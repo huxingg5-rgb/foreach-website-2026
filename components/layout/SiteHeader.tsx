@@ -13,6 +13,9 @@ import {
 } from "react"; // 引入 React 状态、生命周期、缓存、Ref 和事件类型
 
 import { preloadGlobalSearchIndex } from "@/components/search/global-search-index";
+import { ANALYTICAL_APPLICATION_BASE } from "@/data/applications/analytical-documents/registry";
+import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/valveless-pump-routes";
+import { sv10Video } from "@/data/resources/installation-guide/installation-guide.sv10.en";
 
 import {
   getLocalizedHref, // 从多语言路径对象中读取当前语言路径
@@ -172,8 +175,23 @@ function getLocalePathPrefix(localeCode: LocaleCode) {
    当前 /fr/resources/datasheets，切中文 → /resources/datasheets
    当前 /en，切中文 → /
 ================================ */
+// Until translations exist, language switching returns to the translated article list.
+const CHINESE_ONLY_ARTICLE_PATHS = new Set([
+  "/resources/technical-articles/what-is-a-solenoid-valve",
+  "/resources/technical-articles/how-does-an-hplc-injection-valve-work",
+]);
+
 function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
-  const pathWithoutLocale = stripLocalePrefixFromPath(pathname);
+  let pathWithoutLocale = localizeValvelessPumpCategoryPath(
+    stripLocalePrefixFromPath(pathname), localeCode,
+  );
+
+  if (
+    localeCode !== "zh-CN" &&
+    CHINESE_ONLY_ARTICLE_PATHS.has(pathWithoutLocale.replace(/\/+$/, ""))
+  ) {
+    pathWithoutLocale = "/resources/technical-articles/";
+  }
 
   const localePrefix = getLocalePathPrefix(localeCode);
 
@@ -201,6 +219,13 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
 export default function SiteHeader() {
   const pathname = usePathname(); // 获取当前页面路径，例如 /、/about/culture、/en/resources/datasheets 等
   const router = useRouter();
+  const normalizedPathname = pathname.replace(/\/+$/, "");
+  const isEnglishSv10VideoPage = normalizedPathname === sv10Video.detailHref.replace(/\/+$/, "");
+  const isSolenoidPage = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/valves\/solenoid-valves(?:\/(?:sv10-(?:p|threaded|b16)|[23]-way))?$/.test(normalizedPathname);
+  const isMrv3Page = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/valves\/rotary-valves(?:\/mrv3-d(?:10|16|24))?$/.test(normalizedPathname);
+  const normalizedAnalyticalApplicationBase = ANALYTICAL_APPLICATION_BASE.replace(/\/+$/, "");
+  const isEnglishAnalyticalApplicationDetailPage =
+    normalizedPathname.startsWith(`${normalizedAnalyticalApplicationBase}/`);
 
   /**
    * 当前顶部栏显示语言
@@ -514,7 +539,7 @@ const isFittingReplacementDetailPage =
   const shouldUseSolidHeader =
     isScrolled ||
     isFittingReplacementDetailPage || isNewsArticlePage ||
-    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage ||
+    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage || isEnglishSv10VideoPage ||
     isUnknownTopLevelPath ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||
@@ -1062,8 +1087,11 @@ const isFittingReplacementDetailPage =
       closeAllPanels();
 
       // 根据当前路径生成目标语言路径
+      const languageSourcePathname = isEnglishAnalyticalApplicationDetailPage && localeCode !== "en"
+        ? ANALYTICAL_APPLICATION_BASE
+        : window.location.pathname;
       const nextPathname = buildLocalizedPathname(
-        window.location.pathname,
+        languageSourcePathname,
         localeCode,
       );
 
@@ -1086,7 +1114,7 @@ const isFittingReplacementDetailPage =
       <header
         ref={headerRef}
         className={`site-header ${headerLocaleClass} ${shouldUseSolidHeader ? "site-header-scrolled" : ""
-          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage
+          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isEnglishSv10VideoPage
             ? "site-header-solid-page"
             : ""
           } ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
@@ -1365,7 +1393,11 @@ const isFittingReplacementDetailPage =
                 {languageItems.map((language) => (
                   <a
                     key={language.code}
-                    href={isTechnicalArticlePage ? buildLocalizedPathname(pathname || "/", language.code) : language.href}
+                    href={isEnglishAnalyticalApplicationDetailPage && language.code !== "en"
+                      ? buildLocalizedPathname(ANALYTICAL_APPLICATION_BASE, language.code)
+                      : isTechnicalArticlePage || isMrv3Page || isSolenoidPage
+                        ? buildLocalizedPathname(pathname || "/", language.code)
+                        : language.href}
                     className={`site-nav-simple-dropdown-link language-details-item ${language.code === currentLocale
                       ? "language-details-item-active"
                       : ""
@@ -1864,9 +1896,6 @@ const isFittingReplacementDetailPage =
         ) : null}</header>
     );
   }
-
-
-
 
 
 

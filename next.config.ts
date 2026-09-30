@@ -1,4 +1,7 @@
+import { getPipettingRedirectEntries } from "./data/products/selection/pipetting-pump-routes";
+import { getSyringeModelRedirectEntries } from "./data/products/selection/syringe-pump-routes";
 import { getPistonPumpRedirectEntries } from "./lib/seo/piston-pump-migration";
+import { getValvelessPumpRedirectEntries } from "./lib/seo/valveless-pump-migration";
 /* =========================================================
    next.config.ts
    恒永达官网｜Vercel、本地与 Cloudflare 双模式配置
@@ -31,6 +34,7 @@ const isCloudflarePagesBuild =
   process.env.CLOUDFLARE_PAGES_BUILD === "1";
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ["127.0.0.1"],
   /*
    * 只有 Cloudflare 构建才启用静态导出。
    * 本地和 Vercel 普通构建不添加 output。
@@ -45,7 +49,7 @@ const nextConfig: NextConfig = {
   ...(!isCloudflarePagesBuild
     ? {
         async redirects() {
-          return getPistonPumpRedirectEntries();
+          return [...getPipettingRedirectEntries(), ...getSyringeModelRedirectEntries(), ...getPistonPumpRedirectEntries(), ...getValvelessPumpRedirectEntries()];
         },
       }
     : {}),

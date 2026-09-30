@@ -1,4 +1,6 @@
 import { getLocalizedSiteHref } from "@/lib/seo/site-url";
+import { VALVELESS_PUMP_CATEGORY_LABEL_ZH } from "@/data/products/selection/valveless-pump-routes";
+import { getValvelessPumpNames } from "@/data/products/detail/valveless-pump-names";
 
 /* ================================
    navigation.ts
@@ -417,7 +419,7 @@ const productMegaDropdown: MegaDropdown = {
         ),
         productImage(
           "/images/products/pumps/rotary-pump.jpg",
-          t("无阀泵", "Valveless Pump", "Bomba sin válvula", "Pompe sans clapet", "무밸브 펌프", "Бесклапанный насос"),
+          t(VALVELESS_PUMP_CATEGORY_LABEL_ZH, getValvelessPumpNames("en").categoryName, getValvelessPumpNames("es").categoryName, getValvelessPumpNames("fr").categoryName, getValvelessPumpNames("ko").categoryName, getValvelessPumpNames("ru").categoryName),
           t("连续定量输送与比例加液", "Continuous metering and proportional dispensing", "Dosificación continua y dispensación proporcional", "Dosage continu et distribution proportionnelle", "연속 정량 이송 및 비례 분주", "Непрерывное дозирование и пропорциональная подача"),
           localizedPath("/products/pumps/valveless-pumps")
         ),
@@ -456,19 +458,19 @@ const productMegaDropdown: MegaDropdown = {
           "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
           t("旋转阀", "Rotary Valve", "Válvula rotativa", "Vanne rotative", "로터리 밸브", "Роторный клапан"),
           t("多通道流路选择与切换", "Multi-port flow path selection and switching", "Selección y conmutación de rutas multicanal", "Sélection et commutation de voies multicanaux", "다중 포트 유로 선택 및 전환", "Выбор и переключение многоканальных потоков"),
-          localizedPath("/products/valves/rotary-valves")
+          localizedPath("/products/valves/rotary-valves/")
         ),
         productImage(
           "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
           t("高压阀", "High Pressure Valve", "Válvula de alta presión", "Vanne haute pression", "고압 밸브", "Клапан высокого давления"),
           t("适用于高压流路切换与精密控制", "For high-pressure flow switching and precise control", "Para conmutación de flujo de alta presión y control preciso", "Pour commutation de flux haute pression et contrôle précis", "고압 유로 전환 및 정밀 제어용", "Для переключения потоков высокого давления и точного управления"),
-          localizedPath("/products/valves/high-pressure-valves")
+          localizedPath("/products/valves/high-pressure-valves/")
         ),
         productImage(
           "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
           t("电磁阀", "Solenoid Valve", "Válvula solenoide", "Électrovanne", "솔레노이드 밸브", "Соленоидный клапан"),
           t("流路通断控制与精密切换", "On/off control and precise flow switching", "Control de apertura/cierre y conmutación precisa", "Commande marche/arrêt et commutation précise", "유로 온오프 제어 및 정밀 전환", "Управление вкл./выкл. и точное переключение потока"),
-          localizedPath("/products/valves/solenoid-valves")
+          localizedPath("/products/valves/solenoid-valves/")
         ),
       ],
       order: 2,
@@ -1094,7 +1096,10 @@ const applicationMegaDropdown: MegaDropdown = {
             "샘플 주입, 용매 전환, 세척, 폐액 배출 및 저잔류 유로",
             "Ввод образцов, переключение растворителей, промывка, слив и тракты с низким остаточным объёмом",
           ),
-          localizedPath("/applications/analytical-instruments?application=chromatography"),
+          {
+            ...localizedPath("/applications/analytical-instruments?application=chromatography"),
+            en: "/en/applications/analytical-instruments/liquid-chromatography/",
+          },
         ),
         applicationSceneImage(
           "/images/application-center/analytical-spectroscopy-elemental-analysis.webp",
@@ -2599,7 +2604,7 @@ export function getProductImageDisplayMeta(src: string, locale: string) {
 
   if (src.includes("rotary-pump")) {
     return {
-      title: useEnglish ? "Valveless Pump" : "无阀泵",
+      title: useEnglish ? "Valveless Pump" : VALVELESS_PUMP_CATEGORY_LABEL_ZH,
       description: useEnglish
         ? "Continuous metering and proportional dispensing"
         : "连续定量输送与比例加液",

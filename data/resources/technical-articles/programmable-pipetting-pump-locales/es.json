@@ -1,0 +1,123 @@
+{
+  "title": "¿Qué es una bomba de pipeteo automática programable por desplazamiento de aire?",
+  "description": "Bomba de pipeteo automática programable por desplazamiento de aire: principio, detección de nivel e integración OEM de SMTP2, capacidad y rendimiento real.",
+  "deck": "Una bomba de pipeteo automática programable por desplazamiento de aire es un componente de manipulación de líquidos cuya aspiración, dispensación, velocidad y secuencia se configuran mediante comandos. Este artículo trata los módulos por desplazamiento de aire con puntas desechables para instrumentos OEM y utiliza FOREACH SMTP2 para explicar su funcionamiento, supervisión y límites de selección.",
+  "scope": "El módulo realiza la aspiración, la dispensación y la comunicación de estados. El instrumento también necesita movimiento, gestión de recipientes y puntas y un programa de control. Algunos módulos incorporan un eje, pero un módulo no equivale a una estación automática completa.",
+  "titles": [
+    "¿Cómo funciona el desplazamiento de aire?",
+    "¿Qué se puede programar?",
+    "¿Qué aportan la detección de nivel y la supervisión de presión?",
+    "¿Qué tareas automatizadas puede realizar?",
+    "¿Cómo verificar el rendimiento real?",
+    "Prestaciones y límites de selección de SMTP2"
+  ],
+  "paragraphs": [
+    [
+      "Un motor mueve un pistón dentro de una cámara sellada. Una columna de aire separa el pistón del líquido de la punta. Al aspirar, el retroceso aumenta el volumen de aire y reduce la presión; la presión exterior impulsa el líquido hacia la punta. Al dispensar, el pistón avanza y comprime el aire para expulsar el líquido.",
+      "En condiciones normales, la muestra permanece principalmente en la punta desechable. Cambiarla de forma adecuada reduce el arrastre y la contaminación cruzada, pero no elimina los riesgos de aspiración excesiva, aerosoles o manipulación incorrecta. La compresibilidad del aire, viscosidad, volatilidad, temperatura, geometría y estanqueidad de la punta afectan al volumen entregado."
+    ],
+    [
+      "La programación incluye más que el volumen objetivo: velocidades de aspiración y dispensación, tiempos de espera y secuencia. El programa del instrumento coordina estos movimientos con el posicionamiento, las puntas y las incidencias. Los parámetros disponibles y sus rangos deben confirmarse en el protocolo del módulo.",
+      "Una transferencia de 100 μL puede necesitar ajustes diferentes para una solución acuosa, un reactivo viscoso o un líquido volátil. Una Liquid Class agrupa parámetros asociados al líquido, la punta y el modo de dispensación. Es un concepto de desarrollo de métodos, no una afirmación de que SMTP2 incluya una biblioteca universal o compensación automática. Para líquidos difíciles puede ser necesario evaluar consumibles específicos o pipeteo por desplazamiento positivo."
+    ],
+    [
+      "La detección por presión, pLLD, identifica el cambio de presión del circuito de aire cuando la punta toca el líquido; suele coordinarse con una aspiración lenta de aire y el acercamiento del eje Z. La detección capacitiva, cLLD, identifica un cambio de capacitancia al contactar una punta o sonda conductora con el líquido. Deben considerarse la punta, la referencia eléctrica y las propiedades del líquido.",
+      "SMTP2 admite detección de nivel pLLD, cLLD e híbrida hLLD. Elija el método según la punta, las propiedades del líquido y las condiciones eléctricas del instrumento. Confirme la combinación y la activación de las señales y verifique la estabilidad en las condiciones reales de uso.",
+      "La presión y el estado de la punta ayudan a evaluar obstrucciones, falta de líquido o problemas de carga. Las anomalías identificables dependen del algoritmo, los umbrales y el uso. El instrumento define alarmas, parada y recuperación; un fallo no debe provocar automáticamente otra aspiración. La ausencia de alarma no demuestra que el volumen entregado sea correcto."
+    ],
+    [
+      "Las tareas posibles incluyen transferir muestras a recipientes de reacción, añadir reactivos, preparar alícuotas y trabajar con microplacas. Son aplicaciones potenciales en analizadores IVD, diagnóstico molecular, preparación de muestras y automatización de laboratorio; no acreditan la validación de un instrumento o ensayo concreto.",
+      "La transferencia de muestras y el alicuotado repetido pueden requerir puntas, parámetros y controles de contaminación distintos. Especifique recipientes de origen y destino, volúmenes mínimo y habitual, frecuencia de cambio de punta y tiempo de ciclo, además de la capacidad."
+    ],
+    [
+      "Para transferir 100 μL, los pasos siguientes describen un enfoque de verificación, no resultados medidos ni criterios fijos de aceptación. Defina el líquido real, referencia de punta, recipientes y condiciones ambientales y repita las mediciones con parámetros constantes.",
+      "La capacidad nominal, el incremento del accionamiento y el rendimiento volumétrico son magnitudes distintas. La resolución no equivale a exactitud ni repetibilidad. Evalúe por separado la dispensación única y las alícuotas múltiples y registre el método de medida y el número de repeticiones."
+    ],
+    [
+      "FOREACH SMTP2 es una bomba de pipeteo automática programable por desplazamiento de aire de 1000 μL de capacidad nominal con accionamiento y control integrados. Con puntas desechables y el movimiento del instrumento permite aspirar, transferir, dispensar y expulsar puntas.",
+      "El rendimiento real depende de la punta, el volumen objetivo, las propiedades del líquido y la dispensación única o múltiple. Mantenga constantes el líquido de ensayo, la punta, el método de medición y el ambiente para evaluar la desviación y la repetibilidad. Una capacidad nominal de 1000 μL no garantiza un rango utilizable para todos los líquidos, y el control por micropasos no define el volumen mínimo fiable."
+    ]
+  ],
+  "controlHeaders": [
+    "Control",
+    "Función",
+    "Verificación"
+  ],
+  "controlRows": [
+    [
+      "Posición y carrera del pistón",
+      "Fijar el volumen nominal",
+      "Calibración y carrera útil"
+    ],
+    [
+      "Velocidades de aspiración y dispensación",
+      "Adaptarse al líquido, punta y ciclo",
+      "Aspiración incompleta, gotas o salpicaduras"
+    ],
+    [
+      "Espera y secuencia",
+      "Permitir equilibrio de presión y coordinación",
+      "Temporización y volumen entregado"
+    ]
+  ],
+  "steps": [
+    "Verifique carga, estanqueidad y posición respecto al nivel; observe aspiración de aire o burbujas.",
+    "Compruebe goteo durante el traslado, líquido exterior, residuos y salpicaduras.",
+    "Utilice un método adecuado para el volumen. En gravimetría, considere densidad, evaporación y ambiente antes de calcular volumen y desviación.",
+    "Verifique volúmenes mínimo, habitual y máximo. En alicuotado, evalúe la primera, intermedia y última porción. Repita tras cambiar líquido o punta."
+  ],
+  "specHeaders": [
+    "Elemento",
+    "Parámetros y funciones",
+    "Límite de integración"
+  ],
+  "specRows": [
+    [
+      "Capacidad nominal",
+      "1000 μL",
+      "El rango depende de punta, líquido y rendimiento requerido"
+    ],
+    [
+      "Detección de nivel",
+      "pLLD / cLLD / hLLD",
+      "Confirmar consumibles, condiciones eléctricas y activación"
+    ],
+    [
+      "Proceso y puntas",
+      "Supervisión de presión, detección de obstrucción y presencia, expulsión automática",
+      "El programa del instrumento gestiona recuperación y movimiento"
+    ],
+    [
+      "Comunicación",
+      "RS232 / RS485 / CAN",
+      "Confirmar cableado y protocolo de la configuración"
+    ]
+  ],
+  "figureAlts": [
+    "Imagen original en color de un bomba de pipeteo automática programable por desplazamiento de aire FOREACH con carcasa, accionamiento y punta separada",
+    "Dibujo exterior SMTP2 con placa electrónica, accionamiento y puntas separada y montada",
+    "Referencia del fabricante de la interfaz de punta: LTE045 (45 mm), diámetro de acoplamiento de 5,43 mm, longitud de punta y longitud total"
+  ],
+  "figureCaptions": [
+    "Figura 1. Bomba de pipeteo automática programable por desplazamiento de aire FOREACH y punta. La forma y la interfaz dependen de la configuración seleccionada.",
+    "Figura 3. Referencia exterior SMTP2: punta separada a la izquierda y montada a la derecha. Dibujo basado en una imagen de producto; no es una sección interna.",
+    "Figura 2. Referencia de la interfaz de punta adaptada del dibujo del fabricante. LTE045 (45 mm) y el diámetro de acoplamiento de 5,43 mm corresponden solo a la interfaz ilustrada. Confirme la longitud de la punta, la longitud total y la compatibilidad según el consumible y la configuración."
+  ],
+  "faqTitle": "Preguntas frecuentes",
+  "faq": [
+    [
+      "¿Puedo mantener los ajustes con otra punta de igual capacidad?",
+      "La capacidad no demuestra compatibilidad. Confirme referencia, carga y expulsión, estanqueidad y geometría, y verifique el líquido y volumen objetivo."
+    ],
+    [
+      "¿Una aspiración puede alimentar varias alícuotas?",
+      "Sí. SMTP2 puede dispensar varias porciones de volumen definido tras una sola aspiración; para distribuirlas entre distintos recipientes, el instrumento debe coordinar el posicionamiento. El volumen aspirado debe cubrir todas las porciones y el margen del proceso sin superar la capacidad útil de la bomba ni de la punta. Antes del uso, verifique el volumen real de la primera porción, de las intermedias y de la última."
+    ]
+  ],
+  "cta": {
+    "title": "Defina los requisitos de pipeteo e integración",
+    "description": "Indique líquido, volúmenes mínimo/habitual/máximo, referencia de punta, recipientes, modo de dispensación, ciclo y detección para evaluar la configuración SMTP2 y las pruebas del prototipo.",
+    "contactLabel": "Contactar con ingeniería",
+    "productsLabel": "Ver SMTP2"
+  }
+}

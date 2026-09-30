@@ -1,6 +1,7 @@
 import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
 import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
 import { getPistonPumpMetadata } from "@/services/products/getPistonPumpMetadata";
+import { getPipettingMetadata } from "@/services/products/getPipettingMetadata";
 ﻿/* =========================================================
    page.tsx
    恒永达官网｜中文产品类型页 / 旧产品详情页复用动态路由
@@ -28,6 +29,8 @@ import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
+import { getLocalizedSiteHref } from "@/lib/seo/site-url";
+import { VALVELESS_PUMP_LEGACY_CATEGORY_SLUG } from "@/data/products/selection/valveless-pump-routes";
 
 import {
   getProductTypeRouteParams,
@@ -100,6 +103,10 @@ export async function generateMetadata({
   params,
 }: ProductDetailRoutePageProps): Promise<Metadata> {
   const { category, slug } = await params;
+  if (category === "pumps" && slug === "pipetting-pumps") return getPipettingMetadata("zh");
+  if (category === "pumps" && slug === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG) {
+    notFound();
+  }
   if (category === "pumps" && slug === "piston-pump") {
     return getPistonPumpMetadata("", "zh") || {};
   }
@@ -108,21 +115,24 @@ export async function generateMetadata({
   const productTypeRoute = resolveProductTypeRoute(category, slug);
 
   if (productTypeRoute) {
-    if (productTypeRoute.productTypeId === "diaphragm-pump") {
+    if (["diaphragm-pump", "valveless-pump", "syringe-pump"].includes(productTypeRoute.productTypeId)) {
       const canonicalPath = `/products/${category}/${slug}/`;
 
       return {
         title: productTypeRoute.title,
         description: productTypeRoute.description,
+        ...(productTypeRoute.productTypeId === "syringe-pump"
+          ? { robots: { index: true, follow: true } }
+          : {}),
         alternates: {
           canonical: canonicalPath,
           languages: {
             "zh-CN": canonicalPath,
-            "en-US": `/en${canonicalPath}`,
-            es: `/es${canonicalPath}`,
-            fr: `/fr${canonicalPath}`,
-            ko: `/ko${canonicalPath}`,
-            ru: `/ru${canonicalPath}`,
+            "en-US": getLocalizedSiteHref(canonicalPath, "en"),
+            es: getLocalizedSiteHref(canonicalPath, "es"),
+            fr: getLocalizedSiteHref(canonicalPath, "fr"),
+            ko: getLocalizedSiteHref(canonicalPath, "ko"),
+            ru: getLocalizedSiteHref(canonicalPath, "ru"),
             "x-default": canonicalPath,
           },
         },

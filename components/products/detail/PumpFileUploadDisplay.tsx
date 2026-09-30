@@ -16,6 +16,8 @@ type PumpUploadedFileGuardProps = {
 
 type FileNotUploadedDisplayProps = {
   locale: "zh" | "en";
+  title?: string;
+  description?: string;
 };
 
 function getFileCheckUrl(fileUrl: string): string {
@@ -82,6 +84,8 @@ export function PumpUploadedFileGuard({
 // 组件名称：2D 没上传文件显示
 export function TwoDFileNotUploadedDisplay({
   locale,
+  title,
+  description,
 }: FileNotUploadedDisplayProps) {
   return (
     <div
@@ -91,14 +95,14 @@ export function TwoDFileNotUploadedDisplay({
     >
       <div className={styles.noDrawingContent}>
         <h3 className={styles.noDrawingTitle}>
-          {locale === "en"
+          {title || (locale === "en"
             ? "2D Drawing Not Available Yet"
-            : "2D 图纸暂未上传"}
+            : "2D 图纸暂未上传")}
         </h3>
         <p className={styles.noDrawingDescription}>
-          {locale === "en"
+          {description || (locale === "en"
             ? "To request a 2D drawing for this product, please click “Add Drawing” above."
-            : "如需该产品的 2D 图纸，请点击上方“添加图纸”按钮提交需求。"}
+            : "如需该产品的 2D 图纸，请点击上方“添加图纸”按钮提交需求。")}
         </p>
       </div>
     </div>
@@ -108,27 +112,29 @@ export function TwoDFileNotUploadedDisplay({
 // 组件名称：3D 没上传文件显示
 export function ThreeDFileNotUploadedDisplay({
   locale,
+  description,
 }: FileNotUploadedDisplayProps) {
   return (
     <div
       className={styles.modelViewerFallback}
       data-pump-3d-file-not-uploaded="true"
     >
-      {locale === "en"
+      {description || (locale === "en"
         ? "No public 3D model is available for this product."
-        : "暂未配置 3D 模型文件"}
+        : "暂未配置 3D 模型文件")}
     </div>
   );
 }
 
 export function Pump2DFileCheckingDisplay({
   locale,
+  title,
 }: FileNotUploadedDisplayProps) {
   return (
     <div className={[styles.panelBox, styles.noDrawingState].join(" ")}>
       <div className={styles.noDrawingContent}>
         <h3 className={styles.noDrawingTitle}>
-          {locale === "en" ? "Loading drawing..." : "图纸加载中..."}
+          {title || (locale === "en" ? "Loading drawing..." : "图纸加载中...")}
         </h3>
       </div>
     </div>
@@ -137,10 +143,11 @@ export function Pump2DFileCheckingDisplay({
 
 export function Pump3DFileCheckingDisplay({
   locale,
+  title,
 }: FileNotUploadedDisplayProps) {
   return (
     <div className={styles.modelViewerFallback}>
-      {locale === "en" ? "Loading 3D model..." : "3D 模型加载中..."}
+      {title || (locale === "en" ? "Loading 3D model..." : "3D 模型加载中...")}
     </div>
   );
 }

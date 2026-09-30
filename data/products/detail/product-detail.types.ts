@@ -35,6 +35,11 @@ export type ProductApplicationItem = {
   paragraphs: string[];
 };
 
+export type ProductApplicationAreaLink = {
+  label: string;
+  href: string;
+};
+
 export type ProductApplicationSelectionNote = {
   title: string;
   paragraphs: string[];
@@ -68,6 +73,10 @@ export type ProductApplicationsContent = {
   items: ProductApplicationItem[];
   motorComparison?: ProductMotorComparisonContent;
   selectionNote: ProductApplicationSelectionNote;
+  relatedGuides?: {
+    title: string;
+    links: readonly { label: string; href: string }[];
+  };
 };
 
 export type ProductDetailZhRecord = {
@@ -79,6 +88,7 @@ export type ProductDetailZhRecord = {
   name: string;
   advantages: string[];
   commonApplications: string[];
+  applicationAreas?: ProductApplicationAreaLink[];
 
   /**
    * 详情页附属图片。

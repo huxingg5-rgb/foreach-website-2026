@@ -25,7 +25,7 @@ import {
 } from "@/data/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump.article";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 
-import styles from "../../news/NewsArticleClient.module.css";
+import styles from "./TechnicalArticleBody.module.css";
 
 interface Dpl30LiquidDiaphragmPumpArticleProps {
   locale?: TechnicalArticleLocale;
@@ -120,10 +120,12 @@ function ArticleFaq({
       <h2 id="liquid-diaphragm-pump-faq-title">{title}</h2>
       <div>
         {items.map((item, index) => (
-          <div
+          <details
             key={item.question}
-            style={{ marginTop: index === 0 ? 0 : 28 }}
+            className={styles.faqItem}
+            open={index === 0}
           >
+            <summary>
             <h3
               style={{
                 margin: "0 0 10px",
@@ -135,8 +137,9 @@ function ArticleFaq({
             >
               {item.question}
             </h3>
+            </summary>
             <p style={{ margin: 0 }}>{item.answer}</p>
-          </div>
+          </details>
         ))}
       </div>
     </section>

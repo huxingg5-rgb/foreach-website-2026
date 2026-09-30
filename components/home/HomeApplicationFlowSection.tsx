@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 import type { LocaleCode } from "@/lib/i18n";
+import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/valveless-pump-routes";
 
 import {
   getHomeApplicationFlowApiPath, // 引入首页第二屏后端接口路径生成函数
@@ -410,7 +411,7 @@ function getHomeFlowProductHref(
   locale: LocaleCode,
 ) {
   const chinesePath =
-    HOME_FLOW_PRODUCT_PATHS[key] || "/products";
+    localizeValvelessPumpCategoryPath(HOME_FLOW_PRODUCT_PATHS[key] || "/products", locale);
 
   if (locale === "zh-CN") {
     return chinesePath;

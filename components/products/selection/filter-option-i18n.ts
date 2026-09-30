@@ -1,3 +1,4 @@
+import { getValvelessPumpNames } from "@/data/products/detail/valveless-pump-names";
 export type ProductFilterLocale = "zh" | "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 
 type FilterOptionLabelMap = Partial<Record<ProductFilterLocale, string>>;
@@ -144,7 +145,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   },
   "SMTP2 可编程气体置换式移液泵": {
     zh: "SMTP2 可编程气体置换式移液泵",
-    en: "SMTP2 Programmable Gas Displacement Pipetting Pump",
+    en: "SMTP2 Programmable Air Displacement Pipetting Pump",
     es: "Bomba de pipeteo por desplazamiento de aire programable SMTP2",
     fr: "Pompe de pipetage à déplacement d’air programmable SMTP2",
     ko: "SMTP2 프로그래머블 공기 치환식 피펫팅 펌프",
@@ -152,7 +153,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   },
   "SMTP4 气体置换式移液泵": {
     zh: "SMTP4 气体置换式移液泵",
-    en: "SMTP4 Gas Displacement Pipetting Pump",
+    en: "SMTP4 Air Displacement Pipetting Pump",
     es: "Bomba de pipeteo por desplazamiento de aire SMTP4",
     fr: "Pompe de pipetage à déplacement d’air SMTP4",
     ko: "SMTP4 공기 치환식 피펫팅 펌프",
@@ -177,7 +178,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   },
 
   "RPL 单头无阀泵": {
-    zh: "RPL 单头无阀泵",
+    zh: "RPL 单头无阀计量泵",
     en: "RPL Single-Head Valveless Pump",
     es: "Bomba sin válvulas de un cabezal RPL",
     fr: "Pompe sans valve mono-tête RPL",
@@ -185,7 +186,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Одноголовочный бесклапанный насос RPL",
   },
   "RPL 无阀泵": {
-    zh: "RPL 无阀泵",
+    zh: "RPL 单头无阀计量泵",
     en: "RPL Single-Head Valveless Pump",
     es: "Bomba sin válvulas de un cabezal RPL",
     fr: "Pompe sans valve mono-tête RPL",
@@ -193,7 +194,7 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Одноголовочный бесклапанный насос RPL",
   },
   "DRPL 双头无阀泵": {
-    zh: "DRPL 双头无阀泵",
+    zh: "DRPL 双头无阀计量泵",
     en: "DRPL Dual-Head Valveless Pump",
     es: "Bomba sin válvulas de doble cabezal DRPL",
     fr: "Pompe sans valve double tête DRPL",
@@ -202,12 +203,12 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
   },
 
   "多通道旋转阀": {
-    zh: "多通道旋转阀",
-    en: "Multi-Channel Rotary Valve",
-    es: "Válvula rotativa multicanal",
-    fr: "Vanne rotative multicanal",
-    ko: "다채널 로터리 밸브",
-    ru: "Многоканальный поворотный клапан",
+    zh: "旋转阀",
+    en: "Rotary Selector Valves",
+    es: "Válvulas selectoras rotativas",
+    fr: "Vannes de sélection rotatives",
+    ko: "로터리 셀렉터 밸브",
+    ru: "Роторные клапаны-селекторы",
   },
   "高压旋转阀": {
     zh: "高压旋转阀",
@@ -757,6 +758,12 @@ export function getLocalizedFilterOptionLabel(value: string | number | null | un
   const rawValue = String(value ?? "").trim();
   const normalizedLocale = normalizeProductFilterLocale(locale);
   const canonicalValue = FILTER_OPTION_LABEL_ALIASES[rawValue] ?? rawValue;
+  const valvelessNames = getValvelessPumpNames(normalizedLocale);
+  if (valvelessNames) {
+    if (["无阀泵", "无阀计量泵", "Valveless Pump", "Valveless Piston Pumps"].includes(canonicalValue)) return valvelessNames.categoryName;
+    if (["RPL 无阀泵", "RPL 单头无阀泵", "RPL 单头无阀计量泵"].includes(canonicalValue)) return valvelessNames.singleName;
+    if (["DRPL 双头无阀泵", "DRPL 双头无阀计量泵"].includes(canonicalValue)) return valvelessNames.dualName;
+  }
   const localized =
     FILTER_OPTION_LABELS[canonicalValue] ??
     Object.values(FILTER_OPTION_LABELS).find((labels) =>

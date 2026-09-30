@@ -10,6 +10,7 @@
 ========================================================= */
 
 import type { ProductSelectionProduct } from "./product-selection.types";
+import { getHpValveCardText } from "./valve-card-copy";
 
 export const valveFilterLabels = [
   "旋转阀",
@@ -124,23 +125,8 @@ const valveProducts = [
     name: "HP 二位六通带排气高压旋转阀",
     productName: "HP 二位六通带排气高压旋转阀",
 
-    cardTitle: {
-      zh: "HP 二位六通带排气高压旋转阀",
-      en: "HP 2-Position 6-Port with Vent High-Pressure Rotary Valve",
-      es: "Válvula de alta presión HP de tres posiciones y siete puertos",
-      fr: "Valve haute pression HP trois positions sept ports",
-      ko: "HP 3위치 7포트 고압 밸브",
-      ru: "Высоконапорный клапан HP на три положения и семь портов",
-    },
-
-    cardSubtitle: {
-      zh: "二位六通主流路切换与独立排气控制\n25MPa，10-32UNF 接口\n适用于 HPLC 自动进样与排气场景",
-      en: "2-position, 6-port with vent high-pressure flow control\n25MPa, 10-32UNF port\nFor HPLC autosampling and venting",
-      es: "Control de flujo de alta presión de tres posiciones y siete puertos\n25MPa, puerto 10-32UNF\nPara automuestreo HPLC y ventilación",
-      fr: "Contrôle de débit haute pression trois positions sept ports\n25MPa, port 10-32UNF\nPour autosampling HPLC et purge",
-      ko: "3위치 7포트 고압 유로 제어\n25MPa, 10-32UNF 포트\nHPLC 자동 샘플링 및 배기용",
-      ru: "Высоконапорное управление потоком: три положения, семь портов\n25MPa, порт 10-32UNF\nДля автосамплинга HPLC и выпуска воздуха",
-    },
+    cardTitle: getHpValveCardText("title"),
+    cardSubtitle: getHpValveCardText("subtitle"),
 
     image: "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
     imagePath: "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
@@ -174,8 +160,8 @@ const valveProducts = [
       filter04: "定制配置",
     },
 
-    href: "/products/valves/high-pressure-valves",
-    detailHref: "/products/valves/high-pressure-valves",
+    href: "/products/valves/high-pressure-valves/hp/",
+    detailHref: "/products/valves/high-pressure-valves/hp/",
     selectionHref: "/products",
     sourceType: "valve-selection",
   },
@@ -191,8 +177,8 @@ const valveProducts = [
     productTypeSlug: "solenoid-valves",
 
     productId: "6010-solenoid-valve",
-    productCode: "6010",
-    code: "6010",
+    productCode: "SV10",
+    code: "SV10",
 
     categoryId: "valves",
     categoryLabel: "阀系列",
@@ -200,18 +186,18 @@ const valveProducts = [
     productTypeId: "电磁阀",
     productTypeLabel: "电磁阀",
 
-    model: "6010 系列电磁阀",
-    title: "6010 系列电磁阀",
-    name: "6010 系列电磁阀",
-    productName: "6010 系列电磁阀",
+    model: "SV10 系列电磁阀",
+    title: "SV10 系列电磁阀",
+    name: "SV10 系列电磁阀",
+    productName: "SV10 系列电磁阀",
 
     cardTitle: {
-      zh: "6010 系列电磁阀",
-      en: "6010 Series Solenoid Valve",
-      es: "Válvula solenoide serie 6010",
-      fr: "Électrovanne série 6010",
-      ko: "6010 시리즈 솔레노이드 밸브",
-      ru: "Электромагнитный клапан серии 6010",
+      zh: "SV10 系列电磁阀",
+      en: "SV10 Series Solenoid Valve",
+      es: "Válvula solenoide serie SV10",
+      fr: "Électrovanne série SV10",
+      ko: "SV10 시리즈 솔레노이드 밸브",
+      ru: "Электромагнитный клапан серии SV10",
     },
 
     cardSubtitle: {
@@ -226,11 +212,11 @@ const valveProducts = [
     image: "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
     imagePath: "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
     imageUrl: "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
-    imageAlt: "6010 系列电磁阀",
+    imageAlt: "SV10 系列电磁阀",
 
     subtitle: "2通 / 3通摆臂隔膜阀，适用于试剂通断与阀组集成",
     description:
-      "6010 系列电磁阀用于自动化分析仪器中的试剂通断、清洗液控制、废液控制和阀组集成。",
+      "SV10 系列电磁阀用于自动化分析仪器中的试剂通断、清洗液控制、废液控制和阀组集成。",
 
     summary:
       "2通 / 3通结构可选，压力范围 -75kPa~0.25MPa，CV 0.03。",

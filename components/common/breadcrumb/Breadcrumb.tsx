@@ -12,6 +12,7 @@
 ========================================================= */
 
 import Link from "next/link";
+import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
 
 import styles from "./Breadcrumb.module.css";
 
@@ -51,7 +52,8 @@ export default function Breadcrumb({
       className={`${styles.breadcrumb}${className ? ` ${className}` : ""}`}
       aria-label={ariaLabel}
     >
-      {items.map((item, index) => {
+      {items.map((sourceItem, index) => {
+        const item = { ...sourceItem, label: normalizeProductBreadcrumbLabel(sourceItem.label, sourceItem.href) };
         const isLast = index === items.length - 1;
 
         return (

@@ -1,0 +1,157 @@
+{
+  "description": "The FOREACH HP-26SSU3204 is a 2-position, 6-port high-pressure rotary valve with a separate vent position and a maximum working pressure of 25 MPa. It switches between loading, injection and venting paths in HPLC autosamplers. Working with an external sample loop, the valve prepares the sample in the load position, connects the loop to the mobile-phase path in the inject position, and provides a dedicated path in the vent position.\n\nThe valve has 10-32 UNF ports, a 0.4 mm bore and an internal volume of 0.8 μL, with a SUS316L stator and a polymer rotor. For integration into an analytical instrument, check the flow-path diagram, maximum system pressure, compatibility with the sample and mobile phase, and the switching and venting sequence.",
+  "commonApplications": [
+    "HPLC autosampling",
+    "Sample-loop switching",
+    "Fluid-path venting"
+  ],
+  "applicationDetails": {
+    "tabLabel": "Applications",
+    "title": "Typical Applications",
+    "intro": [
+      "In a chromatography system, the valve switches flow paths. The sample-loading mechanism introduces the sample, and the mobile-phase pump provides high-pressure flow. Terms such as injection valve, sample-loop switching valve and autosampler valve describe its role in the actual fluidic circuit."
+    ],
+    "items": [
+      {
+        "title": "HPLC autosampling: switching between loading and injection",
+        "paragraphs": [
+          "In the load position, sample is introduced into the loop. In the inject position, the loop is connected to the mobile phase so the sample enters the chromatography flow path. This component is often described as an injection valve or autosampler valve.",
+          "HP-26SSU3204 works with an external sample loop to form a two-position, six-port injection circuit. In full-loop injection, the loop primarily determines the injected volume. Partial-loop injection also relies on metering by the sample-loading mechanism. Define the target injection volume, available sample volume and loop-filling method together."
+        ]
+      },
+      {
+        "title": "Analytical fluidics: connecting and isolating an external sample loop",
+        "paragraphs": [
+          "Sample-loop switching allows a fixed-volume sample to be loaded before the loop is connected to the main flow path. Additional connection volume and poorly matched connections can affect sample-band dispersion downstream.",
+          "Evaluate extra-column volume using the actual tubing length, internal diameter and fitting geometry. The six-port connections are defined by the valve design; this model is not six independent on/off valves or a multi-position reagent selector."
+        ]
+      },
+      {
+        "title": "Injection cycles: venting and re-establishing the flow path",
+        "paragraphs": [
+          "Air bubbles can affect loop filling and pressure changes. The instrument can establish a vent path at the specified valve position before the next loading and injection steps. Venting is a fluid-path maintenance operation, separate from setting injection volume.",
+          "HP has a separate vent position. Connect the vent line according to the flow-path diagram and operating requirements, and coordinate pressure conditions with switching commands. The vent path is not an automatic degasser, and it should not be opened before the pressure conditions have been confirmed."
+        ]
+      }
+    ],
+    "selectionNote": {
+      "title": "Application Selection Information",
+      "paragraphs": [
+        "Provide the maximum operating and switching pressures, target injection volume, sample loop and filling method, sample and mobile phase, tubing connections and venting sequence. Confirm the HP-26SSU3204 port numbering and control requirements."
+      ]
+    }
+  },
+  "faqs": [
+    {
+      "question": "What do two positions, six ports and a vent mean?",
+      "answer": "Two positions and six ports describe the main loading and injection connections; this model also has a vent position. The product specification defines injection connections as 1–2, 3–4 and 5–6; loading connections as 1–6, 2–3 and 4–5; and the vent connection as 3–7. Confirm port numbering, valve position and control timing against this model's flow-path diagram."
+    },
+    {
+      "question": "Is the 0.8 μL internal volume the injection volume, and how should the loop be selected?",
+      "answer": "0.8 μL is the internal valve volume. Full-loop injection requires enough sample to displace the liquid in the loop, and the loop primarily determines the volume entering the analysis path. Partial-loop injection relies on the sample-loading mechanism to meter the sample into an appropriately sized loop. Select the method using available sample volume, repeatability and method requirements; excess sample loaded is not necessarily all injected."
+    },
+    {
+      "question": "Does a 25 MPa rating suit every HPLC or UHPLC system?",
+      "answer": "The system name alone is not sufficient. 25 MPa is this model's maximum working pressure. Compare steady-state and transient switching pressures with the ratings of the tubing, sample loop and fittings. The lowest-rated component limits the complete circuit."
+    },
+    {
+      "question": "Can any 10-32 UNF fitting be connected directly?",
+      "answer": "Check tubing outside diameter, fitting-end geometry, insertion depth and seals as well as the thread. Matching threads alone do not establish compatible connection geometry or a reliable high-pressure seal."
+    },
+    {
+      "question": "What should be checked first when repeated injections vary?",
+      "answer": "Check loop filling, air bubbles in the sample or mobile phase, valve position, injection dwell time, connection leaks and rotor-seal wear. Injection repeatability is a result of the complete sample-injection circuit and cannot be inferred from valve switching time alone."
+    },
+    {
+      "question": "How should wetted materials and service life be evaluated?",
+      "answer": "This model uses a SUS316L stator and a polymer rotor. Check compatibility with solvent composition, concentration, temperature and cleaning conditions. The specification's 150,000-cycle figure comes from testing with pure water and is not a service-life guarantee for every fluid."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Product Model",
+      "value": "HP-26SSU3204"
+    },
+    {
+      "label": "Rated Voltage",
+      "value": "24 V"
+    },
+    {
+      "label": "Rated Current",
+      "value": "2 A"
+    },
+    {
+      "label": "Rated Power",
+      "value": "48 W"
+    },
+    {
+      "label": "Motor Gear Ratio",
+      "value": "5:1"
+    },
+    {
+      "label": "Valve Configuration",
+      "value": "2-position, 6-port with a separate vent position"
+    },
+    {
+      "label": "Overall Dimensions",
+      "value": "L × W × H: 42 × 42 × 123.5 mm"
+    },
+    {
+      "label": "Mounting Dimensions and Thread",
+      "value": "Locating dimensions: 19 × 20 mm; thread × depth: M3 × 10 mm"
+    },
+    {
+      "label": "Port Thread",
+      "value": "10-32 UNF"
+    },
+    {
+      "label": "Maximum Working Pressure",
+      "value": "25 MPa"
+    },
+    {
+      "label": "Bore Diameter",
+      "value": "0.4 mm"
+    },
+    {
+      "label": "Adjacent-Channel Switching Time",
+      "value": "100 ms"
+    },
+    {
+      "label": "Service Life",
+      "value": "150,000 cycles (pure water)"
+    },
+    {
+      "label": "Operating Noise",
+      "value": "<60 dB"
+    },
+    {
+      "label": "Internal Volume",
+      "value": "0.8 μL"
+    },
+    {
+      "label": "Wetted Material — Stator",
+      "value": "SUS316L"
+    },
+    {
+      "label": "Wetted Material — Rotor",
+      "value": "Polymer"
+    },
+    {
+      "label": "Ambient Temperature",
+      "value": "0–40 °C (non-condensing)"
+    },
+    {
+      "label": "Ambient Humidity",
+      "value": "0–93% ±3 RH at 40 °C (non-condensing)"
+    },
+    {
+      "label": "Storage and Transport Temperature",
+      "value": "−40–55 °C (no freezing or condensation)"
+    }
+  ],
+  "bottomCta": {
+    "title": "Need to confirm the HP valve configuration?",
+    "description": "Provide the maximum operating and switching pressures, target injection volume, sample loop and filling method, sample and mobile phase, tubing connections and venting sequence. Confirm the HP-26SSU3204 port numbering and control requirements.",
+    "buttonText": "Contact an Engineer"
+  }
+}

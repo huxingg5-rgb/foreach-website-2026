@@ -1,4 +1,6 @@
+import { getSyringeModelPath } from "@/data/products/selection/syringe-pump-routes";
 import syringePumpDetails from "@/data/products/generated/pumps/syringe-pumps/detail/index.json";
+import { hld3WhiteBackgroundImage } from "@/data/products/detail/syringe-pump-images";
 
 type Detail = (typeof syringePumpDetails)[number];
 
@@ -40,7 +42,7 @@ export function getSyringePumpProductDetailData(detail: Detail) {
     customInquiryHref: "/contact",
     contactHref: "/contact",
     selectionHref: "/products/pumps/syringe-pumps",
-    detailHref: `/products/pumps/syringe-pumps/${detail.slug}`,
+    detailHref: getSyringeModelPath("zh", detail.slug) || `/products/pumps/syringe-pumps/${detail.slug}`,
 
     specs: Array.isArray((detail as any).specs)
       ? (detail as any).specs
@@ -77,7 +79,9 @@ export function getSyringePumpProductDetailData(detail: Detail) {
     bottomCustomCta: (detail as any).bottomCustomCta,
     showBottomCta: true,
 
-    additionalImages: Array.isArray(detail.additionalImages) ? detail.additionalImages : [],
+    additionalImages: detail.slug === "hld3-30mm-rotary-valve-syringe-pump"
+      ? [...new Set([...detail.additionalImages, hld3WhiteBackgroundImage])]
+      : Array.isArray(detail.additionalImages) ? detail.additionalImages : [],
     images: Array.isArray(detail.images) ? detail.images : [],
     thumbnails: Array.isArray(detail.thumbnails) ? detail.thumbnails : [],
   };

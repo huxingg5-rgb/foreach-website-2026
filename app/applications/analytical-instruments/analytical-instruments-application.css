@@ -31,3 +31,15 @@
   background-size: cover !important;
   background-position: center !important;
 }
+
+/* Mobile-only placement; the control itself reuses the global footer accordion styles. */
+.analytical-mobile-subnav {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .analytical-mobile-subnav {
+    display: grid;
+    margin: 0 22px;
+  }
+}

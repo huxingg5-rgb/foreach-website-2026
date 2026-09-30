@@ -1,0 +1,76 @@
+/* Compatibility styles for existing article renderers. Data and copy stay in place. */
+.root { background: #fff; }
+.body { min-width: 0; }
+.technicalArticleBody { width: 100%; min-width: 0; }
+.root .body > .technicalArticleBody > .contentBlock:first-child:not(:has(h2)) { margin-top: 18px; }
+.contentBlock { width: 100%; min-width: 0; margin: 0; }
+.root .body .contentBlock:has(> h2),
+.root .body > :global(.technicalArticleClusterLinks) {
+  padding: 40px 0 0; margin: 42px 0 0; border-top: 1px solid var(--line);
+}
+.root .body > .contentBlock:first-child:has(> h2),
+.root .body > .technicalArticleBody > .contentBlock:first-child:has(> h2) { margin-top: 32px; }
+.root .body h2 { scroll-margin-top: calc(var(--site-header-height, 90px) + 24px); }
+.root .body h2[data-section-number]::before { content: attr(data-section-number) " "; font-variant-numeric: tabular-nums; }
+.root .body p, .root .body ul, .root .body ol { font-size: var(--body-size); line-height: 1.8; color: var(--ink); }
+.root .body ul, .root .body ol { padding-left: 1.7em; margin: 18px 0 24px; }
+.root .body li { margin-bottom: 12px; padding-left: .35em; }
+.root .body li:last-child { margin-bottom: 0; }
+.root .body h3 { color: #111 !important; font-size: var(--h3-size) !important; line-height: 1.65 !important; font-weight: 400 !important; }
+.sectionSubtitle { margin: 30px 0 12px; }
+.root .body h3:not(summary h3)::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 50%; background: currentColor; vertical-align: .2em; }
+.technicalNotice { border-left: 2px solid #222; padding: 14px 0 14px 20px; margin: 22px 0 26px; }
+.technicalNotice strong { font-weight: 500; }
+.technicalTableWrap { max-width: 100%; overflow-x: auto; margin: 22px 0; overscroll-behavior-x: contain; }
+.technicalTable { width: 100%; border-collapse: collapse; text-align: left; font-size: 15px; line-height: 1.75; }
+.technicalTable thead { border-top: 2px solid #222; }
+.technicalTable th, .technicalTable td { padding: 14px 12px; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+.technicalTable th, .technicalTable strong { font-weight: 400; }
+.technicalTable td { font-variant-numeric: tabular-nums; }
+.technicalRuleList { list-style: decimal outside; }
+.technicalRuleList li > strong { display: block; margin-bottom: 4px; font-weight: 500; }
+.technicalCode { max-width: 100%; max-height: 720px; overflow: auto; margin: 26px 0; padding: 20px; background: #f5f5f5; border: 1px solid var(--line); color: #171717; font: 14px/1.75 Consolas, monospace; tab-size: 4; white-space: pre; }
+.formula { display: block; margin-top: 8px; font: 16px/1.75 Consolas, monospace; overflow-wrap: anywhere; }
+.formulaNote, .sourceNote { display: block; margin-top: 8px; color: var(--muted); font-size: 14px; }
+.figure { width: 100%; margin: 26px auto 30px; }
+.photo, .wiringDiagram { display: block; width: 100%; height: auto; object-fit: contain; }
+.root .body figure { max-width: 100%; }
+.root .body figure img { max-width: 100%; height: auto; object-fit: contain; }
+.root .body figcaption { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 10px; color: var(--muted) !important; font-size: 15px !important; font-weight: 400; line-height: 1.75 !important; text-align: center; }
+.root .cover { position: relative; width: 100%; height: auto; aspect-ratio: 16 / 9; margin: 26px 0 30px; background: #fff; }
+.root .cover img { object-fit: contain; }
+.linkList { display: grid; gap: 12px; margin: 24px 0 0; }
+.linkList p { margin: 0; }
+.faqList { border-top: 1px solid var(--line); }
+.faqItem { border-bottom: 1px solid var(--line); }
+.faqItem summary { padding: 18px 0 18px 4px; cursor: pointer; list-style-position: outside; margin-left: 22px; }
+.root .faqItem summary h3 { display: inline; margin: 0; font-size: var(--body-size) !important; }
+.root .faqItem > p { padding: 0 0 20px 26px; margin: 0; }
+.pagerGrid, .productGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 26px 0; }
+.pagerCard, .productCard { min-width: 0; padding: 18px 0; border-top: 1px solid var(--line); }
+.pagerCard span, .pagerCard strong, .pagerCard em, .productCard span, .productCard strong, .productCard small { display: block; }
+.pagerCard strong, .productCard strong { margin: 8px 0; font-size: 18px; font-weight: 500; }
+.pagerCard em, .productCard small { font-size: 14px; line-height: 1.75; font-style: normal; color: var(--muted); }
+.mobileToc { display: none; }
+@media (max-width: 900px) {
+  .desktopToc { display: none; }
+  .mobileToc { display: block; }
+  .mobileToc summary { cursor: pointer; font-size: 14px; color: var(--muted); }
+  .mobileToc nav { margin-top: 14px; }
+  .root .body > .contentBlock:first-child:has(> h2),
+  .root .body > .technicalArticleBody > .contentBlock:first-child:has(> h2) { border-top: 0; margin-top: 0; padding-top: 32px; }
+}
+@media (max-width: 600px) {
+  .root .body .contentBlock:has(> h2) { margin-top: 32px; padding-top: 30px; }
+  .technicalTable { min-width: 570px; }
+  .technicalTable th, .technicalTable td { padding: 12px 10px; }
+  .technicalCode { padding: 16px; font-size: 12px; }
+  .pagerGrid, .productGrid { grid-template-columns: minmax(0, 1fr); }
+  .root .body figcaption { font-size: 13px !important; }
+}
+@media print {
+  .root .body .contentBlock:has(> h2) { margin-top: 20pt; padding-top: 14pt; }
+  .technicalTable { min-width: 0; font-size: 10pt; }
+  .technicalTableWrap, .technicalCode { overflow: visible; max-height: none; }
+  .faqItem > p { display: block; }
+}

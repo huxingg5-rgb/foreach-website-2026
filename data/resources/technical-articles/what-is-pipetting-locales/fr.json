@@ -1,0 +1,458 @@
+{
+  "copy": {
+    "metadata": {
+      "title": "Qu’est-ce que le pipetage ? Procédés manuels et automatisés",
+      "seoTitle": "Qu’est-ce que le pipetage ? Manuel et automatisé | FOREACH",
+      "seoDescription": "Un exemple de 100 µL explique le pipetage manuel et automatisé : pompe, vanne et plateau, avantages, limites, biais moyen et répétabilité exprimée par le CV.",
+      "coverImage": "/images/resources/technical-articles/what-is-pipetting/manual-and-automated-pipetting-fr.webp",
+      "coverAlt": "Comparaison du pipetage manuel et automatisé : une personne transfère le liquide, tandis qu’une pompe à seringue, une vanne, une aiguille et un plateau remplissent les récipients successifs."
+    },
+    "deck": "Le pipetage consiste à transférer un volume défini de liquide d’un emplacement à un autre. Il peut s’agir, par exemple, de prélever 100 µL dans un tube d’échantillon pour les déposer dans un récipient de réaction, ou d’ajouter un échantillon et un diluant dans une proportion déterminée.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Le pipetage consiste à transférer un volume défini de liquide d’un emplacement à un autre. Il peut s’agir, par exemple, de prélever 100 µL dans un tube d’échantillon pour les déposer dans un récipient de réaction, ou d’ajouter un échantillon et un diluant dans une proportion déterminée."
+      },
+      {
+        "type": "paragraph",
+        "text": "Chaque transfert nécessite de connaître la source, la destination et le volume, puis de réaliser correctement l’aspiration et la distribution. Avec un outil tenu à la main, l’opérateur effectue et coordonne ces tâches ; dans un procédé entièrement automatisé, le matériel suit une séquence programmée. Une même tâche, transférer 100 µL, permet de comprendre la différence."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/what-is-pipetting/manual-and-automated-pipetting-fr.webp",
+        "alt": "Comparaison du pipetage manuel et automatisé : une personne transfère le liquide, tandis qu’une pompe à seringue, une vanne, une aiguille et un plateau remplissent les récipients successifs.",
+        "width": 1200,
+        "height": 630,
+        "caption": "Les deux méthodes transfèrent un volume défini. L’opérateur organise le pipetage manuel ; un programme coordonne le matériel pour le pipetage automatisé."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Pipetage manuel : l’opérateur aspire et transfère le liquide",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "En pipetage manuel, l’opérateur utilise une micropipette ou une pipette associée à un dispositif de pipetage. Avec une micropipette mécanique, il actionne lui-même l’aspiration et la distribution. Une micropipette électronique peut motoriser ces actions, mais le choix de l’échantillon, le déplacement de l’outil et la vérification de la destination restent à la charge de l’opérateur."
+          },
+          {
+            "type": "subheading",
+            "title": "Comment un opérateur réalise-t-il un transfert ?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Prenons le transfert de 100 µL d’un tube d’échantillon vers un récipient de réaction avec une micropipette à embout jetable."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Confirmer la tâche et choisir l’outil. Vérifier l’échantillon et le récipient de destination, choisir une micropipette et un embout adaptés, puis régler 100 µL. Vérifier à la fois que la plage de travail couvre ce volume et que les performances métrologiques sont adaptées à ce point de fonctionnement.",
+              "Monter l’embout et préparer l’aspiration. Vérifier le montage et l’étanchéité, puis effectuer la préparation prévue par la méthode. Un mauvais ajustement de l’embout peut perturber l’aspiration et la distribution.",
+              "Immerger l’embout et aspirer. Maîtriser la position, la profondeur d’immersion et l’aspiration ; attendre que le liquide entre avant de retirer l’embout. Rechercher les bulles ou fuites manifestes.",
+              "Rejoindre le récipient de destination et distribuer. Confirmer la destination, puis respecter la vitesse, la position et le temps d’attente définis par la méthode pour déposer le liquide dans le bon récipient.",
+              "Terminer et préparer l’échantillon suivant. Remplacer l’embout selon les exigences de l’échantillon et de maîtrise de la contamination, consigner l’échantillon traité, puis poursuivre."
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://milnepublishing.geneseo.edu/molecular-techniques/front-matter/pipetting/",
+                "label": "Référence sur la procédure de pipetage manuel"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "L’opérateur prend les décisions, positionne l’outil et organise la séquence. L’observation de l’embout aide à repérer les anomalies manifestes ; le volume réellement transféré doit toutefois être mesuré."
+          },
+          {
+            "type": "subheading",
+            "title": "Avantages et limites du pipetage manuel"
+          },
+          {
+            "type": "paragraph",
+            "text": "Le travail manuel s’adapte facilement. L’opérateur peut intervenir directement si un échantillon change de position, si une addition imprévue est nécessaire ou si le liquide doit être observé. Cette souplesse convient au développement de méthodes, aux petites séries et aux échantillons supplémentaires. Les outils manuels classiques occupent peu de place et sont généralement plus simples à mettre en service qu’un système automatisé complet."
+          },
+          {
+            "type": "paragraph",
+            "text": "Les outils multicanaux ou électroniques réduisent certaines actions répétitives. Les premiers traitent plusieurs positions simultanément ; les outils électroniques avec distribution répétée peuvent limiter le nombre d’aspirations. L’opérateur reste responsable de l’identification des échantillons, du déplacement de l’outil et de l’enchaînement des tâches."
+          },
+          {
+            "type": "paragraph",
+            "text": "Les tâches répétitives mobilisent durablement du temps et de l’attention. Chaque aspiration, déplacement, distribution et changement d’embout exige une action. Lorsque la charge augmente, il faut conserver une technique régulière, vérifier l’ordre des échantillons et tenir les enregistrements. Les variations de rythme, de profondeur d’immersion et de temps d’attente peuvent modifier le volume distribué."
+          },
+          {
+            "type": "subheading",
+            "title": "Comment évaluer la justesse et la répétabilité du pipetage ?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Pour une tâche de 100 µL, il faut examiner séparément le volume moyen transféré et la dispersion des résultats répétés."
+          },
+          {
+            "type": "notice",
+            "text": "Les valeurs suivantes constituent uniquement un exemple de calcul, et non des performances mesurées sur un appareil. Supposons que des transferts répétés dans les mêmes conditions donnent un volume moyen de 99,5 µL et un écart-type de 0,20 µL :"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Indicateur",
+              "Résultat de l’exemple",
+              "Interprétation"
+            ],
+            "rows": [
+              [
+                "Biais moyen",
+                "99,5 − 100 = −0,5 µL",
+                "Le transfert moyen est inférieur de 0,5 µL à la cible."
+              ],
+              [
+                "Biais moyen relatif",
+                "−0,5 ÷ 100 × 100 % = −0,5 %",
+                "Biais moyen rapporté au volume cible, pour évaluer l’erreur systématique."
+              ],
+              [
+                "CV de répétabilité",
+                "0,20 ÷ 99,5 × 100 % ≈ 0,20 %",
+                "Dispersion des résultats autour de leur moyenne dans les mêmes conditions."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le CV est le rapport de l’écart-type à la moyenne, exprimé ici en pourcentage. Un faible CV indique des résultats répétés proches les uns des autres ; si la moyenne s’écarte de la cible, une investigation et un ajustement restent nécessaires. Un CV de 0,20 % ne signifie pas que l’erreur de chaque transfert reste dans ±0,20 %."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/coefvari.htm",
+                "label": "Définition du CV"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "L’acceptation dépend également du biais autorisé pour la tâche. Par exemple, si le biais moyen relatif doit rester dans ±1 %, la limite de biais moyen est de ±1 µL à 100 µL et de ±0,1 µL à 10 µL. Cette valeur de ±1 % est une exigence illustrative, pas une norme universelle pour les équipements manuels ou automatisés. L’exigence de répétabilité doit être définie séparément."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il faut donc mesurer le biais moyen et la répétabilité au volume cible, avec le liquide et les embouts réellement utilisés. La plage nominale ou le nombre de décimales affichées ne suffisent pas à juger les performances."
+          }
+        ]
+      },
+      {
+        "title": "Pipetage entièrement automatisé : comment remplir une rangée de récipients ?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Supposons que chaque récipient d’une rangée doive recevoir 100 µL du même réactif. Avec un outil manuel, l’opérateur répète l’aspiration, le déplacement et la distribution. Une configuration associant une aiguille fixe et des récipients mobiles permet d’expliquer l’automatisation de ces actions. Les 100 µL représentent le volume cible de cet exemple."
+          },
+          {
+            "type": "subheading",
+            "title": "Quel composant réalise quelle action ?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Une tubulure relie le flacon de réactif à une vanne de commutation à trois voies commandée électriquement. Le port commun est relié à la seringue ; les deux autres ports sont reliés au flacon et à l’aiguille de distribution. Les récipients reposent sur un plateau motorisé."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Composant",
+              "Rôle dans cet exemple"
+            ],
+            "rows": [
+              [
+                "Pompe à seringue motorisée",
+                "Recule le piston pour aspirer le réactif et l’avance pour le distribuer ; la course programmée définit le volume cible."
+              ],
+              [
+                "Vanne électrique à trois voies",
+                "Relie le flacon à la seringue pendant l’aspiration, puis la seringue à l’aiguille pendant la distribution, tout en isolant l’autre branche."
+              ],
+              [
+                "Aiguille de distribution fixe",
+                "Dépose le réactif dans le récipient placé au-dessous."
+              ],
+              [
+                "Plateau motorisé",
+                "Place successivement les récipients sous l’aiguille."
+              ],
+              [
+                "Programme de commande",
+                "Ordonne la commutation de la vanne, le mouvement du piston et le positionnement du plateau."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Cette configuration illustre la distribution automatique ; d’autres architectures de pipetage automatisé sont possibles. Des travaux publiés sur la manipulation automatisée des liquides décrivent des réalisations qui coordonnent par programme le volume, le sens de déplacement de la pompe à seringue et la position de la vanne."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://www.mdpi.com/1420-3049/27/19/6665",
+                "label": "Exemple de commande programmée d’une pompe et d’une vanne"
+              }
+            ]
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/fr/products/pumps/syringe-pumps/solenoid-valve-syringe-pumps/",
+                "label": "Pompes à seringue FOREACH HMD avec électrovanne",
+                "suffix": " : découvrez l’association du dosage par seringue et de la sélection des voies par électrovanne pour évaluer une application à aiguille fixe."
+              },
+              {
+                "href": "/fr/products/pumps/syringe-pumps/rotary-valve-syringe-pumps/",
+                "label": "Pompes à seringue FOREACH HLD avec vanne rotative",
+                "suffix": " : découvrez une autre configuration de sélection des voies, en vérifiant les ports et les raccordements selon le nombre de sources et de sorties."
+              },
+              {
+                "href": "/fr/products/valves/",
+                "label": "Vannes de contrôle des fluides FOREACH",
+                "suffix": " : pour une vanne indépendante, vérifiez les connexions, les matériaux en contact avec le liquide, la pression et le mode de commande."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le module pompe-vanne assure le dosage et la sélection du trajet. L’instrument complet doit assurer le positionnement des récipients, le mouvement du plateau et la coordination des actions. Cet exemple explique le procédé ; les performances volumétriques doivent être vérifiées avec la seringue, la tubulure et l’aiguille choisies."
+          },
+          {
+            "type": "subheading",
+            "title": "Comment le réactif arrive-t-il dans un récipient ?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Avant le démarrage, l’opérateur charge le réactif et les récipients, règle le volume par récipient et leur nombre, puis amorce et purge l’air du circuit. L’aiguille reste au-dessus de l’ouverture pour la distribution sans contact utilisée dans cet exemple."
+          },
+          {
+            "type": "paragraph",
+            "text": "Étape 1 : aspirer depuis le flacon de réactif. La vanne relie le flacon à la seringue et ferme la branche de l’aiguille. Le moteur recule le piston, ce qui augmente le volume interne de la seringue et y fait entrer le réactif par la tubulure.",
+            "lead": "Étape 1 : aspirer depuis le flacon de réactif."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-pipetting/automatic-pipetting-aspiration-fr.svg",
+            "alt": "Trajet d’aspiration : le moteur recule le piston et le réactif passe du flacon à la seringue par la vanne de commutation.",
+            "width": 680,
+            "height": 166,
+            "caption": "Aspiration : flacon de réactif → vanne → seringue ; la branche de l’aiguille est fermée.",
+            "flowNodes": [
+              {
+                "label": "Flacon",
+                "detail": "Source de liquide"
+              },
+              {
+                "label": "Vanne",
+                "detail": "Entrée reliée"
+              },
+              {
+                "label": "Seringue",
+                "detail": "Recul du piston"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Étape 2 : commuter le trajet et distribuer dans le récipient. Après l’aspiration, la pompe s’arrête. La vanne relie la seringue à l’aiguille et ferme la branche du flacon. Le plateau place le premier récipient sous l’aiguille et s’immobilise. Le moteur avance alors le piston pour envoyer le réactif dans le récipient par l’aiguille, puis s’arrête à la fin de la course programmée correspondant au volume cible.",
+            "lead": "Étape 2 : commuter le trajet et distribuer dans le récipient."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-pipetting/automatic-pipetting-dispensing-fr.svg",
+            "alt": "Trajet de distribution : le moteur avance le piston et le réactif traverse la vanne et l’aiguille fixe pour atteindre le récipient de réaction.",
+            "width": 680,
+            "height": 166,
+            "caption": "Distribution : seringue → vanne → aiguille → récipient de réaction ; la branche du flacon est fermée. Volume cible : 100 µL.",
+            "flowNodes": [
+              {
+                "label": "Seringue",
+                "detail": "Avance du piston"
+              },
+              {
+                "label": "Vanne",
+                "detail": "Sortie reliée"
+              },
+              {
+                "label": "Aiguille",
+                "detail": "Position fixe"
+              },
+              {
+                "label": "Récipient",
+                "detail": "Reçoit le réactif"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Étape 3 : avancer le plateau et répéter. Une fois la distribution terminée, le moteur du plateau amène le récipient suivant sous l’aiguille. Le programme ramène la vanne sur la branche d’entrée, puis répète l’aspiration, la commutation et la distribution jusqu’au nombre de récipients prévu.",
+            "lead": "Étape 3 : avancer le plateau et répéter."
+          },
+          {
+            "type": "paragraph",
+            "text": "La pompe à seringue déplace le liquide, la vanne choisit le trajet, le plateau présente le récipient suivant et le programme définit le moment de chaque action. L’opérateur prépare le système avant de démarrer ; le matériel prend ensuite en charge les opérations répétitives d’aspiration, de distribution et de positionnement du lot."
+          },
+          {
+            "type": "subheading",
+            "title": "Quels sont les avantages de ce procédé automatique ?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Pour distribuer successivement le même réactif au même volume, l’opérateur n’a plus à saisir l’outil, aspirer et viser chaque récipient. Le programme peut répéter la course du piston, les vitesses et l’ordre des récipients déjà vérifiés, ce qui réduit l’influence des variations du rythme manuel."
+          },
+          {
+            "type": "paragraph",
+            "text": "En contrepartie, les positions des récipients et de l’aiguille ainsi que le programme doivent être définis à l’avance. Un changement de réactif impose de gérer les résidus dans le circuit partagé et de vérifier l’efficacité du nettoyage. Un autre type de récipient ou un autre volume nécessite d’ajuster et de vérifier la méthode. Pour des tâches peu nombreuses ou souvent modifiées, ce temps de préparation doit être inclus dans l’évaluation globale."
+          },
+          {
+            "type": "subheading",
+            "title": "Avec un réglage de 100 µL, comment vérifier le volume réellement reçu ?"
+          },
+          {
+            "type": "paragraph",
+            "text": "La pompe à seringue commande la distribution par le déplacement du piston. Idéalement, la section utile de la seringue multipliée par la course du piston donne le volume déplacé. Des bulles, des fuites ou du liquide résiduel à l’aiguille peuvent faire varier le volume reçu par rapport au réglage. L’amorçage et la purge d’air sont donc nécessaires avant de lancer cet exemple."
+          },
+          {
+            "type": "paragraph",
+            "text": "Mesurez le volume effectivement reçu par les récipients, calculez le biais moyen et le CV selon la méthode précédente, puis examinez les résultats au début, au milieu et à la fin du lot. Programmer une course correspondant à 100 µL ne prouve pas que chaque récipient reçoit exactement 100 µL."
+          },
+          {
+            "type": "paragraph",
+            "text": "En mode manuel, l’opérateur aspire, transfère et distribue avec une souplesse utile en cas de changement. L’automatisation confie les actions répétables à des composants coordonnés. Le choix dépend de la stabilité de la tâche, du nombre de répétitions et du temps de préparation et de nettoyage."
+          },
+          {
+            "type": "subheading",
+            "title": "Pour aller plus loin"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Pour les transferts entre récipients avec des embouts jetables, consultez la ",
+                "href": "/fr/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/smtp2-1000ul/",
+                "label": "pompe de pipetage automatique programmable à déplacement d’air FOREACH SMTP2",
+                "suffix": ". Il s’agit d’une autre configuration : l’instrument complet doit toujours assurer le positionnement et la commande du procédé, et les performances doivent être vérifiées avec le liquide, les embouts et le volume cible."
+              }
+            ]
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/fr/resources/technical-articles/what-is-a-programmable-syringe-pump/",
+                "label": "Qu’est-ce qu’une pompe à seringue programmable ? Coordination de la pompe, de la vanne et de l’entraînement"
+              },
+              {
+                "href": "/fr/resources/technical-articles/what-is-a-programmable-pipetting-pump/",
+                "label": "Qu’est-ce qu’une pompe de pipetage automatique programmable à déplacement d’air ? Une autre configuration"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Questions fréquentes",
+    "faqItems": [],
+    "cta": {
+      "title": "Choisir à partir de la tâche de pipetage",
+      "description": "Évaluez le volume, le liquide, les récipients et le nombre de répétitions pour définir une configuration automatique.",
+      "contactLabel": "Contacter un ingénieur",
+      "productsLabel": "Voir les pompes",
+      "productsHref": "/fr/products/pumps/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "manual-pipetting",
+      "label": "Pipetage manuel",
+      "children": [
+        {
+          "id": "manual-pipetting-steps",
+          "label": "Étapes opératoires"
+        },
+        {
+          "id": "manual-pipetting-tradeoffs",
+          "label": "Avantages et limites"
+        },
+        {
+          "id": "pipetting-accuracy",
+          "label": "Justesse et répétabilité"
+        }
+      ]
+    },
+    {
+      "id": "automated-pipetting-example",
+      "label": "Pipetage automatisé",
+      "children": [
+        {
+          "id": "automated-pipetting-components",
+          "label": "Rôle des composants"
+        },
+        {
+          "id": "automated-pipetting-cycle",
+          "label": "Cycle par récipient"
+        },
+        {
+          "id": "automated-pipetting-tradeoffs",
+          "label": "Avantages et limites"
+        },
+        {
+          "id": "automated-pipetting-verification",
+          "label": "Vérification du volume"
+        },
+        {
+          "id": "pipetting-further-reading",
+          "label": "Pour aller plus loin"
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "label": "Pipetage manuel",
+      "description": "L’opérateur coordonne les étapes",
+      "steps": [
+        "Aspirer le liquide",
+        "Déplacer l’outil",
+        "Distribuer à la cible",
+        "Échantillon suivant"
+      ]
+    },
+    {
+      "label": "Exemple automatisé",
+      "description": "Le programme coordonne le matériel",
+      "steps": [
+        "La pompe aspire",
+        "La vanne commute",
+        "Distribuer par l’aiguille",
+        "Avancer le plateau"
+      ]
+    }
+  ],
+  "subject": {
+    "about": [
+      "Pipetage",
+      "Pipetage manuel",
+      "Pipetage automatisé"
+    ],
+    "mentions": [
+      "Pompe à seringue",
+      "Vanne de commutation",
+      "Biais moyen",
+      "Coefficient de variation CV"
+    ]
+  },
+  "cover": {
+    "title": "Qu’est-ce que le pipetage ?",
+    "subtitle": "Transférer un volume défini d’une source vers une destination",
+    "footer": "Vérifier séparément le volume réglé, la séquence et le résultat réel."
+  }
+}

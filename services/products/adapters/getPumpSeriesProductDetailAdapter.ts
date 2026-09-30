@@ -14,6 +14,7 @@ import { getPistonPumpLocalizedContent } from "@/data/products/detail/applicatio
 
 import { getCompactPumpContent } from "@/data/products/detail/applications/compact-pump-content";
 import { getEaPumpContent } from "@/data/products/detail/applications/ea-pump-content";
+import { getPistonPumpApplicationAreas } from "@/data/products/detail/applications/piston-pump-application-areas";
 import {
   PLUNGER_PUMP_CARD_HEADING_ZH_BY_MODEL,
   PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL,
@@ -599,6 +600,9 @@ export function getPumpSeriesProductDetailAdapter(
 
   const eaContent = getEaPumpContent(toText(record.productId), locale);
   const compactContent = getCompactPumpContent(toText(record.productId), locale);
+  const pistonPumpApplicationAreas = locale === "en" && (eaContent || compactContent)
+    ? getPistonPumpApplicationAreas(toText(record.productId))
+    : [];
   const cardHeading = eaContent || compactContent
     ? (locale === "zh" ? PLUNGER_PUMP_CARD_HEADING_ZH_BY_MODEL : PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL)[toText(record.productId).toUpperCase()]
     : "";
@@ -635,6 +639,7 @@ export function getPumpSeriesProductDetailAdapter(
     advantages: getDetailDescription(candidates, locale),
     description: getDetailDescription(candidates, locale).join("\n\n"),
     commonApplications: getCommonApplications(candidates, locale),
+    ...(pistonPumpApplicationAreas.length ? { applicationAreas: pistonPumpApplicationAreas } : {}),
     ...(compactContent ? { compactDetailContent: true, applicationDetails: compactContent.applicationDetails, seoTitle: compactContent.seoTitle, metaDescription: compactContent.metaDescription, ...(toText(record.productId).startsWith("sm-") ? { datasheetId: "sm-series-en" } : {}) } : {}),
     ...(eaContent ? { eaDetailContent: true, applicationDetails: eaContent.applicationDetails } : {}),
 

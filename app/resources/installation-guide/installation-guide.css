@@ -1117,6 +1117,19 @@ button.installation-guide-card {
 
 /* INSTALLATION_GUIDE_MODAL_PLAYER_END */
 
+/* Keep the title and direct YouTube link visible below embedded players. */
+.installation-guide-modal[data-player-type="iframe"] {
+  width: min(1360px, calc(100vw - 48px), calc((100dvh - 180px) * 16 / 9));
+}
+.installation-guide-modal-title a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1c3768;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* INSTALLATION_GUIDE_REAL_COVERS_START */
 
 /* 教程卡片使用导入的真实封面 */

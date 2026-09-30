@@ -159,17 +159,17 @@ export const datasheetEnItems: DatasheetItem[] = [
   {
     id: "rpl-p635-p15-valveless-pump",
     category: "pump",
-    keywords: "RPL P6.35 P15 valveless pump ceramic piston 50 1200 uL",
-    title: "RPL-P6.35 / RPL-P15 Valveless Pump Datasheet",
+    keywords: "RPL P6.35 P15 valveless metering pump ceramic piston reagent dispensing titration filling",
+    title: "RPL-P6.35 / RPL-P15 Valveless Metering Pump Datasheet",
     label: "Pumps",
     language: "English",
     version: "001",
     update: "2025-07",
     description:
-      "A combined datasheet for RPL-P6.35 and RPL-P15 valveless pumps, covering precision metering ranges from 50 µL to 1200 µL.",
+      "Combined RPL-P6.35 / RPL-P15 valveless metering pump datasheet, version 001 (2025-07), covering displacement, wetted materials, ports, installation and drive configuration.",
     image:
       "/images/products/pumps/product-types/valveless-pumps/foreach-valveless-pumps-product-type-intro.webp",
-    productHref: "/en/products/pumps/valveless-pumps",
+    productHref: "/en/products/pumps/valveless-metering-pump/",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-121b-2507-00001-001-en-rpl-valveless-pump.pdf",
     actionType: "download",
@@ -352,7 +352,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "HP 2-position, 6-port high-pressure valve with a vent path for pressure-resistant liquid-path switching.",
     image:
       "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
-    productHref: "/en/products/valves/high-pressure-valves",
+    productHref: "/en/products/valves/high-pressure-valves/hp/",
     downloadHref:
       "/downloads/resources/datasheets/en/Valves/ps-120c-2604-00001-001-en-hp-2-position-6-port-with-vent-high-pressure-valve.pdf",
     actionType: "download",

@@ -1,0 +1,157 @@
+{
+  "description": "La FOREACH HP-26SSU3204 est une vanne rotative haute pression à 2 positions et 6 voies, dotée d’une position d’évent distincte et d’une pression de service maximale de 25 MPa. Elle commute les circuits de chargement, d’injection et d’évacuation de l’air dans les échantillonneurs automatiques HPLC. Associée à une boucle externe, elle prépare l’échantillon en position de chargement, insère la boucle dans le circuit de la phase mobile en position d’injection et ouvre un circuit dédié en position d’évent.\n\nLa vanne comporte des raccordements 10-32 UNF, un passage de 0,4 mm et un volume interne de 0,8 μL, avec un stator en SUS316L et un rotor en polymère. Pour l’intégrer à un instrument analytique, vérifiez le schéma fluidique, la pression maximale du système, la compatibilité avec l’échantillon et la phase mobile, ainsi que la séquence de commutation et d’évacuation de l’air.",
+  "commonApplications": [
+    "Échantillonnage automatique HPLC",
+    "Commutation de boucle d’échantillonnage",
+    "Évacuation de l’air du circuit"
+  ],
+  "applicationDetails": {
+    "tabLabel": "Applications",
+    "title": "Applications courantes",
+    "intro": [
+      "En chromatographie, la vanne commute les circuits. Le mécanisme de chargement introduit l’échantillon et la pompe de phase mobile assure le débit sous haute pression. Les termes vanne d’injection, de commutation de boucle ou d’échantillonneur automatique décrivent son rôle dans le circuit réel."
+    ],
+    "items": [
+      {
+        "title": "Échantillonnage HPLC : chargement et injection",
+        "paragraphs": [
+          "En position de chargement, l’échantillon entre dans la boucle. En position d’injection, la boucle est raccordée à la phase mobile pour entraîner l’échantillon dans le circuit chromatographique. Ce composant est souvent appelé vanne d’injection ou vanne d’échantillonneur automatique.",
+          "HP-26SSU3204 fonctionne avec une boucle externe dans un circuit à deux positions et six voies. En injection à boucle pleine, la boucle détermine principalement le volume injecté ; en remplissage partiel, le dosage par le mécanisme de chargement intervient également. Définissez ensemble le volume d’injection, le volume d’échantillon disponible et la méthode de remplissage."
+        ]
+      },
+      {
+        "title": "Circuits analytiques : raccordement et isolement de la boucle",
+        "paragraphs": [
+          "La commutation permet de charger un volume fixe d’échantillon avant de raccorder la boucle au circuit principal. Le volume supplémentaire et une mauvaise géométrie des raccords peuvent accroître la dispersion de la bande d’échantillon.",
+          "Évaluez le volume extracolonne à partir de la longueur et du diamètre intérieur réels des tubes et de la géométrie des raccords. Les connexions des six voies sont définies par la conception ; il ne s’agit ni de six vannes indépendantes ni d’un sélecteur de réactifs multiposition."
+        ]
+      },
+      {
+        "title": "Cycle d’injection : évacuation de l’air et rétablissement du circuit",
+        "paragraphs": [
+          "Les bulles peuvent perturber le remplissage de la boucle et les variations de pression. L’instrument peut ouvrir la voie d’évent dans la position prévue avant le chargement et l’injection suivants. Cette opération d’entretien du circuit est distincte du réglage du volume injecté.",
+          "HP possède une position d’évent distincte. Raccordez cette conduite selon le schéma et les instructions, en coordonnant la pression avec les commandes de commutation. Cette voie n’est pas un dégazeur automatique et ne doit pas être ouverte sans avoir vérifié les conditions de pression."
+        ]
+      }
+    ],
+    "selectionNote": {
+      "title": "Informations pour le choix de la configuration",
+      "paragraphs": [
+        "Précisez les pressions maximales de service et de commutation, le volume d’injection, la boucle et sa méthode de remplissage, l’échantillon et la phase mobile, les raccordements et la séquence d’évacuation de l’air. Confirmez la numérotation des ports et les exigences de commande de HP-26SSU3204."
+      ]
+    }
+  },
+  "faqs": [
+    {
+      "question": "Que signifient deux positions, six voies et un évent ?",
+      "answer": "Deux positions et six voies décrivent les connexions principales de chargement et d’injection ; une position d’évent s’y ajoute. La spécification définit 1–2, 3–4 et 5–6 en injection ; 1–6, 2–3 et 4–5 en chargement ; et 3–7 pour l’évent. Vérifiez la numérotation, la position et la séquence de commande sur le schéma du modèle."
+    },
+    {
+      "question": "Le volume interne de 0,8 μL est-il le volume injecté, et comment choisir la boucle ?",
+      "answer": "0,8 μL désigne le volume interne de la vanne. À boucle pleine, une quantité suffisante d’échantillon remplace le liquide dans la boucle, qui détermine principalement le volume injecté. En remplissage partiel, le mécanisme de chargement dose l’échantillon dans une boucle de capacité adaptée. Tenez compte de la quantité disponible, de la répétabilité et de la méthode ; l’excédent chargé n’est pas nécessairement injecté."
+    },
+    {
+      "question": "Une limite de 25 MPa convient-elle à tous les systèmes HPLC ou UHPLC ?",
+      "answer": "Le nom du système ne suffit pas. 25 MPa est la pression de service maximale de ce modèle. Comparez les pressions stables et les transitoires de commutation aux limites des tubes, de la boucle et des raccords. Le composant le moins résistant fixe la limite du circuit."
+    },
+    {
+      "question": "Tout raccord 10-32 UNF peut-il être monté directement ?",
+      "answer": "Vérifiez aussi le diamètre extérieur du tube, la géométrie de l’extrémité, la profondeur d’insertion et les joints. Un filetage identique ne garantit ni une géométrie compatible ni une bonne étanchéité sous haute pression."
+    },
+    {
+      "question": "Que vérifier d’abord si les injections successives varient ?",
+      "answer": "Vérifiez le remplissage de la boucle, les bulles dans l’échantillon ou la phase mobile, la position de vanne, le temps de maintien en injection, les fuites et l’usure du joint de rotor. La répétabilité dépend du circuit d’injection complet, pas seulement du temps de commutation."
+    },
+    {
+      "question": "Comment évaluer les matériaux en contact avec le fluide et la durée de vie ?",
+      "answer": "Le stator est en SUS316L et le rotor en polymère. Vérifiez leur compatibilité avec la composition et la concentration du solvant, la température et les conditions de nettoyage. Les 150 000 cycles de la spécification proviennent d’essais à l’eau pure et ne garantissent pas cette durée avec tous les fluides."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Modèle",
+      "value": "HP-26SSU3204"
+    },
+    {
+      "label": "Tension nominale",
+      "value": "24 V"
+    },
+    {
+      "label": "Courant nominal",
+      "value": "2 A"
+    },
+    {
+      "label": "Puissance nominale",
+      "value": "48 W"
+    },
+    {
+      "label": "Rapport de réduction du moteur",
+      "value": "5:1"
+    },
+    {
+      "label": "Configuration de la vanne",
+      "value": "2 positions, 6 voies et position d’évent distincte"
+    },
+    {
+      "label": "Dimensions extérieures",
+      "value": "L × l × H : 42 × 42 × 123,5 mm"
+    },
+    {
+      "label": "Dimensions de montage et filetage",
+      "value": "Dimensions de positionnement : 19 × 20 mm ; filetage × profondeur : M3 × 10 mm"
+    },
+    {
+      "label": "Filetage des ports",
+      "value": "10-32 UNF"
+    },
+    {
+      "label": "Pression de service maximale",
+      "value": "25 MPa"
+    },
+    {
+      "label": "Diamètre de passage",
+      "value": "0.4 mm"
+    },
+    {
+      "label": "Temps de commutation entre voies adjacentes",
+      "value": "100 ms"
+    },
+    {
+      "label": "Durée de vie",
+      "value": "150 000 cycles (eau pure)"
+    },
+    {
+      "label": "Bruit en fonctionnement",
+      "value": "<60 dB"
+    },
+    {
+      "label": "Volume interne",
+      "value": "0.8 μL"
+    },
+    {
+      "label": "Matériau en contact — stator",
+      "value": "SUS316L"
+    },
+    {
+      "label": "Matériau en contact — rotor",
+      "value": "Polymère"
+    },
+    {
+      "label": "Température ambiante",
+      "value": "0–40 °C (sans condensation)"
+    },
+    {
+      "label": "Humidité ambiante",
+      "value": "0–93% ±3 RH à 40 °C (sans condensation)"
+    },
+    {
+      "label": "Température de stockage et de transport",
+      "value": "−40–55 °C (sans gel ni condensation)"
+    }
+  ],
+  "bottomCta": {
+    "title": "Besoin de confirmer la configuration de la vanne HP ?",
+    "description": "Précisez les pressions maximales de service et de commutation, le volume d’injection, la boucle et sa méthode de remplissage, l’échantillon et la phase mobile, les raccordements et la séquence d’évacuation de l’air. Confirmez la numérotation des ports et les exigences de commande de HP-26SSU3204.",
+    "buttonText": "Contacter un ingénieur"
+  }
+}

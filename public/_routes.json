@@ -1,27 +1,31 @@
 {
-    "version":  1,
-    "include":  [
-                    "/cn/history.aspx",
-                    "/cn/NewsInfo.aspx",
-                    "/cn/ProductIndex.aspx",
-                    "/cn/contact.aspx",
-                    "/cn/Index.aspx",
-                    "/en/history.aspx",
-                    "/en/News.aspx",
-                    "/en/DownList.aspx",
-                    "/en/ProductIndex.aspx",
-                    "/en/JobList.aspx",
-                    "/en/aboutInfo.aspx",
-                    "/en/NewsList.aspx",
-                    "/en/contact.aspx",
-                    "/api/inquiry/*",
-                    "/api/diagnostics/*",
-                    "/_AMapService/*",
-                    "/",
-                    "/baidu_verify_codeva-3SytZbh1AT.html",
-                    "/ByteDanceVerify.html"
-                ],
-    "exclude":  [
-
-                ]
+  "version": 1,
+  "include": [
+    "/cn/history.aspx",
+    "/cn/NewsInfo.aspx",
+    "/cn/ProductIndex.aspx",
+    "/cn/contact.aspx",
+    "/cn/Index.aspx",
+    "/en/history.aspx",
+    "/en/News.aspx",
+    "/en/DownList.aspx",
+    "/en/ProductIndex.aspx",
+    "/en/JobList.aspx",
+    "/en/aboutInfo.aspx",
+    "/en/NewsList.aspx",
+    "/en/contact.aspx",
+    "/api/inquiry/*",
+    "/api/diagnostics/*",
+    "/_AMapService/*",
+    "/",
+    "/baidu_verify_codeva-3SytZbh1AT.html",
+    "/ByteDanceVerify.html",
+    "/products/pumps/pipetting-pumps/*",
+    "/en/products/pumps/pipetting-pumps/*",
+    "/es/products/pumps/pipetting-pumps/*",
+    "/fr/products/pumps/pipetting-pumps/*",
+    "/ko/products/pumps/pipetting-pumps/*",
+    "/ru/products/pumps/pipetting-pumps/*"
+  ],
+  "exclude": []
 }

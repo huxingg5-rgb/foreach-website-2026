@@ -1,0 +1,27 @@
+/* Preserve each selector diagram's natural height and legible port labels. */
+.article [id="rotary-ports"] [data-article-gallery] img {
+  aspect-ratio: auto;
+}
+
+/* Keep the existing article layout; stack diagrams and flow steps on narrow screens. */
+@media (max-width: 600px) {
+  .article [id="rotary-ports"] [data-article-gallery] {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .article [data-article-figure] ol[data-nodes] {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .article [data-article-figure] ol[data-nodes] li {
+    min-height: 62px;
+    padding: 10px 14px;
+  }
+  .article [data-article-figure] ol[data-nodes] li > span[aria-hidden] {
+    left: 50%;
+    top: -23px;
+    width: 22px;
+    height: 22px;
+    transform: translateX(-50%) rotate(90deg);
+  }
+}

@@ -1,9 +1,21 @@
 "use client";
+import {getValveSeriesRoute,getValveSelectionPath,getHpValveDetailPath} from "@/data/products/selection/valve-routes";
+import { expandSolenoidCards, getSolenoidContent, solenoidConfigurations, solenoidImage } from "@/data/products/detail/solenoid-content";
+import { expandMrv3Cards, getMrv3Content } from "@/data/products/detail/mrv3-content";
+import { getMrv3SeriesImage } from "@/data/products/selection/mrv3-series-image";
+import { normalizePipettingPath } from "@/data/products/selection/pipetting-pump-routes";
+import { getPipettingCategoryLabel } from "@/data/products/selection/pipetting-pump-breadcrumbs";
 
 import { normalizePistonPumpPublicName } from "@/data/products/piston-pump-public-name";
+import {
+  getValvelessPumpPath,
+  localizeValvelessPumpCategoryPath,
+  VALVELESS_PUMP_CATEGORY_LABEL_ZH,
+} from "@/data/products/selection/valveless-pump-routes";
 
 import { Suspense, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { getPipettingPath, pipettingSeriesFilters } from "@/data/products/selection/pipetting-pump-seo";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
@@ -18,6 +30,7 @@ import SitePageShell from "@/components/layout/SitePageShell";
 import ProductSelectionStructuredData from "./ProductSelectionStructuredData";
 import { getProductSelectionCardName } from "./ProductSelectionCard";
 import {
+  getCategoryHrefById,
   getProductTypeFilterOptionsByCategory,
   getProductTypeHrefByIds,
   getSeriesFilterOptionsByProductType,
@@ -1143,6 +1156,7 @@ function getText(
 }
 
 function getTaxonomyLabel(locale: SelectionLocale, id: string) {
+  if (id === "valveless-pump") return locale === "zh" ? VALVELESS_PUMP_CATEGORY_LABEL_ZH : getLocalizedFilterOptionLabel("无阀泵", locale);
   const item = selectionTaxonomyItems.find((entry) => entry.id === id);
 
   return getText(locale, item?.label, id);
@@ -1634,6 +1648,10 @@ function normalizeFinalProductDetailHref(
 
 
 function makeDetailHref(product: ProductSelectionProduct) {
+  // Resolve authored valve families before legacy material/tubing text matching.
+  if (product.categoryId === "valves" && product.seriesId === "6010" && solenoidConfigurations.some(item => item.slug === product.productId)) {
+    return `/products/valves/solenoid-valves/${product.productId}/`;
+  }
   /* FEMALE_THREAD_ADAPTER_DETAIL_HREF_START */
   /*
    * 内螺纹互转接头详情地址：
@@ -2763,6 +2781,10 @@ function makeDetailHref(product: ProductSelectionProduct) {
     避免生成 /products/valves/undefined/。
   */
   if ((product as any)?.categoryId === "valves") {
+    if (product.productId === "hp-3-position-7-port-high-pressure-valve") return getHpValveDetailPath("zh");
+    if (product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId)) {
+      return `/products/valves/rotary-valves/${product.productId}/`;
+    }
     const rawHref = String(
       (product as any).detailHref ||
         (product as any).href ||
@@ -2831,9 +2853,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
       .filter(Boolean)
       .pop();
 
-    return slug
-      ? `/products/pumps/valveless-pumps/${slug}`
-      : "/products/pumps/valveless-pumps";
+    return getValvelessPumpPath("zh", slug);
   }
 
   if (isSyringePump) {
@@ -3203,8 +3223,7 @@ function matchesActiveProductType(
   }
 
   /*
-   * 阀系列是统一产品类别，
-   * 同时匹配旋转阀、高压阀和电磁阀。
+   * 兼容旧的阀系列筛选值，按全部系列处理。
    */
   if (
     categoryId === "valves" &&
@@ -3240,8 +3259,8 @@ function matchesActiveProductType(
 function getCategoryDefaultProductTypeId(
   categoryId: string
 ) {
-  return categoryId === "valves"
-    ? "valve-series"
+  return categoryId === "pumps" || categoryId === "valves"
+    ? ""
     : getFirstProductTypeId(categoryId);
 }
 
@@ -3425,7 +3444,7 @@ export default function ProductSelectionClient({
   }, [activeCategoryId, categoryItems]);
 
   const categoryProducts = useMemo(() => {
-    return getProductsByCategory(activeCategoryId).map((product) =>
+    return getProductsByCategory(activeCategoryId).flatMap(product => expandMrv3Cards(product, locale)).flatMap(product => expandSolenoidCards(product, locale)).map((product) =>
       applyDiaphragmPumpReferenceCard(product, locale),
     );
   }, [activeCategoryId, locale]);
@@ -3519,33 +3538,16 @@ export default function ProductSelectionClient({
         optionMap.values()
       );
 
-    /* VALVE_SINGLE_CATEGORY_FINAL_START */
-
-    /*
-     * 阀系列左侧不再显示旋转阀、高压阀、电磁阀三个选项。
-     * 产品类别下只保留一个阀系列。
-     */
-    if (
-      activeCategoryId ===
-      "valves"
-    ) {
+    if (activeCategoryId === "valves") {
       return [
-        {
-          value: "valve-series",
-          label:
-            locale === "zh"
-              ? "阀系列"
-              : locale === "en"
-                ? "Valve Series"
-                : getLocalizedFilterOptionLabel(
-                    "阀系列",
-                    locale
-                  ),
-        },
-      ];
+        { value: "旋转阀", series: "MRV3", label: "多通道旋转阀" },
+        { value: "高压阀", series: "HP", label: "高压旋转阀" },
+        { value: "电磁阀", series: "SV10", label: "电磁阀" },
+      ].map(({ value, series, label }) => ({
+        value,
+        label: `${series} ${getLocalizedFilterOptionLabel(label, locale)}`,
+      }));
     }
-
-    /* VALVE_SINGLE_CATEGORY_FINAL_END */
 
     if (
       activeCategoryId ===
@@ -3621,14 +3623,25 @@ export default function ProductSelectionClient({
       groups.push({
         key: "productType",
         title:
-          activeCategoryId === "valves" && locale === "zh"
-            ? "产品类别"
+          activeCategoryId === "valves"
+            ? {
+                zh: "产品系列",
+                en: "Product Series",
+                es: "Series de productos",
+                fr: "Séries de produits",
+                ko: "제품 시리즈",
+                ru: "Серии продукции",
+              }[locale]
             : activeCategoryId === "fittings" && locale === "zh"
               ? "产品种类"
               : pageText.productTypeLabel,
         inputType: "single",
         options: productTypeOptions,
       });
+    }
+
+    if (activeCategoryId === "valves" && ["旋转阀", "电磁阀"].includes(activeProductTypeId)) {
+      return groups;
     }
 
     activeFilterLabels.forEach((label: ProductSelectionFilterLabel) => {
@@ -3846,10 +3859,20 @@ export default function ProductSelectionClient({
     selectedFilters.filter01 || []
   )[0];
   const activeProductTypeIntroVariant =
-    locale === "zh" && ["plunger-pump", "valveless-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId)
+    activeProductTypeId === "valveless-pump" || activeProductTypeId === "pipette-pump" || (locale === "zh" && ["plunger-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId))
       ? activeSeriesFilterValue
       : initialFilters?.filter01?.[0];
-  const activeProductTypeIntro =
+  const mrv3IntroCopy = activeCategoryId === "valves"
+    ? activeProductTypeId === "旋转阀" ? getMrv3Content("rotary-valves", locale)
+      : activeProductTypeId === "电磁阀" ? getSolenoidContent("solenoid-valves", locale) : null
+    : null;
+  const activeProductTypeIntro = mrv3IntroCopy ? {
+    title: mrv3IntroCopy.seriesTitle,
+    paragraphs: mrv3IntroCopy.introParagraphs,
+    image: activeProductTypeId === "电磁阀"
+      ? { src: solenoidImage, alt: mrv3IntroCopy.title }
+      : getMrv3SeriesImage(locale),
+  } :
     (activeProductTypeId === "diaphragm-pump"
       ? getDiaphragmPumpCategoryIntro(initialFilters?.filter01?.[0], locale)
       : activeProductTypeId === "plunger-pump"
@@ -3859,7 +3882,7 @@ export default function ProductSelectionClient({
           : getInstrumentCategoryIntro(activeProductTypeId, selectedFilters.filter01?.size === 1 ? activeSeriesFilterValue : undefined, locale)) ||
     getProductTypeIntroByIds(activeCategoryId, activeProductTypeId, locale);
   const activeProductTypeIntroHeading = activeProductTypeIntro?.title || "";
-  const compactSelectionLabel = locale === "zh" ? ({"pipette-pump":"移液泵","syringe-pump":"注射泵","高压阀":"高压阀","high-pressure-valves":"高压阀","电磁阀":"电磁阀","solenoid-valves":"电磁阀","valveless-pump":"无阀泵"} as Record<string,string>)[activeProductTypeId] : undefined;
+  const compactSelectionLabel = activeProductTypeId === "valveless-pump" ? getTaxonomyLabel(locale, activeProductTypeId) : locale === "zh" ? ({"pipette-pump":"移液泵","syringe-pump":"注射泵","高压阀":"高压阀","high-pressure-valves":"高压阀","电磁阀":"电磁阀","solenoid-valves":"电磁阀"} as Record<string,string>)[activeProductTypeId] : undefined;
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
 
@@ -4137,6 +4160,33 @@ export default function ProductSelectionClient({
     });
   }, [activeProductTypeId, filterGroups, initialFilters]);
 
+  // Upgrade legacy query-based valve lists on both the product hub and valve hub.
+  // Preserve unrelated campaign/search parameters and the current fragment.
+  useEffect(() => {
+    if ((requestedCategoryId || initialCategoryId) !== 'valves' || !getValveSeriesRoute(requestedProductTypeId)) return;
+    const query = new URLSearchParams(window.location.search);
+    if (!query.has('productType')) return;
+    query.delete('category');
+    query.delete('productType');
+    const suffix = query.toString();
+    router.replace(getValveSelectionPath(locale,requestedProductTypeId) + (suffix ? '?' + suffix : '') + window.location.hash, {scroll:false});
+  }, [requestedCategoryId,requestedProductTypeId,initialCategoryId,locale,router]);
+
+  function navigateCategorySelection(categoryId: string, productTypeId?: string) {
+    const categoryHref = getCategoryHrefById(categoryId);
+    const href = categoryId === "valves" && getValveSeriesRoute(productTypeId)
+      ? getValveSelectionPath(locale,productTypeId)
+      : localizeProductDetailHref(
+      productTypeId
+        ? `${categoryHref}${categoryHref.includes("?") ? "&" : "?"}productType=${encodeURIComponent(productTypeId)}`
+        : categoryHref
+    );
+
+    if (`${window.location.pathname}${window.location.search}` !== href) {
+      router.push(href, { scroll: false });
+    }
+  }
+
   function handleCategoryChange(categoryId: string) {
     const firstProductTypeId =
       getCategoryDefaultProductTypeId(categoryId);
@@ -4154,6 +4204,7 @@ export default function ProductSelectionClient({
     setSearchKeyword("");
     setMobileCategoryOpen(false);
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(firstProductTypeId));
+    navigateCategorySelection(categoryId);
   }
 
   function toggleMobileFilterGroup(key: ProductSelectionFilterGroup["key"]) {
@@ -4186,22 +4237,14 @@ export default function ProductSelectionClient({
       return;
     }
 
-    /*
-     * 阀系列是统一产品类别。
-     * 点击后保持阀系列选中，并显示全部三张阀卡片。
-     */
-    if (
-      activeCategoryId ===
-      "valves"
-    ) {
+    // 阀系列保持列表视图，并将筛选写入 URL，供刷新及前进后退恢复。
+    if (activeCategoryId === "valves") {
       pendingFilterRef.current = {
         filterCategory: activeCategoryId,
         filterName: "product_type_id",
-        filterValue: "valve-series",
+        filterValue: productTypeId || "all",
       };
-      setActiveProductTypeId(
-        "valve-series"
-      );
+      setActiveProductTypeId(productTypeId);
 
       setSelectedFilters(
         {}
@@ -4217,10 +4260,12 @@ export default function ProductSelectionClient({
 
       setMobileOpenFilterGroups(
         getDefaultMobileOpenFilterGroups(
-          "valve-series"
+          productTypeId
         )
       );
 
+      setCurrentProductPage(1);
+      navigateCategorySelection(activeCategoryId, productTypeId);
       return;
     }
 
@@ -4971,6 +5016,9 @@ function isFilterOptionActive(
       };
       setActiveProductTypeId("");
       setSelectedFilters({});
+      if (activeCategoryId === "valves") {
+        navigateCategorySelection(activeCategoryId);
+      }
       return;
     }
 
@@ -5042,25 +5090,39 @@ function isFilterOptionActive(
     });
   }
   function resetCurrentFilters() {
-    const firstProductTypeId =
-      getCategoryDefaultProductTypeId(activeCategoryId);
+    if (activeProductTypeId === "pipette-pump") {
+      setSelectedFilters({});
+      setSearchInputValue("");
+      setSearchKeyword("");
+      router.push(getPipettingPath(locale));
+      return;
+    }
+    // A pump type route keeps its type when clearing configuration filters.
+    const defaultProductTypeId =
+      activeCategoryId === "pumps" && initialCategoryId === "pumps" && initialProductTypeId
+        ? initialProductTypeId
+        : getCategoryDefaultProductTypeId(activeCategoryId);
 
     pendingFilterRef.current = {
       filterCategory: activeCategoryId,
       filterName: "all_filters",
       filterValue: "default",
     };
-    setActiveProductTypeId(firstProductTypeId);
-    setSelectedFilters(getDefaultSelectedFilters(activeCategoryId, firstProductTypeId));
+    setActiveProductTypeId(defaultProductTypeId);
+    setSelectedFilters(getDefaultSelectedFilters(activeCategoryId, defaultProductTypeId));
     setSearchInputValue("");
     setSearchKeyword("");
-    setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(firstProductTypeId));
+    setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(defaultProductTypeId));
+    if (activeCategoryId === "valves") {
+      navigateCategorySelection(activeCategoryId);
+    }
   }
 
   function localizeProductDetailHref(
     href: string,
     product?: ProductSelectionProduct,
   ) {
+    href = normalizePipettingPath(localizeValvelessPumpCategoryPath(href, locale));
     if (
       locale === "zh" ||
       !href.startsWith("/") ||
@@ -5138,14 +5200,27 @@ function isFilterOptionActive(
     addItem(createProductCartItem(product));
   }
 
-  const breadcrumbItems = [
+  const pipettingSeriesIndex = pipettingSeriesFilters.indexOf(initialFilters?.filter01?.[0] || "");
+  const breadcrumbItems = activeCategoryId === 'valves' ? [
+    {label:pageText.breadcrumbHome,href:locale === 'zh' ? '/' : '/' + locale + '/'},
+    {label:pageText.breadcrumbCurrent,href:locale === 'zh' ? '/products/' : '/' + locale + '/products/'},
+    {label:activeCategory.label,...(getValveSeriesRoute(activeProductTypeId) ? {href:getValveSelectionPath(locale)} : {})},
+    ...(getValveSeriesRoute(activeProductTypeId) ? [{label:productTypeOptions.find(option => option.value === activeProductTypeId)?.label || activeProductTypeId}] : []),
+  ] : activeProductTypeId === "pipette-pump" ? [
+    {label: pageText.breadcrumbHome, href: locale === "zh" ? "/" : `/${locale}/`},
+    {label: pageText.breadcrumbCurrent, href: locale === "zh" ? "/products/" : `/${locale}/products/`},
+    {label: getPipettingCategoryLabel(locale), ...(pipettingSeriesIndex >= 0 ? {href: getPipettingPath(locale)} : {})},
+    ...(pipettingSeriesIndex >= 0 ? [{label: pipettingSeriesIndex === 0 ? "SMTP2" : "SMTP4"}] : [])
+  ] : [
     {
       label: pageText.breadcrumbHome,
       href: locale === "zh" ? "/" : `/${locale}`,
     },
     {
       label: pageText.breadcrumbCurrent,
-      ...(compactSelectionLabel ? { href: "/products/" } : {}),
+      ...(compactSelectionLabel
+        ? { href: locale === "zh" ? "/products/" : `/${locale}/products/` }
+        : {}),
     },
     ...(compactSelectionLabel ? [{ label: compactSelectionLabel }] : []),
   ];
@@ -5230,9 +5305,14 @@ function isFilterOptionActive(
 
                 <ProductTypeIntroCopy
                   isPrimaryHeading={
+                    Boolean(mrv3IntroCopy) ||
+                    (activeCategoryId === "valves" && ["高压阀", "high-pressure-valves"].includes(activeProductTypeId)) ||
+                    activeProductTypeId === "syringe-pump" ||
                     activeProductTypeId === "diaphragm-pump" ||
                     activeProductTypeId === "plunger-pump" ||
-                    (locale === "zh" && ["valveless-pump", "pipette-pump", "syringe-pump"].includes(activeProductTypeId))
+                    activeProductTypeId === "valveless-pump" ||
+                    activeProductTypeId === "pipette-pump" ||
+                    (locale === "zh" && ["pipette-pump", "syringe-pump"].includes(activeProductTypeId))
                   }
                   key={`${activeProductTypeId || "none"}-${
                     activeProductTypeIntroVariant || "default"
@@ -5251,6 +5331,11 @@ function isFilterOptionActive(
         <section className="selection-section">
           <div className="selection-layout">
             <ProductFilterPanel
+              getOptionHref={(group, value) => {
+                if (!["syringe-pump", "pipette-pump"].includes(activeProductTypeId)) return undefined;
+                const href = getSeriesHrefByFilterValue(activeCategoryId, activeProductTypeId, group.key, value);
+                return href ? localizeProductDetailHref(href + "/") : undefined;
+              }}
               activeCategory={{
                 ...activeCategory,
                 description:
@@ -5284,7 +5369,7 @@ function isFilterOptionActive(
                 resultSuffix={
                   activeCategoryId === "valves" &&
                   locale === "zh"
-                    ? " 个阀系列"
+                    ? " 种配置"
                     : matchedProducts.length === 1
                       ? pageText.resultSingularSuffix || pageText.resultSuffix
                       : pageText.resultSuffix
@@ -5358,4 +5443,3 @@ function isFilterOptionActive(
 </div>
   );
 }
-

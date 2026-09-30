@@ -1,0 +1,458 @@
+{
+  "copy": {
+    "metadata": {
+      "title": "What Is Pipetting? Manual and Automated Workflows Compared",
+      "seoTitle": "What Is Pipetting? Manual vs. Automated Workflows | FOREACH",
+      "seoDescription": "Learn what pipetting is through a 100 µL example: manual steps, coordinated pump and valve operation, benefits, limitations, mean bias and repeatability CV.",
+      "coverImage": "/images/resources/technical-articles/what-is-pipetting/manual-and-automated-pipetting-en.webp",
+      "coverAlt": "Manual and automated pipetting workflows: an operator transfers liquid by hand, while a syringe pump, switching valve, needle and tray dispense into successive cups."
+    },
+    "deck": "Pipetting is the transfer of a specified volume of liquid from one location to another. Examples include moving 100 µL from a sample tube into a reaction vessel, or adding sample and diluent in a defined ratio.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Pipetting is the transfer of a specified volume of liquid from one location to another. Examples include moving 100 µL from a sample tube into a reaction vessel, or adding sample and diluent in a defined ratio."
+      },
+      {
+        "type": "paragraph",
+        "text": "Each transfer requires a known liquid source, destination and volume, followed by appropriate aspiration and dispensing. With a handheld tool, the operator performs and coordinates these tasks; in a fully automated workflow, equipment follows a programmed sequence. The same task—transferring 100 µL—helps explain the difference."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/what-is-pipetting/manual-and-automated-pipetting-en.webp",
+        "alt": "Manual and automated pipetting workflows: an operator transfers liquid by hand, while a syringe pump, switching valve, needle and tray dispense into successive cups.",
+        "width": 1200,
+        "height": 630,
+        "caption": "Both methods transfer a specified volume. An operator coordinates handheld pipetting; a program coordinates the equipment in automated pipetting."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Manual pipetting: the operator aspirates and transfers liquid",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "In manual pipetting, an operator transfers liquid with a handheld pipette or with a pipette and pipette controller. A mechanical handheld pipette relies on the operator to actuate aspiration and dispensing. An electronic handheld pipette can drive those actions, but a person still selects the sample, moves the tool and checks the destination."
+          },
+          {
+            "type": "subheading",
+            "title": "How does an operator complete one transfer?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Consider transferring 100 µL from a sample tube into a reaction vessel using a handheld pipette with a disposable tip."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Confirm the task and select the tool. Check the sample and destination, select a pipette and tip suitable for the target volume, and set 100 µL. Check both whether the working range includes that volume and how the tool performs at that specific volume.",
+              "Fit the tip and prepare to aspirate. Check tip seating and the seal, and complete the preparation required by the method. A poor fit between tip and pipette can affect aspiration and dispensing.",
+              "Immerse the tip and aspirate. Control position, immersion depth and aspiration, allowing liquid to enter the tip before withdrawing it. Look for obvious bubbles or leakage.",
+              "Move to the destination and dispense. Confirm the target vessel, then follow the method for dispensing speed, position and dwell time so the liquid enters the intended vessel.",
+              "Finish the transfer and prepare the next sample. Replace the tip according to sample and contamination-control requirements, record the completed sample, and continue."
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://milnepublishing.geneseo.edu/molecular-techniques/front-matter/pipetting/",
+                "label": "Reference: handheld pipetting procedure"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The operator makes decisions, positions the tool and controls the sequence. Looking at the tip can reveal obvious problems; the actual transferred volume still needs to be measured."
+          },
+          {
+            "type": "subheading",
+            "title": "Benefits and limitations of manual pipetting"
+          },
+          {
+            "type": "paragraph",
+            "text": "Handheld operation is easy to adjust. An operator can respond directly when a sample moves, an extra addition is needed or the liquid needs closer observation. This flexibility suits method development, small experiments and occasional additional samples. Conventional handheld tools take up little space and are generally easier to put into use than a complete automation system."
+          },
+          {
+            "type": "paragraph",
+            "text": "Multichannel and electronic tools can reduce some repetitive actions. Multichannel tools handle several positions at once, while electronic tools with repeat-dispensing functions can reduce the number of aspiration cycles. The operator still manages sample identification, tool movement and the transition between tasks."
+          },
+          {
+            "type": "paragraph",
+            "text": "Repetitive work continues to demand time and attention. Every aspiration, movement, dispense and tip change requires an action. As workload grows, the operator must maintain consistent technique, confirm sample order and keep records. Changes in pace, tip immersion depth and waiting time can affect the delivered volume."
+          },
+          {
+            "type": "subheading",
+            "title": "What do pipetting accuracy and repeatability mean in practice?"
+          },
+          {
+            "type": "paragraph",
+            "text": "For a 100 µL task, assess the average volume delivered and the variation between repeated results separately."
+          },
+          {
+            "type": "notice",
+            "text": "The following numbers are a calculation example only, not measured performance data for any device. Suppose repeated transfers under the same conditions have a mean volume of 99.5 µL and a standard deviation of 0.20 µL:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Metric",
+              "Example result",
+              "What it tells you"
+            ],
+            "rows": [
+              [
+                "Mean bias",
+                "99.5 − 100 = −0.5 µL",
+                "The average transfer is 0.5 µL below the target."
+              ],
+              [
+                "Relative mean bias",
+                "−0.5 ÷ 100 × 100% = −0.5%",
+                "Mean bias relative to the target volume, used to assess systematic error."
+              ],
+              [
+                "Repeatability CV",
+                "0.20 ÷ 99.5 × 100% ≈ 0.20%",
+                "Dispersion of repeated results relative to their mean under the same conditions."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "CV is the standard deviation divided by the mean, expressed here as a percentage. A small CV indicates closely grouped repeat results; a mean that differs from the target still requires investigation and adjustment. A CV of 0.20% does not mean every transfer has an error within ±0.20%."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/coefvari.htm",
+                "label": "Definition of CV"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Acceptance also depends on the allowable bias for the task. For example, if a task requires relative mean bias within ±1%, the corresponding mean-bias limit is ±1 µL at 100 µL and ±0.1 µL at 10 µL. This ±1% is an illustrative requirement, not a universal standard for manual or automated equipment. Repeatability limits must be specified separately."
+          },
+          {
+            "type": "paragraph",
+            "text": "Evaluate mean bias and repeatability at the target volume with the actual liquid and tips. The nominal volume range or the number of decimal places on a display is insufficient to judge performance."
+          }
+        ]
+      },
+      {
+        "title": "Fully automated pipetting: how does equipment fill a row of reaction cups?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Suppose each cup in a row must receive 100 µL of the same reagent. With a handheld tool, a person repeatedly aspirates, moves and dispenses. A configuration with a fixed dispensing needle and moving reaction cups illustrates how equipment can automate those actions. The 100 µL value is the target volume for this example."
+          },
+          {
+            "type": "subheading",
+            "title": "Which components perform which actions?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Tubing connects the reagent bottle to an electrically controlled three-way switching valve. The common port connects to the syringe; the other two ports connect to the bottle and the dispensing needle. The reaction cups sit on a motor-driven tray."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Component",
+              "Role in this example"
+            ],
+            "rows": [
+              [
+                "Motor-driven syringe pump",
+                "Retracts the syringe plunger to aspirate reagent and advances it to dispense; the programmed travel sets the target volume."
+              ],
+              [
+                "Electrically controlled three-way valve",
+                "Connects bottle to syringe during aspiration and syringe to needle during dispensing, isolating the other branch."
+              ],
+              [
+                "Fixed dispensing needle",
+                "Delivers the reagent into the reaction cup beneath it."
+              ],
+              [
+                "Motor-driven tray",
+                "Positions successive cups below the needle."
+              ],
+              [
+                "Control program",
+                "Sequences valve switching, plunger motion and tray positioning."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "This is one configuration for explaining automated dispensing; other automated pipetting architectures are also possible. Published automated liquid-handling research includes concrete implementations that coordinate syringe-pump volume, motion direction and valve position by program."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://www.mdpi.com/1420-3049/27/19/6665",
+                "label": "Example of programmed pump and valve control"
+              }
+            ]
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/products/pumps/syringe-pumps/solenoid-valve-syringe-pumps/",
+                "label": "FOREACH HMD solenoid-valve syringe pumps",
+                "suffix": ": explore syringe metering with solenoid-valve routing when evaluating fixed-needle dispensing tasks."
+              },
+              {
+                "href": "/en/products/pumps/syringe-pumps/rotary-valve-syringe-pumps/",
+                "label": "FOREACH HLD rotary-valve syringe pumps",
+                "suffix": ": explore an alternative routing configuration, checking valve ports and fluid connections against the number of sources and outlets."
+              },
+              {
+                "href": "/en/products/valves/",
+                "label": "FOREACH fluid-control valves",
+                "suffix": ": when selecting a separate switching valve, check port connections, wetted materials, pressure and control method."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "The pump and valve module provides metering and routing. Cup positioning, tray movement and coordination of all actions remain functions of the complete instrument. This example explains the workflow; volume performance must be verified with the selected syringe, tubing and needle."
+          },
+          {
+            "type": "subheading",
+            "title": "How does reagent reach one cup?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Before starting, the operator loads reagent and cups, sets the volume per cup and cup count, and primes and degasses the fluid path. The needle remains above the cup opening for the non-contact dispensing used in this example."
+          },
+          {
+            "type": "paragraph",
+            "text": "Step 1: aspirate from the reagent bottle. The valve connects the bottle to the syringe and closes the needle branch. The motor retracts the plunger, increasing the syringe chamber volume and drawing reagent through the tubing.",
+            "lead": "Step 1: aspirate from the reagent bottle."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-pipetting/automatic-pipetting-aspiration-en.svg",
+            "alt": "Aspiration path: the motor retracts the syringe plunger, drawing reagent from the bottle through the switching valve into the syringe.",
+            "width": 680,
+            "height": 166,
+            "caption": "Aspiration: reagent bottle → switching valve → syringe; the dispensing-needle branch is closed.",
+            "flowNodes": [
+              {
+                "label": "Reagent bottle",
+                "detail": "Liquid source"
+              },
+              {
+                "label": "Switching valve",
+                "detail": "Inlet connected"
+              },
+              {
+                "label": "Syringe",
+                "detail": "Plunger retracts"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Step 2: switch the path and dispense into the cup. After aspiration, the syringe pump stops. The valve connects the syringe to the needle and closes the bottle branch. The tray positions the first cup below the needle and stops. The motor then advances the plunger, sending reagent through the needle into the cup, and stops after the programmed travel corresponding to the target volume.",
+            "lead": "Step 2: switch the path and dispense into the cup."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-pipetting/automatic-pipetting-dispensing-en.svg",
+            "alt": "Dispensing path: the motor advances the syringe plunger, sending reagent through the switching valve and fixed needle into the reaction cup.",
+            "width": 680,
+            "height": 166,
+            "caption": "Dispensing: syringe → switching valve → needle → reaction cup; the bottle branch is closed and the target volume is 100 µL.",
+            "flowNodes": [
+              {
+                "label": "Syringe",
+                "detail": "Plunger advances"
+              },
+              {
+                "label": "Switching valve",
+                "detail": "Outlet connected"
+              },
+              {
+                "label": "Dispensing needle",
+                "detail": "Fixed position"
+              },
+              {
+                "label": "Reaction cup",
+                "detail": "Receives reagent"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Step 3: advance the tray and repeat. Once dispensing finishes, the tray motor places the next cup below the needle. The program switches the valve back to the inlet branch and repeats aspiration, valve switching and dispensing until the specified number of cups is complete.",
+            "lead": "Step 3: advance the tray and repeat."
+          },
+          {
+            "type": "paragraph",
+            "text": "The syringe pump moves the liquid, the valve selects its path, the tray brings the next cup to the dispensing position, and the program determines when each action occurs. The operator prepares the system before starting; equipment takes over repetitive aspiration, dispensing and positioning throughout the batch."
+          },
+          {
+            "type": "subheading",
+            "title": "What are the benefits of this automated workflow?"
+          },
+          {
+            "type": "paragraph",
+            "text": "When repeatedly dispensing the same reagent at the same volume, the operator does not have to pick up a tool, aspirate and align it with every cup. Verified plunger travel, aspiration and dispensing speeds, and cup sequence can be repeated by the program, reducing the influence of variations in manual timing."
+          },
+          {
+            "type": "paragraph",
+            "text": "The equipment does require cup positions, needle position and a dispensing program to be defined beforehand. Reagent changes require residual liquid in shared paths to be managed and cleaning effectiveness to be checked. Changes in cup type or volume require method adjustment and verification. For small or frequently changing tasks, include this preparation in the total time assessment."
+          },
+          {
+            "type": "subheading",
+            "title": "If the setting is 100 µL, how do you verify the delivered volume?"
+          },
+          {
+            "type": "paragraph",
+            "text": "A syringe pump controls dispensing through plunger displacement. Ideally, the effective cross-sectional area of the syringe multiplied by plunger travel equals the displaced volume. Bubbles, leaks and liquid left at the needle can cause the volume received by the cup to differ from the setting. Priming and degassing are therefore essential preparation for this example."
+          },
+          {
+            "type": "paragraph",
+            "text": "Measure the volume actually received by the cups, calculate mean bias and CV as described above, and check results at the start, middle and end of the batch. Programming a travel corresponding to 100 µL does not prove that every cup has received exactly 100 µL."
+          },
+          {
+            "type": "paragraph",
+            "text": "Manual pipetting lets an operator aspirate, transfer and dispense with flexibility for changes. Automation assigns repeatable actions to coordinated equipment. Choose according to how fixed the task is, how often it repeats, and the time needed for preparation and cleaning."
+          },
+          {
+            "type": "subheading",
+            "title": "Further reading"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "For transfers between containers using disposable tips, see the ",
+                "href": "/en/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/smtp2-1000ul/",
+                "label": "FOREACH SMTP2 programmable automatic air-displacement pipetting pump",
+                "suffix": ". This is another pipetting configuration; the complete instrument must still provide positioning and workflow control, with performance verified for the liquid, tips and target volume."
+              }
+            ]
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-programmable-syringe-pump/",
+                "label": "What is a programmable syringe pump? How the pump, valve and drive work together"
+              },
+              {
+                "href": "/en/resources/technical-articles/what-is-a-programmable-pipetting-pump/",
+                "label": "What is a programmable automatic air-displacement pipetting pump? Another pipetting configuration"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Frequently asked questions",
+    "faqItems": [],
+    "cta": {
+      "title": "Start with the pipetting task",
+      "description": "Assess automated dispensing configurations using the volume, liquid, containers and number of repetitions.",
+      "contactLabel": "Contact an engineer",
+      "productsLabel": "View pumps",
+      "productsHref": "/en/products/pumps/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "manual-pipetting",
+      "label": "Manual pipetting",
+      "children": [
+        {
+          "id": "manual-pipetting-steps",
+          "label": "Operating steps"
+        },
+        {
+          "id": "manual-pipetting-tradeoffs",
+          "label": "Benefits and limitations"
+        },
+        {
+          "id": "pipetting-accuracy",
+          "label": "Accuracy and repeatability"
+        }
+      ]
+    },
+    {
+      "id": "automated-pipetting-example",
+      "label": "Automated pipetting",
+      "children": [
+        {
+          "id": "automated-pipetting-components",
+          "label": "Component roles"
+        },
+        {
+          "id": "automated-pipetting-cycle",
+          "label": "Cup-by-cup cycle"
+        },
+        {
+          "id": "automated-pipetting-tradeoffs",
+          "label": "Benefits and limitations"
+        },
+        {
+          "id": "automated-pipetting-verification",
+          "label": "Volume verification"
+        },
+        {
+          "id": "pipetting-further-reading",
+          "label": "Further reading"
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "label": "Manual pipetting",
+      "description": "The operator coordinates each step",
+      "steps": [
+        "Aspirate liquid",
+        "Move the tool",
+        "Dispense to target",
+        "Next sample"
+      ]
+    },
+    {
+      "label": "Automated example",
+      "description": "A program coordinates the equipment",
+      "steps": [
+        "Pump aspirates",
+        "Valve switches path",
+        "Pump dispenses via needle",
+        "Tray advances"
+      ]
+    }
+  ],
+  "subject": {
+    "about": [
+      "Pipetting",
+      "Manual pipetting",
+      "Automated pipetting"
+    ],
+    "mentions": [
+      "Syringe pump",
+      "Switching valve",
+      "Mean bias",
+      "Coefficient of variation CV"
+    ]
+  },
+  "cover": {
+    "title": "What is pipetting?",
+    "subtitle": "Transfer a specified volume from a source to a destination",
+    "footer": "Check volume settings, action sequence and actual results separately."
+  }
+}

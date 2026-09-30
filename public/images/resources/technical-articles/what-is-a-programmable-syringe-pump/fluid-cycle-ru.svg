@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" role="img" xml:lang="ru">
+<title>Направление жидкости между источником, клапаном, шприцем и сосудом при заборе и выдаче</title><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#202020"/></marker></defs><rect width="800" height="540" fill="white"/>
+<g font-family="Arial, Microsoft YaHei, Malgun Gothic, sans-serif" fill="#181818"><path d="M400 20V465" stroke="#bbb"/>
+<text x="200" y="46" text-anchor="middle" font-size="36" font-weight="bold">01  Забор</text>
+<text x="200" y="82" text-anchor="middle" font-size="26">Источник → шприц</text>
+<rect x="35" y="110" width="330" height="70" rx="4" fill="white" stroke="#202020" stroke-width="2.5"/>
+<text x="200" y="157" text-anchor="middle" font-size="34">Источник</text>
+<path d="M200 193V227" fill="none" stroke="#202020" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="35" y="242" width="330" height="70" rx="4" fill="white" stroke="#202020" stroke-width="2.5"/>
+<text x="200" y="289" text-anchor="middle" font-size="34">Клапан выбора</text>
+<path d="M200 325V359" fill="none" stroke="#202020" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="35" y="374" width="330" height="70" rx="4" fill="white" stroke="#202020" stroke-width="2.5"/>
+<text x="200" y="421" text-anchor="middle" font-size="34">Шприц</text>
+<text x="600" y="46" text-anchor="middle" font-size="36" font-weight="bold">02  Выдача</text>
+<text x="600" y="82" text-anchor="middle" font-size="26">Шприц → приёмник</text>
+<rect x="435" y="110" width="330" height="70" rx="4" fill="white" stroke="#202020" stroke-width="2.5"/>
+<text x="600" y="157" text-anchor="middle" font-size="34">Шприц</text>
+<path d="M600 193V227" fill="none" stroke="#202020" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="435" y="242" width="330" height="70" rx="4" fill="white" stroke="#202020" stroke-width="2.5"/>
+<text x="600" y="289" text-anchor="middle" font-size="34">Клапан выбора</text>
+<path d="M600 325V359" fill="none" stroke="#202020" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="435" y="374" width="330" height="70" rx="4" fill="white" stroke="#202020" stroke-width="2.5"/>
+<text x="600" y="421" text-anchor="middle" font-size="34">Приёмник</text>
+<path d="M35 480H765" stroke="#bbb"/><text x="400" y="520" text-anchor="middle" font-size="30">Соединить путь до начала дозирования</text></g></svg>

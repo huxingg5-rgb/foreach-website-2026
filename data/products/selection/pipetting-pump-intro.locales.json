@@ -1,0 +1,130 @@
+{
+  "es": {
+    "category": {
+      "title": "Módulos de pipeteo por desplazamiento de aire para manipulación automatizada de líquidos",
+      "seoTitle": "Módulos de pipeteo por desplazamiento de aire | FOREACH",
+      "description": "Compare los módulos SMTP2 y SMTP4 de 100, 500 y 1000 μL para transferencia de muestras y dosificación de reactivos, con distintas opciones de control y detección.",
+      "paragraphs": [
+        "Los módulos de pipeteo por desplazamiento de aire FOREACH utilizan puntas desechables para aspirar y dispensar líquidos en analizadores automatizados, equipos de preparación de muestras y estaciones de laboratorio. Estas bombas de pipeteo permiten transferir muestras, añadir reactivos y preparar alícuotas. Las series SMTP2 y SMTP4 ofrecen capacidades nominales de 100 μL, 500 μL y 1000 μL.",
+        "Seleccione el módulo según los volúmenes de trabajo mínimo, habitual y máximo, junto con los requisitos de exactitud, repetibilidad y tiempo de ciclo. Considere las propiedades del líquido, la compatibilidad de las puntas, el espacio de instalación y la arquitectura de control del instrumento. La capacidad nominal y la resolución del accionamiento son especificaciones distintas; el rendimiento debe verificarse con el líquido, las puntas y los parámetros de aspiración y dispensación previstos.",
+        "SMTP2 integra accionamiento y control con detección de nivel de líquido, obstrucción y presencia de punta para estaciones que requieren información sobre el estado del pipeteo. SMTP4 ofrece pipeteo y expulsión automática de puntas, con accionamiento y control del proceso proporcionados por el instrumento. Compare las series según las necesidades de detección y control; después seleccione la capacidad y confirme la compatibilidad de las puntas y el montaje."
+      ]
+    },
+    "smtp2": {
+      "title": "Módulos de pipeteo programables SMTP2 por desplazamiento de aire",
+      "seoTitle": "SMTP2: pipeteo con detección de nivel y obstrucción | FOREACH",
+      "description": "SMTP2 de 1000 μL integra accionamiento, control, detección de nivel, obstrucción y presencia de punta, y expulsión automática para instrumentos automatizados.",
+      "paragraphs": [
+        "La serie SMTP2 FOREACH combina pipeteo programable por desplazamiento de aire con accionamiento, control y supervisión del proceso integrados. Utiliza puntas desechables para aspirar, transferir y dividir muestras en alícuotas, así como para añadir reactivos. La configuración SMTP2-1000 μL tiene una capacidad nominal de 1000 μL para analizadores automatizados, equipos de preparación de muestras y estaciones de pipeteo.",
+        "SMTP2 ofrece detección de nivel por presión pLLD, capacitiva cLLD e híbrida hLLD, además de detección de obstrucción y presencia de punta y expulsión automática. Las opciones de comunicación RS-232, RS-485 y CAN transmiten el estado del pipeteo al controlador del instrumento. Los ejes de posicionamiento y el programa del equipo coordinan la aspiración, la transferencia, la dispensación y la gestión de incidencias.",
+        "Para la integración, defina los parámetros de aspiración y dispensación según el volumen, el líquido, las puntas y los recipientes. Compruebe la compatibilidad del método de detección y de la interfaz de comunicación con el sistema de control. El instrumento debe aportar los ejes, el posicionamiento de recipientes y la respuesta ante incidencias; valide la exactitud, la repetibilidad y el tiempo de ciclo con los líquidos y las puntas reales."
+      ]
+    },
+    "smtp4": {
+      "title": "Módulos de pipeteo SMTP4 por desplazamiento de aire",
+      "seoTitle": "SMTP4: módulos de pipeteo de 100 y 500 μL | FOREACH",
+      "description": "Compare SMTP4 de 100 y 500 μL para transferencia de muestras y adición de reactivos, con expulsión automática de puntas y control proporcionado por el instrumento.",
+      "paragraphs": [
+        "Los módulos SMTP4 FOREACH están diseñados para integrarse en instrumentos automatizados y ofrecen capacidades nominales de 100 μL y 500 μL. Utilizan puntas desechables para transferir muestras, añadir reactivos y preparar alícuotas, con expulsión automática de puntas. El instrumento proporciona el accionamiento, los ejes y el control del proceso para las unidades de preparación de muestras y dosificación automatizada.",
+        "SMTP4-100 μL es una configuración candidata para transferencias de pequeño volumen y preparación de mezclas de reacción. SMTP4-500 μL permite evaluar transferencias individuales mayores, preparación de alícuotas y adición de diluyente. Sus resoluciones de accionamiento son de 0,05 μL/paso y 0,25 μL/paso, respectivamente. Seleccione según el volumen real y el rendimiento requerido; la resolución por paso no define el volumen mínimo de transferencia fiable.",
+        "SMTP4 requiere accionamiento y control externos del instrumento. Si se necesita información sobre nivel, obstrucción o presencia de punta, debe integrarse una solución de detección adicional. Compruebe el sellado de las puntas, los recorridos y fuerzas de colocación y expulsión, el espacio y la coordinación con los ejes. Valide los parámetros de pipeteo, la expulsión de puntas y el ciclo completo con el líquido y las puntas previstos."
+      ]
+    }
+  },
+  "fr": {
+    "category": {
+      "title": "Modules de pipetage à déplacement d’air pour la manipulation automatisée des liquides",
+      "seoTitle": "Modules de pipetage à déplacement d’air | FOREACH",
+      "description": "Comparez les modules SMTP2 et SMTP4 de 100, 500 et 1000 μL pour le transfert d’échantillons et la distribution de réactifs, selon le contrôle et la détection requis.",
+      "paragraphs": [
+        "Les modules de pipetage à déplacement d’air FOREACH utilisent des embouts jetables pour aspirer et distribuer des liquides dans les analyseurs automatisés, les équipements de préparation d’échantillons et les stations de laboratoire. Ces pompes de pipetage assurent le transfert d’échantillons, l’ajout de réactifs et l’aliquotage. Les séries SMTP2 et SMTP4 proposent des capacités nominales de 100 μL, 500 μL et 1000 μL.",
+        "Choisissez le module selon les volumes de travail minimal, habituel et maximal, ainsi que les exigences d’exactitude, de répétabilité et de temps de cycle. Tenez compte des propriétés du liquide, des embouts, de l’encombrement et de l’architecture de commande. La capacité nominale et la résolution de l’entraînement sont deux spécifications distinctes ; les performances doivent être vérifiées avec le liquide, les embouts et les paramètres d’aspiration et de distribution prévus.",
+        "SMTP2 intègre l’entraînement et la commande, avec détection du niveau de liquide, de l’obstruction et de la présence d’embout, pour les postes nécessitant un retour d’état du pipetage. SMTP4 assure le pipetage et l’éjection automatique des embouts ; l’instrument fournit l’entraînement et la commande du procédé. Comparez les séries selon la surveillance et la commande requises, puis choisissez la capacité et confirmez les embouts et le montage."
+      ]
+    },
+    "smtp2": {
+      "title": "Modules de pipetage programmables SMTP2 à déplacement d’air",
+      "seoTitle": "SMTP2 : pipetage avec détection de niveau et d’obstruction | FOREACH",
+      "description": "SMTP2 de 1000 μL intègre entraînement, commande, détection de niveau, d’obstruction et de présence d’embout, avec éjection automatique pour instruments automatisés.",
+      "paragraphs": [
+        "La série SMTP2 FOREACH associe le pipetage programmable à déplacement d’air à un entraînement, une commande et une surveillance intégrés. Les embouts jetables permettent l’aspiration, le transfert et l’aliquotage des échantillons ainsi que l’ajout de réactifs. La configuration SMTP2-1000 μL offre une capacité nominale de 1000 μL pour les analyseurs automatisés, la préparation d’échantillons et les stations de pipetage.",
+        "SMTP2 propose la détection de niveau par pression pLLD, capacitive cLLD et hybride hLLD, ainsi que la détection d’obstruction et de présence d’embout et l’éjection automatique. Les options RS-232, RS-485 et CAN transmettent l’état du pipetage à la commande de l’instrument. Les axes de positionnement et le programme de l’équipement coordonnent l’aspiration, le transfert, la distribution et la gestion des anomalies.",
+        "Pour l’intégration, définissez les paramètres d’aspiration et de distribution selon les volumes, les liquides, les embouts et les récipients. Vérifiez la compatibilité de la détection et de l’interface de communication avec la commande. L’instrument doit fournir les axes, le positionnement des récipients et la logique de traitement des anomalies ; validez l’exactitude, la répétabilité et le temps de cycle avec les liquides et embouts réels."
+      ]
+    },
+    "smtp4": {
+      "title": "Modules de pipetage SMTP4 à déplacement d’air",
+      "seoTitle": "SMTP4 : modules de pipetage de 100 et 500 μL | FOREACH",
+      "description": "Comparez les configurations SMTP4 de 100 et 500 μL pour le transfert d’échantillons et l’ajout de réactifs, avec éjection d’embout et commande fournie par l’instrument.",
+      "paragraphs": [
+        "Les modules SMTP4 FOREACH sont destinés à l’intégration dans des instruments automatisés, avec des capacités nominales de 100 μL et 500 μL. Ils utilisent des embouts jetables pour le transfert d’échantillons, l’ajout de réactifs et l’aliquotage, avec éjection automatique des embouts. L’instrument fournit l’entraînement, les axes et la commande du procédé pour les unités de préparation d’échantillons et de distribution automatisée.",
+        "SMTP4-100 μL constitue une configuration candidate pour les transferts de petits volumes et la préparation de mélanges réactionnels. SMTP4-500 μL permet d’envisager des transferts unitaires plus importants, l’aliquotage et l’ajout de diluant. Les résolutions d’entraînement sont respectivement de 0,05 μL/pas et de 0,25 μL/pas. Choisissez selon les volumes réels et les performances requises ; la résolution par pas ne définit pas le volume minimal transférable de manière fiable.",
+        "SMTP4 nécessite un entraînement et une commande fournis par l’instrument. Si un retour sur le niveau, l’obstruction ou l’état de l’embout est requis, une détection distincte doit être intégrée. Vérifiez l’étanchéité des embouts, les courses et efforts de montage et d’éjection, l’encombrement et la coordination des axes. Validez les paramètres de pipetage, l’éjection et le temps de cycle avec le liquide et les embouts prévus."
+      ]
+    }
+  },
+  "ko": {
+    "category": {
+      "title": "자동 액체 처리용 공기 치환식 피펫팅 모듈",
+      "seoTitle": "공기 치환식 피펫팅 모듈 SMTP2·SMTP4 | FOREACH",
+      "description": "시료 이송과 시약 분주용 SMTP2·SMTP4 피펫팅 모듈을 비교하세요. 공칭 용량 100, 500, 1000 μL와 제어 및 감지 요구에 따라 선택할 수 있습니다.",
+      "paragraphs": [
+        "FOREACH 공기 치환식 피펫팅 모듈은 일회용 팁으로 액체를 흡입하고 분주하며, 자동 분석기, 시료 전처리 장비 및 실험실 워크스테이션에 사용됩니다. 시료 이송, 시약 첨가 및 시료 분할 분주를 지원하는 피펫팅 펌프로, SMTP2와 SMTP4 시리즈에 100 μL, 500 μL, 1000 μL 공칭 용량 구성이 있습니다.",
+        "최소·일상·최대 작업 부피와 정확도, 반복성, 사이클 시간 요구를 기준으로 모듈을 선택합니다. 액체 특성, 팁 호환성, 설치 공간 및 장비 제어 구조도 고려해야 합니다. 공칭 용량과 구동 분해능은 서로 다른 사양이며, 실제 피펫팅 성능은 사용할 액체와 팁, 흡입·분주 조건으로 검증해야 합니다.",
+        "SMTP2는 구동·제어와 액면, 막힘 및 팁 유무 감지를 통합하여 피펫팅 상태 피드백이 필요한 자동화 작업에 적합합니다. SMTP4는 공기 치환식 피펫팅과 자동 팁 배출을 제공하며 구동과 공정 제어는 장비에서 구성합니다. 감지 요구와 제어 구조로 시리즈를 비교한 후 작업 부피에 맞는 용량을 선택하고 팁 및 설치 구성을 확인합니다."
+      ]
+    },
+    "smtp2": {
+      "title": "SMTP2 프로그래머블 공기 치환식 피펫팅 모듈",
+      "seoTitle": "SMTP2 액면·막힘 감지 피펫팅 모듈 | FOREACH",
+      "description": "1000 μL SMTP2는 구동 제어, 액면·막힘·팁 유무 감지 및 자동 팁 배출을 통합하여 자동화 장비에 피펫팅 상태 피드백을 제공합니다.",
+      "paragraphs": [
+        "FOREACH SMTP2 시리즈는 구동, 제어 및 공정 감지를 통합한 프로그래머블 공기 치환식 피펫팅 모듈입니다. 일회용 팁으로 시료 흡입, 이송, 분할 분주 및 시약 첨가를 수행합니다. SMTP2-1000 μL 구성의 공칭 용량은 1000 μL이며 자동 분석기, 시료 전처리 장비 및 실험실 피펫팅 워크스테이션에 통합할 수 있습니다.",
+        "SMTP2는 압력식 pLLD, 정전용량식 cLLD 및 하이브리드 hLLD 액면 감지를 제공하며 팁 막힘 감지, 팁 유무 감지 및 자동 팁 배출을 지원합니다. RS-232, RS-485 및 CAN 통신 구성으로 피펫팅 상태를 장비 제어기에 전달합니다. 위치 제어 축과 장비 프로그램이 흡입, 이송, 분주 및 이상 처리를 조정합니다.",
+        "통합 시 작업 부피, 액체 특성, 팁과 용기에 따라 흡입·분주 조건을 설정하고 감지 방식 및 통신 인터페이스가 제어 시스템에 맞는지 확인합니다. 위치 제어 축, 용기 위치 결정 및 이상 대응 로직은 장비에서 구성해야 합니다. 실제 액체와 팁으로 정확도, 반복성 및 사이클 시간을 검증합니다."
+      ]
+    },
+    "smtp4": {
+      "title": "SMTP4 공기 치환식 피펫팅 모듈",
+      "seoTitle": "SMTP4 100·500 μL 피펫팅 모듈 | FOREACH",
+      "description": "시료 이송과 시약 첨가용 SMTP4 100·500 μL 구성을 비교하세요. 자동 팁 배출을 지원하며 구동과 제어는 장비에서 구성합니다.",
+      "paragraphs": [
+        "FOREACH SMTP4는 자동화 장비 통합용 공기 치환식 피펫팅 모듈로 100 μL 및 500 μL 공칭 용량을 제공합니다. 일회용 팁으로 시료 이송, 시약 첨가 및 분할 분주를 수행하고 자동 팁 배출을 지원합니다. 장비에서 구동, 위치 제어 축 및 공정 제어를 구성하는 시료 전처리와 자동 분주 유닛에 적합합니다.",
+        "SMTP4-100 μL는 소량 시료 이송과 반응 혼합물 준비를 위한 후보 구성입니다. SMTP4-500 μL는 더 큰 1회 이송량, 시료 분할 분주 및 희석액 첨가에 사용할 수 있습니다. 구동 분해능은 각각 0.05 μL/스텝과 0.25 μL/스텝입니다. 실제 작업 부피와 성능 요구로 선택해야 하며 스텝 분해능을 신뢰할 수 있는 최소 이송량으로 해석해서는 안 됩니다.",
+        "SMTP4의 구동과 공정 제어는 장비에서 구성합니다. 액면, 막힘 또는 팁 상태 피드백이 필요하면 별도의 감지 솔루션을 통합해야 합니다. 팁 밀봉, 장착·배출 스트로크와 힘, 설치 공간 및 위치 제어 축의 연동을 확인합니다. 사용할 액체와 팁으로 흡입·분주 조건, 자동 팁 배출 및 장비 사이클 시간을 검증합니다."
+      ]
+    }
+  },
+  "ru": {
+    "category": {
+      "title": "Модули пипетирования с воздушным вытеснением для автоматизации работы с жидкостями",
+      "seoTitle": "Модули пипетирования SMTP2 и SMTP4 | FOREACH",
+      "description": "Сравните SMTP2 и SMTP4 номинальным объёмом 100, 500 и 1000 мкл для переноса образцов и подачи реагентов с учётом требований к управлению и контролю.",
+      "paragraphs": [
+        "Модули пипетирования FOREACH с воздушным вытеснением используют одноразовые наконечники для аспирации и дозирования жидкостей в автоматических анализаторах, оборудовании пробоподготовки и лабораторных станциях. Эти пипетирующие насосы выполняют перенос образцов, добавление реагентов и аликвотирование. Серии SMTP2 и SMTP4 представлены конфигурациями номинальным объёмом 100, 500 и 1000 мкл.",
+        "Выбирайте модуль по минимальному, обычному и максимальному рабочим объёмам, а также требованиям к точности, повторяемости и времени цикла. Учитывайте свойства жидкости, совместимость наконечников, монтажное пространство и систему управления прибором. Номинальный объём и разрешение привода — разные характеристики; фактические показатели необходимо проверять с выбранными жидкостями, наконечниками и параметрами аспирации и дозирования.",
+        "SMTP2 объединяет привод и управление с обнаружением уровня жидкости, закупорки и наличия наконечника для автоматизированных узлов, которым нужна обратная связь о состоянии пипетирования. SMTP4 обеспечивает пипетирование и автоматический сброс наконечника; привод и управление процессом предоставляет прибор. Сравните серии по требованиям к контролю и управлению, затем выберите объём и проверьте совместимость наконечников и монтаж."
+      ]
+    },
+    "smtp2": {
+      "title": "Программируемые модули пипетирования SMTP2 с воздушным вытеснением",
+      "seoTitle": "SMTP2: пипетирование с контролем уровня и закупорки | FOREACH",
+      "description": "SMTP2 объёмом 1000 мкл объединяет привод, управление, обнаружение уровня, закупорки и наконечника с автоматическим сбросом для интеграции в приборы.",
+      "paragraphs": [
+        "Серия FOREACH SMTP2 представляет собой программируемые модули пипетирования с воздушным вытеснением, встроенным приводом, управлением и контролем процесса. Одноразовые наконечники используются для аспирации, переноса и аликвотирования образцов, а также добавления реагентов. Конфигурация SMTP2-1000 μL имеет номинальный объём 1000 мкл и предназначена для автоматических анализаторов, оборудования пробоподготовки и станций пипетирования.",
+        "SMTP2 предлагает обнаружение уровня жидкости по давлению pLLD, ёмкостным методом cLLD и гибридным методом hLLD, а также обнаружение закупорки и наличия наконечника и его автоматический сброс. Варианты связи RS-232, RS-485 и CAN передают состояние пипетирования контроллеру прибора. Оси позиционирования и программа оборудования согласуют аспирацию, перенос, дозирование и обработку нештатных ситуаций.",
+        "При интеграции определите параметры аспирации и дозирования по рабочим объёмам, свойствам жидкости, наконечникам и ёмкостям. Проверьте совместимость метода обнаружения и интерфейса связи с системой управления. Прибор должен обеспечивать оси, позиционирование ёмкостей и логику реакции на нештатные ситуации; точность, повторяемость и время цикла проверяют с фактическими жидкостями и наконечниками."
+      ]
+    },
+    "smtp4": {
+      "title": "Модули пипетирования SMTP4 с воздушным вытеснением",
+      "seoTitle": "SMTP4: модули пипетирования на 100 и 500 мкл | FOREACH",
+      "description": "Сравните SMTP4 на 100 и 500 мкл для переноса образцов и добавления реагентов, с автоматическим сбросом наконечника и управлением со стороны прибора.",
+      "paragraphs": [
+        "Модули FOREACH SMTP4 с воздушным вытеснением предназначены для интеграции в автоматизированные приборы и имеют номинальные объёмы 100 и 500 мкл. Они используют одноразовые наконечники для переноса образцов, добавления реагентов и аликвотирования и поддерживают автоматический сброс наконечника. Привод, оси позиционирования и управление процессом предоставляет прибор пробоподготовки или автоматического дозирования.",
+        "SMTP4-100 μL можно рассматривать для переноса малых объёмов и подготовки реакционных смесей. SMTP4-500 μL подходит для оценки переноса больших разовых объёмов, аликвотирования и добавления разбавителя. Разрешение привода составляет соответственно 0,05 и 0,25 мкл/шаг. Выбирайте конфигурацию по фактическим рабочим объёмам и требуемым показателям; разрешение на шаг не определяет минимальный надёжно переносимый объём.",
+        "Для SMTP4 прибор должен обеспечивать привод и управление процессом. Если нужна обратная связь по уровню, закупорке или состоянию наконечника, необходимо интегрировать отдельную систему обнаружения. Проверьте герметичность наконечника, ход и усилия установки и сброса, монтажное пространство и согласование осей. Подтвердите параметры пипетирования, сброс наконечника и время цикла с выбранной жидкостью и наконечниками."
+      ]
+    }
+  }
+}

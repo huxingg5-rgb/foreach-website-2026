@@ -927,15 +927,10 @@
     "showDatasheetRequest": false,
     "showDrawingRequest": true,
     "show3DRequest": false,
-    "drawing2dUrl": "/resources/drawings/fittings/filters/f-pe-100-32-pp-n-443-02-00282-drawing.pdf",
-    "drawingPdfUrl": "/resources/drawings/fittings/filters/f-pe-100-32-pp-n-443-02-00282-drawing.pdf",
+    "drawing2dUrl": "",
+    "drawingPdfUrl": "",
     "resources": {
-      "drawings": [
-        {
-          "label": "二维图纸 443-02-00282",
-          "href": "/resources/drawings/fittings/filters/f-pe-100-32-pp-n-443-02-00282-drawing.pdf"
-        }
-      ]
+      "drawings": []
     },
     "specs": [
       {

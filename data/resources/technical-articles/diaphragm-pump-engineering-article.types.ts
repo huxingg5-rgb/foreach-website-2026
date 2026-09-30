@@ -45,6 +45,7 @@ export type EngineeringArticleBlock =
   | {
       type: "paragraph";
       text: string;
+      lead?: string;
     }
   | {
       type: "notice";
@@ -68,6 +69,7 @@ export type EngineeringArticleBlock =
       width: number;
       height: number;
       caption: string;
+      flowNodes?: readonly { label: string; detail: string }[];
     }
   | {
       type: "subheading";
@@ -81,6 +83,7 @@ export type EngineeringArticleBlock =
   | {
       type: "links";
       items: readonly EngineeringArticleLink[];
+      ordered?: boolean;
     };
 
 export type EngineeringArticleSection = {

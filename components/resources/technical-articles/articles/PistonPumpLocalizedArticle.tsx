@@ -7,8 +7,8 @@ import type {
   PistonPumpArticlePart,
 } from "@/data/resources/technical-articles/piston-pump-articles.types";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
-import newsStyles from "../../news/NewsArticleClient.module.css";
-import styles from "./DiaphragmPumpEngineeringArticle.module.css";
+import newsStyles from "./TechnicalArticleBody.module.css";
+import styles from "./TechnicalArticleBody.module.css";
 
 function getLocalizedHref(href: string, locale: TechnicalArticleLocale) {
   if (!href.startsWith("/") || locale === "zh-CN") return href;
@@ -201,11 +201,11 @@ export default function PistonPumpLocalizedArticle({
         <section className={newsStyles.contentBlock}>
           <h2>{copy.faqTitle ?? "FAQ"}</h2>
           <div className={styles.faqList}>
-            {copy.faq.map((item) => (
-              <article className={styles.faqItem} key={item.question}>
-                <h3>{item.question}</h3>
+            {copy.faq.map((item, index) => (
+              <details className={styles.faqItem} key={item.question} open={index === 0}>
+                <summary><h3>{item.question}</h3></summary>
                 <p>{item.answer}</p>
-              </article>
+              </details>
             ))}
           </div>
         </section>

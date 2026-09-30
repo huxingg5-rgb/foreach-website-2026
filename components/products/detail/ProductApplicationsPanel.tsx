@@ -96,6 +96,20 @@ export default function ProductApplicationsPanel({
           </Link>
         ) : null}
       </section>
+
+      {content.relatedGuides?.links.length ? (
+        <section className={styles.selectionNote} data-product-related-application-guides="true">
+          <h3>{content.relatedGuides.title}</h3>
+
+          {content.relatedGuides.links.map((guide) => (
+            <div key={guide.href}>
+              <Link className={styles.articleLink} href={guide.href}>
+                {guide.label}
+              </Link>
+            </div>
+          ))}
+        </section>
+      ) : null}
     </section>
   );
 }

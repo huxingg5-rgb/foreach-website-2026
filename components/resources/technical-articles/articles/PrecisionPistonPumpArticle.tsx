@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import newsStyles from "../../news/NewsArticleClient.module.css";
-import styles from "./DiaphragmPumpEngineeringArticle.module.css";
+import newsStyles from "./TechnicalArticleBody.module.css";
+import styles from "./TechnicalArticleBody.module.css";
 
 export const precisionPistonPumpArticleSlug =
   "micro-plunger-pump-selection" as const;
@@ -295,11 +295,11 @@ export default function PrecisionPistonPumpArticle() {
       <section className={newsStyles.contentBlock}>
         <h2>常见问题</h2>
         <div className={styles.faqList}>
-          {precisionPistonPumpArticleFaqZh.map((item) => (
-            <article className={styles.faqItem} key={item.question}>
-              <h3>{item.question}</h3>
+          {precisionPistonPumpArticleFaqZh.map((item, index) => (
+            <details className={styles.faqItem} key={item.question} open={index === 0}>
+              <summary><h3>{item.question}</h3></summary>
               <p>{item.answer}</p>
-            </article>
+            </details>
           ))}
         </div>
       </section>

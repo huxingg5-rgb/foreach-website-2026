@@ -91,6 +91,13 @@ const supportedAssetExtensions =
     ".pdf",
   ]);
 
+// Keep these drawing files offline from product previews until explicitly relinked.
+// Preserve the existing PDF assets and drawing-request actions.
+const unlinkedDrawingSlugs = new Set([
+  "cv-be-32-pp-n",
+  "f-pe-100-32-pp-n",
+]);
+
 function text(value) {
   return String(value ?? "")
     .replace(/\u00a0/g, " ")
@@ -1219,7 +1226,7 @@ for (const item of generatedItems) {
 
   for (
     const pdfAsset
-    of item.exactPdfCandidates
+    of (unlinkedDrawingSlugs.has(item.slug) ? [] : item.exactPdfCandidates)
   ) {
     const matchedInternalCode =
       item.internalCodes.find(

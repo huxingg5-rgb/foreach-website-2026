@@ -27,7 +27,7 @@ export const pipettingPumpSelectionProducts = [
     imageCard: "/images/products/pumps/pipetting-pumps/smtp2-1000ul.webp",
     imageAlt: {
       zh: "SMTP2 可编程气体置换式移液泵",
-      en: "SMTP2 programmable gas displacement pipetting pump",
+      en: "SMTP2 programmable air displacement pipetting pump",
     },
     categoryName: {
       zh: "泵",
@@ -47,11 +47,11 @@ export const pipettingPumpSelectionProducts = [
     },
     seriesName: {
       zh: "SMTP2 可编程气体置换式移液泵",
-      en: "SMTP2 Programmable Gas Displacement Pipetting Pump",
-      es: "Bomba de pipeteo SMTP2 programable por desplazamiento de gas",
-      fr: "Pompe de pipetage SMTP2 programmable à déplacement de gaz",
-      ko: "SMTP2 프로그래머블 가스 치환식 피펫팅 펌프",
-      ru: "Программируемый пипетирующий насос SMTP2 с газовым вытеснением",
+      en: "SMTP2 Programmable Air Displacement Pipetting Pump",
+      es: "Bomba de pipeteo SMTP2 programable por desplazamiento de aire",
+      fr: "Pompe de pipetage SMTP2 programmable à déplacement d’air",
+      ko: "SMTP2 프로그래머블 공기 치환식 피펫팅 펌프",
+      ru: "Программируемый пипетирующий насос SMTP2 с воздушным вытеснением",
     },
     filters: {
       filter01: "SMTP2 可编程气体置换式移液泵",
@@ -72,7 +72,7 @@ export const pipettingPumpSelectionProducts = [
     sortOrder: 10,
     searchKeywords: {
       zh: "SMTP2-1000 μL 移液泵 SMTP2 可编程气体置换式移液泵 SMTP2 可编程气体置换式移液泵 1000 μL 定量分辨率 0.02 μL/微步 液面检测与堵塞检测 自动脱吸头 1000 μL 0.02 μL/微步 液面检测 堵塞检测 自动脱吸头",
-      en: "SMTP2-1000 μL Pipetting Pumps SMTP2 Programmable Gas Displacement Pipetting Pump 1000 μL Resolution 0.02 μL/microstep LLD and clog detection Automatic tip ejection 1000 μL 0.02 μL/microstep LLD clog detection automatic tip ejection",
+      en: "SMTP2-1000 μL Pipetting Pumps SMTP2 Programmable Air Displacement Pipetting Pump 1000 μL Resolution 0.02 μL/microstep LLD and clog detection Automatic tip ejection 1000 μL 0.02 μL/microstep LLD clog detection automatic tip ejection",
       es: "SMTP2-1000 μL bombas de pipeteo SMTP2 programable 1000 μL resolución 0.02 μL/microstep LLD detección de obstrucciones expulsión automática de puntas",
       fr: "SMTP2-1000 μL pompes de pipetage SMTP2 programmable 1000 μL résolution 0.02 μL/microstep LLD détection d'obstruction éjection automatique des embouts",
       ko: "SMTP2-1000 μL 피펫팅 펌프 SMTP2 프로그래머블 1000 μL 분해능 0.02 μL/microstep LLD 막힘 감지 자동 팁 배출",
@@ -107,7 +107,7 @@ export const pipettingPumpSelectionProducts = [
     imageCard: "/images/products/pumps/pipetting-pumps/smtp4-100ul.webp",
     imageAlt: {
       zh: "SMTP4 气体置换式移液泵 100 μL",
-      en: "SMTP4 gas displacement pipetting pump 100 μL",
+      en: "SMTP4 air displacement pipetting pump 100 μL",
     },
     categoryName: {
       zh: "泵",
@@ -127,11 +127,11 @@ export const pipettingPumpSelectionProducts = [
     },
     seriesName: {
       zh: "SMTP4 气体置换式移液泵",
-      en: "SMTP4 Gas Displacement Pipetting Pump",
-      es: "Bomba de pipeteo SMTP4 por desplazamiento de gas",
-      fr: "Pompe de pipetage SMTP4 à déplacement de gaz",
-      ko: "SMTP4 가스 치환식 피펫팅 펌프",
-      ru: "Пипетирующий насос SMTP4 с газовым вытеснением",
+      en: "SMTP4 Air Displacement Pipetting Pump",
+      es: "Bomba de pipeteo SMTP4 por desplazamiento de aire",
+      fr: "Pompe de pipetage SMTP4 à déplacement d’air",
+      ko: "SMTP4 공기 치환식 피펫팅 펌프",
+      ru: "Пипетирующий насос SMTP4 с воздушным вытеснением",
     },
     filters: {
       filter01: "SMTP4 气体置换式移液泵",
@@ -151,11 +151,11 @@ export const pipettingPumpSelectionProducts = [
     sortOrder: 20,
     searchKeywords: {
       zh: "SMTP4-100 μL 移液泵 SMTP4 气体置换式移液泵 SMTP4 气体置换式移液泵 100 μL 定量分辨率 0.05 μL/步 吸头配置可定制 自动脱吸头 100 μL 0.05 μL/步 吸头配置可定制 自动脱吸头",
-      en: "SMTP4-100 μL Pipetting Pumps SMTP4 Gas Displacement Pipetting Pump 100 μL Resolution 0.05 μL/step Custom tip configuration Automatic tip ejection 100 μL 0.05 μL/step custom tip configuration automatic tip ejection",
-      es: "SMTP4-100 μL bombas de pipeteo SMTP4 por desplazamiento de gas 100 μL resolución 0.05 μL/step configuración de punta personalizada expulsión automática de puntas",
-      fr: "SMTP4-100 μL pompes de pipetage SMTP4 à déplacement de gaz 100 μL résolution 0.05 μL/step configuration d'embout personnalisée éjection automatique des embouts",
-      ko: "SMTP4-100 μL 피펫팅 펌프 SMTP4 가스 치환식 100 μL 분해능 0.05 μL/step 맞춤형 팁 구성 자동 팁 배출",
-      ru: "SMTP4-100 μL пипетирующий насос SMTP4 с газовым вытеснением 100 μL разрешение 0.05 μL/step пользовательская конфигурация наконечника автоматический сброс наконечника",
+      en: "SMTP4-100 μL Pipetting Pumps SMTP4 Air Displacement Pipetting Pump 100 μL Resolution 0.05 μL/step Custom tip configuration Automatic tip ejection 100 μL 0.05 μL/step custom tip configuration automatic tip ejection",
+      es: "SMTP4-100 μL bombas de pipeteo SMTP4 por desplazamiento de aire 100 μL resolución 0.05 μL/step configuración de punta personalizada expulsión automática de puntas",
+      fr: "SMTP4-100 μL pompes de pipetage SMTP4 à déplacement d’air 100 μL résolution 0.05 μL/step configuration d'embout personnalisée éjection automatique des embouts",
+      ko: "SMTP4-100 μL 피펫팅 펌프 SMTP4 공기 치환식 100 μL 분해능 0.05 μL/step 맞춤형 팁 구성 자동 팁 배출",
+      ru: "SMTP4-100 μL пипетирующий насос SMTP4 с воздушным вытеснением 100 μL разрешение 0.05 μL/step пользовательская конфигурация наконечника автоматический сброс наконечника",
     },
     source: "pipetting-pump-xlsx",
     reservedConfigSlug: "smtp4-100ul",
@@ -186,7 +186,7 @@ export const pipettingPumpSelectionProducts = [
     imageCard: "/images/products/pumps/pipetting-pumps/smtp4-500ul.webp",
     imageAlt: {
       zh: "SMTP4 气体置换式移液泵 500 μL",
-      en: "SMTP4 gas displacement pipetting pump 500 μL",
+      en: "SMTP4 air displacement pipetting pump 500 μL",
     },
     categoryName: {
       zh: "泵",
@@ -206,11 +206,11 @@ export const pipettingPumpSelectionProducts = [
     },
     seriesName: {
       zh: "SMTP4 气体置换式移液泵",
-      en: "SMTP4 Gas Displacement Pipetting Pump",
-      es: "Bomba de pipeteo SMTP4 por desplazamiento de gas",
-      fr: "Pompe de pipetage SMTP4 à déplacement de gaz",
-      ko: "SMTP4 가스 치환식 피펫팅 펌프",
-      ru: "Пипетирующий насос SMTP4 с газовым вытеснением",
+      en: "SMTP4 Air Displacement Pipetting Pump",
+      es: "Bomba de pipeteo SMTP4 por desplazamiento de aire",
+      fr: "Pompe de pipetage SMTP4 à déplacement d’air",
+      ko: "SMTP4 공기 치환식 피펫팅 펌프",
+      ru: "Пипетирующий насос SMTP4 с воздушным вытеснением",
     },
     filters: {
       filter01: "SMTP4 气体置换式移液泵",
@@ -230,11 +230,11 @@ export const pipettingPumpSelectionProducts = [
     sortOrder: 30,
     searchKeywords: {
       zh: "SMTP4-500 μL 移液泵 SMTP4 气体置换式移液泵 SMTP4 气体置换式移液泵 500 μL 定量分辨率 0.25 μL/步 吸头配置可定制 自动脱吸头 500 μL 0.25 μL/步 吸头配置可定制 自动脱吸头",
-      en: "SMTP4-500 μL Pipetting Pumps SMTP4 Gas Displacement Pipetting Pump 500 μL Resolution 0.25 μL/step Custom tip configuration Automatic tip ejection 500 μL 0.25 μL/step custom tip configuration automatic tip ejection",
-      es: "SMTP4-500 μL bombas de pipeteo SMTP4 por desplazamiento de gas 500 μL resolución 0.25 μL/step configuración de punta personalizada expulsión automática de puntas",
-      fr: "SMTP4-500 μL pompes de pipetage SMTP4 à déplacement de gaz 500 μL résolution 0.25 μL/step configuration d'embout personnalisée éjection automatique des embouts",
-      ko: "SMTP4-500 μL 피펫팅 펌프 SMTP4 가스 치환식 500 μL 분해능 0.25 μL/step 맞춤형 팁 구성 자동 팁 배출",
-      ru: "SMTP4-500 μL пипетирующий насос SMTP4 с газовым вытеснением 500 μL разрешение 0.25 μL/step пользовательская конфигурация наконечника автоматический сброс наконечника",
+      en: "SMTP4-500 μL Pipetting Pumps SMTP4 Air Displacement Pipetting Pump 500 μL Resolution 0.25 μL/step Custom tip configuration Automatic tip ejection 500 μL 0.25 μL/step custom tip configuration automatic tip ejection",
+      es: "SMTP4-500 μL bombas de pipeteo SMTP4 por desplazamiento de aire 500 μL resolución 0.25 μL/step configuración de punta personalizada expulsión automática de puntas",
+      fr: "SMTP4-500 μL pompes de pipetage SMTP4 à déplacement d’air 500 μL résolution 0.25 μL/step configuration d'embout personnalisée éjection automatique des embouts",
+      ko: "SMTP4-500 μL 피펫팅 펌프 SMTP4 공기 치환식 500 μL 분해능 0.25 μL/step 맞춤형 팁 구성 자동 팁 배출",
+      ru: "SMTP4-500 μL пипетирующий насос SMTP4 с воздушным вытеснением 500 μL разрешение 0.25 μL/step пользовательская конфигурация наконечника автоматический сброс наконечника",
     },
     source: "pipetting-pump-xlsx",
     reservedConfigSlug: "smtp4-500ul",

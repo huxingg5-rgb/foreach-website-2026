@@ -16,31 +16,37 @@ export type TutorialPlayerSource =
 
 const modalText: Record<
   InstallationGuideLocale,
-  { close: string; unavailable: string }
+  { close: string; unavailable: string; watchOnYouTube: string }
 > = {
   "zh-CN": {
     close: "关闭视频",
+    watchOnYouTube: "在 YouTube 观看",
     unavailable: "该教程视频暂未上传，请稍后查看或联系技术支持。",
   },
   en: {
     close: "Close video",
+    watchOnYouTube: "Watch on YouTube",
     unavailable:
       "This tutorial video has not been uploaded yet. Please check again later or contact technical support.",
   },
   es: {
     close: "Cerrar vídeo",
+    watchOnYouTube: "Ver en YouTube",
     unavailable: "El vídeo de este tutorial todavía no está disponible.",
   },
   fr: {
     close: "Fermer la vidéo",
+    watchOnYouTube: "Voir sur YouTube",
     unavailable: "La vidéo de ce tutoriel n’est pas encore disponible.",
   },
   ko: {
     close: "동영상 닫기",
+    watchOnYouTube: "YouTube에서 보기",
     unavailable: "이 튜토리얼 영상은 아직 업로드되지 않았습니다.",
   },
   ru: {
     close: "Закрыть видео",
+    watchOnYouTube: "Смотреть на YouTube",
     unavailable: "Видео для этой инструкции пока не загружено.",
   },
 };
@@ -165,6 +171,9 @@ export default function TutorialVideoPlayerModal({
     () => getGuidePlayerSource(guide, true),
     [guide],
   );
+  const youtubeId = guide.videoPlatform === "youtube"
+    ? playerSource.src.match(/youtube\.com\/embed\/([\w-]{11})/)?.[1]
+    : undefined;
 
   const closePlayer = useCallback(() => {
     videoRef.current?.pause();
@@ -205,6 +214,7 @@ export default function TutorialVideoPlayerModal({
     <div className="installation-guide-modal-backdrop" onMouseDown={closePlayer}>
       <section
         className="installation-guide-modal"
+        data-player-type={playerSource.type}
         role="dialog"
         aria-modal="true"
         aria-labelledby={`tutorial-video-modal-${guide.id}`}
@@ -242,6 +252,7 @@ export default function TutorialVideoPlayerModal({
               src={playerSource.src}
               title={guide.title}
               allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />
           ) : null}
@@ -256,6 +267,11 @@ export default function TutorialVideoPlayerModal({
 
         <div className="installation-guide-modal-title">
           <h2 id={`tutorial-video-modal-${guide.id}`}>{guide.title}</h2>
+          {youtubeId ? (
+            <a href={`https://www.youtube.com/watch?v=${youtubeId}`} target="_blank" rel="noopener noreferrer">
+              {text.watchOnYouTube}
+            </a>
+          ) : null}
         </div>
       </section>
     </div>

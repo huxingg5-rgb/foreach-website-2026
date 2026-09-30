@@ -1,0 +1,123 @@
+{
+  "title": "Qu’est-ce qu’une pompe de pipetage automatique programmable à déplacement d’air ?",
+  "description": "Pompe de pipetage automatique programmable à déplacement d’air : principe, détection de niveau et intégration OEM de SMTP2, capacité et performances réelles.",
+  "deck": "Une pompe de pipetage automatique programmable à déplacement d’air est un composant de manipulation de liquides dont l’aspiration, la distribution, les vitesses et la séquence sont définies par des commandes. Cet article présente les modules à déplacement d’air utilisant des embouts jetables dans les instruments OEM, avec FOREACH SMTP2 comme exemple de fonctionnement, de surveillance et de limites de sélection.",
+  "scope": "Le module assure l’aspiration, la distribution et les retours d’état associés. L’instrument doit aussi gérer les mouvements, les récipients, les embouts et le programme de commande. Certains modules intègrent un axe, mais un module seul ne constitue pas une station automatisée complète.",
+  "titles": [
+    "Comment fonctionne le déplacement d’air ?",
+    "Quels paramètres sont programmables ?",
+    "Que permettent la détection de niveau et la surveillance de pression ?",
+    "Quelles tâches peut-on automatiser ?",
+    "Comment vérifier les performances réelles ?",
+    "Capacités et limites de sélection de SMTP2"
+  ],
+  "paragraphs": [
+    [
+      "Un moteur déplace un piston dans une chambre étanche. Un coussin d’air sépare le piston du liquide dans l’embout. À l’aspiration, le recul du piston augmente le volume de la chambre et abaisse la pression ; la pression extérieure fait entrer le liquide dans l’embout. À la distribution, le piston avance et comprime l’air pour expulser le liquide.",
+      "En utilisation normale, l’échantillon reste principalement dans l’embout jetable. Un remplacement adapté réduit le transfert résiduel et la contamination croisée, sans exclure les risques dus à une aspiration excessive, aux aérosols ou à une mauvaise manipulation. Compressibilité de l’air, viscosité, volatilité, température, étanchéité et géométrie de l’embout influencent le volume délivré."
+    ],
+    [
+      "La programmation ne se limite pas au volume cible : elle peut porter sur les vitesses d’aspiration et de distribution, les temps d’attente et l’ordre des actions. Le logiciel de l’instrument les coordonne avec le positionnement, les embouts et la gestion des anomalies. Les paramètres et plages disponibles doivent être confirmés dans le protocole du module.",
+      "Pour transférer 100 μL, une solution aqueuse, un réactif visqueux ou un liquide volatil peuvent nécessiter des réglages différents. Une Liquid Class regroupe les paramètres liés au liquide, à l’embout et au mode de distribution. Il s’agit d’un concept de développement de méthode, sans présumer que SMTP2 dispose d’une bibliothèque universelle ou d’une compensation automatique. Pour certains liquides, des consommables spécifiques ou le déplacement positif doivent être évalués."
+    ],
+    [
+      "La détection par pression, pLLD, repère une variation de pression dans le circuit d’air lorsque l’embout touche le liquide, généralement avec une aspiration lente d’air et l’approche de l’axe Z. La détection capacitive, cLLD, repère la variation de capacité au contact d’un embout ou d’une sonde conductrice avec le liquide. L’embout, la référence électrique et les propriétés du liquide sont à vérifier.",
+      "SMTP2 prend en charge les détections de niveau pLLD, cLLD et hybride hLLD. Choisir la méthode selon l’embout, les propriétés du liquide et les conditions électriques de l’instrument. Confirmer la combinaison et le déclenchement des signaux, puis vérifier la stabilité dans les conditions réelles d’utilisation.",
+      "La pression et l’état de l’embout peuvent aider à détecter une obstruction, un manque de liquide ou un défaut de chargement. Les événements détectables dépendent des algorithmes, seuils et conditions. L’instrument définit les alarmes, l’arrêt et la reprise ; une anomalie ne doit pas déclencher automatiquement une nouvelle aspiration. L’absence d’alarme ne prouve pas la conformité du volume délivré."
+    ],
+    [
+      "Les tâches possibles comprennent le transfert d’échantillons vers des récipients de réaction, l’ajout de réactifs, l’aliquotage et la manipulation en microplaques. Elles concernent notamment l’analyse IVD, le diagnostic moléculaire, la préparation d’échantillons et l’automatisation de laboratoire. Ce sont des applications potentielles, pas la preuve d’une validation dans un instrument ou un test donné.",
+      "Transfert d’échantillons et aliquotage répété peuvent nécessiter des embouts, réglages et stratégies de contamination différents. Préciser les récipients source et destination, les volumes minimal et habituel, la fréquence de changement d’embout et la cadence, au-delà de la seule capacité."
+    ],
+    [
+      "Pour un transfert cible de 100 μL, les étapes suivantes constituent une démarche de vérification, pas des résultats mesurés ni un critère d’acceptation fixe. Définir le liquide réel, la référence d’embout, les récipients et l’environnement, puis répéter les mesures avec les mêmes paramètres.",
+      "La capacité nominale, l’incrément de commande et les performances volumétriques sont distincts. La résolution ne représente ni l’exactitude ni la répétabilité. Évaluer séparément distribution unique et aliquotes multiples, en indiquant la méthode de mesure et le nombre de répétitions."
+    ],
+    [
+      "FOREACH SMTP2 est une pompe de pipetage automatique programmable à déplacement d’air de capacité nominale 1000 μL, avec entraînement et commande intégrés. Associée à des embouts jetables et aux mouvements de l’instrument, elle permet aspiration, transfert, distribution et éjection d’embout.",
+      "Les performances réelles dépendent de l’embout, du volume cible, des propriétés du liquide et du mode de distribution unique ou multiple. Fixer le liquide d’essai, l’embout, la méthode de mesure et l’environnement pour évaluer l’écart et la répétabilité. Une capacité nominale de 1000 μL ne définit pas une plage valable pour tous les liquides, et les micropas ne définissent pas le volume minimal fiable."
+    ]
+  ],
+  "controlHeaders": [
+    "Commande",
+    "Rôle",
+    "À vérifier"
+  ],
+  "controlRows": [
+    [
+      "Position et course du piston",
+      "Définir le volume nominal",
+      "Étalonnage et course utile"
+    ],
+    [
+      "Vitesses d’aspiration et de distribution",
+      "Adapter le mouvement au liquide, à l’embout et à la cadence",
+      "Aspiration incomplète, gouttes ou projections"
+    ],
+    [
+      "Attente et séquence",
+      "Permettre l’équilibrage de pression et la coordination",
+      "Synchronisation et volume délivré"
+    ]
+  ],
+  "steps": [
+    "Vérifier le chargement, l’étanchéité et le positionnement au niveau ; rechercher aspiration d’air et bulles.",
+    "Contrôler les gouttes pendant le transfert, le liquide à l’extérieur de l’embout, les résidus et projections.",
+    "Choisir une mesure adaptée au volume. En gravimétrie, tenir compte de la densité, de l’évaporation et de l’environnement avant de calculer volume et écart.",
+    "Vérifier les volumes minimal, habituel et maximal. En aliquotage, mesurer séparément la première, une portion intermédiaire et la dernière. Revalider après changement de liquide ou d’embout."
+  ],
+  "specHeaders": [
+    "Élément",
+    "Paramètres et fonctions",
+    "Limite d’intégration"
+  ],
+  "specRows": [
+    [
+      "Capacité nominale",
+      "1000 μL",
+      "Plage utile selon embout, liquide et exigences"
+    ],
+    [
+      "Détection de niveau",
+      "pLLD / cLLD / hLLD",
+      "Confirmer consommables, conditions électriques et déclenchement"
+    ],
+    [
+      "Processus et embouts",
+      "Surveillance de pression, détection d’obstruction et de présence, éjection automatique",
+      "Le logiciel de l’instrument gère la reprise et les mouvements"
+    ],
+    [
+      "Communication",
+      "RS232 / RS485 / CAN",
+      "Confirmer câblage et protocole selon configuration"
+    ]
+  ],
+  "figureAlts": [
+    "Image produit originale en couleur d’un pompe de pipetage automatique programmable à déplacement d’air FOREACH avec boîtier, entraînement et embout séparé",
+    "Dessin extérieur SMTP2 montrant la carte électronique, l’entraînement et les embouts séparé et monté",
+    "Référence fabricant de l’interface d’embout : LTE045 (45 mm), diamètre d’emboîtement de 5,43 mm, longueur d’embout et longueur totale"
+  ],
+  "figureCaptions": [
+    "Figure 1. Pompe de pipetage automatique programmable à déplacement d’air FOREACH et embout. La forme et l’interface dépendent de la configuration choisie.",
+    "Figure 3. Référence extérieure SMTP2 : embout séparé à gauche et monté à droite. Dessin issu d’une image de produit ; il ne représente pas une coupe interne.",
+    "Figure 2. Référence d’interface d’embout adaptée du dessin du fabricant. LTE045 (45 mm) et le diamètre d’emboîtement de 5,43 mm concernent uniquement l’interface illustrée. La longueur d’embout, la longueur totale et la compatibilité doivent être confirmées pour le consommable et la configuration retenus."
+  ],
+  "faqTitle": "Questions fréquentes",
+  "faq": [
+    [
+      "Peut-on conserver les réglages avec un autre embout de même capacité ?",
+      "La capacité ne prouve pas la compatibilité. Confirmer référence, chargement, éjection, étanchéité et géométrie, puis vérifier avec le liquide et le volume cibles."
+    ],
+    [
+      "Une aspiration peut-elle alimenter plusieurs aliquotes ?",
+      "Oui. SMTP2 peut distribuer plusieurs portions de volume défini après une seule aspiration ; leur répartition entre plusieurs récipients nécessite un positionnement coordonné par l’instrument. Le volume aspiré doit couvrir toutes les portions et la marge du procédé sans dépasser la capacité utile de la pompe ou de l’embout. Avant utilisation, vérifier le volume réel des premières portions, des portions intermédiaires et des dernières portions."
+    ]
+  ],
+  "cta": {
+    "title": "Définissez les exigences de pipetage et d’intégration",
+    "description": "Indiquez liquide, volumes minimal/habituel/maximal, référence d’embout, récipients, mode de distribution, cadence et détection pour évaluer SMTP2 et les essais du prototype.",
+    "contactLabel": "Contacter un ingénieur",
+    "productsLabel": "Voir SMTP2"
+  }
+}

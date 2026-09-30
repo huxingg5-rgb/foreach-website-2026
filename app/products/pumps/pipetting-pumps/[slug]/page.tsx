@@ -1,8 +1,17 @@
+import { getPipettingSeriesSlug, getPipettingSeriesKey } from "@/data/products/selection/pipetting-pump-routes";
 import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instrument-fluidics-copy.zh";
+import { Suspense } from "react";
+import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
+import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
+import { pipettingSeriesSlugs, pipettingSeriesFilters, isPipettingPageKey } from "@/data/products/selection/pipetting-pump-seo";
+import { getPipettingMetadata } from "@/services/products/getPipettingMetadata";
+import "@/app/products/products.css";
 import { notFound } from "next/navigation";
-import type { ComponentType } from "react";
+import type { ComponentProps } from "react";
 import type { Metadata } from "next";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
+import type { RelatedResourcesLocale } from "@/data/resources/related-resources/related-resources.intl";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 import detailsJson from "@/data/products/generated/pumps/pipetting-pumps/detail/index.json";
@@ -15,6 +24,7 @@ type PageParams = {
 
 type PageProps = {
   params: Promise<PageParams>;
+  renderLocale?: RelatedResourcesLocale;
 };
 
 type SpecItem = {
@@ -80,10 +90,6 @@ type DetailRecord = {
 };
 
 const details = detailsJson as DetailRecord[];
-
-const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
-  data: any;
-}>;
 
 function getText(value: unknown) {
   return String(value || "").trim();
@@ -194,13 +200,13 @@ function toClientData(detail: DetailRecord) {
 }
 
 export function generateStaticParams() {
-  return details.map((item) => ({
-    slug: normalizeSlug(item.slug),
-  }));
+  return pipettingSeriesSlugs.map(key => ({slug: getPipettingSeriesSlug(key)}));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+  const seriesKey = getPipettingSeriesKey(slug);
+  if (seriesKey) return getPipettingMetadata("zh", seriesKey);
   const detail = findDetail(slug);
 
   if (!detail) {
@@ -219,13 +225,33 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function PipettingPumpDetailPage({ params }: PageProps) {
+export default async function PipettingPumpDetailPage({ params, renderLocale = "zh-CN" }: PageProps) {
   const { slug } = await params;
+  const seriesIndex = pipettingSeriesSlugs.indexOf(getPipettingSeriesKey(slug)!);
+  if (seriesIndex >= 0) {
+    return <Suspense fallback={<ProductPageSkeleton variant="selection" />}>
+      <ProductSelectionClient locale="zh" initialCategoryId="pumps" initialProductTypeId="pipette-pump" initialFilters={{filter01: [pipettingSeriesFilters[seriesIndex]]}} />
+    </Suspense>;
+  }
   const detail = findDetail(slug);
 
   if (!detail) {
     notFound();
   }
 
-  return <ProductDetailView data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh")} />;
+  const series = detail.slug.split("-")[0];
+  return (
+    <ProductDetailClient
+      data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh") as ComponentProps<typeof ProductDetailClient>["data"]}
+      afterContent={
+        <RelatedResources
+          sourceType="product"
+          sourceId={detail.productId}
+          sourceSlug={detail.slug}
+          relationKeys={[`series:${series}`]}
+          locale={renderLocale}
+        />
+      }
+    />
+  );
 }

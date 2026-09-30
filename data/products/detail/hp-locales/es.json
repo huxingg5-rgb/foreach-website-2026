@@ -1,0 +1,157 @@
+{
+  "description": "La FOREACH HP-26SSU3204 es una válvula rotativa de alta presión de 2 posiciones y 6 puertos, con una posición de venteo independiente y una presión máxima de trabajo de 25 MPa. Conmuta los circuitos de carga, inyección y venteo en automuestreadores HPLC. Con un bucle de muestra externo, prepara la muestra en la posición de carga, incorpora el bucle al circuito de la fase móvil en la posición de inyección y abre una vía específica en la posición de venteo.\n\nDispone de conexiones 10-32 UNF, un diámetro de paso de 0,4 mm y un volumen interno de 0,8 μL, con estator de SUS316L y rotor de polímero. Para integrarla en un instrumento analítico, compruebe el esquema de flujo, la presión máxima del sistema, la compatibilidad con la muestra y la fase móvil, y la secuencia de conmutación y venteo.",
+  "commonApplications": [
+    "Muestreo automático HPLC",
+    "Conmutación del bucle de muestra",
+    "Venteo del circuito de fluidos"
+  ],
+  "applicationDetails": {
+    "tabLabel": "Aplicaciones",
+    "title": "Aplicaciones típicas",
+    "intro": [
+      "En cromatografía, la válvula conmuta las vías de flujo. El mecanismo de carga introduce la muestra y la bomba de fase móvil proporciona el flujo a alta presión. Los nombres válvula de inyección, de conmutación del bucle o de automuestreador describen su función en el circuito real."
+    ],
+    "items": [
+      {
+        "title": "Muestreo automático HPLC: carga e inyección",
+        "paragraphs": [
+          "En la posición de carga, la muestra entra en el bucle. En la de inyección, el bucle se conecta a la fase móvil y la muestra entra en el circuito cromatográfico. Este componente suele denominarse válvula de inyección o de automuestreador.",
+          "HP-26SSU3204 funciona con un bucle externo en un circuito de dos posiciones y seis puertos. En la inyección de bucle completo, el volumen depende principalmente del bucle; en la de bucle parcial también depende de la dosificación del mecanismo de carga. Defina conjuntamente el volumen de inyección, la muestra disponible y el método de llenado."
+        ]
+      },
+      {
+        "title": "Circuitos analíticos: conexión y aislamiento del bucle",
+        "paragraphs": [
+          "La conmutación permite cargar un volumen fijo de muestra antes de conectar el bucle al circuito principal. El volumen adicional de las conexiones y una geometría inadecuada pueden aumentar la dispersión de la banda de muestra.",
+          "Evalúe el volumen extracolumna con la longitud y el diámetro interior reales de los tubos y la geometría de los racores. Las conexiones de los seis puertos vienen definidas por el diseño; no son seis válvulas independientes ni un selector multiposición de reactivos."
+        ]
+      },
+      {
+        "title": "Ciclo de inyección: venteo y restablecimiento del circuito",
+        "paragraphs": [
+          "Las burbujas pueden afectar al llenado del bucle y a los cambios de presión. El equipo puede abrir la vía de venteo en la posición indicada antes de la siguiente carga e inyección. El venteo es una operación de mantenimiento del circuito, distinta del ajuste del volumen de inyección.",
+          "HP tiene una posición de venteo independiente. Conecte la línea según el esquema y las instrucciones, y coordine la presión con las órdenes de conmutación. Esta vía no es un desgasificador automático ni debe abrirse sin confirmar antes las condiciones de presión."
+        ]
+      }
+    ],
+    "selectionNote": {
+      "title": "Información para seleccionar la configuración",
+      "paragraphs": [
+        "Indique las presiones máximas de trabajo y conmutación, el volumen de inyección, el bucle y su método de llenado, la muestra y la fase móvil, las conexiones y la secuencia de venteo. Confirme la numeración de puertos y los requisitos de control de HP-26SSU3204."
+      ]
+    }
+  },
+  "faqs": [
+    {
+      "question": "¿Qué significan dos posiciones, seis puertos y venteo?",
+      "answer": "Las dos posiciones y los seis puertos describen la carga y la inyección; el modelo añade una posición de venteo. La especificación indica conexiones 1–2, 3–4 y 5–6 en inyección; 1–6, 2–3 y 4–5 en carga; y 3–7 en venteo. Confirme numeración, posición y secuencia de control con el esquema del modelo."
+    },
+    {
+      "question": "¿Los 0,8 μL son el volumen de inyección y cómo se elige el bucle?",
+      "answer": "0,8 μL es el volumen interno de la válvula. En bucle completo, una cantidad suficiente de muestra desplaza el líquido del bucle y este determina principalmente el volumen inyectado. En bucle parcial, el mecanismo de carga dosifica la muestra en un bucle de capacidad adecuada. Considere la muestra disponible, la repetibilidad y el método; no toda la muestra cargada en exceso se inyecta."
+    },
+    {
+      "question": "¿25 MPa son adecuados para cualquier HPLC o UHPLC?",
+      "answer": "El nombre del sistema no basta. 25 MPa es la presión máxima de trabajo de este modelo. Compare la presión estable y los transitorios de conmutación con los límites de tubos, bucle y racores. El componente con menor presión admisible limita el circuito."
+    },
+    {
+      "question": "¿Se puede conectar cualquier racor 10-32 UNF?",
+      "answer": "Compruebe también el diámetro exterior del tubo, la geometría del extremo, la profundidad de inserción y las juntas. La misma rosca no garantiza geometrías compatibles ni un sellado de alta presión correcto."
+    },
+    {
+      "question": "¿Qué comprobar si las inyecciones repetidas varían?",
+      "answer": "Compruebe el llenado del bucle, las burbujas en muestra o fase móvil, la posición de la válvula, el tiempo de permanencia en inyección, las fugas y el desgaste del sello del rotor. La repetibilidad depende del circuito completo, no solo del tiempo de conmutación."
+    },
+    {
+      "question": "¿Cómo evaluar los materiales mojados y la vida útil?",
+      "answer": "El estator es SUS316L y el rotor es un polímero. Verifique compatibilidad con composición y concentración del disolvente, temperatura y limpieza. Los 150.000 ciclos indicados se obtuvieron con agua pura y no garantizan la misma vida útil con todos los fluidos."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Modelo",
+      "value": "HP-26SSU3204"
+    },
+    {
+      "label": "Tensión nominal",
+      "value": "24 V"
+    },
+    {
+      "label": "Corriente nominal",
+      "value": "2 A"
+    },
+    {
+      "label": "Potencia nominal",
+      "value": "48 W"
+    },
+    {
+      "label": "Relación de reducción del motor",
+      "value": "5:1"
+    },
+    {
+      "label": "Configuración de la válvula",
+      "value": "2 posiciones, 6 puertos y posición de venteo independiente"
+    },
+    {
+      "label": "Dimensiones exteriores",
+      "value": "Largo × ancho × alto: 42 × 42 × 123,5 mm"
+    },
+    {
+      "label": "Dimensiones de montaje y rosca",
+      "value": "Dimensiones de posicionamiento: 19 × 20 mm; rosca × profundidad: M3 × 10 mm"
+    },
+    {
+      "label": "Rosca de los puertos",
+      "value": "10-32 UNF"
+    },
+    {
+      "label": "Presión máxima de trabajo",
+      "value": "25 MPa"
+    },
+    {
+      "label": "Diámetro de paso",
+      "value": "0.4 mm"
+    },
+    {
+      "label": "Tiempo de conmutación entre canales adyacentes",
+      "value": "100 ms"
+    },
+    {
+      "label": "Vida útil",
+      "value": "150.000 ciclos (agua pura)"
+    },
+    {
+      "label": "Ruido de funcionamiento",
+      "value": "<60 dB"
+    },
+    {
+      "label": "Volumen interno",
+      "value": "0.8 μL"
+    },
+    {
+      "label": "Material mojado — estator",
+      "value": "SUS316L"
+    },
+    {
+      "label": "Material mojado — rotor",
+      "value": "Polímero"
+    },
+    {
+      "label": "Temperatura ambiente",
+      "value": "0–40 °C (sin condensación)"
+    },
+    {
+      "label": "Humedad ambiente",
+      "value": "0–93% ±3 RH a 40 °C (sin condensación)"
+    },
+    {
+      "label": "Temperatura de almacenamiento y transporte",
+      "value": "−40–55 °C (sin congelación ni condensación)"
+    }
+  ],
+  "bottomCta": {
+    "title": "¿Necesita confirmar la configuración de la válvula HP?",
+    "description": "Indique las presiones máximas de trabajo y conmutación, el volumen de inyección, el bucle y su método de llenado, la muestra y la fase móvil, las conexiones y la secuencia de venteo. Confirme la numeración de puertos y los requisitos de control de HP-26SSU3204.",
+    "buttonText": "Contactar con un ingeniero"
+  }
+}

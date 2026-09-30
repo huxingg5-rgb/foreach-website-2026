@@ -1,4 +1,7 @@
+import { normalizePipettingPath } from "../../data/products/selection/pipetting-pump-routes";
 import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
+import { getValvelessForeignContent, getValvelessLocaleCopy } from "../../data/products/detail/valveless-pump-locales";
+import { getDatasheetsStaticPageData } from "../../data/resources/datasheets.i18n";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -10,8 +13,7 @@ import {
 import { isDiaphragmPumpPublicPath } from "../../data/products/detail/diaphragm-pump-routes";
 import { datasheetZhItems } from "../../data/resources/datasheets.zh";
 import { datasheetEnItems } from "../../data/resources/datasheets.en";
-import { installationGuideZhData } from "../../data/resources/installation-guide/installation-guide.zh";
-import { getInstallationGuideIntlData } from "../../data/resources/installation-guide/installation-guide.intl";
+import { getInstallationGuidePageData } from "../../services/resources/installation-guide/getInstallationGuidePageData";
 import { getVisibleNavigationItems } from "../../data/navigation";
 import { getInternationalUiText } from "../../lib/international-ui";
 import type { LocaleCode } from "../../lib/i18n";
@@ -25,6 +27,7 @@ import { getIvdApplicationPageData } from "../../services/applications/ivd/getIv
 import { getLabAutomationApplicationPageData } from "../../services/applications/lab-automation/getLabAutomationApplicationPageData";
 import { getLifeScienceApplicationPageData } from "../../services/applications/life-science/getLifeScienceApplicationPageData";
 import { getSyntheticBiologyApplicationPageData } from "../../services/applications/synthetic-biology/getSyntheticBiologyApplicationPageData";
+import { analyticalDocumentHref, analyticalDocuments } from "../../data/applications/analytical-documents/registry";
 
 type SearchLocale = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 
@@ -444,6 +447,16 @@ function loadProductAndCompatibleItems(
     if (!sourceTitle || !href) return [];
 
     const copy = getModuleCopy(locale, searchModule);
+    const valvelessSlug = /^\/products\/pumps\/valveless-metering-pump\/([^/]+)\/?$/.exec(href)?.[1];
+    const valveless = !isChinese && valvelessSlug ? getValvelessForeignContent(valvelessSlug, locale) : undefined;
+    if (valveless) {
+      const title = `${valveless.model} ${getValvelessLocaleCopy(locale).categoryName}`;
+      const description = shorten(valveless.cardSummary, 180);
+      const keywords = buildSearchText([valveless.model, valveless.cardSummary, ...valveless.commonApplications]);
+      return [{ m: searchModule, t: title, s: valveless.model, d: description, h: href,
+        i: cleanImage(valveless.source.mainImage),
+        x: buildSearchText([title, description, keywords, href]), k: keywords, a: copy.action }];
+    }
     const pistonSlug = /^\/products\/pumps\/piston-pump\/((?:ea|sm|tm)-\d+-(?:pmma|peek))\/?$/.exec(href)?.[1];
     const piston = pistonSlug ? getPumpSeriesProductDetailAdapter(pistonSlug, isChinese ? "zh" : locale) : null;
     if (piston) {
@@ -509,9 +522,12 @@ function loadProductAndCompatibleItems(
 }
 
 function loadDatasheets(locale: SearchLocale): CompactSearchItem[] {
-  const items = locale === "zh-CN"
+  const sourceItems = locale === "zh-CN"
     ? datasheetZhItems
     : datasheetEnItems;
+  // Scope this localization repair to the RPL resource; keep unrelated results unchanged.
+  const localizedRpl = getDatasheetsStaticPageData(locale).datasheetItems.find(item => item.id.includes("valveless-pump"));
+  const items = sourceItems.map(item => item.id.includes("valveless-pump") && localizedRpl ? localizedRpl : item);
   const copy = getModuleCopy(locale, "datasheets");
 
   return items.flatMap((item) => {
@@ -562,9 +578,7 @@ function loadDatasheets(locale: SearchLocale): CompactSearchItem[] {
 function loadInstallationGuides(
   locale: SearchLocale
 ): CompactSearchItem[] {
-  const pageData = locale === "zh-CN"
-    ? installationGuideZhData
-    : getInstallationGuideIntlData(locale);
+  const pageData = getInstallationGuidePageData(locale);
   const copy = getModuleCopy(locale, "installation-guides");
 
   return pageData.guides.flatMap((guide) => {
@@ -594,7 +608,7 @@ function loadInstallationGuides(
       t: title,
       ...(subtitle ? { s: subtitle } : {}),
       d: description,
-      h: `/resources/installation-guide?guide=${encodeURIComponent(id)}`,
+      h: guide.detailHref?.replace(/^\/en(?=\/)/, "") || `/resources/installation-guide?guide=${encodeURIComponent(id)}`,
       x: buildSearchText([title, subtitle, description, keywords]),
       ...(keywords ? { k: keywords } : {}),
       a: copy.action,
@@ -782,7 +796,22 @@ async function loadMaterialCompatibility(
 function loadApplications(locale: SearchLocale): CompactSearchItem[] {
   const copy = getModuleCopy(locale, "applications");
 
-  return APPLICATION_LOADERS.flatMap(({ slug, load }) => {
+  return APPLICATION_LOADERS.flatMap<CompactSearchItem>(({ slug, load }) => {
+    if (locale === "en" && slug === "analytical-instruments") {
+      return analyticalDocuments.map((document) => {
+        const keywords = buildSearchText([document.navLabel, document.keywords]);
+        return {
+          m: "applications" as const,
+          t: document.title,
+          d: document.description,
+          h: analyticalDocumentHref(document.slug),
+          x: buildSearchText([document.title, document.description, keywords]),
+          k: keywords,
+          a: copy.action,
+        };
+      });
+    }
+
     const loaded = load(locale);
     if (!loaded || typeof loaded !== "object" || Array.isArray(loaded)) {
       return [];
@@ -862,7 +891,7 @@ function getLocalizedValue(
 }
 
 function normalizePageHref(href: string): string {
-  const trimmed = href.trim();
+  const trimmed = normalizePipettingPath(href.trim());
   if (
     !trimmed.startsWith("/") ||
     trimmed.startsWith("//") ||
@@ -885,6 +914,10 @@ function loadSitePages(locale: SearchLocale): CompactSearchItem[] {
   const copy = getModuleCopy(locale, "pages");
   const items: CompactSearchItem[] = [];
   const seen = new WeakSet<object>();
+  // These English routes already have richer entries in the applications module.
+  const analyticalDocumentHrefs = locale === "en"
+    ? new Set(analyticalDocuments.map((document) => normalizePageHref(analyticalDocumentHref(document.slug))))
+    : null;
 
   function visit(value: unknown) {
     if (!value || typeof value !== "object") return;
@@ -916,7 +949,11 @@ function loadSitePages(locale: SearchLocale): CompactSearchItem[] {
       : null;
     const image = cleanImage(imageObject?.src || object.src);
 
-    if (title && href) {
+    const analyticalPathname = href.split(/[?#]/, 1)[0];
+    const isAnalyticalDocument = analyticalDocumentHrefs?.has(
+      analyticalPathname.startsWith("/en/") ? analyticalPathname : `/en${analyticalPathname}`,
+    );
+    if (title && href && !isAnalyticalDocument) {
       items.push({
         m: "pages",
         t: title,

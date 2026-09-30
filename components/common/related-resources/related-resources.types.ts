@@ -2,13 +2,15 @@ import type { InstallationGuideCard } from "@/data/resources/installation-guide/
 import type { RelatedResourcesLocale } from "@/data/resources/related-resources/related-resources.intl";
 import type { TechnicalArticleItem } from "@/data/resources/technical-articles/technical-articles.types";
 
-export type RelatedResourceSourceType = "article" | "product" | "video";
+export type RelatedResourceSourceType = "application" | "article" | "product" | "video";
 export type RelatedResourcesProps = {
   sourceType: RelatedResourceSourceType;
   includeRelatedArticles?: boolean;
   sourceId?: string;
   sourceSlug?: string;
   relationKeys?: readonly string[];
+  /** An explicit, ordered card selection; omit to use automatic relations. */
+  featuredProductIds?: readonly string[];
   locale: RelatedResourcesLocale;
 };
 export type RelatedArticleCard = Pick<TechnicalArticleItem, "id" | "slug" | "title" | "summary" | "date" | "coverImage">;

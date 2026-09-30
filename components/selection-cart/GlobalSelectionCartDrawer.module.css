@@ -801,19 +801,10 @@
 
 @media (max-width: 720px) {
   .floatingActions {
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    padding: 8px max(14px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
-    border-top: 1px solid rgba(23, 51, 104, 0.16);
-    background: #fff;
+    right: 14px;
+    bottom: 14px;
+    gap: 8px;
   }
-
-  /* Reserve end space so the fixed mobile action bar never traps the last content. */
-  :global(body):has(.floatingActions) { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
 
   .floatingActions button {
     width: 52px;

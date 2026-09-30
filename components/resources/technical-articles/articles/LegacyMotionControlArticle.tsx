@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import { legacyMotionArticles } from "@/data/resources/technical-articles/legacy-motion-control-articles.zh";
 import { motionReadingLinks, motionFormulaBlocks, motionImageSizes } from "@/data/resources/technical-articles/legacy-motion-control-layout.zh";
-import newsStyles from "../../news/NewsArticleClient.module.css";
-import styles from "./DiaphragmPumpEngineeringArticle.module.css";
+import newsStyles from "./TechnicalArticleBody.module.css";
+import styles from "./TechnicalArticleBody.module.css";
 
 export default function LegacyMotionControlArticle({ slug }: { slug: string }) {
   const article = legacyMotionArticles.find((item) => item.slug === slug);

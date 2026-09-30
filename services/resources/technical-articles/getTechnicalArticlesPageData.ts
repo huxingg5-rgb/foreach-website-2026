@@ -1,5 +1,12 @@
+import { getValveEngineeringArticles } from "@/data/resources/technical-articles/valve-engineering-articles.article";
+import { getPipettingBasicsArticles } from "@/data/resources/technical-articles/what-is-pipetting.article";
+import { getProgrammableSyringeArticles } from "@/data/resources/technical-articles/programmable-syringe-pump.article";
+import { getProgrammablePipettingArticles } from "@/data/resources/technical-articles/programmable-pipetting-pump.article";
 import { getPumpApplicationArticles } from "@/data/resources/technical-articles/pump-application-articles.article";
 import { getPumpDiagnosticsArticles } from "@/data/resources/technical-articles/pump-diagnostics-articles.article";
+import { getMeteringPumpAccuracyRepeatabilityArticles } from "@/data/resources/technical-articles/metering-pump-accuracy-repeatability.article";
+import { getRplSelectionArticles } from "@/data/resources/technical-articles/rpl-valveless-metering-pump-selection.article";
+import { getValvelessMeteringPumpOverviewArticles } from "@/data/resources/technical-articles/what-is-a-valveless-metering-pump.article";
 /* =========================================================
    getTechnicalArticlesPageData.ts
    恒永达官网｜技术文章列表页数据服务层
@@ -50,6 +57,22 @@ import type {
   TechnicalArticlesSourcePageData,
 } from "@/data/resources/technical-articles/technical-articles.types";
 import { technicalArticlesZhData } from "@/data/resources/technical-articles/technical-articles.zh";
+
+// Archived drafts must not enter any locale's public lists, routes or search indexes.
+// The ten placeholder articles were withdrawn together on 2026-09-19.
+const withdrawnTechnicalArticleSlugs = new Set([
+  "pressure-flow-material-compatibility",
+  "common-fitting-sealing-failure-causes",
+  "fitting-replacement-by-drawings-or-samples",
+  "ivd-fluidic-system-selection-parameters",
+  "low-pressure-vs-high-pressure-fittings",
+  "material-compatibility-table-reference",
+  "peek-ptfe-pfa-material-differences",
+  "rigid-tubing-vs-flexible-tubing",
+  "selecting-microfluidic-fittings",
+  "solenoid-valves-in-microfluidic-systems",
+  "why-application-context-matters",
+]);
 
 function isChineseLocale(locale: TechnicalArticleLocale) {
   return locale === "zh-CN";
@@ -305,6 +328,13 @@ function getTechnicalArticlesSourcePageData(
 // Use the assembled Chinese list so new articles keep the same position in every locale.
 const technicalArticleOrder = new Map(
   [
+    ...getValveEngineeringArticles("zh-CN"),
+    ...getPipettingBasicsArticles("zh-CN"),
+    ...getProgrammableSyringeArticles("zh-CN"),
+    ...getProgrammablePipettingArticles("zh-CN"),
+    ...getMeteringPumpAccuracyRepeatabilityArticles("zh-CN"),
+    ...getValvelessMeteringPumpOverviewArticles("zh-CN"),
+    ...getRplSelectionArticles("zh-CN"),
     ...getPumpDiagnosticsArticles("zh-CN"),
     ...getPumpApplicationArticles("zh-CN"),
     ...getTechnicalArticlesSourcePageData("zh-CN").articles,
@@ -319,11 +349,11 @@ export function getTechnicalArticlesPageData(
   return {
     ...sourcePageData,
     taxonomy: getTechnicalArticleTaxonomy(locale),
-    // Keep the withdrawn article in the source archive, outside all public routes and indexes.
+    // Keep withdrawn drafts in the source archive, outside all public routes and indexes.
     articles: classifyTechnicalArticles(
-      [...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
+      [...getValveEngineeringArticles(locale), ...getPipettingBasicsArticles(locale), ...getProgrammableSyringeArticles(locale), ...getProgrammablePipettingArticles(locale), ...getMeteringPumpAccuracyRepeatabilityArticles(locale), ...getValvelessMeteringPumpOverviewArticles(locale), ...getRplSelectionArticles(locale), ...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
         .filter(
-          (article) => article.slug !== "pressure-flow-material-compatibility",
+          (article) => !withdrawnTechnicalArticleSlugs.has(article.slug),
         )
         .sort((left, right) => {
           const leftOrder =

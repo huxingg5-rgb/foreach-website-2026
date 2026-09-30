@@ -82,3 +82,29 @@
 }
 
 /* ===== FOREACH PRODUCT MOBILE BREADCRUMB END ===== */
+
+/* Equal desktop padding centers the breadcrumb row vertically. */
+@media (min-width: 1025px) {
+  .shellBreadcrumb {
+    padding-top: 23px !important;
+    padding-bottom: 23px !important;
+  }
+}
+
+/* Product detail breadcrumbs and content share the same desktop width. */
+@media (min-width: 1025px) {
+  .shell:has([data-product-detail-page="true"]) {
+    --product-detail-container-width: min(calc(100% - 96px), 1600px);
+  }
+  .shell:has([data-product-detail-page="true"]) .shellBreadcrumb > div {
+    width: var(--product-detail-container-width);
+    margin-inline: auto;
+  }
+}
+/* Compact breadcrumb spacing for small desktop/laptop screens. */
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .shellBreadcrumb {
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+  }
+}

@@ -6,6 +6,9 @@ import type {
   TechnicalArticleSecondaryCategory,
   TechnicalArticleTaxonomyPrimary,
 } from "./technical-articles.types";
+import { meteringPumpAccuracyRepeatabilitySlug } from "./metering-pump-accuracy-repeatability.article";
+import { rplSelectionArticleSlug, rplSelectionRelationKeys } from "./rpl-selection-links";
+import { valvelessMeteringPumpOverviewSlug } from "./what-is-a-valveless-metering-pump.article";
 
 type LocalizedLabel = Record<TechnicalArticleLocale, string>;
 
@@ -29,6 +32,7 @@ const taxonomyStructure: ReadonlyArray<{
     children: [
       "miniature-diaphragm-pumps",
       "plunger-pumps",
+      "valveless-metering-pump",
       "syringe-pumps",
       "pipetting-pumps",
     ],
@@ -132,6 +136,7 @@ const secondaryLabels: Record<
 > = {
   "miniature-diaphragm-pumps": localized("微型隔膜泵", "Miniature Diaphragm Pumps", "Bombas miniatura de diafragma", "Pompes miniatures à membrane", "소형 다이어프램 펌프", "Миниатюрные мембранные насосы"),
   "plunger-pumps": localized("柱塞泵", "Piston Pump", "Bombas de pistón", "Pompes à piston", "피스톤 펌프", "Поршневые насосы"),
+  "valveless-metering-pump": localized("无阀计量泵", "Valveless Metering Pump", "Bomba dosificadora sin válvulas", "Pompe doseuse sans valve", "무밸브 정량 펌프", "Бесклапанный дозирующий насос"),
   "syringe-pumps": localized("注射泵", "Syringe Pumps", "Bombas de jeringa", "Pompes seringues", "시린지 펌프", "Шприцевые насосы"),
   "pipetting-pumps": localized("移液泵", "Pipetting Pumps", "Bombas de pipeteo", "Pompes de pipetage", "피펫팅 펌프", "Пипетирующие насосы"),
   "solenoid-valves": localized("电磁阀", "Solenoid Valves", "Válvulas solenoides", "Électrovannes", "솔레노이드 밸브", "Электромагнитные клапаны"),
@@ -227,17 +232,123 @@ interface ArticleClassificationDefinition {
   secondaryCategory: TechnicalArticleSecondaryCategory;
   tagKeys: readonly TechnicalArticleTagKey[];
   literalTags?: readonly string[];
+  localizedLiteralTags?: Partial<Record<TechnicalArticleLocale, readonly string[]>>;
   relatedProducts: readonly string[];
   relationKeys?: readonly string[];
   relationPriority?: number;
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "how-does-a-rotary-selector-valve-work": {
+    primaryCategory: "valves", secondaryCategory: "multi-port-valves",
+    tagKeys: ["fluid-switching", "cleaning", "oem-integration"],
+    relatedProducts: ["MRV3"],
+    relationKeys: ["series:mrv3", "category:rotary-valves"], relationPriority: 160,
+  },
+  "rotary-valve-selection-guide": {
+    primaryCategory: "valves", secondaryCategory: "multi-port-valves",
+    tagKeys: ["fluid-switching", "testing-validation", "oem-integration"],
+    relatedProducts: ["MRV3"],
+    relationKeys: ["series:mrv3", "category:rotary-valves"], relationPriority: 160,
+  },
+  "rotary-valve-wetted-materials-selection": {
+    primaryCategory: "valves", secondaryCategory: "multi-port-valves",
+    tagKeys: ["material-compatibility", "sealing-leakage", "testing-validation"],
+    relatedProducts: ["MRV3"],
+    relationKeys: ["series:mrv3", "category:rotary-valves"], relationPriority: 160,
+  },
+  "what-is-a-solenoid-valve": {
+    primaryCategory: "valves", secondaryCategory: "solenoid-valves",
+    tagKeys: ["solenoid-valve", "fluid-switching", "testing-validation"],
+    relatedProducts: ["6010"],
+    relationKeys: ["series:6010", "category:solenoid-valves"], relationPriority: 160,
+  },
+  "how-does-an-hplc-injection-valve-work": {
+    primaryCategory: "valves", secondaryCategory: "high-pressure-valves",
+    tagKeys: ["high-pressure", "fluid-switching", "testing-validation"],
+    relatedProducts: ["HP"],
+    relationKeys: ["series:hp", "category:high-pressure-valves"], relationPriority: 160,
+  },
+  "what-is-pipetting": {
+    primaryCategory: "applications-solutions",
+    secondaryCategory: "reagent-sample-handling",
+    tagKeys: ["dosing", "precision", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["移液", "手持移液", "自动移液"],
+      en: ["Pipetting", "Manual pipetting", "Automated pipetting"],
+      es: ["Pipeteo", "Pipeteo manual", "Pipeteo automatizado"],
+      fr: ["Pipetage", "Pipetage manuel", "Pipetage automatisé"],
+      ko: ["피펫팅", "수동 피펫팅", "자동 피펫팅"],
+      ru: ["Пипетирование", "Ручное пипетирование", "Автоматизированное пипетирование"],
+    },
+    relatedProducts: [],
+    relationKeys: ["category:syringe-pumps", "category:pipetting-pumps"],
+    relationPriority: 100,
+  },
+  "what-is-a-programmable-syringe-pump": {
+    primaryCategory: "pumps",
+    secondaryCategory: "syringe-pumps",
+    tagKeys: ["oem-integration", "dosing", "testing-validation"],
+    relatedProducts: ["HMD3", "HMD6", "HLD3", "HLD6"],
+    relationKeys: ["series:hmd3", "series:hmd6", "series:hld3", "series:hld6", "category:syringe-pumps"],
+    relationPriority: 150,
+  },
+  "what-is-a-programmable-pipetting-pump": {
+    primaryCategory: "pumps",
+    secondaryCategory: "pipetting-pumps",
+    tagKeys: ["oem-integration", "dosing", "testing-validation"],
+    relatedProducts: ["SMTP2-1000 μL"],
+    relationKeys: ["series:smtp2", "category:pipetting-pumps"],
+    relationPriority: 150,
+  },
+  [meteringPumpAccuracyRepeatabilitySlug]: {
+    primaryCategory: "pumps",
+    secondaryCategory: "valveless-metering-pump",
+    tagKeys: ["precision", "dosing", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["计量泵准确性", "计量泵重复性", "试剂加液", "RPL"],
+    },
+    relatedProducts: ["RPL-P4", "RPL-P6.35", "RPL-P15"],
+    relationKeys: ["series:rpl"],
+    relationPriority: 165,
+  },
+  [valvelessMeteringPumpOverviewSlug]: {
+    primaryCategory: "pumps",
+    secondaryCategory: "valveless-metering-pump",
+    tagKeys: ["dosing", "selection", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["无阀计量泵", "工作原理", "RPL", "DRPL"],
+      en: ["Valveless metering pump", "Working principle", "RPL", "DRPL"],
+    },
+    relatedProducts: [
+      "RPL-P4",
+      "RPL-P6.35",
+      "RPL-P15",
+      "DRPL-0109",
+      "DRPL-0119",
+    ],
+    relationKeys: ["series:rpl", "series:drpl"],
+    relationPriority: 150,
+  },
+  [rplSelectionArticleSlug]: {
+    primaryCategory: "pumps", secondaryCategory: "valveless-metering-pump",
+    tagKeys: ["dosing", "selection", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["RPL", "无阀计量泵"],
+      en: ["RPL", "Valveless metering pump"],
+      es: ["RPL", "Bomba dosificadora sin válvulas"],
+      fr: ["RPL", "Pompe doseuse sans clapet"],
+      ko: ["RPL", "무밸브 정량펌프"],
+      ru: ["RPL", "Бесклапанный дозирующий насос"],
+    },
+    relatedProducts: ["RPL-P4", "RPL-P6.35", "RPL-P15"],
+    relationKeys: rplSelectionRelationKeys,
+  },
   "fluid-resistance-calculator-liquid-path-design-guide": { primaryCategory: "general-fluidics", secondaryCategory: "tubing-resistance-pressure-drop", tagKeys: ["calculation", "pressure-drop", "tubing-resistance", "selection"], relatedProducts: [] },
   "foreach-miniature-diaphragm-pump-oem-integration": { primaryCategory: "applications-solutions", secondaryCategory: "oem-fluidic-systems", tagKeys: ["oem-integration", "selection", "fluidic-system", "testing-validation"], relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
-  "piston-pump-air-bubbles-dispensing-error": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "EAS"] },
-  "piston-pump-viscous-liquid-aspiration-speed": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "pressure-drop", "testing-validation"], relatedProducts: ["EA", "SM", "TM"] },
-  "piston-pump-dispensing-drift-diagnosis": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "precision", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "SM", "TM"] },
+  "piston-pump-air-bubbles-dispensing-error": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "EAS"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 95 },
+  "piston-pump-viscous-liquid-aspiration-speed": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "pressure-drop", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 90 },
+  "piston-pump-dispensing-drift-diagnosis": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "precision", "troubleshooting", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 85 },
   "miniature-diaphragm-pump-pulsation-damper-validation": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["pulsation", "flow", "testing-validation"], relatedProducts: ["DPL30", "DPL60"] },
   "miniature-liquid-diaphragm-pump-cavitation-diagnosis": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["suction", "troubleshooting", "testing-validation"], relatedProducts: ["DPL30", "DPL60", "DPL30H"] },
   "diaphragm-pump-flow-meter-totalizer-error": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["pulsation", "flow", "testing-validation"], relatedProducts: ["DPL30", "DPL60"] },
@@ -356,7 +467,7 @@ export function classifyTechnicalArticles(
       secondaryCategory: classification.secondaryCategory,
       tags: [
         ...classification.tagKeys.map((tagKey) => tagLabels[tagKey][locale]),
-        ...(classification.literalTags ?? []),
+        ...(classification.localizedLiteralTags?.[locale] ?? classification.literalTags ?? []),
       ],
       relatedProducts: [...classification.relatedProducts],
     };

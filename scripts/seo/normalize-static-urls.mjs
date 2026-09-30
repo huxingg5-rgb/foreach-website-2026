@@ -10,6 +10,8 @@ import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
+const pipettingPaths = JSON.parse(await readFile(new URL("../../data/products/selection/pipetting-pump-paths.json", import.meta.url), "utf8"));
+
 const OUTPUT_ROOT = path.join(process.cwd(), "out");
 const SITE_ORIGIN = "https://www.foreachtek.com";
 const SITE_HOSTNAME = new URL(SITE_ORIGIN).hostname;
@@ -196,6 +198,7 @@ function normalizeInternalReference(value, routeSet, { stripQuery = false } = {}
 
   if (isAbsolute && !/(^|\.)foreachtek\.com$/i.test(url.hostname)) return value;
 
+  url.pathname = url.pathname.replace(/^(\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/pumps\/pipetting-pumps\/)([^/]+)\/?$/, (all, base, slug) => pipettingPaths[slug] ? `${base}${pipettingPaths[slug]}/` : all);
   const candidateRoute = url.pathname === "/"
     ? "/"
     : `${url.pathname.replace(/\/+$/, "")}/`;
@@ -291,10 +294,13 @@ function injectSeoLinks(html, canonicalUrl, alternates) {
   return html.replace(/<\/head>/i, `${tags}</head>`);
 }
 
-// Keep article exports readable in the correct language before JavaScript runs.
-function normalizeTechnicalArticleLanguage(html, route) {
+// Keep scoped content exports in the correct language before JavaScript runs.
+function normalizeContentLanguage(html, route) {
   const { locale, baseSegments } = routeLocaleAndBase(route);
-  if (baseSegments[0] !== "resources" || baseSegments[1] !== "technical-articles") {
+  const isTechnicalArticle = baseSegments[0] === "resources" && baseSegments[1] === "technical-articles";
+  const isEnglishAnalyticalApplication = locale === "en" &&
+    baseSegments[0] === "applications" && baseSegments[1] === "analytical-instruments";
+  if (!isTechnicalArticle && !isEnglishAnalyticalApplication) {
     return html;
   }
   return html.replace(/<html\b[^>]*>/i, (tag) => {
@@ -331,7 +337,7 @@ async function main() {
     html = normalizeJsonLd(html, routeSet, stats);
     html = normalizeOpenGraphUrl(html, canonicalUrl);
     html = injectSeoLinks(html, canonicalUrl, alternates);
-    html = normalizeTechnicalArticleLanguage(html, page.route);
+    html = normalizeContentLanguage(html, page.route);
     await writeFile(page.filePath, html, "utf8");
 
     stats.canonicalLinks += 1;

@@ -57,28 +57,28 @@ export const technicalArticlesZhData: TechnicalArticlesSourcePageData = {
       id: "piston-pump-head-material-selection",
       slug: "piston-pump-head-material-selection",
       category: "pumps-valves",
-      title: "柱塞泵泵头材料怎么选？常用材料与选型方法",
+      title: "输送酸碱试剂时，柱塞泵的泵头、柱塞和密封材料怎么选？",
       summary:
-        "柱塞泵泵头材料会影响介质兼容性、结构稳定性、密封、清洗与项目成本。本文对比PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU，并说明完整接液路径的验证方法。",
+        "酸碱试剂柱塞泵选材不能只看pH。本文按成分、浓度、温度、接触时间和清洗工况，说明泵头、柱塞、密封及完整接液路径的筛选与验证方法。",
       date: "2026-09-06",
       coverImage:
         "/images/resources/technical-articles/piston-pump/piston-pump-head-material-selection-cover.webp",
-      coverAlt: "Foreach透明柱塞泵泵头材料与接液结构特写",
+      coverAlt: "Foreach柱塞泵泵头、柱塞和密封接液材料选型示意",
       content: [
         {
-          title: "柱塞泵泵头材料对比",
+          title: "酸碱试剂柱塞泵接液材料初筛",
           content:
-            "本文介绍PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU的常见选型方向，并说明材料名称不能代替真实介质与工况验证。完整正文由柱塞泵泵头材料技术文章组件渲染。",
+            "本文按真实酸碱工况介绍泵头、柱塞和密封的候选方向，并说明材料名称和pH不能代替具体介质、材料牌号与结构验证。",
         },
         {
-          title: "完整接液路径与项目验证",
+          title: "完整接液路径与分级验证",
           content:
-            "泵头选材需要同时核对柱塞、密封、阀、管路和接头，并结合介质、浓度、温度、接触时间、压力、清洗方式和目标工作液量完成样件及整机验证。",
+            "选材需要同时核对泵头、柱塞、密封、阀、管路和接头，并结合介质、浓度、温度、接触时间、压力、清洗方式和目标工作液量完成试片、零件、密封副及整机验证。",
         },
       ],
-      seoTitle: "柱塞泵泵头材料怎么选？PMMA、PEEK等材料对比 | Foreach Technology",
+      seoTitle: "酸碱试剂柱塞泵材料怎么选？泵头、柱塞与密封 | Foreach",
       seoDescription:
-        "柱塞泵泵头材料怎么选？对比PMMA、PCTG、PPS、PVDF、PP、PTFE、PEEK、POM和PSU的选型方向，了解介质兼容、完整接液路径与验证方法。",
+        "酸碱试剂柱塞泵选材不能只看pH。按成分、浓度、温度、接触时间和清洗工况，筛选泵头、柱塞与密封，并验证完整接液路径。",
     },
     {
       id: "piston-pump-accuracy-repeatability-resolution",

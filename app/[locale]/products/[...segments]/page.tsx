@@ -1,3 +1,15 @@
+import ValveSelectionPage, {getValveSelectionMetadata} from '@/components/products/selection/ValveSelectionPage';
+import HpValveDetailPage, {getHpValveMetadata} from '@/components/products/detail/HpValveDetailPage';
+import {getValveSeriesRoute} from '@/data/products/selection/valve-routes';
+import { getPipettingSeriesSlug, getPipettingSeriesKey, migratePipettingSegments, isPipettingModelRoute } from "@/data/products/selection/pipetting-pump-routes";
+import { getPipettingModelMetadata } from "@/services/products/getPipettingModelMetadata";
+import { syringeModelRoutes } from "@/data/products/selection/syringe-pump-routes";
+import { getSyringeModelMetadata } from "@/services/products/getSyringeModelMetadata";
+import { getSyringeSeriesIndex, syringeSeriesSlugs } from "@/data/products/selection/syringe-pump-series";
+import { getSyringeSeriesMetadata } from "@/services/products/getSyringeSeriesMetadata";
+import { getPipettingMetadata } from "@/services/products/getPipettingMetadata";
+import { pipettingSeriesSlugs, isPipettingPageKey } from "@/data/products/selection/pipetting-pump-seo";
+import { syringePumpIntroLocales } from "@/data/products/selection/syringe-pump-intro.locales";
 import { getControlModuleDetailBySlug } from "@/data/products/control-modules/control-module-detail.generated";
 import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
 import { getQuickConnectSeriesDetailData } from "@/data/products/detail/getQuickConnectSeriesDetailData";
@@ -54,10 +66,12 @@ import DiaphragmPumpDetailPage, {
 import PipettingPumpDetailPage from "@/app/products/pumps/pipetting-pumps/[slug]/page";
 import PlungerPumpDetailPage from "@/app/products/pumps/piston-pump/[slug]/page";
 import SyringePumpDetailPage from "@/app/products/pumps/syringe-pumps/[slug]/page";
-import ValvelessPumpDetailPage from "@/app/products/pumps/valveless-pumps/[slug]/page";
+import ValvelessPumpDetailPage from "@/app/products/pumps/valveless-metering-pump/[slug]/page";
+import { getValvelessPumpSeoTitle } from "@/data/products/detail/valveless-pump-seo";
+import { getValvelessForeignContent, getValvelessLocaleCopy } from "@/data/products/detail/valveless-pump-locales";
+import { getValvelessPumpLanguageAlternates, VALVELESS_PUMP_CATEGORY_SLUG_INTL, VALVELESS_PUMP_LEGACY_CATEGORY_SLUG } from "@/data/products/selection/valveless-pump-routes";
 import ProbeDetailPage from "@/app/products/probes/[slug]/page";
 import TubingDetailStaticPage from "@/app/products/tubing/_components/TubingDetailStaticPage";
-import ValveDetailPage from "@/app/products/valves/[slug]/page";
 
 import "@/app/products/products.css";
 
@@ -106,6 +120,8 @@ const allEnglishProductDetailRoutes:
       ]
     ),
     ...luerEnglishProductDetailRoutes,
+    ["valves", "high-pressure-valves", "hp"],
+    ...pipettingSeriesSlugs.map(slug => ["pumps", "pipetting-pumps", slug]),
   ].filter((segments) => {
     const [category, productTypeId, slug] = segments;
 
@@ -160,7 +176,11 @@ export const dynamicParams = false;
 const INTERNATIONAL_PRODUCT_LOCALES: LocaleCode[] = ["en", "es", "fr", "ko", "ru"];
 
 function getProductRoutesForLocale(_locale: LocaleCode | string) {
-  return migrateDiaphragmPumpRouteSegments(allEnglishProductDetailRoutes)
+  return migrateDiaphragmPumpRouteSegments([...allEnglishProductDetailRoutes, ...syringeSeriesSlugs.map(slug => ["pumps", "syringe-pumps", slug])])
+    .map(segments => segments[0] === "pumps" && segments[1] === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG
+      ? ["pumps", VALVELESS_PUMP_CATEGORY_SLUG_INTL, ...segments.slice(2)] : segments)
+    .map(segments => { const r = segments.length === 3 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.legacy === segments[2]) : undefined; return r ? ["pumps", "syringe-pumps", r.series, r.model] : segments; })
+    .map(migratePipettingSegments)
     .filter(segments => !getPistonPumpRedirect(`/products/${segments.join("/")}/`));
 }
 
@@ -294,6 +314,8 @@ export async function generateMetadata({
   params,
 }: ProductLocaleRoutePageProps): Promise<Metadata> {
   const { locale, segments } = await params;
+  if (segments[0] === 'valves' && segments.length === 2 && getValveSeriesRoute(segments[1])) return getValveSelectionMetadata(segments[1],locale);
+  if (segments.join('/') === 'valves/high-pressure-valves/hp') return getHpValveMetadata(locale);
 
   if (
     segments[0] === "pumps" &&
@@ -307,12 +329,17 @@ export async function generateMetadata({
     return {};
   }
 
+  if (isPipettingModelRoute(segments)) return getPipettingModelMetadata(locale, segments[3]);
   const diaphragmMetadata = await getDiaphragmPumpRouteMetadata(
     locale as LocaleCode,
     segments,
   );
 
   if (diaphragmMetadata) return diaphragmMetadata;
+  if (segments[0] === "pumps" && segments[1] === "pipetting-pumps" && (segments.length === 2 || (segments.length === 3 && getPipettingSeriesKey(segments[2])))) {
+    const key = segments[2] ? getPipettingSeriesKey(segments[2])! : "category";
+    if (isPipettingPageKey(key)) return getPipettingMetadata(locale, key);
+  }
   if (segments[0] === "pumps" && segments[1] === "piston-pump" && segments.length <= 3) {
     const metadata = getPistonPumpMetadata(segments[2] || "", locale);
     if (metadata) return metadata;
@@ -320,10 +347,25 @@ export async function generateMetadata({
 
   const compactContent = locale === "en" && segments.length === 3 && segments[0] === "pumps" && segments[1] === "piston-pump"
     ? getCompactPumpContent(segments[2], "en") : undefined;
+  const isValvelessRoute = segments[0] === "pumps" && (
+    (segments.length === 2 && segments[1] === VALVELESS_PUMP_CATEGORY_SLUG_INTL) ||
+    (segments.length === 3 && segments[1] === VALVELESS_PUMP_CATEGORY_SLUG_INTL)
+  );
+  const valvelessContent = isValvelessRoute && segments.length === 3 ? getValvelessForeignContent(segments[2], locale) : undefined;
+  const valvelessCategory = isValvelessRoute && segments.length === 2 ? getValvelessLocaleCopy(locale) : undefined;
+  const valvelessSeoTitle = valvelessContent ? getValvelessPumpSeoTitle(segments[2], locale)
+    : valvelessCategory ? `${valvelessCategory.category.title} | FOREACH` : undefined;
   const title = compactContent ? compactContent.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, "") : getRouteTitle(segments);
+  const syringeModel = segments.length === 4 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.series === segments[2] && r.model === segments[3]) : undefined;
+  if (syringeModel) return getSyringeModelMetadata(locale, syringeModel.legacy);
+  const syringeSeriesIndex = segments.length === 3 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? getSyringeSeriesIndex(segments[2]) : -1;
+  if (syringeSeriesIndex >= 0) return getSyringeSeriesMetadata(locale, syringeSeriesIndex);
   const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
+  const syringeLocaleCopy = segments.length === 2 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringePumpIntroLocales[locale] : undefined;
+  const isEnglishSyringeCategory = locale === "en" && segments.length === 2 && segments[0] === "pumps" && segments[1] === "syringe-pumps";
+  const syringeSeoTitle = isEnglishSyringeCategory ? "OEM Syringe Pumps for Automated Liquid Handling | FOREACH" : syringeLocaleCopy?.seoTitle;
   const isDetailRoute = segments.length >= 2;
-  const description = compactContent?.metaDescription || (isDetailRoute
+  const description = syringeLocaleCopy?.description || (isEnglishSyringeCategory ? "Explore FOREACH OEM syringe pumps with solenoid or rotary valves, 30/60 mm strokes and single- or multichannel configurations for automated liquid handling." : undefined) || valvelessContent?.metaDescription || valvelessCategory?.category.metaDescription || compactContent?.metaDescription || (isDetailRoute
     ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from Foreach.`
     : `Explore Foreach ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`);
   const keywords = Array.from(
@@ -339,7 +381,9 @@ export async function generateMetadata({
   const productPath = `/products/${segments.join("/")}`;
   // These templates share the body's adapter result instead of a search-index image.
   let productImageData: { mainImage?: string } | null = null;
-  if (segments.length === 2 && segments[0] === "control") {
+  if (valvelessContent) {
+    productImageData = valvelessContent.source;
+  } else if (segments.length === 2 && segments[0] === "control") {
     const detail = getControlModuleDetailBySlug(segments[1]);
     if (detail) productImageData = getControlModuleProductDetailData(detail);
   } else if (
@@ -367,12 +411,13 @@ export async function generateMetadata({
     : undefined;
 
   return {
-    title: compactContent ? { absolute: compactContent.seoTitle } : `${title} | Foreach Technology`,
+    title: syringeSeoTitle ? { absolute: syringeSeoTitle } : valvelessSeoTitle ? { absolute: valvelessSeoTitle } : compactContent ? { absolute: compactContent.seoTitle } : `${title} | Foreach Technology`,
     description,
-    keywords,
+    keywords: isValvelessRoute ? [valvelessContent?.model || valvelessCategory?.categoryName || title, getValvelessLocaleCopy(locale)?.categoryName || title, "FOREACH"] : keywords,
     alternates: {
       canonical: canonicalPath,
-      languages: {
+      languages: isValvelessRoute ? getValvelessPumpLanguageAlternates(segments[2]) : {
+        ...((isEnglishSyringeCategory || syringeLocaleCopy) ? { "zh-CN": "/products/pumps/syringe-pumps/", "x-default": "/products/pumps/syringe-pumps/" } : {}),
         "en-US": `/en/products/${segments.join("/")}/`,
         "es": `/es/products/${segments.join("/")}/`,
         "fr": `/fr/products/${segments.join("/")}/`,
@@ -386,18 +431,18 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      locale: "en_US",
+      locale: isValvelessRoute ? ({ en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU" }[locale] || "en_US") : "en_US",
       url: canonicalPath,
       siteName: "Foreach Technology",
-      title: `${title} | Foreach Technology`,
+      title: syringeSeoTitle || valvelessSeoTitle || `${title} | Foreach Technology`,
       description,
       ...(socialImage
-        ? { images: [{ url: socialImage, alt: title }] }
+        ? { images: [{ url: socialImage, alt: valvelessContent?.imageAlt || valvelessCategory?.category.title || title }] }
         : {}),
     },
     twitter: {
       card: "summary",
-      title: `${title} | Foreach Technology`,
+      title: syringeSeoTitle || valvelessSeoTitle || `${title} | Foreach Technology`,
       description,
       ...(socialImage ? { images: [socialImage] } : {}),
     },
@@ -413,6 +458,11 @@ export default async function ProductLocaleRoutePage({
     notFound();
   }
 
+  if (segments[0] === 'valves' && segments.length === 2 && getValveSeriesRoute(segments[1])) return <ValveSelectionPage slug={segments[1]} locale={locale} />;
+  if (segments.join('/') === 'valves/high-pressure-valves/hp') return <HpValveDetailPage locale={locale} />;
+  if (isPipettingModelRoute(segments)) return PipettingPumpDetailPage({params:Promise.resolve({slug:segments[3]}), renderLocale: locale});
+  const syringeModel = segments.length === 4 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.series === segments[2] && r.model === segments[3]) : undefined;
+  if (syringeModel) return SyringePumpDetailPage({ params: Promise.resolve({ slug: syringeModel.legacy }), renderLocale: locale });
   const [category, slug, seriesSlug] = segments;
 
   if (segments.length === 1) {
@@ -429,7 +479,7 @@ export default async function ProductLocaleRoutePage({
   }
 
   if (segments.length === 2) {
-    const productTypeRoute = resolveProductTypeRoute(category, slug);
+    const productTypeRoute = resolveProductTypeRoute(category, slug, locale);
 
     if (productTypeRoute) {
       return renderSelectionPage({
@@ -440,7 +490,7 @@ export default async function ProductLocaleRoutePage({
     }
 
     if (category === "valves") {
-      return ValveDetailPage({ params: Promise.resolve({ slug }) });
+      return <ValveSelectionPage slug={slug} locale={locale} />;
     }
 
     if (category === "probes") {
@@ -506,15 +556,15 @@ export default async function ProductLocaleRoutePage({
     }
 
     if (slug === "pipetting-pumps") {
-      return PipettingPumpDetailPage({ params: detailParams });
+      return PipettingPumpDetailPage({ params: detailParams, renderLocale: locale });
     }
 
     if (slug === "syringe-pumps") {
-      return SyringePumpDetailPage({ params: detailParams });
+      return SyringePumpDetailPage({ params: detailParams, renderLocale: locale });
     }
 
-    if (slug === "valveless-pumps") {
-      return ValvelessPumpDetailPage({ params: detailParams });
+    if (slug === VALVELESS_PUMP_CATEGORY_SLUG_INTL) {
+      return ValvelessPumpDetailPage({ params: detailParams, renderLocale: locale });
     }
   }
 

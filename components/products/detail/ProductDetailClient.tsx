@@ -1,4 +1,17 @@
 "use client";
+import { getSolenoidContent } from "@/data/products/detail/solenoid-content";
+import { getMrv3Content } from "@/data/products/detail/mrv3-content";
+import { getSyringeModelBreadcrumbs } from "@/data/products/selection/syringe-pump-routes";
+
+import { applySyringePumpDetailCopy } from "@/data/products/detail/syringe-pump-detail-copy";
+import { applyPipettingPumpIntroduction } from "@/data/products/detail/pipetting-pump-introductions.locales";
+import { applyPipettingPumpFaq } from "@/data/products/detail/pipetting-pump-faq.locales";
+import { getPipettingModelBreadcrumbs } from "@/data/products/selection/pipetting-pump-breadcrumbs";
+import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
+
+import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
+import { getValveDetailHeading } from "@/data/products/selection/valve-card-copy";
+import { formatProductHeading } from "@/lib/format-product-heading";
 
 
 import { getChineseProductBreadcrumbs } from "@/data/products/detail/chinese-product-breadcrumbs";
@@ -46,6 +59,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import type { CSSProperties, MouseEvent, ReactNode } from "react";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
+import { applyHpValveDetailCopy } from "@/data/products/detail/hp-content";
+import { applyValvelessEnglishMaterialNames } from "@/data/products/detail/valveless-pump-materials.en";
 import {
   HARD_TUBE_DETAIL_COPY,
   isHardTubeTargetLocale,
@@ -769,6 +784,9 @@ function getTubingBottomCtaData(data: any) {
 }
 
 function getPlungerPumpBottomCta(data: any) {
+  if (data.valvelessDetailContent === true && data.valvelessPresentation?.bottomCta) {
+    return data.valvelessPresentation.bottomCta;
+  }
   if (isHardTubeTargetLocale(String(data?.__locale || ""))) {
     return {
       title: data.bottomCtaTitle,
@@ -851,9 +869,12 @@ function getPlungerPumpBottomCta(data: any) {
   }
 
   if (isValvelessPumpDetailData(data)) {
+    if (data.slug === "rpl-p4" && data.rplP4ChineseCopy) {
+      return data.rplP4ChineseCopy.bottomCta;
+    }
     if (data?.__locale === "en") {
       return {
-        title: "Valveless pumps configured for your fluidic requirements",
+        title: "Valveless metering pumps configured for your fluidic requirements",
         desc: "Share the target displacement, ratio requirements, fluid compatibility, port type, cleaning requirements, and installation space. The Foreach engineering team can help confirm a suitable configuration.",
         button: "Submit a Custom Request",
         href: "/en/contact",
@@ -861,8 +882,8 @@ function getPlungerPumpBottomCta(data: any) {
     }
 
     return {
-      title: "无阀泵可根据您的液路需求进行定制",
-      desc: "恒永达可根据您的应用场景、目标排量、配比要求、液体兼容性、接口方式、清洗口和安装空间，协助确认适合自动化仪器集成的无阀泵配置。",
+      title: "无阀计量泵可根据您的液路需求进行定制",
+      desc: "请提供目标加液量或流量、工作节拍、液体成分、背压、接口和安装空间；双液路配液还需提供目标体积比。FOREACH 可协助确认适合设备集成的无阀计量泵配置。",
       button: "提交定制需求",
       href: "/contact",
     };
@@ -1202,7 +1223,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     ),
   );
   const rawProductModel = String(
-    data.modelDisplay || data.displayModel || data.modelCode || data.model || "",
+    data.valvelessDetailContent === true ? data.productCode : data.modelDisplay || data.displayModel || data.modelCode || data.model || "",
   ).trim();
   const isDiaphragmPump =
     isDiaphragmPumpPublicPath(pathname) &&
@@ -1240,9 +1261,22 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   // Q-series routes collect selectable models; other detail routes describe specifications.
   const isProductCollectionPage =
     /\/products\/fittings\/quick-connect-fittings\/q(?:20|40|60)\/?$/.test(pathname);
-  const compactChineseBreadcrumbs = getChineseProductBreadcrumbs(data, locale);
-  const breadcrumbItems = compactChineseBreadcrumbs
+  const compactChineseBreadcrumbs = getPipettingModelBreadcrumbs(String(data.slug || ""), locale) || getSyringeModelBreadcrumbs(String(data.slug || ""), locale) || getChineseProductBreadcrumbs(data, locale);
+  const breadcrumbItems = (data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.hpAuthoredContent) ? [
+    { name: breadcrumbCopy.home, item: toAbsoluteProductUrl(`${localePrefix}/`) },
+    { name: breadcrumbCopy.products, item: toAbsoluteProductUrl(`${localePrefix}/products/`) },
+    { name: data.breadcrumbCategoryLabel, item: toAbsoluteProductUrl(data.breadcrumbCategoryHref) },
+    ...(!["rotary-valves", "solenoid-valves"].includes(data.slug) ? [{ name: data.breadcrumbSeriesLabel, item: toAbsoluteProductUrl(data.breadcrumbSeriesHref) }] : []),
+    { name: data.breadcrumbLabel, item: canonicalUrl },
+  ] : compactChineseBreadcrumbs
     ? compactChineseBreadcrumbs.map((item) => ({name:item.label,item:item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl}))
+    : data.valvelessDetailContent === true
+    ? [
+        { name: breadcrumbCopy.home, item: toAbsoluteProductUrl(`${localePrefix}/`) },
+        { name: breadcrumbCopy.products, item: toAbsoluteProductUrl(`${localePrefix}/products/`) },
+        { name: data.breadcrumbParentLabel, item: toAbsoluteProductUrl(data.breadcrumbParentHref) },
+        { name: data.breadcrumbLabel, item: canonicalUrl },
+      ]
     : isDiaphragmPump
     ? [
         {
@@ -1336,7 +1370,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
       itemListElement: breadcrumbItems.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        name: item.name,
+        name: normalizeProductBreadcrumbLabel(item.name, item.item),
         item: item.item,
       })),
     },
@@ -1475,8 +1509,13 @@ export default function ProductDetailClient({
       : "";
   const data = useMemo(
     () => {
-      const hasLocalizedPistonCopy = (sourceData.eaDetailContent === true || sourceData.compactDetailContent === true) && sourceData.__locale === configuratorLocale;
-      const localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
+      const mrv3Copy = sourceData.category === "valves" ? (getMrv3Content(sourceData.slug, configuratorLocale) || getSolenoidContent(sourceData.slug, configuratorLocale)) : null;
+      if (mrv3Copy) {
+        const mrv3Data: typeof sourceData = { ...sourceData, ...mrv3Copy, category: "valves" };
+        return applyDiaphragmPumpDetailCopy(mrv3Data, configuratorLocale);
+      }
+      const hasLocalizedPistonCopy = (sourceData.eaDetailContent === true || sourceData.compactDetailContent === true || sourceData.valvelessDetailContent === true) && sourceData.__locale === configuratorLocale;
+      let localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
         : isEnglish
         ? sourceData.__locale === "en"
@@ -1484,8 +1523,17 @@ export default function ProductDetailClient({
           : localizeProductDetailData(sourceData)
         : sourceData;
 
+      // HP navigation is already localized by its route; the generic English
+      // adapter must not add /en to an /es, /fr, /ko or /ru breadcrumb.
+      if (sourceData.hpAuthoredContent) {
+        for (const key of ["breadcrumbLabel", "breadcrumbCategoryLabel", "breadcrumbCategoryHref", "breadcrumbSeriesLabel", "breadcrumbSeriesHref", "detailHref", "selectionHref"]) {
+          localizedData[key] = sourceData[key];
+        }
+        localizedData = applyHpValveDetailCopy(localizedData, configuratorLocale);
+      }
+
       return applyDiaphragmPumpDetailCopy(
-        localizedData,
+        applyPipettingPumpFaq(applyPipettingPumpIntroduction(applySyringePumpDetailCopy(applyValvelessEnglishMaterialNames(localizedData, configuratorLocale), configuratorLocale), configuratorLocale), configuratorLocale),
         configuratorLocale,
       );
     },
@@ -1494,6 +1542,7 @@ export default function ProductDetailClient({
   const hasAuthoredPistonCopy = sourceData.eaDetailContent === true || sourceData.compactDetailContent === true;
   const useAuthoredPistonCopy = hasAuthoredPistonCopy &&
     sourceData.__locale === configuratorLocale;
+  const useAuthoredValvelessCopy = sourceData.valvelessDetailContent === true && sourceData.__locale === configuratorLocale;
   const rawApplicationDetails = (hasAuthoredPistonCopy && !useAuthoredPistonCopy
     ? undefined
     : data.applicationDetails) as
@@ -1507,6 +1556,10 @@ export default function ProductDetailClient({
       ? rawApplicationDetails
       : null;
   const hasApplicationDetails = applicationDetails !== null;
+  // Scoped presentation copy: retain Chinese P4 guidance and localize this series only.
+  const rplP4Copy = useAuthoredValvelessCopy ? data.valvelessPresentation : configuratorLocale === "zh" && data.slug === "rpl-p4"
+    ? data.rplP4ChineseCopy
+    : undefined;
   const isDiaphragmPage = isPublishedDiaphragmPumpDetail(pathname, data);
   const diaphragmReference = isDiaphragmPage
     ? getDiaphragmPumpReferenceFromIdentity(data)
@@ -1536,7 +1589,7 @@ export default function ProductDetailClient({
   );
   const drawingDocumentUrl = drawingPreviewUrl.split("#", 1)[0];
   const isCustomProduct =
-    isDiaphragmPage || isCustomProductCategory(pathname, data);
+    ((data.mrv3AuthoredContent || data.solenoidAuthoredContent) && isCustomInquiryMode(data)) || isDiaphragmPage || isCustomProductCategory(pathname, data);
   const customProductCopy =
     CUSTOM_PRODUCT_NOTICE_COPY[
       configuratorLocale as keyof typeof CUSTOM_PRODUCT_NOTICE_COPY
@@ -1556,12 +1609,20 @@ export default function ProductDetailClient({
    */
   const diaphragmCopy = getDiaphragmPumpCopy(data, configuratorLocale);
   const displayProductTitle =
+    ((data.mrv3AuthoredContent || data.solenoidAuthoredContent) ? data.h1Title : undefined) ||
     diaphragmCopy?.title ||
-    (useAuthoredPistonCopy ? String(data.model || "") : getScopedProductDisplayTitle(
+    (useAuthoredPistonCopy || useAuthoredValvelessCopy ? String(data.model || "") : getScopedProductDisplayTitle(
       data,
       targetLocale,
       String(data.model || "")
     ));
+  const syringeDetailH1 = pathname?.includes("/products/pumps/syringe-pumps/")
+    ? syringePumpCardsLocales[getProductPageLocale(pathname)]?.[String(data.slug || "")]?.heading
+    : undefined;
+  const valveDetailH1 = pathname?.includes("/products/valves/")
+    ? getValveDetailHeading(String(data.slug || ""), configuratorLocale)
+    : undefined;
+  const inheritedDetailH1 = valveDetailH1 || syringeDetailH1;
   // ===== FOREACH TARGET PRODUCT DISPLAY TITLE END =====
   const structuredData = useMemo(
     () => buildProductPageStructuredData(data, pathname || "/"),
@@ -1660,7 +1721,20 @@ export default function ProductDetailClient({
         drawingPreview: "预览图纸",
         drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
-  const productBreadcrumbItems = getChineseProductBreadcrumbs(data, configuratorLocale) || (isDiaphragmPage
+  const productBreadcrumbItems = ((data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.hpAuthoredContent) ? [
+    { label: copy.home, href: `${localePrefix}/` },
+    { label: copy.products, href: `${localePrefix}/products/` },
+    { label: data.breadcrumbCategoryLabel, href: data.breadcrumbCategoryHref },
+    ...(!["rotary-valves", "solenoid-valves"].includes(data.slug) ? [{ label: data.breadcrumbSeriesLabel, href: data.breadcrumbSeriesHref }] : []),
+    { label: String(data.breadcrumbLabel) },
+  ] : null) || getPipettingModelBreadcrumbs(String(data.slug || ""), configuratorLocale) || getSyringeModelBreadcrumbs(String(data.slug || ""), configuratorLocale) || getChineseProductBreadcrumbs(data, configuratorLocale) || (useAuthoredValvelessCopy
+    ? [
+        { label: copy.home, href: `${localePrefix}/` },
+        { label: copy.products, href: `${localePrefix}/products/` },
+        { label: data.breadcrumbParentLabel, href: data.breadcrumbParentHref },
+        { label: data.breadcrumbLabel },
+      ]
+    : isDiaphragmPage
     ? [
         {
           label: diaphragmCategoryCopy.home,
@@ -3144,17 +3218,27 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
 
           <div className={styles.productInfo}>
             <div className={styles.titleGroup}>
-              <h1 className={styles.productModelTitle}>{displayProductTitle}</h1>
+              <h1 className={styles.productModelTitle}>{formatProductHeading(inheritedDetailH1 ? `FOREACH ${inheritedDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle)}</h1>
             </div>
 
-            {useAuthoredPistonCopy ? (
-              <nav className={styles.mobileQuickLinks} aria-label={copy.tabs}>
-                <a href="#product-detail-resources" onClick={() => handleProductTabChange("spec")}>{copy.specifications}</a>
-                <a href="#product-detail-actions">{isCustomProduct ? customProductCopy.contact : isTargetLanguage ? copy.selectModel : getModelActionText(data)}</a>
-              </nav>
-            ) : null}
 
-            {useAuthoredPistonCopy ? (
+            {Array.isArray(data.pipettingIntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-pipetting-description="true">
+                {data.pipettingIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : Array.isArray(data.valveIntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-solenoid-description="true">
+                {data.valveIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : Array.isArray(data.mrv3IntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-mrv3-description="true">
+                {data.mrv3IntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : Array.isArray(data.syringeIntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-syringe-description="true">
+                {data.syringeIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : useAuthoredPistonCopy ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-ea-description="true">
                 {data.advantages.map((paragraph: string, index: number) => (
                   <p key={`${index}-${paragraph}`}>{paragraph}</p>
@@ -3168,12 +3252,23 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
 
             <div className={styles.application}>
               <p className={styles.applicationTitle}>
-                {isLocalizedDetail
+                {isEnglish && data.applicationAreas?.length
+                  ? "Application Areas:"
+                  : isLocalizedDetail
                   ? copy.applications
                   : getDbSectionTitle("applications", copy.applications)}
               </p>
               <p className={styles.applicationText}>
-                {data.commonApplications.join(isLocalizedDetail ? ", " : "、")}
+                {isEnglish && data.applicationAreas?.length
+                  ? data.applicationAreas.map((area, index) => (
+                      <span key={area.href}>
+                        {index > 0 ? ", " : null}
+                        <a className={styles.applicationAreaLink} href={area.href}>
+                          {area.label}
+                        </a>
+                      </span>
+                    ))
+                  : data.commonApplications.join(isLocalizedDetail ? ", " : "、")}
               </p>
             </div>
 
@@ -3213,7 +3308,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     className={styles.button}
                     type="button"
                     onClick={() => {
-                      if (isCustomProduct) {
+                      if (isCustomProduct || (data.mrv3AuthoredContent || data.solenoidAuthoredContent)) {
                         trackContactClick({
                           contactChannel: "contact_form",
                           sourceSection: "product_detail",
@@ -3320,7 +3415,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                       window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
-                    {isCustomProduct
+                    {isCustomProduct || (data.mrv3AuthoredContent || data.solenoidAuthoredContent)
                       ? customProductCopy.contact
                       : isTubingConfiguratorEnabled &&
                           selectedTubingVariant
@@ -3364,7 +3459,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     aria-pressed={isDetailDrawingSelected}
                     onClick={handleAddDrawing}
                   >
-                    {isDetailDrawingSelected ? copy.drawingAdded : copy.drawing}
+                    {isDetailDrawingSelected ? rplP4Copy?.drawingAdded || copy.drawingAdded : rplP4Copy?.drawing || copy.drawing}
                   </button>
                 ) : null}
 
@@ -3551,6 +3646,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     ))}
                   </tbody>
                 </table>
+                {rplP4Copy?.specNotes.map((note: string) => (
+                  <p key={note} className={styles.rplP4SpecNote} data-product-spec-note="true">{note}</p>
+                ))}
               </div>
             </div>
 
@@ -3586,11 +3684,13 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     loadingFallback={
                       <Pump3DFileCheckingDisplay
                         locale={pumpFileDisplayLocale}
+                        title={useAuthoredValvelessCopy ? copy.model3d : undefined}
                       />
                     }
                     missingFallback={
                       <ThreeDFileNotUploadedDisplay
                         locale={pumpFileDisplayLocale}
+                        description={rplP4Copy?.modelUnavailable}
                       />
                     }
                   >
@@ -3631,11 +3731,14 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                   loadingFallback={
                     <Pump2DFileCheckingDisplay
                       locale={pumpFileDisplayLocale}
+                      title={useAuthoredValvelessCopy ? copy.drawingLoading : undefined}
                     />
                   }
                   missingFallback={
                     <TwoDFileNotUploadedDisplay
                       locale={pumpFileDisplayLocale}
+                      title={useAuthoredValvelessCopy ? copy.no2dYet : undefined}
+                      description={rplP4Copy?.drawingUnavailable}
                     />
                   }
                 >

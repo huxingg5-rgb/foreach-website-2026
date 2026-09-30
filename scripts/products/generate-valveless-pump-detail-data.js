@@ -283,7 +283,8 @@ const details = [
     specs: [
       spec("产品类型", "RPL 无阀泵"),
       spec("排量范围", "300–1200 μL/rev"),
-      spec("转速", "5–500 rpm"),
+      // Approved 2026-09-16: PS-121B-2507-00001_001_en, specifications table.
+      spec("转速", "5–300 rpm"),
       spec("准确度", "<2%"),
       spec("重复性", "<0.5%"),
       spec("耐压", "Max 150 kPa"),

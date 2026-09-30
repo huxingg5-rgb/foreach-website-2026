@@ -1,6 +1,13 @@
+import { getSyringeSeriesCopy, syringeSeriesFilters } from "./syringe-pump-series";
+import { syringePumpIntroLocales } from "./syringe-pump-intro.locales";
+import { syringePumpIntroEn } from "./syringe-pump-intro.en";
+import { pipettingPumpIntroEn } from "./pipetting-pump-intro.en";
+import { getPipettingCopy, pipettingSeriesFilters } from "./pipetting-pump-seo";
 import { instrumentIntrosZh, instrumentSeriesIntrosZh } from "./instrument-fluidics-copy.zh";
 import { valvelessPumpIntroZh } from "./valveless-pump-copy.zh";
+import { getValvelessLocaleCopy } from "../detail/valveless-pump-locales";
 import { getPistonPumpIntroCopy } from "./piston-pump-series-copy";
+import { getHpValveIntro } from "./hp-valve-intro";
 /* =========================================================
    product-type-intro.ts
    恒永达官网｜产品中心产品种类介绍数据
@@ -180,14 +187,7 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
 
   "pumps:pipette-pump": {
     en: {
-      title: "Pipetting Pump Series",
-      paragraphs: [
-        "Foreach pipetting pumps are used for sample transfer, reagent dispensing, and micro-volume liquid handling in automated instruments, using air displacement with disposable tips to reduce carryover and cross-contamination risk.",
-        "The range includes SMTP2 programmable gas displacement pipetting pumps and SMTP4 gas displacement pipetting pumps, covering 100 μL, 500 μL, and 1000 μL base configurations.",
-        "Mainstream disposable tips and custom tip adapters are supported, with multiple adapter lengths available for instrument structure and pipetting workflow confirmation.",
-      ],
-      imageAlt:
-        "Foreach pipetting pump series for automated pipetting, dispensing, and sample handling",
+      ...pipettingPumpIntroEn.category,
     },
     es: {
       title: "Serie de bombas de pipeteo",
@@ -232,56 +232,8 @@ const productTypeIntroI18nMap: Record<string, ProductTypeIntroLocaleMap> = {
   },
 
   "pumps:syringe-pump": {
-    en: {
-      title: "Syringe Pump Series",
-      paragraphs: [
-        "Foreach syringe pumps are used for high-precision injection, liquid delivery, gradient control, and stable flow output.",
-        "Syringe pump selection can be based on syringe size, stroke resolution, speed range, control mode, and available installation space.",
-        "Configurations are confirmed by project requirements, including volume, port, wash port, and mounting method.",
-      ],
-      imageAlt:
-        "Foreach syringe pump series for high-precision injection, liquid delivery, and stable flow output",
-    },
-    es: {
-      title: "Serie de bombas de jeringa",
-      paragraphs: [
-        "Las bombas de jeringa Foreach se usan para inyección de alta precisión, suministro de líquidos, control de gradiente y salida de flujo estable.",
-        "La selección se realiza según el tamaño de la jeringa, la resolución de carrera, el rango de velocidad, el modo de control y el espacio de instalación disponible.",
-        "La capacidad, el puerto fluídico, el puerto de lavado y el método de montaje se confirman de acuerdo con los requisitos del proyecto.",
-      ],
-      imageAlt:
-        "Serie de bombas de jeringa Foreach para inyección de alta precisión, suministro de líquidos y flujo estable",
-    },
-    fr: {
-      title: "Série de pompes seringues",
-      paragraphs: [
-        "Les pompes seringues Foreach sont utilisées pour l'injection haute précision, l'alimentation en liquide, le contrôle de gradient et une sortie de débit stable.",
-        "La sélection s'effectue selon la taille de la seringue, la résolution de course, la plage de vitesse, le mode de commande et l'espace d'installation disponible.",
-        "La capacité, le raccord fluidique, le port de lavage et le mode de montage sont validés selon les exigences du projet.",
-      ],
-      imageAlt:
-        "Série de pompes seringues Foreach pour injection haute précision, alimentation en liquide et débit stable",
-    },
-    ko: {
-      title: "시린지 펌프 시리즈",
-      paragraphs: [
-        "Foreach 시린지 펌프는 고정밀 주입, 액체 공급, 그래디언트 제어 및 안정적인 유량 출력에 사용됩니다.",
-        "시린지 규격, 스트로크 분해능, 속도 범위, 제어 방식 및 설치 공간에 따라 제품을 선택할 수 있습니다.",
-        "용량, 유체 포트, 세척 포트 및 장착 방식은 프로젝트 요구사항에 따라 확정합니다.",
-      ],
-      imageAlt:
-        "고정밀 주입, 액체 공급 및 안정적인 유량 출력을 위한 Foreach 시린지 펌프 시리즈",
-    },
-    ru: {
-      title: "Серия шприцевых насосов",
-      paragraphs: [
-        "Шприцевые насосы Foreach применяются для высокоточного ввода, подачи жидкости, градиентного управления и стабильного выходного потока.",
-        "Подбор выполняется по размеру шприца, разрешению хода, диапазону скорости, способу управления и доступному монтажному пространству.",
-        "Рабочий объем, гидравлический порт, промывочный порт и способ монтажа согласовываются с учетом требований проекта.",
-      ],
-      imageAlt:
-        "Серия шприцевых насосов Foreach для высокоточного ввода, подачи жидкости и стабильного потока",
-    },
+    en: syringePumpIntroEn.category,
+    ...syringePumpIntroLocales,
   },
 
   "pumps:valveless-pump": {
@@ -579,13 +531,22 @@ export function getProductTypeIntroByIds(
   locale: SelectionLocale = "zh"
 ) {
   const key = `${categoryId}:${productTypeId}`;
+  const activeLocale = getRuntimeLocale(locale);
+  if (categoryId === "valves" && ["高压阀", "high-pressure-valves"].includes(productTypeId)) {
+    return getHpValveIntro(activeLocale);
+  }
   const baseIntro = productTypeIntroMap[key];
 
   if (!baseIntro) {
     return null;
   }
 
-  const activeLocale = getRuntimeLocale(locale);
+  if (key === "pumps:pipette-pump") {
+    const copy = getPipettingCopy(activeLocale);
+    return { ...baseIntro, ...copy, image: { ...baseIntro.image, alt: copy.imageAlt } };
+  }
+
+  if (key === "pumps:valveless-pump") return getValvelessPumpCategoryIntro(undefined, activeLocale);
 
   if (key === "pumps:plunger-pump") {
     const copy = getPistonPumpIntroCopy("category", activeLocale);
@@ -654,12 +615,35 @@ export function getDiaphragmPumpCategoryIntro(
 }
 
 export function getValvelessPumpCategoryIntro(seriesValue: string | undefined, locale: SelectionLocale): ProductTypeIntroContent | null {
-  if (locale !== "zh") return null;
-  const copy = seriesValue === "RPL 无阀泵" ? valvelessPumpIntroZh.single : seriesValue === "DRPL 双头无阀泵" ? valvelessPumpIntroZh.dual : valvelessPumpIntroZh.category;
-  return { ...copy, image: productTypeIntroMap["pumps:valveless-pump"].image };
+  const localized = locale === "zh" ? valvelessPumpIntroZh : getValvelessLocaleCopy(locale);
+  if (!localized) return null;
+  const copy = seriesValue === "RPL 无阀泵" ? localized.single : seriesValue === "DRPL 双头无阀泵" ? localized.dual : localized.category;
+  const image = productTypeIntroMap["pumps:valveless-pump"].image;
+  return { ...copy, image: locale === "zh" ? image : { ...image, alt: `FOREACH ${copy.title}` } };
 }
 
 export function getInstrumentCategoryIntro(productTypeId:string, seriesValue:string|undefined, locale:SelectionLocale):ProductTypeIntroContent|null {
+  if (productTypeId === "pipette-pump") {
+    const index = pipettingSeriesFilters.indexOf(seriesValue || "");
+    const copy = getPipettingCopy(locale, index === 0 ? "smtp2" : index === 1 ? "smtp4" : "category");
+    const base = productTypeIntroMap["pumps:pipette-pump"];
+    return { ...base, ...copy, image: { ...base.image, alt: copy.imageAlt } };
+  }
+  const syringeSeriesIndex = syringeSeriesFilters.indexOf(seriesValue || "");
+  if (productTypeId === "syringe-pump" && syringeSeriesIndex >= 0) {
+    const copy = getSyringeSeriesCopy(locale, syringeSeriesIndex);
+    const base = productTypeIntroMap["pumps:syringe-pump"];
+    return { ...base, ...copy, image: { ...base.image, alt: copy.imageAlt } };
+  }
+  if (locale === "en" && productTypeId === "syringe-pump") {
+    const copy = seriesValue === "HMD 电磁阀系列注射泵"
+      ? syringePumpIntroEn.hmd
+      : seriesValue === "HLD 旋转阀系列注射泵"
+        ? syringePumpIntroEn.hld
+        : syringePumpIntroEn.category;
+    const base = productTypeIntroMap["pumps:syringe-pump"];
+    return { ...base, ...copy, image: { ...base.image, alt: copy.imageAlt } };
+  }
   if(locale !== "zh" || !instrumentIntrosZh[productTypeId]) return null;
   const base=productTypeIntroMap[`pumps:${productTypeId}`];
   const copy=(seriesValue && instrumentSeriesIntrosZh[seriesValue]) || instrumentIntrosZh[productTypeId];

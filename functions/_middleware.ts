@@ -1,3 +1,4 @@
+import { normalizePipettingPath } from "../data/products/selection/pipetting-pump-routes";
 /**
  * Cloudflare Pages Functions｜旧版官网精确重定向
  *
@@ -45,6 +46,15 @@ export const onRequest: LegacyRedirectHandler = async ({
   }
 
   const requestUrl = new URL(request.url);
+
+  // Handle this migration explicitly in Pages Functions as well as _redirects.
+  const pipettingPath = normalizePipettingPath(requestUrl.pathname);
+  if (pipettingPath !== requestUrl.pathname) {
+    const target = new URL(requestUrl);
+    target.pathname = pipettingPath;
+    return new Response(null, {status: 301, headers: {Location: target.toString()}});
+  }
+
 
   if (requestUrl.hostname.toLowerCase() !== "www.foreachtek.com") {
     return next();

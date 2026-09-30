@@ -33,6 +33,7 @@ type ProductFilterPanelProps = {
     group: ProductSelectionFilterGroup,
     value: string
   ) => void;
+  getOptionHref?: (group: ProductSelectionFilterGroup, value: string) => string | undefined;
   onResetFilters?: () => void;
 };
 
@@ -253,6 +254,7 @@ function BarbedPortFilterGroup({
 
 
 export default function ProductFilterPanel({
+  getOptionHref,
   activeCategory,
   activeProductTypeId,
   filterGroups,
@@ -283,10 +285,15 @@ export default function ProductFilterPanel({
   return (
     <aside
       className="filter-panel"
+      aria-label={activeCategory.id === "valves" ? activeCategory.label : undefined}
       data-category-id={activeCategory.id}
       data-product-type-id={activeProductTypeId || ""}>
       <div className="filter-panel-head">
-        <h2>{activeCategory.label}</h2>
+        {activeCategory.id === "valves" ? (
+          <p className="filter-panel-title">{activeCategory.label}</p>
+        ) : (
+          <h2>{activeCategory.label}</h2>
+        )}
         <p>{activeCategory.description}</p>
       </div>
 
@@ -626,6 +633,8 @@ const inferredShouldUseTwoColumns =
                     )
                   );
 
+                const href = getOptionHref?.(group, option.value);
+                if (href) return <a key={option.value} href={href} className={["filter-option", optionTypeClass, active ? "active" : ""].filter(Boolean).join(" ")} aria-current={active ? "page" : undefined}><span className="filter-check" /><span>{option.label}</span></a>;
                 return (
                   <button
                     className={[
@@ -747,4 +756,3 @@ const inferredShouldUseTwoColumns =
     </aside>
   );
 }
-

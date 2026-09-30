@@ -3,6 +3,7 @@ import type {
   ProductApplicationsContent,
   ProductDetailFaqItem,
 } from "../product-detail.types";
+import { PISTON_APPLICATION_GUIDES } from "@/data/applications/analytical-documents/piston-link-network";
 
 type Locale = "zh" | "en";
 type Material = "PMMA" | "PEEK";
@@ -182,6 +183,10 @@ export function getEaPumpContent(slug: string, locale: Locale) {
         "The specified expected life of five million cycles uses pure water at room temperature and 50 kPa back pressure. Saline or crystallization-prone fluids require a maintenance procedure. Pressure, seal wash, feedback and driver options follow the formal specification and project configuration. Omics, titration and filling require further carryover, minimum-dose, dripping or process validation.",
       ],
     },
+    relatedGuides: locale === "en" ? {
+      title: "Piston-pump application guides for analytical instruments",
+      links: PISTON_APPLICATION_GUIDES,
+    } : undefined,
   };
   const faq = (zhQ: string, zhA: string, enQ: string, enA: string): ProductDetailFaqItem => ({ question: locale === "zh" ? zhQ : enQ, answer: locale === "zh" ? zhA : enA });
   const faqs: ProductDetailFaqItem[] = [
