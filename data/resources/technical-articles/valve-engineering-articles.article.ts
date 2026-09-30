@@ -1,4 +1,6 @@
-import { mrv3Configurations } from "@/data/products/detail/mrv3-content";
+import { rotaryValveArticles } from "./rotary-valve-articles.zh";
+import { getRotaryValveArticles } from "./rotary-valve-articles.intl";
+import { localizeValveEngineeringArticles } from "./valve-engineering-articles.intl";
 import type { DiaphragmPumpEngineeringArticleCopy as ArticleCopy, EngineeringArticleBlock as Block } from "./diaphragm-pump-engineering-article.types";
 import type { TechnicalArticleItem, TechnicalArticleLocale } from "./technical-articles.types";
 
@@ -17,74 +19,6 @@ const cta: ArticleCopy["cta"] = {
   title: "结合实际液路确认阀的配置",
   description: "提供液体种类、压力范围、接口和动作顺序，便于核对适用配置。",
   contactLabel: "联系 FOREACH", productsLabel: "查看阀系列", productsHref: "/products/valves/",
-};
-
-const rotary: ArticleCopy = {
-  metadata: {
-    title: "旋转阀如何切换液路？多通道选路原理与应用",
-    seoTitle: "旋转阀工作原理：多通道选路、试剂切换与清洗 | FOREACH",
-    seoDescription: "用试剂 A、试剂 B 与清洗液的切换示例，说明旋转选择阀怎样配合泵工作，通道数与同时供液的区别，以及共用管路残留和清洗验证。介绍 MRV3 10、16、24 通道配置。",
-    coverImage: "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
-    coverAlt: "FOREACH MRV3 多通道旋转选择阀产品外观",
-  },
-  deck: "以同一套加液机构依次使用试剂 A、试剂 B 和清洗液为例，说明旋转阀如何选择液源，以及泵、程序和清洗动作怎样配合。",
-  leadBlocks: [
-    p("旋转阀通过转子相对定子转动，改变阀内流道与外部接口的连接关系。在分析仪器中，多通道旋转选择阀常用于让一个公共口依次接通不同的试剂瓶、样本管或清洗液瓶。"),
-    p("例如，一套加液机构需要先取试剂 A，再清洗，最后取试剂 B。旋转阀负责选择当前接通哪一瓶液体；泵提供吸排液的动力；控制程序安排选路、输送和清洗的先后。本文讨论的是这种仪器液路旋转阀。"),
-  ],
-  sections: [
-    { title: "旋转选择阀怎样接通一条液路？", blocks: [
-      p("以公共口 COM 配合多个选择口的结构为例，各试剂瓶分别接到不同选择口，COM 接入共用管路。电机带动转子到达指定位置后，转子上的流道把 COM 与目标选择口接通。阀位改变，接入共用管路的液源随之改变。"),
-      flow("旋转选择阀把指定试剂瓶接入公共口，泵随后输送液体至加液针", [["试剂 A", "接指定选择口"], ["旋转阀", "选择口连通 COM"], ["泵", "吸取并输送"], ["加液针", "向目标加液"]], "这是选取试剂 A 后的液体路径；其他液源不应被程序当作同时接通。"),
-      p("阀转到位只表示液路选择动作完成。若泵没有运行、管路中存在气体，或新液体还未通过共用管路，加液针处就不一定已经输出目标试剂。程序需要分别确认阀位、输送动作和输出结果。"),
-    ] },
-    { title: "从试剂 A 换到试剂 B，设备需要做什么？", blocks: [
-      p("设定一个简单任务：试剂 A、试剂 B 和清洗液各占一个选择口，COM 连接同一套泵与加液针；清洗时，加液针移动到废液位，或由另一套已确认的液路把液体导向废液。下面的流程以加液针移动到废液位为例。"),
-      list(
-        "完成试剂 A 加液。停止本次计量动作，使液路处于允许切阀的压力和运行状态，再把加液针移到废液位。",
-        "选择清洗液。程序控制旋转阀接通清洗液口，确认到位后运行泵，让清洗液经过共用管路、泵腔和加液针，并排入废液。清洗量通过残留试验确定。",
-        "选择试剂 B。按相同的切阀条件切换液源，用试剂 B 置换共用路径中的清洗液；这部分液体仍排到废液位。",
-        "开始正式加液。确认输出液体和液量满足要求后，把加液针送到目标容器，再执行试剂 B 的计量动作。"
-      ),
-      flow("试剂切换依次经历结束加液、清洗共用路径、新试剂置换和正式加液", [["结束 A", "停泵并转废液位"], ["清洗", "选清洗液并输送"], ["置换", "选 B 并排至废液"], ["加液 B", "移至目标再计量"]], "阀选择液源，泵推动液体，运动机构决定液体进入反应容器还是废液容器。"),
-      p("若两种液体不能直接接触，应先确定合适的中间清洗介质及换液顺序。不能仅凭切换了阀位，就省略对清洗液、试剂和接液材料的兼容性检查。"),
-    ] },
-    { title: "10、16、24 通道，区别不只是接口数量", blocks: [
-      p("MRV3 常见配置对比，内容积指公共口流路孔与转子槽的内部容积。"),
-      { type: "table", headers: ["配置", "选择通道数", "通径", "阀内容积", "接口"], rows: mrv3Configurations.map(c => [c.slug.toUpperCase(), c.channels, `${c.bore} mm`, `${c.volume} μL`, c.port]) },
-      p("这里的通道数用于描述可供选择的液路数量。对于本文的公共口选路方式，一台 24 通道阀不等于 24 路液体同时独立输送。如果需要多路同步加液，还要配置相应的计量通道和液路。"),
-      p("选型先数清液源、清洗液和预留路径，再比较通径与接口。较小通径会改变流阻，不能只按更小的内容积选阀。MRV3 的工作压力上限为 0.7 MPa，装机时还应检查实际压力及其他部件的使用条件，不能将其当作 HPLC 高压进样阀使用。"),
-    ] },
-    { title: "为什么小内容积仍然需要清洗？", blocks: [
-      p("切换后的残留不仅来自阀内部，还包括共用管路、泵腔、接头和加液针内的旧液体。液体还可能吸附在接液表面，因此只看阀的内容积，不能判断下一份样本是否受到污染。"),
-      { type: "formula", expression: "管内容积 V = π × 内径² × 长度 ÷ 4", note: "例如，内径 0.8 mm、长度 300 mm 的直管，理论内容积约为 151 μL。1 mm³ = 1 μL；此算例仅计算管内几何容积。" },
-      p("这段管路的容积已经明显大于几微升的阀内容积。即便阀位已经切到试剂 B，出口仍可能先流出旧液体与置换液的混合部分。理论容积可用于估算起点，实际清洗量仍要根据液体混合、吸附和允许残留确定，不能直接等同于一次管内容积。"),
-    ] },
-    { title: "装入设备后，怎样验证切换结果？", blocks: [
-      list(
-        "核对每个选择口与液源的对应关系，包括上电复位后的阀位，防止程序中的通道编号与实际接管不一致。",
-        "用实际试剂和清洗液执行完整换液流程，测量切换后的首份液体及连续加液结果；用空白样或适合该液体的检测方法检查残留。",
-        "在预期液位、管路长度和背压下检查流量与液量，同时确认接口密封。阀到位时间不能代替出口液体稳定时间。",
-        "测试阀未到位、泵动作超时和断电重启等情况。没有相应位置或液体状态检测时，程序不能假定这些异常都能被自动识别。"
-      ),
-      p("如果切换后只有第一份结果异常，应优先检查共用路径的置换是否充分；如果持续异常，再检查气泡、泄漏、流阻与泵的实际输送情况。这样才能把阀位问题和液体输送问题分开定位。"),
-    ] },
-    { title: "相关产品与延伸阅读", blocks: [
-      p("需要让同一套液路依次接入多个液源时，可从 MRV3 系列的通道数、接口和接液材料开始核对。"),
-      links(
-        { href: "/products/valves/rotary-valves/", label: "MRV3 多通道旋转选择阀" },
-        ...mrv3Configurations.map(c => ({ href: `/products/valves/rotary-valves/${c.slug}/`, label: `${c.slug.toUpperCase()}：${c.channels} 通道配置` })),
-        { href: "/resources/technical-articles/what-is-pipetting/", label: "什么是移液？手持与自动化移液的流程、优势与区别" },
-        { href: "/resources/technical-articles/how-does-an-hplc-injection-valve-work/", label: "HPLC 六通进样阀如何切换装样与进样路径？" }
-      ),
-    ] },
-  ],
-  faqTitle: "常见问题",
-  faqItems: [
-    { question: "旋转阀能直接控制每次加多少液体吗？", answer: "旋转选择阀负责接通指定液路。实际液量由泵的计量动作、液体状态和安装液路共同决定，需要在目标条件下测量；不能只用阀位或切换次数代替液量控制。" },
-    { question: "内容积越小，换液就一定越快吗？", answer: "不一定。还要比较通径带来的流阻、共用管路容积、泵的输送能力以及清洗要求。阀内容积较小，有助于减少阀内部滞留，但不能代表整条路径的换液时间。" },
-    { question: "断电后能直接沿用上一次通道编号吗？", answer: "应按具体驱动与定位方式完成复位或位置确认，再执行取液。仅保存软件中的上一次编号，不能证明实际阀位与编号一致。" },
-  ], cta,
 };
 
 const solenoid: ArticleCopy = {
@@ -241,6 +175,7 @@ const hplc: ArticleCopy = {
 };
 
 type ValveArticle = {
+  date?: string;
   slug: string;
   copy: ArticleCopy;
   navigation: { id: string; label: string }[];
@@ -250,16 +185,7 @@ type ValveArticle = {
 };
 
 export const valveEngineeringArticles: readonly ValveArticle[] = [
-  {
-    slug: "how-does-a-rotary-selector-valve-work", copy: rotary,
-    navigation: [
-      { id: "rotary-principle", label: "选路原理" }, { id: "rotary-workflow", label: "试剂与清洗液切换" },
-      { id: "rotary-configurations", label: "通道与配置" }, { id: "rotary-residual", label: "内容积与残留" },
-      { id: "rotary-checks", label: "装机验证" }, { id: "rotary-products", label: "产品与延伸阅读" },
-    ],
-    subject: { about: ["旋转阀工作原理", "多通道液路选择", "共用液路清洗"], mentions: ["MRV3", "试剂切换"] },
-    productIds: ["mrv3-ceramic-rotary-valve"], relationKeys: ["series:mrv3", "category:rotary-valves"],
-  },
+  ...rotaryValveArticles,
   {
     slug: "what-is-a-solenoid-valve", copy: solenoid,
     navigation: [
@@ -282,8 +208,22 @@ export const valveEngineeringArticles: readonly ValveArticle[] = [
   },
 ];
 
+const localizedArticles = new Map<TechnicalArticleLocale, readonly ValveArticle[]>();
+function articlesForLocale(locale: TechnicalArticleLocale): readonly ValveArticle[] {
+  if (locale === "zh-CN") return valveEngineeringArticles;
+  const cached = localizedArticles.get(locale);
+  if (cached) return cached;
+  const articles = [
+    ...getRotaryValveArticles(locale),
+    ...localizeValveEngineeringArticles(valveEngineeringArticles.slice(rotaryValveArticles.length), locale),
+  ];
+  localizedArticles.set(locale, articles);
+  return articles;
+}
+
 export function getValveEngineeringArticle(slug: string, locale: TechnicalArticleLocale) {
-  return locale === "zh-CN" ? valveEngineeringArticles.find(article => article.slug === slug) ?? null : null;
+  const articles = articlesForLocale(locale);
+  return articles.find(article => article.slug === slug) ?? null;
 }
 
 function blockText(block: Block): string {
@@ -300,10 +240,10 @@ function blockText(block: Block): string {
 }
 
 export function getValveEngineeringArticles(locale: TechnicalArticleLocale): TechnicalArticleItem[] {
-  if (locale !== "zh-CN") return [];
-  return valveEngineeringArticles.map(({ slug, copy, relationKeys }) => ({
+  const articles = articlesForLocale(locale);
+  return articles.map(({ slug, copy, relationKeys, date }) => ({
     id: slug, slug, category: "pumps-valves", ...copy.metadata, summary: copy.deck,
-    date: "2026-09-29", relationKeys, relationPriority: 160,
+    date: date ?? "2026-09-29", relationKeys, relationPriority: 160,
     content: [
       { title: "", content: copy.leadBlocks.map(blockText).join("\n\n") },
       ...copy.sections.map(section => ({ title: section.title, content: section.blocks.map(blockText).join("\n\n") })),

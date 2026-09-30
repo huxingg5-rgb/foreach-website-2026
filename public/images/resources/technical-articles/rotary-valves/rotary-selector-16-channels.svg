@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="760" viewBox="0 0 720 760" role="img" aria-labelledby="title desc" data-selection-count="16">
+<title id="title">16 通道旋转选择阀连接原理</title>
+<desc id="desc">16 个选择口顺时针编号 1 至 16，中心为公共口 COM；仅 COM 与 2 号选择口连通。选择通道数不含公共口。示意图不代表产品尺寸、实际孔位或编号方向。</desc>
+<rect width="720" height="760" fill="white"/>
+<g font-family="Arial, 'Microsoft YaHei', sans-serif" text-anchor="middle">
+<text x="360" y="42" font-size="34" font-weight="700" fill="#171b20">16 通道</text>
+<rect x="95" y="83" width="530" height="530" rx="18" fill="#3d4249" stroke="#25292e" stroke-width="5"/>
+<rect x="109" y="97" width="502" height="502" rx="12" fill="none" stroke="#646a72" stroke-width="3"/>
+<circle cx="127" cy="115" r="10" fill="#22262b" stroke="#868d95" stroke-width="2"/>
+<circle cx="127" cy="581" r="10" fill="#22262b" stroke="#868d95" stroke-width="2"/>
+<circle cx="593" cy="115" r="10" fill="#22262b" stroke="#868d95" stroke-width="2"/>
+<circle cx="593" cy="581" r="10" fill="#22262b" stroke="#868d95" stroke-width="2"/>
+<circle cx="360" cy="348" r="222" fill="#f2f3f4" stroke="#c4c8cc" stroke-width="5"/>
+<circle cx="360" cy="348" r="138" fill="#d8dce0" stroke="#c3c8ce" stroke-width="2"/>
+<path data-active-path="COM-2" d="M 360 348 L 429.65 179.85" fill="none" stroke="#eaf5ff" stroke-width="20" stroke-linecap="round"/>
+<path d="M 360 348 L 429.65 179.85" fill="none" stroke="#1688dd" stroke-width="13" stroke-linecap="round"/>
+<g data-port="1" data-connected="false">
+<line x1="360.00" y1="166.00" x2="360.00" y2="116.00" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="360.00" y1="166.00" x2="360.00" y2="116.00" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="1" cx="360.00" cy="166.00" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="338.00" y="66.00" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="1" x="360.00" y="84.00" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">1</text>
+</g>
+<g data-port="2" data-connected="true">
+<line x1="429.65" y1="179.85" x2="448.78" y2="133.66" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="429.65" y1="179.85" x2="448.78" y2="133.66" stroke="#1688dd" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="2" cx="429.65" cy="179.85" r="15" fill="#1688dd" stroke="#eaa50d" stroke-width="6"/>
+<rect x="439.03" y="86.10" width="44" height="36" rx="8" fill="#e8f4ff"/>
+<text data-port-label="2" x="461.03" y="104.10" dominant-baseline="central" font-size="30" font-weight="700" fill="#0876bf">2</text>
+</g>
+<g data-port="3" data-connected="false">
+<line x1="488.69" y1="219.31" x2="524.05" y2="183.95" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="488.69" y1="219.31" x2="524.05" y2="183.95" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="3" cx="488.69" cy="219.31" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="524.68" y="143.32" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="3" x="546.68" y="161.32" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">3</text>
+</g>
+<g data-port="4" data-connected="false">
+<line x1="528.15" y1="278.35" x2="574.34" y2="259.22" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="528.15" y1="278.35" x2="574.34" y2="259.22" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="4" cx="528.15" cy="278.35" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="581.90" y="228.97" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="4" x="603.90" y="246.97" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">4</text>
+</g>
+<g data-port="5" data-connected="false">
+<line x1="542.00" y1="348.00" x2="592.00" y2="348.00" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="542.00" y1="348.00" x2="592.00" y2="348.00" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="5" cx="542.00" cy="348.00" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="602.00" y="330.00" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="5" x="624.00" y="348.00" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">5</text>
+</g>
+<g data-port="6" data-connected="false">
+<line x1="528.15" y1="417.65" x2="574.34" y2="436.78" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="528.15" y1="417.65" x2="574.34" y2="436.78" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="6" cx="528.15" cy="417.65" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="581.90" y="431.03" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="6" x="603.90" y="449.03" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">6</text>
+</g>
+<g data-port="7" data-connected="false">
+<line x1="488.69" y1="476.69" x2="524.05" y2="512.05" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="488.69" y1="476.69" x2="524.05" y2="512.05" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="7" cx="488.69" cy="476.69" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="524.68" y="516.68" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="7" x="546.68" y="534.68" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">7</text>
+</g>
+<g data-port="8" data-connected="false">
+<line x1="429.65" y1="516.15" x2="448.78" y2="562.34" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="429.65" y1="516.15" x2="448.78" y2="562.34" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="8" cx="429.65" cy="516.15" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="439.03" y="573.90" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="8" x="461.03" y="591.90" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">8</text>
+</g>
+<g data-port="9" data-connected="false">
+<line x1="360.00" y1="530.00" x2="360.00" y2="580.00" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="360.00" y1="530.00" x2="360.00" y2="580.00" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="9" cx="360.00" cy="530.00" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="338.00" y="594.00" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="9" x="360.00" y="612.00" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">9</text>
+</g>
+<g data-port="10" data-connected="false">
+<line x1="290.35" y1="516.15" x2="271.22" y2="562.34" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="290.35" y1="516.15" x2="271.22" y2="562.34" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="10" cx="290.35" cy="516.15" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="236.97" y="573.90" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="10" x="258.97" y="591.90" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">10</text>
+</g>
+<g data-port="11" data-connected="false">
+<line x1="231.31" y1="476.69" x2="195.95" y2="512.05" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="231.31" y1="476.69" x2="195.95" y2="512.05" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="11" cx="231.31" cy="476.69" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="151.32" y="516.68" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="11" x="173.32" y="534.68" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">11</text>
+</g>
+<g data-port="12" data-connected="false">
+<line x1="191.85" y1="417.65" x2="145.66" y2="436.78" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="191.85" y1="417.65" x2="145.66" y2="436.78" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="12" cx="191.85" cy="417.65" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="94.10" y="431.03" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="12" x="116.10" y="449.03" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">12</text>
+</g>
+<g data-port="13" data-connected="false">
+<line x1="178.00" y1="348.00" x2="128.00" y2="348.00" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="178.00" y1="348.00" x2="128.00" y2="348.00" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="13" cx="178.00" cy="348.00" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="74.00" y="330.00" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="13" x="96.00" y="348.00" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">13</text>
+</g>
+<g data-port="14" data-connected="false">
+<line x1="191.85" y1="278.35" x2="145.66" y2="259.22" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="191.85" y1="278.35" x2="145.66" y2="259.22" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="14" cx="191.85" cy="278.35" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="94.10" y="228.97" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="14" x="116.10" y="246.97" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">14</text>
+</g>
+<g data-port="15" data-connected="false">
+<line x1="231.31" y1="219.31" x2="195.95" y2="183.95" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="231.31" y1="219.31" x2="195.95" y2="183.95" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="15" cx="231.31" cy="219.31" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="151.32" y="143.32" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="15" x="173.32" y="161.32" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">15</text>
+</g>
+<g data-port="16" data-connected="false">
+<line x1="290.35" y1="179.85" x2="271.22" y2="133.66" stroke="#adb6bf" stroke-width="16" stroke-linecap="round"/>
+<line x1="290.35" y1="179.85" x2="271.22" y2="133.66" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+<circle data-selection-port="16" cx="290.35" cy="179.85" r="15" fill="#fff" stroke="#eaa50d" stroke-width="6"/>
+<rect x="236.97" y="86.10" width="44" height="36" rx="8" fill="#fff"/>
+<text data-port-label="16" x="258.97" y="104.10" dominant-baseline="central" font-size="30" font-weight="700" fill="#262b30">16</text>
+</g>
+<circle id="common-port" cx="360" cy="348" r="26" fill="#1688dd" stroke="#eaa50d" stroke-width="7"/>
+<text x="360" y="416" font-size="34" font-weight="700" fill="#262b30">COM</text>
+<text x="360" y="446" font-size="23" fill="#4a525b">公共口</text>
+<text x="360" y="677" font-size="31" font-weight="700" fill="#171b20">公共口 COM ↔ 2 号选择口</text>
+<text x="360" y="718" font-size="26" fill="#515a64">16 个选择口 ＋ 1 个公共口</text>
+<text x="360" y="751" font-size="21" fill="#68727c">连接原理示意 · 不代表产品尺寸</text>
+</g></svg>

@@ -608,7 +608,7 @@ function loadInstallationGuides(
       t: title,
       ...(subtitle ? { s: subtitle } : {}),
       d: description,
-      h: `/resources/installation-guide?guide=${encodeURIComponent(id)}`,
+      h: guide.detailHref?.replace(/^\/en(?=\/)/, "") || `/resources/installation-guide?guide=${encodeURIComponent(id)}`,
       x: buildSearchText([title, subtitle, description, keywords]),
       ...(keywords ? { k: keywords } : {}),
       a: copy.action,

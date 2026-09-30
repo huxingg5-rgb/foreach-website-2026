@@ -1,5 +1,14 @@
-/* Keep the existing monochrome article layout; stack flow steps on narrow screens. */
+/* Preserve each selector diagram's natural height and legible port labels. */
+.article [id="rotary-ports"] [data-article-gallery] img {
+  aspect-ratio: auto;
+}
+
+/* Keep the existing article layout; stack diagrams and flow steps on narrow screens. */
 @media (max-width: 600px) {
+  .article [id="rotary-ports"] [data-article-gallery] {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   .article [data-article-figure] ol[data-nodes] {
     grid-template-columns: 1fr;
     gap: 22px;

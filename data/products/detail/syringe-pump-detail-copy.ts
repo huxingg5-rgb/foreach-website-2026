@@ -3,6 +3,7 @@ import { syringePumpFaqLocales } from "./syringe-pump-faq.locales";
 import { syringePumpApplicationsLocales } from "./syringe-pump-applications.locales";
 import { syringePumpCardsLocales } from "../selection/syringe-pump-cards.locales";
 import { getSyringeSeriesCopy } from "../selection/syringe-pump-series";
+import { hld3WhiteBackgroundImage, getHld3WhiteBackgroundImageAlt } from "./syringe-pump-images";
 const models: Record<string, { faq: number[]; apps: number[]; series: number }> = {
   "hmd3-30mm-solenoid-syringe-pump": { faq: [0,3,4,5,9], apps: [0,1,2], series: 0 },
   "hmd6-60mm-solenoid-syringe-pump": { faq: [1,8,0,5,9], apps: [3,1,2], series: 0 },
@@ -18,7 +19,12 @@ export function applySyringePumpDetailCopy<T extends Record<string, any>>(data: 
   const faqData = { faqs, faq: faqs, faqItems: faqs, faqList: faqs, detailFaqs: faqs };
   const syringeIntroductionParagraphs = syringePumpIntroductions[lang]?.[data.slug];
   const description = syringeIntroductionParagraphs?.join("\n\n") || data.description;
-  const introData = { description, summary: description, overview: description, syringeIntroductionParagraphs };
+  const imageData = data.slug === "hld3-30mm-rotary-valve-syringe-pump" ? {
+    additionalImageAlts: [...new Set<string>(data.additionalImages || [])]
+      .filter(image => image !== data.mainImage)
+      .map(image => image === hld3WhiteBackgroundImage ? getHld3WhiteBackgroundImageAlt(lang) : data.imageAlt || data.title),
+  } : {};
+  const introData = { description, summary: description, overview: description, syringeIntroductionParagraphs, ...imageData };
   if (lang === "zh") return { ...data, ...faqData, ...introData };
   const app = syringePumpApplicationsLocales[lang];
   const card = syringePumpCardsLocales[lang]?.[data.slug];

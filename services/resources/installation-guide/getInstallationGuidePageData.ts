@@ -18,12 +18,14 @@ import type {
 import { installationGuideZhData } from "@/data/resources/installation-guide/installation-guide.zh";
 import { getInstallationGuideIntlData } from "@/data/resources/installation-guide/installation-guide.intl";
 import { channelVideoCopy, getChannelVideoAdditions, getChineseChannelBackfill } from "@/data/resources/installation-guide/installation-guide.channel-additions";
+import { sv10EnglishGuide } from "@/data/resources/installation-guide/installation-guide.sv10.en";
 
 export function getInstallationGuidePageData(
   locale: InstallationGuideLocale = "zh-CN",
 ): InstallationGuidePageData {
   const base = locale === "zh-CN" ? installationGuideZhData : getInstallationGuideIntlData(locale);
   const additions = [
+    ...(locale === "en" ? [sv10EnglishGuide] : []),
     ...getChannelVideoAdditions(locale),
     ...(locale === "zh-CN" ? getChineseChannelBackfill() : []),
   ];

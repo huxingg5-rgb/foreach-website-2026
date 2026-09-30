@@ -245,6 +245,18 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
     relatedProducts: ["MRV3"],
     relationKeys: ["series:mrv3", "category:rotary-valves"], relationPriority: 160,
   },
+  "rotary-valve-selection-guide": {
+    primaryCategory: "valves", secondaryCategory: "multi-port-valves",
+    tagKeys: ["fluid-switching", "testing-validation", "oem-integration"],
+    relatedProducts: ["MRV3"],
+    relationKeys: ["series:mrv3", "category:rotary-valves"], relationPriority: 160,
+  },
+  "rotary-valve-wetted-materials-selection": {
+    primaryCategory: "valves", secondaryCategory: "multi-port-valves",
+    tagKeys: ["material-compatibility", "sealing-leakage", "testing-validation"],
+    relatedProducts: ["MRV3"],
+    relationKeys: ["series:mrv3", "category:rotary-valves"], relationPriority: 160,
+  },
   "what-is-a-solenoid-valve": {
     primaryCategory: "valves", secondaryCategory: "solenoid-valves",
     tagKeys: ["solenoid-valve", "fluid-switching", "testing-validation"],

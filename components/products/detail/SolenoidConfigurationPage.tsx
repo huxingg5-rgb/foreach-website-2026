@@ -4,6 +4,7 @@ import ProductDetailClient from "./ProductDetailClient";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
 import { getSolenoidContent, solenoidBasePath, solenoidLocales } from "@/data/products/detail/solenoid-content";
+import { normalizeValveLocale } from "@/data/products/selection/valve-routes";
 import valveDetails from "@/data/products/generated/valves/detail/index.json";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
@@ -26,11 +27,13 @@ export default function SolenoidConfigurationPage({slug, locale}: {slug: string;
   const base = valveDetails.find(item => item.slug === "solenoid-valves");
   if (!copy || !base) notFound();
   const data = {...base, ...copy, mainImage: copy.mainImage || base.image, imageAlt: copy.imageAlt || copy.title,
-    additionalImages: [], thumbnails: [], images: [],
+    additionalImages: copy.additionalImages, additionalImageAlts: copy.additionalImageAlts, thumbnails: [], images: [],
     showDrawingRequest: true, show3DRequest: false, showDatasheetRequest: false,
     drawing2dUrl: "", model3dUrl: "", datasheetUrl: "",
   } as unknown as ProductDetailPageData;
-  return <ProductDetailClient data={data} afterContent={locale === "zh" ? (
-    <RelatedResources sourceType="product" sourceSlug={slug} relationKeys={["series:6010"]} locale="zh-CN" />
-  ) : undefined} />;
+  const language = normalizeValveLocale(locale);
+  return <ProductDetailClient data={data} afterContent={
+    <RelatedResources sourceType="product" sourceSlug={slug} relationKeys={["series:6010"]}
+      locale={language === "zh" ? "zh-CN" : language} />
+  } />;
 }

@@ -353,10 +353,10 @@ export default function HpValveDetailPage({locale}:{locale:string}) {
         }
       ` }} />
       <ProductDetailView data={data}
-        afterContent={language === "zh" ? (
+        afterContent={
           <RelatedResources sourceType="product" sourceSlug={slug}
-            relationKeys={["series:hp"]} locale="zh-CN" />
-        ) : undefined} />
+            relationKeys={["series:hp"]} locale={language === "zh" ? "zh-CN" : language} />
+        } />
     </div>
   );
 }

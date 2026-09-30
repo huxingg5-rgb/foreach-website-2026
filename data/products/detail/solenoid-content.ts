@@ -5,7 +5,7 @@ import fr from "./solenoid-locales/fr.json";
 import ko from "./solenoid-locales/ko.json";
 import ru from "./solenoid-locales/ru.json";
 import type { ProductSelectionProduct } from "../selection/product-selection.types";
-import { getSolenoidConfigurationImage } from "./solenoid-images";
+import { getSolenoidConfigurationImage, getSolenoidConfigurationGallery } from "./solenoid-images";
 
 export const solenoidLocales = ["zh", "en", "es", "fr", "ko", "ru"] as const;
 type Locale = typeof solenoidLocales[number];
@@ -69,6 +69,7 @@ export function getSolenoidContent(slug: string, locale: string) {
       mainImage: configurationImage.src, image: configurationImage.src, imageCard: configurationImage.src,
       imageAlt: configurationImage.alt, mainImageAlt: configurationImage.alt,
     } : {}),
+    ...(c ? getSolenoidConfigurationGallery(c.slug, locale) : {additionalImages: [], additionalImageAlts: []}),
     productTypeId: "solenoid-valves", productTypeSlug: "solenoid-valves", productTypeName: t.productType,
     model: title, title, name: title, h1Title: title, pageTitle: title, productName: title,
     cardHeading: f?.heading || m?.heading || t.seriesTitle, cardName: f?.cardName || shortModel,

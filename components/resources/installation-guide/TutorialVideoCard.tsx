@@ -1,6 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
+import Link from "next/link";
 
 import type { InstallationGuideCard } from "@/data/resources/installation-guide/installation-guide.types";
 
@@ -24,15 +25,11 @@ export default function TutorialVideoCard({
     ? { backgroundImage: `url(${guide.thumbnail})` }
     : undefined;
 
-  return (
-    <button
-      type="button"
-      className={`installation-guide-card ${
-        variant === "related" ? "installation-guide-card--related" : ""
-      } ${isSelected ? "is-active" : ""}`}
-      onClick={() => onSelect(guide)}
-      aria-pressed={isSelected}
-    >
+  const className = `installation-guide-card ${
+    variant === "related" ? "installation-guide-card--related" : ""
+  } ${isSelected ? "is-active" : ""}`;
+  const content = (
+    <>
       <div
         className="installation-guide-card-image"
         data-guide-id={guide.id}
@@ -52,6 +49,18 @@ export default function TutorialVideoCard({
           </div>
         ) : null}
       </div>
-    </button>
+    </>
   );
+
+  if (guide.detailHref) {
+    return <Link href={guide.detailHref} className={className}
+      style={{ display: "block", color: "inherit", textDecoration: "none" }}>
+      {content}
+    </Link>;
+  }
+
+  return <button type="button" className={className}
+    onClick={() => onSelect(guide)} aria-pressed={isSelected}>
+    {content}
+  </button>;
 }

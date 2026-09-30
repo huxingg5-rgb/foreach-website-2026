@@ -189,11 +189,12 @@ export function getRelatedResourcesData({
     : selectFeaturedProducts(getRelatedProducts(availableProducts, query));
   const products = sourceType === "product" ? [] : selectedProducts.map(product => {
     const title = getProductDetailTitle(product, locale);
+    const imageAlt = getLocalizedProductText(product.imageAlt, locale);
     return {
       id: product.productId, title,
       href: getProductDetailHref(locale, product),
       imageSrc: getProductCardImage(product),
-      imageAlt: getLocalizedProductText(product.imageAlt, locale) || title,
+      imageAlt: imageAlt && (locale === "zh-CN" || !/[\u3400-\u9fff]/u.test(imageAlt)) ? imageAlt : title,
     };
   });
   return { locale, videos, products, articles, primaryRelationKey: relationKeys.map(normalizeRelationKey).find(Boolean) };

@@ -13,7 +13,7 @@ type PagerItem = ComponentProps<typeof NewsArticlePager>["previousArticle"];
 
 /** Keep the original body and footer data; only replace the legacy news layout. */
 export default function LegacyTechnicalArticleLayout({
-  articleId, locale, article, pageData, previousArticle, nextArticle, children, afterContent,
+  articleId, locale, article, pageData, previousArticle, nextArticle, showPager = true, children, afterContent,
 }: {
   articleId: string;
   locale: TechnicalArticleLocale;
@@ -25,6 +25,7 @@ export default function LegacyTechnicalArticleLayout({
   };
   previousArticle?: PagerItem;
   nextArticle?: PagerItem;
+  showPager?: boolean;
   children: ReactNode;
   afterContent?: ReactNode;
 }) {
@@ -55,7 +56,7 @@ export default function LegacyTechnicalArticleLayout({
     </main>
     <div className={newsStyles.page} data-legacy-article-footer>
       {afterContent}
-      <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
+      {showPager && <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />}
       <section className={newsStyles.supportSection}>
         <ResourceSupportCta title={pageData.bottomBanner.title} description={pageData.bottomBanner.description}
           actions={pageData.bottomBanner.actions ?? []} buttonText={primary?.label ?? fallbackContact}

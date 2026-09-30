@@ -5,6 +5,7 @@ import RelatedResources from "@/components/common/related-resources/RelatedResou
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
 import { getMrv3Content, mrv3BasePath } from "@/data/products/detail/mrv3-content";
 import { mrv3Locales } from "@/data/products/detail/mrv3-locales";
+import { normalizeValveLocale } from "@/data/products/selection/valve-routes";
 import valveDetails from "@/data/products/generated/valves/detail/index.json";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
@@ -39,7 +40,9 @@ export default function Mrv3ConfigurationPage({ slug, locale }: { slug: string; 
     showDrawingRequest: true, show3DRequest: false, showDatasheetRequest: false,
     drawing2dUrl: "", model3dUrl: "", datasheetUrl: "",
   } as unknown as ProductDetailPageData;
-  return <ProductDetailClient data={data} afterContent={locale === "zh" ? (
-    <RelatedResources sourceType="product" sourceSlug={slug} relationKeys={["series:mrv3"]} locale="zh-CN" />
-  ) : undefined} />;
+  const language = normalizeValveLocale(locale);
+  return <ProductDetailClient data={data} afterContent={
+    <RelatedResources sourceType="product" sourceSlug={slug} relationKeys={["series:mrv3"]}
+      locale={language === "zh" ? "zh-CN" : language} />
+  } />;
 }

@@ -1,0 +1,68 @@
+{
+  "reviewDate": "2026-09-30",
+  "sourceHash": "11d45d6b",
+  "articles": ["what-is-a-solenoid-valve", "how-does-an-hplc-injection-valve-work"],
+  "targetLocales": ["en", "es", "fr", "ko", "ru"],
+  "scope": "两篇中文文章的完整翻译，包括列表摘要、SEO、正文、表格、流程图文字、目录、FAQ、图片说明、结构化数据主题及内部链接。每种语言 227 个去重字段。",
+  "precedence": "中文文章与 FOREACH 本地规格书决定技术事实；既有产品详情决定系列术语；竞品官方资料仅核对通用原理及行业表达。",
+  "localSources": [
+    {
+      "path": "data/resources/technical-articles/valve-engineering-articles.article.ts",
+      "use": "两篇中文原文、端口示例、参数适用条件、章节结构与验证要求。保留原文 6010 型号称呼，不擅自改成产品导航采用的 SV10。"
+    },
+    {
+      "path": "public/downloads/resources/datasheets/en/Valves/ps-122a-2507-00001-001-en-6010-solenoid-valve.pdf",
+      "pages": [3, 8],
+      "use": "1=NC、2=COM、3=NO；接液材料；−75 kPa 至 0.25 MPa、12/24 V ±10%、标准配置空载 ≤15 ms、2.5 W 及节能配置 1 W 保持。保留 25°C、空气、公共口加压等测试条件；区分试验耐压与长期工作压力。"
+    },
+    {
+      "path": "public/downloads/resources/datasheets/en/Valves/ps-120c-2604-00001-001-en-hp-2-position-6-port-with-vent-high-pressure-valve.pdf",
+      "pages": [4, 6],
+      "use": "Load: 1–6/2–3/4–5；Inject: 1–2/3–4/5–6；Vent: 3–7。工作压力上限 25 MPa、通径 0.4 mm、内容积 0.8 μL、10-32 UNF。Vent 不等同于整机泄压。"
+    },
+    {
+      "path": "data/products/detail/solenoid-locales/{en,es,fr,ko,ru}.json",
+      "use": "沿用两通/三通、常开/常闭、摆动隔膜、接液材料以及安装接口的既有译法。"
+    },
+    {
+      "path": "data/products/detail/hp-locales/{en,es,fr,ko,ru}.json",
+      "use": "沿用外接定量环、流动相、装样、进样、独立排气与阀内容积的既有术语及边界。"
+    },
+    {
+      "path": "data/resources/technical-articles/rotary-valve-articles.intl.ts",
+      "use": "沿用完整文章递归词典、源文哈希失效检查及本地化链接方式；移除 HPLC 相关文章原先只指向中文的例外。"
+    },
+    {
+      "path": "components/layout/SiteHeader.tsx",
+      "use": "移除仅针对这两篇文章的中文专属列表回退规则，使导航语言菜单保留当前文章路径。"
+    }
+  ],
+  "competitorSources": [
+    {
+      "publisher": "Bürkert",
+      "url": "https://www.burkert.com/en/type/0127",
+      "use": "核对 2/2、3/2、rocker 与 separating diaphragm 等通用术语和动作原理。",
+      "boundary": "不采用竞品工作压力、功耗或其他额定参数作为 FOREACH 参数。"
+    },
+    {
+      "publisher": "IDEX Health & Science",
+      "url": "https://www.idex-hs.com/resources/resources-detail/6-port-medium-pressure-injection-valve-instructions",
+      "use": "核对外接 sample loop、Load/Inject、流动相把样品送入分析路径的通用表达。",
+      "boundary": "端口编号采用本地 HP 规格书；不套用 IDEX 端口布局、额定压力或特定全环/部分环填充比例。"
+    }
+  ],
+  "terminology": [
+    {"zh": "电磁阀", "en": "solenoid valve", "es": "electroválvula", "fr": "électrovanne", "ko": "솔레노이드 밸브", "ru": "электромагнитный клапан"},
+    {"zh": "定量环", "en": "sample loop", "es": "bucle de muestra", "fr": "boucle d’échantillonnage", "ko": "시료 루프", "ru": "петля для пробы"},
+    {"zh": "流动相", "en": "mobile phase", "es": "fase móvil", "fr": "phase mobile", "ko": "이동상", "ru": "подвижная фаза"},
+    {"zh": "排气", "en": "venting / Vent", "es": "venteo / Vent", "fr": "évent / évacuation de l’air / Vent", "ko": "배기 / Vent", "ru": "отвод воздуха / Vent"}
+  ],
+  "validation": {
+    "command": "npx tsx scripts/seo/check-valve-engineering-article-locales.ts",
+    "result": "12 个中文及外语详情页全部通过：HTTP 200、完整章节/正文/表格/流程图、FAQ JSON-LD、canonical、6 语言及 x-default hreflang、列表唯一性、静态路由与搜索索引。另校验规格数值、HP 端口对、COM/NC/NO 状态及外语正文/图片说明无汉字残留。",
+    "otherChecks": ["TypeScript --noEmit passed", "ESLint: 0 errors; SiteHeader has 4 pre-existing warnings for unused variables and img elements", "npm run search:check passed"],
+    "visualReview": "浏览器检查英文电磁阀文章及俄文 HPLC 进样流程图；俄文页面宽度与视口均为 1265 px，未发现页面横向溢出。实际通过语言菜单从俄文切换英文，保持 HPLC 详情路径及 #hplc-inject 锚点。",
+    "notRun": ["生产构建", "部署环境验证"],
+    "releaseState": "本地修改；未提交、推送或部署。"
+  }
+}

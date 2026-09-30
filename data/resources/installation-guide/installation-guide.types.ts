@@ -40,6 +40,8 @@ export type InstallationGuideStep = {
 
 export type InstallationGuideCard = {
   id: string;
+  /** Only set when a complete, published-language watch page is available. */
+  detailHref?: string;
   relationKeys?: string[];
   relationPriority?: number;
   title: string;
