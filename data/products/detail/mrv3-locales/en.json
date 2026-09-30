@@ -1,7 +1,7 @@
 {
   "descriptor": "{0}-Channel Ceramic Rotary Selector Valve",
   "seriesDescriptor": "Ceramic Rotary Selector Valves",
-  "seriesTitle": "Multi-Channel Rotary Selector Valves with PEEK or PCTFE Heads",
+  "seriesTitle": "Multi-Channel Rotary Selector Valves for Reagent Selection and Wash-Path Switching",
   "cardHeading": "{0}-channel ceramic rotary selector valve for reagent selection and wash-path switching, with a {1} mm bore and {2} ports",
   "introDefinition": "FOREACH {0} is a {1}-channel ceramic rotary selector valve for integration into automated equipment. It supports reagent selection and wash-path switching in instrument fluidics and laboratory automation systems, working with a pump and the equipment control program to select reagent or wash-fluid connections in sequence.",
   "introMaterials": "The valve uses a zirconia stator and sapphire rotor, with motor-driven rotation to switch fluid paths. PEEK or PCTFE valve-head configurations allow wetted materials to be selected for the reagents, cleaning fluids and operating conditions.",

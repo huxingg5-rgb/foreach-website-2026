@@ -59,6 +59,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import type { CSSProperties, MouseEvent, ReactNode } from "react";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
+import { applyHpValveDetailCopy } from "@/data/products/detail/hp-content";
 import { applyValvelessEnglishMaterialNames } from "@/data/products/detail/valveless-pump-materials.en";
 import {
   HARD_TUBE_DETAIL_COPY,
@@ -1261,7 +1262,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const isProductCollectionPage =
     /\/products\/fittings\/quick-connect-fittings\/q(?:20|40|60)\/?$/.test(pathname);
   const compactChineseBreadcrumbs = getPipettingModelBreadcrumbs(String(data.slug || ""), locale) || getSyringeModelBreadcrumbs(String(data.slug || ""), locale) || getChineseProductBreadcrumbs(data, locale);
-  const breadcrumbItems = (data.mrv3AuthoredContent || data.solenoidAuthoredContent) ? [
+  const breadcrumbItems = (data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.hpAuthoredContent) ? [
     { name: breadcrumbCopy.home, item: toAbsoluteProductUrl(`${localePrefix}/`) },
     { name: breadcrumbCopy.products, item: toAbsoluteProductUrl(`${localePrefix}/products/`) },
     { name: data.breadcrumbCategoryLabel, item: toAbsoluteProductUrl(data.breadcrumbCategoryHref) },
@@ -1514,13 +1515,22 @@ export default function ProductDetailClient({
         return applyDiaphragmPumpDetailCopy(mrv3Data, configuratorLocale);
       }
       const hasLocalizedPistonCopy = (sourceData.eaDetailContent === true || sourceData.compactDetailContent === true || sourceData.valvelessDetailContent === true) && sourceData.__locale === configuratorLocale;
-      const localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
+      let localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
         : isEnglish
         ? sourceData.__locale === "en"
           ? sourceData
           : localizeProductDetailData(sourceData)
         : sourceData;
+
+      // HP navigation is already localized by its route; the generic English
+      // adapter must not add /en to an /es, /fr, /ko or /ru breadcrumb.
+      if (sourceData.hpAuthoredContent) {
+        for (const key of ["breadcrumbLabel", "breadcrumbCategoryLabel", "breadcrumbCategoryHref", "breadcrumbSeriesLabel", "breadcrumbSeriesHref", "detailHref", "selectionHref"]) {
+          localizedData[key] = sourceData[key];
+        }
+        localizedData = applyHpValveDetailCopy(localizedData, configuratorLocale);
+      }
 
       return applyDiaphragmPumpDetailCopy(
         applyPipettingPumpFaq(applyPipettingPumpIntroduction(applySyringePumpDetailCopy(applyValvelessEnglishMaterialNames(localizedData, configuratorLocale), configuratorLocale), configuratorLocale), configuratorLocale),
@@ -1711,7 +1721,7 @@ export default function ProductDetailClient({
         drawingPreview: "预览图纸",
         drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
-  const productBreadcrumbItems = ((data.mrv3AuthoredContent || data.solenoidAuthoredContent) ? [
+  const productBreadcrumbItems = ((data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.hpAuthoredContent) ? [
     { label: copy.home, href: `${localePrefix}/` },
     { label: copy.products, href: `${localePrefix}/products/` },
     { label: data.breadcrumbCategoryLabel, href: data.breadcrumbCategoryHref },

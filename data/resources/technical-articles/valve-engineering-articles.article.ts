@@ -226,7 +226,7 @@ const hplc: ArticleCopy = {
       ),
       p("上述步骤用于建立整机和分析方法的验证过程。不能把一次阀动作正常，或单个零件通过检查，直接等同于系统进样重复性已经合格。"),
       links(
-        { href: "/products/valves/high-pressure-valves/", label: "HP 二位六通带排气高压旋转阀" },
+        { href: "/products/valves/high-pressure-valves/hp/", label: "HP 二位六通带排气高压旋转阀" },
         { href: "/resources/technical-articles/how-does-a-rotary-selector-valve-work/", label: "多通道旋转选择阀：从多个液源中选择一路" },
         { href: "/products/valves/", label: "比较 FOREACH 阀系列的液路任务与配置" }
       ),

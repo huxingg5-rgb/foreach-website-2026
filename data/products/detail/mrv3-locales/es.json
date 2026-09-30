@@ -1,7 +1,7 @@
 {
   "descriptor": "Válvula selectora rotativa cerámica de {0} canales",
   "seriesDescriptor": "Válvulas selectoras rotativas cerámicas",
-  "seriesTitle": "Válvulas selectoras rotativas multicanal con cabezales de PEEK o PCTFE",
+  "seriesTitle": "Válvulas selectoras rotativas multicanal para selección de reactivos y conmutación de circuitos de lavado",
   "cardHeading": "Válvula selectora rotativa cerámica de {0} canales para selección de reactivos y conmutación del circuito de lavado, con paso de {1} mm y conexiones {2}",
   "introDefinition": "FOREACH {0} es una válvula selectora rotativa cerámica de {1} canales para integración en equipos automatizados. Permite seleccionar reactivos y circuitos de lavado en instrumentos y sistemas de automatización de laboratorio. Trabaja con una bomba y el programa de control del equipo para seleccionar las conexiones en secuencia.",
   "introMaterials": "La válvula utiliza un estator de circonia y un rotor de zafiro. El giro motorizado cambia las conexiones de fluido. Los cabezales de PEEK o PCTFE permiten elegir los materiales en contacto con el líquido según los reactivos, los líquidos de limpieza y las condiciones de uso.",

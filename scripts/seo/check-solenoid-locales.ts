@@ -48,6 +48,11 @@ async function main() {
         const alternates = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/gi)];
         for (const lang of solenoidLocales) assert(alternates.some(m => m[1] === (lang === "zh" ? "zh-CN" : lang) && m[2].endsWith(`${lang === "zh" ? "" : `/${lang}`}/products/valves/solenoid-valves/${isDetail ? `${slug}/` : ""}`)));
         const graphs = [...html.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(m => JSON.parse(m[1])["@graph"] || []);
+        if (!isDetail) {
+          assert(graphs.some(node => node['@type'] === 'CollectionPage'));
+          assert.equal(graphs.find(node => node['@type'] === 'ItemList')?.itemListElement.length,2);
+          continue;
+        }
         const product = graphs.find(node => node["@type"] === "ProductModel");
         assert.equal(product?.name,copy.title);
         assert.equal(product?.model,copy.modelName);

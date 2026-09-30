@@ -1,3 +1,6 @@
+import ValveSelectionPage, {getValveSelectionMetadata} from '@/components/products/selection/ValveSelectionPage';
+import HpValveDetailPage, {getHpValveMetadata} from '@/components/products/detail/HpValveDetailPage';
+import {getValveSeriesRoute} from '@/data/products/selection/valve-routes';
 import { getPipettingSeriesSlug, getPipettingSeriesKey, migratePipettingSegments, isPipettingModelRoute } from "@/data/products/selection/pipetting-pump-routes";
 import { getPipettingModelMetadata } from "@/services/products/getPipettingModelMetadata";
 import { syringeModelRoutes } from "@/data/products/selection/syringe-pump-routes";
@@ -69,9 +72,6 @@ import { getValvelessForeignContent, getValvelessLocaleCopy } from "@/data/produ
 import { getValvelessPumpLanguageAlternates, VALVELESS_PUMP_CATEGORY_SLUG_INTL, VALVELESS_PUMP_LEGACY_CATEGORY_SLUG } from "@/data/products/selection/valveless-pump-routes";
 import ProbeDetailPage from "@/app/products/probes/[slug]/page";
 import TubingDetailStaticPage from "@/app/products/tubing/_components/TubingDetailStaticPage";
-import ValveDetailPage from "@/app/products/valves/[slug]/page";
-import SolenoidConfigurationPage, { getSolenoidMetadata } from "@/components/products/detail/SolenoidConfigurationPage";
-import { getMrv3Metadata } from "@/components/products/detail/Mrv3ConfigurationPage";
 
 import "@/app/products/products.css";
 
@@ -120,6 +120,7 @@ const allEnglishProductDetailRoutes:
       ]
     ),
     ...luerEnglishProductDetailRoutes,
+    ["valves", "high-pressure-valves", "hp"],
     ...pipettingSeriesSlugs.map(slug => ["pumps", "pipetting-pumps", slug]),
   ].filter((segments) => {
     const [category, productTypeId, slug] = segments;
@@ -313,10 +314,8 @@ export async function generateMetadata({
   params,
 }: ProductLocaleRoutePageProps): Promise<Metadata> {
   const { locale, segments } = await params;
-  if (segments.join("/") === "valves/solenoid-valves") return getSolenoidMetadata("solenoid-valves", locale);
-  if (segments.join("/") === "valves/rotary-valves") {
-    return getMrv3Metadata("rotary-valves", locale);
-  }
+  if (segments[0] === 'valves' && segments.length === 2 && getValveSeriesRoute(segments[1])) return getValveSelectionMetadata(segments[1],locale);
+  if (segments.join('/') === 'valves/high-pressure-valves/hp') return getHpValveMetadata(locale);
 
   if (
     segments[0] === "pumps" &&
@@ -459,7 +458,8 @@ export default async function ProductLocaleRoutePage({
     notFound();
   }
 
-  if (segments.join("/") === "valves/solenoid-valves") return <SolenoidConfigurationPage slug="solenoid-valves" locale={locale} />;
+  if (segments[0] === 'valves' && segments.length === 2 && getValveSeriesRoute(segments[1])) return <ValveSelectionPage slug={segments[1]} locale={locale} />;
+  if (segments.join('/') === 'valves/high-pressure-valves/hp') return <HpValveDetailPage locale={locale} />;
   if (isPipettingModelRoute(segments)) return PipettingPumpDetailPage({params:Promise.resolve({slug:segments[3]}), renderLocale: locale});
   const syringeModel = segments.length === 4 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.series === segments[2] && r.model === segments[3]) : undefined;
   if (syringeModel) return SyringePumpDetailPage({ params: Promise.resolve({ slug: syringeModel.legacy }), renderLocale: locale });
@@ -490,7 +490,7 @@ export default async function ProductLocaleRoutePage({
     }
 
     if (category === "valves") {
-      return ValveDetailPage({ params: Promise.resolve({ slug }) });
+      return <ValveSelectionPage slug={slug} locale={locale} />;
     }
 
     if (category === "probes") {

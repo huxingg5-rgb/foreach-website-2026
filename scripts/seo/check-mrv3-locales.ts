@@ -55,6 +55,12 @@ async function main() {
         assert(!/<meta name="robots" content="[^"]*noindex/i.test(html), `${copy.detailHref} obsolete noindex`);
         const graphs = [...html.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)]
           .flatMap(match => JSON.parse(match[1])["@graph"] || []);
+        if (!c) {
+          assert(graphs.some(node => node['@type'] === 'CollectionPage'));
+          assert.equal(graphs.find(node => node['@type'] === 'ItemList')?.itemListElement.length,3);
+          pages++;
+          continue;
+        }
         const webPage = graphs.find(node => node["@type"] === "WebPage");
         assert.equal(webPage?.inLanguage, locale === "zh" ? "zh-CN" : locale);
         const product = graphs.find(node => node["@type"] === "ProductModel");

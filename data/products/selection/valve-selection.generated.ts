@@ -160,8 +160,8 @@ const valveProducts = [
       filter04: "定制配置",
     },
 
-    href: "/products/valves/high-pressure-valves",
-    detailHref: "/products/valves/high-pressure-valves",
+    href: "/products/valves/high-pressure-valves/hp/",
+    detailHref: "/products/valves/high-pressure-valves/hp/",
     selectionHref: "/products",
     sourceType: "valve-selection",
   },

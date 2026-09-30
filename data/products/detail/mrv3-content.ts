@@ -22,7 +22,7 @@ export function getMrv3Content(slug: string, locale: string) {
     ? t(`${c.channels}通道陶瓷旋转阀`, "descriptor", [c.channels])
     : t("陶瓷旋转阀", "seriesDescriptor");
   const shortModel = c ? c.slug.toUpperCase() : "MRV3";
-  const seriesTitle = t("多通道旋转阀，提供PEEK或PCTFE阀头配置", "seriesTitle");
+  const seriesTitle = t("多通道旋转阀，适用于试剂选择与清洗路径切换", "seriesTitle");
   const cardHeading = c ? t(`${c.channels}通道陶瓷旋转阀，用于试剂选择与清洗路径切换，采用${c.bore} mm通径和${c.port}接口`, "cardHeading", [c.channels, c.bore, c.port]) : seriesTitle;
   const title = c ? `FOREACH ${cardHeading}` : seriesTitle;
   const mrv3IntroductionParagraphs = c ? [
@@ -107,8 +107,8 @@ export function getMrv3Content(slug: string, locale: string) {
     modelName: shortModel, displayModel: shortModel, modelDisplay: shortModel, productCode: shortModel, breadcrumbLabel: shortModel,
     breadcrumbCategoryLabel: t("阀", "valves"),
     breadcrumbSeriesLabel: t("MRV3 陶瓷旋转阀", "breadcrumbSeries"),
-    breadcrumbCategoryHref: `${prefix}/products/?category=valves`,
-    breadcrumbSeriesHref: `${prefix}/products/?category=valves&productType=${encodeURIComponent("旋转阀")}`,
+    breadcrumbCategoryHref: `${prefix}/products/valves/`,
+    breadcrumbSeriesHref: `${prefix}/products/valves/rotary-valves/`,
     seoTitle: c ? `${shortModel} ${descriptor} | FOREACH` : `${seriesTitle} | MRV3 | FOREACH`, seoDescription: c
       ? t(`${shortModel}：${c.channels}通道陶瓷旋转阀，用于试剂选择与清洗路径切换。比较通径、接口及PEEK或PCTFE阀头配置。FOREACH恒永达。`, "seoConfiguration", [shortModel, c.channels])
       : t("比较MRV3系列10、16、24通道旋转阀，提供PEEK或PCTFE阀头配置，用于自动化试剂选择与清洗路径切换。", "seoSeries"),
@@ -154,12 +154,12 @@ export function getMrv3Content(slug: string, locale: string) {
       ],
       selectionNote: { title: t("告诉我们您的应用需求", "needsTitle"), paragraphs: [t("请说明设备按什么顺序使用哪些液体、需要连接多少个容器或位置，以及每一步的用量和时间要求。提供管路连接图、试剂与清洗液名称、温度压力、接口及安装空间，我们可据此匹配通道配置、阀头材料、电机和驱动器。", "needsText")] },
       relatedGuides: { title: t("比较MRV3配置", "compareTitle"), links: [
-        { label: t("查看全部MRV3旋转阀", "allModels"), href: `${prefix}/products/?category=valves&productType=${encodeURIComponent("旋转阀")}` },
+        { label: t("查看全部MRV3旋转阀", "allModels"), href: `${prefix}/products/valves/rotary-valves/` },
         ...mrv3Configurations.filter(item => item.slug !== slug).map(item => ({ label: t(`${item.slug.toUpperCase()}｜${item.channels}通道陶瓷旋转阀`, "relatedModel", [item.slug.toUpperCase(), item.channels]), href: `${prefix}${mrv3BasePath}${item.slug}/` })),
       ] },
     },
     contactHref: `${prefix}/contact/`, detailHref: `${prefix}${mrv3BasePath}${c ? `${c.slug}/` : ""}`,
-    selectionHref: `${prefix}/products/?category=valves&productType=${encodeURIComponent("旋转阀")}`,
+    selectionHref: `${prefix}/products/valves/rotary-valves/`,
     bottomCtaTitle: t("确认MRV3液路配置", "ctaTitle"),
     bottomCtaDescription: t("告诉我们设备需要切换哪些液体、连接哪些位置，我们为您匹配旋转阀配置。", "ctaDescription"),
     bottomCtaButtonText: t("提交选型需求", "ctaButton"), bottomCtaHref: `${prefix}/contact/`,

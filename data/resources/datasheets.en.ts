@@ -352,7 +352,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "HP 2-position, 6-port high-pressure valve with a vent path for pressure-resistant liquid-path switching.",
     image:
       "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
-    productHref: "/en/products/valves/high-pressure-valves",
+    productHref: "/en/products/valves/high-pressure-valves/hp/",
     downloadHref:
       "/downloads/resources/datasheets/en/Valves/ps-120c-2604-00001-001-en-hp-2-position-6-port-with-vent-high-pressure-valve.pdf",
     actionType: "download",

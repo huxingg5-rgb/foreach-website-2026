@@ -1,4 +1,5 @@
 "use client";
+import {getValveSeriesRoute,getValveSelectionPath,getHpValveDetailPath} from "@/data/products/selection/valve-routes";
 import { expandSolenoidCards, getSolenoidContent, solenoidConfigurations, solenoidImage } from "@/data/products/detail/solenoid-content";
 import { expandMrv3Cards, getMrv3Content } from "@/data/products/detail/mrv3-content";
 import { getMrv3SeriesImage } from "@/data/products/selection/mrv3-series-image";
@@ -2780,6 +2781,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
     避免生成 /products/valves/undefined/。
   */
   if ((product as any)?.categoryId === "valves") {
+    if (product.productId === "hp-3-position-7-port-high-pressure-valve") return getHpValveDetailPath("zh");
     if (product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId)) {
       return `/products/valves/rotary-valves/${product.productId}/`;
     }
@@ -4158,9 +4160,23 @@ export default function ProductSelectionClient({
     });
   }, [activeProductTypeId, filterGroups, initialFilters]);
 
+  // Upgrade legacy query-based valve lists on both the product hub and valve hub.
+  // Preserve unrelated campaign/search parameters and the current fragment.
+  useEffect(() => {
+    if ((requestedCategoryId || initialCategoryId) !== 'valves' || !getValveSeriesRoute(requestedProductTypeId)) return;
+    const query = new URLSearchParams(window.location.search);
+    if (!query.has('productType')) return;
+    query.delete('category');
+    query.delete('productType');
+    const suffix = query.toString();
+    router.replace(getValveSelectionPath(locale,requestedProductTypeId) + (suffix ? '?' + suffix : '') + window.location.hash, {scroll:false});
+  }, [requestedCategoryId,requestedProductTypeId,initialCategoryId,locale,router]);
+
   function navigateCategorySelection(categoryId: string, productTypeId?: string) {
     const categoryHref = getCategoryHrefById(categoryId);
-    const href = localizeProductDetailHref(
+    const href = categoryId === "valves" && getValveSeriesRoute(productTypeId)
+      ? getValveSelectionPath(locale,productTypeId)
+      : localizeProductDetailHref(
       productTypeId
         ? `${categoryHref}${categoryHref.includes("?") ? "&" : "?"}productType=${encodeURIComponent(productTypeId)}`
         : categoryHref
@@ -5185,7 +5201,12 @@ function isFilterOptionActive(
   }
 
   const pipettingSeriesIndex = pipettingSeriesFilters.indexOf(initialFilters?.filter01?.[0] || "");
-  const breadcrumbItems = activeProductTypeId === "pipette-pump" ? [
+  const breadcrumbItems = activeCategoryId === 'valves' ? [
+    {label:pageText.breadcrumbHome,href:locale === 'zh' ? '/' : '/' + locale + '/'},
+    {label:pageText.breadcrumbCurrent,href:locale === 'zh' ? '/products/' : '/' + locale + '/products/'},
+    {label:activeCategory.label,...(getValveSeriesRoute(activeProductTypeId) ? {href:getValveSelectionPath(locale)} : {})},
+    ...(getValveSeriesRoute(activeProductTypeId) ? [{label:productTypeOptions.find(option => option.value === activeProductTypeId)?.label || activeProductTypeId}] : []),
+  ] : activeProductTypeId === "pipette-pump" ? [
     {label: pageText.breadcrumbHome, href: locale === "zh" ? "/" : `/${locale}/`},
     {label: pageText.breadcrumbCurrent, href: locale === "zh" ? "/products/" : `/${locale}/products/`},
     {label: getPipettingCategoryLabel(locale), ...(pipettingSeriesIndex >= 0 ? {href: getPipettingPath(locale)} : {})},

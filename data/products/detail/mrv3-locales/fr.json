@@ -1,7 +1,7 @@
 {
   "descriptor": "Vanne de sélection rotative en céramique à {0} voies",
   "seriesDescriptor": "Vannes de sélection rotatives en céramique",
-  "seriesTitle": "Vannes de sélection rotatives multivoies avec têtes en PEEK ou PCTFE",
+  "seriesTitle": "Vannes de sélection rotatives multivoies pour la sélection des réactifs et la commutation des circuits de rinçage",
   "cardHeading": "Vanne de sélection rotative en céramique à {0} voies pour la sélection des réactifs et la commutation du circuit de rinçage, avec passage de {1} mm et raccordements {2}",
   "introDefinition": "FOREACH {0} est une vanne de sélection rotative en céramique à {1} voies destinée à l’intégration dans des équipements automatisés. Elle permet de sélectionner les réactifs et les circuits de rinçage des instruments et systèmes d’automatisation de laboratoire. Une pompe et le programme de commande de l’équipement coordonnent la sélection successive des raccordements.",
   "introMaterials": "La vanne utilise un stator en zircone et un rotor en saphir. La rotation motorisée commute les circuits de liquide. Les têtes en PEEK ou PCTFE permettent de choisir les matériaux en contact avec le liquide selon les réactifs, les liquides de nettoyage et les conditions d’utilisation.",

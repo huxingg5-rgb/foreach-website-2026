@@ -295,7 +295,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     description: "HP二位六通带排气高压阀适用于高压液路切换、排气控制与精密流体管理。",
     image:
       "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
-    productHref: "/products/valves/high-pressure-valves",
+    productHref: "/products/valves/high-pressure-valves/hp/",
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Valves/ps-120c-2604-00001-a00-cn-hp-2-position-6-port-high-pressure-valve.pdf",
     actionType: "download",

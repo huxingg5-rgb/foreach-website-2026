@@ -67,7 +67,7 @@ const hpValveIntroCopy: Record<SelectionLocale, HpValveIntroCopy> = {
 
 export function getHpValveIntro(locale: SelectionLocale) {
   const copy = hpValveIntroCopy[locale];
-  const href = `${locale === "zh" ? "" : `/${locale}`}/products/valves/high-pressure-valves/`;
+  const href = `${locale === "zh" ? "" : `/${locale}`}/products/valves/high-pressure-valves/hp/`;
   return {
     title: copy.title,
     paragraphs: [...copy.paragraphs, `[${copy.detailLabel}](${href})`],

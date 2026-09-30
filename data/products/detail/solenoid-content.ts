@@ -42,7 +42,7 @@ export function getSolenoidContent(slug: string, locale: string) {
   const paragraphs = f ? [f.definition, f.operation, f.selection, t.materialIntro] : m ? [m.definition, t.functionIntro, t.materialIntro, m.installation] : [t.seriesDescription, t.seriesIntegration, t.seriesCompare];
   const description = paragraphs.join("\n\n");
   const detailHref = `${prefix}${solenoidBasePath}${c || connection ? `${slug}/` : ""}`;
-  const selectionHref = `${prefix}/products/?category=valves&productType=${encodeURIComponent("电磁阀")}`;
+  const selectionHref = `${prefix}/products/valves/solenoid-valves/`;
   const values = [
     shortModel, t.structure, f?.functionValue || t.functions,
     m?.connection || solenoidConnectionConfigurations.map(item => t.models[item.key].connection).join("; "),
@@ -73,8 +73,8 @@ export function getSolenoidContent(slug: string, locale: string) {
     model: title, title, name: title, h1Title: title, pageTitle: title, productName: title,
     cardHeading: f?.heading || m?.heading || t.seriesTitle, cardName: f?.cardName || shortModel,
     modelName: shortModel, displayModel: shortModel, modelDisplay: shortModel, productCode: shortModel,
-    breadcrumbLabel: f?.heading || (connection ? shortModel : t.seriesLabel), breadcrumbCategoryLabel: t.valves, breadcrumbSeriesLabel: t.seriesLabel,
-    breadcrumbCategoryHref: `${prefix}/products/?category=valves`, breadcrumbSeriesHref: selectionHref,
+    breadcrumbLabel: c || connection ? shortModel : t.seriesLabel, breadcrumbCategoryLabel: t.valves, breadcrumbSeriesLabel: t.seriesLabel,
+    breadcrumbCategoryHref: `${prefix}/products/valves/`, breadcrumbSeriesHref: `${prefix}/products/valves/solenoid-valves/`,
     seoTitle: f ? `${f.heading} | ${shortModel} | FOREACH` : m ? `${shortModel} ${m.descriptor} | FOREACH` : `${t.seriesTitle} | SV10 | FOREACH`,
     seoDescription: f?.seo || m?.seo || t.seriesSeo,
     seriesTitle: t.seriesTitle, introParagraphs: [t.seriesDescription, t.seriesIntegration, t.seriesCompare],
