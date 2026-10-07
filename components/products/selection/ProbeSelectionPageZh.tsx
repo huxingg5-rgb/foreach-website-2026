@@ -7,10 +7,14 @@ import "@/app/products/products.css";
 
 export function getProbeSelectionMetadataZh(productTypeId?: string): Metadata {
   const intro = productTypeId ? probeIntrosZh[productTypeId] : undefined;
+  const canonical = getProbeSelectionPathZh(productTypeId);
   return {
-    title: `${intro?.title || probeOverviewHeadingZh} | FOREACH`,
-    description: (intro?.paragraphs || probeOverviewParagraphsZh).join(" "),
-    alternates: { canonical: getProbeSelectionPathZh(productTypeId) },
+    title: { absolute: `${intro?.title || probeOverviewHeadingZh} | 恒永达` },
+    description: (intro?.paragraphs || probeOverviewParagraphsZh)[0],
+    alternates: {
+      canonical,
+      languages: { "zh-CN": canonical, "en-US": `/en${canonical}`, "x-default": canonical },
+    },
   };
 }
 

@@ -7,10 +7,14 @@ import "@/app/products/products.css";
 
 export function getControlSelectionMetadataZh(productTypeId?: string): Metadata {
   const intro = productTypeId ? controlIntrosZh[productTypeId] : undefined;
+  const canonical = getControlSelectionPathZh(productTypeId);
   return {
-    title: `${intro?.title || controlOverviewHeadingZh} | FOREACH`,
-    description: (intro?.paragraphs || controlOverviewParagraphsZh).join(" "),
-    alternates: { canonical: getControlSelectionPathZh(productTypeId) },
+    title: { absolute: `${intro?.title || controlOverviewHeadingZh} | 恒永达` },
+    description: (intro?.paragraphs || controlOverviewParagraphsZh)[0],
+    alternates: {
+      canonical,
+      languages: { "zh-CN": canonical, "en-US": `/en${canonical}`, "x-default": canonical },
+    },
   };
 }
 

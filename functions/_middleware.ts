@@ -1,3 +1,4 @@
+import { normalizeControlModulePath } from "../data/products/selection/control-module-routes";
 import { normalizePipettingPath } from "../data/products/selection/pipetting-pump-routes";
 /**
  * Cloudflare Pages Functions｜旧版官网精确重定向
@@ -46,6 +47,14 @@ export const onRequest: LegacyRedirectHandler = async ({
   }
 
   const requestUrl = new URL(request.url);
+
+  // Pages Functions must handle these legacy URLs before serving static assets.
+  const controlModulePath = normalizeControlModulePath(requestUrl.pathname);
+  if (controlModulePath !== requestUrl.pathname) {
+    const target = new URL(requestUrl);
+    target.pathname = controlModulePath;
+    return new Response(null, { status: 301, headers: { Location: target.toString() } });
+  }
 
   // Handle this migration explicitly in Pages Functions as well as _redirects.
   const pipettingPath = normalizePipettingPath(requestUrl.pathname);

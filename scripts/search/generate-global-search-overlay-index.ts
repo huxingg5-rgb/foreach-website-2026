@@ -1,5 +1,6 @@
 import { normalizeControlModulePath } from "../../data/products/selection/control-module-routes";
 import { resolveApplicationHref } from "../../data/applications/application-routes";
+import { getTubingMaterialCopy } from "../../data/products/tubing/content";
 import { normalizePipettingPath } from "../../data/products/selection/pipetting-pump-routes";
 import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
 import { getValvelessForeignContent, getValvelessLocaleCopy } from "../../data/products/detail/valveless-pump-locales";
@@ -8,7 +9,6 @@ import fs from "node:fs";
 import path from "node:path";
 
 import { siteSearchIndex } from "../../data/search/site-search-index.generated";
-import { getTubingMaterialCopy } from "../../data/products/tubing/content";
 import {
   applyDiaphragmPumpReferenceSearchItem,
   getDiaphragmPumpReferenceModel,

@@ -1,3 +1,4 @@
+import { getFittingSelectionMetadata } from "@/lib/seo/fitting-selection-metadata";
 import { getControlModuleRouteSlug, getControlModulePath, getControlModuleLanguageAlternates } from "@/data/products/selection/control-module-routes";
 import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
 import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
@@ -116,6 +117,10 @@ export async function generateMetadata({
   const productTypeRoute = resolveProductTypeRoute(category, slug);
 
   if (productTypeRoute) {
+    if (category === "fittings") {
+      const metadata = getFittingSelectionMetadata("zh", slug);
+      if (metadata) return metadata;
+    }
     if (["diaphragm-pump", "valveless-pump", "syringe-pump"].includes(productTypeRoute.productTypeId)) {
       const canonicalPath = `/products/${category}/${slug}/`;
 

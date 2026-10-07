@@ -1,3 +1,4 @@
+import { getFittingSelectionMetadata } from "@/lib/seo/fitting-selection-metadata";
 import { migrateControlModuleSegments, getControlModuleDetailSlugFromSegments, getControlModuleLanguageAlternates } from "@/data/products/selection/control-module-routes";
 import ValveSelectionPage, {getValveSelectionMetadata} from '@/components/products/selection/ValveSelectionPage';
 import HpValveDetailPage, {getHpValveMetadata} from '@/components/products/detail/HpValveDetailPage';
@@ -400,6 +401,11 @@ export async function generateMetadata({
 
   if (!isSupportedLocale(locale) || locale === "zh-CN" || !routeExists(locale, segments)) {
     return {};
+  }
+
+  if (segments[0] === "fittings" && segments.length <= 2) {
+    const metadata = getFittingSelectionMetadata(locale, segments[1]);
+    if (metadata) return metadata;
   }
 
   const probeControlSelection = locale === "en" ? getEnglishProbeControlSelection(segments) : undefined;
