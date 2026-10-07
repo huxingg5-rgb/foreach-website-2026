@@ -21,7 +21,7 @@ export class RelatedResourcesBoundary extends Component<
 }
 
 export default function RelatedResourcesLoader(data: RelatedResourcesData) {
-  const ui = getRelatedResourcesText(data.locale);
+  const ui = getRelatedResourcesText(data.uiLocale ?? data.locale);
   const prefix = data.locale === "zh-CN" ? "" : `/${data.locale}`;
   const fallback = (
     <aside className={styles.root} data-related-resources-fallback>

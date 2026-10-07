@@ -1,12 +1,14 @@
 import "server-only";
 
 import Link from "next/link";
+import { resolveApplicationHref } from "@/data/applications/application-routes";
 import { Fragment, type ReactNode } from "react";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import RelatedResourcesLoader from "@/components/common/related-resources/RelatedResourcesLoader";
 import {
   analyticalDocumentHref,
   analyticalDocuments,
+  isIvdClinicalDocumentSlug,
 } from "@/data/applications/analytical-documents/registry";
 import { isLiquidChromatographySlug, liquidChromatographyDocuments } from "@/data/applications/analytical-documents/liquid-chromatography";
 import { getEnglishAnalyticalInstrumentLinks } from "@/data/applications/analytical-instruments/navigation";
@@ -40,6 +42,7 @@ function ContentLink({
   children: ReactNode;
   className?: string;
 }) {
+  href = resolveApplicationHref(href);
   if (/^https?:\/\//i.test(href) || /\.pdf(?:[?#]|$)/i.test(href)) {
     return <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
   }
@@ -227,6 +230,19 @@ function Block({ block, referenceMap }: { block: ApplicationBlock; referenceMap:
 }
 
 function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
+  if (isIvdClinicalDocumentSlug(currentSlug)) {
+    const overview = { label: "IVD fluidic workflows", href: "/en/applications/ivd/" };
+    return <ApplicationGuideNavigation
+      id="ivd-application-guide-navigation"
+      ariaLabel="Clinical chemistry application guides"
+      overview={overview}
+      groups={[{ id: "clinical", label: "Clinical chemistry", overview: { label: "Clinical chemistry workflows", href: "/en/applications/ivd/?instrument=clinical" }, children: analyticalDocuments.filter(entry => isIvdClinicalDocumentSlug(entry.slug)).map(entry => ({ label: entry.navLabel, href: analyticalDocumentHref(entry.slug) })) }]}
+      currentHref={analyticalDocumentHref(currentSlug)}
+      mobileTitle="Clinical chemistry application guides"
+      drawerEyebrow="IVD APPLICATIONS"
+      drawerTitle="Clinical chemistry guides"
+    />;
+  }
   if (!currentSlug) {
     const instruments = getEnglishAnalyticalInstrumentLinks();
     return <ApplicationGuideNavigation
@@ -258,7 +274,7 @@ function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
       href: analyticalDocumentHref(parent.slug),
     },
     children: analyticalDocuments
-      .filter((entry) => entry.kind === "task" && entry.group === parent.slug)
+      .filter((entry) => entry.kind === "task" && entry.group === parent.slug && !isIvdClinicalDocumentSlug(entry.slug))
       .map((entry) => ({
         label: entry.navLabel,
         href: analyticalDocumentHref(entry.slug),
@@ -293,18 +309,18 @@ function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
   );
 }
 
-function Outline({ document }: { document: ApplicationDocument }) {
+function Outline({ document, reviewChinese = false }: { document: ApplicationDocument; reviewChinese?: boolean }) {
   return (
     <nav aria-label="On this page" className={styles.outlineNavigation}>
-      <p className={styles.outlineTitle}>ON THIS PAGE</p>
+      <p className={styles.outlineTitle}>{reviewChinese ? '本页目录' : 'ON THIS PAGE'}</p>
       <div className={styles.outlineLinks}>
         {document.sections.map((section) => (
           <a key={section.id} href={`#${section.id}`} data-outline-link={section.id}>
             {section.title}
           </a>
         ))}
-        {document.references.length ? <a href="#references" data-outline-link="references">References</a> : null}
-        {document.related?.length ? <a href="#related-guides" data-outline-link="related-guides">Related guides</a> : null}
+        {document.references.length ? <a href="#references" data-outline-link="references">{reviewChinese ? '参考资料' : 'References'}</a> : null}
+        {document.related?.length ? <a href="#related-guides" data-outline-link="related-guides">{reviewChinese ? '相关指南' : 'Related guides'}</a> : null}
       </div>
     </nav>
   );
@@ -313,19 +329,24 @@ function Outline({ document }: { document: ApplicationDocument }) {
 export default function AnalyticalApplicationDocument({
   document,
   embedded = false,
+  navigation,
+  reviewChinese = false,
 }: {
   document: ApplicationDocument;
   embedded?: boolean;
+  navigation?: ReactNode;
+  reviewChinese?: boolean;
 }) {
   const referenceMap: ReferenceMap = new Map(document.references.map((reference, index) => [reference.id, { reference, number: index + 1 }]));
   const rootId = "analytical-application-document";
   const isHub = document.kind === "hub";
+  const isIvd = isIvdClinicalDocumentSlug(document.slug);
   const breadcrumbItems = [
     { label: "Home", href: "/en/" },
-    { label: "Analytical instruments", href: isHub ? undefined : analyticalDocumentHref("") },
+    { label: isIvd ? "IVD" : "Analytical instruments", href: isIvd ? "/en/applications/ivd/" : isHub ? undefined : analyticalDocumentHref("") },
     ...(!isHub ? [{ label: document.navLabel }] : []),
   ];
-  const relatedResources = isLiquidChromatographySlug(document.slug)
+  const relatedResources = reviewChinese ? null : isLiquidChromatographySlug(document.slug)
     ? getLiquidChromatographyResources(document.slug)
     : isPistonApplicationSlug(document.slug)
     ? getRelatedResourcesData({
@@ -341,7 +362,7 @@ export default function AnalyticalApplicationDocument({
     : null;
 
   return (
-    <div className={`${styles.page}${embedded ? ` ${styles.embeddedPage}` : ""}`} id={rootId} lang="en">
+    <div className={`${styles.page}${embedded ? ` ${styles.embeddedPage}` : ""}`} id={rootId} lang={reviewChinese ? 'zh-CN' : 'en'}>
       {!embedded ? (
         <SiteBreadcrumb
           ariaLabel="Breadcrumb"
@@ -362,11 +383,11 @@ export default function AnalyticalApplicationDocument({
           </header>
 
           <aside className={styles.sidebar}>
-            <DocumentNavigation currentSlug={document.slug} />
+            {navigation ?? <DocumentNavigation currentSlug={document.slug} />}
           </aside>
 
           <aside className={styles.outline}>
-            <Outline document={document} />
+            <Outline document={document} reviewChinese={reviewChinese} />
           </aside>
 
           <article
@@ -384,9 +405,9 @@ export default function AnalyticalApplicationDocument({
           ))}
 
           {document.references.length ? <section id="references" className={styles.documentSection} data-document-section aria-labelledby="references-heading">
-            <h2 id="references-heading">References</h2>
+            <h2 id="references-heading">{reviewChinese ? '参考资料' : 'References'}</h2>
             <details className={styles.referenceDisclosure} data-reference-disclosure>
-              <summary>View references ({document.references.length})</summary>
+              <summary>{reviewChinese ? '查看参考资料' : 'View references'} ({document.references.length})</summary>
               <ol className={styles.referenceList}>
                 {document.references.map((reference, index) => (
                   <li key={reference.id} id={`ref-${reference.id}`} tabIndex={-1} data-reference-item>
@@ -399,7 +420,7 @@ export default function AnalyticalApplicationDocument({
           </section> : null}
 
           {document.related?.length ? <section id="related-guides" className={styles.documentSection} data-document-section aria-labelledby="related-guides-heading">
-            <h2 id="related-guides-heading">Related guides</h2>
+            <h2 id="related-guides-heading">{reviewChinese ? '相关指南' : 'Related guides'}</h2>
             <LinkList items={document.related} />
           </section> : null}
           </article>

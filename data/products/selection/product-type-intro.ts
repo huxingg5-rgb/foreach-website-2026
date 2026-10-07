@@ -1,3 +1,4 @@
+import { productIntroductionsZh } from "./product-introductions.zh";
 import { getSyringeSeriesCopy, syringeSeriesFilters } from "./syringe-pump-series";
 import { syringePumpIntroLocales } from "./syringe-pump-intro.locales";
 import { syringePumpIntroEn } from "./syringe-pump-intro.en";
@@ -30,6 +31,8 @@ function getTechnicalArticlePath(locale: SelectionLocale, slug: string) {
   const path = `/resources/technical-articles/${slug}/`;
   return locale === "zh" ? path : `/${locale}${path}`;
 }
+
+export const pumpOverviewParagraphsZh = productIntroductionsZh["pumps"];
 
 export type ProductTypeIntroContent = {
   imagePath?: string;

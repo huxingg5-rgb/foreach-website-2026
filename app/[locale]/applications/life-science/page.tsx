@@ -1,3 +1,7 @@
+import EnglishReviewPage, { reviewMetadata } from '@/components/applications/EnglishReviewPage';
+import { getReviewHub } from '@/data/applications/english-review';
+import { applicationDocumentHref } from '@/data/applications/application-routes';
+import { getCanonicalUrl } from '@/lib/seo/site-url';
 /* =========================================================
    page.tsx
    恒永达官网｜生命科学应用领域外语页面入口
@@ -13,12 +17,10 @@
 
 import type { Metadata } from "next";
 
-import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
 import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
 import SpanishIndustryApplicationClient, { KOREAN_INDUSTRY_UI_TEXT } from "@/components/applications/SpanishIndustryApplicationClient";
 import LifeScienceApplicationClient from "@/components/applications/life-science/LifeScienceApplicationClient";
-import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
 import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
 import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
@@ -50,6 +52,10 @@ export async function generateMetadata({
   params,
 }: LifeScienceApplicationLocalePageProps): Promise<Metadata> {
   const { locale } = await params;
+  if (locale === 'en') return {
+    ...reviewMetadata(getReviewHub('life-science')),
+    alternates: { canonical: getCanonicalUrl(applicationDocumentHref('life-science')) },
+  };
 
   if (locale === "es") {
     return createSpanishApplicationMetadata("life-science");
@@ -74,15 +80,8 @@ export default async function LifeScienceApplicationLocalePage({
   params,
 }: LifeScienceApplicationLocalePageProps) {
   const { locale } = await params;
+  if (locale === 'en') return <EnglishReviewPage kind="life-science" />;
   const data = getLifeScienceApplicationPageData(locale);
-
-  if (locale === "en") {
-    return (
-      <ApplicationEnglishClient
-        data={createEnglishApplicationData("life-science", data)}
-      />
-    );
-  }
 
   if (locale === "es") {
     return (

@@ -55,6 +55,7 @@ import pipettingBasicsStyles from "./articles/PipettingBasicsLead.module.css";
 import { rplSelectionArticleSlug } from "@/data/resources/technical-articles/rpl-selection-links";
 import { getRplSelectionSourceHrefs } from "@/data/resources/technical-articles/rpl-selection-sources";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
+import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
 import { PISTON_APPLICATION_GUIDES } from "@/data/applications/analytical-documents/piston-link-network";
 /* =========================================================
    TechnicalArticleDetail.tsx
@@ -193,8 +194,8 @@ function buildTechnicalArticleStructuredData(
   articleType: "Article" | "TechArticle" = "Article",
 ) {
   const canonicalUrl = getTechnicalArticleCanonicalUrl(locale, article.slug);
-  const organizationId = `${TECHNICAL_ARTICLE_SITE_ORIGIN}/#organization`;
-  const websiteId = `${TECHNICAL_ARTICLE_SITE_ORIGIN}/#website`;
+  const organizationId = SITE_ORGANIZATION_ID;
+  const websiteId = SITE_WEBSITE_ID;
   const webpageId = canonicalUrl;
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
   const articleId = `${canonicalUrl}#article`;
@@ -281,20 +282,7 @@ function buildTechnicalArticleStructuredData(
   };
 
   const graph: Record<string, unknown>[] = [
-    {
-      "@type": "Organization",
-      "@id": organizationId,
-      name: "Foreach Technology",
-      legalName: "深圳市恒永达科技股份有限公司",
-      url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
-    },
-    {
-      "@type": "WebSite",
-      "@id": websiteId,
-      url: `${TECHNICAL_ARTICLE_SITE_ORIGIN}/`,
-      name: "Foreach Technology",
-      publisher: { "@id": organizationId },
-    },
+    ...HOME_SITE_IDENTITY["@graph"],
     {
       "@type": "BreadcrumbList",
       "@id": breadcrumbId,

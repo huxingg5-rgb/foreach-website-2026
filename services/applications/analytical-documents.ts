@@ -5,9 +5,11 @@ import {
   getAnalyticalDocumentMetadata,
   getAnalyticalDocumentTrail,
   type AnalyticalDocumentSlug,
+  isIvdClinicalDocumentSlug,
 } from "@/data/applications/analytical-documents/registry";
 import type { ApplicationDocument, ApplicationDocumentBody, ApplicationDocumentMetadata } from "@/data/applications/analytical-documents/types";
-import { getCanonicalUrl, SITE_ORIGIN } from "@/lib/seo/site-url";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
+import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID } from "@/lib/seo/site-identity";
 import { isLiquidChromatographySlug } from "@/data/applications/analytical-documents/liquid-chromatography";
 
 // Server-only page loading: navigation and search use the small registry, not these bodies.
@@ -68,7 +70,11 @@ export function createAnalyticalDocumentMetadata(document: ApplicationDocumentMe
 
 export function createAnalyticalDocumentSchema(document: ApplicationDocument) {
   const canonical = getCanonicalUrl(analyticalDocumentHref(document.slug));
-  const breadcrumbs = document.kind === "hub" || isLiquidChromatographySlug(document.slug) ? [
+  const breadcrumbs = isIvdClinicalDocumentSlug(document.slug) ? [
+    { name: "Home", url: getCanonicalUrl("/en/") },
+    { name: "IVD", url: getCanonicalUrl("/en/applications/ivd/") },
+    { name: document.navLabel, url: canonical },
+  ] : document.kind === "hub" || isLiquidChromatographySlug(document.slug) ? [
     { name: "Home", url: getCanonicalUrl("/en/") },
     { name: "Applications", url: getCanonicalUrl("/en/applications/") },
     { name: "Analytical Instruments", url: getCanonicalUrl(analyticalDocumentHref("")) },
@@ -87,12 +93,12 @@ export function createAnalyticalDocumentSchema(document: ApplicationDocument) {
     headline: document.title,
     description: document.description,
     inLanguage: "en",
-    publisher: { "@type": "Organization", name: "FOREACH", url: SITE_ORIGIN },
+    publisher: { "@id": SITE_ORGANIZATION_ID },
     mainEntityOfPage: canonical,
     ...(document.kind === "hub" ? {
       mainEntity: {
         "@type": "ItemList",
-        itemListElement: analyticalDocuments.filter((item) => item.slug).map((item, index) => ({
+        itemListElement: analyticalDocuments.filter((item) => item.slug && !isIvdClinicalDocumentSlug(item.slug)).map((item, index) => ({
           "@type": "ListItem", position: index + 1, name: item.title,
           url: getCanonicalUrl(analyticalDocumentHref(item.slug)),
         })),
@@ -104,7 +110,7 @@ export function createAnalyticalDocumentSchema(document: ApplicationDocument) {
   };
   return {
     "@context": "https://schema.org",
-    "@graph": [page, {
+    "@graph": [...HOME_SITE_IDENTITY["@graph"], page, {
       "@type": "BreadcrumbList", "@id": `${canonical}#breadcrumb`,
       itemListElement: breadcrumbs.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.name, item: item.url })),
     }],

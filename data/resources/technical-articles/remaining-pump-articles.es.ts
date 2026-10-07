@@ -1478,18 +1478,18 @@ export const remainingPumpArticlesEs = {
   },
   "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm": {
     "metadata": {
-      "title": "¿Cómo elegir EPDM, PTFE y FFKM para una bomba de diafragma miniatura de 300 mL/min?",
+      "title": "¿Cómo elegir EPDM, PTFE y FFKM para una bomba de diafragma miniatura?",
       "seoTitle": "Selección de EPDM, PTFE y FFKM para bombas miniatura | Foreach Technology",
       "seoDescription": "Compare compatibilidad química, hinchamiento, sellado dinámico y validación con el líquido real al seleccionar EPDM, PTFE y FFKM.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-wetted-material-inspection.webp",
-      "coverAlt": "Bomba de diafragma miniatura Foreach DPL30 con combinaciones alternativas de materiales mojados"
+      "coverAlt": "Ejemplo de inspección de componentes en contacto con el fluido de una bomba de diafragma miniatura Foreach"
     },
     "deck": "EPDM, PTFE y FFKM no forman una clasificación simple de menor a mayor calidad. EPDM y FFKM son elastómeros; PTFE es un fluoropolímero. Diafragma, válvulas y cabeza cumplen funciones mecánicas distintas. Se selecciona una estructura mojada completa sometida a cargas dinámicas, no un nombre de material.",
     "leadBlocks": [
       {
         "type": "notice",
-        "label": "Combinaciones oficiales de DPL30:",
-        "text": "Diafragma EPDM / válvulas EPDM / cabeza PPS, o diafragma PTFE / válvulas FFKM / cabeza PPS. No reorganice estos materiales en configuraciones comerciales no publicadas."
+        "label": "Ejemplos de combinaciones de materiales para bombas de diafragma miniatura Foreach:",
+        "text": "Diafragma EPDM / válvulas EPDM / cabeza PPS, o diafragma PTFE / válvulas FFKM / cabeza PPS. No reorganice estos materiales en configuraciones comerciales no publicadas. Este artículo trata la selección de materiales para bombas de diafragma en general. Estas combinaciones son ejemplos disponibles en determinados modelos Foreach; confirme las opciones de cada serie y modelo."
       },
       {
         "type": "paragraph",
@@ -1631,12 +1631,12 @@ export const remainingPumpArticlesEs = {
         ]
       },
       {
-        "title": "7. ¿Cómo entran las combinaciones oficiales DPL30 en la selección?",
+        "title": "7. ¿Cómo incorporar las combinaciones de materiales de la bomba de diafragma al proceso de selección?",
         "blocks": [
           {
             "type": "table",
             "headers": [
-              "Combinación oficial",
+              "Ejemplo de combinación de materiales",
               "Papel como candidato",
               "Pendiente de confirmar"
             ],
@@ -1684,11 +1684,11 @@ export const remainingPumpArticlesEs = {
       }
     ],
     "cta": {
-      "title": "¿Selecciona DPL30 con EPDM o con PTFE/FFKM?",
+      "title": "¿Selecciona EPDM o PTFE/FFKM para una bomba de diafragma miniatura?",
       "description": "Indique composición, concentración, temperatura, presión, tiempo de contacto, método de limpieza y ciclos objetivo para planificar desde preselección e inmersión hasta validación dinámica completa.",
       "contactLabel": "Contactar con un ingeniero",
-      "productsLabel": "Ver la bomba de diafragma miniatura DPL30",
-      "productsHref": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump"
+      "productsLabel": "Ver bombas de diafragma miniatura",
+      "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
     }
   }
 } satisfies Partial<Record<DiaphragmPumpEngineeringArticleSlug, DiaphragmPumpEngineeringArticleCopy>>;

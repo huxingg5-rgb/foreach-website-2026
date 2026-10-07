@@ -1,3 +1,7 @@
+import EnglishReviewPage, { reviewMetadata } from '@/components/applications/EnglishReviewPage';
+import { getReviewHub } from '@/data/applications/english-review';
+import { applicationDocumentHref } from '@/data/applications/application-routes';
+import { getCanonicalUrl } from '@/lib/seo/site-url';
 /* =========================================================
    page.tsx
    恒永达官网｜合成生物应用领域外语页面入口
@@ -5,12 +9,10 @@
 
 import type { Metadata } from "next";
 
-import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
 import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
 import SpanishIndustryApplicationClient, { KOREAN_INDUSTRY_UI_TEXT } from "@/components/applications/SpanishIndustryApplicationClient";
 import SyntheticBiologyApplicationClient from "@/components/applications/synthetic-biology/SyntheticBiologyApplicationClient";
-import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
 import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
 import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
@@ -42,6 +44,10 @@ export async function generateMetadata({
   params,
 }: SyntheticBiologyApplicationLocalePageProps): Promise<Metadata> {
   const { locale } = await params;
+  if (locale === 'en') return {
+    ...reviewMetadata(getReviewHub('synthetic-biology')),
+    alternates: { canonical: getCanonicalUrl(applicationDocumentHref('synthetic-biology')) },
+  };
 
   if (locale === "es") {
     return createSpanishApplicationMetadata("synthetic-biology");
@@ -66,15 +72,8 @@ export default async function SyntheticBiologyApplicationLocalePage({
   params,
 }: SyntheticBiologyApplicationLocalePageProps) {
   const { locale } = await params;
+  if (locale === 'en') return <EnglishReviewPage kind="synthetic-biology" />;
   const data = getSyntheticBiologyApplicationPageData(locale);
-
-  if (locale === "en") {
-    return (
-      <ApplicationEnglishClient
-        data={createEnglishApplicationData("synthetic-biology", data)}
-      />
-    );
-  }
 
   if (locale === "es") {
     return (

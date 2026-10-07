@@ -406,7 +406,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "ABD non-contact air-bubble and liquid detector for transparent tubing, with TTL communication and Modbus RTU support.",
     image:
       "/images/products/control/foreach-abd-air-bubble-detector.webp",
-    productHref: "/en/products/control/abd-air-bubble-detector",
+    productHref: "/en/products/control/air-bubble-detectors/abd",
     downloadHref:
       "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2507-00001-001-en-abd-air-bubble-detector.pdf",
     actionType: "download",

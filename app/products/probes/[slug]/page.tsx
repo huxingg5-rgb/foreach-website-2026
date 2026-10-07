@@ -105,7 +105,7 @@ function toClientData(detail: ProbeDetailRecord) {
     ...detail,
 
     category: "probes",
-    categoryId: "pumps",
+    categoryId: "needles",
     categoryLabel: "针系列",
 
     productTypeSlug: detail.slug,

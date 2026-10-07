@@ -164,11 +164,11 @@ function ResourceTrack({
 
 export default function RelatedResourcesClient({
   locale, videos: allRelatedVideos, products: featuredProducts,
-  articles: allRelatedArticles, primaryRelationKey,
+  articles: allRelatedArticles, primaryRelationKey, uiLocale,
 }: RelatedResourcesData) {
   const [selectedVideo, setSelectedVideo] = useState<InstallationGuideCard | null>(null);
   const [playRequestId, setPlayRequestId] = useState(0);
-  const ui = getRelatedResourcesText(locale);
+  const ui = getRelatedResourcesText(uiLocale ?? locale);
   const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
   const showVideos = allRelatedVideos.length > 0;
   const showProducts = featuredProducts.length > 0;

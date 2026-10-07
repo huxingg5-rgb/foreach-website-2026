@@ -436,7 +436,7 @@ export function localizeTargetProductDetailData<T extends DetailRecord>(sourceDa
     .replace(/-(?:liquid|gas|gas-liquid|air-liquid)-diaphragm-pump$/i, "")
     .replace(/-(?:rotary-valve|solenoid)-syringe-pump$/i, "")
     .replace(/-(?:air-bubble-detector|pressure-sensor)$/i, "");
-  const modelFromPath = (/\d/.test(cleanedPathnameSlug) || cleanedPathnameSlug !== pathnameSlug)
+  const modelFromPath = (/\d/.test(cleanedPathnameSlug) || cleanedPathnameSlug !== pathnameSlug || cleanedPathnameSlug === "abd")
     ? cleanedPathnameSlug.toUpperCase().replace(/-EP-PS$/, "-EP/PS")
     : "";
   const rawModel = String(tubingTitle || cleanDisplayModel || modelFromPath || sourceData.slug || genericProductName).replace(/[.。]+$/, "").trim();

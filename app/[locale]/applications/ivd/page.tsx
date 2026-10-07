@@ -1,3 +1,7 @@
+import EnglishReviewPage, { reviewMetadata } from '@/components/applications/EnglishReviewPage';
+import { getReviewHub } from '@/data/applications/english-review';
+import { applicationDocumentHref } from '@/data/applications/application-routes';
+import { getCanonicalUrl } from '@/lib/seo/site-url';
 import ApplicationPageSkeleton from "@/components/common/ApplicationPageSkeleton";
 import { Suspense } from "react";
 /* =========================================================
@@ -14,15 +18,13 @@ import { Suspense } from "react";
    说明：
    1. 中文不走这里，中文走 app/applications/ivd/page.tsx
    2. 外语动态路由需要 generateStaticParams，方便静态导出
-   3. 英文沿用现有页面，西/法/韩/俄使用独立本地化内容
+   3. 英文使用专题文章，西/法/韩/俄继续使用独立本地化内容
 ========================================================= */
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import IvdLocalizedApplicationClient from "@/components/applications/ivd/IvdLocalizedApplicationClient";
-import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { getIvdApplicationPageData } from "@/services/applications/ivd/getIvdApplicationPageData";
 
 import "../../../applications/ivd/ivd-application.css";
@@ -96,6 +98,10 @@ export async function generateMetadata({
   params,
 }: IvdLocalePageProps): Promise<Metadata> {
   const { locale } = await params;
+  if (locale === 'en') return {
+    ...reviewMetadata(getReviewHub('ivd')),
+    alternates: { canonical: getCanonicalUrl(applicationDocumentHref('ivd')) },
+  };
 
   if (!isIvdLocale(locale)) {
     return {};
@@ -143,6 +149,7 @@ function isIvdLocale(locale: string): locale is IvdLocaleParam {
 
 export default async function IvdLocaleApplicationPage({ params }: IvdLocalePageProps) {
   const { locale } = await params;
+  if (locale === 'en') return <EnglishReviewPage kind="ivd" />;
 
   if (!isIvdLocale(locale)) {
     notFound();
@@ -152,13 +159,7 @@ export default async function IvdLocaleApplicationPage({ params }: IvdLocalePage
 
   return (
     <Suspense fallback={<ApplicationPageSkeleton />}>
-      {locale === "en" ? (
-        <ApplicationEnglishClient
-          data={createEnglishApplicationData("ivd", pageData)}
-        />
-      ) : (
-        <IvdLocalizedApplicationClient data={pageData} />
-      )}
+      <IvdLocalizedApplicationClient data={pageData} />
     </Suspense>
   );
 }

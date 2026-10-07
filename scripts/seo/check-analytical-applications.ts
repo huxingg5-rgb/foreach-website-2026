@@ -9,6 +9,7 @@ import path from "node:path";
 import { gzipSync } from "node:zlib";
 import ts from "typescript";
 import { analyticalDocumentHref, analyticalDocuments } from "../../data/applications/analytical-documents/registry";
+import { applicationRoutes, getApplicationStaticParams, resolveApplicationHref, resolveApplicationRoute } from "../../data/applications/application-routes";
 import type { ApplicationBlock, ApplicationDocument } from "../../data/applications/analytical-documents/types";
 import { createAnalyticalDocumentMetadata, createAnalyticalDocumentSchema, getEnglishAnalyticalDocument } from "../../services/applications/analytical-documents";
 import { getCanonicalUrl, normalizeSiteHref, SITE_ORIGIN } from "../../lib/seo/site-url";
@@ -271,7 +272,7 @@ function checkHtml(document: ApplicationDocument, documents: ApplicationDocument
       containsText(item, reference.title, `${route} full reference`);
       const link = elements(item).find((node) => node.tag === "a");
       assert(link?.attrs.href, `${route}: missing reference link ${reference.id}`);
-      assert.equal(new URL(normalizeSiteHref(link.attrs.href), SITE_ORIGIN).href, new URL(normalizeSiteHref(reference.href), SITE_ORIGIN).href, `${route}: reference target ${reference.id}`);
+      assert.equal(new URL(normalizeSiteHref(link.attrs.href), SITE_ORIGIN).href, new URL(normalizeSiteHref(resolveApplicationHref(reference.href)), SITE_ORIGIN).href, `${route}: reference target ${reference.id}`);
     }
   }
   for (const related of document.related ?? []) {
@@ -304,17 +305,36 @@ function checkHtml(document: ApplicationDocument, documents: ApplicationDocument
 }
 
 function checkRouteEnumeration() {
-  const file = path.join(root, "app/[locale]/applications/analytical-instruments/[slug]/page.tsx");
-  const source = readFileSync(file, "utf8");
-  assert(/export\s+const\s+dynamicParams\s*=\s*false/.test(source), "Application document route must disable unknown dynamic params");
-  const ast = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
-  const declaration = ast.statements.find((node) => ts.isFunctionDeclaration(node) && node.name?.text === "generateStaticParams");
-  assert(declaration, "Missing document generateStaticParams");
-  const functionSource = declaration.getText(ast).replace(/^export\s+/, "");
-  const javascript = ts.transpileModule(functionSource, { compilerOptions: { target: ts.ScriptTarget.ES2022 } }).outputText;
-  // Evaluate only this pure registry mapping, not the page's React/CSS imports.
-  const parameters = new Function("analyticalDocuments", `${javascript}; return generateStaticParams();`)(analyticalDocuments);
-  assert.deepEqual(parameters, analyticalDocuments.filter((document) => document.slug).map(({ slug }) => ({ locale: "en", slug })), "Exactly the registered English-only detail routes must be generated");
+  for (const kind of new Set(applicationRoutes.map((route) => route.kind))) {
+    const file = path.join(root, `app/[locale]/applications/${kind}/[...segments]/page.tsx`);
+    const source = readFileSync(file, "utf8");
+    assert(/export\s+const\s+dynamicParams\s*=\s*false/.test(source), `${kind}: application route must disable unknown dynamic params`);
+    assert(!existsSync(path.join(root, `app/[locale]/applications/${kind}/[slug]/page.tsx`)), `${kind}: obsolete flat route remains`);
+    const ast = ts.createSourceFile(file, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+    const declaration = ast.statements.find((node): node is ts.FunctionDeclaration => ts.isFunctionDeclaration(node) && node.name?.text === "generateStaticParams");
+    const statement = declaration?.body?.statements[0];
+    const expression = statement && ts.isReturnStatement(statement) ? statement.expression : undefined;
+    assert(expression && ts.isCallExpression(expression) && ts.isIdentifier(expression.expression)
+      && expression.expression.text === "getApplicationStaticParams" && expression.arguments.length === 1
+      && ts.isStringLiteral(expression.arguments[0]) && expression.arguments[0].text === kind,
+    `${kind}: generateStaticParams must return the shared hierarchy registry for its domain`);
+
+    const parameters = getApplicationStaticParams(kind);
+    const prefix = `/en/applications/${kind}/`;
+    const expected = applicationRoutes.filter((route) => route.kind === kind && route.slug);
+    assert.deepEqual(parameters, expected.map((route) => ({ locale: "en", segments: route.path.slice(prefix.length, -1).split("/") })), `${kind}: exact canonical detail route enumeration`);
+    unique(parameters.map((entry) => entry.segments.join("/")), `${kind} generated route paths`);
+    for (const entry of parameters) {
+      const route = resolveApplicationRoute(kind, entry.segments);
+      assert(route && route.path === prefix + entry.segments.join("/") + "/", `${kind}: unresolved canonical segments`);
+      assert.equal(resolveApplicationRoute(kind, ["not-a-registered-parent", ...entry.segments]), undefined, `${route.path}: wrong parent must not resolve by final slug`);
+    }
+  }
+  for (const document of analyticalDocuments) {
+    const canonical = analyticalDocumentHref(document.slug);
+    const route = applicationRoutes.find((entry) => entry.path === canonical);
+    assert(route && route.slug === document.slug, `${document.slug || "hub"}: analytical document has no canonical route`);
+  }
 }
 
 async function main() {
@@ -340,8 +360,11 @@ async function main() {
   const sizes = documents.map((document) => checkHtml(document, documents, outputRoot));
   for (const document of documents.filter((item) => item.slug)) {
     for (const prefix of ["", "/zh-CN", "/es", "/fr", "/ko", "/ru"]) {
-      const translated = `${prefix}/applications/analytical-instruments/${document.slug}/`;
-      assert(!localFile(outputRoot, translated), `Fabricated translation was exported: ${translated}`);
+      const paths = new Set([analyticalDocumentHref(document.slug).replace(/^\/en/, ""), `/applications/analytical-instruments/${document.slug}/`]);
+      for (const applicationPath of paths) {
+        const translated = `${prefix}${applicationPath}`;
+        assert(!localFile(outputRoot, translated), `Fabricated translation was exported: ${translated}`);
+      }
     }
   }
   const sitemapFile = path.join(outputRoot, "sitemap.xml");

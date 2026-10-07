@@ -10,6 +10,7 @@ import type {
 type ProductFilterPanelProps = {
   activeCategory: ProductSelectionCategoryItem;
   activeProductTypeId?: string;
+  productTypeResultCount?: number;
   filterGroups: ProductSelectionFilterGroup[];
   mobileOpenFilterGroups?: Record<string, boolean>;
   emptyText: string;
@@ -257,6 +258,7 @@ export default function ProductFilterPanel({
   getOptionHref,
   activeCategory,
   activeProductTypeId,
+  productTypeResultCount,
   filterGroups,
   mobileOpenFilterGroups,
   emptyText,
@@ -268,7 +270,7 @@ export default function ProductFilterPanel({
   onFilterChange,
 }: ProductFilterPanelProps) {
   /*
-   * 只有接头系列中的第一个“产品种类”允许折叠。
+   * 接头和管路系列的第一个“产品种类”允许折叠。
    * 其余所有筛选组始终展开。
    */
   const [isFittingProductTypeOpen, setIsFittingProductTypeOpen] =
@@ -285,18 +287,9 @@ export default function ProductFilterPanel({
   return (
     <aside
       className="filter-panel"
-      aria-label={activeCategory.id === "valves" ? activeCategory.label : undefined}
+      aria-label={activeCategory.label}
       data-category-id={activeCategory.id}
       data-product-type-id={activeProductTypeId || ""}>
-      <div className="filter-panel-head">
-        {activeCategory.id === "valves" ? (
-          <p className="filter-panel-title">{activeCategory.label}</p>
-        ) : (
-          <h2>{activeCategory.label}</h2>
-        )}
-        <p>{activeCategory.description}</p>
-      </div>
-
       {filterGroups.length > 0 ? (
         filterGroups.map((group) => {
           if (
@@ -399,10 +392,10 @@ export default function ProductFilterPanel({
 
           /*
            * 只有这一组折叠：
-           * 接头系列 + 第一个产品种类。
+           * 接头或管路系列 + 第一个产品种类。
            */
           const isCollapsibleProductType =
-            activeCategory.id === "fittings" &&
+            ["fittings", "tubing"].includes(activeCategory.id) &&
             isProductTypeGroup;
 
           const isSingleSelectGroup =
@@ -706,7 +699,12 @@ const inferredShouldUseTwoColumns =
                 onClick={handleToggleGroup}
                 aria-expanded={isGroupOpen}
               >
-                <span>{group.title}</span>
+                <span>
+                  {group.title}
+                  {isProductTypeGroup && productTypeResultCount !== undefined ? (
+                    <span aria-live="polite" aria-atomic="true">（{productTypeResultCount}）</span>
+                  ) : null}
+                </span>
 
                 {isCollapsibleProductType ||
                 onToggleMobileGroup ? (

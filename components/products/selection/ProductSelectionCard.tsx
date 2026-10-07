@@ -1,4 +1,8 @@
 "use client";
+import { getControlModuleCardCopy } from "@/data/products/selection/control-module-card-copy";
+import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
+import { getTubingMaterialCopy } from "@/data/products/tubing/content";
+import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
 import { getSyringeModelRedirect } from "@/data/products/selection/syringe-pump-routes";
 
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
@@ -190,12 +194,20 @@ export function getProductSelectionCardName(
   locale: SelectionLocale,
   title: string,
 ) {
+  const tubingCopy = product.categoryId === "tubing" ? getTubingMaterialCopy(String(product.detailSlug || product.slug || product.productId), locale) : undefined;
+  if (tubingCopy) return tubingCopy.cardTitle;
   const valveCard = getValveCardCopy(product, locale);
   if (valveCard) return valveCard.model;
   if (product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId)) {
     return product.productId.toUpperCase();
   }
   const slug = String(product.detailSlug || product.slug || "");
+  const controlCard = product.categoryId === "control"
+    ? getControlModuleCardCopy(locale, slug) : undefined;
+  if (controlCard) return controlCard.model;
+  const probeControlCopy = locale === "en" && ["needles", "control"].includes(String(product.categoryId))
+    ? probeControlDetailCopyEn[slug] : undefined;
+  if (probeControlCopy) return probeControlCopy.cardTitle;
   const authoredCard = getPipettingCardCopy(locale, slug) || (locale === "zh" ? instrumentCardsZh : syringePumpCardsLocales[locale])?.[slug];
   return authoredCard?.model || toDisplayText(title) || product.productId;
 }
@@ -218,10 +230,13 @@ export default function ProductSelectionCard({
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const cardText = CARD_TEXT[locale];
+  const controlCard = product.categoryId === "control"
+    ? getControlModuleCardCopy(locale, String(product.detailSlug || product.slug || "")) : undefined;
   const valveCard = getValveCardCopy(product, locale);
   const slug = String(product.detailSlug || product.slug || "");
   const authoredCard = getPipettingCardCopy(locale, slug) || (locale === "zh" ? instrumentCardsZh : syringePumpCardsLocales[locale])?.[slug];
   const safeTitle = formatProductHeading(getProductSelectionCardName(product, locale, title));
+  const tubingHeading = product.categoryId === "tubing" ? getTubingMaterialHeading(slug, locale) : undefined;
   const isDiaphragmPumpCard =
     product.productTypeId === "diaphragm-pump" ||
     product.productTypeSlug === "diaphragm-pumps";
@@ -244,8 +259,8 @@ export default function ProductSelectionCard({
   const isSolenoidConfiguration = product.seriesId === "6010" && /^(?:2|3)-way$/.test(product.productId);
   const imageAlt = (isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
     ? product.imageAlt
-    : valveCard ? `FOREACH ${valveCard.model} ${valveCard.name}` : safeTitle;
-  const descriptionHeading = valveCard?.heading || ((isMrv3Configuration || product.seriesId === "6010") ? safeSubtitle : authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
+    : controlCard ? `FOREACH ${controlCard.model} ${controlCard.name}` : valveCard ? `FOREACH ${valveCard.model} ${valveCard.name}` : safeTitle;
+  const descriptionHeading = controlCard?.heading || valveCard?.heading || ((isMrv3Configuration || product.seriesId === "6010") ? safeSubtitle : authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
     ? safeSubtitle
     : plungerCardHeading));
   const usesDescriptionHeading = Boolean(descriptionHeading);
@@ -253,7 +268,7 @@ export default function ProductSelectionCard({
 
   return (
     <article
-      className="product-card"
+      className={`product-card${tubingHeading ? " tubing-material-card" : ""}`}
       data-product-type-id={product.productTypeId || undefined}
       title={valveCard ? `${safeTitle} ${valveCard.name}` : safeTitle}
     >
@@ -268,13 +283,19 @@ export default function ProductSelectionCard({
       </div>
 
       <div className="product-body">
-        {usesDescriptionHeading ? (
+        {tubingHeading ? (
+          <p className="product-title">{tubingHeading.label}</p>
+        ) : usesDescriptionHeading ? (
           <p className="product-title">{safeTitle}</p>
         ) : (
           <h3 className="product-title">{safeTitle}</h3>
         )}
 
-        {usesDescriptionHeading ? (
+        {tubingHeading ? (
+          <h3 className="product-card-summary product-card-description-heading">
+            {formatProductHeading(tubingHeading.description)}
+          </h3>
+        ) : usesDescriptionHeading ? (
           <DescriptionHeading className="product-card-summary product-card-description-heading">
             {formatProductHeading(descriptionHeading || "")}
           </DescriptionHeading>

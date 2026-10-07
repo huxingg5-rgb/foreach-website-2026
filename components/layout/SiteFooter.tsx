@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
 import { openCookieSettings } from "@/lib/privacy/cookie-consent";
+import { companySocialLinks as englishSocialLinks } from "@/data/company-social-links";
 
 import {
   getSiteFooterHref,
@@ -18,39 +19,6 @@ import styles from "./SiteFooterSocial.module.css";
 type SiteFooterProps = {
   locale?: LocaleCode;
 };
-
-const englishSocialLinks = [
-  {
-    key: "linkedin",
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/102748876/",
-    icon: "/images/social-media/international/linkedin.svg",
-  },
-  {
-    key: "youtube",
-    label: "YouTube",
-    href: "https://www.youtube.com/@ForeachFluid",
-    icon: "/images/social-media/international/youtube.svg",
-  },
-  {
-    key: "facebook",
-    label: "Facebook",
-    href: "https://www.facebook.com/people/Foreach-Technology/61586049132811/",
-    icon: "/images/social-media/international/facebook.svg",
-  },
-  {
-    key: "instagram",
-    label: "Instagram",
-    href: "https://www.instagram.com/foreachtechnology/",
-    icon: "/images/social-media/international/instagram.svg",
-  },
-  {
-    key: "x",
-    label: "X",
-    href: "https://x.com/ForeachFluid",
-    icon: "/images/social-media/international/x.svg",
-  },
-] as const;
 
 const footerLegalCopy: Record<
   LocaleCode,
@@ -134,6 +102,9 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                   </button>
 
                   <ul className="site-footer__list">
+                    {activeLocale === "en" && column.key === "applications" ? (
+                      <li><Link href="/en/applications/" prefetch={false}>All applications</Link></li>
+                    ) : null}
                     {column.links.map((link) => (
                       <li key={link.key}>
                         <Link

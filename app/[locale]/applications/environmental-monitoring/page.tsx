@@ -1,3 +1,7 @@
+import EnglishReviewPage, { reviewMetadata } from '@/components/applications/EnglishReviewPage';
+import { getReviewHub } from '@/data/applications/english-review';
+import { applicationDocumentHref } from '@/data/applications/application-routes';
+import { getCanonicalUrl } from '@/lib/seo/site-url';
 /* =========================================================
    page.tsx
    恒永达官网｜环保监测应用领域外语页面入口
@@ -5,12 +9,10 @@
 
 import type { Metadata } from "next";
 
-import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
 import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
 import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
 import SpanishIndustryApplicationClient, { KOREAN_INDUSTRY_UI_TEXT } from "@/components/applications/SpanishIndustryApplicationClient";
 import EnvironmentalMonitoringApplicationClient from "@/components/applications/environmental-monitoring/EnvironmentalMonitoringApplicationClient";
-import { createEnglishApplicationData } from "@/data/applications/application-english";
 import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
 import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
 import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
@@ -42,6 +44,10 @@ export async function generateMetadata({
   params,
 }: EnvironmentalMonitoringApplicationLocalePageProps): Promise<Metadata> {
   const { locale } = await params;
+  if (locale === 'en') return {
+    ...reviewMetadata(getReviewHub('environmental-monitoring')),
+    alternates: { canonical: getCanonicalUrl(applicationDocumentHref('environmental-monitoring')) },
+  };
 
   if (locale === "es") {
     return createSpanishApplicationMetadata("environmental-monitoring");
@@ -66,15 +72,8 @@ export default async function EnvironmentalMonitoringApplicationLocalePage({
   params,
 }: EnvironmentalMonitoringApplicationLocalePageProps) {
   const { locale } = await params;
+  if (locale === 'en') return <EnglishReviewPage kind="environmental-monitoring" />;
   const data = getEnvironmentalMonitoringApplicationPageData(locale);
-
-  if (locale === "en") {
-    return (
-      <ApplicationEnglishClient
-        data={createEnglishApplicationData("environmental-monitoring", data)}
-      />
-    );
-  }
 
   if (locale === "es") {
     return (

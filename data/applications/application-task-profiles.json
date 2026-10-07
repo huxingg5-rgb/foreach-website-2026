@@ -1,0 +1,1010 @@
+{
+  "sample": {
+    "label": {
+      "zh": "取样条件",
+      "en": "Sampling conditions"
+    },
+    "input": {
+      "zh": "实际取样量、源容器余量、针口高度、吸排速度与系统液",
+      "en": "Working aliquot, source reserve, probe height, aspiration/dispense speed and system fluid"
+    },
+    "steps": [
+      {
+        "zh": "预充并确认样本/系统液接触范围",
+        "en": "Prime and confirm sample/system-fluid contact surfaces"
+      },
+      {
+        "zh": "确认液面与阀位，按工作量吸取并交付到目标位置",
+        "en": "Confirm liquid level and valve state, then aspirate and deliver the working aliquot"
+      },
+      {
+        "zh": "清除共享段残液并记录下一样本前的恢复",
+        "en": "Clear shared-path residue and record recovery before the next sample"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "在接收端测量实际交付，覆盖常用小量与最大任务量",
+        "en": "Measure delivery at the receiver at typical small doses and the largest task dose"
+      },
+      {
+        "zh": "覆盖空闲后首剂、样本切换和高低浓度序列",
+        "en": "Cover first dose after idle, changeover and high-to-low sequences"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空吸、凝块/颗粒、针口贴壁或泄漏会改变实际交付",
+        "en": "Empty aspiration, clots/particles, wall sealing or leakage change delivery"
+      },
+      {
+        "zh": "停止当前动作，确认样本身份并按方法决定重采或标记",
+        "en": "Stop the operation, confirm identity and decide re-sampling or flagging by method"
+      }
+    ]
+  },
+  "dose": {
+    "label": {
+      "zh": "加液工作点",
+      "en": "Dispensing duty"
+    },
+    "input": {
+      "zh": "单剂量、循环总量、补液/换瓶间隔、背压和接收几何",
+      "en": "Dose, cycle total, refill/bottle-change interval, backpressure and receiver geometry"
+    },
+    "steps": [
+      {
+        "zh": "核对试剂来源、材料和目标容器，预充排除异常气泡",
+        "en": "Check reagent source, materials and receiver; prime to remove unintended air"
+      },
+      {
+        "zh": "按定义时序交付，记录实际液体接收与补液",
+        "en": "Deliver to the defined sequence and record receipt and refill"
+      },
+      {
+        "zh": "切换或停机后完成清洗及首剂恢复",
+        "en": "Clean and recover the first dose after changeover or idle"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "用实际介质核查首、中、末剂和换瓶后的交付",
+        "en": "Use the actual liquid to check first, middle, last and post-change doses"
+      },
+      {
+        "zh": "确认接收量和节拍，不用命令步数代替液量",
+        "en": "Verify receiver amount and timing rather than equating steps with volume"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空源、气泡、喷嘴挂液及背压变化会影响首剂或末剂",
+        "en": "Empty source, bubbles, retained droplets and backpressure changes affect first or last doses"
+      },
+      {
+        "zh": "中止受影响步骤，预充后验证恢复并避免重复加液",
+        "en": "Stop affected steps, verify recovery after prime and avoid duplicate dosing"
+      }
+    ]
+  },
+  "switch": {
+    "label": {
+      "zh": "阀路输入",
+      "en": "Valve-path inputs"
+    },
+    "input": {
+      "zh": "全部端口、阀状态、各状态压力、共享体积和置换量",
+      "en": "All ports, valve states, pressure in each state, shared volume and purge"
+    },
+    "steps": [
+      {
+        "zh": "核对源、目的地和每个阀状态的实际连接",
+        "en": "Verify sources, destinations and connections for every valve state"
+      },
+      {
+        "zh": "在允许压力下切换，再置换共享段并确认目标液到达",
+        "en": "Switch within the allowed pressure envelope, purge and confirm the target liquid arrives"
+      },
+      {
+        "zh": "进入下一任务前检查隔离与异常时的安全去向",
+        "en": "Check isolation and fault destinations before the next task"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "逐状态检查误通、泄漏、回流和切换后残留",
+        "en": "Check wrong connections, leakage, backflow and residue in each state"
+      },
+      {
+        "zh": "在完整路径测量置换量与到达延迟",
+        "en": "Measure purge and transit delay across the installed path"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "错位、共享段残液或切换压力异常可能影响下一任务",
+        "en": "Wrong state, retained liquid or abnormal switching pressure can affect the next duty"
+      },
+      {
+        "zh": "停泵并核查端口状态，恢复后重新置换",
+        "en": "Stop the pump, verify states and purge again on recovery"
+      }
+    ]
+  },
+  "wash": {
+    "label": {
+      "zh": "清洗与排废工作点",
+      "en": "Wash and drainage duty"
+    },
+    "input": {
+      "zh": "洗液配方、体积/时间、喷洗/吸液几何、空气/泡沫与废液容量",
+      "en": "Cleaner, volume/time, jet/aspiration geometry, air/foam and waste capacity"
+    },
+    "steps": [
+      {
+        "zh": "区分供液与抽排支路，核查废液容器和排液通路",
+        "en": "Separate supply and aspiration; check the waste vessel and discharge route"
+      },
+      {
+        "zh": "按清洗程序供液、接触并排空，监测溢流与吸空",
+        "en": "Supply, contact and empty by the wash program, watching overflow and exposed aspiration"
+      },
+      {
+        "zh": "用空白或下一循环确认清洗后的恢复",
+        "en": "Check recovery with a blank or the next cycle"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "在安装阻力下确认供液与峰值排废能力",
+        "en": "Verify supply and peak drainage at installed resistance"
+      },
+      {
+        "zh": "测量残液、携带污染或方法规定的恢复结果",
+        "en": "Measure residue, carryover or method-defined recovery"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "供液不足、泡沫、吸空和废液满会破坏清洗循环",
+        "en": "Insufficient supply, foam, exposed suction and full waste disrupt washing"
+      },
+      {
+        "zh": "停止供液并处置排废异常，恢复后检查完整循环",
+        "en": "Stop supply, correct drainage faults and verify a complete recovered cycle"
+      }
+    ]
+  },
+  "connect": {
+    "label": {
+      "zh": "连接条件",
+      "en": "Connection conditions"
+    },
+    "input": {
+      "zh": "管ID/OD、长度、接口几何、压力、材料及维护方式",
+      "en": "Tube ID/OD, length, port geometry, pressure, materials and service method"
+    },
+    "steps": [
+      {
+        "zh": "按路径图核对接口、管路标识与接液材料",
+        "en": "Check interfaces, line identity and wetted materials against the path map"
+      },
+      {
+        "zh": "装配后检查密封、预充与每段流向",
+        "en": "After assembly, check sealing, prime and direction in each segment"
+      },
+      {
+        "zh": "更换/维护后复核体积、延迟和交付",
+        "en": "Recheck volume, delay and delivery after service or replacement"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "在实际压力与温度下检查泄漏、脱管和材料变化",
+        "en": "Check leakage, tube retention and material changes at working pressure/temperature"
+      },
+      {
+        "zh": "评价完整路径的残液、恢复和维护后首轮",
+        "en": "Evaluate full-path hold-up, recovery and the first post-service cycle"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "误接、间隙、管路变形或泄漏可能改变体积与压力",
+        "en": "Misconnection, gaps, deformation or leaks can change volume and pressure"
+      },
+      {
+        "zh": "隔离异常段并重新确认装配，不凭相同螺纹判断可互换",
+        "en": "Isolate the segment and recheck assembly; matching threads do not prove interchangeability"
+      }
+    ]
+  },
+  "monitor": {
+    "label": {
+      "zh": "故障识别输入",
+      "en": "Fault-detection inputs"
+    },
+    "input": {
+      "zh": "具体传感器配置、位置、液体/管材、采样率、阈值和时间窗",
+      "en": "Sensor configuration, location, liquid/tubing, sampling rate, thresholds and time window"
+    },
+    "steps": [
+      {
+        "zh": "记录正常泵动作、阀状态和信号随时间变化",
+        "en": "Record normal pump motion, valve state and signal over time"
+      },
+      {
+        "zh": "注入需要识别的故障并设置持续时间与判定逻辑",
+        "en": "Introduce target faults and define persistence and decision logic"
+      },
+      {
+        "zh": "将报警关联当前任务，验证停止与恢复",
+        "en": "Associate alarms with the current task and verify stop and recovery"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "分别测故障检出、误报及端到端响应",
+        "en": "Measure fault detection, false alarms and end-to-end response separately"
+      },
+      {
+        "zh": "覆盖液体、速度和工况变化后的基线",
+        "en": "Cover baseline changes with liquid, speed and operating conditions"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "正常气段、黏度变化与采样延迟可能被误判",
+        "en": "Intentional air segments, viscosity changes or sampling delay can cause false decisions"
+      },
+      {
+        "zh": "控制器判定任务有效性，传感器不单独证明剂量或方法结果",
+        "en": "The controller decides task validity; sensors alone do not prove dose or method results"
+      }
+    ]
+  },
+  "filter": {
+    "label": {
+      "zh": "保护与方法条件",
+      "en": "Protection and method conditions"
+    },
+    "input": {
+      "zh": "目标组分、孔径/材料、过滤面积、压降、止回开启压与泄漏",
+      "en": "Target fraction, pore size/material, area, pressure drop, cracking pressure and leakage"
+    },
+    "steps": [
+      {
+        "zh": "先确认被测对象与允许的预处理，再定位保护元件",
+        "en": "Define the analyte and permitted preparation before placing protection"
+      },
+      {
+        "zh": "核算新滤器与使用后阻力及共享体积",
+        "en": "Account for clean and used resistance and hold-up volume"
+      },
+      {
+        "zh": "制定更换、清洗和恢复检查",
+        "en": "Define replacement, cleaning and recovery checks"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "评价过滤前后目标物、空白/回收或方法规定指标",
+        "en": "Evaluate analyte, blank/recovery or method measures before and after filtration"
+      },
+      {
+        "zh": "核查压降增长、防回流与更换后的恢复",
+        "en": "Check increasing pressure drop, backflow control and post-replacement recovery"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "堵塞、吸附、泄漏或开启压过高会改变方法或交付",
+        "en": "Blockage, adsorption, leaks or excessive cracking pressure can change method or delivery"
+      },
+      {
+        "zh": "先保护当前样本状态，再维护并验证新工作点",
+        "en": "Preserve the current specimen state before service and verify the recovered duty"
+      }
+    ]
+  },
+  "continuous": {
+    "label": {
+      "zh": "持续供液输入",
+      "en": "Sustained-supply inputs"
+    },
+    "input": {
+      "zh": "实际流量、累计量、允许停流、背压、补液和运行时长",
+      "en": "Flow, cumulative volume, allowed interruption, backpressure, refill and duration"
+    },
+    "steps": [
+      {
+        "zh": "按实际介质和背压设定供液，核查预充与首段",
+        "en": "Set supply for the actual liquid and backpressure and check prime and first flow"
+      },
+      {
+        "zh": "记录输出、补液或复位时段及累计交付",
+        "en": "Record output, refill/reset periods and cumulative delivery"
+      },
+      {
+        "zh": "测试换瓶、闲置与断电恢复",
+        "en": "Test bottle changes, idle and power-loss recovery"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "测量工作流量趋势与累计体积，包含补液中断",
+        "en": "Measure flow trends and cumulative volume including refill interruptions"
+      },
+      {
+        "zh": "按用途评价比例、过程或检测结果",
+        "en": "Evaluate ratio, process or detector results for the duty"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空源、气泡、滑移、压力变化或复位会扰动持续输出",
+        "en": "Empty supply, bubbles, slip, pressure change or reset can disturb output"
+      },
+      {
+        "zh": "核对未完成量和过程状态后恢复，避免重复补给",
+        "en": "Confirm undelivered volume and process state before recovery without duplicate supply"
+      }
+    ]
+  },
+  "integration": {
+    "label": {
+      "zh": "系统协调输入",
+      "en": "System-coordination inputs"
+    },
+    "input": {
+      "zh": "任务状态、样本/容器身份、并发资源、互锁和恢复",
+      "en": "Task state, specimen/vessel identity, concurrent resources, interlocks and recovery"
+    },
+    "steps": [
+      {
+        "zh": "建立泵阀、容器及任务的状态表",
+        "en": "Map states for pumps, valves, vessels and tasks"
+      },
+      {
+        "zh": "按资源占用与方法时序执行并记录交付",
+        "en": "Execute and record delivery with resource occupancy and method timing"
+      },
+      {
+        "zh": "注入中断与恢复情景，确认液体去向及可重试步骤",
+        "en": "Introduce interruptions and verify destinations and safe retry steps"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "覆盖并发、边界状态及异常后的完整恢复",
+        "en": "Cover concurrency, boundary states and complete recovery after faults"
+      },
+      {
+        "zh": "检查身份、累计量和记录与实际操作一致",
+        "en": "Check identity, cumulative volume and agreement between records and operations"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "资源冲突、通信中断或身份错位可能造成错投/重复加液",
+        "en": "Resource conflict, communication loss or identity mismatch can cause wrong or duplicate delivery"
+      },
+      {
+        "zh": "停止相关支路并依据已执行记录恢复",
+        "en": "Stop affected branches and recover using completed-operation records"
+      }
+    ]
+  },
+  "compatibility": {
+    "label": {
+      "zh": "介质与材料条件",
+      "en": "Liquid/material conditions"
+    },
+    "input": {
+      "zh": "配方、浓度、温度、接触时长、材料/密封及清洗",
+      "en": "Composition, concentration, temperature, contact duration, materials/seals and washing"
+    },
+    "steps": [
+      {
+        "zh": "确认所有接液表面及实际配方",
+        "en": "Identify every wetted surface and the actual formulation"
+      },
+      {
+        "zh": "评价浸泡、运动及停机后的结晶/变化",
+        "en": "Evaluate soaking, motion and post-idle crystallization or changes"
+      },
+      {
+        "zh": "复测密封、流量与剂量并制定维护",
+        "en": "Recheck sealing, flow and dose and set maintenance"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "验证材料状态、泄漏与实际交付随时间的变化",
+        "en": "Verify material condition, leakage and delivery over time"
+      },
+      {
+        "zh": "覆盖停机清洗、长期待机及恢复",
+        "en": "Cover shutdown washing, extended idle and recovery"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "溶胀、结晶、挥发或吸附会改变材料和计量",
+        "en": "Swelling, crystallization, evaporation or adsorption affect materials and metering"
+      },
+      {
+        "zh": "停止接触并按评估结果更换材料或维护程序",
+        "en": "Stop exposure and revise materials or maintenance from the assessment"
+      }
+    ]
+  },
+  "pinch": {
+    "label": {
+      "zh": "软管控制条件",
+      "en": "Flexible-tube control conditions"
+    },
+    "input": {
+      "zh": "软管材料、OD/壁厚、压力/负压、夹闭与循环次数",
+      "en": "Tube material, OD/wall, pressure/vacuum, closure and cycle count"
+    },
+    "steps": [
+      {
+        "zh": "核对软管配置、安装及进口介质状态",
+        "en": "Confirm tube configuration, mounting and inlet fluid state"
+      },
+      {
+        "zh": "在真实压差下测试夹闭、开启及流量恢复",
+        "en": "Test closure, opening and restored flow at actual differential pressure"
+      },
+      {
+        "zh": "执行维护、更换及所需清洁/灭菌流程",
+        "en": "Service or replace and perform required cleaning/sterilization"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "测量关闭泄漏、开启阻力与循环后的软管状态",
+        "en": "Measure closed leakage, open resistance and tube condition after cycles"
+      },
+      {
+        "zh": "检查全路径密封和维护后的污染边界",
+        "en": "Check full-path sealing and contamination boundaries after service"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "管材疲劳、错装或压差超出配置可能导致关闭失效",
+        "en": "Fatigue, wrong installation or excessive differential pressure can prevent closure"
+      },
+      {
+        "zh": "隔离并更换异常软管，重新验证完整路径",
+        "en": "Isolate and replace affected tubing, then revalidate the path"
+      }
+    ]
+  },
+  "dilution": {
+    "label": {
+      "zh": "加液工作点",
+      "en": "Dispensing duty"
+    },
+    "input": {
+      "zh": "样品/稀释剂剂量、目标比例、混合和共享段残液",
+      "en": "Sample/diluent doses, target ratio, mixing and shared-path residue"
+    },
+    "steps": [
+      {
+        "zh": "核对试剂来源、材料和目标容器，预充排除异常气泡",
+        "en": "Check reagent source, materials and receiver; prime to remove unintended air"
+      },
+      {
+        "zh": "按定义时序交付，记录实际液体接收与补液",
+        "en": "Deliver to the defined sequence and record receipt and refill"
+      },
+      {
+        "zh": "切换或停机后完成清洗及首剂恢复",
+        "en": "Clean and recover the first dose after changeover or idle"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "在接收端核查实际浓度比例、混合与空白",
+        "en": "Verify actual concentration ratio, mixing and blank at the receiver"
+      },
+      {
+        "zh": "评价各路误差、残液和目标物回收",
+        "en": "Assess errors in each stream, residue and analyte recovery"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空源、气泡、喷嘴挂液及背压变化会影响首剂或末剂",
+        "en": "Empty source, bubbles, retained droplets and backpressure changes affect first or last doses"
+      },
+      {
+        "zh": "中止受影响步骤，预充后验证恢复并避免重复加液",
+        "en": "Stop affected steps, verify recovery after prime and avoid duplicate dosing"
+      }
+    ]
+  },
+  "beadWash": {
+    "label": {
+      "zh": "清洗与排废工作点",
+      "en": "Wash and drainage duty"
+    },
+    "input": {
+      "zh": "固相/磁珠、加液与吸液高度、洗涤次数、残液和产物去向",
+      "en": "Solid phase/beads, dispense/aspiration heights, wash count, residue and product destination"
+    },
+    "steps": [
+      {
+        "zh": "区分供液与抽排支路，核查废液容器和排液通路",
+        "en": "Separate supply and aspiration; check the waste vessel and discharge route"
+      },
+      {
+        "zh": "按清洗程序供液、接触并排空，监测溢流与吸空",
+        "en": "Supply, contact and empty by the wash program, watching overflow and exposed aspiration"
+      },
+      {
+        "zh": "用空白或下一循环确认清洗后的恢复",
+        "en": "Check recovery with a blank or the next cycle"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "评价固相保留、洗后残液和最终产物回收",
+        "en": "Evaluate retained solid phase, post-wash residue and recovered product"
+      },
+      {
+        "zh": "以完整洗涤循环和下游结果核查恢复",
+        "en": "Check recovery using full wash cycles and downstream results"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "供液不足、泡沫、吸空和废液满会破坏清洗循环",
+        "en": "Insufficient supply, foam, exposed suction and full waste disrupt washing"
+      },
+      {
+        "zh": "停止供液并处置排废异常，恢复后检查完整循环",
+        "en": "Stop supply, correct drainage faults and verify a complete recovered cycle"
+      }
+    ]
+  },
+  "cellTransfer": {
+    "label": {
+      "zh": "取样条件",
+      "en": "Sampling conditions"
+    },
+    "input": {
+      "zh": "细胞密度、流速/压差、通径、停留时间与转移前状态",
+      "en": "Cell density, velocity/pressure difference, bore, residence time and initial condition"
+    },
+    "steps": [
+      {
+        "zh": "预充并确认样本/系统液接触范围",
+        "en": "Prime and confirm sample/system-fluid contact surfaces"
+      },
+      {
+        "zh": "确认液面与阀位，按工作量吸取并交付到目标位置",
+        "en": "Confirm liquid level and valve state, then aspirate and deliver the working aliquot"
+      },
+      {
+        "zh": "清除共享段残液并记录下一样本前的恢复",
+        "en": "Clear shared-path residue and record recovery before the next sample"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "比较转移前后细胞活率、回收及所需状态",
+        "en": "Compare before/after viability, recovery and required cell condition"
+      },
+      {
+        "zh": "核查完整路径的密封与过程污染控制",
+        "en": "Check full-path sealing and process-contamination control"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空吸、凝块/颗粒、针口贴壁或泄漏会改变实际交付",
+        "en": "Empty aspiration, clots/particles, wall sealing or leakage change delivery"
+      },
+      {
+        "zh": "停止当前动作，确认样本身份并按方法决定重采或标记",
+        "en": "Stop the operation, confirm identity and decide re-sampling or flagging by method"
+      }
+    ]
+  },
+  "pipette": {
+    "label": {
+      "zh": "取样条件",
+      "en": "Sampling conditions"
+    },
+    "input": {
+      "zh": "液体类别、吸头/针、密封、Z轴动作、空气间隔与剂量",
+      "en": "Liquid class, tip/probe, seal, Z motion, air gaps and dose"
+    },
+    "steps": [
+      {
+        "zh": "预充并确认样本/系统液接触范围",
+        "en": "Prime and confirm sample/system-fluid contact surfaces"
+      },
+      {
+        "zh": "确认液面与阀位，按工作量吸取并交付到目标位置",
+        "en": "Confirm liquid level and valve state, then aspirate and deliver the working aliquot"
+      },
+      {
+        "zh": "清除共享段残液并记录下一样本前的恢复",
+        "en": "Clear shared-path residue and record recovery before the next sample"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "在接收端测量实际交付，覆盖常用小量与最大任务量",
+        "en": "Measure delivery at the receiver at typical small doses and the largest task dose"
+      },
+      {
+        "zh": "覆盖空闲后首剂、样本切换和高低浓度序列",
+        "en": "Cover first dose after idle, changeover and high-to-low sequences"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空吸、凝块/颗粒、针口贴壁或泄漏会改变实际交付",
+        "en": "Empty aspiration, clots/particles, wall sealing or leakage change delivery"
+      },
+      {
+        "zh": "停止当前动作，确认样本身份并按方法决定重采或标记",
+        "en": "Stop the operation, confirm identity and decide re-sampling or flagging by method"
+      }
+    ]
+  },
+  "plateDose": {
+    "label": {
+      "zh": "加液工作点",
+      "en": "Dispensing duty"
+    },
+    "input": {
+      "zh": "板型、孔位、独立通道、支路阻力与并发流量",
+      "en": "Plate format, wells, independent channels, branch resistance and concurrent flow"
+    },
+    "steps": [
+      {
+        "zh": "核对试剂来源、材料和目标容器，预充排除异常气泡",
+        "en": "Check reagent source, materials and receiver; prime to remove unintended air"
+      },
+      {
+        "zh": "按定义时序交付，记录实际液体接收与补液",
+        "en": "Deliver to the defined sequence and record receipt and refill"
+      },
+      {
+        "zh": "切换或停机后完成清洗及首剂恢复",
+        "en": "Clean and recover the first dose after changeover or idle"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "测首末孔、通道差异与完整板循环",
+        "en": "Measure first/last wells, channel differences and full plate cycles"
+      },
+      {
+        "zh": "保留孔位身份并验证实际交付与残液",
+        "en": "Track well identity and verify delivery and retained liquid"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空源、气泡、喷嘴挂液及背压变化会影响首剂或末剂",
+        "en": "Empty source, bubbles, retained droplets and backpressure changes affect first or last doses"
+      },
+      {
+        "zh": "中止受影响步骤，预充后验证恢复并避免重复加液",
+        "en": "Stop affected steps, verify recovery after prime and avoid duplicate dosing"
+      }
+    ]
+  },
+  "repeatDose": {
+    "label": {
+      "zh": "加液工作点",
+      "en": "Dispensing duty"
+    },
+    "input": {
+      "zh": "每剂量、次数、首末剂、剩余量及补液恢复",
+      "en": "Dose, count, first/last aliquots, reserve and refill recovery"
+    },
+    "steps": [
+      {
+        "zh": "核对试剂来源、材料和目标容器，预充排除异常气泡",
+        "en": "Check reagent source, materials and receiver; prime to remove unintended air"
+      },
+      {
+        "zh": "按定义时序交付，记录实际液体接收与补液",
+        "en": "Deliver to the defined sequence and record receipt and refill"
+      },
+      {
+        "zh": "切换或停机后完成清洗及首剂恢复",
+        "en": "Clean and recover the first dose after changeover or idle"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "用实际介质核查首、中、末剂和换瓶后的交付",
+        "en": "Use the actual liquid to check first, middle, last and post-change doses"
+      },
+      {
+        "zh": "确认接收量和节拍，不用命令步数代替液量",
+        "en": "Verify receiver amount and timing rather than equating steps with volume"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空源、气泡、喷嘴挂液及背压变化会影响首剂或末剂",
+        "en": "Empty source, bubbles, retained droplets and backpressure changes affect first or last doses"
+      },
+      {
+        "zh": "中止受影响步骤，预充后验证恢复并避免重复加液",
+        "en": "Stop affected steps, verify recovery after prime and avoid duplicate dosing"
+      }
+    ]
+  },
+  "timedDose": {
+    "label": {
+      "zh": "加液工作点",
+      "en": "Dispensing duty"
+    },
+    "input": {
+      "zh": "实际触液时间、剂量、输送延迟、混合和测量窗口",
+      "en": "Actual contact time, dose, transit delay, mixing and measurement window"
+    },
+    "steps": [
+      {
+        "zh": "核对试剂来源、材料和目标容器，预充排除异常气泡",
+        "en": "Check reagent source, materials and receiver; prime to remove unintended air"
+      },
+      {
+        "zh": "按定义时序交付，记录实际液体接收与补液",
+        "en": "Deliver to the defined sequence and record receipt and refill"
+      },
+      {
+        "zh": "切换或停机后完成清洗及首剂恢复",
+        "en": "Clean and recover the first dose after changeover or idle"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "用实际介质核查首、中、末剂和换瓶后的交付",
+        "en": "Use the actual liquid to check first, middle, last and post-change doses"
+      },
+      {
+        "zh": "确认接收量和节拍，不用命令步数代替液量",
+        "en": "Verify receiver amount and timing rather than equating steps with volume"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空源、气泡、喷嘴挂液及背压变化会影响首剂或末剂",
+        "en": "Empty source, bubbles, retained droplets and backpressure changes affect first or last doses"
+      },
+      {
+        "zh": "中止受影响步骤，预充后验证恢复并避免重复加液",
+        "en": "Stop affected steps, verify recovery after prime and avoid duplicate dosing"
+      }
+    ]
+  },
+  "feeding": {
+    "label": {
+      "zh": "持续供液输入",
+      "en": "Sustained-supply inputs"
+    },
+    "input": {
+      "zh": "批次/周期/连续模式、累计量、反应器体积和添加液",
+      "en": "Batch/periodic/continuous mode, cumulative volume, reactor volume and additives"
+    },
+    "steps": [
+      {
+        "zh": "按实际介质和背压设定供液，核查预充与首段",
+        "en": "Set supply for the actual liquid and backpressure and check prime and first flow"
+      },
+      {
+        "zh": "记录输出、补液或复位时段及累计交付",
+        "en": "Record output, refill/reset periods and cumulative delivery"
+      },
+      {
+        "zh": "测试换瓶、闲置与断电恢复",
+        "en": "Test bottle changes, idle and power-loss recovery"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "测量工作流量趋势与累计体积，包含补液中断",
+        "en": "Measure flow trends and cumulative volume including refill interruptions"
+      },
+      {
+        "zh": "按用途评价比例、过程或检测结果",
+        "en": "Evaluate ratio, process or detector results for the duty"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空源、气泡、滑移、压力变化或复位会扰动持续输出",
+        "en": "Empty supply, bubbles, slip, pressure change or reset can disturb output"
+      },
+      {
+        "zh": "核对未完成量和过程状态后恢复，避免重复补给",
+        "en": "Confirm undelivered volume and process state before recovery without duplicate supply"
+      }
+    ]
+  },
+  "onlineSample": {
+    "label": {
+      "zh": "取样条件",
+      "en": "Sampling conditions"
+    },
+    "input": {
+      "zh": "取样点、目标分析、周期、滞留/弃样、保存与体积扰动",
+      "en": "Sampling point, analyte, interval, hold-up/discard, preservation and volume disturbance"
+    },
+    "steps": [
+      {
+        "zh": "预充并确认样本/系统液接触范围",
+        "en": "Prime and confirm sample/system-fluid contact surfaces"
+      },
+      {
+        "zh": "确认液面与阀位，按工作量吸取并交付到目标位置",
+        "en": "Confirm liquid level and valve state, then aspirate and deliver the working aliquot"
+      },
+      {
+        "zh": "清除共享段残液并记录下一样本前的恢复",
+        "en": "Clear shared-path residue and record recovery before the next sample"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "在接收端测量实际交付，覆盖常用小量与最大任务量",
+        "en": "Measure delivery at the receiver at typical small doses and the largest task dose"
+      },
+      {
+        "zh": "覆盖空闲后首剂、样本切换和高低浓度序列",
+        "en": "Cover first dose after idle, changeover and high-to-low sequences"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空吸、凝块/颗粒、针口贴壁或泄漏会改变实际交付",
+        "en": "Empty aspiration, clots/particles, wall sealing or leakage change delivery"
+      },
+      {
+        "zh": "停止当前动作，确认样本身份并按方法决定重采或标记",
+        "en": "Stop the operation, confirm identity and decide re-sampling or flagging by method"
+      }
+    ]
+  },
+  "drain": {
+    "label": {
+      "zh": "清洗与排废工作点",
+      "en": "Wash and drainage duty"
+    },
+    "input": {
+      "zh": "液体或气液进口、酸性/温度、负压、排液量与气密要求",
+      "en": "Flooded or mixed inlet, acidity/temperature, vacuum, drainage and leakage requirements"
+    },
+    "steps": [
+      {
+        "zh": "区分供液与抽排支路，核查废液容器和排液通路",
+        "en": "Separate supply and aspiration; check the waste vessel and discharge route"
+      },
+      {
+        "zh": "按清洗程序供液、接触并排空，监测溢流与吸空",
+        "en": "Supply, contact and empty by the wash program, watching overflow and exposed aspiration"
+      },
+      {
+        "zh": "用空白或下一循环确认清洗后的恢复",
+        "en": "Check recovery with a blank or the next cycle"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "在安装阻力下确认供液与峰值排废能力",
+        "en": "Verify supply and peak drainage at installed resistance"
+      },
+      {
+        "zh": "测量残液、携带污染或方法规定的恢复结果",
+        "en": "Measure residue, carryover or method-defined recovery"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "供液不足、泡沫、吸空和废液满会破坏清洗循环",
+        "en": "Insufficient supply, foam, exposed suction and full waste disrupt washing"
+      },
+      {
+        "zh": "停止供液并处置排废异常，恢复后检查完整循环",
+        "en": "Stop supply, correct drainage faults and verify a complete recovered cycle"
+      }
+    ]
+  },
+  "extraction": {
+    "label": {
+      "zh": "加液工作点",
+      "en": "Dispensing duty"
+    },
+    "input": {
+      "zh": "萃取步骤、相态、各步剂量/压力和产物去向",
+      "en": "Extraction stage, phase, stage volumes/pressure and product destination"
+    },
+    "steps": [
+      {
+        "zh": "核对试剂来源、材料和目标容器，预充排除异常气泡",
+        "en": "Check reagent source, materials and receiver; prime to remove unintended air"
+      },
+      {
+        "zh": "按定义时序交付，记录实际液体接收与补液",
+        "en": "Deliver to the defined sequence and record receipt and refill"
+      },
+      {
+        "zh": "切换或停机后完成清洗及首剂恢复",
+        "en": "Clean and recover the first dose after changeover or idle"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "测目标物回收、相夹带、空白与残留",
+        "en": "Measure analyte recovery, phase carryover, blank and residue"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空源、气泡、喷嘴挂液及背压变化会影响首剂或末剂",
+        "en": "Empty source, bubbles, retained droplets and backpressure changes affect first or last doses"
+      },
+      {
+        "zh": "中止受影响步骤，预充后验证恢复并避免重复加液",
+        "en": "Stop affected steps, verify recovery after prime and avoid duplicate dosing"
+      }
+    ]
+  },
+  "drive": {
+    "label": {
+      "zh": "持续供液输入",
+      "en": "Sustained-supply inputs"
+    },
+    "input": {
+      "zh": "计量/持续供液/清洗/抽排职责、实际介质与安装负载",
+      "en": "Metering/continuous/wash/aspiration duties, actual liquid and installed load"
+    },
+    "steps": [
+      {
+        "zh": "按实际介质和背压设定供液，核查预充与首段",
+        "en": "Set supply for the actual liquid and backpressure and check prime and first flow"
+      },
+      {
+        "zh": "记录输出、补液或复位时段及累计交付",
+        "en": "Record output, refill/reset periods and cumulative delivery"
+      },
+      {
+        "zh": "测试换瓶、闲置与断电恢复",
+        "en": "Test bottle changes, idle and power-loss recovery"
+      }
+    ],
+    "validation": [
+      {
+        "zh": "测量工作流量趋势与累计体积，包含补液中断",
+        "en": "Measure flow trends and cumulative volume including refill interruptions"
+      },
+      {
+        "zh": "按用途评价比例、过程或检测结果",
+        "en": "Evaluate ratio, process or detector results for the duty"
+      }
+    ],
+    "faults": [
+      {
+        "zh": "空源、气泡、滑移、压力变化或复位会扰动持续输出",
+        "en": "Empty supply, bubbles, slip, pressure change or reset can disturb output"
+      },
+      {
+        "zh": "核对未完成量和过程状态后恢复，避免重复补给",
+        "en": "Confirm undelivered volume and process state before recovery without duplicate supply"
+      }
+    ]
+  }
+}

@@ -1478,18 +1478,18 @@ export const remainingPumpArticlesRu = {
   },
   "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm": {
     "metadata": {
-      "title": "Как выбрать EPDM, PTFE и FFKM для жидкостного мембранного микронасоса 300 mL/min?",
+      "title": "Как выбрать EPDM, PTFE и FFKM для мембранного микронасоса?",
       "seoTitle": "Выбор EPDM, PTFE и FFKM для микронасоса | Foreach Technology",
       "seoDescription": "Сравните химическую совместимость, набухание, динамическую герметичность и проверку реальной жидкостью при выборе EPDM, PTFE и FFKM.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-wetted-material-inspection.webp",
-      "coverAlt": "Мембранный жидкостный микронасос Foreach DPL30 с разными смачиваемыми материалами"
+      "coverAlt": "Пример осмотра контактирующих со средой компонентов мембранного микронасоса Foreach"
     },
     "deck": "EPDM, PTFE и FFKM не образуют простую шкалу от худшего к лучшему. EPDM и FFKM — эластомеры, PTFE — фторполимер; мембрана, клапаны и головка выполняют разные механические задачи. Выбирают полную смачиваемую динамически нагруженную конструкцию, а не одно название.",
     "leadBlocks": [
       {
         "type": "notice",
-        "label": "Официальные комбинации DPL30:",
-        "text": "Мембрана EPDM / клапаны EPDM / головка PPS либо мембрана PTFE / клапаны FFKM / головка PPS. Не составляйте из них неопубликованные коммерческие конфигурации."
+        "label": "Примеры сочетаний материалов мембранных микронасосов Foreach:",
+        "text": "Мембрана EPDM / клапаны EPDM / головка PPS либо мембрана PTFE / клапаны FFKM / головка PPS. Не составляйте из них неопубликованные коммерческие конфигурации. В статье рассматриваются общие принципы выбора материалов мембранных насосов. Эти сочетания приведены как примеры для отдельных моделей Foreach; доступные варианты следует уточнять для каждой серии и модели."
       },
       {
         "type": "paragraph",
@@ -1631,12 +1631,12 @@ export const remainingPumpArticlesRu = {
         ]
       },
       {
-        "title": "7. Как включить официальные сочетания DPL30 в выбор?",
+        "title": "7. Как включить сочетания материалов мембранного насоса в процесс выбора?",
         "blocks": [
           {
             "type": "table",
             "headers": [
-              "Официальное сочетание",
+              "Пример сочетания материалов",
               "Роль кандидата",
               "Еще подтвердить"
             ],
@@ -1684,11 +1684,11 @@ export const remainingPumpArticlesRu = {
       }
     ],
     "cta": {
-      "title": "Выбираете DPL30 с EPDM или PTFE/FFKM?",
+      "title": "Выбираете EPDM или PTFE/FFKM для мембранного микронасоса?",
       "description": "Передайте состав жидкости, концентрацию, температуру, давление, контакт, очистку и целевой ресурс для этапов от отбора и погружения до динамической проверки целого насоса.",
       "contactLabel": "Связаться с инженером",
-      "productsLabel": "Посмотреть жидкостный микронасос DPL30",
-      "productsHref": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump"
+      "productsLabel": "Посмотреть мембранные микронасосы",
+      "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
     }
   }
 } satisfies Partial<Record<DiaphragmPumpEngineeringArticleSlug, DiaphragmPumpEngineeringArticleCopy>>;

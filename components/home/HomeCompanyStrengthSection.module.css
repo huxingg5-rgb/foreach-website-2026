@@ -1,0 +1,34 @@
+.metricNumber {
+  position: relative;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 最终值始终保留，并为动画数字及后缀预留稳定宽度。 */
+.metricValue {
+  display: inline-block;
+}
+
+.metricsGrid[data-counting="true"] .metricValue {
+  opacity: 0;
+}
+
+.metricAnimation {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .metricsGrid .metricValue {
+    opacity: 1;
+  }
+
+  .metricAnimation {
+    display: none;
+  }
+
+  .metricsGrid :global(.home-company-metric-card strong) {
+    animation: none;
+  }
+}

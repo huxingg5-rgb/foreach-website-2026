@@ -24,6 +24,7 @@
 import type { Metadata } from "next";
 
 import ContactPageContent from "@/components/contact/ContactPageContent";
+import CompanyPageStructuredData from "@/components/common/CompanyPageStructuredData";
 import { contactZhData } from "@/data/contact-cooperation";
 
 import "./contact.css";
@@ -52,5 +53,16 @@ export const metadata: Metadata = {
 ========================================================= */
 
 export default function ContactPage() {
-  return <ContactPageContent data={contactZhData} locale="zh-CN" />;
+  return (
+    <>
+      <CompanyPageStructuredData
+        type="ContactPage"
+        path="/contact/"
+        name={contactZhData.seo.title}
+        description={contactZhData.seo.description}
+        locale="zh-CN"
+      />
+      <ContactPageContent data={contactZhData} locale="zh-CN" />
+    </>
+  );
 }

@@ -1,0 +1,1841 @@
+{
+  "ivd": {
+    "clinical": {
+      "title": "Clinical chemistry analyzers",
+      "summary": {
+        "zh": "围绕样本、反应试剂、工作液与清洗废液组织生化液路，按方法允许的样本和实际交付量确认配置。",
+        "en": "Organize sample, reaction-reagent, working-fluid and wash paths around assay-approved specimens and the volume received at the reaction position."
+      },
+      "conditions": [
+        {
+          "zh": "方法允许的样本类型、常用剂量与容器残余量",
+          "en": "Assay-approved specimens, working doses and residual specimen volume"
+        },
+        {
+          "zh": "系统液、探针位置、反应节拍与高低浓度切换序列",
+          "en": "System fluid, probe position, reaction timing and high-to-low sequences"
+        }
+      ],
+      "outcome": {
+        "zh": "在接收位置核查交付体积、空闲后首剂和高低浓度切换后的残留。",
+        "en": "Verify delivered volume at the receiver, the first dose after idle and recovery after a high-to-low sample change."
+      },
+      "boundary": {
+        "zh": "样本适用性由检测方法确定；满量程计量指标不能代替小剂量与整机检测结果。",
+        "en": "The assay defines specimen suitability; full-stroke pump specifications do not establish small-dose or analyzer-result performance."
+      },
+      "related": [
+        { "label": { "zh": "生化样本计量详解（英文）", "en": "Clinical chemistry sample metering guide" }, "href": "/en/applications/ivd/piston-sample-transfer/" },
+        { "label": { "zh": "生化试剂加液详解（英文）", "en": "Clinical chemistry reagent dispensing guide" }, "href": "/en/applications/ivd/piston-reagent-dispensing/" }
+      ],
+      "modules": {
+        "clinical-sample": {
+          "task": "sample",
+          "title": "Sample aspiration",
+          "description": {
+            "zh": "从方法允许的血清、血浆或其他样本中取得指定液量。样本可保留在探针前端，由系统液驱动，也可进入泵腔；两种接液架构分别评估稀释、凝块、挂液和清洗。",
+            "en": "Acquire the required aliquot from assay-approved serum, plasma or other specimens. Distinguish system-fluid displacement with sample held at the probe from direct pump contact, then evaluate dilution, clots, retained droplets and cleaning."
+          }
+        },
+        "clinical-reagent": {
+          "task": "dose",
+          "title": "Reagent dispensing",
+          "description": {
+            "zh": "分别规划反应试剂、稀释液和公共工作液。容量选择以常用剂量、单次最大量、补液间隔及空闲后首剂恢复为依据，验证针端实际交付而非只读取泵命令。",
+            "en": "Separate reaction reagents, diluents and shared working fluids. Select capacity from working doses, the largest event, refill timing and first-dose recovery; verify delivery at the probe rather than relying on commanded displacement."
+          }
+        },
+        "clinical-switching": {
+          "task": "switch",
+          "title": "Liquid-path switching",
+          "description": {
+            "zh": "用端口状态表管理试剂、样本、清洗和废液去向。切换后先清除共享通道残液，再进入下一任务，按死体积、置换量和阀位反馈核查误通。",
+            "en": "Use a port-state table for sample, reagent, wash and waste destinations. Clear the shared passage before the next duty and qualify purge volume, retained liquid and valve-state feedback."
+          }
+        },
+        "clinical-cleaning": {
+          "task": "wash",
+          "title": "Probe and vessel washing",
+          "description": {
+            "zh": "针内、针外与反应杯清洗分别配置供液和排废。按污染来源选择洗液、接触时间、喷洗位置和吸液高度，再用高低浓度序列检验携带污染。",
+            "en": "Configure internal probe, external probe and reaction-vessel washing separately. Match cleaner, contact time, jet coverage and aspiration height to the contamination source, then test carryover with high-to-low sequences."
+          }
+        },
+        "clinical-connection": {
+          "task": "connect",
+          "title": "Tubing and connections",
+          "description": {
+            "zh": "将泵、阀、针、传感器及连接段作为完整液路核算。管内径、长度、接头间隙和共享体积影响交付延迟与残液，安装后重新预充并检查密封。",
+            "en": "Evaluate pump, valve, probe, sensor and connections as one path. Tubing ID, length, fitting gaps and shared volume affect delay and carryover; prime and leak-check the assembled channel."
+          }
+        },
+        "clinical-monitoring": {
+          "task": "monitor",
+          "title": "Fluid-state monitoring",
+          "description": {
+            "zh": "在取样和加液阶段识别气泡、空吸、堵塞与漏液。判定需结合传感器位置、液体性质、泵动作和时间窗，由控制器决定停止、重试或标记样本。",
+            "en": "Detect bubbles, empty aspiration, blockage and leaks within the relevant sampling or dispensing window. Combine sensor location and liquid properties with pump state; the controller decides whether to stop, retry or flag the specimen."
+          }
+        }
+      }
+    },
+    "immunoassay": {
+      "title": "Chemiluminescence and immunoassay analyzers",
+      "summary": {
+        "zh": "围绕样本加入、多试剂分配、磁珠分离洗涤与检测时序组织液路。",
+        "en": "Coordinate sample addition, multiple reagents, magnetic-particle separation and washing with the assay sequence."
+      },
+      "conditions": [
+        {
+          "zh": "样本/试剂剂量、磁珠状态、反应容器与洗涤时间",
+          "en": "Sample and reagent doses, bead condition, reaction vessel and wash timing"
+        },
+        {
+          "zh": "固相保留、洗后残液与底物路径隔离要求",
+          "en": "Retained solid phase, post-wash residual liquid and substrate-path isolation"
+        }
+      ],
+      "outcome": {
+        "zh": "联合评价试剂交付、洗后残液、磁珠损失及方法背景信号。",
+        "en": "Assess delivered reagents, residual wash liquid, bead loss and assay background together."
+      },
+      "boundary": {
+        "zh": "泵流量不单独证明洗涤充分；磁捕获、混匀和吸液位置需按整站验证。",
+        "en": "Pump flow alone does not establish wash effectiveness; magnetic capture, mixing and aspiration geometry require station-level validation."
+      },
+      "related": [],
+      "modules": {
+        "immunoassay-sample": {
+          "task": "sample",
+          "title": "Sample addition",
+          "description": {
+            "zh": "按免疫方法规定剂量完成样本加入，选择复用针或一次性吸头架构。重点检查样本间污染、接收位置挂滴及小剂量液体类别设置。",
+            "en": "Deliver the assay-specified sample dose using a reusable-probe or disposable-tip architecture. Check cross-sample contamination, retained droplets at the receiver and liquid-class settings at the working dose."
+          }
+        },
+        "immunoassay-reagent": {
+          "task": "dose",
+          "title": "Multiple reagent dispensing",
+          "description": {
+            "zh": "磁珠悬液、标记物、缓冲液和底物具有不同接液和待机要求。分别管理重悬、首剂、补液和路径清洗，避免将微粒试剂视为清水。",
+            "en": "Manage bead suspensions, labels, buffers and substrates as distinct liquids. Define resuspension, first-dose behavior, refill and cleaning for each path rather than treating particle-containing reagents as water."
+          }
+        },
+        "immunoassay-beadWash": {
+          "task": "beadWash",
+          "title": "Magnetic-particle washing",
+          "description": {
+            "zh": "磁捕获后协调洗液加入、混合与吸液，保留有效固相。供液泵、洗头、吸液高度和排废能力共同决定残液与磁珠损失，需以完整洗涤循环评价。",
+            "en": "After magnetic capture, coordinate wash addition, mixing and aspiration while retaining the solid phase. Qualify the supply pump, wash head, aspiration height and drainage together for residual liquid and bead loss."
+          }
+        },
+        "immunoassay-switching": {
+          "task": "switch",
+          "title": "Reagent and wash-path isolation",
+          "description": {
+            "zh": "明确底物、洗液、试剂与废液哪些通道可以共享。切换时核对阀位、置换量和排液去向，避免清洗液或上一步试剂进入下一反应。",
+            "en": "Define which substrate, reagent, wash and waste passages may be shared. Verify valve state, purge and destination so that cleaning liquid or a preceding reagent does not enter the next reaction."
+          }
+        },
+        "immunoassay-monitoring": {
+          "task": "monitor",
+          "title": "Wash and reagent fault monitoring",
+          "description": {
+            "zh": "把供液不足、洗涤吸空、废液满和气泡作为明确故障。根据发生阶段决定补充预充、停止洗涤或废弃当前反应，而不是将传感器正常等同结果有效。",
+            "en": "Define insufficient supply, exposed aspiration, full waste and bubbles as separate faults. The reaction stage determines whether to re-prime, stop washing or reject the reaction; normal sensor output is not proof of a valid assay."
+          }
+        }
+      }
+    },
+    "hematology": {
+      "title": "Hematology analyzers",
+      "summary": {
+        "zh": "区分全血取样、定量稀释/溶血、检测支路与按仪器架构需要的鞘液供给。",
+        "en": "Separate whole-blood aspiration, dilution and lysis, detection branches and sheath-fluid duties required by the instrument architecture."
+      },
+      "conditions": [
+        {
+          "zh": "全血混匀、黏度/凝块、稀释比例与检测架构",
+          "en": "Blood mixing, viscosity and clots, dilution ratios and detection architecture"
+        },
+        {
+          "zh": "试剂剂量、鞘液工作流量与清洗恢复节拍",
+          "en": "Reagent doses, sheath-fluid operating flow and wash-recovery timing"
+        }
+      ],
+      "outcome": {
+        "zh": "按实际全血工况核查取样、比例与通道恢复，并验证连续检测中的供液稳定。",
+        "en": "Verify sampling, ratios and channel recovery with actual blood conditions and evaluate supply stability during repeated measurements."
+      },
+      "boundary": {
+        "zh": "定量稀释与鞘液流量是不同职责；是否需要鞘液取决于具体检测架构。",
+        "en": "Dilution volume and sheath-fluid flow are different duties; sheath use depends on the detection architecture."
+      },
+      "related": [],
+      "modules": {
+        "hematology-sample": {
+          "task": "sample",
+          "title": "Whole-blood aspiration",
+          "description": {
+            "zh": "取样前确认全血混匀状态和容器条件，再设置吸取高度、速度与余量。关注凝块、针口贴壁、黏度变化和取样后冲洗，避免由水的重复性外推全血表现。",
+            "en": "Confirm mixing and container conditions before setting aspiration height, speed and specimen reserve. Evaluate clots, wall sealing, viscosity changes and post-sampling wash rather than extrapolating water-test repeatability."
+          }
+        },
+        "hematology-dilution": {
+          "task": "dilution",
+          "title": "Dilution, lysis and sheath supply",
+          "description": {
+            "zh": "稀释液与溶血剂按方法定量加入，鞘液按检测支路的流量及压力需求供给。分别验证实际比例和流量稳定性，避免以同一剂量程序覆盖两类任务。",
+            "en": "Dose diluent and lysing reagent by method, while sizing sheath supply for the detection branch's flow and pressure. Validate ratios and flow stability separately instead of assigning one dosing program to both."
+          }
+        },
+        "hematology-channel": {
+          "task": "switch",
+          "title": "Detection-channel switching",
+          "description": {
+            "zh": "记录稀释样本去往各检测支路的端口状态、共享体积和冲洗顺序。多端口阀用于路径选择，其端口数不能代替独立检测通道数量或并发能力。",
+            "en": "Record port states, shared volumes and washing as diluted samples enter each detection branch. A multiport selector does not establish the number of independent measurement channels or simultaneous operations."
+          }
+        },
+        "hematology-cleaning": {
+          "task": "wash",
+          "title": "Blood-path washing and waste",
+          "description": {
+            "zh": "按蛋白、细胞和沉积物来源分配洗液、接触时间、浸泡与排废。评价连续样本后的堵塞趋势、残留和重启恢复，不只比较泵的自由流量。",
+            "en": "Match cleaner, contact time, soak and drainage to proteins, cells and deposits. Evaluate blockage trends, residue and restart recovery across repeated samples instead of comparing free-flow ratings alone."
+          }
+        },
+        "hematology-monitoring": {
+          "task": "monitor",
+          "title": "Blood-path fault monitoring",
+          "description": {
+            "zh": "按取样、试剂加入和检测供液阶段建立正常压力与气泡状态。异常阈值需考虑全血黏度和工作模式，明确堵塞、空吸与供液不足后的处置。",
+            "en": "Establish normal pressure and bubble states for sampling, reagent addition and detection supply. Thresholds must reflect blood viscosity and operating mode, with defined responses to blockage, empty aspiration and inadequate supply."
+          }
+        }
+      }
+    },
+    "coagulation": {
+      "title": "Coagulation analyzers",
+      "summary": {
+        "zh": "从试剂真实触液和测量启动时间倒推取样、加液、混合与温控安排。",
+        "en": "Plan sampling, reagent delivery, mixing and temperature control backward from actual liquid contact and measurement start."
+      },
+      "conditions": [
+        {
+          "zh": "方法允许的样本、试剂剂量、反应温度与容器",
+          "en": "Method-approved specimens, reagent doses, reaction temperature and vessel"
+        },
+        {
+          "zh": "试剂到达、混合、测量窗口与可允许的时序偏差",
+          "en": "Reagent arrival, mixing, reading window and permitted timing deviation"
+        }
+      ],
+      "outcome": {
+        "zh": "在反应位置测量实际交付与触发时间，并评估洗后残留对方法的影响。",
+        "en": "Measure delivery and trigger timing at the reaction position and evaluate method-specific wash recovery."
+      },
+      "boundary": {
+        "zh": "泵或阀的响应时间不等于试剂触液或整机测量启动时间。",
+        "en": "Pump or valve response is not the reagent-contact or analyzer-measurement start time."
+      },
+      "related": [],
+      "modules": {
+        "coagulation-sample": {
+          "task": "sample",
+          "title": "Method-specific sample aspiration",
+          "description": {
+            "zh": "按凝血方法要求设置样本类型、吸取位置与残余量。将前处理状态、凝块风险和管路残液纳入交付验证，保持方法规定的样本组成。",
+            "en": "Configure specimen type, aspiration position and reserve volume for the coagulation method. Include preparation state, clot risk and residual path liquid in delivery validation."
+          }
+        },
+        "coagulation-reagent": {
+          "task": "timedDose",
+          "title": "Reagent delivery and reaction trigger",
+          "description": {
+            "zh": "以试剂在反应位置的实际到达为时序基准，分配加液、混合、温控与测量窗口。验证探针运动、输送延迟和补液恢复，不把电机动作完成作为反应起点。",
+            "en": "Use actual reagent arrival at the reaction position to allocate delivery, mixing, temperature control and reading time. Qualify probe motion, transit delay and refill recovery rather than treating motor completion as reaction start."
+          }
+        },
+        "coagulation-switching": {
+          "task": "switch",
+          "title": "Reagent-path switching",
+          "description": {
+            "zh": "不同方法的试剂保持独立的路径、温度和操作顺序。切换后核查共享段置换、等待时间与恢复后的首剂，再启动下一反应。",
+            "en": "Maintain method-specific reagent paths, temperatures and sequencing. Check purge, dwell and the first recovered dose before starting the next reaction."
+          }
+        },
+        "coagulation-cleaning": {
+          "task": "wash",
+          "title": "Reusable-path washing",
+          "description": {
+            "zh": "针对具体试剂的交叉影响确定洗液、时长和排空流程。评价洗后残液与下一反应，必要时设置专用路径或耗材，而不是统一增加清洗次数。",
+            "en": "Select cleaner, duration and emptying for reagent-specific cross-effects. Evaluate the next reaction after washing and use dedicated paths or consumables where needed."
+          }
+        },
+        "coagulation-monitoring": {
+          "task": "monitor",
+          "title": "Reaction-delivery fault handling",
+          "description": {
+            "zh": "空吸、漏液或堵塞可能改变实际剂量及反应触发。将传感器信号与当前加液阶段关联，由控制器中止、重做或标记反应，保留时序记录。",
+            "en": "Empty aspiration, leakage or blockage can change both dose and reaction timing. Associate sensor signals with the current delivery stage, then stop, repeat or flag the reaction while retaining timing records."
+          }
+        }
+      }
+    },
+    "molecular": {
+      "title": "Molecular diagnostics and PCR preparation",
+      "summary": {
+        "zh": "区分核酸提取、洗脱回收与扩增配液的操作阶段和污染边界。",
+        "en": "Separate extraction, eluate recovery and amplification setup by processing stage and contamination boundary."
+      },
+      "conditions": [
+        {
+          "zh": "样本量、裂解/结合介质、磁珠与洗脱体积",
+          "en": "Sample amount, lysis and binding media, beads and elution volume"
+        },
+        {
+          "zh": "提取前后分区、吸头/固定通路及下游质量要求",
+          "en": "Pre- and post-extraction separation, tip or fixed-path architecture and downstream quality requirements"
+        }
+      ],
+      "outcome": {
+        "zh": "核查回收体积、核酸产物可用性与样本间污染，保持洗液和废液隔离。",
+        "en": "Verify recovered volume, downstream usability and cross-sample contamination while isolating wash and waste."
+      },
+      "boundary": {
+        "zh": "阀切换或低死体积本身不能证明提取后产物和扩增配液的污染隔离。",
+        "en": "Valve switching or low dead volume alone does not establish contamination isolation for eluate or amplification setup."
+      },
+      "related": [],
+      "modules": {
+        "molecular-lysis": {
+          "task": "dose",
+          "title": "Lysis and binding-liquid addition",
+          "description": {
+            "zh": "分别管理裂解液、结合液和磁珠的剂量、材料与混匀。固定液路或一次性吸头需按样本污染、配方和实际工作量选择，关注闲置后首剂及微粒状态。",
+            "en": "Manage lysis liquid, binding liquid and beads by dose, materials and mixing. Select fixed paths or disposable tips from contamination, formulation and working-volume requirements, including first-dose and particle behavior."
+          }
+        },
+        "molecular-wash": {
+          "task": "beadWash",
+          "title": "Washing, elution and recovery",
+          "description": {
+            "zh": "洗涤、残余洗液去除、洗脱与产物转移分阶段执行。评价最终体积、回收、洗液残留与下游抑制风险，洗脱产物通道与废液去向明确隔离。",
+            "en": "Separate washing, residual-wash removal, elution and product transfer. Evaluate final volume, recovery, residual wash and downstream inhibition, with distinct eluate and waste destinations."
+          }
+        },
+        "molecular-switching": {
+          "task": "switch",
+          "title": "Extraction and amplification-path separation",
+          "description": {
+            "zh": "按提取前、提取后及扩增配液区域安排路径与耗材。共享段需定义置换和清洁验证，产品回收与污染较高样本路径分别管理。",
+            "en": "Assign paths and consumables to pre-extraction, post-extraction and amplification setup. Define purge and cleaning validation for shared segments and separate product recovery from heavily contaminated sample paths."
+          }
+        },
+        "molecular-connection": {
+          "task": "connect",
+          "title": "Sample, eluate and waste connections",
+          "description": {
+            "zh": "围绕样本、试剂、洗脱产物和废液确认连接材料、体积与更换方法。安装后检查误接、泄漏和产物损失，连接几何与耗材策略共同参与污染控制。",
+            "en": "Specify materials, volume and replacement for sample, reagent, eluate and waste connections. Check misconnection, leakage and product loss after assembly; geometry and consumable policy both contribute to contamination control."
+          }
+        },
+        "molecular-monitoring": {
+          "task": "monitor",
+          "title": "Extraction-cycle fault monitoring",
+          "description": {
+            "zh": "识别空吸、磁珠或沉淀堵塞、洗液不足及排废异常，并记录故障发生阶段。液路状态用于流程控制，核酸质量和PCR可用性由下游方法评价。",
+            "en": "Detect empty aspiration, bead or precipitate blockage, insufficient wash and drainage faults at the relevant stage. Fluid-state signals support process control; downstream methods evaluate nucleic-acid quality and PCR usability."
+          }
+        }
+      }
+    }
+  },
+  "life-science": {
+    "genomics": {
+      "title": "Genomics and nucleic-acid preparation",
+      "summary": {
+        "zh": "按提取、洗涤、洗脱与转移阶段组织核酸前处理，以最终产物回收和下游可用性评价液路。",
+        "en": "Organize extraction, washing, elution and transfer around recovered nucleic acid and downstream usability."
+      },
+      "conditions": [
+        {
+          "zh": "样本、裂解/结合液、磁珠及各步骤工作量",
+          "en": "Sample, lysis and binding liquids, beads and working volumes"
+        },
+        {
+          "zh": "洗脱容器、接液材料、残余洗液和下游实验",
+          "en": "Eluate receiver, wetted materials, residual wash and downstream experiment"
+        }
+      ],
+      "outcome": {
+        "zh": "记录产物体积、回收及下游使用结果，并核查样本间污染。",
+        "en": "Record product volume, recovery and downstream usability together with cross-sample contamination."
+      },
+      "boundary": {
+        "zh": "提取与建库配液具有不同污染和结果要求；研究流程与临床诊断方法分别确认。",
+        "en": "Extraction and library setup have different contamination and result requirements; research and clinical methods require separate confirmation."
+      },
+      "related": [],
+      "modules": {
+        "samplePrep": {
+          "task": "dose",
+          "title": "Extraction preparation",
+          "description": {
+            "zh": "在裂解、结合或建库前处理阶段分别确认样本与试剂。按黏度、微粒、剂量和混合需要配置泵/吸头，并说明产物进入后续哪一步。",
+            "en": "Define sample and reagent duties separately for lysis, binding or library preparation. Configure pump or tips from viscosity, particles, dose and mixing, identifying the next destination of the product."
+          }
+        },
+        "washElution": {
+          "task": "beadWash",
+          "title": "Washing and eluate recovery",
+          "description": {
+            "zh": "将磁珠洗涤、残余洗液去除、洗脱加液与产物收集分开。实际回收需包含针、管路、容器和吸液高度，不以泵的指令体积代替最终产物体积。",
+            "en": "Separate bead washing, residual-wash removal, elution and collection. Include probe, tubing, receiver and aspiration height when evaluating recovery instead of substituting commanded volume for collected product."
+          }
+        },
+        "switching": {
+          "task": "switch",
+          "title": "Extraction-path switching",
+          "description": {
+            "zh": "为裂解、结合、清洗、洗脱和废液建立操作状态表。共享段先置换，产物通道避免回流与清洗液误入，并按实验目的评价污染。",
+            "en": "Build a state table for lysis, binding, wash, elution and waste. Purge shared segments, prevent backflow or wash entry into the product path and evaluate contamination against the experiment."
+          }
+        },
+        "connection": {
+          "task": "connect",
+          "title": "Low-retention product connections",
+          "description": {
+            "zh": "结合核酸、容器和整个流程评价吸附与残液。选择管内径、材料、接头几何和更换方式，测量经过完整液路后的产物回收。",
+            "en": "Evaluate adsorption and retained liquid for the nucleic acid, receiver and complete process. Select bore, material, fitting geometry and replacement policy, then measure product recovery through the assembled path."
+          }
+        }
+      }
+    },
+    "cellCulture": {
+      "title": "Cell culture and cell processing",
+      "summary": {
+        "zh": "将培养基补液、细胞悬液转移与状态监测连接到细胞回收、状态和过程污染控制。",
+        "en": "Connect medium supply, cell-suspension transfer and fluid monitoring to cell recovery, condition and process-contamination control."
+      },
+      "conditions": [
+        {
+          "zh": "细胞类型/密度、介质黏度、转移量与温度",
+          "en": "Cell type and density, liquid viscosity, transfer amount and temperature"
+        },
+        {
+          "zh": "管路通径、压差、停留时间及清洁/灭菌策略",
+          "en": "Path bore, pressure difference, residence time and cleaning or sterilization strategy"
+        }
+      ],
+      "outcome": {
+        "zh": "比较转移前后的活率、回收与状态，并验证所需污染边界。",
+        "en": "Compare viability, recovery and condition before and after transfer and validate the required contamination boundary."
+      },
+      "boundary": {
+        "zh": "低剪切和无菌是整条路径的验证目标，不能由隔膜泵或夹管阀单独证明。",
+        "en": "Low shear and sterility are full-path validation goals, not properties established by a diaphragm pump or pinch valve alone."
+      },
+      "related": [],
+      "modules": {
+        "media": {
+          "task": "feeding",
+          "title": "Medium and additive supply",
+          "description": {
+            "zh": "区分单次补液、周期加液与持续供给。按培养基、缓冲液和添加液的组成、温度、剂量及运行周期确认接液材料、补液和连接方法。",
+            "en": "Separate single additions, periodic dosing and sustained supply. Confirm materials, refill and connections for the medium, buffers and additives at their actual composition, temperature, dose and run duration."
+          }
+        },
+        "transfer": {
+          "task": "cellTransfer",
+          "title": "Cell-suspension transfer",
+          "description": {
+            "zh": "细胞悬液通过管路时，通径、流速、压差与停留时间共同影响过程。比较候选输送方式，并用转移前后细胞活率和回收结果确认适用性。",
+            "en": "Bore, velocity, pressure difference and residence time jointly affect cell-suspension transfer. Compare candidate transport architectures and establish suitability from before-and-after viability and recovery."
+          }
+        },
+        "monitoring": {
+          "task": "monitor",
+          "title": "Culture-path monitoring",
+          "description": {
+            "zh": "监测补液、转移和排废支路的气泡、压力及供液状态。先定义可接受波动和停止条件，再选择位置与控制逻辑；细胞状态需独立评价。",
+            "en": "Monitor bubbles, pressure and supply state in medium, transfer and waste branches. Define acceptable excursions and stop conditions before choosing location and logic; evaluate cell condition separately."
+          }
+        }
+      }
+    },
+    "automation": {
+      "title": "Life-science automation workflows",
+      "summary": {
+        "zh": "本入口解释核酸、细胞和蛋白实验对自动化平台的要求，平台架构与调度详见实验室自动化。",
+        "en": "This entry describes nucleic-acid, cell and protein requirements for automated platforms; platform architecture and scheduling are covered in laboratory automation."
+      },
+      "conditions": [
+        {
+          "zh": "实验介质、实际剂量、容器与下游结果要求",
+          "en": "Experimental liquids, working doses, receivers and downstream requirements"
+        },
+        {
+          "zh": "固定针/吸头架构、工位、清洗与样本追溯",
+          "en": "Reusable probe or tip architecture, stations, cleaning and sample tracking"
+        }
+      ],
+      "outcome": {
+        "zh": "同时检查液体交付、工位操作与实验产物，不把平台节拍当作实验成功证明。",
+        "en": "Check delivery, station operations and experimental products together; throughput is not proof of experimental success."
+      },
+      "boundary": {
+        "zh": "通用平台内容在实验室自动化维护，生命科学保留实验结果和污染要求。",
+        "en": "Generic platform guidance belongs to laboratory automation; life science retains experimental-result and contamination requirements."
+      },
+      "related": [
+        {
+          "label": {
+            "zh": "查看实验室自动化平台任务",
+            "en": "Explore laboratory-automation platform tasks"
+          },
+          "href": "/applications/lab-automation/"
+        }
+      ],
+      "modules": {
+        "pipetting": {
+          "task": "pipette",
+          "title": "Sample and reagent handling",
+          "description": {
+            "zh": "按实验液体类别选择固定针液体置换或一次性吸头空气置换。将样本/试剂剂量、吸头密封、浸入与接收位置一起验证，连接后续分子或细胞实验。",
+            "en": "Choose liquid-displacement probes or air-displacement disposable tips by experimental liquid class. Validate dose, tip sealing, immersion and receiver position together with downstream molecular or cell workflows."
+          }
+        },
+        "washing": {
+          "task": "wash",
+          "title": "Experimental-path washing and waste",
+          "description": {
+            "zh": "按照分子污染、细胞残留或蛋白吸附来源设置清洗。供液与含气排废分别评估，清洗后用下一样本或空白确认恢复。",
+            "en": "Design washing for molecular contamination, cell residue or protein adsorption. Evaluate liquid supply and mixed-air waste separately, then check recovery using the next specimen or blank."
+          }
+        },
+        "connection": {
+          "task": "connect",
+          "title": "Automation-module connections",
+          "description": {
+            "zh": "连接泵阀、取样机构与多工位时，记录接液范围、路径体积和样本身份。拆装后完成密封、预充及液量复核，再恢复实验。",
+            "en": "Record contact surfaces, path volume and sample identity when connecting pumps, valves and multiple stations. After servicing, check sealing, prime and verify delivery before resuming the experiment."
+          }
+        }
+      }
+    },
+    "protein": {
+      "title": "Protein and antibody handling",
+      "summary": {
+        "zh": "以蛋白/抗体回收、空白和缓冲液切换解释液路，按具体分离或分析方法划分压力区域。",
+        "en": "Explain protein and antibody paths through recovery, blanks and buffer switching, defining pressure zones for the separation or analytical method."
+      },
+      "conditions": [
+        {
+          "zh": "蛋白浓度、配方、吸附/聚集敏感性和工作量",
+          "en": "Protein concentration, formulation, adsorption or aggregation sensitivity and dose"
+        },
+        {
+          "zh": "缓冲液组成、实际压力、接液材料与清洗",
+          "en": "Buffer composition, actual pressure, wetted materials and cleaning"
+        }
+      ],
+      "outcome": {
+        "zh": "比较完整液路前后的回收和空白，核查缓冲液切换后的响应。",
+        "en": "Compare recovery and blank response across the complete path and after buffer changes."
+      },
+      "boundary": {
+        "zh": "材料名称不能单独证明低吸附；样品准备、上样与受压分离支路需分别确认。",
+        "en": "Material names do not establish low adsorption; preparation, loading and pressurized separation branches require separate confirmation."
+      },
+      "related": [],
+      "modules": {
+        "sample": {
+          "task": "sample",
+          "title": "Protein-sample transfer",
+          "description": {
+            "zh": "按蛋白浓度、配方和容器确认取样与转移。除了体积交付，还需评价接液表面吸附、聚集和完整路径的回收，避免以水的计量表现代替蛋白结果。",
+            "en": "Confirm sampling and transfer for the protein concentration, formulation and receiver. Evaluate surface adsorption, aggregation and full-path recovery in addition to volume delivery."
+          }
+        },
+        "buffer": {
+          "task": "switch",
+          "title": "Buffer and eluent selection",
+          "description": {
+            "zh": "明确缓冲液切换位于配制、上样还是分离支路。按端口压力、介质与共享段体积选择阀路，验证置换后的组成与残留。",
+            "en": "Identify whether buffer switching serves preparation, loading or separation. Select the valve path from port pressure, liquid and shared volume, then verify composition and residue after exchange."
+          }
+        },
+        "monitoring": {
+          "task": "monitor",
+          "title": "Protein-path diagnostics",
+          "description": {
+            "zh": "利用压力、气泡和堵塞趋势识别供样或缓冲液异常。判定窗口应结合阀状态和液体性质，最终蛋白回收与分析结果仍由方法评价。",
+            "en": "Use pressure, bubbles and blockage trends to diagnose sample or buffer faults. Interpret them against valve state and liquid properties; the method still evaluates protein recovery and analytical results."
+          }
+        }
+      }
+    },
+    "bioProcess": {
+      "title": "Bioprocess workflow entry",
+      "summary": {
+        "zh": "从生命科学实验进入补料、在线取样和维护任务，完整长周期工艺内容连接合成生物。",
+        "en": "Enter feeding, online sampling and maintenance from the life-science experiment; detailed long-run process guidance is covered in synthetic biology."
+      },
+      "conditions": [
+        {
+          "zh": "培养/实验目的、补料介质、周期与采样去向",
+          "en": "Culture or experimental purpose, feed liquids, duration and sample destination"
+        },
+        {
+          "zh": "累计加液、污染边界、反应容器体积与恢复",
+          "en": "Cumulative additions, contamination boundaries, vessel balance and recovery"
+        }
+      ],
+      "outcome": {
+        "zh": "连接培养过程、实际补料与样本分析，保留整个运行周期的记录。",
+        "en": "Relate culture behavior, actual additions and sample analysis with records across the run."
+      },
+      "boundary": {
+        "zh": "周期加液、连续补料与无菌取样各有条件，不能从单次计量直接外推。",
+        "en": "Periodic dosing, continuous feeding and aseptic sampling each have specific conditions; a single dosing result cannot establish all three."
+      },
+      "related": [
+        {
+          "label": {
+            "zh": "查看合成生物补料与在线取样",
+            "en": "Explore synthetic-biology feeding and sampling"
+          },
+          "href": "/applications/synthetic-biology/"
+        }
+      ],
+      "modules": {
+        "feeding": {
+          "task": "feeding",
+          "title": "Bioprocess additions",
+          "description": {
+            "zh": "确认培养基、诱导剂、碳源或缓冲液的使用目的及工作模式。按累计体积、补液中断和实际介质选择候选，长周期控制详见合成生物补料任务。",
+            "en": "Define the purpose and operating mode for medium, inducer, carbon source or buffer. Select candidates from cumulative volume, refill interruptions and actual liquids; see synthetic-biology feeding guidance for long-run control."
+          }
+        },
+        "sampling": {
+          "task": "onlineSample",
+          "title": "Process-sample transfer",
+          "description": {
+            "zh": "明确在线样本测定什么、送到哪里及是否允许弃样。以代表性、路径滞留、污染和反应器体积扰动评价取样，连接生物工艺主任务。",
+            "en": "Define the analyte, destination and permitted discard volume. Evaluate representativeness, path hold-up, contamination and reactor-volume disturbance with the main process-sampling guidance."
+          }
+        },
+        "waste": {
+          "task": "wash",
+          "title": "Bioprocess washing and waste",
+          "description": {
+            "zh": "按介质、菌体/细胞状态和维护计划区分清洗供液、纯液排液及含气抽吸。恢复运行前核查密封、预充和污染边界。",
+            "en": "Distinguish wash supply, flooded-liquid drainage and mixed-air aspiration by medium, cells and maintenance plan. Check sealing, prime and contamination boundaries before recovery."
+          }
+        }
+      }
+    }
+  },
+  "lab-automation": {
+    "samplePrep": {
+      "title": "Sample-preparation workstations",
+      "summary": {
+        "zh": "以工位、容器、液体类别和资源调度组织样本准备，分析或生物结果回链具体方法。",
+        "en": "Organize preparation around stations, containers, liquid classes and shared resources, linking analytical or biological results to the method."
+      },
+      "conditions": [
+        {
+          "zh": "实际剂量、液体类别、固定针/吸头及容器",
+          "en": "Working doses, liquid classes, reusable probe or tips and containers"
+        },
+        {
+          "zh": "工位顺序、共享通路、预充/清洗和恢复",
+          "en": "Station sequence, shared paths, priming, washing and recovery"
+        }
+      ],
+      "outcome": {
+        "zh": "同时检验工作量、跨工位节拍、样本身份与恢复后首轮操作。",
+        "en": "Verify working doses, inter-station timing, sample identity and the first cycle after recovery."
+      },
+      "boundary": {
+        "zh": "平台操作的成功不代替核酸、细胞或分析方法的结果评价。",
+        "en": "Successful platform operation does not substitute for nucleic-acid, cell or analytical-result validation."
+      },
+      "related": [],
+      "modules": {
+        "pipetting": {
+          "task": "pipette",
+          "title": "Sample transfer",
+          "description": {
+            "zh": "比较固定针液体置换与一次性吸头空气置换。吸头密封、浸入深度、空气间隔、速度及接收位置与泵程序共同确定实际移液。",
+            "en": "Compare liquid-displacement probes with air-displacement disposable tips. Tip sealing, immersion, air gaps, speed and receiver position jointly determine delivery with the pump program."
+          }
+        },
+        "washing": {
+          "task": "beadWash",
+          "title": "Wash and elution operations",
+          "description": {
+            "zh": "协调不同工位的洗液、吸液、洗脱和废液资源。保留产物与废液去向，按方法结果核查残液和回收，同时计入预充和清洗节拍。",
+            "en": "Coordinate wash, aspiration, elution and waste resources across stations. Keep product and waste destinations distinct, checking residual liquid and recovery while accounting for prime and wash time."
+          }
+        },
+        "switching": {
+          "task": "switch",
+          "title": "Shared-path selection",
+          "description": {
+            "zh": "按试剂、工位和废液去向建立状态表。共享泵或阀的占用、排队、置换和互锁纳入调度，避免并发操作抢占液路。",
+            "en": "Build states for reagent, station and waste destinations. Include pump or valve occupancy, queuing, purge and interlocks so concurrent operations cannot seize the same fluid path."
+          }
+        },
+        "connection": {
+          "task": "connect",
+          "title": "Workstation tubing connections",
+          "description": {
+            "zh": "管路装配记录长度、内径、接液材料和模块身份。维护或更换后核对连接、预充和交付量，按路径体积恢复平台操作。",
+            "en": "Record length, ID, materials and module identity during assembly. After service or replacement, verify connections, prime and delivery to restore operations for the installed path volume."
+          }
+        }
+      }
+    },
+    "pipetting": {
+      "title": "Automated pipetting platforms",
+      "summary": {
+        "zh": "将液体类别、针/吸头、运动和泵程序作为一次完整移液操作设计。",
+        "en": "Design liquid class, probe or tip, motion and pump program as one pipetting operation."
+      },
+      "conditions": [
+        {
+          "zh": "目标体积、吸头/针、浸入和接收几何",
+          "en": "Target volume, tip or probe, immersion and receiver geometry"
+        },
+        {
+          "zh": "吸排速度、空气间隔、通道校准与首末剂",
+          "en": "Aspiration and dispense speeds, air gaps, channel calibration and first/last doses"
+        }
+      ],
+      "outcome": {
+        "zh": "在实际液体、吸头与板位下测量交付，并覆盖闲置、补液和多次分配。",
+        "en": "Measure delivery with the actual liquid, tips and positions, covering idle, refill and repeated aliquots."
+      },
+      "boundary": {
+        "zh": "标称容量和每步液量不是最小可靠移液量；一次性吸头与复用针清洗策略不同。",
+        "en": "Capacity and volume per step are not minimum reliable pipetting doses; disposable tips and reusable probes use different contamination strategies."
+      },
+      "related": [],
+      "modules": {
+        "pipetting": {
+          "task": "pipette",
+          "title": "Small-volume pipetting",
+          "description": {
+            "zh": "固定针可评估注射/柱塞计量，一次性吸头可评估SMTP空气置换配置。按液体类别设置吸排、空气间隔和触液动作，验证实际液量与吸头密封。",
+            "en": "Evaluate syringe or piston metering for reusable probes and SMTP air-displacement configurations for disposable tips. Set aspiration, dispense, air gaps and liquid contact by liquid class and verify dose and tip seal."
+          }
+        },
+        "dispensing": {
+          "task": "dose",
+          "title": "Repeated aliquot dispensing",
+          "description": {
+            "zh": "一次吸取多次分配需预留首剂、末剂和剩余量，记录每个通道与接收位置。容量及补液时点以循环总量和节拍确定，验证各剂实际交付。",
+            "en": "Repeated aliquots from one aspiration require defined first and last doses and reserve volume. Record each channel and receiver, choosing capacity and refill timing from the full cycle."
+          }
+        },
+        "needleWash": {
+          "task": "wash",
+          "title": "Reusable-probe washing",
+          "description": {
+            "zh": "复用针同时处理针内和针外接液表面，确认洗液、覆盖、接触时间及排废。一次性吸头则按换头、耗材与弃头策略控制污染，不套用针洗流程。",
+            "en": "Wash internal and external wetted surfaces of reusable probes using defined cleaner, coverage, contact time and drainage. Disposable tips require tip-change and disposal policies rather than a probe-wash sequence."
+          }
+        }
+      }
+    },
+    "microplate": {
+      "title": "Microplate dispensing and washing",
+      "summary": {
+        "zh": "把多孔位交付、洗头、供液与排废作为一个工作站验证，而非只比较泵通道数。",
+        "en": "Validate well delivery, wash head, supply and drainage as one station rather than comparing pump channel count alone."
+      },
+      "conditions": [
+        {
+          "zh": "板型、孔位顺序、剂量及独立通道数量",
+          "en": "Plate format, well order, dose and independent channel count"
+        },
+        {
+          "zh": "歧管阻力、吸液高度、残液/固相和并发节拍",
+          "en": "Manifold resistance, aspiration height, residual liquid or solid phase and concurrency"
+        }
+      ],
+      "outcome": {
+        "zh": "评价孔间交付差异、洗后残液和完整板循环，并保留板位身份。",
+        "en": "Evaluate well-to-well delivery, post-wash residue and the full plate cycle while tracking well identity."
+      },
+      "boundary": {
+        "zh": "多端口选择不等于独立多通道同步；洗板充分性需联合验证液体与保留固相。",
+        "en": "Multiport selection is not independent simultaneous dispensing; plate washing requires joint validation of liquid exchange and retained solid phase."
+      },
+      "related": [],
+      "modules": {
+        "plateDispensing": {
+          "task": "plateDose",
+          "title": "Well dispensing",
+          "description": {
+            "zh": "按项目板型与孔位规划顺序、独立通道和接收高度。验证每孔实际液量、首末孔和并发供液差异，不能将阀端口数作为同步能力。",
+            "en": "Plan order, independent channels and dispense height for the plate format. Verify each well, the first and last positions and concurrent supply; valve port count does not establish synchronization."
+          }
+        },
+        "plateWash": {
+          "task": "beadWash",
+          "title": "Plate washing and aspiration",
+          "description": {
+            "zh": "供液、洗头和吸液高度共同控制残液、泡沫与保留固相。把每次洗涤来液和吸入空气计入排废工作点，验证完整板上的孔间差异。",
+            "en": "Supply, head geometry and aspiration height jointly control residue, foam and retained solid phase. Include wash pulses and aspirated air in drainage sizing and assess differences across the whole plate."
+          }
+        },
+        "connection": {
+          "task": "connect",
+          "title": "Wash-head and manifold connections",
+          "description": {
+            "zh": "按支路长度、内径、接头与歧管体积评估流量分配和空吸。装配后检查密封、堵孔、冲洗与维护可达性，再测孔间表现。",
+            "en": "Evaluate distribution and exposed aspiration from branch length, ID, fittings and manifold volume. Check sealing, blocked openings, flushing and service access before comparing wells."
+          }
+        }
+      }
+    },
+    "reagentDispensing": {
+      "title": "Reagent filling and distribution",
+      "summary": {
+        "zh": "按单剂量、批次数、补液与工作模式比较分装候选，介质兼容和首末剂共同决定方案。",
+        "en": "Compare filling candidates by dose, batch count, refill and operating mode, including compatibility and first/last doses."
+      },
+      "conditions": [
+        {
+          "zh": "每剂量、次数、周期总量和接收容器",
+          "en": "Dose, event count, cycle total and receiver"
+        },
+        {
+          "zh": "配方、温度、背压、待机及补液间隔",
+          "en": "Formulation, temperature, backpressure, idle and refill intervals"
+        }
+      ],
+      "outcome": {
+        "zh": "覆盖批次首中末剂、换瓶恢复及实际介质长时运行。",
+        "en": "Cover first, middle and last doses, bottle-change recovery and long runs with the actual liquid."
+      },
+      "boundary": {
+        "zh": "重复定量与连续供给是不同模式；无阀计量也需实际介质和工作点验证。",
+        "en": "Repeated dosing and continuous supply are different modes; valveless metering also requires actual-liquid and operating-point validation."
+      },
+      "related": [],
+      "modules": {
+        "dispensing": {
+          "task": "repeatDose",
+          "title": "Repeated filling",
+          "description": {
+            "zh": "按每剂量、循环总量和补液间隔比较有限行程计量与适用的RPL/DRPL方案。分别评价首末剂、停机后恢复及真实背压下的输出。",
+            "en": "Compare finite-stroke metering with suitable RPL/DRPL configurations using dose, cycle total and refill timing. Assess first/last doses, restart and output at actual backpressure."
+          }
+        },
+        "compatibility": {
+          "task": "compatibility",
+          "title": "Liquid and material compatibility",
+          "description": {
+            "zh": "实际配方、浓度、温度和接触时间决定泵头、密封与管材选择。将挥发、结晶、黏度变化和停机冲洗纳入测试，避免按单一材料名推断兼容。",
+            "en": "Formulation, concentration, temperature and contact duration determine pump head, seals and tubing. Test evaporation, crystallization, viscosity changes and shutdown flushing rather than inferring compatibility from a material name."
+          }
+        },
+        "monitoring": {
+          "task": "monitor",
+          "title": "Fill-cycle monitoring",
+          "description": {
+            "zh": "识别空瓶、气泡与背压变化，并记录当前剂次和补液状态。恢复后核查首剂及接收量，传感器正常不代替分装体积测量。",
+            "en": "Detect empty source, bubbles and changing backpressure while recording aliquot and refill state. Verify the first recovered dose and receiver volume; normal sensors do not replace volume measurement."
+          }
+        }
+      }
+    },
+    "systemIntegration": {
+      "title": "Automation-system integration",
+      "summary": {
+        "zh": "用资源状态、并发互锁、模块身份和恢复流程连接机器人与液路。",
+        "en": "Connect robotics and fluidics through resource states, concurrency interlocks, module identity and recovery."
+      },
+      "conditions": [
+        {
+          "zh": "工位/板位身份、并行任务与共享泵阀资源",
+          "en": "Station and well identity, concurrent tasks and shared pumps or valves"
+        },
+        {
+          "zh": "通信、连接、预充、故障中断与恢复策略",
+          "en": "Communication, connections, prime, interruption and recovery strategy"
+        }
+      ],
+      "outcome": {
+        "zh": "验证并发、中断恢复和记录追溯，避免样本错位或重复加液。",
+        "en": "Validate concurrency, interrupted-cycle recovery and traceability to prevent misidentification or duplicate delivery."
+      },
+      "boundary": {
+        "zh": "模块可连接不等于即插即用完成；恢复动作必须与当前液体和样本状态一致。",
+        "en": "Connectable modules are not automatically plug-and-play; recovery must reflect the current liquid and specimen state."
+      },
+      "related": [],
+      "modules": {
+        "pathManagement": {
+          "task": "integration",
+          "title": "Fluid-resource scheduling",
+          "description": {
+            "zh": "为泵阀、工位和废液分配资源状态、互锁与任务顺序。记录中断时液体去向和当前样本，明确可重试步骤，避免重复加液。",
+            "en": "Assign states, interlocks and sequencing to pumps, valves, stations and waste. Record liquid destination and specimen at interruption, identifying safe retries without duplicate dosing."
+          }
+        },
+        "moduleConnection": {
+          "task": "connect",
+          "title": "Module identification and connection",
+          "description": {
+            "zh": "将通信接口、模块身份和液路连接一起确认。更换模块后检查方向、密封、预充及工作参数，再释放到自动运行。",
+            "en": "Confirm communication, module identity and fluid connections together. After replacement, check direction, sealing, prime and operating parameters before releasing automatic operation."
+          }
+        },
+        "monitoring": {
+          "task": "monitor",
+          "title": "Fault feedback and recovery",
+          "description": {
+            "zh": "报警需要关联样本/板位、操作阶段和已交付液量。依据故障设计停止、重试、弃样或人工恢复，并保留追溯记录。",
+            "en": "Associate alarms with sample or well, operation stage and delivered liquid. Define stop, retry, rejection or manual recovery and preserve traceable records."
+          }
+        }
+      }
+    }
+  },
+  "analytical-instruments": {
+    "chromatography": {
+      "title": "Chromatography and autosamplers",
+      "summary": {
+        "zh": "分开样本计量、定量环装载、高压进样、针洗和方法需要的柱后试剂支路。",
+        "en": "Separate sample metering, loop loading, high-pressure injection, needle washing and method-specific post-column reagent duties."
+      },
+      "conditions": [
+        {
+          "zh": "进样模式、阀状态、泵实际受压与目标注入量",
+          "en": "Injection mode, valve states, pump pressure exposure and target injected volume"
+        },
+        {
+          "zh": "样本/洗液组成、共享体积、清洗及检测响应",
+          "en": "Sample and cleaner, shared volume, washing and detector response"
+        }
+      ],
+      "outcome": {
+        "zh": "评价实际注入量、重复性、高低浓度残留和阀状态压力边界。",
+        "en": "Evaluate injected volume, repeatability, high-to-low carryover and pressure exposure in each valve state."
+      },
+      "boundary": {
+        "zh": "计量装置不一定处于低压区；低压候选需确认隔离，不能作为HPLC/UHPLC高压主泵替代。",
+        "en": "The metering device is not necessarily in a low-pressure zone; low-pressure candidates require confirmed isolation and do not replace HPLC/UHPLC high-pressure mobile-phase pumps."
+      },
+      "related": [
+        {
+          "label": {
+            "zh": "液相色谱任务详解（英文）",
+            "en": "Detailed liquid-chromatography task guides"
+          },
+          "href": "/en/applications/analytical-instruments/liquid-chromatography/"
+        }
+      ],
+      "modules": {
+        "injection": {
+          "task": "sample",
+          "title": "Sample metering and loop loading",
+          "description": {
+            "zh": "区分样本吸取、满环/部分环装载与真正注入。推动或抽取架构、针与定量环体积、阀状态决定计量装置实际受压及所需过量装载。",
+            "en": "Distinguish aspiration, full- or partial-loop loading and actual injection. Push/pull architecture, probe and loop volume and valve state determine pressure exposure and excess loading requirements."
+          }
+        },
+        "solvent": {
+          "task": "switch",
+          "title": "Solvent and wash-path selection",
+          "description": {
+            "zh": "先确认切换发生在低压清洗/试剂源还是高压分析流路。按每个状态的端口连接和压力选择普通多通阀或适用高压阀，并验证共享段置换。",
+            "en": "Identify whether switching serves low-pressure wash/reagent sources or the pressurized analytical path. Select a multiport or appropriate high-pressure valve from port connections and pressure in every state."
+          }
+        },
+        "wash": {
+          "task": "wash",
+          "title": "Needle-wash supply and drainage",
+          "description": {
+            "zh": "洗液供给与含空气废液抽吸分别选型。按安装阻力、洗液体积、接触时间及排废峰值配置，并以残留序列验证清洗；柱后加液仅在方法需要时另设支路。",
+            "en": "Select wash supply and air-containing waste aspiration separately using installed resistance, wash volume, contact time and drainage peaks. Validate carryover; post-column dosing is a separate branch only when the method needs it."
+          }
+        },
+        "connection": {
+          "task": "connect",
+          "title": "Injection-path connections",
+          "description": {
+            "zh": "核查针、阀、定量环和接头的扫掠体积、间隙及压力。小体积连接需要在实际进样模式下评价残液与峰形，不只比较螺纹或材料名称。",
+            "en": "Check swept volumes, gaps and pressure across probe, valve, loop and fittings. Evaluate residue and peak behavior in the actual injection mode rather than selecting by threads or material alone."
+          }
+        }
+      }
+    },
+    "spectroscopy": {
+      "title": "Spectroscopy and elemental analysis",
+      "summary": {
+        "zh": "针对液体样品元素分析，区分标准/稀释准备、换样冲洗与仪器样品引入。",
+        "en": "For liquid-sample elemental analysis, distinguish standard and dilution preparation, changeover rinsing and instrument sample introduction."
+      },
+      "conditions": [
+        {
+          "zh": "分析方法、酸/基体、样品预算与稀释比例",
+          "en": "Method, acid or matrix, sample budget and dilution ratio"
+        },
+        {
+          "zh": "引入架构、实际流量/压力、空白与恢复时间",
+          "en": "Introduction architecture, actual flow and pressure, blank and recovery time"
+        }
+      ],
+      "outcome": {
+        "zh": "核查浓度比例、混合、空白恢复及方法结果，分别评价准备与供样。",
+        "en": "Verify concentration ratios, mixing, blank recovery and method results separately for preparation and sample introduction."
+      },
+      "boundary": {
+        "zh": "样品准备泵不自动适合作为雾化器供样泵；引入系统按具体仪器确认。",
+        "en": "A preparation pump is not automatically suitable for nebulizer supply; confirm the instrument's introduction system."
+      },
+      "related": [],
+      "modules": {
+        "sampling": {
+          "task": "sample",
+          "title": "Liquid-sample transfer",
+          "description": {
+            "zh": "先定义样品进入稀释容器还是仪器引入端。按酸、盐基体、颗粒、流量和入口压力评估候选，确认样品预算与换样后的空白恢复。",
+            "en": "Define whether sample enters a dilution receiver or instrument introduction inlet. Evaluate acid, salts, particles, flow and inlet pressure, then confirm sample budget and blank recovery."
+          }
+        },
+        "reagent": {
+          "task": "dilution",
+          "title": "Standards and auxiliary reagents",
+          "description": {
+            "zh": "标准配制、超量程稀释、内标和连续辅助试剂各自安排路径。以样品与各液体实际交付量核查浓度和混合，按方法决定是否需要连续供液。",
+            "en": "Assign separate duties to calibration preparation, overrange dilution, internal standard and auxiliary reagents. Verify concentration and mixing from actual deliveries; the method determines continuous-supply needs."
+          }
+        },
+        "switching": {
+          "task": "switch",
+          "title": "Sample, standard and blank selection",
+          "description": {
+            "zh": "切换样品、标准、空白与洗液时核算共享体积和输送延迟。按基体与目标物验证置换量、残留和恢复时间，避免仅按阀端口数选择。",
+            "en": "Account for shared volume and transit delay when switching sample, standard, blank and rinse. Qualify purge, residue and recovery for the matrix and analyte rather than choosing by port count."
+          }
+        }
+      }
+    },
+    "waterQuality": {
+      "title": "Water-analysis fluidics",
+      "summary": {
+        "zh": "负责分析单元内的样品计量、试剂反应与液路保护，现场取送样和维护连接环保监测。",
+        "en": "Cover sampling, reagent reactions and protection inside the analyzer, linking field acquisition and maintenance to environmental monitoring."
+      },
+      "conditions": [
+        {
+          "zh": "水质方法、样品状态、取样量和过滤允许条件",
+          "en": "Water-analysis method, sample state, aliquot and permitted filtration"
+        },
+        {
+          "zh": "试剂份数、反应温控/时序及检测接口",
+          "en": "Reagent portions, reaction temperature and timing, and detection interface"
+        }
+      ],
+      "outcome": {
+        "zh": "按方法评价剂量、反应、空白与回收，核查过滤后被测对象。",
+        "en": "Evaluate dose, reaction, blank and recovery by method and check the measured fraction after filtration."
+      },
+      "boundary": {
+        "zh": "现场代表性与内部计量分别验证；过滤不能仅为保护元件而忽略方法要求。",
+        "en": "Validate field representativeness and internal metering separately; protection filtration must respect the method."
+      },
+      "related": [
+        {
+          "label": {
+            "zh": "现场水样输送与维护",
+            "en": "Field water-sample transport and maintenance"
+          },
+          "href": "/applications/environmental-monitoring/?application=waterQuality"
+        }
+      ],
+      "modules": {
+        "sampling": {
+          "task": "sample",
+          "title": "Analyzer water-sample metering",
+          "description": {
+            "zh": "确认进入分析单元的水样状态与方法允许的预处理。按实际取样量、颗粒和基体设置计量，现场输送长度、滞后和维护详见环保监测。",
+            "en": "Confirm sample state and method-approved preparation at the analyzer inlet. Meter the actual aliquot for particles and matrix; environmental monitoring covers field distance, lag and maintenance."
+          }
+        },
+        "reagent": {
+          "task": "timedDose",
+          "title": "Reaction-reagent dispensing",
+          "description": {
+            "zh": "按方法的反应体积、加液顺序、混合、温控和测量窗口配置。将换瓶预充、首剂恢复和废液容量纳入循环，验证实际交付与反应结果。",
+            "en": "Configure reaction volume, addition sequence, mixing, temperature and reading window by method. Include bottle-change prime, first-dose recovery and waste capacity, verifying delivery and reaction results."
+          }
+        },
+        "protection": {
+          "task": "filter",
+          "title": "Method-compatible protection",
+          "description": {
+            "zh": "先确定目标是溶解态、颗粒相关还是其他方法规定组分，再决定过滤位置。评价吸附、目标物损失、过滤阻力与更换后的恢复。",
+            "en": "Define the method's dissolved, particle-associated or other target fraction before placing filtration. Assess adsorption, analyte loss, resistance and recovery after replacement."
+          }
+        }
+      }
+    },
+    "samplePrep": {
+      "title": "Analytical sample preparation",
+      "summary": {
+        "zh": "围绕稀释比例、萃取回收和目标物保留设计前处理，泵阀保护与方法结果分别验证。",
+        "en": "Design dilution, extraction and target retention around analytical results, validating component protection and method recovery separately."
+      },
+      "conditions": [
+        {
+          "zh": "样品基体、目标物、比例/回收目标与去向",
+          "en": "Sample matrix, analyte, ratio or recovery target and destination"
+        },
+        {
+          "zh": "各步骤剂量、材料、压力与清洗/空白",
+          "en": "Stage volumes, materials, pressure, washing and blank"
+        }
+      ],
+      "outcome": {
+        "zh": "在接收端评价比例、混合、空白与目标物回收。",
+        "en": "Evaluate ratio, mixing, blank and analyte recovery at the receiver."
+      },
+      "boundary": {
+        "zh": "过滤和萃取会改变样品组分，机械保护不能代替方法回收验证。",
+        "en": "Filtration and extraction can change sample composition; mechanical protection does not establish method recovery."
+      },
+      "related": [],
+      "modules": {
+        "dilution": {
+          "task": "dilution",
+          "title": "Dilution and spiking",
+          "description": {
+            "zh": "样本、原液和稀释剂按实际交付量确定比例。共享段残液、混合与体积误差共同影响最终浓度，使用空白、比例检查或加标回收评价。",
+            "en": "Set ratios from actual sample, stock and diluent deliveries. Shared-path residue, mixing and volume errors affect concentration; use blanks, ratio checks or spike recovery."
+          }
+        },
+        "extraction": {
+          "task": "extraction",
+          "title": "Extraction and phase transfer",
+          "description": {
+            "zh": "按具体萃取方法区分装载、洗涤、洗脱或相转移。说明介质相态、压力和产物去向，评价目标物回收、相夹带与残留。",
+            "en": "Separate loading, washing, elution or phase transfer by extraction method. Define phase state, pressure and product destination, evaluating recovery, phase carryover and residue."
+          }
+        },
+        "filtration": {
+          "task": "filter",
+          "title": "Analytical filtration",
+          "description": {
+            "zh": "区分方法规定的过滤与元件保护过滤。按目标物、孔径、材料、容积和压降选择，验证吸附损失、空白及更换后的恢复。",
+            "en": "Distinguish method-required filtration from component protection. Select by analyte, pore size, material, hold-up volume and pressure drop, then test loss, blank and recovery."
+          }
+        }
+      }
+    },
+    "labAnalyzer": {
+      "title": "Analytical-system integration",
+      "summary": {
+        "zh": "按样本、标准、试剂、清洗和废液支路组织整套分析液路，保留方法压力、时序和结果要求。",
+        "en": "Organize sample, standard, reagent, wash and waste branches around the analytical method's pressure, timing and results."
+      },
+      "conditions": [
+        {
+          "zh": "支路职责、阀端口状态、真实剂量/流量和压力",
+          "en": "Branch duties, valve states, working dose or flow and pressure"
+        },
+        {
+          "zh": "路径体积、输送延迟、安装和方法验收",
+          "en": "Path volume, transit delay, assembly and method acceptance"
+        }
+      ],
+      "outcome": {
+        "zh": "按完整方法循环检查交付、响应、空白及异常恢复。",
+        "en": "Check delivery, response, blank and fault recovery across the complete method cycle."
+      },
+      "boundary": {
+        "zh": "计量、连续供液、液体清洗与含气排废分别配置；平台调度连接实验室自动化。",
+        "en": "Configure metering, continuous supply, wash liquid and mixed-air waste separately; platform scheduling is covered in laboratory automation."
+      },
+      "related": [
+        {
+          "label": {
+            "zh": "自动化资源调度与恢复",
+            "en": "Automation-resource scheduling and recovery"
+          },
+          "href": "/applications/lab-automation/?application=systemIntegration"
+        }
+      ],
+      "modules": {
+        "pathManagement": {
+          "task": "integration",
+          "title": "Analytical-path management",
+          "description": {
+            "zh": "为样品、标准、试剂、清洗和废液绘制端口状态与互锁。考虑共享段、误通和输送延迟，明确异常时检测是否停止及样品如何标记。",
+            "en": "Map port states and interlocks for sample, standard, reagent, wash and waste. Include shared passages, wrong destinations and delay, with defined measurement stops and specimen flags."
+          }
+        },
+        "fluidDrive": {
+          "task": "drive",
+          "title": "Branch-specific liquid drive",
+          "description": {
+            "zh": "分配有限行程计量、连续辅助供液、清洗供液和气液抽吸职责。按实际介质和安装负载核查各支路，容量与自由流量不能代表整套系统。",
+            "en": "Assign finite-stroke metering, continuous auxiliary supply, wash supply and gas-liquid aspiration separately. Check each branch at its actual liquid and installed load."
+          }
+        },
+        "moduleConnection": {
+          "task": "connect",
+          "title": "Analyzer-module assembly",
+          "description": {
+            "zh": "连接计量、反应和检测模块时核算体积、响应延迟与维护方法。安装后验证密封、预充、空白和实际信号恢复，再进入方法测试。",
+            "en": "Account for volume, delay and service access between metering, reaction and detection modules. After assembly, verify sealing, prime, blank and signal recovery before method testing."
+          }
+        }
+      }
+    }
+  },
+  "environmental-monitoring": {
+    "waterQuality": {
+      "title": "Online water-monitoring systems",
+      "summary": {
+        "zh": "负责现场取样、输送更新、清洗与无人值守维护，内部反应计量连接分析仪器。",
+        "en": "Cover field acquisition, sample renewal, washing and unattended maintenance, linking internal reaction metering to analytical instruments."
+      },
+      "conditions": [
+        {
+          "zh": "取样点、吸程/扬程、管径/长度和样品更新时间",
+          "en": "Sampling point, suction or delivery head, bore and length, and renewal time"
+        },
+        {
+          "zh": "颗粒/基体、环境温度、清洗周期与废液去向",
+          "en": "Particles and matrix, ambient temperature, wash interval and waste destination"
+        }
+      ],
+      "outcome": {
+        "zh": "比较现场与到达样品的代表性，测量实际更新与维护后恢复。",
+        "en": "Compare field and delivered sample representativeness and measure renewal and post-maintenance recovery."
+      },
+      "boundary": {
+        "zh": "名义容积除以流量只能估算输送时间，不能证明样品完全更新或代表性。",
+        "en": "Nominal volume divided by flow only estimates transit time; it does not prove complete renewal or representativeness."
+      },
+      "related": [
+        {
+          "label": {
+            "zh": "分析单元内部液路",
+            "en": "Fluidics inside the water analyzer"
+          },
+          "href": "/applications/analytical-instruments/?application=waterQuality"
+        }
+      ],
+      "modules": {
+        "sampling": {
+          "task": "onlineSample",
+          "title": "Field water sampling",
+          "description": {
+            "zh": "根据取样点、水位、吸程/扬程与输送距离配置取送样。评估沉积、滞留和混合，实测样品更新时间，并向分析单元说明允许的预处理。",
+            "en": "Configure acquisition from sampling point, level, suction/delivery head and distance. Evaluate deposits, hold-up and mixing, measure renewal time and declare permitted preparation at the analyzer inlet."
+          }
+        },
+        "reagent": {
+          "task": "dose",
+          "title": "Field reagent supply",
+          "description": {
+            "zh": "考虑试剂储存温度、换瓶、预充、首剂与维护周期。现场供液状态与内部反应剂量分别验证，具体方法计量连接分析仪器任务。",
+            "en": "Include storage temperature, bottle changes, prime, first dose and service interval. Validate field supply and internal reaction doses separately with method guidance."
+          }
+        },
+        "reaction": {
+          "task": "switch",
+          "title": "Sampling and analyzer-state switching",
+          "description": {
+            "zh": "记录排旧样、取新样、清洗、反应接口与维护旁路状态。防止旧样或洗液误入检测，并确认恢复后的首轮样品有效状态。",
+            "en": "Record old-sample discard, fresh acquisition, wash, analyzer interface and service bypass. Prevent old sample or cleaner from entering detection and qualify the first recovered cycle."
+          }
+        },
+        "washWaste": {
+          "task": "wash",
+          "title": "Field washing and drainage",
+          "description": {
+            "zh": "按污堵趋势确定冲洗液、周期、排空和废液容器。评价安装流量、气液状态和容器满联锁，维护后核查样品恢复。",
+            "en": "Set cleaner, interval, emptying and waste collection from fouling trends. Evaluate installed flow, inlet fluid state and full-container interlocks, then check sample recovery."
+          }
+        },
+        "protection": {
+          "task": "filter",
+          "title": "Sampling-path protection",
+          "description": {
+            "zh": "过滤先遵从被测组分和方法要求，再配置泵阀保护。记录压降增长、耗材更换和样品变化，避免用过滤后的样本代表所有原水组分。",
+            "en": "Follow analyte and method requirements before adding pump or valve protection. Record pressure-drop growth, replacement and sample changes; a filtered sample does not represent every raw-water fraction."
+          }
+        }
+      }
+    },
+    "wastewater": {
+      "title": "Wastewater and process-water monitoring",
+      "summary": {
+        "zh": "先描述复杂水样的颗粒、黏度、腐蚀和沉积，再确定输送、过滤及维护任务。",
+        "en": "Define particles, viscosity, chemical exposure and deposits before selecting transfer, filtration and maintenance."
+      },
+      "conditions": [
+        {
+          "zh": "粒径/浓度、黏度、温度、配方和结晶",
+          "en": "Particle size and concentration, viscosity, temperature, composition and crystallization"
+        },
+        {
+          "zh": "目标组分、实际负载、清洗和重启条件",
+          "en": "Target fraction, installed load, washing and restart conditions"
+        }
+      ],
+      "outcome": {
+        "zh": "验证到达样品的代表性、目标物回收及清洗重启后的更新。",
+        "en": "Verify delivered-sample representativeness, analyte recovery and renewal after wash or restart."
+      },
+      "boundary": {
+        "zh": "复杂废水不能由清水参数证明适配；过滤应符合目标组分定义。",
+        "en": "Water-test specifications do not establish compatibility with complex wastewater; filtration must follow the target-fraction definition."
+      },
+      "related": [],
+      "modules": {
+        "sampling": {
+          "task": "onlineSample",
+          "title": "Complex-sample transport",
+          "description": {
+            "zh": "取送样需确认颗粒通过能力、黏度、温度、腐蚀与真实扬程。选择候选前说明目标样品组分，并评估沉积、堵塞和代表性。",
+            "en": "Confirm particle passage, viscosity, temperature, chemical exposure and installed head. Define the target sample fraction before choosing candidates and evaluate deposits, blockage and representativeness."
+          }
+        },
+        "filtration": {
+          "task": "filter",
+          "title": "Method-compatible particulate handling",
+          "description": {
+            "zh": "区分溶解态、总量或其他方法规定目标，再决定过滤及维护。评价截留、吸附和阻力，不为保护元件任意去除目标颗粒。",
+            "en": "Define dissolved, total or other method-specific fractions before filtration. Assess retention, adsorption and resistance rather than removing target particles solely for protection."
+          }
+        },
+        "reagent": {
+          "task": "timedDose",
+          "title": "Reagent-reaction interface",
+          "description": {
+            "zh": "按实际废水基体、稀释或加标需要连接分析单元。反应计量、混合和空白按具体方法验证，现场供液与维护另行组织。",
+            "en": "Connect the analyzer for the actual wastewater matrix, dilution or spiking needs. Validate reaction doses, mixing and blanks by method while organizing field supply and maintenance separately."
+          }
+        },
+        "drainage": {
+          "task": "wash",
+          "title": "Drainage and maintenance",
+          "description": {
+            "zh": "根据沉积物、配方和清洗计划设置排液、反冲洗或维护旁路。重启后先确认密封与样品更新，再恢复测量及有效数据标记。",
+            "en": "Set drainage, backflush or service bypass for deposits, composition and cleaning plan. Check sealing and sample renewal on restart before restoring measurement and valid-data flags."
+          }
+        }
+      }
+    },
+    "gasPretreatment": {
+      "title": "Gas-sample pretreatment auxiliaries",
+      "summary": {
+        "zh": "明确样气、冷凝液、吸收液与气液混合抽吸各自支路和工作条件。",
+        "en": "Define separate branches and conditions for sample gas, condensate, absorption liquid and gas-liquid aspiration."
+      },
+      "conditions": [
+        {
+          "zh": "进口介质状态、酸性/温度、气液比例与负压",
+          "en": "Inlet fluid state, acidity and temperature, gas/liquid fraction and vacuum"
+        },
+        {
+          "zh": "漏气允许值、吸收方式、流量和保护压降",
+          "en": "Permitted leakage, absorption architecture, flow and protection pressure drop"
+        }
+      ],
+      "outcome": {
+        "zh": "检查实际排液/抽吸、气密和样气组成影响，验证维护后恢复。",
+        "en": "Check actual drainage or aspiration, leakage and effects on sample-gas composition, including recovery after maintenance."
+      },
+      "boundary": {
+        "zh": "液体流量、气体空载流量和气液抽排能力不能互换；吸收液泵不等于样气泵。",
+        "en": "Liquid flow, gas free flow and mixed-media aspiration are not interchangeable; an absorption-liquid pump is not a sample-gas pump."
+      },
+      "related": [],
+      "modules": {
+        "condensate": {
+          "task": "drain",
+          "title": "Condensate removal",
+          "description": {
+            "zh": "先判断进口是连续液体还是含气/泡沫混合物。按酸性、温度、排放周期与系统负压配置，并检查排液造成的漏气和回流。",
+            "en": "Determine whether the inlet remains flooded or contains air/foam. Configure for acidity, temperature, discharge interval and vacuum, checking leakage and backflow caused by drainage."
+          }
+        },
+        "absorption": {
+          "task": "continuous",
+          "title": "Absorption-liquid delivery",
+          "description": {
+            "zh": "限定吸收液加注或循环职责，按配方、实际流量、背压和气液接触架构验证。气体采样与分析结果由相应系统评价。",
+            "en": "Define absorption-liquid dosing or circulation and validate composition, installed flow, backpressure and contact architecture. The gas-sampling system evaluates acquisition and analytical results."
+          }
+        },
+        "tubeControl": {
+          "task": "pinch",
+          "title": "Flexible-tube shutoff",
+          "description": {
+            "zh": "按气体或液体路径核对软管材料、通径、壁厚、负压与泄漏。夹闭动作、循环寿命和维护更换需在安装状态下验证。",
+            "en": "Confirm tube material, bore, wall thickness, vacuum and leakage for the gas or liquid branch. Validate closure, cycle life and replacement under installed conditions."
+          }
+        },
+        "protection": {
+          "task": "filter",
+          "title": "Pretreatment-path protection",
+          "description": {
+            "zh": "说明颗粒、冷凝或液滴保护位置及新增压降。滤材与采样链路可能影响样气组成，需按具体方法确认目标物保留与系统流量。",
+            "en": "Define particulate, condensate or droplet protection and added pressure drop. Filter media and sampling paths can affect composition; verify target retention and system flow by method."
+          }
+        }
+      }
+    },
+    "samplingPrep": {
+      "title": "Environmental sampling and preparation",
+      "summary": {
+        "zh": "将现场样品转为可分析样本时，保留目标组分、代表性与样本身份。",
+        "en": "Preserve target fractions, representativeness and sample identity when preparing field samples for analysis."
+      },
+      "conditions": [
+        {
+          "zh": "采样容器、保存时间、混匀、分样和分析目标",
+          "en": "Sampling vessel, holding time, mixing, splitting and analyte"
+        },
+        {
+          "zh": "稀释/过滤条件、材料、残留与清洗",
+          "en": "Dilution or filtration, materials, residue and cleaning"
+        }
+      ],
+      "outcome": {
+        "zh": "按方法评价空白、回收、分样代表性与恢复。",
+        "en": "Evaluate blank, recovery, split-sample representativeness and recovery after changeover by method."
+      },
+      "boundary": {
+        "zh": "稀释计量可共用工程方法，但现场保存、颗粒与目标物损失需单独核查。",
+        "en": "Dilution can use shared metering principles, but field holding, particles and analyte losses require separate checks."
+      },
+      "related": [],
+      "modules": {
+        "transfer": {
+          "task": "sample",
+          "title": "Environmental-sample transfer",
+          "description": {
+            "zh": "按容器、保存时间和混匀状态转移与分样。评价材料吸附、样本间污染和颗粒分布，保留来源、时点及目的容器记录。",
+            "en": "Transfer and split samples for their vessels, holding time and mixing state. Evaluate adsorption, cross-sample contamination and particle distribution while recording origin, time and receiver."
+          }
+        },
+        "dilution": {
+          "task": "dilution",
+          "title": "Environmental-sample dilution",
+          "description": {
+            "zh": "原样与稀释剂分别计量，并核查接收端比例与混合。结合现场基体和分析目标评价空白、加标及共享段残液。",
+            "en": "Meter raw sample and diluent separately and check receiver ratio and mixing. Evaluate blank, spikes and shared-path residue for the field matrix and analyte."
+          }
+        },
+        "filtration": {
+          "task": "filter",
+          "title": "Target-preserving filtration",
+          "description": {
+            "zh": "按分析对象决定孔径、材料和是否过滤。记录过滤前后组分、吸附、压降与更换影响，避免将机械防堵自动解释为样品质量改善。",
+            "en": "Select pore size, material and whether to filter from the analytical target. Record fraction changes, adsorption, pressure drop and replacement effects rather than equating clog prevention with improved sample quality."
+          }
+        },
+        "waste": {
+          "task": "wash",
+          "title": "Sampling-preparation wash and waste",
+          "description": {
+            "zh": "按样品与清洗剂安排废液去向和维护。切换样本前验证共享段恢复，以空白或下一样本检测清洗残留。",
+            "en": "Assign waste and service paths for sample and cleaner. Qualify shared-path recovery before changeover and use a blank or next sample to detect residual cleaner."
+          }
+        }
+      }
+    },
+    "systemIntegration": {
+      "title": "Field monitoring-system integration",
+      "summary": {
+        "zh": "围绕取样、预处理、分析、排废和维护旁路组织现场在线系统。",
+        "en": "Organize a field system around acquisition, pretreatment, analysis, drainage and service bypass."
+      },
+      "conditions": [
+        {
+          "zh": "柜内环境、介质、取样长度与运行周期",
+          "en": "Cabinet environment, liquids, sampling length and duty cycle"
+        },
+        {
+          "zh": "各支路工作点、远程状态、维护与数据有效性",
+          "en": "Branch operating points, remote states, maintenance and data validity"
+        }
+      ],
+      "outcome": {
+        "zh": "覆盖长期运行、维护、断电/空源与堵塞后的恢复及数据标记。",
+        "en": "Cover long runs, service and recovery from power loss, empty supply or blockage with data flags."
+      },
+      "boundary": {
+        "zh": "现场寿命与维护周期需按工况验证，不能只引用电机寿命或自由流量。",
+        "en": "Field life and service interval require operating-condition validation, not motor-life or free-flow figures alone."
+      },
+      "related": [],
+      "modules": {
+        "pathManagement": {
+          "task": "integration",
+          "title": "Field-path state management",
+          "description": {
+            "zh": "用状态表连接现场取样、预处理、分析与排废。设置清洗和维护旁路，防止错误样品或洗液进入检测，并记录当前有效状态。",
+            "en": "Connect field acquisition, pretreatment, analysis and waste with a state table. Add wash and service bypass to prevent incorrect sample or cleaner entering detection and record validity state."
+          }
+        },
+        "fluidDrive": {
+          "task": "drive",
+          "title": "Installed branch duties",
+          "description": {
+            "zh": "取送样、加药、清洗和排废按介质、压力与占空分别配置。核查峰值、输送距离及容器状态，避免以一个额定流量覆盖整柜。",
+            "en": "Configure acquisition, reagent supply, washing and waste by liquid, pressure and duty cycle. Check peaks, distance and reservoirs instead of assigning one rated flow to the cabinet."
+          }
+        },
+        "moduleConnection": {
+          "task": "connect",
+          "title": "Field-cabinet connections",
+          "description": {
+            "zh": "确认柜内温度、管路布局、标识、密封与维护可达性。按项目环境评估结露或低温等影响，拆装后重新检查连接和样品更新。",
+            "en": "Confirm cabinet temperature, routing, identification, sealing and access. Evaluate condensation or low-temperature effects for the project and recheck connections and sample renewal after service."
+          }
+        },
+        "monitoring": {
+          "task": "monitor",
+          "title": "Unattended fault recovery",
+          "description": {
+            "zh": "空源、堵塞、泄漏、废液满和通信异常需要明确停测、报警和恢复逻辑。以趋势和实际样品恢复决定数据状态，不用单个传感器正常作为有效测量证明。",
+            "en": "Define stop, alarm and recovery for empty supply, blockage, leaks, full waste and communication faults. Use trends and actual sample recovery to set data validity."
+          }
+        }
+      }
+    }
+  },
+  "synthetic-biology": {
+    "microBioreactor": {
+      "title": "Miniature bioreactors",
+      "summary": {
+        "zh": "以培养过程的补料、取样、介质隔离和体积平衡组织微型反应器液路。",
+        "en": "Organize miniature-reactor fluidics around feeding, sampling, isolation and vessel-volume balance."
+      },
+      "conditions": [
+        {
+          "zh": "培养介质、添加液、剂量/流量与运行时长",
+          "en": "Culture medium, additives, dose or flow and run duration"
+        },
+        {
+          "zh": "取样周期、弃样量、无菌连接与反应器体积",
+          "en": "Sampling interval, discard, aseptic connections and reactor volume"
+        }
+      ],
+      "outcome": {
+        "zh": "核查累计补料、取样代表性、体积平衡及长周期恢复。",
+        "en": "Verify cumulative additions, sample representativeness, vessel balance and long-run recovery."
+      },
+      "boundary": {
+        "zh": "气泡/压力反映液路状态，不直接证明pH、溶氧或生长；无菌边界需整体验证。",
+        "en": "Bubbles and pressure describe fluidics, not pH, dissolved oxygen or growth; aseptic boundaries require system validation."
+      },
+      "related": [],
+      "modules": {
+        "feeding": {
+          "task": "feeding",
+          "title": "Medium and additive feeding",
+          "description": {
+            "zh": "区分批次、周期脉冲与连续补料，分别设置培养基、碳源、诱导剂和pH调节液。按实际介质、累计量和补液中断评价输出。",
+            "en": "Separate batch additions, periodic pulses and continuous feeding for medium, carbon source, inducer and pH-control liquid. Evaluate output with actual liquid, cumulative volume and refill interruptions."
+          }
+        },
+        "sampling": {
+          "task": "onlineSample",
+          "title": "Reactor sampling",
+          "description": {
+            "zh": "说明样本去向、目标分析、管路滞留及弃样量。取样对反应器体积和污染边界的影响与样品代表性一起评价。",
+            "en": "Define sample destination, analyte, path hold-up and discard. Evaluate representativeness together with the effects on reactor volume and contamination boundaries."
+          }
+        },
+        "switching": {
+          "task": "switch",
+          "title": "Feed and sampling-path selection",
+          "description": {
+            "zh": "为补料、取样、清洗和排液建立端口状态表。核查共享体积、关闭后的隔离与误通，避免清洗液或废液回到培养容器。",
+            "en": "Map port states for feed, sampling, wash and drainage. Check shared volume, closed-state isolation and wrong connections to prevent cleaner or waste returning to the culture."
+          }
+        },
+        "waste": {
+          "task": "wash",
+          "title": "Reactor wash and waste",
+          "description": {
+            "zh": "确认废液中的菌体/细胞团、泡沫及空气比例。纯液排液、含气抽吸与清洗供液分别配置，并按维护计划评价恢复与密封。",
+            "en": "Define cells or aggregates, foam and air fraction in waste. Configure flooded drainage, mixed-air aspiration and wash supply separately and evaluate recovery and sealing."
+          }
+        },
+        "monitoring": {
+          "task": "monitor",
+          "title": "Fluid and process interfaces",
+          "description": {
+            "zh": "监测补料、取样和排废支路的压力、气泡及供液状态。与过程传感和控制器关联报警，但培养状态由对应过程测量评价。",
+            "en": "Monitor pressure, bubbles and supply state in feeding, sampling and waste. Link alarms to process sensing and control, while dedicated measurements evaluate culture condition."
+          }
+        }
+      }
+    },
+    "biofoundry": {
+      "title": "Automated build and screening platforms",
+      "summary": {
+        "zh": "在平台操作中保留菌株/样本身份、构建筛选流程与培养结果，通用平台架构连接实验室自动化。",
+        "en": "Preserve strain and specimen identity, build/screen workflow and culture results within automation, linking platform architecture to laboratory automation."
+      },
+      "conditions": [
+        {
+          "zh": "菌株/样本身份、液体类别、板型和实验步骤",
+          "en": "Strain or sample identity, liquid classes, plate format and experiment"
+        },
+        {
+          "zh": "酶液/培养基待机、剂量、污染和追溯",
+          "en": "Enzyme or medium holding, dose, contamination and traceability"
+        }
+      ],
+      "outcome": {
+        "zh": "同时评价孔位交付、身份追溯与构建/筛选结果。",
+        "en": "Evaluate well delivery, identity tracking and build or screening results together."
+      },
+      "boundary": {
+        "zh": "高通量与多通道不等于实验结果有效；通用架构由自动化主文解释。",
+        "en": "Throughput and channel count do not establish experimental validity; automation guidance explains the generic architecture."
+      },
+      "related": [
+        {
+          "label": {
+            "zh": "平台移液与孔板任务",
+            "en": "Platform pipetting and plate tasks"
+          },
+          "href": "/applications/lab-automation/"
+        }
+      ],
+      "modules": {
+        "pipetting": {
+          "task": "pipette",
+          "title": "Build and screen liquid handling",
+          "description": {
+            "zh": "按菌株、样本与试剂身份设置移液和防污染策略。选择固定针或一次性吸头，并在实际液体类别与工位下核查交付和追溯。",
+            "en": "Set handling and contamination controls for strain, sample and reagent identity. Choose probes or disposable tips and verify delivery and tracking with the actual liquid class and station."
+          }
+        },
+        "reagent": {
+          "task": "dose",
+          "title": "Experimental-reagent dispensing",
+          "description": {
+            "zh": "酶液、培养基、缓冲液与诱导剂分别定义剂量和储存/待机要求。验证首剂、活性相关条件和接收位置，不能只引用水的重复性。",
+            "en": "Define doses and storage or hold conditions separately for enzymes, medium, buffers and inducers. Verify first dose, activity-related conditions and receiver behavior."
+          }
+        },
+        "plate": {
+          "task": "plateDose",
+          "title": "Culture and screening plates",
+          "description": {
+            "zh": "将培养/筛选板型、孔位身份与操作顺序关联。评价加液一致性、洗后残液和交叉污染，平台供液排废结构详见自动化。",
+            "en": "Relate plate format and well identity to culture or screening order. Assess delivery, residual wash and cross-contamination, using automation guidance for supply and drainage."
+          }
+        },
+        "pathManagement": {
+          "task": "integration",
+          "title": "Reagent and well routing",
+          "description": {
+            "zh": "将阀位、试剂来源与目标板位绑定，并纳入共享资源互锁。异常后保留样本身份及已执行步骤，避免错投或重复加液。",
+            "en": "Bind valve state and reagent source to the target well with shared-resource interlocks. Preserve identity and completed steps after faults to prevent misdelivery or duplicate dosing."
+          }
+        }
+      }
+    },
+    "feedingControl": {
+      "title": "Feeding and culture-control fluidics",
+      "summary": {
+        "zh": "从允许的停流、累计补料和实际背压定义连续或间歇供液，再配置介质切换及反馈。",
+        "en": "Define continuous or intermittent supply by permitted interruption, cumulative feed and actual backpressure before selecting switching and feedback."
+      },
+      "conditions": [
+        {
+          "zh": "流量/单剂量、允许停流、累计量及换瓶周期",
+          "en": "Flow or dose, permitted interruption, cumulative volume and bottle-change interval"
+        },
+        {
+          "zh": "介质、背压、温度、无菌连接与过程反馈",
+          "en": "Liquid, backpressure, temperature, aseptic connections and process feedback"
+        }
+      ],
+      "outcome": {
+        "zh": "记录整个周期的输出、补液中断、换瓶首段及反应器体积平衡。",
+        "en": "Record run-wide delivery, refill interruption, first flow after bottle change and reactor balance."
+      },
+      "boundary": {
+        "zh": "单缸补液/复位可能中断供液；连续能力和无菌隔离均需系统验证。",
+        "en": "Single-cylinder refill or reset can interrupt supply; continuous delivery and aseptic isolation require system validation."
+      },
+      "related": [],
+      "modules": {
+        "feeding": {
+          "task": "continuous",
+          "title": "Continuous and pulsed feeding",
+          "description": {
+            "zh": "先定义流量、累计体积和允许停流时间，再比较有限行程计量、交替供液或适用无阀计量。实际介质、背压、补液与重启纳入长周期评价。",
+            "en": "Define flow, cumulative volume and permitted interruption before comparing finite-stroke metering, alternating supply or suitable valveless metering. Include actual liquid, backpressure, refill and restart in long-run evaluation."
+          }
+        },
+        "switching": {
+          "task": "switch",
+          "title": "Medium and bottle changes",
+          "description": {
+            "zh": "介质切换、换瓶预充与清洗分别执行。核查配方、共享段残液和恢复后首段，确认新介质到达培养容器的时间与状态。",
+            "en": "Separate medium changes, bottle-change prime and cleaning. Check formulation, shared residue and first recovered flow, confirming when and how new medium reaches the reactor."
+          }
+        },
+        "protection": {
+          "task": "filter",
+          "title": "Backflow and restriction control",
+          "description": {
+            "zh": "按反压、止回开启压力、泄漏和滤器阻力设置保护。防回流与无菌隔离分别验证，避免新增阻力超出补料工作点。",
+            "en": "Configure protection from reverse pressure, cracking pressure, leakage and filter resistance. Validate backflow control and aseptic isolation separately and include added resistance in feeding duty."
+          }
+        },
+        "monitoring": {
+          "task": "monitor",
+          "title": "Feed-state and process feedback",
+          "description": {
+            "zh": "将泵命令、实际供液异常与累计物料记录关联。pH等闭环需要相应过程传感与控制，压力或气泡模块仅提供液路状态信息。",
+            "en": "Relate pump commands, supply faults and cumulative material records. pH or other feedback loops require their process sensors and control; pressure and bubble modules describe fluid state."
+          }
+        }
+      }
+    },
+    "onlineSampling": {
+      "title": "Online process sampling",
+      "summary": {
+        "zh": "以目标分析、样品代表性、弃样体积和无菌边界组织取样与前处理。",
+        "en": "Organize sampling and preparation around analyte, representativeness, discard volume and aseptic boundaries."
+      },
+      "conditions": [
+        {
+          "zh": "测细胞/菌体或液相组分、采样口和周期",
+          "en": "Cell or biomass versus liquid-phase analyte, sampling port and interval"
+        },
+        {
+          "zh": "路径滞留、弃样/回收、保存与体积扰动",
+          "en": "Hold-up, discard or return, preservation and volume disturbance"
+        }
+      ],
+      "outcome": {
+        "zh": "比较过程与采集样品，核查目标物保留、污染和反应器体积变化。",
+        "en": "Compare process and collected sample for target retention, contamination and reactor-volume changes."
+      },
+      "boundary": {
+        "zh": "去除细胞团可能改变被测对象；夹管阀减少阀体接液不等于整条路径无菌。",
+        "en": "Removing cell aggregates can change the analyte; reduced valve-body contact does not establish an aseptic path."
+      },
+      "related": [],
+      "modules": {
+        "sampling": {
+          "task": "onlineSample",
+          "title": "Representative process sampling",
+          "description": {
+            "zh": "明确样本测定对象、取样口、周期及去向。评估滞留段、弃样量、回收选择与培养体积扰动，并通过配对样品核查代表性。",
+            "en": "Define analyte, port, interval and destination. Evaluate hold-up, discard, return choices and culture-volume disturbance, using paired samples to check representativeness."
+          }
+        },
+        "filtration": {
+          "task": "filter",
+          "title": "Analyte-preserving filtration",
+          "description": {
+            "zh": "测菌体/细胞和测液相代谢物对过滤要求不同。按目标选择保留或去除颗粒，评价滤材吸附、压降增长及更换后样品偏差。",
+            "en": "Biomass/cell and liquid-metabolite measurements need different filtration. Select particle retention or removal by analyte and test adsorption, increasing pressure drop and post-replacement bias."
+          }
+        },
+        "pretreatment": {
+          "task": "dilution",
+          "title": "Process-sample preparation",
+          "description": {
+            "zh": "按方法需要安排稀释、保存或其他前处理，并记录实际体积、时延和去向。清洗与废液单独配置，验证目标物回收而不只检查管路通畅。",
+            "en": "Arrange dilution, preservation or other required preparation with actual volumes, delay and destinations. Configure cleaning and waste separately, verifying analyte recovery rather than flow continuity alone."
+          }
+        },
+        "tubeControl": {
+          "task": "pinch",
+          "title": "Closed-tube path control",
+          "description": {
+            "zh": "夹管阀可减少液体接触阀体，仍需核对管材、接头、夹闭、清洁/灭菌及更换。封闭转移与无菌采样按整条路径和操作程序验证。",
+            "en": "A pinch valve reduces liquid contact with the valve body, but tubing, fittings, closure, cleaning or sterilization and replacement still require checks. Validate closed transfer and aseptic sampling as a complete process."
+          }
+        }
+      }
+    },
+    "bioProcessIntegration": {
+      "title": "Small-scale bioprocess integration",
+      "summary": {
+        "zh": "将多补料、取样、清洗、排废与过程反馈连接为可追溯的长周期液路。",
+        "en": "Connect multiple feeds, sampling, washing, drainage and process feedback into a traceable long-run fluidic system."
+      },
+      "conditions": [
+        {
+          "zh": "培养容器、介质、运行时长、压力与工作模式",
+          "en": "Culture vessel, liquids, run duration, pressure and operating mode"
+        },
+        {
+          "zh": "无菌连接、维护旁路、累计物料和异常恢复",
+          "en": "Aseptic connections, service bypass, cumulative materials and fault recovery"
+        }
+      ],
+      "outcome": {
+        "zh": "覆盖长时运行、断电、空料、堵塞与维护恢复，核查累计交付和污染边界。",
+        "en": "Cover long runs, power loss, empty supply, blockage and service recovery, verifying cumulative delivery and contamination boundaries."
+      },
+      "boundary": {
+        "zh": "液路反馈与生物过程结果分别评价；组件组合不单独证明无菌或连续培养能力。",
+        "en": "Evaluate fluid-state feedback and biological results separately; component combinations alone do not prove sterility or continuous-culture capability."
+      },
+      "related": [],
+      "modules": {
+        "pathManagement": {
+          "task": "integration",
+          "title": "Bioprocess-path management",
+          "description": {
+            "zh": "用端口状态、互锁和维护旁路管理补料、采样、清洗与排废。明确并发任务和关闭后的隔离，记录异常时介质与容器状态。",
+            "en": "Manage feed, sampling, wash and waste through port states, interlocks and service bypass. Define concurrency and closed-state isolation, recording liquid and vessel state at faults."
+          }
+        },
+        "fluidDrive": {
+          "task": "drive",
+          "title": "Long-run branch drive",
+          "description": {
+            "zh": "不同支路按介质、背压、持续时间和补液策略选择计量、连续供液或抽排候选。验证运行周期内累计量、波动和恢复，不套用单次清水指标。",
+            "en": "Select metering, continuous supply or aspiration for each branch by liquid, backpressure, duration and refill strategy. Verify cumulative volume, variation and recovery across the run."
+          }
+        },
+        "moduleConnection": {
+          "task": "connect",
+          "title": "Process-vessel and module connections",
+          "description": {
+            "zh": "确认培养容器、试剂、废液及传感器之间的接液材料、密封和更换方法。按清洁/灭菌与长时温度验证连接，维护后复核污染边界。",
+            "en": "Specify materials, sealing and replacement between culture vessel, reagent, waste and sensors. Validate connections for cleaning or sterilization and long exposure, then recheck contamination boundaries after service."
+          }
+        },
+        "monitoring": {
+          "task": "monitor",
+          "title": "Long-run fault recovery",
+          "description": {
+            "zh": "断电、空料、堵塞、泄漏、废液满或通信异常后，按阶段决定停止与恢复。保留累计物料、取样身份和未完成动作，防止恢复后的重复加液。",
+            "en": "Determine stops and recovery by stage after power loss, empty feed, blockage, leaks, full waste or communication failure. Preserve cumulative materials, sample identity and unfinished actions to prevent duplicate additions."
+          }
+        }
+      }
+    }
+  }
+}

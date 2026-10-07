@@ -656,21 +656,21 @@ export const dpl30WaterVsReagentEnCopy = {
 export const dpl30EpdmPtfeFfkmSelectionEnCopy = {
   metadata: {
     title:
-      "How Should You Select EPDM, PTFE and FFKM for a 300 mL/min Micro Liquid Diaphragm Pump?",
+      "How Should You Select EPDM, PTFE and FFKM for a Micro Diaphragm Pump?",
     seoTitle:
-      "Micro Liquid Diaphragm Pump EPDM, PTFE and FFKM Selection | Foreach Technology",
+      "Micro Diaphragm Pump EPDM, PTFE and FFKM Selection | Foreach Technology",
     seoDescription:
-      "Compare EPDM, PTFE and FFKM for a 300 mL/min micro liquid diaphragm pump by evaluating chemical compatibility, swelling, dynamic sealing and actual-fluid validation.",
+      "Compare EPDM, PTFE and FFKM for a micro diaphragm pump by evaluating chemical compatibility, swelling, dynamic sealing and actual-fluid validation.",
     coverImage: DPL30_WETTED_MATERIALS_COVER,
     coverAlt:
-      "Foreach DPL30 micro liquid diaphragm pump with alternative wetted material combinations",
+      "Example inspection of wetted components in a Foreach micro diaphragm pump",
   },
   deck: "EPDM, PTFE and FFKM are not a simple low-to-high material ranking. EPDM and FFKM are elastomers, while PTFE is a fluoropolymer; the diaphragm, valves and pump head perform different mechanical jobs. Selection therefore applies to a complete wetted and dynamically loaded structure, not one material name.",
   leadBlocks: [
     {
       type: "notice",
-      label: "Formal DPL30 combinations:",
-      text: "EPDM diaphragm / EPDM valves / PPS head, or PTFE diaphragm / FFKM valves / PPS head. Do not rearrange these materials into unlisted commercial configurations.",
+      label: "Example material combinations for Foreach micro diaphragm pumps:",
+      text: "EPDM diaphragm / EPDM valves / PPS head, or PTFE diaphragm / FFKM valves / PPS head. This article covers diaphragm-pump material selection in general; these are examples available on selected Foreach models. Confirm the available combination for each series and model rather than assuming arbitrary combinations are offered.",
     },
     {
       type: "paragraph",
@@ -818,12 +818,12 @@ export const dpl30EpdmPtfeFfkmSelectionEnCopy = {
     },
     {
       title:
-        "7. How Do the Formal DPL30 Combinations Enter the Selection Process?",
+        "7. How Do Diaphragm-Pump Material Combinations Enter the Selection Process?",
       blocks: [
         {
           type: "table",
           headers: [
-            "Formal combination",
+            "Example material combination",
             "Candidate role",
             "Still to be confirmed",
           ],
@@ -847,10 +847,10 @@ export const dpl30EpdmPtfeFfkmSelectionEnCopy = {
       ],
     },
   ],
-  faqTitle: "FAQ | EPDM, PTFE and FFKM in a Micro Liquid Diaphragm Pump",
+  faqTitle: "FAQ | EPDM, PTFE and FFKM in a Micro Diaphragm Pump",
   faqItems: [
     {
-      question: "Is PTFE always better than EPDM for a liquid-pump diaphragm?",
+      question: "Is PTFE always better than EPDM for a pump diaphragm?",
       answer:
         "No. PTFE often offers broader chemical resistance, but a dynamic diaphragm must also meet construction, flex-fatigue, pressure and cycle-life requirements. Compare finished diaphragm designs, not names alone.",
     },
@@ -877,11 +877,11 @@ export const dpl30EpdmPtfeFfkmSelectionEnCopy = {
     },
   ],
   cta: {
-    title: "Selecting an EPDM or PTFE/FFKM DPL30 Material Combination?",
+    title: "Selecting EPDM or PTFE/FFKM Materials for a Micro Diaphragm Pump?",
     description:
       "Provide fluid composition, concentration, temperature, pressure, contact time, cleaning method and target cycle life to build a staged plan from candidate screening and immersion to dynamic complete-pump validation.",
     contactLabel: "Contact an Engineer",
-    productsLabel: "View the DPL30 Micro Liquid Diaphragm Pump",
-    productsHref: DPL30_PRODUCT_HREF,
+    productsLabel: "View Micro Diaphragm Pumps",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps/",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;

@@ -5,6 +5,9 @@ import { notFound } from "next/navigation";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import tubingDetailData from "@/data/products/generated/tubing/detail/index.json";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
+import { getTubingMaterialCopy } from "@/data/products/tubing/content";
+import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
+import { getTubingAlternates } from "@/data/products/tubing/metadata";
 
 type FaqItem = {
   question?: string;
@@ -72,10 +75,52 @@ function getFaqItems(detail: TubingDetailRecord) {
     .filter((item) => item.question && item.answer);
 }
 
-function toClientData(detail: TubingDetailRecord) {
+function toClientData(detail: TubingDetailRecord, locale: string) {
   const image = detail.image || "/images/products/common/product-placeholder.svg";
   const images = Array.isArray(detail.images) && detail.images.length > 0 ? detail.images : [image];
   const faqItems = getFaqItems(detail);
+
+  const copy = getTubingMaterialCopy(detail.slug, locale);
+  const en = locale === "en";
+  const authored = copy ? {
+    __locale: locale,
+    tubingAuthoredContent: true,
+    title: copy.h1,
+    name: copy.h1,
+    h1Title: copy.h1,
+    pageTitle: copy.h1,
+    displayModel: en ? "Select a Size" : "请选择尺寸",
+    description: copy.intro.join(" "),
+    shortDescription: copy.intro[0],
+    tubingIntroductionParagraphs: copy.intro,
+    commonApplications: copy.applications,
+    features: copy.features,
+    sellingPoints: copy.features,
+    advantages: copy.features,
+    imageAlt: copy.imageAlt,
+    alt: copy.imageAlt,
+    specs: (en ? localizeProductDetailData(detail).specs : detail.specs) || [],
+    applicationDetails: {
+      tabLabel: en ? "Applications" : "应用与连接",
+      title: en ? "Tubing Selection and Connections" : "管材选型与连接",
+      intro: [],
+      items: [
+        { title: en ? "Selection Considerations" : "选型要点", paragraphs: copy.features },
+        { title: en ? "Application Evaluation" : "应用评估", paragraphs: copy.applications },
+      ],
+      selectionNote: { title: en ? "Fitting Compatibility" : "接头匹配", paragraphs: [copy.connections] },
+    },
+    faq: copy.faqs,
+    faqs: copy.faqs,
+    faqItems: copy.faqs,
+    detailFaqs: copy.faqs,
+    bottomCtaTitle: copy.ctaTitle,
+    bottomCtaDesc: copy.ctaDescription,
+    bottomCtaButton: en ? "Contact an Engineer" : "联系工程师",
+    bottomCtaHref: en ? "/en/contact/" : "/contact/",
+    customInquiryHref: en ? "/en/contact/" : "/contact/",
+    contactHref: en ? "/en/contact/" : "/contact/",
+  } : {};
 
   return {
     ...detail,
@@ -131,15 +176,31 @@ function toClientData(detail: TubingDetailRecord) {
     showCustomInquiryCta: true,
     customInquiryHref: detail.bottomCtaHref || "/contact",
     contactHref: detail.bottomCtaHref || "/contact",
+    ...authored,
   };
 }
 
-export function getTubingMetadata(slug: string): Metadata {
+export function getTubingMetadata(slug: string, locale = "zh"): Metadata {
   const detail = findDetail(slug);
 
   if (!detail) {
     return {
       title: "管路系列 | Foreach Technology",
+    };
+  }
+  const copy = getTubingMaterialCopy(slug, locale);
+  if (copy) {
+    const alternates = getTubingAlternates(slug, locale);
+    return {
+      title: { absolute: copy.seoTitle },
+      description: copy.seoDescription,
+      alternates,
+      ...buildProductSocialMetadata({
+        data: { ...detail, imageAlt: copy.imageAlt },
+        title: copy.seoTitle,
+        description: copy.seoDescription,
+        canonicalUrl: alternates.canonical,
+      }),
     };
   }
 
@@ -155,7 +216,7 @@ export function getTubingMetadata(slug: string): Metadata {
   };
 }
 
-export default function TubingDetailStaticPage({ slug }: { slug: string }) {
+export default function TubingDetailStaticPage({ slug, locale = "zh" }: { slug: string; locale?: string }) {
   const detail = findDetail(slug);
 
   if (!detail) {
@@ -164,7 +225,7 @@ export default function TubingDetailStaticPage({ slug }: { slug: string }) {
 
   return (
     <div data-tubing-detail-page="true">
-      <ProductDetailView data={toClientData(detail)} />
+      <ProductDetailView data={toClientData(detail, locale)} />
     </div>
   );
 }

@@ -413,6 +413,10 @@ function getHomeFlowProductHref(
   const chinesePath =
     localizeValvelessPumpCategoryPath(HOME_FLOW_PRODUCT_PATHS[key] || "/products", locale);
 
+  if (locale === "en" && chinesePath === "/products?category=control") {
+    return "/en/products/control/";
+  }
+
   if (locale === "zh-CN") {
     return chinesePath;
   }
@@ -714,7 +718,9 @@ export default function HomeApplicationFlowSection({
     href={
       locale === "zh-CN"
         ? "/applications/ivd"
-        : `/${locale}/applications/ivd`
+        : locale === "en"
+          ? "/en/applications/"
+          : `/${locale}/applications/ivd`
     }
     className="home-flow-btn brand-navy-button-motion"
     data-home-action="applications"

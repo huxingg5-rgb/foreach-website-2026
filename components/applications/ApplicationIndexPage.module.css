@@ -1,0 +1,37 @@
+.main { width: min(1600px, calc(100% - 56px)); margin: 36px auto 64px; }
+.intro { margin-bottom: 28px; }
+.intro h1, .guidance h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.4; color: #183963; }
+.intro p, .guidanceIntro { margin: 0; max-width: 860px; color: #61748c; line-height: 1.85; }
+.intro p { max-width: none; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.card { min-width: 0; display: flex; flex-direction: column; border: 1px solid #e3eaf2; background: #fff; border-radius: 8px; overflow: hidden; }
+.scene { position: relative; aspect-ratio: 16 / 9; background: #edf2f7; overflow: hidden; }
+.scene img { object-fit: cover; }
+.cardContent { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 24px; }
+.card h2 { margin: 0 0 12px; font-size: 20px; line-height: 1.5; font-weight: 700; }
+.card h2 a { color: #183963; text-decoration: none; }
+.description { margin: 0 0 20px; color: #61748c; font-size: 15px; line-height: 1.85; }
+.topics { display: flex !important; flex-wrap: wrap; padding: 0; margin: 0 0 24px !important; list-style: none; }
+.domainLink { margin-top: auto; align-self: flex-end; }
+.card h2 a:hover { color: #007c6c; }
+.card h2 a:focus-visible, .choice a:focus-visible { outline: 2px solid #007c6c; outline-offset: 4px; border-radius: 3px; }
+.guidance { margin-top: 56px; padding-top: 36px; border-top: 1px solid #e3eaf2; }
+.choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
+.choice { padding: 24px; border: 1px solid #e3eaf2; background: #f7f9fc; border-radius: 8px; }
+.choice h3 { margin: 0 0 20px; font-size: 18px; line-height: 1.5; }
+.choice ul { margin: 0; padding: 0; list-style: none; }
+.choice li { display: flex; flex-direction: column; gap: 8px; color: #61748c; font-size: 15px; line-height: 1.75; }
+.choice li + li { margin-top: 20px; padding-top: 20px; border-top: 1px solid #e3eaf2; }
+.choice a { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 36px; color: #183963; font-weight: 600; text-decoration: none; }
+@media (max-width: 960px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .choices { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 600px) {
+  .main { width: calc(100% - 40px); margin-top: 28px; margin-bottom: 44px; }
+  .intro h1, .guidance h2 { font-size: 24px; }
+  .grid { grid-template-columns: 1fr; gap: 20px; }
+  .cardContent, .choice { padding: 20px; }
+  .choice a { min-height: 44px; }
+  .guidance { margin-top: 40px; padding-top: 28px; }
+}

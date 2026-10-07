@@ -1,0 +1,692 @@
+{
+  "series": {
+    "zh": {
+      "seoTitle": "IVD 与分析仪器流体管材选型 | FOREACH",
+      "seoDescription": "比较 FOREACH 六种仪器流体管材，查看实际内外径组合、型号、硬度与包装；结合介质、温度压力和接头要求完成 IVD 与分析仪器管路选型。",
+      "paragraphs": [
+        "FOREACH 管路系列提供 PVC、TPU、FEP、PTFE、PEEK、PFA 六种管材，以及按图配置的翻边或卡箍连接管组件，面向 IVD 体外诊断、生命科学、实验室自动化及分析检测等领域的设备制造商。管材与组件可用于样本及试剂输送、清洗排液、气体连接、管路延长和模块间接管等任务，并与匹配的接头、泵阀及设备端口组成气液流路。",
+        "不同管材与组件提供对应的尺寸及端接能力。例如，当前 PVC 管材提供 0.8–19.1 mm 内径范围内的规格，TPU 提供 1.6–7 mm 内径范围内的规格；PEEK 当前提供 0.2 × 0.8 mm、0.8 × 1.6 mm 两种内径 × 外径组合，FEP、PTFE、PFA 按已列型号选择相应内外径。管组件可按图配置管长、单端或双端法兰翻边及喇叭口式成型，并匹配接头、垫片、限位件和管路标识。以上为代表性规格与配置示例，内外径须按实际组合选取，流量、压降、承压及真空适用性需结合管长、壁厚、弯曲布管与完整端接组件确认。",
+        "各类管材按介质与布管要求选择对应材料方案。PVC、TPU 可作为柔性连接的候选；FEP、PTFE、PFA 可用于耐化学介质流路的材料评估；PEEK 可用于小内径分析液路的选型。具体材料等级、配方及适用条件按型号确认，不能仅凭材料名称推导整段管路的耐压或兼容性。工程选型需综合评估介质成分、浓度、温度、接触时间、吸附与析出要求、压力或真空、目标流量、管长及安装空间，匹配管材、接头和密封结构；RoHS、REACH 等材料合规资料按所选材料和项目要求确认。"
+      ],
+      "filterHint": "先选择材料，再进入详情页按实际内外径组合选型。",
+      "resultLabel": "6 种管材",
+      "ctaTitle": "需要确认管材和连接规格？",
+      "ctaDescription": "请提供介质与浓度、目标流量、ID/OD、管长、温度、压力或真空条件、接头和布管要求，由 FOREACH 协助确认候选材料与规格。"
+    },
+    "en": {
+      "seoTitle": "Instrument Tubing for IVD & Analytical Instruments | Foreach",
+      "seoDescription": "Compare instrument tubing materials, listed ID/OD combinations and packaging for IVD analyzers and analytical fluid paths. Get fitting selection support.",
+      "paragraphs": [
+        "FOREACH supplies PVC, TPU, FEP, PTFE, PEEK and PFA instrument tubing for liquid and gas transfer in IVD analyzers, analytical equipment and laboratory systems. Compare materials and listed models by fluid compatibility, routing flexibility, required ID/OD and installation space.",
+        "Alongside individual tubing materials, FOREACH provides custom assemblies with flanged or ferrule connections. Options can include single- or double-ended flanges, bell-shaped tube-end forming, matching fittings, gaskets, retaining components and labels. Tube dimensions and end connections must both match the equipment ports.",
+        "Review fluid composition and concentration, temperature, pressure or vacuum, line length, wall thickness and bend routing before selecting a tubing assembly. Flow and pressure drop depend on the complete line. Material compliance documents, including RoHS and REACH, can be provided according to the selected material and project requirements."
+      ],
+      "filterHint": "Choose a material, then select a listed ID/OD combination on its detail page.",
+      "resultLabel": "6 tubing materials",
+      "ctaTitle": "Need help selecting tubing and connections?",
+      "ctaDescription": "Share your fluid and concentration, target flow, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review material and size options."
+    }
+  },
+  "materials": {
+    "pvc": {
+      "zh": {
+        "h1": "聚氯乙烯（PVC）管材",
+        "seoTitle": "聚氯乙烯（PVC）仪器管材 | FOREACH",
+        "seoDescription": "查看 FOREACH 聚氯乙烯（PVC）管材的实际内外径组合、型号与包装，结合介质、温压和接头要求完成仪器管路选型。",
+        "cardTitle": "聚氯乙烯（PVC）管材",
+        "cardLines": [
+          "柔性布管 · 硬度与尺寸选型",
+          "已列内径：0.8–19.1 mm",
+          "已列外径：2.4–25.4 mm"
+        ],
+        "intro": [
+          "FOREACH 聚氯乙烯（PVC）管材提供不同硬度和尺寸组合，面向仪器内部柔性连接，用于气液输送、清洗与排液管路的材料选型，可按布管空间和连接要求选择具体型号。",
+          "当前列出内径 0.8–19.1 mm、外径 2.4–25.4 mm 及 55A、65A 硬度配置。内外径按实际组合选取，同一内径可对应不同壁厚；弯曲、密封和承压表现需结合尺寸、接头及系统工况确认。",
+          "PVC 配方按具体型号与试剂、样本或清洗液的兼容性确认。结合温度、接触时间、吸附、析出与残留要求评估材料，并按倒刺或快插接口条件核对硬度、壁厚和固定方式。"
+        ],
+        "features": [
+          "按硬度与内外径选择具体配置",
+          "同内径可能对应不同外径和壁厚",
+          "包装长度随型号确认"
+        ],
+        "applications": [
+          "仪器内部柔性连接",
+          "介质兼容性确认后的清洗与排液管路",
+          "样本或试剂路径的材料评估"
+        ],
+        "connections": "倒刺连接应核对内径、硬度、壁厚和固定方式；快插连接应核对外径、尺寸公差和厂家支持的软管条件。装配后按系统压力或真空要求验证密封与拔脱性能。",
+        "faqs": [
+          {
+            "question": "PVC 管可以直接用于所有试剂吗？",
+            "answer": "不能仅根据 PVC 名称判断。需核对实际配方、试剂成分与浓度、温度和接触时间；敏感样本路径还应验证吸附、析出和残留。"
+          },
+          {
+            "question": "55A 与 65A 如何选择？",
+            "answer": "当前选型器有这两种硬度。结合布管柔性、倒刺装配、固定方式和壁厚选择；不能仅根据硬度推导压力能力。"
+          },
+          {
+            "question": "相同内径为什么有不同外径？",
+            "answer": "不同外径对应不同名义壁厚，会影响弯曲和接口匹配。应按实际尺寸组合选择，而不是只确认内径。"
+          },
+          {
+            "question": "PVC 管能作蠕动泵管吗？",
+            "answer": "只有具体配方和尺寸经泵头匹配、疲劳寿命及介质测试后才可确认。仪器连接管不能自动视为蠕动泵管。"
+          },
+          {
+            "question": "包装长度和特殊规格如何确认？",
+            "answer": "以选中型号的包装为准。特殊硬度、尺寸或卷长应按项目需求确认可行性、起订量与交期。"
+          }
+        ],
+        "ctaTitle": "需要确认 PVC 管的规格和工况？",
+        "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 PVC 管材与连接配置。",
+        "imageAlt": "FOREACH 聚氯乙烯（PVC）管材产品图",
+        "cardLabel": "PVC",
+        "cardHeading": "聚氯乙烯（PVC）管材，内径 0.8–19.1 mm，可选 55A、65A 两种硬度，管身柔软，便于弯曲和连接"
+      },
+      "en": {
+        "h1": "Flexible PVC Tubing for Instrument Fluid Lines",
+        "seoTitle": "Polyvinyl Chloride (PVC) Tubing | Foreach",
+        "seoDescription": "Compare polyvinyl chloride (PVC) tubing sizes, hardness and packaging for flexible instrument connections. Select a listed ID/OD combination.",
+        "cardTitle": "Polyvinyl Chloride (PVC) Tubing",
+        "cardLines": [
+          "Flexible routing and hardness options",
+          "Listed IDs: 0.8–19.1 mm",
+          "Listed ODs: 2.4–25.4 mm"
+        ],
+        "intro": [
+          "FOREACH flexible polyvinyl chloride (PVC) tubing provides options for instrument gas/liquid connections and wash or drain lines. Select the PVC formulation and model around routing space, flexibility, port design and fluid conditions.",
+          "The current catalogue lists IDs of 0.8–19.1 mm, ODs of 2.4–25.4 mm and 55A or 65A hardness configurations. Choose an actual listed ID/OD combination; models with the same ID can have different wall thicknesses. Check the product code and roll length for the selected model.",
+          "For sample, reagent or wash-fluid paths, evaluate compatibility with the specific PVC formulation. Where adsorption, extractables or carryover affect the workflow, assess the material and cleaning process under intended conditions. Match dimensions, hardness and retention to the connection and system pressure or vacuum."
+        ],
+        "features": [
+          "Select by hardness and ID/OD",
+          "Compare wall thickness when models share the same ID",
+          "Check the roll length for each model"
+        ],
+        "applications": [
+          "Flexible connections inside instruments",
+          "Wash and drain lines after compatibility review",
+          "Material evaluation for sample or reagent paths"
+        ],
+        "connections": "For barbed connections, confirm ID, hardness, wall thickness and retention. For push-in connections, confirm OD, tolerance and the fitting manufacturer’s tubing requirements. Evaluate sealing and retention at the system pressure or vacuum.",
+        "faqs": [
+          {
+            "question": "Is PVC tubing compatible with every reagent?",
+            "answer": "Compatibility depends on the formulation, reagent composition and concentration, temperature and contact time. For sensitive sample paths, also evaluate adsorption, extractables and carryover."
+          },
+          {
+            "question": "How should I choose between 55A and 65A hardness?",
+            "answer": "Consider routing flexibility, barb assembly, retention and wall thickness. Hardness alone does not establish the working pressure of a tubing configuration."
+          },
+          {
+            "question": "Why are different ODs offered for the same ID?",
+            "answer": "Different ODs give different nominal wall thicknesses and affect routing and fitting compatibility. Select the complete ID/OD combination."
+          },
+          {
+            "question": "Can this PVC tubing be used in a peristaltic pump?",
+            "answer": "Confirm the specific formulation, pumphead size, fatigue life and fluid compatibility first. Connection tubing is not automatically qualified as peristaltic pump tubing."
+          },
+          {
+            "question": "How do I confirm packaging or custom sizes?",
+            "answer": "Review the roll length for the selected model. Discuss special hardness, dimensions or lengths with Foreach to confirm feasibility, MOQ and lead time."
+          }
+        ],
+        "ctaTitle": "Need to confirm your PVC tubing specification?",
+        "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the PVC tubing and connection options.",
+        "imageAlt": "Foreach polyvinyl chloride (PVC) tubing product photograph",
+        "cardLabel": "PVC",
+        "cardHeading": "Polyvinyl Chloride (PVC) tubing with a 0.8–19.1 mm inner diameter range and 55A/65A hardness options for flexible fluid connections inside instruments"
+      }
+    },
+    "tpu": {
+      "zh": {
+        "h1": "热塑性聚氨酯（TPU）管材",
+        "seoTitle": "热塑性聚氨酯（TPU）仪器管材 | FOREACH",
+        "seoDescription": "查看 FOREACH 热塑性聚氨酯（TPU）管材的实际内外径组合、型号与包装，结合介质、温压和接头要求完成仪器管路选型。",
+        "cardTitle": "热塑性聚氨酯（TPU）管材",
+        "cardLines": [
+          "硬度选择 · 仪器布管",
+          "已列内径：1.6–7 mm",
+          "已列外径：3.2–10 mm"
+        ],
+        "intro": [
+          "FOREACH 热塑性聚氨酯（TPU）管材涵盖不同硬度及内外径组合，面向仪器内部气路或液路连接，用于柔性布管、管路延长及模块间接管，可按设备空间选择具体配置。",
+          "当前列出内径 1.6–7 mm、外径 3.2–10 mm，以及 80A、85A、95A 硬度配置。尺寸、颜色和包装按对应型号确认，弯曲与接口适配、密封及使用寿命需结合壁厚、安装和实际工况评估。",
+          "TPU 介质兼容性与具体牌号有关，接触水、清洗液或溶剂时需核对材料类型、温度及接触时间。结合软管硬度、接头结构和压力或真空条件确认材料与固定方案。"
+        ],
+        "features": [
+          "当前配置提供 80A、85A、95A 硬度选择",
+          "颜色随具体型号查看",
+          "尺寸与硬度需作为组合匹配"
+        ],
+        "applications": [
+          "仪器内部气路连接评估",
+          "需要柔性布管的连接位置",
+          "兼容性确认后的液体连接"
+        ],
+        "connections": "快插接头需核对外径、公差、硬度和接头允许的管材类型；倒刺接头需核对内径、壁厚和固定要求。避免仅按外径相同就认定连接兼容。",
+        "faqs": [
+          {
+            "question": "TPU 管的硬度会影响什么？",
+            "answer": "会影响柔性、装配和机械表现。当前录入 80A、85A、95A；压力能力仍需具体型号的工况数据。"
+          },
+          {
+            "question": "TPU 管能长期输送水吗？",
+            "answer": "需确认具体材料类型和牌号。醚型与酯型 TPU 在湿环境下表现不同，不能把某一牌号的耐水性用于全部产品。"
+          },
+          {
+            "question": "颜色是否可以独立选择？",
+            "answer": "当前页面按硬度、内径和外径选型，颜色随匹配型号显示。特殊颜色应另行确认。"
+          },
+          {
+            "question": "相同硬度和尺寸出现多个型号怎么办？",
+            "answer": "继续选择具体型号和商品编码，核对颜色、系列或供货差异；如仍无法区分，可向 FOREACH 提交所需配置。"
+          },
+          {
+            "question": "TPU 管能替代氟聚合物管吗？",
+            "answer": "需要重新核对介质、温度、压力和连接。柔性或耐磨性的材料特点并不意味着相同的化学兼容性。"
+          }
+        ],
+        "ctaTitle": "需要确认 TPU 管的规格和工况？",
+        "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 TPU 管材与连接配置。",
+        "imageAlt": "FOREACH 热塑性聚氨酯（TPU）管材产品图",
+        "cardLabel": "TPU",
+        "cardHeading": "热塑性聚氨酯（TPU）管材，内径 1.6–7.0 mm，可选 80A、85A、95A 三种硬度，用于设备中的管路连接"
+      },
+      "en": {
+        "h1": "TPU Tubing for Instrument Connections",
+        "seoTitle": "Thermoplastic Polyurethane (TPU) Tubing | Foreach",
+        "seoDescription": "Explore thermoplastic polyurethane (TPU) tubing by hardness, ID and OD. Compare listed models, colors and packaging for instrument connections.",
+        "cardTitle": "Thermoplastic Polyurethane (TPU) Tubing",
+        "cardLines": [
+          "Hardness options for instrument routing",
+          "Listed IDs: 1.6–7 mm",
+          "Listed ODs: 3.2–10 mm"
+        ],
+        "intro": [
+          "FOREACH thermoplastic polyurethane (TPU) tubing offers hardness and dimensional options for instrument gas or liquid connections. Compare the listed polyurethane tubing models around routing, fitting and fluid requirements, while retaining the specific TPU grade as part of the selection.",
+          "The current catalogue lists IDs of 1.6–7 mm, ODs of 3.2–10 mm and hardness options of 80A, 85A and 95A. Select a complete listed ID/OD and hardness combination, then confirm color, product code and packaging.",
+          "Fluid compatibility depends on the TPU grade. For sustained exposure to water, cleaning agents or solvents, confirm material type, temperature and contact duration before evaluating bend routing, sealing and service life in the assembled line."
+        ],
+        "features": [
+          "Listed hardness options: 80A, 85A and 95A",
+          "Check the color for the selected model",
+          "Match hardness and dimensions as a complete configuration"
+        ],
+        "applications": [
+          "Evaluation for instrument gas connections",
+          "Connections requiring flexible routing",
+          "Liquid connections after compatibility review"
+        ],
+        "connections": "For push-in fittings, check OD, tolerance, hardness and the accepted tubing type. For barbs, check ID, wall thickness and retention. Matching the nominal OD alone does not establish compatibility.",
+        "faqs": [
+          {
+            "question": "What does TPU hardness affect?",
+            "answer": "Hardness influences flexibility, assembly and mechanical behavior. The listed options are 80A, 85A and 95A. Confirm operating pressure for the specific model."
+          },
+          {
+            "question": "Is TPU suitable for continuous water exposure?",
+            "answer": "Confirm the grade and material type. Ether-based and ester-based TPU can behave differently in wet conditions; performance of one grade does not apply to all TPU products."
+          },
+          {
+            "question": "Can I select the color independently?",
+            "answer": "The current selector uses hardness, ID and OD. Color is shown with the matched model. Discuss special color requirements separately."
+          },
+          {
+            "question": "What if several models match the same dimensions?",
+            "answer": "Check the model, product code, color, series and packaging. If the options remain unclear, share the required configuration with Foreach."
+          },
+          {
+            "question": "Can TPU replace fluoropolymer tubing?",
+            "answer": "Recheck the fluid, temperature, pressure and fittings. Flexibility or abrasion resistance does not establish equivalent chemical compatibility."
+          }
+        ],
+        "ctaTitle": "Need to confirm your TPU tubing specification?",
+        "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the TPU tubing and connection options.",
+        "imageAlt": "Foreach thermoplastic polyurethane (TPU) tubing product photograph",
+        "cardLabel": "TPU",
+        "cardHeading": "Thermoplastic Polyurethane (TPU) tubing with a 1.6–7.0 mm inner diameter range and 80A/85A/95A hardness options for fluid connections and routing inside instruments"
+      }
+    },
+    "fep": {
+      "zh": {
+        "h1": "聚全氟乙丙烯（FEP）管材",
+        "seoTitle": "聚全氟乙丙烯（FEP）仪器管材 | FOREACH",
+        "seoDescription": "查看 FOREACH 聚全氟乙丙烯（FEP）管材的实际内外径组合、型号与包装，结合介质、温压和接头要求完成仪器管路选型。",
+        "cardTitle": "聚全氟乙丙烯（FEP）管材",
+        "cardLines": [
+          "氟聚合物连接 · 流体观察评估",
+          "已列内径：0.3–2 mm",
+          "已列外径：1.6–3.2 mm"
+        ],
+        "intro": [
+          "FOREACH 聚全氟乙丙烯（FEP）管材提供仪器流体连接所需的小管径配置，面向气液输送及设备端口接管，也可作为需要观察流体或气泡的管路候选，按介质与安装条件评估。",
+          "当前列出内径 0.3–2 mm、外径 1.6–3.2 mm，尺寸按对应型号组合选择。流体可视性按实际管壁与样品外观确认；翻边或其他端部成型、管长及连接组件按项目配置。",
+          "FEP 属于具有广泛化学耐受性的氟聚合物，需按介质成分、浓度、温度和压力确认兼容性，并匹配接头密封与布管要求。选中管材与完整组件的工作范围按规格资料确认。"
+        ],
+        "features": [
+          "当前型号按内径与外径选择",
+          "可按实际样品评估液体或气泡观察",
+          "接头和温压条件需共同确认"
+        ],
+        "applications": [
+          "试剂与清洗液连接的兼容性评估",
+          "需要观察流体状态的仪器管路",
+          "小尺寸液路连接"
+        ],
+        "connections": "按外径、公差和厂家规定选择平底或卡套连接，同时核对接头螺纹、密封结构和材质。管端需按接头要求切割与安装；升温工况应确认管材与接头的压力降额。",
+        "faqs": [
+          {
+            "question": "FEP 与 PTFE 如何比较？",
+            "answer": "FEP 通常更便于观察流体，但实际外观、尺寸、介质和连接要求仍需比较。不能仅按材料名称判断精度或耐压。"
+          },
+          {
+            "question": "FEP 管是否适用于全部溶剂？",
+            "answer": "广泛耐化学性不等于兼容所有条件。根据介质、浓度、温度和接触时间确认具体管材及所有接液部件。"
+          },
+          {
+            "question": "FEP 管可以连续用于 200 °C 吗？",
+            "answer": "不能由材料参考值直接确认。需要选中管材型号与连接组件的温压数据，并确认介质和使用时间。"
+          },
+          {
+            "question": "为什么需要同时确认 ID 和 OD？",
+            "answer": "ID 影响流阻和管内容积，OD 与公差影响接头配合；两者必须对应同一实际尺寸组合。"
+          },
+          {
+            "question": "FEP 管可以用于光学气泡检测吗？",
+            "answer": "需要验证传感器波长、管材外观、壁厚和尺寸适配。可视性不自动代表与全部光学传感器兼容。"
+          }
+        ],
+        "ctaTitle": "需要确认 FEP 管的规格和工况？",
+        "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 FEP 管材与连接配置。",
+        "imageAlt": "FOREACH 聚全氟乙丙烯（FEP）管材产品图",
+        "cardLabel": "FEP",
+        "cardHeading": "聚全氟乙丙烯（FEP）管材，内径 0.3–2.0 mm，适合小口径管路连接"
+      },
+      "en": {
+        "h1": "FEP Tubing for Instrument Fluid Lines",
+        "seoTitle": "Fluorinated Ethylene Propylene (FEP) Tubing | Foreach",
+        "seoDescription": "Explore fluorinated ethylene propylene (FEP) tubing sizes and models for instrument fluid paths. Review packaging and fitting requirements.",
+        "cardTitle": "Fluorinated Ethylene Propylene (FEP) Tubing",
+        "cardLines": [
+          "Fluoropolymer option for fluid monitoring",
+          "Listed IDs: 0.3–2 mm",
+          "Listed ODs: 1.6–3.2 mm"
+        ],
+        "intro": [
+          "FOREACH fluorinated ethylene propylene (FEP) tubing is a fluoropolymer option for instrument fluid connections. Its broad chemical resistance provides a basis for material selection, with compatibility confirmed for the actual fluid and operating conditions.",
+          "The current catalogue lists ID/OD combinations within 0.3–2 mm ID and 1.6–3.2 mm OD. Where liquid or bubble observation is required, assess visibility using the actual tubing appearance and wall thickness. Confirm the product code and packaging for the chosen combination.",
+          "Select the model around fluid composition, concentration, temperature, pressure, line length and routing, and match the fitting and tube-end preparation. A resin temperature value does not establish the operating range of the tubing and fitting assembly."
+        ],
+        "features": [
+          "Select listed ID/OD combinations",
+          "Evaluate fluid or bubble visibility with the actual tubing",
+          "Confirm fittings and temperature-pressure conditions together"
+        ],
+        "applications": [
+          "Compatibility evaluation for reagent and wash connections",
+          "Instrument paths requiring observation of fluid condition",
+          "Small-diameter fluid connections"
+        ],
+        "connections": "Select flat-bottom or compression connections around OD, tolerance and the fitting specifications. Check the thread, sealing geometry and materials. Prepare the tube end as specified and confirm pressure derating for elevated-temperature operation.",
+        "faqs": [
+          {
+            "question": "How should I compare FEP and PTFE?",
+            "answer": "FEP often offers better visibility of fluid. Compare the actual appearance, dimensions, fluid and connections; material names alone do not establish tolerance or pressure capability."
+          },
+          {
+            "question": "Is FEP compatible with every solvent?",
+            "answer": "Broad chemical resistance does not cover every condition. Confirm the fluid, concentration, temperature and exposure time for the tubing and all wetted components."
+          },
+          {
+            "question": "Can this FEP tubing operate continuously at 200 °C?",
+            "answer": "A resin reference value is insufficient. Confirm temperature-pressure data for the selected tubing model and connections, together with the fluid and operating duration."
+          },
+          {
+            "question": "Why should I specify both ID and OD?",
+            "answer": "ID affects flow resistance and internal volume. OD and tolerance affect fitting compatibility. Select a listed combination containing both dimensions."
+          },
+          {
+            "question": "Can FEP tubing be used with an optical bubble detector?",
+            "answer": "Validate the detector wavelength, tubing appearance, wall thickness and dimensions. Visibility does not establish compatibility with every optical detector."
+          }
+        ],
+        "ctaTitle": "Need to confirm your FEP tubing specification?",
+        "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the FEP tubing and connection options.",
+        "imageAlt": "Foreach fluorinated ethylene propylene (FEP) tubing product photograph",
+        "cardLabel": "FEP",
+        "cardHeading": "Fluorinated Ethylene Propylene (FEP) tubing with a 0.3–2.0 mm inner diameter range for small-bore fluid connections in analytical instruments"
+      }
+    },
+    "ptfe": {
+      "zh": {
+        "h1": "聚四氟乙烯（PTFE）管材",
+        "seoTitle": "聚四氟乙烯（PTFE）仪器管材 | FOREACH",
+        "seoDescription": "查看 FOREACH 聚四氟乙烯（PTFE）管材的实际内外径组合、型号与包装，结合介质、温压和接头要求完成仪器管路选型。",
+        "cardTitle": "聚四氟乙烯（PTFE）管材",
+        "cardLines": [
+          "氟聚合物连接 · 尺寸与型号选择",
+          "已列内径：0.5–4 mm",
+          "已列外径：1.6–6 mm"
+        ],
+        "intro": [
+          "FOREACH 聚四氟乙烯（PTFE）管材包括 TH1、TH2 等型号及颜色配置，面向仪器气液输送和耐化学介质连接，可配合接头形成设备液路或定制端接管组件。",
+          "当前列出内径 0.5–4 mm、外径 1.6–6 mm，按实际内外径组合选择系列、颜色及包装。单端或双端翻边、管长及配套接头按图确认，流量、压降和密封表现需结合完整管路评估。",
+          "PTFE 是常用于耐化学介质连接的氟聚合物，材料适用性需结合介质、浓度、温度和接触时间确认。工作压力按具体管壁尺寸与连接组件资料核对，同时确认管端成型与布管条件。"
+        ],
+        "features": [
+          "按内径、外径与已列颜色选择",
+          "型号与商品编码对应具体配置",
+          "系列、颜色与包装一并核对"
+        ],
+        "applications": [
+          "耐化学介质管路的材料评估",
+          "仪器试剂与清洗连接",
+          "按具体工况确认的液路转接"
+        ],
+        "connections": "按管材外径、公差、端口几何和接头规格确认卡套或平底连接。PTFE 装配需关注夹持、密封及长期载荷下的表现；如需要观察流体，应先确认实际外观，不将透明颜色记录当成普遍性能。",
+        "faqs": [
+          {
+            "question": "TH1 与 TH2 应如何选择？",
+            "answer": "请结合目标尺寸、颜色、包装和实际工况向 FOREACH 确认系列配置。需要特定公差或材料等级时，应在选型需求中明确说明。"
+          },
+          {
+            "question": "为什么相同尺寸会出现多个型号？",
+            "answer": "系列、颜色或包装可能不同。请同时确认型号与商品编码；如无法区分，可提交所需规格，由 FOREACH 协助确认。"
+          },
+          {
+            "question": "PTFE 管一定是透明的吗？",
+            "answer": "常见 PTFE 外观为不透明或半透明。如果需要观察液体或气泡，应按实际管材样品确认可视性，再评估 FEP 等材料选项。"
+          },
+          {
+            "question": "如何确认 PTFE 管的工作温度？",
+            "answer": "提供具体型号、介质、压力和连续使用时间，由 FOREACH 协助核对成品管材与连接组件的适用条件。材料手册不能单独确定装配后的工作范围。"
+          },
+          {
+            "question": "100 ft 和 100 m 包装是否相同？",
+            "answer": "不同。100 ft 等于 30.48 m，而 100 m 是另一卷长。报价和选型清单应保留原包装单位。"
+          }
+        ],
+        "ctaTitle": "需要确认 PTFE 管的规格和工况？",
+        "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 PTFE 管材与连接配置。",
+        "imageAlt": "FOREACH 聚四氟乙烯（PTFE）管材产品图",
+        "cardLabel": "PTFE",
+        "cardHeading": "聚四氟乙烯（PTFE）管材，内径 0.5–4.0 mm，用于试剂、清洗液等介质的输送"
+      },
+      "en": {
+        "h1": "PTFE Tubing for Instrument Fluid Lines",
+        "seoTitle": "Polytetrafluoroethylene (PTFE) Tubing | Foreach",
+        "seoDescription": "Compare polytetrafluoroethylene (PTFE) tubing ID/OD combinations, models, colors and packaging. Confirm fluid and fitting requirements.",
+        "cardTitle": "Polytetrafluoroethylene (PTFE) Tubing",
+        "cardLines": [
+          "Fluoropolymer connections and model options",
+          "Listed IDs: 0.5–4 mm",
+          "Listed ODs: 1.6–6 mm"
+        ],
+        "intro": [
+          "FOREACH polytetrafluoroethylene (PTFE) tubing provides a fluoropolymer option for chemically demanding instrument fluid paths. Compare the listed models against the fluid, temperature, pressure and end-connection requirements before confirming suitability.",
+          "The current catalogue lists IDs of 0.5–4 mm and ODs of 1.6–6 mm, including TH1 and TH2 models with corresponding color options. A size can match more than one model; confirm the actual ID/OD combination, series, color and product code.",
+          "Check packaging, line length, wall thickness and connection method. Tubing, gaskets and sealing geometry jointly determine the behavior of the complete fluid line. Match pressure or vacuum conditions to the selected dimensions and assembled connection."
+        ],
+        "features": [
+          "Select the listed ID, OD and color combination",
+          "Identify the configuration by model and product code",
+          "Review series, color and packaging together"
+        ],
+        "applications": [
+          "Material evaluation for chemically demanding paths",
+          "Instrument reagent and wash connections",
+          "Fluid connections confirmed for the operating conditions"
+        ],
+        "connections": "Confirm compression or flat-bottom fittings using OD, tolerance, port geometry and fitting specifications. Evaluate retention, sealing and behavior under sustained loading. Where fluid visibility is needed, check the actual appearance instead of assuming all listed colors provide transparency.",
+        "faqs": [
+          {
+            "question": "How should I select between TH1 and TH2?",
+            "answer": "Share the required dimensions, color, packaging and operating conditions with Foreach to confirm the series configuration. Specify any required tolerances or material grade."
+          },
+          {
+            "question": "Why can the same size match several models?",
+            "answer": "Series, color or packaging may differ. Confirm both the model and product code. If the options remain unclear, ask Foreach to review the required specification."
+          },
+          {
+            "question": "Is all PTFE tubing transparent?",
+            "answer": "Typical PTFE is opaque or translucent. If liquid or bubble visibility is required, evaluate the actual tubing sample and compare alternatives such as FEP."
+          },
+          {
+            "question": "How do I confirm the operating temperature of PTFE tubing?",
+            "answer": "Share the model, fluid, pressure and operating duration with Foreach to review the tubing and connection conditions. A resin datasheet alone does not establish the operating range of the assembly."
+          },
+          {
+            "question": "Are 100 ft and 100 m rolls equivalent?",
+            "answer": "No. A 100 ft roll is 30.48 m; a 100 m roll is a different length. Retain the original packaging unit in quotations and selection lists."
+          }
+        ],
+        "ctaTitle": "Need to confirm your PTFE tubing specification?",
+        "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the PTFE tubing and connection options.",
+        "imageAlt": "Foreach polytetrafluoroethylene (PTFE) tubing product photograph",
+        "cardLabel": "PTFE",
+        "cardHeading": "Polytetrafluoroethylene (PTFE) tubing with a 0.5–4.0 mm inner diameter range for reagent and wash-fluid connections in instruments"
+      }
+    },
+    "peek": {
+      "zh": {
+        "h1": "聚醚醚酮（PEEK）管材",
+        "seoTitle": "聚醚醚酮（PEEK）仪器管材 | FOREACH",
+        "seoDescription": "查看 FOREACH 聚醚醚酮（PEEK）管材的实际内外径组合、型号与包装，结合介质、温压和接头要求完成仪器管路选型。",
+        "cardTitle": "聚醚醚酮（PEEK）管材",
+        "cardLines": [
+          "小内径管路 · 分析仪器连接",
+          "已列内径：0.2 / 0.8 mm",
+          "已列外径：0.8 / 1.6 mm"
+        ],
+        "intro": [
+          "FOREACH 聚醚醚酮（PEEK）管材提供小内径分析仪器连接规格，面向样品或试剂输送、设备端口接管及小体积流路布置，按目标流量、压降和接头条件选择。",
+          "当前提供 0.2 × 0.8 mm 与 0.8 × 1.6 mm 两种内径 × 外径组合，分别对应独立型号与商品编码。管长、内径及端接结构共同影响压降和流路内容积，高压应用需取得选中规格的工作压力与温度资料。",
+          "PEEK 是分析流体系统中常见的工程聚合物，需按溶剂或试剂成分、浓度和温度确认兼容性。结合壁厚、允许压降、接头材料及密封方式确定配置，压力能力以所选规格和完整组件为准。"
+        ],
+        "features": [
+          "当前列出两种实际 ID × OD 组合",
+          "按小内径液路流阻与内容积选择",
+          "压力和溶剂条件按规格确认"
+        ],
+        "applications": [
+          "小内径分析仪器连接",
+          "样本与试剂路径材料评估",
+          "需要非金属管材的流体连接评估"
+        ],
+        "connections": "0.8 mm OD 与 1.6 mm OD 管材必须匹配对应的接头或适配套；不能因接头螺纹相同而直接替换。1.6 mm 与 1/16 in（1.5875 mm）的关系应按厂家允许尺寸和公差确认。",
+        "faqs": [
+          {
+            "question": "PEEK 管是否能直接用于 HPLC 高压系统？",
+            "answer": "PEEK 在分析系统中常见，但本项目两种规格尚需型号级压力、温度和连接资料。材料名不构成高压系统适用证明。"
+          },
+          {
+            "question": "当前是否提供 0.2–0.8 mm 之间所有内径？",
+            "answer": "当前仅列出 0.2 和 0.8 mm 两种内径及对应外径。其他尺寸应另行确认，不能由范围端点推定可供应。"
+          },
+          {
+            "question": "PEEK 是否兼容所有有机溶剂？",
+            "answer": "不是。部分强酸可攻击 PEEK，部分溶剂可能造成管材溶胀。按具体成分、浓度、温度和压力进行兼容性审核。"
+          },
+          {
+            "question": "小内径是否一定更好？",
+            "answer": "小内径减少管内容积，但可能增加压降。应结合管长、黏度、流量与分析任务选择，不把内容积直接等同于死体积。"
+          },
+          {
+            "question": "1.6 mm OD 能与 1/16 in 接头连接吗？",
+            "answer": "需要核对接头支持的实际尺寸和公差。1/16 in 为 1.5875 mm，不能只凭近似数值承诺互换。"
+          }
+        ],
+        "ctaTitle": "需要确认 PEEK 管的规格和工况？",
+        "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 PEEK 管材与连接配置。",
+        "imageAlt": "FOREACH 聚醚醚酮（PEEK）管材产品图",
+        "cardLabel": "PEEK",
+        "cardHeading": "聚醚醚酮（PEEK）管材，内径可选 0.2 mm 或 0.8 mm，用于小口径管路连接"
+      },
+      "en": {
+        "h1": "Small-Bore PEEK Tubing for Analytical Instruments",
+        "seoTitle": "Polyether Ether Ketone (PEEK) Tubing | Foreach",
+        "seoDescription": "Explore polyether ether ketone (PEEK) tubing in two listed ID/OD combinations for analytical connections. Review model and fitting requirements.",
+        "cardTitle": "Polyether Ether Ketone (PEEK) Tubing",
+        "cardLines": [
+          "Small-bore analytical instrument connections",
+          "Listed IDs: 0.2 / 0.8 mm",
+          "Listed ODs: 0.8 / 1.6 mm"
+        ],
+        "intro": [
+          "FOREACH polyether ether ketone (PEEK) tubing provides small-bore options for analytical instrument connections. Compare the listed models around the fluid, target flow, line length and fitting requirements.",
+          "The current catalogue contains two ID × OD combinations: 0.2 × 0.8 mm and 0.8 × 1.6 mm, each with its own model and product code. Select one of these actual combinations rather than mixing the listed IDs and ODs independently.",
+          "For small-bore paths, review pressure drop, internal volume, solvent compatibility and routing. High-pressure applications require operating data for the selected tubing size; a fitting pressure rating is not a tubing pressure rating."
+        ],
+        "features": [
+          "Two listed ID × OD combinations",
+          "Evaluate pressure drop and internal volume for small-bore paths",
+          "Confirm pressure and solvent conditions by specification"
+        ],
+        "applications": [
+          "Small-bore analytical instrument connections",
+          "Material evaluation for sample and reagent paths",
+          "Evaluation for fluid connections requiring polymer tubing"
+        ],
+        "connections": "Match 0.8 mm and 1.6 mm OD tubing to the specified fitting or sleeve. Identical port threads do not establish interchangeable tube sizes. Confirm whether the fitting accepts 1.6 mm tubing or 1/16 in tubing, which is 1.5875 mm, within its permitted tolerances.",
+        "faqs": [
+          {
+            "question": "Is this PEEK tubing qualified for high-pressure HPLC?",
+            "answer": "PEEK is common in analytical systems, but these sizes still require model-specific pressure, temperature and connection data. The material name alone does not qualify the assembly."
+          },
+          {
+            "question": "Are all IDs between 0.2 and 0.8 mm available?",
+            "answer": "The current list contains only 0.2 and 0.8 mm IDs with their matching ODs. Other sizes require confirmation."
+          },
+          {
+            "question": "Is PEEK compatible with all organic solvents?",
+            "answer": "No. Certain strong acids can attack PEEK, and some solvents may cause tubing to swell. Review composition, concentration, temperature and pressure for the application."
+          },
+          {
+            "question": "Is a smaller ID always preferable?",
+            "answer": "A smaller ID reduces internal volume but may increase pressure drop. Select around length, viscosity, flow and the analytical task. Internal volume is not automatically dead volume."
+          },
+          {
+            "question": "Can 1.6 mm OD tubing use a 1/16 in fitting?",
+            "answer": "Check the dimensions and tolerances accepted by the fitting manufacturer. A 1/16 in diameter is 1.5875 mm; approximate dimensions do not establish interchangeability."
+          }
+        ],
+        "ctaTitle": "Need to confirm your PEEK tubing specification?",
+        "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the PEEK tubing and connection options.",
+        "imageAlt": "Foreach polyether ether ketone (PEEK) tubing product photograph",
+        "cardLabel": "PEEK",
+        "cardHeading": "Polyether Ether Ketone (PEEK) tubing with 0.2 mm and 0.8 mm inner diameter options for small-bore fluid connections in analytical instruments"
+      }
+    },
+    "pfa": {
+      "zh": {
+        "h1": "全氟烷氧基聚合物（PFA）管材",
+        "seoTitle": "全氟烷氧基聚合物（PFA）仪器管材 | FOREACH",
+        "seoDescription": "查看 FOREACH 全氟烷氧基聚合物（PFA）管材的实际内外径组合、型号与包装，结合介质、温压和接头要求完成仪器管路选型。",
+        "cardTitle": "全氟烷氧基聚合物（PFA）管材",
+        "cardLines": [
+          "氟聚合物连接 · 1.6 mm 外径",
+          "已列内径：0.5 / 0.8 / 1 mm",
+          "已列外径：1.6 mm"
+        ],
+        "intro": [
+          "FOREACH 全氟烷氧基聚合物（PFA）管材提供 1.6 mm 外径的仪器流体连接规格，面向耐化学介质气液输送及设备端口接管，可按内径和连接结构组织小管径流路。",
+          "当前提供 0.5、0.8、1.0 mm 内径，外径均为 1.6 mm，按对应型号查看商品编码与包装。实际流量、压降和承压能力需结合管长、壁厚与接头确认，端接及定制组件按项目评估。",
+          "PFA 属于可用于耐化学介质连接的氟聚合物，选型需核对介质、浓度、温度及接触时间。关注纯度或析出的项目，还需确认实际树脂等级、加工和清洁包装资料，材料等级与合规要求按所选配置确认。"
+        ],
+        "features": [
+          "当前三种内径对应同一 1.6 mm 外径",
+          "按介质、流量和管长选择 ID",
+          "纯度等级与清洁资料按项目确认"
+        ],
+        "applications": [
+          "耐化学介质仪器连接评估",
+          "试剂与清洗液连接",
+          "对材料纯度有要求的项目评估"
+        ],
+        "connections": "按 1.6 mm 外径、公差和端口几何选择配套接头。对纯度敏感的项目还需核对接头、密封件和清洗过程；不能只由 PFA 管材决定整条液路的洁净程度。",
+        "faqs": [
+          {
+            "question": "PFA 与 FEP、PTFE 应如何选择？",
+            "answer": "比较实际介质、温度、尺寸、连接和纯度需求；再结合相应牌号和成品资料选择，不能仅按材料价格或名称排序。"
+          },
+          {
+            "question": "当前 PFA 管属于高纯等级吗？",
+            "answer": "当前资料没有证明高纯等级。需要树脂牌号、析出或污染指标及加工与包装证据后才能作此宣称。"
+          },
+          {
+            "question": "当前可以选择哪些尺寸？",
+            "answer": "已列内径为 0.5、0.8、1.0 mm，外径均为 1.6 mm。其他尺寸和卷长需按项目确认。"
+          },
+          {
+            "question": "PFA 的耐温可以直接用材料手册吗？",
+            "answer": "材料手册可辅助初选，但工作温度和压力应依据具体成品尺寸、介质和连接配置确认。"
+          },
+          {
+            "question": "PFA 是否能确保样本无污染？",
+            "answer": "需要评价所有接液部件、清洗、装配和检测流程。材料选择本身不能保证整个系统无污染或无残留。"
+          }
+        ],
+        "ctaTitle": "需要确认 PFA 管的规格和工况？",
+        "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 PFA 管材与连接配置。",
+        "imageAlt": "FOREACH 全氟烷氧基聚合物（PFA）管材产品图",
+        "cardLabel": "PFA",
+        "cardHeading": "全氟烷氧基聚合物（PFA）管材，内径可选 0.5、0.8 或 1.0 mm，外径 1.6 mm，用于试剂、清洗液等介质的输送"
+      },
+      "en": {
+        "h1": "PFA Tubing for Instrument Fluid Lines",
+        "seoTitle": "Perfluoroalkoxy Polymer (PFA) Tubing | Foreach",
+        "seoDescription": "Explore perfluoroalkoxy polymer (PFA) tubing with 1.6 mm OD and three listed IDs. Review models, packaging and material-grade requirements.",
+        "cardTitle": "Perfluoroalkoxy Polymer (PFA) Tubing",
+        "cardLines": [
+          "Fluoropolymer tubing with 1.6 mm OD options",
+          "Listed IDs: 0.5 / 0.8 / 1 mm",
+          "Listed ODs: 1.6 mm"
+        ],
+        "intro": [
+          "FOREACH perfluoroalkoxy polymer (PFA) tubing provides fluoropolymer options for instrument fluid connections. Compare the listed models around the fluid, temperature, tubing dimensions and fitting requirements.",
+          "The current catalogue lists a 1.6 mm OD with IDs of 0.5, 0.8 or 1.0 mm. Select an actual combination around target flow, allowable pressure drop and line length, then confirm the model, product code and packaging.",
+          "Where purity or extractables matter, confirm the resin grade, processing and clean-packaging documentation. Check compatibility, temperature, pressure and end connections for the complete tubing assembly. The PFA material name alone does not establish a particular purity grade."
+        ],
+        "features": [
+          "Three listed IDs with a 1.6 mm OD",
+          "Select ID around the fluid, flow and line length",
+          "Confirm purity grade and cleanliness documentation for the project"
+        ],
+        "applications": [
+          "Evaluation for chemically demanding instrument connections",
+          "Reagent and wash-fluid connections",
+          "Project evaluation where material purity matters"
+        ],
+        "connections": "Select fittings around the 1.6 mm OD, tolerance and port geometry. For purity-sensitive projects, review fittings, seals and cleaning procedures as well. PFA tubing alone does not determine cleanliness of the complete fluid path.",
+        "faqs": [
+          {
+            "question": "How should I compare PFA, FEP and PTFE?",
+            "answer": "Compare the fluid, temperature, dimensions, connections and purity requirements, then use grade-specific and finished-product data. Material name or price alone is insufficient."
+          },
+          {
+            "question": "Is this PFA tubing a high-purity grade?",
+            "answer": "The current records do not establish a high-purity grade. Confirm resin, extractables or contamination data, processing and packaging before making that claim."
+          },
+          {
+            "question": "Which dimensions are listed?",
+            "answer": "The listed IDs are 0.5, 0.8 and 1.0 mm, all with a 1.6 mm OD. Discuss other dimensions or roll lengths separately."
+          },
+          {
+            "question": "Can a resin datasheet establish the operating temperature?",
+            "answer": "A resin datasheet can support initial material selection. Confirm operating temperature and pressure for the finished size, fluid and connection configuration."
+          },
+          {
+            "question": "Does PFA ensure a contamination-free sample path?",
+            "answer": "Evaluate all wetted components, cleaning, assembly and the analytical workflow. Material selection alone cannot guarantee a contamination-free or carryover-free system."
+          }
+        ],
+        "ctaTitle": "Need to confirm your PFA tubing specification?",
+        "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the PFA tubing and connection options.",
+        "imageAlt": "Foreach perfluoroalkoxy polymer (PFA) tubing product photograph",
+        "cardLabel": "PFA",
+        "cardHeading": "Perfluoroalkoxy Polymer (PFA) tubing with 0.5, 0.8 and 1.0 mm inner diameter options and a 1.6 mm outer diameter for reagent and wash-fluid connections in instruments"
+      }
+    }
+  }
+}

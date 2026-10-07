@@ -1,6 +1,8 @@
 import type { ProductSelectionProduct } from "@/data/products/selection/product-selection.types";
 
-export const tubingSelectionProducts: ProductSelectionProduct[] = [
+import { getTubingMaterialCopy } from "@/data/products/tubing/content";
+
+const baseTubingProducts: ProductSelectionProduct[] = [
   {
     "productId": "pvc-tubing",
     "categoryId": "tubing",
@@ -212,6 +214,20 @@ export const tubingSelectionProducts: ProductSelectionProduct[] = [
     }
   }
 ];
+
+// Authored material copy is shared by cards, details and search indexing.
+export const tubingSelectionProducts: ProductSelectionProduct[] = baseTubingProducts.map((product) => {
+  const zh = getTubingMaterialCopy(product.productId, "zh")!;
+  const en = getTubingMaterialCopy(product.productId, "en")!;
+  return {
+    ...product,
+    cardTitle: { zh: zh.cardTitle, en: en.cardTitle },
+    cardSubtitle: { zh: zh.cardHeading, en: en.cardHeading },
+    description: { zh: zh.seoDescription, en: en.seoDescription },
+    imageAlt: { zh: zh.imageAlt, en: en.imageAlt },
+    searchKeywords: { zh: `${zh.cardTitle} ${product.productId} 管材 管路`, en: `${en.cardTitle} ${product.productId} instrument tubing` },
+  };
+});
 
 export const tubingSelectionCards = tubingSelectionProducts;
 

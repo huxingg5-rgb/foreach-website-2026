@@ -1,0 +1,2851 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "path": "/en/applications/analytical-instruments/",
+      "kind": "analytical-instruments",
+      "slug": "",
+      "template": "analytical",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/diaphragm-pump/",
+      "kind": "analytical-instruments",
+      "slug": "diaphragm-pump",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/diaphragm-pump/diaphragm-circulation/",
+      "kind": "analytical-instruments",
+      "slug": "diaphragm-circulation",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/diaphragm-circulation/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/diaphragm-pump/diaphragm-gas-liquid/",
+      "kind": "analytical-instruments",
+      "slug": "diaphragm-gas-liquid",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/diaphragm-gas-liquid/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/diaphragm-pump/diaphragm-liquid/",
+      "kind": "analytical-instruments",
+      "slug": "diaphragm-liquid",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/diaphragm-liquid/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/diaphragm-pump/diaphragm-replenishment/",
+      "kind": "analytical-instruments",
+      "slug": "diaphragm-replenishment",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/diaphragm-replenishment/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/fluidics/",
+      "kind": "analytical-instruments",
+      "slug": "fluidics",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/fluidics/fluidics-fittings/",
+      "kind": "analytical-instruments",
+      "slug": "fluidics-fittings",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/fluidics-fittings/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/fluidics/fluidics-protection/",
+      "kind": "analytical-instruments",
+      "slug": "fluidics-protection",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/fluidics-protection/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/fluidics/fluidics-tubing/",
+      "kind": "analytical-instruments",
+      "slug": "fluidics-tubing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/fluidics-tubing/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-lab-analyzer/",
+      "kind": "analytical-instruments",
+      "slug": "guide-lab-analyzer",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-lab-analyzer/lab-analyzer-diaphragm-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "lab-analyzer-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/lab-analyzer-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-lab-analyzer/lab-analyzer-fluid-monitoring/",
+      "kind": "analytical-instruments",
+      "slug": "lab-analyzer-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/lab-analyzer-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-lab-analyzer/lab-analyzer-fluidic-connections/",
+      "kind": "analytical-instruments",
+      "slug": "lab-analyzer-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/lab-analyzer-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-lab-analyzer/lab-analyzer-fluidic-valves/",
+      "kind": "analytical-instruments",
+      "slug": "lab-analyzer-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/lab-analyzer-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-lab-analyzer/lab-analyzer-fluidic-valves/lab-analyzer-path-management/",
+      "kind": "analytical-instruments",
+      "slug": "lab-analyzer-path-management",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/lab-analyzer-path-management/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-lab-analyzer/lab-analyzer-piston-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "lab-analyzer-piston-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/lab-analyzer-piston-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-lab-analyzer/lab-analyzer-syringe-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "lab-analyzer-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/lab-analyzer-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-lab-analyzer/lab-analyzer-valveless-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "lab-analyzer-valveless-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/lab-analyzer-valveless-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-sample-prep/",
+      "kind": "analytical-instruments",
+      "slug": "guide-sample-prep",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-sample-prep/sample-prep-fluidic-connections/",
+      "kind": "analytical-instruments",
+      "slug": "sample-prep-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/sample-prep-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-sample-prep/sample-prep-fluidic-connections/sample-prep-filtration/",
+      "kind": "analytical-instruments",
+      "slug": "sample-prep-filtration",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/sample-prep-filtration/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-sample-prep/sample-prep-fluidic-valves/",
+      "kind": "analytical-instruments",
+      "slug": "sample-prep-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/sample-prep-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-sample-prep/sample-prep-pipetting-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "sample-prep-pipetting-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/sample-prep-pipetting-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-sample-prep/sample-prep-pipetting-pumps/sample-prep-extraction/",
+      "kind": "analytical-instruments",
+      "slug": "sample-prep-extraction",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/sample-prep-extraction/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-sample-prep/sample-prep-syringe-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "sample-prep-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/sample-prep-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-sample-prep/sample-prep-syringe-pumps/sample-prep-dilution/",
+      "kind": "analytical-instruments",
+      "slug": "sample-prep-dilution",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/sample-prep-dilution/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/",
+      "kind": "analytical-instruments",
+      "slug": "guide-spectroscopy",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/spectroscopy-fluid-monitoring/",
+      "kind": "analytical-instruments",
+      "slug": "spectroscopy-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/spectroscopy-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/spectroscopy-fluidic-connections/",
+      "kind": "analytical-instruments",
+      "slug": "spectroscopy-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/spectroscopy-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/spectroscopy-fluidic-valves/",
+      "kind": "analytical-instruments",
+      "slug": "spectroscopy-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/spectroscopy-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/spectroscopy-fluidic-valves/spectroscopy-switching/",
+      "kind": "analytical-instruments",
+      "slug": "spectroscopy-switching",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/spectroscopy-switching/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/spectroscopy-probes/",
+      "kind": "analytical-instruments",
+      "slug": "spectroscopy-probes",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/spectroscopy-probes/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/spectroscopy-syringe-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "spectroscopy-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/spectroscopy-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/spectroscopy-syringe-pumps/spectroscopy-reagent/",
+      "kind": "analytical-instruments",
+      "slug": "spectroscopy-reagent",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/spectroscopy-reagent/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/spectroscopy-syringe-pumps/spectroscopy-sampling/",
+      "kind": "analytical-instruments",
+      "slug": "spectroscopy-sampling",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/spectroscopy-sampling/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-spectroscopy/spectroscopy-valveless-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "spectroscopy-valveless-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/spectroscopy-valveless-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/",
+      "kind": "analytical-instruments",
+      "slug": "guide-water-quality",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/water-quality-diaphragm-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "water-quality-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/water-quality-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/water-quality-fluid-monitoring/",
+      "kind": "analytical-instruments",
+      "slug": "water-quality-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/water-quality-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/water-quality-fluidic-connections/",
+      "kind": "analytical-instruments",
+      "slug": "water-quality-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/water-quality-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/water-quality-fluidic-connections/water-quality-protection/",
+      "kind": "analytical-instruments",
+      "slug": "water-quality-protection",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/water-quality-protection/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/water-quality-fluidic-valves/",
+      "kind": "analytical-instruments",
+      "slug": "water-quality-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/water-quality-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/water-quality-piston-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "water-quality-piston-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/water-quality-piston-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/water-quality-piston-pumps/water-quality-reagent/",
+      "kind": "analytical-instruments",
+      "slug": "water-quality-reagent",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/water-quality-reagent/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/water-quality-piston-pumps/water-quality-sampling/",
+      "kind": "analytical-instruments",
+      "slug": "water-quality-sampling",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/water-quality-sampling/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/guide-water-quality/water-quality-syringe-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "water-quality-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/water-quality-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/liquid-chromatography/",
+      "kind": "analytical-instruments",
+      "slug": "liquid-chromatography",
+      "template": "analytical",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/liquid-chromatography/lc-autosampler-piston-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "lc-autosampler-piston-pumps",
+      "template": "analytical",
+      "aliases": [
+        "/en/applications/analytical-instruments/lc-autosampler-piston-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/liquid-chromatography/lc-autosampler-piston-pumps/lc-sample-loop-loading/",
+      "kind": "analytical-instruments",
+      "slug": "lc-sample-loop-loading",
+      "template": "analytical",
+      "aliases": [
+        "/en/applications/analytical-instruments/lc-sample-loop-loading/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/liquid-chromatography/lc-autosampler-piston-pumps/lc-sample-metering/",
+      "kind": "analytical-instruments",
+      "slug": "lc-sample-metering",
+      "template": "analytical",
+      "aliases": [
+        "/en/applications/analytical-instruments/lc-sample-metering/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/liquid-chromatography/lc-needle-wash-diaphragm-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "lc-needle-wash-diaphragm-pumps",
+      "template": "analytical",
+      "aliases": [
+        "/en/applications/analytical-instruments/lc-needle-wash-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/liquid-chromatography/lc-needle-wash-diaphragm-pumps/lc-needle-wash-supply/",
+      "kind": "analytical-instruments",
+      "slug": "lc-needle-wash-supply",
+      "template": "analytical",
+      "aliases": [
+        "/en/applications/analytical-instruments/lc-needle-wash-supply/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/liquid-chromatography/lc-needle-wash-diaphragm-pumps/lc-waste-aspiration/",
+      "kind": "analytical-instruments",
+      "slug": "lc-waste-aspiration",
+      "template": "analytical",
+      "aliases": [
+        "/en/applications/analytical-instruments/lc-waste-aspiration/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/liquid-chromatography/lc-post-column-valveless-pumps/",
+      "kind": "analytical-instruments",
+      "slug": "lc-post-column-valveless-pumps",
+      "template": "analytical",
+      "aliases": [
+        "/en/applications/analytical-instruments/lc-post-column-valveless-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/liquid-chromatography/lc-post-column-valveless-pumps/lc-derivatization-reagent-dosing/",
+      "kind": "analytical-instruments",
+      "slug": "lc-derivatization-reagent-dosing",
+      "template": "analytical",
+      "aliases": [
+        "/en/applications/analytical-instruments/lc-derivatization-reagent-dosing/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/monitoring/",
+      "kind": "analytical-instruments",
+      "slug": "monitoring",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/monitoring/monitor-bubble/",
+      "kind": "analytical-instruments",
+      "slug": "monitor-bubble",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/monitor-bubble/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/monitoring/monitor-pressure/",
+      "kind": "analytical-instruments",
+      "slug": "monitor-pressure",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/monitor-pressure/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/pipetting-pump/",
+      "kind": "analytical-instruments",
+      "slug": "pipetting-pump",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/pipetting-pump/pipette-dilution/",
+      "kind": "analytical-instruments",
+      "slug": "pipette-dilution",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/pipette-dilution/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/pipetting-pump/pipette-preparation/",
+      "kind": "analytical-instruments",
+      "slug": "pipette-preparation",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/pipette-preparation/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/pipetting-pump/pipette-transfer/",
+      "kind": "analytical-instruments",
+      "slug": "pipette-transfer",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/pipette-transfer/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/piston-pump/",
+      "kind": "analytical-instruments",
+      "slug": "piston-pump",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/piston-pump/piston-dilution/",
+      "kind": "analytical-instruments",
+      "slug": "piston-dilution",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/piston-dilution/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/piston-pump/piston-titration/",
+      "kind": "analytical-instruments",
+      "slug": "piston-titration",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/piston-titration/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/probes/",
+      "kind": "analytical-instruments",
+      "slug": "probes",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/probes/probe-mixing/",
+      "kind": "analytical-instruments",
+      "slug": "probe-mixing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/probe-mixing/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/probes/probe-sampling/",
+      "kind": "analytical-instruments",
+      "slug": "probe-sampling",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/probe-sampling/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/probes/probe-vessel-washing/",
+      "kind": "analytical-instruments",
+      "slug": "probe-vessel-washing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/probe-vessel-washing/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/probes/probe-washing/",
+      "kind": "analytical-instruments",
+      "slug": "probe-washing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/probe-washing/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/syringe-pump/",
+      "kind": "analytical-instruments",
+      "slug": "syringe-pump",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/syringe-pump/syringe-dilution/",
+      "kind": "analytical-instruments",
+      "slug": "syringe-dilution",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/syringe-dilution/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/syringe-pump/syringe-distribution/",
+      "kind": "analytical-instruments",
+      "slug": "syringe-distribution",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/syringe-distribution/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/syringe-pump/syringe-sampling/",
+      "kind": "analytical-instruments",
+      "slug": "syringe-sampling",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/syringe-sampling/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/syringe-pump/syringe-sequential/",
+      "kind": "analytical-instruments",
+      "slug": "syringe-sequential",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/syringe-sequential/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valveless-pump/",
+      "kind": "analytical-instruments",
+      "slug": "valveless-pump",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valveless-pump/valveless-continuous/",
+      "kind": "analytical-instruments",
+      "slug": "valveless-continuous",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/valveless-continuous/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valveless-pump/valveless-dispensing/",
+      "kind": "analytical-instruments",
+      "slug": "valveless-dispensing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/valveless-dispensing/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valveless-pump/valveless-proportion/",
+      "kind": "analytical-instruments",
+      "slug": "valveless-proportion",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/valveless-proportion/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valveless-pump/valveless-titration/",
+      "kind": "analytical-instruments",
+      "slug": "valveless-titration",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/valveless-titration/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valves/",
+      "kind": "analytical-instruments",
+      "slug": "valves",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valves/valve-diversion/",
+      "kind": "analytical-instruments",
+      "slug": "valve-diversion",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/valve-diversion/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valves/valve-high-pressure/",
+      "kind": "analytical-instruments",
+      "slug": "valve-high-pressure",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/valve-high-pressure/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valves/valve-multiport/",
+      "kind": "analytical-instruments",
+      "slug": "valve-multiport",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/valve-multiport/"
+      ]
+    },
+    {
+      "path": "/en/applications/analytical-instruments/valves/valve-solenoid/",
+      "kind": "analytical-instruments",
+      "slug": "valve-solenoid",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/valve-solenoid/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/",
+      "kind": "environmental-monitoring",
+      "slug": "",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-gas-pretreatment/",
+      "kind": "environmental-monitoring",
+      "slug": "guide-gas-pretreatment",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-gas-pretreatment/gas-pretreatment-diaphragm-pumps/",
+      "kind": "environmental-monitoring",
+      "slug": "gas-pretreatment-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/gas-pretreatment-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-gas-pretreatment/gas-pretreatment-diaphragm-pumps/gas-pretreatment-absorption/",
+      "kind": "environmental-monitoring",
+      "slug": "gas-pretreatment-absorption",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/gas-pretreatment-absorption/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-gas-pretreatment/gas-pretreatment-diaphragm-pumps/gas-pretreatment-condensate/",
+      "kind": "environmental-monitoring",
+      "slug": "gas-pretreatment-condensate",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/gas-pretreatment-condensate/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-gas-pretreatment/gas-pretreatment-fluidic-connections/",
+      "kind": "environmental-monitoring",
+      "slug": "gas-pretreatment-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/gas-pretreatment-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-gas-pretreatment/gas-pretreatment-fluidic-connections/gas-pretreatment-protection/",
+      "kind": "environmental-monitoring",
+      "slug": "gas-pretreatment-protection",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/gas-pretreatment-protection/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-gas-pretreatment/gas-pretreatment-fluidic-valves/",
+      "kind": "environmental-monitoring",
+      "slug": "gas-pretreatment-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/gas-pretreatment-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-gas-pretreatment/gas-pretreatment-fluidic-valves/gas-pretreatment-tube-control/",
+      "kind": "environmental-monitoring",
+      "slug": "gas-pretreatment-tube-control",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/gas-pretreatment-tube-control/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-sampling-prep/",
+      "kind": "environmental-monitoring",
+      "slug": "guide-sampling-prep",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-sampling-prep/sampling-prep-fluidic-connections/",
+      "kind": "environmental-monitoring",
+      "slug": "sampling-prep-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/sampling-prep-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-sampling-prep/sampling-prep-fluidic-connections/sampling-prep-filtration/",
+      "kind": "environmental-monitoring",
+      "slug": "sampling-prep-filtration",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/sampling-prep-filtration/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-sampling-prep/sampling-prep-fluidic-connections/sampling-prep-waste/",
+      "kind": "environmental-monitoring",
+      "slug": "sampling-prep-waste",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/sampling-prep-waste/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-sampling-prep/sampling-prep-fluidic-valves/",
+      "kind": "environmental-monitoring",
+      "slug": "sampling-prep-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/sampling-prep-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-sampling-prep/sampling-prep-pipetting-pumps/",
+      "kind": "environmental-monitoring",
+      "slug": "sampling-prep-pipetting-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/sampling-prep-pipetting-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-sampling-prep/sampling-prep-pipetting-pumps/sampling-prep-transfer/",
+      "kind": "environmental-monitoring",
+      "slug": "sampling-prep-transfer",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/sampling-prep-transfer/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-sampling-prep/sampling-prep-syringe-pumps/",
+      "kind": "environmental-monitoring",
+      "slug": "sampling-prep-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/sampling-prep-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-sampling-prep/sampling-prep-syringe-pumps/sampling-prep-dilution/",
+      "kind": "environmental-monitoring",
+      "slug": "sampling-prep-dilution",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/sampling-prep-dilution/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-system-integration/",
+      "kind": "environmental-monitoring",
+      "slug": "guide-system-integration",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-system-integration/system-integration-diaphragm-pumps/",
+      "kind": "environmental-monitoring",
+      "slug": "system-integration-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/system-integration-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-system-integration/system-integration-fluid-monitoring/",
+      "kind": "environmental-monitoring",
+      "slug": "system-integration-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/system-integration-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-system-integration/system-integration-fluidic-connections/",
+      "kind": "environmental-monitoring",
+      "slug": "system-integration-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/system-integration-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-system-integration/system-integration-fluidic-valves/",
+      "kind": "environmental-monitoring",
+      "slug": "system-integration-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/system-integration-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-system-integration/system-integration-fluidic-valves/system-integration-path-management/",
+      "kind": "environmental-monitoring",
+      "slug": "system-integration-path-management",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/system-integration-path-management/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-wastewater/",
+      "kind": "environmental-monitoring",
+      "slug": "guide-wastewater",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-wastewater/wastewater-diaphragm-pumps/",
+      "kind": "environmental-monitoring",
+      "slug": "wastewater-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/wastewater-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-wastewater/wastewater-diaphragm-pumps/wastewater-drainage/",
+      "kind": "environmental-monitoring",
+      "slug": "wastewater-drainage",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/wastewater-drainage/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-wastewater/wastewater-diaphragm-pumps/wastewater-sampling/",
+      "kind": "environmental-monitoring",
+      "slug": "wastewater-sampling",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/wastewater-sampling/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-wastewater/wastewater-fluid-monitoring/",
+      "kind": "environmental-monitoring",
+      "slug": "wastewater-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/wastewater-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-wastewater/wastewater-fluidic-connections/",
+      "kind": "environmental-monitoring",
+      "slug": "wastewater-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/wastewater-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-wastewater/wastewater-fluidic-connections/wastewater-filtration/",
+      "kind": "environmental-monitoring",
+      "slug": "wastewater-filtration",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/wastewater-filtration/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-wastewater/wastewater-fluidic-valves/",
+      "kind": "environmental-monitoring",
+      "slug": "wastewater-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/wastewater-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/",
+      "kind": "environmental-monitoring",
+      "slug": "guide-water-quality",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/water-quality-diaphragm-pumps/",
+      "kind": "environmental-monitoring",
+      "slug": "water-quality-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/water-quality-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/water-quality-diaphragm-pumps/water-quality-reagent/",
+      "kind": "environmental-monitoring",
+      "slug": "water-quality-reagent",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/water-quality-reagent/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/water-quality-diaphragm-pumps/water-quality-sampling/",
+      "kind": "environmental-monitoring",
+      "slug": "water-quality-sampling",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/water-quality-sampling/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/water-quality-diaphragm-pumps/water-quality-wash-waste/",
+      "kind": "environmental-monitoring",
+      "slug": "water-quality-wash-waste",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/water-quality-wash-waste/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/water-quality-fluid-monitoring/",
+      "kind": "environmental-monitoring",
+      "slug": "water-quality-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/water-quality-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/water-quality-fluidic-connections/",
+      "kind": "environmental-monitoring",
+      "slug": "water-quality-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/water-quality-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/water-quality-fluidic-connections/water-quality-protection/",
+      "kind": "environmental-monitoring",
+      "slug": "water-quality-protection",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/water-quality-protection/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/water-quality-fluidic-valves/",
+      "kind": "environmental-monitoring",
+      "slug": "water-quality-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/water-quality-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/environmental-monitoring/guide-water-quality/water-quality-fluidic-valves/water-quality-reaction/",
+      "kind": "environmental-monitoring",
+      "slug": "water-quality-reaction",
+      "template": "review",
+      "aliases": [
+        "/en/applications/environmental-monitoring/water-quality-reaction/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/",
+      "kind": "ivd",
+      "slug": "",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/",
+      "kind": "ivd",
+      "slug": "guide-clinical",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-diaphragm-pumps/",
+      "kind": "ivd",
+      "slug": "clinical-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/clinical-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-diaphragm-pumps/clinical-cleaning/",
+      "kind": "ivd",
+      "slug": "clinical-cleaning",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/clinical-cleaning/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-fluid-monitoring/",
+      "kind": "ivd",
+      "slug": "clinical-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/clinical-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-fluidic-connections/",
+      "kind": "ivd",
+      "slug": "clinical-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/clinical-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-fluidic-valves/",
+      "kind": "ivd",
+      "slug": "clinical-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/clinical-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-fluidic-valves/clinical-switching/",
+      "kind": "ivd",
+      "slug": "clinical-switching",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/clinical-switching/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-piston-pumps/",
+      "kind": "ivd",
+      "slug": "clinical-piston-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/clinical-piston-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-piston-pumps/piston-reagent-dispensing/",
+      "kind": "ivd",
+      "slug": "piston-reagent-dispensing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/piston-reagent-dispensing/",
+        "/en/applications/ivd/piston-reagent-dispensing/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-piston-pumps/piston-sample-transfer/",
+      "kind": "ivd",
+      "slug": "piston-sample-transfer",
+      "template": "review",
+      "aliases": [
+        "/en/applications/analytical-instruments/piston-sample-transfer/",
+        "/en/applications/ivd/piston-sample-transfer/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-probes/",
+      "kind": "ivd",
+      "slug": "clinical-probes",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/clinical-probes/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-clinical/clinical-syringe-pumps/",
+      "kind": "ivd",
+      "slug": "clinical-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/clinical-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/",
+      "kind": "ivd",
+      "slug": "guide-coagulation",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-diaphragm-pumps/",
+      "kind": "ivd",
+      "slug": "coagulation-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-diaphragm-pumps/coagulation-cleaning/",
+      "kind": "ivd",
+      "slug": "coagulation-cleaning",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-cleaning/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-fluid-monitoring/",
+      "kind": "ivd",
+      "slug": "coagulation-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-fluidic-connections/",
+      "kind": "ivd",
+      "slug": "coagulation-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-fluidic-valves/",
+      "kind": "ivd",
+      "slug": "coagulation-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-fluidic-valves/coagulation-switching/",
+      "kind": "ivd",
+      "slug": "coagulation-switching",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-switching/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-piston-pumps/",
+      "kind": "ivd",
+      "slug": "coagulation-piston-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-piston-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-piston-pumps/coagulation-sample/",
+      "kind": "ivd",
+      "slug": "coagulation-sample",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-sample/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-probes/",
+      "kind": "ivd",
+      "slug": "coagulation-probes",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-probes/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-syringe-pumps/",
+      "kind": "ivd",
+      "slug": "coagulation-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-coagulation/coagulation-syringe-pumps/coagulation-reagent/",
+      "kind": "ivd",
+      "slug": "coagulation-reagent",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/coagulation-reagent/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/",
+      "kind": "ivd",
+      "slug": "guide-hematology",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-diaphragm-pumps/",
+      "kind": "ivd",
+      "slug": "hematology-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-diaphragm-pumps/hematology-cleaning/",
+      "kind": "ivd",
+      "slug": "hematology-cleaning",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-cleaning/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-fluid-monitoring/",
+      "kind": "ivd",
+      "slug": "hematology-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-fluidic-connections/",
+      "kind": "ivd",
+      "slug": "hematology-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-fluidic-valves/",
+      "kind": "ivd",
+      "slug": "hematology-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-fluidic-valves/hematology-channel/",
+      "kind": "ivd",
+      "slug": "hematology-channel",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-channel/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-piston-pumps/",
+      "kind": "ivd",
+      "slug": "hematology-piston-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-piston-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-piston-pumps/hematology-sample/",
+      "kind": "ivd",
+      "slug": "hematology-sample",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-sample/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-probes/",
+      "kind": "ivd",
+      "slug": "hematology-probes",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-probes/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-syringe-pumps/",
+      "kind": "ivd",
+      "slug": "hematology-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-hematology/hematology-syringe-pumps/hematology-dilution/",
+      "kind": "ivd",
+      "slug": "hematology-dilution",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/hematology-dilution/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/",
+      "kind": "ivd",
+      "slug": "guide-immunoassay",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-diaphragm-pumps/",
+      "kind": "ivd",
+      "slug": "immunoassay-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-diaphragm-pumps/immunoassay-bead-wash/",
+      "kind": "ivd",
+      "slug": "immunoassay-bead-wash",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-bead-wash/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-fluid-monitoring/",
+      "kind": "ivd",
+      "slug": "immunoassay-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-fluidic-connections/",
+      "kind": "ivd",
+      "slug": "immunoassay-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-fluidic-valves/",
+      "kind": "ivd",
+      "slug": "immunoassay-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-fluidic-valves/immunoassay-switching/",
+      "kind": "ivd",
+      "slug": "immunoassay-switching",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-switching/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-piston-pumps/",
+      "kind": "ivd",
+      "slug": "immunoassay-piston-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-piston-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-piston-pumps/immunoassay-sample/",
+      "kind": "ivd",
+      "slug": "immunoassay-sample",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-sample/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-probes/",
+      "kind": "ivd",
+      "slug": "immunoassay-probes",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-probes/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-syringe-pumps/",
+      "kind": "ivd",
+      "slug": "immunoassay-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-immunoassay/immunoassay-syringe-pumps/immunoassay-reagent/",
+      "kind": "ivd",
+      "slug": "immunoassay-reagent",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/immunoassay-reagent/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/",
+      "kind": "ivd",
+      "slug": "guide-molecular",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/molecular-diaphragm-pumps/",
+      "kind": "ivd",
+      "slug": "molecular-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/molecular-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/molecular-fluid-monitoring/",
+      "kind": "ivd",
+      "slug": "molecular-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/molecular-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/molecular-fluidic-connections/",
+      "kind": "ivd",
+      "slug": "molecular-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/molecular-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/molecular-fluidic-valves/",
+      "kind": "ivd",
+      "slug": "molecular-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/molecular-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/molecular-fluidic-valves/molecular-switching/",
+      "kind": "ivd",
+      "slug": "molecular-switching",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/molecular-switching/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/molecular-pipetting-pumps/",
+      "kind": "ivd",
+      "slug": "molecular-pipetting-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/molecular-pipetting-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/molecular-pipetting-pumps/molecular-wash/",
+      "kind": "ivd",
+      "slug": "molecular-wash",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/molecular-wash/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/molecular-syringe-pumps/",
+      "kind": "ivd",
+      "slug": "molecular-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/molecular-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/ivd/guide-molecular/molecular-syringe-pumps/molecular-lysis/",
+      "kind": "ivd",
+      "slug": "molecular-lysis",
+      "template": "review",
+      "aliases": [
+        "/en/applications/ivd/molecular-lysis/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/",
+      "kind": "lab-automation",
+      "slug": "",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-microplate/",
+      "kind": "lab-automation",
+      "slug": "guide-microplate",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-microplate/microplate-diaphragm-pumps/",
+      "kind": "lab-automation",
+      "slug": "microplate-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/microplate-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-microplate/microplate-diaphragm-pumps/microplate-plate-wash/",
+      "kind": "lab-automation",
+      "slug": "microplate-plate-wash",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/microplate-plate-wash/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-microplate/microplate-fluid-monitoring/",
+      "kind": "lab-automation",
+      "slug": "microplate-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/microplate-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-microplate/microplate-fluidic-connections/",
+      "kind": "lab-automation",
+      "slug": "microplate-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/microplate-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-microplate/microplate-fluidic-valves/",
+      "kind": "lab-automation",
+      "slug": "microplate-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/microplate-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-microplate/microplate-probes/",
+      "kind": "lab-automation",
+      "slug": "microplate-probes",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/microplate-probes/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-microplate/microplate-syringe-pumps/",
+      "kind": "lab-automation",
+      "slug": "microplate-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/microplate-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-microplate/microplate-syringe-pumps/microplate-plate-dispensing/",
+      "kind": "lab-automation",
+      "slug": "microplate-plate-dispensing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/microplate-plate-dispensing/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/",
+      "kind": "lab-automation",
+      "slug": "guide-pipetting",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/pipetting-air-displacement-pumps/",
+      "kind": "lab-automation",
+      "slug": "pipetting-air-displacement-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/pipetting-air-displacement-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/pipetting-air-displacement-pumps/pipetting-dispensing/",
+      "kind": "lab-automation",
+      "slug": "pipetting-dispensing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/pipetting-dispensing/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/pipetting-air-displacement-pumps/pipetting-single-transfer/",
+      "kind": "lab-automation",
+      "slug": "pipetting-single-transfer",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/pipetting-single-transfer/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/pipetting-fluid-monitoring/",
+      "kind": "lab-automation",
+      "slug": "pipetting-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/pipetting-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/pipetting-fluidic-connections/",
+      "kind": "lab-automation",
+      "slug": "pipetting-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/pipetting-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/pipetting-piston-pumps/",
+      "kind": "lab-automation",
+      "slug": "pipetting-piston-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/pipetting-piston-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/pipetting-probes/",
+      "kind": "lab-automation",
+      "slug": "pipetting-probes",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/pipetting-probes/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/pipetting-probes/pipetting-needle-wash/",
+      "kind": "lab-automation",
+      "slug": "pipetting-needle-wash",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/pipetting-needle-wash/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-pipetting/pipetting-syringe-pumps/",
+      "kind": "lab-automation",
+      "slug": "pipetting-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/pipetting-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-reagent-dispensing/",
+      "kind": "lab-automation",
+      "slug": "guide-reagent-dispensing",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-reagent-dispensing/reagent-dispensing-fluid-monitoring/",
+      "kind": "lab-automation",
+      "slug": "reagent-dispensing-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/reagent-dispensing-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-reagent-dispensing/reagent-dispensing-fluidic-connections/",
+      "kind": "lab-automation",
+      "slug": "reagent-dispensing-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/reagent-dispensing-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-reagent-dispensing/reagent-dispensing-fluidic-valves/",
+      "kind": "lab-automation",
+      "slug": "reagent-dispensing-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/reagent-dispensing-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-reagent-dispensing/reagent-dispensing-syringe-pumps/",
+      "kind": "lab-automation",
+      "slug": "reagent-dispensing-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/reagent-dispensing-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-reagent-dispensing/reagent-dispensing-valveless-pumps/",
+      "kind": "lab-automation",
+      "slug": "reagent-dispensing-valveless-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/reagent-dispensing-valveless-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-reagent-dispensing/reagent-dispensing-valveless-pumps/reagent-dispensing-repeated-filling/",
+      "kind": "lab-automation",
+      "slug": "reagent-dispensing-repeated-filling",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/reagent-dispensing-repeated-filling/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/",
+      "kind": "lab-automation",
+      "slug": "guide-sample-prep",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/sample-prep-diaphragm-pumps/",
+      "kind": "lab-automation",
+      "slug": "sample-prep-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/sample-prep-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/sample-prep-diaphragm-pumps/sample-prep-washing/",
+      "kind": "lab-automation",
+      "slug": "sample-prep-washing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/sample-prep-washing/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/sample-prep-fluid-monitoring/",
+      "kind": "lab-automation",
+      "slug": "sample-prep-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/sample-prep-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/sample-prep-fluidic-connections/",
+      "kind": "lab-automation",
+      "slug": "sample-prep-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/sample-prep-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/sample-prep-fluidic-valves/",
+      "kind": "lab-automation",
+      "slug": "sample-prep-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/sample-prep-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/sample-prep-fluidic-valves/sample-prep-switching/",
+      "kind": "lab-automation",
+      "slug": "sample-prep-switching",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/sample-prep-switching/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/sample-prep-pipetting-pumps/",
+      "kind": "lab-automation",
+      "slug": "sample-prep-pipetting-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/sample-prep-pipetting-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/sample-prep-pipetting-pumps/sample-prep-pipetting/",
+      "kind": "lab-automation",
+      "slug": "sample-prep-pipetting",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/sample-prep-pipetting/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-sample-prep/sample-prep-syringe-pumps/",
+      "kind": "lab-automation",
+      "slug": "sample-prep-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/sample-prep-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-system-integration/",
+      "kind": "lab-automation",
+      "slug": "guide-system-integration",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-system-integration/system-integration-diaphragm-pumps/",
+      "kind": "lab-automation",
+      "slug": "system-integration-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/system-integration-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-system-integration/system-integration-fluid-monitoring/",
+      "kind": "lab-automation",
+      "slug": "system-integration-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/system-integration-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-system-integration/system-integration-fluidic-connections/",
+      "kind": "lab-automation",
+      "slug": "system-integration-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/system-integration-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-system-integration/system-integration-fluidic-valves/",
+      "kind": "lab-automation",
+      "slug": "system-integration-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/system-integration-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-system-integration/system-integration-fluidic-valves/system-integration-path-management/",
+      "kind": "lab-automation",
+      "slug": "system-integration-path-management",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/system-integration-path-management/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-system-integration/system-integration-pipetting-pumps/",
+      "kind": "lab-automation",
+      "slug": "system-integration-pipetting-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/system-integration-pipetting-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/lab-automation/guide-system-integration/system-integration-syringe-pumps/",
+      "kind": "lab-automation",
+      "slug": "system-integration-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/lab-automation/system-integration-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/",
+      "kind": "life-science",
+      "slug": "",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/life-science/guide-automation/",
+      "kind": "life-science",
+      "slug": "guide-automation",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/life-science/guide-automation/automation-diaphragm-pumps/",
+      "kind": "life-science",
+      "slug": "automation-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/automation-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-automation/automation-diaphragm-pumps/automation-washing/",
+      "kind": "life-science",
+      "slug": "automation-washing",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/automation-washing/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-automation/automation-fluid-monitoring/",
+      "kind": "life-science",
+      "slug": "automation-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/automation-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-automation/automation-fluidic-connections/",
+      "kind": "life-science",
+      "slug": "automation-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/automation-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-automation/automation-fluidic-valves/",
+      "kind": "life-science",
+      "slug": "automation-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/automation-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-automation/automation-pipetting-pumps/",
+      "kind": "life-science",
+      "slug": "automation-pipetting-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/automation-pipetting-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-automation/automation-pipetting-pumps/automation-pipetting/",
+      "kind": "life-science",
+      "slug": "automation-pipetting",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/automation-pipetting/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-automation/automation-syringe-pumps/",
+      "kind": "life-science",
+      "slug": "automation-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/automation-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-bio-process/",
+      "kind": "life-science",
+      "slug": "guide-bio-process",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/life-science/guide-bio-process/bio-process-fluid-monitoring/",
+      "kind": "life-science",
+      "slug": "bio-process-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/bio-process-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-bio-process/bio-process-fluidic-connections/",
+      "kind": "life-science",
+      "slug": "bio-process-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/bio-process-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-bio-process/bio-process-fluidic-valves/",
+      "kind": "life-science",
+      "slug": "bio-process-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/bio-process-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-bio-process/bio-process-syringe-pumps/",
+      "kind": "life-science",
+      "slug": "bio-process-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/bio-process-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-bio-process/bio-process-syringe-pumps/bio-process-sampling/",
+      "kind": "life-science",
+      "slug": "bio-process-sampling",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/bio-process-sampling/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-bio-process/bio-process-valveless-pumps/",
+      "kind": "life-science",
+      "slug": "bio-process-valveless-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/bio-process-valveless-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-bio-process/bio-process-valveless-pumps/bio-process-feeding/",
+      "kind": "life-science",
+      "slug": "bio-process-feeding",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/bio-process-feeding/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-cell-culture/",
+      "kind": "life-science",
+      "slug": "guide-cell-culture",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/life-science/guide-cell-culture/cell-culture-diaphragm-pumps/",
+      "kind": "life-science",
+      "slug": "cell-culture-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/cell-culture-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-cell-culture/cell-culture-fluid-monitoring/",
+      "kind": "life-science",
+      "slug": "cell-culture-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/cell-culture-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-cell-culture/cell-culture-fluidic-connections/",
+      "kind": "life-science",
+      "slug": "cell-culture-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/cell-culture-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-cell-culture/cell-culture-fluidic-valves/",
+      "kind": "life-science",
+      "slug": "cell-culture-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/cell-culture-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-cell-culture/cell-culture-syringe-pumps/",
+      "kind": "life-science",
+      "slug": "cell-culture-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/cell-culture-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-cell-culture/cell-culture-syringe-pumps/cell-culture-transfer/",
+      "kind": "life-science",
+      "slug": "cell-culture-transfer",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/cell-culture-transfer/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-cell-culture/cell-culture-valveless-pumps/",
+      "kind": "life-science",
+      "slug": "cell-culture-valveless-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/cell-culture-valveless-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-cell-culture/cell-culture-valveless-pumps/cell-culture-media/",
+      "kind": "life-science",
+      "slug": "cell-culture-media",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/cell-culture-media/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-genomics/",
+      "kind": "life-science",
+      "slug": "guide-genomics",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/life-science/guide-genomics/genomics-fluid-monitoring/",
+      "kind": "life-science",
+      "slug": "genomics-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/genomics-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-genomics/genomics-fluidic-connections/",
+      "kind": "life-science",
+      "slug": "genomics-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/genomics-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-genomics/genomics-fluidic-valves/",
+      "kind": "life-science",
+      "slug": "genomics-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/genomics-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-genomics/genomics-fluidic-valves/genomics-switching/",
+      "kind": "life-science",
+      "slug": "genomics-switching",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/genomics-switching/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-genomics/genomics-pipetting-pumps/",
+      "kind": "life-science",
+      "slug": "genomics-pipetting-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/genomics-pipetting-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-genomics/genomics-pipetting-pumps/genomics-sample-prep/",
+      "kind": "life-science",
+      "slug": "genomics-sample-prep",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/genomics-sample-prep/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-genomics/genomics-pipetting-pumps/genomics-wash-elution/",
+      "kind": "life-science",
+      "slug": "genomics-wash-elution",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/genomics-wash-elution/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-genomics/genomics-syringe-pumps/",
+      "kind": "life-science",
+      "slug": "genomics-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/genomics-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-protein/",
+      "kind": "life-science",
+      "slug": "guide-protein",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/life-science/guide-protein/protein-diaphragm-pumps/",
+      "kind": "life-science",
+      "slug": "protein-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/protein-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-protein/protein-fluid-monitoring/",
+      "kind": "life-science",
+      "slug": "protein-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/protein-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-protein/protein-fluidic-connections/",
+      "kind": "life-science",
+      "slug": "protein-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/protein-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-protein/protein-fluidic-valves/",
+      "kind": "life-science",
+      "slug": "protein-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/protein-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-protein/protein-fluidic-valves/protein-buffer/",
+      "kind": "life-science",
+      "slug": "protein-buffer",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/protein-buffer/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-protein/protein-pipetting-pumps/",
+      "kind": "life-science",
+      "slug": "protein-pipetting-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/protein-pipetting-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-protein/protein-syringe-pumps/",
+      "kind": "life-science",
+      "slug": "protein-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/protein-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/life-science/guide-protein/protein-syringe-pumps/protein-sample/",
+      "kind": "life-science",
+      "slug": "protein-sample",
+      "template": "review",
+      "aliases": [
+        "/en/applications/life-science/protein-sample/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/",
+      "kind": "synthetic-biology",
+      "slug": "",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-bio-process-integration/",
+      "kind": "synthetic-biology",
+      "slug": "guide-bio-process-integration",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-bio-process-integration/bio-process-integration-diaphragm-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "bio-process-integration-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/bio-process-integration-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-bio-process-integration/bio-process-integration-fluid-monitoring/",
+      "kind": "synthetic-biology",
+      "slug": "bio-process-integration-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/bio-process-integration-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-bio-process-integration/bio-process-integration-fluidic-connections/",
+      "kind": "synthetic-biology",
+      "slug": "bio-process-integration-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/bio-process-integration-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-bio-process-integration/bio-process-integration-fluidic-valves/",
+      "kind": "synthetic-biology",
+      "slug": "bio-process-integration-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/bio-process-integration-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-bio-process-integration/bio-process-integration-fluidic-valves/bio-process-integration-path-management/",
+      "kind": "synthetic-biology",
+      "slug": "bio-process-integration-path-management",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/bio-process-integration-path-management/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-bio-process-integration/bio-process-integration-syringe-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "bio-process-integration-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/bio-process-integration-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-bio-process-integration/bio-process-integration-valveless-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "bio-process-integration-valveless-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/bio-process-integration-valveless-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/",
+      "kind": "synthetic-biology",
+      "slug": "guide-biofoundry",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-diaphragm-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-fluid-monitoring/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-fluidic-connections/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-fluidic-valves/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-fluidic-valves/biofoundry-path-management/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-path-management",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-path-management/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-pipetting-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-pipetting-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-pipetting-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-pipetting-pumps/biofoundry-pipetting/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-pipetting",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-pipetting/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-pipetting-pumps/biofoundry-plate/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-plate",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-plate/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-syringe-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-biofoundry/biofoundry-syringe-pumps/biofoundry-reagent/",
+      "kind": "synthetic-biology",
+      "slug": "biofoundry-reagent",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/biofoundry-reagent/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-feeding-control/",
+      "kind": "synthetic-biology",
+      "slug": "guide-feeding-control",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-feeding-control/feeding-control-fluid-monitoring/",
+      "kind": "synthetic-biology",
+      "slug": "feeding-control-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/feeding-control-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-feeding-control/feeding-control-fluidic-connections/",
+      "kind": "synthetic-biology",
+      "slug": "feeding-control-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/feeding-control-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-feeding-control/feeding-control-fluidic-connections/feeding-control-protection/",
+      "kind": "synthetic-biology",
+      "slug": "feeding-control-protection",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/feeding-control-protection/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-feeding-control/feeding-control-fluidic-valves/",
+      "kind": "synthetic-biology",
+      "slug": "feeding-control-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/feeding-control-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-feeding-control/feeding-control-fluidic-valves/feeding-control-switching/",
+      "kind": "synthetic-biology",
+      "slug": "feeding-control-switching",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/feeding-control-switching/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-feeding-control/feeding-control-syringe-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "feeding-control-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/feeding-control-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-feeding-control/feeding-control-valveless-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "feeding-control-valveless-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/feeding-control-valveless-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-feeding-control/feeding-control-valveless-pumps/feeding-control-feeding/",
+      "kind": "synthetic-biology",
+      "slug": "feeding-control-feeding",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/feeding-control-feeding/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/",
+      "kind": "synthetic-biology",
+      "slug": "guide-micro-bioreactor",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-diaphragm-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-diaphragm-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-diaphragm-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-diaphragm-pumps/micro-bioreactor-waste/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-waste",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-waste/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-fluid-monitoring/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-fluidic-connections/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-fluidic-valves/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-fluidic-valves/micro-bioreactor-switching/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-switching",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-switching/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-syringe-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-syringe-pumps/micro-bioreactor-sampling/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-sampling",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-sampling/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-valveless-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-valveless-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-valveless-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-micro-bioreactor/micro-bioreactor-valveless-pumps/micro-bioreactor-feeding/",
+      "kind": "synthetic-biology",
+      "slug": "micro-bioreactor-feeding",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/micro-bioreactor-feeding/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-online-sampling/",
+      "kind": "synthetic-biology",
+      "slug": "guide-online-sampling",
+      "template": "review",
+      "aliases": []
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-online-sampling/online-sampling-fluid-monitoring/",
+      "kind": "synthetic-biology",
+      "slug": "online-sampling-fluid-monitoring",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/online-sampling-fluid-monitoring/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-online-sampling/online-sampling-fluidic-connections/",
+      "kind": "synthetic-biology",
+      "slug": "online-sampling-fluidic-connections",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/online-sampling-fluidic-connections/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-online-sampling/online-sampling-fluidic-connections/online-sampling-filtration/",
+      "kind": "synthetic-biology",
+      "slug": "online-sampling-filtration",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/online-sampling-filtration/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-online-sampling/online-sampling-fluidic-valves/",
+      "kind": "synthetic-biology",
+      "slug": "online-sampling-fluidic-valves",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/online-sampling-fluidic-valves/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-online-sampling/online-sampling-fluidic-valves/online-sampling-tube-control/",
+      "kind": "synthetic-biology",
+      "slug": "online-sampling-tube-control",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/online-sampling-tube-control/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-online-sampling/online-sampling-syringe-pumps/",
+      "kind": "synthetic-biology",
+      "slug": "online-sampling-syringe-pumps",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/online-sampling-syringe-pumps/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-online-sampling/online-sampling-syringe-pumps/online-sampling-pretreatment/",
+      "kind": "synthetic-biology",
+      "slug": "online-sampling-pretreatment",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/online-sampling-pretreatment/"
+      ]
+    },
+    {
+      "path": "/en/applications/synthetic-biology/guide-online-sampling/online-sampling-syringe-pumps/online-sampling-sample-acquisition/",
+      "kind": "synthetic-biology",
+      "slug": "online-sampling-sample-acquisition",
+      "template": "review",
+      "aliases": [
+        "/en/applications/synthetic-biology/online-sampling-sample-acquisition/"
+      ]
+    }
+  ]
+}

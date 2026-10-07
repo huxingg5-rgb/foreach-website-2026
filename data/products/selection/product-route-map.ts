@@ -97,9 +97,9 @@ export const productRouteMap: {
     fittings: {
       categoryId: "fittings",
       label: "接头系列",
-      title: "接头系列 | Foreach Technology",
+      title: "微流体接头选型｜FOREACH 恒永达",
       description:
-        "恒永达接头产品覆盖硬管接头、软管接头、鲁尔接头、快插接头、内螺纹互转接头，以及过滤器与单向阀。",
+        "FOREACH 恒永达提供硬管、软管倒刺、螺纹转倒刺、鲁尔、快插及穿板接头，并配套内螺纹连接件、过滤器与单向阀。按连接结构、管径、螺纹、材料及阀配置选择仪器管路连接组件。",
     },  },
 
   productTypes: {
@@ -158,9 +158,9 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "hard-tube-fittings",
       label: "硬管接头",
-      title: "硬管接头 | Foreach Technology",
+      title: "微流体硬管接头选型｜FOREACH 恒永达",
       description:
-        "硬管接头适用于PTFE、FEP、PFA和PEEK等硬管连接，可根据密封结构、接口螺纹、接管外径、材质和颜色进行选型。",
+        "FOREACH 硬管接头涵盖平底翻边、卡箍、卡环及高压结构，提供 M6×1、1/4-28 UNF 等接口与多种材料配置。按管外径和密封形式选型，查看 HPLC、UHPLC 连接及 FEP、PTFE 定制管组件。",
     },
 
     "barbed-fittings": {
@@ -168,9 +168,9 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "barbed-fittings",
       label: "倒刺接头",
-      title: "倒刺接头 | Foreach Technology",
+      title: "微型软管倒刺接头选型｜FOREACH 恒永达",
       description:
-        "倒刺接头用于软管之间的直通、转向、分流和汇流连接，可根据产品结构、接管内径、材质和颜色进行选型。",
+        "FOREACH 软管倒刺接头涵盖 BA 直通、BL 弯头、BT 三通、BY Y 型及 BBL 堵头，用于软管连接、分流汇流、变径与封堵。按各端口软管内径、结构和材料筛选型号。",
     },
 
     "thread-to-barbed-fittings": {
@@ -178,9 +178,9 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "thread-to-barbed-fittings",
       label: "螺纹转倒刺接头",
-      title: "螺纹转倒刺接头 | Foreach Technology",
+      title: "螺纹转倒刺接头选型｜FOREACH 恒永达",
       description:
-        "螺纹转倒刺接头用于设备螺纹接口与软管液路之间的转接，可根据连接结构、密封方式、螺纹规格、接管内径、材质和颜色进行选型。",
+        "FOREACH 螺纹转倒刺接头提供 SA 螺纹密封、SB 底面密封及 SC 内螺纹转倒刺结构，连接泵阀端口与软管。按螺纹规格、倒刺尺寸及直通、L 型或可旋转配置选型。",
     },
 
     "luer-fittings": {
@@ -188,9 +188,9 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "luer-fittings",
       label: "鲁尔接头",
-      title: "鲁尔接头 | Foreach Technology",
+      title: "鲁尔接头选型｜FOREACH 恒永达",
       description:
-        "鲁尔接头覆盖公鲁尔、母鲁尔、固定锁圈、旋转锁圈及穿板结构。",
+        "FOREACH 鲁尔接头提供公端、母端及固定式、旋转式、一体式锁紧结构，配套穿板螺母与颜色识别环。按配对接口、软管内径和 PP、PA、PVDF 等材料选择液路连接组件。",
     },
 
     "quick-connect-fittings": {
@@ -198,9 +198,9 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "quick-connect-fittings",
       label: "快插接头",
-      title: "快插接头 | Foreach Technology",
+      title: "微流体快插接头选型｜FOREACH 恒永达",
       description:
-        "快插接头覆盖Q20、Q40和Q60系列，可根据管径、端口形式、阀门配置和安装结构进行选型。",
+        "FOREACH Q20、Q40、Q60 快插接头用于设备管路快速连接与拆卸，提供公母端、带阀或不带阀，以及倒刺、螺纹和穿板配置。按系列通径、接管尺寸、主体与密封圈材料选型。",
     },
 
     "female-thread-adapters": {
@@ -208,9 +208,9 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "female-thread-adapters",
       label: "内螺纹互转接头",
-      title: "内螺纹互转接头 | Foreach Technology",
+      title: "内螺纹连接件与转接头选型｜FOREACH 恒永达",
       description:
-        "内螺纹互转接头覆盖二通、三通、标准型、方型、穿板型、T型和Y型结构。",
+        "FOREACH 内螺纹连接件涵盖 U 二通、US 方形二通、PMU 穿板二通与 UT、UY 三通，用于管路对接、接口转换及分流汇流。按 M6×1、1/4-28 UNF 等接口、流道通径与材料选型。",
     },
 
     "bulkhead-barbed-fittings": {
@@ -218,9 +218,9 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "bulkhead-barbed-fittings",
       label: "穿板倒刺接头",
-      title: "穿板倒刺接头 | Foreach Technology",
+      title: "穿板倒刺接头选型｜FOREACH 恒永达",
       description:
-        "穿板倒刺接头系列包含PMB穿板倒刺接头和PMBSN六角螺母，可根据产品结构、螺纹规格、接管内径、材质和颜色进行选型。",
+        "FOREACH PMB 穿板倒刺接头配合 PMBSN 六角螺母固定设备面板两侧软管，提供适配 1.6、2.4、3.2 mm 软管内径及 PP、PA 材料的配置。按管径、面板厚度与安装尺寸选型。",
     },
 
     "filters": {
@@ -228,9 +228,9 @@ export const productRouteMap: {
       categoryId: "fittings",
       productTypeId: "filters",
       label: "过滤器与单向阀",
-      title: "过滤器与单向阀 | Foreach Technology",
+      title: "管路过滤器与单向阀选型｜FOREACH 恒永达",
       description:
-        "过滤器用于液路中的颗粒拦截与流体净化，单向阀用于控制流体单向流动并降低回流风险。",
+        "FOREACH 提供 PE 滤材管路过滤器及膜片式、鸭嘴式单向阀，用于仪器液路颗粒拦截与防倒流。过滤器按过滤精度、流量与压差选择，单向阀按开启压力、流向、材料和端接尺寸选型。",
     },
 
 

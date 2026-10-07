@@ -13,7 +13,6 @@ import {
 } from "react"; // 引入 React 状态、生命周期、缓存、Ref 和事件类型
 
 import { preloadGlobalSearchIndex } from "@/components/search/global-search-index";
-import { ANALYTICAL_APPLICATION_BASE } from "@/data/applications/analytical-documents/registry";
 import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/valveless-pump-routes";
 import { sv10Video } from "@/data/resources/installation-guide/installation-guide.sv10.en";
 
@@ -210,9 +209,13 @@ export default function SiteHeader() {
   const isEnglishSv10VideoPage = normalizedPathname === sv10Video.detailHref.replace(/\/+$/, "");
   const isSolenoidPage = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/valves\/solenoid-valves(?:\/(?:sv10-(?:p|threaded|b16)|[23]-way))?$/.test(normalizedPathname);
   const isMrv3Page = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/valves\/rotary-valves(?:\/mrv3-d(?:10|16|24))?$/.test(normalizedPathname);
-  const normalizedAnalyticalApplicationBase = ANALYTICAL_APPLICATION_BASE.replace(/\/+$/, "");
-  const isEnglishAnalyticalApplicationDetailPage =
-    normalizedPathname.startsWith(`${normalizedAnalyticalApplicationBase}/`);
+  // Application detail documents exist only in English; other languages use the domain hub.
+  const englishApplicationDomain = normalizedPathname.match(
+    /^\/en\/applications\/(ivd|life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology)\/[^/]+(?:\/[^/]+)*$/,
+  )?.[1];
+  const englishApplicationDomainPath = englishApplicationDomain
+    ? `/en/applications/${englishApplicationDomain}/`
+    : undefined;
 
   /**
    * 当前顶部栏显示语言
@@ -1074,8 +1077,8 @@ const isFittingReplacementDetailPage =
       closeAllPanels();
 
       // 根据当前路径生成目标语言路径
-      const languageSourcePathname = isEnglishAnalyticalApplicationDetailPage && localeCode !== "en"
-        ? ANALYTICAL_APPLICATION_BASE
+      const languageSourcePathname = englishApplicationDomainPath && localeCode !== "en"
+        ? englishApplicationDomainPath
         : window.location.pathname;
       const nextPathname = buildLocalizedPathname(
         languageSourcePathname,
@@ -1380,8 +1383,8 @@ const isFittingReplacementDetailPage =
                 {languageItems.map((language) => (
                   <a
                     key={language.code}
-                    href={isEnglishAnalyticalApplicationDetailPage && language.code !== "en"
-                      ? buildLocalizedPathname(ANALYTICAL_APPLICATION_BASE, language.code)
+                    href={englishApplicationDomainPath && language.code !== "en"
+                      ? buildLocalizedPathname(englishApplicationDomainPath, language.code)
                       : isTechnicalArticlePage || isMrv3Page || isSolenoidPage
                         ? buildLocalizedPathname(pathname || "/", language.code)
                         : language.href}
@@ -1827,7 +1830,10 @@ const isFittingReplacementDetailPage =
                 </div>
 
                 {/* 底部入口区 */}
-                <div className="site-nav-mega-footer" style={{ display: "none" }}>
+                <div
+                  className="site-nav-mega-footer"
+                  style={{ display: currentLocale === "en" && activeMegaItem.key === "applications" ? undefined : "none" }}
+                >
                   <span>
                     {getLocalizedText(
                       activeMegaItem.megaDropdown.footerText,
@@ -1837,13 +1843,16 @@ const isFittingReplacementDetailPage =
 
                   <Link
                     href={getLocalizedHref(
-                      activeMegaCards[0]?.href ??
-                      activeMegaItem.megaDropdown.footerHref,
+                      currentLocale === "en" && activeMegaItem.key === "applications"
+                        ? activeMegaItem.megaDropdown.footerHref
+                        : activeMegaCards[0]?.href ?? activeMegaItem.megaDropdown.footerHref,
                       currentLocale,
                     )}
                     onClick={closeAllPanels}
                   >
-                    {activeMegaCards[0]?.title
+                    {currentLocale === "en" && activeMegaItem.key === "applications"
+                      ? getLocalizedText(activeMegaItem.megaDropdown.footerLinkLabel, currentLocale)
+                      : activeMegaCards[0]?.title
                       ? `${getLocalizedText(
                         activeMegaCards[0].title,
                         currentLocale,
@@ -1883,6 +1892,5 @@ const isFittingReplacementDetailPage =
         ) : null}</header>
     );
   }
-
 
 

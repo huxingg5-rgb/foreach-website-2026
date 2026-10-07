@@ -1,5 +1,7 @@
 "use client";
 
+import { useId } from "react";
+
 import type { ProductSelectionCategoryItem } from "./product-selection-ui.types";
 
 type ProductCategoryTabsProps = {
@@ -21,6 +23,8 @@ export default function ProductCategoryTabs({
   onToggleMobileCategory,
   onCategoryChange,
 }: ProductCategoryTabsProps) {
+  const categoryTabsId = useId();
+
   return (
     <section
       className={`category-tabs-wrap ${
@@ -31,17 +35,19 @@ export default function ProductCategoryTabs({
         className="mobile-category-trigger"
         type="button"
         onClick={onToggleMobileCategory}
+        aria-expanded={mobileCategoryOpen}
+        aria-controls={categoryTabsId}
       >
         <span>
           {mobileCategoryPrefix}
           {activeCategoryLabel}
         </span>
-        <span className="mobile-category-symbol">
-          {mobileCategoryOpen ? "-" : "+"}
+        <span className="mobile-category-symbol" aria-hidden="true">
+          {mobileCategoryOpen ? "−" : "+"}
         </span>
       </button>
 
-      <div className="category-tabs">
+      <div className="category-tabs" id={categoryTabsId}>
         {categories.map((category) => (
           <button
             className={`category-tab ${

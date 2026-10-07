@@ -1,3 +1,5 @@
+import { applicationProductKeys, getApplicationGroupContent, getApplicationModuleContent, getApplicationProductCopy, getModuleProductKeys } from "./application-content";
+
 export type EnglishApplicationKind =
   | "analytical-instruments"
   | "environmental-monitoring"
@@ -67,6 +69,7 @@ export type EnglishApplicationGroup = {
 };
 
 export type EnglishApplicationPageData = {
+  kind: EnglishApplicationKind;
   queryKey: "application" | "instrument";
   breadcrumb: Array<{ label: string; href?: string }>;
   hero: {
@@ -96,7 +99,7 @@ export type EnglishApplicationPageData = {
 
 type PageConfig = Omit<
   EnglishApplicationPageData,
-  "groups" | "products" | "queryKey" | "breadcrumb"
+  "kind" | "groups" | "products" | "queryKey" | "breadcrumb"
 > & {
   breadcrumbLabel: string;
   queryKey: "application" | "instrument";
@@ -116,7 +119,7 @@ const PAGE_CONFIG: Record<EnglishApplicationKind, PageConfig> = {
         "Sample aspiration and metering",
         "Reagent delivery and path switching",
         "Rinsing, drainage and waste handling",
-        "Pressure, liquid-level and bubble monitoring",
+        "Pressure and bubble monitoring with system interlocks",
       ],
     },
     groupSectionTitle: "Instrument Types",
@@ -463,7 +466,7 @@ function translateParam(value: string) {
     [/最小/g, "minimum "],
   ];
 
-  let translated = value;
+  let translated = value.replace(/(\d+)\s*万次/g, (_, count: string) => `${Number(count) * 10000} cycles`).replace(/通(?!道)/g, " ports ");
 
   for (const [pattern, replacement] of replacements) {
     translated = translated.replace(pattern, replacement);
@@ -484,6 +487,9 @@ function createProduct(
   key: string,
   source: SourceProduct | undefined
 ): EnglishApplicationProduct {
+  const curated = getApplicationProductCopy(key, "en");
+  if (curated) return { key, ...curated };
+
   const copy = PRODUCT_COPY[key] ?? {
     name: humanizeKey(key),
     ability: "Configurable fluidic functionality for automated instruments.",
@@ -512,17 +518,16 @@ export function createEnglishApplicationData(
   const sourceProducts = source.productAbilities ?? source.products ?? {};
   const sourceGroups = source.instruments ?? source.applications ?? [];
   const products = Object.fromEntries(
-    Object.entries(sourceProducts).map(([key, product]) => [
-      key,
-      createProduct(key, product),
-    ])
+    [...new Set([...Object.keys(sourceProducts), ...applicationProductKeys])].map(key => [key, createProduct(key, sourceProducts[key])])
   );
 
   const groups = sourceGroups.map((group, groupIndex) => {
-    const groupTitle = GROUP_LABELS[group.key] ?? humanizeKey(group.key);
+    const groupCopy = getApplicationGroupContent(kind, group.key);
+    const groupTitle = groupCopy?.title ?? GROUP_LABELS[group.key] ?? humanizeKey(group.key);
     const modules = (group.modules ?? []).map((module, moduleIndex) => {
-      const moduleTitle = MODULE_LABELS[module.key] ?? humanizeKey(module.key);
-      const productKeys = (module.products ?? []).filter((key) => products[key]);
+      const moduleCopy = getApplicationModuleContent(kind, group.key, module.key);
+      const moduleTitle = moduleCopy?.title ?? MODULE_LABELS[module.key] ?? humanizeKey(module.key);
+      const productKeys = getModuleProductKeys(kind, group.key, module.key, module.products ?? []).filter((key) => products[key]);
       const productNames = productKeys.map((key) => products[key].name);
 
       return {
@@ -532,7 +537,7 @@ export function createEnglishApplicationData(
         navSubtitle:
           productNames.slice(0, 3).join(" / ") || "Configurable fluidic components",
         title: moduleTitle,
-        description: `Review the component categories used for ${moduleTitle.toLowerCase()} in ${groupTitle.toLowerCase()} workflows.`,
+        description: moduleCopy?.description.en ?? `Review the component categories used for ${moduleTitle.toLowerCase()} in ${groupTitle.toLowerCase()} workflows.`,
         tags: productNames.slice(0, 4),
         products: productKeys,
       };
@@ -542,11 +547,11 @@ export function createEnglishApplicationData(
       key: group.key,
       index: group.index ?? String(groupIndex + 1).padStart(2, "0"),
       title: groupTitle,
-      summary: "Fluidic workflow and component overview",
+      summary: groupCopy?.summary.en ?? "Fluidic workflow and component overview",
       focusTitle: `${groupTitle} Fluidic Priorities`,
-      focusSummary:
+      focusSummary: groupCopy?.summary.en ??
         "Component selection should account for liquid properties, target volume, flow, pressure, connection geometry and maintenance requirements.",
-      focusPoints: [
+      focusPoints: groupCopy ? [...groupCopy.conditions.map(item => item.en), groupCopy.outcome.en, groupCopy.boundary.en] : [
         "Stable liquid metering and transfer",
         "Reliable path switching and sealing",
         "Compatible wetted materials and connections",
@@ -557,6 +562,7 @@ export function createEnglishApplicationData(
   });
 
   return {
+    kind,
     queryKey: config.queryKey,
     breadcrumb: [
       { label: "Home", href: "/en" },
@@ -572,7 +578,7 @@ export function createEnglishApplicationData(
     focusKicker: config.focusKicker,
     moduleSectionTitle: config.moduleSectionTitle,
     moduleSectionDescription: config.moduleSectionDescription,
-    cta: config.cta,
+    cta: { ...config.cta, description: "Share the equipment and method, liquid formulation, working volume or flow, actual pressure and temperature, containers and tubing, operating cycle and acceptance targets so that candidate configurations, wetted materials and validation can be assessed." },
     groups,
     products,
   };

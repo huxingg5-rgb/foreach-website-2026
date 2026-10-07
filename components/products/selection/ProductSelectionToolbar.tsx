@@ -4,6 +4,7 @@ import type { ProductSelectionSelectedTag } from "./product-selection-ui.types";
 
 type ProductSelectionToolbarProps = {
   total: number;
+  showResultSummary?: boolean;
   resultPrefix: string;
   resultSuffix: string;
   resetButtonText: string;
@@ -25,6 +26,7 @@ type ProductSelectionToolbarProps = {
 
 export default function ProductSelectionToolbar({
   total,
+  showResultSummary = true,
   resultPrefix,
   resultSuffix,
   resetButtonText,
@@ -34,11 +36,13 @@ export default function ProductSelectionToolbar({
   return (
     <div className="product-toolbar">
       <div>
-        <div className="toolbar-summary">
-          {resultPrefix}
-          {total}
-          {resultSuffix}
-        </div>
+        {showResultSummary ? (
+          <div className="toolbar-summary">
+            {resultPrefix}
+            {total}
+            {resultSuffix}
+          </div>
+        ) : null}
 
         <div className="selected-tags">
           {selectedTags.map((item) => (

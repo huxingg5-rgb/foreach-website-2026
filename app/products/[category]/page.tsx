@@ -1,4 +1,5 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
+import { getTubingSeriesMetadata } from "@/data/products/tubing/metadata";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
@@ -27,6 +28,7 @@ export async function generateMetadata({
   params,
 }: ProductsCategoryRoutePageProps): Promise<Metadata> {
   const { category } = await params;
+  if (category === "tubing") return getTubingSeriesMetadata("zh")!;
   const route = resolveCategoryRoute(category);
 
   if (!route) {

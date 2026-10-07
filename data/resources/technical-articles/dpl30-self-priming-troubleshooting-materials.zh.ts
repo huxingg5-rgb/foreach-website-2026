@@ -614,19 +614,19 @@ export const dpl30WaterVsReagentZhCopy = {
 
 export const dpl30EpdmPtfeFfkmSelectionZhCopy = {
   metadata: {
-    title: "300 mL/min微型隔膜液泵的EPDM、PTFE、FFKM怎么选？",
-    seoTitle: "微型隔膜液泵EPDM、PTFE、FFKM材料选型与验证｜Foreach Technology",
+    title: "微型隔膜泵的EPDM、PTFE、FFKM怎么选？",
+    seoTitle: "微型隔膜泵EPDM、PTFE、FFKM材料选型与验证｜Foreach Technology",
     seoDescription:
-      "微型隔膜液泵选择EPDM、PTFE或FFKM时，不能只看耐腐蚀等级。本文从材料功能、溶胀、动态密封和ISO/ASTM浸泡验证说明DPL30材料组合如何评估。",
+      "微型隔膜泵选择EPDM、PTFE或FFKM时，不能只看耐腐蚀等级。本文从材料功能、溶胀、动态密封和ISO/ASTM浸泡验证说明隔膜泵材料组合如何评估。",
     coverImage: DPL30_WETTED_MATERIALS_COVER,
-    coverAlt: "具有不同接液材料组合的Foreach DPL30微型隔膜液泵",
+    coverAlt: "Foreach微型隔膜泵接液部件检查示例",
   },
   deck: "EPDM、PTFE和FFKM不能简单排成由低到高的材料等级。EPDM和FFKM是弹性体，PTFE是氟聚合物；膜片、阀片和泵头承担的机械任务不同。真正的选型对象不是一个材料名称，而是一整套接液材料与动态泵送结构。",
   leadBlocks: [
     {
       type: "notice",
-      label: "DPL30正式组合：",
-      text: "EPDM膜片/EPDM阀片/PPS泵头，或PTFE膜片/FFKM阀片/PPS泵头。不能把三种材料任意排列成未出现在正式选型表中的销售配置。",
+      label: "Foreach微型隔膜泵材料组合示例：",
+      text: "EPDM膜片/EPDM阀片/PPS泵头，或PTFE膜片/FFKM阀片/PPS泵头。本文讨论隔膜泵的材料选型方法，以上为Foreach部分型号的配置示例；可选组合按具体系列和型号确认，不能任意组合为未提供的销售配置。",
     },
     {
       type: "paragraph",
@@ -642,7 +642,7 @@ export const dpl30EpdmPtfeFfkmSelectionZhCopy = {
           headers: [
             "材料",
             "材料类型",
-            "在液泵中的典型关注点",
+            "在隔膜泵中的典型关注点",
             "不能直接推出的结论",
           ],
           rows: [
@@ -769,11 +769,11 @@ export const dpl30EpdmPtfeFfkmSelectionZhCopy = {
       ],
     },
     {
-      title: "七、DPL30材料组合怎样进入选型流程？",
+      title: "七、隔膜泵材料组合怎样进入选型流程？",
       blocks: [
         {
           type: "table",
-          headers: ["正式组合", "适合做什么", "仍需确认什么"],
+          headers: ["材料组合示例", "适合做什么", "仍需确认什么"],
           rows: [
             [
               "EPDM膜片 + EPDM阀片 + PPS泵头",
@@ -794,10 +794,10 @@ export const dpl30EpdmPtfeFfkmSelectionZhCopy = {
       ],
     },
   ],
-  faqTitle: "FAQ｜微型隔膜液泵EPDM、PTFE、FFKM材料选型",
+  faqTitle: "FAQ｜微型隔膜泵EPDM、PTFE、FFKM材料选型",
   faqItems: [
     {
-      question: "PTFE一定比EPDM更适合做微型隔膜液泵膜片吗？",
+      question: "PTFE一定比EPDM更适合做微型隔膜泵膜片吗？",
       answer:
         "不一定。PTFE通常具有更宽的化学耐受范围，但动态膜片还要满足结构、弯曲疲劳、压差和循环寿命要求。应比较完整膜片设计而不是材料名称。",
     },
@@ -823,11 +823,11 @@ export const dpl30EpdmPtfeFfkmSelectionZhCopy = {
     },
   ],
   cta: {
-    title: "正在为DPL30选择EPDM或PTFE/FFKM材料组合？",
+    title: "正在为微型隔膜泵选择EPDM或PTFE/FFKM材料组合？",
     description:
       "请提供介质组成、浓度、温度、压力、接触时间、清洗方式和目标循环寿命，以便从候选材料、浸泡试验到整泵动态验证建立分阶段方案。",
     contactLabel: "联系工程师",
-    productsLabel: "查看DPL30微型隔膜液泵",
-    productsHref: DPL30_PRODUCT_HREF,
+    productsLabel: "查看微型隔膜泵",
+    productsHref: "/products/pumps/miniature-diaphragm-pumps/",
   },
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;
