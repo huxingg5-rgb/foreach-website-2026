@@ -7,6 +7,7 @@ import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内�
 import { useEffect, useRef, useState } from "react"; // 引入 React Hook，用于 DOM 引用、状态和副作用
 
 import HomeCompanyVideo from "@/components/home/HomeCompanyVideo"; // 引入公司介绍视频组件
+import styles from "./HomeCompanyStrengthSection.module.css";
 
 import type { LocaleCode } from "@/lib/i18n"; // 官网支持的语言代码类型
 
@@ -47,13 +48,9 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
 
   const metricsGridRef = useRef<HTMLDivElement | null>(null); // 数据卡片区域 DOM 引用，用于判断是否进入视口
   const advantagesSectionRef = useRef<HTMLElement | null>(null); // 企业优势进入视口附近后再加载背景图
-  const animationFrameRef = useRef<number | null>(null); // requestAnimationFrame 的 id，用于组件卸载时取消动画
-
-  const [shouldAnimateMetrics, setShouldAnimateMetrics] = useState(false); // 是否开始数字计数动画
   const [shouldLoadAdvantageMedia, setShouldLoadAdvantageMedia] = useState(false); // 第四屏接近视口时再启用背景图
-  const [animatedMetricValues, setAnimatedMetricValues] = useState(() => // 当前动画中的数字值
-    metrics.map(() => 0), // 初始时每个数字都从 0 开始
-  ); // animatedMetricValues 状态定义结束
+  // SSR 和首次 hydration 只显示真实数据，动画值仅用于临时视觉层。
+  const [animatedMetricValues, setAnimatedMetricValues] = useState<number[] | null>(null);
 
   const aboutForeachHref =
     locale === "zh-CN"
@@ -88,66 +85,66 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
     };
   }, []);
 
-  useEffect(() => { // 监听数据卡片是否进入视口的副作用开始
-    const metricsGrid = metricsGridRef.current; // 获取数据卡片区域 DOM
+  useEffect(() => {
+    const metricsGrid = metricsGridRef.current;
+    if (!metricsGrid || !("IntersectionObserver" in window)) return;
 
-    if (!metricsGrid) { // 如果数据卡片区域还没有渲染出来
-      return; // 直接结束，不继续创建 observer
-    } // DOM 存在判断结束
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const bounds = metricsGrid.getBoundingClientRect();
+    // 页面恢复滚动位置或延迟 hydration 时，保留用户已经看到的最终值。
+    if (reducedMotion.matches || (bounds.top < window.innerHeight && bounds.bottom > 0)) return;
 
-    const observer = new IntersectionObserver( // 创建 IntersectionObserver，用于监听元素是否进入视口
-      (entries) => { // observer 回调函数开始
-        if (entries.some((entry) => entry.isIntersecting)) { // 如果任意一个监听元素进入视口
-          setShouldAnimateMetrics(true); // 启动数据卡片数字动画
-          observer.disconnect(); // 动画只需要触发一次，触发后断开监听
-        } // 是否进入视口判断结束
-      }, // observer 回调函数结束
-      { // observer 配置开始
-        threshold: 0.28, // 元素进入约 28% 时触发
-      }, // observer 配置结束
-    ); // IntersectionObserver 创建结束
+    let animationFrame: number | null = null;
+    let hasStarted = false;
+    const duration = 1200;
 
-    observer.observe(metricsGrid); // 开始监听数据卡片区域
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (hasStarted || !entries.some((entry) => entry.isIntersecting)) return;
+        hasStarted = true;
+        observer.disconnect();
+        if (reducedMotion.matches) return;
 
-    return () => { // 组件卸载时执行清理函数
-      observer.disconnect(); // 断开 IntersectionObserver，避免内存泄漏
-    }; // 清理函数结束
-  }, []); // 只在组件首次挂载时执行一次
+        const startedAt = performance.now();
+        setAnimatedMetricValues(metrics.map(() => 0));
 
-  useEffect(() => { // 数据卡片数字动画副作用开始
-    if (!shouldAnimateMetrics) { // 如果还没有触发动画
-      return; // 直接返回，不启动动画
-    } // 动画触发判断结束
+        function updateMetricValues(now: number) {
+          const progress = Math.min((now - startedAt) / duration, 1);
+          if (progress >= 1 || reducedMotion.matches) {
+            animationFrame = null;
+            setAnimatedMetricValues(null);
+            return;
+          }
 
-    const startedAt = performance.now(); // 记录动画开始时间
-    const duration = 1200; // 设置动画总时长，单位毫秒
+          const easedProgress = 1 - Math.pow(1 - progress, 3);
+          setAnimatedMetricValues(
+            metrics.map((metric) => Math.round(metric.value * easedProgress)),
+          );
+          animationFrame = window.requestAnimationFrame(updateMetricValues);
+        }
 
-    function easeOutCubic(progress: number) { // 定义缓动函数，让数字变化更自然
-      return 1 - Math.pow(1 - progress, 3); // 返回 easeOutCubic 计算结果
-    } // easeOutCubic 函数结束
+        animationFrame = window.requestAnimationFrame(updateMetricValues);
+      },
+      // 在数字即将出现时启动，避免可见数字先显示最终值再退回零。
+      { rootMargin: "0px 0px 120px 0px", threshold: 0.01 },
+    );
 
-    function updateMetricValues(now: number) { // 定义每一帧更新数字的函数
-      const progress = Math.min((now - startedAt) / duration, 1); // 计算当前动画进度，并限制最大为 1
-      const easedProgress = easeOutCubic(progress); // 使用缓动函数处理动画进度
+    function handleMotionChange() {
+      if (!reducedMotion.matches) return;
+      observer.disconnect();
+      if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
+      animationFrame = null;
+      setAnimatedMetricValues(null);
+    }
 
-      setAnimatedMetricValues( // 更新当前显示的数据值
-        metrics.map((metric) => Math.round(metric.value * easedProgress)), // 根据动画进度计算每个数据卡片的当前数字
-      ); // setAnimatedMetricValues 更新结束
-
-      if (progress < 1) { // 如果动画还没结束
-        animationFrameRef.current = // 保存当前动画帧 id
-          window.requestAnimationFrame(updateMetricValues); // 请求下一帧继续更新数字
-      } // 动画是否结束判断结束
-    } // updateMetricValues 函数结束
-
-    animationFrameRef.current = window.requestAnimationFrame(updateMetricValues); // 启动第一帧数字动画
-
-    return () => { // 组件卸载或依赖变化时执行清理函数
-      if (animationFrameRef.current !== null) { // 如果存在未取消的动画帧
-        window.cancelAnimationFrame(animationFrameRef.current); // 取消动画帧，避免组件卸载后继续更新状态
-      } // animationFrameRef 判断结束
-    }; // 清理函数结束
-  }, [shouldAnimateMetrics, metrics]); // 当 shouldAnimateMetrics 或 metrics 变化时重新执行
+    reducedMotion.addEventListener("change", handleMotionChange);
+    observer.observe(metricsGrid);
+    return () => {
+      observer.disconnect();
+      reducedMotion.removeEventListener("change", handleMotionChange);
+      if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
+    };
+  }, [metrics]);
 
   return ( // 返回首页第三屏和第四屏结构
     <> {/* Fragment 外层，不额外生成 DOM */}
@@ -190,17 +187,19 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
 
               <div // 数据卡片网格开始
                 ref={metricsGridRef} // 绑定数据卡片 DOM 引用
-                className={ // 根据是否正在计数决定 class
-                  shouldAnimateMetrics // 判断数字动画是否开始
-                    ? "home-company-metrics-grid is-counting" // 动画开始时增加 is-counting
-                    : "home-company-metrics-grid" // 默认数据卡片网格 class
-                } // className 判断结束
+                className={`home-company-metrics-grid ${styles.metricsGrid}`}
+                data-counting={animatedMetricValues !== null ? "true" : "false"}
               > {/* 数据卡片网格开始标签结束 */}
                 {metrics.map((metric, index) => ( // 遍历公司数据卡片 */}
                   <div className="home-company-metric-card" key={metric.key}> {/* 单个数据卡片 */}
                     <strong> {/* 数据数字区域 */}
-                      <span className="home-metric-number"> {/* 数字本体 */}
-                        {animatedMetricValues[index]} {/* 当前动画数字 */}
+                      <span className={`home-metric-number ${styles.metricNumber}`}> {/* 数字本体 */}
+                        <span className={styles.metricValue}>{metric.value}</span>
+                        {animatedMetricValues !== null && (
+                          <span className={styles.metricAnimation} aria-hidden="true" data-nosnippet="">
+                            {animatedMetricValues[index]}
+                          </span>
+                        )}
                       </span> {/* 数字本体结束 */}
 
                       <span className="home-metric-suffix"> {/* 数字后缀 */}

@@ -806,6 +806,33 @@
 /ru/products/pumps/diaphragm-pumps/dpl30h-ds/ /ru/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/ 301
 /ru/products/pumps/diaphragm-pumps/dpl30h-bs/ /ru/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/ 301
 /ru/products/pumps/diaphragm-pumps/dpgl800-bs/ /ru/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/ 301
+
+# BEGIN ABD MODEL REDIRECTS
+/products/control/abd-air-bubble-detector /products/control/air-bubble-detectors/abd/ 301
+/products/control/abd-air-bubble-detector/ /products/control/air-bubble-detectors/abd/ 301
+/products/control/abd /products/control/air-bubble-detectors/abd/ 301
+/products/control/abd/ /products/control/air-bubble-detectors/abd/ 301
+/en/products/control/abd-air-bubble-detector /en/products/control/air-bubble-detectors/abd/ 301
+/en/products/control/abd-air-bubble-detector/ /en/products/control/air-bubble-detectors/abd/ 301
+/en/products/control/abd /en/products/control/air-bubble-detectors/abd/ 301
+/en/products/control/abd/ /en/products/control/air-bubble-detectors/abd/ 301
+/es/products/control/abd-air-bubble-detector /es/products/control/air-bubble-detectors/abd/ 301
+/es/products/control/abd-air-bubble-detector/ /es/products/control/air-bubble-detectors/abd/ 301
+/es/products/control/abd /es/products/control/air-bubble-detectors/abd/ 301
+/es/products/control/abd/ /es/products/control/air-bubble-detectors/abd/ 301
+/fr/products/control/abd-air-bubble-detector /fr/products/control/air-bubble-detectors/abd/ 301
+/fr/products/control/abd-air-bubble-detector/ /fr/products/control/air-bubble-detectors/abd/ 301
+/fr/products/control/abd /fr/products/control/air-bubble-detectors/abd/ 301
+/fr/products/control/abd/ /fr/products/control/air-bubble-detectors/abd/ 301
+/ko/products/control/abd-air-bubble-detector /ko/products/control/air-bubble-detectors/abd/ 301
+/ko/products/control/abd-air-bubble-detector/ /ko/products/control/air-bubble-detectors/abd/ 301
+/ko/products/control/abd /ko/products/control/air-bubble-detectors/abd/ 301
+/ko/products/control/abd/ /ko/products/control/air-bubble-detectors/abd/ 301
+/ru/products/control/abd-air-bubble-detector /ru/products/control/air-bubble-detectors/abd/ 301
+/ru/products/control/abd-air-bubble-detector/ /ru/products/control/air-bubble-detectors/abd/ 301
+/ru/products/control/abd /ru/products/control/air-bubble-detectors/abd/ 301
+/ru/products/control/abd/ /ru/products/control/air-bubble-detectors/abd/ 301
+# END ABD MODEL REDIRECTS
 # BEGIN VALVELESS PUMP DETAIL REDIRECTS
 /products/pumps/valveless-pumps/rpl-p4 /products/pumps/valveless-metering-pump/rpl-p4/ 301
 /products/pumps/valveless-pumps/rpl-p4/ /products/pumps/valveless-metering-pump/rpl-p4/ 301

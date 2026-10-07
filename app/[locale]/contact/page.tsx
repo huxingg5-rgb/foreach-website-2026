@@ -29,6 +29,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import ContactPageContent from "@/components/contact/ContactPageContent";
+import CompanyPageStructuredData from "@/components/common/CompanyPageStructuredData";
 import {
   CONTACT_INTL_LOCALES,
   getContactIntlData,
@@ -112,5 +113,16 @@ export default async function ContactIntlPage({
 
   const data = getContactIntlData(locale);
 
-  return <ContactPageContent data={data} locale={locale} />;
+  return (
+    <>
+      <CompanyPageStructuredData
+        type="ContactPage"
+        path={`/${locale}/contact/`}
+        name={data.seo.title}
+        description={data.seo.description}
+        locale={locale}
+      />
+      <ContactPageContent data={data} locale={locale} />
+    </>
+  );
 }

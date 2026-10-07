@@ -1,4 +1,6 @@
+import { normalizeControlModulePath } from "../../data/products/selection/control-module-routes";
 import {normalizeHpProductHref} from "../../data/products/selection/valve-routes";
+import { getTubingMaterialCopy } from "../../data/products/tubing/content";
 import { normalizePipettingPath } from "../../data/products/selection/pipetting-pump-routes";
 import { getSyringeModelRedirect } from "../../data/products/selection/syringe-pump-routes";
 import { getPistonPumpRedirect } from "../../lib/seo/piston-pump-migration";
@@ -796,7 +798,13 @@ async function main() {
     ...productItems,
     ...compatibleItems,
     ...datasheetItems,
-  ].map(item => ({ ...item, href: normalizePipettingPath(getSyringeModelRedirect(item.href) || getPistonPumpRedirect(item.href) || item.href) })).map(item => ({...item, href:normalizeHpProductHref(item.href)})).flatMap(normalizeValvelessSearchItem));
+  ].map(item => ({ ...item, href: normalizeControlModulePath(normalizePipettingPath(getSyringeModelRedirect(item.href) || getPistonPumpRedirect(item.href) || item.href)) })).map(item => ({...item, href:normalizeHpProductHref(item.href)})).flatMap(normalizeValvelessSearchItem)).map(item => {
+    const slug = /^\/products\/tubing\/([^/]+)\/?$/.exec(item.href)?.[1];
+    const zh = slug ? getTubingMaterialCopy(slug, "zh") : undefined;
+    const en = slug ? getTubingMaterialCopy(slug, "en") : undefined;
+    if (!zh || !en || item.module !== "products") return item;
+    return { ...item, title: zh.cardTitle, subtitle: zh.cardHeading, description: zh.seoDescription, keywords: [zh.cardTitle, en.cardTitle, slug!, "管材", "仪器管路", "instrument tubing"] };
+  });
   const invalidProductImages = finalItems.filter((item) => {
     if (item.module !== "products" || !item.image) {
       return item.module === "products";

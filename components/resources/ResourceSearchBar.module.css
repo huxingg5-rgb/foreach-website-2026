@@ -149,7 +149,7 @@
    * 不继承资源中心 PC 灰色横带，也不把输入框和按钮粘成一整块。
    */
   .searchPanel[data-search-context="product-selection"] {
-    padding: 0;
+    padding: 20px 0 0;
     border: 0;
     background: transparent;
     box-shadow: none;

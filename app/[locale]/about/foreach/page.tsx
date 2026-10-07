@@ -19,6 +19,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import AboutForeachClient from "@/app/about/foreach/AboutForeachClient";
+import CompanyPageStructuredData from "@/components/common/CompanyPageStructuredData";
 
 /* 官网当前支持的非中文语言 */
 const ABOUT_FOREACH_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
@@ -99,7 +100,18 @@ export default async function LocaleAboutForeachPage({
     notFound();
   }
 
-  return <AboutForeachClient initialLocale={locale} />;
+  return (
+    <>
+      <CompanyPageStructuredData
+        type="AboutPage"
+        path={`/${locale}/about/foreach/`}
+        name={metadataMap[locale].title}
+        description={metadataMap[locale].description}
+        locale={locale}
+      />
+      <AboutForeachClient initialLocale={locale} />
+    </>
+  );
 }
 
 /* 判断当前 URL 语言是否允许访问 */

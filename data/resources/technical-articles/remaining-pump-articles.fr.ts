@@ -1478,18 +1478,18 @@ export const remainingPumpArticlesFr = {
   },
   "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm": {
     "metadata": {
-      "title": "Comment choisir EPDM, PTFE et FFKM pour une pompe à membrane miniature de 300 mL/min ?",
+      "title": "Comment choisir EPDM, PTFE et FFKM pour une pompe à membrane miniature ?",
       "seoTitle": "Choisir EPDM, PTFE et FFKM pour une micropompe | Foreach Technology",
       "seoDescription": "Comparer compatibilité chimique, gonflement, étanchéité dynamique et validation au fluide réel pour sélectionner EPDM, PTFE et FFKM.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-wetted-material-inspection.webp",
-      "coverAlt": "Pompe à membrane miniature Foreach DPL30 avec différentes associations de matériaux mouillés"
+      "coverAlt": "Exemple de contrôle des composants en contact avec le fluide dans une pompe à membrane miniature Foreach"
     },
     "deck": "EPDM, PTFE et FFKM ne forment pas un classement simple de qualité croissante. EPDM et FFKM sont des élastomères, PTFE un fluoropolymère ; membrane, clapets et tête remplissent des tâches mécaniques différentes. Le choix concerne une structure mouillée complète sollicitée dynamiquement, pas un seul nom.",
     "leadBlocks": [
       {
         "type": "notice",
-        "label": "Associations officielles DPL30 :",
-        "text": "Membrane EPDM / clapets EPDM / tête PPS, ou membrane PTFE / clapets FFKM / tête PPS. Ne recombinez pas ces matériaux en configurations commerciales non publiées."
+        "label": "Exemples d’associations de matériaux pour les pompes à membrane miniatures Foreach :",
+        "text": "Membrane EPDM / clapets EPDM / tête PPS, ou membrane PTFE / clapets FFKM / tête PPS. Ne recombinez pas ces matériaux en configurations commerciales non publiées. Cet article présente la sélection des matériaux des pompes à membrane en général. Ces associations sont des exemples proposés sur certains modèles Foreach ; vérifiez les options disponibles pour chaque série et modèle."
       },
       {
         "type": "paragraph",
@@ -1631,12 +1631,12 @@ export const remainingPumpArticlesFr = {
         ]
       },
       {
-        "title": "7. Comment utiliser les associations officielles DPL30 pour sélectionner ?",
+        "title": "7. Comment intégrer les associations de matériaux de la pompe à membrane au processus de sélection ?",
         "blocks": [
           {
             "type": "table",
             "headers": [
-              "Association officielle",
+              "Exemple d’association de matériaux",
               "Rôle de candidat",
               "Encore à confirmer"
             ],
@@ -1684,11 +1684,11 @@ export const remainingPumpArticlesFr = {
       }
     ],
     "cta": {
-      "title": "Choisir DPL30 en EPDM ou en PTFE/FFKM",
+      "title": "Choisir EPDM ou PTFE/FFKM pour une pompe à membrane miniature",
       "description": "Précisez composition, concentration, température, pression, contact, nettoyage et nombre de cycles pour planifier présélection, immersion et validation dynamique de la pompe complète.",
       "contactLabel": "Contacter un ingénieur",
-      "productsLabel": "Voir la pompe à membrane miniature DPL30",
-      "productsHref": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump"
+      "productsLabel": "Voir les pompes à membrane miniatures",
+      "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
     }
   }
 } satisfies Partial<Record<DiaphragmPumpEngineeringArticleSlug, DiaphragmPumpEngineeringArticleCopy>>;

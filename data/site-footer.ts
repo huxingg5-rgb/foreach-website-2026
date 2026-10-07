@@ -218,10 +218,14 @@ function localizeHref(value: string, locale: LocaleCode) {
 
 export function getSiteFooterHref(value: SiteFooterHref | string | undefined | null, locale: LocaleCode) {
   if (!value) return "#";
-  if (typeof value === "string") return localizeHref(value, locale);
 
   const market = getSiteFooterMarket(locale);
-  const resolved = value[locale] || value[market] || value["zh-CN"] || value.en || value.china || value.global || "#";
+  const resolved = typeof value === "string"
+    ? value
+    : value[locale] || value[market] || value["zh-CN"] || value.en || value.china || value.global || "#";
+  const target = locale === "en" && /^\/(?:en\/)?products\/?\?category=control$/.test(resolved)
+    ? "/products/control/"
+    : resolved;
 
-  return localizeHref(resolved, locale);
+  return localizeHref(target, locale);
 }

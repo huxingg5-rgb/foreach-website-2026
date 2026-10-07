@@ -6,13 +6,13 @@ import editorial from "@/components/resources/technical-articles/articles/RplSel
 import styles from "@/components/resources/technical-articles/articles/TechnicalArticleBody.module.css";
 import { sv10EnglishGuide, sv10Video } from "@/data/resources/installation-guide/installation-guide.sv10.en";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
+import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID } from "@/lib/seo/site-identity";
 import "@/app/resources/technical-articles/technical-articles.css";
 import "@/app/resources/news/news.css";
 
 export default function Sv10VideoPage() {
   const url = getCanonicalUrl(sv10Video.detailHref);
   const videoSchema = {
-    "@context": "https://schema.org",
     "@type": "VideoObject",
     name: sv10Video.title,
     description: sv10Video.description,
@@ -22,7 +22,7 @@ export default function Sv10VideoPage() {
     embedUrl: sv10Video.embedUrl,
     url,
     inLanguage: "en",
-    publisher: { "@type": "Organization", name: "FOREACH", url: "https://www.foreachtek.com/" },
+    publisher: { "@id": SITE_ORGANIZATION_ID },
   };
   const breadcrumbs = [
     { name: "Home", item: getCanonicalUrl("/en/") },
@@ -31,11 +31,13 @@ export default function Sv10VideoPage() {
   ];
 
   return <div className={`newsArticleDetailPage ${editorial.pageSurface}`} data-locale="en" data-article-slug={sv10Video.id} lang="en">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([
-      videoSchema,
-      { "@context": "https://schema.org", "@type": "BreadcrumbList",
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [...HOME_SITE_IDENTITY["@graph"], videoSchema,
+      { "@type": "BreadcrumbList",
         itemListElement: breadcrumbs.map((item, index) => ({ "@type": "ListItem", position: index + 1, ...item })) },
-    ]).replace(/</g, "\\u003c") }} />
+      ],
+    }).replace(/</g, "\\u003c") }} />
     <div className="newsArticleBreadcrumbShell">
       <SiteBreadcrumb items={[
         { label: "Home", href: "/en/" },

@@ -1478,18 +1478,18 @@ export const remainingPumpArticlesKo = {
   },
   "300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm": {
     "metadata": {
-      "title": "300 mL/min 소형 액체 다이어프램 펌프의 EPDM, PTFE, FFKM은 어떻게 선정하나요?",
+      "title": "소형 다이어프램 펌프의 EPDM, PTFE, FFKM은 어떻게 선정하나요?",
       "seoTitle": "소형 다이어프램 펌프의 EPDM·PTFE·FFKM 선정 | Foreach Technology",
       "seoDescription": "화학적 적합성, 팽윤, 동적 밀봉과 실제 액체 검증을 통해 EPDM, PTFE 및 FFKM을 비교합니다.",
       "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-wetted-material-inspection.webp",
-      "coverAlt": "여러 접액 재질 조합을 제공하는 Foreach DPL30 소형 액체 다이어프램 펌프"
+      "coverAlt": "Foreach 소형 다이어프램 펌프의 접액 부품 점검 예시"
     },
     "deck": "EPDM, PTFE와 FFKM은 단순한 하급–상급 재질 순위가 아닙니다. EPDM과 FFKM은 탄성체이고 PTFE는 불소중합체이며, 다이어프램·밸브·헤드는 서로 다른 기계적 역할을 합니다. 따라서 이름 하나가 아니라 동적 하중을 받는 전체 접액 구조를 선정해야 합니다.",
     "leadBlocks": [
       {
         "type": "notice",
-        "label": "DPL30 공식 조합:",
-        "text": "EPDM 다이어프램 / EPDM 밸브 / PPS 헤드 또는 PTFE 다이어프램 / FFKM 밸브 / PPS 헤드입니다. 공개되지 않은 판매 구성으로 재질을 임의 조합하지 마십시오."
+        "label": "Foreach 소형 다이어프램 펌프의 재질 조합 예시:",
+        "text": "EPDM 다이어프램 / EPDM 밸브 / PPS 헤드 또는 PTFE 다이어프램 / FFKM 밸브 / PPS 헤드입니다. 공개되지 않은 판매 구성으로 재질을 임의 조합하지 마십시오. 이 글은 다이어프램 펌프의 일반적인 재질 선정 방법을 다룹니다. 위 조합은 일부 Foreach 모델의 구성 예시이며, 선택 가능한 조합은 각 시리즈와 모델별로 확인해야 합니다."
       },
       {
         "type": "paragraph",
@@ -1631,12 +1631,12 @@ export const remainingPumpArticlesKo = {
         ]
       },
       {
-        "title": "7. DPL30 공식 조합을 선정 과정에 어떻게 적용하나요?",
+        "title": "7. 다이어프램 펌프의 재질 조합을 선정 과정에 어떻게 적용하나요?",
         "blocks": [
           {
             "type": "table",
             "headers": [
-              "공식 조합",
+              "재질 조합 예시",
               "후보 역할",
               "추가 확인"
             ],
@@ -1684,11 +1684,11 @@ export const remainingPumpArticlesKo = {
       }
     ],
     "cta": {
-      "title": "EPDM 또는 PTFE/FFKM DPL30 조합을 선정하시나요?",
+      "title": "소형 다이어프램 펌프용 EPDM 또는 PTFE/FFKM 재질을 선정하시나요?",
       "description": "액체 조성, 농도, 온도, 압력, 접촉 시간, 세정법과 목표 사이클 수를 제공하여 후보 선별·침지부터 완성 펌프 동적 검증까지 단계적으로 계획하십시오.",
       "contactLabel": "엔지니어에게 문의",
-      "productsLabel": "DPL30 소형 액체 다이어프램 펌프 보기",
-      "productsHref": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump"
+      "productsLabel": "소형 다이어프램 펌프 보기",
+      "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
     }
   }
 } satisfies Partial<Record<DiaphragmPumpEngineeringArticleSlug, DiaphragmPumpEngineeringArticleCopy>>;

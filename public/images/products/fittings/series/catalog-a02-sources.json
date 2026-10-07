@@ -1,0 +1,85 @@
+{
+  "sourcePdf": "public/downloads/resources/datasheets/zh-CN/Tubing-and-Fittings/foreach-fittings-and-elastomer-tubing-catalog-a02-cn.pdf",
+  "assets": [
+    {
+      "slug": "hard-tube-fittings",
+      "src": "/images/products/fittings/series/catalog-a02-hard-tube-fittings.webp",
+      "width": 1376,
+      "height": 665,
+      "pdfPages": [
+        5
+      ],
+      "bytes": 104088
+    },
+    {
+      "slug": "barbed-fittings",
+      "src": "/images/products/fittings/series/catalog-a02-barbed-fittings.webp",
+      "width": 769,
+      "height": 630,
+      "pdfPages": [
+        27
+      ],
+      "bytes": 51914
+    },
+    {
+      "slug": "thread-to-barbed-fittings",
+      "src": "/images/products/fittings/series/catalog-a02-thread-to-barbed-fittings.webp",
+      "width": 893,
+      "height": 621,
+      "pdfPages": [
+        41
+      ],
+      "bytes": 118620
+    },
+    {
+      "slug": "luer-fittings",
+      "src": "/images/products/fittings/series/catalog-a02-luer-fittings.webp",
+      "width": 1122,
+      "height": 679,
+      "pdfPages": [
+        49
+      ],
+      "bytes": 73524
+    },
+    {
+      "slug": "quick-connect-fittings",
+      "src": "/images/products/fittings/series/catalog-a02-quick-connect-fittings.webp",
+      "width": 1342,
+      "height": 895,
+      "pdfPages": [
+        62
+      ],
+      "bytes": 125698
+    },
+    {
+      "slug": "female-thread-adapters",
+      "src": "/images/products/fittings/series/catalog-a02-female-thread-adapters.webp",
+      "width": 1147,
+      "height": 609,
+      "pdfPages": [
+        81
+      ],
+      "bytes": 104062
+    },
+    {
+      "slug": "bulkhead-barbed-fittings",
+      "src": "/images/products/fittings/series/catalog-a02-bulkhead-barbed-fittings.webp",
+      "width": 607,
+      "height": 250,
+      "pdfPages": [
+        39
+      ],
+      "bytes": 12386
+    },
+    {
+      "slug": "filters",
+      "src": "/images/products/fittings/series/catalog-a02-filters.webp",
+      "width": 1000,
+      "height": 500,
+      "pdfPages": [
+        91
+      ],
+      "bytes": 9974
+    }
+  ]
+}

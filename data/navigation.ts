@@ -224,8 +224,8 @@ function localizedPath(path: string): LocalizedHref {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
 
   return {
-    "zh-CN": getLocalizedSiteHref(normalizedPath, "zh-CN"),
-    en: getLocalizedSiteHref(normalizedPath, "en"),
+    "zh-CN": getLocalizedSiteHref(normalizedPath === "/products?category=needles" ? "/products/probes/" : normalizedPath === "/products?category=control" ? "/products/control/" : normalizedPath, "zh-CN"),
+    en: getLocalizedSiteHref(normalizedPath === "/products?category=control" ? "/products/control/" : normalizedPath, "en"),
     es: getLocalizedSiteHref(normalizedPath, "es"),
     fr: getLocalizedSiteHref(normalizedPath, "fr"),
     ko: getLocalizedSiteHref(normalizedPath, "ko"),
@@ -621,13 +621,13 @@ const productMegaDropdown: MegaDropdown = {
           "/images/products/control/foreach-abd-air-bubble-detector.webp",
           t("ABD 气泡检测模块", "ABD Air Bubble Detector", "Detector de burbujas ABD", "Détecteur de bulles ABD", "ABD 기포 감지 모듈", "Детектор пузырьков ABD"),
           t("用于透明管路气泡与液滴检测", "For bubble and droplet detection in transparent tubing", "Para detectar burbujas y gotas en tubos transparentes", "Pour détecter les bulles et gouttelettes dans les tubes transparents", "투명 튜빙 내 기포 및 액적 감지용", "Для обнаружения пузырьков и капель в прозрачных трубках"),
-          localizedPath("/products?category=control")
+          { ...localizedPath("/products?category=control"), en: getLocalizedSiteHref("/products/control/air-bubble-detectors/abd/", "en") }
         ),
         productImage(
           "/images/products/control/foreach-pdm5-pressure-sensor.webp",
           t("PDM5 压力检测模块", "PDM5 Pressure Sensor", "Sensor de presión PDM5", "Capteur de pression PDM5", "PDM5 압력 감지 모듈", "Датчик давления PDM5"),
           t("用于液路压力监测与堵塞预警", "For fluid pressure monitoring and blockage warning", "Para monitoreo de presión de fluido y alerta de obstrucción", "Pour surveillance de pression fluidique et alerte de colmatage", "유체 압력 모니터링 및 막힘 경고용", "Для мониторинга давления жидкости и предупреждения о засоре"),
-          localizedPath("/products?category=control")
+          { ...localizedPath("/products?category=control"), en: getLocalizedSiteHref("/products/control/pdm5-pressure-sensor/", "en") }
         ),
       ],
       order: 6,

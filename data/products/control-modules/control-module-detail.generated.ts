@@ -1,3 +1,4 @@
+import { getControlModuleDataSlug } from "../selection/control-module-routes";
 export type ControlModuleSpec = {
   label: string;
   value: string;
@@ -177,7 +178,7 @@ export const controlModuleDetails: ControlModuleDetail[] = [
 ];
 
 export function getControlModuleDetailBySlug(slug: string) {
-  return controlModuleDetails.find((item) => item.slug === slug) || null;
+  return controlModuleDetails.find((item) => item.slug === getControlModuleDataSlug(slug)) || null;
 }
 
 export function getControlModuleDetailSlugs() {

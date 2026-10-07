@@ -1,3 +1,5 @@
+import { getFittingSelectionMetadata } from "@/lib/seo/fitting-selection-metadata";
+import { getControlModuleRouteSlug, getControlModulePath, getControlModuleLanguageAlternates } from "@/data/products/selection/control-module-routes";
 import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
 import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
 import { getPistonPumpMetadata } from "@/services/products/getPistonPumpMetadata";
@@ -14,7 +16,7 @@ import { getPipettingMetadata } from "@/services/products/getPipettingMetadata";
    2. 如果 slug 命中 product-route-map.ts，则显示产品类型筛选页
       示例：/products/pumps/piston-pump
    3. 如果 category === "control"，则显示智控模块详情页
-      示例：/products/control/abd-air-bubble-detector
+      示例：/products/control/abd
    4. 如果没有命中产品类型路由，则继续按旧逻辑显示产品详情页
    5. 这样可以保留原有产品详情页，同时支持新的产品中心 SEO 路径
    6. 柱塞泵具体型号详情页已单独使用：
@@ -75,12 +77,12 @@ const tubingStaticParams = [
    说明：
    1. 当前项目使用 output: export；
    2. dynamicParams = false 时，所有动态路径必须在 generateStaticParams 中列出；
-   3. 所以 ABD / PDM5 详情页必须显式加入静态参数。
+   3. PDM5 在此导出；ABD 由气泡检测分类下的静态页面导出。
 ========================================================= */
 function getControlModuleStaticParams() {
-  return getControlModuleDetailSlugs().map((slug) => ({
+  return getControlModuleDetailSlugs().filter((slug) => slug !== "abd-air-bubble-detector").map((slug) => ({
     category: CONTROL_CATEGORY_ID,
-    slug,
+    slug: getControlModuleRouteSlug(slug),
   }));
 }
 
@@ -115,6 +117,10 @@ export async function generateMetadata({
   const productTypeRoute = resolveProductTypeRoute(category, slug);
 
   if (productTypeRoute) {
+    if (category === "fittings") {
+      const metadata = getFittingSelectionMetadata("zh", slug);
+      if (metadata) return metadata;
+    }
     if (["diaphragm-pump", "valveless-pump", "syringe-pump"].includes(productTypeRoute.productTypeId)) {
       const canonicalPath = `/products/${category}/${slug}/`;
 
@@ -174,11 +180,12 @@ export async function generateMetadata({
     return {
       title,
       description,
+      alternates: { canonical: getControlModulePath(slug), languages: getControlModuleLanguageAlternates(slug) },
       ...buildProductSocialMetadata({
         data: pageData,
         title,
         description,
-        canonicalUrl: `/products/${category}/${slug}/`,
+        canonicalUrl: getControlModulePath(slug),
       }),
     };
   }

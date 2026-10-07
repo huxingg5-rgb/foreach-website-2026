@@ -520,6 +520,12 @@ export function getQuickConnectSeriesDetailData(
     sourceType:
       "quick-connect-series-detail",
 
+    quickConnectIntroductionParagraphsZh: [
+      `FOREACH ${series} 快插接头系列提供${joinValues(genders)}及${joinValues(valveOptions)}配置，面向需要快速拆装的设备管路，用于液路对接、更换和维护，可按${joinValues(shapes)}结构及安装方式选择。`,
+      `${series} 公称通径为 ${series === "Q20" ? "1/8" : series === "Q40" ? "1/4" : "3/8"} 英寸，当前接管或螺纹配置包括${joinValues(connections)}。公称通径不作为实际流量指标；公母端需同系列配对，密封和断开表现需结合压力、介质及各端阀配置确认。`,
+      `当前主体材料包括${joinValues(housingMaterials)}，密封圈材料包括${joinValues(sealMaterials)}，按具体型号组合选择。结合试剂、清洗液、浓度和温度确认材料兼容性，再核对软管条件、穿板固定与拆装频次。`,
+    ],
+
     category:
       "fittings",
 

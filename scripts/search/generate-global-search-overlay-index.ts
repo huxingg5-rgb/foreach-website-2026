@@ -1,3 +1,5 @@
+import { normalizeControlModulePath } from "../../data/products/selection/control-module-routes";
+import { getTubingMaterialCopy } from "../../data/products/tubing/content";
 import { normalizePipettingPath } from "../../data/products/selection/pipetting-pump-routes";
 import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
 import { getValvelessForeignContent, getValvelessLocaleCopy } from "../../data/products/detail/valveless-pump-locales";
@@ -447,6 +449,17 @@ function loadProductAndCompatibleItems(
     if (!sourceTitle || !href) return [];
 
     const copy = getModuleCopy(locale, searchModule);
+    const tubingSlug = /^\/products\/tubing\/([^/]+)\/?$/.exec(href)?.[1];
+    const tubing = tubingSlug ? getTubingMaterialCopy(tubingSlug, isChinese ? "zh" : locale) : undefined;
+    if (tubing) {
+      const title = tubing.cardTitle;
+      const description = tubing.seoDescription;
+      const subtitle = tubing.cardHeading;
+      const keywords = buildSearchText([title, tubingSlug, "instrument tubing", "管材"]);
+      return [{ m: searchModule, t: title, s: subtitle, d: description, h: href,
+        ...(item.image ? { i: cleanImage(item.image) } : {}),
+        x: buildSearchText([title, subtitle, description, keywords, href]), k: keywords, a: copy.action }];
+    }
     const valvelessSlug = /^\/products\/pumps\/valveless-metering-pump\/([^/]+)\/?$/.exec(href)?.[1];
     const valveless = !isChinese && valvelessSlug ? getValvelessForeignContent(valvelessSlug, locale) : undefined;
     if (valveless) {
@@ -891,7 +904,7 @@ function getLocalizedValue(
 }
 
 function normalizePageHref(href: string): string {
-  const trimmed = normalizePipettingPath(href.trim());
+  const trimmed = normalizeControlModulePath(normalizePipettingPath(href.trim()));
   if (
     !trimmed.startsWith("/") ||
     trimmed.startsWith("//") ||

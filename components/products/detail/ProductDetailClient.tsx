@@ -1,4 +1,8 @@
 "use client";
+import { getControlModuleDetailHeading } from "@/data/products/selection/control-module-card-copy";
+import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
+import { getProbeControlBreadcrumbsEn } from "@/lib/seo/probe-control-breadcrumbs";
+import { productDetailIntrosEn } from "@/data/products/selection/product-introductions.en";
 import { getSolenoidContent } from "@/data/products/detail/solenoid-content";
 import { getMrv3Content } from "@/data/products/detail/mrv3-content";
 import { getSyringeModelBreadcrumbs } from "@/data/products/selection/syringe-pump-routes";
@@ -8,6 +12,10 @@ import { applyPipettingPumpIntroduction } from "@/data/products/detail/pipetting
 import { applyPipettingPumpFaq } from "@/data/products/detail/pipetting-pump-faq.locales";
 import { getPipettingModelBreadcrumbs } from "@/data/products/selection/pipetting-pump-breadcrumbs";
 import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
+import { getChineseProductPageBreadcrumbs } from "@/lib/seo/chinese-product-breadcrumbs";
+import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
+import { buildProductSpecProperties } from "@/lib/seo/product-spec-properties";
+import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
 
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
 import { getValveDetailHeading } from "@/data/products/selection/valve-card-copy";
@@ -436,7 +444,7 @@ function isFittingDetailData(data: any): boolean {
 
 function getDisplayModelText(data: any): string {
   if (isTubingDetailData(data)) {
-    return "XXX-XXX-XX-XX";
+    return data?.displayModel || (data?.__locale === "en" ? "Select a Size" : "请选择尺寸");
   }
 
   if (isHardTubeTargetLocale(String(data?.__locale || ""))) {
@@ -1209,9 +1217,11 @@ function getDiaphragmPumpSchemaName(
 function buildProductPageStructuredData(data: any, pathname: string) {
   const canonicalUrl = getCanonicalProductPageUrl(pathname);
   const defaultProductName = String(
-    data.model || data.title || data.name || ""
+    (data.tubingAuthoredContent ? data.h1Title : undefined) || data.model || data.title || data.name || ""
   ).trim();
-  const description = String(data.description || "").trim();
+  const probeControlCopy = getProductPageLocale(pathname) === "en" && ["probes", "control"].includes(String(data.category))
+    ? probeControlDetailCopyEn[String(data.slug || "")] : undefined;
+  const description = probeControlCopy?.description || String(data.description || "").trim();
   const productImages = Array.from(
     new Set(
       [
@@ -1228,6 +1238,9 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const isDiaphragmPump =
     isDiaphragmPumpPublicPath(pathname) &&
     isDiaphragmPumpDetailData(data);
+  const specProperties = (isPumpDetailData(data) || isValveDetailData(data) || data.category === "tubing") && Array.isArray(data.specs)
+    ? buildProductSpecProperties(data.specs)
+    : [];
   const diaphragmReference = isDiaphragmPump
     ? getDiaphragmPumpReferenceFromIdentity(data)
     : null;
@@ -1235,9 +1248,9 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     ? getDiaphragmPumpSchemaModel(pathname, rawProductModel)
     : rawProductModel;
   const locale = getProductPageLocale(pathname);
-  const productName = isDiaphragmPump
+  const productName = probeControlCopy?.h1 || (isDiaphragmPump
     ? getDiaphragmPumpSchemaName(data, pathname, locale, productModel)
-    : defaultProductName;
+    : defaultProductName);
   const productSku = String(
     isDiaphragmPump
       ? data.sku || data.internalSku || ""
@@ -1258,11 +1271,11 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     PRODUCT_BREADCRUMB_COPY[locale] || PRODUCT_BREADCRUMB_COPY.en;
   const diaphragmCategoryCopy = getDiaphragmPumpCategoryCopy(locale);
   const isPistonPump = pathname.includes("/products/pumps/piston-pump/");
-  // Q-series routes collect selectable models; other detail routes describe specifications.
+  // Q-series routes collect selectable models.
   const isProductCollectionPage =
     /\/products\/fittings\/quick-connect-fittings\/q(?:20|40|60)\/?$/.test(pathname);
   const compactChineseBreadcrumbs = getPipettingModelBreadcrumbs(String(data.slug || ""), locale) || getSyringeModelBreadcrumbs(String(data.slug || ""), locale) || getChineseProductBreadcrumbs(data, locale);
-  const breadcrumbItems = (data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.hpAuthoredContent) ? [
+  const legacyBreadcrumbItems = (data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.hpAuthoredContent) ? [
     { name: breadcrumbCopy.home, item: toAbsoluteProductUrl(`${localePrefix}/`) },
     { name: breadcrumbCopy.products, item: toAbsoluteProductUrl(`${localePrefix}/products/`) },
     { name: data.breadcrumbCategoryLabel, item: toAbsoluteProductUrl(data.breadcrumbCategoryHref) },
@@ -1316,8 +1329,15 @@ function buildProductPageStructuredData(data: any, pathname: string) {
           item: canonicalUrl,
         },
       ];
-  const organizationId = `${PRODUCT_SITE_ORIGIN}/#organization`;
-  const websiteId = `${PRODUCT_SITE_ORIGIN}/#website`;
+  const chineseBreadcrumbItems = getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
+  const breadcrumbItems = chineseBreadcrumbItems
+    ? chineseBreadcrumbItems.map((item) => ({ name: item.label, item: item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl }))
+    : legacyBreadcrumbItems;
+  if (String(data.category) === "control" && data.slug === "abd-air-bubble-detector") {
+    breadcrumbItems[breadcrumbItems.length - 1] = { ...breadcrumbItems[breadcrumbItems.length - 1], name: "ABD" };
+  }
+  const organizationId = SITE_ORGANIZATION_ID;
+  const websiteId = SITE_WEBSITE_ID;
   const webpageId = `${canonicalUrl}#webpage`;
   const breadcrumbId = `${canonicalUrl}#breadcrumb`;
   const productId = `${canonicalUrl}#product-model`;
@@ -1336,11 +1356,11 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     publisher: {
       "@id": organizationId,
     },
-    ...(isProductCollectionPage ? {} : {
+    ...(!isProductCollectionPage ? {
       mainEntity: {
         "@id": productId,
       },
-    }),
+    } : {}),
   };
 
   if (description) {
@@ -1348,22 +1368,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   }
 
   const graph: Record<string, unknown>[] = [
-    {
-      "@type": "Organization",
-      "@id": organizationId,
-      name: "Foreach Technology",
-      legalName: "深圳市恒永达科技股份有限公司",
-      url: `${PRODUCT_SITE_ORIGIN}/`,
-    },
-    {
-      "@type": "WebSite",
-      "@id": websiteId,
-      url: `${PRODUCT_SITE_ORIGIN}/`,
-      name: "Foreach Technology",
-      publisher: {
-        "@id": organizationId,
-      },
-    },
+    ...HOME_SITE_IDENTITY["@graph"],
     {
       "@type": "BreadcrumbList",
       "@id": breadcrumbId,
@@ -1392,6 +1397,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
         },
         ...(productModel ? { model: productModel } : {}),
         ...(productSku ? { sku: productSku } : {}),
+        ...(specProperties.length > 0 ? { additionalProperty: specProperties } : {}),
         mainEntityOfPage: {
           "@id": webpageId,
         },
@@ -1514,7 +1520,7 @@ export default function ProductDetailClient({
         const mrv3Data: typeof sourceData = { ...sourceData, ...mrv3Copy, category: "valves" };
         return applyDiaphragmPumpDetailCopy(mrv3Data, configuratorLocale);
       }
-      const hasLocalizedPistonCopy = (sourceData.eaDetailContent === true || sourceData.compactDetailContent === true || sourceData.valvelessDetailContent === true) && sourceData.__locale === configuratorLocale;
+      const hasLocalizedPistonCopy = (sourceData.tubingAuthoredContent === true || sourceData.eaDetailContent === true || sourceData.compactDetailContent === true || sourceData.valvelessDetailContent === true) && sourceData.__locale === configuratorLocale;
       let localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
         : isEnglish
@@ -1608,14 +1614,26 @@ export default function ProductDetailClient({
    * - 不改变型号选择区域的数据。
    */
   const diaphragmCopy = getDiaphragmPumpCopy(data, configuratorLocale);
+  const reviewedIntroductionEn = configuratorLocale === "en" &&
+    ["probes", "control"].includes(String(data.category || ""))
+    ? productDetailIntrosEn[String(data.slug || "")]
+    : undefined;
+  const probeControlDetailCopy = reviewedIntroductionEn ? probeControlDetailCopyEn[String(data.slug || "")] : undefined;
+  const controlDetailH1 = String(data.category) === "control"
+    ? getControlModuleDetailHeading(String(data.slug || ""), configuratorLocale)
+    : undefined;
   const displayProductTitle =
-    ((data.mrv3AuthoredContent || data.solenoidAuthoredContent) ? data.h1Title : undefined) ||
+    probeControlDetailCopy?.h1 || reviewedIntroductionEn?.title ||
+    ((data.tubingAuthoredContent || data.mrv3AuthoredContent || data.solenoidAuthoredContent) ? data.h1Title : undefined) ||
     diaphragmCopy?.title ||
     (useAuthoredPistonCopy || useAuthoredValvelessCopy ? String(data.model || "") : getScopedProductDisplayTitle(
       data,
       targetLocale,
       String(data.model || "")
     ));
+  const tubingDetailH1 = String(data.category || "") === "tubing"
+    ? getTubingMaterialHeading(String(data.slug || ""), configuratorLocale)?.h1
+    : undefined;
   const syringeDetailH1 = pathname?.includes("/products/pumps/syringe-pumps/")
     ? syringePumpCardsLocales[getProductPageLocale(pathname)]?.[String(data.slug || "")]?.heading
     : undefined;
@@ -1721,7 +1739,7 @@ export default function ProductDetailClient({
         drawingPreview: "预览图纸",
         drawingDescription: (model: string) => `查看 ${model} 的技术图纸。`,
       };
-  const productBreadcrumbItems = ((data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.hpAuthoredContent) ? [
+  const legacyProductBreadcrumbItems = ((data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.hpAuthoredContent) ? [
     { label: copy.home, href: `${localePrefix}/` },
     { label: copy.products, href: `${localePrefix}/products/` },
     { label: data.breadcrumbCategoryLabel, href: data.breadcrumbCategoryHref },
@@ -1771,6 +1789,12 @@ export default function ProductDetailClient({
             : displayProductTitle,
         },
       ]);
+  const productBreadcrumbItems = getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
+    pathname, configuratorLocale, legacyProductBreadcrumbItems.at(-1)?.label,
+  ) || legacyProductBreadcrumbItems;
+  if (String(data.category) === "control" && data.slug === "abd-air-bubble-detector") {
+    productBreadcrumbItems[productBreadcrumbItems.length - 1] = { ...productBreadcrumbItems[productBreadcrumbItems.length - 1], label: "ABD" };
+  }
     const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
 
   const analyticsProductId = String(
@@ -3218,11 +3242,25 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
 
           <div className={styles.productInfo}>
             <div className={styles.titleGroup}>
-              <h1 className={styles.productModelTitle}>{formatProductHeading(inheritedDetailH1 ? `FOREACH ${inheritedDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle)}</h1>
+              <h1 className={styles.productModelTitle}>
+                {formatProductHeading(controlDetailH1 || tubingDetailH1 || (inheritedDetailH1 ? `FOREACH ${inheritedDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle))}
+              </h1>
             </div>
 
 
-            {Array.isArray(data.pipettingIntroductionParagraphs) ? (
+            {reviewedIntroductionEn ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-reviewed-introduction="en">
+                {reviewedIntroductionEn.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : configuratorLocale === "zh" && Array.isArray(data.quickConnectIntroductionParagraphsZh) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-quick-connect-description="true">
+                {data.quickConnectIntroductionParagraphsZh.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            ) : Array.isArray(data.tubingIntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-tubing-description="true">
+                {data.tubingIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : Array.isArray(data.pipettingIntroductionParagraphs) ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-pipetting-description="true">
                 {data.pipettingIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
               </div>

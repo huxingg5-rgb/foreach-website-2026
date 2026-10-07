@@ -1,4 +1,18 @@
 "use client";
+
+import { getPistonPumpIntroCopy } from "@/data/products/selection/piston-pump-series-copy";
+import { getControlModulePath } from "@/data/products/selection/control-module-routes";
+import { probeTypesEn, controlTypesEn, probeIntrosEn, controlIntrosEn, probeOverviewParagraphsEn, controlOverviewParagraphsEn, getProbeSelectionPathEn, getControlSelectionPathEn } from "@/data/products/selection/probe-control-selection.en";
+import { getProbeControlBreadcrumbsEn } from "@/lib/seo/probe-control-breadcrumbs";
+import { getProductIntroductionParagraphsZh, productIntroductionsZh } from "@/data/products/selection/product-introductions.zh";
+import { getLocalizedFittingIntroduction } from "@/data/products/selection/fitting-introductions.locales";
+import { productOverviewIntrosEn } from "@/data/products/selection/product-introductions.en";
+import { getProductOverviewHeading } from "@/data/products/selection/product-overview-headings";
+import { getTubingIntro, getTubingSeriesCopy, getTubingMaterialCopy } from "@/data/products/tubing/content";
+import { fittingIntrosZh, fittingOverviewParagraphsZh } from "@/data/products/selection/fitting-headings.zh";
+import ProductTypeIntroImage from "./ProductTypeIntroImage";
+import { probeIntrosZh, probeOverviewParagraphsZh, probeTypesZh, getProbeProductTypeIdZh, getProbeSelectionPathZh } from "@/data/products/selection/probe-selection.zh";
+import { controlIntrosZh, controlOverviewParagraphsZh, controlTypesZh, getControlProductTypeIdZh, getControlSelectionPathZh } from "@/data/products/selection/control-selection.zh";
 import {getValveSeriesRoute,getValveSelectionPath,getHpValveDetailPath} from "@/data/products/selection/valve-routes";
 import { expandSolenoidCards, getSolenoidContent, solenoidConfigurations, solenoidImage } from "@/data/products/detail/solenoid-content";
 import { expandMrv3Cards, getMrv3Content } from "@/data/products/detail/mrv3-content";
@@ -14,7 +28,8 @@ import {
 } from "@/data/products/selection/valveless-pump-routes";
 
 import { Suspense, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { getChineseProductPageBreadcrumbs } from "@/lib/seo/chinese-product-breadcrumbs";
 import { getPipettingPath, pipettingSeriesFilters } from "@/data/products/selection/pipetting-pump-seo";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
@@ -43,6 +58,7 @@ import {
   getValvelessPumpCategoryIntro,
   getInstrumentCategoryIntro,
   getProductTypeIntroByIds,
+  pumpOverviewParagraphsZh,
 } from "@/data/products/selection/product-type-intro";
 import { getProductFilterOptions } from "@/data/products/selection/filter-rules/product-filter-rules.index";
 import {
@@ -621,7 +637,7 @@ const ENGLISH_CATEGORY_DESCRIPTIONS: Record<string, string> = {
   tubing:
     "Select a base configuration by tubing material, outside diameter, inside diameter, and application requirements.",
   control:
-    "Select a base configuration by control method, drive type, and system interface.",
+    "Select by detection task, tubing or fluid-path conditions, and signal interface.",
 };
 
 const TARGET_CATEGORY_DESCRIPTIONS: Record<
@@ -1016,12 +1032,22 @@ const PRODUCT_TYPE_INTRO_DISCLOSURE_TEXT: Record<
   ru: { more: "Показать больше", less: "Свернуть" },
 };
 
+// Count rendered copy only: link destinations and emphasis markers add no visible text.
+function getProductIntroTextLength(paragraph: string) {
+  return paragraph
+    .replace(/\[([^\]]+)\]\((?:\/[^)\s]+|filter:filter\d{2}=[^)]+)\)/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .trim().length;
+}
+
 type ProductTypeIntroCopyProps = {
   title: string;
   paragraphs: string[];
   locale: SelectionLocale;
   isPrimaryHeading: boolean;
   preserveCollapsedContentInDom?: boolean;
+  collapsedParagraphCount?: number;
+  collapsedTextBudget?: number;
   onFilterAction: (filterKey: SelectionFilterKey, value: string) => void;
   selectedFilters: SelectedFilterMap;
 };
@@ -1032,12 +1058,28 @@ function ProductTypeIntroCopy({
   locale,
   isPrimaryHeading,
   preserveCollapsedContentInDom = false,
+  collapsedParagraphCount,
+  collapsedTextBudget,
   onFilterAction,
   selectedFilters,
 }: ProductTypeIntroCopyProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const contentId = useId();
-  const desktopCollapsedParagraphCount = 2;
+  const minimumCollapsedParagraphCount =
+    collapsedParagraphCount ?? (locale === "zh" ? 3 : 2);
+  let desktopCollapsedParagraphCount = minimumCollapsedParagraphCount;
+  if (collapsedTextBudget !== undefined) {
+    let visibleCharacters = 0;
+    desktopCollapsedParagraphCount = 0;
+    // Add complete existing paragraphs until the piston-pump preview amount is reached.
+    // Keep the original minimum so this adjustment never shortens an existing preview.
+    for (const paragraph of paragraphs) {
+      visibleCharacters += getProductIntroTextLength(paragraph);
+      desktopCollapsedParagraphCount += 1;
+      if (desktopCollapsedParagraphCount >= minimumCollapsedParagraphCount &&
+          visibleCharacters >= collapsedTextBudget) break;
+    }
+  }
   const hasHiddenParagraphs = preserveCollapsedContentInDom
     ? paragraphs.length > desktopCollapsedParagraphCount
     : paragraphs.length > 1;
@@ -1122,6 +1164,10 @@ function getCategoryDescription(
   categoryId: string,
   fallback: string
 ) {
+  if (categoryId === "needles" && locale === "zh") return "按采样、穿刺、清洗或混匀任务选择产品，并结合图纸或样品确认定制方案。";
+  if (categoryId === "control" && locale === "zh") return "根据检测对象、管路条件和系统接口选择产品。";
+  const tubingCopy = categoryId === "tubing" ? getTubingSeriesCopy(locale) : undefined;
+  if (tubingCopy) return tubingCopy.filterHint;
   if (locale === "en") {
     return (
       ENGLISH_CATEGORY_DESCRIPTIONS[categoryId] ||
@@ -1213,7 +1259,7 @@ function getProductsByCategory(categoryId: string) {
     管路系列直接返回 6 张材料卡片。
   */
   if (String(arguments[0] || "") === "tubing") {
-    return tubingSelectionProducts;
+    return tubingSelectionProducts.map((product) => ({ ...product, productTypeId: product.productId }));
   }
 
 return selectionProducts
@@ -1243,7 +1289,7 @@ function getFirstProductTypeId(categoryId: string) {
     TUBING_GET_FIRST_PRODUCT_TYPE_20260707
   */
   if (String(arguments[0] || "") === "tubing") {
-    return "tubing";
+    return "";
   }
 
 const products = getProductsByCategory(categoryId);
@@ -2420,7 +2466,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
         ""
     ).trim();
 
-    return controlSlug ? `/products/control/${controlSlug}` : "/products";
+    return controlSlug ? getControlModulePath(controlSlug) : "/products";
   }
   /*
     CONTROL_MODULE_DETAIL_HREF_PATCH_20260708
@@ -2453,7 +2499,7 @@ function makeDetailHref(product: ProductSelectionProduct) {
       .pop();
 
     if (rawSlug === "abd-air-bubble-detector" || rawSlug === "control-abd-air-bubble-detector") {
-      return "/products/control/abd-air-bubble-detector";
+      return getControlModulePath("abd");
     }
 
     if (rawSlug === "pdm5-pressure-sensor" || rawSlug === "control-pdm5-pressure-sensor") {
@@ -3218,7 +3264,7 @@ function matchesActiveProductType(
   activeProductTypeId: string,
   productTypeId: string
 ) {
-  if (!activeProductTypeId) {
+  if (!activeProductTypeId || (categoryId === "tubing" && activeProductTypeId === "tubing")) {
     return true;
   }
 
@@ -3257,9 +3303,10 @@ function matchesActiveProductType(
 
 
 function getCategoryDefaultProductTypeId(
-  categoryId: string
+  categoryId: string,
+  locale: SelectionLocale
 ) {
-  return categoryId === "pumps" || categoryId === "valves"
+  return ["pumps", "valves", "fittings"].includes(categoryId) || (["control", "needles"].includes(categoryId) && ["zh", "en"].includes(locale))
     ? ""
     : getFirstProductTypeId(categoryId);
 }
@@ -3271,6 +3318,7 @@ export default function ProductSelectionClient({
   initialFilters,
 }: ProductSelectionClientProps) {
   const router = useRouter();
+  const pathname = usePathname();
   const [querySelection, setQuerySelection] = useState<{
     categoryId?: string;
     productTypeId?: string;
@@ -3319,14 +3367,14 @@ export default function ProductSelectionClient({
 
   const [activeProductTypeId, setActiveProductTypeId] = useState(() => {
     return initialProductTypeId ||
-        getCategoryDefaultProductTypeId(resolvedInitialCategoryId);
+        getCategoryDefaultProductTypeId(resolvedInitialCategoryId, locale);
   });
 
   const [selectedFilters, setSelectedFilters] = useState<SelectedFilterMap>(
     () => {
       const initialActiveProductTypeId =
         initialProductTypeId ||
-        getCategoryDefaultProductTypeId(resolvedInitialCategoryId);
+        getCategoryDefaultProductTypeId(resolvedInitialCategoryId, locale);
 
       return getInitialSelectedFilters(
         resolvedInitialCategoryId,
@@ -3359,7 +3407,7 @@ export default function ProductSelectionClient({
   >(() => {
     const initialActiveProductTypeId =
       initialProductTypeId ||
-        getCategoryDefaultProductTypeId(resolvedInitialCategoryId);
+        getCategoryDefaultProductTypeId(resolvedInitialCategoryId, locale);
 
     return getDefaultMobileOpenFilterGroups(initialActiveProductTypeId);
   });
@@ -3444,12 +3492,57 @@ export default function ProductSelectionClient({
   }, [activeCategoryId, categoryItems]);
 
   const categoryProducts = useMemo(() => {
-    return getProductsByCategory(activeCategoryId).flatMap(product => expandMrv3Cards(product, locale)).flatMap(product => expandSolenoidCards(product, locale)).map((product) =>
+    const products = getProductsByCategory(activeCategoryId).flatMap(product => expandMrv3Cards(product, locale)).flatMap(product => expandSolenoidCards(product, locale)).map((product) =>
       applyDiaphragmPumpReferenceCard(product, locale),
     );
+
+    if (activeCategoryId === "needles" && ["zh", "en"].includes(locale)) {
+      const order = new Map<string, number>(probeTypesZh.map((type, index) => [type.id, index]));
+      return products.map((product) => ({ ...product, productTypeId: getProbeProductTypeIdZh(product) }))
+        .sort((current, next) => (order.get(current.productTypeId || "") ?? 999) - (order.get(next.productTypeId || "") ?? 999));
+    }
+
+    if (activeCategoryId === "control" && ["zh", "en"].includes(locale)) {
+      const order = new Map<string, number>(controlTypesZh.map((type, index) => [type.id, index]));
+      return products.map((product) => ({ ...product, productTypeId: getControlProductTypeIdZh(product) }))
+        .sort((current, next) => (order.get(current.productTypeId || "") ?? 999) - (order.get(next.productTypeId || "") ?? 999));
+    }
+
+    if (activeCategoryId === "fittings") {
+      const getTypeOrder = (productTypeId: string | undefined) =>
+        FITTING_PRODUCT_TYPE_ORDER_MAP.get(
+          productTypeId === "check-valves" ? "filters" : productTypeId || "",
+        ) ?? 999;
+
+      // Match the sidebar order while preserving the existing order within each type.
+      return products.sort((current, next) =>
+        getTypeOrder(current.productTypeId) - getTypeOrder(next.productTypeId),
+      );
+    }
+
+    return products;
   }, [activeCategoryId, locale]);
 
   const productTypeOptions = useMemo(() => {
+    if (activeCategoryId === "tubing") {
+      return categoryProducts.map((product) => ({
+        value: product.productId,
+        label: locale === "zh"
+          ? `${getTubingMaterialCopy(product.productId, "zh")!.cardLabel} 管`
+          : locale === "en"
+            ? getText(locale, product.cardTitle, product.productId).replace(
+                / \(([A-Z]+)\) Tubing$/,
+                " Tubing ($1)",
+              )
+            : getText(locale, product.cardTitle, product.productId),
+      }));
+    }
+    if (activeCategoryId === "needles" && ["zh", "en"].includes(locale)) {
+      return (locale === "en" ? probeTypesEn : probeTypesZh).map((type) => ({ value: type.id, label: type.label }));
+    }
+    if (activeCategoryId === "control" && ["zh", "en"].includes(locale)) {
+      return (locale === "en" ? controlTypesEn : controlTypesZh).map((type) => ({ value: type.id, label: type.label }));
+    }
     const optionMap = new Map<string, { value: string; label: string }>();
 
     /*
@@ -3632,10 +3725,11 @@ export default function ProductSelectionClient({
                 ko: "제품 시리즈",
                 ru: "Серии продукции",
               }[locale]
-            : activeCategoryId === "fittings" && locale === "zh"
+            : ["fittings", "control", "needles", "tubing"].includes(activeCategoryId) && locale === "zh"
               ? "产品种类"
               : pageText.productTypeLabel,
         inputType: "single",
+        layout: activeCategoryId === "tubing" ? "one" : undefined,
         options: productTypeOptions,
       });
     }
@@ -3786,6 +3880,8 @@ export default function ProductSelectionClient({
     return groups;
   }, [activeCategoryId, activeFilterLabels, activeProductTypeId, currentTypeProducts, locale, productTypeOptions, selectedFilters]);
 
+  const showProductTypeResultCount = filterGroups.some((group) => group.key === "productType");
+
   const matchedProducts = useMemo(() => {
     const keyword = searchKeyword.trim().toLowerCase();
 
@@ -3866,7 +3962,8 @@ export default function ProductSelectionClient({
     ? activeProductTypeId === "旋转阀" ? getMrv3Content("rotary-valves", locale)
       : activeProductTypeId === "电磁阀" ? getSolenoidContent("solenoid-valves", locale) : null
     : null;
-  const activeProductTypeIntro = mrv3IntroCopy ? {
+  const tubingIntro = activeCategoryId === "tubing" ? getTubingIntro(locale, activeProductTypeId) : undefined;
+  const activeProductTypeIntro = tubingIntro || (mrv3IntroCopy ? {
     title: mrv3IntroCopy.seriesTitle,
     paragraphs: mrv3IntroCopy.introParagraphs,
     image: activeProductTypeId === "电磁阀"
@@ -3880,8 +3977,54 @@ export default function ProductSelectionClient({
         : activeProductTypeId === "valveless-pump"
           ? getValvelessPumpCategoryIntro(selectedFilters.filter01?.size === 1 ? activeSeriesFilterValue : undefined, locale)
           : getInstrumentCategoryIntro(activeProductTypeId, selectedFilters.filter01?.size === 1 ? activeSeriesFilterValue : undefined, locale)) ||
-    getProductTypeIntroByIds(activeCategoryId, activeProductTypeId, locale);
-  const activeProductTypeIntroHeading = activeProductTypeIntro?.title || "";
+    getProductTypeIntroByIds(activeCategoryId, activeProductTypeId, locale));
+  const fittingIntroZh = locale === "zh" && activeCategoryId === "fittings"
+    ? fittingIntrosZh[activeProductTypeId]
+    : undefined;
+  const selectionTypeIntroZh = (locale === "zh" && activeCategoryId === "needles" ? probeIntrosZh[activeProductTypeId] : undefined) || fittingIntroZh || (locale === "zh" && activeCategoryId === "control" ? controlIntrosZh[activeProductTypeId] : undefined);
+  const localizedFittingIntro = activeCategoryId === "fittings"
+    ? getLocalizedFittingIntroduction(locale, activeProductTypeId)
+    : undefined;
+  const fittingIntroImage = fittingIntrosZh[activeProductTypeId]?.image;
+  const selectionTypeIntroEn = locale === "en"
+    ? activeCategoryId === "needles" ? probeIntrosEn[activeProductTypeId]
+      : activeCategoryId === "control" ? controlIntrosEn[activeProductTypeId] : undefined
+    : undefined;
+  const selectionTypeIntro = selectionTypeIntroEn || selectionTypeIntroZh || (localizedFittingIntro && fittingIntroImage ? {
+    title: localizedFittingIntro.title,
+    paragraphs: localizedFittingIntro.paragraphs,
+    features: [],
+    image: { ...fittingIntroImage, alt: `FOREACH ${localizedFittingIntro.title}` },
+  } : undefined);
+  const categoryOverviewHeading = !activeProductTypeId || (activeCategoryId === "tubing" && activeProductTypeId === "tubing")
+    ? getProductOverviewHeading(activeCategoryId, locale)
+    : undefined;
+  const categoryOverviewParagraphs = activeCategoryId === "fittings"
+    ? locale === "zh" ? fittingOverviewParagraphsZh : getLocalizedFittingIntroduction(locale)?.paragraphs || []
+    : !["zh", "en"].includes(locale)
+    ? []
+    : activeCategoryId === "tubing"
+    ? getTubingSeriesCopy(locale)?.paragraphs || []
+    : locale === "en"
+      ? activeCategoryId === "needles" ? probeOverviewParagraphsEn : activeCategoryId === "control" ? controlOverviewParagraphsEn : productOverviewIntrosEn[activeCategoryId]?.paragraphs || []
+    : ({
+        pumps: pumpOverviewParagraphsZh,
+        valves: productIntroductionsZh.valves,
+        fittings: fittingOverviewParagraphsZh,
+        control: controlOverviewParagraphsZh,
+        needles: probeOverviewParagraphsZh,
+      } as Record<string, string[]>)[activeCategoryId] || [];
+  const usePublishedPumpValveIntro =
+    locale === "zh" && ["pumps", "valves"].includes(activeCategoryId);
+  const activeIntroductionParagraphsZh = locale === "zh" && !usePublishedPumpValveIntro
+    ? getProductIntroductionParagraphsZh(activeCategoryId, activeProductTypeId, activeProductTypeIntroVariant)
+    : undefined;
+  const activeProductTypeIntroHeading = activeProductTypeIntro?.title || selectionTypeIntro?.title || "";
+  const matchedIntroTextBudget = activeProductTypeId &&
+    ["tubing", "control", "needles"].includes(activeCategoryId)
+    ? getPistonPumpIntroCopy("category", locale).paragraphs.slice(0, 2)
+      .reduce((total, paragraph) => total + getProductIntroTextLength(paragraph), 0)
+    : undefined;
   const compactSelectionLabel = activeProductTypeId === "valveless-pump" ? getTaxonomyLabel(locale, activeProductTypeId) : locale === "zh" ? ({"pipette-pump":"移液泵","syringe-pump":"注射泵","高压阀":"高压阀","high-pressure-valves":"高压阀","电磁阀":"电磁阀","solenoid-valves":"电磁阀"} as Record<string,string>)[activeProductTypeId] : undefined;
   const selectedTagItems = useMemo<ProductSelectionSelectedTag[]>(() => {
     const tags: ProductSelectionSelectedTag[] = [];
@@ -4050,7 +4193,7 @@ export default function ProductSelectionClient({
     const productTypeExistsInProducts = Boolean(
       preferredProductTypeId &&
         categoryProductsForUrl.some(
-          (product) => product.productTypeId === preferredProductTypeId
+          (product) => (nextCategoryId === "needles" && ["zh", "en"].includes(locale) ? getProbeProductTypeIdZh(product) : nextCategoryId === "control" && ["zh", "en"].includes(locale) ? getControlProductTypeIdZh(product) : product.productTypeId) === preferredProductTypeId
         )
     );
 
@@ -4063,7 +4206,7 @@ export default function ProductSelectionClient({
       preferredProductTypeId &&
       (productTypeExistsInProducts || productTypeExistsInRouteMap)
         ? preferredProductTypeId
-        : getCategoryDefaultProductTypeId(nextCategoryId);
+        : getCategoryDefaultProductTypeId(nextCategoryId, locale);
 
     const hasQuerySelection = Boolean(requestedCategoryId || requestedProductTypeId);
 
@@ -4091,6 +4234,7 @@ export default function ProductSelectionClient({
     initialCategoryId,
     initialProductTypeId,
     initialFilters,
+    locale,
   ]);
 
   useEffect(() => {
@@ -4172,9 +4316,30 @@ export default function ProductSelectionClient({
     router.replace(getValveSelectionPath(locale,requestedProductTypeId) + (suffix ? '?' + suffix : '') + window.location.hash, {scroll:false});
   }, [requestedCategoryId,requestedProductTypeId,initialCategoryId,locale,router]);
 
+  useEffect(() => {
+    if (locale !== "en" || !["needles", "control"].includes(requestedCategoryId || "")) return;
+    const query = new URLSearchParams(window.location.search);
+    if (!query.has("category")) return;
+    const target = requestedCategoryId === "needles"
+      ? getProbeSelectionPathEn(requestedProductTypeId)
+      : getControlSelectionPathEn(requestedProductTypeId);
+    query.delete("category");
+    query.delete("productType");
+    const suffix = query.toString();
+    router.replace(target + (suffix ? `?${suffix}` : "") + window.location.hash, { scroll: false });
+  }, [locale, requestedCategoryId, requestedProductTypeId, router]);
+
   function navigateCategorySelection(categoryId: string, productTypeId?: string) {
     const categoryHref = getCategoryHrefById(categoryId);
-    const href = categoryId === "valves" && getValveSeriesRoute(productTypeId)
+    const href = categoryId === "needles" && locale === "en"
+      ? getProbeSelectionPathEn(productTypeId)
+      : categoryId === "control" && locale === "en"
+      ? getControlSelectionPathEn(productTypeId)
+      : categoryId === "needles" && locale === "zh"
+      ? getProbeSelectionPathZh(productTypeId)
+      : categoryId === "control" && locale === "zh"
+      ? getControlSelectionPathZh(productTypeId)
+      : categoryId === "valves" && getValveSeriesRoute(productTypeId)
       ? getValveSelectionPath(locale,productTypeId)
       : localizeProductDetailHref(
       productTypeId
@@ -4189,7 +4354,7 @@ export default function ProductSelectionClient({
 
   function handleCategoryChange(categoryId: string) {
     const firstProductTypeId =
-      getCategoryDefaultProductTypeId(categoryId);
+      getCategoryDefaultProductTypeId(categoryId, locale);
 
     pendingFilterRef.current = {
       filterCategory: "product_category",
@@ -4237,8 +4402,8 @@ export default function ProductSelectionClient({
       return;
     }
 
-    // 阀系列保持列表视图，并将筛选写入 URL，供刷新及前进后退恢复。
-    if (activeCategoryId === "valves") {
+    // 阀和管路系列保持列表视图，URL 筛选支持刷新及前进后退恢复。
+    if (activeCategoryId === "valves" || activeCategoryId === "tubing" || (locale === "en" && ["needles", "control"].includes(activeCategoryId))) {
       pendingFilterRef.current = {
         filterCategory: activeCategoryId,
         filterName: "product_type_id",
@@ -4275,7 +4440,7 @@ export default function ProductSelectionClient({
      * 2. 柱塞泵会跳到 /products/pumps/piston-pump/
      * 3. 没配置正式 URL 的类型，才走原来的前端筛选逻辑
      */
-    const productTypeHref = getProductTypeHrefByIds(
+    const productTypeHref = activeCategoryId === "needles" && locale === "zh" ? getProbeSelectionPathZh(productTypeId) : activeCategoryId === "control" && locale === "zh" ? getControlSelectionPathZh(productTypeId) : getProductTypeHrefByIds(
       activeCategoryId,
       productTypeId
     );
@@ -5016,7 +5181,7 @@ function isFilterOptionActive(
       };
       setActiveProductTypeId("");
       setSelectedFilters({});
-      if (activeCategoryId === "valves") {
+      if (["valves", "tubing", "fittings"].includes(activeCategoryId) || (["control", "needles"].includes(activeCategoryId) && locale === "zh") || (["control", "needles"].includes(activeCategoryId) && locale === "en")) {
         navigateCategorySelection(activeCategoryId);
       }
       return;
@@ -5097,11 +5262,12 @@ function isFilterOptionActive(
       router.push(getPipettingPath(locale));
       return;
     }
-    // A pump type route keeps its type when clearing configuration filters.
+    // Type routes keep their type when clearing configuration filters.
     const defaultProductTypeId =
-      activeCategoryId === "pumps" && initialCategoryId === "pumps" && initialProductTypeId
+      (["pumps", "fittings"].includes(activeCategoryId) || (["control", "needles"].includes(activeCategoryId) && locale === "zh")) &&
+      initialCategoryId === activeCategoryId && initialProductTypeId
         ? initialProductTypeId
-        : getCategoryDefaultProductTypeId(activeCategoryId);
+        : getCategoryDefaultProductTypeId(activeCategoryId, locale);
 
     pendingFilterRef.current = {
       filterCategory: activeCategoryId,
@@ -5113,7 +5279,7 @@ function isFilterOptionActive(
     setSearchInputValue("");
     setSearchKeyword("");
     setMobileOpenFilterGroups(getDefaultMobileOpenFilterGroups(defaultProductTypeId));
-    if (activeCategoryId === "valves") {
+    if (activeCategoryId === "valves" || activeCategoryId === "tubing" || (locale === "en" && ["needles", "control"].includes(activeCategoryId))) {
       navigateCategorySelection(activeCategoryId);
     }
   }
@@ -5201,7 +5367,7 @@ function isFilterOptionActive(
   }
 
   const pipettingSeriesIndex = pipettingSeriesFilters.indexOf(initialFilters?.filter01?.[0] || "");
-  const breadcrumbItems = activeCategoryId === 'valves' ? [
+  const legacyBreadcrumbItems = activeCategoryId === 'valves' ? [
     {label:pageText.breadcrumbHome,href:locale === 'zh' ? '/' : '/' + locale + '/'},
     {label:pageText.breadcrumbCurrent,href:locale === 'zh' ? '/products/' : '/' + locale + '/products/'},
     {label:activeCategory.label,...(getValveSeriesRoute(activeProductTypeId) ? {href:getValveSelectionPath(locale)} : {})},
@@ -5224,12 +5390,15 @@ function isFilterOptionActive(
     },
     ...(compactSelectionLabel ? [{ label: compactSelectionLabel }] : []),
   ];
+  const breadcrumbItems = (locale === "en" ? getProbeControlBreadcrumbsEn(pathname) : undefined) || getChineseProductPageBreadcrumbs(
+    pathname, locale, legacyBreadcrumbItems.at(-1)?.label,
+  ) || legacyBreadcrumbItems;
 
   return (
     <div className="products-selection-page">
       <ProductSelectionStructuredData
         locale={locale}
-        name={activeProductTypeIntroHeading || activeCategory.label}
+        name={categoryOverviewHeading || activeProductTypeIntroHeading || activeCategory.label}
         breadcrumbs={breadcrumbItems}
         items={pagedProducts.map((product) => ({
           name: getProductSelectionCardName(
@@ -5282,9 +5451,25 @@ function isFilterOptionActive(
               onCategoryChange={handleCategoryChange}
             />
 
-            {activeProductTypeIntro ? (
+            {categoryOverviewHeading ? (
+              <header className="category-overview-heading category-overview-intro">
+                <ProductTypeIntroCopy
+                  collapsedParagraphCount={1}
+                  isPrimaryHeading
+                  key={`${activeCategoryId}-${locale}`}
+                  locale={locale}
+                  onFilterAction={handleProductTypeIntroFilterAction}
+                  paragraphs={categoryOverviewParagraphs}
+                  preserveCollapsedContentInDom
+                  selectedFilters={selectedFilters}
+                  title={categoryOverviewHeading}
+                />
+              </header>
+            ) : null}
+
+            {activeProductTypeIntro && !(activeCategoryId === "tubing" && categoryOverviewHeading) ? (
               <section
-                className="product-type-intro-module"
+                className={`product-type-intro-module${tubingIntro ? " tubing-type-intro-module" : ""}${["zh", "en"].includes(locale) && tubingIntro && !activeProductTypeId ? " category-overview-intro" : ""}`}
                 data-product-type-id={activeProductTypeId || ""}
                 aria-label={
                   locale === "zh"
@@ -5305,7 +5490,7 @@ function isFilterOptionActive(
 
                 <ProductTypeIntroCopy
                   isPrimaryHeading={
-                    Boolean(mrv3IntroCopy) ||
+                    Boolean(tubingIntro) || Boolean(mrv3IntroCopy) ||
                     (activeCategoryId === "valves" && ["高压阀", "high-pressure-valves"].includes(activeProductTypeId)) ||
                     activeProductTypeId === "syringe-pump" ||
                     activeProductTypeId === "diaphragm-pump" ||
@@ -5319,19 +5504,57 @@ function isFilterOptionActive(
                   }-${locale}`}
                   locale={locale}
                   onFilterAction={handleProductTypeIntroFilterAction}
-                  paragraphs={activeProductTypeIntro.paragraphs}
+                  paragraphs={activeIntroductionParagraphsZh || activeProductTypeIntro.paragraphs}
+                  collapsedTextBudget={matchedIntroTextBudget}
+                  collapsedParagraphCount={
+                    ["zh", "en"].includes(locale) && tubingIntro && !activeProductTypeId ? 1 : activeCategoryId === "fittings" ? 1 : usePublishedPumpValveIntro ? 2 : undefined
+                  }
                   preserveCollapsedContentInDom={
-                    locale === "zh" && activeProductTypeId === "plunger-pump"
+                    usePublishedPumpValveIntro
+                      ? activeProductTypeId === "plunger-pump"
+                      : Boolean(tubingIntro) || locale === "zh"
                   }
                   selectedFilters={selectedFilters}
                   title={activeProductTypeIntroHeading}
                 />
+              </section>
+            ) : selectionTypeIntro ? (
+              <section
+                className={`product-type-intro-module ${activeCategoryId === "needles" ? "probe-type-intro-module" : activeCategoryId === "control" ? "control-type-intro-module" : "fitting-type-intro-module"}`}
+                data-product-type-id={activeProductTypeId}
+                aria-label={locale === "zh" ? `${selectionTypeIntro.title}产品种类说明` : `${selectionTypeIntro.title} product type overview`}
+              >
+                <ProductTypeIntroImage image={selectionTypeIntro.image}>
+                  <ProductTypeIntroCopy
+                    isPrimaryHeading={!categoryOverviewHeading}
+                    collapsedParagraphCount={activeCategoryId === "fittings" ? 1 : undefined}
+                    collapsedTextBudget={matchedIntroTextBudget}
+                    key={`${activeProductTypeId}-${locale}`}
+                    locale={locale}
+                    onFilterAction={handleProductTypeIntroFilterAction}
+                    paragraphs={[
+                      ...selectionTypeIntro.paragraphs,
+                      ...selectionTypeIntro.features.map(
+                        (feature) => activeCategoryId === "fittings"
+                          ? `${feature.title}：${feature.description}`
+                          : `**${feature.title}${locale === "en" ? ": " : "："}**${feature.description}`,
+                      ),
+                    ]}
+                    preserveCollapsedContentInDom
+                    selectedFilters={selectedFilters}
+                    title={selectionTypeIntro.title}
+                  />
+                </ProductTypeIntroImage>
               </section>
             ) : null}
         <section className="selection-section">
           <div className="selection-layout">
             <ProductFilterPanel
               getOptionHref={(group, value) => {
+                if (locale === "en" && group.key === "productType" && !searchKeyword.trim()) {
+                  if (activeCategoryId === "needles") return getProbeSelectionPathEn(value);
+                  if (activeCategoryId === "control") return getControlSelectionPathEn(value);
+                }
                 if (!["syringe-pump", "pipette-pump"].includes(activeProductTypeId)) return undefined;
                 const href = getSeriesHrefByFilterValue(activeCategoryId, activeProductTypeId, group.key, value);
                 return href ? localizeProductDetailHref(href + "/") : undefined;
@@ -5344,6 +5567,7 @@ function isFilterOptionActive(
                     : getText(locale, activeCategory.description as any, ""),
               }}
               activeProductTypeId={activeProductTypeId}
+              productTypeResultCount={showProductTypeResultCount ? matchedProducts.length : undefined}
               filterGroups={filterGroups}
               mobileOpenFilterGroups={mobileOpenFilterGroups}
               currentPrefix={targetLocaleA11yText?.currentPrefix}
@@ -5361,12 +5585,15 @@ function isFilterOptionActive(
             >
               <ProductSelectionToolbar
                 total={matchedProducts.length}
+                showResultSummary={!showProductTypeResultCount}
                 resultPrefix={
                   matchedProducts.length === 1
                     ? pageText.resultSingularPrefix || pageText.resultPrefix
                     : pageText.resultPrefix
                 }
                 resultSuffix={
+                  activeCategoryId === "needles" && locale === "zh" ? " 类定制产品" :
+                  tubingIntro ? (locale === "zh" ? " 种管材" : " tubing materials") :
                   activeCategoryId === "valves" &&
                   locale === "zh"
                     ? " 种配置"

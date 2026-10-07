@@ -1,3 +1,4 @@
+import { getControlModulePath } from "@/data/products/selection/control-module-routes";
 import type { ControlModuleDetail } from "@/data/products/control-modules/control-module-detail.generated";
 
 const CONTROL_CATEGORY_ID = "control";
@@ -64,8 +65,8 @@ export function getControlModuleProductDetailData(detail: ControlModuleDetail) {
     heroImage: mainImage,
     additionalImages: [],
 
-    detailHref: `/products/control/${detail.slug}`,
-    href: `/products/control/${detail.slug}`,
+    detailHref: getControlModulePath(detail.slug),
+    href: getControlModulePath(detail.slug),
     selectionHref: "/products",
     modelSelectionHref: "/products",
     contactHref: "/contact",

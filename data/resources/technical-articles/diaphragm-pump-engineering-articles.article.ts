@@ -583,7 +583,7 @@ export function getDiaphragmPumpEngineeringArticles(
           createTechnicalArticle(
             dpl30EpdmPtfeFfkmSelectionSlug,
             locale,
-            ["series:dpl30"],
+            ["series:dpl30", "series:dpl60", "series:dpl30h", "series:dpgl800"],
             113,
             "2026-08-30",
             "materials-compatibility",
