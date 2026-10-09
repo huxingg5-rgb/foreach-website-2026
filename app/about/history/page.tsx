@@ -16,23 +16,13 @@ import type { Metadata } from "next";
 import HistoryPageContent from "@/components/about/HistoryPageContent";
 import {
   DEFAULT_HISTORY_LOCALE,
-  getHistoryPageText, 
 } from "@/data/historyMilestones";
-
-/* ================================
-   获取中文默认页面文案
-   说明：
-   这里主要用于页面 SEO 信息
-================================ */
-const pageText = getHistoryPageText(DEFAULT_HISTORY_LOCALE);
+import { getHistoryMetadata } from "@/lib/seo/history-metadata";
 
 /* ================================
    页面 SEO 信息
 ================================ */
-export const metadata: Metadata = {
-  title: pageText.metadataTitle,
-  description: pageText.metadataDescription,
-};
+export const metadata: Metadata = getHistoryMetadata(DEFAULT_HISTORY_LOCALE);
 
 /* ================================
    中文发展历程页面
@@ -41,4 +31,4 @@ export const metadata: Metadata = {
 ================================ */
 export default function AboutHistoryPage() {
   return <HistoryPageContent locale={DEFAULT_HISTORY_LOCALE} />;
-} 
+}

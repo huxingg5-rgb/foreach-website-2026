@@ -12,6 +12,8 @@
 import type { CSSProperties } from "react";
 import HistoryTimeline from "@/components/about/HistoryTimeline";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import CompanyPageStructuredData from "@/components/common/CompanyPageStructuredData";
+import styles from "./HistoryPageContent.module.css";
 import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
 import {
   getHistoryMilestones,
@@ -66,6 +68,7 @@ export default function HistoryPageContent({
      获取当前语言页面文案
   ================================ */
   const pageText = getHistoryPageText(locale);
+  const isChinese = locale === "zh-CN";
 
   /* ================================
      获取当前语言时间轴数据
@@ -79,11 +82,18 @@ export default function HistoryPageContent({
 
   const breadcrumb = getAboutBreadcrumb(
     locale,
-    `${pageText.titleMain}${pageText.titleAccent}`,
+    pageText.title,
   );
 
   return (
-    <main className="about-history-page">
+    <main className={`about-history-page ${styles.page}`} lang={locale}>
+      <CompanyPageStructuredData
+        type="AboutPage"
+        path={`${isChinese ? "" : `/${locale}`}/about/history/`}
+        name={pageText.metadataTitle}
+        description={pageText.metadataDescription}
+        locale={locale}
+      />
       {/* ================================
           顶部小 Banner
       ================================ */}
@@ -117,10 +127,7 @@ export default function HistoryPageContent({
           页面标题区域
       ================================ */}
       <header className="about-history-page-title">
-        <h1>
-          {pageText.titleMain}
-          <span>{pageText.titleAccent}</span>
-        </h1>
+        <h1>{pageText.title}</h1>
 
         <div className="about-history-title-line" aria-hidden="true" />
       </header>
@@ -128,9 +135,9 @@ export default function HistoryPageContent({
       {/* ================================
           发展历程时间轴
           说明：
-          具体交互仍然由 HistoryTimeline 客户端组件负责
+          所有语言的时间轴直接服务端渲染，不依赖滚动脚本显示
       ================================ */}
-      <HistoryTimeline items={historyItems} locale={locale} />
+      <HistoryTimeline items={historyItems} locale={locale} ariaLabel={isChinese ? "恒永达发展历程" : pageText.title} />
 
       {/* ================================
           时间轴结束后的纯图片 Banner

@@ -1,0 +1,162 @@
+/* Scoped to the history page: long translations retain a readable line length. */
+.page.page :global(.about-history-page-title) h1 {
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.3;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+
+.page.page :global(.about-center-banner__title) {
+  max-width: 1100px;
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.page :global(.about-history-container) {
+  width: min(1400px, calc(100% - 64px));
+}
+
+.page.page :global(.about-history-row) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 0;
+  padding-block: 32px;
+}
+
+.page :global(.about-history-col) {
+  min-width: 0;
+}
+
+.page :global(.about-history-col--left) {
+  padding: 0 48px 0 0;
+}
+
+.page :global(.about-history-col--right) {
+  padding: 0 0 0 48px;
+}
+
+.page.page :global(.about-history-text) {
+  max-width: none;
+  text-align: left;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.page.page :global(.about-history-image) {
+  margin: 0;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.page :global(.about-history-image) figcaption {
+  margin-top: 12px;
+  color: #535e70;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.page.page :global(.about-history-year) {
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.25;
+}
+
+.page.page :global(.about-history-list) {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+}
+
+.page.page :global(.about-history-list) li {
+  position: relative;
+  margin: 0;
+  padding-inline-start: 16px;
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+  hyphens: none;
+  color: #414b5a;
+}
+
+.page :global(.about-history-list) li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #173368;
+}
+
+.page[lang="ko"] :global(.about-history-list) li,
+.page[lang="ko"] :global(.about-center-banner__title) {
+  word-break: keep-all;
+}
+
+/* Switch before two-column text becomes cramped on tablets. */
+@media (max-width: 1024px) {
+  .page :global(.about-history-container) {
+    width: min(760px, calc(100% - 32px));
+  }
+
+  .page :global(.about-history-center-line) {
+    left: 12px;
+  }
+
+  .page.page :global(.about-history-row) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 0 24px 42px;
+    margin: 0;
+  }
+
+  .page :global(.about-history-node) {
+    left: 13px;
+    top: 22px;
+    width: 22px;
+    height: 22px;
+    border-width: 3px;
+    transform: translateX(-50%);
+  }
+
+  .page.page :global(.about-history-col) {
+    padding: 0;
+  }
+
+  .page :global(.about-history-col):empty {
+    display: none;
+  }
+
+  .page :global(.about-history-col):has(:global(.about-history-text)) {
+    order: 1;
+  }
+
+  .page :global(.about-history-col):has(:global(.about-history-image)) {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .page :global(.about-history-image) {
+    max-width: 520px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .page.page :global(.about-history-list) li {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .page.page :global(.about-center-banner__title) {
+    font-size: clamp(26px, 7.5vw, 36px);
+    line-height: 1.25;
+  }
+}
