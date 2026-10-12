@@ -1,3 +1,4 @@
+import { flangedFittingRelatedProducts } from "@/data/products/selection/flanged-fitting-related-products";
 import { getDiaphragmPumpCopy } from "@/data/products/detail/diaphragm-pump-copy";
 import { getDiaphragmPumpReferenceByProductId } from "@/data/products/detail/diaphragm-pump-reference-models";
 import { getDiaphragmPumpPath } from "@/data/products/detail/diaphragm-pump-routes";
@@ -25,6 +26,7 @@ import { getTechnicalArticlesPageData } from "@/services/resources/technical-art
 import type { RelatedResourcesProps, RelatedResourcesData } from "@/components/common/related-resources/related-resources.types";
 
 const relatedResourceProducts: ProductSelectionProduct[] = [
+  ...flangedFittingRelatedProducts,
   ...valveSelectionProducts.map(product => ({
     ...product,
     relationKeys: [`series:${String(product.code).toLowerCase()}`, `category:${product.productTypeSlug}`],

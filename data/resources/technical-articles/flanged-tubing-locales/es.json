@@ -1,0 +1,549 @@
+{
+  "metadata": {
+    "title": "Cómo seleccionar conjuntos de tubos con reborde: sellado, conexión y validación en el equipo",
+    "seoTitle": "Conjuntos de tubos con reborde: selección y conexión | FOREACH",
+    "seoDescription": "Compare los racores de fondo plano HF, HF6, HFL y HFL6: materiales, diámetros, dimensiones y alivio frontal. Verifique los puertos M6×1 y 1/4-28 UNF y defina la validación del conjunto.",
+    "coverImage": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-photo.png",
+    "coverAlt": "Conjuntos FOREACH de tubos con reborde con diferentes racores y extremos conformados"
+  },
+  "deck": "Seleccione conjuntamente el material del tubo, sus diámetros interior y exterior, los racores de ambos extremos, las arandelas de apoyo, la geometría del puerto y las dimensiones de montaje. Confirme la compresión del reborde contra el fondo plano y después defina los retenedores, las etiquetas y la validación en el equipo.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "En instrumentos analíticos y circuitos automatizados, los tubos que conectan bombas, válvulas y módulos deben transportar el fluido y permitir un sellado, tendido y mantenimiento adecuados. Poder conectar el tubo es solo una parte: el reborde, la arandela y el puerto receptor determinan si la fuerza actúa sobre la superficie de sellado prevista."
+    },
+    {
+      "type": "paragraph",
+      "text": "En equipos existentes, compruebe primero el conjunto original y los planos del puerto. En un circuito OEM nuevo, defina la configuración según el recorrido, la separación entre puertos y el mantenimiento. A continuación se revisan la estructura, los materiales, las dimensiones, la selección y el montaje."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-photo.png",
+      "alt": "Conjuntos FOREACH de tubos con reborde y sus conexiones terminales",
+      "width": 2760,
+      "height": 1217,
+      "caption": "Conjuntos de tubos con reborde. Seleccione racores, tubos y extremos según el circuito real y las interfaces del equipo."
+    }
+  ],
+  "sections": [
+    {
+      "title": "¿Qué piezas forman el conjunto y cómo se consigue el sellado?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El extremo preconformado del tubo presenta un reborde hacia fuera. El racor roscado transmite fuerza axial mediante una arandela compatible, que apoya y comprime el reborde contra el fondo plano del puerto. Compruebe por separado el roscado y el sellado frontal: que el racor se enrosque no significa que el reborde apoye en el fondo."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/flanged-sealing-structure-es.svg",
+          "alt": "Posición del racor de fondo plano, la arandela y el reborde del tubo",
+          "width": 2064,
+          "height": 996,
+          "caption": "Ejemplo de montaje HF: la arandela queda entre la punta del racor y el reborde. La longitud total de 20.5 mm, el diámetro de cabeza de 8.2 mm y el alivio frontal de 2 mm corresponden a HF. Más abajo se comparan las cuatro series."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se pueden seleccionar HF, HF6, HFL y HFL6. HF y HFL son racores de cabeza estándar; HF6 y HFL6 son compactos. Todos comprimen el reborde mediante arandelas compatibles, pero difieren en cabeza, longitud, orificio y geometría frontal. Seleccione una serie y un modelo concretos; una única cota no representa toda la gama."
+        },
+        {
+          "type": "paragraph",
+          "text": "El conjunto premontado también puede incorporar retenedores y etiquetas. Distinga la función de cada pieza antes de incluir las opciones en el plano de entrega."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Componente",
+            "Función principal",
+            "Datos que confirmar"
+          ],
+          "rows": [
+            [
+              "Tubo y reborde conformado",
+              "Transportar el fluido y formar el sellado frontal mediante el extremo del tubo",
+              "Material, diámetros interior/exterior, longitud, uno o dos extremos con reborde y dimensiones conformadas"
+            ],
+            [
+              "Racor roscado",
+              "Conectar el puerto y aplicar compresión axial",
+              "Serie, material, rosca, orificio pasante y espacio de montaje"
+            ],
+            [
+              "Arandela de apoyo",
+              "Apoyar el reborde y transmitir la compresión",
+              "Material, diámetros interior/exterior, espesor y correspondencia con el racor"
+            ],
+            [
+              "Junta tórica / manguito de retención",
+              "Limitar el deslizamiento del racor por el tubo",
+              "Necesidad, posición y recorrido permitido"
+            ],
+            [
+              "Etiqueta del tubo",
+              "Identificar el circuito, el puerto o la posición de montaje",
+              "Contenido, orientación, posición y correspondencia entre extremos"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-components-es.svg",
+          "alt": "Conjunto de doble extremo con racores, arandelas, retenedores, tubo y etiquetas opcionales",
+          "width": 3012,
+          "height": 1280,
+          "caption": "Ejemplo de configuración de doble extremo. Verifique medidas y opciones por separado para cada interfaz; no todas las opciones se combinan libremente."
+        },
+        {
+          "type": "paragraph",
+          "text": "La junta tórica o el manguito situado detrás del racor limita el deslizamiento; no es la junta de sellado del puerto receptor. Si las interfaces son distintas, confirme cada racor y arandela por separado, sin asumir que ambos extremos son iguales."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo definir el material del tubo, el del racor y los diámetros?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Empiece por el fluido, su concentración, temperatura, tiempo de contacto y limpieza. Los conjuntos FOREACH admiten tubos FEP y PTFE; los cuerpos y arandelas tienen sus propias gamas. El material del cuerpo no representa todos los materiales mojados: identifique las superficies que realmente contactan con el fluido."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pieza",
+            "Configuraciones indicadas",
+            "Límites de selección"
+          ],
+          "rows": [
+            [
+              "Tubo",
+              "FEP, PTFE",
+              "Confirmar por separado la compatibilidad química y la aptitud para conformar el reborde"
+            ],
+            [
+              "Cuerpo HF / HF6",
+              "PEEK, PVDF, PPS",
+              "Verificar material, rosca y diámetro exterior del tubo para cada modelo"
+            ],
+            [
+              "Cuerpo HFL",
+              "PVDF",
+              "Seleccionar la combinación concreta de rosca, diámetro y color"
+            ],
+            [
+              "Cuerpo HFL6",
+              "Las versiones indicadas M6×1 y 1/4-28 UNF son PPS; la versión pequeña 6-40 UNF indicada es PEEK",
+              "No trasladar especificaciones de material entre roscas y medidas distintas"
+            ],
+            [
+              "Arandela compatible",
+              "Acero inoxidable SUS, PEEK o PTFE, según la medida",
+              "Verificar diámetros y espesor; no todas las medidas ofrecen todos los materiales"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/fitting-materials.png",
+          "alt": "Ejemplos de cuerpos de racores de fondo plano en PEEK, PVDF y PPS",
+          "width": 1856,
+          "height": 837,
+          "caption": "Ejemplos de materiales del cuerpo. El color describe la apariencia; confirme el material mediante el modelo y la documentación de entrega. Un material puede tener varios colores."
+        },
+        {
+          "type": "paragraph",
+          "text": "Distinga diámetro interior del tubo, diámetro exterior y orificio del racor. El diámetro interior y la longitud afectan a la resistencia al flujo y al volumen; el exterior determina el ajuste con racor, arandela y herramienta. El orificio debe alojar el tubo seleccionado. Denominar las tres medidas «diámetro del tubo» crea ambigüedad."
+        },
+        {
+          "type": "paragraph",
+          "text": "La documentación actual contempla diámetros exteriores de 1.6, 2.0, 2.5, 3.0 y 3.2 mm. Defina interior y exterior como pareja: 0.8 × 1.6 mm significa interior × exterior, no dos diámetros exteriores admisibles. La combinación debe corresponder al material y al proceso de conformado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Resistir el fluido no significa que cualquier espesor de pared admita el mismo proceso de rebordeado. Confirme herramienta, material y diámetros antes del conformado; después revise la integridad del extremo y del paso. Defina la referencia de longitud, por ejemplo entre caras de sellado, para no confundir longitud de corte y longitud final."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo elegir entre HF, HF6, HFL y HFL6?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Las cuatro series ofrecen M6×1 y 1/4-28 UNF. Verifique primero rosca, diámetro exterior y material; después compare diámetro de cabeza, longitud axial y punta. Las cotas siguientes proceden de los planos de serie enlazados, en mm. No incluyen reborde ni arandela y no equivalen a la longitud que sobresale una vez montado."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hf-dimensions-es.svg",
+          "alt": "Sección HF para tubo exterior 1.6–2.0 mm: cabeza 8.2 mm y longitud 20.5 mm",
+          "width": 858,
+          "height": 1152,
+          "caption": "HF estándar: vistas PEEK natural y PPS negro a la izquierda; sección para tubo exterior 1.6–2.0 mm a la derecha. Cotas en mm.",
+          "productViews": [
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pk-n-main.jpg",
+              "alt": "Racor HF de fondo plano en PEEK natural"
+            },
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-ps-b-main.jpg",
+              "alt": "Racor HF de fondo plano en PPS negro"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hf6-dimensions-es.svg",
+          "alt": "Sección HF6 para tubo exterior 1.6–2.0 mm: cabeza 6.4 mm y longitud 17.6 mm",
+          "width": 928,
+          "height": 1152,
+          "caption": "HF6 compacto: vistas PEEK natural y PPS negro a la izquierda; sección para tubo exterior 1.6–2.0 mm a la derecha. Cotas en mm.",
+          "productViews": [
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pk-n-main.jpg",
+              "alt": "Racor HF6 compacto en PEEK natural"
+            },
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-ps-b-main.jpg",
+              "alt": "Racor HF6 compacto en PPS negro"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hfl-appearance-dimensions.png",
+          "alt": "HFL negro y natural con sección: cabeza 10 mm y longitud 16.5 mm",
+          "width": 2374,
+          "height": 1429,
+          "caption": "HFL estándar: vistas negra y natural y sección dimensional. Cabeza 10 mm; longitud total 16.5 mm. La punta de 4.7 mm corresponde a M6. Cotas en mm."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hfl6-m6-dimensions.png",
+          "alt": "Sección HFL6-M6-16: cabeza 6 mm y longitud 20 mm",
+          "width": 566,
+          "height": 1041,
+          "caption": "HFL6 compacto: vista PPS negro y plano M6 para tubo exterior 1.6 mm. Cabeza 6 mm; longitud total 20 mm. Cotas en mm.",
+          "productViews": [
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
+              "alt": "Racor HFL6-M6-16 compacto en PPS negro",
+              "reverse": true
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Serie",
+            "Diámetro de cabeza / longitud total",
+            "Diámetro exterior del tubo",
+            "Material del cuerpo"
+          ],
+          "rows": [
+            [
+              "HF de fondo plano estándar",
+              "8.2 / 20.5",
+              "1.6–2.0, 2.5, 3.0–3.2; tres grupos",
+              "PEEK, PVDF, PPS"
+            ],
+            [
+              "HF6 de fondo plano compacto",
+              "6.4 / 17.6",
+              "1.6–2.0, 2.5, 3.0–3.2; tres grupos",
+              "PEEK, PVDF, PPS"
+            ],
+            [
+              "HFL de fondo plano estándar",
+              "10 / 16.5",
+              "1.6, 2.0, 2.5, 3.0, 3.2; selección individual",
+              "PVDF"
+            ],
+            [
+              "HFL6 de fondo plano compacto",
+              "6 / 20",
+              "1.6, 2.0, 2.5, 3.0, 3.2; selección individual",
+              "PPS; fila correspondiente a M6 y U28"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HF: cabeza estándar y tres grupos de diámetro exterior"
+        },
+        {
+          "type": "paragraph",
+          "text": "HF tiene cabeza de 8.2 mm, longitud total de 20.5 mm y tramo frontal sin rosca de 2 mm. Los grupos de tubo 1.6–2.0, 2.5 y 3.0–3.2 mm corresponden a orificios de 2.2, 2.7 y 3.4 mm. Seleccione PEEK, PVDF o PPS según el modelo; compruebe el espacio para girar la cabeza y para la salida posterior del tubo."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Plano: ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf-standard-flat-bottom.pdf",
+              "label": "Dimensiones HF (M6 / 1/4-28 UNF)"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HF6: alternativa más estrecha y corta que HF"
+        },
+        {
+          "type": "paragraph",
+          "text": "HF6 tiene cabeza de 6.4 mm y longitud de 17.6 mm, reducciones de 1.8 y 2.9 mm respecto a HF. Comparte sus grupos de tubo, materiales y alivio frontal de 2 mm. Puede ser candidato para puertos próximos o poco espacio axial; verifique separación real, acceso para apriete y desmontaje. Ser compacto no implica soportar más presión."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Plano: ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf6-compact-flat-bottom.pdf",
+              "label": "Dimensiones HF6 (M6 / 1/4-28 UNF)"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HFL: cuerpo más corto y cabeza más ancha"
+        },
+        {
+          "type": "paragraph",
+          "text": "HFL tiene cabeza de 10 mm, longitud de 16.5 mm y alivio frontal de 1 mm. Es más corto que HF, pero necesita más espacio radial. Compruebe ambas direcciones junto a carcasas o puertos densos. Los planos ofrecen PVDF natural y negro para diámetros exteriores 1.6, 2.0, 2.5, 3.0 y 3.2 mm por separado; no aplique los tres grupos de HF."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Planos: ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-m6.pdf",
+              "label": "Dimensiones HFL-M6"
+            },
+            {
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-u28.pdf",
+              "label": "Dimensiones HFL-U28"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HFL6: cuerpo estrecho; comprobar espacio radial y axial"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los planos HFL6 M6 y U28 indican cabeza de 6 mm, longitud total de 20 mm y cuerpo PPS. Es más estrecho que los otros tres, pero más largo que HF6 y HFL: «compacto» no significa mínimo en todas las direcciones. No se indica un tramo frontal sin rosca de 2 mm como en HF/HF6; compruebe el puerto con la geometría propia de HFL6."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para diámetros exteriores HFL6 de 1.6, 2.0, 2.5, 3.0 y 3.2 mm, los orificios nominales son 1.8, 2.2, 2.7, 3.2 y 3.4 mm. El pequeño HFL6-U40-16-PK-N usa rosca 6-40 UNF, cuerpo PEEK y tubo exterior de 1.6 mm. Confirme sus cotas aparte; no se aplican las cotas M6/U28 de la tabla."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Planos: ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-m6.pdf",
+              "label": "Dimensiones HFL6-M6"
+            },
+            {
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-u28.pdf",
+              "label": "Dimensiones HFL6-U28"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Pasar de la serie de racor a la configuración del conjunto"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Compruebe la rosca completa y el fondo plano del puerto antes de seleccionar la serie. M6 y U28 no son intercambiables.",
+            "Seleccione según el diámetro exterior real y verifique orificio y tolerancia. El orificio aloja el tubo; no es su diámetro interior ni el diámetro de flujo del conjunto.",
+            "Use el diámetro de cabeza para comprobar interferencias. Revise longitud, profundidad montada y dirección de salida para el espacio axial, dejando margen de manipulación.",
+            "Ajuste material, diámetros y espesor de la arandela al racor, tubo y puerto; confirme el apoyo y la compresión del reborde."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Los filtros de racores con férula estándar y compactos corresponden a otras estructuras. Las cuatro series de fondo plano aquí son HF, HF6, HFL y HFL6; las cuatro categorías del filtro no equivalen a cuatro opciones de conjunto con reborde. En sustituciones, compruebe prefijo de serie, revisión del plano y puerto."
+        }
+      ]
+    },
+    {
+      "title": "¿Por qué puede fugar aunque la rosca entre?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Compruebe la especificación completa: M6×1 y 1/4-28 UNF son distintas. La apariencia o unas vueltas de prueba no demuestran compatibilidad. Revise después forma, profundidad y estado del fondo del puerto para confirmar el contacto de sellado previsto."
+        },
+        {
+          "type": "paragraph",
+          "text": "La conexión ilustrada necesita un fondo plano conforme al plano. Un cono incompatible puede impedir el asiento y causar fugas o retención local. Punta del racor, espesor de arandela y reborde determinan conjuntamente la posición; compruebe que no exista interferencia antes de obtener compresión efectiva."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/fitting-front-clearance-es.svg",
+          "alt": "Tramo frontal sin rosca de 2 mm del racor ilustrado",
+          "width": 1348,
+          "height": 466,
+          "caption": "HF/HF6: alivio frontal de 2 mm; HFL: 1 mm. Los planos HFL6 M6/U28 no indican esa misma característica. Estas cotas del racor no son cotas de mecanizado de la rosca interior del puerto."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Zona que comprobar",
+            "Requisito ilustrado o de acoplamiento",
+            "Interpretación al montar"
+          ],
+          "rows": [
+            [
+              "Punta del racor",
+              "HF/HF6: 2 mm; HFL: 1 mm; sin característica equivalente indicada para HFL6 M6/U28",
+              "Comprobar cada serie; no generalizar 2 mm"
+            ],
+            [
+              "Diámetro frontal",
+              "HF/HF6/HFL: 4.7 mm en M6 y 5.1 mm en U28",
+              "Es geometría frontal, no diámetro nominal de rosca ni exterior del tubo; no se aplica a HFL6"
+            ],
+            [
+              "Interior del puerto receptor",
+              "Las instrucciones de mecanizado de este conjunto especifican altura de alivio de rosca interior ≤1 mm",
+              "Indicar y comprobar aparte de las cotas frontales del racor"
+            ],
+            [
+              "Fondo del puerto",
+              "Superficie plana sin cono conforme al plano de acoplamiento",
+              "Comprobar forma, suciedad, rayas y contacto real de sellado"
+            ],
+            [
+              "Arandela y reborde",
+              "Dimensiones compatibles con racor, tubo y puerto",
+              "Confirmar orden, integridad y posición de compresión"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Estos requisitos pertenecen al conjunto y puerto correspondientes; no constituyen una norma universal para todos los racores con reborde. Para una válvula o módulo existente, aporte una sección del puerto, no solo el nombre de la rosca."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo distinguir defectos de piezas y problemas de montaje?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Revise interfaces y piezas antes de ajustar. Apretar cada vez más puede deformar permanentemente el reborde plástico y ocultar una incompatibilidad del puerto. Siga el método y par del modelo, tubo y conjunto concretos; no aplique un único valor a todos."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/flanged-end-detail.png",
+          "alt": "Detalle de dos extremos con puntas de racor, arandelas y rebordes",
+          "width": 1745,
+          "height": 897,
+          "caption": "Examine el ajuste entre reborde, arandela y punta. La fotografía ilustra la estructura; el sellado debe verificarse en condiciones definidas."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Compruebe modelo, diámetro exterior, arandela y plano del puerto para descartar piezas mezcladas.",
+            "Busque rebordes inclinados, agrietados o deformados y alteraciones del paso por conformado o compresión.",
+            "Compruebe arandelas ausentes, incorrectas o dañadas, y rayas o partículas en la cara del puerto.",
+            "Monte según el método indicado; observe si el tubo gira al apretar el racor.",
+            "Restablezca el recorrido real, elimine tensión por falta de longitud, curvas cerradas y cargas laterales; repita el ensayo en condiciones del equipo."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si pasa en banco pero fuga instalado, priorice el tendido y las cargas externas. Si falla siempre un puerto, compruebe primero sus piezas y cara de sellado. Así se separan incompatibilidad, estado de las piezas y efectos del tendido."
+        }
+      ]
+    },
+    {
+      "title": "¿Qué validaciones deben realizarse en el equipo?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una comprobación estática solo cubre las condiciones de ese montaje y ensayo. Valide también la longitud real, el tendido y el ciclo de trabajo, y documente los criterios de aceptación en la entrega."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Validación",
+            "Comprobaciones"
+          ],
+          "rows": [
+            [
+              "Dimensiones y montaje",
+              "Referencia de longitud, piezas en ambos extremos, separación de puertos, acceso y curvaturas montadas"
+            ],
+            [
+              "Sellado en funcionamiento",
+              "Comportamiento con presión positiva o negativa real, temperatura y variaciones de presión"
+            ],
+            [
+              "Fluidos y limpieza",
+              "Cambios del tubo, rebordes y sellado tras contactar con reactivos y limpiadores reales"
+            ],
+            [
+              "Mantenimiento y reconexión",
+              "Desmontar según métodos y ciclos del equipo; revisar rebordes, arandelas y sellado posterior"
+            ],
+            [
+              "Consistencia entre lotes",
+              "Comprobar materiales, cotas, aspecto, identificación y registros según el plano acordado"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Presión de ensayo, duración, fuga admisible y ciclos de reconexión deben derivarse del equipo y del conjunto confirmado. Los parámetros de una pieza no garantizan automáticamente presión, vida útil o reutilización de todo el conjunto."
+        }
+      ]
+    },
+    {
+      "title": "¿Qué datos necesita un conjunto de tubos con reborde a medida?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Al contactar con FOREACH, identifique los extremos A y B y detalle racor, rosca, arandela y puerto de cada uno. El rebordeado de uno o dos extremos, longitud, retenedores y etiquetas se definen por proyecto; las combinaciones suministrables siguen los planos y documentos confirmados."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fluido: reactivos y limpiadores, concentración, temperatura, tiempo de contacto y modo de trabajo.",
+            "Tubo: FEP o PTFE, diámetro interior × exterior, color, longitud final y referencia de medida.",
+            "Extremos A/B: serie, material, rosca completa, arandelas y planos de puertos receptores.",
+            "Montaje: recorrido, separación de puertos, espacio de curvatura y método de mantenimiento/desmontaje.",
+            "Identificación: retenedores, texto de etiquetas, orientación de impresión y posición.",
+            "Aceptación: tolerancias, aspecto, limpieza, sellado operativo y comprobaciones de mantenimiento."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "En sustituciones, adjunte fotos del original y explique el problema: longitud insuficiente, montaje difícil, fuga tras mantenimiento o diferencias de lote. Relacionar el fallo con estructura y condiciones permite decidir si cambiar tubo, racores, arandelas o requisitos de fabricación y montaje."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Consultar: ",
+              "href": "/es/products/fittings/hard-tube-fittings/",
+              "label": "Modelos y especificaciones de racores para tubo rígido"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Preguntas frecuentes",
+  "faqItems": [],
+  "cta": {
+    "title": "¿Necesita adaptar el conjunto a su equipo?",
+    "description": "Facilite material, diámetros interior × exterior, longitud final, racores y planos de ambos puertos, junto con fluido, temperatura, presión, retenedores y etiquetas para definir opciones y validación.",
+    "contactLabel": "Contactar",
+    "productsLabel": "Ver racores para tubo rígido",
+    "productsHref": "/es/products/fittings/hard-tube-fittings/"
+  }
+}

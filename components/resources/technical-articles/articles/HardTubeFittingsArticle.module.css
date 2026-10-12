@@ -1,0 +1,86 @@
+/* Keep the Chinese assembly labels readable at their original aspect ratio. */
+.relatedIntro {
+  /* Match the related-resource container so the introduction shares its edges. */
+  width: min(1600px, calc(100% - 56px));
+  margin: 0 auto 24px;
+  color: #5e6b80;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 760px) {
+  .relatedIntro {
+    width: min(1600px, calc(100% - 36px));
+  }
+}
+
+.relatedProducts [data-related-track-item] img {
+  transform: none;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.relatedProducts [data-related-track-item] a > div:first-child {
+  aspect-ratio: 4 / 3;
+}
+
+.relatedProducts [data-related-track-item] h3 {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  min-height: 2.7em;
+}
+
+.article [id="tradeoffs"] [data-article-gallery] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.article [id="tradeoffs"] [data-article-gallery] img {
+  aspect-ratio: auto;
+}
+
+@media (max-width: 600px) {
+  .article [id="tradeoffs"] [data-article-gallery] {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Each fitting family pairs its appearance with its own dimension drawing. */
+.article [id="selection"] [data-article-gallery]:has(> figure:nth-child(4)) {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.article [id="selection"] [data-article-gallery]:has(> figure:nth-child(4)) > figure > img {
+  aspect-ratio: auto;
+}
+
+@media (max-width: 600px) {
+  .article [id="selection"] [data-article-gallery]:has(> figure:nth-child(4)) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Keep the two product links in the hard-tube selection example on one row. */
+.article[id="hard-tube-fittings-selection-guide-article"] [id="selection-example"] > p:has(> a[href="/products/fittings/"]) {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.article[id="hard-tube-fittings-selection-guide-article"] [id="selection-example"] > p:has(> a[href="/products/fittings/"]) > a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* Localized link labels need room to wrap on narrow screens. */
+.article[id="hard-tube-fittings-selection-guide-article"]:not(:lang(zh-CN)) [id="selection-example"] > p:has(> a[href$="/products/fittings/"]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+}

@@ -1,3 +1,5 @@
+import HardTubeGuideProductLink from "@/components/resources/technical-articles/articles/HardTubeGuideProductLink";
+import FlangedFittingRelatedArticle from "@/components/products/detail/FlangedFittingRelatedArticle";
 import type {
   Metadata,
 } from "next";
@@ -384,6 +386,7 @@ export default async function LocalizedHardTubeDetailPage({
 
   return (
     <ProductDetailClient
+      afterContent={<><HardTubeGuideProductLink model={detail.model} locale={locale} /><FlangedFittingRelatedArticle model={detail.model} locale={locale} /></>}
       data={
         toClientData(
           detail

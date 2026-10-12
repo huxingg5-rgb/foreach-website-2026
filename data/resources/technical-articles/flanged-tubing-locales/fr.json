@@ -1,0 +1,549 @@
+{
+  "metadata": {
+    "title": "Choisir un assemblage de tubes à collet plat : étanchéité, raccordement et validation sur instrument",
+    "seoTitle": "Tubes à collet plat : sélection et raccordement | FOREACH",
+    "seoDescription": "Comparez les raccords à fond plat HF, HF6, HFL et HFL6 : matériaux, diamètres, dimensions et dégagement avant. Vérifiez les ports M6×1 et 1/4-28 UNF et définissez la validation.",
+    "coverImage": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-photo.png",
+    "coverAlt": "Assemblages FOREACH de tubes à collet plat avec différents raccords et extrémités formées"
+  },
+  "deck": "Choisissez ensemble le matériau du tube, ses diamètres intérieur et extérieur, les deux raccords, les rondelles d’appui, les ports et les dimensions de montage. Vérifiez la compression du collet contre le fond plat, puis précisez les dispositifs de retenue, les repères et la validation sur instrument.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Dans les instruments analytiques et circuits automatisés, les tubes reliant pompes, vannes et modules doivent transporter le fluide tout en répondant aux besoins d’étanchéité, de cheminement et de maintenance. Le raccordement n’est qu’une étape : le collet, la rondelle et le port récepteur déterminent si l’effort agit sur la bonne surface d’étanchéité."
+    },
+    {
+      "type": "paragraph",
+      "text": "Pour un équipement existant, contrôlez d’abord l’assemblage d’origine et les plans des ports. Pour un nouveau circuit OEM, définissez la configuration selon le cheminement, l’entraxe des ports et la maintenance. Les sections suivantes traitent de la structure, des matériaux, des dimensions, du choix des raccords et du montage."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-photo.png",
+      "alt": "Assemblages FOREACH à collet plat et leurs raccordements d’extrémité",
+      "width": 2760,
+      "height": 1217,
+      "caption": "Assemblages de tubes à collet plat. Choisir les raccords, tubes et extrémités selon le circuit réel et les interfaces de l’équipement."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Quels sont les composants et comment assurent-ils l’étanchéité ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’extrémité préformée du tube présente un collet orienté vers l’extérieur. Le raccord fileté transmet un effort axial par une rondelle adaptée, qui soutient et comprime le collet contre le fond plat du port. Vérifiez séparément le vissage et l’étanchéité frontale : un raccord qui se visse ne garantit pas l’appui du collet au fond."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/flanged-sealing-structure-fr.svg",
+          "alt": "Position du raccord à fond plat, de la rondelle d’appui et du collet",
+          "width": 2064,
+          "height": 996,
+          "caption": "Exemple HF : la rondelle se place entre le nez du raccord et le collet. La longueur totale de 20.5 mm, le diamètre de tête de 8.2 mm et le dégagement de 2 mm concernent HF. Voir la comparaison des quatre séries ci-dessous."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les assemblages peuvent utiliser HF, HF6, HFL ou HFL6. HF et HFL ont une tête standard ; HF6 et HFL6 sont compacts. Tous compriment le collet via une rondelle adaptée, mais leurs têtes, longueurs, alésages et nez diffèrent. Le choix doit porter sur une série et un modèle précis ; un seul dessin ne représente pas toute la gamme."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un assemblage préfabriqué peut aussi comporter des dispositifs de retenue et des repères. Identifiez la fonction de chaque pièce avant de définir les options du plan de livraison."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Composant",
+            "Fonction principale",
+            "Points à confirmer"
+          ],
+          "rows": [
+            [
+              "Tube et collet formé",
+              "Transporter le fluide ; l’extrémité formée assure le contact d’étanchéité frontal",
+              "Matériau, diamètres, longueur, collet à une ou deux extrémités et dimensions formées"
+            ],
+            [
+              "Raccord fileté",
+              "Relier le port et appliquer la compression axiale",
+              "Série, matériau, filetage, alésage et espace de montage"
+            ],
+            [
+              "Rondelle d’appui",
+              "Soutenir le collet et transmettre la compression",
+              "Matériau, diamètres intérieur/extérieur, épaisseur et compatibilité avec le raccord"
+            ],
+            [
+              "Joint torique / manchon de retenue",
+              "Limiter le coulissement du raccord sur le tube",
+              "Nécessité, position et course autorisée"
+            ],
+            [
+              "Repère du tube",
+              "Identifier le circuit, le port ou la position de montage",
+              "Texte, orientation, position et correspondance entre les extrémités"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-components-fr.svg",
+          "alt": "Assemblage double avec raccords, rondelles, retenues, tube et repères optionnels",
+          "width": 3012,
+          "height": 1280,
+          "caption": "Exemple à deux extrémités. Vérifier les dimensions et options pour chaque interface ; toutes les combinaisons ne sont pas possibles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le joint torique ou manchon derrière le raccord limite le coulissement ; il ne constitue pas le joint du port récepteur. Si les interfaces diffèrent, confirmez séparément raccords et rondelles, sans présumer une configuration identique aux deux extrémités."
+        }
+      ]
+    },
+    {
+      "title": "Comment définir séparément les matériaux et les diamètres ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Commencez par le fluide, sa concentration, la température, la durée de contact et le nettoyage. Les assemblages FOREACH proposent des tubes FEP et PTFE ; corps et rondelles ont leurs propres gammes. Le matériau du corps ne représente pas tous les matériaux mouillés : identifiez les surfaces réellement en contact avec le fluide."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pièce",
+            "Configurations indiquées",
+            "Limites de sélection"
+          ],
+          "rows": [
+            [
+              "Tube",
+              "FEP, PTFE",
+              "Confirmer séparément compatibilité chimique et aptitude au formage du collet"
+            ],
+            [
+              "Corps HF / HF6",
+              "PEEK, PVDF, PPS",
+              "Vérifier la combinaison matériau, filetage et diamètre extérieur pour le modèle précis"
+            ],
+            [
+              "Corps HFL",
+              "PVDF",
+              "Choisir la combinaison de filetage, diamètre et couleur"
+            ],
+            [
+              "Corps HFL6",
+              "Les versions M6×1 et 1/4-28 UNF indiquées sont en PPS ; le petit modèle 6-40 UNF indiqué est en PEEK",
+              "Ne pas transposer les matériaux entre filetages et dimensions"
+            ],
+            [
+              "Rondelle adaptée",
+              "Acier inoxydable SUS, PEEK ou PTFE selon la dimension",
+              "Contrôler diamètres et épaisseur ; tous les matériaux ne sont pas proposés pour chaque taille"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/fitting-materials.png",
+          "alt": "Exemples de corps de raccords à fond plat en PEEK, PVDF et PPS",
+          "width": 1856,
+          "height": 837,
+          "caption": "Exemples de matériaux du corps. La couleur décrit l’apparence ; confirmer le matériau avec le modèle et les documents de livraison. Un même matériau peut exister en plusieurs couleurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Distinguez diamètre intérieur du tube, diamètre extérieur et alésage du raccord. Le diamètre intérieur et la longueur influencent résistance hydraulique et volume ; l’extérieur détermine l’ajustement au raccord, à la rondelle et à l’outil. L’alésage doit accueillir le tube prévu. Désigner les trois par « diamètre du tube » est ambigu."
+        },
+        {
+          "type": "paragraph",
+          "text": "La documentation actuelle prévoit des diamètres extérieurs de 1.6, 2.0, 2.5, 3.0 et 3.2 mm. Définissez intérieur et extérieur ensemble : 0.8 × 1.6 mm signifie diamètre intérieur × extérieur, et non deux diamètres extérieurs compatibles. Vérifiez la combinaison avec le matériau et le formage."
+        },
+        {
+          "type": "paragraph",
+          "text": "La résistance au fluide ne rend pas toute épaisseur compatible avec un même procédé de formage. Confirmez outil, matériau et diamètres avant fabrication, puis contrôlez l’extrémité et le passage. Définissez la référence de longueur, par exemple entre faces d’étanchéité, pour distinguer longueur de coupe et longueur finie."
+        }
+      ]
+    },
+    {
+      "title": "Comment choisir entre HF, HF6, HFL et HFL6 ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les quatre séries proposent M6×1 et 1/4-28 UNF. Vérifiez filetage, diamètre extérieur et matériau avant de comparer tête, longueur axiale et nez. Les cotes ci-dessous proviennent des plans de série liés sur le site, en mm. Elles excluent collet et rondelle et ne représentent pas la longueur dépassant après montage."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hf-dimensions-fr.svg",
+          "alt": "Coupe HF pour tube extérieur 1.6–2.0 mm : tête 8.2 mm, longueur 20.5 mm",
+          "width": 858,
+          "height": 1152,
+          "caption": "HF standard : vues PEEK naturel et PPS noir à gauche ; coupe pour tube extérieur 1.6–2.0 mm à droite. Cotes en mm.",
+          "productViews": [
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pk-n-main.jpg",
+              "alt": "Raccord HF à fond plat en PEEK naturel"
+            },
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-ps-b-main.jpg",
+              "alt": "Raccord HF à fond plat en PPS noir"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hf6-dimensions-fr.svg",
+          "alt": "Coupe HF6 pour tube extérieur 1.6–2.0 mm : tête 6.4 mm, longueur 17.6 mm",
+          "width": 928,
+          "height": 1152,
+          "caption": "HF6 compact : vues PEEK naturel et PPS noir à gauche ; coupe pour tube extérieur 1.6–2.0 mm à droite. Cotes en mm.",
+          "productViews": [
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pk-n-main.jpg",
+              "alt": "Raccord HF6 compact en PEEK naturel"
+            },
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-ps-b-main.jpg",
+              "alt": "Raccord HF6 compact en PPS noir"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hfl-appearance-dimensions.png",
+          "alt": "HFL noir et naturel avec coupe : tête 10 mm, longueur 16.5 mm",
+          "width": 2374,
+          "height": 1429,
+          "caption": "HFL standard : vues noire et naturelle et coupe cotée. Tête 10 mm ; longueur totale 16.5 mm. Le nez de 4.7 mm correspond à M6. Cotes en mm."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hfl6-m6-dimensions.png",
+          "alt": "Coupe HFL6-M6-16 : tête 6 mm, longueur 20 mm",
+          "width": 566,
+          "height": 1041,
+          "caption": "HFL6 compact : vue PPS noir et plan M6 pour tube extérieur 1.6 mm. Tête 6 mm ; longueur totale 20 mm. Cotes en mm.",
+          "productViews": [
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
+              "alt": "Raccord HFL6-M6-16 compact en PPS noir",
+              "reverse": true
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Série",
+            "Diamètre de tête / longueur totale",
+            "Diamètre extérieur du tube",
+            "Matériau du corps"
+          ],
+          "rows": [
+            [
+              "HF à fond plat standard",
+              "8.2 / 20.5",
+              "1.6–2.0, 2.5, 3.0–3.2 ; trois groupes",
+              "PEEK, PVDF, PPS"
+            ],
+            [
+              "HF6 à fond plat compact",
+              "6.4 / 17.6",
+              "1.6–2.0, 2.5, 3.0–3.2 ; trois groupes",
+              "PEEK, PVDF, PPS"
+            ],
+            [
+              "HFL à fond plat standard",
+              "10 / 16.5",
+              "1.6, 2.0, 2.5, 3.0, 3.2 ; choix par diamètre",
+              "PVDF"
+            ],
+            [
+              "HFL6 à fond plat compact",
+              "6 / 20",
+              "1.6, 2.0, 2.5, 3.0, 3.2 ; choix par diamètre",
+              "PPS ; ligne applicable aux versions M6 et U28"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HF : tête standard, trois groupes de diamètres"
+        },
+        {
+          "type": "paragraph",
+          "text": "HF présente une tête de 8.2 mm, une longueur de 20.5 mm et un nez non fileté de 2 mm. Les groupes de tubes 1.6–2.0, 2.5 et 3.0–3.2 mm correspondent aux alésages 2.2, 2.7 et 3.4 mm. Choisissez PEEK, PVDF ou PPS selon le modèle et vérifiez l’accès pour tourner la tête ainsi que la sortie arrière du tube."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Plan : ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf-standard-flat-bottom.pdf",
+              "label": "Cotes HF (M6 / 1/4-28 UNF)"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HF6 : plus étroit et plus court que HF"
+        },
+        {
+          "type": "paragraph",
+          "text": "HF6 a une tête de 6.4 mm et une longueur de 17.6 mm, soit 1.8 mm et 2.9 mm de moins que HF. Groupes de tubes, matériaux et dégagement avant de 2 mm correspondent à HF. Envisagez HF6 pour des ports rapprochés ou un espace axial réduit, puis vérifiez accès au serrage et démontage. Un format compact ne garantit pas une pression admissible supérieure."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Plan : ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf6-compact-flat-bottom.pdf",
+              "label": "Cotes HF6 (M6 / 1/4-28 UNF)"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HFL : corps plus court, tête plus large"
+        },
+        {
+          "type": "paragraph",
+          "text": "HFL a une tête de 10 mm, une longueur de 16.5 mm et un dégagement avant de 1 mm. Plus court que HF, il exige davantage d’espace radial. Vérifiez les deux directions près d’un boîtier ou de ports rapprochés. Les plans proposent du PVDF naturel et noir pour chacun des diamètres 1.6, 2.0, 2.5, 3.0 et 3.2 mm ; les trois groupes HF ne s’appliquent pas."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Plans : ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-m6.pdf",
+              "label": "Cotes HFL-M6"
+            },
+            {
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-u28.pdf",
+              "label": "Cotes HFL-U28"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HFL6 : corps fin, vérifier l’entraxe et la réserve axiale"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les plans HFL6 M6 et U28 indiquent une tête de 6 mm, une longueur de 20 mm et un corps PPS. Il est plus étroit que les trois autres, mais plus long que HF6 et HFL : « compact » ne signifie pas minimal dans toutes les directions. Aucun nez non fileté de 2 mm comparable à HF/HF6 n’est indiqué ; vérifiez le port avec la géométrie propre à HFL6."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les diamètres extérieurs HFL6 de 1.6, 2.0, 2.5, 3.0 et 3.2 mm, les alésages nominaux sont 1.8, 2.2, 2.7, 3.2 et 3.4 mm. Le petit HFL6-U40-16-PK-N utilise un filetage 6-40 UNF, un corps PEEK et un tube extérieur de 1.6 mm. Confirmez ses cotes séparément ; celles de M6/U28 ne s’appliquent pas."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Plans : ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-m6.pdf",
+              "label": "Cotes HFL6-M6"
+            },
+            {
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-u28.pdf",
+              "label": "Cotes HFL6-U28"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Passer du choix du raccord à la définition du tube assemblé"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Vérifiez le filetage complet et la surface à fond plat du port avant de sélectionner la série. M6 et U28 ne sont pas interchangeables.",
+            "Choisissez selon le diamètre extérieur réel et contrôlez alésage et tolérance. L’alésage accueille le tube ; il n’est ni son diamètre intérieur ni le diamètre hydraulique du circuit.",
+            "Utilisez le diamètre de tête pour vérifier les interférences. Contrôlez longueur, profondeur montée et sortie du tube pour l’espace axial, avec une marge de manipulation.",
+            "Adaptez matériau, diamètres et épaisseur de rondelle au raccord, au tube et au port ; confirmez l’appui et la compression du collet."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Les filtres de raccords à bague standard et compacts du site désignent d’autres structures. Les quatre séries à fond plat sont ici HF, HF6, HFL et HFL6 ; les quatre catégories du filtre ne sont pas quatre options à collet plat. Pour un remplacement, vérifiez préfixe de série, révision du plan et géométrie du port."
+        }
+      ]
+    },
+    {
+      "title": "Pourquoi une fuite reste-t-elle possible si le raccord se visse ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vérifiez le filetage complet : M6×1 et 1/4-28 UNF sont différents. Une apparence proche ou quelques tours ne prouvent pas la compatibilité. Contrôlez ensuite forme, profondeur et état du fond pour confirmer la surface de contact prévue."
+        },
+        {
+          "type": "paragraph",
+          "text": "La connexion illustrée exige un fond plat conforme au plan. Un cône incompatible peut empêcher l’appui et provoquer fuite ou rétention locale. Nez, épaisseur de rondelle et dimensions du collet déterminent ensemble la position ; recherchez une interférence avant d’obtenir la compression effective."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/fitting-front-clearance-fr.svg",
+          "alt": "Dégagement non fileté de 2 mm à l’avant du raccord illustré",
+          "width": 1348,
+          "height": 466,
+          "caption": "HF/HF6 : 2 mm ; HFL : 1 mm. Les plans HFL6 M6/U28 n’indiquent pas le même dégagement. Ces cotes du raccord ne sont pas les cotes d’usinage du filetage intérieur du port."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Zone à contrôler",
+            "Exigence illustrée ou d’accouplement",
+            "Interprétation au montage"
+          ],
+          "rows": [
+            [
+              "Nez du raccord",
+              "HF/HF6 : 2 mm ; HFL : 1 mm ; pas de dégagement équivalent indiqué pour HFL6 M6/U28",
+              "Vérifier chaque série, sans généraliser 2 mm"
+            ],
+            [
+              "Diamètre du nez",
+              "HF/HF6/HFL : 4.7 mm sur les plans M6, 5.1 mm sur les plans U28",
+              "Géométrie du nez, et non diamètre nominal du filetage ou extérieur du tube ; non applicable à HFL6"
+            ],
+            [
+              "Intérieur du port récepteur",
+              "Les consignes d’usinage de ce type d’assemblage prescrivent un dégagement de filetage intérieur de hauteur ≤1 mm",
+              "Coter et contrôler séparément du nez du raccord"
+            ],
+            [
+              "Fond du port",
+              "Face plane sans cône, conforme au plan d’accouplement",
+              "Vérifier forme, contamination, rayures et contact réel"
+            ],
+            [
+              "Rondelle et collet",
+              "Dimensions adaptées au raccord, tube et port",
+              "Confirmer ordre, intégrité et position de compression"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces exigences concernent l’assemblage et le port correspondants ; elles ne sont pas une norme universelle pour tous les raccords à collet. Pour une vanne ou un module existant, fournissez une coupe du port plutôt que le seul nom du filetage."
+        }
+      ]
+    },
+    {
+      "title": "Comment distinguer défaut de pièce et problème de montage ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vérifiez interfaces et pièces avant d’ajuster. Resserrer toujours davantage peut déformer définitivement le collet plastique et masquer un port incompatible. Respectez méthode et couple propres au raccord, tube et assemblage ; aucune valeur unique ne couvre tous les modèles."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/flanged-end-detail.png",
+          "alt": "Gros plan de deux extrémités avec nez, rondelles et collets",
+          "width": 1745,
+          "height": 897,
+          "caption": "Examinez l’ajustement du collet, de la rondelle et du nez. La photo illustre la structure ; l’étanchéité doit être vérifiée dans les conditions définies."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Contrôlez modèle, diamètre extérieur, rondelle et plan du port pour exclure un mélange de pièces.",
+            "Recherchez collet incliné, fissuré ou déformé et passage altéré par le formage ou la compression.",
+            "Vérifiez les rondelles absentes, incorrectes ou endommagées et les rayures ou particules sur la face du port.",
+            "Montez selon la méthode prévue ; observez si le tube se tord pendant le vissage.",
+            "Rétablissez le cheminement réel, éliminez traction par manque de longueur, courbes serrées et efforts latéraux, puis retestez dans les conditions de l’équipement."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si le banc est satisfaisant mais que le montage fuit, privilégiez le cheminement et les charges externes. Si un port concentre les défauts, contrôlez d’abord ses pièces et sa face d’étanchéité. Cela distingue incompatibilité, état des pièces et contraintes de pose."
+        }
+      ]
+    },
+    {
+      "title": "Quelles validations réaliser sur instrument ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un contrôle statique ne couvre que ses conditions d’assemblage et d’essai. Validez également longueur réelle, cheminement et cadence de fonctionnement, en inscrivant les critères d’acceptation dans les exigences de livraison."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Validation",
+            "Contrôles"
+          ],
+          "rows": [
+            [
+              "Dimensions et montage",
+              "Référence de longueur, composants aux deux extrémités, entraxe, accès aux outils et courbures installées"
+            ],
+            [
+              "Étanchéité en fonctionnement",
+              "Comportement sous pression ou dépression réelle, température et variations de pression"
+            ],
+            [
+              "Fluides et nettoyage",
+              "Évolution du tube, du collet et de l’étanchéité après exposition aux réactifs et nettoyants réels"
+            ],
+            [
+              "Maintenance et reconnexion",
+              "Démonter selon méthodes et cycles de l’équipement ; contrôler collets, rondelles et étanchéité après reconnexion"
+            ],
+            [
+              "Constance des lots",
+              "Vérifier matériaux, cotes, aspect, identification et essais selon le plan convenu"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pression d’essai, durée, fuite admissible et cycles de démontage doivent découler des exigences de l’équipement et de l’assemblage confirmé. Une caractéristique de pièce ne garantit pas automatiquement pression, durée de vie ou réutilisation de l’ensemble."
+        }
+      ]
+    },
+    {
+      "title": "Quelles informations fournir pour un assemblage sur mesure ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour une demande FOREACH, repérez les extrémités A et B et détaillez chaque raccord, filetage, rondelle et port. Collet simple ou double, longueur, retenues et repères se définissent par projet ; les combinaisons livrables suivent les plans et documents confirmés."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fluide : réactifs et nettoyants, concentrations, températures, durées de contact et fonctionnement.",
+            "Tube : FEP ou PTFE, diamètre intérieur × extérieur, couleur, longueur finie et référence de mesure.",
+            "Extrémités A/B : série, matériau, filetage complet, rondelles et plans des ports récepteurs.",
+            "Montage : cheminement, entraxe, espace de courbure et méthode de maintenance/démontage.",
+            "Identification : retenues éventuelles, texte des repères, orientation d’impression et position.",
+            "Réception : tolérances, aspect, propreté, étanchéité en service et contrôles après maintenance."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour un remplacement, joignez des photos de l’original et décrivez le problème : longueur insuffisante, montage difficile, fuite après maintenance ou variation de lot. Relier défaut, structure et conditions permet de décider s’il faut changer tube, raccord, rondelle ou exigences de fabrication et de montage."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Consulter : ",
+              "href": "/fr/products/fittings/hard-tube-fittings/",
+              "label": "Modèles et caractéristiques des raccords pour tubes rigides"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Questions fréquentes",
+  "faqItems": [],
+  "cta": {
+    "title": "Besoin d’adapter l’assemblage aux interfaces de votre équipement ?",
+    "description": "Fournissez matériau, diamètres intérieur × extérieur, longueur finie, raccords et plans des deux ports, ainsi que fluide, température, pression, retenues et repères pour définir configuration et validation.",
+    "contactLabel": "Nous contacter",
+    "productsLabel": "Voir les raccords pour tubes rigides",
+    "productsHref": "/fr/products/fittings/hard-tube-fittings/"
+  }
+}

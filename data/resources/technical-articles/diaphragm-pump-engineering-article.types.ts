@@ -69,6 +69,8 @@ export type EngineeringArticleBlock =
       width: number;
       height: number;
       caption: string;
+      link?: { href: string; label: string };
+      productViews?: readonly { src: string; alt: string; reverse?: boolean }[];
       flowNodes?: readonly { label: string; detail: string }[];
     }
   | {

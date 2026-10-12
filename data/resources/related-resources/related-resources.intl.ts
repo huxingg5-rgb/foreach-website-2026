@@ -9,6 +9,8 @@ export type RelatedResourcesLocale =
   | "ru";
 
 export type RelatedResourcesText = {
+  previous: string;
+  next: string;
   relatedVideos: string;
   relatedProducts: string;
   relatedArticles: string;
@@ -27,6 +29,8 @@ export const relatedResourcesText: Record<
   RelatedResourcesText
 > = {
   "zh-CN": {
+    previous: "上一项",
+    next: "下一项",
     relatedVideos: "相关视频",
     relatedProducts: "相关产品",
     relatedArticles: "相关技术文章",
@@ -40,6 +44,8 @@ export const relatedResourcesText: Record<
     defaultArticleDescription: "继续阅读与当前产品系列相关的技术文章。",
   },
   en: {
+    previous: "previous",
+    next: "next",
     relatedVideos: "Related Videos",
     relatedProducts: "Related Products",
     relatedArticles: "Related Technical Articles",
@@ -53,6 +59,8 @@ export const relatedResourcesText: Record<
     defaultArticleDescription: "Read technical articles related to this product series.",
   },
   es: {
+    previous: "anterior",
+    next: "siguiente",
     relatedVideos: "Vídeos relacionados",
     relatedProducts: "Productos relacionados",
     relatedArticles: "Artículos técnicos relacionados",
@@ -66,6 +74,8 @@ export const relatedResourcesText: Record<
     defaultArticleDescription: "Lea artículos técnicos relacionados con esta serie.",
   },
   fr: {
+    previous: "précédent",
+    next: "suivant",
     relatedVideos: "Vidéos associées",
     relatedProducts: "Produits associés",
     relatedArticles: "Articles techniques associés",
@@ -79,6 +89,8 @@ export const relatedResourcesText: Record<
     defaultArticleDescription: "Lisez les articles techniques associés à cette série.",
   },
   ko: {
+    previous: "이전",
+    next: "다음",
     relatedVideos: "관련 동영상",
     relatedProducts: "관련 제품",
     relatedArticles: "관련 기술 자료",
@@ -92,6 +104,8 @@ export const relatedResourcesText: Record<
     defaultArticleDescription: "이 제품 시리즈와 관련된 기술 자료를 읽어보세요.",
   },
   ru: {
+    previous: "предыдущий",
+    next: "следующий",
     relatedVideos: "Связанные видео",
     relatedProducts: "Связанные продукты",
     relatedArticles: "Связанные технические статьи",

@@ -1,0 +1,600 @@
+{
+  "metadata": {
+    "title": "Guide de sélection des raccords pour tubes en microfluidique : collet, férule et bague de retenue",
+    "seoTitle": "Choisir les raccords pour tubes en microfluidique | FOREACH",
+    "seoDescription": "Guide FOREACH : étanchéité, réutilisation, pression, tubes FEP/PTFE, protection contre la lumière et protection mécanique des raccords à collet, à férule et à bague de retenue, avec un exemple de sélection.",
+    "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-fittings.webp",
+    "coverAlt": "Raccords à collet FOREACH HF / HFL"
+  },
+  "deck": "Points clés : vérifiez d’abord le port, le diamètre extérieur du tube et le fluide, puis la pression, la maintenance et la préparation du tube. Le collet s’appuie sur un fond plat ; la férule serre le tube lors du vissage ; le système à bague de retenue associe une douille et une bague d’étanchéité. Des filetages et diamètres identiques ne suffisent pas à établir la compatibilité.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Points clés : vérifiez d’abord le port, le diamètre extérieur du tube et le fluide, puis la pression, la maintenance et la préparation du tube. Le collet s’appuie sur un fond plat ; la férule serre le tube lors du vissage ; le système à bague de retenue associe une douille et une bague d’étanchéité. Des filetages et diamètres identiques ne suffisent pas à établir la compatibilité.",
+      "lead": "Points clés :"
+    },
+    {
+      "type": "paragraph",
+      "text": "Destiné à la conception d’équipements et de circuits fluidiques ainsi qu’à la maintenance, ce guide établit une présélection à partir de l’étanchéité, des interfaces, des fluides, de la pression et des démontages. Un exemple combine ensuite tube, protection contre la lumière et protection mécanique."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/hard-tube-fitting-assemblies.png",
+      "alt": "Assemblages de tubes avec raccords de différentes couleurs",
+      "width": 2901,
+      "height": 1585,
+      "caption": "Raccords et assemblages de tubes réels"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Comment les trois types de raccord assurent-ils l’étanchéité ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les raccords à collet, à férule et à bague de retenue fixent et étanchent différemment l’extrémité du tube. Déterminez sa préparation et la position de la face d’étanchéité avant de choisir le raccord et les pièces associées."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-fittings.webp",
+          "alt": "Raccords à collet FOREACH HF HFL",
+          "width": 458,
+          "height": 375,
+          "caption": "À collet : séries HF / HFL",
+          "link": {
+            "href": "/fr/products/fittings/hard-tube-fittings/?structure=flanged",
+            "label": "Voir les raccords à collet"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings.webp",
+          "alt": "Raccords à férule FOREACH HN HNF",
+          "width": 455,
+          "height": 311,
+          "caption": "À férule : séries HN / HNF",
+          "link": {
+            "href": "/fr/products/fittings/hard-tube-fittings/?structure=ferrule",
+            "label": "Voir les raccords à férule"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-fittings.webp",
+          "alt": "Composants à bague de retenue FOREACH HSF6 CL-1",
+          "width": 453,
+          "height": 313,
+          "caption": "À bague de retenue : séries HSF6 / CL-1"
+        },
+        {
+          "type": "subheading",
+          "title": "À collet : le collet du tube s’appuie sur la face plane"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-connection-structure-fr.webp",
+          "alt": "Assemblage et cotes du raccord compact à fond plat, de la rondelle et du collet",
+          "width": 1792,
+          "height": 878,
+          "caption": "À collet : assemblage du raccord compact à fond plat et cotes illustrées"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le tube apte au formage, en FEP ou PTFE notamment, reçoit d’abord un collet, puis la rondelle et le raccord adaptés. Dans cette structure, la rondelle se situe entre le collet et le corps du raccord : elle soutient le collet et transmet la compression. Le serrage applique le collet contre le fond plat du port pour assurer l’étanchéité."
+        },
+        {
+          "type": "subheading",
+          "title": "À férule : le serrage maintient le tube et assure l’étanchéité au fond du port"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-structure-fr.webp",
+          "alt": "Assemblage et cotes du raccord compact à férule et de sa férule",
+          "width": 1759,
+          "height": 894,
+          "caption": "À férule : assemblage compact et cotes illustrées"
+        },
+        {
+          "type": "paragraph",
+          "text": "Aucun collet n’est nécessaire. Enfilez le raccord et sa férule sur le tube coupé d’équerre, puis positionnez-les selon les instructions. Le serrage comprime la férule autour du tube et contre la face d’étanchéité du port. Vérifiez taille, orientation et série compatible avant montage."
+        },
+        {
+          "type": "subheading",
+          "title": "À bague de retenue : une douille et une bague d’étanchéité forment l’assemblage terminal"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-connection-structure-fr.webp",
+          "alt": "Assemblage du raccord à bague de retenue, de la douille inox et de la bague d’étanchéité",
+          "width": 1719,
+          "height": 915,
+          "caption": "À bague de retenue : raccord, douille inox et bague d’étanchéité"
+        },
+        {
+          "type": "paragraph",
+          "text": "Enfilez successivement raccord, douille et bague d’étanchéité. Alignez l’extrémité du tube sur la face de la bague, puis comprimez selon les instructions. Le kit CL-1S associe une bague en PEEK et une douille inox au raccord HSF6 correspondant pour assurer une étanchéité en face. Le raccord peut tourner par rapport au tube pendant le raccordement, ce qui limite sa torsion."
+        },
+        {
+          "type": "paragraph",
+          "text": "Suivez les instructions du modèle à bague de retenue choisi. Le préassemblage et les outils particuliers dépendent du kit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conseil de sélection : les raccords à férule et à bague de retenue évitent tous deux le formage d’un collet, mais leurs pièces et leur montage diffèrent. Vérifiez leur association ; des filetages et diamètres identiques ne permettent pas une substitution directe.",
+          "lead": "Conseil de sélection :"
+        }
+      ]
+    },
+    {
+      "title": "Quels sont les avantages et les limites de réutilisation ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avec un procédé de formage maîtrisé, évaluez le collet ; sans formage, la férule ; pour des tubes préassemblés et démontables en maintenance, la bague de retenue. Vérifiez séparément la possibilité de reconnecter l’ensemble complet et celle de remonter des joints retirés.",
+          "lead": "Avec un procédé de formage maîtrisé, évaluez le collet ; sans formage, la férule ; pour des tubes préassemblés et démontables en maintenance, la bague de retenue."
+        },
+        {
+          "type": "subheading",
+          "title": "À collet : adapté au préassemblage, avec une qualité de formage déterminante"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le collet fixe la position de raccordement et facilite le préassemblage. Les limites tiennent au formage, à la planéité et au fond du port. Un collet abîmé, une compression excessive ou un fond conique incompatible empêchent un contact fiable des faces. Inspectez collet et rondelle avant reconnexion."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flat-port-correct-zh.png",
+          "alt": "Coupe d’un collet en appui sur la face d’étanchéité d’un port à fond plat",
+          "width": 555,
+          "height": 145,
+          "caption": "Fond plat : le collet peut s’appuyer sur le fond et assurer l’étanchéité"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/tapered-port-incorrect-zh.png",
+          "width": 555,
+          "height": 135,
+          "alt": "Coupe d’un collet ne pouvant pas s’appuyer sur un fond conique",
+          "caption": "Fond conique : le collet ne peut pas s’appuyer de façon fiable sur le fond"
+        },
+        {
+          "type": "subheading",
+          "title": "À férule : premier montage simple, mais installation unique à respecter"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le tube coupé d’équerre se monte sans formage. Les férules présentées sont destinées à une seule installation ; leur remontage peut provoquer une déformation plastique irréversible. Prévoyez des férules neuves adaptées pour la maintenance."
+        },
+        {
+          "type": "paragraph",
+          "text": "Avant de reconnecter le tube avec sa férule d’origine, obtenez une instruction écrite de réutilisation pour cette combinaison précise. Évaluez séparément la réutilisation de l’écrou selon son état et les exigences de montage."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-assembly-fr.webp",
+          "alt": "Configuration type d’un raccord à férule",
+          "width": 1736,
+          "height": 906,
+          "caption": "Férule : respecter le sens de compression et les dimensions associées"
+        },
+        {
+          "type": "subheading",
+          "title": "À bague de retenue : reconnexions possibles avec inspection de l’extrémité"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un assemblage terminal complet HSF6 avec le kit adapté peut être démonté et reconnecté selon les instructions. Il convient donc à l’évaluation de circuits préassemblés nécessitant une maintenance. Inspectez-le avant chaque reconnexion. Le nombre de cycles et la durée de vie dépendent de la combinaison et des conditions. Pour transférer une ancienne douille sur un tube neuf, confirmez séparément que le kit autorise un nouveau pressage."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-assembly-fr.webp",
+          "alt": "Douille, bague d’étanchéité et raccord avec repères",
+          "width": 1323,
+          "height": 1189,
+          "caption": "Positionner et assembler douille et bague selon les instructions"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Critère de sélection",
+            "À collet",
+            "À férule",
+            "À bague de retenue"
+          ],
+          "rows": [
+            [
+              "Préparation initiale du tube",
+              "Former un collet et utiliser la rondelle adaptée",
+              "Coupe d’équerre et férule adaptée",
+              "Coupe d’équerre ; positionner douille et bague"
+            ],
+            [
+              "Démontage et reconnexion",
+              "Reconnecter selon les instructions si collet et rondelle sont intacts",
+              "Remplacer la férule selon la limite d’installation unique",
+              "Reconnecter l’ensemble complet selon les instructions"
+            ],
+            [
+              "Contrôles principaux",
+              "Planéité du collet et géométrie du fond",
+              "Dimensions, sens et déformation de la férule",
+              "Position de pressage, sens et affleurement du tube"
+            ],
+            [
+              "Besoins à évaluer en priorité",
+              "Procédé de formage existant ou préassemblage sous-traité",
+              "Montage sans collet, avec remplacement de férule en maintenance",
+              "Tubes préassemblés et démontage de maintenance"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pièces associées : HN / HN6 utilisent CL-0X ; HNF / HNF6 utilisent CL-0. Vérifiez séparément la série de raccord et le modèle de férule à la commande.",
+          "lead": "Pièces associées :"
+        }
+      ]
+    },
+    {
+      "title": "Comment affiner le choix selon la pression, les vibrations et la maintenance ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Vérifiez l’interface, puis les fluides, la température et la pression, enfin les coûts de montage et de maintenance. Chaque structure a ses conditions d’emploi ; pression admissible et durée de vie dépendent du modèle et de la combinaison.",
+          "lead": "Vérifiez l’interface, puis les fluides, la température et la pression, enfin les coûts de montage et de maintenance."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Condition connue",
+            "Étape suivante"
+          ],
+          "rows": [
+            [
+              "Port et diamètre extérieur définis",
+              "Vérifiez filetage, fond plat ou conique, position d’étanchéité et profondeur d’insertion ; écartez les géométries incompatibles."
+            ],
+            [
+              "Absence d’outillage ou de procédé de formage stable",
+              "Évaluez un montage sans collet ou des tubes à collet préassemblés par le fournisseur."
+            ],
+            [
+              "Démontages répétés en maintenance",
+              "Évaluez d’abord les ensembles à collet ou à bague autorisés à la reconnexion, avec leurs conditions ; intégrez le remplacement des férules au coût de maintenance."
+            ],
+            [
+              "Exigences de pression continue, température ou pulsations",
+              "Demandez les données de la combinaison raccord, tube et port. Sans données suffisantes, conservez-la comme candidate à valider."
+            ],
+            [
+              "Tube suivant le mouvement d’un mécanisme",
+              "Évaluez cheminement, réserve de déplacement, rayon de courbure et décharge de traction pour ne pas charger le pied du raccord."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour une aspiration rarement démontée, vérifiez d’abord l’étanchéité à l’air, la résistance à l’écrasement et l’interface. Pour les connexions entretenues régulièrement, comparez les conditions de reconnexion de l’ensemble et le coût des joints. Près d’un mécanisme mobile, traitez séparément réserve de déplacement, guidage et décharge de traction."
+        },
+        {
+          "type": "subheading",
+          "title": "Valider les risques réels après présélection"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Condition de fonctionnement",
+            "Risque principal",
+            "Validation"
+          ],
+          "rows": [
+            [
+              "Pression continue prolongée",
+              "Fluage du matériau et variation du serrage",
+              "Maintenez la pression pendant la durée prévue, avec le fluide retenu et à la température maximale ; recherchez fuite, déplacement et arrachement."
+            ],
+            [
+              "Marche/arrêt et pulsations",
+              "Desserrage ou fatigue sous charges répétées",
+              "Relevez pics de pression et cycles ; contrôlez l’étanchéité avant et après cyclage."
+            ],
+            [
+              "Aspiration sous dépression",
+              "Micro-entrées d’air, bulles et déformation du tube",
+              "Contrôlez étanchéité à l’air et résistance à l’écrasement ; recherchez l’origine des bulles éventuelles."
+            ],
+            [
+              "Vibrations et déplacement de l’équipement",
+              "Traction et usure concentrées à l’extrémité",
+              "Validez fixations et décharge de traction ; contrôlez desserrage et fuite après vibrations."
+            ],
+            [
+              "Démontage périodique",
+              "Dommages au collet, à la bague ou à la férule",
+              "Définissez procédure, inspection et critères de remplacement, puis validez la connexion après maintenance."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Intégrez ces essais au plan de validation de l’équipement : température, pressions continue et maximale, dépression, nombre de cycles et fuite admissible. L’acceptation d’un modèle repose sur ses spécifications et les résultats d’essai."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les circuits haute pression nécessitent une sélection distincte. La valeur maximale de 34 MPa du manuel concerne des raccords haute pression dédiés, pas les structures ordinaires à collet, à férule ou à bague présentées ici. Retenez les données nominales du modèle pour la température, le tube et le montage réels."
+        }
+      ]
+    },
+    {
+      "title": "Comment choisir les tubes FEP et PTFE ? Quand les protéger de la lumière ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le diamètre extérieur détermine l’adaptation au raccord ; diamètre intérieur et longueur influencent résistance hydraulique et volume interne ; le matériau conditionne l’aptitude chimique et mécanique. Définissez composition, concentration, température maximale et durée de contact des fluides de travail et de nettoyage avant de choisir tubes et joints mouillés.",
+          "lead": "Le diamètre extérieur détermine l’adaptation au raccord ; diamètre intérieur et longueur influencent résistance hydraulique et volume interne ; le matériau conditionne l’aptitude chimique et mécanique."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un tube de diamètre extérieur 2.5 mm et intérieur 1.5 mm exige un assemblage adapté à 2.5 mm extérieur. Le trou de la rondelle dépend de la série et de la configuration ; il ne doit pas nécessairement égaler le diamètre extérieur du tube. Le volume de rétention supplémentaire dépend aussi de la position du tube, de l’insertion et de la continuité du passage."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tube",
+            "Caractéristiques principales",
+            "Observation et protection lumineuse",
+            "Priorités de sélection"
+          ],
+          "rows": [
+            [
+              "FEP",
+              "Tube naturel relativement transparent, permettant l’observation du circuit",
+              "Observation du liquide et des bulles ; évaluer une protection supplémentaire pour les fluides photosensibles",
+              "Vérifiez fluide, paroi, pression et courbure. La résistance au vieillissement UV n’implique pas le blocage des UV."
+            ],
+            [
+              "PTFE",
+              "Inertie chimique élevée, faible frottement, aptitude au formage d’un collet",
+              "Versions naturelles, noires et certaines transparentes",
+              "Confirmez couleur et transparence par modèle ; validez l’écran lumineux du tube noir selon la longueur d’onde et l’épaisseur."
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ptfe-tubing-photo.png",
+          "alt": "Tubes PTFE naturels et noirs",
+          "width": 1962,
+          "height": 1270,
+          "caption": "PTFE : tubes naturels et noirs"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/fep-tubing-photo.png",
+          "alt": "Tubes FEP transparents",
+          "width": 2544,
+          "height": 1540,
+          "caption": "FEP : tubes transparents"
+        },
+        {
+          "type": "paragraph",
+          "text": "FEP et PTFE présentent une certaine souplesse ; respectez le rayon minimal de chaque référence. En mouvement continu, évaluez pincement, usure et fatigue. Une aptitude à la courbure statique ne valide pas les flexions répétées.",
+          "lead": "FEP et PTFE présentent une certaine souplesse ; respectez le rayon minimal de chaque référence."
+        },
+        {
+          "type": "subheading",
+          "title": "Quelles références envisager pour un diamètre extérieur de 2.5 mm ?"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Référence du tube",
+            "Matériau / couleur",
+            "Diamètre extérieur / intérieur",
+            "Points à vérifier"
+          ],
+          "rows": [
+            [
+              "BFT03008",
+              "FEP / naturel",
+              "2.5 / 1.5 mm",
+              "Candidat dimensionnel pour observer les bulles ; prévoir séparément l’écran lumineux."
+            ],
+            [
+              "TH2-PTFE-B-15-25",
+              "PTFE / noir",
+              "2.5 / 1.5 mm",
+              "Candidat pour tube noir ; mesurer la protection aux longueurs d’onde sensibles."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Les deux références ont un diamètre extérieur de 2.5 mm et intérieur de 1.5 mm. Le choix dépend aussi du fluide, de la pression et de la lumière. Le PTFE transparent TH2-PTFE-T-20-32 existe également ; ses dimensions et conditions doivent être vérifiées séparément."
+        },
+        {
+          "type": "subheading",
+          "title": "Comment concilier protection lumineuse et observation des bulles ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Évaluez un tube transparent avec gaine opaque complète, ou une courte zone d’observation contrôlée, recouverte en fonctionnement. Incluez les zones exposées près des raccords, l’ouverture pendant la maintenance et l’éclairage réel. Décidez selon les longueurs d’onde sensibles, la transmission, la durée d’exposition et la stabilité du fluide."
+        }
+      ]
+    },
+    {
+      "title": "Comment protéger les tubes contre l’usure, la flexion et les mouvements ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Corrigez d’abord cheminement et fixation, puis protégez les zones chargées. Isolez les frottements, guidez les courbures serrées au raccord et prévoyez réserve de mouvement et décharge de traction. Évaluez séparément protection mécanique et tenue en pression.",
+          "lead": "Corrigez d’abord cheminement et fixation, puis protégez les zones chargées."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Zone à risque",
+            "Mesure proposée",
+            "Contrôle à privilégier"
+          ],
+          "rows": [
+            [
+              "Contact avec arête métallique ou support",
+              "Modifier le parcours ; ajouter guide lisse ou gaine anti-abrasion",
+              "Contact d’arête, déplacement de gaine et écrasement aux fixations."
+            ],
+            [
+              "Courbure serrée au pied du raccord",
+              "Ajouter un guide progressif ; évaluer manchon limiteur ou ressort anti-pliure selon la structure",
+              "Rayon minimal, pincement local et nouvelle concentration de contraintes en bout de protection."
+            ],
+            [
+              "Déplacement cyclique d’un organe mobile",
+              "Prévoir réserve de course, guidage et décharge de traction ; évaluer un tube spiralé si adapté",
+              "Course, traction, extension maximale et durée de vie en mouvement."
+            ],
+            [
+              "Traction sur le raccord due aux vibrations",
+              "Placer des clips adaptés sans contrainte rigide trop proche",
+              "Usure aux fixations, déplacement du tube, fuite et desserrage après vibrations."
+            ],
+            [
+              "Fluide à protéger de la lumière",
+              "Choisir tube ou gaine opaque et couvrir les zones proches des connexions",
+              "Transmission aux longueurs d’onde sensibles et intégrité après maintenance."
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/prefabricated-tube-assembly-fr.webp",
+          "alt": "Repérage du collet, de la rondelle, du raccord, du manchon limiteur et de l’identification",
+          "width": 2172,
+          "height": 724,
+          "caption": "Tube préassemblé : collet, rondelle, raccord, manchon limiteur et identification"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les assemblages FOREACH peuvent prendre pour référence la configuration illustrée avec joint torique, manchon limiteur et identification. Pour une gaine anti-abrasion, un ressort anti-pliure ou un tube spiralé, dimensionnez selon espace, course et charges ; confirmez séparément forme et périmètre de fourniture."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gaines, dispositifs anti-pliure et réserve de mouvement réduisent respectivement frottement, courbure serrée et traction. Ils n’augmentent pas la pression interne admissible."
+        }
+      ]
+    },
+    {
+      "title": "Comment sélectionner raccords et assemblages pour un circuit complet ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Conditions de l’exemple : tube extérieur 2.5 mm, filetage M6×1, démontage en maintenance et tronçon près d’un mécanisme mobile. Un fluide photosensible exige aussi un écran lumineux. Présélectionnez composants et tubes selon ces conditions, puis identifiez les conditions à confirmer avant validation finale.",
+          "lead": "Conditions de l’exemple :"
+        },
+        {
+          "type": "subheading",
+          "title": "Vérifier port, fonctionnement et maintenance"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Confirmer le port. M6×1 décrit uniquement le filetage ; vérifiez face plane, profondeur, position du tube et espace de montage.",
+            "Confirmer fluides et circuit. Précisez composition des fluides et nettoyants, température, débit visé, longueur et perte de charge admissible pour évaluer un diamètre intérieur de 1.5 mm.",
+            "Confirmer la maintenance. Pour conserver l’assemblage terminal complet, comparez collet et bague de retenue ; avec une férule, prévoyez son remplacement dans la procédure."
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Solution candidate",
+            "Référence et dimensions associées",
+            "Conditions et vérifications restantes"
+          ],
+          "rows": [
+            [
+              "Option 1 : tube préassemblé à collet",
+              "HFL-M6-25-PV-B : M6×1, diamètre extérieur 2.5 mm, PVDF, noir ; pour la série dimensionnelle de rondelles WS pour M6 / 2.5 mm, voir WS-46-26.",
+              "Procédé de formage qualifié requis ; choisir la rondelle pour l’assemblage et vérifier le port et la pression admissible de l’ensemble."
+            ],
+            [
+              "Option 2 : tube préassemblé à bague de retenue",
+              "HSF6-M6-32-PS-B + CL-1S-25 : raccord M6×1 et kit pour tube 2.5 mm ; bague PEEK et douille inox.",
+              "Ce raccord HSF6 accepte les tubes 2.0 / 2.5 / 3.0 / 3.2 mm ; l’exemple utilise le kit 2.5 mm. Positionner et comprimer selon les instructions."
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Choisir ensuite tube, écran lumineux et protection de la partie mobile"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour observer les bulles, évaluez le FEP naturel BFT03008 avec gaine opaque si nécessaire. Pour un tube noir, évaluez TH2-PTFE-B-15-25 et sa protection réelle. Tous deux ont 2.5 mm extérieur et 1.5 mm intérieur ; confirmez compatibilité chimique et pression séparément. Près des mécanismes, ajoutez fixation, réserve de course et guidage."
+        },
+        {
+          "type": "subheading",
+          "title": "Finaliser la présélection et la validation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Consignez raccords, pièces associées, tubes et protections. Complétez pressions continue et maximale, dépression, température, compatibilité, perte de charge et fréquence de démontage avant revue des plans et essais d’échantillons. Validez pression et durée de vie pour l’ensemble en conditions réelles."
+        },
+        {
+          "type": "paragraph",
+          "text": "Inscrivez étanchéité, tenue au vide, reconnexion, usure en mouvement et protection lumineuse au plan de réception. Notez conditions et résultats avant de figer nomenclature, montage et règles de remplacement."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/fr/products/fittings/",
+              "label": "Voir les séries et caractéristiques des raccords pour tubes",
+              "prefix": ""
+            },
+            {
+              "href": "/fr/products/fittings/hard-tube-fittings/hfl-m6-25-pv-b/",
+              "label": "Voir HFL-M6-25-PV-B",
+              "prefix": "",
+              "suffix": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Questions fréquentes",
+  "faqItems": [
+    {
+      "question": "Une fuite se résout-elle en serrant davantage ou en ajoutant du frein-filet ?",
+      "answer": "Arrêtez, dépressurisez et localisez la fuite, puis inspectez port, tube et joints. Ces trois structures étanchent au niveau du tube ou des pièces associées ; le filetage apporte surtout la compression. Un effort supplémentaire peut endommager collet, férule ou bague. Remplacez les pièces endommagées selon le modèle et retestez. N’ajoutez ni colle, ni ruban d’étanchéité, ni rondelle frein sans autorisation des instructions : profondeur, compatibilité et propreté pourraient changer."
+    },
+    {
+      "question": "Pourquoi une connexion étanche à l’arrêt fuit-elle lorsque la pompe ou le tube bouge ?",
+      "answer": "Le contrôle statique couvre seulement la pression, la température et les efforts du moment. Relevez démarrages et pulsations ; recherchez traction, torsion ou courbure serrée au raccord. Vérifiez cheminement, supports et réserve de course, puis reproduisez le défaut avec fluide, température et mouvement réels. Comparez fuite, déplacement et débit avant/après. Un seul maintien en pression réussi ne valide pas l’équipement complet."
+    },
+    {
+      "question": "Une baisse de débit avec une férule impose-t-elle un raccord à collet ?",
+      "answer": "La baisse seule ne suffit pas à rejeter la férule. Vérifiez diamètre intérieur, passage du raccord, bavures, insertion, courbures et compression excessive du tube. Comparez débit et perte de charge avec les mêmes fluide, température, longueur et conditions de pompe, puis décidez d’adapter montage, dimensions ou structure. Un diamètre extérieur égal ne garantit ni passage ni résistance hydraulique identiques."
+    },
+    {
+      "question": "Pourquoi un raccord testé à l’eau fuit-il avec le fluide de travail ou le nettoyant ?",
+      "answer": "L’eau ne remplace pas la validation chimique réelle. Listez fluides, nettoyants et mélanges résiduels ; vérifiez tube, raccord et joints selon composition, concentration, température et durée. En cas de gonflement, durcissement, fissure ou variation dimensionnelle, identifiez la cause, remplacez les pièces inadaptées et revalidez étanchéité et débit. Une mention générale de résistance aux acides ou solvants ne suffit pas."
+    },
+    {
+      "question": "Peut-on réutiliser férule, kit à bague et raccord après maintenance ?",
+      "answer": "Distinguez reconnexion de l’ensemble complet et nouveau pressage de pièces déposées. Prévoyez des férules neuves selon l’installation unique ; conserver tube et férule exige une instruction écrite pour cette combinaison. La reconnexion d’un ensemble à bague n’autorise pas forcément le transfert de sa douille et de sa bague sur un tube neuf. Inspectez séparément filetage, aspect et montage du raccord, puis retestez."
+    },
+    {
+      "question": "Le tube noir résout-il à la fois exposition lumineuse et vieillissement ?",
+      "answer": "La couleur seule ne suffit pas. Validez l’écran selon longueurs d’onde sensibles, épaisseur et transmission. Pour fissures ou durée de vie, examinez séparément fluide, température, pulsations et flexions répétées. Un tube noir ou une gaine ne remplace pas la validation chimique et mécanique. Si l’observation reste nécessaire, évaluez une courte zone contrôlée ou un écran amovible et vérifiez son intégrité en fonctionnement et après maintenance."
+    }
+  ],
+  "cta": {
+    "title": "Besoin de vérifier l’association raccord–tube ?",
+    "description": "Fournissez plans d’interface, diamètres extérieur et intérieur, fluides, température, plage de pression et besoins de maintenance pour vérifier les combinaisons.",
+    "contactLabel": "Nous contacter",
+    "productsLabel": "Voir les raccords et tubes",
+    "productsHref": "/fr/products/fittings/"
+  }
+}

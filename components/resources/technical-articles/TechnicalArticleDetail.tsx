@@ -1,4 +1,19 @@
 import Link from "next/link";
+import { getHardTubeGuideProducts } from "@/data/resources/technical-articles/hard-tube-fittings-related-products";
+import {
+  getHardTubeFittingsCopy,
+  getHardTubeFittingsNavigation,
+  hardTubeFittingsSlug,
+} from "@/data/resources/technical-articles/hard-tube-fittings-selection.zh";
+import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
+import hardTubeFittingsStyles from "./articles/HardTubeFittingsArticle.module.css";
+import {
+  getFlangedTubingCopy,
+  getFlangedTubingNavigation,
+  flangedTubingProductIds,
+  flangedTubingRelatedIntro,
+  flangedTubingAssembliesSlug,
+} from "@/data/resources/technical-articles/flanged-tubing-assemblies-selection.article";
 import {
   getPipettingBasicsCopy,
   getPipettingBasicsNavigation,
@@ -570,6 +585,8 @@ export default function TechnicalArticleDetail({
   nextArticle,
 }: TechnicalArticleDetailProps) {
   const locale = normalizeLocale(pageData.locale);
+  const isHardTubeFittingsArticle = article.slug === hardTubeFittingsSlug;
+  const isFlangedTubingAssembliesArticle = article.slug === flangedTubingAssembliesSlug;
   const listHref = getArticleListHref(locale);
   const valveArticle = getValveEngineeringArticle(article.slug, locale);
   const pipettingBasicsCopy = getPipettingBasicsCopy(article.slug, locale);
@@ -1011,7 +1028,11 @@ export default function TechnicalArticleDetail({
                                   }
                                 : undefined;
 
-  const structuredDataFaqItems = valveArticle
+  const structuredDataFaqItems = isHardTubeFittingsArticle
+    ? [...getHardTubeFittingsCopy(locale).faqItems]
+    : isFlangedTubingAssembliesArticle
+    ? [...getFlangedTubingCopy(locale).faqItems]
+    : valveArticle
     ? [...valveArticle.copy.faqItems]
     : programmableSyringeCopy
     ? [...programmableSyringeCopy.faqItems]
@@ -1054,7 +1075,7 @@ export default function TechnicalArticleDetail({
     locale,
     structuredDataFaqItems,
     structuredDataSubject,
-    valveArticle !== null || pipettingBasicsCopy !== null ||
+    isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle || valveArticle !== null || pipettingBasicsCopy !== null ||
       programmableSyringeCopy !== null ||
       programmablePipettingCopy !== null ||
       meteringPumpAccuracyRepeatabilityCopy !== null ||
@@ -1072,6 +1093,42 @@ export default function TechnicalArticleDetail({
       ? "TechArticle"
       : "Article",
   );
+
+  if (isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {
+    const copy = isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
+    const navigation = isFlangedTubingAssembliesArticle ? getFlangedTubingNavigation(locale) : getHardTubeFittingsNavigation(locale);
+    return (
+      <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`}
+        data-locale={locale} data-article-slug={article.slug} lang={locale}>
+        <script type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+        <div className="newsArticleBreadcrumbShell"><BreadcrumbComponent {...breadcrumbData} /></div>
+        <RplSelectionArticle copy={copy} className={hardTubeFittingsStyles.article}
+          date={article.date} locale={locale} listHref={listHref} backText={getBackText(locale)}
+          articleId={article.slug} sectionNavigation={navigation} modelLinks={new Map()}
+          faq={{ id: "faq", label: copy.faqTitle, items: copy.faqItems }} />
+        <div className={newsArticleStyles.page} data-rpl-article-footer>
+          {isHardTubeFittingsArticle && <div className={hardTubeFittingsStyles.relatedProducts}>
+            <RelatedResourcesLoader {...getHardTubeGuideProducts(locale)} />
+          </div>}
+          {isFlangedTubingAssembliesArticle && <div data-flanged-related-products>
+            <p className={hardTubeFittingsStyles.relatedIntro}>{flangedTubingRelatedIntro[locale]}</p>
+            <RelatedResources sourceType="article" sourceId={article.id} sourceSlug={article.slug}
+              relationKeys={article.relationKeys} featuredProductIds={flangedTubingProductIds} locale={locale} />
+          </div>}
+          <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
+          <section className={newsArticleStyles.supportSection}>
+            <ResourceSupportCta title={copy.cta.title} description={copy.cta.description}
+              buttonText={copy.cta.contactLabel} href={locale === "zh-CN" ? "/contact/" : `/${locale}/contact/`}
+              actions={[
+                { label: copy.cta.contactLabel, href: locale === "zh-CN" ? "/contact/" : `/${locale}/contact/` },
+                { label: copy.cta.productsLabel, href: copy.cta.productsHref! },
+              ]} />
+          </section>
+        </div>
+      </div>
+    );
+  }
 
   if (valveArticle) {
     return (

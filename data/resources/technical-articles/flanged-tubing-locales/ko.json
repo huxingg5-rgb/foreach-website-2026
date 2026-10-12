@@ -1,0 +1,549 @@
+{
+  "metadata": {
+    "title": "플랜지형 튜브 어셈블리 선정: 밀봉 구조, 포트 적합성 및 장착 검증",
+    "seoTitle": "플랜지형 튜브 어셈블리 선정과 포트 적합성 | FOREACH",
+    "seoDescription": "HF, HF6, HFL, HFL6 평저형 피팅의 재질, 튜브 치수, 외형 및 전단 여유부를 비교합니다. M6×1·1/4-28 UNF 포트와 맞춤 구성 및 장착 검증 요건을 확인하세요.",
+    "coverImage": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-photo.png",
+    "coverAlt": "여러 피팅과 성형 튜브 끝단을 조합한 FOREACH 플랜지형 튜브 어셈블리"
+  },
+  "deck": "튜브 재질과 내·외경, 양 끝 피팅, 지지 와셔, 포트 구조 및 설치 치수를 함께 선정해야 합니다. 플랜지가 평저형 포트에 올바르게 압착되는지 확인한 뒤 위치 제한 부품, 라벨 및 장착 검증 조건을 정합니다.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "분석 장비와 자동화 유로에서 펌프, 밸브, 유체 모듈을 연결하는 튜브 어셈블리는 유체 이송뿐 아니라 밀봉, 배관 및 교체 요건도 충족해야 합니다. 연결할 수 있다는 것만으로는 충분하지 않습니다. 튜브 플랜지, 와셔와 수용 포트의 조합이 올바른 밀봉 위치에 압착력을 전달하는지를 결정합니다."
+    },
+    {
+      "type": "paragraph",
+      "text": "기존 장비는 원래 어셈블리와 포트 도면부터 확인합니다. 신규 OEM 유로는 배관 경로, 포트 간격과 유지보수 방식을 고려해 구성합니다. 아래에서는 구성 부품, 재질·치수, 피팅 선정과 장착 검사를 순서대로 설명합니다."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-photo.png",
+      "alt": "FOREACH 플랜지형 튜브 어셈블리와 끝단 연결부",
+      "width": 2760,
+      "height": 1217,
+      "caption": "플랜지형 튜브 어셈블리 실물. 실제 유로와 장비 인터페이스에 맞춰 피팅, 튜브 및 끝단 구성을 선정합니다."
+    }
+  ],
+  "sections": [
+    {
+      "title": "어떤 부품으로 구성되며 어떻게 밀봉하나요?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "미리 성형한 튜브 끝단은 바깥쪽으로 펼쳐진 플랜지를 이룹니다. 조립 시 나사형 피팅이 축 방향 힘을 가하고, 맞는 와셔가 플랜지를 지지·압착해 평저형 포트의 밀봉면에 밀착시킵니다. 따라서 나사 체결과 단면 밀봉을 따로 확인해야 합니다. 피팅이 나사에 들어간다고 플랜지가 포트 바닥에 닿은 것은 아닙니다."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/flanged-sealing-structure-ko.svg",
+          "alt": "표준 평저형 피팅, 지지 와셔 및 튜브 플랜지의 위치 관계",
+          "width": 2064,
+          "height": 996,
+          "caption": "HF 표준 평저형 피팅 조립 예: 와셔는 피팅 전단과 튜브 플랜지 사이에 있습니다. 전체 길이 20.5 mm, 헤드 외경 8.2 mm, 전단 여유부 2 mm는 HF에 해당합니다. 네 시리즈의 비교는 아래를 참조하세요."
+        },
+        {
+          "type": "paragraph",
+          "text": "HF, HF6, HFL, HFL6 평저형 피팅을 선택할 수 있습니다. HF와 HFL은 표준형, HF6와 HFL6는 소형 헤드 구조입니다. 모두 맞는 와셔로 플랜지를 압착하지만 헤드, 전체 길이, 관통공과 전단 형상이 다릅니다. 특정 시리즈와 모델을 정해야 하며 하나의 치수를 전체 제품에 적용하면 안 됩니다."
+        },
+        {
+          "type": "paragraph",
+          "text": "완성 어셈블리에는 위치 제한 부품과 튜브 라벨도 포함할 수 있습니다. 각 부품의 역할을 구분한 후 납품 도면에 포함할 옵션을 정합니다."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "구성 부품",
+            "주요 역할",
+            "확인 사항"
+          ],
+          "rows": [
+            [
+              "튜브와 성형 플랜지",
+              "유체를 이송하고 성형 끝단으로 단면을 밀봉",
+              "재질, 내·외경, 길이, 단측/양측 플랜지 및 성형 치수"
+            ],
+            [
+              "나사형 피팅",
+              "포트 연결 및 축 방향 압착력 제공",
+              "시리즈, 재질, 나사, 관통공과 설치 공간"
+            ],
+            [
+              "지지 와셔",
+              "플랜지를 지지하고 압착력을 전달",
+              "재질, 내·외경, 두께 및 피팅과의 조합"
+            ],
+            [
+              "O링 / 위치 제한 슬리브",
+              "튜브를 따라 피팅이 미끄러지는 범위 제한",
+              "사용 여부, 위치 및 허용 이동 범위"
+            ],
+            [
+              "튜브 라벨",
+              "유로, 포트 또는 설치 위치 식별",
+              "표기 내용, 방향, 위치 및 양 끝 대응 관계"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-components-ko.svg",
+          "alt": "피팅, 와셔, 위치 제한 부품, 튜브 및 선택 라벨이 포함된 양단 어셈블리",
+          "width": 3012,
+          "height": 1280,
+          "caption": "양단 구성 예. 각 인터페이스에 대해 튜브 치수와 부품 옵션을 따로 확인해야 하며 모든 옵션을 임의로 조합할 수 있는 것은 아닙니다."
+        },
+        {
+          "type": "paragraph",
+          "text": "피팅 뒤의 O링이나 슬리브는 미끄러짐을 제한하며 수용 포트의 밀봉 링이 아닙니다. 양 끝 인터페이스가 다르면 피팅과 와셔도 각각 확인하고 동일한 구성이라고 가정하지 않습니다."
+        }
+      ]
+    },
+    {
+      "title": "튜브 재질, 피팅 재질과 관경은 어떻게 구분해 정하나요?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "유체명, 농도, 작동 온도, 접촉 시간과 세척 절차부터 확인합니다. FOREACH 플랜지 어셈블리에는 FEP 또는 PTFE 튜브를 사용할 수 있으며 피팅 본체와 와셔는 별도 재질·치수 범위를 갖습니다. 본체 재질이 전체 접액 재질을 대표하지 않으므로 실제 유체 접촉면을 구조에 따라 확인합니다."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "부품",
+            "기재된 구성",
+            "선정 시 적용 범위"
+          ],
+          "rows": [
+            [
+              "튜브",
+              "FEP, PTFE",
+              "화학적 적합성과 플랜지 성형 적합성을 별도로 확인"
+            ],
+            [
+              "HF / HF6 본체",
+              "PEEK, PVDF, PPS",
+              "모델별 재질, 나사 및 튜브 외경 조합 확인"
+            ],
+            [
+              "HFL 본체",
+              "PVDF",
+              "나사, 튜브 외경 및 색상 조합에 따라 선정"
+            ],
+            [
+              "HFL6 본체",
+              "기재된 M6×1·1/4-28 UNF 모델은 PPS이며, 소형 6-40 UNF 모델은 PEEK",
+              "다른 나사나 치수의 재질 사양을 그대로 적용하지 않음"
+            ],
+            [
+              "맞춤 와셔",
+              "치수에 따라 SUS, PEEK 또는 PTFE",
+              "내경, 외경과 두께 확인; 모든 치수에 모든 재질이 제공되지는 않음"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/fitting-materials.png",
+          "alt": "PEEK, PVDF 및 PPS 평저형 피팅 본체 외관 예",
+          "width": 1856,
+          "height": 837,
+          "caption": "본체 재질의 외관 예. 색상만으로 재질을 판정하지 말고 모델과 납품 자료를 확인합니다. 같은 재질에도 여러 색상이 있을 수 있습니다."
+        },
+        {
+          "type": "paragraph",
+          "text": "튜브 내경, 튜브 외경과 피팅 관통공을 구분합니다. 내경과 길이는 유동 저항 및 내부 용적에 영향을 주며, 외경은 피팅·와셔·성형 공구와의 조합을 결정합니다. 관통공은 지정된 튜브 외경을 수용해야 합니다. 세 치수를 모두 단순히 ‘관경’으로 표현하면 모호합니다."
+        },
+        {
+          "type": "paragraph",
+          "text": "현재 자료의 튜브 외경은 1.6, 2.0, 2.5, 3.0, 3.2 mm입니다. 내경과 외경을 한 쌍으로 정합니다. 예를 들어 0.8 × 1.6 mm는 내경 × 외경이며 두 개의 호환 외경을 뜻하지 않습니다. 재질과 성형 요건에 맞는 조합인지 확인합니다."
+        },
+        {
+          "type": "paragraph",
+          "text": "목표 유체에 견딘다고 모든 벽 두께가 같은 성형 공정에 적합한 것은 아닙니다. 가공 전 공구, 재질, 내·외경 범위를 확인하고 성형 후 끝단과 유로를 검사합니다. 길이도 양 끝 밀봉면 사이 거리 등 기준을 정해 절단 길이와 완성 길이를 혼동하지 않도록 합니다."
+        }
+      ]
+    },
+    {
+      "title": "HF, HF6, HFL, HFL6는 어떻게 선택하나요?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "네 시리즈 모두 M6×1과 1/4-28 UNF 구성이 있습니다. 나사, 튜브 외경과 재질을 먼저 확인한 다음 헤드 외경, 축 방향 길이와 전단 구조를 비교합니다. 아래 수치는 웹사이트 연결 도면 기준이며 단위는 mm입니다. 플랜지와 와셔를 제외한 치수이며 장착 후 돌출 길이와는 다릅니다."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hf-dimensions-ko.svg",
+          "alt": "튜브 외경 1.6–2.0 mm용 HF 단면: 헤드 외경 8.2 mm, 전체 길이 20.5 mm",
+          "width": 858,
+          "height": 1152,
+          "caption": "HF 표준형: 왼쪽은 PEEK 자연색 및 PPS 검정 외관, 오른쪽은 튜브 외경 1.6–2.0 mm용 단면입니다. 단위 mm.",
+          "productViews": [
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pk-n-main.jpg",
+              "alt": "PEEK 자연색 HF 평저형 피팅"
+            },
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-ps-b-main.jpg",
+              "alt": "PPS 검정 HF 평저형 피팅"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hf6-dimensions-ko.svg",
+          "alt": "튜브 외경 1.6–2.0 mm용 HF6 단면: 헤드 외경 6.4 mm, 전체 길이 17.6 mm",
+          "width": 928,
+          "height": 1152,
+          "caption": "HF6 소형: 왼쪽은 PEEK 자연색 및 PPS 검정 외관, 오른쪽은 튜브 외경 1.6–2.0 mm용 단면입니다. 단위 mm.",
+          "productViews": [
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pk-n-main.jpg",
+              "alt": "PEEK 자연색 HF6 소형 평저형 피팅"
+            },
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-ps-b-main.jpg",
+              "alt": "PPS 검정 HF6 소형 평저형 피팅"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hfl-appearance-dimensions.png",
+          "alt": "HFL 검정·자연색 외관과 단면: 헤드 외경 10 mm, 전체 길이 16.5 mm",
+          "width": 2374,
+          "height": 1429,
+          "caption": "HFL 표준형의 검정·자연색 외관과 치수 단면. 헤드 외경 10 mm, 전체 길이 16.5 mm이며 전단 외경 4.7 mm는 M6용입니다. 단위 mm."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hfl6-m6-dimensions.png",
+          "alt": "HFL6-M6-16 단면: 헤드 외경 6 mm, 전체 길이 20 mm",
+          "width": 566,
+          "height": 1041,
+          "caption": "HFL6 소형: PPS 검정 외관과 M6·튜브 외경 1.6 mm용 도면. 헤드 외경 6 mm, 전체 길이 20 mm. 단위 mm.",
+          "productViews": [
+            {
+              "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
+              "alt": "PPS 검정 HFL6-M6-16 소형 평저형 피팅",
+              "reverse": true
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "시리즈",
+            "헤드 외경 / 전체 길이",
+            "튜브 외경",
+            "본체 재질"
+          ],
+          "rows": [
+            [
+              "HF 표준 평저형",
+              "8.2 / 20.5",
+              "1.6–2.0, 2.5, 3.0–3.2의 세 그룹",
+              "PEEK, PVDF, PPS"
+            ],
+            [
+              "HF6 소형 평저형",
+              "6.4 / 17.6",
+              "1.6–2.0, 2.5, 3.0–3.2의 세 그룹",
+              "PEEK, PVDF, PPS"
+            ],
+            [
+              "HFL 표준 평저형",
+              "10 / 16.5",
+              "1.6, 2.0, 2.5, 3.0, 3.2를 각각 선정",
+              "PVDF"
+            ],
+            [
+              "HFL6 소형 평저형",
+              "6 / 20",
+              "1.6, 2.0, 2.5, 3.0, 3.2를 각각 선정",
+              "PPS; 이 행은 M6 및 U28용"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HF: 표준 헤드와 세 그룹의 튜브 외경"
+        },
+        {
+          "type": "paragraph",
+          "text": "HF는 헤드 외경 8.2 mm, 전체 길이 20.5 mm이며 전단에 2 mm 비나사부가 있습니다. 튜브 외경 1.6–2.0, 2.5, 3.0–3.2 mm 그룹은 각각 관통공 2.2, 2.7, 3.4 mm에 대응합니다. 모델에 따라 PEEK, PVDF, PPS를 고르고 헤드 회전 공간과 뒤쪽 튜브 출구 공간을 확인합니다."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "도면: ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf-standard-flat-bottom.pdf",
+              "label": "HF 치수도 (M6 / 1/4-28 UNF)"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HF6: HF보다 가늘고 짧은 소형 구조"
+        },
+        {
+          "type": "paragraph",
+          "text": "HF6는 헤드 외경 6.4 mm, 전체 길이 17.6 mm로 HF보다 각각 1.8 mm, 2.9 mm 작습니다. 튜브 그룹, 재질 및 2 mm 전단 여유부는 해당 HF 구성과 같습니다. 포트 간격이나 축 방향 공간이 좁을 때 후보로 검토하되 실제 간격, 체결 접근성과 분해 공간을 확인합니다. 작은 외형이 높은 내압을 의미하지는 않습니다."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "도면: ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf6-compact-flat-bottom.pdf",
+              "label": "HF6 치수도 (M6 / 1/4-28 UNF)"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HFL: 짧은 본체와 넓은 헤드"
+        },
+        {
+          "type": "paragraph",
+          "text": "HFL은 헤드 외경 10 mm, 전체 길이 16.5 mm, 전단 여유부 1 mm입니다. HF보다 짧지만 헤드는 넓으므로 하우징이나 인접 포트 근처에서 축·반경 방향 공간을 각각 확인합니다. 도면은 PVDF 자연색과 검정, 외경 1.6, 2.0, 2.5, 3.0, 3.2 mm별 모델을 제시합니다. HF의 세 그룹을 그대로 적용하지 않습니다."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "도면: ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-m6.pdf",
+              "label": "HFL-M6 치수도"
+            },
+            {
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-u28.pdf",
+              "label": "HFL-U28 치수도"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "HFL6: 가는 본체, 반경 간격과 축 방향 여유 확인"
+        },
+        {
+          "type": "paragraph",
+          "text": "HFL6 M6와 U28 도면은 헤드 외경 6 mm, 전체 길이 20 mm, PPS 본체를 명시합니다. 다른 세 종류보다 가늘지만 HF6와 HFL보다는 길어 ‘소형’이 모든 방향에서 최소라는 뜻은 아닙니다. HF/HF6와 같은 2 mm 전단 비나사부는 표시되지 않으므로 HFL6 자체 형상으로 포트를 검토합니다."
+        },
+        {
+          "type": "paragraph",
+          "text": "HFL6의 튜브 외경 1.6, 2.0, 2.5, 3.0, 3.2 mm에 대응하는 공칭 관통공은 1.8, 2.2, 2.7, 3.2, 3.4 mm입니다. 별도의 소형 HFL6-U40-16-PK-N은 6-40 UNF 나사, PEEK 본체와 1.6 mm 튜브 외경을 사용합니다. 설치 치수를 별도로 확인해야 하며 표의 M6/U28 치수를 적용하면 안 됩니다."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "도면: ",
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-m6.pdf",
+              "label": "HFL6-M6 치수도"
+            },
+            {
+              "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-u28.pdf",
+              "label": "HFL6-U28 치수도"
+            }
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "피팅 시리즈에서 어셈블리 구성으로 구체화하기"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "장비 포트의 완전한 나사 사양과 평저 밀봉 구조를 확인한 뒤 시리즈를 고릅니다. M6와 U28은 교환할 수 없습니다.",
+            "실제 튜브 외경으로 모델을 고르고 관통공과 공차를 확인합니다. 관통공은 튜브 수용 공간이며 튜브 내경이나 어셈블리 유로 직경이 아닙니다.",
+            "헤드 외경으로 인접 피팅 간섭을 확인합니다. 전체 길이, 삽입 깊이와 출구 방향으로 축 방향 공간 및 조작 여유를 확인합니다.",
+            "피팅, 튜브와 포트에 맞게 와셔 재질·내외경·두께를 선정하고 플랜지 지지 및 압착 위치를 확인합니다."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "웹사이트의 표준·소형 페룰 피팅 필터는 다른 연결 구조입니다. 여기서 네 평저형 시리즈는 HF, HF6, HFL, HFL6이며 필터의 네 분류가 모두 플랜지용인 것은 아닙니다. 교체 시 시리즈 접두어, 도면 버전과 포트 구조를 함께 확인합니다."
+        }
+      ]
+    },
+    {
+      "title": "나사가 들어가는데도 왜 누설될 수 있나요?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "완전한 나사 사양부터 확인합니다. M6×1과 1/4-28 UNF는 다른 규격이며 외관이 비슷하거나 몇 바퀴 들어간다고 호환되지 않습니다. 이어 포트 바닥의 형상, 깊이와 상태가 필요한 밀봉 접촉을 제공하는지 확인합니다."
+        },
+        {
+          "type": "paragraph",
+          "text": "그림의 연결에는 도면에 맞는 평저 밀봉면이 필요합니다. 맞지 않는 원추형 바닥은 플랜지 접촉을 막아 누설이나 국부 잔류를 유발할 수 있습니다. 피팅 전단, 와셔 두께와 플랜지 치수가 장착 위치를 함께 결정하므로 유효 압착 전에 다른 부위가 간섭하는지 확인합니다."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/fitting-front-clearance-ko.svg",
+          "alt": "그림 피팅의 2 mm 전단 비나사 여유부",
+          "width": 1348,
+          "height": 466,
+          "caption": "HF/HF6의 전단 여유부는 2 mm, HFL은 1 mm입니다. HFL6 M6/U28 도면에는 같은 부위가 표시되지 않습니다. 이 피팅 치수를 수용 포트 암나사의 가공 치수로 사용하면 안 됩니다."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "확인 부위",
+            "표시 또는 결합 요건",
+            "조립 시 해석"
+          ],
+          "rows": [
+            [
+              "피팅 전단",
+              "HF/HF6: 2 mm; HFL: 1 mm; HFL6 M6/U28에는 동등 부위 미표시",
+              "시리즈별로 확인하며 2 mm를 일괄 적용하지 않음"
+            ],
+            [
+              "전단 직경",
+              "HF/HF6/HFL의 M6 도면은 4.7 mm, U28 도면은 5.1 mm",
+              "전단 형상 치수이며 나사 공칭경이나 튜브 외경이 아님; HFL6에는 적용하지 않음"
+            ],
+            [
+              "수용 포트 내부",
+              "해당 어셈블리의 결합 가공 설명은 암나사 여유부 높이를 ≤1 mm로 규정",
+              "피팅 전단 치수와 별도로 표기하고 확인"
+            ],
+            [
+              "포트 바닥",
+              "결합 도면에 맞는 테이퍼 없는 평저 밀봉면",
+              "형상, 오염, 흠집과 실제 접촉 위치 확인"
+            ],
+            [
+              "와셔와 플랜지",
+              "피팅, 튜브와 포트에 맞는 치수",
+              "조립 순서, 부품 상태와 압착 위치 확인"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "이 여유부 요건은 해당 어셈블리와 포트 설계에 적용되며 모든 플랜지 피팅의 공통 가공 표준이 아닙니다. 기존 밸브나 모듈에 연결할 때는 나사명뿐 아니라 수용 포트 단면도를 제공해야 합니다."
+        }
+      ]
+    },
+    {
+      "title": "누설 시 부품 문제와 설치 문제를 어떻게 구분하나요?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "조립을 조정하기 전에 인터페이스와 부품을 검사합니다. 계속 더 세게 조이면 플라스틱 플랜지가 영구 변형되고 포트 불일치가 가려질 수 있습니다. 특정 피팅, 튜브와 어셈블리의 조립 방법·토크를 따르며 모든 모델에 같은 값을 적용하지 않습니다."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/flanged-end-detail.png",
+          "alt": "피팅 전단, 와셔와 플랜지가 보이는 두 어셈블리 끝단 확대 사진",
+          "width": 1745,
+          "height": 897,
+          "caption": "플랜지, 와셔와 전단의 맞물림을 검사합니다. 사진은 구조 예시이며 밀봉 적합성은 정해진 조건에서 검증해야 합니다."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "피팅 모델, 튜브 외경, 와셔와 포트 도면을 대조해 부품 혼용을 배제합니다.",
+            "플랜지의 기울어짐, 균열, 변형과 성형·압착에 의한 유로 변화를 검사합니다.",
+            "와셔 누락, 오조립, 손상 및 포트 밀봉면의 흠집·이물을 확인합니다.",
+            "지정 방법으로 조립하며 피팅 회전 시 튜브도 비틀리는지 관찰합니다.",
+            "실제 배관으로 복원하고 길이 부족, 급격한 굽힘, 당김과 측면 하중을 제거한 후 장비 조건에서 재시험합니다."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "작업대에서는 정상이나 장착 후 누설된다면 배관 경로와 외부 하중을 우선 확인합니다. 특정 포트에 문제가 집중되면 해당 끝단의 부품 조합과 밀봉면을 먼저 확인합니다. 이렇게 인터페이스, 부품 상태와 배관 영향을 구분할 수 있습니다."
+        }
+      ]
+    },
+    {
+      "title": "샘플은 어떤 장착 검증을 거쳐야 하나요?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "한 번의 정적 밀봉 시험은 당시의 조립·시험 조건만 다룹니다. 실제 길이, 배관과 작동 주기로 검증하고 납품 요건에 판정 조건을 명시합니다."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "검증 항목",
+            "확인 내용"
+          ],
+          "rows": [
+            [
+              "치수와 조립",
+              "길이 기준, 양 끝 부품, 포트 간격, 공구 접근성과 장착 후 굽힘"
+            ],
+            [
+              "작동 중 밀봉",
+              "실제 양압·음압, 온도 및 압력 변화에서의 밀봉"
+            ],
+            [
+              "유체와 세척",
+              "실제 시약·세척액 접촉 후 튜브, 플랜지와 밀봉 상태 변화"
+            ],
+            [
+              "유지보수와 재연결",
+              "장비 지정 방법·횟수로 분해 후 플랜지, 와셔와 재연결 밀봉 검사"
+            ],
+            [
+              "로트 일관성",
+              "합의 도면에 따른 재질, 치수, 외관, 식별과 시험 기록"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "시험 압력, 시간, 허용 누설량과 재조립 횟수는 장비 요건과 확인된 구성으로 정해야 합니다. 피팅이나 튜브 단품 사양이 전체 어셈블리의 내압, 수명 또는 재사용 보증이 되는 것은 아닙니다."
+        }
+      ]
+    },
+    {
+      "title": "맞춤 제작에 어떤 정보가 필요한가요?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "FOREACH에 요구사항을 전달할 때 양 끝을 A와 B로 구분하고 각 피팅, 나사, 와셔와 포트 요건을 나열합니다. 단측·양측 플랜지, 길이, 위치 제한 부품과 라벨은 프로젝트별로 정하며 공급 가능한 조합은 확정 도면과 제품 자료를 따릅니다."
+        },
+        {
+          "type": "list",
+          "items": [
+            "유체: 시약·세척액 명칭, 농도, 온도, 접촉 시간과 작동 방식.",
+            "튜브: FEP 또는 PTFE, 내경 × 외경, 색상, 완성 길이와 측정 기준.",
+            "A/B 끝단: 피팅 시리즈, 재질, 전체 나사 사양, 와셔와 수용 포트 도면.",
+            "설치: 배관 경로, 포트 간격, 굽힘 공간 및 유지보수·분해 방식.",
+            "식별: 위치 제한 부품 여부, 라벨 내용, 인쇄 방향과 위치.",
+            "검수: 치수 공차, 외관, 청정도, 작동 밀봉과 유지보수 조립 검사."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "기존 어셈블리 교체 시 원래 사진과 함께 길이 부족, 설치 어려움, 정비 후 누설 또는 로트 차이 등 문제를 설명합니다. 문제를 구조·작동 조건과 연결해야 튜브, 피팅, 와셔 또는 가공·조립 요건 중 무엇을 바꿀지 판단할 수 있습니다."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "제품 보기: ",
+              "href": "/ko/products/fittings/hard-tube-fittings/",
+              "label": "경질 튜브 피팅 모델 및 사양"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "자주 묻는 질문",
+  "faqItems": [],
+  "cta": {
+    "title": "튜브 어셈블리와 장비 인터페이스의 적합성을 확인해야 하나요?",
+    "description": "튜브 재질, 내경 × 외경, 완성 길이, 양 끝 피팅·포트 도면과 함께 유체, 온도, 압력, 위치 제한 부품 및 라벨 요건을 제공하면 후보 구성과 검증 항목을 정할 수 있습니다.",
+    "contactLabel": "문의하기",
+    "productsLabel": "경질 튜브 피팅 보기",
+    "productsHref": "/ko/products/fittings/hard-tube-fittings/"
+  }
+}

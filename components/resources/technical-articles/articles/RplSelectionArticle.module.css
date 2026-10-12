@@ -89,6 +89,16 @@
 .gallery > figure:only-child img { aspect-ratio: auto; }
 .gallery > figure:only-child[data-square="true"] { width: min(100%, 620px); justify-self: center; }
 .gallery figcaption { border-top: 1px solid var(--line); padding-top: 10px; text-align: center; font-size: 15px; font-weight: 400; }
+.figureLink { display: block; width: fit-content; margin: 10px auto 0; padding: 5px 2px; font-size: 15px; }
+.dimensionLayout { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: center; padding: 16px 0 24px; }
+.productViews { display: flex; justify-content: center; align-items: center; gap: 16px; min-width: 0; }
+.productCrop { position: relative; width: min(46%, 190px); aspect-ratio: 1 / 2; overflow: hidden; }
+.gallery .productCrop img { position: absolute; left: 100%; top: 0; width: 200%; max-width: none; height: auto; aspect-ratio: 1; transform: rotate(90deg); transform-origin: 0 0; }
+.gallery .productCrop[data-reverse="true"] img { left: 0; top: 100%; transform: rotate(270deg); }
+.gallery .dimensionDrawing { width: 100%; height: auto; max-height: 480px; aspect-ratio: auto; object-fit: contain; }
+.root[id="hard-tube-fittings-selection-guide-article"] section[id="tubing"] .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.root[id="hard-tube-fittings-selection-guide-article"] section[id="tubing"] .gallery img { aspect-ratio: auto; }
+.root[id="hard-tube-fittings-selection-guide-article"] section[id="tradeoffs"] .gallery > figure:only-child { width: min(100%, 620px); justify-self: center; }
 .root .flowDiagram { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; list-style: none; padding: 0; margin: 0; }
 .root .flowDiagram[data-nodes="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .root .flowDiagram li { position: relative; display: grid; align-content: center; gap: 4px; min-height: 76px; padding: 12px 8px; margin: 0; border: 1px solid #575757; border-radius: 3px; text-align: center; background: #fff; }
@@ -125,6 +135,10 @@
   .body > section:first-child { border-top: 0; margin-top: 0; padding-top: 32px; }
 }
 @media (max-width: 600px) {
+  .dimensionLayout { grid-template-columns: 1fr; gap: 12px; }
+  .productCrop { width: min(36%, 135px); }
+  .gallery .dimensionDrawing { max-height: 420px; }
+  .root[id="hard-tube-fittings-selection-guide-article"] section[id="tubing"] .gallery { grid-template-columns: 1fr; }
   .root .flowDiagram { gap: 18px; }
   .root .flowDiagram li { padding: 10px 4px; }
   .flowDiagram strong { font-size: 14px; }

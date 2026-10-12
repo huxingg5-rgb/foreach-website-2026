@@ -1,0 +1,600 @@
+{
+  "metadata": {
+    "title": "Guía de selección de racores para tubos en microfluídica: reborde, férula y anillo de retención",
+    "seoTitle": "Selección de racores para tubos en microfluídica | FOREACH",
+    "seoDescription": "Guía FOREACH sobre sellado, reutilización, presión, tubos FEP/PTFE, protección de la luz y protección mecánica de racores con reborde, férula o anillo de retención, con un ejemplo de selección.",
+    "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-fittings.webp",
+    "coverAlt": "Racores con reborde FOREACH HF / HFL"
+  },
+  "deck": "Claves de selección: compruebe primero el puerto, el diámetro exterior del tubo y el fluido; después, presión, mantenimiento y preparación del extremo. El reborde se apoya en una cara plana; la férula sujeta el tubo al apretar; el sistema con anillo de retención emplea casquillo y anillo de sellado. Igual rosca y diámetro no garantizan compatibilidad.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Claves de selección: compruebe primero el puerto, el diámetro exterior del tubo y el fluido; después, presión, mantenimiento y preparación del extremo. El reborde se apoya en una cara plana; la férula sujeta el tubo al apretar; el sistema con anillo de retención emplea casquillo y anillo de sellado. Igual rosca y diámetro no garantizan compatibilidad.",
+      "lead": "Claves de selección:"
+    },
+    {
+      "type": "paragraph",
+      "text": "Para diseñadores de equipos y circuitos de fluidos y personal de mantenimiento, esta guía parte del sellado, las interfaces, los fluidos, la presión y las desconexiones para crear una lista de candidatos. Un ejemplo combina después tubo, protección de la luz y protección mecánica."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/hard-tube-fitting-assemblies.png",
+      "alt": "Conjuntos reales de tubos con racores de distintos colores",
+      "width": 2901,
+      "height": 1585,
+      "caption": "Racores y conjuntos de tubos reales"
+    }
+  ],
+  "sections": [
+    {
+      "title": "¿Cómo sellan los tres tipos de conexión?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Los racores con reborde, férula y anillo de retención fijan y sellan el extremo de manera distinta. Determine cómo preparar el tubo y dónde está la cara de sellado antes de elegir el racor y sus piezas."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-fittings.webp",
+          "alt": "Racores con reborde FOREACH HF HFL",
+          "width": 458,
+          "height": 375,
+          "caption": "Con reborde: series HF / HFL",
+          "link": {
+            "href": "/es/products/fittings/hard-tube-fittings/?structure=flanged",
+            "label": "Ver racores con reborde"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings.webp",
+          "alt": "Racores con férula FOREACH HN HNF",
+          "width": 455,
+          "height": 311,
+          "caption": "Con férula: series HN / HNF",
+          "link": {
+            "href": "/es/products/fittings/hard-tube-fittings/?structure=ferrule",
+            "label": "Ver racores con férula"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-fittings.webp",
+          "alt": "Componentes con anillo de retención FOREACH HSF6 CL-1",
+          "width": 453,
+          "height": 313,
+          "caption": "Con anillo de retención: series HSF6 / CL-1"
+        },
+        {
+          "type": "subheading",
+          "title": "Con reborde: el extremo conformado se apoya en la cara plana de sellado"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-connection-structure-es.webp",
+          "alt": "Montaje y dimensiones de racor compacto de fondo plano, arandela y reborde del tubo",
+          "width": 1792,
+          "height": 878,
+          "caption": "Con reborde: montaje del racor compacto de fondo plano y dimensiones ilustradas"
+        },
+        {
+          "type": "paragraph",
+          "text": "Primero se forma un reborde en tubos aptos, como FEP o PTFE, y luego se monta la arandela y el racor correspondientes. En esta estructura, la arandela se sitúa entre reborde y cuerpo: sostiene el reborde y transmite la compresión. Al apretar, el reborde se asienta sobre el fondo plano del puerto y sella."
+        },
+        {
+          "type": "subheading",
+          "title": "Con férula: el apriete sujeta el tubo y sella en el fondo del puerto"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-structure-es.webp",
+          "alt": "Montaje y dimensiones del racor compacto con férula y su férula",
+          "width": 1759,
+          "height": 894,
+          "caption": "Con férula: montaje compacto y dimensiones ilustradas"
+        },
+        {
+          "type": "paragraph",
+          "text": "No se necesita rebordear el extremo. Introduzca racor y férula compatibles en el tubo cortado a escuadra y posiciónelos según las instrucciones. Al apretar, la férula abraza el exterior del tubo y se acopla a la cara de sellado. Compruebe tamaño, orientación y serie compatible antes del montaje."
+        },
+        {
+          "type": "subheading",
+          "title": "Con anillo de retención: casquillo y anillo de sellado forman el conjunto terminal"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-connection-structure-es.webp",
+          "alt": "Montaje de racor con anillo de retención, casquillo inoxidable y anillo de sellado",
+          "width": 1719,
+          "height": 915,
+          "caption": "Con anillo de retención: racor, casquillo inoxidable y anillo de sellado"
+        },
+        {
+          "type": "paragraph",
+          "text": "Introduzca sucesivamente racor, casquillo y anillo de sellado. Enrase el extremo del tubo con la cara del anillo y comprima según las instrucciones. El kit CL-1S combina un anillo PEEK y un casquillo inoxidable con el HSF6 correspondiente para sellar por la cara. Durante la conexión, el racor puede girar respecto al tubo, reduciendo su torsión al apretar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Siga las instrucciones del modelo con anillo de retención. El premontaje y las herramientas especiales dependen del kit concreto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Consejo de selección: férula y anillo de retención evitan el reborde, pero emplean piezas y montajes distintos. Compruebe la combinación del racor con sus componentes; la igualdad de rosca y diámetro no permite sustituirlos directamente.",
+          "lead": "Consejo de selección:"
+        }
+      ]
+    },
+    {
+      "title": "¿Qué ventajas y límites de reutilización tiene cada estructura?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Con un proceso de rebordeado estable, evalúe la conexión con reborde; para montar sin rebordeado, la férula; para conjuntos prefabricados y desconexiones de mantenimiento, el anillo de retención. Confirme por separado la reconexión del conjunto completo y la reinstalación de sellos retirados.",
+          "lead": "Con un proceso de rebordeado estable, evalúe la conexión con reborde; para montar sin rebordeado, la férula; para conjuntos prefabricados y desconexiones de mantenimiento, el anillo de retención."
+        },
+        {
+          "type": "subheading",
+          "title": "Con reborde: adecuado para prefabricación; la calidad del reborde es fundamental"
+        },
+        {
+          "type": "paragraph",
+          "text": "El reborde define la posición de conexión y facilita prefabricación y montaje. Las limitaciones son el proceso de conformado, la planitud y la geometría del fondo. Un reborde dañado, exceso de compresión o fondo cónico incompatible impiden un contacto fiable. Inspeccione reborde y arandela antes de reconectar."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flat-port-correct-zh.png",
+          "alt": "Sección del reborde apoyado en la cara de sellado de un puerto de fondo plano",
+          "width": 555,
+          "height": 145,
+          "caption": "Fondo plano: el reborde puede asentarse y sellar"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/tapered-port-incorrect-zh.png",
+          "width": 555,
+          "height": 135,
+          "alt": "Sección de un reborde que no se asienta en un fondo cónico",
+          "caption": "Fondo cónico: el reborde no logra un apoyo fiable"
+        },
+        {
+          "type": "subheading",
+          "title": "Con férula: primer montaje sencillo, respetando la instalación única"
+        },
+        {
+          "type": "paragraph",
+          "text": "El extremo cortado a escuadra se monta sin rebordeado. Las férulas aquí descritas admiten una sola instalación; reinstalarlas puede causar deformación plástica irreversible. Prepare férulas nuevas compatibles para el mantenimiento."
+        },
+        {
+          "type": "paragraph",
+          "text": "Antes de reconectar el tubo y su férula originales, obtenga instrucciones escritas de reutilización para esa combinación. Evalúe por separado la tuerca del racor según su estado y las exigencias de montaje."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-assembly-es.webp",
+          "alt": "Configuración típica de un racor con férula",
+          "width": 1736,
+          "height": 906,
+          "caption": "Férula: deben coincidir sentido de compresión y especificaciones"
+        },
+        {
+          "type": "subheading",
+          "title": "Con anillo de retención: admite reconexiones, con inspección del conjunto terminal"
+        },
+        {
+          "type": "paragraph",
+          "text": "El conjunto terminal completo HSF6 con su kit compatible puede desmontarse y reconectarse según las instrucciones, por lo que es candidato para circuitos prefabricados con mantenimiento. Inspecciónelo antes de cada conexión. Confirme ciclos permitidos y vida útil para la combinación y condiciones concretas. Para pasar un casquillo usado a un tubo nuevo, confirme aparte que el kit permite un nuevo prensado."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-assembly-es.webp",
+          "alt": "Configuración rotulada de casquillo, anillo de sellado y racor",
+          "width": 1323,
+          "height": 1189,
+          "caption": "Posicionar y montar casquillo y anillo según las instrucciones"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Criterio de selección",
+            "Con reborde",
+            "Con férula",
+            "Con anillo de retención"
+          ],
+          "rows": [
+            [
+              "Preparación inicial del tubo",
+              "Formar reborde y usar arandela compatible",
+              "Corte a escuadra con férula compatible",
+              "Corte a escuadra; posicionar casquillo y anillo"
+            ],
+            [
+              "Desconexión y reconexión",
+              "Reconectar según instrucciones con reborde y arandela intactos",
+              "Sustituir férula según el límite de instalación única",
+              "Reconectar el conjunto completo según instrucciones"
+            ],
+            [
+              "Comprobaciones principales",
+              "Planitud del reborde y geometría del fondo",
+              "Tamaño, orientación y deformación de la férula",
+              "Posición de prensado, orientación y extremo enrasado"
+            ],
+            [
+              "Necesidades a evaluar primero",
+              "Proceso de rebordeado existente o prefabricación contratada",
+              "Montaje sin rebordeado y sustitución de férula en mantenimiento",
+              "Tubos prefabricados y desconexiones de mantenimiento"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Piezas compatibles: HN / HN6 utilizan CL-0X; HNF / HNF6 utilizan CL-0. Verifique por separado serie del racor y modelo de férula al comprar.",
+          "lead": "Piezas compatibles:"
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo reducir candidatos según presión, vibración y mantenimiento?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Compruebe la interfaz, luego fluido, temperatura y presión, y finalmente los costes de montaje y mantenimiento. Cada estructura tiene condiciones de uso; presión admisible y vida útil dependen del modelo y de la combinación.",
+          "lead": "Compruebe la interfaz, luego fluido, temperatura y presión, y finalmente los costes de montaje y mantenimiento."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Condición conocida",
+            "Siguiente paso de selección"
+          ],
+          "rows": [
+            [
+              "Puerto y diámetro exterior definidos",
+              "Compruebe rosca, fondo plano o cónico, posición de sellado y profundidad; descarte geometrías incompatibles."
+            ],
+            [
+              "Sin herramientas ni proceso estable de rebordeado",
+              "Evalúe conexiones sin rebordeado o tubos con reborde prefabricados por el proveedor."
+            ],
+            [
+              "Desconexiones repetidas para mantenimiento",
+              "Evalúe conjuntos con reborde o anillo aprobados para reconexión y sus condiciones; incluya el coste de sustitución de férulas si las utiliza."
+            ],
+            [
+              "Requisitos de presión continua, temperatura o pulsación",
+              "Solicite datos de la combinación concreta de racor, tubo y puerto; mantenga las opciones sin datos suficientes como pendientes de validación."
+            ],
+            [
+              "El tubo acompaña a un mecanismo móvil",
+              "Evalúe recorrido, holgura de movimiento, radio de curvatura y alivio de tensión para no cargar la raíz del racor."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "En aspiración con pocas desconexiones, priorice estanqueidad al aire, resistencia al colapso y ajuste de interfaz. En conexiones de mantenimiento periódico, compare condiciones de reconexión del conjunto y coste de sellos. Cerca de mecanismos móviles, trate aparte holgura, guiado y alivio de tensión."
+        },
+        {
+          "type": "subheading",
+          "title": "Validar los riesgos reales tras la preselección"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Condición de funcionamiento",
+            "Riesgo principal",
+            "Validación"
+          ],
+          "rows": [
+            [
+              "Presión continua prolongada",
+              "Fluencia del material y cambios en la sujeción",
+              "Mantenga presión durante el tiempo del proyecto, con fluido previsto y temperatura máxima; revise fugas, desplazamiento y desprendimiento."
+            ],
+            [
+              "Arranque/parada y pulsación",
+              "Aflojamiento o fatiga por cargas repetidas",
+              "Registre picos y ciclos; revise el sellado antes y después."
+            ],
+            [
+              "Aspiración a presión negativa",
+              "Microentradas de aire, burbujas y deformación de pared",
+              "Compruebe estanqueidad y resistencia al colapso; investigue el origen de cualquier burbuja."
+            ],
+            [
+              "Vibración y movimiento del equipo",
+              "Tracción y desgaste concentrados en el extremo",
+              "Valide fijaciones y alivio de tensión; revise aflojamiento y fugas tras vibración."
+            ],
+            [
+              "Desmontaje periódico",
+              "Daños en reborde, anillo o férula",
+              "Defina procedimiento, inspección y sustitución; después valide la conexión mantenida."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Incluya estas comprobaciones en el plan de validación del equipo, con temperatura, presiones continua y máxima, vacío, ciclos y fuga admisible. Determine la aptitud del modelo por sus especificaciones y resultados."
+        },
+        {
+          "type": "paragraph",
+          "text": "La alta presión requiere selección independiente. Los 34 MPa máximos del manual corresponden a racores dedicados de alta presión, no a las conexiones ordinarias con reborde, férula o anillo de este artículo. Use los datos nominales del modelo para la temperatura, tubo e instalación reales."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo elegir FEP y PTFE y cuándo protegerlos de la luz?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "El diámetro exterior determina el ajuste al racor; diámetro interior y longitud influyen en resistencia al flujo y volumen; el material determina la base de compatibilidad química y mecánica. Confirme composición, concentración, temperatura máxima y tiempo de contacto de fluidos y limpiadores antes de elegir tubo y sellos mojados.",
+          "lead": "El diámetro exterior determina el ajuste al racor; diámetro interior y longitud influyen en resistencia al flujo y volumen; el material determina la base de compatibilidad química y mecánica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un tubo de 2.5 mm exterior y 1.5 mm interior requiere un conjunto compatible con 2.5 mm exterior. El orificio de la arandela se elige por serie y configuración; no tiene que igualar el diámetro exterior. El volumen adicional retenido depende también de posición del extremo, profundidad y continuidad del paso."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tubo",
+            "Características principales",
+            "Observación y protección de la luz",
+            "Prioridades de selección"
+          ],
+          "rows": [
+            [
+              "FEP",
+              "El tubo natural es relativamente transparente y permite observar el circuito",
+              "Permite ver líquido y burbujas; evaluar protección adicional para fluidos fotosensibles",
+              "Compruebe fluido, pared, presión y curvatura. Resistir el envejecimiento UV no implica bloquear la luz UV."
+            ],
+            [
+              "PTFE",
+              "Alta inercia química, bajo rozamiento y aptitud para rebordear",
+              "Versiones naturales, negras y ciertas referencias transparentes",
+              "Confirme color y transparencia por modelo; valide la protección del tubo negro según longitud de onda y espesor."
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ptfe-tubing-photo.png",
+          "alt": "Tubos PTFE naturales y negros reales",
+          "width": 1962,
+          "height": 1270,
+          "caption": "PTFE: tubos naturales y negros"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/fep-tubing-photo.png",
+          "alt": "Tubos FEP transparentes reales",
+          "width": 2544,
+          "height": 1540,
+          "caption": "FEP: tubos transparentes"
+        },
+        {
+          "type": "paragraph",
+          "text": "FEP y PTFE tienen cierta flexibilidad; respete el radio mínimo de cada referencia. En movimiento continuo, evalúe acodamiento, desgaste y fatiga. La curvatura estática no valida la flexión repetida.",
+          "lead": "FEP y PTFE tienen cierta flexibilidad; respete el radio mínimo de cada referencia."
+        },
+        {
+          "type": "subheading",
+          "title": "¿Qué referencias considerar para 2.5 mm de diámetro exterior?"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Modelo del tubo",
+            "Material / color",
+            "Diámetro exterior / interior",
+            "Aspectos a comprobar"
+          ],
+          "rows": [
+            [
+              "BFT03008",
+              "FEP / natural",
+              "2.5 / 1.5 mm",
+              "Candidato dimensional para observar burbujas; diseñar la protección luminosa aparte."
+            ],
+            [
+              "TH2-PTFE-B-15-25",
+              "PTFE / negro",
+              "2.5 / 1.5 mm",
+              "Candidato de tubo negro; medir protección en las longitudes de onda sensibles."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ambos modelos tienen 2.5 mm exterior y 1.5 mm interior; la selección depende además de fluido, presión y luz. Existe PTFE transparente TH2-PTFE-T-20-32, cuyas dimensiones y condiciones deben verificarse por separado."
+        },
+        {
+          "type": "subheading",
+          "title": "¿Cómo combinar protección de la luz y observación de burbujas?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Evalúe tubo transparente con funda opaca completa, o un tramo corto de observación controlado que quede cubierto en funcionamiento. Incluya zonas expuestas cerca de racores, apertura durante mantenimiento e iluminación real. Decida según longitud de onda sensible, transmisión, exposición y estabilidad del fluido."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo proteger los tubos del desgaste, doblado y movimiento?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ajuste primero recorrido y fijación, y proteja después los puntos cargados. Separe superficies de roce, guíe curvas bruscas junto al racor y deje holgura y alivio de tensión. Evalúe protección mecánica por separado de la presión admisible.",
+          "lead": "Ajuste primero recorrido y fijación, y proteja después los puntos cargados."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Zona de riesgo",
+            "Medida sugerida",
+            "Comprobación principal"
+          ],
+          "rows": [
+            [
+              "Contacto con aristas metálicas o soportes",
+              "Cambiar recorrido; añadir guía lisa o funda antidesgaste",
+              "Contacto con aristas, desplazamiento de funda y aplastamiento en fijaciones."
+            ],
+            [
+              "Curva brusca en la raíz del racor",
+              "Añadir guía de curvatura gradual; evaluar manguito limitador o muelle antiacodamiento",
+              "Radio mínimo, acodamiento local y nueva concentración de tensiones al final del protector."
+            ],
+            [
+              "Desplazamiento cíclico de componentes móviles",
+              "Prever holgura, guiado y alivio de tensión; evaluar tubo espiral retráctil si procede",
+              "Carrera, tracción, extensión máxima y vida en ciclos de movimiento."
+            ],
+            [
+              "Vibración que transmite tracción al racor",
+              "Colocar abrazaderas adecuadas, evitando restricciones rígidas demasiado próximas",
+              "Desgaste en fijaciones, desplazamiento del extremo, fugas y aflojamiento tras vibración."
+            ],
+            [
+              "Fluido sensible a la luz",
+              "Elegir tubo o funda opacos y cubrir zonas expuestas junto a conexiones",
+              "Transmisión en bandas sensibles e integridad de la protección tras mantenimiento."
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/prefabricated-tube-assembly-es.webp",
+          "alt": "Reborde, arandela, racor, manguito limitador e identificación del tubo rotulados",
+          "width": 2172,
+          "height": 724,
+          "caption": "Conjunto prefabricado: reborde, arandela, racor, manguito limitador e identificación"
+        },
+        {
+          "type": "paragraph",
+          "text": "Los conjuntos FOREACH pueden tomar como referencia la configuración ilustrada con junta tórica, manguito limitador e identificación. Diseñe fundas antidesgaste, muelles antiacodamiento o tubos espirales según espacio, carrera y cargas; confirme aparte la forma y el alcance de suministro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fundas, protección antiacodamiento y holgura reducen respectivamente roce, curvas bruscas y tracción; no aumentan la presión interna de trabajo admisible."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo seleccionar racores y conjuntos de tubos para un circuito completo?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Condiciones del ejemplo: tubo exterior 2.5 mm, rosca M6×1, desconexión para mantenimiento y tramo junto a un mecanismo móvil. Si el fluido es fotosensible, también necesita protección de la luz. Seleccione componentes y tubo con esas condiciones y enumere lo pendiente antes de cerrar el diseño.",
+          "lead": "Condiciones del ejemplo:"
+        },
+        {
+          "type": "subheading",
+          "title": "Comprobar primero puerto, funcionamiento y mantenimiento"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Confirmar el puerto. M6×1 solo describe la rosca; compruebe cara plana, profundidad, posición del tubo y espacio de montaje.",
+            "Confirmar fluido y circuito. Indique composición de fluidos y limpiadores, temperatura, caudal, longitud y pérdida de presión admisible para valorar 1.5 mm interior.",
+            "Confirmar mantenimiento. Para conservar el conjunto terminal, compare reborde y anillo; con férula, incluya su sustitución por una nueva en el procedimiento."
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Opción candidata",
+            "Modelo y dimensiones compatibles",
+            "Condiciones y verificaciones pendientes"
+          ],
+          "rows": [
+            [
+              "Opción 1: conjunto prefabricado con reborde",
+              "HFL-M6-25-PV-B: M6×1, exterior 2.5 mm, PVDF, negro; para la serie dimensional de arandelas WS de M6 / tubo 2.5 mm, consulte WS-46-26.",
+              "Requiere rebordeado cualificado; elegir material de arandela para el montaje y verificar puerto y presión admisible del conjunto."
+            ],
+            [
+              "Opción 2: conjunto prefabricado con anillo de retención",
+              "HSF6-M6-32-PS-B + CL-1S-25: racor M6×1 con kit para tubo 2.5 mm; anillo PEEK y casquillo inoxidable.",
+              "Esta referencia HSF6 admite tubos 2.0 / 2.5 / 3.0 / 3.2 mm; el ejemplo usa el kit 2.5 mm. Posicionar y comprimir según instrucciones."
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Elegir después tubo, protección de la luz y del tramo móvil"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para ver burbujas, evalúe FEP natural BFT03008 con funda según el fluido. Si se prefiere negro, evalúe TH2-PTFE-B-15-25 y su protección real. Ambos candidatos son 2.5 mm exterior y 1.5 mm interior; confirme compatibilidad y presión por separado. Añada fijación, holgura y guiado cerca del mecanismo móvil."
+        },
+        {
+          "type": "subheading",
+          "title": "Completar la lista y la validación final"
+        },
+        {
+          "type": "paragraph",
+          "text": "Registre racores, piezas, tubo y protección. Defina presión continua y máxima, vacío, temperatura, compatibilidad, pérdida de presión y frecuencia de desconexión antes de revisar planos y muestras. Confirme presión y vida útil del conjunto bajo condiciones reales."
+        },
+        {
+          "type": "paragraph",
+          "text": "Incluya sellado, estanqueidad al vacío, reconexión, desgaste por movimiento y protección de la luz en la aceptación. Registre condiciones y resultados antes de fijar materiales, montaje y reglas de mantenimiento."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/es/products/fittings/",
+              "label": "Ver series y especificaciones de racores para tubos",
+              "prefix": ""
+            },
+            {
+              "href": "/es/products/fittings/hard-tube-fittings/hfl-m6-25-pv-b/",
+              "label": "Ver HFL-M6-25-PV-B",
+              "prefix": "",
+              "suffix": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Preguntas frecuentes",
+  "faqItems": [
+    {
+      "question": "¿Una fuga se soluciona apretando más o añadiendo adhesivo de roscas?",
+      "answer": "Pare, despresurice y localice la fuga; inspeccione puerto, extremo y sellos. Estas conexiones sellan mediante el tubo o piezas asociadas; la rosca aporta principalmente compresión. Más fuerza puede dañar reborde, férula o anillo. Sustituya piezas dañadas según el modelo y repita la prueba. No añada adhesivo, cinta de sellado ni arandelas de bloqueo salvo autorización del montaje, pues alteran profundidad, compatibilidad o limpieza."
+    },
+    {
+      "question": "¿Por qué pasa una prueba estática pero fuga cuando funciona la bomba o se mueve el tubo?",
+      "answer": "La prueba estática solo cubre presión, temperatura y carga de ese momento. Registre arranques y pulsaciones y busque tracción, torsión o curvas bruscas en el racor. Revise recorrido, fijaciones y holgura; reproduzca el problema con fluido, temperatura y movimiento reales. Compare fugas, desplazamiento y caudal antes/después. Una sola prueba estática no valida todo el equipo."
+    },
+    {
+      "question": "¿Debo cambiar a un racor con reborde si baja el caudal al instalar una férula?",
+      "answer": "La caída de caudal no demuestra por sí sola que la férula sea inadecuada. Revise diámetro interior, paso del racor, rebabas, inserción, curvas y compresión excesiva del tubo. Compare caudal y presión diferencial con iguales fluido, temperatura, longitud y condiciones de bomba antes de cambiar montaje, tamaño o estructura. Igual diámetro exterior no implica igual paso ni resistencia."
+    },
+    {
+      "question": "¿Por qué fuga con el fluido de trabajo o limpiador si funcionó con agua?",
+      "answer": "La prueba con agua no sustituye la compatibilidad real. Liste fluidos, limpiadores y mezclas residuales; compruebe tubo, racor y sellos según composición, concentración, temperatura y tiempo. Investigue hinchamiento, endurecimiento, grietas o cambios dimensionales; sustituya piezas incompatibles y revalide sellado y caudal. Las descripciones generales de resistencia a ácidos o disolventes no bastan."
+    },
+    {
+      "question": "¿Se pueden reutilizar férula, kit de anillo y racor tras el mantenimiento?",
+      "answer": "Distinga reconectar el conjunto terminal completo de volver a prensar piezas retiradas. Prepare férulas nuevas conforme a instalación única; reconectar tubo y férula originales requiere instrucciones escritas para esa combinación. Un conjunto con anillo reconectable no autoriza necesariamente transferir casquillo y anillo a un tubo nuevo. Inspeccione aparte rosca, aspecto y montaje del racor y vuelva a probarlo."
+    },
+    {
+      "question": "¿Un tubo negro resuelve a la vez la exposición a la luz y el envejecimiento?",
+      "answer": "El color no basta. Valide protección según bandas sensibles, espesor y transmisión. Para grietas o vida útil, investigue aparte fluido, temperatura, pulsación y flexión repetida. Tubo negro o funda no sustituyen validación química y de movimiento. Si hay que observar burbujas, evalúe un tramo corto controlado o protección abrible y compruebe su integridad durante funcionamiento y tras mantenimiento."
+    }
+  ],
+  "cta": {
+    "title": "¿Necesita confirmar la compatibilidad del racor y del conjunto de tubos?",
+    "description": "Facilite planos de interfaz, diámetros exterior e interior, fluidos, temperatura, presión y requisitos de mantenimiento para comprobar las combinaciones.",
+    "contactLabel": "Contactar",
+    "productsLabel": "Ver racores y tubos",
+    "productsHref": "/es/products/fittings/"
+  }
+}

@@ -18,6 +18,8 @@ import styles from "./RelatedResources.module.css";
 
 type ResourceTrackProps = {
   ariaLabel: string;
+  previousLabel: string;
+  nextLabel: string;
   children: ReactNode;
   itemCount: number;
   trackClassName: string;
@@ -32,6 +34,8 @@ type ResourceTrackProps = {
  */
 function ResourceTrack({
   ariaLabel,
+  previousLabel,
+  nextLabel,
   children,
   itemCount,
   trackClassName,
@@ -134,7 +138,7 @@ function ResourceTrack({
       <button
         type="button"
         className={`${styles.trackButton} ${styles.trackButtonPrevious}`}
-        aria-label={`${ariaLabel}: previous`}
+        aria-label={`${ariaLabel}: ${previousLabel}`}
         disabled={!trackState.hasOverflow || trackState.isAtStart}
         onClick={() => scrollOneCard(-1)}
       >
@@ -152,7 +156,7 @@ function ResourceTrack({
       <button
         type="button"
         className={`${styles.trackButton} ${styles.trackButtonNext}`}
-        aria-label={`${ariaLabel}: next`}
+        aria-label={`${ariaLabel}: ${nextLabel}`}
         disabled={!trackState.hasOverflow || trackState.isAtEnd}
         onClick={() => scrollOneCard(1)}
       >
@@ -222,6 +226,8 @@ export default function RelatedResourcesClient({
           </div>
 
           <ResourceTrack
+            previousLabel={ui.previous}
+            nextLabel={ui.next}
             ariaLabel={ui.relatedVideos}
             itemCount={allRelatedVideos.length}
             trackClassName={styles.videoTrack}
@@ -251,6 +257,8 @@ export default function RelatedResourcesClient({
           </div>
 
           <ResourceTrack
+            previousLabel={ui.previous}
+            nextLabel={ui.next}
             ariaLabel={ui.relatedProducts}
             itemCount={featuredProducts.length}
             trackClassName={styles.productTrack}
@@ -297,6 +305,8 @@ export default function RelatedResourcesClient({
           </div>
 
           <ResourceTrack
+            previousLabel={ui.previous}
+            nextLabel={ui.next}
             ariaLabel={ui.relatedArticles}
             itemCount={allRelatedArticles.length}
             trackClassName={styles.articleTrack}

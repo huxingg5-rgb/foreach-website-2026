@@ -1,0 +1,600 @@
+{
+  "metadata": {
+    "title": "Microfluidic Hard-Tube Fitting Selection Guide: Flanged, Ferrule and Snap-Ring Connections",
+    "seoTitle": "Microfluidic Hard-Tube Fitting Selection Guide | FOREACH",
+    "seoDescription": "Compare FOREACH flanged, ferrule and snap-ring fittings: sealing, reuse limits, pressure conditions, FEP/PTFE tubing, light shielding and mechanical protection, with a tubing assembly selection example.",
+    "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-fittings.webp",
+    "coverAlt": "FOREACH HF / HFL flanged hard-tube fittings"
+  },
+  "deck": "Selection essentials: Check port geometry, tubing OD and fluid first, then pressure, maintenance frequency and tube-end preparation. Flanged fittings press a tube-end flange against a flat sealing face; ferrules grip the tube as the fitting tightens; snap-ring designs use a sleeve and sealing ring. Matching threads and tube diameters alone do not establish compatibility.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Selection essentials: Check port geometry, tubing OD and fluid first, then pressure, maintenance frequency and tube-end preparation. Flanged fittings press a tube-end flange against a flat sealing face; ferrules grip the tube as the fitting tightens; snap-ring designs use a sleeve and sealing ring. Matching threads and tube diameters alone do not establish compatibility.",
+      "lead": "Selection essentials:"
+    },
+    {
+      "type": "paragraph",
+      "text": "For equipment developers, fluid-system designers and maintenance engineers, this guide builds a shortlist from sealing geometry, interfaces, fluids, pressure and disconnection requirements. A fluid-path example then combines tubing, light shielding and mechanical protection."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/hard-tube-fitting-assemblies.png",
+      "alt": "Physical tubing assemblies with hard-tube fittings in different colors",
+      "width": 2901,
+      "height": 1585,
+      "caption": "Hard-tube fittings and assembled tubing"
+    }
+  ],
+  "sections": [
+    {
+      "title": "How do the three connection types seal?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Flanged, ferrule and snap-ring fittings secure and seal the tube end differently. Establish tube-end preparation and sealing-face location before matching the fitting and its components."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-fittings.webp",
+          "alt": "FOREACH HF HFL flanged hard-tube fittings",
+          "width": 458,
+          "height": 375,
+          "caption": "Flanged: HF / HFL series",
+          "link": {
+            "href": "/en/products/fittings/hard-tube-fittings/?structure=flanged",
+            "label": "View flanged fittings"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings.webp",
+          "alt": "FOREACH HN HNF ferrule hard-tube fittings",
+          "width": 455,
+          "height": 311,
+          "caption": "Ferrule: HN / HNF series",
+          "link": {
+            "href": "/en/products/fittings/hard-tube-fittings/?structure=ferrule",
+            "label": "View ferrule fittings"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-fittings.webp",
+          "alt": "FOREACH HSF6 CL-1 snap-ring components",
+          "width": 453,
+          "height": 313,
+          "caption": "Snap-ring: HSF6 / CL-1 series"
+        },
+        {
+          "type": "subheading",
+          "title": "Flanged: a tube-end flange contacts the flat sealing face"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-connection-structure-en.webp",
+          "alt": "Assembly and dimensions of a compact flat-bottom fitting, washer and tube-end flange",
+          "width": 1792,
+          "height": 878,
+          "caption": "Flanged connection: compact flat-bottom fitting assembly and illustrated dimensions"
+        },
+        {
+          "type": "paragraph",
+          "text": "Flangeable tubing such as FEP or PTFE is first formed at the end, then assembled with the matching washer and fitting. In this structure, the washer sits between the flange and fitting body, supporting the flange and transferring compression. Tightening seats the flange against the flat port bottom to form the seal."
+        },
+        {
+          "type": "subheading",
+          "title": "Ferrule: tightening grips the tube and seals at the port bottom"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-structure-en.webp",
+          "alt": "Assembly and dimensions of a compact ferrule fitting and ferrule",
+          "width": 1759,
+          "height": 894,
+          "caption": "Ferrule connection: compact fitting assembly and illustrated dimensions"
+        },
+        {
+          "type": "paragraph",
+          "text": "No tube-end flanging is needed. Slide the fitting and matching ferrule onto square-cut tubing and position them as specified. Tightening compresses the ferrule around the tube wall and against the port sealing face. Confirm ferrule size, orientation and compatible fitting series before assembly."
+        },
+        {
+          "type": "subheading",
+          "title": "Snap-ring: a sleeve and sealing ring form the tube-end assembly"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-connection-structure-en.webp",
+          "alt": "Assembly of a snap-ring fitting, stainless-steel sleeve and sealing ring",
+          "width": 1719,
+          "height": 915,
+          "caption": "Snap-ring connection: fitting, stainless-steel sleeve and sealing ring"
+        },
+        {
+          "type": "paragraph",
+          "text": "Slide on the fitting, sleeve and sealing ring in sequence. Align the tube end flush with the ring face, then compress according to the assembly instructions. The CL-1S kit combines a PEEK sealing ring with a stainless-steel sleeve and the corresponding HSF6 fitting for face sealing. During connection, the fitting can rotate relative to the tube, reducing tube twisting while tightening."
+        },
+        {
+          "type": "paragraph",
+          "text": "Follow the assembly instructions for the specific snap-ring model. Preassembly steps and special tools depend on the selected kit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Selection note: Ferrule and snap-ring fittings both avoid tube-end flanging, but use different parts and assembly methods. Check the matching fitting, ferrule or snap-ring components; equal threads and tube diameters do not make them direct substitutes.",
+          "lead": "Selection note:"
+        }
+      ]
+    },
+    {
+      "title": "What are the advantages and reuse limits of each design?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "With a stable flanging process, assess flanged fittings first; for assembly without flanging, assess ferrule fittings; for preassembled tubing and maintenance disconnection, assess snap-ring fittings. Separately confirm whether a complete assembly may be reconnected and whether removed sealing parts may be reinstalled.",
+          "lead": "With a stable flanging process, assess flanged fittings first; for assembly without flanging, assess ferrule fittings; for preassembled tubing and maintenance disconnection, assess snap-ring fittings."
+        },
+        {
+          "type": "subheading",
+          "title": "Flanged: suitable for preassembled tubing; flange quality is fundamental"
+        },
+        {
+          "type": "paragraph",
+          "text": "A formed flange defines the connection position and supports repeatable prefabrication and assembly. Limitations include the forming process, end-face flatness and port-bottom geometry. A damaged flange, excessive compression or an incompatible conical port can prevent reliable sealing-face contact. Inspect the flange and washer before reconnecting."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flat-port-correct-zh.png",
+          "alt": "Section showing a tube-end flange seated against a flat port sealing face",
+          "width": 555,
+          "height": 145,
+          "caption": "Flat-bottom port: the tube-end flange can seat against the bottom and seal"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/tapered-port-incorrect-zh.png",
+          "width": 555,
+          "height": 135,
+          "alt": "Section showing a tube-end flange that cannot seat against a conical port",
+          "caption": "Conical port: the flange cannot reliably contact the bottom"
+        },
+        {
+          "type": "subheading",
+          "title": "Ferrule: convenient first assembly, subject to single-installation limits"
+        },
+        {
+          "type": "paragraph",
+          "text": "Square-cut tubing can be assembled without flanging. The ferrules covered here are for a single installation; reinstalling them may cause irreversible plastic deformation. Prepare matching new ferrules for maintenance."
+        },
+        {
+          "type": "paragraph",
+          "text": "Before reconnecting the original tube with its original ferrule, obtain written reuse instructions for that exact combination. Assess reuse of the fitting nut separately, based on its condition and assembly requirements."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-assembly-en.webp",
+          "alt": "Typical ferrule fitting configuration",
+          "width": 1736,
+          "height": 906,
+          "caption": "Ferrule: compression direction and mating specifications must match"
+        },
+        {
+          "type": "subheading",
+          "title": "Snap-ring: repeated reconnection still requires tube-end inspection"
+        },
+        {
+          "type": "paragraph",
+          "text": "A complete tube-end assembly using HSF6 and a matching snap-ring kit can be disconnected and reconnected as specified, making it a candidate for serviceable prefabricated fluid paths. Inspect it before each reconnection. Confirm allowable cycles and life for the exact combination and operating conditions. Removing an old sleeve and pressing it onto a new tube requires separate confirmation that the kit permits reinstallation."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-assembly-en.webp",
+          "alt": "Labeled snap-ring sleeve, sealing ring and fitting configuration",
+          "width": 1323,
+          "height": 1189,
+          "caption": "Position and assemble the sleeve and sealing ring as specified"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Selection factor",
+            "Flanged",
+            "Ferrule",
+            "Snap-ring"
+          ],
+          "rows": [
+            [
+              "Initial tube-end preparation",
+              "Form a flange and use a matching washer",
+              "Square-cut end with a matching ferrule",
+              "Square-cut end; locate sleeve and sealing ring"
+            ],
+            [
+              "Disconnection and reconnection",
+              "Reconnect as specified with flange and washer intact",
+              "Replace ferrules according to single-installation limits",
+              "Reconnect the complete assembly as specified"
+            ],
+            [
+              "Key checks",
+              "Flange flatness and port-bottom geometry",
+              "Ferrule size, orientation and deformation",
+              "Pressing position, orientation and flush tube end"
+            ],
+            [
+              "Needs to assess first",
+              "Established flanging process or outsourced preassembly",
+              "No flanging; ferrule replacement during maintenance",
+              "Preassembled tubing and maintenance disconnection"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Matching parts: HN / HN6 use CL-0X; HNF / HNF6 use CL-0. Check the fitting series and ferrule model separately when ordering.",
+          "lead": "Matching parts:"
+        }
+      ]
+    },
+    {
+      "title": "How do pressure, vibration and maintenance narrow the shortlist?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Check the interface first, then fluids, temperature and pressure, and finally assembly and maintenance costs. Each design has conditions of use; assess pressure capability and life for the specific model and connection combination.",
+          "lead": "Check the interface first, then fluids, temperature and pressure, and finally assembly and maintenance costs."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Known condition",
+            "Next selection step"
+          ],
+          "rows": [
+            [
+              "Port and tubing OD are defined",
+              "Check threads, flat or conical bottom, sealing location and insertion depth; exclude geometrically incompatible combinations."
+            ],
+            [
+              "No flanging tools or stable process",
+              "Assess connections without flanging or supplier-preassembled flanged tubing."
+            ],
+            [
+              "Repeated maintenance disconnection",
+              "Assess flanged or snap-ring assemblies approved for reconnection and check reuse conditions; include replacement ferrules in ferrule-system maintenance costs."
+            ],
+            [
+              "Sustained pressure, temperature or pulsation requirements",
+              "Request data for the exact fitting, tubing and port combination. Keep combinations with insufficient data as candidates requiring validation."
+            ],
+            [
+              "Tubing moves with the mechanism",
+              "Assess routing, motion allowance, bend radius and strain relief so motion loads do not concentrate at the fitting root."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "For a rarely disconnected suction line, start with airtightness, resistance to tube collapse and interface fit. For regularly serviced connections, compare reconnection conditions for the complete tube-end assembly and seal replacement costs. Near moving mechanisms, address motion allowance, guidance and strain relief separately."
+        },
+        {
+          "type": "subheading",
+          "title": "Validate real failure risks after shortlisting"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operating condition",
+            "Main risk",
+            "Validation task"
+          ],
+          "rows": [
+            [
+              "Long-term sustained pressure",
+              "Material creep and changes in gripping force",
+              "Hold pressure for the project-defined duration using the intended fluid and maximum operating temperature; check leakage, movement and pullout."
+            ],
+            [
+              "Start/stop operation and pressure pulsation",
+              "Loosening or fatigue from repeated loading",
+              "Record pressure peaks and cycling conditions; inspect seals before and after cycling."
+            ],
+            [
+              "Suction under negative pressure",
+              "Small air leaks, bubbles and tube-wall deformation",
+              "Check connection airtightness and tube-collapse resistance; investigate the source of any bubbles."
+            ],
+            [
+              "Vibration and equipment movement",
+              "Pulling and wear concentrated at the tube end",
+              "Validate supports and strain relief; check loosening and leakage after vibration."
+            ],
+            [
+              "Regular disconnection",
+              "Damage to flange, sealing ring or ferrule",
+              "Define disconnection procedures, inspection methods and replacement criteria, then validate the serviced connection."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Use these tasks in the installed-system validation plan. Specify test temperature, sustained and peak pressures, vacuum conditions, cycle counts and permissible leakage. Judge each model against its specifications and test results."
+        },
+        {
+          "type": "paragraph",
+          "text": "High-pressure fluid paths require separate selection. The manual's maximum pressure of 34 MPa applies to dedicated high-pressure fittings, not the ordinary flanged, ferrule or snap-ring designs discussed here. Use the specific model's rated data for the actual temperature, tubing and installation conditions."
+        }
+      ]
+    },
+    {
+      "title": "How should FEP and PTFE tubing be selected, and when is light shielding needed?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tubing OD determines fitting compatibility; ID and length affect flow resistance and internal volume; material determines basic fluid and mechanical suitability. Establish working and cleaning fluid composition, concentration, maximum temperature and contact time before selecting tubing and wetted sealing materials.",
+          "lead": "Tubing OD determines fitting compatibility; ID and length affect flow resistance and internal volume; material determines basic fluid and mechanical suitability."
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, tubing with 2.5 mm OD and 1.5 mm ID requires a connection assembly compatible with 2.5 mm OD. Select the washer bore for the fitting series and matching specification; it need not equal tubing OD. Additional hold-up volume at the connection also depends on tube-end position, insertion depth and passage alignment."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tubing",
+            "Main characteristics",
+            "Observation and light shielding",
+            "Selection priorities"
+          ],
+          "rows": [
+            [
+              "FEP",
+              "Natural-color tubing is relatively transparent for fluid-path observation",
+              "Helps observe fluid and bubbles; assess extra shielding for light-sensitive fluids",
+              "Check fluid, wall, pressure and bending conditions. Resistance to UV aging does not mean UV light is blocked."
+            ],
+            [
+              "PTFE",
+              "High chemical inertness, low friction coefficient and flangeable ends",
+              "Natural, black and specific transparent grades are available",
+              "Confirm color and transparency by model; validate black tubing's shielding for wavelength and wall thickness."
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ptfe-tubing-photo.png",
+          "alt": "Natural and black PTFE tubing samples",
+          "width": 1962,
+          "height": 1270,
+          "caption": "PTFE: natural and black tubing"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/fep-tubing-photo.png",
+          "alt": "Transparent FEP tubing samples",
+          "width": 2544,
+          "height": 1540,
+          "caption": "FEP: transparent tubing"
+        },
+        {
+          "type": "paragraph",
+          "text": "FEP and PTFE tubing have some flexibility; observe the minimum bend radius for each specification. In continuously moving sections, assess kinking, wear and fatigue. Static bend capability does not establish suitability for repeated flexing.",
+          "lead": "FEP and PTFE tubing have some flexibility; observe the minimum bend radius for each specification."
+        },
+        {
+          "type": "subheading",
+          "title": "Which tubing specifications are candidates for 2.5 mm OD?"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tubing model",
+            "Material / color",
+            "OD / ID",
+            "Selection considerations"
+          ],
+          "rows": [
+            [
+              "BFT03008",
+              "FEP / natural",
+              "2.5 / 1.5 mm",
+              "Size candidate for bubble observation; design light shielding separately."
+            ],
+            [
+              "TH2-PTFE-B-15-25",
+              "PTFE / black",
+              "2.5 / 1.5 mm",
+              "Candidate for black tubing; measure shielding at the sensitive wavelengths."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Both listed models are candidates with 2.5 mm OD and 1.5 mm ID; selection also depends on fluid, pressure and shielding needs. Transparent PTFE model TH2-PTFE-T-20-32 is another option whose dimensions and conditions must be checked separately."
+        },
+        {
+          "type": "subheading",
+          "title": "What if both light shielding and bubble observation are required?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Assess transparent tubing with a full light-blocking sleeve, or a short observation section in a controlled position covered during normal operation. Include exposed areas near fittings, cover opening during maintenance and actual lighting in the assessment. Decide based on fluid-sensitive wavelengths, transmission, exposure time and fluid stability results."
+        }
+      ]
+    },
+    {
+      "title": "How should tubing be protected against wear, bending and motion?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Adjust routing and supports first, then protect the loaded locations. Isolate rubbing surfaces, guide sharp bends near fitting roots, and allow motion with strain relief. Assess mechanical protection separately from fitting pressure capability.",
+          "lead": "Adjust routing and supports first, then protect the loaded locations."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Risk location",
+            "Suggested measure",
+            "Validation focus"
+          ],
+          "rows": [
+            [
+              "Tubing touches metal edges or brackets",
+              "Reroute and add smooth guides or abrasion-resistant sleeves",
+              "Edge contact, sleeve migration and crushing at support points."
+            ],
+            [
+              "Sharp bend at the fitting root",
+              "Use a gradual-bend guide; assess a limiting sleeve or anti-kink spring for the structure",
+              "Minimum bend radius, local kinking and new stress concentration at the protector end."
+            ],
+            [
+              "Cyclic displacement of moving parts",
+              "Allow travel, guidance and strain relief; assess coiled recoil tubing where suitable",
+              "Stroke, pulling force, maximum extension and motion-cycle life."
+            ],
+            [
+              "Vibration puts tension on fittings",
+              "Position retaining clips appropriately and avoid overly close rigid constraints",
+              "Support-point wear, tube-end movement, leakage and loosening after vibration."
+            ],
+            [
+              "Fluid requires light shielding",
+              "Choose shielding tubing or a sleeve and cover exposed areas near connections",
+              "Transmission at sensitive wavelengths and shielding integrity after maintenance."
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/prefabricated-tube-assembly-en.webp",
+          "alt": "Labeled tube-end flange, washer, fitting, limiting sleeve and tube marker",
+          "width": 2172,
+          "height": 724,
+          "caption": "Preassembled tubing: flange, washer, fitting, limiting sleeve and identification"
+        },
+        {
+          "type": "paragraph",
+          "text": "FOREACH preassembled tubing can use the illustrated O-ring, limiting sleeve and tubing identification configuration as a reference. Design abrasion sleeves, anti-kink springs or coiled recoil tubing for the available space, travel and loads, and separately confirm form and supply scope."
+        },
+        {
+          "type": "paragraph",
+          "text": "Abrasion sleeves, anti-kink features and motion allowance reduce rubbing, sharp bending and pulling risks respectively; they do not increase allowable internal working pressure."
+        }
+      ]
+    },
+    {
+      "title": "How are fittings and tubing assemblies selected for a complete fluid path?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Example conditions: 2.5 mm tubing OD, M6×1 port thread, maintenance disconnection and a section near a moving mechanism. Light-sensitive fluids also require shielding. The following selection shortlists connection parts and tubing, then identifies operating conditions to confirm before finalizing.",
+          "lead": "Example conditions:"
+        },
+        {
+          "type": "subheading",
+          "title": "Check the port, operating conditions and maintenance method first"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Confirm the port. M6×1 specifies only the thread; also check the flat sealing face, hole depth, tube-end position and assembly space.",
+            "Confirm fluids and fluid path. Provide working and cleaning fluid composition, temperature, target flow, tube length and allowable pressure drop to assess whether 1.5 mm ID is suitable.",
+            "Confirm maintenance. To retain a complete tube-end assembly during service, compare flanged and snap-ring designs; for ferrule connections, include new ferrule installation in the service procedure."
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Candidate approach",
+            "Model and matching dimensions",
+            "Conditions and checks still required"
+          ],
+          "rows": [
+            [
+              "Option 1: preassembled flanged tubing",
+              "HFL-M6-25-PV-B: M6×1, 2.5 mm OD, PVDF, black. For the WS washer size series for M6 / 2.5 mm tubing, refer to WS-46-26.",
+              "A qualified flanging process is required. Select washer material for the assembly and verify the port and complete assembly's allowable pressure."
+            ],
+            [
+              "Option 2: preassembled snap-ring tubing",
+              "HSF6-M6-32-PS-B + CL-1S-25: M6×1 fitting with a 2.5 mm snap-ring kit; PEEK sealing ring plus stainless-steel sleeve.",
+              "This HSF6 fitting specification accepts 2.0 / 2.5 / 3.0 / 3.2 mm tubing; the example uses the 2.5 mm kit. Position and compress as instructed."
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Then select tubing, shielding and moving-section protection"
+        },
+        {
+          "type": "paragraph",
+          "text": "For bubble observation, assess natural FEP BFT03008 with shielding as the fluid requires. For black tubing, assess TH2-PTFE-B-15-25 and validate actual light blocking. Both candidates have 2.5 mm OD and 1.5 mm ID; confirm fluid compatibility and working pressure separately. Near moving mechanisms, add supports, motion allowance and guides."
+        },
+        {
+          "type": "subheading",
+          "title": "Complete the shortlist and final validation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Record fitting models, matching parts, tubing and protection. Define sustained and peak pressures, vacuum conditions, temperature, fluid compatibility, allowable pressure drop and disconnection frequency before drawing review and sample evaluation. Confirm working pressure and life for the entire combination under actual conditions."
+        },
+        {
+          "type": "paragraph",
+          "text": "Before final selection, include sealing, vacuum airtightness, reconnection, motion wear and light shielding in the acceptance plan. Record conditions and results, then finalize the bill of materials, assembly process and maintenance replacement rules."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/en/products/fittings/",
+              "label": "View hard-tube fitting series and specifications",
+              "prefix": ""
+            },
+            {
+              "href": "/en/products/fittings/hard-tube-fittings/hfl-m6-25-pv-b/",
+              "label": "View HFL-M6-25-PV-B",
+              "prefix": "",
+              "suffix": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Frequently asked questions",
+  "faqItems": [
+    {
+      "question": "Can a leak be fixed by tightening further or adding thread adhesive?",
+      "answer": "Stop, depressurize and locate the leak, then inspect the port, tube end and matching seals. These three connections seal through the tube end or mating components; threads mainly provide compression. Extra force may damage flanges, ferrules or rings. Replace damaged threads, sealing faces or tube ends as the model requires and retest. Do not add adhesive, thread tape or lock washers unless assembly instructions permit them; they can change installation depth, compatibility or cleanliness."
+    },
+    {
+      "question": "Why does a connection pass a static check but leak when the pump or tubing moves?",
+      "answer": "A static check covers only the pressure, temperature and loading at that time. Record start/stop events and pressure pulsation, and check for tension, twisting or sharp bends at the fitting root. Review routing, supports and travel allowance, then reproduce the issue with the actual fluid, temperature and motion. Compare leakage, tube-end displacement and flow before and after adjustment. One static pressure-hold pass does not validate the installed system."
+    },
+    {
+      "question": "Must I switch to a flanged fitting if flow falls after installing a ferrule fitting?",
+      "answer": "Reduced flow alone does not prove that a ferrule design is unsuitable. Check tube ID and fitting passage, cut-end burrs, insertion position, sharp bends and excessive tube-end compression. Compare flow and pressure drop with the same fluid, temperature, tube length and pump conditions before changing assembly, size or connection design. Equal tubing OD does not imply equal internal passages or flow resistance."
+    },
+    {
+      "question": "Why does a water-tested connection leak with the working or cleaning fluid?",
+      "answer": "Water testing does not replace actual-fluid compatibility validation. List working fluids, cleaners and possible residual mixtures. Check tubing, fittings and seals against composition, concentration, temperature and contact time. Investigate swelling, hardening, cracking or dimensional change, replace incompatible parts, then validate assembly sealing and flow again. Broad claims such as acid/alkali or solvent resistance are insufficient."
+    },
+    {
+      "question": "Can the original ferrule, snap-ring kit and fitting be reused after maintenance?",
+      "answer": "Distinguish reconnecting a complete tube-end assembly from pressing removed parts onto tubing again. Prepare new ferrules according to the single-installation requirement; retaining the original tube and ferrule for reconnection requires written instructions for that exact combination. A reconnectable snap-ring assembly does not imply its sleeve and ring may be moved to new tubing. Inspect fitting threads, appearance and assembly condition separately, then retest after maintenance."
+    },
+    {
+      "question": "Does black tubing solve both light exposure and tubing aging?",
+      "answer": "Color alone is insufficient. Validate shielding against fluid-sensitive wavelengths, wall thickness and transmission. Investigate cracking or life issues separately for fluid, temperature, pressure pulsation and repeated flexing. Black tubing or a shielding sleeve cannot replace compatibility and motion-life validation. If bubbles must remain observable, assess a controlled short viewing section or removable shielding, and verify shielding integrity during operation and after service."
+    }
+  ],
+  "cta": {
+    "title": "Need to confirm fitting and tubing assembly compatibility?",
+    "description": "Provide interface drawings, tubing OD and ID, fluids, temperature, pressure range and maintenance requirements to check candidate combinations.",
+    "contactLabel": "Contact us",
+    "productsLabel": "View fittings and tubing",
+    "productsHref": "/en/products/fittings/"
+  }
+}

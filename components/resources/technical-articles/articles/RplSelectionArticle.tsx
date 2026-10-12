@@ -42,7 +42,14 @@ function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: 
             {index > 0 && <span className={styles.flowArrow} aria-hidden="true">→</span>}
             <strong>{node.label}</strong><span>{node.detail}</span>
           </li>)}
-        </ol> : <Image
+        </ol> : block.productViews ? <div className={styles.dimensionLayout}>
+          <div className={styles.productViews}>
+            {block.productViews.map(view => <div className={styles.productCrop} data-reverse={view.reverse || undefined} key={view.src}>
+              <Image src={view.src} alt={view.alt} width={800} height={800} sizes="(max-width: 600px) 70vw, 480px" />
+            </div>)}
+          </div>
+          <Image className={styles.dimensionDrawing} src={block.src} alt={block.alt} width={block.width} height={block.height} sizes="(max-width: 600px) 90vw, 360px" />
+        </div> : <Image
           src={block.src}
           alt={block.alt}
           width={block.width}
@@ -50,6 +57,7 @@ function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: 
           sizes={block.width === block.height ? "(max-width: 700px) 100vw, 620px" : "(max-width: 820px) 100vw, 790px"}
         />}
         <figcaption>{block.caption}</figcaption>
+        {block.link && <Link className={styles.figureLink} href={block.link.href}>{block.link.label}<span aria-hidden="true"> →</span></Link>}
       </figure>
     );
     case "table": return renderTable(block, key, undefined, headerLinks);
