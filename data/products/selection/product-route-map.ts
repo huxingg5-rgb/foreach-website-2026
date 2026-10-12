@@ -18,6 +18,7 @@ import { getPipettingSeriesSlug } from "./pipetting-pump-routes";
 import type { SelectionFilterKey } from "./product-selection.types";
 import { getPipettingCopy, pipettingSeriesFilters, pipettingSeriesSlugs } from "./pipetting-pump-seo";
 import { valvelessPumpIntroZh } from "./valveless-pump-copy.zh";
+import { valvelessPumpSeries } from "./valveless-pump-series";
 import {
   VALVELESS_PUMP_CATEGORY_LABEL_ZH,
   VALVELESS_PUMP_CATEGORY_SLUG_ZH,
@@ -237,6 +238,15 @@ export const productRouteMap: {
   },
 
   series: {
+    ...Object.fromEntries(valvelessPumpSeries.map(series => [series.slug, {
+      category: "pumps", slug: VALVELESS_PUMP_CATEGORY_SLUG_ZH,
+      categoryId: "pumps", productTypeId: "valveless-pump",
+      filterKey: "filter01" as const, filterValue: series.filterValue,
+      initialFilters: { filter01: [series.filterValue] },
+      label: valvelessPumpIntroZh[series.copyKey].title,
+      title: `${valvelessPumpIntroZh[series.copyKey].title} | FOREACH`,
+      description: valvelessPumpIntroZh[series.copyKey].paragraphs[0].replace(/\[([^\]]+)\]\([^)]*\)/g, "$1"),
+    }])),
     ...Object.fromEntries(pipettingSeriesSlugs.map((key, index) => [getPipettingSeriesSlug(key), {
       category: "pumps", slug: "pipetting-pumps", categoryId: "pumps", productTypeId: "pipette-pump",
       filterKey: "filter01" as const, filterValue: pipettingSeriesFilters[index],

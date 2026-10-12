@@ -1,4 +1,5 @@
 "use client";
+import { valvelessPumpSeries } from "@/data/products/selection/valveless-pump-series";
 
 import { getPistonPumpIntroCopy } from "@/data/products/selection/piston-pump-series-copy";
 import { getControlModulePath } from "@/data/products/selection/control-module-routes";
@@ -4540,6 +4541,14 @@ export default function ProductSelectionClient({
         activeProductTypeId
       );
 
+      // Like fitting type selection, navigate to a real route so refresh,
+      // browser history and page metadata all describe the selected series.
+      if (activeProductTypeId === "valveless-pump") {
+        const target = isAlreadySelected ? productTypeHref : seriesHref;
+        if (target) router.push(localizeProductDetailHref(`${target}/`), { scroll: false });
+        return;
+      }
+
       setSelectedFilters((current) => {
         const next: SelectedFilterMap = {
           ...current,
@@ -5174,6 +5183,10 @@ function isFilterOptionActive(
      */
 
     if (key === "productType") {
+      if (activeProductTypeId === "valveless-pump") {
+        router.push(localizeProductDetailHref("/products/pumps/"), { scroll: false });
+        return;
+      }
       pendingFilterRef.current = {
         filterCategory: activeCategoryId,
         filterName: "product_type_id",
@@ -5210,7 +5223,8 @@ function isFilterOptionActive(
 
       if (productTypeHref) {
         router.push(
-          localizeProductDetailHref(productTypeHref)
+          localizeProductDetailHref(productTypeHref),
+          activeProductTypeId === "valveless-pump" ? { scroll: false } : undefined
         );
         return;
       }
@@ -5255,6 +5269,13 @@ function isFilterOptionActive(
     });
   }
   function resetCurrentFilters() {
+    if (activeProductTypeId === "valveless-pump") {
+      setSelectedFilters({});
+      setSearchInputValue("");
+      setSearchKeyword("");
+      router.push(getValvelessPumpPath(locale), { scroll: false });
+      return;
+    }
     if (activeProductTypeId === "pipette-pump") {
       setSelectedFilters({});
       setSearchInputValue("");
@@ -5390,7 +5411,16 @@ function isFilterOptionActive(
     },
     ...(compactSelectionLabel ? [{ label: compactSelectionLabel }] : []),
   ];
-  const breadcrumbItems = (locale === "en" ? getProbeControlBreadcrumbsEn(pathname) : undefined) || getChineseProductPageBreadcrumbs(
+  const activeValvelessSeries = activeProductTypeId === "valveless-pump"
+    ? valvelessPumpSeries.find(series => pathname?.replace(/\/$/, "").endsWith(`/${series.slug}`))
+    : undefined;
+  const valvelessBreadcrumbItems = activeValvelessSeries ? [
+    { label: pageText.breadcrumbHome, href: locale === "zh" ? "/" : `/${locale}/` },
+    { label: pageText.breadcrumbCurrent, href: locale === "zh" ? "/products/" : `/${locale}/products/` },
+    { label: getTaxonomyLabel(locale, "valveless-pump"), href: getValvelessPumpPath(locale) },
+    { label: activeValvelessSeries.slug.toUpperCase() },
+  ] : undefined;
+  const breadcrumbItems = valvelessBreadcrumbItems || (locale === "en" ? getProbeControlBreadcrumbsEn(pathname) : undefined) || getChineseProductPageBreadcrumbs(
     pathname, locale, legacyBreadcrumbItems.at(-1)?.label,
   ) || legacyBreadcrumbItems;
 
@@ -5555,7 +5585,10 @@ function isFilterOptionActive(
                   if (activeCategoryId === "needles") return getProbeSelectionPathEn(value);
                   if (activeCategoryId === "control") return getControlSelectionPathEn(value);
                 }
-                if (!["syringe-pump", "pipette-pump"].includes(activeProductTypeId)) return undefined;
+                if (!["syringe-pump", "pipette-pump", "valveless-pump"].includes(activeProductTypeId)) return undefined;
+                if (activeProductTypeId === "valveless-pump" && selectedFilters.filter01?.has(value)) {
+                  return getValvelessPumpPath(locale);
+                }
                 const href = getSeriesHrefByFilterValue(activeCategoryId, activeProductTypeId, group.key, value);
                 return href ? localizeProductDetailHref(href + "/") : undefined;
               }}

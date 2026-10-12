@@ -83,6 +83,7 @@ import PlungerPumpDetailPage from "@/app/products/pumps/piston-pump/[slug]/page"
 import SyringePumpDetailPage from "@/app/products/pumps/syringe-pumps/[slug]/page";
 import ValvelessPumpDetailPage from "@/app/products/pumps/valveless-metering-pump/[slug]/page";
 import { getValvelessPumpSeoTitle } from "@/data/products/detail/valveless-pump-seo";
+import { valvelessPumpSeries, getValvelessPumpSeriesMetadata } from "@/data/products/selection/valveless-pump-series";
 import { getValvelessForeignContent, getValvelessLocaleCopy } from "@/data/products/detail/valveless-pump-locales";
 import { getValvelessPumpLanguageAlternates, VALVELESS_PUMP_CATEGORY_SLUG_INTL, VALVELESS_PUMP_LEGACY_CATEGORY_SLUG } from "@/data/products/selection/valveless-pump-routes";
 import ProbeDetailPage from "@/app/products/probes/[slug]/page";
@@ -201,6 +202,7 @@ function getProductRoutesForLocale(locale: LocaleCode | string) {
   return migrateDiaphragmPumpRouteSegments([
     ...allEnglishProductDetailRoutes,
     ...syringeSeriesSlugs.map(slug => ["pumps", "syringe-pumps", slug]),
+    ...valvelessPumpSeries.map(({ slug }) => ["pumps", VALVELESS_PUMP_CATEGORY_SLUG_INTL, slug]),
     ...(locale === "en" ? englishProbeControlSelectionRoutes : []),
   ])
     .map(segments => segments[0] === "pumps" && segments[1] === VALVELESS_PUMP_LEGACY_CATEGORY_SLUG
@@ -459,6 +461,9 @@ export async function generateMetadata({
     (segments.length === 3 && segments[1] === VALVELESS_PUMP_CATEGORY_SLUG_INTL)
   );
   const valvelessContent = isValvelessRoute && segments.length === 3 ? getValvelessForeignContent(segments[2], locale) : undefined;
+  const valvelessSeriesMetadata = isValvelessRoute && segments.length === 3
+    ? getValvelessPumpSeriesMetadata(locale, segments[2]) : undefined;
+  if (valvelessSeriesMetadata) return valvelessSeriesMetadata;
   const valvelessCategory = isValvelessRoute && segments.length === 2 ? getValvelessLocaleCopy(locale) : undefined;
   const valvelessSeoTitle = valvelessContent ? getValvelessPumpSeoTitle(segments[2], locale)
     : valvelessCategory ? `${valvelessCategory.category.title} | FOREACH` : undefined;

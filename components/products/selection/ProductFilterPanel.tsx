@@ -627,7 +627,14 @@ const inferredShouldUseTwoColumns =
                   );
 
                 const href = getOptionHref?.(group, option.value);
-                if (href) return <a key={option.value} href={href} className={["filter-option", optionTypeClass, active ? "active" : ""].filter(Boolean).join(" ")} aria-current={active ? "page" : undefined}><span className="filter-check" /><span>{option.label}</span></a>;
+                if (href) return <a key={option.value} href={href} className={["filter-option", optionTypeClass, active ? "active" : ""].filter(Boolean).join(" ")} aria-current={active ? "page" : undefined}
+                  onClick={activeProductTypeId === "valveless-pump" ? (event) => {
+                    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                    event.preventDefault();
+                    onFilterChange(group, option.value);
+                    if (mobileOpenFilterGroups?.[group.key]) onToggleMobileGroup?.(group.key);
+                  } : undefined}
+                ><span className="filter-check" /><span>{option.label}</span></a>;
                 return (
                   <button
                     className={[

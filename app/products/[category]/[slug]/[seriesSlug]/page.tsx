@@ -419,7 +419,7 @@ export function generateStaticParams() {
       (item) =>
         !(
           item.category === "pumps" &&
-          item.slug === "piston-pump"
+          ["piston-pump", "valveless-metering-pump"].includes(item.slug)
         )
     );
 

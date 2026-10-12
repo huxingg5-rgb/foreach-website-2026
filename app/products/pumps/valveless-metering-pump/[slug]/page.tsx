@@ -1,7 +1,12 @@
 import { applyValvelessPumpChineseCopy } from "@/data/products/detail/valveless-pump-copy.zh";
 import { applyValvelessPumpLocalizedCopy } from "@/data/products/detail/valveless-pump-localized-adapter";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
+import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
+import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
+import { valvelessPumpSeries, getValvelessPumpSeries, getValvelessPumpSeriesMetadata } from "@/data/products/selection/valveless-pump-series";
+import "../../../products.css";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
@@ -22,9 +27,7 @@ type ValvelessPumpDetailPageProps = {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return details.map((detail) => ({
-    slug: detail.slug,
-  }));
+  return [...details, ...valvelessPumpSeries].map(({ slug }) => ({ slug }));
 }
 
 function getDetailBySlug(slug: string): ValvelessPumpDetail | null {
@@ -35,6 +38,8 @@ export async function generateMetadata({
   params,
 }: ValvelessPumpDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
+  const seriesMetadata = getValvelessPumpSeriesMetadata("zh", slug);
+  if (seriesMetadata) return seriesMetadata;
   const detail = getDetailBySlug(slug);
 
   if (!detail) {
@@ -172,6 +177,19 @@ export default async function ValvelessPumpDetailPage({
   renderLocale = "zh",
 }: ValvelessPumpDetailPageProps) {
   const { slug } = await params;
+  const series = getValvelessPumpSeries(slug);
+  if (series) {
+    return (
+      <Suspense fallback={<ProductPageSkeleton variant="selection" />}>
+        <ProductSelectionClient
+          locale="zh"
+          initialCategoryId="pumps"
+          initialProductTypeId="valveless-pump"
+          initialFilters={{ filter01: [series.filterValue] }}
+        />
+      </Suspense>
+    );
+  }
   const detail = getDetailBySlug(slug);
 
   if (!detail) {
