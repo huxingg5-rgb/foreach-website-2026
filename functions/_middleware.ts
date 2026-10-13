@@ -1,4 +1,5 @@
 import { normalizeControlModulePath } from "../data/products/selection/control-module-routes";
+import { getLegacyTubingSelectionTarget } from "../data/products/selection/tubing-selection-routes";
 import { normalizePipettingPath } from "../data/products/selection/pipetting-pump-routes";
 /**
  * Cloudflare Pages Functions｜旧版官网精确重定向
@@ -47,6 +48,11 @@ export const onRequest: LegacyRedirectHandler = async ({
   }
 
   const requestUrl = new URL(request.url);
+
+  const tubingSelectionTarget = getLegacyTubingSelectionTarget(requestUrl);
+  if (tubingSelectionTarget) {
+    return new Response(null, { status: 301, headers: { Location: new URL(tubingSelectionTarget, requestUrl).toString() } });
+  }
 
   const retiredFittingsPath = "/en/resources/technical-articles/selecting-microfluidic-fittings";
   if (requestUrl.pathname === retiredFittingsPath || requestUrl.pathname === `${retiredFittingsPath}/`) {

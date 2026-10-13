@@ -1,6 +1,10 @@
 {
   "version": 1,
   "include": [
+    "/products/tubing",
+    "/products/tubing/",
+    "/en/products/tubing",
+    "/en/products/tubing/",
     "/en/resources/technical-articles/selecting-microfluidic-fittings",
     "/en/resources/technical-articles/selecting-microfluidic-fittings/",
     "/cn/history.aspx",

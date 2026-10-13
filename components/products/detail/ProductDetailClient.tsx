@@ -16,6 +16,7 @@ import { getChineseProductPageBreadcrumbs } from "@/lib/seo/chinese-product-brea
 import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
 import { buildProductSpecProperties } from "@/lib/seo/product-spec-properties";
 import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
+import { getTubingGalleryData } from "@/data/products/tubing/gallery";
 
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
 import { getValveDetailHeading } from "@/data/products/selection/valve-card-copy";
@@ -1528,6 +1529,10 @@ export default function ProductDetailClient({
           ? sourceData
           : localizeProductDetailData(sourceData)
         : sourceData;
+
+      if (String(sourceData.category) === "tubing") {
+        localizedData = { ...localizedData, ...getTubingGalleryData(sourceData.slug, configuratorLocale) };
+      }
 
       // HP navigation is already localized by its route; the generic English
       // adapter must not add /en to an /es, /fr, /ko or /ru breadcrumb.

@@ -8,6 +8,7 @@ import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import { getTubingMaterialCopy } from "@/data/products/tubing/content";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
 import { getTubingAlternates } from "@/data/products/tubing/metadata";
+import { getTubingGalleryData } from "@/data/products/tubing/gallery";
 
 type FaqItem = {
   question?: string;
@@ -177,6 +178,7 @@ function toClientData(detail: TubingDetailRecord, locale: string) {
     customInquiryHref: detail.bottomCtaHref || "/contact",
     contactHref: detail.bottomCtaHref || "/contact",
     ...authored,
+    ...getTubingGalleryData(detail.slug, locale),
   };
 }
 

@@ -10,6 +10,7 @@ import { getLocalizedFittingIntroduction } from "@/data/products/selection/fitti
 import { productOverviewIntrosEn } from "@/data/products/selection/product-introductions.en";
 import { getProductOverviewHeading } from "@/data/products/selection/product-overview-headings";
 import { getTubingIntro, getTubingSeriesCopy, getTubingMaterialCopy } from "@/data/products/tubing/content";
+import { getLegacyTubingSelectionTarget, getTubingSelectionPath, hasTubingSelectionLocale, isTubingMaterial } from "@/data/products/selection/tubing-selection-routes";
 import { fittingIntrosZh, fittingOverviewParagraphsZh } from "@/data/products/selection/fitting-headings.zh";
 import ProductTypeIntroImage from "./ProductTypeIntroImage";
 import { probeIntrosZh, probeOverviewParagraphsZh, probeTypesZh, getProbeProductTypeIdZh, getProbeSelectionPathZh } from "@/data/products/selection/probe-selection.zh";
@@ -4330,9 +4331,16 @@ export default function ProductSelectionClient({
     router.replace(target + (suffix ? `?${suffix}` : "") + window.location.hash, { scroll: false });
   }, [locale, requestedCategoryId, requestedProductTypeId, router]);
 
+  useEffect(() => {
+    const target = getLegacyTubingSelectionTarget(new URL(window.location.href));
+    if (target) router.replace(target, { scroll: false });
+  }, [pathname, requestedProductTypeId, router]);
+
   function navigateCategorySelection(categoryId: string, productTypeId?: string) {
     const categoryHref = getCategoryHrefById(categoryId);
-    const href = categoryId === "needles" && locale === "en"
+    const href = categoryId === "tubing" && hasTubingSelectionLocale(locale)
+      ? getTubingSelectionPath(locale, productTypeId)
+      : categoryId === "needles" && locale === "en"
       ? getProbeSelectionPathEn(productTypeId)
       : categoryId === "control" && locale === "en"
       ? getControlSelectionPathEn(productTypeId)
@@ -5420,7 +5428,13 @@ function isFilterOptionActive(
     { label: getTaxonomyLabel(locale, "valveless-pump"), href: getValvelessPumpPath(locale) },
     { label: activeValvelessSeries.slug.toUpperCase() },
   ] : undefined;
-  const breadcrumbItems = valvelessBreadcrumbItems || (locale === "en" ? getProbeControlBreadcrumbsEn(pathname) : undefined) || getChineseProductPageBreadcrumbs(
+  const tubingBreadcrumbItems = activeCategoryId === "tubing" && hasTubingSelectionLocale(locale) ? [
+    { label: pageText.breadcrumbHome, href: locale === "zh" ? "/" : `/${locale}/` },
+    { label: pageText.breadcrumbCurrent, href: locale === "zh" ? "/products/" : `/${locale}/products/` },
+    { label: activeCategory.label, ...(isTubingMaterial(activeProductTypeId) ? { href: getTubingSelectionPath(locale) } : {}) },
+    ...(isTubingMaterial(activeProductTypeId) ? [{ label: productTypeOptions.find(option => option.value === activeProductTypeId)?.label || activeProductTypeId }] : []),
+  ] : undefined;
+  const breadcrumbItems = tubingBreadcrumbItems || valvelessBreadcrumbItems || (locale === "en" ? getProbeControlBreadcrumbsEn(pathname) : undefined) || getChineseProductPageBreadcrumbs(
     pathname, locale, legacyBreadcrumbItems.at(-1)?.label,
   ) || legacyBreadcrumbItems;
 
