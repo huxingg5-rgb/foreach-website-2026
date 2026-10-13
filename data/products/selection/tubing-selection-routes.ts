@@ -7,11 +7,11 @@ export function isTubingMaterial(value: string | undefined): value is typeof tub
 }
 
 export function hasTubingSelectionLocale(locale: string) {
-  return locale === "zh" || locale === "en";
+  return locale === "zh" || locale === "zh-CN" || locale === "en";
 }
 
 export function getTubingSelectionPath(locale: string, material?: string) {
-  const base = `${locale === "zh" ? "" : `/${locale}`}/products/tubing/`;
+  const base = `${locale === "zh" || locale === "zh-CN" ? "" : `/${locale}`}/products/tubing/`;
   return isTubingMaterial(material) ? `${base}${material}/` : base;
 }
 

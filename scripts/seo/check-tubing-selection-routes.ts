@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { onRequest } from "../../functions/_middleware";
 import { getLegacyTubingSelectionTarget, getTubingSelectionPath, getTubingDetailPath, getTubingLanguagePath, tubingMaterials } from "../../data/products/selection/tubing-selection-routes";
 import { getTubingMaterialCopy } from "../../data/products/tubing/content";
+import { getEnabledLocaleCodes } from "../../data/languages";
 
 function readProductModel(html: string, path: string): Record<string, unknown> {
   const models = Array.from(html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g))
@@ -30,13 +31,18 @@ async function main() {
   let detailPages = 0;
   let pumpPages = 0;
   const sitemap = baseUrl ? undefined : readFileSync(join("out", "sitemap.xml"), "utf8");
+  const languageLocales = ["zh", ...getEnabledLocaleCodes()];
+  assert.equal(getTubingSelectionPath("zh-CN"), "/products/tubing/");
   for (const material of tubingMaterials) {
-    for (const source of ["zh", "en", "es", "fr", "ko", "ru"]) {
-      for (const target of ["zh", "en", "es", "fr", "ko", "ru"]) {
+    // The header passes zh-CN; switching to Chinese must keep the material and page role.
+    assert.equal(getTubingLanguagePath(`/en/products/tubing/${material}/`, "zh-CN"), `/products/tubing/${material}/`);
+    assert.equal(getTubingLanguagePath(`/en/products/tubing/${material}/details/`, "zh-CN"), `/products/tubing/${material}/details/`);
+    for (const source of languageLocales) {
+      for (const target of languageLocales) {
         assert.equal(getTubingLanguagePath(getTubingDetailPath(source, material), target), getTubingDetailPath(target, material));
-        if (["zh", "en"].includes(source)) {
+        if (["zh", "zh-CN", "en"].includes(source)) {
           assert.equal(getTubingLanguagePath(getTubingSelectionPath(source, material), target),
-            ["zh", "en"].includes(target) ? getTubingSelectionPath(target, material) : `${getTubingSelectionPath(target)}?productType=${material}`);
+            ["zh", "zh-CN", "en"].includes(target) ? getTubingSelectionPath(target, material) : `${getTubingSelectionPath(target)}?productType=${material}`);
         }
       }
     }
