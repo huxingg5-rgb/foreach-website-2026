@@ -1,0 +1,589 @@
+{
+  "metadata": {
+    "title": "¿Qué es un racor con anillo de compresión? Diseño, medidas y selección",
+    "seoTitle": "Racores con anillo de compresión: diseño y selección | FOREACH",
+    "seoDescription": "Conozca los racores HSF6 y kits CL-1S/CL-1X de FOREACH: roscas, tubos, materiales, alicates de montaje, par de apriete y presión.",
+    "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-fitting-cover-photo.png",
+    "coverAlt": "Racor FOREACH con tubo, anillo de compresión de acero inoxidable y férula de sellado"
+  },
+  "deck": "El racor combina una tuerca roscada, un anillo de compresión y una férula de sellado sin rebordear previamente el tubo. Esta guía presenta HSF6 y CL-1S de FOREACH: conexiones M6×1 y 1/4-28 UNF, tubos de 1,6–3,2 mm de diámetro exterior, tuercas de PPS/PEEK, anillos de acero inoxidable y férulas de PEEK, así como prefabricación, instalación y mantenimiento.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un racor con anillo de compresión es una conexión roscada sin rebordeado para circuitos microfluídicos de instrumentos. Incluye tuerca, anillo de compresión y férula de sellado. Tras cortar el tubo perpendicularmente, el anillo y la férula compatibles se premontan en su extremo. La tuerca comprime el conjunto contra el puerto receptor para sellarlo. Se utiliza en transferencia de reactivos, manipulación de muestras y lavado, conectando tubos con bombas, válvulas y módulos fluídicos de instrumentos analíticos y automatización de laboratorio."
+    },
+    {
+      "type": "paragraph",
+      "text": "Los racores compactos FOREACH HSF6 ofrecen roscas M6×1 y 1/4-28 UNF. Las configuraciones descritas admiten tubos de 1,6, 2,0, 2,5, 3,0 y 3,2 mm de diámetro exterior. Las tuercas son de PPS o PEEK; el kit CL-1S combina un anillo de acero inoxidable y una férula de PEEK. El HSF6 ilustrado tiene una cabeza de 6,0 mm de diámetro y una longitud total de 20,0 mm. Estas medidas permiten evaluar la separación entre puertos y el espacio axial. La tabla siguiente detalla las combinaciones."
+    },
+    {
+      "type": "paragraph",
+      "text": "La conexión permite montaje en campo o conjuntos prefabricados con longitud, racores y etiquetas definidos. Durante el mantenimiento, los extremos completos pueden desconectarse y reconectarse según los requisitos aplicables. El artículo se centra en HSF6/CL-1S y describe por separado CL-1X-16 para conexiones pequeñas 6-40 UNF. Otras series y diámetros requieren sus propios planos."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-fittings.webp",
+      "alt": "Tuercas FOREACH, kits de anillo y férula, y extremos montados",
+      "width": 453,
+      "height": 313,
+      "caption": "La tuerca conecta con el puerto; el anillo y la férula forman el kit del extremo. Seleccione la tuerca y el kit por separado."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Componentes del racor: tuerca, anillo y férula",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aquí, racor con anillo de compresión designa una conexión microfluídica con anillo y férula de sellado independientes. Es una conexión sin rebordeado, pero este término no implica que todos los racores empleen las mismas piezas. El anillo de compresión no es un anillo elástico de retención para ranuras de ejes."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Componente",
+            "Función",
+            "Criterios de selección"
+          ],
+          "rows": [
+            [
+              "Tuerca roscada",
+              "Se enrosca en el puerto y transmite carga axial al kit del extremo",
+              "Rosca, paso del tubo, material y dimensiones exteriores"
+            ],
+            [
+              "Anillo de compresión",
+              "Rodea la zona de acoplamiento de la férula y ayuda a comprimir y fijar el conjunto",
+              "Seleccionarlo con su férula; comprobar orientación y premontaje"
+            ],
+            [
+              "Férula de sellado",
+              "Se acopla al tubo y al puerto para formar la interfaz de sellado",
+              "Diámetro exterior, material, cara y posición"
+            ],
+            [
+              "Tubo y puerto receptor",
+              "Forman el conducto y las superficies de sellado",
+              "Diámetros interior/exterior, corte, fondo del puerto y profundidad de montaje"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "En CL-1S, el anillo es de acero inoxidable SUS y la férula de PEEK. Tuerca, anillo y férula son piezas distintas. Una tuerca de PEEK o PPS no significa que todas las superficies mojadas sean de ese material."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-structure-international.png",
+          "alt": "Posición de la tuerca, anillo inoxidable y férula de PEEK",
+          "width": 1719,
+          "height": 915,
+          "caption": "Tres piezas principales: tuerca, anillo de acero inoxidable y férula. El tubo atraviesa las piezas en ese orden. A — férula de sellado; B — anillo de compresión de acero inoxidable; C — tuerca del racor."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo sella y por qué usar conjuntos prefabricados?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Al enroscar la tuerca en un puerto de fondo plano, la carga axial pasa al anillo y a la férula. La compresión en la posición prevista asienta el extremo contra la superficie de sellado. Deben controlarse tanto el acoplamiento anillo-férula como la posición del tubo. La rosca aporta fijación y fuerza; es necesario comprobar el contacto correcto de las caras."
+        },
+        {
+          "type": "subheading",
+          "title": "Comprobar que el tubo quede enrasado con la cara de la férula"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Posición del extremo",
+            "Posible efecto",
+            "Comprobación"
+          ],
+          "rows": [
+            [
+              "Enrasado con la férula",
+              "Proporciona la posición prevista",
+              "Corte perpendicular y limpio; posición estable tras el prensado"
+            ],
+            [
+              "Retraído dentro de la férula",
+              "Puede dejar un espacio adicional",
+              "Revisar longitud de corte y desplazamiento durante el premontaje"
+            ],
+            [
+              "Sobresaliente o cortado en ángulo",
+              "Puede tocar el puerto antes de tiempo e impedir el asiento",
+              "Revisar preparación y posición del conjunto"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La fotografía identifica la tuerca, el tubo, el anillo inoxidable y la férula, y muestra su disposición."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-components-international.png",
+          "alt": "Extremo de tubo con identificación de férula, anillo inoxidable, tubo y tuerca",
+          "width": 1584,
+          "height": 993,
+          "caption": "A — férula de sellado; B — anillo de compresión de acero inoxidable; C — tubo; D — tuerca del racor."
+        },
+        {
+          "type": "subheading",
+          "title": "Preparar el extremo antes de conectarlo al equipo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Defina tubo, longitud, piezas y etiquetas antes de prefabricar. Preparar los extremos facilita el montaje por lotes y la identificación. Durante la conexión, la tuerca puede girar respecto al tubo para reducir su torsión. No es una unión rotativa para giro continuo durante el funcionamiento."
+        },
+        {
+          "type": "paragraph",
+          "text": "Puede conservarse el extremo completo si está en buen estado, tras revisar la cara de la férula, la posición del anillo y el tubo. Reconectar un extremo intacto es distinto de desmontar un anillo usado e instalarlo en otro tubo."
+        }
+      ]
+    },
+    {
+      "title": "Roscas, tubos, materiales y dimensiones HSF6",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "HSF6 identifica las tuercas; CL-1S y CL-1X son kits de anillo y férula. Seleccione primero la tuerca según el puerto y luego el kit según el diámetro exterior real. No son tres series intercambiables de racores. La tabla recoge las configuraciones HSF6 tratadas, no toda la gama."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Modelo completo",
+            "Rosca",
+            "Diámetro exterior compatible",
+            "Material de la tuerca"
+          ],
+          "rows": [
+            [
+              "HSF6-M6-16-PS-B",
+              "M6×1",
+              "1,6 mm",
+              "PPS"
+            ],
+            [
+              "HSF6-M6-32-PS-B",
+              "M6×1",
+              "2,0, 2,5, 3,0, 3,2 mm",
+              "PPS"
+            ],
+            [
+              "HSF6-U28-16-PK-N",
+              "1/4-28 UNF",
+              "1,6 mm",
+              "PEEK"
+            ],
+            [
+              "HSF6-U28-16-PS-B",
+              "1/4-28 UNF",
+              "1,6 mm",
+              "PPS"
+            ],
+            [
+              "HSF6-U28-32-PK-N",
+              "1/4-28 UNF",
+              "2,0, 2,5, 3,0, 3,2 mm",
+              "PEEK"
+            ],
+            [
+              "HSF6-U28-32-PS-B",
+              "1/4-28 UNF",
+              "2,0, 2,5, 3,0, 3,2 mm",
+              "PPS"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Un tamaño de tuerca puede necesitar distintos kits"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Diámetro exterior real",
+            "Código de tamaño HSF6",
+            "Kit de anillo y férula",
+            "Materiales del kit"
+          ],
+          "rows": [
+            [
+              "1,6 mm",
+              "Tamaño 16, M6/U28",
+              "CL-1S-16",
+              "Anillo SUS + férula PEEK"
+            ],
+            [
+              "2,0 mm",
+              "Tamaño 32, M6/U28",
+              "CL-1S-20",
+              "Anillo SUS + férula PEEK"
+            ],
+            [
+              "2,5 mm",
+              "Tamaño 32, M6/U28",
+              "CL-1S-25",
+              "Anillo SUS + férula PEEK"
+            ],
+            [
+              "3,0 mm",
+              "Tamaño 32, M6/U28",
+              "CL-1S-30",
+              "Anillo SUS + férula PEEK"
+            ],
+            [
+              "3,2 mm",
+              "Tamaño 32, M6/U28",
+              "CL-1S-32",
+              "Anillo SUS + férula PEEK"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Para tubo de 2,5 mm de diámetro exterior y puerto M6 de fondo plano, compruebe HSF6-M6-32-PS-B con CL-1S-25. El código 32 corresponde al grupo de tamaño de la tuerca. El kit debe ser 25 para el tubo de 2,5 mm; no elija CL-1S-32 solo para igualar el código."
+        },
+        {
+          "type": "subheading",
+          "title": "CL-1X-16 es una configuración pequeña diferente"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-tube-ends-photo.png",
+          "alt": "Racores negros y de color natural con anillos metálicos, férulas y extremos de tubo",
+          "width": 2459,
+          "height": 1492,
+          "caption": "Fotografía de los extremos: posición del anillo metálico, férula y tubo. Confirme compatibilidad y dimensiones según las especificaciones correspondientes."
+        },
+        {
+          "type": "paragraph",
+          "text": "CL-1X-16 admite tubos de 1,6 mm de diámetro exterior y utiliza anillo SUS y férula PEEK. Se combina con HFL6-U40-16, rosca 6-40 UNF. Aunque comparte diámetro de tubo con CL-1S-16, difieren el puerto, la geometría y la tuerca; no son intercambiables directamente."
+        },
+        {
+          "type": "subheading",
+          "title": "Las dimensiones determinan el espacio; la profundidad también depende del puerto"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dimensión HSF6 ilustrada",
+            "Valor",
+            "Uso durante el montaje"
+          ],
+          "rows": [
+            [
+              "Diámetro de la cabeza",
+              "6,0 mm",
+              "Comprobar separación y acceso para apretar"
+            ],
+            [
+              "Longitud total de la tuerca",
+              "20,0 mm",
+              "Combinar con la profundidad de montaje para calcular la parte expuesta"
+            ],
+            [
+              "Dimensión axial de la sección delantera",
+              "10,5 mm",
+              "Contrastar con profundidad del puerto y posición del kit; no equivale a engrane efectivo ni a profundidad real"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Estas medidas corresponden al HSF6 ilustrado, no a HSF, HFL6 ni a otras configuraciones. El conjunto debe alcanzar el asiento conservando suficiente engrane de rosca. Si la tuerca toca la superficie del equipo antes de que asiente la férula, aumentar el par no corrige la incompatibilidad dimensional."
+        }
+      ]
+    },
+    {
+      "title": "Elegir entre anillo de compresión, férula y rebordeado",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Compare la preparación del tubo y las piezas de sellado, y después el montaje y mantenimiento. Las conexiones con anillo y las convencionales con férula evitan rebordear. Las primeras usan anillo y férula de sellado separados; las segundas usan una férula compatible para sujetar y sellar."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Criterio",
+            "Conexión con anillo de compresión",
+            "Conexión convencional con férula sin rebordeado",
+            "Conexión con tubo rebordeado"
+          ],
+          "rows": [
+            [
+              "Preparación del extremo",
+              "Corte perpendicular y montaje de anillo y férula",
+              "Corte perpendicular y montaje de férula",
+              "Formación previa del reborde"
+            ],
+            [
+              "Piezas principales",
+              "Tuerca, anillo y férula de sellado",
+              "Tuerca y férula",
+              "Tuerca, reborde del tubo y arandela compatible"
+            ],
+            [
+              "Aspectos del montaje",
+              "Premontar con alicates específicos; revisar orientación, enrase y prensado",
+              "Férula correcta, orientación y asiento del tubo",
+              "Calidad del reborde y contacto de las caras"
+            ],
+            [
+              "Mantenimiento",
+              "Revisar el extremo completo y reconectar según lo indicado",
+              "Preparar férulas de repuesto para los modelos de una sola instalación del artículo relacionado",
+              "Revisar reborde, arandela y puerto antes de reconectar"
+            ],
+            [
+              "Casos a evaluar",
+              "Tubos prefabricados y mantenimiento conservando el extremo montado",
+              "Montaje sin rebordeado y sustitución accesible de férulas",
+              "Proceso de rebordeado consolidado o conjuntos prefabricados rebordeados"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Son diferencias de montaje, no una clasificación por presión. Para mantenimiento frecuente, compare inspección y sustitución. En puertos próximos, compare dimensiones y acceso de herramientas, no solo el nombre de la conexión."
+        },
+        {
+          "type": "links",
+          "ordered": true,
+          "items": [
+            {
+              "href": "/es/resources/technical-articles/what-is-a-ferrule-fitting/",
+              "label": "Racores con férula sin rebordeado: diseño, medidas y selección"
+            },
+            {
+              "href": "/es/resources/technical-articles/flanged-tubing-assemblies-selection-guide/",
+              "label": "Conjuntos de tubos rebordeados: sellado, puertos y selección"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Aplicaciones y configuración del conjunto de tubos",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Comience por las tareas de montaje y mantenimiento. Estos ejemplos orientan la selección; la idoneidad depende también del fluido, la temperatura y la presión."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Aplicación",
+            "Objetivo del conjunto",
+            "Prioridades de configuración"
+          ],
+          "rows": [
+            [
+              "Transferencia de reactivos en instrumentos analíticos",
+              "Preparar conexiones y longitudes antes de instalar",
+              "Puertos, materiales mojados, diámetro interior y longitud"
+            ],
+            [
+              "Manipulación de muestras y lavado",
+              "Controlar el extremo y facilitar identificación y mantenimiento",
+              "Espacios en extremos, limpieza, arrastre residual y etiquetas"
+            ],
+            [
+              "Entre bombas, válvulas y módulos fluídicos",
+              "Normalizar montaje y repuestos",
+              "Separación de puertos, dirección del tubo, pulsaciones y sujeción"
+            ],
+            [
+              "Módulos desmontados para mantenimiento",
+              "Conservar y reconectar el extremo completo",
+              "Frecuencia de desconexión, inspección de caras y sustitución"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "FOREACH ofrece conjuntos con tubos FEP o PTFE, longitudes y etiquetas especificadas. El diámetro exterior determina la compatibilidad; el interior y la longitud influyen en resistencia al flujo y volumen interno. Con igual diámetro exterior y distinto interior, pueden variar el caudal y el estado de la pared tras prensar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Facilite planos de ambos puertos, diámetros interior/exterior, longitud terminada y referencia de medida, fluido, limpieza, temperatura, presiones continua y máxima, y mantenimiento. Seleccione cada extremo por separado si difieren los puertos. Las juntas tóricas o topes del tubo limitan el recorrido de la tuerca; no sellan el puerto del equipo."
+        }
+      ]
+    },
+    {
+      "title": "Instalación, presión y apriete",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Separar premontaje inicial y conexión al puerto"
+        },
+        {
+          "type": "paragraph",
+          "text": "El premontaje requiere alicates específicos compatibles para colocar a presión el anillo y la férula. La presión manual difícilmente permite un montaje correcto. Apretar más la tuerca no sustituye este proceso. Antes de reconectar durante el mantenimiento, revise el extremo ya montado."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los alicates FOREACH son T-SF-4-SS, código 959016. Para montar los tubos, prepare la herramienta compatible con el kit y su diámetro, y confirme posición de sujeción e instrucciones."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-pliers-international.png",
+          "alt": "Alicates específicos FOREACH T-SF-4-SS, código 959016",
+          "width": 1360,
+          "height": 1156,
+          "caption": "Alicates T-SF-4-SS, código 959016, para premontar kits de anillo de compresión."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-assembly-international.png",
+          "alt": "Orden de tuerca, anillo y férula con extremo enrasado",
+          "width": 1323,
+          "height": 1189,
+          "caption": "A — anillo de compresión de acero inoxidable; B — férula de sellado. Introduzca tuerca, anillo y férula en ese orden, compruebe orientación y enrase el tubo con la férula."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Corte perpendicular: use un cortatubos adecuado, retire residuos y compruebe aplastamientos, rebabas o grietas.",
+            "Orientación: introduzca tuerca, anillo y férula según el esquema del kit.",
+            "Posición y premontaje: enrase el tubo con la férula, prense con los alicates específicos y compruebe asiento del anillo y posibles desplazamientos del tubo.",
+            "Conexión: limpie e inspeccione el asiento, mantenga el extremo colocado y apriete según lo indicado.",
+            "Comprobación: fije el tubo y verifique fugas, entrada de aire y desplazamiento con el fluido, temperatura y presión especificados."
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "¿Qué presión admite el racor?"
+        },
+        {
+          "type": "paragraph",
+          "text": "La presión admisible corresponde al conjunto completo de tuerca, kit, tubo y puerto, con temperatura y condiciones definidas. Aquí no se asigna una presión nominal común a HSF6/CL-1S. Obtenga el valor de la combinación elegida. Compruebe presión positiva, vacío y picos de arranque/parada; una tuerca PEEK o un anillo metálico por sí solos no determinan la capacidad."
+        },
+        {
+          "type": "subheading",
+          "title": "¿Qué par de instalación se recomienda?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para racores plásticos FOREACH de tubo rígido con rosca M6×1 o 1/4-28 UNF, se recomienda 0,25–0,30 N·m. Para racores plásticos U40 con anillo y rosca 6-40 UNF, 0,08–0,15 N·m. Seleccione según rosca y material de la tuerca."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Rosca",
+            "Racor aplicable",
+            "Par de instalación recomendado"
+          ],
+          "rows": [
+            [
+              "M6×1",
+              "Racor plástico para tubo rígido",
+              "0,25–0,30 N·m"
+            ],
+            [
+              "1/4-28 UNF",
+              "Racor plástico para tubo rígido",
+              "0,25–0,30 N·m"
+            ],
+            [
+              "6-40 UNF",
+              "Racor plástico U40 con anillo de compresión",
+              "0,08–0,15 N·m"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Estos valores corresponden al apriete roscado en el puerto, no a la fuerza de premontaje. Monte correctamente anillo y férula, aplique el par correspondiente y compruebe sellado y posición del tubo."
+        },
+        {
+          "type": "subheading",
+          "title": "Reconexión y diagnóstico"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Síntoma",
+            "Primera comprobación",
+            "Actuación"
+          ],
+          "rows": [
+            [
+              "Fuga en la primera conexión",
+              "Compatibilidad, orientación de prensado, enrase y fondo del puerto",
+              "Detener y despresurizar; corregir posición o piezas y repetir prueba"
+            ],
+            [
+              "Fuga tras mantenimiento",
+              "Cara sucia o dañada, movimiento del anillo o deformación del tubo",
+              "Determinar si requiere limpieza, reposicionamiento o sustitución"
+            ],
+            [
+              "Menor caudal tras cambiar el conjunto",
+              "Diámetro interior, longitud, residuos, compresión del extremo y curvas cerradas",
+              "Comparar caudal y caída de presión con igual fluido y condiciones de bomba"
+            ],
+            [
+              "Prueba estática correcta, fallo en servicio",
+              "Picos de arranque/parada, temperatura, vibración y cargas externas",
+              "Revisar fijación y holgura de movimiento; validar con ciclos reales"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La reconexión permitida no implica ciclos ilimitados ni ausencia de mantenimiento. Defina ciclos de ensayo, condiciones y fuga admisible; registre sellado, posición y caudal tras cada ciclo. Actúe según los requisitos ante desgaste, grietas o desplazamiento del anillo."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Preguntas frecuentes",
+  "faqItems": [
+    {
+      "question": "¿Esta conexión también es sin rebordeado?",
+      "answer": "Sí. El diseño descrito usa tubo cortado perpendicularmente, sin reborde previo. Los racores convencionales con férula también pueden evitar el rebordeado, pero piezas y montaje son diferentes; el nombre no garantiza compatibilidad."
+    },
+    {
+      "question": "Si HSF6 lleva el código 32, ¿el kit debe ser 32?",
+      "answer": "No. Las tuercas HSF6 de tamaño 32 descritas cubren 2,0, 2,5, 3,0 y 3,2 mm de diámetro exterior. CL-1S se selecciona por el diámetro real: para 2,5 mm, CL-1S-25. Son dos selecciones distintas."
+    },
+    {
+      "question": "¿Son intercambiables CL-1S-16 y CL-1X-16?",
+      "answer": "No. Ambos admiten 1,6 mm, pero CL-1S corresponde a HSF6 M6/U28 y CL-1X-16 a HFL6-U40-16 de 6-40 UNF. Compruebe tuerca, puerto y geometría del kit."
+    },
+    {
+      "question": "¿Se necesita una herramienta específica?",
+      "answer": "Sí. El premontaje requiere alicates compatibles: FOREACH T-SF-4-SS, código 959016. La presión manual difícilmente asienta correctamente anillo y férula; aumentar el par no sustituye el premontaje. Verifique compatibilidad de herramienta, kit y diámetro. Revise los extremos completos antes de reconectarlos."
+    },
+    {
+      "question": "¿Qué par debe utilizarse?",
+      "answer": "Los racores plásticos FOREACH de tubo rígido M6×1 o 1/4-28 UNF requieren el par recomendado de 0,25–0,30 N·m; los U40 plásticos 6-40 UNF, 0,08–0,15 N·m. Son valores de apriete al puerto, no fuerza de premontaje."
+    },
+    {
+      "question": "¿Puede trasladarse un anillo usado a otro tubo?",
+      "answer": "No se deduce de la posibilidad de reconectar. Inspeccione caras, posición del anillo y tubo antes de reconectar el extremo intacto. Trasladar un anillo a otro tubo es una operación distinta y depende de los requisitos del kit."
+    },
+    {
+      "question": "¿Un extremo enrasado garantiza volumen muerto cero?",
+      "answer": "No. El corte perpendicular y la posición correcta ayudan a controlar espacios, pero el volumen residual depende también del puerto, diámetro interior y montaje. Evalúe arrastre y limpieza en los circuitos de muestras y lavado."
+    }
+  ],
+  "cta": {
+    "title": "¿Necesita seleccionar racores o tubos prefabricados?",
+    "description": "Facilite puertos, diámetros, longitud, fluido, temperatura, presión y mantenimiento para confirmar piezas compatibles, instalación y validación de muestras.",
+    "contactLabel": "Contactar con soporte técnico",
+    "productsLabel": "Ver racores para tubo rígido",
+    "productsHref": "/es/products/fittings/hard-tube-fittings/"
+  },
+  "navigationLabels": [
+    "Qué es un racor con anillo de compresión",
+    "Componentes y estanqueidad",
+    "Modelos, materiales y dimensiones",
+    "Comparación de tres conexiones",
+    "Aplicaciones y selección",
+    "Instalación, presión y mantenimiento"
+  ]
+}

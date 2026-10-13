@@ -1,0 +1,508 @@
+{
+  "metadata": {
+    "title": "Racores con férula sin reborde: funcionamiento, medidas y selección",
+    "seoTitle": "Racores con férula sin reborde: funcionamiento, medidas y selección | FOREACH",
+    "seoDescription": "Cómo sellan los racores flangeless los tubos rígidos de microfluídica. Compare medidas, materiales y montaje de las series FOREACH HN, HN6, HNF y HNF6.",
+    "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings-photo.png",
+    "coverAlt": "Tuercas FOREACH negras, azules y de color natural con férulas independientes"
+  },
+  "deck": "Los racores sin reborde comprimen una férula alrededor del tubo mediante una tuerca roscada. Las series FOREACH HN, HN6, HNF y HNF6 cubren diámetros exteriores de 1,6, 2,0, 2,5, 3,0 y 3,2 mm, roscas M6×1 y 1/4-28 UNF y varios materiales para reactivos, muestras y lavado en instrumentación analítica y automatización de laboratorio.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un racor con férula sin reborde es una conexión roscada para tubos rígidos de microfluídica. La denominación flangeless indica que el tubo no necesita un reborde previo; la férula es la pieza independiente que lo sujeta y participa en el sellado. Al apretar la tuerca, la férula se comprime contra el tubo y el puerto receptor. Estas conexiones unen tubos con bombas, válvulas y módulos fluídicos en circuitos de reactivos, muestras y lavado."
+    },
+    {
+      "type": "paragraph",
+      "text": "FOREACH ofrece HN, HN6, HNF y HNF6, con cabezas moleteadas estándar o compactas. Admiten diámetros exteriores de tubo de 1,6, 2,0, 2,5, 3,0 y 3,2 mm y puertos de fondo plano M6×1 o 1/4-28 UNF. El HN6 ilustrado tiene una cabeza de 6,4 mm de diámetro y una longitud total de 15,5 mm; compruebe el plano de cada una de las demás series."
+    },
+    {
+      "type": "paragraph",
+      "text": "Las tuercas HN y HN6 disponen de opciones PEEK, PVDF, POM y PPS. Las configuraciones HNF y HNF6 tratadas aquí utilizan PVDF y PPS, respectivamente. Las férulas independientes pueden ser de PP o ETFE. Seleccione la combinación según diámetro exterior, fluido y espacio, confirmando materiales y medidas por referencia."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings-photo.png",
+      "alt": "Tuercas FOREACH negras, azules y de color natural junto a férulas independientes",
+      "width": 1846,
+      "height": 1245,
+      "caption": "Tuercas y férulas. Seleccione la férula de cada referencia; un aspecto similar no garantiza compatibilidad."
+    }
+  ],
+  "sections": [
+    {
+      "title": "¿Qué es un racor con férula sin reborde?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aquí se describen racores roscados de microfluídica con férula independiente. El tubo atraviesa la tuerca y la férula hasta el puerto; el apriete aplica fuerza axial. La férula sujeta y sella alrededor del tubo: no es una abrazadera de manguera ni una conexión sanitaria tipo clamp."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esta solución utiliza un extremo cortado a escuadra y evita conformar un reborde. Aun así, deben coincidir diámetro exterior, calidad del corte, férula y puerto receptor."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Componente",
+            "Función",
+            "Comprobaciones"
+          ],
+          "rows": [
+            [
+              "Tuerca roscada",
+              "Se enrosca en el puerto y transmite fuerza a la férula",
+              "Serie, rosca, paso del tubo, material y espacio"
+            ],
+            [
+              "Férula",
+              "Sujeta el tubo y participa en el sellado",
+              "Referencia, diámetro exterior, material, orientación y montaje"
+            ],
+            [
+              "Tubo",
+              "Transporta fluido y contacta con la férula",
+              "Diámetros interior y exterior, tolerancia, material, espesor y corte"
+            ],
+            [
+              "Puerto receptor",
+              "Aporta la rosca y el asiento de sellado",
+              "Rosca, fondo, profundidad y superficie de sellado"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Las configuraciones HN, HN6, HNF y HNF6 de este artículo corresponden a puertos de fondo plano M6×1 o 1/4-28 UNF. Otras geometrías, roscas y racores de alta presión requieren sus propios planos e instrucciones."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo se forma el sello?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pase la tuerca y la férula adecuadas sobre el tubo cortado a escuadra, respetando la orientación. Introduzca el conjunto en el puerto compatible y mantenga el extremo en su posición. El avance de la tuerca comprime axialmente la férula, que sujeta el tubo y sella contra el puerto. El sellado exige un asiento correcto; no depende solo de la fricción de la rosca."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-structure-es.webp",
+          "alt": "Racor compacto HN6, férula y tubo con sección acotada",
+          "width": 1759,
+          "height": 894,
+          "caption": "Ejemplo HN6: cabeza de 6,4 mm y longitud total de 15,5 mm, correspondientes al modelo ilustrado. Respete la posición del tubo y la orientación de la férula especificadas."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un tubo desplazado, una férula invertida o un diámetro incorrecto pueden producir resistencia al apriete antes de que el sello asiente. Más fuerza no corrige la incompatibilidad y puede deformar la férula o el tubo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Compruebe por separado el acoplamiento de roscas y el asiento de tubo, férula y puerto. M6×1 y 1/4-28 UNF son distintas: dar unas vueltas no demuestra compatibilidad. No compense una geometría incorrecta con cinta o sellador de roscas."
+        }
+      ]
+    },
+    {
+      "title": "HN, HN6, HNF y HNF6: longitud de rosca y espacio de montaje",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Las series difieren en cabeza, material, longitud roscada, longitud total y férula. Aunque coincidan rosca y diámetro exterior del tubo, revise las medidas del conjunto completo."
+        },
+        {
+          "type": "subheading",
+          "title": "La zona roscada difiere en 2,4 mm: ¿qué debe coincidir?"
+        },
+        {
+          "type": "paragraph",
+          "text": "La zona roscada mide 8,1 mm en HN y HN6 y 10,5 mm en HNF y HNF6: una diferencia de 2,4 mm. Es la cota axial desde la cabeza o el hombro hasta el extremo delantero. Compruébela junto con la profundidad del puerto, la posición de la rosca interior y la compresión de la férula."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Serie",
+            "Cabeza",
+            "Longitud roscada",
+            "Longitud total"
+          ],
+          "rows": [
+            [
+              "HN",
+              "Moleteada estándar",
+              "8,1 mm",
+              "18,1 mm"
+            ],
+            [
+              "HN6",
+              "Compacta",
+              "8,1 mm",
+              "15,5 mm"
+            ],
+            [
+              "HNF",
+              "Moleteada estándar",
+              "10,5 mm",
+              "16,5 mm"
+            ],
+            [
+              "HNF6",
+              "Compacta",
+              "10,5 mm",
+              "20,0 mm"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto no significa que HNF o HNF6 entren siempre 2,4 mm más en el mismo puerto. La profundidad montada depende del asiento del puerto y la férula. La longitud efectiva de acoplamiento corresponde a la parte de las roscas que engrana tras el montaje. Confirme aparte la posición del extremo del tubo."
+        },
+        {
+          "type": "paragraph",
+          "text": "La tuerca debe comprimir la férula asentada y mantener el acoplamiento de rosca requerido. Si el hombro toca el equipo antes de comprimir la férula, puede parecer apretada aunque exista fuga. Revise las medidas: más par no resuelve un desajuste axial."
+        },
+        {
+          "type": "paragraph",
+          "text": "La sección y el despiece muestran la posición relativa de tuerca, férula, tubo y puerto. No representan medidas ni profundidades montadas de todos los modelos; utilice el plano correspondiente."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-port-section.png",
+          "alt": "Sección con tuerca, tubo, férula y puerto receptor",
+          "width": 513,
+          "height": 1332,
+          "caption": "Sección: el tubo atraviesa la tuerca y la férula; la férula se asienta en el puerto."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-exploded.png",
+          "alt": "Despiece: A tubo, B tuerca, C férula, D puerto receptor",
+          "width": 1190,
+          "height": 1269,
+          "caption": "A tubo; B tuerca del racor; C férula; D puerto receptor."
+        },
+        {
+          "type": "subheading",
+          "title": "Compare por separado la cabeza y la longitud total"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrules-and-fittings-photo.png",
+          "alt": "Férulas independientes y tuercas FOREACH de distintas formas",
+          "width": 2425,
+          "height": 1092,
+          "caption": "Férulas a la izquierda; tuercas y férulas a la derecha. Medidas y combinaciones dependen de la referencia exacta."
+        },
+        {
+          "type": "paragraph",
+          "text": "La longitud total permite evaluar el espacio axial; la altura saliente depende también de la inserción. HN6 mide 15,5 mm frente a los 18,1 mm de HN. HNF6 tiene cabeza compacta, pero mide 20,0 mm frente a los 16,5 mm de HNF. Para puertos próximos, compare el diámetro de cabeza; si falta espacio axial, compruebe longitud, saliente, acceso de apriete y recorrido del tubo."
+        },
+        {
+          "type": "subheading",
+          "title": "Compruebe tamaños de tubo, materiales y férulas"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Serie",
+            "Cabeza y materiales",
+            "Selección del diámetro exterior"
+          ],
+          "rows": [
+            [
+              "HN",
+              "Moleteada estándar; PEEK, PVDF, POM o PPS",
+              "Grupos de tuerca: 1,6 mm y 2,0–3,2 mm; férula para cada diámetro real"
+            ],
+            [
+              "HN6",
+              "Compacta; PEEK, PVDF, POM o PPS",
+              "Como HN, distingue grupo de tuerca y tamaño exacto de férula"
+            ],
+            [
+              "HNF",
+              "Moleteada estándar; modelos representativos en PVDF",
+              "Selección individual: 1,6, 2,0, 2,5, 3,0 o 3,2 mm"
+            ],
+            [
+              "HNF6",
+              "Compacta; modelos representativos en PPS",
+              "Selección individual: 1,6, 2,0, 2,5, 3,0 o 3,2 mm"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "El grupo “32” de HN y HN6 cubre tubos de 2,0, 2,5, 3,0 y 3,2 mm de exterior. No implica que una férula sirva para los cuatro: el tubo de 2,5 mm necesita una férula para ese diámetro. HNF y HNF6 se seleccionan por diámetro individual, sin aplicar la agrupación de HN."
+        },
+        {
+          "type": "subheading",
+          "title": "Confirme la referencia completa de la férula"
+        },
+        {
+          "type": "paragraph",
+          "text": "HN y HN6 utilizan CL-0X con códigos 16, 20, 25, 30 y 32. CL-0 y CL-0X tienen geometrías distintas; compartir el código “25” no permite intercambiarlas. Para HNF y HNF6, confirme la férula con la referencia completa de tuerca y la lista aprobada de componentes antes de comprar o montar."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seleccione por separado materiales de tuerca y férula. Las opciones PP y ETFE se confirman por referencia completa. Una tuerca PEEK o PVDF no implica que todas las superficies mojadas sean de ese material. El color tampoco identifica de forma suficiente el material."
+        }
+      ]
+    },
+    {
+      "title": "¿En qué se diferencia de una conexión con reborde?",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/tube-end-connections-photo.png",
+          "alt": "Tres conjuntos FOREACH de conexión de extremos de tubo",
+          "width": 2172,
+          "height": 1158,
+          "caption": "Ejemplos del extremo delantero del racor y sus componentes asociados."
+        },
+        {
+          "type": "paragraph",
+          "text": "La diferencia está en la preparación del tubo y las piezas de sellado. La conexión con reborde comprime un extremo previamente conformado mediante tuerca y arandela. La conexión con férula utiliza tubo cortado a escuadra y una férula independiente. Seleccione según fabricación y mantenimiento, no solo por número de pasos."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Aspecto",
+            "Con férula",
+            "Con reborde"
+          ],
+          "rows": [
+            [
+              "Preparación",
+              "Corte a escuadra y limpieza, sin reborde",
+              "Conformar el reborde según material y tamaño"
+            ],
+            [
+              "Sellado",
+              "Tubo, férula y puerto",
+              "Reborde, arandela y puerto de fondo plano"
+            ],
+            [
+              "Comprobaciones",
+              "Serie, tamaño, orientación y posición del tubo",
+              "Calidad del reborde, arandela y contacto de sellado"
+            ],
+            [
+              "Mantenimiento",
+              "Sustituir las férulas aquí descritas según su requisito de instalación única",
+              "Inspeccionar reborde, arandela y puerto según el conjunto"
+            ],
+            [
+              "Intercambiabilidad",
+              "Verificar todo el conjunto, no solo rosca y diámetro",
+              "Verificar igualmente puerto y componentes"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "El reborde puede convenir si ya existe un proceso estable de conformado o se entregan tubos premontados. La férula permite evitar ese conformado y sustituir la pieza durante el mantenimiento. Presión admisible, sellado prolongado y reconexión dependen de las especificaciones y validación del conjunto."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Más información: ",
+              "href": "/es/resources/technical-articles/flanged-tubing-assemblies-selection-guide/",
+              "label": "Conjuntos de tubos con reborde: estructura y selección"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Las conexiones con anillo de compresión también pueden prescindir del reborde, pero sus manguitos, arandelas y montaje son distintos. Flangeless no identifica una estructura universal. Consulte la guía general para comparar las tres soluciones."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/es/resources/technical-articles/hard-tube-fittings-selection-guide/",
+              "label": "Racores para tubos rígidos: reborde, férula y anillo de compresión",
+              "prefix": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cómo seleccionar el racor adecuado",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Defina el puerto, después el tubo y los componentes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Obtenga la rosca completa y la sección del puerto. El diámetro exterior real determina tuerca y férula; el interior y la longitud influyen en volumen, resistencia y caudal. El orificio de la tuerca aloja el tubo y no equivale automáticamente al diámetro del conducto de fluido."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para tubo de 2,5 mm de exterior con HN6, elija el grupo de tuerca adecuado y CL-0X-25. Compruebe rosca, materiales y tolerancias. Este conjunto candidato aún requiere confirmar presión, compatibilidad química y estanqueidad instalada."
+        },
+        {
+          "type": "subheading",
+          "title": "Seleccione materiales para el fluido y las condiciones reales"
+        },
+        {
+          "type": "paragraph",
+          "text": "Indique composición, concentración, temperatura, contacto y limpieza. Revise tubo, férula y piezas mojadas, y que la pared conserve el paso y la sujeción tras el apriete. La resistencia química no valida cualquier espesor, tolerancia o combinación."
+        },
+        {
+          "type": "subheading",
+          "title": "Compruebe el acceso de montaje y mantenimiento"
+        },
+        {
+          "type": "paragraph",
+          "text": "En puertos próximos revise diámetro e interferencias; junto a carcasas, espacio axial, salida y herramientas. Deje margen para curvas y movimiento sin tracción ni torsión en el racor. Incluya férulas nuevas y su sustitución en el mantenimiento."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Información",
+            "Qué confirma"
+          ],
+          "rows": [
+            [
+              "Rosca y sección del puerto",
+              "Acoplamiento y posición de sellado"
+            ],
+            [
+              "Material, diámetros y tolerancia exterior del tubo",
+              "Ajuste dimensional y sujeción"
+            ],
+            [
+              "Fluido, concentración, temperatura y limpieza",
+              "Compatibilidad y servicio"
+            ],
+            [
+              "Presión continua y máxima, vacío y ciclos de arranque/parada",
+              "Cargas y condiciones de validación"
+            ],
+            [
+              "Separación de puertos, espacio axial y salida",
+              "Montaje, apriete, recorrido y desmontaje"
+            ],
+            [
+              "Frecuencia y método de mantenimiento",
+              "Repuestos y adecuación de la conexión"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Instalación y uso",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Corte a escuadra con una herramienta adecuada. Retire residuos y revise aplastamientos, arañazos o deformaciones. Confirme referencia, orientación y posición del tubo; mantenga el conjunto asentado al apretar. Use el método y par confirmados para esa configuración, sin aplicar un valor universal a todos los racores plásticos."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-assembly-es.webp",
+          "alt": "Orientación típica de tuerca y férula independiente",
+          "width": 1736,
+          "height": 906,
+          "caption": "Montaje típico. La orientación, posición del tubo y apriete deben corresponder a la serie seleccionada."
+        },
+        {
+          "type": "subheading",
+          "title": "Identifique la causa antes de ajustar el montaje"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Síntoma",
+            "Comprobación inicial",
+            "Acción y verificación"
+          ],
+          "rows": [
+            [
+              "Fuga tras el apriete",
+              "Puerto, tamaño, orientación y asiento",
+              "Parar, despresurizar, inspeccionar, sustituir daños y repetir prueba"
+            ],
+            [
+              "Menor caudal tras cambiar racor",
+              "Residuos, compresión, diámetro interior o curvas",
+              "Comparar caudal y caída de presión con el mismo fluido, longitud y bomba"
+            ],
+            [
+              "Fuga solo en marcha",
+              "Picos de presión, temperatura o esfuerzos del tubo",
+              "Revisar fijación y holgura; validar en marcha real"
+            ],
+            [
+              "Fuga tras volver a montar",
+              "Férula deformada, tubo dañado o puerto sucio",
+              "Usar férula nueva para instalación única; revisar y montar"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Los síntomas orientan, pero no demuestran la causa. Menor caudal puede deberse al diámetro interior, residuos o curvas, no al tipo de racor. Compare en condiciones equivalentes para verificar la solución."
+        },
+        {
+          "type": "subheading",
+          "title": "Diferencie sustitución de férula y reutilización de tuerca"
+        },
+        {
+          "type": "paragraph",
+          "text": "Las férulas aquí descritas son para una sola instalación; reinstalarlas puede causar deformación irreversible. Prepare repuestos compatibles. Revise la zona sujetada del tubo y reacondicione el extremo cuando proceda. Evalúe por separado rosca y superficies de carga de la tuerca: sustituir el sello no obliga siempre a desechar todo el racor."
+        },
+        {
+          "type": "subheading",
+          "title": "Valide la conexión completa en el circuito"
+        },
+        {
+          "type": "paragraph",
+          "text": "Compruebe fugas, movimiento y caudal con fluido, temperatura y presión definidos; en aspiración, revise entradas de aire. Ensaye ciclos, pulsaciones, cambios térmicos y movimientos reales. Registre duración, ciclos y fuga admisible. La prueba estática solo valida sus condiciones, no todo el equipo."
+        },
+        {
+          "type": "paragraph",
+          "text": "La presión admisible depende de tuerca, férula, tubo y puerto. No transfiera valores de racores especiales de alta presión a HN, HN6, HNF o HNF6. Una tuerca más resistente no aumenta por sí sola la presión permitida de todo el circuito."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Preguntas frecuentes",
+  "faqItems": [
+    {
+      "question": "¿Todos se instalan sin herramientas?",
+      "answer": "No. Apriete manual, útiles y herramientas de par controlado dependen de la configuración. Sin reborde significa que no se conforma el extremo; no garantiza que todos los modelos se instalen al tacto."
+    },
+    {
+      "question": "¿CL-0 y CL-0X son intercambiables con el mismo diámetro?",
+      "answer": "No basta el diámetro. Sus geometrías deben corresponder a tuerca y puerto. Compruebe referencias y combinación aprobada; probar a enroscar o aumentar fuerza no demuestra compatibilidad."
+    },
+    {
+      "question": "¿Un racor compacto soporta más presión que uno estándar?",
+      "answer": "La cabeza no determina la presión. El diseño compacto responde al espacio; la presión depende también de férula, tubo, puerto, temperatura y montaje. Consulte y valide la combinación exacta."
+    },
+    {
+      "question": "¿Importa el diámetro interior con 1,6 mm de exterior?",
+      "answer": "Sí. El exterior permite seleccionar tuerca y férula; el interior afecta a resistencia, volumen y espesor. Compruebe la pared tras el apriete y los requisitos reales de caudal, presión y fluido."
+    }
+  ],
+  "cta": {
+    "title": "¿Necesita adaptar el racor a su circuito?",
+    "description": "Facilite plano del puerto, material y medidas del tubo, fluido, temperatura, presión y mantenimiento para confirmar serie, férula y validación.",
+    "contactLabel": "Contactar con soporte técnico",
+    "productsLabel": "Ver racores sin reborde",
+    "productsHref": "/es/products/fittings/hard-tube-fittings/?structure=ferrule"
+  },
+  "navigationLabels": [
+    "Definición",
+    "Principio de sellado",
+    "Medidas y ajuste",
+    "Comparación con reborde",
+    "Selección",
+    "Instalación y uso"
+  ],
+  "relatedProductLabel": "Racor con férula sin reborde"
+}

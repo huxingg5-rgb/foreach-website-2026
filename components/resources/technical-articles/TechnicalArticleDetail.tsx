@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { getCompressionRingFittingCopy, getCompressionRingFittingNavigation, compressionRingFittingSlug } from "@/data/resources/technical-articles/what-is-a-compression-ring-fitting.zh";
+import { getFerruleFittingCopy, getFerruleFittingNavigation, ferruleFittingSlug, getFerruleFittingRelatedProducts } from "@/data/resources/technical-articles/what-is-a-ferrule-fitting.zh";
 import { getHardTubeGuideProducts } from "@/data/resources/technical-articles/hard-tube-fittings-related-products";
 import {
   getHardTubeFittingsCopy,
@@ -586,6 +588,8 @@ export default function TechnicalArticleDetail({
 }: TechnicalArticleDetailProps) {
   const locale = normalizeLocale(pageData.locale);
   const isHardTubeFittingsArticle = article.slug === hardTubeFittingsSlug;
+  const isFerruleFittingArticle = article.slug === ferruleFittingSlug;
+  const isCompressionRingFittingArticle = article.slug === compressionRingFittingSlug;
   const isFlangedTubingAssembliesArticle = article.slug === flangedTubingAssembliesSlug;
   const listHref = getArticleListHref(locale);
   const valveArticle = getValveEngineeringArticle(article.slug, locale);
@@ -1028,7 +1032,11 @@ export default function TechnicalArticleDetail({
                                   }
                                 : undefined;
 
-  const structuredDataFaqItems = isHardTubeFittingsArticle
+  const structuredDataFaqItems = isCompressionRingFittingArticle
+    ? [...getCompressionRingFittingCopy(locale).faqItems]
+    : isFerruleFittingArticle
+    ? [...getFerruleFittingCopy(locale).faqItems]
+    : isHardTubeFittingsArticle
     ? [...getHardTubeFittingsCopy(locale).faqItems]
     : isFlangedTubingAssembliesArticle
     ? [...getFlangedTubingCopy(locale).faqItems]
@@ -1075,7 +1083,7 @@ export default function TechnicalArticleDetail({
     locale,
     structuredDataFaqItems,
     structuredDataSubject,
-    isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle || valveArticle !== null || pipettingBasicsCopy !== null ||
+    isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle || valveArticle !== null || pipettingBasicsCopy !== null ||
       programmableSyringeCopy !== null ||
       programmablePipettingCopy !== null ||
       meteringPumpAccuracyRepeatabilityCopy !== null ||
@@ -1094,9 +1102,9 @@ export default function TechnicalArticleDetail({
       : "Article",
   );
 
-  if (isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {
-    const copy = isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
-    const navigation = isFlangedTubingAssembliesArticle ? getFlangedTubingNavigation(locale) : getHardTubeFittingsNavigation(locale);
+  if (isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {
+    const copy = isCompressionRingFittingArticle ? getCompressionRingFittingCopy(locale) : isFerruleFittingArticle ? getFerruleFittingCopy(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
+    const navigation = isCompressionRingFittingArticle ? getCompressionRingFittingNavigation(locale) : isFerruleFittingArticle ? getFerruleFittingNavigation(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingNavigation(locale) : getHardTubeFittingsNavigation(locale);
     return (
       <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`}
         data-locale={locale} data-article-slug={article.slug} lang={locale}>
@@ -1108,6 +1116,9 @@ export default function TechnicalArticleDetail({
           articleId={article.slug} sectionNavigation={navigation} modelLinks={new Map()}
           faq={{ id: "faq", label: copy.faqTitle, items: copy.faqItems }} />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
+          {isFerruleFittingArticle && <div className={hardTubeFittingsStyles.relatedProducts}>
+            <RelatedResourcesLoader {...getFerruleFittingRelatedProducts(locale)} />
+          </div>}
           {isHardTubeFittingsArticle && <div className={hardTubeFittingsStyles.relatedProducts}>
             <RelatedResourcesLoader {...getHardTubeGuideProducts(locale)} />
           </div>}

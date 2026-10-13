@@ -2,11 +2,12 @@ import type { TechnicalArticleLocale } from "./technical-articles.types";
 
 export const hardTubeFittingsSlug = "hard-tube-fittings-selection-guide";
 export const flangedTubingAssembliesSlug = "flanged-tubing-assemblies-selection-guide";
+export const ferruleFittingSlug = "what-is-a-ferrule-fitting";
+export const compressionRingFittingSlug = "what-is-a-compression-ring-fitting";
 
 // Locale-limited articles share this small registry with the header so the
 // language switcher never needs to ship article bodies to the browser.
 const limitedLocales: Partial<Record<string, readonly TechnicalArticleLocale[]>> = {
-
 };
 
 export function isTechnicalArticleLocaleAvailable(slug: string, locale: TechnicalArticleLocale) {

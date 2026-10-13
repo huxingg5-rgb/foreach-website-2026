@@ -1,0 +1,508 @@
+{
+  "metadata": {
+    "title": "Raccords à ferrule sans collet : principe, dimensions et sélection",
+    "seoTitle": "Raccords à ferrule sans collet : principe, dimensions et sélection | FOREACH",
+    "seoDescription": "Comprendre les raccords flangeless pour tubes rigides en microfluidique : étanchéité, dimensions, matériaux et montage des FOREACH HN, HN6, HNF et HNF6.",
+    "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings-photo.png",
+    "coverAlt": "Écrous FOREACH noirs, bleus et de couleur naturelle avec ferrules séparées"
+  },
+  "deck": "Un raccord sans collet comprime une ferrule autour du tube à l’aide d’un écrou fileté, sans former le bout du tube au préalable. Les séries FOREACH HN, HN6, HNF et HNF6 couvrent des diamètres extérieurs de 1,6, 2,0, 2,5, 3,0 et 3,2 mm, des filetages M6×1 et 1/4-28 UNF et plusieurs matériaux pour les circuits de réactifs, d’échantillons et de lavage des instruments et laboratoires automatisés.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un raccord à ferrule sans collet est une connexion filetée pour tubes rigides de microfluidique. Le terme flangeless indique que le tube ne nécessite pas de collet préformé ; la ferrule est la pièce séparée qui assure le maintien et participe à l’étanchéité. Le serrage de l’écrou comprime la ferrule autour du tube et contre l’orifice récepteur. Ces raccords relient les tubes aux pompes, vannes et modules fluidiques des circuits de réactifs, d’échantillons et de lavage."
+    },
+    {
+      "type": "paragraph",
+      "text": "FOREACH propose les séries HN, HN6, HNF et HNF6, à tête moletée standard ou compacte. Elles couvrent les diamètres extérieurs de 1,6, 2,0, 2,5, 3,0 et 3,2 mm et les orifices à fond plat M6×1 ou 1/4-28 UNF. À titre d’exemple, le HN6 illustré présente une tête de 6,4 mm de diamètre et une longueur totale de 15,5 mm. Consultez le plan propre à chaque autre série."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les écrous HN et HN6 sont proposés en PEEK, PVDF, POM et PPS. Les configurations HNF et HNF6 présentées utilisent respectivement du PVDF et du PPS. Les ferrules séparées existent en PP et ETFE. Choisissez l’ensemble selon le diamètre extérieur du tube, le fluide et l’encombrement, puis confirmez matériaux et dimensions par référence."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings-photo.png",
+      "alt": "Écrous FOREACH noirs, bleus et de couleur naturelle avec ferrules séparées",
+      "width": 1846,
+      "height": 1245,
+      "caption": "Écrous et ferrules. Une ressemblance visuelle ne suffit pas : associez les pièces selon leur référence exacte."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Qu’est-ce qu’un raccord à ferrule sans collet ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cet article traite des raccords filetés de microfluidique à ferrule séparée. Le tube traverse l’écrou et la ferrule avant d’entrer dans l’orifice de l’instrument. Le serrage applique un effort axial. La ferrule maintient et étanchéifie le tube ; il ne s’agit ni d’un collier pour flexible ni d’un raccord clamp sanitaire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le tube est coupé d’équerre : il n’est pas nécessaire de former un collet. Cela ne dispense pas de vérifier le diamètre extérieur, la qualité de coupe, la ferrule et la compatibilité de l’orifice."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Composant",
+            "Rôle",
+            "Points à vérifier"
+          ],
+          "rows": [
+            [
+              "Écrou fileté",
+              "Se visse dans l’orifice et transmet l’effort à la ferrule",
+              "Série, filetage, alésage, matériau et dégagement"
+            ],
+            [
+              "Ferrule",
+              "Maintient le tube et participe à l’étanchéité sous compression",
+              "Référence, diamètre extérieur, matériau, sens et montage"
+            ],
+            [
+              "Tube",
+              "Transporte le fluide ; sa paroi extérieure touche la ferrule",
+              "Diamètres intérieur et extérieur, tolérance, matériau, épaisseur et coupe"
+            ],
+            [
+              "Orifice récepteur",
+              "Fournit le filetage et le siège d’étanchéité",
+              "Filetage, fond, profondeur et état des surfaces"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Les configurations HN, HN6, HNF et HNF6 décrites ici concernent les orifices à fond plat M6×1 ou 1/4-28 UNF. D’autres géométries, filetages ou raccords haute pression doivent être évalués selon leurs propres plans et instructions."
+        }
+      ]
+    },
+    {
+      "title": "Comment l’étanchéité est-elle obtenue ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Enfilez l’écrou et la ferrule adaptés sur le tube coupé d’équerre, dans le sens prescrit. Introduisez l’ensemble dans l’orifice compatible en maintenant le bout du tube à sa position prévue. L’avance de l’écrou comprime axialement la ferrule, qui maintient le tube et assure l’étanchéité contre l’orifice. Les pièces doivent être correctement en appui ; le frottement des filets ne suffit pas."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-structure-fr.webp",
+          "alt": "Raccord compact HN6, ferrule, tube et coupe cotée",
+          "width": 1759,
+          "height": 894,
+          "caption": "Exemple HN6 : tête de 6,4 mm et longueur totale de 15,5 mm pour le modèle illustré. Ces valeurs ne s’appliquent pas à tous les raccords ; respectez la position du tube et le sens de la ferrule."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un tube déplacé, une ferrule inversée ou un mauvais diamètre peuvent provoquer une résistance au serrage avant la mise en appui du joint. Serrer davantage ne corrige pas l’incompatibilité et peut déformer la ferrule ou le tube."
+        },
+        {
+          "type": "paragraph",
+          "text": "Vérifiez séparément l’engagement des filets et la mise en appui du tube, de la ferrule et de l’orifice. M6×1 et 1/4-28 UNF sont différents : quelques tours possibles ne prouvent pas la compatibilité. Ne compensez pas une mauvaise géométrie d’étanchéité par du ruban ou un produit d’étanchéité pour filetage."
+        }
+      ]
+    },
+    {
+      "title": "HN, HN6, HNF et HNF6 : longueur filetée et encombrement",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ces séries diffèrent par la tête, le matériau, la longueur de la partie filetée, la longueur totale et la ferrule associée. Même si le filetage et le diamètre extérieur du tube sont identiques, vérifiez les dimensions de l’assemblage complet."
+        },
+        {
+          "type": "subheading",
+          "title": "Un écart de 2,4 mm : quelles positions faut-il vérifier ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "La partie filetée mesure 8,1 mm sur HN et HN6, contre 10,5 mm sur HNF et HNF6, soit 2,4 mm d’écart. Il s’agit de la cote axiale de la tête ou de l’épaulement à l’extrémité avant de l’écrou. Comparez-la à la profondeur de l’orifice, à la position du taraudage et à la position de compression de la ferrule."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Série",
+            "Tête",
+            "Longueur filetée",
+            "Longueur totale"
+          ],
+          "rows": [
+            [
+              "HN",
+              "Moletée standard",
+              "8,1 mm",
+              "18,1 mm"
+            ],
+            [
+              "HN6",
+              "Compacte",
+              "8,1 mm",
+              "15,5 mm"
+            ],
+            [
+              "HNF",
+              "Moletée standard",
+              "10,5 mm",
+              "16,5 mm"
+            ],
+            [
+              "HNF6",
+              "Compacte",
+              "10,5 mm",
+              "20,0 mm"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cet écart ne signifie pas qu’un HNF ou HNF6 pénètre nécessairement de 2,4 mm supplémentaires dans le même orifice. La profondeur montée dépend aussi de la position de la ferrule et de son siège. La longueur d’engagement effective est la portion des filets réellement en prise après montage. Vérifiez également la position du bout du tube."
+        },
+        {
+          "type": "paragraph",
+          "text": "L’écrou doit comprimer la ferrule bien positionnée tout en conservant l’engagement prévu. Si son épaulement bute contre l’équipement avant la compression de la ferrule, le serrage peut sembler terminé alors que le raccord fuit. Vérifiez les cotes : augmenter le couple ne corrige pas un défaut de position axiale."
+        },
+        {
+          "type": "paragraph",
+          "text": "La coupe et la vue éclatée indiquent les positions relatives de l’écrou, de la ferrule, du tube et de l’orifice. Elles ne représentent pas les cotes ni la profondeur montée de tous les modèles ; utilisez le plan correspondant."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-port-section.png",
+          "alt": "Coupe d’un raccord : écrou, tube, ferrule et orifice récepteur",
+          "width": 513,
+          "height": 1332,
+          "caption": "Coupe : le tube traverse l’écrou et la ferrule, qui prend appui dans l’orifice récepteur."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-exploded.png",
+          "alt": "Vue éclatée : A tube, B écrou, C ferrule, D orifice récepteur",
+          "width": 1190,
+          "height": 1269,
+          "caption": "A tube ; B écrou du raccord ; C ferrule ; D orifice récepteur."
+        },
+        {
+          "type": "subheading",
+          "title": "Distinguez la forme de la tête de la longueur totale"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrules-and-fittings-photo.png",
+          "alt": "Ferrules séparées et écrous FOREACH de différentes formes",
+          "width": 2425,
+          "height": 1092,
+          "caption": "Ferrules à gauche ; écrous et ferrules à droite. Les cotes et associations dépendent des références exactes."
+        },
+        {
+          "type": "paragraph",
+          "text": "La longueur totale renseigne sur l’encombrement axial ; la saillie après montage dépend également de l’insertion. HN6 mesure 15,5 mm, contre 18,1 mm pour HN. Malgré sa tête compacte, HNF6 mesure 20,0 mm, contre 16,5 mm pour HNF. Pour des orifices rapprochés, comparez le diamètre des têtes ; en espace axial réduit, vérifiez longueur, saillie, accès au serrage et cheminement du tube."
+        },
+        {
+          "type": "subheading",
+          "title": "Vérifiez ensuite les tailles de tube, matériaux et ferrules"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Série",
+            "Tête et matériaux de l’écrou",
+            "Choix du diamètre extérieur"
+          ],
+          "rows": [
+            [
+              "HN",
+              "Moletée standard ; PEEK, PVDF, POM ou PPS",
+              "Deux groupes d’écrous : 1,6 mm et 2,0–3,2 mm ; ferrule adaptée au diamètre réel"
+            ],
+            [
+              "HN6",
+              "Compacte ; PEEK, PVDF, POM ou PPS",
+              "Comme HN, distingue groupe d’écrou et diamètre exact de ferrule"
+            ],
+            [
+              "HNF",
+              "Moletée standard ; modèles représentatifs en PVDF",
+              "Choix individuel : 1,6, 2,0, 2,5, 3,0 ou 3,2 mm"
+            ],
+            [
+              "HNF6",
+              "Compacte ; modèles représentatifs en PPS",
+              "Choix individuel : 1,6, 2,0, 2,5, 3,0 ou 3,2 mm"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le groupe d’écrous “32” de HN et HN6 couvre les tubes de 2,0, 2,5, 3,0 et 3,2 mm de diamètre extérieur. Une même ferrule ne convient pas pour autant aux quatre tailles : un tube de 2,5 mm exige une ferrule de 2,5 mm. HNF et HNF6 se choisissent par diamètre individuel, sans reprendre ce regroupement."
+        },
+        {
+          "type": "subheading",
+          "title": "Confirmez la référence complète de la ferrule"
+        },
+        {
+          "type": "paragraph",
+          "text": "HN et HN6 utilisent des ferrules CL-0X, avec les codes de taille 16, 20, 25, 30 et 32. CL-0 et CL-0X présentent des géométries différentes ; un même code “25” ne les rend pas interchangeables. Pour HNF et HNF6, confirmez la ferrule à partir de la référence complète de l’écrou et de la nomenclature approuvée avant achat ou montage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Choisissez séparément les matériaux de l’écrou et de la ferrule. Confirmez les options PP et ETFE par référence. Un écrou PEEK ou PVDF ne signifie pas que toutes les surfaces en contact avec le fluide sont dans ce matériau. La couleur ne remplace pas l’identification matière."
+        }
+      ]
+    },
+    {
+      "title": "Quelle différence avec une connexion à collet ?",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/tube-end-connections-photo.png",
+          "alt": "Trois assemblages FOREACH d’extrémités de tubes",
+          "width": 2172,
+          "height": 1158,
+          "caption": "Exemples permettant de comparer l’avant du raccord et ses composants associés."
+        },
+        {
+          "type": "paragraph",
+          "text": "La différence principale concerne la préparation du tube et les pièces d’étanchéité. Une connexion à collet utilise une extrémité préformée comprimée par l’écrou et la rondelle adaptée. Une connexion à ferrule utilise une coupe droite et une ferrule séparée. Le choix dépend du procédé de fabrication et de la maintenance, pas uniquement du nombre d’opérations."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Critère",
+            "Connexion à ferrule",
+            "Connexion à collet"
+          ],
+          "rows": [
+            [
+              "Préparation",
+              "Coupe d’équerre et nettoyage, sans collet préalable",
+              "Former le collet selon le matériau et les dimensions"
+            ],
+            [
+              "Étanchéité",
+              "Tube, ferrule et orifice",
+              "Collet du tube, rondelle et orifice à fond plat"
+            ],
+            [
+              "Contrôles",
+              "Série et taille de ferrule, sens et position du tube",
+              "Qualité du collet, rondelle et contact des surfaces"
+            ],
+            [
+              "Maintenance",
+              "Remplacer les ferrules présentées selon leur exigence de montage unique",
+              "Inspecter collet, rondelle et orifice selon l’assemblage"
+            ],
+            [
+              "Interchangeabilité",
+              "Vérifier tout l’assemblage, pas seulement filetage et diamètre",
+              "Vérifier également l’orifice et les composants associés"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un collet peut convenir à un procédé de formage déjà maîtrisé ou à la livraison de tubes préassemblés. Une ferrule évite ce formage et permet son remplacement en maintenance. Pression admissible, étanchéité durable et limites de reconnexion dépendent des spécifications et de la validation de l’ensemble."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "À lire également : ",
+              "href": "/fr/resources/technical-articles/flanged-tubing-assemblies-selection-guide/",
+              "label": "Tubes à collet : structure et sélection"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Les connexions à bague de compression peuvent également éviter le formage du tube, mais leurs manchons, rondelles et assemblage diffèrent du système à ferrule décrit ici. Flangeless ne définit pas une géométrie universelle. Consultez le guide des tubes rigides pour comparer les trois solutions."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/fr/resources/technical-articles/hard-tube-fittings-selection-guide/",
+              "label": "Raccords pour tubes rigides : collet, ferrule et bague de compression",
+              "prefix": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Comment sélectionner un raccord adapté ?",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Définissez l’orifice, puis le tube et les composants"
+        },
+        {
+          "type": "paragraph",
+          "text": "Obtenez le filetage complet et la coupe de l’orifice pour vérifier le siège. Le diamètre extérieur réel détermine l’écrou et la ferrule. Diamètre intérieur et longueur influencent volume, résistance hydraulique et débit. L’alésage de l’écrou reçoit le tube ; il ne correspond pas automatiquement au diamètre de passage du fluide."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour un tube de 2,5 mm de diamètre extérieur avec HN6, choisissez le bon groupe d’écrou et une CL-0X-25, puis contrôlez filetage, matériaux et tolérances. Cette sélection reste un assemblage candidat : pression admissible, compatibilité chimique et étanchéité dans l’équipement nécessitent confirmation."
+        },
+        {
+          "type": "subheading",
+          "title": "Reliez le choix des matériaux aux conditions réelles"
+        },
+        {
+          "type": "paragraph",
+          "text": "Précisez fluide, concentration, température, durée de contact et nettoyage. Vérifiez tube, ferrule et surfaces mouillées, ainsi que la conservation du passage et du maintien après compression. La résistance chimique ne valide pas toutes les épaisseurs, tolérances ou associations."
+        },
+        {
+          "type": "subheading",
+          "title": "Vérifiez l’accès au montage et à la maintenance"
+        },
+        {
+          "type": "paragraph",
+          "text": "Avec des orifices rapprochés, contrôlez diamètre et interférences ; près d’un carter, dégagement axial, sortie du tube et outils. Prévoyez les rayons de courbure et le jeu de mouvement pour éviter traction et torsion sur le raccord. Intégrez ferrules neuves et procédure de remplacement à la maintenance."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Information à fournir",
+            "Vérification visée"
+          ],
+          "rows": [
+            [
+              "Filetage et coupe de l’orifice",
+              "Engagement et position d’étanchéité"
+            ],
+            [
+              "Matériau, diamètres et tolérance extérieure du tube",
+              "Ajustement et maintien"
+            ],
+            [
+              "Fluide, concentration, température et nettoyage",
+              "Compatibilité des matériaux et service"
+            ],
+            [
+              "Pressions continue et de pointe, vide, cycles marche/arrêt",
+              "Charges réelles et conditions de validation"
+            ],
+            [
+              "Entraxe des orifices, espace axial et sortie du tube",
+              "Montage, serrage, cheminement et démontage"
+            ],
+            [
+              "Fréquence et méthode de maintenance",
+              "Pièces de rechange et adéquation de la connexion"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Montage et utilisation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Coupez le tube d’équerre avec un outil adapté, retirez les débris et recherchez écrasement, rayures ou déformation. Confirmez référence de ferrule, sens et position du tube, puis maintenez l’ensemble en place pendant le serrage prescrit. Utilisez la méthode et le couple confirmés pour cette configuration ; aucun couple unique ne convient à tous les raccords plastiques."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-assembly-fr.webp",
+          "alt": "Orientation type de l’écrou et de la ferrule séparée",
+          "width": 1736,
+          "height": 906,
+          "caption": "Montage type. Sens de la ferrule, position du tube et serrage doivent correspondre à la série choisie."
+        },
+        {
+          "type": "subheading",
+          "title": "Identifiez la cause avant de modifier le montage"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Symptôme",
+            "Premier contrôle",
+            "Action et vérification"
+          ],
+          "rows": [
+            [
+              "Fuite après serrage",
+              "Orifice, taille et sens de ferrule, position du tube",
+              "Arrêter, dépressuriser, inspecter, remplacer les pièces abîmées et réessayer"
+            ],
+            [
+              "Débit réduit après changement",
+              "Débris, écrasement, diamètre intérieur différent ou coude serré",
+              "Comparer débit et perte de charge avec mêmes fluide, longueur et conditions de pompe"
+            ],
+            [
+              "Étanche à l’arrêt, fuite en marche",
+              "Pointes de pression, température ou efforts du tube",
+              "Contrôler fixations et jeu ; valider en fonctionnement réel"
+            ],
+            [
+              "Fuite après remontage",
+              "Ferrule déformée, tube endommagé ou orifice sale",
+              "Préparer une ferrule neuve pour montage unique ; inspecter puis remonter"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces symptômes orientent le diagnostic sans prouver la cause. Un débit réduit peut provenir du diamètre intérieur, de débris ou de courbures plutôt que du raccord. Comparez à conditions identiques pour valider l’effet d’un changement de montage ou de taille."
+        },
+        {
+          "type": "subheading",
+          "title": "Distinguez remplacement de la ferrule et réemploi de l’écrou"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les ferrules présentées sont prévues pour un montage unique ; leur remontage peut entraîner une déformation irréversible. Préparez des pièces neuves compatibles. Inspectez la zone serrée du tube et reprenez son extrémité si nécessaire. Examinez séparément les filets et surfaces d’appui de l’écrou avant réemploi : changer le joint ne condamne pas automatiquement tout le raccord."
+        },
+        {
+          "type": "subheading",
+          "title": "Validez la connexion complète dans le circuit"
+        },
+        {
+          "type": "paragraph",
+          "text": "Contrôlez fuites, déplacement du tube et débit avec fluide, température et pression définis ; vérifiez les entrées d’air à l’aspiration. Couvrez ensuite cycles marche/arrêt, pulsations, variations thermiques et mouvements réels. Consignez durée, cycles et fuite admissible. Un essai statique réussi ne valide que ses conditions, pas tout l’instrument."
+        },
+        {
+          "type": "paragraph",
+          "text": "La pression admissible dépend de l’ensemble écrou, ferrule, tube et orifice. N’appliquez pas une valeur de raccord haute pression aux HN, HN6, HNF ou HNF6. Un matériau d’écrou plus résistant n’augmente pas à lui seul la pression permise du circuit."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Questions fréquentes",
+  "faqItems": [
+    {
+      "question": "Un raccord sans collet se monte-t-il toujours sans outil ?",
+      "answer": "Non. Serrage manuel, embout dédié ou outil dynamométrique dépendent de la configuration. Sans collet signifie que le tube n’est pas préformé, pas que tous les raccords se serrent uniquement au toucher."
+    },
+    {
+      "question": "CL-0 et CL-0X sont-elles interchangeables à diamètre égal ?",
+      "answer": "Le diamètre ne suffit pas. Leur géométrie doit correspondre à l’écrou et à l’orifice. Confirmez références complètes et association approuvée ; un essai de vissage ou un effort accru ne prouve pas la compatibilité."
+    },
+    {
+      "question": "Une tête compacte permet-elle une pression supérieure ?",
+      "answer": "La forme de tête ne détermine pas la pression admissible. Elle concerne l’encombrement ; ferrule, tube, orifice, température et montage interviennent également. Vérifiez et validez l’ensemble précis."
+    },
+    {
+      "question": "Le diamètre intérieur compte-t-il pour deux tubes de 1,6 mm extérieur ?",
+      "answer": "Oui. Le diamètre extérieur sert à choisir écrou et ferrule ; l’intérieur influence résistance, volume et épaisseur. Vérifiez le comportement de la paroi au serrage et les besoins réels en débit, pression et fluide."
+    }
+  ],
+  "cta": {
+    "title": "Besoin d’adapter le raccord à votre instrument ?",
+    "description": "Fournissez le plan de l’orifice, le matériau et les dimensions du tube, le fluide, la température, la pression et la maintenance pour définir la série, la ferrule et les essais.",
+    "contactLabel": "Contacter le support technique",
+    "productsLabel": "Voir les raccords sans collet",
+    "productsHref": "/fr/products/fittings/hard-tube-fittings/?structure=ferrule"
+  },
+  "navigationLabels": [
+    "Définition",
+    "Principe d’étanchéité",
+    "Dimensions et ajustement",
+    "Comparaison avec le collet",
+    "Sélection",
+    "Montage et utilisation"
+  ],
+  "relatedProductLabel": "Raccord à ferrule sans collet"
+}

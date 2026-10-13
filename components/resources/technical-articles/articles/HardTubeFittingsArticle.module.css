@@ -1,4 +1,64 @@
 /* Keep the Chinese assembly labels readable at their original aspect ratio. */
+.article[id="what-is-a-ferrule-fitting-article"] [id="series"] [data-article-gallery] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.article[id="what-is-a-ferrule-fitting-article"] [id="series"] [data-article-gallery] img {
+  height: 380px;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .article[id="what-is-a-ferrule-fitting-article"] [id="series"] [data-article-gallery] {
+    grid-template-columns: 1fr;
+  }
+
+  .article[id="what-is-a-ferrule-fitting-article"] [id="series"] [data-article-gallery] img {
+    height: auto;
+    max-height: 380px;
+  }
+}
+
+.article[id="what-is-a-compression-ring-fitting-article"] img[src$="/snap-ring-fittings.webp"] {
+  width: min(100%, 453px);
+  height: auto;
+  margin-inline: auto;
+}
+
+.article[id="what-is-a-compression-ring-fitting-article"] [id="installation"] [data-article-gallery] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .article[id="what-is-a-compression-ring-fitting-article"] [id="installation"] [data-article-gallery] {
+    grid-template-columns: 1fr;
+  }
+}
+
+.article[id="what-is-a-compression-ring-fitting-article"] img[src$="/compression-ring-assembly-international.png"],
+.article[id="what-is-a-compression-ring-fitting-article"] img[src$="/compression-ring-pliers-international.png"],
+.article[id="what-is-a-compression-ring-fitting-article"] img[src$="/snap-ring-assembly-zh.png"],
+.article[id="what-is-a-compression-ring-fitting-article"] img[src$="/compression-ring-installation-pliers-t-sf-4-ss.png"] {
+  width: min(100%, 595px);
+  height: auto;
+  margin-inline: auto;
+}
+
+.article[id="what-is-a-ferrule-fitting-article"] img[src$="/ferrule-fittings-photo.png"] {
+  width: min(100%, 760px);
+  height: auto;
+  margin-inline: auto;
+}
+
+.article[id="what-is-a-ferrule-fitting-article"] img[src*="/ferrule-assembly-"] {
+  width: min(100%, 455px);
+  height: auto;
+  margin-inline: auto;
+}
+
 .relatedIntro {
   /* Match the related-resource container so the introduction shares its edges. */
   width: min(1600px, calc(100% - 56px));

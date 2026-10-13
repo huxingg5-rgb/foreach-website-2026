@@ -1,0 +1,589 @@
+{
+  "metadata": {
+    "title": "Qu’est-ce qu’un raccord à bague de compression ? Conception et choix",
+    "seoTitle": "Raccords à bague de compression : conception et choix | FOREACH",
+    "seoDescription": "Découvrez les raccords HSF6 et kits CL-1S/CL-1X FOREACH : filetages, tubes, matériaux, pince de montage, couple de serrage et pression.",
+    "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-fitting-cover-photo.png",
+    "coverAlt": "Raccord FOREACH avec tube, bague de compression en acier inoxydable et ferrule d’étanchéité"
+  },
+  "deck": "Ce raccord associe un écrou fileté, une bague de compression et une ferrule d’étanchéité, sans former de collet sur le tube. À partir des HSF6 et CL-1S FOREACH, ce guide présente les interfaces M6×1 et 1/4-28 UNF, les diamètres extérieurs de 1,6 à 3,2 mm, les écrous PPS/PEEK, les bagues inox et les ferrules PEEK, ainsi que la préfabrication, le montage et le raccordement après maintenance.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un raccord à bague de compression est une connexion filetée sans collet pour les circuits microfluidiques d’instruments. Il comprend un écrou, une bague de compression et une ferrule d’étanchéité. Après une coupe d’équerre, la bague et la ferrule compatibles sont préassemblées sur le tube. L’écrou comprime ensuite cet ensemble contre l’orifice récepteur pour assurer l’étanchéité. Ces raccords relient les tubes aux pompes, vannes et modules fluidiques pour le transfert de réactifs, la préparation d’échantillons et le lavage en instrumentation analytique et automatisation de laboratoire."
+    },
+    {
+      "type": "paragraph",
+      "text": "Les raccords compacts FOREACH HSF6 proposent des filetages M6×1 et 1/4-28 UNF. Les configurations décrites acceptent des tubes de diamètre extérieur 1,6, 2,0, 2,5, 3,0 et 3,2 mm. L’écrou est en PPS ou PEEK ; le kit CL-1S associe une bague inox et une ferrule PEEK. Le HSF6 illustré possède une tête de diamètre 6,0 mm et une longueur totale de 20,0 mm. Ces dimensions servent à vérifier l’entraxe des orifices et l’espace axial. Les combinaisons figurent dans le tableau ci-dessous."
+    },
+    {
+      "type": "paragraph",
+      "text": "Ces connexions conviennent au montage sur site ou aux ensembles de tubes préfabriqués, avec longueur, raccords et repérage définis. Les extrémités complètes peuvent être débranchées et rebranchées selon les exigences de maintenance. L’article traite principalement HSF6/CL-1S et décrit séparément CL-1X-16 pour les petites interfaces 6-40 UNF. Les autres séries et diamètres doivent être choisis selon leurs propres plans."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-fittings.webp",
+      "alt": "Écrous FOREACH, kits bague-ferrule et extrémités assemblées",
+      "width": 453,
+      "height": 313,
+      "caption": "L’écrou se visse dans l’orifice ; la bague et la ferrule constituent le kit d’extrémité. Choisir séparément l’écrou et le kit."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Distinguer écrou, bague de compression et ferrule",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ici, le raccord à bague de compression désigne une connexion microfluidique avec bague et ferrule d’étanchéité séparées. Il appartient aux raccords sans collet. Cette expression signifie que le tube ne nécessite pas de collet préformé, et non que tous ces raccords utilisent les mêmes pièces. La bague n’est pas un circlip logé dans une gorge d’arbre."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Composant",
+            "Fonction",
+            "Critères de choix"
+          ],
+          "rows": [
+            [
+              "Écrou fileté",
+              "Se visse dans l’orifice et transmet une charge axiale au kit d’extrémité",
+              "Filetage, passage du tube, matériau et dimensions extérieures"
+            ],
+            [
+              "Bague de compression",
+              "Entoure la zone correspondante de la ferrule pour comprimer et maintenir l’ensemble",
+              "Choisir avec la ferrule compatible ; vérifier orientation et préassemblage"
+            ],
+            [
+              "Ferrule d’étanchéité",
+              "S’ajuste au tube et à l’orifice pour constituer l’interface d’étanchéité",
+              "Diamètre extérieur, matériau, face et position"
+            ],
+            [
+              "Tube et orifice récepteur",
+              "Forment le passage du fluide et les surfaces d’étanchéité",
+              "Diamètres intérieur/extérieur, coupe, fond de l’orifice et profondeur de montage"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans CL-1S, la bague est en acier inoxydable SUS et la ferrule en PEEK. Écrou, bague et ferrule sont distincts. Un écrou PEEK ou PPS ne signifie pas que toutes les surfaces en contact avec le fluide sont constituées de ce matériau."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-structure-international.png",
+          "alt": "Position de l’écrou, de la bague inox et de la ferrule PEEK",
+          "width": 1719,
+          "height": 915,
+          "caption": "Trois pièces principales : écrou, bague inox et ferrule d’étanchéité. Le tube les traverse successivement. A — ferrule d’étanchéité; B — bague de compression en acier inoxydable; C — écrou du raccord."
+        }
+      ]
+    },
+    {
+      "title": "Étanchéité et intérêt des tubes préfabriqués",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "En se vissant dans un orifice à fond plat, l’écrou transmet une force axiale à la bague et à la ferrule. La compression à la position prévue applique l’extrémité contre la surface d’étanchéité. Il faut contrôler l’ajustement bague-ferrule et la position du tube. Le filetage assure retenue et compression ; le bon contact des surfaces reste à vérifier."
+        },
+        {
+          "type": "subheading",
+          "title": "Vérifier l’affleurement du tube avec la face de la ferrule"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Position du tube",
+            "Effet possible",
+            "Contrôle du montage"
+          ],
+          "rows": [
+            [
+              "Affleurant la face de la ferrule",
+              "Permet le positionnement prévu",
+              "Coupe d’équerre, sans débris ; position conservée après pressage"
+            ],
+            [
+              "En retrait dans la ferrule",
+              "Peut laisser un espace supplémentaire",
+              "Vérifier longueur de coupe et recul pendant le préassemblage"
+            ],
+            [
+              "Saillant ou coupé de biais",
+              "Peut toucher prématurément l’orifice et gêner l’appui",
+              "Revoir la préparation et le positionnement"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La photographie identifie l’écrou, le tube, la bague inox et la ferrule, et montre leur disposition."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-components-international.png",
+          "alt": "Extrémité de tube avec repérage de la ferrule, de la bague inox, du tube et de l’écrou",
+          "width": 1584,
+          "height": 993,
+          "caption": "A — ferrule d’étanchéité; B — bague de compression en acier inoxydable; C — tube; D — écrou du raccord."
+        },
+        {
+          "type": "subheading",
+          "title": "Préassembler l’extrémité avant le raccordement"
+        },
+        {
+          "type": "paragraph",
+          "text": "Définir tube, longueur, pièces et repères avant préfabrication. Préparer les extrémités facilite l’assemblage en série et l’identification des circuits. Lors du raccordement, l’écrou peut tourner par rapport au tube et limiter sa torsion. Ce n’est pas un joint tournant destiné à une rotation continue en service."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une extrémité complète en bon état peut être conservée en maintenance, après examen de la face de la ferrule, de la position de la bague et du tube. Rebrancher un ensemble intact diffère du démontage d’une bague usagée pour la monter sur un autre tube."
+        }
+      ]
+    },
+    {
+      "title": "Filetages, tubes, matériaux et dimensions HSF6",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "HSF6 désigne les écrous ; CL-1S et CL-1X désignent les kits bague-ferrule. Choisir l’écrou selon l’orifice, puis le kit selon le diamètre extérieur réel. Il ne s’agit pas de trois séries interchangeables de raccords. Le tableau présente les configurations HSF6 étudiées, pas toute la gamme."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Référence complète",
+            "Filetage",
+            "Diamètre extérieur compatible",
+            "Matériau de l’écrou"
+          ],
+          "rows": [
+            [
+              "HSF6-M6-16-PS-B",
+              "M6×1",
+              "1,6 mm",
+              "PPS"
+            ],
+            [
+              "HSF6-M6-32-PS-B",
+              "M6×1",
+              "2,0, 2,5, 3,0, 3,2 mm",
+              "PPS"
+            ],
+            [
+              "HSF6-U28-16-PK-N",
+              "1/4-28 UNF",
+              "1,6 mm",
+              "PEEK"
+            ],
+            [
+              "HSF6-U28-16-PS-B",
+              "1/4-28 UNF",
+              "1,6 mm",
+              "PPS"
+            ],
+            [
+              "HSF6-U28-32-PK-N",
+              "1/4-28 UNF",
+              "2,0, 2,5, 3,0, 3,2 mm",
+              "PEEK"
+            ],
+            [
+              "HSF6-U28-32-PS-B",
+              "1/4-28 UNF",
+              "2,0, 2,5, 3,0, 3,2 mm",
+              "PPS"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Un même écrou peut nécessiter plusieurs tailles de kit"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Diamètre extérieur réel",
+            "Code de taille HSF6",
+            "Kit bague-ferrule",
+            "Matériaux du kit"
+          ],
+          "rows": [
+            [
+              "1,6 mm",
+              "Taille 16, M6/U28",
+              "CL-1S-16",
+              "Bague SUS + ferrule PEEK"
+            ],
+            [
+              "2,0 mm",
+              "Taille 32, M6/U28",
+              "CL-1S-20",
+              "Bague SUS + ferrule PEEK"
+            ],
+            [
+              "2,5 mm",
+              "Taille 32, M6/U28",
+              "CL-1S-25",
+              "Bague SUS + ferrule PEEK"
+            ],
+            [
+              "3,0 mm",
+              "Taille 32, M6/U28",
+              "CL-1S-30",
+              "Bague SUS + ferrule PEEK"
+            ],
+            [
+              "3,2 mm",
+              "Taille 32, M6/U28",
+              "CL-1S-32",
+              "Bague SUS + ferrule PEEK"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour un tube de diamètre extérieur 2,5 mm et un orifice M6 à fond plat, vérifier HSF6-M6-32-PS-B avec CL-1S-25. Le code 32 définit le groupe de taille de l’écrou. Le kit reste un 25 pour le tube de 2,5 mm ; ne pas choisir CL-1S-32 simplement pour faire correspondre les codes."
+        },
+        {
+          "type": "subheading",
+          "title": "CL-1X-16 : une configuration distincte pour petits orifices"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-tube-ends-photo.png",
+          "alt": "Raccords noirs et naturels montrant bagues métalliques, ferrules et extrémités",
+          "width": 2459,
+          "height": 1492,
+          "caption": "Photographie des extrémités : positions relatives de la bague métallique, de la ferrule et du tube. Vérifier références et dimensions dans les spécifications applicables."
+        },
+        {
+          "type": "paragraph",
+          "text": "CL-1X-16 accepte le diamètre extérieur 1,6 mm avec une bague SUS et une ferrule PEEK. Il s’associe au raccord HFL6-U40-16, filetage 6-40 UNF. Malgré le même diamètre de tube que CL-1S-16, l’orifice, la géométrie et l’écrou diffèrent ; ils ne sont pas directement interchangeables."
+        },
+        {
+          "type": "subheading",
+          "title": "L’encombrement se lit sur le plan ; la profondeur dépend aussi de l’orifice"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dimension HSF6 illustrée",
+            "Valeur",
+            "Utilisation au montage"
+          ],
+          "rows": [
+            [
+              "Diamètre de tête",
+              "6,0 mm",
+              "Vérifier entraxe et accès pour serrage"
+            ],
+            [
+              "Longueur totale de l’écrou",
+              "20,0 mm",
+              "Calculer la longueur apparente avec la profondeur de montage"
+            ],
+            [
+              "Dimension axiale de la partie avant",
+              "10,5 mm",
+              "Vérifier avec la profondeur de l’orifice et la position du kit ; ce n’est ni l’engagement effectif ni la profondeur réelle"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces dimensions concernent le HSF6 illustré, pas HSF, HFL6 ou d’autres configurations. L’ensemble doit atteindre sa position d’étanchéité avec un engagement de filetage suffisant. Si l’écrou bute sur l’instrument avant l’appui de la ferrule, augmenter le couple ne corrige pas l’incompatibilité dimensionnelle."
+        }
+      ]
+    },
+    {
+      "title": "Choisir entre bague de compression, ferrule et collet",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Comparer d’abord préparation du tube et pièces d’étanchéité, puis montage et maintenance. Les raccords à bague et les raccords classiques à ferrule évitent le collet. Les premiers utilisent une bague et une ferrule séparées ; les seconds une ferrule adaptée qui maintient le tube et participe à l’étanchéité."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Critère",
+            "Connexion à bague de compression",
+            "Connexion classique à ferrule sans collet",
+            "Connexion à collet"
+          ],
+          "rows": [
+            [
+              "Préparation du tube",
+              "Coupe d’équerre puis montage bague-ferrule",
+              "Coupe d’équerre puis montage de la ferrule",
+              "Formation préalable d’un collet"
+            ],
+            [
+              "Pièces principales",
+              "Écrou, bague et ferrule d’étanchéité",
+              "Écrou et ferrule",
+              "Écrou, collet du tube et rondelle compatible"
+            ],
+            [
+              "Points de montage",
+              "Préassembler avec la pince dédiée ; contrôler orientation, affleurement et pressage",
+              "Ferrule adaptée, orientation et position du tube",
+              "Qualité du collet et contact des faces"
+            ],
+            [
+              "Maintenance",
+              "Examiner l’extrémité complète avant de la rebrancher selon les consignes",
+              "Prévoir des ferrules neuves pour les modèles à installation unique de l’article associé",
+              "Examiner collet, rondelle et orifice avant reconnexion"
+            ],
+            [
+              "Cas à étudier en priorité",
+              "Tubes préfabriqués et maintenance conservant l’extrémité assemblée",
+              "Montage sans collet et remplacement accessible de la ferrule",
+              "Procédé de formage maîtrisé ou ensembles à collet préfabriqués"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces différences de montage ne constituent pas un classement en pression. Pour une maintenance fréquente, comparer contrôles et remplacements. Pour des orifices rapprochés, comparer encombrement et accès, pas seulement le nom du raccord."
+        },
+        {
+          "type": "links",
+          "ordered": true,
+          "items": [
+            {
+              "href": "/fr/resources/technical-articles/what-is-a-ferrule-fitting/",
+              "label": "Raccords à ferrule sans collet : conception, dimensions et choix"
+            },
+            {
+              "href": "/fr/resources/technical-articles/flanged-tubing-assemblies-selection-guide/",
+              "label": "Tubes à collet : étanchéité, compatibilité et sélection"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Applications et configuration des ensembles",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Partir des opérations de montage et de maintenance. Ces exemples guident la sélection ; l’adéquation dépend aussi du fluide, de la température et de la pression."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Application",
+            "Objectif de l’ensemble",
+            "Priorités de configuration"
+          ],
+          "rows": [
+            [
+              "Transfert de réactifs en instrumentation analytique",
+              "Préparer connexions et longueurs avant intégration",
+              "Orifices, matériaux mouillés, diamètre intérieur et longueur"
+            ],
+            [
+              "Échantillonnage et lavage",
+              "Maîtriser la position du tube, identifier et entretenir les lignes",
+              "Jeux aux extrémités, nettoyage, contamination résiduelle et repérage"
+            ],
+            [
+              "Entre pompes, vannes et modules fluidiques",
+              "Uniformiser assemblage et pièces de rechange",
+              "Entraxe, orientation du tube, pulsations et fixation"
+            ],
+            [
+              "Modules déposés pour maintenance",
+              "Conserver et reconnecter l’extrémité complète",
+              "Fréquence de démontage, examen des faces et règles de remplacement"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Les ensembles FOREACH peuvent utiliser des tubes FEP ou PTFE, avec longueur et repérage définis. Le diamètre extérieur détermine la compatibilité ; le diamètre intérieur et la longueur influencent résistance hydraulique et volume interne. À diamètre extérieur égal, un diamètre intérieur différent peut modifier le débit et l’état de la paroi après pressage."
+        },
+        {
+          "type": "paragraph",
+          "text": "Fournir les plans des deux orifices, diamètres intérieur/extérieur, longueur finie et référence de mesure, fluide, nettoyage, température, pressions continue et de pointe, et exigences de maintenance. Choisir chaque extrémité séparément si les interfaces diffèrent. Les joints toriques ou manchons d’arrêt sur le tube limitent le déplacement de l’écrou ; ils n’assurent pas l’étanchéité de l’orifice."
+        }
+      ]
+    },
+    {
+      "title": "Montage, pression et serrage",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Séparer préassemblage initial et raccordement"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le préassemblage exige une pince dédiée compatible pour presser la bague et la ferrule à leur position. Une simple pression manuelle permet difficilement un montage correct. Serrer davantage l’écrou ne remplace pas ce travail. Avant une reconnexion en maintenance, examiner l’extrémité déjà assemblée."
+        },
+        {
+          "type": "paragraph",
+          "text": "La pince FOREACH porte la référence T-SF-4-SS, code produit 959016. Pour assembler soi-même les tubes, prévoir l’outil compatible avec le kit et le diamètre, et confirmer position de serrage et mode opératoire."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-pliers-international.png",
+          "alt": "Pince dédiée FOREACH T-SF-4-SS, code produit 959016",
+          "width": 1360,
+          "height": 1156,
+          "caption": "Pince T-SF-4-SS, code 959016, pour préassembler les kits à bague de compression."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-assembly-international.png",
+          "alt": "Ordre écrou-bague-ferrule et affleurement du tube",
+          "width": 1323,
+          "height": 1189,
+          "caption": "A — bague de compression en acier inoxydable; B — ferrule d’étanchéité. Enfiler l’écrou, la bague puis la ferrule ; vérifier l’orientation et aligner les faces du tube et de la ferrule."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Couper d’équerre avec un outil adapté ; éliminer les débris et rechercher écrasement, bavures ou fissures.",
+            "Vérifier l’orientation : enfiler écrou, bague et ferrule selon le schéma du kit.",
+            "Positionner et préassembler : faire affleurer le tube, presser avec la pince dédiée, puis vérifier l’assise de la bague et l’absence de recul ou de dépassement du tube.",
+            "Raccorder : nettoyer et examiner la portée, maintenir l’ensemble en place et serrer conformément aux exigences.",
+            "Contrôler : fixer le tube et vérifier fuites, entrée d’air et déplacement dans les conditions spécifiées de fluide, température et pression."
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Quelle pression le raccord supporte-t-il ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "La pression admissible concerne l’ensemble écrou, kit, tube et orifice, pour une température et des conditions définies. Aucun classement de pression commun HSF6/CL-1S n’est donné ici. Obtenir la pression de service admissible de la combinaison choisie. Vérifier surpression, vide et pointes de démarrage/arrêt séparément ; l’écrou PEEK ou la bague métallique ne suffisent pas à déterminer cette limite."
+        },
+        {
+          "type": "subheading",
+          "title": "Quel couple de montage utiliser ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les raccords plastiques FOREACH pour tubes rigides M6×1 ou 1/4-28 UNF ont un couple recommandé de 0,25–0,30 N·m. Les raccords plastiques U40 à bague de compression 6-40 UNF utilisent 0,08–0,15 N·m. Choisir selon filetage et matériau de l’écrou."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Filetage",
+            "Raccord concerné",
+            "Couple de montage recommandé"
+          ],
+          "rows": [
+            [
+              "M6×1",
+              "Raccord plastique pour tube rigide",
+              "0,25–0,30 N·m"
+            ],
+            [
+              "1/4-28 UNF",
+              "Raccord plastique pour tube rigide",
+              "0,25–0,30 N·m"
+            ],
+            [
+              "6-40 UNF",
+              "Raccord plastique U40 à bague de compression",
+              "0,08–0,15 N·m"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces valeurs concernent le serrage fileté dans l’orifice, pas la force de préassemblage. Préassembler correctement bague et ferrule, appliquer le couple correspondant, puis vérifier étanchéité et position du tube."
+        },
+        {
+          "type": "subheading",
+          "title": "Reconnexion et diagnostic"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Symptôme",
+            "Premier contrôle",
+            "Action"
+          ],
+          "rows": [
+            [
+              "Fuite dès la première connexion",
+              "Pièces compatibles, orientation, affleurement et fond de l’orifice",
+              "Arrêter et dépressuriser ; corriger position ou pièces, puis réessayer"
+            ],
+            [
+              "Fuite après maintenance",
+              "Face sale ou endommagée, bague déplacée ou tube déformé",
+              "Déterminer s’il faut nettoyer, repositionner ou remplacer"
+            ],
+            [
+              "Débit réduit après remplacement",
+              "Diamètre intérieur, longueur, débris, écrasement et coudes serrés",
+              "Comparer débit et perte de charge avec fluide et conditions de pompe identiques"
+            ],
+            [
+              "Conforme à l’arrêt, anomalie en fonctionnement",
+              "Pointes de démarrage/arrêt, température, vibrations et efforts externes",
+              "Vérifier fixation et liberté de mouvement ; valider en cycles réels"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Une reconnexion autorisée n’implique ni cycles illimités ni absence de maintenance. Définir nombre de cycles, conditions et fuite admissible ; relever étanchéité, position et débit après chaque cycle. Traiter usure, fissures ou déplacement de bague selon les exigences de l’ensemble."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Questions fréquentes",
+  "faqItems": [
+    {
+      "question": "Ce raccord est-il aussi sans collet ?",
+      "answer": "Oui. Le montage décrit utilise un tube coupé d’équerre sans collet préformé. Les raccords classiques à ferrule peuvent aussi être sans collet, mais les pièces et le montage diffèrent ; le nom seul ne garantit pas l’interchangeabilité."
+    },
+    {
+      "question": "Un code HSF6 32 impose-t-il un kit 32 ?",
+      "answer": "Non. Les écrous HSF6 32 présentés couvrent les diamètres extérieurs 2,0, 2,5, 3,0 et 3,2 mm. CL-1S se choisit selon le diamètre réel : CL-1S-25 pour 2,5 mm. Groupe de taille d’écrou et taille de kit sont distincts."
+    },
+    {
+      "question": "CL-1S-16 et CL-1X-16 sont-ils interchangeables ?",
+      "answer": "Non. Ils acceptent tous deux 1,6 mm, mais CL-1S correspond à HSF6 M6/U28 et CL-1X-16 à HFL6-U40-16 en 6-40 UNF. Vérifier ensemble écrou, orifice et géométrie du kit."
+    },
+    {
+      "question": "Une pince spéciale est-elle nécessaire ?",
+      "answer": "Oui. Le préassemblage initial nécessite la pince compatible FOREACH T-SF-4-SS, code 959016. La pression manuelle permet difficilement le bon assemblage ; augmenter le couple ne le remplace pas. Vérifier compatibilité outil-kit-diamètre. Examiner les extrémités complètes avant reconnexion."
+    },
+    {
+      "question": "Quel couple appliquer à l’installation ?",
+      "answer": "Pour les raccords plastiques FOREACH de tube rigide M6×1 ou 1/4-28 UNF : 0,25–0,30 N·m. Pour les U40 plastiques 6-40 UNF : 0,08–0,15 N·m. Il s’agit du serrage dans l’orifice, pas de la force de préassemblage."
+    },
+    {
+      "question": "Peut-on transférer une bague usagée sur un autre tube ?",
+      "answer": "La possibilité de reconnecter ne le garantit pas. Examiner faces, bague et tube avant de rebrancher un ensemble intact. Démonter une bague pour l’installer sur un autre tube est une opération distincte, soumise aux exigences du kit."
+    },
+    {
+      "question": "Un tube affleurant garantit-il un volume mort nul ?",
+      "answer": "Non. La coupe d’équerre et la position correcte limitent les jeux, mais le volume résiduel dépend aussi de l’orifice, du diamètre intérieur et du montage. Évaluer contamination résiduelle et nettoyage pour les lignes d’échantillons et de lavage."
+    }
+  ],
+  "cta": {
+    "title": "Besoin de choisir un raccord ou un ensemble préfabriqué ?",
+    "description": "Fournir interfaces, diamètres, longueur, fluide, température, pression et maintenance pour confirmer les pièces, le montage et la validation sur échantillons.",
+    "contactLabel": "Contacter le support technique",
+    "productsLabel": "Voir les raccords pour tubes rigides",
+    "productsHref": "/fr/products/fittings/hard-tube-fittings/"
+  },
+  "navigationLabels": [
+    "Qu’est-ce qu’un raccord à bague de compression ?",
+    "Composants et étanchéité",
+    "Modèles, matériaux et dimensions",
+    "Comparaison des trois raccordements",
+    "Applications et sélection",
+    "Montage, pression et maintenance"
+  ]
+}
