@@ -833,6 +833,10 @@
 /ru/products/control/abd /ru/products/control/air-bubble-detectors/abd/ 301
 /ru/products/control/abd/ /ru/products/control/air-bubble-detectors/abd/ 301
 # END ABD MODEL REDIRECTS
+
+# Retired fitting-selection article -> published replacement
+/en/resources/technical-articles/selecting-microfluidic-fittings /en/resources/technical-articles/hard-tube-fittings-selection-guide/ 301
+/en/resources/technical-articles/selecting-microfluidic-fittings/ /en/resources/technical-articles/hard-tube-fittings-selection-guide/ 301
 # BEGIN VALVELESS PUMP DETAIL REDIRECTS
 /products/pumps/valveless-pumps/rpl-p4 /products/pumps/valveless-metering-pump/rpl-p4/ 301
 /products/pumps/valveless-pumps/rpl-p4/ /products/pumps/valveless-metering-pump/rpl-p4/ 301
@@ -895,7 +899,3 @@
 /ru/products/pumps/valveless-pumps/drpl-0119 /ru/products/pumps/valveless-metering-pump/drpl-0119/ 301
 /ru/products/pumps/valveless-pumps/drpl-0119/ /ru/products/pumps/valveless-metering-pump/drpl-0119/ 301
 # END VALVELESS PUMP DETAIL REDIRECTS
-
-# Retired fitting-selection article -> published replacement
-/en/resources/technical-articles/selecting-microfluidic-fittings /en/resources/technical-articles/hard-tube-fittings-selection-guide/ 301
-/en/resources/technical-articles/selecting-microfluidic-fittings/ /en/resources/technical-articles/hard-tube-fittings-selection-guide/ 301
