@@ -1246,9 +1246,13 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   const diaphragmReference = isDiaphragmPump
     ? getDiaphragmPumpReferenceFromIdentity(data)
     : null;
-  const productModel = isDiaphragmPump
-    ? getDiaphragmPumpSchemaModel(pathname, rawProductModel)
-    : rawProductModel;
+  // A tubing material selector has no single model; displayModel is a UI prompt.
+  const isTubingMaterialSelection = isTubingDetailData(data) && data.detailMode === "material_selection";
+  const productModel = isTubingMaterialSelection
+    ? ""
+    : isDiaphragmPump
+      ? getDiaphragmPumpSchemaModel(pathname, rawProductModel)
+      : rawProductModel;
   const locale = getProductPageLocale(pathname);
   const productName = probeControlCopy?.h1 || (isDiaphragmPump
     ? getDiaphragmPumpSchemaName(data, pathname, locale, productModel)

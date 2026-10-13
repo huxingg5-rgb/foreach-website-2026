@@ -17,8 +17,7 @@ export function getTubingSelectionMetadata(material: string, locale: string): Me
     title: { absolute: title },
     description,
     alternates: { canonical: path },
-    // These one-card selection views support navigation; material details remain indexable.
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
     openGraph: { title, description, url: path, type: "website" },
     twitter: { title, description },
   };
