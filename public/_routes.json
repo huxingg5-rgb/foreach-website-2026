@@ -1,6 +1,8 @@
 {
   "version": 1,
   "include": [
+    "/en/resources/technical-articles/selecting-microfluidic-fittings",
+    "/en/resources/technical-articles/selecting-microfluidic-fittings/",
     "/cn/history.aspx",
     "/cn/NewsInfo.aspx",
     "/cn/ProductIndex.aspx",

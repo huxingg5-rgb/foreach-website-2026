@@ -48,6 +48,13 @@ export const onRequest: LegacyRedirectHandler = async ({
 
   const requestUrl = new URL(request.url);
 
+  const retiredFittingsPath = "/en/resources/technical-articles/selecting-microfluidic-fittings";
+  if (requestUrl.pathname === retiredFittingsPath || requestUrl.pathname === `${retiredFittingsPath}/`) {
+    const target = new URL(requestUrl);
+    target.pathname = "/en/resources/technical-articles/hard-tube-fittings-selection-guide/";
+    return new Response(null, { status: 301, headers: { Location: target.toString() } });
+  }
+
   // Pages Functions must handle these legacy URLs before serving static assets.
   const controlModulePath = normalizeControlModulePath(requestUrl.pathname);
   if (controlModulePath !== requestUrl.pathname) {
