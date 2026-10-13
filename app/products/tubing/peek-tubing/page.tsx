@@ -1,7 +1,3 @@
-import TubingDetailStaticPage, { getTubingMetadata } from "../_components/TubingDetailStaticPage";
-
-export const metadata = getTubingMetadata("peek-tubing");
-
-export default function Page() {
-  return <TubingDetailStaticPage slug="peek-tubing" />;
-}
+import TubingSelectionPage, { getTubingSelectionMetadata } from "@/components/products/selection/TubingSelectionPage";
+export const metadata = getTubingSelectionMetadata("peek-tubing", "zh");
+export default function Page() { return <TubingSelectionPage material="peek-tubing" locale="zh" />; }

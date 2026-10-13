@@ -10,7 +10,7 @@ import { getLocalizedFittingIntroduction } from "@/data/products/selection/fitti
 import { productOverviewIntrosEn } from "@/data/products/selection/product-introductions.en";
 import { getProductOverviewHeading } from "@/data/products/selection/product-overview-headings";
 import { getTubingIntro, getTubingSeriesCopy, getTubingMaterialCopy } from "@/data/products/tubing/content";
-import { getLegacyTubingSelectionTarget, getTubingSelectionPath, hasTubingSelectionLocale, isTubingMaterial } from "@/data/products/selection/tubing-selection-routes";
+import { getTubingDetailPath, getLegacyTubingSelectionTarget, getTubingSelectionPath, hasTubingSelectionLocale, isTubingMaterial } from "@/data/products/selection/tubing-selection-routes";
 import { fittingIntrosZh, fittingOverviewParagraphsZh } from "@/data/products/selection/fitting-headings.zh";
 import ProductTypeIntroImage from "./ProductTypeIntroImage";
 import { probeIntrosZh, probeOverviewParagraphsZh, probeTypesZh, getProbeProductTypeIdZh, getProbeSelectionPathZh } from "@/data/products/selection/probe-selection.zh";
@@ -5317,6 +5317,10 @@ function isFilterOptionActive(
     href: string,
     product?: ProductSelectionProduct,
   ) {
+    const tubingMatch = href.match(/^\/(?:en\/)?products\/tubing\/([^/]+)\/?$/);
+    if (tubingMatch && isTubingMaterial(tubingMatch[1]) && hasTubingSelectionLocale(locale)) {
+      return getTubingDetailPath(locale, tubingMatch[1]);
+    }
     href = normalizePipettingPath(localizeValvelessPumpCategoryPath(href, locale));
     if (
       locale === "zh" ||

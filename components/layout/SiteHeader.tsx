@@ -12,6 +12,7 @@ import {
   type MouseEvent,
 } from "react"; // 引入 React 状态、生命周期、缓存、Ref 和事件类型
 
+import { getTubingLanguagePath } from "@/data/products/selection/tubing-selection-routes";
 import { preloadGlobalSearchIndex } from "@/components/search/global-search-index";
 import { ANALYTICAL_APPLICATION_BASE } from "@/data/applications/analytical-documents/registry";
 import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/valveless-pump-routes";
@@ -176,6 +177,8 @@ function getLocalePathPrefix(localeCode: LocaleCode) {
    当前 /en，切中文 → /
 ================================ */
 function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
+  const tubingPath = getTubingLanguagePath(pathname, localeCode);
+  if (tubingPath) return tubingPath;
   const pathWithoutLocale = localizeValvelessPumpCategoryPath(
     stripLocalePrefixFromPath(pathname), localeCode,
   );

@@ -87,6 +87,7 @@ import { valvelessPumpSeries, getValvelessPumpSeriesMetadata } from "@/data/prod
 import { getValvelessForeignContent, getValvelessLocaleCopy } from "@/data/products/detail/valveless-pump-locales";
 import { getValvelessPumpLanguageAlternates, VALVELESS_PUMP_CATEGORY_SLUG_INTL, VALVELESS_PUMP_LEGACY_CATEGORY_SLUG } from "@/data/products/selection/valveless-pump-routes";
 import ProbeDetailPage from "@/app/products/probes/[slug]/page";
+import TubingSelectionPage, { getTubingSelectionMetadata } from "@/components/products/selection/TubingSelectionPage";
 import TubingDetailStaticPage, { getTubingMetadata } from "@/app/products/tubing/_components/TubingDetailStaticPage";
 import { getTubingAlternates, getTubingMaterialSeoCopy, getTubingSeriesMetadata } from "@/data/products/tubing/metadata";
 
@@ -431,7 +432,7 @@ export async function generateMetadata({
 
   if (segments[0] === "tubing" && locale === "en") {
     if (segments.length === 1) return getTubingSeriesMetadata(locale)!;
-    if (segments.length === 2) return getTubingMetadata(segments[1], locale);
+    if (segments.length === 2) return getTubingSelectionMetadata(segments[1], locale);
   }
 
   const tubingSeoCopy = segments[0] === "tubing" && segments.length === 2
@@ -630,6 +631,7 @@ export default async function ProductLocaleRoutePage({
     }
 
     if (category === "tubing") {
+      if (locale === "en") return <TubingSelectionPage material={slug} locale="en" />;
       return <TubingDetailStaticPage slug={slug} locale={locale} />;
     }
 

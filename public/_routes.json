@@ -1,6 +1,8 @@
 {
   "version": 1,
   "include": [
+    "/products/tubing/selection/*",
+    "/en/products/tubing/selection/*",
     "/products/tubing",
     "/products/tubing/",
     "/en/products/tubing",

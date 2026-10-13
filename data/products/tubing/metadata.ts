@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { getTubingDetailPath } from "../selection/tubing-selection-routes";
 import { getTubingSeriesCopy, tubingSeriesImage } from "./content";
 import { SITE_ORIGIN } from "@/lib/seo/site-url";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
 export function getTubingAlternates(slug = "", locale = "zh") {
   const path = `/products/tubing/${slug ? `${slug}/` : ""}`;
-  const localize = (language: string) => `${SITE_ORIGIN}${language === "zh" ? "" : `/${language}`}${path}`;
+  const localize = (language: string) => slug ? `${SITE_ORIGIN}${getTubingDetailPath(language, slug)}` : `${SITE_ORIGIN}${language === "zh" ? "" : `/${language}`}${path}`;
   return {
     canonical: localize(locale),
     languages: Object.fromEntries([

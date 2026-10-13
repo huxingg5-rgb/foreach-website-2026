@@ -17,6 +17,7 @@ import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib
 import { buildProductSpecProperties } from "@/lib/seo/product-spec-properties";
 import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
 import { getTubingGalleryData } from "@/data/products/tubing/gallery";
+import { getTubingDetailBreadcrumbs } from "@/data/products/selection/tubing-selection-routes";
 
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
 import { getValveDetailHeading } from "@/data/products/selection/valve-card-copy";
@@ -1330,7 +1331,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
           item: canonicalUrl,
         },
       ];
-  const chineseBreadcrumbItems = getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
+  const chineseBreadcrumbItems = getTubingDetailBreadcrumbs(pathname, locale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
   const breadcrumbItems = chineseBreadcrumbItems
     ? chineseBreadcrumbItems.map((item) => ({ name: item.label, item: item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl }))
     : legacyBreadcrumbItems;
@@ -1794,7 +1795,7 @@ export default function ProductDetailClient({
             : displayProductTitle,
         },
       ]);
-  const productBreadcrumbItems = getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
+  const productBreadcrumbItems = getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
     pathname, configuratorLocale, legacyProductBreadcrumbItems.at(-1)?.label,
   ) || legacyProductBreadcrumbItems;
   if (String(data.category) === "control" && data.slug === "abd-air-bubble-detector") {
