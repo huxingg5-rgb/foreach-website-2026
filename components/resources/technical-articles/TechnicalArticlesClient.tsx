@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import type { ComponentType } from "react";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
@@ -8,6 +8,7 @@ import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 import TechnicalArticleListItem from "@/components/resources/technical-articles/TechnicalArticleListItem";
 import articleListStyles from "./TechnicalArticleListItem.module.css";
+import { replaceArticleListQuery, takeArticleListScroll, useArticleNavigationSnapshot } from "./articleNavigation";
 import type {
   ClassifiedTechnicalArticleItem,
   TechnicalArticleLocale,
@@ -150,17 +151,34 @@ function getCategoryPathLabel(
   return `${primary.label} / ${secondary.label}`;
 }
 
+function resolveCategoryFilter(pageData: TechnicalArticlesPageData, category: string | null): ActiveCategoryFilter {
+  for (const group of pageData.taxonomy) {
+    if (group.key === category) return { type: "primary", key: group.key };
+    const child = group.children.find((item) => item.key === category);
+    if (child) return { type: "secondary", key: child.key };
+  }
+  return { type: "all" };
+}
+
 export default function TechnicalArticlesClient({
   pageData,
 }: TechnicalArticlesClientProps) {
   const ui = technicalArticlesUi[pageData.locale];
-  const [keyword, setKeyword] = useState("");
-  const [activeFilter, setActiveFilter] = useState<ActiveCategoryFilter>({
-    type: "all",
-  });
-  const [expandedPrimary, setExpandedPrimary] =
-    useState<TechnicalArticlePrimaryCategory | null>(null);
-  const [currentPage, setCurrentPage] = useState(1);
+  const location = useArticleNavigationSnapshot();
+  const listPath = `${pageData.locale === "zh-CN" ? "" : `/${pageData.locale}`}/resources/technical-articles`;
+  const isListLocation = location.split("?")[0].replace(/\/$/, "") === listPath;
+  const params = useMemo(() => new URLSearchParams(location.split("?")[1] ?? ""), [location]);
+  const keyword = params.get("q") ?? "";
+  const category = params.get("category");
+  const activeFilter = useMemo(() => resolveCategoryFilter(pageData, category), [category, pageData]);
+  const expandedPrimary = pageData.taxonomy.find((group) =>
+    params.has("expanded") ? group.key === params.get("expanded") :
+      group.key === category || group.children.some((child) => child.key === category),
+  )?.key ?? null;
+  const requestedPage = Number(params.get("page") ?? "1");
+  const currentPage = Number.isSafeInteger(requestedPage) && requestedPage > 0 ? requestedPage : 1;
+  const restored = useRef(false);
+  const pendingScroll = useRef<number | null | undefined>(undefined);
 
   const categoryCounts = useMemo(() => {
     const primary = new Map<TechnicalArticlePrimaryCategory, number>();
@@ -224,6 +242,34 @@ export default function TechnicalArticlesClient({
   );
   const safeCurrentPage = Math.min(currentPage, totalPages);
 
+  useEffect(() => {
+    if (!isListLocation) return;
+    if (params.has("page") && params.get("page") !== String(safeCurrentPage)) {
+      const next = new URLSearchParams(params);
+      if (safeCurrentPage === 1) next.delete("page");
+      else next.set("page", String(safeCurrentPage));
+      replaceArticleListQuery(next);
+    }
+  }, [isListLocation, params, safeCurrentPage]);
+
+  useEffect(() => {
+    if (!isListLocation || restored.current) return;
+    if (pendingScroll.current === undefined) pendingScroll.current = takeArticleListScroll(location);
+    const scrollY = pendingScroll.current;
+    // Wait until the URL-derived article rows have committed before restoring.
+    let secondFrame = 0;
+    const firstFrame = requestAnimationFrame(() => {
+      secondFrame = requestAnimationFrame(() => {
+        restored.current = true;
+        if (scrollY !== null) window.scrollTo({ top: scrollY, behavior: "instant" });
+      });
+    });
+    return () => {
+      cancelAnimationFrame(firstFrame);
+      cancelAnimationFrame(secondFrame);
+    };
+  }, [isListLocation, location]);
+
   const pagedArticles = useMemo(() => {
     const startIndex =
       (safeCurrentPage - 1) * TECHNICAL_ARTICLES_PAGE_SIZE;
@@ -235,33 +281,35 @@ export default function TechnicalArticlesClient({
   }, [filteredArticles, safeCurrentPage]);
 
   function handleKeywordChange(value: string) {
-    setKeyword(value);
-    setCurrentPage(1);
+    updateList({ q: value, page: null });
+  }
+
+  function updateList(values: Record<string, string | null>) {
+    const next = new URLSearchParams(window.location.search);
+    for (const [key, value] of Object.entries(values)) {
+      if (value === null || value === "") next.delete(key);
+      else next.set(key, value);
+    }
+    replaceArticleListQuery(next);
   }
 
   function handleAllArticles() {
-    setActiveFilter({ type: "all" });
-    setExpandedPrimary(null);
-    setCurrentPage(1);
+    updateList({ category: null, expanded: null, page: null });
   }
 
   function handlePrimaryCategory(key: TechnicalArticlePrimaryCategory) {
-    setActiveFilter({ type: "primary", key });
-    setExpandedPrimary((current) => (current === key ? null : key));
-    setCurrentPage(1);
+    updateList({ category: key, expanded: expandedPrimary === key ? "none" : key, page: null });
   }
 
   function handleSecondaryCategory(
     primaryKey: TechnicalArticlePrimaryCategory,
     secondaryKey: TechnicalArticleSecondaryCategory,
   ) {
-    setActiveFilter({ type: "secondary", key: secondaryKey });
-    setExpandedPrimary(primaryKey);
-    setCurrentPage(1);
+    updateList({ category: secondaryKey, expanded: primaryKey, page: null });
   }
 
   function handlePageChange(page: number) {
-    setCurrentPage(Math.max(1, Math.min(page, totalPages)));
+    updateList({ page: String(Math.max(1, Math.min(page, totalPages))) });
   }
 
   const paginationUi = technicalArticlesPaginationUi[pageData.locale];

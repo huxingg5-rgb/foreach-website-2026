@@ -7,6 +7,7 @@ import Link from "next/link";
 import type { TechnicalArticleItem } from "@/data/resources/technical-articles/technical-articles.types";
 
 import styles from "./TechnicalArticleListItem.module.css";
+import { rememberArticleSource } from "./articleNavigation";
 
 type TechnicalArticleListItemProps = {
   article: Pick<TechnicalArticleItem, "title" | "summary" | "date" | "coverAlt"> & {
@@ -31,6 +32,7 @@ export default function TechnicalArticleListItem({
     <Link
       className={`${styles.row}${showImage ? "" : ` ${styles.withoutImage}`}`}
       href={href}
+      onNavigate={() => rememberArticleSource(href)}
     >
       {showImage && coverImage ? (
         <div className={styles.thumbnail}>

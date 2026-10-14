@@ -60,6 +60,11 @@ function getLocalePrefix(locale: RelatedResourcesLocale) {
   return locale === "zh-CN" ? "" : `/${locale}`;
 }
 
+export function getRelatedProductSeriesKey(productId: string): string | undefined {
+  return relatedResourceProducts.find(product => product.productId === productId)
+    ?.relationKeys?.map(normalizeRelationKey).find(key => key.startsWith("series:"));
+}
+
 function getProductLocale(locale: RelatedResourcesLocale) {
   return locale === "zh-CN" ? "zh" : locale;
 }

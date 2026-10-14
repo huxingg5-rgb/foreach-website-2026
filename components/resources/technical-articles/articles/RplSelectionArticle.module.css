@@ -1,5 +1,20 @@
 /* Opt-in black-and-white article with brand-colored links. No global or site layout overrides. */
 .pageSurface { background: #fff; }
+@media (min-width: 1280px) {
+  .pageSurface:has([data-article-products]) .layout[data-has-related-products] {
+    max-width: 1400px; padding-inline: 28px;
+    grid-template-columns: 180px minmax(0, 1fr) 220px; column-gap: 28px;
+  }
+  .pageSurface:has([data-article-products]) .backNav { max-width: 1400px; padding-inline: 28px; }
+  .pageSurface:has([data-article-products]) [data-related-products-section] { display: none; }
+  .pageSurface:has([data-article-products]) [data-related-products-only] { display: none; }
+}
+@media (min-width: 1440px) {
+  .pageSurface:has([data-article-products]) .layout[data-has-related-products] {
+    padding-inline: 40px; grid-template-columns: 208px minmax(0, 800px) 240px; column-gap: 36px;
+  }
+  .pageSurface:has([data-article-products]) .backNav { padding-inline: 40px; }
+}
 .root {
   --ink: #171717;
   --muted: #575757;

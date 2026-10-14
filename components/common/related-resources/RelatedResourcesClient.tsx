@@ -207,7 +207,7 @@ export default function RelatedResourcesClient({
   }
 
   return (
-    <aside className={styles.root} aria-label={resourceGroupLabel}>
+    <aside className={styles.root} aria-label={resourceGroupLabel} data-related-products-only={showProducts && !showVideos && !showArticles || undefined}>
       {showVideos ? (
         <section className={styles.section}>
           <div className={styles.headingRow}>
@@ -251,7 +251,7 @@ export default function RelatedResourcesClient({
       ) : null}
 
       {showProducts ? (
-        <section className={styles.section}>
+        <section className={styles.section} data-related-products-section>
           <div className={styles.headingRow}>
             <h2>{ui.relatedProducts}</h2>
           </div>

@@ -12,7 +12,7 @@ import ru from "./ferrule-fitting-locales/ru.json";
 export { ferruleFittingSlug } from "./technical-article-availability";
 const imageRoot = "/images/resources/technical-articles/hard-tube-fittings-selection-guide";
 const productsHref = "/products/fittings/hard-tube-fittings/?structure=ferrule";
-const featuredModels = ["HN-M6-16-PV-N", "HN6-M6-16-PV-N", "HNF-M6-16-PV-N", "HNF6-M6-16-PS-B"] as const;
+const featuredModels = ["HN-M6-16-PK-N", "HN6-M6-16-PK-N", "HNF-M6-16-PV-N", "HNF6-M6-16-PS-B"] as const;
 const featuredProducts = featuredModels.map(model => {
   const product = FITTING_PUBLISHED_PRODUCTS.find(item => item.foreachModel === model);
   if (!product) throw new Error(`Missing ferrule article product: ${model}`);

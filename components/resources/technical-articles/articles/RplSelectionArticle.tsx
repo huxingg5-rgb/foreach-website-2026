@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ArticleBackLink from "../ArticleBackLink";
 import { Fragment, type ReactNode } from "react";
 import type {
   DiaphragmPumpEngineeringArticleCopy,
@@ -154,6 +155,7 @@ export default function RplSelectionArticle({
   modelLinks: suppliedModelLinks,
   className,
   leadContent,
+  relatedProducts,
 }: {
   copy: DiaphragmPumpEngineeringArticleCopy;
   date: string;
@@ -166,6 +168,7 @@ export default function RplSelectionArticle({
   modelLinks?: ReadonlyMap<string, string>;
   className?: string;
   leadContent?: ReactNode;
+  relatedProducts?: ReactNode;
 }) {
   const ui = rplArticleUi[locale];
   const defaultModelLinks = new Map(getRplSelectionProducts(locale).map(product => [product.name, product.href]));
@@ -186,12 +189,12 @@ export default function RplSelectionArticle({
   return (
     <>
       <div className={`${newsArticleStyles.page} ${styles.backNav}`}>
-        <Link className={newsArticleStyles.backLink} href={listHref} data-article-back-link>
+        <ArticleBackLink className={newsArticleStyles.backLink} href={listHref}>
           {`< ${backText}`}
-        </Link>
+        </ArticleBackLink>
       </div>
     <main className={[styles.root, className].filter(Boolean).join(" ")} id={`${articleId}-article`} data-editorial-article>
-      <article className={styles.layout} aria-labelledby={titleId}>
+      <article className={styles.layout} aria-labelledby={titleId} data-has-related-products={relatedProducts ? true : undefined}>
         <header className={styles.header} data-article-header>
           <h1 id={titleId}>{copy.metadata.title}</h1>
           <time className={styles.date} dateTime={date}>{formattedDate}</time>
@@ -220,6 +223,7 @@ export default function RplSelectionArticle({
             ) : fullNavigation.map((item, index) => <a key={item.id} href={`#${item.id}`} data-toc-link aria-current={index === 0 ? "location" : undefined}><span>{String(index + 1).padStart(2, "0")}</span>{item.label}</a>)}
           </nav>
         </aside>
+        {relatedProducts}
         <div className={styles.body} data-article-body>
           {copy.sections.map((section, index) => {
             const id = sectionNavigation[index].id;

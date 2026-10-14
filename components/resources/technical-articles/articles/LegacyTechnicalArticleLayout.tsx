@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ArticleBackLink from "../ArticleBackLink";
 import type { ComponentProps, ReactNode } from "react";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 import { NewsArticlePager } from "@/components/resources/news/NewsArticleClient";
@@ -13,7 +13,7 @@ type PagerItem = ComponentProps<typeof NewsArticlePager>["previousArticle"];
 
 /** Keep the original body and footer data; only replace the legacy news layout. */
 export default function LegacyTechnicalArticleLayout({
-  articleId, locale, article, pageData, previousArticle, nextArticle, showPager = true, children, afterContent,
+  articleId, locale, article, pageData, previousArticle, nextArticle, showPager = true, children, afterContent, relatedProducts,
 }: {
   articleId: string;
   locale: TechnicalArticleLocale;
@@ -28,15 +28,16 @@ export default function LegacyTechnicalArticleLayout({
   showPager?: boolean;
   children: ReactNode;
   afterContent?: ReactNode;
+  relatedProducts?: ReactNode;
 }) {
   const primary = pageData.bottomBanner.actions?.[0];
   const fallbackContact = { "zh-CN": "联系我们", en: "Contact Us", es: "Contactar", fr: "Nous contacter", ko: "문의하기", ru: "Связаться" }[locale];
   return <>
     <div className={`${newsStyles.page} ${editorial.backNav}`}>
-      <Link className={newsStyles.backLink} href={pageData.listHref}>{`< ${pageData.backText}`}</Link>
+      <ArticleBackLink className={newsStyles.backLink} href={pageData.listHref}>{`< ${pageData.backText}`}</ArticleBackLink>
     </div>
     <main className={`${editorial.root} ${styles.root}`} id={`${articleId}-article`} data-editorial-article data-legacy-editorial>
-      <article className={editorial.layout}>
+      <article className={editorial.layout} data-has-related-products={relatedProducts ? true : undefined}>
         <header className={editorial.header} data-article-header>
           <h1>{article.title}</h1>
           <time className={editorial.date} dateTime={article.date}>{article.date}</time>
@@ -52,6 +53,7 @@ export default function LegacyTechnicalArticleLayout({
           <LegacyTechnicalArticleContents articleId={articleId} locale={locale} />
         </aside>
         <div className={`${editorial.body} ${styles.body}`} data-article-body>{children}</div>
+        {relatedProducts}
       </article>
     </main>
     <div className={newsStyles.page} data-legacy-article-footer>

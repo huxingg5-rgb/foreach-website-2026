@@ -1,4 +1,6 @@
 import Link from "next/link";
+import ArticleRelatedProducts from "./ArticleRelatedProducts";
+import { getArticleRelatedProducts } from "@/services/resources/technical-articles/getArticleRelatedProducts";
 import { getCompressionRingFittingCopy, getCompressionRingFittingNavigation, compressionRingFittingSlug } from "@/data/resources/technical-articles/what-is-a-compression-ring-fitting.zh";
 import { getFerruleFittingCopy, getFerruleFittingNavigation, ferruleFittingSlug, getFerruleFittingRelatedProducts } from "@/data/resources/technical-articles/what-is-a-ferrule-fitting.zh";
 import { getHardTubeGuideProducts } from "@/data/resources/technical-articles/hard-tube-fittings-related-products";
@@ -1102,6 +1104,10 @@ export default function TechnicalArticleDetail({
       : "Article",
   );
 
+  const sidebarProducts = getArticleRelatedProducts(article, locale);
+  const relatedProductsSidebar = sidebarProducts.length
+    ? <ArticleRelatedProducts products={sidebarProducts} locale={locale} /> : null;
+
   if (isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {
     const copy = isCompressionRingFittingArticle ? getCompressionRingFittingCopy(locale) : isFerruleFittingArticle ? getFerruleFittingCopy(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
     const navigation = isCompressionRingFittingArticle ? getCompressionRingFittingNavigation(locale) : isFerruleFittingArticle ? getFerruleFittingNavigation(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingNavigation(locale) : getHardTubeFittingsNavigation(locale);
@@ -1111,7 +1117,7 @@ export default function TechnicalArticleDetail({
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
         <div className="newsArticleBreadcrumbShell"><BreadcrumbComponent {...breadcrumbData} /></div>
-        <RplSelectionArticle copy={copy} className={hardTubeFittingsStyles.article}
+        <RplSelectionArticle relatedProducts={relatedProductsSidebar} copy={copy} className={hardTubeFittingsStyles.article}
           date={article.date} locale={locale} listHref={listHref} backText={getBackText(locale)}
           articleId={article.slug} sectionNavigation={navigation} modelLinks={new Map()}
           faq={{ id: "faq", label: copy.faqTitle, items: copy.faqItems }} />
@@ -1148,7 +1154,7 @@ export default function TechnicalArticleDetail({
         <script type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
         <div className="newsArticleBreadcrumbShell"><BreadcrumbComponent {...breadcrumbData} /></div>
-        <RplSelectionArticle copy={valveArticle.copy} className={valveArticleStyles.article}
+        <RplSelectionArticle relatedProducts={relatedProductsSidebar} copy={valveArticle.copy} className={valveArticleStyles.article}
           date={article.date} locale={locale} listHref={listHref} backText={getBackText(locale)}
           articleId={article.slug} sectionNavigation={valveArticle.navigation} modelLinks={new Map()}
           faq={{ id: "faq", label: valveArticle.copy.faqTitle, items: valveArticle.copy.faqItems }} />
@@ -1176,7 +1182,7 @@ export default function TechnicalArticleDetail({
         <div className="newsArticleBreadcrumbShell">
           <BreadcrumbComponent {...breadcrumbData} />
         </div>
-        <RplSelectionArticle
+        <RplSelectionArticle relatedProducts={relatedProductsSidebar}
           copy={pipettingBasicsCopy}
           className={pipettingBasicsStyles.article}
           leadContent={<PipettingBasicsLead blocks={pipettingBasicsCopy.leadBlocks} workflows={getPipettingBasicsWorkflows(locale)} />}
@@ -1218,7 +1224,7 @@ export default function TechnicalArticleDetail({
         <div className="newsArticleBreadcrumbShell">
           <BreadcrumbComponent {...breadcrumbData} />
         </div>
-        <RplSelectionArticle
+        <RplSelectionArticle relatedProducts={relatedProductsSidebar}
           copy={programmableSyringeCopy}
           date={article.date}
           locale={locale}
@@ -1258,7 +1264,7 @@ export default function TechnicalArticleDetail({
         <div className="newsArticleBreadcrumbShell">
           <BreadcrumbComponent {...breadcrumbData} />
         </div>
-        <RplSelectionArticle
+        <RplSelectionArticle relatedProducts={relatedProductsSidebar}
           copy={programmablePipettingCopy}
           date={article.date}
           locale={locale}
@@ -1300,7 +1306,7 @@ export default function TechnicalArticleDetail({
         <div className="newsArticleBreadcrumbShell">
           <BreadcrumbComponent {...breadcrumbData} />
         </div>
-        <RplSelectionArticle
+        <RplSelectionArticle relatedProducts={relatedProductsSidebar}
           copy={meteringPumpAccuracyRepeatabilityCopy}
           date={article.date}
           locale={locale}
@@ -1357,7 +1363,7 @@ export default function TechnicalArticleDetail({
         <div className="newsArticleBreadcrumbShell">
           <BreadcrumbComponent {...breadcrumbData} />
         </div>
-        <RplSelectionArticle
+        <RplSelectionArticle relatedProducts={relatedProductsSidebar}
           copy={rplSelectionCopy}
           date={article.date}
           locale={locale}
@@ -1405,7 +1411,7 @@ export default function TechnicalArticleDetail({
         <div className="newsArticleBreadcrumbShell">
           <BreadcrumbComponent {...breadcrumbData} />
         </div>
-        <RplSelectionArticle
+        <RplSelectionArticle relatedProducts={relatedProductsSidebar}
           copy={valvelessMeteringPumpOverviewCopy}
           date={article.date}
           locale={locale}
@@ -1462,7 +1468,7 @@ export default function TechnicalArticleDetail({
         <div className="newsArticleBreadcrumbShell">
           <BreadcrumbComponent {...breadcrumbData} />
         </div>
-        <RplSelectionArticle
+        <RplSelectionArticle relatedProducts={relatedProductsSidebar}
           copy={pistonPumpRplStyleCopy}
           date={article.date}
           locale={locale}
@@ -1513,7 +1519,7 @@ export default function TechnicalArticleDetail({
         <BreadcrumbComponent {...breadcrumbData} />
       </div>
 
-      <LegacyTechnicalArticleLayout
+      <LegacyTechnicalArticleLayout relatedProducts={relatedProductsSidebar}
         articleId={article.slug}
         locale={locale}
         article={adaptedArticle}
