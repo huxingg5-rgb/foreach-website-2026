@@ -1030,6 +1030,12 @@
   object-position: center center !important;
 }
 
+/* Crop only the spare background of the HF body-and-seal photo to a square. */
+.container [data-product-gallery="true"] img[src$="/flat-bottom-fitting-body-and-seal-comparison.webp"] {
+  aspect-ratio: 1 / 1;
+  object-fit: cover !important;
+}
+
 @media (max-width: 1080px) {
   .container .productTop {
     display: grid !important;

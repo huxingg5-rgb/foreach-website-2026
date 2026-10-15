@@ -1,5 +1,11 @@
 const fs = require("fs");
 const path = require("path");
+const highPressureGallery = require("../../data/products/detail/high-pressure-fluidics-gallery.json");
+const compactFluidicsGallery = require("../../data/products/detail/compact-fluidics-gallery.json");
+const standardFluidicsGallery = require("../../data/products/detail/standard-fluidics-gallery.json");
+const detailGalleries = { ...highPressureGallery, ...compactFluidicsGallery, ...standardFluidicsGallery };
+const cardImageExceptions = require("../../data/products/selection/fitting-card-image-exceptions.json");
+const cardImageOverrides = require("../../data/products/selection/hard-tube-card-image-overrides.json");
 
 const root = process.cwd();
 
@@ -262,6 +268,9 @@ function getImageData(
     });
 
   const mainImage =
+    cardImageOverrides[model] ||
+    (cardImageExceptions[product.productId]?.model === model
+      ? cardImageExceptions[product.productId].imageCard : "") ||
     exactImage ||
     mapped.imageCard ||
     mapped.mainImage ||
@@ -518,8 +527,13 @@ const details =
       imageCard:
         media.mainImage,
 
-      additionalImages:
-        media.additionalImages,
+      additionalImages: detailGalleries[model]
+        ? detailGalleries[model].map(image => image.src)
+        : media.additionalImages,
+      ...(detailGalleries[model] ? {
+        additionalImageAlts: detailGalleries[model].map(image => image.alt),
+        images: [media.mainImage, ...detailGalleries[model].map(image => image.src)],
+      } : {}),
 
       imageAlt:
         `${model} ${seriesName} ${material}`,

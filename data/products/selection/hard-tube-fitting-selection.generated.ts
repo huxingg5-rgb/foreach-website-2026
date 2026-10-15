@@ -1660,7 +1660,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 57,
@@ -1689,7 +1689,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 58,
@@ -1718,7 +1718,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 59,
@@ -1776,7 +1776,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 61,
@@ -1805,7 +1805,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 62,
@@ -1834,7 +1834,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 63,
@@ -1892,7 +1892,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 65,
@@ -1950,7 +1950,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 67,
@@ -1979,7 +1979,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 68,
@@ -2008,7 +2008,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PPS",
       "filter05": "黑色"
     },
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-ps-b-main.jpg",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 69,
@@ -2037,7 +2037,7 @@ export const hardTubeFittingSelectionProducts =
       "filter04": "PEEK",
       "filter05": "本色"
     },
-    "imageCard": "/images/logo/foreach-logo-color.svg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-body.webp",
     "detailSlug": "hard-tube-fittings",
     "status": "active",
     "sortOrder": 70,

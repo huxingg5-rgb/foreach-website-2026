@@ -235,7 +235,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809058",
     "foreachModel": "HFL6-M6-16-PS-B",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
     "detailHref": "/products/fittings/hard-tube-fittings/hfl6-m6-16-ps-b",
     "productTypeId": "hard-tube-fittings",
     "productType": "",
@@ -245,7 +245,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809067",
     "foreachModel": "HFL6-U28-32-PS-B",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-ps-b-main.jpg",
     "detailHref": "/products/fittings/hard-tube-fittings/hfl6-u28-32-ps-b",
     "productTypeId": "hard-tube-fittings",
     "productType": "",
@@ -255,7 +255,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809068",
     "foreachModel": "HFL6-M6-32-PS-B",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-ps-b-main.jpg",
     "detailHref": "/products/fittings/hard-tube-fittings/hfl6-m6-32-ps-b",
     "productTypeId": "hard-tube-fittings",
     "productType": "",
@@ -265,7 +265,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809078",
     "foreachModel": "HFL6-M6-20-PS-B",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-ps-b-main.jpg",
     "detailHref": "/products/fittings/hard-tube-fittings/hfl6-m6-20-ps-b",
     "productTypeId": "hard-tube-fittings",
     "productType": "",
@@ -275,7 +275,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809087",
     "foreachModel": "HFL6-U28-30-PS-B",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-ps-b-main.jpg",
     "detailHref": "/products/fittings/hard-tube-fittings/hfl6-u28-30-ps-b",
     "productTypeId": "hard-tube-fittings",
     "productType": "",
@@ -285,7 +285,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809088",
     "foreachModel": "HFL6-M6-30-PS-B",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-ps-b-main.jpg",
     "detailHref": "/products/fittings/hard-tube-fittings/hfl6-m6-30-ps-b",
     "productTypeId": "hard-tube-fittings",
     "productType": "",
@@ -295,7 +295,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809097",
     "foreachModel": "HFL6-U28-25-PS-B",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-ps-b-main.jpg",
     "detailHref": "/products/fittings/hard-tube-fittings/hfl6-u28-25-ps-b",
     "productTypeId": "hard-tube-fittings",
     "productType": "",
@@ -841,6 +841,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "productType": "倒刺接头",
     "productSeries": "倒刺堵头",
     "seriesId": "bbl"
+  },
+  {
+    "productCode": "809286",
+    "foreachModel": "LPBL-PP-N",
+    "imageCard": "/images/products/fittings/luer-fittings/photos/male-luer-plug-pp-natural.webp",
+    "detailHref": "/products/fittings/luer-fittings/lpbl-pp-n",
+    "productTypeId": "luer-fittings",
+    "productType": "",
+    "productSeries": "lpbl",
+    "seriesId": "lpbl"
   },
   {
     "productCode": "809287",
@@ -1943,6 +1953,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "seriesId": "bbl"
   },
   {
+    "productCode": "809409",
+    "foreachModel": "LPBL-PA-W",
+    "imageCard": "/images/products/fittings/luer-fittings/photos/male-luer-plug-pa-white.webp",
+    "detailHref": "/products/fittings/luer-fittings/lpbl-pa-w",
+    "productTypeId": "luer-fittings",
+    "productType": "",
+    "productSeries": "lpbl",
+    "seriesId": "lpbl"
+  },
+  {
     "productCode": "809410",
     "foreachModel": "BT-16D-24D-24D-PA-W",
     "imageCard": "/images/products/fittings/barbed-fittings/products/bt-16d-24d-24d-pa-w-main.jpg",
@@ -2883,6 +2903,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "seriesId": "lsl"
   },
   {
+    "productCode": "809559",
+    "foreachModel": "LRL-16-PP-N",
+    "imageCard": "/images/products/fittings/luer-fittings/products/LRL-16-PP-N.jpg",
+    "detailHref": "/products/fittings/luer-fittings/lrl-16-pp-n",
+    "productTypeId": "luer-fittings",
+    "productType": "",
+    "productSeries": "lrl",
+    "seriesId": "lrl"
+  },
+  {
     "productCode": "809560",
     "foreachModel": "LSL-24-PP-N",
     "imageCard": "/images/products/fittings/luer-fittings/products/LSL-24-PP-N.jpg",
@@ -2893,6 +2923,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "seriesId": "lsl"
   },
   {
+    "productCode": "809561",
+    "foreachModel": "LRL-24-PP-N",
+    "imageCard": "/images/products/fittings/luer-fittings/products/LRL-24-PP-N.jpg",
+    "detailHref": "/products/fittings/luer-fittings/lrl-24-pp-n",
+    "productTypeId": "luer-fittings",
+    "productType": "",
+    "productSeries": "lrl",
+    "seriesId": "lrl"
+  },
+  {
     "productCode": "809562",
     "foreachModel": "LSL-32-PP-N",
     "imageCard": "/images/products/fittings/luer-fittings/products/LSL-32-PP-N.jpg",
@@ -2901,6 +2941,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "productType": "",
     "productSeries": "lsl",
     "seriesId": "lsl"
+  },
+  {
+    "productCode": "809563",
+    "foreachModel": "LRL-32-PP-N",
+    "imageCard": "/images/products/fittings/luer-fittings/products/LRL-32-PP-N.jpg",
+    "detailHref": "/products/fittings/luer-fittings/lrl-32-pp-n",
+    "productTypeId": "luer-fittings",
+    "productType": "",
+    "productSeries": "lrl",
+    "seriesId": "lrl"
   },
   {
     "productCode": "809570",
@@ -4561,6 +4611,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "productType": "螺纹转倒刺接头",
     "productSeries": "直通螺纹密封螺纹转倒刺接头",
     "seriesId": "sa"
+  },
+  {
+    "productCode": "809841",
+    "foreachModel": "HFL6-U40-16-PK-N",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-body.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/hfl6-u40-16-pk-n",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "",
+    "productSeries": "compact-flat-bottom-fitting",
+    "seriesId": "compact-flat-bottom-fitting"
   },
   {
     "productCode": "809842",
@@ -7480,27 +7540,6 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
     ]
   },
   {
-    "productCode": "809559",
-    "foreachModel": "LRL-16-PP-N",
-    "reasons": [
-      "SHARED_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809561",
-    "foreachModel": "LRL-24-PP-N",
-    "reasons": [
-      "SHARED_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809563",
-    "foreachModel": "LRL-32-PP-N",
-    "reasons": [
-      "SHARED_IMAGE"
-    ]
-  },
-  {
     "productCode": "809578",
     "foreachModel": "PMLS-U28-32D-PP-N",
     "reasons": [
@@ -7915,14 +7954,6 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
     ]
   },
   {
-    "productCode": "809841",
-    "foreachModel": "HFL6-U40-16-PK-N",
-    "reasons": [
-      "LOGO_IMAGE",
-      "SHARED_IMAGE"
-    ]
-  },
-  {
     "productCode": "809861",
     "foreachModel": "HSF-U28-32-PEEK-N",
     "reasons": [
@@ -8247,15 +8278,15 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
 
 export const FITTING_PUBLICATION_SUMMARY =
 {
-  "totalProductCodes": 866,
-  "publishedProductCodes": 634,
-  "offlineProductCodes": 232,
+  "totalProductCodes": 868,
+  "publishedProductCodes": 640,
+  "offlineProductCodes": 228,
   "forced136": 4,
   "forced806": 21,
   "invalidMainImage": 53,
-  "logoImage": 94,
+  "logoImage": 93,
   "placeholderImage": 0,
-  "sharedImageProductCodes": 177,
+  "sharedImageProductCodes": 173,
   "fittingReplacementOfflineCodes": 44
 } as const;
 
@@ -8505,6 +8536,7 @@ const publishedDetailRouteKeySet = new Set(
   "hard-tube-fittings/hfl6-u28-25-ps-b",
   "hard-tube-fittings/hfl6-u28-30-ps-b",
   "hard-tube-fittings/hfl6-u28-32-ps-b",
+  "hard-tube-fittings/hfl6-u40-16-pk-n",
   "hard-tube-fittings/hn-m6-16-pk-n",
   "hard-tube-fittings/hn-m6-16-pv-n",
   "hard-tube-fittings/hn-m6-32-pk-n",
@@ -8588,6 +8620,8 @@ const publishedDetailRouteKeySet = new Set(
   "luer-fittings/lp-32d-pa-w",
   "luer-fittings/lp-32d-pa-y",
   "luer-fittings/lp-32d-pp-n",
+  "luer-fittings/lpbl-pa-w",
+  "luer-fittings/lpbl-pp-n",
   "luer-fittings/lpr-16-pa-b",
   "luer-fittings/lpr-16-pa-g",
   "luer-fittings/lpr-16-pa-o",
@@ -8665,8 +8699,11 @@ const publishedDetailRouteKeySet = new Set(
   "luer-fittings/lpt-pa-y",
   "luer-fittings/lpt-pp-n",
   "luer-fittings/lrl-16-pa-w",
+  "luer-fittings/lrl-16-pp-n",
   "luer-fittings/lrl-24-pa-w",
+  "luer-fittings/lrl-24-pp-n",
   "luer-fittings/lrl-32-pa-w",
+  "luer-fittings/lrl-32-pp-n",
   "luer-fittings/ls-16d-pa-w",
   "luer-fittings/ls-16d-pp-n",
   "luer-fittings/ls-24d-pa-w",

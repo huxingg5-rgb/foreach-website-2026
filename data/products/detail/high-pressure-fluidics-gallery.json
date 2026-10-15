@@ -1,0 +1,46 @@
+{
+  "PNC-U32-16-PK-N": [
+    {
+      "src": "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-10-32-thread.webp",
+      "alt": "PNC PEEK fitting for analytical instrument fluidics, showing the 10-32 UNF thread and tapered tip"
+    },
+    {
+      "src": "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-round-base-tubing-assembly.webp",
+      "alt": "PNC PEEK high-pressure tubing connection for analytical instrument fluidics, shown with tubing inserted"
+    },
+    {
+      "src": "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-knurled-body-comparison.webp",
+      "alt": "PNC and PNC6 PEEK fluidic fittings shown together for comparison of the knurled body and hexagonal base"
+    }
+  ],
+  "PNC6-U32-16-PK-N": [
+    {
+      "src": "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-hex-base.webp",
+      "alt": "PNC6 PEEK fitting for analytical instrument fluidics, showing the knurled body, hexagonal base and threaded tip"
+    },
+    {
+      "src": "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-hex-base-tubing-assembly.webp",
+      "alt": "PNC6 PEEK high-pressure tubing connection for analytical instrument fluidics, shown with tubing inserted"
+    },
+    {
+      "src": "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-knurled-body-comparison.webp",
+      "alt": "PNC and PNC6 PEEK fluidic fittings shown together for comparison of the knurled body and hexagonal base"
+    }
+  ],
+  "PNF-U32-16-SS-N": [
+    {
+      "src": "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-fitting-tubing-assembly.webp",
+      "alt": "PNF stainless steel high-pressure tubing connection for analytical instrument fluidics, showing the hexagonal nut and tapered ferrule"
+    },
+    {
+      "src": "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-fitting-nut-and-ferrule-lineup.webp",
+      "alt": "PNF stainless steel two-piece high-pressure connection for analytical fluidics, showing threaded hexagonal nuts and separate tapered ferrules"
+    }
+  ],
+  "PUT-U32-05-SS-N": [
+    {
+      "src": "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-microfluidic-tee-10-32-ports.webp",
+      "alt": "PUT stainless steel high-pressure microfluidic tee bodies, showing threaded ports and mounting holes"
+    }
+  ]
+}

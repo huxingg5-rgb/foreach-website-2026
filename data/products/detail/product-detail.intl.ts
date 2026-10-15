@@ -4,6 +4,17 @@ const HAN_PATTERN = /[\u3400-\u9fff]/;
 const HAN_GLOBAL_PATTERN = /[\u3400-\u9fff]+/g;
 
 const EXACT_TRANSLATIONS: Record<string, string> = {
+  "公鲁尔堵头": "Male Luer Plug",
+  "公鲁尔堵头用于什么接口？": "Which port does the male Luer plug fit?",
+  "用于封堵相匹配的母鲁尔接口，使用前应确认配合尺寸及实际装配效果。": "It closes a mating female Luer port. Confirm mating dimensions and fit before use.",
+  "标准材质和包装有哪些？": "Which materials and packaging are listed?",
+  "目录列有PA白色和PP本色两种型号，均为100个/包。": "The catalog lists white PA and natural PP models, both supplied in bags of 100 pieces.",
+  "包装": "Packaging",
+  "100个/包": "100 pieces/bag",
+  "母鲁尔接口封堵": "Closing a mating female Luer port",
+  "设备装配与维护时的接口保护": "Port protection during equipment assembly and maintenance",
+  "LPBL-PA-W是一款公鲁尔堵头，主体材质为PA，用于封堵相匹配的母鲁尔接口。": "LPBL-PA-W is a PA male Luer plug for closing a mating female Luer port.",
+  "LPBL-PP-N是一款公鲁尔堵头，主体材质为PP，用于封堵相匹配的母鲁尔接口。": "LPBL-PP-N is a PP male Luer plug for closing a mating female Luer port.",
   "名称": "Name",
   "规格": "Specifications",
   "定制确认项": "Custom Confirmation Items",

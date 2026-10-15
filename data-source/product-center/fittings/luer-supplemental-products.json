@@ -1,0 +1,26 @@
+[
+  {
+    "productCode": "809409",
+    "model": "LPBL-PA-W",
+    "series": "LPBL",
+    "productType": "公鲁尔堵头",
+    "material": "PA",
+    "colorCode": "W",
+    "color": "白色",
+    "packQuantity": 100,
+    "imageCard": "/images/products/fittings/luer-fittings/photos/male-luer-plug-pa-white.webp",
+    "source": "User-provided LPBL catalog table, 2026-10-15"
+  },
+  {
+    "productCode": "809286",
+    "model": "LPBL-PP-N",
+    "series": "LPBL",
+    "productType": "公鲁尔堵头",
+    "material": "PP",
+    "colorCode": "N",
+    "color": "本色",
+    "packQuantity": 100,
+    "imageCard": "/images/products/fittings/luer-fittings/photos/male-luer-plug-pp-natural.webp",
+    "source": "User-provided LPBL catalog table, 2026-10-15"
+  }
+]

@@ -1,4 +1,6 @@
-import FlangedFittingRelatedArticle from "@/components/products/detail/FlangedFittingRelatedArticle";
+import HardTubeFittingRelatedArticles from "@/components/products/detail/HardTubeFittingRelatedArticles";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import type { ReactNode } from "react";
 ﻿import type {
   ComponentType,
@@ -18,7 +20,6 @@ import {
 
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
-import HardTubeGuideProductLink from "@/components/resources/technical-articles/articles/HardTubeGuideProductLink";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
@@ -41,6 +42,7 @@ import femaleThreadDetailsJson from "@/data/products/generated/fittings/female-t
 import "../../../products.css";
 
 type ProductsSeriesRoutePageProps = {
+  renderLocale?: TechnicalArticleLocale;
   params: Promise<{
     category: string;
     slug: string;
@@ -640,6 +642,7 @@ export async function generateMetadata({
 
 export default async function ProductsSeriesRoutePage({
   params,
+  renderLocale = "zh-CN",
 }: ProductsSeriesRoutePageProps) {
   const {
     category,
@@ -657,10 +660,16 @@ export default async function ProductsSeriesRoutePage({
   if (fittingDetail) {
     return (
       <ProductDetailView
-        afterContent={fittingDetail.productTypeId === "hard-tube-fittings" ? <>
-          <HardTubeGuideProductLink model={String(fittingDetail.detail.model || "")} />
-          <FlangedFittingRelatedArticle model={String(fittingDetail.detail.model || "")} locale="zh-CN" />
-        </> : undefined}
+        afterContent={fittingDetail.productTypeId === "hard-tube-fittings" ? (
+          <HardTubeFittingRelatedArticles model={String(fittingDetail.detail.model || "")} locale={renderLocale} />
+        ) : fittingDetail.productTypeId === "luer-fittings" ? (
+          <RelatedResources
+            sourceType="product"
+            sourceSlug={String(fittingDetail.detail.model || "").toLowerCase()}
+            relationKeys={["category:luer-fittings"]}
+            locale={renderLocale}
+          />
+        ) : undefined}
         data={
           toFittingClientData(
             fittingDetail

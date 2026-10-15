@@ -248,7 +248,7 @@ export function getLuerFittingArticles(locale: TechnicalArticleLocale): Technica
   return [{
     id: luerFittingSlug, slug: luerFittingSlug, category: "fittings-tubing",
     ...copy.metadata, summary: copy.deck, date: "2026-10-13",
-    relationKeys: ["series:lps", "series:lpr", "series:lp", "series:ls", "series:pmls"], relationPriority: 150,
+    relationKeys: ["category:luer-fittings", "series:lps", "series:lpr", "series:lp", "series:ls", "series:pmls"], relationPriority: 150,
     content: [
       { title: "", content: copy.leadBlocks.map(blockText).join("\n\n") },
       ...copy.sections.map(section => ({ title: section.title, content: section.blocks.map(blockText).join("\n\n") })),

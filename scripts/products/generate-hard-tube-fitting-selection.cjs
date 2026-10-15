@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
+const cardImageExceptions = require("../../data/products/selection/fitting-card-image-exceptions.json");
+const cardImageOverrides = require("../../data/products/selection/hard-tube-card-image-overrides.json");
 
 const root = process.cwd();
 const sourcePath = process.argv[2];
@@ -537,6 +539,9 @@ const products = records.map((record, index) => {
     },
 
     imageCard:
+      cardImageOverrides[modelCode] ||
+      (cardImageExceptions[productCode]?.model === modelCode
+        ? cardImageExceptions[productCode].imageCard : "") ||
       imageMap[modelCode]?.imageCard ||
       "/images/logo/foreach-logo-color.svg",
 

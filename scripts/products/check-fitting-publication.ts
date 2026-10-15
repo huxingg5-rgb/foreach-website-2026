@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
+import cardImageExceptionData from "../../data/products/selection/fitting-card-image-exceptions.json";
 
 import {
   FITTING_OFFLINE_PRODUCTS,
@@ -25,6 +26,7 @@ import {
 } from "../../services/resources/getFittingReplacementDetailData";
 
 type UnknownRecord = Record<string, unknown>;
+const cardImageExceptions: Record<string, { model: string; imageCard: string }> = cardImageExceptionData;
 
 const ROOT = process.cwd();
 const PUBLIC_ROOT = path.join(ROOT, "public");
@@ -177,6 +179,11 @@ async function main() {
       fs.existsSync(imageFile),
       `发布产品主图不存在：${product.productCode} ${product.imageCard}`
     );
+    const exception = cardImageExceptions[product.productCode];
+    if (exception?.model === product.foreachModel && exception.imageCard === product.imageCard) {
+      assert(!logoHashes.has(imageHash), `指定占位图不可使用 Logo：${product.productCode}`);
+      continue;
+    }
     assert(
       !/logo|placeholder|no[-_]?image|default[-_]?product|coming[-_]?soon/i.test(
         product.imageCard

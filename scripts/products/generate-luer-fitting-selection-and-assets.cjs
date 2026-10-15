@@ -15,6 +15,8 @@
 const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
+const cardImageExceptions = require("../../data/products/selection/fitting-card-image-exceptions.json");
+const supplementalLuer = require("./luer-supplemental-products.cjs");
 
 const root = process.cwd();
 
@@ -723,6 +725,11 @@ records.forEach((record, index) => {
       color: parsed.color,
     });
 
+  const cardImageException = cardImageExceptions[record.productCode];
+  if (cardImageException?.model === modelCode) {
+    imageCard = cardImageException.imageCard;
+  }
+
   products.push({
     productId: record.productCode,
     categoryId: "fittings",
@@ -787,6 +794,9 @@ records.forEach((record, index) => {
     has3DFlag: record.has3DFlag,
   };
 });
+
+products.push(...supplementalLuer.selectionProducts(products.length));
+Object.assign(assetMap, supplementalLuer.assetMap());
 
 const duplicateProductCodes = Object.entries(
   countBy(products, (item) => item.productId)

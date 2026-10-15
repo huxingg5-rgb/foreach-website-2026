@@ -3,6 +3,8 @@ import fs from "node:fs";
 import path from "node:path";
 
 import * as XLSX from "xlsx";
+import cardImageExceptionData from "../../data/products/selection/fitting-card-image-exceptions.json";
+import supplementalLuerProducts from "../../data-source/product-center/fittings/luer-supplemental-products.json";
 
 import { barbedFittingSelectionProducts } from "../../data/products/selection/barbed-fitting-selection.generated";
 import { bulkheadBarbedFittingSelectionProducts } from "../../data/products/selection/bulkhead-barbed-fitting-selection.generated";
@@ -15,6 +17,7 @@ import { threadToBarbedFittingSelectionProducts } from "../../data/products/sele
 import { fittingCompatibleModelProducts } from "../../data/resources/fitting-replacement/compatible-models.generated";
 
 type UnknownRecord = Record<string, unknown>;
+const cardImageExceptions: Record<string, { model: string; imageCard: string }> = cardImageExceptionData;
 type OfflineReason =
   | "FORCED_CODE_PREFIX"
   | "NOT_ACTIVE"
@@ -269,6 +272,16 @@ function readSourceRecords(): SourceRecord[] {
     }
   }
 
+  for (const [index, product] of supplementalLuerProducts.entries()) {
+    records.push({
+      productCode: product.productCode,
+      foreachModel: product.model,
+      productType: product.productType,
+      productSeries: product.series,
+      sourceSheet: "luer-supplemental-products.json",
+      sourceRow: index + 1,
+    });
+  }
   return records;
 }
 
@@ -591,6 +604,13 @@ function main() {
   for (const [code, records] of selectionByCode) {
     const imagePath = text(records[0]?.imageCard);
     if (!imagePath) continue;
+
+    // Only these explicitly approved model/image pairs may share a preparation card.
+    // Source identity, active status and file existence checks above still apply.
+    const exception = cardImageExceptions[code];
+    if (exception?.model === recordModel(records[0]) && exception.imageCard === imagePath) {
+      continue;
+    }
 
     const imageFile = publicFile(imagePath);
     const imageHash = sha256(imageFile);

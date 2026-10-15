@@ -728,5 +728,6 @@ export default async function ProductLocaleRoutePage({
 
   return ProductsSeriesRoutePage({
     params: Promise.resolve({ category, slug, seriesSlug }),
+    renderLocale: locale,
   });
 }

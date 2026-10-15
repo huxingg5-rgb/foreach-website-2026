@@ -1,5 +1,15 @@
 ﻿const fs = require("fs");
 const path = require("path");
+const pmlsMaterialGallery = require("../../data/products/detail/pmls-material-gallery.json");
+const lslMaterialGallery = require("../../data/products/detail/lsl-material-gallery.json");
+const lrlMaterialGallery = require("../../data/products/detail/lrl-material-gallery.json");
+const luerLockingCollarGallery = require("../../data/products/detail/luer-locking-collar-gallery.json");
+const lpGallery = require("../../data/products/detail/lp-gallery.json");
+const lsMaterialGallery = require("../../data/products/detail/ls-material-gallery.json");
+const lnsGallery = require("../../data/products/detail/lns-gallery.json");
+const lcrGallery = require("../../data/products/detail/lcr-gallery.json");
+const luerPlugGallery = require("../../data/products/detail/luer-plug-gallery.json");
+const supplementalLuer = require("./luer-supplemental-products.cjs");
 
 const root = process.cwd();
 
@@ -89,6 +99,7 @@ const luerSeriesNames = {
   LCR: "鲁尔接头识别色环",
   LPT: "鲁尔内螺纹套",
   LNS: "鲁尔滚花螺母",
+  LPBL: "公鲁尔堵头",
 };
 
 const femaleSeriesNames = {
@@ -498,6 +509,9 @@ function createApplications(
   productTypeId,
   seriesCode
 ) {
+  if (productTypeId === "luer-fittings" && seriesCode === "LPBL") {
+    return ["母鲁尔接口封堵", "设备装配与维护时的接口保护"];
+  }
   if (
     productTypeId ===
     "luer-fittings"
@@ -548,6 +562,34 @@ function createBaseDetail({
 
   const selectionHref =
     `/products/fittings/${productTypeId}`;
+
+  // Material-level photos show multiple sizes; keep the model-specific main image.
+  const pmlsMaterial = productTypeId === "luer-fittings"
+    ? /^PMLS-U28-(?:16|24|32)D-(PA-W|PP-N)$/.exec(model)?.[1].split("-")[0]
+    : undefined;
+  const lslMaterial = productTypeId === "luer-fittings"
+    ? /^LSL-(?:16|24|32)-(PA-W|PP-N)$/.exec(model)?.[1].split("-")[0]
+    : undefined;
+  const lrlMaterial = productTypeId === "luer-fittings"
+    ? /^LRL-(?:16|24|32)-(PA-W|PP-N)$/.exec(model)?.[1].split("-")[0]
+    : undefined;
+  const lockingCollarGallery = productTypeId === "luer-fittings" && ["LPR", "LPS"].includes(seriesCode)
+    ? luerLockingCollarGallery
+    : undefined;
+  const onePieceMaleGallery = productTypeId === "luer-fittings" && seriesCode === "LP"
+    ? lpGallery
+    : undefined;
+  const lsMaterial = productTypeId === "luer-fittings" && seriesCode === "LS"
+    ? /^LS-(?:16|24|32)D-(PA-W|PP-N)$/.exec(model)?.[1].split("-")[0]
+    : undefined;
+  const luerNutGallery = productTypeId === "luer-fittings" && seriesCode === "LNS"
+    ? lnsGallery
+    : undefined;
+  const identificationRingGallery = productTypeId === "luer-fittings" && seriesCode === "LCR"
+    ? lcrGallery
+    : undefined;
+  const plugGallery = productTypeId === "luer-fittings" && seriesCode === "LPBL" ? luerPlugGallery : undefined;
+  const gallery = pmlsMaterialGallery[pmlsMaterial] || lslMaterialGallery[lslMaterial] || lrlMaterialGallery[lrlMaterial] || lockingCollarGallery || onePieceMaleGallery || lsMaterialGallery[lsMaterial] || luerNutGallery || identificationRingGallery || plugGallery || [];
 
   return {
     sourceType:
@@ -639,12 +681,13 @@ function createBaseDetail({
     imageCard:
       mainImage,
 
-    additionalImages: [],
+    additionalImages: gallery.map((image) => image.src),
+    ...(gallery.length ? { additionalImageAlts: gallery.map((image) => image.alt) } : {}),
 
     images:
       mainImage
-        ? [mainImage]
-        : [],
+        ? [mainImage, ...gallery.map((image) => image.src)]
+        : gallery.map((image) => image.src),
 
     model3dUrl,
 
@@ -667,10 +710,10 @@ function createBaseDetail({
     specifications:
       specs,
 
-    faqs:
-      createFaqs(
-        productTypeId
-      ),
+    faqs: seriesCode === "LPBL" ? [
+      { question: "公鲁尔堵头用于什么接口？", answer: "用于封堵相匹配的母鲁尔接口，使用前应确认配合尺寸及实际装配效果。" },
+      { question: "标准材质和包装有哪些？", answer: "目录列有PA白色和PP本色两种型号，均为100个/包。" },
+    ] : createFaqs(productTypeId),
 
     showDrawingRequest:
       true,
@@ -781,7 +824,9 @@ function createLuerDetail(
       ? `主体材质为${material}`
       : "",
 
-    "适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路连接",
+    seriesCode === "LPBL"
+      ? "用于封堵相匹配的母鲁尔接口"
+      : "适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路连接",
   ].filter(Boolean);
 
   const specs = [
@@ -835,6 +880,9 @@ function createLuerDetail(
         }
       : null,
   ].filter(Boolean);
+
+  const supplementalProduct = supplementalLuer.records.find(record => record.productCode === productCode && record.model === model);
+  if (supplementalProduct) specs.push({ label: "包装", value: `${supplementalProduct.packQuantity}个/包` });
 
   return createBaseDetail({
     product,
@@ -1131,7 +1179,7 @@ for (const target of targets) {
   const expectedCount =
     target.id ===
     "luer-fittings"
-      ? 151
+      ? 151 + supplementalLuer.records.length
       : 24;
 
   if (

@@ -586,6 +586,15 @@ const FILTER_OPTION_LABELS: Record<string, FilterOptionLabelMap> = {
     ru: "Панельная стопорная гайка",
   },
 
+  "LPBL 公鲁尔堵头": {
+    zh: "LPBL 公鲁尔堵头",
+    en: "LPBL Male Luer Plug",
+    es: "LPBL Tapón Luer macho",
+    fr: "LPBL Bouchon Luer mâle",
+    ko: "LPBL 수 루어 플러그",
+    ru: "LPBL Заглушка с наружным конусом Люэра",
+  },
+
   "N - 本色": {
     zh: "N - 本色",
     en: "Natural",

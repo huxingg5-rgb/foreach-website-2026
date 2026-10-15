@@ -3516,10 +3516,22 @@ export default function ProductSelectionClient({
           productTypeId === "check-valves" ? "filters" : productTypeId || "",
         ) ?? 999;
 
-      // Match the sidebar order while preserving the existing order within each type.
-      return products.sort((current, next) =>
-        getTypeOrder(current.productTypeId) - getTypeOrder(next.productTypeId),
-      );
+      // Match the sidebar order and show LPS first within Luer fittings.
+      return products.sort((current, next) => {
+        const typeDifference =
+          getTypeOrder(current.productTypeId) - getTypeOrder(next.productTypeId);
+
+        if (typeDifference !== 0) return typeDifference;
+
+        if (
+          current.productTypeId === "luer-fittings" &&
+          next.productTypeId === "luer-fittings"
+        ) {
+          return Number(next.seriesId === "lps") - Number(current.seriesId === "lps");
+        }
+
+        return 0;
+      });
     }
 
     return products;

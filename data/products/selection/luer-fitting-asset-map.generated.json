@@ -349,6 +349,21 @@
     "has2DFlag": false,
     "has3DFlag": false
   },
+  "809286": {
+    "productCode": "809286",
+    "itemNumber": "",
+    "fullModel": "公鲁尔堵头 LPBL-PP-N",
+    "model": "LPBL-PP-N",
+    "slug": "lpbl-pp-n",
+    "series": "LPBL",
+    "imageCard": "/images/products/fittings/luer-fittings/photos/male-luer-plug-pp-natural.webp",
+    "drawingPdfUrl": "",
+    "imageSourceFile": "male-luer-plug-pp-natural.webp",
+    "drawingSourceFile": "",
+    "has2DFlag": false,
+    "has3DFlag": false,
+    "source": "User-provided LPBL catalog table, 2026-10-15"
+  },
   "809290": {
     "productCode": "809290",
     "itemNumber": "443-02-00316",
@@ -740,6 +755,21 @@
     "drawingSourceFile": "旋转锁圈公鲁尔接头LPR-C.pdf",
     "has2DFlag": false,
     "has3DFlag": false
+  },
+  "809409": {
+    "productCode": "809409",
+    "itemNumber": "",
+    "fullModel": "公鲁尔堵头 LPBL-PA-W",
+    "model": "LPBL-PA-W",
+    "slug": "lpbl-pa-w",
+    "series": "LPBL",
+    "imageCard": "/images/products/fittings/luer-fittings/photos/male-luer-plug-pa-white.webp",
+    "drawingPdfUrl": "",
+    "imageSourceFile": "male-luer-plug-pa-white.webp",
+    "drawingSourceFile": "",
+    "has2DFlag": false,
+    "has3DFlag": false,
+    "source": "User-provided LPBL catalog table, 2026-10-15"
   },
   "809485": {
     "productCode": "809485",

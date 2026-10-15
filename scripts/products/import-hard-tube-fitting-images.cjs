@@ -556,6 +556,17 @@ for (const sourceFile of supportedFiles) {
   });
 }
 
+// HFL6 PPS black variants have dedicated renders; the generic natural-color
+// structure image must not win just because its source filename sorts first.
+for (const [model, media] of Object.entries(modelImageMap)) {
+  if (!/^HFL6-.*-PS-B$/.test(model)) continue;
+  const exactStem = `${model.toLowerCase()}-main`;
+  const blackImage = media.images.find((src) =>
+    path.parse(src).name.toLowerCase() === exactStem
+  );
+  if (blackImage) media.imageCard = blackImage;
+}
+
 const sortedImageMap = Object.fromEntries(
   Object.entries(modelImageMap).sort(
     ([current], [next]) =>

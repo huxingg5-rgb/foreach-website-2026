@@ -4387,6 +4387,62 @@ export const luerFittingSelectionProducts:
       "zh": "滚花螺母 LNS-U28-PA-Y LNS-U28-PA-Y 809603 443-02-00186 滚花螺母 LNS 滚花螺母 1/4-28 UNF PA 黄色",
       "en": "LNS-U28-PA-Y 809603 443-02-00186 LNS 1/4-28 UNF PA"
     }
+  },
+  {
+    "productId": "809409",
+    "categoryId": "fittings",
+    "productTypeId": "luer-fittings",
+    "seriesId": "lpbl",
+    "cardTitle": {
+      "zh": "LPBL-PA-W",
+      "en": "LPBL-PA-W"
+    },
+    "cardSubtitle": {
+      "zh": "公鲁尔堵头\nPA材质｜白色\n鲁尔接头专用堵头",
+      "en": "Male Luer Plug\nPA material | White\nPlug for Luer fittings"
+    },
+    "filters": {
+      "filter01": "公鲁尔堵头",
+      "filter02": "LPBL 公鲁尔堵头",
+      "filter05": "PA",
+      "filter06": "W - 白色"
+    },
+    "imageCard": "/images/products/fittings/luer-fittings/photos/male-luer-plug-pa-white.webp",
+    "detailSlug": "lpbl-pa-w",
+    "status": "active",
+    "sortOrder": 152,
+    "searchKeywords": {
+      "zh": "LPBL-PA-W 809409 公鲁尔堵头 PA 白色",
+      "en": "LPBL-PA-W 809409 male luer plug PA"
+    }
+  },
+  {
+    "productId": "809286",
+    "categoryId": "fittings",
+    "productTypeId": "luer-fittings",
+    "seriesId": "lpbl",
+    "cardTitle": {
+      "zh": "LPBL-PP-N",
+      "en": "LPBL-PP-N"
+    },
+    "cardSubtitle": {
+      "zh": "公鲁尔堵头\nPP材质｜本色\n鲁尔接头专用堵头",
+      "en": "Male Luer Plug\nPP material | Natural\nPlug for Luer fittings"
+    },
+    "filters": {
+      "filter01": "公鲁尔堵头",
+      "filter02": "LPBL 公鲁尔堵头",
+      "filter05": "PP",
+      "filter06": "N - 本色"
+    },
+    "imageCard": "/images/products/fittings/luer-fittings/photos/male-luer-plug-pp-natural.webp",
+    "detailSlug": "lpbl-pp-n",
+    "status": "active",
+    "sortOrder": 153,
+    "searchKeywords": {
+      "zh": "LPBL-PP-N 809286 公鲁尔堵头 PP 本色",
+      "en": "LPBL-PP-N 809286 male luer plug PP"
+    }
   }
 ];
 

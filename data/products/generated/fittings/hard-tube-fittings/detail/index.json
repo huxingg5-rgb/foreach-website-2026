@@ -34,7 +34,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-M6-20-PK-N 标滚平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -154,7 +160,22 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "HF natural PEEK flat-bottom tubing connection for instrument fluidics, showing the threaded body and end sealing washer",
+      "Natural PEEK HF tubing assembly shown beside a black tubing connection for comparison of the body and end sealing components",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -191,7 +212,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-ps-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-ps-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-ps-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-M6-20-PS-B 标滚平底接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -311,7 +336,18 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF PPS black standard flat-bottom connection for instrument fluidics, showing the knurled grip, threaded body and tube opening",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -348,7 +384,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ],
     "imageAlt": "HF-M6-20-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -468,7 +507,16 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -505,7 +553,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-M6-25-PK-N 标滚平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -625,7 +679,22 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "HF natural PEEK flat-bottom tubing connection for instrument fluidics, showing the threaded body and end sealing washer",
+      "Natural PEEK HF tubing assembly shown beside a black tubing connection for comparison of the body and end sealing components",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -662,7 +731,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-ps-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-ps-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-ps-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-M6-25-PS-B 标滚平底接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -782,7 +855,18 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF PPS black standard flat-bottom connection for instrument fluidics, showing the knurled grip, threaded body and tube opening",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -819,7 +903,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ],
     "imageAlt": "HF-M6-25-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -939,7 +1026,16 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-25-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -976,7 +1072,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-M6-32-PK-N 标滚平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -1096,7 +1198,22 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "HF natural PEEK flat-bottom tubing connection for instrument fluidics, showing the threaded body and end sealing washer",
+      "Natural PEEK HF tubing assembly shown beside a black tubing connection for comparison of the body and end sealing components",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -1133,7 +1250,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-ps-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-ps-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-ps-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-M6-32-PS-B 标滚平底接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -1253,7 +1374,18 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF PPS black standard flat-bottom connection for instrument fluidics, showing the knurled grip, threaded body and tube opening",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -1290,7 +1422,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ],
     "imageAlt": "HF-M6-32-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -1410,7 +1545,16 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-32-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -1447,7 +1591,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-U28-20-PK-N 标滚平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -1567,7 +1717,22 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "HF natural PEEK flat-bottom tubing connection for instrument fluidics, showing the threaded body and end sealing washer",
+      "Natural PEEK HF tubing assembly shown beside a black tubing connection for comparison of the body and end sealing components",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -1604,7 +1769,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-ps-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-ps-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-ps-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-U28-20-PS-B 标滚平底接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -1724,7 +1893,18 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF PPS black standard flat-bottom connection for instrument fluidics, showing the knurled grip, threaded body and tube opening",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -1761,7 +1941,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ],
     "imageAlt": "HF-U28-20-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -1881,7 +2064,16 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-20-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -1918,7 +2110,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-U28-25-PK-N 标滚平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -2038,7 +2236,22 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "HF natural PEEK flat-bottom tubing connection for instrument fluidics, showing the threaded body and end sealing washer",
+      "Natural PEEK HF tubing assembly shown beside a black tubing connection for comparison of the body and end sealing components",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -2075,7 +2288,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-ps-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-ps-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-ps-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-U28-25-PS-B 标滚平底接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -2195,7 +2412,18 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF PPS black standard flat-bottom connection for instrument fluidics, showing the knurled grip, threaded body and tube opening",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -2232,7 +2460,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ],
     "imageAlt": "HF-U28-25-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -2352,7 +2583,16 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-25-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -2389,7 +2629,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-U28-32-PK-N 标滚平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -2509,7 +2755,22 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "HF natural PEEK flat-bottom tubing connection for instrument fluidics, showing the threaded body and end sealing washer",
+      "Natural PEEK HF tubing assembly shown beside a black tubing connection for comparison of the body and end sealing components",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -2546,7 +2807,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-ps-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-ps-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-ps-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ],
     "imageAlt": "HF-U28-32-PS-B 标滚平底接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -2666,7 +2931,18 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF PPS black standard flat-bottom connection for instrument fluidics, showing the knurled grip, threaded body and tube opening",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections",
+      "HF standard flat-bottom connection variants for instrument fluidics, showing knurled grips, threaded bodies and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -2703,7 +2979,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ],
     "imageAlt": "HF-U28-32-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -2823,7 +3102,16 @@
     "drawingSource": {
       "sourceFile": "HF系列标滚平底接头.pdf",
       "matchRule": "HF系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF standard flat-bottom connections for instrument fluidics, showing body variants and separate sealing washers",
+      "Sealing washer assortment for HF standard flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-u28-32-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -2860,7 +3148,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ],
     "imageAlt": "HF6-M6-20-PK-N 紧凑平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -2980,7 +3273,20 @@
     "drawingSource": {
       "sourceFile": "HF6系列紧凑平底接头.pdf",
       "matchRule": "HF6系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF6 PEEK compact flat-bottom connections for microfluidic tubing, showing threaded bodies and knurled grips",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, shown together for body and size comparison",
+      "Sealing washer assortment for compact flat-bottom microfluidic tubing connections",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, arranged to show threaded bodies, knurled grips and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -3331,7 +3637,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-25-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-25-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-25-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ],
     "imageAlt": "HF6-M6-25-PK-N 紧凑平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -3451,7 +3762,20 @@
     "drawingSource": {
       "sourceFile": "HF6系列紧凑平底接头.pdf",
       "matchRule": "HF6系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF6 PEEK compact flat-bottom connections for microfluidic tubing, showing threaded bodies and knurled grips",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, shown together for body and size comparison",
+      "Sealing washer assortment for compact flat-bottom microfluidic tubing connections",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, arranged to show threaded bodies, knurled grips and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-25-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -3802,7 +4126,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-32-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-32-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-32-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ],
     "imageAlt": "HF6-M6-32-PK-N 紧凑平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -3922,7 +4251,20 @@
     "drawingSource": {
       "sourceFile": "HF6系列紧凑平底接头.pdf",
       "matchRule": "HF6系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF6 PEEK compact flat-bottom connections for microfluidic tubing, showing threaded bodies and knurled grips",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, shown together for body and size comparison",
+      "Sealing washer assortment for compact flat-bottom microfluidic tubing connections",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, arranged to show threaded bodies, knurled grips and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-32-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -4273,7 +4615,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-20-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-20-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-20-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ],
     "imageAlt": "HF6-U28-20-PK-N 紧凑平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -4393,7 +4740,20 @@
     "drawingSource": {
       "sourceFile": "HF6系列紧凑平底接头.pdf",
       "matchRule": "HF6系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF6 PEEK compact flat-bottom connections for microfluidic tubing, showing threaded bodies and knurled grips",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, shown together for body and size comparison",
+      "Sealing washer assortment for compact flat-bottom microfluidic tubing connections",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, arranged to show threaded bodies, knurled grips and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-20-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -4744,7 +5104,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-25-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-25-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-25-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ],
     "imageAlt": "HF6-U28-25-PK-N 紧凑平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -4864,7 +5229,20 @@
     "drawingSource": {
       "sourceFile": "HF6系列紧凑平底接头.pdf",
       "matchRule": "HF6系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF6 PEEK compact flat-bottom connections for microfluidic tubing, showing threaded bodies and knurled grips",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, shown together for body and size comparison",
+      "Sealing washer assortment for compact flat-bottom microfluidic tubing connections",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, arranged to show threaded bodies, knurled grips and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-25-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -5215,7 +5593,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-32-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-32-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-32-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ],
     "imageAlt": "HF6-U28-32-PK-N 紧凑平底接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -5335,7 +5718,20 @@
     "drawingSource": {
       "sourceFile": "HF6系列紧凑平底接头.pdf",
       "matchRule": "HF6系列 + 平底结构"
-    }
+    },
+    "additionalImageAlts": [
+      "HF6 PEEK compact flat-bottom connections for microfluidic tubing, showing threaded bodies and knurled grips",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, shown together for body and size comparison",
+      "Sealing washer assortment for compact flat-bottom microfluidic tubing connections",
+      "HF6 compact flat-bottom connection variants for instrument fluidics, arranged to show threaded bodies, knurled grips and tube openings"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-u28-32-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -5686,7 +6082,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-16-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -5806,7 +6206,18 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -5843,7 +6254,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-16-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -5855,7 +6269,7 @@
     "drawingPdfUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-m6.pdf",
     "resources": {
       "drawing2dUrl": "",
-      "model3dUrl": "",
+      "model3dUrl": "/models/products/fittings/local-test/443-01-00063.stp#test-preview",
       "drawing2d": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-m6.pdf"
     },
     "specSeriesKey": "standard-flat-bottom-fitting",
@@ -5963,7 +6377,16 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -6000,7 +6423,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-20-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -6120,7 +6547,18 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -6157,7 +6595,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-20-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -6277,7 +6718,16 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -6314,7 +6764,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-25-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -6434,7 +6888,18 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -6471,7 +6936,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-25-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -6591,7 +7059,16 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -6628,7 +7105,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-30-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -6748,7 +7229,18 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -6785,7 +7277,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-30-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -6905,7 +7400,16 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -6942,7 +7446,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-32-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -7062,7 +7570,18 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -7099,7 +7618,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-M6-32-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -7219,7 +7741,16 @@
     "drawingSource": {
       "sourceFile": "HFL-M6.pdf",
       "matchRule": "HFL系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -7256,7 +7787,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-16-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -7376,7 +7911,18 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -7413,7 +7959,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-16-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -7533,7 +8082,16 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -7570,7 +8128,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-20-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -7690,7 +8252,18 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -7727,7 +8300,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-20-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -7847,7 +8423,16 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -7884,7 +8469,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-25-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -8004,7 +8593,18 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -8041,7 +8641,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-25-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -8161,7 +8764,16 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -8198,7 +8810,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-30-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -8318,7 +8934,18 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -8355,7 +8982,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-30-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -8475,7 +9105,16 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -8512,7 +9151,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-32-PV-B 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -8632,7 +9275,18 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "Black HFL PVDF flat-bottom fitting bodies, showing threaded sections, knurled grips and tube openings",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
+      "Flat-bottom fitting bodies in tan, natural and black finishes with separate sealing washers"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -8669,7 +9323,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ],
     "imageAlt": "HFL-U28-32-PV-N 标滚平底接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -8789,7 +9446,16 @@
     "drawingSource": {
       "sourceFile": "HFL-U28.pdf",
       "matchRule": "HFL系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -8822,12 +9488,14 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
     ],
     "imageAlt": "HFL6-M6-16-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -8948,7 +9616,18 @@
     "drawingSource": {
       "sourceFile": "HFL6-M6.pdf",
       "matchRule": "HFL6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections",
+      "HFL6 compact flat-bottom tubing assemblies arranged in rows, showing black threaded fittings, translucent tubing and end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -8981,12 +9660,14 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
     ],
     "imageAlt": "HFL6-M6-20-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -9107,7 +9788,18 @@
     "drawingSource": {
       "sourceFile": "HFL6-M6.pdf",
       "matchRule": "HFL6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections",
+      "HFL6 compact flat-bottom tubing assemblies arranged in rows, showing black threaded fittings, translucent tubing and end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-20-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -9140,12 +9832,13 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
     ],
     "imageAlt": "HFL6-M6-25-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -9266,7 +9959,16 @@
     "drawingSource": {
       "sourceFile": "HFL6-M6.pdf",
       "matchRule": "HFL6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -9303,7 +10005,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ],
     "imageAlt": "HFL6-M6-25-PS-U 紧凑平底接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -9423,7 +10128,16 @@
     "drawingSource": {
       "sourceFile": "HFL6-M6.pdf",
       "matchRule": "HFL6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-25-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -9456,12 +10170,14 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
     ],
     "imageAlt": "HFL6-M6-30-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -9582,7 +10298,18 @@
     "drawingSource": {
       "sourceFile": "HFL6-M6.pdf",
       "matchRule": "HFL6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections",
+      "HFL6 compact flat-bottom tubing assemblies arranged in rows, showing black threaded fittings, translucent tubing and end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-30-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -9615,12 +10342,14 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
     ],
     "imageAlt": "HFL6-M6-32-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -9741,7 +10470,18 @@
     "drawingSource": {
       "sourceFile": "HFL6-M6.pdf",
       "matchRule": "HFL6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections",
+      "HFL6 compact flat-bottom tubing assemblies arranged in rows, showing black threaded fittings, translucent tubing and end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-32-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -9774,12 +10514,13 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
     ],
     "imageAlt": "HFL6-U28-16-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -9900,7 +10641,16 @@
     "drawingSource": {
       "sourceFile": "HFL6-U28.pdf",
       "matchRule": "HFL6系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -9937,7 +10687,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ],
     "imageAlt": "HFL6-U28-16-PS-U 紧凑平底接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -10057,7 +10810,16 @@
     "drawingSource": {
       "sourceFile": "HFL6-U28.pdf",
       "matchRule": "HFL6系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-16-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -10090,12 +10852,13 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
     ],
     "imageAlt": "HFL6-U28-20-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -10216,7 +10979,16 @@
     "drawingSource": {
       "sourceFile": "HFL6-U28.pdf",
       "matchRule": "HFL6系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -10253,7 +11025,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ],
     "imageAlt": "HFL6-U28-20-PS-U 紧凑平底接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -10373,7 +11148,16 @@
     "drawingSource": {
       "sourceFile": "HFL6-U28.pdf",
       "matchRule": "HFL6系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-20-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -10406,12 +11190,14 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
     ],
     "imageAlt": "HFL6-U28-25-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -10532,7 +11318,18 @@
     "drawingSource": {
       "sourceFile": "HFL6-U28.pdf",
       "matchRule": "HFL6系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections",
+      "HFL6 compact flat-bottom tubing assemblies arranged in rows, showing black threaded fittings, translucent tubing and end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-25-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -10565,12 +11362,14 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
     ],
     "imageAlt": "HFL6-U28-30-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -10691,7 +11490,18 @@
     "drawingSource": {
       "sourceFile": "HFL6-U28.pdf",
       "matchRule": "HFL6系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections",
+      "HFL6 compact flat-bottom tubing assemblies arranged in rows, showing black threaded fittings, translucent tubing and end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-30-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -10724,12 +11534,14 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-main.jpg",
-    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-main.jpg",
-    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-main.jpg",
-    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-main.jpg",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-ps-b-main.jpg",
+    "image": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-ps-b-main.jpg",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-ps-b-main.jpg",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
     ],
     "imageAlt": "HFL6-U28-32-PS-B 紧凑平底接头 PPS",
     "detailMode": "standard_model",
@@ -10850,7 +11662,18 @@
     "drawingSource": {
       "sourceFile": "HFL6-U28.pdf",
       "matchRule": "HFL6系列 + U28螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6 compact flat-bottom tubing connection assembly for instrument fluidics, showing a black threaded body, tubing and end sealing components",
+      "Sealing washer assortment for HFL6 compact flat-bottom microfluidic tubing connections",
+      "HFL6 compact flat-bottom tubing assemblies arranged in rows, showing black threaded fittings, translucent tubing and end sealing components"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-u28-32-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -10883,12 +11706,16 @@
       "流路基板连接",
       "IVD与分析仪器"
     ],
-    "mainImage": "/images/logo/foreach-logo-color.svg",
-    "image": "/images/logo/foreach-logo-color.svg",
-    "heroImage": "/images/logo/foreach-logo-color.svg",
-    "imageCard": "/images/logo/foreach-logo-color.svg",
-    "additionalImages": [],
-    "imageAlt": "HFL6-U40-16-PK-N 紧凑平底接头 PEEK",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-body.webp",
+    "image": "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-body.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-body.webp",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-body.webp",
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-6-40-unf-retaining-ring-seal-components.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-disassembled-components.webp"
+    ],
+    "imageAlt": "HFL6-U40-16-PK-N PEEK紧凑平底接头本体及6-40 UNF螺纹",
     "detailMode": "standard_model",
     "hideModelAction": false,
     "showConfigurator": false,
@@ -11002,7 +11829,18 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HFL6-U40-16-PK-N 6-40 UNF PEEK紧凑接头与硬管、卡环及密封件装配展示",
+      "HFL6 6-40微流体硬管连接的卡环与密封件组件",
+      "HFL6 6-40微流体硬管连接的PEEK接头本体、卡环与密封件拆分展示"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-6-40-unf-retaining-ring-seal-components.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-disassembled-components.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -11191,7 +12029,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-peek-natural-knurled-body-pair.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp"
+    ],
     "imageAlt": "HN-M6-16-PK-N 标滚卡箍接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -11306,7 +12148,18 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN natural PEEK ferrule-style tubing connections for instrument fluidics, showing knurled grips and threaded bodies",
+      "Ferrule seal assortment for HN instrument fluidics tubing connections",
+      "HN instrument fluidics tubing connection body variants, showing natural, white and black bodies with knurled grips"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-peek-natural-knurled-body-pair.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -11495,7 +12348,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-pvdf-natural-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN-M6-16-PV-N 标滚卡箍接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -11610,7 +12469,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN natural PVDF ferrule-style tubing connection for instrument fluidics, showing the knurled grip and threaded body",
+      "Ferrule seal assortment for HN instrument fluidics tubing connections",
+      "HN instrument fluidics tubing connection body variants, showing natural, white and black bodies with knurled grips",
+      "HN instrument fluidics ferrule seal shown upright, with the tapered body and central tube opening",
+      "HN instrument fluidics ferrule seal shown at an angle, with the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-16-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-pvdf-natural-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -11799,7 +12673,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-peek-natural-knurled-body-pair.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp"
+    ],
     "imageAlt": "HN-M6-32-PK-N 标滚卡箍接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -11914,7 +12792,18 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN natural PEEK ferrule-style tubing connections for instrument fluidics, showing knurled grips and threaded bodies",
+      "Ferrule seal assortment for HN instrument fluidics tubing connections",
+      "HN instrument fluidics tubing connection body variants, showing natural, white and black bodies with knurled grips"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-peek-natural-knurled-body-pair.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -12103,7 +12992,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-pvdf-natural-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN-M6-32-PV-N 标滚卡箍接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -12218,7 +13113,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN natural PVDF ferrule-style tubing connection for instrument fluidics, showing the knurled grip and threaded body",
+      "Ferrule seal assortment for HN instrument fluidics tubing connections",
+      "HN instrument fluidics tubing connection body variants, showing natural, white and black bodies with knurled grips",
+      "HN instrument fluidics ferrule seal shown upright, with the tapered body and central tube opening",
+      "HN instrument fluidics ferrule seal shown at an angle, with the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-m6-32-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-pvdf-natural-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -12407,7 +13317,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-peek-natural-knurled-body-pair.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp"
+    ],
     "imageAlt": "HN-U28-16-PK-N 标滚卡箍接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -12522,7 +13436,18 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN natural PEEK ferrule-style tubing connections for instrument fluidics, showing knurled grips and threaded bodies",
+      "Ferrule seal assortment for HN instrument fluidics tubing connections",
+      "HN instrument fluidics tubing connection body variants, showing natural, white and black bodies with knurled grips"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-peek-natural-knurled-body-pair.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -12711,7 +13636,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-pvdf-natural-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN-U28-16-PV-N 标滚卡箍接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -12826,7 +13757,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN natural PVDF ferrule-style tubing connection for instrument fluidics, showing the knurled grip and threaded body",
+      "Ferrule seal assortment for HN instrument fluidics tubing connections",
+      "HN instrument fluidics tubing connection body variants, showing natural, white and black bodies with knurled grips",
+      "HN instrument fluidics ferrule seal shown upright, with the tapered body and central tube opening",
+      "HN instrument fluidics ferrule seal shown at an angle, with the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-16-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-pvdf-natural-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -13015,7 +13961,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-peek-natural-knurled-body-pair.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp"
+    ],
     "imageAlt": "HN-U28-32-PK-N 标滚卡箍接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -13130,7 +14080,18 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN natural PEEK ferrule-style tubing connections for instrument fluidics, showing knurled grips and threaded bodies",
+      "Ferrule seal assortment for HN instrument fluidics tubing connections",
+      "HN instrument fluidics tubing connection body variants, showing natural, white and black bodies with knurled grips"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-peek-natural-knurled-body-pair.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -13319,7 +14280,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-pvdf-natural-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN-U28-32-PV-N 标滚卡箍接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -13434,7 +14401,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN natural PVDF ferrule-style tubing connection for instrument fluidics, showing the knurled grip and threaded body",
+      "Ferrule seal assortment for HN instrument fluidics tubing connections",
+      "HN instrument fluidics tubing connection body variants, showing natural, white and black bodies with knurled grips",
+      "HN instrument fluidics ferrule seal shown upright, with the tapered body and central tube opening",
+      "HN instrument fluidics ferrule seal shown at an angle, with the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hn-u28-32-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-pvdf-natural-knurled-body.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -19359,7 +20341,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-16-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-16-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-16-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ],
     "imageAlt": "HNF6-M6-16-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -19479,7 +20467,22 @@
     "drawingSource": {
       "sourceFile": "HNF6-M6.pdf",
       "matchRule": "HNF6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HNF6 compact ferrule fitting bodies in black, showing threads, grips and tube openings",
+      "HNF6 compact ferrule fittings assembled with black tubing and sealing components",
+      "Translucent ferrule with a stepped base, showing the tapered profile and tube opening",
+      "Translucent tapered ferrule showing its bore and sealing profile",
+      "Ferrule variants in translucent and yellow finishes, shown together for shape comparison"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-16-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -19516,7 +20519,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-20-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-20-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-20-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ],
     "imageAlt": "HNF6-M6-20-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -19636,7 +20645,22 @@
     "drawingSource": {
       "sourceFile": "HNF6-M6.pdf",
       "matchRule": "HNF6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HNF6 compact ferrule fitting bodies in black, showing threads, grips and tube openings",
+      "HNF6 compact ferrule fittings assembled with black tubing and sealing components",
+      "Translucent ferrule with a stepped base, showing the tapered profile and tube opening",
+      "Translucent tapered ferrule showing its bore and sealing profile",
+      "Ferrule variants in translucent and yellow finishes, shown together for shape comparison"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-20-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -19673,7 +20697,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-25-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-25-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-25-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ],
     "imageAlt": "HNF6-M6-25-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -19793,7 +20823,22 @@
     "drawingSource": {
       "sourceFile": "HNF6-M6.pdf",
       "matchRule": "HNF6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HNF6 compact ferrule fitting bodies in black, showing threads, grips and tube openings",
+      "HNF6 compact ferrule fittings assembled with black tubing and sealing components",
+      "Translucent ferrule with a stepped base, showing the tapered profile and tube opening",
+      "Translucent tapered ferrule showing its bore and sealing profile",
+      "Ferrule variants in translucent and yellow finishes, shown together for shape comparison"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-25-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -19830,7 +20875,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-30-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-30-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-30-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ],
     "imageAlt": "HNF6-M6-30-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -19950,7 +21001,22 @@
     "drawingSource": {
       "sourceFile": "HNF6-M6.pdf",
       "matchRule": "HNF6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HNF6 compact ferrule fitting bodies in black, showing threads, grips and tube openings",
+      "HNF6 compact ferrule fittings assembled with black tubing and sealing components",
+      "Translucent ferrule with a stepped base, showing the tapered profile and tube opening",
+      "Translucent tapered ferrule showing its bore and sealing profile",
+      "Ferrule variants in translucent and yellow finishes, shown together for shape comparison"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-30-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -19987,7 +21053,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-32-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-32-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-32-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ],
     "imageAlt": "HNF6-M6-32-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -20107,7 +21179,22 @@
     "drawingSource": {
       "sourceFile": "HNF6-M6.pdf",
       "matchRule": "HNF6系列 + M6螺纹"
-    }
+    },
+    "additionalImageAlts": [
+      "HNF6 compact ferrule fitting bodies in black, showing threads, grips and tube openings",
+      "HNF6 compact ferrule fittings assembled with black tubing and sealing components",
+      "Translucent ferrule with a stepped base, showing the tapered profile and tube opening",
+      "Translucent tapered ferrule showing its bore and sealing profile",
+      "Ferrule variants in translucent and yellow finishes, shown together for shape comparison"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-m6-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -20752,7 +21839,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-25-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-25-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-25-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ],
     "imageAlt": "HNF6-U28-25-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -20867,7 +21960,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HNF6 compact ferrule fitting bodies in black, showing threads, grips and tube openings",
+      "HNF6 compact ferrule fittings assembled with black tubing and sealing components",
+      "Translucent ferrule with a stepped base, showing the tapered profile and tube opening",
+      "Translucent tapered ferrule showing its bore and sealing profile",
+      "Ferrule variants in translucent and yellow finishes, shown together for shape comparison"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-25-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -20904,7 +22012,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-30-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-30-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-30-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ],
     "imageAlt": "HNF6-U28-30-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -21019,7 +22133,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HNF6 compact ferrule fitting bodies in black, showing threads, grips and tube openings",
+      "HNF6 compact ferrule fittings assembled with black tubing and sealing components",
+      "Translucent ferrule with a stepped base, showing the tapered profile and tube opening",
+      "Translucent tapered ferrule showing its bore and sealing profile",
+      "Ferrule variants in translucent and yellow finishes, shown together for shape comparison"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-30-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -21056,7 +22185,13 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-32-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-32-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-32-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ],
     "imageAlt": "HNF6-U28-32-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -21171,7 +22306,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HNF6 compact ferrule fitting bodies in black, showing threads, grips and tube openings",
+      "HNF6 compact ferrule fittings assembled with black tubing and sealing components",
+      "Translucent ferrule with a stepped base, showing the tapered profile and tube opening",
+      "Translucent tapered ferrule showing its bore and sealing profile",
+      "Ferrule variants in translucent and yellow finishes, shown together for shape comparison"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hnf6-u28-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -22424,7 +23574,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
     "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
     "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-10-32-thread.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-round-base-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-knurled-body-comparison.webp"
+    ],
     "imageAlt": "PNC-U32-16-PK-N 高压接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -22552,7 +23706,18 @@
     "drawingSource": {
       "sourceFile": "443-02-00478-C.pdf",
       "matchRule": "Excel同一行料号 443-02-00478"
-    }
+    },
+    "additionalImageAlts": [
+      "PNC PEEK fitting for analytical instrument fluidics, showing the 10-32 UNF thread and tapered tip",
+      "PNC PEEK high-pressure tubing connection for analytical instrument fluidics, shown with tubing inserted",
+      "PNC and PNC6 PEEK fluidic fittings shown together for comparison of the knurled body and hexagonal base"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc-u32-16-pk-n-main.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-10-32-thread.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-round-base-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-knurled-body-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -22589,7 +23754,11 @@
     "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
     "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
     "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-hex-base.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-hex-base-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-knurled-body-comparison.webp"
+    ],
     "imageAlt": "PNC6-U32-16-PK-N 高压接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -22717,7 +23886,18 @@
     "drawingSource": {
       "sourceFile": "441-09-00040-C.pdf",
       "matchRule": "Excel同一行料号 441-09-00040"
-    }
+    },
+    "additionalImageAlts": [
+      "PNC6 PEEK fitting for analytical instrument fluidics, showing the knurled body, hexagonal base and threaded tip",
+      "PNC6 PEEK high-pressure tubing connection for analytical instrument fluidics, shown with tubing inserted",
+      "PNC and PNC6 PEEK fluidic fittings shown together for comparison of the knurled body and hexagonal base"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnc6-u32-16-pk-n-main.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-hex-base.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-hex-base-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-knurled-body-comparison.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -22754,7 +23934,10 @@
     "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
     "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
     "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-fitting-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-fitting-nut-and-ferrule-lineup.webp"
+    ],
     "imageAlt": "PNF-U32-16-SS-N 高压接头 SUS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -22877,7 +24060,16 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "PNF stainless steel high-pressure tubing connection for analytical instrument fluidics, showing the hexagonal nut and tapered ferrule",
+      "PNF stainless steel two-piece high-pressure connection for analytical fluidics, showing threaded hexagonal nuts and separate tapered ferrules"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/pnf-u32-16-ss-n-main.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-fitting-tubing-assembly.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-fitting-nut-and-ferrule-lineup.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -23262,9 +24454,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
     "heroImage": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
     "imageCard": "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-microfluidic-tee-10-32-ports.webp"
+    ],
     "images": [
-      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp"
+      "/images/products/fittings/hard-tube-fittings/high-pressure-fitting/put-u32-05-ss-n-main.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-microfluidic-tee-10-32-ports.webp"
     ],
     "model3dUrl": "",
     "modelUrl": "",
@@ -23390,6 +24585,9 @@
       "title": "PUT-U32-05-SS-N 高压接头 | Foreach Technology",
       "description": "PUT-U32-05-SS-N是一款不锈钢高压接头，额定压力为25 MPa，采用10-32 UNF螺纹，流道内径为0.5 mm（ID）。适用于高压微流体液路、分析仪器、IVD设备及实验室自动化系统中的液路连接。"
     },
-    "imageAlt": "PUT-U32-05-SS-N 高压接头 SUS"
+    "imageAlt": "PUT-U32-05-SS-N 高压接头 SUS",
+    "additionalImageAlts": [
+      "PUT stainless steel high-pressure microfluidic tee bodies, showing threaded ports and mounting holes"
+    ]
   }
 ]
