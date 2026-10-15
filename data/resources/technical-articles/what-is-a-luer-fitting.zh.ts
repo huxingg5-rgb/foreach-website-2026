@@ -40,8 +40,8 @@ export const luerFittingCopy: DiaphragmPumpEngineeringArticleCopy = {
     title: "什么是鲁尔接头？公母结构、锁紧方式与选型方法",
     seoTitle: "什么是鲁尔接头？公母结构、锁紧方式与选型方法 | FOREACH",
     seoDescription: "了解鲁尔接头的锥面密封原理与公母配合，比较锁紧式、插入式及固定和旋转锁圈，结合 FOREACH LPS、LPR、LP、LS、PMLS 说明软管连接、穿板安装、规格选择与漏液排查。",
-    coverImage: featuredProducts[1].imageCard,
-    coverAlt: "FOREACH LPR-32-PP-N 旋转锁圈公鲁尔接头及剖面",
+    coverImage: "/images/resources/technical-articles/what-is-a-luer-fitting/pp-panel-mount-luer-photo.png",
+    coverAlt: "FOREACH 彩色鲁尔接头实拍与蓝色锁圈装配示例",
   },
   deck: "鲁尔接头通过公、母锥面配合连接液路，锁紧式增加锁圈保持连接。本文从密封位置和装配动作入手，说明固定锁圈、旋转锁圈、一体式公鲁尔与穿板母鲁尔的区别，以及 1.6、2.4、3.2 mm 内径软管的配套方法。",
   leadBlocks: [
