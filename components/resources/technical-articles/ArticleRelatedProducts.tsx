@@ -16,7 +16,7 @@ export default function ArticleRelatedProducts({ products, locale }: {
       <h2 className={styles.heading}>{ui.relatedProducts}</h2>
       <div className={styles.cards}>
         {products.map(product => <Link className={styles.card} href={product.href} key={product.id}>
-          <div className={styles.image}>
+          <div className={styles.image} data-fill={product.imageFill || undefined}>
             <Image src={product.imageSrc} alt={product.imageAlt || product.title} fill sizes="240px" />
           </div>
           <div className={styles.details}>

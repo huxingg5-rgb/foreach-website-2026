@@ -1,0 +1,483 @@
+{
+  "metadata": {
+    "title": "What Is a Luer Fitting? Male/Female Interfaces, Locking and Selection",
+    "seoTitle": "What Is a Luer Fitting? Interfaces, Locking and Selection | FOREACH",
+    "seoDescription": "Understand Luer taper sealing, slip and lock connections, fixed and rotating collars, tubing sizes and panel mounting with FOREACH LPS, LPR, LP, LS and PMLS fittings.",
+    "coverImage": "/images/products/fittings/luer-fittings/products/LPR-32-PP-N.jpg",
+    "coverAlt": "FOREACH LPR-32-PP-N male Luer fitting with rotating collar and cutaway view"
+  },
+  "deck": "Luer fittings connect fluid paths through mating male and female tapers; locking versions add a collar to retain the connection. This guide explains sealing and assembly, compares fixed collars, rotating collars, one-piece male and bulkhead female Luers, and covers tubing with 1.6, 2.4 and 3.2 mm internal diameters.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "A Luer fitting is a fluid connector that joins through mating male and female tapered surfaces. It is commonly used for tubing adapters, syringe connections and detachable fluid paths in laboratories and analytical instruments. The external taper of the male Luer enters the internal taper of the female Luer to form a seal. Locking versions also use an outer locking structure to keep the connection in place during assembly and operation."
+    },
+    {
+      "type": "paragraph",
+      "text": "FOREACH Luer fittings include LPS male Luers with fixed collars, LPR male Luers with rotating collars, LP one-piece male Luers, LS female Luers and PMLS bulkhead female Luers. The barbed configurations discussed here fit tubing IDs of 1.6, 2.4 and 3.2 mm. Depending on the series, body options include PP, PA and selected PVDF configurations, with accessories such as locking collars, identification rings and mounting nuts."
+    },
+    {
+      "type": "paragraph",
+      "text": "First determine whether the equipment requires a male or female connection. Then check whether the tubing can turn during connection and how the other end connects to tubing or mounts in place. Separating these three questions helps turn a connection that merely fits into a complete assembly that can be installed and serviced."
+    }
+  ],
+  "sections": [
+    {
+      "title": "How Do Male and Female Luers Mate, and Where Is the Seal?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gender is determined by the central taper: the projecting tapered end is the male Luer, and the internal tapered socket receiving it is the female Luer. A male fitting remains male even when surrounded by an internally threaded collar. Likewise, external locking lugs do not make a female fitting male. Judging only by the outermost thread can reverse the identification."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/non-panel-luer-assembly.gif",
+          "alt": "Animation of an inline male/female Luer connection and yellow locking collar assembly",
+          "width": 900,
+          "height": 600,
+          "caption": "Inline Luer assembly: after the male and female interfaces mate, the outer collar retains the connection."
+        },
+        {
+          "type": "paragraph",
+          "text": "The commonly used 6% Luer taper is a diameter change relative to axial length: (large diameter − small diameter) ÷ axial taper length = 0.06. It is not a 6° taper angle. As the male and female tapers engage axially, their contact surfaces are pressed together to form a seal around the fluid passage."
+        },
+        {
+          "type": "paragraph",
+          "text": "A Luer lock adds mechanical retention outside the taper. Lugs or corresponding locking features on the female end engage the internal threads of the male collar to hold the mated tapers in position. Inspect the central taper for sealing and the outer lock for retention. Debris or scratches on the taper can cause leakage even with a tightened collar; applying more force will not repair the sealing surface."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/luer-mated-locking-cutaway.webp",
+          "alt": "Partial cutaway of a mated Luer connection showing the yellow collar engaging the female locking features",
+          "width": 1080,
+          "height": 720,
+          "caption": "Outer locking structure of a mated Luer connection. The cutaway yellow collar shows how the connection is retained; the central mating tapers provide the seal."
+        }
+      ]
+    },
+    {
+      "title": "How Do Luer Slip, Luer Lock and Rotating Collars Differ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Luer slip and Luer lock describe how the connection is retained. A slip connection presses the matching tapers together and relies on contact friction; a lock adds a locking structure around the taper. Fixed and rotating collars are further variants within Luer lock, mainly affecting the assembly motion and tubing twist."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Connection type",
+            "How it connects",
+            "Key selection consideration"
+          ],
+          "rows": [
+            [
+              "Luer slip",
+              "Male and female tapers press together without an additional locking thread",
+              "Suitability for the handling procedure and control of axial pull and lateral disturbance"
+            ],
+            [
+              "Luer lock with fixed collar",
+              "The collar turns with the male fitting, or the mating end turns to engage the lock",
+              "Whether one end can rotate during assembly and whether attached tubing will twist"
+            ],
+            [
+              "Luer lock with rotating collar",
+              "Turn the outer collar while keeping the male body and tubing oriented",
+              "Already routed tubing, a fixed mating end or situations where tubing should not turn"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "The Difference Appears in the Locking Motion"
+        },
+        {
+          "type": "paragraph",
+          "text": "For example, when connecting a male Luer with attached tubing to a fixed female port, a fixed collar turns with the male fitting and may also turn the tubing. This complicates routing when tubing is short, secured at both ends or close to other lines. A rotating collar can engage while the male body stays oriented, making such connections easier to assemble."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/fixed-locking-collar-end-view-en.webp",
+          "alt": "End view of a fixed-collar male Luer, with locating features preventing relative rotation between core and collar",
+          "width": 1080,
+          "height": 720,
+          "caption": "Fixed-collar design: the collar and core remain rotationally fixed relative to each other. Allow space for the fitting and attached tubing to turn during locking.",
+          "link": {
+            "href": "/en/products/fittings/luer-fittings/lps-32-pp-n/",
+            "label": "View LPS-32-PP-N"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/rotating-locking-collar-end-view-en.webp",
+          "alt": "End view of a rotating-collar male Luer, with a yellow circular arrow indicating relative rotation between collar and core",
+          "width": 1080,
+          "height": 720,
+          "caption": "Rotating-collar design: the collar can turn relative to the core. Keep the core and tubing oriented while turning the outer collar to complete the connection.",
+          "link": {
+            "href": "/en/products/fittings/luer-fittings/lpr-32-pp-n/",
+            "label": "View LPR-32-PP-N"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "Here, “rotating” describes the collar's assembly function. It does not mean the fitting is a rotary union suitable for continuous rotation during fluid transfer. Leave bending allowance in the tubing after connection and avoid sustained tensile or lateral loads concentrated at the taper joint."
+        },
+        {
+          "type": "subheading",
+          "title": "A One-Piece Male Luer Can Also Be a Locking Fitting"
+        },
+        {
+          "type": "paragraph",
+          "text": "For LP, “one-piece” describes how the body and locking structure are formed. LP includes a Luer locking thread and must not be classified as a threadless slip connector. Similarly, LSL and LRL are male Luer cores that require matched collars. A core without its collar must not be treated as a complete Luer slip fitting."
+        }
+      ]
+    },
+    {
+      "title": "Which FOREACH Luer Designs and Sizes Are Available?",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Choose the Series by Connection Function First"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Series",
+            "Design and connection task",
+            "Body material options"
+          ],
+          "rows": [
+            [
+              "LPS",
+              "Male Luer with fixed collar; tubing-to-male-Luer connection",
+              "PP"
+            ],
+            [
+              "LPR",
+              "Male Luer with rotating collar; helps maintain tubing orientation",
+              "PP, PA"
+            ],
+            [
+              "LP",
+              "One-piece male Luer with locking structure",
+              "PP, PA"
+            ],
+            [
+              "LS",
+              "Female Luer; tubing-to-female-Luer connection",
+              "PP, PA"
+            ],
+            [
+              "PMLS",
+              "Bulkhead female Luer; secures a detachable connection to a panel",
+              "PP, PA; selected configurations in PVDF"
+            ],
+            [
+              "LSL / LRL",
+              "Fixed / rotating male Luer cores; require matched locking collars",
+              "LSL: PP, PA; LRL also has PVDF configurations"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Materials are listed by series; not every size, color and design is offered in every material. For separately assembled parts, distinguish the core, which forms the fluid passage, from the collar, which provides outer locking. LPT locking collars, LCR identification rings and LNS mounting nuts also have different functions. Retain complete part numbers when selecting them."
+        },
+        {
+          "type": "subheading",
+          "title": "1.6, 2.4 and 3.2 mm Are Tubing IDs, Not Luer Diameters"
+        },
+        {
+          "type": "paragraph",
+          "text": "The barb enters the tubing, so these sizes are selected by tubing internal diameter. In LPR-32-PP-N, for example, 32 denotes a 3.2 mm tubing ID, PP denotes the material and N denotes natural color. Luer gender and locking design must be confirmed separately; “3.2 mm Luer” is not a complete interface specification."
+        },
+        {
+          "type": "paragraph",
+          "text": "This differs from selecting tubing for rigid-tube ferrule and compression-ring fittings, whose sealing and gripping elements act around the tubing exterior and are selected primarily by outside diameter. The same “1.6 mm” may therefore refer to different tubing dimensions in barbed Luer and rigid-tube fitting models. After choosing the tubing ID, also check wall thickness, hardness and material for proper barb insertion and retention."
+        },
+        {
+          "type": "subheading",
+          "title": "Compare Overall Body Length When Axial Space Is Limited"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Compatible tubing ID",
+            "LPS overall length",
+            "LPR overall length",
+            "LP overall length"
+          ],
+          "rows": [
+            [
+              "1.6 mm",
+              "20.0 mm",
+              "20.0 mm",
+              "14.85 mm"
+            ],
+            [
+              "2.4 mm",
+              "22.3 mm",
+              "22.3 mm",
+              "17.15 mm"
+            ],
+            [
+              "3.2 mm",
+              "25.0 mm",
+              "25.0 mm",
+              "19.85 mm"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "For the same 3.2 mm tubing ID, the illustrated LP is 5.15 mm shorter overall than LPS and LPR, making it a candidate for compact layouts. LPS and LPR have the same overall length; their main selection difference is whether the collar rotates relative to the core. A shorter individual part must not take priority over finger clearance for locking, tubing twist or the bend radius at the outlet."
+        },
+        {
+          "type": "paragraph",
+          "text": "These values are the overall lengths of individual parts in the drawings. The space occupied by a mated pair also depends on the counterpart and engagement position. The difference between individual lengths is not automatically the space saved by the complete fluid connection. Use the assembled dimensions of the selected mating parts for equipment layout."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "For a comparison of rigid-tube connections, see: ",
+              "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/",
+              "label": "Hard-Tube Fitting Selection Guide"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "How Do Tubing Adapters and Bulkhead Mounts Form a Complete Fluid Path?",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Match Both Ends of a Tubing Adapter"
+        },
+        {
+          "type": "paragraph",
+          "text": "A Luer-to-barb adapter makes two connections: the Luer end connects to equipment or another fitting, and the barb connects to flexible tubing. If the equipment already has a female Luer port, select a matching male Luer for the tubing side, then choose the barb size by tubing ID. To join two tubing lines, a male/female Luer pair can form the detachable joint, with tubing selected independently on each side."
+        },
+        {
+          "type": "paragraph",
+          "text": "Luer gender does not determine fluid flow direction. Ordinary through-bore fittings do not provide check-valve or automatic shutoff functions when disconnected. If reverse flow must be restricted or fluid stopped upon disconnection, use a valve or dedicated connector that provides that function."
+        },
+        {
+          "type": "subheading",
+          "title": "A Bulkhead Female Luer Fixes the Connection to the Panel"
+        },
+        {
+          "type": "paragraph",
+          "text": "For external tubing access, a bulkhead female Luer fixes the female interface to an enclosure or panel. The internal barb connects to tubing and the external female interface mates with a male Luer. For example, PMLS-U28-32D-PP-N fits 3.2 mm ID tubing at its barb; its central 1/4-28 UNF thread is for panel mounting with the corresponding mounting nut."
+        },
+        {
+          "type": "paragraph",
+          "text": "This U28 thread provides mechanical mounting while liquid flows through the fitting's internal passage. It must not be treated as a 1/4-28 flat-bottom fluid port for a manifold. Bulkhead selection must consider the panel hole, thickness, available nut engagement and rear tubing clearance. If the connection is to an internally threaded fluid port, choose an adapter with the appropriate sealing design instead."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/bulkhead-luer-panel-installation.webp",
+          "alt": "Bulkhead female Luer passing through a transparent panel, with a mounting nut on the opposite side",
+          "width": 1080,
+          "height": 720,
+          "caption": "Bulkhead female Luer installation: the body passes through the panel and a matching nut secures it. One side connects to tubing through a barb; the other provides the external female Luer connection. Panel mounting and Luer locking are separate operations at different locations."
+        },
+        {
+          "type": "subheading",
+          "title": "Selection Example: An External Line That Cannot Easily Rotate"
+        },
+        {
+          "type": "paragraph",
+          "text": "Assume the equipment uses 3.2 mm ID tubing both inside and outside, the external line is already routed, and maintenance requires disconnection at the panel. One candidate is a PMLS-U28-32D-PP-N bulkhead female Luer paired with an LPR-32-PP-N rotating-collar male Luer. The female end provides a fixed connection point; turning the external male collar engages the lock with less need to turn the entire tubing line."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/luer-collar-tubing-rotation-comparison-en.webp",
+          "alt": "Assembly comparison at a fixed female port: the upper rotating collar maintains tubing orientation; the lower fixed collar turns the tubing with the fitting",
+          "width": 1080,
+          "height": 720,
+          "caption": "Locking motion at a fixed female port: the red cross in the upper image indicates that the tubing does not rotate with the collar, not incorrect installation. The yellow circular arrows below indicate that a fixed collar turns with the male fitting and can turn the tubing. Evaluate a rotating collar first when the tubing cannot easily rotate."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Define the panel end: check the PMLS mounting hole, panel thickness, matching nut and rear tubing clearance.",
+            "Define the external end: check taper fit, locking engagement and access between LPR and the female end. Both barbs must match 3.2 mm ID tubing.",
+            "Select materials: assess PP fittings and the chosen tubing against the actual fluid, concentration, temperature and cleaning procedure.",
+            "Validate samples: check sealing, air ingress, flow and connection condition after reconnection under actual pressure, start/stop cycles and tubing layout."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "This example explains a candidate combination and the selection rationale; it does not claim completed validation in a particular instrument. If the equipment already has a female Luer port, an additional bulkhead fitting is unnecessary. If one end can rotate freely, compare fixed-collar and one-piece male Luer options as well."
+        },
+        {
+          "type": "paragraph",
+          "text": "Colors and LCR identification rings help distinguish multiple fluid lines, but should be used with tubing labels and interface positions. Color does not change taper compatibility and cannot by itself prevent misconnections."
+        }
+      ]
+    },
+    {
+      "title": "How Are Luer Fittings Installed and Disconnected?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Treat the tubing connection, Luer connection and panel mounting as separate assembly operations. Attach the tubing and leave working clearance before mating the male and female ends. For male Luers supplied as separate parts, assemble the core and matched collar first according to their requirements."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Inspect parts and tubing ends. Confirm models, genders and collar compatibility. Check tapers for debris, scratches and cracks; tubing cuts should be square, free of debris and not flattened.",
+            "Connect the barb. Use tubing with the correct ID and material, insert it as required for the model, and leave bending allowance. Do not overstretch tubing to compensate for an incorrect barb size.",
+            "Align the Luer tapers. Keep male and female axes aligned for normal engagement. Do not use the collar to pull visibly misaligned ends forcibly together.",
+            "Engage the lock. With fixed collars, allow the fitting or counterpart to turn. With rotating collars, hold the core and tubing orientation while turning the collar. If it binds or does not engage normally, disengage and inspect.",
+            "Test for leaks to the fluid-path requirements. Complete the specified static checks, then cover actual operating pressure, temperature and start/stop conditions. Also look for air ingress on the suction side.",
+            "Stop and depressurize before servicing. After disconnection, inspect the tapers, collar and tubing ends, remove contamination and replace damaged parts, then recheck the connection under the original operating conditions."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The Luer collar and bulkhead nut apply loads at different locations, so their assembly methods and tightening requirements must be determined separately. Production assembly instructions should specify methods, tools and leak-test criteria together. Do not transfer recommended torque values from compression-ring or ferrule fittings to Luer collars, and do not use thread-seal tape to repair a damaged Luer taper."
+        }
+      ]
+    },
+    {
+      "title": "Where Should You Check If Leakage or Air Ingress Persists After Locking?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "First locate the issue at the Luer joint, the barb/tubing interface or the component body. Each location requires a different remedy. Investigate taper and lock engagement when the issue is at the Luer joint. Repeatedly tightening the collar will not fix damaged tubing at the barb."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Observed symptom",
+            "Check first",
+            "Corrective action"
+          ],
+          "rows": [
+            [
+              "Seepage at the Luer joint",
+              "Debris, scratches, misalignment and proper locking engagement",
+              "Stop and depressurize, clean and inspect, replace damaged parts, realign and retest"
+            ],
+            [
+              "Leakage at the barb base or tubing slip",
+              "Tubing ID, wall thickness, material, insertion position and sustained tension",
+              "Recheck tubing compatibility and routing support; further collar tightening is not the remedy"
+            ],
+            [
+              "Bubbles during aspiration without external dripping",
+              "Air ingress at connections; also check liquid level, suction tubing and fluid outgassing",
+              "Check sections under the same suction conditions; bubbles alone do not prove a fitting fault"
+            ],
+            [
+              "Normal at rest, abnormal during start/stop or tubing movement",
+              "Pressure peaks, lateral pulling, tubing twist and loosened connections",
+              "Improve support and movement allowance, then validate at the actual operating cycle"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "If flow decreases after replacing a fitting, also compare internal passage diameter, tubing ID and length, local kinks and debris from cut ends. The same tubing connection size does not mean every fitting has the same internal passage. Flow resistance cannot be determined from appearance or male/female type alone."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Frequently Asked Questions",
+  "faqItems": [
+    {
+      "question": "Does a Luer lock always withstand more pressure than a Luer slip?",
+      "answer": "A lock adds mechanical retention, but allowable working pressure still depends on the specific male/female pair, tubing, materials, temperature and assembly condition. A collar alone does not establish a pressure rating, and another manufacturer's pressure figures cannot be applied to this combination. Validate against the complete connection's specifications and operating conditions."
+    },
+    {
+      "question": "Can Luer fittings from different manufacturers be directly interchanged?",
+      "answer": "Matching male and female types is only the first condition. Check interface dimensions, locking design and applicable specifications, then validate sealing and retention of the actual combination. The name “Luer fitting” does not make every supplied configuration interchangeable under every operating condition."
+    },
+    {
+      "question": "Does a Luer fitting automatically stop flow when disconnected?",
+      "answer": "The ordinary through-bore Luer fittings described here do not inherently provide automatic shutoff. Self-sealing requires the appropriate valve structure. For a fluid path that must stop flow upon disconnection, select a connector or control valve with that specific function."
+    },
+    {
+      "question": "Can an instrument Luer fitting be used directly as a finished medical device?",
+      "answer": "Luer describes the interface type. Appearance alone does not establish medical suitability, sterility or sterilization conditions for a finished product. For medical use, check the applicable documentation and validation requirements for the specific product and final assembly."
+    }
+  ],
+  "cta": {
+    "title": "Need to Match a Luer Fitting to Your Existing Fluid Path?",
+    "description": "Provide counterpart photos or drawings, tubing ID/OD and material, fluid, temperature, pressure and installation clearance to confirm interface gender, collar design and tubing connection.",
+    "contactLabel": "Contact Technical Support",
+    "productsLabel": "View Luer Fittings",
+    "productsHref": "/en/products/fittings/luer-fittings/"
+  },
+  "navigation": [
+    {
+      "id": "sealing",
+      "label": "Interfaces and sealing"
+    },
+    {
+      "id": "locking",
+      "label": "Connection and locking",
+      "children": [
+        {
+          "id": "fixed-vs-rotating",
+          "label": "Fixed vs rotating collars"
+        },
+        {
+          "id": "integral-lock",
+          "label": "One-piece bodies and cores"
+        }
+      ]
+    },
+    {
+      "id": "series",
+      "label": "Series, tubing and dimensions",
+      "children": [
+        {
+          "id": "series-choice",
+          "label": "Series and materials"
+        },
+        {
+          "id": "tubing-id",
+          "label": "Tubing ID"
+        },
+        {
+          "id": "overall-length",
+          "label": "Overall body length"
+        }
+      ]
+    },
+    {
+      "id": "connection",
+      "label": "Tubing and panel selection",
+      "children": [
+        {
+          "id": "hose-connection",
+          "label": "Tubing adapters"
+        },
+        {
+          "id": "panel-mount",
+          "label": "Panel mounting"
+        },
+        {
+          "id": "selection-example",
+          "label": "Complete selection example"
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "label": "Installation and disconnection"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Leakage and air ingress"
+    }
+  ],
+  "relatedProductLabel": "Luer fitting"
+}

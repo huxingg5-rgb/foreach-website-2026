@@ -3,6 +3,7 @@ import ArticleRelatedProducts from "./ArticleRelatedProducts";
 import { getArticleRelatedProducts } from "@/services/resources/technical-articles/getArticleRelatedProducts";
 import { getCompressionRingFittingCopy, getCompressionRingFittingNavigation, compressionRingFittingSlug } from "@/data/resources/technical-articles/what-is-a-compression-ring-fitting.zh";
 import { getFerruleFittingCopy, getFerruleFittingNavigation, ferruleFittingSlug, getFerruleFittingRelatedProducts } from "@/data/resources/technical-articles/what-is-a-ferrule-fitting.zh";
+import { getLuerFittingCopy, getLuerFittingNavigation, luerFittingSlug, getLuerFittingRelatedProducts } from "@/data/resources/technical-articles/what-is-a-luer-fitting.zh";
 import { getHardTubeGuideProducts } from "@/data/resources/technical-articles/hard-tube-fittings-related-products";
 import {
   getHardTubeFittingsCopy,
@@ -591,6 +592,7 @@ export default function TechnicalArticleDetail({
   const locale = normalizeLocale(pageData.locale);
   const isHardTubeFittingsArticle = article.slug === hardTubeFittingsSlug;
   const isFerruleFittingArticle = article.slug === ferruleFittingSlug;
+  const isLuerFittingArticle = article.slug === luerFittingSlug;
   const isCompressionRingFittingArticle = article.slug === compressionRingFittingSlug;
   const isFlangedTubingAssembliesArticle = article.slug === flangedTubingAssembliesSlug;
   const listHref = getArticleListHref(locale);
@@ -1034,7 +1036,9 @@ export default function TechnicalArticleDetail({
                                   }
                                 : undefined;
 
-  const structuredDataFaqItems = isCompressionRingFittingArticle
+  const structuredDataFaqItems = isLuerFittingArticle
+    ? [...getLuerFittingCopy(locale).faqItems]
+    : isCompressionRingFittingArticle
     ? [...getCompressionRingFittingCopy(locale).faqItems]
     : isFerruleFittingArticle
     ? [...getFerruleFittingCopy(locale).faqItems]
@@ -1085,7 +1089,7 @@ export default function TechnicalArticleDetail({
     locale,
     structuredDataFaqItems,
     structuredDataSubject,
-    isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle || valveArticle !== null || pipettingBasicsCopy !== null ||
+    isLuerFittingArticle || isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle || valveArticle !== null || pipettingBasicsCopy !== null ||
       programmableSyringeCopy !== null ||
       programmablePipettingCopy !== null ||
       meteringPumpAccuracyRepeatabilityCopy !== null ||
@@ -1108,9 +1112,9 @@ export default function TechnicalArticleDetail({
   const relatedProductsSidebar = sidebarProducts.length
     ? <ArticleRelatedProducts products={sidebarProducts} locale={locale} /> : null;
 
-  if (isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {
-    const copy = isCompressionRingFittingArticle ? getCompressionRingFittingCopy(locale) : isFerruleFittingArticle ? getFerruleFittingCopy(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
-    const navigation = isCompressionRingFittingArticle ? getCompressionRingFittingNavigation(locale) : isFerruleFittingArticle ? getFerruleFittingNavigation(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingNavigation(locale) : getHardTubeFittingsNavigation(locale);
+  if (isLuerFittingArticle || isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {
+    const copy = isLuerFittingArticle ? getLuerFittingCopy(locale) : isCompressionRingFittingArticle ? getCompressionRingFittingCopy(locale) : isFerruleFittingArticle ? getFerruleFittingCopy(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
+    const navigation = isLuerFittingArticle ? getLuerFittingNavigation(locale) : isCompressionRingFittingArticle ? getCompressionRingFittingNavigation(locale) : isFerruleFittingArticle ? getFerruleFittingNavigation(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingNavigation(locale) : getHardTubeFittingsNavigation(locale);
     return (
       <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`}
         data-locale={locale} data-article-slug={article.slug} lang={locale}>
@@ -1122,6 +1126,9 @@ export default function TechnicalArticleDetail({
           articleId={article.slug} sectionNavigation={navigation} modelLinks={new Map()}
           faq={{ id: "faq", label: copy.faqTitle, items: copy.faqItems }} />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
+          {isLuerFittingArticle && <div className={hardTubeFittingsStyles.relatedProducts}>
+            <RelatedResourcesLoader {...getLuerFittingRelatedProducts(locale)} />
+          </div>}
           {isFerruleFittingArticle && <div className={hardTubeFittingsStyles.relatedProducts}>
             <RelatedResourcesLoader {...getFerruleFittingRelatedProducts(locale)} />
           </div>}

@@ -1,0 +1,483 @@
+{
+  "metadata": {
+    "title": "Qu’est-ce qu’un raccord Luer ? Interfaces mâle/femelle, verrouillage et choix",
+    "seoTitle": "Raccords Luer : interfaces, verrouillage et choix | FOREACH",
+    "seoDescription": "Comprendre l’étanchéité conique Luer, les raccords slip et lock, les bagues fixes et rotatives et le montage sur panneau avec les séries FOREACH LPS, LPR, LP, LS et PMLS.",
+    "coverImage": "/images/products/fittings/luer-fittings/products/LPR-32-PP-N.jpg",
+    "coverAlt": "Raccord Luer mâle FOREACH LPR-32-PP-N à bague rotative et vue en coupe"
+  },
+  "deck": "Les raccords Luer relient les circuits fluidiques par emboîtement de cônes mâle et femelle ; les versions verrouillables ajoutent une bague de maintien. Ce guide explique l’étanchéité et le montage, compare les bagues fixes et rotatives, les mâles monoblocs et les femelles traversantes, puis détaille le raccordement de tubes de 1.6, 2.4 et 3.2 mm de diamètre intérieur.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un raccord Luer réalise une connexion fluidique grâce à deux surfaces coniques complémentaires, mâle et femelle. Il sert couramment à adapter des tubes, raccorder des seringues et créer des liaisons démontables dans les laboratoires et les instruments d’analyse. Le cône extérieur mâle entre dans le cône intérieur femelle ; leur contact assure l’étanchéité. Une version verrouillable comporte aussi une structure périphérique qui maintient l’assemblage pendant le montage et l’utilisation."
+    },
+    {
+      "type": "paragraph",
+      "text": "La gamme FOREACH comprend les Luer mâles LPS à bague fixe, LPR à bague rotative et LP monoblocs, les Luer femelles LS et les femelles traversantes PMLS. Les versions à embout cannelé présentées ici acceptent des tubes de diamètre intérieur 1.6, 2.4 et 3.2 mm. Selon la série, les corps sont proposés en PP, PA et, pour certaines configurations, PVDF. Des bagues de verrouillage, anneaux de repérage et écrous de montage complètent la gamme."
+    },
+    {
+      "type": "paragraph",
+      "text": "Déterminez d’abord si l’équipement exige une interface mâle ou femelle. Vérifiez ensuite si le tube peut tourner pendant le raccordement et comment l’autre extrémité se raccorde ou se fixe. Distinguer ces trois questions permet d’obtenir un ensemble installable et maintenable, au-delà du simple emboîtement."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Comment les Luer mâle et femelle s’emboîtent-ils et où se fait l’étanchéité ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le genre dépend du cône central : l’embout conique saillant est mâle, tandis que l’alésage conique qui le reçoit est femelle. Un mâle reste mâle même s’il possède une bague à filetage intérieur. De même, les ergots extérieurs de verrouillage ne changent pas le genre d’une femelle. Se fier uniquement au filetage périphérique peut inverser l’identification."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/non-panel-luer-assembly.gif",
+          "alt": "Animation de l’accouplement Luer mâle/femelle en ligne et du montage de la bague jaune",
+          "width": 900,
+          "height": 600,
+          "caption": "Assemblage Luer en ligne : après l’emboîtement des interfaces mâle et femelle, la bague extérieure maintient la connexion."
+        },
+        {
+          "type": "paragraph",
+          "text": "La conicité Luer usuelle de 6% exprime la variation du diamètre rapportée à la longueur axiale : (grand diamètre − petit diamètre) ÷ longueur axiale du cône = 0.06. Il ne s’agit pas d’un angle de 6°. L’engagement axial des cônes comprime les surfaces en contact et forme l’étanchéité autour du passage de fluide."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le Luer lock ajoute un maintien mécanique autour du cône : les ergots ou éléments de verrouillage de la femelle s’engagent dans le filetage intérieur de la bague mâle et retiennent les cônes emboîtés. Il faut donc vérifier le cône central pour l’étanchéité et le verrouillage périphérique pour le maintien. Des débris ou rayures sur le cône peuvent provoquer une fuite malgré une bague serrée ; augmenter l’effort ne répare pas la surface d’étanchéité."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/luer-mated-locking-cutaway.webp",
+          "alt": "Coupe partielle d’un raccordement Luer montrant la bague jaune engagée sur les éléments de verrouillage femelles",
+          "width": 1080,
+          "height": 720,
+          "caption": "Verrouillage périphérique d’une connexion Luer : la bague jaune partiellement coupée montre le maintien mécanique. Le verrouillage retient l’ensemble ; le contact des cônes centraux assure l’étanchéité."
+        }
+      ]
+    },
+    {
+      "title": "Quelles différences entre Luer slip, Luer lock et bague rotative ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Luer slip et Luer lock désignent le mode de maintien. Le slip repose sur l’emboîtement sous pression des cônes et leur frottement ; le lock ajoute une structure de verrouillage. Les bagues fixes et rotatives sont deux variantes du Luer lock qui influencent surtout le geste de montage et la torsion du tube."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type de connexion",
+            "Mode d’assemblage",
+            "Critère principal de choix"
+          ],
+          "rows": [
+            [
+              "Luer slip, à emboîtement",
+              "Emboîtement des cônes mâle et femelle sans filetage de verrouillage supplémentaire",
+              "Adaptation au mode opératoire et maîtrise de la traction axiale et des sollicitations latérales"
+            ],
+            [
+              "Luer lock à bague fixe",
+              "La bague tourne avec le mâle, ou l’élément complémentaire tourne pour verrouiller",
+              "Possibilité de tourner une extrémité pendant le montage et risque de torsion du tube"
+            ],
+            [
+              "Luer lock à bague rotative",
+              "La bague extérieure tourne tandis que le corps mâle et le tube gardent leur orientation",
+              "Tube déjà installé, interface complémentaire fixe ou nécessité d’éviter de faire tourner le tube"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "La différence se manifeste pendant le verrouillage"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour raccorder un Luer mâle déjà équipé d’un tube à une femelle fixe, une bague fixe tourne avec le mâle et peut entraîner le tube. Si le tube est court, immobilisé aux deux extrémités ou proche d’autres lignes, cette torsion complique le montage. Une bague rotative permet de verrouiller tout en conservant l’orientation du mâle, ce qui facilite ces raccordements."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/fixed-locking-collar-end-view-fr.webp",
+          "alt": "Vue de face d’un Luer mâle à bague fixe ; les éléments de positionnement empêchent la rotation relative du noyau et de la bague",
+          "width": 1080,
+          "height": 720,
+          "caption": "Bague fixe : la bague et le noyau restent solidaires en rotation. Prévoyez le dégagement nécessaire pour tourner le raccord et le tube pendant le verrouillage.",
+          "link": {
+            "href": "/fr/products/fittings/luer-fittings/lps-32-pp-n/",
+            "label": "Voir le LPS-32-PP-N"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/rotating-locking-collar-end-view-fr.webp",
+          "alt": "Vue de face d’un Luer mâle à bague rotative ; la flèche circulaire jaune indique la rotation relative entre bague et noyau",
+          "width": 1080,
+          "height": 720,
+          "caption": "Bague rotative : la bague tourne par rapport au noyau. Le noyau et le tube peuvent conserver leur orientation pendant que l’on tourne la bague extérieure pour raccorder.",
+          "link": {
+            "href": "/fr/products/fittings/luer-fittings/lpr-32-pp-n/",
+            "label": "Voir le LPR-32-PP-N"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "Le terme « rotative » décrit ici la fonction de montage de la bague. Il ne signifie pas que le raccord peut servir de joint tournant en rotation continue dans un circuit fluidique. Après raccordement, laissez une réserve de courbure au tube et évitez les efforts permanents de traction ou latéraux concentrés sur la jonction conique."
+        },
+        {
+          "type": "subheading",
+          "title": "Un Luer mâle monobloc peut aussi être verrouillable"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour LP, « monobloc » décrit la construction du corps et du dispositif de verrouillage. LP possède un filetage de verrouillage Luer et ne relève pas des raccords slip sans filetage. De même, LSL et LRL sont des noyaux mâles destinés à recevoir une bague compatible ; un noyau sans bague ne doit pas être utilisé comme raccord Luer slip complet."
+        }
+      ]
+    },
+    {
+      "title": "Quels modèles et dimensions Luer FOREACH sont disponibles ?",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Choisir d’abord la série selon la fonction de raccordement"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Série",
+            "Structure et fonction de raccordement",
+            "Matériaux du corps"
+          ],
+          "rows": [
+            [
+              "LPS",
+              "Luer mâle à bague fixe ; liaison tube–Luer mâle",
+              "PP"
+            ],
+            [
+              "LPR",
+              "Luer mâle à bague rotative ; facilite le maintien de l’orientation du tube",
+              "PP, PA"
+            ],
+            [
+              "LP",
+              "Luer mâle monobloc avec verrouillage",
+              "PP, PA"
+            ],
+            [
+              "LS",
+              "Luer femelle ; liaison tube–Luer femelle",
+              "PP, PA"
+            ],
+            [
+              "PMLS",
+              "Luer femelle traversant ; fixe une interface démontable au panneau",
+              "PP, PA ; certaines configurations en PVDF"
+            ],
+            [
+              "LSL / LRL",
+              "Noyaux Luer mâles fixes / rotatifs ; bagues compatibles requises",
+              "LSL : PP, PA ; LRL également disponible dans certaines configurations PVDF"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Les matériaux sont indiqués par série : toutes les combinaisons de taille, couleur et structure ne sont pas disponibles dans chaque matériau. Pour les pièces séparées, distinguez le noyau, qui forme le passage de fluide, de la bague, qui assure le verrouillage périphérique. Les bagues LPT, anneaux de repérage LCR et écrous de montage LNS ont également des fonctions distinctes. Conservez les références complètes lors du choix."
+        },
+        {
+          "type": "subheading",
+          "title": "1.6, 2.4 et 3.2 mm désignent le diamètre intérieur du tube, pas celui du Luer"
+        },
+        {
+          "type": "paragraph",
+          "text": "L’embout cannelé entre dans le tube ; ces dimensions se choisissent donc selon son diamètre intérieur. Dans LPR-32-PP-N, 32 correspond à un tube de 3.2 mm de diamètre intérieur, PP au matériau et N à la couleur naturelle. Le genre et le verrouillage Luer se vérifient séparément : « Luer de 3.2 mm » ne suffit pas à définir l’interface."
+        },
+        {
+          "type": "paragraph",
+          "text": "La méthode diffère de celle des raccords pour tubes rigides à ferrule ou à bague de compression : leurs éléments d’étanchéité et de maintien entourent la paroi extérieure, et le choix porte surtout sur le diamètre extérieur. Ainsi, « 1.6 mm » peut désigner deux dimensions différentes selon la famille. Après avoir choisi le diamètre intérieur, vérifiez aussi l’épaisseur, la dureté et le matériau du tube pour l’insertion et le maintien sur l’embout cannelé."
+        },
+        {
+          "type": "subheading",
+          "title": "Comparer la longueur totale si l’espace axial est limité"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Diamètre intérieur du tube",
+            "Longueur totale LPS",
+            "Longueur totale LPR",
+            "Longueur totale LP"
+          ],
+          "rows": [
+            [
+              "1.6 mm",
+              "20.0 mm",
+              "20.0 mm",
+              "14.85 mm"
+            ],
+            [
+              "2.4 mm",
+              "22.3 mm",
+              "22.3 mm",
+              "17.15 mm"
+            ],
+            [
+              "3.2 mm",
+              "25.0 mm",
+              "25.0 mm",
+              "19.85 mm"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour un tube de même diamètre intérieur de 3.2 mm, le LP représenté est plus court de 5.15 mm que LPS et LPR ; il peut convenir à un agencement compact. LPS et LPR ont la même longueur totale ; leur différence principale est la rotation de la bague par rapport au noyau. Ne privilégiez pas une pièce plus courte au détriment du passage des doigts, de la torsion du tube ou du rayon de courbure en sortie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces valeurs sont les longueurs totales des pièces seules sur les plans. L’encombrement d’une paire accouplée dépend aussi de la pièce complémentaire et de la position d’engagement. L’écart entre pièces n’est donc pas directement l’espace gagné sur la liaison complète. Utilisez les dimensions assemblées des deux composants retenus pour implanter le circuit."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Pour comparer les connexions de tubes rigides, consultez : ",
+              "href": "/fr/resources/technical-articles/hard-tube-fittings-selection-guide/",
+              "label": "Guide de choix des raccords pour tubes rigides"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Comment les adaptateurs et les traversées de panneau forment-ils un circuit complet ?",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Adapter les deux extrémités du raccord de tube"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un adaptateur Luer–embout cannelé réalise deux liaisons : côté Luer avec l’équipement ou un autre raccord, côté cannelé avec le tube souple. Si l’équipement possède déjà un port Luer femelle, choisissez un mâle compatible côté tube, puis la taille de l’embout selon le diamètre intérieur. Pour joindre deux tubes, une paire mâle/femelle crée le point démontable, avec un choix de tube indépendant de chaque côté."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le genre Luer ne détermine pas le sens d’écoulement. Un raccord traversant ordinaire n’assure ni fonction antiretour ni fermeture automatique à la déconnexion. Pour limiter le flux inverse ou arrêter le liquide lors du débranchement, utilisez une vanne ou un raccord dédié possédant cette fonction."
+        },
+        {
+          "type": "subheading",
+          "title": "Le Luer femelle traversant fixe le raccordement au panneau"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour raccorder une ligne extérieure, un Luer femelle traversant fixe l’interface à la carrosserie ou au panneau. L’embout cannelé intérieur reçoit le tube, et l’interface extérieure se raccorde au mâle. Par exemple, PMLS-U28-32D-PP-N accepte un tube de 3.2 mm de diamètre intérieur ; son filetage central 1/4-28 UNF sert au montage sur panneau avec l’écrou adapté."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce filetage U28 assure la fixation mécanique ; le liquide circule dans le passage intérieur. Il ne faut pas le considérer comme un port fluidique 1/4-28 à fond plat de collecteur. Vérifiez le perçage et l’épaisseur du panneau, la longueur d’engagement disponible pour l’écrou et l’espace arrière pour le tube. Pour un port fluidique taraudé, choisissez plutôt un adaptateur dont l’étanchéité correspond au port."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/bulkhead-luer-panel-installation.webp",
+          "alt": "Luer femelle traversant monté dans un panneau transparent, avec écrou de fixation sur l’autre face",
+          "width": 1080,
+          "height": 720,
+          "caption": "Montage traversant : le corps passe dans le panneau et l’écrou compatible le maintient. L’embout cannelé reçoit le tube d’un côté ; l’interface Luer femelle assure le raccordement extérieur de l’autre. La fixation au panneau et le verrouillage Luer sont deux opérations distinctes."
+        },
+        {
+          "type": "subheading",
+          "title": "Exemple : un tube extérieur difficile à faire tourner"
+        },
+        {
+          "type": "paragraph",
+          "text": "Supposons des tubes de 3.2 mm de diamètre intérieur à l’intérieur et à l’extérieur de l’appareil, un trajet extérieur déjà fixé et une déconnexion au panneau pour la maintenance. Une combinaison à évaluer est PMLS-U28-32D-PP-N femelle traversant avec LPR-32-PP-N mâle à bague rotative. La femelle fournit un point fixe ; la bague extérieure verrouille sans devoir entraîner autant l’ensemble du tube."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/luer-collar-tubing-rotation-comparison-fr.webp",
+          "alt": "Comparaison sur une interface femelle fixe : en haut, la bague rotative conserve l’orientation du tube ; en bas, la bague fixe entraîne le tube en tournant",
+          "width": 1080,
+          "height": 720,
+          "caption": "Mouvement de verrouillage sur une femelle fixe : la croix rouge en haut indique que le tube ne tourne pas avec la bague, et non une erreur de montage. Les flèches jaunes en bas indiquent que la bague fixe tourne avec le mâle et peut entraîner le tube. Lorsque le tube tourne difficilement, évaluez d’abord la bague rotative."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Définir le côté panneau : vérifier le perçage PMLS, l’épaisseur, l’écrou compatible et le dégagement arrière du tube.",
+            "Définir le côté extérieur : vérifier les cônes, l’engagement du verrouillage et l’accès entre LPR et la femelle. Les deux embouts doivent convenir au tube de 3.2 mm de diamètre intérieur.",
+            "Choisir les matériaux : évaluer les raccords PP et le tube selon le fluide, sa concentration, la température et le nettoyage réels.",
+            "Valider des échantillons : vérifier l’étanchéité, l’entrée d’air, le débit et l’état après reconnexion avec la pression, les cycles marche/arrêt et le cheminement réels."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cet exemple présente une combinaison candidate et les raisons du choix ; il ne constitue pas une validation sur un instrument donné. Si l’appareil possède déjà un Luer femelle, un raccord traversant supplémentaire est inutile. Si une extrémité tourne librement, comparez également les bagues fixes et les mâles monoblocs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les couleurs et anneaux LCR facilitent le repérage des lignes, mais doivent être associés aux étiquettes et à la position des interfaces. La couleur ne modifie pas la compatibilité conique et n’empêche pas à elle seule les erreurs de raccordement."
+        }
+      ]
+    },
+    {
+      "title": "Comment installer et déconnecter les raccords Luer ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Traitez séparément le raccordement du tube, l’accouplement Luer et la fixation au panneau. Montez d’abord le tube et prévoyez un dégagement de travail, puis accouplez mâle et femelle. Pour un mâle livré en pièces séparées, assemblez au préalable le noyau et sa bague selon les exigences de compatibilité."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Inspecter les pièces et extrémités de tube. Confirmer références, genres et bagues. Vérifier l’absence de débris, rayures et fissures sur les cônes ; la coupe du tube doit être droite, propre et non écrasée.",
+            "Raccorder l’embout cannelé. Utiliser le bon diamètre intérieur et matériau, enfoncer le tube selon les exigences du modèle et laisser une réserve de courbure. Ne pas étirer excessivement le tube pour compenser un embout inadapté.",
+            "Aligner les cônes Luer. Maintenir les axes mâle et femelle alignés pour un engagement normal. Ne pas utiliser la bague pour rapprocher de force deux extrémités visiblement désaxées.",
+            "Verrouiller. Avec une bague fixe, laisser tourner le raccord ou sa contrepartie. Avec une bague rotative, maintenir l’orientation du noyau et du tube tout en tournant la bague. En cas de blocage ou d’engagement anormal, dégager et inspecter.",
+            "Contrôler l’étanchéité selon les exigences du circuit. Réaliser les essais statiques prescrits, puis couvrir pression, température et cycles marche/arrêt réels. Côté aspiration, rechercher aussi une entrée d’air.",
+            "Arrêter et dépressuriser avant la maintenance. Après déconnexion, inspecter cônes, bague et extrémités du tube, éliminer la contamination et remplacer les pièces endommagées, puis revérifier dans les conditions initiales."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La bague Luer et l’écrou traversant appliquent des efforts à des endroits différents ; leurs méthodes de montage et exigences de serrage doivent être définies séparément. En production, documentez ensemble le geste, l’outillage et les critères d’étanchéité. N’appliquez pas aux bagues Luer les couples recommandés pour les raccords à ferrule ou à bague de compression. Le ruban d’étanchéité pour filetage ne répare pas un cône Luer endommagé."
+        }
+      ]
+    },
+    {
+      "title": "Que vérifier si une fuite ou une entrée d’air persiste après verrouillage ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Localisez d’abord le défaut : jonction Luer, liaison embout–tube ou corps de la pièce. Chaque emplacement appelle un remède différent. La vérification du cône et du verrouillage concerne un défaut situé à la jonction Luer. Resserrer sans cesse la bague ne répare pas un tube endommagé sur l’embout."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Symptôme observé",
+            "Premier contrôle",
+            "Action corrective"
+          ],
+          "rows": [
+            [
+              "Suintement à la jonction Luer",
+              "Débris, rayures, désalignement et engagement correct du verrouillage",
+              "Arrêter, dépressuriser, nettoyer et inspecter ; remplacer les pièces abîmées, réaligner et retester"
+            ],
+            [
+              "Fuite à la base de l’embout ou glissement du tube",
+              "Diamètre intérieur, épaisseur, matériau, profondeur d’insertion et traction continue",
+              "Revoir le choix du tube et son maintien ; un serrage supplémentaire de la bague n’est pas la solution"
+            ],
+            [
+              "Bulles à l’aspiration sans gouttes à l’extérieur",
+              "Entrée d’air aux jonctions ; contrôler aussi le niveau, le tube d’aspiration et le dégazage du fluide",
+              "Tester par sections dans les mêmes conditions d’aspiration ; les bulles seules ne prouvent pas un défaut du raccord"
+            ],
+            [
+              "Normal à l’arrêt, anomalie au démarrage, à l’arrêt ou au déplacement du tube",
+              "Pics de pression, traction latérale, torsion du tube et desserrage",
+              "Améliorer le support et la liberté de mouvement, puis valider au cycle réel"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si le débit baisse après remplacement du raccord, comparez aussi le diamètre du passage interne, le diamètre intérieur et la longueur du tube, les coudes excessifs et les débris de coupe. Une même taille de raccordement n’implique pas un même passage interne. La résistance hydraulique ne se déduit pas seulement de la forme ou du genre mâle/femelle."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Questions fréquentes",
+  "faqItems": [
+    {
+      "question": "Un Luer lock supporte-t-il toujours plus de pression qu’un Luer slip ?",
+      "answer": "Le verrouillage ajoute un maintien mécanique, mais la pression de service admissible dépend du couple mâle/femelle, du tube, des matériaux, de la température et du montage. La présence d’une bague ne définit pas à elle seule une pression nominale, et les valeurs d’un autre fabricant ne se transposent pas. Validez la connexion complète selon ses spécifications et conditions d’emploi."
+    },
+    {
+      "question": "Les raccords Luer de fabricants différents sont-ils directement interchangeables ?",
+      "answer": "La correspondance mâle/femelle n’est qu’un premier critère. Vérifiez les dimensions, le verrouillage et les spécifications applicables, puis validez l’étanchéité et le maintien de la combinaison réelle. L’appellation Luer ne garantit pas l’interchangeabilité de toutes les configurations dans toutes les conditions."
+    },
+    {
+      "question": "Un raccord Luer arrête-t-il automatiquement le fluide lorsqu’il est débranché ?",
+      "answer": "Les raccords traversants ordinaires décrits ici ne possèdent pas automatiquement cette fonction. L’auto-obturation nécessite une structure de valve adaptée. Si le circuit doit se fermer à la déconnexion, sélectionnez un raccord ou une vanne de commande offrant explicitement cette fonction."
+    },
+    {
+      "question": "Un Luer pour instrument peut-il être utilisé directement comme dispositif médical fini ?",
+      "answer": "Luer désigne un type d’interface. L’aspect seul ne démontre ni aptitude médicale, ni stérilité, ni conditions de stérilisation du produit fini. Pour un usage médical, vérifiez la documentation applicable et les exigences de validation du produit précis et de l’assemblage final."
+    }
+  ],
+  "cta": {
+    "title": "Besoin d’adapter un Luer à votre circuit existant ?",
+    "description": "Fournissez photos ou plans de la contrepartie, diamètres intérieur/extérieur et matériau du tube, fluide, température, pression et espace disponible pour confirmer le genre, la bague et le raccordement.",
+    "contactLabel": "Contacter l’assistance technique",
+    "productsLabel": "Voir les raccords Luer",
+    "productsHref": "/fr/products/fittings/luer-fittings/"
+  },
+  "navigation": [
+    {
+      "id": "sealing",
+      "label": "Interfaces et étanchéité"
+    },
+    {
+      "id": "locking",
+      "label": "Connexion et verrouillage",
+      "children": [
+        {
+          "id": "fixed-vs-rotating",
+          "label": "Bagues fixes et rotatives"
+        },
+        {
+          "id": "integral-lock",
+          "label": "Corps monoblocs et noyaux"
+        }
+      ]
+    },
+    {
+      "id": "series",
+      "label": "Séries, tubes et dimensions",
+      "children": [
+        {
+          "id": "series-choice",
+          "label": "Séries et matériaux"
+        },
+        {
+          "id": "tubing-id",
+          "label": "Diamètre intérieur du tube"
+        },
+        {
+          "id": "overall-length",
+          "label": "Longueur totale du corps"
+        }
+      ]
+    },
+    {
+      "id": "connection",
+      "label": "Tubes et traversées de panneau",
+      "children": [
+        {
+          "id": "hose-connection",
+          "label": "Adaptateurs de tube"
+        },
+        {
+          "id": "panel-mount",
+          "label": "Montage sur panneau"
+        },
+        {
+          "id": "selection-example",
+          "label": "Exemple complet de choix"
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "label": "Installation et déconnexion"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Fuites et entrées d’air"
+    }
+  ],
+  "relatedProductLabel": "raccord Luer"
+}

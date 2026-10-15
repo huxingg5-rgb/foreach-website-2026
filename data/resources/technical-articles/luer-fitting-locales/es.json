@@ -1,0 +1,483 @@
+{
+  "metadata": {
+    "title": "¿Qué es un conector Luer? Interfaces macho y hembra, bloqueo y selección",
+    "seoTitle": "Conectores Luer: interfaces, bloqueo y selección | FOREACH",
+    "seoDescription": "Conozca el sellado cónico Luer, las conexiones slip y lock, los collares fijos y giratorios, los tamaños de tubo y el montaje en panel con FOREACH LPS, LPR, LP, LS y PMLS.",
+    "coverImage": "/images/products/fittings/luer-fittings/products/LPR-32-PP-N.jpg",
+    "coverAlt": "Conector Luer macho FOREACH LPR-32-PP-N con collar giratorio y vista en sección"
+  },
+  "deck": "Los conectores Luer unen circuitos de fluidos mediante conos macho y hembra; las versiones con bloqueo añaden un collar que retiene la unión. Esta guía explica el sellado y el montaje, compara collares fijos y giratorios, Luer macho de una pieza y Luer hembra pasamuros, y describe la conexión a tubos de 1.6, 2.4 y 3.2 mm de diámetro interior.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un conector Luer une un circuito de fluidos mediante superficies cónicas macho y hembra. Se utiliza habitualmente en adaptadores de tubo, conexiones de jeringas y circuitos desmontables de laboratorios e instrumentos analíticos. El cono exterior macho entra en el cono interior hembra y el contacto entre ambos forma el sello. La versión con bloqueo incorpora además una estructura exterior que mantiene la unión durante el montaje y el uso."
+    },
+    {
+      "type": "paragraph",
+      "text": "La gama FOREACH incluye LPS macho con collar fijo, LPR macho con collar giratorio, LP macho de una pieza, LS hembra y PMLS hembra pasamuros. Las configuraciones con espiga descritas aquí admiten tubos de 1.6, 2.4 y 3.2 mm de diámetro interior. Según la serie, se ofrecen cuerpos de PP, PA y determinadas configuraciones de PVDF, además de collares de bloqueo, anillos de identificación y tuercas de montaje."
+    },
+    {
+      "type": "paragraph",
+      "text": "Primero determine si el equipo necesita una interfaz macho o hembra. Después compruebe si el tubo puede girar durante la conexión y cómo se conecta o se fija el otro extremo. Separar estas tres preguntas permite pasar de una unión que simplemente encaja a un conjunto que puede instalarse y mantenerse correctamente."
+    }
+  ],
+  "sections": [
+    {
+      "title": "¿Cómo se acoplan el Luer macho y el hembra y dónde se forma el sello?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La identificación macho o hembra depende del cono central: el extremo cónico saliente es macho y el alojamiento cónico que lo recibe es hembra. Un macho sigue siendo macho aunque tenga un collar con rosca interior; las aletas de bloqueo exteriores tampoco convierten una hembra en macho. Observar solo la rosca exterior puede llevar a una identificación inversa."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/non-panel-luer-assembly.gif",
+          "alt": "Animación del acoplamiento Luer macho-hembra en línea y del montaje del collar amarillo",
+          "width": 900,
+          "height": 600,
+          "caption": "Montaje Luer en línea: una vez acopladas las interfaces macho y hembra, el collar exterior retiene la unión."
+        },
+        {
+          "type": "paragraph",
+          "text": "La conicidad Luer habitual del 6% expresa la variación de diámetro respecto a la longitud axial: (diámetro mayor − diámetro menor) ÷ longitud axial del cono = 0.06. No es un ángulo de 6°. Al acoplarse axialmente los conos macho y hembra, sus superficies quedan comprimidas y sellan alrededor del conducto de fluido."
+        },
+        {
+          "type": "paragraph",
+          "text": "Luer lock añade una retención mecánica exterior al cono: las aletas u otros elementos de bloqueo del extremo hembra engranan con la rosca interior del collar macho y mantienen los conos acoplados. El sellado se comprueba en el cono central; la retención, en el bloqueo exterior. La suciedad o los arañazos en el cono pueden provocar fugas incluso con el collar apretado; aplicar más fuerza no repara la superficie de sellado."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/luer-mated-locking-cutaway.webp",
+          "alt": "Sección parcial de una unión Luer que muestra el collar amarillo engranado con el bloqueo del extremo hembra",
+          "width": 1080,
+          "height": 720,
+          "caption": "Bloqueo exterior de una unión Luer: el collar amarillo parcialmente seccionado muestra la retención. El bloqueo mantiene la conexión y el contacto entre los conos centrales proporciona el sello."
+        }
+      ]
+    },
+    {
+      "title": "¿En qué se diferencian Luer slip, Luer lock y los collares giratorios?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Luer slip y Luer lock describen cómo se retiene la conexión. Slip une los conos compatibles por presión y los retiene por fricción; lock añade una estructura de bloqueo. Los collares fijos y giratorios son variantes de Luer lock y afectan principalmente al movimiento de montaje y a la torsión del tubo."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tipo de conexión",
+            "Cómo se conecta",
+            "Criterio principal de selección"
+          ],
+          "rows": [
+            [
+              "Luer slip, por inserción",
+              "Los conos macho y hembra se presionan entre sí, sin rosca de bloqueo adicional",
+              "Compatibilidad con el procedimiento de uso y control de la tracción axial y de las fuerzas laterales"
+            ],
+            [
+              "Luer lock con collar fijo",
+              "El collar gira con el macho, o gira el extremo complementario para bloquear la unión",
+              "Si un extremo puede girar durante el montaje y si el tubo conectado se retuerce"
+            ],
+            [
+              "Luer lock con collar giratorio",
+              "Se gira el collar exterior manteniendo la orientación del cuerpo macho y del tubo",
+              "Tubos ya encaminados, extremo complementario fijo o necesidad de evitar el giro del tubo"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "La diferencia aparece durante el bloqueo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Al conectar un Luer macho con tubo a un puerto hembra fijo, el collar fijo gira con el macho y puede arrastrar el tubo. Si el tubo es corto, está fijado en ambos extremos o pasa cerca de otras líneas, la torsión dificulta el montaje. Un collar giratorio permite bloquear manteniendo la orientación del macho y facilita estas conexiones ya encaminadas."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/fixed-locking-collar-end-view-es.webp",
+          "alt": "Vista frontal de un Luer macho con collar fijo; los elementos de posicionamiento impiden el giro relativo entre núcleo y collar",
+          "width": 1080,
+          "height": 720,
+          "caption": "Collar fijo: el collar y el núcleo mantienen su posición angular relativa. Debe quedar espacio para girar el conector y el tubo conectado durante el bloqueo.",
+          "link": {
+            "href": "/es/products/fittings/luer-fittings/lps-32-pp-n/",
+            "label": "Ver LPS-32-PP-N"
+          }
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/rotating-locking-collar-end-view-es.webp",
+          "alt": "Vista frontal de un Luer macho con collar giratorio; la flecha circular amarilla indica el giro relativo entre collar y núcleo",
+          "width": 1080,
+          "height": 720,
+          "caption": "Collar giratorio: puede girar respecto al núcleo. Durante el montaje se mantiene la orientación del núcleo y del tubo mientras se gira el collar exterior.",
+          "link": {
+            "href": "/es/products/fittings/luer-fittings/lpr-32-pp-n/",
+            "label": "Ver LPR-32-PP-N"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": "Aquí, «giratorio» describe la función del collar durante el montaje. No significa que el conector pueda utilizarse como una unión rotativa de funcionamiento continuo. Deje margen de flexión en el tubo y evite que la tracción o las fuerzas laterales se concentren de forma permanente en la unión cónica."
+        },
+        {
+          "type": "subheading",
+          "title": "Un Luer macho de una pieza también puede tener bloqueo"
+        },
+        {
+          "type": "paragraph",
+          "text": "En LP, «de una pieza» describe la construcción del cuerpo y del bloqueo. LP incorpora rosca de bloqueo Luer y no debe clasificarse como un conector slip sin rosca. Del mismo modo, LSL y LRL son núcleos de Luer macho que requieren su collar compatible; un núcleo sin collar no debe utilizarse como un conector Luer slip completo."
+        }
+      ]
+    },
+    {
+      "title": "¿Qué diseños y tamaños Luer ofrece FOREACH?",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Seleccione primero la serie según la función de conexión"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Serie",
+            "Diseño y función de conexión",
+            "Materiales del cuerpo"
+          ],
+          "rows": [
+            [
+              "LPS",
+              "Luer macho con collar fijo; conexión de tubo a Luer macho",
+              "PP"
+            ],
+            [
+              "LPR",
+              "Luer macho con collar giratorio; facilita mantener la orientación del tubo",
+              "PP, PA"
+            ],
+            [
+              "LP",
+              "Luer macho de una pieza con estructura de bloqueo",
+              "PP, PA"
+            ],
+            [
+              "LS",
+              "Luer hembra; conexión de tubo a Luer hembra",
+              "PP, PA"
+            ],
+            [
+              "PMLS",
+              "Luer hembra pasamuros; fija una conexión desmontable al panel",
+              "PP, PA; determinadas configuraciones en PVDF"
+            ],
+            [
+              "LSL / LRL",
+              "Núcleos Luer macho fijos / giratorios; requieren collares compatibles",
+              "LSL: PP, PA; LRL también dispone de configuraciones de PVDF"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Los materiales se indican por serie; no todas las combinaciones de tamaño, color y diseño existen en todos los materiales. En conjuntos de piezas separadas, el núcleo forma el conducto de fluido y el collar proporciona el bloqueo exterior. Los collares LPT, anillos de identificación LCR y tuercas de montaje LNS tienen funciones distintas. Conserve las referencias completas al seleccionarlos."
+        },
+        {
+          "type": "subheading",
+          "title": "1.6, 2.4 y 3.2 mm son diámetros interiores del tubo, no diámetros Luer"
+        },
+        {
+          "type": "paragraph",
+          "text": "La espiga entra en el tubo, por lo que estos tamaños se seleccionan según su diámetro interior. En LPR-32-PP-N, 32 corresponde a un tubo de 3.2 mm de diámetro interior, PP al material y N al color natural. El género y el bloqueo del extremo Luer se comprueban por separado; «Luer de 3.2 mm» no define por completo la interfaz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esto difiere de las conexiones de tubo rígido con férula o anillo de compresión: sus elementos de sellado y sujeción actúan sobre la superficie exterior del tubo y se seleccionan principalmente por diámetro exterior. Así, «1.6 mm» puede designar dimensiones diferentes en un Luer con espiga y en un conector para tubo rígido. Tras elegir el diámetro interior, compruebe también espesor de pared, dureza y material para verificar la inserción y la retención en la espiga."
+        },
+        {
+          "type": "subheading",
+          "title": "Compare la longitud total si el espacio axial es limitado"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Diámetro interior del tubo",
+            "Longitud total LPS",
+            "Longitud total LPR",
+            "Longitud total LP"
+          ],
+          "rows": [
+            [
+              "1.6 mm",
+              "20.0 mm",
+              "20.0 mm",
+              "14.85 mm"
+            ],
+            [
+              "2.4 mm",
+              "22.3 mm",
+              "22.3 mm",
+              "17.15 mm"
+            ],
+            [
+              "3.2 mm",
+              "25.0 mm",
+              "25.0 mm",
+              "19.85 mm"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Para el mismo tubo de 3.2 mm de diámetro interior, el LP mostrado es 5.15 mm más corto que LPS y LPR, por lo que puede ser una opción para montajes compactos. LPS y LPR tienen la misma longitud total; la diferencia principal es el giro del collar respecto al núcleo. No priorice una pieza más corta ignorando el espacio para los dedos, la torsión del tubo o el radio de curvatura a la salida."
+        },
+        {
+          "type": "paragraph",
+          "text": "Estos valores son longitudes totales de piezas individuales en los planos. La longitud de la pareja acoplada también depende de la contraparte y de la posición de acoplamiento. La diferencia entre piezas no equivale directamente al espacio ahorrado por la conexión completa. Utilice las dimensiones del conjunto seleccionado para diseñar el equipo."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Para comparar conexiones de tubo rígido, consulte: ",
+              "href": "/es/resources/technical-articles/hard-tube-fittings-selection-guide/",
+              "label": "Guía de selección de conectores para tubo rígido"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo forman un circuito completo los adaptadores de tubo y los pasamuros?",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "El adaptador de tubo debe ser compatible en ambos extremos"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un adaptador Luer a espiga realiza dos conexiones: el extremo Luer se une al equipo u otro conector, y la espiga al tubo flexible. Si el equipo ya tiene un puerto Luer hembra, seleccione un macho compatible para el lado del tubo y después el tamaño de espiga según el diámetro interior. Para unir dos tubos, una pareja macho-hembra puede formar el punto desmontable, seleccionando el tubo de cada lado de manera independiente."
+        },
+        {
+          "type": "paragraph",
+          "text": "El género Luer no determina el sentido del flujo. Los conectores de paso ordinarios tampoco incorporan por ello una función antirretorno ni cierre automático al desconectarse. Si se necesita impedir el flujo inverso o detener el líquido tras la desconexión, utilice una válvula o un conector específico con esa función."
+        },
+        {
+          "type": "subheading",
+          "title": "El Luer hembra pasamuros fija la conexión al panel"
+        },
+        {
+          "type": "paragraph",
+          "text": "Para conectar una línea desde el exterior, el Luer hembra pasamuros fija la interfaz a la carcasa o al panel. La espiga interior conecta el tubo y la interfaz exterior recibe el Luer macho. Por ejemplo, PMLS-U28-32D-PP-N admite tubo de 3.2 mm de diámetro interior; su rosca central 1/4-28 UNF sirve para el montaje en panel con la tuerca correspondiente."
+        },
+        {
+          "type": "paragraph",
+          "text": "La rosca U28 cumple una función de fijación mecánica; el líquido circula por el conducto interior. No debe tratarse como un puerto de fluido 1/4-28 de fondo plano para un colector. Compruebe el orificio y espesor del panel, la longitud de rosca disponible para la tuerca y el espacio posterior para el tubo. Si se necesita conectar a un puerto de fluido con rosca interior, elija un adaptador con el sellado adecuado para ese puerto."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/bulkhead-luer-panel-installation.webp",
+          "alt": "Luer hembra pasamuros atravesando un panel transparente, con la tuerca de montaje en el otro lado",
+          "width": 1080,
+          "height": 720,
+          "caption": "Montaje pasamuros: el cuerpo atraviesa el panel y la tuerca compatible lo fija. La espiga conecta el tubo a un lado y el Luer hembra proporciona la conexión exterior al otro. La fijación al panel y el bloqueo Luer se realizan en posiciones distintas."
+        },
+        {
+          "type": "subheading",
+          "title": "Ejemplo: un tubo exterior que no puede girar fácilmente"
+        },
+        {
+          "type": "paragraph",
+          "text": "Suponga que se usa tubo de 3.2 mm de diámetro interior dentro y fuera del equipo, que el recorrido exterior ya está fijado y que el mantenimiento exige desconectar en el panel. Puede evaluarse el PMLS-U28-32D-PP-N hembra pasamuros con el LPR-32-PP-N macho de collar giratorio. La hembra ofrece un punto fijo y el collar exterior permite bloquear reduciendo la necesidad de girar todo el tubo."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-luer-fitting/luer-collar-tubing-rotation-comparison-es.webp",
+          "alt": "Comparación en un puerto hembra fijo: arriba, el collar giratorio mantiene la orientación del tubo; abajo, el collar fijo arrastra el tubo al girar",
+          "width": 1080,
+          "height": 720,
+          "caption": "Movimiento de bloqueo ante una hembra fija: la cruz roja superior indica que el tubo no gira con el collar, no un montaje incorrecto. Las flechas amarillas inferiores indican que el collar fijo gira con el macho y puede arrastrar el tubo. Si el tubo no puede girar fácilmente, evalúe primero un collar giratorio."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Defina el lado del panel: compruebe el orificio PMLS, el espesor, la tuerca compatible y el espacio posterior para el tubo.",
+            "Defina el extremo exterior: compruebe conos, bloqueo y acceso entre LPR y la hembra. Ambas espigas deben corresponder a tubo de 3.2 mm de diámetro interior.",
+            "Seleccione los materiales: evalúe los conectores de PP y el tubo elegido según fluido, concentración, temperatura y procedimiento de limpieza reales.",
+            "Valide muestras: compruebe sellado, entrada de aire, caudal y estado tras la reconexión con la presión, ciclos de arranque/parada y recorrido reales."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Este ejemplo presenta una combinación candidata y su justificación; no implica una validación terminada en un equipo concreto. Si el equipo ya tiene un puerto Luer hembra, no hace falta añadir otro pasamuros. Si uno de los extremos gira libremente, también pueden compararse collares fijos y machos de una pieza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los colores y los anillos LCR ayudan a identificar varias líneas, pero deben combinarse con etiquetas y posiciones de los puertos. El color no cambia la compatibilidad de los conos ni evita por sí solo una conexión equivocada."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo se instalan y desconectan los conectores Luer?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Separe las operaciones del extremo del tubo, la unión Luer y la fijación al panel. Conecte primero el tubo y reserve espacio de trabajo antes de acoplar macho y hembra. En machos suministrados por piezas, monte previamente el núcleo y el collar compatible según sus requisitos."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Inspeccione piezas y extremos del tubo. Confirme referencias, género y collar. Revise los conos en busca de suciedad, arañazos o grietas; el corte del tubo debe ser recto, sin residuos ni aplastamiento.",
+            "Conecte la espiga. Use el diámetro interior y material adecuados, inserte el tubo como exige el modelo y deje margen de curvatura. No estire excesivamente el tubo para compensar una espiga incorrecta.",
+            "Alinee los conos Luer. Mantenga coaxiales macho y hembra para acoplarlos normalmente. No fuerce extremos visiblemente desalineados utilizando el collar para juntarlos.",
+            "Complete el bloqueo. Con collar fijo, deje girar el conector o su contraparte. Con collar giratorio, mantenga orientados núcleo y tubo mientras gira el collar. Si se atasca o no engrana correctamente, retire e inspeccione.",
+            "Compruebe fugas según el circuito. Realice primero las pruebas estáticas especificadas y después las de presión, temperatura y arranque/parada reales. En aspiración, compruebe también la entrada de aire.",
+            "Pare y despresurice antes del mantenimiento. Tras desconectar, revise conos, collar y extremos del tubo, limpie la contaminación y sustituya las piezas dañadas; después verifique la unión en las condiciones originales."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "El collar Luer y la tuerca pasamuros aplican fuerzas en puntos diferentes y requieren métodos y condiciones de apriete propios. En producción, documente el procedimiento, las herramientas y los criterios de estanqueidad. No transfiera pares recomendados para conectores con férula o anillo de compresión al collar Luer, ni utilice cinta de sellado de roscas para reparar un cono Luer dañado."
+        }
+      ]
+    },
+    {
+      "title": "¿Qué revisar si persisten fugas o entrada de aire después del bloqueo?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Localice primero el problema en la unión Luer, entre espiga y tubo o en el cuerpo. Cada punto necesita una solución distinta. Solo un problema en la unión Luer justifica centrar el diagnóstico en cono y bloqueo. Apretar repetidamente el collar no repara un tubo dañado en la espiga."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Síntoma observado",
+            "Primera comprobación",
+            "Acción correctiva"
+          ],
+          "rows": [
+            [
+              "Fuga en la unión Luer",
+              "Suciedad, arañazos, desalineación y posición correcta del bloqueo",
+              "Parar, despresurizar, limpiar e inspeccionar; sustituir piezas dañadas, realinear y volver a probar"
+            ],
+            [
+              "Fuga en la base de la espiga o deslizamiento del tubo",
+              "Diámetro interior, espesor, material, inserción y tracción continua del tubo",
+              "Revisar compatibilidad y sujeción del tubo; no resolverlo apretando más el collar"
+            ],
+            [
+              "Burbujas durante la aspiración sin goteo exterior",
+              "Entrada de aire en las uniones; revisar también nivel, tubo de aspiración y desgasificación del fluido",
+              "Comprobar por tramos con las mismas condiciones de aspiración; las burbujas no demuestran por sí solas un fallo del conector"
+            ],
+            [
+              "Correcto en estático, anómalo al arrancar, parar o mover el tubo",
+              "Picos de presión, tracción lateral, torsión y conexiones flojas",
+              "Mejorar soporte y holgura de movimiento; validar con el ciclo real"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si el caudal baja tras sustituir el conector, compare también el diámetro del conducto interno, el diámetro interior y longitud del tubo, los dobleces y los residuos del corte. El mismo tamaño de conexión no garantiza el mismo paso interno. No puede deducirse la resistencia al flujo solo por la forma o por ser macho o hembra."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Preguntas frecuentes",
+  "faqItems": [
+    {
+      "question": "¿Un Luer lock siempre soporta más presión que un Luer slip?",
+      "answer": "El bloqueo añade retención mecánica, pero la presión de trabajo admisible depende de la pareja concreta, el tubo, los materiales, la temperatura y el montaje. El collar no define por sí solo una presión nominal y no permite aplicar valores de otros fabricantes. Valide el conjunto según sus especificaciones y condiciones de uso."
+    },
+    {
+      "question": "¿Pueden intercambiarse directamente conectores Luer de distintos fabricantes?",
+      "answer": "La coincidencia macho-hembra es solo el primer requisito. Compruebe dimensiones, bloqueo y documentación aplicable, y valide sellado y retención de la combinación real. Compartir el nombre Luer no implica intercambiabilidad incondicional de todas las configuraciones y condiciones de trabajo."
+    },
+    {
+      "question": "¿El Luer detiene automáticamente el líquido al desconectarse?",
+      "answer": "Los conectores de paso ordinarios descritos aquí no incorporan automáticamente esa función. El cierre depende de una estructura de válvula adecuada. Si el circuito debe cerrarse al desconectar, seleccione un conector o una válvula de control con esa función específica."
+    },
+    {
+      "question": "¿Puede usarse directamente un Luer para instrumentos como producto sanitario terminado?",
+      "answer": "Luer describe el tipo de interfaz. Su aspecto no demuestra idoneidad médica, esterilidad ni condiciones de esterilización del producto final. Para uso médico, compruebe la documentación y los requisitos de validación del producto concreto y del conjunto final."
+    }
+  ],
+  "cta": {
+    "title": "¿Necesita adaptar un Luer a su circuito de fluidos?",
+    "description": "Facilite fotos o planos de la contraparte, diámetros interior y exterior y material del tubo, fluido, temperatura, presión y espacio disponible para confirmar género, collar y conexión.",
+    "contactLabel": "Contactar con soporte técnico",
+    "productsLabel": "Ver conectores Luer",
+    "productsHref": "/es/products/fittings/luer-fittings/"
+  },
+  "navigation": [
+    {
+      "id": "sealing",
+      "label": "Interfaces y sellado"
+    },
+    {
+      "id": "locking",
+      "label": "Conexión y bloqueo",
+      "children": [
+        {
+          "id": "fixed-vs-rotating",
+          "label": "Collares fijos y giratorios"
+        },
+        {
+          "id": "integral-lock",
+          "label": "Cuerpos de una pieza y núcleos"
+        }
+      ]
+    },
+    {
+      "id": "series",
+      "label": "Series, tubos y dimensiones",
+      "children": [
+        {
+          "id": "series-choice",
+          "label": "Series y materiales"
+        },
+        {
+          "id": "tubing-id",
+          "label": "Diámetro interior del tubo"
+        },
+        {
+          "id": "overall-length",
+          "label": "Longitud total del cuerpo"
+        }
+      ]
+    },
+    {
+      "id": "connection",
+      "label": "Tubos y montaje en panel",
+      "children": [
+        {
+          "id": "hose-connection",
+          "label": "Adaptación a tubos"
+        },
+        {
+          "id": "panel-mount",
+          "label": "Montaje en panel"
+        },
+        {
+          "id": "selection-example",
+          "label": "Ejemplo completo de selección"
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "label": "Instalación y desconexión"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Fugas y entrada de aire"
+    }
+  ],
+  "relatedProductLabel": "conector Luer"
+}
