@@ -1,6 +1,8 @@
 "use client";
 
 import { useId } from "react";
+import Link from "next/link";
+import categoryTabStyles from "@/components/common/product-category-tab.module.css";
 
 import type { ProductSelectionCategoryItem } from "./product-selection-ui.types";
 
@@ -49,6 +51,13 @@ export default function ProductCategoryTabs({
 
       <div className="category-tabs" id={categoryTabsId}>
         {categories.map((category) => (
+          category.href ? <Link
+            key={category.id}
+            className={`${categoryTabStyles.tab} category-tab ${activeCategoryId === category.id ? "active" : ""}`}
+            href={category.href}
+            prefetch={false}
+            aria-current={activeCategoryId === category.id ? "page" : undefined}
+          >{category.label}</Link> :
           <button
             className={`category-tab ${
               activeCategoryId === category.id ? "active" : ""

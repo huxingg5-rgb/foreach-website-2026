@@ -12,6 +12,7 @@ import {
 // 杩欎釜鏂囦欢鐨勪綔鐢細鎶婇椤甸灞忎粠 HomePageContent.tsx 涓媶鍑烘潵锛屾柟渚垮悗缁淮鎶?
 
 import Image from "next/image";
+import { homeCarouselRole, homeUiText } from "@/data/home-ui.intl";
 import Link from "next/link";
 
 import {
@@ -89,6 +90,9 @@ export default function HomeHeroSection({
 }: HomeHeroSectionProps) {
   const homeText = homeI18n[locale];
   const usesStaticHero = locale === "zh-CN";
+  // Start with the existing poster in SSR. A video source is mounted only after
+  // the browser confirms a desktop viewport without reduced-motion preference.
+  const [canPlayDesktopVideo, setCanPlayDesktopVideo] = useState(false);
   const [isCompactDesktop, setIsCompactDesktop] = useState(false);
   const [queuedBannerIndex, setQueuedBannerIndex] = useState<number | null>(null);
   const [requestedBannerIndex, setRequestedBannerIndex] = useState(0);
@@ -190,6 +194,9 @@ export default function HomeHeroSection({
 
     function handleMediaChange() {
       setIsDesktopViewport(desktopMedia.matches);
+      const shouldPlayVideo =
+        !usesStaticHero && desktopMedia.matches && !reducedMotionMedia.matches;
+      setCanPlayDesktopVideo(shouldPlayVideo);
 
       const video =
         heroVideoRef.current;
@@ -212,7 +219,9 @@ export default function HomeHeroSection({
         }
 
         if (!video) {
-          activateDesktopBanner();
+          if (!shouldPlayVideo) {
+            activateDesktopBanner();
+          }
           return;
         }
 
@@ -236,13 +245,7 @@ export default function HomeHeroSection({
         true;
 
       if (video) {
-        video.loop = true;
-
-        if (video.ended) {
-          video.currentTime = 0;
-        }
-
-        resumeVideo(video, false);
+        video.pause();
       }
     }
 
@@ -257,7 +260,9 @@ export default function HomeHeroSection({
             if (
               document.visibilityState !==
                 "visible" ||
-              reducedMotionMedia.matches
+              reducedMotionMedia.matches ||
+              !desktopMedia.matches ||
+              usesStaticHero
             ) {
               return;
             }
@@ -337,7 +342,7 @@ export default function HomeHeroSection({
         repairVideoAfterViewportChange
       );
     };
-  }, []);
+  }, [usesStaticHero, canPlayDesktopVideo]);
 
   useEffect(() => {
     if (
@@ -723,7 +728,7 @@ return (
             ? "true"
             : "false"
         }>
-      {usesStaticHero ? (
+      {usesStaticHero || !canPlayDesktopVideo ? (
         <Image
           className="home-hero-video"
           src="/images/home/home-hero-final-banner.webp"
@@ -743,7 +748,8 @@ return (
           autoPlay
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
+          poster="/images/home/home-hero-final-banner.webp"
           onPlaying={handleVideoPlaying}
           onEnded={handleVideoEnded}
           onError={handleVideoError}
@@ -786,14 +792,10 @@ return (
         }}
         role="region"
         aria-roledescription={
-          locale === "zh-CN"
-            ? "轮播图"
-            : "carousel"
+          homeCarouselRole[locale]
         }
         aria-label={
-          locale === "zh-CN"
-            ? "首页轮播图"
-            : "Homepage banners"
+          homeUiText[locale].banners
         }
         aria-hidden={!desktopHeroActive}
       >
@@ -933,9 +935,7 @@ return (
         <div
           className="home-hero-carousel-pagination"
           aria-label={
-            locale === "zh-CN"
-              ? "切换首页轮播图"
-              : "Choose a homepage banner"
+            homeUiText[locale].chooseBanner
           }
         >
           {[0, 1].map((bannerIndex) => (
@@ -950,9 +950,7 @@ return (
                   : "false"
               }
               aria-label={
-                locale === "zh-CN"
-                  ? `显示第 ${bannerIndex + 1} 张轮播图`
-                  : `Show banner ${bannerIndex + 1}`
+                homeUiText[locale].showBanner(bannerIndex + 1)
               }
               aria-current={
                 (isCompactDesktop ? requestedBannerIndex : activeBannerIndex) ===

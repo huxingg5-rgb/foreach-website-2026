@@ -1,4 +1,4 @@
-﻿import type { LocaleCode } from "@/lib/i18n";
+import type { LocaleCode } from "@/lib/i18n";
 
 import { getLocalizedSiteHref, normalizeSiteHref } from "@/lib/seo/site-url";
 
@@ -29,6 +29,7 @@ const footerInternationalTranslations: Partial<
   Record<Exclude<LocaleCode, "zh-CN" | "en">, Record<string, string>>
 > = {
   es: {
+    "All applications": "Todas las aplicaciones",
     Home: "Inicio", Products: "Productos", "Pump Series": "Bombas", "Valve Series": "Válvulas", "Probe Series": "Sondas y agujas", "Fitting Series": "Conectores", "Tubing Series": "Tubos", "Control Series": "Control inteligente",
     Applications: "Aplicaciones", "Life Science": "Ciencias de la vida", "Lab Automation": "Automatización de laboratorio", "Analytical Instruments": "Instrumentos analíticos", "Environmental Monitoring": "Monitoreo ambiental", "Synthetic Biology": "Biología sintética",
     Resources: "Recursos", Datasheets: "Fichas técnicas", "Fluid Resistance Calculator": "Calculadora de resistencia al flujo", "Fitting Replacement": "Sustitución de conectores", "Installation Guides": "Guías de instalación", "Material Compatibility": "Compatibilidad de materiales", "Technical Articles": "Artículos técnicos", "Company News": "Noticias de la empresa",
@@ -36,6 +37,7 @@ const footerInternationalTranslations: Partial<
     Address: "Dirección", "View Map": "Ver mapa", Email: "Correo electrónico", Tel: "Tel.", Social: "Redes sociales",
   },
   fr: {
+    "All applications": "Toutes les applications",
     Home: "Accueil", Products: "Produits", "Pump Series": "Pompes", "Valve Series": "Vannes", "Probe Series": "Sondes et aiguilles", "Fitting Series": "Raccords", "Tubing Series": "Tubes", "Control Series": "Contrôle intelligent",
     Applications: "Applications", "Life Science": "Sciences de la vie", "Lab Automation": "Automatisation de laboratoire", "Analytical Instruments": "Instruments analytiques", "Environmental Monitoring": "Surveillance environnementale", "Synthetic Biology": "Biologie synthétique",
     Resources: "Ressources", Datasheets: "Fiches techniques", "Fluid Resistance Calculator": "Calculateur de résistance hydraulique", "Fitting Replacement": "Remplacement de raccords", "Installation Guides": "Guides d’installation", "Material Compatibility": "Compatibilité des matériaux", "Technical Articles": "Articles techniques", "Company News": "Actualités de l’entreprise",
@@ -43,6 +45,7 @@ const footerInternationalTranslations: Partial<
     Address: "Adresse", "View Map": "Voir la carte", Email: "E-mail", Tel: "Tél.", Social: "Réseaux sociaux",
   },
   ko: {
+    "All applications": "전체 응용 분야",
     Home: "홈", Products: "제품", "Pump Series": "펌프", "Valve Series": "밸브", "Probe Series": "프로브 및 니들", "Fitting Series": "피팅", "Tubing Series": "튜빙", "Control Series": "스마트 제어",
     Applications: "응용 분야", "Life Science": "생명과학", "Lab Automation": "실험실 자동화", "Analytical Instruments": "분석 기기", "Environmental Monitoring": "환경 모니터링", "Synthetic Biology": "합성생물학",
     Resources: "자료 센터", Datasheets: "데이터시트", "Fluid Resistance Calculator": "유체 저항 계산기", "Fitting Replacement": "피팅 대체품 검색", "Installation Guides": "설치 가이드", "Material Compatibility": "재료 호환성", "Technical Articles": "기술 자료", "Company News": "회사 소식",
@@ -50,6 +53,7 @@ const footerInternationalTranslations: Partial<
     Address: "주소", "View Map": "지도 보기", Email: "이메일", Tel: "전화", Social: "소셜 미디어",
   },
   ru: {
+    "All applications": "Все области применения",
     Home: "Главная", Products: "Продукция", "Pump Series": "Насосы", "Valve Series": "Клапаны", "Probe Series": "Зонды и иглы", "Fitting Series": "Фитинги", "Tubing Series": "Трубки", "Control Series": "Интеллектуальное управление",
     Applications: "Области применения", "Life Science": "Науки о жизни", "Lab Automation": "Лабораторная автоматизация", "Analytical Instruments": "Аналитические приборы", "Environmental Monitoring": "Экологический мониторинг", "Synthetic Biology": "Синтетическая биология",
     Resources: "Ресурсы", Datasheets: "Технические описания", "Fluid Resistance Calculator": "Калькулятор гидравлического сопротивления", "Fitting Replacement": "Подбор замены фитингов", "Installation Guides": "Инструкции по установке", "Material Compatibility": "Совместимость материалов", "Technical Articles": "Технические статьи", "Company News": "Новости компании",

@@ -13,6 +13,7 @@ import { getTubingIntro, getTubingSeriesCopy, getTubingMaterialCopy } from "@/da
 import { getTubingDetailPath, getLegacyTubingSelectionTarget, getTubingSelectionPath, hasTubingSelectionLocale, isTubingMaterial } from "@/data/products/selection/tubing-selection-routes";
 import { fittingIntrosZh, fittingOverviewParagraphsZh } from "@/data/products/selection/fitting-headings.zh";
 import ProductTypeIntroImage from "./ProductTypeIntroImage";
+import { isTubingAssemblyLocale, tubingAssemblyNavigation } from "@/data/products/tubing-assemblies/locales";
 import { probeIntrosZh, probeOverviewParagraphsZh, probeTypesZh, getProbeProductTypeIdZh, getProbeSelectionPathZh } from "@/data/products/selection/probe-selection.zh";
 import { controlIntrosZh, controlOverviewParagraphsZh, controlTypesZh, getControlProductTypeIdZh, getControlSelectionPathZh } from "@/data/products/selection/control-selection.zh";
 import {getValveSeriesRoute,getValveSelectionPath,getHpValveDetailPath} from "@/data/products/selection/valve-routes";
@@ -1248,6 +1249,14 @@ function getCategoryItems(locale: SelectionLocale) {
   generatedCategories.forEach((category) => {
     categoryMap.set(category.id, category);
   });
+
+  if (isTubingAssemblyLocale(locale)) {
+    categoryMap.set("tubing-assemblies", {
+      id: "tubing-assemblies", label: tubingAssemblyNavigation[locale].title, sortOrder: 100,
+      description: tubingAssemblyNavigation[locale].description,
+      href: `/${locale}/products/tubing-assemblies/`,
+    });
+  }
 
   return Array.from(categoryMap.values()).sort(
     (current, next) => current.sortOrder - next.sortOrder

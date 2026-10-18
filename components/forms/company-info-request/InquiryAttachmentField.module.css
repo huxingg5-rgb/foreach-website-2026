@@ -1,0 +1,89 @@
+.field {
+  margin-top: 18px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.toolbar strong {
+  color: #173368;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.toolbar button {
+  min-height: 38px;
+  padding: 8px 18px;
+  border: 1px solid #173368;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #173368;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.toolbar button:hover:not(:disabled) {
+  background: #173368;
+  color: #09e9b4;
+}
+
+.hint {
+  margin: 8px 0 0;
+  color: #5e6b80;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 5px;
+  color: #173368;
+  font-size: 13px;
+}
+
+.name {
+  overflow-wrap: anywhere;
+}
+
+.size {
+  color: #5e6b80;
+  white-space: nowrap;
+}
+
+.list button {
+  border: 0;
+  padding: 4px;
+  background: transparent;
+  color: #173368;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.field button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 8px 0 0;
+  color: #b4232a;
+  font-size: 13px;
+}

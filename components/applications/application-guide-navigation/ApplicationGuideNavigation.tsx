@@ -215,6 +215,7 @@ export default function ApplicationGuideNavigation({
                       href={group.overview.href}
                       prefetch={false}
                       className={`${styles.navParent}${branchActive ? ` ${styles.branchActive}` : ""}`}
+                      data-has-children={group.children.length > 0 ? "true" : undefined}
                       aria-current={currentHref === group.overview.href ? "page" : undefined}
                     >
                       <span>{group.label}</span>

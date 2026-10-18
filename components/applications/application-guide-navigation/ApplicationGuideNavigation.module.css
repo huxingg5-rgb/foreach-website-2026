@@ -30,7 +30,6 @@
   color: var(--brand-blue, #173368);
   background: #eef2f7;
   border-radius: 6px;
-  font-weight: 600;
 }
 .documentNavigation a:hover, .documentNavigation a:focus-visible {
   color: var(--ink, #171717);
@@ -42,7 +41,7 @@
 .navGroup { margin: 0; padding: 8px 0; border-top: 1px solid var(--line, #d9d9d9); }
 .navParentRow { position: relative; }
 .navParent { font-weight: 500; }
-.navParent::after {
+.navParent[data-has-children="true"]::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -54,10 +53,10 @@
   transform: translateY(-65%) rotate(-45deg);
   transition: transform .18s ease;
 }
-.navGroup[data-expanded="true"] .navParent::after { transform: translateY(-70%) rotate(45deg); }
-.navParent.branchActive { color: var(--ink, #171717); font-weight: 600; background: transparent; }
+.navGroup[data-expanded="true"] .navParent[data-has-children="true"]::after { transform: translateY(-70%) rotate(45deg); }
+.navParent.branchActive { color: var(--ink, #171717); background: transparent; }
 .navParent.branchActive:hover { background: #f5f7fa; }
-.navParent[aria-current="page"] { color: var(--brand-blue, #173368); font-weight: 600; }
+.navParent[aria-current="page"] { color: var(--brand-blue, #173368); }
 .navChildren { display: none; margin: 0; padding: 0 0 0 14px; }
 .navGroup[data-expanded="true"] .navChildren { display: block; }
 .documentNavigation .navChild {
@@ -215,7 +214,7 @@
   }
   .navOverview { margin-bottom: 6px; }
   .navGroup { padding: 5px 0; }
-  .navParent::after { display: none; }
+  .navParent[data-has-children="true"]::after { display: none; }
   .mobileGroupToggle {
     position: absolute;
     top: 50%;
@@ -266,9 +265,9 @@
     border-bottom: 1px solid var(--line, #d9d9d9);
   }
   .documentNavigation a { padding-top: 8px; padding-bottom: 8px; }
-  .navParent::after { display: block; }
+  .navParent[data-has-children="true"]::after { display: block; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .navParent::after, .groupChevron { transition: none; }
+  .navParent[data-has-children="true"]::after, .groupChevron { transition: none; }
 }

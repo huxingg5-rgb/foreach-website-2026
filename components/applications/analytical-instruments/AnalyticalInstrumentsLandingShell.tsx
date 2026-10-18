@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import contentStyles from "../ApplicationContentPage.module.css";
 import type { EnglishApplicationPageData } from "@/data/applications/application-english";
 import { getEnglishAnalyticalInstrumentLinks } from "@/data/applications/analytical-instruments/navigation";
 import AnalyticalMobileInstrumentNavigation from "./AnalyticalMobileInstrumentNavigation";
@@ -26,36 +27,7 @@ export default function AnalyticalInstrumentsLandingShell({
   const analyticalInstrumentLinks = getEnglishAnalyticalInstrumentLinks();
 
   return (
-    <div className="ivd-page analytical-instruments-page">
-      <section
-        className="ivd-hero"
-        style={
-          data.hero.backgroundImage
-            ? { backgroundImage: `url(${data.hero.backgroundImage})` }
-            : undefined
-        }
-      >
-        <div className="ivd-hero-inner">
-          <div>
-            <div className="ivd-hero-title">
-              {data.hero.title}
-              <br />
-              <span>{data.hero.highlight}</span>
-            </div>
-            <p>{data.hero.description}</p>
-          </div>
-
-          <aside className="ivd-hero-panel" aria-hidden="true">
-            <h2>{data.hero.panelTitle}</h2>
-            <ul>
-              {data.hero.panelItems.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </aside>
-        </div>
-      </section>
-
+    <div className={`ivd-page analytical-instruments-page ${contentStyles.page}`} data-application-content-page>
       <SiteBreadcrumb
         ariaLabel="Breadcrumb navigation"
         items={data.breadcrumb}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import contentStyles from "./ApplicationContentPage.module.css";
 
 type FrenchIndustryProduct = {
   name: string;
@@ -163,31 +164,7 @@ export default function FrenchIndustryApplicationClient({
   }
 
   return (
-    <main className={`ivd-page ${pageClassName}`}>
-      <section className="ivd-hero">
-        <div className="ivd-hero-inner">
-          <div>
-            <h1>
-              {data.hero.title}
-              <br />
-              <span>{data.hero.highlight}</span>
-            </h1>
-            <p>{data.hero.description}</p>
-          </div>
-
-          {data.hero.panelTitle || data.hero.panelItems.length ? (
-            <aside className="ivd-hero-panel">
-              <h2>{data.hero.panelTitle}</h2>
-              <ul>
-                {data.hero.panelItems.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </aside>
-          ) : null}
-        </div>
-      </section>
-
+    <main className={`ivd-page ${pageClassName} ${contentStyles.page}`} data-application-content-page>
       <SiteBreadcrumb
         ariaLabel="Fil d’Ariane"
         items={data.breadcrumb}
@@ -197,7 +174,7 @@ export default function FrenchIndustryApplicationClient({
       <section className="ivd-section" id="applications">
         <div className="ivd-section-inner">
           <div className="ivd-section-head">
-            <h2 className="ivd-section-title">{data.applicationSection.title}</h2>
+            <h1 className="ivd-section-title">{data.applicationSection.title}</h1>
             <p className="ivd-section-desc">
               {data.applicationSection.description}
             </p>

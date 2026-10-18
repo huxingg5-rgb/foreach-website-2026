@@ -51,9 +51,9 @@ const refs = {
   foreachHighPressure: { id: "foreach-high-pressure", title: "FOREACH: High-Pressure Valve Product Range", href: "/en/products/valves/high-pressure-valves/" },
   foreachSolenoid: { id: "foreach-solenoid", title: "FOREACH: Solenoid Valve Product Range", href: "/en/products/valves/solenoid-valves/" },
   foreachProbe: { id: "foreach-probe", title: "FOREACH: Sampling and Wash Probe Product Range", href: "/en/products/probes/" },
-  foreachBubble: { id: "foreach-bubble", title: "FOREACH: ABD Air Bubble Detector", href: "/en/products/control/abd-air-bubble-detector/" },
+  foreachBubble: { id: "foreach-bubble", title: "FOREACH: ABD Air Bubble Detector", href: "/en/products/control/air-bubble-detectors/abd/" },
   foreachMonitor: { id: "foreach-monitor", title: "FOREACH: PDM5 Pressure Sensor User Manual", href: "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2507-00002-001-en-pdm5-pressure-sensor-user-manual.pdf" },
-  foreachMonitoringRange: { id: "foreach-monitoring-range", title: "FOREACH: Fluid Monitoring and Control Product Range", href: "/en/products/?category=control" },
+  foreachMonitoringRange: { id: "foreach-monitoring-range", title: "FOREACH: Fluid Monitoring and Control Product Range", href: "/en/products/control/" },
   foreachFluidics: { id: "foreach-fluidics", title: "FOREACH: Fittings and Tubing Catalog", href: "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf" },
 } as const satisfies Record<string, ApplicationReference>;
 
@@ -112,7 +112,7 @@ const groupGuides: Record<string, GroupGuide> = {
     flow: ["Normal-cycle baseline", "Sensor at a diagnostic point", "Filtered signal and time window", "Fault classification", "Stop, retry, purge or service action"],
     selectionRows: [["ABD bubble detector", "Non-contact gas/liquid state on compatible transparent tubing", "Tube fit, optical liquid, bubble length and velocity"], ["PDM5 pressure sensor", "Inline pressure trend", "Range, wetted materials, added volume and sample rate"], ["Combined monitoring", "Differentiate air entry, restriction and valve state", "Correlate two signals with commanded motion"]],
     inputs: [["Fault definition", "Empty source, bubble, blockage, leak, closed valve or filter loading", "Determines sensor and location"], ["Time behaviour", "Shortest fault, speed, sampling and debounce", "Determines whether the event is observable"], ["Recovery policy", "Stop, retry, prime, divert or require service", "Turns detection into a controlled instrument response"]],
-    external: refs.sensirionFlow, foreach: refs.foreachMonitoringRange, productLink: { label: "FOREACH fluid monitoring modules", href: "/en/products/?category=control" }, tasks: ["monitor-bubble", "monitor-pressure"],
+    external: refs.sensirionFlow, foreach: refs.foreachMonitoringRange, productLink: { label: "FOREACH fluid monitoring modules", href: "/en/products/control/" }, tasks: ["monitor-bubble", "monitor-pressure"],
   },
   "fluidics": {
     intro: "Tubing, fittings, filters and check valves set the real volume, resistance, chemical exposure and serviceability of an analytical fluid path. FOREACH connection components should be selected as a continuous assembly from each port to the next, not as interchangeable accessories chosen after the pump and valve.",
@@ -424,7 +424,7 @@ const taskGuides: Record<string, TaskGuide> = {
     cycle: ["Learn liquid baseline", "Open valid observation window", "Filter and classify event", "Stop/divert/retry as defined", "Prime and confirm liquid", "Resume only after recovery test"],
     faultRows: [["False bubble alarms", "Tube motion, foam or optical variation", "Fix mounting and qualify liquid-specific threshold"], ["Missed bubbles", "Event shorter than filter or poor coupling", "Increase sampling or change location"], ["Bubble detected too late", "Sensor downstream of decision point", "Move upstream or add diversion capacity"]],
     acceptanceRows: [["Detection limit", "Known gas segments across operating speeds", "Required event is detected"], ["False-alarm rate", "All intended liquids and motions", "Supports unattended operation"], ["Recovery", "Empty source and random-bubble challenges", "Controller prevents acceptance of invalid liquid"]],
-    external: refs.sensirionFlow, foreach: refs.foreachBubble, productLink: { label: "FOREACH ABD bubble detectors", href: "/en/products/control/abd-air-bubble-detector/" }, related: ["monitor-pressure", "piston-sample-transfer", "diaphragm-gas-liquid"],
+    external: refs.sensirionFlow, foreach: refs.foreachBubble, productLink: { label: "FOREACH ABD bubble detectors", href: "/en/products/control/air-bubble-detectors/abd/" }, related: ["monitor-pressure", "piston-sample-transfer", "diaphragm-gas-liquid"],
   },
   "monitor-pressure": {
     intro: "Inline pressure monitoring converts a pump cycle into a diagnostic waveform. A useful implementation records pressure against motion, valve state and time so that blockage, leakage, empty source and normal viscosity changes can be separated.",

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import {
   FormEvent,
@@ -10,6 +10,10 @@ import {
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { siteSearchIndex } from "@/data/search/site-search-index.generated";
+import {
+  getTubingAssemblySearchItems,
+  isTubingAssemblySearchPath,
+} from "@/data/products/tubing-assemblies/search";
 import {
   applyDiaphragmPumpReferenceSearchItem,
   getDiaphragmPumpReferenceByLegacySlug,
@@ -135,7 +139,11 @@ function getLocalizedResultHref(href: string, locale: string): string {
   return `/${locale}${href}`;
 }
 
-function getEnglishSearchItem(item: SiteSearchItem, locale: string): SiteSearchItem {
+function getLocalizedSearchItem(item: SiteSearchItem, locale: string): SiteSearchItem {
+  if (
+    isTubingAssemblySearchPath(item.href) &&
+    item.href.startsWith(`/${locale}/products/tubing-assemblies/`)
+  ) return item;
   const activeLocale = locale as LocaleCode;
   const title = !containsHan(item.title)
     ? item.title
@@ -326,7 +334,17 @@ export default function SiteSearchClient({
 
     if (!queryFromUrl) return result;
 
-    for (const sourceItem of siteSearchIndex) {
+    const tubingItems = getTubingAssemblySearchItems(locale);
+    const sourceItems = tubingItems.length
+      ? [...siteSearchIndex.filter(item => !isTubingAssemblySearchPath(item.href)), ...tubingItems]
+      : siteSearchIndex;
+    const tubingPaths = new Set<string>();
+
+    for (const sourceItem of sourceItems) {
+      if (isTubingAssemblySearchPath(sourceItem.href)) {
+        if (tubingPaths.has(sourceItem.href)) continue;
+        tubingPaths.add(sourceItem.href);
+      }
       const scopedSourceItem = applyDiaphragmPumpReferenceSearchItem(
         sourceItem,
         locale,
@@ -343,7 +361,7 @@ export default function SiteSearchClient({
       }
 
       const item = isEnglish
-        ? getEnglishSearchItem(scopedSourceItem, locale)
+        ? getLocalizedSearchItem(scopedSourceItem, locale)
         : scopedSourceItem;
       const score = scoreItem(item, queryFromUrl);
       if (score <= 0) continue;

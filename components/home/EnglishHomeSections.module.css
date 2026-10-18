@@ -1,0 +1,154 @@
+.section { background: #fff; color: #173368; padding: 76px 0; scroll-margin-top: 100px; }
+.section:global(#products) { padding-bottom: 28px; }
+.section:global(#applications) { padding-top: 52px; }
+/* Align with the existing homepage company section at every breakpoint. */
+.container { width: min(1600px, calc(100% - 96px)); margin: 0 auto; }
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .container { width: min(1180px, calc(100% - 56px)); }
+}
+@media (max-width: 1024px) {
+  .container { width: min(960px, calc(100% - 48px)); }
+}
+@media (max-width: 768px) {
+  .container { width: calc(100% - 32px); }
+}
+.sectionHead { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 36px; }
+.eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; font-size: 12px; font-weight: 600; line-height: 1.5; letter-spacing: 2px; text-transform: uppercase; color: #008bb9; }
+.eyebrow::before { content: ""; width: 6px; height: 6px; flex: 0 0 6px; background: #008bb9; }
+.intro { margin: 0; color: #78899e; font-size: 14px; line-height: 1.8; }
+.filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+.productToolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px 32px; margin-bottom: 32px; }
+.productToolbar .filters { margin-bottom: 0; }
+.productToolbar .catalogNote { margin: 0 0 0 auto; white-space: nowrap; }
+.productGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.product { position: relative; display: flex; flex-direction: column; min-width: 0; border: 1px solid #e5ebf2; border-radius: 0; background: #fff; text-decoration: none; color: inherit; transition: border-color .22s ease, transform .22s ease; }
+.product::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px; z-index: 2; background: #09e9b4; opacity: 0; transform: scaleX(0); transform-origin: left center; pointer-events: none; }
+.product:is(:hover, :focus-visible) { border-color: #09e9b4; transform: translateY(-1px); }
+.product:is(:hover, :focus-visible)::before { opacity: 1; animation: barGrow .36s ease forwards; }
+@keyframes barGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.visual { position: relative; aspect-ratio: 4 / 3; padding: 0; border-bottom: 1px solid #e5ebf2; overflow: hidden; }
+.visual img { object-fit: contain; border-radius: 0; transition: transform .32s ease; }
+.visualCover img { object-fit: cover; }
+.product:is(:hover, :focus-visible) .visual img { transform: scale(1.045); }
+.conceptLabel { position: absolute; top: 12px; right: 12px; font-size: 10px; color: #778699; }
+.productText { display: flex; flex-direction: column; flex: 1; padding: 24px; }
+.productText h3 { margin: 0 0 12px; color: #173368; font-size: 22px; font-weight: 500; line-height: 1.3; transition: color .2s ease; }
+.product:is(:hover, :focus-visible) h3 { color: #09e9b4; }
+.productText p { margin: 0; color: #788493; font-size: 14px; line-height: 1.75; }
+.catalogNote { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 30px; color: #78899e; font-size: 13px; line-height: 1.6; }
+.catalogNote a { margin-left: auto; color: var(--brand-blue); text-decoration: none; font-weight: 600; }
+.catalogNote a:is(:hover, :focus-visible) { color: var(--brand-cyan); }
+.applicationLayout { padding-bottom: 0 !important; align-items: start; }
+.applicationVisual { min-width: 0; background: #fff; }
+.applicationVisual::after { content: none; }
+.applicationVisual img { object-fit: cover; }
+.applicationTitle { min-width: 0; }
+.applicationTitle :global(.home-company-about-title) { white-space: nowrap; }
+.applicationTitle :global(.home-company-about-title) span { white-space: normal; text-transform: none; }
+.section[data-locale]:not([data-locale="en"]) .applicationTitle :global(.home-company-about-title) { white-space: normal; overflow-wrap: anywhere; }
+.section[data-locale]:not([data-locale="en"]) .applicationRow { grid-template-columns: 22px minmax(0, 1fr) 20px; }
+.section[data-locale]:not([data-locale="en"]) .applicationRow > span:nth-child(2) { min-width: 0; overflow-wrap: anywhere; }
+/* Keep translated desktop headings on one line within the image column. */
+@media (min-width: 1181px) {
+  .section[data-locale]:not([data-locale="en"]) .applicationTitle :global(.home-company-about-title) { white-space: nowrap; overflow-wrap: normal; }
+}
+@media (min-width: 1921px) {
+  .section:is([data-locale="es"], [data-locale="fr"], [data-locale="ru"]) .applicationTitle :global(.home-company-about-title) { font-size: 60px !important; }
+}
+.applicationCopy { min-width: 0; padding-top: 64px !important; }
+.applicationDetails { min-width: 0; }
+/* Share a row boundary so the introduction always starts level with the image. */
+@media (min-width: 1181px) {
+  .applicationLayout { grid-template-rows: auto auto; row-gap: 54px !important; }
+  .applicationTitle, .applicationCopy { display: grid; grid-template-rows: subgrid; grid-row: 1 / 3; padding-top: 0 !important; }
+  .applicationTitle { grid-column: 1; }
+  .applicationCopy { grid-column: 2; }
+  .applicationTitle :global(.home-company-about-title) { margin-bottom: 0 !important; }
+  .applicationVisual { margin-top: 0 !important; align-self: start; }
+  .applicationCopy :global(.home-company-intro-title) { align-self: end; margin-bottom: -16px; }
+  .section:global(#applications) .applicationDetails :global(.home-company-intro-copy) { margin-top: 0 !important; }
+}
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .applicationLayout { row-gap: 28px !important; }
+  .applicationCopy :global(.home-company-intro-title) { margin-bottom: 6px; }
+}
+.taskGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; margin-top: 72px; }
+.taskCard { padding: 24px; border: 1px solid #e5ebf2; border-radius: 0; background: #fff; }
+.taskCard h3 { margin: 0 0 12px; color: var(--brand-blue); font-size: 20px; font-weight: 600; line-height: 1.4; }
+.taskCard p { margin: 0; color: rgba(23, 51, 104, .72); font-size: 15px; line-height: 1.8; }
+.applicationRow { display: grid; grid-template-columns: 22px 1fr 20px; align-items: center; gap: 16px; padding: 18px 0; border-top: 1px solid #d9e2ec; color: var(--brand-blue); font-size: 20px; text-decoration: none; transition: color .2s ease; }
+.applicationRow strong { display: block; font-size: 20px; font-weight: 600; line-height: 1.4; }
+.applicationRow small { display: block; margin-top: 4px; font-size: 15px; color: var(--brand-blue); line-height: 1.5; }
+.applicationRow:is(:hover, :focus-visible) { color: var(--brand-cyan); }
+.number { color: var(--brand-blue); font-size: 14px; }
+.applicationMore { cursor: pointer; }
+/* Fit the default four-industry view within the desktop viewport below the header.
+   Use a minimum height so expanded industries and enlarged text can grow safely. */
+@media (min-width: 1181px) {
+  .section:global(#applications) {
+    min-height: calc(100svh - var(--site-header-height));
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(24px, 4svh, 48px);
+    padding-block: clamp(24px, 4svh, 48px);
+    scroll-margin-top: var(--site-header-height);
+  }
+  .applicationLayout { position: relative; top: -50px; row-gap: clamp(20px, 3svh, 36px) !important; }
+  .applicationVisual { height: auto; min-height: 0; aspect-ratio: auto; align-self: stretch; }
+  .section:global(#applications) .applicationDetails :global(.home-company-intro-copy) { margin-bottom: clamp(16px, 2.4svh, 28px) !important; }
+  .applicationRow { padding-block: clamp(8px, 1.3svh, 16px); }
+  .applicationDetails :global(.home-company-about-actions) { margin-top: clamp(16px, 2.4svh, 28px) !important; }
+  .taskGrid { margin-top: 0; position: relative; top: 20px; }
+  .taskCard { padding: clamp(16px, 2svh, 24px); }
+}
+@media (min-width: 1181px) and (max-height: 850px) {
+  .section:global(#applications) { padding-block: 18px; gap: 20px; }
+  .applicationLayout { row-gap: 16px !important; }
+  .section:global(#applications) .applicationDetails :global(.home-company-intro-copy) { line-height: 1.7; margin-bottom: 16px !important; }
+  .applicationRow { padding-block: 6px; }
+  .applicationRow strong { font-size: 18px; }
+  .applicationRow small { font-size: 14px; }
+  .taskCard { padding: 14px; }
+  .taskCard h3 { font-size: 18px; margin-bottom: 8px; }
+  .taskCard p { font-size: 14px; line-height: 1.6; }
+}
+.product:focus-visible, .applicationRow:focus-visible, .applicationMore:focus-visible, .catalogNote a:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 4px; }
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 1180px) {
+  .applicationCopy { padding-top: 0 !important; }
+}
+@media (max-width: 1100px) {
+  .productGrid { gap: 16px; }
+  .productText { padding: 18px; }
+  .productText h3 { font-size: 19px; }
+}
+@media (max-width: 900px) {
+  .taskGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 48px; }
+  .sectionHead { align-items: flex-start; flex-direction: column; gap: 20px; }
+}
+@media (max-width: 760px) {
+  .section { padding: 44px 0; scroll-margin-top: 80px; }
+  .filters { gap: 8px; margin-bottom: 24px; }
+  .productGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+  .productText { padding: 15px 12px 18px; }
+  .productText h3 { font-size: 17px; overflow-wrap: break-word; }
+  .productText p { font-size: 12px; }
+  .conceptLabel { top: 6px; right: 6px; font-size: 8px; }
+  .catalogNote { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .applicationRow { gap: 10px; }
+  .applicationRow strong { font-size: 18px; }
+  .applicationRow small { font-size: 14px; }
+  .eyebrow { font-size: 10px; letter-spacing: 1.5px; }
+  .intro br { display: none; }
+}
+@media (max-width: 480px) {
+  .taskGrid { grid-template-columns: 1fr; }
+  .taskCard { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product, .visual img, .productText h3, .applicationRow { transition: none; }
+  .product:is(:hover, :focus-visible), .product:is(:hover, :focus-visible) .visual img { transform: none; }
+  .product:is(:hover, :focus-visible)::before { animation: none; transform: scaleX(1); }
+}

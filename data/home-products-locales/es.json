@@ -1,0 +1,158 @@
+{
+  "title": "Nuestros productos",
+  "categoriesAriaLabel": "Categorías de productos",
+  "productCenter": "Catálogo de productos",
+  "explore": "Ver {name}",
+  "discuss": "Consultar sobre {name}",
+  "conceptAlt": "Ilustración conceptual de un conjunto de tubos",
+  "conceptLabel": "Imagen ilustrativa",
+  "resultCount": "{count} familias de productos mostradas",
+  "groups": {
+    "Featured": "Destacados",
+    "Pumps": "Bombas",
+    "Valves": "Válvulas",
+    "Probes": "Agujas",
+    "Tubing": "Tubos",
+    "Fittings": "Racores",
+    "Smart Control": "Control inteligente",
+    "Tubing Assemblies": "Conjuntos de tubos"
+  },
+  "products": {
+    "plunger": {
+      "name": "Bombas de pistón",
+      "description": "Aspiración y dispensación controladas de muestras y reactivos para la dosificación de líquidos en instrumentos."
+    },
+    "dpl": {
+      "name": "Bombas de diafragma",
+      "description": "Transferencia de líquidos, cebado y lavado para el suministro y drenaje de los circuitos del instrumento."
+    },
+    "smtp2": {
+      "name": "Módulo de pipeteo SMTP2",
+      "description": "Accionamiento y control integrados, con detección de nivel de líquido, presencia de punta y obstrucciones para el pipeteo automatizado."
+    },
+    "rpl": {
+      "name": "Bombas dosificadoras sin válvulas",
+      "description": "Diseño sin válvulas para dosificar líquidos y dispensar y transferir reactivos en instrumentos."
+    },
+    "assembly": {
+      "name": "Conjuntos de tubos",
+      "description": "Conjuntos de tubos a medida con reborde, anillo de retención o férula para los circuitos de fluidos de instrumentos."
+    },
+    "tube": {
+      "name": "Tubos",
+      "description": "Tubos rígidos y flexibles de PVC y otros materiales, con diámetros interior y exterior y longitudes personalizables."
+    },
+    "quick": {
+      "name": "Racores de conexión rápida",
+      "description": "Para tubos de 1,6 a 19,0 mm de diámetro interior. Opciones en línea y pasamuros, con o sin válvula. Configuraciones a medida."
+    },
+    "needle": {
+      "name": "Agujas",
+      "description": "Diseños de agujas personalizables para muestreo, perforación y lavado."
+    },
+    "flanged-tubing": {
+      "name": "Tubos con reborde",
+      "description": "Tubos a medida con reborde en uno o ambos extremos para puertos de fondo plano compatibles."
+    },
+    "retaining-ring-kits": {
+      "name": "Kits con anillo de retención",
+      "description": "Kits de conexión de tubos con manguitos de retención y anillos de sellado. Configuraciones a medida."
+    },
+    "ferrule-kits": {
+      "name": "Kits con férula",
+      "description": "Kits de racores y férulas para conectar tubos sin rebordear previamente los extremos. Configuraciones a medida."
+    },
+    "family0": {
+      "name": "Bombas de jeringa",
+      "description": "Conjuntos integrados de jeringa y válvula."
+    },
+    "mrv": {
+      "name": "Válvulas rotativas",
+      "description": "Selección y conmutación de los circuitos de fluidos."
+    },
+    "family2": {
+      "name": "Electroválvulas",
+      "description": "Control eléctrico de los circuitos de fluidos del instrumento."
+    },
+    "family3": {
+      "name": "Válvulas de alta presión",
+      "description": "Opciones de válvulas para circuitos de fluidos exigentes."
+    },
+    "family4": {
+      "name": "Agujas de muestreo",
+      "description": "Aspiración y transferencia de muestras."
+    },
+    "family5": {
+      "name": "Agujas de perforación",
+      "description": "Opciones de agujas para operaciones de perforación."
+    },
+    "family6": {
+      "name": "Agujas de lavado",
+      "description": "Agujas para las operaciones de lavado del instrumento."
+    },
+    "family7": {
+      "name": "Paletas mezcladoras",
+      "description": "Componentes de mezcla para las operaciones del instrumento."
+    },
+    "family8": {
+      "name": "Tubos de PVC",
+      "description": "Consulte las opciones de material y dimensiones."
+    },
+    "family9": {
+      "name": "Tubos de TPU",
+      "description": "Consulte las opciones de material y dimensiones."
+    },
+    "family10": {
+      "name": "Tubos de FEP",
+      "description": "Consulte las opciones de material y dimensiones."
+    },
+    "family11": {
+      "name": "Tubos de PTFE",
+      "description": "Consulte las opciones de material y dimensiones."
+    },
+    "family12": {
+      "name": "Tubos de PEEK",
+      "description": "Consulte las opciones de material y dimensiones."
+    },
+    "family13": {
+      "name": "Tubos de PFA",
+      "description": "Consulte las opciones de material y dimensiones."
+    },
+    "family14": {
+      "name": "Racores para tubos rígidos",
+      "description": "Conexiones para tubos rígidos."
+    },
+    "family15": {
+      "name": "Racores de espiga",
+      "description": "Conexiones para tubos flexibles."
+    },
+    "family16": {
+      "name": "Adaptadores roscados a espiga",
+      "description": "Conexión de puertos roscados a tubos."
+    },
+    "family17": {
+      "name": "Racores Luer",
+      "description": "Opciones de conexión Luer."
+    },
+    "family18": {
+      "name": "Adaptadores de rosca hembra",
+      "description": "Adaptadores para conexiones roscadas."
+    },
+    "family19": {
+      "name": "Racores de espiga para panel",
+      "description": "Conexiones de tubos para montaje en panel."
+    },
+    "family20": {
+      "name": "Filtros y válvulas de retención",
+      "description": "Componentes para sus circuitos de fluidos."
+    },
+    "family21": {
+      "name": "Detectores de burbujas de aire",
+      "description": "Monitorización de burbujas de aire en los tubos."
+    },
+    "family22": {
+      "name": "Sensores de presión",
+      "description": "Monitorización de la presión en sus circuitos de fluidos."
+    }
+  }
+}

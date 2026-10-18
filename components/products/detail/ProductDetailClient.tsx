@@ -62,6 +62,9 @@ import type { SelectionCartItemInput } from "@/components/selection-cart/selecti
 import SitePageShell from "@/components/layout/SitePageShell";
 import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
 import CadRequestModal from "./CadRequestModal";
+import TubingAssemblyCustomRequestModal from "@/components/products/tubing-assemblies/TubingAssemblyCustomRequestModal";
+import TubingAssemblySizeTable from "@/components/products/tubing-assemblies/TubingAssemblySizeTable";
+import tubingAssemblySpecStyles from "@/components/products/tubing-assemblies/tubing-assembly-specifications.module.css";
 import ProductApplicationsPanel from "./ProductApplicationsPanel";
 import ProductDatasheetPanel from "./ProductDatasheetPanel";
 import { usePathname } from "next/navigation";
@@ -794,6 +797,9 @@ function getTubingBottomCtaData(data: any) {
 }
 
 function getPlungerPumpBottomCta(data: any) {
+  if (data.category === "tubing-assemblies") {
+    return { title: data.bottomCtaTitle, desc: data.bottomCtaDescription, button: data.bottomCtaButtonText, href: data.bottomCtaHref };
+  }
   if (data.valvelessDetailContent === true && data.valvelessPresentation?.bottomCta) {
     return data.valvelessPresentation.bottomCta;
   }
@@ -998,6 +1004,7 @@ function localizeInternalHref(value: unknown, localePrefix: string): string {
 }
 
 const CUSTOM_PRODUCT_CATEGORY_IDS = new Set([
+  "tubing-assemblies",
   "pumps",
   "valves",
   "probes",
@@ -1335,7 +1342,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
           item: canonicalUrl,
         },
       ];
-  const chineseBreadcrumbItems = getTubingDetailBreadcrumbs(pathname, locale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
+  const chineseBreadcrumbItems: ProductDetailPageData["breadcrumbs"] | null = (data.category === "tubing-assemblies" ? data.breadcrumbs : undefined) || getTubingDetailBreadcrumbs(pathname, locale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
   const breadcrumbItems = chineseBreadcrumbItems
     ? chineseBreadcrumbItems.map((item) => ({ name: item.label, item: item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl }))
     : legacyBreadcrumbItems;
@@ -1493,6 +1500,7 @@ export default function ProductDetailClient({
   afterContent,
 }: ProductDetailClientProps) {
   const pathname = usePathname();
+  const isTubingAssembly = sourceData.category === "tubing-assemblies";
   const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
   const pathnameLocale = String(pathname || "")
     .split("/")
@@ -1584,8 +1592,9 @@ export default function ProductDetailClient({
   const datasheet = resourceLocale
     ? getProductDatasheet(sourceData.datasheetId)
     : null;
+  const hasDatasheetTab = Boolean(resourceLocale && !isTubingAssembly);
   const productDetailTabCount =
-    3 + (hasApplicationDetails ? 1 : 0) + (resourceLocale ? 1 : 0);
+    3 + (hasApplicationDetails ? 1 : 0) + (hasDatasheetTab ? 1 : 0);
   const isCadRequestAvailable = Boolean(
     resourceLocale && sourceData.cadRequestAvailable !== false,
   );
@@ -1799,7 +1808,7 @@ export default function ProductDetailClient({
             : displayProductTitle,
         },
       ]);
-  const productBreadcrumbItems = getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
+  const productBreadcrumbItems = (isTubingAssembly ? sourceData.breadcrumbs : undefined) || getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
     pathname, configuratorLocale, legacyProductBreadcrumbItems.at(-1)?.label,
   ) || legacyProductBreadcrumbItems;
   if (String(data.category) === "control" && data.slug === "abd-air-bubble-detector") {
@@ -1864,6 +1873,7 @@ export default function ProductDetailClient({
 const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 const [hasOpenedModel, setHasOpenedModel] = useState(false);
   const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
+  const [isAssemblyCustomRequestOpen, setIsAssemblyCustomRequestOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [activeThumb, setActiveThumb] = useState(0);
   const thumbViewportRef = useRef<HTMLDivElement | null>(null);
@@ -2720,6 +2730,18 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
         />
       ) : null}
 
+      {isTubingAssembly && isAssemblyCustomRequestOpen ? (
+        <TubingAssemblyCustomRequestModal
+          key={analyticsProductId}
+          locale={configuratorLocale === "zh" ? "zh-CN" : configuratorLocale}
+          copyOverride={data.tubingCustomizationCopy}
+          productId={analyticsProductId}
+          productName={displayProductTitle}
+          quantity={currentDetailCartItem?.quantity || 1}
+          onClose={() => setIsAssemblyCustomRequestOpen(false)}
+        />
+      ) : null}
+
       {resourceLocale && isCadRequestOpen ? (
         <CadRequestModal
           locale={resourceLocale}
@@ -3356,6 +3378,18 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     className={styles.button}
                     type="button"
                     onClick={() => {
+                      if (isTubingAssembly) {
+                        trackBeginInquiry({
+                          formId: "tubing_assembly_custom_request_form",
+                          formType: "customization_request",
+                          sourceSection: "product_detail",
+                          locale: analyticsLocale,
+                          productId: analyticsProductId,
+                          productCategory: analyticsProductCategory,
+                        });
+                        setIsAssemblyCustomRequestOpen(true);
+                        return;
+                      }
                       if (isCustomProduct || (data.mrv3AuthoredContent || data.solenoidAuthoredContent)) {
                         trackContactClick({
                           contactChannel: "contact_form",
@@ -3463,7 +3497,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                       window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
-                    {isCustomProduct || (data.mrv3AuthoredContent || data.solenoidAuthoredContent)
+                    {isTubingAssembly
+                      ? data.tubingCustomizationCopy?.title ?? (isEnglish ? "Customization Request" : "定制申请")
+                      : isCustomProduct || (data.mrv3AuthoredContent || data.solenoidAuthoredContent)
                       ? customProductCopy.contact
                       : isTubingConfiguratorEnabled &&
                           selectedTubingVariant
@@ -3553,7 +3589,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
           <nav
             className={styles.tabNav}
             aria-label={copy.tabs}
-            data-has-datasheet-tab={resourceLocale ? "true" : undefined}
+            data-has-datasheet-tab={hasDatasheetTab ? "true" : undefined}
             data-has-applications-tab={
               hasApplicationDetails ? "true" : undefined
             }
@@ -3641,7 +3677,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
               />
             </button>
 
-            {resourceLocale && resourceCopy ? (
+            {hasDatasheetTab && resourceCopy ? (
               <button
                 className={[
                   styles.tabButton,
@@ -3676,6 +3712,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                   styles.specPanelClean,
                 ].join(" ")}
               >
+                {isTubingAssembly && data.tubingAssemblySizeTable ? (
+                  <h2 className={tubingAssemblySpecStyles.sectionTitle}>{data.tubingAssemblyUi?.parameters ?? "组件参数"}</h2>
+                ) : null}
                 <table className={styles.specTable}>
                   <tbody>
                     {data.specs.map((item) => (
@@ -3694,6 +3733,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                     ))}
                   </tbody>
                 </table>
+                {isTubingAssembly && data.tubingAssemblySizeTable ? (
+                  <TubingAssemblySizeTable data={data.tubingAssemblySizeTable} copy={data.tubingAssemblyUi} />
+                ) : null}
                 {rplP4Copy?.specNotes.map((note: string) => (
                   <p key={note} className={styles.rplP4SpecNote} data-product-spec-note="true">{note}</p>
                 ))}
@@ -3725,7 +3767,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                   className={styles.panelBox}
                   data-product-model3d-panel="true"
                 >
-                {hasOpenedModel ? (isPumpDetail ? (
+                {isTubingAssembly && !model3dUrl ? (
+                  <div className={styles.modelViewerFallback} role="status">{data.tubingAssemblyUi?.modelUnavailable}</div>
+                ) : hasOpenedModel ? (isPumpDetail ? (
                   <PumpUploadedFileGuard
                     key={model3dUrl}
                     fileUrl={model3dUrl}
@@ -3865,7 +3909,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
               )}
             </div>
 
-            {resourceLocale ? (
+            {hasDatasheetTab && resourceLocale ? (
               <div
                 className={[
                   styles.panel,

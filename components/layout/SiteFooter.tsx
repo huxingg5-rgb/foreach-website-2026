@@ -7,6 +7,7 @@ import { useState } from "react";
 import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
 import { openCookieSettings } from "@/lib/privacy/cookie-consent";
 import { companySocialLinks as englishSocialLinks } from "@/data/company-social-links";
+import { isTubingAssemblyLocale, tubingAssemblyNavigation } from "@/data/products/tubing-assemblies/locales";
 
 import {
   getSiteFooterHref,
@@ -102,6 +103,9 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                   </button>
 
                   <ul className="site-footer__list">
+                    {isInternationalLocale(activeLocale) && column.key === "applications" ? (
+                      <li><Link href={`/${activeLocale}/applications/`} prefetch={false}>{getSiteFooterText({ global: "All applications" }, activeLocale)}</Link></li>
+                    ) : null}
                     {column.links.map((link) => (
                       <li key={link.key}>
                         <Link
@@ -112,6 +116,9 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                         </Link>
                       </li>
                     ))}
+                    {isTubingAssemblyLocale(activeLocale) && column.key === "products" ? (
+                      <li><Link href={`/${activeLocale}/products/tubing-assemblies/`} prefetch={false}>{tubingAssemblyNavigation[activeLocale].title}</Link></li>
+                    ) : null}
                   </ul>
                 </nav>
               );

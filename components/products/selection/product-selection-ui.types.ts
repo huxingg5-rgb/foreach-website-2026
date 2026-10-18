@@ -1,9 +1,10 @@
-﻿import type {
+import type {
   ProductSelectionProduct,
   SelectionFilterKey,
 } from "@/data/products/selection/product-selection.types";
 
 export type ProductSelectionCategoryItem = {
+  href?: string;
   id: string;
   label: string;
   description: string;

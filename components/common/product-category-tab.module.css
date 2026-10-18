@@ -1,0 +1,47 @@
+/* Shared by homepage filters and product-center categories. The repeated class
+   keeps this scoped style above legacy page-level link and button rules. */
+.tab.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--brand-blue);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.tab.tab:is(:hover, [aria-pressed="true"], [aria-current="page"], :global(.active)) {
+  border-color: var(--brand-blue);
+  background: var(--brand-blue);
+  color: var(--brand-cyan);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .tab.tab:is(:hover, [aria-pressed="true"], [aria-current="page"], :global(.active)) {
+    color: #ffffff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab.tab {
+    transition: none;
+  }
+}

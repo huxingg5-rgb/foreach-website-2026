@@ -27,21 +27,21 @@ function SkeletonBlock({
   );
 }
 
-export default function ApplicationPageSkeleton() {
+export default function ApplicationPageSkeleton({ showBanner = true }: { showBanner?: boolean }) {
   return (
     <section
-      className={styles.page}
+      className={`${styles.page} ${showBanner ? "" : styles.withoutBanner}`}
       aria-busy="true"
       aria-hidden="true"
     >
-      <div className={styles.banner}>
+      {showBanner ? <div className={styles.banner}>
         <div className={styles.bannerOverlay}>
           <div className={styles.container}>
             <SkeletonBlock className={styles.bannerTitle} />
             <SkeletonBlock className={styles.bannerSubtitle} />
           </div>
         </div>
-      </div>
+      </div> : null}
 
       <div className={styles.navBand}>
         <div className={styles.container}>

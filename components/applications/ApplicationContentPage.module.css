@@ -1,0 +1,29 @@
+.page {
+  padding-top: var(--site-header-height, 82px);
+}
+
+/* Match the technical-article text link while keeping application navigation independent. */
+.page [data-application-back-link] {
+  color: #14233d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  background: transparent;
+  transition: color 0.2s ease;
+}
+.page [data-application-back-link]:hover,
+.page [data-application-back-link]:active,
+.page [data-application-back-link]:focus-visible {
+  color: #173368;
+  font-weight: 400;
+  text-decoration: none;
+  background: transparent;
+}
+.page [data-application-back-link]:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page [data-application-back-link] { transition: none; }
+}

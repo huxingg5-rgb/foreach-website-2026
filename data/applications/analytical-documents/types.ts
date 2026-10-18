@@ -24,6 +24,15 @@ export type ApplicationDocumentBody = {
   related?: readonly ApplicationLink[];
 };
 export type ApplicationDocumentMetadata = {
+  /** Chinese review article ancestry, curated resources and the existing instrument banner. */
+  reviewContext?: {
+    topic: string;
+    level: 'product' | 'task';
+    family: string;
+    parentSlug?: string;
+    products: readonly string[];
+    hero: { highlight: string; description: string };
+  };
   slug: string;
   kind: "hub" | "overview" | "task";
   /** Navigation branch. Empty for the industry hub; equal to slug for a group overview. */

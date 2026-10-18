@@ -1,0 +1,440 @@
+{
+  "syringePump": {
+    "name": {
+      "zh": "注射泵",
+      "en": "Syringe pumps"
+    },
+    "ability": {
+      "zh": "吸取、保持与推出的有限行程计量",
+      "en": "Finite-stroke aspiration, holding and dispensing"
+    },
+    "params": [
+      {
+        "zh": "容量、行程和通道按HLD/HMD配置确认",
+        "en": "Confirm capacity, stroke and channels for the HLD/HMD configuration"
+      },
+      {
+        "zh": "工作剂量、压力与通讯按具体型号确认",
+        "en": "Confirm dose, pressure and communication by model"
+      }
+    ],
+    "advantage": {
+      "zh": "适合需要完整吸排动作的样本、试剂和稀释任务，结合阀路、接收位置和补液时点选择。",
+      "en": "Suitable candidates for sample, reagent and dilution duties requiring controlled aspiration and dispense, selected with valves, receiver and refill timing."
+    },
+    "solves": {
+      "zh": "重点核查实际交付、首剂、气泡和通道差异；容量与步进分辨率不代表最小可靠剂量。",
+      "en": "Check actual delivery, first dose, bubbles and channel differences; capacity and resolution do not establish minimum reliable dose."
+    },
+    "path": "/products/pumps/syringe-pumps/"
+  },
+  "pistonPump": {
+    "name": {
+      "zh": "柱塞泵",
+      "en": "Piston pumps"
+    },
+    "ability": {
+      "zh": "样本、试剂和稀释液的有限行程计量",
+      "en": "Finite-stroke metering of sample, reagent and diluent"
+    },
+    "params": [
+      {
+        "zh": "EA容量50 μL–20 mL；SM 50 μL–1 mL；TM 50–500 μL",
+        "en": "EA capacity 50 μL–20 mL; SM 50 μL–1 mL; TM 50–500 μL"
+      },
+      {
+        "zh": "EA规定条件下满量程准确性/重复性≤0.5%",
+        "en": "EA full-stroke accuracy/repeatability ≤0.5% under specified conditions"
+      },
+      {
+        "zh": "SM准确性按实际配置确认；满量程重复性≤0.5%",
+        "en": "Confirm SM accuracy by configuration; full-stroke repeatability ≤0.5%"
+      },
+      {
+        "zh": "EA/SM预计500万次：纯水、常温、50 kPa背压",
+        "en": "EA/SM expected life 5,000,000 cycles: pure water, room temperature, 50 kPa backpressure"
+      }
+    ],
+    "advantage": {
+      "zh": "按常用剂量、材料、阀路及安装空间比较EA、SM和TM。小剂量交付与补液恢复需在接收端验证。",
+      "en": "Compare EA, SM and TM by working dose, materials, valves and space. Validate small doses and refill recovery at the receiver."
+    },
+    "solves": {
+      "zh": "针对剂量波动、闲置首剂、气泡及残液设计动作与清洗；不作为高压色谱主泵替代。",
+      "en": "Address dose variation, idle first dose, bubbles and residue through motion and washing; these are not high-pressure LC mobile-phase replacements."
+    },
+    "path": "/products/pumps/piston-pump/"
+  },
+  "sampleNeedle": {
+    "name": {
+      "zh": "采样针 / 洗针 / 混合部件",
+      "en": "Sampling, wash and mixing components"
+    },
+    "ability": {
+      "zh": "容器接液位置、吸液与清洗几何",
+      "en": "Liquid-interface, aspiration and washing geometry"
+    },
+    "params": [
+      {
+        "zh": "针径、长度、端部、表面与接口按项目确认",
+        "en": "Confirm diameter, length, end, surface and interface by project"
+      },
+      {
+        "zh": "液位检测、清洗与动作需配合验证",
+        "en": "Validate level sensing, wash and motion together"
+      }
+    ],
+    "advantage": {
+      "zh": "按样本、容器、吸取高度和清洗覆盖设计；几何、泵程序与运动共同决定接收结果。",
+      "en": "Design for specimen, vessel, aspiration height and wash coverage; geometry, pump program and motion jointly determine results."
+    },
+    "solves": {
+      "zh": "评价挂液、凝块、残余样本、吸附和携带污染，定制结构需按完整流程验证。",
+      "en": "Evaluate retained droplets, clots, reserve volume, adsorption and carryover with the complete workflow."
+    },
+    "path": "/products/probes/"
+  },
+  "solenoidValve": {
+    "name": {
+      "zh": "电磁阀",
+      "en": "Solenoid valves"
+    },
+    "ability": {
+      "zh": "支路通断、隔离与两路切换",
+      "en": "Branch shutoff, isolation and two-path selection"
+    },
+    "params": [
+      {
+        "zh": "压差、流向、常态和接液材料按型号确认",
+        "en": "Confirm differential pressure, direction, normal state and wetted materials by model"
+      },
+      {
+        "zh": "线圈占空、响应和安装温度按实际工况评估",
+        "en": "Evaluate coil duty, response and temperature under installed conditions"
+      }
+    ],
+    "advantage": {
+      "zh": "按端口状态、介质、压力及失电去向选择配置，阀响应与液体实际到达时间分别确认。",
+      "en": "Select by port state, liquid, pressure and de-energized destination; confirm valve response and liquid arrival separately."
+    },
+    "solves": {
+      "zh": "核查误通、泄漏、热负载及共享段残留，避免把系列汇总范围当作每个型号的能力。",
+      "en": "Check wrong connections, leakage, thermal duty and shared residue rather than assigning a series aggregate to every model."
+    },
+    "path": "/products/valves/solenoid-valves/"
+  },
+  "rotaryValve": {
+    "name": {
+      "zh": "MRV3旋转阀",
+      "en": "MRV3 rotary valves"
+    },
+    "ability": {
+      "zh": "多源或多目的地的路径选择",
+      "en": "Multi-source or multi-destination path selection"
+    },
+    "params": [
+      {
+        "zh": "标准10 / 16 / 24通道配置",
+        "en": "Standard 10 / 16 / 24-port configurations"
+      },
+      {
+        "zh": "MRV3规格耐压0.7 MPa",
+        "en": "MRV3 specified pressure rating 0.7 MPa"
+      },
+      {
+        "zh": "通径、内容积、接口与材料按对应型号核对",
+        "en": "Check bore, internal volume, interface and materials by model"
+      },
+      {
+        "zh": "规格寿命100万次；实际介质/动作需评估",
+        "en": "Specified life 1,000,000 cycles; evaluate actual liquid and switching duty"
+      }
+    ],
+    "advantage": {
+      "zh": "集中选择样本、试剂或洗液来源，以完整端口状态、共享体积和置换要求确定通数与配置。",
+      "en": "Select sources centrally using the complete state table, shared volume and purge requirement to choose ports and configuration."
+    },
+    "solves": {
+      "zh": "降低路径管理复杂度，仍需验证误通、泄漏与切换后残留；多端口不等于多通道同时加液。",
+      "en": "Simplify routing while validating wrong connections, leakage and residue; multiple ports do not mean simultaneous independent dispensing."
+    },
+    "path": "/products/valves/rotary-valves/"
+  },
+  "pinchValve": {
+    "name": {
+      "zh": "夹管阀",
+      "en": "Pinch valves"
+    },
+    "ability": {
+      "zh": "软管路径的外部夹闭控制",
+      "en": "External shutoff of flexible tubing"
+    },
+    "params": [
+      {
+        "zh": "管材、OD/壁厚、压力及夹闭寿命按配置确认",
+        "en": "Confirm tube material, OD/wall, pressure and closure life by configuration"
+      },
+      {
+        "zh": "关闭泄漏和开启阻力按安装状态验证",
+        "en": "Validate closed leakage and open resistance after installation"
+      }
+    ],
+    "advantage": {
+      "zh": "液体主要接触软管，可用于减少阀体接液并方便更换；需把接头和整条管路一起评估。",
+      "en": "Liquid contacts the tubing, reducing valve-body contact and aiding replacement; evaluate fittings and the entire path together."
+    },
+    "solves": {
+      "zh": "关注管材疲劳、夹闭失效与维护；封闭或无菌能力由完整路径和操作验证。",
+      "en": "Address fatigue, incomplete closure and service; closed or aseptic capability requires path and process validation."
+    },
+    "path": "/products/valves/"
+  },
+  "diaphragmPump": {
+    "name": {
+      "zh": "液体隔膜泵",
+      "en": "Liquid diaphragm pumps"
+    },
+    "ability": {
+      "zh": "清洗供液、补液与适用的液体转移",
+      "en": "Wash supply, replenishment and suitable liquid transfer"
+    },
+    "params": [
+      {
+        "zh": "DPL30 / DPL60系列自由流量300 / 600 mL/min级",
+        "en": "DPL30 / DPL60 free-flow references in the 300 / 600 mL/min class"
+      },
+      {
+        "zh": "流量与压力按实际安装曲线和配置核查",
+        "en": "Check flow and pressure on the installed curve and configuration"
+      },
+      {
+        "zh": "接液材料、温度、吸程和运行周期按型号确认",
+        "en": "Confirm wetted materials, temperature, suction and duty by model"
+      }
+    ],
+    "advantage": {
+      "zh": "适合液体供液候选；按阀、管路、洗头与容器阻力确定实际工作点，含气抽吸单独比较。",
+      "en": "Evaluate for liquid supply at the installed valve, tubing, head and reservoir resistance; compare mixed-air aspiration separately."
+    },
+    "solves": {
+      "zh": "验证供液体积/时间、预充和补液恢复，自由流量与最大压力不同时代表工作点。",
+      "en": "Verify supply volume/time, prime and refill recovery; free flow and maximum pressure do not describe one duty point."
+    },
+    "path": "/products/pumps/miniature-diaphragm-pumps/"
+  },
+  "fittingsTubing": {
+    "name": {
+      "zh": "接头与管材",
+      "en": "Fittings and tubing"
+    },
+    "ability": {
+      "zh": "连接几何、密封和接液材料匹配",
+      "en": "Connection geometry, sealing and wetted-material matching"
+    },
+    "params": [
+      {
+        "zh": "ID/OD、长度、螺纹和端口几何按路径确认",
+        "en": "Confirm ID/OD, length, threads and port geometry for the path"
+      },
+      {
+        "zh": "材料、压力、扫掠体积与维护一起核对",
+        "en": "Check material, pressure, swept volume and service together"
+      }
+    ],
+    "advantage": {
+      "zh": "将泵、阀、针和传感器连成可维护路径，按介质、压力与残液预算选择，而不只按相同螺纹连接。",
+      "en": "Build serviceable paths between pumps, valves, probes and sensors using liquid, pressure and residue budgets rather than matching threads alone."
+    },
+    "solves": {
+      "zh": "验证泄漏、间隙、吸附、压力损失和维护恢复，材料名单不等于介质兼容保证。",
+      "en": "Verify leakage, gaps, adsorption, pressure loss and service recovery; material lists do not guarantee compatibility."
+    },
+    "path": "/products/fittings/"
+  },
+  "sensors": {
+    "name": {
+      "zh": "气泡 / 压力检测",
+      "en": "Bubble and pressure monitoring"
+    },
+    "ability": {
+      "zh": "液路信号采集与控制器异常判定",
+      "en": "Fluid-state signals for controller fault decisions"
+    },
+    "params": [
+      {
+        "zh": "ABD透明管OD 1.6–6.4 mm；检测条件按管材/液体确认",
+        "en": "ABD transparent-tube OD 1.6–6.4 mm; confirm tubing/liquid conditions"
+      },
+      {
+        "zh": "ABD气泡/液体检测宽度>0.8 mm；响应6 ms",
+        "en": "ABD detectable bubble/liquid width >0.8 mm; response 6 ms"
+      },
+      {
+        "zh": "PDM5量程、压力参考与配置按确认资料核对",
+        "en": "Confirm PDM5 range, pressure reference and configuration against approved data"
+      },
+      {
+        "zh": "PDM5默认采样37.5 Hz，最高可调100 Hz",
+        "en": "PDM5 default sampling 37.5 Hz, adjustable up to 100 Hz"
+      }
+    ],
+    "advantage": {
+      "zh": "气泡与压力是不同检测能力。按目标故障、位置、液体和时间窗定义阈值，选择相应检测模块。",
+      "en": "Bubble and pressure are different measurements. Define thresholds for target faults, location, liquid and timing before choosing modules."
+    },
+    "solves": {
+      "zh": "减少空吸、堵塞或气泡导致的流程异常；控制器和方法仍需判断剂量、样本与结果有效性。",
+      "en": "Support detection of empty aspiration, blockage or bubbles; controller and method still determine dose, specimen and result validity."
+    },
+    "path": "/products/control/"
+  },
+  "checkFilter": {
+    "name": {
+      "zh": "止回阀 / 过滤器",
+      "en": "Check valves and filters"
+    },
+    "ability": {
+      "zh": "有条件的防回流和颗粒保护",
+      "en": "Defined backflow and particulate protection"
+    },
+    "params": [
+      {
+        "zh": "开启压、泄漏、孔径、材料与压降按型号确认",
+        "en": "Confirm cracking pressure, leakage, pore size, materials and pressure drop by model"
+      },
+      {
+        "zh": "目标组分、容积和维护按具体方法评估",
+        "en": "Evaluate target fraction, hold-up and maintenance by method"
+      }
+    ],
+    "advantage": {
+      "zh": "先明确保护对象和分析方法，再设置位置与更换流程，新增阻力计入泵阀工作点。",
+      "en": "Define protection target and analytical method before placement and service, including added resistance in the operating point."
+    },
+    "solves": {
+      "zh": "防回流或过滤不单独证明无菌；过滤可能改变目标组分，需检查回收和代表性。",
+      "en": "Backflow control or filtration does not prove sterility; filtration may alter the target fraction and requires recovery and representativeness checks."
+    },
+    "path": "/products/fittings/"
+  },
+  "pipettingPump": {
+    "name": {
+      "zh": "SMTP空气置换移液泵",
+      "en": "SMTP air-displacement pipetting pumps"
+    },
+    "ability": {
+      "zh": "一次性吸头的样本转移与配液",
+      "en": "Disposable-tip sample transfer and liquid preparation"
+    },
+    "params": [
+      {
+        "zh": "SMTP2 / SMTP4容量与驱动按具体配置核对",
+        "en": "Check SMTP2 / SMTP4 capacity and drive by configuration"
+      },
+      {
+        "zh": "实际液量、液体类别与吸头密封联合验证",
+        "en": "Validate working volume, liquid class and tip seal together"
+      }
+    ],
+    "advantage": {
+      "zh": "供一次性吸头架构比较，配合Z轴、液面和接收位置设置吸排速度、空气间隔与动作。",
+      "en": "Compare for disposable-tip architectures with Z motion, liquid level and receiver-specific speeds, air gaps and motion."
+    },
+    "solves": {
+      "zh": "核查挂液、空吸和吸头密封；标称容量或步进分辨率不证明最小可靠移液量。",
+      "en": "Check retained droplets, empty aspiration and sealing; capacity and drive resolution do not establish minimum reliable volume."
+    },
+    "path": "/products/pumps/pipetting-pumps/"
+  },
+  "valvelessPump": {
+    "name": {
+      "zh": "RPL / DRPL无阀计量泵",
+      "en": "RPL / DRPL valveless metering pumps"
+    },
+    "ability": {
+      "zh": "适用的重复剂量、持续供液或双路比例",
+      "en": "Suitable repeated dosing, sustained supply or two-stream proportioning"
+    },
+    "params": [
+      {
+        "zh": "每转排量、每次剂量与每分钟流量分别定义",
+        "en": "Define displacement/revolution, dose/event and flow/minute separately"
+      },
+      {
+        "zh": "介质、转速、背压、预充及恢复按任务验证",
+        "en": "Validate liquid, speed, backpressure, prime and recovery for the duty"
+      }
+    ],
+    "advantage": {
+      "zh": "在真实液体和工作点下比较重复分配或辅助连续供液，双路配比还需验证实际混合比例。",
+      "en": "Compare repeated or sustained auxiliary duties with actual liquids and operating points; paired dosing also requires actual mixture verification."
+    },
+    "solves": {
+      "zh": "关注首剂、滑移、残留、结晶与长期输出；方法适配需验证，不作为所有加液任务必选。",
+      "en": "Assess first dose, slip, residue, crystallization and long-run output; method suitability requires validation."
+    },
+    "path": "/products/pumps/valveless-metering-pump/"
+  },
+  "gasLiquidPump": {
+    "name": {
+      "zh": "气液隔膜泵",
+      "en": "Gas-liquid diaphragm pumps"
+    },
+    "ability": {
+      "zh": "进口含空气/气液混合的抽吸",
+      "en": "Aspiration with air or gas-liquid mixtures at the inlet"
+    },
+    "params": [
+      {
+        "zh": "DPGL800适用于气体/气液混合，不适合100%液体",
+        "en": "DPGL800 is for gas/gas-liquid mixtures, not 100% liquid"
+      },
+      {
+        "zh": "单头6 L/min是空载气体流量",
+        "en": "6 L/min per head is no-load gas flow"
+      },
+      {
+        "zh": "实际排液、空气比例、泡沫和吸程联合验证",
+        "en": "Validate drainage, air fraction, foam and suction together"
+      }
+    ],
+    "advantage": {
+      "zh": "可比较洗站或适用混合介质抽吸；与供液泵、废液瓶、通气和满液联锁共同设计。",
+      "en": "Compare for wash stations or suitable mixed-media aspiration, coordinated with supply, waste vessel, venting and full-level interlocks."
+    },
+    "solves": {
+      "zh": "气体流量不代表液体排废能力，按峰值来液与吸入口状态评价完整抽排循环。",
+      "en": "Gas flow is not a liquid-drain rating; evaluate the full aspiration cycle for peak liquid arrival and inlet state."
+    },
+    "path": "/products/pumps/miniature-diaphragm-pumps/"
+  },
+  "highPressureValve": {
+    "name": {
+      "zh": "高压切换阀",
+      "en": "High-pressure switching valves"
+    },
+    "ability": {
+      "zh": "受压进样路径和压力区域切换",
+      "en": "Pressurized injection paths and pressure-zone switching"
+    },
+    "params": [
+      {
+        "zh": "各阀状态的端口连接与压力按型号核查",
+        "en": "Check port connections and pressures in every state by model"
+      },
+      {
+        "zh": "定量环、接头、材料与切换动作一起验证",
+        "en": "Validate loop, fittings, materials and switching together"
+      }
+    ],
+    "advantage": {
+      "zh": "用于具体高压切换候选，按进样架构和实际压力选择，低压计量装置是否隔离由系统确定。",
+      "en": "Evaluate for defined high-pressure switching, selecting by architecture and exposure; the system determines metering-path isolation."
+    },
+    "solves": {
+      "zh": "核查受压端口误通、泄漏、残留和切换瞬态，普通多通阀不能替代压力核查。",
+      "en": "Check wrong connections, leakage, residue and switching transients at pressurized ports."
+    },
+    "path": "/products/valves/high-pressure-valves/"
+  }
+}

@@ -1,12 +1,15 @@
 import "server-only";
 
 import Link from "next/link";
+import ApplicationProductCards from "@/components/applications/common/ApplicationProductCards";
+import { resolveApplicationHref } from "@/data/applications/application-routes";
 import { Fragment, type ReactNode } from "react";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import RelatedResourcesLoader from "@/components/common/related-resources/RelatedResourcesLoader";
 import {
   analyticalDocumentHref,
   analyticalDocuments,
+  isIvdClinicalDocumentSlug,
 } from "@/data/applications/analytical-documents/registry";
 import { isLiquidChromatographySlug, liquidChromatographyDocuments } from "@/data/applications/analytical-documents/liquid-chromatography";
 import { getEnglishAnalyticalInstrumentLinks } from "@/data/applications/analytical-instruments/navigation";
@@ -29,6 +32,14 @@ import ApplicationGuideNavigation, {
 import DocumentEnhancements from "./DocumentEnhancements";
 import styles from "./AnalyticalApplicationDocument.module.css";
 
+export type ApplicationDocumentLabels = { onThisPage: string; references: string; viewReferences: string; related: string; sources: string; reference: string };
+
+type ProductLinkCardsOptions = {
+  imagesByHref: Readonly<Record<string, string>>;
+  imageScalesByHref?: Readonly<Record<string, number>>;
+  viewDetails: string;
+};
+
 type ReferenceMap = ReadonlyMap<string, { reference: ApplicationReference; number: number }>;
 
 function ContentLink({
@@ -40,6 +51,7 @@ function ContentLink({
   children: ReactNode;
   className?: string;
 }) {
+  href = resolveApplicationHref(href);
   if (/^https?:\/\//i.test(href) || /\.pdf(?:[?#]|$)/i.test(href)) {
     return <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
   }
@@ -47,7 +59,7 @@ function ContentLink({
   return <Link className={className} href={href} prefetch={false}>{children}</Link>;
 }
 
-function Citations({ ids, referenceMap }: { ids?: readonly string[]; referenceMap: ReferenceMap }) {
+function Citations({ ids, referenceMap, referenceLabel }: { ids?: readonly string[]; referenceMap: ReferenceMap; referenceLabel: string }) {
   if (!ids?.length) return null;
   return (
     <sup className={styles.citations}>
@@ -59,7 +71,7 @@ function Citations({ ids, referenceMap }: { ids?: readonly string[]; referenceMa
             key={id}
             href={`#ref-${id}`}
             data-application-reference
-            aria-label={`Reference ${entry.number}: ${entry.reference.title}`}
+            aria-label={`${referenceLabel} ${entry.number}: ${entry.reference.title}`}
           >
             [{entry.number}]
           </a>
@@ -69,7 +81,15 @@ function Citations({ ids, referenceMap }: { ids?: readonly string[]; referenceMa
   );
 }
 
-function LinkList({ items }: { items: readonly ApplicationLink[] }) {
+function LinkList({ items, productLinkCards }: { items: readonly ApplicationLink[]; productLinkCards?: ProductLinkCardsOptions }) {
+  if (productLinkCards && items.length && items.every(item => productLinkCards.imagesByHref[item.href])) {
+    return <ApplicationProductCards
+      products={items.map(item => ({
+        title: item.label, href: item.href, imageSrc: productLinkCards.imagesByHref[item.href], imageScale: productLinkCards.imageScalesByHref?.[item.href], description: item.description,
+      }))}
+      viewDetails={productLinkCards.viewDetails}
+    />;
+  }
   return (
     <ul className={styles.linkList}>
       {items.map((item) => (
@@ -82,16 +102,7 @@ function LinkList({ items }: { items: readonly ApplicationLink[] }) {
   );
 }
 
-function InlineLinkedText({
-  text,
-  links = [],
-}: {
-  text: string;
-  links?: readonly ApplicationInlineLink[];
-}) {
-  if (!links.length) return text;
-
-  function findWholePhrase(phrase: string) {
+function findWholePhrase(text: string, phrase: string) {
     let searchFrom = 0;
     const phraseStartsWithWord = /^[A-Za-z0-9]/.test(phrase);
     const phraseEndsWithWord = /[A-Za-z0-9]$/.test(phrase);
@@ -114,11 +125,20 @@ function InlineLinkedText({
     return -1;
   }
 
+function InlineLinkedText({
+  text,
+  links = [],
+}: {
+  text: string;
+  links?: readonly ApplicationInlineLink[];
+}) {
+  if (!links.length) return text;
+
   const matches = links
     .map((link, sourceIndex) => ({
       link,
       sourceIndex,
-      start: findWholePhrase(link.text),
+      start: findWholePhrase(text, link.text),
     }))
     .map((match) => {
       if (match.start < 0) {
@@ -153,8 +173,8 @@ function InlineLinkedText({
   return <>{output}</>;
 }
 
-function Block({ block, referenceMap }: { block: ApplicationBlock; referenceMap: ReferenceMap }) {
-  const citations = <Citations ids={block.references} referenceMap={referenceMap} />;
+function Block({ block, referenceMap, labels, productLinkCards }: { block: ApplicationBlock; referenceMap: ReferenceMap; labels: ApplicationDocumentLabels; productLinkCards?: ProductLinkCardsOptions }) {
+  const citations = <Citations ids={block.references} referenceMap={referenceMap} referenceLabel={labels.reference} />;
   switch (block.type) {
     case "paragraph":
       return <p><InlineLinkedText text={block.text} links={block.inlineLinks} />{citations}</p>;
@@ -171,8 +191,8 @@ function Block({ block, referenceMap }: { block: ApplicationBlock; referenceMap:
                 {block.rows.map((row, rowIndex) => (
                   <tr key={rowIndex}>
                     {row.map((cell, cellIndex) => cellIndex === 0
-                      ? <th scope="row" key={cellIndex}>{cell}</th>
-                      : <td key={cellIndex}>{cell}</td>)}
+                      ? <th scope="row" key={cellIndex}>{<InlineLinkedText text={cell} links={block.inlineLinks?.filter(link => findWholePhrase(cell, link.text) >= 0)} />}</th>
+                      : <td key={cellIndex}>{<InlineLinkedText text={cell} links={block.inlineLinks?.filter(link => findWholePhrase(cell, link.text) >= 0)} />}</td>)}
                   </tr>
                 ))}
               </tbody>
@@ -185,8 +205,8 @@ function Block({ block, referenceMap }: { block: ApplicationBlock; referenceMap:
       const List = block.ordered ? "ol" : "ul";
       return (
         <div className={styles.listBlock}>
-          <List>{block.items.map((item, index) => <li key={index}>{item}</li>)}</List>
-          {block.references?.length ? <p className={styles.citationRow}><span className={styles.visuallyHidden}>Sources:</span>{citations}</p> : null}
+          <List>{block.items.map((item, index) => <li key={index}><InlineLinkedText text={item} links={block.inlineLinks?.filter(link => findWholePhrase(item, link.text) >= 0)} /></li>)}</List>
+          {block.references?.length ? <p className={styles.citationRow}><span className={styles.visuallyHidden}>{labels.sources}:</span>{citations}</p> : null}
         </div>
       );
     }
@@ -215,8 +235,8 @@ function Block({ block, referenceMap }: { block: ApplicationBlock; referenceMap:
     case "links":
       return (
         <div>
-          <LinkList items={block.items} />
-          {block.references?.length ? <p className={styles.citationRow}><span className={styles.visuallyHidden}>Sources:</span>{citations}</p> : null}
+          <LinkList items={block.items} productLinkCards={productLinkCards} />
+          {block.references?.length ? <p className={styles.citationRow}><span className={styles.visuallyHidden}>{labels.sources}:</span>{citations}</p> : null}
         </div>
       );
     default: {
@@ -227,6 +247,19 @@ function Block({ block, referenceMap }: { block: ApplicationBlock; referenceMap:
 }
 
 function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
+  if (isIvdClinicalDocumentSlug(currentSlug)) {
+    const overview = { label: "IVD fluidic workflows", href: "/en/applications/ivd/" };
+    return <ApplicationGuideNavigation
+      id="ivd-application-guide-navigation"
+      ariaLabel="Clinical chemistry application guides"
+      overview={overview}
+      groups={[{ id: "clinical", label: "Clinical chemistry", overview: { label: "Clinical chemistry workflows", href: "/en/applications/ivd/?instrument=clinical" }, children: analyticalDocuments.filter(entry => isIvdClinicalDocumentSlug(entry.slug)).map(entry => ({ label: entry.navLabel, href: analyticalDocumentHref(entry.slug) })) }]}
+      currentHref={analyticalDocumentHref(currentSlug)}
+      mobileTitle="Clinical chemistry application guides"
+      drawerEyebrow="IVD APPLICATIONS"
+      drawerTitle="Clinical chemistry guides"
+    />;
+  }
   if (!currentSlug) {
     const instruments = getEnglishAnalyticalInstrumentLinks();
     return <ApplicationGuideNavigation
@@ -258,7 +291,7 @@ function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
       href: analyticalDocumentHref(parent.slug),
     },
     children: analyticalDocuments
-      .filter((entry) => entry.kind === "task" && entry.group === parent.slug)
+      .filter((entry) => entry.kind === "task" && entry.group === parent.slug && !isIvdClinicalDocumentSlug(entry.slug))
       .map((entry) => ({
         label: entry.navLabel,
         href: analyticalDocumentHref(entry.slug),
@@ -293,18 +326,18 @@ function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
   );
 }
 
-function Outline({ document }: { document: ApplicationDocument }) {
+function Outline({ document, labels, localized = false }: { document: ApplicationDocument; labels: ApplicationDocumentLabels; localized?: boolean }) {
   return (
-    <nav aria-label="On this page" className={styles.outlineNavigation}>
-      <p className={styles.outlineTitle}>ON THIS PAGE</p>
+    <nav aria-label={localized ? labels.onThisPage : "On this page"} className={styles.outlineNavigation}>
+      <p className={styles.outlineTitle}>{labels.onThisPage}</p>
       <div className={styles.outlineLinks}>
         {document.sections.map((section) => (
           <a key={section.id} href={`#${section.id}`} data-outline-link={section.id}>
             {section.title}
           </a>
         ))}
-        {document.references.length ? <a href="#references" data-outline-link="references">References</a> : null}
-        {document.related?.length ? <a href="#related-guides" data-outline-link="related-guides">Related guides</a> : null}
+        {document.references.length ? <a href="#references" data-outline-link="references">{labels.references}</a> : null}
+        {document.related?.length ? <a href="#related-guides" data-outline-link="related-guides">{labels.related}</a> : null}
       </div>
     </nav>
   );
@@ -313,19 +346,33 @@ function Outline({ document }: { document: ApplicationDocument }) {
 export default function AnalyticalApplicationDocument({
   document,
   embedded = false,
+  navigation,
+  reviewChinese = false,
+  locale,
+  labels: customLabels,
+  hideRelatedResources = false,
+  productLinkCards,
 }: {
   document: ApplicationDocument;
   embedded?: boolean;
+  navigation?: ReactNode;
+  reviewChinese?: boolean;
+  locale?: string;
+  labels?: ApplicationDocumentLabels;
+  hideRelatedResources?: boolean;
+  productLinkCards?: ProductLinkCardsOptions;
 }) {
+  const labels: ApplicationDocumentLabels = customLabels ?? { onThisPage: reviewChinese ? '本页目录' : 'ON THIS PAGE', references: reviewChinese ? '参考资料' : 'References', related: reviewChinese ? '相关指南' : 'Related guides', viewReferences: reviewChinese ? '查看参考资料' : 'View references', sources: 'Sources', reference: 'Reference' };
   const referenceMap: ReferenceMap = new Map(document.references.map((reference, index) => [reference.id, { reference, number: index + 1 }]));
   const rootId = "analytical-application-document";
   const isHub = document.kind === "hub";
+  const isIvd = isIvdClinicalDocumentSlug(document.slug);
   const breadcrumbItems = [
     { label: "Home", href: "/en/" },
-    { label: "Analytical instruments", href: isHub ? undefined : analyticalDocumentHref("") },
+    { label: isIvd ? "IVD" : "Analytical instruments", href: isIvd ? "/en/applications/ivd/" : isHub ? undefined : analyticalDocumentHref("") },
     ...(!isHub ? [{ label: document.navLabel }] : []),
   ];
-  const relatedResources = isLiquidChromatographySlug(document.slug)
+  const relatedResources = reviewChinese || hideRelatedResources ? null : isLiquidChromatographySlug(document.slug)
     ? getLiquidChromatographyResources(document.slug)
     : isPistonApplicationSlug(document.slug)
     ? getRelatedResourcesData({
@@ -341,7 +388,7 @@ export default function AnalyticalApplicationDocument({
     : null;
 
   return (
-    <div className={`${styles.page}${embedded ? ` ${styles.embeddedPage}` : ""}`} id={rootId} lang="en">
+    <div className={`${styles.page}${embedded ? ` ${styles.embeddedPage}` : ""}`} id={rootId} lang={locale ?? (reviewChinese ? 'zh-CN' : 'en')}>
       {!embedded ? (
         <SiteBreadcrumb
           ariaLabel="Breadcrumb"
@@ -357,16 +404,16 @@ export default function AnalyticalApplicationDocument({
             <span className={styles.documentType}>{document.eyebrow}</span>
             <div className={styles.meta}><span className={styles.headerRule} aria-hidden="true" /></div>
             <div className={styles.intro}>
-              {document.intro.map((block, index) => <Block key={index} block={block} referenceMap={referenceMap} />)}
+              {document.intro.map((block, index) => <Block key={index} block={block} referenceMap={referenceMap} labels={labels} productLinkCards={productLinkCards} />)}
             </div>
           </header>
 
           <aside className={styles.sidebar}>
-            <DocumentNavigation currentSlug={document.slug} />
+            {navigation ?? <DocumentNavigation currentSlug={document.slug} />}
           </aside>
 
           <aside className={styles.outline}>
-            <Outline document={document} />
+            <Outline document={document} labels={labels} localized={Boolean(customLabels)} />
           </aside>
 
           <article
@@ -379,14 +426,14 @@ export default function AnalyticalApplicationDocument({
                 <span className={styles.sectionNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                 <span>{section.title}</span>
               </h2>
-              {section.blocks.map((block, blockIndex) => <Block key={blockIndex} block={block} referenceMap={referenceMap} />)}
+              {section.blocks.map((block, blockIndex) => <Block key={blockIndex} block={block} referenceMap={referenceMap} labels={labels} productLinkCards={productLinkCards} />)}
             </section>
           ))}
 
           {document.references.length ? <section id="references" className={styles.documentSection} data-document-section aria-labelledby="references-heading">
-            <h2 id="references-heading">References</h2>
+            <h2 id="references-heading">{labels.references}</h2>
             <details className={styles.referenceDisclosure} data-reference-disclosure>
-              <summary>View references ({document.references.length})</summary>
+              <summary>{labels.viewReferences} ({document.references.length})</summary>
               <ol className={styles.referenceList}>
                 {document.references.map((reference, index) => (
                   <li key={reference.id} id={`ref-${reference.id}`} tabIndex={-1} data-reference-item>
@@ -399,8 +446,8 @@ export default function AnalyticalApplicationDocument({
           </section> : null}
 
           {document.related?.length ? <section id="related-guides" className={styles.documentSection} data-document-section aria-labelledby="related-guides-heading">
-            <h2 id="related-guides-heading">Related guides</h2>
-            <LinkList items={document.related} />
+            <h2 id="related-guides-heading">{labels.related}</h2>
+            <LinkList items={document.related} productLinkCards={productLinkCards} />
           </section> : null}
           </article>
         </main>

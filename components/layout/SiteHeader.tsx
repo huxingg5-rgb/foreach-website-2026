@@ -1,4 +1,6 @@
-"use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
+"use client";
+import tubingMenuStyles from "./SiteHeaderTubingMenu.module.css";
+import { getLanguageHref } from "@/lib/i18n/language-switch"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
 
 import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
@@ -177,6 +179,7 @@ function getLocalePathPrefix(localeCode: LocaleCode) {
    当前 /en，切中文 → /
 ================================ */
 function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
+  if (/^\/(?:en|es|fr|ko|ru)\/(?:applications|products\/tubing-assemblies)(?:\/|$)/.test(pathname)) return getLanguageHref(pathname, localeCode);
   const tubingPath = getTubingLanguagePath(pathname, localeCode);
   if (tubingPath) return tubingPath;
   const pathWithoutLocale = localizeValvelessPumpCategoryPath(
@@ -1077,7 +1080,7 @@ const isFittingReplacementDetailPage =
       closeAllPanels();
 
       // 根据当前路径生成目标语言路径
-      const languageSourcePathname = isEnglishAnalyticalApplicationDetailPage && localeCode !== "en"
+      const languageSourcePathname = isEnglishAnalyticalApplicationDetailPage && localeCode === "zh-CN"
         ? ANALYTICAL_APPLICATION_BASE
         : window.location.pathname;
       const nextPathname = buildLocalizedPathname(
@@ -1383,7 +1386,7 @@ const isFittingReplacementDetailPage =
                 {languageItems.map((language) => (
                   <a
                     key={language.code}
-                    href={isEnglishAnalyticalApplicationDetailPage && language.code !== "en"
+                    href={isEnglishAnalyticalApplicationDetailPage && language.code === "zh-CN"
                       ? buildLocalizedPathname(ANALYTICAL_APPLICATION_BASE, language.code)
                       : isTechnicalArticlePage || isMrv3Page || isSolenoidPage
                         ? buildLocalizedPathname(pathname || "/", language.code)
@@ -1726,7 +1729,7 @@ const isFittingReplacementDetailPage =
                     const displayProductImages = cardImages;
 
                     return (
-                      <div key={card.key} className="site-nav-mega-product-group">
+                      <div key={card.key} className={`site-nav-mega-product-group ${card.categoryKey === "tubing-assemblies" ? tubingMenuStyles.group : ""}`} data-category={card.categoryKey}>
                         {displayProductImages.length > 0 ? (
                           <div className="site-nav-mega-product-grid">
                             {displayProductImages.map((cardImage, cardImageIndex) => {

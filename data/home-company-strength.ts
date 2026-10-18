@@ -68,10 +68,10 @@ export const homeCompanyStrengthData = {
     title: {
       "zh-CN": "走进恒永达科技",
       en: "ABOUT Foreach",
-      es: "ABOUT Foreach",
-      fr: "ABOUT Foreach",
-      ko: "ABOUT Foreach",
-      ru: "ABOUT Foreach",
+      es: "ACERCA DE Foreach",
+      fr: "À PROPOS DE Foreach",
+      ko: "Foreach 소개",
+      ru: "О КОМПАНИИ Foreach",
     },
 
     subtitle: {

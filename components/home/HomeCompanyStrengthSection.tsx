@@ -3,6 +3,7 @@
 
 "use client"; // 这个组件需要数字动画、IntersectionObserver 和浏览器动画帧，所以必须是客户端组件
 
+import { homeUiText } from "@/data/home-ui.intl";
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
 import { useEffect, useRef, useState } from "react"; // 引入 React Hook，用于 DOM 引用、状态和副作用
 
@@ -152,7 +153,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
         <div className="home-company-about-shell"> {/* 公司介绍区域内容外壳 */}
           <div className="home-company-about-main"> {/* 公司介绍主要内容布局 */}
             <div className="home-company-about-left"> {/* 左侧：标题 + 公司视频 */}
-              <h2 className="home-company-about-title"> {/* 公司介绍大标题 */}
+              <h2 className={`home-company-about-title${locale === "fr" ? ` ${styles.singleLineTitle}` : ""}`}> {/* 公司介绍大标题 */}
                 {getHomeCompanyText(aboutData.title, locale)} {/* 公司介绍标题多语言文字 */}
 
                 <span>{getHomeCompanyText(aboutData.subtitle, locale)}</span> {/* 公司介绍副标题多语言文字 */}
@@ -167,9 +168,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
   videoPlayAriaLabel={getHomeCompanyText(aboutData.videoPlayAriaLabel, locale)} // 传入播放按钮无障碍说明
   posterAlt={getHomeCompanyText(companyVideoData.posterAlt, locale)} // 传入视频封面 alt 文案，现在从 video.posterAlt 读取
   fallbackText={
-    locale === "zh-CN"
-      ? "当前浏览器不支持视频播放。"
-      : "Your browser does not support video playback."
+    homeUiText[locale].videoFallback
   }
 />
             </div> {/* 左侧：标题 + 公司视频结束 */}

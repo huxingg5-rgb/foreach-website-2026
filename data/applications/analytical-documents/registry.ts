@@ -1,4 +1,5 @@
 import type { ApplicationDocumentMetadata } from "./types";
+import { applicationDocumentHref } from "../application-routes";
 import { liquidChromatographyDocuments, isLiquidChromatographySlug } from "./liquid-chromatography";
 
 export const ANALYTICAL_APPLICATION_BASE = "/en/applications/analytical-instruments/";
@@ -60,7 +61,13 @@ export const analyticalDocuments = [
 ] as const satisfies readonly ApplicationDocumentMetadata[];
 
 export type AnalyticalDocumentSlug = typeof analyticalDocuments[number]["slug"];
-export function analyticalDocumentHref(slug: string) { return slug ? `${ANALYTICAL_APPLICATION_BASE}${slug}/` : ANALYTICAL_APPLICATION_BASE; }
+export const IVD_CLINICAL_DOCUMENT_SLUGS = ["piston-sample-transfer", "piston-reagent-dispensing"] as const;
+export function isIvdClinicalDocumentSlug(slug: string) {
+  return IVD_CLINICAL_DOCUMENT_SLUGS.some(item => item === slug);
+}
+export function analyticalDocumentHref(slug: string) {
+  return applicationDocumentHref(isIvdClinicalDocumentSlug(slug) ? 'ivd' : 'analytical-instruments', slug);
+}
 export function getAnalyticalDocumentMetadata(slug: string) { return analyticalDocuments.find((entry) => entry.slug === slug); }
 /** Shared visible/schema ancestry; the instrument module is not a translation of the industry hub. */
 export function getAnalyticalDocumentTrail(slug: string): ApplicationDocumentMetadata[] {

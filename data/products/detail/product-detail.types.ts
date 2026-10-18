@@ -18,7 +18,8 @@ export type ProductDetailCategory =
   | "pumps"
   | "valves"
   | "needles"
-  | "controllers";
+  | "controllers"
+  | "tubing-assemblies";
 
 export type ProductDetailFaqItem = {
   question: string;
@@ -28,6 +29,16 @@ export type ProductDetailFaqItem = {
 export type ProductSpecItem = {
   label: string;
   value: string;
+};
+
+export type TubingAssemblySizeTableData = {
+  title: string;
+  rows: Array<{
+    material: string;
+    outerDiameter: string;
+    innerDiameters: string;
+  }>;
+  notes: string[];
 };
 
 export type ProductApplicationItem = {
@@ -139,6 +150,8 @@ export type ProductDetailZhRecord = {
 };
 
 export type ProductDetailPageData = ProductDetailZhRecord & {
+  /** Explicit hierarchy for a product family using the shared detail template. */
+  breadcrumbs?: Array<{ label: string; href?: string }>;
   /**
    * 后续从选型页面基础数据读取。
    */
@@ -148,4 +161,6 @@ export type ProductDetailPageData = ProductDetailZhRecord & {
    * 后续由产品系列规格 Excel 生成。
    */
   specs: ProductSpecItem[];
+  /** Optional tube catalogue pairs for the assembly specification tab. */
+  tubingAssemblySizeTable?: TubingAssemblySizeTableData;
 };

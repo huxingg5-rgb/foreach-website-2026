@@ -1,3 +1,8 @@
+import {
+  getTubingAssemblySearchItems,
+  isTubingAssemblySearchPath,
+} from "@/data/products/tubing-assemblies/search";
+
 export type SearchModule =
   | "products"
   | "compatible-models"
@@ -85,6 +90,16 @@ export function preloadGlobalSearchIndex(
       return response.json() as Promise<CompactSearchItem[]>;
     })
     .then((items) => {
+      const tubingItems = getTubingAssemblySearchItems(locale);
+      if (tubingItems.length) {
+        items = [
+          ...items.filter(item => !isTubingAssemblySearchPath(item.h)),
+          ...tubingItems.map((item): CompactSearchItem => ({
+            m: "products", t: item.title, d: item.description, h: item.href, i: item.image,
+            x: [item.title, item.description, ...item.keywords].join(" "), a: item.actionLabel,
+          })),
+        ];
+      }
       cachedSearchItems.set(searchIndexUrl, items);
       return items;
     })

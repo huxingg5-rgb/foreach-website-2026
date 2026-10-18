@@ -119,7 +119,7 @@ export const environmentalMonitoringEsExactText: Record<string, string> = {
   "冷凝液、吸收液和清洗液稳定输送":
     "Suministro estable de condensado, absorbente y solución de lavado",
   "低压软管路径通断与废液排放控制":
-    "Control de tubos flexibles de baja presión y evacuación de residuos",
+    "Control de apertura y cierre de circuitos de tubo flexible de baja presión y evacuación de residuos líquidos",
   "酸性冷凝液和污染介质下的材料兼容":
     "Compatibilidad de materiales con condensados ácidos y fluidos contaminados",
   "堵塞、液位、气泡和排液异常反馈":
@@ -135,7 +135,7 @@ export const environmentalMonitoringEsExactText: Record<string, string> = {
 
   "环境采样与样品前处理": "Muestreo ambiental y preparación de muestras",
   "样品转移、稀释、过滤、混合与废液排放。":
-    "Transferencia, dilución, filtración, mezcla y evacuación de muestras.",
+    "Transferencia, dilución, filtración y mezcla de muestras, y evacuación de residuos líquidos.",
   "环境采样、稀释、过滤、混合与废液排放液路":
     "Circuitos de muestreo ambiental, dilución, filtración, mezcla y evacuación",
   "环境采样与样品前处理设备通常需要完成样品转移、稀释、试剂加入、过滤、混合、清洗和废液排放。液路系统重点在于样品代表性、低残留、过滤保护和批量处理稳定。":

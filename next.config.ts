@@ -4,6 +4,7 @@ import { getPipettingRedirectEntries } from "./data/products/selection/pipetting
 import { getSyringeModelRedirectEntries } from "./data/products/selection/syringe-pump-routes";
 import { getPistonPumpRedirectEntries } from "./lib/seo/piston-pump-migration";
 import { getValvelessPumpRedirectEntries } from "./lib/seo/valveless-pump-migration";
+import { getApplicationRedirectEntries } from "./data/applications/application-routes";
 /* =========================================================
    next.config.ts
    恒永达官网｜Vercel、本地与 Cloudflare 双模式配置
@@ -50,7 +51,7 @@ const nextConfig: NextConfig = {
   ...(!isCloudflarePagesBuild
     ? {
         async redirects() {
-          return [...getTubingSelectionRedirects(), ...getPipettingRedirectEntries(), ...getSyringeModelRedirectEntries(), ...getPistonPumpRedirectEntries(), ...getValvelessPumpRedirectEntries(), ...getControlModuleRedirectEntries()];
+          return [...getTubingSelectionRedirects(), ...getPipettingRedirectEntries(), ...getSyringeModelRedirectEntries(), ...getPistonPumpRedirectEntries(), ...getValvelessPumpRedirectEntries(), ...getApplicationRedirectEntries(), ...getControlModuleRedirectEntries()];
         },
       }
     : {}),

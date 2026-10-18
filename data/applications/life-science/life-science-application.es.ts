@@ -87,7 +87,7 @@ export const lifeScienceEsExactText: Record<string, string> = {
   "裂解液、结合液、清洗液和洗脱液的稳定定量加入":
     "Dosificación estable de soluciones de lisis, unión, lavado y elución",
   "磁珠清洗、废液抽排和残留控制":
-    "Lavado de partículas magnéticas, evacuación de residuos y control de residuos",
+    "Lavado de partículas magnéticas, evacuación de residuos líquidos y control de contaminación residual",
   "低死体积、低吸附与耐化学介质连接":
     "Conexiones de bajo volumen muerto, baja adsorción y resistencia química",
   "气泡、空吸、堵塞和液位异常识别":

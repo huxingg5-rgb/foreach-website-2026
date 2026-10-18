@@ -413,8 +413,17 @@ function getHomeFlowProductHref(
   const chinesePath =
     localizeValvelessPumpCategoryPath(HOME_FLOW_PRODUCT_PATHS[key] || "/products", locale);
 
+  if (locale === "en" && chinesePath === "/products?category=control") {
+    return "/en/products/control/";
+  }
+
   if (locale === "zh-CN") {
     return chinesePath;
+  }
+
+  if (key === "pressure-sensor") return `/${locale}/products/control/pdm5-pressure-sensor/`;
+  if (key === "bubble-detector" || key === "bubble-sensor") {
+    return `/${locale}/products/control/air-bubble-detectors/abd/`;
   }
 
   return `/${locale}${chinesePath}`;
@@ -714,7 +723,7 @@ export default function HomeApplicationFlowSection({
     href={
       locale === "zh-CN"
         ? "/applications/ivd"
-        : `/${locale}/applications/ivd`
+        : `/${locale}/applications/`
     }
     className="home-flow-btn brand-navy-button-motion"
     data-home-action="applications"

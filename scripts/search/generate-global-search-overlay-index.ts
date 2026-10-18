@@ -1,4 +1,13 @@
+import { getLocalizedApplicationDocument } from '../../services/applications/international-localized';
+import { localizedApplicationHref } from '../../data/applications/international-locales/routes';
+import { getApplicationIndexData } from '../../data/applications/application-index-locales';
+import { getEnglishApplicationDocument } from "../../services/applications/english-localized";
+import { getReviewDocument, isFinalizedEnglishReference } from "../../services/applications/english-review";
+import { getReviewHub } from "../../data/applications/english-review";
+import { getLocalizedIvdDocument } from "../../services/applications/ivd-localized";
+import { ivdRoutes, ivdDocumentHref } from "../../data/applications/ivd-locales/routes";
 import { normalizeControlModulePath } from "../../data/products/selection/control-module-routes";
+import { applicationRoutes, resolveApplicationHref } from "../../data/applications/application-routes";
 import { getTubingMaterialCopy } from "../../data/products/tubing/content";
 import { normalizePipettingPath } from "../../data/products/selection/pipetting-pump-routes";
 import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
@@ -30,6 +39,9 @@ import { getLabAutomationApplicationPageData } from "../../services/applications
 import { getLifeScienceApplicationPageData } from "../../services/applications/life-science/getLifeScienceApplicationPageData";
 import { getSyntheticBiologyApplicationPageData } from "../../services/applications/synthetic-biology/getSyntheticBiologyApplicationPageData";
 import { analyticalDocumentHref, analyticalDocuments } from "../../data/applications/analytical-documents/registry";
+import { createEnglishApplicationData, type ApplicationSourceData, type EnglishApplicationKind } from "../../data/applications/application-english";
+import { getApplicationWorkflow } from "../../data/applications/application-content";
+import { applicationArticleHref, applicationArticleSection, resolveEnglishApplicationArticleHref } from "../../data/applications/application-article-links";
 
 type SearchLocale = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 
@@ -59,7 +71,10 @@ type CompactSearchItem = {
 type UnknownObject = Record<string, unknown>;
 
 const ROOT = process.cwd();
-const OUTPUT_DIRECTORY = path.join(ROOT, "public", "search-data");
+const OUTPUT_DIRECTORY_ARGUMENT = process.argv.find((argument) => argument.startsWith("--output-dir="));
+const OUTPUT_DIRECTORY = OUTPUT_DIRECTORY_ARGUMENT
+  ? path.resolve(ROOT, OUTPUT_DIRECTORY_ARGUMENT.slice("--output-dir=".length))
+  : path.join(ROOT, "public", "search-data");
 const LEGACY_OUTPUT_PATH = path.join(
   OUTPUT_DIRECTORY,
   "global-search-index.v2.json"
@@ -73,6 +88,16 @@ const SEARCH_LOCALES: SearchLocale[] = [
   "ru",
 ];
 const CHECK_MODE = process.argv.includes("--check");
+// Update only the application pages changed by the English localization pass.
+const ENGLISH_APPLICATIONS_ONLY = process.argv.includes("--english-applications-only");
+const APPLICATIONS_ONLY = process.argv.includes("--applications-only");
+const englishReviewRoutes = applicationRoutes.filter(route => route.kind !== 'ivd' && route.template === 'review' && !isFinalizedEnglishReference(route.kind, route.slug));
+const englishApplicationPaths = new Set([...englishReviewRoutes.map(route => route.path), ...ivdRoutes.map(route => ivdDocumentHref('en', route.slug))].map(href => href.replace(/\/+$/, '')));
+function isLocalizedEnglishApplication(item: CompactSearchItem) {
+  const raw = item.h.split(/[?#]/)[0];
+  const pathname = resolveApplicationHref(raw.startsWith('/en/') ? raw : '/en' + raw).replace(/\/+$/, '');
+  return englishApplicationPaths.has(pathname);
+}
 const LOCALES_ARGUMENT = process.argv.find((argument) =>
   argument.startsWith("--locales="),
 );
@@ -806,6 +831,31 @@ async function loadMaterialCompatibility(
   return items;
 }
 
+function loadApplicationWorkflows(locale: SearchLocale): CompactSearchItem[] {
+  if (locale !== "en") return [];
+  const language = "en";
+  const copy = getModuleCopy(locale, "applications");
+  return APPLICATION_LOADERS.flatMap(({ slug, load }) => {
+    const source = load(locale) as ApplicationSourceData;
+    const page = locale === "en" ? createEnglishApplicationData(slug as EnglishApplicationKind, source) : source;
+    const groups = "groups" in page ? page.groups : page.instruments ?? page.applications ?? [];
+    return groups.flatMap(group => (group.modules ?? []).map(moduleItem => {
+      const workflow = getApplicationWorkflow(slug, group.key, moduleItem.key, language);
+      const groupCopy = group as unknown as { title: string };
+      const moduleCopy = moduleItem as unknown as { title: string; description: string; tags?: string[] };
+      return {
+        m: "applications" as const,
+        t: `${groupCopy.title} · ${moduleCopy.title}`,
+        d: shorten(moduleCopy.description, 145),
+        h: applicationArticleHref(slug,group.key)+'#'+applicationArticleSection(slug,group.key,moduleItem.key),
+        x: buildSearchText([groupCopy.title, moduleCopy.title, moduleCopy.description, moduleCopy.tags, workflow?.inputs, workflow?.steps, workflow?.validation, workflow?.faults, workflow?.boundary]),
+        k: buildSearchText([slug, group.key, moduleItem.key, moduleCopy.tags]),
+        a: copy.action,
+      };
+    }));
+  });
+}
+
 function loadApplications(locale: SearchLocale): CompactSearchItem[] {
   const copy = getModuleCopy(locale, "applications");
 
@@ -952,9 +1002,8 @@ function loadSitePages(locale: SearchLocale): CompactSearchItem[] {
       getLocalizedValue(object.description ?? object.alt, locale),
       145
     ) || copy.description;
-    const href = normalizePageHref(
-      getLocalizedValue(object.href, locale)
-    );
+    const localizedHref=getLocalizedValue(object.href,locale);
+    const href = normalizePageHref(locale==='en' ? resolveEnglishApplicationArticleHref(localizedHref) : localizedHref);
     const imageObject = object.image &&
       typeof object.image === "object" &&
       !Array.isArray(object.image)
@@ -1016,16 +1065,49 @@ async function buildLocaleIndex(
     loadMaterialCompatibility(locale),
   ]);
 
-  return deduplicate([
+  const items: CompactSearchItem[] = [
     ...loadProductAndCompatibleItems(locale),
     ...loadDatasheets(locale),
     ...loadInstallationGuides(locale),
     ...technicalArticles,
     ...materialCompatibility,
     ...loadApplications(locale),
+    ...loadApplicationWorkflows(locale),
     ...loadNews(locale),
     ...loadSitePages(locale),
-  ]);
+  ].map((item) => locale === "en" ? { ...item, h: resolveApplicationHref(item.h) } : item);
+  if (locale === "zh-CN") return deduplicate(items);
+  if (locale !== 'en') {
+    const documents: CompactSearchItem[] = await Promise.all(applicationRoutes.map(async route => {
+      const document = await getLocalizedApplicationDocument(locale, route.kind, route.slug);
+      return { m: 'applications', t: document.title, d: document.description,
+        h: localizedApplicationHref(locale, route.kind, route.slug),
+        x: buildSearchText([document.title, document.description, document.keywords, document.sections.map(section => section.title)]),
+        k: buildSearchText([...document.keywords]), a: getModuleCopy(locale, 'applications').action };
+    }));
+    const { copy } = getApplicationIndexData(locale);
+    const index: CompactSearchItem = { m: 'applications', t: copy.seoTitle, d: copy.seoDescription, h: '/' + locale + '/applications/',
+      x: buildSearchText([copy.heading, copy.intro, Object.values(copy.areas).map(area => [area.title, area.description, area.topics])]),
+      k: buildSearchText(Object.values(copy.areas).map(area => area.title)), a: getModuleCopy(locale, 'applications').action };
+    return deduplicate([...items.filter(item => item.m !== 'applications'), index, ...documents]);
+  }
+  const ivdItems: CompactSearchItem[] = await Promise.all(ivdRoutes.map(async route => {
+    const document = await getLocalizedIvdDocument(locale, route.slug);
+    const href = ivdDocumentHref(locale, route.slug);
+    return { m: "applications", t: document.title, d: document.description, h: href,
+      x: buildSearchText([document.title, document.description, document.keywords, document.sections.map(section => section.title)]),
+      k: buildSearchText([...document.keywords]), a: getModuleCopy(locale, "applications").action };
+  }));
+  const localizedItems = [...items.filter(item => !/^\/(?:(?:en|es|fr|ko|ru)\/)?applications\/ivd(?:\/|[?#]|$)/.test(item.h)), ...ivdItems];
+  const reviewItems: CompactSearchItem[] = await Promise.all(englishReviewRoutes.map(async route => {
+    const source = route.slug ? await getReviewDocument(route.kind, route.slug) : getReviewHub(route.kind);
+    if (!source) throw new Error('Missing English application document: ' + route.path);
+    const document = getEnglishApplicationDocument(source, route.kind);
+    return { m: 'applications', t: document.title, d: document.description, h: route.path,
+      x: buildSearchText([document.title, document.description, document.keywords, document.sections.map(section => section.title)]),
+      k: buildSearchText([...document.keywords]), a: getModuleCopy('en', 'applications').action };
+  }));
+  return deduplicate([...localizedItems.filter(item => !isLocalizedEnglishApplication(item)), ...ivdItems, ...reviewItems]);
 }
 
 function getOutputPath(locale: SearchLocale): string {
@@ -1062,6 +1144,8 @@ function getCounts(items: CompactSearchItem[]) {
 }
 
 async function main() {
+  if (ENGLISH_APPLICATIONS_ONLY && (REQUESTED_SEARCH_LOCALES.length !== 1 || REQUESTED_SEARCH_LOCALES[0] !== 'en')) throw new Error('--english-applications-only requires --locales=en');
+  if (APPLICATIONS_ONLY && REQUESTED_SEARCH_LOCALES.includes('zh-CN')) throw new Error('--applications-only requires explicit foreign --locales');
   const localeIndexes = await Promise.all(
     REQUESTED_SEARCH_LOCALES.map(async (locale) => ({
       locale,
@@ -1070,8 +1154,14 @@ async function main() {
   );
 
   for (const { locale, items } of localeIndexes) {
-    const output = JSON.stringify(items);
     const outputPath = getOutputPath(locale);
+    const scoped = ENGLISH_APPLICATIONS_ONLY || APPLICATIONS_ONLY;
+    const isTarget = locale === 'en' ? isLocalizedEnglishApplication : (item: CompactSearchItem) => item.m === 'applications';
+    const previousItems = scoped ? JSON.parse(fs.readFileSync(outputPath, 'utf8')) as CompactSearchItem[] : [];
+    const outputItems = scoped
+      ? [...previousItems.filter(item => !isTarget(item)), ...items.filter(isTarget)]
+      : items;
+    const output = JSON.stringify(outputItems);
     writeOrCheckOutput(outputPath, output);
 
     if (locale === "zh-CN") {
@@ -1085,10 +1175,10 @@ async function main() {
         ? `全站搜索索引检查通过：${locale}`
         : `全站搜索索引已生成：${locale}`
     );
-    for (const [module, count] of Object.entries(getCounts(items))) {
+    for (const [module, count] of Object.entries(getCounts(outputItems))) {
       console.log(`${module}: ${count}`);
     }
-    console.log(`总计：${items.length}`);
+    console.log(`总计：${outputItems.length}`);
     console.log(`JSON 大小：${sizeKB} KB`);
     console.log(`输出：${outputPath}`);
   }

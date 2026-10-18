@@ -3,6 +3,16 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* Keep the French desktop heading within one line of the video column. */
+@media (min-width: 1181px) {
+  .singleLineTitle { white-space: nowrap; }
+  .singleLineTitle span { white-space: normal; }
+}
+
+@media (min-width: 1921px) {
+  .singleLineTitle:global(.home-company-about-title) { font-size: 68px !important; }
+}
+
 /* 最终值始终保留，并为动画数字及后缀预留稳定宽度。 */
 .metricValue {
   display: inline-block;

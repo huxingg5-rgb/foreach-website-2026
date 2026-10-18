@@ -19,6 +19,7 @@
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { homeMetadata } from "@/data/home-metadata";
 import { SITE_NAME } from "@/lib/seo/site-identity";
 
 import HomeStructuredData from "@/components/home/HomeStructuredData";
@@ -99,15 +100,18 @@ export async function generateMetadata({
 }: LocalePageProps): Promise<Metadata> {
   const { locale } = await params;
 
-  if (locale !== "en") {
-    return { openGraph: { siteName: SITE_NAME } };
-  }
-
+  const currentLocale = getLocaleFromRouteSegment(locale);
+  if (!currentLocale || currentLocale === "zh-CN") return {};
+  const { title, description, ogLocale } = homeMetadata[currentLocale];
   return {
-    openGraph: { siteName: SITE_NAME },
-    title: "Foreach Technology | Microfluidic Components and Fluidic Solutions",
-    description:
-      "Foreach Technology develops pumps, valves, probes, fittings, tubing, sensors, and control modules for IVD, life sciences, analytical instruments, synthetic biology, and laboratory automation.",
+    title,
+    description,
+    alternates: {
+      canonical: `/${locale}/`,
+      languages: { "zh-CN": "/", en: "/en/", es: "/es/", fr: "/fr/", ko: "/ko/", ru: "/ru/", "x-default": "/" },
+    },
+    openGraph: { type: "website", siteName: SITE_NAME, locale: ogLocale, url: `/${locale}/`, title, description, images: ["/images/home/home-hero-final-banner.webp"] },
+    twitter: { card: "summary_large_image", title, description, images: ["/images/home/home-hero-final-banner.webp"] },
   };
 }
 
@@ -126,7 +130,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
 
   return (
     <>
-      <HomeStructuredData />
+      <HomeStructuredData locale={currentLocale} />
       <HomePageContent locale={currentLocale} />
     </>
   );

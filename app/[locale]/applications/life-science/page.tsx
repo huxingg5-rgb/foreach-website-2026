@@ -1,129 +1,22 @@
-/* =========================================================
-   page.tsx
-   恒永达官网｜生命科学应用领域外语页面入口
+import { notFound } from 'next/navigation';
+import EnglishReviewPage, { reviewMetadata } from '@/components/applications/EnglishReviewPage';
+import { getReviewHub } from '@/data/applications/english-review';
+import InternationalApplicationPage from '@/components/applications/InternationalApplicationPage';
+import { isApplicationTranslationLocale, localizedApplicationStaticParams, localizedApplicationAlternates } from '@/data/applications/international-locales/routes';
+import { getLocalizedApplicationDocument, getLocalizedApplicationMetadata } from '@/services/applications/international-localized';
 
-   文件路径：
-   app/[locale]/applications/life-science/page.tsx
-
-   说明：
-   1. 外语路径：/en/applications/life-science 等
-   2. 英文沿用现有页面，西班牙语使用正式本地化内容
-   3. generateStaticParams 用于静态导出
-========================================================= */
-
-import type { Metadata } from "next";
-
-import ApplicationEnglishClient from "@/components/applications/ApplicationEnglishClient";
-import FrenchIndustryApplicationClient from "@/components/applications/FrenchIndustryApplicationClient";
-import RussianIndustryApplicationClient from "@/components/applications/RussianIndustryApplicationClient";
-import SpanishIndustryApplicationClient, { KOREAN_INDUSTRY_UI_TEXT } from "@/components/applications/SpanishIndustryApplicationClient";
-import LifeScienceApplicationClient from "@/components/applications/life-science/LifeScienceApplicationClient";
-import { createEnglishApplicationData } from "@/data/applications/application-english";
-import { createFrenchApplicationMetadata } from "@/data/applications/application-french-metadata";
-import { createRussianApplicationMetadata } from "@/data/applications/application-russian-metadata";
-import { createSpanishApplicationMetadata } from "@/data/applications/application-spanish-metadata";
-import { createKoreanApplicationMetadata } from "@/data/applications/application-korean-metadata";
-import { getLifeScienceApplicationPageData } from "@/services/applications/life-science/getLifeScienceApplicationPageData";
-
-import "@/app/applications/life-science/life-science-application.css";
-import "@/app/applications/ivd/ivd-application.css";
-
-const ENABLED_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
-
-type LifeScienceApplicationLocalePageProps = {
-  params: Promise<{
-    locale: string;
-  }>;
-};
-
-export function generateStaticParams() {
-  return ENABLED_LOCALES.map((locale) => ({ locale }));
-}
-
-const defaultMetadata: Metadata = {
-  title: "Life Science Applications｜Foreach Technology",
-  description:
-    "Foreach provides pumps, valves, fittings, tubing, sensors and fluidic system support for life science instruments.",
-};
-
-export async function generateMetadata({
-  params,
-}: LifeScienceApplicationLocalePageProps): Promise<Metadata> {
+type Props = { params: Promise<{ locale: string }> };
+export const dynamicParams = false;
+export function generateStaticParams() { return ['en', 'es', 'fr', 'ko', 'ru'].map(locale => ({ locale })); }
+export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-
-  if (locale === "es") {
-    return createSpanishApplicationMetadata("life-science");
-  }
-
-  if (locale === "fr") {
-    return createFrenchApplicationMetadata("life-science");
-  }
-
-  if (locale === "ko") {
-    return createKoreanApplicationMetadata("life-science");
-  }
-
-  if (locale === "ru") {
-    return createRussianApplicationMetadata("life-science");
-  }
-
-  return defaultMetadata;
+  if (locale === 'en') return { ...reviewMetadata(getReviewHub('life-science'), 'life-science'), alternates: localizedApplicationAlternates('en', 'life-science') };
+  if (!isApplicationTranslationLocale(locale)) notFound();
+  return getLocalizedApplicationMetadata(locale, 'life-science', await getLocalizedApplicationDocument(locale, 'life-science'));
 }
-
-export default async function LifeScienceApplicationLocalePage({
-  params,
-}: LifeScienceApplicationLocalePageProps) {
+export default async function Page({ params }: Props) {
   const { locale } = await params;
-  const data = getLifeScienceApplicationPageData(locale);
-
-  if (locale === "en") {
-    return (
-      <ApplicationEnglishClient
-        data={createEnglishApplicationData("life-science", data)}
-      />
-    );
-  }
-
-  if (locale === "es") {
-    return (
-      <SpanishIndustryApplicationClient
-        data={data}
-        pageClassName="life-science-page"
-        applicationTabsAria="Tipos de aplicaciones de ciencias de la vida"
-      />
-    );
-  }
-
-  if (locale === "fr") {
-    return (
-      <FrenchIndustryApplicationClient
-        data={data}
-        pageClassName="life-science-page"
-        applicationTabsAria="Types d’applications en sciences de la vie"
-      />
-    );
-  }
-
-  if (locale === "ko") {
-    return (
-      <SpanishIndustryApplicationClient
-        data={data}
-        pageClassName="life-science-page"
-        applicationTabsAria="생명과학 응용 유형"
-        uiText={KOREAN_INDUSTRY_UI_TEXT}
-      />
-    );
-  }
-
-  if (locale === "ru") {
-    return (
-      <RussianIndustryApplicationClient
-        data={data}
-        pageClassName="life-science-page"
-        applicationTabsAria="Типы применений в области наук о жизни"
-      />
-    );
-  }
-
-  return <LifeScienceApplicationClient data={data} />;
+  if (locale === 'en') return <EnglishReviewPage kind="life-science" />;
+  if (!isApplicationTranslationLocale(locale)) notFound();
+  return <InternationalApplicationPage locale={locale} kind="life-science" document={await getLocalizedApplicationDocument(locale, 'life-science')} />;
 }

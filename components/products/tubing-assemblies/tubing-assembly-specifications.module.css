@@ -1,0 +1,41 @@
+.sectionTitle {
+  margin: 0 0 16px;
+  color: #173368;
+  font-size: 20px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.sizeSection {
+  margin-top: 30px;
+}
+
+.sizeTable thead {
+  display: block;
+  width: 100%;
+}
+
+.sizeTable caption {
+  display: block;
+  margin-bottom: 10px;
+  color: #596579;
+  font-size: 14px;
+  text-align: left;
+}
+
+.notes {
+  margin-top: 14px;
+  color: #596579;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.notes p {
+  margin: 5px 0 0;
+}
+
+@media (max-width: 720px) {
+  .sectionTitle {
+    font-size: 18px;
+  }
+}

@@ -1,4 +1,8 @@
+import { resolveLocalizedIvdQuery } from "@/data/applications/ivd-locales/routes";
 import { getLocalizedSiteHref } from "@/lib/seo/site-url";
+import { tubingAssemblyTypes } from "@/data/products/tubing-assemblies.en";
+import { isTubingAssemblyLocale, tubingAssemblyLocales, tubingAssemblyNavigation } from "@/data/products/tubing-assemblies/locales";
+import { resolveEnglishApplicationArticleHref } from "@/data/applications/application-article-links";
 import { VALVELESS_PUMP_CATEGORY_LABEL_ZH } from "@/data/products/selection/valveless-pump-routes";
 import { getValvelessPumpNames } from "@/data/products/detail/valveless-pump-names";
 
@@ -2427,10 +2431,71 @@ const navigationItems: NavigationItem[] = [
   },
 ];
 
-export function getVisibleNavigationItems(locale = "zh-CN") {
+const tubingAssemblyMenuImages: Record<string, NavigationImage> = {
+  "flanged-tubing": {
+    src: "/images/products/tubing-assemblies/flanged-tubing-white-shadow-intro.webp",
+    alt: { "zh-CN": "黑色与米色接头的法兰翻边管组件", en: "Flanged tubing assemblies with black and beige fittings" },
+    width: 1254, height: 1254,
+  },
+  "retaining-ring-kits": {
+    src: "/images/products/tubing-assemblies/retaining-ring-kits/black-ptfe/foreach-black-ptfe-retaining-ring-tubing-assembly.webp",
+    alt: { "zh-CN": "卡环管组件接头与密封环件", en: "Retaining-ring tubing connection with fitting and sealing components" },
+    width: 1254, height: 1254,
+  },
+  "ferrule-kits": {
+    src: "/images/products/tubing-assemblies/ferrule-kits/fep/foreach-fep-ferrule-tubing-assembly.webp",
+    alt: { "zh-CN": "透明管材连接螺纹接头与锥形卡箍", en: "Tubing connection with a threaded fitting and conical ferrule" },
+    width: 1254, height: 1254,
+  },
+};
+
+export function getVisibleNavigationItems(locale = "zh-CN"): NavigationItem[] {
   return navigationItems
     .filter((item) => item.enabled)
     .map((item) => {
+      if (item.key === "products" && isTubingAssemblyLocale(locale) && item.megaDropdown) {
+        const title = { "zh-CN": "管组件系列", en: tubingAssemblyNavigation.en.title, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].title])) };
+        const description = { "zh-CN": "法兰翻边、卡环套件、卡箍套件", en: tubingAssemblyNavigation.en.description, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].description])) };
+        const href = { "zh-CN": "/products/", en: "/en/products/tubing-assemblies/", ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `/${code}/products/tubing-assemblies/`])) };
+        return {
+          ...item,
+          megaDropdown: {
+            ...item.megaDropdown,
+            categories: [...item.megaDropdown.categories, { key: "tubing-assemblies", title, description, order: 7, enabled: true }],
+            cards: [...item.megaDropdown.cards, {
+              key: "tubing-assemblies-card", categoryKey: "tubing-assemblies", title, description, href, order: 7, enabled: true,
+              images: tubingAssemblyTypes.map((type, index) => ({ ...productImage(type.image,
+                { "zh-CN": type.name, en: tubingAssemblyNavigation.en.families[index], ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].families[index]])) },
+                { "zh-CN": type.menuDescription, en: tubingAssemblyNavigation.en.descriptions[index], ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].descriptions[index]])) },
+                { "zh-CN": "/products/", en: `/en/products/tubing-assemblies/${type.id}/`, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `/${code}/products/tubing-assemblies/${type.id}/`])) }),
+                ...tubingAssemblyMenuImages[type.id],
+                alt: { "zh-CN": type.name, en: `${tubingAssemblyNavigation.en.families[index]} — ${tubingAssemblyNavigation.en.descriptions[index]}`, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `${tubingAssemblyNavigation[code].families[index]} — ${tubingAssemblyNavigation[code].descriptions[index]}`])) },
+              })),
+            }],
+          },
+          mobileChildren: [...(item.mobileChildren ?? []), { key: "mobile-products-tubing-assemblies", label: title, href, order: 7, enabled: true }],
+        };
+      }
+      if (item.key === "applications" && ["en", "es", "fr", "ko", "ru"].includes(locale)) {
+        const indexHref = { ...localizedPath("/applications/"), "zh-CN": "/applications/ivd/" };
+        return {
+          ...item,
+          href: indexHref,
+          megaDropdown: item.megaDropdown
+            ? { ...item.megaDropdown, footerHref: indexHref }
+            : undefined,
+          mobileChildren: [
+            {
+              key: "mobile-applications-all",
+              label: { "zh-CN": "全部应用领域", en: "All applications", es: "Todas las aplicaciones", fr: "Toutes les applications", ko: "모든 응용 분야", ru: "Все области применения" },
+              href: indexHref,
+              order: 0,
+              enabled: true,
+            },
+            ...(item.mobileChildren ?? []),
+          ],
+        };
+      }
       /*
          联系与合作特殊逻辑：
 
@@ -2537,7 +2602,13 @@ export function getLocalizedText(text: LocalizedText, locale: string) {
 export function getLocalizedHref(href: LocalizedHref, locale: string) {
   const normalizedLocale = normalizeNavigationLocale(locale);
 
-  return href[normalizedLocale] ?? href.en ?? href["zh-CN"] ?? "/";
+  const target = href[normalizedLocale] ?? href.en ?? href["zh-CN"] ?? "/";
+  if (normalizedLocale === "en") return resolveEnglishApplicationArticleHref(target);
+  if (normalizedLocale !== "zh-CN" && target.startsWith(`/${normalizedLocale}/applications/`)) {
+    const englishTarget = target.replace(`/${normalizedLocale}/applications/`, "/en/applications/");
+    return resolveEnglishApplicationArticleHref(englishTarget).replace(/^\/en\/applications\//, `/${normalizedLocale}/applications/`);
+  }
+  return resolveLocalizedIvdQuery(target);
 }
 /* ================================
    导航栏后端接口路径预留

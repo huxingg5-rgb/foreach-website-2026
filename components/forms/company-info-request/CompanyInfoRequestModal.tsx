@@ -31,6 +31,7 @@ import {
   useRef,
   useState,
   type FormEvent,
+  type ReactNode,
   type MouseEvent as ReactMouseEvent,
   type PointerEvent as ReactPointerEvent,
 } from "react";
@@ -235,6 +236,14 @@ interface CompanyInfoRequestModalProps {
   /* 弹窗说明 */
   description: string;
 
+  /* Optional assembly copy; callers without this prop keep the original form. */
+  copyOverrides?: Partial<Pick<
+    ReturnType<typeof getCompanyInfoRequestCopy>,
+    "summary" | "emailPlaceholder" | "notes" | "notesPlaceholder" | "back"
+  >>;
+
+  renderAttachments?: (disabled: boolean) => ReactNode;
+
   /* 当前申请条目 */
   items: CompanyInfoRequestItem[];
 
@@ -296,6 +305,8 @@ export default function CompanyInfoRequestModal({
   eyebrow,
   title,
   description,
+  copyOverrides,
+  renderAttachments,
   items,
   emptyTitle,
   emptyDescription,
@@ -310,7 +321,7 @@ export default function CompanyInfoRequestModal({
   onSubmitPreview,
 }: CompanyInfoRequestModalProps) {
   const isEnglish = locale !== "zh-CN";
-  const copy = getCompanyInfoRequestCopy(locale);
+  const copy = { ...getCompanyInfoRequestCopy(locale), ...copyOverrides };
   const getLocalizedInquiryError = (error: unknown) =>
     locale === "zh-CN" || locale === "en"
       ? getInquiryErrorMessage(error, locale === "en")
@@ -918,6 +929,8 @@ export default function CompanyInfoRequestModal({
                 />
               </label>
             </div>
+
+            {renderAttachments?.(isSubmitting)}
 
             {formError ? (
               <div className={styles.formError}>{formError}</div>

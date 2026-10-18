@@ -64,3 +64,44 @@ export const HOME_SITE_IDENTITY = {
     },
   ],
 };
+
+const ORGANIZATION_COPY: Record<string, { description: string; contactName: string }> = {
+  en: {
+    description: "FOREACH develops core components and fluid-path solutions for microfluidic systems used in IVD, life science, analytical instruments, synthetic biology and laboratory automation.",
+    contactName: "Product inquiries and selection support",
+  },
+  es: {
+    description: "FOREACH desarrolla componentes y soluciones para circuitos microfluídicos utilizados en diagnóstico in vitro, ciencias de la vida, instrumentación analítica, biología sintética y automatización de laboratorio.",
+    contactName: "Consultas de productos y asistencia en la selección",
+  },
+  fr: {
+    description: "FOREACH développe des composants et des solutions de circuits microfluidiques pour le diagnostic in vitro, les sciences de la vie, les instruments d’analyse, la biologie synthétique et l’automatisation de laboratoire.",
+    contactName: "Renseignements produits et aide à la sélection",
+  },
+  ko: {
+    description: "FOREACH는 체외진단, 생명과학, 분석기기, 합성생물학 및 실험실 자동화에 사용되는 미세유체 시스템의 핵심 부품과 유로 솔루션을 개발합니다.",
+    contactName: "제품 문의 및 선정 지원",
+  },
+  ru: {
+    description: "FOREACH разрабатывает компоненты и решения для микрофлюидных систем в диагностике in vitro, науках о жизни, аналитическом приборостроении, синтетической биологии и автоматизации лабораторий.",
+    contactName: "Консультации по продукции и помощь в подборе",
+  },
+};
+
+export function getSiteIdentity(locale: string) {
+  const language = locale === "en-US" ? "en" : locale;
+  const copy = ORGANIZATION_COPY[language];
+  if (!copy) return HOME_SITE_IDENTITY;
+  return {
+    ...HOME_SITE_IDENTITY,
+    "@graph": HOME_SITE_IDENTITY["@graph"].map((entity) => entity["@type"] === "Organization" ? {
+      ...entity,
+      description: copy.description,
+      contactPoint: {
+        ...entity.contactPoint,
+        name: copy.contactName,
+        url: new URL(`/${language}/contact/`, SITE_ORIGIN).href,
+      },
+    } : entity),
+  };
+}

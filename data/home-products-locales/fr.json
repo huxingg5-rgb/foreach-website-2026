@@ -1,0 +1,158 @@
+{
+  "title": "Nos produits",
+  "categoriesAriaLabel": "Catégories de produits",
+  "productCenter": "Catalogue produits",
+  "explore": "Découvrir : {name}",
+  "discuss": "Discuter de votre configuration : {name}",
+  "conceptAlt": "Illustration d’un concept d’ensemble de tubes",
+  "conceptLabel": "Vue illustrative",
+  "resultCount": "{count} familles de produits affichées",
+  "groups": {
+    "Featured": "À découvrir",
+    "Pumps": "Pompes",
+    "Valves": "Vannes",
+    "Probes": "Aiguilles",
+    "Tubing": "Tubes",
+    "Fittings": "Raccords",
+    "Smart Control": "Contrôle intelligent",
+    "Tubing Assemblies": "Ensembles de tubes"
+  },
+  "products": {
+    "plunger": {
+      "name": "Pompes à piston",
+      "description": "Aspiration et distribution contrôlées d’échantillons et de réactifs pour le dosage de liquides dans les instruments."
+    },
+    "dpl": {
+      "name": "Pompes à membrane",
+      "description": "Transfert de liquides, amorçage et lavage pour l’alimentation et la vidange des circuits d’instruments."
+    },
+    "smtp2": {
+      "name": "Module de pipetage SMTP2",
+      "description": "Entraînement et commande intégrés, avec détection du niveau de liquide, de la présence d’embout et des obstructions pour le pipetage automatisé."
+    },
+    "rpl": {
+      "name": "Pompes doseuses sans clapets",
+      "description": "Conception sans clapets pour le dosage de liquides, la distribution et le transfert de réactifs dans les instruments."
+    },
+    "assembly": {
+      "name": "Ensembles de tubes",
+      "description": "Ensembles de tubes sur mesure à collets, bagues de retenue ou ferrules pour les circuits fluidiques des instruments."
+    },
+    "tube": {
+      "name": "Tubes",
+      "description": "Tubes rigides et souples en PVC et autres matériaux, avec diamètres intérieur et extérieur et longueurs personnalisables."
+    },
+    "quick": {
+      "name": "Raccords rapides",
+      "description": "Pour tubes de diamètre intérieur de 1,6 à 19,0 mm. Versions en ligne ou pour traversée de cloison, avec ou sans clapet. Configurations sur mesure disponibles."
+    },
+    "needle": {
+      "name": "Aiguilles",
+      "description": "Aiguilles personnalisables pour le prélèvement, le perçage et le lavage."
+    },
+    "flanged-tubing": {
+      "name": "Tubes à collet",
+      "description": "Tubes sur mesure à collet sur une ou deux extrémités, pour les orifices à fond plat correspondants."
+    },
+    "retaining-ring-kits": {
+      "name": "Kits à bague de retenue",
+      "description": "Kits de raccordement de tubes avec manchons de retenue et joints d’étanchéité. Configurations sur mesure disponibles."
+    },
+    "ferrule-kits": {
+      "name": "Kits à ferrule",
+      "description": "Kits de raccords et ferrules pour raccorder les tubes sans collet préformé. Configurations sur mesure disponibles."
+    },
+    "family0": {
+      "name": "Pompes à seringue",
+      "description": "Ensembles intégrant seringue et vanne."
+    },
+    "mrv": {
+      "name": "Vannes rotatives",
+      "description": "Sélection et commutation des circuits fluidiques."
+    },
+    "family2": {
+      "name": "Électrovannes",
+      "description": "Commande électrique des circuits fluidiques d’instruments."
+    },
+    "family3": {
+      "name": "Vannes haute pression",
+      "description": "Différentes configurations de vannes pour les circuits fluidiques exigeants."
+    },
+    "family4": {
+      "name": "Aiguilles de prélèvement",
+      "description": "Aspiration et transfert d’échantillons."
+    },
+    "family5": {
+      "name": "Aiguilles de perçage",
+      "description": "Différentes configurations d’aiguilles pour les opérations de perçage."
+    },
+    "family6": {
+      "name": "Aiguilles de lavage",
+      "description": "Aiguilles pour les opérations de lavage des instruments."
+    },
+    "family7": {
+      "name": "Palettes d’agitation",
+      "description": "Composants de mélange pour les opérations des instruments."
+    },
+    "family8": {
+      "name": "Tubes en PVC",
+      "description": "Consultez les options de matériau et de dimensions."
+    },
+    "family9": {
+      "name": "Tubes en TPU",
+      "description": "Consultez les options de matériau et de dimensions."
+    },
+    "family10": {
+      "name": "Tubes en FEP",
+      "description": "Consultez les options de matériau et de dimensions."
+    },
+    "family11": {
+      "name": "Tubes en PTFE",
+      "description": "Consultez les options de matériau et de dimensions."
+    },
+    "family12": {
+      "name": "Tubes en PEEK",
+      "description": "Consultez les options de matériau et de dimensions."
+    },
+    "family13": {
+      "name": "Tubes en PFA",
+      "description": "Consultez les options de matériau et de dimensions."
+    },
+    "family14": {
+      "name": "Raccords pour tubes rigides",
+      "description": "Raccordement des tubes rigides."
+    },
+    "family15": {
+      "name": "Raccords cannelés",
+      "description": "Raccordement des tubes souples."
+    },
+    "family16": {
+      "name": "Raccords filetés à embout cannelé",
+      "description": "Raccordement des orifices filetés aux tubes."
+    },
+    "family17": {
+      "name": "Raccords Luer",
+      "description": "Différentes options de raccordement Luer."
+    },
+    "family18": {
+      "name": "Adaptateurs à filetage femelle",
+      "description": "Adaptateurs pour raccordements filetés."
+    },
+    "family19": {
+      "name": "Raccords cannelés pour traversée de cloison",
+      "description": "Raccordements de tubes pour montage sur panneau."
+    },
+    "family20": {
+      "name": "Filtres et clapets antiretour",
+      "description": "Composants pour vos circuits fluidiques."
+    },
+    "family21": {
+      "name": "Détecteurs de bulles d’air",
+      "description": "Surveillance des bulles d’air dans les tubes."
+    },
+    "family22": {
+      "name": "Capteurs de pression",
+      "description": "Surveillance de la pression dans vos circuits fluidiques."
+    }
+  }
+}

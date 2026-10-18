@@ -1,3 +1,4 @@
+import reviewedRussianApplicationText from "./application-russian-reviewed.json";
 import {
   ivdRuExactText,
   ivdRuReplacements,
@@ -452,6 +453,37 @@ export function createRussianExactText(
       overrides[source] ?? translateRussianSource(source),
     ]),
   );
+}
+
+/** Build complete reviewed copy only for the five legacy Russian application domains.
+ * Missing Chinese copy fails here instead of being replaced by a generic sentence.
+ * Other users of the legacy translation helpers retain their existing behavior.
+ */
+export function createReviewedRussianExactText(
+  source: unknown,
+): RussianApplicationExactText {
+  const dictionary: RussianApplicationExactText = reviewedRussianApplicationText;
+  const exactText: RussianApplicationExactText = {};
+  const collect = (value: unknown): void => {
+    if (typeof value === "string") {
+      if (!/[\u3400-\u9fff]/u.test(value)) return;
+      const translated = dictionary[value];
+      if (!translated?.trim() || /[\u3400-\u9fff]/u.test(translated)) {
+        throw new Error("Missing reviewed Russian application translation: " + value);
+      }
+      exactText[value] = translated;
+      return;
+    }
+    if (Array.isArray(value)) {
+      value.forEach(collect);
+      return;
+    }
+    if (value && typeof value === "object") {
+      Object.values(value).forEach(collect);
+    }
+  };
+  collect(source);
+  return exactText;
 }
 
 function translateRussianText(value: string, exactText: RussianApplicationExactText) {
