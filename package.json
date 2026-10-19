@@ -27,7 +27,8 @@
         "applications:check-routes": "tsx scripts/applications/generate-application-routes.ts --check",
         "search:generate": "npm run applications:check-routes && npm run products:build-link-index && npm run products:check-piston-redirects && npm run products:check-valveless-redirects && npm run products:check-piston-locales && tsx scripts/search/generate-site-search-index.ts && tsx scripts/search/generate-global-search-overlay-index.ts",
         "search:check": "tsx scripts/search/generate-site-search-index.ts --check && tsx scripts/search/generate-global-search-overlay-index.ts --check",
-        "build:cloudflare": "npm run search:generate && node scripts/cloudflare/build-pages.mjs && node scripts/seo/normalize-static-urls.mjs && node scripts/seo/generate-sitemap.mjs",
+        "build:cloudflare": "npm run search:generate && node scripts/cloudflare/build-pages.mjs && node scripts/seo/normalize-static-urls.mjs && node scripts/seo/generate-sitemap.mjs && npm run applications:check-indexability",
+        "applications:check-indexability": "node scripts/seo/check-application-indexability.mjs",
         "seo:audit": "node scripts/seo/audit-url-consistency.mjs"
     },
     "dependencies": {

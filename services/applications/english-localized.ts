@@ -129,7 +129,7 @@ export function getEnglishApplicationMetadata(source: ApplicationDocument, kind:
   const image = { url: reviewDomains[kind].image, width: 1920, height: 800, alt: document.title };
   return {
     title: document.seoTitle, description: document.description,
-    robots: { index: false, follow: false },
+    robots: { index: true, follow: true },
     openGraph: { title: document.seoTitle, description: document.description, type: 'website', locale: 'en_US', siteName: 'FOREACH', images: [image] },
     twitter: { card: 'summary_large_image', title: document.seoTitle, description: document.description, images: [image] },
   };

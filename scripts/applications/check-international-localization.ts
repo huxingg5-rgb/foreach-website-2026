@@ -71,8 +71,7 @@ async function main() {
       assert.equal(metadata.description, document.description);
       assert.equal(metadata.alternates?.canonical, getCanonicalUrl(href));
       for (const other of ['en', ...applicationTranslationLocales] as const) assert.equal(metadata.alternates?.languages?.[other], getCanonicalUrl(localizedApplicationHref(other, route.kind, route.slug)));
-      if (route.slug || route.kind === 'ivd') assert.deepEqual(metadata.robots, { index: false, follow: false }, `${href}: review robots`);
-      else assert.equal(metadata.robots, undefined, `${href}: existing hub publication setting`);
+      assert.deepEqual(metadata.robots, { index: true, follow: true }, `${href}: published application must allow indexing`);
       const resources = await getLocalizedApplicationResources(locale, route.kind, document);
       if (route.kind === 'analytical-instruments' && isLiquidChromatographySlug(document.slug)) {
         const originalResources = getLiquidChromatographyResources(document.slug);

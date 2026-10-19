@@ -127,9 +127,7 @@ export function getLocalizedApplicationMetadata(locale: ApplicationTranslationLo
   const image = { url: reviewDomains[kind].image, width: 1920, height: 800, alt: getApplicationIndexData(locale).copy.areas[kind].imageAlt };
   return {
     title: document.seoTitle, description: document.description, keywords: [...document.keywords],
-    // Existing non-IVD industry roots retain their publication setting. New
-    // articles and existing IVD review pages remain in local review mode.
-    ...(document.slug || kind === 'ivd' ? { robots: { index: false, follow: false } } : {}),
+    robots: { index: true, follow: true },
     alternates: { canonical: languages[locale], languages: { ...languages, ...(!document.slug ? { 'zh-CN': getCanonicalUrl(`/applications/${kind}/`) } : {}), 'x-default': languages.en } },
     openGraph: { title: document.seoTitle, description: document.description, type: 'website', siteName: 'FOREACH', url: languages[locale], locale: { es: 'es_ES', fr: 'fr_FR', ko: 'ko_KR', ru: 'ru_RU' }[locale], images: [image] },
     twitter: { card: 'summary_large_image', title: document.seoTitle, description: document.description, images: [image] },

@@ -123,7 +123,7 @@ export function getIvdMetadata(locale: IvdLocale, document: ApplicationDocument)
   const languages = Object.fromEntries(ivdLocales.map(language => [language, getCanonicalUrl(ivdDocumentHref(language, document.slug))]));
   const image = { url: reviewDomains.ivd.image, width: 1920, height: 800, alt: getApplicationIndexData(locale).copy.heroImageAlt };
   return {
-    title: document.seoTitle, description: document.description, keywords: [...document.keywords], robots: { index: false, follow: false },
+    title: document.seoTitle, description: document.description, keywords: [...document.keywords], robots: { index: true, follow: true },
     alternates: { canonical: languages[locale], languages: { ...languages, ...(!document.slug ? { 'zh-CN': getCanonicalUrl('/applications/ivd/') } : {}), 'x-default': languages.en } },
     openGraph: { title: document.seoTitle, description: document.description, type: 'website', siteName: 'FOREACH', url: languages[locale], locale: { en: 'en_US', es: 'es_ES', fr: 'fr_FR', ko: 'ko_KR', ru: 'ru_RU' }[locale], images: [image] },
     twitter: { card: 'summary_large_image', title: document.seoTitle, description: document.description, images: [image] },

@@ -73,7 +73,7 @@ async function main() {
     for (const sectionId of ['working-conditions', 'acceptance', 'fault-recovery']) {
       assert.match(JSON.stringify(document.sections.find(section => section.id === sectionId)), new RegExp(marker, 'i'), `${slug}/${sectionId}`);
     }
-    assert.deepEqual(getEnglishApplicationMetadata(source, 'environmental-monitoring').robots, { index: false, follow: false });
+    assert.deepEqual(getEnglishApplicationMetadata(source, 'environmental-monitoring').robots, { index: true, follow: true });
     const analytical = await getReviewDocument('analytical-instruments', slug.replace('sampling-prep', 'sample-prep'));
     assert.ok(analytical);
     const analyticalDocument = getEnglishApplicationDocument(analytical, 'analytical-instruments');
