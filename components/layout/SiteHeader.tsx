@@ -213,6 +213,8 @@ export default function SiteHeader() {
   const pathname = usePathname(); // 获取当前页面路径，例如 /、/about/culture、/en/resources/datasheets 等
   const router = useRouter();
   const normalizedPathname = pathname.replace(/\/+$/, "");
+  const isLocalizedApplicationDomainPage =
+    /^\/(?:en|es|fr|ko|ru)\/applications\/(?:ivd|life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology)(?:\/|$)/.test(normalizedPathname);
   const isEnglishSv10VideoPage = normalizedPathname === sv10Video.detailHref.replace(/\/+$/, "");
   const isSolenoidPage = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/valves\/solenoid-valves(?:\/(?:sv10-(?:p|threaded|b16)|[23]-way))?$/.test(normalizedPathname);
   const isMrv3Page = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/valves\/rotary-valves(?:\/mrv3-d(?:10|16|24))?$/.test(normalizedPathname);
@@ -532,7 +534,7 @@ const isFittingReplacementDetailPage =
   const shouldUseSolidHeader =
     isScrolled ||
     isFittingReplacementDetailPage || isNewsArticlePage ||
-    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage || isEnglishSv10VideoPage ||
+    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage || isEnglishSv10VideoPage || isLocalizedApplicationDomainPage ||
     isUnknownTopLevelPath ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||
@@ -1107,7 +1109,7 @@ const isFittingReplacementDetailPage =
       <header
         ref={headerRef}
         className={`site-header ${headerLocaleClass} ${shouldUseSolidHeader ? "site-header-scrolled" : ""
-          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isEnglishSv10VideoPage
+          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isEnglishSv10VideoPage || isLocalizedApplicationDomainPage
             ? "site-header-solid-page"
             : ""
           } ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
