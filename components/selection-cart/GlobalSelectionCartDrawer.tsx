@@ -39,6 +39,7 @@ import CompanyInfoRequestModal, {
   type CompanyInfoFormValue,
   type CompanyInfoRequestItem,
 } from "@/components/forms/company-info-request/CompanyInfoRequestModal";
+import InquiryAttachmentField from "@/components/forms/company-info-request/InquiryAttachmentField";
 import { getDrawingRequestCopy } from "@/components/forms/company-info-request/copy";
 import { getLocalizedFilterOptionLabel } from "@/components/products/selection/filter-option-i18n";
 import { getLocaleFromPathname, isInternationalLocale, type LocaleCode } from "@/lib/i18n";
@@ -171,6 +172,7 @@ export default function GlobalSelectionCartDrawer() {
   /* 图纸申请弹窗是否打开 */
   const [isDrawingRequestModalOpen, setIsDrawingRequestModalOpen] =
     useState(false);
+  const [drawingRequestFiles, setDrawingRequestFiles] = useState<File[]>([]);
 
   /* 用于记录清单变化，避免页面初次加载时触发动效 */
   const previousCartSignatureRef = useRef("");
@@ -259,6 +261,7 @@ export default function GlobalSelectionCartDrawer() {
      3. 不使用浏览器 alert，体验更像官网表单
   ========================================================= */
   function handleOpenDrawingRequestModal() {
+    setDrawingRequestFiles([]);
     /*
      * “申请图纸”代表客户希望为当前清单统一申请图纸。
      *
@@ -417,26 +420,30 @@ export default function GlobalSelectionCartDrawer() {
       .filter(Boolean)
       .join("\n");
 
+    const submission = new FormData();
+    const fields = {
+      name: formValue.name.trim(),
+      company: formValue.company.trim(),
+      email: formValue.email.trim(),
+      phone: formValue.phone.trim(),
+      requestType: "Drawing Request",
+      productType: productTypeText.slice(0, 200) || "Selected Products",
+      targetModel: targetModelText.slice(0, 200),
+      projectStage: "Drawing Request Review",
+      message: requirementText,
+      locale,
+    };
+    Object.entries(fields).forEach(([key, value]) => {
+      submission.append(key, value);
+    });
+    drawingRequestFiles.forEach((file) => {
+      submission.append("attachments", file, file.name);
+    });
+
     const response = await fetch("/api/inquiry/submit", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
       credentials: "same-origin",
-      body: JSON.stringify({
-        name: formValue.name.trim(),
-        company: formValue.company.trim(),
-        email: formValue.email.trim(),
-        phone: formValue.phone.trim(),
-        requestType: "Drawing Request",
-        productType:
-          productTypeText.slice(0, 200) || "Selected Products",
-        targetModel: targetModelText.slice(0, 200),
-        projectStage: "Drawing Request Review",
-        message: requirementText,
-        locale,
-        attachments: [],
-      }),
+      body: submission,
     });
 
     const data = (await response
@@ -456,6 +463,7 @@ export default function GlobalSelectionCartDrawer() {
      * 选型产品本身继续保留，便于客户后续生成 PDF 或提交报价需求。
      */
     setAllDrawingNeeds(false);
+    setDrawingRequestFiles([]);
   }
   /* =========================================================
      打印区域
@@ -680,7 +688,19 @@ export default function GlobalSelectionCartDrawer() {
                               removeItem(item.id);
                             }}
                           >
-                            ×
+                            <svg
+                              viewBox="0 0 20 20"
+                              width="16"
+                              height="16"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="1.8"
+                              strokeLinecap="round"
+                              focusable="false"
+                              aria-hidden="true"
+                            >
+                              <path d="M5 5L15 15M15 5L5 15" />
+                            </svg>
                           </button>
 
                           <div className={styles.itemHead}>
@@ -781,7 +801,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={handleOpenDrawingRequestModal}
               >
-                {isEnglish ? t("Request Drawings") : "申请图纸"}
+                {cartCopy.requestQuote}
               </button>
 
               <button
@@ -820,6 +840,15 @@ export default function GlobalSelectionCartDrawer() {
         isOpen={isDrawingRequestModalOpen}
         title={isEnglish ? t("Request Drawings") : "申请图纸"}
         description={drawingCopy.description}
+        renderAttachments={(disabled) => (
+          <InquiryAttachmentField
+            key={locale}
+            locale={locale}
+            files={drawingRequestFiles}
+            disabled={disabled}
+            onChange={setDrawingRequestFiles}
+          />
+        )}
         items={drawingRequestModalItems}
         emptyTitle={drawingCopy.emptyTitle}
         emptyDescription={drawingCopy.emptyDescription}
@@ -832,6 +861,7 @@ export default function GlobalSelectionCartDrawer() {
         analyticsSourceSection="global_selection_cart"
         onClose={() => {
           setIsDrawingRequestModalOpen(false);
+          setDrawingRequestFiles([]);
         }}
         onSubmitPreview={handleSubmitDrawingRequest}
       />

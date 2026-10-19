@@ -5,6 +5,7 @@ import {
   ensureSameOrigin,
   escapeHtml,
   handleInquiryError,
+  InquiryRequestError,
   isValidEmail,
   jsonResponse,
   normalizeEmail,
@@ -32,6 +33,99 @@ type AttachmentMetadata = {
   type: string;
   size: number;
 };
+
+type PreparedAttachment = {
+  metadata: AttachmentMetadata;
+  email: { filename: string; content: string };
+  digest: string;
+};
+
+const MAX_ATTACHMENT_COUNT = 5;
+const MAX_SINGLE_ATTACHMENT_BYTES = 20 * 1024 * 1024;
+const MAX_TOTAL_ATTACHMENT_BYTES = 20 * 1024 * 1024;
+const MAX_MULTIPART_BODY_BYTES = 24 * 1024 * 1024;
+const ALLOWED_ATTACHMENT_EXTENSIONS = new Set([
+  "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx",
+  "jpg", "jpeg", "png", "webp", "zip", "rar", "dxf", "dwg",
+]);
+
+async function readInquiryRequest(request: Request): Promise<{
+  body: Record<string, unknown>;
+  uploadedAttachments: File[];
+}> {
+  const contentType = request.headers.get("Content-Type")?.toLowerCase() || "";
+  if (!contentType.startsWith("multipart/form-data")) {
+    return {
+      body: await readJsonBody(request, 48_000),
+      uploadedAttachments: [],
+    };
+  }
+
+  const contentLength = Number(request.headers.get("Content-Length") || "0");
+  if (Number.isFinite(contentLength) && contentLength > MAX_MULTIPART_BODY_BYTES) {
+    throw new InquiryRequestError(413, "attachments_total_too_large");
+  }
+
+  const formData = await request.formData();
+  const body: Record<string, unknown> = {};
+  for (const [key, value] of formData.entries()) {
+    if (typeof value === "string") body[key] = value;
+  }
+  return {
+    body,
+    uploadedAttachments: formData.getAll("attachments").filter(
+      (value): value is File => typeof value !== "string",
+    ),
+  };
+}
+
+async function prepareUploadedAttachments(files: File[]): Promise<PreparedAttachment[]> {
+  if (files.length > MAX_ATTACHMENT_COUNT) {
+    throw new InquiryRequestError(400, "too_many_attachments");
+  }
+
+  let totalSize = 0;
+  const preparedAttachments: PreparedAttachment[] = [];
+  for (let index = 0; index < files.length; index += 1) {
+    const file = files[index];
+    if (file.size <= 0) throw new InquiryRequestError(400, "attachment_empty");
+    if (file.size > MAX_SINGLE_ATTACHMENT_BYTES) {
+      throw new InquiryRequestError(413, "attachment_too_large");
+    }
+    totalSize += file.size;
+    if (totalSize > MAX_TOTAL_ATTACHMENT_BYTES) {
+      throw new InquiryRequestError(413, "attachments_total_too_large");
+    }
+
+    const safeFileName = cleanText(file.name, 180)
+      .replace(/[\\/:*?"<>|\u0000-\u001f\u007f]/g, "_").trim()
+      || `attachment-${index + 1}`;
+    const extension = safeFileName.includes(".")
+      ? safeFileName.slice(safeFileName.lastIndexOf(".") + 1).toLowerCase()
+      : "";
+    if (!ALLOWED_ATTACHMENT_EXTENSIONS.has(extension)) {
+      throw new InquiryRequestError(400, "attachment_type_not_allowed");
+    }
+
+    const arrayBuffer = await file.arrayBuffer();
+    const digestBuffer = await crypto.subtle.digest("SHA-256", arrayBuffer);
+    const digest = Array.from(new Uint8Array(digestBuffer))
+      .map((byte) => byte.toString(16).padStart(2, "0")).join("");
+    preparedAttachments.push({
+      metadata: {
+        name: safeFileName,
+        type: file.type || "application/octet-stream",
+        size: file.size,
+      },
+      email: {
+        filename: safeFileName,
+        content: Buffer.from(arrayBuffer).toString("base64"),
+      },
+      digest,
+    });
+  }
+  return preparedAttachments;
+}
 
 function normalizeAttachments(
   value: unknown,
@@ -120,15 +214,16 @@ function buildAttachmentText(
  * 5. 成功后删除邮箱验证状态
  *
  * 当前附件说明：
- * - 本接口只接收附件名称、类型和大小
- * - 不直接上传附件文件内容
- * - 客户可回复确认邮件发送原始附件
+ * - JSON 请求保留原有附件元数据行为
+ * - multipart 请求接收原始附件，并附至公司通知邮件
+ * - 附件数量、类型及大小限制与 Cloudflare 接口一致
  */
 export async function POST(request: Request): Promise<Response> {
   try {
     ensureSameOrigin(request);
 
-    const body = await readJsonBody(request, 48_000);
+    const { body, uploadedAttachments } = await readInquiryRequest(request);
+    const preparedAttachments = await prepareUploadedAttachments(uploadedAttachments);
 
     const name = cleanText(body.name, 100);
     const company = cleanText(body.company, 160);
@@ -195,8 +290,9 @@ export async function POST(request: Request): Promise<Response> {
         ? "No additional CAD requirements provided."
         : "");
 
-    const attachments =
-      normalizeAttachments(body.attachments);
+    const attachments = preparedAttachments.length > 0
+      ? preparedAttachments.map((attachment) => attachment.metadata)
+      : normalizeAttachments(body.attachments);
 
     if (!name && !isCadRequest) {
       return jsonResponse(
@@ -293,6 +389,9 @@ export async function POST(request: Request): Promise<Response> {
         productModel,
         currentUrl,
         attachments,
+        ...(preparedAttachments.length > 0
+          ? [preparedAttachments.map((attachment) => attachment.digest)]
+          : []),
       ]),
     );
 
@@ -333,11 +432,17 @@ export async function POST(request: Request): Promise<Response> {
           ${buildTableRow("Selected Files", attachmentText)}
         </table>
 
+        ${preparedAttachments.length > 0 ? `
+        <p style="margin:24px 0 0;font-size:13px;line-height:1.7;color:#67758a;">
+          The original customer files are attached to this notification.
+        </p>
+        ` : `
         <p style="margin:24px 0 0;font-size:13px;line-height:1.7;color:#67758a;">
           File names are listed for reference only.
           The original files are not attached to this notification.
           Please ask the customer to reply with the files if required.
         </p>
+        `}
 
         <p style="margin:12px 0 0;font-size:13px;line-height:1.7;color:#67758a;">
           Reply directly to this email to contact the customer.
@@ -370,14 +475,22 @@ export async function POST(request: Request): Promise<Response> {
           ${escapeHtml(productType || targetModel || "-")}
         </div>
 
+        ${preparedAttachments.length > 0 ? `
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#596980;">
+          Your selected files have been received successfully.
+        </p>
+        ` : `
         <p style="margin:0;font-size:14px;line-height:1.7;color:#596980;">
           If you selected drawings, BOM files, images, or other attachments,
           please reply to this confirmation email with the original files.
         </p>
+        `}
 
         <p style="margin:20px 0 0;font-size:14px;line-height:1.7;color:#596980;">
           感谢您的询盘。恒永达团队将尽快查看需求并与您联系。
-          如需提交图纸或其他附件，可直接回复本邮件并添加附件。
+          ${preparedAttachments.length > 0
+            ? "您选择的附件已成功接收。"
+            : "如需提交图纸或其他附件，可直接回复本邮件并添加附件。"}
         </p>
       `,
     );
@@ -401,8 +514,9 @@ export async function POST(request: Request): Promise<Response> {
       `Current URL: ${currentUrl || "-"}\n` +
       `Requirement: ${displayedMessage || "-"}\n` +
       `Selected Files:\n${attachmentText}\n\n` +
-      "The original files are not attached. " +
-      "Ask the customer to reply with them if required.";
+      (preparedAttachments.length > 0
+        ? "The original customer files are attached to this notification."
+        : "The original files are not attached. Ask the customer to reply with them if required.");
 
     const confirmationText =
       `Dear ${displayedName},\n\n` +
@@ -411,8 +525,9 @@ export async function POST(request: Request): Promise<Response> {
       `Reference: ${referenceId}\n` +
       `Request Type: ${requestType}\n` +
       `Product: ${productType || targetModel || "-"}\n\n` +
-      "If you selected files, please reply to this email " +
-      "with the original attachments.\n\n" +
+      (preparedAttachments.length > 0
+        ? "Your selected files have been received successfully.\n\n"
+        : "If you selected files, please reply to this email with the original attachments.\n\n") +
       "Our team will contact you as soon as possible.";
 
     await Promise.all([
@@ -426,6 +541,9 @@ export async function POST(request: Request): Promise<Response> {
             `[FOREACH Website Inquiry] ${company} · ${requestType}`,
           html: notificationHtml,
           text: notificationText,
+          ...(preparedAttachments.length > 0 ? {
+            attachments: preparedAttachments.map((attachment) => attachment.email),
+          } : {}),
           idempotencyKey:
             `inquiry-notification-${formFingerprint}`,
         },

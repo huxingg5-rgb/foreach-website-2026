@@ -396,9 +396,9 @@
 
 .relatedProductImage img {
   box-sizing: border-box;
-  padding: 0;
+  padding: 10px 0;
   object-fit: contain;
-  transform: scale(1.14);
+  transform: none;
 }
 
 .relatedProductBody {

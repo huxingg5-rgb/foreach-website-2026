@@ -127,6 +127,7 @@
 ========================================================= */
 
 .installation-guide-main {
+  scroll-margin-top: 96px;
   width: min(1600px, calc(100% - 80px));
   margin: 0 auto;
   padding: 64px 0 96px;

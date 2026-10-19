@@ -63,7 +63,11 @@ export function getControlModuleProductDetailData(detail: ControlModuleDetail) {
     imagePath: controlModuleMainImage,
     imageUrl: controlModuleMainImage,
     heroImage: mainImage,
-    additionalImages: [],
+    additionalImages: detail.slug === "pdm5-pressure-sensor" ? [
+      "/images/products/control/foreach-pdm5-pressure-sensor-front.webp",
+      "/images/products/control/foreach-pdm5-pressure-sensor-lying.webp",
+      "/images/products/control/foreach-pdm5-pressure-sensor-top.webp",
+    ] : [],
 
     detailHref: getControlModulePath(detail.slug),
     href: getControlModulePath(detail.slug),

@@ -16,6 +16,35 @@ export function getSolenoidConfigurationImage(slug: "2-way" | "3-way", locale: S
   };
 }
 
+const twoWayGalleryFiles = ["barbed-ports", "base-seals"] as const;
+
+const twoWayGalleryAlts: Record<SelectionLocale, string[]> = {
+  zh: [
+    "FOREACH SV10-2 二通微型电磁阀实拍，展示两个倒刺接口",
+    "FOREACH SV10-2 二通微型电磁阀底部两个端口及 O 形密封圈特写",
+  ],
+  en: [
+    "FOREACH SV10-2 2-way miniature solenoid valve showing two barbed ports",
+    "Close-up of two base ports and O-ring seals on a FOREACH SV10-2 2-way miniature solenoid valve",
+  ],
+  es: [
+    "Electroválvula miniatura FOREACH SV10-2 de 2 vías con dos conexiones de espiga",
+    "Detalle de los dos puertos de base y juntas tóricas de una electroválvula miniatura FOREACH SV10-2 de 2 vías",
+  ],
+  fr: [
+    "Électrovanne miniature FOREACH SV10-2 à 2 voies avec deux raccords cannelés",
+    "Détail des deux orifices de base et des joints toriques d’une électrovanne miniature FOREACH SV10-2 à 2 voies",
+  ],
+  ko: [
+    "바브 포트 2개를 보여 주는 FOREACH SV10-2 2방향 소형 솔레노이드 밸브 실물 사진",
+    "FOREACH SV10-2 2방향 소형 솔레노이드 밸브의 하부 포트 2개와 O링 씰 확대 사진",
+  ],
+  ru: [
+    "Миниатюрный двухходовой электромагнитный клапан FOREACH SV10-2 с двумя штуцерами под шланг",
+    "Два порта основания и кольцевые уплотнения миниатюрного двухходового электромагнитного клапана FOREACH SV10-2 крупным планом",
+  ],
+};
+
 const threeWayGalleryFiles = [
   "assembly", "base-seals", "threaded-head", "barbed-ports", "connection-options", "manifold-assembly",
 ] as const;
@@ -72,8 +101,9 @@ const threeWayGalleryAlts: Record<SelectionLocale, string[]> = {
 };
 
 export function getSolenoidConfigurationGallery(slug: "2-way" | "3-way", locale: SelectionLocale) {
-  return slug === "3-way" ? {
-    additionalImages: threeWayGalleryFiles.map(name => `/images/products/valves/solenoid-valves/foreach-6010-3-way-${name}.webp`),
-    additionalImageAlts: threeWayGalleryAlts[locale],
-  } : { additionalImages: [], additionalImageAlts: [] };
+  const files = slug === "2-way" ? twoWayGalleryFiles : threeWayGalleryFiles;
+  return {
+    additionalImages: files.map(name => `/images/products/valves/solenoid-valves/foreach-6010-${slug}-${name}.webp`),
+    additionalImageAlts: (slug === "2-way" ? twoWayGalleryAlts : threeWayGalleryAlts)[locale],
+  };
 }

@@ -1,3 +1,4 @@
+import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜多语言材料兼容页面入口
@@ -106,18 +107,15 @@ export async function generateMetadata({
     if (!isSupportedLocale(locale)) return {};
 
     if (locale === "en") {
-        return {
-            title: "Material Compatibility｜Foreach Technology",
+        return buildInternationalPageMetadata({ locale, path: "/resources/material-compatibility/",
+            title: "Material Compatibility | FOREACH",
             description:
                 "Foreach material compatibility reference for chemical media, engineering plastics, material properties, and compliance documentation.",
-        };
+        });
     }
 
     const localizedMetadata = materialCompatibilityMetadata[locale];
-    return {
-        ...localizedMetadata,
-        openGraph: localizedMetadata,
-    };
+    return buildInternationalPageMetadata({ locale, path: "/resources/material-compatibility/", ...localizedMetadata });
 }
 
 /* =========================================================

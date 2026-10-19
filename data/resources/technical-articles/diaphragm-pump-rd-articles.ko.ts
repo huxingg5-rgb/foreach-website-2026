@@ -68,11 +68,11 @@ export const diaphragmPumpRdArticlesKo = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/01.svg",
-            "alt": "자흡 기동의 세 가지 관찰 시점",
-            "width": 1000,
-            "height": 650,
-            "caption": "개념도: 최초 액체 도달과 말단 안정 공급은 다른 시점입니다. 시간 간격은 펌프 실측값이 아닙니다."
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ko/diaphragm-pump-working-principle-clean.gif",
+            "alt": "다이어프램 펌프 애니메이션: 흡입 시 입구 밸브가 열리고 토출 시 출구 밸브가 열립니다.",
+            "width": 1100,
+            "height": 535,
+            "caption": "흡입·토출 사이클 개념도이며, 자흡 시간 측정 결과가 아닙니다."
           }
         ]
       },

@@ -68,11 +68,11 @@ export const diaphragmPumpRdArticlesFr = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/01.svg",
-            "alt": "Trois événements pendant l’amorçage",
-            "width": 1000,
-            "height": 650,
-            "caption": "Schéma : première arrivée du liquide et alimentation stable au point final sont deux événements distincts. Les écarts ne sont pas des temps mesurés sur une pompe."
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/fr/diaphragm-pump-working-principle-clean.gif",
+            "alt": "Animation d’une pompe à membrane : le clapet d’entrée s’ouvre à l’aspiration et le clapet de sortie au refoulement.",
+            "width": 1100,
+            "height": 535,
+            "caption": "Cycle d’aspiration et de refoulement (schéma ; ne représente pas une mesure du temps d’auto-amorçage)."
           }
         ]
       },

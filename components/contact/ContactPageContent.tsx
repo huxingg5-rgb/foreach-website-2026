@@ -25,7 +25,7 @@ import { useRef, useState } from "react"; // 寮曞叆 React 鐘舵€佺鐞�
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import type { ContactLocale, ContactPageData } from "@/data/contact-cooperation"; // 寮曞叆鑱旂郴鎴戜滑椤甸潰鏁版嵁绫诲瀷
-import AmapBlock from "@/components/contact/AmapBlock"; // 寮曞叆楂樺痉鍦板浘缁勪欢
+import ContactInformationSection from "@/components/contact/ContactInformationSection"; // 寮曞叆楂樺痉鍦板浘缁勪欢
 import ContactFormSection from "@/components/contact/ContactFormSection";
 import { trackBeginInquiry } from "@/lib/analytics/track-event";
 
@@ -119,7 +119,9 @@ export default function ContactPageContent({ data, locale }: ContactPageContentP
             {/* 椤甸潰涓绘爣棰?*/}
             <h1 className="contact-hero-title">
               {data.hero.titlePrefix}
+              {locale === "zh-CN" ? "" : " "}
               <span>{data.hero.highlightText}</span>
+              {locale === "zh-CN" ? "" : " "}
               {data.hero.titleSuffix}
             </h1>
 
@@ -196,49 +198,7 @@ export default function ContactPageContent({ data, locale }: ContactPageContentP
       {/* =====================================================
           鑱旂郴鏂瑰紡 + 楂樺痉鍦板浘
       ===================================================== */}
-      <section
-        className="contact-section contact-info-section"
-        id="contact-info"
-      >
-        <div className="contact-section-inner">
-          {/* 妯″潡鏍囬 */}
-          <div className="contact-section-head">
-            <h2 className="contact-section-title">{data.contactInfo.title}</h2>
-            <p className="contact-section-desc">
-              {data.contactInfo.description}
-            </p>
-          </div>
-
-          <div className="contact-info-layout">
-            {/* 宸︿晶鍏徃鑱旂郴淇℃伅 */}
-            <section className="contact-company-panel">
-              <h3>
-                {data.contactInfo.companyName}
-                <span>{data.contactInfo.companyPosition}</span>
-              </h3>
-
-              {data.contactInfo.rows.map((row) => (
-                <div className="contact-info-row" key={row.label}>
-                  <div>{row.label}</div>
-                  <div>{row.value}</div>
-                </div>
-              ))}
-            </section>
-
-            {/* 鍙充晶楂樺痉鍦板浘 */}
-            <AmapBlock
-              title={data.contactInfo.map.title}
-              address={data.contactInfo.map.address}
-              lng={data.contactInfo.map.lng}
-              lat={data.contactInfo.map.lat}
-              mapUrl={data.contactInfo.map.mapUrl}
-              loadingText={data.form.mapTexts.loading}
-              errorText={data.form.mapTexts.error}
-              openMapText={data.form.mapTexts.openMap}
-            />
-          </div>
-        </div>
-      </section>
+      <ContactInformationSection data={data} />
 
       {/* =====================================================
           搴曢儴 CTA

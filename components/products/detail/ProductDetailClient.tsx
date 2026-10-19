@@ -13,7 +13,8 @@ import { applyPipettingPumpFaq } from "@/data/products/detail/pipetting-pump-faq
 import { getPipettingModelBreadcrumbs } from "@/data/products/selection/pipetting-pump-breadcrumbs";
 import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
 import { getChineseProductPageBreadcrumbs } from "@/lib/seo/chinese-product-breadcrumbs";
-import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
+import { getSiteIdentity, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
+import { normalizeSiteHref } from "@/lib/seo/site-url";
 import { buildProductSpecProperties } from "@/lib/seo/product-spec-properties";
 import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
 import { getTubingGalleryData } from "@/data/products/tubing/gallery";
@@ -65,13 +66,16 @@ import CadRequestModal from "./CadRequestModal";
 import TubingAssemblyCustomRequestModal from "@/components/products/tubing-assemblies/TubingAssemblyCustomRequestModal";
 import TubingAssemblySizeTable from "@/components/products/tubing-assemblies/TubingAssemblySizeTable";
 import tubingAssemblySpecStyles from "@/components/products/tubing-assemblies/tubing-assembly-specifications.module.css";
-import ProductApplicationsPanel from "./ProductApplicationsPanel";
+import ProductApplicationsPanel, { ProductApplicationGuides } from "./ProductApplicationsPanel";
+import { getEnglishProductApplicationGuides } from "@/data/products/detail/applications/product-application-guides.en";
 import ProductDatasheetPanel from "./ProductDatasheetPanel";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import type { CSSProperties, MouseEvent, ReactNode } from "react";
+import { applyPdm5LocaleCopy } from "@/data/products/detail/pdm5-locales";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
+import { getHardTubeSeo } from "@/data/products/detail/hard-tube-seo";
 import { applyHpValveDetailCopy } from "@/data/products/detail/hp-content";
 import { applyValvelessEnglishMaterialNames } from "@/data/products/detail/valveless-pump-materials.en";
 import {
@@ -991,16 +995,16 @@ function localizeInternalHref(value: unknown, localePrefix: string): string {
   if (
     !localePrefix ||
     !href.startsWith("/") ||
-    /^\/(?:en|es|fr|ko|ru)(?:\/|$)/.test(href) ||
-    href.startsWith("/assets/") ||
-    href.startsWith("/images/") ||
-    href.startsWith("/_next/") ||
-    href.startsWith("/api/")
+    href.startsWith("//") ||
+    /^\/(?:_next|api|assets|documents|downloads|images|models|pdfjs|search-data|videos)(?:\/|$)/.test(href)
   ) {
     return href;
   }
 
-  return `${localePrefix}${href}`;
+  const localizedHref = /^\/(?:en|es|fr|ko|ru)(?:\/|$)/.test(href)
+    ? href
+    : `${localePrefix}${href}`;
+  return normalizeSiteHref(localizedHref);
 }
 
 const CUSTOM_PRODUCT_CATEGORY_IDS = new Set([
@@ -1381,7 +1385,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
   }
 
   const graph: Record<string, unknown>[] = [
-    ...HOME_SITE_IDENTITY["@graph"],
+    ...getSiteIdentity(locale)["@graph"],
     {
       "@type": "BreadcrumbList",
       "@id": breadcrumbId,
@@ -1501,7 +1505,9 @@ export default function ProductDetailClient({
 }: ProductDetailClientProps) {
   const pathname = usePathname();
   const isTubingAssembly = sourceData.category === "tubing-assemblies";
-  const isEnglish = pathname === "/en" || pathname.startsWith("/en/");
+  const isAssemblyChineseReview = isTubingAssembly && sourceData.__reviewLocale === "zh";
+  const isEnglishPath = pathname === "/en" || pathname.startsWith("/en/");
+  const isEnglish = isEnglishPath && !isAssemblyChineseReview;
   const pathnameLocale = String(pathname || "")
     .split("/")
     .filter(Boolean)[0] || "";
@@ -1510,7 +1516,7 @@ export default function ProductDetailClient({
     : null;
   const isTargetLanguage = Boolean(targetLocale);
   const isLocalizedDetail = isEnglish || isTargetLanguage;
-  const resourceLocale = isProductDetailResourceLocale(pathnameLocale)
+  const resourceLocale = !isAssemblyChineseReview && isProductDetailResourceLocale(pathnameLocale)
     ? pathnameLocale
     : null;
   const resourceCopy = resourceLocale
@@ -1522,7 +1528,7 @@ export default function ProductDetailClient({
     MOBILE_PRODUCT_TAB_LABELS[
       configuratorLocale as ProductDetailTabLocale
     ] || MOBILE_PRODUCT_TAB_LABELS.zh;
-  const localePrefix = isEnglish
+  const localePrefix = isEnglishPath
     ? "/en"
     : targetLocale
       ? `/${targetLocale}`
@@ -1542,6 +1548,8 @@ export default function ProductDetailClient({
           ? sourceData
           : localizeProductDetailData(sourceData)
         : sourceData;
+
+      localizedData = applyPdm5LocaleCopy(sourceData, localizedData, configuratorLocale);
 
       if (String(sourceData.category) === "tubing") {
         localizedData = { ...localizedData, ...getTubingGalleryData(sourceData.slug, configuratorLocale) };
@@ -2058,8 +2066,13 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
   const activeRealImage = hasRealImages
     ? realImages[Math.min(activeThumb, realImages.length - 1)]
     : null;
+  const hardTubeSeo = useMemo(
+    () => getHardTubeSeo(sourceData, configuratorLocale),
+    [sourceData, configuratorLocale],
+  );
   const productImageAlt = String(
-    (data as any).imageAltEn ||
+    hardTubeSeo?.imageAlt ||
+      (data as any).imageAltEn ||
       (data as any).mainImageAlt ||
       (data as any).imageAlt ||
       displayProductTitle ||
@@ -2067,8 +2080,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
   )
     .replace(/\s+/g, " ")
     .trim();
-  const additionalImageAlts = Array.isArray(data.additionalImageAlts)
-    ? data.additionalImageAlts.map((alt: unknown) =>
+  const sourceAdditionalImageAlts = hardTubeSeo?.additionalImageAlts || data.additionalImageAlts;
+  const additionalImageAlts = Array.isArray(sourceAdditionalImageAlts)
+    ? sourceAdditionalImageAlts.map((alt: unknown) =>
         String(alt || "")
           .replace(/\s+/g, " ")
           .trim(),
@@ -2720,7 +2734,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
   }
 
   return (
-    <div data-product-breadcrumb-shell="true">
+    <div data-product-breadcrumb-shell="true" lang={isAssemblyChineseReview ? "zh-CN" : undefined}>
       {structuredData ? (
         <script
           type="application/ld+json"
@@ -3283,6 +3297,10 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
             {reviewedIntroductionEn ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-reviewed-introduction="en">
                 {reviewedIntroductionEn.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : Array.isArray(data.pdm5IntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-pdm5-description="true">
+                {data.pdm5IntroductionParagraphs.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}
               </div>
             ) : configuratorLocale === "zh" && Array.isArray(data.quickConnectIntroductionParagraphsZh) ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-quick-connect-description="true">
@@ -3931,6 +3949,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
             ) : null}
           </div>
         </section>
+        {isEnglish ? <ProductApplicationGuides guides={getEnglishProductApplicationGuides(pathname)} /> : null}
         {/* QUICK_CONNECT_SERIES_MODEL_TABLE_START */}
         {Array.isArray((data as any).modelRows) &&
         (data as any).modelRows.length > 0 ? (

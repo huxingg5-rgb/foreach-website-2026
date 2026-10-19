@@ -1,0 +1,43 @@
+{
+  "sourceFile": "443-01-00063.stp",
+  "sourceSha256": "1c063335a2fb462e8044994e36d50ad417ccc8464fd48cc71d332536da3a2466",
+  "unit": "mm",
+  "bounds": {
+    "min": [
+      -5.4,
+      -1.3995075932388548,
+      -10.8
+    ],
+    "max": [
+      1.4,
+      1.3995075932388552,
+      0
+    ]
+  },
+  "centerZ": -5.4,
+  "overallLength": 10.8,
+  "overallBranchSpan": 6.800000000000001,
+  "centerToEnd": 5.4,
+  "branchCenterToEnd": 5.4,
+  "hoseEndToFillet": 3.5,
+  "boreDiameter": 1.2,
+  "tipDiameter": 1.6,
+  "shankDiameter": 1.8,
+  "barbDiameter": 1.9999999999994,
+  "bodyDiameter": 2.8,
+  "shoulderRadius": 0.5,
+  "lipRadius": 0.1,
+  "barbAngle": 19.99999999998,
+  "featureEntities": {
+    "bore": "#1157",
+    "branchBore": "#1179",
+    "tip": "#1296",
+    "shank": "#1368",
+    "crest": "#183",
+    "body": "#1424",
+    "shoulder": "#1621",
+    "lip": "#1762",
+    "cone": "#1324"
+  },
+  "manufacturingTolerances": null
+}

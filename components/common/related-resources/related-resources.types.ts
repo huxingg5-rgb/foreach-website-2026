@@ -16,6 +16,8 @@ export type RelatedResourcesProps = {
 export type RelatedArticleCard = Pick<TechnicalArticleItem, "id" | "slug" | "title" | "summary" | "date" | "coverImage">;
 export type RelatedResourcesData = {
   locale: RelatedResourcesLocale;
+  /** Review text may use a different language while all destination URLs keep locale. */
+  uiLocale?: RelatedResourcesLocale;
   primaryRelationKey?: string;
   videos: InstallationGuideCard[];
   products: { id: string; title: string; href: string; imageSrc: string; imageAlt: string }[];

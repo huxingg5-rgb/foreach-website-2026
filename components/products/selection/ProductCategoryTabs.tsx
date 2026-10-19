@@ -59,7 +59,7 @@ export default function ProductCategoryTabs({
             aria-current={activeCategoryId === category.id ? "page" : undefined}
           >{category.label}</Link> :
           <button
-            className={`category-tab ${
+            className={`${categoryTabStyles.tab} category-tab ${
               activeCategoryId === category.id ? "active" : ""
             }`}
             type="button"

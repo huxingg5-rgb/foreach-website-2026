@@ -24,31 +24,45 @@ type SiteFooterProps = {
 const footerLegalCopy: Record<
   LocaleCode,
   {
+    socialMedia: string;
+    visitSocial: (platform: string) => string;
     privacyPolicy: string;
     cookieSettings: string;
   }
 > = {
   "zh-CN": {
+    socialMedia: "Foreach 社交媒体",
+    visitSocial: (platform) => `访问 Foreach 的 ${platform} 主页`,
     privacyPolicy: "隐私政策",
     cookieSettings: "Cookie 设置",
   },
   en: {
+    socialMedia: "Foreach social media",
+    visitSocial: (platform) => `Visit Foreach on ${platform}`,
     privacyPolicy: "Privacy Policy",
     cookieSettings: "Cookie settings",
   },
   es: {
+    socialMedia: "Redes sociales de Foreach",
+    visitSocial: (platform) => `Visitar Foreach en ${platform}`,
     privacyPolicy: "Política de privacidad",
     cookieSettings: "Configuración de cookies",
   },
   fr: {
+    socialMedia: "Réseaux sociaux de Foreach",
+    visitSocial: (platform) => `Consulter Foreach sur ${platform}`,
     privacyPolicy: "Politique de confidentialité",
     cookieSettings: "Paramètres des cookies",
   },
   ko: {
+    socialMedia: "Foreach 소셜 미디어",
+    visitSocial: (platform) => `${platform}에서 Foreach 방문`,
     privacyPolicy: "개인정보 처리방침",
     cookieSettings: "쿠키 설정",
   },
   ru: {
+    socialMedia: "Социальные сети Foreach",
+    visitSocial: (platform) => `Посетить Foreach в ${platform}`,
     privacyPolicy: "Политика конфиденциальности",
     cookieSettings: "Настройки Cookie",
   },
@@ -168,7 +182,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               >
                 <div
                   className={styles.socialRow}
-                  aria-label="Foreach social media"
+                  aria-label={legalCopy.socialMedia}
                 >
                   {englishSocialLinks.map((item) => (
                     <a
@@ -177,7 +191,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                       key={item.key}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={"Visit Foreach on " + item.label}
+                      aria-label={legalCopy.visitSocial(item.label)}
                       title={item.label}
                     >
                       <img

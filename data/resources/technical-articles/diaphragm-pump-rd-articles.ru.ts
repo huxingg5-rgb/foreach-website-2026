@@ -68,11 +68,11 @@ export const diaphragmPumpRdArticlesRu = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/01.svg",
-            "alt": "Три события при самовсасывании",
-            "width": 1000,
-            "height": 650,
-            "caption": "Схема: первое появление жидкости и стабильная подача к рабочему выходу — разные события. Интервалы не являются измеренными временами насоса."
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/ru/diaphragm-pump-working-principle-clean.gif",
+            "alt": "Анимация мембранного насоса: впускной клапан открывается при всасывании, выпускной — при нагнетании.",
+            "width": 1100,
+            "height": 535,
+            "caption": "Цикл всасывания и нагнетания (схема, а не измерение времени самовсасывания)."
           }
         ]
       },

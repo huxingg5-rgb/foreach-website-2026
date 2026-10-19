@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { HOME_SITE_IDENTITY } from "@/lib/seo/site-identity";
+import { getSiteIdentity } from "@/lib/seo/site-identity";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
 import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
 
@@ -29,7 +29,7 @@ export default function ProductSelectionStructuredData({
   const graph = {
     "@context": "https://schema.org",
     "@graph": [
-      ...HOME_SITE_IDENTITY["@graph"],
+      ...getSiteIdentity(locale)["@graph"],
       {
         "@type": "CollectionPage",
         "@id": `${url}#webpage`,

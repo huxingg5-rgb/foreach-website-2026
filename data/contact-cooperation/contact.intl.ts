@@ -373,6 +373,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
           "Bubble Detector",
           "Conductivity / TDS Module",
           "Tubing / Fittings / Sampling Probe",
+          "Tubing Assemblies",
         ],
       },
       {
@@ -1852,4 +1853,4 @@ export function getContactIntlData(
       },
     },
   };
-} 
+}

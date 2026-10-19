@@ -316,6 +316,15 @@ body .site-page--expanded .home-company-about-title span {
   letter-spacing: 0.08em;
 }
 
+/* Keep Latin and Cyrillic homepage subtitles compact; preserve Chinese and Korean. */
+html:is([lang="en"], [lang="es"], [lang="fr"], [lang="ru"]) body main .home-company-about-title span {
+  letter-spacing: 0.02em;
+}
+
+html[lang="en"] .home-company-about-section .home-company-about-title span {
+  text-transform: none;
+}
+
 body .site-page--compact .home-company-intro-title {
   line-height: 1.2;
 }

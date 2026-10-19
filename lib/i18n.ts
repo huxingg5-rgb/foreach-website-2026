@@ -189,15 +189,15 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   en: {
-    heroTitleLine1: "Microfluidic Components",
-    heroTitleLine2: "& Fluidic Solutions",
+    heroTitleLine1: "Fluidic Components",
+    heroTitleLine2: "for OEM Instruments",
     heroSubtitle:
-      "Precision fluid control components and system support for diagnostics, life science and laboratory automation.",
+      "Pumps, valves, probes, sensors and fluidic connections for precision fluid handling in diagnostic, research, analytical and environmental instruments.",
     productButton: "View Products",
     contactButton: "Contact Support",
     testTitle: "From Core Components to Fluidic Systems",
     testDescription:
-      "We build a microfluidic product platform covering precision dispensing, flow path switching, pressure sensing, bubble detection, tubing connection, and system integration for automated analytical instruments.",
+      "Our fluidic components support precision dispensing, flow path switching, pressure sensing, bubble detection, tubing connection and system integration for automated instruments.",
   },
 
   es: {

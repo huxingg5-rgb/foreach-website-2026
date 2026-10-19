@@ -125,15 +125,15 @@ export const researchManufacturingImages = {
 
   applications: {
     ivd:
-      "/images/about/research-manufacturing/applications/ivd-diagnostics.webp",
+      "/images/applications/application-ivd-960.webp",
     lifeScience:
-      "/images/about/research-manufacturing/applications/life-science.webp",
+      "/images/applications/application-life-science-960.webp",
     analyticalInstrument:
-      "/images/about/research-manufacturing/applications/analytical-instrument.webp",
+      "/images/applications/application-analytical-instruments-960.webp",
     syntheticBiology:
-      "/images/about/research-manufacturing/applications/synthetic-biology.webp",
+      "/images/applications/application-synthetic-biology-960.webp",
     labAutomation:
-      "/images/about/research-manufacturing/applications/lab-automation.webp",
+      "/images/applications/application-lab-automation-960.webp",
   },
 
   why: "/images/about/research-manufacturing/why/why-choose-bg.webp",

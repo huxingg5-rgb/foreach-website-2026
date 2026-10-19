@@ -3,6 +3,8 @@
   font-variant-numeric: tabular-nums;
 }
 
+.aboutMoreLink { margin-left: auto; }
+
 /* Keep the French desktop heading within one line of the video column. */
 @media (min-width: 1181px) {
   .singleLineTitle { white-space: nowrap; }
@@ -41,4 +43,232 @@
   .metricsGrid :global(.home-company-metric-card strong) {
     animation: none;
   }
+}
+
+/* The foreign-language desktop design stays unchanged above laptop widths. */
+@media (min-width: 1181px) and (max-width: 1600px) {
+  .responsiveAbout:global(.home-company-about-section),
+  .responsiveAbout > :global(.home-company-about-shell) { height: auto !important; min-height: 0 !important; }
+  .responsiveAbout > :global(.home-company-about-shell) { padding-top: 52px !important; }
+  .responsiveAbout :global(.home-company-about-right) { padding-top: 0 !important; }
+  .responsiveAbout :global(.home-company-about-main) {
+    align-items: start !important;
+    grid-template-columns: minmax(0, .96fr) minmax(0, 1.04fr) !important;
+    column-gap: clamp(32px, 4vw, 64px) !important;
+    padding-bottom: 64px !important;
+  }
+  .responsiveAbout :global(.home-company-about-left),
+  .responsiveAbout :global(.home-company-about-right) { min-width: 0; }
+  .responsiveAbout :global(.home-company-about-title) { white-space: normal; overflow-wrap: break-word; }
+  .responsiveAbout .metricsGrid { margin-top: 46px !important; gap: 16px !important; }
+  .responsiveAbout :global(.home-company-metric-card) { min-width: 0; }
+  .responsiveAbout :global(.home-company-metric-card strong) { font-size: clamp(28px, 2.8vw, 38px) !important; flex-wrap: wrap; }
+  .responsiveAbout :global(.home-company-metric-card > span) {
+    font-size: clamp(12px, 1vw, 14px) !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Share desktop rows so the video and introduction start at the same height,
+   including when a translated heading wraps. */
+@media (min-width: 1181px) {
+  .responsiveAbout :global(.home-company-about-main) {
+    grid-template-rows: auto auto auto auto;
+    row-gap: 0 !important;
+    align-items: start !important;
+  }
+  .responsiveAbout :global(.home-company-about-left),
+  .responsiveAbout :global(.home-company-about-right) {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / 5;
+    row-gap: 0;
+    padding-top: 0 !important;
+  }
+  .responsiveAbout :global(.home-company-about-left) { grid-column: 1; }
+  .responsiveAbout :global(.home-company-about-right) { grid-column: 2; }
+  .responsiveAbout :global(.home-company-about-title),
+  .responsiveAbout :global(.home-company-intro-title) {
+    grid-row: 1;
+    margin: 0 !important;
+    padding-bottom: 40px;
+    align-self: start;
+  }
+  .responsiveAbout :global(.home-company-intro-title) {
+    align-self: end;
+  }
+  .responsiveAbout :global(.home-company-video-wrap) {
+    grid-row: 2 / 5;
+    margin-top: 0 !important;
+    align-self: start;
+  }
+  .responsiveAbout :global(.home-company-intro-copy) {
+    grid-row: 2;
+    margin-top: 0 !important;
+    align-self: start;
+  }
+  .responsiveAbout .metricsGrid { grid-row: 3; }
+  .responsiveAbout :global(.home-company-about-actions) { grid-row: 4; }
+}
+
+/* Scope motion fixes to this accordion; leave the Chinese version untouched. */
+.advantageCopyInner { display: contents; }
+.advantageCollapsedTitle { display: none; }
+:global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :global(.home-panel-title) {
+  font-weight: 500 !important;
+}
+@media (min-width: 1025px) {
+  .smoothAdvantages { --accordion-duration: .42s; --accordion-ease: cubic-bezier(.25, .8, .25, 1); }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panels) {
+    flex-wrap: nowrap !important;
+  }
+  /* A zero basis shares only the space left after gaps. Percentage bases
+     combined with the legacy wrapping rule pushed the fifth panel down. */
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel),
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panels:hover .home-advantage-panel) {
+    flex: 1 1 0px !important;
+    min-width: 0 !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panels:hover .home-advantage-panel:hover) {
+    flex-grow: 2.667 !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) {
+    transition: flex-grow var(--accordion-duration) var(--accordion-ease) !important;
+    will-change: auto;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel)::before {
+    filter: none !important;
+    transition: transform var(--accordion-duration) ease !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :global(.home-panel-content) {
+    transition: none !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-inline: clamp(24px, 2.7vw, 52px) !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :is(:global(.home-panel-title), :global(.home-panel-line)) { margin-left: 0 !important; }
+
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :global(.home-panel-title) {
+    font-size: clamp(20px, 1.15vw, 30px) !important;
+    line-height: 1.3 !important;
+    transition: none !important;
+    transform: none !important;
+    flex-shrink: 0;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages .twoLineAdvantageTitle {
+    position: relative;
+    min-height: 2.6em;
+  }
+  .smoothAdvantages .advantageCollapsedTitle {
+    display: block;
+    opacity: 1;
+    transition: opacity .18s ease .12s !important;
+  }
+  .smoothAdvantages .advantageExpandedTitle {
+    position: absolute;
+    inset: auto auto 0 0;
+    white-space: nowrap;
+    font-size: clamp(23px, 1.65vw, 32px);
+    line-height: 1.3;
+    opacity: 0;
+    transition: opacity .14s ease !important;
+  }
+  .smoothAdvantages :global(.home-advantage-panel:hover) .advantageCollapsedTitle {
+    opacity: 0;
+    transition: opacity .14s ease !important;
+  }
+  .smoothAdvantages :global(.home-advantage-panel:hover) .advantageExpandedTitle {
+    opacity: 1;
+    transition: opacity .22s ease .16s !important;
+  }
+  .smoothAdvantages .twoLineAdvantageTitle .advantageTitleLine {
+    display: block;
+    white-space: nowrap;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-panel-copy-group) {
+    display: grid !important;
+    grid-template-rows: 0fr;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0;
+    transform: none !important;
+    transition: grid-template-rows var(--accordion-duration) var(--accordion-ease), opacity .12s ease !important;
+  }
+  .smoothAdvantages .advantageCopyInner { display: block; min-height: 0; overflow: hidden; }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel:hover .home-panel-copy-group) {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transition: grid-template-rows var(--accordion-duration) var(--accordion-ease), opacity .24s ease .22s !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :is(:global(.home-panel-brief), :global(.home-panel-detail)) {
+    max-height: none !important;
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    margin: 16px 0 0 !important;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :global(.home-panel-title) { font-size: 17px !important; }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :global(.home-panel-content) { padding-inline: clamp(16px, 1.65vw, 24px) !important; }
+}
+/* Tablet cards have no expanding hover state. Grid accounts for the gap. */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panels) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 0 !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) {
+    min-width: 0 !important;
+    min-height: 360px !important;
+    cursor: default;
+    transition: none !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel)::before {
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :global(.home-panel-content) {
+    height: auto !important;
+    min-height: 360px !important;
+    padding: 28px 24px !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :global(.home-panel-title) {
+    font-size: 22px !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel) :is(:global(.home-panel-copy-group), :global(.home-panel-brief), :global(.home-panel-detail)) {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+@media (min-width: 1601px) {
+  .smoothAdvantages { --accordion-duration: .62s; --accordion-ease: cubic-bezier(.22, 1, .36, 1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel),
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel)::before,
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-panel-copy-group),
+  :global(html[lang] body) .smoothAdvantages.smoothAdvantages :global(.home-advantage-panel:hover .home-panel-copy-group),
+  .smoothAdvantages :global(.home-advantage-panel) .advantageExpandedTitle,
+  .smoothAdvantages :global(.home-advantage-panel) .advantageCollapsedTitle { transition: none !important; }
 }

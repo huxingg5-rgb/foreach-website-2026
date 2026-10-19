@@ -1,0 +1,646 @@
+{
+  "metadata": {
+    "title": "Qu’est-ce qu’un raccord cannelé ? Formes, compatibilité des tubes et documents qualité",
+    "seoTitle": "Raccords cannelés : profils, tubes et qualité | FOREACH",
+    "seoDescription": "Choisir un raccord cannelé FOREACH selon sa forme, le diamètre intérieur du tube et le profil C/F/D/V/X. Expansion, PP/PA et documents ISO, REACH, RoHS et SDS.",
+    "coverImage": "/images/resources/technical-articles/what-is-a-barbed-fitting/barbed-fittings-group-blue.webp",
+    "coverAlt": "Raccords cannelés FOREACH droits, coudés, en T et en Y de différentes tailles sur fond bleu"
+  },
+  "deck": "Choisir un raccord cannelé demande de définir ensemble le circuit, l’ajustement du tube, les documents relatifs aux matériaux et les exigences qualité en série. Un même diamètre intérieur nominal ne garantit ni le même profil, ni le même comportement au montage, ni les mêmes conditions d’emploi.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un raccord cannelé relie des tubes souples grâce à un embout à reliefs inséré dans le tube. Celui-ci se dilate, reprend élastiquement sa forme et épouse la surface du raccord. Les termes anglais sont barbed fitting et hose barb fitting. Il peut servir aux circuits de lavage, réactifs, déchets liquides et gaz dans les instruments ; son aptitude dépend du tube, du fluide, de la pression, de la température et de la validation de l’assemblage."
+    },
+    {
+      "type": "paragraph",
+      "text": "La gamme FOREACH comprend les raccords droits BA, coudes BL, tés BT, raccords en Y BY, croix BX4 et raccords multivoies en π BF4. Les matériaux principaux sont le PP et le PA (polyamide), avec des versions de diamètres égaux ou réductrices. C/F/D/V/X après le code dimensionnel désigne le profil de l’embout ; 1,6, 2,4 ou 3,2 mm indique le diamètre intérieur du tube compatible. Il faut distinguer ces informations pour définir une connexion complète."
+    },
+    {
+      "type": "paragraph",
+      "text": "En production, le raccord doit aussi permettre de traduire une connexion de prototype en référence, plan, spécification matière et exigences de contrôle. FOREACH a obtenu les certifications de systèmes de management de la qualité ISO 9001 et ISO 13485. Les documents REACH, RoHS et MSDS peuvent être demandés pour la configuration retenue. Cet article explique la structure des raccords et l’utilité de ces documents."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Comment l’embout relie-t-il le tube ? Étanchéité et maintien sont deux fonctions",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au montage, l’extrémité du tube se dilate sur la surface d’entrée, franchit la crête puis enveloppe la partie arrière de l’embout. Le contact entre paroi interne et raccord assure l’étanchéité, tandis que leur interaction mécanique contribue au maintien. La cannelure n’est donc ni un filetage à visser dans le tube ni un relief destiné à percer sa paroi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Évaluer séparément l’emmanchement, le maintien et l’étanchéité. Un effort excessif peut endommager l’extrémité ; un emmanchement facile mais lâche peut se défaire sous traction ou variation de pression. Le résultat dépend du profil, du diamètre intérieur, de l’épaisseur, de la dureté et du retour élastique du tube."
+        },
+        {
+          "type": "paragraph",
+          "text": "En aspiration, vérifier également les entrées d’air. L’absence de gouttes à l’extérieur ne prouve pas l’étanchéité sous vide. Une brève traction manuelle ne remplace pas non plus un essai de maintien dans les conditions de fonctionnement."
+        }
+      ]
+    },
+    {
+      "title": "Quelles formes propose FOREACH ? Choisir le corps selon le circuit",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/barbed-fittings-group-blue.webp",
+          "alt": "Raccords cannelés FOREACH droits, coudés, en T et en Y de différentes tailles sur fond bleu",
+          "width": 2375,
+          "height": 1237,
+          "caption": "Les corps assurent la jonction, le changement de direction ou la dérivation. Choisir ensuite les diamètres, matériaux et codes de profil selon la référence."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Série et corps",
+            "Fonction",
+            "Points de sélection"
+          ],
+          "rows": [
+            [
+              "BA droit",
+              "Relier deux tubes de diamètres intérieurs égaux ou différents",
+              "Jonction égale ou réduction ; confirmer le tube de chaque extrémité"
+            ],
+            [
+              "BL coude",
+              "Changer de direction dans un espace limité",
+              "Dimensions du coude, orientation de sortie et espace de courbure"
+            ],
+            [
+              "BT té",
+              "Créer une voie principale et une branche latérale",
+              "Dimensions et positions des trois ports ; associer chaque branche au plan"
+            ],
+            [
+              "BY en Y",
+              "Créer une séparation ou une réunion en Y",
+              "Orientation des branches et trois diamètres, selon le sens réel d’écoulement"
+            ],
+            [
+              "BX4 croix",
+              "Relier des tubes dans quatre directions",
+              "Disposition des ports, espace de montage et identification des lignes"
+            ],
+            [
+              "BF4 en π",
+              "Créer une connexion multivoie en π",
+              "Confirmer sur le plan les positions des ports et l’espace dans l’équipement"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/ba-straight.png",
+          "alt": "Illustration du corps d’un raccord cannelé droit BA",
+          "width": 435,
+          "height": 435,
+          "caption": "BA droit",
+          "captionHref": "/fr/products/fittings/barbed-fittings/ba-32f-pp-n/"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bl-elbow.png",
+          "alt": "Illustration du corps d’un coude cannelé BL",
+          "width": 390,
+          "height": 390,
+          "caption": "BL coude",
+          "captionHref": "/fr/products/fittings/barbed-fittings/bl-32f-pp-n/"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bt-tee.png",
+          "alt": "Illustration du corps d’un té cannelé BT",
+          "width": 513,
+          "height": 366,
+          "caption": "BT té",
+          "captionHref": "/fr/products/fittings/barbed-fittings/bt-32d-pp-n/"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/by-wye.png",
+          "alt": "Illustration du corps d’un raccord cannelé en Y BY",
+          "width": 387,
+          "height": 459,
+          "caption": "BY en Y",
+          "captionHref": "/fr/products/fittings/barbed-fittings/by-32d-pp-n/"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bx4-cross.png",
+          "alt": "Illustration du corps d’un raccord cannelé en croix BX4",
+          "width": 492,
+          "height": 543,
+          "caption": "BX4 croix",
+          "captionHref": "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf#page=32"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bf4-pi.png",
+          "alt": "Illustration du corps d’un raccord cannelé multivoie en π BF4",
+          "width": 678,
+          "height": 285,
+          "caption": "BF4 en π",
+          "captionHref": "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf#page=32"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les tés, Y et corps multivoies offrent des passages ouverts. Ils ne répartissent pas spontanément des volumes égaux et n’assurent pas de fonction antiretour. Le débit de chaque branche dépend aussi du diamètre et de la longueur des tubes, de la résistance aval et du niveau de liquide. Prévoir séparément les vannes ou organes de dosage nécessaires au contrôle du débit ou à la prévention du retour."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les termes égal et réducteur décrivent le diamètre intérieur de tube accepté à chaque extrémité. BA-32F-PP-N relie deux tubes de 3,2 mm de diamètre intérieur ; BA-24F-32F-PP-N relie des tubes de 2,4 et 3,2 mm. Pour un té ou un Y réducteur, vérifier la correspondance entre les positions du code et les ports : trois nombres ne suffisent pas à déterminer l’orientation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les bouchons cannelés BBL ferment les extrémités des tubes et ne doivent pas être confondus avec des raccords traversants. Les raccords filetés à embout cannelé, traversées de cloison et adaptateurs Luer-cannelé remplissent d’autres fonctions d’interface. Leur embout reste à adapter au tube, mais il faut également vérifier l’étanchéité du filetage, la fixation au panneau ou l’accouplement Luer mâle/femelle."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/fr/products/fittings/barbed-fittings/",
+              "label": "Voir les références de raccords cannelés",
+              "suffix": "; "
+            },
+            {
+              "href": "/fr/products/fittings/thread-to-barbed-fittings/",
+              "label": "Voir les raccords filetés à embout cannelé",
+              "suffix": "; "
+            },
+            {
+              "href": "/fr/resources/technical-articles/what-is-a-luer-fitting/",
+              "label": "Comprendre les interfaces Luer et cannelées"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Que signifient C, F, D, V et X, et comment interpréter l’expansion ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "C/F/D/V/X désignent les profils d’embout après le code dimensionnel. Ils sont distincts des séries de corps BA, BL, BT et BY. Les premiers décrivent la surface en contact avec le tube ; les secondes, la forme de la connexion. Un raccord droit et un coude peuvent avoir le même code de profil."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/barb-profiles-c-f-d-v-x.svg",
+          "alt": "Profils cannelés FOREACH C, F, D, V et X ; plages d’expansion et identifiants de série dans le tableau ci-dessous",
+          "width": 900,
+          "height": 350,
+          "caption": "Comparaison des profils FOREACH. Classique, 400, 200, 500 et 600 sont des identifiants de série, pas des classes de pression ni des diamètres de tube. Vérifier les dimensions des extrémités et les tubes avant toute substitution."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Code de profil",
+            "Plage d’expansion",
+            "Identifiant de série"
+          ],
+          "rows": [
+            [
+              "C",
+              "42%–69%",
+              "Série classique"
+            ],
+            [
+              "F",
+              "25%–32%",
+              "Série 400"
+            ],
+            [
+              "D",
+              "24%–50%",
+              "Série 200"
+            ],
+            [
+              "V",
+              "32%–60%",
+              "Série 500"
+            ],
+            [
+              "X",
+              "32%–50%",
+              "Série 600"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ces plages comparent l’expansion du tube associée à chaque profil. Elles ne sont ni l’allongement à la rupture du matériau ni une expansion admissible en service. Elles se recouvrent et ne définissent pas de classement universel d’étanchéité, de pression ou de résistance à l’arrachement. Chaque référence doit être évaluée avec les dimensions et le matériau du tube réel."
+        },
+        {
+          "type": "subheading",
+          "title": "Exemple dimensionnel d’expansion"
+        },
+        {
+          "type": "paragraph",
+          "text": "Comparer le diamètre de crête au diamètre intérieur du tube non monté donne un rapport géométrique de l’expansion nécessaire à l’emmanchement. Ce rapport ne calcule ni l’effort d’insertion, ni la pression de contact, ni la force de maintien à long terme."
+        },
+        {
+          "type": "formula",
+          "expression": "Expansion géométrique = (diamètre de crête − diamètre intérieur initial du tube) ÷ diamètre intérieur initial du tube × 100%",
+          "note": "Utiliser les mêmes unités, le plan de la référence concernée et les dimensions réelles du tube."
+        },
+        {
+          "type": "paragraph",
+          "text": "BA-32F est prévu pour un tube de 3,2 mm de diamètre intérieur ; son plan indique un diamètre de crête A de 4,0 mm. Avec les dimensions nominales, (4,0 − 3,2) ÷ 3,2 × 100% = 25%. Ce résultat est un exemple géométrique, pas un essai sur un tube particulier. Les bornes d’une plage ne doivent pas être attribuées à chaque référence portant le même code."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour un même tube, augmenter l’expansion modifie généralement l’effort d’emmanchement et la déformation locale, sans garantir une meilleure connexion. Comparer les profils candidats avec la même spécification de tube et consigner montage, fuite et comportement à l’arrachement avant de choisir."
+        }
+      ]
+    },
+    {
+      "title": "Lire la référence : diamètre intérieur du tube, profil et matériau",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Exemple de référence complète",
+            "Signification des codes",
+            "Fonction"
+          ],
+          "rows": [
+            [
+              "BA-32F-PP-N",
+              "BA droit ; 32 = diamètre intérieur de 3,2 mm ; profil F ; PP ; N = naturel",
+              "Relier deux tubes de diamètre intérieur 3,2 mm"
+            ],
+            [
+              "BA-24F-32F-PP-N",
+              "Diamètres intérieurs de 2,4 mm / 3,2 mm ; profil F aux deux extrémités",
+              "Transition entre diamètres intérieurs différents"
+            ],
+            [
+              "BL-32F-PP-N",
+              "BL coude ; diamètre intérieur de 3,2 mm ; profil F ; PP naturel",
+              "Relier des tubes dans un angle"
+            ],
+            [
+              "BT-32D-PP-N",
+              "BT té ; diamètres intérieurs égaux de 3,2 mm ; profil D ; PP naturel",
+              "Créer une dérivation à trois ports"
+            ],
+            [
+              "BY-32D-PP-N",
+              "BY en Y ; diamètres intérieurs égaux de 3,2 mm ; profil D ; PP naturel",
+              "Créer un passage en Y"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Les références de diamètres égaux omettent les codes d’extrémité répétés. Ainsi, BL-32D-32D-PP-N peut être abrégé en BL-32D-PP-N. Consulter la table propre à chaque corps plutôt que d’ajouter systématiquement des lettres ou un nombre de ports. PA désigne le polyamide et W le blanc. La couleur identifie la configuration, pas un niveau de qualité."
+        },
+        {
+          "type": "subheading",
+          "title": "Un diamètre intérieur de 3,2 mm n’est pas un diamètre extérieur de 3,2 mm"
+        },
+        {
+          "type": "paragraph",
+          "text": "L’embout pénètre dans le tube : le diamètre intérieur est donc le premier critère. Le diamètre extérieur sert ensuite à vérifier épaisseur, encombrement et collier. Avec 3,2 mm à l’intérieur et 6,4 mm à l’extérieur, l’épaisseur nominale vaut (6,4 − 3,2) ÷ 2 = 1,6 mm. Le diamètre extérieur de 6,4 mm ne justifie pas un embout prévu pour un tube de diamètre intérieur 6,4 mm."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le diamètre intérieur du tube compatible diffère aussi de l’alésage du raccord. Le plan BA-32F indique un alésage B de 2,4 mm et une longueur totale D de 23,0 mm : 3,2 mm identifie le tube, 2,4 mm l’alésage. Pour la résistance à l’écoulement ou le passage de particules, vérifier le passage réel sans assimiler le diamètre du tube au diamètre minimal de tout le circuit."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/fr/products/fittings/barbed-fittings/ba-32f-pp-n/",
+              "label": "BA-32F-PP-N : produit et plan",
+              "suffix": "; "
+            },
+            {
+              "href": "/fr/products/fittings/barbed-fittings/ba-24f-32f-pp-n/",
+              "label": "BA-24F-32F-PP-N : référence réductrice",
+              "suffix": "; "
+            },
+            {
+              "href": "/fr/products/fittings/barbed-fittings/bl-32f-pp-n/",
+              "label": "BL-32F-PP-N : référence coudée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Comment choisir le tube et les matériaux PP ou PA du raccord ?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le tube doit se dilater suffisamment au montage puis rester ajusté à l’embout. Deux tubes de même diamètre intérieur peuvent se comporter différemment selon le matériau, la dureté, l’épaisseur ou les tolérances. Les seules appellations silicone, PVC ou TPU ne suffisent pas. La dureté recommandée par un autre fabricant ne constitue pas une exigence universelle pour les embouts FOREACH."
+        },
+        {
+          "type": "paragraph",
+          "text": "PP et PA sont les principales options FOREACH ; les configurations disponibles varient selon la référence. Vérifier la compatibilité du raccord et du tube avec le liquide, sa concentration, la température, la durée de contact et le nettoyant. Contrôler uniquement la résistance du raccord sans examiner le gonflement, le durcissement ou le retour élastique du tube peut laisser subsister des problèmes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour un tube rigide qui se dilate difficilement, évaluer une connexion adaptée à ce tube. En cas de déconnexions fréquentes, envisager une interface démontable dédiée. Des extractions et insertions forcées répétées modifient l’extrémité ; un premier montage réussi ne prouve pas une réutilisation illimitée."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/fr/resources/material-compatibility/",
+              "label": "Référence de compatibilité des matériaux",
+              "suffix": "; "
+            },
+            {
+              "href": "/fr/resources/technical-articles/hard-tube-fittings-selection-guide/",
+              "label": "Guide des raccords pour tubes rigides"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Qualité en instrumentation : certification, matériaux et traçabilité des livraisons",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au-delà du prix unitaire, le fabricant d’équipement doit considérer les arrêts, reprises, pertes de réactif et coûts de maintenance liés à une défaillance. Comparer les résultats dans les mêmes conditions de tube et de service, ainsi que la disponibilité des spécifications et documents qualité. L’apparence ou le prix seuls ne déterminent pas l’aptitude à l’instrument."
+        },
+        {
+          "type": "subheading",
+          "title": "Systèmes qualité pour l’évaluation fournisseur et le passage en série"
+        },
+        {
+          "type": "paragraph",
+          "text": "FOREACH a obtenu les certifications ISO 9001 et ISO 13485 de systèmes de management de la qualité. Le périmètre indiqué couvre conception, développement, production et service de composants et accessoires de contrôle des fluides pour équipements médicaux. Ces documents permettent d’évaluer l’organisation qualité du fournisseur avec les plans, exigences de contrôle et documents de livraison."
+        },
+        {
+          "type": "paragraph",
+          "text": "La certification du système porte sur l’organisation et son périmètre certifié. Elle ne signifie pas que chaque raccord est un dispositif médical certifié et ne remplace pas les validations de fluide, pression, biocompatibilité ou stérilisation. Si ces propriétés sont requises, il faut les preuves spécifiques au matériau ou au produit."
+        },
+        {
+          "type": "subheading",
+          "title": "Que contiennent les documents REACH, RoHS et MSDS ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "La disponibilité de rapports ou d’informations REACH, RoHS et MSDS peut être étudiée selon la référence FOREACH, le matériau et les exigences du projet. Faire correspondre les documents au produit acheté et à sa matière, puis vérifier date, objet et périmètre de l’essai ou de la déclaration."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type de document",
+            "Usage principal",
+            "Points à vérifier"
+          ],
+          "rows": [
+            [
+              "Certificats ISO 9001 / ISO 13485",
+              "Système qualité et évaluation fournisseur",
+              "Entité certifiée, périmètre, validité et statut actuel du certificat"
+            ],
+            [
+              "Documents REACH",
+              "Informations sur les substances chimiques dans le périmètre déclaré ou testé",
+              "Matériau ou produit, liste des substances, version et date"
+            ],
+            [
+              "Documents RoHS",
+              "Appui au contrôle des substances restreintes pour l’équipement",
+              "Description de l’échantillon, essais, références et périmètre déclaré"
+            ],
+            [
+              "MSDS / SDS",
+              "Sécurité du matériau et recommandations de manipulation et de stockage",
+              "Identification matière, fournisseur et version ; pas une certification des performances"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Chaque document répond à un besoin différent. REACH ou RoHS seuls ne prouvent pas l’aptitude au contact prolongé avec un réactif ; une MSDS ne garantit pas l’absence de fuite. Examiner ces documents avec les essais de fonctionnement pour vérifier à la fois les informations matière et les performances du circuit."
+        },
+        {
+          "type": "subheading",
+          "title": "Des échantillons à la série : cohérence des dimensions, de l’aspect et des dossiers"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le système qualité FOREACH couvre la vérification des matières, les contrôles en cours et en fin de production et les enregistrements de livraison, avec notamment la mesure dimensionnelle optique. Les critères convenus peuvent inclure profil, dimensions critiques, passage libre, bavures ou dommages et identification du modèle et du matériau. Échantillonnage, essais et documents doivent suivre l’accord qualité du projet."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conserver les approbations d’échantillons, versions de plans et spécifications de tubes validées lors du passage en série. Après un changement de tube ou de matériau du raccord, évaluer le besoin de revalidation. Les écarts de montage ou de fonctionnement peuvent ainsi être reliés à la référence, la matière, la version et la livraison, plutôt qu’à une simple ressemblance visuelle."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/fr/about/quality/",
+              "label": "Systèmes qualité, certifications et moyens de contrôle FOREACH",
+              "suffix": "; "
+            },
+            {
+              "href": "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf#page=27",
+              "label": "Télécharger le catalogue des raccords et tubes (anglais)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Exemple : relier deux tubes dans un circuit de lavage d’instrument",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Supposons une jonction fixe entre deux tubes de diamètre intérieur 3,2 mm à l’intérieur d’un instrument. BA-32F-PP-N et BA-32D-PP-N sont des candidats structurels. Ils correspondent au même diamètre nominal mais à des profils différents ; le choix final nécessite une comparaison avec le tube réel."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Définir le tracé : BA pour une jonction droite, BL pour un changement de direction. Prévoir l’espace du raccord et la courbure du tube.",
+            "Spécifier le tube : diamètres intérieur et extérieur, tolérances, matériau, dureté et spécification fournisseur, sans se limiter à « tube de 3,2 ».",
+            "Vérifier les matériaux : évaluer PP ou une autre option disponible selon liquide de lavage, nettoyant, concentration, température et cycle de contact.",
+            "Vérifier les interfaces : codes des deux embouts, dimensions, position d’emmanchement et alésage minimal, pour éviter un bon ajustement avec une résistance excessive.",
+            "Valider les échantillons : montage, étanchéité, traction et démarrages/arrêts réels. En aspiration, ajouter la recherche d’entrée d’air sous vide.",
+            "Définir la livraison : intégrer référence complète, spécification du tube, version du plan et documents matière/qualité aux achats et à la réception."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si un tube a un diamètre intérieur de 2,4 mm, évaluer BA-24F-32F-PP-N plutôt que de le forcer sur un embout plus gros. Cet exemple décrit une démarche de sélection, pas une validation déjà réalisée dans un instrument donné."
+        }
+      ]
+    },
+    {
+      "title": "Comment monter les raccords et quand prévoir un collier ?",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Contrôler référence et surfaces. Vérifier dimensions et codes, puis rechercher saletés, bavures, fissures ou rayures sur le passage, l’entrée et la crête.",
+            "Préparer des coupes perpendiculaires. Enlever les débris et ne pas remonter directement une ancienne extrémité écrasée, fissurée ou étirée.",
+            "Emmancher dans l’axe. Amener le tube à la position prescrite au-delà de la cannelure. En cas d’effort anormal, vérifier dimensions et matériaux.",
+            "Prévoir supports et courbure. Éviter un coude brusque ou une traction permanente à la sortie, surtout avec plusieurs branches ou des tubes lourds.",
+            "Vérifier l’étanchéité en conditions réelles. Couvrir pression, température et cycles prévus ; contrôler les entrées d’air en aspiration et consigner échantillons et conditions."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le besoin d’un collier dépend du tube, de l’ajustement, des variations de pression, de la traction et des vibrations. Adapter le collier au diamètre extérieur après montage et à la zone efficace de serrage, sans désalignement ni compression excessive. Il ne corrige pas un diamètre incorrect ; on ne peut pas non plus affirmer que toutes les connexions fonctionnent sans collier."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ne pas utiliser graisse, solvant ou chauffage pour masquer un emmanchement difficile sans confirmer leur compatibilité : ils peuvent modifier les matériaux ou contaminer le circuit. Arrêter et dépressuriser avant démontage, inspecter raccord et tube après maintenance et refaire les vérifications nécessaires."
+        }
+      ]
+    },
+    {
+      "title": "Que vérifier en cas d’emmanchement difficile, fuite, entrée d’air ou déboîtement ?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Symptôme",
+            "Contrôles prioritaires",
+            "Action et vérification"
+          ],
+          "rows": [
+            [
+              "Tube difficile à emmancher",
+              "Confusion diamètre extérieur/intérieur ; matériau, épaisseur ou profil incompatibles",
+              "Vérifier les deux spécifications et les dommages, puis comparer les combinaisons adaptées"
+            ],
+            [
+              "Suintement après montage",
+              "Position, fissure du tube, rayure de l’embout ou saleté",
+              "Remplacer les pièces endommagées, remonter et tester à pression et température spécifiées"
+            ],
+            [
+              "Bulles en aspiration sans fuite visible",
+              "Entrée d’air sous vide, niveau amont et autres connexions",
+              "Vérifier par tronçons pour distinguer fuite de connexion et autres sources de bulles"
+            ],
+            [
+              "Déboîtement au démarrage/arrêt ou sous traction",
+              "Ajustement, ramollissement ou relaxation du tube, pics de pression et forces extérieures",
+              "Revoir conditions et supports, évaluer le collier et revalider"
+            ],
+            [
+              "Montage différent après changement de lot de tube",
+              "Variation du diamètre intérieur, des tolérances, de la dureté ou du matériau",
+              "Comparer aux échantillons approuvés et dossiers, puis retester la connexion"
+            ],
+            [
+              "Baisse de débit après ajout d’un raccord",
+              "Alésage, courbures brusques, obstruction locale et résistance globale",
+              "Vérifier les passages réels et le débit au point d’utilisation, pas seulement le tube"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Fixer avant les essais les limites de fuite, de maintien et de variation du débit, avec pression, température, fluide, durée et cycles. La mention « testé sans fuite » ne permet pas la reproduction des essais et ne suffit pas à la réception des lots suivants."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Questions fréquentes sur les raccords cannelés",
+  "faqItems": [
+    {
+      "question": "Choisir le raccord selon le diamètre intérieur ou extérieur du tube ?",
+      "answer": "Choisir d’abord selon le diamètre intérieur, puis vérifier extérieur, épaisseur, tolérances, matériau et dureté. BA-32F-PP-N accepte un tube de diamètre intérieur 3,2 mm ; cela ne signifie pas que la crête mesure 3,2 mm. Le diamètre extérieur détermine aussi collier et espace. Pour un même tube avec différents profils, vérifier plans, emmanchement, étanchéité et maintien avec les tubes réels."
+    },
+    {
+      "question": "Un collier est-il obligatoire sur une connexion cannelée ?",
+      "answer": "Cela dépend de l’ajustement et du fonctionnement. Évaluer matériau, dureté, température, pics de pression, vibrations et traction, puis valider étanchéité et maintien selon les exigences de montage. Si nécessaire, adapter le collier au diamètre monté et à la zone de serrage sans endommager tube ou raccord. Il ne compense pas une mauvaise dimension de tube."
+    },
+    {
+      "question": "Comment choisir les deux extrémités d’un raccord cannelé réducteur ?",
+      "answer": "Relever diamètres intérieur et extérieur et matériau de chaque tube, puis sélectionner la référence correspondante. BA-24F-32F-PP-N relie des tubes de diamètres intérieurs 2,4 et 3,2 mm. Vérifier aussi les codes, dimensions et alésage minimal. Pour un té ou Y réducteur, identifier chaque port sur le plan sans déduire son orientation du seul ordre des nombres."
+    }
+  ],
+  "cta": {
+    "title": "Transformer les besoins du circuit en spécification vérifiable",
+    "description": "Préciser diamètres intérieur et extérieur, matériau et dureté à chaque port, tracé, fluide, pression, température et documents requis pour confirmer référence, plan et validation des échantillons.",
+    "contactLabel": "Échanger sur la sélection et les documents",
+    "productsLabel": "Voir les raccords cannelés",
+    "productsHref": "/fr/products/fittings/barbed-fittings/"
+  },
+  "navigation": [
+    {
+      "id": "principle",
+      "label": "Connexion et étanchéité"
+    },
+    {
+      "id": "types",
+      "label": "Formes de corps"
+    },
+    {
+      "id": "profiles",
+      "label": "Profils et expansion",
+      "children": [
+        {
+          "id": "expansion-example",
+          "label": "Exemple dimensionnel"
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "label": "Références et tubes",
+      "children": [
+        {
+          "id": "tube-id",
+          "label": "Diamètre du tube et alésage"
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "label": "Tubes et matériaux"
+    },
+    {
+      "id": "quality",
+      "label": "Documents qualité",
+      "children": [
+        {
+          "id": "quality-systems",
+          "label": "Systèmes de management"
+        },
+        {
+          "id": "material-documents",
+          "label": "REACH / RoHS / MSDS"
+        },
+        {
+          "id": "batch-quality",
+          "label": "Dimensions et livraisons"
+        }
+      ]
+    },
+    {
+      "id": "selection-example",
+      "label": "Exemple de sélection"
+    },
+    {
+      "id": "installation",
+      "label": "Montage et serrage"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Diagnostic et validation"
+    }
+  ],
+  "subjectAbout": [
+    "Raccords cannelés",
+    "Raccordement des tubes souples",
+    "Profils cannelés et expansion"
+  ],
+  "relatedProductTitles": {
+    "tee": "Té cannelé PA, diamètres égaux",
+    "elbow": "Coude cannelé PA, diamètres égaux"
+  }
+}

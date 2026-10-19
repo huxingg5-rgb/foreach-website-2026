@@ -1,0 +1,27 @@
+export type VideoGuideDetail = {
+  id: string;
+  locale: "en";
+  title: string;
+  seoTitle: string;
+  description: string;
+  uploadDate: string;
+  duration: string;
+  durationLabel: string;
+  detailHref: string;
+  watchUrl: string;
+  embedUrl: string;
+  thumbnail: string;
+  breadcrumbLabel: string;
+  sectionId: string;
+  watchHeading: string;
+  caption: string;
+  highlightsIntroduction: string;
+  highlights: readonly { time: string; start: number; title: string; description: string }[];
+  productHeading: string;
+  productIntroduction: string;
+  products: readonly { title: string; href: string }[];
+  seriesLink?: { title: string; href: string };
+  relationKeys: string[];
+  featuredProductIds?: string[];
+  support: { title: string; description: string };
+};

@@ -43,6 +43,7 @@ import {
   type InquiryErrorType,
 } from "@/lib/analytics/track-event";
 import { getCompanyInfoRequestCopy } from "./copy";
+import { formatInquiryCodeCountdown, getLocalizedCompanyInfoError } from "./request-feedback-copy";
 import styles from "./CompanyInfoRequestModal.module.css";
 
 /* 邮箱验证码冷却时间
@@ -150,6 +151,11 @@ function getInquiryErrorMessage(error: unknown, isEnglish: boolean) {
       "Please complete all required information.",
       "请完整填写必填信息。",
     ],
+    too_many_attachments: ["Attach up to 5 files.", "最多添加 5 个附件。"],
+    attachment_empty: ["Empty files cannot be attached.", "不能添加空文件。"],
+    attachment_too_large: ["Each file must be 20 MB or smaller.", "单个附件不能超过 20 MB。"],
+    attachments_total_too_large: ["Attachments must total 20 MB or less.", "附件总大小不能超过 20 MB。"],
+    attachment_type_not_allowed: ["Choose a supported document, image, archive, or CAD file.", "请选择支持的文档、图片、压缩包或 CAD 文件。"],
     request_failed: [
       "The request could not be completed. Please try again later.",
       "请求未能完成，请稍后重新尝试。",
@@ -236,12 +242,13 @@ interface CompanyInfoRequestModalProps {
   /* 弹窗说明 */
   description: string;
 
-  /* Optional assembly copy; callers without this prop keep the original form. */
+  /* 业务场景只覆盖文案，沿用同一份表单及验证流程。 */
   copyOverrides?: Partial<Pick<
     ReturnType<typeof getCompanyInfoRequestCopy>,
     "summary" | "emailPlaceholder" | "notes" | "notesPlaceholder" | "back"
   >>;
 
+  /* 可选业务字段；未传时保持原有资料申请表单。 */
   renderAttachments?: (disabled: boolean) => ReactNode;
 
   /* 当前申请条目 */
@@ -325,7 +332,7 @@ export default function CompanyInfoRequestModal({
   const getLocalizedInquiryError = (error: unknown) =>
     locale === "zh-CN" || locale === "en"
       ? getInquiryErrorMessage(error, locale === "en")
-      : copy.requestFailed;
+      : getLocalizedCompanyInfoError(locale, error instanceof Error ? error.message : "request_failed");
 
   const [formValue, setFormValue] =
     useState<CompanyInfoFormValue>(EMPTY_FORM_VALUE);
@@ -661,7 +668,7 @@ export default function CompanyInfoRequestModal({
         onClick={onClose}
       />
 
-      <section className={styles.modal} aria-label={title}>
+      <section className={styles.modal} role="dialog" aria-modal="true" aria-label={title}>
         <div className={styles.modalHead}>
           <div>
             {/*
@@ -720,14 +727,10 @@ export default function CompanyInfoRequestModal({
               <div>
                 <span>{copy.requestedItems}</span>
                 <strong>{items.length}</strong>
-                <em>{copy.items}</em>
+                <em>{items.length === 1 ? (({ en: "item", es: "elemento", fr: "élément" } as Record<string, string>)[locale] ?? copy.items) : copy.items}</em>
               </div>
 
-              <p>
-                {isEnglish
-                  ? copy.summary
-                  : "请确认需要申请的资料项目并填写公司信息。六位验证码将发送至您填写的邮箱。"}
-              </p>
+              <p>{copy.summary}</p>
             </div>
 
             {hasItems ? (
@@ -775,11 +778,7 @@ export default function CompanyInfoRequestModal({
                   <input
                     type="email"
                     value={formValue.email}
-                    placeholder={
-                      isEnglish
-                        ? copy.emailPlaceholder
-                        : "请输入接收资料的邮箱"
-                    }
+                    placeholder={copy.emailPlaceholder}
                     required={hasItems}
                     onChange={(event) => {
                       updateField("email", event.target.value);
@@ -801,7 +800,7 @@ export default function CompanyInfoRequestModal({
                         ? copy.sending
                         : "发送中..."
                       : emailCodeCountdown > 0
-                        ? `${emailCodeCountdown}s`
+                        ? formatInquiryCodeCountdown(locale, emailCodeCountdown)
                         : hasEmailCodeSent
                           ? isEnglish
                             ? copy.resendCode
@@ -917,11 +916,7 @@ export default function CompanyInfoRequestModal({
                 <span>{copy.notes}</span>
                 <textarea
                   value={formValue.message}
-                  placeholder={
-                    isEnglish
-                      ? copy.notesPlaceholder
-                      : "可补充应用场景、资料用途或其他需求"
-                  }
+                  placeholder={copy.notesPlaceholder}
                   rows={4}
                   onChange={(event) => {
                     updateField("message", event.target.value);

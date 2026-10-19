@@ -13,6 +13,6 @@ const rules = getPistonPumpRedirectEntries().flatMap(rule => rule.source.endsWit
   : [rule.source, `${rule.source}/`].map(source => `${source} ${rule.destination} 301`));
 const value = [markerStart, ...rules, markerEnd, ...remaining].join("\n").replace(/\n+$/, "\n");
 if (process.argv.includes("--check")) {
-  if (original.replace(/\r\n/g, "\n") !== value) throw new Error("Stale piston pump redirects; run products:build-piston-redirects");
+  if (original.replace(/\r\n/g, "\n").replace(/\n+$/, "\n") !== value) throw new Error("Stale piston pump redirects; run products:build-piston-redirects");
 } else fs.writeFileSync(file, value, "utf8");
 console.log(JSON.stringify({check:process.argv.includes("--check"),pistonRedirectRules:rules.length,file:"public/_redirects"}));

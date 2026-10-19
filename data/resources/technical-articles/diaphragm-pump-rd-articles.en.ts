@@ -68,11 +68,11 @@ export const diaphragmPumpRdArticlesEn = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/01.svg",
-            "alt": "Three events during self-priming",
-            "width": 1000,
-            "height": 650,
-            "caption": "Schematic: first liquid and stable endpoint delivery are different events. Their spacing is illustrative, not measured pump timing."
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/diaphragm-pump-working-principle-clean.gif",
+            "alt": "Animated diaphragm pump schematic: inlet valve opens during suction; outlet valve opens during discharge.",
+            "width": 1100,
+            "height": 535,
+            "caption": "Suction and discharge cycle (schematic; not a self-priming timing test)."
           }
         ]
       },

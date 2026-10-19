@@ -13,6 +13,7 @@ import { getPipettingMetadata } from "@/services/products/getPipettingMetadata";
 import { pipettingSeriesSlugs, isPipettingPageKey } from "@/data/products/selection/pipetting-pump-seo";
 import { syringePumpIntroLocales } from "@/data/products/selection/syringe-pump-intro.locales";
 import { getControlModuleDetailBySlug } from "@/data/products/control-modules/control-module-detail.generated";
+import { getPdm5LocaleCopy } from "@/data/products/detail/pdm5-locales";
 import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
 import { getQuickConnectSeriesDetailData } from "@/data/products/detail/getQuickConnectSeriesDetailData";
 import syringePumpDetails from "@/data/products/generated/pumps/syringe-pumps/detail/index.json";
@@ -470,10 +471,11 @@ export async function generateMetadata({
     : valvelessCategory ? `${valvelessCategory.category.title} | FOREACH` : undefined;
   const controlDetailSlug = getControlModuleDetailSlugFromSegments(segments);
   const probeDetailSlug = segments.length === 2 && segments[0] === "probes" ? segments[1] : undefined;
+  const pdm5Copy = controlDetailSlug === "pdm5-pressure-sensor" ? getPdm5LocaleCopy(locale) : undefined;
   const detailCopySlug = controlDetailSlug || probeDetailSlug;
   const probeControlDetailCopy = locale === "en" && detailCopySlug
     ? probeControlDetailCopyEn[detailCopySlug] : undefined;
-  const title = probeControlDetailCopy?.cardTitle || (compactContent ? compactContent.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, "") : getRouteTitle(controlDetailSlug ? ["control", controlDetailSlug] : segments));
+  const title = pdm5Copy?.name || probeControlDetailCopy?.cardTitle || (compactContent ? compactContent.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, "") : getRouteTitle(controlDetailSlug ? ["control", controlDetailSlug] : segments));
   const syringeModel = segments.length === 4 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? syringeModelRoutes.find(r => r.series === segments[2] && r.model === segments[3]) : undefined;
   if (syringeModel) return getSyringeModelMetadata(locale, syringeModel.legacy);
   const syringeSeriesIndex = segments.length === 3 && segments[0] === "pumps" && segments[1] === "syringe-pumps" ? getSyringeSeriesIndex(segments[2]) : -1;
@@ -483,7 +485,7 @@ export async function generateMetadata({
   const isEnglishSyringeCategory = locale === "en" && segments.length === 2 && segments[0] === "pumps" && segments[1] === "syringe-pumps";
   const syringeSeoTitle = isEnglishSyringeCategory ? "OEM Syringe Pumps for Automated Liquid Handling | FOREACH" : syringeLocaleCopy?.seoTitle;
   const isDetailRoute = segments.length >= 2;
-  const description = probeControlDetailCopy?.description || tubingSeoCopy?.description || syringeLocaleCopy?.description || (isEnglishSyringeCategory ? "Explore FOREACH OEM syringe pumps with solenoid or rotary valves, 30/60 mm strokes and single- or multichannel configurations for automated liquid handling." : undefined) || valvelessContent?.metaDescription || valvelessCategory?.category.metaDescription || compactContent?.metaDescription || (isDetailRoute
+  const description = pdm5Copy?.description || probeControlDetailCopy?.description || tubingSeoCopy?.description || syringeLocaleCopy?.description || (isEnglishSyringeCategory ? "Explore FOREACH OEM syringe pumps with solenoid or rotary valves, 30/60 mm strokes and single- or multichannel configurations for automated liquid handling." : undefined) || valvelessContent?.metaDescription || valvelessCategory?.category.metaDescription || compactContent?.metaDescription || (isDetailRoute
     ? `Explore ${title} specifications, materials, interfaces, model configurations, and fluidic applications from Foreach.`
     : `Explore Foreach ${title} for precision fluid handling in IVD, life science, analytical instrumentation, and laboratory automation.`);
   const keywords = Array.from(
@@ -531,10 +533,10 @@ export async function generateMetadata({
   return {
     title: probeControlDetailCopy ? { absolute: probeControlDetailCopy.seoTitle } : tubingSeoCopy ? { absolute: tubingSeoCopy.title } : syringeSeoTitle ? { absolute: syringeSeoTitle } : valvelessSeoTitle ? { absolute: valvelessSeoTitle } : compactContent ? { absolute: compactContent.seoTitle } : `${title} | Foreach Technology`,
     description,
-    keywords: isValvelessRoute ? [valvelessContent?.model || valvelessCategory?.categoryName || title, getValvelessLocaleCopy(locale)?.categoryName || title, "FOREACH"] : keywords,
+    keywords: pdm5Copy ? ["PDM5", pdm5Copy.name, "I2C", "PEEK", "FOREACH"] : isValvelessRoute ? [valvelessContent?.model || valvelessCategory?.categoryName || title, getValvelessLocaleCopy(locale)?.categoryName || title, "FOREACH"] : keywords,
     alternates: tubingSeoCopy ? getTubingAlternates(segments[1], locale) : {
       canonical: canonicalPath,
-      languages: controlDetailSlug === "abd-air-bubble-detector"
+      languages: controlDetailSlug
         ? getControlModuleLanguageAlternates(controlDetailSlug)
         : isValvelessRoute ? getValvelessPumpLanguageAlternates(segments[2]) : {
         ...((isEnglishSyringeCategory || syringeLocaleCopy) ? { "zh-CN": "/products/pumps/syringe-pumps/", "x-default": "/products/pumps/syringe-pumps/" } : {}),
@@ -551,7 +553,7 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      locale: tubingSeoCopy?.openGraphLocale || (isValvelessRoute ? ({ en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU" }[locale] || "en_US") : "en_US"),
+      locale: (pdm5Copy ? { en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU" }[locale] : undefined) || tubingSeoCopy?.openGraphLocale || (isValvelessRoute ? ({ en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU" }[locale] || "en_US") : "en_US"),
       url: canonicalPath,
       siteName: "Foreach Technology",
       title: probeControlDetailCopy?.seoTitle || tubingSeoCopy?.title || syringeSeoTitle || valvelessSeoTitle || `${title} | Foreach Technology`,

@@ -1,3 +1,4 @@
+import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    FOREACH Website｜Resources｜Foreign Language Resource Center Entry
@@ -132,12 +133,12 @@ export async function generateMetadata({
   const metadata = {
     title:
       locale === "en"
-        ? "Resources | Foreach Technology"
+        ? "Product Datasheets and Catalog Downloads | FOREACH"
         : pageData.pageText.seo.title,
     description: pageData.pageText.seo.description,
   };
 
-  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
+  return buildInternationalPageMetadata({ locale, path: "/resources/datasheets/", ...metadata });
 }
 
 /* =========================================================

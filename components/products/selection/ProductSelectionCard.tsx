@@ -1,4 +1,6 @@
 "use client";
+import { normalizeSiteHref } from "@/lib/seo/site-url";
+import { getProductCardThumbnail } from "@/data/products/selection/product-card-thumbnail";
 import { getControlModuleCardCopy } from "@/data/products/selection/control-module-card-copy";
 import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
 import { getTubingMaterialCopy } from "@/data/products/tubing/content";
@@ -246,11 +248,12 @@ export default function ProductSelectionCard({
         .filter(Boolean)
         .join(" · ")
     : toDisplayText(subtitle);
-  const safeDetailHref = localizeCardDetailHref(
+  const localizedDetailHref = localizeCardDetailHref(
     normalizeCardDetailHref(product, detailHref),
     locale,
     product,
   );
+  const safeDetailHref = locale === "zh" ? localizedDetailHref : normalizeSiteHref(localizedDetailHref);
   const cardSpecs = getProductCardSpecs(product, locale)
     .map((spec) => toDisplayText(spec))
     .filter(Boolean);
@@ -265,6 +268,7 @@ export default function ProductSelectionCard({
     : plungerCardHeading));
   const usesDescriptionHeading = Boolean(descriptionHeading);
   const DescriptionHeading = product.categoryId === "valves" ? "h2" : "h3";
+  const thumbnail = getProductCardThumbnail(product.imageCard, locale);
 
   return (
     <article
@@ -276,7 +280,8 @@ export default function ProductSelectionCard({
 
       <div className="product-image" aria-label={imageAlt}>
         {product.imageCard ? (
-          <img src={product.imageCard} alt={imageAlt} loading="lazy" />
+          <img src={thumbnail?.src ?? product.imageCard} alt={imageAlt} loading="lazy"
+            width={thumbnail?.width} height={thumbnail?.height} />
         ) : (
           <div className="product-image-placeholder">{cardText.imagePlaceholder}</div>
         )}

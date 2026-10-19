@@ -1,5 +1,6 @@
 import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/valveless-pump-routes";
 import { getTubingLanguagePath } from "@/data/products/selection/tubing-selection-routes";
+import { getTechnicalArticleLanguagePath } from "@/data/resources/technical-articles/technical-article-availability";
 import type { LocaleCode } from "@/lib/i18n";
 
 const LOCALE_PATH_PREFIXES = ["en", "es", "fr", "ko", "ru"] as const;
@@ -124,7 +125,7 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
   const productLocalizedPath = localizeValvelessPumpCategoryPath(
     stripLocalePrefixFromPath(pathname), localeCode,
   );
-  const pathWithoutLocale = productLocalizedPath;
+  const pathWithoutLocale = getTechnicalArticleLanguagePath(productLocalizedPath, localeCode);
 
   const localePrefix = getLocalePathPrefix(localeCode);
 

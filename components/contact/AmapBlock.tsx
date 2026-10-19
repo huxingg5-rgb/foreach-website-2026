@@ -213,6 +213,7 @@ export default function AmapBlock({
           content: `
             <div style="min-width:260px;padding:4px 2px 6px;">
               <strong
+                class="contact-amap-title"
                 style="
                   display:block;
                   color:#173368;

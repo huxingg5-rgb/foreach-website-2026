@@ -614,7 +614,7 @@
   margin-bottom: 12px;
   color: var(--brand-cyan);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -624,7 +624,7 @@
   color: #ffffff;
   font-size: 32px;
   line-height: 1.3;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.02em;
 }
 
@@ -654,7 +654,7 @@
   background: #ffffff !important;
   color: var(--brand-blue) !important;
   font-size: 15px;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   line-height: 1;
   text-decoration: none !important;
   box-shadow: none !important;
@@ -688,8 +688,7 @@
 .datasheets-page .filter-btn.is-active,
 .datasheets-page .row-link,
 .datasheets-page .row-download,
-.datasheets-page .row-custom,
-.datasheets-page .support-btn {
+.datasheets-page .row-custom {
   font-weight: 600 !important;
 }
 

@@ -1,3 +1,4 @@
+import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜外语公司新闻列表页入口
@@ -47,9 +48,9 @@ export async function generateMetadata({ params }: NewsIntlPageProps): Promise<M
     "zh-CN": "资源中心", en: "Resources", es: "Recursos", fr: "Ressources", ko: "자료", ru: "Ресурсы",
   };
   const metadata = locale === "en"
-    ? { title: "News｜Resources｜Foreach Technology", description: "Follow Foreach updates in exhibitions, company development, technology innovation, quality systems and important announcements." }
+    ? { title: "Company News | FOREACH", description: "Follow Foreach updates in exhibitions, company development, technology innovation, quality systems and important announcements." }
     : { title: `${pageData.hero.title}｜${sectionLabels[locale]}｜Foreach Technology`, description: pageData.hero.description };
-  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
+  return buildInternationalPageMetadata({ locale, path: "/resources/news/", ...metadata });
 }
 
 export default async function NewsIntlPage({ params }: NewsIntlPageProps) {

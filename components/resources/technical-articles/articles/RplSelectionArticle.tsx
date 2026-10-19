@@ -57,7 +57,7 @@ function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: 
           height={block.height}
           sizes={block.width === block.height ? "(max-width: 700px) 100vw, 620px" : "(max-width: 820px) 100vw, 790px"}
         />}
-        <figcaption>{block.caption}</figcaption>
+        <figcaption>{block.captionHref ? <a href={block.captionHref}>{block.caption}</a> : block.caption}</figcaption>
         {block.link && <Link className={styles.figureLink} href={block.link.href}>{block.link.label}<span aria-hidden="true"> →</span></Link>}
       </figure>
     );

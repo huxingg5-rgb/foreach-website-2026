@@ -1,5 +1,5 @@
 import { isMrv3Locale, translateMrv3, type Mrv3MessageKey } from "./mrv3-locales";
-import { getMrv3ConfigurationImage } from "./mrv3-images";
+import { getMrv3ConfigurationImage, getMrv3SeriesGallery } from "./mrv3-images";
 import type { ProductSelectionProduct } from "../selection/product-selection.types";
 
 // PS-120C-005_001_cn: specifications p. 3; PEEK/PCTFE head options in the p. 9 selection diagram.
@@ -98,6 +98,7 @@ export function getMrv3Content(slug: string, locale: string) {
   const commonApplications = [t("多试剂切换", "reagentSelection"), t("样品前处理", "samplePreparation"), t("液体顺序分配", "liquidDistribution"), t("管路清洗", "flushing")];
   return {
     __locale: locale, mrv3AuthoredContent: true, slug, category: "valves", categoryId: "valves",
+    ...getMrv3SeriesGallery(locale),
     ...(configurationImage ? {
       mainImage: configurationImage.src, image: configurationImage.src, imageCard: configurationImage.src,
       imageAlt: configurationImage.alt, mainImageAlt: configurationImage.alt,

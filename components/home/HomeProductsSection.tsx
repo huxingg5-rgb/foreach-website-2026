@@ -6,6 +6,7 @@ import Link from "next/link";
 import type { HomeProductsSectionData } from "@/data/home-products.types";
 import categoryTabStyles from "@/components/common/product-category-tab.module.css";
 import styles from "./EnglishHomeSections.module.css";
+import HomeSectionMoreLink from "./HomeSectionMoreLink";
 
 export default function HomeProductsSection({ data }: { data: HomeProductsSectionData }) {
   const [activeGroup, setActiveGroup] = useState<string>("Featured");
@@ -33,7 +34,7 @@ export default function HomeProductsSection({ data }: { data: HomeProductsSectio
           ))}
           </div>
           <div className={styles.catalogNote}>
-            <Link href={data.productCenterHref} prefetch={false}>{copy.productCenter} <span aria-hidden="true">&gt;&gt;</span></Link>
+            <HomeSectionMoreLink href={data.productCenterHref}>{copy.productCenter}</HomeSectionMoreLink>
           </div>
         </div>
         <div id="home-product-grid" className={styles.productGrid}>

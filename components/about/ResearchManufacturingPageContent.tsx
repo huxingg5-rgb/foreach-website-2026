@@ -15,6 +15,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
 import { useEffect, useRef, useState } from "react";
@@ -34,6 +35,14 @@ import {
 type ResearchManufacturingPageContentProps = {
     locale: ResearchManufacturingLocale;
 };
+
+const APPLICATION_SLUGS = [
+    "ivd",
+    "life-science",
+    "analytical-instruments",
+    "synthetic-biology",
+    "lab-automation",
+] as const;
 
 /* =========================================================
    页面主组件
@@ -435,16 +444,26 @@ export default function ResearchManufacturingPageContent({
                                 aria-label={text.applications.title}
                             >
                                 {text.applications.cards.map((card, index) => (
-                                    <button
+                                    <div
                                         className={`rm-supply-nav-item ${applicationIndex === index ? "is-active" : ""
                                             }`}
                                         key={card.title}
-                                        type="button"
-                                        onClick={() => setApplicationIndex(index)}
                                     >
-                                        <span>{card.title}</span>
-                                        <span className="rm-supply-nav-dot" />
-                                    </button>
+                                        <Link
+                                            className="rm-supply-nav-link"
+                                            href={`${locale === "zh-CN" ? "" : `/${locale}`}/applications/${APPLICATION_SLUGS[index]}/`}
+                                            prefetch={false}
+                                        >
+                                            {card.title}
+                                        </Link>
+                                        <button
+                                            className="rm-supply-nav-dot"
+                                            type="button"
+                                            aria-label={card.title}
+                                            aria-pressed={applicationIndex === index}
+                                            onClick={() => setApplicationIndex(index)}
+                                        />
+                                    </div>
                                 ))}
                             </div>
                         </div>

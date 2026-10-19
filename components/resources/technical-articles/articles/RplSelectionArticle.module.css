@@ -104,6 +104,9 @@
 .gallery > figure:only-child img { aspect-ratio: auto; }
 .gallery > figure:only-child[data-square="true"] { width: min(100%, 620px); justify-self: center; }
 .gallery figcaption { border-top: 1px solid var(--line); padding-top: 10px; text-align: center; font-size: 15px; font-weight: 400; }
+.root[id="what-is-a-barbed-fitting-article"] section[id="types"] .gallery:has(> figure:nth-child(6)) { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.root[id="what-is-a-barbed-fitting-article"] section[id="types"] .gallery:has(> figure:nth-child(6)) img { aspect-ratio: 1; }
+.root[id="what-is-a-barbed-fitting-article"] section[id="types"] .gallery:has(> figure:nth-child(6)) figcaption { font-size: 14px; white-space: normal; overflow-wrap: anywhere; }
 .figureLink { display: block; width: fit-content; margin: 10px auto 0; padding: 5px 2px; font-size: 15px; }
 .dimensionLayout { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: center; padding: 16px 0 24px; }
 .productViews { display: flex; justify-content: center; align-items: center; gap: 16px; min-width: 0; }
@@ -150,6 +153,7 @@
   .body > section:first-child { border-top: 0; margin-top: 0; padding-top: 32px; }
 }
 @media (max-width: 600px) {
+  .root[id="what-is-a-barbed-fitting-article"] section[id="types"] .gallery:has(> figure:nth-child(6)) { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 12px; }
   .dimensionLayout { grid-template-columns: 1fr; gap: 12px; }
   .productCrop { width: min(36%, 135px); }
   .gallery .dimensionDrawing { max-height: 420px; }

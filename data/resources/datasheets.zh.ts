@@ -81,7 +81,7 @@ export const datasheetsZhPageText = {
       "/images/resource/datasheets/banner/resource-datasheet-banner-1920x800-v001.webp",
 
     // Banner 图片 alt，用于 SEO / GEO / 无障碍识别
-    imageAlt: "恒永达资源中心规格书下载页面 Banner",
+    imageAlt: "恒永达资源中心规格书下载页面横幅",
   },
 
   breadcrumb: {
@@ -117,7 +117,7 @@ export const datasheetsZhPageText = {
   },
 
   support: {
-    kicker: "Need Support",
+    kicker: "需要支持",
     title: "没有找到需要的规格书？",
     description:
       "提交产品名称、应用场景或资料需求，我们将协助您获取对应产品规格书，并提供必要的选型建议与技术支持。",

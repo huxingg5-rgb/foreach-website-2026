@@ -1,3 +1,4 @@
+import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜多语言接头替代查询页面入口
@@ -110,7 +111,7 @@ export async function generateMetadata({
     description: pageData.banner.description,
   };
 
-  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
+  return buildInternationalPageMetadata({ locale, path: "/resources/selection-support/fitting-replacement/", ...metadata });
 }
 
 /* =========================================================

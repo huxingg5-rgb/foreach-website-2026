@@ -1,3 +1,4 @@
+import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜多语言关于恒永达页面
@@ -84,10 +85,7 @@ export async function generateMetadata({
     return {};
   }
 
-  return {
-    title: metadataMap[locale].title,
-    description: metadataMap[locale].description,
-  };
+  return buildInternationalPageMetadata({ locale, path: "/about/foreach/", ...metadataMap[locale] });
 }
 
 /* 多语言关于恒永达页面 */

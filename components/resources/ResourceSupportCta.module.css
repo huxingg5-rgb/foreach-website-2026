@@ -69,7 +69,7 @@
   margin-bottom: 14px;
   color: #09e9b4;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.26em;
   text-transform: uppercase;
 }
@@ -79,7 +79,7 @@
   color: #ffffff;
   font-size: 30px;
   line-height: 1.25;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -0.04em;
 }
 
@@ -106,7 +106,7 @@
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
   transition:
@@ -140,4 +140,4 @@
   .button {
     width: fit-content;
   }
-} 
+}

@@ -49,7 +49,7 @@
   color: #173368;
   font-size: 14px;
   line-height: 1.1;
-  font-weight: 900;
+  font-weight: 500;
   text-align: center;
   cursor: pointer;
   box-shadow: 0 12px 30px rgba(23, 51, 104, 0.12);
@@ -60,11 +60,6 @@
     color 0.18s ease,
     border-color 0.18s ease,
     box-shadow 0.18s ease;
-}
-
-/* 俄文按钮字形较宽，右下角两个短标签使用常规字重。 */
-:global(html[lang="ru"]) .floatingActions button {
-  font-weight: 400;
 }
 
 .floatingActions .backToTopButton {
@@ -132,7 +127,7 @@
   color: #173368;
   font-size: 12px;
   line-height: 1;
-  font-weight: 900;
+  font-weight: 500;
   box-shadow: 0 6px 14px rgba(23, 51, 104, 0.16);
 }
 
@@ -236,7 +231,7 @@
   color: #ffffff;
   font-size: 24px;
   line-height: 1.15;
-  font-weight: 900;
+  font-weight: 500;
   overflow-wrap: anywhere;
 }
 
@@ -335,7 +330,7 @@
   color: #173368;
   font-size: 26px;
   line-height: 1;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .summary em {
@@ -364,10 +359,14 @@
 
 .removeButton {
   position: absolute;
-  top: 14px;
+  top: 16px;
   right: 14px;
   width: 30px;
   height: 30px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(23, 51, 104, 0.14);
   border-radius: 5px;
   background: #ffffff;
@@ -404,7 +403,7 @@
   color: #173368;
   font-size: 19px;
   line-height: 1.25;
-  font-weight: 900;
+  font-weight: 500;
   letter-spacing: -0.03em;
 }
 
@@ -417,7 +416,7 @@
   color: #173368;
   font-size: 19px;
   line-height: 1.25;
-  font-weight: 900;
+  font-weight: 500;
   letter-spacing: -0.03em;
   text-decoration: none;
   transition:
@@ -446,7 +445,7 @@
   color: #173368;
   font-size: 12px;
   line-height: 28px;
-  font-weight: 900;
+  font-weight: 500;
   white-space: nowrap;
   cursor: pointer;
   transition:
@@ -487,7 +486,7 @@
   color: #173368;
   font-size: 14px;
   line-height: 1.5;
-  font-weight: 800;
+  font-weight: 500;
   word-break: normal;
   overflow-wrap: break-word;
 }
@@ -519,7 +518,7 @@
   background: #ffffff;
   color: #173368;
   font-size: 15px;
-  font-weight: 900;
+  font-weight: 500;
   text-align: center;
   outline: none;
 }
@@ -544,7 +543,7 @@
   margin-bottom: 6px;
   color: #173368;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .note p {
@@ -577,7 +576,7 @@
   background: #ffffff;
   color: #173368;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 500;
   cursor: pointer;
   box-shadow: none;
   transition:

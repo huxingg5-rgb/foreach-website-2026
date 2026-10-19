@@ -1,0 +1,646 @@
+{
+  "metadata": {
+    "title": "¿Qué es un racor de espiga? Tipos, compatibilidad del tubo y documentación de calidad",
+    "seoTitle": "Racores de espiga: perfiles, tubos y calidad | FOREACH",
+    "seoDescription": "Seleccione racores de espiga FOREACH por geometría, diámetro interior y perfil C/F/D/V/X. Expansión, PP/PA y documentación ISO, REACH, RoHS y SDS para instrumentación.",
+    "coverImage": "/images/resources/technical-articles/what-is-a-barbed-fitting/barbed-fittings-group-blue.webp",
+    "coverAlt": "Racores de espiga FOREACH rectos, acodados, en T y en Y de varios tamaños sobre fondo azul"
+  },
+  "deck": "Para seleccionar un racor de espiga hay que definir conjuntamente el trazado del circuito, el ajuste del tubo, la documentación de materiales y los requisitos de calidad en producción. Un mismo diámetro interior nominal no implica el mismo perfil de espiga, comportamiento de montaje ni condiciones de uso.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un racor de espiga conecta tubos flexibles mediante un extremo con resaltes que se introduce en el tubo. El tubo se expande, recupera su forma y entra en contacto con el racor. En inglés se denomina barbed fitting o hose barb fitting. Puede utilizarse en líneas de lavado, reactivos, residuos líquidos y gases dentro de instrumentos; su idoneidad depende del tubo, el fluido, la presión, la temperatura y la validación de la conexión montada."
+    },
+    {
+      "type": "paragraph",
+      "text": "Los racores de espiga FOREACH incluyen conectores rectos BA, codos BL, tes BT, conectores en Y BY, cruces BX4 y racores multipuerto en π BF4. Los materiales principales son PP y PA (nailon), con versiones de igual diámetro y reductoras. C/F/D/V/X después del código dimensional identifica el perfil de espiga; valores como 1,6; 2,4 y 3,2 mm indican el diámetro interior del tubo compatible. Estos datos se interpretan por separado para definir la conexión completa."
+    },
+    {
+      "type": "paragraph",
+      "text": "En la producción de equipos también importa convertir la conexión del prototipo en un modelo, plano, especificación de material y requisito de inspección definidos. FOREACH ha obtenido las certificaciones de sistemas de gestión de calidad ISO 9001 e ISO 13485. La documentación REACH, RoHS y MSDS puede solicitarse para la configuración seleccionada. Este artículo explica la estructura del racor y el uso de estos documentos."
+    }
+  ],
+  "sections": [
+    {
+      "title": "¿Cómo conecta la espiga el tubo y en qué se diferencian sellado y retención?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durante el montaje, el extremo del tubo se expande sobre la superficie de entrada, supera la cresta de la espiga y rodea el vástago posterior. El contacto de la pared interior con el racor forma el sello, mientras que el acoplamiento mecánico ayuda a retener el tubo. La espiga no es una rosca que se atornilla dentro del tubo ni debe perforar su pared para sujetarlo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conviene evaluar por separado inserción, retención y estanqueidad. Una fuerza excesiva puede dañar el extremo del tubo; una inserción fácil con ajuste holgado puede provocar desprendimiento por tracción o cambios de presión. El resultado depende conjuntamente del perfil, diámetro interior, espesor de pared, dureza y recuperación elástica del tubo."
+        },
+        {
+          "type": "paragraph",
+          "text": "En aspiración también debe comprobarse la entrada de aire. La ausencia de gotas exteriores no demuestra estanqueidad bajo vacío. Del mismo modo, una breve prueba manual de tracción no sustituye la verificación de retención en condiciones de servicio."
+        }
+      ]
+    },
+    {
+      "title": "¿Qué tipos ofrece FOREACH? Elegir el cuerpo según el trazado del circuito",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/barbed-fittings-group-blue.webp",
+          "alt": "Racores de espiga FOREACH rectos, acodados, en T y en Y de varios tamaños sobre fondo azul",
+          "width": 2375,
+          "height": 1237,
+          "caption": "Los cuerpos permiten unir, cambiar de dirección o ramificar líneas. El diámetro, el material y el código de espiga se seleccionan después por modelo."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Serie y cuerpo",
+            "Función de conexión",
+            "Aspectos de selección"
+          ],
+          "rows": [
+            [
+              "BA recto",
+              "Unir dos tubos de igual o distinto diámetro interior",
+              "Unión de igual diámetro o reducción; confirmar el tamaño del tubo en cada extremo"
+            ],
+            [
+              "BL codo",
+              "Cambiar la dirección en un espacio limitado",
+              "Dimensiones del codo, orientación de salida y espacio para curvar el tubo"
+            ],
+            [
+              "BT en T",
+              "Formar una vía principal y una derivación lateral",
+              "Tamaños y posiciones de los tres puertos; asignar las ramas según el plano"
+            ],
+            [
+              "BY en Y",
+              "Crear una bifurcación o confluencia en Y",
+              "Orientación de las ramas y tres tamaños de tubo, considerando el sentido real del flujo"
+            ],
+            [
+              "BX4 cruz",
+              "Conectar tubos en cuatro direcciones",
+              "Distribución de puertos, espacio de montaje e identificación de líneas"
+            ],
+            [
+              "BF4 en π",
+              "Formar una conexión multipuerto en π",
+              "Confirmar en el plano las posiciones de los puertos y el espacio disponible"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/ba-straight.png",
+          "alt": "Esquema del cuerpo de un racor de espiga recto BA",
+          "width": 435,
+          "height": 435,
+          "caption": "BA recto",
+          "captionHref": "/es/products/fittings/barbed-fittings/ba-32f-pp-n/"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bl-elbow.png",
+          "alt": "Esquema del cuerpo de un codo de espiga BL",
+          "width": 390,
+          "height": 390,
+          "caption": "BL codo",
+          "captionHref": "/es/products/fittings/barbed-fittings/bl-32f-pp-n/"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bt-tee.png",
+          "alt": "Esquema del cuerpo de un racor de espiga en T BT",
+          "width": 513,
+          "height": 366,
+          "caption": "BT en T",
+          "captionHref": "/es/products/fittings/barbed-fittings/bt-32d-pp-n/"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/by-wye.png",
+          "alt": "Esquema del cuerpo de un racor de espiga en Y BY",
+          "width": 387,
+          "height": 459,
+          "caption": "BY en Y",
+          "captionHref": "/es/products/fittings/barbed-fittings/by-32d-pp-n/"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bx4-cross.png",
+          "alt": "Esquema del cuerpo de un racor de espiga en cruz BX4",
+          "width": 492,
+          "height": 543,
+          "caption": "BX4 cruz",
+          "captionHref": "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf#page=32"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bf4-pi.png",
+          "alt": "Esquema del cuerpo de un racor multipuerto de espiga en π BF4",
+          "width": 678,
+          "height": 285,
+          "caption": "BF4 en π",
+          "captionHref": "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf#page=32"
+        },
+        {
+          "type": "paragraph",
+          "text": "Las tes, las Y y los cuerpos multipuerto proporcionan vías abiertas. No reparten por sí solos volúmenes iguales ni impiden el retorno. El caudal de cada rama también depende del diámetro y la longitud del tubo, la resistencia aguas abajo y el nivel de líquido. Para impedir el reflujo o controlar la dosificación se necesitan válvulas o componentes dosificadores adecuados."
+        },
+        {
+          "type": "paragraph",
+          "text": "Igual diámetro y reducción describen el diámetro interior de tubo admitido en cada extremo. BA-32F-PP-N une dos tubos de 3,2 mm de diámetro interior; BA-24F-32F-PP-N une tubos de 2,4 y 3,2 mm. En tes e Y reductoras debe comprobarse qué posición del código corresponde a cada puerto; tres números no bastan para determinar la orientación."
+        },
+        {
+          "type": "paragraph",
+          "text": "Los tapones de espiga BBL cierran extremos de tubo y no deben confundirse con racores de paso. Los adaptadores de rosca a espiga, pasamuros de espiga y adaptadores Luer a espiga cumplen funciones adicionales. Conservan la selección del tubo por la espiga, pero también requieren comprobar el sellado de la rosca, el montaje en panel o el acoplamiento Luer macho/hembra."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/es/products/fittings/barbed-fittings/",
+              "label": "Ver modelos de racores de espiga",
+              "suffix": "; "
+            },
+            {
+              "href": "/es/products/fittings/thread-to-barbed-fittings/",
+              "label": "Ver racores de rosca a espiga",
+              "suffix": "; "
+            },
+            {
+              "href": "/es/resources/technical-articles/what-is-a-luer-fitting/",
+              "label": "Comprender la conexión Luer y el extremo de espiga"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "¿Qué significan C, F, D, V y X y cómo se interpreta la expansión?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "C/F/D/V/X son códigos del perfil de espiga situados después del tamaño. Se distinguen de las series de cuerpo BA, BL, BT y BY. Los primeros describen el perfil que contacta con el tubo; las segundas, la geometría del circuito. Un racor recto y un codo pueden utilizar el mismo código de espiga."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/barb-profiles-c-f-d-v-x.svg",
+          "alt": "Perfiles de espiga FOREACH C, F, D, V y X; rangos de expansión e identificadores de serie en la tabla inferior",
+          "width": 900,
+          "height": 350,
+          "caption": "Comparación de perfiles FOREACH. Clásica, 400, 200, 500 y 600 son identificadores de serie, no presiones nominales ni diámetros de tubo. Para una sustitución deben comprobarse los extremos y los tubos compatibles."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Código de espiga",
+            "Rango de expansión",
+            "Identificador de serie"
+          ],
+          "rows": [
+            [
+              "C",
+              "42%–69%",
+              "Serie clásica"
+            ],
+            [
+              "F",
+              "25%–32%",
+              "Serie 400"
+            ],
+            [
+              "D",
+              "24%–50%",
+              "Serie 200"
+            ],
+            [
+              "V",
+              "32%–60%",
+              "Serie 500"
+            ],
+            [
+              "X",
+              "32%–50%",
+              "Serie 600"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Estos rangos comparan la expansión del tubo asociada a cada perfil. No representan el alargamiento a rotura del material ni la expansión admisible durante el funcionamiento. Se solapan y no permiten establecer una clasificación universal de estanqueidad, presión o resistencia al arrancamiento. Cada modelo se evalúa con las dimensiones y el material del tubo real."
+        },
+        {
+          "type": "subheading",
+          "title": "Ejemplo dimensional de expansión"
+        },
+        {
+          "type": "paragraph",
+          "text": "La comparación entre el diámetro exterior de la cresta y el diámetro interior del tubo sin montar permite expresar la expansión necesaria para la inserción. Esta relación geométrica no calcula la fuerza de inserción, la presión de contacto del sello ni la retención a largo plazo."
+        },
+        {
+          "type": "formula",
+          "expression": "Expansión geométrica = (diámetro de la cresta − diámetro interior inicial del tubo) ÷ diámetro interior inicial del tubo × 100%",
+          "note": "Utilice las mismas unidades, el plano del modelo concreto y las dimensiones reales del tubo."
+        },
+        {
+          "type": "paragraph",
+          "text": "BA-32F admite un tubo de 3,2 mm de diámetro interior y su plano indica un diámetro de cresta A de 4,0 mm. Con dimensiones nominales, (4,0 − 3,2) ÷ 3,2 × 100% = 25%. Este 25% es un ejemplo geométrico, no un ensayo de un tubo determinado. Los extremos del rango de un código tampoco se asignan a todos sus modelos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para un mismo tubo, aumentar la expansión suele modificar la resistencia de inserción y la deformación local, pero no garantiza una conexión mejor. Compare los perfiles candidatos con la misma especificación de tubo y registre el montaje, las fugas y la resistencia al arrancamiento antes de elegir."
+        }
+      ]
+    },
+    {
+      "title": "Leer el modelo: diámetro interior del tubo, perfil y material",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Ejemplo de modelo completo",
+            "Significado del código",
+            "Función de conexión"
+          ],
+          "rows": [
+            [
+              "BA-32F-PP-N",
+              "BA recto; 32 = diámetro interior de 3,2 mm; perfil F; PP; N = color natural",
+              "Unir dos tubos de 3,2 mm de diámetro interior"
+            ],
+            [
+              "BA-24F-32F-PP-N",
+              "Diámetros interiores de 2,4 mm / 3,2 mm; perfil F en ambos extremos",
+              "Transición entre distintos diámetros interiores"
+            ],
+            [
+              "BL-32F-PP-N",
+              "BL codo; diámetro interior de 3,2 mm; perfil F; PP natural",
+              "Conectar tubos en una esquina"
+            ],
+            [
+              "BT-32D-PP-N",
+              "BT en T; diámetros interiores iguales de 3,2 mm; perfil D; PP natural",
+              "Crear una derivación de tres puertos"
+            ],
+            [
+              "BY-32D-PP-N",
+              "BY en Y; diámetros interiores iguales de 3,2 mm; perfil D; PP natural",
+              "Crear un recorrido en Y"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "En modelos de igual diámetro se omiten los códigos de extremo repetidos. Por ejemplo, BL-32D-32D-PP-N puede abreviarse como BL-32D-PP-N. Se debe consultar la tabla de cada cuerpo, sin añadir letras ni cantidades de puertos de forma automática. PA significa nailon y W indica blanco. El color identifica la configuración, no un nivel de calidad."
+        },
+        {
+          "type": "subheading",
+          "title": "Diámetro interior de 3,2 mm no significa diámetro exterior de 3,2 mm"
+        },
+        {
+          "type": "paragraph",
+          "text": "La espiga entra en el tubo, por lo que primero se selecciona su diámetro interior. Después, el exterior permite determinar espesor, espacio y sujeción. Un tubo de 3,2 mm de diámetro interior y 6,4 mm de exterior tiene un espesor nominal de (6,4 − 3,2) ÷ 2 = 1,6 mm. Su exterior de 6,4 mm no permite utilizar una espiga destinada a tubos de 6,4 mm de diámetro interior."
+        },
+        {
+          "type": "paragraph",
+          "text": "El diámetro interior del tubo compatible tampoco es el del conducto del racor. En BA-32F, el orificio B mide 2,4 mm y la longitud total D es 23,0 mm. Los 3,2 mm identifican el tubo, mientras que 2,4 mm corresponde al orificio indicado. Para evaluar resistencia al flujo o paso de partículas, compruebe el conducto real, sin asumir que el diámetro del tubo es el mínimo de todo el circuito."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/es/products/fittings/barbed-fittings/ba-32f-pp-n/",
+              "label": "BA-32F-PP-N: producto y plano",
+              "suffix": "; "
+            },
+            {
+              "href": "/es/products/fittings/barbed-fittings/ba-24f-32f-pp-n/",
+              "label": "BA-24F-32F-PP-N: modelo reductor",
+              "suffix": "; "
+            },
+            {
+              "href": "/es/products/fittings/barbed-fittings/bl-32f-pp-n/",
+              "label": "BL-32F-PP-N: modelo acodado"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo elegir el tubo y los materiales PP o PA del racor?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La conexión necesita que el tubo se expanda adecuadamente al montar y después permanezca ajustado al vástago. Dos tubos de igual diámetro interior pueden comportarse de forma distinta por su material, dureza, espesor o tolerancias. Las denominaciones silicona, PVC o TPU no bastan para establecer compatibilidad. Tampoco se debe aplicar la dureza recomendada por otro fabricante a todos los racores FOREACH."
+        },
+        {
+          "type": "paragraph",
+          "text": "PP y PA son las opciones principales de FOREACH; las combinaciones disponibles varían según el modelo. Compruebe la compatibilidad tanto del racor como del tubo con el líquido, la concentración, la temperatura, el tiempo de contacto y el limpiador. Verificar solo la resistencia del racor, sin evaluar hinchamiento, endurecimiento o cambios de recuperación del tubo, puede dejar problemas de conexión sin resolver."
+        },
+        {
+          "type": "paragraph",
+          "text": "Para tubos rígidos que no se expanden fácilmente, evalúe conexiones específicas para ese tubo. Si se requiere desmontaje frecuente, considere una interfaz desmontable dedicada. Forzar repetidamente la extracción e inserción sobre una espiga altera el extremo; un primer montaje correcto no demuestra reutilización ilimitada."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/es/resources/material-compatibility/",
+              "label": "Referencia de compatibilidad de materiales",
+              "suffix": "; "
+            },
+            {
+              "href": "/es/resources/technical-articles/hard-tube-fittings-selection-guide/",
+              "label": "Guía de selección de racores para tubos rígidos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Calidad en instrumentación: certificación, materiales y suministro trazable",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Además del precio unitario, el fabricante del equipo debe considerar paradas, retrabajo, pérdidas de reactivos y mantenimiento por fallos de conexión. Compare resultados con iguales tubos y condiciones, así como la disponibilidad de especificaciones y documentos de materiales y calidad. La apariencia similar o el precio por sí solos no determinan la idoneidad para un instrumento."
+        },
+        {
+          "type": "subheading",
+          "title": "Sistemas de calidad para evaluar proveedores e introducir producción en serie"
+        },
+        {
+          "type": "paragraph",
+          "text": "FOREACH ha obtenido certificaciones de sistemas de gestión de calidad ISO 9001 e ISO 13485. El alcance indicado cubre diseño, desarrollo, producción y servicio de componentes y accesorios de control de fluidos para equipos médicos. Estos documentos permiten evaluar la gestión de calidad del proveedor junto con planos, requisitos de inspección y documentación de entrega."
+        },
+        {
+          "type": "paragraph",
+          "text": "La certificación del sistema se refiere a la organización y a su alcance certificado. No significa que cada racor sea un producto sanitario certificado ni sustituye la validación de fluido, presión, biocompatibilidad o esterilización. Cuando el proyecto exige estas propiedades, se necesita evidencia específica del material o producto correspondiente."
+        },
+        {
+          "type": "subheading",
+          "title": "¿Qué aportan los documentos REACH, RoHS y MSDS?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Se puede consultar la disponibilidad de informes o información REACH, RoHS y MSDS para los racores FOREACH según modelo, material y proyecto. Los documentos deben corresponder al modelo comprado y su configuración de material, verificando fecha, objeto y alcance del ensayo o declaración."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Documento",
+            "Uso principal",
+            "Datos que comprobar"
+          ],
+          "rows": [
+            [
+              "Certificados ISO 9001 / ISO 13485",
+              "Sistema de calidad y evaluación del proveedor",
+              "Entidad certificada, alcance, vigencia y estado actual del certificado"
+            ],
+            [
+              "Documentación REACH",
+              "Información sobre sustancias químicas dentro del alcance declarado o ensayado",
+              "Material o producto, lista de sustancias, revisión y fecha"
+            ],
+            [
+              "Documentación RoHS",
+              "Apoyar la verificación de sustancias restringidas del equipo",
+              "Descripción de muestra, ensayos, modelos y alcance de la declaración"
+            ],
+            [
+              "MSDS / SDS",
+              "Información de seguridad del material y recomendaciones de manipulación y almacenamiento",
+              "Identidad del material, proveedor y revisión; no certifica prestaciones del producto"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cada documento tiene una función. REACH o RoHS por sí solos no demuestran idoneidad para contacto prolongado con un reactivo, ni una MSDS garantiza ausencia de fugas. Revise los documentos junto con ensayos en condiciones de servicio para confirmar tanto la información de materiales como el funcionamiento del circuito."
+        },
+        {
+          "type": "subheading",
+          "title": "De la muestra a la serie: dimensiones, apariencia y registros coherentes"
+        },
+        {
+          "type": "paragraph",
+          "text": "El sistema de calidad FOREACH incluye verificación de materiales, inspección en proceso y final, y registros de entrega, con capacidades como medición dimensional óptica. Los criterios acordados pueden incluir perfil, dimensiones críticas, conductos libres, rebabas o daños e identificación de modelo y material. El muestreo, los ensayos y los documentos suministrados deben seguir el acuerdo de calidad del proyecto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conserve la aprobación de muestras, las revisiones de planos y las especificaciones de tubo validadas al introducir la producción. Evalúe la necesidad de revalidación ante cambios de tubo o material del racor. Así podrá investigar variaciones de montaje o funcionamiento por modelo, material, versión y entrega, sin buscar un sustituto únicamente por su apariencia."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/es/about/quality/",
+              "label": "Sistemas de calidad, certificaciones e inspección de FOREACH",
+              "suffix": "; "
+            },
+            {
+              "href": "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf#page=27",
+              "label": "Descargar catálogo de racores y tubos (inglés)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ejemplo: unir dos tubos en el circuito de lavado de un instrumento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Supongamos que se unen dos tubos de 3,2 mm de diámetro interior en un punto fijo dentro del equipo. BA-32F-PP-N y BA-32D-PP-N son candidatos iniciales. Admiten el mismo diámetro nominal, pero tienen perfiles distintos; la selección final requiere compararlos con el tubo real."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Defina el trazado: BA para unión recta o BL si hace falta cambiar de dirección. Reserve espacio para el racor y la curva del tubo.",
+            "Especifique el tubo: diámetros interior y exterior, tolerancias, material, dureza y especificación del proveedor; no basta con «tubo de 3,2».",
+            "Compruebe materiales: evalúe PP u otro material disponible según líquido de lavado, limpiador, concentración, temperatura y ciclo de contacto.",
+            "Compruebe interfaces: códigos de ambas espigas, plano, posición de inserción y conducto mínimo, para evitar un ajuste correcto con resistencia al flujo inadecuada.",
+            "Valide muestras: montaje, estanqueidad, tracción y ciclos reales de arranque/parada. En aspiración, añada comprobaciones de entrada de aire bajo vacío.",
+            "Defina la entrega: incorpore modelo completo, especificación del tubo, versión del plano y documentos de materiales y calidad a compra y aceptación."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Si un tubo tiene 2,4 mm de diámetro interior, evalúe BA-24F-32F-PP-N en lugar de forzarlo sobre una espiga mayor. Este ejemplo describe un proceso de selección, no una validación ya realizada en un instrumento concreto."
+        }
+      ]
+    },
+    {
+      "title": "¿Cómo montar los racores y cuándo hace falta sujeción externa?",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Inspeccione modelo y superficies. Confirme diámetros y códigos de espiga; revise conducto, entrada y cresta para detectar suciedad, rebabas, grietas o rayas.",
+            "Prepare extremos perpendiculares. Retire restos del corte y no reinstale directamente extremos usados aplastados, agrietados o visiblemente estirados.",
+            "Inserte en dirección axial. Lleve el tubo a la posición especificada, sobrepasando la espiga. Ante resistencia anormal, compruebe dimensiones y materiales.",
+            "Prevea soporte y espacio de curvatura. Evite curvas bruscas o tracción continua en la salida, especialmente con numerosas ramas o tubos pesados.",
+            "Compruebe fugas en servicio. Incluya presión, temperatura y arranques/paradas previstos; en aspiración compruebe entrada de aire y registre muestras y condiciones."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La necesidad de abrazadera depende del tubo, ajuste, variaciones de presión, tracción y vibración. Debe adaptarse al diámetro exterior del tubo montado y a la zona efectiva de sujeción, sin desalineación ni compresión excesiva. No corrige un diámetro erróneo ni puede afirmarse que todos los racores funcionen sin abrazadera."
+        },
+        {
+          "type": "paragraph",
+          "text": "No utilice grasa, disolventes ni calor para ocultar dificultades de inserción sin confirmar su idoneidad: podrían alterar materiales o contaminar el circuito. Pare y despresurice antes de desmontar; tras el mantenimiento, revise racor y extremo del tubo y repita las verificaciones necesarias."
+        }
+      ]
+    },
+    {
+      "title": "¿Qué revisar ante inserción difícil, fugas, entrada de aire o desprendimiento?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Síntoma",
+            "Comprobaciones prioritarias",
+            "Acción y verificación"
+          ],
+          "rows": [
+            [
+              "Inserción difícil del tubo",
+              "Confusión entre diámetro exterior e interior; material, espesor o perfil incompatibles",
+              "Verificar especificaciones y daños del extremo; comparar combinaciones compatibles"
+            ],
+            [
+              "Fuga lenta tras el montaje",
+              "Posición de inserción, grietas, rayas en la espiga o suciedad",
+              "Sustituir piezas dañadas, montar y ensayar a presión y temperatura especificadas"
+            ],
+            [
+              "Burbujas al aspirar sin fuga visible",
+              "Entrada de aire bajo vacío, nivel aguas arriba y otras conexiones",
+              "Revisar por tramos y distinguir entrada por la unión de otras fuentes de burbujas"
+            ],
+            [
+              "Desprendimiento al arrancar/parar o bajo tracción",
+              "Ajuste, ablandamiento o relajación del tubo, picos de presión y cargas externas",
+              "Revisar condiciones y soporte del trazado, evaluar abrazadera y revalidar"
+            ],
+            [
+              "Cambio de sensación de montaje con otro lote de tubo",
+              "Variaciones de diámetro interior, tolerancias, dureza o material",
+              "Comparar muestras y registros aprobados y repetir ensayos de conexión"
+            ],
+            [
+              "Caída de caudal al añadir un racor",
+              "Orificio, curvas bruscas, obstrucción local y resistencia total del circuito",
+              "Comprobar conducto real y caudal en uso, no solo el diámetro del tubo"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Defina antes del ensayo la fuga admisible, retención y variación de caudal, indicando presión, temperatura, fluido, duración y ciclos. «Probado sin fugas» no permite reproducir el resultado ni basta para aceptar lotes posteriores."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Preguntas frecuentes sobre selección de racores de espiga",
+  "faqItems": [
+    {
+      "question": "¿Se elige el racor por el diámetro interior o exterior del tubo?",
+      "answer": "Seleccione primero por diámetro interior y compruebe después exterior, espesor, tolerancias, material y dureza. BA-32F-PP-N admite tubos de 3,2 mm de diámetro interior; no significa que la espiga mida 3,2 mm en su diámetro máximo. El exterior ayuda a definir abrazaderas y espacio. Con igual diámetro interior y distintos perfiles, revise planos y valide inserción, sellado y retención con el tubo real."
+    },
+    {
+      "question": "¿Es obligatorio utilizar una abrazadera en una conexión de espiga?",
+      "answer": "Depende del ajuste entre espiga y tubo y de las condiciones de servicio. Evalúe material, dureza, temperatura, picos de presión, vibración y tracción, y valide estanqueidad y retención según los requisitos de montaje. Si se necesita, adapte la abrazadera al diámetro exterior montado y a la zona de sujeción, sin dañar tubo ni racor. Una abrazadera no compensa un tamaño incorrecto."
+    },
+    {
+      "question": "¿Cómo elegir los dos extremos de un racor de espiga reductor?",
+      "answer": "Registre diámetro interior, exterior y material de cada tubo y seleccione el modelo reductor correspondiente. BA-24F-32F-PP-N conecta diámetros interiores de 2,4 y 3,2 mm. Compruebe también códigos de espiga, plano y conducto mínimo. Para tes o Y reductoras, identifique en el plano qué dimensión corresponde a cada puerto; el orden de los números no determina por sí solo la orientación."
+    }
+  ],
+  "cta": {
+    "title": "Convertir los requisitos del circuito en una especificación verificable",
+    "description": "Facilite diámetros interior y exterior, material y dureza de cada tubo, trazado, fluido, presión, temperatura y documentos requeridos para confirmar modelos, planos y validación de muestras.",
+    "contactLabel": "Consultar selección y documentación",
+    "productsLabel": "Ver modelos de racores de espiga",
+    "productsHref": "/es/products/fittings/barbed-fittings/"
+  },
+  "navigation": [
+    {
+      "id": "principle",
+      "label": "Conexión y sellado"
+    },
+    {
+      "id": "types",
+      "label": "Tipos de cuerpo"
+    },
+    {
+      "id": "profiles",
+      "label": "Códigos y expansión",
+      "children": [
+        {
+          "id": "expansion-example",
+          "label": "Ejemplo dimensional"
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "label": "Modelos y tamaños de tubo",
+      "children": [
+        {
+          "id": "tube-id",
+          "label": "Diámetro interior y conducto"
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "label": "Tubos y materiales"
+    },
+    {
+      "id": "quality",
+      "label": "Documentación de calidad",
+      "children": [
+        {
+          "id": "quality-systems",
+          "label": "Sistemas de gestión"
+        },
+        {
+          "id": "material-documents",
+          "label": "REACH / RoHS / MSDS"
+        },
+        {
+          "id": "batch-quality",
+          "label": "Dimensiones y suministro"
+        }
+      ]
+    },
+    {
+      "id": "selection-example",
+      "label": "Ejemplo de selección"
+    },
+    {
+      "id": "installation",
+      "label": "Montaje y sujeción"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Diagnóstico y validación"
+    }
+  ],
+  "subjectAbout": [
+    "Racores de espiga",
+    "Conexiones de tubos flexibles",
+    "Perfiles de espiga y expansión"
+  ],
+  "relatedProductTitles": {
+    "tee": "Racor de espiga en T, PA, diámetros iguales",
+    "elbow": "Racor de espiga en codo, PA, diámetros iguales"
+  }
+}

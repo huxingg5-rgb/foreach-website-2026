@@ -14,6 +14,8 @@ import { getTubingDetailPath, getLegacyTubingSelectionTarget, getTubingSelection
 import { fittingIntrosZh, fittingOverviewParagraphsZh } from "@/data/products/selection/fitting-headings.zh";
 import ProductTypeIntroImage from "./ProductTypeIntroImage";
 import { isTubingAssemblyLocale, tubingAssemblyNavigation } from "@/data/products/tubing-assemblies/locales";
+import { ProductApplicationGuides } from "@/components/products/detail/ProductApplicationsPanel";
+import { getEnglishProductApplicationGuides } from "@/data/products/detail/applications/product-application-guides.en";
 import { probeIntrosZh, probeOverviewParagraphsZh, probeTypesZh, getProbeProductTypeIdZh, getProbeSelectionPathZh } from "@/data/products/selection/probe-selection.zh";
 import { controlIntrosZh, controlOverviewParagraphsZh, controlTypesZh, getControlProductTypeIdZh, getControlSelectionPathZh } from "@/data/products/selection/control-selection.zh";
 import {getValveSeriesRoute,getValveSelectionPath,getHpValveDetailPath} from "@/data/products/selection/valve-routes";
@@ -3333,21 +3335,23 @@ export default function ProductSelectionClient({
   const [querySelection, setQuerySelection] = useState<{
     categoryId?: string;
     productTypeId?: string;
+    fittingStructure?: string;
   }>({});
   const requestedCategoryId = querySelection.categoryId;
   const requestedProductTypeId = querySelection.productTypeId;
 
   const handleSearchParamsChange = useCallback(
-    (categoryId?: string, productTypeId?: string) => {
+    (categoryId?: string, productTypeId?: string, fittingStructure?: string) => {
       setQuerySelection((current) => {
         if (
           current.categoryId === categoryId &&
-          current.productTypeId === productTypeId
+          current.productTypeId === productTypeId &&
+          current.fittingStructure === fittingStructure
         ) {
           return current;
         }
 
-        return { categoryId, productTypeId };
+        return { categoryId, productTypeId, fittingStructure };
       });
     },
     [],
@@ -4233,17 +4237,24 @@ export default function ProductSelectionClient({
 
     const hasQuerySelection = Boolean(requestedCategoryId || requestedProductTypeId);
 
+    const structureSeries = new Map<string, readonly string[]>([
+      ["flanged", ["standard-flat-bottom-fitting", "compact-flat-bottom-fitting"]],
+      ["ferrule", ["standard-ferrule-fitting", "compact-ferrule-fitting"]],
+    ]).get(querySelection.fittingStructure || "");
+    const nextFilters = hasQuerySelection
+      ? getDefaultSelectedFilters(nextCategoryId, nextProductTypeId)
+      : getInitialSelectedFilters(nextCategoryId, nextProductTypeId, initialFilters);
+    if (nextCategoryId === "fittings" && nextProductTypeId === "hard-tube-fittings" && structureSeries) {
+      const structureValues = categoryProductsForUrl
+        .filter(product => product.productTypeId === nextProductTypeId && structureSeries.includes(product.seriesId || ""))
+        .map(product => product.filters?.filter01)
+        .filter((value): value is string => Boolean(value));
+      if (structureValues.length) nextFilters.filter01 = new Set(structureValues);
+    }
+
     setActiveCategoryId(nextCategoryId);
     setActiveProductTypeId(nextProductTypeId);
-    setSelectedFilters(
-      hasQuerySelection
-        ? getDefaultSelectedFilters(nextCategoryId, nextProductTypeId)
-        : getInitialSelectedFilters(
-            nextCategoryId,
-            nextProductTypeId,
-            initialFilters
-          )
-    );
+    setSelectedFilters(nextFilters);
     setSearchInputValue("");
     setSearchKeyword("");
     setMobileCategoryOpen(false);
@@ -4254,6 +4265,7 @@ export default function ProductSelectionClient({
     categoryItems,
     requestedCategoryId,
     requestedProductTypeId,
+    querySelection.fittingStructure,
     initialCategoryId,
     initialProductTypeId,
     initialFilters,
@@ -5616,6 +5628,7 @@ function isFilterOptionActive(
                 </ProductTypeIntroImage>
               </section>
             ) : null}
+            {locale === "en" ? <ProductApplicationGuides guides={getEnglishProductApplicationGuides(pathname)} /> : null}
         <section className="selection-section">
           <div className="selection-layout">
             <ProductFilterPanel

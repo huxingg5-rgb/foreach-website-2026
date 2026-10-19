@@ -349,14 +349,14 @@
   margin-bottom: 10px;
   color: var(--news-muted);
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .pagerCard strong {
   color: var(--news-blue);
   font-size: 20px;
   line-height: 1.45;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .pagerCard em {

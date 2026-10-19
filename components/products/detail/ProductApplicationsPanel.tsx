@@ -8,6 +8,27 @@ type ProductApplicationsPanelProps = {
   content: ProductApplicationsContent;
 };
 
+export function ProductApplicationGuides({
+  guides,
+}: {
+  guides: ProductApplicationsContent["relatedGuides"];
+}) {
+  if (!guides?.links.length) return null;
+
+  return (
+    <section className={styles.selectionNote} data-product-related-application-guides="true">
+      <h3>{guides.title}</h3>
+      {guides.links.map((guide) => (
+        <div key={guide.href}>
+          <Link className={styles.articleLink} href={guide.href}>
+            {guide.label}
+          </Link>
+        </div>
+      ))}
+    </section>
+  );
+}
+
 export default function ProductApplicationsPanel({
   content,
 }: ProductApplicationsPanelProps) {
@@ -97,19 +118,7 @@ export default function ProductApplicationsPanel({
         ) : null}
       </section>
 
-      {content.relatedGuides?.links.length ? (
-        <section className={styles.selectionNote} data-product-related-application-guides="true">
-          <h3>{content.relatedGuides.title}</h3>
-
-          {content.relatedGuides.links.map((guide) => (
-            <div key={guide.href}>
-              <Link className={styles.articleLink} href={guide.href}>
-                {guide.label}
-              </Link>
-            </div>
-          ))}
-        </section>
-      ) : null}
+      <ProductApplicationGuides guides={content.relatedGuides} />
     </section>
   );
 }

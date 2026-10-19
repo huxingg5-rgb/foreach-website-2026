@@ -21,8 +21,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { getInstallationGuidePageData } from "@/services/resources/installation-guide/getInstallationGuidePageData";
-import Sv10VideoPage from "@/components/resources/installation-guide/Sv10VideoPage";
-import { sv10Video } from "@/data/resources/installation-guide/installation-guide.sv10.en";
+import VideoGuideDetailPage from "@/components/resources/installation-guide/VideoGuideDetailPage";
+import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
 
 const INSTALLATION_GUIDE_DETAIL_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
@@ -42,16 +42,17 @@ export async function generateMetadata({
 }: InstallationGuideIntlDetailPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
 
-  if (locale === "en" && slug === sv10Video.id) {
-    const url = getCanonicalUrl(sv10Video.detailHref);
+  const video = getVideoGuideDetail(locale, slug);
+  if (video) {
+    const url = getCanonicalUrl(video.detailHref);
     return {
-      title: sv10Video.seoTitle,
-      description: sv10Video.description,
+      title: video.seoTitle,
+      description: video.description,
       alternates: { canonical: url },
-      openGraph: { title: sv10Video.title, description: sv10Video.description, url,
-        type: "website", locale: "en_US", images: [{ url: sv10Video.thumbnail, alt: sv10Video.title }] },
-      twitter: { card: "summary_large_image", title: sv10Video.title,
-        description: sv10Video.description, images: [sv10Video.thumbnail] },
+      openGraph: { title: video.title, description: video.description, url,
+        type: "website", locale: "en_US", images: [{ url: video.thumbnail, alt: video.title }] },
+      twitter: { card: "summary_large_image", title: video.title,
+        description: video.description, images: [video.thumbnail] },
     };
   }
 
@@ -107,7 +108,8 @@ export default async function InstallationGuideIntlDetailPage({
     notFound();
   }
 
-  if (locale === "en" && slug === sv10Video.id) return <Sv10VideoPage />;
+  const video = getVideoGuideDetail(locale, slug);
+  if (video) return <VideoGuideDetailPage video={video} />;
 
   return (
     <main style={{ minHeight: "100vh", background: "#ffffff" }}>

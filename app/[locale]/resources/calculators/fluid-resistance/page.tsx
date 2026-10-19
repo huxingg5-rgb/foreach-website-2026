@@ -1,3 +1,4 @@
+import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -33,7 +34,7 @@ export async function generateMetadata({
     description: copy.seoDescription,
   };
 
-  return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
+  return buildInternationalPageMetadata({ locale, path: "/resources/calculators/fluid-resistance/", ...metadata });
 }
 
 function isSupportedLocale(locale: string): locale is SupportedLocale {
@@ -84,7 +85,7 @@ export default async function FluidResistanceIntlPage({
         title={copy.supportTitle}
         description={copy.supportDescription}
         buttonText={copy.supportButton}
-        href={`${prefix}/contact`}
+        href={`${prefix}/contact/`}
       />
     </main>
   );

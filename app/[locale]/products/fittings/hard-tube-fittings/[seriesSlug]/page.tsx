@@ -9,6 +9,7 @@ import {
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
+import { getHardTubeSeo } from "@/data/products/detail/hard-tube-seo";
 
 import {
   connectPublishedFittingProduct,
@@ -81,15 +82,6 @@ const SUPPORTED_LOCALES = [
 
 type SupportedLocale =
   (typeof SUPPORTED_LOCALES)[number];
-
-const PRODUCT_TYPE_NAMES:
-  Record<SupportedLocale, string> = {
-    en: "High-Pressure Fitting",
-    es: "Racor de alta presión",
-    fr: "Raccord haute pression",
-    ko: "고압 피팅",
-    ru: "Фитинг высокого давления",
-  };
 
 const hardTubeDetails =
   (
@@ -332,17 +324,16 @@ export async function generateMetadata({
     return {};
   }
 
-  const productTypeName =
-    PRODUCT_TYPE_NAMES[
-      locale
-    ];
+  const seo = getHardTubeSeo(detail, locale);
+  const title = seo?.title || `${detail.model} | Foreach Technology`;
+  const description = seo?.description || "";
 
   return {
     title:
-      `${detail.model} ${productTypeName} | Foreach Technology`,
+      title,
 
     description:
-      detail.description || "",
+      description,
 
     alternates: {
       canonical:
@@ -350,9 +341,9 @@ export async function generateMetadata({
     },
 
     ...buildProductSocialMetadata({
-      data: detail,
-      title: `${detail.model} ${productTypeName} | Foreach Technology`,
-      description: detail.description || "",
+      data: seo ? { ...detail, imageAltEn: seo.imageAlt } : detail,
+      title,
+      description,
       canonicalUrl: `/${locale}/products/fittings/hard-tube-fittings/${detail.slug}/`,
     }),
   };

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc" xml:lang="es">
+<title id="title">Una bomba alimenta un colector y varios tubos y boquillas descargan en recipientes de recogida medidos individualmente</title><desc id="desc">Una bomba alimenta un colector y varios tubos y boquillas descargan en recipientes de recogida medidos individualmente</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 Z" fill="context-stroke"/></marker></defs><rect width="1200" height="500" fill="white"/>
+<rect x="30" y="205" width="170" height="100" rx="10" fill="#f2f7fa" stroke="#a6b9c9" stroke-width="2"/>
+<text x="115.0" y="263.0" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="400" fill="#173368">Bomba</text>
+<path d="M200,255 L290,255" fill="none" stroke="#008b83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="300" y="205" width="200" height="100" rx="10" fill="#f2f7fa" stroke="#a6b9c9" stroke-width="2"/>
+<text x="400.0" y="263.0" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="400" fill="#173368">Colector</text>
+<path d="M500,255 L565,255 L565,95 L565,385" fill="none" stroke="#008b83" stroke-width="4"/>
+<path d="M565,95 L865,95 L865,110" fill="none" stroke="#008b83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="845" y="110" width="40" height="14" rx="1" fill="#173368" stroke="#173368" stroke-width="2"/>
+<path d="M865,129 L865,139" fill="none" stroke="#008b83" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M825,130 L825,167 L905,167 L905,130" fill="none" stroke="#173368" stroke-width="2"/>
+<path d="M829,157 L901,157" fill="none" stroke="#7bd6cb" stroke-width="8"/>
+<text x="990" y="150" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="400" fill="#173368">Q1</text>
+<path d="M565,190 L865,190 L865,205" fill="none" stroke="#008b83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="845" y="205" width="40" height="14" rx="1" fill="#173368" stroke="#173368" stroke-width="2"/>
+<path d="M865,224 L865,234" fill="none" stroke="#008b83" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M825,225 L825,262 L905,262 L905,225" fill="none" stroke="#173368" stroke-width="2"/>
+<path d="M829,252 L901,252" fill="none" stroke="#7bd6cb" stroke-width="8"/>
+<text x="990" y="245" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="400" fill="#173368">Q2</text>
+<path d="M565,285 L865,285 L865,300" fill="none" stroke="#008b83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="845" y="300" width="40" height="14" rx="1" fill="#173368" stroke="#173368" stroke-width="2"/>
+<path d="M865,319 L865,329" fill="none" stroke="#008b83" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M825,320 L825,357 L905,357 L905,320" fill="none" stroke="#173368" stroke-width="2"/>
+<path d="M829,347 L901,347" fill="none" stroke="#7bd6cb" stroke-width="8"/>
+<text x="990" y="340" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="400" fill="#173368">Q3</text>
+<path d="M565,380 L865,380 L865,395" fill="none" stroke="#008b83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="845" y="395" width="40" height="14" rx="1" fill="#173368" stroke="#173368" stroke-width="2"/>
+<path d="M865,414 L865,424" fill="none" stroke="#008b83" stroke-width="2" stroke-dasharray="8 6"/>
+<path d="M825,415 L825,452 L905,452 L905,415" fill="none" stroke="#173368" stroke-width="2"/>
+<path d="M829,442 L901,442" fill="none" stroke="#7bd6cb" stroke-width="8"/>
+<text x="990" y="435" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="400" fill="#173368">Q4</text>
+<text x="710" y="35" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="400" fill="#173368">Recipientes de recogida</text>
+<text x="300" y="400" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="400" fill="#173368">Q = Q1 + Q2 + Q3 + Q4</text>
+<text x="600" y="480" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="400" fill="#173368">Medir cada ramal por separado</text>
+</svg>

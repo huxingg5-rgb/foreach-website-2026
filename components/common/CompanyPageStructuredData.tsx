@@ -1,4 +1,4 @@
-import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
+import { getSiteIdentity, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
 
 type Props = {
@@ -14,7 +14,7 @@ export default function CompanyPageStructuredData({ type, path, name, descriptio
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      ...HOME_SITE_IDENTITY["@graph"],
+      ...getSiteIdentity(locale)["@graph"],
       {
         "@type": type,
         "@id": `${url}#webpage`,

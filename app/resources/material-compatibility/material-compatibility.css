@@ -157,7 +157,7 @@
   color: var(--mc-blue);
   background: #ffffff;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 500;
   transition: all 0.22s ease;
 }
 
@@ -210,7 +210,7 @@
   color: var(--mc-blue);
   font-size: 32px;
   line-height: 1.25;
-  font-weight: 900;
+  font-weight: 500;
   letter-spacing: -0.02em;
 }
 
@@ -267,14 +267,14 @@
   color: #ffffff;
   background: var(--mc-blue);
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .material-compatibility-table th:first-child,
 .material-compatibility-table td:first-child {
   text-align: left;
   padding-left: 26px;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .material-compatibility-table tbody tr:nth-child(odd) {
@@ -308,7 +308,7 @@
   height: 30px;
   place-items: center;
   color: #111827;
-  font-weight: 900;
+  font-weight: 500;
   background: transparent;
 }
 

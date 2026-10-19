@@ -1,4 +1,5 @@
 import { getHardTubeFittingsArticles } from "@/data/resources/technical-articles/hard-tube-fittings-selection.zh";
+import { getBarbedFittingArticles } from "@/data/resources/technical-articles/what-is-a-barbed-fitting.zh";
 import { getLuerFittingArticles } from "@/data/resources/technical-articles/what-is-a-luer-fitting.zh";
 import { getFerruleFittingArticles } from "@/data/resources/technical-articles/what-is-a-ferrule-fitting.zh";
 import { getCompressionRingFittingArticles } from "@/data/resources/technical-articles/what-is-a-compression-ring-fitting.zh";
@@ -333,6 +334,7 @@ function getTechnicalArticlesSourcePageData(
 // Use the assembled Chinese list so new articles keep the same position in every locale.
 const technicalArticleOrder = new Map(
   [
+    ...getBarbedFittingArticles("zh-CN"),
     ...getLuerFittingArticles("zh-CN"),
     ...getFerruleFittingArticles("zh-CN"),
     ...getCompressionRingFittingArticles("zh-CN"),
@@ -361,7 +363,7 @@ export function getTechnicalArticlesPageData(
     taxonomy: getTechnicalArticleTaxonomy(locale),
     // Keep withdrawn drafts in the source archive, outside all public routes and indexes.
     articles: classifyTechnicalArticles(
-      [...getLuerFittingArticles(locale), ...getCompressionRingFittingArticles(locale), ...getFerruleFittingArticles(locale), ...getFlangedTubingAssembliesArticles(locale), ...getHardTubeFittingsArticles(locale), ...getValveEngineeringArticles(locale), ...getPipettingBasicsArticles(locale), ...getProgrammableSyringeArticles(locale), ...getProgrammablePipettingArticles(locale), ...getMeteringPumpAccuracyRepeatabilityArticles(locale), ...getValvelessMeteringPumpOverviewArticles(locale), ...getRplSelectionArticles(locale), ...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
+      [...getBarbedFittingArticles(locale), ...getLuerFittingArticles(locale), ...getCompressionRingFittingArticles(locale), ...getFerruleFittingArticles(locale), ...getFlangedTubingAssembliesArticles(locale), ...getHardTubeFittingsArticles(locale), ...getValveEngineeringArticles(locale), ...getPipettingBasicsArticles(locale), ...getProgrammableSyringeArticles(locale), ...getProgrammablePipettingArticles(locale), ...getMeteringPumpAccuracyRepeatabilityArticles(locale), ...getValvelessMeteringPumpOverviewArticles(locale), ...getRplSelectionArticles(locale), ...getPumpDiagnosticsArticles(locale), ...getPumpApplicationArticles(locale), ...sourcePageData.articles]
         .filter(
           (article) => !withdrawnTechnicalArticleSlugs.has(article.slug),
         )

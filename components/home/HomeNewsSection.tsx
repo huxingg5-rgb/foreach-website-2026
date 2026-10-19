@@ -8,6 +8,9 @@
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于新闻页面或新闻详情页跳转
 import { useState } from "react"; // 引入 React 的 useState，用于控制顶部分类按钮选中状态
 
+import styles from "./HomeNewsSection.module.css";
+import HomeSectionMoreLink from "./HomeSectionMoreLink";
+
 import HomeNewsListItem from "@/components/home/HomeNewsListItem"; // 引入右侧单条新闻列表卡片组件
 
 import type { LocaleCode } from "@/lib/i18n"; // 引入官网支持的语言代码类型，例如 zh-CN、en、es、fr、ko、ru
@@ -35,7 +38,7 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
 
   return ( // 返回资讯中心模块结构
     <section // 首页资讯中心模块最外层开始
-      className="home-news-screen" // 首页资讯中心模块样式 class
+      className={`home-news-screen ${locale === "zh-CN" ? "" : styles.responsiveNews}`} // 首页资讯中心模块样式 class
       id={homeNewsData.sectionId} // 新闻模块锚点 id，当前为 news
       aria-labelledby="news-title" // 绑定标题 id，提升无障碍语义
     > {/* 首页资讯中心模块最外层开始标签结束 */}
@@ -167,13 +170,16 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
             </div> {/* 右侧新闻列表卡片容器结束 */}
 
             <div className="home-news-bottom-actions"> {/* 右下角查看更多按钮区域 */}
-              <Link // 查看更多新闻链接开始
-                className="home-news-view-all-btn" // 查看更多按钮 class
-                href={getHomeNewsHref(homeNewsData.moreNewsHref, locale)} // 根据当前语言读取更多新闻链接
-                prefetch={false}
-              > {/* 查看更多新闻链接开始标签结束 */}
-                {getHomeNewsText(homeNewsData.moreNewsLabel, locale)} <span>›</span> {/* 更多新闻按钮文字和箭头 */}
-              </Link> {/* 查看更多新闻链接结束 */}
+              {locale === "zh-CN" ? (
+                <Link className="home-news-view-all-btn"
+                  href={getHomeNewsHref(homeNewsData.moreNewsHref, locale)} prefetch={false}>
+                  {getHomeNewsText(homeNewsData.moreNewsLabel, locale)} <span>›</span>
+                </Link>
+              ) : (
+                <HomeSectionMoreLink href={getHomeNewsHref(homeNewsData.moreNewsHref, locale)}>
+                  {getHomeNewsText(homeNewsData.moreNewsLabel, locale)}
+                </HomeSectionMoreLink>
+              )}
             </div> {/* 右下角查看更多按钮区域结束 */}
           </aside> {/* 右侧：新闻列表结束 */}
         </div> {/* 新闻模块三栏布局结束 */}

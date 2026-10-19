@@ -1,4 +1,5 @@
 export type DiaphragmPumpEngineeringArticleSlug =
+  | "diaphragm-pump-vs-peristaltic-pump"
   | "fluid-resistance-calculator-liquid-path-design-guide"
   | "foreach-miniature-diaphragm-pump-oem-integration"
   | "self-priming-miniature-liquid-diaphragm-pump-selection"
@@ -69,6 +70,7 @@ export type EngineeringArticleBlock =
       width: number;
       height: number;
       caption: string;
+      captionHref?: string;
       link?: { href: string; label: string };
       productViews?: readonly { src: string; alt: string; reverse?: boolean }[];
       flowNodes?: readonly { label: string; detail: string }[];

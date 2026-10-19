@@ -19,6 +19,7 @@ import { installationGuideZhData } from "@/data/resources/installation-guide/ins
 import { getInstallationGuideIntlData } from "@/data/resources/installation-guide/installation-guide.intl";
 import { channelVideoCopy, getChannelVideoAdditions, getChineseChannelBackfill } from "@/data/resources/installation-guide/installation-guide.channel-additions";
 import { sv10EnglishGuide } from "@/data/resources/installation-guide/installation-guide.sv10.en";
+import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
 
 export function getInstallationGuidePageData(
   locale: InstallationGuideLocale = "zh-CN",
@@ -38,6 +39,14 @@ export function getInstallationGuidePageData(
         id: "company", type: "category", name: channelVideoCopy[locale].companyCategory, children: [],
       }],
     },
-    guides: [...additions, ...base.guides.filter(guide => !ids.has(guide.id))],
+    guides: [...additions, ...base.guides.filter(guide => !ids.has(guide.id))].map(guide => {
+      const detail = getVideoGuideDetail(locale, guide.id);
+      return detail ? {
+        ...guide,
+        detailHref: detail.detailHref,
+        description: detail.description,
+        relationKeys: detail.relationKeys,
+      } : guide;
+    }),
   };
 }

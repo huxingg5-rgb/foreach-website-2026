@@ -18,6 +18,7 @@ import type { ReactNode } from "react";
 
 import "./globals.css";
 import "./language-typography.css";
+import "./shared-heading-typography.css";
 
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";

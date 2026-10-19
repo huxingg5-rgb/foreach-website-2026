@@ -22,10 +22,10 @@
 import type { ChangeEvent, FormEvent } from "react";
 import { useMemo, useRef, useState } from "react";
 
-import AmapBlock from "@/components/contact/AmapBlock";
+import ContactInformationSection from "@/components/contact/ContactInformationSection";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 
-import type { getContactIntlData } from "@/data/contact-cooperation/contact.intl";
+import type { ContactPageData } from "@/data/contact-cooperation";
 
 import type {
   DistributorLocale,
@@ -58,7 +58,7 @@ import {
 
 type DistributorPageContentProps = {
   content: DistributorPageData;
-  contactPageData: ReturnType<typeof getContactIntlData>;
+  contactPageData: ContactPageData;
   locale: DistributorLocale;
 };
 
@@ -1249,51 +1249,10 @@ export default function DistributorPageContent({
           2. 放在经销商表单和底部 CTA 之间
           3. contactPageData 由服务端 page.tsx 传入，不在客户端重新判断语言
       ===================================================== */}
-      <section
-        className="contact-section contact-info-section distributor-contact-info-section"
+      <ContactInformationSection
+        data={contactPageData}
         id="distributor-contact-info"
-      >
-        <div className="contact-section-inner">
-          <div className="contact-section-head">
-            <h2 className="contact-section-title">
-              {contactPageData.contactInfo.title}
-            </h2>
-
-            <p className="contact-section-desc">
-              {contactPageData.contactInfo.description}
-            </p>
-          </div>
-
-          <div className="contact-info-layout">
-            {/* 左侧公司联系信息 */}
-            <section className="contact-company-panel">
-              <h3>
-                {contactPageData.contactInfo.companyName}
-                <span>{contactPageData.contactInfo.companyPosition}</span>
-              </h3>
-
-              {contactPageData.contactInfo.rows.map((row) => (
-                <div className="contact-info-row" key={row.label}>
-                  <div>{row.label}</div>
-                  <div>{row.value}</div>
-                </div>
-              ))}
-            </section>
-
-            {/* 右侧地图 */}
-            <AmapBlock
-              title={contactPageData.contactInfo.map.title}
-              address={contactPageData.contactInfo.map.address}
-              lng={contactPageData.contactInfo.map.lng}
-              lat={contactPageData.contactInfo.map.lat}
-              mapUrl={contactPageData.contactInfo.map.mapUrl}
-              loadingText={contactPageData.form.mapTexts.loading}
-              errorText={contactPageData.form.mapTexts.error}
-              openMapText={contactPageData.form.mapTexts.openMap}
-            />
-          </div>
-        </div>
-      </section>
+      />
 
       {/* =====================================================
           底部 CTA

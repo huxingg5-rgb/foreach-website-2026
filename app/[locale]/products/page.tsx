@@ -36,9 +36,9 @@ type ProductLocale = (typeof PRODUCT_LOCALES)[number];
 
 const PRODUCT_METADATA: Record<ProductLocale, Metadata> = {
   en: {
-    title: "Precision Fluid Handling Products | Foreach Technology",
+    title: "Fluidic Components: Pumps, Valves and Sensors | FOREACH",
     description:
-      "Explore Foreach pumps, valves, probes and needles, fittings, tubing, sensors, and control modules for precision fluid handling in IVD, analytical instruments, and laboratory automation.",
+      "Compare FOREACH fluidic components for OEM instruments: pumps, valves, probes, fittings, tubing, sensors and controls for precision fluid handling.",
   },
   es: {
     title: "Productos para el manejo preciso de fluidos | Foreach Technology",

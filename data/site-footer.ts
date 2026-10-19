@@ -84,7 +84,7 @@ export const siteFooterData = {
         { key: "pumps", label: { china: "泵系列", global: "Pump Series" }, href: href("/products/pumps") },
         { key: "valves", label: { china: "阀系列", global: "Valve Series" }, href: href("/products/valves") },
         { key: "probes", label: { china: "针系列", global: "Probe Series" }, href: href("/products/probes") },
-        { key: "fittings", label: { china: "接头系列", global: "Fitting Series" }, href: href("/products?category=fittings") },
+        { key: "fittings", label: { china: "接头系列", global: "Fitting Series" }, href: { china: "/products?category=fittings", global: "/products/fittings/" } },
         { key: "tubing", label: { china: "管路系列", global: "Tubing Series" }, href: href("/products/tubing") },
         { key: "control", label: { china: "智控系列", global: "Control Series" }, href: href("/products?category=control") },
       ],
@@ -129,7 +129,7 @@ export const siteFooterData = {
       key: "contact",
       title: { china: "联系我们", global: "Contact Us" },
       links: [
-        { key: "inquiry", label: { china: "询盘表单", global: "Inquiry Form" }, href: href("/contact#inquiry") },
+        { key: "inquiry", label: { china: "询盘表单", global: "Inquiry Form" }, href: { china: "/contact#inquiry", global: "/contact#form" } },
         { key: "contact-info", label: { china: "联系方式", global: "Contact Information" }, href: href("/contact#contact-info") },
       ],
     },
@@ -180,6 +180,10 @@ export const siteFooterData = {
   copyright: {
     china: "© 2026 深圳市恒永达科技股份有限公司 版权所有",
     global: "© 2026 Shenzhen Foreach Technology Co., Ltd. All rights reserved.",
+    es: "© 2026 Shenzhen Foreach Technology Co., Ltd. Todos los derechos reservados.",
+    fr: "© 2026 Shenzhen Foreach Technology Co., Ltd. Tous droits réservés.",
+    ko: "© 2026 Shenzhen Foreach Technology Co., Ltd. 모든 권리 보유.",
+    ru: "© 2026 Shenzhen Foreach Technology Co., Ltd. Все права защищены.",
   },
 };
 

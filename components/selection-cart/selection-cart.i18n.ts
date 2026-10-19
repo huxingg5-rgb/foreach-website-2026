@@ -1,6 +1,7 @@
 import type { LocaleCode } from "@/lib/i18n";
 
 export interface SelectionCartCopy {
+  requestQuote: string;
   headerDescription: string;
   productsCount: string;
   drawingRequests: string;
@@ -31,6 +32,7 @@ export interface SelectionCartCopy {
 
 const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
   "zh-CN": {
+    requestQuote: "询价申请",
     headerDescription:
       "确认型号、数量与图纸需求，后续可统一提交或生成资料包。",
     productsCount: "产品数量",
@@ -62,6 +64,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     },
   },
   en: {
+    requestQuote: "Request a Quote",
     headerDescription:
       "Confirm models, quantities, and drawing requirements before submitting or generating a PDF list.",
     productsCount: "Products",
@@ -93,6 +96,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     },
   },
   es: {
+    requestQuote: "Solicitar cotización",
     headerDescription:
       "Confirme los modelos, las cantidades y los planos necesarios antes de enviar la solicitud o generar la lista PDF.",
     productsCount: "Productos",
@@ -124,6 +128,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     },
   },
   fr: {
+    requestQuote: "Demander un devis",
     headerDescription:
       "Confirmez les modèles, les quantités et les plans requis avant d’envoyer la demande ou de générer la liste PDF.",
     productsCount: "Produits",
@@ -155,6 +160,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     },
   },
   ko: {
+    requestQuote: "견적 요청",
     headerDescription:
       "제출하거나 PDF 목록을 생성하기 전에 모델, 수량 및 도면 요구 사항을 확인하세요.",
     productsCount: "제품",
@@ -186,6 +192,7 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     },
   },
   ru: {
+    requestQuote: "Запросить цену",
     headerDescription:
       "Перед отправкой или созданием PDF-списка проверьте модели, количество и требования к чертежам.",
     productsCount: "Продукты",

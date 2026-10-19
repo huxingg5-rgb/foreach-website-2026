@@ -1,0 +1,15 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  color: var(--brand-blue);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.link:is(:hover, :focus-visible) { color: var(--brand-cyan); }
+.link:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 4px; }
+.arrow { white-space: nowrap; }

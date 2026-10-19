@@ -1,0 +1,37 @@
+/* Keep the original image-and-text news items when the list moves below
+   the two featured cards. Fixed row heights would clip translated text. */
+@media (max-width: 1280px) {
+  .responsiveNews :global(.home-news-list-item) {
+    grid-template-columns: clamp(96px, 12vw, 144px) minmax(0, 1fr) !important;
+    gap: 18px !important;
+    height: auto !important;
+    min-height: 144px;
+    overflow: visible;
+  }
+
+  .responsiveNews :global(.home-news-list-thumb) {
+    height: 100% !important;
+    min-height: 0 !important;
+    aspect-ratio: auto;
+    align-self: stretch;
+  }
+
+  .responsiveNews :global(.home-news-list-content) {
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  .responsiveNews :global(.home-news-list-bottom) {
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsiveNews :global(.home-news-list-item) {
+    grid-template-columns: 112px minmax(0, 1fr) !important;
+    gap: 14px !important;
+    min-height: 132px;
+  }
+}

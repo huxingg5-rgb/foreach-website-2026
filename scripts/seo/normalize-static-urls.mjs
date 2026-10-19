@@ -12,7 +12,10 @@ import process from "node:process";
 
 const pipettingPaths = JSON.parse(await readFile(new URL("../../data/products/selection/pipetting-pump-paths.json", import.meta.url), "utf8"));
 
-const OUTPUT_ROOT = path.join(process.cwd(), "out");
+const outputArgument = process.argv.find(argument => argument.startsWith("--output-root="));
+const OUTPUT_ROOT = outputArgument
+  ? path.resolve(outputArgument.slice("--output-root=".length))
+  : path.join(process.cwd(), "out");
 const SITE_ORIGIN = "https://www.foreachtek.com";
 const SITE_HOSTNAME = new URL(SITE_ORIGIN).hostname;
 const INTERNATIONAL_LOCALES = new Set(["en", "es", "fr", "ko", "ru"]);
@@ -139,7 +142,7 @@ function normalizeExistingAlternate(value, routeSet) {
   return routeSet.has(canonicalRoute) ? absoluteRouteUrl(canonicalRoute) : null;
 }
 
-function getAlternates(html, route, routeSet) {
+function getExistingAlternates(html, routeSet) {
   const alternates = new Map();
 
   for (const match of html.matchAll(/<link\b[^>]*>/gi)) {
@@ -157,10 +160,20 @@ function getAlternates(html, route, routeSet) {
     alternates.set(hreflang, normalizedUrl);
   }
 
-  const { baseSegments } = routeLocaleAndBase(route);
+  return alternates;
+}
+
+function getAlternates(html, route, routeSet, declaredAlternates) {
+  const alternates = getExistingAlternates(html, routeSet);
+  const { locale: currentLocale, baseSegments } = routeLocaleAndBase(route);
   for (const [locale, hreflang] of HREFLANG_BY_LOCALE) {
     const candidateRoute = localeRoute(locale, baseSegments);
-    if (routeSet.has(candidateRoute)) alternates.set(hreflang, absoluteRouteUrl(candidateRoute));
+    // Explicit mappings may use different paths for equivalent page roles.
+    const declaredReturn = declaredAlternates.get(candidateRoute)?.get(currentLocale);
+    const hasDifferentRole = declaredReturn && declaredReturn !== absoluteRouteUrl(route);
+    if (!alternates.has(hreflang) && routeSet.has(candidateRoute) && !hasDifferentRole) {
+      alternates.set(hreflang, absoluteRouteUrl(candidateRoute));
+    }
   }
 
   if (alternates.size < 2) return new Map();
@@ -294,15 +307,9 @@ function injectSeoLinks(html, canonicalUrl, alternates) {
   return html.replace(/<\/head>/i, `${tags}</head>`);
 }
 
-// Keep scoped content exports in the correct language before JavaScript runs.
+// Set the document language before JavaScript runs, including noindex review pages.
 function normalizeContentLanguage(html, route) {
-  const { locale, baseSegments } = routeLocaleAndBase(route);
-  const isTechnicalArticle = baseSegments[0] === "resources" && baseSegments[1] === "technical-articles";
-  const isEnglishAnalyticalApplication = locale === "en" &&
-    baseSegments[0] === "applications" && baseSegments[1] === "analytical-instruments";
-  if (!isTechnicalArticle && !isEnglishAnalyticalApplication) {
-    return html;
-  }
+  const { locale } = routeLocaleAndBase(route);
   return html.replace(/<html\b[^>]*>/i, (tag) => {
     const withoutLang = tag.replace(/\s+lang\s*=\s*(?:"[^"]*"|'[^']*')/i, "");
     return withoutLang.replace(/>$/, ` lang="${locale}">`);
@@ -316,12 +323,14 @@ async function main() {
   for (const filePath of htmlFiles) {
     const html = await readFile(filePath, "utf8");
     const route = routeFromHtmlFile(filePath);
-    if (isIndexablePage(route, filePath, html)) pages.push({ filePath, route, html });
+    pages.push({ filePath, route, html, indexable: isIndexablePage(route, filePath, html) });
   }
 
-  const routeSet = new Set(pages.map(({ route }) => route));
+  const routeSet = new Set(pages.filter(page => page.indexable).map(({ route }) => route));
+  const declaredAlternates = new Map(pages.filter(page => page.indexable).map(page => [page.route, getExistingAlternates(page.html, routeSet)]));
   const stats = {
-    pages: pages.length,
+    pages: routeSet.size,
+    documentLanguages: 0,
     canonicalLinks: 0,
     hreflangLinks: 0,
     normalizedInternalLinks: 0,
@@ -330,14 +339,19 @@ async function main() {
   };
 
   for (const page of pages) {
+    const languageHtml = normalizeContentLanguage(page.html, page.route);
+    if (languageHtml !== page.html) stats.documentLanguages += 1;
+    if (!page.indexable) {
+      if (languageHtml !== page.html) await writeFile(page.filePath, languageHtml, "utf8");
+      continue;
+    }
     const canonicalUrl = absoluteRouteUrl(page.route);
-    const alternates = getAlternates(page.html, page.route, routeSet);
-    let html = removeCanonicalAndHreflang(page.html);
+    const alternates = getAlternates(page.html, page.route, routeSet, declaredAlternates);
+    let html = removeCanonicalAndHreflang(languageHtml);
     html = normalizeAnchorTags(html, routeSet, stats);
     html = normalizeJsonLd(html, routeSet, stats);
     html = normalizeOpenGraphUrl(html, canonicalUrl);
     html = injectSeoLinks(html, canonicalUrl, alternates);
-    html = normalizeContentLanguage(html, page.route);
     await writeFile(page.filePath, html, "utf8");
 
     stats.canonicalLinks += 1;

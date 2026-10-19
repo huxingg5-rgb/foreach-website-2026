@@ -47,6 +47,7 @@ export default async function DatasheetsPage() {
 
   return (
     <DatasheetsClient
+      accessibilityLabels={{ breadcrumb: "面包屑导航", categoryFilter: "规格书分类", thumbnail: "缩略图" }}
       pageText={pageData.pageText}
       filterOptions={pageData.filterOptions}
       datasheetItems={pageData.datasheetItems}

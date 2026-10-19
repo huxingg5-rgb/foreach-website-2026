@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react"; // 引入 React Hook，用�
 
 import HomeCompanyVideo from "@/components/home/HomeCompanyVideo"; // 引入公司介绍视频组件
 import styles from "./HomeCompanyStrengthSection.module.css";
+import HomeSectionMoreLink from "./HomeSectionMoreLink";
 
 import type { LocaleCode } from "@/lib/i18n"; // 官网支持的语言代码类型
 
@@ -37,6 +38,26 @@ const HOME_HONOR_CERTIFICATE_IMAGE_BY_KEY: Record<string, string> = {
     "/images/home/company-honors/iso-9001.webp",
 };
 /* HOME_HONOR_CERTIFICATE_IMAGE_MAP_END */
+
+// Intentional desktop line breaks; title wording remains sourced from the locale data.
+const advantageTitleFirstLines: Partial<Record<LocaleCode, Record<string, string>>> = {
+  en: { rd: "R&D", manufacturing: "Manufacturing", quality: "Quality", custom: "Customization", service: "Technical" },
+  es: { rd: "Capacidad de", manufacturing: "Fabricación y", quality: "Sistema de", custom: "Soporte", service: "Servicio" },
+  fr: { rd: "Capacité", manufacturing: "Fabrication et", quality: "Système", custom: "Support", service: "Service" },
+  ru: { rd: "Возможности", manufacturing: "Производство", quality: "Система", custom: "Кастомизация", service: "Технический" },
+};
+
+function AdvantageTitle({ title, firstLine }: { title: string; firstLine?: string }) {
+  if (!firstLine || !title.startsWith(firstLine)) return <>{title}</>;
+  return <>
+    <span className={styles.advantageExpandedTitle}>{title}</span>
+    <span className={styles.advantageCollapsedTitle} aria-hidden="true">
+      <span className={styles.advantageTitleLine}>{firstLine}</span>
+      {title.slice(firstLine.length, firstLine.length + 1) === " " ? " " : ""}
+      <span className={styles.advantageTitleLine}>{title.slice(firstLine.length).trimStart()}</span>
+    </span>
+  </>;
+}
 
 export default function HomeCompanyStrengthSection({ // 定义并导出首页公司实力组件
   locale, // 接收当前语言
@@ -149,7 +170,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
 
   return ( // 返回首页第三屏和第四屏结构
     <> {/* Fragment 外层，不额外生成 DOM */}
-      <section className="home-company-about-section" id={aboutData.sectionId}> {/* 第三屏：公司介绍区域 */}
+      <section className={`home-company-about-section ${locale === "zh-CN" ? "" : styles.responsiveAbout}`} id={aboutData.sectionId}> {/* 第三屏：公司介绍区域 */}
         <div className="home-company-about-shell"> {/* 公司介绍区域内容外壳 */}
           <div className="home-company-about-main"> {/* 公司介绍主要内容布局 */}
             <div className="home-company-about-left"> {/* 左侧：标题 + 公司视频 */}
@@ -212,9 +233,15 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
               </div> {/* 数据卡片网格结束 */}
 
               <div className="home-company-about-actions"> {/* 公司介绍按钮区域 */}
-                <Link className="home-company-primary-btn brand-navy-button-motion" href={aboutForeachHref} prefetch={false}> {/* 查看更多按钮 */}
-                  {getHomeCompanyText(aboutData.contactButton, locale)} {/* 联系我们按钮多语言文字 */}
-                </Link> {/* 联系我们按钮结束 */}
+                {locale === "zh-CN" ? (
+                  <Link className={`home-news-view-all-btn ${styles.aboutMoreLink}`} href={aboutForeachHref} prefetch={false}>
+                    {getHomeCompanyText(aboutData.contactButton, locale)} <span aria-hidden="true">›</span>
+                  </Link>
+                ) : (
+                  <HomeSectionMoreLink href={aboutForeachHref}>
+                    {getHomeCompanyText(aboutData.contactButton, locale)}
+                  </HomeSectionMoreLink>
+                )}
               </div> {/* 公司介绍按钮区域结束 */}
             </div> {/* 右侧：公司介绍 + 数据卡片 + 联系按钮结束 */}
           </div> {/* 公司介绍主要内容布局结束 */}
@@ -256,7 +283,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
 
       <section // 第四屏：企业优势区域开始
         ref={advantagesSectionRef}
-        className="home-company-advantages-section" // 企业优势区域 class
+        className={`home-company-advantages-section ${locale === "zh-CN" ? "" : styles.smoothAdvantages}`} // 企业优势区域 class
         data-media-ready={shouldLoadAdvantageMedia ? "true" : "false"}
       > {/* 第四屏：企业优势区域开始标签结束 */}
         <div className="home-advantage-panels"> {/* 企业优势卡片区域 */}
@@ -268,13 +295,13 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
               <div className="home-panel-content"> {/* 企业优势卡片内容容器 */}
                 <span className="home-panel-index">{advantage.index}</span> {/* 企业优势编号 */}
 
-                <h3 className="home-panel-title"> {/* 企业优势标题 */}
-                  {getHomeCompanyText(advantage.title, locale)} {/* 企业优势标题多语言文字 */}
+                <h3 className={`home-panel-title ${advantageTitleFirstLines[locale] ? styles.twoLineAdvantageTitle : ""}`}> {/* 企业优势标题 */}
+                  <AdvantageTitle title={getHomeCompanyText(advantage.title, locale)} firstLine={advantageTitleFirstLines[locale]?.[advantage.key]} /> {/* 企业优势标题多语言文字 */}
                 </h3> {/* 企业优势标题结束 */}
 
                 <span className="home-panel-line" /> {/* 企业优势卡片装饰线 */}
 
-                <div className="home-panel-copy-group"> {/* 企业优势两段正文独立容器 */}
+                <div className="home-panel-copy-group"><div className={styles.advantageCopyInner}> {/* 企业优势两段正文独立容器 */}
                   <p className="home-panel-brief"> {/* 企业优势简短说明 */}
                     {getHomeCompanyText(advantage.brief, locale)} {/* 企业优势简短说明多语言文字 */}
                   </p> {/* 企业优势简短说明结束 */}
@@ -282,7 +309,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
                   <p className="home-panel-detail"> {/* 企业优势详细说明 */}
                     {getHomeCompanyText(advantage.detail, locale)} {/* 企业优势详细说明多语言文字 */}
                   </p> {/* 企业优势详细说明结束 */}
-                </div> {/* 企业优势两段正文独立容器结束 */}
+                </div></div> {/* 企业优势两段正文独立容器结束 */}
 
                 <span className="home-panel-arrow" aria-hidden="true"> {/* 企业优势卡片箭头 */}
                   → {/* 箭头符号 */}

@@ -1,24 +1,20 @@
-"use client";
-import tubingMenuStyles from "./SiteHeaderTubingMenu.module.css";
-import { getLanguageHref } from "@/lib/i18n/language-switch"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
+"use client"; // 声明这是客户端组件，因为这里需要使用 useState、useEffect、window 等浏览器能力
 
 import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
 import dynamic from "next/dynamic";
+import tubingMenuStyles from "./SiteHeaderTubingMenu.module.css";
 import { usePathname, useRouter } from "next/navigation"; // 引入路径和路由工具，用于语言判断与按意图预取
 import {
   useEffect,
   useMemo,
   useRef,
   useState,
+  useSyncExternalStore,
   type MouseEvent,
 } from "react"; // 引入 React 状态、生命周期、缓存、Ref 和事件类型
 
-import { getTubingLanguagePath } from "@/data/products/selection/tubing-selection-routes";
 import { preloadGlobalSearchIndex } from "@/components/search/global-search-index";
-import { ANALYTICAL_APPLICATION_BASE } from "@/data/applications/analytical-documents/registry";
-import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/valveless-pump-routes";
-import { sv10Video } from "@/data/resources/installation-guide/installation-guide.sv10.en";
 
 import {
   getLocalizedHref, // 从多语言路径对象中读取当前语言路径
@@ -37,6 +33,7 @@ import {
   type LocaleCode, // 当前官网支持的语言类型
 } from "@/lib/i18n"; // 从 i18n 文件读取语言工具和语言文案
 import { getInternationalUiText } from "@/lib/international-ui";
+import { getLanguageHref, stripLocalePrefixFromPath } from "@/lib/i18n/language-switch";
 import { trackLanguageChange } from "@/lib/analytics/track-event";
 
 const loadGlobalSearchPanel = () =>
@@ -73,7 +70,6 @@ const LOCALE_COOKIE_NAME = "foreach_locale";
    6. 俄语使用 /ru
    7. 这里不要直接拿 localeCode 拼 URL，避免以后语言代码变化导致路径错误
 ================================ */
-const LOCALE_PATH_PREFIXES = ["en", "es", "fr", "ko", "ru"] as const;
 const PUBLIC_TOP_LEVEL_PATH_SEGMENTS = new Set([
   "about",
   "api",
@@ -84,118 +80,6 @@ const PUBLIC_TOP_LEVEL_PATH_SEGMENTS = new Set([
   "resources",
   "search",
 ]);
-
-type LocalePathPrefix = (typeof LOCALE_PATH_PREFIXES)[number];
-
-/* ================================
-   判断某个字符串是否是官网语言前缀
-   例子：
-   en → true
-   zh-CN → false，因为中文不放在 URL 前缀里
-   products → false
-================================ */
-function isLocalePathPrefix(value: string): value is LocalePathPrefix {
-  return LOCALE_PATH_PREFIXES.includes(value as LocalePathPrefix);
-}
-
-/* ================================
-   清理路径格式
-   作用：
-   1. 只保留 pathname，不处理 query 和 hash
-   2. 确保路径始终以 / 开头
-   3. 避免出现空路径
-================================ */
-function normalizePathname(pathname: string) {
-  const pathOnly = pathname.split("?")[0]?.split("#")[0] || "/";
-
-  if (!pathOnly.startsWith("/")) {
-    return `/${pathOnly}`;
-  }
-
-  return pathOnly || "/";
-}
-
-/* ================================
-   去掉路径中的语言前缀
-   例子：
-   /en/resources/datasheets → /resources/datasheets
-   /es/about/history → /about/history
-   /fr → /
-   /about/history → /about/history
-================================ */
-function stripLocalePrefixFromPath(pathname: string) {
-  const pathOnly = normalizePathname(pathname);
-
-  const pathParts = pathOnly.split("/").filter(Boolean);
-
-  const firstPart = pathParts[0];
-
-  if (firstPart && isLocalePathPrefix(firstPart)) {
-    const restPath = pathParts.slice(1).join("/");
-
-    return restPath ? `/${restPath}` : "/";
-  }
-
-  return pathOnly;
-}
-
-/* ================================
-   根据语言代码获取 URL 前缀
-   说明：
-   1. 中文返回空字符串，因为中文路径不加 /zh-CN
-   2. 外语返回对应前缀
-================================ */
-function getLocalePathPrefix(localeCode: LocaleCode) {
-  switch (localeCode) {
-    case "zh-CN":
-      return "";
-
-    case "en":
-      return "/en";
-
-    case "es":
-      return "/es";
-
-    case "fr":
-      return "/fr";
-
-    case "ko":
-      return "/ko";
-
-    case "ru":
-      return "/ru";
-
-    default:
-      return "";
-  }
-}
-
-/* ================================
-   根据目标语言生成新路径
-   例子：
-   当前 /resources/datasheets，切英文 → /en/resources/datasheets
-   当前 /en/resources/datasheets，切法文 → /fr/resources/datasheets
-   当前 /fr/resources/datasheets，切中文 → /resources/datasheets
-   当前 /en，切中文 → /
-================================ */
-function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
-  if (/^\/(?:en|es|fr|ko|ru)\/(?:applications|products\/tubing-assemblies)(?:\/|$)/.test(pathname)) return getLanguageHref(pathname, localeCode);
-  const tubingPath = getTubingLanguagePath(pathname, localeCode);
-  if (tubingPath) return tubingPath;
-  const pathWithoutLocale = localizeValvelessPumpCategoryPath(
-    stripLocalePrefixFromPath(pathname), localeCode,
-  );
-
-  const localePrefix = getLocalePathPrefix(localeCode);
-
-  if (!localePrefix) {
-    return pathWithoutLocale;
-  }
-
-  return pathWithoutLocale === "/"
-    ? localePrefix
-    : `${localePrefix}${pathWithoutLocale}`;
-}
 
 /**
  * SiteHeader
@@ -209,18 +93,27 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
  * 5. 多语言切换时，会尽量保留当前页面路径
  * 6. 接头型号替代详情页已经去掉 Banner，所以需要一进入页面就使用白底 Header
  */
+function subscribeToLocationSuffix(onChange: () => void) {
+  window.addEventListener("popstate", onChange);
+  window.addEventListener("hashchange", onChange);
+  return () => {
+    window.removeEventListener("popstate", onChange);
+    window.removeEventListener("hashchange", onChange);
+  };
+}
+const getLocationSuffix = () => window.location.search + window.location.hash;
+const getServerLocationSuffix = () => "";
+
 export default function SiteHeader() {
+  const locationSuffix = useSyncExternalStore(subscribeToLocationSuffix, getLocationSuffix, getServerLocationSuffix);
   const pathname = usePathname(); // 获取当前页面路径，例如 /、/about/culture、/en/resources/datasheets 等
   const router = useRouter();
   const normalizedPathname = pathname.replace(/\/+$/, "");
   const isLocalizedApplicationDomainPage =
     /^\/(?:en|es|fr|ko|ru)\/applications\/(?:ivd|life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology)(?:\/|$)/.test(normalizedPathname);
-  const isEnglishSv10VideoPage = normalizedPathname === sv10Video.detailHref.replace(/\/+$/, "");
-  const isSolenoidPage = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/valves\/solenoid-valves(?:\/(?:sv10-(?:p|threaded|b16)|[23]-way))?$/.test(normalizedPathname);
-  const isMrv3Page = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/valves\/rotary-valves(?:\/mrv3-d(?:10|16|24))?$/.test(normalizedPathname);
-  const normalizedAnalyticalApplicationBase = ANALYTICAL_APPLICATION_BASE.replace(/\/+$/, "");
-  const isEnglishAnalyticalApplicationDetailPage =
-    normalizedPathname.startsWith(`${normalizedAnalyticalApplicationBase}/`);
+  // These video detail pages share the banner-free article layout. Keep the
+  // existing header in its solid state from the first render, including SV10.
+  const isEnglishVideoDetailPage = /^\/en\/resources\/installation-guide\/(?:sv10-solenoid-valve-overview|youtube-syringe-installation|youtube-q60-quick-fitting|youtube-female-thread-conversion|youtube-bubble-detection-module)$/.test(normalizedPathname);
 
   /**
    * 当前顶部栏显示语言
@@ -534,7 +427,7 @@ const isFittingReplacementDetailPage =
   const shouldUseSolidHeader =
     isScrolled ||
     isFittingReplacementDetailPage || isNewsArticlePage ||
-    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage || isEnglishSv10VideoPage || isLocalizedApplicationDomainPage ||
+    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage || isEnglishVideoDetailPage || isLocalizedApplicationDomainPage ||
     isUnknownTopLevelPath ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||
@@ -1047,8 +940,8 @@ const isFittingReplacementDetailPage =
     function handleLanguageItemClick(
       event: MouseEvent<HTMLAnchorElement>,
       localeCode: LocaleCode,
-      _homeHref: string,
     ) {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
 
       if (localeCode !== currentLocale) {
@@ -1081,25 +974,7 @@ const isFittingReplacementDetailPage =
       // 关闭顶部所有展开面板
       closeAllPanels();
 
-      // 根据当前路径生成目标语言路径
-      const languageSourcePathname = isEnglishAnalyticalApplicationDetailPage && localeCode === "zh-CN"
-        ? ANALYTICAL_APPLICATION_BASE
-        : window.location.pathname;
-      const nextPathname = buildLocalizedPathname(
-        languageSourcePathname,
-        localeCode,
-      );
-
-      // 保留原来的查询参数，但删除旧的 lang / locale 参数
-      const nextSearchParams = new URLSearchParams(window.location.search);
-
-      nextSearchParams.delete("lang");
-      nextSearchParams.delete("locale");
-
-      const nextSearch = nextSearchParams.toString();
-
-      const nextUrl = `${nextPathname}${nextSearch ? `?${nextSearch}` : ""}${window.location.hash
-        }`;
+      const nextUrl = getLanguageHref(window.location.pathname, localeCode, getLocationSuffix());
 
       // 使用 assign 跳转，让浏览器真正进入新语言路径
       window.location.assign(nextUrl);
@@ -1109,7 +984,7 @@ const isFittingReplacementDetailPage =
       <header
         ref={headerRef}
         className={`site-header ${headerLocaleClass} ${shouldUseSolidHeader ? "site-header-scrolled" : ""
-          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isEnglishSv10VideoPage || isLocalizedApplicationDomainPage
+          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isEnglishVideoDetailPage || isLocalizedApplicationDomainPage
             ? "site-header-solid-page"
             : ""
           } ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
@@ -1388,17 +1263,13 @@ const isFittingReplacementDetailPage =
                 {languageItems.map((language) => (
                   <a
                     key={language.code}
-                    href={isEnglishAnalyticalApplicationDetailPage && language.code === "zh-CN"
-                      ? buildLocalizedPathname(ANALYTICAL_APPLICATION_BASE, language.code)
-                      : isTechnicalArticlePage || isMrv3Page || isSolenoidPage
-                        ? buildLocalizedPathname(pathname || "/", language.code)
-                        : language.href}
+                    href={getLanguageHref(pathname || "/", language.code, locationSuffix)}
                     className={`site-nav-simple-dropdown-link language-details-item ${language.code === currentLocale
                       ? "language-details-item-active"
                       : ""
                       }`}
                     onClick={(event) =>
-                      handleLanguageItemClick(event, language.code, language.href)
+                      handleLanguageItemClick(event, language.code)
                     }
                   >
                     <span
@@ -1680,7 +1551,9 @@ const isFittingReplacementDetailPage =
                           }`}
                         onMouseEnter={() =>
                           setActiveMegaCategoryKey(category.key)
-                        }                        onClick={closeAllPanels}
+                        }
+                        onFocus={() => setActiveMegaCategoryKey(category.key)}
+                        onClick={closeAllPanels}
                       >
                         {categoryContent}
                       </Link>
@@ -1835,7 +1708,10 @@ const isFittingReplacementDetailPage =
                 </div>
 
                 {/* 底部入口区 */}
-                <div className="site-nav-mega-footer" style={{ display: "none" }}>
+                <div
+                  className="site-nav-mega-footer"
+                  style={{ display: currentLocale !== "zh-CN" && activeMegaItem.key === "applications" ? undefined : "none" }}
+                >
                   <span>
                     {getLocalizedText(
                       activeMegaItem.megaDropdown.footerText,
@@ -1845,13 +1721,16 @@ const isFittingReplacementDetailPage =
 
                   <Link
                     href={getLocalizedHref(
-                      activeMegaCards[0]?.href ??
-                      activeMegaItem.megaDropdown.footerHref,
+                      currentLocale !== "zh-CN" && activeMegaItem.key === "applications"
+                        ? activeMegaItem.megaDropdown.footerHref
+                        : activeMegaCards[0]?.href ?? activeMegaItem.megaDropdown.footerHref,
                       currentLocale,
                     )}
                     onClick={closeAllPanels}
                   >
-                    {activeMegaCards[0]?.title
+                    {currentLocale !== "zh-CN" && activeMegaItem.key === "applications"
+                      ? getLocalizedText(activeMegaItem.megaDropdown.footerLinkLabel, currentLocale)
+                      : activeMegaCards[0]?.title
                       ? `${getLocalizedText(
                         activeMegaCards[0].title,
                         currentLocale,
@@ -1891,6 +1770,5 @@ const isFittingReplacementDetailPage =
         ) : null}</header>
     );
   }
-
 
 

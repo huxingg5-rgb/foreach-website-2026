@@ -1,4 +1,10 @@
 import { fluidResistanceCalculatorGuideZhCopy } from "./fluid-resistance-calculator-guide.zh";
+import { diaphragmVsPeristalticZh } from "./diaphragm-vs-peristaltic.zh";
+import { diaphragmVsPeristalticEn } from "./diaphragm-vs-peristaltic-locales/en";
+import { diaphragmVsPeristalticEs } from "./diaphragm-vs-peristaltic-locales/es";
+import { diaphragmVsPeristalticFr } from "./diaphragm-vs-peristaltic-locales/fr";
+import { diaphragmVsPeristalticKo } from "./diaphragm-vs-peristaltic-locales/ko";
+import { diaphragmVsPeristalticRu } from "./diaphragm-vs-peristaltic-locales/ru";
 import { foreachDiaphragmPumpOemIntegrationIntlCopies, fluidResistanceCalculatorGuideIntlCopies } from "./oem-fluid-resistance-articles.intl";
 import { foreachDiaphragmPumpOemIntegrationZhCopy } from "./foreach-diaphragm-pump-oem-integration.zh";
 import { remainingPumpArticlesRu } from "./remaining-pump-articles.ru";
@@ -243,6 +249,7 @@ const copyByLocale: Record<
   >
 > = {
   "zh-CN": {
+    "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticZh,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideZhCopy,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationZhCopy,
     ...diaphragmPumpRdArticles["zh-CN"],
@@ -286,6 +293,7 @@ const copyByLocale: Record<
     [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionZhCopy,
   },
   en: {
+    "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticEn,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.en,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.en,
     ...diaphragmPumpRdArticles["en"],
@@ -327,6 +335,7 @@ const copyByLocale: Record<
     [dpl30EpdmPtfeFfkmSelectionSlug]: dpl30EpdmPtfeFfkmSelectionEnCopy,
   },
   es: {
+    "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticEs,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.es,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.es,
     ...diaphragmPumpRdArticles["es"],
@@ -361,6 +370,7 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetEsCopy,
   },
   fr: {
+    "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticFr,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.fr,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.fr,
     ...diaphragmPumpRdArticles["fr"],
@@ -395,6 +405,7 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetFrCopy,
   },
   ko: {
+    "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticKo,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.ko,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.ko,
     ...diaphragmPumpRdArticles["ko"],
@@ -429,6 +440,7 @@ const copyByLocale: Record<
       highBackpressureFluidPathPressureBudgetKoCopy,
   },
   ru: {
+    "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticRu,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.ru,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.ru,
     ...diaphragmPumpRdArticles["ru"],
@@ -531,6 +543,9 @@ function createTechnicalArticle(
 export function getDiaphragmPumpEngineeringArticles(
   locale: TechnicalArticleLocale,
 ): TechnicalArticleItem[] {
+  const comparisonArticles = [
+    createTechnicalArticle("diaphragm-pump-vs-peristaltic-pump", locale, ["series:dpl30", "series:dpl60"], 129, "2026-10-13"),
+  ];
   const inkjetArticles = [
           createTechnicalArticle(
             inkCirculationSupplyReturnPumpSlug,
@@ -708,6 +723,7 @@ export function getDiaphragmPumpEngineeringArticles(
   ];
 
   return [
+    ...comparisonArticles,
     createTechnicalArticle(
       fluidResistanceCalculatorGuideSlug, locale, [], 128, "2026-09-11", "fittings-tubing",
     ),

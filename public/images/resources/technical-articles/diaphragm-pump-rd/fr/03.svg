@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc" xml:lang="fr">
+<title id="title">Suivre les chemins de transmission du bruit</title><desc id="desc">Suivre les chemins de transmission du bruit</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 Z" fill="context-stroke"/></marker></defs><rect width="1000" height="650" fill="white"/>
+<text x="170" y="75" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="600" fill="#173368">Excitation</text>
+<text x="500" y="75" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="600" fill="#173368">Voie de transmission</text>
+<text x="830" y="75" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="600" fill="#173368">Rayonnement sonore</text>
+<rect x="40" y="160" width="260" height="120" rx="10" fill="#f2f7fa" stroke="#a6b9c9" stroke-width="2"/>
+<text x="170.0" y="228.0" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="400" fill="#173368">Moteur / membrane</text>
+<rect x="370" y="160" width="260" height="120" rx="10" fill="#f2f7fa" stroke="#a6b9c9" stroke-width="2"/>
+<text x="500.0" y="228.0" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="400" fill="#173368">Fixations / boîtier</text>
+<rect x="700" y="160" width="260" height="120" rx="10" fill="#f2f7fa" stroke="#a6b9c9" stroke-width="2"/>
+<text x="830.0" y="228.0" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="400" fill="#173368">Surfaces vibrantes</text>
+<path d="M305,220 L360,220" fill="none" stroke="#008b83" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M635,220 L690,220" fill="none" stroke="#008b83" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="40" y="355" width="260" height="120" rx="10" fill="#f2f7fa" stroke="#a6b9c9" stroke-width="2"/>
+<text x="170.0" y="423.0" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="400" fill="#173368">Pulsations de pression</text>
+<rect x="370" y="355" width="260" height="120" rx="10" fill="#f2f7fa" stroke="#a6b9c9" stroke-width="2"/>
+<text x="500.0" y="423.0" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="400" fill="#173368">Tuyaux / supports</text>
+<rect x="700" y="355" width="260" height="120" rx="10" fill="#f2f7fa" stroke="#a6b9c9" stroke-width="2"/>
+<text x="830.0" y="423.0" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="400" fill="#173368">Tuyaux vibrants</text>
+<path d="M305,415 L360,415" fill="none" stroke="#008b83" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M635,415 L690,415" fill="none" stroke="#008b83" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

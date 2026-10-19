@@ -68,11 +68,11 @@ export const diaphragmPumpRdArticlesEs = {
           },
           {
             "type": "figure",
-            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/01.svg",
-            "alt": "Tres eventos durante el autocebado",
-            "width": 1000,
-            "height": 650,
-            "caption": "Esquema: la primera aparición de líquido y la entrega estable al destino son eventos distintos. Las separaciones no representan tiempos medidos de una bomba."
+            "src": "/images/resources/technical-articles/diaphragm-pump-rd/es/diaphragm-pump-working-principle-clean.gif",
+            "alt": "Animación de una bomba de diafragma: la válvula de entrada se abre durante la aspiración y la de salida durante la impulsión.",
+            "width": 1100,
+            "height": 535,
+            "caption": "Ciclo de aspiración e impulsión (esquema; no representa una medición del tiempo de autocebado)."
           }
         ]
       },

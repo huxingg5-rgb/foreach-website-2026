@@ -97,30 +97,6 @@
   scrollbar-width: thin;
 }
 
-.products-selection-page .category-tab {
-  min-height: 44px;
-  padding: 0 22px;
-  border-radius: 8px;
-  border: 1px solid rgba(23, 51, 104, 0.16);
-  background: #ffffff;
-  color: var(--brand-blue);
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 850;
-  white-space: nowrap;
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
-}
-
-.products-selection-page .category-tab:hover,
-.products-selection-page .category-tab.active {
-  color: var(--brand-cyan);
-  background: var(--brand-blue);
-  border-color: var(--brand-blue);
-}
-
 .products-selection-page .selection-section {
   padding-top: 24px;
 }
@@ -1302,30 +1278,6 @@
   overflow-x: auto;
 }
 
-.products-selection-page .category-tab {
-  min-height: 44px;
-  padding: 0 22px;
-  border-radius: 8px;
-  border: 1px solid rgba(23, 51, 104, 0.16);
-  background: #ffffff;
-  color: var(--brand-blue);
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 850;
-  white-space: nowrap;
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
-}
-
-.products-selection-page .category-tab:hover,
-.products-selection-page .category-tab.active {
-  color: var(--brand-cyan);
-  background: var(--brand-blue);
-  border-color: var(--brand-blue);
-}
-
 .products-selection-page .mobile-category-trigger {
   display: none;
 }
@@ -2206,13 +2158,13 @@
   box-sizing: border-box !important;
 }
 
-/* 型号保持大和粗，只让它靠左 */
+/* 产品卡片标题统一字重并保持左对齐。 */
 .products-selection-page .product-title {
   margin: 0 0 10px !important;
   color: var(--brand-blue, #173368) !important;
   font-size: 22px !important;
   line-height: 1.25 !important;
-  font-weight: 650 !important;
+  font-weight: 500 !important;
   text-align: left !important;
   white-space: nowrap !important;
 }
@@ -2711,7 +2663,7 @@
   margin: 0 0 14px !important;
   color: var(--brand-blue) !important;
   font-size: 31px !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   line-height: 1.22 !important;
 }
 
@@ -2876,7 +2828,6 @@
 
   .products-selection-page .product-type-intro-copy .product-type-intro-heading {
     font-size: 22px !important;
-    font-weight: 700 !important;
   }
 
   .products-selection-page .product-type-intro-copy p {

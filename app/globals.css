@@ -1623,7 +1623,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-hero-title {
-    font-size: clamp(42px, 8vw, 64px); /* 1000 濠电姷鏁告慨鐑藉极閹间礁纾绘繛鎴欏焺閺佸銇勯幘璺烘瀾闁告瑥绻愰湁闁稿繐鍚嬬紞鎴犵棯閹勫仴闁哄瞼鍠庨埢鎾诲垂椤旂晫浜剧紓鍌欒兌婵潧螞閸愵喖钃熸繛鎴炃氬Σ鍫ユ煕濡ゅ啫浠﹂柣婵愬灣缁辨挻鎷呮禒瀣懙濠碘槅鍋勯崯鏉戭嚕婵犳艾鐏抽柟棰佺閹垿鏌熼懖鈺勊夐柍褜鍓欑壕顓㈩敊婢舵劖鈷掑〒姘ｅ亾闁逞屽墰閸嬫盯鎳熼娑欐珷妞ゆ柨顫曟禍婊堟煥閺囩偛鈧懓鈽夎閵囧嫰寮撮鍡櫳戠紓浣稿€圭敮鐐哄焵椤掑﹦绉靛ù婊呭仱瀹曟劙鎮欏顔藉瘜闂侀潧鐗嗗Λ妤冪箔閹烘挶浜滈柨鏃囧Г缁惰尙鎮▎鎴斿亾閸忓浜鹃梺鍛婃处閸撴盯宕㈡禒瀣厵闁稿繗鍋愰弳姗€鏌涢妸銉吋闁糕晛锕鎾偄缂堢姷鐩庨梻渚€娼ч…鍫ュ磿閺屻儱鍚归柍褜鍓熷?*/
+    font-size: var(--shared-hero-heading-size); /* 1000 濠电姷鏁告慨鐑藉极閹间礁纾绘繛鎴欏焺閺佸銇勯幘璺烘瀾闁告瑥绻愰湁闁稿繐鍚嬬紞鎴犵棯閹勫仴闁哄瞼鍠庨埢鎾诲垂椤旂晫浜剧紓鍌欒兌婵潧螞閸愵喖钃熸繛鎴炃氬Σ鍫ユ煕濡ゅ啫浠﹂柣婵愬灣缁辨挻鎷呮禒瀣懙濠碘槅鍋勯崯鏉戭嚕婵犳艾鐏抽柟棰佺閹垿鏌熼懖鈺勊夐柍褜鍓欑壕顓㈩敊婢舵劖鈷掑〒姘ｅ亾闁逞屽墰閸嬫盯鎳熼娑欐珷妞ゆ柨顫曟禍婊堟煥閺囩偛鈧懓鈽夎閵囧嫰寮撮鍡櫳戠紓浣稿€圭敮鐐哄焵椤掑﹦绉靛ù婊呭仱瀹曟劙鎮欏顔藉瘜闂侀潧鐗嗗Λ妤冪箔閹烘挶浜滈柨鏃囧Г缁惰尙鎮▎鎴斿亾閸忓浜鹃梺鍛婃处閸撴盯宕㈡禒瀣厵闁稿繗鍋愰弳姗€鏌涢妸銉吋闁糕晛锕鎾偄缂堢姷鐩庨梻渚€娼ч…鍫ュ磿閺屻儱鍚归柍褜鍓熷?*/
   }
 }
 
@@ -1715,7 +1715,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-hero-title {
-    font-size: clamp(26px, 6.5vw, 30px); /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭嬫い銏∶埞鎴︽晬閸曨偂鏉梺绋匡攻閸旀瑥顕ｉ幓鎺嗘斀闁割偅绻傞悘濠傤渻閵堝棛澧遍柛瀣⊕椤㈠﹪姊绘担鍛婂暈婵炶绠撳畷瑙勫閺夋垵鐎梺绋挎湰缁嬪繑绂嶅鍫熺厵闁逛絻娅曞▍鍛存煃瑜滈崜姘洪悢鐓庣畺婵☆垳绮紞鍥煏婵炲灝鈧绮诲顒夋富闁靛牆妫楁慨鍌炴煕婵犲啯绀嬮柕鍡楀€圭缓浠嬪川婵犲嫬寮虫繝娈垮枟椤牓宕洪弽顓熷亗闁绘柨鍚嬮悡鍐┿亜閺嶃劎銆掗柟鍐插暞缁绘稓浠﹂崒姘ｅ亾濠靛绠?*/
+    font-size: var(--shared-hero-heading-size); /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭嬫い銏∶埞鎴︽晬閸曨偂鏉梺绋匡攻閸旀瑥顕ｉ幓鎺嗘斀闁割偅绻傞悘濠傤渻閵堝棛澧遍柛瀣⊕椤㈠﹪姊绘担鍛婂暈婵炶绠撳畷瑙勫閺夋垵鐎梺绋挎湰缁嬪繑绂嶅鍫熺厵闁逛絻娅曞▍鍛存煃瑜滈崜姘洪悢鐓庣畺婵☆垳绮紞鍥煏婵炲灝鈧绮诲顒夋富闁靛牆妫楁慨鍌炴煕婵犲啯绀嬮柕鍡楀€圭缓浠嬪川婵犲嫬寮虫繝娈垮枟椤牓宕洪弽顓熷亗闁绘柨鍚嬮悡鍐┿亜閺嶃劎銆掗柟鍐插暞缁绘稓浠﹂崒姘ｅ亾濠靛绠?*/
     line-height: 1.15; /* 闂傚倸鍊搁崐鎼佸磹妞嬪海鐭嗗ù锝堟缁€濠傗攽閻樻彃浜為柣鎺旀櫕閹叉悂寮崼娑掑亾娓氣偓瀵粙顢橀悙鑼垛偓鍨攽閿涘嫬浠х紒顕呭灦瀵偊鎮╃紒妯锋嫼闂備緡鍋嗛崑娑㈡嚐椤栨稒娅犻柟娈垮枤绾惧ジ寮堕崼娑樺婵炴惌鍠氶埀顒侇問閸ｎ噣宕抽敐澶屽祦閻庯綆浜栭弨浠嬫煕椤愶絿鐭嬫い銏∶埞鎴︽晬閸曨偂鏉梺绋匡攻閸旀瑥顕ｉ幓鎺嗘斀闁割偅绻傞悘濠傤渻閵堝棛澧遍柛瀣⊕椤㈠﹪姊绘担鍛婂暈婵炶绠撳畷瑙勫閺夋垵鐎梺绋挎湰缁嬪繑绂嶅鍫熺厵闁逛絻娅曞▍鍛存煃瑜滈崜姘洪悢鐓庣畺婵☆垳绮紞鍥煏婵炲灝鈧绮诲顒夋富闁靛牆妫楁慨鍌炴煕婵犲啯绀嬮柕鍡楀€垮畷妤冪箔鏉炴壆鐩庢俊鐐€栭幐楣冨磻閻斿憡娅犻柨鏇炲€归悡蹇涙煕閳╁啯绀堢紒鎰⒐椤ㄣ儵鎮欏顔煎壎闂佽鍠楃划鎾崇暦閸楃倣鐔煎礂閸忚偐妲?*/
   }
 
@@ -4937,7 +4937,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-news-main-title {
   margin: 0;
   color: var(--brand-blue);
-  font-size: clamp(52px, 5vw, 76px);
+  font-size: var(--shared-section-heading-size);
   line-height: 1;
   font-weight: 900;
   letter-spacing: -0.055em;
@@ -5055,7 +5055,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #071a35;
   font-size: 23px;
   line-height: 1.68;
-  font-weight: 850;
+  font-weight: 500;
   letter-spacing: -0.045em;
   flex-shrink: 0;
 }
@@ -5141,7 +5141,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #ffffff;
   font-size: 22px;
   line-height: 1.76;
-  font-weight: 850;
+  font-weight: 500;
   letter-spacing: -0.052em;
   flex-shrink: 0;
 }
@@ -5270,7 +5270,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #071a35;
   font-size: 15px;
   line-height: 1.45;
-  font-weight: 850;
+  font-weight: 500;
   letter-spacing: -0.04em;
   transition: color 0.24s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -5426,7 +5426,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-news-main-title {
-    font-size: 34px;
+    font-size: var(--shared-section-heading-size);
   }
 
   .home-news-controls {
@@ -7032,7 +7032,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-hero-title {
     max-width: 760px !important;
-    font-size: clamp(34px, 4vw, 52px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
     line-height: 1.08 !important;
     transform: translate(0, 24px) !important;
   }
@@ -7432,7 +7432,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-news-main-title {
-    font-size: clamp(38px, 4vw, 54px) !important;
+    font-size: var(--shared-section-heading-size) !important;
   }
 
   .home-news-controls {
@@ -8145,7 +8145,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-hero-title {
     max-width: 760px !important;
-    font-size: clamp(34px, 4vw, 52px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
     line-height: 1.08 !important;
     transform: translate(0, 22px) !important;
   }
@@ -8492,7 +8492,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-news-main-title,
   .contact-section-title {
-    font-size: clamp(34px, 3.2vw, 46px) !important;
+    font-size: var(--shared-section-heading-size) !important;
   }
 
   .home-news-tab-btn {
@@ -11476,7 +11476,7 @@ html[lang="ru"] .home-hero-btn:hover {
   margin: 0;
   color: #173368;
   font-size: clamp(32px, 2.2vw, 42px);
-  font-weight: 750;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0;
 }
@@ -12608,7 +12608,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #173368;
   font-size: clamp(34px, 2.7vw, 50px);
   line-height: 1.18;
-  font-weight: 650;
+  font-weight: 500;
   letter-spacing: -0.045em;
 }
 
@@ -12718,7 +12718,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #173368;
   font-size: clamp(34px, 2.6vw, 48px);
   line-height: 1.16;
-  font-weight: 650;
+  font-weight: 500;
   letter-spacing: -0.05em;
 }
 
@@ -12987,7 +12987,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #173368;
   font-size: clamp(36px, 3vw, 56px);
   line-height: 1.16;
-  font-weight: 650;
+  font-weight: 500;
   letter-spacing: -0.05em;
 }
 
@@ -13051,7 +13051,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #173368;
   font-size: 24px;
   line-height: 1.35;
-  font-weight: 650;
+  font-weight: 500;
   letter-spacing: -0.03em;
   transition: color 0.28s ease;
 }
@@ -13082,7 +13082,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #173368;
   font-size: 15px;
   line-height: 1.5;
-  font-weight: 650;
+  font-weight: 500;
   transition: color 0.28s ease;
 }
 
@@ -13205,7 +13205,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #173368;
   font-size: clamp(36px, 3vw, 56px);
   line-height: 1.16;
-  font-weight: 650;
+  font-weight: 500;
   letter-spacing: -0.05em;
 }
 
@@ -13266,7 +13266,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #173368;
   font-size: 20px;
   line-height: 1.42;
-  font-weight: 650;
+  font-weight: 500;
   letter-spacing: -0.02em;
   transition: color 0.28s ease;
 }
@@ -13591,7 +13591,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .rm-section-title {
   color: var(--rm-blue);
   font-size: 42px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.32;
   letter-spacing: 0.01em;
 }
@@ -14064,59 +14064,90 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 .rm-supply-timeline {
+  --supply-dot-size: 42px;
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  align-items: start;
+  align-items: stretch;
   gap: 0;
   min-height: 74px;
 }
 
-.rm-supply-timeline::before {
+.rm-supply-nav-item::before {
   content: "";
   position: absolute;
-  left: 8%;
-  right: 8%;
-  top: 63px;
+  left: 0;
+  right: 0;
+  bottom: calc(6px + var(--supply-dot-size) / 2);
+  transform: translateY(50%);
+  z-index: -1;
   height: 1px;
   background: rgba(23, 51, 104, 0.22);
+}
+
+.rm-supply-nav-item:first-child::before {
+  left: 50%;
+}
+
+.rm-supply-nav-item:last-child::before {
+  right: 50%;
 }
 
 .rm-supply-nav-item {
   position: relative;
   z-index: 1;
   display: grid;
+  grid-template-rows: 1fr var(--supply-dot-size);
   justify-items: center;
   gap: 20px;
+  padding: 0 0 6px;
   border: 0;
   background: transparent;
   color: var(--rm-blue);
   font-family: inherit;
   font-size: 20px;
   font-weight: 600;
-  cursor: pointer;
   opacity: 0.62;
   transition:
     color 0.22s ease,
-    opacity 0.22s ease,
-    transform 0.22s ease;
+    opacity 0.22s ease;
 }
 
 .rm-supply-nav-item:hover {
   color: var(--rm-blue);
   opacity: 1;
-  transform: translateY(-2px);
 }
 
 .rm-supply-nav-item.is-active {
   color: var(--rm-cyan);
   opacity: 1;
-  transform: translateY(-2px);
+}
+
+.rm-supply-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.rm-supply-nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.rm-supply-nav-link:focus-visible,
+.rm-supply-nav-dot:focus-visible {
+  outline: 2px solid var(--rm-blue);
+  outline-offset: 4px;
 }
 
 .rm-supply-nav-dot {
-  width: 42px;
-  height: 42px;
+  width: var(--supply-dot-size);
+  height: var(--supply-dot-size);
+  padding: 0;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -14196,7 +14227,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .rm-why-title {
   color: var(--rm-blue);
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.22;
   letter-spacing: 0.04em;
 }
@@ -14392,7 +14423,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .rm-cta-title {
   color: #ffffff;
   font-size: 34px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
 }
 
@@ -14426,7 +14457,7 @@ html[lang="ru"] .home-hero-btn:hover {
   border-radius: 8px;
 
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
   text-decoration: none;
 
@@ -14580,25 +14611,15 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .rm-supply-timeline {
+    --supply-dot-size: 34px;
     width: 100%;
     overflow-x: auto;
     grid-template-columns: repeat(5, minmax(120px, 1fr));
     min-height: 82px;
   }
 
-  .rm-supply-timeline::before {
-    left: 60px;
-    right: 60px;
-    top: 54px;
-  }
-
   .rm-supply-nav-item {
     font-size: 12px;
-  }
-
-  .rm-supply-nav-dot {
-    width: 34px;
-    height: 34px;
   }
 
   .rm-supply-copy {
@@ -15785,7 +15806,7 @@ html body nav[aria-label*="breadcrumb"] em {
   margin: 0 !important;
 
   color: #ffffff !important;
-  font-size: clamp(42px, 5vw, 78px) !important;
+  font-size: var(--shared-hero-heading-size) !important;
   font-weight: 700 !important;
   line-height: 1.08 !important;
   letter-spacing: 0.05em !important;
@@ -15926,7 +15947,7 @@ html body nav[aria-label*="breadcrumb"] em {
 
   .home-hero-title {
     max-width: 760px !important;
-    font-size: clamp(38px, 7vw, 62px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
   }
 
   .home-hero-subtitle {
@@ -15950,7 +15971,7 @@ html body nav[aria-label*="breadcrumb"] em {
 
   .home-hero-title {
     max-width: 100% !important;
-    font-size: clamp(26px, 6.5vw, 30px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
     line-height: 1.12 !important;
     transform: none !important;
   }
@@ -16800,7 +16821,8 @@ html body nav[aria-label*="breadcrumb"] em {
    首页公司介绍正文恢复。
    使用新 class，避开旧的 home-company-intro-desc 历史覆盖样式。
 */
-.home-company-about-section .home-company-intro-copy {
+.home-company-about-section .home-company-intro-copy,
+#applications .home-company-intro-copy {
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
@@ -16819,7 +16841,8 @@ html body nav[aria-label*="breadcrumb"] em {
 }
 
 @media (min-width: 1441px) {
-  .home-company-about-section .home-company-intro-copy {
+  .home-company-about-section .home-company-intro-copy,
+  #applications .home-company-intro-copy {
     font-size: 16px !important;
     line-height: 1.95 !important;
     margin: 38px 0 34px !important;
@@ -19293,7 +19316,7 @@ html body .home-honor-image img {
      * 1920px时约为52px；
      * 较窄桌面端最低为44px。
      */
-    font-size: clamp(44px, 2.7vw, 52px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
     line-height: 1.14 !important;
 
     /*
@@ -19369,7 +19392,7 @@ html body .home-honor-image img {
     html[lang^="ko"],
     html[lang^="ru"]
   ) body [data-home-hero-title="true"] {
-    font-size: clamp(40px, 3vw, 46px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
     max-width: min(760px, 51vw) !important;
   }
 
@@ -19415,7 +19438,7 @@ html body .home-honor-image img {
      * 高缩放2K屏下至少保持74px。
      * 浏览器宽度增加时逐步放大，最大88px。
      */
-    font-size: clamp(74px, 3.8vw, 88px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
     line-height: 1.08 !important;
     letter-spacing: -0.018em !important;
 
@@ -21473,7 +21496,7 @@ html[data-global-touch-device="true"]
   html[lang]:not([lang="zh-CN"]) .home-advantages-title,
   html[lang]:not([lang="zh-CN"]) .home-news-main-title,
   html[lang]:not([lang="zh-CN"]) .contact-section-title {
-    font-size: clamp(40px, 3.2vw, 54px) !important;
+    font-size: var(--shared-section-heading-size) !important;
     font-weight: 400 !important;
     line-height: 1.14 !important;
     letter-spacing: -0.02em !important;
@@ -21495,7 +21518,7 @@ html[data-global-touch-device="true"]
   html[lang]:not([lang="zh-CN"]) .home-advantages-title,
   html[lang]:not([lang="zh-CN"]) .home-news-main-title,
   html[lang]:not([lang="zh-CN"]) .contact-section-title {
-    font-size: clamp(30px, 8.2vw, 38px) !important;
+    font-size: var(--shared-section-heading-size) !important;
     line-height: 1.16 !important;
   }
 
@@ -21793,7 +21816,7 @@ html[data-global-touch-device="true"]
     margin: 0 !important;
 
     color: #ffffff !important;
-    font-size: clamp(30px, 7vw, 58px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
     line-height: 1.12 !important;
     letter-spacing: 0.02em !important;
     text-shadow:
@@ -21840,7 +21863,7 @@ html[data-global-touch-device="true"]
   html body
     .home-hero-primary-copy
     .home-hero-title {
-    font-size: clamp(27px, 7.8vw, 34px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
   }
 
   html body
@@ -21925,7 +21948,7 @@ html[data-global-touch-device="true"]
   html[lang^="zh"] body .home-news-feature-body { height: auto !important; padding: 22px 20px !important; overflow: visible; flex: 1; }
   html[lang^="zh"] body .home-news-highlight-card { padding: 24px 20px !important; }
   html[lang^="zh"] body .home-news-feature-title,
-  html[lang^="zh"] body .home-news-highlight-title { font-size: 20px !important; font-weight: 600; line-height: 1.45 !important; letter-spacing: 0; display: block; overflow: visible; }
+  html[lang^="zh"] body .home-news-highlight-title { font-size: 20px !important; line-height: 1.45 !important; letter-spacing: 0; display: block; overflow: visible; }
   html[lang^="zh"] body .home-news-feature-desc,
   html[lang^="zh"] body .home-news-highlight-desc { font-size: 15px !important; line-height: 1.6 !important; margin-top: 14px !important; display: block; overflow: visible; }
   html[lang^="zh"] body .home-news-card-footer,
@@ -22023,7 +22046,7 @@ html[data-global-touch-device="true"]
   html[lang^="zh"] body .home-company-about-section .home-company-about-title,
   html[lang^="zh"] body .home-news-title-wrap .home-news-main-title,
   html[lang^="zh"] body .home-contact-inquiry-wrapper .contact-section-title {
-    font-size: 46px !important;
+    font-size: var(--shared-section-heading-size) !important;
     font-weight: 500 !important;
     line-height: 1.3 !important;
     letter-spacing: 0 !important;
@@ -22090,7 +22113,7 @@ html[data-global-touch-device="true"]
     font-weight: 500 !important;
   }
   html[lang^="zh"] body .home-hero-scroll-shell .home-hero-title {
-    font-size: clamp(46px, 4.4vw, 64px) !important;
+    font-size: var(--shared-hero-heading-size) !important;
   }
   html[lang^="zh"] body .home-hero-scroll-shell .home-hero-subtitle {
     font-size: clamp(16px, 1.25vw, 20px) !important;

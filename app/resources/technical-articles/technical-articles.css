@@ -113,7 +113,7 @@
   color: #173368;
   font-size: 30px;
   line-height: 1.08;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.05em;
 }
 
@@ -178,7 +178,7 @@
 
 .technicalArticlesSidebar__button--all.isActive,
 .technicalArticlesSidebar__button--primary.isActive {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .technicalArticlesSidebar__button--secondary {
@@ -188,7 +188,7 @@
   border-radius: 6px;
   font-size: 14px;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
   color: #707b8d;
 }
 

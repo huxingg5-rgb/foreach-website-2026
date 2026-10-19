@@ -24,6 +24,8 @@ import { usePathname, useRouter } from "next/navigation";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
+import ResourcePagination from "@/components/resources/ResourcePagination";
+import { INSTALLATION_GUIDE_PAGE_SIZE, getInstallationGuidePageHref, guidePaginationCopy } from "@/data/resources/installation-guide/installation-guide-pagination";
 import TutorialVideoCard from "@/components/resources/installation-guide/TutorialVideoCard";
 import InstallationGuideSearchParamsSync, {
   type InstallationGuideSearchParamsSnapshot,
@@ -53,6 +55,7 @@ type ActiveFilter = {
 
 type InstallationGuideClientProps = {
   pageData: InstallationGuidePageData;
+  initialPage?: number;
 };
 
 function formatInstallationGuideCount(
@@ -64,10 +67,12 @@ function formatInstallationGuideCount(
 
 export default function InstallationGuideClient({
   pageData,
+  initialPage = 1,
 }: InstallationGuideClientProps) {
   const pathname = usePathname();
   const router = useRouter();
   const [keyword, setKeyword] = useState("");
+  const [filteredPagination, setFilteredPagination] = useState({ key: "", page: 1 });
   const [searchParamsSnapshot, setSearchParamsSnapshot] =
     useState<InstallationGuideSearchParamsSnapshot>({
       relationKey: "",
@@ -218,6 +223,12 @@ export default function InstallationGuideClient({
       return;
     }
 
+    // Existing search/bookmark URLs should open the completed watch page too.
+    if (requestedGuide.detailHref) {
+      router.replace(requestedGuide.detailHref);
+      return;
+    }
+
     const openPlayerTimer = window.setTimeout(() => {
       setSelectedGuide(requestedGuide);
       setIsPlayerOpen(true);
@@ -229,7 +240,7 @@ export default function InstallationGuideClient({
     return () => {
       window.clearTimeout(openPlayerTimer);
     };
-  }, [pageData.guides, requestedGuideId]);
+  }, [pageData.guides, requestedGuideId, router]);
 
   const breadcrumbItems = [
     {
@@ -242,7 +253,9 @@ export default function InstallationGuideClient({
     },
     {
       label: ui.breadcrumbCurrent,
+      ...(initialPage > 1 ? { href: getInstallationGuidePageHref(pageData.locale) } : {}),
     },
+    ...(initialPage > 1 ? [{ label: guidePaginationCopy[pageData.locale].page(initialPage) }] : []),
   ];
 
   /* =========================================================
@@ -296,9 +309,22 @@ export default function InstallationGuideClient({
     relationKey,
   ]);
 
+  const hasFilters = activeFilter.type !== "all" || Boolean(keyword.trim()) || Boolean(relationKey);
+  const filterKey = JSON.stringify([activeFilter.type, activeFilter.id, keyword, relationKey]);
+  const totalPages = Math.max(1, Math.ceil(filteredGuides.length / INSTALLATION_GUIDE_PAGE_SIZE));
+  const currentPage = Math.min(totalPages, hasFilters
+    ? (filteredPagination.key === filterKey ? filteredPagination.page : 1)
+    : initialPage);
+  const pagedGuides = filteredGuides.slice(
+    (currentPage - 1) * INSTALLATION_GUIDE_PAGE_SIZE,
+    currentPage * INSTALLATION_GUIDE_PAGE_SIZE,
+  );
+  const paginationUi = guidePaginationCopy[pageData.locale];
+
   function handleParentClick(
     item: InstallationGuideTreeItem,
   ) {
+    setFilteredPagination({ key: "", page: 1 });
     setActiveFilter({
       type: item.type,
       id: item.id,
@@ -319,6 +345,7 @@ export default function InstallationGuideClient({
     parentId: string,
     childId: string,
   ) {
+    setFilteredPagination({ key: "", page: 1 });
     setActiveFilter({
       type: "series",
       id: childId,
@@ -328,6 +355,7 @@ export default function InstallationGuideClient({
   }
 
   function handleSearch(nextKeyword: string) {
+    setFilteredPagination({ key: "", page: 1 });
     setKeyword(nextKeyword);
   }
 
@@ -409,7 +437,7 @@ export default function InstallationGuideClient({
 
       <ResourceSearchBar
         value={keyword}
-        onChange={setKeyword}
+        onChange={handleSearch}
         onSearch={handleSearch}
         placeholder={pageData.search.placeholder}
         searchButtonText={pageData.search.buttonText}
@@ -421,7 +449,7 @@ export default function InstallationGuideClient({
           左侧筛选 + 右侧教程卡片
       ===================================================== */}
 
-      <section className="installation-guide-main">
+      <section className="installation-guide-main" id="guide-list">
         <aside className="installation-guide-sidebar">
           <div className="installation-guide-sidebar-head">
             <strong>
@@ -548,8 +576,9 @@ export default function InstallationGuideClient({
           ) : null}
 
           {filteredGuides.length > 0 ? (
+            <>
             <div className="installation-guide-card-grid">
-              {filteredGuides.map((guide: InstallationGuideCard) => (
+              {pagedGuides.map((guide: InstallationGuideCard) => (
                 <TutorialVideoCard
                   key={guide.id}
                   guide={guide}
@@ -560,6 +589,19 @@ export default function InstallationGuideClient({
                 />
               ))}
             </div>
+            <ResourcePagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              ariaLabel={paginationUi.pagination}
+              previousLabel={paginationUi.previous}
+              nextLabel={paginationUi.next}
+              {...(hasFilters ? {
+                onPageChange: (page: number) => setFilteredPagination({ key: filterKey, page }),
+              } : {
+                getPageHref: (page: number) => `${getInstallationGuidePageHref(pageData.locale, page)}#guide-list`,
+              })}
+            />
+            </>
           ) : (
             <div className="installation-guide-empty">
               <strong>

@@ -10,6 +10,6 @@ const rules = getValvelessPumpRedirectEntries().flatMap(rule =>
   [rule.source, `${rule.source}/`].map(source => `${source} ${rule.destination} 301`));
 const value = `${remaining}${start}\n${rules.join("\n")}\n${end}\n`;
 if (process.argv.includes("--check")) {
-  if (original !== value) throw new Error("Stale valveless redirects; run products:build-valveless-redirects");
+  if (original.replace(/\n+$/, "\n") !== value) throw new Error("Stale valveless redirects; run products:build-valveless-redirects");
 } else fs.writeFileSync(file, value, "utf8");
 console.log(JSON.stringify({ check: process.argv.includes("--check"), valvelessRedirectRules: rules.length }));

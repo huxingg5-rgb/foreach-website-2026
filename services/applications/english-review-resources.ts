@@ -9,7 +9,7 @@ export function getEnglishReviewResources(kind: EnglishApplicationKind, document
   const plan = getReviewFooterPlan(kind, document);
   const english = getTechnicalArticlesPageData('en').articles;
   return {
-    locale: 'en', videos: [],
+    locale: 'en', uiLocale: 'en', videos: [],
     products: plan.products.map(key => {
       const card = reviewProductCards[key];
       const title = translateApplicationEnglish(card.title);

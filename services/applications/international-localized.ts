@@ -161,7 +161,7 @@ export async function getLocalizedApplicationResources(locale: ApplicationTransl
       ko: '대표 구성 이미지입니다. 용량과 재질은 제품 페이지에서 선택하세요',
       ru: 'Пример конфигурации; выбирайте объём и материалы на странице изделия',
     }[locale];
-    return { locale, videos: [],
+    return { locale, uiLocale: locale, videos: [],
       products: original.products!.map((card, index) => {
         const product = LC_PRODUCTS[relations.products[index]];
         const title = translateApplicationCopy(product.label, copy, locale);
@@ -175,11 +175,11 @@ export async function getLocalizedApplicationResources(locale: ApplicationTransl
       }),
     };
   }
-  if (isFinalizedEnglishReference(kind, document.slug)) return { locale, products: [], articles: [], videos: [] };
+  if (isFinalizedEnglishReference(kind, document.slug)) return { locale, uiLocale: locale, products: [], articles: [], videos: [] };
   const plan = getReviewFooterPlan(kind, document);
   const slugs = kind === 'ivd' ? [...new Set(getIvdReadingPlan(document).flatMap(reading => reading.slugs))].slice(0, 4) : plan.articles;
   return {
-    locale, videos: [],
+    locale, uiLocale: locale, videos: [],
     products: plan.products.map((key: ReviewProductCardId) => {
       const card = reviewProductCards[key];
       const title = key in extraProductLabels[locale] ? extraProductLabels[locale][key as keyof typeof extraProductLabels.es] : ivdProductLabel(locale, key);

@@ -11,7 +11,7 @@ const mrv3SeriesImageAlt: Record<SelectionLocale, string> = {
 
 export function getMrv3SeriesImage(locale: SelectionLocale) {
   return {
-    src: "/images/products/valves/rotary-valves/foreach-mrv3-ceramic-multi-channel-rotary-selector-valves-series.webp",
+    src: "/images/products/valves/rotary-valves/foreach-rotary-valve-valve-assemblies.webp",
     alt: mrv3SeriesImageAlt[locale],
   };
 }

@@ -1,3 +1,4 @@
+import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜外语版联系我们页面入口
@@ -84,10 +85,7 @@ export async function generateMetadata({
 
   const data = getContactIntlData(locale);
 
-  return {
-    title: data.seo.title,
-    description: data.seo.description,
-  };
+  return buildInternationalPageMetadata({ locale, path: "/contact/", title: data.seo.title, description: data.seo.description });
 }
 
 /* =========================================================

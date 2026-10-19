@@ -1,0 +1,91 @@
+/* Shared typography tokens; page layouts remain independent. */
+:root {
+  --shared-hero-heading-size: clamp(42px, 5vw, 78px);
+  --shared-hero-heading-weight: 700;
+  --shared-section-heading-size: clamp(52px, 5vw, 76px);
+  --shared-section-heading-weight: 400;
+  --shared-inner-banner-heading-size: 64px;
+  --shared-inner-banner-heading-line-height: 1.08;
+  --shared-inner-banner-body-size: 18px;
+  --shared-inner-banner-body-line-height: 1.8;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --shared-inner-banner-heading-size: 40px;
+    --shared-inner-banner-heading-line-height: 1.12;
+    --shared-inner-banner-body-size: 16px;
+    --shared-inner-banner-body-line-height: 1.7;
+  }
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --shared-hero-heading-size: clamp(30px, 7vw, 58px);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --shared-hero-heading-size: clamp(27px, 7.8vw, 34px);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --shared-section-heading-size: 34px;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1599px) {
+  html:not([lang^="zh"]) {
+    --shared-hero-heading-size: clamp(40px, 3vw, 46px);
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+  html:not([lang^="zh"]) {
+    --shared-hero-heading-size: clamp(44px, 2.7vw, 52px);
+  }
+}
+
+@media (min-width: 1921px), (min-width: 1600px) and (min-resolution: 1.25dppx) {
+  html:not([lang^="zh"]) {
+    --shared-hero-heading-size: clamp(74px, 3.8vw, 88px);
+  }
+}
+
+@media (max-width: 1920px) {
+  html:not([lang^="zh"]) {
+    --shared-section-heading-size: clamp(40px, 3.2vw, 54px);
+  }
+}
+
+@media (max-width: 768px) {
+  html:not([lang^="zh"]) {
+    --shared-section-heading-size: clamp(30px, 8.2vw, 38px);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+  html[lang^="zh"] {
+    --shared-hero-heading-size: clamp(46px, 4.4vw, 64px);
+    --shared-section-heading-size: 46px;
+    --shared-section-heading-weight: 500;
+  }
+}
+
+.home-hero-title {
+  font-size: var(--shared-hero-heading-size) !important;
+  font-weight: var(--shared-hero-heading-weight) !important;
+}
+
+.home-news-main-title,
+.about-foreach-intro-copy h2,
+.about-foreach-honor-title h2,
+.contact-page .contact-section-title,
+.shared-contact-information .contact-section-title,
+.distributor-page .distributor-section-head h2 {
+  font-size: var(--shared-section-heading-size) !important;
+  font-weight: var(--shared-section-heading-weight) !important;
+}

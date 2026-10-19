@@ -388,6 +388,7 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "brushless-diaphragm-pump-2-wire-vs-5-wire": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["wiring-control", "brushless-motor", "oem-integration", "selection"], literalTags: ["2-wire", "5-wire"], relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
   "dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "high-pressure", "backpressure", "selection"], relatedProducts: ["DPL30H"] },
   "dpgl800-gas-liquid-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["gas-liquid", "self-priming", "waste-handling", "selection"], relatedProducts: ["DPGL800"] },
+  "diaphragm-pump-vs-peristaltic-pump": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "selection", "dosing", "testing-validation"], relatedProducts: ["DPL30", "DPL60"] },
   "dpl60-liquid-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "flow", "operating-point", "selection"], relatedProducts: ["DPL60"] },
   "dpl30-liquid-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "flow", "oem-integration", "selection"], relatedProducts: ["DPL30"] },
   "piston-pump-head-material-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "material-compatibility", "selection", "testing-validation"], literalTags: ["PMMA", "PCTG", "PPS", "PVDF", "PP", "PTFE", "PEEK", "POM", "PSU"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 120 },
@@ -404,6 +405,12 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
     ru: ["Фитинги с обжимным кольцом", "HSF6", "CL-1S", "CL-1X"],
   }, relatedProducts: [] },
   "what-is-a-ferrule-fitting": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "installation"], literalTags: ["卡箍接头", "HN", "HN6", "HNF", "HNF6"], relatedProducts: ["HN-M6-16-PV-N", "HN6-M6-16-PV-N", "HNF-M6-16-PV-N", "HNF6-M6-16-PS-B"] },
+  "what-is-a-barbed-fitting": {
+    primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
+    tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"],
+    literalTags: ["倒刺接头", "软管内径", "C/F/D/V/X", "PP", "PA", "质量体系"],
+    relatedProducts: ["BA-32F-PP-N", "BA-32D-PP-N", "BL-32F-PP-N", "BT-32D-PP-N", "BY-32D-PP-N"],
+  },
   "what-is-a-luer-fitting": {
     primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
     tagKeys: ["fittings", "selection", "sealing-leakage", "installation"],

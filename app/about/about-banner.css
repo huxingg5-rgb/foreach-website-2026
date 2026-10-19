@@ -111,8 +111,8 @@
   max-width: 1080px;
   margin: 0;
   color: #ffffff;
-  font-size: 64px;
-  line-height: 1.08;
+  font-size: var(--shared-inner-banner-heading-size);
+  line-height: var(--shared-inner-banner-heading-line-height);
   font-weight: 600;
   letter-spacing: -0.04em;
   text-align: left;
@@ -129,8 +129,8 @@
   max-width: 860px;
   margin: 24px 0 0;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: var(--shared-inner-banner-body-size);
+  line-height: var(--shared-inner-banner-body-line-height);
   font-weight: 400;
   letter-spacing: normal;
   text-align: left;
@@ -152,15 +152,11 @@
 
   .about-center-banner .about-center-banner__title.about-center-banner__title {
     max-width: 100%;
-    font-size: 40px;
-    line-height: 1.12;
   }
 
   .about-center-banner .about-center-banner__description.about-center-banner__description {
     max-width: 100%;
     margin-top: 20px;
-    font-size: 16px;
-    line-height: 1.7;
   }
 }
 

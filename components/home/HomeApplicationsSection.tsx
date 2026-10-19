@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { HomeApplicationsSectionData } from "@/data/home-applications.intl";
 import styles from "./EnglishHomeSections.module.css";
+import HomeSectionMoreLink from "./HomeSectionMoreLink";
 
 export default function HomeApplicationsSection({ data }: { data: HomeApplicationsSectionData }) {
   const { locale, copy, applications, tasks } = data;
@@ -34,10 +35,9 @@ export default function HomeApplicationsSection({ data }: { data: HomeApplicatio
               ))}
             </div>
             <div className="home-company-about-actions">
-              <Link href={data.allApplicationsHref} prefetch={false}
-                className={`${styles.applicationMore} home-company-primary-btn brand-navy-button-motion`}>
+              <HomeSectionMoreLink href={data.allApplicationsHref}>
                 {copy.allApplications}
-              </Link>
+              </HomeSectionMoreLink>
             </div>
           </div>
         </div>
