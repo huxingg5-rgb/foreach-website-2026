@@ -164,7 +164,7 @@
   color: var(--installation-guide-blue);
   font-size: 30px;
   line-height: 1.08;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.05em;
 }
 
@@ -497,7 +497,7 @@
   font-size: 22px;
   line-height: 1.34;
   letter-spacing: -0.04em;
-  font-weight: 700;
+  font-weight: 500;
   transition: color 0.18s ease;
 }
 
@@ -812,7 +812,7 @@
   font-size: 22px;
   line-height: 1.34;
   letter-spacing: -0.04em;
-  font-weight: 700;
+  font-weight: 500;
   transition: color 0.18s ease;
 
   display: -webkit-box;
@@ -1319,7 +1319,7 @@ button.installation-guide-card,
   color: var(--installation-guide-blue);
   font-size: 20px;
   line-height: 1.45;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.025em;
 }
 
@@ -1452,7 +1452,7 @@ button.installation-guide-card,
   color: var(--installation-guide-blue);
   font-size: 20px;
   line-height: 1.45;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.025em;
 }
 
