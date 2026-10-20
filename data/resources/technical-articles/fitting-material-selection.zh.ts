@@ -1,0 +1,214 @@
+import { FITTING_PUBLISHED_PRODUCTS } from "@/data/products/selection/fitting-publication.generated";
+import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engineering-article.types";
+import { fittingArticleImage } from "./fitting-article-images";
+
+function materialExample(model: string) {
+  const product = FITTING_PUBLISHED_PRODUCTS.find(item => item.foreachModel === model);
+  if (!product) throw new Error(`Missing published material example: ${model}`);
+  return product;
+}
+const ppExample = materialExample("BA-32F-PP-N");
+const paExample = materialExample("BA-32F-PA-W");
+
+/*
+ * Evidence reviewed 2026-10-20:
+ * FOREACH A02 PDF pp.27-28: barbed fittings PP/PA and BA-32F dimensions;
+ * pp.41-48: thread-to-barb material options are model-specific;
+ * p.62 and Q20 records: distinguish PP/POM body from seal/valve components;
+ * PDF p.109 (printed p.108): material reference ranges, not assembled fitting ratings:
+ * PP -10..110 C; PA -40..120 C; POM -40..100 C; PVDF -40..150 C; PEEK -180..225 C.
+ * PP differs from the compatibility-page copy (120 C). This article retains the
+ * verified A02 baseline; the other page is outside this edit. Source provenance
+ * stays in this comment so the public copy focuses on selection and testing.
+ * PDF pp.63,71 (printed pp.62,70): Q20/Q40 PP+EPDM -20..71 C,
+ * POM+NBR -40..82 C; both list 120 psi (8.3 bar). No pressure-temperature
+ * derating curve or pressure test temperature is supplied in those tables.
+ * PDF pp.77-79: Q60 PP+EPDM 60 psi; catalogue approximates this as 4.2 bar.
+ * MPa values below are calculated from psi (120 -> 0.827..., 60 -> 0.413...).
+ * Q60 lower temperature differs across pages (-20 vs 0 C), including mother-end
+ * configurations. Do not publish one general Q60 lower temperature here.
+ * PDF p.24: high-pressure FAMILY maximum 34 MPa; not a rating for every PEEK SKU.
+ * Its assembly note specifies PEEK 0.45 N.m and metal 2.2 N.m only in that context.
+ * Catalogue's broad PVDF/PEEK chemical descriptions do not establish compatibility
+ * for every strong acid/base. Background cross-checks:
+ * https://www.jacomfg.com/fittings/ (general material tradeoffs; no JACO ratings transferred)
+ * https://hpp.arkema.com/en/product-families/kynar-fluoropolymer-family/chemical-resistance-fuel-resistance/
+ * https://www.victrex.com/-/media/downloads/technical-guides/victrex_chemical_resistance_en_us.pdf
+ * Material-first revision: background properties cross-checked against:
+ * https://plastics-rubber.basf.com/emea/en/performance_polymers/products/ultramid
+ * https://www.celanese.com/products/hostaform-celcon-pom-acetal-copolymer
+ * https://www.celanese.com/-/media/Engineered%20Materials/Files/Product%20Technical%20Guides/POM-046_Celcon_DesignGuideTG_AM_0913.pdf
+ * https://www.victrex.com/en/products/polymers/peek-polymers
+ * https://www.parker.com/content/dam/Parker-com/Literature/Praedifa/Catalogs/Catalog_O-Ring-Handbook_PTD5705-EN.pdf
+ * Application directions below are conditional selection guidance, not validated
+ * FOREACH application cases or an assertion that every series offers all five resins.
+ * No assertion that FOREACH uses those manufacturers' particular resin grades.
+ * Chinese terminology reviewed 2026-10-20: material grade is not a fitting model;
+ * describe density, friction coefficient, water absorption and pull-off resistance
+ * explicitly. Manufacturer terminology references (no ratings transferred):
+ * https://www.victrex.com/zh-cn/datasheets
+ * https://www.ensingerplastics.com/zh-cn/shapes/industrial-plastics/pp
+ * https://www.ensingerplastics.com/zh-cn/shapes/engineering-plastics/pom-acetal
+ * https://www.emerson.com/is/content/emerson/zh/final-control/flow-controls/documents/d103588x012-instruction-manual-mr98-series.pdf
+ * Product manifest supplies live SKU images/links. No withdrawn PEEK SKU is linked.
+ */
+export const fittingMaterialSelectionCopy: DiaphragmPumpEngineeringArticleCopy = {
+  metadata: {
+    title: "接头材质怎么选？PP、PA、POM、PVDF 与 PEEK 的应用区别",
+    seoTitle: "接头材质怎么选？PP、PA、POM、PVDF、PEEK 对比 | FOREACH",
+    seoDescription: "比较 PP、PA、POM、PVDF 与 PEEK 的材料性能和参考温度范围，以及 Q20、Q40、Q60 接头的压力和工作温度，说明接头本体、O 形圈与管路的选择，并明确使用前的实际工况测试要求。",
+    coverImage: "/images/resources/technical-articles/fitting-material-selection-guide/fitting-materials-and-connection-types-cover.webp",
+    coverAlt: "恒永达多种接头结构与管路组件展示",
+  },
+  deck: "先比较五种材料的性能和参考温度范围，再说明 O 形圈、接头工作温度与耐压数值，帮助选择接头、密封件和管路，并明确正式使用前的实际工况测试要求。",
+  leadBlocks: [
+    { type: "paragraph", lead: "选择接头材质，首先要了解材料本身的性能。", text: "选择接头材质，首先要了解材料本身的性能。PP 的密度较低，能耐受多种水溶液；PA 具有较好的强度、韧性和耐磨性；POM 的刚性较好、摩擦系数较低，尺寸稳定性较好；PVDF 具有较好的耐化学性；PEEK 则兼顾耐高温性能、机械强度和耐化学性。选择时，应结合介质种类、温度、压力和接头受力情况判断。" },
+    { type: "paragraph", text: "温度与压力要用具体数值比较。例如，材料参考温度上限分别为 PP 110°C、PA 120°C、POM 100°C、PVDF 150°C、PEEK 225°C；而采用 PP 本体和 EPDM 密封圈的 Q20 接头，工作温度上限为 71°C，工作压力为 120 psi（约 0.83 MPa）。下面先介绍材料性能，再说明密封件和具体接头的参数及适用条件。" },
+    { type: "paragraph", lead: "正式使用前，应先进行实际工况测试。", text: "正式使用前，应先进行实际工况测试。接头的密封性能和使用寿命受介质种类与浓度、温度、压力及其波动、接触时间、清洗方式、密封件、管材和装配方式等多种因素影响。本文参数用于初步选型，不能代替接头与配套管路的实际测试；正式装机或批量使用前，应在所选型号允许的使用条件内，用实际介质、密封件和管路完成测试。" },
+  ],
+  sections: [
+    {
+      title: "PP、PA、POM、PVDF 和 PEEK 接头材料有什么区别？",
+      blocks: [
+        { type: "paragraph", text: "比较接头材质，可以先看耐化学性、力学性能、吸水后尺寸变化和耐温性能。这里的耐化学性，是指材料抵抗化学介质作用、维持自身性能的能力。下表温度用于初步选材，实际适用范围还受原材料种类及配方、介质、受力情况和使用时长影响，不能将表中上下限直接当作成品接头的连续工作温度。" },
+        { type: "table", headers: ["材料", "材料参考温度范围", "主要特点与应用"], rows: [
+          ["PP｜聚丙烯", "−10～110°C", "密度较低，能耐受多种水溶液；可用于经相容性确认的水性试剂、冲洗液管路"],
+          ["PA｜聚酰胺 / 尼龙", "−40～120°C", "强度、韧性和耐磨性较好；可用于有机械强度要求的连接，需考虑吸水后的尺寸变化"],
+          ["POM｜聚甲醛", "−40～100°C", "刚性较好、摩擦系数较低、吸水率较低；可用于需要反复插拔或相对滑动的连接部件"],
+          ["PVDF｜聚偏二氟乙烯", "−40～150°C", "耐化学性较好，并具有一定机械强度；可作为腐蚀性试剂和化学样品管路的候选材料"],
+          ["PEEK｜聚醚醚酮", "−180～225°C", "耐高温性能和机械强度较好；可作为较高温度或承载要求下的候选材料"],
+        ] },
+        { type: "paragraph", text: "表中的温度下限也只是材料参考值，不代表成品接头在该温度下仍能可靠密封。需要低温使用时，应同时测试接头本体、密封件和管路。" },
+        { type: "subheading", title: "PP（聚丙烯）：密度较低，可用于多种水溶液管路" },
+        { type: "paragraph", text: "PP 的密度较低，耐化学性较好，能耐受多种盐溶液、碱液和弱酸。仪器内输送水性试剂、冲洗液，或连接储液瓶与软管时，可将 PP 倒刺接头或螺纹转倒刺接头列为候选，并确认其与实际介质是否相容。" },
+        { type: "paragraph", text: "PP 的选型重点在于介质种类和长期受力条件。使用氧化性清洗剂、部分有机溶剂或在较高温度下运行时，都需要单独确认适用性；接头长期受到软管拉力或螺纹压紧力时，还要检查变形是否影响配合与密封。常温下输水时能够正常使用，不代表经过高温清洗后仍然适用。" },
+        { type: "subheading", title: "PA（聚酰胺 / 尼龙）：强度、韧性和耐磨性较好" },
+        { type: "paragraph", text: "PA 具有较好的机械强度、韧性和耐磨性。对于安装时受力较大、受到管路拉力或存在反复摩擦的连接，可将 PA 接头列为候选；布置管路时仍应设置合理支撑，减少接头承受的外力。" },
+        { type: "paragraph", text: "PA 会吸收空气中的水分，接触水溶液时也可能吸水，导致尺寸和力学性能变化，进而影响螺纹配合及倒刺与软管的连接牢固程度。PA6、PA66、PA12 属于不同类型的聚酰胺，不能只凭“尼龙”二字视为相同材料。" },
+        { type: "paragraph", text: "同一种聚酰胺还可能有不同的原材料牌号。牌号是材料生产商用于区分具体材料产品的标识，可对应不同配方和性能，与接头的产品型号不同。选型时应确认原材料牌号、是否添加增强或改性成分，并测试吸水后及接触实际介质后的尺寸和性能变化。" },
+        { type: "subheading", title: "POM（聚甲醛）：刚性较好、摩擦系数较低、尺寸稳定性较好" },
+        { type: "paragraph", text: "POM 具有较好的刚性和耐磨性，摩擦系数与吸水率较低，有利于维持零件尺寸和装配间隙。对于快插接头等需要反复插拔或相对滑动的连接部件，可以考虑 POM；具体是否适用，还要结合部件接触的介质和实际受力情况判断。" },
+        { type: "paragraph", text: "POM 的力学性能不能代替介质相容性测试。使用强酸、强氧化性介质或含氯清洗剂时，应重点确认材料是否适用；未接触液体时插拔顺畅，不代表长期浸泡或反复清洗后仍能保持原有的配合与密封性能。" },
+        { type: "subheading", title: "PVDF（聚偏二氟乙烯）：耐化学性较好，具有一定机械强度" },
+        { type: "paragraph", text: "PVDF 是一种氟塑料，能耐受多种酸、盐及其他化学介质，同时具有一定机械强度。对于输送腐蚀性试剂或化学样品的管路，可以考虑 PVDF 接头，并确认所需结构和尺寸是否有相应产品。" },
+        { type: "paragraph", text: "PVDF 也有不适用的介质和条件，尤其需要确认其对强碱和具体有机溶剂的耐受能力，并考虑浓度与温度。原材料配方及使用条件不同，性能也可能不同，不能仅凭“氟塑料”判断它适用于所有腐蚀性介质。" },
+        { type: "subheading", title: "PEEK（聚醚醚酮）：兼顾耐高温性能和机械强度" },
+        { type: "paragraph", text: "PEEK 兼具耐高温性能、机械强度和耐化学性。在分析仪器的硬管连接，或对使用温度、结构强度和尺寸稳定性有较高要求的部位，可以考虑 PEEK 接头及配套组件。" },
+        { type: "paragraph", text: "PEEK 并非对所有化学品都适用，接触浓硫酸和强氧化性介质时需要特别确认。原材料的耐温性能不能直接用于确定成品接头的工作温度，更不能据此推算耐压值；接头的螺纹、壁厚、端口结构和配套管路都需要满足实际使用要求。" },
+        { type: "paragraph", text: "以 121°C 清洗要求为例，这个温度已超过表中 PP 的 110°C、PA 的 120°C 和 POM 的 100°C 参考上限，不应按这张表直接选用。PVDF 的 150°C、PEEK 的 225°C 参考上限虽高于 121°C，仍需进一步确认成品接头的温度限制、清洗介质及持续时间；初步选材符合要求，并不等于已通过 121°C 清洗或灭菌测试。" },
+      ],
+    },
+    {
+      title: "部分接头带有 O 形圈，为什么还要单独选择密封件材料？",
+      blocks: [
+        { type: "paragraph", text: "了解本体材质后，再看所选接头的密封结构。部分接头会用到 O 形圈（也称 O 圈）、垫片或其他密封件。例如，带 O 形圈的快插接头通过密封圈受压变形封住接合间隙；一体式倒刺接头与软管的连接则主要依靠管壁贴合倒刺表面，并非所有接头都需要另加 O 形圈。" },
+        { type: "paragraph", text: "接头本体与密封件的作用不同，也可能使用不同材料。以 PP 本体、EPDM（三元乙丙橡胶）密封圈的快插接头为例，确认 PP 与介质相容后，还需要按相同介质和清洗条件检查 EPDM 是否适用。密封圈若吸收介质后体积明显增大（溶胀）、发生硬化，或受压后回弹不足，即使本体外观正常，连接处也可能泄漏或插拔不畅。" },
+        { type: "paragraph", text: "接头的工作温度取决于本体、密封件等部件的组合。下表列出 Q20、Q40 采用 PP＋EPDM 或 POM＋NBR（丁腈橡胶）时的工作温度。这些数值对应所列成品接头，不是 EPDM 或 NBR 材料本身的通用耐温范围。" },
+        { type: "table", headers: ["接头系列及材料组合", "工作温度", "与本体材料参考值的区别"], rows: [
+          ["Q20 / Q40｜PP 本体＋EPDM 密封圈", "−20～71°C", "成品上限 71°C；不能按 PP 材料参考上限 110°C 使用"],
+          ["Q20 / Q40｜POM 本体＋NBR 密封圈", "−40～82°C", "成品上限 82°C；不能按 POM 材料参考上限 100°C 使用"],
+        ] },
+        { type: "paragraph", text: "例如设备计划用 80°C 液体清洗，这已超过 Q20/Q40 的 PP＋EPDM 接头的 71°C 上限；POM＋NBR 接头的工作温度上限为 82°C，还需继续确认清洗介质、温度波动和工作压力是否符合要求。更换为 FKM（氟橡胶）密封圈后，也应重新确认接头的允许工作温度和压力，不能直接沿用原组合或橡胶材料表中的数值。" },
+        { type: "paragraph", text: "选择密封件时，需要确认材料种类与配方、尺寸、硬度和装配要求。对于带阀结构，还应沿液体流动路径检查阀内哪些零件与液体接触；对于硬管接头，应分清压套、卡套或垫圈的材料和作用。与液体接触的部件称为接液部件，外部锁紧件是否属于接液部件，应根据实际结构判断。" },
+        { type: "table", headers: ["连接结构", "本体以外需要核对什么", "与选材的关系"], rows: [
+          ["一体式倒刺接头", "软管内壁、尺寸和硬度", "软管接触介质后的变化可能影响密封和抗拔脱能力"],
+          ["螺纹转倒刺接头", "软管，以及该型号实际采用的垫片或辅助密封材料", "按螺纹端的真实密封结构核对，不能统一视为 O 形圈密封"],
+          ["带 O 形圈的快插接头", "O 形圈；带阀型号还包括阀内接液零件", "分别确认本体、密封圈及内部接液零件与介质是否相容"],
+          ["硬管连接组件", "管路及接触液体或参与密封的配套零件", "确认材料、端口和零件之间的配套要求，不能凭外形任意组合"],
+        ] },
+        { type: "paragraph", text: "PTFE、ETFE、PFA 等氟塑料也可用于管路、密封件或其他连接部件，应根据部件的用途和使用条件选择。例如聚四氟乙烯（PTFE）生料带是部分螺纹连接使用的辅助密封材料，使用生料带并不代表接头本体由 PTFE 制成。" },
+        { type: "links", items: [
+          { href: "/resources/technical-articles/what-is-a-quick-disconnect-fitting/#conditions", label: "快插接头的材料与使用条件", prefix: "带阀快插接头可参考", suffix: "；" },
+          { href: "/resources/technical-articles/hard-tube-fittings-selection-guide/", label: "硬管接头结构与配套", prefix: "硬管连接可对照", suffix: "。" },
+        ] },
+      ],
+    },
+    {
+      title: "输送试剂和清洗液时，怎样判断接头材料与介质是否相容？",
+      blocks: [
+        { type: "paragraph", text: "先建立接头会遇到的完整介质清单：正常输送液、清洗剂、消毒剂、冲洗液，以及停机时残留的混合液。只写“酸”“碱”或“酒精”，信息不足；同一种化学品的浓度、接触温度和接触时间变化，都可能改变选材结论。" },
+        { type: "list", ordered: true, items: [
+          "记录介质名称与浓度；混合液说明主要成分和比例，使用实际配方或产品资料。",
+          "分别列出运行与清洗的温度、接触时间、频率，以及停机后是否长期浸泡。",
+          "根据材料相容性信息初步选材，再确认原材料种类、具体部件及其组合是否适用；没有相容性数据，不能视为已经确认可用。",
+          "对混合介质、温度变化或长期受力条件，安排实际样件验证，并检查密封件与软管。",
+        ] },
+        { type: "paragraph", text: "例如一条常温输送水溶液、定期用含氯清洗剂清洗的管路，不能只确认接头材料是否耐水。还应单独列出清洗剂的有效成分、浓度、温度和接触时间，再检查接头本体、密封圈及软管是否适用。反复清洗可能使这些部件发生变化，导致原本密封正常的连接出现泄漏。" },
+        { type: "links", items: [{ href: "/resources/material-compatibility/", label: "材料兼容性查询", prefix: "可用站内", suffix: "进行初步选材，之后仍需按原材料种类、介质浓度和实际使用条件完成测试。" }] },
+      ],
+    },
+    {
+      title: "接头耐压多少？快插接头与专用高压接头的数值如何比较？",
+      blocks: [
+        { type: "paragraph", text: "接头的耐压能力取决于结构、材料和配套部件。Q20、Q40 的 PP 和 POM 接头工作压力为 120 psi（约 0.83 MPa），Q60 的 PP 接头为 60 psi（约 0.41 MPa）。同样使用 PP，系列不同，允许工作压力也可能不同，因此不能仅凭材料名称确定接头耐压值。" },
+        { type: "table", headers: ["产品与材料组合", "压力参数", "适用范围"], rows: [
+          ["Q20 / Q40｜PP＋EPDM", "工作压力 120 psi ≈ 0.83 MPa（8.3 bar）", "工作温度范围为 −20～71°C；目标温度下的允许压力需另行确认"],
+          ["Q20 / Q40｜POM＋NBR", "工作压力 120 psi ≈ 0.83 MPa（8.3 bar）", "工作温度范围为 −40～82°C；目标温度下的允许压力需另行确认"],
+          ["Q60｜PP＋EPDM", "工作压力 60 psi ≈ 0.41 MPa", "适用于所列 Q60 接头，不能沿用 Q20/Q40 的 120 psi"],
+          ["专用高压接头系列｜10-32 UNF 锥面端口", "系列最大耐压 34 MPa（340 bar）", "该专用系列上限；不是所有 PEEK 或所有硬管接头的额定值"],
+        ] },
+        { type: "paragraph", text: "表中 MPa 按 psi 换算并取近似值。判断接头是否适用时，应同时考虑压力和温度，不能默认接头在最高工作温度下仍能承受所列最大压力。应先确认具体型号在目标温度下的允许压力，再用实际介质、密封件和配套管路测试，并模拟启停时的压力波动、清洗过程和持续运行。Q60 用于低温环境时，还需按配对使用的具体型号确认温度下限。" },
+        { type: "paragraph", text: "例如系统要求 0.60 MPa 工作压力，Q60 的 60 psi（约 0.41 MPa）低于这一要求，不能因为它的流道直径更大就认为更耐压。Q20/Q40 的 120 psi（约 0.83 MPa）高于 0.60 MPa，但是否适用还取决于流量、温度、介质和峰值压力。若选用专用高压接头，还应确认具体型号、管材与端口是否配套，不能把 34 MPa 当作任意 PEEK 接头的耐压值。" },
+        { type: "subheading", title: "高压接头的材料不同，安装扭矩也有具体区别" },
+        { type: "paragraph", text: "上述专用高压接头结构对应的安装扭矩为：PEEK 材质高压接头 0.45 N·m，金属材质高压接头 2.2 N·m。这两个数值仅适用于该专用结构，装配前仍需确认具体型号，不能移用于普通倒刺接头、其他卡套接头，也不能靠继续拧紧来提高额定压力。" },
+        { type: "paragraph", text: "塑料零件在持续受力时，变形可能随时间逐渐增大，这种现象称为蠕变；温度和介质会影响蠕变程度。依靠端面压紧密封的连接，应检查运行后密封面是否仍压紧；倒刺连接则应检查软管端部是否软化、松动或滑移。常温下安装后的检查合格，不能代替运行后的复测。" },
+        { type: "table", headers: ["设备条件", "需要检查的内容"], rows: [
+          ["升温后带压运行", "接头及配套管路在目标温度下的允许工作压力"],
+          ["周期性启停或清洗", "温度和压力反复变化、介质交替接触后，连接处是否泄漏或松脱"],
+          ["螺纹装配", "对应材料和结构的扭矩、工具与密封方式"],
+          ["倒刺接头与软管连接", "软管尺寸、硬度、套入倒刺后的扩张程度及固定方式"],
+        ] },
+        { type: "links", items: [
+          { href: "/resources/technical-articles/threaded-hose-barb-fittings-selection-guide/#installation", label: "螺纹转倒刺接头的安装与扭矩范围", prefix: "螺纹连接可查看", suffix: "；" },
+          { href: "/resources/technical-articles/barbed-fitting-expansion-ratio/", label: "倒刺膨胀比与软管配合验证", prefix: "软管连接则继续核对", suffix: "。" },
+        ] },
+      ],
+    },
+    {
+      title: "同规格的 PP 与 PA 倒刺接头应该怎样比较？",
+      blocks: [
+        { type: "paragraph", text: "以恒永达 BA-32F-PP-N 和 BA-32F-PA-W 为例，两款均为直通倒刺接头，倒刺轮廓代号为 F，适配 3.2 mm 内径软管；PP-N 表示 PP 本色，PA-W 表示 PA 白色。比较时，应使用相同规格的软管和相同的连接方式，再判断两种材料是否适用于实际介质和使用条件。" },
+        { type: "figure", src: fittingArticleImage(ppExample.imageCard), width: 800, height: 800, alt: "恒永达 BA-32F-PP-N PP 本色直通倒刺接头，倒刺轮廓代号 F", caption: "BA-32F-PP-N｜PP 本色", captionHref: `${ppExample.detailHref}/` },
+        { type: "figure", src: fittingArticleImage(paExample.imageCard), width: 800, height: 800, alt: "恒永达 BA-32F-PA-W PA 白色直通倒刺接头，倒刺轮廓代号 F", caption: "BA-32F-PA-W｜PA 白色", captionHref: `${paExample.detailHref}/` },
+        { type: "paragraph", text: "例如，仪器内需要连接两段 3.2 mm 内径软管，可先确认 PP 接头与介质、清洗剂是否相容。如果因机械强度要求考虑 PA，还应测试其吸水后的尺寸和力学性能变化，不能仅根据干燥样件的装配情况判断长期适用性。介质和运行条件不明确时，无法直接判定这两款中哪款更合适。" },
+        { type: "paragraph", text: "对比测试时，应使用同一批次的软管、相同装配方法和测试条件，检查软管端部有无损伤、连接处是否泄漏、软管是否容易被拔脱，以及使用后的变化。本色和白色用于区分型号，不代表材料质量等级；外形相同的接头更换材料后，也应重新测试其与软管的配合及密封性能。" },
+        { type: "links", items: [{ href: "/resources/technical-articles/what-is-a-barbed-fitting/", label: "倒刺接头结构、型号与配套说明", prefix: "若还需要确定直通、弯头或分支，可回到", suffix: "。" }] },
+      ],
+    },
+    {
+      title: "接头正式使用前，应怎样进行实际工况测试？",
+      blocks: [
+        { type: "paragraph", text: "正式装机或批量使用前，应选用拟采购型号的接头及配套密封件、管材和其他连接零件，按实际介质、温度、压力及清洗流程进行测试。即使材料名称相同，原材料配方、零件尺寸或装配方式不同，结果仍可能不同，因此应将接头和配套管路一起测试。" },
+        { type: "list", ordered: true, items: [
+          "测试准备：记录完整型号、图纸版本、本体与密封件材料、管材规格及装配方法；按预期工况确定测试条件和判定指标。",
+          "介质接触试验：按实际介质的配方、浓度、接触温度和时间，检查部件外观、尺寸及性能变化；用于分析检测管路时，还应根据项目要求检查材料析出物或介质残留是否干扰检测。",
+          "连接测试：用实际软管或硬管及配套零件，按规定方法装配，检查泄漏、抗拔脱能力和流量，模拟预计使用的温度与压力条件；必要时进行反复拆装测试。",
+          "运行复测：在型号允许范围内模拟启停、持续运行及清洗循环，再次检查密封、松脱和变形情况，记录样件批次、测试时长与结果。",
+        ] },
+        { type: "paragraph", text: "测试时长、循环次数和合格标准应结合设备要求提前确定，一次短时检漏不能代替长期使用验证。若更换本体材料、密封件、管材、装配方法或清洗方案，应重新评估受到影响的项目，并在正式使用前完成相应测试。" },
+      ],
+    },
+  ],
+  faqTitle: "接头材料选择的补充问题",
+  faqItems: [
+    { question: "PA、PVDF 或普通 PEEK 接头的耐压是多少？", answer: "仅凭材料名称不能确定接头的耐压值。本文列出的 Q20/Q40 工作压力 120 psi、Q60 工作压力 60 psi，以及专用高压系列最大耐压 34 MPa，分别对应具体接头或系列。选用 PA、PVDF 或 PEEK 接头时，应确认具体型号及配套管路的额定压力，并在正式使用前完成实际工况测试。" },
+    { question: "接头型号只写 PA，可以直接按 PA66 采购吗？", answer: "不能。PA 是聚酰胺的统称，不能据此确定是 PA6、PA66 还是其他类型。还应向供应方确认原材料牌号、是否添加增强或改性成分，并在采购要求中注明。不同 PA 材料的吸水特性和力学性能可能不同。" },
+    { question: "塑料接头能否直接改成不锈钢接头？", answer: "更换后应重新检查接头及配套管路。不锈钢的种类、表面状态、与介质的相容性、螺纹和密封面、软管配合及安装要求都需要确认。接口名称或外形相同不代表能够直接替换，也不能沿用塑料接头的安装扭矩。" },
+  ],
+  cta: {
+    title: "结合介质与使用条件选择接头材料",
+    description: "提供介质与浓度、运行及清洗温度、压力、接触时间、管材和连接结构，便于确认候选材料、型号及使用前的测试要求。",
+    contactLabel: "沟通材料选型",
+    productsLabel: "查看接头产品",
+    productsHref: "/products/fittings/",
+  },
+};
+
+export const fittingMaterialSelectionNavigation = [
+  { id: "materials", label: "五种材质的温度与特性" },
+  { id: "wetted-parts", label: "O 形圈与成品工作温度" },
+  { id: "chemicals", label: "介质与清洗条件" },
+  { id: "operating-conditions", label: "耐压数值与安装扭矩" },
+  { id: "pp-pa-example", label: "PP 与 PA 同规格对照" },
+  { id: "material-testing", label: "使用前的实际工况测试" },
+];

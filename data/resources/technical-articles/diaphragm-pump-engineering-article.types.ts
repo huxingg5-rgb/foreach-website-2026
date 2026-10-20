@@ -71,6 +71,8 @@ export type EngineeringArticleBlock =
       height: number;
       caption: string;
       captionHref?: string;
+      quickDisconnectDiagram?: "pair" | "valves" | "panel";
+      barbExpansionDiagram?: "assembly" | "comparison" | "profiles";
       link?: { href: string; label: string };
       productViews?: readonly { src: string; alt: string; reverse?: boolean }[];
       flowNodes?: readonly { label: string; detail: string }[];

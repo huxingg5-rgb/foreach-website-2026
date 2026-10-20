@@ -37,6 +37,18 @@
   object-position: center;
 }
 
+.quickDisconnectPhoto {
+  background: #2c2c2a;
+}
+
+.quickDisconnectPhoto img {
+  object-fit: contain;
+}
+
+.diagramCover img {
+  object-fit: contain;
+}
+
 .body {
   display: flex;
   flex-direction: column;

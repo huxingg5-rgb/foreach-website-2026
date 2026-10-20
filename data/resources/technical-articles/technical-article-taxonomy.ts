@@ -411,6 +411,142 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
     literalTags: ["倒刺接头", "软管内径", "C/F/D/V/X", "PP", "PA", "质量体系"],
     relatedProducts: ["BA-32F-PP-N", "BA-32D-PP-N", "BL-32F-PP-N", "BT-32D-PP-N", "BY-32D-PP-N"],
   },
+  "what-is-a-quick-disconnect-fitting": {
+    primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
+    tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"],
+    localizedLiteralTags: {
+      "zh-CN": ["快插接头", "公母配对", "带阀", "Q20", "Q40", "Q60"],
+      "en": ["Quick disconnect fittings", "Male/female pairing", "Valved", "Q20", "Q40", "Q60"],
+      "es": ["Acoplamientos rápidos", "Emparejamiento macho/hembra", "Con válvula", "Q20", "Q40", "Q60"],
+      "fr": ["Raccords rapides", "Appairage mâle/femelle", "Avec clapet", "Q20", "Q40", "Q60"],
+      "ko": ["퀵 디스커넥트 피팅", "수·암 커넥터 조합", "차단 밸브형", "Q20", "Q40", "Q60"],
+      "ru": ["Быстроразъёмные соединения", "Сопряжение штекера и гнезда", "С клапаном", "Q20", "Q40", "Q60"],
+    },
+    relatedProducts: ["Q2001-PNV-SPPE", "Q2001-SMV-SPPE", "Q4004-PNV-SPPE", "Q6006-SNV-SPPE"],
+  },
+  "threaded-hose-barb-fittings-selection-guide": {
+    primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
+    tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"],
+    localizedLiteralTags: {
+      "zh-CN": ["螺纹转倒刺接头", "软管内径", "底面密封", "UNF", "NPT", "M6"],
+      "en": ["Threaded hose barb fittings", "Tubing inner diameter", "Face sealing", "UNF", "NPT", "M6"],
+      "es": ["Racores roscados de espiga", "Diámetro interior del tubo", "Sellado frontal", "UNF", "NPT", "M6"],
+      "fr": ["Raccords filetés cannelés", "Diamètre intérieur du tube", "Étanchéité en face", "UNF", "NPT", "M6"],
+      "ko": ["나사-바브 피팅", "튜브 내경", "단면 밀봉", "UNF", "NPT", "M6"],
+      "ru": ["Резьбовые штуцеры-ёлочки", "Внутренний диаметр трубки", "Торцевое уплотнение", "UNF", "NPT", "M6"],
+    },
+    relatedProducts: ["SA-U28-32D-PP-N", "SB-M5-32D-PP-N", "SBS-M6-32D-PP-N", "SBR-U28-32-PP-N"],
+  },
+  "barbed-fitting-expansion-ratio": {
+    primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
+    tagKeys: ["fittings", "calculation", "tubing", "sealing-leakage", "testing-validation"],
+    localizedLiteralTags: {
+          "zh-CN": [
+                "倒刺膨胀比",
+                "膨胀率",
+                "软管内径",
+                "尺寸公差",
+                "C/F/D/V/X"
+          ],
+          "en": [
+                "Barb expansion ratio",
+                "Expansion percentage",
+                "Tubing inner diameter",
+                "Dimensional tolerances",
+                "C/F/D/V/X"
+          ],
+          "es": [
+                "Relación de expansión en espiga",
+                "Porcentaje de expansión",
+                "Diámetro interior del tubo",
+                "Tolerancias dimensionales",
+                "C/F/D/V/X"
+          ],
+          "fr": [
+                "Rapport de dilatation sur embout cannelé",
+                "Pourcentage de dilatation",
+                "Diamètre intérieur du tube",
+                "Tolérances dimensionnelles",
+                "C/F/D/V/X"
+          ],
+          "ko": [
+                "바브 확장비",
+                "확장률",
+                "튜브 내경",
+                "치수 공차",
+                "C/F/D/V/X"
+          ],
+          "ru": [
+                "Отношение расширения на штуцере",
+                "Процент расширения",
+                "Внутренний диаметр трубки",
+                "Допуски размеров",
+                "C/F/D/V/X"
+          ]
+    },
+    relatedProducts: ["BL-32F-PP-N", "BL-32D-PP-N", "BA-32F-PP-N", "SA-U28-32D-PP-N"],
+  },
+  "fitting-material-selection-guide": {
+    primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
+    tagKeys: ["fittings", "material-compatibility", "selection", "testing-validation"],
+    localizedLiteralTags: {
+          "zh-CN": [
+                "接头材质",
+                "接液材料",
+                "PP",
+                "PA",
+                "POM",
+                "PVDF",
+                "PEEK"
+          ],
+          "en": [
+                "Fitting materials",
+                "Wetted materials",
+                "PP",
+                "PA",
+                "POM",
+                "PVDF",
+                "PEEK"
+          ],
+          "es": [
+                "Materiales de los racores",
+                "Materiales en contacto con el fluido",
+                "PP",
+                "PA",
+                "POM",
+                "PVDF",
+                "PEEK"
+          ],
+          "fr": [
+                "Matériaux des raccords",
+                "Matériaux en contact avec le fluide",
+                "PP",
+                "PA",
+                "POM",
+                "PVDF",
+                "PEEK"
+          ],
+          "ko": [
+                "피팅 재질",
+                "접액 재료",
+                "PP",
+                "PA",
+                "POM",
+                "PVDF",
+                "PEEK"
+          ],
+          "ru": [
+                "Материалы фитингов",
+                "Материалы, контактирующие со средой",
+                "PP",
+                "PA",
+                "POM",
+                "PVDF",
+                "PEEK"
+          ]
+    },
+    relatedProducts: ["BA-32F-PP-N", "BA-32F-PA-W", "SA-U28-32D-PP-N", "SA-U28-32D-PA-W"],
+  },
   "what-is-a-luer-fitting": {
     primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
     tagKeys: ["fittings", "selection", "sealing-leakage", "installation"],

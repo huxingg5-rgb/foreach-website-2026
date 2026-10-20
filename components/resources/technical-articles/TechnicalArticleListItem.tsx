@@ -27,6 +27,9 @@ export default function TechnicalArticleListItem({
   const [failedImage, setFailedImage] = useState<string | null>(null);
   const coverImage = article.coverImage?.trim();
   const showImage = Boolean(coverImage && failedImage !== coverImage);
+  const isQuickDisconnectPhoto = coverImage?.includes("/quick-disconnect-fitting/");
+  const preserveFullCover = coverImage?.endsWith("/barb-expansion-comparison-cover.webp")
+    || coverImage?.endsWith("/fitting-materials-and-connection-types-cover.webp");
 
   return (
     <Link
@@ -35,7 +38,7 @@ export default function TechnicalArticleListItem({
       onNavigate={() => rememberArticleSource(href)}
     >
       {showImage && coverImage ? (
-        <div className={styles.thumbnail}>
+        <div className={`${styles.thumbnail}${isQuickDisconnectPhoto ? ` ${styles.quickDisconnectPhoto}` : ""}${preserveFullCover ? ` ${styles.diagramCover}` : ""}`}>
           <Image
             src={coverImage}
             alt={article.coverAlt ?? article.title}

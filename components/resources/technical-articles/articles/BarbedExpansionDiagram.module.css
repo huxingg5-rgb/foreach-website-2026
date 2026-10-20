@@ -1,0 +1,21 @@
+.root { width: 100%; color: #203d72; }
+.profiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; color: #203d72; }
+.profileCard { min-width: 0; border: 1px solid #dce4ed; padding: 12px 6px; text-align: center; }
+.profileCard p { font-size: 14px; line-height: 1.5; margin: 8px 0; overflow-wrap: anywhere; }
+.profileCard .heading { font-size: 24px; font-weight: 650; }
+.threeSteps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.panel { min-width: 0; border: 1px solid #dce4ed; background: #fff; border-radius: 6px; padding: 16px 8px 8px; }
+.root .heading { margin: 0; text-align: center; font-size: 18px; font-weight: 650; line-height: 1.5; color: #203d72; }
+.heading span { margin-right: 10px; color: #168bb7; font-variant-numeric: tabular-nums; }
+.root .model { text-align: center; font-size: 13px; margin: 6px 0 0; color: #575757; }
+.svg { width: 100%; height: auto; display: block; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+.root .intro { text-align: center; font-size: 20px; font-weight: 600; margin: 0 0 18px; }
+.root .formula { margin: 8px 0; text-align: center; font-size: 15px; font-variant-numeric: tabular-nums; }
+.root .note { margin: 14px 0 0; color: #575757; font-size: 13px; line-height: 1.8; }
+@media (max-width: 650px) {
+  .profiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .threeSteps, .comparison { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .svg { max-width: 340px; margin-inline: auto; }
+  .root .heading { font-size: 19px; }
+}

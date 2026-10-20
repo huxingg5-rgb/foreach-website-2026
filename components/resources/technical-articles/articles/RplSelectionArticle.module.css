@@ -8,6 +8,14 @@
   .pageSurface:has([data-article-products]) .backNav { max-width: 1400px; padding-inline: 28px; }
   .pageSurface:has([data-article-products]) [data-related-products-section] { display: none; }
   .pageSurface:has([data-article-products]) [data-related-products-only] { display: none; }
+  .pageSurface[data-article-slug="what-is-a-quick-disconnect-fitting"] [data-related-products-section],
+  .pageSurface[data-article-slug="what-is-a-quick-disconnect-fitting"] [data-related-products-only],
+  .pageSurface[data-article-slug="threaded-hose-barb-fittings-selection-guide"] [data-related-products-section],
+  .pageSurface[data-article-slug="threaded-hose-barb-fittings-selection-guide"] [data-related-products-only],
+  .pageSurface[data-article-slug="barbed-fitting-expansion-ratio"] [data-related-products-section],
+  .pageSurface[data-article-slug="barbed-fitting-expansion-ratio"] [data-related-products-only],
+  .pageSurface[data-article-slug="fitting-material-selection-guide"] [data-related-products-section],
+  .pageSurface[data-article-slug="fitting-material-selection-guide"] [data-related-products-only] { display: block; }
 }
 @media (min-width: 1440px) {
   .pageSurface:has([data-article-products]) .layout[data-has-related-products] {
@@ -92,6 +100,8 @@
 .body > section[id="parameters"] th:nth-child(2) { width: 45%; }
 .body > section[id="models"] table { min-width: 620px; }
 .body > section[id="models"] th:first-child { width: 20%; }
+.body > section[id="panel-mount"] th:first-child,
+.body > section[id="panel-mount"] td:first-child { white-space: nowrap; }
 .root td { font-variant-numeric: tabular-nums; }
 .note { font-size: 14px; color: var(--muted); }
 .formula, .notice { border-left: 2px solid #222; padding: 14px 0 14px 20px; margin: 22px 0 26px; }

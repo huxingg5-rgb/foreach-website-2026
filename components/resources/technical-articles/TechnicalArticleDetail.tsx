@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getConnectorSelectionArticle } from "@/data/resources/technical-articles/connector-selection-articles.article";
 import ArticleRelatedProducts from "./ArticleRelatedProducts";
 import { getArticleRelatedProducts } from "@/services/resources/technical-articles/getArticleRelatedProducts";
 import { getCompressionRingFittingCopy, getCompressionRingFittingNavigation, compressionRingFittingSlug } from "@/data/resources/technical-articles/what-is-a-compression-ring-fitting.zh";
@@ -591,6 +592,7 @@ export default function TechnicalArticleDetail({
   nextArticle,
 }: TechnicalArticleDetailProps) {
   const locale = normalizeLocale(pageData.locale);
+  const connectorArticle = getConnectorSelectionArticle(article.slug, locale);
   const isHardTubeFittingsArticle = article.slug === hardTubeFittingsSlug;
   const isFerruleFittingArticle = article.slug === ferruleFittingSlug;
   const isLuerFittingArticle = article.slug === luerFittingSlug;
@@ -878,7 +880,7 @@ export default function TechnicalArticleDetail({
   ) : null;
 
   const structuredDataSubject: TechnicalArticleSubject | undefined =
-    isBarbedFittingArticle ? getBarbedFittingSubject(locale) : valveArticle ? valveArticle.subject : pipettingBasicsCopy
+    connectorArticle ? connectorArticle.subject : isBarbedFittingArticle ? getBarbedFittingSubject(locale) : valveArticle ? valveArticle.subject : pipettingBasicsCopy
       ? getPipettingBasicsSubject(locale)
       : meteringPumpAccuracyRepeatabilityCopy
       ? getMeteringPumpAccuracyRepeatabilitySubject(locale)
@@ -1038,7 +1040,9 @@ export default function TechnicalArticleDetail({
                                   }
                                 : undefined;
 
-  const structuredDataFaqItems = isBarbedFittingArticle
+  const structuredDataFaqItems = connectorArticle
+    ? [...connectorArticle.copy.faqItems]
+    : isBarbedFittingArticle
     ? [...getBarbedFittingCopy(locale).faqItems]
     : isLuerFittingArticle
     ? [...getLuerFittingCopy(locale).faqItems]
@@ -1093,7 +1097,7 @@ export default function TechnicalArticleDetail({
     locale,
     structuredDataFaqItems,
     structuredDataSubject,
-    isBarbedFittingArticle || isLuerFittingArticle || isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle || valveArticle !== null || pipettingBasicsCopy !== null ||
+    connectorArticle !== null || isBarbedFittingArticle || isLuerFittingArticle || isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle || valveArticle !== null || pipettingBasicsCopy !== null ||
       programmableSyringeCopy !== null ||
       programmablePipettingCopy !== null ||
       meteringPumpAccuracyRepeatabilityCopy !== null ||
@@ -1112,15 +1116,17 @@ export default function TechnicalArticleDetail({
       : "Article",
   );
 
-  const sidebarProducts = isBarbedFittingArticle
+  const sidebarProducts = connectorArticle
+    ? connectorArticle.sidebarProducts
+    : isBarbedFittingArticle
     ? getBarbedFittingRelatedProducts(locale).products
     : getArticleRelatedProducts(article, locale);
   const relatedProductsSidebar = sidebarProducts.length
     ? <ArticleRelatedProducts products={sidebarProducts} locale={locale} /> : null;
 
-  if (isBarbedFittingArticle || isLuerFittingArticle || isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {
-    const copy = isBarbedFittingArticle ? getBarbedFittingCopy(locale) : isLuerFittingArticle ? getLuerFittingCopy(locale) : isCompressionRingFittingArticle ? getCompressionRingFittingCopy(locale) : isFerruleFittingArticle ? getFerruleFittingCopy(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
-    const navigation = isBarbedFittingArticle ? getBarbedFittingNavigation(locale) : isLuerFittingArticle ? getLuerFittingNavigation(locale) : isCompressionRingFittingArticle ? getCompressionRingFittingNavigation(locale) : isFerruleFittingArticle ? getFerruleFittingNavigation(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingNavigation(locale) : getHardTubeFittingsNavigation(locale);
+  if (connectorArticle || isBarbedFittingArticle || isLuerFittingArticle || isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {
+    const copy = connectorArticle ? connectorArticle.copy : isBarbedFittingArticle ? getBarbedFittingCopy(locale) : isLuerFittingArticle ? getLuerFittingCopy(locale) : isCompressionRingFittingArticle ? getCompressionRingFittingCopy(locale) : isFerruleFittingArticle ? getFerruleFittingCopy(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
+    const navigation = connectorArticle ? connectorArticle.navigation : isBarbedFittingArticle ? getBarbedFittingNavigation(locale) : isLuerFittingArticle ? getLuerFittingNavigation(locale) : isCompressionRingFittingArticle ? getCompressionRingFittingNavigation(locale) : isFerruleFittingArticle ? getFerruleFittingNavigation(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingNavigation(locale) : getHardTubeFittingsNavigation(locale);
     return (
       <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`}
         data-locale={locale} data-article-slug={article.slug} lang={locale}>
@@ -1132,6 +1138,9 @@ export default function TechnicalArticleDetail({
           articleId={article.slug} sectionNavigation={navigation} modelLinks={new Map()}
           faq={{ id: "faq", label: copy.faqTitle, items: copy.faqItems }} />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
+          {connectorArticle && connectorArticle.footerProducts.length > 0 && <div className={hardTubeFittingsStyles.relatedProducts}>
+            <RelatedResourcesLoader locale={locale} products={connectorArticle.footerProducts} articles={[]} videos={[]} />
+          </div>}
           {isLuerFittingArticle && <div className={hardTubeFittingsStyles.relatedProducts}>
             <RelatedResourcesLoader {...getLuerFittingRelatedProducts(locale)} />
           </div>}

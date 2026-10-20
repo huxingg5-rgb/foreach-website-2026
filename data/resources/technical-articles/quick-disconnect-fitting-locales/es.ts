@@ -1,0 +1,130 @@
+import { coverImage, productPath, paragraph as p, table as t, list as l, figure as f, type QuickDisconnectTranslation } from "./shared";
+
+export const es: QuickDisconnectTranslation = {
+  metadata: {
+    title: "¿Qué es un acoplamiento de desconexión rápida? Conexión macho/hembra, válvulas y selección",
+    seoTitle: "Acoplamientos rápidos: conexión, válvulas y selección | FOREACH",
+    seoDescription: "Conozca los acoplamientos de desconexión rápida Q20, Q40 y Q60: mitades macho y hembra, opciones con válvula, tubos y dimensiones de montaje en panel.",
+    coverImage, coverAlt: "Fotografía de tres acoplamientos rápidos FOREACH de distintos tamaños y configuraciones",
+  },
+  deck: "Seleccione el acoplamiento para el circuito de un instrumento según la interfaz de unión, el cierre al desconectar, el tubo, las juntas y el espacio de montaje.",
+  leadBlocks: [
+    p("Un acoplamiento de desconexión rápida consta de dos mitades compatibles, macho y hembra. Al unirlas se establece un paso continuo; al liberar el cierre pueden separarse rápidamente. Se utiliza para cambiar depósitos, retirar módulos de fluido y mantener instrumentos. En inglés se denomina quick disconnect fitting o quick disconnect coupling.", "Un acoplamiento de desconexión rápida consta de dos mitades compatibles, macho y hembra."),
+    p("Este artículo trata de la separación entre las dos mitades. Los racores de inserción directa, también llamados a veces de conexión rápida, liberan el tubo de un mecanismo de sujeción. Conviene distinguir si se quiere separar el acoplamiento o extraer el tubo."),
+    p("Las series FOREACH Q20, Q40 y Q60 ofrecen distintas conexiones de tubo, roscas, montajes y válvulas. Q20 y Q40 incluyen cuerpos de PP o POM; el material listado para Q60 es PP. La serie identifica la familia de acoplamiento y el modelo completo define cada mitad."),
+  ],
+  sections: [
+    { title: "¿Cómo funciona un acoplamiento rápido y cómo se unen el macho y la hembra?", blocks: [
+      p("La conexión combina inserción macho/hembra, retención mecánica y una junta de sellado. El extremo macho entra en el alojamiento hembra, cuyo cierre lo mantiene conectado. La junta del macho sella contra la superficie de la hembra. Las terminaciones posteriores conectan tubos o puertos del equipo. Macho y hembra describen aquí la interfaz de acoplamiento, no una rosca exterior o interior.", "La conexión combina inserción macho/hembra, retención mecánica y una junta de sellado."),
+      f("pair", "Vistas originales Q20 con extremo macho, alojamiento hembra, junta, mecanismo de liberación y terminaciones para tubo", "Figura 1 | Macho Q2001-PNV-SPPE y hembra para panel Q2001-SMV-SPPE. Se utilizan vistas laterales originales, con el macho orientado hacia la hembra. La flecha indica el montaje, no el flujo; sin escala."),
+      p("Retener, sellar y cerrar el paso son funciones distintas. El cierre impide la separación durante el uso normal; la junta evita fugas por la unión; una mitad con válvula cierra además su propio paso al desconectarse. Compruebe las tres funciones por separado."),
+      { type: "figure", src: "", width: 1200, height: 300, alt: "Secuencia de alineación, conexión, comprobación de flujo y desconexión sin presión", caption: "Compruebe por separado el acoplamiento y la válvula. Tras bloquear la unión, verifique la estanqueidad y el caudal reales.", flowNodes: [
+        { label: "Alinear y conectar", detail: "Misma familia; juntas e interfaces limpias" },
+        { label: "Bloquear y comprobar", detail: "Unión completa, estanqueidad y caudal útil" },
+        { label: "Despresurizar y separar", detail: "Liberar el cierre; cada válvula determina el cierre del paso" },
+      ] },
+      p("La serie Q utiliza un mecanismo de liberación por presión. La señal acústica o táctil ayuda, pero no sustituye la comprobación de retención y fugas. El mantenimiento habitual separa las mitades sin retirar cada vez el tubo de la espiga, reduciendo el estiramiento repetido de su extremo."),
+    ] },
+    { title: "¿Qué diferencia hay entre los acoplamientos con válvula y sin válvula?", blocks: [
+      p("Una mitad con válvula cierra automáticamente su propio paso al desconectarse. El emparejamiento correcto y la conexión completa abren la válvula. Una mitad sin válvula permanece abierta después de separarla. El mecanismo exterior de liberación y la válvula interior son elementos independientes.", "Una mitad con válvula cierra automáticamente su propio paso al desconectarse."),
+      p("Los ejemplos hembra Q20 para panel son Q2001-SMX-SPPE sin válvula y Q2001-SMV-SPPE con válvula. Comparten medida de tubo, montaje y materiales. En esta posición del código, X significa sin válvula y V con válvula. Confirme el modelo completo; el cuerpo o la palanca de liberación no bastan."),
+      f("valves", "Comparación Q20 con y sin válvula, usando imágenes de hembras para panel, espiga recta, codo y rosca; líneas azules de paso y marcas rojas de cierre", "Figura 2 | Las hembras inferiores muestran terminaciones Q20 para panel, espiga recta, codo y rosca. X: sin válvula; V: con válvula. Las líneas solo indican el estado del paso; imágenes sin escala."),
+      p("Tras desconectar, ¿debe retener líquido el equipo, el módulo desmontable o ambos? Las configuraciones siguientes describen una pareja. Que un modelo individual lleve válvula solo describe esa mitad."),
+      t(["Configuración", "Estado al separar", "Tarea que evaluar"], [
+        ["Ambas sin válvula", "Los dos pasos quedan abiertos; otros componentes deben controlar el líquido", "Mantenimiento con circuito vaciable y apertura admisible"],
+        ["Una con válvula", "Cierra la mitad con válvula y la otra queda abierta", "Cierre requerido solo en el equipo o en el depósito"],
+        ["Ambas con válvula", "Cada mitad cierra su propio paso", "Reducir pérdidas tanto en el módulo como en el equipo"],
+      ]),
+      p("El doble cierre no garantiza ausencia de goteo. El líquido residual de la cavidad de unión puede salir al separar, y al reconectar puede entrar aire. Si importan la pérdida de muestra, la contaminación cruzada o las burbujas, mida el derrame, el aire introducido y el tiempo de purga tras reconectar."),
+      p("Los diseños dry break o non-spill también dependen de la geometría de las válvulas, el volumen de la cavidad y la secuencia de sellado y apertura. Dos válvulas no acreditan por sí solas una prestación antigoteo. Tampoco implican que se pueda conectar o desconectar bajo presión; siga los requisitos del modelo y del sistema."),
+    ] },
+    { title: "¿Son compatibles los acoplamientos FOREACH con productos similares de marcas internacionales?", blocks: [
+      p("Los acoplamientos FOREACH permiten la unión compatible con productos similares de las series correspondientes de marcas internacionales líderes. Confirme la compatibilidad de los modelos concretos.", "Los acoplamientos FOREACH permiten la unión compatible con productos similares de las series correspondientes de marcas internacionales líderes."),
+      p("La intercambiabilidad depende de la interfaz macho/hembra. La misma medida de tubo, una forma parecida o incluso poder insertar una mitad no prueban la retención, el sellado ni la apertura de válvula. Verifique familia y dimensiones, y después la conexión real."),
+      p("Cada mitad tiene una interfaz frontal para la otra mitad y una terminación para tubo o puerto roscado. La primera depende de serie, geometría macho/hembra y válvulas; la segunda, del diámetro interior del tubo o de la rosca. Admitir el mismo tubo no demuestra que dos mitades acoplen."),
+      t(["Interfaz", "Datos que comprobar", "Error frecuente"], [
+        ["Unión macho/hembra", "Serie, perfil, cierre, posición de junta y válvulas", "Dar por válida la unión solo por su aspecto o inserción"],
+        ["Espiga", "Diámetros interior y exterior, material, dureza y longitud de inserción del tubo", "Confundir diámetro interior del tubo, paso mínimo y diámetro exterior"],
+        ["Rosca", "Interior/exterior, norma, paso, profundidad de puerto y sellado", "Indicar solo 1/8 o 1/4 sin distinguir NPT o UNF"],
+        ["Panel", "Espesor, abertura, fijación y espacio de maniobra", "Confundir rosca de fijación con conexión de fluido"],
+      ]),
+      p("Seleccione Q20, Q40 y Q60 dentro de sus respectivas familias. Al sustituir entre series o marcas, compruebe dimensiones de unión, compresión de junta y carrera de válvula, y valide retención, fugas y caudal. La apariencia o una equivalencia de series no prueban una sustitución directa."),
+    ] },
+    { title: "¿Cómo elegir la medida y distinguir diámetro interior del tubo y paso del acoplamiento?", blocks: [
+      p("Elija la espiga según el diámetro interior del tubo y la terminación roscada según norma y medida de rosca. Después compruebe la familia de unión y la pérdida de presión del conjunto al caudal previsto. El diámetro interior del tubo no es el paso mínimo del acoplamiento ni el diámetro exterior del tubo."),
+      p("Estos ejemplos diferencian serie, conexión de tubo y montaje. Cada fila corresponde a un modelo completo; no atribuya sus materiales, válvulas o montaje a toda la serie."),
+      t(["Modelo completo", "Diámetro interior del tubo", "Mitad y montaje", "Válvula y materiales"], [
+        ["Q2001-PNV-SPPE", "1.6 mm", "Q20 macho, sin panel, recto", "Con válvula; cuerpo PP, junta EPDM"],
+        ["Q2001-SMV-SPPE", "1.6 mm", "Q20 hembra, para panel, recta", "Con válvula; cuerpo PP, junta EPDM"],
+        ["Q4004-PNV-SPPE", "6.4 mm", "Q40 macho, sin panel, recto", "Con válvula; cuerpo PP, junta EPDM"],
+        ["Q6006-SNV-SPPE", "9.5 mm", "Q60 hembra, sin panel, recta", "Con válvula; cuerpo PP, junta EPDM"],
+      ]),
+      p("En Q2001-PNV-SPPE, Q20 identifica la serie y 01 corresponde a tubo de 1.6 mm para ese modelo. P significa macho, N sin panel y V con válvula; S, PP y E al final indican forma recta, cuerpo de PP y junta EPDM. En Q2001-SMV-SPPE, S identifica la hembra y M el montaje en panel. Una letra cambia de significado según su posición."),
+      p("El diámetro interior del tubo no define el paso mínimo del conjunto. La resistencia depende también de los conductos, las válvulas, la combinación de mitades y la viscosidad. Aumentar la conexión del tubo puede no eliminar la restricción de una válvula u otra zona local."),
+    ] },
+    { title: "¿Cómo instalar un acoplamiento en panel y elegir abertura y espesor?", blocks: [
+      p("El cuerpo y la tuerca aprisionan el panel entre el hombro y la fijación. Los espesores máximos para hembras Q20, Q40 y Q60 son respectivamente 8.5 mm, 11.5 mm y 7.5 mm. Para machos Q20 y Q40 son 3.3 mm y 5.5 mm. No intercambie los límites de macho y hembra."),
+      f("panel", "Hembra Q20 y esquema de panel sujeto entre hombro y tuerca, con espesor máximo de 8.5 mm y espacio libre a ambos lados", "Figura 3 | Montaje de Q2001-SMV-SPPE con t ≤ 8.5 mm. El esquema inferior no está a escala. La tabla indica aberturas y espesores de las tres series."),
+      t(["Serie", "Abertura (mm)", "Espesor máx. hembra (mm)", "Espesor máx. macho (mm)"], [
+        ["Q20", "Con plano: Ø13 (0 / −0.3); del plano al borde opuesto 12.1 (0 / −0.1)", "8.5", "3.3"],
+        ["Q40", "Con plano: Ø18 (0 / −0.5); del plano al borde opuesto 17 (0 / −0.3)", "11.5", "5.5"],
+        ["Q60", "Circular: Ø31 (0 / −0.5)", "7.5", "No indicado en el catálogo"],
+      ]),
+      p("Valores de las notas de montaje del catálogo A02. Los paréntesis indican desviaciones superior/inferior: Ø13 (0 / −0.3) equivale a 12.7–13.0 mm. Q20 y Q40 deben cumplir además la cota del plano. Roscas de fijación: Q20, 1/2″-24UNS; Q40, 11/16″-24UNS; Q60, M30×3.5."),
+      p("El montaje en panel y la válvula son opciones independientes: uno define la fijación y la otra el cierre automático al separar. Elija por separado macho/hembra, con/sin montaje en panel y con/sin válvula dentro de la serie."),
+      p("El espesor es la parte del panel aprisionada entre hombro y tuerca, no la longitud roscada ni la profundidad de unión. Reserve espacio exterior para conectar, extraer y liberar el cierre, e interior para apretar la tuerca, conectar el tubo y respetar su curvatura."),
+    ] },
+    { title: "¿Cómo influyen el fluido, la presión y el caudal en la selección?", blocks: [
+      p("Seleccione materiales mojados compatibles con el fluido y los productos de limpieza. Compruebe presión a la temperatura de trabajo, picos de arranque/parada y vacío, y evalúe la pérdida de presión al caudal previsto. Material, presión y caudal deben evaluarse juntos, no solo la medida de tubo o un valor máximo."),
+      t(["Condición", "Comprobación", "Efecto en el instrumento"], [
+        ["Fluido y limpieza", "Identidad, concentración, temperatura y contacto; cuerpo, junta y demás piezas mojadas por separado", "La resistencia del cuerpo no acredita la de juntas o válvulas"],
+        ["Presión y temperatura", "Servicio, picos, vacío y presión residual; valores del conjunto", "Los máximos aislados no describen condiciones combinadas"],
+        ["Caudal y pérdida de presión", "Diferencial de presión y caudal útil en servicio", "La resistencia en aspiración afecta a la entrada de la bomba; en descarga consume margen"],
+        ["Mantenimiento y contaminación", "Frecuencia, líquido residual, entrada de aire, limpieza y protección", "Afecta a purga, tiempo de mantenimiento y contaminación cruzada"],
+        ["Panel y tubos", "Abertura, espesor, accionamiento, radio de curvatura y soporte", "Influye en el acoplamiento completo y el sellado duradero"],
+      ]),
+      p("Evalúe los materiales durante el trabajo y la limpieza. En un cuerpo PP con junta EPDM, compruebe ambos; 'racor PP' no identifica todos los materiales mojados. Para otra junta seleccione un modelo completo documentado, sin convertir una opción de serie en configuración estándar de todos sus modelos."),
+    ] },
+    { title: "¿Cómo reducir las pérdidas al desconectar un depósito?", blocks: [
+      p("Determine qué lado debe retener líquido. Una mitad con válvula puede bastar si solo el equipo necesita cierre; para equipo y depósito, evalúe dos válvulas. Estas detienen el flujo de sus respectivas líneas, pero puede quedar líquido en la unión. Mida el derrame: doble cierre no significa cero goteo."),
+      p("Suponga un instrumento con tubo de 1.6 mm de diámetro interior entre un depósito desmontable y el panel, con cierre requerido a ambos lados. Si el fluido es compatible con PP, EPDM y demás piezas mojadas, Q2001-PNV-SPPE y Q2001-SMV-SPPE son candidatos: macho sin panel en el tubo del módulo y hembra fijada al panel."),
+      l([
+        "Confirmar dos mitades Q20, macho y hembra, ambas con válvula; registrar modelos y códigos en la lista de materiales.",
+        "Seleccionar tubo de 1.6 mm de diámetro interior en ambos lados; registrar diámetro exterior, pared, dureza y material, y validar la espiga.",
+        "Revisar el plano de la hembra Q20: abertura, espesor, tuerca y espacio para liberación, extracción y tubo posterior.",
+        "Comprobar fugas al caudal, presión y temperatura previstos; en aspiración, añadir entrada de aire bajo vacío y caudal útil.",
+        "Parar y despresurizar antes de separar; observar cierre y líquido residual. Tras reconectar, medir aire introducido y tiempo de purga.",
+        "Documentar combinación de tubo/acoplamiento, revisión de plano, montaje y aceptación para compras y mantenimiento repetibles.",
+      ], true),
+      p("Este ejemplo deriva una configuración candidata de la aplicación. Compatibilidad química, pérdida de presión y vida de desconexión necesitan validación en el instrumento. Si solo debe cerrar el equipo, reevalúe una sola válvula; un derrame muy bajo exige revisar diseños específicos y sus datos de ensayo."),
+    ] },
+    { title: "¿Qué revisar si el acoplamiento pierde líquido, no conecta o reduce el caudal?", blocks: [
+      p("Pare, aísle las líneas necesarias y despresurice antes de investigar. Para fugas en la unión, compruebe junta y conexión completa; si no inserta, descarte incompatibilidad, suciedad y presión residual; si baja el caudal, revise apertura de válvula, obstrucciones y curvas cerradas. Si sale líquido continuamente tras separar, confirme primero que esa mitad lleva válvula."),
+      { type: "subheading", title: "Revisar primero el montaje y la desconexión" },
+      l([
+        "Antes del montaje, comprobar modelos, cierre, juntas, superficies y tubo. Resolver arañazos, grietas, piezas ausentes o suciedad.",
+        "Montar primero tubo y panel. Insertar el tubo axialmente hasta su posición y sujetarlo para evitar tracción lateral continua.",
+        "Alinear, conectar por completo y comprobar retención. Ante fuerza anormal, detenerse y revisar incompatibilidad, residuos, presión sobre la válvula o daño de junta.",
+        "Verificar fugas y caudal en las condiciones especificadas. Antes de separar, parar, aislar y liberar la presión residual.",
+        "Proteger las interfaces abiertas de partículas. Revisar juntas y extremos de tubo antes de reconectar y comprobar el funcionamiento posterior.",
+      ], true),
+      t(["Síntoma", "Comprobar primero", "Verificación posterior"], [
+        ["No conecta o no bloquea", "Familia, pareja macho/hembra, cierre, suciedad y presión residual", "Unión completa; no forzar una pareja incompatible"],
+        ["Fuga en la unión", "Junta, superficie y profundidad de conexión", "Sustituir piezas dañadas y probar a presión y temperatura de trabajo"],
+        ["Salida continua al separar", "Presencia de válvula, residuos o daño en el asiento", "Distinguir residuo breve de fallo de cierre; revisar ambas mitades"],
+        ["Más burbujas al reconectar", "Aire en cavidad, suministro y sellado del tubo bajo vacío", "Revisar por tramos y registrar recuperación de purga"],
+        ["Menor caudal", "Válvulas, conductos, curvas y suciedad", "Comparar caudal y pérdida de presión antes y después de instalar"],
+      ]),
+    ] },
+  ],
+  faqTitle: "Preguntas frecuentes sobre acoplamientos rápidos",
+  faqItems: [
+    { question: "¿Qué diferencia hay entre una mitad con válvula y otra sin válvula?", answer: "Al separar, la mitad con válvula cierra automáticamente su propio paso; la otra permanece abierta. Para cerrar ambos lados, elija macho y hembra con válvula. Una válvula no garantiza ausencia de goteo." },
+    { question: "¿En qué se diferencia un acoplamiento rápido de un racor de inserción directa?", answer: "El acoplamiento se separa entre macho y hembra; el racor de inserción libera el tubo. Q20, Q40 y Q60 utilizan dos mitades y no requieren retirar el tubo posterior durante la desconexión habitual." },
+    { question: "¿Pueden acoplarse productos de distintas marcas?", answer: "El aspecto o la medida de tubo no bastan. Compruebe dimensiones de unión, retención y posición de junta; con válvulas, confirme su apertura completa. Una equivalencia de series no sustituye la validación de la pareja real." },
+  ],
+  cta: { title: "Defina una pareja completa para su circuito desmontable", description: "Indique interfaces, cierre requerido, fluido, presión, temperatura y panel para revisar modelos, juntas y validación con muestras.", contactLabel: "Consultar la selección", productsLabel: "Ver acoplamientos rápidos", productsHref: `/es${productPath}` },
+  navigationLabels: ["Funcionamiento y unión", "Con y sin válvula", "Compatibilidad internacional", "Diámetro de tubo y paso", "Montaje y espesor de panel", "Materiales y servicio", "Cambio de depósito y derrames", "Fugas y fallos de conexión"],
+  about: ["Acoplamientos de desconexión rápida", "Unión macho y hembra", "Configuraciones de válvula"],
+  productTitles: ["Q20 macho con válvula, sin panel", "Q20 hembra con válvula, para panel", "Q40 macho recto con válvula", "Q60 hembra recta con válvula"],
+};

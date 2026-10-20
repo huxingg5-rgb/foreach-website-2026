@@ -1,0 +1,130 @@
+import { coverImage, productPath, paragraph as p, table as t, list as l, figure as f, type QuickDisconnectTranslation } from "./shared";
+
+export const fr: QuickDisconnectTranslation = {
+  metadata: {
+    title: "Qu’est-ce qu’un raccord rapide ? Accouplement mâle/femelle, clapets et sélection",
+    seoTitle: "Raccords rapides : accouplement, clapets et sélection | FOREACH",
+    seoDescription: "Comprendre les raccords rapides Q20, Q40 et Q60 : accouplement mâle/femelle, avec ou sans clapet, diamètre du tube et dimensions de montage sur panneau.",
+    coverImage, coverAlt: "Photo de trois raccords rapides FOREACH de différentes tailles et configurations",
+  },
+  deck: "Choisir un raccord rapide pour un circuit d’instrument en vérifiant l’accouplement, la fermeture à la séparation, le tube, les joints et l’encombrement.",
+  leadBlocks: [
+    p("Un raccord rapide comprend deux demi-raccords compatibles, mâle et femelle. Leur accouplement crée un passage continu ; la libération du verrou permet de les séparer rapidement. Il sert notamment au remplacement des réservoirs, au retrait des modules fluidiques et à la maintenance. Les termes anglais sont quick disconnect fitting et quick disconnect coupling.", "Un raccord rapide comprend deux demi-raccords compatibles, mâle et femelle."),
+    p("Cet article concerne la séparation entre deux demi-raccords. Les raccords instantanés pour tube, également appelés parfois raccords rapides, libèrent le tube d’un mécanisme de serrage. Il faut distinguer la séparation de l’accouplement du retrait du tube."),
+    p("Les séries FOREACH Q20, Q40 et Q60 proposent différentes terminaisons pour tube, filetages, fixations et configurations de clapets. Q20 et Q40 existent avec corps PP ou POM ; le corps Q60 répertorié est en PP. La série définit la famille d’accouplement et la référence complète précise chaque demi-raccord."),
+  ],
+  sections: [
+    { title: "Comment fonctionne un raccord rapide et comment s’accouplent le mâle et la femelle ?", blocks: [
+      p("La connexion associe emboîtement mâle/femelle, verrouillage mécanique et joint d’étanchéité. L’embout mâle entre dans le logement femelle et son verrou le retient. Le joint du mâle assure l’étanchéité contre la surface femelle. Les terminaisons arrière raccordent les tubes ou les ports de l’appareil. Mâle et femelle désignent ici l’accouplement, pas des filetages extérieur et intérieur.", "La connexion associe emboîtement mâle/femelle, verrouillage mécanique et joint d’étanchéité."),
+      f("pair", "Vues originales Q20 identifiant embout mâle, logement femelle, joint, déverrouillage et terminaisons pour tube", "Figure 1 | Mâle Q2001-PNV-SPPE et femelle pour panneau Q2001-SMV-SPPE. Vues latérales originales, avec le mâle réorienté pour expliquer l’accouplement. La flèche indique le montage, non l’écoulement ; sans échelle."),
+      p("Verrouillage, étanchéité et obturation ont des rôles distincts. Le verrou empêche la séparation en usage normal, le joint ferme l’interface vers l’extérieur et un demi-raccord à clapet ferme son propre passage après séparation. Vérifier ces trois fonctions séparément."),
+      { type: "figure", src: "", width: 1200, height: 300, alt: "Séquence : aligner, verrouiller et vérifier le débit, puis dépressuriser et séparer", caption: "Vérifier séparément l’engagement et le fonctionnement des clapets. Après verrouillage, contrôler l’étanchéité et le débit réels.", flowNodes: [
+        { label: "Aligner et accoupler", detail: "Même famille ; joints et interfaces propres" },
+        { label: "Verrouiller et contrôler", detail: "Engagement complet, étanchéité et débit utile" },
+        { label: "Dépressuriser et séparer", detail: "Libérer le verrou ; les clapets déterminent l’obturation" },
+      ] },
+      p("La série Q se déverrouille par pression sur le mécanisme de libération. Un clic ou une sensation tactile aide au montage sans remplacer le contrôle de retenue et de fuite. La maintenance sépare habituellement les demi-raccords sans retirer chaque fois le tube de l’embout cannelé, limitant l’étirement répété du tube."),
+    ] },
+    { title: "Quelle différence entre un raccord rapide avec clapet et sans clapet ?", blocks: [
+      p("Un demi-raccord à clapet ferme automatiquement son propre passage lorsqu’il est déconnecté. Un accouplement correct et complet ouvre le clapet. Sans clapet, le passage reste ouvert après séparation. Le déverrouillage extérieur et le clapet intérieur sont deux fonctions indépendantes.", "Un demi-raccord à clapet ferme automatiquement son propre passage lorsqu’il est déconnecté."),
+      p("Les exemples femelles Q20 pour panneau sont Q2001-SMX-SPPE sans clapet et Q2001-SMV-SPPE avec clapet. Le diamètre de tube, le montage et les matériaux sont identiques. À cette position du code, X signifie sans clapet et V avec clapet. Vérifier la référence complète, pas seulement le corps ou le mécanisme de libération."),
+      f("valves", "Comparaison Q20 avec et sans clapet ; vues de femelles pour panneau, droites cannelées, coudées et filetées, avec lignes de passage bleues et repères d’obturation rouges", "Figure 2 | Les femelles du bas présentent les terminaisons Q20 pour panneau, droites cannelées, coudées et filetées. X : sans clapet ; V : avec clapet. Les lignes illustrent uniquement l’état du passage ; images sans échelle."),
+      p("Après séparation, faut-il retenir le liquide côté appareil, côté module démontable ou des deux côtés ? Les configurations suivantes décrivent une paire. La mention « avec clapet » sur une seule référence ne concerne que ce demi-raccord."),
+      t(["Configuration", "État après séparation", "Usage à évaluer"], [
+        ["Deux moitiés sans clapet", "Deux passages ouverts ; le liquide doit être contrôlé ailleurs", "Maintenance avec vidange possible et ouverture acceptable"],
+        ["Une moitié à clapet", "Seul le côté à clapet se ferme", "Obturation nécessaire uniquement côté appareil ou réservoir"],
+        ["Deux moitiés à clapet", "Chaque moitié ferme son passage", "Limiter les pertes côté module et côté appareil"],
+      ]),
+      p("La double obturation ne garantit pas l’absence de gouttes. Le liquide résiduel dans la cavité peut être libéré à la séparation, et de l’air peut entrer au réaccouplement. Si pertes d’échantillon, contamination croisée ou bulles sont critiques, mesurer séparément les pertes, l’air introduit et le temps de purge."),
+      p("Les conceptions dry break et non-spill dépendent aussi de la forme des clapets, du volume de la cavité et de la séquence d’étanchéité et d’ouverture. Deux clapets ne prouvent pas une performance anti-déversement. Ils n’autorisent pas non plus automatiquement une connexion sous pression ; respecter les conditions du modèle et du système."),
+    ] },
+    { title: "Les raccords rapides FOREACH sont-ils compatibles avec les produits similaires de marques internationales ?", blocks: [
+      p("Les raccords rapides FOREACH permettent un accouplement compatible avec les produits similaires des séries correspondantes de grandes marques internationales. La compatibilité doit être confirmée pour chaque référence.", "Les raccords rapides FOREACH permettent un accouplement compatible avec les produits similaires des séries correspondantes de grandes marques internationales."),
+      p("L’interchangeabilité dépend de l’interface mâle/femelle. Un même diamètre de tube, une forme proche ou une insertion possible ne prouvent pas le verrouillage, l’étanchéité ni l’ouverture du clapet. Vérifier famille et dimensions, puis valider l’assemblage réel."),
+      p("Chaque moitié possède une interface avant pour l’autre demi-raccord et une terminaison arrière pour tube ou port fileté. L’avant dépend de la série, de la géométrie et des clapets ; l’arrière dépend du diamètre intérieur du tube ou du filetage. Le même tube ne prouve donc pas l’accouplabilité."),
+      t(["Interface", "Points à consigner", "Erreur fréquente"], [
+        ["Accouplement mâle/femelle", "Série, profil, verrou, position du joint et clapets", "Assimiler ressemblance ou insertion à une interchangeabilité fiable"],
+        ["Embout cannelé", "Diamètres intérieur/extérieur, matériau, dureté et longueur d’emmanchement", "Confondre diamètre intérieur du tube, passage minimal et diamètre extérieur"],
+        ["Filetage", "Sens, norme, pas, profondeur du port et mode d’étanchéité", "Indiquer seulement 1/8 ou 1/4 sans NPT ou UNF"],
+        ["Fixation sur panneau", "Épaisseur, découpe, serrage et espace de manœuvre", "Confondre filetage de fixation et connexion fluidique"],
+      ]),
+      p("Choisir Q20, Q40 et Q60 dans leurs familles respectives. Un remplacement entre séries ou marques exige de vérifier dimensions d’accouplement, compression du joint et course du clapet, puis retenue, fuite et débit. L’apparence ou une correspondance de séries ne valide pas un remplacement direct."),
+    ] },
+    { title: "Comment choisir la taille et distinguer diamètre intérieur du tube et passage du raccord ?", blocks: [
+      p("Choisir l’embout cannelé selon le diamètre intérieur du tube et la terminaison filetée selon la norme et la taille du filetage. Vérifier ensuite la famille d’accouplement et la perte de charge du couple au débit visé. Le diamètre intérieur du tube n’est ni le passage minimal du raccord ni le diamètre extérieur du tube."),
+      p("Les références ci-dessous illustrent les différences de série, raccordement et montage. Chaque ligne décrit un modèle précis, sans généraliser ses matériaux, clapets ou fixations à toute la série."),
+      t(["Référence complète", "Diamètre intérieur du tube", "Moitié et montage", "Clapet et matériaux"], [
+        ["Q2001-PNV-SPPE", "1.6 mm", "Q20 mâle droit, hors panneau", "Avec clapet ; corps PP, joint EPDM"],
+        ["Q2001-SMV-SPPE", "1.6 mm", "Q20 femelle droite, sur panneau", "Avec clapet ; corps PP, joint EPDM"],
+        ["Q4004-PNV-SPPE", "6.4 mm", "Q40 mâle droit, hors panneau", "Avec clapet ; corps PP, joint EPDM"],
+        ["Q6006-SNV-SPPE", "9.5 mm", "Q60 femelle droite, hors panneau", "Avec clapet ; corps PP, joint EPDM"],
+      ]),
+      p("Dans Q2001-PNV-SPPE, Q20 désigne la série et 01 correspond au tube de 1.6 mm de ce modèle. P signifie mâle, N hors panneau et V avec clapet ; S, PP et E à la fin désignent forme droite, corps PP et joint EPDM. Dans Q2001-SMV-SPPE, S signifie femelle et M montage sur panneau. Une lettre dépend de sa position dans la référence."),
+      p("Le diamètre intérieur du tube ne définit pas le plus petit passage du couple. La résistance dépend aussi des conduits, des clapets, de la combinaison des moitiés et de la viscosité. Agrandir la terminaison peut laisser subsister une restriction au clapet ou ailleurs."),
+    ] },
+    { title: "Comment monter un raccord sur panneau et choisir découpe et épaisseur ?", blocks: [
+      p("Le panneau est serré entre l’épaulement du corps et l’écrou. Les épaisseurs maximales des femelles Q20, Q40 et Q60 sont respectivement 8.5 mm, 11.5 mm et 7.5 mm. Celles des mâles Q20 et Q40 sont 3.3 mm et 5.5 mm. Les limites mâles et femelles ne sont pas interchangeables."),
+      f("panel", "Vue originale de la femelle Q20 et schéma du panneau serré entre épaulement et écrou, épaisseur maximale 8.5 mm et dégagement des deux côtés", "Figure 3 | Montage du Q2001-SMV-SPPE avec t ≤ 8.5 mm. Le schéma inférieur est sans échelle. Découpes et épaisseurs des trois séries figurent ci-dessous."),
+      t(["Série", "Découpe (mm)", "Épaisseur max. femelle (mm)", "Épaisseur max. mâle (mm)"], [
+        ["Q20", "Avec méplat : Ø13 (0 / −0.3) ; du méplat au bord opposé 12.1 (0 / −0.1)", "8.5", "3.3"],
+        ["Q40", "Avec méplat : Ø18 (0 / −0.5) ; du méplat au bord opposé 17 (0 / −0.3)", "11.5", "5.5"],
+        ["Q60", "Ronde : Ø31 (0 / −0.5)", "7.5", "Non indiqué au catalogue"],
+      ]),
+      p("Ces valeurs proviennent des consignes de montage A02. Les parenthèses indiquent les écarts supérieur/inférieur : Ø13 (0 / −0.3) correspond à 12.7–13.0 mm. Q20 et Q40 doivent aussi respecter la cote du méplat. Filetages de fixation : Q20, 1/2″-24UNS ; Q40, 11/16″-24UNS ; Q60, M30×3.5."),
+      p("Le montage sur panneau et le clapet sont deux options indépendantes : l’un décrit la fixation, l’autre la fermeture automatique à la séparation. Choisir séparément mâle/femelle, sur/hors panneau et avec/sans clapet dans la série retenue."),
+      p("L’épaisseur du panneau est la matière serrée entre épaulement et écrou, pas la longueur filetée ni la profondeur d’accouplement. Prévoir à l’extérieur le dégagement d’insertion, de retrait et de déverrouillage, et à l’intérieur l’accès à l’écrou, au tube et à ses courbures."),
+    ] },
+    { title: "Comment le fluide, la pression et le débit influencent-ils la sélection ?", blocks: [
+      p("Choisir d’abord les matériaux mouillés compatibles avec le fluide et les nettoyants. Vérifier pression à température, pics de démarrage/arrêt et dépression, puis perte de charge au débit visé. Évaluer ensemble matériau, pression et débit plutôt que la seule taille du tube ou une valeur maximale."),
+      t(["Condition", "Contrôle de sélection", "Conséquence"], [
+        ["Fluide et nettoyage", "Nature, concentration, température et durée ; corps, joint et autres pièces mouillées séparément", "La résistance du corps ne prouve pas celle des joints ou clapets"],
+        ["Pression et température", "Service, pics, dépression et pression résiduelle ; caractéristiques du couple", "Les maxima isolés ne décrivent pas les conditions combinées"],
+        ["Débit et perte de charge", "Pression différentielle et débit utile au point de fonctionnement", "Résistance en aspiration : conditions d’entrée de pompe ; en refoulement : marge de pression"],
+        ["Maintenance et contamination", "Fréquence, résidus, air entrant, nettoyage et protection", "Influence sur la purge, le temps d’intervention et la contamination croisée"],
+        ["Panneau et tuyauterie", "Découpe, épaisseur, dégagement du verrou, courbures et reprise d’effort", "Influence sur l’engagement complet et l’étanchéité durable"],
+      ]),
+      p("Le choix des matériaux couvre le fonctionnement et le nettoyage. Avec un corps PP et un joint EPDM, évaluer les deux matériaux : « raccord PP » ne décrit pas toutes les pièces mouillées. Pour un autre joint, choisir une référence complète documentée, sans considérer une option de série comme équipement standard de chaque modèle."),
+    ] },
+    { title: "Comment limiter les pertes lors du remplacement d’un réservoir ?", blocks: [
+      p("Déterminer le côté qui doit retenir le liquide. Un seul clapet peut convenir si seul l’appareil doit fermer ; deux clapets sont à évaluer si appareil et réservoir doivent fermer. Ils arrêtent la sortie continue de leurs lignes, mais du liquide reste possible dans la cavité. Mesurer les pertes plutôt que promettre zéro goutte."),
+      p("Considérons un tube de diamètre intérieur 1.6 mm reliant un réservoir démontable au panneau d’un instrument, avec fermeture des deux côtés. Si PP, EPDM et autres pièces mouillées sont compatibles, Q2001-PNV-SPPE et Q2001-SMV-SPPE sont des candidats : mâle hors panneau sur le tube du module et femelle fixée au panneau."),
+      l([
+        "Confirmer deux moitiés Q20, mâle et femelle, toutes deux à clapet ; consigner références et codes dans la nomenclature.",
+        "Choisir du tube de diamètre intérieur 1.6 mm des deux côtés ; noter diamètre extérieur, paroi, dureté et matériau, puis valider l’emmanchement.",
+        "Vérifier le plan de montage de la femelle Q20 : découpe, épaisseur, serrage et dégagement pour libération, retrait et tube arrière.",
+        "Contrôler les fuites au débit, à la température et à la pression visés ; en aspiration, ajouter entrée d’air sous dépression et débit utile.",
+        "Arrêter et dépressuriser avant séparation ; observer fermeture et résidus des deux côtés. Mesurer ensuite l’air introduit et la récupération après purge.",
+        "Documenter couple raccord/tube, version du plan, méthode d’assemblage et critères d’acceptation pour les achats et la maintenance.",
+      ], true),
+      p("Cet exemple propose une configuration à partir des besoins. Compatibilité chimique, perte de charge et durée de vie en connexion/déconnexion restent à valider dans l’instrument. Si seul l’appareil doit fermer, réexaminer un seul clapet ; de très faibles pertes exigent une conception adaptée et des essais documentés."),
+    ] },
+    { title: "Que vérifier si le raccord fuit, ne s’accouple pas ou réduit le débit ?", blocks: [
+      p("Arrêter, isoler les lignes nécessaires et dépressuriser avant le diagnostic. Pour une fuite à l’union, vérifier joint et engagement ; pour une insertion impossible, vérifier incompatibilité, débris et pression résiduelle ; pour un débit réduit, vérifier ouverture des clapets, bouchage et courbures. Si le liquide continue à sortir après séparation, vérifier d’abord la présence d’un clapet."),
+      { type: "subheading", title: "Revoir d’abord l’assemblage et la séparation" },
+      l([
+        "Vérifier références, verrou, joints, surfaces et tubes avant montage. Corriger rayures, fissures, pièces manquantes ou contamination.",
+        "Installer d’abord tubes et panneau. Emmancher le tube axialement jusqu’à la position prescrite et le soutenir pour éviter une traction latérale permanente.",
+        "Aligner, accoupler complètement et contrôler la retenue. Arrêter en cas d’effort anormal : incompatibilité, débris, clapet sous pression ou joint endommagé.",
+        "Vérifier fuite et débit dans les conditions prévues. Avant maintenance, arrêter, isoler et dépressuriser, puis déverrouiller et séparer.",
+        "Protéger les interfaces ouvertes des particules. Inspecter joints et extrémités de tube avant reconnexion et revérifier le fonctionnement.",
+      ], true),
+      t(["Symptôme", "Contrôle prioritaire", "Vérification après correction"], [
+        ["Insertion ou verrouillage impossible", "Famille, paire mâle/femelle, verrou, débris et pression résiduelle", "Engagement complet ; ne pas forcer un couple incompatible"],
+        ["Fuite à l’accouplement", "Joint, surface et profondeur d’engagement", "Remplacer les pièces endommagées et tester à pression/température de service"],
+        ["Écoulement continu après séparation", "Présence du clapet, débris ou dommage du siège", "Distinguer résidu bref et défaut de fermeture ; contrôler les deux moitiés"],
+        ["Bulles après reconnexion", "Air dans la cavité, alimentation amont et étanchéité du tube sous vide", "Contrôler par tronçons et mesurer la récupération après purge"],
+        ["Débit réduit", "Ouverture des clapets, conduits, courbures et contamination", "Comparer débit et perte de charge avant/après installation"],
+      ]),
+    ] },
+  ],
+  faqTitle: "Questions fréquentes sur les raccords rapides",
+  faqItems: [
+    { question: "Quelle différence entre avec et sans clapet ?", answer: "Après séparation, la moitié à clapet ferme automatiquement son passage ; l’autre reste ouverte. Pour fermer les deux côtés, choisir un mâle et une femelle à clapet. Le clapet ne garantit pas zéro goutte." },
+    { question: "Quelle différence avec un raccord instantané pour tube ?", answer: "Le raccord rapide se sépare entre ses moitiés mâle et femelle ; le raccord instantané libère le tube. Q20, Q40 et Q60 fonctionnent par accouplement de deux moitiés, sans retirer le tube arrière lors des séparations habituelles." },
+    { question: "Des raccords de marques différentes peuvent-ils s’accoupler ?", answer: "L’apparence et le diamètre de tube ne suffisent pas. Vérifier dimensions d’accouplement, verrou et position de joint ; avec clapets, vérifier leur ouverture complète. Une correspondance de séries ne remplace pas l’essai du couple réel." },
+  ],
+  cta: { title: "Définir un couple complet pour votre circuit démontable", description: "Indiquer interfaces, fermeture requise, fluide, pression, température et contraintes de panneau pour examiner références, joints et validation sur échantillons.", contactLabel: "Discuter de la sélection", productsLabel: "Voir les raccords rapides", productsHref: `/fr${productPath}` },
+  navigationLabels: ["Fonctionnement et accouplement", "Avec ou sans clapet", "Compatibilité internationale", "Tube et diamètre de passage", "Montage et épaisseur du panneau", "Matériaux et fonctionnement", "Réservoir et pertes de liquide", "Fuites et défauts de connexion"],
+  about: ["Raccords à déconnexion rapide", "Accouplement mâle/femelle", "Configurations de clapets"],
+  productTitles: ["Q20 mâle à clapet, hors panneau", "Q20 femelle à clapet, sur panneau", "Q40 mâle droit à clapet", "Q60 femelle droite à clapet"],
+};

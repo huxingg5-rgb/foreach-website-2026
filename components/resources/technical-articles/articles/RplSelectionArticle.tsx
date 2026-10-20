@@ -13,6 +13,8 @@ import { rplArticleUi } from "@/data/resources/technical-articles/rpl-selection-
 import { getRplSelectionProducts } from "@/data/resources/technical-articles/rpl-valveless-metering-pump-selection.article";
 import newsArticleStyles from "@/components/resources/news/NewsArticleClient.module.css";
 import styles from "./RplSelectionArticle.module.css";
+import QuickDisconnectDiagram from "./QuickDisconnectDiagram";
+import BarbedExpansionDiagram from "./BarbedExpansionDiagram";
 
 const sectionIds = ["parameters", "models", "task", "validation", "faq"] as const;
 
@@ -28,7 +30,7 @@ type RplArticleFaq = {
   items: readonly EngineeringArticleFaqItem[];
 };
 
-function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: ReadonlyMap<string, string>, headingId?: string): ReactNode {
+function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: ReadonlyMap<string, string>, headingId?: string, locale: TechnicalArticleLocale = "zh-CN"): ReactNode {
   switch (block.type) {
     case "paragraph": return <p key={key}>{block.lead && block.text.startsWith(block.lead)
       ? <><strong>{block.lead}</strong>{block.text.slice(block.lead.length)}</>
@@ -38,7 +40,7 @@ function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: 
     case "notice": return <aside className={styles.notice} key={key}>{block.label && <p>{block.label}</p>}<p>{block.text}</p></aside>;
     case "figure": return (
       <figure key={key} data-article-figure aria-label={block.flowNodes ? block.alt : undefined} data-square={block.width === block.height ? "true" : undefined}>
-        {block.flowNodes ? <ol className={styles.flowDiagram} data-nodes={block.flowNodes.length} aria-label={block.alt}>
+        {block.barbExpansionDiagram ? <BarbedExpansionDiagram kind={block.barbExpansionDiagram} locale={locale} /> : block.quickDisconnectDiagram ? <QuickDisconnectDiagram kind={block.quickDisconnectDiagram} locale={locale} /> : block.flowNodes ? <ol className={styles.flowDiagram} data-nodes={block.flowNodes.length} aria-label={block.alt}>
           {block.flowNodes.map((node, index) => <li key={node.label}>
             {index > 0 && <span className={styles.flowArrow} aria-hidden="true">→</span>}
             <strong>{node.label}</strong><span>{node.detail}</span>
@@ -89,7 +91,7 @@ function renderTable(block: Extract<EngineeringArticleBlock, { type: "table" }>,
   );
 }
 
-function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: ReadonlyMap<string, string>, subheadingIds?: readonly string[]) {
+function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: ReadonlyMap<string, string>, subheadingIds?: readonly string[], locale: TechnicalArticleLocale = "zh-CN") {
   const nodes: ReactNode[] = [];
   let subheadingIndex = 0;
   for (let index = 0; index < blocks.length; index++) {
@@ -102,20 +104,20 @@ function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: 
       const figures: ReactNode[] = [];
       const start = index;
       while (blocks[index]?.type === "figure") {
-        figures.push(renderBlock(blocks[index], index));
+        figures.push(renderBlock(blocks[index], index, undefined, undefined, locale));
         index++;
       }
       nodes.push(<div className={styles.gallery} data-article-gallery key={start}>{figures}</div>);
       index--;
     } else {
       const headingId = block.type === "subheading" ? subheadingIds?.[subheadingIndex++] : undefined;
-      nodes.push(renderBlock(block, index, headerLinks, headingId));
+      nodes.push(renderBlock(block, index, headerLinks, headingId, locale));
     }
   }
   return nodes;
 }
 
-function renderSection(blocks: readonly EngineeringArticleBlock[], id: string, modelLinks: ReadonlyMap<string, string>, subheadingIds?: readonly string[]) {
+function renderSection(blocks: readonly EngineeringArticleBlock[], id: string, modelLinks: ReadonlyMap<string, string>, subheadingIds?: readonly string[], locale: TechnicalArticleLocale = "zh-CN") {
   if (id === "faq") {
     return <div className={styles.faq}>{blocks.map((block, index) => {
       const answer = blocks[index + 1];
@@ -134,12 +136,12 @@ function renderSection(blocks: readonly EngineeringArticleBlock[], id: string, m
       else steps[steps.length - 1]?.blocks.push(block);
     }
     return <>
-      {renderBlocks(blocks.slice(0, firstHeading))}
-      <ol className={styles.steps}>{steps.map(step => <li key={step.heading}><h3>{step.heading}</h3>{renderBlocks(step.blocks)}</li>)}</ol>
-      {renderBlocks(blocks.slice(end))}
+      {renderBlocks(blocks.slice(0, firstHeading), undefined, undefined, locale)}
+      <ol className={styles.steps}>{steps.map(step => <li key={step.heading}><h3>{step.heading}</h3>{renderBlocks(step.blocks, undefined, undefined, locale)}</li>)}</ol>
+      {renderBlocks(blocks.slice(end), undefined, undefined, locale)}
     </>;
   }
-  return renderBlocks(blocks, id === "models" ? modelLinks : undefined, subheadingIds);
+  return renderBlocks(blocks, id === "models" ? modelLinks : undefined, subheadingIds, locale);
 }
 
 /** Opt-in editorial template first used by the RPL guide and reusable by selected technical articles. */
@@ -202,7 +204,7 @@ export default function RplSelectionArticle({
             <span className={styles.rule} data-meta-rule aria-hidden="true" />
             {locale !== "zh-CN" && <ArticleShare title={copy.metadata.title} locale={locale} />}
           </div>
-          <div className={styles.intro}>{leadContent ?? renderBlocks(copy.leadBlocks)}</div>
+          <div className={styles.intro}>{leadContent ?? renderBlocks(copy.leadBlocks, undefined, undefined, locale)}</div>
         </header>
         <aside className={styles.sidebar} data-article-sidebar>
           <nav className={styles.toc} aria-label={ui.contents}>
@@ -227,7 +229,7 @@ export default function RplSelectionArticle({
         <div className={styles.body} data-article-body>
           {copy.sections.map((section, index) => {
             const id = sectionNavigation[index].id;
-            return <section id={id} key={id} aria-labelledby={`${id}-title`}><h2 className={styles.numberedHeading} id={`${id}-title`}><span className={styles.sectionNumber}>{String(index + 1).padStart(2, "0")}</span><span>{section.title}</span></h2>{renderSection(section.blocks, id, modelLinks, sectionNavigation[index].children?.map(child => child.id))}</section>;
+            return <section id={id} key={id} aria-labelledby={`${id}-title`}><h2 className={styles.numberedHeading} id={`${id}-title`}><span className={styles.sectionNumber}>{String(index + 1).padStart(2, "0")}</span><span>{section.title}</span></h2>{renderSection(section.blocks, id, modelLinks, sectionNavigation[index].children?.map(child => child.id), locale)}</section>;
           })}
           {faq?.items.length ? (
             <section id={faq.id} aria-labelledby={`${faq.id}-title`}>
