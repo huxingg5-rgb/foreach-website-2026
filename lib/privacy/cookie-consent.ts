@@ -9,6 +9,8 @@
    4. 分析权限关闭时，尝试清除 Google Analytics Cookie
 ========================================================= */
 
+import { YANDEX_CONSENT_REVISION, YANDEX_METRICA_ID } from "@/lib/analytics/yandex-config";
+
 export const COOKIE_CONSENT_COOKIE_NAME =
   "foreach_cookie_consent_v1";
 
@@ -22,6 +24,7 @@ export type CookieConsentState = {
   version: 1;
   analytics: boolean;
   updatedAt: string;
+  analyticsRevision?: string;
 };
 
 const COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 180;
@@ -59,6 +62,16 @@ export function readCookieConsent(): CookieConsentState | null {
       return null;
     }
 
+    // An earlier agreement mentioning only GA4 does not opt a visitor into Yandex.
+    // Keep an existing rejection valid; request a fresh choice only for old grants.
+    if (
+      YANDEX_METRICA_ID &&
+      parsedValue.analytics &&
+      parsedValue.analyticsRevision !== YANDEX_CONSENT_REVISION
+    ) {
+      return null;
+    }
+
     return {
       version: 1,
       analytics: parsedValue.analytics,
@@ -66,6 +79,7 @@ export function readCookieConsent(): CookieConsentState | null {
         typeof parsedValue.updatedAt === "string"
           ? parsedValue.updatedAt
           : "",
+      analyticsRevision: parsedValue.analyticsRevision,
     };
   } catch {
     return null;
@@ -79,6 +93,7 @@ export function writeCookieConsent(
     version: 1,
     analytics,
     updatedAt: new Date().toISOString(),
+    ...(YANDEX_METRICA_ID ? { analyticsRevision: YANDEX_CONSENT_REVISION } : {}),
   };
 
   if (!isBrowser()) {
@@ -174,4 +189,28 @@ export function openCookieSettings() {
   window.dispatchEvent(
     new Event(OPEN_COOKIE_SETTINGS_EVENT_NAME),
   );
+}
+
+export function removeYandexMetricaCookies() {
+  if (!isBrowser()) return;
+  const names = document.cookie.split(";").map((item) => item.trim().split("=")[0])
+    .filter((name) => name.startsWith("_ym"));
+  const hostname = window.location.hostname;
+  const domains = new Set<string | undefined>([undefined, hostname, `.${hostname}`]);
+  const parts = hostname.split(".");
+  for (let index = 1; index < parts.length - 1; index += 1) {
+    domains.add(`.${parts.slice(index).join(".")}`);
+    domains.add(parts.slice(index).join("."));
+  }
+  for (const name of names) {
+    for (const domain of domains) expireCookie(name, domain);
+  }
+  try {
+    for (let index = window.localStorage.length - 1; index >= 0; index -= 1) {
+      const key = window.localStorage.key(index);
+      if (key?.startsWith("_ym")) window.localStorage.removeItem(key);
+    }
+  } catch {
+    // Browsers may disallow localStorage; withdrawal must still work.
+  }
 }

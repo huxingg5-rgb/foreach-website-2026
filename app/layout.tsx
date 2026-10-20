@@ -26,6 +26,7 @@ import GlobalTouchInteractions from "@/components/layout/GlobalTouchInteractions
 
 import CookieConsent from "@/components/privacy/CookieConsent";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import YandexMetrica from "@/components/analytics/YandexMetrica";
 import AnalyticsInteractionTracker from "@/components/analytics/AnalyticsInteractionTracker";
 
 import { SelectionCartProvider } from "@/components/selection-cart/SelectionCartProvider";
@@ -35,6 +36,7 @@ import "./products/products.css";
 
 const gaMeasurementId =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "";
+const yandexVerification = (process.env.YANDEX_WEBMASTER_VERIFICATION ?? "3748731b74b19c3b").trim();
 
 /* =========================================================
    网站基础 SEO 信息
@@ -44,6 +46,7 @@ const gaMeasurementId =
 ========================================================= */
 export const metadata: Metadata = {
   metadataBase: SITE_URL,
+  ...(yandexVerification ? { verification: { yandex: yandexVerification } } : {}),
   title: "恒永达 Foreach Technology 官网",
   description:
     "恒永达专注于微流体系统核心零部件与液路系统解决方案，服务 IVD、生命科学、高端分析仪器、合成生物和实验室自动化领域。",
@@ -128,6 +131,7 @@ export default function RootLayout({
           {/* Cookie 同意管理与用户同意后加载的 GA4 */}
           <CookieConsent />
           <GoogleAnalytics />
+          <YandexMetrica />
 
           {/*
             全局选型清单抽屉

@@ -3,6 +3,8 @@ import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import type { LocaleCode } from "@/lib/i18n";
 
 import styles from "./PrivacyPolicyPage.module.css";
+import { YANDEX_METRICA_ID } from "@/lib/analytics/yandex-config";
+import { yandexMetricaPrivacyCopy } from "@/data/privacy/yandex-metrica-copy";
 
 type PolicySection = {
   title: string;
@@ -744,6 +746,14 @@ export default function PrivacyPolicyPage({
   locale,
 }: PrivacyPolicyPageProps) {
   const copy = privacyPolicyCopy[locale];
+  const metricaCopy = YANDEX_METRICA_ID ? yandexMetricaPrivacyCopy[locale] : null;
+  const sections = copy.sections.map((section, index) => (
+    index === 3 && metricaCopy ? {
+      ...section,
+      title: `${section.title} / Yandex Metrica`,
+      paragraphs: [...section.paragraphs, ...metricaCopy.paragraphs],
+    } : section
+  ));
 
   return (
     <main className={styles.page}>
@@ -773,7 +783,7 @@ export default function PrivacyPolicyPage({
           </p>
 
           <p className={styles.updated}>
-            {copy.lastUpdated}
+            {metricaCopy?.lastUpdated ?? copy.lastUpdated}
           </p>
 
           {copy.translationNotice ? (
@@ -784,7 +794,7 @@ export default function PrivacyPolicyPage({
         </header>
 
         <div className={styles.content}>
-          {copy.sections.map((section) => (
+          {sections.map((section) => (
             <section
               className={styles.section}
               key={section.title}

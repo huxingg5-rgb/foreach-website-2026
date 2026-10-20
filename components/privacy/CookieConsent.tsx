@@ -22,6 +22,8 @@ import {
 } from "@/lib/privacy/cookie-consent";
 
 import styles from "./CookieConsent.module.css";
+import { YANDEX_METRICA_ID } from "@/lib/analytics/yandex-config";
+import { yandexMetricaPrivacyCopy } from "@/data/privacy/yandex-metrica-copy";
 
 type ConsentCopy = {
   bannerTitle: string;
@@ -181,7 +183,16 @@ function getPrivacyPolicyHref(locale: LocaleCode) {
 export default function CookieConsent() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
-  const copy = copyByLocale[locale];
+  const baseCopy = copyByLocale[locale];
+  const copy = YANDEX_METRICA_ID ? {
+    ...baseCopy,
+    bannerDescription: baseCopy.bannerDescription.replace(
+      "Google Analytics", yandexMetricaPrivacyCopy[locale].providers,
+    ),
+    analyticsDescription: baseCopy.analyticsDescription.replace(
+      "Google Analytics", yandexMetricaPrivacyCopy[locale].providers,
+    ),
+  } : baseCopy;
 
   const [isReady, setIsReady] = useState(false);
   const [consent, setConsent] =

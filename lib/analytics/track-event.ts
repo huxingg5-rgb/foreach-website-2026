@@ -6,6 +6,8 @@
    - 所有对外函数只接受业务所需的低维度参数，不接受表单正文或客户身份字段。
 ========================================================= */
 
+import { trackMetricaGoal } from "./yandex-metrica";
+
 type GtagFunction = (
   command: "event",
   eventName: string,
@@ -151,6 +153,7 @@ function trackEvent(
   }
 
   const cleanedParameters = cleanParameters(parameters);
+  trackMetricaGoal(eventName, cleanedParameters);
   const gtag = getReadyGtag();
 
   if (!gtag) {
