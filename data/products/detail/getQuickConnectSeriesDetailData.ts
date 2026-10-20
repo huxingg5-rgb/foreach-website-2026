@@ -1,4 +1,5 @@
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
+import { appendQuickConnectSupplementaryImage } from "./quick-connect-gallery";
 import quickConnectRowsJson from "@/data/products/generated/fittings/quick-connect-fittings/index.json";
 import {
   quickConnectFittingSelectionProducts,
@@ -609,7 +610,7 @@ export function getQuickConnectSeriesDetailData(
       images[0],
 
     additionalImages:
-      images.slice(1),
+      appendQuickConnectSupplementaryImage(images.slice(1)),
 
     imageAlt:
       `${series}快插接头系列`,

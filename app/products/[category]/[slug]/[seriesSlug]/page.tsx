@@ -1,4 +1,5 @@
 import HardTubeFittingRelatedArticles from "@/components/products/detail/HardTubeFittingRelatedArticles";
+import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import type { ReactNode } from "react";
@@ -139,7 +140,7 @@ const femaleThreadDetails =
 
 const ProductDetailView =
   ProductDetailClient as unknown as ComponentType<{
-    data: any;
+    data: Record<string, unknown>;
     afterContent?: ReactNode;
   }>;
 
@@ -669,7 +670,13 @@ export default async function ProductsSeriesRoutePage({
             relationKeys={["category:luer-fittings"]}
             locale={renderLocale}
           />
-        ) : undefined}
+        ) : (
+          <FittingRelatedResources
+            productTypeId={fittingDetail.productTypeId}
+            model={String(fittingDetail.detail.model || "")}
+            locale={renderLocale}
+          />
+        )}
         data={
           toFittingClientData(
             fittingDetail

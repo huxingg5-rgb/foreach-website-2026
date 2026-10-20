@@ -65,7 +65,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809002",
     "foreachModel": "SB-U28-16-AC-B",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-u28-16-ac-b.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pom-flat-bottom-seal-male-thread-to-barb-fitting-1-4-28-unf-sb-u28-16-ac-b.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-u28-16-ac-b",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -75,7 +75,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809013",
     "foreachModel": "SB-U28-40-AC-B",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-u28-40-ac-b.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pom-flat-bottom-seal-male-thread-to-barb-fitting-1-4-28-unf-sb-u28-40-ac-b.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-u28-40-ac-b",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -85,7 +85,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809020",
     "foreachModel": "SB-M6-24-AC-B",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m6-24-ac-b.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pom-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sb-m6-24-ac-b.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m6-24-ac-b",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -95,7 +95,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809027",
     "foreachModel": "SB-M6-40-AC-B",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m6-40-ac-b.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pom-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sb-m6-40-ac-b.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m6-40-ac-b",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -585,7 +585,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809194",
     "foreachModel": "U-M6-20-AC-B",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-M6-20-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ac-straight-female-thread-union-m6-u-m6-20-ac-b.webp",
     "detailHref": "/products/fittings/female-thread-adapters/u-m6-20-ac-b",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -595,7 +595,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809195",
     "foreachModel": "U-U28-20-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-straight-female-thread-union-1-4-28-unf-u-u28-20-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/u-u28-20-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -605,7 +605,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809197",
     "foreachModel": "U-M6-20-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-M6-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-straight-female-thread-union-m6-u-m6-20-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/u-m6-20-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -675,7 +675,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809269",
     "foreachModel": "SA-U32-32F-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u32-32f-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-10-32-unf-sa-u32-32f-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u32-32f-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -745,7 +745,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809276",
     "foreachModel": "BA-16F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-straight-barbed-fitting-ba-16f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -755,7 +755,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809277",
     "foreachModel": "BA-24F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-straight-barbed-fitting-ba-24f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -765,7 +765,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809278",
     "foreachModel": "BA-32F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-32f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-straight-barbed-fitting-ba-32f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-32f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -775,7 +775,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809279",
     "foreachModel": "BA-40F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-40f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pp-equal-straight-barbed-fitting-ba-40f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-40f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -815,7 +815,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809283",
     "foreachModel": "BBL-16D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bbl-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-barbed-plug-bbl-16d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bbl-16d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -825,7 +825,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809284",
     "foreachModel": "BBL-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bbl-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-barbed-plug-bbl-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bbl-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -835,7 +835,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809285",
     "foreachModel": "BBL-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bbl-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-barbed-plug-bbl-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bbl-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -855,7 +855,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809287",
     "foreachModel": "BT-16D-24D-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-16d-24d-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4-x-2-4mm-tube-id-pp-reducing-tee-barbed-fitting-bt-16d-24d-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-16d-24d-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -865,7 +865,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809288",
     "foreachModel": "BA-16F-24F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16f-24f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16f-24f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16f-24f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -875,7 +875,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809289",
     "foreachModel": "BA-24F-32F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24f-32f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pp-reducing-straight-barbed-fitting-ba-24f-32f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24f-32f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -905,7 +905,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809292",
     "foreachModel": "SC-M6-16-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sc-m6-16-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-straight-female-thread-to-barb-fitting-m6-x-1-sc-m6-16-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sc-m6-16-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -915,7 +915,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809293",
     "foreachModel": "SC-M6-32-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sc-m6-32-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-female-thread-to-barb-fitting-m6-x-1-sc-m6-32-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sc-m6-32-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -925,7 +925,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809294",
     "foreachModel": "BY-16F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-16f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-y-barbed-fitting-by-16f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-16f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -935,7 +935,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809295",
     "foreachModel": "BY-24F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-24f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-y-barbed-fitting-by-24f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-24f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -945,7 +945,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809296",
     "foreachModel": "BY-32F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-32f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-y-barbed-fitting-by-32f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-32f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -955,7 +955,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809297",
     "foreachModel": "BY-40D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-40d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pp-equal-y-barbed-fitting-by-40d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-40d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -965,7 +965,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809298",
     "foreachModel": "BY-64F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-64f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pp-equal-y-barbed-fitting-by-64f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-64f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -985,7 +985,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809300",
     "foreachModel": "BA-16C-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16c-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-straight-barbed-fitting-ba-16c-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16c-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -995,7 +995,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809301",
     "foreachModel": "SB-M5-16D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-16d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-16d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m5-16d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1005,7 +1005,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809302",
     "foreachModel": "SBS-M6-24D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sbs-m6-24d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sbs-m6-24d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sbs-m6-24d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1015,7 +1015,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809303",
     "foreachModel": "SBS-M6-32D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sbs-m6-32d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sbs-m6-32d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sbs-m6-32d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1025,7 +1025,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809304",
     "foreachModel": "PMB-U28-16D-PP-N",
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pp-n.webp",
     "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-16d-pp-n",
     "productTypeId": "bulkhead-barbed-fittings",
     "productType": "bulkhead-barbed-fittings",
@@ -1035,7 +1035,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809308",
     "foreachModel": "UY-U28-10-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UY-U28-10-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-10-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/uy-u28-10-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -1045,7 +1045,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809309",
     "foreachModel": "BT-16F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-16f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-tee-barbed-fitting-bt-16f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-16f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1055,7 +1055,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809310",
     "foreachModel": "BT-24F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-24f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-tee-barbed-fitting-bt-24f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-24f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1065,7 +1065,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809311",
     "foreachModel": "BT-32F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-tee-barbed-fitting-bt-32f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1135,7 +1135,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809321",
     "foreachModel": "BA-16F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-straight-barbed-fitting-ba-16f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1145,7 +1145,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809322",
     "foreachModel": "BA-16F-24F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16f-24f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16f-24f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16f-24f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1155,7 +1155,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809324",
     "foreachModel": "BA-24F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-straight-barbed-fitting-ba-24f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1165,7 +1165,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809325",
     "foreachModel": "BA-24F-32F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24f-32f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pa-reducing-straight-barbed-fitting-ba-24f-32f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24f-32f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1175,7 +1175,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809326",
     "foreachModel": "BY-24F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-24f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-y-barbed-fitting-by-24f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-24f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1185,7 +1185,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809327",
     "foreachModel": "BT-24F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-24f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-tee-barbed-fitting-bt-24f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-24f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1195,7 +1195,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809328",
     "foreachModel": "BA-32F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-32f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-straight-barbed-fitting-ba-32f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-32f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1205,7 +1205,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809329",
     "foreachModel": "BA-40F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-40f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pa-equal-straight-barbed-fitting-ba-40f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-40f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1215,7 +1215,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809330",
     "foreachModel": "BA-16F-32F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16f-32f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16f-32f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16f-32f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1235,7 +1235,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809332",
     "foreachModel": "BA-16F-32F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16f-32f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16f-32f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16f-32f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1255,7 +1255,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809334",
     "foreachModel": "BY-16F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-16f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-y-barbed-fitting-by-16f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-16f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1265,7 +1265,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809335",
     "foreachModel": "BY-32F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-32f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-y-barbed-fitting-by-32f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-32f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1275,7 +1275,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809336",
     "foreachModel": "BY-64F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-64f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pa-equal-y-barbed-fitting-by-64f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-64f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1285,7 +1285,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809337",
     "foreachModel": "BT-16F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-16f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-tee-barbed-fitting-bt-16f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-16f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1295,7 +1295,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809338",
     "foreachModel": "BT-32F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-tee-barbed-fitting-bt-32f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1305,7 +1305,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809340",
     "foreachModel": "SA-U32-32F-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u32-32f-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-straight-male-thread-to-barb-fitting-10-32-unf-sa-u32-32f-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u32-32f-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1315,7 +1315,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809341",
     "foreachModel": "BY-48F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-48f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4-8mm-tube-id-pp-equal-y-barbed-fitting-by-48f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-48f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1335,7 +1335,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809343",
     "foreachModel": "BY-48F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-48f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4-8mm-tube-id-pa-equal-y-barbed-fitting-by-48f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-48f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1355,7 +1355,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809345",
     "foreachModel": "BL-16F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-16f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-elbow-barbed-fitting-bl-16f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-16f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1365,7 +1365,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809346",
     "foreachModel": "BL-24F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-24f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-elbow-barbed-fitting-bl-24f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-24f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1375,7 +1375,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809347",
     "foreachModel": "BL-32F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-32f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-elbow-barbed-fitting-bl-32f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-32f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1385,7 +1385,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809348",
     "foreachModel": "BL-40F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-40f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pa-equal-elbow-barbed-fitting-bl-40f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-40f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1395,7 +1395,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809349",
     "foreachModel": "BL-64F-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-64f-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pa-equal-elbow-barbed-fitting-bl-64f-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-64f-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1405,7 +1405,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809350",
     "foreachModel": "BL-95D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-95d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pa-equal-elbow-barbed-fitting-bl-95d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-95d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1475,7 +1475,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809357",
     "foreachModel": "BL-16F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-16f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-elbow-barbed-fitting-bl-16f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-16f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1485,7 +1485,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809358",
     "foreachModel": "BL-24F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-24f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-elbow-barbed-fitting-bl-24f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-24f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1495,7 +1495,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809359",
     "foreachModel": "BL-32F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-32f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-elbow-barbed-fitting-bl-32f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-32f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1505,7 +1505,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809360",
     "foreachModel": "BL-40F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-40f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pp-equal-elbow-barbed-fitting-bl-40f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-40f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1515,7 +1515,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809361",
     "foreachModel": "BL-64F-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-64f-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pp-equal-elbow-barbed-fitting-bl-64f-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-64f-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1525,7 +1525,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809362",
     "foreachModel": "BL-95D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-95d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pp-equal-elbow-barbed-fitting-bl-95d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-95d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1595,7 +1595,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809369",
     "foreachModel": "BY-40D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-40d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pa-equal-y-barbed-fitting-by-40d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-40d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1605,7 +1605,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809370",
     "foreachModel": "BA-32C-64C-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-32c-64c-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-6-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-32c-64c-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-32c-64c-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1615,7 +1615,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809371",
     "foreachModel": "BA-32C-64C-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-32c-64c-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-6-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-32c-64c-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-32c-64c-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1645,7 +1645,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809374",
     "foreachModel": "BA-32V-40V-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-32v-40v-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-32v-40v-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-32v-40v-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1655,7 +1655,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809375",
     "foreachModel": "BA-32V-40V-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-32v-40v-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-32v-40v-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-32v-40v-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1665,7 +1665,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809376",
     "foreachModel": "BA-24V-40V-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24v-40v-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-24v-40v-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24v-40v-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1675,7 +1675,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809377",
     "foreachModel": "BA-24V-40V-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24v-40v-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-24v-40v-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24v-40v-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1685,7 +1685,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809378",
     "foreachModel": "BA-64V-79V-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-64v-79v-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-7-9mm-tube-id-pp-reducing-straight-barbed-fitting-ba-64v-79v-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-64v-79v-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1695,7 +1695,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809379",
     "foreachModel": "BA-64V-79V-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-64v-79v-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-7-9mm-tube-id-pa-reducing-straight-barbed-fitting-ba-64v-79v-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-64v-79v-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1705,7 +1705,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809380",
     "foreachModel": "BY-24D-16D-16D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-24d-16d-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-1-6-x-1-6mm-tube-id-pp-reducing-y-barbed-fitting-by-24d-16d-16d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-24d-16d-16d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1715,7 +1715,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809381",
     "foreachModel": "BY-24D-16D-16D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-24d-16d-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-1-6-x-1-6mm-tube-id-pa-reducing-y-barbed-fitting-by-24d-16d-16d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-24d-16d-16d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1725,7 +1725,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809382",
     "foreachModel": "SAL-U32-16D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u32-16d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-elbow-male-thread-to-barb-fitting-10-32-unf-sal-u32-16d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sal-u32-16d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1735,7 +1735,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809383",
     "foreachModel": "SAL-U32-16D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u32-16d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pa-elbow-male-thread-to-barb-fitting-10-32-unf-sal-u32-16d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sal-u32-16d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1745,7 +1745,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809384",
     "foreachModel": "SAL-U32-32D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u32-32d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-elbow-male-thread-to-barb-fitting-10-32-unf-sal-u32-32d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sal-u32-32d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1755,7 +1755,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809385",
     "foreachModel": "SAL-U32-32D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u32-32d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-elbow-male-thread-to-barb-fitting-10-32-unf-sal-u32-32d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sal-u32-32d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1765,7 +1765,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809386",
     "foreachModel": "SAL-U28-16D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u28-16d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-elbow-male-thread-to-barb-fitting-1-4-28-unf-sal-u28-16d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sal-u28-16d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1775,7 +1775,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809387",
     "foreachModel": "SAL-U28-16D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u28-16d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pa-elbow-male-thread-to-barb-fitting-1-4-28-unf-sal-u28-16d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sal-u28-16d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1785,7 +1785,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809388",
     "foreachModel": "SAL-U28-32D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u28-32d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-elbow-male-thread-to-barb-fitting-1-4-28-unf-sal-u28-32d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sal-u28-32d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1795,7 +1795,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809389",
     "foreachModel": "SAL-U28-32D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u28-32d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-elbow-male-thread-to-barb-fitting-1-4-28-unf-sal-u28-32d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sal-u28-32d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -1925,7 +1925,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809406",
     "foreachModel": "BBL-16D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bbl-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-barbed-plug-bbl-16d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bbl-16d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1935,7 +1935,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809407",
     "foreachModel": "BBL-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bbl-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-barbed-plug-bbl-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bbl-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1945,7 +1945,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809408",
     "foreachModel": "BBL-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bbl-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-barbed-plug-bbl-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bbl-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -1965,7 +1965,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809410",
     "foreachModel": "BT-16D-24D-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-16d-24d-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4-x-2-4mm-tube-id-pa-reducing-tee-barbed-fitting-bt-16d-24d-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-16d-24d-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2045,7 +2045,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809424",
     "foreachModel": "BA-64C-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-64c-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pp-equal-straight-barbed-fitting-ba-64c-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-64c-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2055,7 +2055,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809425",
     "foreachModel": "BA-64C-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-64c-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pa-equal-straight-barbed-fitting-ba-64c-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-64c-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2065,7 +2065,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809426",
     "foreachModel": "BA-64V-95V-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-64v-95v-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-9-5mm-tube-id-pp-reducing-straight-barbed-fitting-ba-64v-95v-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-64v-95v-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2075,7 +2075,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809427",
     "foreachModel": "BA-64V-95V-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-64v-95v-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-9-5mm-tube-id-pa-reducing-straight-barbed-fitting-ba-64v-95v-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-64v-95v-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2085,7 +2085,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809428",
     "foreachModel": "BA-64X-127X-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-64x-127x-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-12-7mm-tube-id-pp-reducing-straight-barbed-fitting-ba-64x-127x-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-64x-127x-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2095,7 +2095,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809429",
     "foreachModel": "BA-64X-127X-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-64x-127x-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-12-7mm-tube-id-pa-reducing-straight-barbed-fitting-ba-64x-127x-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-64x-127x-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2105,7 +2105,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809430",
     "foreachModel": "BY-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-y-barbed-fitting-by-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2115,7 +2115,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809431",
     "foreachModel": "BY-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-y-barbed-fitting-by-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2125,7 +2125,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809432",
     "foreachModel": "BY-95X-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-95x-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pp-equal-y-barbed-fitting-by-95x-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-95x-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2135,7 +2135,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809433",
     "foreachModel": "BY-95X-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-95x-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pa-equal-y-barbed-fitting-by-95x-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-95x-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2145,7 +2145,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809434",
     "foreachModel": "BY-32D-16D-16D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-32d-16d-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-1-6-x-1-6mm-tube-id-pp-reducing-y-barbed-fitting-by-32d-16d-16d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-32d-16d-16d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2155,7 +2155,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809435",
     "foreachModel": "BY-32D-16D-16D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-32d-16d-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-1-6-x-1-6mm-tube-id-pa-reducing-y-barbed-fitting-by-32d-16d-16d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-32d-16d-16d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2165,7 +2165,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809436",
     "foreachModel": "BY-64D-32D-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-64d-32d-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-3-2-x-3-2mm-tube-id-pp-reducing-y-barbed-fitting-by-64d-32d-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-64d-32d-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2175,7 +2175,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809437",
     "foreachModel": "BY-64D-32D-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-64d-32d-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-3-2-x-3-2mm-tube-id-pa-reducing-y-barbed-fitting-by-64d-32d-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-64d-32d-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2185,7 +2185,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809438",
     "foreachModel": "BT-40C-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-40c-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pp-equal-tee-barbed-fitting-bt-40c-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-40c-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2195,7 +2195,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809439",
     "foreachModel": "BT-40C-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-40c-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pa-equal-tee-barbed-fitting-bt-40c-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-40c-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2205,7 +2205,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809440",
     "foreachModel": "BT-64C-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-64c-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pp-equal-tee-barbed-fitting-bt-64c-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-64c-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2215,7 +2215,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809441",
     "foreachModel": "BT-64C-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-64c-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pa-equal-tee-barbed-fitting-bt-64c-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-64c-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2225,7 +2225,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809442",
     "foreachModel": "BT-95X-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-95x-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pp-equal-tee-barbed-fitting-bt-95x-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-95x-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2235,7 +2235,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809443",
     "foreachModel": "BT-95X-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-95x-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pa-equal-tee-barbed-fitting-bt-95x-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-95x-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2245,7 +2245,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809444",
     "foreachModel": "BT-32D-32D-16D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-32d-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-3-2-x-1-6mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-32d-16d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-32d-16d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2255,7 +2255,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809445",
     "foreachModel": "BT-32D-32D-16D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-32d-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-3-2-x-1-6mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-32d-16d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-32d-16d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2265,7 +2265,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809446",
     "foreachModel": "BT-24D-24D-16D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-24d-24d-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-2-4-x-1-6mm-tube-id-pp-reducing-tee-barbed-fitting-bt-24d-24d-16d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-24d-24d-16d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2275,7 +2275,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809447",
     "foreachModel": "BT-24D-24D-16D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-24d-24d-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-2-4-x-1-6mm-tube-id-pa-reducing-tee-barbed-fitting-bt-24d-24d-16d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-24d-24d-16d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2285,7 +2285,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809448",
     "foreachModel": "BT-32D-32D-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-32d-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-3-2-x-2-4mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-32d-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-32d-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2295,7 +2295,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809449",
     "foreachModel": "BT-32D-32D-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-32d-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-3-2-x-2-4mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-32d-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-32d-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2305,7 +2305,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809450",
     "foreachModel": "BT-64D-64D-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-64d-64d-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-6-4-x-3-2mm-tube-id-pp-reducing-tee-barbed-fitting-bt-64d-64d-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-64d-64d-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2315,7 +2315,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809451",
     "foreachModel": "BT-64D-64D-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-64d-64d-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-6-4-x-3-2mm-tube-id-pa-reducing-tee-barbed-fitting-bt-64d-64d-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-64d-64d-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2325,7 +2325,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809452",
     "foreachModel": "BT-24D-32D-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-24d-32d-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2-x-3-2mm-tube-id-pp-reducing-tee-barbed-fitting-bt-24d-32d-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-24d-32d-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2335,7 +2335,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809453",
     "foreachModel": "BT-24D-32D-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-24d-32d-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2-x-3-2mm-tube-id-pa-reducing-tee-barbed-fitting-bt-24d-32d-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-24d-32d-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2345,7 +2345,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809454",
     "foreachModel": "BT-32D-16D-16D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-16d-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-1-6-x-1-6mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-16d-16d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-16d-16d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2355,7 +2355,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809455",
     "foreachModel": "BT-32D-16D-16D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-16d-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-1-6-x-1-6mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-16d-16d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-16d-16d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2365,7 +2365,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809456",
     "foreachModel": "BT-32D-24D-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-24d-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-2-4-x-2-4mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-24d-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-24d-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2375,7 +2375,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809457",
     "foreachModel": "BT-32D-24D-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-24d-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-2-4-x-2-4mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-24d-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-24d-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2385,7 +2385,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809458",
     "foreachModel": "BT-32D-64T-64T-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-64t-64t-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-6-4-x-6-4mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-64t-64t-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-64t-64t-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2395,7 +2395,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809459",
     "foreachModel": "BT-32D-64T-64T-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-64t-64t-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2-x-6-4-x-6-4mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-64t-64t-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-64t-64t-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2405,7 +2405,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809460",
     "foreachModel": "BT-64V-95V-95V-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-64v-95v-95v-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-9-5-x-9-5mm-tube-id-pp-reducing-tee-barbed-fitting-bt-64v-95v-95v-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-64v-95v-95v-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2415,7 +2415,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809461",
     "foreachModel": "BT-64V-95V-95V-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-64v-95v-95v-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/6-4-x-9-5-x-9-5mm-tube-id-pa-reducing-tee-barbed-fitting-bt-64v-95v-95v-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-64v-95v-95v-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2425,7 +2425,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809462",
     "foreachModel": "PMB-U28-24D-PP-N",
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pp-n.webp",
     "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pp-n",
     "productTypeId": "bulkhead-barbed-fittings",
     "productType": "bulkhead-barbed-fittings",
@@ -2435,7 +2435,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809463",
     "foreachModel": "PMB-U28-32D-PP-N",
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pp-n.webp",
     "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-32d-pp-n",
     "productTypeId": "bulkhead-barbed-fittings",
     "productType": "bulkhead-barbed-fittings",
@@ -2445,7 +2445,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809465",
     "foreachModel": "SA-U28-16D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-16d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-16d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u28-16d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2455,7 +2455,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809466",
     "foreachModel": "SA-U28-24D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-24d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-24d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u28-24d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2465,7 +2465,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809467",
     "foreachModel": "SA-U28-32D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-32d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-32d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u28-32d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2475,7 +2475,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809468",
     "foreachModel": "SA-U28-40D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-40d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-40d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u28-40d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2485,7 +2485,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809469",
     "foreachModel": "SA-U28-48D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-48d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/4-8mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-48d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u28-48d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2495,7 +2495,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809479",
     "foreachModel": "SB-M5-24D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-24d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-24d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m5-24d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2505,7 +2505,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809480",
     "foreachModel": "SB-M5-32D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-32d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-32d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m5-32d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2515,7 +2515,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809481",
     "foreachModel": "SB-M5-40D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-40d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-40d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m5-40d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2525,7 +2525,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809484",
     "foreachModel": "US-M6-05-AC-B",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-05-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/0-5mm-bore-ac-square-female-thread-union-m6-us-m6-05-ac-b.webp",
     "detailHref": "/products/fittings/female-thread-adapters/us-m6-05-ac-b",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -2585,7 +2585,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809491",
     "foreachModel": "UY-U28-15-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UY-U28-15-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-15-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/uy-u28-15-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -2595,7 +2595,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809494",
     "foreachModel": "SA-U28-24D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-24d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pa-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-24d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u28-24d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2605,7 +2605,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809495",
     "foreachModel": "SA-U28-40D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-40d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pa-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-40d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u28-40d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2615,7 +2615,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809496",
     "foreachModel": "PMB-U28-24D-PA-W",
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pa-w.webp",
     "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pa-w",
     "productTypeId": "bulkhead-barbed-fittings",
     "productType": "bulkhead-barbed-fittings",
@@ -2625,7 +2625,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809497",
     "foreachModel": "PMB-U28-32D-PA-W",
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pa-w.webp",
     "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-32d-pa-w",
     "productTypeId": "bulkhead-barbed-fittings",
     "productType": "bulkhead-barbed-fittings",
@@ -2635,7 +2635,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809500",
     "foreachModel": "SA-U28-32D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-32d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-32d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u28-32d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2645,7 +2645,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809501",
     "foreachModel": "SA-U28-48D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-48d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/4-8mm-tube-id-pa-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-48d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-u28-48d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2655,7 +2655,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809511",
     "foreachModel": "SB-M5-24D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-24d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-24d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m5-24d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2665,7 +2665,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809512",
     "foreachModel": "SB-M5-32D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-32d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-32d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m5-32d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2675,7 +2675,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809513",
     "foreachModel": "SB-M5-40D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-40d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-40d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m5-40d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2685,7 +2685,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809516",
     "foreachModel": "US-M6-15-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-15-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-square-female-thread-union-m6-us-m6-15-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/us-m6-15-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -2695,7 +2695,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809517",
     "foreachModel": "PMB-U28-16D-PA-W",
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pa-w.webp",
     "detailHref": "/products/fittings/bulkhead-barbed-fittings/pmb-u28-16d-pa-w",
     "productTypeId": "bulkhead-barbed-fittings",
     "productType": "bulkhead-barbed-fittings",
@@ -2705,7 +2705,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809518",
     "foreachModel": "UT-U28-20-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/ut-u28-20-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -2715,7 +2715,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809519",
     "foreachModel": "BA-24C-48C-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24c-48c-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-4-8mm-tube-id-pp-reducing-straight-barbed-fitting-ba-24c-48c-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24c-48c-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2725,7 +2725,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809520",
     "foreachModel": "BA-24C-48C-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24c-48c-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-4-8mm-tube-id-pa-reducing-straight-barbed-fitting-ba-24c-48c-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24c-48c-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2735,7 +2735,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809521",
     "foreachModel": "BT-16D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-tee-barbed-fitting-bt-16d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-16d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2745,7 +2745,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809522",
     "foreachModel": "SC-U28-16D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sc-u28-16d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-straight-female-thread-to-barb-fitting-1-4-28-unf-sc-u28-16d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sc-u28-16d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2755,7 +2755,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809523",
     "foreachModel": "SC-U28-24D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sc-u28-24d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-straight-female-thread-to-barb-fitting-1-4-28-unf-sc-u28-24d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sc-u28-24d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2765,7 +2765,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809524",
     "foreachModel": "SC-U28-32D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sc-u28-32d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-female-thread-to-barb-fitting-1-4-28-unf-sc-u28-32d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sc-u28-32d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2775,7 +2775,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809525",
     "foreachModel": "PMU-M12-U28-20-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/PMU-M12-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-bulkhead-female-thread-union-1-4-28-unf-pmu-m12-u28-20-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/pmu-m12-u28-20-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -2785,7 +2785,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809528",
     "foreachModel": "SBR-U28-16-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sbr-u28-16-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-swivel-male-thread-to-barb-fitting-1-4-28-unf-sbr-u28-16-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sbr-u28-16-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2795,7 +2795,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809529",
     "foreachModel": "SBR-U28-24-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sbr-u28-24-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-swivel-male-thread-to-barb-fitting-1-4-28-unf-sbr-u28-24-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sbr-u28-24-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2805,7 +2805,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809530",
     "foreachModel": "SBR-U28-32-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sbr-u28-32-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-swivel-male-thread-to-barb-fitting-1-4-28-unf-sbr-u28-32-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sbr-u28-32-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2815,7 +2815,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809531",
     "foreachModel": "US-M6-10-AC-B",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-10-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1mm-bore-ac-square-female-thread-union-m6-us-m6-10-ac-b.webp",
     "detailHref": "/products/fittings/female-thread-adapters/us-m6-10-ac-b",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -2825,7 +2825,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809532",
     "foreachModel": "US-M6-15-AC-B",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-15-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ac-square-female-thread-union-m6-us-m6-15-ac-b.webp",
     "detailHref": "/products/fittings/female-thread-adapters/us-m6-15-ac-b",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -2835,7 +2835,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809533",
     "foreachModel": "US-M6-05-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-05-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/0-5mm-bore-pp-square-female-thread-union-m6-us-m6-05-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/us-m6-05-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -2845,7 +2845,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809534",
     "foreachModel": "US-M6-10-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-10-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1mm-bore-pp-square-female-thread-union-m6-us-m6-10-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/us-m6-10-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -2855,7 +2855,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809535",
     "foreachModel": "SBS-M6-24D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sbs-m6-24d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sbs-m6-24d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sbs-m6-24d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2865,7 +2865,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809536",
     "foreachModel": "SBS-M6-32D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sbs-m6-32d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sbs-m6-32d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sbs-m6-32d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -2875,7 +2875,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809545",
     "foreachModel": "BT-16D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-tee-barbed-fitting-bt-16d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-16d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -2885,7 +2885,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809547",
     "foreachModel": "BA-16C-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16c-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-straight-barbed-fitting-ba-16c-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16c-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3245,7 +3245,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809604",
     "foreachModel": "BA-16D-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16d-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16d-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16d-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3255,7 +3255,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809605",
     "foreachModel": "BA-16D-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16d-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16d-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16d-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3265,7 +3265,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809606",
     "foreachModel": "BA-24D-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24d-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pp-reducing-straight-barbed-fitting-ba-24d-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24d-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3275,7 +3275,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809607",
     "foreachModel": "BA-24D-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24d-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pa-reducing-straight-barbed-fitting-ba-24d-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24d-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3285,7 +3285,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809608",
     "foreachModel": "BY-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-y-barbed-fitting-by-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3295,7 +3295,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809609",
     "foreachModel": "BY-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-y-barbed-fitting-by-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3305,7 +3305,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809610",
     "foreachModel": "BT-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-tee-barbed-fitting-bt-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3315,7 +3315,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809611",
     "foreachModel": "BT-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-tee-barbed-fitting-bt-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3325,7 +3325,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809621",
     "foreachModel": "BT-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-tee-barbed-fitting-bt-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3335,7 +3335,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809622",
     "foreachModel": "BT-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-tee-barbed-fitting-bt-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3345,7 +3345,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809623",
     "foreachModel": "BY-16D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-y-barbed-fitting-by-16d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-16d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3355,7 +3355,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809624",
     "foreachModel": "BY-16D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-y-barbed-fitting-by-16d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-16d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3365,7 +3365,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809625",
     "foreachModel": "BA-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-straight-barbed-fitting-ba-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3375,7 +3375,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809626",
     "foreachModel": "BA-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-straight-barbed-fitting-ba-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3385,7 +3385,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809627",
     "foreachModel": "BA-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-straight-barbed-fitting-ba-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3395,7 +3395,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809628",
     "foreachModel": "BA-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-straight-barbed-fitting-ba-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3405,7 +3405,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809629",
     "foreachModel": "BA-16D-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16d-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16d-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16d-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3415,7 +3415,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809630",
     "foreachModel": "BA-16D-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16d-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16d-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16d-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3425,7 +3425,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809631",
     "foreachModel": "UT-U28-15-PS-B",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PS-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
     "detailHref": "/products/fittings/female-thread-adapters/ut-u28-15-ps-b",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -3435,7 +3435,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809632",
     "foreachModel": "BL-16D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-elbow-barbed-fitting-bl-16d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-16d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3445,7 +3445,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809633",
     "foreachModel": "BL-16D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-elbow-barbed-fitting-bl-16d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-16d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3455,7 +3455,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809634",
     "foreachModel": "BL-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-elbow-barbed-fitting-bl-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3465,7 +3465,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809635",
     "foreachModel": "BL-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-elbow-barbed-fitting-bl-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3475,7 +3475,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809636",
     "foreachModel": "BL-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-elbow-barbed-fitting-bl-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3485,7 +3485,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809637",
     "foreachModel": "BL-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-elbow-barbed-fitting-bl-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3495,7 +3495,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809638",
     "foreachModel": "BL-16D-24D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-16d-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pp-reducing-elbow-barbed-fitting-bl-16d-24d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-16d-24d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3505,7 +3505,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809639",
     "foreachModel": "BL-16D-24D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-16d-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pa-reducing-elbow-barbed-fitting-bl-16d-24d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-16d-24d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3515,7 +3515,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809640",
     "foreachModel": "BL-24D-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-24d-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pp-reducing-elbow-barbed-fitting-bl-24d-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-24d-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3525,7 +3525,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809641",
     "foreachModel": "BL-24D-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-24d-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pa-reducing-elbow-barbed-fitting-bl-24d-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-24d-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3535,7 +3535,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809642",
     "foreachModel": "BL-16D-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-16d-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pp-reducing-elbow-barbed-fitting-bl-16d-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-16d-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3545,7 +3545,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809643",
     "foreachModel": "BL-16D-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-16d-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pa-reducing-elbow-barbed-fitting-bl-16d-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-16d-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3555,7 +3555,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809644",
     "foreachModel": "BT-127V-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-127v-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/12-7mm-tube-id-pp-equal-tee-barbed-fitting-bt-127v-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-127v-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3565,7 +3565,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809645",
     "foreachModel": "BL-127V-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bl-127v-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/12-7mm-tube-id-pp-equal-elbow-barbed-fitting-bl-127v-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bl-127v-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3575,7 +3575,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809646",
     "foreachModel": "BY-127V-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/by-127v-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/12-7mm-tube-id-pp-equal-y-barbed-fitting-by-127v-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/by-127v-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -3585,7 +3585,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809647",
     "foreachModel": "SB-M5-16D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-16d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-16d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sb-m5-16d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -3905,7 +3905,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809697",
     "foreachModel": "UT-U28-15-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/ut-u28-15-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -3915,7 +3915,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809698",
     "foreachModel": "UT-U28-20-PS-B",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PS-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
     "detailHref": "/products/fittings/female-thread-adapters/ut-u28-20-ps-b",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -4565,7 +4565,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809788",
     "foreachModel": "BA-16F-24F-PV-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16f-24f-pv-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pvdf-reducing-straight-barbed-fitting-ba-16f-24f-pv-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16f-24f-pv-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -4575,7 +4575,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809790",
     "foreachModel": "UY-U28-20-PP-N",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UY-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-20-pp-n.webp",
     "detailHref": "/products/fittings/female-thread-adapters/uy-u28-20-pp-n",
     "productTypeId": "female-thread-adapters",
     "productType": "",
@@ -4595,7 +4595,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809835",
     "foreachModel": "SA-X32-32D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-x32-32d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-straight-male-thread-to-barb-fitting-3-4-taper-thread-sa-x32-32d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-x32-32d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -4605,7 +4605,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809836",
     "foreachModel": "SA-X32-24D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-x32-24d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-straight-male-thread-to-barb-fitting-3-4-taper-thread-sa-x32-24d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-x32-24d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -4625,7 +4625,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809842",
     "foreachModel": "BT-16D-32D-32D-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-16d-32d-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2-x-3-2mm-tube-id-pa-reducing-tee-barbed-fitting-bt-16d-32d-32d-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-16d-32d-32d-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -4635,7 +4635,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809843",
     "foreachModel": "BA-16V-40V-PA-W",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16v-40v-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16v-40v-pa-w.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16v-40v-pa-w",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -4645,7 +4645,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809847",
     "foreachModel": "SA-X32-24D-PA-W",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-x32-24d-pa-w.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pa-straight-male-thread-to-barb-fitting-3-4-taper-thread-sa-x32-24d-pa-w.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-x32-24d-pa-w",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -4655,7 +4655,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809848",
     "foreachModel": "SA-X32-32D-PP-N",
-    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/sa-x32-32d-pp-n.jpg",
+    "imageCard": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-3-4-taper-thread-sa-x32-32d-pp-n.webp",
     "detailHref": "/products/fittings/thread-to-barbed-fittings/sa-x32-32d-pp-n",
     "productTypeId": "thread-to-barbed-fittings",
     "productType": "螺纹转倒刺接头",
@@ -4665,7 +4665,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809851",
     "foreachModel": "BT-16D-32D-32D-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/bt-16d-32d-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2-x-3-2mm-tube-id-pp-reducing-tee-barbed-fitting-bt-16d-32d-32d-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/bt-16d-32d-32d-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",
@@ -4675,7 +4675,7 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
   {
     "productCode": "809854",
     "foreachModel": "BA-16V-40V-PP-N",
-    "imageCard": "/images/products/fittings/barbed-fittings/products/ba-16v-40v-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/barbed-fittings/products/1-6-x-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16v-40v-pp-n.webp",
     "detailHref": "/products/fittings/barbed-fittings/ba-16v-40v-pp-n",
     "productTypeId": "barbed-fittings",
     "productType": "倒刺接头",

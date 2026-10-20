@@ -64,9 +64,9 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 2.4 mm tube ID",
       "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 2.4 mm tube ID"
     },
-    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
-    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
-    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pp-n.webp",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pp-n.webp",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pp-n.webp",
     "imageAlt": {
       "zh": "PMB-U28-24D-PP-N 穿板倒刺接头",
       "en": "PMB-U28-24D-PP-N bulkhead barbed fitting",
@@ -94,7 +94,7 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ru": "PMB-U28-24D-PP-N 809462 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PP 本色"
     },
     "sortOrder": 1,
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pp-n.webp",
     "detailSlug": "pmb-u28-24d-pp-n",
     "status": "active",
     "sourceType": "bulkhead-barbed-selection",
@@ -184,9 +184,9 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 3.2 mm tube ID",
       "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 3.2 mm tube ID"
     },
-    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
-    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
-    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pp-n.webp",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pp-n.webp",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pp-n.webp",
     "imageAlt": {
       "zh": "PMB-U28-32D-PP-N 穿板倒刺接头",
       "en": "PMB-U28-32D-PP-N bulkhead barbed fitting",
@@ -214,7 +214,7 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ru": "PMB-U28-32D-PP-N 809463 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PP 本色"
     },
     "sortOrder": 2,
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pp-n.webp",
     "detailSlug": "pmb-u28-32d-pp-n",
     "status": "active",
     "sourceType": "bulkhead-barbed-selection",
@@ -304,9 +304,9 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 2.4 mm tube ID",
       "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 2.4 mm tube ID"
     },
-    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
-    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
-    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pa-w.webp",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pa-w.webp",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pa-w.webp",
     "imageAlt": {
       "zh": "PMB-U28-24D-PA-W 穿板倒刺接头",
       "en": "PMB-U28-24D-PA-W bulkhead barbed fitting",
@@ -334,7 +334,7 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ru": "PMB-U28-24D-PA-W 809496 bulkhead barbed fitting 1/4-28 UNF 2.4 mm PA 白色"
     },
     "sortOrder": 3,
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pa-w.webp",
     "detailSlug": "pmb-u28-24d-pa-w",
     "status": "active",
     "sourceType": "bulkhead-barbed-selection",
@@ -424,9 +424,9 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 3.2 mm tube ID",
       "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 3.2 mm tube ID"
     },
-    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
-    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
-    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pa-w.webp",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pa-w.webp",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pa-w.webp",
     "imageAlt": {
       "zh": "PMB-U28-32D-PA-W 穿板倒刺接头",
       "en": "PMB-U28-32D-PA-W bulkhead barbed fitting",
@@ -454,7 +454,7 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ru": "PMB-U28-32D-PA-W 809497 bulkhead barbed fitting 1/4-28 UNF 3.2 mm PA 白色"
     },
     "sortOrder": 4,
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pa-w.webp",
     "detailSlug": "pmb-u28-32d-pa-w",
     "status": "active",
     "sourceType": "bulkhead-barbed-selection",
@@ -544,9 +544,9 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 1.6 mm tube ID",
       "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PP housing\nFor 1.6 mm tube ID"
     },
-    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
-    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
-    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pp-n.webp",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pp-n.webp",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pp-n.webp",
     "imageAlt": {
       "zh": "PMB-U28-16D-PP-N 穿板倒刺接头",
       "en": "PMB-U28-16D-PP-N bulkhead barbed fitting",
@@ -574,7 +574,7 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ru": "PMB-U28-16D-PP-N 809304 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PP 本色"
     },
     "sortOrder": 5,
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pp-n.webp",
     "detailSlug": "pmb-u28-16d-pp-n",
     "status": "active",
     "sourceType": "bulkhead-barbed-selection",
@@ -664,9 +664,9 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ko": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 1.6 mm tube ID",
       "ru": "Bulkhead Barbed Fitting\n1/4-28 UNF thread, PA housing\nFor 1.6 mm tube ID"
     },
-    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
-    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
-    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
+    "image": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pa-w.webp",
+    "imagePath": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pa-w.webp",
+    "imageUrl": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pa-w.webp",
     "imageAlt": {
       "zh": "PMB-U28-16D-PA-W 穿板倒刺接头",
       "en": "PMB-U28-16D-PA-W bulkhead barbed fitting",
@@ -694,7 +694,7 @@ export const bulkheadBarbedFittingSelectionProducts =
       "ru": "PMB-U28-16D-PA-W 809517 bulkhead barbed fitting 1/4-28 UNF 1.6 mm PA 白色"
     },
     "sortOrder": 6,
-    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
+    "imageCard": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pa-w.webp",
     "detailSlug": "pmb-u28-16d-pa-w",
     "status": "active",
     "sourceType": "bulkhead-barbed-selection",

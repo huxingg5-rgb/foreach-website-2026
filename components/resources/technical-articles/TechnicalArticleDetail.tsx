@@ -77,7 +77,7 @@ import pipettingBasicsStyles from "./articles/PipettingBasicsLead.module.css";
 import { rplSelectionArticleSlug } from "@/data/resources/technical-articles/rpl-selection-links";
 import { getRplSelectionSourceHrefs } from "@/data/resources/technical-articles/rpl-selection-sources";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
-import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
+import { getSiteIdentity, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
 import { PISTON_APPLICATION_GUIDES } from "@/data/applications/analytical-documents/piston-link-network";
 /* =========================================================
    TechnicalArticleDetail.tsx
@@ -304,7 +304,7 @@ function buildTechnicalArticleStructuredData(
   };
 
   const graph: Record<string, unknown>[] = [
-    ...HOME_SITE_IDENTITY["@graph"],
+    ...getSiteIdentity(locale)["@graph"],
     {
       "@type": "BreadcrumbList",
       "@id": breadcrumbId,
@@ -711,11 +711,7 @@ export default function TechnicalArticleDetail({
       isDiaphragmPumpEngineeringArticle
         ? undefined
         : article.coverImage,
-    coverAlt:
-      article.coverAlt ??
-      (isDpl60Article
-        ? "Foreach DPL60 brushed and brushless liquid diaphragm pumps, 600 mL/min"
-        : article.title),
+    coverAlt: article.coverAlt ?? article.title,
     content: article.content.map((block) => ({
       title: block.title,
       content: block.content,

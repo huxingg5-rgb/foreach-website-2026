@@ -1,5 +1,6 @@
 import type {
   ComponentType,
+  ReactNode,
 } from "react";
 
 import type {
@@ -11,6 +12,8 @@ import {
 } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import QuickConnectRelatedArticles from "@/components/products/detail/QuickConnectRelatedArticles";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
   connectPublishedFittingProduct,
@@ -33,6 +36,7 @@ type DetailRecord = {
 };
 
 type PageProps = {
+  renderLocale?: TechnicalArticleLocale;
   params: Promise<{
     slug: string;
   }>;
@@ -47,7 +51,8 @@ const details =
 
 const ProductDetailView =
   ProductDetailClient as unknown as ComponentType<{
-    data: any;
+    data: (typeof details)[number];
+    afterContent?: ReactNode;
   }>;
 
 export const dynamicParams =
@@ -127,6 +132,7 @@ export async function generateMetadata({
 
 export default async function QuickConnectFittingDetailPage({
   params,
+  renderLocale = "zh-CN",
 }: PageProps) {
   const {
     slug,
@@ -145,6 +151,7 @@ export default async function QuickConnectFittingDetailPage({
 
   return (
     <ProductDetailView
+      afterContent={<QuickConnectRelatedArticles model={detail.model} locale={renderLocale} />}
       data={
         detail
       }

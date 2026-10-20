@@ -15,6 +15,7 @@ import { getIvdReadingPlan } from '@/data/applications/ivd-locales/reading';
 import { getApplicationIndexData } from '@/data/applications/application-index-locales';
 import { getCanonicalUrl } from '@/lib/seo/site-url';
 import { refineEnglishApplicationCopy } from './english-localized';
+import { withQuickDisconnectArticle } from "./quick-disconnect-resources";
 
 const dictionaryLoaders = {
   en: () => import('@/data/applications/ivd-locales/en.json'),
@@ -102,7 +103,7 @@ export function getLocalizedIvdResources(locale: IvdLocale, document: Applicatio
   const plan = getReviewFooterPlan('ivd', document);
   const allArticles = getTechnicalArticlesPageData(locale).articles;
   const slugs = [...new Set(getIvdReadingPlan(document).flatMap(item => item.slugs))];
-  return {
+  return withQuickDisconnectArticle({
     locale, videos: [],
     products: plan.products.map(key => {
       const card = reviewProductCards[key];
@@ -114,7 +115,7 @@ export function getLocalizedIvdResources(locale: IvdLocale, document: Applicatio
       if (!article) throw new Error(`Missing IVD related article ${locale}/${slug}`);
       return { id: article.id, slug, title: article.title, summary: article.summary, date: article.date, coverImage: article.coverImage };
     }),
-  };
+  }, "ivd", document);
 }
 export function getIvdQueryTargets(locale: IvdLocale) {
   return Object.fromEntries(Object.entries(getReviewQueryLinks('ivd')).map(([key, target]) => [key, { ...target, href: localizeIvdHref(target.href, locale) }]));

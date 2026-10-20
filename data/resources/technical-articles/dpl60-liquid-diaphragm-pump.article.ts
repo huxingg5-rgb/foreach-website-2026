@@ -26,6 +26,15 @@ export const dpl60ArticleSlug =
 const DPL60_ARTICLE_COVER =
   "/images/resources/technical-articles/dpl60-liquid-diaphragm-pump/dpl60-article-cover.webp";
 
+const dpl60ArticleCoverAlt: Record<TechnicalArticleLocale, string> = {
+  "zh-CN": "恒永达 DPL60 有刷与无刷液体隔膜泵，600 mL/min",
+  en: "FOREACH DPL60 brushed and brushless liquid diaphragm pumps, 600 mL/min",
+  es: "Bombas de diafragma para líquidos FOREACH DPL60 con y sin escobillas, 600 mL/min",
+  fr: "Pompes à membrane pour liquides FOREACH DPL60 avec et sans balais, 600 mL/min",
+  ko: "FOREACH DPL60 브러시 및 브러시리스 액체 다이어프램 펌프, 600 mL/min",
+  ru: "Мембранные насосы FOREACH DPL60 для жидкости со щёточным и бесщёточным двигателем, 600 mL/min",
+};
+
 export const dpl60StandardModels = [
   { sku: "459003", model: "DPL60-24DB-EP/PS" },
   { sku: "459004", model: "DPL60-24BB-EP/PS" },
@@ -84,6 +93,7 @@ export function getDpl60TechnicalArticle(
     summary: getDpl60ArticleSummary(locale),
     date: "2026-07-13",
     coverImage: DPL60_ARTICLE_COVER,
+    coverAlt: dpl60ArticleCoverAlt[locale],
     content: [
       {
         title: articleCopy.section1.title,

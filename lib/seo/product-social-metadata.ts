@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_ORIGIN } from "@/lib/seo/site-url";
+import { getFittingMainImageAlt, getDescriptiveFittingImageUrl } from "@/data/products/detail/fitting-image-description";
 
 type ProductMetadataSource = Record<string, unknown>;
 
@@ -54,7 +55,7 @@ export function getProductSocialImage(data: ProductMetadataSource) {
     firstImageFromList(data.images) ||
     firstImageFromList(data.galleryImages);
 
-  return toAbsoluteUrl(image);
+  return toAbsoluteUrl(getDescriptiveFittingImageUrl(String(image || "")));
 }
 
 export function buildProductSocialMetadata({
@@ -74,8 +75,10 @@ export function buildProductSocialMetadata({
     return {};
   }
 
+  const locale = new URL(canonicalUrl || "/", SITE_ORIGIN).pathname.match(/^\/(en|es|fr|ko|ru)(?:\/|$)/)?.[1] || "zh";
   const imageAlt = String(
-    data.imageAltEn ||
+    getFittingMainImageAlt(data, locale) ||
+      data.imageAltEn ||
       data.mainImageAlt ||
       data.imageAlt ||
       data.alt ||

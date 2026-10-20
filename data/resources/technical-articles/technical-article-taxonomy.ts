@@ -232,7 +232,7 @@ interface ArticleClassificationDefinition {
   secondaryCategory: TechnicalArticleSecondaryCategory;
   tagKeys: readonly TechnicalArticleTagKey[];
   literalTags?: readonly string[];
-  localizedLiteralTags?: Partial<Record<TechnicalArticleLocale, readonly string[]>>;
+  localizedLiteralTags?: Record<TechnicalArticleLocale, readonly string[]>;
   relatedProducts: readonly string[];
   relationKeys?: readonly string[];
   relationPriority?: number;
@@ -307,6 +307,11 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
     tagKeys: ["precision", "dosing", "testing-validation"],
     localizedLiteralTags: {
       "zh-CN": ["计量泵准确性", "计量泵重复性", "试剂加液", "RPL"],
+      en: ["Metering pump accuracy", "Metering pump repeatability", "Reagent dispensing", "RPL"],
+      es: ["Exactitud de dosificación", "Repetibilidad de dosificación", "Dispensación de reactivos", "RPL"],
+      fr: ["Exactitude de dosage", "Répétabilité de dosage", "Distribution de réactifs", "RPL"],
+      ko: ["정량 펌프 정확도", "정량 펌프 반복성", "시약 분주", "RPL"],
+      ru: ["Точность дозирования", "Повторяемость дозирования", "Дозирование реагентов", "RPL"],
     },
     relatedProducts: ["RPL-P4", "RPL-P6.35", "RPL-P15"],
     relationKeys: ["series:rpl"],
@@ -319,6 +324,10 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
     localizedLiteralTags: {
       "zh-CN": ["无阀计量泵", "工作原理", "RPL", "DRPL"],
       en: ["Valveless metering pump", "Working principle", "RPL", "DRPL"],
+      es: ["Bomba dosificadora sin válvulas", "Principio de funcionamiento", "RPL", "DRPL"],
+      fr: ["Pompe doseuse sans clapet", "Principe de fonctionnement", "RPL", "DRPL"],
+      ko: ["무밸브 정량 펌프", "작동 원리", "RPL", "DRPL"],
+      ru: ["Бесклапанный дозирующий насос", "Принцип работы", "RPL", "DRPL"],
     },
     relatedProducts: [
       "RPL-P4",
@@ -364,11 +373,32 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "stepper-motor-calculation-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 60 },
   "modbus-protocol-fluid-control": { primaryCategory: "fluid-detection-control", secondaryCategory: "intelligent-fluid-control", tagKeys: ["wiring-control", "testing-validation"], relatedProducts: [] },
 
-  "ink-circulation-supply-return-pump-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "liquid-pump", "flow", "pressure", "material-compatibility", "oem-integration"], literalTags: ["Ink Supply Pump", "Ink Return Pump"], relatedProducts: ["DPL30", "DPL60"] },
+  "ink-circulation-supply-return-pump-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "liquid-pump", "flow", "pressure", "material-compatibility", "oem-integration"], localizedLiteralTags: {
+      "zh-CN": ["供墨泵", "回墨泵"],
+      "en": ["Ink supply pump", "Ink return pump"],
+      "es": ["Bomba de suministro de tinta", "Bomba de retorno de tinta"],
+      "fr": ["Pompe d’alimentation en encre", "Pompe de retour d’encre"],
+      "ko": ["잉크 공급 펌프", "잉크 회수 펌프"],
+      "ru": ["Насос подачи чернил", "Насос возврата чернил"],
+    }, relatedProducts: ["DPL30", "DPL60"] },
   "300-vs-600-ml-min-ink-circulation-return-pump-selection": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "flow", "operating-point", "tubing-resistance", "pressure-drop", "selection"], literalTags: ["300 mL/min", "600 mL/min"], relatedProducts: ["DPL30", "DPL60"] },
   "white-ink-circulation-pump-selection-sedimentation": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "white-ink", "pigment-sedimentation", "material-compatibility", "testing-validation"], literalTags: ["TiO₂"], relatedProducts: ["DPL30", "DPL60"] },
-  "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "cleaning-waste", tagKeys: ["ivd", "waste-handling", "gas-liquid", "liquid-pump", "selection", "self-priming", "material-compatibility", "pressure"], literalTags: ["Waste Liquid Pump", "Waste Aspiration Pump", "Vacuum"], relatedProducts: ["DPL30", "DPL60", "DPGL800"] },
-  "ivd-cleaning-wash-rinse-pump-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "cleaning-waste", tagKeys: ["ivd", "cleaning", "selection", "flow", "pressure", "material-compatibility", "gas-liquid", "wiring-control"], literalTags: ["Cleaning Pump", "Wash Pump", "Rinse Pump"], relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
+  "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "cleaning-waste", tagKeys: ["ivd", "waste-handling", "gas-liquid", "liquid-pump", "selection", "self-priming", "material-compatibility", "pressure"], localizedLiteralTags: {
+      "zh-CN": ["废液泵", "废液抽吸泵", "真空"],
+      "en": ["Waste liquid pump", "Waste aspiration pump", "Vacuum"],
+      "es": ["Bomba de residuos líquidos", "Bomba de aspiración de residuos", "Vacío"],
+      "fr": ["Pompe à effluents", "Pompe d’aspiration des effluents", "Vide"],
+      "ko": ["폐액 펌프", "폐액 흡입 펌프", "진공"],
+      "ru": ["Насос для жидких отходов", "Насос для аспирации отходов", "Вакуум"],
+    }, relatedProducts: ["DPL30", "DPL60", "DPGL800"] },
+  "ivd-cleaning-wash-rinse-pump-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "cleaning-waste", tagKeys: ["ivd", "cleaning", "selection", "flow", "pressure", "material-compatibility", "gas-liquid", "wiring-control"], localizedLiteralTags: {
+      "zh-CN": ["清洗泵", "洗涤泵", "冲洗泵"],
+      "en": ["Cleaning pump", "Wash pump", "Rinse pump"],
+      "es": ["Bomba de limpieza", "Bomba de lavado", "Bomba de enjuague"],
+      "fr": ["Pompe de nettoyage", "Pompe de lavage", "Pompe de rinçage"],
+      "ko": ["세정 펌프", "세척 펌프", "헹굼 펌프"],
+      "ru": ["Насос для очистки", "Насос для мойки", "Насос для ополаскивания"],
+    }, relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
   "300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "self-priming", "troubleshooting", "sealing-leakage"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
   "300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "troubleshooting", "backpressure", "sealing-leakage"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
   "300-ml-min-micro-liquid-diaphragm-pump-water-vs-reagent": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "flow", "self-priming", "material-compatibility"], literalTags: ["300 mL/min"], relatedProducts: ["DPL30"] },
@@ -385,7 +415,14 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "life-science-dpl60-600ml-min-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["life-science", "flow", "selection", "operating-point"], literalTags: ["600 mL/min"], relatedProducts: ["DPL60"] },
   "diaphragm-pump-flow-pressure-curve-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["pump-curve", "flow", "pressure", "operating-point"], relatedProducts: ["DPL30", "DPL60", "DPL30H"] },
   "micro-diaphragm-pump-continuous-duty-life": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["continuous-duty", "motor-life", "brushed-motor", "brushless-motor"], relatedProducts: ["DPL30", "DPL60"] },
-  "brushless-diaphragm-pump-2-wire-vs-5-wire": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["wiring-control", "brushless-motor", "oem-integration", "selection"], literalTags: ["2-wire", "5-wire"], relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
+  "brushless-diaphragm-pump-2-wire-vs-5-wire": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["wiring-control", "brushless-motor", "oem-integration", "selection"], localizedLiteralTags: {
+      "zh-CN": ["两线制", "五线制"],
+      "en": ["2-wire", "5-wire"],
+      "es": ["2 hilos", "5 hilos"],
+      "fr": ["2 fils", "5 fils"],
+      "ko": ["2선식", "5선식"],
+      "ru": ["2 провода", "5 проводов"],
+    }, relatedProducts: ["DPL30", "DPL60", "DPL30H", "DPGL800"] },
   "dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "high-pressure", "backpressure", "selection"], relatedProducts: ["DPL30H"] },
   "dpgl800-gas-liquid-diaphragm-pump-selection-guide": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["gas-liquid", "self-priming", "waste-handling", "selection"], relatedProducts: ["DPGL800"] },
   "diaphragm-pump-vs-peristaltic-pump": { primaryCategory: "pumps", secondaryCategory: "miniature-diaphragm-pumps", tagKeys: ["liquid-pump", "selection", "dosing", "testing-validation"], relatedProducts: ["DPL30", "DPL60"] },
@@ -396,19 +433,41 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "micro-plunger-pump-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "precision", "selection"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 100 },
   "solenoid-valves-in-microfluidic-systems": { primaryCategory: "valves", secondaryCategory: "solenoid-valves", tagKeys: ["solenoid-valve", "fluid-switching", "fluidic-system", "selection"], relatedProducts: [] },
   "hard-tube-fittings-selection-guide": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"], literalTags: ["FEP", "PTFE", "PEEK"], relatedProducts: ["HFL-M6-25-PV-B", "HSF6-M6-32-PS-B"] },
-  "flanged-tubing-assemblies-selection-guide": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"], literalTags: ["翻边管组件", "M6", "1/4-28"], relatedProducts: [] },
-  "what-is-a-compression-ring-fitting": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "installation"], literalTags: ["卡环接头", "HSF6", "CL-1S", "CL-1X"], localizedLiteralTags: {
+  "flanged-tubing-assemblies-selection-guide": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"], localizedLiteralTags: {
+      "zh-CN": ["翻边管组件", "M6", "1/4-28"],
+      "en": ["Flanged tubing assemblies", "M6", "1/4-28"],
+      "es": ["Conjuntos de tubos rebordeados", "M6", "1/4-28"],
+      "fr": ["Assemblages de tubes à collet", "M6", "1/4-28"],
+      "ko": ["플랜지 튜브 어셈블리", "M6", "1/4-28"],
+      "ru": ["Сборки трубок с отбортовкой", "M6", "1/4-28"],
+    }, relatedProducts: [] },
+  "what-is-a-compression-ring-fitting": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "installation"], localizedLiteralTags: {
+    "zh-CN": ["卡环接头", "HSF6", "CL-1S", "CL-1X"],
     en: ["Compression-ring fittings", "HSF6", "CL-1S", "CL-1X"],
     es: ["Racores con anillo de compresión", "HSF6", "CL-1S", "CL-1X"],
     fr: ["Raccords à bague de compression", "HSF6", "CL-1S", "CL-1X"],
     ko: ["압축 링 피팅", "HSF6", "CL-1S", "CL-1X"],
     ru: ["Фитинги с обжимным кольцом", "HSF6", "CL-1S", "CL-1X"],
   }, relatedProducts: [] },
-  "what-is-a-ferrule-fitting": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "installation"], literalTags: ["卡箍接头", "HN", "HN6", "HNF", "HNF6"], relatedProducts: ["HN-M6-16-PV-N", "HN6-M6-16-PV-N", "HNF-M6-16-PV-N", "HNF6-M6-16-PS-B"] },
+  "what-is-a-ferrule-fitting": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "installation"], localizedLiteralTags: {
+      "zh-CN": ["卡箍接头", "HN", "HN6", "HNF", "HNF6"],
+      "en": ["Flangeless ferrule fittings", "HN", "HN6", "HNF", "HNF6"],
+      "es": ["Racores con férula sin reborde", "HN", "HN6", "HNF", "HNF6"],
+      "fr": ["Raccords à ferrule sans collet", "HN", "HN6", "HNF", "HNF6"],
+      "ko": ["무플랜지 페룰 피팅", "HN", "HN6", "HNF", "HNF6"],
+      "ru": ["Фитинги с феррулой без отбортовки", "HN", "HN6", "HNF", "HNF6"],
+    }, relatedProducts: ["HN-M6-16-PV-N", "HN6-M6-16-PV-N", "HNF-M6-16-PV-N", "HNF6-M6-16-PS-B"] },
   "what-is-a-barbed-fitting": {
     primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
     tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"],
-    literalTags: ["倒刺接头", "软管内径", "C/F/D/V/X", "PP", "PA", "质量体系"],
+    localizedLiteralTags: {
+      "zh-CN": ["倒刺接头", "软管内径", "C/F/D/V/X", "PP", "PA", "质量体系"],
+      "en": ["Barbed fittings", "Tubing inner diameter", "C/F/D/V/X", "PP", "PA", "Quality system"],
+      "es": ["Racores de espiga", "Diámetro interior del tubo", "C/F/D/V/X", "PP", "PA", "Sistema de calidad"],
+      "fr": ["Raccords cannelés", "Diamètre intérieur du tube", "C/F/D/V/X", "PP", "PA", "Système qualité"],
+      "ko": ["바브 피팅", "튜브 내경", "C/F/D/V/X", "PP", "PA", "품질 시스템"],
+      "ru": ["Штуцеры-ёлочки", "Внутренний диаметр трубки", "C/F/D/V/X", "PP", "PA", "Система качества"],
+    },
     relatedProducts: ["BA-32F-PP-N", "BA-32D-PP-N", "BL-32F-PP-N", "BT-32D-PP-N", "BY-32D-PP-N"],
   },
   "what-is-a-quick-disconnect-fitting": {
@@ -550,8 +609,8 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "what-is-a-luer-fitting": {
     primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
     tagKeys: ["fittings", "selection", "sealing-leakage", "installation"],
-    literalTags: ["鲁尔接头", "Luer lock", "Luer slip", "LPS", "LPR", "LP", "LS", "PMLS"],
     localizedLiteralTags: {
+      "zh-CN": ["鲁尔接头", "Luer lock", "Luer slip", "LPS", "LPR", "LP", "LS", "PMLS"],
       en: ["Luer fittings", "Luer lock", "Luer slip", "LPS", "LPR", "LP", "LS", "PMLS"],
       es: ["Conectores Luer", "Luer lock", "Luer slip", "LPS", "LPR", "LP", "LS", "PMLS"],
       fr: ["Raccords Luer", "Luer lock", "Luer slip", "LPS", "LPR", "LP", "LS", "PMLS"],

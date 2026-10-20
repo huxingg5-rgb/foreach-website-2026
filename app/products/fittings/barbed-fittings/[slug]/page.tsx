@@ -1,5 +1,6 @@
 import type {
   ComponentType,
+  ReactNode,
 } from "react";
 
 import type {
@@ -11,6 +12,8 @@ import {
 } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
   connectPublishedFittingProduct,
@@ -33,6 +36,7 @@ type DetailRecord = {
 };
 
 type PageProps = {
+  renderLocale?: TechnicalArticleLocale;
   params: Promise<{
     slug: string;
   }>;
@@ -47,7 +51,8 @@ const details =
 
 const ProductDetailView =
   ProductDetailClient as unknown as ComponentType<{
-    data: any;
+    data: Record<string, unknown>;
+    afterContent?: ReactNode;
   }>;
 
 export const dynamicParams =
@@ -117,6 +122,7 @@ export async function generateMetadata({
 
 export default async function BarbedFittingDetailPage({
   params,
+  renderLocale = "zh-CN",
 }: PageProps) {
   const {
     slug,
@@ -132,6 +138,7 @@ export default async function BarbedFittingDetailPage({
   return (
     <ProductDetailView
       data={detail}
+      afterContent={<FittingRelatedResources productTypeId="barbed-fittings" model={detail.model} locale={renderLocale} />}
     />
   );
 }

@@ -26,6 +26,7 @@ import type {
 } from "@/data/applications/analytical-documents/types";
 import { getRelatedResourcesData } from "@/services/resources/getRelatedResourcesData";
 import { getLiquidChromatographyResources } from "@/services/applications/liquid-chromatography-resources";
+import { withQuickDisconnectArticle } from "@/services/applications/quick-disconnect-resources";
 import ApplicationGuideNavigation, {
   type ApplicationGuideNavigationGroup,
 } from "@/components/applications/application-guide-navigation/ApplicationGuideNavigation";
@@ -383,8 +384,12 @@ export default function AnalyticalApplicationDocument({
         locale: "en",
       })
     : null;
-  const documentRelatedResources = relatedResources
-    ? { ...relatedResources, videos: [] }
+  const documentRelatedResources = !reviewChinese && !hideRelatedResources
+    ? withQuickDisconnectArticle(
+        relatedResources ? { ...relatedResources, videos: [] } : { locale: "en", videos: [], products: [], articles: [] },
+        isIvd ? "ivd" : "analytical-instruments",
+        document,
+      )
     : null;
 
   return (

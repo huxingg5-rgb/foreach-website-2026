@@ -1,0 +1,3089 @@
+[
+  {
+    "model": "BA-16F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-straight-barbed-fitting-ba-16f-pp-n.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-straight-barbed-fitting-ba-24f-pp-n.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-32F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-32f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-straight-barbed-fitting-ba-32f-pp-n.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-40F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-40f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pp-equal-straight-barbed-fitting-ba-40f-pp-n.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BBL-16D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bbl-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-barbed-plug-bbl-16d-pp-n.webp",
+    "productType": "倒刺堵头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BBL-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bbl-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-barbed-plug-bbl-24d-pp-n.webp",
+    "productType": "倒刺堵头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BBL-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bbl-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-barbed-plug-bbl-32d-pp-n.webp",
+    "productType": "倒刺堵头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-16D-24D-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-16d-24d-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4-x-2-4mm-tube-id-pp-reducing-tee-barbed-fitting-bt-16d-24d-24d-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "2.4",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16F-24F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16f-24f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16f-24f-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24F-32F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24f-32f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pp-reducing-straight-barbed-fitting-ba-24f-32f-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-16F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-16f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-y-barbed-fitting-by-16f-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-24F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-24f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-y-barbed-fitting-by-24f-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-32F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-32f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-y-barbed-fitting-by-32f-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-40D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-40d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pp-equal-y-barbed-fitting-by-40d-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-64F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-64f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pp-equal-y-barbed-fitting-by-64f-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16C-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16c-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-straight-barbed-fitting-ba-16c-pa-w.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-16F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-16f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-tee-barbed-fitting-bt-16f-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-24F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-24f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-tee-barbed-fitting-bt-24f-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-tee-barbed-fitting-bt-32f-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-straight-barbed-fitting-ba-16f-pa-w.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16F-24F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16f-24f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16f-24f-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-straight-barbed-fitting-ba-24f-pa-w.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24F-32F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24f-32f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pa-reducing-straight-barbed-fitting-ba-24f-32f-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-24F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-24f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-y-barbed-fitting-by-24f-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-24F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-24f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-tee-barbed-fitting-bt-24f-pa-w.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-32F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-32f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-straight-barbed-fitting-ba-32f-pa-w.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-40F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-40f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pa-equal-straight-barbed-fitting-ba-40f-pa-w.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16F-32F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16f-32f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16f-32f-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16F-32F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16f-32f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16f-32f-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-16F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-16f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-y-barbed-fitting-by-16f-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-32F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-32f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-y-barbed-fitting-by-32f-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-64F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-64f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pa-equal-y-barbed-fitting-by-64f-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-16F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-16f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-tee-barbed-fitting-bt-16f-pa-w.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-tee-barbed-fitting-bt-32f-pa-w.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-48F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-48f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4-8mm-tube-id-pp-equal-y-barbed-fitting-by-48f-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "4.8"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-48F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-48f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4-8mm-tube-id-pa-equal-y-barbed-fitting-by-48f-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "4.8"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-16F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-16f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-elbow-barbed-fitting-bl-16f-pa-w.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-24F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-24f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-elbow-barbed-fitting-bl-24f-pa-w.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-32F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-32f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-elbow-barbed-fitting-bl-32f-pa-w.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-40F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-40f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pa-equal-elbow-barbed-fitting-bl-40f-pa-w.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-64F-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-64f-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pa-equal-elbow-barbed-fitting-bl-64f-pa-w.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-95D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-95d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pa-equal-elbow-barbed-fitting-bl-95d-pa-w.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-16F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-16f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-elbow-barbed-fitting-bl-16f-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-24F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-24f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-elbow-barbed-fitting-bl-24f-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-32F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-32f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-elbow-barbed-fitting-bl-32f-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-40F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-40f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pp-equal-elbow-barbed-fitting-bl-40f-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-64F-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-64f-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pp-equal-elbow-barbed-fitting-bl-64f-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-95D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-95d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pp-equal-elbow-barbed-fitting-bl-95d-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-40D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-40d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pa-equal-y-barbed-fitting-by-40d-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-32C-64C-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-32c-64c-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-6-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-32c-64c-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-32C-64C-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-32c-64c-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-6-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-32c-64c-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-32V-40V-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-32v-40v-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-32v-40v-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-32V-40V-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-32v-40v-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-32v-40v-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24V-40V-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24v-40v-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-24v-40v-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24V-40V-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24v-40v-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-24v-40v-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-64V-79V-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-64v-79v-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-7-9mm-tube-id-pp-reducing-straight-barbed-fitting-ba-64v-79v-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "7.9"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-64V-79V-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-64v-79v-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-7-9mm-tube-id-pa-reducing-straight-barbed-fitting-ba-64v-79v-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "7.9"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-24D-16D-16D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-24d-16d-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-1-6-x-1-6mm-tube-id-pp-reducing-y-barbed-fitting-by-24d-16d-16d-pp-n.webp",
+    "productType": "Y型异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "1.6",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-24D-16D-16D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-24d-16d-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-1-6-x-1-6mm-tube-id-pa-reducing-y-barbed-fitting-by-24d-16d-16d-pa-w.webp",
+    "productType": "Y型异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "1.6",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BBL-16D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bbl-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-barbed-plug-bbl-16d-pa-w.webp",
+    "productType": "倒刺堵头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BBL-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bbl-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-barbed-plug-bbl-24d-pa-w.webp",
+    "productType": "倒刺堵头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BBL-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bbl-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-barbed-plug-bbl-32d-pa-w.webp",
+    "productType": "倒刺堵头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-16D-24D-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-16d-24d-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4-x-2-4mm-tube-id-pa-reducing-tee-barbed-fitting-bt-16d-24d-24d-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "2.4",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-64C-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-64c-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pp-equal-straight-barbed-fitting-ba-64c-pp-n.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-64C-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-64c-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pa-equal-straight-barbed-fitting-ba-64c-pa-w.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-64V-95V-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-64v-95v-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-9-5mm-tube-id-pp-reducing-straight-barbed-fitting-ba-64v-95v-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-64V-95V-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-64v-95v-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-9-5mm-tube-id-pa-reducing-straight-barbed-fitting-ba-64v-95v-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-64X-127X-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-64x-127x-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-12-7mm-tube-id-pp-reducing-straight-barbed-fitting-ba-64x-127x-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "12.7"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-64X-127X-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-64x-127x-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-12-7mm-tube-id-pa-reducing-straight-barbed-fitting-ba-64x-127x-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "12.7"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-y-barbed-fitting-by-32d-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-y-barbed-fitting-by-32d-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-95X-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-95x-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pp-equal-y-barbed-fitting-by-95x-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-95X-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-95x-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pa-equal-y-barbed-fitting-by-95x-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-32D-16D-16D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-32d-16d-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-1-6-x-1-6mm-tube-id-pp-reducing-y-barbed-fitting-by-32d-16d-16d-pp-n.webp",
+    "productType": "Y型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "1.6",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-32D-16D-16D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-32d-16d-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-1-6-x-1-6mm-tube-id-pa-reducing-y-barbed-fitting-by-32d-16d-16d-pa-w.webp",
+    "productType": "Y型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "1.6",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-64D-32D-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-64d-32d-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-3-2-x-3-2mm-tube-id-pp-reducing-y-barbed-fitting-by-64d-32d-32d-pp-n.webp",
+    "productType": "Y型异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "3.2",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-64D-32D-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-64d-32d-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-3-2-x-3-2mm-tube-id-pa-reducing-y-barbed-fitting-by-64d-32d-32d-pa-w.webp",
+    "productType": "Y型异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "3.2",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-40C-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-40c-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pp-equal-tee-barbed-fitting-bt-40c-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-40C-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-40c-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/4mm-tube-id-pa-equal-tee-barbed-fitting-bt-40c-pa-w.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-64C-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-64c-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pp-equal-tee-barbed-fitting-bt-64c-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-64C-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-64c-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4mm-tube-id-pa-equal-tee-barbed-fitting-bt-64c-pa-w.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-95X-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-95x-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pp-equal-tee-barbed-fitting-bt-95x-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-95X-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-95x-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/9-5mm-tube-id-pa-equal-tee-barbed-fitting-bt-95x-pa-w.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-32D-16D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-32d-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-3-2-x-1-6mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-32d-16d-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "3.2",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-32D-16D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-32d-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-3-2-x-1-6mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-32d-16d-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "3.2",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-24D-24D-16D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-24d-24d-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-2-4-x-1-6mm-tube-id-pp-reducing-tee-barbed-fitting-bt-24d-24d-16d-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "2.4",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-24D-24D-16D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-24d-24d-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-2-4-x-1-6mm-tube-id-pa-reducing-tee-barbed-fitting-bt-24d-24d-16d-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "2.4",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-32D-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-32d-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-3-2-x-2-4mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-32d-24d-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "3.2",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-32D-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-32d-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-3-2-x-2-4mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-32d-24d-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "3.2",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-64D-64D-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-64d-64d-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-6-4-x-3-2mm-tube-id-pp-reducing-tee-barbed-fitting-bt-64d-64d-32d-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "6.4",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-64D-64D-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-64d-64d-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-6-4-x-3-2mm-tube-id-pa-reducing-tee-barbed-fitting-bt-64d-64d-32d-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "6.4",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-24D-32D-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-24d-32d-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2-x-3-2mm-tube-id-pp-reducing-tee-barbed-fitting-bt-24d-32d-32d-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "3.2",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-24D-32D-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-24d-32d-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2-x-3-2mm-tube-id-pa-reducing-tee-barbed-fitting-bt-24d-32d-32d-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "3.2",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-16D-16D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-16d-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-1-6-x-1-6mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-16d-16d-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "1.6",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-16D-16D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-16d-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-1-6-x-1-6mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-16d-16d-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "1.6",
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-24D-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-24d-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-2-4-x-2-4mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-24d-24d-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "2.4",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-24D-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-24d-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-2-4-x-2-4mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-24d-24d-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "2.4",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-64T-64T-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-64t-64t-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-6-4-x-6-4mm-tube-id-pp-reducing-tee-barbed-fitting-bt-32d-64t-64t-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "6.4",
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-64T-64T-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-64t-64t-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2-x-6-4-x-6-4mm-tube-id-pa-reducing-tee-barbed-fitting-bt-32d-64t-64t-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "3.2",
+      "6.4",
+      "6.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-64V-95V-95V-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-64v-95v-95v-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-9-5-x-9-5mm-tube-id-pp-reducing-tee-barbed-fitting-bt-64v-95v-95v-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "9.5",
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-64V-95V-95V-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-64v-95v-95v-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/6-4-x-9-5-x-9-5mm-tube-id-pa-reducing-tee-barbed-fitting-bt-64v-95v-95v-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "6.4",
+      "9.5",
+      "9.5"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24C-48C-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24c-48c-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-4-8mm-tube-id-pp-reducing-straight-barbed-fitting-ba-24c-48c-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "4.8"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24C-48C-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24c-48c-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-4-8mm-tube-id-pa-reducing-straight-barbed-fitting-ba-24c-48c-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "4.8"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-16D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-tee-barbed-fitting-bt-16d-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-16D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-tee-barbed-fitting-bt-16d-pa-w.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16C-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16c-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-straight-barbed-fitting-ba-16c-pp-n.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16D-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16d-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16d-24d-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16D-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16d-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16d-24d-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24D-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24d-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pp-reducing-straight-barbed-fitting-ba-24d-32d-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24D-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24d-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pa-reducing-straight-barbed-fitting-ba-24d-32d-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-y-barbed-fitting-by-24d-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-y-barbed-fitting-by-24d-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-tee-barbed-fitting-bt-24d-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-tee-barbed-fitting-bt-24d-pa-w.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-tee-barbed-fitting-bt-32d-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-tee-barbed-fitting-bt-32d-pa-w.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BY-16D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-y-barbed-fitting-by-16d-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-16D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-y-barbed-fitting-by-16d-pa-w.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-straight-barbed-fitting-ba-24d-pp-n.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-straight-barbed-fitting-ba-24d-pa-w.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-straight-barbed-fitting-ba-32d-pp-n.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-straight-barbed-fitting-ba-32d-pa-w.webp",
+    "productType": "直通等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16D-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16d-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16d-32d-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16D-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16d-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16d-32d-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-16D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pp-equal-elbow-barbed-fitting-bl-16d-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-16D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-elbow-barbed-fitting-bl-16d-pa-w.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pp-equal-elbow-barbed-fitting-bl-24d-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4mm-tube-id-pa-equal-elbow-barbed-fitting-bl-24d-pa-w.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-elbow-barbed-fitting-bl-32d-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-elbow-barbed-fitting-bl-32d-pa-w.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-16D-24D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-16d-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pp-reducing-elbow-barbed-fitting-bl-16d-24d-pp-n.webp",
+    "productType": "L型异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-16D-24D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-16d-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pa-reducing-elbow-barbed-fitting-bl-16d-24d-pa-w.webp",
+    "productType": "L型异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-24D-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-24d-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pp-reducing-elbow-barbed-fitting-bl-24d-32d-pp-n.webp",
+    "productType": "L型异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-24D-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-24d-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/2-4-x-3-2mm-tube-id-pa-reducing-elbow-barbed-fitting-bl-24d-32d-pa-w.webp",
+    "productType": "L型异径倒刺接头",
+    "dimensions": [
+      "2.4",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BL-16D-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-16d-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pp-reducing-elbow-barbed-fitting-bl-16d-32d-pp-n.webp",
+    "productType": "L型异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-16D-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-16d-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2mm-tube-id-pa-reducing-elbow-barbed-fitting-bl-16d-32d-pa-w.webp",
+    "productType": "L型异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-127V-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-127v-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/12-7mm-tube-id-pp-equal-tee-barbed-fitting-bt-127v-pp-n.webp",
+    "productType": "T型等径倒刺接头",
+    "dimensions": [
+      "12.7"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BL-127V-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bl-127v-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/12-7mm-tube-id-pp-equal-elbow-barbed-fitting-bl-127v-pp-n.webp",
+    "productType": "L型等径倒刺接头",
+    "dimensions": [
+      "12.7"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BY-127V-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/by-127v-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/12-7mm-tube-id-pp-equal-y-barbed-fitting-by-127v-pp-n.webp",
+    "productType": "Y型等径倒刺接头",
+    "dimensions": [
+      "12.7"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16F-24F-PV-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16f-24f-pv-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-2-4mm-tube-id-pvdf-reducing-straight-barbed-fitting-ba-16f-24f-pv-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PVDF",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BT-16D-32D-32D-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-16d-32d-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2-x-3-2mm-tube-id-pa-reducing-tee-barbed-fitting-bt-16d-32d-32d-pa-w.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "3.2",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16V-40V-PA-W",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16v-40v-pa-w-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-4mm-tube-id-pa-reducing-straight-barbed-fitting-ba-16v-40v-pa-w.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": ""
+  },
+  {
+    "model": "BT-16D-32D-32D-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/bt-16d-32d-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-3-2-x-3-2mm-tube-id-pp-reducing-tee-barbed-fitting-bt-16d-32d-32d-pp-n.webp",
+    "productType": "T型异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "3.2",
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "BA-16V-40V-PP-N",
+    "category": "barbed-fittings",
+    "source": "/images/products/fittings/barbed-fittings/products/ba-16v-40v-pp-n-main.jpg",
+    "src": "/images/products/fittings/barbed-fittings/products/1-6-x-4mm-tube-id-pp-reducing-straight-barbed-fitting-ba-16v-40v-pp-n.webp",
+    "productType": "直通异径倒刺接头",
+    "dimensions": [
+      "1.6",
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": ""
+  },
+  {
+    "model": "SB-U28-16-AC-B",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-u28-16-ac-b.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pom-flat-bottom-seal-male-thread-to-barb-fitting-1-4-28-unf-sb-u28-16-ac-b.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "POM",
+    "color": "黑色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SB-U28-40-AC-B",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-u28-40-ac-b.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pom-flat-bottom-seal-male-thread-to-barb-fitting-1-4-28-unf-sb-u28-40-ac-b.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "POM",
+    "color": "黑色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SB-M6-24-AC-B",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m6-24-ac-b.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pom-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sb-m6-24-ac-b.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "POM",
+    "color": "黑色",
+    "thread": "M6×1"
+  },
+  {
+    "model": "SB-M6-40-AC-B",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m6-40-ac-b.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pom-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sb-m6-40-ac-b.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "POM",
+    "color": "黑色",
+    "thread": "M6×1"
+  },
+  {
+    "model": "SA-U32-32F-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u32-32f-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-10-32-unf-sa-u32-32f-pp-n.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "10-32 UNF"
+  },
+  {
+    "model": "SC-M6-16-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sc-m6-16-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-straight-female-thread-to-barb-fitting-m6-x-1-sc-m6-16-pp-n.webp",
+    "productType": "直通内螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M6×1"
+  },
+  {
+    "model": "SC-M6-32-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sc-m6-32-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-female-thread-to-barb-fitting-m6-x-1-sc-m6-32-pp-n.webp",
+    "productType": "直通内螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M6×1"
+  },
+  {
+    "model": "SB-M5-16D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-16d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-16d-pa-w.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "M5×0.8"
+  },
+  {
+    "model": "SBS-M6-24D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sbs-m6-24d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sbs-m6-24d-pp-n.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M6×1"
+  },
+  {
+    "model": "SBS-M6-32D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sbs-m6-32d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sbs-m6-32d-pp-n.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M6×1"
+  },
+  {
+    "model": "SA-U32-32F-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u32-32f-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-straight-male-thread-to-barb-fitting-10-32-unf-sa-u32-32f-pa-w.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "10-32 UNF"
+  },
+  {
+    "model": "SAL-U32-16D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u32-16d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-elbow-male-thread-to-barb-fitting-10-32-unf-sal-u32-16d-pp-n.webp",
+    "productType": "L型螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "10-32 UNF"
+  },
+  {
+    "model": "SAL-U32-16D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u32-16d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pa-elbow-male-thread-to-barb-fitting-10-32-unf-sal-u32-16d-pa-w.webp",
+    "productType": "L型螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "10-32 UNF"
+  },
+  {
+    "model": "SAL-U32-32D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u32-32d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-elbow-male-thread-to-barb-fitting-10-32-unf-sal-u32-32d-pp-n.webp",
+    "productType": "L型螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "10-32 UNF"
+  },
+  {
+    "model": "SAL-U32-32D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u32-32d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-elbow-male-thread-to-barb-fitting-10-32-unf-sal-u32-32d-pa-w.webp",
+    "productType": "L型螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "10-32 UNF"
+  },
+  {
+    "model": "SAL-U28-16D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u28-16d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-elbow-male-thread-to-barb-fitting-1-4-28-unf-sal-u28-16d-pp-n.webp",
+    "productType": "L型螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SAL-U28-16D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u28-16d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pa-elbow-male-thread-to-barb-fitting-1-4-28-unf-sal-u28-16d-pa-w.webp",
+    "productType": "L型螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SAL-U28-32D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u28-32d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-elbow-male-thread-to-barb-fitting-1-4-28-unf-sal-u28-32d-pp-n.webp",
+    "productType": "L型螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SAL-U28-32D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sal-u28-32d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-elbow-male-thread-to-barb-fitting-1-4-28-unf-sal-u28-32d-pa-w.webp",
+    "productType": "L型螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SA-U28-16D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-16d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-16d-pp-n.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SA-U28-24D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-24d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-24d-pp-n.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SA-U28-32D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-32d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-32d-pp-n.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SA-U28-40D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-40d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-40d-pp-n.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SA-U28-48D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-48d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/4-8mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-48d-pp-n.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "4.8"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SB-M5-24D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-24d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-24d-pp-n.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M5×0.8"
+  },
+  {
+    "model": "SB-M5-32D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-32d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-32d-pp-n.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M5×0.8"
+  },
+  {
+    "model": "SB-M5-40D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-40d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-40d-pp-n.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M5×0.8"
+  },
+  {
+    "model": "SA-U28-24D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-24d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pa-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-24d-pa-w.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SA-U28-40D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-40d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pa-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-40d-pa-w.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SA-U28-32D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-32d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-32d-pa-w.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SA-U28-48D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-u28-48d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/4-8mm-tube-id-pa-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-48d-pa-w.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "4.8"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SB-M5-24D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-24d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-24d-pa-w.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "M5×0.8"
+  },
+  {
+    "model": "SB-M5-32D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-32d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-32d-pa-w.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "M5×0.8"
+  },
+  {
+    "model": "SB-M5-40D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-40d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/4mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-40d-pa-w.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "M5×0.8"
+  },
+  {
+    "model": "SC-U28-16D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sc-u28-16d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-straight-female-thread-to-barb-fitting-1-4-28-unf-sc-u28-16d-pp-n.webp",
+    "productType": "直通内螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SC-U28-24D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sc-u28-24d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-straight-female-thread-to-barb-fitting-1-4-28-unf-sc-u28-24d-pp-n.webp",
+    "productType": "直通内螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SC-U28-32D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sc-u28-32d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-female-thread-to-barb-fitting-1-4-28-unf-sc-u28-32d-pp-n.webp",
+    "productType": "直通内螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SBR-U28-16-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sbr-u28-16-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-swivel-male-thread-to-barb-fitting-1-4-28-unf-sbr-u28-16-pp-n.webp",
+    "productType": "可旋转底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SBR-U28-24-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sbr-u28-24-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-swivel-male-thread-to-barb-fitting-1-4-28-unf-sbr-u28-24-pp-n.webp",
+    "productType": "可旋转底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SBR-U28-32-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sbr-u28-32-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-swivel-male-thread-to-barb-fitting-1-4-28-unf-sbr-u28-32-pp-n.webp",
+    "productType": "可旋转底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "SBS-M6-24D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sbs-m6-24d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sbs-m6-24d-pa-w.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "M6×1"
+  },
+  {
+    "model": "SBS-M6-32D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sbs-m6-32d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sbs-m6-32d-pa-w.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "M6×1"
+  },
+  {
+    "model": "SB-M5-16D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sb-m5-16d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/1-6mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-16d-pp-n.webp",
+    "productType": "直通底面密封螺纹转倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M5×0.8"
+  },
+  {
+    "model": "SA-X32-32D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-x32-32d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-straight-male-thread-to-barb-fitting-3-4-taper-thread-sa-x32-32d-pa-w.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "3.4 锥螺纹"
+  },
+  {
+    "model": "SA-X32-24D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-x32-24d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pp-straight-male-thread-to-barb-fitting-3-4-taper-thread-sa-x32-24d-pp-n.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "3.4 锥螺纹"
+  },
+  {
+    "model": "SA-X32-24D-PA-W",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-x32-24d-pa-w.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/2-4mm-tube-id-pa-straight-male-thread-to-barb-fitting-3-4-taper-thread-sa-x32-24d-pa-w.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "3.4 锥螺纹"
+  },
+  {
+    "model": "SA-X32-32D-PP-N",
+    "category": "thread-to-barbed-fittings",
+    "source": "/images/products/fittings/thread-to-barbed-fittings/products/sa-x32-32d-pp-n.jpg",
+    "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-3-4-taper-thread-sa-x32-32d-pp-n.webp",
+    "productType": "直通螺纹密封螺纹转倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "3.4 锥螺纹"
+  },
+  {
+    "model": "U-M6-20-AC-B",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/U-M6-20-AC-B.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ac-straight-female-thread-union-m6-u-m6-20-ac-b.webp",
+    "productType": "直通二通内螺纹互转接头",
+    "dimensions": [
+      "2"
+    ],
+    "dimensionKind": "bore",
+    "material": "AC",
+    "color": "黑色",
+    "thread": "M6"
+  },
+  {
+    "model": "U-U28-20-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-straight-female-thread-union-1-4-28-unf-u-u28-20-pp-n.webp",
+    "productType": "直通二通内螺纹互转接头",
+    "dimensions": [
+      "2"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "U-M6-20-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/U-M6-20-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-straight-female-thread-union-m6-u-m6-20-pp-n.webp",
+    "productType": "直通二通内螺纹互转接头",
+    "dimensions": [
+      "2"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M6"
+  },
+  {
+    "model": "UY-U28-10-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/UY-U28-10-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/1mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-10-pp-n.webp",
+    "productType": "Y型三通内螺纹互转接头",
+    "dimensions": [
+      "1"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "US-M6-05-AC-B",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/US-M6-05-AC-B.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/0-5mm-bore-ac-square-female-thread-union-m6-us-m6-05-ac-b.webp",
+    "productType": "方形二通内螺纹互转接头",
+    "dimensions": [
+      "0.5"
+    ],
+    "dimensionKind": "bore",
+    "material": "AC",
+    "color": "黑色",
+    "thread": "M6"
+  },
+  {
+    "model": "UY-U28-15-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/UY-U28-15-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-15-pp-n.webp",
+    "productType": "Y型三通内螺纹互转接头",
+    "dimensions": [
+      "1.5"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "US-M6-15-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/US-M6-15-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-square-female-thread-union-m6-us-m6-15-pp-n.webp",
+    "productType": "方形二通内螺纹互转接头",
+    "dimensions": [
+      "1.5"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M6"
+  },
+  {
+    "model": "UT-U28-20-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-pp-n.webp",
+    "productType": "T型三通内螺纹互转接头",
+    "dimensions": [
+      "2"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "PMU-M12-U28-20-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/PMU-M12-U28-20-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-bulkhead-female-thread-union-1-4-28-unf-pmu-m12-u28-20-pp-n.webp",
+    "productType": "穿板二通内螺纹互转接头",
+    "dimensions": [
+      "2"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "US-M6-10-AC-B",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/US-M6-10-AC-B.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/1mm-bore-ac-square-female-thread-union-m6-us-m6-10-ac-b.webp",
+    "productType": "方形二通内螺纹互转接头",
+    "dimensions": [
+      "1"
+    ],
+    "dimensionKind": "bore",
+    "material": "AC",
+    "color": "黑色",
+    "thread": "M6"
+  },
+  {
+    "model": "US-M6-15-AC-B",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/US-M6-15-AC-B.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ac-square-female-thread-union-m6-us-m6-15-ac-b.webp",
+    "productType": "方形二通内螺纹互转接头",
+    "dimensions": [
+      "1.5"
+    ],
+    "dimensionKind": "bore",
+    "material": "AC",
+    "color": "黑色",
+    "thread": "M6"
+  },
+  {
+    "model": "US-M6-05-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/US-M6-05-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/0-5mm-bore-pp-square-female-thread-union-m6-us-m6-05-pp-n.webp",
+    "productType": "方形二通内螺纹互转接头",
+    "dimensions": [
+      "0.5"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M6"
+  },
+  {
+    "model": "US-M6-10-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/US-M6-10-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/1mm-bore-pp-square-female-thread-union-m6-us-m6-10-pp-n.webp",
+    "productType": "方形二通内螺纹互转接头",
+    "dimensions": [
+      "1"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "M6"
+  },
+  {
+    "model": "UT-U28-15-PS-B",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PS-B.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
+    "productType": "T型三通内螺纹互转接头",
+    "dimensions": [
+      "1.5"
+    ],
+    "dimensionKind": "bore",
+    "material": "PS",
+    "color": "黑色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "UT-U28-15-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-pp-n.webp",
+    "productType": "T型三通内螺纹互转接头",
+    "dimensions": [
+      "1.5"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "UT-U28-20-PS-B",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PS-B.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
+    "productType": "T型三通内螺纹互转接头",
+    "dimensions": [
+      "2"
+    ],
+    "dimensionKind": "bore",
+    "material": "PS",
+    "color": "黑色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "UY-U28-20-PP-N",
+    "category": "female-thread-adapters",
+    "source": "/images/products/fittings/female-thread-adapters/products/UY-U28-20-PP-N.jpg",
+    "src": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-20-pp-n.webp",
+    "productType": "Y型三通内螺纹互转接头",
+    "dimensions": [
+      "2"
+    ],
+    "dimensionKind": "bore",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "PMB-U28-16D-PP-N",
+    "category": "bulkhead-barbed-fittings",
+    "source": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pp-n-main.jpg",
+    "src": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pp-n.webp",
+    "productType": "穿板倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "PMB-U28-24D-PP-N",
+    "category": "bulkhead-barbed-fittings",
+    "source": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pp-n-main.jpg",
+    "src": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pp-n.webp",
+    "productType": "穿板倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "PMB-U28-32D-PP-N",
+    "category": "bulkhead-barbed-fittings",
+    "source": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pp-n-main.jpg",
+    "src": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pp-n.webp",
+    "productType": "穿板倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PP",
+    "color": "本色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "PMB-U28-24D-PA-W",
+    "category": "bulkhead-barbed-fittings",
+    "source": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-24d-pa-w-main.jpg",
+    "src": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pa-w.webp",
+    "productType": "穿板倒刺接头",
+    "dimensions": [
+      "2.4"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "PMB-U28-32D-PA-W",
+    "category": "bulkhead-barbed-fittings",
+    "source": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-32d-pa-w-main.jpg",
+    "src": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pa-w.webp",
+    "productType": "穿板倒刺接头",
+    "dimensions": [
+      "3.2"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "1/4-28 UNF"
+  },
+  {
+    "model": "PMB-U28-16D-PA-W",
+    "category": "bulkhead-barbed-fittings",
+    "source": "/images/products/fittings/bulkhead-barbed-fittings/products/pmb-u28-16d-pa-w-main.jpg",
+    "src": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pa-w.webp",
+    "productType": "穿板倒刺接头",
+    "dimensions": [
+      "1.6"
+    ],
+    "dimensionKind": "tubeId",
+    "material": "PA",
+    "color": "白色",
+    "thread": "1/4-28 UNF"
+  }
+]

@@ -4,11 +4,12 @@ import type { EnglishApplicationKind } from '@/data/applications/application-eng
 import type { RelatedResourcesData } from '@/components/common/related-resources/related-resources.types';
 import { getTechnicalArticlesPageData } from '@/services/resources/technical-articles/getTechnicalArticlesPageData';
 import { translateApplicationEnglish } from './english-localized';
+import { withQuickDisconnectArticle } from "./quick-disconnect-resources";
 
 export function getEnglishReviewResources(kind: EnglishApplicationKind, document: ApplicationDocument): RelatedResourcesData {
   const plan = getReviewFooterPlan(kind, document);
   const english = getTechnicalArticlesPageData('en').articles;
-  return {
+  return withQuickDisconnectArticle({
     locale: 'en', uiLocale: 'en', videos: [],
     products: plan.products.map(key => {
       const card = reviewProductCards[key];
@@ -20,5 +21,5 @@ export function getEnglishReviewResources(kind: EnglishApplicationKind, document
       if (!source) throw new Error('Missing published English application reading ' + slug);
       return { id: source.id, slug, title: source.title, summary: source.summary, date: source.date, coverImage: source.coverImage };
     }),
-  };
+  }, kind, document);
 }

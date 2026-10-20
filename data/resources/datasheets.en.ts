@@ -387,7 +387,7 @@ export const datasheetEnItems: DatasheetItem[] = [
     description:
       "A combined English catalog covering Foreach fittings, connectors, rigid tubing, flexible tubing, and tubing assemblies.",
     image:
-      "/images/products/fittings/barbed-fittings/products/ba-16c-pa-w-main.jpg",
+      "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-straight-barbed-fitting-ba-16c-pa-w.webp",
     productHref: "/en/products/fittings",
     downloadHref:
       "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf",

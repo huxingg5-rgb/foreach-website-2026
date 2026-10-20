@@ -1,9 +1,13 @@
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
+import FittingRelatedResources from "./FittingRelatedResources";
 import { getFlangedFittingRelationKeys } from "@/data/products/selection/flanged-fitting-related-products";
 import { isHardTubeGuideModel } from "@/data/resources/technical-articles/hard-tube-fittings-related-products";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 
 export default function HardTubeFittingRelatedArticles({ model, locale }: { model: string; locale: TechnicalArticleLocale }) {
+  if (locale !== "zh-CN") {
+    return <FittingRelatedResources productTypeId="hard-tube-fittings" model={model} locale={locale} />;
+  }
   const family = model.split("-")[0].toLowerCase();
   const relationKeys = [
     ...getFlangedFittingRelationKeys(model),

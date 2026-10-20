@@ -39,7 +39,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "AC",
       "filter05": "B - 黑色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-05-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/0-5mm-bore-ac-square-female-thread-union-m6-us-m6-05-ac-b.webp",
     "detailSlug": "us-m6-05-ac-b",
     "status": "active",
     "sortOrder": 1,
@@ -68,7 +68,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "AC",
       "filter05": "B - 黑色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-10-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1mm-bore-ac-square-female-thread-union-m6-us-m6-10-ac-b.webp",
     "detailSlug": "us-m6-10-ac-b",
     "status": "active",
     "sortOrder": 2,
@@ -97,7 +97,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "AC",
       "filter05": "B - 黑色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-15-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ac-square-female-thread-union-m6-us-m6-15-ac-b.webp",
     "detailSlug": "us-m6-15-ac-b",
     "status": "active",
     "sortOrder": 3,
@@ -126,7 +126,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-05-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/0-5mm-bore-pp-square-female-thread-union-m6-us-m6-05-pp-n.webp",
     "detailSlug": "us-m6-05-pp-n",
     "status": "active",
     "sortOrder": 4,
@@ -155,7 +155,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-10-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1mm-bore-pp-square-female-thread-union-m6-us-m6-10-pp-n.webp",
     "detailSlug": "us-m6-10-pp-n",
     "status": "active",
     "sortOrder": 5,
@@ -184,7 +184,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/US-M6-15-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-square-female-thread-union-m6-us-m6-15-pp-n.webp",
     "detailSlug": "us-m6-15-pp-n",
     "status": "active",
     "sortOrder": 6,
@@ -213,7 +213,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/PMU-M12-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-bulkhead-female-thread-union-1-4-28-unf-pmu-m12-u28-20-pp-n.webp",
     "detailSlug": "pmu-m12-u28-20-pp-n",
     "status": "active",
     "sortOrder": 7,
@@ -242,7 +242,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-straight-female-thread-union-1-4-28-unf-u-u28-20-pp-n.webp",
     "detailSlug": "u-u28-20-pp-n",
     "status": "active",
     "sortOrder": 8,
@@ -329,7 +329,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-M6-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-straight-female-thread-union-m6-u-m6-20-pp-n.webp",
     "detailSlug": "u-m6-20-pp-n",
     "status": "active",
     "sortOrder": 11,
@@ -358,7 +358,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "AC",
       "filter05": "B - 黑色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/U-M6-20-AC-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ac-straight-female-thread-union-m6-u-m6-20-ac-b.webp",
     "detailSlug": "u-m6-20-ac-b",
     "status": "active",
     "sortOrder": 12,
@@ -387,7 +387,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-pp-n.webp",
     "detailSlug": "ut-u28-15-pp-n",
     "status": "active",
     "sortOrder": 13,
@@ -416,7 +416,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-pp-n.webp",
     "detailSlug": "ut-u28-20-pp-n",
     "status": "active",
     "sortOrder": 14,
@@ -445,7 +445,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PS",
       "filter05": "B - 黑色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PS-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
     "detailSlug": "ut-u28-15-ps-b",
     "status": "active",
     "sortOrder": 15,
@@ -474,7 +474,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PS",
       "filter05": "B - 黑色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PS-B.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
     "detailSlug": "ut-u28-20-ps-b",
     "status": "active",
     "sortOrder": 16,
@@ -532,7 +532,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UY-U28-10-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-10-pp-n.webp",
     "detailSlug": "uy-u28-10-pp-n",
     "status": "active",
     "sortOrder": 18,
@@ -561,7 +561,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UY-U28-15-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-15-pp-n.webp",
     "detailSlug": "uy-u28-15-pp-n",
     "status": "active",
     "sortOrder": 19,
@@ -590,7 +590,7 @@ export const femaleThreadAdapterSelectionProducts:
       "filter04": "PP",
       "filter05": "N - 本色"
     },
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/UY-U28-20-PP-N.jpg",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-20-pp-n.webp",
     "detailSlug": "uy-u28-20-pp-n",
     "status": "active",
     "sortOrder": 20,

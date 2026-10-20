@@ -1,8 +1,10 @@
-import type { ComponentType } from "react";
+import type { ComponentType, ReactNode } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
   connectPublishedFittingProduct,
@@ -25,6 +27,7 @@ type DetailRecord = {
 };
 
 type PageProps = {
+  renderLocale?: TechnicalArticleLocale;
   params: Promise<{ slug: string }>;
 };
 
@@ -36,7 +39,7 @@ const details =
   });
 
 const ProductDetailView =
-  ProductDetailClient as unknown as ComponentType<{ data: any }>;
+  ProductDetailClient as unknown as ComponentType<{ data: Record<string, unknown>; afterContent?: ReactNode }>;
 
 export const dynamicParams = false;
 
@@ -81,6 +84,7 @@ export async function generateMetadata({
 
 export default async function BulkheadBarbedFittingDetailPage({
   params,
+  renderLocale = "zh-CN",
 }: PageProps) {
   const { slug } = await params;
   const detail = findDetail(slug);
@@ -89,5 +93,6 @@ export default async function BulkheadBarbedFittingDetailPage({
     notFound();
   }
 
-  return <ProductDetailView data={detail} />;
+  return <ProductDetailView data={detail}
+    afterContent={<FittingRelatedResources productTypeId="bulkhead-barbed-fittings" model={detail.model} locale={renderLocale} />} />;
 }

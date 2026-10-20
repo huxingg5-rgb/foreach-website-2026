@@ -1,4 +1,5 @@
 import { getFittingSelectionMetadata } from "@/lib/seo/fitting-selection-metadata";
+import { getFittingMainImageAlt } from "@/data/products/detail/fitting-image-description";
 import { migrateControlModuleSegments, getControlModuleDetailSlugFromSegments, getControlModuleLanguageAlternates } from "@/data/products/selection/control-module-routes";
 import ValveSelectionPage, {getValveSelectionMetadata} from '@/components/products/selection/ValveSelectionPage';
 import HpValveDetailPage, {getHpValveMetadata} from '@/components/products/detail/HpValveDetailPage';
@@ -73,6 +74,7 @@ import BulkheadBarbedFittingDetailPage from "@/app/products/fittings/bulkhead-ba
 import CheckValveDetailPage from "@/app/products/fittings/check-valves/[slug]/page";
 import FilterDetailPage from "@/app/products/fittings/filters/[slug]/page";
 import QuickConnectFittingDetailPage from "@/app/products/fittings/quick-connect-fittings/[slug]/page";
+import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
 import QuickConnectQ20Page from "@/app/products/fittings/quick-connect-fittings/q20/page";
 import QuickConnectQ40Page from "@/app/products/fittings/quick-connect-fittings/q40/page";
 import QuickConnectQ60Page from "@/app/products/fittings/quick-connect-fittings/q60/page";
@@ -318,6 +320,7 @@ function renderSelectionPage({
         initialProductTypeId={productTypeId}
         initialFilters={initialFilters}
       />
+      {productTypeId && ["fittings", "tubing"].includes(categoryId) && <FittingRelatedResources productTypeId={productTypeId} locale={locale as "en" | "es" | "fr" | "ko" | "ru"} />}
     </Suspense>
   );
 }
@@ -559,7 +562,7 @@ export async function generateMetadata({
       title: probeControlDetailCopy?.seoTitle || tubingSeoCopy?.title || syringeSeoTitle || valvelessSeoTitle || `${title} | Foreach Technology`,
       description,
       ...(socialImage
-        ? { images: [{ url: socialImage, alt: tubingSeoCopy?.title || valvelessContent?.imageAlt || valvelessCategory?.category.title || title }] }
+        ? { images: [{ url: socialImage, alt: getFittingMainImageAlt({ mainImage: socialImagePath }, locale) || tubingSeoCopy?.title || valvelessContent?.imageAlt || valvelessCategory?.category.title || title }] }
         : {}),
     },
     twitter: {
@@ -633,8 +636,12 @@ export default async function ProductLocaleRoutePage({
     }
 
     if (category === "tubing") {
-      if (locale === "en") return <TubingSelectionPage material={slug} locale="en" />;
-      return <TubingDetailStaticPage slug={slug} locale={locale} />;
+      return <>
+        {locale === "en"
+          ? <TubingSelectionPage material={slug} locale="en" />
+          : <TubingDetailStaticPage slug={slug} locale={locale} />}
+        <FittingRelatedResources productTypeId={slug} locale={locale} />
+      </>;
     }
 
     return ProductDetailRoutePage({
@@ -651,15 +658,15 @@ export default async function ProductLocaleRoutePage({
     slug === "quick-connect-fittings"
   ) {
     if (seriesSlug === "q20") {
-      return <QuickConnectQ20Page />;
+      return <QuickConnectQ20Page renderLocale={locale} />;
     }
 
     if (seriesSlug === "q40") {
-      return <QuickConnectQ40Page />;
+      return <QuickConnectQ40Page renderLocale={locale} />;
     }
 
     if (seriesSlug === "q60") {
-      return <QuickConnectQ60Page />;
+      return <QuickConnectQ60Page renderLocale={locale} />;
     }
   }
 
@@ -708,15 +715,15 @@ export default async function ProductLocaleRoutePage({
     const detailParams = Promise.resolve({ slug: seriesSlug });
 
     if (slug === "barbed-fittings") {
-      return BarbedFittingDetailPage({ params: detailParams });
+      return BarbedFittingDetailPage({ params: detailParams, renderLocale: locale });
     }
 
     if (slug === "quick-connect-fittings") {
-      return QuickConnectFittingDetailPage({ params: detailParams });
+      return QuickConnectFittingDetailPage({ params: detailParams, renderLocale: locale });
     }
 
     if (slug === "bulkhead-barbed-fittings") {
-      return BulkheadBarbedFittingDetailPage({ params: detailParams });
+      return BulkheadBarbedFittingDetailPage({ params: detailParams, renderLocale: locale });
     }
 
     if (slug === "filters") {

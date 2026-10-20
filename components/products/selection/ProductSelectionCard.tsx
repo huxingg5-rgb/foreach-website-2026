@@ -1,6 +1,7 @@
 "use client";
 import { normalizeSiteHref } from "@/lib/seo/site-url";
 import { getProductCardThumbnail } from "@/data/products/selection/product-card-thumbnail";
+import { getFittingMainImageAlt, getDescriptiveFittingImageUrl } from "@/data/products/detail/fitting-image-description";
 import { getControlModuleCardCopy } from "@/data/products/selection/control-module-card-copy";
 import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
 import { getTubingMaterialCopy } from "@/data/products/tubing/content";
@@ -260,15 +261,16 @@ export default function ProductSelectionCard({
   const plungerCardHeading = getProductCardHeading(product, locale);
   const isMrv3Configuration = product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId);
   const isSolenoidConfiguration = product.seriesId === "6010" && /^(?:2|3)-way$/.test(product.productId);
-  const imageAlt = (isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
+  const imageAlt = getFittingMainImageAlt(product, locale) || ((isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
     ? product.imageAlt
-    : controlCard ? `FOREACH ${controlCard.model} ${controlCard.name}` : valveCard ? `FOREACH ${valveCard.model} ${valveCard.name}` : safeTitle;
+    : controlCard ? `FOREACH ${controlCard.model} ${controlCard.name}` : valveCard ? `FOREACH ${valveCard.model} ${valveCard.name}` : safeTitle);
   const descriptionHeading = controlCard?.heading || valveCard?.heading || ((isMrv3Configuration || product.seriesId === "6010") ? safeSubtitle : authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
     ? safeSubtitle
     : plungerCardHeading));
   const usesDescriptionHeading = Boolean(descriptionHeading);
   const DescriptionHeading = product.categoryId === "valves" ? "h2" : "h3";
-  const thumbnail = getProductCardThumbnail(product.imageCard, locale);
+  const cardImage = getDescriptiveFittingImageUrl(product.imageCard || "");
+  const thumbnail = getProductCardThumbnail(cardImage, locale);
 
   return (
     <article
@@ -280,7 +282,7 @@ export default function ProductSelectionCard({
 
       <div className="product-image" aria-label={imageAlt}>
         {product.imageCard ? (
-          <img src={thumbnail?.src ?? product.imageCard} alt={imageAlt} loading="lazy"
+          <img src={thumbnail?.src ?? cardImage} alt={imageAlt} loading="lazy"
             width={thumbnail?.width} height={thumbnail?.height} />
         ) : (
           <div className="product-image-placeholder">{cardText.imagePlaceholder}</div>

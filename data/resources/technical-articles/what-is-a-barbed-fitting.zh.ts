@@ -118,6 +118,7 @@ export const barbedFittingCopy: DiaphragmPumpEngineeringArticleCopy = {
         { type: "formula", expression: "几何扩张比 =（倒刺峰部外径 − 软管初始内径）÷ 软管初始内径 × 100%", note: "计算时两项尺寸采用同一单位，并使用对应型号图纸和实际软管尺寸。" },
         { type: "paragraph", text: "例如 BA-32F 的接管内径为 3.2 mm，图示倒刺峰部外径 A 为 4.0 mm。按标称尺寸计算，(4.0 − 3.2) ÷ 3.2 × 100% = 25%。这里的 25% 是几何算例，不是某种软管的试验结果；也不能把同代码区间的上下限分别套给每一个型号。" },
         { type: "paragraph", text: "对同一种软管，提高扩张程度通常会改变装配阻力和局部变形，但更大的数值不一定带来更好的连接。正确的比较方法是在候选轮廓上使用相同规格的管材，记录装配状态、泄漏和抗拔脱表现，再决定采用哪一种组合。" },
+        { type: "links", items: [{ href: "/resources/technical-articles/barbed-fitting-expansion-ratio/", label: "倒刺膨胀比计算与配合验证", prefix: "需要比较具体型号或评估软管公差时，继续阅读", suffix: "，其中包含 F/D 轮廓尺寸算例和公差边界计算。" }] },
       ],
     },
     {
@@ -148,6 +149,7 @@ export const barbedFittingCopy: DiaphragmPumpEngineeringArticleCopy = {
         { type: "paragraph", text: "恒永达倒刺接头以 PP、PA 配置为主要选择，具体材料组合随型号变化。选材时应同时核对接头和软管与实际液体、浓度、温度、接触时间及清洗剂的相容性。只确认接头耐某种介质，而不检查软管的溶胀、硬化或回弹变化，仍可能留下连接问题。" },
         { type: "paragraph", text: "对于不易扩张的硬管，应评估与管材匹配的硬管连接结构；需要经常拆接的位置，可考虑设置专门的可拆接口。倒刺处强行反复拔插会改变管端状态，不能把首次插装成功等同于允许无限次重复使用。" },
         { type: "links", items: [
+          { href: "/resources/technical-articles/fitting-material-selection-guide/", label: "PP、PA 等接头材质的选择方法", suffix: "；" },
           { href: "/resources/material-compatibility/", label: "材料兼容性参考", suffix: "；" },
           { href: "/resources/technical-articles/hard-tube-fittings-selection-guide/", label: "硬管接头选型指南" },
         ] },

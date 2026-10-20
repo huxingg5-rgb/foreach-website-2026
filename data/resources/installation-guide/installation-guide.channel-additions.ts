@@ -117,7 +117,8 @@ export function getChannelVideoAdditions(locale: InstallationGuideLocale): Insta
     const [title, tag] = copy.videos[video.key];
     return {
       id: `youtube-${video.key}`,
-      relationKeys: [...video.relationKeys],
+      relationKeys: video.key === "female-thread-conversion" && locale !== "zh-CN"
+        ? ["category:female-thread-adapters"] : [...video.relationKeys],
       title,
       category: video.category,
       series: video.series,

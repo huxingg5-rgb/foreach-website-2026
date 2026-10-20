@@ -37,7 +37,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
     leadBlocks: [
       {
         type: "paragraph",
-        text: "典型废液路径是 Wash Well → Aspiration Needle → Waste Tube → Waste Pump。一个清洗周期内，泵入口可能经历 Liquid → Air → Liquid → Air。这里最先要问的不是“需要多少 mL/min”，而是“空气会不会进入泵”。",
+        text: "典型废液路径是 清洗池 → 抽吸针 → 废液管 → 废液泵。一个清洗周期内，泵入口可能经历 液体 → 空气 → 液体 → 空气。这里最先要问的不是“需要多少 mL/min”，而是“空气会不会进入泵”。",
       },
       {
         type: "notice",
@@ -140,7 +140,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
           },
           {
             type: "formula",
-            expression: "Required Pump Capability = Target Vacuum + Line Resistance + Height Difference + Aspiration Requirement",
+            expression: "泵能力要求 = 目标真空 + 管路阻力 + 高差 + 抽吸要求",
             note: "这是选型检查关系，不是可直接相加的通用计算公式；各项需换算到同一压力与时间边界后用整机试验确认。",
           },
         ],
@@ -270,7 +270,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
               ["只按液体流量选废液泵", "先确认空气是否进入和介质状态如何变化"],
               ["把 DPGL800 6 L/min 与 DPL60 600 mL/min 做倍数比较", "分别按空载气体流量与液体流量等级理解"],
               ["只看最大真空", "同时验证系统容积、目标真空与排空时间"],
-              ["忽略吸空和重新吸液", "测试完整 Liquid → Air → Liquid 周期"],
+              ["忽略吸空和重新吸液", "测试完整 液体 → 空气 → 液体 周期"],
               ["只检查泵内材料", "覆盖泵、管、阀、接头、过滤和容器"],
               ["把清洗供液与废液抽吸视为同一任务", "分别建立供液和排废的需求与验收条件"],
             ],
@@ -293,7 +293,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
       { question: "Waste liquid pump 与 waste aspiration pump 有什么区别？", answer: "Waste liquid pump 更强调废液输送；waste aspiration pump 更强调从反应位、洗针位或管路抽走介质。名称可能重叠，关键是废液是否经过泵以及空气是否进入。" },
       { question: "标准液体隔膜泵可以处理 IVD 废液吗？", answer: "可以，但条件是工况以连续液体为主、吸气很少、泵能重新吸液且全部接液材料与真实废液兼容。" },
       { question: "什么时候应使用气液混合隔膜泵进行 IVD 废液抽吸？", answer: "当抽吸针会吸入空气、介质在液体与空气间切换、需要吸空管路或建立负压时，应优先评估气液混合隔膜泵。" },
-      { question: "为什么 IVD 废液管路会进入空气？", answer: "抽吸针会随液面下降露出液面，阀切换和间歇排液也会形成气泡、液塞和吸空阶段，所以入口常呈 Liquid → Air → Liquid 的变化。" },
+      { question: "为什么 IVD 废液管路会进入空气？", answer: "抽吸针会随液面下降露出液面，阀切换和间歇排液也会形成气泡、液塞和吸空阶段，所以入口常呈 液体 → 空气 → 液体 的变化。" },
       { question: "为什么废液抽吸泵需要关注真空？", answer: "真空提供克服高度差、管路、阀、过滤和漏气阻力的压差，并影响抽吸启动与残液排空；但最大真空不能单独代表排空速度。" },
       { question: "为什么系统容积会影响排空时间？", answer: "有效气相容积越大，需要移走的气体越多。管路阻力、漏气、过滤压降和目标真空也会改变压力—时间曲线。" },
       { question: "DPGL800 的 6 L/min 是液体流量吗？", answer: "不是。6 L/min 是单泵头空载气体流量，不是液体流量，也不是废液处理能力。" },
@@ -603,7 +603,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
     },
     deck: "Una bomba de residuos IVD no se selecciona solo por mL/min. Si la línea permanece llena y transfiere líquido de forma continua, evalúe una bomba de diafragma para líquidos. Si la aguja aspira aire y la entrada alterna entre líquido y gas, evalúe una bomba gas-líquido junto con vacío, volumen y tiempo de evacuación.",
     leadBlocks: [
-      { type: "paragraph", text: "Una ruta típica es Wash Well → Aspiration Needle → Waste Tube → Waste Pump. En un ciclo, la entrada puede recibir Liquid → Air → Liquid → Air. Por eso la primera pregunta suele ser «¿entrará aire en la bomba?» y no «¿cuántos mL/min necesito?»." },
+      { type: "paragraph", text: "Una ruta típica es Pozo de lavado → Aguja de aspiración → Tubo de residuos → Bomba de residuos. En un ciclo, la entrada puede recibir Líquido → Aire → Líquido → Aire. Por eso la primera pregunta suele ser «¿entrará aire en la bomba?» y no «¿cuántos mL/min necesito?»." },
       { type: "notice", label: "Respuesta en 30 segundos:", text: "Para transferencia continua y estable de residuos líquidos con poco aire, seleccione por caudal de trabajo, presión y materiales. Para aspiración en seco, evacuación de tubos, generación de vacío o alternancia gas-líquido, seleccione por estado del medio, vacío objetivo, volumen, tiempo y resistencia. No compare directamente ambas cifras de caudal." },
       { type: "links", items: [{ href: IVD_APPLICATION, label: "aplicaciones de diagnóstico IVD y tareas fluídicas", prefix: "Sitúe primero la bomba dentro de las ", suffix: "." }] },
     ],
@@ -627,7 +627,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
       ] },
       { title: "5. ¿Por qué una bomba de aspiración necesita vacío además de caudal?", blocks: [
         { type: "paragraph", text: "La aguja, la altura, los tubos estrechos, válvulas, racores, filtros y fugas consumen diferencia de presión. La bomba debe vencerlos dentro del tiempo disponible, iniciar la aspiración y retirar gas durante la fase seca. El vacío máximo es un límite, no un tiempo de evacuación." },
-        { type: "formula", expression: "Required Pump Capability = Target Vacuum + Line Resistance + Height Difference + Aspiration Requirement", note: "Es una relación de comprobación, no una fórmula aritmética universal. Exprese los límites de presión y tiempo de forma coherente y valide el sistema completo." },
+        { type: "formula", expression: "Capacidad requerida de la bomba = Vacío objetivo + Resistencia de la línea + Diferencia de altura + Requisito de aspiración", note: "Es una relación de comprobación, no una fórmula aritmética universal. Exprese los límites de presión y tiempo de forma coherente y valide el sistema completo." },
       ] },
       { title: "6. ¿Por qué el volumen del sistema cambia el tiempo de evacuación?", blocks: [
         { type: "paragraph", text: "Dos bombas capaces de alcanzar menos de -90 kPa no evacúan necesariamente el mismo sistema en el mismo tiempo. Un mayor volumen gaseoso contiene más gas; tubos estrechos, válvulas, filtros, fugas y un vacío objetivo más profundo prolongan el proceso." },
@@ -654,7 +654,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         { type: "links", items: [{ href: DIRECT_VS_VACUUM_ARTICLE, label: "guía de bombeo directo frente a aspiración indirecta por vacío", prefix: "Para decidir además si los residuos atraviesan la bomba, consulte la ", suffix: "." }] },
       ] },
       { title: "12. Seis errores frecuentes de selección", blocks: [
-        { type: "table", headers: ["Error", "Enfoque correcto"], rows: [["Elegir solo por caudal líquido", "Definir primero la entrada de aire y los cambios de fase"], ["Dividir 6 L/min entre 600 mL/min", "Separar caudal de gas sin carga y clase líquida"], ["Mirar solo el vacío máximo", "Validar volumen, vacío objetivo y tiempo"], ["Ignorar aspiración seca y re-cebado", "Probar Liquid → Air → Liquid"], ["Revisar solo materiales de la bomba", "Cubrir bomba, tubos, válvulas, racores, filtro y recipiente"], ["Tratar limpieza y residuos como una tarea", "Separar requisitos y aceptación"]] },
+        { type: "table", headers: ["Error", "Enfoque correcto"], rows: [["Elegir solo por caudal líquido", "Definir primero la entrada de aire y los cambios de fase"], ["Dividir 6 L/min entre 600 mL/min", "Separar caudal de gas sin carga y clase líquida"], ["Mirar solo el vacío máximo", "Validar volumen, vacío objetivo y tiempo"], ["Ignorar aspiración seca y re-cebado", "Probar Líquido → Aire → Líquido"], ["Revisar solo materiales de la bomba", "Cubrir bomba, tubos, válvulas, racores, filtro y recipiente"], ["Tratar limpieza y residuos como una tarea", "Separar requisitos y aceptación"]] },
       ] },
       { title: "Conclusión: la entrada de aire suele decidir el tipo antes que los mL/min nominales", blocks: [
         { type: "paragraph", text: "Si la línea de residuos permanece llena, empiece por candidatas para líquido como DPL30 o DPL60. Si entra aire, se evacua el tubo o se genera vacío, evalúe una bomba gas-líquido. DPGL800 es una candidata Foreach actual de 24 V sin escobillas, pero debe validarse con volumen, vacío, tiempo, resistencia y residuos reales." },
@@ -685,7 +685,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
     },
     deck: "Une pompe d’effluents IVD ne se choisit pas uniquement en mL/min. Si la conduite reste remplie et transfère le liquide en continu, évaluez une pompe à membrane pour liquides. Si l’aiguille aspire de l’air et que l’entrée alterne liquide et gaz, évaluez une pompe gaz-liquide avec le vide, le volume et le temps d’évacuation.",
     leadBlocks: [
-      { type: "paragraph", text: "Un trajet type est Wash Well → Aspiration Needle → Waste Tube → Waste Pump. Pendant un cycle, l’entrée peut voir Liquid → Air → Liquid → Air. La première question est donc souvent « de l’air entrera-t-il dans la pompe ? » plutôt que « combien de mL/min ? »." },
+      { type: "paragraph", text: "Un trajet type est Puits de lavage → Aiguille d’aspiration → Conduite d’effluents → Pompe à effluents. Pendant un cycle, l’entrée peut voir Liquide → Air → Liquide → Air. La première question est donc souvent « de l’air entrera-t-il dans la pompe ? » plutôt que « combien de mL/min ? »." },
       { type: "notice", label: "Réponse en 30 secondes :", text: "Pour un transfert continu et stable d’effluent liquide avec très peu d’air, choisissez selon le débit de travail, la pression et les matériaux. Pour l’aspiration à sec, l’évacuation, la création de vide ou l’alternance gaz-liquide, choisissez selon l’état du fluide, le vide cible, le volume, le temps et la résistance. Ne comparez pas directement les débits publiés." },
       { type: "links", items: [{ href: IVD_APPLICATION, label: "applications de diagnostic IVD et tâches fluidiques", prefix: "Replacez d’abord la pompe dans les ", suffix: "." }] },
     ],
@@ -709,7 +709,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
       ] },
       { title: "5. Pourquoi une pompe d’aspiration doit-elle fournir du vide en plus du débit ?", blocks: [
         { type: "paragraph", text: "L’aiguille, la hauteur, les tubes étroits, vannes, raccords, filtres et fuites consomment la différence de pression disponible. La pompe doit les vaincre dans le temps requis, amorcer l’aspiration et retirer le gaz pendant la phase sèche. Le vide maximal est une limite, pas un temps d’évacuation." },
-        { type: "formula", expression: "Required Pump Capability = Target Vacuum + Line Resistance + Height Difference + Aspiration Requirement", note: "Il s’agit d’une relation de contrôle, pas d’une formule arithmétique universelle. Harmonisez les limites de pression et de temps, puis validez le système complet." },
+        { type: "formula", expression: "Capacité requise de la pompe = Vide cible + Résistance du circuit + Différence de hauteur + Exigence d’aspiration", note: "Il s’agit d’une relation de contrôle, pas d’une formule arithmétique universelle. Harmonisez les limites de pression et de temps, puis validez le système complet." },
       ] },
       { title: "6. Pourquoi le volume du système modifie-t-il le temps d’évacuation ?", blocks: [
         { type: "paragraph", text: "Deux pompes capables d’atteindre moins de -90 kPa n’évacuent pas forcément le même système au même rythme. Un volume gazeux supérieur contient plus de gaz ; les conduites étroites, vannes, filtres, fuites et un vide cible plus profond ralentissent aussi le processus." },
@@ -736,7 +736,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         { type: "links", items: [{ href: DIRECT_VS_VACUUM_ARTICLE, label: "guide du pompage direct et de l’aspiration indirecte par vide", prefix: "Pour décider aussi si les effluents traversent la pompe, consultez le ", suffix: "." }] },
       ] },
       { title: "12. Six erreurs fréquentes de sélection", blocks: [
-        { type: "table", headers: ["Erreur", "Bonne approche"], rows: [["Choisir seulement par débit liquide", "Définir d’abord l’entrée d’air et les transitions"], ["Diviser 6 L/min par 600 mL/min", "Séparer débit de gaz à vide et classe liquide"], ["Ne lire que le vide maximal", "Valider volume, vide cible et temps"], ["Ignorer aspiration sèche et réamorçage", "Tester Liquid → Air → Liquid"], ["Vérifier seulement la pompe", "Inclure tubes, vannes, raccords, filtre et récipient"], ["Confondre lavage et effluents", "Séparer exigences et acceptation"]] },
+        { type: "table", headers: ["Erreur", "Bonne approche"], rows: [["Choisir seulement par débit liquide", "Définir d’abord l’entrée d’air et les transitions"], ["Diviser 6 L/min par 600 mL/min", "Séparer débit de gaz à vide et classe liquide"], ["Ne lire que le vide maximal", "Valider volume, vide cible et temps"], ["Ignorer aspiration sèche et réamorçage", "Tester Liquide → Air → Liquide"], ["Vérifier seulement la pompe", "Inclure tubes, vannes, raccords, filtre et récipient"], ["Confondre lavage et effluents", "Séparer exigences et acceptation"]] },
       ] },
       { title: "Conclusion : l’entrée d’air détermine souvent le type avant les mL/min nominaux", blocks: [
         { type: "paragraph", text: "Si la conduite reste pleine, commencez par DPL30 ou DPL60 comme candidates liquides. Si elle aspire de l’air, évacue la conduite ou crée du vide, évaluez une pompe gaz-liquide. DPGL800 est une candidate Foreach actuelle, 24 V sans balais, à valider avec le volume, le vide, le temps, la résistance et l’effluent réels." },
@@ -767,7 +767,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
     },
     deck: "IVD 폐액 펌프는 mL/min만으로 선정할 수 없습니다. 배관이 액체로 채워진 채 연속 이송한다면 액체용 다이어프램 펌프를 검토하고, 흡인 니들로 공기가 들어와 입구가 액체와 기체 사이를 반복한다면 진공도, 시스템 체적 및 배기 시간과 함께 기액 혼합 다이어프램 펌프를 검토해야 합니다.",
     leadBlocks: [
-      { type: "paragraph", text: "일반적인 경로는 Wash Well → Aspiration Needle → Waste Tube → Waste Pump입니다. 한 세척 주기에서 입구는 Liquid → Air → Liquid → Air를 경험할 수 있습니다. 따라서 첫 질문은 ‘몇 mL/min인가?’보다 ‘공기가 펌프로 들어오는가?’인 경우가 많습니다." },
+      { type: "paragraph", text: "일반적인 경로는 세척 웰 → 흡인 니들 → 폐액 튜브 → 폐액 펌프입니다. 한 세척 주기에서 입구는 액체 → 공기 → 액체 → 공기를 경험할 수 있습니다. 따라서 첫 질문은 ‘몇 mL/min인가?’보다 ‘공기가 펌프로 들어오는가?’인 경우가 많습니다." },
       { type: "notice", label: "30초 답변:", text: "공기 유입이 거의 없는 안정적인 연속 폐액 이송은 작동 유량, 압력 및 재질을 기준으로 액체용 펌프를 검토합니다. 흡기 운전, 배관 배기, 진공 형성 또는 기액 교대가 있으면 매질 상태, 목표 진공, 체적, 배기 시간과 저항을 기준으로 기액 혼합 펌프를 검토합니다. 두 유량 표기를 직접 비교하면 안 됩니다." },
       { type: "links", items: [{ href: IVD_APPLICATION, label: "IVD 진단 응용 및 유로 작업", prefix: "먼저 전체 ", suffix: " 안에서 펌프의 역할을 확인하십시오." }] },
     ],
@@ -791,7 +791,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
       ] },
       { title: "5. 폐액 흡인에서 유량과 함께 진공이 중요한 이유", blocks: [
         { type: "paragraph", text: "흡인 니들, 높이 차, 가는 배관, 밸브, 피팅, 필터와 누설은 가용 압력차를 소비합니다. 펌프는 주기 내에 이를 극복하고 흡인을 시작하며 흡기 단계에서도 기체를 제거해야 합니다. 최대 진공은 한계 성능이지 배기 시간이 아닙니다." },
-        { type: "formula", expression: "Required Pump Capability = Target Vacuum + Line Resistance + Height Difference + Aspiration Requirement", note: "보편적인 산술식이 아니라 선정 점검 관계입니다. 압력과 시간 경계를 일관되게 정의한 뒤 전체 시스템으로 검증하십시오." },
+        { type: "formula", expression: "필요한 펌프 성능 = 목표 진공 + 배관 저항 + 높이 차 + 흡인 요구사항", note: "보편적인 산술식이 아니라 선정 점검 관계입니다. 압력과 시간 경계를 일관되게 정의한 뒤 전체 시스템으로 검증하십시오." },
       ] },
       { title: "6. 시스템 체적이 배기 시간을 바꾸는 이유", blocks: [
         { type: "paragraph", text: "두 펌프가 모두 -90 kPa 미만에 도달할 수 있어도 같은 시스템의 배기 시간이 같지는 않습니다. 유효 기체 체적이 크면 제거할 기체가 많고, 가는 배관, 밸브, 필터, 누설 및 더 깊은 목표 진공도 시간을 늘립니다." },
@@ -818,7 +818,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         { type: "links", items: [{ href: DIRECT_VS_VACUUM_ARTICLE, label: "직접 액체 이송과 간접 진공 흡인 가이드", prefix: "폐액이 펌프를 통과할지도 결정해야 한다면 ", suffix: "를 참조하십시오." }] },
       ] },
       { title: "12. 여섯 가지 일반적인 선정 오류", blocks: [
-        { type: "table", headers: ["오류", "올바른 접근"], rows: [["액체 유량만으로 선정", "공기 유입과 상태 전환을 먼저 정의"], ["6 L/min을 600 mL/min과 나눔", "무부하 기체 유량과 액체 등급 분리"], ["최대 진공만 확인", "체적, 목표 진공과 시간을 함께 검증"], ["흡기와 재자흡 무시", "Liquid → Air → Liquid 주기 시험"], ["펌프 재질만 검토", "배관, 밸브, 피팅, 필터와 용기 포함"], ["세척과 폐액을 같은 작업으로 취급", "요구사항과 합격 기준 분리"]] },
+        { type: "table", headers: ["오류", "올바른 접근"], rows: [["액체 유량만으로 선정", "공기 유입과 상태 전환을 먼저 정의"], ["6 L/min을 600 mL/min과 나눔", "무부하 기체 유량과 액체 등급 분리"], ["최대 진공만 확인", "체적, 목표 진공과 시간을 함께 검증"], ["흡기와 재자흡 무시", "액체 → 공기 → 액체 주기 시험"], ["펌프 재질만 검토", "배관, 밸브, 피팅, 필터와 용기 포함"], ["세척과 폐액을 같은 작업으로 취급", "요구사항과 합격 기준 분리"]] },
       ] },
       { title: "결론: 공기 유입 여부가 공칭 mL/min보다 먼저 펌프 유형을 결정한다", blocks: [
         { type: "paragraph", text: "폐액 배관이 계속 액체로 채워지면 DPL30 또는 DPL60 같은 액체용 후보부터 검토합니다. 공기를 흡입하거나 배관을 비우고 진공을 만들면 기액 혼합 펌프를 검토합니다. DPGL800은 Foreach의 현재 24 V 무브러시 후보 중 하나지만 실제 체적, 진공, 시간, 저항과 폐액으로 검증해야 합니다." },
@@ -849,7 +849,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
     },
     deck: "Насос отходов IVD нельзя выбирать только по mL/min. Если линия заполнена жидкостью и перенос непрерывен, оценивают жидкостный мембранный насос. Если игла захватывает воздух и на входе чередуются жидкость и газ, оценивают газожидкостный насос вместе с вакуумом, объёмом системы и временем откачки.",
     leadBlocks: [
-      { type: "paragraph", text: "Типичный тракт: Wash Well → Aspiration Needle → Waste Tube → Waste Pump. За один цикл на входе возможна последовательность Liquid → Air → Liquid → Air. Поэтому первый вопрос часто звучит «попадёт ли в насос воздух?», а не «сколько нужно mL/min?»." },
+      { type: "paragraph", text: "Типичный тракт: Промывочная лунка → Аспирационная игла → Трубка отходов → Насос для отходов. За один цикл на входе возможна последовательность Жидкость → Воздух → Жидкость → Воздух. Поэтому первый вопрос часто звучит «попадёт ли в насос воздух?», а не «сколько нужно mL/min?»." },
       { type: "notice", label: "Ответ за 30 секунд:", text: "Для стабильного непрерывного переноса жидких отходов почти без воздуха выбирайте по рабочему расходу, давлению и материалам. Для сухого всасывания, опорожнения трубок, создания вакуума или чередования газа и жидкости — по состоянию среды, целевому вакууму, объёму, времени и сопротивлению. Напрямую сравнивать расходы нельзя." },
       { type: "links", items: [{ href: IVD_APPLICATION, label: "применение в IVD-диагностике и задачи жидкостного тракта", prefix: "Сначала определите роль насоса в разделе ", suffix: "." }] },
     ],
@@ -873,7 +873,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
       ] },
       { title: "5. Почему насосу аспирации нужен вакуум наряду с расходом?", blocks: [
         { type: "paragraph", text: "Игла, перепад высоты, узкие трубки, клапаны, фитинги, фильтры и утечки расходуют доступный перепад давления. Насос должен преодолеть их за заданное время, запустить аспирацию и удалять газ на сухой стадии. Предельный вакуум — это предел, а не время откачки." },
-        { type: "formula", expression: "Required Pump Capability = Target Vacuum + Line Resistance + Height Difference + Aspiration Requirement", note: "Это проверочная зависимость, а не универсальная арифметическая формула. Согласуйте границы давления и времени и испытайте полную систему." },
+        { type: "formula", expression: "Требуемые характеристики насоса = Целевое разрежение + Сопротивление линии + Перепад высот + Требования к аспирации", note: "Это проверочная зависимость, а не универсальная арифметическая формула. Согласуйте границы давления и времени и испытайте полную систему." },
       ] },
       { title: "6. Почему объём системы меняет время откачки?", blocks: [
         { type: "paragraph", text: "Два насоса, способные достичь ниже -90 kPa, не обязательно откачают одну систему за одинаковое время. Больший газовый объём содержит больше газа; узкие линии, клапаны, фильтры, утечки и более глубокий целевой вакуум также увеличивают время." },
@@ -900,7 +900,7 @@ export const ivdWasteLiquidPumpSelectionCopies = {
         { type: "links", items: [{ href: DIRECT_VS_VACUUM_ARTICLE, label: "руководство по прямой перекачке и косвенной вакуумной аспирации", prefix: "Если нужно решить, проходят ли отходы через насос, см. ", suffix: "." }] },
       ] },
       { title: "12. Шесть распространённых ошибок выбора", blocks: [
-        { type: "table", headers: ["Ошибка", "Правильный подход"], rows: [["Выбор только по расходу жидкости", "Сначала определить воздух и смену фаз"], ["Деление 6 L/min на 600 mL/min", "Разделять газовый расход без нагрузки и класс жидкости"], ["Учёт только предельного вакуума", "Совместно проверить объём, целевой вакуум и время"], ["Игнорирование сухого всасывания", "Испытать Liquid → Air → Liquid"], ["Проверка только материалов насоса", "Включить трубки, клапаны, фитинги, фильтр и сосуд"], ["Смешение промывки и отходов", "Разделить требования и критерии"]] },
+        { type: "table", headers: ["Ошибка", "Правильный подход"], rows: [["Выбор только по расходу жидкости", "Сначала определить воздух и смену фаз"], ["Деление 6 L/min на 600 mL/min", "Разделять газовый расход без нагрузки и класс жидкости"], ["Учёт только предельного вакуума", "Совместно проверить объём, целевой вакуум и время"], ["Игнорирование сухого всасывания", "Испытать Жидкость → Воздух → Жидкость"], ["Проверка только материалов насоса", "Включить трубки, клапаны, фитинги, фильтр и сосуд"], ["Смешение промывки и отходов", "Разделить требования и критерии"]] },
       ] },
       { title: "Вывод: поступление воздуха часто определяет тип раньше номинального mL/min", blocks: [
         { type: "paragraph", text: "Если линия остаётся заполненной, начните с жидкостных кандидатов DPL30 или DPL60. Если она захватывает воздух, опорожняется или создаёт вакуум, оцените газожидкостный насос. DPGL800 — один из текущих бесщёточных кандидатов Foreach на 24 V, но его нужно проверить с реальным объёмом, вакуумом, временем, сопротивлением и отходами." },

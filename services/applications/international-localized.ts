@@ -21,6 +21,7 @@ import { getCanonicalUrl } from '@/lib/seo/site-url';
 import { isLiquidChromatographySlug } from '@/data/applications/analytical-documents/liquid-chromatography';
 import { LC_PRODUCTS, LC_TASK_RESOURCES } from '@/data/applications/analytical-documents/liquid-chromatography-resources';
 import { getLiquidChromatographyResources } from './liquid-chromatography-resources';
+import { withQuickDisconnectArticle } from "./quick-disconnect-resources";
 
 const ids: Readonly<Record<string, string>> = sourceIndex;
 const loaders = {
@@ -173,10 +174,10 @@ export async function getLocalizedApplicationResources(locale: ApplicationTransl
       }),
     };
   }
-  if (isFinalizedEnglishReference(kind, document.slug)) return { locale, uiLocale: locale, products: [], articles: [], videos: [] };
+  if (isFinalizedEnglishReference(kind, document.slug)) return withQuickDisconnectArticle({ locale, uiLocale: locale, products: [], articles: [], videos: [] }, kind, document);
   const plan = getReviewFooterPlan(kind, document);
   const slugs = kind === 'ivd' ? [...new Set(getIvdReadingPlan(document).flatMap(reading => reading.slugs))].slice(0, 4) : plan.articles;
-  return {
+  return withQuickDisconnectArticle({
     locale, uiLocale: locale, videos: [],
     products: plan.products.map((key: ReviewProductCardId) => {
       const card = reviewProductCards[key];
@@ -188,5 +189,5 @@ export async function getLocalizedApplicationResources(locale: ApplicationTransl
       if (!article) throw new Error(`Missing local application reading ${locale}/${slug}`);
       return { id: article.id, slug, title: article.title, summary: article.summary, date: article.date, coverImage: article.coverImage };
     }),
-  };
+  }, kind, document);
 }

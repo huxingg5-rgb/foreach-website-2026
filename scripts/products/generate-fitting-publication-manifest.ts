@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { getDescriptiveFittingImageUrl } from "../../data/products/detail/fitting-image-description";
 
 import * as XLSX from "xlsx";
 import cardImageExceptionData from "../../data/products/selection/fitting-card-image-exceptions.json";
@@ -713,7 +714,7 @@ function main() {
       return {
         productCode: code,
         foreachModel: recordModel(record),
-        imageCard: text(record.imageCard),
+        imageCard: getDescriptiveFittingImageUrl(text(record.imageCard)),
         detailHref: canonicalDetailHref(record, detailsByCode),
         productTypeId: text(record.productTypeId),
         productType: text(

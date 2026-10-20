@@ -18,6 +18,15 @@ import { normalizeSiteHref } from "@/lib/seo/site-url";
 import { buildProductSpecProperties } from "@/lib/seo/product-spec-properties";
 import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
 import { getTubingGalleryData } from "@/data/products/tubing/gallery";
+import { getBarbedFittingImageAlt } from "@/data/products/detail/barbed-fitting-gallery";
+import { getThreadToBarbedFittingImageAlt } from "@/data/products/detail/thread-to-barbed-fitting-gallery";
+import { getFemaleThreadAdapterImageAlt } from "@/data/products/detail/female-thread-adapter-gallery";
+import { getBulkheadBarbedFittingImageAlt } from "@/data/products/detail/bulkhead-barbed-fitting-gallery";
+import { getFittingMainImageAlt } from "@/data/products/detail/fitting-image-description";
+import {
+  quickConnectSupplementaryImage,
+  getQuickConnectSupplementaryImageAlt,
+} from "@/data/products/detail/quick-connect-gallery";
 import { getTubingDetailBreadcrumbs } from "@/data/products/selection/tubing-selection-routes";
 
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
@@ -2071,7 +2080,8 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
     [sourceData, configuratorLocale],
   );
   const productImageAlt = String(
-    hardTubeSeo?.imageAlt ||
+    getFittingMainImageAlt(data, configuratorLocale) ||
+      hardTubeSeo?.imageAlt ||
       (data as any).imageAltEn ||
       (data as any).mainImageAlt ||
       (data as any).imageAlt ||
@@ -2090,6 +2100,25 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
     : [];
   const galleryViewLabels = [copy.frontView, copy.sideView, copy.portDetail];
   const getProductImageAlt = (index: number) => {
+    const barbedImageAlt = getBarbedFittingImageAlt(realImages[index], configuratorLocale);
+    if (barbedImageAlt) {
+      return barbedImageAlt;
+    }
+    const threadToBarbedImageAlt = getThreadToBarbedFittingImageAlt(realImages[index], configuratorLocale);
+    if (threadToBarbedImageAlt) {
+      return threadToBarbedImageAlt;
+    }
+    const femaleThreadAdapterImageAlt = getFemaleThreadAdapterImageAlt(realImages[index], configuratorLocale);
+    if (femaleThreadAdapterImageAlt) {
+      return femaleThreadAdapterImageAlt;
+    }
+    const bulkheadBarbedImageAlt = getBulkheadBarbedFittingImageAlt(realImages[index], configuratorLocale);
+    if (bulkheadBarbedImageAlt) {
+      return bulkheadBarbedImageAlt;
+    }
+    if (realImages[index] === quickConnectSupplementaryImage) {
+      return getQuickConnectSupplementaryImageAlt(configuratorLocale);
+    }
     if (index === 0) {
       return productImageAlt;
     }

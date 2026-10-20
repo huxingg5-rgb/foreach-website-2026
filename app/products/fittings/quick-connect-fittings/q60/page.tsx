@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import type { ComponentProps } from "react";
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import QuickConnectRelatedArticles from "@/components/products/detail/QuickConnectRelatedArticles";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import {
   getQuickConnectSeriesDetailData,
   getQuickConnectSeriesMetadata,
@@ -15,7 +18,7 @@ export const metadata: Metadata =
     SERIES
   );
 
-export default function QuickConnectSeriesDetailPage() {
+export default function QuickConnectSeriesDetailPage({ renderLocale = "zh-CN" }: { renderLocale?: TechnicalArticleLocale }) {
   const data =
     getQuickConnectSeriesDetailData(
       SERIES
@@ -29,8 +32,9 @@ export default function QuickConnectSeriesDetailPage() {
 
   return (
     <ProductDetailClient
+      afterContent={<QuickConnectRelatedArticles model={SERIES} locale={renderLocale} />}
       data={
-        data as any
+        data as ComponentProps<typeof ProductDetailClient>["data"]
       }
     />
   );
