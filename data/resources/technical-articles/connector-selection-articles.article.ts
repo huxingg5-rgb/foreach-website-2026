@@ -2,7 +2,10 @@ import { FITTING_PUBLISHED_PRODUCTS } from "@/data/products/selection/fitting-pu
 import type { RelatedResourcesData } from "@/components/common/related-resources/related-resources.types";
 import type { EngineeringArticleBlock } from "./diaphragm-pump-engineering-article.types";
 import type { TechnicalArticleItem, TechnicalArticleLocale } from "./technical-articles.types";
-import { quickDisconnectFittingSlug, threadedHoseBarbFittingsSlug, barbedFittingExpansionRatioSlug, fittingMaterialSelectionSlug } from "./technical-article-availability";
+import { quickDisconnectFittingSlug, threadedHoseBarbFittingsSlug, barbedFittingExpansionRatioSlug, fittingMaterialSelectionSlug, femaleThreadAdaptersSlug, isTechnicalArticleLocaleAvailable } from "./technical-article-availability";
+import { femaleThreadAdaptersCopy, femaleThreadAdaptersNavigation } from "./female-thread-adapters.zh";
+import { bulkheadBarbedFittingSlug } from "./technical-article-availability";
+import { bulkheadBarbedFittingCopy, bulkheadBarbedFittingNavigation } from "./bulkhead-barbed-fitting.zh";
 import { quickDisconnectFittingCopy, quickDisconnectFittingNavigation } from "./quick-disconnect-fitting.zh";
 import { threadedHoseBarbFittingsCopy, threadedHoseBarbFittingsNavigation } from "./threaded-hose-barb-fittings.zh";
 import { quickDisconnectTranslations } from "./quick-disconnect-fitting-locales";
@@ -12,6 +15,8 @@ import { localizeFittingArticle, type FittingTranslationKey } from "./fitting-se
 import { fittingCardCopy } from "./fitting-selection-locales/cards";
 import { addFittingContextLinks } from "./fitting-article-context-links";
 import { fittingArticleImage } from "./fitting-article-images";
+import { panelFittingCards } from "./fitting-selection-locales/panel-fitting-cards";
+import { withEnglishPanelFittingImages } from "./panel-fitting-images";
 
 const articles = [
   {
@@ -126,12 +131,73 @@ const articles = [
       { model: "SA-U28-32D-PA-W", title: "PA 白色螺纹转倒刺接头" },
     ],
   },
+  {
+    slug: femaleThreadAdaptersSlug,
+    copy: femaleThreadAdaptersCopy,
+    navigation: femaleThreadAdaptersNavigation,
+    relationKeys: ["category:female-thread-adapters", "series:u", "series:us", "series:ut", "series:uy", "series:pmu"],
+    subject: { about: ["内螺纹互转接头", "二通与三通连接", "穿板安装", "螺纹端口与密封配套"], mentions: ["U", "US", "UT", "UY", "PMU", "M6×1", "1/4-28 UNF", "PP", "POM", "PPS"] },
+    sidebarCards: [
+      {
+        id: "female-thread-tee-family",
+        title: "UT-U28-15-PP-N · T 型三通",
+        href: "/products/fittings/female-thread-adapters/ut-u28-15-pp-n/",
+        imageSrc: "/images/resources/technical-articles/female-thread-adapters-selection-guide/ut-u28-15-pp-n-sidebar.webp",
+        imageAlt: "恒永达 UT-U28-15-PP-N 本色 PP T 型三通，1/4-28 UNF 内螺纹，通径 1.5 mm",
+        imageFill: true,
+      },
+      {
+        id: "female-thread-pmu-bulkhead",
+        title: "PMU 穿板二通内螺纹接头",
+        href: "/products/fittings/female-thread-adapters/pmu-m12-u28-20-pp-n/",
+        imageSrc: "/images/resources/technical-articles/female-thread-adapters-selection-guide/pmu-sidebar.webp",
+        imageAlt: "PMU-M12-U28-20-PP-N 穿板二通内螺纹接头与安装螺母实拍",
+        imageFill: true,
+      },
+    ],
+    showFooterProducts: true,
+    models: [
+      { model: "US-M6-10-PP-N", title: "US 方型二通 · 1.0 mm 通径" },
+      { model: "U-U28-20-PP-N", title: "U 标准二通 · 2.0 mm 通径" },
+      { model: "UT-U28-15-PP-N", title: "UT T 型三通 · 1.5 mm 通径" },
+      { model: "UY-U28-15-PP-N", title: "UY Y 型三通 · 1.5 mm 通径" },
+      { model: "PMU-M12-U28-20-PP-N", title: "PMU 穿板二通 · 2.0 mm 通径" },
+    ],
+  },
+  {
+    slug: bulkheadBarbedFittingSlug,
+    copy: bulkheadBarbedFittingCopy,
+    navigation: bulkheadBarbedFittingNavigation,
+    relationKeys: ["category:bulkhead-barbed-fittings", "series:pmb", "series:pmbsn"],
+    subject: { about: ["穿板倒刺接头", "面板安装", "软管匹配"], mentions: ["PMB", "PMBSN", "1/4-28 UNF", "PP", "PA"] },
+    sidebarCards: [
+      {
+        id: "pmb-24d-pp", title: "2.4 mm PP 穿板倒刺接头",
+        href: "/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pp-n/",
+        imageSrc: "/images/products/fittings/bulkhead-barbed-fittings/photos/pp-natural-bulkhead-barbed-fitting-long-body-side.webp",
+        imageAlt: "PMB PP 本色穿板倒刺接头侧面实拍，系列外观参考", imageFill: true,
+      },
+      {
+        id: "pmb-24d-pa", title: "2.4 mm PA 穿板倒刺接头",
+        href: "/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pa-w/",
+        imageSrc: "/images/products/fittings/bulkhead-barbed-fittings/photos/pa-white-bulkhead-barbed-fitting-small-body-side.webp",
+        imageAlt: "PMB PA 白色穿板倒刺接头侧面实拍，系列外观参考", imageFill: true,
+      },
+    ],
+    showFooterProducts: true,
+    models: [
+      { model: "PMB-U28-16D-PP-N", title: "1.6 mm PP 穿板倒刺接头" },
+      { model: "PMB-U28-24D-PP-N", title: "2.4 mm PP 穿板倒刺接头" },
+      { model: "PMB-U28-24D-PA-W", title: "2.4 mm PA 穿板倒刺接头" },
+      { model: "PMB-U28-32D-PP-N", title: "3.2 mm PP 穿板倒刺接头" },
+    ],
+  },
 ];
 
 function articlesForLocale(locale: TechnicalArticleLocale) {
-  return articles.map((article, articleIndex) => {
+  return articles.filter(article => isTechnicalArticleLocaleAvailable(article.slug, locale)).map(article => {
     if (locale === "zh-CN") return { ...article, copy: addFittingContextLinks(article.copy, article.slug, locale) };
-    if (articleIndex === 0) {
+    if (article.slug === quickDisconnectFittingSlug) {
       const translation = quickDisconnectTranslations[locale];
       return {
         ...article,
@@ -141,8 +207,28 @@ function articlesForLocale(locale: TechnicalArticleLocale) {
         models: article.models.map((item, index) => ({ ...item, title: translation.productTitles[index] })),
       };
     }
-    const key = (["threaded", "expansion", "materials"] as const)[articleIndex - 1] as FittingTranslationKey;
+    const keyBySlug: Record<string, FittingTranslationKey> = {
+      [threadedHoseBarbFittingsSlug]: "threaded", [barbedFittingExpansionRatioSlug]: "expansion",
+      [fittingMaterialSelectionSlug]: "materials", [femaleThreadAdaptersSlug]: "female",
+      [bulkheadBarbedFittingSlug]: "bulkhead",
+    };
+    const key = keyBySlug[article.slug];
     const translated = localizeFittingArticle(key, { copy: article.copy, navigation: article.navigation }, locale);
+    if (key === "female" || key === "bulkhead") {
+      const cards = panelFittingCards[locale];
+      const sidebarTitles = key === "female" ? cards.femaleSidebar : [cards.bulkhead[1], cards.bulkhead[2]];
+      return {
+        ...article,
+        copy: withEnglishPanelFittingImages(translated.copy),
+        navigation: translated.navigation,
+        subject: { ...article.subject, about: [translated.copy.metadata.title] },
+        models: article.models.map((item, index) => ({ ...item, title: cards[key][index] })),
+        sidebarCards: article.sidebarCards?.map((card, index) => ({
+          ...card, href: `/${locale}${card.href}`, title: sidebarTitles[index],
+          imageAlt: `${key === "bulkhead" ? cards.familyPhoto : cards.photo}: ${sidebarTitles[index]}`,
+        })),
+      };
+    }
     const cards = fittingCardCopy[locale];
     const sidebarTitles = key === "threaded" ? cards.threadedSidebar
       : key === "expansion" ? cards.expansionSidebar : cards.materialsSidebar;
@@ -176,7 +262,8 @@ function blockText(block: EngineeringArticleBlock): string {
 export function getConnectorSelectionArticles(locale: TechnicalArticleLocale): TechnicalArticleItem[] {
   return articlesForLocale(locale).map(({ slug, copy, relationKeys }) => ({
     id: slug, slug, category: "fittings-tubing",
-    ...copy.metadata, summary: copy.deck, date: "2026-10-20",
+    ...copy.metadata, summary: copy.deck, date: slug === femaleThreadAdaptersSlug || slug === bulkheadBarbedFittingSlug ? "2026-10-21" : "2026-10-20",
+    ...(slug === femaleThreadAdaptersSlug || slug === bulkheadBarbedFittingSlug ? { dateModified: "2026-10-21" } : {}),
     relationKeys, relationPriority: 150,
     content: [
       { title: "", content: copy.leadBlocks.map(blockText).join("\n\n") },

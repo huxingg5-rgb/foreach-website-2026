@@ -9,6 +9,7 @@ import {
   barbedFittingSlug as barbed, luerFittingSlug as luer,
   quickDisconnectFittingSlug as quick, threadedHoseBarbFittingsSlug as threaded,
   barbedFittingExpansionRatioSlug as expansion, fittingMaterialSelectionSlug as material,
+  femaleThreadAdaptersSlug as female, bulkheadBarbedFittingSlug as bulkhead,
 } from "./technical-article-availability";
 
 type ArticleEndpoint = readonly [slug: string, sectionId: string];
@@ -19,19 +20,24 @@ export const fittingArticleRelations: readonly (readonly [ArticleEndpoint, Artic
   [[hard, "structures"], [flanged, "sealing"]],
   [[hard, "structures"], [ferrule, "comparison"]],
   [[hard, "structures"], [ring, "comparison"]],
+  [[hard, "selection-example"], [female, "connection"]],
   [[hard, "tubing"], [material, "operating-conditions"]],
   [[flanged, "sealing"], [ferrule, "comparison"]],
   [[flanged, "sealing"], [ring, "comparison"]],
   [[ferrule, "comparison"], [ring, "comparison"]],
   [[barbed, "types"], [threaded, "two-seals"]],
   [[barbed, "profiles"], [expansion, "profiles"]],
+  [[barbed, "types"], [bulkhead, "comparison"]],
   [[barbed, "types"], [luer, "connection"]],
   [[barbed, "materials"], [material, "pp-pa-example"]],
   [[quick, "conditions"], [material, "wetted-parts"]],
+  [[quick, "panel-mount"], [bulkhead, "comparison"]],
   [[quick, "connection"], [luer, "locking"]],
   [[threaded, "tubing-size"], [expansion, "dimensions"]],
   [[threaded, "installation"], [material, "operating-conditions"]],
+  [[threaded, "threads"], [female, "ports-and-sealing"]],
   [[expansion, "tubing-selection"], [material, "pp-pa-example"]],
+  [[expansion, "fit-testing"], [bulkhead, "dimensions"]],
 ];
 
 export const tubingAssemblyArticleSlugs = {

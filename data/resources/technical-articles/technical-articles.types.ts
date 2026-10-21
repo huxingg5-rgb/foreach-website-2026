@@ -90,6 +90,8 @@ export interface TechnicalArticleItem {
   title: string;
   summary: string;
   date: string;
+  /** Date of the last substantive content revision, when recorded. */
+  dateModified?: string;
   coverImage: string;
   coverAlt?: string;
   content: TechnicalArticleBlock[];

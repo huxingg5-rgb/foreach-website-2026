@@ -17,14 +17,28 @@ import materialsEs from "./materials.es.json";
 import materialsFr from "./materials.fr.json";
 import materialsKo from "./materials.ko.json";
 import materialsRu from "./materials.ru.json";
+import femaleSource from "./female.source.json";
+import bulkheadSource from "./bulkhead.source.json";
+import femaleEn from "./female.en.json";
+import femaleEs from "./female.es.json";
+import femaleFr from "./female.fr.json";
+import femaleKo from "./female.ko.json";
+import femaleRu from "./female.ru.json";
+import bulkheadEn from "./bulkhead.en.json";
+import bulkheadEs from "./bulkhead.es.json";
+import bulkheadFr from "./bulkhead.fr.json";
+import bulkheadKo from "./bulkhead.ko.json";
+import bulkheadRu from "./bulkhead.ru.json";
 
 type ForeignLocale = Exclude<TechnicalArticleLocale, "zh-CN">;
-const sources = { threaded: threadedSource, expansion: expansionSource, materials: materialsSource };
+const sources = { threaded: threadedSource, expansion: expansionSource, materials: materialsSource, female: femaleSource, bulkhead: bulkheadSource };
 export type FittingTranslationKey = keyof typeof sources;
 const dictionaries: Record<FittingTranslationKey, Record<ForeignLocale, Record<string, string>>> = {
   threaded: { en: threadedEn, es: threadedEs, fr: threadedFr, ko: threadedKo, ru: threadedRu },
   expansion: { en: expansionEn, es: expansionEs, fr: expansionFr, ko: expansionKo, ru: expansionRu },
   materials: { en: materialsEn, es: materialsEs, fr: materialsFr, ko: materialsKo, ru: materialsRu },
+  female: { en: femaleEn, es: femaleEs, fr: femaleFr, ko: femaleKo, ru: femaleRu },
+  bulkhead: { en: bulkheadEn, es: bulkheadEs, fr: bulkheadFr, ko: bulkheadKo, ru: bulkheadRu },
 };
 
 // Keep dimensions, model codes, structure and anchors from the reviewed source.
@@ -39,7 +53,7 @@ export function localizeFittingArticle<T>(key: FittingTranslationKey, value: T, 
   }
   function walk(input: unknown, field = ""): unknown {
     if (typeof input === "string") {
-      if (["href", "captionHref", "productsHref"].includes(field) && input.startsWith("/")) {
+      if (["href", "captionHref", "productsHref"].includes(field) && /^\/(products|resources|applications|contact)(\/|$)/.test(input)) {
         return `/${locale}${input}`;
       }
       if (/\p{Script=Han}/u.test(input)) {
@@ -47,7 +61,7 @@ export function localizeFittingArticle<T>(key: FittingTranslationKey, value: T, 
         if (!translated) throw new Error(`Untranslated ${key}/${locale}/${field}: ${input}`);
         return translated;
       }
-      return input.replaceAll("。", ".").replaceAll("；", "; ").replaceAll("～", "–");
+      return input.replaceAll("。", ".").replaceAll("；", "; ").replaceAll("～", "–").replaceAll("：", ": ").replaceAll("、", ", ");
     }
     if (Array.isArray(input)) return input.map(item => walk(item, field));
     if (input && typeof input === "object") {

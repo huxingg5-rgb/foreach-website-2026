@@ -483,6 +483,32 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
     },
     relatedProducts: ["Q2001-PNV-SPPE", "Q2001-SMV-SPPE", "Q4004-PNV-SPPE", "Q6006-SNV-SPPE"],
   },
+  "female-thread-adapters-selection-guide": {
+    primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
+    tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"],
+    localizedLiteralTags: {
+      "zh-CN": ["内螺纹互转接头", "二通与三通", "M6×1", "1/4-28 UNF", "PMU 穿板", "通径"],
+      en: ["Female thread unions", "Straight and branch connections", "M6×1", "1/4-28 UNF", "PMU bulkhead unions", "Bore diameter"],
+      es: ["Uniones de rosca hembra", "Conexiones rectas y derivaciones", "M6×1", "1/4-28 UNF", "Uniones pasamuros PMU", "Diámetro de paso"],
+      fr: ["Unions à filetage femelle", "Raccords droits et dérivations", "M6×1", "1/4-28 UNF", "Unions traversantes PMU", "Diamètre de passage"],
+      ko: ["암나사 유니온", "직선 및 분기 연결", "M6×1", "1/4-28 UNF", "PMU 벌크헤드 유니온", "통경"],
+      ru: ["Муфты с внутренней резьбой", "Прямые и разветвляющие соединения", "M6×1", "1/4-28 UNF", "Переборочные муфты PMU", "Диаметр прохода"],
+    },
+    relatedProducts: ["US-M6-10-PP-N", "U-U28-20-PP-N", "UT-U28-15-PP-N", "UY-U28-15-PP-N", "PMU-M12-U28-20-PP-N"],
+  },
+  "what-is-a-bulkhead-barbed-fitting": {
+    primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
+    tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"],
+    localizedLiteralTags: {
+      "zh-CN": ["穿板倒刺接头", "PMB", "PMBSN", "面板安装", "接管内径", "1/4-28 UNF"],
+      en: ["Bulkhead barbed fittings", "PMB", "PMBSN", "Panel mounting", "Tubing inner diameter", "1/4-28 UNF"],
+      es: ["Racores de espiga pasamuros", "PMB", "PMBSN", "Montaje en panel", "Diámetro interior del tubo", "1/4-28 UNF"],
+      fr: ["Raccords cannelés traversants", "PMB", "PMBSN", "Montage sur panneau", "Diamètre intérieur du tube", "1/4-28 UNF"],
+      ko: ["벌크헤드 바브 피팅", "PMB", "PMBSN", "패널 장착", "튜브 내경", "1/4-28 UNF"],
+      ru: ["Переборочные штуцеры-ёлочки", "PMB", "PMBSN", "Монтаж в панели", "Внутренний диаметр трубки", "1/4-28 UNF"],
+    },
+    relatedProducts: ["PMB-U28-16D-PP-N", "PMB-U28-24D-PP-N", "PMB-U28-24D-PA-W", "PMB-U28-32D-PP-N"],
+  },
   "threaded-hose-barb-fittings-selection-guide": {
     primaryCategory: "fittings-tubing", secondaryCategory: "fittings",
     tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"],

@@ -32,7 +32,7 @@ const navigationFactories: Record<string, (locale: TechnicalArticleLocale) => re
 const hrefs = (blocks: readonly EngineeringArticleBlock[]) => blocks.flatMap(block =>
   block.type === "links" ? block.items.map(item => item.href) : block.type === "figure" && block.link ? [block.link.href] : []);
 const slugs = [...new Set(fittingArticleRelations.flatMap(pair => pair.map(endpoint => endpoint[0])))];
-assert.equal(slugs.length, 10, "The published recent fitting cluster must be covered");
+assert.equal(slugs.length, 12, "The complete recent fitting cluster must be covered");
 
 let verified = 0;
 for (const locale of allTubingAssemblyLocales) {

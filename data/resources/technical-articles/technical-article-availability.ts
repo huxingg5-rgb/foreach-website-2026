@@ -10,6 +10,8 @@ export const quickDisconnectFittingSlug = "what-is-a-quick-disconnect-fitting";
 export const threadedHoseBarbFittingsSlug = "threaded-hose-barb-fittings-selection-guide";
 export const barbedFittingExpansionRatioSlug = "barbed-fitting-expansion-ratio";
 export const fittingMaterialSelectionSlug = "fitting-material-selection-guide";
+export const femaleThreadAdaptersSlug = "female-thread-adapters-selection-guide";
+export const bulkheadBarbedFittingSlug = "what-is-a-bulkhead-barbed-fitting";
 
 // Locale-limited articles share this small registry with the header so the
 // language switcher never needs to ship article bodies to the browser.

@@ -3,6 +3,7 @@ import { getFittingAssemblyLinks, withFittingArticleLinks } from "@/data/resourc
 import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
 import { getConnectorSelectionArticle } from "@/data/resources/technical-articles/connector-selection-articles.article";
 import ArticleRelatedProducts from "./ArticleRelatedProducts";
+import { representativeModelsTitle } from "@/data/resources/technical-articles/fitting-selection-locales/panel-fitting-cards";
 import { getArticleRelatedProducts } from "@/services/resources/technical-articles/getArticleRelatedProducts";
 import { getArticleFooterResources } from "@/services/resources/technical-articles/getArticleFooterResources";
 import { getCompressionRingFittingCopy, getCompressionRingFittingNavigation, compressionRingFittingSlug } from "@/data/resources/technical-articles/what-is-a-compression-ring-fitting.zh";
@@ -240,8 +241,8 @@ function buildTechnicalArticleStructuredData(
       : article.slug === programmablePipettingPumpSlug
         ? getProgrammablePipettingSources(locale).map(href => href.startsWith("/") ? getCanonicalUrl(href) : href)
       : [];
-  // Match the RPL page's canonical URL policy without changing other articles.
-  const structuredUrl = rplSources
+  // Keep the existing URL policy for articles outside this release.
+  const structuredUrl = rplSources || article.dateModified
     ? getCanonicalUrl
     : toAbsoluteTechnicalArticleUrl;
   const breadcrumbItems = pageData.breadcrumbs.map((item, index) => ({
@@ -272,6 +273,9 @@ function buildTechnicalArticleStructuredData(
       ? { image: toAbsoluteTechnicalArticleUrl(article.coverImage) }
       : {}),
     ...(article.date ? { datePublished: article.date } : {}),
+    ...(article.dateModified
+      ? { dateModified: article.dateModified }
+      : {}),
     author: { "@id": organizationId },
     publisher: { "@id": organizationId },
     mainEntityOfPage: {
@@ -1115,7 +1119,8 @@ export default function TechnicalArticleDetail({
     ? getBarbedFittingRelatedProducts(locale).products
     : getArticleRelatedProducts(article, locale);
   const relatedProductsSidebar = sidebarProducts.length
-    ? <ArticleRelatedProducts products={sidebarProducts} locale={locale} /> : null;
+    ? <ArticleRelatedProducts products={sidebarProducts} locale={locale}
+        title={["what-is-a-bulkhead-barbed-fitting", "female-thread-adapters-selection-guide"].includes(article.slug) ? representativeModelsTitle[locale] : undefined} /> : null;
   const footerResources = getArticleFooterResources(article, locale);
 
   if (connectorArticle || isBarbedFittingArticle || isLuerFittingArticle || isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {

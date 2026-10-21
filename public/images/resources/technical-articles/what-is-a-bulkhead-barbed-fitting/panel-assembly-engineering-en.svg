@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" role="img" aria-labelledby="title desc">
+ <title id="title">PMB U28 bulkhead connection: partial section</title>
+ <desc id="desc">Assembly section: the body shoulder and PMBSN nut clamp the panel. Tubing fits over the barbs on each side of the continuous passage. Panel thickness t ≤3.5 mm; mounting thread 1/4-28 UNF. Hatching distinguishes the components. Not to scale; no panel-face seal is shown.</desc>
+ <defs>
+  <pattern id="body" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-2 2L2-2M0 10L10 0M8 12L12 8" stroke="#111" stroke-width=".65"/></pattern>
+  <pattern id="panel" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M-2 2L2-2M0 6L6 0M4 8L8 4" stroke="#111" stroke-width=".65"/></pattern>
+  <pattern id="nut" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M-2 7L2 11M0 0L9 9M7-2L11 2" stroke="#111" stroke-width=".65"/></pattern>
+  <pattern id="tube" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 2.5H5" stroke="#111" stroke-width=".55"/></pattern>
+  <marker id="arrow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="7" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 4L0 8Z" fill="#111"/></marker>
+ </defs>
+ <rect width="720" height="620" fill="#fff"/>
+ <g font-family="Arial,Microsoft YaHei,sans-serif" fill="#111">
+  <text x="24" y="43" font-size="28" font-weight="700">PMB U28 · Bulkhead assembly section</text>
+  <text x="24" y="78" font-size="21">Body / PMBSN nut / panel / tubing</text>
+  <path d="M24 97H696M24 535H696" stroke="#111" stroke-width="1.2"/>
+  <rect x="335" y="145" width="42" height="110" fill="url(#panel)" stroke="#111" stroke-width="1.8"/>
+  <rect x="335" y="345" width="42" height="115" fill="url(#panel)" stroke="#111" stroke-width="1.8"/>
+  <path d="M95 278L155 266L155 278H285V244H335V263H450V278H540V266L620 278V322L540 334V322H450V337H335V356H285V322H155V334L95 322Z" fill="url(#body)" stroke="#111" stroke-width="2.2"/>
+  <path d="M377 240H420L439 261V263H377ZM377 337H439V339L420 360H377Z" fill="url(#nut)" stroke="#111" stroke-width="2.2"/>
+  <path d="M377 258H439M377 342H439M439 267L450 274M439 284L450 291M439 309L450 316M439 326L450 333" stroke="#111" stroke-width=".9"/>
+  <rect x="94" y="289" width="527" height="22" fill="#fff"/>
+  <path d="M95 289H620M95 311H620" stroke="#111" stroke-width="2"/>
+  <path d="M40 260H210V278H155L95 289H40ZM40 340H210V322H155L95 311H40Z" fill="url(#tube)" stroke="#111" stroke-width="1.7"/>
+  <path d="M505 260H680V289H620L540 278H505ZM505 340H680V311H620L540 322H505Z" fill="url(#tube)" stroke="#111" stroke-width="1.7"/>
+  <path d="M22 300H698" fill="none" stroke="#111" stroke-width=".8" stroke-dasharray="20 4 3 4"/>
+  <g fill="none" stroke="#111" stroke-width="1.1"><path d="M125 260V208H40"/><path d="M310 244V170H220"/><path d="M407 240V195H475"/><path d="M575 334V400H615"/><path d="M230 300V435H105"/></g>
+  <text x="40" y="194" font-size="24">Tube wall</text>
+  <text x="175" y="155" font-size="24">Body shoulder</text>
+  <text x="480" y="202" font-size="24">Mounting nut</text>
+  <text x="523" y="432" font-size="23">Barb contact</text>
+  <text x="42" y="466" font-size="24">Flow passage</text>
+  <path d="M335 460V495M377 460V495" stroke="#111" stroke-width=".9"/>
+  <path d="M337 481H375" stroke="#111" stroke-width="1.1" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="356" y="521" text-anchor="middle" font-size="23">Panel thickness t ≤ 3.5 mm</text>
+  <text x="24" y="568" font-size="21">Mounting: 1/4-28 UNF; nut and shoulder clamp the panel.</text>
+  <text x="24" y="601" font-size="18">Not to scale. No panel-face seal shown. Validate tubing fit separately.</text>
+ </g>
+</svg>

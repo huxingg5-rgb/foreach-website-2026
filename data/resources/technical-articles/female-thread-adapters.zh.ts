@@ -1,0 +1,179 @@
+import type { DiaphragmPumpEngineeringArticleCopy } from "./diaphragm-pump-engineering-article.types";
+
+// Evidence checked 2026-10-21: FOREACH A02 Chinese catalogue, printed pp. 80–84
+// (PDF pp. 81–85), and current FITTING_PUBLISHED_PRODUCTS / model records.
+// U/US: printed pp. 81, 83; PMU/UT/UY: printed pp. 82–84.
+// AC means POM and PS means PPS in this catalogue's model code.
+// PMU: mounting M12×1.5, fluid ports 1/4-28 UNF, bore 2 mm, panel ≤12.5 mm.
+// U-U40-U28-15-AC-N is a catalogue example, not a current published SKU link.
+// Thread mating alone does not establish port-seat or sealing-kit compatibility.
+// Do not transfer a connector/ferrule torque or pressure rating to the whole family.
+// The catalogue's zero-dead-volume wording is conditional on matching bore/tube ID;
+// this article does not turn it into a system carryover or cleaning guarantee.
+// Supporting industry terminology: IDEX Flangeless Fitting System Connection Guide.
+// Images use existing FOREACH family photos and original A02 catalogue figures.
+// Figures 1/3: printed p. 81; figures 4/5: printed p. 82. PDF crops retain
+// the original geometry and labels; dimensions remain specific to the shown model.
+const productRoot = "/products/fittings/female-thread-adapters/";
+const imageRoot = "/images/resources/technical-articles/female-thread-adapters-selection-guide/";
+
+export const femaleThreadAdaptersCopy: DiaphragmPumpEngineeringArticleCopy = {
+  metadata: {
+    title: "什么是内螺纹互转接头？二通、三通与穿板结构的区别及选型",
+    seoTitle: "内螺纹互转接头是什么？二通、三通与穿板选型｜恒永达 FOREACH",
+    seoDescription: "内螺纹互转接头怎么选？对比直通二通、T/Y 型三通与穿板结构，讲清 M6×1 与 1/4-28 UNF 的配套密封、通径与残留体积，并附漏液排查方法。",
+    coverImage: `${imageRoot}two-way-family.webp`,
+    coverAlt: "恒永达 U 标准型与 US 方型二通内螺纹接头系列实拍",
+  },
+  deck: "从两段管路对接，到三通分支和面板固定，先确定液路连接任务，再逐端核对螺纹与密封配套，最后选择通径、材料和安装方式。",
+  leadBlocks: [
+    { type: "paragraph", lead: "内螺纹互转接头是带有两个或三个内螺纹端口的液路连接件。", text: "内螺纹互转接头是带有两个或三个内螺纹端口的液路连接件。它通过配套的外螺纹接头和密封组件连接软管或硬管，使两段管路连通，或形成分流、汇流节点；穿板型号还可以把连接位置固定在仪器面板上。" },
+    { type: "paragraph", text: "恒永达这一产品系列包括 U 标准二通、US 方型二通、PMU 穿板二通、UT T 型三通和 UY Y 型三通。本文围绕 M6×1、1/4-28 UNF 端口以及 0.5–2.0 mm 通径说明选型，各系列实际提供的规格和材料并不相同。" },
+    { type: "paragraph", text: "本系列中的“互转”主要指管路之间的对接。官网当前展示的型号，每个型号的各液路端口采用相同螺纹，规格包括 M6×1 和 1/4-28 UNF；两端螺纹不同的转接，需要另行确认具体型号与供货方案。英文资料中，同规格直通连接常称 union，异规格转接常称 adapter，T 型、Y 型和穿板结构分别可见 tee、Y connector 和 bulkhead union 等名称。" },
+  ],
+  sections: [
+    {
+      title: "内螺纹互转接头如何连接软管和硬管？",
+      blocks: [
+        { type: "paragraph", text: "连接时，管路先与适合它的外螺纹连接件组成端接，再装入内螺纹本体。硬管通常需要与管外径及端口结构匹配的螺母、卡箍、卡环或翻边组件；软管可经适配的螺纹转倒刺接头进入内螺纹端口。实际组合应同时满足管路夹持和端口密封要求。" },
+        { type: "figure", src: `${imageRoot}catalog-two-way-section.webp`, width: 1500, height: 991, alt: "接头手册中的 U 标准二通内螺纹本体剖面及中央通径局部放大图", caption: "图 1｜U 标准二通的两侧内螺纹与中央通道。图中为本体剖面，连接管路还需配套外螺纹连接件和密封组件。来源：接头手册第 81 页。" },
+        { type: "paragraph", text: "以平底端口与相应管路组件配合为例，螺纹提供轴向紧固力，密封则依靠密封件、管端和端口密封面的正确接触。螺纹相同而密封面形状、端口深度或组件伸出长度不同，仍可能无法形成有效密封。" },
+        { type: "paragraph", text: "本体的内螺纹用于接收外螺纹连接件，管路需要先完成端接再装入端口。维护时，拆开螺纹端接和拔下软管是两个独立动作：拆装前先停机卸压，再检查密封件和管端状态；更换零件时核对原组合型号及配套要求，外形相似的零件也可能采用不同密封结构。" },
+        { type: "links", items: [
+          { href: "/resources/technical-articles/hard-tube-fittings-selection-guide/", label: "硬管接头的连接结构与配套选择", prefix: "硬管端接可继续阅读", suffix: "；" },
+          { href: "/resources/technical-articles/threaded-hose-barb-fittings-selection-guide/", label: "螺纹转倒刺接头的两端密封", prefix: "软管端接可参考", suffix: "。" },
+        ] },
+      ],
+    },
+    {
+      title: "U、US、PMU、UT、UY 内螺纹接头有什么区别？",
+      blocks: [
+        { type: "paragraph", text: "先按通道数量和固定方式选择结构。U、US 用于两段管路的直通连接；PMU 增加穿板固定结构；UT、UY 提供三个相通端口，用于分流或汇流。US 的方形本体与 U 的标准本体不同，但外形本身不能用来判断通径或耐压能力。" },
+        { type: "figure", src: `${imageRoot}two-way-family.webp`, width: 960, height: 960, alt: "U 标准型与 US 方型二通内螺纹接头的本色和黑色系列合照", caption: "图 2｜U 与 US 二通系列实拍。照片展示本体外形，不用于判定单件的螺纹、内部通径或材料牌号。" },
+        { type: "paragraph", text: "下表用当前产品中的代表型号说明五类结构；每行的规格属于所列系列或型号，不能相互套用。" },
+        { type: "table", headers: ["结构与用途", "端口与通径", "材料与代表型号"], rows: [
+          ["U 标准二通：两段管路对接", "M6×1 或 1/4-28 UNF；以下代表型号为 2.0 mm 通径", "U-M6-20-AC-B：POM；U-U28-20-PP-N：PP"],
+          ["US 方型二通：方形本体的直通连接", "M6×1；0.5、1.0、1.5 mm 通径", "PP 或 POM；例如 US-M6-10-PP-N，通径 1.0 mm"],
+          ["PMU 穿板二通：固定在仪器面板", "液路端口 1/4-28 UNF；通径 2.0 mm", "PP；PMU-M12-U28-20-PP-N"],
+          ["UT T 型三通：直线主路与侧向支路", "1/4-28 UNF；1.5、2.0 mm 通径", "PP 或 PPS；例如 UT-U28-15-PP-N，通径 1.5 mm"],
+          ["UY Y 型三通：斜向分支或汇流", "1/4-28 UNF；1.0、1.5、2.0 mm 通径", "PP；例如 UY-U28-15-PP-N，通径 1.5 mm"],
+        ] },
+        { type: "paragraph", text: "型号可帮助识别配置。例如 UT-U28-15-PS-B 中，UT 表示 T 型三通，U28 表示 1/4-28 UNF，15 表示 1.5 mm 通径，PS 在本系列编码中对应 PPS，B 表示黑色。AC 对应 POM，N 表示本色；不能把材料代码 PS 按其他行业的缩写习惯理解为聚苯乙烯。" },
+        { type: "paragraph", text: "材料选择要同时覆盖本体、配套密封件和管路。本系列不同型号提供 PP、POM 或 PPS 本体，适用性取决于介质、浓度、温度、接触时间及清洗剂。材料按完整型号及对应资料核对，颜色只用于辅助识别；整套连接的允许压力需结合本体、密封件、管路和工作温度确认。" },
+        { type: "links", items: [{ href: "/resources/technical-articles/fitting-material-selection-guide/", label: "接头本体与密封件的材料选择", prefix: "进一步核对介质条件时，可阅读", suffix: "。" }] },
+      ],
+    },
+    {
+      title: "M6×1 和 1/4-28 UNF 内螺纹接头怎样配套密封？",
+      blocks: [
+        { type: "paragraph", text: "M6×1 与 1/4-28 UNF 是不同的螺纹规格，不能直接互拧。M6×1 表示公称直径 6 mm、螺距 1 mm；1/4-28 UNF 表示公称直径 1/4 英寸、每英寸 28 牙。两者尺寸接近并不意味着匹配，强行旋入会损伤塑料螺纹或使连接件偏斜。" },
+        { type: "paragraph", text: "逐个端口核对时，应把连接螺纹、密封结构和管路尺寸分开记录。" },
+        { type: "table", headers: ["检查对象", "需要确认的内容", "为什么影响连接"], rows: [
+          ["端口螺纹", "完整规格、内外螺纹及对应端口；M6×1、1/4-28 UNF 均为平行螺纹", "只写 M6 或 1/4 容易漏掉螺距或标准；不能靠强拧补偿错配"],
+          ["密封位置", "平底或其他密封面、端口深度、连接件前端长度及指定密封组件", "螺纹已经锁紧，不代表密封件已经正确压合"],
+          ["管路端接", "管内径、外径、材料；卡箍、卡环或翻边组件的具体配套", "管外径用于选择相应夹持/密封件，管内径参与流道衔接"],
+          ["另一端或第三端", "分别记录每一个端口的规格与配套", "不能核对一个端口后，默认其余端口都已匹配"],
+        ] },
+        { type: "paragraph", text: "U-M6-20-PP-N 的两端均为 M6×1，U-U28-20-PP-N 的两端均为 1/4-28 UNF。官网当前展示的 U、US、UT、UY、PMU 型号，各液路端口采用相同的螺纹规格；管路尺寸和端接组件仍需分别选择。需要两端螺纹不同的转接时，请提供两端螺纹、管路尺寸和介质，联系恒永达确认具体型号、供货与配套方案。" },
+        { type: "paragraph", text: "接头上的字唛可以辅助区分端口：M 表示 M6×1，E 表示 1/4-28 UNF；装配时仍以完整型号和端口资料为准。平底密封组合通过对应密封组件与端口密封面的正确配合实现密封。出现端面泄漏时，应检查管端是否到位、密封组件及端口是否完好；生料带等辅助密封材料只在该组合的装配要求明确规定时使用。" },
+      ],
+    },
+    {
+      title: "内螺纹接头的通径怎么选？与管径、残留体积有什么关系？",
+      blocks: [
+        { type: "paragraph", text: "通径表示接头内部过液通道的尺寸，螺纹规格表示端口的机械连接尺寸，两者是独立参数。例如 US-M6 系列同为 M6×1 端口，却有 0.5、1.0、1.5 mm 通径；更换通径不一定改变外螺纹配套规格，但会改变内部流道与管内径的衔接。" },
+        { type: "figure", src: `${imageRoot}catalog-us-bore.webp`, width: 1500, height: 986, alt: "接头手册中的 US 方型二通外形与剖面尺寸图，A 标记内部通径，尺寸单位为毫米", caption: "图 3｜US 方型二通原图中的 A 表示内部通径；US-M6 系列可选 0.5、1.0、1.5 mm，不代表端口螺纹直径或管外径。来源：接头手册第 81 页。" },
+        { type: "paragraph", text: "选择通径时，先记录管内径和目标流量，再检查接头是否成为局部限制。在其他条件相近时，较小通道可能增加压降；较大的腔体也可能增加需要置换的液量。实际结果仍与通道长度、转弯、端接几何、液体黏度和运行流量有关，不能仅凭通径大小给出流量或残留保证。" },
+        { type: "paragraph", text: "管内径与接头通孔相匹配、管端按对应连接结构到位时，有助于减少连接处的台阶和滞留空间。这是低残留连接的重要条件。整机残留还与内部流道容积、未被充分冲洗的区域及运行方式有关，需要结合实际置换测试评估。" },
+        { type: "paragraph", text: "对试剂切换、样品输送和清洗液路，建议在装机后检查置换过程：保持实际管长、连接组件和运行流量，用允许的示踪或浓度测量方法记录出口恢复到目标状态所需的冲洗量。将结果与检漏、压降和气泡表现一起评估，才能判断所选通径是否适合这条液路。" },
+      ],
+    },
+    {
+      title: "T 型与 Y 型内螺纹三通怎样用于分流和汇流？",
+      blocks: [
+        { type: "paragraph", text: "UT 和 UY 都有三个相通端口，既可用于一路分成两路，也可用于两路汇入一路。T 型适合直线主路带侧向支路的布置；Y 型提供斜向分支。选择时先看相邻管路的走向、弯曲空间和安装孔位置，再比较对应通径及实际工况。" },
+        { type: "figure", src: `${imageRoot}catalog-tee-y-channels.webp`, width: 1321, height: 1500, alt: "接头手册中的 UT T 型和 UY Y 型三通内部通道，右侧放大显示通道交汇处及通孔内径", caption: "图 4｜上方为 UT T 型，下方为 UY Y 型，右侧展示通道交汇处的局部放大。两种结构均可用于分流或汇流，实际流向与支路流量由系统工况决定。来源：接头手册第 82 页。" },
+        { type: "paragraph", text: "普通三通提供连接，不主动控制分配比例。即使两条支路使用相同管径，只要长度、下游背压、阀门开度或局部阻力不同，流量就可能不同。因此，需要两路等量供液时，应设置相应的流量控制或计量方案，并在两路同时工作和单路工作时分别验证。" },
+        { type: "paragraph", text: "汇流也不等于充分混合。两种液体是否达到需要的均匀程度，还取决于流量比、流体性质和后续流道；不能仅凭 T 型或 Y 型外观作保证。若一条支路停用，还要检查其他支路的压力是否造成倒流，需要隔离时由系统设置阀或其他适合的措施。" },
+        { type: "paragraph", text: "UT 与 UY 带有安装孔，可用于固定分支节点，避免管路重量持续作用于端口。布管时为旋紧、拆卸和清洗留出工具空间。T 型与 Y 型的实际压降差异取决于流量、流道几何和流体性质，需要比较时按实际工况测量。" },
+      ],
+    },
+    {
+      title: "PMU 穿板内螺纹接头怎么安装？面板厚度和两种螺纹如何区分？",
+      blocks: [
+        { type: "paragraph", text: "PMU-M12-U28-20-PP-N 将穿板固定和液路连接分在两处：本体外侧 M12×1.5 螺纹用于安装螺母，两侧内螺纹端口为 1/4-28 UNF，内部通径为 2.0 mm。型号中的 M12 不表示两侧液路端口为 M12。" },
+        { type: "figure", src: `${imageRoot}catalog-pmu-panel-mount.webp`, width: 1500, height: 1178, alt: "接头手册中的 PMU 穿板二通装配图，标出面板、安装螺母、1/4-28 UNF 内螺纹本体以及两侧管路端接", caption: "图 5｜PMU 穿板二通的原始装配图，面板夹在安装螺母与本体挡肩之间。该型号允许面板厚度不超过 12.5 mm，需配套螺母。来源：接头手册第 82 页。" },
+        { type: "paragraph", text: "该 PMU 型号允许的面板厚度不超过 12.5 mm，安装时需要配套螺母。面板应夹在本体挡肩与螺母之间，先确认安装方向、开孔和可夹持厚度，再完成固定。12.5 mm 是允许面板厚度，不是开孔直径，也不是液路接头的旋入深度。" },
+        { type: "list", ordered: true, items: [
+          "装配前核对 PMU 完整型号、配套螺母和面板图纸；检查螺纹、挡肩与面板孔边缘，清除毛刺及异物。",
+          "让本体穿过面板，用配套螺母固定；保持本体不随工具转动，不让已连接的管路承受扭转。",
+          "两侧分别安装与 1/4-28 UNF 端口及密封面相匹配的管路端接，区分面板固定与液路密封的紧固要求。",
+          "在面板两侧留出端接拆装、螺母操作和管路弯曲空间，设置合适的管路支撑。",
+          "完成装配后，在目标温度、压力与流量下检查密封和通流；用于吸液侧时增加负压进气检查。",
+        ] },
+        { type: "paragraph", text: "需要通过安装螺母穿板固定时，可选择 PMU；U 标准二通用于管路之间的直接对接。带卡簧固定结构的其他二通按各自的板厚和卡簧要求安装，与 PMU 的 12.5 mm 面板厚度限制分开核对。" },
+      ],
+    },
+    {
+      title: "分析仪器需要一路供液、两路分支时，怎样选择内螺纹接头？",
+      blocks: [
+        { type: "paragraph", text: "假设一台分析仪需要将同一种清洗液送往两个用液模块，拟采用内径 1.5 mm 的管路，并希望把分支节点固定在机内。这个任务可先从 UT T 型或 UY Y 型三通筛选，再按端口配套和布管条件确定方案。以下是选型示例，不是已验证的客户装机案例。" },
+        { type: "list", ordered: true, items: [
+          "明确用液状态：记录两路同时或交替工作的流量、下游背压，以及某一路关闭时另一条支路的运行要求。",
+          "初选结构与通径：直线主路带侧向支路可评估 UT-U28-15-PP-N；斜向分支可评估 UY-U28-15-PP-N。两者均为 1/4-28 UNF 端口、1.5 mm 通径和 PP 本体。",
+          "补全三端端接：按实际管外径、材料和端口密封面选择外螺纹接头及密封组件。1.5 mm 管内径不能代替管外径，也不能据此直接指定卡箍或卡环。",
+          "核对介质和安装：检查清洗液及冲洗剂对本体、密封件和管路的相容性；按安装孔与工具空间布管并固定。",
+          "验证通流和隔离：测量各运行组合下的支路流量、压降、泄漏、气泡与倒流情况；需要等量分配时另行落实控制方案。",
+          "固化采购和维护资料：记录三通型号、三个端接组合、管路尺寸、装配方法及验收条件，维护时按组合更换。",
+        ] },
+        { type: "paragraph", text: "若供液还需要穿过仪器面板，可另行评估 PMU-M12-U28-20-PP-N，但其通径为 2.0 mm。不能因为它与三通同为 U28 端口，就认为整条液路已经等通径；还需检查管路到穿板接头之间的衔接、置换体积和安装空间。" },
+        { type: "links", items: [
+          { href: "/applications/analytical-instruments/", label: "分析仪器液路应用", prefix: "结合具体任务继续阅读", suffix: "；" },
+          { href: "/resources/installation-guide/?guide=youtube-female-thread-conversion", label: "内螺纹互转接头介绍视频", prefix: "产品外形与接口介绍可查看", suffix: "。" },
+        ] },
+      ],
+    },
+    {
+      title: "内螺纹接头漏液、吸入气泡或流量下降时怎么排查？",
+      blocks: [
+        { type: "paragraph", text: "先停机并释放液路残压，再定位故障发生在哪一个端口、管路端接或本体位置。不要在配套关系未确认时反复加力旋紧：错配、管端未到位、密封件损伤与端口裂纹，需要不同的处理。" },
+        { type: "paragraph", text: "按现象逐项排查，并在修复后用实际运行条件复测。" },
+        { type: "table", headers: ["现象", "优先检查", "处理与验证"], rows: [
+          ["端口渗漏", "螺纹和密封面是否匹配、管端是否到位、密封件有无划伤或缺件", "纠正配套或更换损伤件；按该组合的装配要求紧固后检漏"],
+          ["吸液时出现气泡", "端接负压密封、上游供液及其他进气点", "分段定位；外部没有滴液不能代替负压密封验证"],
+          ["旋入困难或歪斜", "M6 与 U28 是否错配、牙距、异物和损伤", "停止强拧，确认端口与外螺纹连接件；损伤件应更换"],
+          ["流量下降或两路差异较大", "接头实际通径、通道堵塞、软管折弯、支路阻力和阀门状态", "比较各段压降与运行状态，不把三通当作均流器"],
+          ["清洗后仍有残留", "管端到位、接口台阶、未被充分置换的支路与死端", "检查装配和冲洗路径，并测量实际置换效果"],
+          ["穿板接头松动或本体裂纹", "螺母固定、管路扭转和侧向拉力、介质作用", "卸载管路受力，检查受损件；重新固定后复核密封"],
+        ] },
+        { type: "paragraph", text: "首次装配时确认完整的本体、端接与管路组合；维护重装时额外检查密封件的变形、磨损及管端损伤。本体状态允许再次使用时，密封件和预装组件仍需按实际状态及各自的复用要求处理。锁紧扭矩和允许压力按该组合的材料、密封方式和工作温度确定，其他接头的数值不能直接套用。" },
+      ],
+    },
+  ],
+  faqTitle: "内螺纹互转接头常见问题",
+  // FAQ intent: Obsidian 产品GEO问题库/01_接头_问题意图与优先级.md,
+  // J09-03/05. Keep the thread-conversion and leak-remedy decisions; bore,
+  // branch-flow and PMU mounting explanations already have dedicated sections.
+  faqItems: [
+    { question: "内螺纹互转接头能把 M6 转成 1/4-28 UNF 吗？", answer: "官网当前展示的 U、US、UT、UY、PMU 型号，各液路端口螺纹相同，不能直接完成 M6×1 与 1/4-28 UNF 之间的转接。例如 U-M6-20-PP-N 两端均为 M6×1，U-U28-20-PP-N 两端均为 1/4-28 UNF。需要这种转接时，请提供两端螺纹、管路尺寸和介质，联系恒永达确认具体型号与配套方案。" },
+    { question: "内螺纹接头漏液时，可以缠生料带或继续拧紧吗？", answer: "先停机卸压，检查管端是否到位、密封组件和端口密封面是否完好。对于依靠端面压合的平底密封组合，缠生料带不能修复端面泄漏，继续加力还可能损伤塑料本体。纠正配套或更换损伤件后，按该组合的装配要求紧固并检漏。" },
+  ],
+  cta: {
+    title: "确定每个端口的完整连接配置",
+    description: "提供液路连接示意、各端螺纹、管内外径及材料、介质、压力、温度和安装空间，便于核对本体型号、密封配套与样件验证条件。",
+    contactLabel: "沟通内螺纹接头选型",
+    productsLabel: "查看内螺纹互转接头",
+    productsHref: productRoot,
+  },
+};
+
+export const femaleThreadAdaptersNavigation = [
+  { id: "connection", label: "软管与硬管连接" },
+  { id: "models", label: "五类结构与型号" },
+  { id: "ports-and-sealing", label: "螺纹与密封配套" },
+  { id: "bore", label: "通径与残留体积" },
+  { id: "tee-and-y", label: "T/Y 型分流与汇流" },
+  { id: "panel-mount", label: "PMU 穿板安装" },
+  { id: "selection-example", label: "仪器分支选型示例" },
+  { id: "troubleshooting", label: "漏液与流量故障" },
+];
