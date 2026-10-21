@@ -1,4 +1,481 @@
 {
+  "zh-CN": [
+    {
+      "id": "tubing-assemblies:zh-CN:overview",
+      "module": "products",
+      "title": "仪器用定制管组件",
+      "description": "恒永达提供法兰翻边、卡环和卡箍三类定制管组件，服务于体外诊断与自动化分析仪器的液路连接，支持设备研发配套、按图定制及批量装配。",
+      "href": "/products/tubing-assemblies/",
+      "image": "/images/products/tubing-assemblies/flanged-tubing-white-shadow-intro.webp",
+      "keywords": [
+        "管组件",
+        "仪器用定制管组件",
+        "法兰翻边管组件",
+        "卡环管组件",
+        "卡箍管组件"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:flanged-tubing:category",
+      "module": "products",
+      "title": "定制法兰翻边管组件",
+      "description": "恒永达提供单端及双端法兰翻边管组件，用于体外诊断与自动化分析仪器的平底端口液路连接。通过管端翻边、配套接头及垫片形成端面密封，支持设备研发配套、按图定制及批量装配。",
+      "href": "/products/tubing-assemblies/flanged-tubing/",
+      "image": "/images/products/tubing-assemblies/flanged-tubing-white-shadow-intro.webp",
+      "keywords": [
+        "管组件",
+        "法兰翻边管组件",
+        "定制法兰翻边管组件"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:flanged-tubing:series",
+      "module": "products",
+      "title": "法兰翻边管组件",
+      "description": "法兰翻边管组件。恒永达提供单端及双端法兰翻边管组件，用于体外诊断与自动化分析仪器的平底端口液路连接。通过管端翻边、配套接头及垫片形成端面密封，支持设备研发配套、按图定制及批量装配。",
+      "href": "/products/tubing-assemblies/flanged-tubing/details/",
+      "image": "/images/products/tubing-assemblies/flanged-tubing-white-shadow-intro.webp",
+      "keywords": [
+        "管组件",
+        "法兰翻边管组件",
+        "定制法兰翻边管组件",
+        "试剂管路连接",
+        "清洗液管路连接",
+        "仪器内部液路连接",
+        "定制液路装配",
+        "透明 FEP、本色 PTFE、PFA、黑色 PTFE",
+        "单端翻边、双端翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK",
+        "M6×1、1/4-28 UNF",
+        "材料与尺寸按对应接头型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:flanged-tubing:fep",
+      "module": "products",
+      "title": "FEP 法兰翻边管组件",
+      "description": "透明 FEP 法兰翻边管组件，内径 0.3–2.0 mm、外径 1.6–3.2 mm，按实际规格配套。接头可选 PPS、PVDF、PEEK，支持 M6×1、1/4-28 UNF、单端/双端翻边、长度及 A/B 两端定制。",
+      "href": "/products/tubing-assemblies/flanged-tubing/details/fep/",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/fep/flanged-tube-fitting-washer-layout.webp",
+      "keywords": [
+        "管组件",
+        "法兰翻边管组件",
+        "定制法兰翻边管组件",
+        "FEP 法兰翻边管组件",
+        "试剂管路连接",
+        "清洗液管路连接",
+        "仪器内部液路连接",
+        "定制液路装配",
+        "透明 FEP",
+        "单端翻边、双端翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK",
+        "M6×1、1/4-28 UNF",
+        "材料与尺寸按对应接头型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:flanged-tubing:ptfe",
+      "module": "products",
+      "title": "PTFE 法兰翻边管组件",
+      "description": "本色 PTFE 法兰翻边管组件，内径 0.5–2.0 mm，内外径按规格配套。PPS、PVDF、PEEK 接头及 M6×1、1/4-28 UNF 螺纹可选，支持单端/双端翻边和按图装配。",
+      "href": "/products/tubing-assemblies/flanged-tubing/details/ptfe/",
+      "image": "/images/products/tubing-assemblies/flanged-tubing-white-shadow-intro.webp",
+      "keywords": [
+        "管组件",
+        "法兰翻边管组件",
+        "定制法兰翻边管组件",
+        "PTFE 法兰翻边管组件",
+        "试剂输送管路连接",
+        "清洗液管路连接",
+        "平底端口连接",
+        "仪器液路配套",
+        "本色 PTFE",
+        "单端翻边、双端翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK",
+        "M6×1、1/4-28 UNF",
+        "材料与尺寸按对应接头型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:flanged-tubing:pfa",
+      "module": "products",
+      "title": "PFA 法兰翻边管组件",
+      "description": "PFA 法兰翻边管组件，管外径 1.6 mm，内径可选 0.5、0.8、1.0 mm。支持单端/双端配置、管长及 A/B 连接定制，翻边工艺、接头与端口按图确认。",
+      "href": "/products/tubing-assemblies/flanged-tubing/details/pfa/",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
+      "keywords": [
+        "管组件",
+        "法兰翻边管组件",
+        "定制法兰翻边管组件",
+        "PFA 法兰翻边管组件",
+        "PFA 试剂管路连接",
+        "清洗液管路配套",
+        "仪器内部液路连接",
+        "按图定制管路",
+        "PFA",
+        "单端翻边、双端翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK",
+        "M6×1、1/4-28 UNF",
+        "材料与尺寸按对应接头型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:flanged-tubing:black-ptfe",
+      "module": "products",
+      "title": "黑色 PTFE 法兰翻边管组件",
+      "description": "黑色 PTFE 翻边管组件用于有避光要求的仪器液路，可选内径 0.8–2.0 mm。支持单端/双端翻边、接头螺纹、长度、护套及管路标识定制，遮光表现按敏感波段确认。",
+      "href": "/products/tubing-assemblies/flanged-tubing/details/black-ptfe/",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly-black-fitting-transparent-mirrored.webp",
+      "keywords": [
+        "管组件",
+        "法兰翻边管组件",
+        "定制法兰翻边管组件",
+        "黑色 PTFE 法兰翻边管组件",
+        "有避光要求的试剂管路",
+        "黑色 PTFE 液路连接",
+        "平底端口配套",
+        "仪器管路装配",
+        "黑色 PTFE",
+        "单端翻边、双端翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK",
+        "M6×1、1/4-28 UNF",
+        "材料与尺寸按对应接头型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:retaining-ring-kits:category",
+      "module": "products",
+      "title": "定制卡环管组件",
+      "description": "恒永达提供由配套接头、卡环压套、密封垫圈和管材组成的卡环管组件，用于体外诊断与自动化分析仪器的液路连接。通过压套与垫圈的配合固定管端并形成密封，支持设备研发配套、按图定制及批量装配。",
+      "href": "/products/tubing-assemblies/retaining-ring-kits/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-pair-white-shadow-intro.webp",
+      "keywords": [
+        "管组件",
+        "卡环管组件",
+        "定制卡环管组件"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:retaining-ring-kits:series",
+      "module": "products",
+      "title": "卡环管组件",
+      "description": "卡环管组件。恒永达提供由配套接头、卡环压套、密封垫圈和管材组成的卡环管组件，用于体外诊断与自动化分析仪器的液路连接。通过压套与垫圈的配合固定管端并形成密封，支持设备研发配套、按图定制及批量装配。",
+      "href": "/products/tubing-assemblies/retaining-ring-kits/details/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-pair-white-shadow-intro.webp",
+      "keywords": [
+        "管组件",
+        "卡环管组件",
+        "定制卡环管组件",
+        "试剂管路连接",
+        "清洗液管路连接",
+        "仪器内部液路连接",
+        "定制液路装配",
+        "透明 FEP、本色 PTFE、PFA、黑色 PTFE",
+        "卡环压套与密封垫圈",
+        "HSF6 接头、6-40 UNF 微型接头",
+        "PPS、PEEK，按对应系列选配",
+        "M6×1、1/4-28 UNF（HSF6 配置）",
+        "SUS、PEEK 部件，按套件型号配套",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:retaining-ring-kits:fep",
+      "module": "products",
+      "title": "FEP 卡环管组件",
+      "description": "透明 FEP 卡环管组件，内径 0.3–2.0 mm，按实际管径选配接头、卡环压套与密封垫圈。提供 6-40 UNF 和 HSF6 连接配置，支持长度及 A/B 两端定制。",
+      "href": "/products/tubing-assemblies/retaining-ring-kits/details/fep/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/fep/foreach-fep-retaining-ring-tubing-assembly-white-mirrored.webp",
+      "keywords": [
+        "管组件",
+        "卡环管组件",
+        "定制卡环管组件",
+        "FEP 卡环管组件",
+        "试剂管路连接",
+        "清洗液管路连接",
+        "卡环端部配套",
+        "仪器内部液路装配",
+        "透明 FEP",
+        "卡环压套与密封垫圈",
+        "HSF6 接头、6-40 UNF 微型接头",
+        "PPS、PEEK，按对应系列选配",
+        "M6×1、1/4-28 UNF（HSF6 配置）",
+        "SUS、PEEK 部件，按套件型号配套",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:retaining-ring-kits:ptfe",
+      "module": "products",
+      "title": "PTFE 卡环管组件",
+      "description": "本色 PTFE 卡环管组件支持内径 0.5–2.0 mm 的已列管材组合，按管外径选择压套、垫圈和接头。6-40 UNF、M6×1、1/4-28 UNF 连接配置及管长可定制。",
+      "href": "/products/tubing-assemblies/retaining-ring-kits/details/ptfe/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-pair-white-shadow-intro.webp",
+      "keywords": [
+        "管组件",
+        "卡环管组件",
+        "定制卡环管组件",
+        "PTFE 卡环管组件",
+        "PTFE 试剂管路连接",
+        "清洗液管路配套",
+        "卡环密封端部连接",
+        "仪器液路装配",
+        "本色 PTFE",
+        "卡环压套与密封垫圈",
+        "HSF6 接头、6-40 UNF 微型接头",
+        "PPS、PEEK，按对应系列选配",
+        "M6×1、1/4-28 UNF（HSF6 配置）",
+        "SUS、PEEK 部件，按套件型号配套",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:retaining-ring-kits:pfa",
+      "module": "products",
+      "title": "PFA 卡环管组件",
+      "description": "PFA 卡环管组件，管外径 1.6 mm，内径可选 0.5、0.8、1.0 mm。接头、压套及垫圈按端口配套，支持管长、6-40 UNF 或 HSF6 连接配置及两端定制。",
+      "href": "/products/tubing-assemblies/retaining-ring-kits/details/pfa/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/pfa/foreach-pfa-retaining-ring-tubing-assembly-transparent-main.webp",
+      "keywords": [
+        "管组件",
+        "卡环管组件",
+        "定制卡环管组件",
+        "PFA 卡环管组件",
+        "PFA 试剂管路连接",
+        "1.6 mm 管材端部配套",
+        "卡环管路定制",
+        "仪器内部液路连接",
+        "PFA",
+        "卡环压套与密封垫圈",
+        "HSF6 接头、6-40 UNF 微型接头",
+        "PPS、PEEK，按对应系列选配",
+        "M6×1、1/4-28 UNF（HSF6 配置）",
+        "SUS、PEEK 部件，按套件型号配套",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:retaining-ring-kits:black-ptfe",
+      "module": "products",
+      "title": "黑色 PTFE 卡环管组件",
+      "description": "黑色 PTFE 卡环组件用于有避光要求的试剂管路，可选内径 0.8–2.0 mm。接头、卡环压套、密封垫圈、管长和两端连接按图配套，支持管路标识定制。",
+      "href": "/products/tubing-assemblies/retaining-ring-kits/details/black-ptfe/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/black-ptfe/foreach-black-ptfe-retaining-ring-tubing-assembly.webp",
+      "keywords": [
+        "管组件",
+        "卡环管组件",
+        "定制卡环管组件",
+        "黑色 PTFE 卡环管组件",
+        "有避光要求的试剂管路",
+        "黑色 PTFE 卡环连接",
+        "仪器端口配套",
+        "带标识液路装配",
+        "黑色 PTFE",
+        "卡环压套与密封垫圈",
+        "HSF6 接头、6-40 UNF 微型接头",
+        "PPS、PEEK，按对应系列选配",
+        "M6×1、1/4-28 UNF（HSF6 配置）",
+        "SUS、PEEK 部件，按套件型号配套",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:ferrule-kits:category",
+      "module": "products",
+      "title": "定制卡箍管组件",
+      "description": "恒永达提供由配套接头、卡箍和管材组成的卡箍管组件（又称卡套管组件），用于体外诊断与自动化分析仪器的液路连接。管端无需预先翻边，通过接头压紧卡箍实现管路固定与密封，支持设备研发配套、按图定制及批量装配。",
+      "href": "/products/tubing-assemblies/ferrule-kits/",
+      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "keywords": [
+        "管组件",
+        "卡箍管组件",
+        "定制卡箍管组件"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:ferrule-kits:series",
+      "module": "products",
+      "title": "卡箍管组件",
+      "description": "卡箍管组件。恒永达提供由配套接头、卡箍和管材组成的卡箍管组件（又称卡套管组件），用于体外诊断与自动化分析仪器的液路连接。管端无需预先翻边，通过接头压紧卡箍实现管路固定与密封，支持设备研发配套、按图定制及批量装配。",
+      "href": "/products/tubing-assemblies/ferrule-kits/details/",
+      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "keywords": [
+        "管组件",
+        "卡箍管组件",
+        "定制卡箍管组件",
+        "试剂管路连接",
+        "清洗液管路连接",
+        "仪器内部液路连接",
+        "定制液路装配",
+        "透明 FEP、本色 PTFE、PFA、黑色 PTFE",
+        "卡箍连接，管端无需预先翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK、POM、PP，按对应系列选配",
+        "M6×1、1/4-28 UNF",
+        "PP、ETFE，按对应型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:ferrule-kits:fep",
+      "module": "products",
+      "title": "FEP 卡箍管组件",
+      "description": "透明 FEP 卡箍管组件，内径 0.3–2.0 mm，按已列管径组合配套。管端无需预先翻边，接头可选 M6×1、1/4-28 UNF，支持长度、卡箍与两端连接定制。",
+      "href": "/products/tubing-assemblies/ferrule-kits/details/fep/",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/fep/foreach-fep-ferrule-tubing-assembly.webp",
+      "keywords": [
+        "管组件",
+        "卡箍管组件",
+        "定制卡箍管组件",
+        "FEP 卡箍管组件",
+        "试剂管路连接",
+        "清洗液管路连接",
+        "免预翻边端部配套",
+        "仪器内部液路装配",
+        "透明 FEP",
+        "卡箍连接，管端无需预先翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK、POM、PP，按对应系列选配",
+        "M6×1、1/4-28 UNF",
+        "PP、ETFE，按对应型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:ferrule-kits:ptfe",
+      "module": "products",
+      "title": "PTFE 卡箍管组件",
+      "description": "本色 PTFE 管配套卡箍与螺纹接头，管端无需预先翻边。可选内径 0.5–2.0 mm，支持管径、长度、接头材料及 A/B 两端连接按图定制。",
+      "href": "/products/tubing-assemblies/ferrule-kits/details/ptfe/",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-front-angle.webp",
+      "keywords": [
+        "管组件",
+        "卡箍管组件",
+        "定制卡箍管组件",
+        "PTFE 卡箍管组件",
+        "PTFE 试剂管路连接",
+        "清洗液管路配套",
+        "免预翻边连接",
+        "仪器端口装配",
+        "本色 PTFE",
+        "卡箍连接，管端无需预先翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK、POM、PP，按对应系列选配",
+        "M6×1、1/4-28 UNF",
+        "PP、ETFE，按对应型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:ferrule-kits:pfa",
+      "module": "products",
+      "title": "PFA 卡箍管组件",
+      "description": "PFA 卡箍管组件，管外径 1.6 mm，内径可选 0.5、0.8、1.0 mm，管端无需预先翻边。支持管长、A/B 端口、接头材质及卡箍配套定制。",
+      "href": "/products/tubing-assemblies/ferrule-kits/details/pfa/",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-front-angle.webp",
+      "keywords": [
+        "管组件",
+        "卡箍管组件",
+        "定制卡箍管组件",
+        "PFA 卡箍管组件",
+        "PFA 试剂管路连接",
+        "1.6 mm 管材端部配套",
+        "免预翻边液路连接",
+        "仪器管路装配",
+        "PFA",
+        "卡箍连接，管端无需预先翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK、POM、PP，按对应系列选配",
+        "M6×1、1/4-28 UNF",
+        "PP、ETFE，按对应型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    },
+    {
+      "id": "tubing-assemblies:zh-CN:ferrule-kits:black-ptfe",
+      "module": "products",
+      "title": "黑色 PTFE 卡箍管组件",
+      "description": "黑色 PTFE 卡箍组件可选内径 0.8–2.0 mm，内外径按规格配套，M6×1、1/4-28 UNF 接口及两端连接可定制，遮光要求按试剂敏感波段确认。",
+      "href": "/products/tubing-assemblies/ferrule-kits/details/black-ptfe/",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-front-angle.webp",
+      "keywords": [
+        "管组件",
+        "卡箍管组件",
+        "定制卡箍管组件",
+        "黑色 PTFE 卡箍管组件",
+        "有避光要求的试剂管路",
+        "黑色 PTFE 卡箍连接",
+        "免预翻边端部配套",
+        "带标识仪器液路",
+        "黑色 PTFE",
+        "卡箍连接，管端无需预先翻边",
+        "标准型、紧凑型",
+        "PPS、PVDF、PEEK、POM、PP，按对应系列选配",
+        "M6×1、1/4-28 UNF",
+        "PP、ETFE，按对应型号选配",
+        "按图定制，可指定长度与公差要求",
+        "可分别指定接头材质、螺纹及连接形式",
+        "弹簧管、防磨护套、限位管、热缩管标识"
+      ],
+      "actionLabel": "查看详情"
+    }
+  ],
   "en": [
     {
       "id": "tubing-assemblies:en:overview",
@@ -53,7 +530,7 @@
         "Material and size matched to the fitting model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -81,7 +558,7 @@
         "Material and size matched to the fitting model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -109,7 +586,7 @@
         "Material and size matched to the fitting model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -119,7 +596,7 @@
       "title": "PFA Flanged Tubing Assembly",
       "description": "PFA flanged tubing, reference OD 1.6 mm and ID 0.5/0.8/1.0 mm. Custom length, single/double ends and A/B connections; flanging, fittings and ports confirmed to drawing.",
       "href": "/en/products/tubing-assemblies/flanged-tubing/details/pfa/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
       "keywords": [
         "Tubing Assemblies",
         "Flanged Tubing Assemblies",
@@ -137,7 +614,7 @@
         "Material and size matched to the fitting model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -145,9 +622,9 @@
       "id": "tubing-assemblies:en:flanged-tubing:black-ptfe",
       "module": "products",
       "title": "Black PTFE Flanged Tubing Assembly",
-      "description": "Black PTFE flanged tubing for instrument lines requiring light shielding, reference ID 0.8–2.0 mm. Custom flanges, fittings, length and labels; shielding confirmed for the sensitive wavelengths.",
+      "description": "Black PTFE flanged tubing for instrument lines requiring light shielding, reference ID 0.8–2.0 mm. Custom flanges, fittings, length, sleeves and labels; shielding confirmed for the sensitive wavelengths.",
       "href": "/en/products/tubing-assemblies/flanged-tubing/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly-black-fitting-transparent-mirrored.webp",
       "keywords": [
         "Tubing Assemblies",
         "Flanged Tubing Assemblies",
@@ -165,7 +642,7 @@
         "Material and size matched to the fitting model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -198,7 +675,7 @@
         "Cleaning-fluid line connections",
         "Internal instrument fluid connections",
         "Custom fluid-path assembly",
-        "Transparent FEP, natural PTFE, black PTFE",
+        "Transparent FEP, natural PTFE, PFA, black PTFE",
         "Retaining sleeve and sealing washer",
         "HSF6 fittings, 6-40 UNF miniature fittings",
         "PPS, PEEK; selected by series",
@@ -206,7 +683,7 @@
         "SUS and PEEK components matched to the kit model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -216,7 +693,7 @@
       "title": "FEP Retaining-Ring Tubing Assembly",
       "description": "Transparent FEP retaining-ring tubing, ID 0.3–2.0 mm. Matched fittings, sleeves and washers; 6-40 UNF or HSF6 configurations, custom length and A/B ends.",
       "href": "/en/products/tubing-assemblies/retaining-ring-kits/details/fep/",
-      "image": "/images/products/tubing-assemblies/retaining-ring-pair-white-shadow-intro.webp",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/fep/foreach-fep-retaining-ring-tubing-assembly-white-mirrored.webp",
       "keywords": [
         "Tubing Assemblies",
         "Retaining-Ring Tubing Assemblies",
@@ -234,7 +711,7 @@
         "SUS and PEEK components matched to the kit model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -262,7 +739,35 @@
         "SUS and PEEK components matched to the kit model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
+      ],
+      "actionLabel": "View Details"
+    },
+    {
+      "id": "tubing-assemblies:en:retaining-ring-kits:pfa",
+      "module": "products",
+      "title": "PFA Retaining-Ring Tubing Assembly",
+      "description": "PFA retaining-ring tubing, reference OD 1.6 mm and ID 0.5/0.8/1.0 mm. Matched fittings, sleeves and washers; custom length, 6-40 UNF or HSF6 and A/B ends.",
+      "href": "/en/products/tubing-assemblies/retaining-ring-kits/details/pfa/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/pfa/foreach-pfa-retaining-ring-tubing-assembly-transparent-main.webp",
+      "keywords": [
+        "Tubing Assemblies",
+        "Retaining-Ring Tubing Assemblies",
+        "Custom Retaining-Ring Tubing Assemblies",
+        "PFA Retaining-Ring Tubing Assembly",
+        "PFA reagent line connections",
+        "End connections for 1.6 mm OD tubing",
+        "Custom retaining-ring tubing",
+        "Internal instrument fluid connections",
+        "PFA",
+        "Retaining sleeve and sealing washer",
+        "HSF6 fittings, 6-40 UNF miniature fittings",
+        "PPS, PEEK; selected by series",
+        "M6×1, 1/4-28 UNF (HSF6 configuration)",
+        "SUS and PEEK components matched to the kit model",
+        "Custom to drawing, with specified length and tolerance",
+        "Fitting material, thread and connection type can be specified separately",
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -290,7 +795,7 @@
         "SUS and PEEK components matched to the kit model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -331,7 +836,7 @@
         "PP, ETFE; matched to the model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -359,7 +864,7 @@
         "PP, ETFE; matched to the model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -369,7 +874,7 @@
       "title": "PTFE Ferrule Tubing Assembly",
       "description": "Natural PTFE tubing with matching ferrules and threaded fittings; no pre-flanging required. Reference ID 0.5–2.0 mm; custom dimensions, length, fitting materials and A/B ends.",
       "href": "/en/products/tubing-assemblies/ferrule-kits/details/ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Tubing Assemblies",
         "Ferrule Tubing Assemblies",
@@ -387,7 +892,7 @@
         "PP, ETFE; matched to the model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -397,7 +902,7 @@
       "title": "PFA Ferrule Tubing Assembly",
       "description": "PFA ferrule tubing, reference OD 1.6 mm and ID 0.5/0.8/1.0 mm. No pre-flanging required; custom length, A/B ports, fitting materials and matched ferrules.",
       "href": "/en/products/tubing-assemblies/ferrule-kits/details/pfa/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Tubing Assemblies",
         "Ferrule Tubing Assemblies",
@@ -415,7 +920,7 @@
         "PP, ETFE; matched to the model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     },
@@ -425,7 +930,7 @@
       "title": "Black PTFE Ferrule Tubing Assembly",
       "description": "Black PTFE ferrule tubing, reference ID 0.8–2.0 mm in matched pairs. Custom M6×1 or 1/4-28 UNF end connections; shielding evaluated for reagent-sensitive wavelengths.",
       "href": "/en/products/tubing-assemblies/ferrule-kits/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Tubing Assemblies",
         "Ferrule Tubing Assemblies",
@@ -443,7 +948,7 @@
         "PP, ETFE; matched to the model",
         "Custom to drawing, with specified length and tolerance",
         "Fitting material, thread and connection type can be specified separately",
-        "Stop tubes, heat-shrink labels"
+        "Coils, abrasion protection sleeves, stop tubes, heat-shrink labels"
       ],
       "actionLabel": "View Details"
     }
@@ -502,7 +1007,7 @@
         "Material y dimensiones seleccionados según el modelo de racor correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -530,7 +1035,7 @@
         "Material y dimensiones seleccionados según el modelo de racor correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -558,7 +1063,7 @@
         "Material y dimensiones seleccionados según el modelo de racor correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -568,7 +1073,7 @@
       "title": "Conjunto de tubo PFA con reborde",
       "description": "Conjunto de tubo PFA con reborde, diámetro exterior de referencia de 1.6 mm y diámetros interiores de 0.5/0.8/1.0 mm. Configuración en uno o ambos extremos, longitud y conexiones A/B personalizables; rebordeado, racores y puertos confirmados según plano.",
       "href": "/es/products/tubing-assemblies/flanged-tubing/details/pfa/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
       "keywords": [
         "Conjuntos de tubos",
         "Conjuntos de tubos con reborde",
@@ -586,7 +1091,7 @@
         "Material y dimensiones seleccionados según el modelo de racor correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -594,9 +1099,9 @@
       "id": "tubing-assemblies:es:flanged-tubing:black-ptfe",
       "module": "products",
       "title": "Conjunto de tubo PTFE negro con reborde",
-      "description": "Conjunto de tubo PTFE negro con reborde para circuitos de instrumentos con requisitos de protección frente a la luz, con diámetros interiores de referencia de 0.8–2.0 mm. Reborde en uno o ambos extremos, roscas, longitud e identificación personalizables; la opacidad se confirma según las longitudes de onda sensibles.",
+      "description": "Conjunto de tubo PTFE negro con reborde para circuitos de instrumentos con requisitos de protección frente a la luz, con diámetros interiores de referencia de 0.8–2.0 mm. Reborde en uno o ambos extremos, roscas, longitud, funda e identificación personalizables; la opacidad se confirma según las longitudes de onda sensibles.",
       "href": "/es/products/tubing-assemblies/flanged-tubing/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly-black-fitting-transparent-mirrored.webp",
       "keywords": [
         "Conjuntos de tubos",
         "Conjuntos de tubos con reborde",
@@ -614,7 +1119,7 @@
         "Material y dimensiones seleccionados según el modelo de racor correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -647,7 +1152,7 @@
         "Conexiones de tubos de limpieza",
         "Conexiones de fluidos internas del instrumento",
         "Montaje de circuitos de fluidos a medida",
-        "FEP transparente, PTFE natural, PTFE negro",
+        "FEP transparente, PTFE natural, PFA, PTFE negro",
         "Manguito de compresión y arandela de sellado",
         "Racores HSF6 y miniatura 6-40 UNF",
         "PPS, PEEK, seleccionados según la serie correspondiente",
@@ -655,7 +1160,7 @@
         "Componentes SUS y PEEK compatibles según el modelo del kit",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -665,7 +1170,7 @@
       "title": "Conjunto de tubo FEP con anillo de retención",
       "description": "Conjunto de tubo FEP transparente con anillo de retención, diámetros interiores de 0.3–2.0 mm y racor, manguito y arandela elegidos según el diámetro real. Configuraciones 6-40 UNF o HSF6; longitud y extremos A/B personalizables.",
       "href": "/es/products/tubing-assemblies/retaining-ring-kits/details/fep/",
-      "image": "/images/products/tubing-assemblies/retaining-ring-pair-white-shadow-intro.webp",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/fep/foreach-fep-retaining-ring-tubing-assembly-white-mirrored.webp",
       "keywords": [
         "Conjuntos de tubos",
         "Conjuntos de tubos con anillo de retención",
@@ -683,7 +1188,7 @@
         "Componentes SUS y PEEK compatibles según el modelo del kit",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -711,7 +1216,35 @@
         "Componentes SUS y PEEK compatibles según el modelo del kit",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
+      ],
+      "actionLabel": "Ver detalles"
+    },
+    {
+      "id": "tubing-assemblies:es:retaining-ring-kits:pfa",
+      "module": "products",
+      "title": "Conjunto de tubo PFA con anillo de retención",
+      "description": "Conjunto de tubo PFA con anillo de retención, diámetro exterior de referencia de 1.6 mm e interiores de 0.5/0.8/1.0 mm. Racor, manguito y arandela compatibles con el puerto; longitud, configuración 6-40 UNF o HSF6 y extremos personalizables.",
+      "href": "/es/products/tubing-assemblies/retaining-ring-kits/details/pfa/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/pfa/foreach-pfa-retaining-ring-tubing-assembly-transparent-main.webp",
+      "keywords": [
+        "Conjuntos de tubos",
+        "Conjuntos de tubos con anillo de retención",
+        "Conjuntos de tubos con anillo de retención a medida",
+        "Conjunto de tubo PFA con anillo de retención",
+        "Conexiones de tubos PFA para reactivos",
+        "Conexiones de extremo para tubo de 1.6 mm",
+        "Personalización de tubos con anillo de retención",
+        "Conexiones de fluidos internas del instrumento",
+        "PFA",
+        "Manguito de compresión y arandela de sellado",
+        "Racores HSF6 y miniatura 6-40 UNF",
+        "PPS, PEEK, seleccionados según la serie correspondiente",
+        "M6×1, 1/4-28 UNF (configuración HSF6)",
+        "Componentes SUS y PEEK compatibles según el modelo del kit",
+        "Fabricación según plano; longitud y tolerancia especificables",
+        "Material del racor, rosca y tipo de conexión especificables por separado",
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -739,7 +1272,7 @@
         "Componentes SUS y PEEK compatibles según el modelo del kit",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -780,7 +1313,7 @@
         "PP, ETFE, seleccionados según el modelo correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -808,7 +1341,7 @@
         "PP, ETFE, seleccionados según el modelo correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -818,7 +1351,7 @@
       "title": "Conjunto de tubo PTFE con férula",
       "description": "Tubo PTFE natural con férula y racor roscado compatibles, sin rebordeado previo. Diámetros interiores de referencia de 0.5–2.0 mm; diámetros, longitud, material del racor y conexiones A/B personalizables según plano.",
       "href": "/es/products/tubing-assemblies/ferrule-kits/details/ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Conjuntos de tubos",
         "Conjuntos de tubos con férula",
@@ -836,7 +1369,7 @@
         "PP, ETFE, seleccionados según el modelo correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -846,7 +1379,7 @@
       "title": "Conjunto de tubo PFA con férula",
       "description": "Conjunto de tubo PFA con férula, diámetro exterior de referencia de 1.6 mm e interiores de 0.5/0.8/1.0 mm, sin rebordeado previo. Longitud, puertos A/B, material de racor y férula personalizables.",
       "href": "/es/products/tubing-assemblies/ferrule-kits/details/pfa/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Conjuntos de tubos",
         "Conjuntos de tubos con férula",
@@ -864,7 +1397,7 @@
         "PP, ETFE, seleccionados según el modelo correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     },
@@ -874,7 +1407,7 @@
       "title": "Conjunto de tubo PTFE negro con férula",
       "description": "Conjunto de tubo PTFE negro con férula para combinaciones de diámetros interiores de referencia de 0.8–2.0 mm. Interfaces M6×1 o 1/4-28 UNF y conexiones de ambos extremos personalizables; la opacidad se confirma según las longitudes de onda sensibles del reactivo.",
       "href": "/es/products/tubing-assemblies/ferrule-kits/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Conjuntos de tubos",
         "Conjuntos de tubos con férula",
@@ -892,7 +1425,7 @@
         "PP, ETFE, seleccionados según el modelo correspondiente",
         "Fabricación según plano; longitud y tolerancia especificables",
         "Material del racor, rosca y tipo de conexión especificables por separado",
-        "Tubo de tope, etiqueta termorretráctil"
+        "Tubo en espiral, funda antidesgaste, tubo de tope, etiqueta termorretráctil"
       ],
       "actionLabel": "Ver detalles"
     }
@@ -951,7 +1484,7 @@
         "Matériau et dimensions sélectionnés selon le modèle de raccord correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -979,7 +1512,7 @@
         "Matériau et dimensions sélectionnés selon le modèle de raccord correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1007,7 +1540,7 @@
         "Matériau et dimensions sélectionnés selon le modèle de raccord correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1017,7 +1550,7 @@
       "title": "Ensemble de tube PFA à collet",
       "description": "Ensemble de tube PFA à collet, diamètre extérieur de référence 1.6 mm et diamètres intérieurs 0.5/0.8/1.0 mm. Configuration à une ou deux extrémités, longueur et raccordements A/B personnalisables ; formage du collet, raccords et orifices confirmés sur plan.",
       "href": "/fr/products/tubing-assemblies/flanged-tubing/details/pfa/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
       "keywords": [
         "Ensembles de tubes",
         "Ensembles de tubes à collet",
@@ -1035,7 +1568,7 @@
         "Matériau et dimensions sélectionnés selon le modèle de raccord correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1043,9 +1576,9 @@
       "id": "tubing-assemblies:fr:flanged-tubing:black-ptfe",
       "module": "products",
       "title": "Ensemble de tube PTFE noir à collet",
-      "description": "Ensemble de tube PTFE noir à collet pour circuits d'instruments exigeant une protection contre la lumière, avec diamètres intérieurs de référence de 0.8–2.0 mm. Collet à une ou deux extrémités, filetages, longueur et identification personnalisables ; occultation confirmée selon les longueurs d'onde sensibles.",
+      "description": "Ensemble de tube PTFE noir à collet pour circuits d'instruments exigeant une protection contre la lumière, avec diamètres intérieurs de référence de 0.8–2.0 mm. Collet à une ou deux extrémités, filetages, longueur, gaine et identification personnalisables ; occultation confirmée selon les longueurs d'onde sensibles.",
       "href": "/fr/products/tubing-assemblies/flanged-tubing/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly-black-fitting-transparent-mirrored.webp",
       "keywords": [
         "Ensembles de tubes",
         "Ensembles de tubes à collet",
@@ -1063,7 +1596,7 @@
         "Matériau et dimensions sélectionnés selon le modèle de raccord correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1096,7 +1629,7 @@
         "Raccordements de lignes de nettoyage",
         "Raccordements fluidiques internes aux instruments",
         "Assemblage de circuits fluidiques sur mesure",
-        "FEP transparent, PTFE naturel, PTFE noir",
+        "FEP transparent, PTFE naturel, PFA, PTFE noir",
         "Manchon de compression et rondelle d'étanchéité",
         "Raccords HSF6 et miniatures 6-40 UNF",
         "PPS, PEEK, sélectionnés selon la série correspondante",
@@ -1104,7 +1637,7 @@
         "Composants SUS et PEEK adaptés selon le modèle de kit",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1114,7 +1647,7 @@
       "title": "Ensemble de tube FEP à bague de retenue",
       "description": "Ensemble de tube FEP transparent à bague de retenue, diamètres intérieurs de 0.3–2.0 mm et raccord, manchon et rondelle choisis selon le diamètre réel. Configurations 6-40 UNF ou HSF6 ; longueur et extrémités A/B personnalisables.",
       "href": "/fr/products/tubing-assemblies/retaining-ring-kits/details/fep/",
-      "image": "/images/products/tubing-assemblies/retaining-ring-pair-white-shadow-intro.webp",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/fep/foreach-fep-retaining-ring-tubing-assembly-white-mirrored.webp",
       "keywords": [
         "Ensembles de tubes",
         "Ensembles de tubes à bague de retenue",
@@ -1132,7 +1665,7 @@
         "Composants SUS et PEEK adaptés selon le modèle de kit",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1160,7 +1693,35 @@
         "Composants SUS et PEEK adaptés selon le modèle de kit",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
+      ],
+      "actionLabel": "Voir les détails"
+    },
+    {
+      "id": "tubing-assemblies:fr:retaining-ring-kits:pfa",
+      "module": "products",
+      "title": "Ensemble de tube PFA à bague de retenue",
+      "description": "Ensemble de tube PFA à bague de retenue, diamètre extérieur de référence 1.6 mm et diamètres intérieurs 0.5/0.8/1.0 mm. Raccord, manchon et rondelle adaptés à l'orifice ; longueur, configuration 6-40 UNF ou HSF6 et extrémités personnalisables.",
+      "href": "/fr/products/tubing-assemblies/retaining-ring-kits/details/pfa/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/pfa/foreach-pfa-retaining-ring-tubing-assembly-transparent-main.webp",
+      "keywords": [
+        "Ensembles de tubes",
+        "Ensembles de tubes à bague de retenue",
+        "Ensembles de tubes à bague de retenue sur mesure",
+        "Ensemble de tube PFA à bague de retenue",
+        "Raccordements de tubes PFA pour réactifs",
+        "Raccordements d'extrémité pour tube de 1.6 mm",
+        "Personnalisation de tubes à bague de retenue",
+        "Raccordements fluidiques internes aux instruments",
+        "PFA",
+        "Manchon de compression et rondelle d'étanchéité",
+        "Raccords HSF6 et miniatures 6-40 UNF",
+        "PPS, PEEK, sélectionnés selon la série correspondante",
+        "M6×1, 1/4-28 UNF (configuration HSF6)",
+        "Composants SUS et PEEK adaptés selon le modèle de kit",
+        "Fabrication sur plan, longueur et tolérance spécifiables",
+        "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1188,7 +1749,7 @@
         "Composants SUS et PEEK adaptés selon le modèle de kit",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1229,7 +1790,7 @@
         "PP, ETFE, sélectionnés selon le modèle correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1257,7 +1818,7 @@
         "PP, ETFE, sélectionnés selon le modèle correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1267,7 +1828,7 @@
       "title": "Ensemble de tube PTFE à ferrule",
       "description": "Tube PTFE naturel avec ferrule et raccord fileté adaptés, sans collet préformé. Diamètres intérieurs de référence de 0.5–2.0 mm ; diamètres, longueur, matériau du raccord et raccordements A/B personnalisables sur plan.",
       "href": "/fr/products/tubing-assemblies/ferrule-kits/details/ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Ensembles de tubes",
         "Ensembles de tubes à ferrule",
@@ -1285,7 +1846,7 @@
         "PP, ETFE, sélectionnés selon le modèle correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1295,7 +1856,7 @@
       "title": "Ensemble de tube PFA à ferrule",
       "description": "Ensemble de tube PFA à ferrule, diamètre extérieur de référence 1.6 mm et diamètres intérieurs 0.5/0.8/1.0 mm, sans collet préformé. Longueur, orifices A/B, matériau du raccord et ferrule personnalisables.",
       "href": "/fr/products/tubing-assemblies/ferrule-kits/details/pfa/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Ensembles de tubes",
         "Ensembles de tubes à ferrule",
@@ -1313,7 +1874,7 @@
         "PP, ETFE, sélectionnés selon le modèle correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     },
@@ -1323,7 +1884,7 @@
       "title": "Ensemble de tube PTFE noir à ferrule",
       "description": "Ensemble de tube PTFE noir à ferrule pour les combinaisons de diamètres intérieurs de référence de 0.8–2.0 mm. Interfaces M6×1 ou 1/4-28 UNF et raccordements personnalisables ; exigences d'occultation confirmées selon les longueurs d'onde sensibles du réactif.",
       "href": "/fr/products/tubing-assemblies/ferrule-kits/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Ensembles de tubes",
         "Ensembles de tubes à ferrule",
@@ -1341,7 +1902,7 @@
         "PP, ETFE, sélectionnés selon le modèle correspondant",
         "Fabrication sur plan, longueur et tolérance spécifiables",
         "Matériau du raccord, filetage et type de raccordement spécifiables séparément",
-        "Tube de butée, étiquette thermorétractable"
+        "Tube spiralé, gaine anti-abrasion, tube de butée, étiquette thermorétractable"
       ],
       "actionLabel": "Voir les détails"
     }
@@ -1400,7 +1961,7 @@
         "재질과 치수는 대응 피팅 모델에 따라 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1428,7 +1989,7 @@
         "재질과 치수는 대응 피팅 모델에 따라 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1456,7 +2017,7 @@
         "재질과 치수는 대응 피팅 모델에 따라 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1466,7 +2027,7 @@
       "title": "PFA 플랜지형 튜빙 어셈블리",
       "description": "PFA 플랜지형 튜빙 어셈블리. 참고 외경 1.6 mm, 내경 0.5/0.8/1.0 mm. 한쪽/양쪽 끝 구성, 튜브 길이 및 A/B 연결을 맞춤 제작하며 플랜지 가공, 피팅 및 포트는 도면으로 확인합니다.",
       "href": "/ko/products/tubing-assemblies/flanged-tubing/details/pfa/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
       "keywords": [
         "튜빙 어셈블리",
         "플랜지형 튜빙 어셈블리",
@@ -1484,7 +2045,7 @@
         "재질과 치수는 대응 피팅 모델에 따라 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1492,9 +2053,9 @@
       "id": "tubing-assemblies:ko:flanged-tubing:black-ptfe",
       "module": "products",
       "title": "검정색 PTFE 플랜지형 튜빙 어셈블리",
-      "description": "검정색 PTFE 플랜지형 튜빙 어셈블리는 차광이 필요한 기기 유로용이며 참고 내경은 0.8–2.0 mm입니다. 한쪽/양쪽 끝 플랜지, 피팅 나사, 길이 및 유로 표시를 맞춤 제작하며 차광 성능은 민감 파장대에 따라 확인합니다.",
+      "description": "검정색 PTFE 플랜지형 튜빙 어셈블리는 차광이 필요한 기기 유로용이며 참고 내경은 0.8–2.0 mm입니다. 한쪽/양쪽 끝 플랜지, 피팅 나사, 길이, 보호 슬리브 및 유로 표시를 맞춤 제작하며 차광 성능은 민감 파장대에 따라 확인합니다.",
       "href": "/ko/products/tubing-assemblies/flanged-tubing/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly-black-fitting-transparent-mirrored.webp",
       "keywords": [
         "튜빙 어셈블리",
         "플랜지형 튜빙 어셈블리",
@@ -1512,7 +2073,7 @@
         "재질과 치수는 대응 피팅 모델에 따라 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1545,7 +2106,7 @@
         "세척액 튜브 연결",
         "기기 내부 유로 연결",
         "맞춤 유로 조립",
-        "투명 FEP, 천연색 PTFE, 검정색 PTFE",
+        "투명 FEP, 내추럴 PTFE, PFA, 검정색 PTFE",
         "리테이닝 링 압착 슬리브 및 밀봉 와셔",
         "HSF6 피팅, 6-40 UNF 초소형 피팅",
         "PPS, PEEK, 해당 시리즈별 선택",
@@ -1553,7 +2114,7 @@
         "SUS, PEEK 부품, 키트 모델에 맞춰 조합",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1563,7 +2124,7 @@
       "title": "FEP 리테이닝 링 튜빙 어셈블리",
       "description": "투명 FEP 리테이닝 링 튜빙 어셈블리. 내경 0.3–2.0 mm이며 실제 관경에 맞춰 피팅, 슬리브 및 밀봉 와셔를 선택합니다. 6-40 UNF 및 HSF6 연결 구성과 길이, A/B 양단 맞춤 제작을 지원합니다.",
       "href": "/ko/products/tubing-assemblies/retaining-ring-kits/details/fep/",
-      "image": "/images/products/tubing-assemblies/retaining-ring-pair-white-shadow-intro.webp",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/fep/foreach-fep-retaining-ring-tubing-assembly-white-mirrored.webp",
       "keywords": [
         "튜빙 어셈블리",
         "리테이닝 링 튜빙 어셈블리",
@@ -1581,7 +2142,7 @@
         "SUS, PEEK 부품, 키트 모델에 맞춰 조합",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1609,7 +2170,35 @@
         "SUS, PEEK 부품, 키트 모델에 맞춰 조합",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
+      ],
+      "actionLabel": "상세 보기"
+    },
+    {
+      "id": "tubing-assemblies:ko:retaining-ring-kits:pfa",
+      "module": "products",
+      "title": "PFA 리테이닝 링 튜빙 어셈블리",
+      "description": "PFA 리테이닝 링 튜빙 어셈블리. 참고 외경 1.6 mm, 내경 0.5/0.8/1.0 mm. 피팅, 슬리브 및 와셔를 포트에 맞춰 조합하며 튜브 길이, 6-40 UNF 또는 HSF6 연결 구성 및 양단을 맞춤 제작합니다.",
+      "href": "/ko/products/tubing-assemblies/retaining-ring-kits/details/pfa/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/pfa/foreach-pfa-retaining-ring-tubing-assembly-transparent-main.webp",
+      "keywords": [
+        "튜빙 어셈블리",
+        "리테이닝 링 튜빙 어셈블리",
+        "맞춤 리테이닝 링 튜빙 어셈블리",
+        "PFA 리테이닝 링 튜빙 어셈블리",
+        "PFA 시약 튜브 연결",
+        "1.6 mm 튜브 끝단 구성",
+        "리테이닝 링 튜빙 맞춤 제작",
+        "기기 내부 유로 연결",
+        "PFA",
+        "리테이닝 링 압착 슬리브 및 밀봉 와셔",
+        "HSF6 피팅, 6-40 UNF 초소형 피팅",
+        "PPS, PEEK, 해당 시리즈별 선택",
+        "M6×1, 1/4-28 UNF(HSF6 구성)",
+        "SUS, PEEK 부품, 키트 모델에 맞춰 조합",
+        "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
+        "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1637,7 +2226,7 @@
         "SUS, PEEK 부품, 키트 모델에 맞춰 조합",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1678,7 +2267,7 @@
         "PP, ETFE, 해당 모델별 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1706,7 +2295,7 @@
         "PP, ETFE, 해당 모델별 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1716,7 +2305,7 @@
       "title": "PTFE 페룰 튜빙 어셈블리",
       "description": "내추럴 PTFE 튜브에 페룰과 나사 피팅을 조합하며 끝단 사전 플랜지 가공이 필요 없습니다. 참고 내경은 0.5–2.0 mm이며 관경, 길이, 피팅 재질 및 A/B 양단 연결을 도면에 따라 맞춤 제작합니다.",
       "href": "/ko/products/tubing-assemblies/ferrule-kits/details/ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "튜빙 어셈블리",
         "페룰 튜빙 어셈블리",
@@ -1734,7 +2323,7 @@
         "PP, ETFE, 해당 모델별 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1744,7 +2333,7 @@
       "title": "PFA 페룰 튜빙 어셈블리",
       "description": "PFA 페룰 튜빙 어셈블리. 참고 외경 1.6 mm, 내경 0.5/0.8/1.0 mm이며 끝단 사전 플랜지 가공이 필요 없습니다. 튜브 길이, A/B 포트, 피팅 재질 및 대응 페룰을 맞춤 제작합니다.",
       "href": "/ko/products/tubing-assemblies/ferrule-kits/details/pfa/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "튜빙 어셈블리",
         "페룰 튜빙 어셈블리",
@@ -1762,7 +2351,7 @@
         "PP, ETFE, 해당 모델별 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     },
@@ -1772,7 +2361,7 @@
       "title": "검정색 PTFE 페룰 튜빙 어셈블리",
       "description": "검정색 PTFE 페룰 어셈블리는 참고 내경 0.8–2.0 mm의 튜브 조합을 지원합니다. M6×1, 1/4-28 UNF 인터페이스와 양단 연결을 맞춤 제작하며 차광 요구사항은 시약의 민감 파장대에 따라 확인합니다.",
       "href": "/ko/products/tubing-assemblies/ferrule-kits/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "튜빙 어셈블리",
         "페룰 튜빙 어셈블리",
@@ -1790,7 +2379,7 @@
         "PP, ETFE, 해당 모델별 선택",
         "도면 기반 맞춤 제작, 길이 및 공차 요구사항 지정 가능",
         "피팅 재질, 나사 및 연결 형식을 양단별로 지정 가능",
-        "스토퍼 튜브, 열수축 튜브 라벨"
+        "코일형 튜브, 내마모 보호 슬리브, 스토퍼 튜브, 열수축 튜브 라벨"
       ],
       "actionLabel": "상세 보기"
     }
@@ -1849,7 +2438,7 @@
         "Материал и размеры подбираются по соответствующей модели фитинга",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -1877,7 +2466,7 @@
         "Материал и размеры подбираются по соответствующей модели фитинга",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -1905,7 +2494,7 @@
         "Материал и размеры подбираются по соответствующей модели фитинга",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -1915,7 +2504,7 @@
       "title": "Трубочная сборка PFA с отбортовкой",
       "description": "Трубочная сборка PFA с отбортовкой, справочный наружный диаметр 1.6 mm, внутренний 0.5/0.8/1.0 mm. Доступны конфигурации одного/обоих концов, длина и соединения A/B на заказ; отбортовка, фитинги и порты подтверждаются по чертежу.",
       "href": "/ru/products/tubing-assemblies/flanged-tubing/details/pfa/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
       "keywords": [
         "Трубочные сборки",
         "Трубочная сборка с отбортовкой",
@@ -1933,7 +2522,7 @@
         "Материал и размеры подбираются по соответствующей модели фитинга",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -1941,9 +2530,9 @@
       "id": "tubing-assemblies:ru:flanged-tubing:black-ptfe",
       "module": "products",
       "title": "Трубочная сборка из чёрного PTFE с отбортовкой",
-      "description": "Трубочная сборка из чёрного PTFE с отбортовкой для жидкостных линий приборов с требованиями к светозащите; справочный внутренний диаметр 0.8–2.0 mm. Отбортовка одного/обоих концов, резьбы, длина и маркировка задаются на заказ. Светозащита подтверждается для чувствительного диапазона длин волн.",
+      "description": "Трубочная сборка из чёрного PTFE с отбортовкой для жидкостных линий приборов с требованиями к светозащите; справочный внутренний диаметр 0.8–2.0 mm. Отбортовка одного/обоих концов, резьбы, длина, защитный рукав и маркировка задаются на заказ. Светозащита подтверждается для чувствительного диапазона длин волн.",
       "href": "/ru/products/tubing-assemblies/flanged-tubing/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly.webp",
+      "image": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly-black-fitting-transparent-mirrored.webp",
       "keywords": [
         "Трубочные сборки",
         "Трубочная сборка с отбортовкой",
@@ -1961,7 +2550,7 @@
         "Материал и размеры подбираются по соответствующей модели фитинга",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -1994,7 +2583,7 @@
         "Соединение трубок для промывочной жидкости",
         "Соединения внутренних жидкостных линий прибора",
         "Сборка жидкостных линий на заказ",
-        "Прозрачный FEP, натуральный PTFE, чёрный PTFE",
+        "Прозрачный FEP, неокрашенный PTFE, PFA, чёрный PTFE",
         "Зажимная втулка стопорного кольца и уплотнительная шайба",
         "Фитинг HSF6, миниатюрный фитинг 6-40 UNF",
         "PPS, PEEK, по соответствующей серии",
@@ -2002,7 +2591,7 @@
         "Детали SUS, PEEK подбираются по модели комплекта",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -2012,7 +2601,7 @@
       "title": "Трубочная сборка FEP со стопорным кольцом",
       "description": "Прозрачная трубочная сборка FEP со стопорным кольцом, внутренний диаметр 0.3–2.0 mm. Фитинг, зажимная втулка и уплотнительная шайба подбираются по фактическим диаметрам. Доступны конфигурации 6-40 UNF и HSF6, длина и концы A/B на заказ.",
       "href": "/ru/products/tubing-assemblies/retaining-ring-kits/details/fep/",
-      "image": "/images/products/tubing-assemblies/retaining-ring-pair-white-shadow-intro.webp",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/fep/foreach-fep-retaining-ring-tubing-assembly-white-mirrored.webp",
       "keywords": [
         "Трубочные сборки",
         "Трубочная сборка со стопорным кольцом",
@@ -2030,7 +2619,7 @@
         "Детали SUS, PEEK подбираются по модели комплекта",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -2058,7 +2647,35 @@
         "Детали SUS, PEEK подбираются по модели комплекта",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
+      ],
+      "actionLabel": "Подробнее о товаре"
+    },
+    {
+      "id": "tubing-assemblies:ru:retaining-ring-kits:pfa",
+      "module": "products",
+      "title": "Трубочная сборка PFA со стопорным кольцом",
+      "description": "Трубочная сборка PFA со стопорным кольцом, справочный наружный диаметр 1.6 mm, внутренний 0.5/0.8/1.0 mm. Фитинг, втулка и шайба подбираются по порту. Доступны длина, конфигурация 6-40 UNF или HSF6 и оба конца на заказ.",
+      "href": "/ru/products/tubing-assemblies/retaining-ring-kits/details/pfa/",
+      "image": "/images/products/tubing-assemblies/retaining-ring-kits/pfa/foreach-pfa-retaining-ring-tubing-assembly-transparent-main.webp",
+      "keywords": [
+        "Трубочные сборки",
+        "Трубочная сборка со стопорным кольцом",
+        "Трубочные сборки со стопорным кольцом на заказ",
+        "Трубочная сборка PFA со стопорным кольцом",
+        "Соединение трубок PFA для реагентов",
+        "Комплектация концов трубок 1.6 mm",
+        "Трубки со стопорным кольцом на заказ",
+        "Соединения внутренних жидкостных линий прибора",
+        "PFA",
+        "Зажимная втулка стопорного кольца и уплотнительная шайба",
+        "Фитинг HSF6, миниатюрный фитинг 6-40 UNF",
+        "PPS, PEEK, по соответствующей серии",
+        "M6×1, 1/4-28 UNF (конфигурация HSF6)",
+        "Детали SUS, PEEK подбираются по модели комплекта",
+        "Изготовление по чертежу с указанием длины и допусков",
+        "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -2086,7 +2703,7 @@
         "Детали SUS, PEEK подбираются по модели комплекта",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -2127,7 +2744,7 @@
         "PP, ETFE, по соответствующей модели",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -2155,7 +2772,7 @@
         "PP, ETFE, по соответствующей модели",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -2165,7 +2782,7 @@
       "title": "Трубочная сборка PTFE с феррулой",
       "description": "Неокрашенная трубка PTFE с феррулой и резьбовым фитингом без предварительной отбортовки конца. Справочный внутренний диаметр 0.5–2.0 mm. Диаметры, длина, материалы фитингов и соединения A/B задаются по чертежу.",
       "href": "/ru/products/tubing-assemblies/ferrule-kits/details/ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Трубочные сборки",
         "Трубочная сборка с феррулой",
@@ -2183,7 +2800,7 @@
         "PP, ETFE, по соответствующей модели",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -2193,7 +2810,7 @@
       "title": "Трубочная сборка PFA с феррулой",
       "description": "Трубочная сборка PFA с феррулой, справочный наружный диаметр 1.6 mm, внутренний 0.5/0.8/1.0 mm. Предварительная отбортовка конца не требуется. Длина, порты A/B, материалы фитингов и соответствующие феррулы задаются на заказ.",
       "href": "/ru/products/tubing-assemblies/ferrule-kits/details/pfa/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Трубочные сборки",
         "Трубочная сборка с феррулой",
@@ -2211,7 +2828,7 @@
         "PP, ETFE, по соответствующей модели",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     },
@@ -2221,7 +2838,7 @@
       "title": "Трубочная сборка из чёрного PTFE с феррулой",
       "description": "Сборка из чёрного PTFE с феррулой поддерживает сочетания диаметров со справочным внутренним диаметром 0.8–2.0 mm. Интерфейсы M6×1, 1/4-28 UNF и оба конца изготавливаются на заказ. Светозащитные требования подтверждаются по чувствительному диапазону длин волн реагента.",
       "href": "/ru/products/tubing-assemblies/ferrule-kits/details/black-ptfe/",
-      "image": "/images/products/tubing-assemblies/ferrule-tubing-black-intro.webp",
+      "image": "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-front-angle.webp",
       "keywords": [
         "Трубочные сборки",
         "Трубочная сборка с феррулой",
@@ -2239,7 +2856,7 @@
         "PP, ETFE, по соответствующей модели",
         "Изготовление по чертежу с указанием длины и допусков",
         "Материал фитинга, резьба и тип соединения задаются для каждого конца отдельно",
-        "Ограничительная трубка, термоусадочная маркировка"
+        "Спиральная трубка, защитный рукав от истирания, ограничительная трубка, термоусадочная маркировка"
       ],
       "actionLabel": "Подробнее о товаре"
     }

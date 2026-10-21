@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useId, useState, type ReactNode } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import SitePageShell from "@/components/layout/SitePageShell";
@@ -14,12 +14,14 @@ import ProductEmptyState from "@/components/products/selection/ProductEmptyState
 import type { ProductSelectionCategoryItem, ProductSelectionFilterGroup, ProductSelectionProductItem } from "@/components/products/selection/product-selection-ui.types";
 import { tubingAssemblyTypes, type TubingAssemblyType } from "@/data/products/tubing-assemblies.en";
 import type { TubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
+import { getTubingAssemblyLocalePrefix } from "@/data/products/tubing-assemblies/locales";
 
-export default function TubingAssembliesSelection({ initialType = "", content }: { initialType?: TubingAssemblyType["id"] | ""; content: TubingAssemblySelectionContent }) {
+export default function TubingAssembliesSelection({ initialType = "", content, afterContent }: { initialType?: TubingAssemblyType["id"] | ""; content: TubingAssemblySelectionContent; afterContent?: ReactNode }) {
   const { locale, ui, cards: products, typeNames, overview, intros, introImages } = content;
-  const getPath = (id?: string) => `/${locale}/products/tubing-assemblies/${id ? `${id}/` : ""}`;
+  const prefix = getTubingAssemblyLocalePrefix(locale);
+  const getPath = (id?: string) => `${prefix}/products/tubing-assemblies/${id ? `${id}/` : ""}`;
   const category: ProductSelectionCategoryItem = { id: "tubing-assemblies", label: ui.category, description: overview.paragraphs[0], sortOrder: 100 };
-  const categories: ProductSelectionCategoryItem[] = [...(["pumps", "valves", "probes", "fittings", "tubing", "control"] as const).map((id, sortOrder) => ({ id, label: ui[id], sortOrder, description: "", href: id === "control" && locale !== "en" ? `/${locale}/products/?category=control` : `/${locale}/products/${id}/` })), category];
+  const categories: ProductSelectionCategoryItem[] = [...(["pumps", "valves", "probes", "fittings", "tubing", "control"] as const).map((id, sortOrder) => ({ id, label: ui[id], sortOrder, description: "", href: id === "control" && locale !== "en" ? `${prefix}/products/?category=control` : `${prefix}/products/${id}/` })), category];
   const filterGroup: ProductSelectionFilterGroup = { key: "productType", title: ui.productType, inputType: "single", layout: "two", options: tubingAssemblyTypes.map(item => ({ value: item.id, label: typeNames[item.id] })) };
   const router = useRouter();
   const [searchInput, setSearchInput] = useState("");
@@ -64,7 +66,7 @@ export default function TubingAssembliesSelection({ initialType = "", content }:
 
   return <div className="products-selection-page">
     <SitePageShell breadcrumbItems={[
-      { label: ui.home, href: `/${locale}/` }, { label: ui.products, href: `/${locale}/products/` },
+      { label: ui.home, href: `${prefix}/` }, { label: ui.products, href: `${prefix}/products/` },
       { label: ui.category, ...(activeType ? { href: getPath() } : {}) },
       ...(activeType ? [{ label: typeNames[activeType] }] : []),
     ]}>
@@ -128,6 +130,7 @@ export default function TubingAssembliesSelection({ initialType = "", content }:
               </section>
             </div>
           </section>
+          {afterContent}
         </div>
       </main>
     </SitePageShell>

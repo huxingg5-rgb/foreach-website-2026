@@ -12,15 +12,14 @@ import ru from "./flanged-tubing-locales/ru.json";
 export { flangedTubingAssembliesSlug } from "./technical-article-availability";
 export { getFlangedTubingNavigation } from "./flanged-tubing-assemblies-faq.intl";
 const translations = { en, es, fr, ko, ru };
-export const flangedTubingProductIds = ["809717", "809723", "809421", "809058"];
 export const flangedTubingRelationKeys = ["series:hf", "series:hf6", "series:hfl", "series:hfl6"];
 export const flangedTubingRelatedIntro: Record<TechnicalArticleLocale, string> = {
-  "zh-CN": "以下按 HF、HF6、HFL、HFL6 各列一个代表型号，便于进入产品页查看规格与图纸。它们是选型入口，具体接管外径、材料、垫片和端口配套仍需分别确认。",
-  en: "One representative model from each series—HF, HF6, HFL and HFL6—links to specifications and drawings. These are selection starting points; confirm tubing OD, materials, washers and port compatibility for each configuration.",
-  es: "Se muestra un modelo representativo de HF, HF6, HFL y HFL6 con acceso a especificaciones y planos. Son puntos de partida; confirme diámetro exterior, materiales, arandelas y puerto para cada configuración.",
-  fr: "Un modèle représentatif de HF, HF6, HFL et HFL6 donne accès aux caractéristiques et plans. Ce sont des points de départ : confirmez diamètre extérieur, matériaux, rondelles et port pour chaque configuration.",
-  ko: "HF, HF6, HFL, HFL6의 대표 모델을 하나씩 제시합니다. 제품 페이지에서 사양과 도면을 확인할 수 있으며, 각 구성의 튜브 외경, 재질, 와셔 및 포트 적합성은 별도로 확인해야 합니다.",
-  ru: "По одному представителю HF, HF6, HFL и HFL6 ведёт к характеристикам и чертежам. Это отправные варианты: отдельно подтвердите наружный диаметр трубки, материалы, шайбы и ответный порт.",
+  "zh-CN": "以下为不同管材的法兰翻边管组件，可进入详情页查看对应配置。管径、管长、两端接头、垫片及端口配套需按实际液路和图纸确认。",
+  en: "Explore flanged tubing assemblies by tubing material. Each detail page presents the corresponding configuration; confirm tube dimensions, length, end fittings, washers and mating ports against your fluid path and drawings.",
+  es: "Explore conjuntos de tubos con reborde según el material. Cada página muestra la configuración correspondiente; confirme dimensiones, longitud, racores de extremo, arandelas y puertos según el circuito y los planos.",
+  fr: "Découvrez les assemblages de tubes à collet par matériau. Chaque fiche présente la configuration correspondante ; confirmez dimensions, longueur, raccords d’extrémité, rondelles et ports selon le circuit et les plans.",
+  ko: "튜브 재질별 플랜지형 튜빙 어셈블리를 확인할 수 있습니다. 각 상세 페이지에서 해당 구성을 확인하고, 튜브 치수와 길이, 양단 피팅, 와셔 및 연결 포트는 실제 유로와 도면에 맞춰 검토하세요.",
+  ru: "Выберите трубную сборку с отбортовкой по материалу трубки. На странице изделия представлена соответствующая конфигурация; размеры и длину трубки, концевые фитинги, шайбы и ответные порты уточняйте по жидкостному тракту и чертежам.",
 };
 
 export function getFlangedTubingCopy(locale: TechnicalArticleLocale): DiaphragmPumpEngineeringArticleCopy {

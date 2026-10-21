@@ -13,7 +13,7 @@ import { getTubingIntro, getTubingSeriesCopy, getTubingMaterialCopy } from "@/da
 import { getTubingDetailPath, getLegacyTubingSelectionTarget, getTubingSelectionPath, hasTubingSelectionLocale, isTubingMaterial } from "@/data/products/selection/tubing-selection-routes";
 import { fittingIntrosZh, fittingOverviewParagraphsZh } from "@/data/products/selection/fitting-headings.zh";
 import ProductTypeIntroImage from "./ProductTypeIntroImage";
-import { isTubingAssemblyLocale, tubingAssemblyNavigation } from "@/data/products/tubing-assemblies/locales";
+import { getTubingAssemblyLocalePrefix, isTubingAssemblyLocale, tubingAssemblyNavigation } from "@/data/products/tubing-assemblies/locales";
 import { ProductApplicationGuides } from "@/components/products/detail/ProductApplicationsPanel";
 import { getEnglishProductApplicationGuides } from "@/data/products/detail/applications/product-application-guides.en";
 import { probeIntrosZh, probeOverviewParagraphsZh, probeTypesZh, getProbeProductTypeIdZh, getProbeSelectionPathZh } from "@/data/products/selection/probe-selection.zh";
@@ -1256,7 +1256,7 @@ function getCategoryItems(locale: SelectionLocale) {
     categoryMap.set("tubing-assemblies", {
       id: "tubing-assemblies", label: tubingAssemblyNavigation[locale].title, sortOrder: 100,
       description: tubingAssemblyNavigation[locale].description,
-      href: `/${locale}/products/tubing-assemblies/`,
+      href: `${getTubingAssemblyLocalePrefix(locale)}/products/tubing-assemblies/`,
     });
   }
 

@@ -5,21 +5,22 @@ import {
   getLocalizedAssemblyDetail,
   getTubingAssemblySelectionContent,
 } from "../../data/products/tubing-assemblies/localized";
-import { tubingAssemblyLocales } from "../../data/products/tubing-assemblies/locales";
+import { allTubingAssemblyLocales, getTubingAssemblyLocalePrefix } from "../../data/products/tubing-assemblies/locales";
 import { getPublishedAssemblyConfigurations, publishedAssemblyPageCount } from "../../data/products/tubing-assemblies/publication";
 import { tubingAssemblyTypes } from "../../data/products/tubing-assemblies.en";
 import type { SiteSearchItem } from "../../data/search/site-search.types";
 
 const outputPath = path.resolve("data/products/tubing-assemblies/search.generated.json");
 const generated: Record<string, SiteSearchItem[]> = {};
+const expectedPageCount = publishedAssemblyPageCount;
 
 function unique(values: (string | undefined)[]): string[] {
   return [...new Set(values.filter((value): value is string => Boolean(value?.trim())))];
 }
 
-for (const locale of tubingAssemblyLocales) {
+for (const locale of allTubingAssemblyLocales) {
   const content = getTubingAssemblySelectionContent(locale);
-  const rootPath = `/${locale}/products/tubing-assemblies/`;
+  const rootPath = `${getTubingAssemblyLocalePrefix(locale)}/products/tubing-assemblies/`;
   const overview: SiteSearchItem = {
     id: `tubing-assemblies:${locale}:overview`,
     module: "products",
@@ -68,12 +69,12 @@ for (const locale of tubingAssemblyLocales) {
   }
 
   const paths = new Set(items.map(item => item.href));
-  if (items.length !== publishedAssemblyPageCount || paths.size !== publishedAssemblyPageCount) {
-    throw new Error(`Expected ${publishedAssemblyPageCount} unique tubing-assembly pages for ${locale}; got ${items.length}/${paths.size}`);
+  if (items.length !== expectedPageCount || paths.size !== expectedPageCount) {
+    throw new Error(`Expected ${expectedPageCount} unique tubing-assembly pages for ${locale}; got ${items.length}/${paths.size}`);
   }
   for (const item of items) {
     if (!item.href.startsWith(rootPath)) throw new Error(`Wrong locale path: ${item.href}`);
-    if (/[\u3400-\u9fff]/.test(JSON.stringify(item))) throw new Error(`Untranslated search item: ${item.id}`);
+    if (locale !== "zh-CN" && /[\u3400-\u9fff]/.test(JSON.stringify(item))) throw new Error(`Untranslated search item: ${item.id}`);
     if (!item.image || !fs.existsSync(path.join("public", item.image))) {
       throw new Error(`Missing search image: ${item.id}: ${item.image}`);
     }
@@ -86,9 +87,9 @@ if (process.argv.includes("--check")) {
   if (!fs.existsSync(outputPath) || fs.readFileSync(outputPath, "utf8") !== expected) {
     throw new Error("Tubing-assembly search snapshot is stale. Run: npx tsx scripts/products/build-tubing-assembly-search.ts");
   }
-  console.log(`Tubing-assembly search snapshot is current: ${publishedAssemblyPageCount} pages × ${tubingAssemblyLocales.length} locales.`);
+  console.log(`Tubing-assembly search snapshot is current: ${expectedPageCount} pages × ${allTubingAssemblyLocales.length} locales = ${expectedPageCount * allTubingAssemblyLocales.length} entries.`);
 } else {
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, expected, "utf8");
-  console.log(`Generated tubing-assembly search snapshot: ${publishedAssemblyPageCount} pages × ${tubingAssemblyLocales.length} locales.`);
+  console.log(`Generated tubing-assembly search snapshot: ${expectedPageCount} pages × ${allTubingAssemblyLocales.length} locales = ${expectedPageCount * allTubingAssemblyLocales.length} entries.`);
 }

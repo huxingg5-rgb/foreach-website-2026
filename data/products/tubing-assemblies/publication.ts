@@ -4,7 +4,7 @@ import type { AssemblyConfiguration, AssemblyFamily } from "../detail/tubing-ass
 const publishedConfigurations: Record<AssemblyFamily, readonly AssemblyConfiguration[]> = {
   "flanged-tubing": ["fep", "ptfe", "pfa", "black-ptfe"],
   "ferrule-kits": ["fep", "ptfe", "pfa", "black-ptfe"],
-  "retaining-ring-kits": ["fep", "ptfe", "black-ptfe"],
+  "retaining-ring-kits": ["fep", "ptfe", "pfa", "black-ptfe"],
 };
 
 export function getPublishedAssemblyConfigurations(family: AssemblyFamily): readonly AssemblyConfiguration[] {
@@ -16,7 +16,7 @@ export function isPublishedAssemblyConfiguration(family: AssemblyFamily, configu
 }
 
 export function isPublishedAssemblyPath(href: string): boolean {
-  const match = href.split(/[?#]/, 1)[0].match(/^\/(?:en|es|fr|ko|ru)\/products\/tubing-assemblies\/([^/]+)\/details\/([^/]+)\/?$/);
+  const match = href.split(/[?#]/, 1)[0].match(/^(?:\/(?:en|es|fr|ko|ru))?\/products\/tubing-assemblies\/([^/]+)\/details\/([^/]+)\/?$/);
   if (!match) return true;
   const [, family, configuration] = match;
   return Object.prototype.hasOwnProperty.call(publishedConfigurations, family)

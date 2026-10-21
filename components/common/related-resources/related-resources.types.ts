@@ -20,6 +20,10 @@ export type RelatedResourcesData = {
   uiLocale?: RelatedResourcesLocale;
   primaryRelationKey?: string;
   videos: InstallationGuideCard[];
-  products: { id: string; title: string; href: string; imageSrc: string; imageAlt: string }[];
+  products: {
+    id: string; title: string; href: string; imageSrc: string; imageAlt: string;
+    /** Shared frame ratio for a product group; source images remain fully contained. */
+    imageAspectRatio?: number;
+  }[];
   articles: RelatedArticleCard[];
 };

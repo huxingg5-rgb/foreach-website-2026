@@ -3,7 +3,7 @@
   height: auto !important;
   max-height: none !important;
   aspect-ratio: 4 / 3;
-  padding: 12px !important;
+  padding: 0 !important;
   flex: 0 0 auto;
 }
 :global(.products-selection-page) .card .image img {
@@ -11,7 +11,7 @@
   height: 100% !important;
   max-height: 100% !important;
   max-width: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
   object-position: center !important;
   transform: none !important;
 }

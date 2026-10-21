@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import TubingAssemblyRelatedArticles from "@/components/products/tubing-assemblies/TubingAssemblyRelatedArticles";
 import { getLocalizedAssemblyDetail, getLocalizedAssemblyMetadata } from "@/data/products/tubing-assemblies/localized";
 import { tubingAssemblyLocales, isTubingAssemblyLocale } from "@/data/products/tubing-assemblies/locales";
 import { tubingAssemblyTypes } from "@/data/products/tubing-assemblies.en";
@@ -19,5 +20,6 @@ export default async function Page({ params }: Props) {
   const { locale, type } = await params;
   const item = tubingAssemblyTypes.find(item => item.id === type);
   if (!isTubingAssemblyLocale(locale) || !item) notFound();
-  return <ProductDetailClient data={getLocalizedAssemblyDetail(locale, item.id)} />;
+  return <ProductDetailClient data={getLocalizedAssemblyDetail(locale, item.id)}
+    afterContent={<TubingAssemblyRelatedArticles type={item.id} locale={locale} />} />;
 }

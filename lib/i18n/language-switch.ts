@@ -115,10 +115,9 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
   if (/^\/(?:en|es|fr|ko|ru)\/applications\/?$/.test(pathname) && localeCode === "zh-CN") {
     return "/applications/ivd/";
   }
-  if (/^\/(?:en|es|fr|ko|ru)\/products\/tubing-assemblies(?:\/|$)/.test(pathname)) {
-    if (localeCode === "zh-CN") return "/products/";
+  if (/^(?:\/(?:en|es|fr|ko|ru))?\/products\/tubing-assemblies(?:\/|$)/.test(pathname)) {
     const assemblyPath = pathname.replace(/^\/(?:en|es|fr|ko|ru)/, "");
-    return `/${localeCode}${assemblyPath.replace(/\/?$/, "/")}`;
+    return `${localeCode === "zh-CN" ? "" : `/${localeCode}`}${assemblyPath.replace(/\/?$/, "/")}`;
   }
   const tubingPath = getTubingLanguagePath(pathname, localeCode);
   if (tubingPath) return tubingPath;

@@ -9,8 +9,12 @@ import type { ProductDetailPageData, ProductSpecItem } from "./product-detail.ty
 import { getCanonicalUrl } from "@/lib/seo/site-url";
 import { assemblyDetailIntroductions, assemblyQualityDocuments } from "./tubing-assembly-introductions.review.zh";
 
-export const assemblyConfigurations = ["fep", "ptfe", "pfa", "black-ptfe", "coiled", "sleeved"] as const;
-export type AssemblyConfiguration = (typeof assemblyConfigurations)[number];
+const allAssemblyConfigurations = ["fep", "ptfe", "pfa", "black-ptfe", "coiled", "sleeved"] as const;
+export type AssemblyConfiguration = (typeof allAssemblyConfigurations)[number];
+// Coiled tubing and protective sleeving remain customization options, not standalone products.
+export const assemblyConfigurations = allAssemblyConfigurations.filter(
+  configuration => configuration !== "coiled" && configuration !== "sleeved",
+);
 export type AssemblyFamily = TubingAssemblyType["id"];
 
 const flangedSharedGallery = [
@@ -18,12 +22,83 @@ const flangedSharedGallery = [
   { file: "flanged-fittings-and-washers.png", alt: "翻边连接用螺纹接头及配套垫圈实拍" },
 ].map(image => ({ ...image, src: `/images/products/tubing-assemblies/flanged-tubing/fep/${image.file}` }));
 
+const fepFlangedGallery = [{
+  src: "/images/products/tubing-assemblies/flanged-tubing/fep/foreach-fep-flanged-tubing-assembly-end-detail.webp",
+  alt: "FEP 法兰翻边管组件端部实拍，展示透明管材、白色螺纹接头与金属支撑垫圈",
+}];
+
+const pfaFlangedGallery = [
+  { file: "foreach-pfa-flanged-tubing-assembly-side.webp", alt: "PFA 法兰翻边管组件侧面实拍，展示半透明螺纹接头与透明管材" },
+  { file: "foreach-pfa-flanged-tubing-assembly-flange-detail.webp", alt: "PFA 法兰翻边管组件端部细节，展示翻边管端与金属支撑垫圈" },
+].map(image => ({ ...image, src: `/images/products/tubing-assemblies/flanged-tubing/pfa/${image.file}` }));
+
+const pfaFlangedMainImage = {
+  src: "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
+  alt: "PFA 法兰翻边管组件，透明翻边管端、半透明螺纹接头及金属支撑垫圈",
+};
+
+const ptfeFlangedGallery = [
+  { file: "foreach-ptfe-flanged-tubing-assembly-angled.webp", alt: "PTFE 法兰翻边管组件斜视实拍，展示本色管材、半透明螺纹接头与金属支撑垫圈" },
+  { file: "foreach-ptfe-flanged-tubing-assembly-flange-detail.webp", alt: "PTFE 法兰翻边管组件端部细节，展示翻边管端与金属支撑垫圈" },
+  { file: "foreach-ptfe-flanged-tubing-assembly-rear-angle.webp", alt: "PTFE 法兰翻边管组件后侧斜视，展示管材与螺纹接头连接部位" },
+].map(image => ({ ...image, src: `/images/products/tubing-assemblies/flanged-tubing/ptfe/${image.file}` }));
+
+const blackPtfeFlangedGallery = [
+  { file: "foreach-black-ptfe-flanged-tubing-assembly-translucent-fitting-angled.webp", alt: "黑色 PTFE 法兰翻边管组件，黑色管材连接半透明螺纹接头及金属支撑垫圈" },
+  { file: "foreach-black-ptfe-flanged-tubing-assembly-translucent-fitting-rear-angle.webp", alt: "黑色 PTFE 法兰翻边管组件后侧斜视，展示半透明接头与黑色管材连接部位" },
+  { file: "foreach-black-ptfe-flanged-tubing-assembly-black-fitting-rear-angle.webp", alt: "黑色 PTFE 法兰翻边管组件后侧斜视，展示黑色螺纹接头与管材连接部位" },
+  { file: "foreach-black-ptfe-flanged-tubing-assembly-black-fitting-flange-detail.webp", alt: "黑色 PTFE 法兰翻边管组件端部细节，展示黑色翻边管端、螺纹接头与金属支撑垫圈" },
+].map(image => ({ ...image, src: `/images/products/tubing-assemblies/flanged-tubing/black-ptfe/${image.file}` }));
+
 const ferruleSharedGallery = [
-  { file: "ferrule-seal-upright.png", alt: "卡套锥形密封件正面实拍" },
-  { file: "ferrule-seal-angled.png", alt: "卡套密封件侧放细节实拍" },
-  { file: "ferrule-seal-selection.png", alt: "不同外形与颜色的卡套密封件实拍" },
-  { file: "ferrule-fittings-and-seals.png", alt: "卡套连接用螺纹接头与配套卡套实拍" },
+  { file: "ferrule-seal-upright.png", alt: "卡箍锥形密封件正面实拍" },
+  { file: "ferrule-seal-angled.png", alt: "卡箍密封件侧放细节实拍" },
+  { file: "ferrule-seal-selection.png", alt: "不同外形与颜色的卡箍密封件实拍" },
+  { file: "ferrule-fittings-and-seals.png", alt: "卡箍连接用螺纹接头与配套卡箍实拍" },
 ].map(image => ({ ...image, src: `/images/products/tubing-assemblies/ferrule-kits/gallery/${image.file}` }));
+
+const ptfeFerruleMainImage = {
+  src: "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-front-angle.webp",
+  alt: "PTFE 管组件前端斜视图，展示白色半透明螺纹接头、前端密封件与本色管材",
+};
+const ptfeFerruleGallery = [{
+  src: "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-side.webp",
+  alt: "PTFE 管组件侧视图，展示白色半透明螺纹接头、前端密封件与本色管材连接",
+}, {
+  src: "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-rear-angle.webp",
+  alt: "PTFE 管组件后侧斜视图，展示本色管材与白色半透明螺纹接头连接部位",
+}];
+
+const blackPtfeFerruleMainImage = {
+  src: "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-front-angle.webp",
+  alt: "黑色 PTFE 卡箍管组件前端斜视图，展示卡箍中心孔、黑色螺纹接头与管材连接",
+};
+const blackPtfeFerruleGallery = [{
+  src: "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-side.webp",
+  alt: "黑色 PTFE 卡箍管组件侧视图，展示黑色螺纹接头、半透明卡箍与黑色管材",
+}];
+
+const pfaRetainingRingMainImage = {
+  src: "/images/products/tubing-assemblies/retaining-ring-kits/pfa/foreach-pfa-retaining-ring-tubing-assembly-transparent-main.webp",
+  alt: "PFA 卡环管组件，透明管材连接米黄色螺纹接头、金属卡环与密封垫圈",
+};
+
+const fepRetainingRingMainImage = {
+  src: "/images/products/tubing-assemblies/retaining-ring-kits/fep/foreach-fep-retaining-ring-tubing-assembly-white-mirrored.webp",
+  alt: "FEP 卡环管组件，透明管材连接米黄色螺纹接头、金属卡环与密封垫圈",
+};
+
+const pfaFerruleMainImage = {
+  src: "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-front-angle.webp",
+  alt: "PFA 卡箍管组件前端斜视图，展示半透明螺纹接头、卡箍中心孔与透明管材",
+};
+const pfaFerruleGallery = [{
+  src: "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-side.webp",
+  alt: "PFA 卡箍管组件侧视图，展示半透明螺纹接头、前端卡箍与透明管材连接",
+},{
+  src: "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-beige-fitting-yellow-ferrule.webp",
+  alt: "PFA 卡箍管组件斜视图，米黄色螺纹接头搭配黄色卡箍与透明管材",
+}];
 
 const retainingRingSharedGallery = [
   { file: "retaining-ring-fittings-and-components.png", alt: "卡环连接用螺纹接头与配套环件实拍" },
@@ -54,21 +129,21 @@ const structures: Record<AssemblyFamily, { intro: string; parts: { name: string;
     installation: "按配套要求安装压套与密封垫圈，使用指定装配工具。管外径、卡环套件和端口需配套确认。",
   },
   "ferrule-kits": {
-    intro: "管端无需预先翻边，由配套螺纹接头压紧卡套，实现管路固定与密封。卡套尺寸随管外径和端口结构选择。",
+    intro: "管端无需预先翻边，由配套螺纹接头压紧卡箍，实现管路固定与密封。卡箍尺寸随管外径和端口结构选择。",
     parts: [
       { name: "管材", description: "确认内外径及管端状态，按安装要求插入配合端口。" },
-      { name: "卡套", description: "按系列提供 PP、ETFE 材质，需与管外径和端口几何形状匹配。" },
+      { name: "卡箍", description: "按系列提供 PP、ETFE 材质，需与管外径和端口几何形状匹配。" },
       { name: "螺纹接头", description: "按系列提供 PPS、PVDF、PEEK、POM、PP 材质及标准、紧凑结构。" },
     ],
-    connections: [["平底端口连接", "M6×1、1/4-28 UNF", "接管外径 1.6、2.0、2.5、3.0、3.2 mm"], ["卡套选配", "随接头及端口确定", "PP、ETFE；具体尺寸按型号选择"]],
-    installation: "确认卡套方向、管材插入深度与接头拧紧要求。按装配图与规定扭矩安装，避免管路受拉或急弯。",
+    connections: [["平底端口连接", "M6×1、1/4-28 UNF", "接管外径 1.6、2.0、2.5、3.0、3.2 mm"], ["卡箍选配", "随接头及端口确定", "PP、ETFE；具体尺寸按型号选择"]],
+    installation: "确认卡箍方向、管材插入深度与接头拧紧要求。按装配图与规定扭矩安装，避免管路受拉或急弯。",
   },
 };
 
 const options: Record<AssemblyConfiguration, { title: string; text: string; rows: string[][] }> = {
   fep: { title: "FEP 管材与长度定制", text: "透明 FEP 管用于仪器内试剂、清洗液及样本相关液路的连接配置。需要观察液体或气泡时，可结合实际管壁与样品确认可视效果。", rows: [["管材", "透明 FEP"], ["尺寸", "按管材尺寸表中的内外径组合选择"], ["成品长度", "按图纸指定，注明测量基准与公差"]] },
   ptfe: { title: "PTFE 管材与长度定制", text: "本色 PTFE 管材按设备液路布局裁切与配套连接。选材时同时提供工作液、清洗液及使用温度。", rows: [["管材", "本色 PTFE"], ["尺寸", "按已列规格选择内外径组合"], ["成品长度", "按安装路径与图纸定制"]] },
-  pfa: { title: "PFA 管材与端部定制", text: "PFA 管材可按管长与两端连接要求配置。管端加工及密封部件需结合所选尺寸与配合端口确认。", rows: [["管材", "PFA"], ["参考外径", "1.6 mm"], ["参考内径", "0.5、0.8、1.0 mm"]] },
+  pfa: { title: "PFA 管材与端部定制", text: "PFA 管材可按管长与两端连接要求配置。管端加工及密封部件需结合所选尺寸与配合端口确认。", rows: [["管材", "PFA"], ["管外径", "1.6 mm"], ["可选内径", "0.5、0.8、1.0 mm"]] },
   "black-ptfe": { title: "黑色 PTFE 与避光配置", text: "用于提出避光要求的仪器液路。请提供试剂敏感波段、遮光要求与安装环境，以确认管材及完整连接部位的遮光表现。", rows: [["管材", "黑色 PTFE"], ["避光要求", "注明敏感波段及验收要求"], ["管路标识", "可指定文字、编号与安装位置"]] },
   coiled: { title: "弹簧管几何尺寸定制", text: "管体螺旋成型，两端保留直管段用于连接。请提供安装空间；如涉及伸缩运动，还需给出行程、运动频率与寿命要求。", rows: [["管材", "FEP、PTFE、PFA 或黑色 PTFE，按成型要求选择"], ["螺旋尺寸", "螺旋直径、圈数、螺距及自然状态长度"], ["端部尺寸", "A、B 两端直管长度与出管方向"]] },
   sleeved: { title: "防磨护套覆盖与位置定制", text: "在管路与机壳、支架等接触的位置配置护套。依据走管路径指定覆盖区间，避免影响端部安装及所需弯曲空间。", rows: [["基础管材", "FEP、PTFE、PFA 或黑色 PTFE"], ["护套", "材质、内径与覆盖长度按图确认"], ["安装位置", "距 A 端或 B 端的距离、固定方式及外部空间"]] },
@@ -103,7 +178,7 @@ const configurationFaqs: Record<AssemblyConfiguration, AssemblyFaq[]> = {
   "fep": [
     {
       "question": "透明 FEP 管能用于观察气泡吗？",
-      "answer": "透明 FEP 管可用于目视观察液体和气泡。可视程度受管壁、内径及液体颜色影响，建议用实际液体和样品确认。"
+      "answer": "透明 FEP 管可用于目视观察液体和气泡。可视程度受管壁、内径及液体颜色影响，可视效果需用实际液体和样品确认。"
     },
     {
       "question": "FEP 管径和长度可以怎样选择？",
@@ -122,8 +197,8 @@ const configurationFaqs: Record<AssemblyConfiguration, AssemblyFaq[]> = {
   ],
   "pfa": [
     {
-      "question": "PFA 管有哪些现有尺寸？",
-      "answer": "当前参考管材外径为 1.6 mm，内径可选 0.5、0.8、1.0 mm。其他尺寸可提供图纸，由工程师评估管材供应与端部配套。"
+      "question": "PFA 管有哪些可选尺寸？",
+      "answer": "配套管材外径为 1.6 mm，内径可选 0.5、0.8、1.0 mm。其他尺寸可提供图纸，由工程师评估管材供应与端部配套。"
     },
     {
       "question": "PFA 组件可以定制哪些部分？",
@@ -171,8 +246,8 @@ const connectionFaqs: Record<AssemblyFamily, AssemblyFaq> = {
     "answer": "6-40 UNF 微型配置采用 PEEK 接头，适配外径 1.6 mm 管材。HSF6 提供 M6×1、1/4-28 UNF 螺纹；按端口螺纹和管外径对照规格表选择套件。"
   },
   "ferrule-kits": {
-    "question": "卡套连接需要预先翻边吗？",
-    "answer": "不需要。配套接头压紧卡套，实现管路固定与密封。装配时按对应型号核对卡套方向、管材插入深度与拧紧要求。"
+    "question": "卡箍连接需要预先翻边吗？",
+    "answer": "不需要。配套接头压紧卡箍，实现管路固定与密封。装配时按对应型号核对卡箍方向、管材插入深度与拧紧要求。"
   }
 };
 const pressureFaq: AssemblyFaq = {
@@ -196,11 +271,22 @@ export function getAssemblyReviewDetail(type: AssemblyFamily, configuration?: As
   const card = cards.find(item => item.detailHref === path);
   const intro = tubingAssemblyTypeIntrosReview[type];
   const usesCardImage = ((type === "flanged-tubing" || type === "ferrule-kits") && configuration === "fep")
-    || ((type === "flanged-tubing" || type === "retaining-ring-kits") && configuration === "black-ptfe")
-    || (type === "flanged-tubing" && configuration === "pfa");
-  const image = usesCardImage && card?.imageCard
-    ? { src: card.imageCard, alt: card.imageAlt }
-    : tubingAssemblyIntroImages[type]!;
+    || ((type === "flanged-tubing" || type === "retaining-ring-kits") && configuration === "black-ptfe");
+  const image = type === "retaining-ring-kits" && configuration === "pfa"
+    ? pfaRetainingRingMainImage
+    : type === "retaining-ring-kits" && configuration === "fep"
+    ? fepRetainingRingMainImage
+    : type === "flanged-tubing" && configuration === "pfa"
+    ? pfaFlangedMainImage
+    : type === "ferrule-kits" && configuration === "black-ptfe"
+      ? blackPtfeFerruleMainImage
+    : type === "ferrule-kits" && configuration === "pfa"
+      ? pfaFerruleMainImage
+    : type === "ferrule-kits" && configuration === "ptfe"
+      ? ptfeFerruleMainImage
+    : usesCardImage && card?.imageCard
+      ? { src: card.imageCard, alt: card.imageAlt }
+      : tubingAssemblyIntroImages[type]!;
   const feature = configuration ? options[configuration] : undefined;
   const structure = structures[type];
   const title = card?.cardTitle ?? tubingAssemblyReviewTypeNames[type];
@@ -211,7 +297,7 @@ export function getAssemblyReviewDetail(type: AssemblyFamily, configuration?: As
     introduction: authored?.paragraphs ?? intro.paragraphs,
     applications: authored?.applications ?? ["试剂管路连接", "清洗液管路连接", "仪器内部液路连接", "定制液路装配"],
     seoTitle: authored?.seoTitle,
-    structure, feature, sizes: sizeRows(configuration).filter(row => type !== "retaining-ring-kits" || row[0] !== "PFA"),
+    structure, feature, sizes: sizeRows(configuration),
     compliance: assemblyQualityDocuments,
     faqs: getAssemblyFaqs(type, configuration),
   };
@@ -232,7 +318,6 @@ function getAssemblyParameters(data: AssemblyReviewDetail): ProductSpecItem[] {
     : data.configuration === "ptfe" ? "本色 PTFE"
     : data.configuration === "pfa" ? "PFA"
     : data.configuration === "black-ptfe" ? "黑色 PTFE"
-    : data.type === "retaining-ring-kits" ? "透明 FEP、本色 PTFE、黑色 PTFE"
     : "透明 FEP、本色 PTFE、PFA、黑色 PTFE";
   const familyParameters: Record<AssemblyFamily, ProductSpecItem[]> = {
     "flanged-tubing": [
@@ -250,11 +335,11 @@ function getAssemblyParameters(data: AssemblyReviewDetail): ProductSpecItem[] {
       { label: "卡环套件", value: "SUS、PEEK 部件，按套件型号配套" },
     ],
     "ferrule-kits": [
-      { label: "连接结构", value: "卡套连接，管端无需预先翻边" },
+      { label: "连接结构", value: "卡箍连接，管端无需预先翻边" },
       { label: "接头结构", value: "标准型、紧凑型" },
       { label: "接头材质", value: "PPS、PVDF、PEEK、POM、PP，按对应系列选配" },
       { label: "螺纹规格", value: "M6×1、1/4-28 UNF" },
-      { label: "卡套材质", value: "PP、ETFE，按对应型号选配" },
+      { label: "卡箍材质", value: "PP、ETFE，按对应型号选配" },
     ],
   };
   const geometryRows = data.feature?.rows.filter(([label]) =>
@@ -278,8 +363,15 @@ function getAssemblyParameters(data: AssemblyReviewDetail): ProductSpecItem[] {
 /** Chinese review content uses the site's existing product-detail template. */
 export function getAssemblySharedDetailData(data: AssemblyReviewDetail): ProductDetailPageData & Record<string, unknown> {
   const paragraphs = [...data.introduction];
-  const gallery = (data.type === "flanged-tubing" ? flangedSharedGallery
-    : data.type === "ferrule-kits" ? ferruleSharedGallery
+  const gallery = (data.type === "flanged-tubing"
+    ? (data.configuration === "pfa" ? [...pfaFlangedGallery, ...flangedSharedGallery]
+      : data.configuration === "ptfe" ? [...ptfeFlangedGallery, ...flangedSharedGallery]
+      : data.configuration === "black-ptfe" ? [...blackPtfeFlangedGallery, ...flangedSharedGallery]
+      : data.configuration === "fep" ? [...fepFlangedGallery, ...flangedSharedGallery] : flangedSharedGallery)
+    : data.type === "ferrule-kits"
+      ? (data.configuration === "black-ptfe" ? [...blackPtfeFerruleGallery, ...ferruleSharedGallery]
+        : data.configuration === "ptfe" ? [...ptfeFerruleGallery, ...ferruleSharedGallery]
+        : data.configuration === "pfa" ? [...pfaFerruleGallery, ...ferruleSharedGallery] : ferruleSharedGallery)
     : data.type === "retaining-ring-kits" ? retainingRingSharedGallery : [])
     .filter(image => image.src !== data.image.src);
   return {

@@ -2456,7 +2456,7 @@ export function getVisibleNavigationItems(locale = "zh-CN"): NavigationItem[] {
       if (item.key === "products" && isTubingAssemblyLocale(locale) && item.megaDropdown) {
         const title = { "zh-CN": "管组件系列", en: tubingAssemblyNavigation.en.title, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].title])) };
         const description = { "zh-CN": "法兰翻边、卡环套件、卡箍套件", en: tubingAssemblyNavigation.en.description, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].description])) };
-        const href = { "zh-CN": "/products/", en: "/en/products/tubing-assemblies/", ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `/${code}/products/tubing-assemblies/`])) };
+        const href = { "zh-CN": "/products/tubing-assemblies/", en: "/en/products/tubing-assemblies/", ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `/${code}/products/tubing-assemblies/`])) };
         return {
           ...item,
           megaDropdown: {
@@ -2465,11 +2465,11 @@ export function getVisibleNavigationItems(locale = "zh-CN"): NavigationItem[] {
             cards: [...item.megaDropdown.cards, {
               key: "tubing-assemblies-card", categoryKey: "tubing-assemblies", title, description, href, order: 7, enabled: true,
               images: tubingAssemblyTypes.map((type, index) => ({ ...productImage(type.image,
-                { "zh-CN": type.name, en: tubingAssemblyNavigation.en.families[index], ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].families[index]])) },
-                { "zh-CN": type.menuDescription, en: tubingAssemblyNavigation.en.descriptions[index], ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].descriptions[index]])) },
-                { "zh-CN": "/products/", en: `/en/products/tubing-assemblies/${type.id}/`, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `/${code}/products/tubing-assemblies/${type.id}/`])) }),
+                { "zh-CN": tubingAssemblyNavigation["zh-CN"].families[index], en: tubingAssemblyNavigation.en.families[index], ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].families[index]])) },
+                { "zh-CN": tubingAssemblyNavigation["zh-CN"].descriptions[index], en: tubingAssemblyNavigation.en.descriptions[index], ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].descriptions[index]])) },
+                { "zh-CN": `/products/tubing-assemblies/${type.id}/`, en: `/en/products/tubing-assemblies/${type.id}/`, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `/${code}/products/tubing-assemblies/${type.id}/`])) }),
                 ...tubingAssemblyMenuImages[type.id],
-                alt: { "zh-CN": type.name, en: `${tubingAssemblyNavigation.en.families[index]} — ${tubingAssemblyNavigation.en.descriptions[index]}`, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `${tubingAssemblyNavigation[code].families[index]} — ${tubingAssemblyNavigation[code].descriptions[index]}`])) },
+                alt: { "zh-CN": tubingAssemblyNavigation["zh-CN"].families[index], en: `${tubingAssemblyNavigation.en.families[index]} — ${tubingAssemblyNavigation.en.descriptions[index]}`, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `${tubingAssemblyNavigation[code].families[index]} — ${tubingAssemblyNavigation[code].descriptions[index]}`])) },
               })),
             }],
           },

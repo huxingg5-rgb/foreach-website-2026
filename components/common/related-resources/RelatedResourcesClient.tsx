@@ -276,7 +276,9 @@ export default function RelatedResourcesClient({
                     className={styles.relatedProductCard}
                     href={product.href}
                   >
-                    <div className={styles.relatedProductImage}>
+                    <div className={styles.relatedProductImage}
+                      data-natural-ratio={product.imageAspectRatio || undefined}
+                      style={product.imageAspectRatio ? { aspectRatio: product.imageAspectRatio } : undefined}>
                       {imageSrc ? (
                         <Image
                           src={imageSrc}

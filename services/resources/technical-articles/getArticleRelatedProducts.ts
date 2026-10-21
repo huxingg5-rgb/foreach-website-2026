@@ -1,6 +1,7 @@
 import type { RelatedResourcesData } from "@/components/common/related-resources/related-resources.types";
 import type { TechnicalArticleItem, TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { getRelatedProductSeriesKey, getRelatedResourcesData } from "@/services/resources/getRelatedResourcesData";
+import { getArticleFooterResources } from "./getArticleFooterResources";
 import { FITTING_PUBLISHED_PRODUCTS } from "@/data/products/selection/fitting-publication.generated";
 import { getFerruleFittingRelatedProducts } from "@/data/resources/technical-articles/what-is-a-ferrule-fitting.zh";
 import { getHardTubeGuideProducts } from "@/data/resources/technical-articles/hard-tube-fittings-related-products";
@@ -97,7 +98,9 @@ export function getArticleRelatedProducts(article: TechnicalArticleItem, locale:
     default: {
       const ids = articleProductIds[article.slug];
       explicit = Boolean(ids);
-      products = getRelatedResourcesData({ sourceType: "article", sourceId: article.id, sourceSlug: article.slug, relationKeys: article.relationKeys, featuredProductIds: ids, locale }).products;
+      products = ids
+        ? getRelatedResourcesData({ sourceType: "article", sourceId: article.id, sourceSlug: article.slug, relationKeys: article.relationKeys, featuredProductIds: ids, locale }).products
+        : getArticleFooterResources(article, locale).products;
     }
   }
 

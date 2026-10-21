@@ -1,8 +1,10 @@
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import { getFittingResourceRelationKeys } from "@/data/products/selection/fitting-resource-relations";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+import { getRelatedResourcesData } from "@/services/resources/getRelatedResourcesData";
+import RelatedResourcesLoader from "@/components/common/related-resources/RelatedResourcesLoader";
 
-/** Reuse the existing article/video cards; these new product-page entries are foreign-language only. */
+/** Use the same published article relations on every supported locale. */
 export default function FittingRelatedResources({
   productTypeId,
   model,
@@ -12,9 +14,12 @@ export default function FittingRelatedResources({
   model?: string;
   locale: TechnicalArticleLocale;
 }) {
-  if (locale === "zh-CN") return null;
   const relationKeys = getFittingResourceRelationKeys(productTypeId, model);
   if (!relationKeys.length) return null;
+  if (locale === "zh-CN") {
+    const data = getRelatedResourcesData({ sourceType: "product", sourceSlug: model?.toLowerCase() ?? productTypeId, relationKeys, locale });
+    return data.articles.length ? <RelatedResourcesLoader {...data} videos={[]} products={[]} /> : null;
+  }
   return <RelatedResources
     sourceType="product"
     sourceSlug={model?.toLowerCase() ?? productTypeId}

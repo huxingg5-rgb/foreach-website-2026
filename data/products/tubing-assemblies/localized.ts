@@ -6,24 +6,25 @@ import ko from "./locales/ko.json";
 import ru from "./locales/ru.json";
 import media from "./media.json";
 import mediaDimensions from "./media-dimensions.json";
-import { tubingAssemblyLocales, type TubingAssemblyLocale } from "./locales";
+import { isPublishedAssemblyConfiguration, isPublishedAssemblyPath } from "./publication";
+import { allTubingAssemblyLocales, getTubingAssemblyLocalePrefix, type TubingAssemblyLocale } from "./locales";
 import { tubingAssemblyReviewCards, tubingAssemblyReviewTypeNames } from "../tubing-assembly-cards.review.zh";
 import { tubingAssemblyOverviewReview, tubingAssemblyTypeIntrosReview, tubingAssemblyIntroImages } from "../tubing-assembly-intros.review.zh";
 import { getAssemblyReviewDetail, getAssemblySharedDetailData, type AssemblyFamily, type AssemblyConfiguration } from "../detail/tubing-assemblies.review.zh";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
-import { isPublishedAssemblyConfiguration, isPublishedAssemblyPath } from "./publication";
 
-const dictionaries: Record<TubingAssemblyLocale, Record<string, string>> = { en, es, fr, ko, ru };
+const dictionaries: Record<Exclude<TubingAssemblyLocale, "zh-CN">, Record<string, string>> = { en, es, fr, ko, ru };
 
 /** Approved review content supplies shared facts; dictionaries supply presentation only. */
 export function translateTubingAssembly(locale: TubingAssemblyLocale, text: string): string {
   if (/[\u3400-\u9fff]/.test(text)) {
+    if (locale === "zh-CN") return text;
     const translated = dictionaries[locale][text];
     if (!translated) throw new Error(`Missing tubing assembly translation (${locale}): ${text}`);
     return translated;
   }
   if (text in media) return media[text as keyof typeof media];
-  return text.replace(/^\/en\//, `/${locale}/`);
+  return text.replace(/^\/en\//, `${getTubingAssemblyLocalePrefix(locale)}/`);
 }
 
 function localize<T>(value: T, locale: TubingAssemblyLocale): T {
@@ -41,6 +42,7 @@ const customizationSource = {
   title: "定制申请", description: "请留下联系信息及简单的定制需求，我们会与您联系确认。", summary: "确认申请产品并填写联系信息，验证码将发送至您的邮箱。", emailPlaceholder: "请输入联系邮箱", notes: "定制需求", notesPlaceholder: "可简单说明管径、长度、连接方式或其他需求。", back: "返回", submit: "提交定制申请", successTitle: "定制申请已提交", successDescription: "我们会根据您填写的信息与您联系，确认具体定制需求。", emptyTitle: "未选择申请产品", emptyDescription: "请返回产品详情页选择需要定制的管组件。", productType: "管组件", quantity: "数量", projectStage: "定制需求确认", requestType: "管组件定制申请",
 };
 const unavailableModels: Record<TubingAssemblyLocale, string> = {
+  "zh-CN": "该定制管组件暂无公开 3D 模型，请联系我们确认所需配置。",
   en: "No public 3D model is available for this custom tubing assembly. Contact us to confirm the required configuration.",
   es: "No hay un modelo 3D público para este conjunto de tubos a medida. Contáctenos para confirmar la configuración necesaria.",
   fr: "Aucun modèle 3D public n’est disponible pour cet assemblage de tubes sur mesure. Contactez-nous pour confirmer la configuration souhaitée.",
@@ -54,7 +56,7 @@ export function getTubingAssemblySelectionContent(locale: TubingAssemblyLocale) 
   return {
     locale,
     ui: localize(uiSource, locale),
-    cards: localize(tubingAssemblyReviewCards.filter(card => card.detailHref && isPublishedAssemblyPath(card.detailHref)), locale).map(card => {
+    cards: localize(tubingAssemblyReviewCards, locale).filter(card => card.detailHref && isPublishedAssemblyPath(card.detailHref)).map(card => {
       const dimensions = mediaDimensions[card.imageCard as keyof typeof mediaDimensions];
       return { ...card, imageWidth: dimensions?.width, imageHeight: dimensions?.height };
     }),
@@ -73,7 +75,7 @@ export function getLocalizedAssemblyDetail(locale: TubingAssemblyLocale, family:
   const result = localize(getAssemblySharedDetailData(getAssemblyReviewDetail(family, configuration)), locale);
   result.__locale = locale;
   delete result.__reviewLocale;
-  if (!configuration) result.description = `${result.h1Title}. ${result.description}`;
+  if (!configuration) result.description = `${result.h1Title}${locale === "zh-CN" ? "。" : ". "}${result.description}`;
   result.tubingAssemblyUi = { ...localize(uiSource, locale), modelUnavailable: unavailableModels[locale] };
   result.tubingCustomizationCopy = localize(customizationSource, locale);
   result.bottomCtaTitle = translateTubingAssembly(locale, "提交定制需求");
@@ -81,14 +83,14 @@ export function getLocalizedAssemblyDetail(locale: TubingAssemblyLocale, family:
   result.bottomCtaDesc = result.bottomCtaDescription;
   result.bottomCtaButtonText = translateTubingAssembly(locale, "定制申请");
   result.bottomCtaButton = result.bottomCtaButtonText;
-  result.bottomCtaHref = `/${locale}/contact/`;
+  result.bottomCtaHref = `${getTubingAssemblyLocalePrefix(locale)}/contact/`;
   return result;
 }
 
 export function getTubingAssemblyAlternates(path: string) {
   const neutral = path.replace(/^\/(?:en|es|fr|ko|ru)\//, "/");
   return Object.fromEntries([
-    ...tubingAssemblyLocales.map(locale => [locale, getCanonicalUrl(`/${locale}${neutral}`)]),
+    ...allTubingAssemblyLocales.map(locale => [locale, getCanonicalUrl(`${getTubingAssemblyLocalePrefix(locale)}${neutral}`)]),
     ["x-default", getCanonicalUrl(`/en${neutral}`)],
   ]);
 }
@@ -99,10 +101,10 @@ export function getLocalizedAssemblyMetadata(locale: TubingAssemblyLocale, famil
   const intro = family ? content.intros[family] : content.overview;
   const title = `${data?.h1Title ?? intro.title} | FOREACH`;
   const description = String(data?.description ?? intro.paragraphs[0]);
-  const path = String(data?.detailHref ?? `/${locale}/products/tubing-assemblies/${family ? `${family}/` : ""}`);
+  const path = String(data?.detailHref ?? `${getTubingAssemblyLocalePrefix(locale)}/products/tubing-assemblies/${family ? `${family}/` : ""}`);
   const url = getCanonicalUrl(path);
   const image = data?.mainImage ?? (family ? content.introImages[family]?.src : content.introImages["flanged-tubing"]?.src);
-  const ogLocale = { en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU" }[locale];
+  const ogLocale = { "zh-CN": "zh_CN", en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU" }[locale];
   return {
     title: { absolute: title }, description,
     alternates: { canonical: url, languages: getTubingAssemblyAlternates(path) },

@@ -401,6 +401,17 @@
   transform: none;
 }
 
+/* Preserve the full assembly photo without adding a second layer of white padding. */
+.relatedProductCard .relatedProductImage[data-natural-ratio] img {
+  padding: 0;
+  object-fit: contain;
+}
+
+.relatedProductCard:has([data-natural-ratio]) .relatedProductBody h3 {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 .relatedProductBody {
   min-width: 0;
   padding: 13px 15px 14px;

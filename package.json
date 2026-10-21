@@ -26,11 +26,14 @@
         "products:check-link-index": "node scripts/products/generate-hard-tube-link-index.mjs --check",
         "applications:build-routes": "tsx scripts/applications/generate-application-routes.ts",
         "applications:check-routes": "tsx scripts/applications/generate-application-routes.ts --check",
-        "search:generate": "npm run products:normalize-fitting-images && npm run applications:check-routes && npm run products:build-link-index && npm run products:check-piston-redirects && npm run products:check-valveless-redirects && npm run products:check-piston-locales && tsx scripts/search/generate-site-search-index.ts && tsx scripts/search/generate-global-search-overlay-index.ts",
+        "search:generate": "npm run products:check-tubing-redirects && tsx scripts/products/build-tubing-assembly-search.ts --check && npm run products:normalize-fitting-images && npm run applications:check-routes && npm run products:build-link-index && npm run products:check-piston-redirects && npm run products:check-valveless-redirects && npm run products:check-piston-locales && tsx scripts/search/generate-site-search-index.ts && tsx scripts/search/generate-global-search-overlay-index.ts",
         "search:check": "tsx scripts/search/generate-site-search-index.ts --check && tsx scripts/search/generate-global-search-overlay-index.ts --check",
         "build:cloudflare": "npm run search:generate && node scripts/cloudflare/build-pages.mjs && node scripts/seo/normalize-static-urls.mjs && node scripts/seo/generate-sitemap.mjs && npm run applications:check-indexability",
         "applications:check-indexability": "node scripts/seo/check-application-indexability.mjs",
-        "seo:audit": "node scripts/seo/audit-url-consistency.mjs"
+        "seo:audit": "node scripts/seo/audit-url-consistency.mjs",
+        "products:build-tubing-redirects": "tsx scripts/products/generate-tubing-assembly-redirects.ts",
+        "products:check-tubing-redirects": "tsx scripts/products/generate-tubing-assembly-redirects.ts --check",
+        "products:check-tubing-release": "tsx scripts/seo/check-tubing-assembly-release.ts"
     },
     "dependencies": {
         "@google/model-viewer": "^4.3.1",

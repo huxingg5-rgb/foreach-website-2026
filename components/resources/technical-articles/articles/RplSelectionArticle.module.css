@@ -6,16 +6,6 @@
     grid-template-columns: 180px minmax(0, 1fr) 220px; column-gap: 28px;
   }
   .pageSurface:has([data-article-products]) .backNav { max-width: 1400px; padding-inline: 28px; }
-  .pageSurface:has([data-article-products]) [data-related-products-section] { display: none; }
-  .pageSurface:has([data-article-products]) [data-related-products-only] { display: none; }
-  .pageSurface[data-article-slug="what-is-a-quick-disconnect-fitting"] [data-related-products-section],
-  .pageSurface[data-article-slug="what-is-a-quick-disconnect-fitting"] [data-related-products-only],
-  .pageSurface[data-article-slug="threaded-hose-barb-fittings-selection-guide"] [data-related-products-section],
-  .pageSurface[data-article-slug="threaded-hose-barb-fittings-selection-guide"] [data-related-products-only],
-  .pageSurface[data-article-slug="barbed-fitting-expansion-ratio"] [data-related-products-section],
-  .pageSurface[data-article-slug="barbed-fitting-expansion-ratio"] [data-related-products-only],
-  .pageSurface[data-article-slug="fitting-material-selection-guide"] [data-related-products-section],
-  .pageSurface[data-article-slug="fitting-material-selection-guide"] [data-related-products-only] { display: block; }
 }
 @media (min-width: 1440px) {
   .pageSurface:has([data-article-products]) .layout[data-has-related-products] {
@@ -113,6 +103,8 @@
 .gallery > figure:only-child { grid-column: 1 / -1; }
 .gallery > figure:only-child img { aspect-ratio: auto; }
 .gallery > figure:only-child[data-square="true"] { width: min(100%, 620px); justify-self: center; }
+.root[id="what-is-a-bulkhead-barbed-fitting-article"] section[id="dimensions"] table { min-width: 800px; }
+.root[id="what-is-a-bulkhead-barbed-fitting-article"] section[id="dimensions"] th:first-child { white-space: nowrap; }
 .gallery figcaption { border-top: 1px solid var(--line); padding-top: 10px; text-align: center; font-size: 15px; font-weight: 400; }
 .root[id="what-is-a-barbed-fitting-article"] section[id="types"] .gallery:has(> figure:nth-child(6)) { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
 .root[id="what-is-a-barbed-fitting-article"] section[id="types"] .gallery:has(> figure:nth-child(6)) img { aspect-ratio: 1; }

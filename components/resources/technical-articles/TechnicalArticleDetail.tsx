@@ -1,12 +1,14 @@
 import Link from "next/link";
+import { getFittingAssemblyLinks, withFittingArticleLinks } from "@/data/resources/technical-articles/fitting-article-relations";
+import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
 import { getConnectorSelectionArticle } from "@/data/resources/technical-articles/connector-selection-articles.article";
 import ArticleRelatedProducts from "./ArticleRelatedProducts";
 import { getArticleRelatedProducts } from "@/services/resources/technical-articles/getArticleRelatedProducts";
+import { getArticleFooterResources } from "@/services/resources/technical-articles/getArticleFooterResources";
 import { getCompressionRingFittingCopy, getCompressionRingFittingNavigation, compressionRingFittingSlug } from "@/data/resources/technical-articles/what-is-a-compression-ring-fitting.zh";
-import { getFerruleFittingCopy, getFerruleFittingNavigation, ferruleFittingSlug, getFerruleFittingRelatedProducts } from "@/data/resources/technical-articles/what-is-a-ferrule-fitting.zh";
-import { getLuerFittingCopy, getLuerFittingNavigation, luerFittingSlug, getLuerFittingRelatedProducts } from "@/data/resources/technical-articles/what-is-a-luer-fitting.zh";
+import { getFerruleFittingCopy, getFerruleFittingNavigation, ferruleFittingSlug } from "@/data/resources/technical-articles/what-is-a-ferrule-fitting.zh";
+import { getLuerFittingCopy, getLuerFittingNavigation, luerFittingSlug } from "@/data/resources/technical-articles/what-is-a-luer-fitting.zh";
 import { getBarbedFittingCopy, getBarbedFittingNavigation, getBarbedFittingSubject, barbedFittingSlug, getBarbedFittingRelatedProducts } from "@/data/resources/technical-articles/what-is-a-barbed-fitting.zh";
-import { getHardTubeGuideProducts } from "@/data/resources/technical-articles/hard-tube-fittings-related-products";
 import {
   getHardTubeFittingsCopy,
   getHardTubeFittingsNavigation,
@@ -17,7 +19,6 @@ import hardTubeFittingsStyles from "./articles/HardTubeFittingsArticle.module.cs
 import {
   getFlangedTubingCopy,
   getFlangedTubingNavigation,
-  flangedTubingProductIds,
   flangedTubingRelatedIntro,
   flangedTubingAssembliesSlug,
 } from "@/data/resources/technical-articles/flanged-tubing-assemblies-selection.article";
@@ -26,7 +27,6 @@ import {
   getPipettingBasicsNavigation,
   getPipettingBasicsWorkflows,
   getPipettingBasicsSubject,
-  pipettingBasicsRelatedProductIds,
   pipettingBasicsSlug,
   pipettingBasicsSources,
 } from "@/data/resources/technical-articles/what-is-pipetting.article";
@@ -50,7 +50,6 @@ import { getPumpDiagnosticsArticleCopy } from "@/data/resources/technical-articl
 import {
   getRplSelectionArticleCopy,
   getRplSelectionFaqItems,
-  getRplSelectionProducts,
 } from "@/data/resources/technical-articles/rpl-valveless-metering-pump-selection.article";
 import {
   getMeteringPumpAccuracyRepeatabilityCopy,
@@ -62,7 +61,6 @@ import {
 import {
   getValvelessMeteringPumpOverviewCopy,
   getValvelessMeteringPumpOverviewNavigation,
-  getValvelessMeteringPumpOverviewProducts,
 } from "@/data/resources/technical-articles/what-is-a-valveless-metering-pump.article";
 import {
   getPistonPumpRplStyleArticleCopy,
@@ -95,7 +93,6 @@ import LegacyMotionControlArticle from "./articles/LegacyMotionControlArticle";
 import { legacyMotionArticles } from "@/data/resources/technical-articles/legacy-motion-control-articles.zh";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
-import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import {
   NewsArticlePager,
 } from "@/components/resources/news/NewsArticleClient";
@@ -1119,10 +1116,14 @@ export default function TechnicalArticleDetail({
     : getArticleRelatedProducts(article, locale);
   const relatedProductsSidebar = sidebarProducts.length
     ? <ArticleRelatedProducts products={sidebarProducts} locale={locale} /> : null;
+  const footerResources = getArticleFooterResources(article, locale);
 
   if (connectorArticle || isBarbedFittingArticle || isLuerFittingArticle || isCompressionRingFittingArticle || isFerruleFittingArticle || isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle) {
-    const copy = connectorArticle ? connectorArticle.copy : isBarbedFittingArticle ? getBarbedFittingCopy(locale) : isLuerFittingArticle ? getLuerFittingCopy(locale) : isCompressionRingFittingArticle ? getCompressionRingFittingCopy(locale) : isFerruleFittingArticle ? getFerruleFittingCopy(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
+    const sourceCopy = connectorArticle ? connectorArticle.copy : isBarbedFittingArticle ? getBarbedFittingCopy(locale) : isLuerFittingArticle ? getLuerFittingCopy(locale) : isCompressionRingFittingArticle ? getCompressionRingFittingCopy(locale) : isFerruleFittingArticle ? getFerruleFittingCopy(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingCopy(locale) : getHardTubeFittingsCopy(locale);
     const navigation = connectorArticle ? connectorArticle.navigation : isBarbedFittingArticle ? getBarbedFittingNavigation(locale) : isLuerFittingArticle ? getLuerFittingNavigation(locale) : isCompressionRingFittingArticle ? getCompressionRingFittingNavigation(locale) : isFerruleFittingArticle ? getFerruleFittingNavigation(locale) : isFlangedTubingAssembliesArticle ? getFlangedTubingNavigation(locale) : getHardTubeFittingsNavigation(locale);
+    const assemblyLinks = isHardTubeFittingsArticle || isFlangedTubingAssembliesArticle || isFerruleFittingArticle || isCompressionRingFittingArticle
+      ? getFittingAssemblyLinks(article.slug, getTubingAssemblySelectionContent(locale)) : [];
+    const copy = withFittingArticleLinks(sourceCopy, article.slug, locale, navigation, pageData.articles, assemblyLinks);
     return (
       <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`}
         data-locale={locale} data-article-slug={article.slug} lang={locale}>
@@ -1134,23 +1135,11 @@ export default function TechnicalArticleDetail({
           articleId={article.slug} sectionNavigation={navigation} modelLinks={new Map()}
           faq={{ id: "faq", label: copy.faqTitle, items: copy.faqItems }} />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          {connectorArticle && connectorArticle.footerProducts.length > 0 && <div className={hardTubeFittingsStyles.relatedProducts}>
-            <RelatedResourcesLoader locale={locale} products={connectorArticle.footerProducts} articles={[]} videos={[]} />
-          </div>}
-          {isLuerFittingArticle && <div className={hardTubeFittingsStyles.relatedProducts}>
-            <RelatedResourcesLoader {...getLuerFittingRelatedProducts(locale)} />
-          </div>}
-          {isFerruleFittingArticle && <div className={hardTubeFittingsStyles.relatedProducts}>
-            <RelatedResourcesLoader {...getFerruleFittingRelatedProducts(locale)} />
-          </div>}
-          {isHardTubeFittingsArticle && <div className={hardTubeFittingsStyles.relatedProducts}>
-            <RelatedResourcesLoader {...getHardTubeGuideProducts(locale)} />
-          </div>}
-          {isFlangedTubingAssembliesArticle && <div data-flanged-related-products>
-            <p className={hardTubeFittingsStyles.relatedIntro}>{flangedTubingRelatedIntro[locale]}</p>
-            <RelatedResources sourceType="article" sourceId={article.id} sourceSlug={article.slug}
-              relationKeys={article.relationKeys} featuredProductIds={flangedTubingProductIds} locale={locale} />
-          </div>}
+          <div className={isFlangedTubingAssembliesArticle ? undefined : hardTubeFittingsStyles.relatedProducts}
+            data-flanged-related-products={isFlangedTubingAssembliesArticle || undefined}>
+            {isFlangedTubingAssembliesArticle && <p className={hardTubeFittingsStyles.relatedIntro}>{flangedTubingRelatedIntro[locale]}</p>}
+            <RelatedResourcesLoader {...footerResources} />
+          </div>
           <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
           <section className={newsArticleStyles.supportSection}>
             <ResourceSupportCta title={copy.cta.title} description={copy.cta.description}
@@ -1177,8 +1166,7 @@ export default function TechnicalArticleDetail({
           articleId={article.slug} sectionNavigation={valveArticle.navigation} modelLinks={new Map()}
           faq={{ id: "faq", label: valveArticle.copy.faqTitle, items: valveArticle.copy.faqItems }} />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <RelatedResources sourceType="article" sourceId={article.id} sourceSlug={article.slug}
-            relationKeys={article.relationKeys} featuredProductIds={valveArticle.productIds} locale={locale} />
+          <RelatedResourcesLoader {...footerResources} />
           <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
         </div>
       </div>
@@ -1213,14 +1201,7 @@ export default function TechnicalArticleDetail({
           modelLinks={new Map()}
         />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <RelatedResources
-            sourceType="article"
-            sourceId={article.id}
-            sourceSlug={article.slug}
-            relationKeys={article.relationKeys}
-            featuredProductIds={pipettingBasicsRelatedProductIds}
-            locale={locale}
-          />
+          <RelatedResourcesLoader {...footerResources} />
           <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
         </div>
       </div>
@@ -1254,13 +1235,7 @@ export default function TechnicalArticleDetail({
           faq={{ id: "faq", label: programmableSyringeCopy.faqTitle, items: programmableSyringeCopy.faqItems }}
         />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <RelatedResources
-            sourceType="article"
-            sourceId={article.id}
-            sourceSlug={article.slug}
-            relationKeys={article.relationKeys}
-            locale={locale}
-          />
+          <RelatedResourcesLoader {...footerResources} />
           <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
         </div>
       </div>
@@ -1294,13 +1269,7 @@ export default function TechnicalArticleDetail({
           faq={{ id: "faq", label: programmablePipettingCopy.faqTitle, items: programmablePipettingCopy.faqItems }}
         />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <RelatedResources
-            sourceType="article"
-            sourceId={article.id}
-            sourceSlug={article.slug}
-            relationKeys={article.relationKeys}
-            locale={locale}
-          />
+          <RelatedResourcesLoader {...footerResources} />
           <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
         </div>
       </div>
@@ -1341,18 +1310,7 @@ export default function TechnicalArticleDetail({
           }}
         />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <RelatedResourcesLoader
-            locale={locale}
-            videos={[]}
-            articles={[]}
-            products={getRplSelectionProducts(locale).map((product) => ({
-              id: product.name,
-              title: product.name,
-              href: product.href,
-              imageSrc: product.image,
-              imageAlt: product.alt,
-            }))}
-          />
+          <RelatedResourcesLoader {...footerResources} />
           <NewsArticlePager
             locale={locale}
             previousArticle={previousArticle}
@@ -1389,18 +1347,7 @@ export default function TechnicalArticleDetail({
           backText={getBackText(locale)}
         />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <RelatedResourcesLoader
-            locale={locale}
-            videos={[]}
-            articles={[]}
-            products={getRplSelectionProducts(locale).map((product) => ({
-              id: product.name,
-              title: product.name,
-              href: product.href,
-              imageSrc: product.image,
-              imageAlt: product.alt,
-            }))}
-          />
+          <RelatedResourcesLoader {...footerResources} />
           <NewsArticlePager
             locale={locale}
             previousArticle={previousArticle}
@@ -1444,20 +1391,7 @@ export default function TechnicalArticleDetail({
           }}
         />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <RelatedResourcesLoader
-            locale={locale}
-            videos={[]}
-            articles={[]}
-            products={getValvelessMeteringPumpOverviewProducts(locale).map(
-              (product) => ({
-                id: product.name,
-                title: product.name,
-                href: product.href,
-                imageSrc: product.image,
-                imageAlt: product.alt,
-              }),
-            )}
-          />
+          <RelatedResourcesLoader {...footerResources} />
           <NewsArticlePager
             locale={locale}
             previousArticle={previousArticle}
@@ -1501,14 +1435,7 @@ export default function TechnicalArticleDetail({
           }}
         />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <RelatedResources
-            sourceType="article"
-            includeRelatedArticles
-            sourceId={article.id}
-            sourceSlug={article.slug}
-            relationKeys={article.relationKeys}
-            locale={locale}
-          />
+          <RelatedResourcesLoader {...footerResources} />
           <NewsArticlePager
             locale={locale}
             previousArticle={previousArticle}
@@ -1545,19 +1472,7 @@ export default function TechnicalArticleDetail({
         previousArticle={previousArticle}
         nextArticle={nextArticle}
         afterContent={
-          <RelatedResources
-            key="technical-article-related-resources"
-            sourceType="article"
-            includeRelatedArticles={
-              isLegacyMotionArticle ||
-              isPistonPumpArticle ||
-              isEnglishPistonLinkNetworkArticle
-            }
-            sourceId={article.id}
-            sourceSlug={article.slug}
-            relationKeys={article.relationKeys}
-            locale={locale}
-          />
+          <RelatedResourcesLoader {...footerResources} />
         }
       >
         {articleBody}
