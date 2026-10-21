@@ -7,6 +7,7 @@ import { getPublishedAssemblyConfigurations, isPublishedAssemblyPath } from "../
 import { getTubingAssemblyRedirectEntries } from "../../data/products/tubing-assemblies/redirects";
 import { tubingAssemblyTypes } from "../../data/products/tubing-assemblies.en";
 import { getTubingAssemblySearchItems } from "../../data/products/tubing-assemblies/search";
+import { onRequest } from "../../functions/_middleware";
 
 const assets = new Set<string>();
 function collect(value: unknown) {
@@ -59,4 +60,28 @@ for (const rule of redirects) {
     assert.ok(!fs.existsSync(path.join("out", rule.source, "index.html")));
   }
 }
-console.log(JSON.stringify({ checkedPages, activeConfigurations: 12, locales: 6, redirects: redirects.length, assets: assets.size, built: process.argv.includes("--built") }));
+async function checkHostedRedirects() {
+  const routes = JSON.parse(fs.readFileSync("public/_routes.json", "utf8")) as { include: string[]; exclude: string[] };
+  assert.ok(routes.include.length + routes.exclude.length <= 100, "Cloudflare function route limit");
+  const next = async () => new Response("pass-through", { status: 418 });
+  for (const rule of redirects) {
+    assert.ok(routes.include.includes(`${rule.source.replace(/\/$/, "")}*`), `Missing function route: ${rule.source}`);
+    for (const method of ["GET", "HEAD"]) {
+      const response = await onRequest({ request: new Request(`https://www.foreachtek.com${rule.source}?ref=legacy`, { method }), next });
+      assert.equal(response.status, 301, `${method}: ${rule.source}`);
+      assert.equal(response.headers.get("Location"), `https://www.foreachtek.com${rule.destination}?ref=legacy`);
+    }
+  }
+  for (const source of [
+    "/products/tubing-assemblies/flanged-tubing/details/coiled/",
+    "/zh-CN/products/tubing-assemblies/flanged-tubing/details/coiled/",
+    "/en/products/tubing-assemblies/flanged-tubing/details/pfa/",
+    "/en/products/tubing-assemblies/unknown/details/coiled/",
+    "/en/products/tubing-assemblies/flanged-tubing/details/coiled-extra/",
+  ]) {
+    assert.equal((await onRequest({ request: new Request(`https://www.foreachtek.com${source}`), next })).status, 418, source);
+  }
+  assert.equal((await onRequest({ request: new Request(`https://www.foreachtek.com${redirects[0].source}`, { method: "POST" }), next })).status, 418);
+  console.log(JSON.stringify({ checkedPages, activeConfigurations: 12, locales: 6, redirects: redirects.length, assets: assets.size, hostedRedirectChecks: 126, functionRoutes: routes.include.length, built: process.argv.includes("--built") }));
+}
+checkHostedRedirects().catch(error => { console.error(error); process.exitCode = 1; });

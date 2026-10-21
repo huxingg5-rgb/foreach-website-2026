@@ -1,6 +1,7 @@
 import { normalizeControlModulePath } from "../data/products/selection/control-module-routes";
 import { getLegacyTubingSelectionTarget } from "../data/products/selection/tubing-selection-routes";
 import { normalizePipettingPath } from "../data/products/selection/pipetting-pump-routes";
+import { getTubingAssemblyRedirectEntries } from "../data/products/tubing-assemblies/redirects";
 /**
  * Cloudflare Pages Functions｜旧版官网精确重定向
  *
@@ -21,6 +22,9 @@ const BAIDU_VERIFY_PATH = "/baidu_verify_codeva-3SytZbh1AT.html";
 const BAIDU_VERIFY_CONTENT = "8fba1099a7a52a28564eca6114d2396c";
 const BYTEDANCE_VERIFY_PATH = "/ByteDanceVerify.html";
 const BYTEDANCE_VERIFY_CONTENT = "ys91dEc0bPhktzcIz+Yb";
+const RETIRED_TUBING_ASSEMBLIES = new Map(
+  getTubingAssemblyRedirectEntries().map(({ source, destination }) => [source, destination]),
+);
 const LEGACY_REDIRECTS = new Map<string, string>([
   ["/cn/history.aspx", "/"],
   ["/cn/NewsInfo.aspx", "/"],
@@ -48,6 +52,14 @@ export const onRequest: LegacyRedirectHandler = async ({
   }
 
   const requestUrl = new URL(request.url);
+
+  // Keep these exact legacy URLs working even when earlier _redirects rules hit host limits.
+  const retiredAssemblyTarget = RETIRED_TUBING_ASSEMBLIES.get(requestUrl.pathname);
+  if (retiredAssemblyTarget) {
+    const target = new URL(requestUrl);
+    target.pathname = retiredAssemblyTarget;
+    return new Response(null, { status: 301, headers: { Location: target.toString() } });
+  }
 
   const tubingSelectionTarget = getLegacyTubingSelectionTarget(requestUrl);
   if (tubingSelectionTarget) {
