@@ -84,9 +84,9 @@ export const siteFooterData = {
         { key: "pumps", label: { china: "泵系列", global: "Pump Series" }, href: href("/products/pumps") },
         { key: "valves", label: { china: "阀系列", global: "Valve Series" }, href: href("/products/valves") },
         { key: "probes", label: { china: "针系列", global: "Probe Series" }, href: href("/products/probes") },
-        { key: "fittings", label: { china: "接头系列", global: "Fitting Series" }, href: { china: "/products?category=fittings", global: "/products/fittings/" } },
+        { key: "fittings", label: { china: "接头系列", global: "Fitting Series" }, href: { china: "/products/fittings/", global: "/products/fittings/" } },
         { key: "tubing", label: { china: "管路系列", global: "Tubing Series" }, href: href("/products/tubing") },
-        { key: "control", label: { china: "智控系列", global: "Control Series" }, href: href("/products?category=control") },
+        { key: "control", label: { china: "智控系列", global: "Control Series" }, href: { china: "/products/control/", global: "/products?category=control" } },
       ],
     },
     {

@@ -405,8 +405,13 @@
         "heroImage":  "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
         "imageCard":  "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
         "additionalImages":  [
-
+                                 "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump-photo-01.webp",
+                                 "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump-photo-02.webp"
                              ],
+        "additionalImageAlts":  [
+                                    "Foreach RPL-P6.35 valveless metering pump, angled view 1",
+                                    "Foreach RPL-P6.35 valveless metering pump, angled view 2"
+                                ],
         "images":  [
 
                    ],
@@ -829,8 +834,15 @@
         "heroImage":  "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
         "imageCard":  "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
         "additionalImages":  [
-
+                                 "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump-photo-01.webp",
+                                 "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump-photo-02.webp",
+                                 "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump-photo-03.webp"
                              ],
+        "additionalImageAlts":  [
+                                    "Foreach RPL-P15 valveless metering pump, nameplate view",
+                                    "Foreach RPL-P15 valveless metering pump, angled view 1",
+                                    "Foreach RPL-P15 valveless metering pump, angled view 2"
+                                ],
         "images":  [
 
                    ],

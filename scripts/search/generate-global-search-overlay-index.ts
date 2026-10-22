@@ -1,3 +1,4 @@
+import {buildCompactSolenoidSearchItems, isSolenoidSearchHref} from "../../data/search/solenoid-search";
 import { getLocalizedApplicationDocument } from '../../services/applications/international-localized';
 import { localizedApplicationHref } from '../../data/applications/international-locales/routes';
 import { getApplicationIndexData } from '../../data/applications/application-index-locales';
@@ -1066,7 +1067,8 @@ async function buildLocaleIndex(
   ]);
 
   const items: CompactSearchItem[] = [
-    ...loadProductAndCompatibleItems(locale),
+    ...loadProductAndCompatibleItems(locale).filter(i => i.m !== "products" || !isSolenoidSearchHref(i.h)),
+    ...buildCompactSolenoidSearchItems(locale),
     ...loadDatasheets(locale),
     ...loadInstallationGuides(locale),
     ...technicalArticles,
@@ -1144,6 +1146,16 @@ function getCounts(items: CompactSearchItem[]) {
 }
 
 async function main() {
+  if (process.argv.includes("--solenoid-only")) {
+    for (const locale of REQUESTED_SEARCH_LOCALES) {
+      const outputPath = getOutputPath(locale);
+      const old = JSON.parse(fs.readFileSync(outputPath, "utf8")) as CompactSearchItem[];
+      const items = [...old.filter(i => i.m !== "products" || !isSolenoidSearchHref(i.h)), ...buildCompactSolenoidSearchItems(locale)];
+      writeOrCheckOutput(outputPath, JSON.stringify(items));
+    }
+    console.log("Solenoid overlay search updated in six locales; other entries preserved");return;
+  }
+
   if (ENGLISH_APPLICATIONS_ONLY && (REQUESTED_SEARCH_LOCALES.length !== 1 || REQUESTED_SEARCH_LOCALES[0] !== 'en')) throw new Error('--english-applications-only requires --locales=en');
   if (APPLICATIONS_ONLY && REQUESTED_SEARCH_LOCALES.includes('zh-CN')) throw new Error('--applications-only requires explicit foreign --locales');
   const localeIndexes = await Promise.all(

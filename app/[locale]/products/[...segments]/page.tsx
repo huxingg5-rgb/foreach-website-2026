@@ -649,10 +649,11 @@ export default async function ProductLocaleRoutePage({
     }
 
     if (category === "tubing") {
+      if (locale === "en") {
+        return <TubingSelectionPage material={slug} locale="en" />;
+      }
       return <>
-        {locale === "en"
-          ? <TubingSelectionPage material={slug} locale="en" />
-          : <TubingDetailStaticPage slug={slug} locale={locale} />}
+        <TubingDetailStaticPage slug={slug} locale={locale} />
         <FittingRelatedResources productTypeId={slug} locale={locale} />
       </>;
     }

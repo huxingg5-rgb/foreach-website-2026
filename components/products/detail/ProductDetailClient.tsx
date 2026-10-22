@@ -109,6 +109,7 @@ import {
   trackResourceView,
 } from "@/lib/analytics/track-event";
 import ProductModelViewer from "./ProductModelViewer";
+import SolenoidAssets from "./SolenoidAssets";
 import {
   Pump2DFileCheckingDisplay,
   Pump3DFileCheckingDisplay,
@@ -1355,7 +1356,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
           item: canonicalUrl,
         },
       ];
-  const chineseBreadcrumbItems: ProductDetailPageData["breadcrumbs"] | null = (data.category === "tubing-assemblies" ? data.breadcrumbs : undefined) || getTubingDetailBreadcrumbs(pathname, locale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
+  const chineseBreadcrumbItems: ProductDetailPageData["breadcrumbs"] | null = ((data.category === "tubing-assemblies" || data.solenoidAuthoredContent) ? data.breadcrumbs : undefined) || getTubingDetailBreadcrumbs(pathname, locale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
   const breadcrumbItems = chineseBreadcrumbItems
     ? chineseBreadcrumbItems.map((item) => ({ name: item.label, item: item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl }))
     : legacyBreadcrumbItems;
@@ -1825,7 +1826,7 @@ export default function ProductDetailClient({
             : displayProductTitle,
         },
       ]);
-  const productBreadcrumbItems = (isTubingAssembly ? sourceData.breadcrumbs : undefined) || getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
+  const productBreadcrumbItems = ((isTubingAssembly || data.solenoidAuthoredContent) ? sourceData.breadcrumbs : undefined) || getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
     pathname, configuratorLocale, legacyProductBreadcrumbItems.at(-1)?.label,
   ) || legacyProductBreadcrumbItems;
   if (String(data.category) === "control" && data.slug === "abd-air-bubble-detector") {
@@ -1889,6 +1890,7 @@ export default function ProductDetailClient({
 
 const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 const [hasOpenedModel, setHasOpenedModel] = useState(false);
+const [solenoidVariant, setSolenoidVariant] = useState(0);
   const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
   const [isAssemblyCustomRequestOpen, setIsAssemblyCustomRequestOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -2232,6 +2234,8 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
       : "pump-selection";
 
   function getDetailCartProductCode() {
+    // NC and NO share a family model name, but must remain distinct selections.
+    if (data.solenoidAuthoredContent && data.slug) return String(data.slug);
     if (
       isTubingConfiguratorEnabled
     ) {
@@ -2269,7 +2273,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
         : getDetailCartProductCode();
 
     const modelText =
-      isTubingConfiguratorEnabled
+      data.solenoidAuthoredContent
+        ? `${data.modelName} · ${data.cardName}`
+        : isTubingConfiguratorEnabled
         ? activeTubingVariant?.model ||
           ""
         : String(
@@ -3318,7 +3324,7 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
           <div className={styles.productInfo}>
             <div className={styles.titleGroup}>
               <h1 className={styles.productModelTitle}>
-                {formatProductHeading(controlDetailH1 || tubingDetailH1 || (inheritedDetailH1 ? `FOREACH ${inheritedDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle))}
+                {formatProductHeading(controlDetailH1 || tubingDetailH1 || (inheritedDetailH1 ? `${data.solenoidAuthoredContent ? "" : "FOREACH "}${inheritedDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle))}
               </h1>
             </div>
 
@@ -3816,7 +3822,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                 >
                 {isTubingAssembly && !model3dUrl ? (
                   <div className={styles.modelViewerFallback} role="status">{data.tubingAssemblyUi?.modelUnavailable}</div>
-                ) : hasOpenedModel ? (isPumpDetail ? (
+                ) : hasOpenedModel ? (data.solenoidAuthoredContent ? (
+                  <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="3d" active={activeTab === "model3d"} variant={solenoidVariant} onVariant={setSolenoidVariant} />
+                ) : isPumpDetail ? (
                   <PumpUploadedFileGuard
                     key={model3dUrl}
                     fileUrl={model3dUrl}
@@ -3862,7 +3870,9 @@ const [hasOpenedModel, setHasOpenedModel] = useState(false);
                 .filter(Boolean)
                 .join(" ")}
             >
-              {isPumpDetail ? (
+              {data.solenoidAuthoredContent ? (
+                activeTab === "drawing" ? <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="drawing" active variant={solenoidVariant} onVariant={setSolenoidVariant} /> : null
+              ) : isPumpDetail ? (
                 <PumpUploadedFileGuard
                   key={drawingPreviewUrl}
                   fileUrl={drawingPreviewUrl}

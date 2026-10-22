@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" role="img" aria-labelledby="title desc">
+ <title id="title">PMB-U28-24D-PP-N 三种配管尺寸</title>
+ <desc id="desc">未装配软管内径为2.4毫米，接头倒刺外径A为3.5毫米，内部孔径B为1.7毫米。各视图分别示意，不按比例。</desc>
+ <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#173368"/></marker></defs>
+ <rect width="720" height="620" fill="#f6f9fc"/>
+ <g font-family="Microsoft YaHei,Arial,sans-serif" fill="#173368">
+  <text x="32" y="46" font-size="29" font-weight="700">三个尺寸，分别用于三个判断</text>
+  <text x="32" y="82" font-size="23" fill="#54687b">PMB-U28-24D-PP-N · 示意不按比例</text>
+  <g stroke="#d8e2eb" fill="#fff"><rect x="24" y="110" width="672" height="143" rx="8"/><rect x="24" y="267" width="672" height="143" rx="8"/><rect x="24" y="424" width="672" height="143" rx="8"/></g>
+  <circle cx="122" cy="181" r="50" fill="#c9eeea" stroke="#218f91" stroke-width="3"/>
+  <circle cx="122" cy="181" r="31" fill="#fff" stroke="#218f91" stroke-width="2"/>
+  <path d="M91 181H153" stroke="#173368" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="220" y="152" font-size="25">① 未装配软管内径</text>
+  <text x="220" y="192" font-size="32" font-weight="700">2.4 mm</text>
+  <text x="220" y="228" font-size="24" fill="#54687b">用于选择适配软管</text>
+  <path d="M80 310L166 294V381L80 365Z" fill="#c8d9e7" stroke="#173368" stroke-width="3"/>
+  <path d="M166 294H194M166 381H194M185 300V375" fill="none" stroke="#173368" stroke-width="2"/>
+  <path d="M185 301V374" stroke="#173368" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="220" y="310" font-size="25">② 倒刺外径 A</text>
+  <text x="220" y="350" font-size="32" font-weight="700">3.5 mm</text>
+  <text x="220" y="386" font-size="24" fill="#54687b">影响管壁扩张与装配配合</text>
+  <path d="M73 457H175V483H73ZM73 509H175V535H73Z" fill="#c8d9e7" stroke="#173368" stroke-width="3"/>
+  <rect x="73" y="486" width="102" height="20" fill="#13b8ad"/>
+  <path d="M175 484H199M175 508H199M190 485V507" stroke="#173368" stroke-width="2"/>
+  <text x="220" y="468" font-size="25">③ 内部孔径 B</text>
+  <text x="220" y="508" font-size="32" font-weight="700">1.7 mm</text>
+  <text x="220" y="544" font-size="24" fill="#54687b">用于判断局部流道与压降</text>
+  <text x="32" y="601" font-size="23" fill="#54687b">还需核对软管材质、壁厚、硬度及尺寸公差</text>
+ </g>
+</svg>

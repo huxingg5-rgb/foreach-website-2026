@@ -24,8 +24,8 @@ Foreach Technology 恒永达科技为体外诊断、生命科学、实验室自�
 - [DPL30-BB 无刷微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30-bb/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 100 kPa。
 - [DPL60-DB 有刷微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl60-db/): 12 V / 24 V DC，空载液体流量 600 mL/min，额定压力 100 kPa。
 - [DPL60-BB 无刷微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl60-bb/): 12 V / 24 V DC，空载液体流量 600 mL/min，额定压力 100 kPa。
-- [DPL30H-DS 有刷高压微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 600 kPa，卡套接头连接 6×4 mm（外径×内径）的硬管。
-- [DPL30H-BS 无刷高压微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 600 kPa，卡套接头连接 6×4 mm（外径×内径）的硬管。
+- [DPL30H-DS 有刷高压微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 600 kPa，卡箍接头连接 6×4 mm（外径×内径）的硬管。
+- [DPL30H-BS 无刷高压微型液体隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/): 12 V / 24 V DC，空载液体流量 300 mL/min，额定压力 600 kPa，卡箍接头连接 6×4 mm（外径×内径）的硬管。
 - [DPGL800-BS 无刷气液混合隔膜泵](https://www.foreachtek.com/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/): 24 V DC，单泵头空载气体流量 6 L/min，最大负压 < -90 kPa，工作介质为气体及气液混合物，不适用于输送 100% 液体。
 
 ### 技术文章与选型问题

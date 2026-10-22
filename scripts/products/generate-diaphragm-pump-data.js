@@ -62,7 +62,7 @@ function readSheet(wb, sheetName) {
   if (!ws) throw new Error(`缺少 Sheet: ${sheetName}`);
   return xlsx.utils.sheet_to_json(ws, { defval: "" }).map(row => {
     const out = {};
-    for (const [k, v] of Object.entries(row)) out[n(k)] = n(v);
+    for (const [k, v] of Object.entries(row)) out[n(k)] = n(v).replaceAll("卡套", "卡箍");
     return out;
   }).filter(row => Object.values(row).some(Boolean));
 }

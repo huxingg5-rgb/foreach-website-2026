@@ -112,7 +112,7 @@ export const diaphragmPumpRdArticlesZh = {
                 "300 mL/min",
                 "600 kPa",
                 "3 mH₂O",
-                "6×4 mm 外径×内径硬管卡套连接"
+                "6×4 mm 外径×内径硬管卡箍连接"
               ]
             ]
           },
@@ -818,7 +818,7 @@ export const diaphragmPumpRdArticlesZh = {
           },
           {
             "type": "paragraph",
-            "text": "管路解耦也要遵守连接与压力要求。DPL30 和 DPL60 规格书给出内径 3.2 mm 软管接口；DPL30H 则给出 6×4 mm 硬管卡套连接。不能为了减振，直接把 DPL30H 改接普通软管，或把长而软的管路当作无代价的缓冲元件。[F1–F3]"
+            "text": "管路解耦也要遵守连接与压力要求。DPL30 和 DPL60 规格书给出内径 3.2 mm 软管接口；DPL30H 则给出 6×4 mm 硬管卡箍连接。不能为了减振，直接把 DPL30H 改接普通软管，或把长而软的管路当作无代价的缓冲元件。[F1–F3]"
           },
           {
             "type": "paragraph",

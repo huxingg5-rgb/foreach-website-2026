@@ -1,13 +1,24 @@
+import {getSolenoidCardCopy} from "../detail/solenoid-card-copy";
 import type {
   ProductSelectionProduct,
   SelectionI18nText,
   SelectionLocale,
 } from "./product-selection.types";
 
-type ValveCardCopy = { model: string; name: string; heading: string };
+type ValveCardCopy = { model: string; name: string; heading: string; description?: string };
+
+// Keep the state in technical details while using shorter selection-card names.
+const solenoidCardClosedQualifier: Record<SelectionLocale, string> = {
+  zh: "常闭",
+  en: "normally closed ",
+  es: "normalmente cerrada ",
+  fr: "normalement fermée ",
+  ko: "상시 닫힘 ",
+  ru: "нормально закрытый ",
+};
 
 // Uses the existing model + descriptive heading card layout.
-// Share card H2 descriptions with the corresponding product-detail H1s.
+// Legacy card descriptions are also used by their corresponding detail headings.
 // Sources: HP PS-120C-2604-00001-001 pp. 4, 6; SV10 PS-122A-003 A02 pp. 3–5.
 const valveCards: Record<SelectionLocale, Record<"hp" | "two" | "three", ValveCardCopy>> = {
   zh: {
@@ -158,6 +169,15 @@ export function getValveCardCopy(
   }
   if (product.productId === "hp-3-position-7-port-high-pressure-valve") return valveCards[locale].hp;
   if (product.seriesId === "6010") {
+    const card = getSolenoidCardCopy(product.productId, locale);
+    if (card) {
+      const qualifier = solenoidCardClosedQualifier[locale];
+      return {
+        ...card,
+        name: card.name.replace(qualifier, ""),
+        heading: card.heading.replace(qualifier, ""),
+      };
+    }
     if (product.productId === "2-way") return valveCards[locale].two;
     if (product.productId === "3-way") return valveCards[locale].three;
   }
@@ -165,6 +185,8 @@ export function getValveCardCopy(
 }
 
 export function getValveDetailHeading(slug: string, locale: SelectionLocale): string | undefined {
+  const solenoidCard = getSolenoidCardCopy(slug, locale);
+  if (solenoidCard) return solenoidCard.heading;
   if (/^mrv3-d(10|16|24)$/.test(slug)) {
     return getValveCardCopy({ productId: slug, seriesId: "MRV3" }, locale)?.heading;
   }

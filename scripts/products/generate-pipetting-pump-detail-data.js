@@ -132,7 +132,12 @@ const details = [
       "体外诊断仪器液体处理模块"
     ],
 
-    additionalImages: [],
+    additionalImages: [
+      `${resourceBase.imageDir}/foreach-smtp2-1000ul-pipetting-pump-horizontal-view.webp`,
+    ],
+    additionalImageAlts: [
+      "Foreach SMTP2-1000 μL programmable air displacement pipetting pump, horizontal view",
+    ],
     showConfigurator: false,
     showDatasheetRequest: false,
     showDrawingRequest: true,
@@ -229,7 +234,14 @@ const details = [
       "紧凑型仪器集成"
     ],
 
-    additionalImages: [],
+    additionalImages: [
+      `${resourceBase.imageDir}/foreach-smtp4-100ul-pipetting-pump-horizontal-view.webp`,
+      `${resourceBase.imageDir}/foreach-smtp4-100ul-pipetting-pump-upright-view.webp`,
+    ],
+    additionalImageAlts: [
+      "Foreach SMTP4-100 μL air displacement pipetting pump, horizontal view",
+      "Foreach SMTP4-100 μL air displacement pipetting pump, upright view",
+    ],
     showConfigurator: false,
     showDatasheetRequest: false,
     showDrawingRequest: true,

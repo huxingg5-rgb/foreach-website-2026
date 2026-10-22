@@ -1,5 +1,4 @@
 import type { ProductApplicationsContent, ProductDetailFaqItem } from "../product-detail.types";
-import { PISTON_APPLICATION_GUIDES } from "@/data/applications/analytical-documents/piston-link-network";
 
 type Locale = "zh" | "en";
 type Localized = Record<Locale, string>;
@@ -132,10 +131,6 @@ export function getCompactPumpContent(slug: string, locale: Locale) {
         sm ? "The SM specification gives an expected life of five million cycles with pure water at room temperature and 50 kPa back pressure. Saline or crystallization-prone fluids require shutdown flushing and maintenance planning." : "Confirm TM accuracy, repeatability, working pressure and life for the selected materials, drive and fluid. Instrument validation also includes valve operation, bubble management, maintenance and cycle timing.",
       ],
     },
-    relatedGuides: locale === "en" ? {
-      title: "Piston-pump application guides for analytical instruments",
-      links: PISTON_APPLICATION_GUIDES,
-    } : undefined,
   };
   const faq = (question: Localized, answer: Localized): ProductDetailFaqItem => ({ question: question[locale], answer: answer[locale] });
   const faqs = [

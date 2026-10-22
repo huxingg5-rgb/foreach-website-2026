@@ -1,7 +1,13 @@
+import {getSolenoidConfiguration, getSolenoidDrawingAsset} from "@/data/products/detail/solenoid-configurations";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import ProductDetailClient from "./ProductDetailClient";
-import RelatedResources from "@/components/common/related-resources/RelatedResources";
+import RelatedResourcesLoader from "@/components/common/related-resources/RelatedResourcesLoader";
+import { getRelatedResourcesData } from "@/services/resources/getRelatedResourcesData";
+import { getSv10RelatedVideo } from "@/data/resources/installation-guide/installation-guide.sv10.en";
+import RelatedProducts from "@/components/common/related-resources/RelatedProducts";
+import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
+import { getBarbedSolenoidRelatedProducts } from "@/services/resources/getSolenoidRelatedProducts";
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
 import { getSolenoidContent, solenoidBasePath, solenoidLocales } from "@/data/products/detail/solenoid-content";
 import { normalizeValveLocale } from "@/data/products/selection/valve-routes";
@@ -26,14 +32,30 @@ export default function SolenoidConfigurationPage({slug, locale}: {slug: string;
   const copy = getSolenoidContent(slug, locale);
   const base = valveDetails.find(item => item.slug === "solenoid-valves");
   if (!copy || !base) notFound();
+  const configuration = getSolenoidConfiguration(slug);
+  const asset = configuration?.assets[0];
+  const drawingAsset = getSolenoidDrawingAsset(slug);
   const data = {...base, ...copy, mainImage: copy.mainImage || base.image, imageAlt: copy.imageAlt || copy.title,
     additionalImages: copy.additionalImages, additionalImageAlts: copy.additionalImageAlts, thumbnails: [], images: [],
     showDrawingRequest: true, show3DRequest: false, showDatasheetRequest: false,
-    drawing2dUrl: "", model3dUrl: "", datasheetUrl: "",
+    drawing2dUrl: drawingAsset ? `/models/valves/6010/${drawingAsset}.png` : "", model3dUrl: asset ? `/models/valves/6010/viewer.html?model=${asset}&lang=${locale}` : "", datasheetUrl: "",
   } as unknown as ProductDetailPageData;
   const language = normalizeValveLocale(locale);
+  const resourceLocale = language === "zh" ? "zh-CN" : language;
+  const resources = getRelatedResourcesData({sourceType: "product", sourceSlug: slug, relationKeys: ["series:6010"], locale: resourceLocale});
+  const overviewVideo = getSv10RelatedVideo(resourceLocale);
+  resources.videos = [overviewVideo, ...resources.videos.filter(video => video.id !== overviewVideo.id)];
+  const relatedProducts = configuration?.connection === "threaded" ? getTubingAssemblySelectionContent(resourceLocale).cards
+    .filter(card => card.productTypeId === "flanged-tubing")
+    .map(card => ({
+      id: card.productId, title: card.cardTitle, href: card.detailHref!,
+      imageSrc: `/images/products/tubing-assemblies/related/${card.productId}-square.webp`,
+      imageAlt: card.imageAlt || card.cardTitle,
+    })) : configuration?.connection === "barbed" ? getBarbedSolenoidRelatedProducts(resourceLocale) : [];
   return <ProductDetailClient data={data} afterContent={
-    <RelatedResources sourceType="product" sourceSlug={slug} relationKeys={["series:6010"]}
-      locale={language === "zh" ? "zh-CN" : language} />
+    <>
+    <RelatedResourcesLoader {...resources} />
+    <RelatedProducts locale={resourceLocale} products={relatedProducts} />
+    </>
   } />;
 }

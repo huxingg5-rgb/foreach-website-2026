@@ -1,12 +1,23 @@
 {
   "seriesTitle": "Miniature Diaphragm Solenoid Valves for Liquid On/Off Control and Flow-Path Switching",
-  "seriesDescription": "FOREACH SV10 miniature solenoid valves control reagent supply and wash-fluid switching in automated equipment. The series includes 2-way normally closed, 2-way normally open and 3-way solenoid valves, using a rocker diaphragm to open, close or switch fluid connections.",
-  "seriesIntegration": "Choose a manifold-mounted, threaded or barbed version to match your fluid connections. These micro solenoid valves are available for 12 V DC or 24 V DC operation, with EPDM, FKM or FFKM diaphragms and an optional power-saving circuit.",
+  "seriesDescription": "FOREACH SV10 miniature diaphragm solenoid valves control reagent and wash-fluid lines in analytical instruments and automated liquid-handling equipment. Choose 2-way normally closed or normally open operation for on/off control, or a 3-way valve for switching a shared line between two fluid paths.",
+  "seriesIntegration": "Choose manifold mounting for direct integration on a fluidic block, barbed ports for flexible tubing, or M6 or 1/4-28 UNF threaded ports for connections through fittings. Check the mounting face, tubing arrangement and service access against the instrument layout.",
   "seriesCompare": "Choose 2-way on/off control or 3-way switching first. For a 2-way valve, select normally closed or normally open, then match the connections, wetted materials and voltage to your equipment.",
-  "seriesSeo": "Compare FOREACH SV10 miniature solenoid valves: 2-way NC/NO or 3-way, 12 V or 24 V DC, with manifold, threaded and barbed connections for reagent and wash lines.",
+  "seriesSeo": "FOREACH SV10 miniature diaphragm solenoid valves for reagent and wash lines. Compare 2-way and 3-way configurations, manifold, barbed and threaded ports, and 12/24 V DC coils.",
   "valves": "Valves",
   "seriesLabel": "SV10 Solenoid Valves",
-  "productType": "Miniature Solenoid Valves",
+  "productType": "Miniature Diaphragm Solenoid Valves",
+  "detailIntro": {
+    "nc": "The SV10 normally closed 2-way valve controls reagent or wash-fluid lines that must close when power is removed. It opens when energized, working with the pump and instrument sequence to control delivery. The valve opens or closes the fluid path; a pump or pressure difference moves the liquid. Coil options are 12 V DC or 24 V DC.",
+    "no": "The SV10 normally open 2-way valve keeps a reagent or wash-fluid line open when power is removed and closes it when energized, allowing the instrument to interrupt delivery as needed. The valve opens or closes the fluid path; a pump or pressure difference moves the liquid. Coil options are 12 V DC or 24 V DC.",
+    "three": "The SV10 3-way valve switches a common port between two other ports so that a shared line can connect to either reagent or wash fluid. Coordinate switching with the pump and instrument sequence for delivery and rinsing, and check the energized and de-energized connections against the fluid circuit. Coil options are 12 V DC or 24 V DC.",
+    "two": "The SV10 2-way valve opens or closes a reagent or wash-fluid line. Choose normally closed operation if the line must close without power, or normally open operation if it must remain open; energizing the valve reverses that state. Coordinate the valve with the pump and instrument sequence to control delivery, and select a 12 V DC or 24 V DC coil."
+  },
+  "detailMaterials": {
+    "base": "Select EPDM, FKM or FFKM diaphragms and matching O-rings after checking compatibility with the reagent and wash-fluid composition, concentration, temperature and contact time.",
+    "barbed": "This configuration has a PEEK base plate, with EPDM, FKM or FFKM options for the diaphragm and matching O-rings. Check material compatibility against the reagent and wash-fluid composition, concentration, temperature and contact time.",
+    "threaded": "EPDM, FKM or FFKM diaphragms and matching O-rings can be combined with the available valve-seat materials. Check all wetted parts against the actual reagents and wash fluids; a PFA seat or base plate requires separate configuration confirmation."
+  },
   "models": {
     "base": {
       "descriptor": "Manifold-Mount Miniature Solenoid Valve",
@@ -36,7 +47,7 @@
   "functionIntro": "The rocker diaphragm opens or closes a connection in a 2-way solenoid valve, or switches the common port between the other two ports in a 3-way solenoid valve. Choose a normally closed or normally open 2-way version for the required state without power. A pump or pressure difference moves the fluid; the valve controls its path. Select a 12 V DC or 24 V DC coil to match the equipment supply.",
   "materialIntro": "Choose EPDM, FKM or FFKM diaphragms and matching O-rings for the actual reagent and cleaning fluid. Base-mounted and barbed versions use a PEEK base plate. Threaded versions offer additional valve-seat materials; PFA seat or base-plate configurations require a separate configuration check.",
   "labels": [
-    "Model family",
+    "Configuration family (not a complete ordering code)",
     "Valve structure",
     "Ports and function",
     "Connection",
@@ -151,5 +162,26 @@
       "applicationText": "Identify the shared line and the two paths to be selected. Check which ports connect with power applied and removed, then coordinate valve switching with the pump sequence.",
       "faqQuestion": "How does a 3-way solenoid valve switch fluid paths?"
     }
-  }
+  },
+  "orderingNote": "The displayed models identify configuration families, not complete ordering codes. Confirm the operating state, voltage, diaphragm and other wetted materials, and power-saving option when ordering. M6 and U28 identify separate M6 and 1/4-28 UNF threaded versions.",
+  "searchTerms": [
+    "miniature solenoid valve",
+    "micro solenoid valve",
+    "diaphragm solenoid valve",
+    "liquid solenoid valve",
+    "2 way solenoid valve",
+    "3 way solenoid valve"
+  ],
+  "metaFunction": {
+    "three": "SV10 3-way diaphragm solenoid valves switch a shared line between reagent and wash-fluid paths.",
+    "nc": "SV10 2-way diaphragm solenoid valves control reagent and wash-fluid lines.",
+    "no": "SV10 normally open 2-way diaphragm solenoid valves keep lines open without power and close when energized.",
+    "two": "SV10 2-way diaphragm solenoid valves offer normally closed and normally open configurations for liquid control."
+  },
+  "metaConnection": {
+    "base": "Mount the PEEK base plate directly on a manifold and select a 12 V DC or 24 V DC coil.",
+    "barbed": "Connect 1.5–2.0 mm ID flexible tubing directly to the barbed ports and select a 12 V DC or 24 V DC coil.",
+    "threaded": "Choose M6 or 1/4-28 UNF threaded ports, wetted materials and a 12 V DC or 24 V DC coil."
+  },
+  "seriesMaterials": "EPDM, FKM or FFKM diaphragms and matching O-rings are available; check all wetted materials against the actual reagent and wash-fluid conditions. Coil options are 12 V DC or 24 V DC, with an optional power-saving circuit that uses 2.5 W at startup and no more than 1 W while holding; confirm availability for the selected configuration."
 }

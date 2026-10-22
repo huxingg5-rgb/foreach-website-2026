@@ -1,4 +1,5 @@
 import type { InstallationGuideCard } from "./installation-guide.types";
+import type { RelatedResourcesLocale } from "../related-resources/related-resources.intl";
 
 // Verified on the FOREACH channel on 2026-09-30; this is a product overview.
 export const sv10Video = {
@@ -57,12 +58,12 @@ export const sv10Video = {
     {
       title: "2-Way Miniature Solenoid Valves",
       description: "Normally closed or normally open configurations for on/off control.",
-      href: "/en/products/valves/solenoid-valves/2-way/",
+      href: "/en/products/valves/solenoid-valves/?solenoid=2-way",
     },
     {
       title: "3-Way Miniature Solenoid Valves",
       description: "Configurations for switching between fluid connections.",
-      href: "/en/products/valves/solenoid-valves/3-way/",
+      href: "/en/products/valves/solenoid-valves/?solenoid=3-way",
     },
   ],
 } as const;
@@ -84,3 +85,16 @@ export const sv10EnglishGuide: InstallationGuideCard = {
   keywords: ["SV10", "solenoid valve video", "miniature solenoid valve", "rocker diaphragm valve", "2-way solenoid valve", "3-way solenoid valve", "fluid control"],
   steps: [],
 };
+
+const sv10RelatedVideoCopy: Record<RelatedResourcesLocale, { title: string; description: string }> = {
+  "zh-CN": { title: "SV10 微型电磁阀产品介绍", description: "45 秒英文视频，介绍二通与三通配置、接口形式、膜片材料及节能选项。" },
+  en: { title: sv10Video.title, description: "45-second English overview of two-way and three-way configurations, connection styles, diaphragm materials and power-saving options." },
+  es: { title: "Presentación de las electroválvulas miniatura SV10", description: "Vídeo en inglés de 45 segundos sobre configuraciones de 2 y 3 vías, conexiones, materiales del diafragma y opciones de ahorro energético." },
+  fr: { title: "Présentation des électrovannes miniatures SV10", description: "Vidéo en anglais de 45 secondes sur les configurations à 2 et 3 voies, les raccordements, les membranes et les options d’économie d’énergie." },
+  ko: { title: "SV10 소형 솔레노이드 밸브 제품 소개", description: "2방향 및 3방향 구성, 연결 방식, 다이어프램 재질과 절전 옵션을 소개하는 45초 영어 영상입니다." },
+  ru: { title: "Обзор миниатюрных электромагнитных клапанов SV10", description: "45-секундное видео на английском: двухходовые и трёхходовые исполнения, подключения, материалы мембраны и энергосберегающие опции." },
+};
+
+export function getSv10RelatedVideo(locale: RelatedResourcesLocale): InstallationGuideCard {
+  return { ...sv10EnglishGuide, ...sv10RelatedVideoCopy[locale], tags: ["SV10"] };
+}

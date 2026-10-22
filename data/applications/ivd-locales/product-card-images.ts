@@ -9,7 +9,7 @@ const productPhotos: Partial<Record<ReviewProductCardId, string>> = {
   "dpl30h": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushed-diaphragm-probe-wash-pump.webp",
   "dpgl": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
   "mrv": "/images/products/valves/rotary-valves/foreach-rotary-valve-24-channel-assembly.webp",
-  "sv": "/images/products/valves/solenoid-valves/foreach-6010-3-way-assembly.webp",
+  "sv": "/images/products/valves/solenoid-valves/foreach-sv10-3-way-assembly.webp",
   "pdm": "/images/products/control/foreach-pdm5-pressure-sensor-front.webp",
   "fittings": "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
   "tubing": "/images/products/tubing/foreach-tubing-series.webp"

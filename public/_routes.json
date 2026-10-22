@@ -87,7 +87,13 @@
     "/ru/products/tubing-assemblies/retaining-ring-kits/details/coiled*",
     "/ru/products/tubing-assemblies/retaining-ring-kits/details/sleeved*",
     "/ru/products/tubing-assemblies/ferrule-kits/details/coiled*",
-    "/ru/products/tubing-assemblies/ferrule-kits/details/sleeved*"
+    "/ru/products/tubing-assemblies/ferrule-kits/details/sleeved*",
+    "/products/valves/solenoid-valves/*",
+    "/en/products/valves/solenoid-valves/*",
+    "/es/products/valves/solenoid-valves/*",
+    "/fr/products/valves/solenoid-valves/*",
+    "/ko/products/valves/solenoid-valves/*",
+    "/ru/products/valves/solenoid-valves/*"
   ],
   "exclude": []
 }

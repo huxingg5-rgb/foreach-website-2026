@@ -84,8 +84,8 @@ const solenoid: ArticleCopy = {
       ),
       links(
         { href: "/products/valves/solenoid-valves/", label: "6010 微型电磁阀系列" },
-        { href: "/products/valves/solenoid-valves/2-way/", label: "两通电磁阀：支路通断" },
-        { href: "/products/valves/solenoid-valves/3-way/", label: "三通电磁阀：公共口切换" },
+        { href: "/products/valves/solenoid-valves/?solenoid=2-way", label: "两通电磁阀：支路通断" },
+        { href: "/products/valves/solenoid-valves/?solenoid=3-way", label: "三通电磁阀：公共口切换" },
         { href: "/resources/technical-articles/what-is-a-programmable-syringe-pump/", label: "可编程注射泵怎样配合阀完成计量动作？" }
       ),
     ] },

@@ -19,7 +19,8 @@ import { getEnglishProductApplicationGuides } from "@/data/products/detail/appli
 import { probeIntrosZh, probeOverviewParagraphsZh, probeTypesZh, getProbeProductTypeIdZh, getProbeSelectionPathZh } from "@/data/products/selection/probe-selection.zh";
 import { controlIntrosZh, controlOverviewParagraphsZh, controlTypesZh, getControlProductTypeIdZh, getControlSelectionPathZh } from "@/data/products/selection/control-selection.zh";
 import {getValveSeriesRoute,getValveSelectionPath,getHpValveDetailPath} from "@/data/products/selection/valve-routes";
-import { expandSolenoidCards, getSolenoidContent, solenoidConfigurations, solenoidImage } from "@/data/products/detail/solenoid-content";
+import { expandSolenoidCards, getSolenoidContent, solenoidConfigurations } from "@/data/products/detail/solenoid-content";
+import { getSolenoidSeriesIntroImage } from "@/data/products/detail/solenoid-images";
 import { expandMrv3Cards, getMrv3Content } from "@/data/products/detail/mrv3-content";
 import { getMrv3SeriesImage } from "@/data/products/selection/mrv3-series-image";
 import { normalizePipettingPath } from "@/data/products/selection/pipetting-pump-routes";
@@ -3511,6 +3512,13 @@ export default function ProductSelectionClient({
       applyDiaphragmPumpReferenceCard(product, locale),
     );
 
+    if (activeCategoryId === "valves") {
+      // Show SV10 first while preserving the order within each series.
+      return products.sort((current, next) =>
+        Number(next.seriesId === "6010") - Number(current.seriesId === "6010"),
+      );
+    }
+
     if (activeCategoryId === "needles" && ["zh", "en"].includes(locale)) {
       const order = new Map<string, number>(probeTypesZh.map((type, index) => [type.id, index]));
       return products.map((product) => ({ ...product, productTypeId: getProbeProductTypeIdZh(product) }))
@@ -3660,9 +3668,9 @@ export default function ProductSelectionClient({
 
     if (activeCategoryId === "valves") {
       return [
+        { value: "电磁阀", series: "SV10", label: "电磁阀" },
         { value: "旋转阀", series: "MRV3", label: "多通道旋转阀" },
         { value: "高压阀", series: "HP", label: "高压旋转阀" },
-        { value: "电磁阀", series: "SV10", label: "电磁阀" },
       ].map(({ value, series, label }) => ({
         value,
         label: `${series} ${getLocalizedFilterOptionLabel(label, locale)}`,
@@ -3994,7 +4002,7 @@ export default function ProductSelectionClient({
     title: mrv3IntroCopy.seriesTitle,
     paragraphs: mrv3IntroCopy.introParagraphs,
     image: activeProductTypeId === "电磁阀"
-      ? { src: solenoidImage, alt: mrv3IntroCopy.title }
+      ? getSolenoidSeriesIntroImage(locale)
       : getMrv3SeriesImage(locale),
   } :
     (activeProductTypeId === "diaphragm-pump"
@@ -5310,6 +5318,15 @@ function isFilterOptionActive(
     });
   }
   function resetCurrentFilters() {
+    if (activeCategoryId === "valves" && ["电磁阀", "solenoid-valves"].includes(activeProductTypeId)) {
+      setSelectedFilters({});
+      setSearchInputValue("");
+      setSearchKeyword("");
+      const url = new URL(window.location.href);
+      url.searchParams.delete("solenoid");
+      window.history.replaceState(window.history.state, "", url);
+      return;
+    }
     if (activeProductTypeId === "valveless-pump") {
       setSelectedFilters({});
       setSearchInputValue("");

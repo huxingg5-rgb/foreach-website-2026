@@ -193,6 +193,14 @@ const details = [
       "foreach-rpl-p635-valveless-pump",
       "FOREACH RPL-P6.35 50–300 μL/rev valveless ceramic piston pump for reagent dispensing and filling"
     ),
+    additionalImages: [
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump-photo-01.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump-photo-02.webp",
+    ],
+    additionalImageAlts: [
+      "Foreach RPL-P6.35 valveless metering pump, angled view 1",
+      "Foreach RPL-P6.35 valveless metering pump, angled view 2",
+    ],
 
     specs: [
       spec("产品类型", "RPL 无阀泵"),
@@ -279,6 +287,16 @@ const details = [
       "foreach-rpl-p15-valveless-pump",
       "FOREACH RPL-P15 300–1200 μL/rev valveless ceramic piston pump for larger-volume dispensing and filling"
     ),
+    additionalImages: [
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump-photo-01.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump-photo-02.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump-photo-03.webp",
+    ],
+    additionalImageAlts: [
+      "Foreach RPL-P15 valveless metering pump, nameplate view",
+      "Foreach RPL-P15 valveless metering pump, angled view 1",
+      "Foreach RPL-P15 valveless metering pump, angled view 2",
+    ],
 
     specs: [
       spec("产品类型", "RPL 无阀泵"),

@@ -1,12 +1,23 @@
 {
   "seriesTitle": "Electroválvulas miniatura de diafragma para apertura, cierre y conmutación de circuitos de líquidos",
-  "seriesDescription": "Las electroválvulas miniatura FOREACH SV10 utilizan un diafragma basculante para abrir, cerrar o conmutar conexiones de fluidos en equipos automatizados. Elija versiones de 2 vías normalmente cerradas, 2 vías normalmente abiertas o 3 vías para suministro de reactivos y lavado.",
-  "seriesIntegration": "Compare montaje en base, conexiones roscadas y espigas para adaptarse al colector, los racores o los tubos flexibles. Hay diafragmas de EPDM, FKM y FFKM, alimentación de 12 o 24 V CC y circuito de ahorro de energía opcional.",
+  "seriesDescription": "Las electroválvulas miniatura de diafragma FOREACH SV10 controlan las líneas de reactivos y lavado en instrumentos analíticos y equipos automatizados de manipulación de líquidos. Estas válvulas solenoides ofrecen versiones de 2 vías normalmente cerradas o abiertas para abrir y cerrar una línea, y versiones de 3 vías para conmutar una línea común entre dos circuitos.",
+  "seriesIntegration": "Elija montaje en colector para integrar la válvula directamente en un bloque fluídico, espigas para tubo flexible o conexiones roscadas M6 o 1/4-28 UNF para racores. Compruebe la superficie de montaje, la disposición de los tubos y el acceso para mantenimiento según el diseño del equipo.",
   "seriesCompare": "Elija primero el control de apertura y cierre de 2 vías o la conmutación de 3 vías. Para 2 vías, seleccione normalmente cerrada o abierta; después defina conexiones, materiales y tensión.",
-  "seriesSeo": "Compare electroválvulas miniatura FOREACH SV10 de 2 y 3 vías: montaje en base, rosca o espiga, con alimentación de 12/24 V CC.",
+  "seriesSeo": "Electroválvulas miniatura de diafragma FOREACH SV10 de 2 y 3 vías para reactivos y lavado, con montaje en colector, espigas o rosca y bobinas de 12/24 V CC.",
   "valves": "Válvulas",
   "seriesLabel": "Electroválvulas SV10",
-  "productType": "Electroválvulas de diafragma",
+  "productType": "Electroválvulas miniatura de diafragma",
+  "detailIntro": {
+    "nc": "La válvula SV10 de 2 vías normalmente cerrada controla las líneas de reactivos o lavado que deben cerrarse al cortar la alimentación. Se abre al energizarse y funciona de forma coordinada con la bomba y la secuencia del equipo para controlar el suministro. La válvula abre o cierra el paso; una bomba o una diferencia de presión mueve el líquido. La bobina está disponible para 12 V o 24 V CC.",
+    "no": "La válvula SV10 de 2 vías normalmente abierta mantiene abierta la línea de reactivos o lavado sin alimentación y la cierra al energizarse, lo que permite interrumpir temporalmente el suministro según la secuencia del equipo. La válvula abre o cierra el paso; una bomba o una diferencia de presión mueve el líquido. La bobina está disponible para 12 V o 24 V CC.",
+    "three": "La válvula SV10 de 3 vías conecta alternativamente el puerto común con los otros dos puertos, de modo que una línea compartida pueda recibir reactivo o líquido de lavado. Coordine la conmutación con la bomba y la secuencia del equipo, y compruebe las conexiones con y sin alimentación según el esquema del circuito. La bobina está disponible para 12 V o 24 V CC.",
+    "two": "La válvula SV10 de 2 vías abre o cierra una línea de reactivos o lavado. Elija una versión normalmente cerrada si la línea debe cerrarse sin alimentación, o normalmente abierta si debe permanecer abierta; al energizar la válvula, el estado se invierte. Coordine su funcionamiento con la bomba y la secuencia del equipo, y seleccione una bobina de 12 V o 24 V CC."
+  },
+  "detailMaterials": {
+    "base": "Seleccione la membrana y las juntas tóricas correspondientes en EPDM, FKM o FFKM tras comprobar su compatibilidad con la composición, concentración, temperatura y tiempo de contacto de los reactivos y líquidos de lavado.",
+    "barbed": "Esta configuración incorpora una placa base de PEEK y ofrece membrana y juntas tóricas en EPDM, FKM o FFKM. Compruebe la compatibilidad de los materiales con la composición, concentración, temperatura y tiempo de contacto de los reactivos y líquidos de lavado.",
+    "threaded": "La membrana y las juntas tóricas de EPDM, FKM o FFKM pueden combinarse con los materiales de asiento disponibles. Compruebe la compatibilidad de todas las piezas en contacto con los reactivos y líquidos de lavado; las configuraciones con asiento o placa base de PFA requieren confirmación específica."
+  },
   "models": {
     "base": {
       "descriptor": "Electroválvula de diafragma para montaje en base",
@@ -36,7 +47,7 @@
   "functionIntro": "Una válvula de 2 vías abre o cierra una conexión; elija normalmente cerrada o abierta según el estado necesario sin alimentación. Una válvula de 3 vías conmuta el puerto común entre los otros dos. La bomba o una diferencia de presión mueve el fluido; la válvula controla su recorrido.",
   "materialIntro": "Elija diafragmas y juntas tóricas de EPDM, FKM o FFKM según el reactivo y el líquido de lavado. Las versiones en base y con espigas utilizan una placa de PEEK. Las versiones roscadas ofrecen otros materiales de asiento; el asiento o la base de PFA requieren una comprobación específica de configuración.",
   "labels": [
-    "Familia de modelos",
+    "Familia de configuración (no es un código de pedido completo)",
     "Estructura",
     "Puertos y función",
     "Conexión",
@@ -151,5 +162,26 @@
       "applicationText": "Identifique la línea compartida y los dos recorridos. Compruebe las conexiones con y sin alimentación y coordine la conmutación con la secuencia de la bomba.",
       "faqQuestion": "¿Cómo conmuta los recorridos una electroválvula de 3 vías?"
     }
-  }
+  },
+  "orderingNote": "Los modelos mostrados identifican familias de configuración, no códigos de pedido completos. Al realizar el pedido, confirme el estado de funcionamiento, la tensión, el diafragma, los demás materiales en contacto con el fluido y la opción de ahorro energético. M6 y U28 corresponden a versiones roscadas distintas: M6 y 1/4-28 UNF.",
+  "searchTerms": [
+    "electroválvula",
+    "válvula solenoide",
+    "electroválvula miniatura",
+    "electroválvula de diafragma",
+    "electroválvula 2 vías",
+    "electroválvula 3 vías"
+  ],
+  "metaFunction": {
+    "three": "Las electroválvulas de diafragma SV10 de 3 vías conmutan una línea común entre reactivo y líquido de lavado.",
+    "nc": "Las electroválvulas de diafragma SV10 de 2 vías abren y cierran las líneas de reactivos y lavado.",
+    "no": "Las electroválvulas SV10 de 2 vías normalmente abiertas permanecen abiertas sin alimentación y se cierran al energizarse.",
+    "two": "Las electroválvulas de diafragma SV10 de 2 vías ofrecen versiones normalmente cerradas o abiertas para el control de líquidos."
+  },
+  "metaConnection": {
+    "base": "La base de PEEK se monta directamente en el colector; hay bobinas de 12 V o 24 V CC.",
+    "barbed": "Las espigas admiten tubo flexible de 1,5–2,0 mm de diámetro interior; hay bobinas de 12 V o 24 V CC.",
+    "threaded": "Seleccione conexiones M6 o 1/4-28 UNF, materiales en contacto con el fluido y una bobina de 12 V o 24 V CC."
+  },
+  "seriesMaterials": "La membrana y las juntas tóricas están disponibles en EPDM, FKM o FFKM; compruebe la compatibilidad de todas las piezas en contacto con los reactivos y líquidos de lavado. Hay bobinas de 12 V o 24 V CC y un circuito opcional de ahorro energético que utiliza 2,5 W al arrancar y no más de 1 W para mantener la válvula activada, sujeto a confirmación para la configuración elegida."
 }

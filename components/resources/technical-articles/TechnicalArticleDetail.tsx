@@ -242,10 +242,8 @@ function buildTechnicalArticleStructuredData(
       : article.slug === programmablePipettingPumpSlug
         ? getProgrammablePipettingSources(locale).map(href => href.startsWith("/") ? getCanonicalUrl(href) : href)
       : [];
-  // Keep the existing URL policy for articles outside this release.
-  const structuredUrl = rplSources || article.dateModified
-    ? getCanonicalUrl
-    : toAbsoluteTechnicalArticleUrl;
+  // Breadcrumb destinations use the same canonical URL policy as page metadata.
+  const structuredUrl = getCanonicalUrl;
   const breadcrumbItems = pageData.breadcrumbs.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
@@ -274,8 +272,8 @@ function buildTechnicalArticleStructuredData(
       ? { image: toAbsoluteTechnicalArticleUrl(article.coverImage) }
       : {}),
     ...(article.date ? { datePublished: article.date } : {}),
-    ...(article.dateModified
-      ? { dateModified: article.dateModified }
+    ...((article.dateModified || article.date)
+      ? { dateModified: article.dateModified || article.date }
       : {}),
     author: { "@id": organizationId },
     publisher: { "@id": organizationId },

@@ -2455,7 +2455,7 @@ export function getVisibleNavigationItems(locale = "zh-CN"): NavigationItem[] {
     .map((item) => {
       if (item.key === "products" && isTubingAssemblyLocale(locale) && item.megaDropdown) {
         const title = { "zh-CN": "管组件系列", en: tubingAssemblyNavigation.en.title, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].title])) };
-        const description = { "zh-CN": "法兰翻边、卡环套件、卡箍套件", en: tubingAssemblyNavigation.en.description, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].description])) };
+        const description = { "zh-CN": tubingAssemblyNavigation["zh-CN"].description, en: tubingAssemblyNavigation.en.description, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].description])) };
         const href = { "zh-CN": "/products/tubing-assemblies/", en: "/en/products/tubing-assemblies/", ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `/${code}/products/tubing-assemblies/`])) };
         return {
           ...item,
@@ -2469,7 +2469,7 @@ export function getVisibleNavigationItems(locale = "zh-CN"): NavigationItem[] {
                 { "zh-CN": tubingAssemblyNavigation["zh-CN"].descriptions[index], en: tubingAssemblyNavigation.en.descriptions[index], ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].descriptions[index]])) },
                 { "zh-CN": `/products/tubing-assemblies/${type.id}/`, en: `/en/products/tubing-assemblies/${type.id}/`, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `/${code}/products/tubing-assemblies/${type.id}/`])) }),
                 ...tubingAssemblyMenuImages[type.id],
-                alt: { "zh-CN": tubingAssemblyNavigation["zh-CN"].families[index], en: `${tubingAssemblyNavigation.en.families[index]} — ${tubingAssemblyNavigation.en.descriptions[index]}`, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `${tubingAssemblyNavigation[code].families[index]} — ${tubingAssemblyNavigation[code].descriptions[index]}`])) },
+                alt: { "zh-CN": `${tubingAssemblyNavigation["zh-CN"].families[index]}，${tubingAssemblyNavigation["zh-CN"].descriptions[index]}`, en: `${tubingAssemblyNavigation.en.families[index]} — ${tubingAssemblyNavigation.en.descriptions[index]}`, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, `${tubingAssemblyNavigation[code].families[index]} — ${tubingAssemblyNavigation[code].descriptions[index]}`])) },
               })),
             }],
           },

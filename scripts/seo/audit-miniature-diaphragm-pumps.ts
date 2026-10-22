@@ -700,8 +700,8 @@ const generatedDpl30hText = JSON.stringify(
 if (/倒刺接口|倒刺端口|卡箍|锁紧结构/.test(generatedDpl30hText)) {
   fail("generated DPL30H JSON 仍含错误接口映射");
 }
-if (!generatedDpl30hText.includes("卡套接头，连接 6×4 mm（外径×内径）的硬管")) {
-  fail("generated DPL30H JSON 缺少正式卡套接头与 6×4 mm 硬管说明");
+if (!generatedDpl30hText.includes("卡箍接头，连接 6×4 mm（外径×内径）的硬管")) {
+  fail("generated DPL30H JSON 缺少正式卡箍接头与 6×4 mm 硬管说明");
 }
 
 const llmsText = fs.readFileSync(path.join(projectRoot, "public", "llms.txt"), "utf8");

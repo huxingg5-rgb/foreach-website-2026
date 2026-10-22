@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" role="img" aria-labelledby="title desc">
+ <title id="title">PMB U28 穿板倒刺接头装配位置</title>
+ <desc id="desc">本体挡肩与螺母夹住面板，两侧软管套住倒刺，内部流道贯通。示意不按比例，无额外板面密封件。</desc>
+ <defs><pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M-3 3L3-3M0 12L12 0M9 15L15 9" stroke="#b8c6d6" stroke-width="2"/></pattern></defs>
+ <rect width="720" height="620" fill="#f6f9fc"/>
+ <g font-family="Microsoft YaHei,Arial,sans-serif" fill="#173368">
+  <text x="36" y="48" font-size="30" font-weight="700">固定面板，贯通两侧软管</text>
+  <text x="36" y="87" font-size="23" fill="#54687b">PMB U28 · 装配位置示意，不按比例</text>
+  <rect x="335" y="145" width="42" height="110" fill="url(#hatch)" stroke="#8a9aab" stroke-width="2"/>
+  <rect x="335" y="345" width="42" height="115" fill="url(#hatch)" stroke="#8a9aab" stroke-width="2"/>
+  <path d="M95 278L155 266L155 278H285V244H335V263H450V278H540V266L620 278V322L540 334V322H450V337H335V356H285V322H155V334L95 322Z" fill="#c8d9e7" stroke="#173368" stroke-width="3"/>
+  <path d="M377 240H420L439 261V339L420 360H377Z" fill="#dde6ed" stroke="#173368" stroke-width="3"/>
+  <path d="M439 267L450 274M439 284L450 291M439 309L450 316M439 326L450 333" stroke="#173368" stroke-width="2"/>
+  <rect x="95" y="289" width="525" height="22" fill="#13b8ad"/>
+  <path d="M40 260H210V277H156L95 287H40ZM40 340H210V323H156L95 313H40Z" fill="#88dcd3" fill-opacity=".65" stroke="#218f91" stroke-width="2"/>
+  <path d="M505 260H680V287H620L540 277H505ZM505 340H680V313H620L540 323H505Z" fill="#88dcd3" fill-opacity=".65" stroke="#218f91" stroke-width="2"/>
+  <g fill="none" stroke="#54687b" stroke-width="2"><path d="M125 260V208H40"/><path d="M310 244V170H220"/><path d="M407 240V195H475"/><path d="M575 340V400H615"/><path d="M230 300V435H105"/></g>
+  <text x="40" y="195" font-size="26">软管</text>
+  <text x="190" y="155" font-size="26">本体挡肩</text>
+  <text x="480" y="202" font-size="26">安装螺母</text>
+  <text x="554" y="435" font-size="26">倒刺端</text>
+  <text x="45" y="467" font-size="26">内部流道</text>
+  <text x="390" y="490" font-size="25">面板厚度 ≤3.5 mm</text>
+  <path d="M356 445V480H380" fill="none" stroke="#54687b" stroke-width="2"/>
+  <rect x="30" y="527" width="660" height="68" rx="8" fill="#e7eff7"/>
+  <text x="50" y="554" font-size="23">安装螺纹：1/4-28 UNF，配合 PMBSN 螺母</text>
+  <text x="50" y="583" font-size="23">固定位置与软管密封位置分别检查</text>
+ </g>
+</svg>

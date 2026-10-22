@@ -400,7 +400,7 @@ export const diaphragmPump100KpaVs600KpaSelectionZhCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "若液路并不需要高背压，直接选择 600 kPa 平台可能增加对连接方式、材料与温度边界、供电功率、控制策略、安装空间和成本的约束。以 Foreach 公开资料为例，DPL30 的自吸高度为 6 mH₂O、介质温度上限为 +80℃；DPL30H 的自吸高度为 3 mH₂O、介质温度上限为 +40℃，并采用 6×4 mm 硬管卡套连接。",
+          text: "若液路并不需要高背压，直接选择 600 kPa 平台可能增加对连接方式、材料与温度边界、供电功率、控制策略、安装空间和成本的约束。以 Foreach 公开资料为例，DPL30 的自吸高度为 6 mH₂O、介质温度上限为 +80℃；DPL30H 的自吸高度为 3 mH₂O、介质温度上限为 +40℃，并采用 6×4 mm 硬管卡箍连接。",
         },
         {
           type: "paragraph",
@@ -703,7 +703,7 @@ export const highBackpressureFluidPathPressureBudgetZhCopy = {
       blocks: [
         {
           type: "paragraph",
-          text: "Foreach DPL30H 高压液体隔膜泵公开参数包括 300 mL/min 空载流量、600 kPa 额定压力、3 mH₂O 自吸高度和 6×4 mm 硬管卡套连接。它可以进入高背压候选池，但选型重点仍是目标背压处可提供的流量，以及该工作点是否落在受控规格书允许的介质、温度和工作制范围内。",
+          text: "Foreach DPL30H 高压液体隔膜泵公开参数包括 300 mL/min 空载流量、600 kPa 额定压力、3 mH₂O 自吸高度和 6×4 mm 硬管卡箍连接。它可以进入高背压候选池，但选型重点仍是目标背压处可提供的流量，以及该工作点是否落在受控规格书允许的介质、温度和工作制范围内。",
         },
         {
           type: "paragraph",
@@ -732,7 +732,7 @@ export const highBackpressureFluidPathPressureBudgetZhCopy = {
         {
           type: "list",
           items: [
-            "确认管材、外径公差、切口质量、插入深度和卡套锁紧要求。",
+            "确认管材、外径公差、切口质量、插入深度和卡箍锁紧要求。",
             "分别确认阀、过滤器、传感器和腔体的允许工作压力、试验压力及对应条件，不能混用术语。",
             "按正常稳态、最不利稳态和瞬态保护边界选择传感器量程、过压停机与泄压路径。",
             "完成压力保持、泄漏、启停、阀切换、堵塞保护和寿命阶段测试。",

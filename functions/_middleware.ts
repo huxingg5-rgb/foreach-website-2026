@@ -1,3 +1,4 @@
+import { getSolenoidRedirectEntries } from "../lib/seo/solenoid-migration";
 import { normalizeControlModulePath } from "../data/products/selection/control-module-routes";
 import { getLegacyTubingSelectionTarget } from "../data/products/selection/tubing-selection-routes";
 import { normalizePipettingPath } from "../data/products/selection/pipetting-pump-routes";
@@ -25,6 +26,7 @@ const BYTEDANCE_VERIFY_CONTENT = "ys91dEc0bPhktzcIz+Yb";
 const RETIRED_TUBING_ASSEMBLIES = new Map(
   getTubingAssemblyRedirectEntries().map(({ source, destination }) => [source, destination]),
 );
+const RETIRED_SOLENOID_PAGES = new Map(getSolenoidRedirectEntries().flatMap(({source, destination}) => [[source, destination], [source.slice(0, -1), destination]]));
 const LEGACY_REDIRECTS = new Map<string, string>([
   ["/cn/history.aspx", "/"],
   ["/cn/NewsInfo.aspx", "/"],
@@ -52,6 +54,12 @@ export const onRequest: LegacyRedirectHandler = async ({
   }
 
   const requestUrl = new URL(request.url);
+  const solenoidTarget = RETIRED_SOLENOID_PAGES.get(requestUrl.pathname);
+  if (solenoidTarget) {
+    const target = new URL(solenoidTarget, requestUrl);
+    for (const [key, value] of requestUrl.searchParams) if (!target.searchParams.has(key)) target.searchParams.append(key, value);
+    return new Response(null, {status: 301, headers: {Location: target.toString()}});
+  }
 
   // Keep these exact legacy URLs working even when earlier _redirects rules hit host limits.
   const retiredAssemblyTarget = RETIRED_TUBING_ASSEMBLIES.get(requestUrl.pathname);

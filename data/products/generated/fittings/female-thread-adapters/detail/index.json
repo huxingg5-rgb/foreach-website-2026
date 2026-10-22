@@ -2379,14 +2379,14 @@
     "modelDisplay": "UT-U28-15-PS-B",
     "displayModel": "UT-U28-15-PS-B",
     "foreachModel": "UT-U28-15-PS-B",
-    "description": "UT-U28-15-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
-    "shortDescription": "UT-U28-15-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
-    "heroDescription": "UT-U28-15-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "description": "UT-U28-15-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为 PPS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UT-U28-15-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为 PPS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UT-U28-15-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为1.5 mm，主体材质为 PPS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
     "advantages": [
       "连接结构：三通",
       "螺纹规格：1/4-28 UNF",
       "通径：1.5 mm",
-      "材质：PS",
+      "材质：PPS",
       "颜色：黑色"
     ],
     "commonApplications": [
@@ -2395,10 +2395,10 @@
       "IVD与分析仪器流路",
       "实验室自动化设备液路"
     ],
-    "mainImage": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
-    "image": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
-    "heroImage": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
+    "image": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
     "additionalImages": [],
     "images": [
       "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp"
@@ -2440,7 +2440,7 @@
       },
       {
         "label": "材质",
-        "value": "PS"
+        "value": "PPS"
       },
       {
         "label": "颜色",
@@ -2478,7 +2478,7 @@
       },
       {
         "label": "材质",
-        "value": "PS"
+        "value": "PPS"
       },
       {
         "label": "颜色",
@@ -2521,10 +2521,10 @@
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
     },
-    "imagePath": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
-    "imageUrl": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
-    "mainImageAlt": "1.5 mm 通径，PS 黑色 T型三通内螺纹互转接头，1/4-28 UNF 螺纹 (UT-U28-15-PS-B)",
-    "imageAlt": "1.5 mm 通径，PS 黑色 T型三通内螺纹互转接头，1/4-28 UNF 螺纹 (UT-U28-15-PS-B)"
+    "imagePath": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
+    "imageUrl": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
+    "mainImageAlt": "1.5 mm 通径，PPS 黑色 T型三通内螺纹互转接头，1/4-28 UNF 螺纹 (UT-U28-15-PS-B)",
+    "imageAlt": "1.5 mm 通径，PPS 黑色 T型三通内螺纹互转接头，1/4-28 UNF 螺纹 (UT-U28-15-PS-B)"
   },
   {
     "sourceType": "fitting-detail",
@@ -2548,14 +2548,14 @@
     "modelDisplay": "UT-U28-20-PS-B",
     "displayModel": "UT-U28-20-PS-B",
     "foreachModel": "UT-U28-20-PS-B",
-    "description": "UT-U28-20-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
-    "shortDescription": "UT-U28-20-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
-    "heroDescription": "UT-U28-20-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为PS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "description": "UT-U28-20-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为 PPS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "shortDescription": "UT-U28-20-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为 PPS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
+    "heroDescription": "UT-U28-20-PS-B是一款T型三通内螺纹互转接头，采用1/4-28 UNF内螺纹接口，通径为2.0 mm，主体材质为 PPS，适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接。",
     "advantages": [
       "连接结构：三通",
       "螺纹规格：1/4-28 UNF",
       "通径：2.0 mm",
-      "材质：PS",
+      "材质：PPS",
       "颜色：黑色"
     ],
     "commonApplications": [
@@ -2564,10 +2564,10 @@
       "IVD与分析仪器流路",
       "实验室自动化设备液路"
     ],
-    "mainImage": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
-    "image": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
-    "heroImage": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
-    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
+    "mainImage": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
+    "image": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
+    "heroImage": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
+    "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
     "additionalImages": [],
     "images": [
       "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp"
@@ -2609,7 +2609,7 @@
       },
       {
         "label": "材质",
-        "value": "PS"
+        "value": "PPS"
       },
       {
         "label": "颜色",
@@ -2647,7 +2647,7 @@
       },
       {
         "label": "材质",
-        "value": "PS"
+        "value": "PPS"
       },
       {
         "label": "颜色",
@@ -2690,10 +2690,10 @@
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
     },
-    "imagePath": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
-    "imageUrl": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
-    "mainImageAlt": "2 mm 通径，PS 黑色 T型三通内螺纹互转接头，1/4-28 UNF 螺纹 (UT-U28-20-PS-B)",
-    "imageAlt": "2 mm 通径，PS 黑色 T型三通内螺纹互转接头，1/4-28 UNF 螺纹 (UT-U28-20-PS-B)"
+    "imagePath": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
+    "imageUrl": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
+    "mainImageAlt": "2 mm 通径，PPS 黑色 T型三通内螺纹互转接头，1/4-28 UNF 螺纹 (UT-U28-20-PS-B)",
+    "imageAlt": "2 mm 通径，PPS 黑色 T型三通内螺纹互转接头，1/4-28 UNF 螺纹 (UT-U28-20-PS-B)"
   },
   {
     "sourceType": "fitting-detail",

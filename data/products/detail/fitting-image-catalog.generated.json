@@ -2950,13 +2950,13 @@
     "model": "UT-U28-15-PS-B",
     "category": "female-thread-adapters",
     "source": "/images/products/fittings/female-thread-adapters/products/UT-U28-15-PS-B.jpg",
-    "src": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
+    "src": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
     "productType": "T型三通内螺纹互转接头",
     "dimensions": [
       "1.5"
     ],
     "dimensionKind": "bore",
-    "material": "PS",
+    "material": "PPS",
     "color": "黑色",
     "thread": "1/4-28 UNF"
   },
@@ -2978,13 +2978,13 @@
     "model": "UT-U28-20-PS-B",
     "category": "female-thread-adapters",
     "source": "/images/products/fittings/female-thread-adapters/products/UT-U28-20-PS-B.jpg",
-    "src": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
+    "src": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
     "productType": "T型三通内螺纹互转接头",
     "dimensions": [
       "2"
     ],
     "dimensionKind": "bore",
-    "material": "PS",
+    "material": "PPS",
     "color": "黑色",
     "thread": "1/4-28 UNF"
   },

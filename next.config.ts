@@ -1,5 +1,6 @@
-import { getTubingSelectionRedirects } from "./data/products/selection/tubing-selection-routes";
+import {getSolenoidRedirectEntries} from "./lib/seo/solenoid-migration";
 import { getTubingAssemblyRedirectEntries } from "./data/products/tubing-assemblies/redirects";
+import { getTubingSelectionRedirects } from "./data/products/selection/tubing-selection-routes";
 import { getControlModuleRedirectEntries } from "./data/products/selection/control-module-routes";
 import { getPipettingRedirectEntries } from "./data/products/selection/pipetting-pump-routes";
 import { getSyringeModelRedirectEntries } from "./data/products/selection/syringe-pump-routes";
@@ -52,7 +53,7 @@ const nextConfig: NextConfig = {
   ...(!isCloudflarePagesBuild
     ? {
         async redirects() {
-          return [...getTubingAssemblyRedirectEntries(), ...getTubingSelectionRedirects(), ...getPipettingRedirectEntries(), ...getSyringeModelRedirectEntries(), ...getPistonPumpRedirectEntries(), ...getValvelessPumpRedirectEntries(), ...getApplicationRedirectEntries(), ...getControlModuleRedirectEntries()];
+          return [...getSolenoidRedirectEntries(), ...getTubingAssemblyRedirectEntries(), ...getTubingSelectionRedirects(), ...getPipettingRedirectEntries(), ...getSyringeModelRedirectEntries(), ...getPistonPumpRedirectEntries(), ...getValvelessPumpRedirectEntries(), ...getApplicationRedirectEntries(), ...getControlModuleRedirectEntries()];
         },
       }
     : {}),

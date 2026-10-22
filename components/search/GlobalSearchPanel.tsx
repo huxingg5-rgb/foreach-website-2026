@@ -360,7 +360,7 @@ export default function GlobalSearchPanel({
     let cancelled = false;
 
     window.setTimeout(() => {
-      if (!cancelled && (locale !== "en" || !getCachedGlobalSearchIndex(locale))) {
+      if (!cancelled && !getCachedGlobalSearchIndex(locale)) {
         setLoadState("loading");
       }
     }, 0);

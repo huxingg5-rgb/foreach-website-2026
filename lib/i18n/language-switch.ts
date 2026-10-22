@@ -117,7 +117,7 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
   }
   if (/^(?:\/(?:en|es|fr|ko|ru))?\/products\/tubing-assemblies(?:\/|$)/.test(pathname)) {
     const assemblyPath = pathname.replace(/^\/(?:en|es|fr|ko|ru)/, "");
-    return `${localeCode === "zh-CN" ? "" : `/${localeCode}`}${assemblyPath.replace(/\/?$/, "/")}`;
+    return `${getLocalePathPrefix(localeCode)}${assemblyPath.replace(/\/?$/, "/")}`;
   }
   const tubingPath = getTubingLanguagePath(pathname, localeCode);
   if (tubingPath) return tubingPath;

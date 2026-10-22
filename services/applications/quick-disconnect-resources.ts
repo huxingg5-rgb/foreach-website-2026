@@ -3,7 +3,8 @@ import type { ApplicationDocument } from "@/data/applications/analytical-documen
 import type { EnglishApplicationKind } from "@/data/applications/application-english";
 import { relatesToQuickDisconnects } from "@/data/applications/quick-disconnect-article-relations";
 import { getConnectorSelectionArticles } from "@/data/resources/technical-articles/connector-selection-articles.article";
-import { quickDisconnectFittingSlug } from "@/data/resources/technical-articles/technical-article-availability";
+import { quickDisconnectFittingSlug, femaleThreadAdaptersSlug, bulkheadBarbedFittingSlug } from "@/data/resources/technical-articles/technical-article-availability";
+import { relatesToPanelFittings } from "@/data/applications/panel-fitting-article-relations";
 
 /** Add the localized reading without replacing the application's existing resources. */
 export function withQuickDisconnectArticle(
@@ -11,10 +12,15 @@ export function withQuickDisconnectArticle(
   kind: EnglishApplicationKind,
   document: Pick<ApplicationDocument, "kind" | "slug" | "reviewContext">,
 ): RelatedResourcesData {
-  if (!relatesToQuickDisconnects(kind, document)
-    || resources.articles.some(article => article.slug === quickDisconnectFittingSlug)) return resources;
-  const article = getConnectorSelectionArticles(resources.locale).find(item => item.slug === quickDisconnectFittingSlug);
-  if (!article) return resources;
-  const { id, slug, title, summary, date, coverImage } = article;
-  return { ...resources, articles: [...resources.articles, { id, slug, title, summary, date, coverImage }] };
+  const slugs = new Set<string>();
+  if (relatesToQuickDisconnects(kind, document)) slugs.add(quickDisconnectFittingSlug);
+  // The user excludes Chinese application pages, but not Chinese product pages.
+  if (resources.locale !== "zh-CN" && relatesToPanelFittings(kind, document)) {
+    slugs.add(femaleThreadAdaptersSlug);
+    slugs.add(bulkheadBarbedFittingSlug);
+  }
+  const additions = getConnectorSelectionArticles(resources.locale)
+    .filter(article => slugs.has(article.slug) && !resources.articles.some(existing => existing.slug === article.slug))
+    .map(({ id, slug, title, summary, date, coverImage }) => ({ id, slug, title, summary, date, coverImage }));
+  return additions.length ? { ...resources, articles: [...resources.articles, ...additions] } : resources;
 }

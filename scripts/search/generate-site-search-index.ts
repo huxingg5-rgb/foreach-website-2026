@@ -1,3 +1,4 @@
+import {replaceSolenoidSearchItems} from "../../data/search/solenoid-search";
 import { normalizeControlModulePath } from "../../data/products/selection/control-module-routes";
 import {normalizeHpProductHref} from "../../data/products/selection/valve-routes";
 import { getTubingMaterialCopy } from "../../data/products/tubing/content";
@@ -784,6 +785,14 @@ function normalizeValvelessSearchItem(item: SiteSearchItem): SiteSearchItem[] {
 }
 
 async function main() {
+  if (process.argv.includes("--solenoid-only")) {
+    const {siteSearchIndex} = await import("../../data/search/site-search-index.generated");
+    const output = buildOutput(replaceSolenoidSearchItems(siteSearchIndex, "zh"));
+    if (CHECK_MODE) {if (fs.readFileSync(OUTPUT_PATH, "utf8") !== output) throw new Error("Solenoid search index is stale");}
+    else fs.writeFileSync(OUTPUT_PATH, output, "utf8");
+    console.log("Solenoid product search updated; other entries preserved");return;
+  }
+
   const [
     productItems,
     compatibleItems,
@@ -794,7 +803,7 @@ async function main() {
     loadDatasheetItems(),
   ]);
 
-  const finalItems = deduplicate([
+  const finalItems = replaceSolenoidSearchItems(deduplicate([
     ...productItems,
     ...compatibleItems,
     ...datasheetItems,
@@ -804,7 +813,7 @@ async function main() {
     const en = slug ? getTubingMaterialCopy(slug, "en") : undefined;
     if (!zh || !en || item.module !== "products") return item;
     return { ...item, title: zh.cardTitle, subtitle: zh.cardHeading, description: zh.seoDescription, keywords: [zh.cardTitle, en.cardTitle, slug!, "管材", "仪器管路", "instrument tubing"] };
-  });
+  }), "zh");
   const invalidProductImages = finalItems.filter((item) => {
     if (item.module !== "products" || !item.image) {
       return item.module === "products";

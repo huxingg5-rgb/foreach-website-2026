@@ -274,7 +274,7 @@ export default function ProductSelectionCard({
 
   return (
     <article
-      className={`product-card${tubingHeading ? " tubing-material-card" : ""}`}
+      className={`product-card${tubingHeading ? " tubing-material-card" : ""}${product.seriesId === "6010" ? " solenoid-configuration-card" : ""}`}
       data-product-type-id={product.productTypeId || undefined}
       title={valveCard ? `${safeTitle} ${valveCard.name}` : safeTitle}
     >

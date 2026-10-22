@@ -4594,3 +4594,11 @@
     font-weight: 500 !important;
   }
 }
+
+/* Keep both threaded SV10 family model names readable at narrow card widths. */
+.products-selection-page .product-card.solenoid-configuration-card .product-title {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  overflow-wrap: anywhere;
+}

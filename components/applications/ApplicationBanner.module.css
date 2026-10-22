@@ -1,10 +1,9 @@
 .hero { min-height: 520px; background: #163559 center / cover no-repeat; color: #fff; }
 .heroInner { position: relative; box-sizing: border-box; width: min(1600px, calc(100% - 64px)); min-height: 520px; margin: 0 auto; padding: 168px 0 40px; }
-.heroTitle { max-width: 1080px; margin: 0; color: #fff; font-size: var(--shared-inner-banner-heading-size, 64px); font-weight: 600; line-height: var(--shared-inner-banner-heading-line-height, 1.08); letter-spacing: -.04em; overflow-wrap: break-word; }
+.heroTitle { max-width: 1080px; margin: 0; color: #fff; font-size: var(--shared-inner-banner-heading-size); font-weight: 600; line-height: var(--shared-inner-banner-heading-line-height); letter-spacing: -.04em; overflow-wrap: break-word; }
 .heroTitle span { color: #04dfc2; }
-.heroDescription { max-width: 860px; margin: 24px 0 0; color: rgba(255, 255, 255, .82); font-size: var(--shared-inner-banner-body-size, 18px); font-weight: 400; line-height: var(--shared-inner-banner-body-line-height, 1.8); letter-spacing: normal; }
+.heroDescription { max-width: 860px; margin: 24px 0 0; color: rgba(255, 255, 255, .82); font-size: var(--shared-inner-banner-body-size); font-weight: 400; line-height: var(--shared-inner-banner-body-line-height); letter-spacing: normal; }
 @media (max-width: 760px) {
-  .hero { --shared-inner-banner-heading-size: 40px; --shared-inner-banner-heading-line-height: 1.12; --shared-inner-banner-body-size: 16px; --shared-inner-banner-body-line-height: 1.7; }
   .hero { min-height: 420px; }
   .heroInner { width: calc(100% - 32px); min-height: 420px; padding: 142px 0 32px; }
   .heroDescription { margin-top: 20px; }

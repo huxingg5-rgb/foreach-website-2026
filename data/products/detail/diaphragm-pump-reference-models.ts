@@ -247,7 +247,7 @@ function getReferenceLocalizedCopy(
     const description = isGasLiquid
       ? `${model} 是 24 V 直流无刷双头微型气液混合隔膜泵，专为气体及气液混合物设计，不适用于输送 100% 液体。单泵头空载气体流量为 6 L/min，最大负压为 < -90 kPa，适用于真空抽吸和气液混合物抽排。`
       : isHighPressure
-        ? `${model} 是 12 V / 24 V ${motor.zh}高压微型液体隔膜泵，额定压力为 600 kPa，空载流量为 300 mL/min。接口为卡套接头，连接 6×4 mm（外径×内径）的硬管。`
+        ? `${model} 是 12 V / 24 V ${motor.zh}高压微型液体隔膜泵，额定压力为 600 kPa，空载流量为 300 mL/min。接口为卡箍接头，连接 6×4 mm（外径×内径）的硬管。`
         : `${model} 是 12 V / 24 V ${motor.zh}微型液体隔膜泵，空载流量为 ${flow} mL/min，额定压力为 100 kPa，适用于仪器内部的清洗、试剂、废液与循环液路。`;
     const seoTitle = isGasLiquid
       ? `双头微型气液混合隔膜泵与真空抽吸 | ${model} | 恒永达`

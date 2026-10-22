@@ -435,14 +435,14 @@ export const femaleThreadAdapterSelectionProducts:
       "en": "UT-U28-15-PS-B"
     },
     "cardSubtitle": {
-      "zh": "三通1/4-28 UNF螺纹互转\n通径为1.5mm\nPS材质",
-      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 1.5 mm\nPS material"
+      "zh": "三通1/4-28 UNF螺纹互转\n通径为1.5mm\nPPS材质",
+      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 1.5 mm\nPPS material"
     },
     "filters": {
       "filter01": "三通",
       "filter02": "1/4-28 UNF",
       "filter03": "1.5 mm",
-      "filter04": "PS",
+      "filter04": "PPS",
       "filter05": "B - 黑色"
     },
     "imageCard": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-ps-b.webp",
@@ -450,8 +450,8 @@ export const femaleThreadAdapterSelectionProducts:
     "status": "active",
     "sortOrder": 15,
     "searchKeywords": {
-      "zh": "三通内螺纹 T形 UT-U28-15-PS-B UT-U28-15-PS-B 809631 443-02-00210 二通-三通 UT T型三通 1/4-28 UNF 1.5 mm PS 黑色",
-      "en": "UT-U28-15-PS-B 809631 443-02-00210 UT 1/4-28 UNF 1.5 mm PS"
+      "zh": "三通内螺纹 T形 UT-U28-15-PS-B UT-U28-15-PS-B 809631 443-02-00210 二通-三通 UT T型三通 1/4-28 UNF 1.5 mm PPS 黑色",
+      "en": "UT-U28-15-PS-B 809631 443-02-00210 UT 1/4-28 UNF 1.5 mm PPS"
     }
   },
   {
@@ -464,14 +464,14 @@ export const femaleThreadAdapterSelectionProducts:
       "en": "UT-U28-20-PS-B"
     },
     "cardSubtitle": {
-      "zh": "三通1/4-28 UNF螺纹互转\n通径为2.0mm\nPS材质",
-      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPS material"
+      "zh": "三通1/4-28 UNF螺纹互转\n通径为2.0mm\nPPS材质",
+      "en": "3-Way 1/4-28 UNF Female Thread Adapter\nFlow Path Diameter: 2.0 mm\nPPS material"
     },
     "filters": {
       "filter01": "三通",
       "filter02": "1/4-28 UNF",
       "filter03": "2.0 mm",
-      "filter04": "PS",
+      "filter04": "PPS",
       "filter05": "B - 黑色"
     },
     "imageCard": "/images/products/fittings/female-thread-adapters/products/2mm-bore-ps-tee-female-thread-adapter-1-4-28-unf-ut-u28-20-ps-b.webp",
@@ -479,8 +479,8 @@ export const femaleThreadAdapterSelectionProducts:
     "status": "active",
     "sortOrder": 16,
     "searchKeywords": {
-      "zh": "三通内螺纹 T型 UT-U28-20-PS-B UT-U28-20-PS-B 809698 443-02-00261 二通-三通 UT T型三通 1/4-28 UNF 2.0 mm PS 黑色",
-      "en": "UT-U28-20-PS-B 809698 443-02-00261 UT 1/4-28 UNF 2.0 mm PS"
+      "zh": "三通内螺纹 T型 UT-U28-20-PS-B UT-U28-20-PS-B 809698 443-02-00261 二通-三通 UT T型三通 1/4-28 UNF 2.0 mm PPS 黑色",
+      "en": "UT-U28-20-PS-B 809698 443-02-00261 UT 1/4-28 UNF 2.0 mm PPS"
     }
   },
   {

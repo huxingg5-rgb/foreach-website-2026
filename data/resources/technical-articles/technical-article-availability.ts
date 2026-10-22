@@ -15,7 +15,8 @@ export const bulkheadBarbedFittingSlug = "what-is-a-bulkhead-barbed-fitting";
 
 // Locale-limited articles share this small registry with the header so the
 // language switcher never needs to ship article bodies to the browser.
-const limitedLocales: Partial<Record<string, readonly TechnicalArticleLocale[]>> = {};
+const limitedLocales: Partial<Record<string, readonly TechnicalArticleLocale[]>> = {
+};
 
 export function isTechnicalArticleLocaleAvailable(slug: string, locale: TechnicalArticleLocale) {
   return limitedLocales[slug]?.includes(locale) ?? true;

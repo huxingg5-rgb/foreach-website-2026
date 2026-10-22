@@ -973,7 +973,7 @@ function createFemaleDetail(
       : "",
 
     material
-      ? `主体材质为${material}`
+      ? `主体材质为 ${material}`
       : "",
 
     "适用于微流体系统、IVD仪器、分析仪器及实验室自动化设备中的液路转接",

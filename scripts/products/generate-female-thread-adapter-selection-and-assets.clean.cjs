@@ -10,6 +10,8 @@
 const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
+// A02 catalogue pp. 82, 84: these published UT models use PPS; keep PS in the SKU.
+const materialDisplayNames = require("../../data/products/detail/female-thread-material-overrides.json");
 
 const root = process.cwd();
 
@@ -366,7 +368,7 @@ function parseModel(model) {
     materialCode,
 
     material:
-      materialCode,
+      materialDisplayNames[model] || materialCode,
 
     colorCode,
 
