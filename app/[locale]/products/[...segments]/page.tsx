@@ -75,6 +75,8 @@ import CheckValveDetailPage from "@/app/products/fittings/check-valves/[slug]/pa
 import FilterDetailPage from "@/app/products/fittings/filters/[slug]/page";
 import QuickConnectFittingDetailPage from "@/app/products/fittings/quick-connect-fittings/[slug]/page";
 import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
+import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import QuickConnectQ20Page from "@/app/products/fittings/quick-connect-fittings/q20/page";
 import QuickConnectQ40Page from "@/app/products/fittings/quick-connect-fittings/q40/page";
 import QuickConnectQ60Page from "@/app/products/fittings/quick-connect-fittings/q60/page";
@@ -585,11 +587,14 @@ export default async function ProductLocaleRoutePage({
 
   const probeControlSelection = locale === "en" ? getEnglishProbeControlSelection(segments) : undefined;
   if (probeControlSelection) {
-    return renderSelectionPage({
+    const selection = renderSelectionPage({
       locale,
       categoryId: probeControlSelection.categoryId,
       productTypeId: probeControlSelection.productTypeId,
     });
+    return probeControlSelection.productTypeId === "sampling-probes"
+      ? <>{selection}<RelatedResources sourceType="product" sourceId="sampling-probes" relationKeys={["category:sampling-probes"]} locale="en" /></>
+      : selection;
   }
 
   if (segments[0] === 'valves' && segments.length === 2 && getValveSeriesRoute(segments[1])) return <ValveSelectionPage slug={segments[1]} locale={locale} />;
@@ -600,6 +605,14 @@ export default async function ProductLocaleRoutePage({
   const [category, slug, seriesSlug] = segments;
   const controlDetailSlug = getControlModuleDetailSlugFromSegments(segments);
   if (controlDetailSlug) {
+    if (locale === "en") {
+      const detail = getControlModuleDetailBySlug(controlDetailSlug);
+      if (!detail) notFound();
+      return <ProductDetailClient data={getControlModuleProductDetailData(detail)} afterContent={
+        <RelatedResources sourceType="product" sourceId={`control-${controlDetailSlug}`} sourceSlug={controlDetailSlug}
+          relationKeys={[`series:${controlDetailSlug.split("-")[0]}`]} locale="en" />
+      } />;
+    }
     return ProductDetailRoutePage({ params: Promise.resolve({ category: "control", slug: controlDetailSlug }) });
   }
 

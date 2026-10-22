@@ -1,0 +1,17 @@
+.page[data-video-guide-detail] :global([data-article-products] [data-fill="true"]) img {
+  object-fit: contain;
+}
+
+.page[data-video-guide-detail][data-show-footer-products] :global([data-related-products-section]),
+.page[data-video-guide-detail][data-show-footer-products] :global([data-related-products-only]) {
+  display: block;
+}
+
+.page :global([data-related-products-section] [data-related-track-item] a > div:has(> img)) {
+  aspect-ratio: 1;
+}
+
+.page :global([data-related-products-section]) img {
+  padding: 0;
+  object-fit: contain;
+}

@@ -16,7 +16,10 @@ export type VideoGuideDetail = {
   watchHeading: string;
   caption: string;
   highlightsIntroduction: string;
-  highlights: readonly { time: string; start: number; title: string; description: string }[];
+  highlightsHeading?: string;
+  highlights: readonly { time?: string; start?: number; title: string; description: string }[];
+  keywords?: readonly string[];
+  productKeys?: readonly string[];
   productHeading: string;
   productIntroduction: string;
   products: readonly { title: string; href: string }[];

@@ -7,6 +7,7 @@ import { getVideoGuideRelatedProducts } from "@/services/resources/installation-
 import LegacyTechnicalArticleLayout from "@/components/resources/technical-articles/articles/LegacyTechnicalArticleLayout";
 import editorial from "@/components/resources/technical-articles/articles/RplSelectionArticle.module.css";
 import styles from "@/components/resources/technical-articles/articles/TechnicalArticleBody.module.css";
+import videoLayout from "./VideoGuideDetailPage.module.css";
 import type { VideoGuideDetail } from "@/data/resources/installation-guide/video-guide-detail.types";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
 import { HOME_SITE_IDENTITY, SITE_ORGANIZATION_ID } from "@/lib/seo/site-identity";
@@ -14,6 +15,7 @@ import "@/app/resources/technical-articles/technical-articles.css";
 import "@/app/resources/news/news.css";
 
 export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetail }) {
+  const useUpdatedLayout = !["sv10-solenoid-valve-overview", "youtube-syringe-installation"].includes(video.id);
   const products = getVideoGuideRelatedProducts(video.id);
   const footerProducts = getVideoGuideRelatedProducts(video.id, "footer");
   const relatedResources = getRelatedResourcesData({
@@ -38,7 +40,7 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
     { name: video.title, item: url },
   ];
 
-  return <div className={`newsArticleDetailPage ${editorial.pageSurface}`} data-video-guide-detail data-show-footer-products data-locale={video.locale} data-article-slug={video.id} lang="en">
+  return <div className={`newsArticleDetailPage ${editorial.pageSurface} ${useUpdatedLayout ? videoLayout.page : ""}`} data-video-guide-detail data-show-footer-products data-locale={video.locale} data-article-slug={video.id} lang="en">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [...HOME_SITE_IDENTITY["@graph"], videoSchema,
@@ -84,15 +86,15 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
         <p><a href={video.watchUrl} target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></p>
       </section>
       <section className={styles.contentBlock} aria-labelledby={`${video.sectionId}-overview`}>
-        <h2 id={`${video.sectionId}-overview`}>Video highlights</h2>
+        <h2 id={`${video.sectionId}-overview`}>{video.highlightsHeading ?? "Video highlights"}</h2>
         <p>{video.highlightsIntroduction}</p>
         <ul>
-          {video.highlights.map(highlight => <li key={highlight.start}>
+          {video.highlights.map(highlight => <li key={highlight.title}>
             <p>
-              <a href={`${video.watchUrl}&t=${highlight.start}s`} target="_blank" rel="noopener noreferrer"
+              {highlight.start !== undefined && highlight.time ? <><a href={`${video.watchUrl}&t=${highlight.start}s`} target="_blank" rel="noopener noreferrer"
                 aria-label={`Watch ${highlight.title.toLowerCase()} at ${highlight.time} on YouTube`}>
                 {highlight.time}
-              </a>{" — "}<strong>{highlight.title}</strong>
+              </a>{" — "}</> : null}<strong>{highlight.title}</strong>
               <br />{highlight.description}
             </p>
           </li>)}

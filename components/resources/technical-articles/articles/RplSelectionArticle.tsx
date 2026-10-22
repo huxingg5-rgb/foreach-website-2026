@@ -157,6 +157,7 @@ export default function RplSelectionArticle({
   modelLinks: suppliedModelLinks,
   className,
   leadContent,
+  afterLeadContent,
   relatedProducts,
 }: {
   copy: DiaphragmPumpEngineeringArticleCopy;
@@ -170,6 +171,7 @@ export default function RplSelectionArticle({
   modelLinks?: ReadonlyMap<string, string>;
   className?: string;
   leadContent?: ReactNode;
+  afterLeadContent?: ReactNode;
   relatedProducts?: ReactNode;
 }) {
   const ui = rplArticleUi[locale];
@@ -204,7 +206,10 @@ export default function RplSelectionArticle({
             <span className={styles.rule} data-meta-rule aria-hidden="true" />
             {locale !== "zh-CN" && <ArticleShare title={copy.metadata.title} locale={locale} />}
           </div>
-          <div className={styles.intro}>{leadContent ?? renderBlocks(copy.leadBlocks, undefined, undefined, locale)}</div>
+          <div className={styles.intro}>
+            {leadContent ?? renderBlocks(copy.leadBlocks, undefined, undefined, locale)}
+            {afterLeadContent}
+          </div>
         </header>
         <aside className={styles.sidebar} data-article-sidebar>
           <nav className={styles.toc} aria-label={ui.contents}>

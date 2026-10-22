@@ -1,0 +1,33 @@
+.overview {
+  margin-top: 28px;
+}
+
+.overview .heading {
+  margin-bottom: 14px;
+}
+
+.figure {
+  margin: 0 0 16px;
+}
+
+.player {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
+.caption {
+  margin-top: 10px;
+  color: var(--muted, #575757);
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.note {
+  font-size: 14px;
+  line-height: 1.7;
+}

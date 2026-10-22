@@ -46,6 +46,10 @@ export function getInstallationGuidePageData(
         detailHref: detail.detailHref,
         description: detail.description,
         relationKeys: detail.relationKeys,
+        ...(!["sv10-solenoid-valve-overview", "youtube-syringe-installation"].includes(guide.id) ? {
+          title: detail.title,
+          keywords: [...new Set([detail.title, ...(detail.keywords ?? []), ...guide.keywords])],
+        } : {}),
       } : guide;
     }),
   };

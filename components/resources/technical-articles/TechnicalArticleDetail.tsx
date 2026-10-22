@@ -3,6 +3,7 @@ import { getFittingAssemblyLinks, withFittingArticleLinks } from "@/data/resourc
 import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
 import { getConnectorSelectionArticle } from "@/data/resources/technical-articles/connector-selection-articles.article";
 import ArticleRelatedProducts from "./ArticleRelatedProducts";
+import FemaleThreadOverviewVideo from "./articles/FemaleThreadOverviewVideo";
 import { representativeModelsTitle } from "@/data/resources/technical-articles/fitting-selection-locales/panel-fitting-cards";
 import { getArticleRelatedProducts } from "@/services/resources/technical-articles/getArticleRelatedProducts";
 import { getArticleFooterResources } from "@/services/resources/technical-articles/getArticleFooterResources";
@@ -1138,6 +1139,7 @@ export default function TechnicalArticleDetail({
         <RplSelectionArticle relatedProducts={relatedProductsSidebar} copy={copy} className={hardTubeFittingsStyles.article}
           date={article.date} locale={locale} listHref={listHref} backText={getBackText(locale)}
           articleId={article.slug} sectionNavigation={navigation} modelLinks={new Map()}
+          afterLeadContent={article.slug === "female-thread-adapters-selection-guide" && locale !== "zh-CN" ? <FemaleThreadOverviewVideo locale={locale} /> : undefined}
           faq={{ id: "faq", label: copy.faqTitle, items: copy.faqItems }} />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
           <div className={isFlangedTubingAssembliesArticle ? undefined : hardTubeFittingsStyles.relatedProducts}

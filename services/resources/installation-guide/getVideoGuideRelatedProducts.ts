@@ -7,21 +7,30 @@ import type { ProductSelectionProduct } from "@/data/products/selection/product-
 import { syringePumpSelectionProducts } from "@/data/products/selection/syringe-pump-selection.generated";
 import { getSyringeModelPath } from "@/data/products/selection/syringe-pump-routes";
 import type { ArticleRelatedProduct } from "@/services/resources/technical-articles/getArticleRelatedProducts";
+import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
+import { getVideoGuideProduct } from "@/data/resources/installation-guide/video-guide-products";
+import { getFemaleThreadAdapterImageAlt } from "@/data/products/detail/female-thread-adapter-gallery";
 
 function selectionCard(products: ProductSelectionProduct[], id: string, href: string | null): ArticleRelatedProduct {
   const product = products.find(item => item.productId === id);
   const title = product?.cardTitle?.en;
   if (!product?.imageCard || !title || !href) throw new Error(`Missing video related product: ${id}`);
-  return { id, title, href, imageSrc: product.imageCard, imageAlt: title };
+  return { id, title, href, imageSrc: id === "control-pdm5-pressure-sensor" ? "/images/products/control/foreach-pdm5-pressure-sensor-front.webp" : product.imageCard, imageAlt: title };
 }
 
 function fittingCard(model: string): ArticleRelatedProduct {
   const product = FITTING_PUBLISHED_PRODUCTS.find(item => item.foreachModel === model);
   if (!product) throw new Error(`Missing video related fitting: ${model}`);
+  const photo = model.startsWith("UT-U28-")
+    ? `/images/products/fittings/female-thread-adapters/photos/ut-u28-tee-female-thread-adapter-${model.endsWith("-PS-B") ? "black-front-detail" : "natural-single"}.webp`
+    : model === "PMU-M12-U28-20-PP-N"
+      ? "/images/products/fittings/female-thread-adapters/photos/pp-bulkhead-female-thread-union-with-separate-metal-nut.webp"
+      : undefined;
   return {
     id: product.productCode, title: product.foreachModel,
     href: `/en${product.detailHref.replace(/\/$/, "")}/`,
-    imageSrc: product.imageCard, imageAlt: product.foreachModel,
+    imageSrc: photo ?? product.imageCard,
+    imageAlt: (photo && getFemaleThreadAdapterImageAlt(photo, "en")) || product.foreachModel,
   };
 }
 
@@ -31,10 +40,14 @@ const FOOTER_PRODUCT_LIMIT = 10;
 export function getVideoGuideRelatedProducts(videoId: string, placement: "sidebar" | "footer" = "sidebar"): ArticleRelatedProduct[] {
   const products = selectVideoGuideRelatedProducts(videoId, placement);
   return products.filter((product, index) => products.findIndex(item => item.href === product.href) === index)
-    .slice(0, placement === "footer" ? FOOTER_PRODUCT_LIMIT : 2);
+    .slice(0, placement === "footer" ? FOOTER_PRODUCT_LIMIT : 2)
+    .map(product => ["sv10-solenoid-valve-overview", "youtube-syringe-installation"].includes(videoId)
+      ? product : { ...product, imageFill: true });
 }
 
 function selectVideoGuideRelatedProducts(videoId: string, placement: "sidebar" | "footer"): ArticleRelatedProduct[] {
+  const detail = getVideoGuideDetail("en", videoId);
+  if (detail?.productKeys) return detail.productKeys.map(getVideoGuideProduct);
   if (videoId === "youtube-female-thread-conversion" && placement === "footer") {
     return [
       "U-U28-20-PP-N", "U-M6-20-AC-B", "UT-U28-20-PS-B", "UT-U28-20-PP-N",
@@ -45,7 +58,7 @@ function selectVideoGuideRelatedProducts(videoId: string, placement: "sidebar" |
       const product = femaleThreadAdapterSelectionProducts.find(item => item.productId === card.id);
       const material = product?.filters?.filter04;
       if (product?.status !== "active" || !material) throw new Error(`Missing active fitting material: ${model}`);
-      return { ...card, title: `${card.title} · ${material}`, imageAlt: `${model}, ${material} female thread adapter` };
+      return { ...card, title: `${card.title} · ${material}` };
     });
   }
   if (videoId === "youtube-q60-quick-fitting" && placement === "footer") {
@@ -68,7 +81,7 @@ function selectVideoGuideRelatedProducts(videoId: string, placement: "sidebar" |
     case "youtube-q60-quick-fitting":
       return ["Q6006-SNX-SPPE", "Q6006-SMX-LPPE"].map(fittingCard);
     case "youtube-female-thread-conversion":
-      return ["U-U28-20-PP-N", "UT-U28-20-PP-N"].map(fittingCard);
+      return ["UT-U28-20-PP-N", "PMU-M12-U28-20-PP-N"].map(fittingCard);
     case "youtube-bubble-detection-module":
       // Complementary fluid-monitoring products, not two versions of the ABD.
       return ["abd-air-bubble-detector", "pdm5-pressure-sensor"]

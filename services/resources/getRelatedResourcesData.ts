@@ -181,7 +181,10 @@ function selectFeaturedProducts(products: ProductSelectionProduct[]) {
 export function getRelatedResourcesData({
   sourceType, sourceId, sourceSlug, relationKeys = [], featuredProductIds, includeRelatedArticles = false, locale,
 }: RelatedResourcesProps): RelatedResourcesData {
-  const query = { id: sourceId, slug: sourceSlug, relationKeys };
+  // A model-specific test must not be attached to every motor variant in its series.
+  const query = { id: sourceId, slug: sourceSlug, relationKeys: sourceType === "product"
+    ? [...relationKeys, ...[sourceId, sourceSlug].filter(Boolean).map(identity => `product:${identity}`)]
+    : relationKeys };
   const videos = sourceType === "video" ? [] : getRelatedVideos(getInstallationGuidePageData(locale).guides, query);
   const articles = sourceType === "article" && !includeRelatedArticles ? [] :
     getRelatedArticles(getTechnicalArticlesPageData(locale).articles, query).map(
