@@ -4,7 +4,6 @@ import { getTubingAssemblyLocalePrefix, type TubingAssemblyLocale } from "@/data
 import { getCanonicalUrl } from "@/lib/seo/site-url";
 
 import TubingAssembliesSelection from "./TubingAssembliesSelection";
-import TubingAssemblyRelatedArticles from "./TubingAssemblyRelatedArticles";
 
 export default function TubingAssembliesPage({ item, locale }: { item?: TubingAssemblyType; locale: TubingAssemblyLocale }) {
   const content = getTubingAssemblySelectionContent(locale);
@@ -26,7 +25,6 @@ export default function TubingAssembliesPage({ item, locale }: { item?: TubingAs
   };
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
-    <TubingAssembliesSelection key={`${locale}-${item?.id ?? "all"}`} initialType={item?.id} content={content}
-      afterContent={<TubingAssemblyRelatedArticles type={item?.id} locale={locale} />} />
+    <TubingAssembliesSelection key={`${locale}-${item?.id ?? "all"}`} initialType={item?.id} content={content} />
   </>;
 }
