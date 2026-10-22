@@ -43,6 +43,7 @@ async function main() {
       for (const value of ["-75 kPa – 0.25 MPa","1.4 mm","20 μL","0.03","EPDM / FKM / FFKM","DC 12 / 24 V (±10%)","2.5 W"]) assert(copy.specs.some(row => row.value === value));
       if (c) {
         assert.equal(copy.valveIntroductionParagraphs.length, 2, "configuration introductions keep two coherent paragraphs");
+        assert(copy.valveIntroductionParagraphs[0].includes(c.model), "Introduction identifies the specific product model");
         assert.equal(copy.h1Title, getSolenoidCardCopy(slug, locale)!.heading, "Preserve the original complete heading sentence");
         assert.equal(getValveDetailHeading(slug, locale), copy.h1Title);
         if (c.state === "nc") {
@@ -78,6 +79,7 @@ async function main() {
         assert.equal(renderedHeading, expectedHeading, `visible heading ${copy.detailHref}`);
         assert(decode(html).includes(copy.seoTitle), `metadata ${copy.detailHref}`);
         assert(decode(html).includes(copy.seoDescription), `description ${copy.detailHref}`);
+        if (c) assert(decode(html).includes(copy.valveIntroductionParagraphs[0]), `visible model introduction ${copy.detailHref}`);
         assert(html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1].endsWith(copy.detailHref));
         const alternates = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/gi)];
         for (const lang of solenoidLocales) assert(alternates.some(m => m[1] === (lang === "zh" ? "zh-CN" : lang) && m[2].endsWith(`${lang === "zh" ? "" : `/${lang}`}/products/valves/solenoid-valves/${isDetail ? `${slug}/` : ""}`)));

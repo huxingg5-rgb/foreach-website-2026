@@ -52,7 +52,7 @@ export function getSolenoidContent(slug: string, locale: string) {
   // Keep each paragraph focused: operation first, then installation and wetted materials.
   const joinSentences = (sentences: string[]) => sentences.join(locale === "zh" ? "" : " ");
   const paragraphs = c && m ? [
-    t.detailIntro[c.state || c.key],
+    t.detailIntro[c.state || c.key].replace(/\bSV10\b/, shortModel),
     joinSentences([m.installation, t.detailMaterials[c.connection]]),
   ] : m && connection ? [
     joinSentences([m.definition, t.functionIntro]),
