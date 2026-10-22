@@ -1,3 +1,5 @@
+import { getSolenoidContent } from "@/data/products/detail/solenoid-content";
+import { getSolenoidConfigurationImage } from "@/data/products/detail/solenoid-images";
 import type { RelatedResourcesData } from "@/components/common/related-resources/related-resources.types";
 import type { TechnicalArticleItem, TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { FITTING_PUBLISHED_PRODUCTS } from "@/data/products/selection/fitting-publication.generated";
@@ -42,6 +44,17 @@ export function getArticleFooterResources(article: TechnicalArticleItem, locale:
   if (connector) {
     data.products = connector.products;
   } else switch (article.slug) {
+    case "what-is-a-solenoid-valve": {
+      const productLocale = locale === "zh-CN" ? "zh" : locale;
+      const configurations = ["2-way-nc-barbed", "3-way-barbed", "2-way-nc-base", "3-way-base", "2-way-nc-threaded", "3-way-threaded", "2-way-no-barbed", "2-way-no-base", "2-way-no-threaded"];
+      data.products = configurations.map(slug => {
+        const product = getSolenoidContent(slug, productLocale)!;
+        const image = getSolenoidConfigurationImage(slug, productLocale)!;
+        return { id: slug, title: `${product.modelName} · ${product.cardName}`,
+          href: product.detailHref, imageSrc: image.src, imageAlt: image.alt, imageAspectRatio: 1 };
+      });
+      break;
+    }
     case "what-is-a-luer-fitting": data = getLuerFittingRelatedProducts(locale); break;
     case "what-is-a-ferrule-fitting": data = getFerruleFittingRelatedProducts(locale); break;
     case "hard-tube-fittings-selection-guide": data = getHardTubeGuideProducts(locale); break;

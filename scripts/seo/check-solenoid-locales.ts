@@ -18,8 +18,8 @@ async function main() {
       if (configuration.state === "nc") {
         assert(!copy.heading.toLowerCase().includes(closedName[locale]), "NC is omitted from public card names but retained in specifications");
       }
-      if (configuration.state && configuration.connection !== "threaded") {
-        const prefix = configuration.connection === "base" ? "SV10-P-2" : "SV10-B16-2";
+      if (configuration.state) {
+        const prefix = ({base: "SV10-P-2", barbed: "SV10-B16-2", threaded: "SV10-M6/U28-2"})[configuration.connection];
         assert.equal(configuration.model, prefix + configuration.state.toUpperCase());
         assert.equal(card.model, configuration.model);
       }

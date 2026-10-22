@@ -1,3 +1,4 @@
+import RelatedProducts from "@/components/common/related-resources/RelatedProducts";
 import Link from "next/link";
 import { getFittingAssemblyLinks, withFittingArticleLinks } from "@/data/resources/technical-articles/fitting-article-relations";
 import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
@@ -1171,7 +1172,9 @@ export default function TechnicalArticleDetail({
           articleId={article.slug} sectionNavigation={valveArticle.navigation} modelLinks={new Map()}
           faq={{ id: "faq", label: valveArticle.copy.faqTitle, items: valveArticle.copy.faqItems }} />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <RelatedResourcesLoader {...footerResources} />
+          {article.slug === "what-is-a-solenoid-valve"
+            ? <RelatedProducts locale={locale} products={footerResources.products} />
+            : <RelatedResourcesLoader {...footerResources} />}
           <NewsArticlePager locale={locale} previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
         </div>
       </div>

@@ -56,6 +56,7 @@ export function getArticleRelatedProducts(article: TechnicalArticleItem, locale:
   let products: ArticleRelatedProduct[];
   let explicit = true;
   switch (article.slug) {
+    case "what-is-a-solenoid-valve": products = getArticleFooterResources(article, locale).products.slice(0, 2); break;
     case "what-is-a-luer-fitting": {
       const imageAlts = {
         "zh-CN": ["彩色鲁尔接头实拍，中央展示蓝色锁圈装配示例", "LPR-32-PP-Y 黄色旋转锁圈公鲁尔接头及剖面"],

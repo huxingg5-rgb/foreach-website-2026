@@ -23,8 +23,8 @@ export const solenoidConfigurations: SolenoidConfiguration[] = [
   ...threeWay,
   ...(["nc", "no"] as const).flatMap(state => solenoidLegacyConfigurations.map(c => ({
     ...c, slug: `2-way-${state}-${c.connection}`, state,
-    // The supplied model chart uses 2NC/2NO for base and barbed variants.
-    model: c.connection === "threaded" ? c.model : `${c.model}${state.toUpperCase()}`,
+    // The supplied model chart uses 2NC/2NO for all two-way connection variants.
+    model: `${c.model}${state.toUpperCase()}`,
     assets: c.assets.filter(asset => asset.endsWith(`2${state}`)),
   }))),
 ];
