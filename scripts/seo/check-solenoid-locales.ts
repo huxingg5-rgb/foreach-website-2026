@@ -26,7 +26,8 @@ async function main() {
         assert.equal(configuration.model, prefix + configuration.state.toUpperCase());
         assert.equal(card.model, configuration.model);
       }
-      assert(fs.existsSync("public" + card.imageCard));
+      assert(card.imageCard, "Every solenoid card has an image");
+      assert(fs.existsSync("public" + card.imageCard.split("?")[0]));
       if (configuration.state) {
         assert.equal(card.specs?.[2].value, getSolenoidStateCopy(locale, configuration.state).label);
         assert(configuration.assets.every(asset => asset.endsWith("2" + configuration.state)));

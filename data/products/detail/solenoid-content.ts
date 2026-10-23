@@ -18,7 +18,7 @@ type SolenoidMessages = typeof en & {
 const messages: Record<Locale, SolenoidMessages> = { zh, en, es, fr, ko, ru };
 export const isSolenoidLocale = (value: string): value is Locale => solenoidLocales.includes(value as Locale);
 export const solenoidBasePath = "/products/valves/solenoid-valves/";
-export const solenoidImage = "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp";
+export const solenoidImage = "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp?v=20261023-all";
 import {solenoidConfigurations, solenoidConfigurationName, getSolenoidConfiguration} from "./solenoid-configurations";
 import {getSolenoidCardCopy, getSolenoidStateCopy} from "./solenoid-card-copy";
 export {solenoidConfigurations} from "./solenoid-configurations";
