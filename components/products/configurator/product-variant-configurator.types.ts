@@ -65,6 +65,9 @@ export type ProductConfiguratorUiText = {
 
 export type ProductConfiguratorConfig = {
   id: string;
+  localizedLocale?: ProductConfiguratorLocale;
+  showProductCode?: boolean;
+  allowListRemoval?: boolean;
   title: string;
   description?: string;
   productName: string;

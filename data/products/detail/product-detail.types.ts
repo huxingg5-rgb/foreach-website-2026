@@ -100,6 +100,7 @@ export type ProductDetailZhRecord = {
   advantages: string[];
   commonApplications: string[];
   applicationAreas?: ProductApplicationAreaLink[];
+  applicationAreasTitle?: string;
 
   /**
    * 详情页附属图片。

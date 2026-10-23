@@ -155,11 +155,55 @@ const twoWayNoBasePortsAlts: Record<SelectionLocale, string> = {
   ru: "Два порта основания и кольцевые уплотнения двухходового нормально открытого электромагнитного клапана FOREACH SV10-P-2NO для монтажа на коллектор крупным планом",
 };
 
+const threeWayBarbedPortsCloseupAlts: Record<SelectionLocale, string> = {
+  zh: "FOREACH SV10-B16-3 三通倒刺式微型隔膜电磁阀的三个倒刺接口特写",
+  en: "Close-up of the three barbed ports on a FOREACH SV10-B16-3 3-way miniature diaphragm solenoid valve",
+  es: "Detalle de las tres conexiones de espiga de una electroválvula de diafragma miniatura FOREACH SV10-B16-3 de 3 vías",
+  fr: "Gros plan des trois raccords cannelés d’une électrovanne à membrane miniature FOREACH SV10-B16-3 à 3 voies",
+  ko: "FOREACH SV10-B16-3 3방향 소형 다이어프램 솔레노이드 밸브의 바브 포트 3개 확대 사진",
+  ru: "Три штуцера под шланг миниатюрного трёхходового мембранного электромагнитного клапана FOREACH SV10-B16-3 крупным планом",
+};
+
+const threeWayBasePortsCloseupAlts: Record<SelectionLocale, string> = {
+  zh: "FOREACH SV10-P-3 三通基板式微型隔膜电磁阀底部三个端口及 O 形密封圈特写",
+  en: "Close-up of three base ports and O-ring seals on a FOREACH SV10-P-3 3-way miniature diaphragm solenoid valve",
+  es: "Detalle de los tres puertos de base y juntas tóricas de una electroválvula de diafragma miniatura FOREACH SV10-P-3 de 3 vías",
+  fr: "Gros plan des trois orifices de base et des joints toriques d’une électrovanne à membrane miniature FOREACH SV10-P-3 à 3 voies",
+  ko: "FOREACH SV10-P-3 3방향 소형 다이어프램 솔레노이드 밸브의 하부 포트 3개와 O링 씰 확대 사진",
+  ru: "Три порта основания и кольцевые уплотнения миниатюрного трёхходового мембранного электромагнитного клапана FOREACH SV10-P-3 крупным планом",
+};
+
+const baseManifoldAssemblyAlts: Record<SelectionLocale, string> = {
+  zh: "FOREACH SV10 基板式电磁阀集成安装在透明液路板上的实拍示例",
+  en: "Example of FOREACH SV10 manifold-mount solenoid valves installed on a transparent fluidic manifold",
+  es: "Ejemplo de electroválvulas FOREACH SV10 de montaje en base instaladas en un colector de fluidos transparente",
+  fr: "Exemple d’électrovannes FOREACH SV10 sur embase montées sur un collecteur fluidique transparent",
+  ko: "투명 유체 매니폴드에 통합 장착된 FOREACH SV10 베이스 장착형 솔레노이드 밸브의 실제 구성 예시",
+  ru: "Пример электромагнитных клапанов FOREACH SV10 для монтажа на основание, установленных на прозрачном жидкостном коллекторе",
+};
+
+const threeWayThreadedValveSeatAlts: Record<SelectionLocale, string> = {
+  zh: "FOREACH SV10-M6/U28-3 三通螺纹式微型隔膜电磁阀实拍，展示阀体与螺纹阀座",
+  en: "FOREACH SV10-M6/U28-3 3-way miniature diaphragm solenoid valve showing the valve body and threaded valve seat",
+  es: "Electroválvula de diafragma miniatura FOREACH SV10-M6/U28-3 de 3 vías, con el cuerpo y el asiento roscado de la válvula",
+  fr: "Électrovanne à membrane miniature FOREACH SV10-M6/U28-3 à 3 voies, montrant le corps et le siège fileté",
+  ko: "밸브 본체와 나사식 밸브 시트를 보여 주는 FOREACH SV10-M6/U28-3 3방향 소형 다이어프램 솔레노이드 밸브 실물 사진",
+  ru: "Миниатюрный трёхходовой мембранный электромагнитный клапан FOREACH SV10-M6/U28-3 с корпусом и резьбовым седлом",
+};
+
 export function getSolenoidConfigurationGallery(slug: string, locale: SelectionLocale) {
   const c = getSolenoidConfiguration(slug);
   if (c) {
     const additionalImages: string[] = [];
     const additionalImageAlts: string[] = [];
+    if (c.slug === "3-way-base") {
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-p-3-base-ports-closeup.webp");
+      additionalImageAlts.push(threeWayBasePortsCloseupAlts[locale]);
+    }
+    if (c.slug === "3-way-barbed") {
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-b16-3-barbed-ports-closeup.webp");
+      additionalImageAlts.push(threeWayBarbedPortsCloseupAlts[locale]);
+    }
     if (c.slug === "2-way-no-base") {
       additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-p-2-normally-open-base-ports.webp");
       additionalImageAlts.push(twoWayNoBasePortsAlts[locale]);
@@ -171,6 +215,14 @@ export function getSolenoidConfigurationGallery(slug: string, locale: SelectionL
     if (c.key === "three") {
       additionalImages.push(threeWayConnectionOptionsImage);
       additionalImageAlts.push(threeWayConnectionOptionsAlts[locale]);
+    }
+    if (c.connection === "base") {
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-base-manifold-assembly-gallery.webp");
+      additionalImageAlts.push(baseManifoldAssemblyAlts[locale]);
+    }
+    if (c.slug === "3-way-threaded") {
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-3-way-threaded-valve-seat-gallery.webp");
+      additionalImageAlts.push(threeWayThreadedValveSeatAlts[locale]);
     }
     return {additionalImages, additionalImageAlts};
   }

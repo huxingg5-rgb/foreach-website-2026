@@ -4602,3 +4602,21 @@
   text-overflow: clip !important;
   overflow-wrap: anywhere;
 }
+
+/* SV10 selection cards use square media with centered, proportional image fill. */
+.products-selection-page .solenoid-configuration-card .product-image {
+  aspect-ratio: 1 / 1;
+  height: auto !important;
+  min-height: 0;
+  max-height: none;
+  flex-shrink: 0;
+}
+
+.products-selection-page .solenoid-configuration-card .product-image img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}

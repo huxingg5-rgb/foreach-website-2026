@@ -19,6 +19,14 @@ const cardSources = {
 };
 const selectedSlugs = process.argv.slice(2);
 const galleryAssets = {
+ '3-way-base-ports-closeup': {
+  source: path.join(__dirname, 'image-sources/solenoid-valves/3-way-base-ports-closeup.jpg'),
+  output: 'foreach-sv10-p-3-base-ports-closeup.webp',
+ },
+ '3-way-barbed-ports-closeup': {
+  source: path.join(__dirname, 'image-sources/solenoid-valves/3-way-barbed-ports-closeup.jpg'),
+  output: 'foreach-sv10-b16-3-barbed-ports-closeup.webp',
+ },
  '2-way-no-base-ports': {
   source: path.join(__dirname, 'image-sources/solenoid-valves/2-way-no-base-ports.png'),
   output: 'foreach-sv10-p-2-normally-open-base-ports.webp',

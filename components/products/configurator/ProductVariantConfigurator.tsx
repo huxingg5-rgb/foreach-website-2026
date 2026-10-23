@@ -361,6 +361,7 @@ export default function ProductVariantConfigurator({
                 </b>
               </div>
 
+              {config.showProductCode !== false ? (
               <div
                 className={styles.summaryRow}
               >
@@ -370,6 +371,7 @@ export default function ProductVariantConfigurator({
                     "—"}
                 </b>
               </div>
+              ) : null}
 
               {config.dimensions.map(
                 (dimension) => (
@@ -678,8 +680,7 @@ export default function ProductVariantConfigurator({
 
                             <span>
                               {variant.model}
-                              {" / "}
-                              {variant.productCode}
+                              {config.showProductCode !== false ? ` / ${variant.productCode}` : ""}
                             </span>
                           </button>
                         );
@@ -740,12 +741,12 @@ export default function ProductVariantConfigurator({
                   .filter(Boolean)
                   .join(" ")}
                 type="button"
-                disabled={!matchingVariant}
+                disabled={!matchingVariant || (matchingVariantIsSelected && config.allowListRemoval === false)}
                 aria-pressed={
                   matchingVariantIsSelected
                 }
                 onClick={() => {
-                  if (!matchingVariant) {
+                  if (!matchingVariant || (matchingVariantIsSelected && config.allowListRemoval === false)) {
                     return;
                   }
 

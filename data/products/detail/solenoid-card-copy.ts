@@ -17,14 +17,14 @@ const copy = {
     ],
     "descriptions": [
       "采用 PEEK 底板，可直接安装于液路板，用于 OEM 仪器中试剂与清洗液的流路切换。",
-      "通过倒刺（宝塔）接口直连软管，可选 DC 12V 或 24V，用于试剂供液与管路清洗之间的路径切换。",
+      "通过倒刺（宝塔）接口直连软管，用于试剂供液与管路清洗之间的路径切换。",
       "提供 M6 或 1/4-28 UNF 接口，阀座可选 PEEK、PTFE、PVDF 等材料，用于公共管路在两条液路之间切换。",
       "采用 PEEK 底板集成于液路板，断电时关闭，用于多阀液路模块中的试剂供液控制。",
-      "可直接连接软管，提供 DC 12V 或 24V 供电选项，用于需要断电关闭的试剂与清洗液管路。",
+      "可直接连接软管，用于需要断电关闭的试剂与清洗液管路。",
       "通过 M6 或 1/4-28 UNF 接口连接管路，膜片可选 EPDM、FKM 或 FFKM，用于不同试剂管路的通断控制。",
       "可直接安装于液路板，断电时保持连通、通电时关闭，适用于需要默认连通的仪器液路。",
       "采用 PEEK 底板和倒刺软管接口，用于需要保持连通、按控制信号暂时关闭的供液管路。",
-      "提供 M6 或 1/4-28 UNF 接口及 DC 12V、24V 供电选项，用于断电保持连通的试剂或清洗管路。"
+      "提供 M6 或 1/4-28 UNF 接口，用于断电保持连通的试剂或清洗管路。"
     ],
     "separator": "，",
     "nc": {
@@ -55,14 +55,14 @@ const copy = {
     ],
     "descriptions": [
       "with a PEEK base for direct manifold integration and switching between reagent and wash-fluid paths in OEM instruments.",
-      "with barbed ports for direct tubing connection and 12 V or 24 V DC options, for switching between reagent supply and line washing.",
+      "with barbed ports for direct tubing connection, enabling switching between reagent supply and line washing.",
       "with M6 or 1/4-28 UNF ports and valve-seat options including PEEK, PTFE and PVDF, for switching a common line between two fluid paths.",
       "with a PEEK base for manifold integration, closing when de-energized to control reagent supply in multi-valve fluidic modules.",
-      "for direct tubing connection, with 12 V or 24 V DC options, for reagent and wash-fluid lines that must close when power is off.",
+      "for direct tubing connection to reagent and wash-fluid lines that must close when power is off.",
       "with M6 or 1/4-28 UNF ports and EPDM, FKM or FFKM diaphragm options, for on/off control of different reagent lines.",
       "for direct manifold integration, remaining open when de-energized and closing when energized, for instrument circuits requiring a default open path.",
       "with a PEEK base and barbed tubing ports, for supply lines that remain open and close temporarily on a control signal.",
-      "with M6 or 1/4-28 UNF ports and 12 V or 24 V DC options, for reagent or wash-fluid lines that remain open when power is off."
+      "with M6 or 1/4-28 UNF ports, for reagent or wash-fluid lines that remain open when power is off."
     ],
     "separator": " ",
     "nc": {
@@ -93,14 +93,14 @@ const copy = {
     ],
     "descriptions": [
       "con base de PEEK para integración directa en el colector y conmutación entre reactivos y líquidos de lavado en instrumentos OEM.",
-      "para conectar directamente tubos flexibles, con opciones de 12 V o 24 V CC, y conmutar entre el suministro de reactivos y el lavado de líneas.",
+      "para conectar directamente tubos flexibles y conmutar entre el suministro de reactivos y el lavado de líneas.",
       "M6 o 1/4-28 UNF, con asientos disponibles en PEEK, PTFE, PVDF y otros materiales, para conmutar una línea común entre dos circuitos.",
       "con base de PEEK para integración en el colector; se cierra sin alimentación para controlar el suministro de reactivos en módulos de varias válvulas.",
-      "para conexión directa a tubos flexibles, con opciones de 12 V o 24 V CC, en líneas de reactivos y lavado que deben cerrarse sin alimentación.",
+      "para conexión directa a tubos flexibles en líneas de reactivos y lavado que deben cerrarse sin alimentación.",
       "M6 o 1/4-28 UNF y diafragmas disponibles en EPDM, FKM o FFKM, para abrir y cerrar líneas de distintos reactivos.",
       "para integración directa en el colector; permanece abierta sin alimentación y se cierra al energizarse, en circuitos que requieren una conexión abierta por defecto.",
       "con base de PEEK para líneas de suministro que permanecen abiertas y se cierran temporalmente mediante una señal de control.",
-      "M6 o 1/4-28 UNF y opciones de 12 V o 24 V CC, para líneas de reactivos o lavado que permanecen abiertas sin alimentación."
+      "M6 o 1/4-28 UNF, para líneas de reactivos o lavado que permanecen abiertas sin alimentación."
     ],
     "separator": " ",
     "nc": {
@@ -131,14 +131,14 @@ const copy = {
     ],
     "descriptions": [
       "avec embase en PEEK pour intégration directe au collecteur et commutation entre réactifs et liquides de rinçage dans les instruments OEM.",
-      "pour raccordement direct de tuyaux souples, avec options 12 V ou 24 V CC, et commutation entre alimentation en réactifs et rinçage des conduites.",
+      "pour raccordement direct de tuyaux souples et commutation entre alimentation en réactifs et rinçage des conduites.",
       "M6 ou 1/4-28 UNF, avec sièges disponibles notamment en PEEK, PTFE ou PVDF, pour commuter une conduite commune entre deux circuits.",
       "avec embase en PEEK pour intégration au collecteur ; se ferme hors tension pour commander l’alimentation en réactifs des modules à plusieurs vannes.",
-      "pour raccordement direct de tuyaux souples, avec options 12 V ou 24 V CC, dans les circuits de réactifs et de rinçage devant se fermer hors tension.",
+      "pour raccordement direct de tuyaux souples dans les circuits de réactifs et de rinçage devant se fermer hors tension.",
       "M6 ou 1/4-28 UNF et membranes au choix en EPDM, FKM ou FFKM, pour commander le passage de différents réactifs.",
       "pour intégration directe au collecteur ; reste ouverte hors tension et se ferme sous tension, dans les circuits nécessitant une connexion ouverte par défaut.",
       "avec embase en PEEK pour les conduites d’alimentation restant ouvertes et se fermant temporairement sur un signal de commande.",
-      "M6 ou 1/4-28 UNF et options 12 V ou 24 V CC, pour les circuits de réactifs ou de rinçage restant ouverts hors tension."
+      "M6 ou 1/4-28 UNF, pour les circuits de réactifs ou de rinçage restant ouverts hors tension."
     ],
     "separator": " ",
     "nc": {
@@ -169,14 +169,14 @@ const copy = {
     ],
     "descriptions": [
       "PEEK 베이스로 매니폴드에 직접 장착하여 OEM 기기의 시약 및 세척액 유로를 전환합니다.",
-      "바브 포트에 연질 튜브를 직접 연결하며 DC 12 V 또는 24 V를 선택할 수 있어 시약 공급과 배관 세척 사이의 유로 전환에 사용합니다.",
+      "바브 포트에 연질 튜브를 직접 연결하여 시약 공급과 배관 세척 사이의 유로 전환에 사용합니다.",
       "M6 또는 1/4-28 UNF 포트와 PEEK, PTFE, PVDF 등의 밸브 시트 재질 옵션을 제공하며 공통 배관을 두 유로 사이에서 전환합니다.",
       "PEEK 베이스로 매니폴드에 통합되며 전원 차단 시 닫혀 다중 밸브 유체 모듈의 시약 공급을 제어합니다.",
-      "연질 튜브를 직접 연결하고 DC 12 V 또는 24 V를 선택할 수 있으며 전원 차단 시 닫혀야 하는 시약 및 세척액 배관에 사용합니다.",
+      "연질 튜브를 직접 연결하며 전원 차단 시 닫혀야 하는 시약 및 세척액 배관에 사용합니다.",
       "M6 또는 1/4-28 UNF 포트와 EPDM, FKM 또는 FFKM 다이어프램 옵션을 제공하여 다양한 시약 배관의 개폐를 제어합니다.",
       "매니폴드에 직접 장착되며 전원 차단 시 열리고 통전 시 닫혀 기본적으로 연결 상태를 유지해야 하는 기기 유로에 적합합니다.",
       "PEEK 베이스와 바브 튜브 포트를 갖추어 평상시 열린 상태를 유지하다가 제어 신호에 따라 일시적으로 닫혀야 하는 공급 배관에 사용합니다.",
-      "M6 또는 1/4-28 UNF 포트와 DC 12 V 또는 24 V 옵션을 제공하며 전원 차단 시에도 열려 있어야 하는 시약 또는 세척 배관에 사용합니다."
+      "M6 또는 1/4-28 UNF 포트를 제공하며 전원 차단 시에도 열려 있어야 하는 시약 또는 세척 배관에 사용합니다."
     ],
     "separator": "는 ",
     "nc": {
@@ -207,14 +207,14 @@ const copy = {
     ],
     "descriptions": [
       "с основанием из PEEK для прямой установки на коллектор и переключения линий реагентов и промывки в OEM-приборах.",
-      "для прямого подключения гибких трубок, с питанием 12 или 24 В постоянного тока, для переключения между подачей реагентов и промывкой линий.",
+      "для прямого подключения гибких трубок и переключения между подачей реагентов и промывкой линий.",
       "M6 или 1/4-28 UNF, с вариантами седла из PEEK, PTFE, PVDF и других материалов, для переключения общей линии между двумя жидкостными трактами.",
       "с основанием из PEEK для установки на коллектор; закрывается без питания и управляет подачей реагентов в многоклапанных жидкостных модулях.",
-      "для прямого подключения гибких трубок, с питанием 12 или 24 В постоянного тока, для линий реагентов и промывки, закрывающихся без питания.",
+      "для прямого подключения гибких трубок в линиях реагентов и промывки, закрывающихся без питания.",
       "M6 или 1/4-28 UNF и вариантами мембраны из EPDM, FKM или FFKM, для открытия и перекрытия линий различных реагентов.",
       "для прямой установки на коллектор; открыт без питания и закрывается при подаче напряжения, для линий приборов с открытым состоянием по умолчанию.",
       "с основанием из PEEK для линий подачи, которые остаются открытыми и временно закрываются по управляющему сигналу.",
-      "M6 или 1/4-28 UNF и питанием 12 или 24 В постоянного тока, для линий реагентов или промывки, остающихся открытыми без питания."
+      "M6 или 1/4-28 UNF, для линий реагентов или промывки, остающихся открытыми без питания."
     ],
     "separator": " ",
     "nc": {
@@ -233,6 +233,80 @@ const copy = {
   }
 } as const;
 
+// Shared selection-card H2 and detail-page H1 copy. Keep short names
+// separate so this copy update does not rename URLs or metadata titles.
+const chineseConfigurationHeadings: Record<string, string> = {
+  "3-way-base": "二位三通微型隔膜电磁阀 SV10-P-3，底座安装式，可多阀集成于液路板，响应≤15 ms。",
+  "3-way-barbed": "三通微型电磁阀管路型 SV10-B16-3，倒刺接口，适用于医疗和实验室仪器。",
+  "3-way-threaded": "三通微型螺纹电磁阀 SV10-M6/U28-3，提供 M6 或 1/4-28 UNF 接口，快速响应。",
+  "2-way-nc-base": "二位二通常闭微型隔膜电磁阀 SV10-P-2NC，底座安装式，用于采样与清洗液控制。",
+  "2-way-nc-barbed": "二通常闭微型隔膜电磁阀 SV10-B16-2NC，倒刺接口，结构紧凑。",
+  "2-way-nc-threaded": "螺纹二通微型电磁阀 SV10-M6/U28-2NC，膜片可选 FKM、FFKM，可提供 OEM 解决方案。",
+  "2-way-no-base": "二通常开微型隔膜电磁阀 SV10-P-2NO，基板安装，低死容积摇臂结构。",
+  "2-way-no-barbed": "二通常开微型隔膜电磁阀 SV10-B16-2NO，宝塔接口，适用于医疗和实验室仪器。",
+  "2-way-no-threaded": "二通常开微型电磁阀 SV10-M6/U28-2NO，螺纹接口，适用于采样和清洗。",
+};
+
+// Use natural industry terminology in each market; model identities and claims
+// match the approved Chinese copy. Micro and miniature are distributed by model.
+const localizedConfigurationHeadings: Record<Exclude<SelectionLocale, "zh">, Record<string, string>> = {
+  en: {
+    "3-way-base": "Miniature 3-Way Diaphragm Solenoid Valve SV10-P-3, Base Mounted for Manifold Integration, ≤15 ms Response",
+    "3-way-barbed": "3-Way Micro Diaphragm Solenoid Valve SV10-B16-3 with Barbed Ports for Medical and Laboratory Instruments",
+    "3-way-threaded": "Threaded 3-Way Miniature Diaphragm Solenoid Valve SV10-M6/U28-3, M6 or 1/4-28 UNF Ports, Fast Response",
+    "2-way-nc-base": "2-Way Normally Closed Micro Diaphragm Solenoid Valve SV10-P-2NC, Base Mounted for Sampling and Wash-Fluid Control",
+    "2-way-nc-barbed": "Compact 2-Way Normally Closed Miniature Diaphragm Solenoid Valve SV10-B16-2NC with Barbed Ports",
+    "2-way-nc-threaded": "Threaded 2-Way Micro Diaphragm Solenoid Valve SV10-M6/U28-2NC, FKM or FFKM Diaphragms for OEM Integration",
+    "2-way-no-base": "2-Way Normally Open Miniature Diaphragm Solenoid Valve SV10-P-2NO, Base-Mounted Rocker Design with Low Dead Volume",
+    "2-way-no-barbed": "Normally Open 2-Way Micro Diaphragm Solenoid Valve SV10-B16-2NO, Barbed Ports for Medical and Laboratory Instruments",
+    "2-way-no-threaded": "Threaded 2-Way Normally Open Miniature Diaphragm Solenoid Valve SV10-M6/U28-2NO for Sampling and Rinsing",
+  },
+  es: {
+    "3-way-base": "Electroválvula miniatura de diafragma de 3 vías SV10-P-3, montaje en base para integración en colector, respuesta ≤15 ms",
+    "3-way-barbed": "Microelectroválvula de diafragma de 3 vías SV10-B16-3, conexiones de espiga para equipos médicos y de laboratorio",
+    "3-way-threaded": "Electroválvula miniatura de diafragma de 3 vías SV10-M6/U28-3, conexiones roscadas M6 o 1/4-28 UNF y respuesta rápida",
+    "2-way-nc-base": "Electroválvula miniatura de diafragma de 2 vías normalmente cerrada SV10-P-2NC, montaje en base para muestreo y control del líquido de lavado",
+    "2-way-nc-barbed": "Microelectroválvula de diafragma de 2 vías normalmente cerrada SV10-B16-2NC, diseño compacto con conexiones de espiga",
+    "2-way-nc-threaded": "Electroválvula miniatura de diafragma de 2 vías SV10-M6/U28-2NC, conexiones roscadas y diafragmas FKM o FFKM para integración OEM",
+    "2-way-no-base": "Electroválvula miniatura de diafragma de 2 vías normalmente abierta SV10-P-2NO, montaje en base y mecanismo basculante de bajo volumen muerto",
+    "2-way-no-barbed": "Microelectroválvula de diafragma de 2 vías normalmente abierta SV10-B16-2NO, conexiones de espiga para equipos médicos y de laboratorio",
+    "2-way-no-threaded": "Electroválvula miniatura de diafragma de 2 vías normalmente abierta SV10-M6/U28-2NO, conexiones roscadas para muestreo y lavado",
+  },
+  fr: {
+    "3-way-base": "Électrovanne miniature à membrane 3 voies SV10-P-3, montage sur embase pour intégration au collecteur, réponse ≤15 ms",
+    "3-way-barbed": "Micro-électrovanne à membrane 3 voies SV10-B16-3, embouts cannelés pour instruments médicaux et de laboratoire",
+    "3-way-threaded": "Électrovanne miniature à membrane 3 voies SV10-M6/U28-3, ports filetés M6 ou 1/4-28 UNF et réponse rapide",
+    "2-way-nc-base": "Électrovanne miniature à membrane 2 voies normalement fermée SV10-P-2NC, montage sur embase pour échantillonnage et commande du liquide de rinçage",
+    "2-way-nc-barbed": "Micro-électrovanne à membrane 2 voies normalement fermée SV10-B16-2NC, conception compacte avec embouts cannelés",
+    "2-way-nc-threaded": "Électrovanne miniature à membrane 2 voies SV10-M6/U28-2NC, ports filetés et membranes FKM ou FFKM pour intégration OEM",
+    "2-way-no-base": "Électrovanne miniature à membrane 2 voies normalement ouverte SV10-P-2NO, montage sur embase et mécanisme à bascule à faible volume mort",
+    "2-way-no-barbed": "Micro-électrovanne à membrane 2 voies normalement ouverte SV10-B16-2NO, embouts cannelés pour instruments médicaux et de laboratoire",
+    "2-way-no-threaded": "Électrovanne miniature à membrane 2 voies normalement ouverte SV10-M6/U28-2NO, ports filetés pour échantillonnage et rinçage",
+  },
+  ko: {
+    "3-way-base": "매니폴드 통합용 베이스 장착형 3방향 소형 다이어프램 솔레노이드 밸브 SV10-P-3, 응답 시간 ≤15 ms",
+    "3-way-barbed": "의료 및 실험실 기기용 3방향 마이크로 다이어프램 솔레노이드 밸브 SV10-B16-3, 바브 포트",
+    "3-way-threaded": "3방향 소형 다이어프램 솔레노이드 밸브 SV10-M6/U28-3, M6 또는 1/4-28 UNF 나사 포트, 빠른 응답",
+    "2-way-nc-base": "샘플링 및 세척액 제어용 2방향 상시 닫힘 다이어프램 솔레노이드 밸브 SV10-P-2NC, 소형 베이스 장착형",
+    "2-way-nc-barbed": "2방향 상시 닫힘 소형 다이어프램 솔레노이드 밸브 SV10-B16-2NC, 바브 포트와 콤팩트한 구조",
+    "2-way-nc-threaded": "OEM 통합용 나사 연결형 2방향 소형 다이어프램 솔레노이드 밸브 SV10-M6/U28-2NC, FKM·FFKM 다이어프램 옵션",
+    "2-way-no-base": "2방향 상시 열림 소형 다이어프램 솔레노이드 밸브 SV10-P-2NO, 베이스 장착형, 낮은 데드 볼륨의 로커 구조",
+    "2-way-no-barbed": "의료 및 실험실 기기용 2방향 상시 열림 마이크로 다이어프램 솔레노이드 밸브 SV10-B16-2NO, 바브 포트",
+    "2-way-no-threaded": "샘플링 및 세척용 2방향 상시 열림 소형 다이어프램 솔레노이드 밸브 SV10-M6/U28-2NO, 나사 포트",
+  },
+  ru: {
+    "3-way-base": "Миниатюрный трёхходовой мембранный электромагнитный клапан SV10-P-3 для монтажа на коллектор, время срабатывания ≤15 мс",
+    "3-way-barbed": "Трёхходовой миниатюрный мембранный электромагнитный клапан SV10-B16-3 со штуцерами под шланг для медицинских и лабораторных приборов",
+    "3-way-threaded": "Трёхходовой миниатюрный мембранный электромагнитный клапан SV10-M6/U28-3, резьбовые порты M6 или 1/4-28 UNF, быстрое срабатывание",
+    "2-way-nc-base": "Двухходовой нормально закрытый миниатюрный мембранный электромагнитный клапан SV10-P-2NC для монтажа на коллектор, отбора проб и управления промывкой",
+    "2-way-nc-barbed": "Двухходовой нормально закрытый миниатюрный мембранный электромагнитный клапан SV10-B16-2NC, компактный корпус со штуцерами под шланг",
+    "2-way-nc-threaded": "Двухходовой миниатюрный мембранный электромагнитный клапан SV10-M6/U28-2NC с резьбовыми портами, мембраны FKM или FFKM для OEM-интеграции",
+    "2-way-no-base": "Двухходовой нормально открытый миниатюрный мембранный электромагнитный клапан SV10-P-2NO для монтажа на коллектор, коромысловая конструкция с малым мёртвым объёмом",
+    "2-way-no-barbed": "Двухходовой нормально открытый миниатюрный мембранный электромагнитный клапан SV10-B16-2NO со штуцерами под шланг для медицинских и лабораторных приборов",
+    "2-way-no-threaded": "Двухходовой нормально открытый миниатюрный мембранный электромагнитный клапан SV10-M6/U28-2NO с резьбовыми портами для отбора проб и промывки",
+  },
+};
+
 export function getSolenoidStateCopy(locale: SelectionLocale, state: "nc" | "no") {
   return copy[locale][state];
 }
@@ -244,5 +318,7 @@ export function getSolenoidCardCopy(slug: string, locale: SelectionLocale) {
   const connectionIndex = ["base", "barbed", "threaded"].indexOf(configuration.connection);
   const name = index < 0 ? text.legacyNames[connectionIndex] : text.names[index];
   const description = text.descriptions[index < 0 ? 3 + connectionIndex : index];
-  return {model: configuration.model, name, description, heading: name + text.separator + description};
+  const heading = (locale === "zh" ? chineseConfigurationHeadings[slug] : localizedConfigurationHeadings[locale][slug])
+    ?? name + text.separator + description;
+  return {model: configuration.model, name, description, heading};
 }

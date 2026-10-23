@@ -24,6 +24,12 @@ export type ProductDatasheet = {
  * a product-specific document can be added without changing the UI layer.
  */
 export const PRODUCT_DATASHEETS: Record<string, ProductDatasheet> = {
+  "sv10-series-en": {
+    id: "sv10-series-en",
+    file: datasheetEnItems.find(item => item.id === "6010-solenoid-valve")!.downloadHref!,
+    shortTitle: "SV10 / 6010 (English)",
+    title: "SV10 / 6010 Solenoid Valve Datasheet (English)",
+  },
   "rpl-series-en": {
     id: "rpl-series-en",
     file: datasheetEnItems.find(item => item.id === "rpl-p635-p15-valveless-pump")!.downloadHref!,

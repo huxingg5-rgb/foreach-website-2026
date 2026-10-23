@@ -7,16 +7,6 @@ import type {
 
 type ValveCardCopy = { model: string; name: string; heading: string; description?: string };
 
-// Keep the state in technical details while using shorter selection-card names.
-const solenoidCardClosedQualifier: Record<SelectionLocale, string> = {
-  zh: "常闭",
-  en: "normally closed ",
-  es: "normalmente cerrada ",
-  fr: "normalement fermée ",
-  ko: "상시 닫힘 ",
-  ru: "нормально закрытый ",
-};
-
 // Uses the existing model + descriptive heading card layout.
 // Legacy card descriptions are also used by their corresponding detail headings.
 // Sources: HP PS-120C-2604-00001-001 pp. 4, 6; SV10 PS-122A-003 A02 pp. 3–5.
@@ -170,14 +160,7 @@ export function getValveCardCopy(
   if (product.productId === "hp-3-position-7-port-high-pressure-valve") return valveCards[locale].hp;
   if (product.seriesId === "6010") {
     const card = getSolenoidCardCopy(product.productId, locale);
-    if (card) {
-      const qualifier = solenoidCardClosedQualifier[locale];
-      return {
-        ...card,
-        name: card.name.replace(qualifier, ""),
-        heading: card.heading.replace(qualifier, ""),
-      };
-    }
+    if (card) return card;
     if (product.productId === "2-way") return valveCards[locale].two;
     if (product.productId === "3-way") return valveCards[locale].three;
   }

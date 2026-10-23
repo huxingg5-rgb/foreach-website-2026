@@ -785,3 +785,44 @@
 }
 
 /* TPU_COLUMN_LAYOUT_OVERRIDE_END */
+
+/* SV10 selectors share a compact summary and use longer configuration model codes. */
+.selector[aria-labelledby^="sv10-"] .groupGrid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.selector[aria-labelledby^="sv10-"] .summaryRow {
+  min-height: 38px;
+  padding: 7px 0;
+}
+
+.selector[aria-labelledby^="sv10-"] .summaryTable {
+  margin-top: 16px;
+}
+
+.selector[aria-labelledby^="sv10-"] .modelResult strong {
+  font-size: clamp(18px, 1.5vw, 22px);
+}
+
+.selector[aria-labelledby^="sv10-"] :is(h2, h3, strong, b, legend, button) {
+  font-weight: 500;
+}
+
+@media (min-width: 761px) {
+  .selector[aria-labelledby^="sv10-"] .groupGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .selector[aria-labelledby^="sv10-"] .optionGroup:first-child {
+    grid-column: auto;
+  }
+
+  .selector[aria-labelledby^="sv10-"] .optionGroup:only-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Keep the selection reminder visible on narrow screens too. */
+.selector[aria-labelledby^="sv10-"] .notice {
+  display: block;
+}

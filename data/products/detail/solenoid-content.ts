@@ -6,10 +6,15 @@ import ko from "./solenoid-locales/ko.json";
 import ru from "./solenoid-locales/ru.json";
 import type { ProductSelectionProduct } from "../selection/product-selection.types";
 import { getSolenoidConfigurationImage, getSolenoidConfigurationGallery } from "./solenoid-images";
+import { getSolenoidApplicationAreas } from "./applications/solenoid-application-areas";
 
 export const solenoidLocales = ["zh", "en", "es", "fr", "ko", "ru"] as const;
 type Locale = typeof solenoidLocales[number];
-type SolenoidMessages = typeof en & { seriesFunction?: string; seriesMaterials?: string };
+type SolenoidMessages = typeof en & {
+  seriesFunction?: string;
+  seriesMaterials?: string;
+  configurationIntroductions?: Record<string, string[]>;
+};
 const messages: Record<Locale, SolenoidMessages> = { zh, en, es, fr, ko, ru };
 export const isSolenoidLocale = (value: string): value is Locale => solenoidLocales.includes(value as Locale);
 export const solenoidBasePath = "/products/valves/solenoid-valves/";
@@ -51,13 +56,13 @@ export function getSolenoidContent(slug: string, locale: string) {
   const title = heading ? `FOREACH ${heading}` : f ? `FOREACH ${f.heading}` : m ? `FOREACH ${m.heading}` : t.seriesTitle;
   // Keep each paragraph focused: operation first, then installation and wetted materials.
   const joinSentences = (sentences: string[]) => sentences.join(locale === "zh" ? "" : " ");
-  const paragraphs = c && m ? [
+  const paragraphs = (c ? t.configurationIntroductions?.[c.slug] : undefined) ?? (c && m ? [
     t.detailIntro[c.state || c.key].replace(/\bSV10\b/, shortModel),
     joinSentences([m.installation, t.detailMaterials[c.connection]]),
   ] : m && connection ? [
     joinSentences([m.definition, t.functionIntro]),
     joinSentences([m.installation, t.detailMaterials[connection.key]]),
-  ] : introParagraphs;
+  ] : introParagraphs);
   const description = paragraphs.join("\n\n");
   const detailHref = `${prefix}${solenoidBasePath}${c || connection ? `${slug}/` : ""}`;
   const selectionHref = `${prefix}/products/valves/solenoid-valves/`;
@@ -86,6 +91,7 @@ export function getSolenoidContent(slug: string, locale: string) {
     : faq);
   return {
     __locale: locale, solenoidAuthoredContent: true, slug, category: "valves", categoryId: "valves",
+    datasheetId: "sv10-series-en",
     ...(configurationImage ? {
       mainImage: configurationImage.src, image: configurationImage.src, imageCard: configurationImage.cardSrc,
       imageAlt: configurationImage.alt, mainImageAlt: configurationImage.alt,
@@ -106,6 +112,7 @@ export function getSolenoidContent(slug: string, locale: string) {
     showStandardModelSelector: false, specSeriesKey: slug, specs,
     advantages: [f?.operation || t.functionIntro, t.materialIntro], highlights: [], features: [],
     commonApplications: applicationItems.map(item => item.title),
+    ...(locale !== "zh" ? getSolenoidApplicationAreas(locale) : {}),
     faqs, faq: faqs, faqItems: faqs, detailFaqs: faqs,
     applicationDetails: {
       tabLabel: t.applications, title: t.typicalApplications, intro: [f?.definition || t.applicationsIntro], items: applicationItems,

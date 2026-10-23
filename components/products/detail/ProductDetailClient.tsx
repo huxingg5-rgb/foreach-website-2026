@@ -126,6 +126,8 @@ import {
 import type {
   ProductConfiguratorVariant,
 } from "@/components/products/configurator";
+import { getSolenoidConfigurator } from "@/data/products/configurator/solenoid-valves";
+import { getSolenoidViewConfigurationText } from "@/data/products/configurator/solenoid-valves.i18n";
 
 /* PVC_CONFIGURATOR_ENGLISH_START */
 import {
@@ -2057,6 +2059,25 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 : null;
   /* TPU_TUBING_CONFIGURATOR_STATE_END */
 
+  const detailModelConfigurator = useMemo(
+    () => data.solenoidAuthoredContent
+      ? getSolenoidConfigurator(String(data.slug || ""), configuratorLocale)
+      : undefined,
+    [data.solenoidAuthoredContent, data.slug, configuratorLocale],
+  );
+  const [openDetailModelConfiguratorId, setOpenDetailModelConfiguratorId] = useState<string | null>(null);
+  const [selectedDetailVariantId, setSelectedDetailVariantId] = useState<string | null>(null);
+  const singleDetailVariant = detailModelConfigurator?.variants.length === 1
+    ? detailModelConfigurator.variants[0]
+    : null;
+  // Resolve against this page's catalog so navigation cannot reuse another product's selection.
+  const selectedDetailVariant = singleDetailVariant ?? detailModelConfigurator?.variants.find(
+    variant => variant.id === selectedDetailVariantId,
+  ) ?? null;
+  const isDetailModelConfiguratorEnabled = Boolean(detailModelConfigurator);
+  const isDetailVariantRequired = (isTubingConfiguratorEnabled && !selectedTubingVariant)
+    || (isDetailModelConfiguratorEnabled && !selectedDetailVariant);
+
   const realImages = useMemo(() => {
     const images: string[] = [];
 
@@ -2234,6 +2255,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       : "pump-selection";
 
   function getDetailCartProductCode() {
+    if (isDetailModelConfiguratorEnabled) return selectedDetailVariant?.productCode || "";
     // NC and NO share a family model name, but must remain distinct selections.
     if (data.solenoidAuthoredContent && data.slug) return String(data.slug);
     if (
@@ -2260,20 +2282,25 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
   function createDetailCartItem(
     needDrawing: boolean,
-    tubingVariantOverride?: ProductConfiguratorVariant
+    variantOverride?: ProductConfiguratorVariant
   ): SelectionCartItemInput {
     const activeTubingVariant =
-      tubingVariantOverride ||
+      variantOverride ||
       selectedTubingVariant;
+    const activeDetailVariant = variantOverride || selectedDetailVariant;
 
     const productCode =
-      isTubingConfiguratorEnabled
+      isDetailModelConfiguratorEnabled
+        ? activeDetailVariant?.productCode || ""
+        : isTubingConfiguratorEnabled
         ? activeTubingVariant
             ?.productCode || ""
         : getDetailCartProductCode();
 
     const modelText =
-      data.solenoidAuthoredContent
+      isDetailModelConfiguratorEnabled
+        ? activeDetailVariant?.model || ""
+        : data.solenoidAuthoredContent
         ? `${data.modelName} · ${data.cardName}`
         : isTubingConfiguratorEnabled
         ? activeTubingVariant?.model ||
@@ -2310,7 +2337,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
         ).trim();
 
     const resolvedProductName =
-      isPvcTubingConfiguratorEnabled
+      isDetailModelConfiguratorEnabled
+        ? "微型隔膜电磁阀"
+        : isPvcTubingConfiguratorEnabled
         ? isEnglish
           ? "PVC Tubing"
           : "PVC 管"
@@ -2497,6 +2526,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     );
 
     if (existingItem) {
+      if (isDetailModelConfiguratorEnabled) return;
       removeItem(existingItem.id);
       return;
     }
@@ -2722,6 +2752,14 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     }
 
     addItem(item);
+  }
+
+  function handleToggleDetailVariant(variant: ProductConfiguratorVariant) {
+    const catalogVariant = detailModelConfigurator?.variants.find(item => item.id === variant.id);
+    if (!catalogVariant) return;
+    const existingItem = getItem(detailCartSourceType, catalogVariant.productCode);
+    if (existingItem) return;
+    addItem(createDetailCartItem(false, catalogVariant));
   }
 
   function isPfaVariantSelected(
@@ -3010,6 +3048,22 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       ) : null}
       {/* PEEK_TUBING_CONFIGURATOR_RENDER_END */}
 
+      {detailModelConfigurator ? (
+        <ProductVariantConfigurator
+          key={detailModelConfigurator.id}
+          locale={configuratorLocale}
+          open={openDetailModelConfiguratorId === detailModelConfigurator.id}
+          config={detailModelConfigurator}
+          value={selectedDetailVariant}
+          isVariantSelected={variant => Boolean(getItem(detailCartSourceType, variant.productCode))}
+          onToggleVariant={handleToggleDetailVariant}
+          onClose={() => setOpenDetailModelConfiguratorId(null)}
+          onConfirm={variant => {
+            setSelectedDetailVariantId(variant.id);
+            setOpenDetailModelConfiguratorId(null);
+          }}
+        />
+      ) : null}
       {/* PFA_TUBING_CONFIGURATOR_RENDER_START */}
       {isPfaTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
@@ -3373,33 +3427,42 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               </p>
             )}
 
-            <div className={styles.application}>
-              <p className={styles.applicationTitle}>
-                {isEnglish && data.applicationAreas?.length
-                  ? "Application Areas:"
-                  : isLocalizedDetail
-                  ? copy.applications
-                  : getDbSectionTitle("applications", copy.applications)}
-              </p>
-              <p className={styles.applicationText}>
-                {isEnglish && data.applicationAreas?.length
-                  ? data.applicationAreas.map((area, index) => (
-                      <span key={area.href}>
-                        {index > 0 ? ", " : null}
-                        <a className={styles.applicationAreaLink} href={area.href}>
-                          {area.label}
-                        </a>
-                      </span>
-                    ))
-                  : data.commonApplications.join(isLocalizedDetail ? ", " : "、")}
-              </p>
-            </div>
+            {!(data.solenoidAuthoredContent && configuratorLocale === "zh") && (
+              <div className={styles.application}>
+                <p className={styles.applicationTitle}>
+                  {(isEnglish || data.solenoidAuthoredContent) && data.applicationAreas?.length
+                    ? data.applicationAreasTitle || "Application Areas:"
+                    : isLocalizedDetail
+                    ? copy.applications
+                    : getDbSectionTitle("applications", copy.applications)}
+                </p>
+                <p className={styles.applicationText}>
+                  {(isEnglish || data.solenoidAuthoredContent) && data.applicationAreas?.length
+                    ? data.applicationAreas.map((area, index) => (
+                        <span key={area.href}>
+                          {index > 0 ? ", " : null}
+                          <a className={styles.applicationAreaLink} href={area.href}>
+                            {area.label}
+                          </a>
+                        </span>
+                      ))
+                    : data.commonApplications.join(isLocalizedDetail ? ", " : "、")}
+                </p>
+              </div>
+            )}
 
             <div id="product-detail-actions" className={styles.operationArea}>
               <div data-product-model-row="true" className={styles.modelLine}>
                 <div className={styles.modelCodeWrap}>
                   <div className={styles.modelCodeText}>
-                    {isCustomProduct ? (
+                    {isDetailModelConfiguratorEnabled ? (
+                      <>
+                        <span className={styles.modelLabel}>{copy.model}</span>
+                        <span className={styles.modelCode}>
+                          {selectedDetailVariant?.model || detailModelConfigurator?.emptySelectionText}
+                        </span>
+                      </>
+                    ) : isCustomProduct ? (
                       <>
                         <span className={styles.modelLabel}>{copy.model}</span>
                         <span className={styles.modelCode}>
@@ -3431,6 +3494,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     className={styles.button}
                     type="button"
                     onClick={() => {
+                      if (detailModelConfigurator) {
+                        setOpenDetailModelConfiguratorId(detailModelConfigurator.id);
+                        return;
+                      }
                       if (isTubingAssembly) {
                         trackBeginInquiry({
                           formId: "tubing_assembly_custom_request_form",
@@ -3550,7 +3617,11 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                       window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
-                    {isTubingAssembly
+                    {singleDetailVariant
+                      ? getSolenoidViewConfigurationText(configuratorLocale)
+                      : isDetailModelConfiguratorEnabled
+                      ? selectedDetailVariant ? copy.reselect : copy.selectModel
+                      : isTubingAssembly
                       ? data.tubingCustomizationCopy?.title ?? (isEnglish ? "Customization Request" : "定制申请")
                       : isCustomProduct || (data.mrv3AuthoredContent || data.solenoidAuthoredContent)
                       ? customProductCopy.contact
@@ -3589,10 +3660,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   <button
                     className={styles.button}
                     type="button"
-                    disabled={
-                      isTubingConfiguratorEnabled &&
-                      !selectedTubingVariant
-                    }
+                    disabled={isDetailVariantRequired}
                     aria-pressed={isDetailDrawingSelected}
                     onClick={handleAddDrawing}
                   >
@@ -3624,10 +3692,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 <button
                   className={styles.button}
                   type="button"
-                  disabled={
-                    isTubingConfiguratorEnabled &&
-                      !selectedTubingVariant
-                  }
+                  disabled={isDetailVariantRequired || (isDetailModelConfiguratorEnabled && isDetailProductSelected)}
                   aria-pressed={isDetailProductSelected}
                   onClick={handleAddList}
                 >

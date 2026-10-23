@@ -364,7 +364,7 @@ export function localizeProductConfiguratorConfig(
   config: ProductConfiguratorConfig,
   locale: ProductConfiguratorLocale
 ): ProductConfiguratorConfig {
-  if (locale === "zh" || locale === "en") {
+  if (config.localizedLocale === locale || locale === "zh" || locale === "en") {
     return config;
   }
 

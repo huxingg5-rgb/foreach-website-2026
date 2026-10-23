@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import {getValveDetailHeading} from "../../data/products/selection/valve-card-copy";
+import {getValveCardCopy, getValveDetailHeading} from "../../data/products/selection/valve-card-copy";
 import fs from "node:fs";
 import {getSolenoidConfiguration} from "../../data/products/detail/solenoid-configurations";
 import {getSolenoidCardCopy, getSolenoidStateCopy} from "../../data/products/detail/solenoid-card-copy";
@@ -15,9 +15,12 @@ async function main() {
       const configuration = getSolenoidConfiguration(card.productId)!;
       const copy = getSolenoidCardCopy(card.productId, locale)!;
       assert(copy && !/\n|undefined/.test(copy.heading));
+      assert.equal(getValveCardCopy(card, locale)?.heading, copy.heading, "Selection and detail headings share the approved copy");
       if (configuration.state === "nc") {
-        assert(!copy.heading.toLowerCase().includes(closedName[locale]), "NC is omitted from public card names but retained in specifications");
+        const showClosed = configuration.connection !== "threaded";
+        assert.equal(copy.heading.toLowerCase().includes(closedName[locale]), showClosed, "Base and barbed cards include NC in every language; threaded headings keep the approved shorter wording");
       }
+      assert(copy.heading.includes(configuration.model), "Every current card includes its model");
       if (configuration.state) {
         const prefix = ({base: "SV10-P-2", barbed: "SV10-B16-2", threaded: "SV10-M6/U28-2"})[configuration.connection];
         assert.equal(configuration.model, prefix + configuration.state.toUpperCase());
@@ -33,6 +36,10 @@ async function main() {
     const prefix = locale === "zh" ? "" : `/${locale}`;
     for (const slug of ["solenoid-valves", ...solenoidPageConfigurations.map(c => c.slug)]) {
       const copy = getSolenoidContent(slug, locale)!;
+      if (locale !== "zh") {
+        assert.equal(copy.applicationAreas?.length, 3);
+        for (const area of copy.applicationAreas!) assert(area.href.startsWith(`/${locale}/applications/`));
+      }
       const c = getSolenoidConfiguration(slug);
       const connection = solenoidConnectionConfigurations.find(item => item.key === c?.connection);
       const isDetail = Boolean(c || connection);
@@ -47,7 +54,8 @@ async function main() {
         assert.equal(copy.h1Title, getSolenoidCardCopy(slug, locale)!.heading, "Preserve the original complete heading sentence");
         assert.equal(getValveDetailHeading(slug, locale), copy.h1Title);
         if (c.state === "nc") {
-          assert(!copy.h1Title.toLowerCase().includes(closedName[locale]));
+          const showClosed = c.connection !== "threaded";
+          assert.equal(copy.h1Title.toLowerCase().includes(closedName[locale]), showClosed);
           assert(!copy.seoTitle.toLowerCase().includes(closedName[locale]));
         }
         assert(copy.faqs.at(-1)!.answer.includes("M6"), "ordering guidance distinguishes connection variants");
