@@ -822,7 +822,7 @@ async function main() {
     const imageFile = path.join(
       ROOT,
       "public",
-      ...item.image.replace(/^\/+/, "").split("/")
+      ...item.image.split(/[?#]/, 1)[0].replace(/^\/+/, "").split("/")
     );
 
     return !fs.existsSync(imageFile);
