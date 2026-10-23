@@ -1,5 +1,6 @@
 import type { ProductApplicationsContent, ProductDetailFaqItem } from "./product-detail.types";
 import { getValvelessPumpSeoTitle } from "./valveless-pump-seo";
+import { valvelessPumpIntroductionsZh } from "./valveless-pump-introductions.zh";
 
 // Reviewed 2026-09-16. Industry terminology is not a claim of model validation.
 // https://www.fluidmetering.com/blog/dispensing-metering
@@ -154,7 +155,11 @@ const content: Record<string, Copy> = {
 };
 
 export function getValvelessPumpChineseContent(slug: string): Copy | undefined {
-  return content[slug];
+  const copy = content[slug];
+  const introduction = valvelessPumpIntroductionsZh[slug];
+  return copy && introduction
+    ? { ...copy, description: introduction.paragraphs.join("\n\n") }
+    : copy;
 }
 
 function fullSpecNames(value: unknown): unknown {
@@ -175,10 +180,15 @@ function fullSpecNames(value: unknown): unknown {
 
 export function applyValvelessPumpReviewedChineseCopy<T extends { slug?: string; productTypeId?: string }>(data: T, locale: string): T {
   if (locale !== "zh" || data.productTypeId !== "valveless-pump") return data;
-  const copy = content[data.slug || ""];
+  const copy = getValvelessPumpChineseContent(data.slug || "");
   if (!copy) return data;
+  const introduction = valvelessPumpIntroductionsZh[data.slug || ""];
   const record = data as T & Record<string, unknown>;
   return { ...data, ...copy, seo: { ...(record.seo as object || {}), ...copy.seo },
-    commonApplications: copy.applicationDetails.items.map(item => item.title),
+    ...(introduction ? {
+      model: introduction.title, title: introduction.title, name: introduction.title,
+      valvelessIntroductionParagraphs: introduction.paragraphs,
+      commonApplications: introduction.commonApplications,
+    } : { commonApplications: copy.applicationDetails.items.map(item => item.title) }),
     specs: fullSpecNames(record.specs), specifications: fullSpecNames(record.specifications), specificationGroups: fullSpecNames(record.specificationGroups) };
 }

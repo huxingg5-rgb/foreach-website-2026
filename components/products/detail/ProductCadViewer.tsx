@@ -16,7 +16,7 @@ export default function ProductCadViewer({ modelId, title, locale, active }: {
     return () => window.removeEventListener("message", ready);
   }, [active, modelId]);
   return <iframe ref={frame} key={modelId}
-    src={`/models/valves/6010/viewer.html?model=${encodeURIComponent(modelId)}&lang=${encodeURIComponent(locale)}`}
+    src={`${["rpl-p4", "rpl-p635", "rpl-p15", "drpl-0109"].includes(modelId) ? "/models/products/pumps/valveless-pumps" : "/models/valves/6010"}/viewer.html?model=${encodeURIComponent(modelId)}&lang=${encodeURIComponent(locale)}`}
     title={`${title} 3D`} allow="fullscreen"
     style={{ display: "block", width: "100%", height: "min(680px, 75svh)", minHeight: 440, border: 0, borderRadius: 12 }} />;
 }

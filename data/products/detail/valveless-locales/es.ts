@@ -27,17 +27,85 @@ export const es: ValvelessLocaleCopy = {
     "Indique por separado composición, viscosidad, condiciones de entrada y contrapresión de cada líquido, además de proporción, conexiones, control y espacio. Revise los materiales mojados de ambas vías."
   ] },
   materials: { pvdf: "fluoruro de polivinilideno (PVDF)", alumina: "óxido de aluminio (Al₂O₃)", zirconia: "dióxido de zirconio (ZrO₂)" },
+  // Adapted from the reviewed Chinese cards and three-paragraph introductions (2026-10-23).
   cards: {
-    p4: "Bomba dosificadora sin válvulas de un cabezal y pistón cerámico, 12–80 μL/rev, para dosificación de pequeños volúmenes de reactivo, adición de valorante y dispensación repetida.",
-    p635: "Bomba dosificadora sin válvulas de un cabezal y pistón cerámico, 50–300 μL/rev, para reactivos, valoración y llenado volumétrico. Cabezal de fluoruro de polivinilideno (PVDF) y conjunto de dióxido de zirconio (ZrO₂).",
-    p15: "Bomba dosificadora sin válvulas de un cabezal y pistón cerámico, 300–1200 μL/rev, para llenado de mayores volúmenes, adición de tampón y suministro cuantitativo. Cabezal de fluoruro de polivinilideno (PVDF) y conjunto de óxido de aluminio (Al₂O₃).",
-    dual: "Bomba dosificadora sin válvulas de doble cabezal para dilución de concentrados y dosificación proporcional. Relación concentrado:diluyente {{ratio}}; configuración mostrada: {{concentrate}} μL + {{diluent}} μL."
+    "p4": "RPL-P4, bomba miniatura sin válvulas con pistón cerámico, 12–80 μL/rev, para pequeñas dosis de reactivo y adición de valorante.",
+    "p635": "RPL-P6.35, bomba sin válvulas de pistón rotativo, 50–300 μL/rev, con conexiones de lavado para dispensación de reactivos y llenado volumétrico.",
+    "p15": "RPL-P15, bomba dosificadora de pistón cerámico, 300–1200 μL/rev, con conexiones de lavado para llenado de reactivos y dispensación de soluciones tampón.",
+    "dual9": "DRPL-0109, bomba dosificadora de doble cabezal con pistones cerámicos para dilución de reactivos y preparación de tampones en una relación concentrado:diluyente de 1:9.",
+    "dual19": "DRPL-0119, bomba dosificadora de pistón y doble cabezal para dilución de reactivos concentrados y dosificación proporcional en una relación concentrado:diluyente de 1:19."
   },
-  descriptions: {
-    p4: "FOREACH RPL-P4 es una bomba dosificadora sin válvulas de un cabezal y pistón cerámico, con desplazamiento de 12–80 μL/rev, para pequeños volúmenes de reactivo, valorante y llenado repetido. El pistón gira y se desplaza axialmente para aspirar e impulsar. La configuración mostrada tiene cabezal de fluoruro de polivinilideno (PVDF), conjunto de óxido de aluminio (Al₂O₃) y conexión de trabajo 1/4-28 UNF-2B. Relacione dosis, desplazamiento y ciclos, y después compruebe el tiempo de accionamiento; el desplazamiento por vuelta no es la dosis mínima fiable.",
-    p635: "FOREACH RPL-P6.35 es una bomba dosificadora sin válvulas de un cabezal y pistón cerámico, de 50–300 μL/rev, para reactivos, valorante y llenado volumétrico. La configuración mostrada tiene cabezal de fluoruro de polivinilideno (PVDF) y conjunto de dióxido de zirconio (ZrO₂). El ajuste mecánico del desplazamiento y la velocidad del motor permiten adaptar cantidad y tiempo. Las conexiones de trabajo y lavado son 1/4-28 UNF-2B, pero corresponden a circuitos distintos; el lavado de la zona del pistón no debe confundirse con la vía de trabajo.",
-    p15: "FOREACH RPL-P15 es una bomba dosificadora sin válvulas de un cabezal y pistón cerámico, de 300–1200 μL/rev, para llenado de mayores volúmenes de reactivo, dispensación de tampón y suministro cuantitativo. Tiene cabezal de fluoruro de polivinilideno (PVDF) y conjunto de óxido de aluminio (Al₂O₃). El ajuste mecánico y la velocidad se seleccionan según el caudal medio. La conexión de trabajo es G1/8 y la de lavado 1/4-28 UNF-2B. Evalúe volumen y ciclo para llenado, o caudal y duración para suministro continuo.",
-    dual: "FOREACH {{model}} es una bomba dosificadora sin válvulas de doble cabezal y pistón cerámico para diluir reactivos, preparar tampones y dosificar dos líquidos en relación concentrado:diluyente {{ratio}}. La configuración mostrada corresponde a {{concentrate}} μL de concentrado y {{diluent}} μL de diluyente, con volumen nominal total de {{total}} mL. Puede seleccionarse como bomba de dilución o de dosificación proporcional. El suministro proporcional y la mezcla aguas abajo son etapas diferentes: compruebe ambas cantidades, la relación y la homogeneidad."
+  introductions: {
+    "p4": {
+      "title": "RPL-P4: bomba dosificadora sin válvulas de pistón cerámico, 12–80 μL/rev, para reactivos y titulación",
+      "paragraphs": [
+        "RPL-P4 es una bomba dosificadora sin válvulas, de un cabezal y pistón cerámico, con un desplazamiento de 12–80 μL por vuelta. La rotación del pistón conecta alternativamente la cámara con la aspiración y la impulsión; el movimiento axial alternativo aspira y expulsa el líquido. El mecanismo no necesita válvulas antirretorno independientes en la entrada y la salida. El volumen nominal de cada dosis depende del desplazamiento y del número de vueltas, mientras que el accionamiento coordina las dosificaciones repetidas.",
+        "Puede seleccionarse para dispensar pequeños volúmenes de reactivo en analizadores automatizados, suministrar valorante en tituladores y llenar viales o tubos de reactivo en el laboratorio. Su menor desplazamiento por vuelta facilita ajustar los ciclos a dosis pequeñas. Los incrementos próximos al punto final de una titulación deben comprobarse con el posicionamiento del accionamiento y el volumen que realmente sale de la punta.",
+        "La configuración mostrada combina un cabezal de fluoruro de polivinilideno (PVDF) y un conjunto cerámico de alúmina (Al₂O₃), conectados al circuito del instrumento mediante racores. Compruebe la compatibilidad de los materiales en contacto con el líquido tanto con el reactivo como con la solución de limpieza. El intervalo de desplazamiento no equivale a un volumen mínimo de dosificación validado."
+      ],
+      "commonApplications": [
+        "Analizadores automatizados: dispensación y dosificación de pequeños volúmenes de reactivo",
+        "Tituladores automáticos: suministro de valorante y dosificación incremental",
+        "Equipos de laboratorio: llenado volumétrico de viales y tubos de reactivo"
+      ],
+      "metaDescription": "Bomba dosificadora sin válvulas RPL-P4, 12–80 μL/rev, para reactivos y titulación. Cabezal de PVDF y conjunto cerámico de alúmina."
+    },
+    "p635": {
+      "title": "RPL-P6.35: bomba dosificadora sin válvulas, 50–300 μL/rev, con lavado para dispensación y llenado",
+      "paragraphs": [
+        "RPL-P6.35 es una bomba dosificadora sin válvulas de un cabezal con pistón cerámico y desplazamiento de 50–300 μL por vuelta. La rotación del pistón alterna la conexión entre entrada y salida; su movimiento axial modifica el volumen de la cámara para aspirar e impulsar el líquido. Así se eliminan las válvulas antirretorno independientes del mecanismo de bombeo. El ajuste mecánico fija el volumen nominal por vuelta y la velocidad del motor permite adaptar el caudal medio y el tiempo de dosificación.",
+        "Sus aplicaciones incluyen la adición de reactivos por etapas en analizadores automatizados, el suministro de valorante en tituladores de laboratorio y el llenado volumétrico de tubos y frascos pequeños. Una dosis puede acumular uno o varios ciclos completos, de acuerdo con el volumen requerido y el tiempo disponible en el equipo.",
+        "La configuración mostrada emplea un cabezal de fluoruro de polivinilideno (PVDF), un conjunto cerámico de zirconia (ZrO₂) y conexiones de lavado de la zona del pistón. El circuito de trabajo aspira e impulsa el reactivo; el de lavado limpia la zona del pistón. Planifique la limpieza habitual y al detener el equipo según las propiedades del líquido. Vuelva a calibrar el volumen suministrado después de ajustar el desplazamiento o modificar el circuito."
+      ],
+      "commonApplications": [
+        "Analizadores automatizados: dispensación y adición de reactivos por etapas",
+        "Tituladores de laboratorio: suministro y dosificación de valorante",
+        "Equipos de envasado de reactivos: llenado volumétrico de tubos y frascos"
+      ],
+      "metaDescription": "RPL-P6.35, bomba dosificadora sin válvulas de 50–300 μL/rev para reactivos, titulación y llenado. Cabezal de PVDF, zirconia y conexiones de lavado."
+    },
+    "p15": {
+      "title": "RPL-P15: bomba dosificadora sin válvulas, 300–1200 μL/rev, con lavado para llenado y dispensación de tampones",
+      "paragraphs": [
+        "RPL-P15 es una bomba dosificadora sin válvulas de un cabezal con pistón cerámico y desplazamiento de 300–1200 μL por vuelta. La rotación alterna la conexión entre aspiración e impulsión, y el movimiento axial aspira y expulsa el líquido sin válvulas antirretorno independientes en el mecanismo. El ajuste mecánico del desplazamiento, la velocidad y el número de vueltas permiten adaptar el caudal medio y el volumen por dosis.",
+        "Está orientada al llenado volumétrico de frascos de reactivo, la dispensación de tampones ya preparados en estaciones de laboratorio y el suministro dosificado en instrumentos analíticos. Para un mismo volumen objetivo, un mayor desplazamiento requiere menos vueltas y ayuda a ajustar el tiempo de entrega en tareas de mayor volumen.",
+        "La configuración mostrada combina un cabezal de fluoruro de polivinilideno (PVDF), un conjunto cerámico de alúmina (Al₂O₃) y conexiones para lavar la zona del pistón. La limpieza debe adaptarse a las características del reactivo. Compruebe los materiales en contacto con el líquido frente al fluido de proceso y al de limpieza, y calibre el volumen y el caudal en el circuito real del equipo."
+      ],
+      "commonApplications": [
+        "Envasado de reactivos: llenado volumétrico de frascos",
+        "Estaciones de preparación de laboratorio: dispensación de tampones preparados y reposición de depósitos",
+        "Módulos de instrumentos analíticos: suministro y transferencia dosificados"
+      ],
+      "metaDescription": "RPL-P15, bomba dosificadora sin válvulas de 300–1200 μL/rev para llenado de reactivos y dispensación de tampones. PVDF, alúmina y conexiones de lavado."
+    },
+    "dual9": {
+      "title": "DRPL-0109: bomba dosificadora sin válvulas de doble cabezal para dilución 1:9 y dosificación proporcional",
+      "paragraphs": [
+        "DRPL-0109 es una bomba dosificadora sin válvulas de doble cabezal y pistones cerámicos que suministra concentrado y diluyente en una relación volumétrica de 1:9. Cada cabezal dosifica una de las dos vías. La rotación y el movimiento axial alternativo de los pistones conmutan los pasos, aspiran e impulsan el líquido sin válvulas antirretorno independientes en el mecanismo. La integración de ambas vías en un solo conjunto facilita diseñar el circuito para una proporción fija.",
+        "Sus aplicaciones incluyen la dilución en línea de reactivos concentrados en analizadores, la preparación de tampones en equipos de laboratorio y la dosificación proporcional por lotes en producción de reactivos. La relación 1:9 indica una parte de concentrado y nueve de diluyente. Esta configuración se selecciona para recetas que requieren esa proporción y un suministro repetido de ambos líquidos.",
+        "Cada circuito de trabajo se conecta a su depósito correspondiente. Las conexiones de lavado permiten preparar la limpieza de la zona del pistón según el líquido de cada vía. La unión de las salidas y los elementos de mezcla posteriores forman la solución de trabajo. Verifique por separado la proporción suministrada y la homogeneidad de la mezcla; seleccione materiales y líquidos de limpieza para la configuración concreta."
+      ],
+      "commonApplications": [
+        "Analizadores automatizados: dilución en línea de reactivos en relación concentrado:diluyente 1:9",
+        "Equipos de laboratorio: preparación de tampones en proporción fija",
+        "Producción de reactivos: dosificación proporcional de dos líquidos por lotes"
+      ],
+      "metaDescription": "Bomba dosificadora sin válvulas DRPL-0109 de doble cabezal, relación concentrado:diluyente 1:9, para dilución de reactivos y preparación de tampones."
+    },
+    "dual19": {
+      "title": "DRPL-0119: bomba dosificadora sin válvulas de doble cabezal para dilución 1:19 y preparación de soluciones",
+      "paragraphs": [
+        "DRPL-0119 es una bomba dosificadora sin válvulas de doble cabezal y pistones cerámicos que suministra concentrado y diluyente en una relación volumétrica de 1:19. Los cabezales dosifican ambos líquidos por separado. La rotación del pistón conecta alternativamente entrada y salida; su movimiento axial realiza la aspiración y la impulsión. Este mecanismo prescinde de válvulas antirretorno independientes y permite alimentar dos vías en una proporción fija.",
+        "Se puede seleccionar para diluir reactivos concentrados en analizadores automatizados, preparar soluciones de trabajo en el laboratorio y suministrar líquidos proporcionalmente por lotes. La relación 1:19 significa una parte de concentrado y diecinueve de diluyente. La elección depende de la receta; esta configuración aporta una mayor proporción de diluyente que la de 1:9.",
+        "Conecte las vías de trabajo a sus respectivos depósitos y utilice las conexiones de lavado para configurar la limpieza de la zona de los pistones. Ajuste los ciclos al volumen de preparación y al tiempo disponible, con los elementos de mezcla y almacenamiento necesarios aguas abajo. Cambiar la proporción exige revisar los cabezales y el desplazamiento; variar únicamente la velocidad general no convierte 1:19 en otra proporción."
+      ],
+      "commonApplications": [
+        "Analizadores automatizados: dilución de reactivos en relación concentrado:diluyente 1:19",
+        "Sistemas de laboratorio: preparación de soluciones de trabajo en proporción fija",
+        "Preparación de reactivos: suministro proporcional de concentrado y diluyente por lotes"
+      ],
+      "metaDescription": "DRPL-0119, bomba dosificadora sin válvulas de doble cabezal para relación concentrado:diluyente 1:19, dilución y preparación de soluciones de trabajo."
+    }
   },
   intros: {
     p4: "RPL-P4 se orienta a pequeñas dosis por una vía. Según la tarea, puede denominarse bomba dispensadora de reactivos, dosificadora de valorante o bomba de llenado volumétrico. Los nombres describen funciones, no mecanismos distintos. Las aplicaciones siguientes relacionan dosis, secuencia y tiempo.",
@@ -101,6 +169,36 @@ export const es: ValvelessLocaleCopy = {
       "Las conexiones de trabajo mostradas son 1/4-28 UNF-2B para reactivo A y G1/8 para B; ambas de lavado son 1/4-28 UNF-2B. Verifique en el plano qué líquido corresponde a A/B, no lo deduzca solo del tamaño de conexión. Revise presión y alimentación por separado."
     ] }
   },
+  modelFaqs: {
+    "p635": [
+      {
+        "question": "¿Cómo elegir entre RPL-P6.35 y RPL-P4?",
+        "answer": "Sus desplazamientos son de 50–300 μL/rev y 12–80 μL/rev, respectivamente. A partir de la dosis y el tiempo disponible, calcule el desplazamiento y las vueltas necesarias; después compare el comportamiento con dosis pequeñas y las opciones de accionamiento. Un desplazamiento mayor no implica mayor exactitud."
+      },
+      {
+        "question": "¿Qué modifican el ajuste del desplazamiento y la velocidad?",
+        "answer": "El ajuste mecánico cambia el volumen nominal por vuelta completa. La velocidad determina cuántas vueltas se realizan por unidad de tiempo. Estime la dosis multiplicando desplazamiento por vueltas y el caudal medio multiplicando desplazamiento por velocidad; calibre después la salida real."
+      },
+      {
+        "question": "¿En qué se diferencian las conexiones de lavado y de trabajo?",
+        "answer": "En la configuración mostrada ambas tienen rosca 1/4-28 UNF-2B, pero sirven a circuitos diferentes. Las de trabajo aspiran e impulsan el reactivo; las de lavado limpian la zona del pistón. No son intercambiables por tener la misma rosca. Conéctelas según el plano de la configuración suministrada."
+      }
+    ],
+    "p15": [
+      {
+        "question": "¿Qué diferencia hay entre RPL-P15 y RPL-P6.35?",
+        "answer": "Sus desplazamientos son de 300–1200 μL/rev y 50–300 μL/rev, respectivamente. RPL-P15 puede evaluarse para llenado y suministro de mayores volúmenes. Compare volumen objetivo, tiempo disponible y necesidades de dosis pequeñas; el caudal por sí solo no basta para elegir."
+      },
+      {
+        "question": "¿300–1200 μL/rev es un caudal?",
+        "answer": "No. Es el desplazamiento por vuelta; el caudal depende también de la velocidad. Por ejemplo, 500 μL/rev × 120 rpm dan un caudal medio nominal de 60 mL/min. Calibre el valor real con el líquido y la contrapresión previstos. Un caudal medio no implica ausencia de pulsaciones."
+      },
+      {
+        "question": "¿RPL-P15 puede preparar por sí sola una mezcla proporcional?",
+        "answer": "Es una bomba de un cabezal para dosificar o suministrar un líquido. La preparación proporcional de dos líquidos necesita una segunda vía y el control correspondiente. Para relaciones fijas concentrado:diluyente de 1:9 o 1:19, puede evaluarse por separado una configuración DRPL de doble cabezal."
+      }
+    ]
+  },
   faqSingle: [
     { question: "¿Cómo se relacionan los nombres de uso con una bomba sin válvulas?", answer: "Bomba dosificadora sin válvulas describe mecanismo y función. Dispensadora de reactivos, dosificadora de valorante y bomba de llenado describen tareas en un equipo; no significan que todas las bombas de esas aplicaciones usen el mismo mecanismo." },
     { question: "¿{{range}} es el volumen de cada dosis?", answer: "Es el desplazamiento por vuelta, no una dosis garantizada ni el mínimo fiable. Para vueltas completas, multiplique desplazamiento por número de vueltas y después calibre en la salida. No presuponga entrega proporcional para cualquier ángulo parcial." },
@@ -120,8 +218,6 @@ export const es: ValvelessLocaleCopy = {
     p635: "La configuración mostrada tiene cabezal y tapón de fluoruro de polivinilideno (PVDF), conjunto de dióxido de zirconio (ZrO₂) y conexiones de trabajo y lavado 1/4-28 UNF-2B. La misma rosca no hace intercambiables los circuitos.",
     p15: "La configuración mostrada tiene cabezal y tapón de fluoruro de polivinilideno (PVDF), conjunto de óxido de aluminio (Al₂O₃), conexión de trabajo G1/8 y de lavado 1/4-28 UNF-2B."
   },
-  seoSingle: "Bomba dosificadora sin válvulas FOREACH {{model}}, {{range}}. Aplicaciones, cálculo de dosis y ciclos, materiales y requisitos de integración.",
-  seoDual: "Bomba sin válvulas de doble cabezal FOREACH {{model}}, relación {{ratio}} y configuración {{concentrate}} μL + {{diluent}} μL. Dilución, dosificación proporcional y mezcla.",
   selectionSingle: "Indique composición, dosis o caudal continuo, tiempo de adición, duración diaria, condiciones de entrada, contrapresión y control. Dimensione desplazamiento y ciclo y verifique después en el circuito real. Las aplicaciones son orientaciones de selección, no validación en todos los equipos citados.",
   selectionDual: "Indique ambos líquidos, relación volumétrica, lote o caudal total, tiempo, condiciones de entrada y contrapresión por vía, y mezcla aguas abajo. Evalúe por separado suministro proporcional, control y homogeneidad; las aplicaciones no implican validación universal.",
   specs: { "产品类型": "Tipo de producto", "排量范围": "Desplazamiento por vuelta", "转速": "Velocidad", "准确度": "Exactitud", "准确性": "Exactitud", "重复性": "Repetibilidad", "耐压": "Resistencia a presión", "寿命": "Vida útil", "泵头材质": "Material del cabezal", "堵头材质": "Material del tapón", "陶瓷套件": "Conjunto cerámico", "工作液路接口": "Conexión de trabajo", "清洗液路接口": "Conexión de lavado", "整体尺寸": "Dimensiones totales", "重量": "Peso", "配置方式": "Configuración", "稀释比": "Relación volumétrica concentrado:diluyente", "浓缩液份数": "Partes de concentrado", "稀释液份数": "Partes de diluyente", "浓缩液定量（μL）": "Volumen de concentrado (μL)", "稀释液定量（μL）": "Volumen de diluyente (μL)", "配液量（mL）": "Volumen total (mL)", "流量 QMin，mL/min": "Caudal mínimo QMin (mL/min)", "流量 QMax，mL/min": "Caudal máximo QMax (mL/min)", "试剂A 工作液路接口": "Conexión de trabajo, reactivo A", "试剂B 工作液路接口": "Conexión de trabajo, reactivo B", "试剂A 清洗液路接口": "Conexión de lavado, reactivo A", "试剂B 清洗液路接口": "Conexión de lavado, reactivo B", "试剂A 端耐压": "Resistencia a presión, vía A", "试剂B 端耐压": "Resistencia a presión, vía B", "尺寸/mm": "Dimensiones (mm)" },

@@ -110,6 +110,9 @@ import {
 } from "@/lib/analytics/track-event";
 import ProductModelViewer from "./ProductModelViewer";
 import SolenoidAssets from "./SolenoidAssets";
+import ProductCadViewer from "./ProductCadViewer";
+import { getValvelessPumpAssets } from "@/data/products/detail/valveless-pump-assets";
+import { getValvelessPumpConfigurator } from "@/data/products/configurator/valveless-pumps";
 import {
   Pump2DFileCheckingDisplay,
   Pump3DFileCheckingDisplay,
@@ -1620,13 +1623,16 @@ export default function ProductDetailClient({
   );
   const pumpFileDisplayLocale = isLocalizedDetail ? "en" : "zh";
   const isPumpDetail = isPumpDetailData(data);
+  const rplAssets = data.productTypeId === "valveless-pump" ? getValvelessPumpAssets(data.slug) : undefined;
   const model3dUrl = String(
+    data.productTypeId === "valveless-pump" ? rplAssets?.model3dUrl || "" :
     data.model3dUrl ||
       data.resources?.model3dUrl ||
       "",
   ).trim();
   const drawingPreviewUrl = getProductDrawingPreviewUrl(
     data.slug,
+    data.productTypeId === "valveless-pump" ? rplAssets?.drawingPdfUrl || "" :
     data.drawing2dUrl ||
       data.drawingPdfUrl ||
       data.partDrawingUrl ||
@@ -2062,8 +2068,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   const detailModelConfigurator = useMemo(
     () => data.solenoidAuthoredContent
       ? getSolenoidConfigurator(String(data.slug || ""), configuratorLocale)
-      : undefined,
-    [data.solenoidAuthoredContent, data.slug, configuratorLocale],
+      : isValvelessPumpDetailData(data)
+        ? getValvelessPumpConfigurator(String(data.slug || ""), configuratorLocale)
+        : undefined,
+    [data.solenoidAuthoredContent, data.productTypeId, data.slug, configuratorLocale],
   );
   const [openDetailModelConfiguratorId, setOpenDetailModelConfiguratorId] = useState<string | null>(null);
   const [selectedDetailVariantId, setSelectedDetailVariantId] = useState<string | null>(null);
@@ -2338,7 +2346,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
     const resolvedProductName =
       isDetailModelConfiguratorEnabled
-        ? "微型隔膜电磁阀"
+        ? isValvelessPumpDetailData(data) ? data.productTypeName : "微型隔膜电磁阀"
         : isPvcTubingConfiguratorEnabled
         ? isEnglish
           ? "PVC Tubing"
@@ -3403,6 +3411,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-pipetting-description="true">
                 {data.pipettingIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
               </div>
+            ) : Array.isArray(data.valvelessIntroductionParagraphs) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-valveless-description="true">
+                {data.valvelessIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
+              </div>
             ) : Array.isArray(data.valveIntroductionParagraphs) ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-solenoid-description="true">
                 {data.valveIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
@@ -3889,6 +3901,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   <div className={styles.modelViewerFallback} role="status">{data.tubingAssemblyUi?.modelUnavailable}</div>
                 ) : hasOpenedModel ? (data.solenoidAuthoredContent ? (
                   <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="3d" active={activeTab === "model3d"} variant={solenoidVariant} onVariant={setSolenoidVariant} />
+                ) : rplAssets ? (
+                  <ProductCadViewer modelId={rplAssets.viewerId} title={rplAssets.model} locale={configuratorLocale} active={activeTab === "model3d"} />
                 ) : isPumpDetail ? (
                   <PumpUploadedFileGuard
                     key={model3dUrl}
@@ -3959,19 +3973,19 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   <PdfDrawingPreview
                     pdfPreviewUrl={drawingPreviewUrl}
                     previewHref={resourceLocale ? drawingDocumentUrl : undefined}
-                    deferDesktopUntilOpen={Boolean(resourceLocale)}
+                    deferDesktopUntilOpen={Boolean(resourceLocale || rplAssets)}
                     previousPageLabel={resourceCopy?.previousPage}
                     nextPageLabel={resourceCopy?.nextPage}
                     previousPageVisibleLabel={resourceCopy?.previousPageShort}
                     nextPageVisibleLabel={resourceCopy?.nextPageShort}
-                    documentTitle={data.model}
+                    documentTitle={rplAssets?.model || data.model}
                     text={
                       isLocalizedDetail
                         ? {
                             title: copy.technicalDrawing,
                             loadingLabel: copy.drawingLoading,
                             previewButton: copy.drawingPreview,
-                            description: copy.drawingDescription(data.model),
+                            description: copy.drawingDescription(rplAssets?.model || data.model),
                           }
                         : undefined
                     }
@@ -3981,19 +3995,19 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 <PdfDrawingPreview
                   pdfPreviewUrl={drawingPreviewUrl}
                   previewHref={resourceLocale ? drawingDocumentUrl : undefined}
-                  deferDesktopUntilOpen={Boolean(resourceLocale)}
+                  deferDesktopUntilOpen={Boolean(resourceLocale || rplAssets)}
                   previousPageLabel={resourceCopy?.previousPage}
                   nextPageLabel={resourceCopy?.nextPage}
                   previousPageVisibleLabel={resourceCopy?.previousPageShort}
                   nextPageVisibleLabel={resourceCopy?.nextPageShort}
-                  documentTitle={data.model}
+                  documentTitle={rplAssets?.model || data.model}
                   text={
                     isLocalizedDetail
                       ? {
                           title: copy.technicalDrawing,
                           loadingLabel: copy.drawingLoading,
                           previewButton: copy.drawingPreview,
-                          description: copy.drawingDescription(data.model),
+                          description: copy.drawingDescription(rplAssets?.model || data.model),
                         }
                       : undefined
                   }

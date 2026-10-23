@@ -29,17 +29,85 @@ export const en: ValvelessLocaleCopy = {
     "Provide the composition, viscosity, inlet conditions and outlet backpressure of each liquid, together with the ratio, tubing, drive controls and available space. Check the wetted materials and configuration of both paths separately."
   ] },
   materials: { pvdf: "polyvinylidene fluoride (PVDF)", alumina: "aluminium oxide (Al₂O₃)", zirconia: "zirconium dioxide (ZrO₂)" },
+  // Adapted from the reviewed Chinese cards and three-paragraph introductions (2026-10-23).
   cards: {
-    p4: "Micro precision metering pump with a valveless ceramic-piston design for reagent and titrant dispensing, with a displacement range of 12–80 μL/rev.",
-    p635: "Precision metering pump with a valveless zirconia ceramic-piston design for reagent dispensing, titrant delivery, and volumetric filling, with a displacement range of 50–300 μL/rev.",
-    p15: "Precision metering pump with a valveless alumina ceramic-piston design for reagent filling, buffer addition, and quantitative dispensing, with a displacement range of 300–1200 μL/rev.",
-    dual: "Dual-head precision metering pump with a valveless ceramic-piston design for concentrate dilution and proportional dosing, configured at a {{ratio}} volume ratio of {{concentrate}} μL + {{diluent}} μL."
+    "p4": "RPL-P4 miniature valveless ceramic piston pump, 12–80 μL/rev, for small-volume reagent dispensing and titrant dosing.",
+    "p635": "RPL-P6.35 valveless rotary piston pump, 50–300 μL/rev, with wash ports for reagent dispensing and volumetric filling.",
+    "p15": "RPL-P15 ceramic piston metering pump, 300–1200 μL/rev, with wash ports for reagent filling and buffer dispensing.",
+    "dual9": "DRPL-0109 dual-head ceramic piston metering pump for reagent dilution and buffer preparation at a 1:9 concentrate-to-diluent volume ratio.",
+    "dual19": "DRPL-0119 dual-head piston metering pump for concentrate dilution and proportional dosing at a 1:19 concentrate-to-diluent volume ratio."
   },
-  descriptions: {
-    p4: "FOREACH RPL-P4 is a single-head ceramic-piston valveless metering pump with a displacement of 12–80 μL/rev for small-volume reagent dispensing, titrant dosing and repeated filling. Rotary and reciprocating piston motion handles suction and discharge. The shown configuration uses a polyvinylidene fluoride (PVDF) head, an aluminium oxide (Al₂O₃) ceramic set and a 1/4-28 UNF-2B working-fluid port. Match displacement and operating cycles to dose volume, then assess the drive against the available time; displacement per revolution is not the minimum reliable dose.",
-    p635: "FOREACH RPL-P6.35 is a single-head ceramic-piston valveless metering pump with a displacement of 50–300 μL/rev for reagent dispensing, titrant dosing and volumetric filling. The shown configuration uses a polyvinylidene fluoride (PVDF) head and a zirconium dioxide (ZrO₂) ceramic set. Mechanical displacement adjustment and motor-speed selection match output and timing. Working-fluid and wash-fluid ports are both 1/4-28 UNF-2B, but serve different circuits; the wash circuit is for the piston area and must not be confused with the working-fluid path.",
-    p15: "FOREACH RPL-P15 is a single-head ceramic-piston valveless metering pump with a displacement of 300–1200 μL/rev for larger-volume reagent filling, buffer dispensing and quantitative liquid supply. The shown configuration uses a polyvinylidene fluoride (PVDF) head and an aluminium oxide (Al₂O₃) ceramic set. Mechanical displacement adjustment and motor-speed selection match the required average flow. The working-fluid port is G1/8 and the wash-fluid port is 1/4-28 UNF-2B. Assess dose volume and cycle time for filling, or flow and duration for continuous supply.",
-    dual: "FOREACH {{model}} is a dual-head ceramic-piston valveless metering pump for concentrate dilution, buffer preparation and proportional dosing at a concentrate-to-diluent volume ratio of {{ratio}}. The shown configuration delivers {{concentrate}} μL of concentrate and {{diluent}} μL of diluent, giving a nominal combined volume of {{total}} mL. It can be specified as a concentrate dilution pump or proportioning pump. Proportional delivery and downstream mixing are separate steps: check each path output, the ratio and the uniformity of the prepared liquid."
+  introductions: {
+    "p4": {
+      "title": "RPL-P4 Valveless Ceramic Piston Metering Pump, 12–80 μL/rev, for Reagent Dispensing and Titration",
+      "paragraphs": [
+        "RPL-P4 is a single-head valveless ceramic piston metering pump with a displacement of 12–80 μL per revolution. The piston rotates to connect the metering chamber alternately to the inlet and outlet, while its axial reciprocating motion draws in and discharges liquid. This mechanism needs no separate inlet or outlet check valves. Nominal dispense volume depends on displacement per revolution and the number of revolutions; the drive coordinates repeated dispensing cycles.",
+        "Applications include small-volume reagent dispensing in automated analyzers, titrant delivery in automatic titrators, and volumetric filling of laboratory vials and reagent tubes. Its smaller displacement range helps match operating cycles to small-volume tasks. Near a titration endpoint, the required increment must still be checked against drive positioning and the volume actually delivered at the tip.",
+        "The shown configuration combines a polyvinylidene fluoride (PVDF) pump head with an aluminium oxide (Al₂O₃) ceramic set and connects to the instrument circuit through tubing fittings. Check wetted materials against both the reagent and cleaning liquid. The displacement range is not a validated minimum dispense volume."
+      ],
+      "commonApplications": [
+        "Automated analyzers: small-volume reagent dispensing and dosing",
+        "Automatic titrators: titrant delivery and incremental dosing",
+        "Laboratory filling systems: volumetric filling of vials and reagent tubes"
+      ],
+      "metaDescription": "RPL-P4 valveless ceramic piston metering pump, 12–80 μL/rev, for small-volume reagent dispensing and titration. PVDF head and alumina ceramic set."
+    },
+    "p635": {
+      "title": "RPL-P6.35 Valveless Ceramic Piston Metering Pump, 50–300 μL/rev, with Wash Ports for Dispensing and Filling",
+      "paragraphs": [
+        "RPL-P6.35 is a single-head valveless ceramic piston metering pump with a displacement of 50–300 μL per revolution. Piston rotation alternately connects the inlet and outlet; axial reciprocation changes the metering chamber volume to draw in and discharge liquid. Separate inlet and outlet check valves are therefore unnecessary within the pumping mechanism. Mechanical displacement adjustment sets nominal volume per revolution, while motor speed sets average flow and delivery time.",
+        "Applications include staged reagent dispensing in automated analyzers, titrant delivery in laboratory titrators, and volumetric filling of reagent tubes and small bottles. A dispense can comprise one or more complete revolutions, allowing the delivery sequence to be matched to the target dose and instrument cycle time.",
+        "The shown configuration uses a polyvinylidene fluoride (PVDF) pump head and a zirconium dioxide (ZrO₂) ceramic set, with wash ports for rinsing the piston area. The working-fluid circuit draws in and discharges reagent; the wash circuit rinses the piston area. Plan routine and shutdown cleaning around the liquid properties, and recalibrate delivered volume after adjusting displacement or changing the fluid circuit."
+      ],
+      "commonApplications": [
+        "Automated analyzers: reagent dispensing and staged dosing",
+        "Laboratory titrators: titrant delivery and dosing",
+        "Reagent filling systems: volumetric filling of tubes and small bottles"
+      ],
+      "metaDescription": "RPL-P6.35 valveless metering pump, 50–300 μL/rev, for reagent dispensing, titration and filling. PVDF head, zirconia ceramic set and piston wash ports."
+    },
+    "p15": {
+      "title": "RPL-P15 Valveless Ceramic Piston Metering Pump, 300–1200 μL/rev, with Wash Ports for Reagent Filling and Buffer Dispensing",
+      "paragraphs": [
+        "RPL-P15 is a single-head valveless ceramic piston metering pump with a displacement of 300–1200 μL per revolution. The piston rotates to alternate between inlet and outlet and reciprocates axially to draw in and discharge liquid, eliminating separate inlet and outlet check valves from the pumping mechanism. Mechanical displacement adjustment, motor speed and revolution count can be combined to match average flow and volume per dispense.",
+        "Applications include volumetric reagent bottle filling, dispensing premixed buffer in laboratory preparation workstations, and metered liquid supply in analytical instruments. For a given target volume, a larger displacement requires fewer revolutions, helping match delivery time to larger-volume dispensing tasks.",
+        "The shown configuration combines a polyvinylidene fluoride (PVDF) pump head with an aluminium oxide (Al₂O₃) ceramic set and wash ports for rinsing the piston area. These ports allow cleaning procedures to be planned around the reagent. Check wetted materials against both the process and cleaning liquids, and calibrate dispense volume and flow in the instrument's fluid circuit."
+      ],
+      "commonApplications": [
+        "Reagent filling systems: volumetric bottle filling",
+        "Laboratory preparation workstations: premixed buffer dispensing and reservoir replenishment",
+        "Analytical instrument supply modules: metered liquid delivery"
+      ],
+      "metaDescription": "RPL-P15 valveless metering pump, 300–1200 μL/rev, for reagent filling and buffer dispensing. PVDF head, alumina ceramic set and piston wash ports."
+    },
+    "dual9": {
+      "title": "DRPL-0109 Dual-Head Valveless Ceramic Piston Metering Pump for 1:9 Reagent Dilution and Proportional Dosing",
+      "paragraphs": [
+        "DRPL-0109 is a dual-head valveless ceramic piston metering pump that delivers concentrate and diluent at a 1:9 volume ratio. Two pump heads meter the liquids separately. Rotary and axial reciprocating piston motion switches the flow paths and draws in and discharges liquid without separate inlet or outlet check valves in the pumping mechanism. Integrating both metering paths in one pump assembly helps organize a fluid circuit around a fixed ratio.",
+        "Applications include inline dilution of concentrated reagents in automated analyzers, buffer preparation in laboratory equipment, and proportional batch dosing in reagent production. A ratio of 1:9 means one volume of concentrate plus nine volumes of diluent. Select this configuration for recipes requiring that ratio and repeated delivery of both liquids.",
+        "Connect each working-fluid path to its own supply. Wash ports allow rinsing of the piston area to be arranged for each liquid. Downstream junctions and mixing components combine the two outputs into a working solution. Verify the delivery ratio and mixture uniformity separately, and match wetted materials and cleaning liquids to the specific configuration."
+      ],
+      "commonApplications": [
+        "Automated analyzers: inline reagent dilution at a 1:9 concentrate-to-diluent ratio",
+        "Laboratory preparation equipment: fixed-ratio buffer preparation",
+        "Reagent production stations: proportional batch dosing of two liquids"
+      ],
+      "metaDescription": "DRPL-0109 dual-head valveless metering pump for 1:9 concentrate-to-diluent dosing. Explore reagent dilution, buffer preparation and mixing requirements."
+    },
+    "dual19": {
+      "title": "DRPL-0119 Dual-Head Valveless Ceramic Piston Metering Pump for 1:19 Concentrate Dilution and Working-Solution Preparation",
+      "paragraphs": [
+        "DRPL-0119 is a dual-head valveless ceramic piston metering pump that delivers concentrate and diluent at a 1:19 volume ratio. The two pump heads meter concentrate and diluent separately. Piston rotation alternately connects the inlet and outlet, while axial reciprocation draws in and discharges liquid. This mechanism removes the need for separate inlet and outlet check valves within the pump and supports two-liquid delivery at a fixed ratio.",
+        "Applications include concentrated-reagent dilution in automated analyzers, working-solution preparation in laboratory systems, and proportional batch delivery in reagent preparation stations. A ratio of 1:19 means one volume of concentrate plus nineteen volumes of diluent. Select it according to the recipe; it uses a greater proportion of diluent than the 1:9 configuration.",
+        "Connect the two working-fluid paths to their respective supplies and use the wash ports to arrange rinsing around the pistons. Match operating cycles to target batch volume and preparation time, with downstream mixing and storage as required. Changing the recipe ratio requires a suitable pump-head and displacement configuration; changing overall speed alone cannot turn 1:19 into another ratio."
+      ],
+      "commonApplications": [
+        "Automated analyzers: reagent dilution at a 1:19 concentrate-to-diluent ratio",
+        "Laboratory preparation systems: fixed-ratio working-solution preparation",
+        "Reagent preparation stations: proportional batch delivery of concentrate and diluent"
+      ],
+      "metaDescription": "DRPL-0119 dual-head valveless metering pump for 1:19 concentrate-to-diluent dosing. Explore concentrate dilution and fixed-ratio working-solution preparation."
+    }
   },
   intros: {
     p4: "RPL-P4 addresses small-volume dosing through one liquid path. It may be specified as a reagent dispensing pump, titrant dosing pump or volumetric filling pump according to its task. These names do not identify different pump mechanisms. The applications below connect dose volume, operating sequence and timing.",
@@ -103,6 +171,36 @@ export const en: ValvelessLocaleCopy = {
       "The shown working-fluid ports are 1/4-28 UNF-2B for reagent A and G1/8 for reagent B; both wash-fluid ports are 1/4-28 UNF-2B. Confirm the A/B-to-liquid mapping from the configuration drawing rather than port size alone. Check the pressure and supply status of both paths separately."
     ] }
   },
+  modelFaqs: {
+    "p635": [
+      {
+        "question": "How should I choose between RPL-P6.35 and RPL-P4?",
+        "answer": "Their displacement ranges are 50–300 μL/rev and 12–80 μL/rev respectively. Start with the target dose and available time to estimate displacement and revolution count, then compare small-dose output and drive options. Greater displacement does not mean greater accuracy."
+      },
+      {
+        "question": "What do displacement adjustment and motor speed control?",
+        "answer": "Mechanical adjustment changes the nominal volume delivered per complete revolution. Motor speed changes how many revolutions are completed per unit time. Estimate dose from displacement × revolution count and average flow from displacement × speed, then calibrate actual output."
+      },
+      {
+        "question": "How do the wash ports differ from the working-fluid ports?",
+        "answer": "Both use 1/4-28 UNF-2B threads in the shown configuration, but they serve different circuits. Working-fluid ports carry reagent into and out of the pump; wash ports rinse the piston area. Matching threads do not make them interchangeable. Follow the drawing for the supplied configuration."
+      }
+    ],
+    "p15": [
+      {
+        "question": "How does RPL-P15 differ from RPL-P6.35?",
+        "answer": "Their displacement ranges are 300–1200 μL/rev and 50–300 μL/rev respectively. RPL-P15 is an option for larger-volume filling and liquid supply. Compare the target fill volume, delivery time and any small-dose requirements, rather than choosing by flow alone."
+      },
+      {
+        "question": "Can 300–1200 μL/rev be read as a flow rate?",
+        "answer": "No. It is displacement per revolution; flow also depends on speed. For example, 500 μL/rev × 120 rpm gives a nominal average flow of 60 mL/min. Calibrate the actual flow with the liquid and backpressure in use. Average flow does not imply pulse-free delivery."
+      },
+      {
+        "question": "Can RPL-P15 prepare a two-liquid mixture on its own?",
+        "answer": "It is a single-head pump for metering or dispensing one liquid. Proportional preparation of two liquids requires another fluid path and suitable control. For fixed concentrate-to-diluent ratios of 1:9 or 1:19, a DRPL dual-head configuration can be assessed separately."
+      }
+    ]
+  },
   faqSingle: [
     { question: "How do application names relate to a valveless metering pump?", answer: "Valveless metering pump describes the pump mechanism and metering function. Reagent dispensing pump, titrant dosing pump and filling pump describe tasks within an instrument. These task names do not mean that every pump used in that application has the same mechanism." },
     { question: "Is {{range}} the volume of each dispense?", answer: "It is displacement per revolution, not a guaranteed dose or minimum reliable volume. For complete revolutions, multiply the displacement setting by revolution count to estimate nominal dose, then calibrate at the outlet. Do not assume proportional delivery at every arbitrary partial angle." },
@@ -122,8 +220,6 @@ export const en: ValvelessLocaleCopy = {
     p635: "The shown configuration uses a polyvinylidene fluoride (PVDF) head and plug, a zirconium dioxide (ZrO₂) ceramic set, and 1/4-28 UNF-2B working-fluid and wash-fluid ports. Identical threads do not make the two circuits interchangeable.",
     p15: "The shown configuration uses a polyvinylidene fluoride (PVDF) head and plug, an aluminium oxide (Al₂O₃) ceramic set, a G1/8 working-fluid port and a 1/4-28 UNF-2B wash-fluid port."
   },
-  seoSingle: "FOREACH {{model}} valveless metering pump, {{range}}. Explore applications, dose and cycle-time calculations, wetted materials and integration requirements.",
-  seoDual: "FOREACH {{model}} dual-head valveless metering pump, {{ratio}} concentrate-to-diluent ratio and {{concentrate}} μL + {{diluent}} μL configuration. Explore dilution, proportional dosing and mixing requirements.",
   selectionSingle: "Provide liquid composition, dose volume or continuous flow, allowable delivery time, daily run duration, inlet conditions, outlet backpressure and drive requirements. Use these inputs to size displacement and timing, then verify output in the actual circuit. Application directions are not claims of validation in every listed instrument.",
   selectionDual: "Provide both liquids, target volume ratio, batch volume or total flow, preparation time, both inlet conditions and backpressures, and the downstream mixing arrangement. Assess proportional delivery, instrument control and mixture uniformity separately; listed applications are selection directions, not universal validation claims.",
   specs: { "产品类型": "Product type", "排量范围": "Displacement per revolution", "转速": "Speed", "准确度": "Accuracy", "准确性": "Accuracy", "重复性": "Repeatability", "耐压": "Pressure rating", "寿命": "Service life", "泵头材质": "Pump head material", "堵头材质": "Plug material", "陶瓷套件": "Ceramic set", "工作液路接口": "Working-fluid port", "清洗液路接口": "Wash-fluid port", "整体尺寸": "Overall dimensions", "重量": "Weight", "配置方式": "Configuration", "稀释比": "Concentrate-to-diluent volume ratio", "浓缩液份数": "Concentrate parts", "稀释液份数": "Diluent parts", "浓缩液定量（μL）": "Concentrate volume (μL)", "稀释液定量（μL）": "Diluent volume (μL)", "配液量（mL）": "Combined volume (mL)", "流量 QMin，mL/min": "Minimum flow QMin (mL/min)", "流量 QMax，mL/min": "Maximum flow QMax (mL/min)", "试剂A 工作液路接口": "Reagent A working-fluid port", "试剂B 工作液路接口": "Reagent B working-fluid port", "试剂A 清洗液路接口": "Reagent A wash-fluid port", "试剂B 清洗液路接口": "Reagent B wash-fluid port", "试剂A 端耐压": "Reagent A pressure rating", "试剂B 端耐压": "Reagent B pressure rating", "尺寸/mm": "Dimensions (mm)" },

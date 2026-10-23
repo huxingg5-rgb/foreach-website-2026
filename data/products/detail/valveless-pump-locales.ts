@@ -10,6 +10,13 @@ import type { ProductApplicationsContent } from "./product-detail.types";
 // This module must stay independent of the selection catalog and SEO title helper:
 // both use these authored strings. Identity and specifications come from the source records.
 const locales = { en, es, fr, ko, ru };
+const galleryViews = {
+  en: { nameplate: "nameplate view", angled: "angled view" },
+  es: { nameplate: "vista de la placa de identificación", angled: "vista en perspectiva" },
+  fr: { nameplate: "vue de la plaque signalétique", angled: "vue en perspective" },
+  ko: { nameplate: "명판 보기", angled: "사선 보기" },
+  ru: { nameplate: "вид заводской таблички", angled: "вид под углом" },
+};
 export const valvelessForeignLocales = Object.keys(locales) as ValvelessForeignLocale[];
 export function getValvelessLocaleCopy(locale: string) {
   return locales[locale as ValvelessForeignLocale];
@@ -46,6 +53,9 @@ export function getValvelessForeignContent(slug: string, locale: string) {
     if (!(token in params)) throw new Error(`Unknown valveless content token: ${token}`);
     return String(params[token]);
   });
+  const introductionKey = dual ? (slug === "drpl-0109" ? "dual9" : "dual19") : key as "p4" | "p635" | "p15";
+  const introduction = copy.introductions[introductionKey];
+  const introductionParagraphs = introduction.paragraphs.map(fill);
   const items = scenarios[slug].map(id => ({
     title: fill(copy.applications[id].title), paragraphs: copy.applications[id].paragraphs.map(fill),
   }));
@@ -70,13 +80,24 @@ export function getValvelessForeignContent(slug: string, locale: string) {
     const translatedValue = localizedValue(row.value);
     return { ...row, label, name: label, title: label, value: translatedValue, content: translatedValue };
   });
+  const faqs = dual ? copy.faqDual : key === "p635" || key === "p15"
+    ? [...copy.modelFaqs[key], ...copy.faqSingle.slice(3)]
+    : copy.faqSingle;
+  const imageAlt = `FOREACH ${model} ${dual ? copy.dualName : copy.singleName}`;
+  const views = galleryViews[locale as ValvelessForeignLocale];
+  const additionalImageAlts = (source.additionalImages || []).map((_, index) => {
+    const isNameplate = slug === "rpl-p15" && index === 0;
+    const angle = slug === "rpl-p15" ? index : index + 1;
+    return `${imageAlt}, ${isNameplate ? views.nameplate : `${views.angled} ${angle}`}`;
+  });
   return {
-    model, source, cardSummary: fill(copy.cards[key]),
-    description: fill(copy.descriptions[key]),
-    metaDescription: fill(dual ? copy.seoDual : copy.seoSingle),
-    applicationDetails, commonApplications: items.map(item => item.title),
-    faqs: (dual ? copy.faqDual : copy.faqSingle).map(item => ({ question: fill(item.question), answer: fill(item.answer) })),
-    specs, imageAlt: `FOREACH ${model} ${dual ? copy.dualName : copy.singleName}`,
+    model, source, cardSummary: fill(copy.cards[introductionKey]),
+    title: fill(introduction.title), introductionParagraphs,
+    description: introductionParagraphs.join("\n\n"),
+    metaDescription: fill(introduction.metaDescription),
+    applicationDetails, commonApplications: introduction.commonApplications.map(fill),
+    faqs: faqs.map(item => ({ question: fill(item.question), answer: fill(item.answer) })),
+    specs, imageAlt, additionalImageAlts,
     presentation: {
       specNotes: dual ? copy.specNotesDual : copy.specNotesSingle,
       modelUnavailable: fill(copy.modelUnavailable), drawingUnavailable: fill(copy.drawingUnavailable),

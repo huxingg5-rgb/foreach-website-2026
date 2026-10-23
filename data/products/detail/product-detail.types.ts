@@ -108,6 +108,7 @@ export type ProductDetailZhRecord = {
    * 没有附属图时使用空数组。
    */
   additionalImages: string[];
+  additionalImageAlts?: string[];
 
   showConfigurator: boolean;
   showDatasheetRequest: boolean;

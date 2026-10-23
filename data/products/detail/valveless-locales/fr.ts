@@ -27,17 +27,85 @@ export const fr: ValvelessLocaleCopy = {
     "Précisez composition, viscosité, alimentation et contre-pression de chaque liquide, ainsi que le rapport, la tuyauterie, la commande et l'espace disponible. Contrôlez séparément les matériaux en contact avec le liquide et la configuration de chaque circuit."
   ] },
   materials: { pvdf: "polyfluorure de vinylidène (PVDF)", alumina: "oxyde d'aluminium (Al₂O₃)", zirconia: "dioxyde de zirconium (ZrO₂)" },
+  // Adapted from the reviewed Chinese cards and three-paragraph introductions (2026-10-23).
   cards: {
-    p4: "Pompe doseuse sans valve à une tête et piston céramique, 12–80 μL/rev, pour les petites doses de réactifs, l'ajout de titrant et la distribution répétée.",
-    p635: "Pompe doseuse sans valve à une tête et piston céramique, 50–300 μL/rev, pour la distribution de réactifs, le titrage et le remplissage volumétrique. Tête en polyfluorure de vinylidène (PVDF), céramique en dioxyde de zirconium (ZrO₂).",
-    p15: "Pompe doseuse sans valve à une tête et piston céramique, 300–1200 μL/rev, pour le remplissage de réactifs, l'ajout de tampon et le transfert quantitatif. Tête en polyfluorure de vinylidène (PVDF), céramique en oxyde d'aluminium (Al₂O₃).",
-    dual: "Pompe doseuse sans valve à double tête pour la dilution de concentrés et le dosage proportionnel. Rapport volumique concentré/diluant {{ratio}} ; configuration présentée : {{concentrate}} μL + {{diluent}} μL."
+    "p4": "RPL-P4, pompe miniature sans valve à piston céramique, 12–80 μL/rev, pour les petites doses de réactifs et l'ajout de titrant.",
+    "p635": "RPL-P6.35, pompe sans valve à piston rotatif, 50–300 μL/rev, avec raccords de rinçage pour la distribution de réactifs et le remplissage volumétrique.",
+    "p15": "RPL-P15, pompe doseuse à piston céramique, 300–1200 μL/rev, avec raccords de rinçage pour le remplissage de réactifs et la distribution de tampons.",
+    "dual9": "DRPL-0109, pompe doseuse à double tête et pistons céramiques pour la dilution de réactifs et la préparation de tampons au rapport volumique concentré/diluant 1:9.",
+    "dual19": "DRPL-0119, pompe doseuse à double tête et pistons pour la dilution de réactifs concentrés et le dosage proportionnel au rapport volumique concentré/diluant 1:19."
   },
-  descriptions: {
-    p4: "La FOREACH RPL-P4 est une pompe doseuse sans valve à une tête et piston céramique de 12–80 μL/rev, destinée aux petites doses de réactifs, au titrage et au remplissage répété. La rotation et la translation du piston assurent l'aspiration et le refoulement. La configuration présentée comporte une tête en polyfluorure de vinylidène (PVDF), un ensemble en oxyde d'aluminium (Al₂O₃) et un raccord de travail 1/4-28 UNF-2B. Adaptez cylindrée et nombre de tours au volume visé, puis l'entraînement au temps disponible ; la cylindrée par tour n'est pas la dose minimale fiable.",
-    p635: "La FOREACH RPL-P6.35 est une pompe doseuse sans valve à une tête et piston céramique de 50–300 μL/rev pour la distribution de réactifs, le titrage et le remplissage volumétrique. La configuration présentée associe une tête en polyfluorure de vinylidène (PVDF) à un ensemble en dioxyde de zirconium (ZrO₂). Réglage mécanique de la cylindrée et vitesse du moteur permettent d'adapter quantité et durée. Les raccords de travail et de lavage sont tous deux en 1/4-28 UNF-2B, mais desservent des circuits distincts : le lavage de la zone du piston ne doit pas être confondu avec le circuit de travail.",
-    p15: "La FOREACH RPL-P15 est une pompe doseuse sans valve à une tête et piston céramique de 300–1200 μL/rev pour le remplissage de volumes de réactifs plus importants, la distribution de tampons et l'alimentation quantitative. La configuration présentée utilise une tête en polyfluorure de vinylidène (PVDF) et un ensemble en oxyde d'aluminium (Al₂O₃). Cylindrée mécanique et vitesse déterminent le débit moyen visé. Le raccord de travail est G1/8 et celui de lavage 1/4-28 UNF-2B. En remplissage, définissez volume et cycle ; en alimentation continue, débit et durée.",
-    dual: "La FOREACH {{model}} est une pompe doseuse sans valve à double tête et pistons céramiques pour la dilution de concentrés, la préparation de tampons et le dosage proportionnel au rapport volumique concentré/diluant {{ratio}}. La configuration présentée fournit {{concentrate}} μL de concentré et {{diluent}} μL de diluant, soit un volume nominal combiné de {{total}} mL. Elle peut être désignée comme pompe de dilution ou pompe proportionnelle. Le dosage des deux liquides et leur mélange en aval sont distincts : contrôlez les volumes de chaque circuit, le rapport et l'homogénéité finale."
+  introductions: {
+    "p4": {
+      "title": "RPL-P4 : pompe doseuse sans valve à piston céramique, 12–80 μL/rev, pour réactifs et titrage",
+      "paragraphs": [
+        "La RPL-P4 est une pompe doseuse sans valve à une tête et piston céramique, d'une cylindrée de 12–80 μL par tour. La rotation du piston relie alternativement la chambre à l'aspiration puis au refoulement ; son mouvement axial alternatif aspire et chasse le liquide. Le mécanisme ne nécessite donc pas de clapets antiretour distincts à l'entrée et à la sortie. Le volume nominal distribué dépend de la cylindrée et du nombre de tours, avec un entraînement adapté aux séquences de dosage répétées.",
+        "Elle peut être sélectionnée pour la distribution de petits volumes de réactifs dans les analyseurs automatisés, l'ajout de titrant dans les titrateurs et le remplissage volumétrique de flacons ou de tubes au laboratoire. Sa faible cylindrée facilite l'adaptation du nombre de cycles aux petites doses. À proximité du point final d'un titrage, il reste nécessaire de vérifier le positionnement de l'entraînement et le volume réellement délivré à la pointe.",
+        "La configuration présentée associe une tête en polyfluorure de vinylidène (PVDF) à un ensemble céramique en alumine (Al₂O₃) et se raccorde au circuit de l'instrument par des raccords de tuyauterie. Vérifiez la compatibilité des matériaux en contact avec le réactif et le liquide de nettoyage. La plage de cylindrée ne correspond pas à un volume minimal de dosage validé."
+      ],
+      "commonApplications": [
+        "Analyseurs automatisés : distribution et dosage de petits volumes de réactifs",
+        "Titrateurs automatiques : alimentation en titrant et ajouts successifs",
+        "Équipements de laboratoire : remplissage volumétrique de flacons et de tubes"
+      ],
+      "metaDescription": "Pompe doseuse sans valve RPL-P4, 12–80 μL/rev, pour petites doses de réactifs et titrage. Tête en PVDF et ensemble céramique en alumine."
+    },
+    "p635": {
+      "title": "RPL-P6.35 : pompe doseuse sans valve, 50–300 μL/rev, avec rinçage pour distribution et remplissage",
+      "paragraphs": [
+        "La RPL-P6.35 est une pompe doseuse sans valve à une tête et piston céramique, d'une cylindrée de 50–300 μL par tour. La rotation du piston alterne la connexion entre aspiration et refoulement, tandis que son déplacement axial fait varier le volume de la chambre pour aspirer et délivrer le liquide. Le mécanisme fonctionne sans clapets antiretour d'entrée et de sortie séparés. Le réglage mécanique fixe le volume nominal par tour ; la vitesse du moteur permet d'adapter le débit moyen et la durée de distribution.",
+        "Les applications comprennent l'ajout de réactifs par étapes dans les analyseurs automatisés, l'alimentation en titrant des titrateurs de laboratoire et le remplissage volumétrique de tubes et de petits flacons. Une dose peut être obtenue en un ou plusieurs cycles complets, selon le volume cible et le temps disponible dans le cycle de l'instrument.",
+        "La configuration présentée comprend une tête en polyfluorure de vinylidène (PVDF), un ensemble céramique en zircone (ZrO₂) et des raccords de rinçage de la zone du piston. Le circuit de travail assure l'aspiration et le refoulement du réactif ; le circuit de rinçage nettoie la zone du piston. Adaptez le nettoyage courant et à l'arrêt aux propriétés du liquide, puis réétalonnez le volume délivré après tout réglage de cylindrée ou changement du circuit."
+      ],
+      "commonApplications": [
+        "Analyseurs automatisés : distribution et ajout de réactifs par étapes",
+        "Titrateurs de laboratoire : alimentation et dosage du titrant",
+        "Conditionnement de réactifs : remplissage volumétrique de tubes et de petits flacons"
+      ],
+      "metaDescription": "RPL-P6.35, pompe doseuse sans valve de 50–300 μL/rev pour réactifs, titrage et remplissage. Tête en PVDF, céramique en zircone et raccords de rinçage."
+    },
+    "p15": {
+      "title": "RPL-P15 : pompe doseuse sans valve, 300–1200 μL/rev, avec rinçage pour remplissage et distribution de tampons",
+      "paragraphs": [
+        "La RPL-P15 est une pompe doseuse sans valve à une tête et piston céramique, d'une cylindrée de 300–1200 μL par tour. La rotation du piston alterne les connexions d'aspiration et de refoulement, et son mouvement axial assure le pompage sans clapets antiretour séparés. Le réglage mécanique de la cylindrée, la vitesse du moteur et le nombre de tours permettent d'adapter le débit moyen et le volume distribué à chaque opération.",
+        "Elle peut être sélectionnée pour le remplissage volumétrique de flacons de réactifs, la distribution de tampons déjà préparés dans les postes de laboratoire et l'alimentation dosée d'instruments d'analyse. Pour un même volume cible, une cylindrée plus élevée réduit le nombre de tours nécessaire et facilite l'adaptation du temps de distribution aux volumes plus importants.",
+        "La configuration présentée associe une tête en polyfluorure de vinylidène (PVDF), un ensemble céramique en alumine (Al₂O₃) et des raccords de rinçage de la zone du piston. Le nettoyage peut ainsi être organisé selon les propriétés du réactif. Vérifiez la compatibilité des matériaux avec le liquide distribué et le liquide de nettoyage ; étalonnez les volumes et les débits dans le circuit réel de l'instrument."
+      ],
+      "commonApplications": [
+        "Conditionnement de réactifs : remplissage volumétrique de flacons",
+        "Postes de préparation de laboratoire : distribution de tampons préparés et réapprovisionnement des réservoirs",
+        "Modules d'alimentation d'analyseurs : transfert et alimentation dosés"
+      ],
+      "metaDescription": "RPL-P15, pompe doseuse sans valve de 300–1200 μL/rev pour remplissage de réactifs et distribution de tampons. PVDF, alumine et raccords de rinçage."
+    },
+    "dual9": {
+      "title": "DRPL-0109 : pompe doseuse sans valve à double tête pour dilution 1:9 et dosage proportionnel",
+      "paragraphs": [
+        "La DRPL-0109 est une pompe doseuse sans valve à double tête et pistons céramiques, destinée à délivrer un concentré et un diluant au rapport volumique 1:9. Chaque tête assure le dosage d'un liquide. La rotation et le mouvement axial alternatif des pistons réalisent la commutation, l'aspiration et le refoulement sans clapets antiretour séparés dans le mécanisme. Les deux circuits de dosage sont réunis dans un même ensemble pour faciliter l'intégration d'une alimentation à rapport fixe.",
+        "Les applications comprennent la dilution en ligne de réactifs concentrés dans les analyseurs automatisés, la préparation de tampons au laboratoire et le dosage proportionnel par lots en production de réactifs. Le rapport 1:9 signifie un volume de concentré pour neuf volumes de diluant. Choisissez cette configuration lorsque la recette exige ce rapport et des apports répétés des deux liquides.",
+        "Chaque circuit de travail se raccorde à sa propre source de liquide. Les raccords de rinçage permettent de nettoyer la zone du piston en fonction du fluide de chaque circuit. Les sorties doivent être réunies et mélangées en aval pour former la solution de travail. Vérifiez séparément le rapport des volumes délivrés et l'homogénéité ; adaptez les matériaux en contact et les liquides de nettoyage à la configuration."
+      ],
+      "commonApplications": [
+        "Analyseurs automatisés : dilution en ligne au rapport concentré/diluant 1:9",
+        "Équipements de laboratoire : préparation de tampons à rapport fixe",
+        "Production de réactifs : dosage proportionnel de deux liquides par lots"
+      ],
+      "metaDescription": "DRPL-0109, pompe doseuse sans valve à double tête, rapport concentré/diluant 1:9, pour dilution de réactifs et préparation de tampons."
+    },
+    "dual19": {
+      "title": "DRPL-0119 : pompe doseuse sans valve à double tête pour dilution 1:19 et préparation de solutions",
+      "paragraphs": [
+        "La DRPL-0119 est une pompe doseuse sans valve à double tête et pistons céramiques, destinée à délivrer un concentré et un diluant au rapport volumique 1:19. Les deux têtes dosent séparément les liquides. La rotation du piston alterne la connexion à l'entrée et à la sortie, et son mouvement axial assure l'aspiration et le refoulement. Le mécanisme ne comporte pas de clapets antiretour d'entrée et de sortie indépendants et permet l'alimentation de deux circuits à rapport fixe.",
+        "Elle peut être sélectionnée pour la dilution de réactifs concentrés dans les analyseurs, la préparation de solutions de travail au laboratoire et l'alimentation proportionnelle par lots. Le rapport 1:19 signifie un volume de concentré pour dix-neuf volumes de diluant. Le choix dépend de la recette ; cette configuration apporte une proportion de diluant plus élevée que la configuration 1:9.",
+        "Raccordez chaque circuit de travail à sa source et utilisez les raccords de rinçage pour organiser le nettoyage de la zone des pistons. Adaptez les cycles au volume à préparer et au temps disponible, avec les éléments de mélange et de stockage nécessaires en aval. Pour changer de rapport, il faut revoir la configuration des têtes et des cylindrées ; une variation de vitesse globale ne suffit pas à transformer le rapport 1:19."
+      ],
+      "commonApplications": [
+        "Analyseurs automatisés : dilution de réactifs au rapport concentré/diluant 1:19",
+        "Systèmes de laboratoire : préparation de solutions de travail à rapport fixe",
+        "Préparation de réactifs : alimentation proportionnelle en concentré et diluant par lots"
+      ],
+      "metaDescription": "DRPL-0119, pompe doseuse sans valve à double tête, rapport concentré/diluant 1:19, pour dilution de concentrés et préparation de solutions de travail."
+    }
   },
   intros: {
     p4: "La RPL-P4 assure le dosage de petits volumes sur un seul circuit. Selon sa fonction, elle est appelée pompe de distribution de réactifs, de dosage de titrant ou de remplissage volumétrique. Ces noms ne désignent pas des mécanismes différents. Les applications ci-dessous relient volume, séquence et temps de cycle.",
@@ -101,6 +169,36 @@ export const fr: ValvelessLocaleCopy = {
       "Les raccords de travail présentés sont 1/4-28 UNF-2B pour le réactif A et G1/8 pour B ; les deux raccords de lavage sont 1/4-28 UNF-2B. Vérifiez l'affectation A/B aux liquides sur le plan, sans la déduire de la taille du raccord. Contrôlez pression et alimentation séparément sur les deux circuits."
     ] }
   },
+  modelFaqs: {
+    "p635": [
+      {
+        "question": "Comment choisir entre RPL-P6.35 et RPL-P4 ?",
+        "answer": "Leurs cylindrées sont respectivement de 50–300 μL/rev et 12–80 μL/rev. Partez du volume cible et du temps disponible pour estimer la cylindrée et le nombre de tours, puis comparez les performances aux petites doses et les options d'entraînement. Une cylindrée plus élevée ne signifie pas une meilleure exactitude."
+      },
+      {
+        "question": "Quels sont les effets du réglage de cylindrée et de la vitesse ?",
+        "answer": "Le réglage mécanique modifie le volume nominal par tour complet. La vitesse détermine le nombre de tours par unité de temps. Estimez la dose par cylindrée × nombre de tours et le débit moyen par cylindrée × vitesse, puis étalonnez la quantité réellement délivrée."
+      },
+      {
+        "question": "Quelle différence entre les raccords de rinçage et de travail ?",
+        "answer": "Dans la configuration présentée, les deux utilisent un filetage 1/4-28 UNF-2B mais desservent des circuits distincts. Les raccords de travail assurent l'aspiration et le refoulement du réactif ; ceux de rinçage nettoient la zone du piston. Le même filetage ne les rend pas interchangeables. Suivez le plan de la configuration fournie."
+      }
+    ],
+    "p15": [
+      {
+        "question": "Quelle différence entre RPL-P15 et RPL-P6.35 ?",
+        "answer": "Leurs cylindrées sont respectivement de 300–1200 μL/rev et 50–300 μL/rev. La RPL-P15 peut être étudiée pour le remplissage ou l'alimentation de volumes plus importants. Comparez le volume cible, le temps disponible et les besoins de petites doses, pas seulement le débit."
+      },
+      {
+        "question": "La valeur 300–1200 μL/rev correspond-elle à un débit ?",
+        "answer": "Non. Elle indique la cylindrée par tour ; le débit dépend aussi de la vitesse. Par exemple, 500 μL/rev × 120 rpm donnent un débit moyen nominal de 60 mL/min. Étalonnez le débit réel avec le liquide et la contre-pression prévus. Un débit moyen ne signifie pas une alimentation sans pulsations."
+      },
+      {
+        "question": "La RPL-P15 peut-elle préparer seule un mélange proportionnel ?",
+        "answer": "C'est une pompe à une tête destinée au dosage ou à l'alimentation d'un seul liquide. La préparation proportionnelle de deux liquides nécessite un second circuit et une commande adaptée. Pour les rapports fixes concentré/diluant 1:9 ou 1:19, une configuration DRPL à double tête peut être étudiée séparément."
+      }
+    ]
+  },
   faqSingle: [
     { question: "Que signifient les différentes appellations de la pompe ?", answer: "Pompe doseuse sans valve décrit le mécanisme et la fonction de dosage. Pompe de distribution de réactifs, de dosage de titrant ou de remplissage décrit la tâche dans l'instrument. Ces appellations ne signifient pas que toutes les pompes de l'application utilisent le même mécanisme." },
     { question: "{{range}} correspond-il au volume de chaque dose ?", answer: "Il s'agit de la cylindrée par tour, pas d'une dose garantie ni d'un volume minimal fiable. Pour des tours complets, multipliez cylindrée et nombre de tours afin d'estimer la dose nominale, puis étalonnez à la sortie. Ne supposez pas une distribution proportionnelle pour tout angle partiel arbitraire." },
@@ -120,8 +218,6 @@ export const fr: ValvelessLocaleCopy = {
     p635: "La configuration présentée utilise une tête et un bouchon en polyfluorure de vinylidène (PVDF), un ensemble en dioxyde de zirconium (ZrO₂), et des raccords de travail et de lavage 1/4-28 UNF-2B. Des filetages identiques ne rendent pas les circuits interchangeables.",
     p15: "La configuration présentée utilise une tête et un bouchon en polyfluorure de vinylidène (PVDF), un ensemble en oxyde d'aluminium (Al₂O₃), un raccord de travail G1/8 et un raccord de lavage 1/4-28 UNF-2B."
   },
-  seoSingle: "Pompe doseuse sans valve FOREACH {{model}}, {{range}}. Applications, calcul du volume et du cycle, matériaux en contact avec le liquide et intégration.",
-  seoDual: "Pompe doseuse sans valve FOREACH {{model}} à double tête, rapport concentré/diluant {{ratio}}, {{concentrate}} μL + {{diluent}} μL. Dilution, dosage et mélange.",
   selectionSingle: "Indiquez composition, volume par dose ou débit continu, durée d'ajout autorisée, durée quotidienne, alimentation en entrée, contre-pression et commande. Dimensionnez cylindrée et cycle, puis vérifiez le circuit réel. Les applications proposées ne constituent pas une validation dans chaque instrument cité.",
   selectionDual: "Indiquez les deux liquides, le rapport volumique, le volume du lot ou le débit total, la durée de préparation, les conditions d'entrée et contre-pressions, ainsi que le mélange aval. Évaluez séparément dosage proportionnel, commande et homogénéité ; les applications ne sont pas des validations universelles.",
   specs: { "产品类型": "Type de produit", "排量范围": "Cylindrée par tour", "转速": "Vitesse", "准确度": "Exactitude", "准确性": "Exactitude", "重复性": "Répétabilité", "耐压": "Tenue en pression", "寿命": "Durée de vie", "泵头材质": "Matériau de la tête", "堵头材质": "Matériau du bouchon", "陶瓷套件": "Ensemble céramique", "工作液路接口": "Raccord du circuit de travail", "清洗液路接口": "Raccord du circuit de lavage", "整体尺寸": "Dimensions hors tout", "重量": "Masse", "配置方式": "Configuration", "稀释比": "Rapport volumique concentré/diluant", "浓缩液份数": "Parts de concentré", "稀释液份数": "Parts de diluant", "浓缩液定量（μL）": "Volume de concentré (μL)", "稀释液定量（μL）": "Volume de diluant (μL)", "配液量（mL）": "Volume combiné (mL)", "流量 QMin，mL/min": "Débit minimal QMin (mL/min)", "流量 QMax，mL/min": "Débit maximal QMax (mL/min)", "试剂A 工作液路接口": "Raccord de travail du réactif A", "试剂B 工作液路接口": "Raccord de travail du réactif B", "试剂A 清洗液路接口": "Raccord de lavage du réactif A", "试剂B 清洗液路接口": "Raccord de lavage du réactif B", "试剂A 端耐压": "Tenue en pression du circuit A", "试剂B 端耐压": "Tenue en pression du circuit B", "尺寸/mm": "Dimensions (mm)" },
