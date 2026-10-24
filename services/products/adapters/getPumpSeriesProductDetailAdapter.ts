@@ -1,5 +1,7 @@
 import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
 import { getPistonPumpLocalizedContent } from "@/data/products/detail/applications/piston-pump-locales";
+import { getTmPumpGallery } from "@/data/products/detail/tm-pump-gallery";
+import { getSmPmmaPumpGallery } from "@/data/products/detail/sm-pmma-pump-gallery";
 /* =========================================================
    getPumpSeriesProductDetailAdapter.ts
    恒永达官网｜泵系列数据库数据 → 原详情页数据结构适配器
@@ -572,6 +574,8 @@ export function getPumpSeriesProductDetailAdapter(
     return {
       ...base,
       ...localized,
+      ...getTmPumpGallery(slug, locale, base.additionalImages, base.additionalImageAlts),
+      ...getSmPmmaPumpGallery(slug, locale, base.additionalImages, base.additionalImageAlts),
       __locale: locale,
       model: `Foreach ${localized.heading}`,
       name: `Foreach ${localized.heading}`,
@@ -645,6 +649,8 @@ export function getPumpSeriesProductDetailAdapter(
 
     mainImage,
     additionalImages,
+    ...getTmPumpGallery(slug, locale, additionalImages),
+    ...getSmPmmaPumpGallery(slug, locale, additionalImages),
 
     showConfigurator: false,
     showDatasheetRequest: false,

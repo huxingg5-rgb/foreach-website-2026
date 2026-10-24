@@ -1,0 +1,62 @@
+[
+  {
+    "source": "02.png",
+    "filename": "foreach-tm-pmma-piston-pump-rear-view.webp",
+    "alt": {
+      "zh": "FOREACH TM 超微型柱塞泵背面实拍，展示透明 PMMA 泵头、黑色机身和步进电机",
+      "en": "Rear view of a FOREACH TM ultra-compact piston pump with a transparent PMMA head, black body and stepper motor",
+      "es": "Vista posterior de una bomba de pistón ultracompacta FOREACH TM con cabezal transparente de PMMA, cuerpo negro y motor paso a paso",
+      "fr": "Vue arrière d’une pompe à piston ultracompacte FOREACH TM avec tête transparente en PMMA, corps noir et moteur pas à pas",
+      "ko": "투명 PMMA 헤드, 검은색 본체 및 스테퍼 모터가 보이는 FOREACH TM 초소형 피스톤 펌프의 후면",
+      "ru": "Вид сзади сверхкомпактного поршневого насоса FOREACH TM с прозрачной головкой из PMMA, чёрным корпусом и шаговым двигателем"
+    }
+  },
+  {
+    "source": "04.png",
+    "filename": "foreach-tm-50ul-500ul-pmma-piston-pumps-pair.webp",
+    "alt": {
+      "zh": "FOREACH TM-50 μL 与 TM-500 μL 柱塞泵并排实拍，展示透明 PMMA 泵头和电机线束",
+      "en": "FOREACH TM-50 μL and TM-500 μL piston pumps side by side, showing transparent PMMA heads and motor wiring",
+      "es": "Bombas de pistón FOREACH TM-50 μL y TM-500 μL una junto a otra, con cabezales transparentes de PMMA y cableado de los motores",
+      "fr": "Pompes à piston FOREACH TM-50 μL et TM-500 μL côte à côte, avec têtes transparentes en PMMA et câblage des moteurs",
+      "ko": "투명 PMMA 헤드와 모터 배선이 보이도록 나란히 배치한 FOREACH TM-50 μL 및 TM-500 μL 피스톤 펌프",
+      "ru": "Поршневые насосы FOREACH TM-50 μL и TM-500 μL рядом: прозрачные головки из PMMA и провода двигателей"
+    }
+  },
+  {
+    "source": "03.png",
+    "filename": "foreach-tm-50ul-pmma-piston-pump-front-angle.webp",
+    "alt": {
+      "zh": "FOREACH TM-50 μL 超微型柱塞泵侧前视图，展示透明 PMMA 泵头、侧面接口和电机",
+      "en": "Front angled view of a FOREACH TM-50 μL ultra-compact piston pump with a transparent PMMA head, side port and motor",
+      "es": "Vista frontal en ángulo de una bomba de pistón ultracompacta FOREACH TM-50 μL con cabezal transparente de PMMA, puerto lateral y motor",
+      "fr": "Vue de trois quarts avant d’une pompe à piston ultracompacte FOREACH TM-50 μL avec tête transparente en PMMA, orifice latéral et moteur",
+      "ko": "투명 PMMA 헤드, 측면 포트 및 모터가 보이는 FOREACH TM-50 μL 초소형 피스톤 펌프의 전면 사선 모습",
+      "ru": "Вид спереди под углом сверхкомпактного поршневого насоса FOREACH TM-50 μL с прозрачной головкой из PMMA, боковым портом и двигателем"
+    }
+  },
+  {
+    "source": "05.png",
+    "filename": "foreach-tm-500ul-pmma-piston-pump-wiring-view.webp",
+    "alt": {
+      "zh": "FOREACH TM-500 μL 柱塞泵实拍，展示透明 PMMA 泵头、步进电机、线束和连接器",
+      "en": "FOREACH TM-500 μL piston pump showing its transparent PMMA head, stepper motor, wiring harness and connector",
+      "es": "Bomba de pistón FOREACH TM-500 μL con cabezal transparente de PMMA, motor paso a paso, mazo de cables y conector",
+      "fr": "Pompe à piston FOREACH TM-500 μL avec tête transparente en PMMA, moteur pas à pas, faisceau de câbles et connecteur",
+      "ko": "투명 PMMA 헤드, 스테퍼 모터, 배선 하니스 및 커넥터가 보이는 FOREACH TM-500 μL 피스톤 펌프",
+      "ru": "Поршневой насос FOREACH TM-500 μL с прозрачной головкой из PMMA, шаговым двигателем, жгутом проводов и разъёмом"
+    }
+  },
+  {
+    "source": "06.png",
+    "filename": "foreach-tm-piston-pump-three-pump-size-comparison.webp",
+    "alt": {
+      "zh": "FOREACH 三款不同尺寸柱塞泵并排外观对比，左侧为 TM 超微型柱塞泵",
+      "en": "Side-by-side size comparison of three FOREACH piston pumps, with the TM ultra-compact piston pump on the left",
+      "es": "Comparación visual de tamaño de tres bombas de pistón FOREACH, con la bomba ultracompacta TM a la izquierda",
+      "fr": "Comparaison visuelle des dimensions de trois pompes à piston FOREACH, avec la pompe ultracompacte TM à gauche",
+      "ko": "크기가 다른 FOREACH 피스톤 펌프 세 대의 외관 비교, 왼쪽은 TM 초소형 피스톤 펌프",
+      "ru": "Наглядное сравнение размеров трёх поршневых насосов FOREACH; слева — сверхкомпактный насос TM"
+    }
+  }
+]

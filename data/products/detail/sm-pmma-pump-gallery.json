@@ -1,0 +1,62 @@
+[
+  {
+    "source": "03.png",
+    "filename": "foreach-sm-pmma-piston-pumps-pair-angled-wiring-view.webp",
+    "alt": {
+      "zh": "FOREACH SM 亚克力（PMMA）泵头柱塞泵双泵斜视图，展示透明泵头、银色机身和电机线束",
+      "en": "Angled view of two FOREACH SM piston pumps with acrylic (PMMA) heads, silver bodies and motor wiring",
+      "es": "Vista en ángulo de dos bombas de pistón FOREACH SM con cabezales de acrílico (PMMA), cuerpos plateados y cableado de los motores",
+      "fr": "Vue en angle de deux pompes à piston FOREACH SM avec têtes en acrylique (PMMA), corps argentés et câblage des moteurs",
+      "ko": "아크릴(PMMA) 헤드, 은색 본체 및 모터 배선이 보이는 FOREACH SM 피스톤 펌프 두 대의 사선 모습",
+      "ru": "Вид под углом двух поршневых насосов FOREACH SM с акриловыми головками (PMMA), серебристыми корпусами и проводами двигателей"
+    }
+  },
+  {
+    "source": "04.png",
+    "filename": "foreach-sm-pmma-piston-pumps-pair-front-view.webp",
+    "alt": {
+      "zh": "FOREACH SM 亚克力（PMMA）泵头柱塞泵双泵正面实拍，展示透明泵头、机身前侧组件和步进电机",
+      "en": "Front view of two FOREACH SM piston pumps showing transparent acrylic (PMMA) heads, front-mounted components and stepper motors",
+      "es": "Vista frontal de dos bombas de pistón FOREACH SM con cabezales transparentes de acrílico (PMMA), componentes frontales y motores paso a paso",
+      "fr": "Vue de face de deux pompes à piston FOREACH SM avec têtes transparentes en acrylique (PMMA), composants en façade et moteurs pas à pas",
+      "ko": "투명 아크릴(PMMA) 헤드, 전면 장착 부품 및 스테퍼 모터가 보이는 FOREACH SM 피스톤 펌프 두 대의 정면",
+      "ru": "Вид спереди двух поршневых насосов FOREACH SM с прозрачными акриловыми головками (PMMA), передними компонентами и шаговыми двигателями"
+    }
+  },
+  {
+    "source": "05.png",
+    "filename": "foreach-sm-pmma-piston-pumps-three-configurations.webp",
+    "alt": {
+      "zh": "FOREACH SM 柱塞泵三种配置外观对比，展示亚克力（PMMA）泵头外形、银色机身和电机配置",
+      "en": "Visual comparison of three FOREACH SM piston pump configurations, showing acrylic (PMMA) head shapes, silver bodies and motor configurations",
+      "es": "Comparación visual de tres configuraciones de bombas de pistón FOREACH SM, con distintas formas de cabezal de acrílico (PMMA), cuerpos plateados y motores",
+      "fr": "Comparaison visuelle de trois configurations de pompes à piston FOREACH SM, montrant les formes des têtes en acrylique (PMMA), les corps argentés et les moteurs",
+      "ko": "아크릴(PMMA) 헤드 형상, 은색 본체 및 모터 구성을 보여 주는 FOREACH SM 피스톤 펌프 세 가지 구성의 외관 비교",
+      "ru": "Сравнение внешнего вида трёх конфигураций поршневых насосов FOREACH SM: форма акриловых головок (PMMA), серебристые корпуса и двигатели"
+    }
+  },
+  {
+    "source": "06.png",
+    "filename": "foreach-sm-pmma-piston-pumps-pair-side-port-view.webp",
+    "alt": {
+      "zh": "FOREACH SM 亚克力（PMMA）泵头柱塞泵双泵侧视图，展示泵头侧面接口、机身铭牌和电机",
+      "en": "Side view of two FOREACH SM piston pumps with acrylic (PMMA) heads, showing side ports, body labels and motors",
+      "es": "Vista lateral de dos bombas de pistón FOREACH SM con cabezales de acrílico (PMMA), puertos laterales, etiquetas y motores",
+      "fr": "Vue latérale de deux pompes à piston FOREACH SM avec têtes en acrylique (PMMA), orifices latéraux, étiquettes et moteurs",
+      "ko": "헤드의 측면 포트, 본체 라벨 및 모터가 보이는 아크릴(PMMA) 헤드의 FOREACH SM 피스톤 펌프 두 대의 측면",
+      "ru": "Вид сбоку двух поршневых насосов FOREACH SM с акриловыми головками (PMMA): боковые порты, маркировка корпусов и двигатели"
+    }
+  },
+  {
+    "source": "01.png",
+    "filename": "foreach-sm-pmma-piston-pumps-side-mounted-valve-configuration.webp",
+    "alt": {
+      "zh": "FOREACH SM 亚克力（PMMA）泵头柱塞泵三泵并排展示，右侧泵带侧装阀组件",
+      "en": "Three FOREACH SM piston pumps with acrylic (PMMA) heads side by side, with a side-mounted valve assembly on the right-hand pump",
+      "es": "Tres bombas de pistón FOREACH SM con cabezales de acrílico (PMMA) una junto a otra; la bomba de la derecha lleva un conjunto de válvula lateral",
+      "fr": "Trois pompes à piston FOREACH SM avec têtes en acrylique (PMMA) côte à côte ; celle de droite comporte un ensemble de vanne latéral",
+      "ko": "아크릴(PMMA) 헤드의 FOREACH SM 피스톤 펌프 세 대를 나란히 배치한 모습, 오른쪽 펌프에는 측면 밸브 어셈블리 장착",
+      "ru": "Три поршневых насоса FOREACH SM с акриловыми головками (PMMA) рядом; на правом насосе установлен боковой клапанный узел"
+    }
+  }
+]
