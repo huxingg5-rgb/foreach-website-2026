@@ -3,7 +3,7 @@ import type { englishHomeProducts, productGroups } from './home-products.en';
 
 export type HomeProductsLocale = Exclude<LocaleCode, 'zh-CN'>;
 export type HomeProductGroup = (typeof productGroups)[number];
-export type HomeProduct = (typeof englishHomeProducts)[number];
+export type HomeProduct = (typeof englishHomeProducts)[number] & { imageAlt?: string };
 export type HomeProductsCopy = {
   title: string;
   categoriesAriaLabel: string;
@@ -14,7 +14,7 @@ export type HomeProductsCopy = {
   conceptLabel: string;
   resultCount: string;
   groups: Record<HomeProductGroup, string>;
-  products: Record<string, { name: string; description: string }>;
+  products: Record<string, { name: string; description: string; imageAlt?: string }>;
 };
 export type HomeProductsSectionData = {
   locale: HomeProductsLocale;

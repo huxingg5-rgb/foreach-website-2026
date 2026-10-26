@@ -7,14 +7,14 @@ export function createDimensions(stage,camera){
  const element=(tag,attrs)=>{const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);svg.append(e);return e;};
  const format=v=>Number(v.toFixed(2)).toString();
  function set(model,object){data=model.dimensions;solid=object;svg.replaceChildren();items=[];lastFrame='';chosen.fill(null);shown.fill(true);if(!data)return;
-  const values=[...data.size];if(Math.abs(data.size[1]-data.housing.width)>=.01)values.push(data.housing.width);
+  const values=[...data.size];if(data.housing&&Math.abs(data.size[1]-data.housing.width)>=.01)values.push(data.housing.width);
   for(const value of values){const item={extension:element('path',{class:'dimension-extension'}),line:element('path',{class:'dimension-line'}),text:element('text',{'text-anchor':'middle','dominant-baseline':'middle',class:'dimension-label'})};item.text.textContent=format(value)+' mm';items.push(item);}
  }
  function update(){if(!visible||!data)return;const w=stage.clientWidth,h=stage.clientHeight;solid.updateWorldMatrix(true,false);
   const frame=[w,h,...camera.matrixWorld.elements,...camera.projectionMatrix.elements,...solid.matrixWorld.elements].map(v=>Number(v).toFixed(6)).join(',');if(frame===lastFrame)return;lastFrame=frame;
   attr(svg,'viewBox',`0 0 ${w} ${h}`);svg.style.width=w+'px';svg.style.height=h+'px';
   const projectBox=box=>Array.from({length:8},(_,j)=>{const p=new THREE.Vector3();data.axes.forEach((a,k)=>p.addScaledVector(new THREE.Vector3(...a),j&(1<<k)?box.max[k]:box.min[k]));solid.localToWorld(p);p.project(camera);return [(p.x+1)*w/2,(1-p.y)*h/2];});
-  const outerCorners=projectBox(data),housingCorners=projectBox(data.housing);let widthNormal;
+  const outerCorners=projectBox(data),housingCorners=data.housing?projectBox(data.housing):outerCorners;let widthNormal;
   for(let k=0;k<items.length;k++){const axis=k===3?1:k,corners=k===3?housingCorners:outerCorners,center=corners.reduce((a,p)=>[a[0]+p[0]/8,a[1]+p[1]/8],[0,0]);let best,previous;for(let j=0;j<8;j++){if(j&(1<<axis))continue;const a=corners[j],b=corners[j|(1<<axis)],dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy);if(len<.001)continue;let n=[-dy/len,dx/len],mid=[(a[0]+b[0])/2,(a[1]+b[1])/2],distance=(mid[0]-center[0])*n[0]+(mid[1]-center[1])*n[1];if(distance<0){n=n.map(v=>-v);distance=-distance;}
    // Put the housing measurement on the opposite side of the total span.
    const score=distance-(k===3&&widthNormal?Math.max(0,n[0]*widthNormal[0]+n[1]*widthNormal[1])*10000:0);

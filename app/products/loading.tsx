@@ -1,5 +1,5 @@
-import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
+import ProductRouteLoading from "@/components/common/ProductRouteLoading";
 
 export default function ProductsLoading() {
-  return <ProductPageSkeleton variant="selection" />;
+  return <ProductRouteLoading />;
 }

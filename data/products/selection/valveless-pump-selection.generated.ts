@@ -29,7 +29,7 @@ const baseValvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "RPL-P4 бесклапанный насос малого объема",
     },
     cardSubtitle: {
-      zh: "RPL-P4 微型无阀陶瓷柱塞泵，单圈排量 12–80 μL，用于小体积试剂加注与滴定加液。",
+      zh: "P4 微型无阀柱塞泵，适用于分析仪器中的试剂分配",
       en: "12–80 μL/rev small-volume dispensing\nFor micro dispensing and titration\nCustom displacement and port options",
       es: "Dosificación de pequeño volumen 12–80 μL/rev\nPara microdosificación y titulación\nOpciones personalizadas de desplazamiento y puerto",
       fr: "Dosage petit volume 12–80 μL/rev\nPour microdosage et titration\nOptions personnalisées de déplacement et de port",
@@ -66,7 +66,7 @@ const baseValvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "RPL-P6.35 бесклапанный насос среднего-малого объема",
     },
     cardSubtitle: {
-      zh: "RPL-P6.35 无阀旋转柱塞泵，单圈排量 50–300 μL，配有清洗接口，用于试剂分配与定量灌装。",
+      zh: "P6.35 无阀旋转柱塞泵，适用于实验室定量加液与分装，支持 OEM 配套",
       en: "50–300 μL/rev mid-small volume dispensing\nFor reagent dispensing and filling\nWash port and fluidic configuration options",
       es: "Dosificación de volumen medio-bajo 50–300 μL/rev\nPara dispensación de reactivos y llenado\nOpciones de puerto de lavado y configuración fluídica",
       fr: "Dosage moyen-petit volume 50–300 μL/rev\nPour distribution de réactifs et remplissage\nOptions de port de lavage et de configuration fluidique",
@@ -103,7 +103,7 @@ const baseValvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "RPL-P15 бесклапанный насос среднего-большого объема",
     },
     cardSubtitle: {
-      zh: "RPL-P15 陶瓷柱塞计量泵，单圈排量 300–1200 μL，配有清洗接口，用于试剂灌装与缓冲液分装。",
+      zh: "P15 陶瓷柱塞计量泵，适用于生命科学领域的试剂灌装",
       en: "300–1200 μL/rev mid-large volume dispensing\nFor liquid addition and filling\nCustom ports and mounting options",
       es: "Dosificación de volumen medio-alto 300–1200 μL/rev\nPara adición de líquidos y llenado\nOpciones personalizadas de puertos y montaje",
       fr: "Dosage moyen-grand volume 300–1200 μL/rev\nPour ajout de liquide et remplissage\nOptions personnalisées de ports et de montage",
@@ -140,7 +140,7 @@ const baseValvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "DRPL-0109 двухголовочный бесклапанный насос",
     },
     cardSubtitle: {
-      zh: "DRPL-0109 双头陶瓷柱塞计量泵，浓缩液与稀释液体积比为 1:9，用于试剂稀释与缓冲液配制。",
+      zh: "DRPL-0109 双头陶瓷柱塞泵，适用于体外诊断设备中的试剂稀释",
       en: "1:9 dual-head proportional dispensing\n100 μL concentrate and 900 μL diluent\nFor 1 mL dilution and dispensing",
       es: "Dosificación proporcional de doble cabezal 1:9\n100 μL de concentrado y 900 μL de diluyente\nPara dilución y dosificación de 1 mL",
       fr: "Distribution proportionnelle double tête 1:9\n100 μL de concentré et 900 μL de diluant\nPour dilution et distribution de 1 mL",
@@ -177,7 +177,7 @@ const baseValvelessPumpSelectionProducts: ProductSelectionProduct[] = [
       ru: "DRPL-0119 двухголовочный бесклапанный насос",
     },
     cardSubtitle: {
-      zh: "DRPL-0119 双头柱塞式计量泵，浓缩液与稀释液体积比为 1:19，用于浓缩试剂稀释与比例加液。",
+      zh: "DRPL-0119 双头柱塞泵，适用于实验室比例加液",
       en: "1:19 dual-head proportional dispensing\n60 μL concentrate and 1140 μL diluent\nFor 1.2 mL dilution and dispensing",
       es: "Dosificación proporcional de doble cabezal 1:19\n60 μL de concentrado y 1140 μL de diluyente\nPara dilución y dosificación de 1.2 mL",
       fr: "Distribution proportionnelle double tête 1:19\n60 μL de concentré et 1140 μL de diluant\nPour dilution et distribution de 1.2 mL",

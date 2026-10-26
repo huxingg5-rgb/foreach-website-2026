@@ -45,6 +45,26 @@ export type ProductConfiguratorResultRow = {
   precision?: number;
 };
 
+export type ProductConfiguratorSummaryValue = {
+  label?: string;
+  value?: ProductConfiguratorValue;
+  selectionKey?: string;
+  resultKey?: string;
+  unit?: string;
+  precision?: number;
+};
+
+export type ProductConfiguratorCompactSummary = {
+  rows: {
+    label: string;
+    values: ProductConfiguratorSummaryValue[];
+  }[];
+  defaults?: {
+    title: string;
+    rows: ProductConfiguratorFixedRow[];
+  };
+};
+
 export type ProductConfiguratorUiText = {
   closeAriaLabel: string;
   currentSelection: string;
@@ -65,13 +85,16 @@ export type ProductConfiguratorUiText = {
 
 export type ProductConfiguratorConfig = {
   id: string;
+  // Authored locale-specific configurations bypass the generic tubing translator.
   localizedLocale?: ProductConfiguratorLocale;
-  showProductCode?: boolean;
-  allowListRemoval?: boolean;
   title: string;
   description?: string;
   productName: string;
   showProductNameInSelection?: boolean;
+  // Hide the SKU row when only a configuration model, not an assigned SKU, is known.
+  showProductCode?: boolean;
+  // Default preserves the existing add/remove toggle used by tubing selectors.
+  allowListRemoval?: boolean;
 
   /*
    * true：首次打开时不默认选中任何规格。
@@ -102,6 +125,8 @@ export type ProductConfiguratorConfig = {
   defaultVariantId?: string;
   fixedSummaryRows?: ProductConfiguratorFixedRow[];
   resultSummaryRows?: ProductConfiguratorResultRow[];
+  // Opt in to a short summary; existing selectors retain their full summary.
+  compactSummary?: ProductConfiguratorCompactSummary;
   noticeTitle?: string;
   notice?: string;
 };

@@ -244,6 +244,21 @@ const hardTubeFittingSelectionProductsForDisplay = [
 
 /* HARD_TUBE_HFL_BEFORE_HF_END */
 
+const diaphragmPumpDisplayOrder = new Map([
+  ["diaphragm-dpl30h-brushless", 1],
+  ["diaphragm-dpl30h-brushed", 2],
+  ["diaphragm-dpl60-brushless", 3],
+  ["diaphragm-dpl60-brushed", 4],
+  ["diaphragm-dpl30-brushless", 5],
+  ["diaphragm-dpl30-brushed", 6],
+  ["diaphragm-dpgl800-ff", 7],
+]);
+const diaphragmPumpSelectionProductsForDisplay = [...diaphragmPumpSelectionProducts]
+  .sort((current, next) =>
+    (diaphragmPumpDisplayOrder.get(current.productId) ?? 999) -
+    (diaphragmPumpDisplayOrder.get(next.productId) ?? 999),
+  );
+
 const selectionProducts = [
   /* FILTER_CHECK_VALVE_SELECTION_PRODUCTS_START */
   ...(filterCheckValveSelectionProducts as unknown as typeof baseSelectionProducts),
@@ -256,7 +271,7 @@ const selectionProducts = [
     ...quickConnectFittingSelectionProducts,
   ...threadToBarbedFittingSelectionProducts,
 ...baseSelectionProducts,
-  ...diaphragmPumpSelectionProducts,
+  ...diaphragmPumpSelectionProductsForDisplay,
   ...pipettingPumpSelectionProducts,
   ...valvelessPumpSelectionProducts,
   ...valveSelectionProducts,
@@ -1253,11 +1268,12 @@ function getCategoryItems(locale: SelectionLocale) {
     categoryMap.set(category.id, category);
   });
 
-  if (isTubingAssemblyLocale(locale)) {
+  const tubingAssemblyLocale = locale === "zh" ? "zh-CN" : locale;
+  if (isTubingAssemblyLocale(tubingAssemblyLocale)) {
     categoryMap.set("tubing-assemblies", {
-      id: "tubing-assemblies", label: tubingAssemblyNavigation[locale].title, sortOrder: 100,
-      description: tubingAssemblyNavigation[locale].description,
-      href: `${getTubingAssemblyLocalePrefix(locale)}/products/tubing-assemblies/`,
+      id: "tubing-assemblies", label: locale === "zh" ? "管组件" : tubingAssemblyNavigation[tubingAssemblyLocale].title, sortOrder: 100,
+      description: tubingAssemblyNavigation[tubingAssemblyLocale].description,
+      href: `${getTubingAssemblyLocalePrefix(tubingAssemblyLocale)}/products/tubing-assemblies/`,
     });
   }
 
@@ -5471,6 +5487,9 @@ function isFilterOptionActive(
         ? { href: locale === "zh" ? "/products/" : `/${locale}/products/` }
         : {}),
     },
+    ...(locale === "en" && activeProductTypeId === "valveless-pump"
+      ? [{ label: "Pumps", href: "/en/products/pumps/" }]
+      : []),
     ...(compactSelectionLabel ? [{ label: compactSelectionLabel }] : []),
   ];
   const activeValvelessSeries = activeProductTypeId === "valveless-pump"
@@ -5479,6 +5498,7 @@ function isFilterOptionActive(
   const valvelessBreadcrumbItems = activeValvelessSeries ? [
     { label: pageText.breadcrumbHome, href: locale === "zh" ? "/" : `/${locale}/` },
     { label: pageText.breadcrumbCurrent, href: locale === "zh" ? "/products/" : `/${locale}/products/` },
+    ...(locale === "en" ? [{ label: "Pumps", href: "/en/products/pumps/" }] : []),
     { label: getTaxonomyLabel(locale, "valveless-pump"), href: getValvelessPumpPath(locale) },
     { label: activeValvelessSeries.slug.toUpperCase() },
   ] : undefined;
@@ -5488,7 +5508,13 @@ function isFilterOptionActive(
     { label: activeCategory.label, ...(isTubingMaterial(activeProductTypeId) ? { href: getTubingSelectionPath(locale) } : {}) },
     ...(isTubingMaterial(activeProductTypeId) ? [{ label: productTypeOptions.find(option => option.value === activeProductTypeId)?.label || activeProductTypeId }] : []),
   ] : undefined;
-  const breadcrumbItems = tubingBreadcrumbItems || valvelessBreadcrumbItems || (locale === "en" ? getProbeControlBreadcrumbsEn(pathname) : undefined) || getChineseProductPageBreadcrumbs(
+  const fittingsCategoryBreadcrumbItems = locale === "en" && activeCategoryId === "fittings"
+    && pathname?.replace(/\/$/, "") === "/en/products/fittings" ? [
+      { label: pageText.breadcrumbHome, href: "/en/" },
+      { label: pageText.breadcrumbCurrent, href: "/en/products/" },
+      { label: activeCategory.label },
+    ] : undefined;
+  const breadcrumbItems = fittingsCategoryBreadcrumbItems || tubingBreadcrumbItems || valvelessBreadcrumbItems || (locale === "en" ? getProbeControlBreadcrumbsEn(pathname) : undefined) || getChineseProductPageBreadcrumbs(
     pathname, locale, legacyBreadcrumbItems.at(-1)?.label,
   ) || legacyBreadcrumbItems;
 

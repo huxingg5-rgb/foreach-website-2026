@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 
+import LoadingProgress from "@/components/common/LoadingProgress";
 import styles from "./product-detail.module.css";
 
 type PumpFileAvailability = "checking" | "available" | "missing";
@@ -146,8 +147,8 @@ export function Pump3DFileCheckingDisplay({
   title,
 }: FileNotUploadedDisplayProps) {
   return (
-    <div className={styles.modelViewerFallback}>
-      {title || (locale === "en" ? "Loading 3D model..." : "3D 模型加载中...")}
+    <div className={styles.modelViewerCanvasWrap} style={{ position: "relative" }}>
+      <LoadingProgress active label={title || (locale === "en" ? "Loading 3D model" : "3D 模型加载中")} />
     </div>
   );
 }

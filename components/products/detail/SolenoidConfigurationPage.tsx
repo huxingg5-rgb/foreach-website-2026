@@ -38,7 +38,7 @@ export default function SolenoidConfigurationPage({slug, locale}: {slug: string;
   const data = {...base, ...copy, mainImage: copy.mainImage || base.image, imageAlt: copy.imageAlt || copy.title,
     additionalImages: copy.additionalImages, additionalImageAlts: copy.additionalImageAlts, thumbnails: [], images: [],
     showDrawingRequest: true, show3DRequest: false, showDatasheetRequest: false,
-    drawing2dUrl: drawingAsset ? `/models/valves/6010/${drawingAsset}.png` : "", model3dUrl: asset ? `/models/valves/6010/viewer.html?model=${asset}&lang=${locale}` : "", datasheetUrl: "",
+    drawing2dUrl: drawingAsset ? `/models/valves/6010/${drawingAsset}.png` : "", model3dUrl: asset ? `/models/valves/6010/viewer.html?v=fcadl01-20261026&model=${asset}&lang=${locale}` : "", datasheetUrl: "",
   } as unknown as ProductDetailPageData;
   const language = normalizeValveLocale(locale);
   const resourceLocale = language === "zh" ? "zh-CN" : language;

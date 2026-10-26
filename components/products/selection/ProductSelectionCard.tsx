@@ -1,6 +1,7 @@
 "use client";
 import { normalizeSiteHref } from "@/lib/seo/site-url";
 import { getProductCardThumbnail } from "@/data/products/selection/product-card-thumbnail";
+import { getValvelessPumpImageAlt } from "@/data/products/detail/valveless-pump-image-copy";
 import { getFittingMainImageAlt, getDescriptiveFittingImageUrl } from "@/data/products/detail/fitting-image-description";
 import { getControlModuleCardCopy } from "@/data/products/selection/control-module-card-copy";
 import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
@@ -261,7 +262,7 @@ export default function ProductSelectionCard({
   const plungerCardHeading = getProductCardHeading(product, locale);
   const isMrv3Configuration = product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId);
   const isSolenoidConfiguration = product.seriesId === "6010" && /^(?:2|3)-way$/.test(product.productId);
-  const imageAlt = getFittingMainImageAlt(product, locale) || ((isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
+  const imageAlt = getValvelessPumpImageAlt(product.imageCard || "", locale) || getFittingMainImageAlt(product, locale) || ((isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
     ? product.imageAlt
     : controlCard ? `FOREACH ${controlCard.model} ${controlCard.name}` : valveCard ? `FOREACH ${valveCard.model} ${valveCard.name}` : safeTitle);
   const descriptionHeading = controlCard?.heading || valveCard?.heading || ((isMrv3Configuration || product.seriesId === "6010") ? safeSubtitle : authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
@@ -271,10 +272,11 @@ export default function ProductSelectionCard({
   const DescriptionHeading = product.categoryId === "valves" ? "h2" : "h3";
   const cardImage = getDescriptiveFittingImageUrl(product.imageCard || "");
   const thumbnail = getProductCardThumbnail(cardImage, locale);
+  const usesSquareImage = product.seriesId === "6010" || product.productTypeId === "valveless-pump";
 
   return (
     <article
-      className={`product-card${tubingHeading ? " tubing-material-card" : ""}${product.seriesId === "6010" ? " solenoid-configuration-card" : ""}`}
+      className={`product-card${tubingHeading ? " tubing-material-card" : ""}${product.seriesId === "6010" ? " solenoid-configuration-card" : ""}${usesSquareImage ? " square-image-card" : ""}`}
       data-product-type-id={product.productTypeId || undefined}
       title={valveCard ? `${safeTitle} ${valveCard.name}` : safeTitle}
     >

@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
-import {gzipSync} from "node:zlib";
+import {gunzipSync} from "node:zlib";
+import {decodeCompactCad} from "../products/solenoid-viewer/compact-cad.js";
 import {getSolenoidRedirectEntries} from "../../lib/seo/solenoid-migration";
 import {solenoidConfigurations, matchesSolenoidFilter} from "../../data/products/detail/solenoid-configurations";
 import {isSolenoidSearchHref} from "../../data/search/solenoid-search";
@@ -30,16 +31,16 @@ async function main() {
     if (c.connection === "barbed" && c.key === "two") assert.equal(c.assets.length,0);
     else assert.equal(c.assets.length,1);
     for (const asset of c.assets) {
-      const file = path.join("public/models/valves/6010",`${asset}.json`);
+      const file = path.join("public/models/valves/6010",`${asset}.fcad.gz`);
       const bytes = fs.readFileSync(file);
-      const model = JSON.parse(bytes.toString());
+      const model = decodeCompactCad(new Uint8Array(gunzipSync(bytes)));
       assert(model.exteriorOnly && model.dimensions.housing && model.meshes.length);
       assert(!model.drawing && (!model.file || model.file === path.basename(model.file)), "No embedded drawing or local source path in model response");
       assert(model.name.toLowerCase().includes(asset.endsWith("3") ? "-3" : asset.endsWith("2nc") ? "-2nc" : "-2no"));
       assert(model.dimensions.size.every((n: number) => n > 0 && n < 80));
-      assert(fs.existsSync(file.replace(/json$/, "png")), "Use supplied original drawings");
-      assert(!fs.existsSync(file.replace(/json$/, "svg")), "Generated substitute drawings must stay removed");
-      console.log(`${asset}: ${(bytes.length/1024).toFixed(0)} KB JSON / ${(gzipSync(bytes).length/1024).toFixed(0)} KB gzip`);
+      assert(fs.existsSync(path.join("public/models/valves/6010", `${asset}.png`)), "Use supplied original drawings");
+      assert(!fs.existsSync(path.join("public/models/valves/6010", `${asset}.svg`)), "Generated substitute drawings must stay removed");
+      console.log(`${asset}: ${(bytes.length/1024).toFixed(0)} KB lossless compact CAD`);
     }
   }
   for (const locale of ["zh-CN","en","es","fr","ko","ru"]) {

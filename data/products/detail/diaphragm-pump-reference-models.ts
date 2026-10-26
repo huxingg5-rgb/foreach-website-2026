@@ -19,6 +19,20 @@ export type DiaphragmPumpReferenceCopyKey =
   | "dpl30h-brushless"
   | "dpgl800-brushless";
 
+// Shared approved main photos for detail galleries and selection cards.
+const MAIN_PHOTOS: Partial<Record<DiaphragmPumpReferenceCopyKey, string>> = {
+  "dpl30-brushless": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
+  "dpl60-brushed": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushed-miniature-liquid-diaphragm-pump-front-side.webp",
+  "dpl60-brushless": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
+  "dpl30h-brushed": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushed-diaphragm-pressurized-liquid-transfer-pump.webp",
+  "dpl30h-brushless": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushless-diaphragm-liquid-supply-pump.webp",
+  "dpgl800-brushless": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
+};
+
+export function getDiaphragmPumpMainPhoto(key: DiaphragmPumpReferenceCopyKey) {
+  return MAIN_PHOTOS[key];
+}
+
 export type DiaphragmPumpReferenceLocalizedCopy = {
   h1: string;
   cardSubtitle: string;
@@ -481,6 +495,7 @@ export function applyDiaphragmPumpReferenceCard<T extends ProductSelectionProduc
   return {
     ...product,
     detailSlug: reference.slug,
+    imageCard: getDiaphragmPumpMainPhoto(reference.copyKey) || product.imageCard,
     cardTitle: { ...(typeof product.cardTitle === "object" ? product.cardTitle : {}), [targetLocale]: reference.model },
     cardSubtitle: { ...(typeof product.cardSubtitle === "object" ? product.cardSubtitle : {}), [targetLocale]: localized.cardSubtitle },
   } as T;

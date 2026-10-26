@@ -1,6 +1,7 @@
 "use client";
 
 import { createElement, useEffect, useId, useRef, useState } from "react";
+import LoadingProgress from "@/components/common/LoadingProgress";
 import styles from "./product-detail.module.css";
 import dimensionStyles from "./ProductModelDimensions.module.css";
 import ProductModelFeatureDimensions, { FITTING_DIMENSION_ORBIT, FITTING_DIMENSION_TARGET, fittingFeatureHotspots, hasFittingFeatureDimensions, type DimensionModelElement } from "./ProductModelFeatureDimensions";
@@ -26,11 +27,12 @@ type ProductModelViewerProps = {
 };
 
 export default function ProductModelViewer(props: ProductModelViewerProps) {
-  return <ProductModelViewerCanvas {...props} />;
+  return <ProductModelViewerCanvas key={`${props.modelUrl || ""}:${props.locale || "zh"}`} {...props} />;
 }
 
 function ProductModelViewerCanvas({ slug, modelName, productModel, modelUrl, locale = "zh", isActive = true }: ProductModelViewerProps) {
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
+  const [modelReady, setModelReady] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const [errorKind, setErrorKind] = useState<"library" | "model">("library");
   const [stepError, setStepError] = useState("");
@@ -115,8 +117,11 @@ function ProductModelViewerCanvas({ slug, modelName, productModel, modelUrl, loc
     const model = modelRef.current;
     if (status !== "ready" || !model) return;
     const timer = window.setTimeout(() => { setErrorKind("model"); setStatus("error"); }, 45000);
+    let disposed = false;
+    let renderFrame = 0;
     const loaded = () => {
       window.clearTimeout(timer);
+      renderFrame = requestAnimationFrame(() => { if (!disposed) setModelReady(true); });
       if (isStep) {
         const size = model.getDimensions();
         if (AXES.every(axis => Number.isFinite(size[axis]) && size[axis] > 0)) {
@@ -131,6 +136,8 @@ function ProductModelViewerCanvas({ slug, modelName, productModel, modelUrl, loc
     if (model.loaded) loaded();
     return () => {
       window.clearTimeout(timer);
+      disposed = true;
+      cancelAnimationFrame(renderFrame);
       model.removeEventListener("load", loaded);
       model.removeEventListener("error", failed);
     };
@@ -172,14 +179,13 @@ function ProductModelViewerCanvas({ slug, modelName, productModel, modelUrl, loc
         <button type="button" className={styles.button} onClick={() => {
           // A failed bundled import is cached by the runtime until the document reloads.
           if (errorKind === "library") { window.location.reload(); return; }
-          setStatus("loading"); setStepError(""); setMeasurement(null); setAttempt(Date.now());
+          setStatus("loading"); setModelReady(false); setStepSource(""); setStepError(""); setMeasurement(null); setAttempt(Date.now());
         }}>{errorKind === "library" ? (locale === "en" ? "Reload page" : "刷新页面") : (locale === "en" ? "Retry 3D preview" : "重新加载 3D")}</button>
       </div>
     </div>
   );
-  if (status !== "ready") return <div className={styles.modelViewerFallback} role="status">{isStep
-    ? (locale === "en" ? "Reading STEP model..." : "正在读取 STP 模型...")
-    : (locale === "en" ? "Loading 3D model..." : "3D 模型加载中...")}</div>;
+  const loadingLabel = locale === "en" ? "Loading 3D model" : "3D 模型加载中";
+  if (status !== "ready") return <div className={`${styles.modelViewerCanvasWrap} ${dimensionStyles.frame}`} data-model-status="loading" aria-busy="true"><LoadingProgress active label={loadingLabel} /></div>;
   // Use a fresh cache key after a failed GLB request; model-viewer also caches loader failures.
   const [modelPath, modelHash] = modelUrl.split("#");
   const source = attempt ? `${modelPath}${modelPath.includes("?") ? "&" : "?"}__foreach_3d_retry=${attempt}${modelHash ? `#${modelHash}` : ""}` : modelUrl;
@@ -200,15 +206,16 @@ function ProductModelViewerCanvas({ slug, modelName, productModel, modelUrl, loc
       createElement("span", { key: `${axis}-label`, slot: `hotspot-${axis}-label`, "data-position": position(middle), "data-normal": "0 1 0", className: dimensionStyles.anchor, "aria-hidden": true }),
     ];
   }) : [];
-  return <div className={`${styles.modelViewerCanvasWrap} ${isStep ? dimensionStyles.frame : ""}`} data-step-preview={isStep || undefined}>
+  return <div className={`${styles.modelViewerCanvasWrap} ${dimensionStyles.frame}`} data-step-preview={isStep || undefined} data-model-status={modelReady ? "ready" : "loading"} aria-busy={!modelReady}>
     {createElement("model-viewer", {
       ref: modelRef, key: attempt, src: isStep ? stepSource : source, alt: isTestPreview ? `${fileName} local CAD test model` : `${finalProductName} 3D model`,
-      cameraControls: true, autoRotate: isActive && !isStep, shadowIntensity: "0.35", exposure: "0.9",
+      inert: !modelReady, cameraControls: true, autoRotate: isActive && !isStep, shadowIntensity: "0.35", exposure: "0.9",
       ...(isStep ? { cameraOrbit: hasFeatures ? FITTING_DIMENSION_ORBIT : "35deg 65deg 135%" } : {}),
       ...(hasFeatures ? { cameraTarget: FITTING_DIMENSION_TARGET, minCameraOrbit: "auto auto 35%", maxCameraOrbit: "auto auto 230%", interactionPrompt: "none" } : {}),
       ar: false, loading: "eager", className: styles.modelViewerCanvas,
       style: { display: "block", width: "100%", height: "100%", minHeight: "100%" },
-    }, ...hotspotChildren)}
+    }, createElement("span", { slot: "progress-bar", hidden: true }), ...hotspotChildren)}
+    <LoadingProgress active={!modelReady} label={loadingLabel} />
     {isStep && !hasFeatures && <div className={dimensionStyles.toolbar}>
       <div className={dimensionStyles.summary}>
         <strong>{locale === "en" ? "Model overall dimensions · mm" : "模型外形尺寸 · mm"}</strong>

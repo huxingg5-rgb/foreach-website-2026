@@ -11,10 +11,15 @@
    4. detail 用于产品详情页
 ========================================================= */
 
+import { usePathname } from "next/navigation";
+import { VALVELESS_PUMP_MODEL_SLUGS } from "@/data/products/selection/valveless-pump-routes";
 import styles from "./ProductPageSkeleton.module.css";
+import { resolveProductSkeletonRoute } from "./product-skeleton-route";
 
 type ProductPageSkeletonProps = {
   variant: "selection" | "detail";
+  routeSelectionPaths?: readonly string[];
+  englishSelectionPaths?: readonly string[];
 };
 
 function SkeletonBlock({
@@ -33,10 +38,28 @@ function SkeletonBlock({
 
 export default function ProductPageSkeleton({
   variant,
+  routeSelectionPaths,
+  englishSelectionPaths,
 }: ProductPageSkeletonProps) {
+  const pathname = usePathname();
+  const route = resolveProductSkeletonRoute(pathname, variant, routeSelectionPaths, englishSelectionPaths);
+  // Preserve the more specific valveless selection layout at Suspense boundaries.
+  const valvelessRoute = pathname?.match(
+    /^\/(?:(?:en|es|fr|ko|ru)\/)?products\/pumps\/valveless-metering-pump(?:\/([^/]+))?\/?$/,
+  );
+  const childSlug = valvelessRoute?.[1];
+  const isValvelessSelection = Boolean(valvelessRoute)
+    && (!childSlug || childSlug === "rpl" || childSlug === "drpl");
+  const isValvelessDetail = Boolean(valvelessRoute)
+    && VALVELESS_PUMP_MODEL_SLUGS.some((slug) => slug === childSlug);
+  const resolvedVariant = isValvelessSelection ? "selection" : isValvelessDetail ? "detail" : route.variant;
+  const cardCount = isValvelessSelection ? (childSlug === "rpl" ? 3 : childSlug === "drpl" ? 2 : 5) : 8;
+
   return (
     <section
-      className={styles.shell}
+      className={[styles.shell, isValvelessSelection ? styles.valvelessSelection : "", resolvedVariant === "detail" ? styles.detailShell : ""].filter(Boolean).join(" ")}
+      data-product-skeleton={isValvelessSelection ? "valveless-selection" : resolvedVariant}
+      data-skeleton-locale={route.locale}
       aria-busy="true"
       aria-hidden="true"
     >
@@ -46,15 +69,15 @@ export default function ProductPageSkeleton({
         </div>
       </div>
 
-      {variant === "selection" ? (
+      {resolvedVariant === "selection" ? (
         <>
           <div className={styles.searchBand}>
             <SkeletonBlock className={styles.searchBox} />
           </div>
 
-          <div className={styles.container}>
+          <div className={[styles.container, isValvelessSelection ? styles.valvelessContent : ""].filter(Boolean).join(" ")}>
             <div className={styles.categoryTabs}>
-              {Array.from({ length: 6 }).map((_, index) => (
+              {Array.from({ length: isValvelessSelection ? 7 : 6 }).map((_, index) => (
                 <SkeletonBlock
                   key={index}
                   className={styles.categoryTab}
@@ -62,20 +85,51 @@ export default function ProductPageSkeleton({
               ))}
             </div>
 
+            {isValvelessSelection ? (
+              <div className={styles.valvelessIntro}>
+                <SkeletonBlock className={styles.valvelessIntroImage} />
+                <div className={styles.valvelessIntroCopy}>
+                  <SkeletonBlock className={styles.valvelessIntroTitle} />
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <SkeletonBlock key={index} className={styles.valvelessIntroLine} />
+                  ))}
+                  <SkeletonBlock className={styles.valvelessIntroMore} />
+                </div>
+              </div>
+            ) : null}
+
             <div className={styles.selectionLayout}>
               <aside className={styles.filterPanel}>
-                <SkeletonBlock className={styles.filterTitle} />
-
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <div
-                    key={index}
-                    className={styles.filterGroup}
-                  >
+                {isValvelessSelection ? (
+                  <>
                     <SkeletonBlock className={styles.filterLabel} />
-                    <SkeletonBlock className={styles.filterOption} />
-                    <SkeletonBlock className={styles.filterOptionShort} />
-                  </div>
-                ))}
+                    <div className={styles.valvelessTypeOptions}>
+                      {Array.from({ length: 5 }).map((_, index) => (
+                        <SkeletonBlock key={index} className={styles.valvelessFilterOption} />
+                      ))}
+                    </div>
+                    <div className={styles.filterGroup}>
+                      <SkeletonBlock className={styles.filterLabel} />
+                      <SkeletonBlock className={styles.valvelessFilterOption} />
+                      <SkeletonBlock className={styles.valvelessFilterOption} />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <SkeletonBlock className={styles.filterTitle} />
+
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <div
+                        key={index}
+                        className={styles.filterGroup}
+                      >
+                        <SkeletonBlock className={styles.filterLabel} />
+                        <SkeletonBlock className={styles.filterOption} />
+                        <SkeletonBlock className={styles.filterOptionShort} />
+                      </div>
+                    ))}
+                  </>
+                )}
               </aside>
 
               <div className={styles.selectionMain}>
@@ -85,7 +139,7 @@ export default function ProductPageSkeleton({
                 </div>
 
                 <div className={styles.cardGrid}>
-                  {Array.from({ length: 8 }).map((_, index) => (
+                  {Array.from({ length: cardCount }).map((_, index) => (
                     <article
                       key={index}
                       className={styles.productCard}
@@ -93,7 +147,12 @@ export default function ProductPageSkeleton({
                       <SkeletonBlock className={styles.cardImage} />
                       <SkeletonBlock className={styles.cardTitle} />
                       <SkeletonBlock className={styles.cardMeta} />
-                      <SkeletonBlock className={styles.cardButton} />
+                      {isValvelessSelection ? (
+                        <div className={styles.valvelessCardActions}>
+                          <SkeletonBlock className={styles.cardButton} />
+                          <SkeletonBlock className={styles.cardButton} />
+                        </div>
+                      ) : <SkeletonBlock className={styles.cardButton} />}
                     </article>
                   ))}
                 </div>
@@ -108,24 +167,23 @@ export default function ProductPageSkeleton({
               <SkeletonBlock className={styles.detailImage} />
 
               <div className={styles.thumbnailRow}>
-                {Array.from({ length: 4 }).map((_, index) => (
-                  <SkeletonBlock
-                    key={index}
-                    className={styles.thumbnail}
-                  />
-                ))}
+                {/* The gallery count is unknown until product data resolves. */}
+                <SkeletonBlock className={styles.galleryTrack} />
               </div>
             </div>
 
             <div className={styles.detailInfo}>
-              <SkeletonBlock className={styles.detailEyebrow} />
               <SkeletonBlock className={styles.detailTitle} />
               <SkeletonBlock className={styles.detailTitleShort} />
 
               <div className={styles.detailTextGroup}>
-                <SkeletonBlock className={styles.detailText} />
-                <SkeletonBlock className={styles.detailText} />
-                <SkeletonBlock className={styles.detailTextShort} />
+                {Array.from({ length: 3 }).map((_, index) => (
+                  <div className={styles.detailParagraph} key={index}>
+                    <SkeletonBlock className={styles.detailText} />
+                    <SkeletonBlock className={styles.detailText} />
+                    <SkeletonBlock className={styles.detailTextShort} />
+                  </div>
+                ))}
               </div>
 
               <div className={styles.detailModelRow}>
@@ -134,20 +192,15 @@ export default function ProductPageSkeleton({
               </div>
 
               <div className={styles.detailActionRow}>
-                <SkeletonBlock className={styles.detailAction} />
-                <SkeletonBlock className={styles.detailAction} />
-                <SkeletonBlock className={styles.detailActionWide} />
+                {/* Requests depend on product flags as well as locale. Reserve
+                    the region without inventing a fixed number of buttons. */}
+                <SkeletonBlock className={styles.detailActionsPlaceholder} />
               </div>
             </div>
           </div>
 
           <div className={styles.detailTabs}>
-            {Array.from({ length: 4 }).map((_, index) => (
-              <SkeletonBlock
-                key={index}
-                className={styles.detailTab}
-              />
-            ))}
+            <SkeletonBlock className={styles.detailTabsPlaceholder} />
           </div>
 
           <div className={styles.detailPanel}>

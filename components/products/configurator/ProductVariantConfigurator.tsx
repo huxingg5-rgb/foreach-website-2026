@@ -335,10 +335,10 @@ export default function ProductVariantConfigurator({
 
         <div className={styles.main}>
           <aside
-            className={styles.summary}
+            className={[styles.summary, config.compactSummary ? styles.compactSummary : ""].filter(Boolean).join(" ")}
             aria-live="polite"
           >
-            <div
+            {!config.compactSummary ? <div
               className={styles.summaryTitle}
             >
               <span>{uiText.currentSelection}</span>
@@ -346,12 +346,12 @@ export default function ProductVariantConfigurator({
               <strong>
                 {currentSelectionText}
               </strong>
-            </div>
+            </div> : null}
 
             <div
               className={styles.summaryTable}
             >
-              <div
+              {!config.compactSummary ? <div
                 className={styles.summaryRow}
               >
                 <span>{uiText.finalModel}</span>
@@ -359,21 +359,40 @@ export default function ProductVariantConfigurator({
                   {matchingVariant?.model ||
                     "—"}
                 </b>
-              </div>
+              </div> : null}
 
               {config.showProductCode !== false ? (
-              <div
-                className={styles.summaryRow}
-              >
-                <span>{uiText.productCode}</span>
-                <b>
-                  {matchingVariant?.productCode ||
-                    "—"}
-                </b>
-              </div>
+                <div className={styles.summaryRow}>
+                  <span>{uiText.productCode}</span>
+                  <b>{matchingVariant?.productCode || "—"}</b>
+                </div>
               ) : null}
 
-              {config.dimensions.map(
+              {config.compactSummary?.rows.map((row) => (
+                <div className={styles.summaryRow} key={row.label}>
+                  <span>{row.label}</span>
+                  <b className={styles.summaryValues}>
+                    {row.values.map((part, index) => {
+                      const value = part.selectionKey
+                        ? selection[part.selectionKey]
+                        : part.resultKey
+                          ? matchingVariant?.result?.[part.resultKey]
+                          : part.value;
+                      return (
+                        <span key={`${part.label || part.selectionKey || part.resultKey || "value"}-${index}`}>
+                          {part.label ? `${part.label}: ` : ""}
+                          {localizeProductConfiguratorValue(
+                            formatConfiguratorValue(value, part.unit, part.precision),
+                            locale,
+                          )}
+                        </span>
+                      );
+                    })}
+                  </b>
+                </div>
+              ))}
+
+              {!config.compactSummary && config.dimensions.map(
                 (dimension) => (
                   <div
                     className={
@@ -401,7 +420,7 @@ export default function ProductVariantConfigurator({
                 )
               )}
 
-              {config.fixedSummaryRows?.map(
+              {!config.compactSummary && config.fixedSummaryRows?.map(
                 (row) => (
                   <div
                     className={
@@ -415,7 +434,7 @@ export default function ProductVariantConfigurator({
                 )
               )}
 
-              {config.resultSummaryRows?.map(
+              {!config.compactSummary && config.resultSummaryRows?.map(
                 (row) => (
                   <div
                     className={
@@ -441,6 +460,18 @@ export default function ProductVariantConfigurator({
                 )
               )}
             </div>
+
+            {config.compactSummary?.defaults ? (
+              <details className={styles.summaryDefaults}>
+                <summary>{config.compactSummary.defaults.title}</summary>
+                {config.compactSummary.defaults.rows.map((row) => (
+                  <div className={styles.summaryRow} key={row.label}>
+                    <span>{row.label}</span>
+                    <b>{row.value}</b>
+                  </div>
+                ))}
+              </details>
+            ) : null}
           </aside>
 
           <section className={styles.config}>

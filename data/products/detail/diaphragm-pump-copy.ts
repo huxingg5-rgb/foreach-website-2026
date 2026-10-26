@@ -1,6 +1,7 @@
 import copyJson from "./diaphragm-pump-copy.generated.json";
 import {
   getDiaphragmPumpCategoryCopy,
+  getDiaphragmPumpMainPhoto,
   getDiaphragmPumpReferenceFromIdentity,
   type DiaphragmPumpReferenceCopyKey,
 } from "./diaphragm-pump-reference-models";
@@ -400,10 +401,60 @@ export function getDiaphragmPumpSeriesSeoDescription(
   return `${seriesTitle}${titleSeparator}${sharedParameters.join(separator)}${terminator}`;
 }
 
-function getDiaphragmPumpGallery(
+export function getDiaphragmPumpGallery(
   key: DiaphragmPumpCopyKey,
   data: Record<string, unknown>,
+  locale: SelectionLocale,
 ) {
+  const preferredImage = getDiaphragmPumpMainPhoto(key);
+  if (preferredImage) {
+    const mainImage = typeof data.mainImage === "string" ? data.mainImage : "";
+    const additionalImages: string[] = Array.isArray(data.additionalImages)
+      ? [...data.additionalImages] : [];
+    const additionalImageAlts: string[] = Array.isArray(data.additionalImageAlts)
+      ? [...data.additionalImageAlts] : [];
+    const productImages = data.productImages as
+      { main?: { src?: string; alt?: string } } | undefined;
+    const alreadyPromoted = mainImage === preferredImage;
+    const selectedIndex = additionalImages.indexOf(preferredImage);
+
+    if (!mainImage || (!alreadyPromoted && selectedIndex < 0)) return null;
+
+    // Keep each existing ALT with its image, including the former main image.
+    const selectedImage = alreadyPromoted ? mainImage : additionalImages[selectedIndex];
+    const selectedAlt = alreadyPromoted
+      ? String(data.imageAltEn || productImages?.main?.alt || data.mainImageAlt || data.imageAlt || "")
+      : additionalImageAlts[selectedIndex];
+    if (!selectedAlt) return null;
+
+    if (!alreadyPromoted) {
+      const originalMainAlt = locale === "zh"
+        ? String(data.imageAlt || "")
+        : getDiaphragmPumpCopy(data, locale)?.title || String(data.imageAlt || "");
+      additionalImages.splice(selectedIndex, 1);
+      additionalImageAlts.splice(selectedIndex, 1);
+      additionalImages.unshift(mainImage);
+      additionalImageAlts.unshift(originalMainAlt);
+    }
+
+    return {
+      mainImage: selectedImage,
+      image: selectedImage,
+      imageUrl: selectedImage,
+      imageCard: selectedImage,
+      heroImage: selectedImage,
+      coverImage: selectedImage,
+      imageAlt: selectedAlt,
+      imageAltEn: selectedAlt,
+      mainImageAlt: selectedAlt,
+      images: [{ src: selectedImage, alt: selectedAlt }],
+      productImages: { ...productImages, main: { src: selectedImage, alt: selectedAlt } },
+      additionalImages,
+      additionalImageAlts,
+      galleryImages: [selectedImage, ...additionalImages],
+    };
+  }
+
   if (key !== "dpl30-brushed") {
     return null;
   }
@@ -437,7 +488,7 @@ export function applyDiaphragmPumpDetailCopy<
   const applications = [copy.applications];
   const faqs = copy.faqs.map((item) => ({ ...item }));
   const reference = getDiaphragmPumpReferenceFromIdentity(data);
-  const gallery = reference ? getDiaphragmPumpGallery(key, data) : null;
+  const gallery = reference ? getDiaphragmPumpGallery(key, data, locale) : null;
   const categoryCopy = getDiaphragmPumpCategoryCopy(locale);
   const productType = getMiniatureProductType(key, locale);
   const specs = normalizeProductTypeSpecs(data.specs, productType);

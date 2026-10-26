@@ -111,8 +111,10 @@ import {
 import ProductModelViewer from "./ProductModelViewer";
 import SolenoidAssets from "./SolenoidAssets";
 import ProductCadViewer from "./ProductCadViewer";
+import ModelPreviewTrigger from "./ModelPreviewTrigger";
 import { getValvelessPumpAssets } from "@/data/products/detail/valveless-pump-assets";
-import { getValvelessPumpConfigurator } from "@/data/products/configurator/valveless-pumps";
+import { getDiaphragmPumpCadAssets } from "@/data/products/detail/diaphragm-pump-cad-assets";
+import { getPistonPumpCadAssets } from "@/data/products/detail/piston-pump-cad-assets";
 import {
   Pump2DFileCheckingDisplay,
   Pump3DFileCheckingDisplay,
@@ -130,6 +132,8 @@ import type {
   ProductConfiguratorVariant,
 } from "@/components/products/configurator";
 import { getSolenoidConfigurator } from "@/data/products/configurator/solenoid-valves";
+import { getValvelessPumpConfigurator } from "@/data/products/configurator/valveless-pumps";
+import { getDiaphragmPumpConfigurator } from "@/data/products/configurator/diaphragm-pumps";
 import { getSolenoidViewConfigurationText } from "@/data/products/configurator/solenoid-valves.i18n";
 
 /* PVC_CONFIGURATOR_ENGLISH_START */
@@ -1319,6 +1323,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     ? [
         { name: breadcrumbCopy.home, item: toAbsoluteProductUrl(`${localePrefix}/`) },
         { name: breadcrumbCopy.products, item: toAbsoluteProductUrl(`${localePrefix}/products/`) },
+        ...(locale === "en" ? [{ name: "Pumps", item: toAbsoluteProductUrl("/en/products/pumps/") }] : []),
         { name: data.breadcrumbParentLabel, item: toAbsoluteProductUrl(data.breadcrumbParentHref) },
         { name: data.breadcrumbLabel, item: canonicalUrl },
       ]
@@ -1624,9 +1629,12 @@ export default function ProductDetailClient({
   const pumpFileDisplayLocale = isLocalizedDetail ? "en" : "zh";
   const isPumpDetail = isPumpDetailData(data);
   const rplAssets = data.productTypeId === "valveless-pump" ? getValvelessPumpAssets(data.slug) : undefined;
+  const diaphragmCadAssets = isDiaphragmPage ? getDiaphragmPumpCadAssets(data.slug) : undefined;
+  const pistonCadAssets = getPistonPumpCadAssets(data.slug);
+  const cadAssets = rplAssets || diaphragmCadAssets || pistonCadAssets;
   const model3dUrl = String(
     data.productTypeId === "valveless-pump" ? rplAssets?.model3dUrl || "" :
-    data.model3dUrl ||
+    cadAssets?.model3dUrl || data.model3dUrl ||
       data.resources?.model3dUrl ||
       "",
   ).trim();
@@ -1794,6 +1802,7 @@ export default function ProductDetailClient({
     ? [
         { label: copy.home, href: `${localePrefix}/` },
         { label: copy.products, href: `${localePrefix}/products/` },
+        ...(configuratorLocale === "en" ? [{ label: "Pumps", href: "/en/products/pumps/" }] : []),
         { label: data.breadcrumbParentLabel, href: data.breadcrumbParentHref },
         { label: data.breadcrumbLabel },
       ]
@@ -1898,6 +1907,8 @@ export default function ProductDetailClient({
 
 const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
 const [hasOpenedModel, setHasOpenedModel] = useState(false);
+const [openedModelUrl, setOpenedModelUrl] = useState("");
+const showModelPreview = Boolean(model3dUrl) && openedModelUrl !== model3dUrl;
 const [solenoidVariant, setSolenoidVariant] = useState(0);
   const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
   const [isAssemblyCustomRequestOpen, setIsAssemblyCustomRequestOpen] = useState(false);
@@ -2068,10 +2079,12 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   const detailModelConfigurator = useMemo(
     () => data.solenoidAuthoredContent
       ? getSolenoidConfigurator(String(data.slug || ""), configuratorLocale)
-      : isValvelessPumpDetailData(data)
-        ? getValvelessPumpConfigurator(String(data.slug || ""), configuratorLocale)
-        : undefined,
-    [data.solenoidAuthoredContent, data.productTypeId, data.slug, configuratorLocale],
+      : isDiaphragmPage
+        ? getDiaphragmPumpConfigurator(String(data.slug || ""), configuratorLocale)
+        : isValvelessPumpDetailData(data)
+          ? getValvelessPumpConfigurator(String(data.slug || ""), configuratorLocale)
+          : undefined,
+    [data.solenoidAuthoredContent, data.productTypeId, data.slug, configuratorLocale, isDiaphragmPage],
   );
   const [openDetailModelConfiguratorId, setOpenDetailModelConfiguratorId] = useState<string | null>(null);
   const [selectedDetailVariantId, setSelectedDetailVariantId] = useState<string | null>(null);
@@ -2083,6 +2096,11 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     variant => variant.id === selectedDetailVariantId,
   ) ?? null;
   const isDetailModelConfiguratorEnabled = Boolean(detailModelConfigurator);
+  const hasConcreteDisplayModel = isDetailModelConfiguratorEnabled
+    ? Boolean(selectedDetailVariant?.model)
+    : !isCustomProduct && (isTubingConfiguratorEnabled
+      ? Boolean(selectedTubingVariant?.model)
+      : !isCustomInquiryMode(data) && Boolean(getDisplayModelText(data).trim()));
   const isDetailVariantRequired = (isTubingConfiguratorEnabled && !selectedTubingVariant)
     || (isDetailModelConfiguratorEnabled && !selectedDetailVariant);
 
@@ -2346,7 +2364,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
     const resolvedProductName =
       isDetailModelConfiguratorEnabled
-        ? isValvelessPumpDetailData(data) ? data.productTypeName : "微型隔膜电磁阀"
+        ? isDiaphragmPage
+          ? diaphragmCategoryCopy.parent
+          : isValvelessPumpDetailData(data) ? "无阀计量泵" : "微型隔膜电磁阀"
         : isPvcTubingConfiguratorEnabled
         ? isEnglish
           ? "PVC Tubing"
@@ -2421,7 +2441,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     if (nextTab === activeTab) return;
 
     setActiveTab(nextTab);
-    if (nextTab === "model3d") setHasOpenedModel(true);
+    if (nextTab === "model3d" && !showModelPreview) setHasOpenedModel(true);
 
     if (!analyticsProductId) return;
 
@@ -2445,7 +2465,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     });
 
     const resource =
-      nextTab === "model3d" && model3dUrl
+      nextTab === "model3d" && model3dUrl && data.productTypeId !== "valveless-pump"
         ? {
             url: model3dUrl,
             id: `${analyticsProductId}:model3d`,
@@ -2473,6 +2493,20 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       resourceType: resource.type,
       fileType,
       sourceSection: "product_detail_tabs",
+      locale: analyticsLocale,
+      productId: analyticsProductId,
+    });
+  }
+
+  function handleOpenModel() {
+    setOpenedModelUrl(model3dUrl);
+    setHasOpenedModel(true);
+    if (!analyticsProductId) return;
+    trackResourceView({
+      resourceId: `${analyticsProductId}:model3d`,
+      resourceType: "3d_model",
+      fileType: model3dUrl.split(/[?#]/)[0].split(".").at(-1) || "unknown",
+      sourceSection: "product_detail_3d_preview",
       locale: analyticsLocale,
       productId: analyticsProductId,
     });
@@ -3412,7 +3446,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 {data.pipettingIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
               </div>
             ) : Array.isArray(data.valvelessIntroductionParagraphs) ? (
-              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-valveless-description="true">
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-valveless-description="true" data-valveless-model={data.slug}>
                 {data.valvelessIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
               </div>
             ) : Array.isArray(data.valveIntroductionParagraphs) ? (
@@ -3464,7 +3498,11 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             )}
 
             <div id="product-detail-actions" className={styles.operationArea}>
-              <div data-product-model-row="true" className={styles.modelLine}>
+              <div
+                data-product-model-row="true"
+                data-concrete-model={hasConcreteDisplayModel ? "true" : undefined}
+                className={styles.modelLine}
+              >
                 <div className={styles.modelCodeWrap}>
                   <div className={styles.modelCodeText}>
                     {isDetailModelConfiguratorEnabled ? (
@@ -3869,6 +3907,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 {rplP4Copy?.specNotes.map((note: string) => (
                   <p key={note} className={styles.rplP4SpecNote} data-product-spec-note="true">{note}</p>
                 ))}
+                {configuratorLocale === "zh" && isValvelessPumpDetailData(data) && data.valvelessFlowNote ? (
+                  <p className={styles.rplP4SpecNote} data-product-flow-note="true">{data.valvelessFlowNote}</p>
+                ) : null}
               </div>
             </div>
 
@@ -3894,15 +3935,21 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 .join(" ")}
             >
               <div
-                  className={styles.panelBox}
+                  className={[styles.panelBox, showModelPreview ? styles.modelPreviewGate : ""].filter(Boolean).join(" ")}
                   data-product-model3d-panel="true"
                 >
-                {isTubingAssembly && !model3dUrl ? (
+                {showModelPreview ? (
+                  <ModelPreviewTrigger
+                    model={cadAssets?.model || data.model || data.productCode || data.slug}
+                    locale={configuratorLocale}
+                    onOpen={handleOpenModel}
+                  />
+                ) : isTubingAssembly && !model3dUrl ? (
                   <div className={styles.modelViewerFallback} role="status">{data.tubingAssemblyUi?.modelUnavailable}</div>
                 ) : hasOpenedModel ? (data.solenoidAuthoredContent ? (
                   <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="3d" active={activeTab === "model3d"} variant={solenoidVariant} onVariant={setSolenoidVariant} />
-                ) : rplAssets ? (
-                  <ProductCadViewer modelId={rplAssets.viewerId} title={rplAssets.model} locale={configuratorLocale} active={activeTab === "model3d"} />
+                ) : cadAssets ? (
+                  <ProductCadViewer modelId={cadAssets.viewerId} title={cadAssets.model} headMaterial={pistonCadAssets?.headMaterial} locale={configuratorLocale} active={activeTab === "model3d"} />
                 ) : isPumpDetail ? (
                   <PumpUploadedFileGuard
                     key={model3dUrl}

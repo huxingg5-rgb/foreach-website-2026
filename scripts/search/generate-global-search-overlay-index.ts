@@ -1146,6 +1146,20 @@ function getCounts(items: CompactSearchItem[]) {
 }
 
 async function main() {
+  if (process.argv.includes("--valveless-only")) {
+    const isTarget = (item: CompactSearchItem) => item.m === "products" && /^\/products\/pumps\/valveless-metering-pump\/[^/]+\/?$/.test(item.h);
+    for (const locale of REQUESTED_SEARCH_LOCALES.filter(locale => locale !== "zh-CN")) {
+      const outputPath = getOutputPath(locale);
+      const previous = JSON.parse(fs.readFileSync(outputPath, "utf8")) as CompactSearchItem[];
+      const replacements = new Map(loadProductAndCompatibleItems(locale).filter(isTarget).map(item => [item.h, item]));
+      if (replacements.size !== 5 || previous.filter(isTarget).length !== 5) throw new Error(`Expected five valveless products in ${locale}`);
+      const items = previous.map(item => isTarget(item) ? replacements.get(item.h)! : item);
+      if (items.some(item => !item)) throw new Error(`Unmatched valveless search route in ${locale}`);
+      writeOrCheckOutput(outputPath, JSON.stringify(items));
+    }
+    console.log("Valveless search entries updated; unrelated entries and Chinese index preserved.");
+    return;
+  }
   if (process.argv.includes("--solenoid-only")) {
     for (const locale of REQUESTED_SEARCH_LOCALES) {
       const outputPath = getOutputPath(locale);

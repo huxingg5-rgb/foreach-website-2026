@@ -185,6 +185,37 @@
   overflow-wrap: anywhere;
 }
 
+.compactSummary .summaryTable {
+  margin-top: 0;
+}
+
+.summaryValues {
+  display: grid;
+  gap: 4px;
+}
+
+.summaryValues > span {
+  color: inherit;
+}
+
+.summaryDefaults {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.summaryDefaults > summary {
+  width: fit-content;
+  padding: 6px 0;
+  color: var(--brand-blue);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.summaryDefaults > summary:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 4px;
+}
+
 .config {
   display: grid;
   grid-template-rows:

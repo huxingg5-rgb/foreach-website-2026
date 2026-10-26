@@ -1,6 +1,7 @@
+import { getValvelessPumpImageAlt } from "./valveless-pump-image-copy";
 import type { ProductApplicationsContent, ProductDetailFaqItem } from "./product-detail.types";
 import { getValvelessPumpSeoTitle } from "./valveless-pump-seo";
-import { valvelessPumpIntroductionsZh } from "./valveless-pump-introductions.zh";
+import { valvelessPumpFlowNotesZh, valvelessPumpIntroductionsZh } from "./valveless-pump-introductions.zh";
 
 // Reviewed 2026-09-16. Industry terminology is not a claim of model validation.
 // https://www.fluidmetering.com/blog/dispensing-metering
@@ -184,10 +185,19 @@ export function applyValvelessPumpReviewedChineseCopy<T extends { slug?: string;
   if (!copy) return data;
   const introduction = valvelessPumpIntroductionsZh[data.slug || ""];
   const record = data as T & Record<string, unknown>;
-  return { ...data, ...copy, seo: { ...(record.seo as object || {}), ...copy.seo },
+  const mainImage = typeof record.mainImage === "string" ? record.mainImage : "";
+  const imageAlt = getValvelessPumpImageAlt(mainImage, locale);
+  const additionalImages = Array.isArray(record.additionalImages) ? record.additionalImages : [];
+  const existingAlts = Array.isArray(record.additionalImageAlts) ? record.additionalImageAlts : [];
+  return { ...data, ...copy,
+    ...(imageAlt ? { imageAlt, mainImageAlt: imageAlt, imageAltEn: imageAlt } : {}),
+    additionalImageAlts: additionalImages.map((image, index) =>
+      getValvelessPumpImageAlt(String(image), locale) || existingAlts[index] || imageAlt || ""),
+    seo: { ...(record.seo as object || {}), ...copy.seo },
     ...(introduction ? {
       model: introduction.title, title: introduction.title, name: introduction.title,
       valvelessIntroductionParagraphs: introduction.paragraphs,
+      valvelessFlowNote: data.slug?.startsWith("drpl-") ? valvelessPumpFlowNotesZh.dual : valvelessPumpFlowNotesZh.single,
       commonApplications: introduction.commonApplications,
     } : { commonApplications: copy.applicationDetails.items.map(item => item.title) }),
     specs: fullSpecNames(record.specs), specifications: fullSpecNames(record.specifications), specificationGroups: fullSpecNames(record.specificationGroups) };

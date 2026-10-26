@@ -244,6 +244,15 @@
   margin-top: 12px;
 }
 
+.container .productDescParagraphs[data-valveless-model^="rpl-"] > p {
+  margin: 0 !important;
+  line-height: 1.35 !important;
+}
+
+.container .productDescParagraphs[data-valveless-model^="rpl-"] > p + p {
+  margin-top: 6px !important;
+}
+
 .application {
   margin-top: var(--content-section-gap);
 }
@@ -253,7 +262,7 @@
   color: #111111;
   font-size: 24px;
   line-height: 1.35;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .applicationText {
@@ -322,6 +331,10 @@
   font-weight: 500;
   letter-spacing: 0.01em;
   white-space: nowrap;
+}
+
+.modelLine[data-concrete-model="true"] .modelCode {
+  color: var(--blue);
 }
 
 .button {
@@ -442,6 +455,13 @@
   padding: 32px 36px 38px;
   border: 1px solid var(--line);
   background: #ffffff;
+}
+
+/* The preview supplies the same full-width border and spacing as the 2D frame. */
+.panelBox.modelPreviewGate {
+  min-height: 0;
+  padding: 0;
+  border: 0;
 }
 
 .specPanelClean {
@@ -588,7 +608,7 @@
   .applicationTitle {
     font-size: 20px;
     line-height: 1.35;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .modelLine {
@@ -606,7 +626,7 @@
 
   .modelLabel {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .modelCode {
@@ -1601,7 +1621,7 @@
   color: #111111 !important;
   font-size: 18px !important;
   line-height: 1.45 !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
 
 .faqToggle {
@@ -2138,11 +2158,11 @@
 
 /* ===== FOREACH 3d model global height END ===== */
 
-/* ===== FOREACH model text same size bold START ===== */
+/* ===== FOREACH model text same size medium START ===== */
 /*
   型号文字统一：
   - “型号：”和“定制配置请联系我们”字号一致
-  - 两边统一加粗
+  - 两边统一使用 500 字重
   - 不改颜色
   - 不改按钮样式
 */
@@ -2151,7 +2171,7 @@
 .container .modelCode {
   font-size: 24px !important;
   line-height: 1.25 !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   letter-spacing: 0 !important;
 }
 
@@ -2160,7 +2180,7 @@
   .container .modelCode {
     font-size: 20px !important;
     line-height: 1.25 !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
   }
 }
 
@@ -2169,11 +2189,11 @@
   .container .modelCode {
     font-size: 18px !important;
     line-height: 1.25 !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
   }
 }
 
-/* ===== FOREACH model text same size bold END ===== */
+/* ===== FOREACH model text same size medium END ===== */
 
 
 

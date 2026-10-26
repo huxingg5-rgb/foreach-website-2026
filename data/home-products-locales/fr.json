@@ -20,34 +20,42 @@
   "products": {
     "plunger": {
       "name": "Pompes à piston",
+      "imageAlt": "Pompes à piston EA, SM et TM de FOREACH présentées côte à côte",
       "description": "Aspiration et distribution contrôlées d’échantillons et de réactifs pour le dosage de liquides dans les instruments."
     },
     "dpl": {
       "name": "Pompes à membrane",
+      "imageAlt": "Pompe à membrane miniature FOREACH avec moteur et tête noire",
       "description": "Transfert de liquides, amorçage et lavage pour l’alimentation et la vidange des circuits d’instruments."
     },
     "smtp2": {
       "name": "Module de pipetage SMTP2",
+      "imageAlt": "Module de pipetage SMTP2 de FOREACH avec tige de pipetage et carte de commande",
       "description": "Entraînement et commande intégrés, avec détection du niveau de liquide, de la présence d’embout et des obstructions pour le pipetage automatisé."
     },
     "rpl": {
       "name": "Pompes doseuses sans clapets",
+      "imageAlt": "Pompe doseuse sans clapets FOREACH avec moteur et tête de pompe",
       "description": "Conception sans clapets pour le dosage de liquides, la distribution et le transfert de réactifs dans les instruments."
     },
     "assembly": {
       "name": "Ensembles de tubes",
+      "imageAlt": "Ensembles de tubes FOREACH avec raccords montés",
       "description": "Ensembles de tubes sur mesure à collets, bagues de retenue ou ferrules pour les circuits fluidiques des instruments."
     },
     "tube": {
       "name": "Tubes",
+      "imageAlt": "Tubes transparents et translucides FOREACH pour instruments",
       "description": "Tubes rigides et souples en PVC et autres matériaux, avec diamètres intérieur et extérieur et longueurs personnalisables."
     },
     "quick": {
       "name": "Raccords rapides",
+      "imageAlt": "Raccords rapides FOREACH de différentes formes et dimensions",
       "description": "Pour tubes de diamètre intérieur de 1,6 à 19,0 mm. Versions en ligne ou pour traversée de cloison, avec ou sans clapet. Configurations sur mesure disponibles."
     },
     "needle": {
       "name": "Aiguilles",
+      "imageAlt": "Aiguilles pour instruments FOREACH avec tiges métalliques et ensembles de connexion",
       "description": "Aiguilles personnalisables pour le prélèvement, le perçage et le lavage."
     },
     "flanged-tubing": {

@@ -181,9 +181,9 @@
 
 .detailHero {
   display: grid;
-  grid-template-columns: minmax(0, 1.14fr) minmax(380px, 0.86fr);
-  gap: 56px;
-  padding: 40px 0 48px;
+  grid-template-columns: minmax(0, 35%) minmax(0, 1fr);
+  gap: clamp(28px, 3.3vw, 64px);
+  padding: 0 0 48px;
 }
 
 .detailMedia,
@@ -193,28 +193,23 @@
 
 .detailImage {
   width: 100%;
-  min-height: 520px;
+  aspect-ratio: 1 / 1;
 }
 
 .thumbnailRow {
   display: flex;
-  gap: 14px;
-  margin-top: 14px;
+  height: 96px;
+  padding: 0 34px;
+  margin-top: 12px;
 }
 
-.thumbnail {
-  width: 82px;
-  height: 82px;
+.galleryTrack {
+  width: 100%;
+  height: 100%;
 }
 
 .detailInfo {
-  padding-top: 10px;
-}
-
-.detailEyebrow {
-  width: 120px;
-  height: 16px;
-  margin-bottom: 18px;
+  padding-top: 0;
 }
 
 .detailTitle {
@@ -226,13 +221,18 @@
 .detailTitleShort {
   width: 56%;
   height: 34px;
-  margin-bottom: 34px;
+  margin-bottom: 24px;
 }
 
 .detailTextGroup {
   display: grid;
-  gap: 12px;
+  gap: 20px;
   margin-bottom: 34px;
+}
+
+.detailParagraph {
+  display: grid;
+  gap: 12px;
 }
 
 .detailText {
@@ -246,11 +246,16 @@
 }
 
 .detailModelRow {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 126px;
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 18px;
+  padding-top: 24px;
+  border-top: 1px solid #e8edf4;
+  margin-bottom: 28px;
 }
+
+.detailModel { width: min(280px, 52%); }
+.detailConfigButton { width: 126px; }
 
 .detailModel,
 .detailConfigButton {
@@ -258,26 +263,24 @@
 }
 
 .detailActionRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1.25fr;
-  gap: 10px;
+  width: 100%;
 }
 
-.detailAction,
-.detailActionWide {
-  height: 42px;
+.detailActionsPlaceholder {
+  width: 100%;
+  height: 44px;
 }
 
 .detailTabs {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid rgba(23, 51, 104, 0.14);
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
   border-bottom: 1px solid rgba(23, 51, 104, 0.14);
 }
 
-.detailTab {
-  height: 58px;
-  border-right: 1px solid #ffffff;
+.detailTabsPlaceholder {
+  width: min(100%, 560px);
+  height: 32px;
 }
 
 .detailPanel {
@@ -314,9 +317,6 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .detailHero {
-    gap: 36px;
-  }
 }
 
 @media (max-width: 900px) {
@@ -345,13 +345,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .detailHero {
-    grid-template-columns: 1fr;
-  }
-
-  .detailImage {
-    min-height: 460px;
-  }
 }
 
 @media (max-width: 680px) {
@@ -430,16 +423,7 @@
 
   .detailHero {
     gap: 26px;
-    padding: 22px 0 34px;
-  }
-
-  .detailImage {
-    min-height: 360px;
-  }
-
-  .thumbnail {
-    width: 66px;
-    height: 66px;
+    padding: 0 0 34px;
   }
 
   .detailInfo {
@@ -451,22 +435,6 @@
     height: 28px;
   }
 
-  .detailModelRow {
-    grid-template-columns: minmax(0, 1fr) 106px;
-  }
-
-  .detailActionRow {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .detailActionWide {
-    grid-column: 1 / -1;
-  }
-
-  .detailTabs {
-    grid-template-columns: repeat(4, minmax(92px, 1fr));
-    overflow-x: auto;
-  }
 
   .detailPanel {
     min-height: 340px;
@@ -475,6 +443,267 @@
 
   .specRow {
     grid-template-columns: 40% minmax(0, 1fr);
+  }
+}
+
+/* Match ProductDetailClient's shared desktop and mobile gallery geometry. */
+.detailShell .container {
+  width: min(1600px, calc(100% - 96px));
+}
+
+.detailShell .breadcrumbLine { margin: 23px 0; }
+.detailShell[data-skeleton-locale="zh"] .detailTitleShort { width: 42%; }
+.detailShell[data-skeleton-locale="zh"] .detailTextShort { width: 64%; }
+.detailShell[data-skeleton-locale="zh"] .detailActionsPlaceholder { width: 72%; }
+.detailShell[data-skeleton-locale="zh"] .detailTabsPlaceholder { max-width: 440px; }
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .detailShell .breadcrumbLine { margin: 11px 0; }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .detailShell .thumbnailRow { height: 80px; }
+  .detailShell .detailTitle,
+  .detailShell .detailTitleShort { height: 28px; }
+}
+
+@media (max-width: 1024px) {
+  .detailShell .detailHero { grid-template-columns: 1fr; gap: 34px; }
+  .detailShell .detailMedia { width: min(100%, 720px); margin: 0 auto; }
+}
+
+@media (max-width: 900px) {
+  .detailShell .breadcrumbLine { margin: 12px 0; }
+}
+
+@media (max-width: 768px) {
+  .detailShell .container { width: calc(100% - 28px); }
+  .detailShell .detailMedia { max-width: 420px; }
+  .detailShell .detailImage { height: 300px; aspect-ratio: auto; }
+  .detailShell .thumbnailRow { height: 72px; padding: 0 32px; }
+  .detailShell .detailHero { gap: 28px; }
+  .detailShell .detailActionsPlaceholder { width: 100%; }
+}
+
+@media (max-width: 420px) {
+  .detailShell .detailImage { height: 270px; }
+}
+
+/* Scoped to valveless category/series routes; other skeletons stay unchanged. */
+.valvelessSelection .container {
+  width: min(1600px, calc(100% - 96px));
+}
+
+.valvelessSelection .valvelessContent {
+  /* Match the existing products-main > products-container inset. */
+  width: min(1504px, calc(100% - 192px));
+}
+
+.valvelessSelection .categoryTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 22px;
+}
+
+.valvelessSelection .categoryTab {
+  width: 92px;
+  border-radius: 8px;
+}
+
+.valvelessSelection .categoryTab:last-child {
+  width: 160px;
+}
+
+.valvelessIntro {
+  display: grid;
+  grid-template-columns: 430px minmax(0, 1fr);
+  gap: 46px;
+  align-items: center;
+  padding: 24px 0;
+  margin-bottom: 52px;
+  border-top: 1px solid #e5ebf2;
+}
+
+.valvelessIntroImage {
+  width: 100%;
+  height: 320px;
+}
+
+.valvelessIntroCopy {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.valvelessIntroTitle {
+  width: 72%;
+  height: 34px;
+  margin-bottom: 8px;
+}
+
+.valvelessIntroLine {
+  height: 16px;
+}
+
+.valvelessIntroLine:nth-child(4),
+.valvelessIntroLine:nth-child(7) {
+  width: 78%;
+  margin-bottom: 12px;
+}
+
+.valvelessIntroMore {
+  justify-self: end;
+  width: 86px;
+  height: 18px;
+}
+
+.valvelessSelection .selectionLayout {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 32px;
+}
+
+.valvelessSelection .filterPanel {
+  min-height: 0;
+  padding: 18px 14px;
+}
+
+.valvelessTypeOptions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.valvelessFilterOption {
+  height: 44px;
+}
+
+.valvelessSelection .filterGroup {
+  display: grid;
+  gap: 8px;
+  padding-bottom: 0;
+}
+
+.valvelessSelection .filterLabel {
+  margin-bottom: 14px;
+}
+
+.valvelessSelection .toolbar {
+  min-height: 56px;
+  padding: 0 16px;
+  border: 1px solid #e5ebf2;
+  border-radius: 8px;
+}
+
+.valvelessSelection .cardGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.valvelessSelection .cardImage {
+  aspect-ratio: 4 / 3;
+}
+
+.valvelessSelection .cardMeta {
+  height: 48px;
+}
+
+.valvelessCardActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 1400px) {
+  .valvelessIntro {
+    grid-template-columns: 390px minmax(0, 1fr);
+    gap: 38px;
+  }
+
+  .valvelessIntroImage {
+    height: 290px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .valvelessSelection .container {
+    width: calc(100% - 48px);
+  }
+
+  .valvelessSelection .selectionLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .valvelessSelection .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1200px) {
+  .valvelessSelection .valvelessContent {
+    width: calc(100% - 96px);
+  }
+}
+
+@media (max-width: 900px) {
+  .valvelessIntro {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 22px 0 20px;
+    margin-bottom: 44px;
+  }
+
+  .valvelessIntroImage {
+    height: 230px;
+  }
+
+  .valvelessSelection .categoryTabs {
+    display: block;
+  }
+
+  .valvelessSelection .categoryTab {
+    width: 100%;
+  }
+
+  .valvelessSelection .categoryTab:not(:first-child) {
+    display: none;
+  }
+
+  .valvelessSelection .filterPanel {
+    display: grid;
+    gap: 18px;
+    margin: 0;
+  }
+
+  .valvelessTypeOptions,
+  .valvelessSelection .filterGroup .valvelessFilterOption {
+    display: none;
+  }
+
+  .valvelessSelection .filterLabel {
+    margin: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .valvelessSelection .container {
+    width: calc(100% - 32px);
+  }
+
+  .valvelessSelection .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .valvelessSelection .toolbarTitle {
+    width: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .valvelessSelection .valvelessContent {
+    width: calc(100% - 64px);
   }
 }
 

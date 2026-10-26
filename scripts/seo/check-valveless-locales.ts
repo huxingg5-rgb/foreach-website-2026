@@ -60,7 +60,8 @@ for (const locale of valvelessForeignLocales) {
     assert.deepEqual(adapter.valvelessIntroductionParagraphs, copy.introductionParagraphs);
     assert.equal(copy.description, copy.introductionParagraphs.join("\n\n"));
     assert.ok(copy.title.startsWith(copy.model));
-    assert.ok(copy.cardSummary.startsWith(copy.model));
+    const cardModel = copy.model.replace(/^RPL-/, "");
+    assert.ok(copy.cardSummary.startsWith(`${cardModel} `), `${locale}/${source.slug}: reviewed card model prefix`);
     assert.equal(adapter.description, copy.description);
     assert.equal(adapter.modelDisplay, source.modelDisplay, "Preserve custom configuration metadata");
     assert.equal(adapter.detailHref, getValvelessPumpPath(locale, source.slug));

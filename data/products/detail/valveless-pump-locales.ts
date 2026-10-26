@@ -1,4 +1,5 @@
 import details from "../generated/pumps/valveless-pumps/detail/index.json";
+import { getValvelessPumpImageAlt } from "./valveless-pump-image-copy";
 import { en } from "./valveless-locales/en";
 import { es } from "./valveless-locales/es";
 import { fr } from "./valveless-locales/fr";
@@ -83,12 +84,14 @@ export function getValvelessForeignContent(slug: string, locale: string) {
   const faqs = dual ? copy.faqDual : key === "p635" || key === "p15"
     ? [...copy.modelFaqs[key], ...copy.faqSingle.slice(3)]
     : copy.faqSingle;
-  const imageAlt = `FOREACH ${model} ${dual ? copy.dualName : copy.singleName}`;
+  const imageAlt = getValvelessPumpImageAlt(source.mainImage, locale)
+    || `FOREACH ${model} ${dual ? copy.dualName : copy.singleName}`;
   const views = galleryViews[locale as ValvelessForeignLocale];
-  const additionalImageAlts = (source.additionalImages || []).map((_, index) => {
+  const additionalImageAlts = (source.additionalImages || []).map((image, index) => {
     const isNameplate = slug === "rpl-p15" && index === 0;
     const angle = slug === "rpl-p15" ? index : index + 1;
-    return `${imageAlt}, ${isNameplate ? views.nameplate : `${views.angled} ${angle}`}`;
+    return getValvelessPumpImageAlt(image, locale)
+      || `${imageAlt}, ${isNameplate ? views.nameplate : `${views.angled} ${angle}`}`;
   });
   return {
     model, source, cardSummary: fill(copy.cards[introductionKey]),

@@ -14,7 +14,8 @@ export const englishHomeProducts = [
     "group": "Pumps",
     "name": "Piston Pumps",
     "description": "Controlled aspiration and dispensing of samples and reagents for instrument dosing and liquid metering.",
-    "image": "/images/products/pumps/plunger-pump/ea/pump-ea-1000ul-pmma.webp",
+    "image": "/images/home/products/foreach-home-piston-pumps.webp",
+    "imageAlt": "FOREACH EA, SM and TM piston pumps shown side by side",
     "href": "/en/products/pumps/piston-pump/",
     "featured": true,
     "illustrative": false
@@ -24,7 +25,8 @@ export const englishHomeProducts = [
     "group": "Pumps",
     "name": "Diaphragm Pumps",
     "description": "Liquid transfer, priming and washing for instrument fluid supply and drainage.",
-    "image": "/images/home/diaphragm-pump-product-photo-card.webp",
+    "image": "/images/home/products/foreach-home-diaphragm-pump.webp",
+    "imageAlt": "FOREACH miniature diaphragm pump with motor and black pump head",
     "href": "/en/products/pumps/miniature-diaphragm-pumps/",
     "featured": true,
     "illustrative": false
@@ -34,7 +36,8 @@ export const englishHomeProducts = [
     "group": "Pumps",
     "name": "SMTP2 Pipetting Module",
     "description": "Integrated drive and control with liquid-level, tip-presence and blockage detection for automated pipetting.",
-    "image": "/images/products/pumps/pipetting-pumps/foreach-smtp2-1000ul-programmable-gas-displacement-pipetting-pump.webp",
+    "image": "/images/home/products/foreach-home-smtp2-pipetting-module.webp",
+    "imageAlt": "FOREACH SMTP2 pipetting module with pipetting shaft and control board",
     "href": "/en/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/",
     "featured": true,
     "illustrative": false
@@ -44,7 +47,8 @@ export const englishHomeProducts = [
     "group": "Pumps",
     "name": "Valveless Metering Pumps",
     "description": "Valveless design for liquid metering, dosing and reagent transfer in instruments.",
-    "image": "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    "image": "/images/home/products/foreach-home-valveless-metering-pump.webp",
+    "imageAlt": "FOREACH valveless metering pump with motor and pump head",
     "href": "/en/products/pumps/valveless-metering-pump/",
     "featured": true,
     "illustrative": false
@@ -54,7 +58,8 @@ export const englishHomeProducts = [
     "group": "Tubing Assemblies",
     "name": "Tubing Assemblies",
     "description": tubingAssembliesDescription,
-    "image": "/images/home/tubing-assemblies-product-photo-card.webp",
+    "image": "/images/home/products/foreach-home-tubing-assemblies.webp",
+    "imageAlt": "FOREACH tubing assemblies with fitted connectors",
     "href": getTubingAssemblyPath(),
     "featured": true,
     "illustrative": false
@@ -64,7 +69,8 @@ export const englishHomeProducts = [
     "group": "Tubing",
     "name": "Tubing",
     "description": "Rigid and flexible tubing in PVC and other materials, with customizable inner and outer diameters and lengths.",
-    "image": "/images/home/tubing-product-photo-card.webp",
+    "image": "/images/home/products/foreach-home-instrument-tubing.webp",
+    "imageAlt": "FOREACH transparent and translucent instrument tubing",
     "href": "/en/products/tubing/",
     "featured": true,
     "illustrative": false
@@ -74,7 +80,8 @@ export const englishHomeProducts = [
     "group": "Fittings",
     "name": "Quick-Connect Fittings",
     "description": "For tubing IDs from 1.6 to 19.0 mm, with bulkhead and inline, valved and non-valved options. Custom configurations available.",
-    "image": "/images/products/fittings/series/catalog-a02-quick-connect-fittings.webp",
+    "image": "/images/home/products/foreach-home-quick-connect-fittings.webp",
+    "imageAlt": "FOREACH quick-connect fittings in multiple shapes and sizes",
     "href": "/en/products/fittings/quick-connect-fittings/",
     "featured": true,
     "illustrative": false
@@ -84,7 +91,8 @@ export const englishHomeProducts = [
     "group": "Probes",
     "name": "Probes",
     "description": "Customizable probe designs for sampling, piercing and washing applications.",
-    "image": "/images/home/probes-product-photo-card.webp",
+    "image": "/images/home/products/foreach-home-instrument-probes.webp",
+    "imageAlt": "FOREACH instrument probes with metal shafts and connection assemblies",
     "href": "/en/products/probes/",
     "featured": true,
     "illustrative": false

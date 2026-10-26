@@ -5,6 +5,7 @@ import DiaphragmPumpSeriesOptions from "@/components/products/diaphragm-pumps/Di
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import {
   getDiaphragmPumpCopy,
+  getDiaphragmPumpGallery,
   getDiaphragmPumpSeriesSeoDescription,
 } from "@/data/products/detail/diaphragm-pump-copy";
 import { getDiaphragmPumpApplicationDetails } from "@/data/products/detail/applications/diaphragm-pump-applications";
@@ -970,7 +971,7 @@ function adaptToProductDetailClientData(
     findMediaUrlByType(detail, "规格书") ||
     findDiaphragmMediaUrlByPathKeywords(detail, ["datasheets", ".pdf"]);
 
-  return {
+  const productData = {
     id: slug,
     productId: slug,
     slug,
@@ -1093,6 +1094,12 @@ function adaptToProductDetailClientData(
     metaTitle: getText(detail.seo?.title || seoProductTitle),
     metaDescription: getText(detail.seo?.description || description),
   };
+
+  // Share the same main photo across the gallery, structured data and metadata.
+  const gallery = reference && reference.copyKey !== "dpl30-brushed"
+    ? getDiaphragmPumpGallery(reference.copyKey, productData, locale)
+    : null;
+  return { ...productData, ...gallery };
 }
 
 function getPreferredProductDetailData(

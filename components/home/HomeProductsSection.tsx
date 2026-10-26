@@ -42,7 +42,7 @@ export default function HomeProductsSection({ data }: { data: HomeProductsSectio
             <Link key={product.id} href={product.href} prefetch={false} className={styles.product}
               aria-label={(product.illustrative ? copy.discuss : copy.explore).replace('{name}', product.name)}>
               <div className={`${styles.visual} ${product.id === "assembly" || product.id === "tube" ? styles.visualCover : ""}`}>
-                <Image src={product.image} alt={product.illustrative ? copy.conceptAlt : `${product.name} — FOREACH`}
+                <Image src={product.image} alt={product.illustrative ? copy.conceptAlt : product.imageAlt ?? `${product.name} — FOREACH`}
                   fill sizes="(max-width: 760px) 46vw, (max-width: 1600px) 23vw, 350px" />
                 {product.illustrative && <span className={styles.conceptLabel}>{copy.conceptLabel}</span>}
               </div>

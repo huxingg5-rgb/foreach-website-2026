@@ -5,5 +5,5 @@ export function getValvelessPumpAssets(slug: string) {
   const model = models[slug];
   if (!model) return undefined;
   const base = `/models/products/pumps/valveless-pumps/${slug}`;
-  return { model, viewerId: slug, model3dUrl: `${base}.json`, drawingPdfUrl: `${base}-drawing.pdf` };
+  return { model, viewerId: slug, model3dUrl: `${base}.fcad.gz`, drawingPdfUrl: `${base}-drawing.pdf` };
 }

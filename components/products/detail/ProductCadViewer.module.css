@@ -1,0 +1,35 @@
+.frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #f6f8fb;
+}
+
+.error {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(246, 248, 251, 0.96);
+  color: #173368;
+  text-align: center;
+}
+
+.error button {
+  padding: 10px 20px;
+  border: 1px solid #173368;
+  border-radius: 8px;
+  background: #fff;
+  color: #173368;
+  font: inherit;
+  cursor: pointer;
+}
+
+.error button:focus-visible {
+  outline: 2px solid #173368;
+  outline-offset: 3px;
+}
