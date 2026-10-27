@@ -14,8 +14,6 @@ import { getTubingDetailPath, getLegacyTubingSelectionTarget, getTubingSelection
 import { fittingIntrosZh, fittingOverviewParagraphsZh } from "@/data/products/selection/fitting-headings.zh";
 import ProductTypeIntroImage from "./ProductTypeIntroImage";
 import { getTubingAssemblyLocalePrefix, isTubingAssemblyLocale, tubingAssemblyNavigation } from "@/data/products/tubing-assemblies/locales";
-import { ProductApplicationGuides } from "@/components/products/detail/ProductApplicationsPanel";
-import { getEnglishProductApplicationGuides } from "@/data/products/detail/applications/product-application-guides.en";
 import { probeIntrosZh, probeOverviewParagraphsZh, probeTypesZh, getProbeProductTypeIdZh, getProbeSelectionPathZh } from "@/data/products/selection/probe-selection.zh";
 import { controlIntrosZh, controlOverviewParagraphsZh, controlTypesZh, getControlProductTypeIdZh, getControlSelectionPathZh } from "@/data/products/selection/control-selection.zh";
 import {getValveSeriesRoute,getValveSelectionPath,getHpValveDetailPath} from "@/data/products/selection/valve-routes";
@@ -5671,7 +5669,6 @@ function isFilterOptionActive(
                 </ProductTypeIntroImage>
               </section>
             ) : null}
-            {locale === "en" ? <ProductApplicationGuides guides={getEnglishProductApplicationGuides(pathname)} /> : null}
         <section className="selection-section">
           <div className="selection-layout">
             <ProductFilterPanel

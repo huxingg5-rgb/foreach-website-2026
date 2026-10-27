@@ -75,8 +75,7 @@ import CadRequestModal from "./CadRequestModal";
 import TubingAssemblyCustomRequestModal from "@/components/products/tubing-assemblies/TubingAssemblyCustomRequestModal";
 import TubingAssemblySizeTable from "@/components/products/tubing-assemblies/TubingAssemblySizeTable";
 import tubingAssemblySpecStyles from "@/components/products/tubing-assemblies/tubing-assembly-specifications.module.css";
-import ProductApplicationsPanel, { ProductApplicationGuides } from "./ProductApplicationsPanel";
-import { getEnglishProductApplicationGuides } from "@/data/products/detail/applications/product-application-guides.en";
+import ProductApplicationsPanel from "./ProductApplicationsPanel";
 import ProductDatasheetPanel from "./ProductDatasheetPanel";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -4114,7 +4113,6 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             ) : null}
           </div>
         </section>
-        {isEnglish ? <ProductApplicationGuides guides={getEnglishProductApplicationGuides(pathname)} /> : null}
         {/* QUICK_CONNECT_SERIES_MODEL_TABLE_START */}
         {Array.isArray((data as any).modelRows) &&
         (data as any).modelRows.length > 0 ? (
