@@ -24,6 +24,7 @@ import { usePathname, useRouter } from "next/navigation";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
+import ResourceCategorySidebar from "@/components/resources/ResourceCategorySidebar";
 import ResourcePagination from "@/components/resources/ResourcePagination";
 import { INSTALLATION_GUIDE_PAGE_SIZE, getInstallationGuidePageHref, guidePaginationCopy } from "@/data/resources/installation-guide/installation-guide-pagination";
 import TutorialVideoCard from "@/components/resources/installation-guide/TutorialVideoCard";
@@ -44,7 +45,6 @@ import type {
   InstallationGuideCard,
   InstallationGuideFilterType,
   InstallationGuidePageData,
-  InstallationGuideTreeChild,
   InstallationGuideTreeItem,
 } from "@/data/resources/installation-guide/installation-guide.types";
 
@@ -442,7 +442,8 @@ export default function InstallationGuideClient({
         placeholder={pageData.search.placeholder}
         searchButtonText={pageData.search.buttonText}
         recentLabel={pageData.search.recentLabel}
-        recentKeywords={pageData.search.recentKeywords}
+        historyKey={`installation-guide:${pageData.locale}`}
+        historyLocale={pageData.locale}
       />
 
       {/* =====================================================
@@ -450,120 +451,29 @@ export default function InstallationGuideClient({
       ===================================================== */}
 
       <section className="installation-guide-main" id="guide-list">
-        <aside className="installation-guide-sidebar">
-          <div className="installation-guide-sidebar-head">
-            <strong>
-              {pageData.sidebar.title}
-            </strong>
-          </div>
-
-          <div className="installation-guide-tree">
-            {pageData.sidebar.tree.map(
-              (item: InstallationGuideTreeItem) => {
-                const hasChildren =
-                  item.children.length > 0;
-
-                const isOpen =
-                  openGroupId === item.id;
-
-                const isActive =
-                  activeFilter.type === item.type &&
-                  activeFilter.id === item.id;
-
-                const itemCount =
-                  item.type === "all"
-                    ? guideCounts.all
-                    : item.type === "series"
-                      ? (guideCounts.series.get(item.id) ?? 0)
-                      : (guideCounts.category.get(item.id) ?? 0);
-
-                return (
-                  <div
-                    key={item.id}
-                    className={`installation-guide-tree-group ${
-                      isOpen ? "is-open" : ""
-                    }`}
-                  >
-                    <button
-                      type="button"
-                      className={`installation-guide-tree-parent ${
-                        isActive ? "is-active" : ""
-                      } ${
-                        hasChildren
-                          ? "has-children"
-                          : "no-children"
-                      }`}
-                      onClick={() =>
-                        handleParentClick(item)
-                      }
-                    >
-                      <strong className="installation-guide-tree-parent-label">
-                        {item.name}
-                        <span className="installation-guide-tree-count">
-                          {formatInstallationGuideCount(
-                            pageData.locale,
-                            itemCount,
-                          )}
-                        </span>
-                      </strong>
-
-                      <span
-                        className="installation-guide-tree-toggle"
-                        aria-hidden="true"
-                      />
-                    </button>
-
-                    {hasChildren ? (
-                      <div className="installation-guide-tree-children">
-                        {item.children.map(
-                          (
-                            child: InstallationGuideTreeChild,
-                          ) => {
-                            const isChildActive =
-                              activeFilter.type ===
-                                "series" &&
-                              activeFilter.id ===
-                                child.id;
-
-                            return (
-                              <button
-                                key={child.id}
-                                type="button"
-                                className={`installation-guide-tree-child ${
-                                  isChildActive
-                                    ? "is-active"
-                                    : ""
-                                }`}
-                                onClick={() =>
-                                  handleChildClick(
-                                    item.id,
-                                    child.id,
-                                  )
-                                }
-                              >
-                                <span className="installation-guide-tree-child-label">
-                                  {child.name}
-                                  <span className="installation-guide-tree-count">
-                                    {formatInstallationGuideCount(
-                                      pageData.locale,
-                                      guideCounts.series.get(
-                                        child.id,
-                                      ) ?? 0,
-                                    )}
-                                  </span>
-                                </span>
-                              </button>
-                            );
-                          },
-                        )}
-                      </div>
-                    ) : null}
-                  </div>
-                );
-              },
-            )}
-          </div>
-        </aside>
+        <ResourceCategorySidebar
+          title={pageData.sidebar.title}
+          items={pageData.sidebar.tree.map((item) => ({
+            id: item.id,
+            label: item.name,
+            countLabel: formatInstallationGuideCount(
+              pageData.locale,
+              item.type === "all" ? guideCounts.all
+                : item.type === "series" ? guideCounts.series.get(item.id) ?? 0
+                : guideCounts.category.get(item.id) ?? 0,
+            ),
+            active: activeFilter.type === item.type && activeFilter.id === item.id,
+            expanded: openGroupId === item.id,
+            onSelect: () => handleParentClick(item),
+            children: item.children.map((child) => ({
+              id: child.id,
+              label: child.name,
+              countLabel: formatInstallationGuideCount(pageData.locale, guideCounts.series.get(child.id) ?? 0),
+              active: activeFilter.type === "series" && activeFilter.id === child.id,
+              onSelect: () => handleChildClick(item.id, child.id),
+            })),
+          }))}
+        />
 
         <section className="installation-guide-content">
           {relationKey ? (

@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
    ProductBasicCard.module.css
    恒永达官网｜公共产品基础卡片样式
 
@@ -30,26 +30,24 @@
   border: 1px solid var(--line, #e5ebf2);
   background: #ffffff;
   color: var(--brand-blue, #173368);
-  transform: translateY(0);
+  transform: none;
   transition:
-    border-color 0.22s ease,
-    transform 0.22s ease,
-    background 0.22s ease;
+    border-color 0.22s ease, background 0.22s ease;
 }
 
 .card:hover {
   border-color: var(--brand-cyan, #09e9b4);
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .card.isActive {
   border-color: var(--line, #e5ebf2);
-  transform: translateY(0);
+  transform: none;
 }
 
 .card.isActive:hover {
   border-color: var(--brand-cyan, #09e9b4);
-  transform: translateY(-1px);
+  transform: none;
 }
 
 /* 顶部荧光线：默认隐藏，hover 时从左向右展开 */
@@ -295,7 +293,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 0;
   border: 1px solid rgba(23, 51, 104, 0.18);
   background: #ffffff;
   color: var(--brand-blue, #173368);

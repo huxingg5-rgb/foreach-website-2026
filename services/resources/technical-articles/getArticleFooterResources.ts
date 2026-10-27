@@ -1,3 +1,4 @@
+import { hasFittingOverviewVideo, isFittingOverviewVideo } from "@/data/resources/installation-guide/fitting-video-relations";
 import { getSolenoidContent } from "@/data/products/detail/solenoid-content";
 import { getSolenoidConfigurationImage } from "@/data/products/detail/solenoid-images";
 import type { RelatedResourcesData } from "@/components/common/related-resources/related-resources.types";
@@ -6,6 +7,7 @@ import { FITTING_PUBLISHED_PRODUCTS } from "@/data/products/selection/fitting-pu
 import { controlModuleSelectionProducts } from "@/data/products/selection/control-module-selection.generated";
 import { getControlModulePath } from "@/data/products/selection/control-module-routes";
 import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
+import { getInstrumentFluidicsArticle } from "@/data/resources/technical-articles/instrument-fluidics-articles.article";
 import { getConnectorSelectionArticle } from "@/data/resources/technical-articles/connector-selection-articles.article";
 import { getHardTubeGuideProducts } from "@/data/resources/technical-articles/hard-tube-fittings-related-products";
 import { getFerruleFittingRelatedProducts } from "@/data/resources/technical-articles/what-is-a-ferrule-fitting.zh";
@@ -40,9 +42,14 @@ function selectArticleResources(data: RelatedResourcesData): RelatedResourcesDat
 /** Shared footer selection for both editorial templates, independent of the sidebar. */
 export function getArticleFooterResources(article: TechnicalArticleItem, locale: TechnicalArticleLocale): RelatedResourcesData {
   let data: RelatedResourcesData = { locale, products: [], articles: [], videos: [] };
-  const connector = getConnectorSelectionArticle(article.slug, locale);
+  const connector = getConnectorSelectionArticle(article.slug, locale)
+    ?? getInstrumentFluidicsArticle(article.slug, locale);
   if (connector) {
     data.products = connector.products;
+    if (article.slug.startsWith("quick-disconnect-coupling-")) {
+      data.videos = getRelatedResourcesData({ sourceType: "article", sourceId: article.id,
+        sourceSlug: article.slug, relationKeys: article.relationKeys, locale }).videos;
+    }
   } else switch (article.slug) {
     case "what-is-a-solenoid-valve": {
       const productLocale = locale === "zh-CN" ? "zh" : locale;
@@ -105,6 +112,16 @@ export function getArticleFooterResources(article: TechnicalArticleItem, locale:
     default: data = getRelatedResourcesData({ sourceType: "article", sourceId: article.id,
       sourceSlug: article.slug, relationKeys: article.relationKeys, locale,
       featuredProductIds: featuredProductIds[article.slug] ?? getValveEngineeringArticle(article.slug, locale)?.productIds });
+  }
+  // Preserve each article's product selection while exposing the newly added fitting videos.
+  if (hasFittingOverviewVideo(article.relationKeys)) {
+    const fittingVideos = getRelatedResourcesData({
+      sourceType: "article", sourceId: article.id, sourceSlug: article.slug,
+      relationKeys: article.relationKeys, locale,
+    }).videos.filter(video =>
+      isFittingOverviewVideo(video.id));
+    data.videos = [...data.videos, ...fittingVideos.filter(video =>
+      !data.videos.some(existing => existing.id === video.id))];
   }
   return selectArticleResources(data);
 }

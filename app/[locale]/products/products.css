@@ -162,7 +162,7 @@
   min-height: 42px;
   padding: 0 20px;
   border: 1px solid rgba(23, 51, 104, 0.2);
-  border-radius: 8px;
+  border-radius: 0;
   background: #ffffff;
   color: #173368;
   font-size: 15px;
@@ -371,7 +371,7 @@
 
 /* 鍏叡 ProductBasicCard 鍦ㄤ骇鍝佷腑蹇冮噷鐨勫眬閮ㄨ鐩?*/
 .product-selection-page .product-selection-card:hover {
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .product-selection-page .product-selection-card::before {

@@ -1,3 +1,5 @@
+import { fittingOverviewVideoRelations } from "@/data/resources/installation-guide/fitting-video-relations";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
 import type { VideoGuideDetail } from "./video-guide-detail.types";
 import metadata from "./video-guide-source-metadata.json";
 import { videoProductLinks } from "./video-guide-products";
@@ -6,11 +8,12 @@ import { videoProductLinks } from "./video-guide-products";
 // checked on 2026-10-21. Untimed notes are editorial selection guidance, not invented
 // transcript chapters. Product specifications remain in their current product sources.
 type LibraryEntry = {
+  thumbnail?: string;
   key: string; youtubeId: keyof typeof metadata; title: string; seoTitle: string;
   description: string; watchHeading: string; caption: string;
   highlightsHeading: string; introduction: string;
   highlights: readonly [title: string, description: string][];
-  productKeys: readonly string[]; relationKeys: string[];
+  productKeys?: readonly string[]; relationKeys: string[];
   productHeading: string; productIntroduction: string;
   links?: VideoGuideDetail["products"];
   keywords?: readonly string[];
@@ -29,13 +32,13 @@ function makeGuide(entry: LibraryEntry): VideoGuideDetail {
     detailHref: `/en/resources/installation-guide/${id}/`,
     watchUrl: `https://www.youtube.com/watch?v=${entry.youtubeId}`,
     embedUrl: `https://www.youtube.com/embed/${entry.youtubeId}?rel=0&playsinline=1&hl=en`,
-    thumbnail: `https://i.ytimg.com/vi/${entry.youtubeId}/hqdefault.jpg`,
+    thumbnail: entry.thumbnail ? getCanonicalUrl(entry.thumbnail) : `https://i.ytimg.com/vi/${entry.youtubeId}/hqdefault.jpg`,
     breadcrumbLabel: entry.title, sectionId: entry.key,
     watchHeading: entry.watchHeading, caption: entry.caption,
     highlightsHeading: entry.highlightsHeading, highlightsIntroduction: entry.introduction,
     highlights: entry.highlights.map(([title, description]) => ({ title, description })),
     productHeading: entry.productHeading, productIntroduction: entry.productIntroduction,
-    products: [...videoProductLinks(entry.productKeys), ...(entry.links ?? [])],
+    products: [...videoProductLinks(entry.productKeys ?? []), ...(entry.links ?? [])],
     productKeys: entry.productKeys, relationKeys: entry.relationKeys,
     keywords: entry.keywords,
     support: { title: "Discuss your fluid-system requirements", description: "Share your fluid, required flow and pressure, operating cycle, connections and control interface so we can review a suitable configuration." },
@@ -46,6 +49,133 @@ const liquidCategory = { title: "Compare miniature liquid diaphragm pumps", href
 const gasLiquidCategory = { title: "Explore pumps for gas-liquid handling and waste aspiration", href: "/en/products/pumps/miniature-diaphragm-pumps/gas-liquid-diaphragm-pumps/" };
 
 const entries: readonly LibraryEntry[] = [
+  // Official watch-page metadata and descriptions verified on 2026-10-27.
+{
+  "key": "f-ss-water-circulation-filter",
+  "youtubeId": "2K0r5MMFcHs",
+  "thumbnail": "/images/resources/installation-guide/youtube/f-ss-water-circulation-filter-cover.jpg",
+  "title": "Water Circulation Filter for Recirculating Water Loops",
+  "seoTitle": "Water Circulation Filter for Water Loops",
+  "description": "Watch the FOREACH F-SS water circulation filter overview. Review filtration requirements, flow conditions and tubing connections for a recirculating water loop.",
+  "watchHeading": "Watch the F-SS water circulation filter overview",
+  "caption": "F-SS water circulation filter",
+  "highlightsHeading": "What should you check when selecting a water-loop filter?",
+  "introduction": "The F-SS overview introduces a filter for recirculating water systems. Select the filter around the water-loop task, then confirm the required filtration, flow conditions and connection compatibility for the intended configuration.",
+  "highlights": [
+    [
+      "Filtration requirements",
+      "Define what the water loop needs to filter and confirm the filter medium and filtration rating for the selected configuration."
+    ],
+    [
+      "Flow conditions",
+      "Review the required circulation flow and the pressure drop available across the filter. Check performance in the complete loop, including the pump and tubing."
+    ],
+    [
+      "Connection compatibility",
+      "Match the filter connections to the tubing and confirm material compatibility with the water treatment and cleaning conditions."
+    ]
+  ],
+  "productKeys": [],
+  "relationKeys": [
+    "topic:f-ss-water-circulation"
+  ],
+  "productHeading": "Discuss a filter for your recirculating water system",
+  "productIntroduction": "Contact our team with the required filtration, flow conditions and tubing dimensions to review the F-SS configuration. The filter category provides other available filter products for comparison; they are not presented as equivalent replacements.",
+  "links": [
+    {
+      "title": "View available filter products",
+      "href": "/en/products/fittings/filters/"
+    }
+  ],
+  "keywords": [
+    "F-SS",
+    "water circulation filter",
+    "water loop filtration"
+  ]
+},
+{
+  "key": "thread-to-barb-fittings",
+  "youtubeId": "i7Gr86k5xoI",
+  "thumbnail": "/images/resources/installation-guide/youtube/thread-to-barb-fittings-cover.jpg",
+  "title": "Thread-to-Barb Fittings for Flexible Tubing Connections",
+  "seoTitle": "Thread-to-Barb Fittings for Flexible Tubing",
+  "description": "Watch how thread-to-barb fittings connect flexible tubing to threaded ports. Match the thread specification, tubing inner diameter and wetted materials.",
+  "watchHeading": "Watch the thread-to-barb fitting overview",
+  "caption": "Thread-to-barb fittings for flexible tubing and threaded ports",
+  "highlightsHeading": "How do you match a thread-to-barb fitting to a fluid connection?",
+  "introduction": "Thread-to-barb fittings connect flexible tubing to threaded ports on pumps, valves and other fluid-system components. The official overview identifies the thread specification, tubing inner diameter and material compatibility as the starting points for selection.",
+  "highlights": [
+    [
+      "Threaded port",
+      "Match the thread specification and sealing arrangement to the mating port. A similar-looking thread is not enough to establish compatibility."
+    ],
+    [
+      "Flexible tubing",
+      "Match the tubing inner diameter to the specified hose-barb connection. Review the tubing material and operating conditions as part of the complete connection."
+    ],
+    [
+      "Fluid and operating conditions",
+      "Check all wetted materials against the fluid and cleaning process, then verify the assembled connection under its intended pressure and temperature."
+    ]
+  ],
+  "relationKeys": [...fittingOverviewVideoRelations["youtube-thread-to-barb-fittings"]],
+  "productHeading": "Compare fittings for flexible tubing and threaded ports",
+  "productIntroduction": "Use the current product drawings and specifications to compare thread and hose-barb connections. The example products below illustrate available configurations; they do not identify every part shown in the video.",
+  "links": [
+    {
+      "title": "View thread-to-barbed fittings",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/"
+    }
+  ],
+  "keywords": [
+    "thread-to-barb fittings",
+    "threaded hose barb",
+    "flexible tubing",
+    "tubing inner diameter"
+  ]
+},
+{
+  "key": "rigid-tubing-fittings",
+  "youtubeId": "20BZArgyibY",
+  "thumbnail": "/images/resources/installation-guide/youtube/rigid-tubing-fittings-cover.jpg",
+  "title": "Rigid Tubing Fittings for Fluid System Connections",
+  "seoTitle": "Rigid Tubing Fittings for Fluid Systems",
+  "description": "Watch the rigid tubing fitting overview. Match tubing outer diameter, port specification and sealing arrangement when connecting pumps, valves and fluid lines.",
+  "watchHeading": "Watch the rigid tubing fitting overview",
+  "caption": "Rigid tubing fittings for fluid-system connections",
+  "highlightsHeading": "How do you select a fitting for rigid tubing?",
+  "introduction": "Rigid tubing fittings connect tubing to pumps, valves and other fluid-system components. Select the connection to match the tubing outer diameter, port specification and application requirements, as described in the official overview.",
+  "highlights": [
+    [
+      "Tubing outer diameter",
+      "Start with the actual tubing outer diameter and its dimensional tolerance. Confirm the fitting is intended for that tube size and material."
+    ],
+    [
+      "Port and sealing arrangement",
+      "Match the thread, port geometry and required sealing components. Flanged and flangeless connections use different assembly arrangements; follow the selected product's instructions."
+    ],
+    [
+      "Application requirements",
+      "Check fluid compatibility, pressure, temperature and available assembly space. Verify the complete connection in the intended fluid circuit."
+    ]
+  ],
+  "relationKeys": [...fittingOverviewVideoRelations["youtube-rigid-tubing-fittings"]],
+  "productHeading": "Compare rigid tubing connection options",
+  "productIntroduction": "Review the available flanged and flangeless fitting options, together with the mating port and required sealing components. Use the product drawing for the exact assembly.",
+  "links": [
+    {
+      "title": "View rigid tubing fittings",
+      "href": "/en/products/fittings/hard-tube-fittings/"
+    }
+  ],
+  "keywords": [
+    "rigid tubing fittings",
+    "hard tube fittings",
+    "tubing outer diameter",
+    "flanged fitting",
+    "flangeless fitting"
+  ]
+},
   {
     key: "dpl30-vs-dpl30h", youtubeId: "ReMmjMTZgjM",
     title: "How to Choose a Liquid Diaphragm Pump for Higher Backpressure",

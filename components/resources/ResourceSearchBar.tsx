@@ -20,16 +20,7 @@ import {
 } from "react";
 
 import styles from "./ResourceSearchBar.module.css";
-
-export type ResourceSearchBarClassNames = {
-  root?: string;
-  form?: string;
-  input?: string;
-  button?: string;
-  recent?: string;
-  recentLabel?: string;
-  recentButton?: string;
-};
+import useRecentSearches from "./useRecentSearches";
 
 export type ResourceSearchBarProps = {
   value: string;
@@ -39,9 +30,10 @@ export type ResourceSearchBarProps = {
   searchButtonText?: string;
   recentLabel?: string;
   recentKeywords?: string[];
+  historyKey?: string;
+  historyLocale?: string;
   showRecentKeywords?: boolean;
-  classNames?: ResourceSearchBarClassNames;
-  context?: "default" | "product-selection";
+  keywordNormalizer?: (value: string) => string;
 };
 
 function normalizeKeyword(value: string) {
@@ -55,11 +47,18 @@ export default function ResourceSearchBar({
   placeholder = "请输入产品",
   searchButtonText = "搜索",
   recentLabel = "最近搜索",
-  recentKeywords = ["柱塞泵", "Q20", "电磁阀", "高压阀", "压力传感器"],
+  recentKeywords = [],
+  historyKey,
+  historyLocale = "en",
   showRecentKeywords = true,
-  classNames = {},
-  context = "default",
+  keywordNormalizer = normalizeKeyword,
 }: ResourceSearchBarProps) {
+  const history = useRecentSearches(showRecentKeywords ? historyKey : undefined);
+  const displayedKeywords = historyKey ? history.keywords : recentKeywords;
+  const removeLabel = ({
+    "zh-CN": "删除搜索记录", en: "Remove recent search", es: "Eliminar búsqueda reciente",
+    fr: "Supprimer la recherche récente", ko: "최근 검색 삭제", ru: "Удалить недавний запрос",
+  } as Record<string, string>)[historyLocale] ?? "Remove recent search";
   const [
     isSubmitPressed,
     setIsSubmitPressed,
@@ -71,44 +70,37 @@ export default function ResourceSearchBar({
     const normalizedValue =
       value.trim();
 
+    history.remember(normalizedValue);
     onChange(normalizedValue);
     onSearch(normalizedValue);
   }
 
   function handleRecentKeywordClick(keyword: string) {
+    history.remember(keyword);
     onChange(keyword);
     onSearch(keyword);
   }
 
-  const rootClassName = classNames.root ?? styles.searchPanel;
-  const formClassName = classNames.form ?? styles.searchRow;
-  const inputClassName = classNames.input ?? styles.searchInput;
-  const buttonClassName = classNames.button ?? styles.searchButton;
-  const recentClassName = classNames.recent ?? styles.historyRow;
-  const recentLabelClassName = classNames.recentLabel ?? styles.historyLabel;
-  const recentButtonClassName =
-    classNames.recentButton ?? styles.historyButton;
-
   return (
     <section
-      className={rootClassName}
-      data-search-context={context}
+      className={styles.searchPanel}
       data-touch-feedback="neutral"
     >
-      <form className={formClassName} onSubmit={handleSubmit}>
+      <form className={styles.searchRow} onSubmit={handleSubmit}>
         <input
-          className={inputClassName}
+          className={styles.searchInput}
           type="search"
           name="resource-search"
           enterKeyHint="search"
           autoComplete="off"
           value={value}
           placeholder={placeholder}
+          aria-label={placeholder}
           onChange={(event) => onChange(event.target.value)}
         />
 
         <button
-          className={buttonClassName}
+          className={styles.searchButton}
           type="submit"
           data-pressed={
             isSubmitPressed
@@ -135,25 +127,37 @@ export default function ResourceSearchBar({
         </button>
       </form>
 
-      {showRecentKeywords && recentKeywords.length > 0 ? (
-        <div className={recentClassName}>
-          <span className={recentLabelClassName}>{recentLabel}</span>
+      {showRecentKeywords && displayedKeywords.length > 0 ? (
+        <div className={styles.historyRow}>
+          <span className={styles.historyLabel}>{recentLabel}</span>
 
-          {recentKeywords.map((keyword) => {
+          {displayedKeywords.map((keyword) => {
             const isActive =
-              normalizeKeyword(value) === normalizeKeyword(keyword);
+              keywordNormalizer(value) === keywordNormalizer(keyword);
 
             return (
-              <button
-                key={keyword}
-                className={`${recentButtonClassName} ${
-                  isActive ? styles.active : ""
-                }`}
-                type="button"
-                onClick={() => handleRecentKeywordClick(keyword)}
-              >
-                {keyword}
-              </button>
+              <span key={keyword} className={historyKey ? styles.historyChip : undefined}>
+                <button
+                  className={`${styles.historyButton} ${
+                    isActive ? styles.active : ""
+                  }`}
+                  type="button"
+                  onClick={() => handleRecentKeywordClick(keyword)}
+                >
+                  {keyword}
+                </button>
+                {historyKey ? (
+                  <button
+                    className={styles.removeButton}
+                    type="button"
+                    aria-label={`${removeLabel}: ${keyword}`}
+                    title={`${removeLabel}: ${keyword}`}
+                    onClick={() => history.remove(keyword)}
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                ) : null}
+              </span>
             );
           })}
         </div>

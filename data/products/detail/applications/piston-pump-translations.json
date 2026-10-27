@@ -8,10 +8,10 @@
   ],
   "atoms": {
     "microliter reagent addition in clinical chemistry and immunoassay analyzers, small-volume sample handling and reaction-liquid addition in life science instruments": {
-      "es": "la adición microlítica de reactivos en analizadores de química clínica e inmunoensayo, el manejo de pequeñas muestras y la adición de líquido de reacción en instrumentos de ciencias de la vida",
-      "fr": "l’ajout microlitrique de réactifs dans les analyseurs de chimie clinique et d’immunoanalyse, le traitement de petits échantillons et l’ajout de liquide réactionnel dans les instruments des sciences de la vie",
+      "es": "la adición de microvolúmenes de reactivos en analizadores de química clínica e inmunoensayo, el manejo de pequeñas muestras y la adición de líquido de reacción en instrumentos de ciencias de la vida",
+      "fr": "l’ajout de microvolumes de réactifs dans les analyseurs de chimie clinique et d’immunoanalyse, le traitement de petits échantillons et l’ajout de liquide réactionnel dans les instruments des sciences de la vie",
       "ko": "임상화학 및 면역분석기의 미량 시약 첨가, 소량 샘플 처리 및 생명과학 장비의 반응액 첨가",
-      "ru": "микролитровое добавление реагентов в анализаторах клинической химии и иммуноанализа, обработка малых образцов и добавление реакционной жидкости в приборах наук о жизни"
+      "ru": "микролитровое добавление реагентов в анализаторах клинической химии и иммуноанализа, обработка малых образцов и добавление реакционной жидкости в оборудовании для исследований в области наук о жизни"
     },
     "reagent dispensing in clinical chemistry analyzers, sample dilution in automated preparation systems and metered reaction-liquid addition": {
       "es": "la dispensación de reactivos en analizadores de química clínica, la dilución de muestras en sistemas de preparación automatizada y la adición dosificada de líquido de reacción",
@@ -26,8 +26,8 @@
       "ru": "добавление реагентов в анализаторах клинической химии и иммуноанализа, автоматическое разведение образцов, распределение буферов и добавление стандартных растворов в анализаторах воды"
     },
     "milliliter-scale reagent transfer in diagnostic analyzers, diluent addition in sample preparation and automated buffer preparation": {
-      "es": "la transferencia mililítica de reactivos en analizadores de diagnóstico, la adición de diluyente en la preparación de muestras y la preparación automática de tampones",
-      "fr": "le transfert millilitrique de réactifs dans les analyseurs de diagnostic, l’ajout de diluant en préparation d’échantillons et la préparation automatisée de tampons",
+      "es": "la transferencia de volúmenes en mililitros de reactivos en analizadores de diagnóstico, la adición de diluyente en la preparación de muestras y la preparación automática de tampones",
+      "fr": "le transfert de volumes de l’ordre du millilitre de réactifs dans les analyseurs de diagnostic, l’ajout de diluant en préparation d’échantillons et la préparation automatisée de tampons",
       "ko": "진단 분석기의 밀리리터 단위 시약 이송, 샘플 전처리의 희석액 첨가 및 자동 완충액 조제",
       "ru": "перенос миллилитровых объёмов реагентов в диагностических анализаторах, добавление разбавителя при пробоподготовке и автоматическое приготовление буферов"
     },
@@ -50,8 +50,8 @@
       "ru": "перенос крупных объёмов промывочной жидкости, дозированная промывка системы, автоматическое приготовление растворов и заполнение жидкостного тракта прибора"
     },
     "microliter reagent addition and small-volume sample dispensing": {
-      "es": "la adición microlítica de reactivos y la dispensación de pequeñas muestras",
-      "fr": "l’ajout microlitrique de réactifs et la distribution de petits volumes d’échantillons",
+      "es": "la adición de microvolúmenes de reactivos y la dispensación de pequeñas muestras",
+      "fr": "l’ajout de microvolumes de réactifs et la distribution de petits volumes d’échantillons",
       "ko": "미량 시약 첨가 및 소량 샘플 분주",
       "ru": "микролитровое добавление реагентов и дозирование малых объёмов образцов"
     },
@@ -92,8 +92,8 @@
       "ru": "добавление разбавителя и распределение буфера"
     },
     "microliter reagent addition in compact fluid paths": {
-      "es": "la adición microlítica de reactivos en circuitos compactos",
-      "fr": "l’ajout microlitrique de réactifs dans des circuits compacts",
+      "es": "la adición de microvolúmenes de reactivos en circuitos compactos",
+      "fr": "l’ajout de microvolumes de réactifs dans des circuits compacts",
       "ko": "소형 유로의 미량 시약 첨가",
       "ru": "микролитровое добавление реагентов в компактных трактах"
     },
@@ -199,7 +199,7 @@
       "es": "También pueden evaluarse configuraciones de proyecto para instrumentos de ciencias de la vida y ómicas, llenado de reactivos de diagnóstico y dosificación de líquidos industriales.",
       "fr": "Des configurations spécifiques peuvent aussi être évaluées pour les instruments des sciences de la vie et des omiques, le conditionnement de réactifs de diagnostic et le dosage de liquides industriels.",
       "ko": "생명과학 및 오믹스 장비, 진단 시약 분주 포장, 산업용 액체 정량 주입에 대해서도 프로젝트별 구성을 검토할 수 있습니다.",
-      "ru": "Также возможна оценка проектных конфигураций для приборов наук о жизни и омиксных исследований, фасовки диагностических реагентов и дозирования промышленных жидкостей."
+      "ru": "Также возможна оценка проектных конфигураций для оборудования для исследований в области наук о жизни и омиксных исследований, фасовки диагностических реагентов и дозирования промышленных жидкостей."
     },
     "Tasks include reagent addition, dilution, standard addition, buffer dispensing, reaction-liquid addition, solution preparation, metered washing and priming.": {
       "es": "Las tareas incluyen adición de reactivos, dilución, adición de patrones, dispensación de tampones, adición de líquido de reacción, preparación de soluciones, lavado dosificado y cebado.",
@@ -307,7 +307,7 @@
       "es": "Bombas de dispensación de tampones para instrumentos de ciencias de la vida y ómicas",
       "fr": "Pompes de distribution de tampons pour instruments des sciences de la vie et des omiques",
       "ko": "생명과학 및 오믹스 장비용 완충액 분주 펌프",
-      "ru": "Насосы для распределения буферов в приборах наук о жизни и омиксных исследований"
+      "ru": "Насосы для распределения буферов в оборудовании для исследований в области наук о жизни и омиксных исследований"
     },
     "Sample preparation in life science and omics instruments can require staged buffer, reagent and reaction-liquid addition.": {
       "es": "La preparación de muestras en estos instrumentos puede requerir adiciones por etapas de tampón, reactivo y líquido de reacción.",
@@ -521,7 +521,7 @@
     },
     "Closed-loop feedback and an ISC{0} integrated driver are listed options; the driver supports RS-{1}, RS-{2} and CAN.": {
       "es": "Se ofrecen realimentación en lazo cerrado y un controlador integrado ISC{0}; este admite RS-{1}, RS-{2} y CAN.",
-      "fr": "Un retour en boucle fermée et un pilote intégré ISC{0} sont proposés en option ; le pilote prend en charge RS-{1}, RS-{2} et CAN.",
+      "fr": "Un retour en boucle fermée et un module de commande intégré ISC{0} sont proposés en option ; le module de commande prend en charge RS-{1}, RS-{2} et CAN.",
       "ko": "폐루프 피드백과 ISC{0} 통합 드라이버가 옵션으로 제공되며, 드라이버는 RS-{1}, RS-{2} 및 CAN을 지원합니다.",
       "ru": "Предусмотрены опции обратной связи с замкнутым контуром и встроенного драйвера ISC{0}; драйвер поддерживает RS-{1}, RS-{2} и CAN."
     },
@@ -574,8 +574,8 @@
       "ru": "Модель на странице обозначает представленную конфигурацию; окончательные материалы, порты и узлы определяются проектом."
     },
     "{0} Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with a PMMA Pump Head": {
-      "es": "Bomba de pistón cerámico de precisión de {0} para dispensación microlítica, adición de líquido de reacción y manejo de pequeñas muestras, con cabezal de PMMA",
-      "fr": "Pompe à piston céramique de précision de {0} pour distribution microlitrique, ajout de liquide réactionnel et traitement de petits échantillons, avec tête en PMMA",
+      "es": "Bomba de pistón cerámico de precisión de {0} para dispensación de microvolúmenes, adición de líquido de reacción y manejo de pequeñas muestras, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour distribution de microvolumes, ajout de liquide réactionnel et traitement de petits échantillons, avec tête en PMMA",
       "ko": "미량 액체 분주, 반응액 보충 및 소량 샘플 처리를 위한 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
       "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для микролитрового дозирования, добавления реакционной жидкости и работы с малыми образцами, с головкой из PMMA"
     },
@@ -588,7 +588,7 @@
     "Displayed pump head material": {
       "es": "Material del cabezal mostrado",
       "fr": "Matériau de la tête présentée",
-      "ko": "표시 펌프 헤드 재료",
+      "ko": "해당 구성의 펌프 헤드 재질",
       "ru": "Материал представленной головки"
     },
     "Poly(methyl methacrylate) (PMMA)": {
@@ -600,20 +600,20 @@
     "Pump head material options": {
       "es": "Materiales opcionales del cabezal",
       "fr": "Matériaux de tête en option",
-      "ko": "펌프 헤드 재료 옵션",
+      "ko": "펌프 헤드 재질 옵션",
       "ru": "Варианты материала головки"
     },
     "PCTG / PMMA / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.": {
-      "es": "PCTG / PMMA / PEEK; pueden evaluarse otros materiales técnicos según la compatibilidad con el fluido, la resistencia estructural, el proceso de fabricación y el volumen del proyecto.",
-      "fr": "PCTG / PMMA / PEEK ; d’autres matériaux techniques peuvent être évalués selon la compatibilité avec le fluide, la résistance mécanique, la fabrication et le volume du projet.",
+      "es": "PCTG / PMMA / PEEK; pueden evaluarse otros materiales técnicos según la compatibilidad con el fluido, la resistencia estructural, el proceso de fabricación y el volumen de producción previsto.",
+      "fr": "PCTG / PMMA / PEEK ; d’autres matériaux techniques peuvent être évalués selon la compatibilité avec le fluide, la résistance mécanique, la fabrication et le volume de production prévu.",
       "ko": "PCTG / PMMA / PEEK; 기타 엔지니어링 재료는 유체 호환성, 구조 강도, 제조 공정 및 프로젝트 물량에 따라 평가할 수 있습니다.",
-      "ru": "PCTG / PMMA / PEEK; другие конструкционные материалы оцениваются по совместимости с жидкостью, прочности, технологии изготовления и объёму проекта."
+      "ru": "PCTG / PMMA / PEEK; другие конструкционные материалы оцениваются по совместимости с жидкостью, прочности, технологии изготовления и планируемому объёму производства."
     },
     "Piston material options": {
       "es": "Materiales opcionales del pistón",
       "fr": "Matériaux de piston en option",
-      "ko": "피스톤 재료 옵션",
-      "ru": "Варианты материала поршня"
+      "ko": "플런저 재질 옵션",
+      "ru": "Варианты материала плунжера"
     },
     "Zirconia ceramic / alumina ceramic / polyether ether ketone (PEEK) / sapphire; the combination is assessed for fluid properties, service-life requirements, installation space and project needs.": {
       "es": "Cerámica de zirconia / cerámica de alúmina / poliéter éter cetona (PEEK) / zafiro; la combinación se evalúa según el fluido, la vida útil requerida, el espacio y las necesidades del proyecto.",
@@ -630,7 +630,7 @@
     "Stroke": {
       "es": "Carrera",
       "fr": "Course",
-      "ko": "행정",
+      "ko": "스트로크",
       "ru": "Ход"
     },
     "Recommended max speed": {
@@ -654,7 +654,7 @@
     "Full-stroke steps": {
       "es": "Pasos por carrera completa",
       "fr": "Nombre de pas sur la course complète",
-      "ko": "전체 행정 스텝 수",
+      "ko": "전체 스트로크의 스텝 수",
       "ru": "Число шагов на полный ход"
     },
     "{0} Step": {
@@ -797,7 +797,7 @@
     },
     "The specification lists an optional ISC{0} integrated driver with RS-{1}, RS-{2} and CAN interfaces; these are driver capabilities, not interfaces built into the bare pump.": {
       "es": "La especificación incluye un controlador integrado ISC{0} opcional con RS-{1}, RS-{2} y CAN; estas interfaces pertenecen al controlador, no a la bomba sin electrónica de control.",
-      "fr": "La fiche prévoit un pilote intégré ISC{0} en option avec RS-{1}, RS-{2} et CAN ; ces interfaces appartiennent au pilote et ne sont pas intégrées à la pompe seule.",
+      "fr": "La fiche prévoit un module de commande intégré ISC{0} en option avec RS-{1}, RS-{2} et CAN ; ces interfaces appartiennent au module de commande et ne sont pas intégrées à la pompe seule.",
       "ko": "사양서에는 RS-{1}, RS-{2} 및 CAN을 제공하는 ISC{0} 통합 드라이버 옵션이 있습니다. 이는 드라이버의 통신 기능이며 펌프 단품에 내장된 인터페이스가 아닙니다.",
       "ru": "В спецификации указан опциональный встроенный драйвер ISC{0} с RS-{1}, RS-{2} и CAN; эти интерфейсы относятся к драйверу, а не к насосу без управляющей электроники."
     },
@@ -1306,10 +1306,10 @@
       "ru": "Коэффициент разведения также требует проверки объёма образца, объёма разбавителя и смешивания."
     },
     "Life science instruments: metered reaction-liquid dispensing pump": {
-      "es": "Instrumentos de ciencias de la vida: bomba de líquido de reacción dosificado",
+      "es": "Instrumentos de ciencias de la vida: bomba para dosificar líquidos de reacción",
       "fr": "Instruments des sciences de la vie : pompe de distribution dosée de liquide réactionnel",
       "ko": "생명과학 장비: 반응액 정량 분주 펌프",
-      "ru": "Приборы наук о жизни: насос для дозирования реакционной жидкости"
+      "ru": "Исследования в области наук о жизни: насос для дозирования реакционной жидкости"
     },
     "Small-volume reaction systems add different liquids in sequence.": {
       "es": "Los sistemas de reacción de pequeño volumen añaden diferentes líquidos en secuencia.",
@@ -1924,10 +1924,10 @@
       "ru": "Полиметилметакрилат (PMMA)"
     },
     "PCTG copolyester / Acrylic (PMMA) / PEEK; Other engineering materials can be assessed for fluid compatibility, structural strength, manufacturing process and project volume.": {
-      "es": "PCTG / PMMA / PEEK; pueden evaluarse otros materiales técnicos según la compatibilidad con el fluido, la resistencia estructural, el proceso de fabricación y el volumen del proyecto.",
-      "fr": "PCTG / PMMA / PEEK ; d’autres matériaux techniques peuvent être évalués selon la compatibilité avec le fluide, la résistance mécanique, la fabrication et le volume du projet.",
+      "es": "PCTG / PMMA / PEEK; pueden evaluarse otros materiales técnicos según la compatibilidad con el fluido, la resistencia estructural, el proceso de fabricación y el volumen de producción previsto.",
+      "fr": "PCTG / PMMA / PEEK ; d’autres matériaux techniques peuvent être évalués selon la compatibilité avec le fluide, la résistance mécanique, la fabrication et le volume de production prévu.",
       "ko": "PCTG / PMMA / PEEK; 기타 엔지니어링 재료는 유체 호환성, 구조 강도, 제조 공정 및 프로젝트 물량에 따라 평가할 수 있습니다.",
-      "ru": "PCTG / PMMA / PEEK; другие конструкционные материалы оцениваются по совместимости с жидкостью, прочности, технологии изготовления и объёму проекта."
+      "ru": "PCTG / PMMA / PEEK; другие конструкционные материалы оцениваются по совместимости с жидкостью, прочности, технологии изготовления и планируемому объёму производства."
     },
     "The displayed PEEK pump head can be replaced by a project-matched acrylic (PMMA) or PCTG copolyester option.": {
       "es": "El cabezal de PEEK mostrado puede sustituirse por una opción de PMMA o PCTG adaptada al proyecto.",
@@ -2032,8 +2032,8 @@
       "ru": "Представлен PMMA; другие материалы подлежат оценке для проекта."
     },
     "{0} Precision Ceramic Piston Pump for Microliter Liquid Dispensing, Reaction-Liquid Addition and Small-Volume Sample Handling, with an Acrylic (PMMA) Pump Head": {
-      "es": "Bomba de pistón cerámico de precisión de {0} para dispensación microlítica, adición de líquido de reacción y manejo de pequeñas muestras, con cabezal de PMMA",
-      "fr": "Pompe à piston céramique de précision de {0} pour distribution microlitrique, ajout de liquide réactionnel et traitement de petits échantillons, avec tête en PMMA",
+      "es": "Bomba de pistón cerámico de precisión de {0} para dispensación de microvolúmenes, adición de líquido de reacción y manejo de pequeñas muestras, con cabezal de PMMA",
+      "fr": "Pompe à piston céramique de précision de {0} pour distribution de microvolumes, ajout de liquide réactionnel et traitement de petits échantillons, avec tête en PMMA",
       "ko": "미량 액체 분주, 반응액 보충 및 소량 샘플 처리를 위한 {0} PMMA 헤드 정밀 세라믹 피스톤 펌프",
       "ru": "Прецизионный насос с керамическим поршнем объёмом {0} для микролитрового дозирования, добавления реакционной жидкости и работы с малыми образцами, с головкой из PMMA"
     },
@@ -2084,6 +2084,42 @@
       "fr": "Pompe à piston céramique de précision ultra-compacte de {0} pour {1}, avec tête en PMMA",
       "ko": "{1}용 {0} PMMA 헤드 초소형 정밀 세라믹 피스톤 펌프",
       "ru": "Ультракомпактный прецизионный насос с керамическим поршнем объёмом {0} и головкой из PMMA; задачи: {1}"
+    },
+    "Fluidic ports": {
+      "es": "Conexiones de fluido",
+      "fr": "Raccordements fluidiques",
+      "ko": "유체 연결 포트",
+      "ru": "Жидкостные присоединения"
+    },
+    "Recommended maximum motor speed": {
+      "es": "Velocidad máxima recomendada del motor",
+      "fr": "Vitesse maximale recommandée du moteur",
+      "ko": "권장 최대 모터 회전 속도",
+      "ru": "Рекомендуемая максимальная частота вращения двигателя"
+    },
+    "Design life": {
+      "es": "Vida útil de diseño",
+      "fr": "Durée de vie nominale",
+      "ko": "설계 수명",
+      "ru": "Расчётный ресурс"
+    },
+    "{0} steps": {
+      "es": "{0} pasos",
+      "fr": "{0} pas",
+      "ko": "{0}스텝",
+      "ru": "{0} шагов"
+    },
+    "{0} / {1} steps": {
+      "es": "{0} / {1} pasos",
+      "fr": "{0} / {1} pas",
+      "ko": "{0} / {1}스텝",
+      "ru": "{0} / {1} шагов"
+    },
+    "{0} rpm": {
+      "es": "{0} RPM",
+      "fr": "{0} RPM",
+      "ko": "{0} RPM",
+      "ru": "{0} RPM"
     }
   }
 }

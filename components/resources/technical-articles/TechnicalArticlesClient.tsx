@@ -4,6 +4,8 @@ import { useEffect, useMemo, useRef } from "react";
 import type { ComponentType } from "react";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import ResourceCategorySidebar from "@/components/resources/ResourceCategorySidebar";
+import ResourcePagination from "@/components/resources/ResourcePagination";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 import TechnicalArticleListItem from "@/components/resources/technical-articles/TechnicalArticleListItem";
@@ -354,137 +356,40 @@ export default function TechnicalArticlesClient({
             ui?.recent ??
             (pageData.locale === "zh-CN" ? "最近搜索" : "Recent")
           }
-          recentKeywords={
-            ui?.recentKeywords ??
-            (pageData.locale === "zh-CN"
-              ? ["接头", "PEEK", "材料兼容", "柱塞泵", "IVD"]
-              : ["Fittings", "PEEK", "Compatibility", "Piston Pump", "IVD"])
-          }
+          historyKey={`technical-articles:${pageData.locale}`}
+          historyLocale={pageData.locale}
           showRecentKeywords
         />
       </section>
 
       <section className="technicalArticlesContentSection">
-        <aside className="technicalArticlesSidebar">
-          <h2 className="technicalArticlesSidebar__title">
-            {ui?.categories ??
-              (pageData.locale === "zh-CN" ? "技术分类" : "Technical Categories")}
-          </h2>
-
-          <div className="technicalArticlesSidebar__list">
-            <div className="technicalArticlesSidebar__group">
-              <button
-                type="button"
-                className={`technicalArticlesSidebar__button technicalArticlesSidebar__button--all${
-                  activeFilter.type === "all" ? " isActive" : ""
-                }`}
-                aria-pressed={activeFilter.type === "all"}
-                onClick={handleAllArticles}
-              >
-                <span className="technicalArticlesSidebar__label">
-                  {allArticlesLabel}
-                  <span className="technicalArticlesSidebar__count">
-                    {formatArticleCount(
-                      pageData.locale,
-                      pageData.articles.length,
-                    )}
-                  </span>
-                </span>
-                <span
-                  className="technicalArticlesSidebar__toggle technicalArticlesSidebar__toggle--empty"
-                  aria-hidden="true"
-                />
-              </button>
-            </div>
-
-            {pageData.taxonomy.map((primary) => {
-              const isExpanded = expandedPrimary === primary.key;
-              const isPrimaryActive =
-                activeFilter.type === "primary" &&
-                activeFilter.key === primary.key;
-              const panelId = `technical-articles-${primary.key}`;
-              const triggerId = `${panelId}-trigger`;
-
-              return (
-                <div
-                  className={`technicalArticlesSidebar__group${
-                    isExpanded ? " isOpen" : ""
-                  }`}
-                  key={primary.key}
-                >
-                  <button
-                    type="button"
-                    id={triggerId}
-                    className={`technicalArticlesSidebar__button technicalArticlesSidebar__button--primary${
-                      isPrimaryActive ? " isActive" : ""
-                    }`}
-                    aria-expanded={isExpanded}
-                    aria-controls={isExpanded ? panelId : undefined}
-                    aria-pressed={isPrimaryActive}
-                    onClick={() => handlePrimaryCategory(primary.key)}
-                  >
-                    <span className="technicalArticlesSidebar__label">
-                      {primary.label}
-                      <span className="technicalArticlesSidebar__count">
-                        {formatArticleCount(
-                          pageData.locale,
-                          categoryCounts.primary.get(primary.key) ?? 0,
-                        )}
-                      </span>
-                    </span>
-                    <span
-                      className="technicalArticlesSidebar__toggle"
-                      aria-hidden="true"
-                    />
-                  </button>
-
-                  {isExpanded ? (
-                    <div
-                      id={panelId}
-                      className="technicalArticlesSidebar__children"
-                      role="region"
-                      aria-labelledby={triggerId}
-                    >
-                      {primary.children.map((secondary) => {
-                        const isSecondaryActive =
-                          activeFilter.type === "secondary" &&
-                          activeFilter.key === secondary.key;
-
-                        return (
-                          <button
-                            type="button"
-                            className={`technicalArticlesSidebar__button technicalArticlesSidebar__button--secondary${
-                              isSecondaryActive ? " isActive" : ""
-                            }`}
-                            key={secondary.key}
-                            aria-pressed={isSecondaryActive}
-                            onClick={() =>
-                              handleSecondaryCategory(
-                                primary.key,
-                                secondary.key,
-                              )
-                            }
-                          >
-                            <span className="technicalArticlesSidebar__label">
-                              {secondary.label}
-                              <span className="technicalArticlesSidebar__count">
-                                {formatArticleCount(
-                                  pageData.locale,
-                                  categoryCounts.secondary.get(secondary.key) ??
-                                    0,
-                                )}
-                              </span>
-                            </span>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  ) : null}
-                </div>
-              );
-            })}
-          </div>
-        </aside>
+        <ResourceCategorySidebar
+          title={ui?.categories ?? (pageData.locale === "zh-CN" ? "技术分类" : "Technical Categories")}
+          items={[
+            {
+              id: "all",
+              label: allArticlesLabel,
+              countLabel: formatArticleCount(pageData.locale, pageData.articles.length),
+              active: activeFilter.type === "all",
+              onSelect: handleAllArticles,
+            },
+            ...pageData.taxonomy.map((primary) => ({
+              id: primary.key,
+              label: primary.label,
+              countLabel: formatArticleCount(pageData.locale, categoryCounts.primary.get(primary.key) ?? 0),
+              active: activeFilter.type === "primary" && activeFilter.key === primary.key,
+              expanded: expandedPrimary === primary.key,
+              onSelect: () => handlePrimaryCategory(primary.key),
+              children: primary.children.map((secondary) => ({
+                id: secondary.key,
+                label: secondary.label,
+                countLabel: formatArticleCount(pageData.locale, categoryCounts.secondary.get(secondary.key) ?? 0),
+                active: activeFilter.type === "secondary" && activeFilter.key === secondary.key,
+                onSelect: () => handleSecondaryCategory(primary.key, secondary.key),
+              })),
+            })),
+          ]}
+        />
 
         <div className="technicalArticlesMain">
           {filteredArticles.length > 0 ? (
@@ -501,41 +406,14 @@ export default function TechnicalArticlesClient({
                 ))}
               </div>
 
-              {totalPages > 1 ? (
-                <nav
-                  className="technicalArticlesPagination"
-                  aria-label={
-                    pageData.locale === "zh-CN"
-                      ? "技术文章分页"
-                      : paginationUi?.pagination ??
-                        "Technical articles pagination"
-                  }
-                >
-                  <button
-                    type="button"
-                    className="technicalArticlesPagination__button"
-                    disabled={safeCurrentPage <= 1}
-                    onClick={() => handlePageChange(safeCurrentPage - 1)}
-                  >
-                    {paginationUi?.previous ??
-                      (pageData.locale === "zh-CN" ? "上一页" : "Previous")}
-                  </button>
-
-                  <span className="technicalArticlesPagination__status">
-                    {safeCurrentPage} / {totalPages}
-                  </span>
-
-                  <button
-                    type="button"
-                    className="technicalArticlesPagination__button"
-                    disabled={safeCurrentPage >= totalPages}
-                    onClick={() => handlePageChange(safeCurrentPage + 1)}
-                  >
-                    {paginationUi?.next ??
-                      (pageData.locale === "zh-CN" ? "下一页" : "Next")}
-                  </button>
-                </nav>
-              ) : null}
+              <ResourcePagination
+                currentPage={safeCurrentPage}
+                totalPages={totalPages}
+                ariaLabel={pageData.locale === "zh-CN" ? "技术文章分页" : paginationUi?.pagination ?? "Technical articles pagination"}
+                previousLabel={paginationUi?.previous ?? (pageData.locale === "zh-CN" ? "上一页" : "Previous")}
+                nextLabel={paginationUi?.next ?? (pageData.locale === "zh-CN" ? "下一页" : "Next")}
+                onPageChange={handlePageChange}
+              />
             </>
           ) : (
             <div className="technicalArticlesEmpty">

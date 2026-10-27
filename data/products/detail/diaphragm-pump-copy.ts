@@ -1,7 +1,13 @@
 import copyJson from "./diaphragm-pump-copy.generated.json";
 import {
+  getDiaphragmPumpIntroduction,
+  type DiaphragmPumpIntroduction,
+} from "./diaphragm-pump-introductions";
+import {
   getDiaphragmPumpCategoryCopy,
   getDiaphragmPumpMainPhoto,
+  getDiaphragmPumpPrimaryPhoto,
+  getDiaphragmPumpReferenceModel,
   getDiaphragmPumpReferenceFromIdentity,
   type DiaphragmPumpReferenceCopyKey,
 } from "./diaphragm-pump-reference-models";
@@ -15,6 +21,7 @@ export type DiaphragmPumpCopy = {
   title: string;
   cardParameters: string[];
   intro: string;
+  introductionParagraphs?: DiaphragmPumpIntroduction;
   applications: string;
   breadcrumbs: string[];
   faqs: Array<{
@@ -321,7 +328,7 @@ export function getDiaphragmPumpCopyKey(
 export function getDiaphragmPumpCopy(
   value: unknown,
   locale: SelectionLocale,
-) {
+): DiaphragmPumpCopy | null {
   const seriesCopy = getDiaphragmPumpSeriesCopy(value, locale);
 
   if (seriesCopy) {
@@ -362,10 +369,13 @@ export function getDiaphragmPumpCopy(
   }
 
   const localized = reference.localized[locale];
+  const introductionParagraphs = getDiaphragmPumpIntroduction(reference.copyKey, locale);
 
   return {
     ...baseCopy,
     title: localized.h1,
+    intro: introductionParagraphs.join(" "),
+    introductionParagraphs,
     breadcrumbs: [
       categoryCopy.home,
       categoryCopy.products,
@@ -407,6 +417,45 @@ export function getDiaphragmPumpGallery(
   locale: SelectionLocale,
 ) {
   const preferredImage = getDiaphragmPumpMainPhoto(key);
+  const primaryPhoto = getDiaphragmPumpPrimaryPhoto(key);
+  if (primaryPhoto) {
+    const primarySource = "sourcePublic" in primaryPhoto ? primaryPhoto.sourcePublic : undefined;
+    const reference = getDiaphragmPumpReferenceModel(primaryPhoto.model.toLowerCase());
+    const mainAlt = reference?.localized[locale].h1 || `FOREACH ${primaryPhoto.model}`;
+    const oldMain = typeof data.mainImage === "string" ? data.mainImage : "";
+    const oldImages: string[] = Array.isArray(data.additionalImages) ? data.additionalImages : [];
+    const oldAlts: string[] = Array.isArray(data.additionalImageAlts) ? data.additionalImageAlts : [];
+    const oldAltByImage = new Map(oldImages.map((src, index) => [src, oldAlts[index] || mainAlt]));
+    if (oldMain) oldAltByImage.set(oldMain, locale === "zh"
+      ? String(data.imageAlt || mainAlt)
+      : getDiaphragmPumpCopy(data, locale)?.title || mainAlt);
+    // Preserve the former primary first, then every existing image. Reapplying
+    // the adapter must not duplicate images or change their order.
+    const additionalImages = [...new Set([
+      primaryPhoto.previousMain,
+      oldMain,
+      ...oldImages,
+      ...(key === "dpl30-brushed" ? DPL30_BRUSHED_DETAIL_IMAGES : []),
+    ].filter((src) => src && src !== primaryPhoto.main && src !== primarySource))];
+    const additionalImageAlts = additionalImages.map((src) => oldAltByImage.get(src) || mainAlt);
+    const productImages = data.productImages as Record<string, unknown> | undefined;
+    return {
+      mainImage: primaryPhoto.main,
+      image: primaryPhoto.main,
+      imageUrl: primaryPhoto.main,
+      imageCard: primaryPhoto.card,
+      heroImage: primaryPhoto.main,
+      coverImage: primaryPhoto.main,
+      imageAlt: mainAlt,
+      imageAltEn: mainAlt,
+      mainImageAlt: mainAlt,
+      images: [{ src: primaryPhoto.main, alt: mainAlt }],
+      productImages: { ...productImages, main: { src: primaryPhoto.main, alt: mainAlt } },
+      additionalImages,
+      additionalImageAlts,
+      galleryImages: [primaryPhoto.main, ...additionalImages],
+    };
+  }
   if (preferredImage) {
     const mainImage = typeof data.mainImage === "string" ? data.mainImage : "";
     const additionalImages: string[] = Array.isArray(data.additionalImages)
@@ -516,9 +565,11 @@ export function applyDiaphragmPumpDetailCopy<
           mainImageAlt: copy.title,
         }
       : {}),
-    description: reference
-      ? `${copy.intro} ${reference.localized[locale].introConditionSentence}`
-      : copy.intro,
+    description: copy.introductionParagraphs
+      ? copy.intro
+      : reference
+        ? `${copy.intro} ${reference.localized[locale].introConditionSentence}`
+        : copy.intro,
     commonApplications: applications,
     applications,
     applicationScenarios: applications,

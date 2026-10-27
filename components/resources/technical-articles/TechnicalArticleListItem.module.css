@@ -26,10 +26,12 @@
 
 .thumbnail {
   position: relative;
-  min-height: 135px;
-  align-self: stretch;
+  min-height: 0;
+  align-self: start;
   overflow: hidden;
   background: #fff;
+  width: 100%;
+  aspect-ratio: 4 / 3;
 }
 
 .thumbnail img {
@@ -71,7 +73,7 @@
 
 .title {
   margin: 9px 0 0;
-  color: #173368;
+  color: #333333;
   font-size: 22px;
   font-weight: 500;
   line-height: 1.5;
@@ -129,10 +131,6 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .thumbnail {
-    min-height: 112px;
-  }
-
   .title {
     font-size: 20px;
   }
@@ -156,7 +154,6 @@
   .thumbnail {
     grid-column: 1;
     grid-row: 1 / span 2;
-    min-height: 90px;
   }
 
   .meta,

@@ -35,7 +35,7 @@
   padding: 0 18px;
   border: 1px solid rgba(23, 51, 104, 0.22);
   border-right: 0;
-  border-radius: 6px 0 0 6px;
+  border-radius: 0;
   outline: none;
   background: #ffffff;
   color: #173368;
@@ -58,7 +58,7 @@
 .searchButton {
   height: 46px;
   border: 1px solid #173368;
-  border-radius: 0 6px 6px 0;
+  border-radius: 0;
   background: #173368;
   color: #ffffff;
   font-size: 15px;
@@ -88,16 +88,19 @@
 }
 
 .historyLabel {
+  flex-shrink: 0;
+  white-space: nowrap;
   color: rgba(23, 51, 104, 0.66);
   font-size: 13px;
 }
 
 .historyButton {
+  white-space: nowrap;
   min-width: 78px;
   height: 30px;
   padding: 0 14px;
   border: 1px solid rgba(23, 51, 104, 0.16);
-  border-radius: 6px;
+  border-radius: 0;
   background: #ffffff;
   color: #173368;
   font-size: 13px;
@@ -115,6 +118,39 @@
   background: #ffffff;
   color: #173368;
 }
+.historyChip {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.historyChip .historyButton {
+  border-radius: 0;
+}
+
+.removeButton {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(23, 51, 104, 0.16);
+  border-left: 0;
+  border-radius: 0;
+  background: #ffffff;
+  color: #173368;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  background: #e8edf5;
+}
+
+.historyChip button:focus-visible {
+  outline: 2px solid #173368;
+  outline-offset: -3px;
+}
+
 @media (max-width: 760px) {
   .searchPanel {
     padding: 20px 0;
@@ -123,62 +159,34 @@
   .searchRow {
     grid-template-columns: minmax(0, 1fr) 96px;
     gap: 0;
-    width: 100%;
-    margin: 0;
+    width: calc(100% - 32px);
+    margin: 0 auto;
   }
 
   .searchInput {
     min-width: 0;
     border-right: 0;
-    border-radius: 6px 0 0 6px;
+    border-radius: 0;
   }
 
   .searchButton {
     width: 96px;
     min-width: 96px;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0;
     white-space: nowrap;
   }
   
   .historyRow {
     gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    padding-bottom: 4px;
   }
 
-  /*
-   * 产品中心手机端使用独立、轻量的搜索行：
-   * 不继承资源中心 PC 灰色横带，也不把输入框和按钮粘成一整块。
-   */
-  .searchPanel[data-search-context="product-selection"] {
-    padding: 20px 0 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-    clip-path: none;
-  }
-
-  .searchPanel[data-search-context="product-selection"] .searchRow {
-    grid-template-columns: minmax(0, 1fr) 88px;
-    gap: 8px;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .searchPanel[data-search-context="product-selection"] .searchInput {
-    min-width: 0;
-    height: 44px;
-    box-sizing: border-box;
-    border: 1px solid rgba(23, 51, 104, 0.22);
-    border-radius: 6px;
-    padding: 0 12px;
-    text-align: left;
-  }
-
-  .searchPanel[data-search-context="product-selection"] .searchButton {
-    width: 88px;
-    min-width: 88px;
-    height: 44px;
-    box-sizing: border-box;
-    border-radius: 6px;
+  .historyRow > * {
+    flex-shrink: 0;
   }
 }
 
@@ -191,8 +199,8 @@
     outline: none;
   }
 
-  .searchPanel[data-search-context="product-selection"] .searchButton:active,
-  .searchPanel[data-search-context="product-selection"] .searchButton[data-pressed="true"] {
+  .searchButton:active,
+  .searchButton[data-pressed="true"] {
     border-color: #09e9b4;
     background: #09e9b4;
     color: #173368;

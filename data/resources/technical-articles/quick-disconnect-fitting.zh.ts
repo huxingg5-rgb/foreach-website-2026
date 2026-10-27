@@ -120,6 +120,9 @@ export const quickDisconnectFittingCopy: DiaphragmPumpEngineeringArticleCopy = {
           ["拆装与污染控制", "拆装频率、残液、进气、清洁和防尘措施", "影响维护时间、排气步骤和交叉污染控制"],
           ["面板与布管", "开孔和板厚、按钮操作空间、软管弯曲半径及拉力支撑", "影响能否顺利接合与长期保持密封"],
         ] },
+        { type: "links", items: [
+          { href: "/resources/technical-articles/quick-disconnect-coupling-flow-pressure-drop/", label: "快速接头流量与压降：曲线读法和 Kv/Cv 估算" },
+        ] },
         { type: "paragraph", text: "材料选择应覆盖正常输送和清洗两个阶段。例如，使用 PP 外壳与 EPDM 密封圈的型号时，需分别评价两种材料，而不能只依据“PP 接头”这个名称判断全部接液部件。若需要其他密封圈材料，应选择有明确记录的完整型号，不把系列可选项视为当前型号的默认配置。" },
         { type: "links", items: [{ href: "/resources/technical-articles/fitting-material-selection-guide/", label: "接头材质选择：本体、密封件与介质条件", prefix: "需要进一步比较材料时，阅读", suffix: "。" }] },
       ],

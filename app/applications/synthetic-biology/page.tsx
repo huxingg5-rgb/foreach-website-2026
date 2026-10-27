@@ -1,3 +1,4 @@
+import ApplicationFittingVideos from "@/components/applications/ApplicationFittingVideos";
 /* =========================================================
    page.tsx
    恒永达官网｜合成生物应用领域中文页面入口
@@ -19,5 +20,5 @@ export const metadata: Metadata = {
 export default function SyntheticBiologyApplicationPage() {
   const data = getSyntheticBiologyApplicationPageData("zh-CN");
 
-  return <SyntheticBiologyApplicationClient data={data} />;
+  return <SyntheticBiologyApplicationClient data={data} relatedVideos={<ApplicationFittingVideos />} />;
 }

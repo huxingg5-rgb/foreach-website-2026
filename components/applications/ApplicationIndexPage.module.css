@@ -15,13 +15,13 @@
 .topicNav { width: 100%; margin-bottom: 12px; }
 .topics { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; list-style: none; }
 .topics li { min-width: 0; max-width: 100%; }
-.topicLink { display: block; padding: 6px 9px; border: 1px solid #e3eaf2; border-radius: 5px; color: #183963; background: #fff; font-size: 13px; font-weight: 500; line-height: 1.4; text-decoration: none; }
+.topicLink { display: block; padding: 6px 9px; border: 1px solid #e3eaf2; border-radius: 0; color: #183963; background: #fff; font-size: 13px; font-weight: 500; line-height: 1.4; text-decoration: none; }
 .topicLabel { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; overflow-wrap: anywhere; }
 
 .topicLink:focus-visible { outline: 2px solid #09e9b4; outline-offset: 3px; }
 .domainLink { margin-top: auto; align-self: flex-end; font-size: 13px; line-height: 1.5; }
 .card h2 a:is(:hover, :focus-visible, :active) { color: #09e9b4; }
-.card h2 a:focus-visible, .choice a:focus-visible { outline: 2px solid #007c6c; outline-offset: 4px; border-radius: 3px; }
+.card h2 a:focus-visible, .choice a:focus-visible { outline: 2px solid #007c6c; outline-offset: 4px; border-radius: 0; }
 .guidance { margin-top: 56px; padding-top: 36px; border-top: 1px solid #e3eaf2; }
 .choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
 .choice { padding: 24px; border: 1px solid #e3eaf2; background: #f7f9fc; border-radius: 8px; }

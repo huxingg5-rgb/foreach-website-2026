@@ -23,18 +23,18 @@
   min-height: 44px;
   margin: 0 0 2px;
   padding: 11px 36px 11px 14px;
-  border-radius: 6px;
+  border-radius: 0;
 }
 .documentNavigation .navOverview { margin-bottom: 8px; font-weight: 500; }
 .documentNavigation a[aria-current="page"] {
   color: var(--brand-blue, #173368);
   background: #eef2f7;
-  border-radius: 6px;
+  border-radius: 0;
 }
 .documentNavigation a:hover, .documentNavigation a:focus-visible {
   color: var(--ink, #171717);
   background: #f5f7fa;
-  border-radius: 6px;
+  border-radius: 0;
 }
 .documentNavigation a[aria-current="page"]:hover,
 .documentNavigation a[aria-current="page"]:focus-visible { color: var(--brand-blue, #173368); }
@@ -63,7 +63,7 @@
   min-height: 36px;
   margin: 0 0 2px;
   padding: 8px 10px 8px 16px;
-  border-radius: 6px;
+  border-radius: 0;
   color: var(--ink, #171717);
   font-size: 13px;
   line-height: 1.5;

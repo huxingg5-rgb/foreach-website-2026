@@ -1,3 +1,4 @@
+import ApplicationFittingVideos from "@/components/applications/ApplicationFittingVideos";
 /* =========================================================
    page.tsx
    恒永达官网｜分析仪器应用领域中文页面入口
@@ -19,5 +20,5 @@ export const metadata: Metadata = {
 export default function AnalyticalInstrumentsApplicationPage() {
   const data = getAnalyticalInstrumentsApplicationPageData("zh-CN");
 
-  return <AnalyticalInstrumentsApplicationClient data={data} />;
+  return <AnalyticalInstrumentsApplicationClient data={data} relatedVideos={<ApplicationFittingVideos />} />;
 }

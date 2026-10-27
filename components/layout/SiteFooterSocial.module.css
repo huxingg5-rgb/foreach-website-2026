@@ -30,7 +30,7 @@
 }
 
 .socialLink:hover {
-  transform: translateY(-2px);
+  transform: none;
   border-color: #09e9b4;
   background: #ffffff;
 }

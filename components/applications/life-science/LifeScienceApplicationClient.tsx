@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 /* =========================================================
    LifeScienceApplicationClient.tsx
    恒永达官网｜生命科学应用领域交互组件
@@ -25,6 +27,7 @@ import type {
 } from "@/data/applications/life-science/life-science-application.types";
 
 type LifeScienceApplicationClientProps = {
+  relatedVideos?: ReactNode;
   data: LifeScienceApplicationPageData;
 };
 
@@ -36,7 +39,7 @@ function getApplicationKeyFromUrl() {
   return new URLSearchParams(window.location.search).get("application") ?? "";
 }
 
-export default function LifeScienceApplicationClient({ data }: LifeScienceApplicationClientProps) {
+export default function LifeScienceApplicationClient({ relatedVideos, data }: LifeScienceApplicationClientProps) {
   const firstApplication = data.applications[0];
 
   const [activeApplicationKey, setActiveApplicationKey] = useState(firstApplication?.key ?? "");
@@ -321,6 +324,8 @@ export default function LifeScienceApplicationClient({ data }: LifeScienceApplic
       {/* =====================================================
           联系 CTA
       ===================================================== */}
+      {relatedVideos}
+
       <section className="ivd-cta" id="contact">
         <div className="ivd-cta-inner">
           <div>

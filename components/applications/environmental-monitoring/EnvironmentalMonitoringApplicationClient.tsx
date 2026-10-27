@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 /* =========================================================
    EnvironmentalMonitoringApplicationClient.tsx
    恒永达官网｜环保监测应用领域交互组件
@@ -16,6 +18,7 @@ import type {
 } from "@/data/applications/environmental-monitoring/environmental-monitoring-application.types";
 
 type EnvironmentalMonitoringApplicationClientProps = {
+  relatedVideos?: ReactNode;
   data: EnvironmentalMonitoringApplicationPageData;
 };
 
@@ -28,7 +31,7 @@ function getApplicationKeyFromUrl() {
 }
 
 export default function EnvironmentalMonitoringApplicationClient({
-  data,
+  relatedVideos, data,
 }: EnvironmentalMonitoringApplicationClientProps) {
   const firstApplication = data.applications[0];
 
@@ -292,6 +295,8 @@ export default function EnvironmentalMonitoringApplicationClient({
           </div>
         </div>
       </section>
+
+      {relatedVideos}
 
       <section className="ivd-cta" id="contact">
         <div className="ivd-cta-inner">

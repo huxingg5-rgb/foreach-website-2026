@@ -3424,7 +3424,11 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             </div>
 
 
-            {reviewedIntroductionEn ? (
+            {diaphragmCopy?.introductionParagraphs ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-diaphragm-description="true">
+                {diaphragmCopy.introductionParagraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+              </div>
+            ) : reviewedIntroductionEn ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-reviewed-introduction="en">
                 {reviewedIntroductionEn.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
               </div>

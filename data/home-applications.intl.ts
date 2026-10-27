@@ -24,7 +24,7 @@ const localizedCopy: Record<HomeApplicationsLocale, HomeApplicationsCopy> = {
   en: {
     title: "Product Applications",
     subtitle: "Fluid Handling · Instrumentation · Automation",
-    imageAlt: "Automated liquid handling equipment in a laboratory",
+    imageAlt: "FOREACH technician working on fluidic equipment",
     industryTitle: "Explore by Industry",
     introduction: "Our fluidic components support instruments and workflows across key industries. Explore your industry below to find relevant applications and component options for your system.",
     allApplications: "All applications",
@@ -41,7 +41,7 @@ const localizedCopy: Record<HomeApplicationsLocale, HomeApplicationsCopy> = {
   es: {
     title: "Aplicaciones de productos",
     subtitle: "Manejo de fluidos · Instrumentación · Automatización",
-    imageAlt: "Equipo automatizado de manejo de líquidos en un laboratorio",
+    imageAlt: "Técnico de FOREACH trabajando en un equipo fluídico",
     industryTitle: "Explore por sector",
     introduction: "Nuestros componentes fluídicos se integran en instrumentos y procesos de sectores clave. Explore su sector para encontrar aplicaciones y opciones de componentes para su sistema.",
     allApplications: "Todas las aplicaciones",
@@ -58,7 +58,7 @@ const localizedCopy: Record<HomeApplicationsLocale, HomeApplicationsCopy> = {
   fr: {
     title: "Applications des produits",
     subtitle: "Gestion des fluides · Instrumentation · Automatisation",
-    imageAlt: "Équipement automatisé de manipulation de liquides dans un laboratoire",
+    imageAlt: "Technicien FOREACH travaillant sur un équipement fluidique",
     industryTitle: "Explorez par secteur",
     introduction: "Nos composants fluidiques équipent les instruments et les procédés de secteurs clés. Explorez votre secteur pour découvrir les applications et les composants adaptés à votre système.",
     allApplications: "Toutes les applications",
@@ -75,7 +75,7 @@ const localizedCopy: Record<HomeApplicationsLocale, HomeApplicationsCopy> = {
   ko: {
     title: "제품 응용 분야",
     subtitle: "유체 처리 · 계측 장비 · 자동화",
-    imageAlt: "실험실의 자동 액체 처리 장비",
+    imageAlt: "유체 장비를 작업 중인 FOREACH 기술자",
     industryTitle: "산업별 응용 분야",
     introduction: "당사의 유체 부품은 주요 산업의 장비와 작업 공정에 사용됩니다. 해당 산업을 선택하여 시스템에 적합한 응용 분야와 부품을 살펴보세요.",
     allApplications: "모든 응용 분야",
@@ -92,7 +92,7 @@ const localizedCopy: Record<HomeApplicationsLocale, HomeApplicationsCopy> = {
   ru: {
     title: "Применение продукции",
     subtitle: "Работа с жидкостями · Приборы · Автоматизация",
-    imageAlt: "Автоматизированное оборудование для работы с жидкостями в лаборатории",
+    imageAlt: "Техник FOREACH за работой с жидкостным оборудованием",
     industryTitle: "Выберите отрасль",
     introduction: "Наши компоненты для управления жидкостями используются в приборах и рабочих процессах ключевых отраслей. Выберите отрасль, чтобы найти подходящие области применения и компоненты для вашей системы.",
     allApplications: "Все области применения",

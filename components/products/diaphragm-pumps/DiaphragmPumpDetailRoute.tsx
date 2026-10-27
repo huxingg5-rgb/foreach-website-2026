@@ -1096,7 +1096,7 @@ function adaptToProductDetailClientData(
   };
 
   // Share the same main photo across the gallery, structured data and metadata.
-  const gallery = reference && reference.copyKey !== "dpl30-brushed"
+  const gallery = reference
     ? getDiaphragmPumpGallery(reference.copyKey, productData, locale)
     : null;
   return { ...productData, ...gallery };

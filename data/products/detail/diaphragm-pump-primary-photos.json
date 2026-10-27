@@ -1,0 +1,44 @@
+{
+  "dpl30-brushed": {
+    "model": "DPL30-DB",
+    "sourceFile": "DPL30-有刷.jpg",
+    "main": "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-db-brushed-liquid-diaphragm-pump-front-20261027.webp",
+    "card": "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-db-brushed-liquid-diaphragm-pump-front-20261027-card.webp",
+    "previousMain": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp"
+  },
+  "dpl30-brushless": {
+    "model": "DPL30-BB",
+    "sourcePublic": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
+    "main": "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-bb-brushless-labeled-front-main.webp",
+    "card": "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-bb-brushless-labeled-front-card.webp",
+    "previousMain": "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-bb-brushless-liquid-diaphragm-pump-front-20261027.webp"
+  },
+  "dpl60-brushed": {
+    "model": "DPL60-DB",
+    "sourceFile": "DPL60-有刷.jpg",
+    "main": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-db-brushed-liquid-diaphragm-pump-front-20261027.webp",
+    "card": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-db-brushed-liquid-diaphragm-pump-front-20261027-card.webp",
+    "previousMain": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushed-miniature-liquid-diaphragm-pump-front-side.webp"
+  },
+  "dpl60-brushless": {
+    "model": "DPL60-BB",
+    "sourceFile": "DPL60-无刷.jpg",
+    "main": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-bb-brushless-liquid-diaphragm-pump-front-20261027.webp",
+    "card": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-bb-brushless-liquid-diaphragm-pump-front-20261027-card.webp",
+    "previousMain": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp"
+  },
+  "dpl30h-brushed": {
+    "model": "DPL30H-DS",
+    "sourceFile": "DPL30H-有刷.jpg",
+    "main": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-ds-brushed-liquid-diaphragm-pump-front-20261027.webp",
+    "card": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-ds-brushed-liquid-diaphragm-pump-front-20261027-card.webp",
+    "previousMain": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushed-diaphragm-pressurized-liquid-transfer-pump.webp"
+  },
+  "dpl30h-brushless": {
+    "model": "DPL30H-BS",
+    "sourceFile": "DPL30H-无刷.jpg",
+    "main": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-bs-brushless-liquid-diaphragm-pump-front-20261027.webp",
+    "card": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-bs-brushless-liquid-diaphragm-pump-front-20261027-card.webp",
+    "previousMain": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushless-diaphragm-liquid-supply-pump.webp"
+  }
+}

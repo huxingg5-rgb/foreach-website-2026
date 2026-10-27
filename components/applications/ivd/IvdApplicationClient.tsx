@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 /* =========================================================
    IvdApplicationClient.tsx
    恒永达官网｜IVD 应用领域页客户端组件
@@ -26,10 +28,11 @@ import type {
 } from "@/data/applications/ivd/ivd-application.types";
 
 type IvdApplicationClientProps = {
+  relatedVideos?: ReactNode;
   data: IvdApplicationPageData;
 };
 
-export default function IvdApplicationClient({ data }: IvdApplicationClientProps) {
+export default function IvdApplicationClient({ relatedVideos, data }: IvdApplicationClientProps) {
   const firstInstrument = data.instruments[0];
 
   const [activeInstrumentKey, setActiveInstrumentKey] = useState(firstInstrument?.key ?? "");
@@ -322,6 +325,8 @@ export default function IvdApplicationClient({ data }: IvdApplicationClientProps
           1. 保留 H5 原版单按钮
           2. 后期按钮可跳转到联系页或需求表单
       ===================================================== */}
+      {relatedVideos}
+
       <section className="ivd-cta" id="contact">
         <div className="ivd-cta-inner">
           <div>

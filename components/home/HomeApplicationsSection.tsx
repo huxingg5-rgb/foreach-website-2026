@@ -16,7 +16,7 @@ export default function HomeApplicationsSection({ data }: { data: HomeApplicatio
             <span>{copy.subtitle}</span>
           </h2>
           <div className={`${styles.applicationVisual} home-company-video-wrap`}>
-            <Image src="/images/applications/application-lab-automation-960.webp"
+            <Image src="/images/home/company-bottom-bg.webp"
               alt={copy.imageAlt} fill
               sizes="(max-width: 1280px) 92vw, (max-width: 1600px) 45vw, 710px" />
           </div>

@@ -1,0 +1,677 @@
+{
+  "EA-100-PMMA": {
+    "role": "dispensing",
+    "zh": {
+      "heading": "100 μL 精密分液泵，适用于分析仪器微量试剂添加，支持 OEM 配套",
+      "introduction": "100 μL 精密分液泵，适用于分析仪器微量试剂添加，支持 OEM 配套。"
+    },
+    "en": {
+      "heading": "100 μL Precision Dispense Pump for Reagent Addition and OEM Integration",
+      "introduction": "A 100 μL precision dispense pump with a PMMA head for microliter reagent addition in analytical instruments, with OEM integration support."
+    },
+    "es": {
+      "heading": "Bomba dosificadora de precisión de 100 μL para reactivos e integración OEM",
+      "introduction": "Bomba dosificadora de precisión de 100 μL con cabezal de PMMA para añadir microvolúmenes de reactivos en instrumentos analíticos, con soporte para integración OEM."
+    },
+    "fr": {
+      "heading": "Pompe de dosage de précision 100 μL pour réactifs et intégration OEM",
+      "introduction": "Pompe de dosage de précision de 100 μL à tête en PMMA pour l’ajout de microvolumes de réactifs dans les instruments d’analyse, avec accompagnement de l’intégration OEM."
+    },
+    "ko": {
+      "heading": "100 μL 정밀 분주 펌프, 분석기 미량 시약 주입 및 OEM 장비 통합 지원",
+      "introduction": "PMMA 헤드의 100 μL 정밀 분주 펌프로, 분석기에서 미량 시약을 주입하는 용도에 적합하며 OEM 장비 통합을 지원합니다."
+    },
+    "ru": {
+      "heading": "Прецизионный дозирующий насос 100 мкл для реагентов и OEM-интеграции",
+      "introduction": "Прецизионный дозирующий насос на 100 мкл с головкой из PMMA для добавления микролитровых объёмов реагентов в аналитических приборах. Предусмотрена поддержка OEM-интеграции."
+    }
+  },
+  "EA-100-PEEK": {
+    "role": "dispensing",
+    "zh": {
+      "heading": "100 μL PEEK 泵头加样泵，面向小体积液体处理，可按介质匹配接液材料",
+      "introduction": "100 μL PEEK 泵头加样泵，面向小体积液体处理，可按介质匹配接液材料。"
+    },
+    "en": {
+      "heading": "100 μL PEEK Dispensing Pump with Fluid-Specific Wetted Material Options",
+      "introduction": "A 100 μL dispensing pump with a PEEK head for small-volume liquid handling. Wetted materials can be selected to suit the fluid."
+    },
+    "es": {
+      "heading": "Bomba dispensadora de 100 μL, cabezal PEEK y materiales según el fluido",
+      "introduction": "Bomba dispensadora de 100 μL con cabezal de PEEK para manejar pequeños volúmenes. Los materiales en contacto con el líquido se seleccionan según el fluido."
+    },
+    "fr": {
+      "heading": "Pompe de distribution 100 μL, tête PEEK, matériaux adaptés au fluide",
+      "introduction": "Pompe de distribution de 100 μL à tête en PEEK pour la manipulation de petits volumes. Les matériaux en contact avec le liquide sont sélectionnés selon le fluide."
+    },
+    "ko": {
+      "heading": "100 μL PEEK 헤드 분주 펌프, 소용량 액체 처리 및 유체별 접액부 소재 선택",
+      "introduction": "PEEK 헤드의 100 μL 분주 펌프로 소용량 액체를 처리합니다. 접액부 소재는 사용하는 유체에 맞춰 선택할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Насос-дозатор 100 мкл, головка PEEK, материалы под рабочую жидкость",
+      "introduction": "Насос-дозатор на 100 мкл с головкой из PEEK для работы с малыми объёмами жидкости. Материалы смачиваемых деталей подбираются под рабочую среду."
+    }
+  },
+  "EA-250-PMMA": {
+    "role": "sampling",
+    "zh": {
+      "heading": "250 μL 精密取样泵，适用于样本吸取与稀释，PMMA 泵头配置",
+      "introduction": "250 μL 精密取样泵，适用于样本吸取与稀释，PMMA 泵头配置。"
+    },
+    "en": {
+      "heading": "250 μL Precision Sampling Pump for Aspiration and Dilution, PMMA Head",
+      "introduction": "A 250 μL precision sampling pump with a PMMA head for sample aspiration and dilution in analytical instruments."
+    },
+    "es": {
+      "heading": "Bomba de muestreo de 250 μL para aspiración y dilución, cabezal PMMA",
+      "introduction": "Bomba de muestreo de precisión de 250 μL con cabezal de PMMA para aspirar y diluir muestras en instrumentos analíticos."
+    },
+    "fr": {
+      "heading": "Pompe de prélèvement 250 μL pour aspiration et dilution, tête PMMA",
+      "introduction": "Pompe de prélèvement de précision de 250 μL à tête en PMMA pour l’aspiration et la dilution d’échantillons dans les instruments d’analyse."
+    },
+    "ko": {
+      "heading": "250 μL 정밀 샘플링 펌프, 시료 흡입·희석용 PMMA 헤드 구성",
+      "introduction": "PMMA 헤드의 250 μL 정밀 샘플링 펌프로, 분석기에서 시료를 흡입하고 희석하는 용도에 적합합니다."
+    },
+    "ru": {
+      "heading": "Прецизионный насос 250 мкл для отбора и разбавления проб, головка PMMA",
+      "introduction": "Прецизионный насос на 250 мкл с головкой из PMMA для аспирации и разбавления проб в аналитических приборах."
+    }
+  },
+  "EA-250-PEEK": {
+    "role": "sampling",
+    "zh": {
+      "heading": "250 μL PEEK 泵头取样泵，可按液体特性匹配柱塞与密封配置",
+      "introduction": "250 μL PEEK 泵头取样泵，可按液体特性匹配柱塞与密封配置。"
+    },
+    "en": {
+      "heading": "250 μL PEEK Sampling Pump with Configurable Pistons and Seals",
+      "introduction": "A 250 μL sampling pump with a PEEK head. Piston and seal configurations can be matched to the fluid and operating conditions."
+    },
+    "es": {
+      "heading": "Bomba de muestreo de 250 μL, cabezal PEEK, pistón y juntas configurables",
+      "introduction": "Bomba de muestreo de 250 μL con cabezal de PEEK. El pistón y las juntas pueden adaptarse a las propiedades del líquido y a las condiciones de uso."
+    },
+    "fr": {
+      "heading": "Pompe de prélèvement 250 μL, tête PEEK, piston et joints au choix",
+      "introduction": "Pompe de prélèvement de 250 μL à tête en PEEK. Le piston et les joints peuvent être adaptés aux propriétés du liquide et aux conditions d’utilisation."
+    },
+    "ko": {
+      "heading": "250 μL PEEK 헤드 샘플링 펌프, 액체 특성에 따른 피스톤·씰 구성",
+      "introduction": "PEEK 헤드의 250 μL 샘플링 펌프입니다. 액체 특성과 사용 조건에 맞춰 피스톤과 씰 구성을 선택할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Насос для проб 250 мкл, головка PEEK, выбор поршня и уплотнений",
+      "introduction": "Насос для отбора проб на 250 мкл с головкой из PEEK. Поршень и уплотнения подбираются с учётом свойств жидкости и условий эксплуатации."
+    }
+  },
+  "EA-500-PMMA": {
+    "role": "reagent",
+    "zh": {
+      "heading": "500 μL 试剂加样泵，适用于自动化仪器定量加液，可配套阀组件",
+      "introduction": "500 μL 试剂加样泵，适用于自动化仪器定量加液，可配套阀组件。"
+    },
+    "en": {
+      "heading": "500 μL Reagent Dispensing Pump for Automation, with Valve Options",
+      "introduction": "A 500 μL reagent dispensing pump with a PMMA head for metered liquid addition in automated instruments. Matching valve assemblies are available."
+    },
+    "es": {
+      "heading": "Bomba para dosificar reactivos de 500 μL con opciones de válvulas",
+      "introduction": "Bomba de 500 μL con cabezal de PMMA para dosificar reactivos en instrumentos automatizados. Se pueden incorporar conjuntos de válvulas adecuados al circuito."
+    },
+    "fr": {
+      "heading": "Pompe de dosage de réactifs 500 μL pour automates, vannes en option",
+      "introduction": "Pompe de dosage de réactifs de 500 μL à tête en PMMA pour l’ajout de volumes définis dans les instruments automatisés. Des ensembles de vannes peuvent être associés au circuit."
+    },
+    "ko": {
+      "heading": "500 μL 시약 분주 펌프, 자동화 장비 정량 주입 및 밸브 어셈블리 연계",
+      "introduction": "PMMA 헤드의 500 μL 시약 분주 펌프로, 자동화 장비의 정량 주입에 적합합니다. 유로에 맞는 밸브 어셈블리를 함께 구성할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Насос для дозирования реагентов 500 мкл с подбором клапанных узлов",
+      "introduction": "Насос на 500 мкл с головкой из PMMA для дозированного добавления реагентов в автоматизированных приборах. Возможна комплектация клапанными узлами."
+    }
+  },
+  "EA-500-PEEK": {
+    "role": "reagent",
+    "zh": {
+      "heading": "500 μL PEEK 泵头试剂分配泵，适用于试剂与缓冲液定量添加",
+      "introduction": "500 μL PEEK 泵头试剂分配泵，适用于试剂与缓冲液定量添加。"
+    },
+    "en": {
+      "heading": "500 μL PEEK Reagent Dispensing Pump for Reagent and Buffer Dosing",
+      "introduction": "A 500 μL reagent dispensing pump with a PEEK head for metered reagent and buffer addition."
+    },
+    "es": {
+      "heading": "Bomba dosificadora de 500 μL, cabezal PEEK, para reactivos y tampones",
+      "introduction": "Bomba de dispensación de reactivos de 500 μL con cabezal de PEEK para añadir volúmenes definidos de reactivos y soluciones tampón."
+    },
+    "fr": {
+      "heading": "Pompe de dosage 500 μL, tête PEEK, pour réactifs et solutions tampons",
+      "introduction": "Pompe de distribution de réactifs de 500 μL à tête en PEEK pour l’ajout dosé de réactifs et de solutions tampons."
+    },
+    "ko": {
+      "heading": "500 μL PEEK 헤드 시약 분주 펌프, 시약·완충액 정량 주입용",
+      "introduction": "PEEK 헤드의 500 μL 시약 분주 펌프로, 시약과 완충액을 정해진 양만큼 주입하는 용도에 적합합니다."
+    },
+    "ru": {
+      "heading": "Дозирующий насос 500 мкл, головка PEEK, для реагентов и буферов",
+      "introduction": "Насос на 500 мкл с головкой из PEEK для дозированного добавления реагентов и буферных растворов."
+    }
+  },
+  "EA-1000-PMMA": {
+    "role": "dispensing",
+    "zh": {
+      "heading": "1 mL 液体分配泵，适用于实验室自动化加液，提供 PMMA 泵头配置",
+      "introduction": "1 mL 液体分配泵，适用于实验室自动化加液，提供 PMMA 泵头配置。"
+    },
+    "en": {
+      "heading": "1 mL Liquid Dispensing Pump for Laboratory Automation, PMMA Head",
+      "introduction": "A 1 mL liquid dispensing pump with a PMMA head for automated liquid addition in laboratory instruments."
+    },
+    "es": {
+      "heading": "Bomba dispensadora de 1 mL para automatización de laboratorio, PMMA",
+      "introduction": "Bomba dispensadora de líquidos de 1 mL con cabezal de PMMA para adición automatizada de líquidos en el laboratorio."
+    },
+    "fr": {
+      "heading": "Pompe de distribution 1 mL pour l’automatisation du laboratoire, PMMA",
+      "introduction": "Pompe de distribution de liquides de 1 mL à tête en PMMA pour l’ajout automatisé de liquides au laboratoire."
+    },
+    "ko": {
+      "heading": "1 mL 액체 분주 펌프, 실험실 자동화 주입용 PMMA 헤드 구성",
+      "introduction": "PMMA 헤드의 1 mL 액체 분주 펌프로, 실험실 자동화 장비에서 액체를 주입하는 용도에 적합합니다."
+    },
+    "ru": {
+      "heading": "Насос-дозатор 1 мл для лабораторной автоматизации, головка PMMA",
+      "introduction": "Насос-дозатор жидкостей на 1 мл с головкой из PMMA для автоматизированного добавления жидкостей в лабораторных приборах."
+    }
+  },
+  "EA-1000-PEEK": {
+    "role": "reagent",
+    "zh": {
+      "heading": "1 mL OEM 试剂加样泵，PEEK 泵头，可匹配电机、光耦反馈与控制器",
+      "introduction": "1 mL OEM 试剂加样泵，PEEK 泵头，可匹配电机、光耦反馈与控制器。"
+    },
+    "en": {
+      "heading": "1 mL OEM Reagent Pump, PEEK Head, with Drive and Optical Sensor Options",
+      "introduction": "A 1 mL OEM reagent dispensing pump with a PEEK head. Motor, optical feedback and controller options can be matched to the instrument."
+    },
+    "es": {
+      "heading": "Bomba OEM de 1 mL para reactivos, PEEK y opciones de accionamiento",
+      "introduction": "Bomba OEM de 1 mL con cabezal de PEEK para dosificar reactivos. El motor, la realimentación mediante sensor óptico y el controlador se pueden configurar para el instrumento."
+    },
+    "fr": {
+      "heading": "Pompe OEM pour réactifs 1 mL, tête PEEK, entraînement configurable",
+      "introduction": "Pompe OEM de dosage de réactifs de 1 mL à tête en PEEK. Le moteur, le retour d’information optique et le contrôleur peuvent être adaptés à l’instrument."
+    },
+    "ko": {
+      "heading": "1 mL OEM 시약 분주 펌프, PEEK 헤드 및 모터·광학 피드백·제어기 선택",
+      "introduction": "PEEK 헤드의 1 mL OEM 시약 분주 펌프입니다. 장비 요구에 맞춰 모터, 광학 피드백 및 제어기를 구성할 수 있습니다."
+    },
+    "ru": {
+      "heading": "OEM-насос 1 мл для реагентов, головка PEEK, выбор привода и управления",
+      "introduction": "OEM-насос для дозирования реагентов на 1 мл с головкой из PEEK. Двигатель, оптическая обратная связь и контроллер подбираются под прибор."
+    }
+  },
+  "EA-2500-PMMA": {
+    "role": "metering",
+    "zh": {
+      "heading": "2.5 mL 精密计量泵，适用于稀释液与缓冲液添加，接口可选 1/4-28 UNF 或 M6",
+      "introduction": "2.5 mL 精密计量泵，适用于稀释液与缓冲液添加，接口可选 1/4-28 UNF 或 M6。"
+    },
+    "en": {
+      "heading": "2.5 mL Precision Metering Pump for Diluent and Buffer Dosing",
+      "introduction": "A 2.5 mL precision metering pump with a PMMA head for diluent and buffer addition. Port options are 1/4-28 UNF or M6."
+    },
+    "es": {
+      "heading": "Bomba dosificadora de precisión de 2,5 mL para diluyentes y tampones",
+      "introduction": "Bomba dosificadora de precisión de 2,5 mL con cabezal de PMMA para añadir diluyentes y soluciones tampón, con conexiones de 1/4-28 UNF o M6."
+    },
+    "fr": {
+      "heading": "Pompe doseuse de précision 2,5 mL pour diluants et solutions tampons",
+      "introduction": "Pompe doseuse de précision de 2,5 mL à tête en PMMA pour l’ajout de diluants et de solutions tampons, avec raccordements 1/4-28 UNF ou M6 au choix."
+    },
+    "ko": {
+      "heading": "2.5 mL 정밀 정량 펌프, 희석액·완충액 주입 및 1/4-28 UNF·M6 포트 선택",
+      "introduction": "PMMA 헤드의 2.5 mL 정밀 정량 펌프로, 희석액과 완충액 주입에 적합합니다. 포트는 1/4-28 UNF 또는 M6를 선택할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Прецизионный дозирующий насос 2,5 мл для разбавителей и буферов",
+      "introduction": "Прецизионный дозирующий насос на 2,5 мл с головкой из PMMA для добавления разбавителей и буферных растворов. Соединения: 1/4-28 UNF или M6."
+    }
+  },
+  "EA-2500-PEEK": {
+    "role": "dispensing",
+    "zh": {
+      "heading": "2.5 mL PEEK 泵头分液泵，面向自动化配液流程，支持柱塞材料选配",
+      "introduction": "2.5 mL PEEK 泵头分液泵，面向自动化配液流程，支持柱塞材料选配。"
+    },
+    "en": {
+      "heading": "2.5 mL PEEK Dispensing Pump for Automated Liquid Preparation",
+      "introduction": "A 2.5 mL dispensing pump with a PEEK head for automated liquid preparation, with selectable piston materials."
+    },
+    "es": {
+      "heading": "Bomba dispensadora de 2,5 mL, cabezal PEEK, para preparación de líquidos",
+      "introduction": "Bomba dispensadora de 2,5 mL con cabezal de PEEK para la preparación automatizada de líquidos, con materiales de pistón seleccionables."
+    },
+    "fr": {
+      "heading": "Pompe de distribution 2,5 mL, tête PEEK, pour préparation automatisée",
+      "introduction": "Pompe de distribution de 2,5 mL à tête en PEEK pour la préparation automatisée de liquides, avec choix du matériau du piston."
+    },
+    "ko": {
+      "heading": "2.5 mL PEEK 헤드 분주 펌프, 자동 용액 조제용 피스톤 소재 선택",
+      "introduction": "PEEK 헤드의 2.5 mL 분주 펌프로, 자동 용액 조제 공정에 사용하며 피스톤 소재를 선택할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Насос-дозатор 2,5 мл, головка PEEK, для автоматического приготовления жидкостей",
+      "introduction": "Насос-дозатор на 2,5 мл с головкой из PEEK для автоматизированного приготовления жидкостей, с выбором материала поршня."
+    }
+  },
+  "EA-5000-PMMA": {
+    "role": "dosing",
+    "zh": {
+      "heading": "5 mL 定量加液泵，适用于清洗液补充与管路预充，可配套液路阀组件",
+      "introduction": "5 mL 定量加液泵，适用于清洗液补充与管路预充，可配套液路阀组件。"
+    },
+    "en": {
+      "heading": "5 mL Dosing Pump for Wash-Fluid Replenishment and Priming, Valve Options",
+      "introduction": "A 5 mL dosing pump with a PMMA head for wash-fluid replenishment and line priming. Matching fluidic valve assemblies are available."
+    },
+    "es": {
+      "heading": "Bomba dosificadora de 5 mL para líquido de lavado y cebado, válvulas opcionales",
+      "introduction": "Bomba dosificadora de 5 mL con cabezal de PMMA para reponer líquido de lavado y cebar las líneas. Se pueden suministrar conjuntos de válvulas para el circuito."
+    },
+    "fr": {
+      "heading": "Pompe doseuse 5 mL pour liquide de lavage et amorçage, vannes en option",
+      "introduction": "Pompe doseuse de 5 mL à tête en PMMA pour l’appoint de liquide de lavage et l’amorçage des conduites. Des ensembles de vannes adaptés au circuit sont disponibles."
+    },
+    "ko": {
+      "heading": "5 mL 정량 주입 펌프, 세척액 보충·유로 프라이밍 및 밸브 어셈블리 연계",
+      "introduction": "PMMA 헤드의 5 mL 정량 주입 펌프로, 세척액 보충과 유로 프라이밍에 적합합니다. 유로용 밸브 어셈블리를 함께 구성할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Дозирующий насос 5 мл для промывочной жидкости и заполнения линий",
+      "introduction": "Дозирующий насос на 5 мл с головкой из PMMA для пополнения промывочной жидкости и предварительного заполнения линий. Возможна комплектация клапанными узлами."
+    }
+  },
+  "EA-5000-PEEK": {
+    "role": "metering",
+    "zh": {
+      "heading": "5 mL PEEK 泵头计量泵，适用于清洗液与缓冲液输送，接液配置按介质匹配",
+      "introduction": "5 mL PEEK 泵头计量泵，适用于清洗液与缓冲液输送，接液配置按介质匹配。"
+    },
+    "en": {
+      "heading": "5 mL PEEK Metering Pump for Wash Fluids and Buffers, Wetted-Part Options",
+      "introduction": "A 5 mL metering pump with a PEEK head for wash-fluid and buffer transfer. Wetted components are selected to suit the fluid."
+    },
+    "es": {
+      "heading": "Bomba dosificadora de 5 mL, PEEK, para líquidos de lavado y tampones",
+      "introduction": "Bomba dosificadora de 5 mL con cabezal de PEEK para transferir líquidos de lavado y soluciones tampón. Las piezas en contacto con el líquido se seleccionan según el fluido."
+    },
+    "fr": {
+      "heading": "Pompe doseuse 5 mL, tête PEEK, pour liquides de lavage et tampons",
+      "introduction": "Pompe doseuse de 5 mL à tête en PEEK pour le transfert de liquides de lavage et de solutions tampons. Les pièces en contact avec le liquide sont sélectionnées selon le fluide."
+    },
+    "ko": {
+      "heading": "5 mL PEEK 헤드 정량 펌프, 세척액·완충액 이송 및 유체별 접액부 구성",
+      "introduction": "PEEK 헤드의 5 mL 정량 펌프로, 세척액과 완충액을 이송합니다. 접액부 구성은 사용하는 유체에 맞춰 선택합니다."
+    },
+    "ru": {
+      "heading": "Дозирующий насос 5 мл, PEEK, для промывочных жидкостей и буферов",
+      "introduction": "Дозирующий насос на 5 мл с головкой из PEEK для подачи промывочных жидкостей и буферных растворов. Смачиваемые детали подбираются под рабочую среду."
+    }
+  },
+  "EA-10000-PMMA": {
+    "role": "dosing",
+    "zh": {
+      "heading": "10 mL 定量加液泵，适用于仪器液路冲洗与预充，PMMA 泵头配置",
+      "introduction": "10 mL 定量加液泵，适用于仪器液路冲洗与预充，PMMA 泵头配置。"
+    },
+    "en": {
+      "heading": "10 mL Dosing Pump for Instrument Flushing and Line Priming, PMMA Head",
+      "introduction": "A 10 mL dosing pump with a PMMA head for flushing and priming instrument fluid paths."
+    },
+    "es": {
+      "heading": "Bomba dosificadora de 10 mL para lavado y cebado de circuitos, PMMA",
+      "introduction": "Bomba dosificadora de 10 mL con cabezal de PMMA para lavar y cebar los circuitos de líquido de los instrumentos."
+    },
+    "fr": {
+      "heading": "Pompe doseuse 10 mL pour rinçage et amorçage des circuits, tête PMMA",
+      "introduction": "Pompe doseuse de 10 mL à tête en PMMA pour le rinçage et l’amorçage des circuits fluidiques des instruments."
+    },
+    "ko": {
+      "heading": "10 mL 정량 주입 펌프, 장비 유로 세척·프라이밍용 PMMA 헤드 구성",
+      "introduction": "PMMA 헤드의 10 mL 정량 주입 펌프로, 장비 유로 세척과 프라이밍에 적합합니다."
+    },
+    "ru": {
+      "heading": "Дозирующий насос 10 мл для промывки и заполнения линий, головка PMMA",
+      "introduction": "Дозирующий насос на 10 мл с головкой из PMMA для промывки и предварительного заполнения жидкостных трактов приборов."
+    }
+  },
+  "EA-10000-PEEK": {
+    "role": "dispensing",
+    "zh": {
+      "heading": "10 mL OEM 分液泵，采用 PEEK 泵头，支持接口、驱动与控制配置",
+      "introduction": "10 mL OEM 分液泵，采用 PEEK 泵头，支持接口、驱动与控制配置。"
+    },
+    "en": {
+      "heading": "10 mL OEM Dispensing Pump, PEEK Head, with Port and Control Options",
+      "introduction": "A 10 mL OEM dispensing pump with a PEEK head, with configurable ports, drive and controls."
+    },
+    "es": {
+      "heading": "Bomba dispensadora OEM de 10 mL, PEEK, con conexiones y control configurables",
+      "introduction": "Bomba dispensadora OEM de 10 mL con cabezal de PEEK y opciones de conexiones, accionamiento y control."
+    },
+    "fr": {
+      "heading": "Pompe OEM de distribution 10 mL, PEEK, raccordements et commande au choix",
+      "introduction": "Pompe OEM de distribution de 10 mL à tête en PEEK, avec raccordements, entraînement et commande configurables."
+    },
+    "ko": {
+      "heading": "10 mL OEM 분주 펌프, PEEK 헤드 및 포트·구동·제어 구성 선택",
+      "introduction": "PEEK 헤드의 10 mL OEM 분주 펌프로, 포트와 구동·제어 구성을 장비 요구에 맞춰 선택할 수 있습니다."
+    },
+    "ru": {
+      "heading": "OEM-насос-дозатор 10 мл, PEEK, выбор соединений, привода и управления",
+      "introduction": "OEM-насос-дозатор на 10 мл с головкой из PEEK, с выбором соединений, привода и системы управления."
+    }
+  },
+  "SM-50-PMMA": {
+    "role": "reagent",
+    "zh": {
+      "heading": "50 μL 微型试剂加样泵，适用于小体积试剂添加，面向小型仪器配套",
+      "introduction": "50 μL 微型试剂加样泵，适用于小体积试剂添加，面向小型仪器配套。"
+    },
+    "en": {
+      "heading": "50 μL Miniature Reagent Dispensing Pump for Small Instrument Integration",
+      "introduction": "A 50 μL miniature reagent dispensing pump with a PMMA head for small-volume reagent addition in compact instruments."
+    },
+    "es": {
+      "heading": "Bomba miniatura de 50 μL para reactivos en instrumentos compactos",
+      "introduction": "Bomba miniatura de 50 μL con cabezal de PMMA para añadir pequeños volúmenes de reactivos, destinada a su integración en instrumentos compactos."
+    },
+    "fr": {
+      "heading": "Pompe miniature pour réactifs 50 μL à intégrer aux petits instruments",
+      "introduction": "Pompe miniature de dosage de réactifs de 50 μL à tête en PMMA pour l’ajout de petits volumes, destinée à l’intégration dans des instruments compacts."
+    },
+    "ko": {
+      "heading": "50 μL 소형 시약 분주 펌프, 소용량 시약 주입 및 소형 장비 통합용",
+      "introduction": "PMMA 헤드의 50 μL 소형 시약 분주 펌프로, 소용량 시약을 주입하며 소형 장비에 통합하기 위한 구성입니다."
+    },
+    "ru": {
+      "heading": "Миниатюрный насос 50 мкл для реагентов в компактных приборах",
+      "introduction": "Миниатюрный насос для дозирования реагентов на 50 мкл с головкой из PMMA для добавления малых объёмов реагентов в компактных приборах."
+    }
+  },
+  "SM-100-PMMA": {
+    "role": "sampling",
+    "zh": {
+      "heading": "100 μL 微型取样泵，适用于小型加样机构，可配套加样针与管路",
+      "introduction": "100 μL 微型取样泵，适用于小型加样机构，可配套加样针与管路。"
+    },
+    "en": {
+      "heading": "100 μL Miniature Sampling Pump with Dispensing Probe and Tubing Options",
+      "introduction": "A 100 μL miniature sampling pump with a PMMA head for compact sampling mechanisms. Matching dispensing probes and tubing are available."
+    },
+    "es": {
+      "heading": "Bomba de muestreo miniatura de 100 μL con opciones de sonda y tubos",
+      "introduction": "Bomba de muestreo miniatura de 100 μL con cabezal de PMMA para mecanismos de muestreo compactos. Se pueden suministrar sondas de dispensación y tubos adecuados."
+    },
+    "fr": {
+      "heading": "Pompe de prélèvement miniature 100 μL, sonde et tubulures en option",
+      "introduction": "Pompe de prélèvement miniature de 100 μL à tête en PMMA pour les mécanismes de prélèvement compacts. Des sondes de distribution et des tubulures peuvent être associées."
+    },
+    "ko": {
+      "heading": "100 μL 소형 샘플링 펌프, 소형 샘플링 장치용 분주 니들·튜빙 연계",
+      "introduction": "PMMA 헤드의 100 μL 소형 샘플링 펌프로, 소형 샘플링 장치에 적합합니다. 분주 니들과 튜빙을 함께 구성할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Миниатюрный насос для проб 100 мкл с подбором дозирующей иглы и трубок",
+      "introduction": "Миниатюрный насос для проб на 100 мкл с головкой из PMMA для компактных механизмов отбора и дозирования. Возможен подбор дозирующей иглы и трубок."
+    }
+  },
+  "SM-100-PEEK": {
+    "role": "dispensing",
+    "zh": {
+      "heading": "100 μL PEEK 泵头微型加样泵，面向紧凑液路，支持阀组件与控制器配套",
+      "introduction": "100 μL PEEK 泵头微型加样泵，面向紧凑液路，支持阀组件与控制器配套。"
+    },
+    "en": {
+      "heading": "100 μL PEEK Miniature Dispensing Pump with Valve and Controller Options",
+      "introduction": "A 100 μL miniature dispensing pump with a PEEK head for compact fluid paths, with matching valve and controller options."
+    },
+    "es": {
+      "heading": "Bomba dispensadora miniatura de 100 μL, PEEK, con válvulas y controlador",
+      "introduction": "Bomba dispensadora miniatura de 100 μL con cabezal de PEEK para circuitos compactos, con opciones de válvulas y controlador."
+    },
+    "fr": {
+      "heading": "Pompe de distribution miniature 100 μL, PEEK, vannes et contrôleur au choix",
+      "introduction": "Pompe miniature de distribution de 100 μL à tête en PEEK pour les circuits compacts, avec options de vannes et de contrôleur."
+    },
+    "ko": {
+      "heading": "100 μL PEEK 헤드 소형 분주 펌프, 소형 유로용 밸브·제어기 선택",
+      "introduction": "PEEK 헤드의 100 μL 소형 분주 펌프로, 소형 유로에 맞춰 밸브 어셈블리와 제어기를 함께 구성할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Миниатюрный насос-дозатор 100 мкл, PEEK, выбор клапанов и контроллера",
+      "introduction": "Миниатюрный насос-дозатор на 100 мкл с головкой из PEEK для компактных жидкостных трактов, с подбором клапанных узлов и контроллера."
+    }
+  },
+  "SM-250-PMMA": {
+    "role": "reagent",
+    "zh": {
+      "heading": "250 μL 微型试剂分配泵，适用于反应体系定量加液，PMMA 泵头",
+      "introduction": "250 μL 微型试剂分配泵，适用于反应体系定量加液，PMMA 泵头。"
+    },
+    "en": {
+      "heading": "250 μL Miniature Reagent Dispensing Pump for Reaction Dosing, PMMA Head",
+      "introduction": "A 250 μL miniature reagent dispensing pump with a PMMA head for metered liquid addition to reaction mixtures."
+    },
+    "es": {
+      "heading": "Bomba miniatura de 250 μL para dosificar reactivos en reacciones, PMMA",
+      "introduction": "Bomba dispensadora de reactivos miniatura de 250 μL con cabezal de PMMA para añadir volúmenes definidos de líquido a mezclas de reacción."
+    },
+    "fr": {
+      "heading": "Pompe miniature pour réactifs 250 μL, dosage en réaction, tête PMMA",
+      "introduction": "Pompe miniature de distribution de réactifs de 250 μL à tête en PMMA pour l’ajout de volumes définis aux mélanges réactionnels."
+    },
+    "ko": {
+      "heading": "250 μL 소형 시약 분주 펌프, 반응액 정량 주입용 PMMA 헤드 구성",
+      "introduction": "PMMA 헤드의 250 μL 소형 시약 분주 펌프로, 반응 혼합물에 정해진 양의 액체를 주입하는 용도에 적합합니다."
+    },
+    "ru": {
+      "heading": "Миниатюрный насос 250 мкл для дозирования реагентов в реакции, PMMA",
+      "introduction": "Миниатюрный насос для дозирования реагентов на 250 мкл с головкой из PMMA для добавления заданных объёмов жидкости в реакционные смеси."
+    }
+  },
+  "SM-250-PEEK": {
+    "role": "metering",
+    "zh": {
+      "heading": "250 μL 可定制微型计量泵，PEEK 泵头，柱塞与密封按试剂成分匹配",
+      "introduction": "250 μL 可定制微型计量泵，PEEK 泵头，柱塞与密封按试剂成分匹配。"
+    },
+    "en": {
+      "heading": "250 μL Custom Miniature Metering Pump, PEEK Head, Piston and Seal Options",
+      "introduction": "A customizable 250 μL miniature metering pump with a PEEK head. Pistons and seals are selected according to reagent composition."
+    },
+    "es": {
+      "heading": "Bomba dosificadora miniatura de 250 μL a medida, cabezal PEEK",
+      "introduction": "Bomba dosificadora miniatura de 250 μL configurable, con cabezal de PEEK. El pistón y las juntas se seleccionan según la composición del reactivo."
+    },
+    "fr": {
+      "heading": "Pompe doseuse miniature 250 μL sur mesure, tête PEEK",
+      "introduction": "Pompe doseuse miniature de 250 μL configurable, à tête en PEEK. Le piston et les joints sont sélectionnés selon la composition du réactif."
+    },
+    "ko": {
+      "heading": "250 μL 맞춤형 소형 정량 펌프, PEEK 헤드 및 시약별 피스톤·씰 선택",
+      "introduction": "PEEK 헤드의 250 μL 맞춤형 소형 정량 펌프입니다. 시약 성분에 맞춰 피스톤과 씰을 선택합니다."
+    },
+    "ru": {
+      "heading": "Миниатюрный дозирующий насос 250 мкл под заказ, головка PEEK",
+      "introduction": "Миниатюрный дозирующий насос на 250 мкл с головкой из PEEK, с конфигурацией под проект. Поршень и уплотнения подбираются по составу реагента."
+    }
+  },
+  "SM-500-PMMA": {
+    "role": "dosing",
+    "zh": {
+      "heading": "500 μL OEM 微型加液泵，适用于试剂与稀释液添加，可配套光耦反馈",
+      "introduction": "500 μL OEM 微型加液泵，适用于试剂与稀释液添加，可配套光耦反馈。"
+    },
+    "en": {
+      "heading": "500 μL OEM Miniature Dosing Pump for Reagents and Diluents",
+      "introduction": "A 500 μL OEM miniature dosing pump with a PMMA head for reagent and diluent addition, with optional optical feedback."
+    },
+    "es": {
+      "heading": "Bomba dosificadora miniatura OEM de 500 μL para reactivos y diluyentes",
+      "introduction": "Bomba dosificadora miniatura OEM de 500 μL con cabezal de PMMA para añadir reactivos y diluyentes, con opción de realimentación mediante sensor óptico."
+    },
+    "fr": {
+      "heading": "Pompe doseuse miniature OEM 500 μL pour réactifs et diluants",
+      "introduction": "Pompe doseuse miniature OEM de 500 μL à tête en PMMA pour l’ajout de réactifs et de diluants, avec retour d’information optique en option."
+    },
+    "ko": {
+      "heading": "500 μL OEM 소형 정량 주입 펌프, 시약·희석액 주입 및 광학 피드백 선택",
+      "introduction": "PMMA 헤드의 500 μL OEM 소형 정량 주입 펌프로, 시약과 희석액 주입에 적합하며 광학 피드백을 선택할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Миниатюрный OEM-насос 500 мкл для дозирования реагентов и разбавителей",
+      "introduction": "Миниатюрный OEM-насос на 500 мкл с головкой из PMMA для дозированного добавления реагентов и разбавителей. Оптическая обратная связь доступна как опция."
+    }
+  },
+  "SM-1000-PMMA": {
+    "role": "buffer",
+    "zh": {
+      "heading": "1 mL 微型分液泵，适用于小型设备缓冲液分配，支持管路与控制器配套",
+      "introduction": "1 mL 微型分液泵，适用于小型设备缓冲液分配，支持管路与控制器配套。"
+    },
+    "en": {
+      "heading": "1 mL Miniature Buffer Dispensing Pump with Tubing and Controller Options",
+      "introduction": "A 1 mL miniature dispensing pump with a PMMA head for buffer distribution in small instruments, with matching tubing and controller options."
+    },
+    "es": {
+      "heading": "Bomba miniatura de 1 mL para tampones, con opciones de tubos y controlador",
+      "introduction": "Bomba dispensadora miniatura de 1 mL con cabezal de PMMA para distribuir soluciones tampón en equipos pequeños, con opciones de tubos y controlador."
+    },
+    "fr": {
+      "heading": "Pompe miniature pour tampons 1 mL, tubulures et contrôleur en option",
+      "introduction": "Pompe de distribution miniature de 1 mL à tête en PMMA pour les solutions tampons dans les petits instruments, avec options de tubulures et de contrôleur."
+    },
+    "ko": {
+      "heading": "1 mL 소형 완충액 분주 펌프, 소형 장비용 튜빙·제어기 연계",
+      "introduction": "PMMA 헤드의 1 mL 소형 분주 펌프로, 소형 장비에서 완충액을 분배하며 튜빙과 제어기를 함께 구성할 수 있습니다."
+    },
+    "ru": {
+      "heading": "Миниатюрный насос-дозатор 1 мл для буферов, выбор трубок и контроллера",
+      "introduction": "Миниатюрный насос-дозатор на 1 мл с головкой из PMMA для подачи буферных растворов в небольших приборах, с подбором трубок и контроллера."
+    }
+  },
+  "TM-50-PMMA": {
+    "role": "dosing",
+    "zh": {
+      "heading": "50 μL 超微型加液泵，适用于紧凑型分析模块，采用 6-40 UNF 接口",
+      "introduction": "50 μL 超微型加液泵，适用于紧凑型分析模块，采用 6-40 UNF 接口。"
+    },
+    "en": {
+      "heading": "50 μL Ultra-Compact Dosing Pump for Analytical Modules, 6-40 UNF Ports",
+      "introduction": "A 50 μL ultra-compact dosing pump with a PMMA head for compact analytical modules. The displayed configuration uses 6-40 UNF ports."
+    },
+    "es": {
+      "heading": "Bomba dosificadora ultracompacta de 50 μL para módulos, conexiones 6-40 UNF",
+      "introduction": "Bomba dosificadora ultracompacta de 50 μL con cabezal de PMMA para módulos analíticos compactos. La configuración mostrada utiliza conexiones de 6-40 UNF."
+    },
+    "fr": {
+      "heading": "Pompe doseuse ultra-compacte 50 μL pour modules, raccordements 6-40 UNF",
+      "introduction": "Pompe doseuse ultra-compacte de 50 μL à tête en PMMA pour les modules d’analyse compacts. La configuration présentée utilise des raccordements 6-40 UNF."
+    },
+    "ko": {
+      "heading": "50 μL 초소형 정량 주입 펌프, 소형 분석 모듈용 6-40 UNF 포트 구성",
+      "introduction": "PMMA 헤드의 50 μL 초소형 정량 주입 펌프로, 소형 분석 모듈에 적합합니다. 표시된 구성은 6-40 UNF 포트를 사용합니다."
+    },
+    "ru": {
+      "heading": "Сверхкомпактный дозирующий насос 50 мкл для модулей, порты 6-40 UNF",
+      "introduction": "Сверхкомпактный дозирующий насос на 50 мкл с головкой из PMMA для компактных аналитических модулей. Показанная конфигурация имеет порты 6-40 UNF."
+    }
+  },
+  "TM-100-PMMA": {
+    "role": "sampling",
+    "zh": {
+      "heading": "100 μL 超微型取样泵，适用于小型检测模块中的样本分配，PMMA 泵头",
+      "introduction": "100 μL 超微型取样泵，适用于小型检测模块中的样本分配，PMMA 泵头。"
+    },
+    "en": {
+      "heading": "100 μL Ultra-Compact Sampling Pump for Detection Modules, PMMA Head",
+      "introduction": "A 100 μL ultra-compact sampling pump with a PMMA head for sample dispensing in small detection modules."
+    },
+    "es": {
+      "heading": "Bomba de muestreo ultracompacta de 100 μL para módulos de detección, PMMA",
+      "introduction": "Bomba de muestreo ultracompacta de 100 μL con cabezal de PMMA para dispensar muestras en módulos de detección pequeños."
+    },
+    "fr": {
+      "heading": "Pompe de prélèvement ultra-compacte 100 μL pour modules de détection, PMMA",
+      "introduction": "Pompe de prélèvement ultra-compacte de 100 μL à tête en PMMA pour la distribution d’échantillons dans les petits modules de détection."
+    },
+    "ko": {
+      "heading": "100 μL 초소형 샘플링 펌프, 소형 검출 모듈의 시료 분주용 PMMA 헤드",
+      "introduction": "PMMA 헤드의 100 μL 초소형 샘플링 펌프로, 소형 검출 모듈에서 시료를 분주하는 용도에 적합합니다."
+    },
+    "ru": {
+      "heading": "Сверхкомпактный насос для проб 100 мкл для модулей детекции, PMMA",
+      "introduction": "Сверхкомпактный насос для проб на 100 мкл с головкой из PMMA для распределения проб в небольших модулях детекции."
+    }
+  },
+  "TM-250-PMMA": {
+    "role": "dispensing",
+    "zh": {
+      "heading": "250 μL OEM 紧凑型加样泵，面向分析模块，阀组件与驱动控制可按项目匹配",
+      "introduction": "250 μL OEM 紧凑型加样泵，面向分析模块，阀组件与驱动控制可按项目匹配。"
+    },
+    "en": {
+      "heading": "250 μL OEM Compact Dispensing Pump with Valve and Drive Control Options",
+      "introduction": "A 250 μL OEM compact dispensing pump with a PMMA head for analytical modules. Valves and drive controls can be matched to the project."
+    },
+    "es": {
+      "heading": "Bomba dispensadora compacta OEM de 250 μL, válvulas y control configurables",
+      "introduction": "Bomba dispensadora compacta OEM de 250 μL con cabezal de PMMA para módulos analíticos. Las válvulas y el control del accionamiento se pueden adaptar al proyecto."
+    },
+    "fr": {
+      "heading": "Pompe de distribution compacte OEM 250 μL, vannes et commande au choix",
+      "introduction": "Pompe compacte OEM de distribution de 250 μL à tête en PMMA pour les modules d’analyse. Les vannes et la commande de l’entraînement peuvent être adaptées au projet."
+    },
+    "ko": {
+      "heading": "250 μL OEM 소형 분주 펌프, 분석 모듈용 밸브·구동 제어 구성",
+      "introduction": "PMMA 헤드의 250 μL OEM 소형 분주 펌프로 분석 모듈에 통합할 수 있습니다. 밸브 어셈블리와 구동 제어는 프로젝트에 맞춰 구성합니다."
+    },
+    "ru": {
+      "heading": "Компактный OEM-насос-дозатор 250 мкл, выбор клапанов и управления",
+      "introduction": "Компактный OEM-насос-дозатор на 250 мкл с головкой из PMMA для аналитических модулей. Клапанные узлы и управление приводом подбираются под проект."
+    }
+  },
+  "TM-500-PMMA": {
+    "role": "dispensing",
+    "zh": {
+      "heading": "500 μL 紧凑型分液泵，适用于试剂与缓冲液添加，支持接管与安装配套",
+      "introduction": "500 μL 紧凑型分液泵，适用于试剂与缓冲液添加，支持接管与安装配套。"
+    },
+    "en": {
+      "heading": "500 μL Compact Dispensing Pump for Reagents and Buffers, Mounting Options",
+      "introduction": "A 500 μL compact dispensing pump with a PMMA head for reagent and buffer addition, with tubing connection and mounting options."
+    },
+    "es": {
+      "heading": "Bomba compacta de 500 μL para reactivos y tampones, opciones de montaje",
+      "introduction": "Bomba dispensadora compacta de 500 μL con cabezal de PMMA para añadir reactivos y soluciones tampón, con opciones de conexión de tubos y montaje."
+    },
+    "fr": {
+      "heading": "Pompe compacte 500 μL pour réactifs et tampons, montage configurable",
+      "introduction": "Pompe de distribution compacte de 500 μL à tête en PMMA pour l’ajout de réactifs et de solutions tampons, avec options de raccordement des tubulures et de montage."
+    },
+    "ko": {
+      "heading": "500 μL 소형 분주 펌프, 시약·완충액 주입 및 튜빙 연결·장착 옵션",
+      "introduction": "PMMA 헤드의 500 μL 소형 분주 펌프로, 시약과 완충액 주입에 적합하며 튜빙 연결 및 장착 구성을 지원합니다."
+    },
+    "ru": {
+      "heading": "Компактный насос-дозатор 500 мкл для реагентов и буферов, выбор монтажа",
+      "introduction": "Компактный насос-дозатор на 500 мкл с головкой из PMMA для добавления реагентов и буферных растворов, с подбором трубных соединений и крепления."
+    }
+  }
+}

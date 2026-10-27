@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { captureReactDiagnostic } from "@/lib/diagnostics/client-capture";
 
 const button: CSSProperties = {
-  padding: "10px 16px", border: "1px solid #d8d8d8", borderRadius: 6,
+  padding: "10px 16px", border: "1px solid #d8d8d8", borderRadius: 0,
   background: "#fff", color: "#171717", fontSize: 15, cursor: "pointer",
 };
 

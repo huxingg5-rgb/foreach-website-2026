@@ -1,0 +1,32 @@
+/* Shared shape for native controls, including dialogs rendered in portals.
+   Important layered rules override legacy page/hover styles and inline radii.
+   Header navigation, its search portal, footer social icons, and video play controls keep their shape.
+   Link buttons use square component styles or opt in with data-site-button. */
+@layer site-button-shape {
+  :where(
+    button,
+    [role="button"],
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    summary,
+    a.home-flow-mobile-product-tag,
+    label.contact-file-button,
+    label.distributor-upload-btn,
+    [data-site-button]
+  ):not(:where(
+    [data-video-play-button],
+    .home-company-video-play,
+    .installation-guide-card-play,
+    .installation-guide-modal-play,
+    .frd-drawing-play-icon,
+    .site-header,
+    .site-header *,
+    [data-global-search-panel],
+    [data-global-search-panel] *,
+    .site-footer__qrcode-area,
+    .site-footer__qrcode-area *
+  )) {
+    border-radius: 0 !important;
+  }
+}

@@ -13,6 +13,7 @@ type TutorialVideoCardProps = {
    * `related` 只提供关联资源模块使用的样式标识；默认卡片的结构和尺寸保持不变。
    */
   variant?: "default" | "related";
+  playInline?: boolean;
 };
 
 export default function TutorialVideoCard({
@@ -20,6 +21,7 @@ export default function TutorialVideoCard({
   isSelected = false,
   onSelect,
   variant = "default",
+  playInline = false,
 }: TutorialVideoCardProps) {
   const imageStyle: CSSProperties | undefined = guide.thumbnail
     ? { backgroundImage: `url(${guide.thumbnail})` }
@@ -35,6 +37,7 @@ export default function TutorialVideoCard({
         data-guide-id={guide.id}
         style={imageStyle}
       >
+        <span className="installation-guide-card-thumbnail" aria-hidden="true" />
         <span className="installation-guide-card-play" aria-hidden="true" />
       </div>
 
@@ -52,7 +55,7 @@ export default function TutorialVideoCard({
     </>
   );
 
-  if (guide.detailHref) {
+  if (guide.detailHref && !playInline) {
     return <Link href={guide.detailHref} className={className}
       style={{ display: "block", color: "inherit", textDecoration: "none" }}>
       {content}

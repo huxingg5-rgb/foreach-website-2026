@@ -239,6 +239,7 @@ interface ArticleClassificationDefinition {
 }
 
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
+  "quick-disconnect-coupling-flow-pressure-drop": {"primaryCategory": "fittings-tubing", "secondaryCategory": "fittings", "tagKeys": ["fittings", "selection", "testing-validation"], "relatedProducts": ["Q20", "Q40", "Q60"]},
 
   "how-does-a-rotary-selector-valve-work": {
     primaryCategory: "valves", secondaryCategory: "multi-port-valves",

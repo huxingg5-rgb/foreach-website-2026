@@ -1,4 +1,5 @@
 @import "tailwindcss"; /* 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽鎺抽崐鎰板磻閹剧粯鍋傞柕鍫濐槹閻撴稓鈧箍鍎辨鎼佺嵁閺嶎厽鐓?Tailwind CSS 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛鎾茬劍閸忔粓鏌涢锝嗙闁汇倝绠栭弻锝夊箛椤撶姰鍋為梺鍝勵儏缁夊綊寮婚妸銉㈡斀闁糕檧鏅滆倴闂備線鈧偛鑻崢鍝ョ磼閼镐絻澹橀柣锝囧厴婵℃瓕顦柛瀣尭閳藉鈻嶉褌绨婚柍缁樻崌楠炲鏁傜憴锝嗗闂備礁鍚嬫禍浠嬪磿瀹ュ鏁傞柛鈺勬硾濞差參銆佸☉銏″€婚柛銉㈡櫇閳?*/
+@import "../components/common/button-shape.css";
 
 /* =========================================================
    app/globals.css
@@ -1886,7 +1887,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-flow-btn {
   height: 54px;
   padding: 0 34px;
-  border-radius: 10px;
+  border-radius: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2465,7 +2466,7 @@ html[lang="ru"] .home-hero-btn:hover {
     width: 100%;
     height: 48px;
     padding: 0 14px;
-    border-radius: 8px;
+    border-radius: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -3345,7 +3346,7 @@ html[lang="ru"] .home-hero-btn:hover {
   min-height: 0;
 
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0;
 
   /*
     闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛顐ｆ磵閳ь剨绠撳畷濂稿閳ュ啿绨ラ梻浣烘嚀椤曨厽鎱ㄩ幘顔煎瀭婵犻潧鐗冮崑鎾诲礂婢跺﹣澹曢梻渚€鈧偛鑻晶鎾煙瀹曞洤浠遍柡灞芥椤撳ジ宕ㄩ锝呮暥闂傚倷绀侀崥瀣娴犲纾块柛妤冨亹閺嬫棃鏌熸潏楣冩闁绘挾鍠栭悡顐﹀炊閵婏妇顦ユ繛瀵稿閸ャ劎鍘遍柣搴秵閸嬪懎鐣峰畝鍕厵妞ゆ梻鍋撻弳顒併亜閵忥紕娲撮柟顔界懅閳ь剛鏁搁…鍫㈡暜?
@@ -3506,8 +3507,10 @@ html[lang="ru"] .home-hero-btn:hover {
 .home-company-video-play::before {
   content: "";
   position: absolute;
-  left: 29px;
-  top: 22px;
+  left: 50%;
+  top: 50%;
+  /* Align the triangle's visual center with the circular button. */
+  transform: translate(-33.333333%, -50%);
 
   width: 0;
   height: 0;
@@ -3690,7 +3693,7 @@ html[lang="ru"] .home-hero-btn:hover {
   padding: 0 34px;
 
   border: 1px solid rgba(23, 51, 104, 0.22);
-  border-radius: 8px;
+  border-radius: 0;
 
   background: rgba(255, 255, 255, 0.72);
   color: #173368;
@@ -3928,7 +3931,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-company-video-wrap {
-    border-radius: 22px;
+    border-radius: 0;
   }
 
   .home-company-intro-title {
@@ -3983,9 +3986,6 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-company-video-play::before {
-    left: 24px;
-    top: 18px;
-
     border-top-width: 10px;
     border-bottom-width: 10px;
     border-left-width: 17px;
@@ -4797,7 +4797,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .plain-btn:hover {
   border-color: var(--brand-blue);
   background: #f8fafd;
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .plain-btn:disabled {
@@ -4822,7 +4822,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .primary-btn:hover {
   color: var(--brand-cyan);
   background: #102b58;
-  transform: translateY(-1px);
+  transform: none;
 }
 
 /* =========================================================
@@ -4830,7 +4830,7 @@ html[lang="ru"] .home-hero-btn:hover {
    Component code: brand-navy-button-motion
 
    说明：
-   1. 只负责交互颜色和位移动效，不改变按钮默认尺寸与布局。
+   1. 只负责交互颜色反馈，悬停时保持按钮原位，不改变默认尺寸与布局。
    2. 深蓝使用 FOREACH 品牌色 #173368。
    3. 交互文字使用品牌荧光色 #09e9b4。
    4. 仅在支持鼠标悬停的 PC 设备上生效。
@@ -4848,7 +4848,7 @@ html[lang="ru"] .home-hero-btn:hover {
     color: var(--brand-cyan, #09e9b4) !important;
     background: var(--brand-blue, #173368) !important;
     border-color: var(--brand-blue, #173368) !important;
-    transform: translateY(-2px);
+    transform: none;
   }
 
   .brand-navy-button-motion:active:not(:disabled) {
@@ -5170,7 +5170,7 @@ html[lang="ru"] .home-hero-btn:hover {
   min-width: 132px;
   height: 48px;
   padding: 0 24px;
-  border-radius: 8px;
+  border-radius: 0;
   background: #ffffff;
   color: #061b3d;
   text-decoration: none;
@@ -5183,7 +5183,7 @@ html[lang="ru"] .home-hero-btn:hover {
 }
 
 .home-news-highlight-btn:hover {
-  transform: translateY(-2px);
+  transform: none;
   background: #09e9b4;
   color: #061b3d;
 }
@@ -5337,7 +5337,7 @@ html[lang="ru"] .home-hero-btn:hover {
   height: 44px;
   padding: 0 24px;
   border: 1px solid rgba(23, 51, 104, 0.18);
-  border-radius: 8px;
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.78);
   color: #173368;
   text-decoration: none;
@@ -7273,7 +7273,7 @@ html[lang="ru"] .home-hero-btn:hover {
 
   .home-company-video-wrap {
     margin-top: 32px !important;
-    border-radius: 8px !important;
+    border-radius: 0 !important;
   }
 
   .home-company-video-play {
@@ -7282,8 +7282,6 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-company-video-play::before {
-    left: 22px !important;
-    top: 17px !important;
     border-top-width: 9px !important;
     border-bottom-width: 9px !important;
     border-left-width: 16px !important;
@@ -9065,7 +9063,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .site-nav-mega-about .site-nav-mega-footer a:hover {
   background: #173368;
   color: #09e9b4;
-  transform: translateY(-1px);
+  transform: none;
 }
 
 /* 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛顐ｆ磵閳ь剨绠撳畷濂稿閳ュ啿绨ラ梻浣告贡婢ф顭垮鈧畷鎺楀Ω閳哄倻鍘搁悗骞垮劚妤犲憡绂嶉姘ｆ斀妞ゆ梹瀵ч悵顏堟煏閸パ冾伃妤犵偞甯￠獮瀣攽閹邦亝鍋呯紓鍌氬€烽懗鑸靛垔鐎靛摜绀婂〒姘ｅ亾鐎殿喖顭烽幃銏㈡偘閳ュ厖澹曞┑鐐村灦閻燁垶鎮炴禒瀣厽妞ゆ挾鍎愰崕鎴犵磼鏉堛劌娴い銏″哺瀹曞崬鈻庨幋鐐搭啅闂傚倷绀侀悿鍥涢崟顖€鍥偨閸濄儱绁﹀┑顔姐仜閸嬫挻顨ラ悙鍙夊闁瑰嘲鎳愮划娆撳垂椤曞懏顥忔繝鐢靛Х閺佸憡鎱ㄩ悽鍓叉晩闁哄稁鍘奸崹鍌炴煕濡ゅ啫鍓辨繛鎾愁煼閺岋箑螣娓氼垱鈻撻梺鎼炲€栧ú鐔煎蓟濞戞瑧绡€闁告洦鍋呴悘渚€姊哄Ч鍥р偓鎰板磻閹剧粯鈷戠痪顓炴噹椤ュ秹鏌熷ú璁崇敖鐎垫澘锕畷绋课旈埀顒傜不閻旂儤鍠愰柣妤€鐗嗙粭姘舵煃闁垮鐏撮柡宀€鍠栭幊鏍煛娴ｉ鎹曢梻浣告啞濮婄懓鐣濋幖浣歌摕闁绘柨鎼弸鍫ユ煕濡ゅ啫浠掗柛鐘诧躬濮婅櫣鎷犻垾铏彎缂備胶濮甸悧鐘荤嵁閸愩劉鏋庨柟鍨暞閺呫垺绻濋姀锝嗙【妞ゆ垵娲鎶筋敆娴ｈ櫣鐦堢紒鍓у钃辨い顐躬閺屾盯濡搁妶鍛ギ濡ょ姷鍋為悧鐘汇€侀弴銏℃櫆缂備焦蓱濞呮挸鈹戦悩鍨毄濠殿喗娼欑叅闁挎洖鍊归崑鍌炴煏婢舵稑顩紒鐘荤畺閺岀喓鈧數顭堥崜閬嶆煟閹哄秶鐭欓柡宀嬬秬缁犳稑鈽夊Δ浣告灓闂備礁鎼径鍥礈濠靛绠柛娑卞灣閻瑩鏌ら幇浣哥仩闁绘挻蓱娣囧﹪鎮欓鍕ㄥ亾閺嶎厼钃熼柕濞у嫬搴婂┑顔姐仜閸嬫挾鈧鍣崑濠傜暦閹烘鍊烽柤纰卞墻閸炲爼姊洪悷鏉挎倯闁伙綆浜畷褰掑及韫囧姹楅梺鍓茬厛閸犳帡寮ㄦ禒瀣厽闁归偊鍘界紞鎴︽煟韫囥儳鐣甸柡宀€鍠栧畷銊︾節閸愩劉鍋撻幇鐗堢厓闁靛鍨抽悾鐢告煙椤旂晫鐭嬮柟渚垮姂楠炲洭濡搁妷銈咁棜闂備胶顭堥張顒傜矙閹炬眹鈧懘鎮滈懞銉モ偓鐢告煥濠靛棛鍑圭紒銊ャ偢閺岋絾鎯旈鐓庮潽缂備胶绮惄顖氼嚕閸洖绠ｆ繝闈涙搐閳ь剦鍨伴埞鎴︽倷閹绘帗鍊梺鑽ゅ枂閸庣敻宕洪姀鐙€鍚嬪璺好¤椤法鎹勬笟顖氬壋闂佸憡顭囬崑鎾舵崲濠靛顥堟繛鎴炃氶崑鎾诲箹娴ｂ偓閸ヮ剦鏁婇柟瑙勫姇灏忓┑鐐差嚟婵挳顢栭崱娑欏亗闁哄洢鍨洪悡娑㈡煕鐏炲墽鐭婂ù鐘崇矋缁绘稓浠﹂崒姘ｅ亾濡ゅ啫鍨濈紓浣诡焽缁♀偓濠殿喗锕╅崢楣冨储閻㈠憡鐓熼幖娣灮閳洘銇勯鐐村窛缂侇喛顕ц灒闁兼祴鏅滈敍?*/
@@ -13901,7 +13899,7 @@ html[lang="ru"] .home-hero-btn:hover {
 .rm-process-step:hover,
 .rm-process-step.is-active {
   background: rgba(23, 51, 104, 0.58);
-  transform: translateY(-4px);
+  transform: none;
 }
 
 .rm-process-step span {
@@ -14454,7 +14452,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: var(--rm-blue);
   background: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.86);
-  border-radius: 8px;
+  border-radius: 0;
 
   font-size: 15px;
   font-weight: 500;
@@ -14473,7 +14471,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: var(--rm-blue);
   background: var(--rm-cyan);
   border-color: var(--rm-cyan);
-  transform: translateY(-2px);
+  transform: none;
 
 }
 
@@ -14800,7 +14798,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #061a3a;
   background: #09e9b4;
   border-color: #09e9b4;
-  transform: translateY(-1px);
+  transform: none;
 }
 
 /* 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛顐ｆ礀缁犵娀鏌熼幑鎰靛殭閻熸瑱绠撻幃妤呮晲鎼粹€愁潻闂佹悶鍔嶇换鍫ョ嵁閺嶎灔搴敆閳ь剚淇婇懖鈺冩／闁诡垎浣镐划闂佸搫鏈ú妯兼崲濞戙垹鍨傛い鏃傚帶椤ユ瑩姊绘担铏瑰笡婵﹤顭峰畷銏ｎ樄闁诡喗锚閻ｇ兘宕堕敐鍛闁荤喐鐟ョ€氼厾绮堥埀顒€鈹戦悙鑼勾闁告梹鍨挎俊瀛樼瑹閳ь剙鐣烽妸褉鍋撳☉娆樼劷闁告ü绮欏铏圭磼濡搫顫屽銈嗘处閸欏啴宕洪敐澶娢у璺侯儑閸橀亶姊洪崫鍕偓浠嬪磿閼姐倐鍋撳顐㈠祮闁?*/
@@ -14894,7 +14892,7 @@ html[lang="ru"] .home-hero-btn:hover {
   color: #061a3a;
   background: #09e9b4;
   border-color: #09e9b4;
-  transform: translateY(-1px);
+  transform: none;
 }
 
 /* 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛顐ｆ礀缁犵娀鏌熼幑鎰靛殭閻熸瑱绠撻幃妤呮晲鎼粹€愁潻闂佹悶鍔嶇换鍫ョ嵁閺嶎灔搴敆閳ь剚淇婇懖鈺冩／闁诡垎浣镐划闂佸搫鏈ú妯兼崲濞戙垺鍊锋い鎺嶈兌瑜板懘姊绘担铏瑰笡闁告梹娲熼弫鍐敂閸繆鎽曢梺鎸庣箓椤︻垳绮诲☉銏♀拻闁割偆鍠撻埥澶嬨亜椤愵偄浜版慨濠冩そ楠炴牠鎮欓幓鎺濈€烽梻浣告啞椤棝宕堕敐鍌氫壕闁挎梻鍋撳畷澶愭煏婵犲繒鐣辩痪缁㈠灦濮婃椽骞嗚缁犳澘顭胯缂嶄焦淇婇懜闈涚窞閻庯綆鍓欓獮鎰攽閻愯埖褰х紓宥勭椤洩顦归柛鈹惧亾濡炪倖甯婇懗鍓佺不閹剧粯鐓熼柨婵嗘搐閸樻潙鈹戦鐟颁壕闂備線娼ч悧鍡椢涘Δ浣侯洸婵犲﹤瀚换鍡涙煏閸繄绠绘俊缁㈠枟閵囧嫰骞嬮悙鍨櫑濡炪値鍘煎ú顓炵暦婵傜鍗抽柣鏂垮级鐎氬ジ姊绘担鍛婂暈缂佸鍨块弫鍐Ω閿斿墽褰惧┑鈽嗗灥閸嬫劗澹曟總鍛婂€甸柨婵嗙凹缁ㄧ粯銇勮箛锝呬簼濞ｅ洤锕畷锝嗗緞婵犲偆娼撻梻浣哥枃椤宕硅ぐ鎺戠劦妞ゆ帒锕︾粔鐢告煕鐎ｎ亝顥㈢€规洘绻堝畷濂稿即閻斿弶瀚奸梻浣告啞閹逛胶浜稿▎鎾冲偍婵炴垯鍨洪悡鏇㈡煟濡櫣锛嶅褔浜堕弻鈩冪瑹閸パ勭彎閻庤娲橀敃銏犵暦閿濆纾兼繛鎴炵閸掓盯姊虹拠鈥虫殭闁搞儜鍥ф暪闂備線娼х换鍫ュ垂婵犳艾姹查柕鍫濇缁诲棝鏌ｉ幇鍏哥盎闁逞屽劯閸涱垯绗夐梺鍦劋椤ㄥ繘寮€ｎ剚鍠愰柡鍐ㄧ墑閳ь兛绀侀～婵嬫嚋閸偅鐝冲┑鐘灱濞夋盯鏁冮妶鍛殼闁糕剝绋掗埛鎴犵磽娴ｅ顏呮叏閸垺鍠愰柡澶婄仢閺嗘瑩寮?SVG */
@@ -15850,7 +15848,7 @@ html body nav[aria-label*="breadcrumb"] em {
 
   border: 1px solid
     rgba(23, 51, 104, 0.12) !important;
-  border-radius: 10px !important;
+  border-radius: 0 !important;
   background:
     rgba(255, 255, 255, 0.72) !important;
   color: #173368 !important;
@@ -15876,6 +15874,10 @@ html body nav[aria-label*="breadcrumb"] em {
     filter 0.22s ease;
 }
 
+.home-hero-fluid-resistance-slide .home-hero-btn {
+  font-weight: 500 !important;
+}
+
 @media
   (min-width: 769px) and
   (hover: hover) and
@@ -15886,7 +15888,7 @@ html body nav[aria-label*="breadcrumb"] em {
     border-color: #173368 !important;
     box-shadow: none;
     transform:
-      translateY(-2px);
+      none;
   }
 
   .home-hero-btn:active {
@@ -17779,7 +17781,7 @@ body.global-search-lock {
     max-height: 34px !important;
 
     padding: 0 !important;
-    border-radius: 6px !important;
+    border-radius: 0 !important;
 
     font-size: 12px !important;
     line-height: 1 !important;
@@ -17871,7 +17873,7 @@ body.global-search-lock {
   align-items: center;
   color: inherit;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .home-flow-inline-link:visited {
@@ -19254,7 +19256,7 @@ html body .home-honor-image img {
   .home-hero-scroll-shell
     .home-hero-carousel-dot:hover {
     transform:
-      translateY(-1px);
+      none;
   }
 
   .home-hero-scroll-shell

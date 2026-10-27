@@ -1,9 +1,13 @@
+import { fittingOverviewVideoRelations } from "@/data/resources/installation-guide/fitting-video-relations";
 import type { InstallationGuideCard, InstallationGuideLocale } from "./installation-guide.types";
 import { getInstallationGuideYouTubeGuides } from "./installation-guide.youtube.generated";
 
-// Matched by YouTube video ID against the 27 public channel videos on 2026-09-28.
+// Channel additions matched by YouTube video ID. Three fitting/filter videos verified on 2026-10-27.
 // Keep the existing local Chinese tutorials and the 18 translated YouTube guides intact.
 const videos = [
+  {"key":"f-ss-water-circulation-filter","videoId":"2K0r5MMFcHs","thumbnail":"/images/resources/installation-guide/youtube/f-ss-water-circulation-filter-cover.jpg","category":"fittings","series":"filters","relationKeys":["topic:f-ss-water-circulation"],"keywords":["F-SS","water circulation filter","water loop filtration"]},
+  {"key":"thread-to-barb-fittings","videoId":"i7Gr86k5xoI","thumbnail":"/images/resources/installation-guide/youtube/thread-to-barb-fittings-cover.jpg","category":"fittings","series":"thread-to-barbed-fittings","relationKeys":fittingOverviewVideoRelations["youtube-thread-to-barb-fittings"],"keywords":["thread-to-barb fittings","threaded hose barb","flexible tubing","tubing inner diameter"]},
+  {"key":"rigid-tubing-fittings","videoId":"20BZArgyibY","thumbnail":"/images/resources/installation-guide/youtube/rigid-tubing-fittings-cover.jpg","category":"fittings","series":"hard-tube-fittings","relationKeys":fittingOverviewVideoRelations["youtube-rigid-tubing-fittings"],"keywords":["rigid tubing fittings","hard tube fittings","tubing outer diameter","flanged fitting","flangeless fitting"]},
   { key: "syringe-installation", videoId: "llwyaeH9Ti4", category: "pumps", series: "syringe-pump", relationKeys: ["category:syringe-pumps"], keywords: ["syringe installation"] },
   { key: "q60-quick-fitting", videoId: "tmwsLxhxBPQ", category: "fittings", series: "quick-connect-fittings", relationKeys: ["series:q60"], keywords: ["Q60", "quick fitting"] },
   { key: "female-thread-conversion", videoId: "W1FQgD9sVK8", category: "fittings", series: "female-thread-adapters", relationKeys: [], keywords: ["female thread conversion"] },
@@ -27,6 +31,9 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   "zh-CN": {
     companyCategory: "公司介绍", watchOnYouTube: "在 YouTube 观看", videoLabel: "FOREACH 视频",
     videos: {
+      "f-ss-water-circulation-filter": ["F-SS 水循环过滤器：循环水路过滤","水循环过滤"],
+      "thread-to-barb-fittings": ["螺纹转倒刺接头：连接软管与螺纹接口","螺纹转倒刺接头"],
+      "rigid-tubing-fittings": ["硬管接头：液路系统连接","硬管接头"],
       "syringe-installation": ["注射泵的注射器安装教程", "注射器安装"],
       "q60-quick-fitting": ["Q60 系列快速接头介绍", "快速接头"],
       "female-thread-conversion": ["内螺纹转换连接方案", "螺纹转换"],
@@ -41,6 +48,9 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   en: {
     companyCategory: "About FOREACH", watchOnYouTube: "Watch on YouTube", videoLabel: "FOREACH video",
     videos: {
+      "f-ss-water-circulation-filter": ["F-SS Water Circulation Filter | Water Loop Filtration","Water filtration"],
+      "thread-to-barb-fittings": ["Thread-to-Barb Fittings | Connect Flexible Tubing to Threaded Ports","Thread-to-barb fittings"],
+      "rigid-tubing-fittings": ["Rigid Tubing Fittings | Fluid System Connections","Rigid tubing fittings"],
       "syringe-installation": ["Syringe Pump: Syringe Installation Guide", "Syringe installation"],
       "q60-quick-fitting": ["Q60 Series Quick Fittings", "Quick fittings"],
       "female-thread-conversion": ["Female Thread Conversion Solutions", "Thread adapters"],
@@ -55,6 +65,9 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   es: {
     companyCategory: "Acerca de FOREACH", watchOnYouTube: "Ver en YouTube", videoLabel: "Vídeo de FOREACH",
     videos: {
+      "f-ss-water-circulation-filter": ["Filtro de circulación de agua F-SS para circuitos de recirculación","Filtración de agua"],
+      "thread-to-barb-fittings": ["Racores roscados con espiga para conectar tubos flexibles","Racores roscados con espiga"],
+      "rigid-tubing-fittings": ["Racores para tubos rígidos en sistemas de fluidos","Racores para tubos rígidos"],
       "syringe-installation": ["Bomba de jeringa: guía de instalación de la jeringa", "Instalación de la jeringa"],
       "q60-quick-fitting": ["Conectores rápidos de la serie Q60", "Conectores rápidos"],
       "female-thread-conversion": ["Soluciones de adaptación de roscas hembra", "Adaptadores de rosca"],
@@ -69,6 +82,9 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   fr: {
     companyCategory: "À propos de FOREACH", watchOnYouTube: "Voir sur YouTube", videoLabel: "Vidéo FOREACH",
     videos: {
+      "f-ss-water-circulation-filter": ["Filtre de circulation d’eau F-SS pour circuits en boucle","Filtration de l’eau"],
+      "thread-to-barb-fittings": ["Raccords filetés à embout cannelé pour tubes souples","Raccords filetés cannelés"],
+      "rigid-tubing-fittings": ["Raccords pour tubes rigides dans les circuits de fluides","Raccords pour tubes rigides"],
       "syringe-installation": ["Pompe à seringue : guide d’installation de la seringue", "Installation de la seringue"],
       "q60-quick-fitting": ["Raccords rapides de la série Q60", "Raccords rapides"],
       "female-thread-conversion": ["Solutions d’adaptation de filetages femelles", "Adaptateurs filetés"],
@@ -83,6 +99,9 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   ko: {
     companyCategory: "FOREACH 소개", watchOnYouTube: "YouTube에서 보기", videoLabel: "FOREACH 동영상",
     videos: {
+      "f-ss-water-circulation-filter": ["F-SS 순환수 필터: 순환수 회로 여과","순환수 여과"],
+      "thread-to-barb-fittings": ["나사-호스 바브 피팅: 연질 튜브와 나사 포트 연결","나사-호스 바브 피팅"],
+      "rigid-tubing-fittings": ["경질 튜브 피팅: 유체 시스템 연결","경질 튜브 피팅"],
       "syringe-installation": ["시린지 펌프의 시린지 설치 가이드", "시린지 설치"],
       "q60-quick-fitting": ["Q60 시리즈 퀵 커넥터 소개", "퀵 커넥터"],
       "female-thread-conversion": ["암나사 변환 연결 솔루션", "나사 어댑터"],
@@ -97,6 +116,9 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   ru: {
     companyCategory: "О компании FOREACH", watchOnYouTube: "Смотреть на YouTube", videoLabel: "Видео FOREACH",
     videos: {
+      "f-ss-water-circulation-filter": ["Фильтр F-SS для рециркуляционных водяных контуров","Фильтрация воды"],
+      "thread-to-barb-fittings": ["Резьбовые штуцеры для соединения гибких трубок с резьбовыми портами","Резьбовые штуцеры"],
+      "rigid-tubing-fittings": ["Фитинги для жёстких трубок в жидкостных системах","Фитинги для жёстких трубок"],
       "syringe-installation": ["Шприцевой насос: руководство по установке шприца", "Установка шприца"],
       "q60-quick-fitting": ["Быстроразъёмные соединения серии Q60", "Быстроразъёмные соединения"],
       "female-thread-conversion": ["Переходники с внутренней резьбой", "Резьбовые переходники"],
@@ -124,7 +146,7 @@ export function getChannelVideoAdditions(locale: InstallationGuideLocale): Insta
       series: video.series,
       tags: [tag],
       description: `${copy.videoLabel}: ${title}`,
-      thumbnail: `https://i.ytimg.com/vi/${video.videoId}/hqdefault.jpg`,
+      thumbnail: "thumbnail" in video ? video.thumbnail : `https://i.ytimg.com/vi/${video.videoId}/hqdefault.jpg`,
       videoPlatform: "youtube",
       videoUrl: `https://www.youtube.com/embed/${video.videoId}?rel=0&playsinline=1&hl=${language}&cc_lang_pref=${language}`,
       keywords: [title, tag, ...video.keywords, video.videoId],

@@ -36,7 +36,8 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
   };
   const breadcrumbs = [
     { name: "Home", item: getCanonicalUrl("/en/") },
-    { name: "Video Guides", item: getCanonicalUrl("/en/resources/installation-guide/") },
+    { name: "Resources", item: getCanonicalUrl("/en/resources/") },
+    { name: "Usage Guide", item: getCanonicalUrl("/en/resources/installation-guide/") },
     { name: video.title, item: url },
   ];
 
@@ -49,9 +50,10 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
       ],
     }).replace(/</g, "\\u003c") }} />
     <div className="newsArticleBreadcrumbShell">
-      <SiteBreadcrumb items={[
+      <SiteBreadcrumb className={videoLayout.breadcrumb} items={[
         { label: "Home", href: "/en/" },
-        { label: "Video Guides", href: "/en/resources/installation-guide/" },
+        { label: "Resources", href: "/en/resources/" },
+        { label: "Usage Guide", href: "/en/resources/installation-guide/" },
         { label: video.breadcrumbLabel },
       ]} />
     </div>

@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
+
 import { Breadcrumb } from "@/components/common/breadcrumb";
 import { ProductBasicCard } from "@/components/common/product-card";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
@@ -160,15 +162,9 @@ export default function FittingReplacementHome({
 
   const paginatedProducts = visibleProducts.slice(pageStart, pageEnd);
 
-  function handleSubmitSearch() {
-    const keyword = searchValue.trim();
-    setSubmittedKeyword(keyword);
-    setCurrentPage(1);
-  }
-
-  function handleExampleSearch(model: string) {
-    setSearchValue(model);
-    setSubmittedKeyword(model);
+  function handleSearchChange(value: string) {
+    setSearchValue(value);
+    setSubmittedKeyword(value.trim());
     setCurrentPage(1);
   }
 
@@ -237,74 +233,18 @@ export default function FittingReplacementHome({
           />
         </div>
 
-        <section className="frp-search-panel">
-          <div className="frp-container frp-search-panel-inner">
-            <div className="frp-search-row">
-              <input
-                className="frp-search-input"
-                type="search"
-                aria-label={
-                  ["es", "fr", "ko", "ru"].includes(pageLocale)
-                    ? data.search.placeholder
-                    : undefined
-                }
-                value={searchValue}
-                placeholder={data.search.placeholder}
-                onChange={(event) => {
-                  const keyword = event.target.value;
-                  setSearchValue(keyword);
-                  setSubmittedKeyword(keyword.trim());
-                  setCurrentPage(1);
-                }}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter") {
-                    handleSubmitSearch();
-                  }
-                }}
-              />
-
-              <button
-                className="frp-search-button"
-                type="button"
-                onClick={handleSubmitSearch}
-              >
-                {data.search.buttonText}
-              </button>
-            </div>
-
-            <div className="frp-history-row">
-              <span className="frp-history-label">
-                {homeText?.history.label ?? "示例型号"}
-              </span>
-
-              {exampleModels
-                .filter(
-                  (model) =>
-                    model !== "P-982BLKx" &&
-                    model !== "P-1082BLKx"
-                )
-                .map((model) => {
-                return (
-                  <button
-                    className={`frp-history-button ${
-                      normalizeModel(submittedKeyword) ===
-                      normalizeModel(model)
-                        ? "active"
-                        : ""
-                    }`}
-                    type="button"
-                    key={model}
-                    onClick={() => {
-                      handleExampleSearch(model);
-                    }}
-                  >
-                    {model}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+        <ResourceSearchBar
+          value={searchValue}
+          onChange={handleSearchChange}
+          onSearch={handleSearchChange}
+          placeholder={data.search.placeholder}
+          searchButtonText={data.search.buttonText}
+          recentLabel={homeText?.history.label ?? "示例型号"}
+          recentKeywords={exampleModels.filter(
+            (model) => model !== "P-982BLKx" && model !== "P-1082BLKx",
+          )}
+          keywordNormalizer={normalizeModel}
+        />
 
         <section className="frp-card-section">
           <div className="frp-container">

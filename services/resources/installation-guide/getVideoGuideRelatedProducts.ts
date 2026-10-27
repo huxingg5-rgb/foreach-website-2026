@@ -10,6 +10,8 @@ import type { ArticleRelatedProduct } from "@/services/resources/technical-artic
 import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
 import { getVideoGuideProduct } from "@/data/resources/installation-guide/video-guide-products";
 import { getFemaleThreadAdapterImageAlt } from "@/data/products/detail/female-thread-adapter-gallery";
+import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
+import { getTubingAssemblyDetailPath } from "@/data/products/tubing-assemblies.en";
 
 function selectionCard(products: ProductSelectionProduct[], id: string, href: string | null): ArticleRelatedProduct {
   const product = products.find(item => item.productId === id);
@@ -70,6 +72,25 @@ function selectVideoGuideRelatedProducts(videoId: string, placement: "sidebar" |
     ].map(fittingCard);
   }
   switch (videoId) {
+    case "youtube-thread-to-barb-fittings":
+      return ["SA-U28-32D-PP-N", "SB-M5-32D-PP-N",
+        ...(placement === "footer" ? ["SBS-M6-32D-PP-N", "SBR-U28-32-PP-N"] : []),
+      ].map(fittingCard);
+    case "youtube-rigid-tubing-fittings": {
+      const assemblies = getTubingAssemblySelectionContent("en");
+      return ([
+        { id: "tubing-assembly-fep-flanged", family: "flanged-tubing" },
+        { id: "tubing-assembly-fep-ferrule", family: "ferrule-kits" },
+      ] as const).map(({ id, family }) => {
+        const product = assemblies.cards.find(item => item.productId === id);
+        if (!product?.detailHref || !product.imageCard) throw new Error(`Missing video related tubing assembly: ${id}`);
+        return {
+          id, title: assemblies.typeNames[family],
+          href: getTubingAssemblyDetailPath(family),
+          imageSrc: product.imageCard, imageAlt: product.imageAlt || product.cardTitle,
+        };
+      });
+    }
     case "sv10-solenoid-valve-overview":
       return getSolenoidRelatedProducts("en");
     case "youtube-syringe-installation":

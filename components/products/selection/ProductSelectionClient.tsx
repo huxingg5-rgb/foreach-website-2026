@@ -5549,8 +5549,6 @@ function isFilterOptionActive(
         }
         breadcrumbItems={breadcrumbItems}
       >
-        <main className="products-main">
-          <div className="products-container">
             <ResourceSearchBar
               value={searchInputValue}
               onChange={handleSearchInputChange}
@@ -5558,8 +5556,10 @@ function isFilterOptionActive(
               placeholder={pageText.searchPlaceholder}
               searchButtonText={pageText.searchButton}
               showRecentKeywords={false}
-              context="product-selection"
             />
+        <main className="products-main">
+          <div className="products-container">
+
 
             <ProductCategoryTabs
               categories={categoryItems}

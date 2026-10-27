@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 /* =========================================================
    SyntheticBiologyApplicationClient.tsx
    恒永达官网｜合成生物应用领域交互组件
@@ -16,6 +18,7 @@ import type {
 } from "@/data/applications/synthetic-biology/synthetic-biology-application.types";
 
 type SyntheticBiologyApplicationClientProps = {
+  relatedVideos?: ReactNode;
   data: SyntheticBiologyApplicationPageData;
 };
 
@@ -28,7 +31,7 @@ function getApplicationKeyFromUrl() {
 }
 
 export default function SyntheticBiologyApplicationClient({
-  data,
+  relatedVideos, data,
 }: SyntheticBiologyApplicationClientProps) {
   const firstApplication = data.applications[0];
 
@@ -292,6 +295,8 @@ export default function SyntheticBiologyApplicationClient({
           </div>
         </div>
       </section>
+
+      {relatedVideos}
 
       <section className="ivd-cta" id="contact">
         <div className="ivd-cta-inner">

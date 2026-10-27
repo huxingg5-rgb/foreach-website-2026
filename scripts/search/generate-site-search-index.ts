@@ -21,6 +21,7 @@ import {
 } from "../../data/products/generated/pumps/pump-series.selection.generated";
 import {
   diaphragmPumpReferenceModels,
+  getDiaphragmPumpPrimaryPhoto,
 } from "../../data/products/detail/diaphragm-pump-reference-models";
 import {
   getDiaphragmPumpPath,
@@ -199,7 +200,7 @@ function buildDiaphragmPumpReferenceSearchItems(): SiteSearchItem[] {
       subtitle: localized.cardSubtitle,
       description: localized.seoDescription,
       href,
-      image: cleanImagePath(selectionProduct?.imageCard || ""),
+      image: cleanImagePath(getDiaphragmPumpPrimaryPhoto(reference.copyKey)?.card || selectionProduct?.imageCard || ""),
       model: reference.model,
       productCode: "",
       actionLabel: "查看产品",

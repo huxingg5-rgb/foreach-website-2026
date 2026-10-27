@@ -1,3 +1,4 @@
+import ApplicationFittingVideos from "@/components/applications/ApplicationFittingVideos";
 /* =========================================================
    page.tsx
    恒永达官网｜生命科学应用领域中文页面入口
@@ -27,5 +28,5 @@ export const metadata: Metadata = {
 export default function LifeScienceApplicationPage() {
   const data = getLifeScienceApplicationPageData("zh-CN");
 
-  return <LifeScienceApplicationClient data={data} />;
+  return <LifeScienceApplicationClient data={data} relatedVideos={<ApplicationFittingVideos />} />;
 }

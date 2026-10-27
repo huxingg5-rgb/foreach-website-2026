@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 /* =========================================================
    AnalyticalInstrumentsApplicationClient.tsx
    恒永达官网｜分析仪器应用领域交互组件
@@ -16,6 +18,7 @@ import type {
 } from "@/data/applications/analytical-instruments/analytical-instruments-application.types";
 
 type AnalyticalInstrumentsApplicationClientProps = {
+  relatedVideos?: ReactNode;
   data: AnalyticalInstrumentsApplicationPageData;
 };
 
@@ -28,7 +31,7 @@ function getApplicationKeyFromUrl() {
 }
 
 export default function AnalyticalInstrumentsApplicationClient({
-  data,
+  relatedVideos, data,
 }: AnalyticalInstrumentsApplicationClientProps) {
   const firstApplication = data.applications[0];
 
@@ -292,6 +295,8 @@ export default function AnalyticalInstrumentsApplicationClient({
           </div>
         </div>
       </section>
+
+      {relatedVideos}
 
       <section className="ivd-cta" id="contact">
         <div className="ivd-cta-inner">

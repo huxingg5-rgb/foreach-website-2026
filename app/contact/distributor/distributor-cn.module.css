@@ -116,7 +116,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  border-radius: 0;
   font-size: 14px;
   font-weight: 850;
   text-decoration: none;
@@ -137,7 +137,7 @@
   color: #061a3a;
   background: #09e9b4;
   border-color: #09e9b4;
-  transform: translateY(-2px);
+  transform: none;
 }
 
 .secondaryButton {
@@ -150,7 +150,7 @@
   color: #061a3a;
   border-color: #09e9b4;
   background: rgba(9, 233, 180, 0.1);
-  transform: translateY(-2px);
+  transform: none;
 }
 
 /* =========================================================

@@ -70,15 +70,15 @@ export default function TubingAssembliesSelection({ initialType = "", content, a
       { label: ui.category, ...(activeType ? { href: getPath() } : {}) },
       ...(activeType ? [{ label: typeNames[activeType] }] : []),
     ]}>
+      <ResourceSearchBar
+        value={searchInput}
+        onChange={value => { setSearchInput(value); if (!value.trim()) setQuery(""); }}
+        onSearch={value => { setQuery(value.trim()); }}
+        placeholder={ui.searchPlaceholder}
+        searchButtonText={ui.search} showRecentKeywords={false}
+      />
       <main className="products-main">
         <div className="products-container">
-          <ResourceSearchBar
-            value={searchInput}
-            onChange={value => { setSearchInput(value); if (!value.trim()) setQuery(""); }}
-            onSearch={value => { setQuery(value.trim()); }}
-            placeholder={ui.searchPlaceholder}
-            searchButtonText={ui.search} showRecentKeywords={false} context="product-selection"
-          />
           <ProductCategoryTabs categories={categories} activeCategoryId={category.id}
             activeCategoryLabel={category.label} mobileCategoryOpen={mobileCategoryOpen}
             mobileCategoryPrefix={ui.currentCategory}

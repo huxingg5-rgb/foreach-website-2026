@@ -68,23 +68,6 @@
   background: #ffffff;
 }
 
-
-.newsSearchSection .frp-search-input::placeholder {
-  color: rgba(23, 51, 104, 0.42);
-}
-
-.newsSearchSection .frp-search-input:focus {
-  border-color: #173368;
-  background: #ffffff;
-}
-
-
-.newsSearchSection .frp-search-button:hover {
-  border-color: #173368;
-  background: #173368;
-  color: #09e9b4;
-}
-
 /* =========================================================
    新闻列表
 ========================================================= */
@@ -387,21 +370,6 @@
 
   .newsSearchSection {
     padding: 36px 0 0;
-  }
-
-  .newsSearchSection .frp-search-row {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .newsSearchSection .frp-search-input {
-    border-right: 1px solid rgba(23, 51, 104, 0.22);
-    border-radius: 8px;
-  }
-
-  .newsSearchSection .frp-search-button {
-    width: 100%;
-    border-radius: 8px;
   }
 
   .newsGrid {

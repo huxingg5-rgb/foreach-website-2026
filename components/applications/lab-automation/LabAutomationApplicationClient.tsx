@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 /* =========================================================
    LabAutomationApplicationClient.tsx
    恒永达官网｜实验室自动化应用领域交互组件
@@ -25,6 +27,7 @@ import type {
 } from "@/data/applications/lab-automation/lab-automation-application.types";
 
 type LabAutomationApplicationClientProps = {
+  relatedVideos?: ReactNode;
   data: LabAutomationApplicationPageData;
 };
 
@@ -36,7 +39,7 @@ function getApplicationKeyFromUrl() {
   return new URLSearchParams(window.location.search).get("application") ?? "";
 }
 
-export default function LabAutomationApplicationClient({ data }: LabAutomationApplicationClientProps) {
+export default function LabAutomationApplicationClient({ relatedVideos, data }: LabAutomationApplicationClientProps) {
   const firstApplication = data.applications[0];
 
   const [activeApplicationKey, setActiveApplicationKey] = useState(firstApplication?.key ?? "");
@@ -319,6 +322,8 @@ export default function LabAutomationApplicationClient({ data }: LabAutomationAp
       {/* =====================================================
           联系 CTA
       ===================================================== */}
+      {relatedVideos}
+
       <section className="ivd-cta" id="contact">
         <div className="ivd-cta-inner">
           <div>

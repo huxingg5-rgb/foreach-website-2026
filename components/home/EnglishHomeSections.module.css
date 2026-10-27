@@ -21,9 +21,9 @@
 .productToolbar .filters { margin-bottom: 0; }
 .productToolbar .catalogNote { margin: 0 0 0 auto; white-space: nowrap; }
 .productGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
-.product { position: relative; display: flex; flex-direction: column; min-width: 0; border: 1px solid #e5ebf2; border-radius: 0; background: #fff; text-decoration: none; color: inherit; transition: border-color .22s ease, transform .22s ease; }
+.product { position: relative; display: flex; flex-direction: column; min-width: 0; border: 1px solid #e5ebf2; border-radius: 0; background: #fff; text-decoration: none; color: inherit; transition: border-color .22s ease; }
 .product::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px; z-index: 2; background: #09e9b4; opacity: 0; transform: scaleX(0); transform-origin: left center; pointer-events: none; }
-.product:is(:hover, :focus-visible) { border-color: #09e9b4; transform: translateY(-1px); }
+.product:is(:hover, :focus-visible) { border-color: #09e9b4; transform: none; }
 .product:is(:hover, :focus-visible)::before { opacity: 1; animation: barGrow .36s ease forwards; }
 @keyframes barGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 .visual { position: relative; aspect-ratio: 4 / 3; padding: 0; border-bottom: 1px solid #e5ebf2; overflow: hidden; }
@@ -39,9 +39,9 @@
 .catalogNote a { margin-left: auto; color: var(--brand-blue); text-decoration: none; font-weight: 600; }
 .catalogNote a:is(:hover, :focus-visible) { color: var(--brand-cyan); }
 .applicationLayout { padding-bottom: 0 !important; align-items: start; }
-.applicationVisual { min-width: 0; background: #fff; }
+.applicationVisual:global(.home-company-video-wrap) { min-width: 0; height: auto; min-height: 0; aspect-ratio: 942 / 620; align-self: start; background: #fff; }
 .applicationVisual::after { content: none; }
-.applicationVisual img { object-fit: cover; }
+.applicationVisual img { object-fit: cover; object-position: center top; transform: scaleX(-1); }
 .applicationTitle { min-width: 0; }
 .applicationTitle :global(.home-company-about-title) { white-space: nowrap; }
 .applicationTitle :global(.home-company-about-title) span { white-space: normal; text-transform: none; }
@@ -77,9 +77,10 @@
 .taskCard h3 { margin: 0 0 12px; color: var(--brand-blue); font-size: 20px; font-weight: 600; line-height: 1.4; }
 .taskCard p { margin: 0; color: rgba(23, 51, 104, .72); font-size: 15px; line-height: 1.8; }
 .applicationRow { display: grid; grid-template-columns: 22px 1fr 20px; align-items: center; gap: 16px; padding: 18px 0; border-top: 1px solid #d9e2ec; color: var(--brand-blue); font-size: 20px; text-decoration: none; transition: color .2s ease; }
-.applicationRow strong { display: block; font-size: 20px; font-weight: 600; line-height: 1.4; }
+.applicationRow strong { display: block; color: #000; font-size: 20px; font-weight: 600; line-height: 1.4; }
 .applicationRow small { display: block; margin-top: 4px; font-size: 15px; color: var(--brand-blue); line-height: 1.5; }
-.applicationRow:is(:hover, :focus-visible) { color: var(--brand-cyan); }
+.applicationRow:is(:hover, :focus-visible),
+.applicationRow:is(:hover, :focus-visible) strong { color: var(--brand-cyan); }
 .number { color: var(--brand-blue); font-size: 14px; }
 .applicationMore { cursor: pointer; }
 /* Fit the default four-industry view within the desktop viewport below the header.
@@ -96,7 +97,6 @@
     scroll-margin-top: var(--site-header-height);
   }
   .applicationLayout { position: relative; top: -50px; row-gap: clamp(20px, 3svh, 36px) !important; }
-  .applicationVisual { height: auto; min-height: 0; aspect-ratio: auto; align-self: stretch; }
   .section:global(#applications) .applicationDetails :global(.home-company-intro-copy) { margin-bottom: clamp(16px, 2.4svh, 28px) !important; }
   .applicationRow { padding-block: clamp(8px, 1.3svh, 16px); }
   .applicationDetails :global(.home-company-about-actions) { margin-top: clamp(16px, 2.4svh, 28px) !important; }

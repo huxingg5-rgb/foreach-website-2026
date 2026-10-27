@@ -15,7 +15,7 @@ import { getIvdReadingPlan } from '@/data/applications/ivd-locales/reading';
 import { getApplicationIndexData } from '@/data/applications/application-index-locales';
 import { getCanonicalUrl } from '@/lib/seo/site-url';
 import { refineEnglishApplicationCopy } from './english-localized';
-import { withQuickDisconnectArticle } from "./quick-disconnect-resources";
+import { withApplicationFittingResources } from "./fitting-video-resources";
 
 const dictionaryLoaders = {
   en: () => import('@/data/applications/ivd-locales/en.json'),
@@ -103,7 +103,7 @@ export function getLocalizedIvdResources(locale: IvdLocale, document: Applicatio
   const plan = getReviewFooterPlan('ivd', document);
   const allArticles = getTechnicalArticlesPageData(locale).articles;
   const slugs = [...new Set(getIvdReadingPlan(document).flatMap(item => item.slugs))];
-  return withQuickDisconnectArticle({
+  return withApplicationFittingResources({
     locale, videos: [],
     products: plan.products.map(key => {
       const card = reviewProductCards[key];

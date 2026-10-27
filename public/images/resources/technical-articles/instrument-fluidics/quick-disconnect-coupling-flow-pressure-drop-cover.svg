@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+<rect width="1200" height="750" fill="#f3f7fa"/><rect width="1200" height="12" fill="#007b83"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#173747">
+<text x="65" y="104" font-size="48" font-weight="700">快速接头流量与压降</text>
+<text x="65" y="157" font-size="25">先确定目标流量，再核对允许压降和完整连接配置</text>
+<rect x="55" y="205" width="1090" height="87" rx="6" fill="#d7e9ee"/>
+<text x="79" y="259" font-size="28">系列</text>
+<text x="344" y="259" font-size="28">接管内径范围</text>
+<text x="794" y="259" font-size="28">选型依据</text>
+<rect x="55" y="297" width="1090" height="87" rx="6" fill="#fff"/>
+<text x="79" y="351" font-size="28">Q20</text>
+<text x="344" y="351" font-size="28">1.6–6.4 mm</text>
+<text x="794" y="351" font-size="28">流量—压降曲线</text>
+<rect x="55" y="389" width="1090" height="87" rx="6" fill="#fff"/>
+<text x="79" y="443" font-size="28">Q40</text>
+<text x="344" y="443" font-size="28">6.4–9.5 mm</text>
+<text x="794" y="443" font-size="28">Kv / Cv 估算</text>
+<rect x="55" y="481" width="1090" height="87" rx="6" fill="#fff"/>
+<text x="79" y="535" font-size="28">Q60</text>
+<text x="344" y="535" font-size="28">9.5–19.0 mm</text>
+<text x="794" y="535" font-size="28">完整组合实测</text>
+<text x="65" y="650" font-size="22" fill="#4e6671">曲线读数与反算系数用于初筛；3/4″ 配置需另取测试数据。</text>
+<text x="65" y="700" font-size="20" fill="#4e6671">FOREACH 恒永达 · 快速接头选型</text></g></svg>

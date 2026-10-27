@@ -1,5 +1,7 @@
 "use client";
 
+import { isFittingOverviewVideo } from "@/data/resources/installation-guide/fitting-video-relations";
+
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -243,6 +245,7 @@ export default function RelatedResourcesClient({
                   isSelected={selectedVideo?.id === guide.id}
                   onSelect={handleVideoSelect}
                   variant="related"
+                  playInline={isFittingOverviewVideo(guide.id)}
                 />
               </div>
             ))}

@@ -1,4 +1,6 @@
 import type { ProductSelectionProduct } from "@/data/products/selection/product-selection.types";
+import primaryPhotos from "./diaphragm-pump-primary-photos.json";
+import { getDiaphragmPumpIntroduction } from "./diaphragm-pump-introductions";
 import {
   DIAPHRAGM_PUMP_FINAL_ROUTE_PREFIX,
   DIAPHRAGM_PUMP_REFERENCE_ROUTES,
@@ -30,7 +32,15 @@ const MAIN_PHOTOS: Partial<Record<DiaphragmPumpReferenceCopyKey, string>> = {
 };
 
 export function getDiaphragmPumpMainPhoto(key: DiaphragmPumpReferenceCopyKey) {
-  return MAIN_PHOTOS[key];
+  return getDiaphragmPumpPrimaryPhoto(key)?.main || MAIN_PHOTOS[key];
+}
+
+export function getDiaphragmPumpPrimaryPhoto(key: DiaphragmPumpReferenceCopyKey) {
+  return key === "dpgl800-brushless" ? undefined : primaryPhotos[key];
+}
+
+export function getDiaphragmPumpCardPhoto(key: DiaphragmPumpReferenceCopyKey) {
+  return getDiaphragmPumpPrimaryPhoto(key)?.card || getDiaphragmPumpMainPhoto(key);
 }
 
 export type DiaphragmPumpReferenceLocalizedCopy = {
@@ -204,6 +214,68 @@ const REFERENCE_DEFINITIONS: readonly ReferenceDefinition[] = [
   { slug: "dpgl800-bs", model: "DPGL800-BS", copyKey: "dpgl800-brushless", selectionProductIds: ["diaphragm-dpgl800-ff"], kind: "gas-liquid", motor: "brushless", flow: 6000 },
 ];
 
+// Authored per locale: the model is shown separately from cards and detail H1s.
+// Wiring and speed-control options must not read as standard on every unit.
+const REFERENCE_CARD_HEADINGS: Record<
+  DiaphragmPumpReferenceLocale,
+  Record<DiaphragmPumpReferenceCopyKey, string>
+> = {
+  zh: {
+    "dpl30-brushed": "300 mL/min 有刷微型液体隔膜泵｜OEM 仪器配套",
+    "dpl30-brushless": "300 mL/min 两线无刷微型液体隔膜泵｜12 V / 24 V 可选",
+    "dpl60-brushed": "600 mL/min 有刷液体隔膜泵｜OEM 定制配置",
+    "dpl60-brushless": "600 mL/min 无刷液体隔膜泵｜可选五线 PWM 调速",
+    "dpl30h-brushed": "600 kPa 有刷高压液体隔膜泵｜OEM 设备配套",
+    "dpl30h-brushless": "12 V / 24 V 无刷高压液体隔膜泵｜可选调速配置",
+    "dpgl800-brushless": "24 V 无刷气液隔膜泵｜OEM 废液抽吸配套",
+  },
+  en: {
+    "dpl30-brushed": "300 mL/min Brushed Micro Liquid Diaphragm Pump for OEM Instruments",
+    "dpl30-brushless": "300 mL/min 2-Wire Brushless Miniature Liquid Diaphragm Pump | 12V/24V",
+    "dpl60-brushed": "600 mL/min Brushed Liquid Diaphragm Pump | Custom OEM Options",
+    "dpl60-brushless": "600 mL/min Brushless Liquid Diaphragm Pump | 5-Wire PWM Option",
+    "dpl30h-brushed": "600 kPa Brushed High-Pressure Liquid Diaphragm Pump for OEM Systems",
+    "dpl30h-brushless": "12V/24V Brushless High-Pressure Liquid Diaphragm Pump | PWM Option",
+    "dpgl800-brushless": "24V Brushless Gas-Liquid Diaphragm Pump for OEM Waste Aspiration",
+  },
+  es: {
+    "dpl30-brushed": "Microbomba de diafragma para líquidos, 300 mL/min | Motor con escobillas para equipos OEM",
+    "dpl30-brushless": "Microbomba de diafragma para líquidos, 300 mL/min | Motor sin escobillas de 2 hilos, 12 o 24 V",
+    "dpl60-brushed": "Bomba de diafragma para líquidos, 600 mL/min | Motor con escobillas y opciones OEM a medida",
+    "dpl60-brushless": "Bomba de diafragma para líquidos, 600 mL/min | Motor sin escobillas; opción PWM de 5 hilos",
+    "dpl30h-brushed": "Bomba de diafragma de alta presión para líquidos, 600 kPa | Motor con escobillas para OEM",
+    "dpl30h-brushless": "Bomba de diafragma de alta presión para líquidos, 12 o 24 V | Motor sin escobillas; velocidad regulable opcional",
+    "dpgl800-brushless": "Bomba de diafragma gas-líquido de 24 V | Motor sin escobillas para aspiración de residuos en equipos OEM",
+  },
+  fr: {
+    "dpl30-brushed": "Micropompe à membrane pour liquides, 300 mL/min | Moteur à balais pour instruments OEM",
+    "dpl30-brushless": "Pompe à membrane miniature pour liquides, 300 mL/min | Moteur sans balais à 2 fils, 12 V ou 24 V",
+    "dpl60-brushed": "Pompe à membrane pour liquides, 600 mL/min | Moteur à balais, options OEM sur mesure",
+    "dpl60-brushless": "Pompe à membrane pour liquides, 600 mL/min | Moteur sans balais, option PWM à 5 fils",
+    "dpl30h-brushed": "Pompe à membrane haute pression pour liquides, 600 kPa | Moteur à balais pour OEM",
+    "dpl30h-brushless": "Pompe à membrane haute pression pour liquides, 12 V ou 24 V | Moteur sans balais, variation de vitesse en option",
+    "dpgl800-brushless": "Pompe à membrane gaz-liquide 24 V sans balais | Aspiration des effluents pour équipements OEM",
+  },
+  ko: {
+    "dpl30-brushed": "300 mL/min 브러시형 소형 액체 다이어프램 펌프 | OEM 계측기용",
+    "dpl30-brushless": "300 mL/min 2선식 브러시리스 소형 액체 다이어프램 펌프 | 12 V / 24 V 선택",
+    "dpl60-brushed": "600 mL/min 브러시형 액체 다이어프램 펌프 | OEM 맞춤 구성",
+    "dpl60-brushless": "600 mL/min 브러시리스 액체 다이어프램 펌프 | 5선식 PWM 속도 제어 옵션",
+    "dpl30h-brushed": "600 kPa 브러시형 고압 액체 다이어프램 펌프 | OEM 장비용",
+    "dpl30h-brushless": "12 V / 24 V 브러시리스 고압 액체 다이어프램 펌프 | 속도 조절 옵션",
+    "dpgl800-brushless": "24 V 브러시리스 기액 혼합 다이어프램 펌프 | OEM 장비 폐액 흡인용",
+  },
+  ru: {
+    "dpl30-brushed": "Мембранный микронасос для жидкостей, 300 мл/мин | Щёточный привод для OEM-приборов",
+    "dpl30-brushless": "Миниатюрный мембранный насос для жидкостей, 300 мл/мин | Бесщёточный привод, 2 провода, 12 или 24 В",
+    "dpl60-brushed": "Мембранный насос для жидкостей, 600 мл/мин | Щёточный привод, OEM-исполнения на заказ",
+    "dpl60-brushless": "Мембранный насос для жидкостей, 600 мл/мин | Бесщёточный привод; 5 проводов и ШИМ — опция",
+    "dpl30h-brushed": "Мембранный насос высокого давления для жидкостей, 600 кПа | Щёточный привод для OEM",
+    "dpl30h-brushless": "Мембранный насос высокого давления для жидкостей, 12 или 24 В | Бесщёточный привод, регулировка скорости как опция",
+    "dpgl800-brushless": "Газожидкостный мембранный насос 24 В с бесщёточным приводом | Откачка отходов в OEM-системах",
+  },
+};
+
 const LIQUID_APPLICATIONS: Record<DiaphragmPumpReferenceLocale, string> = {
   zh: "清洗液输送、试剂转移、废液抽排、管路预充、液体循环",
   en: "Wash-fluid delivery, reagent transfer, waste-fluid evacuation, line priming, liquid circulation",
@@ -248,16 +320,11 @@ function getReferenceLocalizedCopy(
   const isHighPressure = definition.kind === "high-pressure";
   const flow = definition.flow;
   const model = definition.model;
-  const hours = getReferenceServiceLifeHours(definition);
+  const cardSubtitle = REFERENCE_CARD_HEADINGS[locale][definition.copyKey];
+  const h1 = cardSubtitle;
   const applications = isGasLiquid ? GAS_LIQUID_APPLICATIONS[locale] : LIQUID_APPLICATIONS[locale];
 
   if (locale === "zh") {
-    const cardSubtitle = isGasLiquid
-      ? `24 V 直流无刷双头微型气液混合隔膜泵，单泵头空载气体流量 6 L/min，寿命 ${hours}`
-      : isHighPressure
-        ? `600 kPa ${motor.zh}高压微型隔膜泵，寿命 ${hours}，12 V / 24 V 可选`
-        : `${flow} mL/min ${motor.zh}微型隔膜泵，寿命 ${hours}，12 V / 24 V 可选`;
-    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model} 是 24 V 直流无刷双头微型气液混合隔膜泵，专为气体及气液混合物设计，不适用于输送 100% 液体。单泵头空载气体流量为 6 L/min，最大负压为 < -90 kPa，适用于真空抽吸和气液混合物抽排。`
       : isHighPressure
@@ -272,12 +339,6 @@ function getReferenceLocalizedCopy(
   }
 
   if (locale === "en") {
-    const cardSubtitle = isGasLiquid
-      ? `24 V Brushless DC Dual-Head Miniature Gas-Liquid Diaphragm Pump, 6 L/min No-Load Gas Flow per Head, ${hours} Service Life`
-      : isHighPressure
-        ? `600 kPa ${motor.en} High-Pressure Miniature Liquid Diaphragm Pump, ${hours} Service Life, 12 V / 24 V`
-        : `${flow} mL/min ${motor.en} Miniature Liquid Diaphragm Pump, ${hours} Service Life, 12 V / 24 V`;
-    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model} is a 24 V brushless DC dual-head miniature gas-liquid diaphragm pump. Designed for gas and gas-liquid mixtures. It is not suitable for pumping 100% liquid. Its single-head no-load gas flow is 6 L/min and maximum negative pressure is < -90 kPa.`
       : isHighPressure
@@ -292,12 +353,6 @@ function getReferenceLocalizedCopy(
   }
 
   if (locale === "es") {
-    const cardSubtitle = isGasLiquid
-      ? `Bomba de diafragma miniatura gas-líquido de doble cabezal con motor CC sin escobillas de 24 V, caudal de gas sin carga de 6 L/min por cabezal, vida útil de ${hours}`
-      : isHighPressure
-        ? `Bomba miniatura de diafragma de alta presión para líquidos, 600 kPa, con ${motor.es}, vida útil de ${hours}, 12 V / 24 V`
-        : `Bomba miniatura de diafragma para líquidos de ${flow} mL/min con ${motor.es}, vida útil de ${hours}, 12 V / 24 V`;
-    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model} es una bomba de diafragma en miniatura gas-líquido de doble cabezal, 24 V, con motor CC sin escobillas, diseñada para gases y mezclas gas-líquido. No es adecuada para bombear líquido al 100 %. El caudal de gas sin carga de un cabezal es de 6 L/min y el vacío máximo es < -90 kPa.`
       : isHighPressure
@@ -312,12 +367,6 @@ function getReferenceLocalizedCopy(
   }
 
   if (locale === "fr") {
-    const cardSubtitle = isGasLiquid
-      ? `Pompe à membrane miniature gaz-liquide à double tête avec moteur CC sans balais 24 V, débit de gaz à vide de 6 L/min par tête, durée de vie de ${hours}`
-      : isHighPressure
-        ? `Pompe à membrane miniature haute pression pour liquides, 600 kPa, avec ${motor.fr}, durée de vie de ${hours}, 12 V / 24 V`
-        : `Pompe à membrane miniature pour liquides de ${flow} mL/min avec ${motor.fr}, durée de vie de ${hours}, 12 V / 24 V`;
-    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model} est une pompe à membrane miniature gaz-liquide à double tête, 24 V, à moteur CC sans balais, conçue pour les gaz et les mélanges gaz-liquide. Elle ne convient pas au pompage de liquide à 100 %. Le débit de gaz sans charge d’une seule tête est de 6 L/min et le vide maximal est < -90 kPa.`
       : isHighPressure
@@ -332,12 +381,6 @@ function getReferenceLocalizedCopy(
   }
 
   if (locale === "ko") {
-    const cardSubtitle = isGasLiquid
-      ? `24 V 브러시리스 DC 듀얼 헤드 소형 기액 혼합 다이어프램 펌프, 헤드당 무부하 가스 유량 6 L/min, 수명 ${hours}`
-      : isHighPressure
-        ? `600 kPa ${motor.ko} 고압 소형 액체 다이어프램 펌프, 수명 ${hours}, 12 V / 24 V`
-        : `${flow} mL/min ${motor.ko} 소형 액체 다이어프램 펌프, 수명 ${hours}, 12 V / 24 V`;
-    const h1 = `Foreach ${model} ${cardSubtitle}`;
     const description = isGasLiquid
       ? `${model}는 24 V 브러시리스 DC 듀얼 헤드 소형 기액 혼합 다이어프램 펌프로 가스 및 기액 혼합물용으로 설계되었습니다. 100% 액체 펌핑에는 적합하지 않습니다. 단일 헤드 무부하 가스 유량은 6 L/min이고 최대 부압/진공은 < -90 kPa입니다.`
       : isHighPressure
@@ -351,12 +394,6 @@ function getReferenceLocalizedCopy(
     return { h1, cardSubtitle, description, applications, seoTitle, seoDescription: description };
   }
 
-  const cardSubtitle = isGasLiquid
-    ? `Двухголовочный миниатюрный газожидкостный мембранный насос 24 V с бесщёточным двигателем постоянного тока, расход газа без нагрузки одной головки 6 L/min, срок службы ${hours}`
-    : isHighPressure
-      ? `Миниатюрный жидкостный мембранный насос высокого давления 600 kPa с ${motor.ru}, срок службы ${hours}, 12 V / 24 V`
-      : `Миниатюрный жидкостный мембранный насос ${flow} mL/min с ${motor.ru}, срок службы ${hours}, 12 V / 24 V`;
-  const h1 = `Foreach ${model} ${cardSubtitle}`;
   const description = isGasLiquid
     ? `${model} — двухголовочный миниатюрный газожидкостный мембранный насос 24 V с бесщёточным двигателем, предназначенный для газа и газожидкостных смесей. Он не подходит для перекачивания 100 % жидкости. Расход газа без нагрузки одной головки составляет 6 L/min, максимальное разрежение — < -90 kPa.`
     : isHighPressure
@@ -406,14 +443,15 @@ function buildLocalizedCopy(definition: ReferenceDefinition) {
     (["zh", "en", "es", "fr", "ko", "ru"] as const).map((locale) => {
       const copy = getReferenceLocalizedCopy(definition, locale);
       const serviceLife = getReferenceServiceLifeCopy(definition)[locale];
+      const introduction = getDiaphragmPumpIntroduction(definition.copyKey, locale);
 
       return [
         locale,
         {
           ...copy,
-          description: `${copy.description} ${serviceLife.descriptionSentence}`,
+          description: introduction.join(" "),
           introConditionSentence: serviceLife.introConditionSentence,
-          seoDescription: `${copy.seoDescription} ${serviceLife.descriptionSentence}`,
+          seoDescription: introduction[0],
         },
       ];
     }),
@@ -495,7 +533,7 @@ export function applyDiaphragmPumpReferenceCard<T extends ProductSelectionProduc
   return {
     ...product,
     detailSlug: reference.slug,
-    imageCard: getDiaphragmPumpMainPhoto(reference.copyKey) || product.imageCard,
+    imageCard: getDiaphragmPumpCardPhoto(reference.copyKey) || product.imageCard,
     cardTitle: { ...(typeof product.cardTitle === "object" ? product.cardTitle : {}), [targetLocale]: reference.model },
     cardSubtitle: { ...(typeof product.cardSubtitle === "object" ? product.cardSubtitle : {}), [targetLocale]: localized.cardSubtitle },
   } as T;
@@ -516,6 +554,7 @@ export function applyDiaphragmPumpReferenceSearchItem<T extends object>(item: T,
   return {
     ...item,
     title: reference.model,
+    image: getDiaphragmPumpPrimaryPhoto(reference.copyKey)?.card || record.image,
     subtitle: localized.cardSubtitle,
     description: localized.seoDescription,
     href: getDiaphragmPumpPath(targetLocale, reference.slug, { trailingSlash: false }),

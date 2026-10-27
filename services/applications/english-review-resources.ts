@@ -4,12 +4,12 @@ import type { EnglishApplicationKind } from '@/data/applications/application-eng
 import type { RelatedResourcesData } from '@/components/common/related-resources/related-resources.types';
 import { getTechnicalArticlesPageData } from '@/services/resources/technical-articles/getTechnicalArticlesPageData';
 import { translateApplicationEnglish } from './english-localized';
-import { withQuickDisconnectArticle } from "./quick-disconnect-resources";
+import { withApplicationFittingResources } from "./fitting-video-resources";
 
 export function getEnglishReviewResources(kind: EnglishApplicationKind, document: ApplicationDocument): RelatedResourcesData {
   const plan = getReviewFooterPlan(kind, document);
   const english = getTechnicalArticlesPageData('en').articles;
-  return withQuickDisconnectArticle({
+  return withApplicationFittingResources({
     locale: 'en', uiLocale: 'en', videos: [],
     products: plan.products.map(key => {
       const card = reviewProductCards[key];

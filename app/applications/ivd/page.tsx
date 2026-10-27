@@ -1,3 +1,4 @@
+import ApplicationFittingVideos from "@/components/applications/ApplicationFittingVideos";
 import ApplicationPageSkeleton from "@/components/common/ApplicationPageSkeleton";
 import { Suspense } from "react";
 /* =========================================================
@@ -32,7 +33,7 @@ export default function IvdApplicationPage() {
 
   return (
     <Suspense fallback={<ApplicationPageSkeleton />}>
-      <IvdApplicationClient data={pageData} />
+      <IvdApplicationClient data={pageData} relatedVideos={<ApplicationFittingVideos />} />
     </Suspense>
   );
 }

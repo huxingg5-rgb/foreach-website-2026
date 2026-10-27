@@ -1,0 +1,802 @@
+{
+  "EA-100-PMMA": {
+    "zh": [
+      "EA-100-PMMA 是标称容量为 100 μL 的精密分液泵，适用于分析仪器的微量试剂添加、小体积样本处理及反应液补加。采用 PMMA 泵头与陶瓷柱塞，由步进电机驱动柱塞往复运动，完成液体吸取与定量分配。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套光耦反馈、阀组件与控制器，支持微量加液单元与仪器控制系统集成。",
+      "支持 OEM 定制，泵头材料可选 PMMA、PCTG、PEEK 等，柱塞材料可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。电机、接口及配套液路组件可根据试剂成分、安装空间和加液流程匹配。"
+    ],
+    "en": [
+      "EA-100-PMMA is a precision dispense pump with a nominal capacity of 100 μL for microliter reagent addition, small-volume sample handling and reaction-liquid addition in analytical instruments. An acrylic (PMMA) head and ceramic piston work with a reciprocating stepper drive to aspirate and dispense measured volumes.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Optical feedback, valve assemblies and a controller can be supplied to integrate the microliter dispensing unit with instrument controls.",
+      "OEM customization includes PMMA, PCTG and PEEK head options, with zirconia ceramic, alumina ceramic, PEEK or sapphire pistons. Motor, port and fluidic component choices can be matched to reagent chemistry, available space and the dispensing sequence."
+    ],
+    "es": [
+      "EA-100-PMMA es una bomba de dispensación de precisión con capacidad nominal de 100 μL para añadir microvolúmenes de reactivos, manipular pequeñas muestras y reponer líquido de reacción en instrumentos analíticos. Combina un cabezal de PMMA y un pistón cerámico con accionamiento alternativo por motor paso a paso para aspirar y dispensar volúmenes definidos.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Se pueden incorporar realimentación óptica, conjuntos de válvulas y un controlador para integrar la unidad de microdosificación con el control del instrumento.",
+      "La personalización OEM incluye cabezales de PMMA, PCTG o PEEK y pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. El motor, las conexiones y los componentes del circuito se seleccionan según la composición del reactivo, el espacio disponible y la secuencia de dosificación."
+    ],
+    "fr": [
+      "EA-100-PMMA est une pompe de distribution de précision d’une capacité nominale de 100 μL, destinée à l’ajout de microvolumes de réactifs, au traitement de petits échantillons et à l’appoint de liquide réactionnel dans les instruments d’analyse. Sa tête en PMMA et son piston en céramique sont associés à un entraînement alternatif par moteur pas-à-pas pour aspirer et distribuer des volumes définis.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Un retour d’information optique, des ensembles de vannes et un contrôleur peuvent être associés pour intégrer l’unité de microdosage à la commande de l’instrument.",
+      "Les possibilités de personnalisation OEM comprennent des têtes en PMMA, PCTG ou PEEK et des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Le moteur, les raccordements et les composants fluidiques sont choisis selon la composition du réactif, l’espace disponible et la séquence de dosage."
+    ],
+    "ko": [
+      "EA-100-PMMA는 공칭 용량 100 μL의 정밀 분주 펌프로, 분석 장비의 미량 시약 첨가, 소량 시료 처리 및 반응액 보충에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터가 플런저를 왕복 구동하여 액체를 흡입하고 정량 분주합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 광학 피드백, 밸브 어셈블리 및 컨트롤러를 함께 구성하여 미량 액체 공급 유닛을 장비 제어 시스템에 통합할 수 있습니다.",
+      "OEM 맞춤 제작을 지원하며, 펌프 헤드 재질로 PMMA, PCTG, PEEK 등을 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 시약 성분, 설치 공간 및 액체 첨가 순서에 맞춰 모터, 연결 포트와 유로 부품을 구성할 수 있습니다."
+    ],
+    "ru": [
+      "EA-100-PMMA — прецизионный дозирующий насос номинальным объёмом 100 мкл для добавления микродоз реагентов, обработки малых проб и пополнения реакционной смеси в аналитических приборах. Головка из PMMA и керамический плунжер образуют дозирующий узел: шаговый двигатель перемещает плунжер возвратно-поступательно для забора и дозированной подачи жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Возможна комплектация оптической обратной связью, клапанными узлами и контроллером для интеграции узла микродозирования с системой управления прибора.",
+      "Предусмотрено изготовление в OEM-конфигурации: для головки доступны PMMA, PCTG, PEEK и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Двигатель, присоединения и жидкостные компоненты подбираются с учётом состава реагента, монтажного пространства и последовательности дозирования."
+    ]
+  },
+  "EA-100-PEEK": {
+    "zh": [
+      "EA-100-PEEK 是标称容量为 100 μL 的精密加样泵，适用于小体积液体处理、微量试剂分配及反应体系加液。采用 PEEK 泵头和步进电机驱动的柱塞往复结构，通过柱塞行程控制液体吸取与排出。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套阀组件、光耦反馈与控制器，便于组织试剂切换和分步加液流程。",
+      "可按介质特性匹配接液材料，泵头除 PEEK 外，可选 PMMA、PCTG 等方案；柱塞可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。接口、电机及控制配置可结合仪器布局和液体处理要求定制。"
+    ],
+    "en": [
+      "EA-100-PEEK is a 100 μL nominal-capacity precision dispensing pump for small-volume liquid handling, microliter reagent dispensing and dosing into reaction mixtures. Its PEEK head and stepper-driven reciprocating piston provide stroke-controlled aspiration and dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Valve assemblies, optical feedback and a controller can be configured for reagent switching and staged dispensing.",
+      "Wetted materials can be matched to the fluid. PMMA and PCTG heads are alternatives to PEEK, with zirconia ceramic, alumina ceramic, PEEK or sapphire piston options. Ports, motor and controls can be tailored to the instrument layout and liquid-handling requirements."
+    ],
+    "es": [
+      "EA-100-PEEK es una bomba de dispensación de precisión de 100 μL de capacidad nominal para pequeños volúmenes, reactivos y mezclas de reacción. Su cabezal de PEEK y su pistón alternativo, accionado por motor paso a paso, permiten controlar la aspiración y la dispensación mediante la carrera del pistón.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Las opciones de válvulas, realimentación óptica y controlador permiten organizar el cambio de reactivos y la dispensación por etapas.",
+      "Los materiales en contacto con el líquido se pueden adaptar al fluido. Además de PEEK, se ofrecen cabezales de PMMA o PCTG, con pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y el control se pueden personalizar según la distribución del instrumento y el manejo de líquidos requerido."
+    ],
+    "fr": [
+      "EA-100-PEEK est une pompe de distribution de précision d’une capacité nominale de 100 μL pour la manipulation de petits volumes, la distribution microlitrique de réactifs et l’ajout de liquide aux mélanges réactionnels. Sa tête en PEEK et son piston alternatif entraîné par moteur pas-à-pas permettent de contrôler l’aspiration et la distribution par la course du piston.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent être configurés pour le changement de réactif et la distribution par étapes.",
+      "Les matériaux en contact avec le liquide peuvent être adaptés au fluide. Des têtes en PMMA ou PCTG sont proposées en alternative au PEEK, avec des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et la commande peuvent être personnalisés selon l’implantation de l’instrument et les besoins de manipulation des liquides."
+    ],
+    "ko": [
+      "EA-100-PEEK는 공칭 용량 100 μL의 정밀 액체 분주 펌프로, 소량 액체 취급, 미량 시약 분주 및 반응계의 액체 첨가에 적합합니다. PEEK 펌프 헤드와 스테핑 모터로 구동하는 왕복 플런저 구조를 적용하여 플런저 스트로크로 흡입 및 토출량을 제어합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 시약 전환과 단계별 액체 첨가를 제어할 수 있습니다.",
+      "액체 특성에 맞춰 접액부 재질을 선택할 수 있으며, 펌프 헤드는 PEEK 외에 PMMA, PCTG 등으로 구성할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 장비 배치와 액체 취급 요구에 맞춰 연결 포트, 모터 및 제어 구성을 맞춤 제작할 수 있습니다."
+    ],
+    "ru": [
+      "EA-100-PEEK — прецизионный насос-дозатор номинальным объёмом 100 мкл для работы с малыми объёмами жидкости, дозирования микроколичеств реагентов и подачи жидкости в реакционную смесь. Насос оснащён головкой из PEEK и возвратно-поступательным плунжерным механизмом с шаговым приводом; ход плунжера задаёт забор и выдачу жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, оптическая обратная связь и контроллер позволяют организовать переключение реагентов и поэтапное добавление жидкости.",
+      "Материалы деталей, контактирующих с жидкостью, подбираются под рабочую среду. Помимо PEEK, для головки доступны PMMA, PCTG и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Присоединения, двигатель и управление можно адаптировать к компоновке прибора и задачам обработки жидкости."
+    ]
+  },
+  "EA-250-PMMA": {
+    "zh": [
+      "EA-250-PMMA 是标称容量为 250 μL 的精密取样泵，适用于自动化样品前处理中的样本吸取、样本稀释及定量转移。采用 PMMA 泵头与陶瓷柱塞，通过步进电机驱动柱塞往复运动，配合仪器程序完成吸排液。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套阀组件、光耦反馈与控制器，支持样本与稀释液的分步处理。",
+      "泵头材料可选 PMMA、PCTG、PVDF、PEEK 等，柱塞材料可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。接口、电机和液路组件可围绕样本特性、清洗方式及整机安装要求匹配。"
+    ],
+    "en": [
+      "EA-250-PMMA is a precision sampling pump with a nominal capacity of 250 μL for sample aspiration, dilution and metered transfer in automated sample preparation. The PMMA head and ceramic piston are coupled to a reciprocating stepper drive for instrument-controlled aspiration and dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Valve assemblies, optical feedback and a controller support staged handling of samples and diluents.",
+      "Head options include PMMA, PCTG, PVDF and PEEK; piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor and fluidic components can be selected around sample properties, cleaning procedures and instrument mounting requirements."
+    ],
+    "es": [
+      "EA-250-PMMA es una bomba de muestreo de precisión de 250 μL de capacidad nominal para aspiración, dilución y transferencia dosificada de muestras en sistemas automatizados de preparación. El cabezal de PMMA y el pistón cerámico trabajan con un accionamiento alternativo por motor paso a paso, coordinado con el programa del instrumento.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Los conjuntos de válvulas, la realimentación óptica y el controlador se pueden configurar para manejar muestras y diluyentes por etapas.",
+      "Las opciones de cabezal incluyen PMMA, PCTG, PVDF y PEEK; los pistones pueden ser de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y los componentes del circuito se seleccionan según la muestra, el procedimiento de limpieza y el montaje en el instrumento."
+    ],
+    "fr": [
+      "EA-250-PMMA est une pompe de prélèvement de précision d’une capacité nominale de 250 μL pour l’aspiration, la dilution et le transfert dosé d’échantillons en préparation automatisée. La tête en PMMA et le piston en céramique utilisent un entraînement alternatif par moteur pas-à-pas, coordonné avec le programme de l’instrument.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent être associés au traitement par étapes des échantillons et des diluants.",
+      "Les têtes peuvent être en PMMA, PCTG, PVDF ou PEEK ; les pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et les composants fluidiques sont choisis selon les propriétés de l’échantillon, la procédure de nettoyage et le montage dans l’instrument."
+    ],
+    "ko": [
+      "EA-250-PMMA는 공칭 용량 250 μL의 정밀 샘플링 펌프로, 자동화 시료 전처리 공정의 시료 흡입, 희석 및 정량 이송에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터의 왕복 구동으로 장비 프로그램에 따라 액체를 흡입하고 토출합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 시료와 희석액을 단계별로 처리할 수 있습니다.",
+      "펌프 헤드 재질은 PMMA, PCTG, PVDF, PEEK 등에서 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 시료 특성, 세척 방식 및 장비 설치 조건에 맞춰 연결 포트, 모터와 유로 부품을 구성할 수 있습니다."
+    ],
+    "ru": [
+      "EA-250-PMMA — прецизионный насос для отбора проб номинальным объёмом 250 мкл, предназначенный для забора, разбавления и дозированного переноса проб при автоматизированной пробоподготовке. В конструкции используются головка из PMMA и керамический плунжер. Шаговый двигатель обеспечивает возвратно-поступательное движение плунжера для забора и выдачи жидкости по программе прибора.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, оптическая обратная связь и контроллер позволяют организовать поэтапную работу с пробой и разбавителем.",
+      "Для головки доступны PMMA, PCTG, PVDF, PEEK и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Присоединения, двигатель и жидкостные компоненты подбираются с учётом свойств пробы, способа промывки и монтажа в приборе."
+    ]
+  },
+  "EA-250-PEEK": {
+    "zh": [
+      "EA-250-PEEK 是标称容量为 250 μL 的精密取样泵，适用于分析仪器的样本吸取、稀释及小体积液体转移。采用 PEEK 泵头与柱塞往复计量结构，由步进电机控制吸排液行程。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套液路阀组件、光耦反馈与控制器，满足取样、排液和液路切换的集成需求。",
+      "柱塞与密封配置可根据液体特性匹配，柱塞材料可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。泵头可选 PEEK、PMMA、PCTG、PVDF 等材料，并可按项目配置接口、电机及控制方式。"
+    ],
+    "en": [
+      "EA-250-PEEK is a precision sampling pump with a nominal capacity of 250 μL for aspiration, dilution and small-volume transfers in analytical instruments. It combines a PEEK head with a reciprocating piston metering mechanism; a stepper motor controls the aspirate and dispense strokes.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Fluidic valve assemblies, optical feedback and a controller can be configured for sampling, dispensing and fluid-path switching.",
+      "Pistons and seals can be matched to the fluid, with zirconia ceramic, alumina ceramic, PEEK or sapphire pistons available. Head options include PEEK, PMMA, PCTG and PVDF; ports, motor and controls can be configured for the project."
+    ],
+    "es": [
+      "EA-250-PEEK es una bomba de muestreo de precisión de 250 μL de capacidad nominal para aspirar y diluir muestras y transferir pequeños volúmenes en instrumentos analíticos. Combina un cabezal de PEEK con un mecanismo dosificador de pistón alternativo; el motor paso a paso controla las carreras de aspiración y dispensación.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Se pueden incorporar conjuntos de válvulas, realimentación óptica y un controlador para muestreo, dispensación y conmutación del circuito.",
+      "El pistón y las juntas se pueden adaptar a las propiedades del líquido, con pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Hay opciones de cabezal en PEEK, PMMA, PCTG y PVDF, además de conexiones, motor y control configurables para el proyecto."
+    ],
+    "fr": [
+      "EA-250-PEEK est une pompe de prélèvement de précision d’une capacité nominale de 250 μL pour aspirer et diluer des échantillons et transférer de petits volumes dans les instruments d’analyse. Elle associe une tête en PEEK à un mécanisme de dosage par piston alternatif, dont les courses d’aspiration et de distribution sont commandées par un moteur pas-à-pas.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes fluidiques, un retour d’information optique et un contrôleur peuvent être configurés pour le prélèvement, la distribution et la commutation des circuits.",
+      "Le piston et les joints peuvent être adaptés aux propriétés du liquide, avec des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les têtes sont disponibles en PEEK, PMMA, PCTG ou PVDF ; les raccordements, le moteur et la commande peuvent être configurés pour le projet."
+    ],
+    "ko": [
+      "EA-250-PEEK는 공칭 용량 250 μL의 정밀 샘플링 펌프로, 분석 장비의 시료 흡입, 희석 및 소량 액체 이송에 적합합니다. PEEK 펌프 헤드와 왕복 플런저 계량 구조를 사용하며, 스테핑 모터가 흡입 및 토출 스트로크를 제어합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 유로 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 샘플링, 토출 및 유로 전환을 통합할 수 있습니다.",
+      "액체 특성에 맞춰 플런저와 씰을 구성할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 펌프 헤드는 PEEK, PMMA, PCTG, PVDF 등에서 선택하고, 프로젝트에 맞춰 연결 포트, 모터와 제어 방식을 지정할 수 있습니다."
+    ],
+    "ru": [
+      "EA-250-PEEK — прецизионный насос для отбора проб номинальным объёмом 250 мкл для забора и разбавления проб, а также переноса малых объёмов жидкости в аналитических приборах. Дозирующий узел включает головку из PEEK и возвратно-поступательный плунжерный механизм; шаговый двигатель управляет ходом забора и выдачи жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Возможна комплектация жидкостными клапанными узлами, оптической обратной связью и контроллером для интеграции отбора проб, выдачи жидкости и переключения трактов.",
+      "Плунжер и уплотнения подбираются с учётом свойств жидкости. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Для головки доступны PEEK, PMMA, PCTG, PVDF и другие согласованные варианты; присоединения, двигатель и способ управления определяются проектом."
+    ]
+  },
+  "EA-500-PMMA": {
+    "zh": [
+      "EA-500-PMMA 是标称容量为 500 μL 的精密试剂加样泵，适用于生化与免疫分析仪的试剂添加、样本稀释及缓冲液分配。采用 PMMA 泵头与陶瓷柱塞，由步进电机驱动柱塞往复运动，完成液体吸取与定量分配。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套阀组件、光耦反馈与控制器，满足仪器吸排液、液路切换和驱动控制的集成需求。",
+      "支持 OEM 定制，泵头材料可选 PMMA、PCTG、PEEK 等，柱塞材料可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。接口、电机及配套液路组件可根据试剂成分、安装空间和整机控制要求匹配。"
+    ],
+    "en": [
+      "EA-500-PMMA is a precision reagent dispensing pump with a nominal capacity of 500 μL for reagent addition, sample dilution and buffer dispensing in clinical chemistry and immunoassay analyzers. Its PMMA head and ceramic piston use a reciprocating stepper drive to aspirate and dispense measured volumes.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Valve assemblies, optical feedback and a controller can be supplied for instrument aspiration, dispensing, fluid-path switching and drive-control integration.",
+      "OEM customization includes PMMA, PCTG and PEEK heads, with zirconia ceramic, alumina ceramic, PEEK or sapphire pistons. Ports, motor and matching fluidic components can be selected for reagent chemistry, mounting space and instrument control requirements."
+    ],
+    "es": [
+      "EA-500-PMMA es una bomba de dispensación de reactivos de precisión de 500 μL de capacidad nominal para añadir reactivos, diluir muestras y distribuir soluciones tampón en analizadores de química clínica e inmunoensayo. Su cabezal de PMMA y su pistón cerámico utilizan un accionamiento alternativo por motor paso a paso para aspirar y dispensar volúmenes definidos.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Se pueden incorporar conjuntos de válvulas, realimentación óptica y un controlador para integrar aspiración, dispensación, conmutación de fluidos y control del accionamiento.",
+      "La personalización OEM incluye cabezales de PMMA, PCTG o PEEK y pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y los componentes del circuito se pueden adaptar a la composición del reactivo, al espacio de montaje y al control del instrumento."
+    ],
+    "fr": [
+      "EA-500-PMMA est une pompe de dosage de réactifs de précision d’une capacité nominale de 500 μL pour l’ajout de réactifs, la dilution d’échantillons et la distribution de tampons dans les analyseurs de chimie clinique et d’immunoanalyse. Sa tête en PMMA et son piston en céramique utilisent un entraînement alternatif par moteur pas-à-pas pour aspirer et distribuer des volumes définis.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent être associés à l’aspiration, à la distribution, à la commutation fluidique et à la commande de l’entraînement.",
+      "La personnalisation OEM comprend des têtes en PMMA, PCTG ou PEEK et des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et les composants fluidiques peuvent être adaptés à la composition du réactif, à l’espace de montage et aux besoins de commande de l’instrument."
+    ],
+    "ko": [
+      "EA-500-PMMA는 공칭 용량 500 μL의 정밀 시약 분주 펌프로, 생화학 및 면역 분석 장비의 시약 첨가, 시료 희석 및 완충액 분주에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터가 플런저를 왕복 구동하여 액체를 흡입하고 정량 분주합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 장비의 흡입·토출, 유로 전환 및 구동 제어를 통합할 수 있습니다.",
+      "OEM 맞춤 제작을 지원하며, 펌프 헤드 재질로 PMMA, PCTG, PEEK 등을 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 시약 성분, 설치 공간 및 장비 제어 요구에 맞춰 연결 포트, 모터와 유로 부품을 구성할 수 있습니다."
+    ],
+    "ru": [
+      "EA-500-PMMA — прецизионный насос-дозатор реагентов номинальным объёмом 500 мкл для добавления реагентов, разбавления проб и дозирования буферных растворов в биохимических и иммунохимических анализаторах. Головка из PMMA и керамический плунжер работают с шаговым приводом, обеспечивающим возвратно-поступательное движение для забора и дозированной подачи жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Возможна комплектация клапанными узлами, оптической обратной связью и контроллером для интеграции забора и выдачи жидкости, переключения трактов и управления приводом.",
+      "Предусмотрено изготовление в OEM-конфигурации: для головки доступны PMMA, PCTG, PEEK и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Присоединения, двигатель и жидкостные компоненты подбираются с учётом состава реагента, монтажного пространства и требований к управлению прибором."
+    ]
+  },
+  "EA-500-PEEK": {
+    "zh": [
+      "EA-500-PEEK 是标称容量为 500 μL 的试剂分配泵，适用于分析仪器的试剂定量添加、缓冲液分配及反应液补加。采用 PEEK 泵头和步进驱动的柱塞往复结构，配合仪器程序完成定量吸排液。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套阀组件、光耦反馈与控制器，支持试剂分配单元与整机液路集成。",
+      "可根据试剂成分匹配泵头、柱塞和密封配置。泵头材料可选 PEEK、PMMA、PCTG、PVDF 等，柱塞可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石，并可配置接口、电机及配套控制组件。"
+    ],
+    "en": [
+      "EA-500-PEEK is a reagent dispensing pump with a nominal capacity of 500 μL for metered reagent addition, buffer dispensing and reaction-liquid replenishment in analytical instruments. A PEEK head and stepper-driven reciprocating piston support programmed aspiration and dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Valve assemblies, optical feedback and a controller support integration of the reagent dispensing unit into the instrument fluid path.",
+      "Head, piston and seal configurations can be matched to reagent chemistry. Head options include PEEK, PMMA, PCTG and PVDF, with zirconia ceramic, alumina ceramic, PEEK or sapphire pistons. Ports, motor and control components are also configurable."
+    ],
+    "es": [
+      "EA-500-PEEK es una bomba de dispensación de reactivos de 500 μL de capacidad nominal para la adición dosificada de reactivos, la distribución de soluciones tampón y la reposición de líquido de reacción en instrumentos analíticos. Un cabezal de PEEK y un pistón alternativo con motor paso a paso permiten programar la aspiración y la dispensación.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Las opciones de válvulas, realimentación óptica y controlador facilitan la integración de la unidad de reactivos en el circuito del instrumento.",
+      "El cabezal, el pistón y las juntas se seleccionan según la composición del reactivo. Las opciones de cabezal incluyen PEEK, PMMA, PCTG y PVDF, con pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. También se pueden configurar las conexiones, el motor y los componentes de control."
+    ],
+    "fr": [
+      "EA-500-PEEK est une pompe de distribution de réactifs d’une capacité nominale de 500 μL pour l’ajout dosé de réactifs, la distribution de tampons et l’appoint de liquide réactionnel dans les instruments d’analyse. La tête en PEEK et le piston alternatif entraîné par moteur pas-à-pas permettent de programmer l’aspiration et la distribution.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Les options de vannes, de retour d’information optique et de contrôleur facilitent l’intégration de l’unité de réactifs au circuit de l’instrument.",
+      "La tête, le piston et les joints peuvent être choisis selon la composition du réactif. Les têtes peuvent être en PEEK, PMMA, PCTG ou PVDF, avec des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et les composants de commande sont également configurables."
+    ],
+    "ko": [
+      "EA-500-PEEK는 공칭 용량 500 μL의 시약 분주 펌프로, 분석 장비의 시약 정량 첨가, 완충액 분주 및 반응액 보충에 적합합니다. PEEK 펌프 헤드와 스테핑 모터로 구동하는 왕복 플런저 구조를 적용하여 장비 프로그램에 따라 액체를 정량 흡입하고 토출합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 시약 분주 유닛을 장비 유로에 통합할 수 있습니다.",
+      "시약 성분에 맞춰 펌프 헤드, 플런저와 씰을 구성할 수 있습니다. 펌프 헤드 재질은 PEEK, PMMA, PCTG, PVDF 등에서 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 연결 포트, 모터와 제어 부품도 함께 구성할 수 있습니다."
+    ],
+    "ru": [
+      "EA-500-PEEK — насос-дозатор реагентов номинальным объёмом 500 мкл для дозированного добавления реагентов, подачи буферных растворов и пополнения реакционной смеси в аналитических приборах. Головка из PEEK и возвратно-поступательный плунжерный механизм с шаговым приводом обеспечивают дозированный забор и выдачу жидкости по программе прибора.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, оптическая обратная связь и контроллер позволяют встроить дозирование реагентов в жидкостный тракт прибора.",
+      "Головка, плунжер и уплотнения подбираются под состав реагента. Для головки доступны PEEK, PMMA, PCTG, PVDF и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Дополнительно можно подобрать присоединения, двигатель и компоненты управления."
+    ]
+  },
+  "EA-1000-PMMA": {
+    "zh": [
+      "EA-1000-PMMA 是标称容量为 1 mL 的液体分配泵，适用于实验室自动化设备的定量加液、稀释液添加及缓冲液配液。采用 PMMA 泵头与陶瓷柱塞，由步进电机驱动柱塞完成毫升级液体的吸取与分配。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套阀组件、光耦反馈与控制器，支持定量转移及多次吸排液流程。",
+      "泵头材料可选 PMMA、PCTG、PEEK、PVDF 等，柱塞材料可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。可根据配液流程、介质特性及安装空间，匹配接口、电机和液路控制配置。"
+    ],
+    "en": [
+      "EA-1000-PMMA is a liquid dispensing pump with a nominal capacity of 1 mL for metered liquid addition, diluent dosing and buffer preparation in laboratory automation. Its PMMA head and ceramic piston are driven by a stepper motor for milliliter-scale aspiration and dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Valve assemblies, optical feedback and a controller can be configured for metered transfer and repeated aspirate/dispense cycles.",
+      "Head options include PMMA, PCTG, PEEK and PVDF; piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor and fluidic controls can be matched to the preparation sequence, fluid properties and mounting space."
+    ],
+    "es": [
+      "EA-1000-PMMA es una bomba dispensadora de líquidos de 1 mL de capacidad nominal para adición dosificada, incorporación de diluyentes y preparación de tampones en automatización de laboratorio. El cabezal de PMMA y el pistón cerámico, accionado por motor paso a paso, permiten aspirar y dispensar volúmenes del orden del mililitro.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Los conjuntos de válvulas, la realimentación óptica y el controlador se pueden configurar para transferencias dosificadas y ciclos repetidos de aspiración y dispensación.",
+      "Las opciones de cabezal incluyen PMMA, PCTG, PEEK y PVDF, con pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y el control del circuito se pueden adaptar a la preparación de líquidos, las propiedades del fluido y el espacio de montaje."
+    ],
+    "fr": [
+      "EA-1000-PMMA est une pompe de distribution de liquides d’une capacité nominale de 1 mL pour l’ajout dosé, l’apport de diluants et la préparation de tampons en automatisation de laboratoire. La tête en PMMA et le piston en céramique, entraîné par moteur pas-à-pas, assurent l’aspiration et la distribution à l’échelle du millilitre.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent être configurés pour les transferts dosés et les cycles répétés d’aspiration et de distribution.",
+      "Les têtes peuvent être en PMMA, PCTG, PEEK ou PVDF et les pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et la commande fluidique sont adaptés à la séquence de préparation, aux propriétés du fluide et à l’espace de montage."
+    ],
+    "ko": [
+      "EA-1000-PMMA는 공칭 용량 1 mL의 액체 분주 펌프로, 실험실 자동화 장비의 정량 액체 첨가, 희석액 첨가 및 완충액 조제에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터로 플런저를 구동하여 밀리리터 단위의 액체를 흡입하고 분주합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 정량 이송과 반복 흡입·토출 공정을 구현할 수 있습니다.",
+      "펌프 헤드 재질은 PMMA, PCTG, PEEK, PVDF 등에서 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 액체 조제 공정, 액체 특성 및 설치 공간에 맞춰 연결 포트, 모터와 유로 제어 구성을 조정할 수 있습니다."
+    ],
+    "ru": [
+      "EA-1000-PMMA — дозирующий насос номинальным объёмом 1 мл для дозированной подачи жидкости, добавления разбавителя и приготовления буферных растворов в системах лабораторной автоматизации. В конструкции используются головка из PMMA и керамический плунжер с шаговым приводом для забора и выдачи миллилитровых объёмов.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, оптическая обратная связь и контроллер позволяют организовать дозированный перенос и последовательности многократного забора и выдачи жидкости.",
+      "Для головки доступны PMMA, PCTG, PEEK, PVDF и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Присоединения, двигатель и управление жидкостным трактом подбираются с учётом процесса приготовления растворов, свойств среды и монтажного пространства."
+    ]
+  },
+  "EA-1000-PEEK": {
+    "zh": [
+      "EA-1000-PEEK 是标称容量为 1 mL 的 OEM 试剂加样泵，适用于诊断分析仪的试剂输送、样品前处理加液及缓冲液分配。采用 PEEK 泵头和步进电机驱动的柱塞计量结构，完成程序控制下的液体吸取与排出。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可匹配电机、光耦反馈、阀组件与控制器，支持仪器液路及驱动控制集成。",
+      "支持按整机需求定制材料与控制配置。泵头可选 PEEK、PMMA、PCTG、PSU 等材料，柱塞可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石；接口及配套组件可结合试剂成分和设备布局匹配。"
+    ],
+    "en": [
+      "EA-1000-PEEK is an OEM reagent dispensing pump with a nominal capacity of 1 mL for reagent transfer in diagnostic analyzers, liquid addition in sample preparation and buffer dispensing. Its PEEK head and stepper-driven piston metering mechanism support programmed aspiration and dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Motor, optical feedback, valve and controller options support instrument fluidics and drive-control integration.",
+      "Materials and controls can be tailored to the instrument. Head options include PEEK, PMMA, PCTG and PSU, with zirconia ceramic, alumina ceramic, PEEK or sapphire pistons. Ports and supporting components can be matched to reagent chemistry and equipment layout."
+    ],
+    "es": [
+      "EA-1000-PEEK es una bomba OEM de dispensación de reactivos de 1 mL de capacidad nominal para transferir reactivos en analizadores de diagnóstico, añadir líquidos durante la preparación de muestras y distribuir tampones. El cabezal de PEEK y el mecanismo dosificador de pistón con motor paso a paso realizan la aspiración y la dispensación programadas.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Las opciones de motor, realimentación óptica, válvulas y controlador permiten integrar el circuito y el control del accionamiento.",
+      "Los materiales y el control se pueden personalizar para el instrumento. Hay cabezales de PEEK, PMMA, PCTG o PSU y pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones y los componentes auxiliares se seleccionan según el reactivo y la distribución del equipo."
+    ],
+    "fr": [
+      "EA-1000-PEEK est une pompe OEM de dosage de réactifs d’une capacité nominale de 1 mL pour le transfert de réactifs dans les analyseurs de diagnostic, l’ajout de liquides en préparation d’échantillons et la distribution de tampons. La tête en PEEK et le mécanisme de dosage à piston entraîné par moteur pas-à-pas permettent l’aspiration et la distribution programmées.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Les options de moteur, de retour d’information optique, de vannes et de contrôleur permettent d’intégrer le circuit et la commande de l’entraînement.",
+      "Les matériaux et la commande peuvent être personnalisés pour l’instrument. Les têtes sont proposées en PEEK, PMMA, PCTG ou PSU, avec des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements et composants associés sont choisis selon le réactif et l’implantation de l’équipement."
+    ],
+    "ko": [
+      "EA-1000-PEEK는 공칭 용량 1 mL의 OEM 시약 분주 펌프로, 진단 분석 장비의 시약 이송, 시료 전처리 시 액체 첨가 및 완충액 분주에 적합합니다. PEEK 펌프 헤드와 스테핑 모터 구동 플런저 계량 구조를 사용하여 프로그램에 따라 액체를 흡입하고 토출합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 모터, 광학 피드백, 밸브 어셈블리 및 컨트롤러를 장비에 맞게 구성하여 유로와 구동 제어를 통합할 수 있습니다.",
+      "장비 요구에 맞춘 재질 및 제어 구성의 맞춤 제작을 지원합니다. 펌프 헤드는 PEEK, PMMA, PCTG, PSU 등에서 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 시약 성분과 장비 배치에 맞춰 연결 포트 및 부품을 구성할 수 있습니다."
+    ],
+    "ru": [
+      "EA-1000-PEEK — OEM-насос-дозатор реагентов номинальным объёмом 1 мл для подачи реагентов в диагностических анализаторах, добавления жидкости при пробоподготовке и дозирования буферных растворов. Головка из PEEK и плунжерный дозирующий механизм с шаговым приводом обеспечивают программируемый забор и выдачу жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Двигатель, оптическую обратную связь, клапанные узлы и контроллер можно согласовать с жидкостным трактом и системой управления приводами прибора.",
+      "Материалы и управление можно адаптировать к требованиям прибора. Для головки доступны PEEK, PMMA, PCTG, PSU и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Присоединения и комплектующие подбираются под состав реагента и компоновку оборудования."
+    ]
+  },
+  "EA-2500-PMMA": {
+    "zh": [
+      "EA-2500-PMMA 是标称容量为 2.5 mL 的精密计量泵，适用于样品前处理中的稀释液添加、实验室缓冲液配制及定量供液。采用 PMMA 泵头与陶瓷柱塞，通过步进驱动的柱塞往复运动控制液体转移。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程提供 2000 步或 2236 步配置，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套阀组件、光耦反馈与控制器，组织配液和定量添加流程。",
+      "支持 OEM 定制，泵头材料可选 PMMA、PCTG、PEEK、PSU 等，柱塞材料可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。接口、电机及控制配置可根据单次液量、配液节拍和整机空间匹配。"
+    ],
+    "en": [
+      "EA-2500-PMMA is a precision metering pump with a nominal capacity of 2.5 mL for diluent addition in sample preparation, laboratory buffer preparation and metered liquid delivery. A PMMA head and ceramic piston use a reciprocating stepper drive to control liquid transfer.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 or 2236 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Valve assemblies, optical feedback and a controller can be configured for liquid preparation and metered addition.",
+      "OEM customization includes PMMA, PCTG, PEEK and PSU heads, with zirconia ceramic, alumina ceramic, PEEK or sapphire pistons. Ports, motor and controls can be selected around the dose volume, liquid-preparation cycle time and available instrument space."
+    ],
+    "es": [
+      "EA-2500-PMMA es una bomba dosificadora de precisión de 2,5 mL de capacidad nominal para añadir diluyentes en la preparación de muestras, preparar tampones de laboratorio y suministrar volúmenes definidos. El cabezal de PMMA y el pistón cerámico utilizan un accionamiento alternativo por motor paso a paso para controlar la transferencia.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 o 2236 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Se pueden incorporar válvulas, realimentación óptica y un controlador para organizar la preparación de líquidos y la adición dosificada.",
+      "La personalización OEM incluye cabezales de PMMA, PCTG, PEEK o PSU y pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y el control se seleccionan según el volumen por dosis, el tiempo de ciclo de preparación y el espacio disponible."
+    ],
+    "fr": [
+      "EA-2500-PMMA est une pompe doseuse de précision d’une capacité nominale de 2,5 mL pour l’ajout de diluants en préparation d’échantillons, la préparation de tampons au laboratoire et l’alimentation en volumes définis. La tête en PMMA et le piston en céramique utilisent un entraînement alternatif par moteur pas-à-pas pour contrôler le transfert.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 ou 2236 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent être associés à la préparation de liquides et à l’ajout dosé.",
+      "La personnalisation OEM comprend des têtes en PMMA, PCTG, PEEK ou PSU et des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et la commande sont adaptés au volume par dose, au temps de cycle de préparation et à l’espace disponible."
+    ],
+    "ko": [
+      "EA-2500-PMMA는 공칭 용량 2.5 mL의 정밀 정량 펌프로, 시료 전처리의 희석액 첨가, 실험실 완충액 조제 및 정량 액체 공급에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터로 구동하는 플런저의 왕복 운동으로 이송량을 제어합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 또는 2236 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 액체 조제와 정량 첨가 공정을 제어할 수 있습니다.",
+      "OEM 맞춤 제작을 지원하며, 펌프 헤드 재질로 PMMA, PCTG, PEEK, PSU 등을 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 1회 액량, 조제 주기 및 장비 내부 공간에 맞춰 연결 포트, 모터와 제어 구성을 조정할 수 있습니다."
+    ],
+    "ru": [
+      "EA-2500-PMMA — прецизионный дозирующий насос номинальным объёмом 2,5 мл для добавления разбавителя при пробоподготовке, приготовления лабораторных буферных растворов и дозированной подачи жидкости. Головка из PMMA и керамический плунжер работают с шаговым приводом: возвратно-поступательное движение плунжера задаёт объём переноса.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 или 2236 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, оптическая обратная связь и контроллер позволяют организовать приготовление растворов и дозированное добавление компонентов.",
+      "Предусмотрено изготовление в OEM-конфигурации: для головки доступны PMMA, PCTG, PEEK, PSU и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Присоединения, двигатель и управление подбираются под разовый объём, длительность цикла приготовления раствора и доступное пространство в приборе."
+    ]
+  },
+  "EA-2500-PEEK": {
+    "zh": [
+      "EA-2500-PEEK 是标称容量为 2.5 mL 的精密分液泵，适用于自动化配液流程中的缓冲液分配、稀释液添加及定量液体转移。采用 PEEK 泵头与柱塞往复结构，通过步进电机控制吸排液行程。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程提供 2000 步或 2236 步配置，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套液路阀组件、光耦反馈与控制器，满足自动配液单元的集成需求。",
+      "支持柱塞材料选配，可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。泵头除 PEEK 外，可选 PMMA、PCTG、PSU 等方案，并可根据介质、安装位置及控制要求匹配接口、电机和阀组件。"
+    ],
+    "en": [
+      "EA-2500-PEEK is a precision dispense pump with a nominal capacity of 2.5 mL for buffer dispensing, diluent addition and metered transfer in automated liquid preparation. The PEEK head and reciprocating piston are driven by a stepper motor to control aspiration and dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 or 2236 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Fluidic valve assemblies, optical feedback and a controller support integration into automated liquid-preparation units.",
+      "Piston material options include zirconia ceramic, alumina ceramic, PEEK and sapphire. PMMA, PCTG and PSU heads are alternatives to PEEK. Ports, motor and valve assemblies can be matched to the fluid, mounting position and control requirements."
+    ],
+    "es": [
+      "EA-2500-PEEK es una bomba dispensadora de precisión de 2,5 mL de capacidad nominal para distribuir tampones, añadir diluyentes y transferir volúmenes definidos en la preparación automatizada de líquidos. El cabezal de PEEK y el pistón alternativo trabajan con un motor paso a paso que controla la aspiración y la dispensación.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 o 2236 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Las opciones de válvulas, realimentación óptica y controlador permiten integrar la bomba en unidades de preparación automática de líquidos.",
+      "El pistón puede ser de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Los cabezales de PMMA, PCTG y PSU son alternativas al de PEEK. Las conexiones, el motor y las válvulas se pueden adaptar al fluido, a la posición de montaje y a los requisitos de control."
+    ],
+    "fr": [
+      "EA-2500-PEEK est une pompe de distribution de précision d’une capacité nominale de 2,5 mL pour la distribution de tampons, l’ajout de diluants et le transfert dosé en préparation automatisée de liquides. La tête en PEEK et le piston alternatif sont entraînés par un moteur pas-à-pas qui commande les courses d’aspiration et de distribution.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 ou 2236 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Les options de vannes, de retour d’information optique et de contrôleur permettent l’intégration aux unités de préparation automatique de liquides.",
+      "Le piston peut être en céramique de zircone, céramique d’alumine, PEEK ou saphir. Des têtes en PMMA, PCTG ou PSU sont proposées en alternative au PEEK. Les raccordements, le moteur et les vannes peuvent être adaptés au fluide, à la position de montage et aux exigences de commande."
+    ],
+    "ko": [
+      "EA-2500-PEEK는 공칭 용량 2.5 mL의 정밀 분주 펌프로, 자동 조제 공정의 완충액 분주, 희석액 첨가 및 정량 액체 이송에 적합합니다. PEEK 펌프 헤드와 왕복 플런저 구조를 사용하며, 스테핑 모터가 흡입 및 토출 스트로크를 제어합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 또는 2236 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 유로 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 자동 액체 조제 유닛에 통합할 수 있습니다.",
+      "플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 펌프 헤드는 PEEK 외에 PMMA, PCTG, PSU 등으로 구성할 수 있으며, 액체 특성, 설치 위치 및 제어 요구에 맞춰 연결 포트, 모터와 밸브 어셈블리를 선택할 수 있습니다."
+    ],
+    "ru": [
+      "EA-2500-PEEK — прецизионный насос-дозатор номинальным объёмом 2,5 мл для подачи буферных растворов, добавления разбавителя и дозированного переноса жидкости в автоматизированных системах приготовления растворов. Конструкция включает головку из PEEK и возвратно-поступательный плунжерный механизм; шаговый двигатель управляет ходом забора и выдачи жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 или 2236 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Возможна комплектация жидкостными клапанными узлами, оптической обратной связью и контроллером для встраивания в автоматический узел приготовления растворов.",
+      "Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Помимо PEEK, для головки доступны PMMA, PCTG, PSU и другие согласованные варианты. Присоединения, двигатель и клапанные узлы подбираются с учётом рабочей среды, места установки и требований к управлению."
+    ]
+  },
+  "EA-5000-PMMA": {
+    "zh": [
+      "EA-5000-PMMA 是标称容量为 5 mL 的定量加液泵，适用于分析仪器的清洗液补充、样品前处理管路预充及缓冲液输送。采用 PMMA 泵头与陶瓷柱塞，通过步进电机驱动柱塞完成较大单次液量的吸取与排出。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套阀组件、光耦反馈与控制器，支持定量补液、液路置换和预充流程。",
+      "可按清洗液成分和设备液路配置泵头、柱塞及配套组件。泵头材料可选 PMMA、PCTG、PEEK、PVDF 等，柱塞可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石；接口、电机与控制方式可按整机需求匹配。"
+    ],
+    "en": [
+      "EA-5000-PMMA is a dosing pump with a nominal capacity of 5 mL for wash-fluid replenishment in analyzers, priming of sample-preparation lines and buffer transfer. Its PMMA head and ceramic piston use a stepper drive to aspirate and dispense larger individual volumes.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Valve assemblies, optical feedback and a controller can be configured for metered replenishment, fluid replacement and priming.",
+      "Head, piston and supporting components can be configured for the wash-fluid chemistry and instrument fluid path. Head options include PMMA, PCTG, PEEK and PVDF, with zirconia ceramic, alumina ceramic, PEEK or sapphire pistons. Ports, motor and controls can be matched to the instrument."
+    ],
+    "es": [
+      "EA-5000-PMMA es una bomba dosificadora de 5 mL de capacidad nominal para reponer líquido de lavado en analizadores, cebar líneas de preparación de muestras y transferir tampones. Su cabezal de PMMA y su pistón cerámico utilizan un motor paso a paso para aspirar y dispensar volúmenes individuales mayores.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Se pueden incorporar válvulas, realimentación óptica y un controlador para reposición dosificada, sustitución del líquido del circuito y cebado.",
+      "El cabezal, el pistón y los componentes auxiliares se pueden configurar según la composición del líquido de lavado y el circuito del instrumento. Hay opciones de cabezal en PMMA, PCTG, PEEK y PVDF, con pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y el control se adaptan al equipo."
+    ],
+    "fr": [
+      "EA-5000-PMMA est une pompe doseuse d’une capacité nominale de 5 mL pour l’appoint de liquide de lavage dans les analyseurs, l’amorçage des conduites de préparation d’échantillons et le transfert de tampons. Sa tête en PMMA et son piston en céramique utilisent un moteur pas-à-pas pour aspirer et distribuer des volumes unitaires plus importants.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent être configurés pour l’appoint dosé, le remplacement du liquide et l’amorçage.",
+      "La tête, le piston et les composants associés peuvent être configurés selon la composition du liquide de lavage et le circuit de l’instrument. Les têtes peuvent être en PMMA, PCTG, PEEK ou PVDF, avec des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et la commande sont adaptés à l’équipement."
+    ],
+    "ko": [
+      "EA-5000-PMMA는 공칭 용량 5 mL의 정량 액체 공급 펌프로, 분석 장비의 세척액 보충, 시료 전처리 배관의 프라이밍 및 완충액 이송에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터로 플런저를 구동하여 비교적 큰 1회 액량을 흡입하고 토출합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 정량 보충, 유로 내 액체 교체 및 프라이밍을 수행할 수 있습니다.",
+      "세척액 성분과 장비 유로에 맞춰 펌프 헤드, 플런저 및 부품을 구성할 수 있습니다. 펌프 헤드 재질은 PMMA, PCTG, PEEK, PVDF 등에서 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 연결 포트, 모터와 제어 방식은 장비 요구에 맞춰 조정할 수 있습니다."
+    ],
+    "ru": [
+      "EA-5000-PMMA — насос для дозированной подачи жидкости номинальным объёмом 5 мл, предназначенный для пополнения промывочной жидкости, предварительного заполнения линий пробоподготовки и подачи буферных растворов в аналитических приборах. Головка из PMMA и керамический плунжер с шаговым приводом обеспечивают забор и выдачу увеличенного объёма за один ход.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, оптическая обратная связь и контроллер позволяют организовать дозированное пополнение, замену жидкости в тракте и предварительное заполнение линий.",
+      "Головка, плунжер и комплектующие подбираются под состав промывочной жидкости и жидкостный тракт оборудования. Для головки доступны PMMA, PCTG, PEEK, PVDF и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Присоединения, двигатель и способ управления согласуются с требованиями прибора."
+    ]
+  },
+  "EA-5000-PEEK": {
+    "zh": [
+      "EA-5000-PEEK 是标称容量为 5 mL 的精密计量泵，适用于清洗液与缓冲液的定量输送，以及自动化设备的配液和补液流程。采用 PEEK 泵头和步进驱动的柱塞往复结构，通过行程控制液体转移量。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套阀组件、光耦反馈与控制器，便于连接供液、切换和仪器控制单元。",
+      "接液配置可根据介质匹配，泵头材料可选 PEEK、PMMA、PCTG、PVDF 等，柱塞可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。电机、液路接口及配套控制组件可按设备布局和输送流程定制。"
+    ],
+    "en": [
+      "EA-5000-PEEK is a precision metering pump with a nominal capacity of 5 mL for wash-fluid and buffer delivery, automated liquid preparation and replenishment. A PEEK head and stepper-driven reciprocating piston control the transferred volume through the piston stroke.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Valve assemblies, optical feedback and a controller connect liquid supply, fluid switching and instrument control functions.",
+      "Wetted components can be matched to the fluid, with PEEK, PMMA, PCTG and PVDF head options and zirconia ceramic, alumina ceramic, PEEK or sapphire pistons. Motor, fluidic ports and control components can be tailored to the equipment layout and transfer sequence."
+    ],
+    "es": [
+      "EA-5000-PEEK es una bomba dosificadora de precisión de 5 mL de capacidad nominal para suministrar líquidos de lavado y tampones, así como para preparar y reponer líquidos en equipos automatizados. Un cabezal de PEEK y un pistón alternativo con motor paso a paso controlan el volumen transferido mediante la carrera del pistón.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Las válvulas, la realimentación óptica y el controlador se pueden configurar para conectar suministro, conmutación y control del instrumento.",
+      "Los componentes en contacto con el líquido se seleccionan según el fluido, con cabezales de PEEK, PMMA, PCTG o PVDF y pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. El motor, las conexiones y los componentes de control se pueden personalizar para la distribución del equipo y la secuencia de transferencia."
+    ],
+    "fr": [
+      "EA-5000-PEEK est une pompe doseuse de précision d’une capacité nominale de 5 mL pour l’alimentation dosée en liquides de lavage et en tampons, ainsi que pour la préparation et l’appoint de liquides dans les équipements automatisés. La tête en PEEK et le piston alternatif à entraînement pas-à-pas contrôlent le volume transféré par la course du piston.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent relier les fonctions d’alimentation, de commutation et de commande de l’instrument.",
+      "Les pièces en contact avec le liquide sont choisies selon le fluide, avec des têtes en PEEK, PMMA, PCTG ou PVDF et des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Le moteur, les raccordements et les composants de commande peuvent être personnalisés selon l’implantation et la séquence de transfert."
+    ],
+    "ko": [
+      "EA-5000-PEEK는 공칭 용량 5 mL의 정밀 정량 펌프로, 세척액과 완충액의 정량 이송 및 자동화 장비의 액체 조제·보충에 적합합니다. PEEK 펌프 헤드와 스테핑 모터로 구동하는 왕복 플런저 구조를 사용하며, 스트로크를 조절하여 액체 이송량을 제어합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 액체 공급·유로 전환 유닛을 장비 제어부와 연결할 수 있습니다.",
+      "액체 특성에 맞춰 접액부를 구성할 수 있습니다. 펌프 헤드 재질은 PEEK, PMMA, PCTG, PVDF 등에서 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 장비 배치와 이송 공정에 맞춰 모터, 유체 연결 포트와 제어 부품을 맞춤 제작할 수 있습니다."
+    ],
+    "ru": [
+      "EA-5000-PEEK — прецизионный дозирующий насос номинальным объёмом 5 мл для дозированной подачи промывочных и буферных растворов, а также приготовления и пополнения растворов в автоматизированном оборудовании. Головка из PEEK и возвратно-поступательный плунжерный механизм с шаговым приводом позволяют задавать переносимый объём ходом плунжера.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, оптическая обратная связь и контроллер позволяют связать узлы подачи и переключения жидкости с системой управления прибора.",
+      "Материалы деталей, контактирующих с жидкостью, подбираются под рабочую среду. Для головки доступны PEEK, PMMA, PCTG, PVDF и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Двигатель, жидкостные присоединения и компоненты управления можно адаптировать к компоновке оборудования и процессу подачи жидкости."
+    ]
+  },
+  "EA-10000-PMMA": {
+    "zh": [
+      "EA-10000-PMMA 是标称容量为 10 mL 的定量加液泵，适用于分析仪器的液路冲洗、管路预充及较大液量的定量转移。采用 PMMA 泵头与陶瓷柱塞，由步进电机驱动柱塞往复运动，完成清洗液或配液介质的吸排液。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 4000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套阀组件、光耦反馈与控制器，支持冲洗、补液和预充程序的液路集成。",
+      "泵头材料可选 PMMA、PEEK、PVDF、PTFE 等，柱塞材料可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石。接口、电机及配套阀组件可根据液体特性、单次供液量和仪器安装要求匹配。"
+    ],
+    "en": [
+      "EA-10000-PMMA is a dosing pump with a nominal capacity of 10 mL for instrument fluid-path flushing, line priming and larger metered transfers. Its PMMA head and ceramic piston use a reciprocating stepper drive to aspirate and dispense wash fluids or liquid-preparation media.",
+      "Ports are available in 1/4-28 UNF or M6, with 4000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Valve assemblies, optical feedback and a controller can be configured for flushing, replenishment and priming sequences.",
+      "Head options include PMMA, PEEK, PVDF and PTFE; piston options include zirconia ceramic, alumina ceramic, PEEK and sapphire. Ports, motor and valve assemblies can be selected for fluid properties, volume per delivery and instrument mounting requirements."
+    ],
+    "es": [
+      "EA-10000-PMMA es una bomba dosificadora de 10 mL de capacidad nominal para lavar circuitos de instrumentos, cebar líneas y realizar transferencias dosificadas de mayor volumen. El cabezal de PMMA y el pistón cerámico, con accionamiento alternativo por motor paso a paso, aspiran y dispensan líquidos de lavado o de preparación.",
+      "Conexiones 1/4-28 UNF o M6 y 4000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Se pueden incorporar válvulas, realimentación óptica y un controlador para las secuencias de lavado, reposición y cebado.",
+      "Las opciones de cabezal incluyen PMMA, PEEK, PVDF y PTFE, con pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y los conjuntos de válvulas se seleccionan según el líquido, el volumen de cada suministro y el montaje en el instrumento."
+    ],
+    "fr": [
+      "EA-10000-PMMA est une pompe doseuse d’une capacité nominale de 10 mL pour le rinçage des circuits d’instruments, l’amorçage des conduites et les transferts dosés de volumes plus importants. La tête en PMMA et le piston en céramique, entraîné en mouvement alternatif par moteur pas-à-pas, aspirent et distribuent les liquides de lavage ou de préparation.",
+      "Raccordements 1/4-28 UNF ou M6, avec 4000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent être configurés pour le rinçage, l’appoint et l’amorçage.",
+      "Les têtes peuvent être en PMMA, PEEK, PVDF ou PTFE et les pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et les ensembles de vannes sont choisis selon le liquide, le volume de chaque apport et le montage dans l’instrument."
+    ],
+    "ko": [
+      "EA-10000-PMMA는 공칭 용량 10 mL의 정량 액체 공급 펌프로, 분석 장비의 유로 세척, 배관 프라이밍 및 비교적 큰 액량의 정량 이송에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터가 플런저를 왕복 구동하여 세척액이나 조제용 액체를 흡입하고 토출합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 4000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 세척, 보충 및 프라이밍 프로그램에 유로를 연계할 수 있습니다.",
+      "펌프 헤드 재질은 PMMA, PEEK, PVDF, PTFE 등에서 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 액체 특성, 1회 공급량 및 장비 설치 조건에 맞춰 연결 포트, 모터와 밸브 어셈블리를 구성할 수 있습니다."
+    ],
+    "ru": [
+      "EA-10000-PMMA — насос для дозированной подачи жидкости номинальным объёмом 10 мл, предназначенный для промывки жидкостных трактов, предварительного заполнения трубок и дозированного переноса увеличенных объёмов в аналитических приборах. Головка из PMMA и керамический плунжер с возвратно-поступательным шаговым приводом обеспечивают забор и выдачу промывочной жидкости или компонентов для приготовления растворов.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 4000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, оптическая обратная связь и контроллер позволяют включить жидкостный тракт в программы промывки, пополнения и предварительного заполнения.",
+      "Для головки доступны PMMA, PEEK, PVDF, PTFE и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Присоединения, двигатель и клапанные узлы подбираются с учётом свойств жидкости, разового объёма подачи и требований к монтажу в приборе."
+    ]
+  },
+  "EA-10000-PEEK": {
+    "zh": [
+      "EA-10000-PEEK 是标称容量为 10 mL 的 OEM 分液泵，适用于自动化仪器的定量供液、配液及液路冲洗。采用 PEEK 泵头和步进电机驱动的柱塞计量结构，配合设备程序完成较大液量的吸取与分配。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 4000 步，满量程准确性和重复性均为 ≤0.5%，预计寿命为 500 万次。可配套光耦反馈、阀组件与控制器，支持供液单元与整机驱动控制系统连接。",
+      "支持接口、驱动与控制配置定制。泵头材料可选 PEEK、PMMA、PSU、PVDF 等，柱塞可选氧化锆陶瓷、氧化铝陶瓷、PEEK 或蓝宝石；材料组合和配套液路组件可根据介质与项目需求匹配。"
+    ],
+    "en": [
+      "EA-10000-PEEK is an OEM dispensing pump with a nominal capacity of 10 mL for metered supply, liquid preparation and fluid-path flushing in automated instruments. A PEEK head and stepper-driven piston metering mechanism handle larger aspiration and dispense volumes under instrument control.",
+      "Ports are available in 1/4-28 UNF or M6, with 4000 steps per full stroke. Full-stroke accuracy and repeatability are both ≤0.5%, with an anticipated life of 5 million cycles. Optical feedback, valve assemblies and a controller support connection of the supply unit to instrument drive controls.",
+      "Ports, drive and control arrangements can be customized. Head options include PEEK, PMMA, PSU and PVDF, with zirconia ceramic, alumina ceramic, PEEK or sapphire pistons. Wetted-material combinations and fluidic components can be matched to the fluid and project requirements."
+    ],
+    "es": [
+      "EA-10000-PEEK es una bomba dispensadora OEM de 10 mL de capacidad nominal para suministro dosificado, preparación de líquidos y lavado de circuitos en instrumentos automatizados. El cabezal de PEEK y el mecanismo dosificador de pistón con motor paso a paso permiten aspirar y dispensar volúmenes mayores bajo el control del instrumento.",
+      "Conexiones 1/4-28 UNF o M6 y 4000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Las opciones de realimentación óptica, válvulas y controlador conectan la unidad de suministro con el control del accionamiento del instrumento.",
+      "Las conexiones, el accionamiento y el control se pueden personalizar. Hay cabezales de PEEK, PMMA, PSU o PVDF y pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Los materiales en contacto con el líquido y los componentes del circuito se seleccionan según el fluido y el proyecto."
+    ],
+    "fr": [
+      "EA-10000-PEEK est une pompe OEM de distribution d’une capacité nominale de 10 mL pour l’alimentation dosée, la préparation de liquides et le rinçage des circuits dans les instruments automatisés. La tête en PEEK et le mécanisme de dosage à piston entraîné par moteur pas-à-pas permettent d’aspirer et de distribuer des volumes plus importants sous commande de l’instrument.",
+      "Raccordements 1/4-28 UNF ou M6, avec 4000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Les options de retour d’information optique, de vannes et de contrôleur relient l’unité d’alimentation à la commande de l’entraînement de l’instrument.",
+      "Les raccordements, l’entraînement et la commande peuvent être personnalisés. Les têtes sont proposées en PEEK, PMMA, PSU ou PVDF, avec des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les matériaux en contact avec le liquide et les composants fluidiques sont adaptés au fluide et au projet."
+    ],
+    "ko": [
+      "EA-10000-PEEK는 공칭 용량 10 mL의 OEM 분주 펌프로, 자동화 장비의 정량 액체 공급, 액체 조제 및 유로 세척에 적합합니다. PEEK 펌프 헤드와 스테핑 모터 구동 플런저 계량 구조를 적용하여 장비 프로그램에 따라 비교적 큰 액량을 흡입하고 분주합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 4000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 광학 피드백, 밸브 어셈블리 및 컨트롤러를 함께 구성하여 액체 공급 유닛을 장비의 구동 제어 시스템에 연결할 수 있습니다.",
+      "연결 포트, 구동 및 제어 구성을 맞춤 제작할 수 있습니다. 펌프 헤드 재질은 PEEK, PMMA, PSU, PVDF 등에서 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 액체 특성과 프로젝트 요구에 맞춰 재질 조합 및 유로 부품을 구성할 수 있습니다."
+    ],
+    "ru": [
+      "EA-10000-PEEK — OEM-насос-дозатор номинальным объёмом 10 мл для дозированной подачи жидкости, приготовления растворов и промывки жидкостных трактов автоматизированных приборов. Головка из PEEK и плунжерный дозирующий механизм с шаговым приводом обеспечивают забор и выдачу увеличенных объёмов по программе оборудования.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 4000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Оптическая обратная связь, клапанные узлы и контроллер позволяют связать узел подачи жидкости с системой управления приводами прибора.",
+      "Предусмотрена адаптация присоединений, привода и управления. Для головки доступны PEEK, PMMA, PSU, PVDF и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Сочетание материалов и жидкостные компоненты подбираются под рабочую среду и требования проекта."
+    ]
+  },
+  "SM-50-PMMA": {
+    "zh": [
+      "SM-50-PMMA 是标称容量为 50 μL 的微型试剂加样泵，适用于小型分析仪器的微量试剂添加及小体积反应体系加液。采用 PMMA 泵头与陶瓷柱塞，通过紧凑的步进驱动结构完成液体吸取与定量分配。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程重复性为 ≤0.5%，预计寿命为 500 万次；准确性指标按所选配置确认。可配套光耦反馈、阀组件与控制器，满足小型仪器的加液控制需求。",
+      "支持 OEM 配套定制，泵头材料可选 PMMA、PSU、POM、PEEK，柱塞材料可选陶瓷、不锈钢或 PEEK。加样针、管路及安装方式可根据试剂特性和仪器空间匹配。"
+    ],
+    "en": [
+      "SM-50-PMMA is a miniature reagent dispensing pump with a nominal capacity of 50 μL for microliter reagent addition and dosing into small-volume reaction mixtures in compact analyzers. A PMMA head and ceramic piston use a compact stepper drive for aspiration and metered dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke repeatability is ≤0.5%, with an anticipated life of 5 million cycles; dispensing accuracy is confirmed for the selected configuration. Optical feedback, valve assemblies and a controller are available for dosing control in compact instruments.",
+      "OEM configurations offer PMMA, PSU, POM or PEEK heads and ceramic, stainless steel or PEEK pistons. Dispensing probes, tubing and mounting arrangements can be matched to reagent properties and the available instrument space."
+    ],
+    "es": [
+      "SM-50-PMMA es una bomba miniatura de dispensación de reactivos de 50 μL de capacidad nominal para añadir microvolúmenes de reactivos y dosificar en pequeñas mezclas de reacción en analizadores compactos. El cabezal de PMMA y el pistón cerámico incorporan un accionamiento compacto por motor paso a paso para aspiración y dispensación dosificada.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La repetibilidad a carrera completa es ≤0,5 %, con una vida útil estimada de 5 millones de ciclos; la exactitud se confirma para la configuración seleccionada. Se pueden incorporar realimentación óptica, válvulas y un controlador para dosificar en instrumentos compactos.",
+      "Las configuraciones OEM ofrecen cabezales de PMMA, PSU, POM o PEEK y pistones de cerámica, acero inoxidable o PEEK. Las sondas de dispensación, los tubos y el montaje se pueden adaptar al reactivo y al espacio del instrumento."
+    ],
+    "fr": [
+      "SM-50-PMMA est une pompe miniature de dosage de réactifs d’une capacité nominale de 50 μL pour l’ajout de microvolumes et le dosage dans de petits mélanges réactionnels au sein d’analyseurs compacts. La tête en PMMA et le piston en céramique utilisent un entraînement pas-à-pas compact pour l’aspiration et la distribution dosée.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. La répétabilité à pleine course est ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles ; l’exactitude est confirmée pour la configuration choisie. Un retour d’information optique, des ensembles de vannes et un contrôleur peuvent être associés à la commande du dosage dans les petits instruments.",
+      "Les configurations OEM proposent des têtes en PMMA, PSU, POM ou PEEK et des pistons en céramique, acier inoxydable ou PEEK. Les sondes de distribution, les tubulures et le montage peuvent être adaptés au réactif et à l’espace de l’instrument."
+    ],
+    "ko": [
+      "SM-50-PMMA는 공칭 용량 50 μL의 소형 시약 분주 펌프로, 소형 분석 장비의 미량 시약 첨가와 소용량 반응계의 액체 첨가에 적합합니다. PMMA 펌프 헤드, 세라믹 플런저 및 소형 스테핑 모터 구동 구조로 액체를 흡입하고 정량 분주합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 반복성은 ≤0.5%이며, 예상 수명은 500만 회입니다. 정확도는 선택한 구성에 따라 확인합니다. 광학 피드백, 밸브 어셈블리 및 컨트롤러를 함께 구성하여 소형 장비의 액체 첨가 동작을 제어할 수 있습니다.",
+      "OEM 맞춤 구성을 지원하며, 펌프 헤드 재질로 PMMA, PSU, POM, PEEK를 선택할 수 있습니다. 플런저 재질은 세라믹, 스테인리스강 또는 PEEK 중에서 선택할 수 있습니다. 시약 특성과 장비 공간에 맞춰 시료 주입 니들, 튜빙 및 설치 방식을 구성할 수 있습니다."
+    ],
+    "ru": [
+      "SM-50-PMMA — миниатюрный насос-дозатор реагентов номинальным объёмом 50 мкл для добавления микродоз реагентов и подачи жидкости в реакционные смеси малого объёма в компактных анализаторах. Головка из PMMA, керамический плунжер и компактный шаговый привод обеспечивают забор и дозированную подачу жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Показатель повторяемости на полном ходе — ≤0,5%, ожидаемый ресурс — 5 млн циклов; точность дозирования подтверждается для выбранной конфигурации. Возможна комплектация оптической обратной связью, клапанными узлами и контроллером для управления добавлением жидкости в компактных приборах.",
+      "Предусмотрена индивидуальная OEM-комплектация. Для головки доступны PMMA, PSU, POM и PEEK. Для плунжера доступны керамика, нержавеющая сталь или PEEK. Дозирующие иглы, трубки и способ монтажа подбираются под свойства реагента и доступное пространство в приборе."
+    ]
+  },
+  "SM-100-PMMA": {
+    "zh": [
+      "SM-100-PMMA 是标称容量为 100 μL 的微型取样泵，适用于小型自动加样机构的样本吸取、样本稀释及定量转移。采用 PMMA 泵头与陶瓷柱塞，由步进电机驱动柱塞往复运动，配合加样机构完成吸排液。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程重复性为 ≤0.5%，预计寿命为 500 万次；准确性指标按所选配置确认。可配套加样针、管路、阀组件和控制器，连接样本处理与液路切换单元。",
+      "泵头材料可选 PMMA、PSU、POM、PEEK，柱塞可选陶瓷、不锈钢或 PEEK。可围绕样本特性、加样针布局和清洗流程，匹配光耦反馈、管路连接及整机安装方式。"
+    ],
+    "en": [
+      "SM-100-PMMA is a miniature sampling pump with a nominal capacity of 100 μL for sample aspiration, dilution and metered transfer in compact automated sampling mechanisms. Its PMMA head and ceramic piston use a reciprocating stepper drive coordinated with the sampling mechanism.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke repeatability is ≤0.5%, with an anticipated life of 5 million cycles; dispensing accuracy is confirmed for the selected configuration. Dispensing probes, tubing, valve assemblies and a controller can be matched to sample handling and fluid switching.",
+      "Head options are PMMA, PSU, POM and PEEK, with ceramic, stainless steel or PEEK pistons. Optical feedback, tubing connections and mounting arrangements can be matched to sample properties, probe layout and cleaning procedures."
+    ],
+    "es": [
+      "SM-100-PMMA es una bomba de muestreo miniatura de 100 μL de capacidad nominal para aspirar, diluir y transferir muestras en mecanismos compactos de muestreo automático. Su cabezal de PMMA y su pistón cerámico utilizan un accionamiento alternativo por motor paso a paso, coordinado con el mecanismo de muestreo.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La repetibilidad a carrera completa es ≤0,5 %, con una vida útil estimada de 5 millones de ciclos; la exactitud se confirma para la configuración seleccionada. Se pueden seleccionar sondas de dispensación, tubos, válvulas y un controlador para el manejo de muestras y la conmutación de fluidos.",
+      "Los cabezales pueden ser de PMMA, PSU, POM o PEEK, con pistones de cerámica, acero inoxidable o PEEK. La realimentación óptica, las conexiones de tubos y el montaje se seleccionan según la muestra, la disposición de la sonda y la limpieza."
+    ],
+    "fr": [
+      "SM-100-PMMA est une pompe de prélèvement miniature d’une capacité nominale de 100 μL pour l’aspiration, la dilution et le transfert dosé d’échantillons dans les mécanismes compacts de prélèvement automatique. La tête en PMMA et le piston en céramique utilisent un entraînement alternatif par moteur pas-à-pas, coordonné avec le mécanisme de prélèvement.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. La répétabilité à pleine course est ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles ; l’exactitude est confirmée pour la configuration choisie. Des sondes de distribution, des tubulures, des ensembles de vannes et un contrôleur peuvent être adaptés au traitement des échantillons et à la commutation des fluides.",
+      "Les têtes peuvent être en PMMA, PSU, POM ou PEEK, avec des pistons en céramique, acier inoxydable ou PEEK. Le retour d’information optique, les raccordements des tubulures et le montage sont choisis selon l’échantillon, la disposition de la sonde et le nettoyage."
+    ],
+    "ko": [
+      "SM-100-PMMA는 공칭 용량 100 μL의 소형 샘플링 펌프로, 소형 자동 시료 주입 장치의 시료 흡입, 희석 및 정량 이송에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터의 왕복 구동을 시료 주입 동작과 연계하여 액체를 흡입하고 토출합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 반복성은 ≤0.5%이며, 예상 수명은 500만 회입니다. 정확도는 선택한 구성에 따라 확인합니다. 시료 주입 니들, 튜빙, 밸브 어셈블리 및 컨트롤러를 함께 구성하여 시료 처리부와 유로 전환부를 연결할 수 있습니다.",
+      "펌프 헤드 재질은 PMMA, PSU, POM, PEEK에서 선택할 수 있습니다. 플런저 재질은 세라믹, 스테인리스강 또는 PEEK 중에서 선택할 수 있습니다. 시료 특성, 주입 니들 배치 및 세척 공정에 맞춰 광학 피드백, 튜빙 연결과 장비 설치 방식을 구성할 수 있습니다."
+    ],
+    "ru": [
+      "SM-100-PMMA — миниатюрный насос для отбора проб номинальным объёмом 100 мкл для забора, разбавления и дозированного переноса проб в компактных автоматических пробоотборных устройствах. Головка из PMMA и керамический плунжер работают с возвратно-поступательным шаговым приводом, согласуя забор и выдачу жидкости с работой механизма подачи проб.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Показатель повторяемости на полном ходе — ≤0,5%, ожидаемый ресурс — 5 млн циклов; точность дозирования подтверждается для выбранной конфигурации. Возможна комплектация дозирующими иглами, трубками, клапанными узлами и контроллером для связи обработки проб с переключением жидкостных трактов.",
+      "Для головки доступны PMMA, PSU, POM и PEEK. Для плунжера доступны керамика, нержавеющая сталь или PEEK. Оптическая обратная связь, соединения трубок и монтаж в приборе подбираются с учётом свойств пробы, расположения дозирующей иглы и процесса промывки."
+    ]
+  },
+  "SM-100-PEEK": {
+    "zh": [
+      "SM-100-PEEK 是标称容量为 100 μL 的微型加样泵，适用于紧凑液路中的试剂添加和小体积液体分配。采用 PEEK 泵头与步进驱动的柱塞往复结构，便于与小型分析仪器的加液单元配套。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程重复性为 ≤0.5%，预计寿命为 500 万次；准确性指标按所选配置确认。可配套阀组件、光耦反馈与控制器，支持试剂切换和分步吸排液。",
+      "可根据试剂成分选择陶瓷、不锈钢或 PEEK 柱塞，泵头除 PEEK 外，也可采用 PMMA、PSU、POM 等材料。管路、加样针和安装配置可围绕设备空间与液体处理流程匹配。"
+    ],
+    "en": [
+      "SM-100-PEEK is a miniature dispensing pump with a nominal capacity of 100 μL for reagent addition and small-volume dispensing in compact fluid paths. A PEEK head and stepper-driven reciprocating piston support integration into the dispensing units of small analytical instruments.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke repeatability is ≤0.5%, with an anticipated life of 5 million cycles; dispensing accuracy is confirmed for the selected configuration. Valve assemblies, optical feedback and a controller support reagent switching and staged aspiration and dispensing.",
+      "Ceramic, stainless steel or PEEK pistons can be selected for the reagent. PMMA, PSU and POM heads are alternatives to PEEK. Tubing, dispensing probes and mounting can be configured around available space and the liquid-handling sequence."
+    ],
+    "es": [
+      "SM-100-PEEK es una bomba dispensadora miniatura de 100 μL de capacidad nominal para añadir reactivos y distribuir pequeños volúmenes en circuitos compactos. El cabezal de PEEK y el pistón alternativo con motor paso a paso facilitan su integración en las unidades de dispensación de instrumentos analíticos pequeños.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La repetibilidad a carrera completa es ≤0,5 %, con una vida útil estimada de 5 millones de ciclos; la exactitud se confirma para la configuración seleccionada. Las opciones de válvulas, realimentación óptica y controlador permiten cambiar de reactivo y aspirar y dispensar por etapas.",
+      "El pistón puede ser de cerámica, acero inoxidable o PEEK, según el reactivo. Los cabezales de PMMA, PSU y POM son alternativas al de PEEK. Los tubos, las sondas de dispensación y el montaje se pueden adaptar al espacio y a la secuencia de manejo de líquidos."
+    ],
+    "fr": [
+      "SM-100-PEEK est une pompe de distribution miniature d’une capacité nominale de 100 μL pour l’ajout de réactifs et la distribution de petits volumes dans les circuits compacts. Sa tête en PEEK et son piston alternatif à entraînement pas-à-pas facilitent l’intégration aux unités de distribution des petits instruments d’analyse.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. La répétabilité à pleine course est ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles ; l’exactitude est confirmée pour la configuration choisie. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent être associés au changement de réactif et aux séquences d’aspiration et de distribution.",
+      "Le piston peut être en céramique, acier inoxydable ou PEEK selon le réactif. Des têtes en PMMA, PSU ou POM sont proposées en alternative au PEEK. Les tubulures, les sondes de distribution et le montage peuvent être adaptés à l’espace disponible et à la séquence de manipulation des liquides."
+    ],
+    "ko": [
+      "SM-100-PEEK는 공칭 용량 100 μL의 소형 분주 펌프로, 공간이 제한된 유로의 시약 첨가와 소량 액체 분주에 적합합니다. PEEK 펌프 헤드와 스테핑 모터로 구동하는 왕복 플런저 구조를 적용하여 소형 분석 장비의 액체 공급 유닛과 함께 구성할 수 있습니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 반복성은 ≤0.5%이며, 예상 수명은 500만 회입니다. 정확도는 선택한 구성에 따라 확인합니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 시약 전환과 단계별 흡입·토출을 제어할 수 있습니다.",
+      "시약 성분에 맞춰 세라믹, 스테인리스강 또는 PEEK 플런저를 선택할 수 있습니다. 펌프 헤드는 PEEK 외에 PMMA, PSU, POM 재질로도 구성할 수 있으며, 장비 공간과 액체 취급 공정에 맞춰 튜빙, 시료 주입 니들 및 설치 구성을 조정할 수 있습니다."
+    ],
+    "ru": [
+      "SM-100-PEEK — миниатюрный насос-дозатор номинальным объёмом 100 мкл для добавления реагентов и дозирования малых объёмов жидкости в компактных жидкостных трактах. Головка из PEEK и возвратно-поступательный плунжерный механизм с шаговым приводом подходят для встраивания в узлы подачи жидкости малогабаритных аналитических приборов.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Показатель повторяемости на полном ходе — ≤0,5%, ожидаемый ресурс — 5 млн циклов; точность дозирования подтверждается для выбранной конфигурации. Клапанные узлы, оптическая обратная связь и контроллер позволяют организовать переключение реагентов и поэтапный забор и выдачу жидкости.",
+      "С учётом состава реагента можно выбрать плунжер из керамики, нержавеющей стали или PEEK. Помимо PEEK, для головки доступны PMMA, PSU и POM. Трубки, дозирующие иглы и монтажная конфигурация подбираются под доступное пространство и процесс обработки жидкости."
+    ]
+  },
+  "SM-250-PMMA": {
+    "zh": [
+      "SM-250-PMMA 是标称容量为 250 μL 的微型试剂分配泵，适用于分析仪器的试剂分配和反应体系定量加液。采用 PMMA 泵头与陶瓷柱塞，通过步进驱动控制柱塞行程，完成液体吸取和分步添加。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程重复性为 ≤0.5%，预计寿命为 500 万次；准确性指标按所选配置确认。可配套阀组件、光耦反馈、加样针与控制器，组织反应液添加流程。",
+      "泵头材料可选 PMMA、PSU、POM、PEEK，柱塞材料可选陶瓷、不锈钢或 PEEK。可根据试剂成分、反应单元位置和管路布局，匹配接液材料、管路连接及安装方式。"
+    ],
+    "en": [
+      "SM-250-PMMA is a miniature reagent dispensing pump with a nominal capacity of 250 μL for reagent distribution and metered addition to reaction mixtures in analytical instruments. Its PMMA head and ceramic piston use stepper-controlled strokes for aspiration and staged dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke repeatability is ≤0.5%, with an anticipated life of 5 million cycles; dispensing accuracy is confirmed for the selected configuration. Valve assemblies, optical feedback, dispensing probes and a controller can be configured for reaction-liquid addition.",
+      "Head options are PMMA, PSU, POM and PEEK, with ceramic, stainless steel or PEEK pistons. Wetted materials, tubing connections and mounting arrangements can be matched to reagent chemistry, reaction-unit position and the tubing layout."
+    ],
+    "es": [
+      "SM-250-PMMA es una bomba miniatura de dispensación de reactivos de 250 μL de capacidad nominal para distribuir reactivos y añadir volúmenes definidos a mezclas de reacción en instrumentos analíticos. El cabezal de PMMA y el pistón cerámico utilizan carreras controladas por motor paso a paso para aspirar y dosificar por etapas.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La repetibilidad a carrera completa es ≤0,5 %, con una vida útil estimada de 5 millones de ciclos; la exactitud se confirma para la configuración seleccionada. Se pueden incorporar válvulas, realimentación óptica, sondas de dispensación y un controlador para la adición de líquidos de reacción.",
+      "Las opciones de cabezal son PMMA, PSU, POM y PEEK, con pistones de cerámica, acero inoxidable o PEEK. Los materiales en contacto con el líquido, las conexiones de tubos y el montaje se seleccionan según el reactivo, la posición de la unidad de reacción y el trazado del circuito."
+    ],
+    "fr": [
+      "SM-250-PMMA est une pompe miniature de distribution de réactifs d’une capacité nominale de 250 μL pour la distribution de réactifs et l’ajout de volumes définis aux mélanges réactionnels dans les instruments d’analyse. La tête en PMMA et le piston en céramique utilisent des courses commandées par moteur pas-à-pas pour l’aspiration et l’ajout par étapes.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. La répétabilité à pleine course est ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles ; l’exactitude est confirmée pour la configuration choisie. Des ensembles de vannes, un retour d’information optique, des sondes de distribution et un contrôleur peuvent être configurés pour l’ajout de liquide réactionnel.",
+      "Les têtes peuvent être en PMMA, PSU, POM ou PEEK, avec des pistons en céramique, acier inoxydable ou PEEK. Les matériaux en contact avec le liquide, les raccordements et le montage sont choisis selon le réactif, la position de l’unité réactionnelle et le tracé des tubulures."
+    ],
+    "ko": [
+      "SM-250-PMMA는 공칭 용량 250 μL의 소형 시약 분주 펌프로, 분석 장비의 시약 분주 및 반응계에 대한 정량 액체 첨가에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터로 플런저 스트로크를 제어하여 액체를 흡입하고 단계별로 첨가합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 반복성은 ≤0.5%이며, 예상 수명은 500만 회입니다. 정확도는 선택한 구성에 따라 확인합니다. 밸브 어셈블리, 광학 피드백, 시료 주입 니들 및 컨트롤러를 함께 구성하여 반응액 첨가 공정을 제어할 수 있습니다.",
+      "펌프 헤드 재질은 PMMA, PSU, POM, PEEK에서 선택할 수 있습니다. 플런저 재질은 세라믹, 스테인리스강 또는 PEEK 중에서 선택할 수 있습니다. 시약 성분, 반응 유닛의 위치 및 튜빙 배치에 맞춰 접액부 재질, 튜빙 연결과 설치 방식을 구성할 수 있습니다."
+    ],
+    "ru": [
+      "SM-250-PMMA — миниатюрный насос-дозатор реагентов номинальным объёмом 250 мкл для распределения реагентов и дозированного добавления жидкости в реакционную смесь в аналитических приборах. В конструкции используются головка из PMMA и керамический плунжер; шаговый привод управляет ходом плунжера для забора и поэтапного добавления жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Показатель повторяемости на полном ходе — ≤0,5%, ожидаемый ресурс — 5 млн циклов; точность дозирования подтверждается для выбранной конфигурации. Клапанные узлы, оптическая обратная связь, дозирующие иглы и контроллер позволяют организовать добавление реакционного раствора.",
+      "Для головки доступны PMMA, PSU, POM и PEEK. Для плунжера доступны керамика, нержавеющая сталь или PEEK. Материалы деталей, контактирующих с жидкостью, соединения трубок и способ монтажа подбираются с учётом состава реагента, расположения реакционного узла и трассировки трубок."
+    ]
+  },
+  "SM-250-PEEK": {
+    "zh": [
+      "SM-250-PEEK 是标称容量为 250 μL 的可定制微型计量泵，适用于试剂分配、反应液添加及紧凑仪器中的定量液体处理。采用 PEEK 泵头和步进电机驱动的柱塞计量结构，完成程序控制下的吸排液。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程重复性为 ≤0.5%，预计寿命为 500 万次；准确性指标按所选配置确认。可配套阀组件、光耦反馈与控制器，支持定量添加和液路切换。",
+      "支持 OEM 定制，柱塞可选陶瓷、不锈钢或 PEEK，并根据试剂成分匹配密封配置。泵头材料可选 PEEK、PMMA、PSU、POM，配套管路、加样针与安装方式可结合整机需求确定。"
+    ],
+    "en": [
+      "SM-250-PEEK is a configurable miniature metering pump with a nominal capacity of 250 μL for reagent dispensing, reaction-liquid addition and metered liquid handling in compact instruments. A PEEK head and stepper-driven piston metering mechanism support programmed aspiration and dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke repeatability is ≤0.5%, with an anticipated life of 5 million cycles; dispensing accuracy is confirmed for the selected configuration. Valve assemblies, optical feedback and a controller support metered addition and fluid-path switching.",
+      "OEM customization includes ceramic, stainless steel or PEEK pistons, with seals matched to reagent chemistry. Head options are PEEK, PMMA, PSU and POM; tubing, dispensing probes and mounting arrangements can be selected for the instrument."
+    ],
+    "es": [
+      "SM-250-PEEK es una bomba dosificadora miniatura configurable de 250 μL de capacidad nominal para dispensar reactivos, añadir líquido de reacción y manejar volúmenes definidos en instrumentos compactos. El cabezal de PEEK y el mecanismo dosificador de pistón con motor paso a paso permiten programar la aspiración y la dispensación.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La repetibilidad a carrera completa es ≤0,5 %, con una vida útil estimada de 5 millones de ciclos; la exactitud se confirma para la configuración seleccionada. Las opciones de válvulas, realimentación óptica y controlador permiten la adición dosificada y la conmutación del circuito.",
+      "La personalización OEM incluye pistones de cerámica, acero inoxidable o PEEK, con juntas seleccionadas según el reactivo. Los cabezales pueden ser de PEEK, PMMA, PSU o POM; los tubos, las sondas de dispensación y el montaje se adaptan a los requisitos del instrumento."
+    ],
+    "fr": [
+      "SM-250-PEEK est une pompe doseuse miniature configurable d’une capacité nominale de 250 μL pour la distribution de réactifs, l’ajout de liquide réactionnel et la manipulation dosée de liquides dans les instruments compacts. La tête en PEEK et le mécanisme de dosage à piston entraîné par moteur pas-à-pas permettent l’aspiration et la distribution programmées.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. La répétabilité à pleine course est ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles ; l’exactitude est confirmée pour la configuration choisie. Les options de vannes, de retour d’information optique et de contrôleur permettent l’ajout dosé et la commutation des circuits.",
+      "La personnalisation OEM comprend des pistons en céramique, acier inoxydable ou PEEK, avec des joints adaptés au réactif. Les têtes peuvent être en PEEK, PMMA, PSU ou POM ; les tubulures, les sondes de distribution et le montage sont choisis selon les besoins de l’instrument."
+    ],
+    "ko": [
+      "SM-250-PEEK는 공칭 용량 250 μL의 맞춤형 소형 정량 펌프로, 시약 분주, 반응액 첨가 및 소형 장비의 정량 액체 취급에 적합합니다. PEEK 펌프 헤드와 스테핑 모터 구동 플런저 계량 구조를 사용하여 프로그램에 따라 액체를 흡입하고 토출합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 반복성은 ≤0.5%이며, 예상 수명은 500만 회입니다. 정확도는 선택한 구성에 따라 확인합니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 정량 첨가와 유로 전환을 제어할 수 있습니다.",
+      "OEM 맞춤 제작을 지원하며, 플런저는 세라믹, 스테인리스강 또는 PEEK에서 선택하고 시약 성분에 맞춰 씰을 구성할 수 있습니다. 펌프 헤드 재질은 PEEK, PMMA, PSU, POM에서 선택할 수 있으며, 튜빙, 시료 주입 니들 및 설치 방식은 장비 요구에 맞춰 결정합니다."
+    ],
+    "ru": [
+      "SM-250-PEEK — миниатюрный дозирующий насос номинальным объёмом 250 мкл с возможностью индивидуальной конфигурации для дозирования реагентов, добавления реакционных растворов и работы с заданными объёмами жидкости в компактных приборах. Головка из PEEK и плунжерный дозирующий механизм с шаговым приводом обеспечивают программируемый забор и выдачу жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Показатель повторяемости на полном ходе — ≤0,5%, ожидаемый ресурс — 5 млн циклов; точность дозирования подтверждается для выбранной конфигурации. Клапанные узлы, оптическая обратная связь и контроллер позволяют организовать дозированное добавление жидкости и переключение трактов.",
+      "Предусмотрено изготовление в OEM-конфигурации: плунжер можно выбрать из керамики, нержавеющей стали или PEEK, а уплотнения — подобрать под состав реагента. Для головки доступны PEEK, PMMA, PSU и POM. Трубки, дозирующие иглы и способ монтажа определяются требованиями прибора."
+    ]
+  },
+  "SM-500-PMMA": {
+    "zh": [
+      "SM-500-PMMA 是标称容量为 500 μL 的 OEM 微型加液泵，适用于小型自动化仪器的试剂添加、稀释液定量输送及样本处理。采用 PMMA 泵头与陶瓷柱塞，由步进电机驱动柱塞往复运动，完成定量吸排液。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程重复性为 ≤0.5%，预计寿命为 500 万次；准确性指标按所选配置确认。可配套光耦反馈、阀组件与控制器，满足加液动作与仪器程序的配合需求。",
+      "泵头材料可选 PMMA、PSU、POM、PEEK，柱塞材料可选陶瓷、不锈钢或 PEEK。可根据试剂与稀释液特性，匹配加样针、管路、控制器和安装配置，形成适合整机布局的加液单元。"
+    ],
+    "en": [
+      "SM-500-PMMA is an OEM miniature dosing pump with a nominal capacity of 500 μL for reagent addition, metered diluent delivery and sample handling in small automated instruments. Its PMMA head and ceramic piston use a reciprocating stepper drive for metered aspiration and dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke repeatability is ≤0.5%, with an anticipated life of 5 million cycles; dispensing accuracy is confirmed for the selected configuration. Optical feedback, valve assemblies and a controller coordinate dispensing actions with the instrument program.",
+      "Head options are PMMA, PSU, POM and PEEK, with ceramic, stainless steel or PEEK pistons. Dispensing probes, tubing, controller and mounting arrangements can be matched to reagent and diluent properties to build a dosing unit suited to the instrument layout."
+    ],
+    "es": [
+      "SM-500-PMMA es una bomba dosificadora miniatura OEM de 500 μL de capacidad nominal para añadir reactivos, suministrar diluyentes y manejar muestras en instrumentos automatizados pequeños. El cabezal de PMMA y el pistón cerámico utilizan un accionamiento alternativo por motor paso a paso para aspiración y dispensación dosificada.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La repetibilidad a carrera completa es ≤0,5 %, con una vida útil estimada de 5 millones de ciclos; la exactitud se confirma para la configuración seleccionada. La realimentación óptica, las válvulas y el controlador se pueden configurar para coordinar la dosificación con el programa del instrumento.",
+      "Los cabezales pueden ser de PMMA, PSU, POM o PEEK, con pistones de cerámica, acero inoxidable o PEEK. Las sondas de dispensación, los tubos, el controlador y el montaje se seleccionan según el reactivo y el diluyente para configurar una unidad dosificadora adecuada al equipo."
+    ],
+    "fr": [
+      "SM-500-PMMA est une pompe doseuse miniature OEM d’une capacité nominale de 500 μL pour l’ajout de réactifs, l’alimentation dosée en diluants et le traitement d’échantillons dans les petits instruments automatisés. La tête en PMMA et le piston en céramique utilisent un entraînement alternatif par moteur pas-à-pas pour aspirer et distribuer des volumes définis.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. La répétabilité à pleine course est ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles ; l’exactitude est confirmée pour la configuration choisie. Le retour d’information optique, les ensembles de vannes et le contrôleur peuvent être configurés pour coordonner le dosage avec le programme de l’instrument.",
+      "Les têtes peuvent être en PMMA, PSU, POM ou PEEK, avec des pistons en céramique, acier inoxydable ou PEEK. Les sondes de distribution, les tubulures, le contrôleur et le montage sont choisis selon les réactifs et diluants pour former une unité de dosage adaptée à l’implantation de l’instrument."
+    ],
+    "ko": [
+      "SM-500-PMMA는 공칭 용량 500 μL의 OEM 소형 액체 공급 펌프로, 소형 자동화 장비의 시약 첨가, 희석액 정량 이송 및 시료 처리에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터의 플런저 왕복 구동으로 정량 흡입과 토출을 수행합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 반복성은 ≤0.5%이며, 예상 수명은 500만 회입니다. 정확도는 선택한 구성에 따라 확인합니다. 광학 피드백, 밸브 어셈블리 및 컨트롤러를 함께 구성하여 액체 첨가 동작을 장비 프로그램과 연계할 수 있습니다.",
+      "펌프 헤드 재질은 PMMA, PSU, POM, PEEK에서 선택할 수 있습니다. 플런저 재질은 세라믹, 스테인리스강 또는 PEEK 중에서 선택할 수 있습니다. 시약과 희석액의 특성에 맞춰 시료 주입 니들, 튜빙, 컨트롤러 및 설치 구성을 조정하여 장비 배치에 적합한 액체 공급 유닛을 구성할 수 있습니다."
+    ],
+    "ru": [
+      "SM-500-PMMA — миниатюрный OEM-насос для дозированной подачи жидкости номинальным объёмом 500 мкл, предназначенный для добавления реагентов, дозированного переноса разбавителя и обработки проб в компактных автоматизированных приборах. Головка из PMMA и керамический плунжер с возвратно-поступательным шаговым приводом обеспечивают дозированный забор и выдачу жидкости.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Показатель повторяемости на полном ходе — ≤0,5%, ожидаемый ресурс — 5 млн циклов; точность дозирования подтверждается для выбранной конфигурации. Оптическая обратная связь, клапанные узлы и контроллер позволяют согласовать подачу жидкости с программой прибора.",
+      "Для головки доступны PMMA, PSU, POM и PEEK. Для плунжера доступны керамика, нержавеющая сталь или PEEK. Дозирующие иглы, трубки, контроллер и монтажная конфигурация подбираются под свойства реагентов и разбавителей, чтобы сформировать узел подачи жидкости с учётом компоновки прибора."
+    ]
+  },
+  "SM-1000-PMMA": {
+    "zh": [
+      "SM-1000-PMMA 是标称容量为 1 mL 的微型分液泵，适用于小型设备的缓冲液分配、稀释液添加及自动化配液。采用 PMMA 泵头与陶瓷柱塞，通过紧凑的步进驱动结构完成毫升级液体的吸取与分配。",
+      "液路接口可选 1/4-28 UNF 或 M6，满量程为 2000 步，满量程重复性为 ≤0.5%，预计寿命为 500 万次；准确性指标按所选配置确认。可配套管路、阀组件、光耦反馈与控制器，支持缓冲液分配和多次吸排液流程。",
+      "可根据缓冲液成分及配液要求匹配接液材料，泵头可选 PMMA、PSU、POM、PEEK，柱塞可选陶瓷、不锈钢或 PEEK。管路连接、控制组件和安装方式可按小型设备的空间与布局定制。"
+    ],
+    "en": [
+      "SM-1000-PMMA is a miniature dispense pump with a nominal capacity of 1 mL for buffer dispensing, diluent addition and automated liquid preparation in small instruments. The PMMA head and ceramic piston use a compact stepper drive for milliliter-scale aspiration and dispensing.",
+      "Ports are available in 1/4-28 UNF or M6, with 2000 steps per full stroke. Full-stroke repeatability is ≤0.5%, with an anticipated life of 5 million cycles; dispensing accuracy is confirmed for the selected configuration. Tubing, valve assemblies, optical feedback and a controller support buffer distribution and repeated aspirate/dispense cycles.",
+      "Wetted materials can be matched to buffer chemistry and liquid-preparation requirements. Head options are PMMA, PSU, POM and PEEK, with ceramic, stainless steel or PEEK pistons. Tubing connections, control components and mounting can be tailored to the compact instrument layout."
+    ],
+    "es": [
+      "SM-1000-PMMA es una bomba dispensadora miniatura de 1 mL de capacidad nominal para distribuir tampones, añadir diluyentes y preparar líquidos automáticamente en equipos pequeños. Su cabezal de PMMA y su pistón cerámico, con accionamiento compacto por motor paso a paso, trabajan con volúmenes del orden del mililitro.",
+      "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La repetibilidad a carrera completa es ≤0,5 %, con una vida útil estimada de 5 millones de ciclos; la exactitud se confirma para la configuración seleccionada. Se pueden incorporar tubos, válvulas, realimentación óptica y un controlador para distribuir tampones y repetir ciclos de aspiración y dispensación.",
+      "Los materiales en contacto con el líquido se seleccionan según la composición del tampón y la preparación requerida. Hay cabezales de PMMA, PSU, POM o PEEK y pistones de cerámica, acero inoxidable o PEEK. Las conexiones de tubos, el control y el montaje se pueden personalizar para el espacio del equipo."
+    ],
+    "fr": [
+      "SM-1000-PMMA est une pompe de distribution miniature d’une capacité nominale de 1 mL pour la distribution de tampons, l’ajout de diluants et la préparation automatique de liquides dans les petits équipements. Sa tête en PMMA et son piston en céramique utilisent un entraînement pas-à-pas compact pour travailler à l’échelle du millilitre.",
+      "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. La répétabilité à pleine course est ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles ; l’exactitude est confirmée pour la configuration choisie. Des tubulures, des vannes, un retour d’information optique et un contrôleur peuvent être associés à la distribution de tampons et aux cycles répétés d’aspiration et de distribution.",
+      "Les matériaux en contact avec le liquide sont choisis selon la composition du tampon et la préparation requise. Les têtes peuvent être en PMMA, PSU, POM ou PEEK et les pistons en céramique, acier inoxydable ou PEEK. Les raccordements, les composants de commande et le montage peuvent être personnalisés pour l’espace disponible."
+    ],
+    "ko": [
+      "SM-1000-PMMA는 공칭 용량 1 mL의 소형 분주 펌프로, 소형 장비의 완충액 분주, 희석액 첨가 및 자동 액체 조제에 적합합니다. PMMA 펌프 헤드, 세라믹 플런저 및 소형 스테핑 모터 구동 구조로 밀리리터 단위의 액체를 흡입하고 분주합니다.",
+      "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 반복성은 ≤0.5%이며, 예상 수명은 500만 회입니다. 정확도는 선택한 구성에 따라 확인합니다. 튜빙, 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 완충액 분주와 반복 흡입·토출 공정을 수행할 수 있습니다.",
+      "완충액 성분과 액체 조제 요구에 맞춰 접액부 재질을 선택할 수 있습니다. 펌프 헤드는 PMMA, PSU, POM, PEEK에서 선택할 수 있습니다. 플런저 재질은 세라믹, 스테인리스강 또는 PEEK 중에서 선택할 수 있습니다. 소형 장비의 공간과 배치에 맞춰 튜빙 연결, 제어 부품 및 설치 방식을 맞춤 제작할 수 있습니다."
+    ],
+    "ru": [
+      "SM-1000-PMMA — миниатюрный насос-дозатор номинальным объёмом 1 мл для подачи буферных растворов, добавления разбавителя и автоматизированного приготовления растворов в компактном оборудовании. Головка из PMMA, керамический плунжер и компактный шаговый привод обеспечивают забор и выдачу миллилитровых объёмов.",
+      "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Показатель повторяемости на полном ходе — ≤0,5%, ожидаемый ресурс — 5 млн циклов; точность дозирования подтверждается для выбранной конфигурации. Трубки, клапанные узлы, оптическая обратная связь и контроллер позволяют организовать дозирование буферных растворов и последовательности многократного забора и выдачи жидкости.",
+      "Материалы деталей, контактирующих с жидкостью, подбираются под состав буферного раствора и требования к его приготовлению. Для головки доступны PMMA, PSU, POM и PEEK. Для плунжера доступны керамика, нержавеющая сталь или PEEK. Соединения трубок, компоненты управления и способ монтажа можно адаптировать к пространству и компоновке компактного оборудования."
+    ]
+  },
+  "TM-50-PMMA": {
+    "zh": [
+      "TM-50-PMMA 是标称容量为 50 μL 的超微型加液泵，适用于紧凑型分析模块中的微量试剂添加。采用 PMMA 泵头与陶瓷柱塞，由步进电机驱动柱塞往复运动，便于在有限安装空间内布置加液单元。",
+      "采用 6-40 UNF 液路接口，满量程为 2540 步，可配套阀组件、接管与驱动控制，支持分析模块的定量吸排液。准确性、重复性与寿命指标按项目配置确认。",
+      "支持围绕 OEM 分析模块定制安装方式、管路连接及阀组件配置。其他泵头或柱塞材料可根据试剂成分、密封配合和结构空间评估，具体材料组合与结构以项目图纸为准。"
+    ],
+    "en": [
+      "TM-50-PMMA is an ultra-compact dosing pump with a nominal capacity of 50 μL for microliter reagent addition in compact analytical modules. Its PMMA head and ceramic piston use a reciprocating stepper drive for integration into space-constrained dispensing units.",
+      "The configuration uses 6-40 UNF ports and 2540 steps per full stroke. Valve assemblies, tubing connections and drive controls can be configured for metered aspiration and dispensing in analytical modules. Accuracy, repeatability and service-life specifications are confirmed for the project configuration.",
+      "Mounting, tubing connections and valve configurations can be customized for OEM analytical modules. Alternative head or piston materials can be assessed against reagent chemistry, seal fit and available space; the final material and mechanical configuration is defined by the project drawing."
+    ],
+    "es": [
+      "TM-50-PMMA es una bomba dosificadora ultracompacta de 50 μL de capacidad nominal para añadir microvolúmenes de reactivos en módulos analíticos compactos. El cabezal de PMMA y el pistón cerámico utilizan un accionamiento alternativo por motor paso a paso para integrar la unidad de dosificación en espacios reducidos.",
+      "La configuración utiliza conexiones 6-40 UNF y 2540 pasos por carrera completa. Se pueden configurar válvulas, conexiones de tubos y control del accionamiento para aspiración y dispensación dosificadas en módulos analíticos. La exactitud, la repetibilidad y la vida útil se confirman para la configuración del proyecto.",
+      "El montaje, las conexiones de tubos y las válvulas se pueden personalizar para módulos analíticos OEM. Otros materiales de cabezal o pistón se evalúan según el reactivo, el ajuste de las juntas y el espacio disponible; la combinación final de materiales y la estructura se definen en el plano del proyecto."
+    ],
+    "fr": [
+      "TM-50-PMMA est une pompe doseuse ultra-compacte d’une capacité nominale de 50 μL pour l’ajout de microvolumes de réactifs dans les modules d’analyse compacts. Sa tête en PMMA et son piston en céramique utilisent un entraînement alternatif par moteur pas-à-pas pour intégrer l’unité de dosage dans un espace limité.",
+      "La configuration utilise des raccordements 6-40 UNF et 2540 pas sur la course complète. Des ensembles de vannes, des tubulures et une commande d’entraînement peuvent être configurés pour l’aspiration et la distribution dosées dans les modules d’analyse. L’exactitude, la répétabilité et la durée de vie sont confirmées pour la configuration du projet.",
+      "Le montage, les raccordements des tubulures et les vannes peuvent être personnalisés pour les modules d’analyse OEM. D’autres matériaux de tête ou de piston peuvent être évalués selon le réactif, l’ajustement des joints et l’espace disponible ; les matériaux et la structure retenus sont définis par le plan du projet."
+    ],
+    "ko": [
+      "TM-50-PMMA는 공칭 용량 50 μL의 초소형 액체 공급 펌프로, 소형 분석 모듈의 미량 시약 첨가에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터의 왕복 구동 구조로 제한된 설치 공간에 액체 공급 유닛을 배치할 수 있습니다.",
+      "6-40 UNF 유체 연결 포트를 사용하며, 전체 스트로크는 2540 스텝입니다. 밸브 어셈블리, 튜빙 연결부 및 구동 제어를 함께 구성하여 분석 모듈의 정량 흡입·토출을 구현할 수 있습니다. 정확도, 반복성 및 수명 사양은 프로젝트 구성에 따라 확인합니다.",
+      "OEM 분석 모듈에 맞춰 설치 방식, 튜빙 연결 및 밸브 어셈블리를 맞춤 구성할 수 있습니다. 다른 펌프 헤드나 플런저 재질은 시약 성분, 씰과의 조합 및 구조상 가용 공간을 기준으로 검토하며, 최종 재질 조합과 구조는 프로젝트 도면에 따라 결정합니다."
+    ],
+    "ru": [
+      "TM-50-PMMA — сверхминиатюрный насос для подачи жидкости номинальным объёмом 50 мкл, предназначенный для добавления микродоз реагентов в компактных аналитических модулях. Головка из PMMA и керамический плунжер с возвратно-поступательным шаговым приводом позволяют разместить узел подачи жидкости в ограниченном пространстве.",
+      "Жидкостные присоединения — 6-40 UNF, полный ход — 2540 шагов. Возможна комплектация клапанными узлами, соединениями для трубок и средствами управления приводом для дозированного забора и выдачи жидкости в аналитическом модуле. Точность, повторяемость и ресурс подтверждаются для проектной конфигурации.",
+      "Для OEM-аналитического модуля можно адаптировать способ монтажа, соединения трубок и клапанную конфигурацию. Другие материалы головки или плунжера рассматриваются с учётом состава реагента, сопряжения с уплотнениями и доступного пространства. Окончательное сочетание материалов и конструкция определяются проектными чертежами."
+    ]
+  },
+  "TM-100-PMMA": {
+    "zh": [
+      "TM-100-PMMA 是标称容量为 100 μL 的超微型取样泵，适用于小型检测模块中的样本吸取与定量分配。采用 PMMA 泵头与陶瓷柱塞，通过步进驱动控制柱塞行程，完成紧凑液路内的样本转移。",
+      "采用 6-40 UNF 液路接口，满量程为 2540 步，可结合阀组件、管路与驱动控制组织取样和排液步骤。准确性、重复性与寿命指标按项目配置确认。",
+      "可根据检测模块的样本路径和安装位置，匹配接管方式、固定结构及阀组件。泵头、柱塞和密封配合可围绕样本成分及清洗需求开展材料与结构评估，支持模块化液路集成。"
+    ],
+    "en": [
+      "TM-100-PMMA is an ultra-compact sampling pump with a nominal capacity of 100 μL for sample aspiration and metered dispensing in small detection modules. A PMMA head and ceramic piston use stepper-controlled strokes to transfer samples within compact fluid paths.",
+      "The configuration uses 6-40 UNF ports and 2540 steps per full stroke. Valve assemblies, tubing and drive controls can be matched to the sampling and dispensing sequence. Accuracy, repeatability and service-life specifications are confirmed for the project configuration.",
+      "Tubing connections, mounting features and valves can be matched to the sample path and installation position in the detection module. Head, piston and seal materials and geometry can be assessed against sample composition and cleaning requirements for modular fluidic integration."
+    ],
+    "es": [
+      "TM-100-PMMA es una bomba de muestreo ultracompacta de 100 μL de capacidad nominal para aspirar y dispensar muestras en módulos de detección pequeños. El cabezal de PMMA y el pistón cerámico realizan carreras controladas por motor paso a paso para transferir muestras dentro de circuitos compactos.",
+      "La configuración utiliza conexiones 6-40 UNF y 2540 pasos por carrera completa. Las válvulas, los tubos y el control del accionamiento se pueden adaptar a la secuencia de muestreo y dispensación. La exactitud, la repetibilidad y la vida útil se confirman para la configuración del proyecto.",
+      "Las conexiones de tubos, los elementos de fijación y las válvulas se pueden adaptar al recorrido de la muestra y a la posición del módulo de detección. Los materiales y la geometría del cabezal, el pistón y las juntas se evalúan según la muestra y la limpieza, para la integración de circuitos modulares."
+    ],
+    "fr": [
+      "TM-100-PMMA est une pompe de prélèvement ultra-compacte d’une capacité nominale de 100 μL pour l’aspiration et la distribution dosée d’échantillons dans les petits modules de détection. La tête en PMMA et le piston en céramique utilisent des courses commandées par moteur pas-à-pas pour transférer les échantillons dans des circuits compacts.",
+      "La configuration utilise des raccordements 6-40 UNF et 2540 pas sur la course complète. Les ensembles de vannes, les tubulures et la commande d’entraînement peuvent être adaptés aux séquences de prélèvement et de distribution. L’exactitude, la répétabilité et la durée de vie sont confirmées pour la configuration du projet.",
+      "Les raccordements des tubulures, les fixations et les vannes peuvent être adaptés au trajet de l’échantillon et à la position du module de détection. Les matériaux et la géométrie de la tête, du piston et des joints peuvent être évalués selon l’échantillon et le nettoyage, pour l’intégration de circuits modulaires."
+    ],
+    "ko": [
+      "TM-100-PMMA는 공칭 용량 100 μL의 초소형 샘플링 펌프로, 소형 검출 모듈의 시료 흡입 및 정량 분주에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터로 플런저 스트로크를 제어하여 소형 유로 내에서 시료를 이송합니다.",
+      "6-40 UNF 유체 연결 포트를 사용하며, 전체 스트로크는 2540 스텝입니다. 밸브 어셈블리, 튜빙 및 구동 제어와 연계하여 샘플링과 토출 단계를 구성할 수 있습니다. 정확도, 반복성 및 수명 사양은 프로젝트 구성에 따라 확인합니다.",
+      "검출 모듈의 시료 경로와 설치 위치에 맞춰 튜빙 연결 방식, 고정 구조 및 밸브 어셈블리를 구성할 수 있습니다. 시료 성분과 세척 요구를 바탕으로 펌프 헤드, 플런저 및 씰의 재질과 구조를 검토하여 모듈형 유로 통합을 지원합니다."
+    ],
+    "ru": [
+      "TM-100-PMMA — сверхминиатюрный насос для отбора проб номинальным объёмом 100 мкл для забора и дозированной подачи проб в малогабаритных измерительных модулях. Головка из PMMA и керамический плунжер работают с шаговым приводом, который управляет ходом плунжера для переноса пробы внутри компактного жидкостного тракта.",
+      "Жидкостные присоединения — 6-40 UNF, полный ход — 2540 шагов. Клапанные узлы, трубки и управление приводом можно согласовать для выполнения этапов отбора пробы и выдачи жидкости. Точность, повторяемость и ресурс подтверждаются для проектной конфигурации.",
+      "Способ подключения трубок, крепления и клапанные узлы подбираются с учётом пути пробы и места установки в измерительном модуле. Материалы и конструкция головки, плунжера и уплотнений оцениваются с учётом состава пробы и требований к промывке для интеграции в модульный жидкостный тракт."
+    ]
+  },
+  "TM-250-PMMA": {
+    "zh": [
+      "TM-250-PMMA 是标称容量为 250 μL 的 OEM 紧凑型加样泵，适用于分析模块中的试剂添加和反应液定量分配。采用 PMMA 泵头与陶瓷柱塞，由步进电机驱动柱塞完成吸排液，便于与阀路和检测单元组合布局。",
+      "采用 6-40 UNF 液路接口，满量程为 2540 步，可配套阀组件与驱动控制，满足分析模块分步加液和液路切换的集成需求。准确性、重复性与寿命指标按项目配置确认。",
+      "支持按项目匹配安装方式、接管、阀组件和驱动控制配置。其他泵头及柱塞材料可结合反应液成分、密封设计与可用空间评估，具体配置按整机需求和项目图纸确定。"
+    ],
+    "en": [
+      "TM-250-PMMA is an OEM compact dispensing pump with a nominal capacity of 250 μL for reagent addition and metered reaction-liquid dispensing in analytical modules. Its PMMA head and ceramic piston use a stepper drive for aspiration and dispensing alongside valves and detection components.",
+      "The configuration uses 6-40 UNF ports and 2540 steps per full stroke. Valve assemblies and drive controls support staged dispensing and fluid-path switching in analytical modules. Accuracy, repeatability and service-life specifications are confirmed for the project configuration.",
+      "Mounting, tubing connections, valves and drive controls can be configured for the project. Alternative head and piston materials can be assessed against reaction-liquid chemistry, seal design and available space, with the final configuration defined by instrument requirements and the project drawing."
+    ],
+    "es": [
+      "TM-250-PMMA es una bomba dispensadora compacta OEM de 250 μL de capacidad nominal para añadir reactivos y dosificar líquidos de reacción en módulos analíticos. El cabezal de PMMA y el pistón cerámico utilizan un motor paso a paso para aspiración y dispensación, con una disposición compatible con la integración de válvulas y unidades de detección.",
+      "La configuración utiliza conexiones 6-40 UNF y 2540 pasos por carrera completa. Las opciones de válvulas y control del accionamiento permiten integrar la dispensación por etapas y la conmutación de fluidos en módulos analíticos. La exactitud, la repetibilidad y la vida útil se confirman para la configuración del proyecto.",
+      "El montaje, las conexiones de tubos, las válvulas y el control del accionamiento se configuran para el proyecto. Otros materiales de cabezal y pistón se evalúan según el líquido de reacción, el diseño de las juntas y el espacio disponible; la configuración final responde al instrumento y al plano del proyecto."
+    ],
+    "fr": [
+      "TM-250-PMMA est une pompe compacte OEM de distribution d’une capacité nominale de 250 μL pour l’ajout de réactifs et la distribution dosée de liquide réactionnel dans les modules d’analyse. La tête en PMMA et le piston en céramique utilisent un entraînement pas-à-pas pour l’aspiration et la distribution, avec une implantation adaptée à l’association de vannes et d’unités de détection.",
+      "La configuration utilise des raccordements 6-40 UNF et 2540 pas sur la course complète. Les options de vannes et de commande d’entraînement permettent d’intégrer la distribution par étapes et la commutation des fluides aux modules d’analyse. L’exactitude, la répétabilité et la durée de vie sont confirmées pour la configuration du projet.",
+      "Le montage, les raccordements des tubulures, les vannes et la commande d’entraînement sont configurés pour le projet. D’autres matériaux de tête et de piston peuvent être évalués selon le liquide réactionnel, la conception des joints et l’espace disponible ; la configuration finale suit les besoins de l’instrument et le plan du projet."
+    ],
+    "ko": [
+      "TM-250-PMMA는 공칭 용량 250 μL의 OEM 소형 분주 펌프로, 분석 모듈의 시약 첨가와 반응액 정량 분주에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터가 플런저를 구동하여 액체를 흡입하고 토출합니다. 밸브 유로 및 검출 유닛과 함께 배치할 수 있는 구조입니다.",
+      "6-40 UNF 유체 연결 포트를 사용하며, 전체 스트로크는 2540 스텝입니다. 밸브 어셈블리 및 구동 제어를 함께 구성하여 분석 모듈의 단계별 액체 첨가와 유로 전환을 통합할 수 있습니다. 정확도, 반복성 및 수명 사양은 프로젝트 구성에 따라 확인합니다.",
+      "프로젝트에 맞춰 설치 방식, 튜빙 연결, 밸브 어셈블리 및 구동 제어를 구성할 수 있습니다. 다른 펌프 헤드와 플런저 재질은 반응액 성분, 씰 설계 및 가용 공간을 기준으로 검토하며, 세부 구성은 장비 요구와 프로젝트 도면에 따라 결정합니다."
+    ],
+    "ru": [
+      "TM-250-PMMA — компактный OEM-насос-дозатор номинальным объёмом 250 мкл для добавления реагентов и дозирования реакционных растворов в аналитических модулях. Конструкция включает головку из PMMA и керамический плунжер с шаговым приводом для забора и выдачи жидкости; насос можно компоновать с клапанными и измерительными узлами.",
+      "Жидкостные присоединения — 6-40 UNF, полный ход — 2540 шагов. Клапанные узлы и управление приводом позволяют интегрировать поэтапную подачу жидкости и переключение трактов в аналитическом модуле. Точность, повторяемость и ресурс подтверждаются для проектной конфигурации.",
+      "Способ монтажа, трубные соединения, клапанные узлы и управление приводом подбираются под проект. Другие материалы головки и плунжера оцениваются с учётом состава реакционного раствора, конструкции уплотнений и доступного пространства; конфигурация определяется требованиями прибора и проектными чертежами."
+    ]
+  },
+  "TM-500-PMMA": {
+    "zh": [
+      "TM-500-PMMA 是标称容量为 500 μL 的紧凑型分液泵，适用于模块化仪器中的试剂添加、缓冲液分配及定量加液。采用 PMMA 泵头与陶瓷柱塞，通过步进驱动的柱塞往复结构完成液体吸取和排出。",
+      "采用 6-40 UNF 液路接口，满量程为 2540 步，可配套管路、阀组件与驱动控制，支持试剂和缓冲液的分步输送。准确性、重复性与寿命指标按项目配置确认。",
+      "可围绕仪器安装空间和液路走向，定制接管方式、固定结构及配套阀组件。泵头、柱塞与密封材料可根据介质特性开展项目评估，并匹配整机所需的驱动和控制配置。"
+    ],
+    "en": [
+      "TM-500-PMMA is a compact dispense pump with a nominal capacity of 500 μL for reagent addition, buffer dispensing and metered dosing in modular instruments. Its PMMA head and ceramic piston use a reciprocating stepper drive to aspirate and dispense liquid.",
+      "The configuration uses 6-40 UNF ports and 2540 steps per full stroke. Tubing, valve assemblies and drive controls can be configured for staged reagent and buffer delivery. Accuracy, repeatability and service-life specifications are confirmed for the project configuration.",
+      "Tubing connections, mounting features and valve assemblies can be tailored to the instrument space and fluid routing. Head, piston and seal materials can be assessed for the fluid, with drive and control arrangements matched to the instrument."
+    ],
+    "es": [
+      "TM-500-PMMA es una bomba dispensadora compacta de 500 μL de capacidad nominal para añadir reactivos, distribuir tampones y dosificar líquidos en instrumentos modulares. El cabezal de PMMA y el pistón cerámico utilizan un accionamiento alternativo por motor paso a paso para aspirar y dispensar.",
+      "La configuración utiliza conexiones 6-40 UNF y 2540 pasos por carrera completa. Se pueden configurar tubos, válvulas y control del accionamiento para suministrar reactivos y tampones por etapas. La exactitud, la repetibilidad y la vida útil se confirman para la configuración del proyecto.",
+      "Las conexiones de tubos, los elementos de fijación y los conjuntos de válvulas se pueden personalizar según el espacio y el recorrido del circuito. Los materiales del cabezal, el pistón y las juntas se evalúan para el fluido, con accionamiento y control adaptados al instrumento."
+    ],
+    "fr": [
+      "TM-500-PMMA est une pompe de distribution compacte d’une capacité nominale de 500 μL pour l’ajout de réactifs, la distribution de tampons et le dosage de liquides dans les instruments modulaires. Sa tête en PMMA et son piston en céramique utilisent un entraînement alternatif par moteur pas-à-pas pour aspirer et distribuer le liquide.",
+      "La configuration utilise des raccordements 6-40 UNF et 2540 pas sur la course complète. Les tubulures, les ensembles de vannes et la commande d’entraînement peuvent être configurés pour l’alimentation par étapes en réactifs et en tampons. L’exactitude, la répétabilité et la durée de vie sont confirmées pour la configuration du projet.",
+      "Les raccordements des tubulures, les fixations et les ensembles de vannes peuvent être personnalisés selon l’espace disponible et le tracé du circuit. Les matériaux de la tête, du piston et des joints peuvent être évalués pour le fluide, avec un entraînement et une commande adaptés à l’instrument."
+    ],
+    "ko": [
+      "TM-500-PMMA는 공칭 용량 500 μL의 소형 분주 펌프로, 모듈형 장비의 시약 첨가, 완충액 분주 및 정량 액체 공급에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터로 구동하는 왕복 플런저 구조로 액체를 흡입하고 토출합니다.",
+      "6-40 UNF 유체 연결 포트를 사용하며, 전체 스트로크는 2540 스텝입니다. 튜빙, 밸브 어셈블리 및 구동 제어를 함께 구성하여 시약과 완충액을 단계별로 이송할 수 있습니다. 정확도, 반복성 및 수명 사양은 프로젝트 구성에 따라 확인합니다.",
+      "장비의 설치 공간과 유로 배치에 맞춰 튜빙 연결 방식, 고정 구조 및 밸브 어셈블리를 맞춤 구성할 수 있습니다. 펌프 헤드, 플런저 및 씰 재질은 액체 특성을 기준으로 프로젝트별로 검토하며, 장비에 필요한 구동 및 제어 구성도 함께 조정합니다."
+    ],
+    "ru": [
+      "TM-500-PMMA — компактный насос-дозатор номинальным объёмом 500 мкл для добавления реагентов, распределения буферных растворов и дозированной подачи жидкости в модульных приборах. Головка из PMMA и керамический плунжер с возвратно-поступательным шаговым приводом обеспечивают забор и выдачу жидкости.",
+      "Жидкостные присоединения — 6-40 UNF, полный ход — 2540 шагов. Трубки, клапанные узлы и управление приводом позволяют организовать поэтапную подачу реагентов и буферных растворов. Точность, повторяемость и ресурс подтверждаются для проектной конфигурации.",
+      "Способ подключения трубок, крепления и клапанные узлы можно адаптировать к монтажному пространству и расположению жидкостных линий прибора. Материалы головки, плунжера и уплотнений оцениваются в рамках проекта с учётом свойств среды; привод и управление согласуются с требованиями оборудования."
+    ]
+  }
+}

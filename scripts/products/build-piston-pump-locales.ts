@@ -3,7 +3,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { EA_PUMP_MODELS, getEaPumpContent } from "../../data/products/detail/applications/ea-pump-content";
 import { COMPACT_PUMP_MODELS, getCompactPumpContent } from "../../data/products/detail/applications/compact-pump-content";
-import { PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL } from "../../data/products/selection/card-copy/plunger-pump-card-copy";
+import { getPistonPumpMarketingCopy } from "../../data/products/piston-pump-marketing-copy";
+import { getPistonPumpIntroduction } from "../../data/products/detail/piston-pump-introductions";
+import { formatPistonPumpDisplayText } from "../../data/products/detail/piston-pump-display-locale";
 import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
 import rawCatalog from "../../data/products/detail/applications/piston-pump-translations.json";
 
@@ -33,7 +35,7 @@ function translateText(text: string, locale: TargetLocale): string {
       return tokens[Number(index)];
     });
   }).join(" ");
-  const result = prefix + translated;
+  const result = formatPistonPumpDisplayText(prefix + translated, locale);
   if (locale === "fr") return result.replace(/à le\b/g, "au").replace(/à les\b/g, "aux").replace(/\bde le\b/g, "du").replace(/\bde les\b/g, "des");
   if (locale === "es") return result.replace(/\ba el\b/g, "al").replace(/\bde el\b/g, "del");
   return result;
@@ -48,10 +50,6 @@ function translateValue<T>(value: T, locale: TargetLocale): T {
   return value;
 }
 
-const seoNouns: Translation = {
-  es: "Bomba de pistón de precisión", fr: "Pompe à piston de précision",
-  ko: "정밀 피스톤 펌프", ru: "Прецизионный поршневой насос",
-};
 const cta: Record<TargetLocale, { title: string; body: string; button: string }> = {
   es: { title: "Confirme la configuración de", body: "Indique el fluido, volumen por dosis, error permitido, tiempo, temperatura, contrapresión, espacio y requisitos de control. Foreach le ayudará a seleccionar materiales, puertos y componentes para su aplicación.", button: "Contactar con un ingeniero" },
   fr: { title: "Confirmez la configuration de", body: "Précisez le fluide, le volume par dose, l’erreur admissible, le délai, la température, la contre-pression, l’espace et les besoins de commande. Foreach vous aide à choisir les matériaux, raccordements et composants adaptés à votre application.", button: "Contacter un ingénieur" },
@@ -78,7 +76,9 @@ for (const slug of [...EA_PUMP_MODELS, ...COMPACT_PUMP_MODELS]) {
   };
   const extra = data as typeof data & { parameterFootnotes?: string[]; resourceFootnotes?: string[]; pageFootnotes?: string[]; imageCaption?: string; imageFootnotes?: string[]; sectionTitleMap?: Record<string, string> };
   const english = {
-    ...translatableContent, heading: PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL[slug.toUpperCase()],
+    // Headings and introductions are authored separately in each language; the catalog below
+    // continues to translate the unchanged technical and application content.
+    ...translatableContent, heading: undefined, description: undefined,
     specs: data.specs, parameterFootnotes: extra.parameterFootnotes, resourceFootnotes: extra.resourceFootnotes,
     pageFootnotes: extra.pageFootnotes, imageCaption: extra.imageCaption, imageFootnotes: extra.imageFootnotes,
     sectionTitleMap: extra.sectionTitleMap,
@@ -87,13 +87,16 @@ for (const slug of [...EA_PUMP_MODELS, ...COMPACT_PUMP_MODELS]) {
   for (const locale of locales) {
     const translated = translateValue(english, locale);
     const model = slug.toUpperCase();
-    const [, capacity, material] = slug.split("-");
-    const volume = Number(capacity) >= 1000 ? `${Number(capacity) / 1000} mL` : `${capacity} μL`;
-    const compactSeo = translated as typeof translated & { seoTitle?: string; metaDescription?: string };
-    const seoTitle = compactSeo.seoTitle || `${model} ${volume} ${material.toUpperCase()} ${seoNouns[locale]} | Foreach Technology`;
-    headings[locale][model] = translated.heading;
+    const copy = getPistonPumpMarketingCopy(model, locale);
+    if (!copy) throw new Error(`Missing authored marketing copy: ${model}/${locale}`);
+    const introduction = getPistonPumpIntroduction(model, locale);
+    if (!introduction) throw new Error(`Missing authored introduction: ${model}/${locale}`);
+    headings[locale][model] = copy.heading;
     generated[locale][slug] = {
-      ...translated, seoTitle, metaDescription: compactSeo.metaDescription || translated.description[0],
+      ...translated,
+      heading: copy.heading,
+      description: introduction,
+      seoTitle: copy.seoTitle, metaDescription: copy.metaDescription,
       bottomCtaTitle: `${cta[locale].title} ${model}`,
       bottomCtaDescription: cta[locale].body, bottomCtaButtonText: cta[locale].button, bottomCtaHref: "/contact/",
     };

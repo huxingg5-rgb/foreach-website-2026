@@ -8,6 +8,7 @@ import { probeControlDetailCopyEn } from "@/data/products/selection/probe-contro
 import { getTubingMaterialCopy } from "@/data/products/tubing/content";
 import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
 import { getSyringeModelRedirect } from "@/data/products/selection/syringe-pump-routes";
+import { getPistonPumpMarketingCopy } from "@/data/products/piston-pump-marketing-copy";
 
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
 import { instrumentCardsZh } from "@/data/products/selection/instrument-fluidics-copy.zh";
@@ -262,7 +263,8 @@ export default function ProductSelectionCard({
   const plungerCardHeading = getProductCardHeading(product, locale);
   const isMrv3Configuration = product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId);
   const isSolenoidConfiguration = product.seriesId === "6010" && /^(?:2|3)-way$/.test(product.productId);
-  const imageAlt = getValvelessPumpImageAlt(product.imageCard || "", locale) || getFittingMainImageAlt(product, locale) || ((isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
+  const pistonImageAlt = product.productTypeId === "plunger-pump" ? getPistonPumpMarketingCopy(product.detailSlug || product.productId, locale)?.imageAlt : undefined;
+  const imageAlt = pistonImageAlt || getValvelessPumpImageAlt(product.imageCard || "", locale) || getFittingMainImageAlt(product, locale) || ((isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
     ? product.imageAlt
     : controlCard ? `FOREACH ${controlCard.model} ${controlCard.name}` : valveCard ? `FOREACH ${valveCard.model} ${valveCard.name}` : safeTitle);
   const descriptionHeading = controlCard?.heading || valveCard?.heading || ((isMrv3Configuration || product.seriesId === "6010") ? safeSubtitle : authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")

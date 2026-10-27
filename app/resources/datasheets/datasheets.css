@@ -517,7 +517,7 @@
   height: 40px;
   padding: 0 18px;
   border: 1px solid var(--brand-blue);
-  border-radius: var(--radius-sm);
+  border-radius: 0;
   background: #ffffff;
   color: var(--brand-blue);
   font-size: 14px;
@@ -650,7 +650,7 @@
   height: 46px;
   padding: 0 24px;
   border: 1px solid #ffffff !important;
-  border-radius: 8px !important;
+  border-radius: 0 !important;
   background: #ffffff !important;
   color: var(--brand-blue) !important;
   font-size: 15px;

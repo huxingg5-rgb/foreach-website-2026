@@ -1,3 +1,4 @@
+import ApplicationFittingVideos from "@/components/applications/ApplicationFittingVideos";
 /* =========================================================
    page.tsx
    恒永达官网｜环保监测应用领域中文页面入口
@@ -19,5 +20,5 @@ export const metadata: Metadata = {
 export default function EnvironmentalMonitoringApplicationPage() {
   const data = getEnvironmentalMonitoringApplicationPageData("zh-CN");
 
-  return <EnvironmentalMonitoringApplicationClient data={data} />;
+  return <EnvironmentalMonitoringApplicationClient data={data} relatedVideos={<ApplicationFittingVideos />} />;
 }

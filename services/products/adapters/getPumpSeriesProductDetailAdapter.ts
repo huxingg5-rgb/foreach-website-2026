@@ -2,6 +2,9 @@ import type { SelectionLocale } from "@/data/products/selection/product-selectio
 import { getPistonPumpLocalizedContent } from "@/data/products/detail/applications/piston-pump-locales";
 import { getTmPumpGallery } from "@/data/products/detail/tm-pump-gallery";
 import { getSmPmmaPumpGallery } from "@/data/products/detail/sm-pmma-pump-gallery";
+import { getPistonPumpMarketingCopy } from "@/data/products/piston-pump-marketing-copy";
+import { getPistonPumpIntroduction } from "@/data/products/detail/piston-pump-introductions";
+import { formatPistonPumpDisplayText, formatPistonPumpSpecLabel } from "@/data/products/detail/piston-pump-display-locale";
 /* =========================================================
    getPumpSeriesProductDetailAdapter.ts
    恒永达官网｜泵系列数据库数据 → 原详情页数据结构适配器
@@ -324,7 +327,10 @@ function getSpecs(content: any, locale: "zh" | "en", strictLocale = false): Prod
       return true;
     });
 
-  return dedupeSpecs(specs);
+  return dedupeSpecs(specs).map((item) => strictLocale ? {
+    label: formatPistonPumpSpecLabel(item.label, locale),
+    value: formatPistonPumpDisplayText(item.value, locale),
+  } : item);
 }
 
 function getFootnotesByPosition(content: any, renderPosition: string) {
@@ -571,19 +577,20 @@ export function getPumpSeriesProductDetailAdapter(
     const base = getPumpSeriesProductDetailAdapter(slug, "en");
     const localized = getPistonPumpLocalizedContent(slug, locale);
     if (!base || !localized) return null;
+    const marketingCopy = getPistonPumpMarketingCopy(slug, locale);
     return {
       ...base,
       ...localized,
       ...getTmPumpGallery(slug, locale, base.additionalImages, base.additionalImageAlts),
       ...getSmPmmaPumpGallery(slug, locale, base.additionalImages, base.additionalImageAlts),
       __locale: locale,
-      model: `Foreach ${localized.heading}`,
-      name: `Foreach ${localized.heading}`,
+      model: localized.heading,
+      name: localized.heading,
       advantages: localized.description,
       description: localized.description.join("\n\n"),
       imageAltEn: undefined,
-      mainImageAlt: localized.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, ""),
-      imageAlt: localized.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, ""),
+      mainImageAlt: marketingCopy?.imageAlt || localized.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, ""),
+      imageAlt: marketingCopy?.imageAlt || localized.seoTitle.replace(/ \| Foreach(?: Technology)?$/i, ""),
     } as ProductDetailPageData;
   }
   const record = getPumpSeriesDetailData(slug, locale);
@@ -612,7 +619,7 @@ export function getPumpSeriesProductDetailAdapter(
     : "";
 
   const pageTitle =
-    (cardHeading ? `Foreach ${cardHeading}` : "") ||
+    cardHeading ||
     toText(content.h1) ||
     toText(content.title) ||
     toText(record.internalModelRef) ||
@@ -662,7 +669,7 @@ export function getPumpSeriesProductDetailAdapter(
 
     specSeriesKey: toText(record.seriesSlug || record.pumpTypeSlug || "pumps"),
 
-    specs: getSpecs(content, locale, Boolean(compactContent)),
+    specs: getSpecs(content, locale, Boolean(eaContent || compactContent)),
 
     drawing2dUrl: toText(resources.drawing2dUrl),
     drawingPdfUrl: toText(resources.drawing2dUrl),
@@ -684,11 +691,17 @@ export function getPumpSeriesProductDetailAdapter(
     pageFootnotes: getPageFootnotes(content),
   };
 
-  if (eaContent) {
-    const capacity = /\b(\d+(?:\.\d+)? (?:μL|mL))/.exec(PLUNGER_PUMP_CARD_HEADING_EN_BY_MODEL[toText(record.productId).toUpperCase()] || "")?.[1] || "";
-    const material = toText(record.productId).toUpperCase().endsWith("PEEK") ? "PEEK" : "PMMA";
-    data.seoTitle = `${toText(record.productId).toUpperCase()} ${capacity} ${material} ${locale === "zh" ? "精密柱塞泵" : "Precision Piston Pump"} | Foreach Technology`;
-    data.metaDescription = eaContent.description[0];
+  const marketingCopy = getPistonPumpMarketingCopy(toText(record.productId), locale);
+  if (marketingCopy) {
+    const paragraphs = getPistonPumpIntroduction(toText(record.productId), locale)
+      ?? getDetailDescription(candidates, locale);
+    data.name = marketingCopy.heading;
+    data.advantages = paragraphs;
+    data.description = paragraphs.join("\n\n");
+    data.seoTitle = marketingCopy.seoTitle;
+    data.metaDescription = marketingCopy.metaDescription;
+    data.mainImageAlt = marketingCopy.imageAlt;
+    data.imageAlt = marketingCopy.imageAlt;
   }
   return data;
 }

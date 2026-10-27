@@ -1,4 +1,5 @@
 import type { SelectionLocale } from "./product-selection.types";
+import { formatPistonPumpDisplayText } from "../detail/piston-pump-display-locale";
 
 export type PistonSeriesKey = "category" | "ea" | "sm" | "tm";
 type IntroCopy = { title: string; paragraphs: string[]; imageAlt: string };
@@ -248,7 +249,13 @@ const copy: Record<SelectionLocale, Record<PistonSeriesKey, IntroCopy>> = {
 };
 
 export function getPistonPumpIntroCopy(series: PistonSeriesKey, locale: SelectionLocale) {
-  return copy[locale][series];
+  const entry = copy[locale][series];
+  return {
+    ...entry,
+    title: formatPistonPumpDisplayText(entry.title, locale),
+    paragraphs: entry.paragraphs.map((paragraph) => formatPistonPumpDisplayText(paragraph, locale)),
+    imageAlt: formatPistonPumpDisplayText(entry.imageAlt, locale),
+  };
 }
 
 export const PISTON_SERIES_SLUGS: Record<string, PistonSeriesKey> = {

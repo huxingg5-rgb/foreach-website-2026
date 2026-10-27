@@ -113,7 +113,7 @@ export default function SiteHeader() {
     /^\/(?:en|es|fr|ko|ru)\/applications\/(?:ivd|life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology)(?:\/|$)/.test(normalizedPathname);
   // These video detail pages share the banner-free article layout. Keep the
   // existing header in its solid state from the first render, including SV10.
-  const isEnglishVideoDetailPage = /^\/en\/resources\/installation-guide\/(?:sv10-solenoid-valve-overview|youtube-syringe-installation|youtube-q60-quick-fitting|youtube-female-thread-conversion|youtube-bubble-detection-module)$/.test(normalizedPathname);
+  const isEnglishVideoDetailPage = /^\/en\/resources\/installation-guide\/[^/]+$/.test(normalizedPathname);
 
   /**
    * 当前顶部栏显示语言

@@ -1,4 +1,4 @@
-﻿.diaphragm-detail-page {
+.diaphragm-detail-page {
   background: #f6f8fb;
   color: #172033;
 }
@@ -112,7 +112,7 @@
   justify-content: center;
   min-height: 42px;
   padding: 0 18px;
-  border-radius: 8px;
+  border-radius: 0;
   border: 1px solid #173368;
   color: #173368;
   background: #fff;
@@ -377,12 +377,12 @@
   display: flex;
   flex-direction: column;
   min-height: 360px;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .diaphragm-selection-card:hover {
   border-color: #173368;
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .diaphragm-selection-image {
@@ -459,7 +459,7 @@
   align-items: center;
   justify-content: center;
   min-height: 38px;
-  border-radius: 8px;
+  border-radius: 0;
   border: 1px solid #173368;
   color: #173368;
   background: #fff;

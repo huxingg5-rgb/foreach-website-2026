@@ -1,3 +1,4 @@
+import ApplicationFittingVideos from "@/components/applications/ApplicationFittingVideos";
 /* =========================================================
    page.tsx
    恒永达官网｜实验室自动化应用领域中文页面入口
@@ -27,5 +28,5 @@ export const metadata: Metadata = {
 export default function LabAutomationApplicationPage() {
   const data = getLabAutomationApplicationPageData("zh-CN");
 
-  return <LabAutomationApplicationClient data={data} />;
+  return <LabAutomationApplicationClient data={data} relatedVideos={<ApplicationFittingVideos />} />;
 }

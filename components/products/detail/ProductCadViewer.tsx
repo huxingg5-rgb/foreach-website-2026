@@ -61,7 +61,7 @@ function CadFrame({ modelId, title, locale, active, headMaterial, attempt = 0, o
     return () => window.removeEventListener("message", ready);
   }, [active, modelId, onState]);
   return <iframe ref={frame} key={modelId}
-    src={`/models/valves/6010/viewer.html?v=fcadl01-20261026&loader=parent&model=${encodeURIComponent(modelId)}&lang=${encodeURIComponent(locale)}${headMaterial ? `&head=${headMaterial}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
+    src={`/models/valves/6010/viewer.html?v=fcadl01-focus-20261027&loader=parent&model=${encodeURIComponent(modelId)}&lang=${encodeURIComponent(locale)}${headMaterial ? `&head=${headMaterial}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
     onError={() => onState?.("error")}
     title={`${title} 3D`} allow="fullscreen"
     style={{ display: "block", width: "100%", height: "min(680px, 75svh)", minHeight: 440, border: 0, borderRadius: 12 }} />;

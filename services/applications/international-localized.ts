@@ -21,7 +21,7 @@ import { getCanonicalUrl } from '@/lib/seo/site-url';
 import { isLiquidChromatographySlug } from '@/data/applications/analytical-documents/liquid-chromatography';
 import { LC_PRODUCTS, LC_TASK_RESOURCES } from '@/data/applications/analytical-documents/liquid-chromatography-resources';
 import { getLiquidChromatographyResources } from './liquid-chromatography-resources';
-import { withQuickDisconnectArticle } from "./quick-disconnect-resources";
+import { withApplicationFittingResources } from "./fitting-video-resources";
 
 const ids: Readonly<Record<string, string>> = sourceIndex;
 const loaders = {
@@ -174,10 +174,10 @@ export async function getLocalizedApplicationResources(locale: ApplicationTransl
       }),
     };
   }
-  if (isFinalizedEnglishReference(kind, document.slug)) return withQuickDisconnectArticle({ locale, uiLocale: locale, products: [], articles: [], videos: [] }, kind, document);
+  if (isFinalizedEnglishReference(kind, document.slug)) return withApplicationFittingResources({ locale, uiLocale: locale, products: [], articles: [], videos: [] }, kind, document);
   const plan = getReviewFooterPlan(kind, document);
   const slugs = kind === 'ivd' ? [...new Set(getIvdReadingPlan(document).flatMap(reading => reading.slugs))].slice(0, 4) : plan.articles;
-  return withQuickDisconnectArticle({
+  return withApplicationFittingResources({
     locale, uiLocale: locale, videos: [],
     products: plan.products.map((key: ReviewProductCardId) => {
       const card = reviewProductCards[key];
