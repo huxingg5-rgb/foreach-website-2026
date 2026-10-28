@@ -111,9 +111,6 @@ export default function SiteHeader() {
   const normalizedPathname = pathname.replace(/\/+$/, "");
   const isLocalizedApplicationDomainPage =
     /^\/(?:en|es|fr|ko|ru)\/applications\/(?:ivd|life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology)(?:\/|$)/.test(normalizedPathname);
-  // These video detail pages share the banner-free article layout. Keep the
-  // existing header in its solid state from the first render, including SV10.
-  const isEnglishVideoDetailPage = /^\/en\/resources\/installation-guide\/[^/]+$/.test(normalizedPathname);
 
   /**
    * 当前顶部栏显示语言
@@ -403,6 +400,11 @@ const isFittingReplacementDetailPage =
     technicalArticlePathSegments[1] === "technical-articles" &&
     Boolean(technicalArticlePathSegments[2]);
 
+  // All video detail pages have a white background and need the color logo
+  // from the first render. Listing and /page/N routes retain their hero header.
+  const isVideoDetailPage =
+    /^\/resources\/installation-guide\/[^/]+$/.test(normalizedPathWithoutLocale);
+
   /* ================================
      产品中心页面判断
 
@@ -427,7 +429,7 @@ const isFittingReplacementDetailPage =
   const shouldUseSolidHeader =
     isScrolled ||
     isFittingReplacementDetailPage || isNewsArticlePage ||
-    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage || isEnglishVideoDetailPage || isLocalizedApplicationDomainPage ||
+    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage || isVideoDetailPage || isLocalizedApplicationDomainPage ||
     isUnknownTopLevelPath ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||
@@ -984,7 +986,7 @@ const isFittingReplacementDetailPage =
       <header
         ref={headerRef}
         className={`site-header ${headerLocaleClass} ${shouldUseSolidHeader ? "site-header-scrolled" : ""
-          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isEnglishVideoDetailPage || isLocalizedApplicationDomainPage
+          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isVideoDetailPage || isLocalizedApplicationDomainPage
             ? "site-header-solid-page"
             : ""
           } ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""
