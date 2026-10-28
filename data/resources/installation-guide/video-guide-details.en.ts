@@ -1,6 +1,8 @@
 import type { VideoGuideDetail } from "./video-guide-detail.types";
 import { sv10EnglishGuide, sv10Video } from "./installation-guide.sv10.en";
 import { additionalEnglishVideoGuideDetails } from "./video-guide-library.en";
+import { getProductVideoCopy, videoGuideUi } from "./product-video-copy";
+import { getLanguageHref } from "@/lib/i18n/language-switch";
 
 // Source: official YouTube watch-page metadata, descriptions and captions/frames,
 // checked 2026-10-17. Durations use the watch page's ISO metadata (rounded seconds).
@@ -138,6 +140,38 @@ export const englishVideoGuideDetails: readonly VideoGuideDetail[] = [
   ...additionalEnglishVideoGuideDetails,
 ];
 
-export function getVideoGuideDetail(locale: string, id: string) {
-  return locale === "en" ? englishVideoGuideDetails.find(video => video.id === id) : undefined;
+export function getVideoGuideDetail(locale: string, id: string): VideoGuideDetail | undefined {
+  const base = englishVideoGuideDetails.find(video => video.id === id);
+  if (!base) return undefined;
+  const copy = getProductVideoCopy(locale, id);
+  if (!copy) return locale === "en" ? base : undefined;
+  const language = locale as VideoGuideDetail["locale"];
+  const { sections, productLinkTitle, ...fields } = copy;
+  const localLink = (link: { title: string; href: string }, title?: string) => {
+    // Preserve existing English references. The older size guide has a full
+    // English detail only, identified as such in the translated link labels.
+    const href = language === "en" || link.href.includes("/youtube-quick-connect-coupling-types/")
+      ? link.href : getLanguageHref(link.href, language);
+    if (link.href.includes("/quick-disconnect-coupling-pressure-rating/") && href.endsWith("/resources/technical-articles/")) {
+      const labels = { "zh-CN": "快插接头选型与截止配置", en: "Quick-disconnect selection and shutoff configurations",
+        es: "Selección de acoplamientos rápidos y opciones de cierre", fr: "Choix des raccords rapides et configurations d’obturation",
+        ko: "퀵 커플링 선정과 차단 구성", ru: "Выбор быстроразъёмных соединений и вариантов перекрытия" };
+      return { title: labels[language], href: getLanguageHref("/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/", language) };
+    }
+    return { title: title ?? link.title, href };
+  };
+  return {
+    ...base, ...fields, locale: language, seoTitle: language === "en" ? base.seoTitle : `${copy.title} | FOREACH`,
+    lead: undefined,
+    detailHref: `${language === "zh-CN" ? "" : `/${language}`}/resources/installation-guide/${id}/`,
+    embedUrl: base.embedUrl.replace(/([?&]hl=)en\b/, `$1${language === "zh-CN" ? "zh-Hans" : language}`),
+    durationLabel: videoGuideUi[language].duration,
+    sections: base.sections?.map((section, index) => ({
+      ...section,
+      title: sections?.[index]?.title ?? section.title,
+      paragraphs: sections?.[index]?.paragraphs ?? section.paragraphs,
+      links: section.links?.map(link => localLink(link, sections?.[index]?.linkTitle)),
+    })),
+    products: base.products.map(link => localLink(link, productLinkTitle)),
+  };
 }

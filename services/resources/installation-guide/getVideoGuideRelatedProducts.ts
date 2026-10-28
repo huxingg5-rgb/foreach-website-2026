@@ -12,6 +12,12 @@ import { getVideoGuideProduct } from "@/data/resources/installation-guide/video-
 import { getFemaleThreadAdapterImageAlt } from "@/data/products/detail/female-thread-adapter-gallery";
 import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
 import { getTubingAssemblyDetailPath } from "@/data/products/tubing-assemblies.en";
+import { pistonPumpRelatedProducts } from "@/data/products/selection/piston-pump-related-products";
+import { tubingSelectionProducts } from "@/data/products/selection/tubing-selection.generated";
+import { getTubingDetailPath } from "@/data/products/selection/tubing-selection-routes";
+import { getTubingGalleryData } from "@/data/products/tubing/gallery";
+import { getLanguageHref } from "@/lib/i18n/language-switch";
+import type { VideoGuideDetail } from "@/data/resources/installation-guide/video-guide-detail.types";
 
 function selectionCard(products: ProductSelectionProduct[], id: string, href: string | null): ArticleRelatedProduct {
   const product = products.find(item => item.productId === id);
@@ -39,10 +45,18 @@ function fittingCard(model: string): ArticleRelatedProduct {
 const FOOTER_PRODUCT_LIMIT = 10;
 
 /** Keep the rail concise; each footer offers up to ten distinct published products. */
-export function getVideoGuideRelatedProducts(videoId: string, placement: "sidebar" | "footer" = "sidebar"): ArticleRelatedProduct[] {
+export function getVideoGuideRelatedProducts(videoId: string, placement: "sidebar" | "footer" = "sidebar", locale: VideoGuideDetail["locale"] = "en"): ArticleRelatedProduct[] {
   const products = selectVideoGuideRelatedProducts(videoId, placement);
   return products.filter((product, index) => products.findIndex(item => item.href === product.href) === index)
     .slice(0, placement === "footer" ? FOOTER_PRODUCT_LIMIT : 2)
+    .map(product => {
+      if (locale === "en") return product;
+      const selection = [...pistonPumpRelatedProducts, ...tubingSelectionProducts].find(item => item.productId === product.id);
+      const title = selection?.cardTitle?.[locale === "zh-CN" ? "zh" : locale] ?? product.title;
+      const gallery = getTubingGalleryData(product.id, locale);
+      return { ...product, title, href: getLanguageHref(product.href, locale),
+        imageAlt: gallery?.additionalImageAlts[0] ?? title };
+    })
     .map(product => ["sv10-solenoid-valve-overview", "youtube-syringe-installation"].includes(videoId)
       ? product : { ...product, imageFill: true });
 }
@@ -72,6 +86,35 @@ function selectVideoGuideRelatedProducts(videoId: string, placement: "sidebar" |
     ].map(fittingCard);
   }
   switch (videoId) {
+    case "youtube-piston-pump-liquid-dispensing":
+      return ["pump-ea-500ul-pmma", "pump-ea-500ul-peek",
+        ...(placement === "footer" ? ["pump-ea-100ul-pmma", "pump-ea-250ul-pmma"] : []),
+      ].map(id => {
+        const product = pistonPumpRelatedProducts.find(item => item.productId === id);
+        return selectionCard(pistonPumpRelatedProducts, id, product?.detailHref ? `/en${product.detailHref}/` : null);
+      });
+    case "youtube-flexible-tubing-laboratory-fluid-lines":
+      // Recommend materials with real gallery photos; PFA currently has only a rendered main image.
+      return ["pvc-tubing", "tpu-tubing",
+        ...(placement === "footer" ? ["fep-tubing", "ptfe-tubing", "peek-tubing"] : []),
+      ].map(id => {
+        const gallery = getTubingGalleryData(id, "en");
+        const imageSrc = gallery?.additionalImages[0];
+        const imageAlt = gallery?.additionalImageAlts[0];
+        if (!imageSrc || !imageAlt) throw new Error(`Missing tubing gallery photo: ${id}`);
+        return {
+          ...selectionCard(tubingSelectionProducts, id, getTubingDetailPath("en", id)),
+          imageSrc, imageAlt, imageAspectRatio: 1,
+        };
+      });
+    case "youtube-quick-connect-sealing-compatibility":
+      return ["Q2002-SNX-SPPE", "Q6006-SNX-SPPE",
+        ...(placement === "footer" ? ["Q4004-SNX-SPPE", "Q6006-PNV-LPPE"] : []),
+      ].map(fittingCard);
+    case "youtube-quick-connect-coupling-types":
+      return ["Q2002-SNX-SPPE", "Q6006-SNX-SPPE",
+        ...(placement === "footer" ? ["Q4004-SNX-SPPE"] : []),
+      ].map(fittingCard);
     case "youtube-thread-to-barb-fittings":
       return ["SA-U28-32D-PP-N", "SB-M5-32D-PP-N",
         ...(placement === "footer" ? ["SBS-M6-32D-PP-N", "SBR-U28-32-PP-N"] : []),

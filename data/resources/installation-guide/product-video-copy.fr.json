@@ -1,0 +1,89 @@
+{
+  "piston-pump-liquid-dispensing": {
+    "title": "Pompes à piston de précision pour le dosage de liquides",
+    "description": "Pompes à piston FOREACH EA de 50 μL à 20 mL : têtes PMMA, PCTG ou PEEK, ensembles pompe-vanne intégrés et personnalisation OEM pour instruments.",
+    "leadParagraphs": [
+      "Les pompes à piston de précision FOREACH EA utilisent un moteur pas à pas pour entraîner le piston en mouvement alternatif. La course du piston contrôle l’aspiration et le dosage du liquide. Les capacités nominales vont de 50 μL à 20 mL pour l’ajout de réactifs, la dilution d’échantillons et d’autres opérations dans les analyseurs de biochimie clinique, d’immunoanalyse et les équipements d’automatisation de laboratoire. La durée de vie estimée est de 5 millions de cycles avec de l’eau pure, à température ambiante et sous une contre-pression de 50 kPa.",
+      "Les têtes de pompe sont proposées en PMMA, PCTG ou PEEK, avec des pistons en céramique, PEEK ou saphir. Des ensembles pompe-vanne intégrés et une personnalisation OEM sont disponibles. Tête, piston, raccordements, moteur, vannes et contrôleur peuvent être adaptés au réactif, à la séquence de dosage et à l’espace disponible pour intégrer le module de gestion des liquides de l’instrument."
+    ],
+    "breadcrumbLabel": "Dosage par pompe à piston",
+    "watchHeading": "Voir la présentation des pompes à piston EA",
+    "caption": "Pompes EA et applications de gestion des liquides · Commentaire en anglais",
+    "media": {"title": "Présentation des pompes à piston EA", "description": "Gros plans des pompes FOREACH EA et présentation de leurs applications de gestion des liquides. Commentaire en anglais."},
+    "highlightsHeading": "Que faut-il préciser pour choisir une pompe de dosage ?",
+    "highlightsIntroduction": "Définissez la tâche de dosage, puis comparez les caractéristiques de la pompe aux exigences du circuit installé.",
+    "highlights": [
+      {"title": "Volume et temps de cycle", "description": "Précisez les volumes minimal, habituel et maximal, les temps d’aspiration et de distribution et les intervalles de remplissage. Le plus petit volume critique doit être validé même si la capacité couvre le maximum."},
+      {"title": "Exactitude et répétabilité", "description": "L’exactitude décrit la proximité de la cible ; la répétabilité décrit la dispersion des résultats. Fixez des limites distinctes et comparez à volume et conditions identiques."},
+      {"title": "Circuit complet en contact avec le liquide", "description": "Vérifiez tête, piston, joints, vannes, tubes et sortie vis-à-vis du réactif et du nettoyage. Une tête compatible ne garantit pas la compatibilité de tout l’ensemble."}
+    ],
+    "sections": [
+      {"title": "La capacité détermine-t-elle le volume minimal de dosage ?", "paragraphs": ["Non. La capacité par course complète et le volume théorique par pas décrivent le déplacement et la résolution de commande. Jeux mécaniques, commutation des vannes, gaz piégé, dilatation des tubes et détachement des gouttes affectent le volume délivré, surtout à faible course.", "Choisissez une capacité couvrant la séquence de transfert tout en permettant de valider le plus petit volume. Vérifiez les volumes et conditions d’essai associés aux performances. Un résultat à pleine course ne s’applique pas à toute course partielle ; un petit incrément de commande n’est pas un volume minimal validé."], "linkTitle": "Exactitude, répétabilité et résolution des pompes à piston"},
+      {"title": "Comment l’amorçage et la commande des vannes influencent-ils le dosage ?", "paragraphs": ["Une bulle se comprime lorsque la pression augmente et absorbe une partie du déplacement. Les tubes souples stockent et restituent aussi du volume. Une commande moteur répétable peut donc produire une distribution retardée ou variable.", "Amorcez le circuit selon la procédure prévue. Vérifiez l’étanchéité d’entrée, le niveau du réservoir, les vannes et le temps de stabilisation. Évaluez séparément le démarrage et le régime établi, notamment après changement de réservoir, nettoyage ou arrêt prolongé."], "linkTitle": "Bulles d’air et erreurs de dosage"},
+      {"title": "Comment valider la pompe dans l’instrument ?", "paragraphs": ["Testez les volumes minimal, habituel et maximal avec le réactif prévu ou un liquide représentatif justifié. Utilisez les vannes, tubes, raccords et embouts réels. Consignez température, conditions d’entrée, contre-pression, mouvement et cadence ; mesurez moyenne et dispersion séparément.", "Réévaluez compatibilité et performances après des cycles représentatifs de nettoyage et d’utilisation. Comparez les configurations EA ci-dessous, consultez la spécification actuelle du modèle et confirmez les résultats dans le circuit installé."], "linkTitle": "Choisir le matériau de la tête selon le liquide"}
+    ],
+    "productHeading": "Comparer les capacités et matériaux de tête EA",
+    "productIntroduction": "Comparez capacité, matériau, raccordements et commande sur les pages des modèles EA. Une même capacité ne rend pas deux configurations interchangeables vis-à-vis d’un réactif.",
+    "productLinkTitle": "Explorer les configurations de pompes à piston",
+    "support": {"title": "Vous choisissez une pompe de dosage ?", "description": "Précisez les volumes, le réactif, la cadence, la contre-pression, les matériaux et les critères d’exactitude et de répétabilité."},
+    "keywords": ["pompe à piston de précision", "pompe EA", "dosage de réactifs", "ensemble pompe-vanne", "personnalisation OEM", "tête PMMA PCTG PEEK"]
+  },
+  "flexible-tubing-laboratory-fluid-lines": {
+    "title": "Tubes souples pour circuits de laboratoire",
+    "description": "Tubes PVC FOREACH : diamètre intérieur 0,8–19,1 mm, extérieur 2,4–25,4 mm, duretés 55/65 Shore A et configurations OEM pour instruments.",
+    "leadParagraphs": [
+      "Les tubes en PVC (polychlorure de vinyle) FOREACH sont destinés au transfert de gaz et de liquides, au nettoyage, à l’évacuation et aux raccordements internes des instruments d’analyse, équipements d’automatisation de laboratoire et dispositifs de diagnostic in vitro (IVD). Leur souplesse facilite le cheminement et leur transparence permet d’observer les liquides et les bulles. Plusieurs combinaisons de dimensions couvrent des diamètres intérieurs de 0,8–19,1 mm et extérieurs de 2,4–25,4 mm, avec des duretés de 55 ou 65 Shore A. Le modèle se choisit selon l’espace, l’épaisseur de paroi et le raccordement.",
+      "La fourniture de tubes pour instruments OEM permet d’adapter dimensions, dureté et raccordements au fluide, à l’implantation et aux raccords. Les modèles actuels comprennent des conditionnements de 15, 30 et 50 mètres par couronne. Les dimensions, duretés et longueurs spéciales peuvent être étudiées par projet pour l’assemblage et la production en série."
+    ],
+    "breadcrumbLabel": "Tubes de laboratoire",
+    "watchHeading": "Voir la présentation des tubes souples",
+    "caption": "Tubes transparents, extrémités et souplesse · Commentaire en anglais",
+    "media": {"title": "Présentation des tubes souples", "description": "Gros plans des tubes transparents FOREACH, des extrémités et de la flexion manuelle, avec leurs applications de laboratoire. Commentaire en anglais."},
+    "highlightsHeading": "Quels détails confirmer avant de commander ?",
+    "highlightsIntroduction": "La vidéo montre l’aspect et la souplesse. La sélection exige aussi de connaître la formulation, les dimensions, la pression et le raccordement complet.",
+    "highlights": [
+      {"title": "Matériau et exposition", "description": "Identifiez liquide, concentration, température, durée de contact et produits de nettoyage. Vérifiez la formulation choisie dans ces conditions."},
+      {"title": "Diamètres intérieur et extérieur", "description": "Le diamètre intérieur affecte le passage et le montage sur embout cannelé ; l’extérieur affecte l’encombrement et les raccords serrant ou étanchant la paroi externe. Consignez les deux et leurs tolérances."},
+      {"title": "Cheminement et raccordement", "description": "Vérifiez rayon de courbure, maintien et support près du raccord. Une courbure serrée ou une traction répétée peut modifier le passage ou solliciter la connexion."}
+    ],
+    "sections": [
+      {"title": "Comment choisir le matériau d’un tube de laboratoire ?", "paragraphs": ["Partez du fluide et du nettoyage réels. FOREACH propose PVC, TPU, FEP, PTFE, PEEK et PFA. Leurs propriétés chimiques et mécaniques diffèrent ; un diamètre nominal identique ne les rend pas interchangeables.", "Demandez les données techniques et documents de conformité nécessaires pour la formulation et la référence livrée. Transparence, surface lisse ou flexion manuelle ne démontrent ni la teneur en substances extractibles, ni la compatibilité chimique, la stérilisabilité ou la pression admissible."]},
+      {"title": "Comment les diamètres influencent-ils le raccordement ?", "paragraphs": ["Pour un embout cannelé, vérifiez le diamètre intérieur et le profil de l’embout. Épaisseur, dureté et élasticité influencent l’expansion, le maintien et la résistance à l’arrachement. Un tube trop grand peut être lâche ; un montage trop serré peut endommager l’ensemble.", "Pour les raccords définis par le diamètre extérieur, respectez la géométrie d’étanchéité et les instructions. Consignez dimensions et tolérances réelles et vérifiez maintien et fuites avec l’ensemble choisi en conditions représentatives."], "linkTitle": "Taux d’expansion sur embout cannelé et ajustement du tube"},
+      {"title": "Que vérifier après la pose ?", "paragraphs": ["Recherchez pincements, courbes serrées, frottements et charges sans support près des raccords. Vérifiez l’effet du mouvement, de la température et de l’aspiration sur la forme du tube. Une étanchéité statique ne garantit pas le même comportement pendant les cycles.", "Faites fonctionner tout le circuit au débit et aux conditions d’entrée et de sortie prévus. Contrôlez fuites, entrées d’air, déplacements et évolution après nettoyage ou réutilisation. Alimentation, évacuation et dosage peuvent exiger des critères différents."]}
+    ],
+    "productHeading": "Comparer les matériaux et dimensions disponibles",
+    "productIntroduction": "Comparez PVC et TPU pour les lignes souples, puis les autres matériaux selon les propriétés requises. Cette gamme sert à la comparaison ; la vidéo ne présente pas tous les matériaux.",
+    "productLinkTitle": "Explorer les tubes par matériau",
+    "support": {"title": "Vous choisissez des tubes pour un instrument ?", "description": "Précisez liquide, nettoyage, diamètres intérieur et extérieur, longueur, pression ou vide, température et raccord."},
+    "keywords": ["tube PVC", "tube souple de laboratoire", "tube transparent", "diamètre intérieur extérieur", "dureté Shore A", "tubes OEM"]
+  },
+  "quick-connect-sealing-compatibility": {
+    "title": "Raccords rapides : étanchéité et compatibilité d’accouplement",
+    "description": "Raccords rapides FOREACH Q20/Q40/Q60 pour tubes de diamètre intérieur 1,6–19,0 mm : matériaux, configurations à clapet et solutions OEM.",
+    "leadParagraphs": [
+      "Les raccords rapides FOREACH utilisent des éléments mâle et femelle à accouplement et déverrouillage rapides pour le transfert de réactifs, les réservoirs et la maintenance des circuits d’instruments d’analyse et d’automatisation de laboratoire. Q20 offre un diamètre nominal de passage de 1/8 pouce pour des tubes de diamètre intérieur 1,6–6,4 mm ; Q40, un passage de 1/4 pouce pour 6,4–9,5 mm ; Q60, un passage de 3/8 pouce pour 9,5–19,0 mm. Chaque série propose des dimensions distinctes dans la plage indiquée.",
+      "Q20 et Q40 proposent un corps POM avec joints NBR ou un corps PP avec joints EPDM ; Q60 utilise un corps PP et des joints EPDM. Des versions droites, coudées, traversées de cloison et filetées sont disponibles. L’association des éléments permet un raccordement sans clapet, à obturation d’un seul côté ou des deux côtés. Fourniture OEM et solutions personnalisées sont proposées selon le fluide, le tube, l’espace et l’obturation souhaitée à la déconnexion."
+    ],
+    "breadcrumbLabel": "Étanchéité et compatibilité des raccords",
+    "watchHeading": "Voir l’accouplement et la déconnexion des raccords rapides",
+    "caption": "Éléments de raccord et démonstration manuelle · Commentaire en anglais",
+    "media": {"title": "Démonstration des raccords rapides", "description": "Présentation des dimensions et démonstration manuelle de connexion et déconnexion des raccords FOREACH. Commentaire en anglais."},
+    "highlightsHeading": "Comment évaluer une paire de raccords ?",
+    "highlightsIntroduction": "Vérifiez la connexion complète d’un réservoir, d’un module remplaçable ou d’un circuit nécessitant une maintenance.",
+    "highlights": [
+      {"title": "Interface et verrouillage", "description": "Confirmez la paire mâle/femelle, la géométrie de verrouillage et la position du joint. Un même diamètre de tube ne prouve pas la compatibilité des éléments."},
+      {"title": "Corps et joints", "description": "Vérifiez séparément le corps et l’élastomère vis-à-vis du liquide, du nettoyage et de la température. Un corps adapté ne compense pas un joint incompatible."},
+      {"title": "Obturation et déconnexion", "description": "Déterminez quel côté doit retenir le liquide et nécessite un clapet. Un raccord à clapet ne garantit pas une déconnexion à sec ou sans écoulement."}
+    ],
+    "sections": [
+      {"title": "Pourquoi un raccord verrouillé peut-il fuir ?", "paragraphs": ["Le verrouillage retient les éléments ; le joint doit toucher la bonne surface. Débris, détérioration, matériau inadapté ou engagement incomplet peuvent empêcher l’étanchéité. Les efforts du tube sollicitent aussi la connexion.", "Suivez les instructions, inspectez les surfaces et évitez courbures forcées et traction continue. Testez les fuites à pression et température réelles, avec variations de pression et cycles représentatifs. La démonstration ne constitue pas une qualification d’étanchéité ou d’endurance."]},
+      {"title": "Des raccords d’aspect similaire sont-ils interchangeables ?", "paragraphs": ["Pas sur le seul aspect. Comparez dimensions d’interface, verrouillage, joint et ouverture des clapets. Une paire qui s’emboîte peut limiter le débit ou mal s’étancher. Pour remplacer une autre marque, faites confirmer la combinaison exacte et validez-la dans le circuit.", "Distinguez compatibilité d’accouplement, dimension du tube, filetage et passage nominal. Consultez le guide dimensionnel et la spécification de la paire avant le remplacement."], "linkTitle": "Distinguer passage, tube et filetage des raccords rapides (anglais)"},
+      {"title": "Dans quelles conditions tester la paire ?", "paragraphs": ["Précisez liquide, débit, pression ou vide, température et nettoyage. Vérifiez la pression admissible et l’autorisation éventuelle de connexion sous pression. La pression de service seule ne permet pas d’actionner le déverrouillage sous pression.", "Mesurez fuites, rétention ou écoulement de liquide, restriction de débit et maintien après des cycles représentatifs. Incluez le tube et la traversée de cloison réels. Validez l’obturation et la perte de charge de l’ensemble, même avec clapets."], "linkTitle": "Pression admissible et connexion sous pression"}
+    ],
+    "productHeading": "Comparer les configurations de raccords rapides",
+    "productIntroduction": "Comparez connexions, montage et clapets des exemples Q20, Q40 et Q60. Les cartes présentent des configurations distinctes : confirmez l’élément complémentaire avant de commander une paire.",
+    "productLinkTitle": "Explorer les raccords et leurs paires compatibles",
+    "support": {"title": "Vous recherchez une paire ou un remplacement ?", "description": "Fournissez références ou plans des deux éléments, dimensions du tube, fluide, pression, température et exigences d’obturation et de maintenance."},
+    "keywords": ["raccords rapides", "coupleurs rapides", "Q20 Q40 Q60", "diamètre nominal de passage", "diamètre intérieur du tube", "clapet d’obturation", "OEM"]
+  }
+}

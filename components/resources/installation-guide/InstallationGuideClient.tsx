@@ -22,6 +22,7 @@ import {
 import { usePathname, useRouter } from "next/navigation";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
+import pageShellStyles from "@/components/layout/SitePageShell.module.css";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 import ResourceCategorySidebar from "@/components/resources/ResourceCategorySidebar";
@@ -137,7 +138,7 @@ export default function InstallationGuideClient({
       isChinesePage ? "资源中心" : "Resources",
 
     breadcrumbCurrent:
-      isChinesePage ? "使用教程" : "Usage Guide",
+      isChinesePage ? "使用教程" : "Installation Guides",
 
     productCategory:
       isChinesePage ? "产品分类：" : "Product Category: ",
@@ -246,10 +247,6 @@ export default function InstallationGuideClient({
     {
       label: ui.breadcrumbHome,
       href: `${localePrefix || ""}/`,
-    },
-    {
-      label: ui.breadcrumbResources,
-      href: `${localePrefix}/resources`,
     },
     {
       label: ui.breadcrumbCurrent,
@@ -432,6 +429,7 @@ export default function InstallationGuideClient({
       <SiteBreadcrumb
         ariaLabel={ui.breadcrumbAriaLabel}
         variant="bar"
+        className={pageShellStyles.shellBreadcrumb}
         items={breadcrumbItems}
       />
 

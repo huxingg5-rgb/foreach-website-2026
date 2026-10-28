@@ -1,4 +1,4 @@
-import type { ComponentType } from "react";
+import type { ComponentType, ReactNode } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -48,7 +48,8 @@ type TubingDetailRecord = {
 const records = tubingDetailData as TubingDetailRecord[];
 
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
-  data: any;
+  data: ReturnType<typeof toClientData>;
+  afterContent?: ReactNode;
 }>;
 
 function findDetail(slug: string) {
@@ -218,7 +219,15 @@ export function getTubingMetadata(slug: string, locale = "zh"): Metadata {
   };
 }
 
-export default function TubingDetailStaticPage({ slug, locale = "zh" }: { slug: string; locale?: string }) {
+export default function TubingDetailStaticPage({
+  slug,
+  locale = "zh",
+  afterContent,
+}: {
+  slug: string;
+  locale?: string;
+  afterContent?: ReactNode;
+}) {
   const detail = findDetail(slug);
 
   if (!detail) {
@@ -227,7 +236,7 @@ export default function TubingDetailStaticPage({ slug, locale = "zh" }: { slug: 
 
   return (
     <div data-tubing-detail-page="true">
-      <ProductDetailView data={toClientData(detail, locale)} />
+      <ProductDetailView data={toClientData(detail, locale)} afterContent={afterContent} />
     </div>
   );
 }

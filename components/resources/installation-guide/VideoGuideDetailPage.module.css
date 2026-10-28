@@ -15,10 +15,3 @@
   padding: 0;
   object-fit: contain;
 }
-
-@media (min-width: 1280px) {
-  .breadcrumb > div { width: 100%; max-width: 1400px; padding-inline: 28px; box-sizing: border-box; }
-}
-@media (min-width: 1440px) {
-  .breadcrumb > div { padding-inline: 40px; }
-}

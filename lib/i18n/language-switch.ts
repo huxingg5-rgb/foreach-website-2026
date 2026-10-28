@@ -1,3 +1,4 @@
+import { isVideoGuideLocaleAvailable, getVideoGuideDetailLocales } from "@/data/resources/installation-guide/video-guide-route-availability";
 import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/valveless-pump-routes";
 import { getTubingLanguagePath } from "@/data/products/selection/tubing-selection-routes";
 import { getTechnicalArticleLanguagePath } from "@/data/resources/technical-articles/technical-article-availability";
@@ -150,14 +151,18 @@ export function getLanguageHref(pathname: string, locale: LocaleCode, suffix = "
   // Chinese route generates the original Chinese guide IDs instead. The SV10
   // overview is English-only, so its other language choices use their guide hub.
   const normalizedSource = normalizePathname(pathname);
+  const videoGuideSlug = normalizedSource.match(/^\/(?:en|es|fr|ko|ru)\/resources\/installation-guide\/(youtube-[^/]+)\/?$/)?.[1];
+  const useVideoPlayer = Boolean(videoGuideSlug && !isVideoGuideLocaleAvailable(locale, videoGuideSlug));
   const useInstallationGuideHub =
-    (locale === "zh-CN" && /^\/(?:en|es|fr|ko|ru)\/resources\/installation-guide\/youtube-[^/]+\/?$/.test(normalizedSource)) ||
+    useVideoPlayer ||
+    (locale === "zh-CN" && videoGuideSlug && !getVideoGuideDetailLocales(videoGuideSlug)?.includes("zh-CN")) ||
     (locale !== "en" && /^\/en\/resources\/installation-guide\/sv10-solenoid-valve-overview\/?$/.test(normalizedSource));
   const sourcePath = useDomainHub ? `/en/applications/${domain}/`
     : useInstallationGuideHub ? "/resources/installation-guide/"
     : chinesePaginationBase ?? pathname;
   const localizedPath = buildLocalizedPathname(sourcePath, locale);
   const target = new URL(localizedPath, "https://www.foreachtek.com");
+  if (useVideoPlayer && videoGuideSlug) target.searchParams.set("guide", videoGuideSlug);
   target.pathname = target.pathname === "/" ? "/" : target.pathname.replace(/\/+$/, "") + "/";
   const url = new URL(pathname + suffix, "https://www.foreachtek.com");
   url.searchParams.delete("lang");

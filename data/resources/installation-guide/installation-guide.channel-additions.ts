@@ -1,10 +1,15 @@
 import { fittingOverviewVideoRelations } from "@/data/resources/installation-guide/fitting-video-relations";
 import type { InstallationGuideCard, InstallationGuideLocale } from "./installation-guide.types";
 import { getInstallationGuideYouTubeGuides } from "./installation-guide.youtube.generated";
+import { getProductVideoCopy } from "./product-video-copy";
 
 // Channel additions matched by YouTube video ID. Three fitting/filter videos verified on 2026-10-27.
 // Keep the existing local Chinese tutorials and the 18 translated YouTube guides intact.
 const videos = [
+  { key: "piston-pump-liquid-dispensing", videoId: "_nD17YG7Nw8", thumbnail: "/images/resources/installation-guide/youtube/piston-pump-liquid-dispensing-cover.jpg", category: "pumps", series: "plunger-pump", relationKeys: ["series:ea"], keywords: ["precision piston pump", "liquid dispensing", "EA piston pump", "stroke capacity", "accuracy", "repeatability"] },
+  { key: "flexible-tubing-laboratory-fluid-lines", videoId: "9JHmGMsBFMg", thumbnail: "/images/resources/installation-guide/youtube/flexible-tubing-laboratory-fluid-lines-cover.jpg", category: "fittings", series: "tubing", relationKeys: fittingOverviewVideoRelations["youtube-flexible-tubing-laboratory-fluid-lines"], keywords: ["flexible laboratory tubing", "instrument tubing", "tubing ID OD", "PVC tubing", "TPU tubing", "hose barb tubing fit"] },
+  { key: "quick-connect-sealing-compatibility", videoId: "-GOja7f3460", thumbnail: "/images/resources/installation-guide/youtube/quick-connect-sealing-compatibility-cover.jpg", category: "fittings", series: "quick-connect-fittings", relationKeys: fittingOverviewVideoRelations["youtube-quick-connect-sealing-compatibility"], keywords: ["quick connect fittings", "quick disconnect coupling", "sealing", "mating compatibility", "shutoff coupling"] },
+  { key: "quick-connect-coupling-types", videoId: "skwIaK1N4f4", thumbnail: "/images/resources/installation-guide/youtube/quick-connect-coupling-types-cover.jpg", category: "fittings", series: "quick-connect-fittings", relationKeys: fittingOverviewVideoRelations["youtube-quick-connect-coupling-types"], keywords: ["quick connect fitting sizes","quick-connect fittings","flow size vs tubing size","quick connect fitting compatibility","tubing inner diameter","tubing outer diameter","thread size","fitting pressure drop"] },
   {"key":"f-ss-water-circulation-filter","videoId":"2K0r5MMFcHs","thumbnail":"/images/resources/installation-guide/youtube/f-ss-water-circulation-filter-cover.jpg","category":"fittings","series":"filters","relationKeys":["topic:f-ss-water-circulation"],"keywords":["F-SS","water circulation filter","water loop filtration"]},
   {"key":"thread-to-barb-fittings","videoId":"i7Gr86k5xoI","thumbnail":"/images/resources/installation-guide/youtube/thread-to-barb-fittings-cover.jpg","category":"fittings","series":"thread-to-barbed-fittings","relationKeys":fittingOverviewVideoRelations["youtube-thread-to-barb-fittings"],"keywords":["thread-to-barb fittings","threaded hose barb","flexible tubing","tubing inner diameter"]},
   {"key":"rigid-tubing-fittings","videoId":"20BZArgyibY","thumbnail":"/images/resources/installation-guide/youtube/rigid-tubing-fittings-cover.jpg","category":"fittings","series":"hard-tube-fittings","relationKeys":fittingOverviewVideoRelations["youtube-rigid-tubing-fittings"],"keywords":["rigid tubing fittings","hard tube fittings","tubing outer diameter","flanged fitting","flangeless fitting"]},
@@ -24,13 +29,17 @@ type ChannelCopy = {
   companyCategory: string;
   watchOnYouTube: string;
   videoLabel: string;
-  videos: Record<VideoKey, readonly [title: string, tag: string]>;
+  videos: Record<VideoKey, readonly [title: string, tag: string, description?: string]>;
 };
 
 export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   "zh-CN": {
     companyCategory: "公司介绍", watchOnYouTube: "在 YouTube 观看", videoLabel: "FOREACH 视频",
     videos: {
+      "piston-pump-liquid-dispensing": ["精密柱塞泵：液体定量与选型要点", "柱塞泵定量", "观看 EA 柱塞泵介绍，了解目标剂量、行程容量、接液材料与排气灌注对液体定量的影响。小剂量精度和重复性应在实际液路中验证。"],
+      "flexible-tubing-laboratory-fluid-lines": ["实验室液路软管：材料、管径与连接选型", "实验室管材", "观看透明软管与弯曲展示，选型时核对材料兼容性、内外径、倒刺接头配合及实际布管条件。"],
+      "quick-connect-sealing-compatibility": ["快插接头：密封与公母配对兼容性", "快插连接检查", "观看快插接头连接与断开演示，核对公母接口、密封材料、带阀配置及实际工况下的泄漏与流量表现。"],
+      "quick-connect-coupling-types": ["快插接头尺寸：通径与管径有什么区别？","快插接头尺寸","视频展示不同通径的快插接头。选型时应区分内部通径、接管内径或外径与螺纹规格，并核对压降及公母端配对兼容性。"],
       "f-ss-water-circulation-filter": ["F-SS 水循环过滤器：循环水路过滤","水循环过滤"],
       "thread-to-barb-fittings": ["螺纹转倒刺接头：连接软管与螺纹接口","螺纹转倒刺接头"],
       "rigid-tubing-fittings": ["硬管接头：液路系统连接","硬管接头"],
@@ -48,6 +57,10 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   en: {
     companyCategory: "About FOREACH", watchOnYouTube: "Watch on YouTube", videoLabel: "FOREACH video",
     videos: {
+      "piston-pump-liquid-dispensing": ["Precision Piston Pumps for Liquid Dispensing", "Piston pump dispensing", "Watch the EA piston pump overview and learn how dose volume, stroke capacity, wetted materials and priming affect precision liquid dispensing."],
+      "flexible-tubing-laboratory-fluid-lines": ["Flexible Tubing for Laboratory Fluid Lines", "Laboratory tubing", "Watch flexible tubing for instrument fluid lines. Check material compatibility, tubing ID and OD, hose-barb fit and routing before selection."],
+      "quick-connect-sealing-compatibility": ["Quick-Connect Fittings: Sealing and Mating Compatibility", "Quick-connect sealing", "Watch quick-connect fittings connect and disconnect. Check mating interfaces, seal materials, shutoff options and installed leakage before choosing a pair."],
+      "quick-connect-coupling-types": ["Quick-Connect Fitting Sizes: Flow Size vs. Tubing Size","Quick-connect fitting sizes","Understand quick-connect fitting sizes: internal flow size, tubing ID/OD and thread size. Learn what to check for flow, pressure drop and mating compatibility."],
       "f-ss-water-circulation-filter": ["F-SS Water Circulation Filter | Water Loop Filtration","Water filtration"],
       "thread-to-barb-fittings": ["Thread-to-Barb Fittings | Connect Flexible Tubing to Threaded Ports","Thread-to-barb fittings"],
       "rigid-tubing-fittings": ["Rigid Tubing Fittings | Fluid System Connections","Rigid tubing fittings"],
@@ -65,6 +78,10 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   es: {
     companyCategory: "Acerca de FOREACH", watchOnYouTube: "Ver en YouTube", videoLabel: "Vídeo de FOREACH",
     videos: {
+      "piston-pump-liquid-dispensing": ["Bombas de pistón de precisión para dosificación de líquidos", "Dosificación con pistón", "Vea la presentación de las bombas EA. Revise el volumen de dosis, la capacidad por carrera, los materiales en contacto con el líquido y el cebado; valide la exactitud y la repetibilidad en el circuito real."],
+      "flexible-tubing-laboratory-fluid-lines": ["Tubos flexibles para circuitos de laboratorio", "Tubos de laboratorio", "Vea los tubos transparentes y su flexibilidad. Compruebe la compatibilidad del material, los diámetros interior y exterior, el ajuste con la espiga y el recorrido instalado."],
+      "quick-connect-sealing-compatibility": ["Racores rápidos: estanqueidad y compatibilidad de acoplamiento", "Estanqueidad de racores", "Vea la conexión y desconexión de racores rápidos. Revise las interfaces, los materiales de sellado, las opciones de cierre y las fugas en condiciones de uso."],
+      "quick-connect-coupling-types": ["Tamaños de racores rápidos: paso interno y tamaño del tubo","Tamaños de racores rápidos","El vídeo muestra racores rápidos con distintos pasos internos. Para seleccionar un racor, distinga el paso interno, el diámetro interior o exterior del tubo y la rosca; compruebe la pérdida de presión y la compatibilidad de ambas mitades."],
       "f-ss-water-circulation-filter": ["Filtro de circulación de agua F-SS para circuitos de recirculación","Filtración de agua"],
       "thread-to-barb-fittings": ["Racores roscados con espiga para conectar tubos flexibles","Racores roscados con espiga"],
       "rigid-tubing-fittings": ["Racores para tubos rígidos en sistemas de fluidos","Racores para tubos rígidos"],
@@ -82,6 +99,10 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   fr: {
     companyCategory: "À propos de FOREACH", watchOnYouTube: "Voir sur YouTube", videoLabel: "Vidéo FOREACH",
     videos: {
+      "piston-pump-liquid-dispensing": ["Pompes à piston de précision pour le dosage de liquides", "Dosage par piston", "Découvrez les pompes EA. Vérifiez le volume dosé, la capacité par course, les matériaux mouillés et l’amorçage ; validez l’exactitude et la répétabilité dans le circuit réel."],
+      "flexible-tubing-laboratory-fluid-lines": ["Tubes souples pour les circuits de laboratoire", "Tubes de laboratoire", "Découvrez les tubes transparents et leur souplesse. Vérifiez la compatibilité du matériau, les diamètres intérieur et extérieur, l’ajustement sur l’embout cannelé et le cheminement installé."],
+      "quick-connect-sealing-compatibility": ["Raccords rapides : étanchéité et compatibilité d’accouplement", "Étanchéité des raccords", "Observez la connexion et la déconnexion des raccords rapides. Vérifiez les interfaces, les joints, les options de fermeture et les fuites dans les conditions d’utilisation."],
+      "quick-connect-coupling-types": ["Dimensions des raccords rapides : passage interne et tube","Dimensions des raccords rapides","La vidéo présente des raccords rapides de différentes tailles de passage. Pour choisir un raccord, distinguez le passage interne, les diamètres intérieur et extérieur du tube et le filetage ; vérifiez la perte de charge et la compatibilité des deux parties."],
       "f-ss-water-circulation-filter": ["Filtre de circulation d’eau F-SS pour circuits en boucle","Filtration de l’eau"],
       "thread-to-barb-fittings": ["Raccords filetés à embout cannelé pour tubes souples","Raccords filetés cannelés"],
       "rigid-tubing-fittings": ["Raccords pour tubes rigides dans les circuits de fluides","Raccords pour tubes rigides"],
@@ -99,6 +120,10 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   ko: {
     companyCategory: "FOREACH 소개", watchOnYouTube: "YouTube에서 보기", videoLabel: "FOREACH 동영상",
     videos: {
+      "piston-pump-liquid-dispensing": ["액체 정량 토출을 위한 정밀 피스톤 펌프", "피스톤 펌프 정량 토출", "EA 피스톤 펌프를 살펴보고 목표 토출량, 스트로크 용량, 접액 재질과 프라이밍 조건을 확인하세요. 정확도와 반복성은 실제 유체 회로에서 검증해야 합니다."],
+      "flexible-tubing-laboratory-fluid-lines": ["실험실 유체 라인용 연질 튜브", "실험실 튜브", "투명 튜브의 형태와 유연성을 확인하세요. 선정 시 재질 호환성, 내경과 외경, 호스 바브와의 결합 및 설치 경로를 검토해야 합니다."],
+      "quick-connect-sealing-compatibility": ["퀵 커넥트 피팅: 밀봉과 수·암 결합 호환성", "퀵 커넥트 밀봉", "퀵 커넥트 피팅의 연결과 분리를 확인하세요. 결합 인터페이스, 씰 재질, 차단 밸브 구성 및 실제 사용 조건에서의 누설을 검토해야 합니다."],
+      "quick-connect-coupling-types": ["퀵 커넥트 피팅 치수: 유로 크기와 튜브 치수의 차이","퀵 커넥트 피팅 치수","영상에서 서로 다른 유로 크기의 퀵 커넥트 피팅을 확인하세요. 선정 시 내부 유로 크기, 튜브 내경·외경과 나사 규격을 구분하고 압력 손실 및 암수 연결부의 호환성을 확인해야 합니다."],
       "f-ss-water-circulation-filter": ["F-SS 순환수 필터: 순환수 회로 여과","순환수 여과"],
       "thread-to-barb-fittings": ["나사-호스 바브 피팅: 연질 튜브와 나사 포트 연결","나사-호스 바브 피팅"],
       "rigid-tubing-fittings": ["경질 튜브 피팅: 유체 시스템 연결","경질 튜브 피팅"],
@@ -116,6 +141,10 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   ru: {
     companyCategory: "О компании FOREACH", watchOnYouTube: "Смотреть на YouTube", videoLabel: "Видео FOREACH",
     videos: {
+      "piston-pump-liquid-dispensing": ["Прецизионные поршневые насосы для дозирования жидкостей", "Поршневое дозирование", "Посмотрите обзор насосов EA. Учитывайте объём дозы, объём за ход, контактирующие с жидкостью материалы и заполнение контура; проверяйте точность и повторяемость в реальной системе."],
+      "flexible-tubing-laboratory-fluid-lines": ["Гибкие трубки для лабораторных жидкостных линий", "Лабораторные трубки", "Посмотрите прозрачные трубки и демонстрацию их гибкости. Проверьте совместимость материала, внутренний и наружный диаметры, посадку на штуцер и трассировку линии."],
+      "quick-connect-sealing-compatibility": ["Быстросъёмные соединения: герметичность и совместимость частей", "Герметичность соединений", "Посмотрите соединение и разъединение ответных частей. Проверьте интерфейсы, материалы уплотнений, запорные клапаны и утечки в рабочих условиях."],
+      "quick-connect-coupling-types": ["Размеры быстросъёмных соединений: проход и размер трубки","Размеры быстросъёмных соединений","Видео показывает быстросъёмные соединения с разными проходами. При выборе различайте внутренний проход, внутренний или наружный диаметр трубки и размер резьбы; проверяйте перепад давления и совместимость ответных частей."],
       "f-ss-water-circulation-filter": ["Фильтр F-SS для рециркуляционных водяных контуров","Фильтрация воды"],
       "thread-to-barb-fittings": ["Резьбовые штуцеры для соединения гибких трубок с резьбовыми портами","Резьбовые штуцеры"],
       "rigid-tubing-fittings": ["Фитинги для жёстких трубок в жидкостных системах","Фитинги для жёстких трубок"],
@@ -136,7 +165,10 @@ export function getChannelVideoAdditions(locale: InstallationGuideLocale): Insta
   const copy = channelVideoCopy[locale];
   const language = locale === "zh-CN" ? "zh-Hans" : locale;
   return videos.map(video => {
-    const [title, tag] = copy.videos[video.key];
+    const [fallbackTitle, tag, fallbackDescription] = copy.videos[video.key];
+    const productCopy = getProductVideoCopy(locale, video.key);
+    const title = productCopy?.title ?? fallbackTitle;
+    const description = productCopy?.description ?? fallbackDescription;
     return {
       id: `youtube-${video.key}`,
       relationKeys: video.key === "female-thread-conversion" && locale !== "zh-CN"
@@ -145,11 +177,11 @@ export function getChannelVideoAdditions(locale: InstallationGuideLocale): Insta
       category: video.category,
       series: video.series,
       tags: [tag],
-      description: `${copy.videoLabel}: ${title}`,
+      description: description ?? `${copy.videoLabel}: ${title}`,
       thumbnail: "thumbnail" in video ? video.thumbnail : `https://i.ytimg.com/vi/${video.videoId}/hqdefault.jpg`,
       videoPlatform: "youtube",
       videoUrl: `https://www.youtube.com/embed/${video.videoId}?rel=0&playsinline=1&hl=${language}&cc_lang_pref=${language}`,
-      keywords: [title, tag, ...video.keywords, video.videoId],
+      keywords: [title, tag, ...(productCopy?.keywords ?? video.keywords), video.videoId],
       steps: [],
     };
   });

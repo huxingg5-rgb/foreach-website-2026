@@ -23,7 +23,8 @@ import { notFound } from "next/navigation";
 import { getInstallationGuidePageData } from "@/services/resources/installation-guide/getInstallationGuidePageData";
 import VideoGuideDetailPage from "@/components/resources/installation-guide/VideoGuideDetailPage";
 import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
-import { getCanonicalUrl } from "@/lib/seo/site-url";
+import { isVideoGuideLocaleAvailable } from "@/data/resources/installation-guide/video-guide-route-availability";
+import { getVideoGuideMetadata } from "@/data/resources/installation-guide/video-guide-metadata";
 
 const INSTALLATION_GUIDE_DETAIL_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
@@ -42,19 +43,9 @@ export async function generateMetadata({
 }: InstallationGuideIntlDetailPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
 
+  if (!isVideoGuideLocaleAvailable(locale, slug)) notFound();
   const video = getVideoGuideDetail(locale, slug);
-  if (video) {
-    const url = getCanonicalUrl(video.detailHref);
-    return {
-      title: video.seoTitle,
-      description: video.description,
-      alternates: { canonical: url },
-      openGraph: { title: video.title, description: video.description, url,
-        type: "website", locale: "en_US", images: [{ url: video.thumbnail, alt: video.title }] },
-      twitter: { card: "summary_large_image", title: video.title,
-        description: video.description, images: [video.thumbnail] },
-    };
-  }
+  if (video) return getVideoGuideMetadata(video);
 
   if (locale === "en") {
     return {
@@ -84,7 +75,7 @@ export async function generateMetadata({
 
 export function generateStaticParams() {
   return INSTALLATION_GUIDE_DETAIL_LOCALES.flatMap((locale) => {
-    return getInstallationGuidePageData(locale).guides.map((guide) => ({
+    return getInstallationGuidePageData(locale).guides.filter(guide => isVideoGuideLocaleAvailable(locale, guide.id)).map((guide) => ({
       locale,
       slug: guide.id,
     }));
@@ -99,6 +90,8 @@ export default async function InstallationGuideIntlDetailPage({
   if (!INSTALLATION_GUIDE_DETAIL_LOCALES.includes(locale)) {
     notFound();
   }
+
+  if (!isVideoGuideLocaleAvailable(locale, slug)) notFound();
 
   const currentGuide = getInstallationGuidePageData(locale).guides.find((guide) => {
     return guide.id === slug;

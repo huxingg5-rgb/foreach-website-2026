@@ -1,8 +1,12 @@
 ﻿import type { Metadata } from "next";
-import Link from "next/link";
+import SitePageShell from "@/components/layout/SitePageShell";
 import { notFound } from "next/navigation";
 
 import { installationGuideZhData } from "@/data/resources/installation-guide/installation-guide.zh";
+import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
+import { getVideoGuideMetadata } from "@/data/resources/installation-guide/video-guide-metadata";
+import VideoGuideDetailPage from "@/components/resources/installation-guide/VideoGuideDetailPage";
+import { multilingualProductVideoIds } from "@/data/resources/installation-guide/video-guide-route-availability";
 
 type InstallationGuideDetailPageProps = {
   params: Promise<{
@@ -11,15 +15,16 @@ type InstallationGuideDetailPageProps = {
 };
 
 export function generateStaticParams() {
-  return installationGuideZhData.guides.map((guide) => ({
-    slug: guide.id,
-  }));
+  return [...new Set([...installationGuideZhData.guides.map(guide => guide.id), ...multilingualProductVideoIds])]
+    .map(slug => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: InstallationGuideDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
+  const video = getVideoGuideDetail("zh-CN", slug);
+  if (video) return getVideoGuideMetadata(video);
 
   const currentGuide = installationGuideZhData.guides.find(
     (guide) => guide.id === slug,
@@ -41,6 +46,8 @@ export default async function InstallationGuideDetailPage({
   params,
 }: InstallationGuideDetailPageProps) {
   const { slug } = await params;
+  const video = getVideoGuideDetail("zh-CN", slug);
+  if (video) return <VideoGuideDetailPage video={video} />;
 
   const currentGuide = installationGuideZhData.guides.find(
     (guide) => guide.id === slug,
@@ -51,6 +58,14 @@ export default async function InstallationGuideDetailPage({
   }
 
   return (
+    <SitePageShell
+      breadcrumbAriaLabel="面包屑导航"
+      breadcrumbItems={[
+        { label: "首页", href: "/" },
+        { label: "使用教程", href: "/resources/installation-guide/" },
+        { label: currentGuide.title },
+      ]}
+    >
     <main
       style={{
         minHeight: "100vh",
@@ -64,29 +79,6 @@ export default async function InstallationGuideDetailPage({
           margin: "0 auto",
         }}
       >
-        <nav
-          aria-label="面包屑"
-          style={{
-            marginBottom: "28px",
-            fontSize: "14px",
-            color: "#667085",
-          }}
-        >
-          <Link
-            href="/resources/installation-guide"
-            style={{
-              color: "#173368",
-              textDecoration: "none",
-            }}
-          >
-            使用教程
-          </Link>
-
-          <span style={{ margin: "0 10px" }}>/</span>
-
-          <span>{currentGuide.title}</span>
-        </nav>
-
         <header
           style={{
             marginBottom: "30px",
@@ -182,5 +174,6 @@ export default async function InstallationGuideDetailPage({
         ) : null}
       </article>
     </main>
+    </SitePageShell>
   );
 }

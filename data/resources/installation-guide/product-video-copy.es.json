@@ -1,0 +1,89 @@
+{
+  "piston-pump-liquid-dispensing": {
+    "title": "Bombas de pistón de precisión para dosificación de líquidos",
+    "description": "Bombas de pistón FOREACH EA de 50 μL a 20 mL, con cabezales PMMA, PCTG o PEEK, integración de bomba y válvula y personalización OEM para instrumentos.",
+    "leadParagraphs": [
+      "Las bombas de pistón de precisión FOREACH EA utilizan un motor paso a paso para mover el pistón en ambos sentidos y controlar la aspiración y la dosificación mediante su recorrido. Con capacidades nominales de 50 μL a 20 mL, se emplean en la adición de reactivos, la dilución de muestras y otras tareas de manipulación de líquidos en analizadores de química clínica, inmunoensayo y equipos de automatización de laboratorio. La vida útil estimada es de 5 millones de ciclos con agua pura, a temperatura ambiente y con una contrapresión de 50 kPa.",
+      "Los cabezales están disponibles en PMMA, PCTG y PEEK, con pistones de cerámica, PEEK o zafiro. Se ofrecen conjuntos integrados de bomba y válvula y personalización OEM. El cabezal, el pistón, las conexiones, el motor, las válvulas y el controlador pueden adaptarse al reactivo, la secuencia de dosificación y el espacio de montaje para su integración en el módulo de líquidos del instrumento."
+    ],
+    "breadcrumbLabel": "Dosificación con bomba de pistón",
+    "watchHeading": "Ver la presentación de las bombas de pistón EA",
+    "caption": "Bombas EA y aplicaciones de manipulación de líquidos · Narración en inglés",
+    "media": {"title": "Presentación de las bombas de pistón EA", "description": "Primeros planos de las bombas FOREACH EA y presentación de sus aplicaciones de manipulación de líquidos. Narración en inglés."},
+    "highlightsHeading": "¿Qué debe especificarse para una bomba de dosificación?",
+    "highlightsIntroduction": "Defina primero la tarea de dosificación. Estas notas ayudan a relacionar las especificaciones de la bomba con los requisitos del circuito instalado.",
+    "highlights": [
+      {"title": "Volumen de trabajo y tiempo de ciclo", "description": "Registre los volúmenes mínimo, habitual y máximo, el tiempo de aspiración y dosificación y los intervalos de recarga. Cubrir el mayor volumen no evita validar el menor volumen crítico."},
+      {"title": "Exactitud y repetibilidad", "description": "La exactitud expresa la proximidad al objetivo; la repetibilidad, la dispersión entre resultados. Establezca límites separados y compare datos al mismo volumen y en las mismas condiciones."},
+      {"title": "Circuito completo en contacto con el líquido", "description": "Compruebe cabezal, pistón, juntas, válvulas, tubos y salida frente al reactivo y al proceso de limpieza. Un cabezal compatible no garantiza la compatibilidad de todo el conjunto."}
+    ],
+    "sections": [
+      {"title": "¿La capacidad de la bomba define el volumen mínimo dosificable?", "paragraphs": ["No. La capacidad por carrera completa y el volumen teórico por paso describen el desplazamiento y la resolución de mando. La holgura mecánica, la conmutación de válvulas, el gas atrapado, la expansión del tubo y el desprendimiento de gotas afectan al volumen entregado, especialmente en carreras cortas.", "Seleccione una capacidad que cubra la secuencia de transferencia y permita validar la dosis menor. Revise el volumen y las condiciones de ensayo junto con cada especificación. El rendimiento a carrera completa no se aplica a cualquier carrera parcial, y un incremento de mando pequeño no equivale a una dosis mínima validada."], "linkTitle": "Exactitud, repetibilidad y resolución de las bombas de pistón"},
+      {"title": "¿Cómo influyen el cebado y la sincronización de válvulas?", "paragraphs": ["Al aumentar la presión, una burbuja se comprime y absorbe parte del desplazamiento del pistón. Los tubos flexibles también almacenan y liberan volumen. Una orden repetible del motor puede producir una entrega retardada o variable.", "Cebe todo el circuito siguiendo el procedimiento del conjunto. Revise la estanqueidad de entrada, el nivel del depósito, la conmutación de válvulas y el tiempo de estabilización. Evalúe por separado el arranque y el funcionamiento estable, especialmente después de cambiar el depósito, limpiar o mantener el equipo parado."], "linkTitle": "Burbujas de aire y errores de dosificación"},
+      {"title": "¿Cómo validar la bomba en el instrumento?", "paragraphs": ["Ensaye los volúmenes mínimo, habitual y máximo con el reactivo previsto o un líquido representativo justificado. Incluya válvulas, tubos, racores y punta de dispensación reales. Registre temperatura, entrada, contrapresión, movimiento y tiempos; mida por separado la media y la variación.", "Repita la revisión de compatibilidad y rendimiento tras ciclos representativos de limpieza y uso. Compare las capacidades y los cabezales EA mostrados abajo, consulte la especificación vigente del modelo y confirme el resultado instalado."], "linkTitle": "Selección del material del cabezal según el líquido"}
+    ],
+    "productHeading": "Comparar capacidades y materiales de cabezal EA",
+    "productIntroduction": "Compare capacidad, material, conexiones y control en las páginas de los modelos EA. Dos bombas de igual capacidad pueden tener requisitos de compatibilidad distintos y no ser intercambiables.",
+    "productLinkTitle": "Explorar configuraciones de bombas de pistón",
+    "support": {"title": "¿Busca una bomba para dosificación?", "description": "Indique el intervalo de volumen, reactivo, tiempo de ciclo, contrapresión, materiales y límites de exactitud y repetibilidad."},
+    "keywords": ["bomba de pistón de precisión", "bomba EA", "dosificación de reactivos", "bomba y válvula integradas", "personalización OEM", "cabezal PMMA PCTG PEEK"]
+  },
+  "flexible-tubing-laboratory-fluid-lines": {
+    "title": "Tubos flexibles para circuitos de laboratorio",
+    "description": "Tubos PVC FOREACH para instrumentos: diámetro interior de 0,8–19,1 mm, exterior de 2,4–25,4 mm, dureza Shore A 55/65 y suministro OEM.",
+    "leadParagraphs": [
+      "Los tubos de PVC (policloruro de vinilo) FOREACH se destinan al transporte de gases y líquidos, la limpieza y el drenaje y las conexiones internas de instrumentos analíticos, equipos de automatización de laboratorio y diagnóstico in vitro (IVD). Su flexibilidad facilita el trazado y su transparencia permite observar líquidos y burbujas. Se ofrecen combinaciones de tamaños con diámetros interiores de 0,8–19,1 mm y exteriores de 2,4–25,4 mm, y durezas de 55 y 65 Shore A. El modelo se selecciona según el espacio, el espesor de pared y la conexión.",
+      "Se ofrece suministro de tubos para instrumentos OEM, ajustando dimensiones, dureza y conexiones al fluido, la distribución del equipo y las especificaciones del racor. Los modelos actuales incluyen rollos de 15, 30 y 50 metros. Las dimensiones, durezas y longitudes de rollo especiales pueden evaluarse por proyecto para el montaje de equipos y la producción en serie."
+    ],
+    "breadcrumbLabel": "Tubos de laboratorio",
+    "watchHeading": "Ver la presentación de los tubos flexibles",
+    "caption": "Tubos transparentes, extremos y flexibilidad · Narración en inglés",
+    "media": {"title": "Presentación de tubos flexibles", "description": "Primeros planos de tubos transparentes FOREACH, extremos y flexión manual, con aplicaciones de laboratorio e instrumentación analítica. Narración en inglés."},
+    "highlightsHeading": "¿Qué detalles confirmar antes de pedir tubos?",
+    "highlightsIntroduction": "El vídeo muestra el aspecto y la flexibilidad. La selección requiere también conocer la formulación, las dimensiones, la presión y la conexión completa.",
+    "highlights": [
+      {"title": "Material y exposición", "description": "Identifique el líquido, concentración, temperatura, tiempo de contacto y productos de limpieza. Verifique la formulación elegida frente a esas condiciones."},
+      {"title": "Diámetros interior y exterior", "description": "El diámetro interior afecta al paso y al ajuste sobre la espiga; el exterior, al espacio y a los racores que sujetan o sellan por fuera. Registre ambos y sus tolerancias."},
+      {"title": "Trazado y conexión", "description": "Revise el radio de curvatura, la retención y el apoyo cerca del racor. Una curva cerrada o un tirón repetido pueden alterar el paso o cargar la unión."}
+    ],
+    "sections": [
+      {"title": "¿Cómo elegir el material del tubo de laboratorio?", "paragraphs": ["Parta del fluido y la limpieza reales y compare grados adecuados. FOREACH ofrece PVC y TPU, además de FEP, PTFE, PEEK y PFA. Sus propiedades mecánicas y químicas difieren; compartir diámetro nominal no los hace intercambiables.", "Solicite los datos técnicos y documentos de conformidad necesarios para la formulación y la pieza suministrada. La transparencia, la superficie lisa o una flexión manual no demuestran por sí solas el comportamiento de extraíbles, la compatibilidad química, la aptitud para esterilización ni la presión admisible."]},
+      {"title": "¿Cómo afectan los diámetros a la conexión?", "paragraphs": ["En una conexión con espiga, compruebe el diámetro interior y el perfil de la espiga. El espesor, la dureza y la elasticidad determinan la expansión, el agarre y la resistencia al arrancamiento. Un tubo grande puede quedar suelto; uno demasiado ajustado puede dañarse al montarlo.", "Para racores definidos por el diámetro exterior, respete su geometría de sellado e instrucciones. Registre las dimensiones reales y las tolerancias y valide retención y fugas con el conjunto elegido en condiciones representativas."], "linkTitle": "Relación de expansión de la espiga y ajuste del tubo"},
+      {"title": "¿Qué comprobar después del montaje?", "paragraphs": ["Busque estrangulamientos, curvas cerradas, rozamientos y cargas sin apoyo junto a los racores. Compruebe si el movimiento, la temperatura o la aspiración deforman el tubo. Una unión estanca en reposo puede comportarse de otra forma durante el ciclo.", "Pruebe el circuito al caudal y las condiciones de entrada y salida requeridos. Compruebe fugas, entrada de aire, desplazamientos y cambios tras limpiar o reutilizar. Las líneas de suministro, residuos y dosificación pueden exigir criterios distintos."]}
+    ],
+    "productHeading": "Comparar materiales y dimensiones disponibles",
+    "productIntroduction": "Compare PVC y TPU para líneas flexibles y consulte los demás materiales cuando la aplicación requiera otras propiedades. Esta gama ampliada sirve para comparar; el vídeo no muestra todos los materiales.",
+    "productLinkTitle": "Explorar tubos para instrumentos por material",
+    "support": {"title": "¿Está seleccionando tubos para un instrumento?", "description": "Indique líquido, productos de limpieza, diámetros interior y exterior, longitud, presión o vacío, temperatura y racor."},
+    "keywords": ["tubo PVC", "tubos flexibles de laboratorio", "tubo transparente", "diámetro interior exterior", "dureza Shore A", "tubos OEM"]
+  },
+  "quick-connect-sealing-compatibility": {
+    "title": "Racores rápidos: estanqueidad y compatibilidad de acoplamiento",
+    "description": "Acoplamientos rápidos FOREACH Q20/Q40/Q60 para tubos de 1,6–19,0 mm de diámetro interior, con materiales, válvulas de cierre y soluciones OEM.",
+    "leadParagraphs": [
+      "Los acoplamientos rápidos FOREACH utilizan mitades macho y hembra de conexión y liberación rápidas para transferir reactivos, conectar depósitos y mantener circuitos de instrumentos analíticos y equipos de automatización de laboratorio. La serie Q20 tiene un diámetro nominal de paso de 1/8 de pulgada y admite tubos de 1,6–6,4 mm de diámetro interior; Q40, un paso de 1/4 de pulgada y tubos de 6,4–9,5 mm; Q60, un paso de 3/8 de pulgada y tubos de 9,5–19,0 mm. Cada serie ofrece tamaños discretos dentro del intervalo indicado.",
+      "Q20 y Q40 ofrecen cuerpos de POM con juntas NBR o cuerpos de PP con juntas EPDM; Q60 utiliza PP y EPDM. Hay conexiones rectas, acodadas, pasamuros y roscadas. La combinación de mitades permite conexiones sin válvula, con cierre en un lado o con cierre en ambos lados. Se ofrecen suministro OEM y soluciones personalizadas según el fluido, el tubo, el espacio de montaje y el cierre requerido al desconectar."
+    ],
+    "breadcrumbLabel": "Estanqueidad y compatibilidad de acoplamientos",
+    "watchHeading": "Ver la conexión y desconexión de acoplamientos rápidos",
+    "caption": "Mitades de acoplamiento y demostración manual · Narración en inglés",
+    "media": {"title": "Demostración de acoplamientos rápidos", "description": "Presentación de tamaños y conexión y desconexión manual de las mitades de acoplamientos FOREACH. Narración en inglés."},
+    "highlightsHeading": "¿Qué hace adecuado un par de acoplamientos?",
+    "highlightsIntroduction": "Use estas comprobaciones para evaluar la conexión completa de un depósito, módulo sustituible o circuito que necesite mantenimiento.",
+    "highlights": [
+      {"title": "Interfaz y retención", "description": "Confirme el emparejamiento macho/hembra, el enclavamiento y la posición de la junta. Un mismo tamaño de tubo no demuestra compatibilidad entre mitades."},
+      {"title": "Cuerpo y juntas", "description": "Compruebe por separado cuerpo y elastómero frente al líquido, la limpieza y la temperatura. Un cuerpo adecuado no compensa una junta incompatible."},
+      {"title": "Cierre y desconexión", "description": "Determine qué lado debe retener líquido y qué mitad necesita válvula. Tener válvula no implica desconexión en seco ni ausencia de derrames."}
+    ],
+    "sections": [
+      {"title": "¿Por qué puede haber fugas aunque el acoplamiento encaje?", "paragraphs": ["El enclavamiento retiene las mitades; la junta debe contactar con la superficie correcta. Suciedad, daños, materiales inadecuados o una inserción incompleta pueden impedir el sellado. Las cargas del tubo también afectan a la unión.", "Siga las instrucciones, inspeccione las superficies y evite curvas forzadas o tracción continua. Compruebe fugas a presión y temperatura de servicio, incluyendo cambios de presión y ciclos de conexión. La demostración no constituye un ensayo de estanqueidad o resistencia."]},
+      {"title": "¿Se pueden intercambiar acoplamientos de aspecto similar?", "paragraphs": ["No basándose solo en el aspecto. Compare interfaz, enclavamiento, posición de la junta y apertura de válvulas. Una pareja que conecta puede restringir el flujo o sellar mal. Para sustituciones entre marcas, confirme la combinación exacta y valídela en el circuito.", "Distinga la compatibilidad entre mitades del tamaño de tubo, rosca y paso nominal. Consulte tanto la guía de dimensiones como la especificación del acoplamiento antes de seleccionar repuestos."], "linkTitle": "Distinguir paso, tubo y rosca en acoplamientos rápidos (inglés)"},
+      {"title": "¿En qué condiciones debe probarse la conexión?", "paragraphs": ["Defina líquido, caudal, presión o vacío, temperatura y limpieza. Compruebe la presión admisible y si se permite conectar o desconectar bajo presión. La presión de trabajo no autoriza por sí sola accionar la liberación con presión.", "Mida fugas, líquido retenido o derramado, restricción de flujo y retención tras ciclos representativos. Incluya el tubo y el montaje pasamuros reales. Un cierre con válvula ayuda a aislar el depósito, pero exige validar el cierre y la pérdida de presión del conjunto."], "linkTitle": "Presión admisible y conexión bajo presión"}
+    ],
+    "productHeading": "Comparar configuraciones de acoplamientos rápidos",
+    "productIntroduction": "Compare conexión, montaje y válvulas en los ejemplos Q20, Q40 y Q60. Son configuraciones independientes: confirme la mitad complementaria especificada antes de pedir el par.",
+    "productLinkTitle": "Explorar acoplamientos y opciones de emparejamiento",
+    "support": {"title": "¿Necesita emparejar o sustituir un acoplamiento?", "description": "Facilite referencias o planos de ambas mitades, dimensiones del tubo, fluido, presión, temperatura y requisitos de cierre y mantenimiento."},
+    "keywords": ["acoplamientos rápidos", "racores rápidos", "Q20 Q40 Q60", "diámetro nominal de paso", "diámetro interior del tubo", "válvula de cierre", "OEM"]
+  }
+}

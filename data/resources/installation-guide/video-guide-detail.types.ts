@@ -1,9 +1,12 @@
 export type VideoGuideDetail = {
   id: string;
-  locale: "en";
+  locale: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
   title: string;
   seoTitle: string;
   description: string;
+  lead?: string;
+  leadParagraphs?: readonly string[];
+  media?: { title: string; description: string };
   uploadDate: string;
   duration: string;
   durationLabel: string;
@@ -18,6 +21,12 @@ export type VideoGuideDetail = {
   highlightsIntroduction: string;
   highlightsHeading?: string;
   highlights: readonly { time?: string; start?: number; title: string; description: string }[];
+  sections?: readonly {
+    id: string;
+    title: string;
+    paragraphs: readonly string[];
+    links?: readonly { title: string; href: string }[];
+  }[];
   keywords?: readonly string[];
   productKeys?: readonly string[];
   productHeading: string;

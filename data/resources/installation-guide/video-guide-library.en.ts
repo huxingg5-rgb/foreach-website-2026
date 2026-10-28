@@ -10,12 +10,16 @@ import { videoProductLinks } from "./video-guide-products";
 type LibraryEntry = {
   thumbnail?: string;
   key: string; youtubeId: keyof typeof metadata; title: string; seoTitle: string;
+  breadcrumbLabel: string;
   description: string; watchHeading: string; caption: string;
+  lead?: string; media?: VideoGuideDetail["media"];
+  sections?: VideoGuideDetail["sections"];
   highlightsHeading: string; introduction: string;
   highlights: readonly [title: string, description: string][];
   productKeys?: readonly string[]; relationKeys: string[];
   productHeading: string; productIntroduction: string;
   links?: VideoGuideDetail["products"];
+  support?: VideoGuideDetail["support"];
   keywords?: readonly string[];
 };
 
@@ -29,11 +33,12 @@ function makeGuide(entry: LibraryEntry): VideoGuideDetail {
   return {
     id, locale: "en", title: entry.title, seoTitle: `${entry.seoTitle} | FOREACH`,
     description: entry.description, ...source, durationLabel,
+    lead: entry.lead, media: entry.media, sections: entry.sections,
     detailHref: `/en/resources/installation-guide/${id}/`,
     watchUrl: `https://www.youtube.com/watch?v=${entry.youtubeId}`,
     embedUrl: `https://www.youtube.com/embed/${entry.youtubeId}?rel=0&playsinline=1&hl=en`,
     thumbnail: entry.thumbnail ? getCanonicalUrl(entry.thumbnail) : `https://i.ytimg.com/vi/${entry.youtubeId}/hqdefault.jpg`,
-    breadcrumbLabel: entry.title, sectionId: entry.key,
+    breadcrumbLabel: entry.breadcrumbLabel, sectionId: entry.key,
     watchHeading: entry.watchHeading, caption: entry.caption,
     highlightsHeading: entry.highlightsHeading, highlightsIntroduction: entry.introduction,
     highlights: entry.highlights.map(([title, description]) => ({ title, description })),
@@ -41,7 +46,7 @@ function makeGuide(entry: LibraryEntry): VideoGuideDetail {
     products: [...videoProductLinks(entry.productKeys ?? []), ...(entry.links ?? [])],
     productKeys: entry.productKeys, relationKeys: entry.relationKeys,
     keywords: entry.keywords,
-    support: { title: "Discuss your fluid-system requirements", description: "Share your fluid, required flow and pressure, operating cycle, connections and control interface so we can review a suitable configuration." },
+    support: entry.support ?? { title: "Discuss your fluid-system requirements", description: "Share your fluid, required flow and pressure, operating cycle, connections and control interface so we can review a suitable configuration." },
   };
 }
 
@@ -49,9 +54,226 @@ const liquidCategory = { title: "Compare miniature liquid diaphragm pumps", href
 const gasLiquidCategory = { title: "Explore pumps for gas-liquid handling and waste aspiration", href: "/en/products/pumps/miniature-diaphragm-pumps/gas-liquid-diaphragm-pumps/" };
 
 const entries: readonly LibraryEntry[] = [
+  // Brand editions published 2026-10-28. English narration and six subtitle
+  // tracks verified in Studio; durations are the watch player's rounded seconds.
+  // The untimed selection notes below supplement the short product overviews.
+  {
+    key: "piston-pump-liquid-dispensing", youtubeId: "_nD17YG7Nw8",
+    breadcrumbLabel: "Piston Pump Liquid Dispensing",
+    thumbnail: "/images/resources/installation-guide/youtube/piston-pump-liquid-dispensing-cover.jpg",
+    title: "Precision Piston Pumps for Liquid Dispensing",
+    seoTitle: "Precision Piston Pumps for Liquid Dispensing",
+    description: "Watch the EA piston pump overview and learn how dose volume, stroke capacity, wetted materials and priming affect precision liquid dispensing.",
+    lead: "Select a precision piston pump around the smallest, normal and largest liquid doses your instrument must deliver. Nominal stroke capacity describes displaced volume; it does not establish the minimum reliable dose. Check accuracy and repeatability at the actual working volumes with the intended fluid, valves and tubing.",
+    media: {
+      title: "EA Piston Pump Product Overview",
+      description: "A short introduction to FOREACH EA piston pumps, with product close-ups and an overview of liquid-handling applications. English narration.",
+    },
+    watchHeading: "Watch the EA piston pump overview",
+    caption: "EA piston pumps and liquid-handling applications · English narration",
+    highlightsHeading: "What Should You Specify for a Liquid-Dispensing Piston Pump?",
+    introduction: "Use the product overview as a starting point, then define the dispensing task. The following selection notes explain how to compare a pump specification with the requirements of an installed liquid path.",
+    highlights: [
+      ["Working dose and cycle time", "Record the minimum, normal and maximum dose, the time allowed for aspiration and dispensing, and any refill interval. A capacity that covers the largest transfer still needs evaluation at the smallest critical dose."],
+      ["Accuracy and repeatability", "Accuracy describes closeness to the target; repeatability describes the spread of repeated results. Define separate acceptance limits and compare results obtained at the same volume and operating conditions."],
+      ["Complete wetted path", "Check the pump head, piston, seals, valves, tubing and outlet against the reagent and cleaning method. A compatible pump head alone does not establish compatibility of the complete assembly."],
+    ],
+    sections: [
+      {
+        id: "stroke-capacity-and-dose", title: "Does Piston Pump Capacity Define the Minimum Dispensing Volume?",
+        paragraphs: [
+          "No. Full-stroke capacity and theoretical volume per motor step describe displacement and command resolution. Delivered liquid can differ because of mechanical backlash, valve timing, trapped gas, tubing expansion and droplet release. These effects become more significant when they occupy a larger fraction of a short stroke.",
+          "Choose a capacity that covers the required transfer sequence while leaving the smallest dose practical to validate. Read the specified test volume and test conditions alongside any accuracy or repeatability figure. Full-stroke performance should not be applied to every partial stroke, and a small command increment is not a validated minimum dose.",
+        ],
+        links: [{ title: "Understand piston pump accuracy, repeatability and resolution", href: "/en/resources/technical-articles/piston-pump-accuracy-repeatability-resolution/" }],
+      },
+      {
+        id: "priming-and-delivery", title: "Why Do Priming and Valve Timing Change Piston Pump Delivery?",
+        paragraphs: [
+          "A bubble compresses as pressure rises, so part of the piston displacement can initially compress gas instead of moving liquid through the outlet. Flexible tubing can also store and release volume as pressure changes. A repeatable motor command may therefore produce delayed or inconsistent liquid delivery.",
+          "Prime the complete path using the procedure appropriate to the selected assembly. Check inlet sealing, reservoir level, valve switching and the time allowed for pressure to settle. Evaluate startup and steady operation separately, particularly after a reservoir change, cleaning cycle or long idle period.",
+        ],
+        links: [{ title: "Diagnose air bubbles and piston pump dispensing error", href: "/en/resources/technical-articles/piston-pump-air-bubbles-dispensing-error/" }],
+      },
+      {
+        id: "dispensing-validation", title: "How Should a Piston Pump Be Validated in an Instrument?",
+        paragraphs: [
+          "Test the minimum, normal and maximum working volumes using the intended reagent or a justified representative fluid. Include the production valves, tubing, fittings and dispense tip; record fluid temperature, inlet conditions, backpressure, motion settings and cycle timing. Measure mean delivery and variation separately rather than judging one successful dispense.",
+          "Review material compatibility and performance again after representative cleaning and operating cycles. The EA configurations linked below provide concrete capacity and pump-head options to compare. Use each selected model's current specification and confirm the installed result before applying a general product-overview claim to your instrument.",
+        ],
+        links: [{ title: "Select a piston pump head material for the actual liquid", href: "/en/resources/technical-articles/piston-pump-head-material-selection/" }],
+      },
+    ],
+    relationKeys: ["series:ea"],
+    productHeading: "Compare EA Piston Pump Capacities and Head Materials",
+    productIntroduction: "Start with the representative EA configurations below, then compare capacity, head material, connections and control requirements on the product pages. Models with the same capacity may serve different material requirements; they are not automatically interchangeable in the same reagent path.",
+    links: [{ title: "Explore piston pump configurations", href: "/en/products/pumps/piston-pump/" }],
+    keywords: ["precision piston pump", "liquid dispensing", "piston pump dosing", "EA piston pump", "dispensing accuracy", "pump repeatability", "stroke capacity"],
+    support: { title: "Selecting a Piston Pump for a Dispensing Task?", description: "Share the dose range, reagent, cycle time, backpressure, wetted-material requirements and accuracy and repeatability limits." },
+  },
+  {
+    key: "flexible-tubing-laboratory-fluid-lines", youtubeId: "9JHmGMsBFMg",
+    breadcrumbLabel: "Flexible Laboratory Tubing",
+    thumbnail: "/images/resources/installation-guide/youtube/flexible-tubing-laboratory-fluid-lines-cover.jpg",
+    title: "Flexible Tubing for Laboratory Fluid Lines",
+    seoTitle: "Flexible Tubing for Laboratory Fluid Lines",
+    description: "Watch flexible tubing for instrument fluid lines. Learn how to check material compatibility, tubing ID and OD, hose-barb fit and routing before selection.",
+    lead: "Flexible tubing for laboratory fluid lines must match the liquid, cleaning process, dimensions and connection method. A tube that bends easily or looks transparent is not automatically suitable for the reagent or operating pressure. Specify the tubing material, inner diameter, outer diameter and service conditions together.",
+    media: {
+      title: "Flexible Tubing Product Overview",
+      description: "Close-up views of FOREACH transparent tubing, tube ends and manual bending, with an introduction to laboratory and analytical-instrument applications. English narration.",
+    },
+    watchHeading: "Watch the flexible tubing product overview",
+    caption: "Transparent tubing, tube ends and flexibility demonstration · English narration",
+    highlightsHeading: "Which Tubing Details Matter Before Ordering?",
+    introduction: "The video shows the appearance and flexibility of tubing. Selection also requires information that cannot be established from appearance alone: the material formulation, dimensions, pressure conditions and complete connection.",
+    highlights: [
+      ["Material and exposure", "Identify the liquid, concentration, temperature, contact time and cleaning agents. Check the selected material and formulation against those conditions instead of transferring a general chemical-resistance statement to every tube."],
+      ["Inner diameter and outer diameter", "Inner diameter affects the flow passage and hose-barb fit. Outer diameter affects clearance and fittings designed to grip or seal the tube exterior. Record both dimensions and their tolerances."],
+      ["Routing and connection", "Check bend radius, tube retention and support near the fitting. A tight bend or repeated pull can change the flow path or load the connection even when the tube initially appears to fit."],
+    ],
+    sections: [
+      {
+        id: "tubing-material-selection", title: "How Do You Choose a Material for Laboratory Tubing?",
+        paragraphs: [
+          "Start with the actual fluid and cleaning process, then compare suitable tubing grades. FOREACH lists PVC and TPU tubing as well as FEP, PTFE, PEEK and PFA options. These materials have different mechanical and chemical properties; they should not be treated as interchangeable because they share the same nominal diameter.",
+          "Request the technical data and any required compliance documentation for the selected formulation and supplied part. Transparency, a smooth surface or a manual bending demonstration does not establish extractables performance, chemical compatibility, sterilization suitability or a pressure rating for every application.",
+        ],
+      },
+      {
+        id: "tubing-dimensions-and-fit", title: "How Do Tubing ID and OD Affect the Connection?",
+        paragraphs: [
+          "For a hose barb, begin with the tubing inner diameter and the specified barb profile. Wall thickness, hardness and elasticity influence how the tube expands over the barb, grips the connection and resists pull-off. An oversize tube can fit loosely; an overly tight combination may require excessive force or damage the assembly.",
+          "For fittings specified by tubing outer diameter, follow that connection's sealing geometry and assembly instructions. Do not infer compatibility from a matching nominal size alone. Record the actual tube dimensions and tolerance, and verify retention and leakage with the chosen tube and fitting under representative conditions.",
+        ],
+        links: [{ title: "Check barb expansion ratio and tubing fit", href: "/en/resources/technical-articles/barbed-fitting-expansion-ratio/" }],
+      },
+      {
+        id: "installed-tubing-checks", title: "What Should Be Checked After Routing Flexible Tubing?",
+        paragraphs: [
+          "Inspect the installed route for kinks, sharp bends, rubbing and unsupported loads at the fittings. Check whether movement, temperature or suction changes the tube shape. A connection that seals during a stationary bench test may behave differently when the reservoir moves or the instrument cycles.",
+          "Run the complete fluid path at the required flow, inlet and outlet conditions. Check for leaks, air entry, tube movement and changes after cleaning or repeated use. Keep the acceptance criteria tied to the instrument task: a supply line, waste line and precision dispensing line can impose different requirements on the same nominal tube size.",
+        ],
+      },
+    ],
+    relationKeys: [...fittingOverviewVideoRelations["youtube-flexible-tubing-laboratory-fluid-lines"]],
+    productHeading: "Compare Tubing Materials and Available Dimensions",
+    productIntroduction: "Review PVC and TPU tubing for the flexible-line task, then use the additional material pages below when the application calls for a different chemical or mechanical profile. The wider product range is provided for comparison; the video does not demonstrate every listed material.",
+    links: [{ title: "Browse instrument tubing by material", href: "/en/products/tubing/" }],
+    keywords: ["flexible laboratory tubing", "instrument tubing", "transparent tubing", "tubing ID OD", "PVC tubing", "TPU tubing", "hose barb tubing fit"],
+    support: { title: "Choosing Tubing for an Instrument Fluid Line?", description: "Share the liquid and cleaning agents, tubing ID and OD, length, pressure or vacuum, temperature and connecting fitting." },
+  },
+  {
+    key: "quick-connect-sealing-compatibility", youtubeId: "-GOja7f3460",
+    breadcrumbLabel: "Quick-Connect Sealing and Compatibility",
+    thumbnail: "/images/resources/installation-guide/youtube/quick-connect-sealing-compatibility-cover.jpg",
+    title: "Quick-Connect Fittings: Sealing and Mating Compatibility",
+    seoTitle: "Quick-Connect Fittings: Sealing and Compatibility",
+    description: "Watch quick-connect fittings connect and disconnect. Check mating interfaces, seal materials, shutoff options and installed leakage before choosing a pair.",
+    lead: "Choose quick-connect fittings as a complete mating pair for the fluid and service conditions. A connector that clicks into place still needs compatible sealing geometry, materials and valve operation. Tube size or a similar appearance alone does not establish that two halves will form a reliable fluid connection.",
+    media: {
+      title: "Quick-Connect Fitting Connection Demonstration",
+      description: "A short FOREACH quick-connect fitting overview showing connector sizes and manual connection and disconnection of mating halves. English narration.",
+    },
+    watchHeading: "Watch quick-connect fittings connect and disconnect",
+    caption: "Quick-connect fitting pairs and manual connection demonstration · English narration",
+    highlightsHeading: "What Makes a Quick-Connect Pair Suitable for a Fluid Line?",
+    introduction: "The video demonstrates handling of mating halves. Use the checks below to evaluate the complete connection for a reservoir, replaceable module or serviceable instrument fluid path.",
+    highlights: [
+      ["Mating interface and retention", "Confirm the intended male/female pairing, latch geometry and seal position. Matching tube sizes do not establish mating compatibility. Check engagement and retention using the selected pair's instructions."],
+      ["Body and seal materials", "Review the connector body and elastomer separately against the liquid, cleaning agent and temperature. A suitable body material does not compensate for an unsuitable seal."],
+      ["Shutoff and disconnection", "Determine which side should retain liquid when disconnected and whether either half needs a shutoff valve. Confirm the permitted disconnect procedure; valved does not automatically mean dry-break or spill-free."],
+    ],
+    sections: [
+      {
+        id: "quick-connect-sealing-check", title: "Why Can a Quick-Connect Fitting Leak After It Clicks Into Place?",
+        paragraphs: [
+          "The latch retains the halves, while the seal must contact the correct mating surface. Debris, seal damage, an unsuitable seal material or incomplete engagement can prevent a sound seal even when the connection appears assembled. Tubing loads can also disturb the joint or its tube termination.",
+          "Follow the selected connector's assembly instructions, inspect the sealing surfaces and route the tubing without a forced bend or continuous pull. Check leakage at the actual service pressure and temperature, including representative pressure changes and repeated connection cycles. Do not treat the brief handling demonstration as a leakage or endurance qualification.",
+        ],
+      },
+      {
+        id: "quick-connect-replacement", title: "Can Similar-Looking Quick-Connect Fittings Be Interchanged?",
+        paragraphs: [
+          "Not on appearance alone. Compare the interface dimensions, latch engagement, seal location and valve opening of both halves. A pair that physically connects may still restrict flow, engage incompletely or place the seal incorrectly. For cross-brand replacement, obtain confirmation for the exact part combination and validate it in the intended circuit.",
+          "Keep mating compatibility separate from tube size, thread size and nominal flow size. The fitting size guide explains those dimensions; the connector specification identifies the acceptable pairing and termination. Check both before selecting replacement parts.",
+        ],
+        links: [{ title: "Distinguish quick-connect flow size, tubing size and thread size", href: "/en/resources/installation-guide/youtube-quick-connect-coupling-types/" }],
+      },
+      {
+        id: "quick-connect-service-conditions", title: "Which Service Conditions Should a Quick-Connect Pair Be Tested Under?",
+        paragraphs: [
+          "Specify the liquid, required flow, operating pressure or vacuum, temperature and cleaning process. Check the pressure rating for the selected configuration and whether connection or disconnection under pressure is permitted. Working pressure alone does not establish permission to operate the release mechanism while pressurized.",
+          "Measure leakage, retained fluid or spillage where relevant, flow restriction and retention after representative service cycles. Include the actual tubing and any panel mounting in the test. A valved connection can help isolate a reservoir, but the complete assembly still needs validation for the required shutoff behavior and allowable pressure drop.",
+        ],
+        links: [{ title: "Review quick-disconnect pressure ratings and connection under pressure", href: "/en/resources/technical-articles/quick-disconnect-coupling-pressure-rating/" }],
+      },
+    ],
+    relationKeys: [...fittingOverviewVideoRelations["youtube-quick-connect-sealing-compatibility"]],
+    productHeading: "Compare Quick-Connect Fitting Configurations",
+    productIntroduction: "Use the representative products below to review connection, mounting and valve options across the Q20, Q40 and Q60 families. These cards show separate configurations for comparison; select the documented mating half for each part before ordering a complete pair.",
+    links: [{ title: "Browse quick-connect fittings and mating options", href: "/en/products/fittings/quick-connect-fittings/" }],
+    keywords: ["quick connect fittings", "quick disconnect coupling", "quick connect sealing", "mating compatibility", "fluid connector leakage", "shutoff coupling", "quick connector replacement"],
+    support: { title: "Matching a Quick-Connect Pair or Replacement?", description: "Share both part numbers or drawings, tubing dimensions, fluid, pressure, temperature and the required shutoff and service procedure." },
+  },
+  // Published on 2026-10-28; source narration and six subtitle tracks verified.
+  {
+    key: "quick-connect-coupling-types", youtubeId: "skwIaK1N4f4",
+    breadcrumbLabel: "Quick-Connect Fitting Sizes",
+    thumbnail: "/images/resources/installation-guide/youtube/quick-connect-coupling-types-cover.jpg",
+    title: "Quick-Connect Fitting Sizes: Flow Size vs. Tubing Size",
+    seoTitle: "Quick-Connect Fitting Sizes: Flow Size vs. Tubing Size",
+    description: "Understand quick-connect fitting sizes: internal flow size, tubing ID/OD and thread size. Learn what to check for flow, pressure drop and mating compatibility.",
+    lead: "Quick-connect fitting sizes can refer to the internal flow passage, tubing connection or thread specification. These dimensions are not interchangeable. Before selecting a fitting, identify what each size describes, confirm the mating connection, and check the required flow and allowable pressure drop.",
+    media: {
+      title: "Quick-Connect Fitting Flow Sizes",
+      description: "A short overview of quick-connect fittings with 1/8, 1/4 and 3/8 inch flow sizes, followed by an introduction to fitting options and custom designs. English narration.",
+    },
+    watchHeading: "Watch the quick-connect fitting flow-size overview",
+    caption: "Quick-connect fittings with 1/8, 1/4 and 3/8 inch flow sizes · English narration",
+    highlightsHeading: "What Does Quick-Connect Fitting Size Mean?",
+    introduction: "For the separable male/female fittings shown in the video, record three dimensions separately. A fraction such as 1/4 inch is incomplete unless the specification identifies which part of the connection it describes.",
+    highlights: [
+      ["Flow size", "A nominal designation for the internal flow passage. It is a dimension, not a flow-rate rating. Consult the product drawing when the actual minimum bore matters."],
+      ["Tubing connection size", "The tube dimension specified for the termination. A hose barb is selected by tubing inner diameter (ID); other connection designs may specify outer diameter (OD). Follow the size convention for that termination."],
+      ["Thread specification", "The nominal thread size must be accompanied by its standard and sealing arrangement. A 1/4-inch thread designation alone does not identify the fitting's flow size or the tube it accepts."],
+    ],
+    sections: [
+      {
+        id: "flow-size-vs-tubing-size", title: "Is Flow Size the Same as Tubing Size?",
+        paragraphs: [
+          "No. A 1/4-inch flow-size designation does not establish a 1/4-inch tubing ID, tubing OD or thread size. A fitting family may offer several tubing or threaded terminations around the same nominal flow passage. Read the flow-size and connection-size fields separately.",
+          "For a tubing connection, record both ID and OD, the tube material and the required termination style. Match a hose barb to the specified tubing ID, then check the tube's wall thickness, flexibility and engagement requirements. For a threaded port, record the thread standard and size instead of selecting by a fractional size alone.",
+        ],
+      },
+      {
+        id: "flow-size-selection", title: "How Does Flow Size Affect Fitting Selection?",
+        paragraphs: [
+          "At a given flow rate, pressure loss depends on the internal passages, valve structure, combination of mating halves and fluid properties. Increasing the tubing connection size may leave a restriction inside the fitting unchanged. A nominal flow-size label cannot establish how much liquid the complete connection will deliver.",
+          "Start with the required flow and the pressure drop the circuit can allow across the connection. Review a flow–pressure drop curve or a suitable flow-coefficient calculation for the selected configuration and fluid conditions. Check the valve arrangement and both mating halves, then verify performance in the installed fluid path.",
+        ],
+        links: [{ title: "Read the quick-connect fitting flow and pressure-drop guide", href: "/en/resources/technical-articles/quick-disconnect-coupling-flow-pressure-drop/" }],
+      },
+      {
+        id: "same-size-compatibility", title: "Will Quick-Connect Fittings of the Same Size Fit Together?",
+        paragraphs: [
+          "Not necessarily. Matching tubing sizes or nominal flow sizes does not prove that two fitting halves can mate. The male/female interface, latch, seal location and valve arrangement must be compatible. Two halves that accept the same tube can still belong to different mating families.",
+          "Confirm the intended mating pair from the manufacturer's specifications. For replacement or cross-brand pairing, compare the interface dimensions and verify retention, sealing and full valve opening where valves are fitted. Select materials and pressure/temperature ratings for the service conditions, and validate leakage and flow with the actual assembled connection.",
+        ],
+        links: [{ title: "Review quick-connect fitting interfaces, valves and compatibility", href: "/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/" }],
+      },
+    ],
+    relationKeys: [...fittingOverviewVideoRelations["youtube-quick-connect-coupling-types"]],
+    productHeading: "Find Quick-Connect Fittings for Your Tubing Connection",
+    productIntroduction: "Compare available tubing and threaded terminations, valve options and mounting arrangements. Use each product's drawing and specification to confirm the mating interface, connection size and service conditions.",
+    links: [{ title: "View all quick-connect fittings", href: "/en/products/fittings/quick-connect-fittings/" }],
+    keywords: ["quick connect fitting sizes", "quick-connect fittings", "flow size vs tubing size", "quick connect fitting compatibility", "tubing inner diameter", "tubing outer diameter", "thread size", "fitting pressure drop"],
+    support: { title: "Need Help Matching a Quick-Connect Fitting?", description: "Share the tubing ID and OD, termination type, fluid, required flow, operating pressure and temperature, and the mating connection you need to match." },
+  },
   // Official watch-page metadata and descriptions verified on 2026-10-27.
 {
   "key": "f-ss-water-circulation-filter",
+  "breadcrumbLabel": "Water Circulation Filters",
   "youtubeId": "2K0r5MMFcHs",
   "thumbnail": "/images/resources/installation-guide/youtube/f-ss-water-circulation-filter-cover.jpg",
   "title": "Water Circulation Filter for Recirculating Water Loops",
@@ -95,6 +317,7 @@ const entries: readonly LibraryEntry[] = [
 },
 {
   "key": "thread-to-barb-fittings",
+  "breadcrumbLabel": "Thread-to-Barb Fittings",
   "youtubeId": "i7Gr86k5xoI",
   "thumbnail": "/images/resources/installation-guide/youtube/thread-to-barb-fittings-cover.jpg",
   "title": "Thread-to-Barb Fittings for Flexible Tubing Connections",
@@ -136,6 +359,7 @@ const entries: readonly LibraryEntry[] = [
 },
 {
   "key": "rigid-tubing-fittings",
+  "breadcrumbLabel": "Rigid Tubing Fittings",
   "youtubeId": "20BZArgyibY",
   "thumbnail": "/images/resources/installation-guide/youtube/rigid-tubing-fittings-cover.jpg",
   "title": "Rigid Tubing Fittings for Fluid System Connections",
@@ -178,6 +402,7 @@ const entries: readonly LibraryEntry[] = [
 },
   {
     key: "dpl30-vs-dpl30h", youtubeId: "ReMmjMTZgjM",
+    breadcrumbLabel: "Pump Selection for Backpressure",
     title: "How to Choose a Liquid Diaphragm Pump for Higher Backpressure",
     seoTitle: "Liquid Diaphragm Pump Selection for Higher Backpressure",
     description: "Compare liquid diaphragm pumps with the same nominal flow but different pressure capability. See how backpressure and tubing connections affect selection.",
@@ -198,6 +423,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "dpgl800-vacuum-test", youtubeId: "zIRjV3F279I",
+    breadcrumbLabel: "Waste Aspiration Vacuum Test",
     title: "Miniature Diaphragm Vacuum Pump Test for Waste Aspiration",
     seoTitle: "Miniature Diaphragm Vacuum Pump Test",
     description: "Watch a miniature gas-liquid diaphragm pump vacuum test and learn which pressure, tubing and head-connection conditions matter for waste aspiration.",
@@ -216,6 +442,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "dpl-series-introduction", youtubeId: "FfOkY6ZA8yc",
+    breadcrumbLabel: "Liquid Diaphragm Pump Overview",
     title: "Miniature Liquid Diaphragm Pumps for Instrument Fluid Transfer",
     seoTitle: "Miniature Liquid Diaphragm Pump Overview",
     description: "Explore miniature liquid diaphragm pumps for instrument fluid transfer. Compare flow requirements, pressure capability, motor options and tubing connections.",
@@ -235,6 +462,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "lld-liquid-level-detection", youtubeId: "TlwZ3Ba6H_M",
+    breadcrumbLabel: "Liquid Level Detection",
     title: "Liquid Level Detection for Automated Pipetting",
     seoTitle: "Liquid Level Detection for Automated Pipetting",
     description: "See how liquid level detection supports automated pipetting, and review probe geometry, liquid conditions and the control response before aspiration.",
@@ -253,6 +481,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "about-foreach", youtubeId: "4lJCbmfZZEs",
+    breadcrumbLabel: "FOREACH Company Overview",
     title: "Fluid Control Components for Laboratory Instruments",
     seoTitle: "Fluid Control Components for Laboratory Instruments",
     description: "Watch the FOREACH company overview and explore fluid-control components for laboratory instruments, from liquid transfer to automated pipetting.",
@@ -271,6 +500,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "dpl60-brushed-pressure-test", youtubeId: "yeOkzvD86xI",
+    breadcrumbLabel: "DPL60 Brushed Pressure Test",
     title: "Brushed Liquid Diaphragm Pump Pressure Test: 600 mL/min Class",
     seoTitle: "Brushed Liquid Diaphragm Pump Pressure Test",
     description: "Watch a brushed liquid diaphragm pump pressure test and see why its 600 mL/min free-flow rating must be evaluated separately from pressure capability.",
@@ -288,6 +518,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "dpl60-brushed-flow-rate-test", youtubeId: "WRBdbi1A83U",
+    breadcrumbLabel: "DPL60 Brushed Flow Test",
     title: "600 mL/min Brushed Liquid Diaphragm Pump Flow Test",
     seoTitle: "600 mL/min Brushed Liquid Pump Flow Test",
     description: "Watch a 600 mL/min class brushed liquid diaphragm pump flow test and review how inlet conditions, tubing and backpressure affect delivered flow.",
@@ -305,6 +536,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "dpl60-brushless-flow-rate-test", youtubeId: "pZV2uQOMt5I",
+    breadcrumbLabel: "DPL60 Brushless Flow Test",
     title: "600 mL/min Brushless Liquid Diaphragm Pump Flow Test",
     seoTitle: "600 mL/min Brushless Liquid Pump Flow Test",
     description: "See a brushless liquid diaphragm pump flow test for the 600 mL/min class, with selection checks for motor control, backpressure and operating duty.",
@@ -322,6 +554,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "dpl30-brushed-pressure-test", youtubeId: "p5_Brvhf9Qo",
+    breadcrumbLabel: "DPL30 Brushed Pressure Test",
     title: "Brushed Micro Liquid Diaphragm Pump Pressure Test",
     seoTitle: "Brushed Micro Liquid Pump Pressure Test",
     description: "Review a brushed micro liquid diaphragm pump pressure test and check how working pressure, flow and connection type determine suitability for a fluid circuit.",
@@ -339,6 +572,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "dpl30-brushless-pressure-test", youtubeId: "Lzox2V0DiYs",
+    breadcrumbLabel: "DPL30 Brushless Pressure Test",
     title: "Brushless Micro Liquid Diaphragm Pump Pressure Test",
     seoTitle: "Brushless Micro Liquid Pump Pressure Test",
     description: "Watch a brushless micro liquid diaphragm pump pressure test and review the difference between nominal flow, pressure capability and installed performance.",
@@ -356,6 +590,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "dpl30-brushless-flow-rate-test", youtubeId: "esCbqosu9NU",
+    breadcrumbLabel: "DPL30 Brushless Flow Test",
     title: "300 mL/min Brushless Liquid Diaphragm Pump Flow Test",
     seoTitle: "300 mL/min Brushless Liquid Pump Flow Test",
     description: "Watch a 300 mL/min class brushless liquid diaphragm pump flow test and check the inlet, outlet and control conditions needed for a useful comparison.",
@@ -373,6 +608,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "dpl30-brushed-flow-rate-test", youtubeId: "RqgFil-5YAo",
+    breadcrumbLabel: "DPL30 Brushed Flow Test",
     title: "300 mL/min Brushed Liquid Diaphragm Pump Flow Test",
     seoTitle: "300 mL/min Brushed Liquid Pump Flow Test",
     description: "See a 300 mL/min class brushed liquid diaphragm pump flow demonstration and review the conditions needed to assess a compact liquid-transfer pump.",
@@ -390,6 +626,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "five-wire-brushless-control-wires", youtubeId: "hIR9dg47_wU",
+    breadcrumbLabel: "5-Wire Brushless Pump Wiring",
     title: "5-Wire Brushless Diaphragm Pump Wiring: PWM and Speed Feedback",
     seoTitle: "5-Wire Brushless Pump Wiring: PWM and FG",
     description: "Understand the control functions introduced in a five-wire brushless diaphragm pump video, including PWM speed control, FG feedback and direction control.",
@@ -409,6 +646,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key: "two-wire-brushless-diaphragm-pump", youtubeId: "p3PlAdfx9Sk",
+    breadcrumbLabel: "2-Wire Brushless Pump Connections",
     title: "2-Wire Brushless Diaphragm Pumps: Power Connections and Selection",
     seoTitle: "2-Wire Brushless Diaphragm Pump Connections",
     description: "Explore a two-wire brushless diaphragm pump interface and compare simple power connections with the control and feedback needs of an instrument.",
@@ -427,6 +665,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key:"diaphragm-pump-hose-barb-protection", youtubeId:"rSFDAexeFmU",
+    breadcrumbLabel: "Pump Hose Barb Protection",
     title:"How to Prevent Diaphragm Pump Hose Barb Breakage",
     seoTitle:"How to Prevent Pump Hose Barb Breakage",
     description:"See how to connect tubing without bending a miniature diaphragm pump hose barb, and check tubing fit, insertion direction and strain relief.",
@@ -444,6 +683,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key:"diaphragm-pump-placement-stability", youtubeId:"ag48EKqdPyU",
+    breadcrumbLabel: "Pump Placement and Mounting",
     title:"Why Does a Miniature Diaphragm Pump Rock on a Flat Surface?",
     seoTitle:"Why a Diaphragm Pump Rocks on a Flat Surface",
     description:"Learn why a motor housing can prevent a miniature diaphragm pump from sitting flat, and how to check the intended mounting faces and fixing points.",
@@ -462,6 +702,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key:"diaphragm-installation", youtubeId:"bVbg038KImo",
+    breadcrumbLabel: "Diaphragm Pump Installation",
     title:"How to Install a Miniature Liquid Diaphragm Pump",
     seoTitle:"Miniature Liquid Diaphragm Pump Installation Guide",
     description:"Watch miniature liquid diaphragm pump installation methods and review mounting, tubing connections, electrical checks and startup precautions.",
@@ -480,6 +721,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key:"800-series-gas-liquid", youtubeId:"UwleXANBWvQ",
+    breadcrumbLabel: "Gas-Liquid Pump Overview",
     title:"Gas-Liquid Diaphragm Pumps for Waste Aspiration and Vacuum Handling",
     seoTitle:"Gas-Liquid Diaphragm Pumps for Waste Aspiration",
     description:"Explore a miniature gas-liquid diaphragm pump for aspiration tasks, with clear distinctions between no-load gas flow, vacuum and liquid-handling performance.",
@@ -498,6 +740,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key:"brushed-vs-brushless-lifespan", youtubeId:"EUt7BG3WWwA",
+    breadcrumbLabel: "Pump Motor Wear and EMI",
     title:"Brushed vs. Brushless Pump Motors: Wear, Cleanliness and EMI",
     seoTitle:"Brushed vs. Brushless Pump Motors: Wear and EMI",
     description:"Compare brushed and brushless diaphragm pump motors beyond service life, including brush wear, contamination concerns and electromagnetic interference.",
@@ -516,6 +759,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key:"60-series-pressure", youtubeId:"fH9ofJfE4Us",
+    breadcrumbLabel: "Maximum vs. Working Pressure",
     title:"Diaphragm Pump Maximum Pressure vs. Working Pressure",
     seoTitle:"Diaphragm Pump Maximum vs. Working Pressure",
     description:"Use a diaphragm pump pressure demonstration to understand the difference between a test reading, a published pressure limit and a useful flow-pressure operating point.",
@@ -533,6 +777,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key:"motor-selection", youtubeId:"FGQFrcs9cWI",
+    breadcrumbLabel: "Diaphragm Pump Motor Selection",
     title:"How to Choose a Brushed or Brushless Diaphragm Pump Motor",
     seoTitle:"Choosing a Brushed or Brushless Pump Motor",
     description:"Choose a diaphragm pump motor around operating hours, start-stop cycles, control requirements and electrical integration, then compare the matching pump configurations.",
@@ -551,6 +796,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key:"30h-series-pressure", youtubeId:"ntivZyFe1B0",
+    breadcrumbLabel: "DPL30H High-Pressure Test",
     title:"High-Pressure Miniature Liquid Diaphragm Pump Test",
     seoTitle:"High-Pressure Miniature Liquid Diaphragm Pump Test",
     description:"Watch a high-pressure miniature liquid diaphragm pump demonstration and review pressure limits, threaded connections and flow under backpressure.",
@@ -569,6 +815,7 @@ const entries: readonly LibraryEntry[] = [
   },
   {
     key:"diaphragm-selection", youtubeId:"zgP7udU0asI",
+    breadcrumbLabel: "Miniature Diaphragm Pump Selection",
     title:"How to Choose a Miniature Diaphragm Pump for Your Fluid System",
     seoTitle:"How to Choose a Miniature Diaphragm Pump",
     description:"Choose a miniature diaphragm pump by medium, working flow, pressure, materials and control requirements, then compare liquid and gas-liquid configurations.",

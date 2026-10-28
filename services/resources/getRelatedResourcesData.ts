@@ -45,7 +45,7 @@ const relatedResourceProducts: ProductSelectionProduct[] = [
     }] : [];
   }),
   ...pipettingPumpSelectionProducts.flatMap(product => {
-    if (product.detailSlug !== "smtp2-1000ul") return [];
+    if (!product.detailSlug?.startsWith("smtp2-")) return [];
     const detailHref = getPipettingModelPath("zh-CN", product.detailSlug);
     return detailHref ? [{
       ...product,
@@ -185,7 +185,16 @@ export function getRelatedResourcesData({
   const query = { id: sourceId, slug: sourceSlug, relationKeys: sourceType === "product"
     ? [...relationKeys, ...[sourceId, sourceSlug].filter(Boolean).map(identity => `product:${identity}`)]
     : relationKeys };
-  const videos = sourceType === "video" ? [] : getRelatedVideos(getInstallationGuidePageData(locale).guides, query);
+  // These new English video editions are for the international product pages.
+  // Keep the existing related-video collection on Chinese product pages intact.
+  const internationalProductVideoIds = [
+    "youtube-piston-pump-liquid-dispensing",
+    "youtube-flexible-tubing-laboratory-fluid-lines",
+    "youtube-quick-connect-sealing-compatibility",
+    "youtube-quick-connect-coupling-types",
+  ];
+  const videos = sourceType === "video" ? [] : getRelatedVideos(getInstallationGuidePageData(locale).guides, query)
+    .filter(video => sourceType !== "product" || locale !== "zh-CN" || !internationalProductVideoIds.includes(video.id));
   const articles = sourceType === "article" && !includeRelatedArticles ? [] :
     getRelatedArticles(getTechnicalArticlesPageData(locale).articles, query).map(
       ({ id, slug, title, summary, date, coverImage }) => ({ id, slug, title, summary, date, coverImage }),

@@ -17,7 +17,7 @@ export default function LegacyTechnicalArticleLayout({
 }: {
   articleId: string;
   locale: TechnicalArticleLocale;
-  article: { title: string; date: string; summary?: string; coverImage?: string; coverAlt?: string };
+  article: { title: string; date: string; summary?: string; summaryParagraphs?: readonly string[]; coverImage?: string; coverAlt?: string };
   pageData: {
     listHref: string;
     backText: string;
@@ -43,7 +43,9 @@ export default function LegacyTechnicalArticleLayout({
           <time className={editorial.date} dateTime={article.date}>{article.date}</time>
           <div className={`${editorial.meta} ${editorial.metaWithoutShare}`} aria-hidden="true"><span className={editorial.rule} /></div>
           <div className={editorial.intro}>
-            {article.summary ? <p>{article.summary}</p> : null}
+            {article.summaryParagraphs
+              ? article.summaryParagraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)
+              : article.summary ? <p>{article.summary}</p> : null}
             {article.coverImage ? <figure className={`${newsStyles.cover} ${styles.cover}`}>
               <Image src={article.coverImage} alt={article.coverAlt ?? article.title} fill priority sizes="(max-width: 900px) 100vw, 800px" />
             </figure> : null}

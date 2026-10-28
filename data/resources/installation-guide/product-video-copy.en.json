@@ -1,0 +1,29 @@
+{
+  "piston-pump-liquid-dispensing": {
+    "title": "Precision Piston Pumps for Liquid Dispensing",
+    "description": "FOREACH EA precision piston pumps: 50 μL–20 mL capacities, PMMA/PCTG/PEEK pump heads, integrated pump-valve assemblies and OEM customization for instrument liquid handling.",
+    "leadParagraphs": [
+      "FOREACH EA precision piston pumps use a stepper motor to drive the piston back and forth, controlling liquid aspiration and metered dispensing through piston travel. Nominal capacities range from 50 μL to 20 mL for reagent addition, sample dilution and other liquid-handling tasks in clinical chemistry analyzers, immunoassay analyzers and laboratory automation equipment. Estimated service life is 5 million cycles with pure water at ambient temperature and 50 kPa backpressure.",
+      "Pump head options include PMMA, PCTG and PEEK, with ceramic, PEEK or sapphire pistons. Integrated pump-valve assemblies and OEM customization are available. Pump heads, pistons, fluid connections, motors, valve assemblies and controllers can be configured to suit the reagent, dispensing sequence and available installation space for integration into an instrument's liquid-handling module."
+    ],
+    "keywords": ["precision piston pump", "EA piston pump", "50 μL–20 mL", "OEM piston pump", "integrated pump valve", "PMMA PCTG PEEK pump head", "reagent dispensing"]
+  },
+  "flexible-tubing-laboratory-fluid-lines": {
+    "title": "Flexible Tubing for Laboratory Fluid Lines",
+    "description": "FOREACH flexible PVC tubing for instrument fluid lines: 0.8–19.1 mm ID, 2.4–25.4 mm OD, Shore A 55/65 hardness and OEM tubing configurations.",
+    "leadParagraphs": [
+      "FOREACH PVC (polyvinyl chloride) tubing is designed for gas and liquid transfer, cleaning and drainage, and internal fluid connections in analytical instruments, laboratory automation and in vitro diagnostic (IVD) equipment. Its flexible construction facilitates routing, while the transparent tube makes liquids and bubbles visible. Available size combinations span 0.8–19.1 mm inner diameter and 2.4–25.4 mm outer diameter, with Shore A hardness options of 55 and 65. Select the model according to installation space, wall thickness and connection requirements.",
+      "OEM instrument tubing configurations are supported. Tubing dimensions, hardness and connections can be matched to the fluid, equipment layout and fitting specifications. Current models are supplied in options including 15, 30 and 50 metres per roll. Custom dimensions, hardness and roll lengths can be evaluated for individual projects to support equipment assembly and volume production."
+    ],
+    "keywords": ["PVC tubing", "flexible laboratory tubing", "instrument tubing", "transparent PVC tubing", "Shore A 55 65", "OEM tubing", "tubing ID OD"]
+  },
+  "quick-connect-sealing-compatibility": {
+    "title": "Quick-Connect Fittings: Sealing and Mating Compatibility",
+    "description": "FOREACH Q20/Q40/Q60 quick-connect fittings cover tubing IDs from 1.6 to 19.0 mm, with body/seal options, shutoff configurations and OEM connection solutions.",
+    "leadParagraphs": [
+      "FOREACH quick-connect fittings use male and female halves that connect and release quickly for reagent transfer, reservoir connections and fluid-line maintenance in analytical instruments, laboratory automation and equipment fluid circuits. Three series are available: Q20 has a nominal flow size of 1/8 inch and tubing inner diameters of 1.6–6.4 mm; Q40 has a nominal flow size of 1/4 inch and tubing inner diameters of 6.4–9.5 mm; Q60 has a nominal flow size of 3/8 inch and tubing inner diameters of 9.5–19.0 mm. Each series offers discrete sizes within its stated range.",
+      "Q20 and Q40 offer POM bodies with NBR seals or PP bodies with EPDM seals; Q60 uses PP bodies with EPDM seals. Straight, elbow, bulkhead and threaded connection options are available. Combining the appropriate male and female halves provides non-valved, single-shutoff or double-shutoff connections. OEM supply and customized connection solutions are supported, with configurations matched to the fluid, tubing dimensions, installation space and required shutoff behavior on disconnection."
+    ],
+    "keywords": ["quick connect fittings", "quick disconnect coupling", "Q20 Q40 Q60", "tubing inner diameter", "POM NBR PP EPDM", "single shutoff double shutoff", "OEM fluid connectors"]
+  }
+}
