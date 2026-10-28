@@ -94,6 +94,7 @@ export type EngineeringArticleBlock =
 
 export type EngineeringArticleSection = {
   title: string;
+  tocLabel?: string;
   blocks: readonly EngineeringArticleBlock[];
 };
 
@@ -109,6 +110,7 @@ export type DiaphragmPumpEngineeringArticleCopy = {
   leadBlocks: readonly EngineeringArticleBlock[];
   sections: readonly EngineeringArticleSection[];
   faqTitle: string;
+  faqTocLabel?: string;
   faqItems: readonly EngineeringArticleFaqItem[];
   cta: {
     title: string;

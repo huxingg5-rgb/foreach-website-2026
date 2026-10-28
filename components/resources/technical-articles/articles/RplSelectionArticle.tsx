@@ -178,15 +178,16 @@ export default function RplSelectionArticle({
   const defaultModelLinks = new Map(getRplSelectionProducts(locale).map(product => [product.name, product.href]));
   const modelLinks = suppliedModelLinks ?? defaultModelLinks;
   const defaultSectionNavigation = sectionIds.map((id, index) => ({ id, label: ui.sections[index] }));
-  const sectionNavigation: RplArticleSectionNavigationItem[] = copy.sections.map((section, index) =>
-    suppliedSectionNavigation?.[index] ??
+  const sectionNavigation: RplArticleSectionNavigationItem[] = copy.sections.map((section, index) => {
+    const navigation = suppliedSectionNavigation?.[index] ??
       defaultSectionNavigation[index] ?? {
         id: `section-${index + 1}`,
         label: section.title,
-      },
-  );
+      };
+    return { ...navigation, label: section.tocLabel ?? navigation.label };
+  });
   const fullNavigation: readonly RplArticleSectionNavigationItem[] = faq?.items.length
-    ? [...sectionNavigation, { id: faq.id, label: faq.label }]
+    ? [...sectionNavigation, { id: faq.id, label: copy.faqTocLabel ?? faq.label }]
     : sectionNavigation;
   const titleId = `${articleId}-article-title`;
   const formattedDate = new Intl.DateTimeFormat(locale, { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
