@@ -1,3 +1,5 @@
+import { getPistonPumpMarketingCopy } from "../../data/products/piston-pump-marketing-copy";
+import pistonMarketingCatalog from "../../data/products/piston-pump-marketing-copy.json";
 import {replaceSolenoidSearchItems} from "../../data/search/solenoid-search";
 import { normalizeControlModulePath } from "../../data/products/selection/control-module-routes";
 import {normalizeHpProductHref} from "../../data/products/selection/valve-routes";
@@ -785,6 +787,26 @@ function normalizeValvelessSearchItem(item: SiteSearchItem): SiteSearchItem[] {
   }];
 }
 
+// Models with an authored productName use the same approved copy as the cards
+// and detail pages. All other product search entries retain their current copy.
+function normalizeConfiguredPistonSearchItem(item: SiteSearchItem): SiteSearchItem {
+  if (item.module !== "products") return item;
+  const slug = /^\/products\/pumps\/piston-pump\/([^/]+)\/?$/.exec(item.href)?.[1];
+  if (!slug) return item;
+  const model = slug.toUpperCase();
+  const entry = pistonMarketingCatalog[model as keyof typeof pistonMarketingCatalog];
+  if (!entry || !("productName" in entry.zh)) return item;
+  const copy = getPistonPumpMarketingCopy(model, "zh");
+  if (!copy) return item;
+  return {
+    ...item,
+    title: model + " " + copy.productName,
+    subtitle: copy.heading,
+    description: copy.introduction,
+    keywords: [model, copy.heading, copy.productName, "柱塞泵", "piston pump"],
+  };
+}
+
 async function main() {
   if (process.argv.includes("--solenoid-only")) {
     const {siteSearchIndex} = await import("../../data/search/site-search-index.generated");
@@ -814,7 +836,7 @@ async function main() {
     const en = slug ? getTubingMaterialCopy(slug, "en") : undefined;
     if (!zh || !en || item.module !== "products") return item;
     return { ...item, title: zh.cardTitle, subtitle: zh.cardHeading, description: zh.seoDescription, keywords: [zh.cardTitle, en.cardTitle, slug!, "管材", "仪器管路", "instrument tubing"] };
-  }), "zh");
+  }), "zh").map(normalizeConfiguredPistonSearchItem);
   const invalidProductImages = finalItems.filter((item) => {
     if (item.module !== "products" || !item.image) {
       return item.module === "products";

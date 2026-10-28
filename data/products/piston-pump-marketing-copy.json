@@ -110,55 +110,67 @@
   "EA-500-PMMA": {
     "role": "reagent",
     "zh": {
-      "heading": "500 μL 试剂加样泵，适用于自动化仪器定量加液，可配套阀组件",
-      "introduction": "500 μL 试剂加样泵，适用于自动化仪器定量加液，可配套阀组件。"
+      "heading": "500 微升精密陶瓷柱塞泵，适用于试剂加样",
+      "introduction": "500 μL 精密陶瓷柱塞泵，采用 PMMA 泵头，适用于分析仪器的试剂定量添加。",
+      "productName": "精密陶瓷柱塞泵"
     },
     "en": {
-      "heading": "500 μL Reagent Dispensing Pump for Automation, with Valve Options",
-      "introduction": "A 500 μL reagent dispensing pump with a PMMA head for metered liquid addition in automated instruments. Matching valve assemblies are available."
+      "heading": "500 μL Precision Ceramic Piston Pump for Reagent Dispensing",
+      "introduction": "A 500 μL precision piston pump with a ceramic piston and PMMA head for metered reagent dispensing in analytical instruments.",
+      "productName": "Precision Ceramic Piston Pump"
     },
     "es": {
-      "heading": "Bomba para dosificar reactivos de 500 μL con opciones de válvulas",
-      "introduction": "Bomba de 500 μL con cabezal de PMMA para dosificar reactivos en instrumentos automatizados. Se pueden incorporar conjuntos de válvulas adecuados al circuito."
+      "heading": "Bomba de pistón cerámico de 500 μL para dosificación precisa de reactivos",
+      "introduction": "Bomba de precisión de 500 μL con pistón cerámico y cabezal de PMMA para dosificar reactivos en instrumentos analíticos.",
+      "productName": "Bomba de pistón cerámico"
     },
     "fr": {
-      "heading": "Pompe de dosage de réactifs 500 μL pour automates, vannes en option",
-      "introduction": "Pompe de dosage de réactifs de 500 μL à tête en PMMA pour l’ajout de volumes définis dans les instruments automatisés. Des ensembles de vannes peuvent être associés au circuit."
+      "heading": "Pompe de précision à piston céramique 500 μL pour réactifs",
+      "introduction": "Pompe de précision de 500 μL à piston céramique et tête en PMMA pour le dosage de réactifs dans les instruments d’analyse.",
+      "productName": "Pompe à piston céramique"
     },
     "ko": {
-      "heading": "500 μL 시약 분주 펌프, 자동화 장비 정량 주입 및 밸브 어셈블리 연계",
-      "introduction": "PMMA 헤드의 500 μL 시약 분주 펌프로, 자동화 장비의 정량 주입에 적합합니다. 유로에 맞는 밸브 어셈블리를 함께 구성할 수 있습니다."
+      "heading": "500 μL 정밀 세라믹 피스톤 펌프, 시약 분주용",
+      "introduction": "세라믹 피스톤과 PMMA 헤드를 적용한 500 μL 정밀 피스톤 펌프입니다. 분석기에서 시약을 정량 분주하는 용도로 사용합니다.",
+      "productName": "정밀 세라믹 피스톤 펌프"
     },
     "ru": {
-      "heading": "Насос для дозирования реагентов 500 мкл с подбором клапанных узлов",
-      "introduction": "Насос на 500 мкл с головкой из PMMA для дозированного добавления реагентов в автоматизированных приборах. Возможна комплектация клапанными узлами."
+      "heading": "Прецизионный насос 500 мкл с керамическим плунжером для реагентов",
+      "introduction": "Прецизионный плунжерный насос на 500 мкл с керамическим плунжером и головкой из PMMA для дозирования реагентов в аналитических приборах.",
+      "productName": "Насос с керамическим плунжером"
     }
   },
   "EA-500-PEEK": {
     "role": "reagent",
     "zh": {
-      "heading": "500 μL PEEK 泵头试剂分配泵，适用于试剂与缓冲液定量添加",
-      "introduction": "500 μL PEEK 泵头试剂分配泵，适用于试剂与缓冲液定量添加。"
+      "heading": "500 微升 PEEK 泵头柱塞计量泵，适用于试剂分配",
+      "introduction": "500 μL PEEK 泵头柱塞计量泵，适用于试剂与缓冲液定量分配，柱塞与密封可按介质选配。",
+      "productName": "柱塞计量泵"
     },
     "en": {
-      "heading": "500 μL PEEK Reagent Dispensing Pump for Reagent and Buffer Dosing",
-      "introduction": "A 500 μL reagent dispensing pump with a PEEK head for metered reagent and buffer addition."
+      "heading": "500 μL Piston Metering Pump with PEEK Head for Reagent Dispensing",
+      "introduction": "A 500 μL piston metering pump with a PEEK head for reagent and buffer dispensing. Piston and seal options can be matched to the fluid.",
+      "productName": "Piston Metering Pump"
     },
     "es": {
-      "heading": "Bomba dosificadora de 500 μL, cabezal PEEK, para reactivos y tampones",
-      "introduction": "Bomba de dispensación de reactivos de 500 μL con cabezal de PEEK para añadir volúmenes definidos de reactivos y soluciones tampón."
+      "heading": "Bomba dosificadora de pistón de 500 μL, cabezal PEEK, para reactivos",
+      "introduction": "Bomba dosificadora de pistón de 500 μL con cabezal de PEEK para reactivos y soluciones tampón. El pistón y las juntas se seleccionan según el fluido.",
+      "productName": "Bomba dosificadora de pistón"
     },
     "fr": {
-      "heading": "Pompe de dosage 500 μL, tête PEEK, pour réactifs et solutions tampons",
-      "introduction": "Pompe de distribution de réactifs de 500 μL à tête en PEEK pour l’ajout dosé de réactifs et de solutions tampons."
+      "heading": "Pompe doseuse à piston 500 μL, tête PEEK, pour réactifs",
+      "introduction": "Pompe doseuse à piston de 500 μL avec tête en PEEK pour réactifs et solutions tampons. Le piston et les joints sont choisis en fonction du fluide.",
+      "productName": "Pompe doseuse à piston"
     },
     "ko": {
-      "heading": "500 μL PEEK 헤드 시약 분주 펌프, 시약·완충액 정량 주입용",
-      "introduction": "PEEK 헤드의 500 μL 시약 분주 펌프로, 시약과 완충액을 정해진 양만큼 주입하는 용도에 적합합니다."
+      "heading": "500 μL PEEK 헤드 피스톤 정량 펌프, 시약 분주용",
+      "introduction": "PEEK 헤드의 500 μL 피스톤 정량 펌프로 시약과 완충액을 분주합니다. 유체 특성에 맞춰 피스톤과 씰을 선택할 수 있습니다.",
+      "productName": "피스톤 정량 펌프"
     },
     "ru": {
-      "heading": "Дозирующий насос 500 мкл, головка PEEK, для реагентов и буферов",
-      "introduction": "Насос на 500 мкл с головкой из PEEK для дозированного добавления реагентов и буферных растворов."
+      "heading": "Плунжерный насос-дозатор 500 мкл, головка PEEK, для реагентов",
+      "introduction": "Плунжерный насос-дозатор на 500 мкл с головкой из PEEK для реагентов и буферных растворов. Материалы плунжера и уплотнений подбираются под жидкость.",
+      "productName": "Плунжерный насос-дозатор"
     }
   },
   "EA-1000-PMMA": {
@@ -488,28 +500,34 @@
   "SM-250-PEEK": {
     "role": "metering",
     "zh": {
-      "heading": "250 μL 可定制微型计量泵，PEEK 泵头，柱塞与密封按试剂成分匹配",
-      "introduction": "250 μL 可定制微型计量泵，PEEK 泵头，柱塞与密封按试剂成分匹配。"
+      "heading": "250 微升微型柱塞泵，支持 POM 等材质泵头定制",
+      "introduction": "250 μL 微型柱塞泵，展示配置为 PEEK 泵头，POM 等材质泵头可按项目定制，适用于紧凑型仪器的定量加液。",
+      "productName": "微型柱塞泵"
     },
     "en": {
-      "heading": "250 μL Custom Miniature Metering Pump, PEEK Head, Piston and Seal Options",
-      "introduction": "A customizable 250 μL miniature metering pump with a PEEK head. Pistons and seals are selected according to reagent composition."
+      "heading": "250 μL Miniature Piston Pump with POM and Other Custom Pump Head Options",
+      "introduction": "A 250 μL miniature piston pump for dosing in compact instruments. The configuration shown has a PEEK head; custom POM and other pump heads are available for OEM projects.",
+      "productName": "Miniature Piston Pump"
     },
     "es": {
-      "heading": "Bomba dosificadora miniatura de 250 μL a medida, cabezal PEEK",
-      "introduction": "Bomba dosificadora miniatura de 250 μL configurable, con cabezal de PEEK. El pistón y las juntas se seleccionan según la composición del reactivo."
+      "heading": "Bomba de pistón miniatura de 250 μL, cabezal POM y otros materiales a medida",
+      "introduction": "Bomba de pistón miniatura de 250 μL para dosificación en equipos compactos. El cabezal mostrado es de PEEK; se ofrecen cabezales a medida en POM u otros materiales según el proyecto.",
+      "productName": "Bomba de pistón miniatura"
     },
     "fr": {
-      "heading": "Pompe doseuse miniature 250 μL sur mesure, tête PEEK",
-      "introduction": "Pompe doseuse miniature de 250 μL configurable, à tête en PEEK. Le piston et les joints sont sélectionnés selon la composition du réactif."
+      "heading": "Pompe à piston miniature 250 μL, tête sur mesure en POM ou autre matériau",
+      "introduction": "Pompe à piston miniature de 250 μL pour le dosage dans les instruments compacts. La version présentée possède une tête en PEEK ; des têtes en POM ou d’autres matériaux peuvent être réalisées sur mesure.",
+      "productName": "Pompe à piston miniature"
     },
     "ko": {
-      "heading": "250 μL 맞춤형 소형 정량 펌프, PEEK 헤드 및 시약별 피스톤·씰 선택",
-      "introduction": "PEEK 헤드의 250 μL 맞춤형 소형 정량 펌프입니다. 시약 성분에 맞춰 피스톤과 씰을 선택합니다."
+      "heading": "250 μL 소형 피스톤 펌프, POM 등 헤드 소재 맞춤 제작",
+      "introduction": "소형 장비의 정량 주입을 위한 250 μL 피스톤 펌프입니다. 표시된 구성은 PEEK 헤드이며, 프로젝트에 맞춰 POM 등 다른 소재로 헤드를 제작할 수 있습니다.",
+      "productName": "소형 피스톤 펌프"
     },
     "ru": {
-      "heading": "Миниатюрный дозирующий насос 250 мкл под заказ, головка PEEK",
-      "introduction": "Миниатюрный дозирующий насос на 250 мкл с головкой из PEEK, с конфигурацией под проект. Поршень и уплотнения подбираются по составу реагента."
+      "heading": "Миниатюрный плунжерный насос 250 мкл, головки из POM на заказ",
+      "introduction": "Миниатюрный плунжерный насос на 250 мкл для компактных приборов. Показана головка из PEEK; головки из POM и других материалов изготавливаются по требованиям проекта.",
+      "productName": "Миниатюрный плунжерный насос"
     }
   },
   "SM-500-PMMA": {
@@ -569,55 +587,67 @@
   "TM-50-PMMA": {
     "role": "dosing",
     "zh": {
-      "heading": "50 μL 超微型加液泵，适用于紧凑型分析模块，采用 6-40 UNF 接口",
-      "introduction": "50 μL 超微型加液泵，适用于紧凑型分析模块，采用 6-40 UNF 接口。"
+      "heading": "50 μL 超微型柱塞泵，适用于紧凑型分析模块，采用 6-40 UNF 接口",
+      "introduction": "50 μL 超微型柱塞泵，采用 6-40 UNF 液路接口，适用于紧凑型分析模块中的微量试剂添加。",
+      "productName": "超微型柱塞泵"
     },
     "en": {
-      "heading": "50 μL Ultra-Compact Dosing Pump for Analytical Modules, 6-40 UNF Ports",
-      "introduction": "A 50 μL ultra-compact dosing pump with a PMMA head for compact analytical modules. The displayed configuration uses 6-40 UNF ports."
+      "heading": "50 μL Ultra-Compact Piston Pump for Analytical Modules, 6-40 UNF Ports",
+      "introduction": "A 50 μL ultra-compact piston pump with 6-40 UNF fluid ports for microliter reagent dosing in compact analytical modules.",
+      "productName": "Ultra-Compact Piston Pump"
     },
     "es": {
-      "heading": "Bomba dosificadora ultracompacta de 50 μL para módulos, conexiones 6-40 UNF",
-      "introduction": "Bomba dosificadora ultracompacta de 50 μL con cabezal de PMMA para módulos analíticos compactos. La configuración mostrada utiliza conexiones de 6-40 UNF."
+      "heading": "Bomba de pistón ultracompacta de 50 μL para módulos analíticos, puertos 6-40 UNF",
+      "introduction": "Bomba de pistón ultracompacta de 50 μL con conexiones 6-40 UNF para dosificar microvolúmenes de reactivos en módulos analíticos compactos.",
+      "productName": "Bomba de pistón ultracompacta"
     },
     "fr": {
-      "heading": "Pompe doseuse ultra-compacte 50 μL pour modules, raccordements 6-40 UNF",
-      "introduction": "Pompe doseuse ultra-compacte de 50 μL à tête en PMMA pour les modules d’analyse compacts. La configuration présentée utilise des raccordements 6-40 UNF."
+      "heading": "Pompe à piston ultracompacte 50 μL pour modules d’analyse, ports 6-40 UNF",
+      "introduction": "Pompe à piston ultracompacte de 50 μL avec raccordements 6-40 UNF pour l’ajout de microvolumes de réactifs dans les modules d’analyse compacts.",
+      "productName": "Pompe à piston ultracompacte"
     },
     "ko": {
-      "heading": "50 μL 초소형 정량 주입 펌프, 소형 분석 모듈용 6-40 UNF 포트 구성",
-      "introduction": "PMMA 헤드의 50 μL 초소형 정량 주입 펌프로, 소형 분석 모듈에 적합합니다. 표시된 구성은 6-40 UNF 포트를 사용합니다."
+      "heading": "50 μL 초소형 피스톤 펌프, 분석 모듈용 6-40 UNF 포트",
+      "introduction": "6-40 UNF 유체 포트를 적용한 50 μL 초소형 피스톤 펌프입니다. 설치 공간이 제한된 분석 모듈에서 미량 시약을 주입하는 데 사용합니다.",
+      "productName": "초소형 피스톤 펌프"
     },
     "ru": {
-      "heading": "Сверхкомпактный дозирующий насос 50 мкл для модулей, порты 6-40 UNF",
-      "introduction": "Сверхкомпактный дозирующий насос на 50 мкл с головкой из PMMA для компактных аналитических модулей. Показанная конфигурация имеет порты 6-40 UNF."
+      "heading": "Сверхкомпактный плунжерный насос 50 мкл для анализаторов, порты 6-40 UNF",
+      "introduction": "Сверхкомпактный плунжерный насос на 50 мкл с портами 6-40 UNF для дозирования микролитровых объёмов реагентов в компактных аналитических модулях.",
+      "productName": "Сверхкомпактный плунжерный насос"
     }
   },
   "TM-100-PMMA": {
     "role": "sampling",
     "zh": {
-      "heading": "100 μL 超微型取样泵，适用于小型检测模块中的样本分配，PMMA 泵头",
-      "introduction": "100 μL 超微型取样泵，适用于小型检测模块中的样本分配，PMMA 泵头。"
+      "heading": "100 μL 超微型柱塞泵，适用于小型检测模块中的样本分配，PMMA 泵头",
+      "introduction": "100 μL 超微型柱塞泵，采用 PMMA 泵头，适用于小型检测模块中的样本吸取与定量分配。",
+      "productName": "超微型柱塞泵"
     },
     "en": {
-      "heading": "100 μL Ultra-Compact Sampling Pump for Detection Modules, PMMA Head",
-      "introduction": "A 100 μL ultra-compact sampling pump with a PMMA head for sample dispensing in small detection modules."
+      "heading": "100 μL Ultra-Compact Piston Pump for Sample Handling, PMMA Head",
+      "introduction": "A 100 μL ultra-compact piston pump with a PMMA head for sample aspiration and metered dispensing in small detection modules.",
+      "productName": "Ultra-Compact Piston Pump"
     },
     "es": {
-      "heading": "Bomba de muestreo ultracompacta de 100 μL para módulos de detección, PMMA",
-      "introduction": "Bomba de muestreo ultracompacta de 100 μL con cabezal de PMMA para dispensar muestras en módulos de detección pequeños."
+      "heading": "Bomba de pistón ultracompacta de 100 μL para muestras, cabezal PMMA",
+      "introduction": "Bomba de pistón ultracompacta de 100 μL con cabezal de PMMA para aspirar y dispensar volúmenes definidos de muestra en módulos de detección compactos.",
+      "productName": "Bomba de pistón ultracompacta"
     },
     "fr": {
-      "heading": "Pompe de prélèvement ultra-compacte 100 μL pour modules de détection, PMMA",
-      "introduction": "Pompe de prélèvement ultra-compacte de 100 μL à tête en PMMA pour la distribution d’échantillons dans les petits modules de détection."
+      "heading": "Pompe à piston ultracompacte 100 μL pour échantillons, tête PMMA",
+      "introduction": "Pompe à piston ultracompacte de 100 μL à tête en PMMA pour l’aspiration et la distribution dosée d’échantillons dans les petits modules de détection.",
+      "productName": "Pompe à piston ultracompacte"
     },
     "ko": {
-      "heading": "100 μL 초소형 샘플링 펌프, 소형 검출 모듈의 시료 분주용 PMMA 헤드",
-      "introduction": "PMMA 헤드의 100 μL 초소형 샘플링 펌프로, 소형 검출 모듈에서 시료를 분주하는 용도에 적합합니다."
+      "heading": "100 μL 초소형 피스톤 펌프, 검출 모듈의 시료 분주용 PMMA 헤드",
+      "introduction": "PMMA 헤드의 100 μL 초소형 피스톤 펌프로, 소형 검출 모듈에서 시료를 흡입하고 정량 분주하는 용도에 적합합니다.",
+      "productName": "초소형 피스톤 펌프"
     },
     "ru": {
-      "heading": "Сверхкомпактный насос для проб 100 мкл для модулей детекции, PMMA",
-      "introduction": "Сверхкомпактный насос для проб на 100 мкл с головкой из PMMA для распределения проб в небольших модулях детекции."
+      "heading": "Сверхкомпактный плунжерный насос 100 мкл для проб, головка PMMA",
+      "introduction": "Сверхкомпактный плунжерный насос на 100 мкл с головкой из PMMA для аспирации и дозирования проб в малогабаритных детекторных модулях.",
+      "productName": "Сверхкомпактный плунжерный насос"
     }
   },
   "TM-250-PMMA": {

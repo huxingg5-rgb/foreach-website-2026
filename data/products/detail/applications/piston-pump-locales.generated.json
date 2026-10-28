@@ -686,9 +686,9 @@
     },
     "ea-500-pmma": {
       "description": [
-        "EA-500-PMMA es una bomba de dispensación de reactivos de precisión de 500 μL de capacidad nominal para añadir reactivos, diluir muestras y distribuir soluciones tampón en analizadores de química clínica e inmunoensayo. Su cabezal de PMMA y su pistón cerámico utilizan un accionamiento alternativo por motor paso a paso para aspirar y dispensar volúmenes definidos.",
-        "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Se pueden incorporar conjuntos de válvulas, realimentación óptica y un controlador para integrar aspiración, dispensación, conmutación de fluidos y control del accionamiento.",
-        "La personalización OEM incluye cabezales de PMMA, PCTG o PEEK y pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y los componentes del circuito se pueden adaptar a la composición del reactivo, al espacio de montaje y al control del instrumento."
+        "EA-500-PMMA es una bomba de precisión con pistón cerámico y capacidad nominal de 500 μL, adecuada para dosificar reactivos, diluir muestras y dispensar soluciones tampón en analizadores de química clínica e inmunoensayo. Un motor paso a paso acciona el pistón dentro del cabezal de PMMA para aspirar y dispensar volúmenes definidos de líquido.",
+        "Las conexiones pueden ser de 1/4-28 UNF o M6, con 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa se especifican en ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Como opciones se ofrecen conjuntos de válvulas, realimentación mediante sensor óptico y un controlador para integrar la aspiración, la dispensación, la conmutación del circuito y el accionamiento.",
+        "La personalización OEM incluye cabezales de PMMA, PCTG o PEEK y pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y los componentes del circuito se seleccionan según la composición del reactivo, el espacio de montaje y los requisitos de control del instrumento."
       ],
       "commonApplications": [
         "Dosificación de reactivos",
@@ -779,7 +779,7 @@
           "answer": "Indique EA-500-PMMA o la capacidad objetivo, dosis, error permitido, tiempo, composición del fluido, temperatura, contrapresión, espacio de montaje y requisitos de control. El modelo de la página identifica una configuración de muestra; los materiales, puertos y conjuntos definitivos se definen por proyecto."
         }
       ],
-      "heading": "Bomba para dosificar reactivos de 500 μL con opciones de válvulas",
+      "heading": "Bomba de pistón cerámico de 500 μL para dosificación precisa de reactivos",
       "specs": [
         {
           "label": "Volumen",
@@ -856,8 +856,8 @@
       "imageCaption": "",
       "imageFootnotes": [],
       "sectionTitleMap": {},
-      "seoTitle": "EA-500-PMMA 500 μL Bomba para reactivos | Foreach Technology",
-      "metaDescription": "EA-500-PMMA: Bomba de 500 μL con cabezal de PMMA para dosificar reactivos en instrumentos automatizados. Se pueden incorporar conjuntos de válvulas adecuados al circuito.",
+      "seoTitle": "EA-500-PMMA 500 μL Bomba de pistón cerámico | Foreach Technology",
+      "metaDescription": "EA-500-PMMA: Bomba de precisión de 500 μL con pistón cerámico y cabezal de PMMA para dosificar reactivos en instrumentos analíticos.",
       "bottomCtaTitle": "Confirme la configuración de EA-500-PMMA",
       "bottomCtaDescription": "Indique el fluido, volumen por dosis, error permitido, tiempo, temperatura, contrapresión, espacio y requisitos de control. Foreach le ayudará a seleccionar materiales, puertos y componentes para su aplicación.",
       "bottomCtaButtonText": "Contactar con un ingeniero",
@@ -865,9 +865,9 @@
     },
     "ea-500-peek": {
       "description": [
-        "EA-500-PEEK es una bomba de dispensación de reactivos de 500 μL de capacidad nominal para la adición dosificada de reactivos, la distribución de soluciones tampón y la reposición de líquido de reacción en instrumentos analíticos. Un cabezal de PEEK y un pistón alternativo con motor paso a paso permiten programar la aspiración y la dispensación.",
-        "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa son ambas ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Las opciones de válvulas, realimentación óptica y controlador facilitan la integración de la unidad de reactivos en el circuito del instrumento.",
-        "El cabezal, el pistón y las juntas se seleccionan según la composición del reactivo. Las opciones de cabezal incluyen PEEK, PMMA, PCTG y PVDF, con pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. También se pueden configurar las conexiones, el motor y los componentes de control."
+        "EA-500-PEEK es una bomba dosificadora de pistón con capacidad nominal de 500 μL y cabezal de PEEK, adecuada para añadir reactivos, dispensar soluciones tampón y reponer líquido de reacción en instrumentos analíticos. Un motor paso a paso acciona el pistón alternativo para aspirar y dispensar volúmenes definidos según el programa del instrumento.",
+        "Las conexiones pueden ser de 1/4-28 UNF o M6, con 2000 pasos por carrera completa. La exactitud y la repetibilidad a carrera completa se especifican en ≤0,5 %, con una vida útil estimada de 5 millones de ciclos. Los conjuntos de válvulas, la realimentación mediante sensor óptico y el controlador son opcionales y facilitan la integración de la unidad de dosificación en el circuito del instrumento.",
+        "El cabezal, el pistón y las juntas se seleccionan según la composición del reactivo. Hay cabezales de PEEK, PMMA, PCTG o PVDF y pistones de cerámica de zirconia, cerámica de alúmina, PEEK o zafiro. Las conexiones, el motor y los componentes de control se configuran según las necesidades del instrumento."
       ],
       "commonApplications": [
         "Dosificación de reactivos",
@@ -958,7 +958,7 @@
           "answer": "Indique EA-500-PEEK o la capacidad objetivo, dosis, error permitido, tiempo, composición del fluido, temperatura, contrapresión, espacio de montaje y requisitos de control. El modelo de la página identifica una configuración de muestra; los materiales, puertos y conjuntos definitivos se definen por proyecto."
         }
       ],
-      "heading": "Bomba dosificadora de 500 μL, cabezal PEEK, para reactivos y tampones",
+      "heading": "Bomba dosificadora de pistón de 500 μL, cabezal PEEK, para reactivos",
       "specs": [
         {
           "label": "Volumen",
@@ -1035,8 +1035,8 @@
       "imageCaption": "",
       "imageFootnotes": [],
       "sectionTitleMap": {},
-      "seoTitle": "EA-500-PEEK 500 μL Bomba para reactivos | Foreach Technology",
-      "metaDescription": "EA-500-PEEK: Bomba de dispensación de reactivos de 500 μL con cabezal de PEEK para añadir volúmenes definidos de reactivos y soluciones tampón.",
+      "seoTitle": "EA-500-PEEK 500 μL Bomba dosificadora de pistón | Foreach Technology",
+      "metaDescription": "EA-500-PEEK: Bomba dosificadora de pistón de 500 μL con cabezal de PEEK para reactivos y soluciones tampón. El pistón y las juntas se seleccionan según el fluido.",
       "bottomCtaTitle": "Confirme la configuración de EA-500-PEEK",
       "bottomCtaDescription": "Indique el fluido, volumen por dosis, error permitido, tiempo, temperatura, contrapresión, espacio y requisitos de control. Foreach le ayudará a seleccionar materiales, puertos y componentes para su aplicación.",
       "bottomCtaButtonText": "Contactar con un ingeniero",
@@ -3119,11 +3119,11 @@
       "bottomCtaHref": "/contact/"
     },
     "sm-250-peek": {
-      "heading": "Bomba dosificadora miniatura de 250 μL a medida, cabezal PEEK",
+      "heading": "Bomba de pistón miniatura de 250 μL, cabezal POM y otros materiales a medida",
       "description": [
-        "SM-250-PEEK es una bomba dosificadora miniatura configurable de 250 μL de capacidad nominal para dispensar reactivos, añadir líquido de reacción y manejar volúmenes definidos en instrumentos compactos. El cabezal de PEEK y el mecanismo dosificador de pistón con motor paso a paso permiten programar la aspiración y la dispensación.",
-        "Conexiones 1/4-28 UNF o M6 y 2000 pasos por carrera completa. La repetibilidad a carrera completa es ≤0,5 %, con una vida útil estimada de 5 millones de ciclos; la exactitud se confirma para la configuración seleccionada. Las opciones de válvulas, realimentación óptica y controlador permiten la adición dosificada y la conmutación del circuito.",
-        "La personalización OEM incluye pistones de cerámica, acero inoxidable o PEEK, con juntas seleccionadas según el reactivo. Los cabezales pueden ser de PEEK, PMMA, PSU o POM; los tubos, las sondas de dispensación y el montaje se adaptan a los requisitos del instrumento."
+        "SM-250-PEEK es una bomba de pistón miniatura con capacidad nominal de 250 μL para dispensar reactivos, añadir líquido de reacción y dosificar volúmenes definidos en instrumentos compactos. La configuración mostrada incorpora un cabezal de PEEK; los cabezales de POM y otros materiales se fabrican a medida según el proyecto. Un motor paso a paso acciona el pistón alternativo para realizar la aspiración y la dispensación programadas.",
+        "Las conexiones pueden ser de 1/4-28 UNF o M6, con 2000 pasos por carrera completa. La repetibilidad a carrera completa se especifica en ≤0,5 %, con una vida útil estimada de 5 millones de ciclos; la especificación de exactitud se confirma para la configuración elegida. Se ofrecen conjuntos de válvulas, realimentación mediante sensor óptico y un controlador como opciones para dosificar y conmutar el circuito de líquidos.",
+        "La personalización OEM incluye cabezales de PEEK, PMMA, PSU o POM y pistones de cerámica, acero inoxidable o PEEK, con juntas seleccionadas según la composición del reactivo. Los tubos, las sondas de dispensación y el montaje se configuran en función del espacio disponible y de la secuencia de manipulación de líquidos."
       ],
       "commonApplications": [
         "Adición dosificada de líquido de reacción",
@@ -3202,8 +3202,8 @@
           "answer": "La repetibilidad SM a carrera completa es ≤0,5 % en las condiciones especificadas, no a cualquier dosis pequeña. Indique el volumen de trabajo y el error permitido para confirmar la exactitud de la configuración. La vida prevista de cinco millones de ciclos corresponde a agua pura, temperatura ambiente y contrapresión de 50 kPa; no es una garantía para cualquier reactivo."
         }
       ],
-      "seoTitle": "SM-250-PEEK 250 μL Bomba dosificadora de precisión | Foreach Technology",
-      "metaDescription": "SM-250-PEEK: Bomba dosificadora miniatura de 250 μL configurable, con cabezal de PEEK. El pistón y las juntas se seleccionan según la composición del reactivo.",
+      "seoTitle": "SM-250-PEEK 250 μL Bomba de pistón miniatura | Foreach Technology",
+      "metaDescription": "SM-250-PEEK: Bomba de pistón miniatura de 250 μL para dosificación en equipos compactos. El cabezal mostrado es de PEEK; se ofrecen cabezales a medida en POM u otros materiales según el proyecto.",
       "specs": [
         {
           "label": "Volumen",
@@ -3608,11 +3608,11 @@
       "bottomCtaHref": "/contact/"
     },
     "tm-50-pmma": {
-      "heading": "Bomba dosificadora ultracompacta de 50 μL para módulos, conexiones 6-40 UNF",
+      "heading": "Bomba de pistón ultracompacta de 50 μL para módulos analíticos, puertos 6-40 UNF",
       "description": [
-        "TM-50-PMMA es una bomba dosificadora ultracompacta de 50 μL de capacidad nominal para añadir microvolúmenes de reactivos en módulos analíticos compactos. El cabezal de PMMA y el pistón cerámico utilizan un accionamiento alternativo por motor paso a paso para integrar la unidad de dosificación en espacios reducidos.",
-        "La configuración utiliza conexiones 6-40 UNF y 2540 pasos por carrera completa. Se pueden configurar válvulas, conexiones de tubos y control del accionamiento para aspiración y dispensación dosificadas en módulos analíticos. La exactitud, la repetibilidad y la vida útil se confirman para la configuración del proyecto.",
-        "El montaje, las conexiones de tubos y las válvulas se pueden personalizar para módulos analíticos OEM. Otros materiales de cabezal o pistón se evalúan según el reactivo, el ajuste de las juntas y el espacio disponible; la combinación final de materiales y la estructura se definen en el plano del proyecto."
+        "TM-50-PMMA es una bomba de pistón ultracompacta con capacidad nominal de 50 μL, adecuada para dosificar microvolúmenes de reactivos en módulos analíticos compactos. Un motor paso a paso acciona el pistón cerámico dentro del cabezal de PMMA, facilitando la integración de la unidad de dosificación en espacios reducidos.",
+        "Utiliza conexiones de líquido 6-40 UNF y 2540 pasos por carrera completa. Los conjuntos de válvulas, las conexiones de tubos y el control del accionamiento se configuran según el proyecto para realizar la aspiración y la dispensación dosificadas. Las especificaciones de exactitud, repetibilidad y vida útil se confirman para la configuración del proyecto.",
+        "El montaje, las conexiones de tubos y los conjuntos de válvulas pueden adaptarse a los requisitos de módulos analíticos OEM. Los materiales alternativos del cabezal o del pistón se evalúan según la composición del reactivo, el ajuste de las juntas y el espacio disponible; los planos del proyecto definen la combinación final de materiales y el diseño mecánico."
       ],
       "commonApplications": [
         "Dispensación de reactivos en analizadores",
@@ -3691,8 +3691,8 @@
           "answer": "Indique volumen de trabajo, error permitido, reactivo, temperatura, contrapresión y ciclos diarios para los ensayos de dispensación y duración. Los 2540 pasos por carrera completa no determinan la exactitud, repetibilidad ni vida útil."
         }
       ],
-      "seoTitle": "TM-50-PMMA 50 μL Bomba dosificadora | Foreach Technology",
-      "metaDescription": "TM-50-PMMA: Bomba dosificadora ultracompacta de 50 μL con cabezal de PMMA para módulos analíticos compactos. La configuración mostrada utiliza conexiones de 6-40 UNF.",
+      "seoTitle": "TM-50-PMMA 50 μL Bomba de pistón ultracompacta | Foreach Technology",
+      "metaDescription": "TM-50-PMMA: Bomba de pistón ultracompacta de 50 μL con conexiones 6-40 UNF para dosificar microvolúmenes de reactivos en módulos analíticos compactos.",
       "specs": [
         {
           "label": "Volumen",
@@ -3771,11 +3771,11 @@
       "bottomCtaHref": "/contact/"
     },
     "tm-100-pmma": {
-      "heading": "Bomba de muestreo ultracompacta de 100 μL para módulos de detección, PMMA",
+      "heading": "Bomba de pistón ultracompacta de 100 μL para muestras, cabezal PMMA",
       "description": [
-        "TM-100-PMMA es una bomba de muestreo ultracompacta de 100 μL de capacidad nominal para aspirar y dispensar muestras en módulos de detección pequeños. El cabezal de PMMA y el pistón cerámico realizan carreras controladas por motor paso a paso para transferir muestras dentro de circuitos compactos.",
-        "La configuración utiliza conexiones 6-40 UNF y 2540 pasos por carrera completa. Las válvulas, los tubos y el control del accionamiento se pueden adaptar a la secuencia de muestreo y dispensación. La exactitud, la repetibilidad y la vida útil se confirman para la configuración del proyecto.",
-        "Las conexiones de tubos, los elementos de fijación y las válvulas se pueden adaptar al recorrido de la muestra y a la posición del módulo de detección. Los materiales y la geometría del cabezal, el pistón y las juntas se evalúan según la muestra y la limpieza, para la integración de circuitos modulares."
+        "TM-100-PMMA es una bomba de pistón ultracompacta con capacidad nominal de 100 μL para aspirar y dispensar volúmenes definidos de muestra en módulos de detección compactos. Combina un cabezal de PMMA y un pistón cerámico, cuya carrera se controla mediante un motor paso a paso para transferir muestras dentro de circuitos compactos.",
+        "Utiliza conexiones de líquido 6-40 UNF y 2540 pasos por carrera completa. Los conjuntos de válvulas, los tubos y el control del accionamiento se configuran según la secuencia de aspiración y dispensación. Las especificaciones de exactitud, repetibilidad y vida útil se confirman para la configuración del proyecto.",
+        "Las conexiones de tubos, las fijaciones y los conjuntos de válvulas pueden configurarse según el recorrido de la muestra y la posición de montaje. Los materiales y la geometría del cabezal, el pistón y las juntas se evalúan en función de la composición de la muestra y los requisitos de limpieza, facilitando la integración en sistemas de fluidos modulares."
       ],
       "commonApplications": [
         "el muestreo automático y la dilución de muestras",
@@ -3854,8 +3854,8 @@
           "answer": "Indique volumen de trabajo, error permitido, reactivo, temperatura, contrapresión y ciclos diarios para los ensayos de dispensación y duración. Los 2540 pasos por carrera completa no determinan la exactitud, repetibilidad ni vida útil."
         }
       ],
-      "seoTitle": "TM-100-PMMA 100 μL Bomba de muestreo | Foreach Technology",
-      "metaDescription": "TM-100-PMMA: Bomba de muestreo ultracompacta de 100 μL con cabezal de PMMA para dispensar muestras en módulos de detección pequeños.",
+      "seoTitle": "TM-100-PMMA 100 μL Bomba de pistón ultracompacta | Foreach Technology",
+      "metaDescription": "TM-100-PMMA: Bomba de pistón ultracompacta de 100 μL con cabezal de PMMA para aspirar y dispensar volúmenes definidos de muestra en módulos de detección compactos.",
       "specs": [
         {
           "label": "Volumen",
@@ -4947,9 +4947,9 @@
     },
     "ea-500-pmma": {
       "description": [
-        "EA-500-PMMA est une pompe de dosage de réactifs de précision d’une capacité nominale de 500 μL pour l’ajout de réactifs, la dilution d’échantillons et la distribution de tampons dans les analyseurs de chimie clinique et d’immunoanalyse. Sa tête en PMMA et son piston en céramique utilisent un entraînement alternatif par moteur pas-à-pas pour aspirer et distribuer des volumes définis.",
-        "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information optique et un contrôleur peuvent être associés à l’aspiration, à la distribution, à la commutation fluidique et à la commande de l’entraînement.",
-        "La personnalisation OEM comprend des têtes en PMMA, PCTG ou PEEK et des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et les composants fluidiques peuvent être adaptés à la composition du réactif, à l’espace de montage et aux besoins de commande de l’instrument."
+        "EA-500-PMMA est une pompe de précision à piston céramique d’une capacité nominale de 500 μL, adaptée au dosage de réactifs, à la dilution d’échantillons et à la distribution de solutions tampons dans les analyseurs de biochimie et d’immunoanalyse. Un moteur pas-à-pas entraîne le piston dans une tête en PMMA pour aspirer le liquide et distribuer des volumes définis.",
+        "Les raccordements sont disponibles en 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux spécifiées à ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information par capteur optique et un contrôleur sont proposés en option pour intégrer l’aspiration, la distribution, la commutation des circuits et la commande du moteur.",
+        "La personnalisation OEM comprend des têtes en PMMA, PCTG ou PEEK et des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et les composants fluidiques sont choisis selon la composition des réactifs, l’espace de montage et les besoins de commande de l’instrument."
       ],
       "commonApplications": [
         "Dosage de réactifs",
@@ -5040,7 +5040,7 @@
           "answer": "Indiquez EA-500-PMMA ou la capacité visée, le volume par dose, l’erreur admissible, le délai, la composition du fluide, la température, la contre-pression, l’espace de montage et les besoins de commande. Le modèle de la page identifie une configuration présentée ; les matériaux, raccordements et ensembles définitifs sont définis pour le projet."
         }
       ],
-      "heading": "Pompe de dosage de réactifs 500 μL pour automates, vannes en option",
+      "heading": "Pompe de précision à piston céramique 500 μL pour réactifs",
       "specs": [
         {
           "label": "Volume",
@@ -5117,8 +5117,8 @@
       "imageCaption": "",
       "imageFootnotes": [],
       "sectionTitleMap": {},
-      "seoTitle": "EA-500-PMMA 500 μL Pompe pour réactifs | Foreach Technology",
-      "metaDescription": "EA-500-PMMA: Pompe de dosage de réactifs de 500 μL à tête en PMMA pour l’ajout de volumes définis dans les instruments automatisés. Des ensembles de vannes peuvent être associés au circuit.",
+      "seoTitle": "EA-500-PMMA 500 μL Pompe à piston céramique | Foreach Technology",
+      "metaDescription": "EA-500-PMMA: Pompe de précision de 500 μL à piston céramique et tête en PMMA pour le dosage de réactifs dans les instruments d’analyse.",
       "bottomCtaTitle": "Confirmez la configuration de EA-500-PMMA",
       "bottomCtaDescription": "Précisez le fluide, le volume par dose, l’erreur admissible, le délai, la température, la contre-pression, l’espace et les besoins de commande. Foreach vous aide à choisir les matériaux, raccordements et composants adaptés à votre application.",
       "bottomCtaButtonText": "Contacter un ingénieur",
@@ -5126,9 +5126,9 @@
     },
     "ea-500-peek": {
       "description": [
-        "EA-500-PEEK est une pompe de distribution de réactifs d’une capacité nominale de 500 μL pour l’ajout dosé de réactifs, la distribution de tampons et l’appoint de liquide réactionnel dans les instruments d’analyse. La tête en PEEK et le piston alternatif entraîné par moteur pas-à-pas permettent de programmer l’aspiration et la distribution.",
-        "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Les options de vannes, de retour d’information optique et de contrôleur facilitent l’intégration de l’unité de réactifs au circuit de l’instrument.",
-        "La tête, le piston et les joints peuvent être choisis selon la composition du réactif. Les têtes peuvent être en PEEK, PMMA, PCTG ou PVDF, avec des pistons en céramique de zircone, céramique d’alumine, PEEK ou saphir. Les raccordements, le moteur et les composants de commande sont également configurables."
+        "EA-500-PEEK est une pompe doseuse à piston d’une capacité nominale de 500 μL, équipée d’une tête en PEEK. Elle convient à l’ajout dosé de réactifs, à la distribution de solutions tampons et à l’appoint de liquide réactionnel dans les instruments d’analyse. Un moteur pas-à-pas entraîne le piston alternatif pour aspirer et distribuer le liquide selon le programme de l’instrument.",
+        "Les raccordements sont disponibles en 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. L’exactitude et la répétabilité à pleine course sont toutes deux spécifiées à ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles. Des ensembles de vannes, un retour d’information par capteur optique et un contrôleur sont disponibles en option pour intégrer l’unité de dosage au circuit fluidique de l’instrument.",
+        "La tête, le piston et les joints sont choisis en fonction de la composition des réactifs. Les matériaux proposés comprennent le PEEK, le PMMA, le PCTG et le PVDF pour la tête, ainsi que la céramique de zircone, la céramique d’alumine, le PEEK et le saphir pour le piston. Les raccordements, le moteur et les composants de commande peuvent être configurés selon les besoins de l’instrument."
       ],
       "commonApplications": [
         "Dosage de réactifs",
@@ -5219,7 +5219,7 @@
           "answer": "Indiquez EA-500-PEEK ou la capacité visée, le volume par dose, l’erreur admissible, le délai, la composition du fluide, la température, la contre-pression, l’espace de montage et les besoins de commande. Le modèle de la page identifie une configuration présentée ; les matériaux, raccordements et ensembles définitifs sont définis pour le projet."
         }
       ],
-      "heading": "Pompe de dosage 500 μL, tête PEEK, pour réactifs et solutions tampons",
+      "heading": "Pompe doseuse à piston 500 μL, tête PEEK, pour réactifs",
       "specs": [
         {
           "label": "Volume",
@@ -5296,8 +5296,8 @@
       "imageCaption": "",
       "imageFootnotes": [],
       "sectionTitleMap": {},
-      "seoTitle": "EA-500-PEEK 500 μL Pompe pour réactifs | Foreach Technology",
-      "metaDescription": "EA-500-PEEK: Pompe de distribution de réactifs de 500 μL à tête en PEEK pour l’ajout dosé de réactifs et de solutions tampons.",
+      "seoTitle": "EA-500-PEEK 500 μL Pompe doseuse à piston | Foreach Technology",
+      "metaDescription": "EA-500-PEEK: Pompe doseuse à piston de 500 μL avec tête en PEEK pour réactifs et solutions tampons. Le piston et les joints sont choisis en fonction du fluide.",
       "bottomCtaTitle": "Confirmez la configuration de EA-500-PEEK",
       "bottomCtaDescription": "Précisez le fluide, le volume par dose, l’erreur admissible, le délai, la température, la contre-pression, l’espace et les besoins de commande. Foreach vous aide à choisir les matériaux, raccordements et composants adaptés à votre application.",
       "bottomCtaButtonText": "Contacter un ingénieur",
@@ -7380,11 +7380,11 @@
       "bottomCtaHref": "/contact/"
     },
     "sm-250-peek": {
-      "heading": "Pompe doseuse miniature 250 μL sur mesure, tête PEEK",
+      "heading": "Pompe à piston miniature 250 μL, tête sur mesure en POM ou autre matériau",
       "description": [
-        "SM-250-PEEK est une pompe doseuse miniature configurable d’une capacité nominale de 250 μL pour la distribution de réactifs, l’ajout de liquide réactionnel et la manipulation dosée de liquides dans les instruments compacts. La tête en PEEK et le mécanisme de dosage à piston entraîné par moteur pas-à-pas permettent l’aspiration et la distribution programmées.",
-        "Raccordements 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. La répétabilité à pleine course est ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles ; l’exactitude est confirmée pour la configuration choisie. Les options de vannes, de retour d’information optique et de contrôleur permettent l’ajout dosé et la commutation des circuits.",
-        "La personnalisation OEM comprend des pistons en céramique, acier inoxydable ou PEEK, avec des joints adaptés au réactif. Les têtes peuvent être en PEEK, PMMA, PSU ou POM ; les tubulures, les sondes de distribution et le montage sont choisis selon les besoins de l’instrument."
+        "SM-250-PEEK est une pompe à piston miniature d’une capacité nominale de 250 μL, adaptée à la distribution de réactifs, à l’ajout de liquide réactionnel et au dosage dans les instruments compacts. La configuration présentée possède une tête en PEEK ; des têtes en POM ou dans d’autres matériaux peuvent être réalisées sur mesure selon le projet. Un moteur pas-à-pas entraîne le piston alternatif pour assurer l’aspiration et la distribution programmées.",
+        "Les raccordements sont disponibles en 1/4-28 UNF ou M6, avec 2000 pas sur la course complète. La répétabilité à pleine course est spécifiée à ≤0,5 %, pour une durée de vie estimée à 5 millions de cycles ; la spécification d’exactitude est confirmée pour la configuration retenue. Des ensembles de vannes, un retour d’information par capteur optique et un contrôleur sont disponibles en option pour le dosage et la commutation des circuits fluidiques.",
+        "La personnalisation OEM comprend des têtes en PEEK, PMMA, PSU ou POM et des pistons en céramique, acier inoxydable ou PEEK, avec des joints choisis selon la composition des réactifs. Les tubulures, les sondes de distribution et le montage sont définis en fonction de l’encombrement disponible et de la séquence de manipulation des liquides."
       ],
       "commonApplications": [
         "Ajout dosé de liquide réactionnel",
@@ -7463,8 +7463,8 @@
           "answer": "La répétabilité SM sur la course complète est ≤0,5 % dans les conditions spécifiées, et non à toutes les petites doses. Précisez le volume de travail et l’erreur admissible pour confirmer l’exactitude de la configuration. La durée de vie prévue de cinq millions de cycles concerne l’eau pure à température ambiante sous 50 kPa de contre-pression ; elle n’est pas garantie avec tous les réactifs."
         }
       ],
-      "seoTitle": "SM-250-PEEK 250 μL Pompe doseuse de précision | Foreach Technology",
-      "metaDescription": "SM-250-PEEK: Pompe doseuse miniature de 250 μL configurable, à tête en PEEK. Le piston et les joints sont sélectionnés selon la composition du réactif.",
+      "seoTitle": "SM-250-PEEK 250 μL Pompe à piston miniature | Foreach Technology",
+      "metaDescription": "SM-250-PEEK: Pompe à piston miniature de 250 μL pour le dosage dans les instruments compacts. La version présentée possède une tête en PEEK ; des têtes en POM ou d’autres matériaux peuvent être réalisées sur mesure.",
       "specs": [
         {
           "label": "Volume",
@@ -7869,11 +7869,11 @@
       "bottomCtaHref": "/contact/"
     },
     "tm-50-pmma": {
-      "heading": "Pompe doseuse ultra-compacte 50 μL pour modules, raccordements 6-40 UNF",
+      "heading": "Pompe à piston ultracompacte 50 μL pour modules d’analyse, ports 6-40 UNF",
       "description": [
-        "TM-50-PMMA est une pompe doseuse ultra-compacte d’une capacité nominale de 50 μL pour l’ajout de microvolumes de réactifs dans les modules d’analyse compacts. Sa tête en PMMA et son piston en céramique utilisent un entraînement alternatif par moteur pas-à-pas pour intégrer l’unité de dosage dans un espace limité.",
-        "La configuration utilise des raccordements 6-40 UNF et 2540 pas sur la course complète. Des ensembles de vannes, des tubulures et une commande d’entraînement peuvent être configurés pour l’aspiration et la distribution dosées dans les modules d’analyse. L’exactitude, la répétabilité et la durée de vie sont confirmées pour la configuration du projet.",
-        "Le montage, les raccordements des tubulures et les vannes peuvent être personnalisés pour les modules d’analyse OEM. D’autres matériaux de tête ou de piston peuvent être évalués selon le réactif, l’ajustement des joints et l’espace disponible ; les matériaux et la structure retenus sont définis par le plan du projet."
+        "TM-50-PMMA est une pompe à piston ultracompacte d’une capacité nominale de 50 μL, adaptée à l’ajout de microvolumes de réactifs dans les modules d’analyse compacts. Un moteur pas-à-pas entraîne le piston en céramique dans une tête en PMMA, pour intégrer l’unité de dosage lorsque l’espace de montage est limité.",
+        "La pompe utilise des raccordements fluidiques 6-40 UNF et 2540 pas sur la course complète. Les ensembles de vannes, les raccordements de tubulures et la commande du moteur peuvent être configurés selon le projet pour assurer l’aspiration et la distribution dosées. Les spécifications d’exactitude, de répétabilité et de durée de vie sont confirmées pour la configuration du projet.",
+        "Le montage, les raccordements de tubulures et les ensembles de vannes peuvent être adaptés aux besoins des modules d’analyse OEM. D’autres matériaux de tête ou de piston sont évalués selon la composition des réactifs, l’ajustement des joints et l’espace disponible ; les plans du projet définissent la combinaison finale de matériaux et la conception mécanique."
       ],
       "commonApplications": [
         "Distribution de réactifs dans les analyseurs",
@@ -7952,8 +7952,8 @@
           "answer": "Indiquez le volume de travail, l’erreur admissible, le réactif, la température, la contre-pression et les cycles quotidiens pour les essais de distribution et cycliques. Les 2540 pas sur la course complète ne définissent ni l’exactitude, ni la répétabilité, ni la durée de vie."
         }
       ],
-      "seoTitle": "TM-50-PMMA 50 μL Pompe doseuse | Foreach Technology",
-      "metaDescription": "TM-50-PMMA: Pompe doseuse ultra-compacte de 50 μL à tête en PMMA pour les modules d’analyse compacts. La configuration présentée utilise des raccordements 6-40 UNF.",
+      "seoTitle": "TM-50-PMMA 50 μL Pompe à piston ultracompacte | Foreach Technology",
+      "metaDescription": "TM-50-PMMA: Pompe à piston ultracompacte de 50 μL avec raccordements 6-40 UNF pour l’ajout de microvolumes de réactifs dans les modules d’analyse compacts.",
       "specs": [
         {
           "label": "Volume",
@@ -8032,11 +8032,11 @@
       "bottomCtaHref": "/contact/"
     },
     "tm-100-pmma": {
-      "heading": "Pompe de prélèvement ultra-compacte 100 μL pour modules de détection, PMMA",
+      "heading": "Pompe à piston ultracompacte 100 μL pour échantillons, tête PMMA",
       "description": [
-        "TM-100-PMMA est une pompe de prélèvement ultra-compacte d’une capacité nominale de 100 μL pour l’aspiration et la distribution dosée d’échantillons dans les petits modules de détection. La tête en PMMA et le piston en céramique utilisent des courses commandées par moteur pas-à-pas pour transférer les échantillons dans des circuits compacts.",
-        "La configuration utilise des raccordements 6-40 UNF et 2540 pas sur la course complète. Les ensembles de vannes, les tubulures et la commande d’entraînement peuvent être adaptés aux séquences de prélèvement et de distribution. L’exactitude, la répétabilité et la durée de vie sont confirmées pour la configuration du projet.",
-        "Les raccordements des tubulures, les fixations et les vannes peuvent être adaptés au trajet de l’échantillon et à la position du module de détection. Les matériaux et la géométrie de la tête, du piston et des joints peuvent être évalués selon l’échantillon et le nettoyage, pour l’intégration de circuits modulaires."
+        "TM-100-PMMA est une pompe à piston ultracompacte d’une capacité nominale de 100 μL, adaptée à l’aspiration et à la distribution dosée d’échantillons dans les modules de détection compacts. Elle associe une tête en PMMA et un piston en céramique, dont la course est commandée par un moteur pas-à-pas pour transférer les échantillons dans des circuits compacts.",
+        "La pompe utilise des raccordements fluidiques 6-40 UNF et 2540 pas sur la course complète. Les ensembles de vannes, les tubulures et la commande du moteur peuvent être configurés selon la séquence d’aspiration et de distribution. Les spécifications d’exactitude, de répétabilité et de durée de vie sont confirmées pour la configuration du projet.",
+        "Les raccordements de tubulures, les fixations et les ensembles de vannes sont configurables selon le trajet de l’échantillon et la position de montage. Les matériaux et la géométrie de la tête, du piston et des joints sont évalués en fonction de la composition des échantillons et des besoins de nettoyage, afin de faciliter l’intégration dans des systèmes fluidiques modulaires."
       ],
       "commonApplications": [
         "le prélèvement automatisé et la dilution d’échantillons",
@@ -8115,8 +8115,8 @@
           "answer": "Indiquez le volume de travail, l’erreur admissible, le réactif, la température, la contre-pression et les cycles quotidiens pour les essais de distribution et cycliques. Les 2540 pas sur la course complète ne définissent ni l’exactitude, ni la répétabilité, ni la durée de vie."
         }
       ],
-      "seoTitle": "TM-100-PMMA 100 μL Pompe de prélèvement | Foreach Technology",
-      "metaDescription": "TM-100-PMMA: Pompe de prélèvement ultra-compacte de 100 μL à tête en PMMA pour la distribution d’échantillons dans les petits modules de détection.",
+      "seoTitle": "TM-100-PMMA 100 μL Pompe à piston ultracompacte | Foreach Technology",
+      "metaDescription": "TM-100-PMMA: Pompe à piston ultracompacte de 100 μL à tête en PMMA pour l’aspiration et la distribution dosée d’échantillons dans les petits modules de détection.",
       "specs": [
         {
           "label": "Volume",
@@ -9208,9 +9208,9 @@
     },
     "ea-500-pmma": {
       "description": [
-        "EA-500-PMMA는 공칭 용량 500 μL의 정밀 시약 분주 펌프로, 생화학 및 면역 분석 장비의 시약 첨가, 시료 희석 및 완충액 분주에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터가 플런저를 왕복 구동하여 액체를 흡입하고 정량 분주합니다.",
-        "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 장비의 흡입·토출, 유로 전환 및 구동 제어를 통합할 수 있습니다.",
-        "OEM 맞춤 제작을 지원하며, 펌프 헤드 재질로 PMMA, PCTG, PEEK 등을 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 시약 성분, 설치 공간 및 장비 제어 요구에 맞춰 연결 포트, 모터와 유로 부품을 구성할 수 있습니다."
+        "EA-500-PMMA는 공칭 용량 500 μL의 정밀 세라믹 피스톤 펌프로, 생화학·면역 분석기의 시약 분주, 시료 희석 및 완충액 공급에 적합합니다. PMMA 펌프 헤드와 세라믹 피스톤을 사용하며, 스테핑 모터가 피스톤을 왕복 구동하여 액체를 흡입하고 정량 분주합니다.",
+        "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%로 규정되며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광센서 피드백 및 컨트롤러를 옵션으로 선택하여 흡입·분주, 유로 전환 및 구동 제어 기능을 장비에 통합할 수 있습니다.",
+        "OEM 맞춤 제작을 지원합니다. 펌프 헤드는 PMMA, PCTG, PEEK 등에서, 피스톤은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어에서 선택할 수 있습니다. 연결 포트, 모터 및 유로 부품은 시약 성분, 설치 공간과 장비 제어 요구에 맞춰 구성합니다."
       ],
       "commonApplications": [
         "시약 정량 주입",
@@ -9301,7 +9301,7 @@
           "answer": "EA-500-PMMA 또는 목표 용량, 단회 주입량, 허용 오차, 소요 시간, 유체 성분, 온도, 배압, 설치 공간 및 제어 요구를 제공해 주십시오. 페이지의 모델명은 표시 구성을 식별하며, 최종 재료, 포트 및 부품 조합은 프로젝트별로 결정합니다."
         }
       ],
-      "heading": "500 μL 시약 분주 펌프, 자동화 장비 정량 주입 및 밸브 어셈블리 연계",
+      "heading": "500 μL 정밀 세라믹 피스톤 펌프, 시약 분주용",
       "specs": [
         {
           "label": "용량",
@@ -9378,8 +9378,8 @@
       "imageCaption": "",
       "imageFootnotes": [],
       "sectionTitleMap": {},
-      "seoTitle": "EA-500-PMMA 500 μL 시약 분주 펌프 | Foreach Technology",
-      "metaDescription": "EA-500-PMMA: PMMA 헤드의 500 μL 시약 분주 펌프로, 자동화 장비의 정량 주입에 적합합니다. 유로에 맞는 밸브 어셈블리를 함께 구성할 수 있습니다.",
+      "seoTitle": "EA-500-PMMA 500 μL 정밀 세라믹 피스톤 펌프 | Foreach Technology",
+      "metaDescription": "EA-500-PMMA: 세라믹 피스톤과 PMMA 헤드를 적용한 500 μL 정밀 피스톤 펌프입니다. 분석기에서 시약을 정량 분주하는 용도로 사용합니다.",
       "bottomCtaTitle": "구성 확인: EA-500-PMMA",
       "bottomCtaDescription": "유체, 단회 주입량, 허용 오차, 소요 시간, 온도, 배압, 설치 공간 및 제어 요구를 알려주십시오. Foreach가 응용 조건에 맞는 재료, 포트 및 부품 선정을 지원합니다.",
       "bottomCtaButtonText": "엔지니어에게 문의",
@@ -9387,9 +9387,9 @@
     },
     "ea-500-peek": {
       "description": [
-        "EA-500-PEEK는 공칭 용량 500 μL의 시약 분주 펌프로, 분석 장비의 시약 정량 첨가, 완충액 분주 및 반응액 보충에 적합합니다. PEEK 펌프 헤드와 스테핑 모터로 구동하는 왕복 플런저 구조를 적용하여 장비 프로그램에 따라 액체를 정량 흡입하고 토출합니다.",
-        "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%이며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 시약 분주 유닛을 장비 유로에 통합할 수 있습니다.",
-        "시약 성분에 맞춰 펌프 헤드, 플런저와 씰을 구성할 수 있습니다. 펌프 헤드 재질은 PEEK, PMMA, PCTG, PVDF 등에서 선택할 수 있습니다. 플런저 재질은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어 중에서 선택할 수 있습니다. 연결 포트, 모터와 제어 부품도 함께 구성할 수 있습니다."
+        "EA-500-PEEK는 PEEK 펌프 헤드를 적용한 공칭 용량 500 μL의 피스톤 정량 펌프입니다. 분석 장비의 시약 정량 첨가, 완충액 분주 및 반응액 보충에 적합합니다. 스테핑 모터가 피스톤을 왕복 구동하여 장비 프로그램에 따라 액체를 흡입하고 정량 분주합니다.",
+        "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 정확도와 반복성은 모두 ≤0.5%로 규정되며, 예상 수명은 500만 회입니다. 밸브 어셈블리, 광센서 피드백 및 컨트롤러를 옵션으로 선택하여 시약 분주 유닛을 장비 유로에 통합할 수 있습니다.",
+        "펌프 헤드, 피스톤 및 씰은 시약 성분에 맞춰 선택합니다. 헤드 재질은 PEEK, PMMA, PCTG, PVDF 등이며, 피스톤은 지르코니아 세라믹, 알루미나 세라믹, PEEK 또는 사파이어를 선택할 수 있습니다. 연결 포트, 모터 및 제어 부품은 장비 요구에 맞춰 구성합니다."
       ],
       "commonApplications": [
         "시약 정량 주입",
@@ -9480,7 +9480,7 @@
           "answer": "EA-500-PEEK 또는 목표 용량, 단회 주입량, 허용 오차, 소요 시간, 유체 성분, 온도, 배압, 설치 공간 및 제어 요구를 제공해 주십시오. 페이지의 모델명은 표시 구성을 식별하며, 최종 재료, 포트 및 부품 조합은 프로젝트별로 결정합니다."
         }
       ],
-      "heading": "500 μL PEEK 헤드 시약 분주 펌프, 시약·완충액 정량 주입용",
+      "heading": "500 μL PEEK 헤드 피스톤 정량 펌프, 시약 분주용",
       "specs": [
         {
           "label": "용량",
@@ -9557,8 +9557,8 @@
       "imageCaption": "",
       "imageFootnotes": [],
       "sectionTitleMap": {},
-      "seoTitle": "EA-500-PEEK 500 μL 시약 분주 펌프 | Foreach Technology",
-      "metaDescription": "EA-500-PEEK: PEEK 헤드의 500 μL 시약 분주 펌프로, 시약과 완충액을 정해진 양만큼 주입하는 용도에 적합합니다.",
+      "seoTitle": "EA-500-PEEK 500 μL 피스톤 정량 펌프 | Foreach Technology",
+      "metaDescription": "EA-500-PEEK: PEEK 헤드의 500 μL 피스톤 정량 펌프로 시약과 완충액을 분주합니다. 유체 특성에 맞춰 피스톤과 씰을 선택할 수 있습니다.",
       "bottomCtaTitle": "구성 확인: EA-500-PEEK",
       "bottomCtaDescription": "유체, 단회 주입량, 허용 오차, 소요 시간, 온도, 배압, 설치 공간 및 제어 요구를 알려주십시오. Foreach가 응용 조건에 맞는 재료, 포트 및 부품 선정을 지원합니다.",
       "bottomCtaButtonText": "엔지니어에게 문의",
@@ -11641,11 +11641,11 @@
       "bottomCtaHref": "/contact/"
     },
     "sm-250-peek": {
-      "heading": "250 μL 맞춤형 소형 정량 펌프, PEEK 헤드 및 시약별 피스톤·씰 선택",
+      "heading": "250 μL 소형 피스톤 펌프, POM 등 헤드 소재 맞춤 제작",
       "description": [
-        "SM-250-PEEK는 공칭 용량 250 μL의 맞춤형 소형 정량 펌프로, 시약 분주, 반응액 첨가 및 소형 장비의 정량 액체 취급에 적합합니다. PEEK 펌프 헤드와 스테핑 모터 구동 플런저 계량 구조를 사용하여 프로그램에 따라 액체를 흡입하고 토출합니다.",
-        "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 반복성은 ≤0.5%이며, 예상 수명은 500만 회입니다. 정확도는 선택한 구성에 따라 확인합니다. 밸브 어셈블리, 광학 피드백 및 컨트롤러를 함께 구성하여 정량 첨가와 유로 전환을 제어할 수 있습니다.",
-        "OEM 맞춤 제작을 지원하며, 플런저는 세라믹, 스테인리스강 또는 PEEK에서 선택하고 시약 성분에 맞춰 씰을 구성할 수 있습니다. 펌프 헤드 재질은 PEEK, PMMA, PSU, POM에서 선택할 수 있으며, 튜빙, 시료 주입 니들 및 설치 방식은 장비 요구에 맞춰 결정합니다."
+        "SM-250-PEEK는 공칭 용량 250 μL의 소형 피스톤 펌프로, 소형 장비의 시약 분주, 반응액 첨가 및 정량 주입에 적합합니다. 표시된 구성은 PEEK 펌프 헤드이며, POM 등 다른 소재의 헤드는 프로젝트 요구에 맞춰 제작할 수 있습니다. 스테핑 모터가 피스톤을 왕복 구동하여 프로그램에 따라 액체를 흡입하고 분주합니다.",
+        "유체 연결 포트는 1/4-28 UNF 또는 M6를 선택할 수 있으며, 전체 스트로크는 2000 스텝입니다. 전체 스트로크 기준 반복성은 ≤0.5%이고 예상 수명은 500만 회이며, 정확도 사양은 선택한 구성에 따라 확인합니다. 밸브 어셈블리, 광센서 피드백 및 컨트롤러를 옵션으로 선택하여 정량 주입과 유로 전환 기능을 구성할 수 있습니다.",
+        "OEM 맞춤 제작 시 헤드 재질은 PEEK, PMMA, PSU 또는 POM에서, 피스톤 재질은 세라믹, 스테인리스강 또는 PEEK에서 선택할 수 있습니다. 씰은 시약 성분에 맞춰 선정하며, 튜빙, 분주 니들 및 설치 방식은 장비 공간과 액체 처리 순서에 맞춰 구성합니다."
       ],
       "commonApplications": [
         "반응액 정량 첨가",
@@ -11724,8 +11724,8 @@
           "answer": "SM 전체 행정 반복성 ≤0.5%는 지정 조건의 값이며 임의의 소량에 적용되지 않습니다. 실제 작업 액량과 허용 오차를 제공하여 해당 구성의 정확도를 확인해야 합니다. 예상 수명 500만 회는 순수, 상온 및 50 kPa 배압 조건이며 모든 시약에서의 수명을 보장하지는 않습니다."
         }
       ],
-      "seoTitle": "SM-250-PEEK 250 μL 정밀 정량 펌프 | Foreach Technology",
-      "metaDescription": "SM-250-PEEK: PEEK 헤드의 250 μL 맞춤형 소형 정량 펌프입니다. 시약 성분에 맞춰 피스톤과 씰을 선택합니다.",
+      "seoTitle": "SM-250-PEEK 250 μL 소형 피스톤 펌프 | Foreach Technology",
+      "metaDescription": "SM-250-PEEK: 소형 장비의 정량 주입을 위한 250 μL 피스톤 펌프입니다. 표시된 구성은 PEEK 헤드이며, 프로젝트에 맞춰 POM 등 다른 소재로 헤드를 제작할 수 있습니다.",
       "specs": [
         {
           "label": "용량",
@@ -12130,11 +12130,11 @@
       "bottomCtaHref": "/contact/"
     },
     "tm-50-pmma": {
-      "heading": "50 μL 초소형 정량 주입 펌프, 소형 분석 모듈용 6-40 UNF 포트 구성",
+      "heading": "50 μL 초소형 피스톤 펌프, 분석 모듈용 6-40 UNF 포트",
       "description": [
-        "TM-50-PMMA는 공칭 용량 50 μL의 초소형 액체 공급 펌프로, 소형 분석 모듈의 미량 시약 첨가에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터의 왕복 구동 구조로 제한된 설치 공간에 액체 공급 유닛을 배치할 수 있습니다.",
-        "6-40 UNF 유체 연결 포트를 사용하며, 전체 스트로크는 2540 스텝입니다. 밸브 어셈블리, 튜빙 연결부 및 구동 제어를 함께 구성하여 분석 모듈의 정량 흡입·토출을 구현할 수 있습니다. 정확도, 반복성 및 수명 사양은 프로젝트 구성에 따라 확인합니다.",
-        "OEM 분석 모듈에 맞춰 설치 방식, 튜빙 연결 및 밸브 어셈블리를 맞춤 구성할 수 있습니다. 다른 펌프 헤드나 플런저 재질은 시약 성분, 씰과의 조합 및 구조상 가용 공간을 기준으로 검토하며, 최종 재질 조합과 구조는 프로젝트 도면에 따라 결정합니다."
+        "TM-50-PMMA는 공칭 용량 50 μL의 초소형 피스톤 펌프로, 소형 분석 모듈의 미량 시약 주입에 적합합니다. PMMA 펌프 헤드와 세라믹 피스톤을 사용하며, 스테핑 모터의 왕복 구동 구조로 설치 공간이 제한된 곳에 주입 유닛을 배치할 수 있습니다.",
+        "6-40 UNF 유체 포트를 사용하며 전체 스트로크는 2540 스텝입니다. 프로젝트에 맞춰 밸브 어셈블리, 튜빙 연결 및 구동 제어를 구성하여 정량 흡입과 분주를 구현할 수 있습니다. 정확도, 반복성 및 수명 사양은 프로젝트 구성에 따라 확인합니다.",
+        "OEM 분석 모듈의 요구에 맞춰 설치 방식, 튜빙 연결 및 밸브 어셈블리를 맞춤 구성할 수 있습니다. 다른 헤드 또는 피스톤 소재는 시약 성분, 씰의 조립 적합성 및 설치 공간을 기준으로 검토하며, 최종 소재 조합과 기계 구조는 프로젝트 도면에 따릅니다."
       ],
       "commonApplications": [
         "분석기 시약 주입",
@@ -12213,8 +12213,8 @@
           "answer": "분주 및 반복 시험을 위해 실제 액량, 허용 오차, 시약, 온도, 배압 및 일일 작동 횟수를 제공해 주십시오. 전체 행정 2540스텝이 정확도, 반복성 또는 수명을 의미하지는 않습니다."
         }
       ],
-      "seoTitle": "TM-50-PMMA 50 μL 정량 주입 펌프 | Foreach Technology",
-      "metaDescription": "TM-50-PMMA: PMMA 헤드의 50 μL 초소형 정량 주입 펌프로, 소형 분석 모듈에 적합합니다. 표시된 구성은 6-40 UNF 포트를 사용합니다.",
+      "seoTitle": "TM-50-PMMA 50 μL 초소형 피스톤 펌프 | Foreach Technology",
+      "metaDescription": "TM-50-PMMA: 6-40 UNF 유체 포트를 적용한 50 μL 초소형 피스톤 펌프입니다. 설치 공간이 제한된 분석 모듈에서 미량 시약을 주입하는 데 사용합니다.",
       "specs": [
         {
           "label": "용량",
@@ -12293,11 +12293,11 @@
       "bottomCtaHref": "/contact/"
     },
     "tm-100-pmma": {
-      "heading": "100 μL 초소형 샘플링 펌프, 소형 검출 모듈의 시료 분주용 PMMA 헤드",
+      "heading": "100 μL 초소형 피스톤 펌프, 검출 모듈의 시료 분주용 PMMA 헤드",
       "description": [
-        "TM-100-PMMA는 공칭 용량 100 μL의 초소형 샘플링 펌프로, 소형 검출 모듈의 시료 흡입 및 정량 분주에 적합합니다. PMMA 펌프 헤드와 세라믹 플런저를 사용하며, 스테핑 모터로 플런저 스트로크를 제어하여 소형 유로 내에서 시료를 이송합니다.",
-        "6-40 UNF 유체 연결 포트를 사용하며, 전체 스트로크는 2540 스텝입니다. 밸브 어셈블리, 튜빙 및 구동 제어와 연계하여 샘플링과 토출 단계를 구성할 수 있습니다. 정확도, 반복성 및 수명 사양은 프로젝트 구성에 따라 확인합니다.",
-        "검출 모듈의 시료 경로와 설치 위치에 맞춰 튜빙 연결 방식, 고정 구조 및 밸브 어셈블리를 구성할 수 있습니다. 시료 성분과 세척 요구를 바탕으로 펌프 헤드, 플런저 및 씰의 재질과 구조를 검토하여 모듈형 유로 통합을 지원합니다."
+        "TM-100-PMMA는 공칭 용량 100 μL의 초소형 피스톤 펌프로, 소형 검출 모듈의 시료 흡입 및 정량 분주에 적합합니다. PMMA 펌프 헤드와 세라믹 피스톤을 사용하며, 스테핑 모터로 피스톤 스트로크를 제어하여 소형 유로 내에서 시료를 이송합니다.",
+        "6-40 UNF 유체 포트를 사용하며 전체 스트로크는 2540 스텝입니다. 시료 흡입과 토출 순서에 맞춰 밸브 어셈블리, 튜빙 및 구동 제어를 구성할 수 있습니다. 정확도, 반복성 및 수명 사양은 프로젝트 구성에 따라 확인합니다.",
+        "검출 모듈의 시료 이동 경로와 설치 위치에 맞춰 튜빙 연결, 고정 구조 및 밸브 어셈블리를 구성할 수 있습니다. 헤드, 피스톤 및 씰의 소재와 구조는 시료 성분과 세척 요구를 기준으로 검토하여 모듈형 유체 시스템에 통합합니다."
       ],
       "commonApplications": [
         "자동 샘플링 및 샘플 희석",
@@ -12376,8 +12376,8 @@
           "answer": "분주 및 반복 시험을 위해 실제 액량, 허용 오차, 시약, 온도, 배압 및 일일 작동 횟수를 제공해 주십시오. 전체 행정 2540스텝이 정확도, 반복성 또는 수명을 의미하지는 않습니다."
         }
       ],
-      "seoTitle": "TM-100-PMMA 100 μL 샘플링 펌프 | Foreach Technology",
-      "metaDescription": "TM-100-PMMA: PMMA 헤드의 100 μL 초소형 샘플링 펌프로, 소형 검출 모듈에서 시료를 분주하는 용도에 적합합니다.",
+      "seoTitle": "TM-100-PMMA 100 μL 초소형 피스톤 펌프 | Foreach Technology",
+      "metaDescription": "TM-100-PMMA: PMMA 헤드의 100 μL 초소형 피스톤 펌프로, 소형 검출 모듈에서 시료를 흡입하고 정량 분주하는 용도에 적합합니다.",
       "specs": [
         {
           "label": "용량",
@@ -13469,9 +13469,9 @@
     },
     "ea-500-pmma": {
       "description": [
-        "EA-500-PMMA — прецизионный насос-дозатор реагентов номинальным объёмом 500 мкл для добавления реагентов, разбавления проб и дозирования буферных растворов в биохимических и иммунохимических анализаторах. Головка из PMMA и керамический плунжер работают с шаговым приводом, обеспечивающим возвратно-поступательное движение для забора и дозированной подачи жидкости.",
-        "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Возможна комплектация клапанными узлами, оптической обратной связью и контроллером для интеграции забора и выдачи жидкости, переключения трактов и управления приводом.",
-        "Предусмотрено изготовление в OEM-конфигурации: для головки доступны PMMA, PCTG, PEEK и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Присоединения, двигатель и жидкостные компоненты подбираются с учётом состава реагента, монтажного пространства и требований к управлению прибором."
+        "EA-500-PMMA — прецизионный плунжерный насос номинальным объёмом 500 мкл с керамическим плунжером для дозирования реагентов, разбавления проб и подачи буферных растворов в биохимических и иммунохимических анализаторах. Шаговый двигатель перемещает плунжер в головке из PMMA, обеспечивая забор жидкости и дозированную подачу.",
+        "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости при полном ходе — оба ≤0,5 %; ожидаемый ресурс — 5 млн циклов. В качестве опций доступны клапанные узлы, обратная связь по оптическому датчику и контроллер для интеграции забора и подачи жидкости, переключения потоков и управления приводом.",
+        "Предусмотрено изготовление в OEM-конфигурации: головки из PMMA, PCTG или PEEK, плунжеры из циркониевой или алюмооксидной керамики, PEEK либо сапфира. Присоединения, двигатель и вспомогательные компоненты жидкостного тракта подбираются с учётом состава реагентов, места для установки и требований к управлению прибором."
       ],
       "commonApplications": [
         "Дозирование реагентов",
@@ -13562,7 +13562,7 @@
           "answer": "Укажите EA-500-PMMA или целевой объём, размер дозы, допустимую погрешность, время, состав жидкости, температуру, противодавление, монтажное пространство и требования к управлению. Модель на странице обозначает представленную конфигурацию; окончательные материалы, порты и узлы определяются проектом."
         }
       ],
-      "heading": "Насос для дозирования реагентов 500 мкл с подбором клапанных узлов",
+      "heading": "Прецизионный насос 500 мкл с керамическим плунжером для реагентов",
       "specs": [
         {
           "label": "Объём",
@@ -13639,8 +13639,8 @@
       "imageCaption": "",
       "imageFootnotes": [],
       "sectionTitleMap": {},
-      "seoTitle": "EA-500-PMMA 500 мкл Насос для реагентов | Foreach Technology",
-      "metaDescription": "EA-500-PMMA: Насос на 500 мкл с головкой из PMMA для дозированного добавления реагентов в автоматизированных приборах. Возможна комплектация клапанными узлами.",
+      "seoTitle": "EA-500-PMMA 500 мкл Насос с керамическим плунжером | Foreach Technology",
+      "metaDescription": "EA-500-PMMA: Прецизионный плунжерный насос на 500 мкл с керамическим плунжером и головкой из PMMA для дозирования реагентов в аналитических приборах.",
       "bottomCtaTitle": "Подтвердите конфигурацию EA-500-PMMA",
       "bottomCtaDescription": "Укажите жидкость, объём дозы, допустимую погрешность, время, температуру, противодавление, пространство и требования к управлению. Foreach поможет подобрать материалы, порты и компоненты для вашего применения.",
       "bottomCtaButtonText": "Связаться с инженером",
@@ -13648,9 +13648,9 @@
     },
     "ea-500-peek": {
       "description": [
-        "EA-500-PEEK — насос-дозатор реагентов номинальным объёмом 500 мкл для дозированного добавления реагентов, подачи буферных растворов и пополнения реакционной смеси в аналитических приборах. Головка из PEEK и возвратно-поступательный плунжерный механизм с шаговым приводом обеспечивают дозированный забор и выдачу жидкости по программе прибора.",
-        "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости на полном ходе — оба ≤0,5%; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, оптическая обратная связь и контроллер позволяют встроить дозирование реагентов в жидкостный тракт прибора.",
-        "Головка, плунжер и уплотнения подбираются под состав реагента. Для головки доступны PEEK, PMMA, PCTG, PVDF и другие согласованные варианты. Плунжер можно выбрать из циркониевой керамики, алюмооксидной керамики, PEEK или сапфира. Дополнительно можно подобрать присоединения, двигатель и компоненты управления."
+        "EA-500-PEEK — плунжерный насос-дозатор номинальным объёмом 500 мкл с головкой из PEEK для дозированного добавления реагентов, подачи буферных растворов и пополнения реакционной смеси в аналитических приборах. Шаговый двигатель обеспечивает возвратно-поступательное движение плунжера для забора и дозированной подачи жидкости по программе прибора.",
+        "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Погрешность дозирования и показатель повторяемости при полном ходе — оба ≤0,5 %; ожидаемый ресурс — 5 млн циклов. Клапанные узлы, обратная связь по оптическому датчику и контроллер доступны как опции для интеграции дозирующего узла в жидкостный тракт прибора.",
+        "Головка, плунжер и уплотнения подбираются с учётом состава реагентов. Для головки доступны PEEK, PMMA, PCTG и PVDF; для плунжера — циркониевая или алюмооксидная керамика, PEEK либо сапфир. Присоединения, двигатель и компоненты управления могут быть сконфигурированы под требования прибора."
       ],
       "commonApplications": [
         "Дозирование реагентов",
@@ -13741,7 +13741,7 @@
           "answer": "Укажите EA-500-PEEK или целевой объём, размер дозы, допустимую погрешность, время, состав жидкости, температуру, противодавление, монтажное пространство и требования к управлению. Модель на странице обозначает представленную конфигурацию; окончательные материалы, порты и узлы определяются проектом."
         }
       ],
-      "heading": "Дозирующий насос 500 мкл, головка PEEK, для реагентов и буферов",
+      "heading": "Плунжерный насос-дозатор 500 мкл, головка PEEK, для реагентов",
       "specs": [
         {
           "label": "Объём",
@@ -13818,8 +13818,8 @@
       "imageCaption": "",
       "imageFootnotes": [],
       "sectionTitleMap": {},
-      "seoTitle": "EA-500-PEEK 500 мкл Насос для реагентов | Foreach Technology",
-      "metaDescription": "EA-500-PEEK: Насос на 500 мкл с головкой из PEEK для дозированного добавления реагентов и буферных растворов.",
+      "seoTitle": "EA-500-PEEK 500 мкл Плунжерный насос-дозатор | Foreach Technology",
+      "metaDescription": "EA-500-PEEK: Плунжерный насос-дозатор на 500 мкл с головкой из PEEK для реагентов и буферных растворов. Материалы плунжера и уплотнений подбираются под жидкость.",
       "bottomCtaTitle": "Подтвердите конфигурацию EA-500-PEEK",
       "bottomCtaDescription": "Укажите жидкость, объём дозы, допустимую погрешность, время, температуру, противодавление, пространство и требования к управлению. Foreach поможет подобрать материалы, порты и компоненты для вашего применения.",
       "bottomCtaButtonText": "Связаться с инженером",
@@ -15902,11 +15902,11 @@
       "bottomCtaHref": "/contact/"
     },
     "sm-250-peek": {
-      "heading": "Миниатюрный дозирующий насос 250 мкл под заказ, головка PEEK",
+      "heading": "Миниатюрный плунжерный насос 250 мкл, головки из POM на заказ",
       "description": [
-        "SM-250-PEEK — миниатюрный дозирующий насос номинальным объёмом 250 мкл с возможностью индивидуальной конфигурации для дозирования реагентов, добавления реакционных растворов и работы с заданными объёмами жидкости в компактных приборах. Головка из PEEK и плунжерный дозирующий механизм с шаговым приводом обеспечивают программируемый забор и выдачу жидкости.",
-        "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Показатель повторяемости на полном ходе — ≤0,5%, ожидаемый ресурс — 5 млн циклов; точность дозирования подтверждается для выбранной конфигурации. Клапанные узлы, оптическая обратная связь и контроллер позволяют организовать дозированное добавление жидкости и переключение трактов.",
-        "Предусмотрено изготовление в OEM-конфигурации: плунжер можно выбрать из керамики, нержавеющей стали или PEEK, а уплотнения — подобрать под состав реагента. Для головки доступны PEEK, PMMA, PSU и POM. Трубки, дозирующие иглы и способ монтажа определяются требованиями прибора."
+        "SM-250-PEEK — миниатюрный плунжерный насос номинальным объёмом 250 мкл для дозирования реагентов, добавления реакционных растворов и подачи заданных объёмов жидкости в компактных приборах. Представленная конфигурация оснащена головкой из PEEK; головки из POM и других материалов изготавливаются по требованиям проекта. Шаговый привод плунжера обеспечивает программируемый забор и дозированную подачу жидкости.",
+        "Доступны жидкостные присоединения 1/4-28 UNF или M6; полный ход составляет 2000 шагов. Показатель повторяемости при полном ходе — ≤0,5 %, ожидаемый ресурс — 5 млн циклов; допустимая погрешность дозирования подтверждается для выбранной конфигурации. Клапанные узлы, обратная связь по оптическому датчику и контроллер доступны как опции для дозированной подачи и переключения потоков.",
+        "OEM-конфигурация предусматривает головки из PEEK, PMMA, PSU или POM и плунжеры из керамики, нержавеющей стали либо PEEK. Уплотнения подбираются под состав реагентов, а трубки, дозирующие иглы и крепления — с учётом доступного места и последовательности операций с жидкостью."
       ],
       "commonApplications": [
         "Дозированное добавление реакционной жидкости",
@@ -15985,8 +15985,8 @@
           "answer": "Повторяемость SM на полном ходе составляет ≤0,5 % в заданных условиях, а не при любой малой дозе. Для подтверждения точности конфигурации укажите рабочий объём и допустимую погрешность. Ожидаемый ресурс в пять миллионов циклов относится к чистой воде при комнатной температуре и противодавлении 50 кПа; для любого реагента он не гарантируется."
         }
       ],
-      "seoTitle": "SM-250-PEEK 250 мкл Прецизионный дозирующий насос | Foreach Technology",
-      "metaDescription": "SM-250-PEEK: Миниатюрный дозирующий насос на 250 мкл с головкой из PEEK, с конфигурацией под проект. Поршень и уплотнения подбираются по составу реагента.",
+      "seoTitle": "SM-250-PEEK 250 мкл Миниатюрный плунжерный насос | Foreach Technology",
+      "metaDescription": "SM-250-PEEK: Миниатюрный плунжерный насос на 250 мкл для компактных приборов. Показана головка из PEEK; головки из POM и других материалов изготавливаются по требованиям проекта.",
       "specs": [
         {
           "label": "Объём",
@@ -16391,11 +16391,11 @@
       "bottomCtaHref": "/contact/"
     },
     "tm-50-pmma": {
-      "heading": "Сверхкомпактный дозирующий насос 50 мкл для модулей, порты 6-40 UNF",
+      "heading": "Сверхкомпактный плунжерный насос 50 мкл для анализаторов, порты 6-40 UNF",
       "description": [
-        "TM-50-PMMA — сверхминиатюрный насос для подачи жидкости номинальным объёмом 50 мкл, предназначенный для добавления микродоз реагентов в компактных аналитических модулях. Головка из PMMA и керамический плунжер с возвратно-поступательным шаговым приводом позволяют разместить узел подачи жидкости в ограниченном пространстве.",
-        "Жидкостные присоединения — 6-40 UNF, полный ход — 2540 шагов. Возможна комплектация клапанными узлами, соединениями для трубок и средствами управления приводом для дозированного забора и выдачи жидкости в аналитическом модуле. Точность, повторяемость и ресурс подтверждаются для проектной конфигурации.",
-        "Для OEM-аналитического модуля можно адаптировать способ монтажа, соединения трубок и клапанную конфигурацию. Другие материалы головки или плунжера рассматриваются с учётом состава реагента, сопряжения с уплотнениями и доступного пространства. Окончательное сочетание материалов и конструкция определяются проектными чертежами."
+        "TM-50-PMMA — сверхкомпактный плунжерный насос номинальным объёмом 50 мкл для добавления микродоз реагентов в компактных аналитических модулях. Шаговый двигатель перемещает керамический плунжер в головке из PMMA, позволяя разместить дозирующий узел при ограниченном монтажном пространстве.",
+        "Насос оснащён жидкостными присоединениями 6-40 UNF; полный ход составляет 2540 шагов. Клапанные узлы, подключения трубок и управление приводом могут быть сконфигурированы под проект для дозированного забора и подачи жидкости. Погрешность дозирования, повторяемость и ресурс подтверждаются для конкретной проектной конфигурации.",
+        "Крепления, подключения трубок и клапанные узлы могут быть адаптированы к требованиям аналитических OEM-модулей. Другие материалы головки или плунжера оцениваются с учётом состава реагентов, сопряжения уплотнений и доступного пространства. Окончательные материалы и механическая конструкция определяются проектными чертежами."
       ],
       "commonApplications": [
         "Дозирование реагентов в анализаторах",
@@ -16474,8 +16474,8 @@
           "answer": "Для испытаний дозирования и циклических испытаний укажите рабочий объём, допустимую погрешность, реагент, температуру, противодавление и число циклов в день. Число 2540 шагов на полный ход не определяет точность, повторяемость или ресурс."
         }
       ],
-      "seoTitle": "TM-50-PMMA 50 мкл Дозирующий насос | Foreach Technology",
-      "metaDescription": "TM-50-PMMA: Сверхкомпактный дозирующий насос на 50 мкл с головкой из PMMA для компактных аналитических модулей. Показанная конфигурация имеет порты 6-40 UNF.",
+      "seoTitle": "TM-50-PMMA 50 мкл Сверхкомпактный плунжерный насос | Foreach Technology",
+      "metaDescription": "TM-50-PMMA: Сверхкомпактный плунжерный насос на 50 мкл с портами 6-40 UNF для дозирования микролитровых объёмов реагентов в компактных аналитических модулях.",
       "specs": [
         {
           "label": "Объём",
@@ -16554,11 +16554,11 @@
       "bottomCtaHref": "/contact/"
     },
     "tm-100-pmma": {
-      "heading": "Сверхкомпактный насос для проб 100 мкл для модулей детекции, PMMA",
+      "heading": "Сверхкомпактный плунжерный насос 100 мкл для проб, головка PMMA",
       "description": [
-        "TM-100-PMMA — сверхминиатюрный насос для отбора проб номинальным объёмом 100 мкл для забора и дозированной подачи проб в малогабаритных измерительных модулях. Головка из PMMA и керамический плунжер работают с шаговым приводом, который управляет ходом плунжера для переноса пробы внутри компактного жидкостного тракта.",
-        "Жидкостные присоединения — 6-40 UNF, полный ход — 2540 шагов. Клапанные узлы, трубки и управление приводом можно согласовать для выполнения этапов отбора пробы и выдачи жидкости. Точность, повторяемость и ресурс подтверждаются для проектной конфигурации.",
-        "Способ подключения трубок, крепления и клапанные узлы подбираются с учётом пути пробы и места установки в измерительном модуле. Материалы и конструкция головки, плунжера и уплотнений оцениваются с учётом состава пробы и требований к промывке для интеграции в модульный жидкостный тракт."
+        "TM-100-PMMA — сверхкомпактный плунжерный насос номинальным объёмом 100 мкл для забора и дозированной подачи проб в малогабаритных измерительных модулях. Головка из PMMA и керамический плунжер работают с шаговым приводом, который управляет ходом плунжера для переноса пробы внутри компактного жидкостного тракта.",
+        "Насос оснащён жидкостными присоединениями 6-40 UNF; полный ход составляет 2540 шагов. Клапанные узлы, трубки и управление приводом конфигурируются под последовательность забора и выдачи пробы. Погрешность дозирования, повторяемость и ресурс подтверждаются для конкретной проектной конфигурации.",
+        "Подключения трубок, крепления и клапанные узлы можно адаптировать к тракту движения пробы и месту установки. Материалы и геометрия головки, плунжера и уплотнений оцениваются с учётом состава проб и требований к промывке для интеграции в модульные жидкостные системы."
       ],
       "commonApplications": [
         "автоматический отбор и разведение образцов",
@@ -16637,8 +16637,8 @@
           "answer": "Для испытаний дозирования и циклических испытаний укажите рабочий объём, допустимую погрешность, реагент, температуру, противодавление и число циклов в день. Число 2540 шагов на полный ход не определяет точность, повторяемость или ресурс."
         }
       ],
-      "seoTitle": "TM-100-PMMA 100 мкл Насос для проб | Foreach Technology",
-      "metaDescription": "TM-100-PMMA: Сверхкомпактный насос для проб на 100 мкл с головкой из PMMA для распределения проб в небольших модулях детекции.",
+      "seoTitle": "TM-100-PMMA 100 мкл Сверхкомпактный плунжерный насос | Foreach Technology",
+      "metaDescription": "TM-100-PMMA: Сверхкомпактный плунжерный насос на 100 мкл с головкой из PMMA для аспирации и дозирования проб в малогабаритных детекторных модулях.",
       "specs": [
         {
           "label": "Объём",

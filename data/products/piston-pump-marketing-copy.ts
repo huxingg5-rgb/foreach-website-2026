@@ -15,7 +15,7 @@ const names = {
   buffer: { zh: "缓冲液分配泵", en: "Buffer Dispensing Pump", es: "Bomba para soluciones tampón", fr: "Pompe pour solutions tampons", ko: "완충액 분주 펌프", ru: "Насос для буферных растворов" },
 } satisfies Record<string, Record<SelectionLocale, string>>;
 
-type MarketingEntry = { role: keyof typeof names } & Record<SelectionLocale, { heading: string; introduction: string }>;
+type MarketingEntry = { role: keyof typeof names } & Record<SelectionLocale, { heading: string; introduction: string; productName?: string }>;
 const copyByModel = catalog as Record<string, MarketingEntry>;
 
 export const PISTON_PUMP_MARKETING_MODELS = Object.keys(copyByModel);
@@ -30,7 +30,7 @@ export function getPistonPumpMarketingCopy(model: string, locale: SelectionLocal
   const localizedValue = ["es", "fr", "ru"].includes(locale) ? value.replace(".", ",") : value;
   const unit = locale === "ru" ? (Number(capacity) >= 1000 ? "мл" : "мкл") : (Number(capacity) >= 1000 ? "mL" : "μL");
   const volume = `${localizedValue} ${unit}`;
-  const productName = names[entry.role][locale];
+  const productName = copy.productName || names[entry.role][locale];
   const identity = `${key} · ${productName} · ${volume} · ${material}`;
   return {
     ...copy,
