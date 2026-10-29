@@ -105,6 +105,18 @@ export const siteFooterData = {
       key: "resources",
       title: { china: "资源中心", global: "Resources" },
       links: [
+        {
+          key: "faq",
+          label: {
+            china: "常见问题",
+            global: "Frequently Asked Questions",
+            es: "Preguntas frecuentes",
+            fr: "Questions fréquentes",
+            ko: "자주 묻는 질문",
+            ru: "Часто задаваемые вопросы",
+          },
+          href: href("/resources/faq/"),
+        },
         { key: "datasheets", label: { china: "规格书下载", global: "Datasheets" }, href: href("/resources/datasheets") },
         { key: "fluid-resistance-calculator", label: { china: "流阻计算器", global: "Fluid Resistance Calculator" }, href: href("/resources/calculators/fluid-resistance") },
         { key: "fitting-replacement", label: { china: "接头替代查询", global: "Fitting Replacement" }, href: href("/resources/selection-support/fitting-replacement") },
