@@ -1,5 +1,6 @@
 "use client";
 
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import Link from "next/link";
 import { Suspense, useCallback, useMemo, useState } from "react";
 
@@ -403,9 +404,9 @@ export default function IvdLocalizedApplicationClient({
             ) : null}
           </div>
 
-          <Link className="ivd-btn" href={data.ctaBanner.secondaryHref}>
+          <BottomCtaButton className="ivd-btn" href={data.ctaBanner.secondaryHref}>
             {data.ctaBanner.secondaryText}
-          </Link>
+          </BottomCtaButton>
         </div>
       </section>
     </main>

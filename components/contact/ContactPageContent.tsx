@@ -21,6 +21,7 @@
 
 "use client"; // 褰撳墠缁勪欢闇€瑕佹敮鎸佺偣鍑绘敮鎸佸崱鐗囧悗婊氬姩鍒拌〃鍗曪紝鎵€浠ヤ娇鐢ㄥ鎴风缁勪欢
 
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import { useRef, useState } from "react"; // 寮曞叆 React 鐘舵€佺鐞嗭紝鐢ㄤ簬璁板綍褰撳墠閫変腑鐨勯渶姹傜被鍨?
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
@@ -211,7 +212,7 @@ export default function ContactPageContent({ data, locale }: ContactPageContentP
           </div>
 
           <div className="contact-bottom-actions">
-            <button
+            <BottomCtaButton
               className="contact-button"
               type="button"
               onClick={() => {
@@ -220,15 +221,15 @@ export default function ContactPageContent({ data, locale }: ContactPageContentP
               }}
             >
               {data.bottomCta.buttons.form.label}
-            </button>
+            </BottomCtaButton>
 
-            <button
+            <BottomCtaButton
               className="contact-button"
               type="button"
               onClick={() => scrollToSection("contact-info")}
             >
               {data.bottomCta.buttons.contact.label}
-            </button>
+            </BottomCtaButton>
           </div>
         </div>
       </section>

@@ -14,6 +14,7 @@
 
 "use client";
 
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import Image from "next/image";
 import Link from "next/link";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
@@ -533,12 +534,12 @@ export default function ResearchManufacturingPageContent({
                             <p className="rm-cta-desc">{text.cta.desc}</p>
                         </div>
 
-                        <a
+                        <BottomCtaButton
                             className="rm-cta-button"
                             href={locale === "zh-CN" ? "/contact" : `/${locale}/contact`}
                         >
                             {text.cta.button}
-                        </a>
+                        </BottomCtaButton>
                     </div>
                 </div>
             </section>

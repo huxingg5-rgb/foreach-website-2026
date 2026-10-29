@@ -1,3 +1,4 @@
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import type { ReactNode } from "react";
 import Link from "next/link";
 
@@ -52,9 +53,9 @@ export default function AnalyticalInstrumentsLandingShell({
             ) : null}
           </div>
 
-          <Link className="ivd-btn" href={data.cta.href}>
+          <BottomCtaButton className="ivd-btn" href={data.cta.href}>
             {data.cta.buttonLabel}
-          </Link>
+          </BottomCtaButton>
         </div>
       </section>
     </div>

@@ -1,3 +1,4 @@
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import 'server-only';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -59,7 +60,7 @@ export default function ApplicationIndexPage({ locale }: { locale: ApplicationIn
     <section className={reviewStyles.contact} aria-labelledby="application-contact-heading" style={{ backgroundImage: 'linear-gradient(105deg, rgba(12, 34, 70, .94), rgba(23, 51, 104, .83)), url(/images/applications/lab-automation/lab-automation-cta-bg-1920x520-v001.webp)' }}>
       <div className={reviewStyles.contactInner}>
         <div><h2 id="application-contact-heading">{copy.contactHeading}</h2><p>{copy.contactDescription}</p></div>
-        <Link href={contactHref}>{copy.contactLabel}</Link>
+        <BottomCtaButton href={contactHref}>{copy.contactLabel}</BottomCtaButton>
       </div>
     </section>
   </div>;

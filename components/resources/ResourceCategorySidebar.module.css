@@ -23,6 +23,27 @@
   display: block;
 }
 
+.list[hidden] {
+  display: none;
+}
+
+.titleToggle {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 54px;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
 .group {
   min-width: 0;
   padding: 7px 0;
@@ -146,6 +167,7 @@
 
 .button[aria-expanded="true"]
   .toggle::after,
+.titleToggle[aria-expanded="true"] .toggle::after,
 .emptyToggle::before,
 .emptyToggle::after {
   display: none;

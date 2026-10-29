@@ -1,3 +1,4 @@
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import 'server-only';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -55,7 +56,7 @@ export default function EnglishReviewPage({ kind, document: source = getReviewHu
     />} />
     <RelatedResourcesLoader {...resources} />
     <section className={styles.contact} id="contact" data-review-contact style={{ backgroundImage: `linear-gradient(105deg, rgba(12, 34, 70, .94), rgba(23, 51, 104, .83)), url(${cta.backgroundImage})` }}>
-      <div className={styles.contactInner}><div><h2>{cta.title}</h2><p>{cta.description}</p></div><Link href={cta.href}>{cta.buttonLabel}</Link></div>
+      <div className={styles.contactInner}><div><h2>{cta.title}</h2><p>{cta.description}</p></div><BottomCtaButton href={cta.href}>{cta.buttonLabel}</BottomCtaButton></div>
     </section>
   </div>;
 }

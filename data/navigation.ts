@@ -2453,6 +2453,22 @@ export function getVisibleNavigationItems(locale = "zh-CN"): NavigationItem[] {
   return navigationItems
     .filter((item) => item.enabled)
     .map((item) => {
+      // Desktop and mobile resource menus share the six-language FAQ entry.
+      if (item.key === "resources") {
+        return {
+          ...item,
+          mobileChildren: [
+            {
+              key: "mobile-resource-faq-library",
+              label: { "zh-CN": "常见问题", en: "Frequently Asked Questions", es: "Preguntas frecuentes", fr: "Questions fréquentes", ko: "자주 묻는 질문", ru: "Часто задаваемые вопросы" },
+              href: { "zh-CN": "/resources/faq/", en: "/en/resources/faq/", es: "/es/resources/faq/", fr: "/fr/resources/faq/", ko: "/ko/resources/faq/", ru: "/ru/resources/faq/" },
+              order: 0,
+              enabled: true,
+            },
+            ...(item.mobileChildren ?? []),
+          ],
+        };
+      }
       if (item.key === "products" && isTubingAssemblyLocale(locale) && item.megaDropdown) {
         const title = { "zh-CN": "管组件系列", en: tubingAssemblyNavigation.en.title, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].title])) };
         const description = { "zh-CN": tubingAssemblyNavigation["zh-CN"].description, en: tubingAssemblyNavigation.en.description, ...Object.fromEntries(tubingAssemblyLocales.map(code => [code, tubingAssemblyNavigation[code].description])) };

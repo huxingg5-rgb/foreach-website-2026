@@ -1,4 +1,5 @@
 "use client";
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import { getControlModuleDetailHeading } from "@/data/products/selection/control-module-card-copy";
 import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
 import { getProbeControlBreadcrumbsEn } from "@/lib/seo/probe-control-breadcrumbs";
@@ -1135,12 +1136,12 @@ function PlungerPumpBottomCta({
           <h2>{cta.title}</h2>
           <p>{cta.desc}</p>
         </div>
-        <a
+        <BottomCtaButton
           className={styles.plungerBottomCtaButton}
           href={localizeInternalHref(cta.href, localePrefix)}
         >
           {cta.button}
-        </a>
+        </BottomCtaButton>
       </div>
     </section>
   );

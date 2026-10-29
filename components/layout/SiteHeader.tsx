@@ -405,6 +405,8 @@ const isFittingReplacementDetailPage =
   const isVideoDetailPage =
     /^\/resources\/installation-guide\/[^/]+$/.test(normalizedPathWithoutLocale);
 
+  const isFaqPage = normalizedPathWithoutLocale === "/resources/faq";
+
   /* ================================
      产品中心页面判断
 
@@ -429,7 +431,7 @@ const isFittingReplacementDetailPage =
   const shouldUseSolidHeader =
     isScrolled ||
     isFittingReplacementDetailPage || isNewsArticlePage ||
-    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage || isVideoDetailPage || isLocalizedApplicationDomainPage ||
+    isTechnicalArticlePage || isProductCenterPage || isPrivacyPolicyPage || isVideoDetailPage || isFaqPage || isLocalizedApplicationDomainPage ||
     isUnknownTopLevelPath ||
     openPanel !== "none" ||
     Boolean(desktopMegaKey) ||

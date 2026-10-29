@@ -19,6 +19,7 @@
    3. 附件当前只提交文件名称、类型和大小，原文件不上传
 ========================================================= */
 
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import type { ChangeEvent, FormEvent } from "react";
 import { useMemo, useRef, useState } from "react";
 
@@ -1264,9 +1265,9 @@ export default function DistributorPageContent({
             <p>{content.bottomCta.desc}</p>
           </div>
 
-          <a href="#form" className="distributor-btn distributor-btn-main">
+          <BottomCtaButton href="#form" className="distributor-btn distributor-btn-main">
             {content.bottomCta.button}
-          </a>
+          </BottomCtaButton>
         </div>
       </section>
 

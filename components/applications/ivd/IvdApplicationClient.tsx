@@ -1,5 +1,6 @@
 "use client";
 
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import type { ReactNode } from "react";
 
 /* =========================================================
@@ -344,9 +345,9 @@ export default function IvdApplicationClient({ relatedVideos, data }: IvdApplica
             ) : null}
           </div>
 
-          <Link className="ivd-btn" href={data.ctaBanner.secondaryHref || "/contact"}>
+          <BottomCtaButton className="ivd-btn" href={data.ctaBanner.secondaryHref || "/contact"}>
             提交应用需求
-          </Link>
+          </BottomCtaButton>
         </div>
       </section>
     </main>

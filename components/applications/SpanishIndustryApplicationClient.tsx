@@ -1,5 +1,6 @@
 "use client";
 
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
@@ -397,9 +398,9 @@ export default function SpanishIndustryApplicationClient({
             <p>{data.cta.description}</p>
           </div>
 
-          <Link className="ivd-btn" href={data.cta.href}>
+          <BottomCtaButton className="ivd-btn" href={data.cta.href}>
             {data.cta.buttonLabel}
-          </Link>
+          </BottomCtaButton>
         </div>
       </section>
     </main>

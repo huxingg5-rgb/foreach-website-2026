@@ -1,3 +1,4 @@
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import 'server-only';
 import Link from 'next/link';
 import SiteBreadcrumb from '@/components/common/SiteBreadcrumb';
@@ -39,7 +40,7 @@ export default async function InternationalApplicationPage({ locale, kind, docum
       navigation={<ApplicationGuideNavigation key={href} id={`${kind}-application-navigation`} ariaLabel={`${copy.areas[kind].title}: ${ui.guide}`} overview={navigation.overview} groups={navigation.groups} currentHref={href} mobileTitle={navigation.overview.label} drawerEyebrow={ui.guide} drawerTitle={navigation.overview.label} browseLabel={ui.browse} closeLabel={ui.close} />} />
     <RelatedResourcesLoader {...await getLocalizedApplicationResources(locale, kind, document)} />
     <section className={styles.contact} id="contact" data-review-contact style={{ backgroundImage: `linear-gradient(105deg, rgba(12, 34, 70, .94), rgba(23, 51, 104, .83)), url(${cta.backgroundImage})` }}>
-      <div className={styles.contactInner}><div><h2>{cta.title}</h2><p>{cta.description}</p></div><Link href={cta.href}>{cta.buttonLabel}</Link></div>
+      <div className={styles.contactInner}><div><h2>{cta.title}</h2><p>{cta.description}</p></div><BottomCtaButton href={cta.href}>{cta.buttonLabel}</BottomCtaButton></div>
     </section>
   </div>;
 }

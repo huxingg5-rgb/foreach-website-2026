@@ -1,5 +1,6 @@
 "use client";
 
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import type { ReactNode } from "react";
 
 /* =========================================================
@@ -305,9 +306,9 @@ export default function SyntheticBiologyApplicationClient({
             <p>{data.cta.description}</p>
           </div>
 
-          <Link className="ivd-btn" href={data.cta.href}>
+          <BottomCtaButton className="ivd-btn" href={data.cta.href}>
             {data.cta.buttonLabel}
-          </Link>
+          </BottomCtaButton>
         </div>
       </section>
     </main>

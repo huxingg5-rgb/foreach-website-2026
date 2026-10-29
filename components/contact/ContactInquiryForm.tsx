@@ -43,6 +43,11 @@ import {
 type ContactInquiryFormProps = {
   data: ContactPageData; // 当前语言页面数据
   presetRequestType?: string; // 外部卡片点击后传进来的需求类型
+  initialValues?: Partial<Pick<ContactFormState, "requestType" | "productType">>;
+  variant?: "page" | "modal";
+  onSuccessClose?: () => void;
+  onDraftStart?: () => void;
+  analyticsSourceSection?: string;
 };
 
 type InquiryApiResponse = {
@@ -143,6 +148,7 @@ type InquiryRuntimeText = {
   networkError: string;
   configurationError: string;
   genericError: string;
+  requiredFieldsMissing: string;
 };
 
 const INQUIRY_RUNTIME_TEXT: Record<
@@ -150,6 +156,7 @@ const INQUIRY_RUNTIME_TEXT: Record<
   InquiryRuntimeText
 > = {
   "zh-CN": {
+    requiredFieldsMissing: "请填写姓名、公司、目标产品 / 部件类型和需求描述。",
     codeSent: "验证码已发送，请查收邮箱。",
     sendTooFrequently:
       "验证码发送过于频繁，请在 60 秒后重试。",
@@ -168,6 +175,7 @@ const INQUIRY_RUNTIME_TEXT: Record<
   },
 
   en: {
+    requiredFieldsMissing: "Please enter your name, company, target product / component type, and inquiry details.",
     codeSent:
       "The verification code has been sent. Please check your email.",
     sendTooFrequently:
@@ -187,6 +195,7 @@ const INQUIRY_RUNTIME_TEXT: Record<
   },
 
   es: {
+    requiredFieldsMissing: "Complete el nombre, la empresa, el producto o componente y los detalles de la consulta.",
     codeSent:
       "El código de verificación se ha enviado. Revise su correo electrónico.",
     sendTooFrequently:
@@ -206,6 +215,7 @@ const INQUIRY_RUNTIME_TEXT: Record<
   },
 
   fr: {
+    requiredFieldsMissing: "Renseignez votre nom, votre entreprise, le produit ou composant et les détails de votre demande.",
     codeSent:
       "Le code de vérification a été envoyé. Consultez votre boîte de réception.",
     sendTooFrequently:
@@ -225,6 +235,7 @@ const INQUIRY_RUNTIME_TEXT: Record<
   },
 
   ko: {
+    requiredFieldsMissing: "이름, 회사, 대상 제품 또는 부품 유형, 문의 내용을 입력해 주세요.",
     codeSent:
       "인증 코드가 전송되었습니다. 이메일을 확인해 주세요.",
     sendTooFrequently:
@@ -244,6 +255,7 @@ const INQUIRY_RUNTIME_TEXT: Record<
   },
 
   ru: {
+    requiredFieldsMissing: "Укажите имя, компанию, тип изделия или компонента и описание запроса.",
     codeSent:
       "Код подтверждения отправлен. Проверьте электронную почту.",
     sendTooFrequently:
@@ -317,6 +329,11 @@ function getInquiryApiErrorMessage(
       : "unknown_error";
 
   switch (errorCode) {
+    case "required_fields_missing":
+    case "name_required":
+    case "company_required":
+      return runtimeText.requiredFieldsMissing;
+
     case "invalid_email":
       return data.form.alerts.invalidEmail;
 
@@ -487,10 +504,19 @@ function waitForIframeImages(iframeDocument: Document) {
 export default function ContactInquiryForm({
   data,
   presetRequestType,
+  initialValues,
+  variant = "page",
+  onSuccessClose,
+  onDraftStart,
+  analyticsSourceSection = "contact_form_section",
 }: ContactInquiryFormProps) {
   const [formData, setFormData] = useState<ContactFormState>(() =>
-    createInitialFormData(data),
+    ({
+      ...createInitialFormData(data), ...initialValues,
+      ...(presetRequestType ? { requestType: presetRequestType } : {}),
+    }),
   );
+  const [previousRequestType, setPreviousRequestType] = useState(presetRequestType);
 
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
@@ -517,6 +543,13 @@ export default function ContactInquiryForm({
   const [referenceId, setReferenceId] = useState("");
   const formStartedRef = useRef(false);
   const nativeValidationReportedRef = useRef(false);
+  const successRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (variant === "modal" && showSuccessModal) {
+      successRef.current?.focus({ preventScroll: true });
+    }
+  }, [variant, showSuccessModal]);
 
   function getAnalyticsLocale() {
     return document.documentElement.lang || "zh-CN";
@@ -526,10 +559,11 @@ export default function ContactInquiryForm({
     if (formStartedRef.current) return;
 
     formStartedRef.current = true;
+    onDraftStart?.();
     trackFormStart({
       formId: "contact_inquiry_form",
       formType: "general_inquiry",
-      sourceSection: "contact_form_section",
+      sourceSection: analyticsSourceSection,
       locale: getAnalyticsLocale(),
     });
   }
@@ -541,7 +575,7 @@ export default function ContactInquiryForm({
     trackInquirySubmitError({
       formId: "contact_inquiry_form",
       formType: "general_inquiry",
-      sourceSection: "contact_form_section",
+      sourceSection: analyticsSourceSection,
       locale: getAnalyticsLocale(),
       errorType,
       submissionStage,
@@ -564,14 +598,13 @@ export default function ContactInquiryForm({
      点击页面上的支持卡片后，可以自动切换表单需求类型
   ========================================================= */
 
-  useEffect(() => {
-    if (!presetRequestType) return;
-
-    setFormData((prev) => ({
-      ...prev,
-      requestType: presetRequestType,
-    }));
-  }, [presetRequestType]);
+  // Update only the externally selected request type, preserving the rest of the draft.
+  if (presetRequestType !== previousRequestType) {
+    setPreviousRequestType(presetRequestType);
+    if (presetRequestType) {
+      setFormData((prev) => ({ ...prev, requestType: presetRequestType }));
+    }
+  }
 
   /* =========================================================
      通用表单字段修改
@@ -1042,11 +1075,13 @@ export default function ContactInquiryForm({
        * 邮件已经发送成功。
        * 接下来生成浏览器打印版需求单。
        */
-      printRequirementFromHiddenIframe(
-        generatedFileName,
-        requestNumber,
-        createdAtText,
-      );
+      if (variant === "page") {
+        printRequirementFromHiddenIframe(
+          generatedFileName,
+          requestNumber,
+          createdAtText,
+        );
+      }
 
       /*
        * 后端提交成功后，邮箱验证状态会被消耗。
@@ -1068,7 +1103,7 @@ export default function ContactInquiryForm({
       trackLeadGenerated({
         formId: "contact_inquiry_form",
         formType: "general_inquiry",
-        sourceSection: "contact_form_section",
+        sourceSection: analyticsSourceSection,
         locale: currentLang,
       });
       formStartedRef.current = false;
@@ -1123,6 +1158,23 @@ export default function ContactInquiryForm({
     } finally {
       setIsSubmitting(false);
     }
+  }
+
+  if (variant === "modal" && showSuccessModal) {
+    return (
+      <div className="contact-inline-success" ref={successRef} tabIndex={-1} role="status">
+        <div className="contact-success-icon" aria-hidden="true">✓</div>
+        <h3>{data.form.successModal.title}</h3>
+        <p>{data.form.successModal.description}</p>
+        {referenceId ? <p>{data.form.pdfTexts.requestNumber}：{referenceId}</p> : null}
+        <button type="button" className="contact-success-button" onClick={() => {
+          setShowSuccessModal(false);
+          setFormData({ ...createInitialFormData(data), ...initialValues });
+          setSelectedFiles([]);
+          onSuccessClose?.();
+        }}>{data.form.successModal.closeButton}</button>
+      </div>
+    );
   }
 
   return (
@@ -1210,6 +1262,7 @@ export default function ContactInquiryForm({
 
               <input
                 name="emailCode"
+                aria-label={data.form.emailVerification.codePlaceholder}
                 type="text"
                 value={formData.emailCode}
                 placeholder={data.form.emailVerification.codePlaceholder}
@@ -1283,10 +1336,12 @@ export default function ContactInquiryForm({
           <div className="contact-field">
             <label htmlFor="contact-product-type">
               {data.form.labels.productType}
+              <span>*</span>
             </label>
             <select
               id="contact-product-type"
               name="productType"
+              required
               value={formData.productType}
               onChange={handleFieldChange}
               disabled={isSubmitting}
@@ -1379,7 +1434,7 @@ export default function ContactInquiryForm({
               </label>
 
               <button
-                className="contact-submit-button brand-navy-button-motion"
+                className={`contact-submit-button${variant === "page" ? " brand-navy-button-motion" : ""}`}
                 type="submit"
                 disabled={isSubmitting}
               >

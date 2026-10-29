@@ -1,3 +1,4 @@
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import 'server-only';
 import Link from 'next/link';
 import SiteBreadcrumb from '@/components/common/SiteBreadcrumb';
@@ -49,7 +50,7 @@ export default async function IvdLocalizedReviewPage({ locale, document }: { loc
     />} />
     <RelatedResourcesLoader {...getLocalizedIvdResources(locale, document)} />
     <section className={styles.contact} id="contact" data-review-contact style={{ backgroundImage: `linear-gradient(105deg, rgba(12, 34, 70, .94), rgba(23, 51, 104, .83)), url(${reviewDomains.ivd.image})` }}>
-      <div className={styles.contactInner}><div><h2>{ui.contactTitle}</h2><p>{ui.contactDescription}</p></div><Link href={`/${locale}/contact/`}>{ui.contactButton}</Link></div>
+      <div className={styles.contactInner}><div><h2>{ui.contactTitle}</h2><p>{ui.contactDescription}</p></div><BottomCtaButton href={`/${locale}/contact/`}>{ui.contactButton}</BottomCtaButton></div>
     </section>
   </div>;
 }

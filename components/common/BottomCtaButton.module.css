@@ -1,0 +1,49 @@
+/* Match the Contact page's resting buttons; highlight only on interaction.
+ * Scoped specificity overrides legacy page classes without changing layout.
+ */
+:global(html) :global(body) .button[data-bottom-cta-button] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  min-height: 44px !important;
+  height: auto !important;
+  padding: 0 22px !important;
+  border: 1px solid rgba(255, 255, 255, 0.52) !important;
+  border-radius: 0 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  transition:
+    background-color 0.24s ease,
+    border-color 0.24s ease,
+    color 0.24s ease !important;
+}
+
+:global(html) :global(body) .button[data-bottom-cta-button]:is(:hover, :focus-visible, :active, [data-global-touch-pressed="true"]) {
+  background: #09e9b4 !important;
+  border-color: #09e9b4 !important;
+  color: #173368 !important;
+  transform: none !important;
+}
+
+:global(html) :global(body) .button[data-bottom-cta-button]:focus-visible {
+  outline: 2px solid rgba(9, 233, 180, 0.42) !important;
+  outline-offset: 2px !important;
+}
+
+@media (hover: none), (pointer: coarse) {
+  :global(html) :global(body) .button[data-bottom-cta-button]:is(:hover, :focus):not(:focus-visible):not([data-global-touch-pressed="true"]) {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.52) !important;
+    color: #ffffff !important;
+    transform: none !important;
+  }
+}

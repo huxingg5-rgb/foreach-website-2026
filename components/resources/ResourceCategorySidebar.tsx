@@ -1,6 +1,6 @@
 "use client";
 
-import { useId } from "react";
+import { useId, useState } from "react";
 import styles from "./ResourceCategorySidebar.module.css";
 
 type CategoryOption = {
@@ -19,16 +19,31 @@ export type ResourceCategoryItem = CategoryOption & {
 type ResourceCategorySidebarProps = {
   title: string;
   items: readonly ResourceCategoryItem[];
+  collapsible?: boolean;
 };
 
 /** Shared presentation; each resource page owns its filters and navigation. */
-export default function ResourceCategorySidebar({ title, items }: ResourceCategorySidebarProps) {
+export default function ResourceCategorySidebar({ title, items, collapsible = false }: ResourceCategorySidebarProps) {
   const id = useId();
+  const [sectionOpen, setSectionOpen] = useState(true);
 
   return (
     <aside className={styles.sidebar} aria-labelledby={`${id}-title`}>
-      <h2 className={styles.title} id={`${id}-title`}>{title}</h2>
-      <div className={styles.list}>
+      <h2 className={styles.title} id={`${id}-title`}>
+        {collapsible ? (
+          <button
+            type="button"
+            className={styles.titleToggle}
+            aria-expanded={sectionOpen}
+            aria-controls={`${id}-list`}
+            onClick={() => setSectionOpen((open) => !open)}
+          >
+            <span>{title}</span>
+            <span className={styles.toggle} aria-hidden="true" />
+          </button>
+        ) : title}
+      </h2>
+      <div className={styles.list} id={`${id}-list`} hidden={collapsible && !sectionOpen}>
         {items.map((item, index) => {
           const hasChildren = Boolean(item.children?.length);
           const expanded = hasChildren && Boolean(item.expanded);

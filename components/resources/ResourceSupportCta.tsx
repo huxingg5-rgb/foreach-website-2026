@@ -12,7 +12,7 @@
    4. 规格书、安装教程、材料兼容、常见问题等页面都可以复用
 ========================================================= */
 
-import Link from "next/link";
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import styles from "./ResourceSupportCta.module.css";
 
 type ResourceSupportCtaProps = {
@@ -29,7 +29,10 @@ type ResourceSupportCtaProps = {
   buttonText: string;
 
   /* 按钮跳转地址 */
-  href: string;
+  href?: string;
+
+  /* 当前页操作，例如打开联系表单弹窗。 */
+  onAction?: () => void;
 
   /*
    * 可选多按钮数据。未传时继续使用原有 buttonText / href，保证所有
@@ -47,12 +50,13 @@ export default function ResourceSupportCta({
   description,
   buttonText,
   href,
+  onAction,
   actions,
 }: ResourceSupportCtaProps) {
   const resolvedActions =
     actions && actions.length > 0
       ? actions
-      : [{ label: buttonText, href }];
+      : href ? [{ label: buttonText, href }] : [];
 
   return (
     <section className={styles.resourceSupportCta}>
@@ -72,14 +76,18 @@ export default function ResourceSupportCta({
             gap: 12,
           }}
         >
-          {resolvedActions.map((action) => (
-            <Link
+          {onAction ? (
+            <BottomCtaButton className={styles.button} onClick={onAction} aria-haspopup="dialog">
+              {buttonText}
+            </BottomCtaButton>
+          ) : resolvedActions.map((action) => (
+            <BottomCtaButton
               className={styles.button}
               href={action.href}
               key={`${action.href}-${action.label}`}
             >
               {action.label}
-            </Link>
+            </BottomCtaButton>
           ))}
         </div>
       </div>

@@ -25,6 +25,7 @@
    DatasheetsClient.tsx
 ========================================================= */
 
+import BottomCtaButton from "@/components/common/BottomCtaButton";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 
@@ -364,9 +365,9 @@ export default function DatasheetsClient({
           </div>
 
           <div className="support-actions">
-            <Link className="support-btn" href={pageText.support.buttonHref}>
+            <BottomCtaButton className="support-btn" href={pageText.support.buttonHref}>
               {pageText.support.buttonText}
-            </Link>
+            </BottomCtaButton>
           </div>
         </div>
       </section>
