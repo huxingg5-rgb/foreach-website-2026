@@ -1,3 +1,4 @@
+import { getTubingMaterialArticle } from "@/data/resources/technical-articles/ptfe-tubing.article";
 import { hasFittingOverviewVideo, isFittingOverviewVideo } from "@/data/resources/installation-guide/fitting-video-relations";
 import { getSolenoidContent } from "@/data/products/detail/solenoid-content";
 import { getSolenoidConfigurationImage } from "@/data/products/detail/solenoid-images";
@@ -43,7 +44,8 @@ function selectArticleResources(data: RelatedResourcesData): RelatedResourcesDat
 export function getArticleFooterResources(article: TechnicalArticleItem, locale: TechnicalArticleLocale): RelatedResourcesData {
   let data: RelatedResourcesData = { locale, products: [], articles: [], videos: [] };
   const connector = getConnectorSelectionArticle(article.slug, locale)
-    ?? getInstrumentFluidicsArticle(article.slug, locale);
+    ?? getInstrumentFluidicsArticle(article.slug, locale)
+    ?? getTubingMaterialArticle(article.slug, locale);
   if (connector) {
     data.products = connector.products;
     if (article.slug.startsWith("quick-disconnect-coupling-")) {

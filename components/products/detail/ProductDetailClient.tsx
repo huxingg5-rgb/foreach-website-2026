@@ -19,6 +19,7 @@ import { normalizeSiteHref } from "@/lib/seo/site-url";
 import { buildProductSpecProperties } from "@/lib/seo/product-spec-properties";
 import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
 import { getTubingGalleryData } from "@/data/products/tubing/gallery";
+import { getTubingIntroductionCopy } from "@/data/products/tubing/content";
 import { getBarbedFittingImageAlt } from "@/data/products/detail/barbed-fitting-gallery";
 import { getThreadToBarbedFittingImageAlt } from "@/data/products/detail/thread-to-barbed-fitting-gallery";
 import { getFemaleThreadAdapterImageAlt } from "@/data/products/detail/female-thread-adapter-gallery";
@@ -1573,6 +1574,16 @@ export default function ProductDetailClient({
 
       if (String(sourceData.category) === "tubing") {
         localizedData = { ...localizedData, ...getTubingGalleryData(sourceData.slug, configuratorLocale) };
+        const tubingIntroduction = getTubingIntroductionCopy(sourceData.slug, configuratorLocale);
+        if (tubingIntroduction) {
+          localizedData = {
+            ...localizedData,
+            description: tubingIntroduction.intro.join(" "),
+            shortDescription: tubingIntroduction.intro[0],
+            tubingIntroductionParagraphs: tubingIntroduction.intro,
+            commonApplications: tubingIntroduction.applications,
+          };
+        }
       }
 
       // HP navigation is already localized by its route; the generic English

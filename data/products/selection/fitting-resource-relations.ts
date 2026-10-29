@@ -17,7 +17,7 @@ function modelSeries(model: string) {
 
 /** Category pages collect their published series; model pages keep exact-series videos. */
 export function getFittingResourceRelationKeys(productTypeId: string, model?: string): string[] {
-  if (["pvc-tubing", "tpu-tubing"].includes(productTypeId)) {
+  if (["pvc-tubing", "tpu-tubing", "ptfe-tubing", "fep-tubing", "pfa-tubing"].includes(productTypeId)) {
     return [`category:${productTypeId}`];
   }
   if (!supportedTypes.has(productTypeId)) return [];

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getFittingAssemblyLinks, withFittingArticleLinks } from "@/data/resources/technical-articles/fitting-article-relations";
 import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
 import { getInstrumentFluidicsArticle } from "@/data/resources/technical-articles/instrument-fluidics-articles.article";
+import { getTubingMaterialArticle } from "@/data/resources/technical-articles/ptfe-tubing.article";
 import RelatedProducts from "@/components/common/related-resources/RelatedProducts";
 import { getConnectorSelectionArticle } from "@/data/resources/technical-articles/connector-selection-articles.article";
 import ArticleRelatedProducts from "./ArticleRelatedProducts";
@@ -595,8 +596,10 @@ export default function TechnicalArticleDetail({
 }: TechnicalArticleDetailProps) {
   const locale = normalizeLocale(pageData.locale);
   const instrumentFluidicsArticle = getInstrumentFluidicsArticle(article.slug, locale);
+  const tubingMaterialArticle = getTubingMaterialArticle(article.slug, locale);
   const connectorArticle = getConnectorSelectionArticle(article.slug, locale)
-    ?? instrumentFluidicsArticle;
+    ?? instrumentFluidicsArticle
+    ?? tubingMaterialArticle;
   const isHardTubeFittingsArticle = article.slug === hardTubeFittingsSlug;
   const isFerruleFittingArticle = article.slug === ferruleFittingSlug;
   const isLuerFittingArticle = article.slug === luerFittingSlug;
@@ -1144,10 +1147,10 @@ export default function TechnicalArticleDetail({
           afterLeadContent={article.slug === "female-thread-adapters-selection-guide" && locale !== "zh-CN" ? <FemaleThreadOverviewVideo locale={locale} /> : undefined}
           faq={{ id: "faq", label: copy.faqTitle, items: copy.faqItems }} />
         <div className={newsArticleStyles.page} data-rpl-article-footer>
-          <div className={isFlangedTubingAssembliesArticle || instrumentFluidicsArticle ? undefined : hardTubeFittingsStyles.relatedProducts}
+          <div className={isFlangedTubingAssembliesArticle || instrumentFluidicsArticle || tubingMaterialArticle ? undefined : hardTubeFittingsStyles.relatedProducts}
             data-flanged-related-products={isFlangedTubingAssembliesArticle || undefined}>
             {isFlangedTubingAssembliesArticle && <p className={hardTubeFittingsStyles.relatedIntro}>{flangedTubingRelatedIntro[locale]}</p>}
-            {instrumentFluidicsArticle
+            {instrumentFluidicsArticle || tubingMaterialArticle
               ? <>
                   <RelatedProducts locale={locale} products={footerResources.products} />
                   {footerResources.videos.length > 0 && <RelatedResourcesLoader {...footerResources} products={[]} articles={[]} />}
