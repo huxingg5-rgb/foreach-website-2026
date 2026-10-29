@@ -6,35 +6,35 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "../diaphragm-pump-engi
 // pressure is inferred. Backpressure examples are calculations, not test results.
 export const copy = {
   "metadata": {
-    "title": "快速接头能承受多大压力？工作压力、温度与带压插拔",
-    "seoTitle": "快速接头能承受多大压力？工作压力、温度与带压插拔｜恒永达 FOREACH",
-    "seoDescription": "快速接头能承受多大压力？恒永达 Q20、Q40 标准配置为 8.3 bar，Q60-PP 为 4.2 bar。结合流量—压降算例，说明下游背压、启停峰值、温度与介质如何影响选型，以及带阀接头的残压释放和插拔检查。",
+    "title": "快插接头能承受多大压力？工作压力、温度与带压插拔",
+    "seoTitle": "快插接头能承受多大压力？工作压力、温度与带压插拔｜恒永达 FOREACH",
+    "seoDescription": "快插接头能承受多大压力？恒永达 Q20、Q40 标准配置为 8.3 bar，Q60-PP 为 4.2 bar。结合流量—压降算例，说明下游背压、启停峰值、温度与介质如何影响选型，以及带阀接头的残压释放和插拔检查。",
     "coverImage": "/images/resources/technical-articles/instrument-fluidics/quick-disconnect-coupling-pressure-rating-cover.webp",
-    "coverAlt": "白底展示的 Q20、Q40、Q60 快速接头分离公母端"
+    "coverAlt": "白底展示的 Q20、Q40、Q60 快插接头分离公母端"
   },
-  "deck": "快速接头的承压能力要按系列、材料和使用工况判断。恒永达 Q20、Q40 的 POM＋NBR、PP＋EPDM 标准配置工作压力为 8.3 bar（约 0.83 MPa），Q60 的 PP＋EPDM 配置为 4.2 bar（约 0.42 MPa）。选型时既要确认目标流量下的压降，也要把接头所在位置的压力峰值、介质和温度一起核对；带阀结构不等于允许带压插拔。",
+  "deck": "快插接头的承压能力要按系列、材料和使用工况判断。恒永达 Q20、Q40 的 POM＋NBR、PP＋EPDM 标准配置工作压力为 8.3 bar（约 0.83 MPa），Q60 的 PP＋EPDM 配置为 4.2 bar（约 0.42 MPa）。选型时既要确认目标流量下的压降，也要把接头所在位置的压力峰值、介质和温度一起核对；带阀结构不等于允许带压插拔。",
   "leadBlocks": [
     {
       "type": "paragraph",
-      "text": "快速接头的承压能力要按系列、材料和使用工况判断。恒永达 Q20、Q40 的 POM＋NBR、PP＋EPDM 标准配置工作压力为 8.3 bar（约 0.83 MPa），Q60 的 PP＋EPDM 配置为 4.2 bar（约 0.42 MPa）。选型时既要确认目标流量下的压降，也要把接头所在位置的压力峰值、介质和温度一起核对；带阀结构不等于允许带压插拔。"
+      "text": "快插接头的承压能力要按系列、材料和使用工况判断。恒永达 Q20、Q40 的 POM＋NBR、PP＋EPDM 标准配置工作压力为 8.3 bar（约 0.83 MPa），Q60 的 PP＋EPDM 配置为 4.2 bar（约 0.42 MPa）。选型时既要确认目标流量下的压降，也要把接头所在位置的压力峰值、介质和温度一起核对；带阀结构不等于允许带压插拔。"
     },
     {
       "type": "paragraph",
-      "text": "本文讨论的是公母端可以快速分离的快速接头，也称快插接头，用于仪器供液、清洗、废液及储液瓶管路。流量系数文章解决“目标流量要消耗多少压差”，本文接着说明“这组连接在实际压力和温度下能否使用”，并给出背压算例、维护步骤和装机验证方法。"
+      "text": "本文讨论的是公母端可以快速分离的快插接头，用于仪器供液、清洗、废液及储液瓶管路。流量系数文章解决“目标流量要消耗多少压差”，本文接着说明“这组连接在实际压力和温度下能否使用”，并给出背压算例、维护步骤和装机验证方法。"
     },
     {
       "type": "links",
       "items": [
         {
           "href": "/resources/technical-articles/quick-disconnect-coupling-flow-pressure-drop/",
-          "label": "快速接头流量怎么算？流量—压降曲线与 Kv/Cv 计算方法"
+          "label": "快插接头流量怎么算？流量—压降曲线与 Kv/Cv 计算方法"
         }
       ]
     }
   ],
   "sections": [
     {
-      "title": "Q20、Q40、Q60 快速接头的工作压力是多少？",
+      "title": "Q20、Q40、Q60 快插接头的工作压力是多少？",
       "tocLabel": "工作压力",
       "blocks": [
         {
@@ -116,7 +116,7 @@ export const copy = {
       ]
     },
     {
-      "title": "快速接头通径越大，承压能力越高吗？",
+      "title": "快插接头通径越大，承压能力越高吗？",
       "tocLabel": "通径与承压",
       "blocks": [
         {
@@ -148,7 +148,7 @@ export const copy = {
       ]
     },
     {
-      "title": "快速接头工作压力与压降有什么区别？怎样计入下游背压？",
+      "title": "快插接头工作压力与压降有什么区别？怎样计入下游背压？",
       "tocLabel": "压降与背压",
       "blocks": [
         {
@@ -227,7 +227,7 @@ export const copy = {
       ]
     },
     {
-      "title": "选快速接头时要核对哪些压力？",
+      "title": "选快插接头时要核对哪些压力？",
       "tocLabel": "压力核对",
       "blocks": [
         {
@@ -281,7 +281,7 @@ export const copy = {
       ]
     },
     {
-      "title": "温度会降低快速接头的承压能力吗？",
+      "title": "温度会降低快插接头的承压能力吗？",
       "tocLabel": "温度影响",
       "blocks": [
         {
@@ -347,7 +347,7 @@ export const copy = {
       ]
     },
     {
-      "title": "快速接头可以带压插拔吗？带阀结构为何不能代替泄压？",
+      "title": "快插接头可以带压插拔吗？带阀结构为何不能代替泄压？",
       "tocLabel": "带压插拔与泄压",
       "blocks": [
         {
@@ -389,7 +389,7 @@ export const copy = {
       ]
     },
     {
-      "title": "大管径快速接头安装时要检查什么？",
+      "title": "大管径快插接头安装时要检查什么？",
       "tocLabel": "Q60 安装检查",
       "blocks": [
         {
@@ -414,7 +414,7 @@ export const copy = {
       ]
     },
     {
-      "title": "装机后怎样验证快速接头的压力与密封？",
+      "title": "装机后怎样验证快插接头的压力与密封？",
       "tocLabel": "装机验证",
       "blocks": [
         {
@@ -473,7 +473,7 @@ export const copy = {
       ]
     },
     {
-      "title": "快速接头选型延伸阅读",
+      "title": "快插接头选型延伸阅读",
       "tocLabel": "延伸阅读",
       "blocks": [
         {
@@ -481,7 +481,7 @@ export const copy = {
           "items": [
             {
               "href": "/resources/technical-articles/quick-disconnect-coupling-flow-pressure-drop/",
-              "label": "快速接头流量怎么算？流量—压降曲线与 Kv/Cv 计算方法"
+              "label": "快插接头流量怎么算？流量—压降曲线与 Kv/Cv 计算方法"
             },
             {
               "href": "/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
@@ -497,7 +497,7 @@ export const copy = {
       ]
     }
   ],
-  "faqTitle": "快速接头承压常见问题",
+  "faqTitle": "快插接头承压常见问题",
   "faqTocLabel": "常见问题",
   "faqItems": [
     {
@@ -509,15 +509,15 @@ export const copy = {
       "answer": "不能直接沿用。软管材料、壁厚、温度以及尾端固定方式可能先成为限制。应按公母端、密封件、软管和其他接口中允许压力最低的环节筛选，并验证整套组件的密封与连接保持情况。"
     },
     {
-      "question": "采购或替换快速接头时，怎样比较两家的耐压数据？",
+      "question": "采购或替换快插接头时，怎样比较两家的耐压数据？",
       "answer": "先确认比较的是工作压力、保压测试压力还是爆破压力，再核对完整公母端、阀门与密封材料、介质、温度、测试时长、循环次数和失效判据。若还需要带压操作，应单独取得允许连接和断开的条件。不同条件的数据不能只按数值大小排序，替换后仍需整机验证。"
     }
   ],
   "cta": {
-    "title": "结合实际工况确认快速接头配置",
+    "title": "结合实际工况确认快插接头配置",
     "description": "按上文记录完整连接配置和实际使用工况，恒永达工程师可协助核对 Q20、Q40、Q60 的候选配置与验证项目。",
-    "contactLabel": "沟通快速接头选型",
-    "productsLabel": "查看快速接头型号",
+    "contactLabel": "沟通快插接头选型",
+    "productsLabel": "查看快插接头型号",
     "productsHref": "/products/fittings/quick-connect-fittings/"
   }
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;

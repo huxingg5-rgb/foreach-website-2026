@@ -229,7 +229,7 @@ export const copy = {
         },
         {
           "type": "paragraph",
-          "text": "These Q60 curves cover 3/8″ and 1/2″ tubing connections; do not extrapolate them to 3/4″ (19.0 mm) by scaling the tube diameter. Q60-PP has a 4.2 bar working-pressure rating. With the downstream side at atmospheric or positive gauge pressure, curve points above that pressure drop are not usable operating conditions."
+          "text": "These Q60 curves cover 3/8″ and 1/2″ tubing connections; do not extrapolate them to 3/4″ (19.0 mm) by scaling the tube diameter. Q60-PP has a 4.2 bar working-pressure rating. With the downstream side at atmospheric or positive gauge pressure, curve points above that pressure drop are not usable operating conditions. See the pressure-rating article in Further Reading."
         }
       ]
     },
@@ -489,6 +489,10 @@ export const copy = {
         {
           "type": "links",
           "items": [
+            {
+              "href": "/en/resources/technical-articles/quick-disconnect-coupling-pressure-rating/",
+              "label": "Quick Disconnect Fitting Pressure Ratings: Temperature and Connection Under Pressure"
+            },
             {
               "href": "/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
               "label": "What Is a Quick Disconnect Fitting? Connections, Valves and Selection"

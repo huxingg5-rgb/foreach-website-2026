@@ -8,8 +8,8 @@ const deck = "A quick disconnect's pressure rating depends on its series, materi
 
 export const copy = {
   metadata: {
-    title: "Quick Disconnect Pressure Ratings: Temperature and Connection Under Pressure",
-    seoTitle: "Quick Disconnect Pressure Ratings & Temperature | FOREACH",
+    title: "Quick Disconnect Fitting Pressure Ratings: Temperature and Connection Under Pressure",
+    seoTitle: "Quick Disconnect Fitting Pressure Ratings & Temperature | FOREACH",
     seoDescription: "Check Q20, Q40 and Q60 working pressure against pressure drop, backpressure and temperature. Covers residual pressure, shutoff valves and assembly validation.",
     coverImage,
     coverAlt: "Q20, Q40 and Q60 quick disconnect coupling halves shown separated on a white background",

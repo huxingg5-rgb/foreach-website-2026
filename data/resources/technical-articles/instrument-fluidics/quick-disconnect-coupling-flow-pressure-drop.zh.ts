@@ -6,17 +6,17 @@ import type { DiaphragmPumpEngineeringArticleCopy } from "../diaphragm-pump-engi
 // These data are for preliminary calculation, not SKU-specific ratings or acceptance limits.
 export const copy = {
   "metadata": {
-    "title": "快速接头流量怎么算？流量—压降曲线与 Kv/Cv 计算方法",
-    "seoTitle": "快速接头流量怎么算？流量—压降曲线与 Kv/Cv 计算方法｜恒永达 FOREACH",
-    "seoDescription": "快速接头流量怎么算？结合 Q20、Q40、Q60 流量—压降曲线与 Kv/Cv 估算值，说明目标流量下的压降计算、允许压降下的流量估算，以及阀门配置、泵吸液侧和多支路供液的选型方法。",
+    "title": "快插接头流量怎么算？流量—压降曲线与 Kv/Cv 计算方法",
+    "seoTitle": "快插接头流量怎么算？流量—压降曲线与 Kv/Cv 计算方法｜恒永达 FOREACH",
+    "seoDescription": "快插接头流量怎么算？结合 Q20、Q40、Q60 流量—压降曲线与 Kv/Cv 估算值，说明目标流量下的压降计算、允许压降下的流量估算，以及阀门配置、泵吸液侧和多支路供液的选型方法。",
     "coverImage": "/images/resources/technical-articles/instrument-fluidics/quick-disconnect-coupling-flow-pressure-drop-cover.webp",
-    "coverAlt": "Q60 快速接头连接与分离状态，灰色接头白底产品图"
+    "coverAlt": "Q60 快插接头连接与分离状态，灰色接头白底产品图"
   },
-  "deck": "快速接头的流量与允许压降、接管尺寸、阀门配置及介质性质有关。选型时，先确定目标流量，再用流量—压降曲线或 Kv/Cv 系数估算接头的压力损失，判断是否在液路的压差预算内。本文以公母端可快速分离的 Q20、Q40、Q60 快速接头为例，说明曲线读法、流量与压降计算，以及泵吸液侧、多支路供液的选型和验证方法。",
+  "deck": "快插接头的流量与允许压降、接管尺寸、阀门配置及介质性质有关。选型时，先确定目标流量，再用流量—压降曲线或 Kv/Cv 系数估算接头的压力损失，判断是否在液路的压差预算内。本文以公母端可快速分离的 Q20、Q40、Q60 快插接头为例，说明曲线读法、流量与压降计算，以及泵吸液侧、多支路供液的选型和验证方法。",
   "leadBlocks": [
     {
       "type": "paragraph",
-      "text": "快速接头的流量与允许压降、接管尺寸、阀门配置及介质性质有关。选型时，先确定目标流量，再用流量—压降曲线或 Kv/Cv 系数估算接头的压力损失，判断是否在液路的压差预算内。本文以公母端可快速分离的 Q20、Q40、Q60 快速接头为例，说明曲线读法、流量与压降计算，以及泵吸液侧、多支路供液的选型和验证方法。"
+      "text": "快插接头的流量与允许压降、接管尺寸、阀门配置及介质性质有关。选型时，先确定目标流量，再用流量—压降曲线或 Kv/Cv 系数估算接头的压力损失，判断是否在液路的压差预算内。本文以公母端可快速分离的 Q20、Q40、Q60 快插接头为例，说明曲线读法、流量与压降计算，以及泵吸液侧、多支路供液的选型和验证方法。"
     },
     {
       "type": "paragraph",
@@ -25,13 +25,13 @@ export const copy = {
   ],
   "sections": [
     {
-      "title": "快速接头的流量由哪些因素决定？",
+      "title": "快插接头的流量由哪些因素决定？",
       "blocks": [
         {
           "type": "figure",
           "src": "/images/resources/technical-articles/instrument-fluidics/quick-disconnect-couplings-photo.webp",
-          "alt": "三种快速接头实物，展示不同外形及直通、弯头和螺纹尾端",
-          "caption": "快速接头实物：不同外形与尾端连接方式。",
+          "alt": "三种快插接头实物，展示不同外形及直通、弯头和螺纹尾端",
+          "caption": "快插接头实物：不同外形与尾端连接方式。",
           "width": 2000,
           "height": 2000
         },
@@ -59,7 +59,7 @@ export const copy = {
       ]
     },
     {
-      "title": "快速接头流量—压降曲线怎么看？",
+      "title": "快插接头流量—压降曲线怎么看？",
       "blocks": [
         {
           "type": "paragraph",
@@ -113,7 +113,7 @@ export const copy = {
         {
           "type": "figure",
           "src": "/images/resources/technical-articles/instrument-fluidics/q20-series-white.webp",
-          "alt": "Q20 系列快速接头的连接与分离状态",
+          "alt": "Q20 系列快插接头的连接与分离状态",
           "caption": "Q20 系列",
           "width": 1500,
           "height": 1500
@@ -121,7 +121,7 @@ export const copy = {
         {
           "type": "figure",
           "src": "/images/resources/technical-articles/instrument-fluidics/q40-series-white.webp",
-          "alt": "Q40 系列快速接头的连接与分离状态",
+          "alt": "Q40 系列快插接头的连接与分离状态",
           "caption": "Q40 系列",
           "width": 1500,
           "height": 1500
@@ -129,7 +129,7 @@ export const copy = {
         {
           "type": "figure",
           "src": "/images/resources/technical-articles/instrument-fluidics/q60-series-white.webp",
-          "alt": "Q60 系列快速接头的连接与分离状态",
+          "alt": "Q60 系列快插接头的连接与分离状态",
           "caption": "Q60 系列",
           "width": 1500,
           "height": 1500
@@ -141,7 +141,7 @@ export const copy = {
         {
           "type": "figure",
           "src": "/images/resources/technical-articles/instrument-fluidics/q20-catalog-flow-curves.webp",
-          "alt": "Q20 快速接头气体与液体流量—压降曲线",
+          "alt": "Q20 快插接头气体与液体流量—压降曲线",
           "caption": "图 1｜Q20 流量—压降曲线。上图为气体 Nm³/min，下图为液体 L/min；纵轴均为压降 bar。",
           "width": 835,
           "height": 1205
@@ -230,7 +230,7 @@ export const copy = {
         {
           "type": "figure",
           "src": "/images/resources/technical-articles/instrument-fluidics/q40-catalog-flow-curves.webp",
-          "alt": "Q40 快速接头气体与液体流量—压降曲线",
+          "alt": "Q40 快插接头气体与液体流量—压降曲线",
           "caption": "图 2｜Q40 流量—压降曲线。上图为气体 Nm³/min，下图为液体 L/min；纵轴均为压降 bar。",
           "width": 835,
           "height": 1360
@@ -301,7 +301,7 @@ export const copy = {
         {
           "type": "figure",
           "src": "/images/resources/technical-articles/instrument-fluidics/q60-catalog-flow-curves.webp",
-          "alt": "Q60 快速接头气体与液体流量—压降曲线",
+          "alt": "Q60 快插接头气体与液体流量—压降曲线",
           "caption": "图 3｜Q60 流量—压降曲线。上图为气体 Nm³/min，下图为液体 L/min；纵轴均为压降 bar。",
           "width": 835,
           "height": 1260
@@ -371,12 +371,12 @@ export const copy = {
         },
         {
           "type": "paragraph",
-          "text": "本节曲线适用于 Q60 的 3/8″ 和 1/2″ 接管，不能按管径比例外推至 3/4″（19.0 mm）接管。另外，Q60-PP 的工作压力为 4.2 bar，在下游为常压或正压的液路中，曲线上压降高于这个值的区段不可作为使用工况。"
+          "text": "本节曲线适用于 Q60 的 3/8″ 和 1/2″ 接管，不能按管径比例外推至 3/4″（19.0 mm）接管。另外，Q60-PP 的工作压力为 4.2 bar，在下游为常压或正压的液路中，曲线上压降高于这个值的区段不可作为使用工况，原因见《快插接头能承受多大压力》。"
         }
       ]
     },
     {
-      "title": "快速接头流量怎么算？用 Kv 或 Cv 估算压降",
+      "title": "快插接头流量怎么算？用 Kv 或 Cv 估算压降",
       "blocks": [
         {
           "type": "paragraph",
@@ -404,7 +404,7 @@ export const copy = {
         },
         {
           "type": "paragraph",
-          "text": "例 3：一条液路上串联两对相同的快速接头，总压降是单对的 2 倍，等效 Kv 为单对的 1/√2。串联不同元件时，等效 Kv 按 1/Kv总² = 1/Kv₁² + 1/Kv₂² + … 计算。"
+          "text": "例 3：一条液路上串联两对相同的快插接头，总压降是单对的 2 倍，等效 Kv 为单对的 1/√2。串联不同元件时，等效 Kv 按 1/Kv总² = 1/Kv₁² + 1/Kv₂² + … 计算。"
         },
         {
           "type": "paragraph",
@@ -426,11 +426,11 @@ export const copy = {
       ]
     },
     {
-      "title": "带阀和不带阀的快速接头，压降差多少？",
+      "title": "带阀和不带阀的快插接头，压降差多少？",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "带阀快速接头在公母分离时自动关闭通道，代价是阀芯和弹簧留在流道里，接合后的压降高于不带阀的直通型号。两侧都带阀时流道里有两个阀芯，压降通常最高。"
+          "text": "带阀快插接头在公母分离时自动关闭通道，代价是阀芯和弹簧留在流道里，接合后的压降高于不带阀的直通型号。两侧都带阀时流道里有两个阀芯，压降通常最高。"
         },
         {
           "type": "paragraph",
@@ -525,7 +525,7 @@ export const copy = {
       ]
     },
     {
-      "title": "快速接头装在泵吸液侧，压降为什么要更保守？",
+      "title": "快插接头装在泵吸液侧，压降为什么要更保守？",
       "blocks": [
         {
           "type": "paragraph",
@@ -542,11 +542,11 @@ export const copy = {
       ]
     },
     {
-      "title": "多条支路共用一个快速接头，按多大流量选？",
+      "title": "多条支路共用一个快插接头，按多大流量选？",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "位于共同入口的快速接头，承担所有同时工作支路的流量之和："
+          "text": "位于共同入口的快插接头，承担所有同时工作支路的流量之和："
         },
         {
           "type": "formula",
@@ -576,7 +576,7 @@ export const copy = {
       ]
     },
     {
-      "title": "装机后怎样验证快速接头的流量和压降？",
+      "title": "装机后怎样验证快插接头的流量和压降？",
       "blocks": [
         {
           "type": "table",
@@ -626,11 +626,15 @@ export const copy = {
       ]
     },
     {
-      "title": "快速接头选型延伸阅读",
+      "title": "快插接头选型延伸阅读",
       "blocks": [
         {
           "type": "links",
           "items": [
+            {
+              "href": "/resources/technical-articles/quick-disconnect-coupling-pressure-rating/",
+              "label": "快插接头能承受多大压力？工作压力、温度与带压插拔"
+            },
             {
               "href": "/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
               "label": "什么是快插接头？公母配对、带阀结构与仪器液路选型"
@@ -649,14 +653,14 @@ export const copy = {
       ]
     }
   ],
-  "faqTitle": "快速接头流量与压降常见问题",
+  "faqTitle": "快插接头流量与压降常见问题",
   "faqItems": [
     {
-      "question": "快速接头流量怎么算？",
+      "question": "快插接头流量怎么算？",
       "answer": "先确定允许的压降，再按 Q = Kv × √（ΔP ÷ SG）计算，Q 的单位为 m³/h，ΔP 的单位为 bar。也可以直接在流量—压降曲线上，从允许压降向右找到曲线，再向下读出流量。"
     },
     {
-      "question": "快速接头的压降多大算正常？",
+      "question": "快插接头的压降多大算正常？",
       "answer": "没有统一的合格值，要看液路的压差预算。出液侧按泵在目标流量下的可用压力分配；吸液侧的可用压差很有限（开口储液瓶约为一个大气压加液位差），接头压降要尽量小。"
     },
     {
@@ -664,7 +668,7 @@ export const copy = {
       "answer": "在同一系列、同一阀门配置下，接管加大后压降明显下降。例如 Q20 在 2 L/min 时，1/8″ 接管约 1.0 bar，1/4″ 接管约 0.07 bar。但整条液路的流量还受软管、阀门、针孔等其他部件限制，放大接头的收益要放在整条液路里评估。"
     },
     {
-      "question": "大流量快速接头怎么选？",
+      "question": "大流量快插接头怎么选？",
       "answer": "先确定目标流量、允许压降和系统最高压力，再选择公母端、接管尺寸及阀门组合。在对应的液体曲线上读取目标流量下的压降，判断是否满足液路预算，同时核对工作压力和温度范围。多支路共用入口时，按同时开启支路的总流量选型，装机后测量接头压降和各支路末端流量。"
     },
     {
@@ -673,10 +677,10 @@ export const copy = {
     }
   ],
   "cta": {
-    "title": "结合实际液路确认快速接头配置",
+    "title": "结合实际液路确认快插接头配置",
     "description": "提供目标流量、介质与温度、安装位置（吸液侧或出液侧）以及允许的压降，恒永达工程师可以协助核对 Q20、Q40、Q60 的公母端组合、接管尺寸和阀门配置。",
-    "contactLabel": "沟通快速接头选型",
-    "productsLabel": "查看快速接头型号",
+    "contactLabel": "沟通快插接头选型",
+    "productsLabel": "查看快插接头型号",
     "productsHref": "/products/fittings/quick-connect-fittings/"
   }
 } as const satisfies DiaphragmPumpEngineeringArticleCopy;
