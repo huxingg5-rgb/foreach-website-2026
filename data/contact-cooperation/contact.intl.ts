@@ -1853,4 +1853,4 @@ export function getContactIntlData(
       },
     },
   };
-}
+} 

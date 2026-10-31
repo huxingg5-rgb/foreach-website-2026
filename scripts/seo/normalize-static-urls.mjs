@@ -211,6 +211,7 @@ function normalizeInternalReference(value, routeSet, { stripQuery = false } = {}
 
   if (isAbsolute && !/(^|\.)foreachtek\.com$/i.test(url.hostname)) return value;
 
+  url.pathname = url.pathname.replace(/\/smtp2-programmable-pipetting-module\/smtp2-1000ul\/?$/, "/smtp2-programmable-pipetting-module/");
   url.pathname = url.pathname.replace(/^(\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/pumps\/pipetting-pumps\/)([^/]+)\/?$/, (all, base, slug) => pipettingPaths[slug] ? `${base}${pipettingPaths[slug]}/` : all);
   const candidateRoute = url.pathname === "/"
     ? "/"

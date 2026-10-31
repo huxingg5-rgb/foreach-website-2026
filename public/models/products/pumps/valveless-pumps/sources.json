@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "rpl-p4",
+    "sourceModel": "RPL_P4_外发.stp",
+    "sha256": "2b5ea2587e0bcc0465b183f7d05bf8a5a6202ff77a3a8eb17301672935f3262f",
+    "sourceDrawing": "RPL_P4.pdf",
+    "drawingSha256": "65793b8c705e8b9ad7664c28a188b5306ae08d2c29924ae12009ecbb6dbef416",
+    "meshes": 73,
+    "sizeMm": [
+      76.46104447942406,
+      114.70821216302623,
+      76.46104447942406
+    ]
+  },
+  {
+    "slug": "rpl-p635",
+    "sourceModel": "RPL_P635_外发.stp",
+    "sha256": "9dfb155cf3a0227fc2fcb79bfa68e5a2406e817b1570f476d6ee0c2a7cd13847",
+    "sourceDrawing": "RPL_P635.pdf",
+    "drawingSha256": "1b6ec159afba4ada2b563c22fb5eec0cd44b9a62854b318f6d038fbf88eb8b48",
+    "meshes": 94,
+    "sizeMm": [
+      77.87525804178418,
+      144.18090760554588,
+      77.87525804178418
+    ]
+  },
+  {
+    "slug": "rpl-p15",
+    "sourceModel": "RPL_P15_外发.stp",
+    "sha256": "62ee2be9c83576f4c2544cccb751e5ec3b6eefd863a3974e7886729173fcb8a4",
+    "sourceDrawing": "RPL_P15.pdf",
+    "drawingSha256": "c6c80fdf85a5adc904f6d7280c5b4081306f553d2775a5ee74058042f4fc9339",
+    "meshes": 28,
+    "sizeMm": [
+      77.937629020917,
+      155.19133876889728,
+      97.10213988071044
+    ]
+  }
+]

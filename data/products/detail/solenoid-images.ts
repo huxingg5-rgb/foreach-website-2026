@@ -13,7 +13,7 @@ const seriesIntroAltByLocale: Record<SelectionLocale, string> = {
 
 export function getSolenoidSeriesIntroImage(locale: SelectionLocale) {
   return {
-    src: "/images/products/valves/solenoid-valves/foreach-sv10-connection-options-intro.webp?v=20261023-all",
+    src: "/images/products/valves/solenoid-valves/foreach-sv10-connection-options-intro.webp",
     alt: seriesIntroAltByLocale[locale],
     width: 2000,
     height: 1500,
@@ -32,13 +32,13 @@ const imageAltByLocale: Record<SelectionLocale, (ways: "2" | "3") => string> = {
 export function getSolenoidConfigurationImage(slug: string, locale: SelectionLocale) {
   const c = getSolenoidConfiguration(slug);
   if (c) return {
-    src: `/images/products/valves/solenoid-valves/foreach-sv10-${c.imageSlug}-main.webp?v=20261023-all`,
-    cardSrc: `/images/products/valves/solenoid-valves/foreach-sv10-${c.imageSlug}-card.webp?v=20261023-all`,
+    src: `/images/products/valves/solenoid-valves/foreach-sv10-${c.imageSlug}-main.webp`,
+    cardSrc: `/images/products/valves/solenoid-valves/foreach-sv10-${c.imageSlug}-card.webp`,
     alt: `FOREACH ${c.model} ${getSolenoidCardCopy(slug, locale)?.name || solenoidConfigurationName(slug, locale)}`,
   };
   return {
-    cardSrc: `/images/products/valves/solenoid-valves/foreach-sv10-${slug}-miniature-solenoid-valve.webp?v=20261023-all`,
-    src: `/images/products/valves/solenoid-valves/foreach-sv10-${slug}-miniature-solenoid-valve.webp?v=20261023-all`,
+    cardSrc: `/images/products/valves/solenoid-valves/foreach-sv10-${slug}-miniature-solenoid-valve.webp`,
+    src: `/images/products/valves/solenoid-valves/foreach-sv10-${slug}-miniature-solenoid-valve.webp`,
     alt: imageAltByLocale[locale](slug === "2-way" ? "2" : "3"),
   };
 }
@@ -136,7 +136,7 @@ const valveSeatComparisonAlts: Record<SelectionLocale, string> = {
   ru: "Резьбовые седла двухходового и трёхходового электромагнитных клапанов FOREACH SV10 рядом, крупным планом",
 };
 
-const threeWayConnectionOptionsImage = "/images/products/valves/solenoid-valves/foreach-sv10-3-way-connection-options-gallery.webp?v=20261023-all";
+const threeWayConnectionOptionsImage = "/images/products/valves/solenoid-valves/foreach-sv10-3-way-connection-options-gallery.webp";
 const threeWayConnectionOptionsAlts: Record<SelectionLocale, string> = {
   zh: "FOREACH SV10 三通电磁阀合照，展示基板式、倒刺式和螺纹阀座式连接",
   en: "FOREACH SV10 3-way solenoid valves showing manifold-mount, barbed and threaded connections",
@@ -197,19 +197,19 @@ export function getSolenoidConfigurationGallery(slug: string, locale: SelectionL
     const additionalImages: string[] = [];
     const additionalImageAlts: string[] = [];
     if (c.slug === "3-way-base") {
-      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-p-3-base-ports-closeup.webp?v=20261023-all");
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-p-3-base-ports-closeup.webp");
       additionalImageAlts.push(threeWayBasePortsCloseupAlts[locale]);
     }
     if (c.slug === "3-way-barbed") {
-      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-b16-3-barbed-ports-closeup.webp?v=20261023-all");
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-b16-3-barbed-ports-closeup.webp");
       additionalImageAlts.push(threeWayBarbedPortsCloseupAlts[locale]);
     }
     if (c.slug === "2-way-no-base") {
-      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-p-2-normally-open-base-ports.webp?v=20261023-all");
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-p-2-normally-open-base-ports.webp");
       additionalImageAlts.push(twoWayNoBasePortsAlts[locale]);
     }
     if (c.connection === "threaded") {
-      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-threaded-valve-seat-comparison.webp?v=20261023-all");
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-threaded-valve-seat-comparison.webp");
       additionalImageAlts.push(valveSeatComparisonAlts[locale]);
     }
     if (c.key === "three") {
@@ -217,11 +217,11 @@ export function getSolenoidConfigurationGallery(slug: string, locale: SelectionL
       additionalImageAlts.push(threeWayConnectionOptionsAlts[locale]);
     }
     if (c.connection === "base") {
-      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-base-manifold-assembly-gallery.webp?v=20261023-all");
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-base-manifold-assembly-gallery.webp");
       additionalImageAlts.push(baseManifoldAssemblyAlts[locale]);
     }
     if (c.slug === "3-way-threaded") {
-      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-3-way-threaded-valve-seat-gallery.webp?v=20261023-all");
+      additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-3-way-threaded-valve-seat-gallery.webp");
       additionalImageAlts.push(threeWayThreadedValveSeatAlts[locale]);
     }
     return {additionalImages, additionalImageAlts};
@@ -229,7 +229,7 @@ export function getSolenoidConfigurationGallery(slug: string, locale: SelectionL
   const files = slug === "2-way" ? twoWayGalleryFiles : threeWayGalleryFiles;
   return {
     additionalImages: [
-      ...files.map(name => `/images/products/valves/solenoid-valves/foreach-sv10-${slug}-${name}.webp?v=20261023-all`),
+      ...files.map(name => `/images/products/valves/solenoid-valves/foreach-sv10-${slug}-${name}.webp`),
       ...(slug === "3-way" ? [threeWayConnectionOptionsImage] : []),
     ],
     additionalImageAlts: [

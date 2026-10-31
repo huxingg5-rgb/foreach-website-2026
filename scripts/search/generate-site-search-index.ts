@@ -1,4 +1,6 @@
+import { replaceSmtp4SearchItems } from "../../data/search/smtp4-search";
 import { getPistonPumpMarketingCopy } from "../../data/products/piston-pump-marketing-copy";
+import { replaceSmtp2SearchItems } from "../../data/search/smtp2-search";
 import pistonMarketingCatalog from "../../data/products/piston-pump-marketing-copy.json";
 import {replaceSolenoidSearchItems} from "../../data/search/solenoid-search";
 import { normalizeControlModulePath } from "../../data/products/selection/control-module-routes";
@@ -744,6 +746,7 @@ function deduplicate(items: SiteSearchItem[]): SiteSearchItem[] {
 }
 
 function buildOutput(items: SiteSearchItem[]): string {
+  items = replaceSmtp4SearchItems(replaceSmtp2SearchItems(items));
   /*
     不直接输出超大的数组字面量。
     否则 TypeScript 会尝试推导数千条记录形成的联合类型，
@@ -808,6 +811,13 @@ function normalizeConfiguredPistonSearchItem(item: SiteSearchItem): SiteSearchIt
 }
 
 async function main() {
+  if (process.argv.includes("--smtp2-only") || process.argv.includes("--smtp4-only")) {
+    const { siteSearchIndex } = await import("../../data/search/site-search-index.generated");
+    const output = buildOutput(siteSearchIndex);
+    if (CHECK_MODE) { if (fs.readFileSync(OUTPUT_PATH, "utf8") !== output) throw new Error("SMTP2 search index is stale"); }
+    else fs.writeFileSync(OUTPUT_PATH, output, "utf8");
+    console.log("SMTP2 search entries updated; other entries preserved"); return;
+  }
   if (process.argv.includes("--solenoid-only")) {
     const {siteSearchIndex} = await import("../../data/search/site-search-index.generated");
     const output = buildOutput(replaceSolenoidSearchItems(siteSearchIndex, "zh"));
@@ -845,7 +855,7 @@ async function main() {
     const imageFile = path.join(
       ROOT,
       "public",
-      ...item.image.split(/[?#]/, 1)[0].replace(/^\/+/, "").split("/")
+      ...item.image.replace(/^\/+/, "").split("/")
     );
 
     return !fs.existsSync(imageFile);

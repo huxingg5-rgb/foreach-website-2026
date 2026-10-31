@@ -1,0 +1,722 @@
+[
+  {
+    "id": "ea-100",
+    "sourceSha256": "fff2c44371833ba12d658d398ff39777a22e9e018249e5fe2db1125559e31030",
+    "sourceFile": "01常规柱塞泵/03_3D模型，零部件都在，内部渲染模型/EA-0100UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 64,
+        "removedMeshes": 12,
+        "faces": 2927,
+        "removedFaces": 866,
+        "triangles": 617548,
+        "sourceTriangles": 1958362,
+        "sizeMm": [
+          48,
+          136.3,
+          62
+        ],
+        "bytes": 7040699,
+        "sha256": "4061c4331889f2d7ef68b5f7c51fcd9886dd377a9e26c75c0c711a2cd0379acc",
+        "rasterVisibleFacesRestored": 25
+      },
+      "peek": {
+        "meshes": 54,
+        "removedMeshes": 22,
+        "faces": 2590,
+        "removedFaces": 1203,
+        "triangles": 529940,
+        "sourceTriangles": 1958362,
+        "sizeMm": [
+          48,
+          136.3,
+          62
+        ],
+        "bytes": 6022637,
+        "sha256": "6e22c244df7f36df119970274aad6e9998998cb2a702ae465b62a959d3fc51c3",
+        "rasterVisibleFacesRestored": 17
+      }
+    }
+  },
+  {
+    "id": "ea-1000",
+    "sourceSha256": "f10e48f5511e20153bdf49aa584daa4402d99019323567233cd70ccdfee9b5df",
+    "sourceFile": "01常规柱塞泵/03_3D模型，零部件都在，内部渲染模型/EA-1000UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 65,
+        "removedMeshes": 11,
+        "faces": 2899,
+        "removedFaces": 865,
+        "triangles": 609371,
+        "sourceTriangles": 1962342,
+        "sizeMm": [
+          48,
+          137.8,
+          62
+        ],
+        "bytes": 6963141,
+        "sha256": "6a4ac3f4960cdb4cc6cf666b8b1a3887c177df0485ce67f64517e49f0f984b46",
+        "rasterVisibleFacesRestored": 28
+      },
+      "peek": {
+        "meshes": 51,
+        "removedMeshes": 25,
+        "faces": 2557,
+        "removedFaces": 1207,
+        "triangles": 515783,
+        "sourceTriangles": 1962342,
+        "sizeMm": [
+          48,
+          137.8,
+          62
+        ],
+        "bytes": 5864353,
+        "sha256": "42d8d65402753881f6fd514242661fc193c4d20a75fbc044167c3ff11a8702d2",
+        "rasterVisibleFacesRestored": 19
+      }
+    }
+  },
+  {
+    "id": "ea-10000",
+    "sourceSha256": "d59b176c45874069fadbb07395525fe20df0c0fa7b78c1061c1c778a6edd513b",
+    "sourceFile": "01常规柱塞泵/03_3D模型，零部件都在，内部渲染模型/EA-0010ML.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 62,
+        "removedMeshes": 21,
+        "faces": 2589,
+        "removedFaces": 656,
+        "triangles": 770812,
+        "sourceTriangles": 2047797,
+        "sizeMm": [
+          45,
+          164.5,
+          59
+        ],
+        "bytes": 9367942,
+        "sha256": "6b569119869c37106819547a1bd786011be910c2055b0301ac387f1087026825",
+        "rasterVisibleFacesRestored": 19
+      },
+      "peek": {
+        "meshes": 54,
+        "removedMeshes": 29,
+        "faces": 2429,
+        "removedFaces": 816,
+        "triangles": 726774,
+        "sourceTriangles": 2047797,
+        "sizeMm": [
+          45,
+          164.5,
+          59
+        ],
+        "bytes": 8890704,
+        "sha256": "8d406638226fa819de518561d4c5b93b77df3fad32811a955e1c52419db27bba",
+        "rasterVisibleFacesRestored": 22
+      }
+    }
+  },
+  {
+    "id": "ea-20000",
+    "sourceSha256": "5d1ac56c21c699ed5c518d659b75caf69a80cc22c4da2b9bdc26381580fb7201",
+    "sourceFile": "01常规柱塞泵/03_3D模型，零部件都在，内部渲染模型/EA-0020ML.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 64,
+        "removedMeshes": 19,
+        "faces": 2576,
+        "removedFaces": 600,
+        "triangles": 649683,
+        "sourceTriangles": 1188224,
+        "sizeMm": [
+          45,
+          242,
+          59
+        ],
+        "bytes": 7759225,
+        "sha256": "0d88ebe1deb4325e971ba468b25b4aff21878d9c5dada84f87c933cc3ec17ed5",
+        "rasterVisibleFacesRestored": 16
+      },
+      "peek": {
+        "meshes": 58,
+        "removedMeshes": 25,
+        "faces": 2480,
+        "removedFaces": 696,
+        "triangles": 606741,
+        "sourceTriangles": 1188224,
+        "sizeMm": [
+          45,
+          242,
+          59
+        ],
+        "bytes": 7290266,
+        "sha256": "a528ad5f19587704182c409913a0a975f1146f060fd916df6b06afdd81ea0aae",
+        "rasterVisibleFacesRestored": 21
+      }
+    }
+  },
+  {
+    "id": "ea-250",
+    "sourceSha256": "0c486a040baf96b4111d60db02dcbe2ca2790da3896ed36fa6a11ece632b8c91",
+    "sourceFile": "01常规柱塞泵/03_3D模型，零部件都在，内部渲染模型/EA-0250UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 64,
+        "removedMeshes": 12,
+        "faces": 2920,
+        "removedFaces": 868,
+        "triangles": 611592,
+        "sourceTriangles": 1959174,
+        "sizeMm": [
+          48,
+          136.3,
+          62
+        ],
+        "bytes": 6971683,
+        "sha256": "e2eafc91ca3ae61c2f426a84c277d4a6b5535ba88827bb11c9e7ccbe322cc9ec",
+        "rasterVisibleFacesRestored": 25
+      },
+      "peek": {
+        "meshes": 52,
+        "removedMeshes": 24,
+        "faces": 2588,
+        "removedFaces": 1200,
+        "triangles": 524484,
+        "sourceTriangles": 1959174,
+        "sizeMm": [
+          48,
+          136.3,
+          62
+        ],
+        "bytes": 5952687,
+        "sha256": "aabe503e77cbea71b14b7c52be63e0a4dc887f0e2dd782574df524455b0adb06",
+        "rasterVisibleFacesRestored": 16
+      }
+    }
+  },
+  {
+    "id": "ea-2500",
+    "sourceSha256": "e5122e0632521044de4f99dbdc860a09eaa8cc685093eac35c65bb24a2097abf",
+    "sourceFile": "01常规柱塞泵/03_3D模型，零部件都在，内部渲染模型/EA-2500UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 64,
+        "removedMeshes": 12,
+        "faces": 2850,
+        "removedFaces": 872,
+        "triangles": 591777,
+        "sourceTriangles": 1947436,
+        "sizeMm": [
+          48,
+          137.3,
+          62
+        ],
+        "bytes": 6753448,
+        "sha256": "a37d09214de214dd94b0b7ec0b880b886a3795e0f24ebbf444ec9e7e40cef831",
+        "rasterVisibleFacesRestored": 24
+      },
+      "peek": {
+        "meshes": 53,
+        "removedMeshes": 23,
+        "faces": 2563,
+        "removedFaces": 1159,
+        "triangles": 520504,
+        "sourceTriangles": 1947436,
+        "sizeMm": [
+          48,
+          137.3,
+          62
+        ],
+        "bytes": 5914544,
+        "sha256": "395241f1db7be39e8700a22399316d72c9e2e0aefc8151493ff231561d554a70",
+        "rasterVisibleFacesRestored": 14
+      }
+    }
+  },
+  {
+    "id": "ea-50",
+    "sourceSha256": "d50c704d5f9ef3fe413bbfb3741a53d084c47f436f489e1fa8f28f26739a58ec",
+    "sourceFile": "01常规柱塞泵/03_3D模型，零部件都在，内部渲染模型/EA-0050UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 64,
+        "removedMeshes": 12,
+        "faces": 2909,
+        "removedFaces": 862,
+        "triangles": 615095,
+        "sourceTriangles": 1947658,
+        "sizeMm": [
+          48,
+          132.3,
+          62
+        ],
+        "bytes": 7052773,
+        "sha256": "d45018a3922892bcb32faa329b84c77816d260a35aadf54fa9699bda1dc8d0d6",
+        "rasterVisibleFacesRestored": 24
+      },
+      "peek": {
+        "meshes": 54,
+        "removedMeshes": 22,
+        "faces": 2578,
+        "removedFaces": 1193,
+        "triangles": 531694,
+        "sourceTriangles": 1947658,
+        "sizeMm": [
+          48,
+          132.3,
+          62
+        ],
+        "bytes": 6072991,
+        "sha256": "2ccfa2ad41e828951441e34692a6d29ab85e0bf9d6db32e05b3fae9068d047b0",
+        "rasterVisibleFacesRestored": 13
+      }
+    }
+  },
+  {
+    "id": "ea-500",
+    "sourceSha256": "9c080ed7377d3e2b05157424fc2eea18f9d44ee9df94dd1bb323f9434f7aa817",
+    "sourceFile": "01常规柱塞泵/03_3D模型，零部件都在，内部渲染模型/EA-0500UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 65,
+        "removedMeshes": 11,
+        "faces": 2894,
+        "removedFaces": 881,
+        "triangles": 612741,
+        "sourceTriangles": 1956884,
+        "sizeMm": [
+          48,
+          137.8,
+          62
+        ],
+        "bytes": 7004443,
+        "sha256": "0ae1d10648269ce8da389a891a78a468450730414ee10d9be1bcf646c0115f32",
+        "rasterVisibleFacesRestored": 26
+      },
+      "peek": {
+        "meshes": 51,
+        "removedMeshes": 25,
+        "faces": 2555,
+        "removedFaces": 1220,
+        "triangles": 519131,
+        "sourceTriangles": 1956884,
+        "sizeMm": [
+          48,
+          137.8,
+          62
+        ],
+        "bytes": 5902458,
+        "sha256": "f066f706bb9475b03162dd625bb9b9931dd28510e2770827a9e0764990d9ff88",
+        "rasterVisibleFacesRestored": 15
+      }
+    }
+  },
+  {
+    "id": "ea-5000",
+    "sourceSha256": "8146b5d03abcfbd3480c93da8eba33a583d137a4136ab4cb2b505138fb4f9a45",
+    "sourceFile": "01常规柱塞泵/03_3D模型，零部件都在，内部渲染模型/EA-5000UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 51,
+        "removedMeshes": 14,
+        "faces": 1737,
+        "removedFaces": 694,
+        "triangles": 297607,
+        "sourceTriangles": 1630994,
+        "sizeMm": [
+          48.001419999999996,
+          139.3,
+          62.001419999999996
+        ],
+        "bytes": 3638250,
+        "sha256": "056e9a4bca4351d961104dbab7769a2462fb5e11d98d339aeea6b138bfc4e057",
+        "rasterVisibleFacesRestored": 31
+      },
+      "peek": {
+        "meshes": 38,
+        "removedMeshes": 27,
+        "faces": 1464,
+        "removedFaces": 967,
+        "triangles": 210124,
+        "sourceTriangles": 1630994,
+        "sizeMm": [
+          48.001419999999996,
+          139.3,
+          62.001419999999996
+        ],
+        "bytes": 2585762,
+        "sha256": "373ca2b934e3a38df2cbaaa9a09275a7f043ac136b1a4123d49e38cf21b0054a",
+        "rasterVisibleFacesRestored": 19
+      }
+    }
+  },
+  {
+    "id": "sm-100",
+    "sourceSha256": "e139d39a01078ea507da8042ff2d10f9c4a2a7355af4030fb8f36e0467a89900",
+    "sourceFile": "02微型柱塞泵/03_3D模型，零部件都在，内部渲染模型/SM-0100UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 42,
+        "removedMeshes": 18,
+        "faces": 2835,
+        "removedFaces": 515,
+        "triangles": 1077083,
+        "sourceTriangles": 2551914,
+        "sizeMm": [
+          28,
+          129.56926,
+          35.4
+        ],
+        "bytes": 11196882,
+        "sha256": "0703b8ba0ef6e5dbcac1d2127e831dc91c031c8f7c6ddcaf967a1511d466c883",
+        "rasterVisibleFacesRestored": 20
+      },
+      "peek": {
+        "meshes": 39,
+        "removedMeshes": 21,
+        "faces": 2738,
+        "removedFaces": 612,
+        "triangles": 1045145,
+        "sourceTriangles": 2551914,
+        "sizeMm": [
+          28,
+          129.56926,
+          35.4
+        ],
+        "bytes": 10857998,
+        "sha256": "0c5642f11917b778c65c572f9076e8852ff55cccdfcf373c52ebf388c00e3728",
+        "rasterVisibleFacesRestored": 29
+      }
+    }
+  },
+  {
+    "id": "sm-1000",
+    "sourceSha256": "73015a6a0aea7b0a0b9da1fb808fb45af2f978930c99e28f9f82c362484ec49b",
+    "sourceFile": "02微型柱塞泵/03_3D模型，零部件都在，内部渲染模型/SM-1000UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 44,
+        "removedMeshes": 18,
+        "faces": 2835,
+        "removedFaces": 518,
+        "triangles": 1079821,
+        "sourceTriangles": 2404434,
+        "sizeMm": [
+          28,
+          129.56926,
+          37.4
+        ],
+        "bytes": 11342870,
+        "sha256": "b03da0a4e8b30219c5ecb77b04ac506e263b4f14f88f77640b3312ad82a9e09d",
+        "rasterVisibleFacesRestored": 19
+      },
+      "peek": {
+        "meshes": 42,
+        "removedMeshes": 20,
+        "faces": 2739,
+        "removedFaces": 614,
+        "triangles": 1049300,
+        "sourceTriangles": 2404434,
+        "sizeMm": [
+          28,
+          129.56926,
+          37.4
+        ],
+        "bytes": 11015953,
+        "sha256": "eb5665754e6b47b7af7e17461503945f1167a9c9d613b95d8c45691b0df59958",
+        "rasterVisibleFacesRestored": 29
+      }
+    }
+  },
+  {
+    "id": "sm-250",
+    "sourceSha256": "9a8e47cacdb28b7bc945aff727d1a81a86f975343379263d78225c1787572c44",
+    "sourceFile": "02微型柱塞泵/03_3D模型，零部件都在，内部渲染模型/SM-0250UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 44,
+        "removedMeshes": 18,
+        "faces": 2843,
+        "removedFaces": 515,
+        "triangles": 1076533,
+        "sourceTriangles": 2409767,
+        "sizeMm": [
+          28,
+          129.5694,
+          35.4
+        ],
+        "bytes": 11192804,
+        "sha256": "57b09743bb151e910c29248010fea39803607297956e9b42d3f531bafe4f6616",
+        "rasterVisibleFacesRestored": 20
+      },
+      "peek": {
+        "meshes": 41,
+        "removedMeshes": 21,
+        "faces": 2739,
+        "removedFaces": 619,
+        "triangles": 1043299,
+        "sourceTriangles": 2409767,
+        "sizeMm": [
+          28,
+          129.5694,
+          35.4
+        ],
+        "bytes": 10829800,
+        "sha256": "513d0cfd7a29a5b33530dc07ba0cf2883d6686b7c5d223b278c7a5cb9b425369",
+        "rasterVisibleFacesRestored": 28
+      }
+    }
+  },
+  {
+    "id": "sm-50",
+    "sourceSha256": "87ea40011bf0267d7b95cfc1ebb226584fa0720f3e07aa406aed9b10cc2dd587",
+    "sourceFile": "02微型柱塞泵/03_3D模型，零部件都在，内部渲染模型/SM-0050UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 42,
+        "removedMeshes": 18,
+        "faces": 2839,
+        "removedFaces": 504,
+        "triangles": 1084295,
+        "sourceTriangles": 2402412,
+        "sizeMm": [
+          28,
+          129.56926,
+          35.4
+        ],
+        "bytes": 11300184,
+        "sha256": "8a4947f9ab1bb4e9a04bd8392e38877b290569659dd363dcfa174e24731464a8",
+        "rasterVisibleFacesRestored": 20
+      },
+      "peek": {
+        "meshes": 41,
+        "removedMeshes": 19,
+        "faces": 2743,
+        "removedFaces": 600,
+        "triangles": 1053579,
+        "sourceTriangles": 2402412,
+        "sizeMm": [
+          28,
+          129.56926,
+          35.4
+        ],
+        "bytes": 10963138,
+        "sha256": "13079f640217c2795bf8641fb55d1aa2b2a9ac7cbb81880779832f82eb087168",
+        "rasterVisibleFacesRestored": 28
+      }
+    }
+  },
+  {
+    "id": "sm-500",
+    "sourceSha256": "be44c15fb68c570f798bbbca2fec48822f5358b43c3a891ff604eab75244e800",
+    "sourceFile": "02微型柱塞泵/03_3D模型，零部件都在，内部渲染模型/SM-0500UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 42,
+        "removedMeshes": 18,
+        "faces": 2827,
+        "removedFaces": 515,
+        "triangles": 1079987,
+        "sourceTriangles": 2400160,
+        "sizeMm": [
+          28,
+          129.56926,
+          35.4
+        ],
+        "bytes": 11361423,
+        "sha256": "9a8cfa414830cdb93d85bf94be7a0c20d8d58913982c39f560060a7441f5cbd0",
+        "rasterVisibleFacesRestored": 17
+      },
+      "peek": {
+        "meshes": 39,
+        "removedMeshes": 21,
+        "faces": 2726,
+        "removedFaces": 616,
+        "triangles": 1044798,
+        "sourceTriangles": 2400160,
+        "sizeMm": [
+          28,
+          129.56926,
+          35.4
+        ],
+        "bytes": 10965790,
+        "sha256": "7761274452b66de2190ab208698c060874c3d87c9c0e522cc886989e14860ca4",
+        "rasterVisibleFacesRestored": 24
+      }
+    }
+  },
+  {
+    "id": "tm-100",
+    "sourceSha256": "131705879e1118f1af8b14cb7ee94c5ca8f3e64eeeb853beb6e6079bd7e0edcf",
+    "sourceFile": "03超微型柱塞泵/03_3D模型，零部件都在，内部渲染模型/TM-0100UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 48,
+        "removedMeshes": 32,
+        "faces": 2858,
+        "removedFaces": 497,
+        "triangles": 950456,
+        "sourceTriangles": 1017189,
+        "sizeMm": [
+          20.2,
+          102,
+          26.4
+        ],
+        "bytes": 10108774,
+        "sha256": "2697ba55bb784d1e26fc3e344ae6e4df4fdedeb20b133da7e73b0d77fa53c1d6",
+        "rasterVisibleFacesRestored": 15
+      },
+      "peek": {
+        "meshes": 47,
+        "removedMeshes": 33,
+        "faces": 2728,
+        "removedFaces": 627,
+        "triangles": 913440,
+        "sourceTriangles": 1017189,
+        "sizeMm": [
+          20.2,
+          102,
+          26.4
+        ],
+        "bytes": 9712317,
+        "sha256": "b27e163240223fe1b71456423406aff6fa56b93e515d6f684ed37012270ab995",
+        "rasterVisibleFacesRestored": 22
+      }
+    }
+  },
+  {
+    "id": "tm-250",
+    "sourceSha256": "8c9953079da018502f115fc4950a1fcb7d932d43a1787d4af447fb25ced189ff",
+    "sourceFile": "03超微型柱塞泵/03_3D模型，零部件都在，内部渲染模型/TM-0250UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 48,
+        "removedMeshes": 32,
+        "faces": 2857,
+        "removedFaces": 496,
+        "triangles": 950396,
+        "sourceTriangles": 1023207,
+        "sizeMm": [
+          20.2,
+          102,
+          26.4
+        ],
+        "bytes": 10108325,
+        "sha256": "0daf41f1838b20d03e58f780b99550347934abaa144d896a0dd95504806ff446",
+        "rasterVisibleFacesRestored": 16
+      },
+      "peek": {
+        "meshes": 46,
+        "removedMeshes": 34,
+        "faces": 2717,
+        "removedFaces": 636,
+        "triangles": 906384,
+        "sourceTriangles": 1023207,
+        "sizeMm": [
+          20.2,
+          102,
+          26.4
+        ],
+        "bytes": 9625090,
+        "sha256": "f6bc71f6594f84dc019459d1fed0e702471218f82e4db17651968ee71d2b113a",
+        "rasterVisibleFacesRestored": 19
+      }
+    }
+  },
+  {
+    "id": "tm-50",
+    "sourceSha256": "1addd87afb12182c8414099095a083fb9d74573ae4d3462bd3983596e1a89fa4",
+    "sourceFile": "03超微型柱塞泵/03_3D模型，零部件都在，内部渲染模型/TM-0050UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 48,
+        "removedMeshes": 32,
+        "faces": 2860,
+        "removedFaces": 495,
+        "triangles": 957256,
+        "sourceTriangles": 1015367,
+        "sizeMm": [
+          20.2,
+          102,
+          26.4
+        ],
+        "bytes": 10198203,
+        "sha256": "6309e0a7ccbe34c2f741991bd79cbf10b5712f87528df15ee4c22b06a504b13e",
+        "rasterVisibleFacesRestored": 15
+      },
+      "peek": {
+        "meshes": 46,
+        "removedMeshes": 34,
+        "faces": 2720,
+        "removedFaces": 635,
+        "triangles": 909996,
+        "sourceTriangles": 1015367,
+        "sizeMm": [
+          20.2,
+          102,
+          26.4
+        ],
+        "bytes": 9664502,
+        "sha256": "3a1a233cab528ccccd5ff1a025d27671841da56bf54e0a0c3388fafcc9b948e1",
+        "rasterVisibleFacesRestored": 20
+      }
+    }
+  },
+  {
+    "id": "tm-500",
+    "sourceSha256": "5708ca67b2aea01923a5153f11f73f111a0371b708593b46b4a4f40e9e707bc1",
+    "sourceFile": "03超微型柱塞泵/03_3D模型，零部件都在，内部渲染模型/TM-0500UL.stp",
+    "views": 110,
+    "variants": {
+      "pmma": {
+        "meshes": 48,
+        "removedMeshes": 32,
+        "faces": 2857,
+        "removedFaces": 494,
+        "triangles": 954590,
+        "sourceTriangles": 1018083,
+        "sizeMm": [
+          20.2,
+          102,
+          26.4
+        ],
+        "bytes": 10141036,
+        "sha256": "d1909eaafb90f15059f0092460b0459cd96809b099c8d112f12e4048b21287a0",
+        "rasterVisibleFacesRestored": 15
+      },
+      "peek": {
+        "meshes": 46,
+        "removedMeshes": 34,
+        "faces": 2716,
+        "removedFaces": 635,
+        "triangles": 906092,
+        "sourceTriangles": 1018083,
+        "sizeMm": [
+          20.2,
+          102,
+          26.4
+        ],
+        "bytes": 9616450,
+        "sha256": "e20becb880b68b2efe24794170071c05e6757fbc348f7530ca4fce791ee3501a",
+        "rasterVisibleFacesRestored": 19
+      }
+    }
+  }
+]

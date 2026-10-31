@@ -13,6 +13,7 @@ import { getPistonPumpMarketingCopy } from "@/data/products/piston-pump-marketin
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
 import { instrumentCardsZh } from "@/data/products/selection/instrument-fluidics-copy.zh";
 import { getPipettingCardCopy } from "@/data/products/selection/pipetting-pump-cards.locales";
+import { getSmtp2VariantCopy } from "@/data/products/detail/smtp2-variant-content";
 import { getValveCardCopy } from "@/data/products/selection/valve-card-copy";
 import { formatProductHeading } from "@/lib/format-product-heading";
 import { usePathname } from "next/navigation";
@@ -49,6 +50,11 @@ const PRODUCT_SELECTION_LOCALES: SelectionLocale[] = [
   "ko",
   "ru",
 ];
+
+const QUICK_CONNECT_CARD_IMAGE_SCALE: Record<string, number> = {
+  q20: 0.8,
+  q40: 0.9,
+};
 
 const CARD_TEXT: Record<
   SelectionLocale,
@@ -264,7 +270,7 @@ export default function ProductSelectionCard({
   const isMrv3Configuration = product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId);
   const isSolenoidConfiguration = product.seriesId === "6010" && /^(?:2|3)-way$/.test(product.productId);
   const pistonImageAlt = product.productTypeId === "plunger-pump" ? getPistonPumpMarketingCopy(product.detailSlug || product.productId, locale)?.imageAlt : undefined;
-  const imageAlt = pistonImageAlt || getValvelessPumpImageAlt(product.imageCard || "", locale) || getFittingMainImageAlt(product, locale) || ((isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
+  const imageAlt = getSmtp2VariantCopy(product.detailSlug || "", locale)?.imageAlt || pistonImageAlt || getValvelessPumpImageAlt(product.imageCard || "", locale) || getFittingMainImageAlt(product, locale) || ((isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
     ? product.imageAlt
     : controlCard ? `FOREACH ${controlCard.model} ${controlCard.name}` : valveCard ? `FOREACH ${valveCard.model} ${valveCard.name}` : safeTitle);
   const descriptionHeading = controlCard?.heading || valveCard?.heading || ((isMrv3Configuration || product.seriesId === "6010") ? safeSubtitle : authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
@@ -275,6 +281,9 @@ export default function ProductSelectionCard({
   const cardImage = getDescriptiveFittingImageUrl(product.imageCard || "");
   const thumbnail = getProductCardThumbnail(cardImage, locale);
   const usesSquareImage = product.seriesId === "6010" || product.productTypeId === "valveless-pump";
+  const cardImageScale = product.productTypeId === "quick-connect-fittings"
+    ? QUICK_CONNECT_CARD_IMAGE_SCALE[product.seriesId || ""]
+    : undefined;
 
   return (
     <article
@@ -287,7 +296,8 @@ export default function ProductSelectionCard({
       <div className="product-image" aria-label={imageAlt}>
         {product.imageCard ? (
           <img src={thumbnail?.src ?? cardImage} alt={imageAlt} loading="lazy"
-            width={thumbnail?.width} height={thumbnail?.height} />
+            width={thumbnail?.width} height={thumbnail?.height}
+            style={cardImageScale ? { scale: cardImageScale } : undefined} />
         ) : (
           <div className="product-image-placeholder">{cardText.imagePlaceholder}</div>
         )}

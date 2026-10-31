@@ -25,7 +25,9 @@ const translations = { "zh-CN": zh, en, es, fr, ko, ru } as Record<TechnicalArti
 export const pipettingBasicsSlug = "what-is-pipetting";
 export const pipettingBasicsRelatedProductIds = [
   "pump-ea-500ul-pmma",
-  "pipetting-smtp2-1000ul",
+  "pipetting-smtp2-500",
+  "pipetting-smtp2-510",
+  "pipetting-smtp2-520",
   "hld6-60mm-rotary-valve-syringe-pump",
 ] as const;
 export const pipettingBasicsSources = [

@@ -455,5 +455,8 @@
   "蠕动泵泵管": "Tubes pour pompes péristaltiques",
   "清洗管路": "Lignes de nettoyage",
   "管路流阻": "Résistance hydraulique du tube",
-  "定长管组件": "Ensembles de tubes de longueur définie"
+  "定长管组件": "Ensembles de tubes de longueur définie",
+  "FOREACH 本色 PTFE 管盘卷及管端细节展示": "Bobine de tube PTFE naturel FOREACH avec une extrémité coupée visible",
+  "FOREACH 黑色 PTFE 管盘卷及管端展示": "Bobine de tube PTFE noir FOREACH avec l’extrémité visible",
+  "FOREACH PVC 透明弯曲管材与管口近景": "Tube PVC transparent FOREACH courbé avec une extrémité visible"
 }

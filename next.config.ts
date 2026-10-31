@@ -39,6 +39,10 @@ const isCloudflarePagesBuild =
   process.env.CLOUDFLARE_PAGES_BUILD === "1";
 
 const nextConfig: NextConfig = {
+  // Give concurrent local previews separate generated caches when requested.
+  ...(process.env.NODE_ENV === "development" && process.env.NEXT_DEV_DIST_DIR
+    ? { distDir: process.env.NEXT_DEV_DIST_DIR }
+    : {}),
   /*
    * 只有 Cloudflare 构建才启用静态导出。
    * 本地和 Vercel 普通构建不添加 output。
@@ -59,6 +63,15 @@ const nextConfig: NextConfig = {
     : {}),
 
   trailingSlash: true,
+
+  // Next.js 16 blocks cross-origin access to development resources by default.
+  // Keep the local 127.0.0.1 URL usable so the client bundle can hydrate and
+  // interactive navigation (including hover menus) can run there.
+  ...(process.env.NODE_ENV === "development"
+    ? {
+        allowedDevOrigins: ["127.0.0.1"],
+      }
+    : {}),
 
   images: {
     unoptimized: true,

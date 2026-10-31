@@ -1,0 +1,191 @@
+[
+  {
+    "slug": "dpl30-db",
+    "name": "DPL30-DB",
+    "sourceModel": "DPL30-BDC-外发版本模型.stp",
+    "sha256": "1b1b885e9db1b07039e7dd26c3166ae58acec63330793b875a6fb8edd959b002",
+    "tessellation": {
+      "linearUnit": "millimeter",
+      "linearDeflectionType": "absolute_value",
+      "linearDeflection": 0.03,
+      "angularDeflection": 0.15
+    },
+    "triangles": 277910,
+    "meshSlots": 1,
+    "sizeMm": [
+      61.52296556882395,
+      61.522965568803706,
+      83.2
+    ],
+    "optimized": {
+      "triangles": 166542,
+      "nonemptyMeshes": 1,
+      "jsonBytes": 9714143,
+      "gzipBytes": 2607764,
+      "jsonSha256": "f6b5ddedbee6133c1e13d968c20b80a852de5ca2014e9ae562c81a85d1b5606e",
+      "gzipSha256": "a6bbf91975278a64db8276e2da45e2104a4f3166daf24dcd6cce98450c890dd5"
+    }
+  },
+  {
+    "slug": "dpl30-bb",
+    "name": "DPL30-BB",
+    "sourceModel": "DPL30-BLDC-外发版本模型.stp",
+    "sha256": "7394ddd79600789d60f57ed253b4eb72fea6fbfd3e3100b7d3a95da74bd98c34",
+    "tessellation": {
+      "linearUnit": "millimeter",
+      "linearDeflectionType": "absolute_value",
+      "linearDeflection": 0.03,
+      "angularDeflection": 0.15
+    },
+    "triangles": 413442,
+    "meshSlots": 2,
+    "sizeMm": [
+      82.9107400377,
+      61.522965568784215,
+      61.522965568814215
+    ],
+    "optimized": {
+      "triangles": 240010,
+      "nonemptyMeshes": 2,
+      "jsonBytes": 13205261,
+      "gzipBytes": 3324654,
+      "jsonSha256": "cddebb091088f76a0511cac5ee6fb995a05b166790579fe6a60ec6e0b57c1652",
+      "gzipSha256": "0a8605f3d42bcd5302b5ed864014bf53680b20dcc4e88336e2152c3fbafecd03"
+    }
+  },
+  {
+    "slug": "dpl60-db",
+    "name": "DPL60-DB",
+    "sourceModel": "DPL60-BDC-外发版本模型.stp",
+    "sha256": "5ab2ab030f0508fffc7b328f3283ff6ad37643e01315e0b8b305af22dd7e4f10",
+    "tessellation": {
+      "linearUnit": "millimeter",
+      "linearDeflectionType": "absolute_value",
+      "linearDeflection": 0.03,
+      "angularDeflection": 0.15
+    },
+    "triangles": 259822,
+    "meshSlots": 1,
+    "sizeMm": [
+      63.220021843824,
+      63.220021843764,
+      83.2
+    ],
+    "optimized": {
+      "triangles": 155264,
+      "nonemptyMeshes": 1,
+      "jsonBytes": 8910414,
+      "gzipBytes": 2306663,
+      "jsonSha256": "d1674c18d17b0fa146ef83abd912daeff682812a414cc6fbfb499f7fb3569e89",
+      "gzipSha256": "9346db4e96e2a46e59cb44a32c2905dbb7585398dd9c7651d1121395e90ff180"
+    }
+  },
+  {
+    "slug": "dpl60-bb",
+    "name": "DPL60-BB",
+    "sourceModel": "DPL60-BLDC-外发版本模型.stp",
+    "sha256": "10ca8f04098f9fed30233a3bd647003deb32a9ce581336ff0ee3dacce90bc291",
+    "tessellation": {
+      "linearUnit": "millimeter",
+      "linearDeflectionType": "absolute_value",
+      "linearDeflection": 0.03,
+      "angularDeflection": 0.15
+    },
+    "triangles": 392308,
+    "meshSlots": 2,
+    "sizeMm": [
+      82.9107400377,
+      63.220021843764,
+      63.220021843824
+    ],
+    "optimized": {
+      "triangles": 235849,
+      "nonemptyMeshes": 2,
+      "jsonBytes": 12804971,
+      "gzipBytes": 3173960,
+      "jsonSha256": "c98a9678835e88b6cdc165ac9b6514b527c8121cac18bfb9dbacae8e50beaee2",
+      "gzipSha256": "35379a61539eedbe5c3e83af8cd94cfdbdbadc4a6040f7ba91983e2ecb80527d"
+    }
+  },
+  {
+    "slug": "dpl30h-ds",
+    "name": "DPL30H-DS",
+    "sourceModel": "DPL30H-BDC-外发版本模型.stp",
+    "sha256": "e75af2cf6d6078ace8d2bef95f1d386cf83a8821d58a50fc71d3dc8e41cd77e4",
+    "tessellation": {
+      "linearUnit": "millimeter",
+      "linearDeflectionType": "absolute_value",
+      "linearDeflection": 0.03,
+      "angularDeflection": 0.15
+    },
+    "triangles": 395048,
+    "meshSlots": 9,
+    "sizeMm": [
+      54.8,
+      42.100000000003504,
+      83.2
+    ],
+    "optimized": {
+      "triangles": 265341,
+      "nonemptyMeshes": 9,
+      "jsonBytes": 14468393,
+      "gzipBytes": 3846302,
+      "jsonSha256": "6acff09f3270a1da310fd3ab3d5ca1ac2b31e463e4b6dc92e88c52be4b8becaf",
+      "gzipSha256": "351bb73312afcc7ee5b4928e3d1c8103bc7bf0bfdc6035557d52a0de90088988"
+    }
+  },
+  {
+    "slug": "dpl30h-bs",
+    "name": "DPL30H-BS",
+    "sourceModel": "DPL30H-BLDC-外发版本模型.stp",
+    "sha256": "7557c87ca0a2fa58246489afd578c4c112f71133b1ef0b69bf112816a230cef3",
+    "tessellation": {
+      "linearUnit": "millimeter",
+      "linearDeflectionType": "absolute_value",
+      "linearDeflection": 0.03,
+      "angularDeflection": 0.15
+    },
+    "triangles": 516040,
+    "meshSlots": 11,
+    "sizeMm": [
+      68.25,
+      63.9000000000035,
+      54.8
+    ],
+    "optimized": {
+      "triangles": 329717,
+      "nonemptyMeshes": 11,
+      "jsonBytes": 17528702,
+      "gzipBytes": 4557461,
+      "jsonSha256": "d33ff1289b7fa8e5fdf5670fcf64786264303b2f07b624737f105dea48f7b6a3",
+      "gzipSha256": "8640760cdd9af05fdabd38571ffc28e5af3f66365a676df9f9a5816fdd00438f"
+    }
+  },
+  {
+    "slug": "dpgl800-bs",
+    "name": "DPGL800-BS",
+    "sourceModel": "86泵-接口朝向下-外发版本模型.stp",
+    "sha256": "c4c12c21014d33eafdb2ed03184b70437d9b56981ef80d116f286ef652f96f92",
+    "tessellation": {
+      "linearUnit": "millimeter",
+      "linearDeflectionType": "absolute_value",
+      "linearDeflection": 0.03,
+      "angularDeflection": 0.15
+    },
+    "triangles": 986554,
+    "meshSlots": 38,
+    "sizeMm": [
+      103.8,
+      48,
+      140.60000000001727
+    ],
+    "optimized": {
+      "triangles": 509518,
+      "nonemptyMeshes": 33,
+      "jsonBytes": 28292141,
+      "gzipBytes": 7577800,
+      "jsonSha256": "ba365f055b569a2be4076b6231ce1f54f78680dd804cd591791f790f904732b3",
+      "gzipSha256": "a23269ef6bae3f591b3ebb3afa721fcf057e22b6b0f5fb896aa500a9e9a688c6"
+    }
+  }
+]

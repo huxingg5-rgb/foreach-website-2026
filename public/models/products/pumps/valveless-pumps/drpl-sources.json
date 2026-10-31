@@ -1,0 +1,15 @@
+[
+  {
+    "slug": "drpl-0109",
+    "sourceModel": "DRPL_1x9_外发.stp",
+    "sha256": "4f8faf5d019e815805517c30d4d84afeb020edc8f1ca5b6fc2b557a93b3e617e",
+    "sourceDrawing": "DRPL_1x9.pdf",
+    "drawingSha256": "73576932bde0470841026e5bc1993640a89beb18908e3094a44d98f94378726f",
+    "meshes": 178,
+    "sizeMm": [
+      250.07231518292735,
+      75.92837815512729,
+      83.7
+    ]
+  }
+]

@@ -455,5 +455,8 @@
   "蠕动泵泵管": "Peristaltic pump tubing",
   "清洗管路": "Cleaning lines",
   "管路流阻": "Tubing hydraulic resistance",
-  "定长管组件": "Cut-to-length tubing assemblies"
+  "定长管组件": "Cut-to-length tubing assemblies",
+  "FOREACH 本色 PTFE 管盘卷及管端细节展示": "FOREACH natural PTFE tubing coil with a cut tube end",
+  "FOREACH 黑色 PTFE 管盘卷及管端展示": "FOREACH black PTFE tubing coil with the tube end visible",
+  "FOREACH PVC 透明弯曲管材与管口近景": "FOREACH clear PVC tubing bend with an exposed tube end"
 }

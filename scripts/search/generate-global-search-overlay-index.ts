@@ -1,3 +1,4 @@
+import { replaceSmtp4CompactItems } from "../../data/search/smtp4-search";
 import {buildCompactSolenoidSearchItems, isSolenoidSearchHref} from "../../data/search/solenoid-search";
 import { getLocalizedApplicationDocument } from '../../services/applications/international-localized';
 import { localizedApplicationHref } from '../../data/applications/international-locales/routes';
@@ -11,6 +12,7 @@ import { normalizeControlModulePath } from "../../data/products/selection/contro
 import { applicationRoutes, resolveApplicationHref } from "../../data/applications/application-routes";
 import { getTubingMaterialCopy } from "../../data/products/tubing/content";
 import { normalizePipettingPath } from "../../data/products/selection/pipetting-pump-routes";
+import { replaceSmtp2CompactItems } from "../../data/search/smtp2-search";
 import { getPumpSeriesProductDetailAdapter } from "../../services/products/adapters/getPumpSeriesProductDetailAdapter";
 import { getValvelessForeignContent, getValvelessLocaleCopy } from "../../data/products/detail/valveless-pump-locales";
 import { getDatasheetsStaticPageData } from "../../data/resources/datasheets.i18n";
@@ -1120,6 +1122,8 @@ function getOutputPath(locale: SearchLocale): string {
 }
 
 function writeOrCheckOutput(outputPath: string, output: string) {
+  const locale = /global-search-index\.([a-z-]+)\.v3\.json$/i.exec(outputPath)?.[1] || "zh-CN";
+  output = JSON.stringify(replaceSmtp4CompactItems(replaceSmtp2CompactItems(JSON.parse(output), locale), locale));
   if (CHECK_MODE) {
     const currentOutput = fs.existsSync(outputPath)
       ? fs.readFileSync(outputPath, "utf8")
@@ -1146,6 +1150,15 @@ function getCounts(items: CompactSearchItem[]) {
 }
 
 async function main() {
+  if (process.argv.includes("--smtp2-only") || process.argv.includes("--smtp4-only")) {
+    for (const locale of REQUESTED_SEARCH_LOCALES) {
+      const outputPath = getOutputPath(locale);
+      const output = fs.readFileSync(outputPath, "utf8");
+      writeOrCheckOutput(outputPath, output);
+      if (locale === "zh-CN") writeOrCheckOutput(LEGACY_OUTPUT_PATH, fs.readFileSync(LEGACY_OUTPUT_PATH, "utf8"));
+    }
+    console.log("SMTP2 compact search entries updated; other entries preserved"); return;
+  }
   if (process.argv.includes("--valveless-only")) {
     const isTarget = (item: CompactSearchItem) => item.m === "products" && /^\/products\/pumps\/valveless-metering-pump\/[^/]+\/?$/.test(item.h);
     for (const locale of REQUESTED_SEARCH_LOCALES.filter(locale => locale !== "zh-CN")) {

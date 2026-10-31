@@ -10541,7 +10541,7 @@ export const quickConnectFittingFilterLabels =
       "ko": "Product Series",
       "ru": "Product Series"
     },
-    "inputType": "multiple",
+    "inputType": "single",
     "sortOrder": 10,
     "visible": true
   },

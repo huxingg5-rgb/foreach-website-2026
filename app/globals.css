@@ -1,4 +1,11 @@
-@import "tailwindcss"; /* 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽鎺抽崐鎰板磻閹剧粯鍋傞柕鍫濐槹閻撴稓鈧箍鍎辨鎼佺嵁閺嶎厽鐓?Tailwind CSS 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛鎾茬劍閸忔粓鏌涢锝嗙闁汇倝绠栭弻锝夊箛椤撶姰鍋為梺鍝勵儏缁夊綊寮婚妸銉㈡斀闁糕檧鏅滆倴闂備線鈧偛鑻崢鍝ョ磼閼镐絻澹橀柣锝囧厴婵℃瓕顦柛瀣尭閳藉鈻嶉褌绨婚柍缁樻崌楠炲鏁傜憴锝嗗闂備礁鍚嬫禍浠嬪磿瀹ュ鏁傞柛鈺勬硾濞差參銆佸☉銏″€婚柛銉㈡櫇閳?*/
+@import "tailwindcss" source(none);
+/* Scan runtime source only; generated previews and reports are not CSS inputs. */
+@source "./";
+@source "../components";
+@source "../data";
+@source "../lib";
+@source "../services";
+@source "../public/**/*.html"; /* 闂傚倸鍊峰ù鍥敋瑜忛埀顒佺▓閺呯娀銆佸▎鎾冲唨妞ゆ挾鍋熼悰銉モ攽鎺抽崐鎰板磻閹剧粯鍋傞柕鍫濐槹閻撴稓鈧箍鍎辨鎼佺嵁閺嶎厽鐓?Tailwind CSS 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛鎾茬劍閸忔粓鏌涢锝嗙闁汇倝绠栭弻锝夊箛椤撶姰鍋為梺鍝勵儏缁夊綊寮婚妸銉㈡斀闁糕檧鏅滆倴闂備線鈧偛鑻崢鍝ョ磼閼镐絻澹橀柣锝囧厴婵℃瓕顦柛瀣尭閳藉鈻嶉褌绨婚柍缁樻崌楠炲鏁傜憴锝嗗闂備礁鍚嬫禍浠嬪磿瀹ュ鏁傞柛鈺勬硾濞差參銆佸☉銏″€婚柛銉㈡櫇閳?*/
 @import "../components/common/button-shape.css";
 
 /* =========================================================
@@ -15854,7 +15861,7 @@ html body nav[aria-label*="breadcrumb"] em {
   color: #173368 !important;
 
   font-size: 16px !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   line-height: 1 !important;
   text-decoration: none !important;
 

@@ -1,7 +1,7 @@
-import { pressureTranslations } from "./instrument-fluidics/pressure-locales";
-import { copy as pressure } from "./instrument-fluidics/quick-disconnect-coupling-pressure-rating.zh";
 import { flowTranslations } from "./instrument-fluidics/flow-locales";
+import { pressureTranslations } from "./instrument-fluidics/pressure-locales";
 import { copy as flow } from "./instrument-fluidics/quick-disconnect-coupling-flow-pressure-drop.zh";
+import { copy as pressure } from "./instrument-fluidics/quick-disconnect-coupling-pressure-rating.zh";
 import type { RelatedResourcesData } from "@/components/common/related-resources/related-resources.types";
 import { FITTING_PUBLISHED_PRODUCTS } from "@/data/products/selection/fitting-publication.generated";
 import { diaphragmPumpSelectionProducts } from "@/data/products/selection/diaphragm-pump-selection.generated";
@@ -12,12 +12,12 @@ import type { TechnicalArticleItem, TechnicalArticleLocale } from "./technical-a
 
 // Model cards are configuration examples, not the unidentified catalogue test samples.
 const definitions = [
-  { slug: "quick-disconnect-coupling-pressure-rating", copy: pressure, category: "fittings-tubing", series: "q20,q40,q60",
-    models: ["Q6006-SNV-SPPE", "Q6008-PNV-SPPE", "Q6012-SNV-SPPE", "Q4006-PNV-SPPE", "Q2002-PNV-SACN"], pumpIds: [],
-    anchors: ["pressure-ratings", "size-vs-pressure", "pressure-vs-drop", "pressure-checks", "temperature", "disconnect-safely", "q60-installation", "sample-validation", "further-reading"] },
   { slug: "quick-disconnect-coupling-flow-pressure-drop", copy: flow, category: "fittings-tubing", series: "q20,q40,q60",
     models: ["Q2002-PNV-SPPE", "Q2004-PNV-SPPE", "Q4004-PNV-SPPE", "Q4006-PNV-SPPE", "Q6006-SNV-SPPE", "Q6008-PNV-SPPE"], pumpIds: [],
     anchors: ["flow-factors", "read-curves", "flow-tables", "kv-cv-calculation", "valve-pressure-drop", "model-size-codes", "suction-side", "parallel-branches", "fluid-properties", "sample-validation", "further-reading"] },
+  { slug: "quick-disconnect-coupling-pressure-rating", copy: pressure, category: "fittings-tubing", series: "q20,q40,q60",
+    models: ["Q6006-SNV-SPPE", "Q6008-PNV-SPPE", "Q6012-SNV-SPPE", "Q4006-PNV-SPPE", "Q2002-PNV-SACN"], pumpIds: [],
+    anchors: ["pressure-ratings", "size-vs-pressure", "pressure-vs-drop", "pressure-checks", "temperature", "disconnect-safely", "q60-installation", "sample-validation", "further-reading"] },
 ] as const;
 
 function blockText(block: EngineeringArticleBlock): string {
@@ -42,9 +42,14 @@ function relationKeys(item: Pick<typeof definitions[number], "series" | "pumpIds
 }
 
 function definitionsForLocale(locale: TechnicalArticleLocale) {
-  return definitions.map(item => ({ ...item, copy: locale === "zh-CN" ? item.copy
-    : item.slug === "quick-disconnect-coupling-pressure-rating" ? pressureTranslations[locale]
-    : flowTranslations[locale] }));
+  return definitions.map(item => ({
+    ...item,
+    copy: locale === "zh-CN"
+      ? item.copy
+      : item.slug === "quick-disconnect-coupling-flow-pressure-drop"
+        ? flowTranslations[locale]
+        : pressureTranslations[locale],
+  }));
 }
 
 export function getInstrumentFluidicsArticles(locale: TechnicalArticleLocale): TechnicalArticleItem[] {

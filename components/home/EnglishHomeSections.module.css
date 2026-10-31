@@ -74,7 +74,7 @@
 }
 .taskGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; margin-top: 72px; }
 .taskCard { padding: 24px; border: 1px solid #e5ebf2; border-radius: 0; background: #fff; }
-.taskCard h3 { margin: 0 0 12px; color: var(--brand-blue); font-size: 20px; font-weight: 600; line-height: 1.4; }
+.taskCard h3 { margin: 0 0 12px; color: #000; font-size: 20px; font-weight: 600; line-height: 1.4; }
 .taskCard p { margin: 0; color: rgba(23, 51, 104, .72); font-size: 15px; line-height: 1.8; }
 .applicationRow { display: grid; grid-template-columns: 22px 1fr 20px; align-items: center; gap: 16px; padding: 18px 0; border-top: 1px solid #d9e2ec; color: var(--brand-blue); font-size: 20px; text-decoration: none; transition: color .2s ease; }
 .applicationRow strong { display: block; color: #000; font-size: 20px; font-weight: 600; line-height: 1.4; }

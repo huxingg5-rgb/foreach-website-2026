@@ -1,4 +1,4 @@
-import type { LocaleCode } from "@/lib/i18n";
+﻿import type { LocaleCode } from "@/lib/i18n";
 
 import { getLocalizedSiteHref, normalizeSiteHref } from "@/lib/seo/site-url";
 

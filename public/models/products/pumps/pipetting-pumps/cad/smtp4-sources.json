@@ -1,0 +1,143 @@
+{
+  "mappingSource": "User-supplied SMTP4 capacity filenames; 100 and 250 STEP sources are byte-identical",
+  "models": [
+    {
+      "slug": "smtp4-100ul",
+      "sourceModel": "SMTP4-100ul.stp",
+      "sourceSha256": "c7240f55875d00bec19ca22b5f8d641c2ff67e822bb77a6a76504a119e209a13",
+      "tessellation": {
+        "linearUnit": "millimeter",
+        "linearDeflectionType": "absolute_value",
+        "linearDeflection": 0.03,
+        "angularDeflection": 0.5
+      },
+      "coordinateDecimals": 5,
+      "meshCount": 22,
+      "triangles": 18095,
+      "sizeMm": [
+        28,
+        153.1,
+        33
+      ],
+      "asset": "smtp4-100ul.fcad.gz",
+      "bytes": 95238,
+      "sha256": "0fd150c8b1735f21cd9e1605c1384cd8eedb410cd7dff5a1e661b61f8507501c",
+      "numericRoundTripExact": true,
+      "sourceMeshes": 46,
+      "removedMeshes": 24,
+      "sourceFaces": 799,
+      "keptFaces": 521,
+      "removedFaces": 278,
+      "sourceTriangles": 24388,
+      "beforeBytes": 106772,
+      "reductionPercent": 10.8,
+      "rasterRestoredFaces": 50,
+      "finishes": {
+        "polymer": 39,
+        "black": 418,
+        "metal": 60,
+        "chrome": 4
+      },
+      "appearanceReference": "Existing product gallery photographs",
+      "exteriorOptimization": {
+        "rayDirections": 102,
+        "rasterViews": 142,
+        "rasterResolution": 1024,
+        "wholeFaces": true,
+        "geometryDecimation": false
+      }
+    },
+    {
+      "slug": "smtp4-250ul",
+      "sourceModel": "SMTP4-250ul.stp",
+      "sourceSha256": "c7240f55875d00bec19ca22b5f8d641c2ff67e822bb77a6a76504a119e209a13",
+      "tessellation": {
+        "linearUnit": "millimeter",
+        "linearDeflectionType": "absolute_value",
+        "linearDeflection": 0.03,
+        "angularDeflection": 0.5
+      },
+      "coordinateDecimals": 5,
+      "meshCount": 22,
+      "triangles": 18095,
+      "sizeMm": [
+        28,
+        153.1,
+        33
+      ],
+      "asset": "smtp4-250ul.fcad.gz",
+      "bytes": 95238,
+      "sha256": "d05b6591fea187835916cb8558f9756a0f84f54ea9fba88ef16b56a67c5e6de6",
+      "numericRoundTripExact": true,
+      "sourceMeshes": 46,
+      "removedMeshes": 24,
+      "sourceFaces": 799,
+      "keptFaces": 521,
+      "removedFaces": 278,
+      "sourceTriangles": 24388,
+      "beforeBytes": 106772,
+      "reductionPercent": 10.8,
+      "rasterRestoredFaces": 50,
+      "finishes": {
+        "polymer": 39,
+        "black": 418,
+        "metal": 60,
+        "chrome": 4
+      },
+      "appearanceReference": "Existing product gallery photographs",
+      "exteriorOptimization": {
+        "rayDirections": 102,
+        "rasterViews": 142,
+        "rasterResolution": 1024,
+        "wholeFaces": true,
+        "geometryDecimation": false
+      }
+    },
+    {
+      "slug": "smtp4-500ul",
+      "sourceModel": "SMTP4-500ul.stp",
+      "sourceSha256": "63aaffe7eaa580d6071a47d1217dc493f9aa5fa1101bb8bce6d7b80125eeba9f",
+      "tessellation": {
+        "linearUnit": "millimeter",
+        "linearDeflectionType": "absolute_value",
+        "linearDeflection": 0.03,
+        "angularDeflection": 0.5
+      },
+      "coordinateDecimals": 5,
+      "meshCount": 27,
+      "triangles": 20786,
+      "sizeMm": [
+        30.6,
+        154.9,
+        33
+      ],
+      "asset": "smtp4-500ul.fcad.gz",
+      "bytes": 119156,
+      "sha256": "cc6c4f1d749c823dfa7391769f7545ddb2ebb82c8c9e35969a00d1d352d292ee",
+      "numericRoundTripExact": true,
+      "sourceMeshes": 51,
+      "removedMeshes": 24,
+      "sourceFaces": 771,
+      "keptFaces": 545,
+      "removedFaces": 226,
+      "sourceTriangles": 27162,
+      "beforeBytes": 127215,
+      "reductionPercent": 6.3,
+      "rasterRestoredFaces": 62,
+      "finishes": {
+        "black": 442,
+        "chrome": 6,
+        "polymer": 39,
+        "metal": 58
+      },
+      "appearanceReference": "Existing product gallery photographs",
+      "exteriorOptimization": {
+        "rayDirections": 102,
+        "rasterViews": 142,
+        "rasterResolution": 1024,
+        "wholeFaces": true,
+        "geometryDecimation": false
+      }
+    }
+  ]
+}

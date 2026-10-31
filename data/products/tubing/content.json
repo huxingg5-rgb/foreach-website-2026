@@ -79,13 +79,13 @@
         ],
         "ctaTitle": "需要确认 PVC 管的规格和工况？",
         "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 PVC 管材与连接配置。",
-        "imageAlt": "FOREACH 聚氯乙烯（PVC）管材产品图",
+        "imageAlt": "FOREACH PVC 管材多种管径与管口截面展示",
         "cardLabel": "PVC",
         "cardHeading": "聚氯乙烯（PVC）管材，内径 0.8–19.1 mm，可选 55A、65A 两种硬度，管身柔软，便于弯曲和连接"
       },
       "en": {
-        "h1": "Flexible PVC Tubing for Instrument Fluid Lines",
-        "seoTitle": "Polyvinyl Chloride (PVC) Tubing | Foreach",
+        "h1": "Clear PVC Tubing for Liquid Handling, 0.8–19.1 mm ID, 55A/65A",
+        "seoTitle": "Clear PVC Tubing for Liquid Handling, 0.8–19.1 mm ID, 55A/65A | Foreach",
         "seoDescription": "Compare polyvinyl chloride (PVC) tubing sizes, hardness and packaging for flexible instrument connections. Select a listed ID/OD combination.",
         "cardTitle": "Polyvinyl Chloride (PVC) Tubing",
         "cardLines": [
@@ -133,9 +133,9 @@
         ],
         "ctaTitle": "Need to confirm your PVC tubing specification?",
         "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the PVC tubing and connection options.",
-        "imageAlt": "Foreach polyvinyl chloride (PVC) tubing product photograph",
+        "imageAlt": "FOREACH PVC tubing in different diameters with colored tube ends",
         "cardLabel": "PVC",
-        "cardHeading": "Polyvinyl Chloride (PVC) tubing with a 0.8–19.1 mm inner diameter range and 55A/65A hardness options for flexible fluid connections inside instruments"
+        "cardHeading": "Clear PVC Tubing for Liquid Handling, 0.8–19.1 mm ID, 55A/65A"
       },
       "es": {
         "intro": [
@@ -237,13 +237,13 @@
         ],
         "ctaTitle": "需要确认 TPU 管的规格和工况？",
         "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 TPU 管材与连接配置。",
-        "imageAlt": "FOREACH 热塑性聚氨酯（TPU）管材产品图",
+        "imageAlt": "FOREACH 透明 TPU 管盘卷与管端展示",
         "cardLabel": "TPU",
         "cardHeading": "热塑性聚氨酯（TPU）管材，内径 1.6–7.0 mm，可选 80A、85A、95A 三种硬度，用于设备中的管路连接"
       },
       "en": {
-        "h1": "TPU Tubing for Instrument Connections",
-        "seoTitle": "Thermoplastic Polyurethane (TPU) Tubing | Foreach",
+        "h1": "TPU Polyurethane Tubing for Liquid Handling, 1.6–7.0 mm ID, 80A/85A/95A",
+        "seoTitle": "TPU Polyurethane Tubing for Liquid Handling, 1.6–7.0 mm ID, 80A/85A/95A | Foreach",
         "seoDescription": "Explore thermoplastic polyurethane (TPU) tubing by hardness, ID and OD. Compare listed models, colors and packaging for instrument connections.",
         "cardTitle": "Thermoplastic Polyurethane (TPU) Tubing",
         "cardLines": [
@@ -291,9 +291,9 @@
         ],
         "ctaTitle": "Need to confirm your TPU tubing specification?",
         "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the TPU tubing and connection options.",
-        "imageAlt": "Foreach thermoplastic polyurethane (TPU) tubing product photograph",
+        "imageAlt": "Foreach transparent TPU tubing coil with exposed tube ends",
         "cardLabel": "TPU",
-        "cardHeading": "Thermoplastic Polyurethane (TPU) tubing with a 1.6–7.0 mm inner diameter range and 80A/85A/95A hardness options for fluid connections and routing inside instruments"
+        "cardHeading": "TPU Polyurethane Tubing for Liquid Handling, 1.6–7.0 mm ID, 80A/85A/95A"
       },
       "es": {
         "intro": [
@@ -400,8 +400,8 @@
         "cardHeading": "聚全氟乙丙烯（FEP）管材，内径 0.3–2.0 mm，适合小口径管路连接"
       },
       "en": {
-        "h1": "FEP Tubing for Instrument Fluid Lines",
-        "seoTitle": "Fluorinated Ethylene Propylene (FEP) Tubing | Foreach",
+        "h1": "Clear FEP Tubing for Reagent Lines, 0.3–2.0 mm ID, 1.6–3.2 mm OD",
+        "seoTitle": "Clear FEP Tubing for Reagent Lines, 0.3–2.0 mm ID, 1.6–3.2 mm OD | Foreach",
         "seoDescription": "Explore fluorinated ethylene propylene (FEP) tubing sizes and models for instrument fluid paths. Review packaging and fitting requirements.",
         "cardTitle": "Fluorinated Ethylene Propylene (FEP) Tubing",
         "cardLines": [
@@ -451,7 +451,7 @@
         "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the FEP tubing and connection options.",
         "imageAlt": "Foreach fluorinated ethylene propylene (FEP) tubing product photograph",
         "cardLabel": "FEP",
-        "cardHeading": "Fluorinated Ethylene Propylene (FEP) tubing with a 0.3–2.0 mm inner diameter range for small-bore fluid connections in analytical instruments"
+        "cardHeading": "Clear FEP Tubing for Reagent Lines, 0.3–2.0 mm ID, 1.6–3.2 mm OD"
       },
       "es": {
         "intro": [
@@ -554,13 +554,13 @@
         ],
         "ctaTitle": "需要确认 PTFE 管的规格和工况？",
         "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 PTFE 管材与连接配置。",
-        "imageAlt": "FOREACH 聚四氟乙烯（PTFE）管材产品图",
+        "imageAlt": "FOREACH 本色与黑色 PTFE 管盘卷展示",
         "cardLabel": "PTFE",
         "cardHeading": "聚四氟乙烯（PTFE）管材，内径 0.5–4.0 mm，用于试剂、清洗液等介质的输送"
       },
       "en": {
-        "h1": "PTFE Tubing for Instrument Fluid Lines",
-        "seoTitle": "Polytetrafluoroethylene (PTFE) Tubing | Foreach",
+        "h1": "Chemical-Resistant PTFE Tubing for Liquid Handling, 0.5–4.0 mm ID",
+        "seoTitle": "Chemical-Resistant PTFE Tubing for Liquid Handling, 0.5–4.0 mm ID | Foreach",
         "seoDescription": "Compare polytetrafluoroethylene (PTFE) tubing ID/OD combinations, models, colors and packaging. Confirm fluid and fitting requirements.",
         "cardTitle": "Polytetrafluoroethylene (PTFE) Tubing",
         "cardLines": [
@@ -609,9 +609,9 @@
         ],
         "ctaTitle": "Need to confirm your PTFE tubing specification?",
         "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the PTFE tubing and connection options.",
-        "imageAlt": "Foreach polytetrafluoroethylene (PTFE) tubing product photograph",
+        "imageAlt": "Foreach natural and black PTFE tubing coils shown together",
         "cardLabel": "PTFE",
-        "cardHeading": "Polytetrafluoroethylene (PTFE) tubing with a 0.5–4.0 mm inner diameter range for reagent and wash-fluid connections in instruments"
+        "cardHeading": "Chemical-Resistant PTFE Tubing for Liquid Handling, 0.5–4.0 mm ID"
       },
       "es": {
         "intro": [
@@ -722,8 +722,8 @@
         "cardHeading": "聚醚醚酮（PEEK）管材，内径可选 0.2 mm 或 0.8 mm，用于小口径管路连接"
       },
       "en": {
-        "h1": "Small-Bore PEEK Tubing for Analytical Instruments",
-        "seoTitle": "Polyether Ether Ketone (PEEK) Tubing | Foreach",
+        "h1": "PEEK Capillary Tubing for HPLC, 1/16\" and 1/32\" OD, 0.8/0.2 mm ID",
+        "seoTitle": "PEEK Capillary Tubing for HPLC, 1/16\" and 1/32\" OD, 0.8/0.2 mm ID | Foreach",
         "seoDescription": "Explore polyether ether ketone (PEEK) tubing in two listed ID/OD combinations for analytical connections. Review model and fitting requirements.",
         "cardTitle": "Polyether Ether Ketone (PEEK) Tubing",
         "cardLines": [
@@ -773,7 +773,7 @@
         "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the PEEK tubing and connection options.",
         "imageAlt": "Foreach polyether ether ketone (PEEK) tubing product photograph",
         "cardLabel": "PEEK",
-        "cardHeading": "Polyether Ether Ketone (PEEK) tubing with 0.2 mm and 0.8 mm inner diameter options for small-bore fluid connections in analytical instruments"
+        "cardHeading": "PEEK Capillary Tubing for HPLC, 1/16\" and 1/32\" OD, 0.8/0.2 mm ID"
       },
       "es": {
         "intro": [
@@ -875,13 +875,13 @@
         ],
         "ctaTitle": "需要确认 PFA 管的规格和工况？",
         "ctaDescription": "提交介质、浓度、ID/OD、管长、温度、压力或真空、接头及布管要求，由 FOREACH 协助确认 PFA 管材与连接配置。",
-        "imageAlt": "FOREACH 全氟烷氧基聚合物（PFA）管材产品图",
+        "imageAlt": "FOREACH PFA 透明管材盘卷与管端展示",
         "cardLabel": "PFA",
         "cardHeading": "全氟烷氧基聚合物（PFA）管材，内径可选 0.5、0.8 或 1.0 mm，外径 1.6 mm，用于试剂、清洗液等介质的输送"
       },
       "en": {
-        "h1": "PFA Tubing for Instrument Fluid Lines",
-        "seoTitle": "Perfluoroalkoxy Polymer (PFA) Tubing | Foreach",
+        "h1": "PFA Tubing for Analytical Liquid Lines, 1/16\" OD, 0.5/0.8/1.0 mm ID",
+        "seoTitle": "PFA Tubing for Analytical Liquid Lines, 1/16\" OD, 0.5/0.8/1.0 mm ID | Foreach",
         "seoDescription": "Explore perfluoroalkoxy polymer (PFA) tubing with 1.6 mm OD and three listed IDs. Review models, packaging and material-grade requirements.",
         "cardTitle": "Perfluoroalkoxy Polymer (PFA) Tubing",
         "cardLines": [
@@ -929,9 +929,9 @@
         ],
         "ctaTitle": "Need to confirm your PFA tubing specification?",
         "ctaDescription": "Share the fluid and concentration, ID/OD, length, temperature, pressure or vacuum, fittings and routing requirements so Foreach can help review the PFA tubing and connection options.",
-        "imageAlt": "Foreach perfluoroalkoxy polymer (PFA) tubing product photograph",
+        "imageAlt": "FOREACH translucent PFA tubing coil with an exposed tube end",
         "cardLabel": "PFA",
-        "cardHeading": "Perfluoroalkoxy Polymer (PFA) tubing with 0.5, 0.8 and 1.0 mm inner diameter options and a 1.6 mm outer diameter for reagent and wash-fluid connections in instruments"
+        "cardHeading": "PFA Tubing for Analytical Liquid Lines, 1/16\" OD, 0.5/0.8/1.0 mm ID"
       },
       "es": {
         "intro": [

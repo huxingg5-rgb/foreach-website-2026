@@ -26,6 +26,7 @@ import { usePathname } from "next/navigation";
 
 import { getLocalizedFilterOptionLabel } from "@/components/products/selection/filter-option-i18n";
 import { getLocaleFromPathname } from "@/lib/i18n";
+import { isHardTubeAccessoryCartItem, hardTubeProductCodeText } from "@/data/products/configurator/hard-tube-accessories";
 import {
   trackAddToInquiryList,
   trackInquiryListView,
@@ -40,6 +41,7 @@ import type {
   SelectionCartItemInput,
   SelectionCartSourceType,
 } from "./selection-cart.types";
+import { changeCartGroupDrawing, changeCartGroupQuantity, createCartBundle, getCartGroupMemberIds, getCartGroups, migrateLegacyHflBundle } from "./selection-cart-bundles";
 
 /* 新版全局清单缓存 key */
 const GLOBAL_CART_STORAGE_KEY = "foreach_global_selection_cart_v1";
@@ -147,6 +149,7 @@ interface SelectionCartContextValue {
   closeCart: () => void;
 
   addItem: (item: SelectionCartItemInput) => void;
+  addBundle: (primary: SelectionCartItemInput, accessories: SelectionCartItemInput[]) => void;
   removeItem: (id: string) => void;
   clearCart: () => void;
 
@@ -189,6 +192,7 @@ function buildCartItemId(item: {
 function isPublishedCartItem(item: {
   sourceType: SelectionCartSourceType;
   productCode: string;
+  foreachModel?: string;
   detailHref?: string;
 }) {
   const isFittingItem =
@@ -198,7 +202,8 @@ function isPublishedCartItem(item: {
 
   return (
     !isFittingItem ||
-    isPublishedFittingProductCode(item.productCode)
+    isPublishedFittingProductCode(item.productCode) ||
+    isHardTubeAccessoryCartItem(item)
   );
 }
 
@@ -265,7 +270,8 @@ function buildCartText(
     return getCartText(locale, "No products selected", "暂无选型产品");
   }
 
-  const lines = items.map((item, index) => {
+  const lines = getCartGroups(items).flatMap((group, groupIndex) => group.items.map((item, partIndex) => {
+    const number = group.accessories.length ? `${groupIndex + 1}.${partIndex + 1}` : `${groupIndex + 1}`;
     const isPumpSelection = item.sourceType === "pump-selection";
     const localizedProductName = isPumpSelection
       ? getLocalizedFilterOptionLabel(item.productName, locale)
@@ -278,10 +284,11 @@ function buildCartText(
 
     if (isPumpSelection) {
       return [
-        `#${index + 1}`,
+        `#${number}`,
         `${getCartText(locale, "Source", "来源")}: ${sourceLabel}`,
         `${getCartText(locale, "Product Type", "产品类型")}: ${localizedProductName}`,
         `${getCartText(locale, "Product Model", "产品型号")}: ${item.foreachModel}`,
+        ...(item.bundleId ? [`${getCartText(locale, "Product Code", "商品编码")}: ${hardTubeProductCodeText(item, getCartText(locale, "To be confirmed", "待确认"))}`] : []),
         `${getCartText(locale, "Quantity", "数量")}: ${item.quantity}`,
         `${getCartText(locale, "2D Drawing", "2D 图纸")}: ${
           item.needDrawing
@@ -292,7 +299,7 @@ function buildCartText(
     }
 
     return [
-      `#${index + 1}`,
+      `#${number}`,
       `${getCartText(locale, "Source", "来源")}: ${sourceLabel}`,
       `${getCartText(locale, "Product", "产品")}: ${item.productName}`,
       `${getCartText(locale, "Product Code", "商品编码")}: ${item.productCode}`,
@@ -305,7 +312,7 @@ function buildCartText(
           : getCartText(locale, "Not Required", "暂不需要")
       }`,
     ].join("\n");
-  });
+  }));
 
   return lines.join("\n\n");
 }
@@ -337,7 +344,7 @@ export function SelectionCartProvider({
       }
 
         setItems(
-          parsedGlobalCart
+          migrateLegacyHflBundle(parsedGlobalCart
             .filter(isPublishedCartItem)
             .map((item) => {
               return {
@@ -345,7 +352,7 @@ export function SelectionCartProvider({
                 quantity: Math.max(1, Number(item.quantity || 1)),
                 needDrawing: Boolean(item.needDrawing),
               };
-            })
+            }))
         );
 
         setHasMounted(true);
@@ -463,21 +470,41 @@ export function SelectionCartProvider({
     }
   }
 
+  function addBundle(primary: SelectionCartItemInput, accessories: SelectionCartItemInput[]) {
+    if (!accessories.length || ![primary, ...accessories].every(isPublishedCartItem)) return;
+    const bundle = createCartBundle(primary, accessories);
+    if (items.some(item => item.bundleId === bundle[0].bundleId)) return;
+    setItems(prev => prev.some(item => item.bundleId === bundle[0].bundleId) ? prev : [...prev, ...bundle]);
+    bundle.forEach((item, index) => trackAddToInquiryList({
+      locale,
+      sourceSection: item.sourceType,
+      listSize: items.length + index + 1,
+      productId: item.productCode,
+      productName: item.foreachModel,
+      productCategory: item.productName,
+      productSeries: item.sourceType,
+    }));
+  }
+
   function removeItem(id: string) {
-    const removedItem = items.find((item) => item.id === id);
-    if (!removedItem) return;
+    const ids = getCartGroupMemberIds(items, id);
+    const removedItems = items.filter(item => ids.has(item.id));
+    if (!removedItems.length) return;
 
-    setItems((prev) => prev.filter((item) => item.id !== id));
+    setItems((prev) => {
+      const currentIds = getCartGroupMemberIds(prev, id);
+      return prev.filter(item => !currentIds.has(item.id));
+    });
 
-    trackRemoveFromInquiryList({
+    removedItems.forEach(removedItem => trackRemoveFromInquiryList({
       locale,
       sourceSection: "global_selection_cart",
-      listSize: Math.max(0, items.length - 1),
+      listSize: Math.max(0, items.length - removedItems.length),
       productId: removedItem.productCode,
       productName: removedItem.foreachModel,
       productCategory: removedItem.productName,
       productSeries: removedItem.sourceType,
-    });
+    }));
   }
 
   function clearCart() {
@@ -507,29 +534,11 @@ export function SelectionCartProvider({
   }
 
   function changeQuantity(id: string, quantity: number) {
-    setItems((prev) => {
-      return prev.map((item) => {
-        if (item.id !== id) return item;
-
-        return {
-          ...item,
-          quantity: Math.max(1, Number(quantity || 1)),
-        };
-      });
-    });
+    setItems(prev => changeCartGroupQuantity(prev, id, quantity));
   }
 
   function toggleDrawingNeed(id: string, needDrawing: boolean) {
-    setItems((prev) => {
-      return prev.map((item) => {
-        if (item.id !== id) return item;
-
-        return {
-          ...item,
-          needDrawing,
-        };
-      });
-    });
+    setItems(prev => changeCartGroupDrawing(prev, id, needDrawing));
   }
 
   /*
@@ -611,6 +620,7 @@ export function SelectionCartProvider({
       openCart,
       closeCart,
       addItem,
+      addBundle,
       removeItem,
       clearCart,
       changeQuantity,

@@ -1,0 +1,55 @@
+{
+  "width": 1500,
+  "height": 1500,
+  "format": "webp",
+  "photos": [
+    {
+      "source": "72.JPG",
+      "filename": "foreach-smtp2-pipetting-pumps-pair-top-angled-view.webp",
+      "alt": {
+        "zh": "两台 FOREACH SMTP2 移液泵的俯斜视图，展示适配器、控制板和泵体",
+        "en": "Top angled view of two FOREACH SMTP2 pipetting pumps showing adapters, control boards and pump bodies",
+        "es": "Vista oblicua superior de dos bombas de pipeteo FOREACH SMTP2 con adaptadores, placas de control y cuerpos de bomba",
+        "fr": "Vue plongeante en perspective de deux pompes de pipetage FOREACH SMTP2 avec adaptateurs, cartes de commande et corps de pompe",
+        "ko": "어댑터, 제어 보드 및 펌프 본체가 보이는 FOREACH SMTP2 피펫팅 펌프 두 대의 위쪽 사선 모습",
+        "ru": "Вид сверху под углом двух пипетирующих насосов FOREACH SMTP2 с адаптерами, платами управления и корпусами"
+      }
+    },
+    {
+      "source": "74.JPG",
+      "filename": "foreach-smtp2-pipetting-pumps-pair-side-angled-view.webp",
+      "alt": {
+        "zh": "两台 FOREACH SMTP2 移液泵的侧斜视图，展示不同长度适配器和控制板",
+        "en": "Side angled view of two FOREACH SMTP2 pipetting pumps showing adapters of different lengths and control boards",
+        "es": "Vista lateral oblicua de dos bombas de pipeteo FOREACH SMTP2 con adaptadores de distinta longitud y placas de control",
+        "fr": "Vue latérale en perspective de deux pompes de pipetage FOREACH SMTP2 avec adaptateurs de longueurs différentes et cartes de commande",
+        "ko": "길이가 다른 어댑터와 제어 보드가 보이는 FOREACH SMTP2 피펫팅 펌프 두 대의 측면 사선 모습",
+        "ru": "Вид сбоку под углом двух пипетирующих насосов FOREACH SMTP2 с адаптерами разной длины и платами управления"
+      }
+    },
+    {
+      "source": "01.png",
+      "filename": "foreach-smtp2-pipetting-pumps-three-adapter-lengths.webp",
+      "alt": {
+        "zh": "三款 FOREACH SMTP2 移液泵并排展示不同长度的吸头适配器",
+        "en": "Three FOREACH SMTP2 pipetting pumps side by side showing different tip adapter lengths",
+        "es": "Tres bombas de pipeteo FOREACH SMTP2 alineadas con adaptadores de punta de distintas longitudes",
+        "fr": "Trois pompes de pipetage FOREACH SMTP2 côte à côte avec des adaptateurs d’embout de longueurs différentes",
+        "ko": "길이가 다른 팁 어댑터를 비교할 수 있도록 나란히 배치한 FOREACH SMTP2 피펫팅 펌프 세 대",
+        "ru": "Три пипетирующих насоса FOREACH SMTP2 рядом с адаптерами наконечников разной длины"
+      }
+    },
+    {
+      "source": "07.png",
+      "filename": "foreach-smtp2-pipetting-pump-with-tip-render.webp",
+      "alt": {
+        "zh": "装有吸头的 FOREACH SMTP2 移液泵渲染图，展示适配器、控制板和泵体",
+        "en": "Rendering of a FOREACH SMTP2 pipetting pump with a tip fitted, showing the adapter, control board and pump body",
+        "es": "Representación de una bomba de pipeteo FOREACH SMTP2 con punta instalada, adaptador, placa de control y cuerpo de bomba",
+        "fr": "Rendu d’une pompe de pipetage FOREACH SMTP2 avec embout monté, adaptateur, carte de commande et corps de pompe",
+        "ko": "팁이 장착된 FOREACH SMTP2 피펫팅 펌프 렌더링 이미지로, 어댑터, 제어 보드 및 펌프 본체가 보입니다",
+        "ru": "Визуализация пипетирующего насоса FOREACH SMTP2 с установленным наконечником, адаптером, платой управления и корпусом"
+      }
+    }
+  ]
+}

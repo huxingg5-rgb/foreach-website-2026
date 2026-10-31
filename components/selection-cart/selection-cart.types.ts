@@ -28,6 +28,10 @@ export interface SelectionCartItem {
   /* 全局唯一 ID，建议格式：sourceType:productCode */
   id: string;
 
+  /* 配套组合共享数量、图纸选择和删除操作；各零件仍保留独立型号。 */
+  bundleId?: string;
+  bundleRole?: "primary" | "accessory";
+
   /* 来源模块 */
   sourceType: SelectionCartSourceType;
 

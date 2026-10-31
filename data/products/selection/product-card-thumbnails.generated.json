@@ -239,8 +239,18 @@
     "width": 640,
     "height": 472
   },
+  "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp": {
+    "src": "/images/products/card-thumbnails/foreach-fep-tubing-clear-black-options-b3d3562a.webp",
+    "width": 640,
+    "height": 640
+  },
   "/images/products/tubing/fep-tubing/fep-tubing-main.webp": {
     "src": "/images/products/card-thumbnails/fep-tubing-main-cb93173d.webp",
+    "width": 640,
+    "height": 640
+  },
+  "/images/products/tubing/peek-tubing/foreach-chemical-resistant-peek-tubing-color-options.webp": {
+    "src": "/images/products/card-thumbnails/foreach-chemical-resistant-peek-tubing-color-options-fd20bed0.webp",
     "width": 640,
     "height": 640
   },
@@ -254,13 +264,28 @@
     "width": 640,
     "height": 640
   },
+  "/images/products/tubing/ptfe-tubing/foreach-chemical-resistant-ptfe-tubing.webp": {
+    "src": "/images/products/card-thumbnails/foreach-chemical-resistant-ptfe-tubing-cb27410c.webp",
+    "width": 640,
+    "height": 640
+  },
   "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp": {
     "src": "/images/products/card-thumbnails/ptfe-tubing-main-5aeed5c4.webp",
     "width": 640,
     "height": 640
   },
+  "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp": {
+    "src": "/images/products/card-thumbnails/foreach-clear-flexible-pvc-tubing-a408103c.webp",
+    "width": 640,
+    "height": 640
+  },
   "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp": {
     "src": "/images/products/card-thumbnails/pvc-tubing-main-232b12b8.webp",
+    "width": 640,
+    "height": 640
+  },
+  "/images/products/tubing/tpu-tubing/foreach-abrasion-resistant-tpu-tubing-black-coil.webp": {
+    "src": "/images/products/card-thumbnails/foreach-abrasion-resistant-tpu-tubing-black-coil-7ae28022.webp",
     "width": 640,
     "height": 640
   },
@@ -290,13 +315,18 @@
     "height": 641
   },
   "/images/products/valves/solenoid-valves/foreach-sv10-2-way-miniature-solenoid-valve.webp": {
-    "src": "/images/products/card-thumbnails/foreach-sv10-2-way-miniature-solenoid-valve-085077a5.webp",
+    "src": "/images/products/card-thumbnails/foreach-sv10-2-way-miniature-solenoid-valve-9f28aebf.webp",
     "width": 640,
     "height": 669
   },
   "/images/products/valves/solenoid-valves/foreach-sv10-3-way-miniature-solenoid-valve.webp": {
-    "src": "/images/products/card-thumbnails/foreach-sv10-3-way-miniature-solenoid-valve-d86d905a.webp",
+    "src": "/images/products/card-thumbnails/foreach-sv10-3-way-miniature-solenoid-valve-03770efb.webp",
     "width": 640,
     "height": 674
+  },
+  "/images/products/tubing/tpu-tubing/foreach-flexible-tpu-tubing-instrument-routing.webp": {
+    "src": "/images/products/card-thumbnails/foreach-flexible-tpu-tubing-instrument-routing-card.webp",
+    "width": 640,
+    "height": 640
   }
 }

@@ -1,3 +1,5 @@
+import { getSmtp2VariantCopy } from "./smtp2-variant-content";
+import { getSmtp4ModelCopy } from "./smtp4-model-content";
 type QA = [question: string, answer: string];
 
 // Source: SMTP datasheet PS-130A-2507-00001_001_en, pages 5, 14 and 15.
@@ -107,14 +109,24 @@ const modelQuestions: Record<string, number[]> = {
   "smtp4-500ul": [11, 12, 8, 9, 13],
 };
 
-export function getPipettingFaqs(locale: string, slug: string) {
+type PipettingFaqRows = {question:string;answer:string;q:string;a:string;title:string;content:string}[];
+export function getPipettingFaqs(locale: string, slug: string): PipettingFaqRows | undefined {
+  if (slug === "smtp4-250ul") {
+    const smtp4 = getSmtp4ModelCopy(slug, locale);
+    const common = bank[locale === "zh-CN" ? "zh" : locale];
+    if (!smtp4 || !common) return undefined;
+    return [...smtp4.faq250, ...[8, 9].map(index => ({ question: common[index][0], answer: common[index][1] }))]
+      .map(({ question, answer }) => ({ question, answer, q: question, a: answer, title: question, content: answer }));
+  }
+  const variant = getSmtp2VariantCopy(slug, locale);
   const rows = bank[locale === "zh-CN" ? "zh" : locale];
-  const indices = modelQuestions[slug];
+  const indices = variant ? [0, 1, 2, 4] : modelQuestions[slug];
   if (!rows || !indices) return undefined;
-  return indices.map(index => {
+  const faqs = indices.map(index => {
     const [question, answer] = rows[index];
-    return { question, answer, q: question, a: answer, title: question, content: answer };
+    return { question: variant ? question.replace(/SMTP2-1000\s*(?:μL|мкл)/g, variant.model) : question, answer };
   });
+  return (variant ? [variant.faq, ...faqs] : faqs).map(({question, answer}) => ({question, answer, q: question, a: answer, title: question, content: answer}));
 }
 
 export function applyPipettingPumpFaq<T extends Record<string, any>>(data: T, locale: string): T {

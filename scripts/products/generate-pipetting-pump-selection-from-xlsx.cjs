@@ -44,8 +44,9 @@ const rows = readSheet(workbook, "selection").filter((row) => {
   return String(row.enabled).trim().toUpperCase() !== "FALSE";
 });
 
-if (rows.length !== 3) {
-  throw new Error(`移液泵选型卡片数量应为 3，当前为 ${rows.length}`);
+const expectedSlugs = ["smtp2-1000ul", "smtp4-100ul", "smtp4-250ul", "smtp4-500ul"];
+if (rows.length !== expectedSlugs.length || expectedSlugs.some(slug => rows.filter(row => row.detailSlug === slug).length !== 1)) {
+  throw new Error("移液泵选型卡片缺失或重复");
 }
 
 const productBlocks = rows
@@ -128,10 +129,11 @@ const productBlocks = rows
   .join(",\n");
 
 const result = `import type { ProductSelectionProduct, ProductSelectionFilterLabel } from "./product-selection.types";
+import { withSmtp2SelectionConfiguration } from "./smtp2-configuration-selection";
 
-export const pipettingPumpSelectionProducts = [
+export const pipettingPumpSelectionProducts = ([
 ${productBlocks}
-] as unknown as ProductSelectionProduct[];
+] as unknown as ProductSelectionProduct[]).flatMap(withSmtp2SelectionConfiguration);
 
 export const pipettingPumpFilterLabels: ProductSelectionFilterLabel[] = [
   {

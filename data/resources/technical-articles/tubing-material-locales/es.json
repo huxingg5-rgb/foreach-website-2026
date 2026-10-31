@@ -455,5 +455,8 @@
   "蠕动泵泵管": "Tubos para bombas peristálticas",
   "清洗管路": "Líneas de limpieza",
   "管路流阻": "Resistencia hidráulica del tubo",
-  "定长管组件": "Conjuntos de tubos de longitud definida"
+  "定长管组件": "Conjuntos de tubos de longitud definida",
+  "FOREACH 本色 PTFE 管盘卷及管端细节展示": "Bobina de tubo PTFE natural FOREACH con un extremo cortado visible",
+  "FOREACH 黑色 PTFE 管盘卷及管端展示": "Bobina de tubo PTFE negro FOREACH con el extremo visible",
+  "FOREACH PVC 透明弯曲管材与管口近景": "Curva de tubo PVC transparente FOREACH con un extremo visible"
 }

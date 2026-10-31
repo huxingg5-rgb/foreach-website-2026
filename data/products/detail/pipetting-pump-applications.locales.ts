@@ -203,6 +203,10 @@ export const pipettingApplicationCopy: Record<string, Copy> = {
 };
 
 export function getPipettingApplications(locale: string, slug: string): ProductApplicationsContent | undefined {
+  if (slug === "smtp4-250ul") {
+    const base = getPipettingApplications(locale, "smtp4-100ul");
+    return base ? JSON.parse(JSON.stringify(base).replace(/SMTP4-100/g, "SMTP4-250").replace(/\b100(?=\s*(?:μL|мкл))/g, "250")) : undefined;
+  }
   const copy = pipettingApplicationCopy[locale];
   const model = ["smtp2-1000ul", "smtp4-100ul", "smtp4-500ul"].indexOf(slug);
   if (!copy || model < 0) return undefined;

@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const smtp2Catalog = require("../../data/products/detail/smtp2-configurations.json");
+const smtp2Gallery = require("../../data/products/detail/smtp2-gallery.json");
 
 const outDir = path.join(
   process.cwd(),
@@ -79,6 +81,7 @@ const resourceFiles = {
 
 function resources(key) {
   const file = resourceFiles[key];
+  const variants = key === "smtp2_1000ul" ? smtp2Catalog.variants : null;
 
   return {
     mainImage: `${resourceBase.imageDir}/${file.image}`,
@@ -95,10 +98,19 @@ function resources(key) {
       imageAltEn: file.imageAltEn,
     },
     plannedFiles: {
-      mainImage: `public${resourceBase.imageDir}/${file.image}`,
+      mainImage: variants ? `public${variants[0].image}` : `public${resourceBase.imageDir}/${file.image}`,
       model3d: `public${resourceBase.modelDir}/${file.model3d}`,
       drawing2d: `public${resourceBase.drawingDir}/${file.drawing2d}`,
     },
+    ...(variants ? {
+      mainImage: variants[0].image,
+      imageCard: variants[0].cardImage,
+      imageAlt: `FOREACH ${variants[0].model} 1000 μL, LTE008 (8 mm)`,
+      mainImageAlt: `FOREACH ${variants[0].model} 1000 μL, LTE008 (8 mm)`,
+      imageAltEn: `FOREACH ${variants[0].model} 1000 μL, LTE008 (8 mm)`,
+      additionalImages: variants.slice(1).map(item => item.image),
+      additionalImageAlts: variants.slice(1).map(item => `FOREACH ${item.model} 1000 μL, ${item.adapter} (${item.lengthMm} mm)`),
+    } : {}),
   };
 }
 
@@ -151,7 +163,8 @@ const details = [
 
     specs: [
       spec("产品名称", "SMTP2 1000μL 可编程气体置换式移液泵"),
-      spec("型号", "SMTP2-1000μL"),
+      spec("型号", smtp2Catalog.variants.map(item => item.model).join(" / ")),
+      spec("吸头适配器", smtp2Catalog.variants.map(item => `${item.model}: ${item.adapter} (${item.lengthMm} mm)`).join("; ")),
       spec("产品系列", "SMTP2 可编程气体置换式移液泵"),
       spec("移液方式", "气体置换式"),
       spec("标称量程", "1000μL"),
@@ -400,12 +413,54 @@ const details = [
   })
 ];
 
+// PS-130A-2507-00001_001_en, table 17: 250 μL, 0.125 μL/step.
+// The supplied 100 and 250 STEP files have identical exterior geometry.
+// Use the existing SMTP4 series photograph until a separate 250 photo is supplied.
+const smtp4Base = details.find(item => item.slug === "smtp4-100ul");
+const smtp4250 = JSON.parse(JSON.stringify(smtp4Base).replace(/smtp4-100ul/g,"smtp4-250ul").replace(/SMTP4-100/g,"SMTP4-250").replace(/100(?=\s*μL)/g,"250").replace(/0\.05/g,"0.125"));
+smtp4250.mainImage = smtp4Base.mainImage;
+smtp4250.additionalImages = smtp4Base.additionalImages;
+smtp4250.plannedFiles.mainImage = smtp4Base.plannedFiles.mainImage;
+smtp4250.drawing2dUrl = smtp4250.drawingPdfUrl = "";
+smtp4250.resources.drawing2dUrl = smtp4250.resources.drawingPdfUrl = "";
+smtp4250.plannedFiles.drawing2d = "";
+smtp4250.specs = smtp4250.specs.map(row => row.label === "电源要求" ? spec(row.label,"24VDC") : row.label === "装吸头所需力" ? spec(row.label,"30 N") : row.label === "总体尺寸" ? spec(row.label,"28 × 28 × 161 mm") : row);
+details.splice(details.findIndex(item => item.slug === "smtp4-500ul"),0,buildDetail(smtp4250));
+for (const detail of details.filter(item => item.slug.startsWith("smtp4-"))) {
+  detail.model3dUrl = detail.resources.model3dUrl = resourceBase.modelDir + "/cad/" + detail.slug + ".fcad.gz";
+  detail.plannedFiles.model3d = "public" + detail.model3dUrl;
+}
+const publishedDetails = details.flatMap(detail => {
+  if (detail.slug !== "smtp2-1000ul") return [detail];
+  return smtp2Catalog.variants.map(variant => {
+    const slug = variant.model.toLowerCase();
+    const specs = detail.specs.map(row => row.label === "型号" ? spec(row.label, variant.model)
+      : row.label === "吸头适配器" ? spec(row.label, `${variant.adapter} (${variant.lengthMm} mm)`)
+        : row.label === "产品名称" ? spec(row.label, `${variant.model} 1000μL 可编程气体置换式移液泵`) : row);
+    const alt = `FOREACH ${variant.model} 1000 μL, ${variant.adapter} (${variant.lengthMm} mm)`;
+    return buildDetail({
+      ...detail, slug, productId: `pipetting-${slug}`, productCode: variant.model,
+      modelDisplay: variant.model, displayModel: variant.model, foreachModel: variant.model,
+      model: specs[0].value, name: specs[0].value, title: specs[0].value,
+      mainImage: variant.image, imageCard: variant.cardImage,
+      imageAlt: alt, imageAltEn: alt, mainImageAlt: alt,
+      additionalImages: smtp2Gallery.photos.map(photo => `${resourceBase.imageDir}/${photo.filename}`),
+      additionalImageAlts: smtp2Gallery.photos.map(photo => photo.alt.zh),
+      detailHref: `/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/${slug}/`,
+      specSeriesKey: slug, specs,
+      // The existing family drawing/model has no confirmed variant identity.
+      model3dUrl: "", drawing2dUrl: "", drawingPdfUrl: "",
+      resources: { model3dUrl: "", drawing2dUrl: "", drawingPdfUrl: "", imageAltEn: alt },
+      plannedFiles: { mainImage: `public${variant.image}`, model3d: "", drawing2d: "" },
+    });
+  });
+});
 fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(outFile, JSON.stringify(details, null, 2), "utf8");
+fs.writeFileSync(outFile, JSON.stringify(publishedDetails, null, 2), "utf8");
 
 console.log("generated:", outFile);
 console.log("detail pages:");
-details.forEach((item) => {
+publishedDetails.forEach((item) => {
   console.log(`- ${item.slug} | ${item.model} | ${item.productCode}`);
   console.log(`  image: ${item.plannedFiles.mainImage}`);
   console.log(`  model3d: ${item.plannedFiles.model3d}`);

@@ -23,7 +23,7 @@ const assets = [
   },
   {
     "id": "rpl",
-    "source": "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    "source": "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-metering-pump-front-angle-card.webp",
     "target": "/images/home/products/foreach-home-valveless-metering-pump.webp"
   },
   {

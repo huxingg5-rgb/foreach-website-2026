@@ -9,8 +9,12 @@ const labels: Record<string, [string, string, string]> = {
   ru: ["Главная", "Продукты", "Пипетирующие насосы"],
 };
 const models: Record<string, string> = {
+  "smtp2-500": "SMTP2-500",
+  "smtp2-510": "SMTP2-510",
+  "smtp2-520": "SMTP2-520",
   "smtp2-1000ul": "SMTP2-1000 μL",
   "smtp4-100ul": "SMTP4-100 μL",
+  "smtp4-250ul": "SMTP4-250 μL",
   "smtp4-500ul": "SMTP4-500 μL",
 };
 

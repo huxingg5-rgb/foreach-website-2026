@@ -39,10 +39,10 @@ for (const locale of locales) {
     previousArticle: null,
     nextArticle: null,
   });
-  assert(articles.some(article => article.slug === "rpl-valveless-metering-pump-selection-guide"),
-    `${locale}: preserve the published RPL selection guide`);
-  // All neighbors and boundaries follow the public article order checked above.
-  console.log(`PASS: ${locale}: ${articles.length} article pagers, boundaries and missing-slug handling`);
+  const rpl = getTechnicalArticlePagerData(locale, "rpl-valveless-metering-pump-selection-guide");
+  assert.equal(rpl.previousArticle, null);
+  assert.equal(rpl.nextArticle?.href, hrefFor("piston-pump-air-bubbles-dispensing-error"));
+  console.log(`PASS: ${locale}: ${articles.length} article pagers, boundaries and RPL next link`);
 }
 
 console.log(`PASS: ${verified} localized article pagers; correct titles, dates, locale URLs and reciprocal links.`);

@@ -33,3 +33,4 @@ export function formatPistonPumpSpecLabel(label: string, locale: "zh" | "en"): s
   };
   return labels[label] ?? label;
 }
+

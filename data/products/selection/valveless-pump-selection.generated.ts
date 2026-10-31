@@ -39,7 +39,7 @@ const baseValvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     filters: {
       filter01: "RPL 无阀泵",
     },
-    imageCard: "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-metering-pump-front-angle-card.webp",
     detailSlug: "rpl-p4",
     status: "active",
     sortOrder: 1101,
@@ -76,7 +76,7 @@ const baseValvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     filters: {
       filter01: "RPL 无阀泵",
     },
-    imageCard: "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-metering-pump-front-angle-card.webp",
     detailSlug: "rpl-p635",
     status: "active",
     sortOrder: 1102,
@@ -113,7 +113,7 @@ const baseValvelessPumpSelectionProducts: ProductSelectionProduct[] = [
     filters: {
       filter01: "RPL 无阀泵",
     },
-    imageCard: "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
+    imageCard: "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-metering-pump-front-angle-card.webp",
     detailSlug: "rpl-p15",
     status: "active",
     sortOrder: 1103,

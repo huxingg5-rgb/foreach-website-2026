@@ -6256,6 +6256,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-M6-16-PV-N 标滚平底接头 PVDF",
@@ -6269,7 +6271,7 @@
     "drawingPdfUrl": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-m6.pdf",
     "resources": {
       "drawing2dUrl": "",
-      "model3dUrl": "/models/products/fittings/local-test/443-01-00063.stp#test-preview",
+      "model3dUrl": "",
       "drawing2d": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-m6.pdf"
     },
     "specSeriesKey": "standard-flat-bottom-fitting",
@@ -6380,11 +6382,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -6597,6 +6603,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-M6-20-PV-N 标滚平底接头 PVDF",
@@ -6721,11 +6729,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-20-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -6938,6 +6950,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-M6-25-PV-N 标滚平底接头 PVDF",
@@ -7062,11 +7076,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-25-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -7279,6 +7297,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-M6-30-PV-N 标滚平底接头 PVDF",
@@ -7403,11 +7423,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-30-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -7620,6 +7644,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-M6-32-PV-N 标滚平底接头 PVDF",
@@ -7744,11 +7770,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-32-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -7961,6 +7991,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-U28-16-PV-N 标滚平底接头 PVDF",
@@ -8085,11 +8117,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -8302,6 +8338,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-U28-20-PV-N 标滚平底接头 PVDF",
@@ -8426,11 +8464,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-20-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -8643,6 +8685,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-U28-25-PV-N 标滚平底接头 PVDF",
@@ -8767,11 +8811,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-25-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -8984,6 +9032,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-U28-30-PV-N 标滚平底接头 PVDF",
@@ -9108,11 +9158,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-30-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -9325,6 +9379,8 @@
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-n-main.jpg",
     "additionalImages": [
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ],
     "imageAlt": "HFL-U28-32-PV-N 标滚平底接头 PVDF",
@@ -9449,11 +9505,15 @@
     },
     "additionalImageAlts": [
       "HFL natural-color PVDF flat-bottom fitting assembled with translucent tubing, showing the threaded body, washer and flanged tube end",
+      "PTFE flanged tubing assembly with a natural-color threaded fitting and end-face washer",
+      "Sealing washer assortment for flat-bottom tubing connections, showing different sizes and finishes",
       "Tubing assembly comparison with natural-color HFL fittings and a black fitting, showing different end sealing components"
     ],
     "images": [
       "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-32-pv-n-main.jpg",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+      "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
       "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
     ]
   },
@@ -14453,7 +14513,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ac-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ac-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ac-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-M6-16-AC-B 紧凑卡箍接头 POM",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -14568,7 +14633,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ac-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -14605,7 +14683,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-M6-16-PK-N 紧凑卡箍接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -14720,7 +14803,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -14757,7 +14853,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ps-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ps-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ps-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-M6-16-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -14872,7 +14973,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -14909,7 +15023,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-M6-16-PV-N 紧凑卡箍接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -15024,7 +15143,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -15062,7 +15194,11 @@
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-ac-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-ac-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
     ],
     "imageAlt": "HN6-M6-32-AC-B 紧凑卡箍接头 POM",
     "detailMode": "standard_model",
@@ -15178,7 +15314,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN6-M6-32-AC-B compact ferrule fitting supplementary view",
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-ac-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -15216,7 +15367,10 @@
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-pk-n-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
     ],
     "imageAlt": "HN6-M6-32-PK-N 紧凑卡箍接头 PEEK",
     "detailMode": "standard_model",
@@ -15332,7 +15486,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -15370,7 +15537,11 @@
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-ps-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-ps-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
     ],
     "imageAlt": "HN6-M6-32-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
@@ -15486,7 +15657,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN6-M6-32-PS-B compact ferrule fitting supplementary view",
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -15523,7 +15709,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ac-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ac-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ac-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-U28-16-AC-B 紧凑卡箍接头 POM",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -15638,7 +15829,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ac-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -15675,7 +15879,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pk-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pk-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pk-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-U28-16-PK-N 紧凑卡箍接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -15790,7 +15999,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pk-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -15827,7 +16049,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ps-b-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ps-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ps-b-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-U28-16-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -15942,7 +16169,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -15979,7 +16219,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pv-n-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pv-n-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pv-n-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-U28-16-PV-N 紧凑卡箍接头 PVDF",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -16094,7 +16339,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-16-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -16132,7 +16390,11 @@
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-ac-b-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-ac-b-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
     ],
     "imageAlt": "HN6-U28-32-AC-B 紧凑卡箍接头 POM",
     "detailMode": "standard_model",
@@ -16248,7 +16510,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN6-U28-32-AC-B compact ferrule fitting supplementary view",
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-ac-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -16285,7 +16562,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-U28-32-ET-N 紧凑卡箍接头 ETFE",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -16400,7 +16682,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -16437,7 +16732,12 @@
     "image": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ],
     "imageAlt": "HN6-U28-32-PK-B 紧凑卡箍接头 PEEK",
     "detailMode": "standard_model",
     "hideModelAction": false,
@@ -16552,7 +16852,20 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -16590,7 +16903,11 @@
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-ps-b-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
     ],
     "imageAlt": "HN6-U28-32-PS-B 紧凑卡箍接头 PPS",
     "detailMode": "standard_model",
@@ -16706,7 +17023,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN6-U28-32-PS-B compact ferrule fitting supplementary view",
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-ps-b-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -16744,7 +17076,11 @@
     "heroImage": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "imageCard": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
     "additionalImages": [
-      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-pv-n-main.jpg"
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
     ],
     "imageAlt": "HN6-U28-32-PV-N 紧凑卡箍接头 PVDF",
     "detailMode": "standard_model",
@@ -16860,7 +17196,22 @@
     "sectionTitleMap": {
       "applications": "常见应用：",
       "faq": "常见问题"
-    }
+    },
+    "additionalImageAlts": [
+      "HN6-U28-32-PV-N compact ferrule fitting supplementary view",
+      "Ferrule seal assortment for instrument fluidics tubing connections",
+      "Ferrule fitting body assortment showing natural, white and black threaded bodies with knurled grips",
+      "Upright ferrule seal showing the tapered body and central tube opening",
+      "Angled ferrule seal showing the tube opening and sealing profile"
+    ],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-u28-32-pv-n-main.jpg",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+      "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+    ]
   },
   {
     "sourceType": "fitting-detail",

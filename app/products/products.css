@@ -4562,6 +4562,16 @@
 
 /* UNIFIED_FILTER_DISABLED_VISUAL_END */
 
+/* Pointer selection has no default focus frame; keyboard focus stays visible. */
+.products-selection-page .filter-panel .filter-option:focus {
+  outline: none;
+}
+
+.products-selection-page .filter-panel .filter-option:focus-visible {
+  outline: 2px solid var(--brand-cyan, #09e9b4);
+  outline-offset: -2px;
+}
+
 /* Consistent regular-weight filter text across locales, products and states. */
 .products-selection-page .filter-panel,
 .products-selection-page .filter-panel :is(h2, h3, p, button, label, strong, b),

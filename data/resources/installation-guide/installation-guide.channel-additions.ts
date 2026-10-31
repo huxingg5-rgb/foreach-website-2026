@@ -44,7 +44,7 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
       "thread-to-barb-fittings": ["螺纹转倒刺接头：连接软管与螺纹接口","螺纹转倒刺接头"],
       "rigid-tubing-fittings": ["硬管接头：液路系统连接","硬管接头"],
       "syringe-installation": ["注射泵的注射器安装教程", "注射器安装"],
-      "q60-quick-fitting": ["Q60 系列快速接头介绍", "快速接头"],
+      "q60-quick-fitting": ["Q60 系列快插接头介绍", "快插接头"],
       "female-thread-conversion": ["内螺纹转换连接方案", "螺纹转换"],
       "bubble-detection-module": ["气泡检测模块介绍", "气泡检测"],
       "dpl30-vs-dpl30h": ["DPL30 与 DPL30H 微型隔膜液体泵选型对比", "选型对比"],

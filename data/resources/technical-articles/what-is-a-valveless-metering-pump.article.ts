@@ -585,17 +585,17 @@ const overviewProductModels = [
   {
     name: "RPL-P4",
     slug: "rpl-p4",
-    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-metering-pump-front-angle.webp",
   },
   {
     name: "RPL-P6.35",
     slug: "rpl-p635",
-    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-metering-pump-front-angle.webp",
   },
   {
     name: "RPL-P15",
     slug: "rpl-p15",
-    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
+    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-metering-pump-front-angle.webp",
   },
   {
     name: "DRPL-0109",

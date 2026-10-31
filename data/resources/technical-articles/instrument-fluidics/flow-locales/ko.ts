@@ -229,7 +229,7 @@ export const copy = {
         },
         {
           "type": "paragraph",
-          "text": "이 Q60 곡선은 3/8″와 1/2″ 연결에 해당합니다. 튜브 직경 비율로 3/4″(19.0 mm) 연결에 외삽해서는 안 됩니다. Q60-PP의 사용 압력은 4.2 bar이므로, 출구가 대기압 또는 양의 게이지 압력인 회로에서는 이 값을 넘는 압력 강하 지점을 운전 조건으로 사용할 수 없습니다."
+          "text": "이 Q60 곡선은 3/8″와 1/2″ 연결에 해당합니다. 튜브 직경 비율로 3/4″(19.0 mm) 연결에 외삽해서는 안 됩니다. Q60-PP의 사용 압력은 4.2 bar이므로, 출구가 대기압 또는 양의 게이지 압력인 회로에서는 이 값을 넘는 압력 강하 지점을 운전 조건으로 사용할 수 없습니다. 관련 자료의 사용 압력 글을 참고하세요."
         }
       ]
     },
@@ -489,6 +489,10 @@ export const copy = {
         {
           "type": "links",
           "items": [
+            {
+              "href": "/ko/resources/technical-articles/quick-disconnect-coupling-pressure-rating/",
+              "label": "퀵 커플링의 사용 압력: 온도 영향과 가압 상태 연결·분리"
+            },
             {
               "href": "/ko/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
               "label": "퀵 디스커넥트 커플링이란? 암수 결합, 밸브와 선정 방법"

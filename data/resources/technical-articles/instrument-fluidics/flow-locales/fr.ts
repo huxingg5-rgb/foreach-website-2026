@@ -229,7 +229,7 @@ export const copy = {
         },
         {
           "type": "paragraph",
-          "text": "Les courbes Q60 présentées concernent les raccordements de 3/8″ et 1/2″. Ne les extrapolez pas au 3/4″ (19.0 mm) au prorata du diamètre. La pression de service de Q60-PP est de 4.2 bar. Si l'aval est à la pression atmosphérique ou à une pression manométrique positive, les points dépassant cette perte de charge ne constituent pas des conditions d'utilisation admissibles."
+          "text": "Les courbes Q60 présentées concernent les raccordements de 3/8″ et 1/2″. Ne les extrapolez pas au 3/4″ (19.0 mm) au prorata du diamètre. La pression de service de Q60-PP est de 4.2 bar. Si l'aval est à la pression atmosphérique ou à une pression manométrique positive, les points dépassant cette perte de charge ne constituent pas des conditions d'utilisation admissibles. Voir l'article sur la pression de service dans les lectures complémentaires."
         }
       ]
     },
@@ -489,6 +489,10 @@ export const copy = {
         {
           "type": "links",
           "items": [
+            {
+              "href": "/fr/resources/technical-articles/quick-disconnect-coupling-pressure-rating/",
+              "label": "Pression des raccords rapides : température et connexion sous pression"
+            },
             {
               "href": "/fr/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
               "label": "Qu'est-ce qu'un raccord rapide ? Connexion mâle/femelle, clapets et sélection"

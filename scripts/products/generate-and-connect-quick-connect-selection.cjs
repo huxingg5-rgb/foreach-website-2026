@@ -926,7 +926,7 @@ const filterLabels = [
       ),
 
     inputType:
-      "multiple",
+      "single",
 
     sortOrder:
       10,

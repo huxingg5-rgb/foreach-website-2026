@@ -141,3 +141,4 @@ export function getEnglishApplicationSchema(document: ApplicationDocument, href:
     { '@type': 'BreadcrumbList', itemListElement: breadcrumbs.map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.label, item: getCanonicalUrl(item.href ?? href) })) },
   ] };
 }
+

@@ -1,3 +1,4 @@
+import { replaceTranslatedPhrase } from "./translated-phrase-spacing";
 import { localizeProductDetailData } from "./product-detail.intl";
 import {
   isHardTubeTargetLocale,
@@ -224,7 +225,7 @@ function localizeSourceValue(value: string, locale: HardTubeTargetLocale) {
   return Object.entries(SOURCE_VALUE_TERMS[locale])
     .concat(Object.entries(EXTRA_SOURCE_VALUE_TERMS[locale]))
     .sort(([a], [b]) => b.length - a.length)
-    .reduce((text, [source, target]) => text.split(source).join(target), value);
+    .reduce((text, [source, target]) => replaceTranslatedPhrase(text, source, target), value);
 }
 
 function localizeAdvancedValue(value: unknown, locale: HardTubeTargetLocale): unknown {

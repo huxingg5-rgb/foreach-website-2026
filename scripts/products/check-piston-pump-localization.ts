@@ -98,3 +98,4 @@ for (const locale of locales) {
 }
 console.log(JSON.stringify({ models: PISTON_PUMP_MARKETING_MODELS.length, pages, specificationRows, seriesVersions, errors }, null, 2));
 if (errors.length) process.exitCode = 1;
+

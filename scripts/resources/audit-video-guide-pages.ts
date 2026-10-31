@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { getInstallationGuidePageData } from "@/services/resources/installation-guide/getInstallationGuidePageData";
-import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
+import { englishVideoGuideDetails, getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
 import { getVideoGuideRelatedProducts } from "@/services/resources/installation-guide/getVideoGuideRelatedProducts";
 import { getVideoGuideProduct } from "@/data/resources/installation-guide/video-guide-products";
 import { getRelatedResourcesData } from "@/services/resources/getRelatedResourcesData";
@@ -21,6 +21,17 @@ const expectedIds = [
 ].map(id => `youtube-${id}`);
 
 const guides = getInstallationGuidePageData("en").guides;
+const breadcrumbLabels = new Set<string>();
+const breadcrumbManifest = englishVideoGuideDetails.map(video => {
+  const guide = guides.find(item => item.id === video.id);
+  assert(guide, `Video missing from guide listing: ${video.id}`);
+  assert.equal(guide.detailHref, video.detailHref, `Breadcrumb parent/list route mismatch: ${video.id}`);
+  assert(video.breadcrumbLabel.trim(), `Missing breadcrumb label: ${video.id}`);
+  assert.equal(video.breadcrumbLabel, video.breadcrumbLabel.trim());
+  assert(!breadcrumbLabels.has(video.breadcrumbLabel), `Indistinguishable video breadcrumb: ${video.breadcrumbLabel}`);
+  breadcrumbLabels.add(video.breadcrumbLabel);
+  return { id: video.id, href: video.detailHref, title: video.title, breadcrumbLabel: video.breadcrumbLabel };
+});
 const titles = new Set<string>();
 const manifest = expectedIds.map(id => {
   const guide = guides.find(item => item.id === id);
@@ -96,6 +107,6 @@ for (const video of manifest) {
 const output = process.argv.find(arg => arg.startsWith("--output="))?.slice("--output=".length);
 if (output) {
   fs.mkdirSync(path.dirname(output), { recursive: true });
-  fs.writeFileSync(output, JSON.stringify({ checkedAt: new Date().toISOString(), videos: manifest, reverseLinks }, null, 2));
+  fs.writeFileSync(output, JSON.stringify({ checkedAt: new Date().toISOString(), breadcrumbManifest, videos: manifest, reverseLinks }, null, 2));
 }
-console.log(`PASS: ${manifest.length} historical video pages; ${reverseLinks.length} product backlink groups; canonical links, source timing, images and search entries.`);
+console.log(`PASS: ${breadcrumbManifest.length} video breadcrumb labels; ${manifest.length} historical video pages; ${reverseLinks.length} product backlink groups; canonical links, source timing, images and search entries.`);

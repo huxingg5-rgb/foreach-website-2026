@@ -46,9 +46,27 @@ function media(baseName, alt) {
 
 function buildDetail(detail) {
   const specs = detail.specs || [];
+  const isRpl = ["rpl-p4", "rpl-p635", "rpl-p15"].includes(detail.slug);
+  const imageRoot = "/images/products/pumps/valveless-pumps/";
+  const photo = `${imageRoot}foreach-${detail.slug}-valveless-metering-pump-front-angle.webp`;
+  const oldMain = detail.slug === "rpl-p4"
+    ? `${imageRoot}foreach-rpl-p4-valveless-pump-assembly.webp`
+    : `${imageRoot}foreach-${detail.slug}-valveless-pump.webp`;
+  const photoAlt = `FOREACH ${detail.productCode} valveless metering pump, front three-quarter view`;
 
   return {
     ...detail,
+    ...(isRpl ? {
+      mainImage: photo,
+      image: photo,
+      heroImage: photo,
+      imageCard: photo.replace(".webp", "-card.webp"),
+      additionalImages: [oldMain, ...(detail.additionalImages || [])],
+      additionalImageAlts: [detail.slug === "rpl-p4" ? "FOREACH RPL-P4 miniature valveless piston pump, assembly view" : detail.mainImageAlt, ...(detail.additionalImageAlts || [])],
+      imageAltEn: photoAlt,
+      imageAlt: photoAlt,
+      mainImageAlt: photoAlt,
+    } : {}),
     category: "pumps",
     productTypeId: "valveless-pump",
     productTypeSlug: "valveless-pumps",
@@ -108,6 +126,14 @@ const details = [
       "foreach-rpl-p4-valveless-pump",
       "FOREACH RPL-P4 12–80 μL/rev valveless ceramic piston pump for micro dispensing and titration"
     ),
+    additionalImages: [
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p4-ceramic-piston-pump-front.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p4-rotary-piston-metering-pump-drive-wiring-view.webp",
+    ],
+    additionalImageAlts: [
+      "FOREACH RPL-P4 ceramic piston pump for microdispensing, front view",
+      "FOREACH RPL-P4 rotary piston metering pump, angled view showing the drive mechanism and motor wiring",
+    ],
 
     specs: [
       spec("产品类型", "RPL 无阀泵"),
@@ -194,12 +220,16 @@ const details = [
       "FOREACH RPL-P6.35 50–300 μL/rev valveless ceramic piston pump for reagent dispensing and filling"
     ),
     additionalImages: [
-      "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump-photo-01.webp",
-      "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump-photo-02.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump-drive-wiring.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p635-ceramic-piston-dosing-pump-front-view.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p635-reagent-dispensing-pump-head-ports-detail.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p635-rotary-piston-pump-wiring.webp",
     ],
     additionalImageAlts: [
-      "Foreach RPL-P6.35 valveless metering pump, angled view 1",
-      "Foreach RPL-P6.35 valveless metering pump, angled view 2",
+      "FOREACH RPL-P6.35 valveless metering pump showing the drive assembly and wiring",
+      "FOREACH RPL-P6.35 ceramic piston dosing pump, front view showing the pump head and displacement adjustment knob",
+      "FOREACH RPL-P6.35 reagent dispensing pump, close-up of the pump head, fluid ports and rotary piston drive",
+      "FOREACH RPL-P6.35 rotary piston pump with motor wiring",
     ],
 
     specs: [
@@ -288,14 +318,20 @@ const details = [
       "FOREACH RPL-P15 300–1200 μL/rev valveless ceramic piston pump for larger-volume dispensing and filling"
     ),
     additionalImages: [
-      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump-photo-01.webp",
-      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump-photo-02.webp",
-      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump-photo-03.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-ceramic-piston-dosing-pump-front-view.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-rotary-piston-metering-pump-head-detail.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-reagent-dispensing-pump-barbed-ports-detail.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-ceramic-piston-pump-nameplate.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-rotary-piston-pump-drive.webp",
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p15-metering-pump-adjustment.webp",
     ],
     additionalImageAlts: [
-      "Foreach RPL-P15 valveless metering pump, nameplate view",
-      "Foreach RPL-P15 valveless metering pump, angled view 1",
-      "Foreach RPL-P15 valveless metering pump, angled view 2",
+      "FOREACH RPL-P15 ceramic piston dosing pump, front view showing the displacement adjustment knob",
+      "FOREACH RPL-P15 rotary piston metering pump, close-up of the pump head, black connectors and drive mechanism",
+      "FOREACH RPL-P15 reagent dispensing pump, close-up of the pump head with barbed hose connectors",
+      "FOREACH RPL-P15 ceramic piston pump with model nameplate",
+      "FOREACH RPL-P15 rotary piston pump showing the drive mechanism",
+      "FOREACH RPL-P15 metering pump with displacement adjustment knob",
     ],
 
     specs: [

@@ -1,6 +1,7 @@
 import type { ProductSelectionProduct, ProductSelectionFilterLabel } from "./product-selection.types";
+import { withSmtp2SelectionConfiguration } from "./smtp2-configuration-selection";
 
-export const pipettingPumpSelectionProducts = [
+export const pipettingPumpSelectionProducts = ([
   {
     productId: "pipetting-smtp2-1000ul",
     categoryId: "pumps",
@@ -161,6 +162,85 @@ export const pipettingPumpSelectionProducts = [
     reservedConfigSlug: "smtp4-100ul",
   },
   {
+    productId: "pipetting-smtp4-250ul",
+    categoryId: "pumps",
+    productTypeId: "pipette-pump",
+    seriesId: "smtp4-gas-displacement-pipetting-pump",
+    seriesSlug: "smtp4-gas-displacement-pipetting-pump",
+    detailSlug: "smtp4-250ul",
+    cardTitle: {
+      zh: "SMTP4-250 μL",
+      en: "SMTP4-250 μL",
+      es: "SMTP4-250 μL",
+      fr: "SMTP4-250 μL",
+      ko: "SMTP4-250 μL",
+      ru: "SMTP4-250 μL",
+    },
+    cardSubtitle: {
+      zh: "定量分辨率 0.125 μL/步\n吸头配置可定制\n自动脱吸头",
+      en: "Resolution 0.125 μL/step\nCustom tip configuration\nAutomatic tip ejection",
+      es: "Resolución 0.125 μL/step\nConfiguración de punta personalizada\nExpulsión automática de puntas",
+      fr: "Résolution 0.125 μL/step\nConfiguration d'embout personnalisée\nÉjection automatique des embouts",
+      ko: "분해능 0.125 μL/step\n맞춤형 팁 구성\n자동 팁 배출",
+      ru: "Разрешение 0.125 μL/step\nПользовательская конфигурация наконечника\nАвтоматический сброс наконечника",
+    },
+    imageCard: "/images/products/pumps/pipetting-pumps/smtp4-100ul.webp",
+    imageAlt: {
+      zh: "SMTP4 气体置换式移液泵 250 μL",
+      en: "SMTP4 air displacement pipetting pump 250 μL",
+    },
+    categoryName: {
+      zh: "泵",
+      en: "Pumps",
+      es: "Bombas",
+      fr: "Pompes",
+      ko: "펌프",
+      ru: "Насосы",
+    },
+    productTypeName: {
+      zh: "移液泵",
+      en: "Pipetting Pumps",
+      es: "Bombas de pipeteo",
+      fr: "Pompes de pipetage",
+      ko: "피펫팅 펌프",
+      ru: "Пипетирующие насосы",
+    },
+    seriesName: {
+      zh: "SMTP4 气体置换式移液泵",
+      en: "SMTP4 Air Displacement Pipetting Pump",
+      es: "Bomba de pipeteo SMTP4 por desplazamiento de aire",
+      fr: "Pompe de pipetage SMTP4 à déplacement d’air",
+      ko: "SMTP4 공기 치환식 피펫팅 펌프",
+      ru: "Пипетирующий насос SMTP4 с воздушным вытеснением",
+    },
+    filters: {
+      filter01: "SMTP4 气体置换式移液泵",
+      filter02: "250 μL",
+    },
+    filter01: "SMTP4 气体置换式移液泵",
+    filter02: "250 μL",
+    tags: [
+          "250 μL",
+          "0.125 μL/步",
+          "吸头配置可定制",
+          "自动脱吸头"
+    ],
+    needDrawing: true,
+    needModel3d: true,
+    status: "active",
+    sortOrder: 25,
+    searchKeywords: {
+      zh: "SMTP4-250 μL 移液泵 SMTP4 气体置换式移液泵 SMTP4 气体置换式移液泵 250 μL 定量分辨率 0.125 μL/步 吸头配置可定制 自动脱吸头 250 μL 0.125 μL/步 吸头配置可定制 自动脱吸头",
+      en: "SMTP4-250 μL Pipetting Pumps SMTP4 Air Displacement Pipetting Pump 250 μL Resolution 0.125 μL/step Custom tip configuration Automatic tip ejection 250 μL 0.125 μL/step custom tip configuration automatic tip ejection",
+      es: "SMTP4-250 μL bombas de pipeteo SMTP4 por desplazamiento de aire 250 μL resolución 0.125 μL/step configuración de punta personalizada expulsión automática de puntas",
+      fr: "SMTP4-250 μL pompes de pipetage SMTP4 à déplacement d’air 250 μL résolution 0.125 μL/step configuration d'embout personnalisée éjection automatique des embouts",
+      ko: "SMTP4-250 μL 피펫팅 펌프 SMTP4 공기 치환식 250 μL 분해능 0.125 μL/step 맞춤형 팁 구성 자동 팁 배출",
+      ru: "SMTP4-250 μL пипетирующий насос SMTP4 с воздушным вытеснением 250 μL разрешение 0.125 μL/step пользовательская конфигурация наконечника автоматический сброс наконечника",
+    },
+    source: "pipetting-pump-xlsx",
+    reservedConfigSlug: "smtp4-250ul",
+  },
+  {
     productId: "pipetting-smtp4-500ul",
     categoryId: "pumps",
     productTypeId: "pipette-pump",
@@ -239,7 +319,7 @@ export const pipettingPumpSelectionProducts = [
     source: "pipetting-pump-xlsx",
     reservedConfigSlug: "smtp4-500ul",
   }
-] as unknown as ProductSelectionProduct[];
+] as unknown as ProductSelectionProduct[]).flatMap(withSmtp2SelectionConfiguration);
 
 export const pipettingPumpFilterLabels: ProductSelectionFilterLabel[] = [
   {

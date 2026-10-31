@@ -3,8 +3,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import LoadingProgress from "@/components/common/LoadingProgress";
 import styles from "./ProductCadViewer.module.css";
+import type { FittingCadFinish } from "@/data/products/detail/flat-bottom-fitting-cad-assets";
 
-type CadViewerProps = { modelId: string; title: string; locale: string; active: boolean; headMaterial?: "pmma" | "peek" };
+type CadViewerProps = { modelId: string; title: string; locale: string; active: boolean; headMaterial?: "pmma" | "peek"; fittingFinish?: FittingCadFinish; fittingProduct?: string; fittingAccessory?: string };
 const loadingCopy = {
   zh: ["3D 模型加载中", "3D 模型加载失败，请重试。", "重新加载"],
   en: ["Loading 3D model", "The 3D model could not load. Please try again.", "Retry"],
@@ -16,7 +17,7 @@ const loadingCopy = {
 
 /** Shared CAD viewer for prepared product display models. */
 export default function ProductCadViewer(props: CadViewerProps) {
-  return <LoadedCadViewer key={`${props.modelId}:${props.locale}:${props.headMaterial || ""}`} {...props} />;
+  return <LoadedCadViewer key={`${props.modelId}:${props.locale}:${props.headMaterial || ""}:${props.fittingFinish || ""}:${props.fittingProduct || ""}`} {...props} />;
 }
 
 function LoadedCadViewer(props: CadViewerProps) {
@@ -44,16 +45,25 @@ function LoadedCadViewer(props: CadViewerProps) {
   </div>;
 }
 
-function CadFrame({ modelId, title, locale, active, headMaterial, attempt = 0, onState }: CadViewerProps & {
+function CadFrame({ modelId, title, locale, active, headMaterial, fittingFinish, fittingProduct, fittingAccessory, attempt = 0, onState }: CadViewerProps & {
   attempt?: number;
   onState?: (status: "ready" | "error") => void;
 }) {
   const frame = useRef<HTMLIFrameElement>(null);
+  const initialAccessory = useRef(fittingAccessory).current;
+  const latestAccessory = useRef(fittingAccessory);
+  useEffect(() => {
+    latestAccessory.current = fittingAccessory;
+    if (fittingAccessory) frame.current?.contentWindow?.postMessage({ type: "fitting-accessory", code: fittingAccessory }, window.location.origin);
+  }, [fittingAccessory]);
   useEffect(() => {
     const send = () => frame.current?.contentWindow?.postMessage({ type: "solenoid-active", active }, window.location.origin);
     const ready = (event: MessageEvent) => {
       if (event.origin !== window.location.origin || event.source !== frame.current?.contentWindow) return;
-      if (event.data?.type === "solenoid-ready") send();
+      if (event.data?.type === "solenoid-ready") {
+        send();
+        if (latestAccessory.current) frame.current?.contentWindow?.postMessage({ type: "fitting-accessory", code: latestAccessory.current }, window.location.origin);
+      }
       if (event.data?.type === "cad-rendered") onState?.("ready");
       if (event.data?.type === "cad-error") onState?.("error");
     };
@@ -61,7 +71,7 @@ function CadFrame({ modelId, title, locale, active, headMaterial, attempt = 0, o
     return () => window.removeEventListener("message", ready);
   }, [active, modelId, onState]);
   return <iframe ref={frame} key={modelId}
-    src={`/models/valves/6010/viewer.html?v=fcadl01-focus-20261027&loader=parent&model=${encodeURIComponent(modelId)}&lang=${encodeURIComponent(locale)}${headMaterial ? `&head=${headMaterial}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
+    src={`/models/valves/6010/viewer.html?v=hard-tube-20261030-dimensions3&loader=parent&model=${encodeURIComponent(modelId)}&lang=${encodeURIComponent(locale)}${headMaterial ? `&head=${headMaterial}` : ""}${fittingFinish ? `&finish=${fittingFinish}` : ""}${fittingProduct ? `&product=${encodeURIComponent(fittingProduct)}` : ""}${initialAccessory ? `&accessory=${encodeURIComponent(initialAccessory)}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
     onError={() => onState?.("error")}
     title={`${title} 3D`} allow="fullscreen"
     style={{ display: "block", width: "100%", height: "min(680px, 75svh)", minHeight: 440, border: 0, borderRadius: 12 }} />;

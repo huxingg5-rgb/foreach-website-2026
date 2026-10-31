@@ -988,7 +988,7 @@ const isFittingReplacementDetailPage =
       <header
         ref={headerRef}
         className={`site-header ${headerLocaleClass} ${shouldUseSolidHeader ? "site-header-scrolled" : ""
-          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isVideoDetailPage || isLocalizedApplicationDomainPage
+          } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isLocalizedApplicationDomainPage
             ? "site-header-solid-page"
             : ""
           } ${openPanel !== "none" || desktopMegaKey ? "header-panel-open" : ""

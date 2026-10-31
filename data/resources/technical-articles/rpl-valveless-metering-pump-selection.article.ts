@@ -25,19 +25,19 @@ export const rplSelectionProducts = [
   {
     name: "RPL-P4",
     href: getValvelessPumpPath("zh-CN", "rpl-p4"),
-    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-metering-pump-front-angle.webp",
     alt: "RPL-P4 单头无阀计量泵外观",
   },
   {
     name: "RPL-P6.35",
     href: getValvelessPumpPath("zh-CN", "rpl-p635"),
-    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-metering-pump-front-angle.webp",
     alt: "RPL-P6.35 单头无阀计量泵外观",
   },
   {
     name: "RPL-P15",
     href: getValvelessPumpPath("zh-CN", "rpl-p15"),
-    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-pump.webp",
+    image: "/images/products/pumps/valveless-pumps/foreach-rpl-p15-valveless-metering-pump-front-angle.webp",
     alt: "RPL-P15 单头无阀计量泵外观",
   },
 ] as const;

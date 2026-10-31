@@ -1,0 +1,158 @@
+{
+  "mappingSource": "3D文件说明.txt: 2247=SMTP2-500; 2439=SMTP2-510; 2550=SMTP2-520; -02=without cover",
+  "models": [
+    {
+      "slug": "smtp2-500",
+      "sourceModel": "515-00-02247-02.stp",
+      "sourceSha256": "5410b7e5cd53dd58d3f8b25465b99e297a164cc13caef69e6e4f75b7e0ae0b90",
+      "adapter": "LTE008",
+      "adapterNominalLengthMm": 8,
+      "configuration": "without cover (-02)",
+      "tessellation": {
+        "linearUnit": "millimeter",
+        "linearDeflectionType": "absolute_value",
+        "linearDeflection": 0.03,
+        "angularDeflection": 0.5
+      },
+      "coordinateDecimals": 5,
+      "meshCount": 17,
+      "triangles": 58636,
+      "sizeMm": [
+        34.95349,
+        150.59334,
+        52.49283
+      ],
+      "asset": "smtp2-500.fcad.gz",
+      "bytes": 398631,
+      "sha256": "1245e61ceee365b5c18016b08e01a34110e23605668524a84f329fcdaaaf0a38",
+      "numericRoundTripExact": true,
+      "sourceMeshes": 64,
+      "removedMeshes": 47,
+      "sourceFaces": 3425,
+      "keptFaces": 2400,
+      "removedFaces": 1025,
+      "sourceTriangles": 128982,
+      "beforeBytes": 2017138,
+      "reductionPercent": 80.2,
+      "rasterRestoredFaces": 39,
+      "finishes": {
+        "black": 500,
+        "chrome": 5,
+        "polymer": 611,
+        "pcb": 180,
+        "metal": 879,
+        "connector": 225
+      },
+      "appearanceReference": "Existing product gallery photographs",
+      "exteriorOptimization": {
+        "rayDirections": 102,
+        "rasterViews": 142,
+        "rasterResolution": 1024,
+        "wholeFaces": true,
+        "geometryDecimation": false
+      }
+    },
+    {
+      "slug": "smtp2-510",
+      "sourceModel": "515-00-02439-02.stp",
+      "sourceSha256": "3c64c3b89fe9939bd54396080167458e9fa4ff9d06fa4a2c3f10234ef17ae1a1",
+      "adapter": "LTE045",
+      "adapterNominalLengthMm": 45,
+      "configuration": "without cover (-02)",
+      "tessellation": {
+        "linearUnit": "millimeter",
+        "linearDeflectionType": "absolute_value",
+        "linearDeflection": 0.03,
+        "angularDeflection": 0.5
+      },
+      "coordinateDecimals": 5,
+      "meshCount": 23,
+      "triangles": 60091,
+      "sizeMm": [
+        31,
+        191.59334,
+        52.49283
+      ],
+      "asset": "smtp2-510.fcad.gz",
+      "bytes": 407367,
+      "sha256": "5c20b217bc07174745827c9df737ec866354f0a1dee7b5e6dd24868e7a5c8016",
+      "numericRoundTripExact": true,
+      "sourceMeshes": 52,
+      "removedMeshes": 29,
+      "sourceFaces": 4167,
+      "keptFaces": 2507,
+      "removedFaces": 1660,
+      "sourceTriangles": 133663,
+      "beforeBytes": 2035022,
+      "reductionPercent": 80,
+      "rasterRestoredFaces": 40,
+      "finishes": {
+        "polymer": 613,
+        "black": 611,
+        "pcb": 184,
+        "metal": 868,
+        "connector": 225,
+        "chrome": 6
+      },
+      "appearanceReference": "Existing product gallery photographs",
+      "exteriorOptimization": {
+        "rayDirections": 102,
+        "rasterViews": 142,
+        "rasterResolution": 1024,
+        "wholeFaces": true,
+        "geometryDecimation": false
+      }
+    },
+    {
+      "slug": "smtp2-520",
+      "sourceModel": "515-00-02550-02.stp",
+      "sourceSha256": "4a37bde103250b522161d16cdd71238e9925cdcfd4acff38ed727a00f5d14e4d",
+      "adapter": "LTE072",
+      "adapterNominalLengthMm": 72,
+      "configuration": "without cover (-02)",
+      "tessellation": {
+        "linearUnit": "millimeter",
+        "linearDeflectionType": "absolute_value",
+        "linearDeflection": 0.03,
+        "angularDeflection": 0.5
+      },
+      "coordinateDecimals": 5,
+      "meshCount": 23,
+      "triangles": 59242,
+      "sizeMm": [
+        31,
+        218.59334,
+        52.49283
+      ],
+      "asset": "smtp2-520.fcad.gz",
+      "bytes": 400934,
+      "sha256": "f17769c0d96392b8f735cb72d70c32f2d4badbd40aa8e9b0ab54a49696fca0d6",
+      "numericRoundTripExact": true,
+      "sourceMeshes": 68,
+      "removedMeshes": 45,
+      "sourceFaces": 4100,
+      "keptFaces": 2498,
+      "removedFaces": 1602,
+      "sourceTriangles": 132564,
+      "beforeBytes": 2028646,
+      "reductionPercent": 80.2,
+      "rasterRestoredFaces": 38,
+      "finishes": {
+        "polymer": 608,
+        "black": 607,
+        "pcb": 183,
+        "metal": 869,
+        "connector": 225,
+        "chrome": 6
+      },
+      "appearanceReference": "Existing product gallery photographs",
+      "exteriorOptimization": {
+        "rayDirections": 102,
+        "rasterViews": 142,
+        "rasterResolution": 1024,
+        "wholeFaces": true,
+        "geometryDecimation": false
+      }
+    }
+  ]
+}

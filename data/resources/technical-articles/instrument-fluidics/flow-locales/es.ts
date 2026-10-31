@@ -229,7 +229,7 @@ export const copy = {
         },
         {
           "type": "paragraph",
-          "text": "Estas curvas Q60 corresponden a conexiones de 3/8″ y 1/2″; no deben extrapolarse a 3/4″ (19.0 mm) en proporción al diámetro. Q60-PP admite una presión de trabajo de 4.2 bar. Con salida a presión atmosférica o manométrica positiva, los puntos cuya pérdida supera ese valor no son condiciones de funcionamiento utilizables."
+          "text": "Estas curvas Q60 corresponden a conexiones de 3/8″ y 1/2″; no deben extrapolarse a 3/4″ (19.0 mm) en proporción al diámetro. Q60-PP admite una presión de trabajo de 4.2 bar. Con salida a presión atmosférica o manométrica positiva, los puntos cuya pérdida supera ese valor no son condiciones de funcionamiento utilizables. Consulte el artículo de presión de trabajo en las lecturas relacionadas."
         }
       ]
     },
@@ -489,6 +489,10 @@ export const copy = {
         {
           "type": "links",
           "items": [
+            {
+              "href": "/es/resources/technical-articles/quick-disconnect-coupling-pressure-rating/",
+              "label": "Presión de trabajo de los acoplamientos rápidos: temperatura y conexión bajo presión"
+            },
             {
               "href": "/es/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
               "label": "¿Qué es un acoplamiento rápido? Conexión macho/hembra, válvulas y selección"

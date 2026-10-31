@@ -85,7 +85,7 @@ export const copy = {
       p("Record the connection and available installation space together with the fluid, temperature, peak pressure and maintenance conditions. This shows whether the flow benefit of a larger bore is compatible with the system's pressure and service requirements."),
     ] },
     { title: "How should quick disconnect pressure performance and sealing be validated in equipment?", tocLabel: "Assembly validation", blocks: [
-      p("Use the intended complete body-and-insert pair, seals, tubing and support arrangement. A short pressure-hold test with water at room temperature only characterizes those conditions; it does not cover hot cleaning, pressure cycling or repeated servicing."),
+      p("Use the intended complete body-and-insert pair, seals, tubing and support arrangement. A short room-temperature water hold test only characterizes those conditions; it does not cover hot cleaning, pressure cycling or repeated servicing."),
       table(["Validation item", "Record", "Purpose"], [
         ["Configuration and service", "Full part numbers, materials, valve arrangement, tubing material and size, fluid and temperature", "Match the test assembly to the intended installation"],
         ["Steady pressure and pressure drop", "Pressure on both sides and delivered flow at the required operating point", "Check pressure capability separately from available differential pressure"],

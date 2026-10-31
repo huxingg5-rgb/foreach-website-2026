@@ -1,4 +1,3 @@
-import "./InternationalHome.css";
 // 杩欐槸鍏充簬 components/home/HomePageContent.tsx 鐨勬枃浠讹細鐢ㄤ簬绠＄悊棣栭〉鎵€鏈夋ā鍧楃殑鎺掑垪椤哄簭
 // 杩欎釜鏂囦欢鐨勪綔鐢細鍙礋璐ｂ€滈椤电粨鏋勭粍鍚堚€濓紝涓嶇洿鎺ュ啓 Hero 棣栧睆鐨勫叿浣撳唴瀹?
 
@@ -55,7 +54,7 @@ export default function HomePageContent({ locale }: HomePageContentProps) {
   const languageTextLayoutClass = getLanguageTextLayoutClass(locale);
 
   return (
-    <div className={`site-page ${languageTextLayoutClass}${locale !== "zh-CN" ? " international-home" : ""}`} data-home-locale={locale}>
+    <div className={`site-page ${languageTextLayoutClass}`}>
       <main>
         {/* 绗竴灞忥細Hero 棣栧睆鍖哄煙 */}
         <HomeHeroSection locale={locale} />

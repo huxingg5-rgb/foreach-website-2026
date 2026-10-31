@@ -1,3 +1,4 @@
+import { replaceTranslatedPhrase } from "./translated-phrase-spacing";
 type DetailRecord = Record<string, any>;
 
 const HAN_PATTERN = /[\u3400-\u9fff]/;
@@ -1829,7 +1830,7 @@ function translateActualPhrase(value: string) {
     ...ACTUAL_NARRATIVE_PHRASE_TRANSLATIONS,
     ...FITTING_FRAGMENT_TRANSLATIONS,
   ].sort((left, right) => right[0].length - left[0].length)) {
-    translated = translated.split(source).join(target);
+    translated = replaceTranslatedPhrase(translated, source, target);
   }
 
   return normalizeSpacing(translated);
@@ -2515,7 +2516,7 @@ function translateKnownPhrases(value: string) {
   for (const [source, target] of [...PHRASE_TRANSLATIONS].sort(
     (left, right) => right[0].length - left[0].length
   )) {
-    translated = translated.split(source).join(target);
+    translated = replaceTranslatedPhrase(translated, source, target);
   }
 
   return normalizeSpacing(translated);
@@ -2736,7 +2737,7 @@ function translateNarrativeFragment(value: string) {
     ...Object.entries(NARRATIVE_EXACT_TRANSLATIONS),
     ...NARRATIVE_PHRASE_TRANSLATIONS,
   ].sort((left, right) => right[0].length - left[0].length)) {
-    translated = translated.split(source).join(target);
+    translated = replaceTranslatedPhrase(translated, source, target);
   }
 
   return normalizeSpacing(
@@ -3011,10 +3012,13 @@ function translateFittingFragment(value: string) {
 
   let translated = value;
 
-  for (const [source, target] of [...FITTING_FRAGMENT_TRANSLATIONS].sort(
+  for (const [source, target] of [
+    ...FITTING_FRAGMENT_TRANSLATIONS,
+    ...NARRATIVE_PHRASE_TRANSLATIONS,
+  ].sort(
     (left, right) => right[0].length - left[0].length
   )) {
-    translated = translated.split(source).join(target);
+    translated = replaceTranslatedPhrase(translated, source, target);
   }
 
   translated = translateKnownPhrases(translated);

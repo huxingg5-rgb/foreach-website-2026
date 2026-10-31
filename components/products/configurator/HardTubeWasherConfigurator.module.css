@@ -1,0 +1,122 @@
+.selector { --right-inset: 32px; }
+.selector > header, .selector > footer, .selector .config { padding-right: var(--right-inset); }
+.selector :is(h2, h3, h4, strong, b, legend, button) { font-weight: 500; }
+.selector h2 { font-weight: 600; font-size: 27px; }
+.selector :is(button, a):focus-visible { outline: 2px solid #173368; outline-offset: 4px; }
+.footer .supportNotice { display: block; }
+.supportNotice a { color: #173368; text-decoration: underline; text-underline-offset: 3px; }
+.supportNotice a:hover { color: var(--brand-cyan, #09e9b4); }
+.main { grid-template-columns: minmax(300px, 33%) minmax(0, 1fr); }
+.summaryTable { margin-top: 16px; }
+.summaryTable > div { grid-template-columns: 86px minmax(0, 1fr); min-height: 41px; }
+.productName { margin: 9px 0 0; color: #5f6b7a; font-size: 13px; }
+.washerSummary { margin-top: 22px; padding-top: 18px; border-top: 1px solid #e5ebf2; }
+.eyebrow { display: block; color: #5f6b7a; font-size: 13px; }
+.washerSummary strong { display: block; margin-top: 10px; color: #173368; font-size: 18px; overflow-wrap: anywhere; }
+.washerSummary p { margin: 8px 0 0; color: #5f6b7a; font-size: 12px; line-height: 1.6; }
+.config { gap: 24px; }
+.configBody { display: flex; flex-direction: column; gap: 22px; min-height: 0; }
+.tubeOptions button { white-space: nowrap; }
+.optionGrid { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 24px; }
+.optionGridWithTube { grid-template-columns: minmax(110px, .9fr) minmax(88px, .7fr) minmax(150px, 1.2fr) minmax(140px, 1fr); gap: 20px; }
+.options { display: grid; gap: 12px; margin-top: 5px; }
+.materialOption { min-height: 48px; }
+.materialOption small { display: block; margin-top: 7px; color: #7a8594; font-size: 12px; font-weight: 400; }
+.materialOption:disabled small { color: #a5adba; }
+.dimensions { border-left: 1px solid #e5ebf2; padding-left: 22px; }
+.dimensions h4 { margin: 0 0 18px; font-size: 14px; }
+.dimensions dl { margin: 0; display: grid; gap: 17px; font-size: 13px; }
+.dimensions dl > div { display: flex; justify-content: space-between; gap: 12px; }
+.dimensions dt { color: #5f6b7a; }
+.dimensions dd { margin: 0; white-space: nowrap; }
+.dimensions p { margin-top: 22px; color: #8a96a8; font-size: 12px; line-height: 1.6; }
+.selectionNote { margin: 0; color: #5f6b7a; font-size: 13px; line-height: 1.7; }
+.result { margin-top: auto; padding: 16px 20px; background: #f6f9fc; border: 1px solid #e5ebf2; }
+.resultHeader { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-bottom: 10px; color: #5f6b7a; font-size: 13px; }
+.resultHeader button { min-height: 32px; padding: 0 14px; font-size: 12px; }
+.resultRow { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: start; gap: 20px; padding: 11px 0; }
+.resultRow + .resultRow { border-top: 1px solid #e5ebf2; }
+.resultRow > span { color: #5f6b7a; font-size: 13px; padding-top: 3px; }
+.resultRow strong { display: block; color: #173368; font-size: 20px; line-height: 1.4; overflow-wrap: anywhere; }
+.resultRow small { display: block; margin-top: 4px; color: #5f6b7a; font-size: 12px; }
+.resultRow .pending { color: #8a96a8; font-size: 16px; }
+.confirmedList { display: grid; gap: 8px; margin: -8px 0 0; }
+.confirmed { display: flex; align-items: baseline; gap: 8px 14px; flex-wrap: wrap; margin: 0; color: #173368; font-size: 15px; line-height: 1.7; }
+.confirmed > span:first-child { min-width: 6em; color: #5f6b7a; }
+.confirmed small { color: #5f6b7a; font-size: 13px; }
+/* Keep the Chinese layout while allowing longer localized labels to wrap. */
+.selector:not([lang="zh"]) { grid-template-rows: auto minmax(0, 1fr) auto; }
+.selector:not([lang="zh"]) > header { min-height: 82px; padding-top: 18px; padding-bottom: 18px; }
+.selector:not([lang="zh"]) > footer { min-height: 76px; padding-top: 14px; padding-bottom: 14px; }
+.selector:not([lang="zh"]) .summaryTable > div { grid-template-columns: minmax(100px, .95fr) minmax(0, 1fr); }
+.selector:not([lang="zh"]) .resultRow { grid-template-columns: minmax(65px, .2fr) minmax(0, 1fr); }
+.selector:not([lang="zh"]) :is(legend, button, .dimensions dt) { white-space: normal; overflow-wrap: anywhere; }
+.selector:not([lang="zh"]) .tubeOptions button { white-space: nowrap; }
+@media (min-width: 901px) {
+  .selector .optionGrid > fieldset:first-child { grid-column: auto; }
+}
+@media (max-width: 1180px) {
+  .selector { --right-inset: 24px; }
+}
+@media (min-width: 901px) and (max-height: 780px) {
+  .selector { grid-template-rows: 90px minmax(0, 1fr) 80px; }
+  .selector > header { padding-top: 22px; }
+  .summary, .config { padding-top: 18px; padding-bottom: 18px; }
+  .config { gap: 18px; }
+  .configBody { gap: 12px; }
+  .options { gap: 2px; }
+  .materialOption { min-height: 42px; }
+  .dimensions p { margin-top: 14px; }
+  .result { padding: 12px 18px; }
+  .resultHeader { margin-bottom: 4px; }
+  .resultRow { padding: 7px 0; }
+  .resultRow strong { font-size: 18px; }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  .optionGrid { grid-template-columns: 1fr 1fr; }
+  .dimensions { grid-column: 1 / -1; border-left: 0; padding: 12px 0 0; border-top: 1px solid #e5ebf2; }
+  .dimensions h4, .dimensions p { display: none; }
+  .dimensions dl { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 1100px) {
+  .optionGridWithTube { grid-template-columns: minmax(110px, .9fr) minmax(88px, .7fr) minmax(150px, 1.2fr); }
+  .optionGridWithTube .dimensions { grid-column: 1 / -1; border-left: 0; padding: 14px 0 0; border-top: 1px solid #e5ebf2; }
+  .optionGridWithTube .dimensions dl { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .overlay { padding: 12px; }
+  .main { display: block; }
+  .configBody { min-height: auto; }
+  .selector { --right-inset: 20px; grid-template-rows: 78px minmax(0, 1fr) auto; }
+  .selector > header { padding-top: 0; align-items: center; }
+  .selector h2 { font-size: 22px; }
+  .summary { padding: 18px 20px; }
+  .summaryTable { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; }
+  .summaryTable > div { grid-template-columns: 78px minmax(0, 1fr); gap: 10px; }
+  .washerSummary { margin-top: 14px; padding-top: 14px; }
+  .config { padding: 20px; }
+  .footer { padding: 12px 20px; }
+}
+@media (max-width: 600px) {
+  .selector:not([lang="zh"]) .summaryTable > div { grid-template-columns: 1fr; }
+  .selector { --right-inset: 16px; }
+  .overlay { padding: 0; }
+  .selector h2 { font-size: 21px; }
+  .summaryTable { grid-template-columns: 1fr 1fr; column-gap: 14px; }
+  .summaryTable > div { grid-template-columns: 1fr; gap: 4px; padding: 8px 0; }
+  .config > div:first-child { display: block; }
+  .config > div:first-child > span { display: block; text-align: left; margin-top: 8px; }
+  .optionGrid { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+  .optionGridWithTube .materialGroup { grid-column: 1 / -1; }
+  .dimensions { grid-column: 1 / -1; border-left: 0; padding: 14px 0 0; border-top: 1px solid #e5ebf2; }
+  .dimensions h4 { margin-bottom: 12px; }
+  .dimensions dl { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .dimensions dl > div { display: block; }
+  .dimensions dd { margin-top: 6px; }
+  .dimensions p { margin: 12px 0 0; }
+  .result { padding: 14px; }
+  .resultRow { gap: 8px; grid-template-columns: 32px minmax(0, 1fr); }
+  .resultRow strong { font-size: 16px; }
+  .footer { padding: 12px 16px max(12px, env(safe-area-inset-bottom)); }
+  .confirmed { font-size: 14px; }
+}

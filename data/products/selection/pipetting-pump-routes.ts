@@ -1,15 +1,15 @@
 import paths from "./pipetting-pump-paths.json";
-export const pipettingModelSlugs = ["smtp2-1000ul", "smtp4-100ul", "smtp4-500ul"] as const;
+export const pipettingModelSlugs = ["smtp2-500", "smtp2-510", "smtp2-520", "smtp4-100ul", "smtp4-250ul", "smtp4-500ul"] as const;
 export function getPipettingSeriesSlug(key: "smtp2" | "smtp4") { return paths[key]; }
 export function getPipettingSeriesKey(slug: string): "smtp2" | "smtp4" | undefined {
   return slug === paths.smtp2 ? "smtp2" : slug === paths.smtp4 ? "smtp4" : undefined;
 }
 export function getPipettingModelPath(locale: string, model: string) {
-  if (!pipettingModelSlugs.includes(model as typeof pipettingModelSlugs[number])) return undefined;
+  if (model !== "smtp2-1000ul" && !pipettingModelSlugs.includes(model as typeof pipettingModelSlugs[number])) return undefined;
   return `${["zh", "zh-CN", ""].includes(locale) ? "" : `/${locale}`}/products/pumps/pipetting-pumps/${paths[model as keyof typeof paths]}/`;
 }
 export function normalizePipettingPath(href: string) {
-  return href.replace(/^(\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/pumps\/pipetting-pumps\/)([^/?#]+)\/?([?#].*)?$/, (all, base, slug, suffix) => {
+  return href.replace(/\/smtp2-programmable-pipetting-module\/smtp2-1000ul(?=\/|[?#]|$)/, "/smtp2-programmable-pipetting-module").replace(/^(\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/pumps\/pipetting-pumps\/)([^/?#]+)\/?([?#].*)?$/, (all, base, slug, suffix) => {
     const target = paths[slug as keyof typeof paths];
     return target ? `${base}${target}/${suffix || ""}` : all;
   });

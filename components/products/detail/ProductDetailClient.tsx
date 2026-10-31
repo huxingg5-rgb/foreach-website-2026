@@ -54,6 +54,7 @@ import {
   isDiaphragmPumpPublicPath,
 } from "@/data/products/detail/diaphragm-pump-routes";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
+import { findHardTubeCartBundle, getHardTubeSelectionSummary } from "@/components/selection-cart/selection-cart-bundles";
 import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
 /* =========================================================
    ProductDetailClient.tsx
@@ -84,6 +85,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import type { CSSProperties, MouseEvent, ReactNode } from "react";
 import { applyPdm5LocaleCopy } from "@/data/products/detail/pdm5-locales";
+import { getAbdGalleryData } from "@/data/products/detail/abd-gallery";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
 import { getHardTubeSeo } from "@/data/products/detail/hard-tube-seo";
 import { applyHpValveDetailCopy } from "@/data/products/detail/hp-content";
@@ -116,6 +118,9 @@ import ModelPreviewTrigger from "./ModelPreviewTrigger";
 import { getValvelessPumpAssets } from "@/data/products/detail/valveless-pump-assets";
 import { getDiaphragmPumpCadAssets } from "@/data/products/detail/diaphragm-pump-cad-assets";
 import { getPistonPumpCadAssets } from "@/data/products/detail/piston-pump-cad-assets";
+import { getHardTubeFittingCadAssets } from "@/data/products/detail/hard-tube-fitting-cad-assets";
+import { getSmtp4CadAssets } from "@/data/products/detail/smtp4-cad-assets";
+import { getSmtp2CadAssets } from "@/data/products/detail/smtp2-cad-assets";
 import {
   Pump2DFileCheckingDisplay,
   Pump3DFileCheckingDisplay,
@@ -136,6 +141,10 @@ import { getSolenoidConfigurator } from "@/data/products/configurator/solenoid-v
 import { getValvelessPumpConfigurator } from "@/data/products/configurator/valveless-pumps";
 import { getDiaphragmPumpConfigurator } from "@/data/products/configurator/diaphragm-pumps";
 import { getSolenoidViewConfigurationText } from "@/data/products/configurator/solenoid-valves.i18n";
+import HardTubeWasherConfigurator from "@/components/products/configurator/HardTubeWasherConfigurator";
+import hardTubeStyles from "@/components/products/configurator/HardTubeWasherConfigurator.module.css";
+import { getHardTubeAccessoryConfig, getHardTubeAccessory, describeHardTubeAccessory, type HardTubeAccessoryChoice } from "@/data/products/configurator/hard-tube-accessories";
+import { getHardTubeAccessoryCopy, getHardTubeAccessoryKindLabel, getHardTubeMaterialLabel, formatHardTubeCopy } from "@/data/products/configurator/hard-tube-accessories.intl";
 
 /* PVC_CONFIGURATOR_ENGLISH_START */
 import {
@@ -1367,7 +1376,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
           item: canonicalUrl,
         },
       ];
-  const chineseBreadcrumbItems: ProductDetailPageData["breadcrumbs"] | null = ((data.category === "tubing-assemblies" || data.solenoidAuthoredContent) ? data.breadcrumbs : undefined) || getTubingDetailBreadcrumbs(pathname, locale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
+  const chineseBreadcrumbItems: ProductDetailPageData["breadcrumbs"] | null = data.breadcrumbs || getTubingDetailBreadcrumbs(pathname, locale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
   const breadcrumbItems = chineseBreadcrumbItems
     ? chineseBreadcrumbItems.map((item) => ({ name: item.label, item: item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl }))
     : legacyBreadcrumbItems;
@@ -1571,6 +1580,7 @@ export default function ProductDetailClient({
         : sourceData;
 
       localizedData = applyPdm5LocaleCopy(sourceData, localizedData, configuratorLocale);
+      localizedData = { ...localizedData, ...getAbdGalleryData(sourceData.slug, configuratorLocale) };
 
       if (String(sourceData.category) === "tubing") {
         localizedData = { ...localizedData, ...getTubingGalleryData(sourceData.slug, configuratorLocale) };
@@ -1642,7 +1652,10 @@ export default function ProductDetailClient({
   const rplAssets = data.productTypeId === "valveless-pump" ? getValvelessPumpAssets(data.slug) : undefined;
   const diaphragmCadAssets = isDiaphragmPage ? getDiaphragmPumpCadAssets(data.slug) : undefined;
   const pistonCadAssets = getPistonPumpCadAssets(data.slug);
-  const cadAssets = rplAssets || diaphragmCadAssets || pistonCadAssets;
+  const smtp2CadAssets = getSmtp2CadAssets(data.slug);
+  const smtp4CadAssets = getSmtp4CadAssets(data.slug);
+  const fittingCadAssets = data.productTypeId === "hard-tube-fittings" ? getHardTubeFittingCadAssets(data.slug) : undefined;
+  const cadAssets = rplAssets || diaphragmCadAssets || pistonCadAssets || smtp2CadAssets || smtp4CadAssets || fittingCadAssets;
   const model3dUrl = String(
     data.productTypeId === "valveless-pump" ? rplAssets?.model3dUrl || "" :
     cadAssets?.model3dUrl || data.model3dUrl ||
@@ -1688,7 +1701,7 @@ export default function ProductDetailClient({
     : undefined;
   const displayProductTitle =
     probeControlDetailCopy?.h1 || reviewedIntroductionEn?.title ||
-    ((data.tubingAuthoredContent || data.mrv3AuthoredContent || data.solenoidAuthoredContent) ? data.h1Title : undefined) ||
+    ((data.tubingAuthoredContent || data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.smtp2Variant || data.smtp4AuthoredContent) ? data.h1Title : undefined) ||
     diaphragmCopy?.title ||
     (useAuthoredPistonCopy || useAuthoredValvelessCopy ? String(data.model || "") : getScopedProductDisplayTitle(
       data,
@@ -1854,13 +1867,13 @@ export default function ProductDetailClient({
             : displayProductTitle,
         },
       ]);
-  const productBreadcrumbItems = ((isTubingAssembly || data.solenoidAuthoredContent) ? sourceData.breadcrumbs : undefined) || getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
+  const productBreadcrumbItems = sourceData.breadcrumbs || getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
     pathname, configuratorLocale, legacyProductBreadcrumbItems.at(-1)?.label,
   ) || legacyProductBreadcrumbItems;
   if (String(data.category) === "control" && data.slug === "abd-air-bubble-detector") {
     productBreadcrumbItems[productBreadcrumbItems.length - 1] = { ...productBreadcrumbItems[productBreadcrumbItems.length - 1], label: "ABD" };
   }
-    const { addItem, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
+    const { items: cartItems, addItem, addBundle, getItem, toggleDrawingNeed, removeItem } = useSelectionCart();
 
   const analyticsProductId = String(
     explicitAnalyticsProductId ||
@@ -2107,6 +2120,21 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     variant => variant.id === selectedDetailVariantId,
   ) ?? null;
   const isDetailModelConfiguratorEnabled = Boolean(detailModelConfigurator);
+  const hardTubeAccessoryConfig = getHardTubeAccessoryConfig(data, configuratorLocale);
+  const hardTubeCopy = getHardTubeAccessoryCopy(configuratorLocale);
+  const hardTubeText = (template: string) => formatHardTubeCopy(template, {
+    kind: getHardTubeAccessoryKindLabel(hardTubeAccessoryConfig?.accessoryKind || "垫片", configuratorLocale),
+  });
+  const isHardTubeConfiguratorEnabled = Boolean(hardTubeAccessoryConfig);
+  const [isHardTubeConfiguratorOpen, setIsHardTubeConfiguratorOpen] = useState(false);
+  const [hardTubeSelection, setHardTubeSelection] = useState<{ productCode: string; choice: HardTubeAccessoryChoice | null } | null>(null);
+  const hardTubeAccessoryChoice = hardTubeSelection?.productCode === hardTubeAccessoryConfig?.productCode
+    && (hardTubeSelection?.choice === "none" || getHardTubeAccessory(hardTubeAccessoryConfig, hardTubeSelection?.choice ?? null))
+    ? hardTubeSelection?.choice ?? null : null;
+  function setHardTubeAccessoryChoice(choice: HardTubeAccessoryChoice | null) {
+    if (hardTubeAccessoryConfig) setHardTubeSelection({ productCode: hardTubeAccessoryConfig.productCode, choice });
+  }
+  const hardTubeSelectionSummary = hardTubeAccessoryConfig ? getHardTubeSelectionSummary(cartItems, hardTubeAccessoryConfig, hardTubeAccessoryChoice) : [];
   const hasConcreteDisplayModel = isDetailModelConfiguratorEnabled
     ? Boolean(selectedDetailVariant?.model)
     : !isCustomProduct && (isTubingConfiguratorEnabled
@@ -2437,12 +2465,46 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
 
   const currentDetailCartItem =
-    getItem(
+    isHardTubeConfiguratorEnabled && hardTubeAccessoryChoice && hardTubeAccessoryChoice !== "none"
+      ? findHardTubeCartBundle(cartItems, hardTubeAccessoryConfig!, hardTubeAccessoryChoice)?.primary
+      : getItem(
       detailCartSourceType,
       getDetailCartProductCode()
     );
-  const isDetailProductSelected = Boolean(currentDetailCartItem);
-  const isDetailDrawingSelected = Boolean(currentDetailCartItem?.needDrawing);
+  const isDetailProductSelected = isHardTubeConfiguratorEnabled
+    ? hardTubeAccessoryChoice !== null && isHardTubeSelectionAdded(hardTubeAccessoryChoice)
+    : Boolean(currentDetailCartItem);
+  const isDetailDrawingSelected = isHardTubeConfiguratorEnabled && hardTubeAccessoryChoice && hardTubeAccessoryChoice !== "none"
+    ? Boolean(findHardTubeCartBundle(cartItems, hardTubeAccessoryConfig!, hardTubeAccessoryChoice)?.items.some(item => item.needDrawing))
+    : Boolean(currentDetailCartItem?.needDrawing);
+
+  function isHardTubeSelectionAdded(choice: HardTubeAccessoryChoice) {
+    if (!hardTubeAccessoryConfig) return false;
+    return choice === "none"
+      ? Boolean(getItem(detailCartSourceType, getDetailCartProductCode()))
+      : Boolean(findHardTubeCartBundle(cartItems, hardTubeAccessoryConfig!, choice));
+  }
+
+  function addHardTubeSelection(choice: HardTubeAccessoryChoice, needDrawing = false) {
+    if (!hardTubeAccessoryConfig || (choice !== "none" && !getHardTubeAccessory(hardTubeAccessoryConfig, choice))) return;
+    setHardTubeAccessoryChoice(choice);
+    const washer = getHardTubeAccessory(hardTubeAccessoryConfig, choice);
+    if (washer) {
+      addBundle(createDetailCartItem(needDrawing), [{
+        sourceType: detailCartSourceType,
+        sourceLabel: hardTubeCopy.source,
+        productName: formatHardTubeCopy(hardTubeCopy.accessoryProduct, { material: getHardTubeMaterialLabel(washer.material, configuratorLocale), kind: getHardTubeAccessoryKindLabel(washer.kind, configuratorLocale), model: hardTubeAccessoryConfig.model }),
+        productCode: washer.productCode,
+        foreachModel: washer.model,
+        competitorModels: [],
+        quantity: 1,
+        needDrawing,
+        detailHref: hardTubeAccessoryConfig.detailHref,
+      }]);
+    } else if (choice === "none" && !getItem(detailCartSourceType, getDetailCartProductCode())) {
+      addItem(createDetailCartItem(needDrawing));
+    }
+  }
 
   function handleOpenConfigurator() {
     console.info("配置选择端口预留", data.slug);
@@ -2528,6 +2590,12 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
 
   function handleAddDrawing() {
+    if (isHardTubeConfiguratorEnabled && hardTubeAccessoryChoice && hardTubeAccessoryChoice !== "none") {
+      const bundle = findHardTubeCartBundle(cartItems, hardTubeAccessoryConfig!, hardTubeAccessoryChoice);
+      if (bundle) toggleDrawingNeed(bundle.primary.id, !bundle.items.some(item => item.needDrawing));
+      else addHardTubeSelection(hardTubeAccessoryChoice, true);
+      return;
+    }
     const item = createDetailCartItem(true);
 
     if (!item.productCode || !item.foreachModel) {
@@ -2566,6 +2634,11 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
 
   function handleAddList() {
+    if (isHardTubeConfiguratorEnabled) {
+      if (hardTubeAccessoryChoice === null) setIsHardTubeConfiguratorOpen(true);
+      else addHardTubeSelection(hardTubeAccessoryChoice);
+      return;
+    }
     const item = createDetailCartItem(false);
 
     if (!item.productCode || !item.foreachModel) {
@@ -3117,6 +3190,20 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           }}
         />
       ) : null}
+      {isHardTubeConfiguratorEnabled && isHardTubeConfiguratorOpen ? (
+        <HardTubeWasherConfigurator
+          key={hardTubeAccessoryConfig!.productCode}
+          config={hardTubeAccessoryConfig!}
+          value={hardTubeAccessoryChoice}
+          isAdded={isHardTubeSelectionAdded}
+          onAdd={addHardTubeSelection}
+          onClose={() => setIsHardTubeConfiguratorOpen(false)}
+          onConfirm={choice => {
+            setHardTubeAccessoryChoice(choice);
+            setIsHardTubeConfiguratorOpen(false);
+          }}
+        />
+      ) : null}
       {/* PFA_TUBING_CONFIGURATOR_RENDER_START */}
       {isPfaTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
@@ -3531,18 +3618,18 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                       <>
                         <span className={styles.modelLabel}>{copy.model}</span>
                         <span className={styles.modelCode}>
-                          {customProductCopy.notice}
+                          {data.smtp2Variant ? data.productCode : customProductCopy.notice}
                         </span>
                       </>
                     ) : (
                       <>
-                        <span className={styles.modelLabel}>{copy.model}</span>
+                        <span className={styles.modelLabel}>{copy.model}{hardTubeAccessoryConfig && configuratorLocale !== "zh" ? "\u00a0" : ""}</span>
                         <span
                           className={
                             styles.modelCode
                           }
                         >
-                          {isTubingConfiguratorEnabled
+                          {hardTubeAccessoryConfig ? hardTubeAccessoryConfig.model : isTubingConfiguratorEnabled
                             ? selectedTubingVariant
                                 ?.model ||
                               getDisplayModelText(
@@ -3559,6 +3646,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     className={styles.button}
                     type="button"
                     onClick={() => {
+                      if (isHardTubeConfiguratorEnabled) {
+                        setIsHardTubeConfiguratorOpen(true);
+                        return;
+                      }
                       if (detailModelConfigurator) {
                         setOpenDetailModelConfiguratorId(detailModelConfigurator.id);
                         return;
@@ -3682,7 +3773,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                       window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
-                    {singleDetailVariant
+                    {isHardTubeConfiguratorEnabled
+                      ? hardTubeAccessoryChoice !== null ? hardTubeCopy.reselect : hardTubeCopy.configure
+                      : singleDetailVariant
                       ? getSolenoidViewConfigurationText(configuratorLocale)
                       : isDetailModelConfiguratorEnabled
                       ? selectedDetailVariant ? copy.reselect : copy.selectModel
@@ -3710,6 +3803,22 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 ) : null}
               </div>
 
+              {isHardTubeConfiguratorEnabled ? (
+                <div className={hardTubeStyles.confirmedList} aria-live="polite">
+                  {hardTubeSelectionSummary.length ? hardTubeSelectionSummary.map(choice => {
+                    const washer = getHardTubeAccessory(hardTubeAccessoryConfig, choice);
+                    return (
+                      <div className={hardTubeStyles.confirmed} key={choice}>
+                        <span>{washer ? hardTubeText(hardTubeCopy.paired) : hardTubeCopy.fittingOnly}{configuratorLocale === "zh" ? "：" : ":"}</span>
+                        <span>{washer?.model || hardTubeAccessoryConfig!.model}</span>
+                        <small>{washer ? describeHardTubeAccessory(washer, configuratorLocale) : hardTubeText(hardTubeCopy.without)}</small>
+                      </div>
+                    );
+                  }) : (
+                    <div className={hardTubeStyles.confirmed}><span>{hardTubeCopy.option}</span><span>{hardTubeText(hardTubeCopy.optional)}</span></div>
+                  )}
+                </div>
+              ) : null}
               <div data-product-action-grid="true" className={styles.actionRow}>
                 {data.showDatasheetRequest ? (
                   <button
@@ -3757,7 +3866,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 <button
                   className={styles.button}
                   type="button"
-                  disabled={isDetailVariantRequired || (isDetailModelConfiguratorEnabled && isDetailProductSelected)}
+                  disabled={isDetailVariantRequired || ((isDetailModelConfiguratorEnabled || isHardTubeConfiguratorEnabled) && isDetailProductSelected)}
                   aria-pressed={isDetailProductSelected}
                   onClick={handleAddList}
                 >
@@ -3964,7 +4073,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 ) : hasOpenedModel ? (data.solenoidAuthoredContent ? (
                   <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="3d" active={activeTab === "model3d"} variant={solenoidVariant} onVariant={setSolenoidVariant} />
                 ) : cadAssets ? (
-                  <ProductCadViewer modelId={cadAssets.viewerId} title={cadAssets.model} headMaterial={pistonCadAssets?.headMaterial} locale={configuratorLocale} active={activeTab === "model3d"} />
+                  <ProductCadViewer modelId={cadAssets.viewerId} title={cadAssets.model} headMaterial={pistonCadAssets?.headMaterial} fittingFinish={fittingCadAssets?.fittingFinish} fittingProduct={fittingCadAssets?.fittingProduct} fittingAccessory={fittingCadAssets ? hardTubeAccessoryChoice ?? undefined : undefined} locale={configuratorLocale} active={activeTab === "model3d"} />
                 ) : isPumpDetail ? (
                   <PumpUploadedFileGuard
                     key={model3dUrl}
@@ -4057,19 +4166,19 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 <PdfDrawingPreview
                   pdfPreviewUrl={drawingPreviewUrl}
                   previewHref={resourceLocale ? drawingDocumentUrl : undefined}
-                  deferDesktopUntilOpen={Boolean(resourceLocale || rplAssets)}
+                  deferDesktopUntilOpen={Boolean(resourceLocale)}
                   previousPageLabel={resourceCopy?.previousPage}
                   nextPageLabel={resourceCopy?.nextPage}
                   previousPageVisibleLabel={resourceCopy?.previousPageShort}
                   nextPageVisibleLabel={resourceCopy?.nextPageShort}
-                  documentTitle={rplAssets?.model || data.model}
+                  documentTitle={data.model}
                   text={
                     isLocalizedDetail
                       ? {
                           title: copy.technicalDrawing,
                           loadingLabel: copy.drawingLoading,
                           previewButton: copy.drawingPreview,
-                          description: copy.drawingDescription(rplAssets?.model || data.model),
+                          description: copy.drawingDescription(data.model),
                         }
                       : undefined
                   }

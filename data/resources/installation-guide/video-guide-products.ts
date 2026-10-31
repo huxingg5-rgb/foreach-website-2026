@@ -38,11 +38,11 @@ export function getVideoGuideProduct(key: string): ArticleRelatedProduct {
       imageSrc: copy.image.src, imageAlt: copy.image.alt, imageFill: true };
   }
   if (key === "smtp2-1000ul") {
-    const product = pipettingPumpSelectionProducts.find(item => item.detailSlug === key);
+    const product = pipettingPumpSelectionProducts.find(item => item.detailSlug === "smtp2-500");
     const href = getPipettingModelPath("en", key);
     if (!product?.imageCard || !href) throw new Error(`Missing video pipetting product: ${key}`);
-    return { id: key, title: product.cardTitle.en, href, imageSrc: product.imageCard,
-      imageAlt: "SMTP2 1000 microliter air-displacement pipetting pump", imageFill: true };
+    return { id: key, title: "SMTP2 Programmable Pipetting Modules", href, imageSrc: product.imageCard,
+      imageAlt: "SMTP2-500 with LTE008 adapter, representative SMTP2 pipetting module", imageFill: true };
   }
   throw new Error(`Unknown video product key: ${key}`);
 }

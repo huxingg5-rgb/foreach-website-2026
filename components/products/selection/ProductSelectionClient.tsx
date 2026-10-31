@@ -13,7 +13,6 @@ import { getTubingIntro, getTubingSeriesCopy, getTubingMaterialCopy } from "@/da
 import { getTubingDetailPath, getLegacyTubingSelectionTarget, getTubingSelectionPath, hasTubingSelectionLocale, isTubingMaterial } from "@/data/products/selection/tubing-selection-routes";
 import { fittingIntrosZh, fittingOverviewParagraphsZh } from "@/data/products/selection/fitting-headings.zh";
 import ProductTypeIntroImage from "./ProductTypeIntroImage";
-import { getTubingAssemblyLocalePrefix, isTubingAssemblyLocale, tubingAssemblyNavigation } from "@/data/products/tubing-assemblies/locales";
 import { probeIntrosZh, probeOverviewParagraphsZh, probeTypesZh, getProbeProductTypeIdZh, getProbeSelectionPathZh } from "@/data/products/selection/probe-selection.zh";
 import { controlIntrosZh, controlOverviewParagraphsZh, controlTypesZh, getControlProductTypeIdZh, getControlSelectionPathZh } from "@/data/products/selection/control-selection.zh";
 import {getValveSeriesRoute,getValveSelectionPath,getHpValveDetailPath} from "@/data/products/selection/valve-routes";
@@ -1266,12 +1265,11 @@ function getCategoryItems(locale: SelectionLocale) {
     categoryMap.set(category.id, category);
   });
 
-  const tubingAssemblyLocale = locale === "zh" ? "zh-CN" : locale;
-  if (isTubingAssemblyLocale(tubingAssemblyLocale)) {
+  if (locale === "en" || locale === "zh") {
     categoryMap.set("tubing-assemblies", {
-      id: "tubing-assemblies", label: locale === "zh" ? "管组件" : tubingAssemblyNavigation[tubingAssemblyLocale].title, sortOrder: 100,
-      description: tubingAssemblyNavigation[tubingAssemblyLocale].description,
-      href: `${getTubingAssemblyLocalePrefix(tubingAssemblyLocale)}/products/tubing-assemblies/`,
+      id: "tubing-assemblies", label: locale === "zh" ? "管组件" : "Tubing Assemblies", sortOrder: 100,
+      description: locale === "zh" ? "法兰翻边、卡环和卡箍定制管组件。" : "Flanged tubing, retaining ring kits and ferrule kits.",
+      href: `${locale === "zh" ? "" : "/en"}/products/tubing-assemblies/`,
     });
   }
 
@@ -5549,18 +5547,16 @@ function isFilterOptionActive(
         }
         breadcrumbItems={breadcrumbItems}
       >
-            <ResourceSearchBar
-              value={searchInputValue}
-              onChange={handleSearchInputChange}
-              onSearch={handleProductSearch}
-              placeholder={pageText.searchPlaceholder}
-              searchButtonText={pageText.searchButton}
-              showRecentKeywords={false}
-            />
+        <ResourceSearchBar
+          value={searchInputValue}
+          onChange={handleSearchInputChange}
+          onSearch={handleProductSearch}
+          placeholder={pageText.searchPlaceholder}
+          searchButtonText={pageText.searchButton}
+          showRecentKeywords={false}
+        />
         <main className="products-main">
           <div className="products-container">
-
-
             <ProductCategoryTabs
               categories={categoryItems}
               activeCategoryId={activeCategoryId}

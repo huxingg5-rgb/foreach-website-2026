@@ -4358,7 +4358,17 @@ export const englishProductDetailRoutes = [
   [
     "pumps",
     "pipetting-pumps",
-    "smtp2-1000ul"
+    "smtp2-500"
+  ],
+  [
+    "pumps",
+    "pipetting-pumps",
+    "smtp2-510"
+  ],
+  [
+    "pumps",
+    "pipetting-pumps",
+    "smtp2-520"
   ],
   [
     "pumps",

@@ -1,5 +1,6 @@
 import { getControlModulePath } from "@/data/products/selection/control-module-routes";
 import type { ControlModuleDetail } from "@/data/products/control-modules/control-module-detail.generated";
+import { getAbdGalleryData } from "@/data/products/detail/abd-gallery";
 
 const CONTROL_CATEGORY_ID = "control";
 
@@ -68,6 +69,7 @@ export function getControlModuleProductDetailData(detail: ControlModuleDetail) {
       "/images/products/control/foreach-pdm5-pressure-sensor-lying.webp",
       "/images/products/control/foreach-pdm5-pressure-sensor-top.webp",
     ] : [],
+    ...getAbdGalleryData(detail.slug),
 
     detailHref: getControlModulePath(detail.slug),
     href: getControlModulePath(detail.slug),

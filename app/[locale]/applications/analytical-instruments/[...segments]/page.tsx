@@ -21,6 +21,7 @@ export const dynamicParams = false;
 export function generateStaticParams() {
   return localizedApplicationStaticParams('analytical-instruments');
 }
+
 async function loadPage(params: Props['params']) {
   const { locale, segments } = await params;
   if (locale !== 'en' && !isApplicationTranslationLocale(locale)) notFound();
@@ -67,3 +68,4 @@ export default async function Page({ params }: Props) {
   }
   return <EnglishReviewPage kind={route.kind} document={document} currentHref={route.path} />;
 }
+

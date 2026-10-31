@@ -1,4 +1,8 @@
 import { getPipettingModelPath } from "@/data/products/selection/pipetting-pump-routes";
+import { getSmtp2VariantCopy } from "./smtp2-variant-content";
+import { getSmtp4ModelCopy } from "./smtp4-model-content";
+import smtp2Gallery from "./smtp2-gallery.json";
+import { applyInstrumentFluidicsChineseCopy } from "./instrument-fluidics-copy.zh";
 import { getPipettingApplications } from "./pipetting-pump-applications.locales";
 import { getPipettingSpecs } from "./pipetting-pump-specs.locales";
 export const pipettingPumpIntroductions: Record<string, Record<string, string[]>> = {
@@ -12,6 +16,11 @@ export const pipettingPumpIntroductions: Record<string, Record<string, string[]>
       "恒永达 SMTP4-100 μL 是一款面向自动化仪器集成的气体置换式移液泵，标称容量为 100 μL。产品配合一次性吸头完成样本吸取、转移和试剂添加，可用于样本前处理设备、自动化分析仪器及实验室工作站中的小体积液体处理工位。",
       "针对样本向反应管、样品杯或微孔板转移，以及反应体系中的定量加液需求，SMTP4-100 μL 可配合设备运动轴完成吸液与排液，并支持自动脱吸头。吸头规格及适配方式需结合容器尺寸、取液位置和换吸头流程确认。",
       "产品由设备方配套驱动与流程控制，液面及异常吸液监测需结合项目配置检测方案。选型时应明确最小、常用和最大工作液量，并结合液体性质、吸头规格与移液节拍验证实际表现；0.05 μL/步为驱动分辨率，不代表最小可靠移液量或移液准确性。",
+    ],
+    "smtp4-250ul": [
+      "恒永达 SMTP4-250 μL 是一款面向自动化仪器集成的气体置换式移液泵，标称容量为 250 μL。产品配合一次性吸头完成样本吸取、转移和试剂添加，可用于样本前处理设备、自动化分析仪器及实验室工作站中的小体积液体处理工位。",
+      "针对样本向反应管、样品杯或微孔板转移，以及反应体系中的定量加液需求，SMTP4-250 μL 可配合设备运动轴完成吸液与排液，并支持自动脱吸头。吸头规格及适配方式需结合容器尺寸、取液位置和换吸头流程确认。",
+      "产品由设备方配套驱动与流程控制，液面及异常吸液监测需结合项目配置检测方案。选型时应明确最小、常用和最大工作液量，并结合液体性质、吸头规格与移液节拍验证实际表现；0.125 μL/步为驱动分辨率，不代表最小可靠移液量或移液准确性。",
     ],
     "smtp4-500ul": [
       "恒永达 SMTP4-500 μL 是一款面向自动化仪器集成的气体置换式移液泵，标称容量为 500 μL。产品配合一次性吸头完成样本转移、分装、稀释液添加与试剂分配，可用于样本前处理设备、自动加样单元及实验室液体处理工作站。",
@@ -30,6 +39,11 @@ export const pipettingPumpIntroductions: Record<string, Record<string, string[]>
       "SMTP4-100 μL works with the instrument’s positioning axes to aspirate and dispense liquids for sample transfer into reaction tubes, sample cups or microplates and for measured additions to reaction mixtures. It supports automatic tip ejection. Tip specifications and compatibility must be confirmed against container dimensions, aspiration positions and the tip-changing sequence.",
       "The equipment integrator supplies drive and process control; liquid level and abnormal aspiration monitoring require a project-specific detection solution. Define minimum, routine and maximum working volumes, then validate performance with the intended liquids, tips and cycle times. The 0.05 μL/step drive resolution does not specify the minimum reliable pipetting volume or pipetting accuracy.",
     ],
+    "smtp4-250ul": [
+      "FOREACH SMTP4-250 μL is an air displacement pipetting pump with a nominal capacity of 250 μL, designed for integration into automated instruments. It uses disposable tips for sample aspiration, transfer and reagent addition in small-volume liquid handling stations within sample preparation equipment, automated analyzers and laboratory workstations.",
+      "SMTP4-250 μL works with the instrument’s positioning axes to aspirate and dispense liquids for sample transfer into reaction tubes, sample cups or microplates and for measured additions to reaction mixtures. It supports automatic tip ejection. Tip specifications and compatibility must be confirmed against container dimensions, aspiration positions and the tip-changing sequence.",
+      "The equipment integrator supplies drive and process control; liquid level and abnormal aspiration monitoring require a project-specific detection solution. Define minimum, routine and maximum working volumes, then validate performance with the intended liquids, tips and cycle times. The 0.125 μL/step drive resolution does not specify the minimum reliable pipetting volume or pipetting accuracy.",
+    ],
     "smtp4-500ul": [
       "FOREACH SMTP4-500 μL is an air displacement pipetting pump with a nominal capacity of 500 μL, designed for integration into automated instruments. Disposable tips support sample transfer, aliquoting, diluent addition and reagent dispensing in sample preparation equipment, automated pipetting units and laboratory liquid handling workstations.",
       "SMTP4-500 μL is a capacity option for sample transfer and liquid addition tasks requiring larger individual volumes. It works with the instrument’s positioning axes to transfer liquids between source and destination containers and supports automatic tip ejection. Aspiration and dispensing cycles, motion sequences and tip changes for aliquoting must be defined according to actual volumes and workflow requirements.",
@@ -46,6 +60,11 @@ export const pipettingPumpIntroductions: Record<string, Record<string, string[]>
       "FOREACH SMTP4-100 μL es una bomba de pipeteo por desplazamiento de aire con una capacidad nominal de 100 μL, diseñada para integrarse en instrumentos automatizados. Utiliza puntas desechables para aspirar y transferir muestras y añadir reactivos en puestos de manipulación de pequeños volúmenes de equipos de preparación de muestras, analizadores automatizados y estaciones de laboratorio.",
       "SMTP4-100 μL trabaja con los ejes de posicionamiento del instrumento para aspirar y dispensar líquidos al transferir muestras a tubos de reacción, cubetas o microplacas y al realizar adiciones dosificadas a mezclas de reacción. Admite la expulsión automática de puntas. Las especificaciones y la compatibilidad de las puntas deben confirmarse según las dimensiones de los recipientes, las posiciones de aspiración y la secuencia de cambio de punta.",
       "El integrador del equipo proporciona el accionamiento y el control del proceso; la supervisión del nivel y de anomalías de aspiración requiere una solución de detección adaptada al proyecto. Deben definirse los volúmenes mínimo, habitual y máximo y validar el funcionamiento con los líquidos, puntas y tiempos de ciclo previstos. La resolución de accionamiento de 0,05 μL/paso no indica el volumen mínimo de pipeteo fiable ni su exactitud.",
+    ],
+    "smtp4-250ul": [
+      "FOREACH SMTP4-250 μL es una bomba de pipeteo por desplazamiento de aire con una capacidad nominal de 250 μL, diseñada para integrarse en instrumentos automatizados. Utiliza puntas desechables para aspirar y transferir muestras y añadir reactivos en puestos de manipulación de pequeños volúmenes de equipos de preparación de muestras, analizadores automatizados y estaciones de laboratorio.",
+      "SMTP4-250 μL trabaja con los ejes de posicionamiento del instrumento para aspirar y dispensar líquidos al transferir muestras a tubos de reacción, cubetas o microplacas y al realizar adiciones dosificadas a mezclas de reacción. Admite la expulsión automática de puntas. Las especificaciones y la compatibilidad de las puntas deben confirmarse según las dimensiones de los recipientes, las posiciones de aspiración y la secuencia de cambio de punta.",
+      "El integrador del equipo proporciona el accionamiento y el control del proceso; la supervisión del nivel y de anomalías de aspiración requiere una solución de detección adaptada al proyecto. Deben definirse los volúmenes mínimo, habitual y máximo y validar el funcionamiento con los líquidos, puntas y tiempos de ciclo previstos. La resolución de accionamiento de 0,125 μL/paso no indica el volumen mínimo de pipeteo fiable ni su exactitud.",
     ],
     "smtp4-500ul": [
       "FOREACH SMTP4-500 μL es una bomba de pipeteo por desplazamiento de aire con una capacidad nominal de 500 μL, diseñada para integrarse en instrumentos automatizados. Utiliza puntas desechables para transferir y alicuotar muestras, añadir diluyente y dispensar reactivos en equipos de preparación de muestras, unidades de pipeteo automatizado y estaciones de manipulación de líquidos.",
@@ -64,6 +83,11 @@ export const pipettingPumpIntroductions: Record<string, Record<string, string[]>
       "SMTP4-100 μL fonctionne avec les axes de positionnement de l’instrument pour aspirer et distribuer les liquides lors du transfert d’échantillons vers des tubes de réaction, des godets ou des microplaques et lors d’ajouts dosés aux mélanges réactionnels. Elle prend en charge l’éjection automatique des embouts. Leurs spécifications et leur compatibilité doivent être confirmées selon les dimensions des récipients, les positions d’aspiration et la séquence de changement d’embout.",
       "L’intégrateur fournit l’entraînement et la commande du processus ; la surveillance du niveau et des anomalies d’aspiration nécessite une solution de détection adaptée au projet. Définir les volumes minimal, habituel et maximal, puis valider les performances avec les liquides, les embouts et les temps de cycle prévus. La résolution d’entraînement de 0,05 μL/pas ne représente ni le volume minimal de pipetage fiable ni l’exactitude du pipetage.",
     ],
+    "smtp4-250ul": [
+      "FOREACH SMTP4-250 μL est une pompe de pipetage à déplacement d’air d’une capacité nominale de 250 μL, conçue pour l’intégration dans des instruments automatisés. Elle utilise des embouts jetables pour l’aspiration et le transfert d’échantillons et l’ajout de réactifs aux postes de manipulation de petits volumes des équipements de préparation d’échantillons, des analyseurs automatisés et des stations de laboratoire.",
+      "SMTP4-250 μL fonctionne avec les axes de positionnement de l’instrument pour aspirer et distribuer les liquides lors du transfert d’échantillons vers des tubes de réaction, des godets ou des microplaques et lors d’ajouts dosés aux mélanges réactionnels. Elle prend en charge l’éjection automatique des embouts. Leurs spécifications et leur compatibilité doivent être confirmées selon les dimensions des récipients, les positions d’aspiration et la séquence de changement d’embout.",
+      "L’intégrateur fournit l’entraînement et la commande du processus ; la surveillance du niveau et des anomalies d’aspiration nécessite une solution de détection adaptée au projet. Définir les volumes minimal, habituel et maximal, puis valider les performances avec les liquides, les embouts et les temps de cycle prévus. La résolution d’entraînement de 0,125 μL/pas ne représente ni le volume minimal de pipetage fiable ni l’exactitude du pipetage.",
+    ],
     "smtp4-500ul": [
       "FOREACH SMTP4-500 μL est une pompe de pipetage à déplacement d’air d’une capacité nominale de 500 μL, conçue pour l’intégration dans des instruments automatisés. Elle utilise des embouts jetables pour le transfert et l’aliquotage d’échantillons, l’ajout de diluant et la distribution de réactifs dans les équipements de préparation d’échantillons, les unités de pipetage automatisé et les stations de manipulation de liquides.",
       "SMTP4-500 μL constitue une option de capacité pour les transferts d’échantillons et les ajouts de liquides nécessitant un volume plus élevé par opération. Elle fonctionne avec les axes de positionnement de l’instrument pour transférer les liquides entre les récipients source et destination et prend en charge l’éjection automatique des embouts. Le nombre de cycles d’aspiration et de distribution, l’ordre des mouvements et les changements d’embout doivent être définis selon les volumes réels et le protocole d’aliquotage.",
@@ -81,6 +105,11 @@ export const pipettingPumpIntroductions: Record<string, Record<string, string[]>
       "SMTP4-100 μL는 장비의 위치 제어 축과 연동하여 시료를 반응 튜브, 시료 컵 또는 마이크로플레이트로 옮기거나 반응 혼합물에 정해진 양의 액체를 첨가하기 위한 흡입과 분주를 수행하며, 자동 팁 배출을 지원합니다. 팁 사양과 호환성은 용기 크기, 흡입 위치 및 팁 교체 순서에 맞춰 확인해야 합니다.",
       "장비 통합업체가 구동 및 공정 제어를 구성하며, 액면 및 비정상 흡입 감지에는 프로젝트에 맞는 별도의 감지 구성이 필요합니다. 최소·일반·최대 작업 액량을 정하고 액체 특성, 팁 사양 및 처리 주기에 따라 실제 성능을 검증해야 합니다. 0.05 μL/스텝은 구동 분해능이며 최소 신뢰 가능 피펫팅 용량이나 피펫팅 정확도를 의미하지 않습니다.",
     ],
+    "smtp4-250ul": [
+      "FOREACH SMTP4-250 μL는 자동화 장비 통합용 공기 치환식 피펫팅 펌프로, 공칭 용량은 250 μL입니다. 일회용 팁을 사용하여 시료 흡입과 이송, 시약 첨가를 수행하며 시료 전처리 장비, 자동 분석기 및 실험실 워크스테이션의 소량 액체 처리 공정에 사용할 수 있습니다.",
+      "SMTP4-250 μL는 장비의 위치 제어 축과 연동하여 시료를 반응 튜브, 시료 컵 또는 마이크로플레이트로 옮기거나 반응 혼합물에 정해진 양의 액체를 첨가하기 위한 흡입과 분주를 수행하며, 자동 팁 배출을 지원합니다. 팁 사양과 호환성은 용기 크기, 흡입 위치 및 팁 교체 순서에 맞춰 확인해야 합니다.",
+      "장비 통합업체가 구동 및 공정 제어를 구성하며, 액면 및 비정상 흡입 감지에는 프로젝트에 맞는 별도의 감지 구성이 필요합니다. 최소·일반·최대 작업 액량을 정하고 액체 특성, 팁 사양 및 처리 주기에 따라 실제 성능을 검증해야 합니다. 0.125 μL/스텝은 구동 분해능이며 최소 신뢰 가능 피펫팅 용량이나 피펫팅 정확도를 의미하지 않습니다.",
+    ],
     "smtp4-500ul": [
       "FOREACH SMTP4-500 μL는 자동화 장비 통합용 공기 치환식 피펫팅 펌프로, 공칭 용량은 500 μL입니다. 일회용 팁을 사용하여 시료 이송과 분할 분주, 희석액 첨가 및 시약 분주를 수행하며 시료 전처리 장비, 자동 피펫팅 유닛 및 실험실 액체 처리 워크스테이션에 사용할 수 있습니다.",
       "SMTP4-500 μL는 1회 처리 액량이 비교적 큰 시료 이송 및 액체 첨가 작업에서 용량 선택 후보가 될 수 있습니다. 장비의 위치 제어 축과 연동하여 원래 용기에서 대상 용기로 액체를 이송하고 자동 팁 배출을 지원합니다. 시료 분할 분주에 필요한 흡입·분주 횟수, 동작 순서 및 팁 교체 방식은 실제 액량과 공정 요구사항에 따라 정해야 합니다.",
@@ -97,6 +126,11 @@ export const pipettingPumpIntroductions: Record<string, Record<string, string[]>
       "FOREACH SMTP4-100 μL — пипетирующий насос с воздушным вытеснением и номинальным объёмом 100 мкл для интеграции в автоматизированные приборы. Одноразовые наконечники используются для аспирации и переноса образцов и добавления реагентов на участках обработки малых объёмов в оборудовании пробоподготовки, автоматических анализаторах и лабораторных станциях.",
       "SMTP4-100 μL работает совместно с осями позиционирования прибора для аспирации и дозирования при переносе образцов в реакционные пробирки, чашечки или микропланшеты и при дозированном добавлении жидкостей в реакционные смеси. Поддерживается автоматический сброс наконечников. Их характеристики и совместимость необходимо подтвердить с учётом размеров ёмкостей, положения при аспирации и последовательности смены наконечников.",
       "Привод и управление процессом обеспечивает интегратор оборудования; контроль уровня и нарушений аспирации требует отдельного решения по обнаружению с учётом проекта. Следует определить минимальный, типичный и максимальный рабочие объёмы и проверить работу с выбранными жидкостями, наконечниками и временем цикла. Разрешение привода 0,05 мкл/шаг не определяет минимальный надёжно дозируемый объём или точность пипетирования.",
+    ],
+    "smtp4-250ul": [
+      "FOREACH SMTP4-250 μL — пипетирующий насос с воздушным вытеснением и номинальным объёмом 250 мкл для интеграции в автоматизированные приборы. Одноразовые наконечники используются для аспирации и переноса образцов и добавления реагентов на участках обработки малых объёмов в оборудовании пробоподготовки, автоматических анализаторах и лабораторных станциях.",
+      "SMTP4-250 μL работает совместно с осями позиционирования прибора для аспирации и дозирования при переносе образцов в реакционные пробирки, чашечки или микропланшеты и при дозированном добавлении жидкостей в реакционные смеси. Поддерживается автоматический сброс наконечников. Их характеристики и совместимость необходимо подтвердить с учётом размеров ёмкостей, положения при аспирации и последовательности смены наконечников.",
+      "Привод и управление процессом обеспечивает интегратор оборудования; контроль уровня и нарушений аспирации требует отдельного решения по обнаружению с учётом проекта. Следует определить минимальный, типичный и максимальный рабочие объёмы и проверить работу с выбранными жидкостями, наконечниками и временем цикла. Разрешение привода 0,125 мкл/шаг не определяет минимальный надёжно дозируемый объём или точность пипетирования.",
     ],
     "smtp4-500ul": [
       "FOREACH SMTP4-500 μL — пипетирующий насос с воздушным вытеснением и номинальным объёмом 500 мкл для интеграции в автоматизированные приборы. Одноразовые наконечники используются для переноса и аликвотирования образцов, добавления разбавителя и дозирования реагентов в оборудовании пробоподготовки, автоматических модулях пипетирования и лабораторных станциях обработки жидкостей.",
@@ -117,20 +151,44 @@ const applicationLabels: Record<string, { tab: string; tags: string[][] }> = {
 
 export function applyPipettingPumpIntroduction<T extends Record<string, any>>(data: T, locale: string): T {
   const lang = locale === "zh-CN" ? "zh" : locale;
-  const pipettingIntroductionParagraphs = pipettingPumpIntroductions[lang]?.[data.slug];
-  if (!pipettingIntroductionParagraphs) return data;
+  const smtp4 = getSmtp4ModelCopy(data.slug, lang);
+  const variant = getSmtp2VariantCopy(data.slug, lang);
+  const authoredParagraphs = pipettingPumpIntroductions[lang]?.[variant ? "smtp2-1000ul" : data.slug];
+  if (!authoredParagraphs) return data;
+  const pipettingIntroductionParagraphs = smtp4?.paragraphs || variant?.paragraphs || authoredParagraphs;
   const description = pipettingIntroductionParagraphs.join("\n\n");
   const labels = applicationLabels[lang];
-  const index = ["smtp2-1000ul", "smtp4-100ul", "smtp4-500ul"].indexOf(data.slug);
-  const applicationDetails = getPipettingApplications(lang, data.slug);
+  const index = ["smtp2-1000ul", "smtp4-100ul", "smtp4-500ul"].indexOf(variant ? "smtp2-1000ul" : data.slug === "smtp4-250ul" ? "smtp4-100ul" : data.slug);
+  const baseApplication = getPipettingApplications(lang, variant ? "smtp2-1000ul" : data.slug)
+    || (variant && lang === "zh" ? (applyInstrumentFluidicsChineseCopy({slug:"smtp2-1000ul"}, "zh") as Record<string, any>).applicationDetails : undefined);
+  const applicationDetails = variant && baseApplication ? {
+    ...baseApplication, intro: [variant.paragraphs[0]],
+    items: [variant.application, ...baseApplication.items.slice(0, 2)],
+    selectionNote: { title: variant.labels.selection, paragraphs: [variant.labels.boundary] },
+  } : baseApplication;
   const specs = getPipettingSpecs(lang, data.slug);
   return {
     ...data, detailHref: getPipettingModelPath(locale, String(data.slug || "")), description, summary: description, overview: description, pipettingIntroductionParagraphs,
-    commonApplications: labels.tags[index],
+    commonApplications: smtp4?.tags || labels.tags[index],
     ...(applicationDetails ? { applicationDetails } : {}),
     ...(specs ? {
       specs, specifications: specs, model: specs[0].value,
       imageAltEn: `FOREACH ${specs[0].value}`, mainImageAlt: `FOREACH ${specs[0].value}`, imageAlt: `FOREACH ${specs[0].value}`,
+    } : {}),
+    ...(smtp4 ? {
+      smtp4AuthoredContent: true, model: smtp4.heading, h1Title: smtp4.heading,
+      title: smtp4.heading, pageTitle: smtp4.heading, productName: smtp4.heading,
+      name: smtp4.model, modelDisplay: smtp4.model, displayModel: smtp4.model, foreachModel: smtp4.model,
+      applicationDetails: smtp4.applicationDetails,
+    } : {}),
+    ...(variant ? {
+      smtp2Variant: true, model: variant.heading, h1Title: variant.heading,
+      name: variant.model, productName: variant.heading, productCode: variant.model,
+      modelDisplay: variant.model, displayModel: variant.model, foreachModel: variant.model,
+      mainImage: variant.image, imageCard: variant.cardImage,
+      imageAltEn: variant.imageAlt, mainImageAlt: variant.imageAlt, imageAlt: variant.imageAlt,
+      additionalImages: smtp2Gallery.photos.map(photo => `/images/products/pumps/pipetting-pumps/${photo.filename}`),
+      additionalImageAlts: smtp2Gallery.photos.map(photo => photo.alt[lang as keyof typeof photo.alt] || photo.alt.en),
     } : {}),
   };
 }

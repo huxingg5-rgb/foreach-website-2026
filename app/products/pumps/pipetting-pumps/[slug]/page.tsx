@@ -59,6 +59,7 @@ type DetailRecord = {
   displayModel?: string;
   foreachModel?: string;
   mainImage?: string;
+  imageCard?: string;
   image?: string;
   heroImage?: string;
   additionalImages?: string[];
@@ -166,7 +167,7 @@ function toClientData(detail: DetailRecord) {
     mainImage,
     image: mainImage,
     heroImage: mainImage,
-    imageCard: mainImage,
+    imageCard: detail.imageCard || mainImage,
     showConfigurator: Boolean(detail.showConfigurator),
     showDatasheetRequest: Boolean(detail.showDatasheetRequest),
     showDrawingRequest: Boolean(detail.showDrawingRequest),

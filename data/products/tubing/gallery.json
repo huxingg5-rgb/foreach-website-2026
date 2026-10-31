@@ -1,6 +1,17 @@
 {
   "pvc-tubing": [
     {
+      "src": "/images/products/tubing/pvc-tubing/pvc-tubing-view-02.webp",
+      "alt": {
+        "zh": "FOREACH PVC 透明弯曲管材与管口近景",
+        "en": "FOREACH clear PVC tubing bend with an exposed tube end",
+        "es": "Curva de tubo PVC transparente FOREACH con un extremo visible",
+        "fr": "Tube PVC transparent FOREACH courbé avec une extrémité visible",
+        "ko": "끝단이 보이는 FOREACH 투명 PVC 튜브 곡관",
+        "ru": "Изогнутая прозрачная трубка ПВХ FOREACH с видимым концом"
+      }
+    },
+    {
       "src": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
       "alt": {
         "zh": "FOREACH 透明柔性 PVC 管盘卷及管口展示",
@@ -9,17 +20,6 @@
         "fr": "Bobine de tube PVC transparent et souple FOREACH avec une extrémité visible",
         "ko": "끝단이 보이는 FOREACH 투명 연질 PVC 튜브 코일",
         "ru": "Бухта прозрачной гибкой трубки ПВХ FOREACH с видимым концом"
-      }
-    },
-    {
-      "src": "/images/products/tubing/pvc-tubing/foreach-pvc-tubing-1.6mm-id-3.2mm-od-option.webp",
-      "alt": {
-        "zh": "FOREACH PVC 管多种管径与壁厚展示，系列可选内径 1.6 mm、外径 3.2 mm",
-        "en": "FOREACH PVC tubing in different diameters and wall thicknesses, with a 1.6 mm ID by 3.2 mm OD option",
-        "es": "Tubos de PVC FOREACH de distintos diámetros y espesores de pared; opción de 1,6 mm de diámetro interior y 3,2 mm exterior",
-        "fr": "Tubes PVC FOREACH de différents diamètres et épaisseurs de paroi ; option de diamètre intérieur 1,6 mm et extérieur 3,2 mm",
-        "ko": "다양한 관경과 벽 두께의 FOREACH PVC 튜브, 내경 1.6 mm 및 외경 3.2 mm 사양 선택 가능",
-        "ru": "Трубки ПВХ FOREACH разного диаметра и толщины стенки; доступен вариант с внутренним диаметром 1,6 мм и наружным 3,2 мм"
       }
     },
     {
@@ -35,17 +35,6 @@
     }
   ],
   "tpu-tubing": [
-    {
-      "src": "/images/products/tubing/tpu-tubing/foreach-abrasion-resistant-tpu-tubing-black-coil.webp",
-      "alt": {
-        "zh": "FOREACH 黑色耐磨 TPU 管盘卷展示",
-        "en": "FOREACH black abrasion-resistant TPU tubing in a coil",
-        "es": "Bobina de tubo de TPU negro resistente a la abrasión FOREACH",
-        "fr": "Bobine de tube TPU noir résistant à l’abrasion FOREACH",
-        "ko": "FOREACH 검정색 내마모성 TPU 튜브 코일",
-        "ru": "Бухта чёрной износостойкой трубки TPU FOREACH"
-      }
-    },
     {
       "src": "/images/products/tubing/tpu-tubing/foreach-flexible-tpu-tubing-instrument-routing.webp",
       "alt": {
@@ -66,17 +55,6 @@
         "fr": "Tube TPU FOREACH courbé avec extrémité ouverte ; option de diamètre intérieur 2,4 mm et extérieur 4,0 mm",
         "ko": "곡선 몸체와 열린 끝단의 FOREACH TPU 튜브, 내경 2.4 mm 및 외경 4.0 mm 사양 선택 가능",
         "ru": "Изогнутая трубка TPU FOREACH с открытым концом; доступен вариант с внутренним диаметром 2,4 мм и наружным 4,0 мм"
-      }
-    },
-    {
-      "src": "/images/products/tubing/tpu-tubing/foreach-transparent-tpu-tubing-wall-detail.webp",
-      "alt": {
-        "zh": "FOREACH 透明 TPU 管壁与环形管口近景",
-        "en": "FOREACH transparent TPU tubing showing the tube wall and circular openings",
-        "es": "Tubos transparentes de TPU FOREACH con detalle de la pared y las aberturas circulares",
-        "fr": "Tubes TPU transparents FOREACH montrant la paroi et les ouvertures circulaires",
-        "ko": "관벽과 원형 개구부가 보이는 FOREACH 투명 TPU 튜브",
-        "ru": "Прозрачные трубки TPU FOREACH с видимыми стенками и круглыми отверстиями"
       }
     }
   ],
@@ -150,36 +128,25 @@
   ],
   "ptfe-tubing": [
     {
-      "src": "/images/products/tubing/ptfe-tubing/foreach-chemical-resistant-ptfe-tubing.webp",
+      "src": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-natural-coil.webp",
       "alt": {
-        "zh": "FOREACH 耐化学 PTFE 管盘卷与管口展示",
-        "en": "FOREACH chemical-resistant PTFE tubing coil with an exposed opening",
-        "es": "Bobina de tubo PTFE resistente a productos químicos FOREACH con una abertura visible",
-        "fr": "Bobine de tube PTFE résistant aux produits chimiques FOREACH avec une ouverture visible",
-        "ko": "개구부가 보이는 FOREACH 내화학성 PTFE 튜브 코일",
-        "ru": "Бухта химически стойкой трубки PTFE FOREACH с видимым отверстием"
+        "zh": "FOREACH 本色 PTFE 管盘卷及管端细节展示",
+        "en": "FOREACH natural PTFE tubing coil with a cut tube end",
+        "es": "Bobina de tubo PTFE natural FOREACH con un extremo cortado visible",
+        "fr": "Bobine de tube PTFE naturel FOREACH avec une extrémité coupée visible",
+        "ko": "절단면이 보이는 FOREACH 자연색 PTFE 튜브 코일",
+        "ru": "Бухта трубки PTFE натурального цвета FOREACH с видимым срезом"
       }
     },
     {
-      "src": "/images/products/tubing/ptfe-tubing/foreach-low-friction-ptfe-tubing.webp",
+      "src": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-black-coil.webp",
       "alt": {
-        "zh": "FOREACH 低摩擦 PTFE 管材盘卷展示",
-        "en": "FOREACH low-friction PTFE tubing shown in a coil",
-        "es": "Tubo PTFE de baja fricción FOREACH presentado en bobina",
-        "fr": "Tube PTFE à faible frottement FOREACH présenté en bobine",
-        "ko": "코일 형태의 FOREACH 저마찰 PTFE 튜브",
-        "ru": "Трубка PTFE FOREACH с низким коэффициентом трения в бухте"
-      }
-    },
-    {
-      "src": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-diameter-wall-options.webp",
-      "alt": {
-        "zh": "FOREACH 多种管径的 PTFE 管，展示管口和管壁差异",
-        "en": "FOREACH PTFE tubing in different diameters showing tube openings and wall profiles",
-        "es": "Tubos PTFE FOREACH de distintos diámetros con aberturas y perfiles de pared visibles",
-        "fr": "Tubes PTFE FOREACH de différents diamètres montrant les ouvertures et les profils de paroi",
-        "ko": "다양한 관경의 개구부와 관벽 단면이 보이는 FOREACH PTFE 튜브",
-        "ru": "Трубки PTFE FOREACH разных диаметров с видимыми отверстиями и профилями стенок"
+        "zh": "FOREACH 黑色 PTFE 管盘卷及管端展示",
+        "en": "FOREACH black PTFE tubing coil with the tube end visible",
+        "es": "Bobina de tubo PTFE negro FOREACH con el extremo visible",
+        "fr": "Bobine de tube PTFE noir FOREACH avec l’extrémité visible",
+        "ko": "끝단이 보이는 FOREACH 검정색 PTFE 튜브 코일",
+        "ru": "Бухта чёрной трубки PTFE FOREACH с видимым концом"
       }
     },
     {
@@ -259,6 +226,41 @@
         "fr": "Tube PEEK FOREACH avec raccord fileté ; option de tube de diamètre intérieur 0,8 mm et extérieur 1,6 mm",
         "ko": "나사식 피팅과 연결된 FOREACH PEEK 튜브, 내경 0.8 mm 및 외경 1.6 mm 튜브 사양 선택 가능",
         "ru": "Трубка PEEK FOREACH с резьбовым фитингом; доступен вариант трубки с внутренним диаметром 0,8 мм и наружным 1,6 мм"
+      }
+    }
+  ],
+  "pfa-tubing": [
+    {
+      "src": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+      "alt": {
+        "zh": "FOREACH PFA 透明管材盘卷与管端展示",
+        "en": "FOREACH translucent PFA tubing coil with an exposed tube end",
+        "es": "Bobina de tubo PFA translúcido FOREACH con un extremo visible",
+        "fr": "Bobine de tube PFA translucide FOREACH avec une extrémité visible",
+        "ko": "끝단이 보이는 FOREACH 반투명 PFA 튜브 코일",
+        "ru": "Бухта полупрозрачной трубки PFA FOREACH с видимым концом"
+      }
+    },
+    {
+      "src": "/images/products/tubing/pfa-tubing/pfa-tubing-view-02.webp",
+      "alt": {
+        "zh": "FOREACH PFA 管材盘卷近景，展示透明管壁与弯曲布管形态",
+        "en": "FOREACH PFA tubing coil close-up showing translucent walls and curved routing",
+        "es": "Primer plano de una bobina de tubo PFA FOREACH con paredes translúcidas y curvas",
+        "fr": "Gros plan d’une bobine de tube PFA FOREACH montrant ses parois translucides et ses courbes",
+        "ko": "반투명 관벽과 곡선 배치를 보여주는 FOREACH PFA 튜브 코일 클로즈업",
+        "ru": "Крупный план бухты трубки PFA FOREACH с полупрозрачной стенкой и изгибами"
+      }
+    },
+    {
+      "src": "/images/products/tubing/pfa-tubing/pfa-tubing-view-03.webp",
+      "alt": {
+        "zh": "FOREACH PFA 透明管材多层盘卷展示，用于仪器液路管材选型",
+        "en": "FOREACH translucent PFA tubing arranged in layered coils for instrument fluid-line selection",
+        "es": "Tubos PFA translúcidos FOREACH dispuestos en capas para seleccionar líneas de fluidos de instrumentos",
+        "fr": "Tubes PFA translucides FOREACH disposés en couches pour le choix des lignes fluidiques d’instruments",
+        "ko": "기기 유체 라인 선정을 위해 여러 겹으로 배치한 FOREACH 반투명 PFA 튜브",
+        "ru": "Полупрозрачные трубки PFA FOREACH, уложенные слоями для выбора жидкостных линий приборов"
       }
     }
   ]

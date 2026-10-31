@@ -239,3 +239,4 @@ export function getDiaphragmPumpIntroduction(
 ): DiaphragmPumpIntroduction {
   return INTRODUCTIONS[locale][key];
 }
+

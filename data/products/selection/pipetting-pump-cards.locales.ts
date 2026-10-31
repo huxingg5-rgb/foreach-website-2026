@@ -1,4 +1,6 @@
 import type { SelectionLocale } from "./product-selection.types";
+import { getSmtp2VariantCopy } from "../detail/smtp2-variant-content";
+import { getSmtp4ModelCopy } from "../detail/smtp4-model-content";
 
 // Match the Chinese authored cards: model paragraph followed by a descriptive H3.
 const headings: Record<Exclude<SelectionLocale, "zh">, [string, string, string]> = {
@@ -36,6 +38,10 @@ const models = [
 ] as const;
 
 export function getPipettingCardCopy(locale: SelectionLocale, slug: string) {
+  const smtp4 = getSmtp4ModelCopy(slug, locale);
+  if (smtp4) return { model: smtp4.model, heading: smtp4.heading };
+  const variant = getSmtp2VariantCopy(slug, locale);
+  if (variant) return { model: variant.model, heading: variant.heading };
   if (locale === "zh") return undefined;
   const index = models.findIndex(([key]) => key === slug);
   if (index < 0) return undefined;

@@ -1,0 +1,30 @@
+{
+  "source": "PS-130A-2507-00001-001, page 16, Table 19; user-supplied SMTP2 photos 06.png / 05.png / 04.png",
+  "capacityUl": 1000,
+  "variants": [
+    {
+      "model": "SMTP2-500",
+      "adapter": "LTE008",
+      "lengthMm": 8,
+      "sourceImage": "06.png",
+      "image": "/images/products/pumps/pipetting-pumps/foreach-smtp2-500-lte008-8mm.webp",
+      "cardImage": "/images/products/pumps/pipetting-pumps/foreach-smtp2-500-lte008-8mm-card.webp"
+    },
+    {
+      "model": "SMTP2-510",
+      "adapter": "LTE045",
+      "lengthMm": 45,
+      "sourceImage": "05.png",
+      "image": "/images/products/pumps/pipetting-pumps/foreach-smtp2-510-lte045-45mm.webp",
+      "cardImage": "/images/products/pumps/pipetting-pumps/foreach-smtp2-510-lte045-45mm-card.webp"
+    },
+    {
+      "model": "SMTP2-520",
+      "adapter": "LTE072",
+      "lengthMm": 72,
+      "sourceImage": "04.png",
+      "image": "/images/products/pumps/pipetting-pumps/foreach-smtp2-520-lte072-72mm.webp",
+      "cardImage": "/images/products/pumps/pipetting-pumps/foreach-smtp2-520-lte072-72mm-card.webp"
+    }
+  ]
+}

@@ -525,7 +525,7 @@ const productMegaDropdown: MegaDropdown = {
       href: localizedPath("/products/tubing"),
       images: [
         productImage(
-          "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
+          "/images/products/tubing/pvc-tubing/pvc-tubing-menu.webp",
           t("PVC 管", "PVC Tubing", "Tubo PVC", "Tube PVC", "PVC 튜빙", "Трубка PVC"),
           t(
             "适合体外诊断与实验室液路",
@@ -538,7 +538,7 @@ const productMegaDropdown: MegaDropdown = {
           localizedPath("/products/tubing/pvc-tubing")
         ),
         productImage(
-          "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
+          "/images/products/tubing/tpu-tubing/tpu-tubing-menu.webp",
           t("TPU 管", "TPU Tubing", "Tubo TPU", "Tube TPU", "TPU 튜빙", "Трубка TPU"),
           t(
             "柔韧耐用，适合动态液路",
@@ -564,7 +564,7 @@ const productMegaDropdown: MegaDropdown = {
           localizedPath("/products/tubing/fep-tubing")
         ),
         productImage(
-          "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
+          "/images/products/tubing/ptfe-tubing/ptfe-tubing-menu.webp",
           t("PTFE 管", "PTFE Tubing", "Tubo PTFE", "Tube PTFE", "PTFE 튜빙", "Трубка PTFE"),
           t(
             "耐腐蚀，适合多种试剂输送",
@@ -590,7 +590,7 @@ const productMegaDropdown: MegaDropdown = {
           localizedPath("/products/tubing/peek-tubing")
         ),
         productImage(
-          "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+          "/images/products/tubing/pfa-tubing/pfa-tubing-menu.webp",
           t("PFA 管", "PFA Tubing", "Tubo PFA", "Tube PFA", "PFA 튜빙", "Трубка PFA"),
           t(
             "高纯度、耐腐蚀，适合高要求液路",

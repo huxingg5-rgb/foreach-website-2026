@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTubingDetailPath } from "../selection/tubing-selection-routes";
 import { getTubingSeriesCopy, tubingSeriesImage } from "./content";
+import { getTubingMaterialHeading } from "./headings";
 import { SITE_ORIGIN } from "@/lib/seo/site-url";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
@@ -51,8 +52,9 @@ export function getTubingMaterialSeoCopy(slug: string, locale: string) {
   if (!material || !["es", "fr", "ko", "ru"].includes(locale)) return undefined;
 
   const template = tubingMaterialSeoTemplates[locale as keyof typeof tubingMaterialSeoTemplates];
+  const heading = getTubingMaterialHeading(slug, locale);
   return {
-    title: template.title(material),
+    title: heading ? `${heading.description} | FOREACH` : template.title(material),
     description: template.description(material),
     openGraphLocale: template.openGraphLocale,
   };

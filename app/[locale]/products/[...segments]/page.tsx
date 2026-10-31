@@ -4,7 +4,7 @@ import { migrateControlModuleSegments, getControlModuleDetailSlugFromSegments, g
 import ValveSelectionPage, {getValveSelectionMetadata} from '@/components/products/selection/ValveSelectionPage';
 import HpValveDetailPage, {getHpValveMetadata} from '@/components/products/detail/HpValveDetailPage';
 import {getValveSeriesRoute} from '@/data/products/selection/valve-routes';
-import { getPipettingSeriesSlug, getPipettingSeriesKey, migratePipettingSegments, isPipettingModelRoute } from "@/data/products/selection/pipetting-pump-routes";
+import { getPipettingSeriesSlug, getPipettingSeriesKey, migratePipettingSegments, isPipettingModelRoute, pipettingModelSlugs } from "@/data/products/selection/pipetting-pump-routes";
 import { getPipettingModelMetadata } from "@/services/products/getPipettingModelMetadata";
 import { syringeModelRoutes } from "@/data/products/selection/syringe-pump-routes";
 import { getSyringeModelMetadata } from "@/services/products/getSyringeModelMetadata";
@@ -207,6 +207,10 @@ const englishProbeControlSelectionRoutes = [
 function getProductRoutesForLocale(locale: LocaleCode | string) {
   return migrateDiaphragmPumpRouteSegments([
     ...allEnglishProductDetailRoutes,
+    // Include current pipetting models even before the next exported-route snapshot.
+    ...pipettingModelSlugs.filter(model => !allEnglishProductDetailRoutes.some(segments =>
+      segments[0] === "pumps" && segments[1] === "pipetting-pumps" && segments.at(-1) === model
+    )).map(model => ["pumps", "pipetting-pumps", model]),
     ...syringeSeriesSlugs.map(slug => ["pumps", "syringe-pumps", slug]),
     ...valvelessPumpSeries.map(({ slug }) => ["pumps", VALVELESS_PUMP_CATEGORY_SLUG_INTL, slug]),
     ...(locale === "en" ? englishProbeControlSelectionRoutes : []),
@@ -322,7 +326,6 @@ function renderSelectionPage({
         initialProductTypeId={productTypeId}
         initialFilters={initialFilters}
       />
-      {productTypeId && ["fittings", "tubing"].includes(categoryId) && <FittingRelatedResources productTypeId={productTypeId} locale={locale as "en" | "es" | "fr" | "ko" | "ru"} />}
     </Suspense>
   );
 }

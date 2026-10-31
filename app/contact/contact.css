@@ -711,8 +711,8 @@
     /* 琛ㄥ崟鎺т欢鏈€灏忛珮搴?*/
     border: 1px solid rgba(23, 51, 104, 0.2);
     /* 琛ㄥ崟鎺т欢娴呰摑鐏拌竟妗?*/
-    border-radius: var(--contact-radius);
-    /* 琛ㄥ崟鎺т欢缁熶竴 8px 鍦嗚 */
+    border-radius: 0;
+    /* Keep inquiry form controls square. */
     background-color: #ffffff;
     /* 琛ㄥ崟鎺т欢鐧借壊鑳屾櫙 */
     padding: 0 13px;

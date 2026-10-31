@@ -78,7 +78,7 @@ export const copy = {
       p("Registre el espacio y las conexiones junto con fluido, temperatura, picos de presión y mantenimiento. Así puede comprobarse si la mejora de caudal de un paso mayor es compatible con el servicio previsto."),
     ] },
     { title: "¿Cómo validar presión y estanqueidad del acoplamiento rápido en el equipo?", tocLabel: "Validación del conjunto", blocks: [
-      p("Utilice las mitades, juntas, manguera y soportes previstos para el montaje. Un ensayo breve de mantenimiento de presión con agua a temperatura ambiente no representa limpieza caliente, ciclos de presión ni reconexiones repetidas."),
+      p("Utilice las mitades, juntas, manguera y soportes previstos para el montaje. Un ensayo breve con agua a temperatura ambiente no representa limpieza caliente, ciclos de presión ni reconexiones repetidas."),
       table(["Ensayo o comprobación", "Qué registrar", "Objetivo"], [
         ["Configuración y servicio", "Referencias completas, materiales, válvulas, manguera, diámetro, fluido y temperatura", "Reproducir la conexión que se instalará"],
         ["Presión estable y pérdida de carga", "Presión a ambos lados y caudal entregado", "Separar resistencia a la presión y presupuesto de presión diferencial"],

@@ -1,0 +1,644 @@
+{
+  "geometries": {
+    "flat-bottom-hf-m6-20": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-m6-20.fcad.gz",
+      "sourcePart": "443-02-00359"
+    },
+    "flat-bottom-hf-m6-25": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-m6-25.fcad.gz",
+      "sourcePart": "443-02-00360"
+    },
+    "flat-bottom-hf-m6-32": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-m6-32.fcad.gz",
+      "sourcePart": "443-02-00361"
+    },
+    "flat-bottom-hf-u28-20": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-u28-20.fcad.gz",
+      "sourcePart": "443-02-00761"
+    },
+    "flat-bottom-hf-u28-25": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-u28-25.fcad.gz",
+      "sourcePart": "443-02-00357"
+    },
+    "flat-bottom-hf-u28-32": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-u28-32.fcad.gz",
+      "sourcePart": "443-02-00760"
+    },
+    "flat-bottom-hf6-m6-20": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf6-m6-20.fcad.gz",
+      "sourcePart": "443-02-00365"
+    },
+    "flat-bottom-hf6-m6-25": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf6-m6-25.fcad.gz",
+      "sourcePart": "443-02-00366"
+    },
+    "flat-bottom-hf6-m6-32": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf6-m6-32.fcad.gz",
+      "sourcePart": "443-02-00367"
+    },
+    "flat-bottom-hf6-u28-32": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hf6-u28-32.fcad.gz",
+      "sourcePart": "443-02-00364"
+    },
+    "flat-bottom-hfl-m6-25": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-25.fcad.gz",
+      "sourcePart": "443-01-00165"
+    },
+    "flat-bottom-hfl-m6-30": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-30.fcad.gz",
+      "sourcePart": "443-01-00006"
+    },
+    "flat-bottom-hfl-u28-16": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-16.fcad.gz",
+      "sourcePart": "443-00-00078"
+    },
+    "flat-bottom-hfl-u28-30": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-30.fcad.gz",
+      "sourcePart": "443-01-00147"
+    },
+    "flat-bottom-hfl6-u40-16": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u40-16.fcad.gz",
+      "sourcePart": "443-02-00692"
+    },
+    "flat-bottom-hfl-m6-16": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-16.fcad.gz",
+      "sourcePart": "443-01-00164"
+    },
+    "flat-bottom-hfl-m6-20": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-20.fcad.gz",
+      "sourcePart": "443-01-00005"
+    },
+    "flat-bottom-hfl-m6-32": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-32.fcad.gz",
+      "sourcePart": "443-01-00166"
+    },
+    "flat-bottom-hfl-u28-20": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-20.fcad.gz",
+      "sourcePart": "443-00-00522"
+    },
+    "flat-bottom-hfl-u28-25": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-25.fcad.gz",
+      "sourcePart": "443-01-00146"
+    },
+    "flat-bottom-hfl-u28-32": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-32.fcad.gz",
+      "sourcePart": "443-00-00082"
+    },
+    "flat-bottom-hfl6-m6-16": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-16.fcad.gz",
+      "sourcePart": "443-02-00652"
+    },
+    "flat-bottom-hfl6-m6-20": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-20.fcad.gz",
+      "sourcePart": "443-02-00649"
+    },
+    "flat-bottom-hfl6-m6-25": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-25.fcad.gz",
+      "sourcePart": "443-02-00651"
+    },
+    "flat-bottom-hfl6-m6-30": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-30.fcad.gz",
+      "sourcePart": "443-02-00648"
+    },
+    "flat-bottom-hfl6-m6-32": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-32.fcad.gz",
+      "sourcePart": "443-02-00650"
+    },
+    "flat-bottom-hfl6-u28-16": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-16.fcad.gz",
+      "sourcePart": "443-02-00647"
+    },
+    "flat-bottom-hfl6-u28-20": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-20.fcad.gz",
+      "sourcePart": "443-02-00644"
+    },
+    "flat-bottom-hfl6-u28-25": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-25.fcad.gz",
+      "sourcePart": "443-02-00646"
+    },
+    "flat-bottom-hfl6-u28-30": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-30.fcad.gz",
+      "sourcePart": "443-02-00643"
+    },
+    "flat-bottom-hfl6-u28-32": {
+      "model3dUrl": "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-32.fcad.gz",
+      "sourcePart": "443-02-00645"
+    }
+  },
+  "products": {
+    "hf-m6-20-pk-n": {
+      "viewerId": "flat-bottom-hf-m6-20",
+      "model": "HF-M6-20-PK-N",
+      "part": "443-02-00359",
+      "workbookRow": 123,
+      "finish": "peek"
+    },
+    "hf-m6-20-ps-b": {
+      "viewerId": "flat-bottom-hf-m6-20",
+      "model": "HF-M6-20-PS-B",
+      "part": "443-02-00413",
+      "workbookRow": 126,
+      "finish": "black"
+    },
+    "hf-m6-20-pv-n": {
+      "viewerId": "flat-bottom-hf-m6-20",
+      "model": "HF-M6-20-PV-N",
+      "part": "443-02-00412",
+      "workbookRow": 129,
+      "finish": "natural"
+    },
+    "hf-m6-25-pk-n": {
+      "viewerId": "flat-bottom-hf-m6-25",
+      "model": "HF-M6-25-PK-N",
+      "part": "443-02-00360",
+      "workbookRow": 124,
+      "finish": "peek"
+    },
+    "hf-m6-25-ps-b": {
+      "viewerId": "flat-bottom-hf-m6-25",
+      "model": "HF-M6-25-PS-B",
+      "part": "443-02-00415",
+      "workbookRow": 127,
+      "finish": "black"
+    },
+    "hf-m6-25-pv-n": {
+      "viewerId": "flat-bottom-hf-m6-25",
+      "model": "HF-M6-25-PV-N",
+      "part": "443-02-00414",
+      "workbookRow": 130,
+      "finish": "natural"
+    },
+    "hf-m6-32-pk-n": {
+      "viewerId": "flat-bottom-hf-m6-32",
+      "model": "HF-M6-32-PK-N",
+      "part": "443-02-00361",
+      "workbookRow": 125,
+      "finish": "peek"
+    },
+    "hf-m6-32-ps-b": {
+      "viewerId": "flat-bottom-hf-m6-32",
+      "model": "HF-M6-32-PS-B",
+      "part": "443-02-00777",
+      "workbookRow": 128,
+      "finish": "black"
+    },
+    "hf-m6-32-pv-n": {
+      "viewerId": "flat-bottom-hf-m6-32",
+      "model": "HF-M6-32-PV-N",
+      "part": "443-02-00416",
+      "workbookRow": 131,
+      "finish": "natural"
+    },
+    "hf-u28-20-pk-n": {
+      "viewerId": "flat-bottom-hf-u28-20",
+      "model": "HF-U28-20-PK-N",
+      "part": "443-02-00761",
+      "workbookRow": 114,
+      "finish": "peek"
+    },
+    "hf-u28-20-ps-b": {
+      "viewerId": "flat-bottom-hf-u28-20",
+      "model": "HF-U28-20-PS-B",
+      "part": "443-02-00775",
+      "workbookRow": 117,
+      "finish": "black"
+    },
+    "hf-u28-20-pv-n": {
+      "viewerId": "flat-bottom-hf-u28-20",
+      "model": "HF-U28-20-PV-N",
+      "part": "443-02-00756",
+      "workbookRow": 120,
+      "finish": "natural"
+    },
+    "hf-u28-25-pk-n": {
+      "viewerId": "flat-bottom-hf-u28-25",
+      "model": "HF-U28-25-PK-N",
+      "part": "443-02-00357",
+      "workbookRow": 115,
+      "finish": "peek"
+    },
+    "hf-u28-25-ps-b": {
+      "viewerId": "flat-bottom-hf-u28-25",
+      "model": "HF-U28-25-PS-B",
+      "part": "443-02-00776",
+      "workbookRow": 118,
+      "finish": "black"
+    },
+    "hf-u28-25-pv-n": {
+      "viewerId": "flat-bottom-hf-u28-25",
+      "model": "HF-U28-25-PV-N",
+      "part": "443-02-00408",
+      "workbookRow": 121,
+      "finish": "natural"
+    },
+    "hf-u28-32-pk-n": {
+      "viewerId": "flat-bottom-hf-u28-32",
+      "model": "HF-U28-32-PK-N",
+      "part": "443-02-00760",
+      "workbookRow": 116,
+      "finish": "peek"
+    },
+    "hf-u28-32-ps-b": {
+      "viewerId": "flat-bottom-hf-u28-32",
+      "model": "HF-U28-32-PS-B",
+      "part": "443-02-00774",
+      "workbookRow": 119,
+      "finish": "black"
+    },
+    "hf-u28-32-pv-n": {
+      "viewerId": "flat-bottom-hf-u28-32",
+      "model": "HF-U28-32-PV-N",
+      "part": "443-02-00755",
+      "workbookRow": 122,
+      "finish": "natural"
+    },
+    "hf6-m6-20-pk-n": {
+      "viewerId": "flat-bottom-hf6-m6-20",
+      "model": "HF6-M6-20-PK-N",
+      "part": "443-02-00365",
+      "workbookRow": 87,
+      "finish": "peek"
+    },
+    "hf6-m6-20-ps-b": {
+      "viewerId": "flat-bottom-hf6-m6-20",
+      "model": "HF6-M6-20-PS-B",
+      "part": "443-02-00425",
+      "workbookRow": 93,
+      "finish": "black"
+    },
+    "hf6-m6-20-pv-n": {
+      "viewerId": "flat-bottom-hf6-m6-20",
+      "model": "HF6-M6-20-PV-N",
+      "part": "443-02-00763",
+      "workbookRow": 90,
+      "finish": "natural"
+    },
+    "hf6-m6-25-pk-n": {
+      "viewerId": "flat-bottom-hf6-m6-25",
+      "model": "HF6-M6-25-PK-N",
+      "part": "443-02-00366",
+      "workbookRow": 88,
+      "finish": "peek"
+    },
+    "hf6-m6-25-ps-b": {
+      "viewerId": "flat-bottom-hf6-m6-25",
+      "model": "HF6-M6-25-PS-B",
+      "part": "443-02-00773",
+      "workbookRow": 94,
+      "finish": "black"
+    },
+    "hf6-m6-25-pv-n": {
+      "viewerId": "flat-bottom-hf6-m6-25",
+      "model": "HF6-M6-25-PV-N",
+      "part": "443-02-00426",
+      "workbookRow": 91,
+      "finish": "natural"
+    },
+    "hf6-m6-32-pk-n": {
+      "viewerId": "flat-bottom-hf6-m6-32",
+      "model": "HF6-M6-32-PK-N",
+      "part": "443-02-00367",
+      "workbookRow": 89,
+      "finish": "peek"
+    },
+    "hf6-m6-32-ps-b": {
+      "viewerId": "flat-bottom-hf6-m6-32",
+      "model": "HF6-M6-32-PS-B",
+      "part": "443-02-00429",
+      "workbookRow": 95,
+      "finish": "black"
+    },
+    "hf6-m6-32-pv-n": {
+      "viewerId": "flat-bottom-hf6-m6-32",
+      "model": "HF6-M6-32-PV-N",
+      "part": "443-02-00428",
+      "workbookRow": 92,
+      "finish": "natural"
+    },
+    "hf6-u28-32-pk-n": {
+      "viewerId": "flat-bottom-hf6-u28-32",
+      "model": "HF6-U28-32-PK-N",
+      "part": "443-02-00364",
+      "workbookRow": 80,
+      "finish": "peek"
+    },
+    "hf6-u28-32-ps-b": {
+      "viewerId": "flat-bottom-hf6-u28-32",
+      "model": "HF6-U28-32-PS-B",
+      "part": "443-02-00766",
+      "workbookRow": 86,
+      "finish": "black"
+    },
+    "hf6-u28-32-pv-n": {
+      "viewerId": "flat-bottom-hf6-u28-32",
+      "model": "HF6-U28-32-PV-N",
+      "part": "443-02-00422",
+      "workbookRow": 83,
+      "finish": "natural"
+    },
+    "hfl-m6-25-pv-b": {
+      "viewerId": "flat-bottom-hfl-m6-25",
+      "model": "HFL-M6-25-PV-B",
+      "part": "443-01-00165",
+      "workbookRow": 20,
+      "finish": "black"
+    },
+    "hfl-m6-25-pv-n": {
+      "viewerId": "flat-bottom-hfl-m6-25",
+      "model": "HFL-M6-25-PV-N",
+      "part": "443-00-00202",
+      "workbookRow": 9,
+      "finish": "natural"
+    },
+    "hfl-m6-30-pv-b": {
+      "viewerId": "flat-bottom-hfl-m6-30",
+      "model": "HFL-M6-30-PV-B",
+      "part": "443-01-00006",
+      "workbookRow": 21,
+      "finish": "black"
+    },
+    "hfl-m6-30-pv-n": {
+      "viewerId": "flat-bottom-hfl-m6-30",
+      "model": "HFL-M6-30-PV-N",
+      "part": "443-00-00227",
+      "workbookRow": 12,
+      "finish": "natural"
+    },
+    "hfl-u28-16-pv-b": {
+      "viewerId": "flat-bottom-hfl-u28-16",
+      "model": "HFL-U28-16-PV-B",
+      "part": "443-00-00078",
+      "workbookRow": 13,
+      "finish": "black"
+    },
+    "hfl-u28-16-pv-n": {
+      "viewerId": "flat-bottom-hfl-u28-16",
+      "model": "HFL-U28-16-PV-N",
+      "part": "443-00-00056",
+      "workbookRow": 3,
+      "finish": "natural"
+    },
+    "hfl-u28-30-pv-b": {
+      "viewerId": "flat-bottom-hfl-u28-30",
+      "model": "HFL-U28-30-PV-B",
+      "part": "443-01-00147",
+      "workbookRow": 16,
+      "finish": "black"
+    },
+    "hfl-u28-30-pv-n": {
+      "viewerId": "flat-bottom-hfl-u28-30",
+      "model": "HFL-U28-30-PV-N",
+      "part": "443-00-00225",
+      "workbookRow": 6,
+      "finish": "natural"
+    },
+    "hfl6-u40-16-pk-n": {
+      "viewerId": "flat-bottom-hfl6-u40-16",
+      "model": "HFL6-U40-16-PK-N",
+      "part": "443-02-00692",
+      "workbookRow": 96,
+      "finish": "peek"
+    },
+    "hfl-m6-16-pv-b": {
+      "viewerId": "flat-bottom-hfl-m6-16",
+      "model": "HFL-M6-16-PV-B",
+      "part": "443-01-00164",
+      "workbookRow": 18,
+      "finish": "black"
+    },
+    "hfl-m6-16-pv-n": {
+      "viewerId": "flat-bottom-hfl-m6-16",
+      "model": "HFL-M6-16-PV-N",
+      "part": "443-00-00201",
+      "workbookRow": 8,
+      "finish": "natural"
+    },
+    "hfl-m6-20-pv-b": {
+      "viewerId": "flat-bottom-hfl-m6-20",
+      "model": "HFL-M6-20-PV-B",
+      "part": "443-01-00005",
+      "workbookRow": 19,
+      "finish": "black"
+    },
+    "hfl-m6-20-pv-n": {
+      "viewerId": "flat-bottom-hfl-m6-20",
+      "model": "HFL-M6-20-PV-N",
+      "part": "443-00-00204",
+      "workbookRow": 11,
+      "finish": "natural"
+    },
+    "hfl-m6-32-pv-b": {
+      "viewerId": "flat-bottom-hfl-m6-32",
+      "model": "HFL-M6-32-PV-B",
+      "part": "443-01-00166",
+      "workbookRow": 22,
+      "finish": "black"
+    },
+    "hfl-m6-32-pv-n": {
+      "viewerId": "flat-bottom-hfl-m6-32",
+      "model": "HFL-M6-32-PV-N",
+      "part": "443-00-00203",
+      "workbookRow": 10,
+      "finish": "natural"
+    },
+    "hfl-u28-20-pv-b": {
+      "viewerId": "flat-bottom-hfl-u28-20",
+      "model": "HFL-U28-20-PV-B",
+      "part": "443-00-00522",
+      "workbookRow": 14,
+      "finish": "black"
+    },
+    "hfl-u28-20-pv-n": {
+      "viewerId": "flat-bottom-hfl-u28-20",
+      "model": "HFL-U28-20-PV-N",
+      "part": "443-00-00222",
+      "workbookRow": 5,
+      "finish": "natural"
+    },
+    "hfl-u28-25-pv-b": {
+      "viewerId": "flat-bottom-hfl-u28-25",
+      "model": "HFL-U28-25-PV-B",
+      "part": "443-01-00146",
+      "workbookRow": 15,
+      "finish": "black"
+    },
+    "hfl-u28-25-pv-n": {
+      "viewerId": "flat-bottom-hfl-u28-25",
+      "model": "HFL-U28-25-PV-N",
+      "part": "443-00-00221",
+      "workbookRow": 4,
+      "finish": "natural"
+    },
+    "hfl-u28-32-pv-b": {
+      "viewerId": "flat-bottom-hfl-u28-32",
+      "model": "HFL-U28-32-PV-B",
+      "part": "443-00-00082",
+      "workbookRow": 17,
+      "finish": "black"
+    },
+    "hfl-u28-32-pv-n": {
+      "viewerId": "flat-bottom-hfl-u28-32",
+      "model": "HFL-U28-32-PV-N",
+      "part": "443-00-00057",
+      "workbookRow": 7,
+      "finish": "natural"
+    },
+    "hfl6-m6-16-ps-b": {
+      "viewerId": "flat-bottom-hfl6-m6-16",
+      "model": "HFL6-M6-16-PS-B",
+      "part": "443-02-00652",
+      "workbookRow": 52,
+      "finish": "black"
+    },
+    "hfl6-m6-20-ps-b": {
+      "viewerId": "flat-bottom-hfl6-m6-20",
+      "model": "HFL6-M6-20-PS-B",
+      "part": "443-02-00649",
+      "workbookRow": 49,
+      "finish": "black"
+    },
+    "hfl6-m6-25-ps-b": {
+      "viewerId": "flat-bottom-hfl6-m6-25",
+      "model": "HFL6-M6-25-PS-B",
+      "part": "443-02-00651",
+      "workbookRow": 51,
+      "finish": "black"
+    },
+    "hfl6-m6-25-ps-u": {
+      "viewerId": "flat-bottom-hfl6-m6-25",
+      "model": "HFL6-M6-25-PS-U",
+      "part": "443-02-00667",
+      "workbookRow": 53,
+      "finish": "natural"
+    },
+    "hfl6-m6-30-ps-b": {
+      "viewerId": "flat-bottom-hfl6-m6-30",
+      "model": "HFL6-M6-30-PS-B",
+      "part": "443-02-00648",
+      "workbookRow": 48,
+      "finish": "black"
+    },
+    "hfl6-m6-32-ps-b": {
+      "viewerId": "flat-bottom-hfl6-m6-32",
+      "model": "HFL6-M6-32-PS-B",
+      "part": "443-02-00650",
+      "workbookRow": 50,
+      "finish": "black"
+    },
+    "hfl6-u28-16-ps-b": {
+      "viewerId": "flat-bottom-hfl6-u28-16",
+      "model": "HFL6-U28-16-PS-B",
+      "part": "443-02-00647",
+      "workbookRow": 47,
+      "finish": "black"
+    },
+    "hfl6-u28-16-ps-u": {
+      "viewerId": "flat-bottom-hfl6-u28-16",
+      "model": "HFL6-U28-16-PS-U",
+      "part": "443-02-00668",
+      "workbookRow": 54,
+      "finish": "natural"
+    },
+    "hfl6-u28-20-ps-b": {
+      "viewerId": "flat-bottom-hfl6-u28-20",
+      "model": "HFL6-U28-20-PS-B",
+      "part": "443-02-00644",
+      "workbookRow": 44,
+      "finish": "black"
+    },
+    "hfl6-u28-20-ps-u": {
+      "viewerId": "flat-bottom-hfl6-u28-20",
+      "model": "HFL6-U28-20-PS-U",
+      "part": "443-02-00676",
+      "workbookRow": 55,
+      "finish": "natural"
+    },
+    "hfl6-u28-25-ps-b": {
+      "viewerId": "flat-bottom-hfl6-u28-25",
+      "model": "HFL6-U28-25-PS-B",
+      "part": "443-02-00646",
+      "workbookRow": 46,
+      "finish": "black"
+    },
+    "hfl6-u28-30-ps-b": {
+      "viewerId": "flat-bottom-hfl6-u28-30",
+      "model": "HFL6-U28-30-PS-B",
+      "part": "443-02-00643",
+      "workbookRow": 43,
+      "finish": "black"
+    },
+    "hfl6-u28-32-ps-b": {
+      "viewerId": "flat-bottom-hfl6-u28-32",
+      "model": "HFL6-U28-32-PS-B",
+      "part": "443-02-00645",
+      "workbookRow": 45,
+      "finish": "black"
+    },
+    "hf6-u28-20-pk-n": {
+      "viewerId": "flat-bottom-hf6-m6-20",
+      "model": "HF6-U28-20-PK-N",
+      "part": "443-02-00750",
+      "workbookRow": 78,
+      "finish": "peek",
+      "provisionalGeometry": true,
+      "provisionalSourceModel": "HF6-M6-20-PK-N",
+      "provisionalSourceViewerId": "flat-bottom-hf6-m6-20",
+      "provisionalReason": "Exact HF6 U28 geometry is not available; temporarily reuse the matching HF6 M6 geometry."
+    },
+    "hf6-u28-20-ps-b": {
+      "viewerId": "flat-bottom-hf6-m6-20",
+      "model": "HF6-U28-20-PS-B",
+      "part": "443-02-00767",
+      "workbookRow": 84,
+      "finish": "black",
+      "provisionalGeometry": true,
+      "provisionalSourceModel": "HF6-M6-20-PS-B",
+      "provisionalSourceViewerId": "flat-bottom-hf6-m6-20",
+      "provisionalReason": "Exact HF6 U28 geometry is not available; temporarily reuse the matching HF6 M6 geometry."
+    },
+    "hf6-u28-20-pv-n": {
+      "viewerId": "flat-bottom-hf6-m6-20",
+      "model": "HF6-U28-20-PV-N",
+      "part": "443-02-00762",
+      "workbookRow": 81,
+      "finish": "natural",
+      "provisionalGeometry": true,
+      "provisionalSourceModel": "HF6-M6-20-PV-N",
+      "provisionalSourceViewerId": "flat-bottom-hf6-m6-20",
+      "provisionalReason": "Exact HF6 U28 geometry is not available; temporarily reuse the matching HF6 M6 geometry."
+    },
+    "hf6-u28-25-pk-n": {
+      "viewerId": "flat-bottom-hf6-m6-25",
+      "model": "HF6-U28-25-PK-N",
+      "part": "443-02-00751",
+      "workbookRow": 79,
+      "finish": "peek",
+      "provisionalGeometry": true,
+      "provisionalSourceModel": "HF6-M6-25-PK-N",
+      "provisionalSourceViewerId": "flat-bottom-hf6-m6-25",
+      "provisionalReason": "Exact HF6 U28 geometry is not available; temporarily reuse the matching HF6 M6 geometry."
+    },
+    "hf6-u28-25-ps-b": {
+      "viewerId": "flat-bottom-hf6-m6-25",
+      "model": "HF6-U28-25-PS-B",
+      "part": "443-02-00768",
+      "workbookRow": 85,
+      "finish": "black",
+      "provisionalGeometry": true,
+      "provisionalSourceModel": "HF6-M6-25-PS-B",
+      "provisionalSourceViewerId": "flat-bottom-hf6-m6-25",
+      "provisionalReason": "Exact HF6 U28 geometry is not available; temporarily reuse the matching HF6 M6 geometry."
+    },
+    "hf6-u28-25-pv-n": {
+      "viewerId": "flat-bottom-hf6-m6-25",
+      "model": "HF6-U28-25-PV-N",
+      "part": "443-02-00764",
+      "workbookRow": 82,
+      "finish": "natural",
+      "provisionalGeometry": true,
+      "provisionalSourceModel": "HF6-M6-25-PV-N",
+      "provisionalSourceViewerId": "flat-bottom-hf6-m6-25",
+      "provisionalReason": "Exact HF6 U28 geometry is not available; temporarily reuse the matching HF6 M6 geometry."
+    }
+  }
+}

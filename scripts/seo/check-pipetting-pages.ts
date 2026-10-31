@@ -11,7 +11,7 @@ const prerendered = process.argv.includes("--prerender");
 const base = process.env.PIPETTING_AUDIT_ORIGIN || "http://127.0.0.1:3000";
 const origin = "https://www.foreachtek.com";
 const escape = (s:string) => s.replaceAll("&","&amp;").replaceAll('"',"&quot;").replaceAll("'","&#x27;").replaceAll("<","&lt;").replaceAll(">","&gt;");
-const expectedModels = {category:["smtp2-1000ul","smtp4-100ul","smtp4-500ul"], smtp2:["smtp2-1000ul"], smtp4:["smtp4-100ul","smtp4-500ul"]};
+const expectedModels = {category:["smtp2-500","smtp2-510","smtp2-520","smtp4-100ul","smtp4-250ul","smtp4-500ul"], smtp2:["smtp2-500","smtp2-510","smtp2-520"], smtp4:["smtp4-100ul","smtp4-250ul","smtp4-500ul"]};
 async function main() {
   const sitemap = exported ? await readFile("out/sitemap.xml", "utf8") : "";
   let count = 0;

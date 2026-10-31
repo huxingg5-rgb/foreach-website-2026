@@ -1,0 +1,42 @@
+{
+  "width": 1500,
+  "height": 1500,
+  "photos": [
+    {
+      "source": "91.JPG",
+      "filename": "foreach-abd-air-bubble-detectors-open-cover-side-view.webp",
+      "alt": {
+        "zh": "三个 FOREACH ABD 气泡检测模块的侧面实拍，展示打开的翻盖、管槽和安装孔",
+        "en": "Side view of three FOREACH ABD air bubble detection modules with open covers, tubing grooves and mounting holes",
+        "es": "Vista lateral de tres módulos de detección de burbujas FOREACH ABD con tapas abiertas, ranuras para tubos y orificios de montaje",
+        "fr": "Vue latérale de trois modules de détection de bulles FOREACH ABD avec couvercles ouverts, rainures pour tubes et trous de fixation",
+        "ko": "덮개를 연 FOREACH ABD 기포 감지 모듈 세 개의 측면 모습으로, 튜브 홈과 장착 구멍이 보입니다",
+        "ru": "Вид сбоку трёх модулей обнаружения пузырьков FOREACH ABD с открытыми крышками, пазами для трубок и монтажными отверстиями"
+      }
+    },
+    {
+      "source": "93.JPG",
+      "filename": "foreach-abd-air-bubble-detectors-closed-cover-angled-view.webp",
+      "alt": {
+        "zh": "三个 FOREACH ABD 气泡检测模块的斜视实拍，展示闭合翻盖、电气连接器和安装孔",
+        "en": "Angled view of three FOREACH ABD air bubble detection modules with closed covers, electrical connectors and mounting holes",
+        "es": "Vista en ángulo de tres módulos de detección de burbujas FOREACH ABD con tapas cerradas, conectores eléctricos y orificios de montaje",
+        "fr": "Vue en perspective de trois modules de détection de bulles FOREACH ABD avec couvercles fermés, connecteurs électriques et trous de fixation",
+        "ko": "덮개를 닫은 FOREACH ABD 기포 감지 모듈 세 개의 사선 모습으로, 전기 커넥터와 장착 구멍이 보입니다",
+        "ru": "Вид под углом трёх модулей обнаружения пузырьков FOREACH ABD с закрытыми крышками, электрическими разъёмами и монтажными отверстиями"
+      }
+    },
+    {
+      "source": "92.JPG",
+      "filename": "foreach-abd-air-bubble-detectors-open-cover-front-view.webp",
+      "alt": {
+        "zh": "三个 FOREACH ABD 气泡检测模块的正面实拍，展示打开的翻盖、不同宽度的管槽和电气连接器",
+        "en": "Front view of three FOREACH ABD air bubble detection modules with open covers, tubing grooves of different widths and electrical connectors",
+        "es": "Vista frontal de tres módulos de detección de burbujas FOREACH ABD con tapas abiertas, ranuras para tubos de distintas anchuras y conectores eléctricos",
+        "fr": "Vue de face de trois modules de détection de bulles FOREACH ABD avec couvercles ouverts, rainures pour tubes de différentes largeurs et connecteurs électriques",
+        "ko": "덮개를 연 FOREACH ABD 기포 감지 모듈 세 개의 정면 모습으로, 폭이 다른 튜브 홈과 전기 커넥터가 보입니다",
+        "ru": "Вид спереди трёх модулей обнаружения пузырьков FOREACH ABD с открытыми крышками, пазами для трубок разной ширины и электрическими разъёмами"
+      }
+    }
+  ]
+}

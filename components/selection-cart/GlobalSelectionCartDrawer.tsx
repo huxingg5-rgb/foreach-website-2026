@@ -23,6 +23,7 @@
       - 打印区域通过 portal 挂到 body 最高层，避免多页空白
 ========================================================= */
 
+import { hardTubeProductCodeText } from "@/data/products/configurator/hard-tube-accessories";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createPortal } from "react-dom";
@@ -49,6 +50,7 @@ import { trackBeginInquiry } from "@/lib/analytics/track-event";
 import styles from "./GlobalSelectionCartDrawer.module.css";
 import { useSelectionCart } from "./SelectionCartProvider";
 import { getSelectionCartCopy } from "./selection-cart.i18n";
+import { getCartGroups } from "./selection-cart-bundles";
 
 /* =========================================================
    PDF 页眉 / 页脚 SVG 路径
@@ -147,6 +149,8 @@ export default function GlobalSelectionCartDrawer() {
     generatePdfList,
     printTime,
   } = useSelectionCart();
+  const cartGroups = useMemo(() => getCartGroups(items), [items]);
+  const orderedItems = useMemo(() => cartGroups.flatMap(group => group.items), [cartGroups]);
 
   /* =========================================================
      是否已经在浏览器端挂载
@@ -160,8 +164,8 @@ export default function GlobalSelectionCartDrawer() {
 
   /* 已经标记“已添加图纸”的型号 */
   const requestDrawingItems = useMemo(() => {
-    return items.filter((item) => item.needDrawing);
-  }, [items]);
+    return orderedItems.filter((item) => item.needDrawing);
+  }, [orderedItems]);
 
   /* 图纸需求数量 */
   const drawingNeedCount = requestDrawingItems.length;
@@ -205,6 +209,7 @@ export default function GlobalSelectionCartDrawer() {
             ? [
                 `${isEnglish ? t("Product Type") : "产品类型"}: ${localizedProductName}`,
                 `${isEnglish ? t("Product Model") : "产品型号"}: ${item.foreachModel}`,
+                ...(item.bundleId ? [`${isEnglish ? t("Product Code") : "商品编码"}: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}`] : []),
                 `${isEnglish ? t("Quantity") : "数量"}: ${item.quantity}`,
               ]
             : [
@@ -376,6 +381,7 @@ export default function GlobalSelectionCartDrawer() {
             `${index + 1}. ${item.foreachModel}`,
             `Product Type: ${localizedProductName}`,
             `Product Model: ${item.foreachModel}`,
+            ...(item.bundleId ? [`Product Code: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}`] : []),
             `Quantity: ${item.quantity}`,
           ].join("\n");
         }
@@ -525,10 +531,10 @@ export default function GlobalSelectionCartDrawer() {
                   </td>
                 </tr>
               ) : (
-                items.map((item, index) => {
+                cartGroups.flatMap((group, groupIndex) => group.items.map((item, partIndex) => {
                   return (
                     <tr key={item.id}>
-                      <td>{index + 1}</td>
+                      <td>{group.accessories.length ? `${groupIndex + 1}.${partIndex + 1}` : groupIndex + 1}</td>
                       <td>
                         {item.sourceType === "pump-selection"
                           ? cartCopy.sourceLabels.products
@@ -545,7 +551,7 @@ export default function GlobalSelectionCartDrawer() {
                       </td>
                       <td>
                         {item.sourceType === "pump-selection"
-                          ? cartCopy.configuredProduct
+                          ? item.bundleId ? `${isEnglish ? t("Product Code") : "商品编码"}: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}` : cartCopy.configuredProduct
                           : item.competitorModels.join(" / ") || "-"}
                       </td>
                       <td>{item.foreachModel}</td>
@@ -557,7 +563,7 @@ export default function GlobalSelectionCartDrawer() {
                       </td>
                     </tr>
                   );
-                })
+                }))
               )}
             </tbody>
           </table>
@@ -671,7 +677,9 @@ export default function GlobalSelectionCartDrawer() {
                   </div>
 
                   <div className={styles.list}>
-                    {items.map((item) => {
+                    {cartGroups.map((group) => {
+                      const item = group.primary;
+                      const needsDrawing = group.items.some(part => part.needDrawing);
                       const localizedProductName = getLocalizedCartProductName(
                         item.productName,
                         item.sourceType,
@@ -679,11 +687,11 @@ export default function GlobalSelectionCartDrawer() {
                       );
 
                       return (
-                        <article className={styles.item} key={item.id}>
+                        <article className={`${styles.item} ${group.accessories.length ? styles.bundleItem : ""}`} key={group.id}>
                           <button
                             className={styles.removeButton}
                             type="button"
-                            aria-label={isEnglish ? t("Remove") : "删除该产品"}
+                            aria-label={isEnglish ? t("Remove") : group.accessories.length ? "删除该组合" : "删除该产品"}
                             onClick={() => {
                               removeItem(item.id);
                             }}
@@ -728,16 +736,16 @@ export default function GlobalSelectionCartDrawer() {
 
                             <button
                               className={
-                                item.needDrawing
+                                needsDrawing
                                   ? `${styles.drawingButton} ${styles.active}`
                                   : styles.drawingButton
                               }
                               type="button"
                               onClick={() => {
-                                toggleDrawingNeed(item.id, !item.needDrawing);
+                                toggleDrawingNeed(item.id, !needsDrawing);
                               }}
                             >
-                              {item.needDrawing
+                              {needsDrawing
                                 ? isEnglish ? t("Drawing Added") : "已添加图纸"
                                 : isEnglish ? t("Add Drawing") : "添加图纸"}
                             </button>
@@ -763,6 +771,16 @@ export default function GlobalSelectionCartDrawer() {
                               </div>
                             </>
                           )}
+
+                          {group.accessories.map(accessory => (
+                            <div className={styles.bundleAccessory} key={accessory.id}>
+                              <h3>{accessory.foreachModel}</h3>
+                              <div className={styles.infoRow}>
+                                <span>{isEnglish ? t("Product Type") : "产品类型"}</span>
+                                <strong>{getLocalizedCartProductName(accessory.productName, accessory.sourceType, locale)}</strong>
+                              </div>
+                            </div>
+                          ))}
 
                           <div className={styles.quantityRow}>
                             <label htmlFor={`global-cart-qty-${item.id}`}>

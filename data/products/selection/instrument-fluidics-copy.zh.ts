@@ -1,3 +1,5 @@
+import { getSmtp4ModelCopy } from "../detail/smtp4-model-content";
+
 // Chinese authored copy. Shared card headings are also the detail H1 source.
 export const instrumentCardsZh: Record<string, { model: string; type: string; parent: string; heading: string }> = {
   "smtp2-1000ul": {
@@ -10,13 +12,19 @@ export const instrumentCardsZh: Record<string, { model: string; type: string; pa
     "model": "SMTP4-100 μL",
     "type": "移液泵",
     "parent": "/products/pumps/pipetting-pumps/",
-    "heading": "100 μL 气体置换式移液泵，用于小体积样本转移和反应体系加液，支持自动脱吸头及吸头适配"
+    "heading": getSmtp4ModelCopy("smtp4-100ul", "zh")!.heading
+  },
+  "smtp4-250ul": {
+    "model": "SMTP4-250 μL",
+    "type": "移液泵",
+    "parent": "/products/pumps/pipetting-pumps/",
+    "heading": getSmtp4ModelCopy("smtp4-250ul", "zh")!.heading
   },
   "smtp4-500ul": {
     "model": "SMTP4-500 μL",
     "type": "移液泵",
     "parent": "/products/pumps/pipetting-pumps/",
-    "heading": "500 μL 气体置换式移液泵，用于样本分装、稀释液添加与试剂转移，支持自动脱吸头及吸头适配"
+    "heading": getSmtp4ModelCopy("smtp4-500ul", "zh")!.heading
   },
   "hmd3-30mm-solenoid-syringe-pump": {
     "model": "HMD3",
@@ -59,7 +67,7 @@ export const instrumentIntrosZh: Record<string, {title:string;paragraphs:string[
   "pipette-pump": {
     "title": "气体置换式移液泵",
     "paragraphs": [
-      "恒永达气体置换式移液泵配合一次性吸头完成吸液与排液，用于自动化分析仪器、样本前处理设备和实验室工作站中的样本转移、试剂添加与分装。这类产品也称为气体置换式移液模块，包括 SMTP2 和 SMTP4 系列，提供 100 μL、500 μL 和 1000 μL 标称容量配置。",
+      "恒永达气体置换式移液泵配合一次性吸头完成吸液与排液，用于自动化分析仪器、样本前处理设备和实验室工作站中的样本转移、试剂添加与分装。这类产品也称为气体置换式移液模块，包括 SMTP2 和 SMTP4 系列，提供 100 μL、250 μL、500 μL 和 1000 μL 标称容量配置。",
       "移液泵选型应根据最小、常用及最大工作液量，结合准确度、重复性和移液节拍要求确定配置，同时考虑液体性质、吸头适配、安装空间及设备控制方式。标称容量与驱动分辨率应分别比较，实际移液性能需结合目标液体、吸头和吸排液参数验证。",
       "SMTP2 集成驱动控制与液面、堵塞及吸头检测，适合需要移液状态反馈的自动化工位。SMTP4 支持气体置换移液与自动脱吸头，由设备方配套驱动和流程控制。可根据检测需求与控制架构比较两个系列，再按工作液量选择容量，并确认吸头及安装适配。"
     ]
@@ -85,8 +93,8 @@ export const instrumentSeriesIntrosZh: Record<string, {title:string;paragraphs:s
   "SMTP4 气体置换式移液泵": {
     "title": "SMTP4 气体置换式移液泵",
     "paragraphs": [
-      "恒永达 SMTP4 系列是面向自动化仪器集成的气体置换式移液泵，提供 100 μL 和 500 μL 标称容量配置，配合一次性吸头完成样本转移、试剂添加及分装，并支持自动脱吸头。适用于由设备方统一配置驱动、运动轴和流程控制的样本前处理及自动加样单元。",
-      "SMTP4-100 μL 可作为小体积样本转移与反应体系加液的候选配置；SMTP4-500 μL 可用于单次液量较大的样本转移、分装和稀释液添加。两种配置的驱动分辨率分别为 0.05 μL/步和 0.25 μL/步，选型应结合实际工作液量与性能要求，不能将步进分辨率视为最小可靠移液量。",
+      "恒永达 SMTP4 系列是面向自动化仪器集成的气体置换式移液泵，提供 100 μL、250 μL 和 500 μL 标称容量配置，配合一次性吸头完成样本转移、试剂添加及分装，并支持自动脱吸头。适用于由设备方统一配置驱动、运动轴和流程控制的样本前处理及自动加样单元。",
+      "SMTP4-100 μL 可作为小体积样本转移与反应体系加液的候选配置；SMTP4-500 μL 可用于单次液量较大的样本转移、分装和稀释液添加。SMTP4-250 μL 可用于 250 μL 容量范围内的样本转移和试剂添加。100、250、500 μL 三种配置的驱动分辨率分别为 0.05、0.125、0.25 μL/步，选型应结合实际工作液量与性能要求，不能将步进分辨率视为最小可靠移液量。",
       "SMTP4 的驱动与流程控制由设备方配套；如需液面、堵塞或吸头状态反馈，应另外匹配检测方案。集成时需核对吸头密封、装卸行程与推力、安装空间及运动轴配合，并使用目标液体和吸头验证吸排液参数、自动脱吸头动作与整机节拍。"
     ]
   },

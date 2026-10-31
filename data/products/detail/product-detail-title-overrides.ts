@@ -394,6 +394,13 @@ export const PRODUCT_DETAIL_TITLE_OVERRIDES: Record<
     ko: "SMTP4 100 μL 공기 치환식 피펫팅 펌프",
     ru: "SMTP4 100 мкл Пипетирующий насос с вытеснением воздуха",
   },
+  "smtp4-250ul": {
+    en: "SMTP4 250 μL Air-Displacement Pipetting Pump",
+    es: "SMTP4 250 μL Bomba de pipeteo por desplazamiento de aire",
+    fr: "SMTP4 250 μL Pompe de pipetage à déplacement d’air",
+    ko: "SMTP4 250 μL 공기 치환식 피펫팅 펌프",
+    ru: "SMTP4 250 мкл Пипетирующий насос с вытеснением воздуха",
+  },
   "smtp4-500ul": {
     en: "SMTP4 500 μL Air-Displacement Pipetting Pump",
     es: "SMTP4 500 μL Bomba de pipeteo por desplazamiento de aire",

@@ -14,7 +14,7 @@ import { findMatchingConfiguratorVariants } from "../../components/products/conf
 import { getProductDatasheet } from "../../data/products/detail/product-detail-resources";
 
 const origin = process.env.VALVELESS_CHECK_ORIGIN || "http://127.0.0.1:3000";
-const reportFile = process.env.VALVELESS_CHECK_REPORT || "valveless-page-check.json";
+const reportFile = "E:/0_TemporaryAiKnowledgeBase/Output/Downloads/valveless-locales-20261023/page-check.json";
 const decode = (text: string) => text.replace(/&amp;/g,"&").replace(/&quot;/g,'"').replace(/&#x27;|&#39;/g,"'").replace(/&lt;/g,"<").replace(/&gt;/g,">");
 const clean = (text: string) => decode(text.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g," ")).replace(/\s+/g," ").trim();
 const main = (html: string) => html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] || "";
@@ -60,8 +60,7 @@ for (const locale of valvelessForeignLocales) {
     assert.deepEqual(adapter.valvelessIntroductionParagraphs, copy.introductionParagraphs);
     assert.equal(copy.description, copy.introductionParagraphs.join("\n\n"));
     assert.ok(copy.title.startsWith(copy.model));
-    const cardModel = copy.model.replace(/^RPL-/, "");
-    assert.ok(copy.cardSummary.startsWith(`${cardModel} `), `${locale}/${source.slug}: reviewed card model prefix`);
+    assert.ok(copy.cardSummary.startsWith(copy.model));
     assert.equal(adapter.description, copy.description);
     assert.equal(adapter.modelDisplay, source.modelDisplay, "Preserve custom configuration metadata");
     assert.equal(adapter.detailHref, getValvelessPumpPath(locale, source.slug));
@@ -107,7 +106,7 @@ async function checkHttp() {
       const body = main(html), text = clean(body);
       assert.ok(links(html).some(link => link.includes(`rel="canonical" href="https://www.foreachtek.com${path}"`)), `Canonical ${path}`);
       for (const [language, href] of Object.entries(getValvelessPumpLanguageAlternates(slug === "category" ? undefined : slug))) {
-        assert.ok(links(html).some(link => [language, ...(language === "en-US" ? ["en"] : [])].some(tag => link.toLowerCase().includes(`hreflang="${tag}" href="https://www.foreachtek.com${href}"`.toLowerCase()))), `Language ${language}: ${path}`);
+        assert.ok(links(html).some(link => link.includes(`hrefLang="${language}" href="https://www.foreachtek.com${href}"`)), `Language ${language}: ${path}`);
       }
       assert.equal([...body.matchAll(/<h1\b/g)].length,1,`One H1 ${path}`);
       if(locale === "zh") {

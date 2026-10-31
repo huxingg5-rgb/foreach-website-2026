@@ -3,6 +3,7 @@ import source from "@/data/products/generated/pumps/pipetting-pumps/detail/index
 // Exact source-value translations, never substring replacement. Numeric-only values stay intact.
 const locales = ["en", "es", "fr", "ko", "ru"];
 const labels: Record<string, string[]> = {
+  "吸头适配器": ["Tip adapter", "Adaptador de punta", "Adaptateur d’embout", "팁 어댑터", "Адаптер наконечника"],
   "产品名称": ["Product name", "Nombre del producto", "Nom du produit", "제품명", "Название изделия"],
   "型号": ["Model", "Modelo", "Modèle", "모델", "Модель"],
   "产品系列": ["Product series", "Serie", "Série", "제품 시리즈", "Серия"],
@@ -66,7 +67,7 @@ export function getPipettingSpecs(locale: string, slug: string) {
     const label = labels[spec.label]?.[language];
     if (!label) throw new Error(`Missing pipetting spec label: ${locale}/${spec.label}`);
     let value = values[spec.value]?.[language];
-    if (spec.label === "产品名称") value = `${series} ${capacity} ${pumpName}`;
+    if (spec.label === "产品名称") value = `${slug.startsWith("smtp2-") && slug !== "smtp2-1000ul" ? product.productCode : series} ${capacity} ${pumpName}`;
     if (spec.label === "产品系列") value = `${series} ${pumpName}`;
     if (!value && /(?:μL\/步|^\d+ 步$)/.test(spec.value)) {
       const step = ["step", "paso", "pas", "스텝", "шаг"][language];

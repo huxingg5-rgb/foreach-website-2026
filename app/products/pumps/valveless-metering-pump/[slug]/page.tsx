@@ -98,7 +98,7 @@ function toClientData(detail: ValvelessPumpDetail) {
     mainImage,
     image: mainImage,
     heroImage: mainImage,
-    imageCard: mainImage,
+    imageCard: detail.imageCard || mainImage,
 
     additionalImages: Array.isArray((detail as any).additionalImages)
       ? (detail as any).additionalImages
