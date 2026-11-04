@@ -15,12 +15,18 @@ const assemblyPhotos: Record<AssemblyMaterial, { src: string; alt: string }> = {
   pfa: { src: "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-side.webp", alt: "恒永达 PFA 法兰翻边管组件侧面实拍，展示透明管体与端部连接" },
 };
 
+// Article cards show a real product photo; the first gallery image may be a rendering.
+const articleCardPhotos: Partial<Record<string, string>> = {
+  "pvc-tubing": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+};
+
 export function tubingProductCard(id: string, locale: TechnicalArticleLocale = "zh-CN") {
   const language = locale === "zh-CN" ? "zh" : locale;
   const product = getTubingMaterialCopy(id, language === "zh" ? "zh" : "en");
   const selection = tubingSelectionProducts.find(item => item.productId === id);
   if (!product || !selection) throw new Error(`Missing tubing article product: ${id}`);
-  const photo = getTubingGallery(id)?.[0];
+  const gallery = getTubingGallery(id);
+  const photo = gallery?.find(image => image.src === articleCardPhotos[id]) ?? gallery?.[0];
   // The shared card dictionary uses the material's short catalog name as its key.
   const title = language === "zh" || language === "en" ? product.cardTitle
     : localizeProductCardTitle(selection, language, `${id.replace("-tubing", "").toUpperCase()} Tubing`);
