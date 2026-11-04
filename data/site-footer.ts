@@ -185,7 +185,7 @@ export const siteFooterData = {
 
   qrCodePlaceholder: { china: "二维码", global: "Social" },
 
-  icp: { china: "粤ICP备2020107216号-2", global: "" },
+  icp: { china: "粤ICP备2020107216号", global: "" },
 
   icpHref: { china: "https://beian.miit.gov.cn/", global: "https://beian.miit.gov.cn/" },
 

@@ -241,6 +241,7 @@ interface ArticleClassificationDefinition {
 const articleClassifications: Record<string, ArticleClassificationDefinition> = {
   "quick-disconnect-coupling-flow-pressure-drop": {"primaryCategory": "fittings-tubing", "secondaryCategory": "fittings", "tagKeys": ["fittings", "selection", "testing-validation"], "relatedProducts": ["Q20", "Q40", "Q60"]},
   "quick-disconnect-coupling-pressure-rating": {"primaryCategory": "fittings-tubing", "secondaryCategory": "fittings", "tagKeys": ["fittings", "selection", "testing-validation"], "relatedProducts": ["Q20", "Q40", "Q60"]},
+  "what-is-a-diaphragm-pump": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["selection", "liquid-pump", "self-priming", "pulsation"], "relatedProducts": ["DPL30", "DPL60", "DPGL800"]},
 
   "how-does-a-rotary-selector-valve-work": {
     primaryCategory: "valves", secondaryCategory: "multi-port-valves",
