@@ -1,0 +1,344 @@
+/* =========================================================
+   ExhibitionBookingAside.module.css
+   与左侧「本文目录」同款：灰色小标题 + 左侧细竖线（顶部一段深蓝）+ 深蓝文字
+   颜色直接用文章模板（RplSelectionArticle .root）里的 --muted / --line
+   所有规则都以 .card 开头，避免被模板的 .root p / .root :focus-visible 覆盖
+   三栏居中的布局规则在 exhibition-booking-layout.css
+========================================================= */
+
+/* 右侧第三栏：位置与左侧目录（.sidebar / .toc）完全一致 */
+.rail {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .rail {
+    display: block;
+    grid-column: 3;
+    grid-row: 3 / span 3;
+    align-self: stretch;
+    min-width: 0;
+    padding-top: calc((var(--share-size, 44px) - var(--toc-label-line-height, 26px)) / 2);
+  }
+
+  .sticky {
+    position: sticky;
+    top: calc(var(--site-header-height, 90px) + 24px);
+    max-height: calc(100dvh - var(--site-header-height, 90px) - 48px);
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin;
+  }
+}
+
+/* 窄屏：显示在正文末尾 */
+.inline {
+  max-width: 420px;
+  margin-top: 48px;
+}
+
+@media (min-width: 1280px) {
+  .inline {
+    display: none;
+  }
+}
+
+@media print {
+  .rail,
+  .inline {
+    display: none;
+  }
+}
+
+
+.card {
+  box-sizing: border-box;
+  color: var(--brand-blue, #173368);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card *,
+.card *::before,
+.card *::after {
+  box-sizing: border-box;
+}
+
+/* 标题：同「本文目录」(.tocLabel) */
+.card .heading {
+  margin: 0 0 18px;
+  color: var(--muted, #575757);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: var(--toc-label-line-height, 26px);
+  letter-spacing: 0.05em;
+}
+
+/* 左侧细竖线 + 顶部深蓝一段：同目录的当前项 */
+.card .body {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 4px 0 4px 13px;
+  border-left: 2px solid var(--line, #d9d9d9);
+}
+
+.card .body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 2px;
+  height: 52px;
+  background: var(--brand-blue, #173368);
+}
+
+.card .field {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.card .label {
+  padding: 0;
+  color: var(--muted, #575757);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.card .label em {
+  margin-left: 2px;
+  color: #d93025;
+  font-style: normal;
+}
+
+.card .input {
+  width: 100%;
+  min-width: 0;
+  padding: 6px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line, #d9d9d9);
+  border-radius: 0;
+  background: transparent;
+  color: var(--brand-blue, #173368);
+  font: inherit;
+  font-size: 14px;
+}
+
+.card .input::placeholder,
+.card .textarea::placeholder {
+  color: #a3a3a3;
+}
+
+.card .input:focus,
+.card .input:focus-visible {
+  border-bottom-color: var(--brand-blue, #173368);
+  outline: none;
+}
+
+/* 留言：方框，自由填写 */
+.card .textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 76px;
+  margin-top: 2px;
+  padding: 8px 10px;
+  border: 1px solid var(--line, #d9d9d9);
+  border-radius: 0;
+  background: transparent;
+  color: var(--brand-blue, #173368);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.card .textarea:focus,
+.card .textarea:focus-visible {
+  border-color: var(--brand-blue, #173368);
+  outline: none;
+}
+
+/* 附件：留言下方，细框小按钮 + 灰色说明 + 已选文件 */
+.card .attach {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.card .fileButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  overflow: hidden;
+  border: 1px solid var(--line, #d9d9d9);
+  background: transparent;
+  color: var(--brand-blue, #173368);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.card .fileButton svg {
+  flex: 0 0 14px;
+}
+
+.card .fileButton input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* 悬停：深蓝底白字（与公告条「预约现场洽谈」弹窗一致） */
+.card .fileButton:hover:not([data-disabled]) {
+  border-color: var(--brand-blue, #173368);
+  background: var(--brand-blue, #173368);
+  color: #ffffff;
+}
+
+.card .fileButton:focus-within {
+  outline: 2px solid var(--brand-cyan, #09e9b4);
+  outline-offset: 2px;
+}
+
+.card .fileButton[data-disabled] {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.card .fileButton[data-disabled] input {
+  cursor: default;
+}
+
+.card .fileTip {
+  color: var(--muted, #575757);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.card .fileList {
+  display: grid;
+  gap: 4px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card .fileList li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  padding: 4px 4px 4px 8px;
+  background: #f5f7fa;
+  font-size: 12px;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.card .fileList li::before,
+.card .fileList li::marker {
+  content: none;
+}
+
+.card .fileName {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--brand-blue, #173368);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card .fileSize {
+  flex: 0 0 auto;
+  color: var(--muted, #575757);
+}
+
+.card .fileList button {
+  display: inline-flex;
+  flex: 0 0 22px;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted, #575757);
+  cursor: pointer;
+}
+
+.card .fileList button:hover:not(:disabled) {
+  color: var(--brand-blue, #173368);
+}
+
+.card .fileList button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.card .submit {
+  height: 38px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 0;
+  background: var(--brand-blue, #173368);
+  color: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* 悬停：荧光绿底深蓝字（与公告条「预约现场洽谈」弹窗一致） */
+.card .submit:hover:not(:disabled) {
+  background: var(--brand-cyan, #09e9b4);
+  color: var(--brand-blue, #173368);
+}
+
+.card .submit:focus-visible {
+  outline: 2px solid var(--brand-cyan, #09e9b4);
+  outline-offset: 2px;
+}
+
+.card .submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.card .notice {
+  min-height: 1em;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.card .notice:empty {
+  display: none;
+}
+
+.card .notice[data-tone="error"] {
+  color: #d93025;
+}
+
+.card .notice[data-tone="success"] {
+  color: #1e7b4f;
+}
+

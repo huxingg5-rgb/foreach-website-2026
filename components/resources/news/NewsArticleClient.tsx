@@ -109,6 +109,8 @@ type NewsArticleClientProps = {
   nextArticle?: NewsPagerItem | null;
   children?: ReactNode;
   afterContent?: ReactNode;
+  /* 传入后替换整个新闻标题区 + 主题图 + 正文，用于技术文章版式（NewsEditorialArticle） */
+  editorialArticle?: ReactNode;
 };
 
 /* =========================================================
@@ -326,6 +328,7 @@ export default function NewsArticleClient({
   nextArticle,
   children,
   afterContent,
+  editorialArticle,
 }: NewsArticleClientProps) {
   const pathname = usePathname();
 
@@ -437,11 +440,14 @@ export default function NewsArticleClient({
     uiText.fallbackContactHref;
   /* ADLM_2026_DEPARTURE_ARTICLE_END */
 
+  const PageRoot = editorialArticle ? "div" : "main";
+
   return (
-    <main className={styles.page}>
+    <PageRoot className={styles.page}>
       {/* =====================================================
           1. 新闻标题区
       ====================================================== */}
+      {editorialArticle ? editorialArticle : (
       <article className={styles.article}>
         <header className={styles.header}>
           <div className={styles.container}>
@@ -536,6 +542,7 @@ export default function NewsArticleClient({
           </div>
         </section>
       </article>
+      )}
 
       {afterContent}
 
@@ -559,6 +566,6 @@ export default function NewsArticleClient({
           buttonHref={articleSupportHref}
         />
       </section>
-    </main>
+    </PageRoot>
   );
 }

@@ -1,0 +1,208 @@
+/* =========================================================
+   ExhibitionBookingDialog.module.css
+   恒永达官网｜「预约现场洽谈」弹窗样式
+
+   外框（.dialog / .header / 关闭按钮）照搬 components/contact/ContactInquiryModal.module.css，
+   两边互不影响：改这里不会动「联系我们」弹窗，反之亦然
+========================================================= */
+
+/* ---------- 外框：与「联系我们」弹窗一致 ---------- */
+.dialog {
+  width: min(760px, calc(100vw - 40px));
+  max-width: none;
+  max-height: calc(100dvh - 64px);
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+  color: #173368;
+  box-shadow: 0 28px 70px rgb(15 28 52 / 24%);
+  overflow: hidden;
+}
+
+.dialog[open] { display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.dialog::backdrop { background: rgb(15 28 52 / 46%); }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 28px 22px;
+  background: #173368;
+  color: #fff;
+}
+.header h2 { margin: 0; color: #fff; font-size: 28px; font-weight: 500; line-height: 1.25; }
+.header p { margin: 8px 0 0; color: rgb(255 255 255 / 75%); font-size: 14px; line-height: 1.7; }
+.header > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 34px;
+  align-self: flex-start;
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0;
+  border: 2px solid rgb(255 255 255 / 32%);
+  border-radius: 7px;
+  background: transparent;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+}
+.header > button svg { display: block; flex: 0 0 18px; }
+.header > button:hover { border-color: #09e9b4; color: #09e9b4; }
+.header > button[data-global-touch-pressed="true"] {
+  border: 2px solid #09e9b4 !important;
+  background: #09e9b4 !important;
+  color: #173368 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+.header > button:focus-visible { outline: 2px solid #09e9b4; outline-offset: 3px; }
+
+.body { min-height: 0; padding: 24px 28px 28px; overflow-y: auto; overscroll-behavior: contain; }
+
+/* ---------- 表单：姓名 + 邮箱（更宽）一排，联系方式、留言各占一排 ---------- */
+.form { margin: 0; }
+
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+/* 标签贴着输入框，某一列标签换行时同一排的输入框仍然对齐 */
+.field { display: grid; grid-column: 1 / -1; align-content: end; min-width: 0; gap: 7px; }
+.nameField { grid-column: span 4; }
+.emailField { grid-column: span 8; }
+.full { grid-column: 1 / -1; }
+
+.label { color: #526781; font-size: 14px; line-height: 1.5; }
+.label > span { margin-left: 3px; color: #d25151; }
+
+.body .input,
+.body .textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #dce4ee;
+  border-radius: 0;
+  background: #fff;
+  color: #173368;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.body .input::placeholder,
+.body .textarea::placeholder { color: #97a6b9; opacity: 1; }
+.body .textarea { min-height: 112px; resize: vertical; }
+.body .input:is(:focus, :focus-visible),
+.body .textarea:is(:focus, :focus-visible) {
+  outline: none;
+  border-color: #dce4ee;
+  box-shadow: none;
+  background-color: #f8fafc;
+}
+
+/* ---------- 附件：按钮在「发送」左边，已选文件列在留言下方 ---------- */
+
+.fileButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 10px 20px;
+  overflow: hidden;
+  border: 1px solid #173368;
+  background: #fff;
+  color: #173368;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+.fileButton svg { flex: 0 0 16px; }
+.fileButton input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.fileButton:hover:not([data-disabled]) { border-color: #173368; background: #173368; color: #fff; }
+.fileButton:focus-within { outline: 2px solid #173368; outline-offset: 2px; }
+.fileButton[data-disabled] { opacity: .5; cursor: not-allowed; }
+.fileButton[data-disabled] input { cursor: not-allowed; }
+
+.fileTip { color: #7a8aa1; font-size: 12px; line-height: 1.6; }
+
+.fileList { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.fileList li { display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: #f5f7fa; font-size: 12px; line-height: 1.5; }
+.fileName { flex: 1 1 auto; min-width: 0; overflow: hidden; color: #173368; text-overflow: ellipsis; white-space: nowrap; }
+.fileSize { flex: 0 0 auto; color: #7a8aa1; }
+.fileList button {
+  flex: 0 0 auto;
+  padding: 3px 8px;
+  border: 1px solid #dce4ee;
+  border-radius: 0;
+  background: #fff;
+  color: #173368;
+  font: inherit;
+  cursor: pointer;
+}
+.fileList button:hover:not(:disabled) { border-color: #173368; }
+.fileList button:disabled { opacity: .5; cursor: not-allowed; }
+
+.actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 16px; }
+.actionsText { display: grid; flex: 1 1 auto; gap: 4px; min-width: 0; }
+.buttons { display: flex; flex: 0 0 auto; align-items: stretch; gap: 12px; }
+.notice { min-width: 0; margin: 0; color: #d25151; font-size: 13px; line-height: 1.6; }
+.notice:empty { display: none; }
+
+.body .submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 180px;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid #173368;
+  border-radius: 0;
+  background: #173368;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+.body .submit:hover:not(:disabled) { border-color: #09e9b4; background: #09e9b4; color: #173368; }
+.body .submit:disabled { opacity: .5; cursor: not-allowed; }
+.body .submit:focus-visible { outline: 2px solid #173368; outline-offset: 2px; }
+
+/* ---------- 提交成功 ---------- */
+.success { padding: 36px 12px; text-align: center; outline: none; }
+.successIcon { color: #09e9b4; font-size: 42px; line-height: 1; }
+.success h3 { margin: 16px 0; color: #173368; font-size: 24px; font-weight: 500; }
+.success p { margin: 12px 0; color: #627189; line-height: 1.7; overflow-wrap: anywhere; }
+.body .success .submit { margin-top: 20px; }
+
+/* ---------- 窄屏 ---------- */
+@media (max-width: 720px) {
+  .nameField,
+  .emailField { grid-column: 1 / -1; }
+}
+
+@media (max-width: 600px) {
+  .dialog { width: calc(100vw - 24px); max-height: calc(100dvh - 24px); }
+  .header { padding: 20px; gap: 12px; }
+  .header h2 { font-size: 24px; }
+  .body { padding: 20px; }
+  .actions { flex-direction: column; align-items: stretch; }
+  .buttons { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
+  .body .submit { width: 100%; min-width: 0; }
+}

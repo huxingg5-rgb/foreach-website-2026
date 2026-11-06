@@ -449,6 +449,44 @@ export const newsIntlData: NewsPageData = {
       seoDescription:
         "Foreach participated in CMEF & ICMD Autumn 2014, presenting new product lines and microfluidic system applications.",
     },
+    /* MEDICA 2026: appended last on purpose — news.translations.ts maps es/fr/ko/ru by array index. */
+    {
+      id: "medica-2026",
+      slug: "medica-2026",
+      category: "exhibition",
+      title: "Meet Foreach at MEDICA 2026 | Booth 1H39-1",
+      summary:
+        "From November 16 to 19, 2026, Foreach will be at Booth 1H39-1 at MEDICA 2026 in Düsseldorf, Germany, meeting OEM instrument manufacturers to discuss second-source evaluation, sample testing, and long-term supply of pumps, valves, and fluidic components. You are welcome to book an on-site meeting in advance.",
+      date: "2026-11-05",
+      coverImage: "/images/resources/news/articles/medica-2026/cover.webp",
+      coverAlt: "Entrance of Messe Düsseldorf",
+      isPinned: true,
+      content: [
+        {
+          title: "Why Visit Booth 1H39-1",
+          content:
+            "MEDICA is one of the world’s largest B2B trade fairs for the medical industry and runs alongside COMPAMED, the trade fair for the medical device supply chain. At this year’s fair, Foreach is focusing on OEM instrument projects already in production or under development, offering a second source you can evaluate, qualify as a replacement, and rely on for long-term supply, reducing single-source risk.\n\nSupplier qualification: we support supplier onboarding assessments and quality system audits.\nRapid sample testing: samples of pumps, valves, and fluidic components are available quickly for validation on your instrument.\nCompatibility evaluation: we compare against your existing parts to assess interface, performance, and material compatibility.\nLong-term volume supply: stable, continuous volume supply for OEM instrument projects.",
+        },
+        {
+          title: "Products to Discuss at the Booth",
+          content:
+            "During the fair, you can talk with our team about selection, replacement, and customization needs for the following product lines:\n\n[Pump Series](/en/products/pumps): precision metering, continuous supply, automated pipetting, and stable transfer\n[Valve Series](/en/products/valves): on/off control, tubing shutoff, and multi-channel switching\n[Probe Series](/en/products/probes): sampling probes, rinsing probes, puncturing probes, stirrers, and custom probe assemblies\n[Fitting Series](/en/products/fittings): tubing connectors, rigid tubing fittings, Luer fittings, quick connectors, and custom tubing assemblies\n[Tubing Series](/en/products/tubing): multi-material flexible tubing, rigid tubing, and transparent fluid lines\n[Smart Control Series](/en/products/control): fluid pressure monitoring, bubble detection, and system protection",
+        },
+        {
+          title: "Quality and Credentials",
+          content:
+            "For a second-source supplier, stable quality and controlled processes are at the core of every customer evaluation.\n\nCertified systems: ISO 9001 quality management system and ISO 13485 medical device quality management system.\nControlled production: a Class 100,000 cleanroom; tubing is produced in our own extrusion workshop inside the cleanroom, with defined ID/OD tolerances and sampling frequency for every specification; core parts such as pump and valve structural components and connectors are machined in our own machining center.\n![Extrusion center (cleanroom)](/images/about/research-manufacturing/ability/extrusion-center.webp 1220x760)\n![Machining center](/images/about/research-manufacturing/ability/machining-center.webp 1220x760)\n![Quality inspection](/images/about/quality-management.webp 1200x760)\nCompliance documents: material and compliance documents, such as RoHS reports for tubing, are available on request.\nCompany credentials: founded in 2012, Foreach is recognized as a National Specialized and Innovative “Little Giant” Enterprise and a Shenzhen Gazelle Enterprise, and operates a Guangdong Engineering Technology Research Center.\n![National Specialized and Innovative “Little Giant” Enterprise](/images/about/foreach/honors/honor-row2-little-giant.webp 692x460)\n![Shenzhen Gazelle Enterprise](/images/about/foreach/honors/honor-row2-gazelle.webp 634x460)\n![Guangdong Engineering Technology Research Center](/images/about/foreach/honors/honor-row2-engineering-center.webp 756x460)",
+        },
+        {
+          title: "Book an On-Site Meeting",
+          content:
+            "Whether you are looking for a second source for an instrument already in production or selecting pumps, valves, and fluidic connections for a new project, we welcome you to book in advance, and we will schedule the meeting around your agenda.\n\nHow to book: email info@foreachtek.com and we will confirm a meeting time with you.\nPlease include: the products or current part numbers you are interested in, your preferred date and time, and the topics you want to discuss (such as replacement evaluation, sample testing, or supplier audits).\nClosing time: on the last day of the fair (Thursday, November 19), the halls close at 16:00, so please plan your visit accordingly.\n\nWe look forward to meeting you in Düsseldorf.",
+        },
+      ],
+      seoTitle: "Meet Foreach at MEDICA 2026 | Booth 1H39-1",
+      seoDescription:
+        "Visit Foreach at Booth 1H39-1 at MEDICA 2026 in Düsseldorf (November 16–19): second-source evaluation, sample testing, and long-term supply of pumps, valves, and fluidic components.",
+    },
   ],
 
   bottomBanner: {

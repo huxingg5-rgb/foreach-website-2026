@@ -35,6 +35,7 @@ import {
 import { getInternationalUiText } from "@/lib/international-ui";
 import { getLanguageHref, stripLocalePrefixFromPath } from "@/lib/i18n/language-switch";
 import { trackLanguageChange } from "@/lib/analytics/track-event";
+import SiteAnnouncementBar from "./SiteAnnouncementBar"; // 全站顶部公告条（展会等），删除时连同下方一行一起删
 
 const loadGlobalSearchPanel = () =>
   import("@/components/search/GlobalSearchPanel");
@@ -996,6 +997,8 @@ const isFittingReplacementDetailPage =
           } ${isSearchOpen ? "site-header-search-open" : ""}`}
         onMouseLeave={isSearchOpen ? undefined : handleHeaderMouseLeave}
       >
+        <SiteAnnouncementBar locale={currentLocale} />
+
         {/* Top 栏内部容器 */}
         <div className="site-header-inner">
           {/* Logo 区域 */}
