@@ -66,6 +66,43 @@ export const newsZhData: NewsPageData = {
 
   articles: [
     {
+      id: "medica-2026",
+      slug: "medica-2026",
+      category: "exhibition",
+      title: "MEDICA 2026 德国杜塞尔多夫医疗展｜恒永达诚邀您莅临 1H39-1 展位",
+      summary:
+        "2026 年 11 月 16 – 19 日，恒永达将在德国杜塞尔多夫 MEDICA 2026 医疗展 1H39-1 展位，与 OEM 仪器制造商交流泵、阀及流体部件的第二供应商评估、样品测试与长期供货。欢迎提前预约现场洽谈。",
+      date: "2026-11-05",
+      coverImage: "/images/resources/news/articles/medica-2026/cover.webp",
+      coverAlt: "杜塞尔多夫展览中心入口",
+      isPinned: true,
+      content: [
+        {
+          title: "为什么来 1H39-1 展位",
+          content:
+            "MEDICA 是全球规模最大的医疗行业 B2B 展会之一，与医疗器械供应链展 COMPAMED 同期举行。本次参展，恒永达重点面向已量产或正在开发的 OEM 仪器项目，提供可评估、可替代、可长期供货的第二供应来源，帮助降低单一来源风险。\n\n供应商资质审核：配合完成供应商准入评估与质量体系审核。\n快速样品测试：泵、阀及流体部件可快速提供样品，在您的设备上验证。\n兼容替代评估：对照现有部件，评估接口、性能与材料的匹配。\n长期量产供货：为 OEM 仪器项目提供稳定、持续的批量供货。",
+        },
+        {
+          title: "现场可以交流的产品",
+          content:
+            "展会期间，您可以就以下产品线与我们的团队现场交流选型、替代与定制需求：\n\n[泵系列](/products/pumps)：精密定量、连续供液、自动移液与稳定输送\n[阀系列](/products/valves)：流路通断、夹管控制与多通道切换\n[针系列](/products/probes)：样本针、清洗针、穿刺针、搅拌针与定制针组件\n[接头系列](/products/fittings)：软管接头、硬管接头、鲁尔接头、快插连接与定制管路组件\n[管路系列](/products/tubing)：多材料软管、硬管与透明液路管线\n[智控系列](/products/control)：液路压力监测、气泡检测与系统保护",
+        },
+        {
+          title: "质量与资质",
+          content:
+            "作为第二供应商，质量稳定与过程可控是客户评估的核心。\n\n体系认证：ISO 9001 质量管理体系、ISO 13485 医疗器械质量管理体系。\n受控生产：十万级洁净车间；管路由洁净车间内的自有挤塑车间生产，每种规格设定内外径公差与抽检频次；泵阀结构件、连接件等核心零件由自有机加中心加工。\n![挤塑中心（洁净车间）](/images/about/research-manufacturing/ability/extrusion-center.webp 1220x760)\n![机加中心](/images/about/research-manufacturing/ability/machining-center.webp 1220x760)\n![质量检测](/images/about/quality-management.webp 1200x760)\n合规文件：材料与合规文件（如管路 RoHS 报告）可按需提供。\n企业资质：成立于 2012 年，国家级专精特新“小巨人”企业、深圳市瞪羚企业，建有广东省工程技术研究中心。\n![国家级专精特新“小巨人”企业](/images/about/foreach/honors/honor-row2-little-giant.webp 692x460)\n![深圳市瞪羚企业](/images/about/foreach/honors/honor-row2-gazelle.webp 634x460)\n![广东省工程技术研究中心](/images/about/foreach/honors/honor-row2-engineering-center.webp 756x460)",
+        },
+        {
+          title: "预约现场洽谈",
+          content:
+            "无论您正在为已量产的设备寻找第二供应来源，还是在为新项目选型泵、阀和流体连接部件，都欢迎提前预约，我们会按您的日程安排现场洽谈。\n\n预约方式：请发送邮件至 info@foreachtek.com，我们会与您确认见面时间。\n预约时请注明：感兴趣的产品或现有部件型号、希望见面的日期与时段，以及想讨论的问题（如替代评估、样品测试、供应商审核）。\n闭馆提醒：展会最后一天（11 月 19 日，周四）16:00 闭馆，请合理安排行程。\n\n期待在杜塞尔多夫与您相见。",
+        },
+      ],
+      seoTitle: "MEDICA 2026 德国杜塞尔多夫医疗展｜恒永达展位 1H39-1",
+      seoDescription:
+        "恒永达将参加 2026 年 11 月 16 – 19 日德国杜塞尔多夫 MEDICA 医疗展，展位 1H39-1，面向 OEM 仪器项目提供泵、阀及流体部件的第二供应商评估、样品测试与长期供货支持，欢迎预约现场洽谈。",
+    },
+    {
       id: "adlm-2026-team-departure",
       slug: "adlm-2026-team-departure",
       category: "exhibition",

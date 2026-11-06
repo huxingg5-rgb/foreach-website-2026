@@ -16,6 +16,8 @@ type LegacyArticleTranslation = readonly [
 type StructuredArticleTranslation = {
   title: string;
   summary: string;
+  /** 封面图说明（可选，不填沿用英文） */
+  coverAlt?: string;
   content: readonly {
     title: string;
     content: string;
@@ -114,6 +116,37 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["Foreach superó la revisión del proyecto de excelencia de calidad del distrito de Guangming", "La aprobación de 2024 refleja los avances continuos en gestión de calidad e innovación tecnológica.", "Revisión del proyecto superada", "Foreach superó la revisión, que reconoce el desarrollo de la gestión de calidad, la innovación y la mejora continua de la empresa.", "Mejora continua de la gestión de calidad", "La gestión de calidad sustenta el suministro estable de componentes microfluídicos. Foreach seguirá mejorando su sistema y sus servicios.", "Apoyo fiable a los clientes", "Foreach continuará apoyando a IVD, ciencias de la vida, automatización de laboratorio y sectores relacionados con productos estables y servicios profesionales."],
     ["Foreach reconocida como empresa nacional especializada e innovadora Little Giant", "El reconocimiento distingue su dedicación e innovación de largo plazo en el control microfluídico.", "Reconocimiento nacional Little Giant", "Foreach fue reconocida por su especialización e innovación en tecnología de control microfluídico.", "Enfoque en el control microfluídico", "Foreach desarrolla componentes y capacidades de sistemas, como bombas, válvulas, sondas, racores, sensores y módulos.", "Apoyo profesional a los clientes", "Seguiremos mejorando productos y servicios especializados, refinados, diferenciados e innovadores para ofrecer componentes y soluciones fiables."],
     ["Foreach concluyó con éxito CMEF & ICMD Otoño 2014", "Foreach presentó nuevas líneas de producto y analizó aplicaciones de sistemas microfluídicos con sus clientes.", "Una feria exitosa", "Foreach presentó productos actualizados y nuevas líneas, que atrajeron la atención de numerosos visitantes y clientes.", "Intercambio técnico", "Foreach compartió conocimientos en el foro de innovación tecnológica de servicios personalizados para fabricación de dispositivos médicos.", "Apoyo a IVD y sectores relacionados", "Numerosos clientes conocieron nuestras series y capacidades. Foreach seguirá apoyando a IVD con productos y servicios profesionales."],
+        {
+          title: "Visite a Foreach en MEDICA 2026 | Stand 1H39-1",
+          summary:
+            "Del 16 al 19 de noviembre de 2026, Foreach estará en el stand 1H39-1 de MEDICA 2026 en Düsseldorf (Alemania) para hablar con fabricantes de instrumentos OEM sobre evaluación de segundo proveedor, pruebas de muestras y suministro a largo plazo de bombas, válvulas y componentes fluídicos. Le invitamos a reservar una reunión con antelación.",
+          coverAlt: "Entrada de Messe Düsseldorf",
+          content: [
+            {
+              title: "Por qué visitar el stand 1H39-1",
+              content:
+                "MEDICA es una de las mayores ferias B2B del sector médico a nivel mundial y se celebra junto con COMPAMED, la feria de la cadena de suministro de dispositivos médicos. En esta edición, Foreach se centra en proyectos de instrumentos OEM ya en producción o en desarrollo, y ofrece un segundo proveedor que puede evaluar, homologar como alternativa y mantener a largo plazo, para reducir el riesgo de depender de una sola fuente.\n\nHomologación de proveedores: apoyamos la evaluación de alta de proveedores y las auditorías del sistema de calidad.\nPruebas rápidas de muestras: disponemos rápidamente de muestras de bombas, válvulas y componentes fluídicos para validarlas en su equipo.\nEvaluación de sustitución: comparamos con sus piezas actuales la compatibilidad de interfaces, prestaciones y materiales.\nSuministro a largo plazo: suministro en serie estable y continuo para proyectos de instrumentos OEM.",
+            },
+            {
+              title: "Productos que puede consultar en el stand",
+              content:
+                "Durante la feria, puede hablar con nuestro equipo sobre selección, sustitución y personalización de las siguientes líneas de producto:\n\n[Series de bombas](/es/products/pumps): dosificación precisa, suministro continuo, pipeteo automatizado y transferencia estable\n[Series de válvulas](/es/products/valves): control de apertura/cierre, cierre de tubos y conmutación multicanal\n[Series de sondas](/es/products/probes): sondas de muestreo, sondas de enjuague, sondas de perforación, agitadores y conjuntos de sondas personalizados\n[Series de racores](/es/products/fittings): conectores para tubos, racores para tubos rígidos, racores Luer, conectores rápidos y conjuntos de tubos personalizados\n[Series de tubos](/es/products/tubing): tubos flexibles multimaterial, tubos rígidos y líneas de fluido transparentes\n[Serie de control inteligente](/es/products/control): monitoreo de presión de fluido, detección de burbujas y protección del sistema",
+            },
+            {
+              title: "Calidad y credenciales",
+              content:
+                "Para un segundo proveedor, la calidad estable y los procesos controlados son el núcleo de la evaluación del cliente.\n\nSistemas certificados: sistema de gestión de calidad ISO 9001 y sistema de gestión de calidad para dispositivos médicos ISO 13485.\nProducción controlada: sala limpia de clase 100 000; los tubos se fabrican en nuestro propio taller de extrusión dentro de la sala limpia, con tolerancias de diámetro interior y exterior y frecuencia de muestreo definidas para cada especificación; las piezas clave, como los componentes estructurales de bombas y válvulas y los conectores, se mecanizan en nuestro propio centro de mecanizado.\n![Centro de extrusión (sala limpia)](/images/about/research-manufacturing/ability/extrusion-center.webp 1220x760)\n![Centro de mecanizado](/images/about/research-manufacturing/ability/machining-center.webp 1220x760)\n![Inspección de calidad](/images/about/quality-management.webp 1200x760)\nDocumentación de conformidad: la documentación de materiales y de conformidad (como los informes RoHS de los tubos) está disponible bajo petición.\nCredenciales de la empresa: fundada en 2012, Foreach está reconocida como Empresa nacional especializada e innovadora «Little Giant» y Empresa gacela de Shenzhen, y cuenta con un Centro de investigación de tecnología de ingeniería de Guangdong.\n![Empresa nacional especializada e innovadora «Little Giant»](/images/about/foreach/honors/honor-row2-little-giant.webp 692x460)\n![Empresa gacela de Shenzhen](/images/about/foreach/honors/honor-row2-gazelle.webp 634x460)\n![Centro de investigación de tecnología de ingeniería de Guangdong](/images/about/foreach/honors/honor-row2-engineering-center.webp 756x460)",
+            },
+            {
+              title: "Reserve una reunión en el stand",
+              content:
+                "Tanto si busca un segundo proveedor para un equipo ya en producción como si está seleccionando bombas, válvulas y conexiones fluídicas para un nuevo proyecto, le invitamos a reservar con antelación; organizaremos la reunión según su agenda.\n\nCómo reservar: escriba a info@foreachtek.com y le confirmaremos la hora de la reunión.\nIndique en su solicitud: los productos o referencias actuales que le interesan, la fecha y la franja horaria preferidas y los temas que desea tratar (como evaluación de sustitución, pruebas de muestras o auditoría de proveedores).\nHorario de cierre: el último día de la feria (jueves 19 de noviembre) cierra a las 16:00; tenga en cuenta este horario al planificar su visita.\n\nEsperamos verle en Düsseldorf.",
+            },
+          ],
+          seoTitle: "Foreach en MEDICA 2026 | Stand 1H39-1",
+          seoDescription:
+            "Visite a Foreach en el stand 1H39-1 de MEDICA 2026 (Düsseldorf, 16–19 de noviembre): evaluación de segundo proveedor, muestras y suministro de bombas, válvulas y componentes fluídicos.",
+        },
   ],
   fr: [
         {
@@ -162,6 +195,37 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["Foreach a validé le projet de développement de l’excellence qualité du district de Guangming", "La validation 2024 reflète les progrès continus en gestion de la qualité et en innovation technologique.", "Validation du projet", "Cette validation reconnaît le développement de la gestion de la qualité, l’innovation technologique et l’amélioration continue de Foreach.", "Amélioration continue de la qualité", "La gestion de la qualité est essentielle à la livraison stable des composants microfluidiques. Foreach continuera d’améliorer son système et ses services.", "Un soutien fiable aux clients", "Foreach continuera d’accompagner l’IVD, les sciences de la vie, l’automatisation de laboratoire et les secteurs associés."],
     ["Foreach reconnue entreprise nationale spécialisée et innovante Little Giant", "Cette reconnaissance salue son engagement et son innovation durables dans le contrôle microfluidique.", "Reconnaissance nationale Little Giant", "Foreach a été reconnue pour sa spécialisation et son innovation dans les technologies de contrôle microfluidique.", "Priorité au contrôle microfluidique", "Foreach développe composants et systèmes, notamment pompes, vannes, sondes, raccords, capteurs et modules associés.", "Un soutien professionnel aux clients", "Nous améliorerons produits et services spécialisés, raffinés, distinctifs et innovants afin de fournir des composants et solutions fiables."],
     ["Foreach a conclu avec succès le CMEF & ICMD Automne 2014", "Foreach y a présenté de nouvelles gammes et échangé avec ses clients sur les applications microfluidiques.", "Un salon réussi", "Foreach a présenté des produits améliorés et de nouvelles gammes qui ont suscité l’intérêt de nombreux visiteurs et clients.", "Échanges techniques", "Foreach a partagé son expertise lors du forum sur l’innovation technologique des services personnalisés de fabrication de dispositifs médicaux.", "Soutenir l’IVD et les secteurs associés", "De nombreux clients ont découvert nos gammes et nos capacités. Foreach continuera d’accompagner l’IVD avec des produits et services professionnels."],
+        {
+          title: "Rencontrez Foreach à MEDICA 2026 | Stand 1H39-1",
+          summary:
+            "Du 16 au 19 novembre 2026, Foreach sera présent au stand 1H39-1 de MEDICA 2026 à Düsseldorf (Allemagne) pour échanger avec les fabricants d’instruments OEM sur l’évaluation d’un second fournisseur, les tests d’échantillons et l’approvisionnement à long terme en pompes, vannes et composants fluidiques. Prenez rendez-vous dès maintenant.",
+          coverAlt: "Entrée du parc des expositions Messe Düsseldorf",
+          content: [
+            {
+              title: "Pourquoi venir au stand 1H39-1",
+              content:
+                "MEDICA est l’un des plus grands salons B2B au monde pour le secteur médical et se tient en même temps que COMPAMED, le salon de la chaîne d’approvisionnement des dispositifs médicaux. Cette année, Foreach s’adresse en priorité aux projets d’instruments OEM déjà en production ou en développement, en proposant une seconde source que vous pouvez évaluer, qualifier en substitution et pérenniser, afin de réduire le risque lié à une source unique.\n\nQualification fournisseur : nous accompagnons les évaluations de référencement et les audits du système qualité.\nÉchantillons rapides : des échantillons de pompes, vannes et composants fluidiques sont rapidement disponibles pour validation sur votre équipement.\nÉvaluation de substitution : nous comparons avec vos pièces actuelles la compatibilité des interfaces, des performances et des matériaux.\nApprovisionnement durable : des livraisons en série stables et continues pour les projets d’instruments OEM.",
+            },
+            {
+              title: "Produits présentés sur le stand",
+              content:
+                "Pendant le salon, vous pourrez échanger avec notre équipe sur la sélection, la substitution et la personnalisation des gammes suivantes :\n\n[Séries de pompes](/fr/products/pumps) : dosage précis, alimentation continue, pipetage automatisé et transfert stable\n[Séries de vannes](/fr/products/valves) : commande marche/arrêt, fermeture de tubes et commutation multicanal\n[Séries de sondes](/fr/products/probes) : sondes d’échantillonnage, sondes de rinçage, sondes de perçage, agitateurs et assemblages de sondes personnalisés\n[Séries de raccords](/fr/products/fittings) : connecteurs pour tubes, raccords pour tubes rigides, raccords Luer, connecteurs rapides et assemblages de tubes personnalisés\n[Séries de tubes](/fr/products/tubing) : tubes souples multi-matériaux, tubes rigides et lignes fluidiques transparentes\n[Série de contrôle intelligent](/fr/products/control) : surveillance de la pression fluidique, détection de bulles et protection du système",
+            },
+            {
+              title: "Qualité et références",
+              content:
+                "Pour un second fournisseur, la stabilité de la qualité et la maîtrise des procédés sont au cœur de l’évaluation client.\n\nSystèmes certifiés : système de management de la qualité ISO 9001 et système de management de la qualité des dispositifs médicaux ISO 13485.\nProduction maîtrisée : salle blanche de classe 100 000 ; les tubes sont extrudés dans notre propre atelier d’extrusion situé dans la salle blanche, avec des tolérances de diamètres intérieur et extérieur et une fréquence d’échantillonnage définies pour chaque référence ; les pièces clés, comme les composants structurels des pompes et vannes et les connecteurs, sont usinées dans notre propre centre d’usinage.\n![Centre d’extrusion (salle blanche)](/images/about/research-manufacturing/ability/extrusion-center.webp 1220x760)\n![Centre d’usinage](/images/about/research-manufacturing/ability/machining-center.webp 1220x760)\n![Contrôle qualité](/images/about/quality-management.webp 1200x760)\nDocuments de conformité : les documents matières et de conformité (comme les rapports RoHS des tubes) sont disponibles sur demande.\nRéférences de l’entreprise : fondée en 2012, Foreach est reconnue Entreprise nationale spécialisée et innovante « Little Giant » et Entreprise gazelle de Shenzhen, et dispose d’un Centre de recherche en technologie d’ingénierie du Guangdong.\n![Entreprise nationale spécialisée et innovante « Little Giant »](/images/about/foreach/honors/honor-row2-little-giant.webp 692x460)\n![Entreprise gazelle de Shenzhen](/images/about/foreach/honors/honor-row2-gazelle.webp 634x460)\n![Centre de recherche en technologie d’ingénierie du Guangdong](/images/about/foreach/honors/honor-row2-engineering-center.webp 756x460)",
+            },
+            {
+              title: "Prendre rendez-vous sur le stand",
+              content:
+                "Que vous recherchiez une seconde source pour un équipement déjà en production ou que vous sélectionniez des pompes, vannes et connexions fluidiques pour un nouveau projet, n’hésitez pas à prendre rendez-vous à l’avance : nous organiserons l’entretien selon votre agenda.\n\nComment réserver : écrivez à info@foreachtek.com et nous vous confirmerons l’horaire du rendez-vous.\nÀ préciser : les produits ou références actuelles qui vous intéressent, la date et le créneau souhaités, ainsi que les sujets à aborder (évaluation de substitution, tests d’échantillons, audit fournisseur, etc.).\nFermeture : le dernier jour du salon (jeudi 19 novembre), les halls ferment à 16h00 ; merci d’en tenir compte dans votre programme.\n\nAu plaisir de vous rencontrer à Düsseldorf.",
+            },
+          ],
+          seoTitle: "Foreach à MEDICA 2026 | Stand 1H39-1",
+          seoDescription:
+            "Foreach au stand 1H39-1 de MEDICA 2026 (Düsseldorf, 16–19 novembre) : évaluation de second fournisseur, échantillons et approvisionnement en pompes, vannes et composants fluidiques.",
+        },
   ],
   ko: [
         {
@@ -210,6 +274,37 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["Foreach, 광밍구 우수 품질 육성 프로젝트 심사 통과", "2024년 심사 통과는 품질 관리와 기술 혁신의 지속적인 발전을 보여 줍니다.", "프로젝트 심사 통과", "Foreach의 품질 관리 발전, 기술 혁신과 지속적인 개선을 인정받았습니다.", "품질 관리의 지속 개선", "품질 관리는 미세유체 핵심 부품의 안정적 공급 기반입니다. Foreach는 품질 시스템과 서비스 역량을 계속 개선합니다.", "고객을 위한 신뢰성 높은 지원", "IVD, 생명과학, 실험실 자동화와 관련 분야에 안정적인 제품과 전문 서비스를 계속 제공합니다."],
     ["Foreach, 국가급 전문화·혁신 Little Giant 기업으로 선정", "미세유체 제어에 대한 장기적인 집중과 혁신을 인정받았습니다.", "국가급 Little Giant 인정", "Foreach는 미세유체 제어 기술의 전문성과 혁신을 인정받았습니다.", "미세유체 제어에 집중", "펌프, 밸브, 프로브, 피팅, 센서 및 관련 모듈을 포함한 핵심 부품과 시스템 역량을 개발합니다.", "고객을 위한 전문 지원", "전문화, 정교화, 차별화와 혁신을 바탕으로 신뢰할 수 있는 부품과 시스템 솔루션을 제공합니다."],
     ["Foreach, CMEF & ICMD 2014 가을 전시회 성공적으로 마무리", "Foreach는 신제품 라인을 선보이고 고객과 미세유체 시스템 적용을 논의했습니다.", "성공적인 전시", "업그레이드 제품과 신제품 라인이 많은 방문객과 고객의 관심을 받았습니다.", "기술 교류", "의료기기 제조 맞춤 서비스 기술 혁신 포럼에서 산업 과제와 전문 솔루션에 대한 기술 정보를 공유했습니다.", "IVD 및 관련 분야 지원", "많은 고객이 제품 시리즈와 시스템 역량을 확인했습니다. Foreach는 전문 제품과 서비스로 IVD 산업을 계속 지원합니다."],
+        {
+          title: "MEDICA 2026에서 Foreach를 만나보세요 | 부스 1H39-1",
+          summary:
+            "Foreach는 2026년 11월 16~19일 독일 뒤셀도르프에서 열리는 MEDICA 2026의 1H39-1 부스에서 OEM 장비 제조사와 펌프, 밸브 및 유체 부품의 세컨드 소스 평가, 샘플 테스트, 장기 공급에 대해 상담합니다. 현장 미팅을 미리 예약해 주세요.",
+          coverAlt: "메세 뒤셀도르프 전시장 입구",
+          content: [
+            {
+              title: "1H39-1 부스를 방문해야 하는 이유",
+              content:
+                "MEDICA는 세계 최대 규모의 의료 산업 B2B 전시회 중 하나로, 의료기기 공급망 전시회인 COMPAMED와 함께 개최됩니다. 이번 전시회에서 Foreach는 이미 양산 중이거나 개발 중인 OEM 장비 프로젝트를 중심으로, 평가와 대체 적용이 가능하고 장기 공급이 가능한 세컨드 소스를 제공하여 단일 공급원 리스크를 줄일 수 있도록 지원합니다.\n\n공급업체 자격 심사: 공급업체 등록 평가와 품질 시스템 감사를 지원합니다.\n신속한 샘플 테스트: 펌프, 밸브 및 유체 부품 샘플을 신속하게 제공하여 고객 장비에서 검증할 수 있습니다.\n호환 대체 평가: 기존 부품과 비교해 인터페이스, 성능 및 소재 적합성을 평가합니다.\n장기 양산 공급: OEM 장비 프로젝트에 안정적이고 지속적인 양산 공급을 제공합니다.",
+            },
+            {
+              title: "부스에서 상담 가능한 제품",
+              content:
+                "전시 기간 동안 아래 제품군의 선정, 대체 및 맞춤 제작 요구 사항에 대해 저희 팀과 현장에서 상담하실 수 있습니다.\n\n[펌프 시리즈](/ko/products/pumps): 정밀 정량, 연속 공급, 자동 피펫팅 및 안정적인 이송\n[밸브 시리즈](/ko/products/valves): 온오프 제어, 튜빙 차단 및 다중 채널 전환\n[프로브 시리즈](/ko/products/probes): 샘플링 프로브, 린싱 프로브, 피어싱 프로브, 교반기 및 맞춤형 프로브 어셈블리\n[피팅 시리즈](/ko/products/fittings): 튜빙 커넥터, 리지드 튜빙 피팅, 루어 피팅, 퀵 커넥터 및 맞춤형 튜빙 어셈블리\n[튜빙 시리즈](/ko/products/tubing): 다중 소재 플렉시블 튜빙, 리지드 튜빙 및 투명 유체 라인\n[스마트 제어 시리즈](/ko/products/control): 유체 압력 모니터링, 기포 감지 및 시스템 보호",
+            },
+            {
+              title: "품질 및 인증",
+              content:
+                "세컨드 소스 공급업체에게 안정적인 품질과 공정 관리는 고객 평가의 핵심입니다.\n\n인증 체계: ISO 9001 품질경영시스템, ISO 13485 의료기기 품질경영시스템.\n생산 관리: 10만 등급 클린룸을 운영하며, 튜빙은 클린룸 내 자체 압출 작업장에서 생산하고 규격별로 내경·외경 공차와 샘플링 검사 주기를 설정합니다. 펌프·밸브 구조 부품과 커넥터 등 핵심 부품은 자체 가공 센터에서 가공합니다.\n![압출 센터(클린룸)](/images/about/research-manufacturing/ability/extrusion-center.webp 1220x760)\n![가공 센터](/images/about/research-manufacturing/ability/machining-center.webp 1220x760)\n![품질 검사](/images/about/quality-management.webp 1200x760)\n규제 준수 문서: 소재 및 규제 준수 문서(예: 튜빙 RoHS 보고서)는 요청 시 제공합니다.\n기업 자격: 2012년에 설립되었으며, 국가급 전정특신 ‘작은 거인’ 기업 및 선전시 가젤 기업으로 인정받았고, 광둥성 공정기술 연구센터를 보유하고 있습니다.\n![국가급 전정특신 ‘작은 거인’ 기업](/images/about/foreach/honors/honor-row2-little-giant.webp 692x460)\n![선전시 가젤 기업](/images/about/foreach/honors/honor-row2-gazelle.webp 634x460)\n![광둥성 공정기술 연구센터](/images/about/foreach/honors/honor-row2-engineering-center.webp 756x460)",
+            },
+            {
+              title: "현장 미팅 예약",
+              content:
+                "이미 양산 중인 장비의 세컨드 소스를 찾고 계시든, 신규 프로젝트를 위한 펌프, 밸브 및 유체 연결 부품을 선정하고 계시든, 미리 예약해 주시면 일정에 맞춰 현장 미팅을 준비하겠습니다.\n\n예약 방법: info@foreachtek.com으로 이메일을 보내 주시면 미팅 시간을 확인해 드립니다.\n예약 시 기재 사항: 관심 제품 또는 현재 사용 중인 부품 모델, 희망 날짜와 시간대, 논의하고 싶은 내용(예: 대체 평가, 샘플 테스트, 공급업체 심사)을 알려 주세요.\n폐장 안내: 전시회 마지막 날(11월 19일 목요일)은 16:00에 폐장하니 일정에 참고해 주세요.\n\n뒤셀도르프에서 뵙기를 기대합니다.",
+            },
+          ],
+          seoTitle: "MEDICA 2026 Foreach | 부스 1H39-1",
+          seoDescription:
+            "Foreach는 2026년 11월 16~19일 독일 뒤셀도르프 MEDICA 2026 1H39-1 부스에서 OEM 장비 프로젝트를 위한 펌프, 밸브 및 유체 부품의 세컨드 소스 평가, 샘플 테스트, 장기 공급을 지원합니다. 현장 미팅을 예약하세요.",
+        },
   ],
   ru: [
         {
@@ -258,6 +353,37 @@ const articleTranslations: Record<ForeignLocale, readonly ArticleTranslation[]> 
     ["Foreach прошла проверку проекта повышения качества района Гуанмин", "Проверка 2024 года отражает постоянный прогресс в управлении качеством и технологических инновациях.", "Проверка проекта пройдена", "Результат подтверждает развитие управления качеством, технологические инновации и постоянное совершенствование Foreach.", "Постоянное улучшение управления качеством", "Управление качеством — основа стабильных поставок компонентов. Foreach продолжит улучшать систему и сервис.", "Надёжная поддержка клиентов", "Foreach продолжит поддерживать IVD, науки о жизни, лабораторную автоматизацию и смежные области стабильной продукцией и профессиональным сервисом."],
     ["Foreach признана национальным специализированным и инновационным предприятием Little Giant", "Признание отмечает многолетнюю специализацию и инновации в области микрофлюидного управления.", "Национальное признание Little Giant", "Foreach получила признание за специализацию и инновации в технологиях микрофлюидного управления.", "Работа над микрофлюидным управлением", "Foreach развивает насосы, клапаны, зонды, фитинги, датчики, модули и поддержку гидравлических систем.", "Профессиональная поддержка клиентов", "Мы продолжим совершенствовать специализированные, точные, отличительные и инновационные продукты и услуги для надёжных системных решений."],
     ["Foreach успешно завершила участие в CMEF & ICMD Осень 2014", "Foreach представила новые линейки и обсудила с клиентами применение микрофлюидных систем.", "Успешная выставка", "Обновлённая продукция и новые линейки Foreach привлекли внимание многочисленных посетителей и клиентов.", "Технический обмен", "На форуме инноваций в производстве медицинских изделий Foreach поделилась техническими знаниями и обсудила отраслевые задачи.", "Поддержка IVD и смежных областей", "Многие клиенты познакомились с нашими сериями и системными возможностями. Foreach продолжит профессионально поддерживать отрасль IVD."],
+        {
+          title: "Foreach на выставке MEDICA 2026 | Стенд 1H39-1",
+          summary:
+            "С 16 по 19 ноября 2026 года Foreach будет работать на стенде 1H39-1 выставки MEDICA 2026 в Дюссельдорфе (Германия) и обсуждать с производителями OEM-оборудования оценку второго поставщика, тестирование образцов и долгосрочные поставки насосов, клапанов и жидкостных компонентов. Приглашаем заранее записаться на встречу.",
+          coverAlt: "Вход в выставочный центр Messe Düsseldorf",
+          content: [
+            {
+              title: "Почему стоит посетить стенд 1H39-1",
+              content:
+                "MEDICA — одна из крупнейших в мире B2B-выставок медицинской отрасли; она проходит одновременно с COMPAMED — выставкой цепочки поставок для производителей медицинских изделий. На этой выставке Foreach ориентируется на проекты OEM-оборудования, которые уже выпускаются серийно или находятся в разработке, и предлагает второй источник поставок, который можно оценить, квалифицировать для замены и получать на долгосрочной основе, снижая риск зависимости от одного поставщика.\n\nКвалификация поставщика: помогаем пройти оценку при включении в перечень поставщиков и аудит системы качества.\nБыстрые образцы: образцы насосов, клапанов и жидкостных компонентов предоставляются оперативно для проверки на вашем оборудовании.\nОценка замены: сравниваем с вашими текущими деталями совместимость интерфейсов, характеристик и материалов.\nДолгосрочные поставки: стабильные и непрерывные серийные поставки для проектов OEM-оборудования.",
+            },
+            {
+              title: "Продукция для обсуждения на стенде",
+              content:
+                "Во время выставки вы сможете обсудить с нашей командой подбор, замену и индивидуальные решения по следующим линейкам продукции:\n\n[Серии насосов](/ru/products/pumps): точное дозирование, непрерывная подача, автоматическое пипетирование и стабильная передача\n[Серии клапанов](/ru/products/valves): управление вкл./выкл., перекрытие трубок и многоканальное переключение\n[Серии зондов](/ru/products/probes): пробоотборные зонды, промывочные зонды, прокалывающие зонды, мешалки и индивидуальные узлы зондов\n[Серии фитингов](/ru/products/fittings): соединители для трубок, фитинги для жестких трубок, фитинги Luer, быстроразъемные соединители и индивидуальные трубные сборки\n[Серии трубок](/ru/products/tubing): многоматериальные гибкие трубки, жесткие трубки и прозрачные жидкостные линии\n[Серия интеллектуального управления](/ru/products/control): мониторинг давления жидкости, обнаружение пузырьков и защита системы",
+            },
+            {
+              title: "Качество и квалификация",
+              content:
+                "Для второго поставщика стабильное качество и управляемые процессы — главное, что оценивает заказчик.\n\nСертифицированные системы: система менеджмента качества ISO 9001 и система менеджмента качества медицинских изделий ISO 13485.\nКонтролируемое производство: чистое помещение класса 100 000; трубки производятся на собственном экструзионном участке внутри чистого помещения, для каждого типоразмера заданы допуски на внутренний и наружный диаметр и периодичность выборочного контроля; ключевые детали, включая конструктивные элементы насосов и клапанов и соединители, изготавливаются в собственном механообрабатывающем центре.\n![Экструзионный центр (чистое помещение)](/images/about/research-manufacturing/ability/extrusion-center.webp 1220x760)\n![Механообрабатывающий центр](/images/about/research-manufacturing/ability/machining-center.webp 1220x760)\n![Контроль качества](/images/about/quality-management.webp 1200x760)\nДокументы о соответствии: документы на материалы и о соответствии (например, отчеты RoHS для трубок) предоставляются по запросу.\nСтатус компании: основана в 2012 году; признана Национальным специализированным инновационным предприятием «Малый гигант» и Газель-предприятием города Шэньчжэнь, имеет Инженерно-технологический исследовательский центр провинции Гуандун.\n![Национальное специализированное инновационное предприятие «Малый гигант»](/images/about/foreach/honors/honor-row2-little-giant.webp 692x460)\n![Газель-предприятие города Шэньчжэнь](/images/about/foreach/honors/honor-row2-gazelle.webp 634x460)\n![Инженерно-технологический исследовательский центр провинции Гуандун](/images/about/foreach/honors/honor-row2-engineering-center.webp 756x460)",
+            },
+            {
+              title: "Запись на встречу на стенде",
+              content:
+                "Если вы ищете второй источник поставок для уже выпускаемого оборудования или подбираете насосы, клапаны и жидкостные соединения для нового проекта, запишитесь на встречу заранее — мы организуем ее с учетом вашего графика.\n\nКак записаться: напишите на info@foreachtek.com, и мы подтвердим время встречи.\nУкажите в письме: интересующую продукцию или номера используемых деталей, удобные дату и время, а также темы для обсуждения (например, оценка замены, тестирование образцов, аудит поставщика).\nВремя закрытия: в последний день выставки (четверг, 19 ноября) павильоны закрываются в 16:00 — учтите это при планировании.\n\nБудем рады встрече в Дюссельдорфе.",
+            },
+          ],
+          seoTitle: "Foreach на MEDICA 2026 | Стенд 1H39-1",
+          seoDescription:
+            "Foreach на MEDICA 2026 (Дюссельдорф, 16–19 ноября), стенд 1H39-1: оценка второго поставщика, образцы и долгосрочные поставки насосов, клапанов и жидкостных компонентов.",
+        },
   ],
 };
 
@@ -311,6 +437,7 @@ export function localizeNews(
           ...article,
           title: translation.title,
           summary: translation.summary,
+          coverAlt: translation.coverAlt ?? article.coverAlt,
           content: translation.content.map((block) => ({
             title: block.title,
             content: block.content,
