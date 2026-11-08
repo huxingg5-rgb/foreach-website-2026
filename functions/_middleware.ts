@@ -1,4 +1,5 @@
 import { getSolenoidRedirectEntries } from "../lib/seo/solenoid-migration";
+import { getQuickConnectSeriesRedirectEntries } from "../lib/seo/quick-connect-migration";
 import { normalizeControlModulePath } from "../data/products/selection/control-module-routes";
 import { getLegacyTubingSelectionTarget } from "../data/products/selection/tubing-selection-routes";
 import { normalizePipettingPath } from "../data/products/selection/pipetting-pump-routes";
@@ -27,6 +28,12 @@ const RETIRED_TUBING_ASSEMBLIES = new Map(
   getTubingAssemblyRedirectEntries().map(({ source, destination }) => [source, destination]),
 );
 const RETIRED_SOLENOID_PAGES = new Map(getSolenoidRedirectEntries().flatMap(({source, destination}) => [[source, destination], [source.slice(0, -1), destination]]));
+const RETIRED_QUICK_CONNECT_SERIES = new Map(
+  getQuickConnectSeriesRedirectEntries().flatMap(({ source, destination }) => [
+    [source, destination],
+    [`${source}/`, destination],
+  ]),
+);
 const LEGACY_REDIRECTS = new Map<string, string>([
   ["/cn/history.aspx", "/"],
   ["/cn/NewsInfo.aspx", "/"],
@@ -54,6 +61,13 @@ export const onRequest: LegacyRedirectHandler = async ({
   }
 
   const requestUrl = new URL(request.url);
+  const quickConnectTarget = RETIRED_QUICK_CONNECT_SERIES.get(requestUrl.pathname);
+  if (quickConnectTarget) {
+    const target = new URL(requestUrl);
+    target.pathname = quickConnectTarget;
+    return new Response(null, { status: 301, headers: { Location: target.toString() } });
+  }
+
   const solenoidTarget = RETIRED_SOLENOID_PAGES.get(requestUrl.pathname);
   if (solenoidTarget) {
     const target = new URL(solenoidTarget, requestUrl);
