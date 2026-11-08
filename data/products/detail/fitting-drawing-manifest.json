@@ -1,0 +1,2687 @@
+{
+  "schemaVersion": 1,
+  "products": {
+    "hard-tube-fittings": {
+      "hf-u28-20-pk-n": {
+        "geometryKey": "HF-U28-20",
+        "url": ""
+      },
+      "hf-u28-20-ps-b": {
+        "geometryKey": "HF-U28-20",
+        "url": ""
+      },
+      "hf-u28-20-pv-n": {
+        "geometryKey": "HF-U28-20",
+        "url": ""
+      },
+      "hf-u28-25-pk-n": {
+        "geometryKey": "HF-U28-25",
+        "url": ""
+      },
+      "hf-u28-25-ps-b": {
+        "geometryKey": "HF-U28-25",
+        "url": ""
+      },
+      "hf-u28-25-pv-n": {
+        "geometryKey": "HF-U28-25",
+        "url": ""
+      },
+      "hf-u28-32-pk-n": {
+        "geometryKey": "HF-U28-32",
+        "url": ""
+      },
+      "hf-u28-32-ps-b": {
+        "geometryKey": "HF-U28-32",
+        "url": ""
+      },
+      "hf-u28-32-pv-n": {
+        "geometryKey": "HF-U28-32",
+        "url": ""
+      },
+      "hf6-m6-20-pk-n": {
+        "geometryKey": "HF6-M6-20",
+        "url": ""
+      },
+      "hf6-m6-20-ps-b": {
+        "geometryKey": "HF6-M6-20",
+        "url": ""
+      },
+      "hf6-m6-20-pv-n": {
+        "geometryKey": "HF6-M6-20",
+        "url": ""
+      },
+      "hf6-m6-25-pk-n": {
+        "geometryKey": "HF6-M6-25",
+        "url": ""
+      },
+      "hf6-m6-25-ps-b": {
+        "geometryKey": "HF6-M6-25",
+        "url": ""
+      },
+      "hf6-m6-25-pv-n": {
+        "geometryKey": "HF6-M6-25",
+        "url": ""
+      },
+      "hf6-m6-32-pk-n": {
+        "geometryKey": "HF6-M6-32",
+        "url": ""
+      },
+      "hf6-m6-32-ps-b": {
+        "geometryKey": "HF6-M6-32",
+        "url": ""
+      },
+      "hf6-m6-32-pv-n": {
+        "geometryKey": "HF6-M6-32",
+        "url": ""
+      },
+      "hf6-u28-20-pk-n": {
+        "geometryKey": "HF6-U28-20",
+        "url": ""
+      },
+      "hf6-u28-20-ps-b": {
+        "geometryKey": "HF6-U28-20",
+        "url": ""
+      },
+      "hf6-u28-20-pv-n": {
+        "geometryKey": "HF6-U28-20",
+        "url": ""
+      },
+      "hf6-u28-25-pk-n": {
+        "geometryKey": "HF6-U28-25",
+        "url": ""
+      },
+      "hf6-u28-25-ps-b": {
+        "geometryKey": "HF6-U28-25",
+        "url": ""
+      },
+      "hf6-u28-25-pv-n": {
+        "geometryKey": "HF6-U28-25",
+        "url": ""
+      },
+      "hf6-u28-32-pk-n": {
+        "geometryKey": "HF6-U28-32",
+        "url": ""
+      },
+      "hf6-u28-32-ps-b": {
+        "geometryKey": "HF6-U28-32",
+        "url": ""
+      },
+      "hf6-u28-32-pv-n": {
+        "geometryKey": "HF6-U28-32",
+        "url": ""
+      },
+      "hfl-m6-16-pv-b": {
+        "geometryKey": "HFL-M6-16",
+        "url": ""
+      },
+      "hfl-m6-16-pv-n": {
+        "geometryKey": "HFL-M6-16",
+        "url": ""
+      },
+      "hfl-m6-20-pv-b": {
+        "geometryKey": "HFL-M6-20",
+        "url": ""
+      },
+      "hfl-m6-20-pv-n": {
+        "geometryKey": "HFL-M6-20",
+        "url": ""
+      },
+      "hfl-m6-25-pv-b": {
+        "geometryKey": "HFL-M6-25",
+        "url": ""
+      },
+      "hfl-m6-25-pv-n": {
+        "geometryKey": "HFL-M6-25",
+        "url": ""
+      },
+      "hfl-m6-30-pv-b": {
+        "geometryKey": "HFL-M6-30",
+        "url": ""
+      },
+      "hfl-m6-30-pv-n": {
+        "geometryKey": "HFL-M6-30",
+        "url": ""
+      },
+      "hfl-m6-32-pv-b": {
+        "geometryKey": "HFL-M6-32",
+        "url": ""
+      },
+      "hfl-m6-32-pv-n": {
+        "geometryKey": "HFL-M6-32",
+        "url": ""
+      },
+      "hfl-u28-16-pv-b": {
+        "geometryKey": "HFL-U28-16",
+        "url": ""
+      },
+      "hfl-u28-16-pv-n": {
+        "geometryKey": "HFL-U28-16",
+        "url": ""
+      },
+      "hfl-u28-20-pv-b": {
+        "geometryKey": "HFL-U28-20",
+        "url": ""
+      },
+      "hfl-u28-20-pv-n": {
+        "geometryKey": "HFL-U28-20",
+        "url": ""
+      },
+      "hfl-u28-25-pv-b": {
+        "geometryKey": "HFL-U28-25",
+        "url": ""
+      },
+      "hfl-u28-25-pv-n": {
+        "geometryKey": "HFL-U28-25",
+        "url": ""
+      },
+      "hfl-u28-30-pv-b": {
+        "geometryKey": "HFL-U28-30",
+        "url": ""
+      },
+      "hfl-u28-30-pv-n": {
+        "geometryKey": "HFL-U28-30",
+        "url": ""
+      },
+      "hfl-u28-32-pv-b": {
+        "geometryKey": "HFL-U28-32",
+        "url": ""
+      },
+      "hfl-u28-32-pv-n": {
+        "geometryKey": "HFL-U28-32",
+        "url": ""
+      },
+      "hfl6-m6-16-ps-b": {
+        "geometryKey": "HFL6-M6-16",
+        "url": ""
+      },
+      "hfl6-m6-20-ps-b": {
+        "geometryKey": "HFL6-M6-20",
+        "url": ""
+      },
+      "hfl6-m6-25-ps-b": {
+        "geometryKey": "HFL6-M6-25",
+        "url": ""
+      },
+      "hfl6-m6-25-ps-u": {
+        "geometryKey": "HFL6-M6-25",
+        "url": ""
+      },
+      "hfl6-m6-30-ps-b": {
+        "geometryKey": "HFL6-M6-30",
+        "url": ""
+      },
+      "hfl6-m6-32-ps-b": {
+        "geometryKey": "HFL6-M6-32",
+        "url": ""
+      },
+      "hfl6-u28-16-ps-b": {
+        "geometryKey": "HFL6-U28-16",
+        "url": ""
+      },
+      "hfl6-u28-16-ps-u": {
+        "geometryKey": "HFL6-U28-16",
+        "url": ""
+      },
+      "hfl6-u28-20-ps-b": {
+        "geometryKey": "HFL6-U28-20",
+        "url": ""
+      },
+      "hfl6-u28-20-ps-u": {
+        "geometryKey": "HFL6-U28-20",
+        "url": ""
+      },
+      "hfl6-u28-25-ps-b": {
+        "geometryKey": "HFL6-U28-25",
+        "url": ""
+      },
+      "hfl6-u28-30-ps-b": {
+        "geometryKey": "HFL6-U28-30",
+        "url": ""
+      },
+      "hfl6-u28-32-ps-b": {
+        "geometryKey": "HFL6-U28-32",
+        "url": ""
+      },
+      "hfl6-u40-16-pk-n": {
+        "geometryKey": "HFL6-U40-16",
+        "url": ""
+      },
+      "hn-m6-16-ac-b": {
+        "geometryKey": "HN-M6-16",
+        "url": ""
+      },
+      "hn-m6-16-pk-n": {
+        "geometryKey": "HN-M6-16",
+        "url": ""
+      },
+      "hn-m6-16-ps-b": {
+        "geometryKey": "HN-M6-16",
+        "url": ""
+      },
+      "hn-m6-16-pv-n": {
+        "geometryKey": "HN-M6-16",
+        "url": ""
+      },
+      "hn-m6-32-ac-b": {
+        "geometryKey": "HN-M6-32",
+        "url": ""
+      },
+      "hn-m6-32-pk-n": {
+        "geometryKey": "HN-M6-32",
+        "url": ""
+      },
+      "hn-m6-32-ps-b": {
+        "geometryKey": "HN-M6-32",
+        "url": ""
+      },
+      "hn-m6-32-pv-n": {
+        "geometryKey": "HN-M6-32",
+        "url": ""
+      },
+      "hn6-m6-16-ac-b": {
+        "geometryKey": "HN6-M6-16",
+        "url": ""
+      },
+      "hn6-m6-16-pk-n": {
+        "geometryKey": "HN6-M6-16",
+        "url": ""
+      },
+      "hn6-m6-16-ps-b": {
+        "geometryKey": "HN6-M6-16",
+        "url": ""
+      },
+      "hn6-m6-16-pv-n": {
+        "geometryKey": "HN6-M6-16",
+        "url": ""
+      },
+      "hn6-m6-32-ac-b": {
+        "geometryKey": "HN6-M6-32",
+        "url": ""
+      },
+      "hn6-m6-32-pk-n": {
+        "geometryKey": "HN6-M6-32",
+        "url": ""
+      },
+      "hn6-m6-32-ps-b": {
+        "geometryKey": "HN6-M6-32",
+        "url": ""
+      },
+      "hn6-u28-16-ac-b": {
+        "geometryKey": "HN6-U28-16",
+        "url": ""
+      },
+      "hn6-u28-16-pk-n": {
+        "geometryKey": "HN6-U28-16",
+        "url": ""
+      },
+      "hn6-u28-16-ps-b": {
+        "geometryKey": "HN6-U28-16",
+        "url": ""
+      },
+      "hn6-u28-16-pv-n": {
+        "geometryKey": "HN6-U28-16",
+        "url": ""
+      },
+      "hn6-u28-32-ac-b": {
+        "geometryKey": "HN6-U28-32",
+        "url": ""
+      },
+      "hn6-u28-32-et-n": {
+        "geometryKey": "HN6-U28-32",
+        "url": ""
+      },
+      "hn6-u28-32-pk-b": {
+        "geometryKey": "HN6-U28-32",
+        "url": ""
+      },
+      "hn6-u28-32-ps-b": {
+        "geometryKey": "HN6-U28-32",
+        "url": ""
+      },
+      "hn6-u28-32-pv-n": {
+        "geometryKey": "HN6-U28-32",
+        "url": ""
+      },
+      "hne-u28-32-pp-n": {
+        "geometryKey": "HNE-U28-32",
+        "url": ""
+      },
+      "hne6-u28-32-ps-b": {
+        "geometryKey": "HNE6-U28-32",
+        "url": ""
+      },
+      "hnf-m6-16-pv-b": {
+        "geometryKey": "HNF-M6-16",
+        "url": ""
+      },
+      "hnf-m6-16-pv-n": {
+        "geometryKey": "HNF-M6-16",
+        "url": ""
+      },
+      "hnf-m6-20-pv-b": {
+        "geometryKey": "HNF-M6-20",
+        "url": ""
+      },
+      "hnf-m6-20-pv-n": {
+        "geometryKey": "HNF-M6-20",
+        "url": ""
+      },
+      "hnf-m6-25-pv-b": {
+        "geometryKey": "HNF-M6-25",
+        "url": ""
+      },
+      "hnf-m6-25-pv-n": {
+        "geometryKey": "HNF-M6-25",
+        "url": ""
+      },
+      "hnf-m6-30-pv-b": {
+        "geometryKey": "HNF-M6-30",
+        "url": ""
+      },
+      "hnf-m6-30-pv-n": {
+        "geometryKey": "HNF-M6-30",
+        "url": ""
+      },
+      "hnf-m6-32-pv-b": {
+        "geometryKey": "HNF-M6-32",
+        "url": ""
+      },
+      "hnf-m6-32-pv-n": {
+        "geometryKey": "HNF-M6-32",
+        "url": ""
+      },
+      "hnf-u28-16-pv-b": {
+        "geometryKey": "HNF-U28-16",
+        "url": ""
+      },
+      "hnf-u28-16-pv-n": {
+        "geometryKey": "HNF-U28-16",
+        "url": ""
+      },
+      "hnf-u28-20-pv-b": {
+        "geometryKey": "HNF-U28-20",
+        "url": ""
+      },
+      "hnf-u28-20-pv-n": {
+        "geometryKey": "HNF-U28-20",
+        "url": ""
+      },
+      "hnf-u28-25-pv-b": {
+        "geometryKey": "HNF-U28-25",
+        "url": ""
+      },
+      "hnf-u28-25-pv-n": {
+        "geometryKey": "HNF-U28-25",
+        "url": ""
+      },
+      "hnf-u28-30-pv-b": {
+        "geometryKey": "HNF-U28-30",
+        "url": ""
+      },
+      "hnf-u28-30-pv-n": {
+        "geometryKey": "HNF-U28-30",
+        "url": ""
+      },
+      "hnf-u28-32-pv-b": {
+        "geometryKey": "HNF-U28-32",
+        "url": ""
+      },
+      "hnf-u28-32-pv-n": {
+        "geometryKey": "HNF-U28-32",
+        "url": ""
+      },
+      "hnf6-m6-16-ps-b": {
+        "geometryKey": "HNF6-M6-16",
+        "url": ""
+      },
+      "hnf6-m6-20-ps-b": {
+        "geometryKey": "HNF6-M6-20",
+        "url": ""
+      },
+      "hnf6-m6-25-ps-b": {
+        "geometryKey": "HNF6-M6-25",
+        "url": ""
+      },
+      "hnf6-m6-30-ps-b": {
+        "geometryKey": "HNF6-M6-30",
+        "url": ""
+      },
+      "hnf6-m6-32-ps-b": {
+        "geometryKey": "HNF6-M6-32",
+        "url": ""
+      },
+      "hnf6-u28-16-ps-b": {
+        "geometryKey": "HNF6-U28-16",
+        "url": ""
+      },
+      "hnf6-u28-16-ps-u": {
+        "geometryKey": "HNF6-U28-16",
+        "url": ""
+      },
+      "hnf6-u28-20-ps-b": {
+        "geometryKey": "HNF6-U28-20",
+        "url": ""
+      },
+      "hnf6-u28-20-ps-u": {
+        "geometryKey": "HNF6-U28-20",
+        "url": ""
+      },
+      "hnf6-u28-25-ps-b": {
+        "geometryKey": "HNF6-U28-25",
+        "url": ""
+      },
+      "hnf6-u28-30-ps-b": {
+        "geometryKey": "HNF6-U28-30",
+        "url": ""
+      },
+      "hnf6-u28-32-ps-b": {
+        "geometryKey": "HNF6-U28-32",
+        "url": ""
+      },
+      "hsf-u28-16-pk-n": {
+        "geometryKey": "HSF-U28-16",
+        "url": ""
+      },
+      "hsf-u28-32-peek-n": {
+        "geometryKey": "HSF-U28-32",
+        "url": ""
+      },
+      "hsf6-m6-16-ps-b": {
+        "geometryKey": "HSF6-M6-16",
+        "url": ""
+      },
+      "hsf6-m6-18-ps-b": {
+        "geometryKey": "HSF6-M6-18",
+        "url": ""
+      },
+      "hsf6-u28-16-pk-n": {
+        "geometryKey": "HSF6-U28-16",
+        "url": ""
+      },
+      "hsf6-u28-16-ps-b": {
+        "geometryKey": "HSF6-U28-16",
+        "url": ""
+      },
+      "hsf6-u28-32-pk-n": {
+        "geometryKey": "HSF6-U28-32",
+        "url": ""
+      },
+      "hsf6-u28-32-ps-b": {
+        "geometryKey": "HSF6-U28-32",
+        "url": ""
+      },
+      "pnc-u32-16-pk-n": {
+        "geometryKey": "PNC-U32-16",
+        "url": ""
+      },
+      "pnc6-u32-16-pk-n": {
+        "geometryKey": "PNC6-U32-16",
+        "url": ""
+      },
+      "pnf-u32-16-ss-n": {
+        "geometryKey": "PNF-U32-16",
+        "url": ""
+      },
+      "cl-0-16-et-n": {
+        "geometryKey": "CL-0-16",
+        "url": ""
+      },
+      "cl-0-16-pp-n": {
+        "geometryKey": "CL-0-16",
+        "url": ""
+      },
+      "cl-0-20-et-n": {
+        "geometryKey": "CL-0-20",
+        "url": ""
+      },
+      "cl-0-20-pp-n": {
+        "geometryKey": "CL-0-20",
+        "url": ""
+      },
+      "cl-0-25-et-n": {
+        "geometryKey": "CL-0-25",
+        "url": ""
+      },
+      "cl-0-25-pp-n": {
+        "geometryKey": "CL-0-25",
+        "url": ""
+      },
+      "cl-0-30-et-n": {
+        "geometryKey": "CL-0-30",
+        "url": ""
+      },
+      "cl-0-30-pp-n": {
+        "geometryKey": "CL-0-30",
+        "url": ""
+      },
+      "cl-0-32-et-n": {
+        "geometryKey": "CL-0-32",
+        "url": ""
+      },
+      "cl-0-32-pp-n": {
+        "geometryKey": "CL-0-32",
+        "url": ""
+      },
+      "cl-0x-16-et-n": {
+        "geometryKey": "CL-0X-16",
+        "url": ""
+      },
+      "cl-0x-16-pp-n": {
+        "geometryKey": "CL-0X-16",
+        "url": ""
+      },
+      "cl-0x-20-et-n": {
+        "geometryKey": "CL-0X-20",
+        "url": ""
+      },
+      "cl-0x-20-pp-n": {
+        "geometryKey": "CL-0X-20",
+        "url": ""
+      },
+      "cl-0x-25-et-n": {
+        "geometryKey": "CL-0X-25",
+        "url": ""
+      },
+      "cl-0x-25-pp-n": {
+        "geometryKey": "CL-0X-25",
+        "url": ""
+      },
+      "cl-0x-30-et-n": {
+        "geometryKey": "CL-0X-30",
+        "url": ""
+      },
+      "cl-0x-30-pp-n": {
+        "geometryKey": "CL-0X-30",
+        "url": ""
+      },
+      "cl-0x-32-et-n": {
+        "geometryKey": "CL-0X-32",
+        "url": ""
+      },
+      "cl-0x-32-pp-n": {
+        "geometryKey": "CL-0X-32",
+        "url": ""
+      },
+      "hbl6-u28-ps-b": {
+        "geometryKey": "HBL6-U28",
+        "url": ""
+      },
+      "hbl6-m6-ps-b": {
+        "geometryKey": "HBL6-M6",
+        "url": ""
+      },
+      "hbl-u28-pv-n": {
+        "geometryKey": "HBL-U28",
+        "url": ""
+      },
+      "hbl-u28-pv-b": {
+        "geometryKey": "HBL-U28",
+        "url": ""
+      },
+      "hbl-m6-pv-n": {
+        "geometryKey": "HBL-M6",
+        "url": ""
+      },
+      "hbl-m6-pv-b": {
+        "geometryKey": "HBL-M6",
+        "url": ""
+      },
+      "hbl6x-m6-pv-n": {
+        "geometryKey": "HBL6X-M6",
+        "url": ""
+      },
+      "hbl6x-u28-pv-n": {
+        "geometryKey": "HBL6X-U28",
+        "url": ""
+      },
+      "cl-1x-16": {
+        "geometryKey": "CL-1X-16",
+        "url": ""
+      },
+      "cl-1-16": {
+        "geometryKey": "CL-1-16",
+        "url": ""
+      },
+      "cl-1-20": {
+        "geometryKey": "CL-1-20",
+        "url": ""
+      },
+      "cl-1-25": {
+        "geometryKey": "CL-1-25",
+        "url": ""
+      },
+      "cl-1-30": {
+        "geometryKey": "CL-1-30",
+        "url": ""
+      },
+      "cl-1-32": {
+        "geometryKey": "CL-1-32",
+        "url": ""
+      },
+      "cl-1s-16": {
+        "geometryKey": "CL-1S-16",
+        "url": ""
+      },
+      "cl-1s-20": {
+        "geometryKey": "CL-1S-20",
+        "url": ""
+      },
+      "cl-1s-25": {
+        "geometryKey": "CL-1S-25",
+        "url": ""
+      },
+      "cl-1s-30": {
+        "geometryKey": "CL-1S-30",
+        "url": ""
+      },
+      "cl-1s-32": {
+        "geometryKey": "CL-1S-32",
+        "url": ""
+      }
+    },
+    "barbed-fittings": {
+      "ba-16f-pp-n": {
+        "geometryKey": "BA-16F",
+        "url": ""
+      },
+      "ba-24f-pp-n": {
+        "geometryKey": "BA-24F",
+        "url": ""
+      },
+      "ba-32f-pp-n": {
+        "geometryKey": "BA-32F",
+        "url": ""
+      },
+      "ba-40f-pp-n": {
+        "geometryKey": "BA-40F",
+        "url": ""
+      },
+      "ba-16f-24f-pp-n": {
+        "geometryKey": "BA-16F-24F",
+        "url": ""
+      },
+      "ba-24f-32f-pp-n": {
+        "geometryKey": "BA-24F-32F",
+        "url": ""
+      },
+      "ba-16f-pa-w": {
+        "geometryKey": "BA-16F",
+        "url": ""
+      },
+      "ba-16f-24f-pa-w": {
+        "geometryKey": "BA-16F-24F",
+        "url": ""
+      },
+      "ba-24f-pa-w": {
+        "geometryKey": "BA-24F",
+        "url": ""
+      },
+      "ba-24f-32f-pa-w": {
+        "geometryKey": "BA-24F-32F",
+        "url": ""
+      },
+      "ba-32f-pa-w": {
+        "geometryKey": "BA-32F",
+        "url": ""
+      },
+      "ba-40f-pa-w": {
+        "geometryKey": "BA-40F",
+        "url": ""
+      },
+      "ba-16f-32f-pp-n": {
+        "geometryKey": "BA-16F-32F",
+        "url": ""
+      },
+      "ba-16f-32f-pa-w": {
+        "geometryKey": "BA-16F-32F",
+        "url": ""
+      },
+      "ba-32c-64c-pa-w": {
+        "geometryKey": "BA-32C-64C",
+        "url": ""
+      },
+      "ba-32c-64c-pp-n": {
+        "geometryKey": "BA-32C-64C",
+        "url": ""
+      },
+      "ba-32v-40v-pp-n": {
+        "geometryKey": "BA-32V-40V",
+        "url": ""
+      },
+      "ba-32v-40v-pa-w": {
+        "geometryKey": "BA-32V-40V",
+        "url": ""
+      },
+      "ba-24v-40v-pp-n": {
+        "geometryKey": "BA-24V-40V",
+        "url": ""
+      },
+      "ba-24v-40v-pa-w": {
+        "geometryKey": "BA-24V-40V",
+        "url": ""
+      },
+      "ba-64v-79v-pp-n": {
+        "geometryKey": "BA-64V-79V",
+        "url": ""
+      },
+      "ba-64v-79v-pa-w": {
+        "geometryKey": "BA-64V-79V",
+        "url": ""
+      },
+      "ba-64c-pp-n": {
+        "geometryKey": "BA-64C",
+        "url": ""
+      },
+      "ba-64c-pa-w": {
+        "geometryKey": "BA-64C",
+        "url": ""
+      },
+      "ba-64v-95v-pp-n": {
+        "geometryKey": "BA-64V-95V",
+        "url": ""
+      },
+      "ba-64v-95v-pa-w": {
+        "geometryKey": "BA-64V-95V",
+        "url": ""
+      },
+      "ba-64x-127x-pp-n": {
+        "geometryKey": "BA-64X-127X",
+        "url": ""
+      },
+      "ba-64x-127x-pa-w": {
+        "geometryKey": "BA-64X-127X",
+        "url": ""
+      },
+      "ba-16c-pp-n": {
+        "geometryKey": "BA-16C",
+        "url": ""
+      },
+      "ba-16d-24d-pp-n": {
+        "geometryKey": "BA-16D-24D",
+        "url": ""
+      },
+      "ba-16d-24d-pa-w": {
+        "geometryKey": "BA-16D-24D",
+        "url": ""
+      },
+      "ba-24d-32d-pp-n": {
+        "geometryKey": "BA-24D-32D",
+        "url": ""
+      },
+      "ba-24d-32d-pa-w": {
+        "geometryKey": "BA-24D-32D",
+        "url": ""
+      },
+      "ba-24d-pp-n": {
+        "geometryKey": "BA-24D",
+        "url": ""
+      },
+      "ba-24d-pa-w": {
+        "geometryKey": "BA-24D",
+        "url": ""
+      },
+      "ba-32d-pp-n": {
+        "geometryKey": "BA-32D",
+        "url": ""
+      },
+      "ba-32d-pa-w": {
+        "geometryKey": "BA-32D",
+        "url": ""
+      },
+      "ba-16d-32d-pp-n": {
+        "geometryKey": "BA-16D-32D",
+        "url": ""
+      },
+      "ba-16d-32d-pa-w": {
+        "geometryKey": "BA-16D-32D",
+        "url": ""
+      },
+      "ba-16c-pa-w": {
+        "geometryKey": "BA-16C",
+        "url": ""
+      },
+      "ba-16f-24f-pv-n": {
+        "geometryKey": "BA-16F-24F",
+        "url": ""
+      },
+      "ba-24c-48c-pp-n": {
+        "geometryKey": "BA-24C-48C",
+        "url": ""
+      },
+      "ba-24c-48c-pa-w": {
+        "geometryKey": "BA-24C-48C",
+        "url": ""
+      },
+      "ba-16v-40v-pa-w": {
+        "geometryKey": "BA-16V-40V",
+        "url": ""
+      },
+      "ba-16v-40v-pp-n": {
+        "geometryKey": "BA-16V-40V",
+        "url": ""
+      },
+      "bl-16f-pa-w": {
+        "geometryKey": "BL-16F",
+        "url": ""
+      },
+      "bl-24f-pa-w": {
+        "geometryKey": "BL-24F",
+        "url": ""
+      },
+      "bl-32f-pa-w": {
+        "geometryKey": "BL-32F",
+        "url": ""
+      },
+      "bl-40f-pa-w": {
+        "geometryKey": "BL-40F",
+        "url": ""
+      },
+      "bl-64f-pa-w": {
+        "geometryKey": "BL-64F",
+        "url": ""
+      },
+      "bl-95d-pa-w": {
+        "geometryKey": "BL-95D",
+        "url": ""
+      },
+      "bl-16f-pp-n": {
+        "geometryKey": "BL-16F",
+        "url": ""
+      },
+      "bl-24f-pp-n": {
+        "geometryKey": "BL-24F",
+        "url": ""
+      },
+      "bl-32f-pp-n": {
+        "geometryKey": "BL-32F",
+        "url": ""
+      },
+      "bl-40f-pp-n": {
+        "geometryKey": "BL-40F",
+        "url": ""
+      },
+      "bl-64f-pp-n": {
+        "geometryKey": "BL-64F",
+        "url": ""
+      },
+      "bl-95d-pp-n": {
+        "geometryKey": "BL-95D",
+        "url": ""
+      },
+      "bl-16d-pp-n": {
+        "geometryKey": "BL-16D",
+        "url": ""
+      },
+      "bl-16d-pa-w": {
+        "geometryKey": "BL-16D",
+        "url": ""
+      },
+      "bl-24d-pp-n": {
+        "geometryKey": "BL-24D",
+        "url": ""
+      },
+      "bl-24d-pa-w": {
+        "geometryKey": "BL-24D",
+        "url": ""
+      },
+      "bl-32d-pp-n": {
+        "geometryKey": "BL-32D",
+        "url": ""
+      },
+      "bl-32d-pa-w": {
+        "geometryKey": "BL-32D",
+        "url": ""
+      },
+      "bl-16d-24d-pp-n": {
+        "geometryKey": "BL-16D-24D",
+        "url": ""
+      },
+      "bl-16d-24d-pa-w": {
+        "geometryKey": "BL-16D-24D",
+        "url": ""
+      },
+      "bl-24d-32d-pp-n": {
+        "geometryKey": "BL-24D-32D",
+        "url": ""
+      },
+      "bl-24d-32d-pa-w": {
+        "geometryKey": "BL-24D-32D",
+        "url": ""
+      },
+      "bl-16d-32d-pp-n": {
+        "geometryKey": "BL-16D-32D",
+        "url": ""
+      },
+      "bl-16d-32d-pa-w": {
+        "geometryKey": "BL-16D-32D",
+        "url": ""
+      },
+      "bl-127v-pp-n": {
+        "geometryKey": "BL-127V",
+        "url": ""
+      },
+      "bt-16f-pp-n": {
+        "geometryKey": "BT-16F",
+        "url": ""
+      },
+      "bt-24f-pp-n": {
+        "geometryKey": "BT-24F",
+        "url": ""
+      },
+      "bt-32f-pp-n": {
+        "geometryKey": "BT-32F",
+        "url": ""
+      },
+      "bt-24f-pa-w": {
+        "geometryKey": "BT-24F",
+        "url": ""
+      },
+      "bt-16f-pa-w": {
+        "geometryKey": "BT-16F",
+        "url": ""
+      },
+      "bt-32f-pa-w": {
+        "geometryKey": "BT-32F",
+        "url": ""
+      },
+      "bt-40c-pp-n": {
+        "geometryKey": "BT-40C",
+        "url": ""
+      },
+      "bt-40c-pa-w": {
+        "geometryKey": "BT-40C",
+        "url": ""
+      },
+      "bt-64c-pp-n": {
+        "geometryKey": "BT-64C",
+        "url": ""
+      },
+      "bt-64c-pa-w": {
+        "geometryKey": "BT-64C",
+        "url": ""
+      },
+      "bt-95x-pp-n": {
+        "geometryKey": "BT-95X",
+        "url": ""
+      },
+      "bt-95x-pa-w": {
+        "geometryKey": "BT-95X",
+        "url": ""
+      },
+      "bt-32d-32d-16d-pp-n": {
+        "geometryKey": "BT-32D-32D-16D",
+        "url": ""
+      },
+      "bt-32d-32d-16d-pa-w": {
+        "geometryKey": "BT-32D-32D-16D",
+        "url": ""
+      },
+      "bt-24d-24d-16d-pp-n": {
+        "geometryKey": "BT-24D-24D-16D",
+        "url": ""
+      },
+      "bt-24d-24d-16d-pa-w": {
+        "geometryKey": "BT-24D-24D-16D",
+        "url": ""
+      },
+      "bt-32d-32d-24d-pp-n": {
+        "geometryKey": "BT-32D-32D-24D",
+        "url": ""
+      },
+      "bt-32d-32d-24d-pa-w": {
+        "geometryKey": "BT-32D-32D-24D",
+        "url": ""
+      },
+      "bt-64d-64d-32d-pp-n": {
+        "geometryKey": "BT-64D-64D-32D",
+        "url": ""
+      },
+      "bt-64d-64d-32d-pa-w": {
+        "geometryKey": "BT-64D-64D-32D",
+        "url": ""
+      },
+      "bt-24d-32d-32d-pp-n": {
+        "geometryKey": "BT-24D-32D-32D",
+        "url": ""
+      },
+      "bt-24d-32d-32d-pa-w": {
+        "geometryKey": "BT-24D-32D-32D",
+        "url": ""
+      },
+      "bt-32d-16d-16d-pp-n": {
+        "geometryKey": "BT-32D-16D-16D",
+        "url": ""
+      },
+      "bt-32d-16d-16d-pa-w": {
+        "geometryKey": "BT-32D-16D-16D",
+        "url": ""
+      },
+      "bt-32d-24d-24d-pp-n": {
+        "geometryKey": "BT-32D-24D-24D",
+        "url": ""
+      },
+      "bt-32d-24d-24d-pa-w": {
+        "geometryKey": "BT-32D-24D-24D",
+        "url": ""
+      },
+      "bt-32d-64t-64t-pp-n": {
+        "geometryKey": "BT-32D-64T-64T",
+        "url": ""
+      },
+      "bt-32d-64t-64t-pa-w": {
+        "geometryKey": "BT-32D-64T-64T",
+        "url": ""
+      },
+      "bt-64v-95v-95v-pp-n": {
+        "geometryKey": "BT-64V-95V-95V",
+        "url": ""
+      },
+      "bt-64v-95v-95v-pa-w": {
+        "geometryKey": "BT-64V-95V-95V",
+        "url": ""
+      },
+      "bt-16d-pp-n": {
+        "geometryKey": "BT-16D",
+        "url": ""
+      },
+      "bt-16d-pa-w": {
+        "geometryKey": "BT-16D",
+        "url": ""
+      },
+      "bt-24d-pp-n": {
+        "geometryKey": "BT-24D",
+        "url": ""
+      },
+      "bt-24d-pa-w": {
+        "geometryKey": "BT-24D",
+        "url": ""
+      },
+      "bt-32d-pp-n": {
+        "geometryKey": "BT-32D",
+        "url": ""
+      },
+      "bt-32d-pa-w": {
+        "geometryKey": "BT-32D",
+        "url": ""
+      },
+      "bt-127v-pp-n": {
+        "geometryKey": "BT-127V",
+        "url": ""
+      },
+      "bt-16d-24d-24d-pp-n": {
+        "geometryKey": "BT-16D-24D-24D",
+        "url": ""
+      },
+      "bt-16d-24d-24d-pa-w": {
+        "geometryKey": "BT-16D-24D-24D",
+        "url": ""
+      },
+      "bt-16d-32d-32d-pa-w": {
+        "geometryKey": "BT-16D-32D-32D",
+        "url": ""
+      },
+      "bt-16d-32d-32d-pp-n": {
+        "geometryKey": "BT-16D-32D-32D",
+        "url": ""
+      },
+      "by-16f-pp-n": {
+        "geometryKey": "BY-16F",
+        "url": ""
+      },
+      "by-24f-pp-n": {
+        "geometryKey": "BY-24F",
+        "url": ""
+      },
+      "by-32f-pp-n": {
+        "geometryKey": "BY-32F",
+        "url": ""
+      },
+      "by-40d-pp-n": {
+        "geometryKey": "BY-40D",
+        "url": ""
+      },
+      "by-64f-pp-n": {
+        "geometryKey": "BY-64F",
+        "url": ""
+      },
+      "by-24f-pa-w": {
+        "geometryKey": "BY-24F",
+        "url": ""
+      },
+      "by-16f-pa-w": {
+        "geometryKey": "BY-16F",
+        "url": ""
+      },
+      "by-32f-pa-w": {
+        "geometryKey": "BY-32F",
+        "url": ""
+      },
+      "by-64f-pa-w": {
+        "geometryKey": "BY-64F",
+        "url": ""
+      },
+      "by-48f-pp-n": {
+        "geometryKey": "BY-48F",
+        "url": ""
+      },
+      "by-48f-pa-w": {
+        "geometryKey": "BY-48F",
+        "url": ""
+      },
+      "by-40d-pa-w": {
+        "geometryKey": "BY-40D",
+        "url": ""
+      },
+      "by-24d-16d-16d-pp-n": {
+        "geometryKey": "BY-24D-16D-16D",
+        "url": ""
+      },
+      "by-24d-16d-16d-pa-w": {
+        "geometryKey": "BY-24D-16D-16D",
+        "url": ""
+      },
+      "by-32d-pp-n": {
+        "geometryKey": "BY-32D",
+        "url": ""
+      },
+      "by-32d-pa-w": {
+        "geometryKey": "BY-32D",
+        "url": ""
+      },
+      "by-95x-pp-n": {
+        "geometryKey": "BY-95X",
+        "url": ""
+      },
+      "by-95x-pa-w": {
+        "geometryKey": "BY-95X",
+        "url": ""
+      },
+      "by-32d-16d-16d-pp-n": {
+        "geometryKey": "BY-32D-16D-16D",
+        "url": ""
+      },
+      "by-32d-16d-16d-pa-w": {
+        "geometryKey": "BY-32D-16D-16D",
+        "url": ""
+      },
+      "by-64d-32d-32d-pp-n": {
+        "geometryKey": "BY-64D-32D-32D",
+        "url": ""
+      },
+      "by-64d-32d-32d-pa-w": {
+        "geometryKey": "BY-64D-32D-32D",
+        "url": ""
+      },
+      "by-24d-pp-n": {
+        "geometryKey": "BY-24D",
+        "url": ""
+      },
+      "by-24d-pa-w": {
+        "geometryKey": "BY-24D",
+        "url": ""
+      },
+      "by-16d-pp-n": {
+        "geometryKey": "BY-16D",
+        "url": ""
+      },
+      "by-16d-pa-w": {
+        "geometryKey": "BY-16D",
+        "url": ""
+      },
+      "by-127v-pp-n": {
+        "geometryKey": "BY-127V",
+        "url": ""
+      },
+      "bbl-16d-pp-n": {
+        "geometryKey": "BBL-16D",
+        "url": ""
+      },
+      "bbl-24d-pp-n": {
+        "geometryKey": "BBL-24D",
+        "url": ""
+      },
+      "bbl-32d-pp-n": {
+        "geometryKey": "BBL-32D",
+        "url": ""
+      },
+      "bbl-16d-pa-w": {
+        "geometryKey": "BBL-16D",
+        "url": ""
+      },
+      "bbl-24d-pa-w": {
+        "geometryKey": "BBL-24D",
+        "url": ""
+      },
+      "bbl-32d-pa-w": {
+        "geometryKey": "BBL-32D",
+        "url": ""
+      }
+    },
+    "luer-fittings": {
+      "lsl-16-pp-n": {
+        "geometryKey": "LSL-16",
+        "url": ""
+      },
+      "lsl-16-pa-w": {
+        "geometryKey": "LSL-16",
+        "url": ""
+      },
+      "lsl-24-pp-n": {
+        "geometryKey": "LSL-24",
+        "url": ""
+      },
+      "lsl-24-pa-w": {
+        "geometryKey": "LSL-24",
+        "url": ""
+      },
+      "lsl-32-pp-n": {
+        "geometryKey": "LSL-32",
+        "url": ""
+      },
+      "lsl-32-pa-w": {
+        "geometryKey": "LSL-32",
+        "url": ""
+      },
+      "lrl-16-pp-n": {
+        "geometryKey": "LRL-16",
+        "url": ""
+      },
+      "lrl-16-pa-w": {
+        "geometryKey": "LRL-16",
+        "url": ""
+      },
+      "lrl-16-pv-n": {
+        "geometryKey": "LRL-16",
+        "url": ""
+      },
+      "lrl-24-pp-n": {
+        "geometryKey": "LRL-24",
+        "url": ""
+      },
+      "lrl-24-pa-w": {
+        "geometryKey": "LRL-24",
+        "url": ""
+      },
+      "lrl-24-pv-n": {
+        "geometryKey": "LRL-24",
+        "url": ""
+      },
+      "lrl-32-pp-n": {
+        "geometryKey": "LRL-32",
+        "url": ""
+      },
+      "lrl-32-pa-w": {
+        "geometryKey": "LRL-32",
+        "url": ""
+      },
+      "lrl-32-pv-n": {
+        "geometryKey": "LRL-32",
+        "url": ""
+      },
+      "lp-32d-pp-n": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pa-w": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pa-b": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pa-r": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pa-g": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pa-u": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pa-o": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pa-y": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pp-r": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pp-g": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pp-u": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      },
+      "lp-32d-pp-b": {
+        "geometryKey": "LP-32D",
+        "url": ""
+      }
+    },
+    "quick-connect-fittings": {
+      "q2001-pmv-sacn": {
+        "geometryKey": "Q2001-PMV-S",
+        "url": ""
+      },
+      "q2001-pmv-sppe": {
+        "geometryKey": "Q2001-PMV-S",
+        "url": ""
+      },
+      "q2001-pmx-sacn": {
+        "geometryKey": "Q2001-PMX-S",
+        "url": ""
+      },
+      "q2001-pmx-sppe": {
+        "geometryKey": "Q2001-PMX-S",
+        "url": ""
+      },
+      "q2001-pnv-sacn": {
+        "geometryKey": "Q2001-PNV-S",
+        "url": ""
+      },
+      "q2001-pnv-sppe": {
+        "geometryKey": "Q2001-PNV-S",
+        "url": ""
+      },
+      "q2001-pnx-sacn": {
+        "geometryKey": "Q2001-PNX-S",
+        "url": ""
+      },
+      "q2001-pnx-sppe": {
+        "geometryKey": "Q2001-PNX-S",
+        "url": ""
+      },
+      "q2001-smv-sacn": {
+        "geometryKey": "Q2001-SMV-S",
+        "url": ""
+      },
+      "q2001-smv-sppe": {
+        "geometryKey": "Q2001-SMV-S",
+        "url": ""
+      },
+      "q2001-smx-sacn": {
+        "geometryKey": "Q2001-SMX-S",
+        "url": ""
+      },
+      "q2001-smx-sppe": {
+        "geometryKey": "Q2001-SMX-S",
+        "url": ""
+      },
+      "q2001-snv-sacn": {
+        "geometryKey": "Q2001-SNV-S",
+        "url": ""
+      },
+      "q2001-snv-sppe": {
+        "geometryKey": "Q2001-SNV-S",
+        "url": ""
+      },
+      "q2001-snx-sacn": {
+        "geometryKey": "Q2001-SNX-S",
+        "url": ""
+      },
+      "q2001-snx-sppe": {
+        "geometryKey": "Q2001-SNX-S",
+        "url": ""
+      },
+      "q2002-pmv-sacn": {
+        "geometryKey": "Q2002-PMV-S",
+        "url": ""
+      },
+      "q2002-pmv-sppe": {
+        "geometryKey": "Q2002-PMV-S",
+        "url": ""
+      },
+      "q2002-pmx-sacn": {
+        "geometryKey": "Q2002-PMX-S",
+        "url": ""
+      },
+      "q2002-pmx-sppe": {
+        "geometryKey": "Q2002-PMX-S",
+        "url": ""
+      },
+      "q2002-pnv-lacn": {
+        "geometryKey": "Q2002-PNV-L",
+        "url": ""
+      },
+      "q2002-pnv-lppe": {
+        "geometryKey": "Q2002-PNV-L",
+        "url": ""
+      },
+      "q2002-pnv-sacf": {
+        "geometryKey": "Q2002-PNV-S",
+        "url": ""
+      },
+      "q2002-pnv-sacn": {
+        "geometryKey": "Q2002-PNV-S",
+        "url": ""
+      },
+      "q2002-pnv-sppe": {
+        "geometryKey": "Q2002-PNV-S",
+        "url": ""
+      },
+      "q2002-pnx-lacn": {
+        "geometryKey": "Q2002-PNX-L",
+        "url": ""
+      },
+      "q2002-pnx-lppe": {
+        "geometryKey": "Q2002-PNX-L",
+        "url": ""
+      },
+      "q2002-pnx-sacn": {
+        "geometryKey": "Q2002-PNX-S",
+        "url": ""
+      },
+      "q2002-pnx-sppe": {
+        "geometryKey": "Q2002-PNX-S",
+        "url": ""
+      },
+      "q2002-smv-sacn": {
+        "geometryKey": "Q2002-SMV-S",
+        "url": ""
+      },
+      "q2002-smv-sppe": {
+        "geometryKey": "Q2002-SMV-S",
+        "url": ""
+      },
+      "q2002-smx-sacn": {
+        "geometryKey": "Q2002-SMX-S",
+        "url": ""
+      },
+      "q2002-smx-sppe": {
+        "geometryKey": "Q2002-SMX-S",
+        "url": ""
+      },
+      "q2002-snv-lacn": {
+        "geometryKey": "Q2002-SNV-L",
+        "url": ""
+      },
+      "q2002-snv-lppe": {
+        "geometryKey": "Q2002-SNV-L",
+        "url": ""
+      },
+      "q2002-snv-sacf": {
+        "geometryKey": "Q2002-SNV-S",
+        "url": ""
+      },
+      "q2002-snv-sacn": {
+        "geometryKey": "Q2002-SNV-S",
+        "url": ""
+      },
+      "q2002-snv-sppe": {
+        "geometryKey": "Q2002-SNV-S",
+        "url": ""
+      },
+      "q2002-snx-lacn": {
+        "geometryKey": "Q2002-SNX-L",
+        "url": ""
+      },
+      "q2002-snx-lppe": {
+        "geometryKey": "Q2002-SNX-L",
+        "url": ""
+      },
+      "q2002-snx-sacn": {
+        "geometryKey": "Q2002-SNX-S",
+        "url": ""
+      },
+      "q2002-snx-sppe": {
+        "geometryKey": "Q2002-SNX-S",
+        "url": ""
+      },
+      "q2003-pmv-sacn": {
+        "geometryKey": "Q2003-PMV-S",
+        "url": ""
+      },
+      "q2003-pmv-sppe": {
+        "geometryKey": "Q2003-PMV-S",
+        "url": ""
+      },
+      "q2003-pmx-sacn": {
+        "geometryKey": "Q2003-PMX-S",
+        "url": ""
+      },
+      "q2003-pmx-sppe": {
+        "geometryKey": "Q2003-PMX-S",
+        "url": ""
+      },
+      "q2003-pnv-sacn": {
+        "geometryKey": "Q2003-PNV-S",
+        "url": ""
+      },
+      "q2003-pnv-sppe": {
+        "geometryKey": "Q2003-PNV-S",
+        "url": ""
+      },
+      "q2003-pnx-sacn": {
+        "geometryKey": "Q2003-PNX-S",
+        "url": ""
+      },
+      "q2003-pnx-sppe": {
+        "geometryKey": "Q2003-PNX-S",
+        "url": ""
+      },
+      "q2003-smv-sacn": {
+        "geometryKey": "Q2003-SMV-S",
+        "url": ""
+      },
+      "q2003-smv-sppe": {
+        "geometryKey": "Q2003-SMV-S",
+        "url": ""
+      },
+      "q2003-smx-sacn": {
+        "geometryKey": "Q2003-SMX-S",
+        "url": ""
+      },
+      "q2003-smx-sppe": {
+        "geometryKey": "Q2003-SMX-S",
+        "url": ""
+      },
+      "q2003-snv-sacn": {
+        "geometryKey": "Q2003-SNV-S",
+        "url": ""
+      },
+      "q2003-snv-sppe": {
+        "geometryKey": "Q2003-SNV-S",
+        "url": ""
+      },
+      "q2003-snx-sacn": {
+        "geometryKey": "Q2003-SNX-S",
+        "url": ""
+      },
+      "q2003-snx-sppe": {
+        "geometryKey": "Q2003-SNX-S",
+        "url": ""
+      },
+      "q2004-pmv-sacn": {
+        "geometryKey": "Q2004-PMV-S",
+        "url": ""
+      },
+      "q2004-pmv-sppe": {
+        "geometryKey": "Q2004-PMV-S",
+        "url": ""
+      },
+      "q2004-pmx-sacn": {
+        "geometryKey": "Q2004-PMX-S",
+        "url": ""
+      },
+      "q2004-pmx-sppe": {
+        "geometryKey": "Q2004-PMX-S",
+        "url": ""
+      },
+      "q2004-pnv-lacn": {
+        "geometryKey": "Q2004-PNV-L",
+        "url": ""
+      },
+      "q2004-pnv-lppe": {
+        "geometryKey": "Q2004-PNV-L",
+        "url": ""
+      },
+      "q2004-pnv-sacn": {
+        "geometryKey": "Q2004-PNV-S",
+        "url": ""
+      },
+      "q2004-pnv-sppe": {
+        "geometryKey": "Q2004-PNV-S",
+        "url": ""
+      },
+      "q2004-pnx-lacn": {
+        "geometryKey": "Q2004-PNX-L",
+        "url": ""
+      },
+      "q2004-pnx-lppe": {
+        "geometryKey": "Q2004-PNX-L",
+        "url": ""
+      },
+      "q2004-pnx-sacn": {
+        "geometryKey": "Q2004-PNX-S",
+        "url": ""
+      },
+      "q2004-pnx-sppe": {
+        "geometryKey": "Q2004-PNX-S",
+        "url": ""
+      },
+      "q2004-smv-sacn": {
+        "geometryKey": "Q2004-SMV-S",
+        "url": ""
+      },
+      "q2004-smv-sppe": {
+        "geometryKey": "Q2004-SMV-S",
+        "url": ""
+      },
+      "q2004-smx-sacn": {
+        "geometryKey": "Q2004-SMX-S",
+        "url": ""
+      },
+      "q2004-smx-sppe": {
+        "geometryKey": "Q2004-SMX-S",
+        "url": ""
+      },
+      "q2004-snv-lacn": {
+        "geometryKey": "Q2004-SNV-L",
+        "url": ""
+      },
+      "q2004-snv-lppe": {
+        "geometryKey": "Q2004-SNV-L",
+        "url": ""
+      },
+      "q2004-snv-sacn": {
+        "geometryKey": "Q2004-SNV-S",
+        "url": ""
+      },
+      "q2004-snv-sppe": {
+        "geometryKey": "Q2004-SNV-S",
+        "url": ""
+      },
+      "q2004-snx-lacn": {
+        "geometryKey": "Q2004-SNX-L",
+        "url": ""
+      },
+      "q2004-snx-lppe": {
+        "geometryKey": "Q2004-SNX-L",
+        "url": ""
+      },
+      "q2004-snx-sacn": {
+        "geometryKey": "Q2004-SNX-S",
+        "url": ""
+      },
+      "q2004-snx-sppe": {
+        "geometryKey": "Q2004-SNX-S",
+        "url": ""
+      },
+      "q2018n-pnv-sacn": {
+        "geometryKey": "Q2018N-PNV-S",
+        "url": ""
+      },
+      "q2018n-pnv-sppe": {
+        "geometryKey": "Q2018N-PNV-S",
+        "url": ""
+      },
+      "q2018n-pnx-sacn": {
+        "geometryKey": "Q2018N-PNX-S",
+        "url": ""
+      },
+      "q2018n-pnx-sppe": {
+        "geometryKey": "Q2018N-PNX-S",
+        "url": ""
+      },
+      "q2018n-snv-sacn": {
+        "geometryKey": "Q2018N-SNV-S",
+        "url": ""
+      },
+      "q2018n-snv-sppe": {
+        "geometryKey": "Q2018N-SNV-S",
+        "url": ""
+      },
+      "q2018n-snx-sacn": {
+        "geometryKey": "Q2018N-SNX-S",
+        "url": ""
+      },
+      "q2018n-snx-sppe": {
+        "geometryKey": "Q2018N-SNX-S",
+        "url": ""
+      },
+      "q2018t-snv-sacn": {
+        "geometryKey": "Q2018T-SNV-S",
+        "url": ""
+      },
+      "q2018t-snv-sppe": {
+        "geometryKey": "Q2018T-SNV-S",
+        "url": ""
+      },
+      "q2018t-snx-sacn": {
+        "geometryKey": "Q2018T-SNX-S",
+        "url": ""
+      },
+      "q2018t-snx-sppe": {
+        "geometryKey": "Q2018T-SNX-S",
+        "url": ""
+      },
+      "q2028u-pnv-sacn": {
+        "geometryKey": "Q2028U-PNV-S",
+        "url": ""
+      },
+      "q2028u-pnv-sppe": {
+        "geometryKey": "Q2028U-PNV-S",
+        "url": ""
+      },
+      "q2028u-smv-sacn": {
+        "geometryKey": "Q2028U-SMV-S",
+        "url": ""
+      },
+      "q2028u-smv-sppe": {
+        "geometryKey": "Q2028U-SMV-S",
+        "url": ""
+      },
+      "q4004-pmv-sacn": {
+        "geometryKey": "Q4004-PMV-S",
+        "url": ""
+      },
+      "q4004-pmv-sppe": {
+        "geometryKey": "Q4004-PMV-S",
+        "url": ""
+      },
+      "q4004-pmx-sacn": {
+        "geometryKey": "Q4004-PMX-S",
+        "url": ""
+      },
+      "q4004-pmx-sppe": {
+        "geometryKey": "Q4004-PMX-S",
+        "url": ""
+      },
+      "q4004-pnv-lacn": {
+        "geometryKey": "Q4004-PNV-L",
+        "url": ""
+      },
+      "q4004-pnv-lppe": {
+        "geometryKey": "Q4004-PNV-L",
+        "url": ""
+      },
+      "q4004-pnv-sacn": {
+        "geometryKey": "Q4004-PNV-S",
+        "url": ""
+      },
+      "q4004-pnv-sppe": {
+        "geometryKey": "Q4004-PNV-S",
+        "url": ""
+      },
+      "q4004-pnx-sacn": {
+        "geometryKey": "Q4004-PNX-S",
+        "url": ""
+      },
+      "q4004-pnx-sppe": {
+        "geometryKey": "Q4004-PNX-S",
+        "url": ""
+      },
+      "q4004-smv-sacn": {
+        "geometryKey": "Q4004-SMV-S",
+        "url": ""
+      },
+      "q4004-smv-sppe": {
+        "geometryKey": "Q4004-SMV-S",
+        "url": ""
+      },
+      "q4004-smx-sacn": {
+        "geometryKey": "Q4004-SMX-S",
+        "url": ""
+      },
+      "q4004-smx-sppe": {
+        "geometryKey": "Q4004-SMX-S",
+        "url": ""
+      },
+      "q4004-snv-sacn": {
+        "geometryKey": "Q4004-SNV-S",
+        "url": ""
+      },
+      "q4004-snv-sppe": {
+        "geometryKey": "Q4004-SNV-S",
+        "url": ""
+      },
+      "q4004-snx-sacn": {
+        "geometryKey": "Q4004-SNX-S",
+        "url": ""
+      },
+      "q4004-snx-sppe": {
+        "geometryKey": "Q4004-SNX-S",
+        "url": ""
+      },
+      "q4005-pmv-sacn": {
+        "geometryKey": "Q4005-PMV-S",
+        "url": ""
+      },
+      "q4005-pmv-sppe": {
+        "geometryKey": "Q4005-PMV-S",
+        "url": ""
+      },
+      "q4005-pmx-sacn": {
+        "geometryKey": "Q4005-PMX-S",
+        "url": ""
+      },
+      "q4005-pmx-sppe": {
+        "geometryKey": "Q4005-PMX-S",
+        "url": ""
+      },
+      "q4005-pnv-sacn": {
+        "geometryKey": "Q4005-PNV-S",
+        "url": ""
+      },
+      "q4005-pnv-sppe": {
+        "geometryKey": "Q4005-PNV-S",
+        "url": ""
+      },
+      "q4005-pnx-sacn": {
+        "geometryKey": "Q4005-PNX-S",
+        "url": ""
+      },
+      "q4005-pnx-sppe": {
+        "geometryKey": "Q4005-PNX-S",
+        "url": ""
+      },
+      "q4005-smv-sacn": {
+        "geometryKey": "Q4005-SMV-S",
+        "url": ""
+      },
+      "q4005-smv-sppe": {
+        "geometryKey": "Q4005-SMV-S",
+        "url": ""
+      },
+      "q4005-smx-sacn": {
+        "geometryKey": "Q4005-SMX-S",
+        "url": ""
+      },
+      "q4005-smx-sppe": {
+        "geometryKey": "Q4005-SMX-S",
+        "url": ""
+      },
+      "q4005-snv-sacn": {
+        "geometryKey": "Q4005-SNV-S",
+        "url": ""
+      },
+      "q4005-snv-sppe": {
+        "geometryKey": "Q4005-SNV-S",
+        "url": ""
+      },
+      "q4005-snx-sacn": {
+        "geometryKey": "Q4005-SNX-S",
+        "url": ""
+      },
+      "q4005-snx-sppe": {
+        "geometryKey": "Q4005-SNX-S",
+        "url": ""
+      },
+      "q4006-pmv-sacn": {
+        "geometryKey": "Q4006-PMV-S",
+        "url": ""
+      },
+      "q4006-pmv-sppe": {
+        "geometryKey": "Q4006-PMV-S",
+        "url": ""
+      },
+      "q4006-pmx-sacn": {
+        "geometryKey": "Q4006-PMX-S",
+        "url": ""
+      },
+      "q4006-pmx-sppe": {
+        "geometryKey": "Q4006-PMX-S",
+        "url": ""
+      },
+      "q4006-pnv-sacn": {
+        "geometryKey": "Q4006-PNV-S",
+        "url": ""
+      },
+      "q4006-pnv-sppe": {
+        "geometryKey": "Q4006-PNV-S",
+        "url": ""
+      },
+      "q4006-pnx-lacn": {
+        "geometryKey": "Q4006-PNX-L",
+        "url": ""
+      },
+      "q4006-pnx-lppe": {
+        "geometryKey": "Q4006-PNX-L",
+        "url": ""
+      },
+      "q4006-pnx-sacn": {
+        "geometryKey": "Q4006-PNX-S",
+        "url": ""
+      },
+      "q4006-pnx-sppe": {
+        "geometryKey": "Q4006-PNX-S",
+        "url": ""
+      },
+      "q4006-smv-sacn": {
+        "geometryKey": "Q4006-SMV-S",
+        "url": ""
+      },
+      "q4006-smv-sppe": {
+        "geometryKey": "Q4006-SMV-S",
+        "url": ""
+      },
+      "q4006-smx-sacn": {
+        "geometryKey": "Q4006-SMX-S",
+        "url": ""
+      },
+      "q4006-smx-sppe": {
+        "geometryKey": "Q4006-SMX-S",
+        "url": ""
+      },
+      "q4006-snv-sacn": {
+        "geometryKey": "Q4006-SNV-S",
+        "url": ""
+      },
+      "q4006-snv-sppe": {
+        "geometryKey": "Q4006-SNV-S",
+        "url": ""
+      },
+      "q4006-snx-sacn": {
+        "geometryKey": "Q4006-SNX-S",
+        "url": ""
+      },
+      "q4006-snx-sppe": {
+        "geometryKey": "Q4006-SNX-S",
+        "url": ""
+      },
+      "q4014n-pnv-sacn": {
+        "geometryKey": "Q4014N-PNV-S",
+        "url": ""
+      },
+      "q4014n-pnv-sppe": {
+        "geometryKey": "Q4014N-PNV-S",
+        "url": ""
+      },
+      "q4014n-snv-sacn": {
+        "geometryKey": "Q4014N-SNV-S",
+        "url": ""
+      },
+      "q4014n-snv-sppe": {
+        "geometryKey": "Q4014N-SNV-S",
+        "url": ""
+      },
+      "q4014n-snx-sacn": {
+        "geometryKey": "Q4014N-SNX-S",
+        "url": ""
+      },
+      "q4014n-snx-sppe": {
+        "geometryKey": "Q4014N-SNX-S",
+        "url": ""
+      },
+      "q6006-pnv-lppe": {
+        "geometryKey": "Q6006-PNV-L",
+        "url": ""
+      },
+      "q6006-pnv-sppe": {
+        "geometryKey": "Q6006-PNV-S",
+        "url": ""
+      },
+      "q6006-pnx-lppe": {
+        "geometryKey": "Q6006-PNX-L",
+        "url": ""
+      },
+      "q6006-pnx-sppe": {
+        "geometryKey": "Q6006-PNX-S",
+        "url": ""
+      },
+      "q6006-smv-lppe": {
+        "geometryKey": "Q6006-SMV-L",
+        "url": ""
+      },
+      "q6006-smv-sppe": {
+        "geometryKey": "Q6006-SMV-S",
+        "url": ""
+      },
+      "q6006-smx-lppe": {
+        "geometryKey": "Q6006-SMX-L",
+        "url": ""
+      },
+      "q6006-smx-sppe": {
+        "geometryKey": "Q6006-SMX-S",
+        "url": ""
+      },
+      "q6006-snv-sppe": {
+        "geometryKey": "Q6006-SNV-S",
+        "url": ""
+      },
+      "q6006-snx-sppe": {
+        "geometryKey": "Q6006-SNX-S",
+        "url": ""
+      },
+      "q6008-pnv-lppe": {
+        "geometryKey": "Q6008-PNV-L",
+        "url": ""
+      },
+      "q6008-pnv-sppe": {
+        "geometryKey": "Q6008-PNV-S",
+        "url": ""
+      },
+      "q6008-pnx-lppe": {
+        "geometryKey": "Q6008-PNX-L",
+        "url": ""
+      },
+      "q6008-pnx-sppe": {
+        "geometryKey": "Q6008-PNX-S",
+        "url": ""
+      },
+      "q6008-smv-lppe": {
+        "geometryKey": "Q6008-SMV-L",
+        "url": ""
+      },
+      "q6008-smv-sppe": {
+        "geometryKey": "Q6008-SMV-S",
+        "url": ""
+      },
+      "q6008-smx-lppe": {
+        "geometryKey": "Q6008-SMX-L",
+        "url": ""
+      },
+      "q6008-smx-sppe": {
+        "geometryKey": "Q6008-SMX-S",
+        "url": ""
+      },
+      "q6008-snv-lppe": {
+        "geometryKey": "Q6008-SNV-L",
+        "url": ""
+      },
+      "q6008-snv-sppe": {
+        "geometryKey": "Q6008-SNV-S",
+        "url": ""
+      },
+      "q6008-snx-sppe": {
+        "geometryKey": "Q6008-SNX-S",
+        "url": ""
+      },
+      "q6012-pnv-sppe": {
+        "geometryKey": "Q6012-PNV-S",
+        "url": ""
+      },
+      "q6012-pnx-sppe": {
+        "geometryKey": "Q6012-PNX-S",
+        "url": ""
+      },
+      "q6012-smv-sppe": {
+        "geometryKey": "Q6012-SMV-S",
+        "url": ""
+      },
+      "q6012-smx-sppe": {
+        "geometryKey": "Q6012-SMX-S",
+        "url": ""
+      },
+      "q6012-snv-sppe": {
+        "geometryKey": "Q6012-SNV-S",
+        "url": ""
+      },
+      "q6012-snx-sppe": {
+        "geometryKey": "Q6012-SNX-S",
+        "url": ""
+      },
+      "q6012n-pnv-sppe": {
+        "geometryKey": "Q6012N-PNV-S",
+        "url": ""
+      },
+      "q6012n-pnx-sppe": {
+        "geometryKey": "Q6012N-PNX-S",
+        "url": ""
+      },
+      "q6012n-snv-sppe": {
+        "geometryKey": "Q6012N-SNV-S",
+        "url": ""
+      },
+      "q6012n-snx-sppe": {
+        "geometryKey": "Q6012N-SNX-S",
+        "url": ""
+      },
+      "q6038n-pnv-sppe": {
+        "geometryKey": "Q6038N-PNV-S",
+        "url": ""
+      },
+      "q6038n-pnx-sppe": {
+        "geometryKey": "Q6038N-PNX-S",
+        "url": ""
+      },
+      "q6038n-snv-sppe": {
+        "geometryKey": "Q6038N-SNV-S",
+        "url": ""
+      },
+      "q6038n-snx-sppe": {
+        "geometryKey": "Q6038N-SNX-S",
+        "url": ""
+      },
+      "q4004-snv-lppe": {
+        "geometryKey": "Q4004-SNV-L",
+        "url": ""
+      }
+    },
+    "thread-to-barbed-fittings": {
+      "sa-u32-24f-pp-n": {
+        "geometryKey": "SA-U32-24F",
+        "url": ""
+      },
+      "sa-u32-32f-pp-n": {
+        "geometryKey": "SA-U32-32F",
+        "url": ""
+      },
+      "sa-u32-24f-pa-w": {
+        "geometryKey": "SA-U32-24F",
+        "url": ""
+      },
+      "sa-u32-16f-pa-w": {
+        "geometryKey": "SA-U32-16F",
+        "url": ""
+      },
+      "sa-u32-32f-pa-w": {
+        "geometryKey": "SA-U32-32F",
+        "url": ""
+      },
+      "sal-u32-16d-pp-n": {
+        "geometryKey": "SAL-U32-16D",
+        "url": ""
+      },
+      "sal-u32-16d-pa-w": {
+        "geometryKey": "SAL-U32-16D",
+        "url": ""
+      },
+      "sal-u32-32d-pp-n": {
+        "geometryKey": "SAL-U32-32D",
+        "url": ""
+      },
+      "sal-u32-32d-pa-w": {
+        "geometryKey": "SAL-U32-32D",
+        "url": ""
+      },
+      "sal-u28-16d-pp-n": {
+        "geometryKey": "SAL-U28-16D",
+        "url": ""
+      },
+      "sal-u28-16d-pa-w": {
+        "geometryKey": "SAL-U28-16D",
+        "url": ""
+      },
+      "sal-u28-32d-pp-n": {
+        "geometryKey": "SAL-U28-32D",
+        "url": ""
+      },
+      "sal-u28-32d-pa-w": {
+        "geometryKey": "SAL-U28-32D",
+        "url": ""
+      },
+      "sa-u28-16d-pp-n": {
+        "geometryKey": "SA-U28-16D",
+        "url": ""
+      },
+      "sa-u28-24d-pp-n": {
+        "geometryKey": "SA-U28-24D",
+        "url": ""
+      },
+      "sa-u28-32d-pp-n": {
+        "geometryKey": "SA-U28-32D",
+        "url": ""
+      },
+      "sa-u28-40d-pp-n": {
+        "geometryKey": "SA-U28-40D",
+        "url": ""
+      },
+      "sa-u28-48d-pp-n": {
+        "geometryKey": "SA-U28-48D",
+        "url": ""
+      },
+      "sa-1-8npt-24c-pp-n": {
+        "geometryKey": "SA-1/8NPT-24C",
+        "url": ""
+      },
+      "sa-1-8npt-32c-pp-n": {
+        "geometryKey": "SA-1/8NPT-32C",
+        "url": ""
+      },
+      "sa-1-8npt-40c-pp-n": {
+        "geometryKey": "SA-1/8NPT-40C",
+        "url": ""
+      },
+      "sa-1-8npt-48c-pp-n": {
+        "geometryKey": "SA-1/8NPT-48C",
+        "url": ""
+      },
+      "sa-1-8npt-64c-pp-n": {
+        "geometryKey": "SA-1/8NPT-64C",
+        "url": ""
+      },
+      "sal-1-8npt-64d-pp-n": {
+        "geometryKey": "SAL-1/8NPT-64D",
+        "url": ""
+      },
+      "sa-1-4npt-32d-pp-n": {
+        "geometryKey": "SA-1/4NPT-32D",
+        "url": ""
+      },
+      "sa-1-4npt-64d-pp-n": {
+        "geometryKey": "SA-1/4NPT-64D",
+        "url": ""
+      },
+      "sa-1-4npt-95d-pp-n": {
+        "geometryKey": "SA-1/4NPT-95D",
+        "url": ""
+      },
+      "sa-u28-24d-pa-w": {
+        "geometryKey": "SA-U28-24D",
+        "url": ""
+      },
+      "sa-u28-40d-pa-w": {
+        "geometryKey": "SA-U28-40D",
+        "url": ""
+      },
+      "sa-u28-32d-pa-w": {
+        "geometryKey": "SA-U28-32D",
+        "url": ""
+      },
+      "sa-u28-48d-pa-w": {
+        "geometryKey": "SA-U28-48D",
+        "url": ""
+      },
+      "sa-1-8npt-24c-pa-w": {
+        "geometryKey": "SA-1/8NPT-24C",
+        "url": ""
+      },
+      "sa-1-8npt-32c-pa-w": {
+        "geometryKey": "SA-1/8NPT-32C",
+        "url": ""
+      },
+      "sa-1-8npt-40c-pa-w": {
+        "geometryKey": "SA-1/8NPT-40C",
+        "url": ""
+      },
+      "sa-1-8npt-48c-pa-w": {
+        "geometryKey": "SA-1/8NPT-48C",
+        "url": ""
+      },
+      "sa-1-8npt-64c-pa-w": {
+        "geometryKey": "SA-1/8NPT-64C",
+        "url": ""
+      },
+      "sal-1-8npt-64d-pa-w": {
+        "geometryKey": "SAL-1/8NPT-64D",
+        "url": ""
+      },
+      "sa-1-4npt-64d-pa-w": {
+        "geometryKey": "SA-1/4NPT-64D",
+        "url": ""
+      },
+      "sa-1-4npt-95d-pa-w": {
+        "geometryKey": "SA-1/4NPT-95D",
+        "url": ""
+      },
+      "sa-u32-24f-pv-n": {
+        "geometryKey": "SA-U32-24F",
+        "url": ""
+      },
+      "sa-x32-32d-pa-w": {
+        "geometryKey": "SA-X32-32D",
+        "url": ""
+      },
+      "sa-x32-24d-pp-n": {
+        "geometryKey": "SA-X32-24D",
+        "url": ""
+      },
+      "sa-x32-24d-pa-w": {
+        "geometryKey": "SA-X32-24D",
+        "url": ""
+      },
+      "sa-x32-32d-pp-n": {
+        "geometryKey": "SA-X32-32D",
+        "url": ""
+      },
+      "sa-3-8npt-127-pp-n": {
+        "geometryKey": "SA-3/8NPT-127",
+        "url": ""
+      },
+      "sa-u32-16d-pp-n": {
+        "geometryKey": "SA-U32-16D",
+        "url": ""
+      },
+      "sa-u32-16d-pa-w": {
+        "geometryKey": "SA-U32-16D",
+        "url": ""
+      },
+      "sa-g1-8-40c-pv-n": {
+        "geometryKey": "SA-G1/8-40C",
+        "url": ""
+      },
+      "sa-g1-8-40c-pv-n-o-ringfkm": {
+        "geometryKey": "SA-G1/8-40C",
+        "url": ""
+      },
+      "sa-g1-8-64c-pp-n-o-ring-809034": {
+        "geometryKey": "SA-G1/8-64C",
+        "url": ""
+      },
+      "sa-g1-8-40c-pv-n-o-ring": {
+        "geometryKey": "SA-G1/8-40C",
+        "url": ""
+      },
+      "sa-g1-8-40c-pp-n-o-ring": {
+        "geometryKey": "SA-G1/8-40C",
+        "url": ""
+      },
+      "sa-g1-8-64c-pv-n-o-ring": {
+        "geometryKey": "SA-G1/8-64C",
+        "url": ""
+      },
+      "sa-g1-8-64c-pp-n-o-ring-809924": {
+        "geometryKey": "SA-G1/8-64C",
+        "url": ""
+      },
+      "sa-g1-8-64c-pk-n-o-ring": {
+        "geometryKey": "SA-G1/8-64C",
+        "url": ""
+      },
+      "sb-u28-16-pp-n": {
+        "geometryKey": "SB-U28-16",
+        "url": ""
+      },
+      "sb-u28-24-pp-n": {
+        "geometryKey": "SB-U28-24",
+        "url": ""
+      },
+      "sb-u28-32-pp-n": {
+        "geometryKey": "SB-U28-32",
+        "url": ""
+      },
+      "sb-u28-40-pp-n": {
+        "geometryKey": "SB-U28-40",
+        "url": ""
+      },
+      "sb-m6-16-pp-n": {
+        "geometryKey": "SB-M6-16",
+        "url": ""
+      },
+      "sb-m6-24-pp-n": {
+        "geometryKey": "SB-M6-24",
+        "url": ""
+      },
+      "sb-m6-32-pp-n": {
+        "geometryKey": "SB-M6-32",
+        "url": ""
+      },
+      "sb-m6-40-pp-n": {
+        "geometryKey": "SB-M6-40",
+        "url": ""
+      },
+      "sb-u28-16-ac-b": {
+        "geometryKey": "SB-U28-16",
+        "url": ""
+      },
+      "sb-u28-24-ac-b": {
+        "geometryKey": "SB-U28-24",
+        "url": ""
+      },
+      "sb-u28-32-ac-b": {
+        "geometryKey": "SB-U28-32",
+        "url": ""
+      },
+      "sb-u28-40-ac-b": {
+        "geometryKey": "SB-U28-40",
+        "url": ""
+      },
+      "sb-m6-24-ac-b": {
+        "geometryKey": "SB-M6-24",
+        "url": ""
+      },
+      "sb-m6-40-ac-b": {
+        "geometryKey": "SB-M6-40",
+        "url": ""
+      },
+      "sb-u28-16-pv-n": {
+        "geometryKey": "SB-U28-16",
+        "url": ""
+      },
+      "sb-u28-24-pv-n": {
+        "geometryKey": "SB-U28-24",
+        "url": ""
+      },
+      "sb-u28-32-pv-n": {
+        "geometryKey": "SB-U28-32",
+        "url": ""
+      },
+      "sb-u28-40-pv-n": {
+        "geometryKey": "SB-U28-40",
+        "url": ""
+      },
+      "sb-m6-16-pv-n": {
+        "geometryKey": "SB-M6-16",
+        "url": ""
+      },
+      "sb-m6-24-pv-n": {
+        "geometryKey": "SB-M6-24",
+        "url": ""
+      },
+      "sb-m6-32-pv-n": {
+        "geometryKey": "SB-M6-32",
+        "url": ""
+      },
+      "sb-m6-40-pv-n": {
+        "geometryKey": "SB-M6-40",
+        "url": ""
+      },
+      "sb-u28-16-pp-w": {
+        "geometryKey": "SB-U28-16",
+        "url": ""
+      },
+      "sb-u28-32-pp-w": {
+        "geometryKey": "SB-U28-32",
+        "url": ""
+      },
+      "sb-m6-16-pp-w": {
+        "geometryKey": "SB-M6-16",
+        "url": ""
+      },
+      "sb-m6-32-pp-w": {
+        "geometryKey": "SB-M6-32",
+        "url": ""
+      },
+      "sb-m5-24d-pp-n": {
+        "geometryKey": "SB-M5-24D",
+        "url": ""
+      },
+      "sb-m5-32d-pp-n": {
+        "geometryKey": "SB-M5-32D",
+        "url": ""
+      },
+      "sb-m5-40d-pp-n": {
+        "geometryKey": "SB-M5-40D",
+        "url": ""
+      },
+      "sb-m5-24d-pa-w": {
+        "geometryKey": "SB-M5-24D",
+        "url": ""
+      },
+      "sb-m5-32d-pa-w": {
+        "geometryKey": "SB-M5-32D",
+        "url": ""
+      },
+      "sb-m5-40d-pa-w": {
+        "geometryKey": "SB-M5-40D",
+        "url": ""
+      },
+      "sb-m5-16d-pp-n": {
+        "geometryKey": "SB-M5-16D",
+        "url": ""
+      },
+      "sb-m5-16d-pa-w": {
+        "geometryKey": "SB-M5-16D",
+        "url": ""
+      },
+      "sbs-m6-24d-pp-n": {
+        "geometryKey": "SBS-M6-24D",
+        "url": ""
+      },
+      "sbs-m6-32d-pp-n": {
+        "geometryKey": "SBS-M6-32D",
+        "url": ""
+      },
+      "sbs-m6-24d-pa-w": {
+        "geometryKey": "SBS-M6-24D",
+        "url": ""
+      },
+      "sbs-m6-32d-pa-w": {
+        "geometryKey": "SBS-M6-32D",
+        "url": ""
+      },
+      "sbr-u28-16-pp-n": {
+        "geometryKey": "SBR-U28-16",
+        "url": ""
+      },
+      "sbr-u28-24-pp-n": {
+        "geometryKey": "SBR-U28-24",
+        "url": ""
+      },
+      "sbr-u28-32-pp-n": {
+        "geometryKey": "SBR-U28-32",
+        "url": ""
+      },
+      "sc-u28-16d-pp-n": {
+        "geometryKey": "SC-U28-16D",
+        "url": ""
+      },
+      "sc-u28-24d-pp-n": {
+        "geometryKey": "SC-U28-24D",
+        "url": ""
+      },
+      "sc-u28-32d-pp-n": {
+        "geometryKey": "SC-U28-32D",
+        "url": ""
+      },
+      "sc-m6-16-pp-n": {
+        "geometryKey": "SC-M6-16",
+        "url": ""
+      },
+      "sc-m6-32-pp-n": {
+        "geometryKey": "SC-M6-32",
+        "url": ""
+      },
+      "sa-g1-8-64c-pp-n": {
+        "geometryKey": "SA-G1/8-64C",
+        "url": ""
+      },
+      "sa-g1-8-40c-pp-n": {
+        "geometryKey": "SA-G1/8-40C",
+        "url": ""
+      },
+      "sa-g1-8-64c-pv-n": {
+        "geometryKey": "SA-G1/8-64C",
+        "url": ""
+      },
+      "sa-g1-8-64c-pk-n": {
+        "geometryKey": "SA-G1/8-64C",
+        "url": ""
+      }
+    },
+    "female-thread-adapters": {
+      "us-m6-05-ac-b": {
+        "geometryKey": "US-M6-05",
+        "url": ""
+      },
+      "us-m6-10-ac-b": {
+        "geometryKey": "US-M6-10",
+        "url": ""
+      },
+      "us-m6-15-ac-b": {
+        "geometryKey": "US-M6-15",
+        "url": ""
+      },
+      "us-m6-05-pp-n": {
+        "geometryKey": "US-M6-05",
+        "url": ""
+      },
+      "us-m6-10-pp-n": {
+        "geometryKey": "US-M6-10",
+        "url": ""
+      },
+      "us-m6-15-pp-n": {
+        "geometryKey": "US-M6-15",
+        "url": ""
+      },
+      "pmu-m12-u28-20-pp-n": {
+        "geometryKey": "PMU-M12-U28-20",
+        "url": ""
+      },
+      "u-u28-20-pp-n": {
+        "geometryKey": "U-U28-20",
+        "url": ""
+      },
+      "u-u28-20-ac-b": {
+        "geometryKey": "U-U28-20",
+        "url": ""
+      },
+      "u-u28-20-ps-b": {
+        "geometryKey": "U-U28-20",
+        "url": ""
+      },
+      "u-m6-20-pp-n": {
+        "geometryKey": "U-M6-20",
+        "url": ""
+      },
+      "u-m6-20-ac-b": {
+        "geometryKey": "U-M6-20",
+        "url": ""
+      },
+      "ut-u28-15-pp-n": {
+        "geometryKey": "UT-U28-15",
+        "url": ""
+      },
+      "ut-u28-20-pp-n": {
+        "geometryKey": "UT-U28-20",
+        "url": ""
+      },
+      "ut-u28-15-ps-b": {
+        "geometryKey": "UT-U28-15",
+        "url": ""
+      },
+      "ut-u28-20-ps-b": {
+        "geometryKey": "UT-U28-20",
+        "url": ""
+      },
+      "ut-m6-20-pp-n": {
+        "geometryKey": "UT-M6-20",
+        "url": ""
+      },
+      "uy-u28-10-pp-n": {
+        "geometryKey": "UY-U28-10",
+        "url": ""
+      },
+      "uy-u28-15-pp-n": {
+        "geometryKey": "UY-U28-15",
+        "url": ""
+      },
+      "uy-u28-20-pp-n": {
+        "geometryKey": "UY-U28-20",
+        "url": ""
+      },
+      "pmbsn-m12-pa-b": {
+        "geometryKey": "PMBSN-M12",
+        "url": ""
+      },
+      "pu-u32-08-ss-n": {
+        "geometryKey": "PU-U32-08",
+        "url": ""
+      },
+      "pu-u32-u28-08-ss-n": {
+        "geometryKey": "PU-U32-U28-08",
+        "url": ""
+      },
+      "put-u32-05-ss-n": {
+        "geometryKey": "PUT-U32-05",
+        "url": ""
+      }
+    },
+    "bulkhead-barbed-fittings": {
+      "pmb-u28-24d-pp-n": {
+        "geometryKey": "PMB-U28-24D",
+        "url": ""
+      },
+      "pmb-u28-32d-pp-n": {
+        "geometryKey": "PMB-U28-32D",
+        "url": ""
+      },
+      "pmb-u28-24d-pa-w": {
+        "geometryKey": "PMB-U28-24D",
+        "url": ""
+      },
+      "pmb-u28-32d-pa-w": {
+        "geometryKey": "PMB-U28-32D",
+        "url": ""
+      },
+      "pmb-u28-16d-pp-n": {
+        "geometryKey": "PMB-U28-16D",
+        "url": ""
+      },
+      "pmb-u28-16d-pa-w": {
+        "geometryKey": "PMB-U28-16D",
+        "url": ""
+      }
+    }
+  }
+}

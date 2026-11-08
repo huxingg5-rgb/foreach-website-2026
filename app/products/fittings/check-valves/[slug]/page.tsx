@@ -1,5 +1,7 @@
+import FittingLocalizedSelectionContent from "@/components/products/detail/FittingLocalizedSelectionContent";
 import type {
   ComponentType,
+  ReactNode,
 } from "react";
 
 import type {
@@ -11,6 +13,9 @@ import {
 } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import QuickConnectDetailContent from "@/components/products/detail/QuickConnectDetailContent";
+import { withRemainingFittingChineseData } from "@/data/products/detail/remaining-fitting-detail.zh";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
   connectPublishedFittingProduct,
@@ -33,6 +38,7 @@ type DetailRecord = {
 };
 
 type PageProps = {
+  renderLocale?: TechnicalArticleLocale;
   params: Promise<{
     slug: string;
   }>;
@@ -48,6 +54,8 @@ const details =
 const ProductDetailView =
   ProductDetailClient as unknown as ComponentType<{
     data: any;
+    customerCategoryMode?: "fitting-zh";
+    customerCategoryContent?: Partial<Record<"selection" | "delivery", ReactNode>>;
   }>;
 
 export const dynamicParams =
@@ -123,6 +131,7 @@ export async function generateMetadata({
 
 export default async function CheckValveDetailPage({
   params,
+  renderLocale = "zh-CN",
 }: PageProps) {
   const {
     slug,
@@ -139,7 +148,11 @@ export default async function CheckValveDetailPage({
 
   return (
     <ProductDetailView
-      data={detail}
+      data={renderLocale === "zh-CN" ? withRemainingFittingChineseData({ ...detail, productTypeId: "check-valves" }) : detail}
+      customerCategoryMode="fitting-zh"
+      customerCategoryContent={renderLocale === "zh-CN" ? {
+        selection: <QuickConnectDetailContent data={{ ...detail, productTypeId: "check-valves" }} section="selection" variant="standalone-fitting" />,
+      } : { selection: <FittingLocalizedSelectionContent data={{ ...detail, productTypeId: "check-valves" }} locale={renderLocale} /> }}
     />
   );
 }

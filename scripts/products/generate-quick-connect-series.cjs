@@ -475,10 +475,10 @@ const products =
             ),
 
           detailHref:
-            `/products/fittings/quick-connect-fittings/${series.toLowerCase()}#${productCode}`,
+            `/products/fittings/quick-connect-fittings/${foreachModel.toLowerCase()}`,
 
           selectionHref:
-            `/products/fittings/quick-connect-fittings/${series.toLowerCase()}`,
+            "/products/fittings/quick-connect-fittings",
 
           sourceRow:
             index + 2,

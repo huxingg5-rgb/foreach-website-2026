@@ -31,6 +31,10 @@ const galleryAssets = {
   source: path.join(__dirname, 'image-sources/solenoid-valves/2-way-no-base-ports.png'),
   output: 'foreach-sv10-p-2-normally-open-base-ports.webp',
  },
+ '3-way-connection-options-photo': {
+  source: path.join(__dirname, 'image-sources/solenoid-valves/3-way-connection-options-photo.png'),
+  output: 'foreach-sv10-3-way-connection-options-photo.webp',
+ },
 };
 for (const slug of selectedSlugs) {
  if (!Object.hasOwn(inputs, slug) && !Object.hasOwn(galleryAssets, slug)) throw new Error(`Unknown solenoid image configuration: ${slug}`);

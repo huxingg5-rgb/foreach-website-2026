@@ -145,7 +145,7 @@ export function getLanguageHref(pathname: string, locale: LocaleCode, suffix = "
   // Chinese lists still use their original client pagination, so the foreign
   // static /page/N/ routes must switch to the corresponding Chinese list root.
   const chinesePaginationBase = locale === "zh-CN"
-    ? normalizePathname(pathname).match(/^(\/(?:en|es|fr|ko|ru)\/(?:products\/.+|resources\/technical-articles))\/page\/(?:[2-9]\d*|1\d+)\/?$/)?.[1]
+    ? normalizePathname(pathname).match(/^(\/(?:en|es|fr|ko|ru)\/(?:products\/.+|resources\/(?:technical-articles|installation-guide)))\/page\/(?:[2-9]\d*|1\d+)\/?$/)?.[1]
     : undefined;
   // YouTube detail slugs are generated only by the foreign detail route; the
   // Chinese route generates the original Chinese guide IDs instead. The SV10
@@ -162,11 +162,12 @@ export function getLanguageHref(pathname: string, locale: LocaleCode, suffix = "
     : chinesePaginationBase ?? pathname;
   const localizedPath = buildLocalizedPathname(sourcePath, locale);
   const target = new URL(localizedPath, "https://www.foreachtek.com");
-  if (useVideoPlayer && videoGuideSlug) target.searchParams.set("guide", videoGuideSlug);
+  if (useVideoPlayer && videoGuideSlug && locale !== "zh-CN") target.searchParams.set("guide", videoGuideSlug);
   target.pathname = target.pathname === "/" ? "/" : target.pathname.replace(/\/+$/, "") + "/";
   const url = new URL(pathname + suffix, "https://www.foreachtek.com");
   url.searchParams.delete("lang");
   url.searchParams.delete("locale");
+  if (locale === "zh-CN" && url.searchParams.get("guide")?.startsWith("youtube-")) url.searchParams.delete("guide");
   if (chinesePaginationBase) url.searchParams.delete("page");
   // A localized category fallback can carry its own selector (for example productType).
   // Keep that selector authoritative while retaining unrelated source parameters.

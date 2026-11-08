@@ -16,7 +16,8 @@ import { syringePumpIntroLocales } from "@/data/products/selection/syringe-pump-
 import { getControlModuleDetailBySlug } from "@/data/products/control-modules/control-module-detail.generated";
 import { getPdm5LocaleCopy } from "@/data/products/detail/pdm5-locales";
 import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
-import { getQuickConnectSeriesDetailData } from "@/data/products/detail/getQuickConnectSeriesDetailData";
+import { localizeQuickConnectDetailData } from "@/data/products/detail/quick-connect-detail.intl";
+import quickConnectDetailsJson from "@/data/products/generated/fittings/quick-connect-fittings/detail/index.json";
 import syringePumpDetails from "@/data/products/generated/pumps/syringe-pumps/detail/index.json";
 import { getSyringePumpProductDetailData } from "@/services/products/adapters/getSyringePumpProductDetailData";
 import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
@@ -77,9 +78,6 @@ import QuickConnectFittingDetailPage from "@/app/products/fittings/quick-connect
 import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
-import QuickConnectQ20Page from "@/app/products/fittings/quick-connect-fittings/q20/page";
-import QuickConnectQ40Page from "@/app/products/fittings/quick-connect-fittings/q40/page";
-import QuickConnectQ60Page from "@/app/products/fittings/quick-connect-fittings/q60/page";
 import DiaphragmPumpDetailPage, {
   getDiaphragmPumpMetadata,
 } from "@/components/products/diaphragm-pumps/DiaphragmPumpDetailRoute";
@@ -159,7 +157,7 @@ const allEnglishProductDetailRoutes:
       productTypeId === "quick-connect-fittings" &&
       ["q20", "q40", "q60"].includes(slug)
     ) {
-      return true;
+      return false;
     }
 
     return isPublishedFittingDetailRoute(
@@ -420,6 +418,46 @@ export async function generateMetadata({
     if (metadata) return metadata;
   }
 
+  if (
+    segments[0] === "fittings" &&
+    segments[1] === "quick-connect-fittings" &&
+    segments.length === 3
+  ) {
+    const detail = (quickConnectDetailsJson as Array<Record<string, unknown>>).find(
+      (item) => String(item.slug || "").trim().toLowerCase() === segments[2].toLowerCase(),
+    );
+    if (detail) {
+      const localized = locale === "en"
+        ? localizeQuickConnectDetailData(detail)
+        : detail;
+      const seo = (localized.seo && typeof localized.seo === "object" ? localized.seo : {}) as Record<string, unknown>;
+      const canonicalPath = `/${locale}/products/${segments.join("/")}/`;
+      const chinesePath = canonicalPath.replace(/^\/en\//, "/");
+      return {
+        title: String(seo.title || localized.title || localized.model || "Quick-Connect Fitting"),
+        description: String(seo.description || localized.description || ""),
+        alternates: {
+          canonical: canonicalPath,
+          languages: { "zh-CN": chinesePath, "en-US": canonicalPath, "x-default": chinesePath },
+        },
+        robots: { index: true, follow: true },
+        openGraph: {
+          type: "website",
+          locale: locale === "en" ? "en_US" : locale,
+          url: canonicalPath,
+          siteName: "Foreach Technology",
+          title: String(seo.title || localized.title || "Quick-Connect Fitting"),
+          description: String(seo.description || localized.description || ""),
+        },
+        twitter: {
+          card: "summary",
+          title: String(seo.title || localized.title || "Quick-Connect Fitting"),
+          description: String(seo.description || localized.description || ""),
+        },
+      };
+    }
+  }
+
   const probeControlSelection = locale === "en" ? getEnglishProbeControlSelection(segments) : undefined;
   if (probeControlSelection) {
     const { title, paragraphs, canonicalPath } = probeControlSelection;
@@ -514,13 +552,6 @@ export async function generateMetadata({
   } else if (controlDetailSlug) {
     const detail = getControlModuleDetailBySlug(controlDetailSlug);
     if (detail) productImageData = getControlModuleProductDetailData(detail);
-  } else if (
-    segments.length === 3 &&
-    segments[0] === "fittings" &&
-    segments[1] === "quick-connect-fittings" &&
-    ["q20", "q40", "q60"].includes(segments[2])
-  ) {
-    productImageData = getQuickConnectSeriesDetailData(segments[2]);
   } else if (
     segments.length === 3 &&
     segments[0] === "pumps" &&
@@ -670,23 +701,6 @@ export default async function ProductLocaleRoutePage({
     notFound();
   }
 
-  if (
-    category === "fittings" &&
-    slug === "quick-connect-fittings"
-  ) {
-    if (seriesSlug === "q20") {
-      return <QuickConnectQ20Page renderLocale={locale} />;
-    }
-
-    if (seriesSlug === "q40") {
-      return <QuickConnectQ40Page renderLocale={locale} />;
-    }
-
-    if (seriesSlug === "q60") {
-      return <QuickConnectQ60Page renderLocale={locale} />;
-    }
-  }
-
   const seriesRoute = resolveSeriesRoute(category, slug, seriesSlug);
 
   if (seriesRoute) {
@@ -744,11 +758,11 @@ export default async function ProductLocaleRoutePage({
     }
 
     if (slug === "filters") {
-      return FilterDetailPage({ params: detailParams });
+      return FilterDetailPage({ params: detailParams, renderLocale: locale });
     }
 
     if (slug === "check-valves") {
-      return CheckValveDetailPage({ params: detailParams });
+      return CheckValveDetailPage({ params: detailParams, renderLocale: locale });
     }
   }
 

@@ -24,6 +24,7 @@ import { notFound } from "next/navigation";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import NewsArticleClient from "@/components/resources/news/NewsArticleClient";
+import NewsEditorialArticle, { isEditorialNewsArticle } from "@/components/resources/news/articles/NewsEditorialArticle";
 
 import { getNewsPageData } from "@/services/resources/news/getNewsPageData";
 import {
@@ -281,6 +282,11 @@ const breadcrumbData = getNewsBreadcrumbData();
         article={article}
         previousArticle={previousArticle}
         nextArticle={nextArticle}
+        editorialArticle={
+          isEditorialNewsArticle(slug) ? (
+            <NewsEditorialArticle article={article} locale={NEWS_LOCALE} />
+          ) : undefined
+        }
       />
     </div>
   );

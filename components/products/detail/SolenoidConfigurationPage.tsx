@@ -43,8 +43,10 @@ export default function SolenoidConfigurationPage({slug, locale}: {slug: string;
   const language = normalizeValveLocale(locale);
   const resourceLocale = language === "zh" ? "zh-CN" : language;
   const resources = getRelatedResourcesData({sourceType: "product", sourceSlug: slug, relationKeys: ["series:6010"], locale: resourceLocale});
-  const overviewVideo = getSv10RelatedVideo(resourceLocale);
-  resources.videos = [overviewVideo, ...resources.videos.filter(video => video.id !== overviewVideo.id)];
+  if (resourceLocale !== "zh-CN") {
+    const overviewVideo = getSv10RelatedVideo(resourceLocale);
+    resources.videos = [overviewVideo, ...resources.videos.filter(video => video.id !== overviewVideo.id)];
+  }
   const relatedProducts = configuration?.connection === "threaded" ? getTubingAssemblySelectionContent(resourceLocale).cards
     .filter(card => card.productTypeId === "flanged-tubing")
     .map(card => ({

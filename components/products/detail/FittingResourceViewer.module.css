@@ -1,0 +1,98 @@
+.resource {
+  padding: 18px;
+  background: #fff;
+}
+
+.viewport {
+  position: relative;
+  min-width: 0;
+  min-height: 640px;
+  color: #173368;
+}
+
+.viewport [hidden] { display: none !important; }
+
+.tabs {
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  left: 22px;
+  display: flex;
+  padding: 4px;
+  border: 1px solid #dbe3ee;
+  background: #fff;
+}
+
+.tabs button {
+  height: 36px;
+  padding: 0 10px;
+  border: 0;
+  background: #fff;
+  color: #173368;
+  font: 700 12px/1.5 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif;
+  cursor: pointer;
+}
+
+.tabs button[aria-selected="true"] { background: #173368; color: #00c9a7; }
+.tabs button:focus-visible, .drawingSelect:focus-visible { outline: 2px solid #173368; outline-offset: 3px; }
+
+/* Keep localized resource tabs above the iframe's own model controls. */
+.modelPanel { padding-top: 56px; }
+
+.empty {
+  display: grid;
+  place-content: center;
+  min-height: 640px;
+  padding: 64px 24px;
+  text-align: center;
+  color: #5e6b80;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.drawing { padding: 56px 14px 14px; }
+.drawingSelect {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  max-width: calc(100% - 200px);
+  height: 46px;
+  padding: 8px 14px;
+  border: 1px solid #dbe3ee;
+  border-radius: 0;
+  background: #fff;
+  color: #173368;
+  font: inherit;
+  font-size: 12px;
+}
+.drawing :global(.frd-drawing-viewer) {
+  height: max(570px, min(610px, calc(75svh - 70px)));
+  border: 0;
+  background: #fff;
+}
+.drawing .empty { min-height: 570px; }
+
+.preview { padding: 0; }
+.preview .viewport, .preview .empty { min-height: 290px; }
+.previewButton {
+  border: 1px solid #173368;
+  padding: 12px 20px;
+  background: #fff;
+  color: #173368;
+  font: inherit;
+  cursor: pointer;
+}
+.previewButton:focus-visible { outline: 2px solid #173368; outline-offset: 3px; }
+
+@media (max-width: 800px) { .tabs { left: 14px; } }
+@media (max-width: 600px) {
+  .resource { padding: 12px; }
+  .tabs { left: 12px; }
+  .tabs button { height: 32px; font-size: 11px; }
+  .drawing { padding: 56px 0 12px; }
+  .drawingSelect { right: 0; height: 42px; max-width: calc(100% - 150px); padding: 6px; }
+}
+@media (max-width: 420px) {
+  .drawing:has(.drawingSelect) { padding-top: 104px; }
+  .drawingSelect { top: 50px; left: 0; width: 100%; max-width: none; }
+}

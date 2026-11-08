@@ -8,6 +8,7 @@ import {
   isPublishedFittingProduct,
   isPublishedFittingProductCode,
 } from "@/data/products/selection/fitting-publication.generated";
+import { getQuickConnectDrawingHref } from "./quick-connect-drawing-assets";
 
 export type QuickConnectSeries =
   | "Q20"
@@ -188,6 +189,10 @@ function normalizeSeries(
   return series as QuickConnectSeries;
 }
 
+function modelSlug(value: unknown) {
+  return cleanText(value).toLowerCase();
+}
+
 export function getQuickConnectSeriesRows(
   seriesInput: string
 ) {
@@ -332,6 +337,14 @@ export function getQuickConnectSeriesDetailData(
         )
         .map((product) => product.imageCard)
     ).slice(0, 4);
+  const selectionProductByModel = new Map(
+    publishedQuickConnectProducts
+      .filter((product) => cleanText(product.seriesId).toUpperCase() === series)
+      .map((product) => [
+        cleanText(product.foreachModel || product.model).toUpperCase(),
+        product,
+      ] as const),
+  );
   /* QUICK_CONNECT_SERIES_MODEL_ROWS
    *
    * 系列详情页完整型号表。
@@ -349,6 +362,21 @@ export function getQuickConnectSeriesDetailData(
         cleanText(
           item.foreachModel
         ),
+
+      imagePath:
+        selectionProductByModel.get(
+          cleanText(item.foreachModel).toUpperCase()
+        )?.imageCard ||
+        "",
+
+      drawingHref:
+        getQuickConnectDrawingHref(
+          item.foreachModel
+        ),
+
+      detailHref:
+        "/products/fittings/quick-connect-fittings/" +
+        modelSlug(item.foreachModel),
 
       connection:
         normalizeConnection(
@@ -378,6 +406,11 @@ export function getQuickConnectSeriesDetailData(
       housingMaterial:
         cleanText(
           item.housingMaterial
+        ),
+
+      sealingRingMaterial:
+        cleanText(
+          item.sealingRingMaterial
         ),
     })
   );
@@ -662,7 +695,7 @@ export function getQuickConnectSeriesDetailData(
       `${series}系列完整型号`,
 
     modelTableDescription:
-      `当前共${rows.length}个在售型号。点击筛选页面中的查看详情，可直接定位到对应型号。`,
+      `当前共${rows.length}个在售型号。点击表格中的型号即可按规格选择并定位到对应详情页。`,
     faqs,
     detailHref,
 
@@ -709,6 +742,9 @@ export function getQuickConnectSeriesDetailData(
 
         href:
           detailHref,
+
+        linkCurrent:
+          true,
       },
     ],
 

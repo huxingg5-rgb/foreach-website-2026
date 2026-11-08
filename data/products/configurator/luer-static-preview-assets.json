@@ -1,0 +1,99 @@
+{
+  "products": {
+    "LPBL-PP-N": {
+      "url": "/images/products/fittings/luer-fittings/assembly-static/lpbl-pp-n-side.webp",
+      "view": "assembly-side",
+      "bounds": {
+        "min": [
+          -6.35,
+          -3.174999952316284,
+          -3.174999952316284
+        ],
+        "max": [
+          8.299999618530274,
+          3.174999952316284,
+          3.174999952316284
+        ]
+      },
+      "geometryId": "lpbl-95ef4cbcff2e",
+      "sourceSha256": "ecb834a1745ed1e1a7b91f21cc7fe73160c6a73ac7be76c79ce6b717077c4f4b",
+      "imageSha256": "6226fc193969598f6cd90db3d33fc5303a50f8137b331428f59656246d6651a9"
+    },
+    "LP-32D-PP-N": {
+      "url": "/images/products/fittings/luer-fittings/assembly-static/lp-32d-pp-n-side.webp",
+      "view": "assembly-side",
+      "bounds": {
+        "min": [
+          -11.55,
+          -5.5,
+          -5.400557994842529
+        ],
+        "max": [
+          8.300000381469726,
+          5.500000000000002,
+          5.400557994842529
+        ]
+      },
+      "geometryId": "lp-71b61af84b98",
+      "sourceSha256": "c3efe14f1562e2241ad43ef364d230159c82e4e2956710027f58b474e1ad2e59",
+      "imageSha256": "e4fde96c5b615dbf7c55a016a9fb3f764ea0ffd07a55c563ff42a3e5357fb869"
+    },
+    "LPR-24-PA-B": {
+      "url": "/images/products/fittings/luer-fittings/assembly-static/lpr-24-pa-b-side.webp",
+      "view": "assembly-side",
+      "bounds": {
+        "min": [
+          -14,
+          -5.500000000000001,
+          -5.400557994842529
+        ],
+        "max": [
+          8.300000190734863,
+          5.500000000000001,
+          5.400557994842529
+        ]
+      },
+      "geometryId": "lpr-7140821e65aa",
+      "sourceSha256": "5b65e3425d6882fdb3a0cbe0b523d7136a5a7ad5eb291feaaae03aa952585125",
+      "imageSha256": "4d6ea835d06ce5943f67c339199643e85fcee50856552bc69522ad42bd29c4c3"
+    },
+    "LPBL-PA-W": {
+      "url": "/images/products/fittings/luer-fittings/assembly-static/lpbl-pa-w-side.webp",
+      "view": "assembly-side",
+      "bounds": {
+        "min": [
+          -6.35,
+          -3.174999952316284,
+          -3.174999952316284
+        ],
+        "max": [
+          8.299999618530274,
+          3.174999952316284,
+          3.174999952316284
+        ]
+      },
+      "geometryId": "lpbl-95ef4cbcff2e",
+      "sourceSha256": "ecb834a1745ed1e1a7b91f21cc7fe73160c6a73ac7be76c79ce6b717077c4f4b",
+      "imageSha256": "a2a14c232d958e06cb16635f786cb6c4b85e272625d68b6e3831fbb2cb7cf9ed"
+    },
+    "LPT-PA-R": {
+      "url": "/images/products/fittings/luer-fittings/assembly-static/lpt-pa-r-side.webp",
+      "view": "assembly-side",
+      "bounds": {
+        "min": [
+          -4.900000000000002,
+          -5.499999999999998,
+          -5.400557994842529
+        ],
+        "max": [
+          6.1,
+          5.500000000000004,
+          5.400557994842529
+        ]
+      },
+      "geometryId": "lpt-da66b70b41f6",
+      "sourceSha256": "135020d169cdc07c25dc6a004c1f57654bbda05640ff2c72530a04ae201a559c",
+      "imageSha256": "677b3a08de04d4c34766a9a03982b6afb6e9cd6dfef23b9f693faca12aed1e8a"
+    }
+  }
+}

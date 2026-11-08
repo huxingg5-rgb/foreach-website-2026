@@ -2718,11 +2718,6 @@ export const englishProductDetailRoutes = [
   [
     "fittings",
     "quick-connect-fittings",
-    "q20"
-  ],
-  [
-    "fittings",
-    "quick-connect-fittings",
     "q2001-pmv-sacn"
   ],
   [
@@ -3213,11 +3208,6 @@ export const englishProductDetailRoutes = [
   [
     "fittings",
     "quick-connect-fittings",
-    "q40"
-  ],
-  [
-    "fittings",
-    "quick-connect-fittings",
     "q4004-pmv-sacn"
   ],
   [
@@ -3504,11 +3494,6 @@ export const englishProductDetailRoutes = [
     "fittings",
     "quick-connect-fittings",
     "q4014n-snx-sppe"
-  ],
-  [
-    "fittings",
-    "quick-connect-fittings",
-    "q60"
   ],
   [
     "fittings",

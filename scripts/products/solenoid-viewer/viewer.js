@@ -1,3 +1,5 @@
+import {getQuickConnectCopy,getQuickConnectProduct,getQuickConnectGeometryUrl,isQuickConnectPilot,loadQuickConnectMate,orientQuickConnectProduct,createQuickConnectPair} from './quick-connect-pair.js';
+import {quickConnectMaterials,quickConnectDisplayEdges} from './appearance-quick-connect.js';
 import {decodeCompactCad} from './compact-cad.js';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
@@ -9,6 +11,10 @@ import {pistonMaterials} from './appearance-piston.js';
 import {smtp2Materials} from './appearance-smtp2.js';
 import {fittingMaterials} from './appearance-fitting.js';
 import fittingManifest from '../../../data/products/detail/hard-tube-fitting-cad-manifest.json';
+import standaloneFittingManifest from '../../../data/products/detail/standalone-fitting-cad-manifest.json';
+import remainingFittingManifest from '../../../data/products/detail/remaining-fitting-cad-manifest.json';
+import quickConnectManifest from '../../../data/products/detail/quick-connect-fitting-cad-manifest.json';
+import fittingDrawings from '../../../data/products/detail/fitting-drawing-manifest.json';
 import {loadFittingCompanion,addFittingCompanion,orientFittingBody,getFittingCatalog} from './fitting-companion.js';
 import {createFittingSelector} from './fitting-selector.js';
 import {createDisplayEdges} from './edges-rpl.js';
@@ -16,6 +22,7 @@ import {createDimensions} from './dimensions.js';
 import {applyModelPose,modelWithDisplayDimensions} from './model-pose.js';
 
 const language=new URLSearchParams(location.search).get('lang')||'en';
+document.documentElement.classList.toggle('external-resource-tabs',new URLSearchParams(location.search).get('resources')==='external');
 const translations={
 zh:['复位','自动旋转','适应窗口','操作帮助','全屏','模型结构','外形尺寸（不含电线）','观察视角','显示样式','等轴测|正视图|后视图|右视图|左视图|俯视图|仰视图','带边线|实体|线框','拖动旋转；滚轮或双指缩放。尺寸按模型测量，不含电线。','加载失败，点击重试','加载中…'],
 en:['Reset','Auto rotate','Fit','Help','Fullscreen','Parts','Dimensions (excluding wires)','View','Display','Isometric|Front|Back|Right|Left|Top|Bottom','Edges|Solid|Wireframe','Drag to rotate; scroll or pinch to zoom. Model dimensions exclude wires.','Unable to load. Retry','Loading…'],
@@ -36,10 +43,16 @@ const isRpl=rplIds.includes(new URLSearchParams(location.search).get('model'));
 const usesParentLoader=parent!==window&&new URLSearchParams(location.search).get('loader')==='parent';
 const isDiaphragm=diaphragmIds.includes(new URLSearchParams(location.search).get('model'));
 const isPump=isRpl||isDiaphragm||isPiston||isPipetting;
-const fittingIds=[...new Set(Object.values(fittingManifest.products).map(product=>product.viewerId))];
+const mergedFittingManifest={...fittingManifest,products:{...fittingManifest.products,...Object.values(standaloneFittingManifest.products).reduce((all,family)=>({...all,...family}),{}),...Object.values(remainingFittingManifest.products).reduce((all,family)=>({...all,...family}),{})},geometries:{...fittingManifest.geometries,...Object.values(standaloneFittingManifest.geometries).reduce((all,geometry)=>({...all,[geometry.viewerId]:geometry}),{}),...remainingFittingManifest.geometries}};
+const fittingIds=[...new Set([...Object.values(mergedFittingManifest.products),...Object.values(standaloneFittingManifest.products).flatMap(family=>Object.values(family))].map(product=>product.viewerId).filter(Boolean))];
+const legacyFittingIds=[...new Set(Object.values(fittingManifest.products).map(product=>product.viewerId))];
 const isFitting=fittingIds.includes(new URLSearchParams(location.search).get('model'));
+const isLegacyFitting=legacyFittingIds.includes(new URLSearchParams(location.search).get('model'));
+const quickConnectIds=[...new Set(Object.values(quickConnectManifest.products).map(product=>product.viewerId))];
+const isQuickConnect=quickConnectIds.includes(new URLSearchParams(location.search).get('model'));
+const isPreparedFitting=isFitting||isQuickConnect;
 const isFlatBottomFitting=isFitting&&new URLSearchParams(location.search).get('model')?.startsWith('flat-bottom-');
-if(isPump||isFitting){
+if(isPump||isPreparedFitting){
  const pumpInstructions={
   zh:['模型外形尺寸','拖动旋转；滚轮或双指缩放。尺寸按当前模型测量，安装尺寸请查看原始二维图纸。'],
   en:['Model envelope dimensions','Drag to rotate; scroll or pinch to zoom. Dimensions are measured from this model. Refer to the original drawing for mounting dimensions.'],
@@ -49,7 +62,7 @@ if(isPump||isFitting){
   ru:['Габариты модели','Перетаскивайте для вращения; колесо или щипок для масштаба. Размеры измерены по этой модели. Монтажные размеры смотрите на исходном чертеже.'],
  };
  [tr[6],tr[11]]=pumpInstructions[language]||pumpInstructions.en;
- if(isFitting){
+ if(isLegacyFitting){
   const fittingInstructions={
    zh:['接头与配套件尺寸','拖动旋转；滚轮或双指缩放。左侧切换配套件。接头横向放置，配套件位于孔口前方并留有间隙，分别标注尺寸。安装尺寸请查看原始二维图纸。'],
    en:['Fitting and accessory dimensions','Drag to rotate; scroll or pinch to zoom. Select a matching part on the left. The fitting is horizontal, with the accessory aligned in front of the opening, a gap between them and separate dimensions. Refer to the original drawing for mounting dimensions.'],
@@ -63,6 +76,7 @@ if(isPump||isFitting){
  document.title=isDiaphragm||isPiston||isPipetting?'FOREACH '+new URLSearchParams(location.search).get('model').toUpperCase().replace('UL',' μL')+' · 3D':new URLSearchParams(location.search).get('model').startsWith('drpl-')?'FOREACH DRPL · 3D':'FOREACH RPL · 3D';
  if(isFitting)document.title='FOREACH '+new URLSearchParams(location.search).get('model').replace(/^(flat-bottom|ferrule)-/,'').toUpperCase()+' · 3D';
 }
+if(isQuickConnect){const product=getQuickConnectProduct(new URLSearchParams(location.search));if(product)document.title='FOREACH '+product.model+' · 3D';}
 document.documentElement.lang=language;
 ['home','play','fit','help','full','tree','dimensions','views','display'].forEach((id,i)=>{const e=document.getElementById(id);e.title=tr[i];e.setAttribute('aria-label',tr[i]);});
 ['views','display'].forEach((id,i)=>tr[9+i].split('|').forEach((label,j)=>document.getElementById(id).options[j].textContent=label));
@@ -71,7 +85,7 @@ document.querySelector('#tree-panel h2').textContent=tr[5];
 document.querySelectorAll('#help-panel p').forEach(e=>e.remove());
 const instruction=document.createElement('p');instruction.textContent=tr[11];document.getElementById('help-panel').append(instruction);
 document.getElementById('help-close').setAttribute('aria-label',tr[3]);
-if(isFitting){
+if(isPreparedFitting){
  const sectionCopy={
   zh:['剖切','剖切视图','剖切方向','剖切位置','方向','移动滑块查看内部，切口不封面。'],
   en:['Section','Section view','Section axis','Section position','Axis','Move the slider to view the interior. Cut faces are not capped.'],
@@ -94,14 +108,22 @@ if(usesParentLoader && parent!==window)document.getElementById('loading').hidden
 
 async function start() {
 const params=new URLSearchParams(location.search), id=params.get('model');
-const allowed=['base-2nc','base-2no','base-3','threaded-2nc','threaded-2no','threaded-3','barbed-3',...rplIds,...diaphragmIds,...pistonIds,...pipettingIds,...fittingIds];
+const allowed=['base-2nc','base-2no','base-3','threaded-2nc','threaded-2no','threaded-3','barbed-3',...rplIds,...diaphragmIds,...pistonIds,...pipettingIds,...fittingIds,...quickConnectIds];
 if(!allowed.includes(id))throw new Error('Unknown model');
-const response=await fetch(isFitting?fittingManifest.geometries[id].model3dUrl:isPipetting?'/models/products/pumps/pipetting-pumps/cad/'+id+'.fcad.gz':isPiston?'/models/products/pumps/piston-pumps/cad/'+id+(params.get('head')==='peek'?'-peek':'')+'.fcad.gz':isDiaphragm?'/models/products/pumps/diaphragm-pumps/cad/'+id+'.fcad.gz':isRpl?'/models/products/pumps/valveless-pumps/'+id+'.fcad.gz':'./'+id+'.fcad.gz', usesParentLoader && params.has('retry') ? {cache:'reload'} : undefined);
+const quickConnectProduct=isQuickConnect?getQuickConnectProduct(params):null;
+const quickConnectPreview=isQuickConnectPilot(quickConnectProduct);
+// Every quick-connect product supports connected and individual views.
+const quickConnectReview=isQuickConnect;
+const quickConnectStudioLighting=quickConnectReview||quickConnectProduct?.series==='Q60';
+const response=await fetch(isFitting?mergedFittingManifest.geometries[id].model3dUrl:isQuickConnect?getQuickConnectGeometryUrl(quickConnectProduct,quickConnectProduct):isPipetting?'/models/products/pumps/pipetting-pumps/cad/'+id+'.fcad.gz':isPiston?'/models/products/pumps/piston-pumps/cad/'+id+(params.get('head')==='peek'?'-peek':'')+'.fcad.gz':isDiaphragm?'/models/products/pumps/diaphragm-pumps/cad/'+id+'.fcad.gz':isRpl?'/models/products/pumps/valveless-pumps/'+id+'.fcad.gz':'./'+id+'.fcad.gz', usesParentLoader && params.has('retry') ? {cache:'reload'} : undefined);
 if(!response.ok)throw new Error('Model unavailable');
 // Files carry gzip themselves; also accept hosts that already decoded the body.
 const bytes=new Uint8Array(await response.arrayBuffer());
 const raw=bytes[0]===0x1f&&bytes[1]===0x8b?new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer()):bytes;
 const models=[decodeCompactCad(raw)];
+let quickConnectMate=isQuickConnect?await loadQuickConnectMate(params).catch(()=>({unavailable:true,model:params.get('mate')||''})):null;
+if(quickConnectProduct)models[0]={...models[0],name:quickConnectProduct.model};
+
 let fittingCompanion=isFitting?await loadFittingCompanion(params):null;
 
 const $=id=>document.getElementById(id);
@@ -110,38 +132,55 @@ for(const el of document.querySelectorAll('[data-icon]'))el.innerHTML='<svg view
 const stage=$('stage'),scene=new THREE.Scene();scene.background=new THREE.Color(0xffffff);
 const camera=new THREE.OrthographicCamera(-50,50,50,-50,0.01,10000);
 const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,preserveDrawingBuffer:false});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.localClippingEnabled=true;renderer.setClearColor(0xffffff);stage.appendChild(renderer.domElement);renderer.domElement.setAttribute('aria-label',tr[7]+' 3D');
-if(isPump||isFitting){const studio=new RoomEnvironment(),pmrem=new THREE.PMREMGenerator(renderer);scene.environment=pmrem.fromScene(studio,.04).texture;studio.dispose();pmrem.dispose();renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;}
-scene.add(new THREE.HemisphereLight(0xffffff,0xb7b9bd,2.0));
-for(const [pos,intensity] of [[[100,150,200],1.8],[[-120,40,-80],1.0],[[40,-150,70],.8]]){const l=new THREE.DirectionalLight(0xffffff,intensity);l.position.set(...pos);scene.add(l);}
+if(isPump||isPreparedFitting){const studio=new RoomEnvironment(),pmrem=new THREE.PMREMGenerator(renderer);scene.environment=pmrem.fromScene(studio,.04).texture;studio.dispose();pmrem.dispose();renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=quickConnectProduct?.series==='Q60'?.85:1;}
+scene.add(new THREE.HemisphereLight(0xffffff,0xb7b9bd,quickConnectStudioLighting?1:2));
+for(const [pos,intensity] of [[[100,150,200],1.8],[[-120,40,-80],1.0],[[40,-150,70],.8]]){const l=new THREE.DirectionalLight(0xffffff,intensity*(quickConnectStudioLighting?.7:1));l.position.set(...pos);scene.add(l);}
 // A soft, off-axis camera fill keeps downward-facing surfaces readable while rotating.
-const viewFill=new THREE.DirectionalLight(0xffffff,1.6);
+const viewFill=new THREE.DirectionalLight(0xffffff,quickConnectStudioLighting?.8:1.6);
 viewFill.position.set(-1,1,2);viewFill.target.position.set(0,0,-1);
 camera.add(viewFill,viewFill.target);scene.add(camera);
 const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.09;controls.autoRotateSpeed=1.6;controls.minZoom=.15;controls.maxZoom=12;
+// Quick-connect pages use the shared horizontal-fitting
+// interaction and prevent accidental pan/flip while preserving the generic
+// controls for every other CAD product.
+if(quickConnectReview){
+ controls.rotateSpeed=.72;
+ controls.zoomSpeed=.85;
+ controls.panSpeed=.8;
+ controls.screenSpacePanning=true;
+ controls.enablePan=false;
+ controls.minPolarAngle=.12;
+ controls.maxPolarAngle=Math.PI-.12;
+ controls.zoomToCursor=true;
+}
 const fittingOuterNames={zh:'外径',en:'OD',es:'DE',fr:'DE',ko:'외경',ru:'Наруж. Ø'};
 const fittingOuterLabel=`${fittingOuterNames[language]||fittingOuterNames.en}${language==='ru'?'':' Ø'}`;
-const dimensions=createDimensions(stage,camera,isFlatBottomFitting?{side:'bottom',diameterAxis:0,diameterLabel:fittingOuterLabel}:isFitting?{side:'bottom'}:{});let dimensionsVisible=true;
-$('dimensions').onclick=()=>{const on=dimensions.toggle();dimensionsVisible=on;companion?.setDimensionsVisible(on);$('dimensions').classList.toggle('active',on);$('dimensions').setAttribute('aria-pressed',String(on));};
-const group=new THREE.Group();scene.add(group);let materials=[],edges=[],parts=[],modelIndex=0,radius=50,display='edges',clipOn=false,clippingAxis='x',bounds,companion,fittingBody;
+const dimensions=createDimensions(stage,camera,isQuickConnect?{side:'bottom',axes:[models[0].mating.axis],offset:34}:isFlatBottomFitting?{side:'bottom',diameterAxis:0,diameterLabel:fittingOuterLabel}:isPreparedFitting?{side:'bottom'}:{});let dimensionsVisible=true;
+$('dimensions').onclick=()=>{const on=quickConnectReview?!dimensionsVisible:dimensions.toggle();dimensionsVisible=on;companion?.setDimensionsVisible(on);quickPair?.setDimensionsVisible(on);$('dimensions').classList.toggle('active',on);$('dimensions').setAttribute('aria-pressed',String(on));};
+const group=new THREE.Group();scene.add(group);let materials=[],edges=[],parts=[],modelIndex=0,radius=50,display='edges',clipOn=false,clippingAxis='x',bounds,companion,fittingBody,quickPair,quickFitReady=false;
 const plane=new THREE.Plane(new THREE.Vector3(-1,0,0),0);
 function resize(){const w=stage.clientWidth,h=stage.clientHeight;if(!w||!h)return;renderer.setSize(w,h);const aspect=w/h;camera.left=-radius*aspect;camera.right=radius*aspect;camera.top=radius;camera.bottom=-radius;camera.updateProjectionMatrix();}
-new ResizeObserver(resize).observe(stage);
-function pose(v){camera.up.set(0,1,0);if(v==='top')camera.up.set(0,0,-1);if(isFitting&&v==='iso')camera.up.set(0,1,-.35).normalize();const dirs={iso:isFitting?[.5,.35,1]:[1,.65,1],front:[0,0,1],back:[0,0,-1],right:[1,0,0],left:[-1,0,0],top:[0,1,0],bottom:[0,-1,0]};camera.position.copy(new THREE.Vector3(...(dirs[v]||dirs.iso)).normalize().multiplyScalar(radius*5));controls.target.set(0,0,0);camera.zoom=1;camera.updateProjectionMatrix();controls.update();
- if(v==='top'||v==='bottom'||(isFitting&&v==='iso')){
-  camera.updateMatrixWorld();const b=new THREE.Box3().setFromObject(group,isDiaphragm);
+new ResizeObserver(()=>{if(isQuickConnect&&quickFitReady)fit();else resize();}).observe(stage);
+function pose(v){const viewKey=quickConnectReview?(v==='front'?'top':v==='top'?'front':v):v;camera.up.set(0,1,0);if(viewKey==='top')camera.up.set(0,0,-1);if(isPreparedFitting&&viewKey==='iso')camera.up.set(0,1,-.35).normalize();const dirs={iso:isPreparedFitting?[.5,.35,1]:[1,.65,1],front:[0,0,1],back:[0,0,-1],right:[1,0,0],left:[-1,0,0],top:[0,1,0],bottom:[0,-1,0]};camera.position.copy(new THREE.Vector3(...(dirs[viewKey]||dirs.iso)).normalize().multiplyScalar(radius*5));controls.target.set(0,0,0);camera.zoom=1;camera.updateProjectionMatrix();controls.update();
+ if(viewKey==='top'||viewKey==='bottom'||(isPreparedFitting&&viewKey==='iso')){
+  camera.updateMatrixWorld();const b=quickConnectReview&&quickPair?quickPair.getBounds():new THREE.Box3().setFromObject(group,isDiaphragm);
   const corners=Array.from({length:8},(_,i)=>new THREE.Vector3(i&1?b.max.x:b.min.x,i&2?b.max.y:b.min.y,i&4?b.max.z:b.min.z).project(camera));
   const span=axis=>Math.max(...corners.map(p=>p[axis]))-Math.min(...corners.map(p=>p[axis]));
   // Leave room for the dimension extensions around the projected end face.
   camera.zoom=THREE.MathUtils.clamp(Math.min(1.25/span('x'),1.25/span('y')),controls.minZoom,controls.maxZoom);camera.updateProjectionMatrix();
  }
  $('views').value=v;}
-function fit(){const b=new THREE.Box3().setFromObject(group,isDiaphragm);if(b.isEmpty())return;const s=b.getSize(new THREE.Vector3());const aspect=stage.clientWidth/stage.clientHeight;radius=Math.max(s.length()*((isPiston||isPipetting)?.62:isDiaphragm?.58:isPump?.49:.62),s.length()*.55/Math.max(.5,aspect));resize();pose('iso');}
-function disposal(){companion?.dispose();companion=null;group.traverse(o=>{o.geometry?.dispose();if(o.material){for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});group.clear();materials=[];edges=[];parts=[];}
+function fit(){let b=quickConnectReview&&quickPair?quickPair.getBounds():new THREE.Box3().setFromObject(group,isDiaphragm);if(b.isEmpty())return;if(quickConnectReview&&quickPair){group.position.sub(b.getCenter(new THREE.Vector3()));b=quickPair.getBounds();bounds=b;}const s=b.getSize(new THREE.Vector3());const aspect=stage.clientWidth/stage.clientHeight;radius=Math.max(s.length()*((isPiston||isPipetting)?.62:isDiaphragm?.58:isPump?.49:.62),s.length()*.55/Math.max(.5,aspect));resize();pose('iso');if(isQuickConnect){
+ camera.updateMatrixWorld();const corners=Array.from({length:8},(_,i)=>new THREE.Vector3(i&1?b.max.x:b.min.x,i&2?b.max.y:b.min.y,i&4?b.max.z:b.min.z).project(camera));
+ const span=axis=>Math.max(...corners.map(p=>p[axis]))-Math.min(...corners.map(p=>p[axis]));
+ camera.zoom=THREE.MathUtils.clamp(camera.zoom*Math.min(1.5/span('x'),1.25/span('y')),controls.minZoom,controls.maxZoom);camera.updateProjectionMatrix();
+ }}
+function disposal(){quickPair?.dispose();quickPair=null;companion?.dispose();companion=null;group.traverse(o=>{o.geometry?.dispose();if(o.material){for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});group.clear();materials=[];edges=[];parts=[];}
 function refreshParts(data){
  $('tree-content').replaceChildren();const head=document.createElement('div');head.className='tree-root';head.textContent=data.root.children?.[0]?.name||data.name;$('tree-content').append(head);
  if(!data.exteriorOptimized)parts.forEach((part,i)=>{if(!parts[i])return;const label=document.createElement('label');label.className='part';const cb=document.createElement('input');cb.type='checkbox';cb.checked=part.visible;cb.setAttribute('aria-label',tr[5]+' '+(i+1));cb.onchange=()=>{parts[i].visible=cb.checked;};const span=document.createElement('span');span.textContent=part.userData.partName||data.meshes[i]?.name||tr[5]+' '+(i+1);label.append(cb,span);$('tree-content').append(label);});
 }
-function load(index){disposal();group.position.set(0,0,0);controls.autoRotate=false;$('play').classList.remove('active');$('play').setAttribute('aria-pressed','false');modelIndex=index;const data=modelWithDisplayDimensions(models[index]);const solid=new THREE.Group();applyModelPose(data,solid);if(isFitting){orientFittingBody(id,solid);fittingBody=solid;}group.add(solid);
+function load(index){disposal();group.position.set(0,0,0);controls.autoRotate=false;$('play').classList.remove('active');$('play').setAttribute('aria-pressed','false');modelIndex=index;const data=modelWithDisplayDimensions(models[index]);const solid=new THREE.Group();applyModelPose(data,solid);if(isQuickConnect)orientQuickConnectProduct(data,solid,quickConnectProduct);if(isLegacyFitting){orientFittingBody(id,solid);fittingBody=solid;}group.add(solid);
  const exteriorOptimized=Boolean(data.exteriorOptimized);
  // Exterior meshes omit hidden contact surfaces and must remain assembled.
  $('tree').hidden=exteriorOptimized;if(exteriorOptimized){$('tree-panel').hidden=true;$('tree').classList.remove('active');}
@@ -150,11 +189,12 @@ function load(index){disposal();group.position.set(0,0,0);controls.autoRotate=fa
  $('section').hidden=Boolean(data.exteriorOnly);document.querySelector('#display option[value="transparent"]').disabled=Boolean(data.exteriorOnly);if(data.exteriorOnly){clipOn=false;$('section-panel').hidden=true;if(display==='transparent'){display='edges';$('display').value='edges';}}
  const isPlate=data.name.startsWith('SV10-P-')||Boolean(data.appearance?.barbed);let topZ=-Infinity;for(const s of data.meshes)for(let j=2;j<s.attributes.position.array.length;j+=3)topZ=Math.max(topZ,s.attributes.position.array[j]);const baseZ=data.appearance?.baseZ??(isPlate?0:topZ-30.9);
  data.meshes.forEach((src,i)=>{const edgePatch=data.exteriorOptimized?.edgeReconstruction?.[i];if(!src.index.array.length&&!edgePatch)return;const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(src.attributes.position.array,3));if(src.attributes.normal)g.setAttribute('normal',new THREE.Float32BufferAttribute(src.attributes.normal.array,3));g.setIndex(src.index.array);if(!src.attributes.normal)g.computeVertexNormals();
- const m=!src.index.array.length?[]:(data.appearance?.flatBottom||data.appearance?.fitting)?fittingMaterials(src,g,params.get('finish')):(data.appearance?.smtp2||data.appearance?.smtp4)?smtp2Materials(src,g):data.appearance?.piston?pistonMaterials(src,g,data.name,i,new URLSearchParams(location.search).get('head')==='peek'?'peek':'pmma'):data.appearance?.diaphragm?diaphragmMaterials(src,g,data.name,i):data.appearance?.rpl?rplMaterials(src,g):photoMaterials(src,g,baseZ,isPlate);materials.push(...m);const mesh=src.index.array.length?new THREE.Mesh(g,m):new THREE.Group();solid.add(mesh);parts[i]=mesh;
- const edge=new THREE.LineSegments(createDisplayEdges(g,edgePatch),new THREE.LineBasicMaterial({color:0x64655f,transparent:true,opacity:.28}));mesh.add(edge);edges.push(edge);if(!src.index.array.length)g.dispose();
+const m=!src.index.array.length?[]:isQuickConnect?quickConnectMaterials(src,g,quickConnectProduct,data,quickConnectPreview):(data.appearance?.flatBottom||data.appearance?.fitting||isQuickConnect)?fittingMaterials(src,g,params.get('finish')):(data.appearance?.smtp2||data.appearance?.smtp4)?smtp2Materials(src,g):data.appearance?.piston?pistonMaterials(src,g,data.name,i,new URLSearchParams(location.search).get('head')==='peek'?'peek':'pmma'):data.appearance?.diaphragm?diaphragmMaterials(src,g,data.name,i):data.appearance?.rpl?rplMaterials(src,g):photoMaterials(src,g,baseZ,isPlate);materials.push(...m);const mesh=src.index.array.length?new THREE.Mesh(g,m):new THREE.Group();solid.add(mesh);parts[i]=mesh;if(isQuickConnect)mesh.userData.partName=quickConnectProduct.model+' · '+(i+1);
+ const edge=new THREE.LineSegments(isQuickConnect?quickConnectDisplayEdges(src,g,quickConnectPreview):createDisplayEdges(g,edgePatch),new THREE.LineBasicMaterial({color:0x64655f,transparent:true,opacity:quickConnectPreview?.42:.28}));mesh.add(edge);edges.push(edge);if(!src.index.array.length)g.dispose();
  });
- companion=addFittingCompanion(fittingCompanion,solid,group,materials,edges,parts,stage,camera);companion?.setDimensionsVisible(dimensionsVisible);
- const box=new THREE.Box3().setFromObject(group,isDiaphragm);group.position.sub(box.getCenter(new THREE.Vector3()));bounds=new THREE.Box3().setFromObject(group,isDiaphragm);dimensions.set(data,solid);$('models').value=String(index);$('drawing').alt=data.name+' 原始二维图纸';
+ companion=isFitting?addFittingCompanion(fittingCompanion,solid,group,materials,edges,parts,stage,camera):null;companion?.setDimensionsVisible(dimensionsVisible);
+ if(isQuickConnect)quickPair=createQuickConnectPair({base:quickConnectProduct,baseData:data,baseSolid:solid,selected:quickConnectMate,group,materials,edges,parts,stage,camera,language,review:quickConnectReview,onViewChange:()=>{fit();updateClip();}});
+ const box=new THREE.Box3().setFromObject(group,isDiaphragm);group.position.sub(box.getCenter(new THREE.Vector3()));bounds=new THREE.Box3().setFromObject(group,isDiaphragm);dimensions.set(data,solid);if(quickConnectReview)dimensions.setVisible(false);$('models').value=String(index);$('drawing').alt=data.name+' 原始二维图纸';
  refreshParts(data);
  $('status').textContent=data.name+(fittingCompanion?' + '+fittingCompanion.model:'');$('section-range').value=50;updateClip();applyDisplay();fit();}
 function applyDisplay(){materials.forEach(m=>{m.wireframe=display==='wire';m.transparent=display==='transparent';m.opacity=display==='transparent'?.28:1;m.depthWrite=display!=='transparent';m.needsUpdate=true;});edges.forEach(e=>e.visible=display==='edges'||display==='transparent');}
@@ -167,7 +207,44 @@ function toggle(panel,button){$(panel).hidden=!$(panel).hidden;$(button).classLi
 $('tree').onclick=()=>toggle('tree-panel','tree');$('help').onclick=()=>toggle('help-panel','help');$('help-close').onclick=()=>toggle('help-panel','help');
 $('section').onclick=()=>{clipOn=!clipOn;$('section-panel').hidden=!clipOn;$('section').classList.toggle('active',clipOn);updateClip();};$('section-range').oninput=updateClip;$('section-axis').onchange=e=>{clippingAxis=e.target.value;updateClip();};
 $('full').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('viewer').requestFullscreen();}catch{$('viewer').classList.toggle('expanded');resize();}};
-function mode(is3d){$('stage').hidden=!is3d;$('drawing-wrap').hidden=is3d;$('tools').hidden=!is3d;$('side-tools').hidden=!is3d;$('tab3d').classList.toggle('selected',is3d);$('tab2d').classList.toggle('selected',!is3d);$('tab3d').setAttribute('aria-selected',String(is3d));$('tab2d').setAttribute('aria-selected',String(!is3d));if(!is3d){$('tree-panel').hidden=true;$('tree').classList.remove('active');$('section-panel').hidden=true;$('help-panel').hidden=true;}else if(clipOn)$('section-panel').hidden=false;resize();}
+function refreshQuickDrawing(){
+ if(!isQuickConnect)return;
+ const container=$('drawing-wrap');container.replaceChildren();container.classList.add('quick-connect-drawing');
+ const select=document.createElement('select');select.id='quick-connect-drawing-model';select.setAttribute('aria-label',getQuickConnectCopy(language).drawing);
+ const options=[quickConnectProduct,quickConnectMate?.product].filter(Boolean).sort((a,b)=>a.gender.localeCompare(b.gender));
+ const iframe=document.createElement('iframe');iframe.style.cssText='display:block;width:100%;flex:1;min-height:0;border:0;background:white';
+ const show=()=>{const product=options.find(p=>p.model===select.value)||options[0];if(!product)return;const url=fittingDrawings.products['quick-connect-fittings']?.[product.model.toLowerCase()]?.url||product.drawingPdfUrl;iframe.hidden=!url;if(!url){iframe.removeAttribute('src');return;}iframe.title=product.model+' 2D PDF';iframe.src=url+'#toolbar=0&navpanes=0&scrollbar=1';};
+ for(const product of options){const option=document.createElement('option');option.value=product.model;option.textContent=(product.gender==='P'?getQuickConnectCopy(language).male:getQuickConnectCopy(language).female)+' · '+product.model;select.append(option);}
+ select.value=quickConnectProduct.model;select.onchange=show;container.append(select,iframe);show();
+}
+function prepareHardTubeDrawing(){
+ const container=$('drawing-wrap');
+ if(container.dataset.hardTubeDrawingReady)return;
+ container.dataset.hardTubeDrawingReady='true';
+ container.classList.add('hard-tube-drawing');
+ // Keep the legacy image node for model-label updates; the original PDF is separate.
+ $('drawing').hidden=true;
+ let drawingUrl;
+ try{
+  const candidate=new URL(params.get('drawing')||'',location.origin);
+  if(candidate.origin===location.origin&&candidate.pathname.endsWith('.pdf')){
+   const view=new URLSearchParams(candidate.hash.slice(1));
+   if(!view.has('view')&&!view.has('zoom'))view.set('view','FitH');
+   candidate.hash=view.toString();drawingUrl=candidate.href;
+  }
+ }catch{}
+ if(drawingUrl){
+  const iframe=document.createElement('iframe');
+  iframe.dataset.hardTubeDrawing='true';
+  iframe.title=(mergedFittingManifest.products[params.get('product')]?.model||models[0].name)+' 2D PDF';
+  iframe.src=drawingUrl;container.append(iframe);
+ }else{
+  const message=document.createElement('p');message.className='hard-tube-drawing-message';message.setAttribute('role','status');
+  message.textContent=({zh:'当前型号暂无公开二维图纸，可通过产品页添加图纸需求。',en:'No public 2D drawing is available for this model. Request a drawing on the product page.',es:'No hay un plano 2D público para este modelo. Solicítelo en la página del producto.',fr:'Aucun plan 2D public pour ce modèle. Demandez-le sur la page du produit.',ko:'이 모델의 공개 2D 도면이 없습니다. 제품 페이지에서 도면을 요청하세요.',ru:'Для этой модели нет открытого 2D-чертежа. Запросите его на странице изделия.'})[language]||'No public 2D drawing is available for this model.';
+  container.append(message);
+ }
+}
+function mode(is3d){if(!is3d&&isQuickConnect)refreshQuickDrawing();if(isFitting){if(!is3d)prepareHardTubeDrawing();$('viewer').classList.toggle('hard-tube-drawing-active',!is3d);}$('stage').hidden=!is3d;$('drawing-wrap').hidden=is3d;$('tools').hidden=!is3d;$('side-tools').hidden=!is3d;$('tab3d').classList.toggle('selected',is3d);$('tab2d').classList.toggle('selected',!is3d);$('tab3d').setAttribute('aria-selected',String(is3d));$('tab2d').setAttribute('aria-selected',String(!is3d));if(!is3d){$('tree-panel').hidden=true;$('tree').classList.remove('active');$('section-panel').hidden=true;$('help-panel').hidden=true;}else if(clipOn)$('section-panel').hidden=false;resize();}
 $('tab3d').onclick=()=>mode(true);$('tab2d').onclick=()=>mode(false);
 window.addEventListener('keydown',e=>{if(e.defaultPrevented||e.target.matches('select,input'))return;if(e.key==='Home')$('home').click();if(e.key==='Escape'){['tree-panel','help-panel'].forEach(id=>$(id).hidden=true);['tree','help'].forEach(id=>$(id).classList.remove('active'));}});
 let selectionRequest=0;
@@ -190,12 +267,24 @@ async function selectFittingAccessory(code){
  }catch{if(request===selectionRequest)fittingSelector.error();}
 }
 const fittingSelector=isFitting?createFittingSelector(params,selectFittingAccessory):null;
-load(0);fittingSelector?.setSelection(fittingCompanion?.code||'none',fittingCompanion);
+load(0);quickFitReady=true;fittingSelector?.setSelection(fittingCompanion?.code||'none',fittingCompanion);
 let active=true, visible=true;
 let announcedRender=false;
-function frame(){controls.update();renderer.render(scene,camera);dimensions.update();companion?.update();if(!announcedRender){announcedRender=true;document.getElementById('loading').hidden=true;document.getElementById('loading').setAttribute('aria-busy','false');if(usesParentLoader)parent.postMessage({type:'cad-rendered'},location.origin);}}
+function frame(){controls.update();renderer.render(scene,camera);dimensions.update();companion?.update();quickPair?.update();if(!announcedRender){announcedRender=true;document.getElementById('loading').hidden=true;document.getElementById('loading').setAttribute('aria-busy','false');if(usesParentLoader)parent.postMessage({type:'cad-rendered'},location.origin);}}
 function activity(){renderer.setAnimationLoop(active && visible && !document.hidden ? frame : null);if(active)resize();}
-window.addEventListener('message',e=>{if(e.origin===location.origin&&e.source===parent&&e.data?.type==='fitting-accessory')selectFittingAccessory(e.data.code);if(e.origin===location.origin && e.source===parent && e.data?.type==='solenoid-active'){active=Boolean(e.data.active);activity();if(usesParentLoader&&announcedRender)parent.postMessage({type:'cad-rendered'},location.origin);}});
+let quickMateRequest=0;
+async function selectQuickMate(slug){
+ if(!isQuickConnect||!slug||slug===params.get('mate'))return;
+ const request=++quickMateRequest;
+ const selection=await loadQuickConnectMate(params,slug).catch(()=>({unavailable:true,model:slug.toUpperCase()}));
+ if(request!==quickMateRequest)return;
+ params.set('mate',slug);quickConnectMate=selection;quickPair?.setSelection(selection);quickPair?.setDimensionsVisible(dimensionsVisible);
+ if(quickConnectReview)fit();
+ refreshParts(models[modelIndex]);updateClip();applyDisplay();
+ if(!$('drawing-wrap').hidden)refreshQuickDrawing();
+ $('status').textContent=quickConnectProduct.model+(selection?.product?' + '+selection.product.model:'');
+}
+window.addEventListener('message',e=>{if(e.origin===location.origin&&e.source===parent&&e.data?.type==='quick-connect-mate')selectQuickMate(e.data.slug);if(e.origin===location.origin&&e.source===parent&&e.data?.type==='fitting-accessory')selectFittingAccessory(e.data.code);if(e.origin===location.origin && e.source===parent && e.data?.type==='solenoid-active'){active=Boolean(e.data.active);activity();if(usesParentLoader&&announcedRender)parent.postMessage({type:'cad-rendered'},location.origin);}});
 new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;activity();}).observe(stage);
 document.addEventListener('visibilitychange',activity);
 renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();renderer.setAnimationLoop(null);fail();});

@@ -30,6 +30,9 @@ const MOBILE_PDF_MEDIA_QUERY =
   "(max-width: 760px)";
 
 interface FittingReplacementDrawingPreviewText {
+  readonly errorLabel?: string;
+  readonly pageLabel?: string;
+  readonly retryLabel?: string;
   readonly title: string;
   readonly iframeTitle?: string;
   readonly loadingLabel: string;
@@ -191,19 +194,19 @@ export default function FittingReplacementDrawingPreview({
     );
 
   const errorLabel =
-    containsChinese
+    text.errorLabel || (containsChinese
       ? "图纸加载失败，请刷新页面后重试"
-      : "Unable to load the drawing. Refresh the page and try again.";
+      : "Unable to load the drawing. Refresh the page and try again.");
 
   const pageLabel =
-    containsChinese
+    text.pageLabel || (containsChinese
       ? "页"
-      : "page";
+      : "page");
 
   const retryLabel =
-    containsChinese
+    text.retryLabel || (containsChinese
       ? "重新加载"
-      : "Try again";
+      : "Try again");
 
   const resolvedPreviousPageLabel =
     previousPageLabel ||

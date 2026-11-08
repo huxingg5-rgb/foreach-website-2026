@@ -10,6 +10,8 @@ export function updateFittingMaterial(material,finish) {
 
 // A visual material finish only; every variant uses the same source geometry.
 export function fittingMaterials(src, geometry, finish) {
+  // Reviewed assembly components (e.g. the EPDM diaphragm) keep their own finish.
+  finish = src.fittingFinish || finish;
   // Slightly darker light finishes remain legible under the shared studio lights.
   geometry.clearGroups();
   geometry.addGroup(0, src.index.array.length, 0);

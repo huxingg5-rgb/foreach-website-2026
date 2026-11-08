@@ -1,0 +1,108 @@
+/* =========================================================
+   NewsEventPanel.module.css
+   展会新闻 · 关键信息卡 + 预约按钮
+   按钮沿用官网按钮触碰样式：品牌蓝底 #173368 + 荧光绿字 #09e9b4
+========================================================= */
+
+.panel {
+  margin: 26px 0 30px;
+  padding: 22px 26px;
+  border: 1px solid #dfe5ee;
+  border-top: 3px solid #173368;
+  background: #f5f8fc;
+}
+
+.panel[data-variant="cta"] {
+  margin: 34px 0 0;
+  border-top-width: 1px;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px 32px;
+  margin: 0;
+}
+
+.fact {
+  min-width: 0;
+}
+
+.fact dt {
+  margin: 0 0 4px;
+  color: #575757;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.fact dd {
+  margin: 0;
+  color: #173368;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+
+.facts + .actions {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #dfe5ee;
+}
+
+/* 选择器加上 .panel a，压过文章正文里 .root a 的下划线和颜色 */
+.panel a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 30px;
+  border: 1px solid #173368;
+  background: #173368;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.panel a.button:hover,
+.panel a.button:focus-visible {
+  background: #173368;
+  color: #09e9b4;
+  text-decoration: none;
+}
+
+.email {
+  margin: 0;
+  color: #575757;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .panel {
+    padding: 18px 16px;
+  }
+
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .fact dd {
+    font-size: 15px;
+  }
+
+  .panel a.button {
+    width: 100%;
+  }
+}

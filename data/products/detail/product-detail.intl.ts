@@ -5,6 +5,16 @@ const HAN_PATTERN = /[\u3400-\u9fff]/;
 const HAN_GLOBAL_PATTERN = /[\u3400-\u9fff]+/g;
 
 const EXACT_TRANSLATIONS: Record<string, string> = {
+  "安装螺纹": "Mounting Thread",
+  "液路内螺纹": "Fluid-Port Female Thread",
+  "PP（聚丙烯）": "PP (polypropylene)",
+  "PA（聚酰胺／尼龙）": "PA (polyamide / nylon)",
+  "POM（聚甲醛，代码 AC）": "POM (polyoxymethylene, code AC)",
+  "PPS（聚苯硫醚，代码 PS）": "PPS (polyphenylene sulfide, code PS)",
+  "鲁尔接头识别色环": "Luer Identification Ring",
+  "鲁尔内螺纹套": "Luer Internally Threaded Collar",
+  "鲁尔滚花螺母": "Luer Knurled Nut",
+  "穿板母鲁尔接头": "Bulkhead Female Luer Fitting",
   "公鲁尔堵头": "Male Luer Plug",
   "公鲁尔堵头用于什么接口？": "Which port does the male Luer plug fit?",
   "用于封堵相匹配的母鲁尔接口，使用前应确认配合尺寸及实际装配效果。": "It closes a mating female Luer port. Confirm mating dimensions and fit before use.",
@@ -2633,11 +2643,12 @@ function translateSpecificationValue(value: string) {
 
 function localizeSpecificationEntry(
   item: unknown,
-  context: LocalizationContext
+  context: LocalizationContext,
+  preserveLiteralValues = false
 ): unknown {
   if (Array.isArray(item)) {
     return item.map((child) =>
-      localizeSpecificationEntry(child, context)
+      localizeSpecificationEntry(child, context, preserveLiteralValues)
     );
   }
 
@@ -2680,6 +2691,11 @@ function localizeSpecificationEntry(
       }
 
       if (key === "value") {
+        // Fitting SKUs, resin codes and dimensions are catalog literals.
+        // Running them through prose spacing can turn PPS into "PP S".
+        if (preserveLiteralValues && typeof value === "string" && !HAN_PATTERN.test(value)) {
+          return [key, value];
+        }
         return [
           key,
           rowTranslation ||
@@ -2723,7 +2739,7 @@ function localizeSpecificationEntry(
         key,
         Array.isArray(value) ||
         (value && typeof value === "object")
-          ? localizeSpecificationEntry(value, context)
+          ? localizeSpecificationEntry(value, context, preserveLiteralValues)
           : value,
       ];
     })
@@ -4080,7 +4096,8 @@ export function localizeProductDetailData<T extends DetailRecord>(data: T): T {
     if (Array.isArray(data[key])) {
       localized[key] = localizeSpecificationEntry(
         data[key],
-        context
+        context,
+        data.category === "fittings" || data.categoryId === "fittings"
       );
     }
   }

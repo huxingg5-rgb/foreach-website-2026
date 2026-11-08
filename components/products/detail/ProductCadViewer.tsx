@@ -5,7 +5,21 @@ import LoadingProgress from "@/components/common/LoadingProgress";
 import styles from "./ProductCadViewer.module.css";
 import type { FittingCadFinish } from "@/data/products/detail/flat-bottom-fitting-cad-assets";
 
-type CadViewerProps = { modelId: string; title: string; locale: string; active: boolean; headMaterial?: "pmma" | "peek"; fittingFinish?: FittingCadFinish; fittingProduct?: string; fittingAccessory?: string };
+type CadViewerProps = {
+  modelId?: string;
+  title: string;
+  locale: string;
+  active: boolean;
+  drawingUrl?: string;
+  previewImageUrl?: string;
+  productFamily?: "quick-connect" | "fitting";
+  headMaterial?: "pmma" | "peek";
+  fittingFinish?: FittingCadFinish;
+  fittingProduct?: string;
+  fittingAccessory?: string;
+  quickConnectMate?: string;
+  externalResourceTabs?: boolean;
+};
 const loadingCopy = {
   zh: ["3D 模型加载中", "3D 模型加载失败，请重试。", "重新加载"],
   en: ["Loading 3D model", "The 3D model could not load. Please try again.", "Retry"],
@@ -17,7 +31,7 @@ const loadingCopy = {
 
 /** Shared CAD viewer for prepared product display models. */
 export default function ProductCadViewer(props: CadViewerProps) {
-  return <LoadedCadViewer key={`${props.modelId}:${props.locale}:${props.headMaterial || ""}:${props.fittingFinish || ""}:${props.fittingProduct || ""}`} {...props} />;
+  return <LoadedCadViewer key={`${props.modelId || "placeholder"}:${props.locale}:${props.drawingUrl || ""}:${props.previewImageUrl || ""}:${props.productFamily || ""}:${props.headMaterial || ""}:${props.fittingFinish || ""}:${props.fittingProduct || ""}`} {...props} />;
 }
 
 function LoadedCadViewer(props: CadViewerProps) {
@@ -33,7 +47,7 @@ function LoadedCadViewer(props: CadViewerProps) {
     const timer = window.setTimeout(() => setStatus("error"), 60000);
     return () => window.clearTimeout(timer);
   }, [status, props.active, attempt]);
-  return <div className={styles.frame} data-cad-model-status={status} data-rpl-model-status={["rpl-p4", "rpl-p635", "rpl-p15", "drpl-0109"].includes(props.modelId) ? status : undefined} aria-busy={status === "loading"}>
+  return <div className={styles.frame} data-cad-model-status={status} data-rpl-model-status={props.modelId && ["rpl-p4", "rpl-p635", "rpl-p15", "drpl-0109"].includes(props.modelId) ? status : undefined} aria-busy={status === "loading"}>
     <div inert={status !== "ready"}>
       <CadFrame key={attempt} {...props} attempt={attempt} onState={onState} />
     </div>
@@ -45,13 +59,22 @@ function LoadedCadViewer(props: CadViewerProps) {
   </div>;
 }
 
-function CadFrame({ modelId, title, locale, active, headMaterial, fittingFinish, fittingProduct, fittingAccessory, attempt = 0, onState }: CadViewerProps & {
+function CadFrame({ modelId, title, locale, active, drawingUrl, productFamily, headMaterial, fittingFinish, fittingProduct, fittingAccessory, quickConnectMate, externalResourceTabs, attempt = 0, onState }: CadViewerProps & {
   attempt?: number;
   onState?: (status: "ready" | "error") => void;
 }) {
+  const viewerModelId = modelId || "base-2nc";
+  const isQuickConnect = productFamily === "quick-connect";
+  const placeholder = !modelId;
   const frame = useRef<HTMLIFrameElement>(null);
-  const initialAccessory = useRef(fittingAccessory).current;
+  const [initialAccessory] = useState(fittingAccessory);
   const latestAccessory = useRef(fittingAccessory);
+  const [initialMate] = useState(quickConnectMate);
+  const latestMate = useRef(quickConnectMate);
+  useEffect(() => {
+    latestMate.current = quickConnectMate;
+    if (quickConnectMate) frame.current?.contentWindow?.postMessage({ type: "quick-connect-mate", slug: quickConnectMate }, window.location.origin);
+  }, [quickConnectMate]);
   useEffect(() => {
     latestAccessory.current = fittingAccessory;
     if (fittingAccessory) frame.current?.contentWindow?.postMessage({ type: "fitting-accessory", code: fittingAccessory }, window.location.origin);
@@ -62,6 +85,7 @@ function CadFrame({ modelId, title, locale, active, headMaterial, fittingFinish,
       if (event.origin !== window.location.origin || event.source !== frame.current?.contentWindow) return;
       if (event.data?.type === "solenoid-ready") {
         send();
+        if (latestMate.current) frame.current?.contentWindow?.postMessage({ type: "quick-connect-mate", slug: latestMate.current }, window.location.origin);
         if (latestAccessory.current) frame.current?.contentWindow?.postMessage({ type: "fitting-accessory", code: latestAccessory.current }, window.location.origin);
       }
       if (event.data?.type === "cad-rendered") onState?.("ready");
@@ -70,9 +94,9 @@ function CadFrame({ modelId, title, locale, active, headMaterial, fittingFinish,
     send(); window.addEventListener("message", ready);
     return () => window.removeEventListener("message", ready);
   }, [active, modelId, onState]);
-  return <iframe ref={frame} key={modelId}
-    src={`/models/valves/6010/viewer.html?v=hard-tube-20261030-dimensions3&loader=parent&model=${encodeURIComponent(modelId)}&lang=${encodeURIComponent(locale)}${headMaterial ? `&head=${headMaterial}` : ""}${fittingFinish ? `&finish=${fittingFinish}` : ""}${fittingProduct ? `&product=${encodeURIComponent(fittingProduct)}` : ""}${initialAccessory ? `&accessory=${encodeURIComponent(initialAccessory)}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
+  return <iframe ref={frame} key={viewerModelId}
+    src={`/models/valves/6010/viewer.html?v=fitting-resources-20261107-2&loader=parent&model=${encodeURIComponent(viewerModelId)}&lang=${encodeURIComponent(locale)}${externalResourceTabs ? "&resources=external" : ""}${placeholder ? "&placeholder=true" : ""}${drawingUrl ? `&drawing=${encodeURIComponent(drawingUrl)}` : ""}${initialMate ? `&mate=${encodeURIComponent(initialMate)}` : ""}${headMaterial ? `&head=${headMaterial}` : ""}${fittingFinish ? `&finish=${fittingFinish}` : ""}${fittingProduct ? `&product=${encodeURIComponent(fittingProduct)}` : ""}${initialAccessory ? `&accessory=${encodeURIComponent(initialAccessory)}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
     onError={() => onState?.("error")}
     title={`${title} 3D`} allow="fullscreen"
-    style={{ display: "block", width: "100%", height: "min(680px, 75svh)", minHeight: 440, border: 0, borderRadius: 12 }} />;
+    style={{ display: "block", width: "100%", height: "min(680px, 75svh)", minHeight: isQuickConnect ? 640 : 440, border: 0, borderRadius: 12 }} />;
 }

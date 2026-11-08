@@ -18,6 +18,7 @@ body{padding:0!important;background:#fff}.topbar,.side-tools{top:0}.stage{top:48
 .toolselect:focus-visible{background:#f0f4f8;box-shadow:inset 0 -2px 0 var(--brand)}
 @media(forced-colors:active){.toolselect:focus-visible{outline:2px solid Highlight;outline-offset:-2px;box-shadow:none}}
 .fitting-part-label{position:absolute;transform:translateX(-50%);font-size:11px;line-height:1.5;white-space:nowrap;color:#505963;background:rgba(255,255,255,.9);padding:2px 5px;border-radius:4px;pointer-events:none}
+.stage[hidden]~.fitting-part-label{display:none}
 .fitting-selector{position:absolute;left:22px;top:60px;bottom:18px;width:228px;display:flex;flex-direction:column;gap:10px;padding:16px;background:#f8fafd;border:1px solid var(--line);z-index:3;overflow:auto}
 .fitting-selector h2{margin:0;font-size:14px;font-weight:600;color:var(--brand)}
 .fitting-choices{display:flex;flex-direction:column;gap:7px;min-height:0;overflow:auto;flex:0 1 auto;padding:2px}
@@ -34,18 +35,72 @@ body{padding:0!important;background:#fff}.topbar,.side-tools{top:0}.stage{top:48
 .fitting-mobile-select{display:none}.has-fitting-selector .stage{left:270px}
 @media(max-width:900px) and (min-width:601px){.fitting-selector{left:14px;width:194px;padding:12px}.has-fitting-selector .stage{left:222px}}
 @media(max-width:600px){.fitting-selector{left:12px;right:12px;top:100px;bottom:auto;width:auto;padding:8px 10px;gap:5px;max-height:100px}.fitting-selector h2{font-size:11px}.fitting-mobile-select{display:block;width:100%;padding:5px 25px 5px 8px;font-size:11px;border-radius:0}.fitting-choices,.fitting-selected-detail{display:none}.has-fitting-selector .stage{left:0;top:191px}}
-</style></head><body>
+.tabs{position:absolute;left:132px;top:0;z-index:10;display:flex;gap:0;padding:4px;background:#ffffffef;border:1px solid var(--line);border-radius:0}.tabs button{min-width:48px;height:36px;padding:0 10px;border:0;background:#fff;color:var(--brand);font-size:12px;font-weight:700}.tabs button.selected{background:var(--brand);color:var(--accent)}.has-fitting-selector .tabs{left:270px}.empty-model{position:absolute;inset:0;z-index:4;display:grid;place-items:center;padding:24px;background:#fff;color:var(--brand);font-size:16px;font-weight:600;text-align:center;pointer-events:none}.empty-model[hidden]{display:none!important}@media(max-width:600px){.tabs{left:12px;top:53px}.has-fitting-selector .tabs{left:12px;top:100px}.tabs button{min-width:44px;height:32px;font-size:11px}}</style><style>
+/* 左上角工具条：2D/3D 切换在前，尺寸/结构按钮在后，合成一排；选中项不再显示底部横线 */
+.left-toolbar{position:absolute;left:22px;top:0;z-index:10;display:flex;align-items:center;padding:4px;background:#ffffffef;border:1px solid var(--line)}
+.left-toolbar .side-tools,.left-toolbar .tabs{position:static;margin:0;padding:0;max-width:none;background:transparent;border:0;border-radius:0}
+.left-toolbar .tabs+.side-tools:not([hidden]){margin-left:5px;padding-left:5px;border-left:1px solid var(--line)}
+.tabs button.selected:after{content:none}
+@media(max-width:800px){.left-toolbar{left:14px}}
+@media(max-width:600px){.left-toolbar{left:12px}}
+</style>
+<style>
+.has-quick-connect-selector .stage{left:270px;top:48px;bottom:116px}
+
+.quick-connect-selector .fitting-choices{flex:none}
+.quick-connect-selector .fitting-choices button strong{font-size:12px}
+.quick-connect-selector button:disabled{opacity:.45;cursor:not-allowed}
+.quick-connect-selector .fitting-selected-detail{font-size:12px}
+.quick-connect-selected-models strong{display:block;font-size:11px;line-height:1.6;overflow-wrap:anywhere}
+.quick-connect-dimension-reference,.quick-connect-assembly-status{font-size:11px;line-height:1.65;color:var(--muted);margin:14px 0 0}
+.quick-connect-assembly-status{color:var(--brand)}
+.stage[hidden]~.quick-connect-selector{display:none}
+@media(max-width:900px) and (min-width:601px){.has-quick-connect-selector .stage{left:222px}}
+@media(max-width:600px){
+ .quick-connect-selector{top:136px;bottom:auto;max-height:none;padding:8px 10px;gap:6px}
+ .quick-connect-selector h2,.quick-connect-selector .fitting-selected-detail h3,.quick-connect-selected-models{display:none}
+ .quick-connect-selector .fitting-selected-detail{display:block;border:0;padding:0}
+ .quick-connect-selector .fitting-mobile-select{font-size:12px}
+ .quick-connect-selector .fitting-selected-detail dl{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0}
+ .quick-connect-selector .fitting-selected-detail dl>div{flex-direction:column;gap:2px}
+ .quick-connect-selector .fitting-selected-detail dd{font-size:12px;font-weight:600}
+ .quick-connect-dimension-reference{font-size:10px;line-height:1.5;margin:6px 0 0}
+ .has-quick-connect-selector .stage{left:0;top:274px;bottom:160px}
+
+}
+</style>
+<style>
+/* Hard-tube drawings use the existing PDF without rebuilding the 3D scene. */
+.drawing-wrap.hard-tube-drawing{inset:56px 14px 14px;overflow:hidden;text-align:left}
+.hard-tube-drawing iframe{display:block;width:100%;height:100%;border:0;background:white}
+.hard-tube-drawing-message{height:100%;margin:0;display:grid;place-items:center;padding:24px;text-align:center}
+.hard-tube-drawing-active .fitting-selector{display:none}
+/* Quick-connect drawing controls share the 2D/3D toolbar row. */
+.drawing-wrap.quick-connect-drawing{inset:0 14px 14px;display:flex;flex-direction:column;gap:10px}
+#quick-connect-drawing-model{align-self:flex-end;flex:none;height:46px;max-width:calc(100% - 160px);min-width:0;border-radius:0;padding-right:46px;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='m3 4.5 3 3 3-3' fill='none' stroke='%23173368' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;background-size:12px 12px;text-overflow:ellipsis}
+@media(max-width:600px){.drawing-wrap.quick-connect-drawing{gap:14px}#quick-connect-drawing-model{height:42px;font-size:12px;max-width:calc(100% - 136px);padding-left:10px}}
+@media(max-width:420px){.drawing-wrap.quick-connect-drawing{top:52px;gap:10px}#quick-connect-drawing-model{max-width:100%}}
+@media(forced-colors:active){#quick-connect-drawing-model{appearance:auto;background-image:none}}
+/* Detail pages use the shared React resource tabs; this frame only renders 3D. */
+.external-resource-tabs .left-toolbar .tabs{display:none!important}
+.external-resource-tabs .left-toolbar{left:170px}
+.external-resource-tabs .left-toolbar .tabs+.side-tools{margin-left:0;padding-left:0;border-left:0}
+@media(max-width:800px){.external-resource-tabs .left-toolbar{left:162px}}
+@media(max-width:600px){.external-resource-tabs .left-toolbar{left:150px}}
+.external-resource-tabs .viewer:fullscreen .left-toolbar{left:22px}
+</style>
+</head><body>
 <header><h1>6010 系列电磁阀</h1><label class="model-picker"><select id="models" aria-label="选择型号"></select></label></header>
-<div class="tabs" role="tablist"><button id="tab2d" role="tab" aria-selected="false">2D 图纸</button><button id="tab3d" class="selected" role="tab" aria-selected="true">3D 模型</button></div>
+
 <main id="viewer" class="viewer"><div id="loading" class="loading" role="status" aria-live="polite" aria-busy="true"><div class="loading-inner"><span class="loading-spinner" aria-hidden="true"></span><strong id="loading-label">Loading 3D model</strong><div class="loading-track" aria-hidden="true"><div class="loading-bar"></div></div></div></div><div id="stage" class="stage"></div><div class="topbar"><div id="tools" class="tools">
 <button id="home" class="iconbtn" aria-label="复位" title="复位 · Home" data-icon="home"></button><button id="play" class="iconbtn" aria-label="自动旋转" aria-pressed="false" title="自动旋转" data-icon="play"></button><button id="fit" class="iconbtn" aria-label="适应窗口" title="适应窗口" data-icon="fit"></button><span class="divider"></span>
 <label class="toolgroup"><span data-icon="view"></span><select id="views" class="toolselect" aria-label="观察视角"><option value="iso">等轴测</option><option value="front">正视图</option><option value="back">后视图</option><option value="right">右视图</option><option value="left">左视图</option><option value="top">俯视图</option><option value="bottom">仰视图</option></select></label>
 <label class="toolgroup"><span data-icon="cube"></span><select id="display" class="toolselect" aria-label="显示样式"><option value="edges">带边线</option><option value="solid">实体</option><option value="wire">线框</option><option value="transparent" hidden>透明</option></select></label><span class="divider"></span><button id="help" class="iconbtn" aria-label="操作帮助" title="操作帮助" data-icon="help"></button><button id="full" class="iconbtn" aria-label="全屏" title="全屏" data-icon="full"></button>
 </div></div>
-<div id="side-tools" class="side-tools"><button id="dimensions" class="iconbtn active" aria-label="外形尺寸（不含电线）" aria-pressed="true" title="外形尺寸（不含电线）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v10H3zM7 7v5m5-5v3m5-3v5"/></svg></button><button id="tree" class="iconbtn" aria-label="模型结构" title="模型结构" data-icon="tree"></button><button id="section" class="iconbtn" aria-label="剖切" title="剖切" data-icon="section"></button></div>
+<div class="left-toolbar"><div class="tabs" role="tablist" aria-label="2D/3D资源切换"><button id="tab2d" role="tab" aria-selected="false">2D 图纸</button><button id="tab3d" class="selected" role="tab" aria-selected="true">3D 模型</button></div><div id="side-tools" class="side-tools"><button id="dimensions" class="iconbtn active" aria-label="外形尺寸（不含电线）" aria-pressed="true" title="外形尺寸（不含电线）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v10H3zM7 7v5m5-5v3m5-3v5"/></svg></button><button id="tree" class="iconbtn" aria-label="模型结构" title="模型结构" data-icon="tree"></button><button id="section" class="iconbtn" aria-label="剖切" title="剖切" data-icon="section"></button></div></div>
 <aside id="tree-panel" class="panel tree-panel" hidden><h2>模型结构</h2><div id="tree-content"></div></aside>
 <aside id="section-panel" class="panel section-panel" hidden><h2>剖切视图</h2><label>方向 <select id="section-axis" aria-label="剖切方向"><option value="x">X</option><option value="y">Y</option><option value="z">Z</option></select></label><input id="section-range" aria-label="剖切位置" type="range" min="0" max="100" value="50"><div class="subtle">移动滑块查看内部 · 切口不封面</div></aside>
 <aside id="help-panel" class="panel help-panel" hidden><h2>操作说明</h2><button id="help-close" class="iconbtn help-close" aria-label="关闭帮助" data-icon="close"></button><p><strong>旋转模型</strong><span>左键拖动 / 单指拖动</span></p><p><strong>缩放</strong><span>滚轮 / 双指缩放</span></p><p><strong>平移</strong><span>右键拖动 / 双指拖动</span></p><p><strong>复位</strong><span>Home</span></p><p class="subtle">尺寸按模型测量，不含电线。</p></aside>
-<div id="drawing-wrap" class="drawing-wrap" hidden><img id="drawing" alt="二维图纸"></div><span id="status" class="sr-only" role="status"></span></main>
+<div id="drawing-wrap" class="drawing-wrap" hidden><img id="drawing" alt="二维图纸"></div><div id="empty-model" class="empty-model" hidden role="status"></div><span id="status" class="sr-only" role="status"></span></main>
 
-<script src="./viewer.js?v=hard-tube-20261030-dimensions3"></script></body></html>
+<script src="./viewer.js?v=fitting-resources-20261107-2"></script></body></html>

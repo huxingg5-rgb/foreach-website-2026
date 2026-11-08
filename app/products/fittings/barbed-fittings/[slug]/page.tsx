@@ -1,3 +1,4 @@
+import FittingLocalizedSelectionContent from "@/components/products/detail/FittingLocalizedSelectionContent";
 import type {
   ComponentType,
   ReactNode,
@@ -12,6 +13,7 @@ import {
 } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import QuickConnectDetailContent from "@/components/products/detail/QuickConnectDetailContent";
 import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
@@ -49,11 +51,12 @@ const details =
     return connected ? [connected] : [];
   });
 
-const ProductDetailView =
-  ProductDetailClient as unknown as ComponentType<{
-    data: Record<string, unknown>;
-    afterContent?: ReactNode;
-  }>;
+const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
+  data: Record<string, unknown>;
+  afterContent?: ReactNode;
+  customerCategoryMode?: "fitting-zh";
+  customerCategoryContent?: Partial<Record<"selection" | "delivery", ReactNode>>;
+}>;
 
 export const dynamicParams =
   false;
@@ -137,6 +140,11 @@ export default async function BarbedFittingDetailPage({
 
   return (
     <ProductDetailView
+      customerCategoryMode="fitting-zh"
+      customerCategoryContent={renderLocale === "zh-CN" ? {
+        selection: <QuickConnectDetailContent data={{ ...detail, productTypeId: "barbed-fittings" }} section="selection" variant="standalone-fitting" />,
+        delivery: <QuickConnectDetailContent data={{ ...detail, productTypeId: "barbed-fittings" }} section="delivery" variant="standalone-fitting" />,
+      } : { selection: <FittingLocalizedSelectionContent data={{ ...detail, productTypeId: "barbed-fittings" }} locale={renderLocale} /> }}
       data={detail}
       afterContent={<FittingRelatedResources productTypeId="barbed-fittings" model={detail.model} locale={renderLocale} />}
     />

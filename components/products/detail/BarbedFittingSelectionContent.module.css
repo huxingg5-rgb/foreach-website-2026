@@ -1,0 +1,8 @@
+.table{min-width:520px}
+.installSteps{list-style:decimal;margin:0;padding-left:24px}
+@media(max-width:640px){
+  .table{min-width:0;table-layout:fixed}
+  .table.table th{white-space:normal}
+  .table th:first-child{width:32%}
+  .table td{overflow-wrap:anywhere}
+}

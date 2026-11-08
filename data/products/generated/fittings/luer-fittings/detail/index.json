@@ -22734,9 +22734,16 @@
     "image": "/images/products/fittings/luer-fittings/products/LPT-PP-N.jpg",
     "heroImage": "/images/products/fittings/luer-fittings/products/LPT-PP-N.jpg",
     "imageCard": "/images/products/fittings/luer-fittings/products/LPT-PP-N.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+    ],
     "images": [
-      "/images/products/fittings/luer-fittings/products/LPT-PP-N.jpg"
+      "/images/products/fittings/luer-fittings/products/LPT-PP-N.jpg",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
     ],
     "model3dUrl": "",
     "modelUrl": "",
@@ -22839,7 +22846,12 @@
     "resourceMessages": {
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
-    }
+    },
+    "additionalImageAlts": [
+      "Male Luer fittings with colored locking collars, assembled color options shown in a row",
+      "Male Luer fitting and locking collar assembly examples in multiple colors",
+      "Luer locking collar assembly example connected to bulkhead fittings on a panel"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -22881,9 +22893,16 @@
     "image": "/images/products/fittings/luer-fittings/products/LPT-PA-W.jpg",
     "heroImage": "/images/products/fittings/luer-fittings/products/LPT-PA-W.jpg",
     "imageCard": "/images/products/fittings/luer-fittings/products/LPT-PA-W.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+    ],
     "images": [
-      "/images/products/fittings/luer-fittings/products/LPT-PA-W.jpg"
+      "/images/products/fittings/luer-fittings/products/LPT-PA-W.jpg",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
     ],
     "model3dUrl": "",
     "modelUrl": "",
@@ -22986,7 +23005,12 @@
     "resourceMessages": {
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
-    }
+    },
+    "additionalImageAlts": [
+      "Male Luer fittings with colored locking collars, assembled color options shown in a row",
+      "Male Luer fitting and locking collar assembly examples in multiple colors",
+      "Luer locking collar assembly example connected to bulkhead fittings on a panel"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -23028,9 +23052,16 @@
     "image": "/images/products/fittings/luer-fittings/products/LPT-PA-B.jpg",
     "heroImage": "/images/products/fittings/luer-fittings/products/LPT-PA-B.jpg",
     "imageCard": "/images/products/fittings/luer-fittings/products/LPT-PA-B.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+    ],
     "images": [
-      "/images/products/fittings/luer-fittings/products/LPT-PA-B.jpg"
+      "/images/products/fittings/luer-fittings/products/LPT-PA-B.jpg",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
     ],
     "model3dUrl": "",
     "modelUrl": "",
@@ -23133,7 +23164,12 @@
     "resourceMessages": {
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
-    }
+    },
+    "additionalImageAlts": [
+      "Male Luer fittings with colored locking collars, assembled color options shown in a row",
+      "Male Luer fitting and locking collar assembly examples in multiple colors",
+      "Luer locking collar assembly example connected to bulkhead fittings on a panel"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -23175,9 +23211,16 @@
     "image": "/images/products/fittings/luer-fittings/products/LPT-PA-R.jpg",
     "heroImage": "/images/products/fittings/luer-fittings/products/LPT-PA-R.jpg",
     "imageCard": "/images/products/fittings/luer-fittings/products/LPT-PA-R.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+    ],
     "images": [
-      "/images/products/fittings/luer-fittings/products/LPT-PA-R.jpg"
+      "/images/products/fittings/luer-fittings/products/LPT-PA-R.jpg",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
     ],
     "model3dUrl": "",
     "modelUrl": "",
@@ -23280,7 +23323,12 @@
     "resourceMessages": {
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
-    }
+    },
+    "additionalImageAlts": [
+      "Male Luer fittings with colored locking collars, assembled color options shown in a row",
+      "Male Luer fitting and locking collar assembly examples in multiple colors",
+      "Luer locking collar assembly example connected to bulkhead fittings on a panel"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -23322,9 +23370,16 @@
     "image": "/images/products/fittings/luer-fittings/products/LPT-PA-G.jpg",
     "heroImage": "/images/products/fittings/luer-fittings/products/LPT-PA-G.jpg",
     "imageCard": "/images/products/fittings/luer-fittings/products/LPT-PA-G.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+    ],
     "images": [
-      "/images/products/fittings/luer-fittings/products/LPT-PA-G.jpg"
+      "/images/products/fittings/luer-fittings/products/LPT-PA-G.jpg",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
     ],
     "model3dUrl": "",
     "modelUrl": "",
@@ -23427,7 +23482,12 @@
     "resourceMessages": {
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
-    }
+    },
+    "additionalImageAlts": [
+      "Male Luer fittings with colored locking collars, assembled color options shown in a row",
+      "Male Luer fitting and locking collar assembly examples in multiple colors",
+      "Luer locking collar assembly example connected to bulkhead fittings on a panel"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -23469,9 +23529,16 @@
     "image": "/images/products/fittings/luer-fittings/products/LPT-PA-U.jpg",
     "heroImage": "/images/products/fittings/luer-fittings/products/LPT-PA-U.jpg",
     "imageCard": "/images/products/fittings/luer-fittings/products/LPT-PA-U.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+    ],
     "images": [
-      "/images/products/fittings/luer-fittings/products/LPT-PA-U.jpg"
+      "/images/products/fittings/luer-fittings/products/LPT-PA-U.jpg",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
     ],
     "model3dUrl": "",
     "modelUrl": "",
@@ -23574,7 +23641,12 @@
     "resourceMessages": {
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
-    }
+    },
+    "additionalImageAlts": [
+      "Male Luer fittings with colored locking collars, assembled color options shown in a row",
+      "Male Luer fitting and locking collar assembly examples in multiple colors",
+      "Luer locking collar assembly example connected to bulkhead fittings on a panel"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -23616,9 +23688,16 @@
     "image": "/images/products/fittings/luer-fittings/products/LPT-PA-O.jpg",
     "heroImage": "/images/products/fittings/luer-fittings/products/LPT-PA-O.jpg",
     "imageCard": "/images/products/fittings/luer-fittings/products/LPT-PA-O.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+    ],
     "images": [
-      "/images/products/fittings/luer-fittings/products/LPT-PA-O.jpg"
+      "/images/products/fittings/luer-fittings/products/LPT-PA-O.jpg",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
     ],
     "model3dUrl": "",
     "modelUrl": "",
@@ -23721,7 +23800,12 @@
     "resourceMessages": {
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
-    }
+    },
+    "additionalImageAlts": [
+      "Male Luer fittings with colored locking collars, assembled color options shown in a row",
+      "Male Luer fitting and locking collar assembly examples in multiple colors",
+      "Luer locking collar assembly example connected to bulkhead fittings on a panel"
+    ]
   },
   {
     "sourceType": "fitting-detail",
@@ -23763,9 +23847,16 @@
     "image": "/images/products/fittings/luer-fittings/products/LPT-PA-Y.jpg",
     "heroImage": "/images/products/fittings/luer-fittings/products/LPT-PA-Y.jpg",
     "imageCard": "/images/products/fittings/luer-fittings/products/LPT-PA-Y.jpg",
-    "additionalImages": [],
+    "additionalImages": [
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+    ],
     "images": [
-      "/images/products/fittings/luer-fittings/products/LPT-PA-Y.jpg"
+      "/images/products/fittings/luer-fittings/products/LPT-PA-Y.jpg",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+      "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+      "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
     ],
     "model3dUrl": "",
     "modelUrl": "",
@@ -23868,7 +23959,12 @@
     "resourceMessages": {
       "model3d": "暂无3D模型",
       "drawing": "暂无二维图纸"
-    }
+    },
+    "additionalImageAlts": [
+      "Male Luer fittings with colored locking collars, assembled color options shown in a row",
+      "Male Luer fitting and locking collar assembly examples in multiple colors",
+      "Luer locking collar assembly example connected to bulkhead fittings on a panel"
+    ]
   },
   {
     "sourceType": "fitting-detail",

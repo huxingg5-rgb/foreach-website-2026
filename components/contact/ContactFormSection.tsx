@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import type { ComponentProps } from "react";
 import type { ContactPageData } from "@/data/contact-cooperation";
 import ContactInquiryForm from "@/components/contact/ContactInquiryForm";
 
@@ -8,6 +9,8 @@ type ContactFormSectionProps = {
   presetRequestType?: string;
   id?: string;
   className?: string;
+  showHeading?: boolean;
+  formProps?: Pick<ComponentProps<typeof ContactInquiryForm>, "initialValues" | "idPrefix" | "variant" | "analyticsSourceSection">;
 };
 
 export default function ContactFormSection({
@@ -15,6 +18,8 @@ export default function ContactFormSection({
   presetRequestType,
   id = "form",
   className = "",
+  showHeading = true,
+  formProps,
 }: ContactFormSectionProps) {
   const finalPresetRequestType =
     presetRequestType || data.form.requestTypes[0] || "";
@@ -25,10 +30,10 @@ export default function ContactFormSection({
       id={id}
     >
       <div className="contact-section-inner">
-        <div className="contact-section-head">
+        {showHeading ? <div className="contact-section-head">
           <h2 className="contact-section-title">{data.form.title}</h2>
           <p className="contact-section-desc">{data.form.description}</p>
-        </div>
+        </div> : null}
 
         <div className="contact-form-layout">
           <aside className="contact-guide-panel">
@@ -56,6 +61,7 @@ export default function ContactFormSection({
           <ContactInquiryForm
             data={data}
             presetRequestType={finalPresetRequestType}
+            {...formProps}
           />
         </div>
       </div>

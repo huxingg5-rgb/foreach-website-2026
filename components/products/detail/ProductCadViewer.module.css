@@ -5,6 +5,92 @@
   background: #f6f8fb;
 }
 
+.pending {
+  display: grid;
+  grid-template-columns: minmax(180px, 38%) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  min-height: min(680px, 75svh);
+  padding: clamp(24px, 5vw, 64px);
+  background: linear-gradient(135deg, #f8fbff 0%, #eef4fb 100%);
+  color: #173368;
+}
+
+.pendingVisual {
+  position: relative;
+  min-height: 240px;
+  overflow: hidden;
+  border: 1px solid rgba(23, 51, 104, 0.12);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.pendingImage {
+  object-fit: contain;
+  padding: 18px;
+}
+
+.pendingPlaceholder {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 240px;
+  color: rgba(23, 51, 104, 0.28);
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.pendingContent {
+  max-width: 520px;
+}
+
+.pendingContent strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: clamp(20px, 3vw, 30px);
+}
+
+.pendingContent p {
+  margin: 0 0 20px;
+  color: #53627b;
+  line-height: 1.75;
+}
+
+.pendingContent a,
+.pendingLink {
+  display: inline-flex;
+  padding: 10px 16px;
+  border: 1px solid #173368;
+  border-radius: 8px;
+  background: #fff;
+  color: #173368;
+  font: inherit;
+  text-decoration: none;
+}
+
+.pendingLink {
+  border-color: rgba(23, 51, 104, 0.25);
+  color: #637087;
+}
+
+@media (max-width: 700px) {
+  .pending {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: 440px;
+    padding: 24px;
+  }
+
+  .pendingVisual {
+    min-height: 190px;
+  }
+
+  .pendingPlaceholder {
+    min-height: 190px;
+  }
+}
+
 .error {
   position: absolute;
   inset: 0;

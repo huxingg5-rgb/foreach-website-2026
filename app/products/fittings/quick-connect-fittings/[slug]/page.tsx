@@ -1,7 +1,4 @@
-import type {
-  ComponentType,
-  ReactNode,
-} from "react";
+import type { ComponentProps } from "react";
 
 import type {
   Metadata,
@@ -11,8 +8,7 @@ import {
   notFound,
 } from "next/navigation";
 
-import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
-import QuickConnectRelatedArticles from "@/components/products/detail/QuickConnectRelatedArticles";
+import QuickConnectDetailPage from "@/components/products/detail/QuickConnectDetailPage";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
@@ -48,12 +44,6 @@ const details =
       connectPublishedFittingProduct(detail);
     return connected ? [connected] : [];
   });
-
-const ProductDetailView =
-  ProductDetailClient as unknown as ComponentType<{
-    data: (typeof details)[number];
-    afterContent?: ReactNode;
-  }>;
 
 export const dynamicParams =
   false;
@@ -150,11 +140,9 @@ export default async function QuickConnectFittingDetailPage({
   }
 
   return (
-    <ProductDetailView
-      afterContent={<QuickConnectRelatedArticles model={detail.model} locale={renderLocale} />}
-      data={
-        detail
-      }
+    <QuickConnectDetailPage
+      locale={renderLocale}
+      data={detail as unknown as ComponentProps<typeof QuickConnectDetailPage>["data"]}
     />
   );
 }

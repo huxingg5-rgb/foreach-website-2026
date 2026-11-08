@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>鲁尔接头 · 2D / 3D</title>
+<!-- SHARED_CAD_STYLES -->
+<style>
+/* Only Luer-specific information extends the shared quick-connect interface. */
+.luer-panel-setting{border-top:1px solid var(--line);margin-top:10px;padding-top:10px;font-size:11px;color:var(--brand)}
+.luer-panel-setting input{width:62px;border:1px solid var(--line);background:#fff;color:var(--brand);padding:3px 5px;margin-left:4px;font:inherit;border-radius:0}
+.luer-panel-setting input:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.luer-panel-setting p{margin:6px 0 0;color:var(--muted);font-size:11px}
+.luer-legend{position:absolute;left:270px;right:22px;bottom:18px;display:flex;justify-content:space-around;flex-wrap:wrap;gap:6px 16px;font-size:11px;line-height:1.6;color:var(--brand)}
+.luer-legend span{overflow-wrap:anywhere}.luer-legend i{display:inline-block;width:8px;height:8px;margin-right:5px;border:1px solid var(--line);border-radius:50%}
+.luer-legend .reference{width:100%;margin:2px 0 0;color:var(--muted)}
+#drawing-frame{display:block;width:100%;flex:1;min-height:0;border:0;background:white}
+.luer-preview .topbar,.luer-preview .left-toolbar,.luer-preview #luer-selector,.luer-preview #legend,.luer-preview #drawing-wrap,.luer-preview .panel{display:none!important}
+.luer-preview .stage{inset:0!important}
+@media(max-width:900px) and (min-width:601px){.luer-legend{left:222px}}
+@media(max-width:600px){
+ .luer-panel-setting{display:flex;align-items:center;gap:8px;margin-top:6px;padding-top:6px;font-size:10px}
+ .luer-panel-setting label{white-space:nowrap}.luer-panel-setting input{width:45px;padding:1px 3px}
+ .luer-panel-setting p{margin:0;font-size:10px}
+ .has-quick-connect-selector .stage{top:316px;bottom:100px}
+ .luer-legend{left:14px;right:14px;bottom:14px;justify-content:flex-start;font-size:10px;gap:4px 12px}
+}
+</style></head><body>
+<main id="viewer" class="viewer has-quick-connect-selector" data-status="loading">
+  <div id="busy" class="loading" role="status" aria-live="polite" aria-busy="true"><div class="loading-inner"><span class="loading-spinner" aria-hidden="true"></span><strong id="busy-label">正在加载鲁尔模型…</strong><div class="loading-track" aria-hidden="true"><div class="loading-bar"></div></div><button id="retry" hidden>重新加载</button></div></div>
+  <div id="stage" class="stage" aria-label="可旋转的鲁尔接头 3D 模型"></div>
+  <!-- SHARED_CAD_TOOLBARS -->
+  <!-- SHARED_CAD_PANELS -->
+  <aside id="luer-selector" class="fitting-selector quick-connect-selector" aria-label="查看方式">
+    <h2 id="choice-title">查看方式</h2>
+    <div id="choices" class="fitting-choices" role="radiogroup" aria-labelledby="choice-title"></div>
+    <select id="mobile-choice" class="fitting-mobile-select" aria-label="查看方式"></select>
+    <div class="fitting-selected-detail"><h3 id="detail-heading">对接组合 · 外形尺寸</h3><div id="selected-models" class="quick-connect-selected-models"></div><dl id="measurements"></dl><p class="quick-connect-dimension-reference">尺寸为 3D 模型外包络参考值，工程安装以二维图纸为准。</p>
+      <div id="panel-setting" class="luer-panel-setting" hidden><label>面板厚度（mm）<input id="panel-thickness" type="number" min="0" max="3.5" step="0.1" value="2" aria-label="面板厚度，单位毫米"></label><p>0–3.5 mm；面板未显示。</p></div>
+    </div>
+  </aside>
+  <div id="legend" class="luer-legend"></div>
+  <div id="drawing-wrap" class="drawing-wrap quick-connect-drawing" hidden><select id="luer-drawing-model" aria-label="二维图纸型号"></select><iframe id="drawing-frame" title="当前鲁尔零件的 2D 图纸"></iframe></div>
+</main><script src="./viewer.js?v=fitting-locales-20261108-2"></script></body></html>

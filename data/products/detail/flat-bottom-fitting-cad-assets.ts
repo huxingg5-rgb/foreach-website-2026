@@ -1,6 +1,6 @@
 import manifest from "./flat-bottom-fitting-cad-manifest.json";
 
-export type FittingCadFinish = "peek" | "natural" | "black";
+export type FittingCadFinish = "peek" | "natural" | "black" | "steel" | "yellow";
 
 // Exact product allowlist: family + thread + tube OD must match before sharing
 // geometry. Material/color affect the finish, never the model dimensions.

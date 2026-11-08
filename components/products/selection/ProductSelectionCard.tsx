@@ -1,6 +1,7 @@
 "use client";
 import { normalizeSiteHref } from "@/lib/seo/site-url";
 import { getProductCardThumbnail } from "@/data/products/selection/product-card-thumbnail";
+import { getBarbedFittingCardImageScale } from "@/data/products/selection/barbed-fitting-card-image-scale";
 import { getValvelessPumpImageAlt } from "@/data/products/detail/valveless-pump-image-copy";
 import { getFittingMainImageAlt, getDescriptiveFittingImageUrl } from "@/data/products/detail/fitting-image-description";
 import { getControlModuleCardCopy } from "@/data/products/selection/control-module-card-copy";
@@ -283,7 +284,7 @@ export default function ProductSelectionCard({
   const usesSquareImage = product.seriesId === "6010" || product.productTypeId === "valveless-pump";
   const cardImageScale = product.productTypeId === "quick-connect-fittings"
     ? QUICK_CONNECT_CARD_IMAGE_SCALE[product.seriesId || ""]
-    : undefined;
+    : getBarbedFittingCardImageScale(product);
 
   return (
     <article

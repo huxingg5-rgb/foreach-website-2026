@@ -146,6 +146,16 @@ const threeWayConnectionOptionsAlts: Record<SelectionLocale, string> = {
   ru: "Трёхходовые электромагнитные клапаны FOREACH SV10 с монтажом на коллектор, штуцерами и резьбовыми портами",
 };
 
+const threeWayConnectionOptionsPhotoImage = "/images/products/valves/solenoid-valves/foreach-sv10-3-way-connection-options-photo.webp";
+const threeWayConnectionOptionsPhotoAlts: Record<SelectionLocale, string> = {
+  zh: "FOREACH SV10 三通微型电磁阀实拍，展示基板式与倒刺式接口",
+  en: "FOREACH SV10 3-way miniature solenoid valves showing manifold-mount and barbed connections",
+  es: "Electroválvulas miniatura FOREACH SV10 de 3 vías con conexiones de base y de espiga",
+  fr: "Électrovannes miniatures FOREACH SV10 à 3 voies avec raccordements sur embase et cannelés",
+  ko: "베이스 장착형 및 바브형 연결을 보여 주는 FOREACH SV10 3방향 소형 솔레노이드 밸브",
+  ru: "Трёхходовые миниатюрные электромагнитные клапаны FOREACH SV10 с подключением к основанию и штуцерами",
+};
+
 const twoWayNoBasePortsAlts: Record<SelectionLocale, string> = {
   zh: "FOREACH SV10-P-2NO 二通常开基板式电磁阀底部两个端口及 O 形密封圈特写",
   en: "Close-up of two base ports and O-ring seals on a FOREACH SV10-P-2NO 2-way normally open manifold-mount solenoid valve",
@@ -215,6 +225,8 @@ export function getSolenoidConfigurationGallery(slug: string, locale: SelectionL
     if (c.key === "three") {
       additionalImages.push(threeWayConnectionOptionsImage);
       additionalImageAlts.push(threeWayConnectionOptionsAlts[locale]);
+      additionalImages.push(threeWayConnectionOptionsPhotoImage);
+      additionalImageAlts.push(threeWayConnectionOptionsPhotoAlts[locale]);
     }
     if (c.connection === "base") {
       additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-base-manifold-assembly-gallery.webp");

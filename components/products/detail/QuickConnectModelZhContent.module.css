@@ -1,0 +1,32 @@
+/* Match Q2001 installation figures. Typography and other layouts are shared. */
+.content :global(.fx-panel-figures) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 920px;
+  margin: 0 0 24px;
+}
+.content :global(.fx-panel-figures) figure { margin: 0; min-width: 0; }
+.content :global(.fx-panel-figures) a {
+  display: block;
+  aspect-ratio: 1.4;
+  overflow: hidden;
+  background: #fff;
+}
+.content :global(.fx-panel-figures) img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content :global(.fx-panel-figures) figcaption {
+  border: 0;
+  padding: 8px 0 0;
+  font-size: 14px;
+  color: var(--fx-muted);
+}
+.content :global(#fx-panel-install) tbody th { width: 26%; font-weight: 400; vertical-align: top; }
+@media (max-width: 640px) {
+  .content :global(.fx-panel-figures) { grid-template-columns: 1fr; gap: 18px; max-width: 440px; }
+  .content :global(#fx-panel-install) tbody th { width: 32%; }
+}

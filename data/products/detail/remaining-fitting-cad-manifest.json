@@ -1,0 +1,473 @@
+{
+  "schemaVersion": 1,
+  "products": {
+    "female-thread-adapters": {
+      "u-m6-20-ac-b": {
+        "model": "U-M6-20-AC-B",
+        "productCode": "809194",
+        "viewerId": "female-thread-adapters-u-m6-20",
+        "finish": "black",
+        "sourcePart": "443-00-00178",
+        "drawingPdfUrl": "",
+        "drawingSha256": "a31c241de3f86ee4f86525b17309d12da0de70c70baea3d9ee385d62a6c42e60",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "u-u28-20-pp-n": {
+        "model": "U-U28-20-PP-N",
+        "productCode": "809195",
+        "viewerId": "female-thread-adapters-u-u28-20",
+        "finish": "natural",
+        "sourcePart": "443-00-00523",
+        "drawingPdfUrl": "",
+        "drawingSha256": "74dc28f71c8578c6bec347498a0c70c597bb9993b0c2af73cd53f2436a08e5f9",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "u-m6-20-pp-n": {
+        "model": "U-M6-20-PP-N",
+        "productCode": "809197",
+        "viewerId": "female-thread-adapters-u-m6-20",
+        "finish": "natural",
+        "sourcePart": "443-00-00525",
+        "drawingPdfUrl": "",
+        "drawingSha256": "541bfcf0fb27daa5d2619d55e771c6e759bf90284393680df646d2304e5a4eab",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "us-m6-05-ac-b": {
+        "model": "US-M6-05-AC-B",
+        "productCode": "809484",
+        "viewerId": "female-thread-adapters-us-m6-05-reviewed",
+        "finish": "black",
+        "sourcePart": "443-02-00061",
+        "drawingPdfUrl": "",
+        "drawingSha256": "65a74e604fec24d5d3169af009920c51bdb14f80e93fbe121091435bc57a94d6",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "us-m6-10-ac-b": {
+        "model": "US-M6-10-AC-B",
+        "productCode": "809531",
+        "viewerId": "female-thread-adapters-us-m6-10",
+        "finish": "black",
+        "sourcePart": "443-02-00107",
+        "drawingPdfUrl": "",
+        "drawingSha256": "ce9b4e106d92107b7aa342f22b4a7cf6ac97d1595b73c5fed7bc08d95a1422cf",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "us-m6-15-ac-b": {
+        "model": "US-M6-15-AC-B",
+        "productCode": "809532",
+        "viewerId": "female-thread-adapters-us-m6-15",
+        "finish": "black",
+        "sourcePart": "443-02-00108",
+        "drawingPdfUrl": "",
+        "drawingSha256": "1bbe7e50c2d8f07e0bd69c46b3461bbccd4db2e22f71ef7b604531c4f510171b",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "us-m6-05-pp-n": {
+        "model": "US-M6-05-PP-N",
+        "productCode": "809533",
+        "viewerId": "female-thread-adapters-us-m6-05-reviewed",
+        "finish": "natural",
+        "sourcePart": "443-02-00109",
+        "drawingPdfUrl": "",
+        "drawingSha256": "705b04deffed8f851e2a409a9f9e3c50efe948a6edec4d483fcfac1aea089ac0",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "us-m6-10-pp-n": {
+        "model": "US-M6-10-PP-N",
+        "productCode": "809534",
+        "viewerId": "female-thread-adapters-us-m6-10",
+        "finish": "natural",
+        "sourcePart": "443-02-00110",
+        "drawingPdfUrl": "",
+        "drawingSha256": "f88466602e1f3c5b21a32a5a3ccf794eca9cb208754d904b2c36e7d8442d73df",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "us-m6-15-pp-n": {
+        "model": "US-M6-15-PP-N",
+        "productCode": "809516",
+        "viewerId": "female-thread-adapters-us-m6-15",
+        "finish": "natural",
+        "sourcePart": "443-02-00094",
+        "drawingPdfUrl": "",
+        "drawingSha256": "bd0795631ac4ff5b6531d661281515d3381e7a623a0ac505aabcf63fa01cc1f8",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "ut-u28-15-ps-b": {
+        "model": "UT-U28-15-PS-B",
+        "productCode": "809631",
+        "viewerId": "female-thread-adapters-ut-u28-15-reviewed",
+        "finish": "black",
+        "sourcePart": "443-02-00210",
+        "drawingPdfUrl": "",
+        "drawingSha256": "0be742cfde729cc3bd2865eb05c18adb991cf697a5a9ff2779794c2034df012f",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "ut-u28-15-pp-n": {
+        "model": "UT-U28-15-PP-N",
+        "productCode": "809697",
+        "viewerId": "female-thread-adapters-ut-u28-15-reviewed",
+        "finish": "natural",
+        "sourcePart": "443-02-00260",
+        "drawingPdfUrl": "",
+        "drawingSha256": "9dcba905c91e8733f9bb31668c48924add85c988473b364c2b0188572458b55b",
+        "drawingSource": "01-接头/01-硬管接头/二通接头/443-02-00260_001_cn.pdf"
+      },
+      "ut-u28-20-ps-b": {
+        "model": "UT-U28-20-PS-B",
+        "productCode": "809698",
+        "viewerId": "female-thread-adapters-ut-u28-20-reviewed",
+        "finish": "black",
+        "sourcePart": "443-02-00261",
+        "drawingPdfUrl": "",
+        "drawingSha256": "d98a5b21f36de8b5d0015a86d791aadcf444ee5b8beb5361538c9c563b310721",
+        "drawingSource": "01-接头/07-内螺纹接头/UT系列/443-02-00261-C.pdf"
+      },
+      "ut-u28-20-pp-n": {
+        "model": "UT-U28-20-PP-N",
+        "productCode": "809518",
+        "viewerId": "female-thread-adapters-ut-u28-20-reviewed",
+        "finish": "natural",
+        "sourcePart": "443-02-00096",
+        "drawingPdfUrl": "",
+        "drawingSha256": "7302dbbf1c44d2638d10fdc091c701d26f844b7b2e98e853042b16f7c51ac001",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "uy-u28-10-pp-n": {
+        "model": "UY-U28-10-PP-N",
+        "productCode": "809308",
+        "viewerId": "female-thread-adapters-uy-u28-10-reviewed",
+        "finish": "natural",
+        "sourcePart": "443-02-00330",
+        "drawingPdfUrl": "",
+        "drawingSha256": "0fdfd3a6f99f0a35557f8624af78379390b10126da5091a92813ee56c9158e16",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "uy-u28-15-pp-n": {
+        "model": "UY-U28-15-PP-N",
+        "productCode": "809491",
+        "viewerId": "female-thread-adapters-uy-u28-15",
+        "finish": "natural",
+        "sourcePart": "443-02-00067",
+        "drawingPdfUrl": "",
+        "drawingSha256": "c437e8b21f07ec5a82bbf32a0c116ae65b4aaf6ec470e59059d0de87a8c42fc3",
+        "drawingSource": "existing-reviewed-exact-model"
+      },
+      "uy-u28-20-pp-n": {
+        "model": "UY-U28-20-PP-N",
+        "productCode": "809790",
+        "viewerId": "female-thread-adapters-uy-u28-20",
+        "finish": "natural",
+        "sourcePart": "443-02-00477",
+        "drawingPdfUrl": "",
+        "drawingSha256": "2b6633d841af2f8d213ee059e4a0c2c0537c220bd23bca32e61d2f837dd2ccc6",
+        "drawingSource": "01-接头/07-内螺纹接头/UY系列/443-02-00477-C.pdf"
+      },
+      "pmu-m12-u28-20-pp-n": {
+        "model": "PMU-M12-U28-20-PP-N",
+        "productCode": "809525",
+        "viewerId": "female-thread-adapters-pmu-m12-u28-20-reviewed",
+        "finish": "natural",
+        "sourcePart": "443-02-00104",
+        "drawingPdfUrl": "",
+        "drawingSha256": "5ba782095d96244f4d4845f5ec7ce4ae221e54da2d8244d8c2c0dc9d21133ddc",
+        "drawingSource": "01-接头/07-内螺纹接头/PMU系列/443-02-00104-C.pdf"
+      }
+    },
+    "bulkhead-barbed-fittings": {
+      "pmb-u28-16d-pp-n": {
+        "model": "PMB-U28-16D-PP-N",
+        "productCode": "809304",
+        "viewerId": "bulkhead-barbed-fittings-pmb-u28-16d",
+        "finish": "natural",
+        "sourcePart": "443-02-00323",
+        "drawingPdfUrl": "",
+        "drawingSha256": "adc8c95096f6ec8781eb93d72b1b627287cba5d4c6c1b533a55e12227e0e3c0a",
+        "drawingSource": "01-接头/02-倒刺接头/443-02-00323-C.pdf"
+      },
+      "pmb-u28-16d-pa-w": {
+        "model": "PMB-U28-16D-PA-W",
+        "productCode": "809517",
+        "viewerId": "bulkhead-barbed-fittings-pmb-u28-16d",
+        "finish": "natural",
+        "sourcePart": "443-02-00470",
+        "drawingPdfUrl": "",
+        "drawingSha256": "630e7d6b10ba03c5cb109bf0c637f7cd58dc8f34fe7021733637bd708e4dddde",
+        "drawingSource": "01-接头/02-倒刺接头/443-02-00470-C.pdf"
+      },
+      "pmb-u28-24d-pp-n": {
+        "model": "PMB-U28-24D-PP-N",
+        "productCode": "809462",
+        "viewerId": "bulkhead-barbed-fittings-pmb-u28-24d",
+        "finish": "natural",
+        "sourcePart": "443-02-00039",
+        "drawingPdfUrl": "",
+        "drawingSha256": "c14c1104f78625e68e3dd2618a90b601e965be23d5351ccb31db39eb1ff3381e",
+        "drawingSource": "01-接头/02-倒刺接头/443-02-00039-C.pdf"
+      },
+      "pmb-u28-24d-pa-w": {
+        "model": "PMB-U28-24D-PA-W",
+        "productCode": "809496",
+        "viewerId": "bulkhead-barbed-fittings-pmb-u28-24d",
+        "finish": "natural",
+        "sourcePart": "443-02-00073",
+        "drawingPdfUrl": "",
+        "drawingSha256": "5a2d0473afbd29214a5c6848830fe051cb16d380f6cea007c7412ae2f19c96ad",
+        "drawingSource": "01-接头/02-倒刺接头/443-02-00073-C.pdf"
+      },
+      "pmb-u28-32d-pp-n": {
+        "model": "PMB-U28-32D-PP-N",
+        "productCode": "809463",
+        "viewerId": "bulkhead-barbed-fittings-pmb-u28-32d",
+        "finish": "natural",
+        "sourcePart": "443-02-00040",
+        "drawingPdfUrl": "",
+        "drawingSha256": "7146826d01d4f36e02791e051bb44bdbc0a4edf7410a6ac391291079d195fdc1",
+        "drawingSource": "01-接头/02-倒刺接头/443-02-00040-C.pdf"
+      },
+      "pmb-u28-32d-pa-w": {
+        "model": "PMB-U28-32D-PA-W",
+        "productCode": "809497",
+        "viewerId": "bulkhead-barbed-fittings-pmb-u28-32d",
+        "finish": "natural",
+        "sourcePart": "443-02-00074",
+        "drawingPdfUrl": "",
+        "drawingSha256": "3045884b3015c1396f9ffb219fbdb35e2eca68995bab680ee24ab74c9baf663d",
+        "drawingSource": "01-接头/02-倒刺接头/443-02-00074-C.pdf"
+      }
+    },
+    "filters": {
+      "f-pe-60-32-pp-n": {
+        "model": "F-PE-60-32-PP-N",
+        "productCode": "139003",
+        "viewerId": "filters-f-pe-60-32",
+        "finish": "natural",
+        "sourcePart": "443-02-00455",
+        "drawingPdfUrl": "",
+        "drawingSha256": "c100f22c6141d2b86a8a82ef356ca4e577d5041946beb418d5e78844815794ce",
+        "drawingSource": "03-过滤器、单向阀/443-02-00455-C.pdf"
+      },
+      "f-pe-100-32-pp-n": {
+        "model": "F-PE-100-32-PP-N",
+        "productCode": "139001",
+        "viewerId": "filters-f-pe-100-32",
+        "finish": "natural",
+        "sourcePart": "443-02-00282",
+        "drawingPdfUrl": "",
+        "drawingSha256": "4916240147994b76ddfc69411d66206c1ccd27d09bba244a872189c929102149",
+        "drawingSource": "03-过滤器、单向阀/443-02-00282_002_cn.pdf"
+      }
+    },
+    "check-valves": {
+      "cv-be-32-pp-n": {
+        "model": "CV-BE-32-PP-N",
+        "productCode": "129001",
+        "viewerId": "check-valves-cv-be-32",
+        "finish": "natural",
+        "sourcePart": "443-02-00281",
+        "drawingPdfUrl": "",
+        "drawingSha256": "ea41bceefd95335fc63feff9cf662fe21707dff81292f4acdbe07d343906c534",
+        "drawingSource": "03-过滤器、单向阀/443-02-00281-C.pdf"
+      }
+    }
+  },
+  "geometries": {
+    "female-thread-adapters-us-m6-05-reviewed": {
+      "viewerId": "female-thread-adapters-us-m6-05-reviewed",
+      "model3dUrl": "/models/products/fittings/female-thread-adapters/cad/female-thread-adapters-us-m6-05-reviewed.fcad.gz",
+      "family": "female-thread-adapters",
+      "geometryKey": "us-m6-05-reviewed",
+      "sourceFile": "01-接头/01-硬管接头/二通接头/443-02-00061_001_cn.stp",
+      "sourceSha256": "6657b1bf494f97332017d08cc78021d9e3b0fed76b99f16e27872aef3174b84d",
+      "sizeMm": [
+        9.9,
+        21,
+        9.5
+      ],
+      "rotationEuler": [
+        0,
+        0,
+        0
+      ]
+    },
+    "female-thread-adapters-uy-u28-10-reviewed": {
+      "viewerId": "female-thread-adapters-uy-u28-10-reviewed",
+      "model3dUrl": "/models/products/fittings/female-thread-adapters/cad/female-thread-adapters-uy-u28-10-reviewed.fcad.gz",
+      "family": "female-thread-adapters",
+      "geometryKey": "uy-u28-10-reviewed",
+      "sourceFile": "01-接头/07-内螺纹接头/UY系列/443-02-00330-C.stp",
+      "sourceSha256": "00591aa736215de2ee3524fd9f158ba2b52a801dd7f5ccc898d735594b8fee93",
+      "sizeMm": [
+        10.15,
+        22.25381,
+        25.54178
+      ],
+      "rotationEuler": [
+        0,
+        0,
+        0
+      ]
+    },
+    "female-thread-adapters-ut-u28-15-reviewed": {
+      "viewerId": "female-thread-adapters-ut-u28-15-reviewed",
+      "model3dUrl": "/models/products/fittings/female-thread-adapters/cad/female-thread-adapters-ut-u28-15-reviewed.fcad.gz",
+      "family": "female-thread-adapters",
+      "geometryKey": "ut-u28-15-reviewed",
+      "sourceFile": "01-接头/01-硬管接头/二通接头/443-02-00260_001_cn.stp",
+      "sourceSha256": "aa4b0c4717c0fa2707bcd14900028b5956e496174ee2e5c2e6bc34f4c7c22175",
+      "sizeMm": [
+        10,
+        27.4,
+        18.45
+      ],
+      "rotationEuler": [
+        0,
+        0,
+        0
+      ]
+    },
+    "female-thread-adapters-ut-u28-20-reviewed": {
+      "viewerId": "female-thread-adapters-ut-u28-20-reviewed",
+      "model3dUrl": "/models/products/fittings/female-thread-adapters/cad/female-thread-adapters-ut-u28-20-reviewed.fcad.gz",
+      "family": "female-thread-adapters",
+      "geometryKey": "ut-u28-20-reviewed",
+      "sourceFile": "01-接头/07-内螺纹接头/UT系列/443-02-00096-c.stp",
+      "sourceSha256": "63003875b966ca671ea858b33d71af20d8cff5778948791a2e7c190ae5d5567f",
+      "sizeMm": [
+        10,
+        27.4,
+        18.45
+      ],
+      "rotationEuler": [
+        0,
+        0,
+        0
+      ]
+    },
+    "female-thread-adapters-pmu-m12-u28-20-reviewed": {
+      "viewerId": "female-thread-adapters-pmu-m12-u28-20-reviewed",
+      "model3dUrl": "/models/products/fittings/female-thread-adapters/cad/female-thread-adapters-pmu-m12-u28-20-reviewed.fcad.gz",
+      "family": "female-thread-adapters",
+      "geometryKey": "pmu-m12-u28-20-reviewed",
+      "sourceFile": "01-接头/07-内螺纹接头/PMU系列/443-02-00104-C.stp",
+      "sourceSha256": "29250ee701bc96f700346cde0ef281693a048c40f105e3788d143db12063169c",
+      "sizeMm": [
+        14,
+        21.00002,
+        14
+      ],
+      "rotationEuler": [
+        0,
+        0,
+        0
+      ]
+    },
+    "bulkhead-barbed-fittings-pmb-u28-16d": {
+      "viewerId": "bulkhead-barbed-fittings-pmb-u28-16d",
+      "model3dUrl": "/models/products/fittings/bulkhead-barbed-fittings/cad/bulkhead-barbed-fittings-pmb-u28-16d.fcad.gz",
+      "family": "bulkhead-barbed-fittings",
+      "geometryKey": "pmb-u28-16d",
+      "sourceFile": "01-接头/02-倒刺接头/443-02-00323-C.stp",
+      "sourceSha256": "36251a55751d0838e129df5dfd824041cc6cfc1193f9bc571e98d51485d4dd4f",
+      "sizeMm": [
+        7.8,
+        9.00666,
+        21
+      ],
+      "rotationEuler": [
+        0,
+        -1.5707963267948966,
+        0
+      ]
+    },
+    "bulkhead-barbed-fittings-pmb-u28-24d": {
+      "viewerId": "bulkhead-barbed-fittings-pmb-u28-24d",
+      "model3dUrl": "/models/products/fittings/bulkhead-barbed-fittings/cad/bulkhead-barbed-fittings-pmb-u28-24d.fcad.gz",
+      "family": "bulkhead-barbed-fittings",
+      "geometryKey": "pmb-u28-24d",
+      "sourceFile": "01-接头/02-倒刺接头/443-02-00039-C.stp",
+      "sourceSha256": "79d695e2e364f981db64d99eae8f9c398218974bf759cf0cc1b9aa6c0b0da1ed",
+      "sizeMm": [
+        7.8,
+        9.00666,
+        25
+      ],
+      "rotationEuler": [
+        0,
+        -1.5707963267948966,
+        0
+      ]
+    },
+    "bulkhead-barbed-fittings-pmb-u28-32d": {
+      "viewerId": "bulkhead-barbed-fittings-pmb-u28-32d",
+      "model3dUrl": "/models/products/fittings/bulkhead-barbed-fittings/cad/bulkhead-barbed-fittings-pmb-u28-32d.fcad.gz",
+      "family": "bulkhead-barbed-fittings",
+      "geometryKey": "pmb-u28-32d",
+      "sourceFile": "01-接头/02-倒刺接头/443-02-00040-C.stp",
+      "sourceSha256": "898fef14e56af465693acabe24550bdfce459010be1b7b4eceb235ffdb1bfc4d",
+      "sizeMm": [
+        7.8,
+        9.00666,
+        31
+      ],
+      "rotationEuler": [
+        0,
+        -1.5707963267948966,
+        0
+      ]
+    },
+    "filters-f-pe-60-32": {
+      "viewerId": "filters-f-pe-60-32",
+      "model3dUrl": "/models/products/fittings/filters/cad/filters-f-pe-60-32.fcad.gz",
+      "family": "filters",
+      "geometryKey": "f-pe-60-32",
+      "sourceFile": "03-过滤器、单向阀/443-02-00455_asm.stp",
+      "sourceSha256": "5484ed5b4b42057301ac22ed32da6846748e8568744aff4b6afafda3cbdb2ddf",
+      "sizeMm": [
+        19.700000000000003,
+        19.7,
+        32.7
+      ],
+      "rotationEuler": [
+        0,
+        -1.5707963267948966,
+        0
+      ]
+    },
+    "filters-f-pe-100-32": {
+      "viewerId": "filters-f-pe-100-32",
+      "model3dUrl": "/models/products/fittings/filters/cad/filters-f-pe-100-32.fcad.gz",
+      "family": "filters",
+      "geometryKey": "f-pe-100-32",
+      "sourceFile": "03-过滤器、单向阀/443-02-00282_asm.stp",
+      "sourceSha256": "5484ed5b4b42057301ac22ed32da6846748e8568744aff4b6afafda3cbdb2ddf",
+      "sizeMm": [
+        19.700000000000003,
+        19.7,
+        32.7
+      ],
+      "rotationEuler": [
+        0,
+        -1.5707963267948966,
+        0
+      ]
+    },
+    "check-valves-cv-be-32": {
+      "viewerId": "check-valves-cv-be-32",
+      "model3dUrl": "/models/products/fittings/check-valves/cad/check-valves-cv-be-32.fcad.gz",
+      "family": "check-valves",
+      "geometryKey": "cv-be-32",
+      "sourceFile": "03-过滤器、单向阀/443-02-00281_asm.stp",
+      "sourceSha256": "ae883e48b01e435c9329e862a0f607d9eebba64d30332a191adf6beba7ce42ce",
+      "sizeMm": [
+        19.7,
+        19.700000000000003,
+        32.739999999999995
+      ],
+      "rotationEuler": [
+        0,
+        -1.5707963267948966,
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+/* The modal, chips, buttons and pair layout share the quick-connect stylesheet. */
+.dialog { width: min(1080px, 100%); }
+.row { grid-template-columns: 72px minmax(0, 1fr); }
+.endPicker { margin-top: 18px; padding-top: 12px; border-top: 1px solid #e5ebf2; }
+.endPicker h4 { margin: 0 0 8px; color: #173368; font-size: 15px; }
+.disabled { opacity: .5; cursor: not-allowed; border-style: dashed; }
+.accessories { margin-top: 18px; padding-top: 12px; border-top: 1px solid #e5ebf2; }
+.accessories h4 { margin: 0 0 8px; color: #173368; font-size: 15px; }
+.accessory { display: grid; gap: 6px; margin-top: 12px; color: #173368; font-size: 13px; }
+.accessory label { display: flex; align-items: center; gap: 7px; }
+.accessory input { accent-color: #09a985; }
+.accessoryOptions { min-width: 0; }
+.accessoryOptions button:disabled { cursor: default; }
+.accessoryInactive { opacity: .5; }
+.summary { margin: 14px 0 0; padding: 0; list-style: none; }
+.summary li { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 9px; padding: 9px 0; border-top: 1px solid #e5ebf2; }
+.summary img { width: 48px; height: 48px; object-fit: contain; border: 1px solid #e5ebf2; background: #fff; }
+.summary strong { display: block; color: #173368; font-size: 12px; overflow-wrap: anywhere; }
+.summary small { display: block; margin-top: 3px; color: #667085; font-size: 11px; }
+.summary a { color: #173368; font-size: 11px; text-underline-offset: 2px; }
+.quantity { font-size: 12px; color: #667085; white-space: nowrap; }
+.single { grid-template-columns: minmax(0, 160px); justify-content: center; }
+.error { color: #b42318; font-size: 13px; line-height: 1.6; }
+.footActions { flex-wrap: wrap; }
+.flowHeading { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.flowHeading h4 { margin: 0; color: #000; font-size: 16px; font-weight: 400; line-height: 1.5; }
+.entryCollar { margin-top: 8px; }
+.footActions button:disabled { border-color: #cfd8e5; color: #8a96a8; background: #f7fafc; cursor: default; }
+
+/* Shared dialog presentation for all Chinese Luer fitting selectors. */
+.compact .endPicker:first-child, .compact .accessories:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.compact .endPicker h4, .compact .accessories h4 { color: #000; font-size: 16px; font-weight: 400; line-height: 1.5; }
+.compact .accessories { margin-top: 16px; padding-top: 14px; }
+.compact .accessories > p { margin-bottom: 12px; }
+.compact [data-luer-combination-type] { --luer-accessory-label-width: 104px; }
+.compact .accessory { grid-template-columns: minmax(var(--luer-accessory-label-width, 96px), max-content) minmax(0, 1fr); align-items: start; gap: 12px; }
+.compact .accessory label { white-space: nowrap; color: #5f6b7a; }
+.compact:not(:lang(zh)) .accessory { grid-template-columns: minmax(100px, .65fr) minmax(0, 1fr); }
+.compact:not(:lang(zh)) .accessory label { white-space: normal; overflow-wrap: anywhere; }
+.compact .accessory input { accent-color: #173368; }
+.compact .accessory > label { min-height: 32px; }
+.compact .result { padding-bottom: 0; }
+.compact [data-luer-assembly] { margin-top: 16px; }
+.compact [data-luer-assembly] > div { border: 0; }
+.compact [data-luer-assembly] > figcaption { display: none; }
+.previewNote { margin: 4px 0 14px; color: #8a96a8; font-size: 12px; line-height: 1.5; }
+.partsTable { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 13px; line-height: 1.5; }
+.partsTable th, .partsTable td { padding: 8px 6px; border-bottom: 1px solid #e5ebf2; text-align: left; vertical-align: middle; }
+.partsTable th { color: #5f6b7a; font-weight: 400; }
+.partsTable td { color: #000; overflow-wrap: anywhere; }
+.partsTable th:first-child, .partsTable td:first-child { width: 28%; padding-left: 0; }
+.partsTable th:last-child, .partsTable td:last-child { width: 78px; padding-right: 0; }
+.compact [data-luer-selection-mode="single"] [data-luer-assembly] { max-width: 360px; margin-left: auto; margin-right: auto; }
+@media (max-width: 760px) {
+  .dialog { height: 100dvh; max-height: 100dvh; }
+  .row { grid-template-columns: minmax(0, 1fr); }
+  .footActions button { padding: 8px 10px; }
+  .compact .accessory { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .partsTable { font-size: 12px; }
+  .partsTable th:first-child, .partsTable td:first-child { width: 26%; }
+  .partsTable th:last-child, .partsTable td:last-child { width: 64px; }
+}

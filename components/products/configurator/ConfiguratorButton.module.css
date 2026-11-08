@@ -1,0 +1,15 @@
+.button[data-configurator-button] {
+  --brand-blue: #173368;
+  --brand-cyan: #09e9b4;
+  font-family: "HarmonyOS Sans SC", "Microsoft YaHei", Arial, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.button[data-configurator-button]:focus-visible:not(:disabled) {
+  border-color: var(--brand-blue);
+  background: var(--brand-blue);
+  color: var(--brand-cyan);
+  outline: none;
+  text-decoration: none;
+}

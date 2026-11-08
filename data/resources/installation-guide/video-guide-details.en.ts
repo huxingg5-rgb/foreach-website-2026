@@ -82,8 +82,8 @@ export const englishVideoGuideDetails: readonly VideoGuideDetail[] = [
       { time: "00:50", start: 50, title: "Hose connection options", description: "The closing section introduces different hose connection sizes. Match each end to its hose size and verify the complete mating pair on the product pages." },
     ],
     productHeading: "Compare quick disconnect halves for the required shutoff arrangement",
-    productIntroduction: "Use the Q60 series page to compare connector halves and connection options. Check the required shutoff arrangement, hose dimensions, material and installation drawing for the selected pair.",
-    products: [{ title: "Q60 Quick-Connect Fittings", href: "/en/products/fittings/quick-connect-fittings/q60/" }],
+    productIntroduction: "Use the quick-connect fitting selection page to compare connector halves and connection options. Check the required shutoff arrangement, hose dimensions, material and installation drawing for the selected pair.",
+    products: [{ title: "Quick-Connect Fittings", href: "/en/products/fittings/quick-connect-fittings/" }],
     seriesLink: { title: "View all quick-connect fittings →", href: "/en/products/fittings/quick-connect-fittings/" },
     relationKeys: ["series:q60"],
     keywords: ["quick disconnect fittings", "valved quick connect", "non-valved coupling", "panel mount coupling", "hose connector"],
@@ -141,6 +141,7 @@ export const englishVideoGuideDetails: readonly VideoGuideDetail[] = [
 ];
 
 export function getVideoGuideDetail(locale: string, id: string): VideoGuideDetail | undefined {
+  if (locale === "zh-CN") return undefined;
   const base = englishVideoGuideDetails.find(video => video.id === id);
   if (!base) return undefined;
   const copy = getProductVideoCopy(locale, id);

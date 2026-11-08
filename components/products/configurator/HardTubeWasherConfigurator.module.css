@@ -1,11 +1,6 @@
-.selector { --right-inset: 32px; }
-.selector > header, .selector > footer, .selector .config { padding-right: var(--right-inset); }
-.selector :is(h2, h3, h4, strong, b, legend, button) { font-weight: 500; }
-.selector h2 { font-weight: 600; font-size: 27px; }
+.selector .config { padding-right: var(--right-inset); }
+.selector :is(h3, h4, strong, b, legend, button) { font-weight: 500; }
 .selector :is(button, a):focus-visible { outline: 2px solid #173368; outline-offset: 4px; }
-.footer .supportNotice { display: block; }
-.supportNotice a { color: #173368; text-decoration: underline; text-underline-offset: 3px; }
-.supportNotice a:hover { color: var(--brand-cyan, #09e9b4); }
 .main { grid-template-columns: minmax(300px, 33%) minmax(0, 1fr); }
 .summaryTable { margin-top: 16px; }
 .summaryTable > div { grid-template-columns: 86px minmax(0, 1fr); min-height: 41px; }
@@ -45,9 +40,6 @@
 .confirmed > span:first-child { min-width: 6em; color: #5f6b7a; }
 .confirmed small { color: #5f6b7a; font-size: 13px; }
 /* Keep the Chinese layout while allowing longer localized labels to wrap. */
-.selector:not([lang="zh"]) { grid-template-rows: auto minmax(0, 1fr) auto; }
-.selector:not([lang="zh"]) > header { min-height: 82px; padding-top: 18px; padding-bottom: 18px; }
-.selector:not([lang="zh"]) > footer { min-height: 76px; padding-top: 14px; padding-bottom: 14px; }
 .selector:not([lang="zh"]) .summaryTable > div { grid-template-columns: minmax(100px, .95fr) minmax(0, 1fr); }
 .selector:not([lang="zh"]) .resultRow { grid-template-columns: minmax(65px, .2fr) minmax(0, 1fr); }
 .selector:not([lang="zh"]) :is(legend, button, .dimensions dt) { white-space: normal; overflow-wrap: anywhere; }
@@ -55,12 +47,7 @@
 @media (min-width: 901px) {
   .selector .optionGrid > fieldset:first-child { grid-column: auto; }
 }
-@media (max-width: 1180px) {
-  .selector { --right-inset: 24px; }
-}
 @media (min-width: 901px) and (max-height: 780px) {
-  .selector { grid-template-rows: 90px minmax(0, 1fr) 80px; }
-  .selector > header { padding-top: 22px; }
   .summary, .config { padding-top: 18px; padding-bottom: 18px; }
   .config { gap: 18px; }
   .configBody { gap: 12px; }
@@ -84,24 +71,16 @@
   .optionGridWithTube .dimensions dl { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 900px) {
-  .overlay { padding: 12px; }
   .main { display: block; }
   .configBody { min-height: auto; }
-  .selector { --right-inset: 20px; grid-template-rows: 78px minmax(0, 1fr) auto; }
-  .selector > header { padding-top: 0; align-items: center; }
-  .selector h2 { font-size: 22px; }
   .summary { padding: 18px 20px; }
   .summaryTable { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; }
   .summaryTable > div { grid-template-columns: 78px minmax(0, 1fr); gap: 10px; }
   .washerSummary { margin-top: 14px; padding-top: 14px; }
   .config { padding: 20px; }
-  .footer { padding: 12px 20px; }
 }
 @media (max-width: 600px) {
   .selector:not([lang="zh"]) .summaryTable > div { grid-template-columns: 1fr; }
-  .selector { --right-inset: 16px; }
-  .overlay { padding: 0; }
-  .selector h2 { font-size: 21px; }
   .summaryTable { grid-template-columns: 1fr 1fr; column-gap: 14px; }
   .summaryTable > div { grid-template-columns: 1fr; gap: 4px; padding: 8px 0; }
   .config > div:first-child { display: block; }
@@ -117,6 +96,5 @@
   .result { padding: 14px; }
   .resultRow { gap: 8px; grid-template-columns: 32px minmax(0, 1fr); }
   .resultRow strong { font-size: 16px; }
-  .footer { padding: 12px 16px max(12px, env(safe-area-inset-bottom)); }
   .confirmed { font-size: 14px; }
 }

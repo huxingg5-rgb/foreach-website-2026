@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
-import { createPortal } from "react-dom";
 import Link from "next/link";
 import { getHardTubeAccessory, hardTubeProductCodeText, describeHardTubeAccessory, formatTubeDiameters, type HardTubeAccessoryConfig, type HardTubeAccessoryChoice } from "@/data/products/configurator/hard-tube-accessories";
 import { getHardTubeAccessoryCopy, getHardTubeAccessoryKindLabel, getHardTubeMaterialLabel, getHardTubeColorLabel, formatHardTubeCopy } from "@/data/products/configurator/hard-tube-accessories.intl";
+import ConfiguratorButton from "./ConfiguratorButton";
+import ConfiguratorDialogFrame from "./ConfiguratorDialogFrame";
 import shared from "./product-variant-configurator.module.css";
 import styles from "./HardTubeWasherConfigurator.module.css";
 
@@ -102,106 +103,105 @@ export default function HardTubeWasherConfigurator({ config, value, onClose, onC
 
   const optionClass = (active: boolean) => [shared.option, shared.single, active ? shared.active : ""].filter(Boolean).join(" ");
 
-  return createPortal(
-    <div className={`${shared.overlay} ${styles.overlay}`}>
-      <section ref={dialogRef} className={`${shared.selector} ${styles.selector}`} lang={locale} role="dialog" aria-modal="true" aria-labelledby="hfl-washer-title" aria-describedby="hfl-washer-description">
-        <header className={shared.header}>
-          <div className={shared.headerText}>
-            <h2 id="hfl-washer-title">{text(copy.title)}</h2>
-            <p id="hfl-washer-description">{text(copy.description)}</p>
+  return (
+    <ConfiguratorDialogFrame
+      dialogRef={dialogRef}
+      closeRef={closeRef}
+      locale={locale}
+      className={styles.selector}
+      titleId="hfl-washer-title"
+      descriptionId="hfl-washer-description"
+      title={text(copy.title)}
+      description={text(copy.description)}
+      closeLabel={copy.close}
+      onClose={onClose}
+      notice={<>{copy.supportBefore}<Link href={`${locale === "zh" ? "" : `/${locale}`}/contact/#form`}>{copy.contact}</Link>{text(copy.supportAfter)}</>}
+      actions={<>
+        <ConfiguratorButton variant="secondary" active={added} disabled={!ready || added} onClick={() => { if (ready && choice !== null) onAdd(choice); }}>{added ? copy.added : copy.add}</ConfiguratorButton>
+        <ConfiguratorButton variant="primary" disabled={!ready} onClick={() => { if (ready && choice !== null) onConfirm(choice); }}>{copy.confirm}</ConfiguratorButton>
+      </>}
+    >
+      <div className={`${shared.main} ${styles.main}`}>
+        <aside className={`${shared.summary} ${styles.summary}`}>
+          <div className={shared.summaryTitle}>
+            <span>{copy.current}</span>
+            <strong>{config.model}</strong>
+            <p className={styles.productName}>{config.productName}</p>
           </div>
-          <button ref={closeRef} className={shared.closeButton} type="button" aria-label={copy.close} onClick={onClose}>×</button>
-        </header>
+          <div className={`${shared.summaryTable} ${styles.summaryTable}`}>
+            {[[copy.code, config.productCode], [copy.thread, config.thread], [copy.tube, diameterLabel], [copy.bodyMaterial, config.material], [copy.bodyColor, config.color]].map(([label, text]) => (
+              <div className={shared.summaryRow} key={label}><span>{label}</span><b>{text}</b></div>
+            ))}
+          </div>
+          <div className={styles.washerSummary} aria-live="polite">
+            <span className={styles.eyebrow}>{text(copy.paired)}</span>
+            <strong>{washer?.model || (withWasher ? text(copy.chooseMaterial) : copy.fittingOnly)}</strong>
+            <p>{washer ? `${accessoryDescription(washer)} · ${copy.code} ${accessoryCode(washer)}` : text(withWasher ? copy.chooseOne : copy.noneThisTime)}</p>
+          </div>
+        </aside>
 
-        <div className={`${shared.main} ${styles.main}`}>
-          <aside className={`${shared.summary} ${styles.summary}`}>
-            <div className={shared.summaryTitle}>
-              <span>{copy.current}</span>
-              <strong>{config.model}</strong>
-              <p className={styles.productName}>{config.productName}</p>
-            </div>
-            <div className={`${shared.summaryTable} ${styles.summaryTable}`}>
-              {[[copy.code, config.productCode], [copy.thread, config.thread], [copy.tube, diameterLabel], [copy.bodyMaterial, config.material], [copy.bodyColor, config.color]].map(([label, text]) => (
-                <div className={shared.summaryRow} key={label}><span>{label}</span><b>{text}</b></div>
-              ))}
-            </div>
-            <div className={styles.washerSummary} aria-live="polite">
-              <span className={styles.eyebrow}>{text(copy.paired)}</span>
-              <strong>{washer?.model || (withWasher ? text(copy.chooseMaterial) : copy.fittingOnly)}</strong>
-              <p>{washer ? `${accessoryDescription(washer)} · ${copy.code} ${accessoryCode(washer)}` : text(withWasher ? copy.chooseOne : copy.noneThisTime)}</p>
-            </div>
-          </aside>
-
-          <section className={`${shared.config} ${styles.config}`}>
-            <div className={shared.sectionHead}>
-              <h3>{copy.configuration}</h3><span>{text(copy.compatibility, { thread: config.thread, diameters: diameterLabel })}</span>
-            </div>
-            <div className={styles.configBody}>
-              <div className={`${styles.optionGrid} ${config.tubeOuterDiameters.length > 1 ? styles.optionGridWithTube : ""}`}>
-                <fieldset className={shared.optionGroup}>
-                  <legend>{copy.pairing}</legend>
-                  <div className={styles.options}>
-                    <button type="button" disabled={!config.accessories.length} className={optionClass(withWasher)} aria-pressed={withWasher} onClick={() => { if (!withWasher) select(null); }}><span className={shared.check} aria-hidden="true" /><span>{text(copy.withAccessory)}</span></button>
-                    <button type="button" className={optionClass(!withWasher)} aria-pressed={!withWasher} onClick={() => select("none")}><span className={shared.check} aria-hidden="true" /><span>{copy.fittingOnly}</span></button>
-                  </div>
-                </fieldset>
-                {config.tubeOuterDiameters.length > 1 && (
-                  <fieldset className={`${shared.optionGroup} ${styles.tubeOptions}`}>
-                    <legend>{copy.tube}</legend>
-                    <div className={styles.options} role="radiogroup" aria-label={copy.tube}>
-                      {config.tubeOuterDiameters.map(diameter => <button key={diameter} type="button" role="radio" aria-checked={tubeDiameter === diameter} className={optionClass(tubeDiameter === diameter)} onClick={() => {
-                        setTubeDiameter(diameter);
-                        if (choice !== "none") select(null);
-                      }}><span className={shared.check} aria-hidden="true" />{diameter.toFixed(1)} mm</button>)}
-                    </div>
-                  </fieldset>
-                )}
-                <fieldset className={`${shared.optionGroup} ${styles.materialGroup}`} role="radiogroup" aria-label={text(copy.materialSingle)} disabled={!withWasher}>
-                  <legend>{text(copy.materialSingle)}</legend>
-                  <div className={styles.options}>
-                    {availableAccessories.map((item, index) => (
-                      <button key={item.productCode} type="button" role="radio" disabled={!withWasher} className={`${optionClass(choice === item.productCode)} ${styles.materialOption}`} aria-checked={choice === item.productCode} tabIndex={choice === item.productCode || (!washer && index === 0) ? 0 : -1} onClick={() => select(item.productCode)} onKeyDown={event => handleMaterialKey(event, index)}>
-                        <span className={shared.check} aria-hidden="true" />
-                        <span>{getHardTubeMaterialLabel(item.material, locale)}{kind === "卡箍" ? ` · ${getHardTubeColorLabel(item.color, locale)}` : ""}<small>{kind === "垫片" ? `${copy.thickness} ${item.thickness} mm` : text(copy.fitsTube, { diameters: `${tubeDiameter.toFixed(1)} mm` })}</small></span>
-                      </button>
-                    ))}
-                  </div>
-                </fieldset>
-                <div className={styles.dimensions}>
-                  <h4>{text(copy.specs)}</h4>
-                  <dl>{kind === "垫片" ? <>
-                    <div><dt>{copy.outer}</dt><dd>{washer ? `${washer.outerDiameter} mm` : "—"}</dd></div>
-                    <div><dt>{copy.inner}</dt><dd>{washer ? `${washer.innerDiameter} mm` : "—"}</dd></div>
-                    <div><dt>{copy.thickness}</dt><dd>{washer ? `${washer.thickness} mm` : "—"}</dd></div>
-                  </> : <>
-                    <div><dt>{copy.outer}</dt><dd>{washer?.outerDiameter ? `${washer.outerDiameter} mm` : "—"}</dd></div>
-                    <div><dt>{copy.inner}</dt><dd>{washer?.innerDiameter ? `${washer.innerDiameter} mm` : "—"}</dd></div>
-                    <div><dt>{copy.height}</dt><dd>{washer?.height ? `${washer.height} mm` : "—"}</dd></div>
-                    <div><dt>{copy.tubeOd}</dt><dd>{washer ? formatTubeDiameters(washer.tubeOuterDiameters) : "—"}</dd></div>
-                  </>}</dl>
-                  <p>{copy.dimensionsNote}</p>
+        <section className={`${shared.config} ${styles.config}`}>
+          <div className={shared.sectionHead}>
+            <h3>{copy.configuration}</h3><span>{text(copy.compatibility, { thread: config.thread, diameters: diameterLabel })}</span>
+          </div>
+          <div className={styles.configBody}>
+            <div className={`${styles.optionGrid} ${config.tubeOuterDiameters.length > 1 ? styles.optionGridWithTube : ""}`}>
+              <fieldset className={shared.optionGroup}>
+                <legend>{copy.pairing}</legend>
+                <div className={styles.options}>
+                  <button type="button" disabled={!config.accessories.length} className={optionClass(withWasher)} aria-pressed={withWasher} onClick={() => { if (!withWasher) select(null); }}><span className={shared.check} aria-hidden="true" /><span>{text(copy.withAccessory)}</span></button>
+                  <button type="button" className={optionClass(!withWasher)} aria-pressed={!withWasher} onClick={() => select("none")}><span className={shared.check} aria-hidden="true" /><span>{copy.fittingOnly}</span></button>
                 </div>
-              </div>
-
-              <p className={styles.selectionNote}>{text(withWasher ? copy.selectionNote : copy.fittingOnlyNote)}</p>
-
-              <div className={styles.result} aria-live="polite">
-                <div className={styles.resultHeader}><span>{copy.selected}</span><button className={shared.copyButton} type="button" disabled={!ready} onClick={copySelection}>{copyStatus || copy.copy}</button></div>
-                <div className={styles.resultRow}><span>{copy.fitting}</span><div><strong>{config.model}</strong><small>{copy.code} {config.productCode} · {config.material}</small></div></div>
-                <div className={styles.resultRow}><span>{kindLabel}</span><div><strong className={!washer ? styles.pending : undefined}>{washer?.model || (withWasher ? text(copy.chooseMaterial) : copy.notIncluded)}</strong>{washer && <small>{copy.code} {accessoryCode(washer)} · {accessoryDescription(washer)}</small>}</div></div>
+              </fieldset>
+              {config.tubeOuterDiameters.length > 1 && (
+                <fieldset className={`${shared.optionGroup} ${styles.tubeOptions}`}>
+                  <legend>{copy.tube}</legend>
+                  <div className={styles.options} role="radiogroup" aria-label={copy.tube}>
+                    {config.tubeOuterDiameters.map(diameter => <button key={diameter} type="button" role="radio" aria-checked={tubeDiameter === diameter} className={optionClass(tubeDiameter === diameter)} onClick={() => {
+                      setTubeDiameter(diameter);
+                      if (choice !== "none") select(null);
+                    }}><span className={shared.check} aria-hidden="true" />{diameter.toFixed(1)} mm</button>)}
+                  </div>
+                </fieldset>
+              )}
+              <fieldset className={`${shared.optionGroup} ${styles.materialGroup}`} role="radiogroup" aria-label={text(copy.materialSingle)} disabled={!withWasher}>
+                <legend>{text(copy.materialSingle)}</legend>
+                <div className={styles.options}>
+                  {availableAccessories.map((item, index) => (
+                    <button key={item.productCode} type="button" role="radio" disabled={!withWasher} className={`${optionClass(choice === item.productCode)} ${styles.materialOption}`} aria-checked={choice === item.productCode} tabIndex={choice === item.productCode || (!washer && index === 0) ? 0 : -1} onClick={() => select(item.productCode)} onKeyDown={event => handleMaterialKey(event, index)}>
+                      <span className={shared.check} aria-hidden="true" />
+                      <span>{getHardTubeMaterialLabel(item.material, locale)}{kind === "卡箍" ? ` · ${getHardTubeColorLabel(item.color, locale)}` : ""}<small>{kind === "垫片" ? `${copy.thickness} ${item.thickness} mm` : text(copy.fitsTube, { diameters: `${tubeDiameter.toFixed(1)} mm` })}</small></span>
+                    </button>
+                  ))}
+                </div>
+              </fieldset>
+              <div className={styles.dimensions}>
+                <h4>{text(copy.specs)}</h4>
+                <dl>{kind === "垫片" ? <>
+                  <div><dt>{copy.outer}</dt><dd>{washer ? `${washer.outerDiameter} mm` : "—"}</dd></div>
+                  <div><dt>{copy.inner}</dt><dd>{washer ? `${washer.innerDiameter} mm` : "—"}</dd></div>
+                  <div><dt>{copy.thickness}</dt><dd>{washer ? `${washer.thickness} mm` : "—"}</dd></div>
+                </> : <>
+                  <div><dt>{copy.outer}</dt><dd>{washer?.outerDiameter ? `${washer.outerDiameter} mm` : "—"}</dd></div>
+                  <div><dt>{copy.inner}</dt><dd>{washer?.innerDiameter ? `${washer.innerDiameter} mm` : "—"}</dd></div>
+                  <div><dt>{copy.height}</dt><dd>{washer?.height ? `${washer.height} mm` : "—"}</dd></div>
+                  <div><dt>{copy.tubeOd}</dt><dd>{washer ? formatTubeDiameters(washer.tubeOuterDiameters) : "—"}</dd></div>
+                </>}</dl>
+                <p>{copy.dimensionsNote}</p>
               </div>
             </div>
-          </section>
-        </div>
 
-        <footer className={`${shared.footer} ${styles.footer}`}>
-          <div className={`${shared.notice} ${styles.supportNotice}`}>{copy.supportBefore}<Link href={`${locale === "zh" ? "" : `/${locale}`}/contact/#form`}>{copy.contact}</Link>{text(copy.supportAfter)}</div>
-          <div className={shared.actions}>
-            <button className={`${shared.listButton} ${added ? shared.listButtonActive : ""}`} type="button" disabled={!ready || added} onClick={() => { if (ready && choice !== null) onAdd(choice); }}>{added ? copy.added : copy.add}</button>
-            <button className={shared.primaryButton} type="button" disabled={!ready} onClick={() => { if (ready && choice !== null) onConfirm(choice); }}>{copy.confirm}</button>
+            <p className={styles.selectionNote}>{text(withWasher ? copy.selectionNote : copy.fittingOnlyNote)}</p>
+
+            <div className={styles.result} aria-live="polite">
+              <div className={styles.resultHeader}><span>{copy.selected}</span><button className={shared.copyButton} type="button" disabled={!ready} onClick={copySelection}>{copyStatus || copy.copy}</button></div>
+              <div className={styles.resultRow}><span>{copy.fitting}</span><div><strong>{config.model}</strong><small>{copy.code} {config.productCode} · {config.material}</small></div></div>
+              <div className={styles.resultRow}><span>{kindLabel}</span><div><strong className={!washer ? styles.pending : undefined}>{washer?.model || (withWasher ? text(copy.chooseMaterial) : copy.notIncluded)}</strong>{washer && <small>{copy.code} {accessoryCode(washer)} · {accessoryDescription(washer)}</small>}</div></div>
+            </div>
           </div>
-        </footer>
-      </section>
-    </div>, document.body,
+        </section>
+      </div>
+
+    </ConfiguratorDialogFrame>
   );
 }

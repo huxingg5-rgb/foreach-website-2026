@@ -573,7 +573,7 @@ function createBaseDetail({
   const lrlMaterial = productTypeId === "luer-fittings"
     ? /^LRL-(?:16|24|32)-(PA-W|PP-N)$/.exec(model)?.[1].split("-")[0]
     : undefined;
-  const lockingCollarGallery = productTypeId === "luer-fittings" && ["LPR", "LPS"].includes(seriesCode)
+  const lockingCollarGallery = productTypeId === "luer-fittings" && ["LPR", "LPS", "LPT"].includes(seriesCode)
     ? luerLockingCollarGallery
     : undefined;
   const onePieceMaleGallery = productTypeId === "luer-fittings" && seriesCode === "LP"

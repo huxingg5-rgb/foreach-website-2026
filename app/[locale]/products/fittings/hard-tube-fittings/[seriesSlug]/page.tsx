@@ -1,4 +1,5 @@
 import HardTubeFittingRelatedArticles from "@/components/products/detail/HardTubeFittingRelatedArticles";
+import FittingLocalizedSelectionContent from "@/components/products/detail/FittingLocalizedSelectionContent";
 import type {
   Metadata,
 } from "next";
@@ -376,6 +377,8 @@ export default async function LocalizedHardTubeDetailPage({
 
   return (
     <ProductDetailClient
+      customerCategoryMode="hard-tube-zh"
+      customerCategoryContent={{selection:<FittingLocalizedSelectionContent data={{...detail,productTypeId:"hard-tube-fittings"}} locale={locale}/>}}
       afterContent={<HardTubeFittingRelatedArticles model={detail.model} locale={locale} />}
       data={
         toClientData(

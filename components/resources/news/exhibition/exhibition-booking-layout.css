@@ -1,0 +1,33 @@
+/* =========================================================
+   exhibition-booking-layout.css（全局样式，由 ExhibitionBookingAside 引入）
+   只对「带预约表单右栏」的展会文章生效，其他技术文章 / 新闻不受影响：
+   ≥1280px：目录 / 正文 / 预约表单 三栏，整体居中
+   数值与 RplSelectionArticle.module.css 里「相关产品右栏」的三栏规则一致
+========================================================= */
+
+@media (min-width: 1280px) {
+  main[data-editorial-article] > article[data-has-related-products]:has(> [data-booking-rail]) {
+    max-width: 1400px;
+    padding-inline: 28px;
+    grid-template-columns: 180px minmax(0, 1fr) 220px;
+    column-gap: 28px;
+  }
+
+  /* 「< 返回」与三栏左边对齐 */
+  div:has(+ main[data-editorial-article] > article > [data-booking-rail]) {
+    max-width: 1400px;
+    padding-inline: 28px;
+  }
+}
+
+@media (min-width: 1440px) {
+  main[data-editorial-article] > article[data-has-related-products]:has(> [data-booking-rail]) {
+    padding-inline: 40px;
+    grid-template-columns: 208px minmax(0, 800px) 240px;
+    column-gap: 36px;
+  }
+
+  div:has(+ main[data-editorial-article] > article > [data-booking-rail]) {
+    padding-inline: 40px;
+  }
+}

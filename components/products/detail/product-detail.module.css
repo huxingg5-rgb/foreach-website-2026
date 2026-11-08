@@ -362,6 +362,31 @@
   color: var(--cyan);
 }
 
+.button.selectionPrimary {
+  background: var(--blue);
+  color: var(--cyan);
+}
+
+.modelSelectionButton {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: rgba(23, 51, 104, 0.35);
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.modelSelectionButton:hover,
+.modelSelectionButton:focus-visible {
+  color: var(--cyan-dark, #008e75);
+  text-decoration-color: currentColor;
+}
+
 .actionRow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1349,6 +1374,168 @@
   width: 46px !important;
   height: 3px !important;
   background: #00d6aa !important;
+}
+
+/* Fitting details share these three content sections in every language. */
+.customerCategoryNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 76px;
+  border-bottom: 1px solid #dbe3ee;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.customerCategoryButton {
+  position: relative;
+  min-width: auto;
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0 6px;
+  border: 0;
+  background: transparent;
+  color: #111111;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.customerCategoryButton:hover {
+  color: #00b894;
+}
+
+.customerCategoryButton.isActive {
+  color: #00cfa5;
+}
+
+.customerCategoryButton::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: transparent;
+}
+
+.customerCategoryButton.isActive::after {
+  width: 46px;
+  height: 3px;
+  background: #00d6aa;
+}
+
+.customerCategoryPanelHidden {
+  display: none !important;
+}
+
+.customerCategoryContent {
+  margin-top: 18px;
+}
+
+/* 快插中文产品资料平铺规格和已提供的 2D 图纸；3D 暂不接入。 */
+.productResourcePanelsFlat {
+  padding-top: 0;
+}
+
+.productResourcePanelsFlat .panel {
+  display: block;
+  margin: 0;
+  padding: 0 0 36px;
+  border-bottom: 1px solid #dbe3ee;
+}
+
+.productResourcePanelsFlat .panel + .panel {
+  padding-top: 32px;
+}
+
+.productResourcePanelsFlat .panel:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.flatPanelTitle {
+  margin: 0 0 16px;
+  color: #111111;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.quickConnectPairNote {
+  margin: 16px 0 0;
+  padding: 0 8px;
+  color: #465369;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.quickConnectPairNote a {
+  color: #173368;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.modelDrawingGroup {
+  display: contents;
+}
+
+.productResourcePanelsFlat .modelDrawingGroup {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #dbe3ee;
+  background: #ffffff;
+}
+
+.productResourcePanelsFlat .modelDrawingGroup .panel {
+  display: none;
+  margin: 0;
+  padding: 18px;
+  border-bottom: 0;
+}
+
+.productResourcePanelsFlat .modelDrawingGroup .panel.isActive {
+  display: block;
+}
+
+.productResourcePanelsFlat .modelDrawingGroup .panel .panelBox {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .customerCategoryNav {
+    justify-content: flex-start;
+    gap: 24px;
+    overflow-x: auto;
+  }
+
+  .customerCategoryButton {
+    font-size: 20px;
+  }
+
+  .productResourcePanelsFlat .panel {
+    padding-bottom: 28px;
+  }
+
+  .productResourcePanelsFlat .panel + .panel {
+    padding-top: 24px;
+  }
+
+  .productResourcePanelsFlat .modelDrawingGroup {
+    border-radius: 0;
+  }
+
+  .flatPanelTitle {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
 }
 
 /* ===== FOREACH product detail tab final clean END ===== */
@@ -2712,5 +2899,25 @@
     font-size: 16px !important;
     font-weight: 400 !important;
     line-height: 1.7 !important;
+  }
+}
+
+/* Keep translated section labels visible on phones and tablets. */
+@media (max-width: 1024px) {
+  .customerCategoryNav {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 8px;
+    overflow: visible;
+  }
+  .customerCategoryButton {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
+  }
+  .customerCategoryNav:not(:lang(zh)) .customerCategoryButton {
+    font-size: clamp(12px, 3.5vw, 20px);
   }
 }

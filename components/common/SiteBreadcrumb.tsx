@@ -27,6 +27,8 @@ import styles from "./SiteBreadcrumb.module.css";
 export type SiteBreadcrumbItem = {
   label: string;
   href?: string;
+  /** Allow a detail page to keep its canonical current-page URL clickable. */
+  linkCurrent?: boolean;
 };
 
 type SiteBreadcrumbVariant = "bar" | "inline";
@@ -68,11 +70,18 @@ export default function SiteBreadcrumb({
         {items.map((sourceItem, index) => {
           const item = { ...sourceItem, label: normalizeProductBreadcrumbLabel(sourceItem.label, sourceItem.href) };
           const isLast = index === items.length - 1;
+          const canLink = Boolean(
+            item.href &&
+            !isResourcesRootHref(item.href) &&
+            (!isLast || item.linkCurrent),
+          );
 
           return (
             <span className={styles.item} key={`${item.label}-${index}`}>
-              {item.href && !isLast && !isResourcesRootHref(item.href) ? (
-                <Link href={item.href}>{item.label}</Link>
+              {canLink ? (
+                <Link href={item.href!} aria-current={isLast ? "page" : undefined}>
+                  {item.label}
+                </Link>
               ) : isLast ? (
                 <strong>{item.label}</strong>
               ) : (

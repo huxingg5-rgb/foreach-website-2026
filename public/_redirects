@@ -1529,6 +1529,45 @@
 /ru/products/pumps/pipetting-pumps/smtp4-250ul/ /ru/products/pumps/pipetting-pumps/smtp4-pipetting-module/smtp4-250ul/ 301
 /ru/products/pumps/pipetting-pumps/smtp4-500ul /ru/products/pumps/pipetting-pumps/smtp4-pipetting-module/smtp4-500ul/ 301
 /ru/products/pumps/pipetting-pumps/smtp4-500ul/ /ru/products/pumps/pipetting-pumps/smtp4-pipetting-module/smtp4-500ul/ 301
+
+# BEGIN RETIRED QUICK CONNECT SERIES
+/products/fittings/quick-connect-fittings/q20 /products/fittings/quick-connect-fittings/ 301
+/products/fittings/quick-connect-fittings/q20/ /products/fittings/quick-connect-fittings/ 301
+/products/fittings/quick-connect-fittings/q40 /products/fittings/quick-connect-fittings/ 301
+/products/fittings/quick-connect-fittings/q40/ /products/fittings/quick-connect-fittings/ 301
+/products/fittings/quick-connect-fittings/q60 /products/fittings/quick-connect-fittings/ 301
+/products/fittings/quick-connect-fittings/q60/ /products/fittings/quick-connect-fittings/ 301
+/en/products/fittings/quick-connect-fittings/q20 /en/products/fittings/quick-connect-fittings/ 301
+/en/products/fittings/quick-connect-fittings/q20/ /en/products/fittings/quick-connect-fittings/ 301
+/en/products/fittings/quick-connect-fittings/q40 /en/products/fittings/quick-connect-fittings/ 301
+/en/products/fittings/quick-connect-fittings/q40/ /en/products/fittings/quick-connect-fittings/ 301
+/en/products/fittings/quick-connect-fittings/q60 /en/products/fittings/quick-connect-fittings/ 301
+/en/products/fittings/quick-connect-fittings/q60/ /en/products/fittings/quick-connect-fittings/ 301
+/es/products/fittings/quick-connect-fittings/q20 /es/products/fittings/quick-connect-fittings/ 301
+/es/products/fittings/quick-connect-fittings/q20/ /es/products/fittings/quick-connect-fittings/ 301
+/es/products/fittings/quick-connect-fittings/q40 /es/products/fittings/quick-connect-fittings/ 301
+/es/products/fittings/quick-connect-fittings/q40/ /es/products/fittings/quick-connect-fittings/ 301
+/es/products/fittings/quick-connect-fittings/q60 /es/products/fittings/quick-connect-fittings/ 301
+/es/products/fittings/quick-connect-fittings/q60/ /es/products/fittings/quick-connect-fittings/ 301
+/fr/products/fittings/quick-connect-fittings/q20 /fr/products/fittings/quick-connect-fittings/ 301
+/fr/products/fittings/quick-connect-fittings/q20/ /fr/products/fittings/quick-connect-fittings/ 301
+/fr/products/fittings/quick-connect-fittings/q40 /fr/products/fittings/quick-connect-fittings/ 301
+/fr/products/fittings/quick-connect-fittings/q40/ /fr/products/fittings/quick-connect-fittings/ 301
+/fr/products/fittings/quick-connect-fittings/q60 /fr/products/fittings/quick-connect-fittings/ 301
+/fr/products/fittings/quick-connect-fittings/q60/ /fr/products/fittings/quick-connect-fittings/ 301
+/ko/products/fittings/quick-connect-fittings/q20 /ko/products/fittings/quick-connect-fittings/ 301
+/ko/products/fittings/quick-connect-fittings/q20/ /ko/products/fittings/quick-connect-fittings/ 301
+/ko/products/fittings/quick-connect-fittings/q40 /ko/products/fittings/quick-connect-fittings/ 301
+/ko/products/fittings/quick-connect-fittings/q40/ /ko/products/fittings/quick-connect-fittings/ 301
+/ko/products/fittings/quick-connect-fittings/q60 /ko/products/fittings/quick-connect-fittings/ 301
+/ko/products/fittings/quick-connect-fittings/q60/ /ko/products/fittings/quick-connect-fittings/ 301
+/ru/products/fittings/quick-connect-fittings/q20 /ru/products/fittings/quick-connect-fittings/ 301
+/ru/products/fittings/quick-connect-fittings/q20/ /ru/products/fittings/quick-connect-fittings/ 301
+/ru/products/fittings/quick-connect-fittings/q40 /ru/products/fittings/quick-connect-fittings/ 301
+/ru/products/fittings/quick-connect-fittings/q40/ /ru/products/fittings/quick-connect-fittings/ 301
+/ru/products/fittings/quick-connect-fittings/q60 /ru/products/fittings/quick-connect-fittings/ 301
+/ru/products/fittings/quick-connect-fittings/q60/ /ru/products/fittings/quick-connect-fittings/ 301
+# END RETIRED QUICK CONNECT SERIES
 # BEGIN RETIRED TUBING ASSEMBLY REDIRECTS
 /en/products/tubing-assemblies/flanged-tubing/details/coiled /en/products/tubing-assemblies/flanged-tubing/details/ 301
 /en/products/tubing-assemblies/flanged-tubing/details/coiled/ /en/products/tubing-assemblies/flanged-tubing/details/ 301

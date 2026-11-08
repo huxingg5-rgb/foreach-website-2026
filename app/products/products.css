@@ -4628,3 +4628,10 @@
   object-fit: cover !important;
   object-position: center !important;
 }
+
+/* Give every Luer fitting card balanced whitespace around the complete image. */
+.products-selection-page .product-card[data-product-type-id="luer-fittings"] .product-image img {
+  width: 80% !important;
+  height: 80% !important;
+  object-fit: contain !important;
+}

@@ -3,10 +3,6 @@ import SitePageShell from "@/components/layout/SitePageShell";
 import { notFound } from "next/navigation";
 
 import { installationGuideZhData } from "@/data/resources/installation-guide/installation-guide.zh";
-import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
-import { getVideoGuideMetadata } from "@/data/resources/installation-guide/video-guide-metadata";
-import VideoGuideDetailPage from "@/components/resources/installation-guide/VideoGuideDetailPage";
-import { multilingualProductVideoIds } from "@/data/resources/installation-guide/video-guide-route-availability";
 
 type InstallationGuideDetailPageProps = {
   params: Promise<{
@@ -15,16 +11,13 @@ type InstallationGuideDetailPageProps = {
 };
 
 export function generateStaticParams() {
-  return [...new Set([...installationGuideZhData.guides.map(guide => guide.id), ...multilingualProductVideoIds])]
-    .map(slug => ({ slug }));
+  return installationGuideZhData.guides.map(guide => ({ slug: guide.id }));
 }
 
 export async function generateMetadata({
   params,
 }: InstallationGuideDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const video = getVideoGuideDetail("zh-CN", slug);
-  if (video) return getVideoGuideMetadata(video);
 
   const currentGuide = installationGuideZhData.guides.find(
     (guide) => guide.id === slug,
@@ -46,8 +39,6 @@ export default async function InstallationGuideDetailPage({
   params,
 }: InstallationGuideDetailPageProps) {
   const { slug } = await params;
-  const video = getVideoGuideDetail("zh-CN", slug);
-  if (video) return <VideoGuideDetailPage video={video} />;
 
   const currentGuide = installationGuideZhData.guides.find(
     (guide) => guide.id === slug,

@@ -1,0 +1,7780 @@
+{
+  "schemaVersion": 1,
+  "description": "Source BREP retention groove and locking-land datums for neutral assembled display; geometry and product dimensions are unchanged.",
+  "geometries": {
+    "quick-connect-515-00-04956": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "be7b1e770de2bb984a62964ddc58e052c3df1bbdbed1cec26dbb9ffa587a01ee",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -7.715,
+        0,
+        0
+      ],
+      "center": [
+        3.565,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.915,
+        4.215
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          37
+        ],
+        [
+          0,
+          38
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05229": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "c4aa365ba0e985b606b65bbeb24315a010639e95a676b97df6a3aa67f5b152fd",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -5.715,
+        0,
+        0
+      ],
+      "center": [
+        3.565,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.915,
+        4.215
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05262": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "ed72bd7f91cb0af3b01cd86fff5a242d48b2121755c003d0fc90fd4246981f55",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -5.715,
+        0,
+        0
+      ],
+      "center": [
+        3.565,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.915,
+        4.215
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05240": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "f5fd7255a653ab96708d709c22f3ecb1a429b14de1bbffb95f7a7baeddc5b8c5",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -7.7,
+        0,
+        0
+      ],
+      "center": [
+        3.55,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.9,
+        4.2
+      ],
+      "grooveWidthMm": 1.3000000000000003,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05225": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "826e48979f2657974e9688ba12eed5dd2003794e90dfd08ef3202b6289806eee",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -8.15
+      ],
+      "center": [
+        0,
+        0,
+        1.1
+      ],
+      "grooveInterval": [
+        0.45,
+        1.75
+      ],
+      "grooveWidthMm": 1.3,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05238": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "6fdd9e8a01f032673e3140e2af17177ce507bf7d5a6cfcfd19e13233f80d2523",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          170
+        ],
+        [
+          0,
+          162
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05271": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "5abc99bba8288c28ad5ed66ae8811bad851cef66c8f27ef4ffc857796cbc0e3a",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          175
+        ],
+        [
+          0,
+          167
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05271",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05223": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "a6a515acb46dc10fa46e125f2e1a15305597a5011e672d73ed0bacc3c5650c33",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          45
+        ],
+        [
+          0,
+          43
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05256": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "927da9be6ad652fde905dfa93f827f840689016adc4c06f52bbd3d33f4bb1df5",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          45
+        ],
+        [
+          0,
+          43
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05230": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "5d45ce5aea637d44e24c1d9bbf91dc2726d291e72443a0c3dc0f5f370604fbb6",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05265": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "f983efef720c8a5cb4882abaa727f0627a6eff23db5fc3b0d98811a9c796fd3b",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          59
+        ],
+        [
+          0,
+          51
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05252": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "e8bb084db6d4a53f3d3065b5c5ceb7cb671dc75187f45a3da3474f5c6b068003",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05247": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "69c9c2f2584a0b12a6a7494fd31ff44c9ae8a345ae8e6b012cb86347913b63d3",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          74
+        ],
+        [
+          0,
+          66
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04952": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "7f42285f11f20f367debff0ff0a2f6e7304de7ee9baa057c6a038a7954d3ffc0",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -2.565,
+        8,
+        -8.931373269211
+      ],
+      "center": [
+        9.215,
+        8,
+        -8.931373269211
+      ],
+      "grooveInterval": [
+        8.565,
+        9.865
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04941": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "9c3b6431ed2c5c0fa0d5d667ff1c2ba107ca7af05f1f9f9eb977b6103144050c",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -2.565,
+        8,
+        -8.931373269211
+      ],
+      "center": [
+        9.215,
+        8,
+        -8.931373269211
+      ],
+      "grooveInterval": [
+        8.565,
+        9.865
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04957": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "8c4b347359f2b0e5f5d821b654c89aa86dc438949689dcd18d0af067c4a57ef4",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -5.715,
+        0,
+        0
+      ],
+      "center": [
+        3.565,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.915,
+        4.215
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04953": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "4e9af7e92aa3a30e3e540ac4d09cad7ffe06a6e445991b1ab5da3438089f12c6",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -5.715,
+        0,
+        0
+      ],
+      "center": [
+        3.565,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.915,
+        4.215
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04876": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "e9bfd88082c6537638f44ad1caa2436691146a6b0fd3034558185b4d76805774",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -7.7,
+        0,
+        0
+      ],
+      "center": [
+        3.55,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.9,
+        4.2
+      ],
+      "grooveWidthMm": 1.3000000000000003,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05254": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "d5d4ef02bc8b6632ac2d86b3b0b660604be71d1f67ecbc2278ff0525aded173a",
+      "axis": 1,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        -2,
+        0
+      ],
+      "center": [
+        0,
+        9.280000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8.63,
+        9.93
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          61
+        ],
+        [
+          0,
+          70
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04950": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "cd8c77812603295464c68d0475571cf705a541ae96e205c88dad283994f50429",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -2.75,
+        8,
+        -8.931373269211
+      ],
+      "center": [
+        9.2,
+        8,
+        -8.931373269211
+      ],
+      "grooveInterval": [
+        8.55,
+        9.85
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04958": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "dd3caac12a45b2173094fd28bd56e26156d85160f40442a56d08498a7b67f7d5",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -2.75,
+        8,
+        -8.931373269211
+      ],
+      "center": [
+        9.2,
+        8,
+        -8.931373269211
+      ],
+      "grooveInterval": [
+        8.55,
+        9.85
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04947": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "219069a54ffd8eef8ee5e050ff61b76eec23ccf02965791a72f448fb3112b484",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        17,
+        -17.88
+      ],
+      "center": [
+        0,
+        7.72,
+        -17.88
+      ],
+      "grooveInterval": [
+        7.07,
+        8.37
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04959": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "822e420cecf73471fe9558467fbaffc65bf16ae1970fb990636caa8541867d1c",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        17,
+        -17.88
+      ],
+      "center": [
+        0,
+        7.72,
+        -17.88
+      ],
+      "grooveInterval": [
+        7.07,
+        8.37
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04960": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "cea4d1f7612ee98d4422458bddb87c0523a5cc5d442cbfa3d2fbaceef797af2f",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -3.69385
+      ],
+      "center": [
+        0,
+        0,
+        5.556150000000001
+      ],
+      "grooveInterval": [
+        4.90615,
+        6.20615
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04946": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "e9409428a575a7b261c914bb667dbb75e469f15d8521e274a151512d0c3b8e23",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -3.69385
+      ],
+      "center": [
+        0,
+        0,
+        5.556150000000001
+      ],
+      "grooveInterval": [
+        4.90615,
+        6.20615
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04949": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "99eb92bea2973b18b2ef4b36c02c145b8d939339f61a044a525895e4662f678e",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.4
+      ],
+      "center": [
+        0,
+        0,
+        -25.95
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.4,
+        -25.5
+      ],
+      "faceReferences": [
+        [
+          0,
+          213
+        ],
+        [
+          0,
+          279
+        ],
+        [
+          0,
+          281
+        ],
+        [
+          0,
+          240
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04951": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "5c22ebe6efe334f662ebe900285e19e8307aacdcb269bdf1ce834fc542dffa4b",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          184
+        ],
+        [
+          0,
+          176
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05271",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04944": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "a93022d37442abde84c78b37ae0968ec7122297f232b9bb560c2e985a0e38057",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          31
+        ],
+        [
+          0,
+          29
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04955": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "a958a9bccddb78aa27002e9a29b604d3919112f48e516517820b0177129292a8",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          47
+        ],
+        [
+          0,
+          45
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05235": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "9272f28aa481837bd0a561963ce383352848ac4fd1661f7ba740c321141d3044",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          80
+        ],
+        [
+          0,
+          72
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05268": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "2dd109afc98c3447638dd7a8baa2d32a901180b148dc9a02a5309fbbbdba9bee",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          79
+        ],
+        [
+          0,
+          71
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04948": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "ab882aee8e877c67fd8bde685a2c9b84a01649d75b8421ef486d6ee181c3829c",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        28.22,
+        0,
+        0
+      ],
+      "center": [
+        25.87,
+        0,
+        0
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        25.42,
+        26.32
+      ],
+      "faceReferences": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "releaseDirection": [
+        0,
+        0,
+        -1
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            2,
+            1,
+            0
+          ],
+          "s": [
+            -1,
+            1,
+            -1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04942": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "7f23874ad754bf1c98a54dbffb3575cda5c775e0de22d825bec47c4a220f0a31",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        8.47,
+        7.546930746137,
+        -28.22
+      ],
+      "center": [
+        8.47,
+        7.546930746137,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05220": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "ed24dd3630cc136fea30771f58fc181e9513785b4de2d6e8cc19e23655b61cac",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05250": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "0eaf8eb496dddd5c562b80d32812bebb473800e352561cf8443291b199602cf8",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          90
+        ],
+        [
+          0,
+          82
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05203": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "44e984c5769b21dcca0588b36c1b821b090caed4eecd6b36e8cfcae14eeda81b",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04954": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "8695d83a783a93ff99bf80f7d6e516077085fa3d80996ee3e30d998c7effde92",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          84
+        ],
+        [
+          0,
+          76
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05245": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "e8af96de4217594198226efd66fc2c276d625b595cccaf391af98c5de0a43c14",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -7.715,
+        0,
+        0
+      ],
+      "center": [
+        3.565,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.915,
+        4.215
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05231": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "279dcdb746198863e84f3995f2ee426f4ff67a544dcea38429f6efcdab6a59b1",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -5.715,
+        0,
+        0
+      ],
+      "center": [
+        3.565,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.915,
+        4.215
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05241": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "2ccff64ffb735756aa9bf5db0ad706a2bea27ef4adc2bf711aa161279b3c380e",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -7.7,
+        0,
+        0
+      ],
+      "center": [
+        3.55,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.9,
+        4.2
+      ],
+      "grooveWidthMm": 1.3000000000000003,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05226": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "a601ce5daf062ef98c3e910d0a2f47433e0bf434c1b398e0e98d08a6ba6f2fee",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -29.30385
+      ],
+      "center": [
+        0,
+        0,
+        -20.053849999999997
+      ],
+      "grooveInterval": [
+        -20.70385,
+        -19.40385
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05239": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "93a74e8e619810ead1f3ffeb4e9cc5dda85da5b1c2058bfabdd3e6a02ea10d6c",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          182
+        ],
+        [
+          0,
+          174
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05272": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "ae58ebcd59495f95be8fdaa07723ca0158bc39262bffa9eb673ee819ec20a67c",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          186
+        ],
+        [
+          0,
+          178
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05271",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05224": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "230baf1bfee095ee5caab03b3e9b5304d68c317f3c04075b71c35106ed703285",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          45
+        ],
+        [
+          0,
+          43
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05257": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "bed873888b0d7bd85ee8d77c5e5cc3dfe805e1ba496a324f1d178e7174c9cc5e",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          45
+        ],
+        [
+          0,
+          43
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05233": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "6d6f1a051ecc53346a288d34054a740cc082917ecfa2502790aeec62a74e27c1",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05266": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "a5b8b50c109ac76f1c8438c548aa8106bfa4ee1267d6f90fd5596e3640ef2632",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          71
+        ],
+        [
+          0,
+          63
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05218": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "5316f686f94de69dcd1c3374d5b483ab3e453d5df9c07affb21ddba256bc1113",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05248": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "277174e5b48c04d6b788f37e5b79e6c0a1755dfb3e7d86a2f766bea62c004a3c",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05246": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "1ae3e1bc6b2a98820e664a32897b4538ece794da10696ffbf96b6c9611252e8e",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -7.715,
+        0,
+        0
+      ],
+      "center": [
+        3.565,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.915,
+        4.215
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05232": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "735c936ebbfce997d9a36c458e450493abf948dbf87f0ed914b82bb97d4f60de",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -5.715,
+        0,
+        0
+      ],
+      "center": [
+        3.565,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.915,
+        4.215
+      ],
+      "grooveWidthMm": 1.2999999999999998,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05243": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "909fc47b21fbc262aa4332d899c4efe853e4d0f6ebcf915e93da57de7bc8001b",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -7.7,
+        0,
+        0
+      ],
+      "center": [
+        3.55,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.9,
+        4.2
+      ],
+      "grooveWidthMm": 1.3000000000000003,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05242": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "d18b08131c315ed9370b9457983f345a96c960facc4e6011bf0fda8d9043d872",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -7.7,
+        0,
+        0
+      ],
+      "center": [
+        3.55,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.9,
+        4.2
+      ],
+      "grooveWidthMm": 1.3000000000000003,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05227": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "7951300c16e3742ca65e1f94a0f49472b173a67c714c56347e451ca0119d399c",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        17.5,
+        -23.43
+      ],
+      "center": [
+        0,
+        8.25,
+        -23.43
+      ],
+      "grooveInterval": [
+        7.6,
+        8.9
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          35
+        ],
+        [
+          0,
+          36
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04973": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "7439ed2aeb53a9dcc2ad0777d3943713e97aa062304a958a41e7d6a6a393a00b",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        23,
+        -23.43
+      ],
+      "center": [
+        0,
+        13.75,
+        -23.43
+      ],
+      "grooveInterval": [
+        13.1,
+        14.4
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          35
+        ],
+        [
+          0,
+          36
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04943": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "18830a2d59c655f49e02cac4aef412b54c56c6fb9bdf588a143d52abebc3f797",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -30.30385
+      ],
+      "center": [
+        0,
+        0,
+        -21.053849999999997
+      ],
+      "grooveInterval": [
+        -21.70385,
+        -20.40385
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05197": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "3afee627ee86993c188822b705187472cb916138bacaecc7458d899a61b2e501",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        9.25
+      ],
+      "grooveInterval": [
+        8.6,
+        9.9
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04878": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "42c2e061399a2cbae7a47a5e23a07dc099fd4ef443947dc857208b694d266cb8",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04974": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "cc7b887894a9b3153430168373544e3d5439232f762a48672496d6839c1fca41",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          188
+        ],
+        [
+          0,
+          180
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05271",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04945": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "4a05310800c147dc283ba175a1b721caf4f0e9d2293d424321f227ca448a22f1",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          45
+        ],
+        [
+          0,
+          43
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05258": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "56c24d467e3c6299906e8dc3575b557fb03af77be29d71ee3ad367573880ff3c",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2
+      ],
+      "center": [
+        0,
+        0,
+        -25.85
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -26.3,
+        -25.4
+      ],
+      "faceReferences": [
+        [
+          0,
+          45
+        ],
+        [
+          0,
+          43
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05236": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "30dd3e871a4ceb784002f0222d82dc9dd57eb6fa576dfd3a13269eaf7156e49d",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          79
+        ],
+        [
+          0,
+          71
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05269": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "5275265a1ff22c465d3d1298896da590e79767c2c9a46579b366077660171dd0",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          78
+        ],
+        [
+          0,
+          70
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05234": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "23db5bab22652091be748dacbdf16826d7fd9a292906b7e7bd0fa4ed44ca5d2e",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          74
+        ],
+        [
+          0,
+          66
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05267": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "914752d7278f114a93b93f5ca7d028ce5eb7112b0ffe49e1e1939af3c2df6c03",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          71
+        ],
+        [
+          0,
+          63
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05221": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "674d8b5d7e464123e13e0e02d1df6004027b6b11aed022347b18114c6743e4d6",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          92
+        ],
+        [
+          0,
+          84
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05219": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "c4a7109e6e6a4581ea2a674cacbc387c1804353b7431e21a52e467f4d0e3fc8f",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05249": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "d943ba7700e8b8d1833a01321e06eef5f32fe57823e919449b42ce44b1f83bf3",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05244": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "322517ce5077e30bed01de51fd4f2044107e7573f4a219a43361a25cb856ce4a",
+      "axis": 0,
+      "sign": -1,
+      "mouthCenter": [
+        -7.7,
+        0,
+        0
+      ],
+      "center": [
+        3.55,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        2.9,
+        4.2
+      ],
+      "grooveWidthMm": 1.3000000000000003,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05228": {
+      "gender": "P",
+      "series": "Q20",
+      "sourceSha256": "e672c1d1dcffbabe14fc4afb45aa3274a6a4377b5ea27330dc340cbb1c871cf3",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -22.41321
+      ],
+      "center": [
+        0,
+        0,
+        -13.16321
+      ],
+      "grooveInterval": [
+        -13.81321,
+        -12.51321
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 2.8,
+      "faceReferences": [
+        [
+          0,
+          65
+        ],
+        [
+          0,
+          66
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05237": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "368a42e4d8d78e61417000ca07df8da01c73be70441ec247a64f3dfb26c2469f",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05270": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "2b7fbbd4d6efad43c3ae2e461b52c4c0450e0f4a4c188975ca35c83c09cbe267",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.22
+      ],
+      "center": [
+        0,
+        0,
+        -25.87
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.32,
+        -25.42
+      ],
+      "faceReferences": [
+        [
+          0,
+          75
+        ],
+        [
+          0,
+          67
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05222": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "3f11e10a5dbec73a303dce27c0eb24850c4c8ca4a8872811d92c0eb6f886aff7",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05238",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05255": {
+      "gender": "S",
+      "series": "Q20",
+      "sourceSha256": "e22cdd467497ec5dbcef58869e7110ab7955aee000d99e2cde2e57d381d3506b",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -28.2191
+      ],
+      "center": [
+        0,
+        0,
+        -25.8691
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -26.3191,
+        -25.4191
+      ],
+      "faceReferences": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-05265",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04978": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "22515019a28df72a1d214d37b566dedb5f3bb4b180157691cbfede99e701c607",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        33,
+        0,
+        0
+      ],
+      "center": [
+        18.15,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        17.5,
+        18.8
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05291": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "4eba96b64bce12f772d41f431b72ac70125bdddc14d81cdba61de21eaeb1b9ba",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        30,
+        0,
+        0
+      ],
+      "center": [
+        18.15,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        17.5,
+        18.8
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04877": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "44d503635b806069d7287848bdda6ab07c2a4ca55da5afa874d5ee70f65701ce",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        31.975,
+        0,
+        0
+      ],
+      "center": [
+        16.155,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        15.505,
+        16.805
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          61
+        ],
+        [
+          0,
+          71
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04963": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "ecad96deb1a2743bcc19d929753b33f2ecce0a9445327a35b5b4e99330528030",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        31.975,
+        0,
+        0
+      ],
+      "center": [
+        16.155,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        15.505,
+        16.805
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          61
+        ],
+        [
+          0,
+          71
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04962": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "7d16bfd105923654e0ae209930aaf0b023940b2f9bdcf9cef1aa5061878ba0db",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        31.975,
+        0,
+        0
+      ],
+      "center": [
+        16.155,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        15.505,
+        16.805
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          56
+        ],
+        [
+          0,
+          66
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05287": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "7d1447cbe49049750b992609abbfefbec63c808d6df9ac3dea9e3d6b1a9a21b4",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -32.89592
+      ],
+      "center": [
+        0,
+        0,
+        -21.045920000000002
+      ],
+      "grooveInterval": [
+        -21.69592,
+        -20.39592
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          60
+        ],
+        [
+          0,
+          61
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04965": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "b3605d9ce6857d020d57e76d74742005635e4b68a4ef80b5a66fe5d023b51bb8",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          183
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05318": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "8310840910784bd68e15edfec8f25ff580baad2f632d3f6159f2efa847727b11",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          183
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04964": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "4f02e7667c081cf030b93d906806c5112342881d20aed08b067f43b8908d69d2",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -32.15
+      ],
+      "center": [
+        0,
+        0,
+        -29.8
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -30.25,
+        -29.35
+      ],
+      "faceReferences": [
+        [
+          0,
+          125
+        ],
+        [
+          0,
+          142
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05303": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "8c01e3d284cf83c5a0744ff9ed5b149fc23cd0d0e8385e15621c9a1fc65aed50",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          129
+        ],
+        [
+          0,
+          78
+        ],
+        [
+          0,
+          79
+        ],
+        [
+          0,
+          210
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05281": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "7e63e263c0962da432ed5db4b8a4e30b966489a594c0428b1b02ca914a2842ab",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          78
+        ],
+        [
+          0,
+          72
+        ],
+        [
+          0,
+          115
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05298": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "d91ed3b7e57bfd51d3be6a4e16642ee4a1f8d885faa73d97024f44d7211177f0",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          78
+        ],
+        [
+          0,
+          72
+        ],
+        [
+          0,
+          115
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05297": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "8e950b5e3885aa6bfc85d835f9b274c6b27b9cdfccadf82fd306fbb59494f772",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        34,
+        0,
+        0
+      ],
+      "center": [
+        18.15,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        17.5,
+        18.8
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05292": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "b47ecdf8f0ad8d049f40570655caf333e6538655a6fef6deaa7d71b6e364ce91",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        30,
+        0,
+        0
+      ],
+      "center": [
+        18.15,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        17.5,
+        18.8
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04961": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "39027d9c3fd5ecc7e24a9c0890db9d11fc874e66ee39e0b1091c27c64bda7e21",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        31.975,
+        0,
+        0
+      ],
+      "center": [
+        16.155,
+        0,
+        0
+      ],
+      "grooveInterval": [
+        15.505,
+        16.805
+      ],
+      "grooveWidthMm": 1.299999999999999,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          32
+        ],
+        [
+          0,
+          33
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05288": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "42bdf41b0e0285416c62be1bd0566d726512901b15c61df02f7d6273f53183ec",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -32.39592
+      ],
+      "center": [
+        0,
+        0,
+        -20.545920000000002
+      ],
+      "grooveInterval": [
+        -21.19592,
+        -19.89592
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04977": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "93fcf2e1cf23bbd5129872c1587bf8ac07af396f8b1071b40b6fdc23a0059a22",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          183
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05319": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "9a832aa279f429332b460191a23487fb02cfb77b277817bdebb3f2f315a2691d",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          183
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05286": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "567d090608f466056c45adf8e107f39be1d8f456fd83f9ead85bca66fec0c4a8",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05304": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "a365bff011f2fdc433525d4873a9210e5a1d06d0b9d2ce9c4bebeac7c00fb6a0",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          129
+        ],
+        [
+          0,
+          78
+        ],
+        [
+          0,
+          79
+        ],
+        [
+          0,
+          210
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05293": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "5b7baac42014c28b76484559e8094ac1aba8f51286ef358078c98ba652bd0d77",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          67
+        ],
+        [
+          0,
+          61
+        ],
+        [
+          0,
+          104
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05314": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "6295b79ba2f3de4dc75d3c7d5b7f50405c34f3034922df79860c912f099468f9",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          74
+        ],
+        [
+          0,
+          65
+        ],
+        [
+          0,
+          70
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05282": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "6e8ceace4dfc6ddff55bb39ca396e1e207656faed940b7fd5398e1e7086d9b7a",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          78
+        ],
+        [
+          0,
+          72
+        ],
+        [
+          0,
+          115
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05299": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "cca2f03572b749c7e168b8904f72f152dd85bb0c36846db8b1207da196788fb6",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          78
+        ],
+        [
+          0,
+          72
+        ],
+        [
+          0,
+          115
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05206": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "31401f9f8a0293cc8d71a42c2344778e376f85b422429b1d8838d6ce91ebdd73",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        35.2077,
+        11.24077434597,
+        -10
+      ],
+      "center": [
+        19.3577,
+        11.24077434597,
+        -10
+      ],
+      "grooveInterval": [
+        18.7077,
+        20.0077
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          117
+        ],
+        [
+          0,
+          118
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05207": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "d237eae267053bfa73950d7d2346ca696317efc0428a708c05c912a0abd29e90",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        31.15655,
+        11.24077434597,
+        -10
+      ],
+      "center": [
+        19.30655,
+        11.24077434597,
+        -10
+      ],
+      "grooveInterval": [
+        18.65655,
+        19.95655
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05208": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "a004852738d759881b3be10722968d332a758ead93877782ba45879abe4a1d50",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        35.00388,
+        8.931373269211,
+        -8
+      ],
+      "center": [
+        18.865000000000002,
+        8.931373269211,
+        -8
+      ],
+      "grooveInterval": [
+        18.215,
+        19.515
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05289": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "7201a34eb2cd398a37c5c47f29b705fa0acf26a9b92d31f329fdc48838fe9185",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        22,
+        -25.4
+      ],
+      "center": [
+        0,
+        10.15,
+        -25.4
+      ],
+      "grooveInterval": [
+        9.5,
+        10.8
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          91
+        ],
+        [
+          0,
+          92
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04966": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "8cb1d0485020f08898c15a0f0ff05bc5100f30c49af05bdb24a11496387a889d",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        29.0015,
+        -25.37706324507
+      ],
+      "center": [
+        0,
+        17.151200000000003,
+        -25.37706324507
+      ],
+      "grooveInterval": [
+        16.5009,
+        17.8015
+      ],
+      "grooveWidthMm": 1.3005999999999993,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          34
+        ],
+        [
+          0,
+          35
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05209": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "c37e8acdb3db8402940ccb4308447eed1a4c8b3a76263be9b5a54205e9e87ce1",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        7.9,
+        7.9,
+        -32.4
+      ],
+      "center": [
+        7.9,
+        7.9,
+        -20.549999999999997
+      ],
+      "grooveInterval": [
+        -21.2,
+        -19.9
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05204": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "d449e3a8dbba5b9cc85c0687c3a7d73fdd9cc8a5c2d176790552b19680871be2",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -33.25
+      ],
+      "center": [
+        0,
+        0,
+        -29.8
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -30.25,
+        -29.35
+      ],
+      "faceReferences": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          54
+        ],
+        [
+          0,
+          61
+        ],
+        [
+          0,
+          52
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05216": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "b6b3c7063e60e650a465c54acd2238081123a3a6716f16b863ccd15f9beede83",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          186
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04975": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "2ea50fafc4bc843d5395f03e1f0c94b50c71b8880aa60db2548cb630f5ddef89",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -32.15
+      ],
+      "center": [
+        0,
+        0,
+        -29.8
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        -30.25,
+        -29.35
+      ],
+      "faceReferences": [
+        [
+          0,
+          125
+        ],
+        [
+          0,
+          142
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05305": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "947d24f34d822d4e5102478403361f02226d801dbfa0f036ff6ef30deaca277b",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          133
+        ],
+        [
+          0,
+          82
+        ],
+        [
+          0,
+          83
+        ],
+        [
+          0,
+          214
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05200": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "1129600e6daee036c3d05be66ac2b16a35a0805c3f9b2abef6dca3641ecfc0ef",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          145
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05315": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "d1d3f28880602c1f32bbd2344bea337ae6f4b99c16ee183ce6aa487798e96653",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          77
+        ],
+        [
+          0,
+          68
+        ],
+        [
+          0,
+          73
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05205": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "1e37106357a39ca6b1abb54f4211e803c9c7ac2d2e9034bebae766e0f7266f21",
+      "axis": 2,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        0,
+        32.15
+      ],
+      "center": [
+        0,
+        0,
+        29.8
+      ],
+      "thicknessMm": 0.8999999999999986,
+      "lockingLandInterval": [
+        29.35,
+        30.25
+      ],
+      "faceReferences": [
+        [
+          0,
+          131
+        ],
+        [
+          0,
+          81
+        ],
+        [
+          0,
+          94
+        ],
+        [
+          0,
+          113
+        ],
+        [
+          0,
+          114
+        ]
+      ],
+      "releaseDirection": [
+        -1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            -1,
+            1,
+            -1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05300": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "5828e43e2735708a7428b3329d244aa1f5099a53753f6baa8b4d7fc4e25489ee",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          82
+        ],
+        [
+          0,
+          76
+        ],
+        [
+          0,
+          119
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05212": {
+      "gender": "P",
+      "series": "Q40",
+      "sourceSha256": "cbda1388979049867faac93f2018e7d4a5968f8c649c8fbebc6b19eff70631d0",
+      "axis": 0,
+      "sign": 1,
+      "mouthCenter": [
+        34.685,
+        8.931373269211,
+        -8
+      ],
+      "center": [
+        18.865000000000002,
+        8.931373269211,
+        -8
+      ],
+      "grooveInterval": [
+        18.215,
+        19.515
+      ],
+      "grooveWidthMm": 1.3000000000000007,
+      "grooveRadiusMm": 4.45,
+      "faceReferences": [
+        [
+          0,
+          53
+        ],
+        [
+          0,
+          63
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05296": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "391f36d984f9d2f402df2cf3c9f262616d024cbc030da1357075846bdd586a09",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          91
+        ],
+        [
+          0,
+          85
+        ],
+        [
+          0,
+          128
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05317": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "2a4fa2de6433e8d1c89501960aabbfee3c24e92cf40f6cd1bc71ec78572e0749",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          32
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "faceReferences": [
+          [
+            4,
+            7
+          ]
+        ],
+        "method": "outer planar face of the isolated folded button"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05285": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "11b2af84b172015e0f7f0ee732c1de3d8e8bbc7652f0f3ac189bffd049bef6a4",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          102
+        ],
+        [
+          0,
+          96
+        ],
+        [
+          0,
+          139
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-05302": {
+      "gender": "S",
+      "series": "Q40",
+      "sourceSha256": "ab77acd25b9ff6d7b2122042b32af6da4fd621f786d45b6a5159483084eafcfa",
+      "axis": 2,
+      "sign": -1,
+      "mouthCenter": [
+        0,
+        0,
+        -31.95
+      ],
+      "center": [
+        0,
+        0,
+        -29.6
+      ],
+      "thicknessMm": 0.9000000000000021,
+      "lockingLandInterval": [
+        -30.05,
+        -29.15
+      ],
+      "faceReferences": [
+        [
+          0,
+          78
+        ],
+        [
+          0,
+          72
+        ],
+        [
+          0,
+          115
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04965",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "method": "parallel faces of the metal release plate"
+    },
+    "quick-connect-515-00-04875": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "3f662492ec2e9434a40a9c11656de3020ecaccab73b07147ee44992d60e5e214",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -1.777107189532e-14,
+        32.3,
+        0
+      ],
+      "center": [
+        -1.777107189532e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05334": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "edb8f483b31604c8563a44dbc94d1f7e44fec4b5c19d1de34600d4187bbb44dc",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -1.962334406785e-14,
+        28.3,
+        0
+      ],
+      "center": [
+        -1.962334406785e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          93
+        ],
+        [
+          0,
+          97
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05341": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "414f42d552a743f1526fe8eedde10def19b848d84b26778889ea8c907aead73f",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          456
+        ],
+        [
+          0,
+          451
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          456
+        ],
+        "loadShoulder": [
+          0,
+          451
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            453
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            434
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            439
+          ],
+          [
+            0,
+            440
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-04969": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "0233a212e0cbbf49a9073b584ea1a58f98a1f40b9dcc0b1450a0da4740e8746a",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          456
+        ],
+        [
+          0,
+          451
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          456
+        ],
+        "loadShoulder": [
+          0,
+          451
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            453
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            434
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            439
+          ],
+          [
+            0,
+            440
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05339": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "46b28b1c8f6d0692eca6ded5e3a2b6f5a60ad8c74f794f68156e42a43f676f0d",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          104
+        ],
+        [
+          0,
+          101
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          104
+        ],
+        "loadShoulder": [
+          0,
+          101
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            94
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            41
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05330": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "8090569169307c5ab115d5bc1c7788520971809f910456fd1f1f1210173e30b3",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          104
+        ],
+        [
+          0,
+          101
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          104
+        ],
+        "loadShoulder": [
+          0,
+          101
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            94
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            41
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05342": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "7105e92676c3e147eff8caeb9cdb3d9086962fc56c19e9391aff1136c744e7b6",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          335
+        ],
+        [
+          0,
+          330
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          335
+        ],
+        "loadShoulder": [
+          0,
+          330
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            332
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            312
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            321
+          ],
+          [
+            0,
+            323
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05325": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "5a1ed3533ae1f77bdcafe59805afdc31e21542261bb968a7d4285cf2b07bae87",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          114
+        ],
+        [
+          0,
+          111
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          114
+        ],
+        "loadShoulder": [
+          0,
+          111
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            104
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            87
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            71
+          ],
+          [
+            0,
+            73
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-04972": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "526339871e4a2ac5cca776f0a645997303501f887ff6fb1da68e26e9f844c3ba",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -2.093366479589e-14,
+        32.3,
+        0
+      ],
+      "center": [
+        -2.093366479589e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          23
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05213": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "4cbb380d1e3f80f722fca6e1ca8797e18162b125d498b82053e808de82bdb8b1",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        12.75,
+        32.3,
+        -12.75
+      ],
+      "center": [
+        12.75,
+        11.495000000000001,
+        -12.75
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05335": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "6984d34a294095cb94577c809d32772fdad6a6a25c0d42ac9c54c9368252e2c5",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -1.962334406785e-14,
+        28.3,
+        0
+      ],
+      "center": [
+        -1.962334406785e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          93
+        ],
+        [
+          0,
+          97
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04971": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "2aaa06b80d96bc0d9bd439a1b1e684bc5e93442041a1ade36c9bf8de7942db12",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -2.093366479589e-14,
+        28.3,
+        0
+      ],
+      "center": [
+        -2.093366479589e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          83
+        ],
+        [
+          0,
+          87
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05346": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "9aca7a993aa59198faeb1b8d7fa0dea925566bb686cdcc80295d6e38b1b52098",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          456
+        ],
+        [
+          0,
+          451
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          456
+        ],
+        "loadShoulder": [
+          0,
+          451
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            453
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            434
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            439
+          ],
+          [
+            0,
+            440
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05344": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "ff9d0b2f807f6e512ac4e50c681079f7fb124ac40d413ab79a2df22f90aad190",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          445
+        ],
+        [
+          0,
+          440
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          445
+        ],
+        "loadShoulder": [
+          0,
+          440
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            442
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            423
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            428
+          ],
+          [
+            0,
+            429
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05340": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "c68d0ad5aa5b74c7c081a6b5c5a59d7951014a210cf08a571cdf5115afe56258",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          104
+        ],
+        [
+          0,
+          101
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          104
+        ],
+        "loadShoulder": [
+          0,
+          101
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            94
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            41
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-04970": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "ad10978dee2f1d3135024938c60e71fea8679cd1a63089b15d51892071289edb",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          104
+        ],
+        [
+          0,
+          101
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          104
+        ],
+        "loadShoulder": [
+          0,
+          101
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            94
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            41
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05215": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "1ed53eb73068f223f45630d7d772e0453c6b665ac20a782b31cc2476f0ac9606",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        17.48723125089,
+        51.8,
+        -17.48723125089
+      ],
+      "center": [
+        17.48723125089,
+        42.8,
+        -17.48723125089
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          290
+        ],
+        [
+          0,
+          285
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          290
+        ],
+        "loadShoulder": [
+          0,
+          285
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            287
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            268
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            277
+          ],
+          [
+            0,
+            278
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05210": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "e3a227a30aac5dd72d808a3ec940a4e43ed03f5a67a014691d436a9d9305776a",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          282
+        ],
+        [
+          0,
+          277
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          282
+        ],
+        "loadShoulder": [
+          0,
+          277
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            279
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            260
+          ]
+        ],
+        "outerFrontPatches": []
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05326": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "1ece02d6cfbbea9bd53d696b8460f7f7824fcac875619a8b1d59001360449016",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          341
+        ],
+        [
+          0,
+          338
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          341
+        ],
+        "loadShoulder": [
+          0,
+          338
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            331
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            97
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            64
+          ],
+          [
+            0,
+            65
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-04982": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "d2635514721da794844486b4671209ffdec102ab6886f1002d831d9a062ef341",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -1.777107189532e-14,
+        32.3,
+        0
+      ],
+      "center": [
+        -1.777107189532e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05333": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "2a4b429dd2fb9e9baa3275f41180c6fcd9e46e05a2e5f71b5116ab458f934ec9",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -1.962334406785e-14,
+        28.3,
+        0
+      ],
+      "center": [
+        -1.962334406785e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          89
+        ],
+        [
+          0,
+          93
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-04874": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "2a9c76a907d3a9c505be903aa70396d9b6d16f8ee3f1febc37d698d7fac056e3",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          446
+        ],
+        [
+          0,
+          441
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          446
+        ],
+        "loadShoulder": [
+          0,
+          441
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            443
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            424
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            429
+          ],
+          [
+            0,
+            430
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05331": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "2ff53978f7fb511661a187ea8e65858547a719a7e3398b68994ea1b6d2194a0e",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          104
+        ],
+        [
+          0,
+          101
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          104
+        ],
+        "loadShoulder": [
+          0,
+          101
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            94
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            41
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-04981": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "c754059fcae84abb5bdf5eebe256035996435a06dd30d8ae8227f2e0de7e4b9c",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          353
+        ],
+        [
+          0,
+          348
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          353
+        ],
+        "loadShoulder": [
+          0,
+          348
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            350
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            330
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            340
+          ],
+          [
+            0,
+            341
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05327": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "a2f483b11b5bdaccc009e9776be9d5e9edab60a75816480b5f6cef3cfb8e1762",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          347
+        ],
+        [
+          0,
+          344
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          347
+        ],
+        "loadShoulder": [
+          0,
+          344
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            337
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            103
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            70
+          ],
+          [
+            0,
+            71
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05345": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "317a2246a93088b6fdb19f2c482a150852effdd5a8baf02d5d783bfe571a796f",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -1.777107189532e-14,
+        32.3,
+        0
+      ],
+      "center": [
+        -1.777107189532e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05382": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "a6619f6c95f8c1b4941ceaecbd0becdd601af4a39424cf28493817e5b1c13b1c",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -1.962334406785e-14,
+        28.3,
+        0
+      ],
+      "center": [
+        -1.962334406785e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          110
+        ],
+        [
+          0,
+          114
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05214": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "dd2a7201bc46160d44c94d0fd70e000defcafea986b365d0f7ee0c33139cf3ff",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        12.75,
+        32.3,
+        -12.75
+      ],
+      "center": [
+        12.75,
+        11.495000000000001,
+        -12.75
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05336": {
+      "gender": "P",
+      "series": "Q60",
+      "sourceSha256": "0eed8027229a62c0459d467f6677c0278c3e3ca1f3a67adb44d8cb9465db7193",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        -1.962334406785e-14,
+        28.3,
+        0
+      ],
+      "center": [
+        -1.962334406785e-14,
+        11.495000000000001,
+        0
+      ],
+      "grooveInterval": [
+        8,
+        14.99
+      ],
+      "grooveWidthMm": 6.99,
+      "grooveRadiusMm": 10,
+      "faceReferences": [
+        [
+          0,
+          109
+        ],
+        [
+          0,
+          113
+        ]
+      ],
+      "method": "coaxial cylindrical retention-groove floor"
+    },
+    "quick-connect-515-00-05211": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "744bba63620731de628821a1cff15e9768870def2042e9465a5d784e7754e9af",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        17.95249569453,
+        52.1,
+        -17.95249569453
+      ],
+      "center": [
+        17.95249569453,
+        42.900000000000006,
+        -17.95249569453
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42.1,
+        43.7
+      ],
+      "plateEnvelopeInterval": [
+        41.599999999999994,
+        45.39999999999999
+      ],
+      "faceReferences": [
+        [
+          0,
+          331
+        ],
+        [
+          0,
+          326
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          331
+        ],
+        "loadShoulder": [
+          0,
+          326
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            328
+          ]
+        ],
+        "outerBackEdge": [],
+        "outerFrontPatches": []
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    },
+    "quick-connect-515-00-05328": {
+      "gender": "S",
+      "series": "Q60",
+      "sourceSha256": "4c97b97a1e5a2982cd987a3a08b6ed674fc49af55449017df00b00489988e4b0",
+      "axis": 1,
+      "sign": 1,
+      "mouthCenter": [
+        0,
+        51.8,
+        0
+      ],
+      "center": [
+        0,
+        42.8,
+        0
+      ],
+      "thicknessMm": 1.6000000000000014,
+      "lockingLandInterval": [
+        42,
+        43.6
+      ],
+      "plateEnvelopeInterval": [
+        41.5,
+        45.3
+      ],
+      "faceReferences": [
+        [
+          0,
+          366
+        ],
+        [
+          0,
+          363
+        ]
+      ],
+      "releaseDirection": [
+        1,
+        0,
+        0
+      ],
+      "releaseDirectionEvidence": {
+        "reference": "quick-connect-515-00-04969",
+        "transform": {
+          "p": [
+            0,
+            1,
+            2
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "method": "verified asymmetric release-button template"
+      },
+      "engagementSurfaces": {
+        "lockingCylinder": [
+          0,
+          366
+        ],
+        "loadShoulder": [
+          0,
+          363
+        ],
+        "insertionChamfer": [
+          [
+            0,
+            356
+          ]
+        ],
+        "outerBackEdge": [
+          [
+            0,
+            122
+          ]
+        ],
+        "outerFrontPatches": [
+          [
+            0,
+            89
+          ],
+          [
+            0,
+            90
+          ]
+        ]
+      },
+      "method": "midpoint of actual cylindrical locking land; neutral assembly, not the loaded shoulder-contact position"
+    }
+  },
+  "products": {
+    "q2001-pmv-sacn": "quick-connect-515-00-04956",
+    "q2001-pmv-sppe": "quick-connect-515-00-04956",
+    "q2001-pmx-sacn": "quick-connect-515-00-05229",
+    "q2001-pmx-sppe": "quick-connect-515-00-05262",
+    "q2001-pnv-sacn": "quick-connect-515-00-05240",
+    "q2001-pnv-sppe": "quick-connect-515-00-05240",
+    "q2001-pnx-sacn": "quick-connect-515-00-05225",
+    "q2001-pnx-sppe": "quick-connect-515-00-05225",
+    "q2001-smv-sacn": "quick-connect-515-00-05238",
+    "q2001-smv-sppe": "quick-connect-515-00-05271",
+    "q2001-smx-sacn": "quick-connect-515-00-05223",
+    "q2001-smx-sppe": "quick-connect-515-00-05256",
+    "q2001-snv-sacn": "quick-connect-515-00-05230",
+    "q2001-snv-sppe": "quick-connect-515-00-05265",
+    "q2001-snx-sacn": "quick-connect-515-00-05252",
+    "q2001-snx-sppe": "quick-connect-515-00-05247",
+    "q2002-pmv-sacn": "quick-connect-515-00-04952",
+    "q2002-pmv-sppe": "quick-connect-515-00-04941",
+    "q2002-pmx-sacn": "quick-connect-515-00-04957",
+    "q2002-pmx-sppe": "quick-connect-515-00-04953",
+    "q2002-pnv-lacn": "quick-connect-515-00-04876",
+    "q2002-pnv-lppe": "quick-connect-515-00-05254",
+    "q2002-pnv-sacn": "quick-connect-515-00-04950",
+    "q2002-pnv-sppe": "quick-connect-515-00-04958",
+    "q2002-pnx-lacn": "quick-connect-515-00-04947",
+    "q2002-pnx-lppe": "quick-connect-515-00-04959",
+    "q2002-pnx-sacn": "quick-connect-515-00-04960",
+    "q2002-pnx-sppe": "quick-connect-515-00-04946",
+    "q2002-smv-sacn": "quick-connect-515-00-04949",
+    "q2002-smv-sppe": "quick-connect-515-00-04951",
+    "q2002-smx-sacn": "quick-connect-515-00-04944",
+    "q2002-smx-sppe": "quick-connect-515-00-04955",
+    "q2002-snv-lacn": "quick-connect-515-00-05235",
+    "q2002-snv-lppe": "quick-connect-515-00-05268",
+    "q2002-snv-sacn": "quick-connect-515-00-04948",
+    "q2002-snv-sppe": "quick-connect-515-00-04942",
+    "q2002-snx-lacn": "quick-connect-515-00-05220",
+    "q2002-snx-lppe": "quick-connect-515-00-05250",
+    "q2002-snx-sacn": "quick-connect-515-00-05203",
+    "q2002-snx-sppe": "quick-connect-515-00-04954",
+    "q2003-pmv-sacn": "quick-connect-515-00-05245",
+    "q2003-pmv-sppe": "quick-connect-515-00-05245",
+    "q2003-pmx-sacn": "quick-connect-515-00-05231",
+    "q2003-pmx-sppe": "quick-connect-515-00-05231",
+    "q2003-pnv-sacn": "quick-connect-515-00-05241",
+    "q2003-pnv-sppe": "quick-connect-515-00-05241",
+    "q2003-pnx-sacn": "quick-connect-515-00-05226",
+    "q2003-pnx-sppe": "quick-connect-515-00-05226",
+    "q2003-smv-sacn": "quick-connect-515-00-05239",
+    "q2003-smv-sppe": "quick-connect-515-00-05272",
+    "q2003-smx-sacn": "quick-connect-515-00-05224",
+    "q2003-smx-sppe": "quick-connect-515-00-05257",
+    "q2003-snv-sacn": "quick-connect-515-00-05233",
+    "q2003-snv-sppe": "quick-connect-515-00-05266",
+    "q2003-snx-sacn": "quick-connect-515-00-05218",
+    "q2003-snx-sppe": "quick-connect-515-00-05248",
+    "q2004-pmv-sacn": "quick-connect-515-00-05246",
+    "q2004-pmv-sppe": "quick-connect-515-00-05246",
+    "q2004-pmx-sacn": "quick-connect-515-00-05232",
+    "q2004-pmx-sppe": "quick-connect-515-00-05232",
+    "q2004-pnv-lacn": "quick-connect-515-00-05243",
+    "q2004-pnv-lppe": "quick-connect-515-00-05243",
+    "q2004-pnv-sacn": "quick-connect-515-00-05242",
+    "q2004-pnv-sppe": "quick-connect-515-00-05242",
+    "q2004-pnx-lacn": "quick-connect-515-00-05227",
+    "q2004-pnx-lppe": "quick-connect-515-00-04973",
+    "q2004-pnx-sacn": "quick-connect-515-00-04943",
+    "q2004-pnx-sppe": "quick-connect-515-00-05197",
+    "q2004-smv-sacn": "quick-connect-515-00-04878",
+    "q2004-smv-sppe": "quick-connect-515-00-04974",
+    "q2004-smx-sacn": "quick-connect-515-00-04945",
+    "q2004-smx-sppe": "quick-connect-515-00-05258",
+    "q2004-snv-lacn": "quick-connect-515-00-05236",
+    "q2004-snv-lppe": "quick-connect-515-00-05269",
+    "q2004-snv-sacn": "quick-connect-515-00-05234",
+    "q2004-snv-sppe": "quick-connect-515-00-05267",
+    "q2004-snx-lacn": "quick-connect-515-00-05221",
+    "q2004-snx-sacn": "quick-connect-515-00-05219",
+    "q2004-snx-sppe": "quick-connect-515-00-05249",
+    "q2018n-pnv-sacn": "quick-connect-515-00-05244",
+    "q2018n-pnv-sppe": "quick-connect-515-00-05244",
+    "q2018n-pnx-sacn": "quick-connect-515-00-05228",
+    "q2018n-pnx-sppe": "quick-connect-515-00-05228",
+    "q2018n-snv-sacn": "quick-connect-515-00-05237",
+    "q2018n-snv-sppe": "quick-connect-515-00-05270",
+    "q2018n-snx-sacn": "quick-connect-515-00-05222",
+    "q2018n-snx-sppe": "quick-connect-515-00-05255",
+    "q4004-pmv-sacn": "quick-connect-515-00-04978",
+    "q4004-pmv-sppe": "quick-connect-515-00-04978",
+    "q4004-pmx-sacn": "quick-connect-515-00-05291",
+    "q4004-pmx-sppe": "quick-connect-515-00-05291",
+    "q4004-pnv-lacn": "quick-connect-515-00-04877",
+    "q4004-pnv-lppe": "quick-connect-515-00-04963",
+    "q4004-pnv-sacn": "quick-connect-515-00-04962",
+    "q4004-pnv-sppe": "quick-connect-515-00-04962",
+    "q4004-pnx-sacn": "quick-connect-515-00-05287",
+    "q4004-pnx-sppe": "quick-connect-515-00-05287",
+    "q4004-smv-sacn": "quick-connect-515-00-04965",
+    "q4004-smv-sppe": "quick-connect-515-00-05318",
+    "q4004-smx-sacn": "quick-connect-515-00-04964",
+    "q4004-smx-sppe": "quick-connect-515-00-05303",
+    "q4004-snx-sacn": "quick-connect-515-00-05281",
+    "q4004-snx-sppe": "quick-connect-515-00-05298",
+    "q4005-pmv-sacn": "quick-connect-515-00-05297",
+    "q4005-pmv-sppe": "quick-connect-515-00-05297",
+    "q4005-pmx-sacn": "quick-connect-515-00-05292",
+    "q4005-pmx-sppe": "quick-connect-515-00-05292",
+    "q4005-pnv-sacn": "quick-connect-515-00-04961",
+    "q4005-pnv-sppe": "quick-connect-515-00-04961",
+    "q4005-pnx-sacn": "quick-connect-515-00-05288",
+    "q4005-pnx-sppe": "quick-connect-515-00-05288",
+    "q4005-smv-sacn": "quick-connect-515-00-04977",
+    "q4005-smv-sppe": "quick-connect-515-00-05319",
+    "q4005-smx-sacn": "quick-connect-515-00-05286",
+    "q4005-smx-sppe": "quick-connect-515-00-05304",
+    "q4005-snv-sacn": "quick-connect-515-00-05293",
+    "q4005-snv-sppe": "quick-connect-515-00-05314",
+    "q4005-snx-sacn": "quick-connect-515-00-05282",
+    "q4005-snx-sppe": "quick-connect-515-00-05299",
+    "q4006-pmv-sacn": "quick-connect-515-00-05206",
+    "q4006-pmv-sppe": "quick-connect-515-00-05206",
+    "q4006-pmx-sacn": "quick-connect-515-00-05207",
+    "q4006-pmx-sppe": "quick-connect-515-00-05207",
+    "q4006-pnv-sacn": "quick-connect-515-00-05208",
+    "q4006-pnv-sppe": "quick-connect-515-00-05208",
+    "q4006-pnx-lacn": "quick-connect-515-00-05289",
+    "q4006-pnx-lppe": "quick-connect-515-00-04966",
+    "q4006-pnx-sacn": "quick-connect-515-00-05209",
+    "q4006-pnx-sppe": "quick-connect-515-00-05209",
+    "q4006-smv-sacn": "quick-connect-515-00-05204",
+    "q4006-smv-sppe": "quick-connect-515-00-05216",
+    "q4006-smx-sacn": "quick-connect-515-00-04975",
+    "q4006-smx-sppe": "quick-connect-515-00-05305",
+    "q4006-snv-sacn": "quick-connect-515-00-05200",
+    "q4006-snv-sppe": "quick-connect-515-00-05315",
+    "q4006-snx-sacn": "quick-connect-515-00-05205",
+    "q4006-snx-sppe": "quick-connect-515-00-05300",
+    "q4014n-pnv-sacn": "quick-connect-515-00-05212",
+    "q4014n-pnv-sppe": "quick-connect-515-00-05212",
+    "q4014n-snv-sacn": "quick-connect-515-00-05296",
+    "q4014n-snv-sppe": "quick-connect-515-00-05317",
+    "q4014n-snx-sacn": "quick-connect-515-00-05285",
+    "q4014n-snx-sppe": "quick-connect-515-00-05302",
+    "q6006-pnv-lppe": "quick-connect-515-00-04875",
+    "q6006-pnx-lppe": "quick-connect-515-00-05334",
+    "q6006-smv-lppe": "quick-connect-515-00-05341",
+    "q6006-smv-sppe": "quick-connect-515-00-04969",
+    "q6006-smx-lppe": "quick-connect-515-00-05339",
+    "q6006-smx-sppe": "quick-connect-515-00-05330",
+    "q6006-snv-sppe": "quick-connect-515-00-05342",
+    "q6006-snx-sppe": "quick-connect-515-00-05325",
+    "q6008-pnv-lppe": "quick-connect-515-00-04972",
+    "q6008-pnv-sppe": "quick-connect-515-00-05213",
+    "q6008-pnx-lppe": "quick-connect-515-00-05335",
+    "q6008-pnx-sppe": "quick-connect-515-00-04971",
+    "q6008-smv-lppe": "quick-connect-515-00-05346",
+    "q6008-smv-sppe": "quick-connect-515-00-05344",
+    "q6008-smx-lppe": "quick-connect-515-00-05340",
+    "q6008-smx-sppe": "quick-connect-515-00-04970",
+    "q6008-snv-lppe": "quick-connect-515-00-05215",
+    "q6008-snv-sppe": "quick-connect-515-00-05210",
+    "q6008-snx-sppe": "quick-connect-515-00-05326",
+    "q6012-pnv-sppe": "quick-connect-515-00-04982",
+    "q6012-pnx-sppe": "quick-connect-515-00-05333",
+    "q6012-smv-sppe": "quick-connect-515-00-04874",
+    "q6012-smx-sppe": "quick-connect-515-00-05331",
+    "q6012-snv-sppe": "quick-connect-515-00-04981",
+    "q6012-snx-sppe": "quick-connect-515-00-05327",
+    "q6012n-pnv-sppe": "quick-connect-515-00-05345",
+    "q6012n-pnx-sppe": "quick-connect-515-00-05382",
+    "q6038n-pnv-sppe": "quick-connect-515-00-05214",
+    "q6038n-pnx-sppe": "quick-connect-515-00-05336",
+    "q6038n-snv-sppe": "quick-connect-515-00-05211",
+    "q6038n-snx-sppe": "quick-connect-515-00-05328"
+  }
+}

@@ -81,7 +81,7 @@ function ArticleFigure({
   );
 }
 
-function ArticleBlock({
+export function ArticleBlock({
   block,
   locale,
 }: {

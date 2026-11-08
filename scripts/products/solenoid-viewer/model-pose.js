@@ -20,6 +20,15 @@ const basisFor=data=>data.appearance?.piston
   : data.appearance?.diaphragm?diaphragmBases[data.name.toLowerCase()]:undefined;
 
 export function applyModelPose(data,solid){
+  // BA straight barbs use both Y-long and Z-long source exports. Align their
+  // actual tube axis with display X; dimensions stay in source coordinates
+  // and follow this same solid transform, without changing the CAD geometry.
+  if(data.appearance?.standaloneFitting&&/^BA-/i.test(data.name)){
+    const {size,axes}=data.dimensions;
+    const axis=size.indexOf(Math.max(...size));
+    solid.quaternion.setFromUnitVectors(new THREE.Vector3(...axes[axis]).normalize(),new THREE.Vector3(1,0,0));
+    return;
+  }
   const basis=basisFor(data);
   if(basis){
     const [x,y,z]=basis;

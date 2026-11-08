@@ -1,0 +1,43 @@
+/* Typography, cards and image grids come from QuickConnectDetailContent. */
+.modelCode { justify-content: flex-start; padding: 12px 0; }
+.part { display: flex; align-items: flex-start; gap: 8px; }
+.modelCode .segment b { display: flex; align-items: center; justify-content: center; min-width: 68px; height: 44px; padding: 0 14px; line-height: 1; text-align: center; }
+.modelCode .segment small { width: 100%; text-align: center; }
+.separator { display: flex; align-items: center; justify-content: center; min-width: 10px; height: 44px; }
+.table { table-layout: fixed; }
+.table th:first-child, .table td:first-child { width: 25%; }
+.table.table th { white-space: normal; }
+.table td { overflow-wrap: anywhere; }
+.tool.tool { max-width: 340px; grid-template-columns: minmax(0,1fr); margin: 24px 0; }
+.visualGrid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; margin: 20px 0; }
+.visualGrid.threeColumns { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.visualItem.visualItem { display: grid; grid-template-columns: 128px minmax(0,1fr); align-items: center; gap: 16px; padding: 16px; }
+.visualThumb { width: 128px; }
+.visualThumb figure { margin: 0; }
+.visualThumb img { display: block; width: 100%; height: auto; aspect-ratio: 1; border: 0; background: #fff; }
+.visualCopy { min-width: 0; }
+.visualItem .visualCopy h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.4; }
+.visualItem .visualCopy p { margin: 0 0 6px; font-size: 14px; line-height: 1.65; color: var(--fx-ink); }
+.visualItem .visualCopy .visualPurpose { color: var(--fx-navy); font-weight: 600; }
+.visualItem .visualCopy .visualAction { color: var(--fx-muted); font-size: 13px; margin-bottom: 0; }
+.installationLayout { display: grid; grid-template-columns: minmax(0,1fr); gap: 24px; margin: 24px 0; }
+.installationFigures.installationFigures { width: 100%; max-width: 760px; grid-template-columns: repeat(2,minmax(0,1fr)); margin: 0; gap: 32px; }
+.installationFigures.installationFigures img { aspect-ratio: 1; }
+@media (max-width:1200px) {
+  .visualGrid.threeColumns { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width:800px) {
+  .visualGrid { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width:640px) {
+  .modelCode.modelCode, .part { gap: 6px; }
+  .modelCode .segment { width: 58px; min-width: 0; }
+  .modelCode .segment b { width: 58px; min-width: 0; height: 40px; padding: 0 6px; font-size: 17px; }
+  .modelCode .segment small { font-size: 10px; line-height: 1.5; }
+  .separator { min-width: 6px; height: 40px; }
+  .table th:first-child, .table td:first-child { width: 30%; }
+  .visualItem.visualItem { grid-template-columns: 96px minmax(0,1fr); gap: 12px; padding: 12px; }
+  .visualThumb { width: 96px; }
+  .visualItem .visualCopy h3 { font-size: 16px; }
+  .installationFigures.installationFigures { max-width: 360px; grid-template-columns: minmax(0,1fr); gap: 20px; }
+}

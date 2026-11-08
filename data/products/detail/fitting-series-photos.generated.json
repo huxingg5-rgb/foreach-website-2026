@@ -1,0 +1,1672 @@
+{
+  "barbed-fittings:直通等径倒刺接头": [
+    {
+      "model": "BA-16F-PP-N",
+      "family": "BA",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-dark.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-blue.webp"
+      ]
+    },
+    {
+      "model": "BA-16F-PA-W",
+      "family": "BA",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-dark.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-blue.webp"
+      ]
+    },
+    {
+      "model": "BA-64C-PA-W",
+      "family": "BA",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/pa-equal-straight-barbed-fitting-side-view.webp",
+        "/images/products/fittings/barbed-fittings/photos/pa-equal-straight-barbed-fitting-molded-body-detail.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-dark.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-blue.webp"
+      ]
+    },
+    {
+      "model": "BA-16C-PP-N",
+      "family": "BA",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/pp-equal-straight-barbed-fitting-compact-tapered-body.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-dark.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-blue.webp"
+      ]
+    },
+    {
+      "model": "BA-24D-PP-N",
+      "family": "BA",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/pp-equal-straight-barbed-fitting-side-view.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-dark.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-blue.webp"
+      ]
+    }
+  ],
+  "barbed-fittings:直通异径倒刺接头": [
+    {
+      "model": "BA-16F-24F-PP-N",
+      "family": "BA",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-black-background-group.webp",
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-blue-background-lineup.webp",
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-port-close-up.webp",
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-size-lineup.webp"
+      ]
+    },
+    {
+      "model": "BA-16F-24F-PA-W",
+      "family": "BA",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-black-background-group.webp",
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-blue-background-lineup.webp",
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-port-close-up.webp",
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-size-lineup.webp"
+      ]
+    },
+    {
+      "model": "BA-16F-24F-PV-N",
+      "family": "BA",
+      "material": "PVDF",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-black-background-group.webp",
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-blue-background-lineup.webp",
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-port-close-up.webp",
+        "/images/products/fittings/barbed-fittings/photos/straight-reducing-barbed-fittings-size-lineup.webp"
+      ]
+    }
+  ],
+  "barbed-fittings:L型等径倒刺接头": [
+    {
+      "model": "BL-16F-PA-W",
+      "family": "BL",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/elbow-barbed-fittings-size-lineup.webp",
+        "/images/products/fittings/barbed-fittings/photos/pa-equal-elbow-barbed-fitting-square-body-detail.webp"
+      ]
+    },
+    {
+      "model": "BL-95D-PA-W",
+      "family": "BL",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/elbow-barbed-fittings-size-lineup.webp"
+      ]
+    },
+    {
+      "model": "BL-16F-PP-N",
+      "family": "BL",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/elbow-barbed-fittings-size-lineup.webp"
+      ]
+    },
+    {
+      "model": "BL-16D-PA-W",
+      "family": "BL",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/elbow-barbed-fittings-size-lineup.webp",
+        "/images/products/fittings/barbed-fittings/photos/pa-equal-elbow-barbed-fitting-rounded-side-view.webp",
+        "/images/products/fittings/barbed-fittings/photos/pa-equal-elbow-barbed-fitting-rounded-rear-view.webp"
+      ]
+    }
+  ],
+  "barbed-fittings:L型异径倒刺接头": [
+    {
+      "model": "BL-16D-24D-PP-N",
+      "family": "BL",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/reducing-elbow-barbed-fittings-mixed-material-group.webp",
+        "/images/products/fittings/barbed-fittings/photos/pp-reducing-elbow-barbed-fitting-black-background.webp",
+        "/images/products/fittings/barbed-fittings/photos/pp-reducing-elbow-barbed-fitting-blue-port-close-up.webp"
+      ]
+    },
+    {
+      "model": "BL-16D-24D-PA-W",
+      "family": "BL",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/reducing-elbow-barbed-fittings-mixed-material-group.webp"
+      ]
+    }
+  ],
+  "barbed-fittings:T型等径倒刺接头": [
+    {
+      "model": "BT-16F-PP-N",
+      "family": "BT",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/equal-tee-barbed-fittings-seven-piece-mixed-lineup.webp"
+      ]
+    },
+    {
+      "model": "BT-24F-PA-W",
+      "family": "BT",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/equal-tee-barbed-fittings-seven-piece-mixed-lineup.webp"
+      ]
+    },
+    {
+      "model": "BT-40C-PP-N",
+      "family": "BT",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/equal-tee-barbed-fittings-seven-piece-mixed-lineup.webp",
+        "/images/products/fittings/barbed-fittings/photos/tee-equal-barbed-fittings-three-size-group.webp"
+      ]
+    },
+    {
+      "model": "BT-40C-PA-W",
+      "family": "BT",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/pa-equal-tee-barbed-fitting-square-body-front.webp",
+        "/images/products/fittings/barbed-fittings/photos/pa-equal-tee-barbed-fitting-molded-mark-detail.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-tee-barbed-fittings-seven-piece-mixed-lineup.webp"
+      ]
+    },
+    {
+      "model": "BT-16D-PA-W",
+      "family": "BT",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/pa-equal-tee-barbed-fitting-compact-body.webp",
+        "/images/products/fittings/barbed-fittings/photos/equal-tee-barbed-fittings-seven-piece-mixed-lineup.webp"
+      ]
+    }
+  ],
+  "barbed-fittings:T型异径倒刺接头": [
+    {
+      "model": "BT-32D-32D-16D-PP-N",
+      "family": "BT",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/aab-reducing-tee-barbed-fittings-mixed-material-group.webp"
+      ]
+    },
+    {
+      "model": "BT-32D-32D-16D-PA-W",
+      "family": "BT",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/pa-aab-reducing-tee-barbed-fitting-side-port-view.webp",
+        "/images/products/fittings/barbed-fittings/photos/aab-reducing-tee-barbed-fittings-mixed-material-group.webp"
+      ]
+    },
+    {
+      "model": "BT-24D-32D-32D-PA-W",
+      "family": "BT",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/pa-abb-reducing-tee-barbed-fitting-front-view.webp",
+        "/images/products/fittings/barbed-fittings/photos/pa-abb-reducing-tee-barbed-fitting-body-detail.webp",
+        "/images/products/fittings/barbed-fittings/photos/tee-reducing-barbed-fittings-white-pair.webp"
+      ]
+    }
+  ],
+  "barbed-fittings:Y型等径倒刺接头": [
+    {
+      "model": "BY-16F-PP-N",
+      "family": "BY",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/y-barbed-fittings-size-lineup.webp",
+        "/images/products/fittings/barbed-fittings/photos/y-equal-barbed-fittings-six-piece-dark-lineup.webp"
+      ]
+    },
+    {
+      "model": "BY-24F-PA-W",
+      "family": "BY",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/y-barbed-fittings-size-lineup.webp",
+        "/images/products/fittings/barbed-fittings/photos/y-equal-barbed-fittings-six-piece-dark-lineup.webp"
+      ]
+    }
+  ],
+  "barbed-fittings:Y型异径倒刺接头": [
+    {
+      "model": "BY-24D-16D-16D-PP-N",
+      "family": "BY",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/y-reducing-barbed-fittings-mixed-material-group.webp",
+        "/images/products/fittings/barbed-fittings/photos/y-reducing-barbed-fittings-three-piece-detail-group.webp"
+      ]
+    },
+    {
+      "model": "BY-24D-16D-16D-PA-W",
+      "family": "BY",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/barbed-fittings/photos/y-reducing-barbed-fittings-mixed-material-group.webp",
+        "/images/products/fittings/barbed-fittings/photos/y-reducing-barbed-fittings-three-piece-detail-group.webp",
+        "/images/products/fittings/barbed-fittings/photos/pa-y-reducing-barbed-fitting-side-view.webp",
+        "/images/products/fittings/barbed-fittings/photos/pa-y-reducing-barbed-fitting-large-port-close-up.webp"
+      ]
+    }
+  ],
+  "bulkhead-barbed-fittings:PMB": [
+    {
+      "model": "PMB-U28-24D-PP-N",
+      "family": "PMB",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/bulkhead-barbed-fittings/photos/pp-natural-bulkhead-barbed-fitting-long-body-side.webp",
+        "/images/products/fittings/bulkhead-barbed-fittings/photos/pp-natural-bulkhead-barbed-fitting-with-separate-nut.webp",
+        "/images/products/fittings/bulkhead-barbed-fittings/photos/pp-natural-bulkhead-barbed-fitting-with-fitted-nut.webp",
+        "/images/products/fittings/bulkhead-barbed-fittings/photos/pmb-bulkhead-barbed-fittings-assembled-family-group.webp"
+      ]
+    },
+    {
+      "model": "PMB-U28-24D-PA-W",
+      "family": "PMB",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/bulkhead-barbed-fittings/photos/pa-white-bulkhead-barbed-fitting-small-body-side.webp",
+        "/images/products/fittings/bulkhead-barbed-fittings/photos/pa-white-bulkhead-barbed-fitting-with-separate-pp-nut.webp",
+        "/images/products/fittings/bulkhead-barbed-fittings/photos/pmb-bulkhead-barbed-fittings-assembled-family-group.webp"
+      ]
+    }
+  ],
+  "female-thread-adapters:US": [
+    {
+      "model": "US-M6-05-AC-B",
+      "family": "US",
+      "material": "AC",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-black-pair.webp",
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-family-group-angle.webp",
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-family-lineup.webp"
+      ]
+    },
+    {
+      "model": "US-M6-05-PP-N",
+      "family": "US",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-family-group-angle.webp",
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-family-lineup.webp"
+      ]
+    }
+  ],
+  "female-thread-adapters:PMU": [
+    {
+      "model": "PMU-M12-U28-20-PP-N",
+      "family": "PMU",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/female-thread-adapters/photos/pp-bulkhead-female-thread-union-with-separate-metal-nut.webp",
+        "/images/products/fittings/female-thread-adapters/photos/pp-bulkhead-female-thread-union-fitted-metal-nut-side.webp",
+        "/images/products/fittings/female-thread-adapters/photos/pp-bulkhead-female-thread-unions-assembly-group.webp"
+      ]
+    }
+  ],
+  "female-thread-adapters:U": [
+    {
+      "model": "U-U28-20-PP-N",
+      "family": "U",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-family-group-angle.webp",
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-family-lineup.webp"
+      ]
+    },
+    {
+      "model": "U-M6-20-AC-B",
+      "family": "U",
+      "material": "AC",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-black-pair.webp",
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-family-group-angle.webp",
+        "/images/products/fittings/female-thread-adapters/photos/u-us-two-way-female-thread-adapter-family-lineup.webp"
+      ]
+    }
+  ],
+  "female-thread-adapters:UT": [
+    {
+      "model": "UT-U28-15-PP-N",
+      "family": "UT",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/female-thread-adapters/photos/ut-u28-tee-female-thread-adapter-natural-single.webp",
+        "/images/products/fittings/female-thread-adapters/photos/ut-u28-tee-female-thread-adapter-natural-black-pair.webp"
+      ]
+    },
+    {
+      "model": "UT-U28-15-PS-B",
+      "family": "UT",
+      "material": "PPS",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/female-thread-adapters/photos/ut-u28-tee-female-thread-adapter-black-single.webp",
+        "/images/products/fittings/female-thread-adapters/photos/ut-u28-tee-female-thread-adapter-black-front-detail.webp",
+        "/images/products/fittings/female-thread-adapters/photos/ut-u28-tee-female-thread-adapter-natural-black-pair.webp"
+      ]
+    }
+  ],
+  "female-thread-adapters:UY": [
+    {
+      "model": "UY-U28-10-PP-N",
+      "family": "UY",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/female-thread-adapters/photos/uy-u28-y-female-thread-adapter-natural-single.webp",
+        "/images/products/fittings/female-thread-adapters/photos/uy-u28-y-female-thread-adapter-natural-group.webp",
+        "/images/products/fittings/female-thread-adapters/photos/uy-u28-y-female-thread-adapter-natural-lineup.webp"
+      ]
+    }
+  ],
+  "hard-tube-fittings:standard-flat-bottom-fitting": [
+    {
+      "model": "HF-M6-20-PK-N",
+      "family": "HF",
+      "material": "PEEK",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-peek-natural-tubing-end-seal-assembly.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-tubing-assembly-comparison.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+      ]
+    },
+    {
+      "model": "HF-M6-20-PS-B",
+      "family": "HF",
+      "material": "PPS",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pps-black-knurled-body.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-knurled-body-variant-closeup.webp"
+      ]
+    },
+    {
+      "model": "HF-M6-20-PV-N",
+      "family": "HF",
+      "material": "PVDF",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp"
+      ]
+    },
+    {
+      "model": "HFL-M6-16-PV-B",
+      "family": "HFL",
+      "material": "PVDF",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-black-body-lineup.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-body-and-seal-comparison.webp"
+      ]
+    },
+    {
+      "model": "HFL-M6-16-PV-N",
+      "family": "HFL",
+      "material": "PVDF",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-pvdf-natural-tubing-assembly.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-long-body-tubing-assembly-comparison.webp"
+      ]
+    }
+  ],
+  "hard-tube-fittings:compact-flat-bottom-fitting": [
+    {
+      "model": "HF6-M6-20-PK-N",
+      "family": "HF6",
+      "material": "PEEK",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-body-lineup.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-comparison.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-variant-fan-arrangement.webp"
+      ]
+    },
+    {
+      "model": "HFL6-M6-16-PS-B",
+      "family": "HFL6",
+      "material": "PPS",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-tubing-seal-assembly.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-sealing-washer-assortment.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-black-tubing-assembly-lineup.webp"
+      ]
+    },
+    {
+      "model": "HFL6-U40-16-PK-N",
+      "family": "HFL6",
+      "material": "PEEK",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-tubing-assembly.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/flat-bottom-fitting-6-40-unf-retaining-ring-seal-components.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/compact-flat-bottom-fitting-peek-6-40-unf-disassembled-components.webp"
+      ]
+    }
+  ],
+  "hard-tube-fittings:standard-ferrule-fitting": [
+    {
+      "model": "HN-M6-16-PK-N",
+      "family": "HN",
+      "material": "PEEK",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-peek-natural-knurled-body-pair.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp"
+      ]
+    },
+    {
+      "model": "HN-M6-16-PV-N",
+      "family": "HN",
+      "material": "PVDF",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-pvdf-natural-knurled-body.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+      ]
+    }
+  ],
+  "hard-tube-fittings:compact-ferrule-fitting": [
+    {
+      "model": "HN6-M6-16-PK-N",
+      "family": "HN6",
+      "material": "PEEK",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+      ]
+    },
+    {
+      "model": "HN6-M6-16-PV-N",
+      "family": "HN6",
+      "material": "PVDF",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-fitting-threaded-body-variant-lineup.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp"
+      ]
+    },
+    {
+      "model": "HNF6-M6-16-PS-B",
+      "family": "HNF6",
+      "material": "PPS",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-bodies.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/compact-ferrule-fitting-black-tubing-assembly.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-upright-profile.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-bore-detail.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/ferrule-seal-variant-lineup.webp"
+      ]
+    }
+  ],
+  "hard-tube-fittings:high-pressure-fitting": [
+    {
+      "model": "PNC-U32-16-PK-N",
+      "family": "PNC",
+      "material": "PEEK",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-10-32-thread.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-round-base-tubing-assembly.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-knurled-body-comparison.webp"
+      ]
+    },
+    {
+      "model": "PNC6-U32-16-PK-N",
+      "family": "PNC6",
+      "material": "PEEK",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-hex-base.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-hex-base-tubing-assembly.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/peek-fitting-knurled-body-comparison.webp"
+      ]
+    },
+    {
+      "model": "PNF-U32-16-SS-N",
+      "family": "PNF",
+      "material": "SUS",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-fitting-tubing-assembly.webp",
+        "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-fitting-nut-and-ferrule-lineup.webp"
+      ]
+    },
+    {
+      "model": "PUT-U32-05-SS-N",
+      "family": "PUT",
+      "material": "SUS",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/hard-tube-fittings/photos/stainless-steel-microfluidic-tee-10-32-ports.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LSL": [
+    {
+      "model": "LSL-16-PP-N",
+      "family": "LSL",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-core-for-fixed-collar-pp-natural-size-group.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-core-for-fixed-collar-pp-pa-comparison.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-colored-collar-assembly-example.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-colored-collar-port-view.webp"
+      ]
+    },
+    {
+      "model": "LSL-16-PA-W",
+      "family": "LSL",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-core-for-fixed-collar-pa-white-size-group.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-core-for-fixed-collar-pp-pa-comparison.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-colored-collar-assembly-example.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-colored-collar-port-view.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LRL": [
+    {
+      "model": "LRL-16-PP-N",
+      "family": "LRL",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-core-for-rotating-collar-pp-natural-size-group.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-core-for-rotating-collar-pp-pa-comparison.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-colored-collar-assembly-example.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-colored-collar-port-view.webp"
+      ]
+    },
+    {
+      "model": "LRL-16-PA-W",
+      "family": "LRL",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-core-for-rotating-collar-pa-white-size-group.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-core-for-rotating-collar-pp-pa-comparison.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-colored-collar-assembly-example.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-colored-collar-port-view.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LPR": [
+    {
+      "model": "LPR-16-PP-N",
+      "family": "LPR",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PP-W",
+      "family": "LPR",
+      "material": "PP",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PP-B",
+      "family": "LPR",
+      "material": "PP",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PP-R",
+      "family": "LPR",
+      "material": "PP",
+      "color": "红色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PP-G",
+      "family": "LPR",
+      "material": "PP",
+      "color": "绿色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PP-U",
+      "family": "LPR",
+      "material": "PP",
+      "color": "蓝色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PP-O",
+      "family": "LPR",
+      "material": "PP",
+      "color": "橙色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PP-Y",
+      "family": "LPR",
+      "material": "PP",
+      "color": "黄色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-24-PA-W",
+      "family": "LPR",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-24-PA-Y",
+      "family": "LPR",
+      "material": "PA",
+      "color": "黄色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-32-PA-B",
+      "family": "LPR",
+      "material": "PA",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PA-R",
+      "family": "LPR",
+      "material": "PA",
+      "color": "红色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PA-G",
+      "family": "LPR",
+      "material": "PA",
+      "color": "绿色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PA-U",
+      "family": "LPR",
+      "material": "PA",
+      "color": "蓝色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPR-16-PA-O",
+      "family": "LPR",
+      "material": "PA",
+      "color": "橙色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LPS": [
+    {
+      "model": "LPS-16-PP-N",
+      "family": "LPS",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPS-32-PP-B",
+      "family": "LPS",
+      "material": "PP",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPS-32-PP-U",
+      "family": "LPS",
+      "material": "PP",
+      "color": "蓝色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPS-16-PP-W",
+      "family": "LPS",
+      "material": "PP",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPS-16-PP-R",
+      "family": "LPS",
+      "material": "PP",
+      "color": "红色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPS-16-PP-G",
+      "family": "LPS",
+      "material": "PP",
+      "color": "绿色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPS-16-PP-O",
+      "family": "LPS",
+      "material": "PP",
+      "color": "橙色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPS-16-PP-Y",
+      "family": "LPS",
+      "material": "PP",
+      "color": "黄色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LP": [
+    {
+      "model": "LP-32D-PP-N",
+      "family": "LP",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    },
+    {
+      "model": "LP-32D-PA-W",
+      "family": "LP",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    },
+    {
+      "model": "LP-32D-PA-O",
+      "family": "LP",
+      "material": "PA",
+      "color": "橙色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    },
+    {
+      "model": "LP-32D-PA-Y",
+      "family": "LP",
+      "material": "PA",
+      "color": "黄色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    },
+    {
+      "model": "LP-16D-PA-B",
+      "family": "LP",
+      "material": "PA",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    },
+    {
+      "model": "LP-16D-PA-R",
+      "family": "LP",
+      "material": "PA",
+      "color": "红色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    },
+    {
+      "model": "LP-16D-PA-G",
+      "family": "LP",
+      "material": "PA",
+      "color": "绿色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    },
+    {
+      "model": "LP-16D-PA-U",
+      "family": "LP",
+      "material": "PA",
+      "color": "蓝色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LS": [
+    {
+      "model": "LS-16D-PP-N",
+      "family": "LS",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/female-luer-fitting-pp-size-options.webp",
+        "/images/products/fittings/luer-fittings/photos/female-luer-fitting-size-and-material-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    },
+    {
+      "model": "LS-16D-PA-W",
+      "family": "LS",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/female-luer-fitting-pa-size-options.webp",
+        "/images/products/fittings/luer-fittings/photos/female-luer-fitting-size-and-material-options.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/one-piece-male-luer-fitting-mated-assembly-side-view.webp"
+      ]
+    }
+  ],
+  "luer-fittings:PMLS": [
+    {
+      "model": "PMLS-U28-16D-PP-N",
+      "family": "PMLS",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/bulkhead-female-luer-fitting-pp-natural-upright-view.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-female-luer-fitting-pp-natural-barb-view.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-female-luer-fitting-mixed-appearance-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "PMLS-U28-16D-PA-W",
+      "family": "PMLS",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/bulkhead-female-luer-fitting-pa-white-barb-view.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-female-luer-fitting-pa-white-upright-view.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-female-luer-fitting-pa-white-port-view.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LCR": [
+    {
+      "model": "LCR-PP-N",
+      "family": "LCR",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-assortment.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LCR-PA-W",
+      "family": "LCR",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-assortment.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LCR-PA-B",
+      "family": "LCR",
+      "material": "PA",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-assortment.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LCR-PA-R",
+      "family": "LCR",
+      "material": "PA",
+      "color": "红色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-assortment.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LCR-PA-G",
+      "family": "LCR",
+      "material": "PA",
+      "color": "绿色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-assortment.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LCR-PA-U",
+      "family": "LCR",
+      "material": "PA",
+      "color": "蓝色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-assortment.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LCR-PA-O",
+      "family": "LCR",
+      "material": "PA",
+      "color": "橙色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-assortment.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LCR-PA-Y",
+      "family": "LCR",
+      "material": "PA",
+      "color": "黄色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-lineup.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-identification-ring-color-assortment.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LPT": [
+    {
+      "model": "LPT-PP-N",
+      "family": "LPT",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPT-PA-W",
+      "family": "LPT",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPT-PA-B",
+      "family": "LPT",
+      "material": "PA",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPT-PA-R",
+      "family": "LPT",
+      "material": "PA",
+      "color": "红色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPT-PA-G",
+      "family": "LPT",
+      "material": "PA",
+      "color": "绿色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPT-PA-U",
+      "family": "LPT",
+      "material": "PA",
+      "color": "蓝色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPT-PA-O",
+      "family": "LPT",
+      "material": "PA",
+      "color": "橙色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LPT-PA-Y",
+      "family": "LPT",
+      "material": "PA",
+      "color": "黄色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/male-luer-lock-fitting-assembly-group.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LNS": [
+    {
+      "model": "LNS-U28-PP-N",
+      "family": "LNS",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-knurled-nut-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LNS-U28-PA-W",
+      "family": "LNS",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-knurled-nut-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LNS-U28-PA-B",
+      "family": "LNS",
+      "material": "PA",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-knurled-nut-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LNS-U28-PA-R",
+      "family": "LNS",
+      "material": "PA",
+      "color": "红色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-knurled-nut-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LNS-U28-PA-G",
+      "family": "LNS",
+      "material": "PA",
+      "color": "绿色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-knurled-nut-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LNS-U28-PA-U",
+      "family": "LNS",
+      "material": "PA",
+      "color": "蓝色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-knurled-nut-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LNS-U28-PA-O",
+      "family": "LNS",
+      "material": "PA",
+      "color": "橙色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-knurled-nut-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    },
+    {
+      "model": "LNS-U28-PA-Y",
+      "family": "LNS",
+      "material": "PA",
+      "color": "黄色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-knurled-nut-color-options.webp",
+        "/images/products/fittings/luer-fittings/photos/bulkhead-luer-fitting-panel-assembly-color-rings.webp"
+      ]
+    }
+  ],
+  "luer-fittings:LPBL": [
+    {
+      "model": "LPBL-PA-W",
+      "family": "LPBL",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-plug-fitting-assembly.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-plug-group-and-assembly.webp"
+      ]
+    },
+    {
+      "model": "LPBL-PP-N",
+      "family": "LPBL",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/luer-fittings/photos/luer-plug-fitting-assembly.webp",
+        "/images/products/fittings/luer-fittings/photos/luer-plug-group-and-assembly.webp"
+      ]
+    }
+  ],
+  "quick-connect-fittings:Q20": [
+    {
+      "model": "Q2001-PMV-SACN",
+      "family": "Q2001",
+      "material": "POM",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q2001-PMV-SPPE",
+      "family": "Q2001",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q2002-PMV-SACN",
+      "family": "Q2002",
+      "material": "POM",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q2002-PMV-SPPE",
+      "family": "Q2002",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q2003-PMV-SACN",
+      "family": "Q2003",
+      "material": "POM",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q2003-PMV-SPPE",
+      "family": "Q2003",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q2004-PMV-SACN",
+      "family": "Q2004",
+      "material": "POM",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q2004-PMV-SPPE",
+      "family": "Q2004",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q2018N-PNV-SACN",
+      "family": "Q2018N",
+      "material": "POM",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q2018N-PNV-SPPE",
+      "family": "Q2018N",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    }
+  ],
+  "quick-connect-fittings:Q40": [
+    {
+      "model": "Q4004-PMV-SACN",
+      "family": "Q4004",
+      "material": "POM",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q4004-PMV-SPPE",
+      "family": "Q4004",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q4005-PMV-SACN",
+      "family": "Q4005",
+      "material": "POM",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q4005-PMV-SPPE",
+      "family": "Q4005",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q4006-PMV-SACN",
+      "family": "Q4006",
+      "material": "POM",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q4006-PMV-SPPE",
+      "family": "Q4006",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q4014N-PNV-SACN",
+      "family": "Q4014N",
+      "material": "POM",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q4014N-PNV-SPPE",
+      "family": "Q4014N",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    }
+  ],
+  "quick-connect-fittings:Q60": [
+    {
+      "model": "Q6006-PNV-LPPE",
+      "family": "Q6006",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q6008-PNV-LPPE",
+      "family": "Q6008",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q6012-PNV-SPPE",
+      "family": "Q6012",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q6012N-PNV-SPPE",
+      "family": "Q6012N",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    },
+    {
+      "model": "Q6038N-PNV-SPPE",
+      "family": "Q6038N",
+      "material": "PP",
+      "color": "",
+      "photos": [
+        "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp"
+      ]
+    }
+  ],
+  "thread-to-barbed-fittings:SA": [
+    {
+      "model": "SA-U32-32F-PP-N",
+      "family": "SA",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-family-group.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-six-piece-lineup.webp"
+      ]
+    },
+    {
+      "model": "SA-U32-32F-PA-W",
+      "family": "SA",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-family-group.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-six-piece-lineup.webp"
+      ]
+    }
+  ],
+  "thread-to-barbed-fittings:SB": [
+    {
+      "model": "SB-U28-16-AC-B",
+      "family": "SB",
+      "material": "POM",
+      "color": "黑色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-family-group.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-six-piece-lineup.webp"
+      ]
+    },
+    {
+      "model": "SB-M5-24D-PP-N",
+      "family": "SB",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-family-group.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-six-piece-lineup.webp"
+      ]
+    },
+    {
+      "model": "SB-M5-24D-PA-W",
+      "family": "SB",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-family-group.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-six-piece-lineup.webp"
+      ]
+    }
+  ],
+  "thread-to-barbed-fittings:SBS": [
+    {
+      "model": "SBS-M6-24D-PP-N",
+      "family": "SBS",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-family-group.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-six-piece-lineup.webp"
+      ]
+    },
+    {
+      "model": "SBS-M6-24D-PA-W",
+      "family": "SBS",
+      "material": "PA",
+      "color": "白色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-family-group.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-six-piece-lineup.webp"
+      ]
+    }
+  ],
+  "thread-to-barbed-fittings:SBR": [
+    {
+      "model": "SBR-U28-16-PP-N",
+      "family": "SBR",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/sbr-u28-pp-swivel-male-thread-to-barb-single-angle.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/sbr-u28-pp-swivel-male-thread-to-barb-three-piece-group.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-family-group.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/male-thread-to-barb-straight-fitting-six-piece-lineup.webp"
+      ]
+    }
+  ],
+  "thread-to-barbed-fittings:SC": [
+    {
+      "model": "SC-M6-16-PP-N",
+      "family": "SC",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/sc-m6-pp-female-thread-to-barb-slim-port.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/sc-m6-pp-female-thread-to-barb-two-angle-pair.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/sc-m6-pp-female-thread-to-barb-three-piece-group.webp"
+      ]
+    },
+    {
+      "model": "SC-M6-32-PP-N",
+      "family": "SC",
+      "material": "PP",
+      "color": "本色",
+      "photos": [
+        "/images/products/fittings/thread-to-barbed-fittings/photos/sc-m6-pp-female-thread-to-barb-broad-port.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/sc-m6-pp-female-thread-to-barb-two-angle-pair.webp",
+        "/images/products/fittings/thread-to-barbed-fittings/photos/sc-m6-pp-female-thread-to-barb-three-piece-group.webp"
+      ]
+    }
+  ]
+}

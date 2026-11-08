@@ -55,10 +55,6 @@ export function getChineseProductPageBreadcrumbs(
     if (type) append(normalizedType === "miniature-diaphragm-pumps" ? "微型隔膜泵" : type.label, `${base}${normalizedType}/`);
     const series = resolveSeriesRoute(category, normalizedType, segments[3]);
     if (series) append(series.label, `${base}${normalizedType}/${segments[3]}/`);
-    if (category === "fittings" && normalizedType === "quick-connect-fittings") {
-      const qSeries = segments[3]?.match(/^q(20|40|60)/i);
-      if (qSeries) append(`Q${qSeries[1]} 系列`, `${base}${normalizedType}/q${qSeries[1]}/`);
-    }
   }
   const pagePath = `/${segments.join("/")}/`;
   if (pagePath !== currentPath && currentLabel?.trim()) items.push({ label: currentLabel.trim() });

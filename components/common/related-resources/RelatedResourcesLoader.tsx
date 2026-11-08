@@ -20,7 +20,10 @@ export class RelatedResourcesBoundary extends Component<
   render() { return this.state.failed ? this.props.fallback : this.props.children; }
 }
 
-export default function RelatedResourcesLoader(data: RelatedResourcesData) {
+export default function RelatedResourcesLoader(resources: RelatedResourcesData) {
+  // Also cover callers that supply their own curated videos and the error fallback.
+  const data = resources.locale === "zh-CN" ? { ...resources, videos: [] } : resources;
+  if (!data.videos.length && !data.products.length && !data.articles.length) return null;
   const ui = getRelatedResourcesText(data.uiLocale ?? data.locale);
   const prefix = data.locale === "zh-CN" ? "" : `/${data.locale}`;
   const fallback = (

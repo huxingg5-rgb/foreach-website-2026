@@ -128,8 +128,7 @@ export const femaleThreadAdaptersCopy: DiaphragmPumpEngineeringArticleCopy = {
         ] },
         { type: "paragraph", text: "若供液还需要穿过仪器面板，可另行评估 PMU-M12-U28-20-PP-N，但其通径为 2.0 mm。不能因为它与三通同为 U28 端口，就认为整条液路已经等通径；还需检查管路到穿板接头之间的衔接、置换体积和安装空间。" },
         { type: "links", items: [
-          { href: "/applications/analytical-instruments/", label: "分析仪器液路应用", prefix: "结合具体任务继续阅读", suffix: "；" },
-          { href: "/resources/installation-guide/?guide=youtube-female-thread-conversion", label: "内螺纹互转接头介绍视频", prefix: "产品外形与接口介绍可查看", suffix: "。" },
+          { href: "/applications/analytical-instruments/", label: "分析仪器液路应用", prefix: "结合具体任务继续阅读", suffix: "。" },
         ] },
       ],
     },

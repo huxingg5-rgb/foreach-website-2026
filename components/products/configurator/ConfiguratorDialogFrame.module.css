@@ -1,0 +1,35 @@
+/* Shell refinements shared with the original hard-tube selector. */
+.dialog { --right-inset: 32px; }
+.dialog > header, .dialog > footer { padding-right: var(--right-inset); }
+.dialog > header h2 { font-weight: 600; font-size: 27px; }
+.footer .notice { display: block; }
+.notice a { color: #173368; text-decoration: underline; text-underline-offset: 3px; }
+.notice a:hover { color: var(--brand-cyan, #09e9b4); }
+
+.dialog:not([lang="zh"]) { grid-template-rows: auto minmax(0, 1fr) auto; }
+.dialog:not([lang="zh"]) > header { min-height: 82px; padding-top: 18px; padding-bottom: 18px; }
+.dialog:not([lang="zh"]) > footer { min-height: 76px; padding-top: 14px; padding-bottom: 14px; }
+
+@media (max-width: 1180px) {
+  .dialog { --right-inset: 24px; }
+}
+
+@media (min-width: 901px) and (max-height: 780px) {
+  .dialog { grid-template-rows: 90px minmax(0, 1fr) 80px; }
+  .dialog > header { padding-top: 22px; }
+}
+
+@media (max-width: 900px) {
+  .overlay { padding: 12px; }
+  .dialog { --right-inset: 20px; grid-template-rows: 78px minmax(0, 1fr) auto; }
+  .dialog > header { padding-top: 0; align-items: center; }
+  .dialog > header h2 { font-size: 22px; }
+  .footer { padding: 12px 20px; }
+}
+
+@media (max-width: 600px) {
+  .overlay { padding: 0; }
+  .dialog { --right-inset: 16px; }
+  .dialog > header h2 { font-size: 21px; }
+  .footer { padding: 12px 16px max(12px, env(safe-area-inset-bottom)); }
+}

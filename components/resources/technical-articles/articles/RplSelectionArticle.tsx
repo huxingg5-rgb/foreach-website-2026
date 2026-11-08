@@ -91,7 +91,7 @@ function renderTable(block: Extract<EngineeringArticleBlock, { type: "table" }>,
   );
 }
 
-function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: ReadonlyMap<string, string>, subheadingIds?: readonly string[], locale: TechnicalArticleLocale = "zh-CN") {
+export function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: ReadonlyMap<string, string>, subheadingIds?: readonly string[], locale: TechnicalArticleLocale = "zh-CN") {
   const nodes: ReactNode[] = [];
   let subheadingIndex = 0;
   for (let index = 0; index < blocks.length; index++) {
@@ -159,6 +159,7 @@ export default function RplSelectionArticle({
   leadContent,
   afterLeadContent,
   relatedProducts,
+  afterBody,
 }: {
   copy: DiaphragmPumpEngineeringArticleCopy;
   date: string;
@@ -173,6 +174,8 @@ export default function RplSelectionArticle({
   leadContent?: ReactNode;
   afterLeadContent?: ReactNode;
   relatedProducts?: ReactNode;
+  /** Optional content rendered after the last section (e.g. a booking call to action). */
+  afterBody?: ReactNode;
 }) {
   const ui = rplArticleUi[locale];
   const defaultModelLinks = new Map(getRplSelectionProducts(locale).map(product => [product.name, product.href]));
@@ -253,6 +256,7 @@ export default function RplSelectionArticle({
               </div>
             </section>
           ) : null}
+          {afterBody}
         </div>
       </article>
       <ArticleEnhancements articleId={articleId} locale={locale} />

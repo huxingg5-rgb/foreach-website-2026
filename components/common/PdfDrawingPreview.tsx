@@ -20,6 +20,9 @@ type PdfDrawingPreviewText = {
   loadingLabel: string;
   previewButton: string;
   description: string;
+  errorLabel?: string;
+  pageLabel?: string;
+  retryLabel?: string;
 };
 
 type PdfDrawingPreviewProps = {
@@ -56,6 +59,7 @@ export default function PdfDrawingPreview({
   nextPageVisibleLabel,
 }: PdfDrawingPreviewProps) {
   const resolvedText: PdfDrawingPreviewText = {
+    ...text,
     title: text.title || "零件图",
     loadingLabel: text.loadingLabel || "图纸加载中",
     previewButton: text.previewButton || "点击预览图纸",

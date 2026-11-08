@@ -142,54 +142,59 @@ export const homeNewsData = {
   ] satisfies HomeNewsTab[],
 
   featureNews: {
-    key: "adlm-2026-onsite",
+    key: "medica-2026",
     categoryKey: "exhibition",
     categoryLabel: {
-      "zh-CN": "展会活动",
-      en: "Exhibitions",
-      es: "Exposiciones",
-      fr: "Salons",
-      ko: "전시회",
-      ru: "Выставки",
+      "zh-CN":
+        "展会活动",
+      en:
+        "Exhibitions",
+      es:
+        "Exposiciones",
+      fr:
+        "Salons",
+      ko:
+        "전시회",
+      ru:
+        "Выставки",
     },
-    date: "2026/07/30",
-    image:
-      "/images/home/news/adlm-2026-onsite-1200.webp",
+    date: "2026/11/05",
+    image: "/images/home/news/medica-2026-1200.webp",
     title: {
       "zh-CN":
-        "ADLM 2026现场直击｜恒永达亮相4105号展位",
+        "MEDICA 2026｜恒永达诚邀您莅临 1H39-\u20601 展位",
       en:
-        "Live from ADLM 2026 | Meet Foreach at Booth 4105",
+        "Meet Foreach at MEDICA 2026 | Booth\u00a01H39-\u20601",
       es:
-        "En directo desde ADLM 2026 | Visite a Foreach en el stand 4105",
+        "Visite a Foreach en MEDICA 2026 | Stand\u00a01H39-\u20601",
       fr:
-        "En direct de l’ADLM 2026 | Retrouvez Foreach au stand 4105",
+        "Rencontrez Foreach à MEDICA 2026 | Stand\u00a01H39-\u20601",
       ko:
-        "ADLM 2026 현장 소식 | Foreach Technology 부스 4105를 만나보세요",
+        "MEDICA 2026에서 Foreach를 만나보세요 | 부스\u00a01H39-\u20601",
       ru:
-        "ADLM 2026: репортаж с выставки | Foreach Technology на стенде 4105",
+        "Foreach на выставке MEDICA 2026 | Стенд\u00a01H39-\u20601",
     },
     description: {
       "zh-CN":
-        "ADLM 2026在美国加利福尼亚州阿纳海姆正式举行。恒永达团队已在4105号展位准备就绪，期待与全球临床诊断、生命科学、分析仪器及实验室自动化领域的行业伙伴现场交流。",
+        "恒永达将于 2026 年 11 月 16 日至 19 日参加德国杜塞尔多夫 MEDICA 2026，展位号 1H39-\u20601，欢迎新老客户及合作伙伴莅临交流。",
       en:
-        "ADLM 2026 is underway in Anaheim, California. The Foreach team is ready at Booth 4105 to meet professionals from clinical diagnostics, life science, analytical instrumentation, and laboratory automation.",
+        "Foreach will exhibit at MEDICA 2026 in Düsseldorf, Germany, from November 16 to 19, 2026. Visit Booth\u00a01H39-\u20601 to discuss second-source options for pumps, valves, and fluidic components.",
       es:
-        "ADLM 2026 ya está en marcha en Anaheim, California. El equipo de Foreach le espera en el stand 4105 para conversar con profesionales del diagnóstico clínico, las ciencias de la vida, la instrumentación analítica y la automatización de laboratorios.",
+        "Foreach participará en MEDICA 2026 en Düsseldorf (Alemania) del 16 al 19 de noviembre de 2026. Visite el stand 1H39-\u20601 para hablar de opciones de segundo proveedor para bombas, válvulas y componentes fluídicos.",
       fr:
-        "L’ADLM 2026 se tient actuellement à Anaheim, en Californie. L’équipe Foreach vous accueille au stand 4105 pour échanger avec les professionnels du diagnostic clinique, des sciences de la vie, de l’instrumentation analytique et de l’automatisation des laboratoires.",
+        "Foreach participera à MEDICA 2026 à Düsseldorf (Allemagne) du 16 au 19 novembre 2026. Retrouvez-nous au stand 1H39-\u20601 pour parler de solutions de second fournisseur pour pompes, vannes et composants fluidiques.",
       ko:
-        "ADLM 2026이 미국 캘리포니아 애너하임에서 진행 중입니다. Foreach 팀은 부스 4105에서 임상 진단, 생명과학, 분석 기기 및 실험실 자동화 분야의 전문가들과 만날 준비를 마쳤습니다.",
+        "Foreach는 2026년 11월 16일부터 19일까지 독일 뒤셀도르프에서 열리는 MEDICA 2026에 참가합니다. 부스\u00a01H39-\u20601에서 펌프, 밸브 및 유체 부품의 세컨드 소스 공급 방안을 상담해 보세요.",
       ru:
-        "Выставка ADLM 2026 проходит в Анахайме, штат Калифорния. Команда Foreach ждет специалистов в области клинической диагностики, наук о жизни, аналитического приборостроения и автоматизации лабораторий на стенде 4105.",
+        "Foreach примет участие в выставке MEDICA 2026 в Дюссельдорфе (Германия) с 16 по 19 ноября 2026 года. Посетите стенд\u00a01H39-\u20601, чтобы обсудить альтернативные поставки насосов, клапанов и жидкостных компонентов.",
     },
     href: {
-      "zh-CN": "/resources/news/adlm-2026-onsite",
-      en: "/en/resources/news/adlm-2026-onsite",
-      es: "/es/resources/news/adlm-2026-onsite",
-      fr: "/fr/resources/news/adlm-2026-onsite",
-      ko: "/ko/resources/news/adlm-2026-onsite",
-      ru: "/ru/resources/news/adlm-2026-onsite",
+      "zh-CN": "/resources/news/medica-2026",
+      en: "/en/resources/news/medica-2026",
+      es: "/es/resources/news/medica-2026",
+      fr: "/fr/resources/news/medica-2026",
+      ko: "/ko/resources/news/medica-2026",
+      ru: "/ru/resources/news/medica-2026",
     },
   } satisfies HomeNewsItem,
 
@@ -239,6 +244,62 @@ export const homeNewsData = {
   } satisfies HomeNewsItem,
 
   newsList: [
+    {
+      key: "adlm-2026-onsite",
+      categoryKey: "exhibition",
+      categoryLabel: {
+        "zh-CN":
+          "展会活动",
+        en:
+          "Exhibitions",
+        es:
+          "Exposiciones",
+        fr:
+          "Salons",
+        ko:
+          "전시회",
+        ru:
+          "Выставки",
+      },
+      date: "2026/07/30",
+      image: "/images/home/news/adlm-2026-onsite-480.webp",
+      title: {
+        "zh-CN":
+          "ADLM 2026现场直击｜恒永达亮相4105号展位",
+        en:
+          "Live from ADLM 2026 | Meet Foreach at Booth 4105",
+        es:
+          "En directo desde ADLM 2026 | Visite a Foreach en el stand 4105",
+        fr:
+          "En direct de l’ADLM 2026 | Retrouvez Foreach au stand 4105",
+        ko:
+          "ADLM 2026 현장 소식 | Foreach Technology 부스 4105를 만나보세요",
+        ru:
+          "ADLM 2026: репортаж с выставки | Foreach Technology на стенде 4105",
+      },
+      description: {
+        "zh-CN":
+          "ADLM 2026 在美国阿纳海姆举行，恒永达团队在 4105 号展位与全球行业伙伴现场交流。",
+        en:
+          "ADLM 2026 is underway in Anaheim, California, and the Foreach team is ready at Booth 4105.",
+        es:
+          "ADLM 2026 se celebra en Anaheim, California, y el equipo de Foreach le espera en el stand 4105.",
+        fr:
+          "L’ADLM 2026 se tient à Anaheim, en Californie, et l’équipe Foreach vous accueille au stand 4105.",
+        ko:
+          "ADLM 2026이 미국 캘리포니아 애너하임에서 진행 중이며, Foreach 팀이 부스 4105에서 기다리고 있습니다.",
+        ru:
+          "ADLM 2026 проходит в Анахайме, штат Калифорния; команда Foreach ждет вас на стенде 4105.",
+      },
+      href: {
+        "zh-CN": "/resources/news/adlm-2026-onsite",
+        en: "/en/resources/news/adlm-2026-onsite",
+        es: "/es/resources/news/adlm-2026-onsite",
+        fr: "/fr/resources/news/adlm-2026-onsite",
+        ko: "/ko/resources/news/adlm-2026-onsite",
+        ru: "/ru/resources/news/adlm-2026-onsite",
+      },
+    },
     {
       key: "caclp-2026",
       categoryKey: "exhibition",
@@ -369,50 +430,6 @@ export const homeNewsData = {
         fr: "/fr/resources/news/guangzhou-high-med-expo-2026",
         ko: "/ko/resources/news/guangzhou-high-med-expo-2026",
         ru: "/ru/resources/news/guangzhou-high-med-expo-2026",
-      },
-    },
-    {
-      key: "national-little-giant-2024",
-      categoryKey: "company",
-      categoryLabel: {
-        "zh-CN": "公司动态",
-        en: "Company Updates",
-        es: "Noticias de la empresa",
-        fr: "Actualités de l’entreprise",
-        ko: "회사 소식",
-        ru: "Новости компании",
-      },
-      date: "2024/09/06",
-      image: "/images/home/news/national-little-giant-2024-480.webp",
-      title: {
-        "zh-CN": "恒永达荣获国家级专精特新“小巨人”称号",
-        en: "Foreach Recognized as a National Specialized and Innovative Little Giant Enterprise",
-        es: "Foreach reconocida como empresa nacional especializada e innovadora",
-        fr: "Foreach reconnue comme entreprise nationale spécialisée et innovante",
-        ko: "Foreach, 국가급 전문·특화·혁신 Little Giant 기업 선정",
-        ru: "Foreach получила статус национального специализированного и инновационного предприятия Little Giant",
-      },
-      description: {
-        "zh-CN":
-          "恒永达凭借在微流体控制领域的长期专注与创新能力，荣获国家级专精特新“小巨人”企业称号。",
-        en:
-          "Foreach was recognized for its long-term focus and innovation in microfluidic control technology.",
-        es:
-          "Foreach fue reconocida por su enfoque e innovación en tecnología de control microfluídico.",
-        fr:
-          "Foreach a été reconnue pour son engagement et son innovation dans le contrôle microfluidique.",
-        ko:
-          "Foreach는 마이크로플루이딕 제어 기술에 대한 지속적인 집중과 혁신 역량을 인정받았습니다.",
-        ru:
-          "Foreach получила признание за долгосрочную специализацию и инновации в области микрофлюидного управления.",
-      },
-      href: {
-        "zh-CN": "/resources/news/national-little-giant-2024",
-        en: "/en/resources/news/national-little-giant-2024",
-        es: "/es/resources/news/national-little-giant-2024",
-        fr: "/fr/resources/news/national-little-giant-2024",
-        ko: "/ko/resources/news/national-little-giant-2024",
-        ru: "/ru/resources/news/national-little-giant-2024",
       },
     },
   ] satisfies HomeNewsItem[],

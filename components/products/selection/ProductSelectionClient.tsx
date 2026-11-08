@@ -3549,7 +3549,10 @@ export default function ProductSelectionClient({
           productTypeId === "check-valves" ? "filters" : productTypeId || "",
         ) ?? 999;
 
-      // Match the sidebar order and show LPS first within Luer fittings.
+      const isColoredLuer = (product: ProductSelectionProduct) =>
+        /-(R|G|U|O|Y)$/.test(String(product.cardTitle?.zh || product.cardTitle?.en || "").trim().toUpperCase());
+
+      // Keep category order; Chinese Luer cards show colors first, then LPS within each group.
       return products.sort((current, next) => {
         const typeDifference =
           getTypeOrder(current.productTypeId) - getTypeOrder(next.productTypeId);
@@ -3560,6 +3563,10 @@ export default function ProductSelectionClient({
           current.productTypeId === "luer-fittings" &&
           next.productTypeId === "luer-fittings"
         ) {
+          if (locale === "zh") {
+            const colorDifference = Number(isColoredLuer(next)) - Number(isColoredLuer(current));
+            if (colorDifference !== 0) return colorDifference;
+          }
           return Number(next.seriesId === "lps") - Number(current.seriesId === "lps");
         }
 

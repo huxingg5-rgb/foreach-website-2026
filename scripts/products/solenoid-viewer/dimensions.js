@@ -8,7 +8,7 @@ export function createDimensions(stage,camera,options={}){
  const format=v=>Number(v.toFixed(2)).toString();
  function set(model,object){data=model.dimensions;solid=object;svg.replaceChildren();items=[];lastFrame='';chosen.fill(null);shown.fill(true);if(!data)return;
   const axes=options.axes||[0,1,2],values=axes.map(axis=>({axis,value:data.size[axis]}));if(data.housing&&Math.abs(data.size[1]-data.housing.width)>=.01)values.push({axis:1,value:data.housing.width,housing:true});
-  for(const {axis,value,housing} of values){const item={axis,housing,extension:element('path',{class:'dimension-extension'}),line:element('path',{class:'dimension-line'}),text:element('text',{'text-anchor':'middle','dominant-baseline':'middle',class:'dimension-label'})};item.text.textContent=(options.diameterAxis===axis?`${options.diameterLabel||'Ø'} `:'')+format(value)+' mm';items.push(item);}
+  for(const {axis,value,housing} of values){const item={axis,housing,extension:element('path',{class:'dimension-extension'}),line:element('path',{class:'dimension-line'}),text:element('text',{'text-anchor':'middle','dominant-baseline':'middle',class:'dimension-label'})};item.text.textContent=(options.axisLabels?.[axis]?`${options.axisLabels[axis]} `:options.diameterAxis===axis?`${options.diameterLabel||'Ø'} `:'')+format(value)+' mm';items.push(item);}
  }
  function update(){if(!visible||!data)return;const w=stage.clientWidth,h=stage.clientHeight;solid.updateWorldMatrix(true,false);
   const frame=[w,h,...camera.matrixWorld.elements,...camera.projectionMatrix.elements,...solid.matrixWorld.elements].map(v=>Number(v).toFixed(6)).join(',');if(frame===lastFrame)return;lastFrame=frame;
@@ -31,7 +31,9 @@ export function createDimensions(stage,camera,options={}){
    const xy=p=>p.map(v=>v.toFixed(2)).join(',');
    attr(item.extension,'d',`M ${xy(a)} L ${xy(A.map((v,i)=>v+n[i]*6))} M ${xy(b)} L ${xy(B.map((v,i)=>v+n[i]*6))}`);
    let path=`M ${xy(A)} L ${xy(B)}`;for(const [p,sgn] of [[A,1],[B,-1]]){const tip1=p.map((v,i)=>v+u[i]*sgn*7+n[i]*3),tip2=p.map((v,i)=>v+u[i]*sgn*7-n[i]*3);path+=` M ${xy(tip1)} L ${xy(p)} L ${xy(tip2)}`;}attr(item.line,'d',path);
-   attr(item.text,'x',((A[0]+B[0])/2+n[0]*14).toFixed(2));attr(item.text,'y',((A[1]+B[1])/2+n[1]*14).toFixed(2));
+   let labelX=(A[0]+B[0])/2+n[0]*14,labelY=(A[1]+B[1])/2+n[1]*14;
+   if(options.clampLabels){const margin=(item.text.getComputedTextLength?.()||item.text.textContent.length*6)/2+8;labelX=Math.max(margin,Math.min(w-margin,labelX));labelY=Math.max(12,Math.min(h-12,labelY));}
+   attr(item.text,'x',labelX.toFixed(2));attr(item.text,'y',labelY.toFixed(2));
   }
  }
  function setVisible(next){if(visible===next)return;visible=next;svg.style.display=visible?'':'none';if(visible)lastFrame='';}

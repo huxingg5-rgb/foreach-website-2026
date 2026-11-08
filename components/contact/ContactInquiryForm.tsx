@@ -43,7 +43,8 @@ import {
 type ContactInquiryFormProps = {
   data: ContactPageData; // 当前语言页面数据
   presetRequestType?: string; // 外部卡片点击后传进来的需求类型
-  initialValues?: Partial<Pick<ContactFormState, "requestType" | "productType">>;
+  initialValues?: Partial<Pick<ContactFormState, "requestType" | "productType" | "targetModel" | "projectStage">>;
+  idPrefix?: string;
   variant?: "page" | "modal";
   onSuccessClose?: () => void;
   onDraftStart?: () => void;
@@ -505,6 +506,7 @@ export default function ContactInquiryForm({
   data,
   presetRequestType,
   initialValues,
+  idPrefix = "contact",
   variant = "page",
   onSuccessClose,
   onDraftStart,
@@ -1191,12 +1193,12 @@ export default function ContactInquiryForm({
         <div className="contact-form-grid">
           {/* 姓名 */}
           <div className="contact-field">
-            <label htmlFor="contact-name">
+            <label htmlFor={`${idPrefix}-name`}>
               {data.form.fields.name.label}
               <span>*</span>
             </label>
             <input
-              id="contact-name"
+              id={`${idPrefix}-name`}
               name="name"
               type="text"
               value={formData.name}
@@ -1208,12 +1210,12 @@ export default function ContactInquiryForm({
 
           {/* 公司名称 */}
           <div className="contact-field">
-            <label htmlFor="contact-company">
+            <label htmlFor={`${idPrefix}-company`}>
               {data.form.fields.company.label}
               <span>*</span>
             </label>
             <input
-              id="contact-company"
+              id={`${idPrefix}-company`}
               name="company"
               type="text"
               value={formData.company}
@@ -1225,14 +1227,14 @@ export default function ContactInquiryForm({
 
           {/* 邮箱验证码 */}
           <div className="contact-field contact-field-full">
-            <label htmlFor="contact-email">
+            <label htmlFor={`${idPrefix}-email`}>
               {data.form.emailVerification.emailLabel}
               <span>*</span>
             </label>
 
             <div className="contact-email-row">
               <input
-                id="contact-email"
+                id={`${idPrefix}-email`}
                 name="email"
                 type="email"
                 value={formData.email}
@@ -1298,12 +1300,12 @@ export default function ContactInquiryForm({
 
           {/* 需求类型 */}
           <div className="contact-field">
-            <label htmlFor="contact-request-type">
+            <label htmlFor={`${idPrefix}-request-type`}>
               {data.form.labels.requestType}
               <span>*</span>
             </label>
             <select
-              id="contact-request-type"
+              id={`${idPrefix}-request-type`}
               name="requestType"
               value={formData.requestType}
               onChange={handleFieldChange}
@@ -1320,9 +1322,9 @@ export default function ContactInquiryForm({
 
           {/* 电话 / 微信 */}
           <div className="contact-field">
-            <label htmlFor="contact-phone">{data.form.fields.phone.label}</label>
+            <label htmlFor={`${idPrefix}-phone`}>{data.form.fields.phone.label}</label>
             <input
-              id="contact-phone"
+              id={`${idPrefix}-phone`}
               name="phone"
               type="text"
               value={formData.phone}
@@ -1334,12 +1336,12 @@ export default function ContactInquiryForm({
 
           {/* 目标产品 / 部件类型 */}
           <div className="contact-field">
-            <label htmlFor="contact-product-type">
+            <label htmlFor={`${idPrefix}-product-type`}>
               {data.form.labels.productType}
               <span>*</span>
             </label>
             <select
-              id="contact-product-type"
+              id={`${idPrefix}-product-type`}
               name="productType"
               required
               value={formData.productType}
@@ -1362,11 +1364,11 @@ export default function ContactInquiryForm({
 
           {/* 当前阶段 */}
           <div className="contact-field">
-            <label htmlFor="contact-project-stage">
+            <label htmlFor={`${idPrefix}-project-stage`}>
               {data.form.labels.projectStage}
             </label>
             <select
-              id="contact-project-stage"
+              id={`${idPrefix}-project-stage`}
               name="projectStage"
               value={formData.projectStage}
               onChange={handleFieldChange}
@@ -1384,11 +1386,11 @@ export default function ContactInquiryForm({
 
           {/* 具体型号 / 竞品型号 */}
           <div className="contact-field contact-field-full">
-            <label htmlFor="contact-target-model">
+            <label htmlFor={`${idPrefix}-target-model`}>
               {data.form.fields.targetModel.label}
             </label>
             <input
-              id="contact-target-model"
+              id={`${idPrefix}-target-model`}
               name="targetModel"
               type="text"
               value={formData.targetModel}
@@ -1400,12 +1402,12 @@ export default function ContactInquiryForm({
 
           {/* 需求描述 */}
           <div className="contact-field contact-field-full">
-            <label htmlFor="contact-message">
+            <label htmlFor={`${idPrefix}-message`}>
               {data.form.fields.message.label}
               <span>*</span>
             </label>
             <textarea
-              id="contact-message"
+              id={`${idPrefix}-message`}
               name="message"
               value={formData.message}
               placeholder={data.form.fields.message.placeholder}

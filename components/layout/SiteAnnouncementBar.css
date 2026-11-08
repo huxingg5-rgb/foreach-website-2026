@@ -1,0 +1,378 @@
+/* =========================================================
+   SiteAnnouncementBar.css
+   恒永达官网｜全站顶部公告条样式 + 布局让位
+
+   规则：
+   1. 本文件里所有“布局让位”都挂在 html:has(.site-announcement) 下，
+      只有公告条真正渲染时才生效；公告条不显示时，全站布局与原来完全一致
+   2. 不修改 app/globals.css 等原有样式文件
+   3. 下面的导航基础高度是对照 app/globals.css 里 --site-header-height 的定义写的：
+        默认 82px（:root）、≥1921px 90px、1025–1599px 64px、≤768px 60px
+      如果以后 globals.css 改了导航高度，这里要同步改
+   4. 公告条高度：≥1441px 64px、1025–1440px 60px、769–1024px 52px、≤768px 44px
+========================================================= */
+
+/* ---------- 公告条本身 ---------- */
+
+.site-announcement {
+  position: relative;
+  z-index: 2;
+  height: var(--site-announcement-height, 60px);
+  background: #173368;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* 左侧文字、右侧按钮，整体收在中间一段宽度内 */
+.site-announcement__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1080px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-announcement__message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  color: inherit;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.site-announcement__tag {
+  flex: none;
+  padding: 4px 16px;
+  background: #09e9b4;
+  color: #173368;
+  font-weight: 400;
+}
+
+.site-announcement__booth {
+  flex: none;
+  margin-right: 4px;
+}
+
+/* 地点 · 日期：粗体，最醒目 */
+.site-announcement__highlight {
+  display: flex;
+  flex: none;
+  align-items: center;
+  font-weight: 700;
+}
+
+.site-announcement__date::before {
+  content: "·";
+  margin: 0 8px;
+}
+
+.site-announcement__compact {
+  display: none;
+}
+
+.site-announcement__actions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-announcement__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.site-announcement__button--secondary {
+  border-color: #ffffff;
+  background: transparent;
+  color: #ffffff;
+}
+
+.site-announcement__button--primary {
+  min-width: 150px;
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #173368;
+}
+
+/* 鼠标触碰：两个按钮都变荧光绿底、深蓝字（立即预约平时是白底深蓝字） */
+@media (hover: hover) and (pointer: fine) {
+  .site-announcement__button--secondary:hover {
+    border-color: #09e9b4;
+    background: #09e9b4;
+    color: #173368;
+  }
+
+  .site-announcement__button--primary:hover {
+    border-color: #09e9b4;
+    background: #09e9b4;
+    color: #173368;
+  }
+
+  .site-announcement__button:active {
+    transform: scale(0.98);
+  }
+}
+
+/* 触屏：按下时给同样的反馈 */
+@media (hover: none), (pointer: coarse) {
+  .site-announcement__button--secondary:active {
+    border-color: #09e9b4;
+    background: #09e9b4;
+    color: #173368;
+  }
+
+  .site-announcement__button--primary:active {
+    border-color: #09e9b4;
+    background: #09e9b4;
+    color: #173368;
+  }
+}
+
+.site-announcement a:focus-visible {
+  outline: 2px solid rgba(9, 233, 180, 0.7);
+  outline-offset: 3px;
+}
+
+@media (min-width: 1441px) {
+  .site-announcement {
+    font-size: 15px;
+  }
+
+  .site-announcement__inner {
+    max-width: 1180px;
+  }
+
+  .site-announcement__button {
+    height: 32px;
+    font-size: 15px;
+  }
+
+  .site-announcement__button--primary {
+    min-width: 160px;
+  }
+}
+
+/* 小屏笔记本（1025–1279px）：多语言文案较长，先隐藏日期，避免挤到按钮 */
+@media (min-width: 1025px) and (max-width: 1279.98px) {
+  .site-announcement__date {
+    display: none;
+  }
+}
+
+/* 平板：隐藏日期，按钮收窄 */
+@media (max-width: 1024px) {
+  .site-announcement {
+    font-size: 14px;
+  }
+
+  .site-announcement__inner {
+    gap: 20px;
+  }
+
+  .site-announcement__date {
+    display: none;
+  }
+
+  .site-announcement__button {
+    height: 28px;
+    font-size: 13px;
+  }
+
+  .site-announcement__button--primary {
+    min-width: 0;
+    padding: 0 18px;
+  }
+}
+
+/* 手机：展会名标签 + 地点 + “立即预约” */
+@media (max-width: 768px) {
+  .site-announcement {
+    font-size: 13px;
+  }
+
+  .site-announcement__inner {
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .site-announcement__message {
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  .site-announcement__tag {
+    padding: 4px 8px;
+  }
+
+  .site-announcement__booth,
+  .site-announcement__full,
+  .site-announcement__button--secondary {
+    display: none;
+  }
+
+  .site-announcement__compact {
+    display: inline;
+  }
+
+  .site-announcement__highlight {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .site-announcement__place {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .site-announcement__button {
+    height: 30px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+}
+
+/* ---------- 布局让位：仅在公告条存在时生效 ---------- */
+
+/* 1. 公告条高度 + 导航总高度（全站约 16 处留白 / 吸顶位置都读 --site-header-height） */
+html:has(.site-announcement) {
+  --site-announcement-height: 52px;
+  --site-header-height: calc(82px + var(--site-announcement-height));
+}
+
+@media (min-width: 1025px) {
+  html:has(.site-announcement) {
+    --site-announcement-height: 60px;
+  }
+}
+
+@media (min-width: 1441px) {
+  html:has(.site-announcement) {
+    --site-announcement-height: 64px;
+  }
+}
+
+@media (min-width: 1921px) {
+  html:has(.site-announcement) {
+    --site-header-height: calc(90px + var(--site-announcement-height));
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1599px) {
+  html:has(.site-announcement) {
+    --site-header-height: calc(64px + var(--site-announcement-height));
+  }
+}
+
+@media (max-width: 768px) {
+  html:has(.site-announcement) {
+    --site-announcement-height: 44px;
+    --site-header-height: calc(60px + var(--site-announcement-height));
+  }
+}
+
+/* 2. Logo + 菜单那一行保持原高度，不被撑高 */
+html:has(.site-announcement) .site-header .site-header-inner {
+  height: calc(var(--site-header-height) - var(--site-announcement-height)) !important;
+}
+
+/* 3. 手机 / 平板菜单与遮罩：原来写死在导航下方，整体再下移一个公告条高度 */
+@media (max-width: 1000px) {
+  html:has(.site-announcement) .site-header .mobile-nav,
+  html:has(.site-announcement) .site-header .mobile-nav-backdrop {
+    top: calc(82px + var(--site-announcement-height)) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  html:has(.site-announcement) {
+    --mobile-header-height: calc(60px + var(--site-announcement-height));
+  }
+
+  html:has(.site-announcement) .site-header .mobile-nav,
+  html:has(.site-announcement) .site-header .mobile-nav-backdrop {
+    top: var(--mobile-header-height) !important;
+  }
+}
+
+/* 4. 首页“流程”板块的吸顶位置（原值写死，不读变量） */
+@media (min-width: 769px) {
+  html:has(.site-announcement) .home-flow-sticky {
+    top: calc(100px + var(--site-announcement-height)) !important;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  html:has(.site-announcement) .home-flow-sticky {
+    top: calc(66px + var(--site-announcement-height)) !important;
+  }
+}
+
+/* 5. 联系我们页 Banner：原上边距、最小高度写死（app/contact/contact.css），各加一个公告条高度 */
+html:has(.site-announcement) .contact-hero-inner {
+  min-height: calc(420px + var(--site-announcement-height));
+  padding-top: calc(86px + var(--site-announcement-height));
+}
+
+@media (max-width: 760px) {
+  html:has(.site-announcement) .contact-hero-inner {
+    min-height: calc(340px + var(--site-announcement-height));
+    padding-top: calc(58px + var(--site-announcement-height));
+  }
+}
+
+/* 6. 经销商页 Banner：垂直居中 + 写死的最小高度（app/contact/contact.css），整体下移一个公告条高度 */
+html:has(.site-announcement) .distributor-hero {
+  min-height: calc(720px + var(--site-announcement-height));
+  padding-top: var(--site-announcement-height);
+}
+
+@media (max-width: 680px) {
+  html:has(.site-announcement) .distributor-hero {
+    min-height: calc(620px + var(--site-announcement-height));
+  }
+}
+
+/* 7. 电脑端 Resources / 外语版 Contact & Partnership 下拉：
+      原样式把下拉项高度设为整个页头高度（app/globals.css，min-width:1001px 段），
+      加了公告条后会被撑高，下拉离开导航栏、并伸进公告条挡住按钮；这里只算 Logo + 菜单那一行 */
+@media (min-width: 1001px) {
+  html:has(.site-announcement) .site-header .site-nav-item-has-simple-dropdown {
+    height: calc(var(--site-header-height) - var(--site-announcement-height));
+  }
+}
+
+/* 8. 电脑端 Products / Applications / About Us 大下拉面板：
+      原最大高度按“屏幕高度 - 原页头”写死，再减去公告条高度，矮屏幕底部不被裁 */
+@media (min-width: 1001px) {
+  html:has(.site-announcement) .site-nav-mega-inner {
+    max-height: calc(100vh - 112px - var(--site-announcement-height));
+  }
+}
+
+@media (min-width: 1025px) {
+  html:has(.site-announcement) .site-nav-mega.site-nav-mega-open .site-nav-mega-inner {
+    max-height: min(720px, calc(100vh - 96px - var(--site-announcement-height))) !important;
+  }
+}

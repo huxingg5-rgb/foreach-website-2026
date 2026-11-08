@@ -311,9 +311,9 @@ export function getBarbedFittingGallery(product: Record<string, unknown>): {
   // Share the mixed group across the L-reducer family, but keep translucent
   // PP-only photos off the white PA models and all equal-bore elbow pages.
   const model = String(product.model || product.modelDisplay || product.slug || "").toUpperCase();
-  // FIT catalog p. 28 distinguishes C/D straight bodies from F barb profiles.
-  // Use the supplied single photos only for matching body shapes and materials.
-  // These family views do not establish a photographed part's exact bore.
+  // Share the equal-bore straight family lineups with every BA profile,
+  // including F. The lineups are explicitly labelled C/D family references;
+  // single-product close-ups still require matching body shapes and materials.
   if (productName === "直通等径倒刺接头") {
     const matchedPhotos: Record<string, readonly PhotoKey[]> = {
       "BA-16C-PP-N": ["straightEqualPpCompact"],
@@ -325,8 +325,7 @@ export function getBarbedFittingGallery(product: Record<string, unknown>): {
       "BA-32D-PA-W": ["straightEqualPaSide", "straightEqualPaDetail"],
       "BA-64C-PA-W": ["straightEqualPaSide", "straightEqualPaDetail"],
     };
-    const matched = matchedPhotos[model];
-    if (!matched) return {};
+    const matched = matchedPhotos[model] || [];
     keys.push(...matched, "straightEqualGroupDark", "straightEqualGroupBlue");
   }
 
@@ -344,6 +343,10 @@ export function getBarbedFittingGallery(product: Record<string, unknown>): {
       keys.push("teeEqualGroup");
       // The earlier three-piece photograph contains only translucent PP.
       if (model.endsWith("-PP-N")) keys.push("tee");
+    } else {
+      // F-profile pages also show the real equal-tee family lineup. Do not
+      // attach C/D single-part close-ups as photographs of an F-profile SKU.
+      keys.push("teeEqualGroup");
     }
   }
   // FIT catalog p. 30: port 1 is the perpendicular branch, ports 2 and 3

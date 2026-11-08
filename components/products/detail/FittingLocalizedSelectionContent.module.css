@@ -1,0 +1,9 @@
+.content { min-width: 0; }
+.content.content small {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+.content :global(.fx-seg) small { max-width: 160px; }
+.content th { white-space: normal; }

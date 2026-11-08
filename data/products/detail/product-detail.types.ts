@@ -153,7 +153,7 @@ export type ProductDetailZhRecord = {
 
 export type ProductDetailPageData = ProductDetailZhRecord & {
   /** Explicit hierarchy for a product family using the shared detail template. */
-  breadcrumbs?: Array<{ label: string; href?: string }>;
+  breadcrumbs?: Array<{ label: string; href?: string; linkCurrent?: boolean }>;
   /**
    * 后续从选型页面基础数据读取。
    */

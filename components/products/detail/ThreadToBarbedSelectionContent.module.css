@@ -1,0 +1,46 @@
+/* Keep the quick-connect/HFL typography, cards and tables in the shared wrapper.
+   Only the thread-to-barb model strip and illustrations need local layout rules. */
+.modelCode { justify-content: flex-start; padding: 12px 0; }
+.modelPart { display: flex; align-items: flex-start; gap: 8px; }
+.modelCode .modelPart .segment b {
+  display: flex; align-items: center; justify-content: center;
+  min-width: 68px; height: 44px; padding: 0 14px; line-height: 1; text-align: center;
+}
+.modelCode .modelPart .segment small { width: 100%; text-align: center; }
+.modelCode .modelPart .separator {
+  display: flex; align-items: center; justify-content: center;
+  min-width: 10px; height: 44px; padding: 0; line-height: 1;
+}
+.table, .modelTable { table-layout: fixed; }
+.table.table th, .modelTable.modelTable th { white-space: normal; }
+.table td, .modelTable td { overflow-wrap: anywhere; }
+.comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.ratioFigure { border: 1px solid rgba(23, 51, 104, .16); padding: 20px; text-align: center; }
+.ratioFigure.ratioFigure h3 { margin: 0 0 8px; font-size: 17px; }
+.ratioFigure p { color: #7b879d; font-size: 14px; }
+.ratioFigure svg { display: block; max-width: 230px; width: 100%; height: auto; margin: 0 auto; }
+.formula.formula p { margin: 0 0 8px; }
+.formula.formula p:last-child { margin: 0; }
+.toolRow { display: grid; grid-template-columns: 7fr 5fr; gap: 40px; align-items: center; margin-bottom: 24px; }
+.toolRow h3:first-child { margin-top: 0; }
+.toolFigure { text-align: center; }
+.toolFigure img { display: block; width: 100%; max-width: 340px; height: auto; margin: 0 auto; object-fit: contain; }
+@media (max-width: 640px) {
+  .modelCode.modelCode, .modelPart { gap: 6px; }
+  .modelCode .modelPart .segment { width: 52px; min-width: 0; }
+  .modelCode .modelPart .segment b { min-width: 52px; height: 40px; padding: 0 8px; }
+  .modelCode .modelPart .separator { height: 40px; min-width: 6px; }
+  .modelCode .modelPart .segment small { font-size: 10px; }
+  .modelCode .modelPart .segment .longCode { font-size: 12px; padding: 0 3px; }
+  .modelTable col:first-child { width: 28% !important; }
+  .toolRow { grid-template-columns: 1fr; gap: 20px; }
+  .ratioFigure { padding: 12px 8px; }
+}
+@media (max-width: 360px) {
+  .modelCode.modelCode, .modelPart { gap: 3px; }
+  .modelCode .modelPart .segment { width: 44px; }
+  .modelCode .modelPart .segment b { min-width: 44px; padding: 0 5px; font-size: 16px; }
+  .modelCode .modelPart .separator { min-width: 4px; font-size: 16px; }
+  .modelCode .modelPart .segment small { font-size: 10px; line-height: 1.5; }
+  .comparison { grid-template-columns: 1fr; }
+}

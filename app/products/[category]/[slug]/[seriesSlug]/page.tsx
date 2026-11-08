@@ -1,4 +1,6 @@
+import FittingLocalizedSelectionContent from "@/components/products/detail/FittingLocalizedSelectionContent";
 import HardTubeFittingRelatedArticles from "@/components/products/detail/HardTubeFittingRelatedArticles";
+import HardTubeDetailContent from "@/components/products/detail/HardTubeDetailContent";
 import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
@@ -21,6 +23,8 @@ import {
 
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { withRemainingFittingChineseData, withRemainingFittingProductSpecs } from "@/data/products/detail/remaining-fitting-detail.zh";
+import QuickConnectDetailContent from "@/components/products/detail/QuickConnectDetailContent";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
@@ -142,6 +146,8 @@ const ProductDetailView =
   ProductDetailClient as unknown as ComponentType<{
     data: Record<string, unknown>;
     afterContent?: ReactNode;
+    customerCategoryMode?: "fitting-zh" | "luer-zh" | "hard-tube-zh";
+    customerCategoryContent?: Partial<Record<"selection" | "delivery", ReactNode>>;
   }>;
 
 export const dynamicParams =
@@ -661,6 +667,16 @@ export default async function ProductsSeriesRoutePage({
   if (fittingDetail) {
     return (
       <ProductDetailView
+        customerCategoryMode={fittingDetail.productTypeId === "hard-tube-fittings" ? "hard-tube-zh" : fittingDetail.productTypeId === "luer-fittings" ? "luer-zh" : ["thread-to-barbed-fittings", "female-thread-adapters"].includes(fittingDetail.productTypeId) ? "fitting-zh" : undefined}
+        customerCategoryContent={renderLocale === "zh-CN" && fittingDetail.productTypeId === "hard-tube-fittings" ? {
+          selection: <HardTubeDetailContent data={fittingDetail.detail} section="selection" />,
+        } : renderLocale === "zh-CN" && fittingDetail.productTypeId === "luer-fittings" ? {
+          selection: <QuickConnectDetailContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} section="selection" variant="luer-fitting" />,
+          delivery: <QuickConnectDetailContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} section="delivery" variant="luer-fitting" />,
+        } : renderLocale === "zh-CN" && ["thread-to-barbed-fittings", "female-thread-adapters"].includes(fittingDetail.productTypeId) ? {
+          selection: <QuickConnectDetailContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} section="selection" variant="standalone-fitting" />,
+          delivery: <QuickConnectDetailContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} section="delivery" variant="standalone-fitting" />,
+        } : { selection: <FittingLocalizedSelectionContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} locale={renderLocale} /> }}
         afterContent={fittingDetail.productTypeId === "hard-tube-fittings" ? (
           <HardTubeFittingRelatedArticles model={String(fittingDetail.detail.model || "")} locale={renderLocale} />
         ) : fittingDetail.productTypeId === "luer-fittings" ? (
@@ -677,11 +693,11 @@ export default async function ProductsSeriesRoutePage({
             locale={renderLocale}
           />
         )}
-        data={
-          toFittingClientData(
-            fittingDetail
-          )
-        }
+        data={renderLocale === "zh-CN"
+          ? withRemainingFittingChineseData(toFittingClientData(fittingDetail))
+          : renderLocale === "en"
+          ? withRemainingFittingProductSpecs(toFittingClientData(fittingDetail))
+          : toFittingClientData(fittingDetail)}
       />
     );
   }

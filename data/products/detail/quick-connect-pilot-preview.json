@@ -1,0 +1,15 @@
+{
+  "baseModel": "Q2001-PMV-SACN",
+  "version": "20261105-review2",
+  "geometries": {
+    "quick-connect-515-00-04956": {
+      "model3dUrl": "/models/products/fittings/quick-connect/preview-q2001/quick-connect-515-00-04956.fcad.gz"
+    },
+    "quick-connect-515-00-05238": {
+      "model3dUrl": "/models/products/fittings/quick-connect/preview-q2001/quick-connect-515-00-05238.fcad.gz"
+    },
+    "quick-connect-515-00-05265": {
+      "model3dUrl": "/models/products/fittings/quick-connect/preview-q2001/quick-connect-515-00-05265.fcad.gz"
+    }
+  }
+}

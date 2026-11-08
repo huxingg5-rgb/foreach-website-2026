@@ -1,0 +1,28 @@
+/* Chinese hard-tube content only; quick-connect base styles remain shared. */
+.modelCode { justify-content: flex-start; padding: 12px 0; }
+.modelPart { display: flex; align-items: flex-start; gap: 8px; }
+.modelCode .modelPart .segment b {
+  display: flex; align-items: center; justify-content: center;
+  min-width: 68px; height: 44px; padding: 0 14px; line-height: 1; text-align: center;
+}
+.modelCode .modelPart .segment small { width: 100%; text-align: center; }
+.modelCode .modelPart .separator {
+  display: flex; align-items: center; justify-content: center;
+  min-width: 10px; height: 44px; padding: 0; line-height: 1;
+}
+.modelTable th:first-child { width: 16%; }
+.codeOption { display: inline-block; margin-right: 20px; }
+.codeOption:last-child { margin-right: 0; }
+.widePhoto { grid-column: 1 / -1; }
+@media (max-width: 640px) {
+  .modelCode.modelCode, .modelPart { gap: 6px; }
+  .modelCode .modelPart .segment b { min-width: 52px; height: 40px; padding: 0 8px; }
+  .modelCode .modelPart .separator { height: 40px; }
+  .modelTable th:first-child { width: 28%; }
+}
+@media (max-width: 360px) {
+  .modelCode.modelCode, .modelPart { gap: 3px; }
+  .modelCode .modelPart .segment b { min-width: 48px; padding: 0 6px; font-size: 16px; }
+  .modelCode .modelPart .separator { min-width: 5px; font-size: 16px; }
+  .modelTable th:first-child { width: 34%; }
+}

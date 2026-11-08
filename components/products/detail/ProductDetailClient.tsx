@@ -1,5 +1,9 @@
 "use client";
+import { fittingView } from "@/components/products/detail/fitting-view";
+import { fittingText } from "@/data/products/detail/fitting-ui.intl";
 import BottomCtaButton from "@/components/common/BottomCtaButton";
+import QuickConnectPreviewNote from "./QuickConnectPreviewNote";
+import FittingDeliveryZh from "./FittingDeliveryZh";
 import { getControlModuleDetailHeading } from "@/data/products/selection/control-module-card-copy";
 import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
 import { getProbeControlBreadcrumbsEn } from "@/lib/seo/probe-control-breadcrumbs";
@@ -14,6 +18,7 @@ import { applyPipettingPumpFaq } from "@/data/products/detail/pipetting-pump-faq
 import { getPipettingModelBreadcrumbs } from "@/data/products/selection/pipetting-pump-breadcrumbs";
 import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
 import { getChineseProductPageBreadcrumbs } from "@/lib/seo/chinese-product-breadcrumbs";
+import { getFittingDetailBreadcrumbs } from "@/lib/seo/fitting-breadcrumbs";
 import { getSiteIdentity, SITE_ORGANIZATION_ID, SITE_WEBSITE_ID } from "@/lib/seo/site-identity";
 import { normalizeSiteHref } from "@/lib/seo/site-url";
 import { buildProductSpecProperties } from "@/lib/seo/product-spec-properties";
@@ -21,6 +26,7 @@ import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
 import { getTubingGalleryData } from "@/data/products/tubing/gallery";
 import { getTubingIntroductionCopy } from "@/data/products/tubing/content";
 import { getBarbedFittingImageAlt } from "@/data/products/detail/barbed-fitting-gallery";
+import { getSharedFittingPhotoAlt } from "@/data/products/detail/fitting-series-photo-copy";
 import { getThreadToBarbedFittingImageAlt } from "@/data/products/detail/thread-to-barbed-fitting-gallery";
 import { getFemaleThreadAdapterImageAlt } from "@/data/products/detail/female-thread-adapter-gallery";
 import { getBulkheadBarbedFittingImageAlt } from "@/data/products/detail/bulkhead-barbed-fitting-gallery";
@@ -54,7 +60,7 @@ import {
   isDiaphragmPumpPublicPath,
 } from "@/data/products/detail/diaphragm-pump-routes";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
-import { findHardTubeCartBundle, getHardTubeSelectionSummary } from "@/components/selection-cart/selection-cart-bundles";
+import { findHardTubeCartBundle, getHardTubeSelectionSummary, getCartGroups } from "@/components/selection-cart/selection-cart-bundles";
 import type { SelectionCartItemInput } from "@/components/selection-cart/selection-cart.types";
 /* =========================================================
    ProductDetailClient.tsx
@@ -80,7 +86,8 @@ import TubingAssemblySizeTable from "@/components/products/tubing-assemblies/Tub
 import tubingAssemblySpecStyles from "@/components/products/tubing-assemblies/tubing-assembly-specifications.module.css";
 import ProductApplicationsPanel from "./ProductApplicationsPanel";
 import ProductDatasheetPanel from "./ProductDatasheetPanel";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import type { CSSProperties, MouseEvent, ReactNode } from "react";
@@ -119,6 +126,9 @@ import { getValvelessPumpAssets } from "@/data/products/detail/valveless-pump-as
 import { getDiaphragmPumpCadAssets } from "@/data/products/detail/diaphragm-pump-cad-assets";
 import { getPistonPumpCadAssets } from "@/data/products/detail/piston-pump-cad-assets";
 import { getHardTubeFittingCadAssets } from "@/data/products/detail/hard-tube-fitting-cad-assets";
+import { getStandaloneFittingCadAssets } from "@/data/products/detail/standalone-fitting-cad-assets";
+import { getRemainingFittingCadAssets } from "@/data/products/detail/remaining-fitting-cad-assets";
+import { getQuickConnectFittingCadAssets } from "@/data/products/detail/quick-connect-fitting-cad-assets";
 import { getSmtp4CadAssets } from "@/data/products/detail/smtp4-cad-assets";
 import { getSmtp2CadAssets } from "@/data/products/detail/smtp2-cad-assets";
 import {
@@ -145,6 +155,21 @@ import HardTubeWasherConfigurator from "@/components/products/configurator/HardT
 import hardTubeStyles from "@/components/products/configurator/HardTubeWasherConfigurator.module.css";
 import { getHardTubeAccessoryConfig, getHardTubeAccessory, describeHardTubeAccessory, type HardTubeAccessoryChoice } from "@/data/products/configurator/hard-tube-accessories";
 import { getHardTubeAccessoryCopy, getHardTubeAccessoryKindLabel, getHardTubeMaterialLabel, formatHardTubeCopy } from "@/data/products/configurator/hard-tube-accessories.intl";
+import QuickConnectPairSelector from "@/components/products/configurator/QuickConnectPairSelector";
+import LuerPairSelector from "@/components/products/configurator/LuerPairSelector";
+import { isStandaloneFittingType } from "@/data/products/configurator/standalone-fitting-selection";
+import LuerAssemblyPreview from "@/components/products/configurator/LuerAssemblyPreview";
+import LuerCadViewer from "./LuerCadViewer";
+import FittingResourceViewer, { type FittingDrawing, type FittingModelSource } from "./FittingResourceViewer";
+import { getLuerRole } from "@/data/products/configurator/luer-combination";
+import { getLuerCadAssets } from "@/data/products/detail/luer-cad-assets";
+import luerAssemblyStyles from "@/components/products/configurator/LuerAssemblyPreview.module.css";
+import { getLuerPairConfig, resolveLuerPair, describeLuerPart, type LuerPairChoice } from "@/data/products/configurator/luer-pairing";
+import { getQuickConnectPairConfig } from "@/data/products/configurator/quick-connect-pairing";
+import QuickConnectModelSelector, { type QuickConnectModelRow } from "@/components/products/configurator/QuickConnectModelSelector";
+import { localizeQuickConnectDetailData } from "@/data/products/detail/quick-connect-detail.intl";
+import { getQuickConnectDrawingHref } from "@/data/products/detail/quick-connect-drawing-assets";
+import { getFittingDrawingHref } from "@/data/products/detail/fitting-drawing-assets";
 
 /* PVC_CONFIGURATOR_ENGLISH_START */
 import {
@@ -268,8 +293,13 @@ function ProductTabLabel({
 type ProductDetailClientProps = {
   data: ProductDetailPageData & Record<string, any>;
   analyticsProductId?: string;
+  beforeFaqContent?: ReactNode;
   afterContent?: ReactNode;
+  customerCategoryMode?: "quick-connect-zh" | "fitting-zh" | "luer-zh" | "hard-tube-zh";
+  customerCategoryContent?: Partial<Record<"selection" | "delivery", ReactNode>>;
 };
+
+type CustomerCategoryKey = "product" | "selection" | "delivery";
 
 type ZoomStyle = CSSProperties & {
   "--zoom-x"?: string;
@@ -290,6 +320,13 @@ function getProductDrawingPreviewUrl(slug: string, configuredUrl?: string) {
   }
 
   const normalizedSlug = slug.trim().toLowerCase();
+
+  // Q2001 has a published 2D PDF, while its source CAD in the shared
+  // delivery folder is encrypted and cannot be used by the web viewer.
+  if (normalizedSlug === "q2001-pmv-sacn") {
+    return "/downloads/resources/selection-support/fitting-replacement/q20/drawings/Q2001-PMV-SACN.pdf#toolbar=0&navpanes=0&scrollbar=1";
+  }
+
   const match = normalizedSlug.match(/^(ea|sm|tm)-(\d+)/);
 
   if (!match) {
@@ -1376,7 +1413,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
           item: canonicalUrl,
         },
       ];
-  const chineseBreadcrumbItems: ProductDetailPageData["breadcrumbs"] | null = data.breadcrumbs || getTubingDetailBreadcrumbs(pathname, locale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
+  const chineseBreadcrumbItems: ProductDetailPageData["breadcrumbs"] | null = getFittingDetailBreadcrumbs(pathname, locale, String(data.model || data.foreachModel || data.slug || "")) || data.breadcrumbs || getTubingDetailBreadcrumbs(pathname, locale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(pathname, locale, legacyBreadcrumbItems.at(-1)?.name);
   const breadcrumbItems = chineseBreadcrumbItems
     ? chineseBreadcrumbItems.map((item) => ({ name: item.label, item: item.href ? toAbsoluteProductUrl(item.href) : canonicalUrl }))
     : legacyBreadcrumbItems;
@@ -1528,12 +1565,18 @@ function getScopedProductDisplayTitle(
 
 /* ===== FOREACH SCOPED PRODUCT DISPLAY TITLE END ===== */
 
+const StandaloneFittingSelector = dynamic(() => import("@/components/products/configurator/StandaloneFittingSelector"), {ssr: false});
+
 export default function ProductDetailClient({
   data: sourceData,
   analyticsProductId: explicitAnalyticsProductId,
+  beforeFaqContent,
   afterContent,
+  customerCategoryMode,
+  customerCategoryContent,
 }: ProductDetailClientProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const isTubingAssembly = sourceData.category === "tubing-assemblies";
   const isAssemblyChineseReview = isTubingAssembly && sourceData.__reviewLocale === "zh";
   const isEnglishPath = pathname === "/en" || pathname.startsWith("/en/");
@@ -1571,7 +1614,10 @@ export default function ProductDetailClient({
         return applyDiaphragmPumpDetailCopy(mrv3Data, configuratorLocale);
       }
       const hasLocalizedPistonCopy = (sourceData.tubingAuthoredContent === true || sourceData.eaDetailContent === true || sourceData.compactDetailContent === true || sourceData.valvelessDetailContent === true) && sourceData.__locale === configuratorLocale;
-      let localizedData = hasLocalizedPistonCopy ? sourceData : targetLocale
+      const isEnglishQuickConnect = sourceData.productTypeId === "quick-connect-fittings" && configuratorLocale === "en";
+      let localizedData = hasLocalizedPistonCopy ? sourceData : isEnglishQuickConnect
+        ? localizeQuickConnectDetailData(sourceData)
+        : targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
         : isEnglish
         ? sourceData.__locale === "en"
@@ -1580,6 +1626,13 @@ export default function ProductDetailClient({
         : sourceData;
 
       localizedData = applyPdm5LocaleCopy(sourceData, localizedData, configuratorLocale);
+      // Fitting identities are catalog keys, never sentences to translate.
+      // In particular, the generic English prose adapter may add a full stop.
+      if (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") {
+        for (const key of ["slug", "model", "foreachModel", "modelDisplay", "displayModel", "productCode", "productId", "detailHref", "href"] as const) {
+          if (sourceData[key] !== undefined) localizedData[key] = sourceData[key];
+        }
+      }
       localizedData = { ...localizedData, ...getAbdGalleryData(sourceData.slug, configuratorLocale) };
 
       if (String(sourceData.category) === "tubing") {
@@ -1641,9 +1694,13 @@ export default function ProductDetailClient({
   const datasheet = resourceLocale
     ? getProductDatasheet(sourceData.datasheetId)
     : null;
-  const hasDatasheetTab = Boolean(resourceLocale && !isTubingAssembly);
+  // English fittings follow the Chinese information layout: specs and the
+  // shared 2D/3D viewer. Do not append an unrelated, empty datasheet panel.
+  const hasDatasheetTab = Boolean(resourceLocale && !isTubingAssembly &&
+    !(isEnglish && (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings")));
   const productDetailTabCount =
-    3 + (hasApplicationDetails ? 1 : 0) + (hasDatasheetTab ? 1 : 0);
+    (data.productTypeId === "quick-connect-fittings" && !getQuickConnectFittingCadAssets(data.slug) ? 2 : 3) +
+    (hasApplicationDetails ? 1 : 0) + (hasDatasheetTab ? 1 : 0);
   const isCadRequestAvailable = Boolean(
     resourceLocale && sourceData.cadRequestAvailable !== false,
   );
@@ -1655,16 +1712,34 @@ export default function ProductDetailClient({
   const smtp2CadAssets = getSmtp2CadAssets(data.slug);
   const smtp4CadAssets = getSmtp4CadAssets(data.slug);
   const fittingCadAssets = data.productTypeId === "hard-tube-fittings" ? getHardTubeFittingCadAssets(data.slug) : undefined;
-  const cadAssets = rplAssets || diaphragmCadAssets || pistonCadAssets || smtp2CadAssets || smtp4CadAssets || fittingCadAssets;
+  const luerCadAssets = data.productTypeId === "luer-fittings"
+    ? getLuerCadAssets(data.slug) : undefined;
+  const remainingFittingCadAssets = getRemainingFittingCadAssets(String(data.productTypeId), data.slug);
+  const standaloneFittingCadAssets = remainingFittingCadAssets || (["barbed-fittings", "thread-to-barbed-fittings", "female-thread-adapters"].includes(String(data.productTypeId))
+    ? getStandaloneFittingCadAssets(String(data.productTypeId), data.slug)
+    : undefined);
+  const quickConnectCadAssets = data.productTypeId === "quick-connect-fittings" ? getQuickConnectFittingCadAssets(data.slug) : undefined;
+  const isQuickConnectFitting = data.productTypeId === "quick-connect-fittings";
+  const isQuickConnectSeriesDetail = isQuickConnectFitting && Array.isArray((data as any).modelRows);
+  const quickConnectSeriesRows = (isQuickConnectSeriesDetail ? (data as any).modelRows : []) as QuickConnectModelRow[];
+  const cadAssets = rplAssets || diaphragmCadAssets || pistonCadAssets || smtp2CadAssets || smtp4CadAssets || fittingCadAssets || quickConnectCadAssets || standaloneFittingCadAssets;
   const model3dUrl = String(
     data.productTypeId === "valveless-pump" ? rplAssets?.model3dUrl || "" :
-    cadAssets?.model3dUrl || data.model3dUrl ||
+    luerCadAssets?.model3dUrl || cadAssets?.model3dUrl || data.model3dUrl ||
       data.resources?.model3dUrl ||
       "",
   ).trim();
+  const quickConnectDrawingUrl = isQuickConnectFitting
+    ? getQuickConnectDrawingHref(data.model || data.foreachModel || data.slug)
+    : null;
+  const standaloneFittingDrawingUrl = standaloneFittingCadAssets?.drawingPdfUrl || null;
   const drawingPreviewUrl = getProductDrawingPreviewUrl(
     data.slug,
     data.productTypeId === "valveless-pump" ? rplAssets?.drawingPdfUrl || "" :
+    luerCadAssets?.drawingPdfUrl || remainingFittingCadAssets?.drawingPdfUrl ||
+    getFittingDrawingHref(String(data.productTypeId), data.slug) ||
+    quickConnectDrawingUrl ||
+    standaloneFittingDrawingUrl ||
     data.drawing2dUrl ||
       data.drawingPdfUrl ||
       data.partDrawingUrl ||
@@ -1867,7 +1942,7 @@ export default function ProductDetailClient({
             : displayProductTitle,
         },
       ]);
-  const productBreadcrumbItems = sourceData.breadcrumbs || getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
+  const productBreadcrumbItems = getFittingDetailBreadcrumbs(pathname, configuratorLocale, String(data.model || data.foreachModel || data.slug || "")) || (isQuickConnectFitting ? data.breadcrumbs : sourceData.breadcrumbs) || getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
     pathname, configuratorLocale, legacyProductBreadcrumbItems.at(-1)?.label,
   ) || legacyProductBreadcrumbItems;
   if (String(data.category) === "control" && data.slug === "abd-air-bubble-detector") {
@@ -1930,9 +2005,29 @@ export default function ProductDetailClient({
   ]);
 
 const [activeTab, setActiveTab] = useState<ProductDetailTab>("spec");
+const isHardTubeCustomerCategoryPage = customerCategoryMode === "hard-tube-zh";
+const isCustomerCategoryPage = customerCategoryMode === "quick-connect-zh" || customerCategoryMode === "fitting-zh" || customerCategoryMode === "luer-zh" || isHardTubeCustomerCategoryPage;
+// All locales use the shared fitting delivery component; its regional copy is separate.
+const showSharedFittingDelivery =
+
+  (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings");
+const hasCustomerCategoryNavigation = isCustomerCategoryPage || showSharedFittingDelivery;
+const [activeCustomerCategory, setActiveCustomerCategory] =
+  useState<CustomerCategoryKey>("product");
+const showCustomerCategoryProductTabs =
+  isCustomerCategoryPage && activeCustomerCategory === "product";
+const showProductResourceTabs =
+  !hasCustomerCategoryNavigation || activeCustomerCategory === "product";
+// Keep the hard-tube viewer mounted while the resource panel is hidden by a category switch.
+const useSharedFittingResources = !isQuickConnectSeriesDetail &&
+  (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings");
+const showFlatProductResources = showCustomerCategoryProductTabs || isHardTubeCustomerCategoryPage || useSharedFittingResources;
 const [hasOpenedModel, setHasOpenedModel] = useState(false);
 const [openedModelUrl, setOpenedModelUrl] = useState("");
-const showModelPreview = Boolean(model3dUrl) && openedModelUrl !== model3dUrl;
+const showModelPreview =
+  Boolean(model3dUrl) &&
+  openedModelUrl !== model3dUrl &&
+  !showFlatProductResources;
 const [solenoidVariant, setSolenoidVariant] = useState(0);
   const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
   const [isAssemblyCustomRequestOpen, setIsAssemblyCustomRequestOpen] = useState(false);
@@ -2127,10 +2222,65 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   });
   const isHardTubeConfiguratorEnabled = Boolean(hardTubeAccessoryConfig);
   const [isHardTubeConfiguratorOpen, setIsHardTubeConfiguratorOpen] = useState(false);
+  const [isStandaloneFittingSelectorOpen, setIsStandaloneFittingSelectorOpen] = useState(false);
+  const standaloneFittingType = isStandaloneFittingType(data.productTypeId) ? data.productTypeId : null;
   const [hardTubeSelection, setHardTubeSelection] = useState<{ productCode: string; choice: HardTubeAccessoryChoice | null } | null>(null);
   const hardTubeAccessoryChoice = hardTubeSelection?.productCode === hardTubeAccessoryConfig?.productCode
     && (hardTubeSelection?.choice === "none" || getHardTubeAccessory(hardTubeAccessoryConfig, hardTubeSelection?.choice ?? null))
     ? hardTubeSelection?.choice ?? null : null;
+  const quickConnectPairConfig = getQuickConnectPairConfig(data, configuratorLocale);
+  const isQuickConnectPairingEnabled = Boolean(quickConnectPairConfig);
+  const useSharedQuickConnectSelector = isQuickConnectPairingEnabled;
+  const [isQuickConnectPairConfiguratorOpen, setIsQuickConnectPairConfiguratorOpen] = useState(false);
+  const [quickConnectPairSelection, setQuickConnectPairSelection] = useState<string | null>(() => quickConnectPairConfig?.defaultModel || null);
+  const [quickConnectLastPairModel, setQuickConnectLastPairModel] = useState<string | null>(() => quickConnectPairConfig?.defaultModel || null);
+  const isQuickConnectSingleSelection = useSharedQuickConnectSelector && quickConnectPairSelection === "none";
+  const quickConnectPairOption = quickConnectPairConfig?.options.find(option => option.model === quickConnectPairSelection) || null;
+  const quickConnectViewerMate = isQuickConnectSingleSelection ? "none" : quickConnectPairOption?.model.toLowerCase();
+
+  const luerPairConfig = getLuerPairConfig(data, configuratorLocale);
+  const isLuerPairingEnabled = Boolean(luerPairConfig);
+  const [luerPairSelection, setLuerPairSelection] = useState<LuerPairChoice | null>(() => luerPairConfig?.defaultChoice || null);
+  const [showLuerAssembly, setShowLuerAssembly] = useState(true);
+  const [isLuerPairSelectorOpen, setIsLuerPairSelectorOpen] = useState(false);
+  const [luerDrawingRequest, setLuerDrawingRequest] = useState(false);
+  const luerSelectedParts = luerPairConfig && luerPairSelection ? resolveLuerPair(luerPairConfig, luerPairSelection) : null;
+  const fittingResourceDrawings: FittingDrawing[] = luerSelectedParts
+    ? luerSelectedParts.map(part => ({ role: getLuerRole(part.family), label: part.name, model: part.model, url: part.drawingHref }))
+    : quickConnectPairConfig
+      ? [{ role: quickConnectPairConfig.baseGender, label: quickConnectPairConfig.baseGender === "P" ? "公端" : "母端", model: quickConnectPairConfig.baseModel, url: drawingPreviewUrl },
+        ...(quickConnectPairOption ? [{ role: quickConnectPairOption.genderCode, label: quickConnectPairOption.genderCode === "P" ? "公端" : "母端", model: quickConnectPairOption.model, url: quickConnectPairOption.drawingHref }] : [])]
+      : [{ role: "base", label: "零件", model: data.model || data.foreachModel || data.slug, url: drawingPreviewUrl }];
+  const fittingResourceModel: FittingModelSource = quickConnectCadAssets
+    ? { kind: "cad", props: { modelId: quickConnectCadAssets.viewerId, title: quickConnectCadAssets.model,
+        productFamily: "quick-connect", fittingProduct: data.slug, quickConnectMate: quickConnectViewerMate, locale: configuratorLocale } }
+    : luerCadAssets
+      ? { kind: "luer", parts: luerSelectedParts || [luerCadAssets] }
+      : fittingCadAssets || standaloneFittingCadAssets
+        ? { kind: "cad", props: { modelId: (fittingCadAssets || standaloneFittingCadAssets)!.viewerId,
+            title: (fittingCadAssets || standaloneFittingCadAssets)!.model, productFamily: "fitting",
+            fittingFinish: (fittingCadAssets || standaloneFittingCadAssets)!.fittingFinish,
+            fittingProduct: fittingCadAssets?.fittingProduct || data.slug,
+            fittingAccessory: fittingCadAssets ? hardTubeAccessoryChoice ?? undefined : undefined, locale: configuratorLocale } }
+        : model3dUrl ? { kind: "file", slug: data.slug, model: data.model, url: model3dUrl } : null;
+  const [isQuickConnectSeriesSelectorOpen, setIsQuickConnectSeriesSelectorOpen] = useState(false);
+  const [quickConnectSeriesModelSelection, setQuickConnectSeriesModelSelection] = useState<string | null>(null);
+
+  function openQuickConnectSeriesSelector(model?: string) {
+    setQuickConnectSeriesModelSelection(model || quickConnectSeriesRows[0]?.model || null);
+    setIsQuickConnectSeriesSelectorOpen(true);
+  }
+
+  function confirmQuickConnectSeriesModel(model: string) {
+    const row = quickConnectSeriesRows.find(item => item.model === model);
+    setQuickConnectSeriesModelSelection(model);
+    setIsQuickConnectSeriesSelectorOpen(false);
+    const href = localizeInternalHref(
+      row?.detailHref || `/products/fittings/quick-connect-fittings/${model.toLowerCase()}`,
+      localePrefix,
+    );
+    window.location.href = href;
+  }
   function setHardTubeAccessoryChoice(choice: HardTubeAccessoryChoice | null) {
     if (hardTubeAccessoryConfig) setHardTubeSelection({ productCode: hardTubeAccessoryConfig.productCode, choice });
   }
@@ -2204,6 +2354,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     if (bulkheadBarbedImageAlt) {
       return bulkheadBarbedImageAlt;
     }
+    const sharedPhotoAlt = getSharedFittingPhotoAlt(sourceData.sharedFittingPhotoSources, realImages[index], configuratorLocale);
+    if (sharedPhotoAlt) return sharedPhotoAlt;
     if (realImages[index] === quickConnectSupplementaryImage) {
       return getQuickConnectSupplementaryImageAlt(configuratorLocale);
     }
@@ -2293,6 +2445,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }, [activeThumb, realImages.length]);
 
   function handlePreviousThumb() {
+    if (isLuerPairingEnabled) setShowLuerAssembly(false);
     if (hasRealImages) {
       setActiveThumb((current) =>
         current === 0 ? realImages.length - 1 : current - 1,
@@ -2304,6 +2457,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
 
   function handleNextThumb() {
+    if (isLuerPairingEnabled) setShowLuerAssembly(false);
     if (hasRealImages) {
       setActiveThumb((current) =>
         current === realImages.length - 1 ? 0 : current + 1,
@@ -2455,7 +2609,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
         data.heroImage ||
         "",
       detailHref:
-        data.detailHref ||
+        (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings")
+          ? localizeInternalHref(String(data.detailHref || data.href || ""), localePrefix)
+          : data.detailHref ||
         data.href ||
         (isLocalizedDetail && fallbackDetailHref
           ? `${localePrefix}${fallbackDetailHref}`
@@ -2471,18 +2627,113 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       detailCartSourceType,
       getDetailCartProductCode()
     );
-  const isDetailProductSelected = isHardTubeConfiguratorEnabled
+  const isDetailProductSelected = isLuerPairingEnabled
+    ? Boolean(luerPairSelection && findLuerPairCartGroup(luerPairSelection))
+    : isHardTubeConfiguratorEnabled
     ? hardTubeAccessoryChoice !== null && isHardTubeSelectionAdded(hardTubeAccessoryChoice)
-    : Boolean(currentDetailCartItem);
-  const isDetailDrawingSelected = isHardTubeConfiguratorEnabled && hardTubeAccessoryChoice && hardTubeAccessoryChoice !== "none"
+    : isQuickConnectPairingEnabled
+      ? isQuickConnectSingleSelection ? Boolean(currentDetailCartItem) : Boolean(quickConnectPairOption && isQuickConnectPairAdded(quickConnectPairOption.model))
+      : Boolean(currentDetailCartItem);
+  const isDetailDrawingSelected = isLuerPairingEnabled
+    ? Boolean(luerPairSelection && findLuerPairCartGroup(luerPairSelection)?.items.some(item => item.needDrawing))
+    : isHardTubeConfiguratorEnabled && hardTubeAccessoryChoice && hardTubeAccessoryChoice !== "none"
     ? Boolean(findHardTubeCartBundle(cartItems, hardTubeAccessoryConfig!, hardTubeAccessoryChoice)?.items.some(item => item.needDrawing))
-    : Boolean(currentDetailCartItem?.needDrawing);
+    : isQuickConnectPairingEnabled && quickConnectPairOption
+      ? Boolean(findQuickConnectPairCartGroup(quickConnectPairOption.model)?.items.some(item => item.needDrawing))
+      : Boolean(currentDetailCartItem?.needDrawing);
+
+  function findLuerPairCartGroup(choice: LuerPairChoice) {
+    if (!luerPairConfig) return undefined;
+    const parts = resolveLuerPair(luerPairConfig, choice);
+    if (!parts) return undefined;
+    return getCartGroups(cartItems).find(group =>
+      group.primary.sourceType === detailCartSourceType
+      && group.primary.productCode === luerPairConfig.base.productCode
+      && group.primary.foreachModel === luerPairConfig.base.model
+      && (parts.length > 1 || !group.primary.bundleId)
+      && group.items.length === parts.length
+      && group.items.every(item => parts.some(part => part.productCode === item.productCode && part.model === item.foreachModel)));
+  }
+
+  function addLuerSelection(choice: LuerPairChoice, needDrawing = false) {
+    if (!luerPairConfig) return;
+    const parts = resolveLuerPair(luerPairConfig, choice);
+    if (!parts) return;
+    setLuerPairSelection(choice);
+    setShowLuerAssembly(true);
+    const existing = findLuerPairCartGroup(choice);
+    if (existing) {
+      if (needDrawing) toggleDrawingNeed(existing.primary.id, true);
+      return;
+    }
+    const primary = createDetailCartItem(needDrawing);
+    if (parts.length === 1) { addItem(primary); return; }
+    addBundle(primary, parts.slice(1).map(part => ({
+      sourceType: detailCartSourceType, sourceLabel: copy.detailSourceLabel,
+      productName: fittingText(part.name, configuratorLocale), productCode: part.productCode, foreachModel: part.model,
+      competitorModels: [], quantity: 1, needDrawing,
+      imagePath: part.imagePath, detailHref: localizeInternalHref(part.detailHref, localePrefix),
+    })));
+  }
+
+  function openLuerPairSelector(needDrawing = false) {
+    setLuerDrawingRequest(needDrawing);
+    setIsLuerPairSelectorOpen(true);
+  }
 
   function isHardTubeSelectionAdded(choice: HardTubeAccessoryChoice) {
     if (!hardTubeAccessoryConfig) return false;
     return choice === "none"
       ? Boolean(getItem(detailCartSourceType, getDetailCartProductCode()))
       : Boolean(findHardTubeCartBundle(cartItems, hardTubeAccessoryConfig!, choice));
+  }
+
+  function findQuickConnectPairCartGroup(model: string) {
+    const option = quickConnectPairConfig?.options.find(item => item.model === model);
+    if (!option || !quickConnectPairConfig) return undefined;
+    return getCartGroups(cartItems).find(group =>
+      group.primary.productCode === getDetailCartProductCode()
+        && group.primary.foreachModel === quickConnectPairConfig.baseModel
+        && group.accessories.some(item => item.productCode === option.productCode
+          && item.foreachModel === option.model
+          && item.detailHref === option.detailHref)
+    );
+  }
+
+  function isQuickConnectPairAdded(model: string) {
+    if (useSharedQuickConnectSelector && model === "none") return Boolean(getItem(detailCartSourceType, getDetailCartProductCode()));
+    return Boolean(findQuickConnectPairCartGroup(model));
+  }
+
+  function applyQuickConnectSelection(model: string) {
+    if (model !== "none") setQuickConnectLastPairModel(model);
+    setQuickConnectPairSelection(model);
+  }
+
+  function addQuickConnectPair(model: string, needDrawing = false) {
+    const config = quickConnectPairConfig;
+    if (config && useSharedQuickConnectSelector && model === "none") {
+      applyQuickConnectSelection("none");
+      const existing = getItem(detailCartSourceType, getDetailCartProductCode());
+      if (!existing) addItem(createDetailCartItem(needDrawing));
+      else if (needDrawing) toggleDrawingNeed(existing.id, true);
+      return;
+    }
+    const option = config?.options.find(item => item.model === model);
+    if (!config || !option) return;
+    applyQuickConnectSelection(option.model);
+    addBundle(createDetailCartItem(needDrawing), [{
+      sourceType: detailCartSourceType,
+      sourceLabel: copy.detailSourceLabel,
+      productName: fittingText(`${config.series} ${option.genderCode === "P" ? "公端" : "母端"}快插接头`, configuratorLocale),
+      productCode: option.productCode,
+      foreachModel: option.model,
+      competitorModels: [],
+      quantity: 1,
+      needDrawing,
+      imagePath: option.imagePath,
+      detailHref: localizeInternalHref(option.detailHref, localePrefix),
+    }]);
   }
 
   function addHardTubeSelection(choice: HardTubeAccessoryChoice, needDrawing = false) {
@@ -2507,6 +2758,14 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
 
   function handleOpenConfigurator() {
+    if (isQuickConnectSeriesDetail) {
+      openQuickConnectSeriesSelector();
+      return;
+    }
+    if (isQuickConnectPairingEnabled) {
+      setIsQuickConnectPairConfiguratorOpen(true);
+      return;
+    }
     console.info("配置选择端口预留", data.slug);
   }
 
@@ -2590,10 +2849,27 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
 
   function handleAddDrawing() {
+    if (isLuerPairingEnabled) {
+      if (!luerPairSelection) { openLuerPairSelector(true); return; }
+      const group = findLuerPairCartGroup(luerPairSelection);
+      if (group) toggleDrawingNeed(group.primary.id, !group.items.some(item => item.needDrawing));
+      else addLuerSelection(luerPairSelection, true);
+      return;
+    }
     if (isHardTubeConfiguratorEnabled && hardTubeAccessoryChoice && hardTubeAccessoryChoice !== "none") {
       const bundle = findHardTubeCartBundle(cartItems, hardTubeAccessoryConfig!, hardTubeAccessoryChoice);
       if (bundle) toggleDrawingNeed(bundle.primary.id, !bundle.items.some(item => item.needDrawing));
       else addHardTubeSelection(hardTubeAccessoryChoice, true);
+      return;
+    }
+    if (isQuickConnectPairingEnabled && !isQuickConnectSingleSelection) {
+      if (!quickConnectPairOption) {
+        setIsQuickConnectPairConfiguratorOpen(true);
+        return;
+      }
+      const bundle = findQuickConnectPairCartGroup(quickConnectPairOption.model);
+      if (bundle) toggleDrawingNeed(bundle.primary.id, !bundle.items.some(item => item.needDrawing));
+      else addQuickConnectPair(quickConnectPairOption.model, true);
       return;
     }
     const item = createDetailCartItem(true);
@@ -2634,9 +2910,20 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
 
   function handleAddList() {
+    if (isLuerPairingEnabled) {
+      if (!luerPairSelection) openLuerPairSelector();
+      else addLuerSelection(luerPairSelection);
+      return;
+    }
     if (isHardTubeConfiguratorEnabled) {
       if (hardTubeAccessoryChoice === null) setIsHardTubeConfiguratorOpen(true);
       else addHardTubeSelection(hardTubeAccessoryChoice);
+      return;
+    }
+    if (isQuickConnectPairingEnabled) {
+      if (isQuickConnectSingleSelection) addQuickConnectPair("none");
+      else if (!quickConnectPairOption) setIsQuickConnectPairConfiguratorOpen(true);
+      else addQuickConnectPair(quickConnectPairOption.model);
       return;
     }
     const item = createDetailCartItem(false);
@@ -2933,7 +3220,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
 
   return (
-    <div data-product-breadcrumb-shell="true" lang={isAssemblyChineseReview ? "zh-CN" : undefined}>
+    fittingView(<div data-product-breadcrumb-shell="true" lang={isAssemblyChineseReview ? "zh-CN" : undefined}>
       {structuredData ? (
         <script
           type="application/ld+json"
@@ -3204,6 +3491,68 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           }}
         />
       ) : null}
+      {isStandaloneFittingSelectorOpen && standaloneFittingType ? (
+        <StandaloneFittingSelector
+          locale={configuratorLocale}
+          key={`${standaloneFittingType}:${data.model}`}
+          productTypeId={standaloneFittingType}
+          model={String(data.foreachModel || data.model)}
+          sourceType={detailCartSourceType}
+          onClose={() => setIsStandaloneFittingSelectorOpen(false)}
+          onConfirm={option => {
+            setIsStandaloneFittingSelectorOpen(false);
+            if (option.model !== String(data.foreachModel || data.model)) router.push(localizeInternalHref(option.detailHref, localePrefix), {scroll: false});
+          }}
+        />
+      ) : null}
+      {isLuerPairSelectorOpen && luerPairConfig ? (
+        <LuerPairSelector
+          locale={configuratorLocale}
+          key={luerPairConfig.base.model}
+          config={luerPairConfig}
+          presentation="compact"
+          value={luerPairSelection}
+          needDrawing={luerDrawingRequest}
+          onClose={() => setIsLuerPairSelectorOpen(false)}
+          isAdded={choice => Boolean(findLuerPairCartGroup(choice))}
+          onAdd={choice => addLuerSelection(choice, luerDrawingRequest)}
+          onConfirm={choice => {
+            setLuerPairSelection(choice);
+            setShowLuerAssembly(true);
+            if (luerDrawingRequest) addLuerSelection(choice, true);
+            setIsLuerPairSelectorOpen(false);
+          }}
+        />
+      ) : null}
+      {isQuickConnectPairingEnabled && isQuickConnectPairConfiguratorOpen && quickConnectPairConfig ? (
+        <QuickConnectPairSelector
+          locale={configuratorLocale}
+          key={quickConnectPairConfig.baseModel}
+          open={isQuickConnectPairConfiguratorOpen}
+          config={quickConnectPairConfig}
+          presentation={useSharedQuickConnectSelector ? "compact" : "standard"}
+          value={quickConnectPairSelection}
+          lastPairModel={quickConnectLastPairModel}
+          isAdded={model => isQuickConnectPairAdded(model)}
+          onAdd={model => addQuickConnectPair(model)}
+          onClose={() => setIsQuickConnectPairConfiguratorOpen(false)}
+          onConfirm={model => {
+            applyQuickConnectSelection(model);
+            setIsQuickConnectPairConfiguratorOpen(false);
+          }}
+        />
+      ) : null}
+      {isQuickConnectSeriesDetail && isQuickConnectSeriesSelectorOpen ? (
+        <QuickConnectModelSelector
+          open={isQuickConnectSeriesSelectorOpen}
+          series={String(data.seriesName || data.seriesId || data.productCode || "").toUpperCase()}
+          rows={quickConnectSeriesRows}
+          value={quickConnectSeriesModelSelection}
+          locale={configuratorLocale}
+          onClose={() => setIsQuickConnectSeriesSelectorOpen(false)}
+          onConfirm={confirmQuickConnectSeriesModel}
+        />
+      ) : null}
       {/* PFA_TUBING_CONFIGURATOR_RENDER_START */}
       {isPfaTubingConfiguratorEnabled ? (
         <ProductVariantConfigurator
@@ -3256,10 +3605,14 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
         <section className={styles.productTop}>
           <div data-product-gallery="true" className={styles.gallery} aria-label={copy.gallery}>
+            {luerPairConfig ? <div className={luerAssemblyStyles.switch} role="group" aria-label="产品预览方式">
+              <button type="button" aria-pressed={showLuerAssembly} onClick={() => setShowLuerAssembly(true)}>{luerPairConfig.unifiedSelection && luerPairSelection?.mode === "single" ? luerPairConfig.baseRole === "core" ? "芯子预览" : "单件预览" : "组合预览"}</button>
+              <button type="button" aria-pressed={!showLuerAssembly} onClick={() => setShowLuerAssembly(false)}>产品图片</button>
+            </div> : null}
             <div data-product-main-stage="true"
               className={[
                 styles.mainImage,
-                isZooming ? styles.isZooming : "",
+                isZooming && !(isLuerPairingEnabled && showLuerAssembly) ? styles.isZooming : "",
               ]
                 .filter(Boolean)
                 .join(" ")}
@@ -3268,7 +3621,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               onMouseLeave={() => setIsZooming(false)}
               onMouseMove={handleMainImageMove}
             >
-              {activeRealImage ? (
+              {luerPairConfig && showLuerAssembly ? <LuerAssemblyPreview locale={configuratorLocale} parts={luerSelectedParts} hero imageOnly assembleCore singleImage={luerPairSelection?.mode === "single"} /> : activeRealImage ? (
                 <img data-product-main-image="true"
                   src={activeRealImage}
                   alt={getProductImageAlt(activeThumb)}
@@ -3396,13 +3749,13 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                         data-product-thumb-index={index}
                         className={[
                           styles.thumb,
-                          activeThumb === index ? styles.isActive : "",
+                          activeThumb === index && !(isLuerPairingEnabled && showLuerAssembly) ? styles.isActive : "",
                         ]
                           .filter(Boolean)
                           .join(" ")}
                         type="button"
                         aria-label={getProductImageAlt(index)}
-                        onClick={() => setActiveThumb(index)}
+                        onClick={() => { setActiveThumb(index); if (isLuerPairingEnabled) setShowLuerAssembly(false); }}
                       >
                         <img src={image} alt={getProductImageAlt(index)} />
                       </button>
@@ -3539,6 +3892,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-quick-connect-description="true">
                 {data.quickConnectIntroductionParagraphsZh.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}
               </div>
+            ) : configuratorLocale === "en" && Array.isArray(data.quickConnectIntroductionParagraphsEn) ? (
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-quick-connect-description="true">
+                {data.quickConnectIntroductionParagraphsEn.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
             ) : Array.isArray(data.tubingIntroductionParagraphs) ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-tubing-description="true">
                 {data.tubingIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
@@ -3572,6 +3929,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             ) : (
               <p className={styles.productDesc}>
                 {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
+                {luerPairConfig?.allowCoreAssembly && luerPairConfig.baseRole === "core" ? `搭配 LPT 锁圈，可组成${luerPairConfig.base.family === "LRL" ? "旋转" : "固定"}锁圈公鲁尔接头。` : null}
               </p>
             )}
 
@@ -3643,11 +4001,21 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     )}
                   </div>
                   <button
-                    className={styles.button}
+                    className={`${styles.button}${useSharedQuickConnectSelector ? ` ${styles.selectionPrimary}` : ""}`}
                     type="button"
                     onClick={() => {
+                      if (standaloneFittingType) { setIsStandaloneFittingSelectorOpen(true); return; }
+                      if (isLuerPairingEnabled) { openLuerPairSelector(); return; }
                       if (isHardTubeConfiguratorEnabled) {
                         setIsHardTubeConfiguratorOpen(true);
+                        return;
+                      }
+                      if (isQuickConnectSeriesDetail) {
+                        openQuickConnectSeriesSelector();
+                        return;
+                      }
+                      if (isQuickConnectPairingEnabled) {
+                        setIsQuickConnectPairConfiguratorOpen(true);
                         return;
                       }
                       if (detailModelConfigurator) {
@@ -3773,8 +4141,21 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                       window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
-                    {isHardTubeConfiguratorEnabled
+                    {(String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") &&
+                      !isCustomProduct && !isCustomInquiryMode(data)
+                      ? "搭配选型"
+                      : isLuerPairingEnabled
+                      ? luerPairSelection ? "重新组合选型" : "组合选型"
+                      : isHardTubeConfiguratorEnabled
                       ? hardTubeAccessoryChoice !== null ? hardTubeCopy.reselect : hardTubeCopy.configure
+                      : isQuickConnectSeriesDetail
+                      ? (configuratorLocale === "zh" ? "点击型号选择" : "Select a model")
+                      : isQuickConnectPairingEnabled
+                      ? quickConnectPairConfig?.showModelGuidance
+                        ? `配合${quickConnectPairConfig.baseGender === "P" ? "母" : "公"}端选型`
+                        : quickConnectPairOption
+                        ? (configuratorLocale === "zh" ? "重新选择配合端" : "Change mating end")
+                        : (configuratorLocale === "zh" ? "选择配合端" : "Select mating end")
                       : singleDetailVariant
                       ? getSolenoidViewConfigurationText(configuratorLocale)
                       : isDetailModelConfiguratorEnabled
@@ -3817,6 +4198,35 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   }) : (
                     <div className={hardTubeStyles.confirmed}><span>{hardTubeCopy.option}</span><span>{hardTubeText(hardTubeCopy.optional)}</span></div>
                   )}
+                </div>
+              ) : null}
+              {luerPairConfig ? (
+                <div className={hardTubeStyles.confirmedList} aria-live="polite" data-luer-selection-summary="true">
+                  {luerPairConfig.allowCoreAssembly && luerPairConfig.baseRole === "core" && luerSelectedParts ? luerSelectedParts.length === 1 ? (
+                    <div className={hardTubeStyles.confirmed}><span>选购方式：</span><span>仅选芯子</span><small>不含锁圈、母端及穿板附件</small></div>
+                  ) : <>
+                    <div className={hardTubeStyles.confirmed}><span>公端组成：</span><span>{luerSelectedParts.filter(part => ["LSL", "LRL", "LPT"].includes(part.family)).map(part => part.model).join(" ＋ ")}</span><small>芯子＋锁圈</small></div>
+                    {luerSelectedParts.filter(part => !["LSL", "LRL", "LPT"].includes(part.family)).map(part => (
+                      <div className={hardTubeStyles.confirmed} key={part.model}><span>{part.family === "LS" || part.family === "PMLS" ? "配合母端" : part.name}：</span><span>{part.model}</span><small>{describeLuerPart(part)}</small></div>
+                    ))}
+                  </> : luerSelectedParts ? luerSelectedParts.length === 1 ? (
+                    <div className={hardTubeStyles.confirmed}><span>选购方式：</span><span>{luerPairConfig.unifiedSelection ? `仅选${luerPairConfig.base.name}` : "仅当前接头"}</span><small>{luerPairConfig.base.model}</small></div>
+                  ) : luerSelectedParts.slice(1).map(part => (
+                    <div className={hardTubeStyles.confirmed} key={part.model}><span>{part.family === "LS" || part.family === "PMLS" ? "配套接头" : part.name}：</span><span>{part.model}</span><small>{describeLuerPart(part)}</small></div>
+                  )) : (
+                    <div className={hardTubeStyles.confirmed}><span>配套接头：</span><span>选择配套接头及附件</span><small>按当前型号确定连接结构，两侧管径可分别选择</small></div>
+                  )}
+                </div>
+              ) : null}
+              {isQuickConnectPairingEnabled && quickConnectPairConfig ? (
+                <div className={hardTubeStyles.confirmedList} aria-live="polite" data-quick-connect-selection-summary="true">
+                  {isQuickConnectSingleSelection ? <div className={hardTubeStyles.confirmed}>
+                    <span>选型方式：</span><span>仅选当前接头</span><small>{quickConnectPairConfig.baseModel}</small>
+                  </div> : <div className={hardTubeStyles.confirmed}>
+                    <span>{configuratorLocale === "zh" ? "配套接头：" : "Mating end:"}</span>
+                    <span>{quickConnectPairOption?.model || (configuratorLocale === "zh" ? "请选择配套接头" : "Select a mating end")}</span>
+                    <small>{quickConnectPairOption?.description || (configuratorLocale === "zh" ? `${quickConnectPairConfig.series} 公母端可按两侧工况分别组合` : `Combine ${quickConnectPairConfig.series} male and female ends for the two sides of the fluid path`)}</small>
+                  </div>}
                 </div>
               ) : null}
               <div data-product-action-grid="true" className={styles.actionRow}>
@@ -3866,18 +4276,50 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 <button
                   className={styles.button}
                   type="button"
-                  disabled={isDetailVariantRequired || ((isDetailModelConfiguratorEnabled || isHardTubeConfiguratorEnabled) && isDetailProductSelected)}
+                  disabled={isDetailVariantRequired || ((isDetailModelConfiguratorEnabled || isHardTubeConfiguratorEnabled || isLuerPairingEnabled) && isDetailProductSelected)}
                   aria-pressed={isDetailProductSelected}
                   onClick={handleAddList}
                 >
-                  {isDetailProductSelected ? copy.addedToList : copy.addToList}
+                  {isDetailProductSelected ? copy.addedToList : isLuerPairingEnabled && luerSelectedParts && luerSelectedParts.length > 1 ? "加入组合清单" : copy.addToList}
                 </button>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="product-detail-resources" className={styles.detailSection}>
+        <section
+          id="product-detail-resources"
+          className={styles.detailSection}
+        >
+          {hasCustomerCategoryNavigation ? (
+            <nav
+              className={styles.customerCategoryNav}
+              lang={configuratorLocale}
+              aria-label="产品内容分类"
+            >
+              {([
+                ["product", "产品资料"],
+                ["selection", "选型与使用"],
+                ["delivery", "交付与售后"],
+              ] as Array<[CustomerCategoryKey, string]>).filter(([key]) => key !== "selection" || isCustomerCategoryPage).map(([key, label]) => (
+                <button
+                  key={key}
+                  className={[
+                    styles.customerCategoryButton,
+                    activeCustomerCategory === key ? styles.isActive : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  type="button"
+                  aria-pressed={activeCustomerCategory === key}
+                  onClick={() => setActiveCustomerCategory(key)}
+                >
+                  {label}
+                </button>
+              ))}
+            </nav>
+          ) : null}
+          {showProductResourceTabs && !showFlatProductResources ? (
           <nav
             className={styles.tabNav}
             aria-label={copy.tabs}
@@ -3927,6 +4369,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               </button>
             ) : null}
 
+            {!isQuickConnectFitting || quickConnectCadAssets ? (
             <button
               className={[
                 styles.tabButton,
@@ -3951,11 +4394,12 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 shortLabel={mobileTabLabels.model3d}
               />
             </button>
+            ) : null}
 
             <button
               className={[
                 styles.tabButton,
-                activeTab === "drawing" ? styles.isActive : "",
+                activeTab === "drawing" || (showFlatProductResources && isQuickConnectFitting) ? styles.isActive : "",
               ]
                 .filter(Boolean)
                 .join(" ")}
@@ -3988,8 +4432,19 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               </button>
             ) : null}
           </nav>
+          ) : null}
 
-          <div className={styles.panelWrap}>
+          <div
+            className={[
+              styles.panelWrap,
+              showFlatProductResources ? styles.productResourcePanelsFlat : "",
+              !showProductResourceTabs
+                ? styles.customerCategoryPanelHidden
+                : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+          >
             <div
               className={[
                 styles.panel,
@@ -4046,19 +4501,32 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   .filter(Boolean)
                   .join(" ")}
               >
+                {showFlatProductResources ? (
+                  <h3 className={styles.flatPanelTitle}>{applicationDetails.tabLabel}</h3>
+                ) : null}
                 <ProductApplicationsPanel content={applicationDetails} />
               </div>
             ) : null}
 
+            <div className={styles.modelDrawingGroup}>
+            {useSharedFittingResources ? (
+              <FittingResourceViewer locale={configuratorLocale} key={`${configuratorLocale}:${data.slug}`} drawings={fittingResourceDrawings}
+                modelSource={fittingResourceModel} active={showProductResourceTabs} />
+            ) : (<>
+            {!isQuickConnectFitting || quickConnectCadAssets ? (
             <div
               className={[
                 styles.panel,
                 activeTab === "model3d" ? styles.isActive : "",
+                showFlatProductResources ? styles.isActive : "",
               ]
                 .filter(Boolean)
                 .join(" ")}
             >
-              <div
+              {!showFlatProductResources ? (
+                <h3 className={styles.flatPanelTitle}>{copy.model3d}</h3>
+              ) : null}
+            <div
                   className={[styles.panelBox, showModelPreview ? styles.modelPreviewGate : ""].filter(Boolean).join(" ")}
                   data-product-model3d-panel="true"
                 >
@@ -4068,12 +4536,29 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     locale={configuratorLocale}
                     onOpen={handleOpenModel}
                   />
+                ) : isHardTubeCustomerCategoryPage && !fittingCadAssets && !model3dUrl ? (
+                  <div className={styles.modelViewerFallback} role="status">当前型号暂无公开 3D 模型，请以对应图纸核对结构与尺寸。</div>
                 ) : isTubingAssembly && !model3dUrl ? (
                   <div className={styles.modelViewerFallback} role="status">{data.tubingAssemblyUi?.modelUnavailable}</div>
-                ) : hasOpenedModel ? (data.solenoidAuthoredContent ? (
-                  <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="3d" active={activeTab === "model3d"} variant={solenoidVariant} onVariant={setSolenoidVariant} />
-                ) : cadAssets ? (
-                  <ProductCadViewer modelId={cadAssets.viewerId} title={cadAssets.model} headMaterial={pistonCadAssets?.headMaterial} fittingFinish={fittingCadAssets?.fittingFinish} fittingProduct={fittingCadAssets?.fittingProduct} fittingAccessory={fittingCadAssets ? hardTubeAccessoryChoice ?? undefined : undefined} locale={configuratorLocale} active={activeTab === "model3d"} />
+                ) : isQuickConnectFitting && quickConnectCadAssets ? (
+                  <ProductCadViewer
+                    modelId={quickConnectCadAssets.viewerId}
+                    title={quickConnectCadAssets.model}
+                    drawingUrl={drawingPreviewUrl || undefined}
+                    productFamily="quick-connect"
+                    fittingProduct={data.slug}
+                    quickConnectMate={quickConnectViewerMate}
+                    locale={configuratorLocale}
+                    active={showFlatProductResources || activeTab === "model3d"}
+                  />
+                ) : isLuerPairingEnabled && luerSelectedParts ? (
+                  <LuerCadViewer parts={luerSelectedParts} active={showFlatProductResources || activeTab === "model3d"} />
+                ) : luerCadAssets ? (
+                  <LuerCadViewer parts={[luerCadAssets]} active={showFlatProductResources || activeTab === "model3d"} />
+                ) : hasOpenedModel || showFlatProductResources ? (data.solenoidAuthoredContent ? (
+                  <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="3d" active={showFlatProductResources || activeTab === "model3d"} variant={solenoidVariant} onVariant={setSolenoidVariant} />
+                ) : cadAssets || showFlatProductResources ? (
+                  <ProductCadViewer modelId={cadAssets?.viewerId} title={cadAssets?.model || data.model || data.productCode || data.slug} drawingUrl={drawingPreviewUrl || undefined} productFamily={(fittingCadAssets || standaloneFittingCadAssets) ? "fitting" : undefined} headMaterial={pistonCadAssets?.headMaterial} fittingFinish={(fittingCadAssets || standaloneFittingCadAssets)?.fittingFinish} fittingProduct={fittingCadAssets?.fittingProduct || (standaloneFittingCadAssets ? data.slug : undefined)} fittingAccessory={fittingCadAssets ? hardTubeAccessoryChoice ?? undefined : undefined} locale={configuratorLocale} active={showFlatProductResources || activeTab === "model3d"} />
                 ) : isPumpDetail ? (
                   <PumpUploadedFileGuard
                     key={model3dUrl}
@@ -4111,15 +4596,20 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 )) : null}
               </div>
             </div>
+            ) : null}
 
+            {!(showFlatProductResources && (quickConnectCadAssets || (isHardTubeCustomerCategoryPage && fittingCadAssets))) ? (
             <div
               className={[
                 styles.panel,
-                activeTab === "drawing" ? styles.isActive : "",
+                activeTab === "drawing" || (showFlatProductResources && (isQuickConnectFitting || isHardTubeCustomerCategoryPage)) ? styles.isActive : "",
               ]
                 .filter(Boolean)
                 .join(" ")}
             >
+              {!showFlatProductResources || isQuickConnectFitting || isHardTubeCustomerCategoryPage ? (
+                <h3 className={styles.flatPanelTitle}>{copy.technicalDrawing}</h3>
+              ) : null}
               {data.solenoidAuthoredContent ? (
                 activeTab === "drawing" ? <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="drawing" active variant={solenoidVariant} onVariant={setSolenoidVariant} /> : null
               ) : isPumpDetail ? (
@@ -4215,6 +4705,14 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 </div>
               )}
             </div>
+            ) : null}
+
+            </>)}
+            </div>
+
+            {isQuickConnectFitting && quickConnectCadAssets && (showFlatProductResources || activeTab === "model3d") ? (
+              <QuickConnectPreviewNote model={quickConnectCadAssets.model} locale={configuratorLocale} />
+            ) : null}
 
             {hasDatasheetTab && resourceLocale ? (
               <div
@@ -4225,6 +4723,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   .filter(Boolean)
                   .join(" ")}
               >
+                {showFlatProductResources ? (
+                  <h3 className={styles.flatPanelTitle}>{resourceCopy?.datasheetTab}</h3>
+                ) : null}
                 <div className={styles.panelBox}>
                   <ProductDatasheetPanel
                     datasheet={datasheet}
@@ -4237,24 +4738,46 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               </div>
             ) : null}
           </div>
+          {hasCustomerCategoryNavigation && activeCustomerCategory !== "product" ? (
+            <div className={styles.customerCategoryContent}>
+              {activeCustomerCategory === "selection"
+                ? customerCategoryContent?.selection
+                : null}
+              {activeCustomerCategory === "delivery"
+                ? (showSharedFittingDelivery ? <FittingDeliveryZh locale={configuratorLocale} productModel={String(data.model || data.foreachModel || "")} /> : customerCategoryContent?.delivery)
+                : null}
+            </div>
+          ) : null}
         </section>
         {/* QUICK_CONNECT_SERIES_MODEL_TABLE_START */}
-        {Array.isArray((data as any).modelRows) &&
+        {(!hasCustomerCategoryNavigation || activeCustomerCategory === "product") &&
+          Array.isArray((data as any).modelRows) &&
         (data as any).modelRows.length > 0 ? (
           <section
             id="model-selection"
             className={styles.faqSection}
           >
             <div className={styles.faqHeader}>
-              <h2>
-                {(data as any).modelTableTitle ||
-                  copy.completeModels}
-              </h2>
+              <div>
+                <h2>
+                  {(data as any).modelTableTitle ||
+                    copy.completeModels}
+                </h2>
 
-              {(data as any).modelTableDescription ? (
-                <p>
-                  {(data as any).modelTableDescription}
-                </p>
+                {(data as any).modelTableDescription ? (
+                  <p>
+                    {(data as any).modelTableDescription}
+                  </p>
+                ) : null}
+              </div>
+              {isQuickConnectSeriesDetail ? (
+                <button
+                  className={styles.button}
+                  type="button"
+                  onClick={() => openQuickConnectSeriesSelector()}
+                >
+                  {configuratorLocale === "en" ? "Select a model" : "点击型号选择"}
+                </button>
               ) : null}
             </div>
 
@@ -4287,7 +4810,17 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                           id={rowKey || undefined}
                           key={rowKey}
                         >
-                          <td>{item.model}</td>
+                          <td>
+                            {isQuickConnectSeriesDetail ? (
+                              <button
+                                type="button"
+                                className={styles.modelSelectionButton}
+                                onClick={() => openQuickConnectSeriesSelector(String(item.model || ""))}
+                              >
+                                {item.model}
+                              </button>
+                            ) : item.model}
+                          </td>
                           <td>{item.productCode}</td>
                           <td>{item.connection}</td>
                           <td>{item.gender}</td>
@@ -4305,6 +4838,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           </section>
         ) : null}
         {/* QUICK_CONNECT_SERIES_MODEL_TABLE_END */}
+
+        {beforeFaqContent}
 
         {data.faqs && data.faqs.length > 0 ? (
           <section className={styles.faqSection}>
@@ -4372,6 +4907,6 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       </div>
     </main>
     </SitePageShell>
-</div>
+</div>, (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") ? configuratorLocale : "zh")
   );
 }
