@@ -103,6 +103,9 @@
 .gallery > figure:only-child { grid-column: 1 / -1; }
 .gallery > figure:only-child img { aspect-ratio: auto; }
 .gallery > figure:only-child[data-square="true"] { width: min(100%, 620px); justify-self: center; }
+/* Preserve the original curves, axes and legend. Only cover the blank title band. */
+.originalChart { position: relative; container-type: inline-size; width: 100%; }
+.originalChart .chartTitle { position: absolute; inset: 1px 1px auto; height: 14%; display: flex; align-items: center; justify-content: center; padding: 0 4%; background: #fff; color: #333; font-size: clamp(10px, 2.8cqw, 24px); font-weight: 600; line-height: 1.2; text-align: center; }
 .root[id="what-is-a-bulkhead-barbed-fitting-article"] section[id="dimensions"] table { min-width: 800px; }
 .root[id="what-is-a-bulkhead-barbed-fitting-article"] section[id="dimensions"] th:first-child { white-space: nowrap; }
 .gallery figcaption { border-top: 1px solid var(--line); padding-top: 10px; text-align: center; font-size: 15px; font-weight: 400; }

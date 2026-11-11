@@ -52,6 +52,9 @@ function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: 
             </div>)}
           </div>
           <Image className={styles.dimensionDrawing} src={block.src} alt={block.alt} width={block.width} height={block.height} sizes="(max-width: 600px) 90vw, 360px" />
+        </div> : block.imageTitle ? <div className={styles.originalChart} data-localized-chart style={{ aspectRatio: `${block.width} / ${block.height}` }}>
+          <Image src={block.src} alt={block.alt} width={block.width} height={block.height} sizes="(max-width: 820px) 100vw, 790px" />
+          <span className={styles.chartTitle} data-chart-title aria-hidden="true">{block.imageTitle}</span>
         </div> : <Image
           src={block.src}
           alt={block.alt}

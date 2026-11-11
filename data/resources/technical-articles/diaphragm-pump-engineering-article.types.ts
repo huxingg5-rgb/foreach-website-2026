@@ -70,6 +70,8 @@ export type EngineeringArticleBlock =
       width: number;
       height: number;
       caption: string;
+      /** Localized title displayed over the whitespace title band of an original test chart. */
+      imageTitle?: string;
       captionHref?: string;
       quickDisconnectDiagram?: "pair" | "valves" | "panel";
       barbExpansionDiagram?: "assembly" | "comparison" | "profiles";
