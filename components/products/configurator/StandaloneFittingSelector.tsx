@@ -1,12 +1,15 @@
 "use client";
 
+import DrawingRequirements from "./DrawingRequirements";
+import { getDrawingTypes, getDrawingRequirementsCopy, normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
+import { useModelDrawingRequirements } from "@/data/products/configurator/model-drawing-requirements";
 import { fittingView } from "@/components/products/detail/fitting-view";
 import { fittingText } from "@/data/products/detail/fitting-ui.intl";
 import { useEffect, useId, useRef, useState } from "react";
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 import type { SelectionCartSourceType } from "@/components/selection-cart/selection-cart.types";
 import { getStandaloneDimensionValues, loadStandaloneFittingSelection, pickStandaloneDimension,
-  type StandaloneFittingOption, type StandaloneFittingSelection, type StandaloneFittingType } from "@/data/products/configurator/standalone-fitting-selection";
+  type StandaloneFittingOption, type StandaloneFittingSelection, type StandaloneFittingFamily } from "@/data/products/configurator/standalone-fitting-selection";
 import ConfiguratorDialogFrame from "./ConfiguratorDialogFrame";
 import ConfiguratorButton from "./ConfiguratorButton";
 import shared from "./QuickConnectPairSelector.module.css";
@@ -14,7 +17,7 @@ import styles from "./StandaloneFittingSelector.module.css";
 
 type Props = {
   locale?: string;
-  productTypeId: StandaloneFittingType; model: string; sourceType: SelectionCartSourceType;
+  productTypeId: StandaloneFittingFamily; model: string; sourceType: SelectionCartSourceType;
   onClose: () => void; onConfirm: (option: StandaloneFittingOption) => void;
 };
 
@@ -25,8 +28,8 @@ export default function StandaloneFittingSelector({ locale = "zh", productTypeId
   const [adjusted, setAdjusted] = useState("");
   const [error, setError] = useState(false);
   const [attempt, setAttempt] = useState(0);
-  const [drawingChoices, setDrawingChoices] = useState<Record<string, boolean>>({});
-  const { getItem, addItem, toggleDrawingNeed } = useSelectionCart();
+  const [drawingChoices, setDrawingChoices] = useState<Record<string, CadDrawingType[]>>({});
+  const { getItem, addItem, setDrawingTypes } = useSelectionCart();
   const dialog = useRef<HTMLElement>(null), closeButton = useRef<HTMLButtonElement>(null), id = useId();
   const close = useRef(onClose);
   useEffect(() => { close.current = onClose; }, [onClose]);
@@ -69,8 +72,10 @@ export default function StandaloneFittingSelector({ locale = "zh", productTypeId
   const exact = config?.options.find(option => option.model === normalized || option.productCode === normalized);
   const matches = normalized ? config?.options.filter(option => option.model.includes(normalized) || option.productCode.includes(normalized)) || [] : [];
   const existing = selected ? getItem(sourceType, selected.productCode) : undefined;
-  const needDrawing = selected ? drawingChoices[selected.productCode] ?? existing?.needDrawing ?? false : false;
-  const added = Boolean(existing && existing.needDrawing === needDrawing);
+  const [savedDrawings, saveDrawings] = useModelDrawingRequirements(`${productTypeId}:${selected?.model || model}`);
+  const drawings = selected ? drawingChoices[selected.productCode] ?? savedDrawings : [];
+  const needDrawing = drawings.length > 0;
+  const added = Boolean(existing && JSON.stringify(getDrawingTypes(existing)) === JSON.stringify(drawings));
   function locate(text: string) {
     setLookup(text);
     const query = text.trim().toUpperCase();
@@ -82,13 +87,16 @@ export default function StandaloneFittingSelector({ locale = "zh", productTypeId
     const next = pickStandaloneDimension(pickerConfig, selected, key, value);
     const changes = pickerConfig.dimensions.filter(field => field.key !== key && next.attributes[field.key] !== selected.attributes[field.key]);
     setChoice(next.model); setLookup("");
-    setAdjusted(changes.length ? `已同步匹配：${changes.map(field => `${field.label} ${next.attributes[field.key] || "—"}`).join("、")}` : "");
+    const summary = changes.map(field => `${fittingText(field.label, locale)} ${fittingText(next.attributes[field.key] || "—", locale)}`)
+      .join(locale === "zh" ? "、" : ", ");
+    setAdjusted(changes.length ? `已同步匹配：${summary}` : "");
   }
   function addSelection() {
     if (!selected || !config) return;
-    if (existing) {if (existing.needDrawing !== needDrawing) toggleDrawingNeed(existing.id, needDrawing); return;}
+    saveDrawings(drawings);
+    if (existing) {setDrawingTypes(existing.id, drawings); return;}
     addItem({sourceType, sourceLabel: fittingText("产品详情页", locale), productName: fittingText(config.name, locale), productCode: selected.productCode,
-      foreachModel: selected.model, competitorModels: [], quantity: 1, needDrawing,
+      foreachModel: selected.model, competitorModels: [], quantity: 1, needDrawing, drawingTypes: normalizeDrawingTypes(drawings),
       imagePath: selected.imagePath, detailHref: locale === "zh" ? selected.detailHref : `/${locale}${selected.detailHref}`});
   }
   return fittingView(<ConfiguratorDialogFrame
@@ -97,8 +105,8 @@ export default function StandaloneFittingSelector({ locale = "zh", productTypeId
     closeLabel="关闭接头选型" onClose={onClose} className={`${shared.compact} ${styles.dialog}`}
     notice="单件选购，每种型号 1 件；数量可在清单中调整。"
     actions={<>
-      <ConfiguratorButton onClick={addSelection} disabled={!selected || added} active={added}>{added ? "已加入清单" : existing ? "更新图纸需求" : "加入清单"}</ConfiguratorButton>
-      <ConfiguratorButton variant="primary" disabled={!selected} onClick={() => {if (selected) onConfirm(selected);}}>确认选型</ConfiguratorButton>
+      <ConfiguratorButton onClick={addSelection} disabled={!selected || added} active={added}>{added ? "已加入清单" : existing ? getDrawingRequirementsCopy(locale).update : "加入清单"}</ConfiguratorButton>
+      <ConfiguratorButton variant="primary" disabled={!selected} onClick={() => {if (selected) { saveDrawings(drawings); onConfirm(selected); }}}>确认选型</ConfiguratorButton>
     </>}
   >
     <div className={shared.body} data-standalone-fitting-selector={productTypeId}>
@@ -149,8 +157,8 @@ export default function StandaloneFittingSelector({ locale = "zh", productTypeId
             <div><dt>型号</dt><dd>{selected.model}</dd></div>
             <div><dt>商品编码</dt><dd>{selected.productCode}</dd></div>
           </dl>
-          <label className={styles.drawing}><input type="checkbox" checked={needDrawing}
-            onChange={event => setDrawingChoices(current => ({...current, [selected.productCode]: event.target.checked}))} />需要图纸</label>
+          <DrawingRequirements locale={locale} value={drawings}
+            onChange={value => setDrawingChoices(current => ({ ...current, [selected.productCode]: value }))} />
         </section>
       </div>}
     </div>

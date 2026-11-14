@@ -14,6 +14,7 @@ interface InquiryAttachmentFieldProps {
   files: File[];
   disabled: boolean;
   onChange: (files: File[]) => void;
+  reservedFiles?: readonly { size: number }[];
 }
 
 export default function InquiryAttachmentField({
@@ -21,6 +22,7 @@ export default function InquiryAttachmentField({
   files,
   disabled,
   onChange,
+  reservedFiles = [],
 }: InquiryAttachmentFieldProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [error, setError] = useState("");
@@ -33,7 +35,7 @@ export default function InquiryAttachmentField({
     const nextFiles = [...files, ...additions];
 
     let nextError = "";
-    if (nextFiles.length > MAX_FILES) {
+    if (nextFiles.length + reservedFiles.length > MAX_FILES) {
       nextError = copy.tooMany;
     } else if (additions.some((file) => file.size === 0)) {
       nextError = copy.empty;
@@ -41,7 +43,7 @@ export default function InquiryAttachmentField({
       nextError = copy.unsupported;
     } else if (additions.some((file) => file.size > MAX_BYTES)) {
       nextError = copy.fileTooLarge;
-    } else if (nextFiles.reduce((total, file) => total + file.size, 0) > MAX_BYTES) {
+    } else if ([...nextFiles, ...reservedFiles].reduce((total, file) => total + file.size, 0) > MAX_BYTES) {
       nextError = copy.totalTooLarge;
     }
 
@@ -69,6 +71,7 @@ export default function InquiryAttachmentField({
       </div>
       <p className={styles.hint}>
         {copy.hint}
+        {reservedFiles.length ? ` ${copy.reservedHint.replace("{count}", String(reservedFiles.length)).replace("{remaining}", String(Math.max(0, MAX_FILES - reservedFiles.length)))}` : ""}
       </p>
       {files.length ? (
         <ul className={styles.list} aria-label={copy.selected}>

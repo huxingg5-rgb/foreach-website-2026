@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { SITE_ORIGIN } from "@/lib/seo/site-url";
 import { getFittingMainImageAlt, getDescriptiveFittingImageUrl } from "@/data/products/detail/fitting-image-description";
+import { getFittingDetailAlternates } from "./fitting-detail-alternates";
+import { getProbeDetailAlternates } from "./probe-detail-alternates";
 
 type ProductMetadataSource = Record<string, unknown>;
 
@@ -68,11 +70,12 @@ export function buildProductSocialMetadata({
   title: string;
   description?: string;
   canonicalUrl?: string;
-}): Pick<Metadata, "openGraph" | "twitter"> {
+}): Pick<Metadata, "openGraph" | "twitter" | "alternates"> {
   const image = getProductSocialImage(data);
+  const alternates = canonicalUrl ? getFittingDetailAlternates(canonicalUrl) || getProbeDetailAlternates(canonicalUrl) : undefined;
 
   if (!image) {
-    return {};
+    return alternates ? { alternates } : {};
   }
 
   const locale = new URL(canonicalUrl || "/", SITE_ORIGIN).pathname.match(/^\/(en|es|fr|ko|ru)(?:\/|$)/)?.[1] || "zh";
@@ -86,6 +89,7 @@ export function buildProductSocialMetadata({
   ).trim();
 
   return {
+    ...(alternates ? { alternates } : {}),
     openGraph: {
       type: "website",
       title,

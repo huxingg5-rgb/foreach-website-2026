@@ -4,7 +4,7 @@ const {getLuerPairConfig, getLuerPlugChoice, resolveLuerPair} = require('../../d
 const {getLuerRole} = require('../../data/products/configurator/luer-combination.ts');
 const {resolveLuerCadModels, luerPlacement, luerFemaleOffset, luerCadManifest: manifest} = require('./solenoid-viewer/luer-assembly.js');
 const {decodeCompactCad} = require('./solenoid-viewer/compact-cad.js');
-const THREE = require('./solenoid-viewer/node_modules/three');
+const THREE = require('three');
 const root = path.resolve(__dirname, '../..'), models = Object.keys(manifest.products);
 const configFor = model => getLuerPairConfig({model, productTypeId: 'luer-fittings'}, 'zh');
 const cache = new Map();
@@ -26,8 +26,7 @@ test('every published Luer SKU has a valid default selection, exact images and i
     assert.deepEqual(resolveLuerPair(config, {mode: 'single'}).map(p => p.model), [model]);
     for (const part of parts) {
       assert.ok(fs.existsSync(path.join(root, 'public', part.imagePath)), part.model);
-      // Drawings are optional in a release that excludes new 2D files.
-      if (part.drawingHref) assert.ok(fs.existsSync(path.join(root, 'public', part.drawingHref)), part.model);
+      assert.ok(fs.existsSync(path.join(root, 'public', part.drawingHref)), part.model);
     }
     for (const locale of ['en','es','fr','ko','ru']) assert.deepEqual(getLuerPairConfig({model, productTypeId: 'luer-fittings'}, locale)?.defaultChoice, config.defaultChoice);
   }

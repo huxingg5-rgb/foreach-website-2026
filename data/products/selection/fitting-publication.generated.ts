@@ -573,6 +573,36 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "seriesId": "lps"
   },
   {
+    "productCode": "809178",
+    "foreachModel": "HBL-U28-PV-N",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-card.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl-u28-pv-n/",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productSeries": "标滚螺纹堵头",
+    "seriesId": "standard-threaded-plug"
+  },
+  {
+    "productCode": "809180",
+    "foreachModel": "HBL-M6-PV-N",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-card.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl-m6-pv-n/",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productSeries": "标滚螺纹堵头",
+    "seriesId": "standard-threaded-plug"
+  },
+  {
+    "productCode": "809184",
+    "foreachModel": "HBL6-U28-PS-B",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-card.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl6-u28-ps-b/",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productSeries": "紧凑螺纹堵头",
+    "seriesId": "compact-threaded-plug"
+  },
+  {
     "productCode": "809188",
     "foreachModel": "LPS-24-PP-W",
     "imageCard": "/images/products/fittings/luer-fittings/products/LPS-24-PP-W.jpg",
@@ -581,6 +611,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "productType": "",
     "productSeries": "lps",
     "seriesId": "lps"
+  },
+  {
+    "productCode": "809189",
+    "foreachModel": "HBL6-M6-PS-B",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-card.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl6-m6-ps-b/",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productSeries": "紧凑螺纹堵头",
+    "seriesId": "compact-threaded-plug"
   },
   {
     "productCode": "809194",
@@ -1803,6 +1843,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "seriesId": "sal"
   },
   {
+    "productCode": "809390",
+    "foreachModel": "HBL-U28-PV-B",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-card.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl-u28-pv-b/",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productSeries": "标滚螺纹堵头",
+    "seriesId": "standard-threaded-plug"
+  },
+  {
     "productCode": "809391",
     "foreachModel": "HFL-U28-16-PV-B",
     "imageCard": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-u28-16-pv-b-main.jpg",
@@ -1891,6 +1941,16 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "productType": "",
     "productSeries": "standard-ferrule-fitting",
     "seriesId": "standard-ferrule-fitting"
+  },
+  {
+    "productCode": "809400",
+    "foreachModel": "HBL-M6-PV-B",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-card.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl-m6-pv-b/",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productSeries": "标滚螺纹堵头",
+    "seriesId": "standard-threaded-plug"
   },
   {
     "productCode": "809401",
@@ -2781,6 +2841,26 @@ export const FITTING_PUBLISHED_PRODUCTS: PublishedFittingProduct[] =
     "productType": "",
     "productSeries": "pmu",
     "seriesId": "pmu"
+  },
+  {
+    "productCode": "809526",
+    "foreachModel": "HBL6X-M6-PV-N",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-card.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl6x-m6-pv-n/",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productSeries": "顶丝堵头",
+    "seriesId": "slotted-fitting-plug"
+  },
+  {
+    "productCode": "809527",
+    "foreachModel": "HBL6X-U28-PV-N",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-card.webp",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl6x-u28-pv-n/",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productSeries": "顶丝堵头",
+    "seriesId": "slotted-fitting-plug"
   },
   {
     "productCode": "809528",
@@ -7155,34 +7235,6 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
     ]
   },
   {
-    "productCode": "809178",
-    "foreachModel": "HBL-U28-PV-N",
-    "reasons": [
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809180",
-    "foreachModel": "HBL-M6-PV-N",
-    "reasons": [
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809184",
-    "foreachModel": "HBL6-U28-PS-B",
-    "reasons": [
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809189",
-    "foreachModel": "HBL6-M6-PS-B",
-    "reasons": [
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
     "productCode": "809192",
     "foreachModel": "U-U28-20-AC-B",
     "reasons": [
@@ -7287,20 +7339,6 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
     "foreachModel": "SA-U32-16F-PA-W",
     "reasons": [
       "NOT_ACTIVE",
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809390",
-    "foreachModel": "HBL-U28-PV-B",
-    "reasons": [
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809400",
-    "foreachModel": "HBL-M6-PV-B",
-    "reasons": [
       "NO_MAIN_IMAGE"
     ]
   },
@@ -7478,20 +7516,6 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
       "NOT_ACTIVE",
       "LOGO_IMAGE",
       "SHARED_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809526",
-    "foreachModel": "HBL6X-M6-PV-N",
-    "reasons": [
-      "NO_MAIN_IMAGE"
-    ]
-  },
-  {
-    "productCode": "809527",
-    "foreachModel": "HBL6X-U28-PV-N",
-    "reasons": [
-      "NO_MAIN_IMAGE"
     ]
   },
   {
@@ -8279,11 +8303,11 @@ export const FITTING_OFFLINE_PRODUCTS: Array<{
 export const FITTING_PUBLICATION_SUMMARY =
 {
   "totalProductCodes": 868,
-  "publishedProductCodes": 640,
-  "offlineProductCodes": 228,
+  "publishedProductCodes": 648,
+  "offlineProductCodes": 220,
   "forced136": 4,
   "forced806": 21,
-  "invalidMainImage": 53,
+  "invalidMainImage": 45,
   "logoImage": 93,
   "placeholderImage": 0,
   "sharedImageProductCodes": 173,
@@ -8473,6 +8497,14 @@ const publishedDetailRouteKeySet = new Set(
   "female-thread-adapters/uy-u28-20-pp-n",
   "filters/f-pe-100-32-pp-n",
   "filters/f-pe-60-32-pp-n",
+  "hard-tube-fittings/hbl-m6-pv-b",
+  "hard-tube-fittings/hbl-m6-pv-n",
+  "hard-tube-fittings/hbl-u28-pv-b",
+  "hard-tube-fittings/hbl-u28-pv-n",
+  "hard-tube-fittings/hbl6-m6-ps-b",
+  "hard-tube-fittings/hbl6-u28-ps-b",
+  "hard-tube-fittings/hbl6x-m6-pv-n",
+  "hard-tube-fittings/hbl6x-u28-pv-n",
   "hard-tube-fittings/hf-m6-20-pk-n",
   "hard-tube-fittings/hf-m6-20-ps-b",
   "hard-tube-fittings/hf-m6-20-pv-n",

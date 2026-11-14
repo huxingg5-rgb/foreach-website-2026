@@ -1,5 +1,6 @@
 "use client";
 import { valvelessPumpSeries } from "@/data/products/selection/valveless-pump-series";
+import { hardTubePlugCopy } from "@/data/products/detail/hard-tube-plugs";
 
 import { getPistonPumpIntroCopy } from "@/data/products/selection/piston-pump-series-copy";
 import { getControlModulePath } from "@/data/products/selection/control-module-routes";
@@ -4673,6 +4674,10 @@ export default function ProductSelectionClient({
       const values = new Set(next[filterKey] || []);
       const shouldSelect = !values.has(value);
 
+      if (activeProductTypeId === "hard-tube-fittings" && filterKey === "filter01" && shouldSelect && hardTubePlugCopy.zh.names.includes(value)) {
+        delete next.filter03;
+      }
+
       if (group.inputType === "single") {
         values.clear();
       }
@@ -5172,6 +5177,7 @@ function isProductFilterOptionDisabled(
          */
         return FILTER_KEYS.every(
           (dependencyKey) => {
+            if (activeProductTypeId === "hard-tube-fittings" && candidateKey === "filter01" && dependencyKey === "filter03" && hardTubePlugCopy.zh.names.includes(value)) return true;
             if (
               dependencyKey ===
               candidateKey
@@ -5696,7 +5702,7 @@ function isFilterOptionActive(
               }}
               activeProductTypeId={activeProductTypeId}
               productTypeResultCount={showProductTypeResultCount ? matchedProducts.length : undefined}
-              filterGroups={filterGroups}
+              filterGroups={activeProductTypeId === "hard-tube-fittings" && [...(selectedFilters.filter01 || [])].some(value => hardTubePlugCopy.zh.names.includes(value)) ? filterGroups.filter(group => group.key !== "filter03") : filterGroups}
               mobileOpenFilterGroups={mobileOpenFilterGroups}
               currentPrefix={targetLocaleA11yText?.currentPrefix}
               barbedPortLabel={targetLocaleA11yText?.barbedPortLabel}

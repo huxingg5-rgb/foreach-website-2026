@@ -3,6 +3,10 @@ import type { ComponentType, ReactNode } from "react";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import DiaphragmPumpSeriesOptions from "@/components/products/diaphragm-pumps/DiaphragmPumpSeriesOptions";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { DiaphragmPumpProductNotes, DiaphragmPumpSelectionContent, DiaphragmPumpDeliveryContent } from "./DiaphragmPumpDetailContent";
+import { getDiaphragmPumpGuide } from "@/data/products/detail/diaphragm-pump-guide";
+import { diaphragmText } from "@/data/products/detail/diaphragm-pump-ui.intl";
+import { PRODUCT_CENTER_BREADCRUMB_LABELS } from "@/lib/seo/product-breadcrumb-label";
 import {
   getDiaphragmPumpCopy,
   getDiaphragmPumpGallery,
@@ -18,6 +22,7 @@ import {
 } from "@/data/products/detail/diaphragm-pump-reference-models";
 import {
   getDiaphragmPumpLanguageAlternates,
+  getDiaphragmPumpLocalePrefix,
   getDiaphragmPumpPath,
   normalizeDiaphragmPumpLocale,
 } from "@/data/products/detail/diaphragm-pump-routes";
@@ -111,6 +116,8 @@ const details = detailsJson as DiaphragmDetail[];
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
   afterContent?: ReactNode;
+  customerCategoryMode?: "diaphragm-pump";
+  customerCategoryContent?: Partial<Record<"product" | "selection" | "delivery", ReactNode>>;
 }>;
 
 function getText(value: unknown) {
@@ -856,6 +863,7 @@ function adaptToProductDetailClientData(
   locale: ReturnType<typeof normalizeDiaphragmPumpLocale>,
 ) {
   const slug = normalizeSlug(detail.slug);
+  const localePrefix = getDiaphragmPumpLocalePrefix(locale);
   const isNeutralSeries = Boolean(getDiaphragmPumpNeutralSeriesSlug(slug));
   const title = getText(detail.title || detail.displayName || detail.seriesId);
   const cleanModelCode = getCleanDiaphragmModelCode(detail);
@@ -1083,10 +1091,10 @@ function adaptToProductDetailClientData(
     partDrawingText: "查看零件图",
 
     breadcrumbs: [
-      { label: "产品中心", href: "/products" },
-      { label: "泵", href: "/products/pumps" },
-      { label: "微型隔膜泵", href: "/products/pumps/miniature-diaphragm-pumps" },
-      { label: cleanModelCode, href: "/products/pumps/miniature-diaphragm-pumps/" + slug },
+      { label: PRODUCT_CENTER_BREADCRUMB_LABELS[locale], href: `${localePrefix}/products/` },
+      { label: diaphragmText("泵", locale), href: `${localePrefix}/products/pumps/` },
+      { label: diaphragmText("微型隔膜泵", locale), href: getDiaphragmPumpPath(locale) },
+      { label: cleanModelCode, href: getDiaphragmPumpPath(locale, slug) },
     ],
 
     seoTitle: getText(detail.seo?.title || seoProductTitle),
@@ -1291,15 +1299,26 @@ export default async function DiaphragmPumpDetailPage({
     notFound();
   }
 
+  const guide = getDiaphragmPumpGuide(resolvedParams.slug);
+
   return (
     <ProductDetailView
       data={data}
+      customerCategoryMode={guide ? "diaphragm-pump" : undefined}
+      customerCategoryContent={guide ? {
+        product: <DiaphragmPumpProductNotes guide={guide} locale={locale} />,
+        selection: <>
+          <DiaphragmPumpSelectionContent guide={guide} locale={locale} applications={data.applicationDetails} />
+          <DiaphragmPumpSeriesOptions locale={locale} seriesSlug={data.slug} />
+        </>,
+        delivery: <DiaphragmPumpDeliveryContent guide={guide} locale={locale} />,
+      } : undefined}
       afterContent={
         <>
-          <DiaphragmPumpSeriesOptions
+          {!guide ? <DiaphragmPumpSeriesOptions
             locale={locale}
             seriesSlug={data.slug}
-          />
+          /> : null}
           <RelatedResources
             key="product-related-resources"
             sourceType="product"

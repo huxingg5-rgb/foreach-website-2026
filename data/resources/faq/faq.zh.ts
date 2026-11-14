@@ -15,6 +15,7 @@ import { rplSelectionFaqItems, rplSelectionArticleSlug } from "../technical-arti
 import { controlModuleDetails } from "@/data/products/control-modules/control-module-detail.generated";
 import probeDetails from "@/data/products/generated/probes/detail/index.json";
 import tubingContent from "@/data/products/tubing/content.json";
+import { pvcTubingFaqsZh } from "@/data/products/tubing/pvc-faq.zh";
 import type { FaqItem, ReviewedFaqItem } from "./faq.types";
 
 // Server-side composition: published article/product answers remain authoritative.
@@ -93,7 +94,7 @@ export const reviewedFaqItems: ReviewedFaqItem[] = [
   ]),
   ...selected(needle("piercing-probes", "piercing-probe"), [["piercing-difference", "穿刺针和采样针有什么区别？", ["选型"]]]),
   ...selected(needle("stirring-paddles", "stirrer"), [["stirrer-dimensions", "搅拌桨为什么需要按反应杯定制？", ["定制"]]]),
-  ...selected({ source: "data/products/tubing/content.json", intent: "管路问题库：材料与规格匹配；现有 PVC FAQ", category: "tubing", subcategory: "soft-tubing", questions: tubingContent.materials.pvc.zh.faqs, href: "/products/tubing/pvc-tubing/", label: "查看 PVC 管材", aliases: ["PVC", "管子", "内径", "外径"] }, [
+  ...selected({ source: "data/products/tubing/pvc-faq.zh.ts", intent: "管路问题库：材料与规格匹配；现有 PVC FAQ", category: "tubing", subcategory: "soft-tubing", questions: pvcTubingFaqsZh, href: "/products/tubing/pvc-tubing/", label: "查看 PVC 管材", aliases: ["PVC", "管子", "内径", "外径"] }, [
     ["pvc-reagent", "PVC 管可以直接用于所有试剂吗？", ["材料兼容"]],
     ["tubing-wall", "相同内径为什么有不同外径？", ["规格匹配"]],
     ["pvc-peristaltic", "PVC 管能作蠕动泵管吗？", ["选型"]],

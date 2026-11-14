@@ -11,6 +11,7 @@ import {pistonMaterials} from './appearance-piston.js';
 import {smtp2Materials} from './appearance-smtp2.js';
 import {fittingMaterials} from './appearance-fitting.js';
 import fittingManifest from '../../../data/products/detail/hard-tube-fitting-cad-manifest.json';
+import plugManifest from '../../../data/products/detail/hard-tube-plug-cad-manifest.json';
 import standaloneFittingManifest from '../../../data/products/detail/standalone-fitting-cad-manifest.json';
 import remainingFittingManifest from '../../../data/products/detail/remaining-fitting-cad-manifest.json';
 import quickConnectManifest from '../../../data/products/detail/quick-connect-fitting-cad-manifest.json';
@@ -43,7 +44,7 @@ const isRpl=rplIds.includes(new URLSearchParams(location.search).get('model'));
 const usesParentLoader=parent!==window&&new URLSearchParams(location.search).get('loader')==='parent';
 const isDiaphragm=diaphragmIds.includes(new URLSearchParams(location.search).get('model'));
 const isPump=isRpl||isDiaphragm||isPiston||isPipetting;
-const mergedFittingManifest={...fittingManifest,products:{...fittingManifest.products,...Object.values(standaloneFittingManifest.products).reduce((all,family)=>({...all,...family}),{}),...Object.values(remainingFittingManifest.products).reduce((all,family)=>({...all,...family}),{})},geometries:{...fittingManifest.geometries,...Object.values(standaloneFittingManifest.geometries).reduce((all,geometry)=>({...all,[geometry.viewerId]:geometry}),{}),...remainingFittingManifest.geometries}};
+const mergedFittingManifest={...fittingManifest,products:{...fittingManifest.products,...plugManifest.products,...Object.values(standaloneFittingManifest.products).reduce((all,family)=>({...all,...family}),{}),...Object.values(remainingFittingManifest.products).reduce((all,family)=>({...all,...family}),{})},geometries:{...fittingManifest.geometries,...plugManifest.geometries,...Object.values(standaloneFittingManifest.geometries).reduce((all,geometry)=>({...all,[geometry.viewerId]:geometry}),{}),...remainingFittingManifest.geometries}};
 const fittingIds=[...new Set([...Object.values(mergedFittingManifest.products),...Object.values(standaloneFittingManifest.products).flatMap(family=>Object.values(family))].map(product=>product.viewerId).filter(Boolean))];
 const legacyFittingIds=[...new Set(Object.values(fittingManifest.products).map(product=>product.viewerId))];
 const isFitting=fittingIds.includes(new URLSearchParams(location.search).get('model'));
@@ -213,7 +214,7 @@ function refreshQuickDrawing(){
  const select=document.createElement('select');select.id='quick-connect-drawing-model';select.setAttribute('aria-label',getQuickConnectCopy(language).drawing);
  const options=[quickConnectProduct,quickConnectMate?.product].filter(Boolean).sort((a,b)=>a.gender.localeCompare(b.gender));
  const iframe=document.createElement('iframe');iframe.style.cssText='display:block;width:100%;flex:1;min-height:0;border:0;background:white';
- const show=()=>{const product=options.find(p=>p.model===select.value)||options[0];if(!product)return;const url=fittingDrawings.products['quick-connect-fittings']?.[product.model.toLowerCase()]?.url||product.drawingPdfUrl;iframe.hidden=!url;if(!url){iframe.removeAttribute('src');return;}iframe.title=product.model+' 2D PDF';iframe.src=url+'#toolbar=0&navpanes=0&scrollbar=1';};
+ const show=()=>{const product=options.find(p=>p.model===select.value)||options[0];if(!product)return;iframe.title=product.model+' 2D PDF';iframe.src=(fittingDrawings.products['quick-connect-fittings']?.[product.model.toLowerCase()]?.url||product.drawingPdfUrl)+'#toolbar=0&navpanes=0&scrollbar=1';};
  for(const product of options){const option=document.createElement('option');option.value=product.model;option.textContent=(product.gender==='P'?getQuickConnectCopy(language).male:getQuickConnectCopy(language).female)+' · '+product.model;select.append(option);}
  select.value=quickConnectProduct.model;select.onchange=show;container.append(select,iframe);show();
 }

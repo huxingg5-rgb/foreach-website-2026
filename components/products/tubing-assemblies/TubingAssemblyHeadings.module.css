@@ -1,0 +1,50 @@
+.page {
+  --assembly-heading-color: #111111;
+  --assembly-title-size: 24px;
+  --assembly-subtitle-size: 18px;
+  --assembly-heading-weight: 600;
+}
+
+/* Keep the shared detail, guide and delivery components on one heading scale. */
+.page[data-product-detail-page][data-assembly-heading-scope] h2,
+.page[data-product-detail-page][data-assembly-heading-scope] [data-assembly-content="delivery"] h3 {
+  color: var(--assembly-heading-color);
+  font-size: var(--assembly-title-size);
+  font-weight: var(--assembly-heading-weight);
+  line-height: 1.4;
+}
+
+/* Intro and saved-configuration labels retain their original responsive style. */
+.page[data-product-detail-page][data-assembly-heading-scope] h3:not(:where([data-flanged-configuration-workspace] h3)) {
+  color: var(--assembly-heading-color);
+  font-size: var(--assembly-subtitle-size);
+  font-weight: var(--assembly-heading-weight);
+  line-height: 1.5;
+}
+
+.page[data-product-detail-page][data-assembly-heading-scope] h2[data-assembly-page-heading] {
+  color: var(--assembly-heading-color);
+  /* Shared FAQ rules have responsive overrides marked important. */
+  font-size: var(--assembly-title-size) !important;
+  font-weight: var(--assembly-heading-weight);
+  line-height: 1.4 !important;
+}
+
+.page[data-product-detail-page][data-assembly-heading-scope] [data-assembly-content="delivery"] h3 > span {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* Preserve readable contrast on the shared dark call-to-action banner. */
+.page[data-product-detail-page][data-assembly-heading-scope] [data-product-bottom-cta] h2 {
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .page {
+    --assembly-title-size: 20px;
+    --assembly-subtitle-size: 16px;
+  }
+}

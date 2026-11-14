@@ -9,6 +9,11 @@ import { Suspense, type ComponentType, type ReactNode } from "react";
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { PistonPumpDeliveryContent, EaPumpSelectionContent, PistonPumpSpecNotes } from "@/components/products/detail/EaPumpDetailContent";
+import CompactPistonPumpSelectionContent from "@/components/products/detail/CompactPistonPumpSelectionContent";
+import { pistonText } from "@/data/products/detail/piston-pump-ui.intl";
+import { applyPistonPumpGuide, getPistonPumpGuide } from "@/data/products/detail/piston-pump-guide.zh";
+import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import * as plungerPumpDetailModule from "@/data/products/detail/plunger-pump-detail.generated";
 import { selectionProducts } from "@/data/products/selection/product-selection.generated";
@@ -45,6 +50,8 @@ const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
   analyticsProductId?: string;
   afterContent?: ReactNode;
+  customerCategoryMode?: "piston-pump";
+  customerCategoryContent?: Partial<Record<"product" | "selection" | "delivery", ReactNode>>;
 }>;
 
 const LEGACY_SLUG_ALIASES: Record<string, string> = {
@@ -720,8 +727,14 @@ export default async function PlungerPumpDetailPage({
   );
   const relationKeys = getPistonPumpRelationKeys(data);
   const relatedResourcesLocale = locale === "zh" ? "zh-CN" : locale;
+  const guide = getPistonPumpGuide(data.slug);
+  const authored = guide ? applyPistonPumpGuide(data as ProductDetailPageData, guide) : undefined;
   const productData = {
-    ...data,
+    ...(authored ? locale === "zh" ? authored : {
+      ...data,
+      specs: authored.specs.map(spec => ({ ...spec, label: pistonText(spec.label, locale), value: pistonText(spec.value, locale) })),
+      faqs: authored.faqs?.map(faq => ({ ...faq, question: pistonText(faq.question, locale), answer: pistonText(faq.answer, locale) })),
+    } : data),
     relationKeys,
   };
 
@@ -729,6 +742,14 @@ export default async function PlungerPumpDetailPage({
     <ProductDetailView
       data={productData}
       analyticsProductId={analyticsProductId}
+      customerCategoryMode={guide ? "piston-pump" : undefined}
+      customerCategoryContent={guide ? {
+        product: <PistonPumpSpecNotes locale={locale} guide={guide} />,
+        selection: guide.series === "EA"
+          ? <EaPumpSelectionContent locale={locale} key={guide.slug} guide={guide} />
+          : <CompactPistonPumpSelectionContent locale={locale} key={guide.slug} guide={guide} />,
+        delivery: <PistonPumpDeliveryContent locale={locale} guide={guide} />,
+      } : undefined}
       afterContent={
         <RelatedResources
           key="product-related-resources"

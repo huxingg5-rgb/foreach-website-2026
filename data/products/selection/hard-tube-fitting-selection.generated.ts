@@ -4,8 +4,8 @@
 
    数据范围：
    - 工作表：01_硬管接头
-   - 包含：平底、卡箍、卡环和高压接头
-   - 不包含：堵头、卡箍、卡环套件
+   - 包含：平底、卡箍、卡环、高压接头及螺纹堵头
+   - 不包含：独立卡箍、卡环套件
    ========================================================= */
 
 import type {
@@ -4371,6 +4371,366 @@ export const hardTubeFittingSelectionProducts =
       "zh": "硬管接头 高压接头 PUT PUT-U32-05-SS-N 809664 441-09-00046 10-32 UNF 0.5 mm（ID） SUS 本色 25 MPa",
       "en": "hard tube fitting high-pressure fitting PUT PUT-U32-05-SS-N 809664 441-09-00046 10-32 UNF 0.5 mm（ID） SUS natural 25 MPa"
     }
+  },
+  {
+    "productId": "809184",
+    "sourcePart": "443-02-00663",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productTypeName": "紧凑螺纹堵头",
+    "productSeries": "紧凑螺纹堵头",
+    "seriesId": "compact-threaded-plug",
+    "cardTitle": {
+      "zh": "HBL6-U28-PS-B",
+      "en": "HBL6-U28-PS-B",
+      "es": "HBL6-U28-PS-B",
+      "fr": "HBL6-U28-PS-B",
+      "ko": "HBL6-U28-PS-B",
+      "ru": "HBL6-U28-PS-B"
+    },
+    "cardSubtitle": {
+      "zh": "液路端口封堵\n螺纹规格: 1/4-28 UNF\n主体材质: PPS",
+      "en": "Fluidic port closure\nThread: 1/4-28 UNF\nBody material: PPS",
+      "es": "Cierre de puertos de fluido\nRosca: 1/4-28 UNF\nMaterial del cuerpo: PPS",
+      "fr": "Obturation de ports fluidiques\nFiletage: 1/4-28 UNF\nMatériau du corps: PPS",
+      "ko": "유체 포트 밀폐\n나사: 1/4-28 UNF\n본체 재질: PPS",
+      "ru": "Закрытие жидкостных портов\nРезьба: 1/4-28 UNF\nМатериал корпуса: PPS"
+    },
+    "filters": {
+      "filter01": "紧凑螺纹堵头",
+      "filter02": "1/4-28 UNF",
+      "filter03": "",
+      "filter04": "PPS",
+      "filter05": "黑色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-card.webp",
+    "detailSlug": "hbl6-u28-ps-b",
+    "status": "active",
+    "sortOrder": 900,
+    "searchKeywords": {
+      "zh": "紧凑螺纹堵头 HBL6-U28-PS-B 809184 443-02-00663 1/4-28 UNF PPS 黑色 液路端口封堵",
+      "en": "Compact Threaded Plug HBL6-U28-PS-B 809184 443-02-00663 1/4-28 UNF PPS Black Fluidic port closure",
+      "es": "Tapón roscado compacto HBL6-U28-PS-B 809184 443-02-00663 1/4-28 UNF PPS Negro Cierre de puertos de fluido",
+      "fr": "Bouchon fileté compact HBL6-U28-PS-B 809184 443-02-00663 1/4-28 UNF PPS Noir Obturation de ports fluidiques",
+      "ko": "컴팩트 나사 플러그 HBL6-U28-PS-B 809184 443-02-00663 1/4-28 UNF PPS 검정 유체 포트 밀폐",
+      "ru": "Компактная резьбовая заглушка HBL6-U28-PS-B 809184 443-02-00663 1/4-28 UNF PPS Чёрный Закрытие жидкостных портов"
+    }
+  },
+  {
+    "productId": "809189",
+    "sourcePart": "443-02-00664",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productTypeName": "紧凑螺纹堵头",
+    "productSeries": "紧凑螺纹堵头",
+    "seriesId": "compact-threaded-plug",
+    "cardTitle": {
+      "zh": "HBL6-M6-PS-B",
+      "en": "HBL6-M6-PS-B",
+      "es": "HBL6-M6-PS-B",
+      "fr": "HBL6-M6-PS-B",
+      "ko": "HBL6-M6-PS-B",
+      "ru": "HBL6-M6-PS-B"
+    },
+    "cardSubtitle": {
+      "zh": "液路端口封堵\n螺纹规格: M6×1\n主体材质: PPS",
+      "en": "Fluidic port closure\nThread: M6×1\nBody material: PPS",
+      "es": "Cierre de puertos de fluido\nRosca: M6×1\nMaterial del cuerpo: PPS",
+      "fr": "Obturation de ports fluidiques\nFiletage: M6×1\nMatériau du corps: PPS",
+      "ko": "유체 포트 밀폐\n나사: M6×1\n본체 재질: PPS",
+      "ru": "Закрытие жидкостных портов\nРезьба: M6×1\nМатериал корпуса: PPS"
+    },
+    "filters": {
+      "filter01": "紧凑螺纹堵头",
+      "filter02": "M6×1",
+      "filter03": "",
+      "filter04": "PPS",
+      "filter05": "黑色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-card.webp",
+    "detailSlug": "hbl6-m6-ps-b",
+    "status": "active",
+    "sortOrder": 901,
+    "searchKeywords": {
+      "zh": "紧凑螺纹堵头 HBL6-M6-PS-B 809189 443-02-00664 M6×1 PPS 黑色 液路端口封堵",
+      "en": "Compact Threaded Plug HBL6-M6-PS-B 809189 443-02-00664 M6×1 PPS Black Fluidic port closure",
+      "es": "Tapón roscado compacto HBL6-M6-PS-B 809189 443-02-00664 M6×1 PPS Negro Cierre de puertos de fluido",
+      "fr": "Bouchon fileté compact HBL6-M6-PS-B 809189 443-02-00664 M6×1 PPS Noir Obturation de ports fluidiques",
+      "ko": "컴팩트 나사 플러그 HBL6-M6-PS-B 809189 443-02-00664 M6×1 PPS 검정 유체 포트 밀폐",
+      "ru": "Компактная резьбовая заглушка HBL6-M6-PS-B 809189 443-02-00664 M6×1 PPS Чёрный Закрытие жидкостных портов"
+    }
+  },
+  {
+    "productId": "809178",
+    "sourcePart": "443-00-00145",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productTypeName": "标滚螺纹堵头",
+    "productSeries": "标滚螺纹堵头",
+    "seriesId": "standard-threaded-plug",
+    "cardTitle": {
+      "zh": "HBL-U28-PV-N",
+      "en": "HBL-U28-PV-N",
+      "es": "HBL-U28-PV-N",
+      "fr": "HBL-U28-PV-N",
+      "ko": "HBL-U28-PV-N",
+      "ru": "HBL-U28-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "液路端口封堵\n螺纹规格: 1/4-28 UNF\n主体材质: PVDF",
+      "en": "Fluidic port closure\nThread: 1/4-28 UNF\nBody material: PVDF",
+      "es": "Cierre de puertos de fluido\nRosca: 1/4-28 UNF\nMaterial del cuerpo: PVDF",
+      "fr": "Obturation de ports fluidiques\nFiletage: 1/4-28 UNF\nMatériau du corps: PVDF",
+      "ko": "유체 포트 밀폐\n나사: 1/4-28 UNF\n본체 재질: PVDF",
+      "ru": "Закрытие жидкостных портов\nРезьба: 1/4-28 UNF\nМатериал корпуса: PVDF"
+    },
+    "filters": {
+      "filter01": "标滚螺纹堵头",
+      "filter02": "1/4-28 UNF",
+      "filter03": "",
+      "filter04": "PVDF",
+      "filter05": "本色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-card.webp",
+    "detailSlug": "hbl-u28-pv-n",
+    "status": "active",
+    "sortOrder": 902,
+    "searchKeywords": {
+      "zh": "标滚螺纹堵头 HBL-U28-PV-N 809178 443-00-00145 1/4-28 UNF PVDF 本色 液路端口封堵",
+      "en": "Standard Threaded Plug HBL-U28-PV-N 809178 443-00-00145 1/4-28 UNF PVDF Natural Fluidic port closure",
+      "es": "Tapón roscado estándar HBL-U28-PV-N 809178 443-00-00145 1/4-28 UNF PVDF Natural Cierre de puertos de fluido",
+      "fr": "Bouchon fileté standard HBL-U28-PV-N 809178 443-00-00145 1/4-28 UNF PVDF Naturel Obturation de ports fluidiques",
+      "ko": "표준 나사 플러그 HBL-U28-PV-N 809178 443-00-00145 1/4-28 UNF PVDF 내추럴 유체 포트 밀폐",
+      "ru": "Стандартная резьбовая заглушка HBL-U28-PV-N 809178 443-00-00145 1/4-28 UNF PVDF Натуральный Закрытие жидкостных портов"
+    }
+  },
+  {
+    "productId": "809390",
+    "sourcePart": "443-00-00156",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productTypeName": "标滚螺纹堵头",
+    "productSeries": "标滚螺纹堵头",
+    "seriesId": "standard-threaded-plug",
+    "cardTitle": {
+      "zh": "HBL-U28-PV-B",
+      "en": "HBL-U28-PV-B",
+      "es": "HBL-U28-PV-B",
+      "fr": "HBL-U28-PV-B",
+      "ko": "HBL-U28-PV-B",
+      "ru": "HBL-U28-PV-B"
+    },
+    "cardSubtitle": {
+      "zh": "液路端口封堵\n螺纹规格: 1/4-28 UNF\n主体材质: PVDF",
+      "en": "Fluidic port closure\nThread: 1/4-28 UNF\nBody material: PVDF",
+      "es": "Cierre de puertos de fluido\nRosca: 1/4-28 UNF\nMaterial del cuerpo: PVDF",
+      "fr": "Obturation de ports fluidiques\nFiletage: 1/4-28 UNF\nMatériau du corps: PVDF",
+      "ko": "유체 포트 밀폐\n나사: 1/4-28 UNF\n본체 재질: PVDF",
+      "ru": "Закрытие жидкостных портов\nРезьба: 1/4-28 UNF\nМатериал корпуса: PVDF"
+    },
+    "filters": {
+      "filter01": "标滚螺纹堵头",
+      "filter02": "1/4-28 UNF",
+      "filter03": "",
+      "filter04": "PVDF",
+      "filter05": "黑色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-card.webp",
+    "detailSlug": "hbl-u28-pv-b",
+    "status": "active",
+    "sortOrder": 903,
+    "searchKeywords": {
+      "zh": "标滚螺纹堵头 HBL-U28-PV-B 809390 443-00-00156 1/4-28 UNF PVDF 黑色 液路端口封堵",
+      "en": "Standard Threaded Plug HBL-U28-PV-B 809390 443-00-00156 1/4-28 UNF PVDF Black Fluidic port closure",
+      "es": "Tapón roscado estándar HBL-U28-PV-B 809390 443-00-00156 1/4-28 UNF PVDF Negro Cierre de puertos de fluido",
+      "fr": "Bouchon fileté standard HBL-U28-PV-B 809390 443-00-00156 1/4-28 UNF PVDF Noir Obturation de ports fluidiques",
+      "ko": "표준 나사 플러그 HBL-U28-PV-B 809390 443-00-00156 1/4-28 UNF PVDF 검정 유체 포트 밀폐",
+      "ru": "Стандартная резьбовая заглушка HBL-U28-PV-B 809390 443-00-00156 1/4-28 UNF PVDF Чёрный Закрытие жидкостных портов"
+    }
+  },
+  {
+    "productId": "809180",
+    "sourcePart": "443-00-00200",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productTypeName": "标滚螺纹堵头",
+    "productSeries": "标滚螺纹堵头",
+    "seriesId": "standard-threaded-plug",
+    "cardTitle": {
+      "zh": "HBL-M6-PV-N",
+      "en": "HBL-M6-PV-N",
+      "es": "HBL-M6-PV-N",
+      "fr": "HBL-M6-PV-N",
+      "ko": "HBL-M6-PV-N",
+      "ru": "HBL-M6-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "液路端口封堵\n螺纹规格: M6×1\n主体材质: PVDF",
+      "en": "Fluidic port closure\nThread: M6×1\nBody material: PVDF",
+      "es": "Cierre de puertos de fluido\nRosca: M6×1\nMaterial del cuerpo: PVDF",
+      "fr": "Obturation de ports fluidiques\nFiletage: M6×1\nMatériau du corps: PVDF",
+      "ko": "유체 포트 밀폐\n나사: M6×1\n본체 재질: PVDF",
+      "ru": "Закрытие жидкостных портов\nРезьба: M6×1\nМатериал корпуса: PVDF"
+    },
+    "filters": {
+      "filter01": "标滚螺纹堵头",
+      "filter02": "M6×1",
+      "filter03": "",
+      "filter04": "PVDF",
+      "filter05": "本色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-card.webp",
+    "detailSlug": "hbl-m6-pv-n",
+    "status": "active",
+    "sortOrder": 904,
+    "searchKeywords": {
+      "zh": "标滚螺纹堵头 HBL-M6-PV-N 809180 443-00-00200 M6×1 PVDF 本色 液路端口封堵",
+      "en": "Standard Threaded Plug HBL-M6-PV-N 809180 443-00-00200 M6×1 PVDF Natural Fluidic port closure",
+      "es": "Tapón roscado estándar HBL-M6-PV-N 809180 443-00-00200 M6×1 PVDF Natural Cierre de puertos de fluido",
+      "fr": "Bouchon fileté standard HBL-M6-PV-N 809180 443-00-00200 M6×1 PVDF Naturel Obturation de ports fluidiques",
+      "ko": "표준 나사 플러그 HBL-M6-PV-N 809180 443-00-00200 M6×1 PVDF 내추럴 유체 포트 밀폐",
+      "ru": "Стандартная резьбовая заглушка HBL-M6-PV-N 809180 443-00-00200 M6×1 PVDF Натуральный Закрытие жидкостных портов"
+    }
+  },
+  {
+    "productId": "809400",
+    "sourcePart": "443-00-00146",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productTypeName": "标滚螺纹堵头",
+    "productSeries": "标滚螺纹堵头",
+    "seriesId": "standard-threaded-plug",
+    "cardTitle": {
+      "zh": "HBL-M6-PV-B",
+      "en": "HBL-M6-PV-B",
+      "es": "HBL-M6-PV-B",
+      "fr": "HBL-M6-PV-B",
+      "ko": "HBL-M6-PV-B",
+      "ru": "HBL-M6-PV-B"
+    },
+    "cardSubtitle": {
+      "zh": "液路端口封堵\n螺纹规格: M6×1\n主体材质: PVDF",
+      "en": "Fluidic port closure\nThread: M6×1\nBody material: PVDF",
+      "es": "Cierre de puertos de fluido\nRosca: M6×1\nMaterial del cuerpo: PVDF",
+      "fr": "Obturation de ports fluidiques\nFiletage: M6×1\nMatériau du corps: PVDF",
+      "ko": "유체 포트 밀폐\n나사: M6×1\n본체 재질: PVDF",
+      "ru": "Закрытие жидкостных портов\nРезьба: M6×1\nМатериал корпуса: PVDF"
+    },
+    "filters": {
+      "filter01": "标滚螺纹堵头",
+      "filter02": "M6×1",
+      "filter03": "",
+      "filter04": "PVDF",
+      "filter05": "黑色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-card.webp",
+    "detailSlug": "hbl-m6-pv-b",
+    "status": "active",
+    "sortOrder": 905,
+    "searchKeywords": {
+      "zh": "标滚螺纹堵头 HBL-M6-PV-B 809400 443-00-00146 M6×1 PVDF 黑色 液路端口封堵",
+      "en": "Standard Threaded Plug HBL-M6-PV-B 809400 443-00-00146 M6×1 PVDF Black Fluidic port closure",
+      "es": "Tapón roscado estándar HBL-M6-PV-B 809400 443-00-00146 M6×1 PVDF Negro Cierre de puertos de fluido",
+      "fr": "Bouchon fileté standard HBL-M6-PV-B 809400 443-00-00146 M6×1 PVDF Noir Obturation de ports fluidiques",
+      "ko": "표준 나사 플러그 HBL-M6-PV-B 809400 443-00-00146 M6×1 PVDF 검정 유체 포트 밀폐",
+      "ru": "Стандартная резьбовая заглушка HBL-M6-PV-B 809400 443-00-00146 M6×1 PVDF Чёрный Закрытие жидкостных портов"
+    }
+  },
+  {
+    "productId": "809526",
+    "sourcePart": "443-02-00105",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productTypeName": "顶丝堵头",
+    "productSeries": "顶丝堵头",
+    "seriesId": "slotted-fitting-plug",
+    "cardTitle": {
+      "zh": "HBL6X-M6-PV-N",
+      "en": "HBL6X-M6-PV-N",
+      "es": "HBL6X-M6-PV-N",
+      "fr": "HBL6X-M6-PV-N",
+      "ko": "HBL6X-M6-PV-N",
+      "ru": "HBL6X-M6-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "液路端口封堵\n螺纹规格: M6×1\n主体材质: PVDF",
+      "en": "Fluidic port closure\nThread: M6×1\nBody material: PVDF",
+      "es": "Cierre de puertos de fluido\nRosca: M6×1\nMaterial del cuerpo: PVDF",
+      "fr": "Obturation de ports fluidiques\nFiletage: M6×1\nMatériau du corps: PVDF",
+      "ko": "유체 포트 밀폐\n나사: M6×1\n본체 재질: PVDF",
+      "ru": "Закрытие жидкостных портов\nРезьба: M6×1\nМатериал корпуса: PVDF"
+    },
+    "filters": {
+      "filter01": "顶丝堵头",
+      "filter02": "M6×1",
+      "filter03": "",
+      "filter04": "PVDF",
+      "filter05": "本色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-card.webp",
+    "detailSlug": "hbl6x-m6-pv-n",
+    "status": "active",
+    "sortOrder": 906,
+    "searchKeywords": {
+      "zh": "顶丝堵头 HBL6X-M6-PV-N 809526 443-02-00105 M6×1 PVDF 本色 液路端口封堵",
+      "en": "Slotted Fitting Plug HBL6X-M6-PV-N 809526 443-02-00105 M6×1 PVDF Natural Fluidic port closure",
+      "es": "Tapón roscado ranurado HBL6X-M6-PV-N 809526 443-02-00105 M6×1 PVDF Natural Cierre de puertos de fluido",
+      "fr": "Bouchon fileté fendu HBL6X-M6-PV-N 809526 443-02-00105 M6×1 PVDF Naturel Obturation de ports fluidiques",
+      "ko": "일자 홈 피팅 플러그 HBL6X-M6-PV-N 809526 443-02-00105 M6×1 PVDF 내추럴 유체 포트 밀폐",
+      "ru": "Резьбовая заглушка со шлицем HBL6X-M6-PV-N 809526 443-02-00105 M6×1 PVDF Натуральный Закрытие жидкостных портов"
+    }
+  },
+  {
+    "productId": "809527",
+    "sourcePart": "443-02-00106",
+    "categoryId": "fittings",
+    "productTypeId": "hard-tube-fittings",
+    "productType": "堵头",
+    "productTypeName": "顶丝堵头",
+    "productSeries": "顶丝堵头",
+    "seriesId": "slotted-fitting-plug",
+    "cardTitle": {
+      "zh": "HBL6X-U28-PV-N",
+      "en": "HBL6X-U28-PV-N",
+      "es": "HBL6X-U28-PV-N",
+      "fr": "HBL6X-U28-PV-N",
+      "ko": "HBL6X-U28-PV-N",
+      "ru": "HBL6X-U28-PV-N"
+    },
+    "cardSubtitle": {
+      "zh": "液路端口封堵\n螺纹规格: 1/4-28 UNF\n主体材质: PVDF",
+      "en": "Fluidic port closure\nThread: 1/4-28 UNF\nBody material: PVDF",
+      "es": "Cierre de puertos de fluido\nRosca: 1/4-28 UNF\nMaterial del cuerpo: PVDF",
+      "fr": "Obturation de ports fluidiques\nFiletage: 1/4-28 UNF\nMatériau du corps: PVDF",
+      "ko": "유체 포트 밀폐\n나사: 1/4-28 UNF\n본체 재질: PVDF",
+      "ru": "Закрытие жидкостных портов\nРезьба: 1/4-28 UNF\nМатериал корпуса: PVDF"
+    },
+    "filters": {
+      "filter01": "顶丝堵头",
+      "filter02": "1/4-28 UNF",
+      "filter03": "",
+      "filter04": "PVDF",
+      "filter05": "本色"
+    },
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-card.webp",
+    "detailSlug": "hbl6x-u28-pv-n",
+    "status": "active",
+    "sortOrder": 907,
+    "searchKeywords": {
+      "zh": "顶丝堵头 HBL6X-U28-PV-N 809527 443-02-00106 1/4-28 UNF PVDF 本色 液路端口封堵",
+      "en": "Slotted Fitting Plug HBL6X-U28-PV-N 809527 443-02-00106 1/4-28 UNF PVDF Natural Fluidic port closure",
+      "es": "Tapón roscado ranurado HBL6X-U28-PV-N 809527 443-02-00106 1/4-28 UNF PVDF Natural Cierre de puertos de fluido",
+      "fr": "Bouchon fileté fendu HBL6X-U28-PV-N 809527 443-02-00106 1/4-28 UNF PVDF Naturel Obturation de ports fluidiques",
+      "ko": "일자 홈 피팅 플러그 HBL6X-U28-PV-N 809527 443-02-00106 1/4-28 UNF PVDF 내추럴 유체 포트 밀폐",
+      "ru": "Резьбовая заглушка со шлицем HBL6X-U28-PV-N 809527 443-02-00106 1/4-28 UNF PVDF Натуральный Закрытие жидкостных портов"
+    }
   }
 ] as ProductSelectionProduct[];
 
@@ -4550,5 +4910,44 @@ export const hardTubeFittingTaxonomyItems =
       "ru": "High-pressure Fitting"
     },
     "sortOrder": 425
+  },
+  {
+    "type": "series",
+    "id": "standard-threaded-plug",
+    "label": {
+      "zh": "标滚螺纹堵头",
+      "en": "Standard Threaded Plug",
+      "es": "Tapón roscado estándar",
+      "fr": "Bouchon fileté standard",
+      "ko": "표준 나사 플러그",
+      "ru": "Стандартная резьбовая заглушка"
+    },
+    "sortOrder": 426
+  },
+  {
+    "type": "series",
+    "id": "compact-threaded-plug",
+    "label": {
+      "zh": "紧凑螺纹堵头",
+      "en": "Compact Threaded Plug",
+      "es": "Tapón roscado compacto",
+      "fr": "Bouchon fileté compact",
+      "ko": "컴팩트 나사 플러그",
+      "ru": "Компактная резьбовая заглушка"
+    },
+    "sortOrder": 427
+  },
+  {
+    "type": "series",
+    "id": "slotted-fitting-plug",
+    "label": {
+      "zh": "顶丝堵头",
+      "en": "Slotted Fitting Plug",
+      "es": "Tapón roscado ranurado",
+      "fr": "Bouchon fileté fendu",
+      "ko": "일자 홈 피팅 플러그",
+      "ru": "Резьбовая заглушка со шлицем"
+    },
+    "sortOrder": 428
   }
 ] as ProductSelectionTaxonomyItem[];

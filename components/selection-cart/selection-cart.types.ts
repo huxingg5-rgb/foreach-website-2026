@@ -1,3 +1,4 @@
+import type { CadDrawingType } from "@/data/products/detail/drawing-requirements";
 ﻿/* =========================================================
    selection-cart.types.ts
    恒永达官网｜全局选型清单类型定义
@@ -15,6 +16,10 @@
    说明：
    后续如果增加泵、阀、传感器，可以继续扩展字符串。
 */
+import type { FlangedConfiguration } from "@/data/products/configurator/flanged-tubing-configurations";
+import type { GeneratedPdfAttachment } from "@/lib/inquiry/pdf-attachments";
+import type { EaPumpInquiryConfiguration } from "@/data/products/configurator/ea-pump-inquiry";
+
 export type SelectionCartSourceType =
   | "fitting-replacement"
   | "pump-selection"
@@ -53,14 +58,23 @@ export interface SelectionCartItem {
   /* 数量 */
   quantity: number;
 
-  /* 是否需要 2D 图纸 */
+  /* Legacy flag; explicit types distinguish 2D drawings from 3D models. */
   needDrawing: boolean;
+  drawingTypes?: CadDrawingType[];
+  /** A detail-page product selection can be inquired about without requesting drawings. */
+  inquiryMode?: "product";
 
   /* 产品详情页链接 */
   detailHref?: string;
 
   /* 产品图片路径 */
   imagePath?: string;
+
+  /* Frozen saved configuration plus a reference to the persisted PDF bytes. */
+  flangedConfiguration?: FlangedConfiguration;
+  drawingAttachment?: GeneratedPdfAttachment;
+  /** Customer requirements, kept separate from the reference product model. */
+  eaPumpConfiguration?: EaPumpInquiryConfiguration;
 }
 
 /* 加入清单时的输入结构
@@ -73,4 +87,4 @@ export type SelectionCartItemInput = Omit<
 > & {
   id?: string;
   quantity?: number;
-}; 
+};

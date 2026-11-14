@@ -1,0 +1,75 @@
+{
+  "imageRoot": "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/",
+  "width": 1500,
+  "height": 1125,
+  "photos": {
+    "configurationExample": {
+      "source": "tubing-assembly-configuration-example.png",
+      "filename": "tubing-assembly-configuration-example.webp",
+      "width": 2038,
+      "height": 1243,
+      "lossless": true,
+      "alt": "管组件搭配选型示例，展示 A/B 端接头、管径、长度、公差及管标配置",
+      "caption": "管组件搭配选型示例"
+    },
+    "drawingExample": {
+      "source": "tubing-assembly-drawing-bom-example.png",
+      "filename": "tubing-assembly-drawing-bom-example.webp",
+      "width": 1272,
+      "height": 965,
+      "lossless": true,
+      "alt": "管组件二维图纸示例，包含 A/B 端结构、长度尺寸及对应部件明细表",
+      "caption": "管组件二维图纸与部件清单示例"
+    },
+    "endDimensionInspection": {
+      "source": "tubing-assembly-end-dimension-inspection-ppe.png",
+      "filename": "tubing-assembly-end-dimension-inspection.webp",
+      "fit": "cover",
+      "alt": "工作人员佩戴口罩与手套，使用数显卡尺核对管组件端部零件尺寸",
+      "caption": "端部尺寸检验"
+    },
+    "lengthInspection": {
+      "source": "tubing-assembly-length-check-ppe.png",
+      "filename": "tubing-assembly-length-check.webp",
+      "fit": "cover",
+      "alt": "工作人员佩戴口罩与手套，沿长尺核对管组件长度",
+      "caption": "管组件长度核对"
+    },
+    "baggedAssemblies": {
+      "source": "单独产品.jpg",
+      "filename": "bagged-tubing-assemblies.webp",
+      "alt": "恒永达管组件装袋实拍，透明袋内可见管身、接头及物料标签",
+      "caption": "管组件装袋"
+    },
+    "innerBox": {
+      "source": "单独产品-小包装.jpg",
+      "filename": "tubing-assemblies-inner-box.webp",
+      "alt": "袋装管组件放入小包装盒，盒内可见管身、接头与缓冲材料",
+      "caption": "内袋入盒"
+    },
+    "foamProtection": {
+      "source": "单独产品-填充物.jpg",
+      "filename": "tubing-assemblies-foam-protection.webp",
+      "alt": "管组件包装盒内覆盖白色缓冲材料的实拍示例",
+      "caption": "缓冲材料覆盖"
+    },
+    "labeledBox": {
+      "source": "单独产品-箱外标签.jpg",
+      "filename": "tubing-assembly-box-label.webp",
+      "alt": "恒永达管组件小包装盒及盒盖上的物料标识卡",
+      "caption": "小包装与箱外标签"
+    },
+    "packingList": {
+      "source": "单独产品-随货清单.jpg",
+      "filename": "tubing-assembly-packing-list.webp",
+      "alt": "管组件包装盒外透明袋中放置的中英文装箱清单",
+      "caption": "随货装箱清单"
+    },
+    "shipmentCartons": {
+      "source": "shipment-cartons.jpg",
+      "filename": "tubing-assembly-shipment-cartons.webp",
+      "alt": "恒永达封箱待发纸箱，箱外可见物料标识卡与封箱胶带",
+      "caption": "封箱待发"
+    }
+  }
+}

@@ -83,11 +83,18 @@ body{padding:0!important;background:#fff}.topbar,.side-tools{top:0}.stage{top:48
 @media(forced-colors:active){#quick-connect-drawing-model{appearance:auto;background-image:none}}
 /* Detail pages use the shared React resource tabs; this frame only renders 3D. */
 .external-resource-tabs .left-toolbar .tabs{display:none!important}
-.external-resource-tabs .left-toolbar{left:170px}
+.external-resource-tabs .left-toolbar{left:var(--resource-tools-left,170px)}
 .external-resource-tabs .left-toolbar .tabs+.side-tools{margin-left:0;padding-left:0;border-left:0}
-@media(max-width:800px){.external-resource-tabs .left-toolbar{left:162px}}
-@media(max-width:600px){.external-resource-tabs .left-toolbar{left:150px}}
+@media(max-width:800px){.external-resource-tabs .left-toolbar{left:var(--resource-tools-left,162px)}}
+@media(max-width:600px){.external-resource-tabs .left-toolbar{left:var(--resource-tools-left,150px)}}
 .external-resource-tabs .viewer:fullscreen .left-toolbar{left:22px}
+/* Preserve separate, usable controls when the embedded viewport is too narrow. */
+@media(min-width:601px) and (max-width:760px){
+ .external-resource-tabs .topbar{left:14px;right:auto;top:53px}
+ .external-resource-tabs .stage,.external-resource-tabs .has-quick-connect-selector .stage{top:106px}
+ .external-resource-tabs .fitting-selector{top:110px}
+ .external-resource-tabs .tree-panel,.external-resource-tabs .section-panel,.external-resource-tabs .help-panel{top:110px}
+}
 </style>
 </head><body>
 <header><h1>6010 系列电磁阀</h1><label class="model-picker"><select id="models" aria-label="选择型号"></select></label></header>
@@ -103,4 +110,4 @@ body{padding:0!important;background:#fff}.topbar,.side-tools{top:0}.stage{top:48
 <aside id="help-panel" class="panel help-panel" hidden><h2>操作说明</h2><button id="help-close" class="iconbtn help-close" aria-label="关闭帮助" data-icon="close"></button><p><strong>旋转模型</strong><span>左键拖动 / 单指拖动</span></p><p><strong>缩放</strong><span>滚轮 / 双指缩放</span></p><p><strong>平移</strong><span>右键拖动 / 双指拖动</span></p><p><strong>复位</strong><span>Home</span></p><p class="subtle">尺寸按模型测量，不含电线。</p></aside>
 <div id="drawing-wrap" class="drawing-wrap" hidden><img id="drawing" alt="二维图纸"></div><div id="empty-model" class="empty-model" hidden role="status"></div><span id="status" class="sr-only" role="status"></span></main>
 
-<script src="./viewer.js?v=fitting-resources-20261107-2"></script></body></html>
+<script src="./viewer.js?v=fitting-plugs-20261111-1"></script></body></html>

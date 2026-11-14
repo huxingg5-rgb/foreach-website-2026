@@ -2,7 +2,7 @@
 
 import { fittingView } from "@/components/products/detail/fitting-view";
 import { fittingText } from "@/data/products/detail/fitting-ui.intl";
-import { useEffect, useId, useRef, useState, type ComponentProps, type KeyboardEvent } from "react";
+import { useEffect, useId, useRef, useState, type ComponentProps, type KeyboardEvent, type ReactNode } from "react";
 import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
 import ProductCadViewer from "./ProductCadViewer";
 import LuerCadViewer from "./LuerCadViewer";
@@ -34,18 +34,20 @@ function drawingPreviewHref(url: string) {
 }
 
 /** One activation lifecycle for every fitting detail, regardless of CAD renderer. */
-export default function FittingResourceViewer({ locale = "zh", drawings, modelSource, active, preview = false }: {
+export default function FittingResourceViewer({ locale = "zh", drawings, modelSource, active, preview = false, drawingPreview }: {
   locale?: string;
   drawings: FittingDrawing[];
   modelSource: FittingModelSource;
   active: boolean;
   preview?: boolean;
+  drawingPreview?: ReactNode;
 }) {
   const id = useId();
   const [view, setView] = useState<"2d" | "3d" | null>(null);
   const [opened, setOpened] = useState({ "2d": false, "3d": false });
   const [drawingRole, setDrawingRole] = useState(drawings[0]?.role || "base");
   const resource = useRef<HTMLElement>(null);
+  const modelPanel = useRef<HTMLDivElement>(null);
   const manualChoice = useRef(false);
   const autoStarted = useRef(false);
   const cancelAutomatic = useRef<(() => void) | null>(null);
@@ -84,6 +86,33 @@ export default function FittingResourceViewer({ locale = "zh", drawings, modelSo
   };
   const modelActive = active && view === "3d" && visible;
 
+  useEffect(() => {
+    if (preview || view !== "3d") return;
+    const tabs = resource.current?.querySelector<HTMLElement>('[role="tablist"]');
+    const panel = modelPanel.current;
+    if (!tabs || !panel) return;
+    // Both CAD renderers share the toolbar CSS. Reserve exactly the space
+    // occupied by the localized React tabs, including after a frame retry.
+    const alignTools = () => {
+      const frame = panel.querySelector("iframe");
+      if (!frame || !frame.getBoundingClientRect().width) return;
+      const inset = Math.ceil(tabs.getBoundingClientRect().right - frame.getBoundingClientRect().left) + 8;
+      try {
+        // A newly loading PDF can have no documentElement; Chrome's native PDF
+        // renderer can also use a separate origin. Neither affects 3D alignment.
+        frame.contentDocument?.documentElement?.style.setProperty("--resource-tools-left", `${inset}px`);
+      } catch (error) {
+        if (!(error instanceof DOMException && error.name === "SecurityError")) throw error;
+      }
+    };
+    const observer = new ResizeObserver(alignTools);
+    observer.observe(tabs);
+    observer.observe(panel);
+    panel.addEventListener("load", alignTools, true);
+    alignTools();
+    return () => { observer.disconnect(); panel.removeEventListener("load", alignTools, true); };
+  }, [view, locale, preview]);
+
   return fittingView(<section ref={resource} className={`${styles.resource} ${preview ? styles.preview : ""}`} data-fitting-resources={preview ? undefined : "true"}
     data-fitting-preview={preview ? "true" : undefined} data-resource-view={view || "idle"}
     data-model-active={String(modelActive)}
@@ -107,7 +136,7 @@ export default function FittingResourceViewer({ locale = "zh", drawings, modelSo
             value={drawing?.role || ""} onChange={event => setDrawingRole(event.target.value)}>
             {drawings.map(item => <option key={item.role} value={item.role}>{item.label} · {item.model}</option>)}
           </select>}
-          {drawing?.url ? <PdfDrawingPreview
+          {drawing?.url ? drawingPreview ?? <PdfDrawingPreview
             pdfPreviewUrl={drawingPreviewHref(drawing.url)} documentTitle={drawing.model} autoOpen deferDesktopUntilOpen
             showPreviewDescription={false} text={{ title: fittingText("2D 图纸", locale), loadingLabel: fittingText("2D 图纸加载中", locale), previewButton: fittingText("点击预览图纸",locale), description: "", errorLabel: fittingText("图纸加载失败，请刷新页面后重试",locale), pageLabel: fittingText("页",locale), retryLabel: fittingText("重新加载",locale) }}
             previousPageLabel={fittingText("上一页",locale)} nextPageLabel={fittingText("下一页",locale)}
@@ -115,7 +144,7 @@ export default function FittingResourceViewer({ locale = "zh", drawings, modelSo
           /> : <div className={styles.empty} role="status">当前零件暂无公开 2D 图纸，可通过“添加图纸”提交需求。</div>}
         </div>}
       </div>
-      <div id={`${id}-3d-panel`} className={preview ? undefined : styles.modelPanel} role={preview ? undefined : "tabpanel"} aria-labelledby={preview ? undefined : `${id}-3d-tab`} hidden={view !== "3d"}>
+      <div ref={modelPanel} id={`${id}-3d-panel`} className={preview ? undefined : styles.modelPanel} role={preview ? undefined : "tabpanel"} aria-labelledby={preview ? undefined : `${id}-3d-tab`} hidden={view !== "3d"}>
         {opened["3d"] && (modelSource?.kind === "cad"
           ? <ProductCadViewer {...modelSource.props} active={modelActive} externalResourceTabs />
           : modelSource?.kind === "luer"

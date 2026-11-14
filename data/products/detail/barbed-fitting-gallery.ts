@@ -18,6 +18,7 @@ const photos = {
   teeAabPaFront: "pa-aab-reducing-tee-barbed-fitting-side-port-view.webp",
   teeAabGroup: "aab-reducing-tee-barbed-fittings-mixed-material-group.webp",
   elbow: "elbow-barbed-fittings-size-lineup.webp",
+  elbowPpLineup: "pp-elbow-barbed-fittings-ten-piece-black-lineup.webp",
   elbowReducingGroup: "reducing-elbow-barbed-fittings-mixed-material-group.webp",
   elbowReducingPpBlack: "pp-reducing-elbow-barbed-fitting-black-background.webp",
   elbowReducingPpBlue: "pp-reducing-elbow-barbed-fitting-blue-port-close-up.webp",
@@ -79,6 +80,7 @@ const imageAlts: Record<PhotoLocale, Record<PhotoKey, string>> = {
     teeAabPaFront: "PA乳白色AAB变径T型倒刺接头系列实拍：中间支路与一侧接口等径，另一侧接口较小",
     teeAabGroup: "AAB变径T型倒刺接头系列合照：两款半透明与三款乳白色接头，均有一个较小的直通侧口",
     elbow: "L型倒刺弯头系列实拍：七款不同规格的乳白色与半透明直角接头",
+    elbowPpLineup: "PP本色L型倒刺接头系列合照：黑底上十款不同尺寸的半透明直角接头；系列参考图",
     elbowReducingGroup: "L型变径倒刺接头系列合照：黑底上的一款半透明接头和两款乳白色接头",
     elbowReducingPpBlack: "PP本色L型变径倒刺接头实拍：黑底上的半透明直角接头及大小接管端",
     elbowReducingPpBlue: "PP本色L型变径倒刺接头特写：蓝色织物背景上的半透明接头与大小端口",
@@ -117,6 +119,7 @@ const imageAlts: Record<PhotoLocale, Record<PhotoKey, string>> = {
     teeAabPaFront: "Ivory PA AAB reducing tee barbed fitting family photo: the perpendicular branch matches one inline port, with the other inline port smaller",
     teeAabGroup: "AAB reducing tee barbed fitting family group: two translucent and three ivory white connectors, each with one smaller inline side port",
     elbow: "Elbow barbed fitting family photo: seven white and translucent right-angle fittings",
+    elbowPpLineup: "Natural PP elbow barbed fitting family photo: ten translucent right-angle connectors in different sizes on a black background; family reference image",
     elbowReducingGroup: "Reducing elbow barbed fitting family photo: one translucent and two ivory white connectors on black fabric",
     elbowReducingPpBlack: "Natural PP reducing elbow barbed fitting: a translucent right-angle connector with larger and smaller hose ends on black fabric",
     elbowReducingPpBlue: "Natural PP reducing elbow barbed fitting close-up: translucent connector and different-size ports on blue fabric",
@@ -155,6 +158,7 @@ const imageAlts: Record<PhotoLocale, Record<PhotoKey, string>> = {
     teeAabPaFront: "Familia de racores reductores AAB en T de PA blanco marfil: ramal perpendicular igual a una boca axial y la otra boca axial menor",
     teeAabGroup: "Familia de racores reductores AAB en T: dos conectores translúcidos y tres blancos, cada uno con una boca axial lateral menor",
     elbow: "Familia de racores de espiga en L: siete codos blancos y translúcidos de distintos tamaños",
+    elbowPpLineup: "Foto de la familia de codos de espiga de PP natural: diez conectores translúcidos de distintos tamaños sobre fondo negro; imagen de referencia de la familia",
     elbowReducingGroup: "Familia de codos reductores de espiga: un conector translúcido y dos blancos sobre tela negra",
     elbowReducingPpBlack: "Codo reductor de espiga de PP natural: conector translúcido con extremos de distinto diámetro sobre tela negra",
     elbowReducingPpBlue: "Detalle de un codo reductor de espiga de PP natural: conector translúcido y bocas de distinto diámetro sobre tela azul",
@@ -193,6 +197,7 @@ const imageAlts: Record<PhotoLocale, Record<PhotoKey, string>> = {
     teeAabPaFront: "Gamme de raccords réducteurs AAB en T en PA ivoire : branche perpendiculaire égale à un embout axial, autre embout axial plus petit",
     teeAabGroup: "Gamme de raccords réducteurs AAB en T : deux raccords translucides et trois ivoire, chacun avec un embout axial latéral plus petit",
     elbow: "Gamme de raccords cannelés coudés : sept raccords à angle droit blancs et translucides",
+    elbowPpLineup: "Photo de la gamme de raccords cannelés coudés en PP naturel : dix raccords translucides de différentes tailles sur fond noir ; image de référence de la gamme",
     elbowReducingGroup: "Gamme de raccords cannelés coudés réducteurs : un raccord translucide et deux blancs sur tissu noir",
     elbowReducingPpBlack: "Raccord cannelé coudé réducteur en PP naturel : raccord translucide à extrémités de diamètres différents sur tissu noir",
     elbowReducingPpBlue: "Gros plan d'un raccord cannelé coudé réducteur en PP naturel : raccord translucide et embouts de diamètres différents sur tissu bleu",
@@ -231,6 +236,7 @@ const imageAlts: Record<PhotoLocale, Record<PhotoKey, string>> = {
     teeAabPaFront: "유백색 PA AAB 이경 T형 바브 피팅 제품군 사진: 수직 분기와 한쪽 직선 연결부의 직경이 같고 반대쪽 연결부는 작음",
     teeAabGroup: "AAB 이경 T형 바브 피팅 제품군 사진: 한쪽 직선 연결부가 작은 반투명 커넥터 2종과 유백색 커넥터 3종",
     elbow: "L형 바브 피팅 제품군 사진: 크기가 다른 흰색 및 반투명 직각 피팅 7종",
+    elbowPpLineup: "내추럴 PP L형 바브 피팅 제품군 참고 사진: 검은 배경에 크기가 다른 반투명 직각 커넥터 10종",
     elbowReducingGroup: "L형 이경 바브 피팅 제품군 사진: 검은 천 위 반투명 커넥터 1종과 유백색 커넥터 2종",
     elbowReducingPpBlack: "천연색 PP L형 이경 바브 피팅: 검은 천 위 반투명 직각 커넥터의 대경 및 소경 호스 연결부",
     elbowReducingPpBlue: "천연색 PP L형 이경 바브 피팅 확대 사진: 파란 천 위 반투명 커넥터와 직경이 다른 포트",
@@ -269,6 +275,7 @@ const imageAlts: Record<PhotoLocale, Record<PhotoKey, string>> = {
     teeAabPaFront: "Серия переходных Т-образных штуцеров AAB из PA цвета слоновой кости: перпендикулярный отвод равен одному соосному концу, другой соосный конец меньше",
     teeAabGroup: "Серия переходных Т-образных штуцеров AAB: два полупрозрачных и три молочно-белых соединителя, каждый с одним меньшим соосным боковым концом",
     elbow: "Серия угловых штуцеров «ёлочка»: семь белых и полупрозрачных соединителей под прямым углом",
+    elbowPpLineup: "Обзорное фото серии угловых штуцеров из натурального PP: десять полупрозрачных соединителей разных размеров на чёрном фоне",
     elbowReducingGroup: "Серия угловых переходных штуцеров «ёлочка»: один полупрозрачный и два молочно-белых соединителя на чёрной ткани",
     elbowReducingPpBlack: "Угловой переходной штуцер из PP натурального цвета: полупрозрачный соединитель с концами разных диаметров на чёрной ткани",
     elbowReducingPpBlue: "Крупный план углового переходного штуцера из PP натурального цвета: полупрозрачный соединитель с отверстиями разных диаметров на синей ткани",
@@ -394,6 +401,12 @@ export function getBarbedFittingGallery(product: Record<string, unknown>): {
     } else if (/^BL-(16|24|32|40|64)F-PA-W$/.test(model)) {
       keys.push("elbowEqualPaSquare");
     }
+  }
+
+  // The ten-piece PP lineup is a family reference for both equal and reducing
+  // elbows. Keep it off PA models and retain every existing gallery image.
+  if (["L型等径倒刺接头", "L型异径倒刺接头"].includes(productName) && /^BL-.+-PP-[^-]+$/.test(model)) {
+    keys.push("elbowPpLineup");
   }
 
   const existingImages = Array.isArray(product.additionalImages) ? product.additionalImages : [];

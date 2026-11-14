@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2250" viewBox="0 0 1500 1125">
+<title>EA 배선 / 스트로크 참조</title>
+<desc>A: 상부 기계적 한계점, B: 광센서 신호 전환점, C: 전체 스트로크 정수 스텝 위치, D: 하부 기계적 한계점. AB와 CD는 빨간색 끝단 영역이며 BC는 파란색 작동 영역입니다.</desc>
+<rect width="1500" height="1125" fill="white"/>
+<rect x="290" y="130" width="38" height="75" fill="#f00000"/>
+<rect x="290" y="205" width="38" height="670" fill="#082962"/>
+<rect x="290" y="875" width="38" height="75" fill="#f00000"/>
+<g fill="none" stroke="#111" stroke-width="3">
+<path d="M328 130H1250 M328 205H1250 M328 875H1250 M328 950H1250"/>
+</g>
+<g font-family="Arial,Microsoft YaHei,sans-serif" font-size="44" fill="#111" font-weight="400">
+<text x="440" y="106">상부 기계적 한계점 (A)</text>
+<text x="440" y="184">광센서 신호 전환점 (B)</text>
+<text x="440" y="852">전체 스트로크 정수 스텝 위치 (C)</text>
+<text x="440" y="1020">하부 기계적 한계점 (D)</text>
+</g>
+</svg>

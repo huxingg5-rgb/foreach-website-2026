@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "products": {
+    "hbl6-u28-ps-b": {
+      "viewerId": "plug-hbl6-u28",
+      "model": "HBL6-U28-PS-B",
+      "productCode": "809184",
+      "part": "443-02-00663",
+      "workbookRow": 168,
+      "finish": "black"
+    },
+    "hbl6-m6-ps-b": {
+      "viewerId": "plug-hbl6-m6",
+      "model": "HBL6-M6-PS-B",
+      "productCode": "809189",
+      "part": "443-02-00664",
+      "workbookRow": 169,
+      "finish": "black"
+    },
+    "hbl-u28-pv-n": {
+      "viewerId": "plug-hbl-u28",
+      "model": "HBL-U28-PV-N",
+      "productCode": "809178",
+      "part": "443-00-00145",
+      "workbookRow": 170,
+      "finish": "natural"
+    },
+    "hbl-u28-pv-b": {
+      "viewerId": "plug-hbl-u28",
+      "model": "HBL-U28-PV-B",
+      "productCode": "809390",
+      "part": "443-00-00156",
+      "workbookRow": 171,
+      "finish": "black"
+    },
+    "hbl-m6-pv-n": {
+      "viewerId": "plug-hbl-m6",
+      "model": "HBL-M6-PV-N",
+      "productCode": "809180",
+      "part": "443-00-00200",
+      "workbookRow": 172,
+      "finish": "natural"
+    },
+    "hbl-m6-pv-b": {
+      "viewerId": "plug-hbl-m6",
+      "model": "HBL-M6-PV-B",
+      "productCode": "809400",
+      "part": "443-00-00146",
+      "workbookRow": 173,
+      "finish": "black"
+    },
+    "hbl6x-m6-pv-n": {
+      "viewerId": "plug-hbl6x-m6",
+      "model": "HBL6X-M6-PV-N",
+      "productCode": "809526",
+      "part": "443-02-00105",
+      "workbookRow": 174,
+      "finish": "natural"
+    },
+    "hbl6x-u28-pv-n": {
+      "viewerId": "plug-hbl6x-u28",
+      "model": "HBL6X-U28-PV-N",
+      "productCode": "809527",
+      "part": "443-02-00106",
+      "workbookRow": 175,
+      "finish": "natural"
+    }
+  },
+  "geometries": {
+    "plug-hbl6-u28": {
+      "viewerId": "plug-hbl6-u28",
+      "model3dUrl": "/models/products/fittings/plugs/cad/plug-hbl6-u28.fcad.gz",
+      "sourcePart": "443-02-00663",
+      "sourceFile": "443-02-00663-c.stp",
+      "sourceSha256": "be8130e5b7b42c831f1802b389503bb357b5ae0aad0ea1481ae77c49ef9cede4",
+      "geometrySha256": "97505453a55611c41a945a725f6c7360dad2ea72e848d0c1b8ac717acd6da169",
+      "sizeMm": [
+        6.3,
+        21.5,
+        6.299439456243314
+      ]
+    },
+    "plug-hbl6-m6": {
+      "viewerId": "plug-hbl6-m6",
+      "model3dUrl": "/models/products/fittings/plugs/cad/plug-hbl6-m6.fcad.gz",
+      "sourcePart": "443-02-00664",
+      "sourceFile": "443-02-00664-c.stp",
+      "sourceSha256": "3d386a918986b9f6b24fd364d4eb80844d38952b1ece83b6c1a68ff82878e410",
+      "geometrySha256": "80efff6f0865a21f3684e84eddd2f08ba6dee8e9dac89148ca60a1b3bccde4a6",
+      "sizeMm": [
+        6.3,
+        21.5,
+        6.3
+      ]
+    },
+    "plug-hbl-u28": {
+      "viewerId": "plug-hbl-u28",
+      "model3dUrl": "/models/products/fittings/plugs/cad/plug-hbl-u28.fcad.gz",
+      "sourcePart": "443-00-00145",
+      "sourceFile": "443-00-00145-c.stp",
+      "sourceSha256": "8ea190555df47c96d58ea626e86f23358f6a0ddea510ef49da073148e0ca57d3",
+      "geometrySha256": "1f26a8feb6d1d6d9d3f1554ca47c884693bbb3386aeb86825f62d2d03410c7fe",
+      "sizeMm": [
+        9.4,
+        16.5,
+        9.399930070478842
+      ]
+    },
+    "plug-hbl-m6": {
+      "viewerId": "plug-hbl-m6",
+      "model3dUrl": "/models/products/fittings/plugs/cad/plug-hbl-m6.fcad.gz",
+      "sourcePart": "443-00-00200",
+      "sourceFile": "443-00-00200-c.stp",
+      "sourceSha256": "9a821819b5686cd7e5f8cf60aaaa1234c799e297acb704cfdb17b983af8e5836",
+      "geometrySha256": "17724fef2d185e1c9929eecc3cfb809815862de4e457582a187f69f7b8ae581f",
+      "sizeMm": [
+        9.4,
+        16.8,
+        9.39993007047884
+      ]
+    },
+    "plug-hbl6x-m6": {
+      "viewerId": "plug-hbl6x-m6",
+      "model3dUrl": "/models/products/fittings/plugs/cad/plug-hbl6x-m6.fcad.gz",
+      "sourcePart": "443-02-00105",
+      "sourceFile": "443-02-00105-c.stp",
+      "sourceSha256": "abe145446096b4c0dc957b74eec11b308c73aab58ae6e06564cb59ed33abfd86",
+      "geometrySha256": "f8eabf66bf650722205810df41383789a7482ac2d7693a07708bf2fe7be1d43c",
+      "sizeMm": [
+        5.839999295449999,
+        6.499999999999974,
+        5.8399554761155095
+      ]
+    },
+    "plug-hbl6x-u28": {
+      "viewerId": "plug-hbl6x-u28",
+      "model3dUrl": "/models/products/fittings/plugs/cad/plug-hbl6x-u28.fcad.gz",
+      "sourcePart": "443-02-00106",
+      "sourceFile": "443-02-00106-c.stp",
+      "sourceSha256": "02b6310ff9e46942d56a5e56d64bb5c703253c211bf88826f85af477d2f005e1",
+      "geometrySha256": "22bef8b92dfa74e7546591566b966c50e5e12f0dd737c0e0a34badba6d2ff2c8",
+      "sizeMm": [
+        6.239901044367,
+        6.5,
+        6.240002590458647
+      ]
+    }
+  }
+}

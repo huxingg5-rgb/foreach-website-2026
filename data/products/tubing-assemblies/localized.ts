@@ -24,7 +24,8 @@ export function translateTubingAssembly(locale: TubingAssemblyLocale, text: stri
     return translated;
   }
   if (text in media) return media[text as keyof typeof media];
-  return text.replace(/^\/en\//, `${getTubingAssemblyLocalePrefix(locale)}/`);
+  const translated = text.replace(/^\/en\//, `${getTubingAssemblyLocalePrefix(locale)}/`);
+  return locale === "zh-CN" ? translated : translated.replace(/、/g, ", ").replace(/（/g, " (").replace(/）/g, ")");
 }
 
 function localize<T>(value: T, locale: TubingAssemblyLocale): T {

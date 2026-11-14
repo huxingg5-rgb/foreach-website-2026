@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
+const {readHardTubePlugRows,buildHardTubePlugSelection,getHardTubePlugTaxonomy}=require("./hard-tube-plugs.cjs");
 const cardImageExceptions = require("../../data/products/selection/fitting-card-image-exceptions.json");
 const cardImageOverrides = require("../../data/products/selection/hard-tube-card-image-overrides.json");
 
@@ -589,6 +590,8 @@ const products = records.map((record, index) => {
   };
 });
 
+products.push(...readHardTubePlugRows(workbook).map((row,index)=>buildHardTubePlugSelection(row,900+index)));
+
 const filterLabels = [
   {
     categoryId: "fittings",
@@ -661,6 +664,7 @@ const taxonomyItems = [
     sortOrder: 410,
   },
   ...seriesTaxonomy,
+  ...getHardTubePlugTaxonomy(),
 ];
 
 const outputPath = path.join(
@@ -681,8 +685,8 @@ const output = `/* =========================================================
 
    数据范围：
    - 工作表：01_硬管接头
-   - 包含：平底、卡箍、卡环和高压接头
-   - 不包含：堵头、卡箍、卡环套件
+   - 包含：平底、卡箍、卡环、高压接头及螺纹堵头
+   - 不包含：独立卡箍、卡环套件
    ========================================================= */
 
 import type {

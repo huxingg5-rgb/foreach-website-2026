@@ -1,5 +1,7 @@
 "use client";
 
+import DrawingRequirements from "./DrawingRequirements";
+import { normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import { fittingView } from "@/components/products/detail/fitting-view";
 import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -16,12 +18,14 @@ type Props = {
   locale?: string;
   config: LuerPairConfig; value: LuerPairChoice | null; needDrawing: boolean;
   presentation?: "standard" | "compact";
-  onClose: () => void; onConfirm: (choice: LuerPairChoice) => void;
-  onAdd: (choice: LuerPairChoice) => void; isAdded: (choice: LuerPairChoice) => boolean;
+  drawingTypes?: CadDrawingType[];
+  onClose: () => void; onConfirm: (choice: LuerPairChoice, drawingTypes: CadDrawingType[]) => void;
+  onAdd: (choice: LuerPairChoice, drawingTypes: CadDrawingType[]) => void; isAdded: (choice: LuerPairChoice, drawingTypes: CadDrawingType[]) => boolean;
 };
 type PairChoice = Extract<LuerPairChoice, {mode: "pair"}>;
 
-export default function LuerPairSelector({ locale = "zh", config, value, needDrawing, presentation = "standard", onClose, onConfirm, onAdd, isAdded }: Props) {
+export default function LuerPairSelector({ locale = "zh", config, value, needDrawing, drawingTypes: initialDrawings, presentation = "standard", onClose, onConfirm, onAdd, isAdded }: Props) {
+  const [drawings, setDrawings] = useState(() => normalizeDrawingTypes(initialDrawings, needDrawing));
   const isCompact = presentation === "compact";
   const coreSelection = config.allowCoreAssembly;
   const unified = config.unifiedSelection;
@@ -83,7 +87,7 @@ export default function LuerPairSelector({ locale = "zh", config, value, needDra
     : mode === "core" ? {mode: "core", maleModel: form.maleModel, collarModel: form.collarModel} : {...form,
     collarModel: needsCollar ? form.collarModel : null,
     ringModel: panel ? form.ringModel : null, nutModel: panel ? form.nutModel : null};
-  const parts = resolveLuerPair(config, choice), added = isAdded(choice);
+  const parts = resolveLuerPair(config, choice), added = isAdded(choice, drawings);
   const currentNote = config.baseRole === "core" ? "当前芯子 · 组合时需搭配锁圈"
     : config.baseRole === "male" && config.base.family !== "LP" ? "当前公端 · 已含锁圈"
     : config.baseRole === "plug" ? "当前堵头 · 用于母鲁尔口封堵" : "当前型号 · 组合中保留此零件";
@@ -183,6 +187,7 @@ export default function LuerPairSelector({ locale = "zh", config, value, needDra
             </> : <p className={styles.hint}>仅将 {config.base.model} 加入清单，适用于已有配套件的情况。{config.baseRole === "core" ? "芯子需与锁圈组装后使用。" : ""}</p>}
           </section>
           <section className={`${styles.result} ${local.result}`} aria-label="组合结果" aria-live="polite">
+            <DrawingRequirements locale={locale} value={drawings} onChange={setDrawings} />
             <span className={styles.eyebrow}>{isCompact ? mode === "single" ? "选型结果" : "组合结果" : mode === "single" ? "单件选购" : "装配组合预览"}</span><LuerAssemblyPreview locale={locale} parts={parts} imageOnly assembleCore singleImage={mode === "single"} />
             {parts ? isCompact ? <>
               <p className={local.previewNote}>{mode === "single" ? "单件示意；尺寸以对应零件图为准。" : "组合示意；尺寸以对应零件图为准。"}</p>
@@ -204,8 +209,8 @@ export default function LuerPairSelector({ locale = "zh", config, value, needDra
     closeLabel="关闭组合选型" onClose={onClose}
     notice={parts ? `本次包含 ${parts.length} 种零件，每种 1 件；数量可在清单调整。` : "未找到合适型号？可联系我们确认适配型号及供货情况。"}
     actions={<>
-      <ConfiguratorButton variant="secondary" active={added} disabled={!parts || (added && !needDrawing)} onClick={() => { if (parts) onAdd(choice); }}>{needDrawing ? "加入清单并申请图纸" : added ? "已加入清单" : mode === "single" ? "加入清单" : "加入组合清单"}</ConfiguratorButton>
-      <ConfiguratorButton variant="primary" disabled={!parts} onClick={() => { if (parts) onConfirm(choice); }}>{needDrawing ? "确认并添加图纸" : mode === "single" ? "确认选型" : "确认组合"}</ConfiguratorButton>
+      <ConfiguratorButton variant="secondary" active={added} disabled={!parts || (added && !needDrawing)} onClick={() => { if (parts) onAdd(choice, drawings); }}>{needDrawing ? "加入清单并申请图纸" : added ? "已加入清单" : mode === "single" ? "加入清单" : "加入组合清单"}</ConfiguratorButton>
+      <ConfiguratorButton variant="primary" disabled={!parts} onClick={() => { if (parts) onConfirm(choice, drawings); }}>{needDrawing ? "确认并添加图纸" : mode === "single" ? "确认选型" : "确认组合"}</ConfiguratorButton>
     </>}>{body}</ConfiguratorDialogFrame>, locale);
   return createPortal(fittingView(<div className={styles.overlay}>
     <section ref={dialog} className={`${styles.dialog} ${local.dialog}`} role="dialog" aria-modal="true" aria-labelledby={`${id}-title`} aria-describedby={`${id}-description`} lang="zh-CN">
@@ -215,8 +220,8 @@ export default function LuerPairSelector({ locale = "zh", config, value, needDra
       {body}
       <footer className={styles.footer}><p>{parts ? `本次包含 ${parts.length} 种零件，每种 1 件；数量可在清单调整。` : "请先选定有效规格。"}介质、温度和使用压力需结合完整组合确认。</p>
         <div className={`${styles.actions} ${local.footActions}`}>
-          <button className={styles.secondary} type="button" disabled={!parts || (added && !needDrawing)} onClick={() => { if (parts) onAdd(choice); }}>{needDrawing ? "加入清单并申请图纸" : added ? "已加入清单" : mode === "single" ? "加入单件清单" : "加入组合清单"}</button>
-          <button className={styles.primary} type="button" disabled={!parts} onClick={() => { if (parts) onConfirm(choice); }}>{needDrawing ? "确认并添加图纸" : mode === "single" ? "确认单件" : "确认组合"}</button>
+          <button className={styles.secondary} type="button" disabled={!parts || (added && !needDrawing)} onClick={() => { if (parts) onAdd(choice, drawings); }}>{needDrawing ? "加入清单并申请图纸" : added ? "已加入清单" : mode === "single" ? "加入单件清单" : "加入组合清单"}</button>
+          <button className={styles.primary} type="button" disabled={!parts} onClick={() => { if (parts) onConfirm(choice, drawings); }}>{needDrawing ? "确认并添加图纸" : mode === "single" ? "确认单件" : "确认组合"}</button>
         </div>
       </footer>
     </section>

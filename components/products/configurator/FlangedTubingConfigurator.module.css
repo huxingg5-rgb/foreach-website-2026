@@ -1,0 +1,113 @@
+.dialog { width: min(1380px, 100%); height: min(900px, calc(100dvh - 48px)); }
+.dialog button.saveButton[data-configurator-button="primary"]:is(:hover, :focus-visible):not(:disabled) { background: #09e9b4; border-color: #09e9b4; color: #173368; }
+.body { min-height: 0; overflow: auto; padding: 18px 28px; color: #172033; }
+.configurationIdentity { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; font-size: 12px; color: #667085; }
+.configurationIdentity label { display: flex; align-items: center; gap: 10px; min-width: 0; max-width: 100%; color: #173368; }
+.configurationIdentity input { width: 220px; min-width: 0; padding: 6px 8px; border: 1px solid #cfd8e5; background: #fff; color: #172033; font: inherit; font-size: 14px; }
+.mode { display: flex; align-items: center; flex-shrink: 0; gap: 10px; font-size: 14px; }
+.modeButtons { display: flex; gap: 6px; }
+.modeButton, .modeActive { min-height: 32px; padding: 5px 14px; border: 1px solid #cfd8e5; background: #fff; color: #173368; font: inherit; cursor: pointer; }
+.modeActive { color: #fff; background: #173368; border-color: #173368; }
+.feedback { margin: 0 0 10px; color: #667085; font-size: 12px; text-align: right; }
+.error { color: #b54708; }
+.selectionSheet { background: #fff; }
+.controls { display: grid; grid-template-columns: minmax(0, 1fr) 240px minmax(0, 1fr); gap: 20px; padding: 16px 20px; border-top: 1px solid #e5ebf2; }
+.endCard, .tubeCard { min-width: 0; }
+.tubeCard { padding: 0 20px; border-left: 1px solid #e5ebf2; border-right: 1px solid #e5ebf2; }
+.cardHeading { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 27px; margin-bottom: 10px; }
+.cardHeading h3, .sectionTitle { margin: 0; color: #000; font-size: 16px; line-height: 1.5; font-weight: 500; }
+.matchedModel { margin: 8px 0 0; font-size: 12px; line-height: 1.5; color: #667085; overflow-wrap: anywhere; }
+.copyEnd { padding: 0; border: 0; color: #173368; background: transparent; font: inherit; font-size: 12px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.endFields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; }
+.accessoryRow { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 14px; min-width: 0; }
+.field { display: grid; align-content: start; gap: 4px; min-width: 0; color: #667085; font-size: 12px; line-height: 1.5; }
+label.field { grid-template-columns: var(--field-label-width, 48px) minmax(0, 1fr); align-items: center; gap: 8px; }
+label.field > span:first-child { white-space: nowrap; }
+.tubeCard { --field-label-width: 88px; }
+.field input, .field select, .field textarea, .tagField > input { display: block; width: 100%; min-width: 0; min-height: 32px; padding: 5px 8px; border: 1px solid #cfd8e5; border-radius: 0; color: #172033; background: #fff; font: inherit; font-size: 14px; line-height: 1.45; }
+.field select { appearance: none; -webkit-appearance: none; padding-right: 30px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='m2.5 4.25 3.5 3.5 3.5-3.5' fill='none' stroke='%23172033' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 11px center; background-size: 12px 12px; }
+.field textarea { min-height: 82px; resize: vertical; }
+.tubeCard > .field + .field, .tubeCard > .tubeDimensions + .field { margin-top: 8px; }
+.readonlyValue { display: flex; align-items: center; min-height: 32px; color: #344054; font-size: 13px; }
+.compatibility { margin: 0 20px; padding: 8px 12px; background: #f8fafc; color: #795110; font-size: 12px; line-height: 1.5; }
+.compatibility p { margin: 2px 0; }
+.choiceField, .inlineField { display: grid; grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: 8px; min-width: 0; min-height: 32px; color: #667085; font-size: 12px; line-height: 1.5; }
+.choiceField > span, .inlineField > span { white-space: nowrap; }
+.choiceOptions { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; min-width: 0; }
+.choiceOption { min-height: 32px; padding: 4px 6px; border: 1px solid #cfd8e5; color: #173368; background: #fff; font: inherit; font-size: 13px; line-height: 1.4; white-space: nowrap; cursor: pointer; }
+.choiceOption:hover { border-color: #173368; }
+.choiceOption[aria-pressed="true"] { border-color: #173368; color: #fff; background: #173368; }
+.endCard > .choiceField + .field { margin-top: 10px; }
+.tubeDimensions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; margin-top: 8px; }
+.tags { display: grid; grid-template-columns: 1fr 1fr; gap: 30%; padding: 0 20px 12px; }
+.tagField { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 10px; min-width: 0; font-size: 13px; }
+.tagToggle { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; color: #173368; }
+.tagToggle input { accent-color: #173368; }
+.tagField > input:disabled { background: #f8fafc; color: #8a96a8; }
+.more { display: flex; flex-wrap: wrap; align-items: start; gap: 12px 28px; padding-top: 12px; color: #667085; font-size: 12px; line-height: 1.6; }
+.more details[open] { flex-basis: 100%; }
+.more summary { cursor: pointer; color: #173368; }
+.requirementsSection { flex-basis: 100%; min-width: 0; }
+.requirements { --field-label-width: 72px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 20px; }
+.requirementsNotes { grid-column: 1 / -1; }
+.referencePhotos { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); gap: 20px; }
+.referencePhotos img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.referencePhotos figure { margin: 0; }
+.referencePhotos svg { width: 100%; display: block; }
+.referencePhotos figcaption { margin-top: 4px; }
+.bom { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+.bom th, .bom td { padding: 8px 10px; text-align: left; border-bottom: 1px solid #e5ebf2; }
+.bom th { font-weight: 400; color: #667085; }
+.bom td:last-child { width: 60px; white-space: nowrap; }
+.body button:focus-visible, .body input:focus-visible, .body select:focus-visible, .body textarea:focus-visible { outline: 2px solid #315c96; outline-offset: 2px; }
+.body [data-flanged-part] :is(button, input, select, textarea):focus { outline: none; }
+@media (min-width: 1101px) and (max-width: 1180px) {
+  .controls { grid-template-columns: minmax(0, 1fr) 200px minmax(0, 1fr); gap: 16px; }
+  .tubeCard { padding: 0 12px; }
+}
+@media (max-width: 1100px) {
+  .body { padding: 16px 20px; }
+  .controls { grid-template-columns: minmax(0, 1fr) 230px minmax(0, 1fr); gap: 16px; padding: 14px 16px; }
+  .tubeCard { padding: 0 14px; }
+  .endFields { grid-template-columns: 1fr; gap: 8px; }
+  .accessoryRow { grid-template-columns: minmax(0, 1fr); }
+  .requirements { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tags { gap: 18%; padding-left: 16px; padding-right: 16px; }
+}
+@media (max-width: 760px) {
+  .dialog { height: 100dvh; max-height: 100dvh; }
+  .body { padding: 14px 16px; }
+  .controls { grid-template-columns: 1fr; gap: 18px; }
+  .endFields { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .accessoryRow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tubeCard { padding: 14px 0; border-left: 0; border-right: 0; border-top: 1px solid #e5ebf2; border-bottom: 1px solid #e5ebf2; }
+  .feedback { text-align: left; }
+  .tags { grid-template-columns: 1fr; gap: 10px; }
+  .dialog > footer { flex-wrap: wrap; gap: 10px; }
+  .dialog > footer > div:last-child { width: 100%; flex-wrap: wrap; gap: 7px; }
+  .dialog > footer button { flex: 1 1 calc(50% - 7px); white-space: nowrap; min-width: 0; padding: 8px; font-size: 12px; }
+}
+@media (max-width: 540px) {
+  .endFields { grid-template-columns: 1fr; }
+  .accessoryRow { grid-template-columns: minmax(0, 1fr); }
+  .requirements { grid-template-columns: 1fr; }
+}
+
+/* Longer existing site translations keep each label and its control together. */
+.dialog:not(:lang(zh-CN)):not(:lang(zh)) .endFields { grid-template-columns: minmax(0, 1fr); }
+.dialog:not(:lang(zh-CN)):not(:lang(zh)) .accessoryRow { grid-template-columns: minmax(0, 1fr); }
+.dialog:not(:lang(zh-CN)):not(:lang(zh)) label.field { --field-label-width: 112px; }
+.dialog:not(:lang(zh-CN)):not(:lang(zh)) label.field > span:first-child { white-space: normal; }
+.dialog:not(:lang(zh-CN)):not(:lang(zh)) .choiceField { grid-template-columns: 112px minmax(0, 1fr); }
+.dialog:not(:lang(zh-CN)):not(:lang(zh)) .choiceField > span { white-space: normal; }
+.dialog:not(:lang(zh-CN)):not(:lang(zh)) .requirements { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.dialog:not(:lang(zh-CN)):not(:lang(zh)) .tags { gap: 20%; }
+.dialog:not(:lang(zh-CN)):not(:lang(zh)) .tubeCard label.field { --field-label-width: 88px; }
+@media (min-width: 761px) {
+  .dialog:not(:lang(zh-CN)):not(:lang(zh)) .controls { grid-template-columns: minmax(0, 1fr) 290px minmax(0, 1fr); }
+}
+@media (max-width: 540px) {
+  .dialog:not(:lang(zh-CN)):not(:lang(zh)) .requirements { grid-template-columns: minmax(0, 1fr); }
+  .dialog:not(:lang(zh-CN)):not(:lang(zh)) .mode { flex: 1 1 100%; min-width: 0; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .dialog:not(:lang(zh-CN)):not(:lang(zh)) .modeButtons { max-width: 100%; flex-wrap: wrap; }
+}

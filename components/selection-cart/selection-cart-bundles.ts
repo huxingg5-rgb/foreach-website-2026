@@ -1,3 +1,4 @@
+import { getDrawingTypes, normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import { HFL_PILOT_WASHERS, HFL_WASHER_PILOT, getHflPilotWasher, isHflPilotWasherCartItem, type HflWasherChoice } from "@/data/products/configurator/hfl-m6-16-washers";
 import type { SelectionCartItem, SelectionCartItemInput } from "./selection-cart.types";
 import { getHardTubeAccessory, isHardTubeAccessoryCartItem, normalizeHardTubeDetailHref, type HardTubeAccessoryConfig, type HardTubeAccessoryChoice } from "@/data/products/configurator/hard-tube-accessories";
@@ -53,7 +54,12 @@ export function changeCartGroupQuantity(items: SelectionCartItem[], id: string, 
 
 export function changeCartGroupDrawing(items: SelectionCartItem[], id: string, needDrawing: boolean) {
   const ids = getCartGroupMemberIds(items, id);
-  return items.map(item => ids.has(item.id) ? { ...item, needDrawing } : item);
+  return items.map(item => ids.has(item.id) ? { ...item, needDrawing, drawingTypes: needDrawing ? getDrawingTypes(item).length ? getDrawingTypes(item) : normalizeDrawingTypes(undefined, true) : [] } : item);
+}
+
+export function changeCartGroupDrawingTypes(items: SelectionCartItem[], id: string, value: CadDrawingType[]) {
+  const ids = getCartGroupMemberIds(items, id), drawingTypes = normalizeDrawingTypes(value);
+  return items.map(item => ids.has(item.id) ? { ...item, drawingTypes, needDrawing: drawingTypes.length > 0 || Boolean(item.drawingAttachment) } : item);
 }
 
 export function findHardTubeCartBundle(items: SelectionCartItem[], config: HardTubeAccessoryConfig, choice: HardTubeAccessoryChoice) {

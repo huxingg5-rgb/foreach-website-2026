@@ -1,0 +1,51 @@
+import assert from "node:assert/strict";
+import { defaultFlangedTubingChoice } from "../../data/products/configurator/flanged-tubing";
+import { deleteFlangedConfiguration, emptyFlangedConfigurationStore, saveFlangedConfiguration } from "../../data/products/configurator/flanged-tubing-configurations";
+import { createFlangedConfigurationCartItem, flangedConfigurationInquirySummary } from "../../data/products/configurator/flanged-tubing-cart";
+import { appendInquiryAttachments, attachmentDigest, validateInquiryAttachments, INQUIRY_ATTACHMENT_MAX_BYTES } from "../../lib/inquiry/pdf-attachments";
+
+async function main() {
+  const { record, store } = saveFlangedConfiguration(emptyFlangedConfigurationStore(), { ...defaultFlangedTubingChoice(), length: "600" }, "专属配置", null, "2026-11-09T01:00:00Z", "config-a");
+  const attachment = { key: "snapshot-a", name: "专属配置-R1.pdf", size: 24, pageCount: 2, sha256: "a".repeat(64) };
+  const first = createFlangedConfigurationCartItem(record, attachment);
+  const cartSnapshotBeforeDelete = JSON.stringify(first);
+  assert.equal(deleteFlangedConfiguration(store, record.id, record.revision).configurations.length, 0);
+  assert.equal(JSON.stringify(first), cartSnapshotBeforeDelete, "deleting the source configuration must preserve the cart snapshot and its PDF reference");
+  const edited = saveFlangedConfiguration(store, { ...record.choice, length: "1500" }, record.name, record.id, "2026-11-09T02:00:00Z");
+  const next = createFlangedConfigurationCartItem(edited.record, { ...attachment, key: "snapshot-b", name: "专属配置-R2.pdf" });
+  assert.notEqual(first.id, next.id, "revisions must remain separate cart items");
+  assert.equal(first.flangedConfiguration?.choice.length, "600");
+  record.choice.a.material = "changed after add";
+  record.name = "changed after add";
+  attachment.name = "changed after add.pdf";
+  assert.equal(first.flangedConfiguration?.name, "专属配置");
+  assert.notEqual(first.flangedConfiguration?.choice.a.material, record.choice.a.material);
+  assert.equal(first.drawingAttachment?.name, "专属配置-R1.pdf");
+  const roundtrip = JSON.parse(JSON.stringify(first));
+  assert.equal(roundtrip.drawingAttachment.key, "snapshot-a");
+  assert.equal(roundtrip.flangedConfiguration.revision, 1);
+  assert.ok(flangedConfigurationInquirySummary(roundtrip.flangedConfiguration).includes("600"));
+  const sameChoice = saveFlangedConfiguration(emptyFlangedConfigurationStore(), edited.record.choice, "另一配置", null, "2026-11-09T02:00:00Z", "config-b").record;
+  assert.notEqual(next.id, createFlangedConfigurationCartItem(sameChoice, attachment).id, "different saved configurations must not collapse even if parameters match");
+
+  const generated = new File(["%PDF-1.7\nconfiguration"], "配置-R1.pdf", { type: "application/pdf" });
+  const extra = new File(["additional requirements"], "要求.txt");
+  const form = new FormData();
+  form.set("message", flangedConfigurationInquirySummary(roundtrip.flangedConfiguration));
+  appendInquiryAttachments(form, [generated], [extra]);
+  const sent = form.getAll("attachments") as File[];
+  assert.equal(sent.length, 2);
+  assert.equal(sent[0].name, generated.name);
+  assert.equal(await sent[0].text(), await generated.text(), "multipart must contain PDF bytes, not a name, URL, or JSON metadata");
+  assert.equal(await attachmentDigest(await sent[0].arrayBuffer()), await attachmentDigest(await generated.arrayBuffer()));
+  assert.equal(sent[1].name, extra.name);
+  validateInquiryAttachments([generated, ...Array(4).fill(extra)]);
+  assert.throws(() => appendInquiryAttachments(new FormData(), [generated], Array(5).fill(extra)), /too_many_attachments/);
+  const max = new File([new Uint8Array(INQUIRY_ATTACHMENT_MAX_BYTES)], "max.pdf");
+  validateInquiryAttachments([max]);
+  assert.throws(() => validateInquiryAttachments([max, generated]), /attachments_total_too_large/);
+  assert.throws(() => validateInquiryAttachments([new File([new Uint8Array(INQUIRY_ATTACHMENT_MAX_BYTES + 1)], "large.pdf")]), /attachment_too_large/);
+  assert.throws(() => validateInquiryAttachments([new File([], "empty.pdf")]), /attachment_empty/);
+  console.log("PASS: immutable versioned snapshots, distinct configurations, JSON refresh metadata, actual multipart PDF bytes, and combined attachment limits.");
+}
+void main();

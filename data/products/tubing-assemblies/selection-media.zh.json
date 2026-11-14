@@ -1,0 +1,397 @@
+{
+  "images": {
+    "ferruleSealing": {
+      "src": "/images/products/tubing-assemblies/selection/ferrule-connection-exploded.webp",
+      "width": 1500,
+      "height": 980,
+      "alt": "卡箍连接的端部结构，展示管材、螺纹接头与配套卡箍的装配关系",
+      "caption": "卡箍连接的部件与装配关系",
+      "source": {
+        "file": "ferrule-connection-exploded.webp",
+        "path": "public/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-structure-zh.png",
+        "crop": [
+          0,
+          0.004,
+          0.7,
+          0.9
+        ],
+        "alt": "卡箍连接的端部结构，展示管材、螺纹接头与配套卡箍的装配关系",
+        "caption": "卡箍连接的部件与装配关系",
+        "sha256": "40bb2d040658fd1383374c80484ca8b5f162fe05152830610d4dfaf46b25ad75"
+      },
+      "sha256": "7ad1ca84306ac9e66f950d343e629b42feed6b6e1c1633f58551a80de37ed390"
+    },
+    "ringSealing": {
+      "src": "/images/products/tubing-assemblies/selection/retaining-ring-sealing-components.webp",
+      "width": 1500,
+      "height": 824,
+      "alt": "卡环连接的部件结构，A 为密封垫圈、B 为卡环压套、C 为螺纹接头",
+      "caption": "卡环压套、密封垫圈与接头的配合关系",
+      "source": {
+        "file": "retaining-ring-sealing-components.webp",
+        "path": "public/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-structure-international.png",
+        "crop": [
+          0,
+          0.004,
+          1,
+          0.996
+        ],
+        "alt": "卡环连接的部件结构，A 为密封垫圈、B 为卡环压套、C 为螺纹接头",
+        "caption": "卡环压套、密封垫圈与接头的配合关系",
+        "sha256": "b608bd0a74d2da23414cd8cd43c6a08bc9d0aa40d6c7561b3c2f7d84631ac932"
+      },
+      "sha256": "772904dea1b820d797da12cc297ca8911ea72db7c9e8a2b40e07a5501abf20c3"
+    },
+    "ringPliers": {
+      "src": "/images/products/tubing-assemblies/selection/t-sf-4-ss-ring-installation-pliers.webp",
+      "width": 1500,
+      "height": 1119,
+      "alt": "T-SF-4-SS 卡环安装钳，用于配套卡环压套与垫圈的预装",
+      "caption": "卡环套件预装工具 T-SF-4-SS",
+      "source": {
+        "file": "t-sf-4-ss-ring-installation-pliers.webp",
+        "path": "public/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-installation-pliers-t-sf-4-ss.png",
+        "crop": [
+          0,
+          0,
+          1,
+          0.75
+        ],
+        "alt": "T-SF-4-SS 卡环安装钳，用于配套卡环压套与垫圈的预装",
+        "caption": "卡环套件预装工具 T-SF-4-SS",
+        "sha256": "107ea27bdd68911cb8f0c87c60eac51566e97ea59d838df00d0b0c500fd4a2f1"
+      },
+      "sha256": "b118e9f9a6289488b061607110590cbed958f8659afe4c156f1c2e44779c5ec9"
+    },
+    "ferruleStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/selection/hn-standard-fitting-dimensions.webp",
+      "width": 1500,
+      "height": 867,
+      "alt": "HN 标准卡箍接头的外形与剖面尺寸图",
+      "caption": "HN 标准接头尺寸示例，单位 mm",
+      "source": {
+        "file": "hn-standard-fitting-dimensions.webp",
+        "page": 14,
+        "crop": [
+          0.4,
+          0.286,
+          0.28,
+          0.115
+        ],
+        "alt": "HN 标准卡箍接头的外形与剖面尺寸图",
+        "caption": "HN 标准接头尺寸示例，单位 mm",
+        "sha256": "27250b44cfd6af0a171ef6fc0c670f4efe13f1ae302f2218f9aac17e820e7d8f"
+      },
+      "sha256": "73961c83dfd04921ff111391c79e6fac8fea75573050042a9d8ef8fdfb11fe50"
+    },
+    "ferruleCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/selection/hn6-compact-fitting-dimensions.webp",
+      "width": 1500,
+      "height": 820,
+      "alt": "HN6 紧凑卡箍接头的外形与剖面尺寸图",
+      "caption": "HN6 紧凑接头尺寸示例，单位 mm",
+      "source": {
+        "file": "hn6-compact-fitting-dimensions.webp",
+        "page": 14,
+        "crop": [
+          0.399,
+          0.568,
+          0.281,
+          0.113
+        ],
+        "alt": "HN6 紧凑卡箍接头的外形与剖面尺寸图",
+        "caption": "HN6 紧凑接头尺寸示例，单位 mm",
+        "sha256": "27250b44cfd6af0a171ef6fc0c670f4efe13f1ae302f2218f9aac17e820e7d8f"
+      },
+      "sha256": "c044226e87b15eb31a4b829c6de8e93c46dc875fcf295c590299b30e3fa1fc6e"
+    },
+    "ringPpsDimensions": {
+      "src": "/images/products/tubing-assemblies/selection/hsf6-pps-fitting-dimensions.webp",
+      "width": 1500,
+      "height": 759,
+      "alt": "HSF6 PPS 卡环接头尺寸示例，PEEK 材质应按自身型号图纸确认",
+      "caption": "HSF6 PPS 接头尺寸示例，单位 mm",
+      "source": {
+        "file": "hsf6-pps-fitting-dimensions.webp",
+        "page": 21,
+        "crop": [
+          0.399,
+          0.31,
+          0.293,
+          0.112
+        ],
+        "alt": "HSF6 PPS 卡环接头尺寸示例，PEEK 材质应按自身型号图纸确认",
+        "caption": "HSF6 PPS 接头尺寸示例，单位 mm",
+        "sha256": "27250b44cfd6af0a171ef6fc0c670f4efe13f1ae302f2218f9aac17e820e7d8f"
+      },
+      "sha256": "d501caad0e0a34a28f6148c0bbf070c9c0b6fe1ef90cc5ece28893b6ec24297a"
+    },
+    "ringComponents": {
+      "src": "/images/products/tubing-assemblies/selection/cl-1-ring-kit-components.webp",
+      "width": 1500,
+      "height": 1310,
+      "alt": "CL-1S 与 CL-1X 卡环套件的尺寸图、系列说明与配套规格表",
+      "caption": "CL-1S 与 CL-1X 卡环套件尺寸及配套规格",
+      "source": {
+        "file": "cl-1-ring-kit-components.webp",
+        "page": 21,
+        "crop": [
+          0.399,
+          0.569,
+          0.509,
+          0.32
+        ],
+        "alt": "CL-1S 与 CL-1X 卡环套件的尺寸图、系列说明与配套规格表",
+        "caption": "CL-1S 与 CL-1X 卡环套件尺寸及配套规格",
+        "diagramOverride": {
+          "path": "scripts/products/source-assets/tubing-assemblies/cl-1-ring-kit-dimensions-user-screenshot.png",
+          "sha256": "a986cba17acdc9bb76acbb3763179747819d33e31a5df4beebabcafc597955a4",
+          "top": 134,
+          "bottom": 570
+        },
+        "sha256": "27250b44cfd6af0a171ef6fc0c670f4efe13f1ae302f2218f9aac17e820e7d8f"
+      },
+      "sha256": "4e9c02bcb8648a7ce469b18d1171dcc3ecf6f58c6c4eac05e7b1b6802946a006"
+    },
+    "flangeSealing": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-sealing-components.webp",
+      "width": 1500,
+      "height": 1000,
+      "alt": "翻边管端、支撑垫片和螺纹接头的分解装配示意",
+      "caption": "翻边、支撑垫片与接头的装配关系",
+      "source": {
+        "kind": "existing",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-sealing-components.webp"
+      },
+      "sha256": "d63932f7ff804109707e65ae130b69be9384deb89053b2ffb43a1ba3dc0b91cc"
+    },
+    "flangeConfiguration": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-tubing-configurable-components.webp",
+      "width": 1500,
+      "height": 483,
+      "alt": "管组件配置示意，标明法兰翻边、垫片、接头、O 型圈限位管及管标的位置",
+      "caption": "管端零件、限位与管标的配置关系",
+      "source": {
+        "kind": "existing",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-tubing-configurable-components.webp"
+      },
+      "sha256": "008930deff94d23d5c946492189e8bdc7a4598afa61fca44a99065d75c58162f"
+    },
+    "flangeStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/hf-fitting-dimensions.webp",
+      "width": 1500,
+      "height": 829,
+      "alt": "HF 平底接头尺寸图，标注头部外径 8.2 mm、总长 20.5 mm 与前端避空尺寸",
+      "caption": "HF 接头尺寸示例，单位 mm",
+      "source": {
+        "kind": "existing",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/hf-fitting-dimensions.webp"
+      },
+      "sha256": "e8fbf0087a657e12b81ec29b2aba94e9c45650710d4ff2358684abfc73fd4788"
+    },
+    "flangeCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/hf6-fitting-dimensions.webp",
+      "width": 1500,
+      "height": 859,
+      "alt": "HF6 紧凑平底接头尺寸图，标注头部外径 6.4 mm、总长 17.6 mm 与前端避空尺寸",
+      "caption": "HF6 紧凑接头尺寸示例，单位 mm",
+      "source": {
+        "kind": "existing",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/hf6-fitting-dimensions.webp"
+      },
+      "sha256": "23ce171c2826788c0dd8b727af604f52b11db65d3cdf17e49cafea844cba223e"
+    },
+    "flatPort": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-flat-port-section.webp",
+      "width": 1500,
+      "height": 579,
+      "alt": "平底端口的翻边密封剖面，端部贴合平整底面并标示内螺纹避空位尺寸",
+      "caption": "翻边与平底密封面贴合",
+      "source": {
+        "kind": "existing",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-flat-port-section.webp"
+      },
+      "sha256": "e3007770c4f114127dae08dd5e3ccbd268446cd2b4c566673c703f9bebcd4301"
+    },
+    "conicalPort": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-conical-port-section.webp",
+      "width": 1500,
+      "height": 347,
+      "alt": "锥底端口剖面，展示平底翻边结构与锥形底面不能均匀贴合的位置",
+      "caption": "锥形底孔不能提供匹配的平底密封面",
+      "source": {
+        "kind": "existing",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-conical-port-section.webp"
+      },
+      "sha256": "a4cc0a9bae609b5da14bb8b8332c7afbb3601d977c28f03477f48979f9092c0a"
+    },
+    "torqueTool": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/t-st-torque-driver.webp",
+      "width": 1500,
+      "height": 888,
+      "alt": "FOREACH T-ST 可调扭力批实物，用于配合对应接头批头控制锁紧扭矩",
+      "caption": "T-ST 扭力批，批头按接头系列选配",
+      "source": {
+        "kind": "existing",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/t-st-torque-driver.webp"
+      },
+      "sha256": "e0788a6b3b5881ec6510e6b9c26019ee68d359faed91f2ab62b09178e5ce8207"
+    },
+    "flanged-tubing:fep": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/foreach-fep-flanged-tubing-assembly-end-detail.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "FEP 法兰翻边管组件，透明翻边管端、黑色螺纹接头及配套垫圈的展开结构",
+      "caption": "FEP 法兰翻边管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/fep/foreach-fep-flanged-tubing-assembly-end-detail.webp",
+        "sha256": "343810e134a393e05be48d6d94a10dd2a456918c78e3556dc2fcef7286b2b29f"
+      },
+      "sha256": "343810e134a393e05be48d6d94a10dd2a456918c78e3556dc2fcef7286b2b29f"
+    },
+    "flanged-tubing:ptfe": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "白底法兰翻边管组件，黑色与本色接头连接透明管材",
+      "caption": "PTFE 法兰翻边管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+        "sha256": "dc1b2598727e0aafb9c3357718a9e2b264a938c59f5d08321c212c892254ea18"
+      },
+      "sha256": "dc1b2598727e0aafb9c3357718a9e2b264a938c59f5d08321c212c892254ea18"
+    },
+    "flanged-tubing:pfa": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "PFA 法兰翻边管组件，透明翻边管端、半透明螺纹接头及金属支撑垫圈",
+      "caption": "PFA 法兰翻边管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
+        "sha256": "229bbdfaa6960d9b5d7580b833537a23f1c954f4356f13e0c5cae5091a44413d"
+      },
+      "sha256": "229bbdfaa6960d9b5d7580b833537a23f1c954f4356f13e0c5cae5091a44413d"
+    },
+    "flanged-tubing:black-ptfe": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly-black-fitting-transparent-mirrored.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "黑色 PTFE 法兰翻边管组件斜视实拍，展示黑色螺纹接头、翻边管端与金属支撑垫圈",
+      "caption": "黑色 PTFE 法兰翻边管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/flanged-tubing/black-ptfe/foreach-black-ptfe-flanged-tubing-assembly-black-fitting-transparent-mirrored.webp",
+        "sha256": "d49463aa51ecc16e0e12d5413bfe7035375be506b98d3b93e6786cf3309f45b1"
+      },
+      "sha256": "d49463aa51ecc16e0e12d5413bfe7035375be506b98d3b93e6786cf3309f45b1"
+    },
+    "ferrule-kits:fep": {
+      "src": "/images/products/tubing-assemblies/selection/fep-ferrule-kits-guide-photo.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "FEP 卡箍管组件，透明 FEP 管连接黑色螺纹接头与半透明锥形卡箍",
+      "caption": "FEP 卡箍管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/ferrule-kits/fep/foreach-fep-ferrule-tubing-assembly.webp",
+        "sha256": "3588e60758e1a85ab2999464345e2e72eda6bfd1e15272e1ee57be26ab04e678"
+      },
+      "sha256": "4333a530f2e0d20544c33b0a1f90dc2cdee94d61052a05fba27062aacbee3a2f"
+    },
+    "ferrule-kits:ptfe": {
+      "src": "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-front-angle.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "PTFE 管组件前端斜视图，展示白色半透明螺纹接头、前端密封件与本色管材",
+      "caption": "PTFE 卡箍管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/ferrule-kits/ptfe/foreach-ptfe-ferrule-tubing-assembly-front-angle.webp",
+        "sha256": "287848e0716ffeb8fd6ffc0f4ab8a6450237bbca79134996465667b6ed2ba111"
+      },
+      "sha256": "287848e0716ffeb8fd6ffc0f4ab8a6450237bbca79134996465667b6ed2ba111"
+    },
+    "ferrule-kits:pfa": {
+      "src": "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-front-angle.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "PFA 卡箍管组件前端斜视图，展示半透明螺纹接头、卡箍中心孔与透明管材",
+      "caption": "PFA 卡箍管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/ferrule-kits/pfa/foreach-pfa-ferrule-tubing-assembly-front-angle.webp",
+        "sha256": "e3efb708ae2cf29c1287c44e6b5ba4b0a23505cd79aefac973525c8e1ad8d43f"
+      },
+      "sha256": "e3efb708ae2cf29c1287c44e6b5ba4b0a23505cd79aefac973525c8e1ad8d43f"
+    },
+    "ferrule-kits:black-ptfe": {
+      "src": "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-front-angle.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "黑色 PTFE 卡箍管组件前端斜视图，展示卡箍中心孔、黑色螺纹接头与管材连接",
+      "caption": "黑色 PTFE 卡箍管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/ferrule-kits/black-ptfe/foreach-black-ptfe-ferrule-tubing-assembly-front-angle.webp",
+        "sha256": "9441690fb93e147f5826af3b92e442462c568cbb609f830e807e3de2042e2cce"
+      },
+      "sha256": "9441690fb93e147f5826af3b92e442462c568cbb609f830e807e3de2042e2cce"
+    },
+    "retaining-ring-kits:fep": {
+      "src": "/images/products/tubing-assemblies/retaining-ring-kits/fep/foreach-fep-retaining-ring-tubing-assembly-white-mirrored.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "FEP 卡环管组件，透明管材连接米黄色螺纹接头、金属卡环与密封垫圈",
+      "caption": "FEP 卡环管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/retaining-ring-kits/fep/foreach-fep-retaining-ring-tubing-assembly-white-mirrored.webp",
+        "sha256": "6662dafafe039be9205ebf651337a4ba2a2e15e6a48cd0349dcc5af3cf6b8152"
+      },
+      "sha256": "6662dafafe039be9205ebf651337a4ba2a2e15e6a48cd0349dcc5af3cf6b8152"
+    },
+    "retaining-ring-kits:ptfe": {
+      "src": "/images/products/tubing-assemblies/selection/ptfe-retaining-ring-kits-guide-photo.webp",
+      "width": 1500,
+      "height": 1106,
+      "alt": "6-40 UNF 接头与紧凑卡箍接头的实拍对比，展示接头及管路连接",
+      "caption": "6-40 UNF 与紧凑卡箍接头实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/retaining-ring-pair-white-shadow-intro.png",
+        "sha256": "305b80f2b3f69b074eaa8fa4ec5dee0e10a1207089c514e678a674765270542f"
+      },
+      "sha256": "29f89ebc4743ec415074d2f76c893b8809b376dbda51871b06893b5b279f3ce1"
+    },
+    "retaining-ring-kits:pfa": {
+      "src": "/images/products/tubing-assemblies/retaining-ring-kits/pfa/foreach-pfa-retaining-ring-tubing-assembly-transparent-main.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "PFA 卡环管组件，透明管材连接米黄色螺纹接头、金属卡环与密封垫圈",
+      "caption": "PFA 卡环管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/retaining-ring-kits/pfa/foreach-pfa-retaining-ring-tubing-assembly-transparent-main.webp",
+        "sha256": "8db3c564b4738f4b5f20211dad6cedcb95d558c76a851c1e12e2b5b2e60c0577"
+      },
+      "sha256": "8db3c564b4738f4b5f20211dad6cedcb95d558c76a851c1e12e2b5b2e60c0577"
+    },
+    "retaining-ring-kits:black-ptfe": {
+      "src": "/images/products/tubing-assemblies/selection/black-ptfe-retaining-ring-kits-guide-photo.webp",
+      "width": 1500,
+      "height": 1500,
+      "alt": "黑色 PTFE 卡环管组件，黑色管材连接米黄色螺纹接头、金属卡环及密封垫圈",
+      "caption": "黑色 PTFE 卡环管组件实拍示例",
+      "source": {
+        "kind": "existing-photo",
+        "path": "/images/products/tubing-assemblies/retaining-ring-kits/black-ptfe/foreach-black-ptfe-retaining-ring-tubing-assembly.webp",
+        "sha256": "7acef518a37deab85f633f3e712538144f710878869e420d74db4806c7ea56ad"
+      },
+      "sha256": "01c0c2f52287d8175ffb7cb028e7e295a77ac31ab3b1ffcba157fbfcfd5f5fce"
+    }
+  }
+}

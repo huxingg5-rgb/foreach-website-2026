@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const {isHardTubePlug,buildHardTubePlugDetail}=require("./hard-tube-plugs.cjs");
 const highPressureGallery = require("../../data/products/detail/high-pressure-fluidics-gallery.json");
 const compactFluidicsGallery = require("../../data/products/detail/compact-fluidics-gallery.json");
 const standardFluidicsGallery = require("../../data/products/detail/standard-fluidics-gallery.json");
@@ -366,6 +367,8 @@ const imageMap =
 
 const details =
   products.map((product) => {
+    const plugModel=getLocalizedText(product.cardTitle).toUpperCase();
+    if(isHardTubePlug({model:plugModel}))return buildHardTubePlugDetail({model:plugModel,productCode:getText(product.productId),part:getText(product.sourcePart)});
     const model =
       getLocalizedText(
         product.cardTitle

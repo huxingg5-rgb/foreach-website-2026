@@ -1,5 +1,7 @@
 "use client";
 
+import DrawingRequirements from "./DrawingRequirements";
+import { normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import { fittingView } from "@/components/products/detail/fitting-view";
 import { Fragment, useEffect, useId, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -25,9 +27,10 @@ type Props = {
   value: string | null;
   lastPairModel?: string | null;
   onClose: () => void;
-  onConfirm: (model: string) => void;
-  onAdd: (model: string) => void;
-  isAdded: (model: string) => boolean;
+  drawingTypes?: CadDrawingType[];
+  onConfirm: (model: string, drawingTypes: CadDrawingType[]) => void;
+  onAdd: (model: string, drawingTypes: CadDrawingType[]) => void;
+  isAdded: (model: string, drawingTypes: CadDrawingType[]) => boolean;
 };
 
 type DimensionKey = "tube" | "panel" | "valve" | "shape" | "material";
@@ -94,7 +97,7 @@ const copy = {
     lookupPlaceholder: "e.g. Q2002-SNV-LACN",
     lookupFound: "Model found",
     lookupNotFound: "No matching model. Check the spelling.",
-    lookupMore: (count: number) => `${count} matches. Keep typing to narrow down.`,
+    lookupMore: (count: number) => `${count} ${count === 1 ? "match" : "matches"}. Keep typing to narrow down.`,
     suggestions: "Matching models",
     dimensions: { tube: "Tube", panel: "Mounting", valve: "Valve", shape: "Shape", material: "Material" },
     values: {
@@ -154,10 +157,12 @@ export default function QuickConnectPairSelector({
   value,
   lastPairModel,
   onClose,
+  drawingTypes: initialDrawings,
   onConfirm,
   onAdd,
   isAdded,
 }: Props) {
+  const [drawings, setDrawings] = useState(() => normalizeDrawingTypes(initialDrawings));
   const isCompact = presentation === "compact";
   const originalCopy = copy[config.locale];
   const isChinese = config.locale === "zh";
@@ -285,7 +290,7 @@ export default function QuickConnectPairSelector({
   const specLine = DIMENSIONS.map(dimension => valueLabel(localeCopy, dimension, current[dimension])).join(" · ");
   // "none" is an explicit single fitting, distinct from an unconfirmed pairing.
   const selection = singleOnly ? "none" : selected.option.model;
-  const added = isAdded(selection);
+  const added = isAdded(selection, drawings);
 
   function isAvailable(dimension: DimensionKey, candidate: string) {
     return entries.some(entry => entry.attrs[dimension] === candidate && sameExcept(entry.attrs, current, dimension));
@@ -461,6 +466,7 @@ export default function QuickConnectPairSelector({
               </figure></Fragment>;
             })}
           </div>
+          <DrawingRequirements locale={locale} value={drawings} onChange={setDrawings} />
           <dl className={styles.details}>
             <div><dt>{singleOnly ? "接头型号" : localeCopy.femaleModel}</dt><dd>{singleOnly ? config.baseModel : selected.option.model}</dd></div>
             <div><dt>{localeCopy.code}</dt><dd>{(singleOnly ? config.baseProductCode : selected.option.productCode) || "—"}</dd></div>
@@ -496,10 +502,10 @@ export default function QuickConnectPairSelector({
         onClose={onClose}
         notice={localeCopy.note}
         actions={<>
-          <ConfiguratorButton variant="secondary" active={added} disabled={added} onClick={() => onAdd(selection)}>
+          <ConfiguratorButton variant="secondary" active={added} disabled={added} onClick={() => onAdd(selection, drawings)}>
             {added ? localeCopy.added : singleOnly ? "加入清单" : localeCopy.add}
           </ConfiguratorButton>
-          <ConfiguratorButton variant="primary" onClick={() => onConfirm(selection)}>{singleOnly ? "确认选型" : localeCopy.confirm}</ConfiguratorButton>
+          <ConfiguratorButton variant="primary" onClick={() => onConfirm(selection, drawings)}>{singleOnly ? "确认选型" : localeCopy.confirm}</ConfiguratorButton>
         </>}
       >
         {body}
@@ -529,10 +535,10 @@ export default function QuickConnectPairSelector({
         <footer className={styles.footer}>
           <p>{localeCopy.note}</p>
           <div className={styles.actions}>
-            <button type="button" className={styles.secondary} disabled={added} onClick={() => onAdd(selected.option.model)}>
+            <button type="button" className={styles.secondary} disabled={added} onClick={() => onAdd(selected.option.model, drawings)}>
               {added ? localeCopy.added : localeCopy.add}
             </button>
-            <button type="button" className={styles.primary} onClick={() => onConfirm(selected.option.model)}>{localeCopy.confirm}</button>
+            <button type="button" className={styles.primary} onClick={() => onConfirm(selected.option.model, drawings)}>{localeCopy.confirm}</button>
           </div>
         </footer>
       </section>

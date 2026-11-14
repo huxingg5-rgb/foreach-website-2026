@@ -1,0 +1,224 @@
+{
+  "HF6-U28-20": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hf6-u28-20.fcad.gz",
+    "sourcePart": "443-02-00362",
+    "sourceFile": "新版硬管接头\\旧文件\\紧凑平底\\HF6-U28-20.stp",
+    "sourceSha256": "0c6cac77a70dbb01d122a8e402b330c697c2c8de5b94b711ea7b5b89147ece73"
+  },
+  "HF6-U28-25": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hf6-u28-25.fcad.gz",
+    "sourcePart": "443-02-00363",
+    "sourceFile": "新版硬管接头\\旧文件\\紧凑平底\\HF6-U28-25.stp",
+    "sourceSha256": "ff2fb9496c5e1fcd3f5ecf3c1e4e877d740d52160f4621532027ed43e2bab0df"
+  },
+  "HN-U28-16": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hn-u28-16.fcad.gz",
+    "sourcePart": "443-02-00368",
+    "sourceFile": "新版硬管接头\\旧文件\\标滚卡箍\\HN-U28-16.stp",
+    "sourceSha256": "cae9060f9df9ce62f87f9530166669c65876d4907035586c41f0efc4da3fd504"
+  },
+  "HN-U28-32": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hn-u28-32.fcad.gz",
+    "sourcePart": "443-02-00369",
+    "sourceFile": "新版硬管接头\\旧文件\\标滚卡箍\\HN-U28-32.stp",
+    "sourceSha256": "8dc5a6987922716b6161c539b450da7810cee8fc4fe523154360b2462a8449b7"
+  },
+  "HNF-M6-16": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-m6-16.fcad.gz",
+    "sourcePart": "443-00-00205",
+    "sourceFile": "卡箍接头\\HNF-M6-16.stp",
+    "sourceSha256": "b346a55e3af2072f37b98488a00c84ac76218adf356426ee90fc9769b094ebac"
+  },
+  "HNF-M6-20": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-m6-20.fcad.gz",
+    "sourcePart": "443-00-00208",
+    "sourceFile": "卡箍接头\\HNF-M6-20.stp",
+    "sourceSha256": "d1bae2fd7804580168252b45e578bbc556fc95333f107329f38c45352929bcd6"
+  },
+  "HNF-M6-25": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-m6-25.fcad.gz",
+    "sourcePart": "443-00-00206",
+    "sourceFile": "卡箍接头\\HNF-M6-25.stp",
+    "sourceSha256": "9ba8f3d4cfa814e868656344a55c375720af4892f9d703f8e5f73eaea3cd8986"
+  },
+  "HNF-M6-30": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-m6-30.fcad.gz",
+    "sourcePart": "443-00-00228",
+    "sourceFile": "卡箍接头\\HNF-M6-30.stp",
+    "sourceSha256": "d7f1f0c8b2dc1e574aba98c260761b36af451dfde074e8606447795e2fa98710"
+  },
+  "HNF-M6-32": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-m6-32.fcad.gz",
+    "sourcePart": "443-00-00207",
+    "sourceFile": "卡箍接头\\HNF-M6-32.stp",
+    "sourceSha256": "6a0edda6404c837777f8387f9e60ca3eb919252d1dee02994eed1d676a0f87f7"
+  },
+  "HNF-U28-16": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-u28-16.fcad.gz",
+    "sourcePart": "443-00-00058",
+    "sourceFile": "卡箍接头\\HNF-U28-16.stp",
+    "sourceSha256": "dc262c6a87139ded9afdf4d79ff049745ab726628aceffdbf194dfc2fbc47cd3"
+  },
+  "HNF-U28-20": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-u28-20.fcad.gz",
+    "sourcePart": "443-00-00224",
+    "sourceFile": "卡箍接头\\HNF-U28-20.stp",
+    "sourceSha256": "71967c0c4db76ac26ec1e8de4441375366ccba69216c08e05e14d0de9dea67cd"
+  },
+  "HNF-U28-25": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-u28-25.fcad.gz",
+    "sourcePart": "443-00-00223",
+    "sourceFile": "卡箍接头\\HNF-U28-25.stp",
+    "sourceSha256": "20806f97e3993c2e774aa53d43c8a97f87cc8f33f3e857b12350292c70012a41"
+  },
+  "HNF-U28-30": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-u28-30.fcad.gz",
+    "sourcePart": "443-00-00226",
+    "sourceFile": "卡箍接头\\HNF-U28-30.stp",
+    "sourceSha256": "098f3bf9004b4e4f4e70f4d17b85e002968cca2ac3725c64c8f5559cd6ac6eeb"
+  },
+  "HNF-U28-32": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf-u28-32.fcad.gz",
+    "sourcePart": "443-00-00059",
+    "sourceFile": "卡箍接头\\HNF-U28-32.stp",
+    "sourceSha256": "78f76218177deb67c714c2c2c8947a96e1e32ef936eecc9823db9ad308a6d07a"
+  },
+  "HNF6-M6-16": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-16.fcad.gz",
+    "sourcePart": "443-00-00379",
+    "sourceFile": "卡箍接头\\HNF6-M6-16.stp",
+    "sourceSha256": "b22898bc87d9afb5dbb1b8a1f1a72c52360b5b3f1b0f630b284d68b432246def"
+  },
+  "HNF6-M6-20": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-20.fcad.gz",
+    "sourcePart": "443-00-00382",
+    "sourceFile": "卡箍接头\\HNF6-M6-20.stp",
+    "sourceSha256": "42ea23a0d2cc53b84c1f810ca36d7a609ee17d21c54842d07dc9f34c7fd8dfb8"
+  },
+  "HNF6-M6-25": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-25.fcad.gz",
+    "sourcePart": "443-00-00380",
+    "sourceFile": "卡箍接头\\HNF6-M6-25.stp",
+    "sourceSha256": "f438744f756c0c30b9449f47a75974ba97ba69c3aadf1c7f698a21241f185c71"
+  },
+  "HNF6-M6-30": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-30.fcad.gz",
+    "sourcePart": "443-00-00383",
+    "sourceFile": "卡箍接头\\HNF6-M6-30.stp",
+    "sourceSha256": "ea05faabeb9ca165149215674759ae555606d70a137ab23f6dfee24af3415694"
+  },
+  "HNF6-M6-32": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-32.fcad.gz",
+    "sourcePart": "443-00-00381",
+    "sourceFile": "卡箍接头\\HNF6-M6-32.stp",
+    "sourceSha256": "3ad4664669e53ed780d6d90fad2453dc4c0acb78f865ef32c86acf5efbec26e9"
+  },
+  "HNF6-U28-16": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-16.fcad.gz",
+    "sourcePart": "443-00-00487",
+    "sourceFile": "卡箍接头\\HNF6-U28-16.stp",
+    "sourceSha256": "3a8473357f338841d9ed9b5426cb0a1457b3c19eaae44b2a3cb2b0b77b610bf9"
+  },
+  "HNF6-U28-20": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-20.fcad.gz",
+    "sourcePart": "443-00-00372",
+    "sourceFile": "卡箍接头\\HNF6-U28-20.stp",
+    "sourceSha256": "563a42e1480f5519a5f2f47895bd8d4ff3b6105ef11df33153e7381e18d4cf25"
+  },
+  "HNF6-U28-25": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-25.fcad.gz",
+    "sourcePart": "443-00-00486",
+    "sourceFile": "卡箍接头\\HNF6-U28-25.stp",
+    "sourceSha256": "a11912118b5f6a27a585ad69492b1f759d9b8a75132686e095bbc502a8c5467c"
+  },
+  "HNF6-U28-30": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-30.fcad.gz",
+    "sourcePart": "443-00-00373",
+    "sourceFile": "卡箍接头\\HNF6-U28-30.stp",
+    "sourceSha256": "191d6cab821756dcb0189d89943312002e50fc931b2db62d18afdf38438792d5"
+  },
+  "HNF6-U28-32": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-32.fcad.gz",
+    "sourcePart": "443-00-00484",
+    "sourceFile": "卡箍接头\\HNF6-U28-32.stp",
+    "sourceSha256": "443a42e6e2fedc34d630578636d1108cd11389dc1ec0956ddcaec7f5cdd5d91d"
+  },
+  "HNE6-U28-32": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hne6-u28-32.fcad.gz",
+    "sourcePart": "443-02-00677",
+    "sourceFile": "443-02-00677.stp",
+    "sourceSha256": "e4f1a234ffe65a6d2f8372d72fd91fc94c4ae9dedafd6de4b3ce82903474f998"
+  },
+  "HSF6-M6-16": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hsf6-m6-16.fcad.gz",
+    "sourcePart": "443-02-00499",
+    "sourceFile": "卡环接头\\443-02-00499-C.stp",
+    "sourceSha256": "38bc4e4ab280dedc891705d92ce9981300e6a9c6cabf1d45e32590b108ec6c34"
+  },
+  "HSF6-M6-18": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hsf6-m6-18.fcad.gz",
+    "sourcePart": "443-02-00708",
+    "sourceFile": "新版硬管接头\\模型\\443-02-00708-C.stp",
+    "sourceSha256": "abcebf70022c849961653d9c89d763a44ef93a8a0866d4295f884849e1dedcfd"
+  },
+  "HSF6-U28-16": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hsf6-u28-16.fcad.gz",
+    "sourcePart": "443-02-00497",
+    "sourceFile": "卡环接头\\443-02-00497-C.stp",
+    "sourceSha256": "83c747226863bbea04f05547ddb61741b7c7a9e4355e1bce62b2daa6dfd9f13f"
+  },
+  "HSF6-U28-32": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hsf6-u28-32.fcad.gz",
+    "sourcePart": "443-02-00498",
+    "sourceFile": "卡环接头\\443-02-00498-C.stp",
+    "sourceSha256": "0a4c0afb3a1d4e09b120d62fa2e9c9fb6b4d42a60fd7dd4f5f6bd228c1f79cea"
+  },
+  "CL-0-16": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-cl-0-16.fcad.gz",
+    "sourcePart": "443-00-00032",
+    "sourceFile": "卡箍，垫片\\CL-0-16.stp",
+    "sourceSha256": "a37e2a19a311039d52b9685b02c17adfbbdc221820ea301a05e2bd2af7260f0d"
+  },
+  "CL-0-20": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-cl-0-20.fcad.gz",
+    "sourcePart": "443-00-00147",
+    "sourceFile": "卡箍，垫片\\CL-0-20.stp",
+    "sourceSha256": "acf2ecf0821adb837b2c6da9612777814a1fb63514ecc4266930eeb24bf18a90"
+  },
+  "CL-0-25": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-cl-0-25.fcad.gz",
+    "sourcePart": "443-00-00035",
+    "sourceFile": "卡箍，垫片\\CL-0-25.stp",
+    "sourceSha256": "01268b47a9d5036a2d75617de72a141783549b0be42c214f19457f39d802837d"
+  },
+  "CL-0-30": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-cl-0-30.fcad.gz",
+    "sourcePart": "443-00-00188",
+    "sourceFile": "卡箍，垫片\\CL-0-30.stp",
+    "sourceSha256": "901591bcdb695bb919d61013e70f34201ed258e216bdae0bf578f3829edb5e00"
+  },
+  "CL-0-32": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-cl-0-32.fcad.gz",
+    "sourcePart": "443-00-00034",
+    "sourceFile": "卡箍，垫片\\CL-0-32.stp",
+    "sourceSha256": "acfe338bb0d1edfbeed0f09c39584a0476b72d5fa33e091c14f2367035f9856f"
+  },
+  "HSF6-M6-32": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hsf6-m6-32.fcad.gz",
+    "sourcePart": "443-02-00500",
+    "sourceFile": "卡环接头\\443-02-00500-C.stp",
+    "sourceSha256": "2f8921257b1dab4c9e4726de3e98e4aa4e105e3a5521d9cf0ae8057573196df7"
+  },
+  "HSF6-U28-16-PK-N": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hsf6-u28-16-pk-n.fcad.gz",
+    "sourcePart": "441-09-00222",
+    "sourceFile": "卡环接头\\441-09-00222-C.stp",
+    "sourceSha256": "eb8dd11d45b355a82b5e8236e03f47db55af8978bfd864897d1e84b15b080fa7"
+  },
+  "WSS-32-SS-N": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-wss-32-ss-n.fcad.gz",
+    "sourcePart": "441-09-00120",
+    "sourceFile": "卡环接头\\441-09-00128-C.stp",
+    "sourceSha256": "4c5328833238d23188bb1f00738cc72b95cd55e845e00dc175a58499a17e8550"
+  }
+}

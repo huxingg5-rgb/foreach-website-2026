@@ -1,0 +1,58 @@
+.guide { min-width: 0; overflow-wrap: anywhere; }
+.guide h2 { font-weight: 500; }
+.guide h3 { font-weight: 500; }
+.intro { max-width: 1100px; }
+.decisionTable { min-width: 760px; }
+.decisionTable th:first-child { width: 24%; }
+.decisionTable td { width: 38%; }
+.currentRow { background: #f1f5fa; }
+.figure { margin: 0; min-width: 0; }
+.figure img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; }
+.curveFigure { align-self: start; }
+.figure figcaption { margin-top: 8px; color: #5d687a; font-size: 13px; line-height: 1.7; }
+.axisNote { display: block; margin-top: 4px; }
+.twoColumn { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 28px; margin: 24px 0; }
+.modelCodeScroll { max-width: 100%; overflow-x: auto; margin: 22px 0; padding: 4px 0 8px; }
+.modelCode { display: flex; align-items: flex-start; gap: 12px; width: max-content; }
+.modelCodePart { display: flex; align-items: flex-start; gap: 12px; }
+.modelCodeSegment { display: grid; gap: 8px; min-width: 84px; text-align: center; }
+.modelCodeSegment b { display: flex; align-items: center; justify-content: center; min-height: 46px; padding: 8px 12px; border: 1px solid #173368; color: #173368; font-size: 22px; line-height: 1.25; font-weight: 500; }
+.modelCodeSegment small { display: block; color: #5d687a; font-size: 12px; line-height: 1.6; white-space: nowrap; }
+.modelCodeSeparator { display: flex; align-items: center; justify-content: center; width: 14px; height: 46px; color: #173368; font-size: 22px; line-height: 1; }
+.modelCodeTable { min-width: 600px; }
+.modelCodeTable th:first-child { width: 22%; }
+.modelCodeOptions { display: flex; flex-wrap: wrap; gap: 4px 28px; }
+.modelCodeOption { display: flex; align-items: baseline; gap: 10px; }
+.modelCodeOption > span:first-child { flex: 0 0 auto; color: #173368; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.modelCodeTable .modelCodeNote { margin: 8px 0 0; color: #5d687a; font-size: 13px; line-height: 1.75; }
+.modelCodeExample { margin: 22px 0 14px; padding: 20px 22px; background: #f6f9fc; }
+.modelCodeExample h3 { font-size: 18px; }
+.modelCodeExample p:last-child { margin-bottom: 0; }
+.wireChoices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.wiringDiagram { display: block; width: 100%; height: auto; font-family: inherit; }
+.wireChoices button { min-width: 0; overflow-wrap: anywhere; }
+.wirePhotos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; border-top: 1px solid #dbe3ee; padding: 24px; }
+.wirePhotos figure { margin: 0; min-width: 0; }
+.wirePhotos img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.wirePhotos figcaption { color: #5d687a; font-size: 13px; margin-top: 8px; }
+.scope { margin: 18px 0; padding: 18px 22px; background: #f6f9fc; }
+.scope p:last-child { margin-bottom: 0; }
+.materialTable { min-width: 720px; }
+.materialTable th:first-child { width: 13%; }
+.materialTable td:nth-child(2) { width: 35%; }
+.troubleTable { min-width: 760px; }
+.troubleTable th:first-child { width: 23%; }
+.troubleTable td { width: 38.5%; }
+.guide strong { font-weight: 500; }
+@media (max-width: 900px) {
+  .twoColumn { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+}
+@media (max-width: 600px) {
+  .modelCode, .modelCodePart { gap: 8px; }
+  .modelCodeSegment { min-width: 64px; }
+  .modelCodeSegment b { min-height: 40px; padding: 8px 10px; font-size: 18px; }
+  .modelCodeSeparator { width: 10px; height: 40px; font-size: 18px; }
+  .modelCodeExample { padding: 16px 18px; }
+  .wirePhotos { padding: 18px; gap: 10px; }
+  .scope { padding: 16px 18px; }
+}

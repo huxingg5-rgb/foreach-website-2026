@@ -18,6 +18,7 @@ import { getFerruleFittingCopy } from "../technical-articles/what-is-a-ferrule-f
 import { getCompressionRingFittingCopy } from "../technical-articles/what-is-a-compression-ring-fitting.zh";
 import { getConnectorSelectionArticle } from "../technical-articles/connector-selection-articles.article";
 import tubingContent from "@/data/products/tubing/content.json";
+import { pvcTubingFaqsZh } from "@/data/products/tubing/pvc-faq.zh";
 
 type SourceQuestion = { question: string; answer: string };
 function sourceQuestions(item: ReviewedFaqItem, locale: LocaleCode): readonly SourceQuestion[] {
@@ -32,6 +33,7 @@ function sourceQuestions(item: ReviewedFaqItem, locale: LocaleCode): readonly So
     case "valveless": return getRplSelectionFaqItems(locale);
     case "rotary": return getRotaryValveArticles(locale)[0].copy.faqItems;
     case "soft-tubing": case "hard-tubing": {
+      if (item.subcategory === "soft-tubing" && productLocale === "zh") return pvcTubingFaqsZh;
       if (productLocale !== "zh" && productLocale !== "en") throw new Error(`Missing tubing FAQ supplement: ${locale}/${item.id}`);
       return tubingContent.materials[item.subcategory === "soft-tubing" ? "pvc" : "ptfe"][productLocale].faqs;
     }

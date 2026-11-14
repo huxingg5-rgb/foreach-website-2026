@@ -1,0 +1,11 @@
+.drawings { display: flex; flex-wrap: wrap; gap: 12px 22px; }
+.drawings a { display: block; }
+.materialLayout { display: grid; grid-template-columns: minmax(0,3fr) minmax(0,2fr); gap: 28px; align-items: start; margin: 24px 0; }
+.materialLayout > * { min-width: 0; }
+.kitSpecifications { margin-top: 16px; min-width: 0; }
+.kitSpecifications p { font-size: 14px; }
+.kitSpecifications table { min-width: 420px; font-size: 13px; }
+.kitSpecifications th, .kitSpecifications td { padding: 10px 12px; }
+@media (max-width: 600px) {
+  .materialLayout { grid-template-columns: minmax(0,1fr); gap: 18px; }
+}

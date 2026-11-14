@@ -17,6 +17,9 @@ export const bulkheadBarbedFittingSlug = "what-is-a-bulkhead-barbed-fitting";
 // language switcher never needs to ship article bodies to the browser.
 const limitedLocales: Partial<Record<string, readonly TechnicalArticleLocale[]>> = {
   "quick-disconnect-coupling-pressure-rating": ["zh-CN"],
+  // Temporarily hidden at the user's request; retain the source for restoration.
+  "diaphragm-pump-noise-test-conditions": [],
+  "chemiluminescence-analyzer-diaphragm-pump-wash-waste": [],
 };
 
 export function isTechnicalArticleLocaleAvailable(slug: string, locale: TechnicalArticleLocale) {

@@ -1,4 +1,8 @@
 "use client";
+import { drawingRequirementsLine, getDrawingTypes, normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
+import { changeCartGroupDrawingTypes } from "./selection-cart-bundles";
+import { normalizeFlangedChoice, validateFlangedChoice } from "@/data/products/configurator/flanged-tubing";
+import { eaPumpInquirySummary } from "@/data/products/configurator/ea-pump-inquiry";
 
 /* =========================================================
    SelectionCartProvider.tsx
@@ -19,6 +23,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -155,13 +160,9 @@ interface SelectionCartContextValue {
 
   changeQuantity: (id: string, quantity: number) => void;
   toggleDrawingNeed: (id: string, needDrawing: boolean) => void;
+  setDrawingTypes: (id: string, value: CadDrawingType[]) => void;
 
-  /*
-   * 批量设置当前清单中所有产品的图纸需求状态。
-   *
-   * 点击“申请图纸”时统一设置为 true；
-   * 提交成功后统一恢复为 false。
-   */
+  /* Compatibility action for older entry points; configuration requests retain each saved selection. */
   setAllDrawingNeeds: (needDrawing: boolean) => void;
 
   getItem: (
@@ -272,29 +273,26 @@ function buildCartText(
 
   const lines = getCartGroups(items).flatMap((group, groupIndex) => group.items.map((item, partIndex) => {
     const number = group.accessories.length ? `${groupIndex + 1}.${partIndex + 1}` : `${groupIndex + 1}`;
-    const isPumpSelection = item.sourceType === "pump-selection";
-    const localizedProductName = isPumpSelection
+    const isProductSelection = item.sourceType === "pump-selection" || item.sourceType === "tubing-selection";
+    const localizedProductName = isProductSelection
       ? getLocalizedFilterOptionLabel(item.productName, locale)
       : item.productName;
     const sourceLabel = getCartText(
       locale,
-      isPumpSelection ? "Products" : "Fitting Replacement Search",
+      isProductSelection ? "Products" : "Fitting Replacement Search",
       item.sourceLabel,
     );
 
-    if (isPumpSelection) {
+    if (isProductSelection) {
       return [
         `#${number}`,
         `${getCartText(locale, "Source", "来源")}: ${sourceLabel}`,
         `${getCartText(locale, "Product Type", "产品类型")}: ${localizedProductName}`,
         `${getCartText(locale, "Product Model", "产品型号")}: ${item.foreachModel}`,
+        ...(item.eaPumpConfiguration ? [eaPumpInquirySummary(item.eaPumpConfiguration, locale)] : []),
         ...(item.bundleId ? [`${getCartText(locale, "Product Code", "商品编码")}: ${hardTubeProductCodeText(item, getCartText(locale, "To be confirmed", "待确认"))}`] : []),
         `${getCartText(locale, "Quantity", "数量")}: ${item.quantity}`,
-        `${getCartText(locale, "2D Drawing", "2D 图纸")}: ${
-          item.needDrawing
-            ? getCartText(locale, "Required", "需要")
-            : getCartText(locale, "Not Required", "暂不需要")
-        }`,
+        drawingRequirementsLine(item, locale),
       ].join("\n");
     }
 
@@ -306,11 +304,7 @@ function buildCartText(
       `${getCartText(locale, "Foreach Model", "恒永达型号")}: ${item.foreachModel}`,
       `${getCartText(locale, "Compatible Models", "兼容编码")}: ${item.competitorModels.join(" / ") || "-"}`,
       `${getCartText(locale, "Quantity", "数量")}: ${item.quantity}`,
-      `${getCartText(locale, "2D Drawing", "2D 图纸")}: ${
-        item.needDrawing
-          ? getCartText(locale, "Required", "需要")
-          : getCartText(locale, "Not Required", "暂不需要")
-      }`,
+      drawingRequirementsLine(item, locale),
     ].join("\n");
   }));
 
@@ -325,6 +319,8 @@ export function SelectionCartProvider({
   const locale = getLocaleFromPathname(pathname);
 
   const [items, setItems] = useState<SelectionCartItem[]>([]);
+  const currentItems = useRef(items);
+  useEffect(() => { currentItems.current = items; }, [items]);
   const [isOpen, setIsOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
   const [printTime, setPrintTime] = useState("");
@@ -350,7 +346,7 @@ export function SelectionCartProvider({
               return {
                 ...item,
                 quantity: Math.max(1, Number(item.quantity || 1)),
-                needDrawing: Boolean(item.needDrawing),
+                needDrawing: Boolean(item.needDrawing), drawingTypes: getDrawingTypes(item),
               };
             }))
         );
@@ -402,7 +398,7 @@ export function SelectionCartProvider({
         sourceSection: "global_selection_cart",
         products: items.map((item) => ({
           productId: item.productCode,
-          productName: item.foreachModel,
+          productName: item.flangedConfiguration ? item.productName : item.foreachModel,
           productCategory: item.productName,
           productSeries: item.sourceType,
         })),
@@ -431,6 +427,26 @@ export function SelectionCartProvider({
     const quantity = Math.max(1, Number(input.quantity || 1));
     const existingItem = items.find((item) => item.id === id);
 
+    if (input.flangedConfiguration) {
+      const invalid = validateFlangedChoice(normalizeFlangedChoice(input.flangedConfiguration.choice));
+      if (invalid) throw new Error(invalid);
+      if (!input.drawingAttachment) throw new Error("请先生成配置 PDF 附件。");
+      const live = currentItems.current;
+      const existing = live.find(item => item.id === id);
+      if (existing?.flangedConfiguration && JSON.stringify(existing.flangedConfiguration) !== JSON.stringify(input.flangedConfiguration)) {
+        throw new Error("清单中已有不同内容的同名版本，请保存为新版本后重新加入。");
+      }
+      // Persist this versioned item before reporting success. Other products retain
+      // the existing in-memory fallback when browser storage is unavailable.
+      const next = existing ? live.map(item => item.id === id ? { ...item, drawingAttachment: input.drawingAttachment, needDrawing: true, drawingTypes: normalizeDrawingTypes(input.drawingTypes) } : item)
+        : [...live, { ...input, id, quantity, needDrawing: true, drawingTypes: normalizeDrawingTypes(input.drawingTypes) }];
+      try { window.localStorage.setItem(GLOBAL_CART_STORAGE_KEY, JSON.stringify(next)); }
+      catch { throw new Error("清单保存失败，请检查浏览器存储权限或可用空间。配置尚未加入清单。"); }
+      currentItems.current = next; setItems(next);
+      if (!existing) trackAddToInquiryList({ locale, sourceSection: input.sourceType, listSize: next.length, productId: input.productCode, productName: input.productName, productCategory: input.productName, productSeries: input.sourceType });
+      return;
+    }
+
     setItems((prev) => {
       const currentItem = prev.find((item) => item.id === id);
 
@@ -442,6 +458,7 @@ export function SelectionCartProvider({
             ...item,
             quantity: item.quantity + quantity,
             needDrawing: Boolean(item.needDrawing || input.needDrawing),
+            drawingTypes: input.drawingTypes === undefined ? getDrawingTypes(item) : normalizeDrawingTypes(input.drawingTypes),
           };
         });
       }
@@ -452,7 +469,7 @@ export function SelectionCartProvider({
           ...input,
           id,
           quantity,
-          needDrawing: Boolean(input.needDrawing),
+          needDrawing: Boolean(input.needDrawing), drawingTypes: getDrawingTypes(input),
         },
       ];
     });
@@ -501,7 +518,7 @@ export function SelectionCartProvider({
       sourceSection: "global_selection_cart",
       listSize: Math.max(0, items.length - removedItems.length),
       productId: removedItem.productCode,
-      productName: removedItem.foreachModel,
+      productName: removedItem.flangedConfiguration ? removedItem.productName : removedItem.foreachModel,
       productCategory: removedItem.productName,
       productSeries: removedItem.sourceType,
     }));
@@ -526,7 +543,7 @@ export function SelectionCartProvider({
         sourceSection: "global_selection_cart_clear",
         listSize: Math.max(0, items.length - index - 1),
         productId: item.productCode,
-        productName: item.foreachModel,
+        productName: item.flangedConfiguration ? item.productName : item.foreachModel,
         productCategory: item.productName,
         productSeries: item.sourceType,
       });
@@ -535,6 +552,10 @@ export function SelectionCartProvider({
 
   function changeQuantity(id: string, quantity: number) {
     setItems(prev => changeCartGroupQuantity(prev, id, quantity));
+  }
+
+  function setDrawingTypes(id: string, value: CadDrawingType[]) {
+    setItems(prev => changeCartGroupDrawingTypes(prev, id, value));
   }
 
   function toggleDrawingNeed(id: string, needDrawing: boolean) {
@@ -556,7 +577,7 @@ export function SelectionCartProvider({
 
         return {
           ...item,
-          needDrawing,
+          needDrawing, drawingTypes: needDrawing ? getDrawingTypes(item).length ? getDrawingTypes(item) : normalizeDrawingTypes(undefined, true) : [],
         };
       });
     });
@@ -625,6 +646,7 @@ export function SelectionCartProvider({
       clearCart,
       changeQuantity,
       toggleDrawingNeed,
+      setDrawingTypes,
       setAllDrawingNeeds,
       getItem,
       copyCartText,

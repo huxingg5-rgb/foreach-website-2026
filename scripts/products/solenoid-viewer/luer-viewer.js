@@ -197,12 +197,6 @@ function showDrawing() {
     const option = node('option', `${roleNames[part.family]} · ${part.model}`); option.value = part.model; select.append(option);
   }
   select.value = drawingModel;
-  const frame = $('drawing-frame');
-  frame.hidden = !product.drawingUrl;
-  if (!product.drawingUrl) {
-    frame.removeAttribute('src');
-    return;
-  }
   const url = `${product.drawingUrl}?v=${product.drawingSha256.slice(0, 12)}`;
   if ($('drawing-frame').dataset.model !== product.model) {
     $('drawing-frame').src = `${url}#toolbar=0&navpanes=0&scrollbar=1`; $('drawing-frame').dataset.model = product.model;

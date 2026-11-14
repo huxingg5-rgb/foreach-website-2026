@@ -58,5 +58,19 @@
       "ko": "아크릴(PMMA) 헤드의 FOREACH SM 피스톤 펌프 세 대를 나란히 배치한 모습, 오른쪽 펌프에는 측면 밸브 어셈블리 장착",
       "ru": "Три поршневых насоса FOREACH SM с акриловыми головками (PMMA) рядом; на правом насосе установлен боковой клапанный узел"
     }
+  },
+  {
+    "source": "sm-pmma-piston-pumps-batch-original.png",
+    "filename": "foreach-sm-pmma-miniature-piston-pumps-batch-transparent-heads.webp",
+    "width": 1500,
+    "height": 1500,
+    "alt": {
+      "zh": "SM 微型柱塞泵批量实拍，展示透明 PMMA 泵头、橙色封帽、泵体及电机线束",
+      "en": "Batch photograph of SM miniature piston pumps with transparent PMMA heads, orange caps, pump bodies and motor wiring",
+      "es": "Fotografía de un lote de bombas de pistón en miniatura SM con cabezales transparentes de PMMA, tapas naranjas, cuerpos de bomba y cableado de los motores",
+      "fr": "Photographie d’un lot de pompes à piston miniatures SM avec têtes transparentes en PMMA, bouchons orange, corps de pompe et câblage des moteurs",
+      "ko": "투명 PMMA 헤드, 주황색 캡, 펌프 본체 및 모터 배선이 보이는 SM 소형 피스톤 펌프 여러 대의 실물 사진",
+      "ru": "Фотография партии миниатюрных поршневых насосов SM с прозрачными головками из PMMA, оранжевыми колпачками, корпусами и проводами двигателей"
+    }
   }
 ]

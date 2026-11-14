@@ -4,6 +4,8 @@ import QuickConnectDetailContent from "./QuickConnectDetailContent";
 import QuickConnectQ20ZhContent from "./QuickConnectQ20ZhContent";
 import QuickConnectModelZhContent from "./QuickConnectModelZhContent";
 import HardTubeDetailContent from "./HardTubeDetailContent";
+import HardTubePlugDetailContent from "./HardTubePlugDetailContent";
+import { isHardTubePlug } from "@/data/products/detail/hard-tube-plugs";
 import { getQuickConnectRow } from "@/data/products/detail/quick-connect-model-guidance";
 import { fittingDetailText } from "@/data/products/detail/fitting-detail-copy.intl";
 import { fittingDetailView } from "./fitting-detail-view";
@@ -28,6 +30,7 @@ export function fittingSelectionTemplate(data: Identity) {
 /** Server composition: only translated presentation is serialized to the page.
  * SKU lookup, source specs, component layout and engineering assets stay shared. */
 export default function FittingLocalizedSelectionContent({data,locale}:{data:Identity;locale:TechnicalArticleLocale}) {
+  if (data.productTypeId === "hard-tube-fittings" && isHardTubePlug(data)) return <HardTubePlugDetailContent data={data} locale={locale} />;
   const content=fittingSelectionTemplate(data);
   if (locale === "zh-CN") return content;
   return <div className={styles.content} lang={locale} data-fitting-localized-selection={data.productTypeId} data-fitting-content-source="current-chinese-detail">

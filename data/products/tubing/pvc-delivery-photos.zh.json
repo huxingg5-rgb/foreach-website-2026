@@ -1,0 +1,101 @@
+{
+  "imageRoot": "/images/products/tubing/pvc-tubing/delivery/",
+  "photos": {
+    "materialHandling": {
+      "source": "codex-clipboard-184fdca8-51b4-4a55-bf57-23c670a651e8.jpg",
+      "filename": "tubing-material-handling-equipment.webp",
+      "width": 1500,
+      "height": 842,
+      "alt": "管材制造现场的料斗、原料处理设备及输送管路",
+      "caption": "原料处理与供料设备"
+    },
+    "extrusionControl": {
+      "source": "codex-clipboard-ab95bda8-5ef0-4546-87e6-54cb02412d04.jpg",
+      "filename": "tubing-extrusion-process-control.webp",
+      "width": 1500,
+      "height": 842,
+      "alt": "工作人员在管材挤出设备旁查看生产控制界面",
+      "caption": "挤出设备与生产参数核对"
+    },
+    "extrusionDie": {
+      "source": "codex-clipboard-f4f04189-d1bd-4553-bb8c-7ac531da1339.jpg",
+      "filename": "tubing-extrusion-die-outlet.webp",
+      "width": 1500,
+      "height": 842,
+      "alt": "透明管材从挤出模头出口进入后续成型工序的现场特写",
+      "caption": "管材挤出成型"
+    },
+    "coolingLine": {
+      "source": "codex-clipboard-0c737e3f-3a68-40e8-babc-936731488765.jpg",
+      "filename": "tubing-cooling-production-line.webp",
+      "width": 1500,
+      "height": 842,
+      "alt": "管材制造现场的连续冷却生产线及透明防护盖",
+      "caption": "连续冷却工序"
+    },
+    "onlineGauge": {
+      "source": "codex-clipboard-1c1d8939-2765-43fc-a904-187bd1c8eac8.jpg",
+      "filename": "tubing-inline-diameter-gauge.webp",
+      "width": 1500,
+      "height": 842,
+      "alt": "透明管材经导向轮通过在线测径设备的制造现场",
+      "caption": "在线测径设备"
+    },
+    "measurementScreen": {
+      "source": "codex-clipboard-1eccbd72-8e4d-4dc8-834d-708e77fe88ab.jpg",
+      "filename": "tubing-diameter-monitoring-screen.webp",
+      "width": 1500,
+      "height": 842,
+      "alt": "管材在线测径界面，显示拍摄时的直径、椭圆度与变化曲线",
+      "caption": "尺寸监测界面（现场读数示例）"
+    },
+    "baggedTubing": {
+      "source": "codex-clipboard-4efc8a78-9749-493e-95ee-7816a66ef22e.jpg",
+      "filename": "pvc-tubing-bag-and-batch-label.webp",
+      "width": 1500,
+      "height": 1125,
+      "alt": "盘卷透明管材的独立袋装实拍，袋上可见商品编码、型号、数量和批次标签",
+      "caption": "盘卷袋装与批次标签"
+    },
+    "openBox": {
+      "source": "codex-clipboard-e9bff786-98ef-48b7-92a8-49eefcd3e903.jpg",
+      "filename": "pvc-tubing-open-box-protection.webp",
+      "width": 1500,
+      "height": 1125,
+      "alt": "纸盒内放置袋装盘卷管材与缓冲材料的开箱实拍",
+      "caption": "盒内盘卷与缓冲防护"
+    },
+    "closedBox": {
+      "source": "codex-clipboard-7fe49c79-ed34-4983-8972-d88f2596417c.jpg",
+      "filename": "pvc-tubing-halotube-closed-box.webp",
+      "width": 1500,
+      "height": 1125,
+      "alt": "恒永达 Halotube 管材包装纸盒的外观实拍",
+      "caption": "Halotube 盒装外观"
+    },
+    "cartonSealing": {
+      "source": "codex-clipboard-16a8ed7e-ff10-4d42-8f66-d1d666b43a36.jpg",
+      "filename": "tubing-shipment-carton-sealing.webp",
+      "width": 1500,
+      "height": 1125,
+      "alt": "工作人员在打包台使用胶带封箱器封合恒永达发货外箱的实拍",
+      "caption": "外箱封箱"
+    },
+    "shipmentCartons": {
+      "source": "codex-clipboard-e8bb7233-fe05-4469-947f-b31b2873177c.jpg",
+      "filename": "tubing-packed-shipping-cartons.webp",
+      "width": 1500,
+      "height": 1125,
+      "alt": "恒永达已封装发货纸箱的实拍，外箱贴有装箱标签与检验标识",
+      "caption": "成箱包装与装箱标签"
+    },
+    "usageInstructions": {
+      "source": "codex-clipboard-feada581-23e8-472a-9474-aac1c1c508a2.jpg",
+      "filename": "tubing-packaged-use-warning-instructions.webp",
+      "width": 1500,
+      "height": 1125,
+      "alt": "盘卷管材包装盒中放置的管材使用警示说明示例",
+      "caption": "随货使用警示说明（示例）"
+    }
+  }
+}

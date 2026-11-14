@@ -2,6 +2,7 @@ import type { SelectionLocale } from "@/data/products/selection/product-selectio
 import { getPistonPumpLocalizedContent } from "@/data/products/detail/applications/piston-pump-locales";
 import { getTmPumpGallery } from "@/data/products/detail/tm-pump-gallery";
 import { getSmPmmaPumpGallery } from "@/data/products/detail/sm-pmma-pump-gallery";
+import { getEaPumpGallery } from "@/data/products/detail/ea-pump-gallery";
 import { getPistonPumpMarketingCopy } from "@/data/products/piston-pump-marketing-copy";
 import { getPistonPumpIntroduction } from "@/data/products/detail/piston-pump-introductions";
 import { formatPistonPumpDisplayText, formatPistonPumpSpecLabel } from "@/data/products/detail/piston-pump-display-locale";
@@ -583,6 +584,7 @@ export function getPumpSeriesProductDetailAdapter(
       ...localized,
       ...getTmPumpGallery(slug, locale, base.additionalImages, base.additionalImageAlts),
       ...getSmPmmaPumpGallery(slug, locale, base.additionalImages, base.additionalImageAlts),
+      ...getEaPumpGallery(slug, locale, base.additionalImages, base.additionalImageAlts),
       __locale: locale,
       model: localized.heading,
       name: localized.heading,
@@ -652,12 +654,13 @@ export function getPumpSeriesProductDetailAdapter(
     commonApplications: getCommonApplications(candidates, locale),
     ...(pistonPumpApplicationAreas.length ? { applicationAreas: pistonPumpApplicationAreas } : {}),
     ...(compactContent ? { compactDetailContent: true, applicationDetails: compactContent.applicationDetails, seoTitle: compactContent.seoTitle, metaDescription: compactContent.metaDescription, ...(toText(record.productId).startsWith("sm-") ? { datasheetId: "sm-series-en" } : {}) } : {}),
-    ...(eaContent ? { eaDetailContent: true, applicationDetails: eaContent.applicationDetails } : {}),
+    ...(eaContent ? { eaDetailContent: true, applicationDetails: eaContent.applicationDetails, ...(locale === "en" ? { datasheetId: "ea-series-en" } : {}) } : {}),
 
     mainImage,
     additionalImages,
     ...getTmPumpGallery(slug, locale, additionalImages),
     ...getSmPmmaPumpGallery(slug, locale, additionalImages),
+    ...getEaPumpGallery(slug, locale, additionalImages),
 
     showConfigurator: false,
     showDatasheetRequest: false,

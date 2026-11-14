@@ -116,9 +116,8 @@ export type ProductDetailZhRecord = {
   show3DRequest: boolean;
 
   /**
-   * Optional registry key for a real product datasheet. Runtime locale logic
-   * decides whether the resource UI is rendered; Chinese detail pages ignore
-   * this field.
+   * Optional registry key for a real product datasheet. The resource adapter
+   * prefers the Chinese file on Chinese pages and labels the supplied file language.
    */
   datasheetId?: string;
 
@@ -129,7 +128,7 @@ export type ProductDetailZhRecord = {
   applicationDetails?: ProductApplicationsContent;
 
   /**
-   * Defaults to available on non-Chinese product detail pages. Set false only
+   * Defaults to available on product detail pages. Set false only
    * when CAD requests are explicitly unavailable for a product.
    */
   cadRequestAvailable?: boolean;

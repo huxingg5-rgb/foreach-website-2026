@@ -1,0 +1,11 @@
+.workspace { min-width: 0; }
+.workspace [hidden] { display: none; }
+.workspace .title { font-size: 20px; }
+.summary { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+
+@media (min-width: 1025px) {
+  .workspace .title { font-size: clamp(20px, calc(0.72vw + 10.16px), 24px); }
+}
+@media (max-width: 768px) {
+  .workspace .title { font-size: 17px; }
+}

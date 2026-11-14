@@ -1,4 +1,5 @@
 import { replaceSmtp4CompactItems } from "../../data/search/smtp4-search";
+import { replaceHardTubePlugCompactItems } from "../../data/search/hard-tube-plug-search";
 import {buildCompactSolenoidSearchItems, isSolenoidSearchHref} from "../../data/search/solenoid-search";
 import { getLocalizedApplicationDocument } from '../../services/applications/international-localized';
 import { localizedApplicationHref } from '../../data/applications/international-locales/routes';
@@ -1123,7 +1124,8 @@ function getOutputPath(locale: SearchLocale): string {
 
 function writeOrCheckOutput(outputPath: string, output: string) {
   const locale = /global-search-index\.([a-z-]+)\.v3\.json$/i.exec(outputPath)?.[1] || "zh-CN";
-  output = JSON.stringify(replaceSmtp4CompactItems(replaceSmtp2CompactItems(JSON.parse(output), locale), locale));
+  if (!process.argv.includes("--hard-tube-plugs-only")) output = JSON.stringify(replaceSmtp4CompactItems(replaceSmtp2CompactItems(JSON.parse(output), locale), locale));
+  output = JSON.stringify(replaceHardTubePlugCompactItems(JSON.parse(output), locale));
   if (CHECK_MODE) {
     const currentOutput = fs.existsSync(outputPath)
       ? fs.readFileSync(outputPath, "utf8")
@@ -1150,6 +1152,14 @@ function getCounts(items: CompactSearchItem[]) {
 }
 
 async function main() {
+  if (process.argv.includes("--hard-tube-plugs-only")) {
+    for (const locale of REQUESTED_SEARCH_LOCALES) {
+      const outputPath=getOutputPath(locale);
+      writeOrCheckOutput(outputPath,fs.readFileSync(outputPath,"utf8"));
+      if(locale === "zh-CN") writeOrCheckOutput(LEGACY_OUTPUT_PATH,fs.readFileSync(LEGACY_OUTPUT_PATH,"utf8"));
+    }
+    console.log("Hard-tube plug compact search updated in six locales; other entries preserved");return;
+  }
   if (process.argv.includes("--smtp2-only") || process.argv.includes("--smtp4-only")) {
     for (const locale of REQUESTED_SEARCH_LOCALES) {
       const outputPath = getOutputPath(locale);

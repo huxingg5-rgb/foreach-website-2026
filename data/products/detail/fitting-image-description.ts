@@ -1,5 +1,6 @@
 import catalog from "./fitting-image-catalog.generated.json";
 import photoAliases from "./fitting-photo-url-aliases.generated.json";
+import { isHardTubePlug, getHardTubePlugPresentation } from "./hard-tube-plugs";
 import { buildFittingImageAlt, type FittingImageRecord } from "./fitting-image-copy";
 
 const records = catalog as FittingImageRecord[];
@@ -11,6 +12,10 @@ const byUrl = new Map(records.flatMap(record => [
 
 /** A registry match is required: never infer sizes or materials from SKU digits. */
 export function getFittingMainImageAlt(product: Record<string, unknown>, locale: string): string | undefined {
+  if (isHardTubePlug(product)) {
+    const p = getHardTubePlugPresentation(product, locale);
+    return `${p.model} ${p.name} — ${p.material} ${p.color} — ${p.copy.image}`;
+  }
   const model = String(product.foreachModel || product.model || "").trim().toUpperCase();
   // Some localized adapters format the displayed model with spaces; image URLs
   // remain stable identifiers and also cover selection cards without a model.

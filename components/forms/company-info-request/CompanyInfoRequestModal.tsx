@@ -251,6 +251,9 @@ interface CompanyInfoRequestModalProps {
   /* 可选业务字段；未传时保持原有资料申请表单。 */
   renderAttachments?: (disabled: boolean) => ReactNode;
 
+  /* Business attachments must be ready before submitting this request. */
+  submissionBlocked?: boolean;
+
   /* 当前申请条目 */
   items: CompanyInfoRequestItem[];
 
@@ -314,6 +317,7 @@ export default function CompanyInfoRequestModal({
   description,
   copyOverrides,
   renderAttachments,
+  submissionBlocked = false,
   items,
   emptyTitle,
   emptyDescription,
@@ -516,7 +520,7 @@ export default function CompanyInfoRequestModal({
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!hasItems || isSubmitting) return;
+    if (!hasItems || isSubmitting || submissionBlocked) return;
 
     const email = formValue.email.trim();
 
@@ -937,6 +941,7 @@ export default function CompanyInfoRequestModal({
                 type="submit"
                 disabled={
                   !hasItems ||
+                  submissionBlocked ||
                   isSubmitting ||
                   isSendingEmailCode
                 }

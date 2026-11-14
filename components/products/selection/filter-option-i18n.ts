@@ -1,4 +1,5 @@
 import { getValvelessPumpNames } from "@/data/products/detail/valveless-pump-names";
+import { hardTubePlugCopy } from "@/data/products/detail/hard-tube-plugs";
 export type ProductFilterLocale = "zh" | "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 
 type FilterOptionLabelMap = Partial<Record<ProductFilterLocale, string>>;
@@ -767,6 +768,8 @@ export function getLocalizedFilterOptionLabel(value: string | number | null | un
   const rawValue = String(value ?? "").trim();
   const normalizedLocale = normalizeProductFilterLocale(locale);
   const canonicalValue = FILTER_OPTION_LABEL_ALIASES[rawValue] ?? rawValue;
+  const plugSeriesIndex = hardTubePlugCopy.zh.names.indexOf(canonicalValue);
+  if (plugSeriesIndex >= 0) return hardTubePlugCopy[normalizedLocale === "zh-CN" ? "zh" : normalizedLocale].names[plugSeriesIndex];
   const valvelessNames = getValvelessPumpNames(normalizedLocale);
   if (valvelessNames) {
     if (["无阀泵", "无阀计量泵", "Valveless Pump", "Valveless Piston Pumps"].includes(canonicalValue)) return valvelessNames.categoryName;

@@ -1,6 +1,10 @@
 import { datasheetEnItems } from "../../resources/datasheets.en";
+import { datasheetZhItems } from "../../resources/datasheets.zh";
+import { getAssemblyEntryPreset } from "../configurator/tubing-assembly-entry";
+import { isTubingMaterial } from "../selection/tubing-selection-routes";
 
 export const PRODUCT_DETAIL_RESOURCE_LOCALES = [
+  "zh",
   "en",
   "es",
   "fr",
@@ -16,6 +20,14 @@ export type ProductDatasheet = {
   file: string;
   shortTitle: string;
   title: string;
+  language?: "en" | "zh";
+  kind?: "datasheet" | "catalog";
+};
+
+export const PRODUCT_CATALOG_EN = {
+  id: "foreach-product-catalog-en",
+  file: "/downloads/resources/catalogs/en/EN-B0BED2006-JIAN.pdf",
+  title: "FOREACH Full Product Catalog (English)",
 };
 
 /*
@@ -35,6 +47,12 @@ export const PRODUCT_DATASHEETS: Record<string, ProductDatasheet> = {
     file: datasheetEnItems.find(item => item.id === "rpl-p635-p15-valveless-pump")!.downloadHref!,
     shortTitle: "RPL-P6.35 / RPL-P15 (English, 001 / 2025-07)",
     title: datasheetEnItems.find(item => item.id === "rpl-p635-p15-valveless-pump")!.title,
+  },
+  "ea-series-en": {
+    id: "ea-series-en",
+    file: datasheetEnItems.find(item => item.id === "ea-piston-pump")!.downloadHref!,
+    shortTitle: "EA",
+    title: "EA Piston Pump Datasheet",
   },
   "sm-series-en": {
     id: "sm-series-en",
@@ -72,6 +90,41 @@ export function getProductDatasheet(
   }
 
   return PRODUCT_DATASHEETS[normalizedId] ?? null;
+}
+
+/** Resolve only real files already published in the site's resource catalog. */
+export function getDetailDatasheet(data: { slug?: string; model?: string; productTypeId?: string; datasheetId?: string }, locale: string): ProductDatasheet | null {
+  const slug = String(data.slug || "").toLowerCase();
+  const model = String(data.model || "").toUpperCase();
+  const type = String(data.productTypeId || "");
+  const ids = [
+    [/^ea-/, "ea-piston-pump"], [/^sm-/, "sm-piston-pump"],
+    [/^dpl30h(?:-|$)/, "dpl30h-diaphragm-pump"], [/^dpl30(?:-|$)/, "dpl30-diaphragm-pump"],
+    [/^dpl60(?:-|$)/, "dpl60-diaphragm-pump"], [/^dpgl800(?:-|$)/, "dpgl800-diaphragm-pump"],
+    [/^rpl-p(?:635|15)(?:-|$)/, locale === "zh" && /^rpl-p635/.test(slug) ? "rpl-p635-valveless-pump" : "rpl-p635-p15-valveless-pump"],
+    [/^smtp[24](?:-|$)/, "smtp2-smtp4-pipetting-pump"],
+    [/^hld3(?:-|$)/, "hld3-syringe-pump"], [/^hld6(?:-|$)/, "hld6-syringe-pump"],
+    [/^hmd3(?:-|$)/, "hmd3-syringe-pump"], [/^hmd6(?:-|$)/, "hmd6-syringe-pump"],
+    [/^mrv3(?:-|$)/, "mrv3-multi-channel-rotary-valve"], [/^(?:hp|high-pressure-valves)$/, "hp-2-position-6-port-high-pressure-valve"],
+    [/^abd(?:-|$)/, "abd-air-bubble-detector"], [/^pdm5(?:-|$)/, "pdm5-pressure-sensor"],
+  ] as const;
+  const isTubingCatalog = type.includes("fitting") || type.includes("tubing")
+    || ["female-thread-adapters", "filters", "check-valves"].includes(type)
+    || isTubingMaterial(slug) || Boolean(getAssemblyEntryPreset(slug));
+  const id = isTubingCatalog ? "fittings-and-tubing-catalog"
+    : type === "solenoid-valves" || /^SV10(?:-|\b)/.test(model) ? "6010-solenoid-valve"
+    : ids.find(([pattern]) => pattern.test(slug))?.[1];
+  const fromCatalog = (language: "zh" | "en") => {
+    const item = (language === "zh" ? datasheetZhItems : datasheetEnItems).find(row => row.id === id && row.actionType === "download" && row.downloadHref?.endsWith(".pdf"));
+    return item?.downloadHref ? { id: `${item.id}-${language}`, file: item.downloadHref, title: item.title,
+      shortTitle: item.title, language, kind: isTubingCatalog ? "catalog" as const : "datasheet" as const } : null;
+  };
+  // Chinese content may use its Chinese reference. Download menus on other
+  // locales list English documents only, without falling back to a Chinese PDF.
+  if (locale === "zh") return fromCatalog("zh") || fromCatalog("en") || getProductDatasheet(data.datasheetId);
+  const registered = getProductDatasheet(data.datasheetId);
+  return fromCatalog("en") || (registered && registered.language !== "zh" && registered.file.includes("/datasheets/en/")
+    ? { ...registered, language: "en" as const } : null);
 }
 
 type ProductDetailResourceCopy = {
@@ -127,6 +180,21 @@ const RESOURCE_COPY: Record<
   ProductDetailResourceLocale,
   ProductDetailResourceCopy
 > = {
+  zh: {
+    datasheetTab: "规格书", unavailableTitle: "暂无规格书", unavailableDescription: "可联系业务负责人获取本产品资料。",
+    viewDatasheet: title => `查看 ${title}`, downloadDatasheet: title => `下载 ${title} PDF`, previewLoading: "正在加载规格书…",
+    previousPage: "上一页", nextPage: "下一页", previousPageShort: "上一页", nextPageShort: "下一页", previewButton: "查看规格书",
+    previewDescription: title => `在线预览 ${title}。`, requestCad: "申请 CAD", cadTitle: "申请 CAD",
+    cadDescription: "填写公司信息并验证邮箱，我们会按所选产品与配置核对可提供的 CAD 文件。",
+    company: "公司名称", companyPlaceholder: "请输入公司名称", businessEmail: "工作邮箱", businessEmailPlaceholder: "请输入工作邮箱",
+    verificationCode: "验证码", verificationCodePlaceholder: "请输入六位验证码", sendCode: "发送验证码", resendCode: "重新发送",
+    sendingCode: "正在发送…", verifyEmail: "验证邮箱", verifyingEmail: "正在验证…", emailVerified: "邮箱已验证。", codeSent: "验证码已发送，请查收邮件。",
+    message: "补充说明（选填）", messagePlaceholder: "请说明所需 CAD 格式、配置或其他要求。", submitCad: "提交 CAD 申请", submittingCad: "正在提交…",
+    close: "关闭对话框", successTitle: "CAD 申请已提交", successDescription: "我们已收到申请并发送确认邮件，将按所选产品核对可提供的文件。", closeSuccess: "关闭",
+    invalidEmail: "请输入有效的工作邮箱。", companyRequired: "请输入公司名称。", requestCodeFirst: "请先获取验证码。", enterCode: "请输入完整的六位验证码。",
+    codeIncorrect: "验证码不正确。", codeExpired: "验证码已过期，请重新获取。", sendTooFrequently: "验证码已发送，请等待 60 秒后再试。",
+    verificationExpired: "邮箱验证已过期，请重新验证。", serviceUnavailable: "邮箱验证服务暂时不可用。", requestFailed: "提交未成功，请稍后重试。",
+  },
   en: {
     datasheetTab: "Datasheet",
     unavailableTitle: "Datasheet not yet available",

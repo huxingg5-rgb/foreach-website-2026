@@ -4,6 +4,7 @@ type AttachmentCopy = {
   label: string;
   add: string;
   hint: string;
+  reservedHint: string;
   selected: string;
   remove: string;
   tooMany: string;
@@ -16,6 +17,7 @@ type AttachmentCopy = {
 const copies: Record<LocaleCode, AttachmentCopy> = {
   "zh-CN": {
     label: "附件（选填）", add: "添加附件", selected: "已选附件", remove: "移除",
+    reservedHint: "已自动附加 {count} 个配置 PDF，可再添加 {remaining} 个附件；上述大小限制包含配置 PDF。",
     hint: "可添加图纸、规格要求或参考图片，最多 5 个文件，合计不超过 20 MB。支持 PDF、Office 文档、JPG/PNG/WebP、ZIP/RAR、DXF/DWG。",
     tooMany: "最多添加 5 个附件。", empty: "不能添加空文件。",
     unsupported: "请选择支持的文档、图片、压缩包或 CAD 文件。",
@@ -23,6 +25,7 @@ const copies: Record<LocaleCode, AttachmentCopy> = {
   },
   en: {
     label: "Attachments (Optional)", add: "Add Attachments", selected: "Selected Attachments", remove: "Remove",
+    reservedHint: "Configuration PDFs attached automatically: {count}. Up to {remaining} additional files; the total size limit includes the configuration PDFs.",
     hint: "Add drawings, specifications, or reference images. Up to 5 files, 20 MB total. Supports PDF, Office documents, JPG/PNG/WebP, ZIP/RAR, and DXF/DWG.",
     tooMany: "Attach up to 5 files.", empty: "Empty files cannot be attached.",
     unsupported: "Choose a supported document, image, archive, or CAD file.",
@@ -30,6 +33,7 @@ const copies: Record<LocaleCode, AttachmentCopy> = {
   },
   es: {
     label: "Archivos adjuntos (opcional)", add: "Añadir archivos", selected: "Archivos seleccionados", remove: "Eliminar",
+    reservedHint: "PDF de configuración adjuntos automáticamente: {count}. Puede añadir {remaining} archivos más; el límite de tamaño total incluye los PDF de configuración.",
     hint: "Añada planos, especificaciones o imágenes de referencia. Máximo 5 archivos y 20 MB en total. Se admiten PDF, documentos de Office, JPG/PNG/WebP, ZIP/RAR y DXF/DWG.",
     tooMany: "Puede adjuntar un máximo de 5 archivos.", empty: "No se pueden adjuntar archivos vacíos.",
     unsupported: "Seleccione un documento, imagen, archivo comprimido o archivo CAD compatible.",
@@ -37,6 +41,7 @@ const copies: Record<LocaleCode, AttachmentCopy> = {
   },
   fr: {
     label: "Pièces jointes (facultatif)", add: "Ajouter des fichiers", selected: "Fichiers sélectionnés", remove: "Supprimer",
+    reservedHint: "PDF de configuration joints automatiquement : {count}. Vous pouvez ajouter {remaining} fichiers ; la limite de taille totale inclut les PDF de configuration.",
     hint: "Ajoutez des plans, des spécifications ou des images de référence. Maximum 5 fichiers et 20 Mo au total. Formats acceptés : PDF, documents Office, JPG/PNG/WebP, ZIP/RAR et DXF/DWG.",
     tooMany: "Vous pouvez joindre jusqu’à 5 fichiers.", empty: "Les fichiers vides ne peuvent pas être joints.",
     unsupported: "Choisissez un document, une image, une archive ou un fichier CAO compatible.",
@@ -44,6 +49,7 @@ const copies: Record<LocaleCode, AttachmentCopy> = {
   },
   ko: {
     label: "첨부 파일(선택)", add: "파일 첨부", selected: "선택한 첨부 파일", remove: "삭제",
+    reservedHint: "구성 PDF {count}개가 자동 첨부되었습니다. 파일을 {remaining}개 더 추가할 수 있으며, 총 용량 제한에는 구성 PDF가 포함됩니다.",
     hint: "도면, 사양서 또는 참고 이미지를 첨부할 수 있습니다. 최대 5개 파일, 총 20 MB까지 가능합니다. PDF, Office 문서, JPG/PNG/WebP, ZIP/RAR, DXF/DWG를 지원합니다.",
     tooMany: "파일은 최대 5개까지 첨부할 수 있습니다.", empty: "빈 파일은 첨부할 수 없습니다.",
     unsupported: "지원되는 문서, 이미지, 압축 파일 또는 CAD 파일을 선택해 주세요.",
@@ -51,6 +57,7 @@ const copies: Record<LocaleCode, AttachmentCopy> = {
   },
   ru: {
     label: "Вложения (необязательно)", add: "Добавить файлы", selected: "Выбранные файлы", remove: "Удалить",
+    reservedHint: "Автоматически прикреплено PDF конфигурации: {count}. Можно добавить ещё {remaining} файла; общий лимит размера включает PDF конфигурации.",
     hint: "Добавьте чертежи, спецификации или изображения для справки. Не более 5 файлов общим размером до 20 МБ. Поддерживаются PDF, документы Office, JPG/PNG/WebP, ZIP/RAR и DXF/DWG.",
     tooMany: "Можно прикрепить не более 5 файлов.", empty: "Нельзя прикреплять пустые файлы.",
     unsupported: "Выберите документ, изображение, архив или файл CAD поддерживаемого формата.",

@@ -1,0 +1,31 @@
+{
+  "HSF-U28-16-PK-N": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hsf-u28-16-pk-n.fcad.gz",
+    "sourcePart": "441-09-00260",
+    "sourceMethod": "Rhino native STEP tessellation",
+    "meshSha256": "e7f6d811df577d5e74ee877d253336b56a64d383faa1038e1770a4be305d5e00",
+    "sourceSha256": "a651eebda572da3dc2697d1322fc37414a6ad50ed3a6e9f7c6864a39646077ce",
+    "toleranceMm": 0.003,
+    "nativeSizeMm": [
+      8.1999998,
+      20.5,
+      8.1999998
+    ],
+    "drawingDiameterMm": 8.2
+  },
+  "HSF-U28-32-PEEK-N": {
+    "model3dUrl": "/models/products/tubing-assemblies/cad/assembly-hsf-u28-32-peek-n.fcad.gz",
+    "sourcePart": "443-02-00758",
+    "sourceMethod": "Rhino native STEP tessellation",
+    "meshSha256": "c46f4a551982578772cd7b20c252aadc01455c18c2ef50a121fae5d1efe7a271",
+    "sourceSha256": "6b12157373c259ba410c1938cdaa7a2cc7373461b8d0521edbba513e7d0da9e3",
+    "toleranceMm": 0.003,
+    "nativeSizeMm": [
+      8.1999998,
+      18.1000004,
+      8.1999998
+    ],
+    "drawingDiameterMm": 8.5,
+    "reviewNote": "Native STEP maximum diameter is 8.2 mm; formal PDF specifies 8.5 mm. Source geometry is preserved without scaling."
+  }
+}

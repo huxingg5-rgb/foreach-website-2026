@@ -284,7 +284,7 @@
       "sourceFile": "两件套公鲁尔接头/LPS固定锁圈公鲁尔接头/LPS-16.stp",
       "sourceSha256": "53f7ed8da1867c5ecb8b3edbf3d70b5c7a3b415207d984aeb2ddab47ec070f4f",
       "itemNumber": "443-02-00297",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lps-16-pp-o.pdf",
       "drawingSha256": "85b970165fd7be15ae10c4a7902c73dc593f5bf336b58f3ef52fae946cf08277"
     },
     "LS-16D-PP-N": {
@@ -300,7 +300,7 @@
       "sourceFile": "443-02-00154-C.stp",
       "sourceSha256": "a223d79babc8ea878d71f99892e22f704a44b82132700d26d4b75c9ef703f8b9",
       "itemNumber": "443-02-00154",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/ls-16d-pp-n.pdf",
       "drawingSha256": "c5dc284163a4c813e86e7a9c1565b8befb8e06e9e640d18870c7d4f55979f0d6"
     },
     "LS-24D-PP-N": {
@@ -316,7 +316,7 @@
       "sourceFile": "443-02-00155-C.stp",
       "sourceSha256": "464a94ea89e6a34e73d28186242b7801245b7f06ced04319cdf47c926fc9dc2b",
       "itemNumber": "443-02-00155",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/ls-24d-pp-n.pdf",
       "drawingSha256": "c8ec863ee9767d86d38db0e3a75d105632fe383c76c4f475cc402363433a6749"
     },
     "LS-32D-PP-N": {
@@ -332,7 +332,7 @@
       "sourceFile": "443-02-00156-C.stp",
       "sourceSha256": "a709846c8abd27ff8a6e7630f6847b1c06635186219eb249f7d1cd140a5eda52",
       "itemNumber": "443-02-00156",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/ls-32d-pp-n.pdf",
       "drawingSha256": "16c094860edd65e6ed8d3b40d92b4ea82715dae807f99c16b4de7ff4e1142803"
     },
     "LS-16D-PA-W": {
@@ -348,7 +348,7 @@
       "sourceFile": "443-02-00268-C.stp",
       "sourceSha256": "4d15560bda80183569a1261abebcddd27ecd3717a52965da9116be8eb69851ed",
       "itemNumber": "443-02-00268",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/ls-16d-pa-w.pdf",
       "drawingSha256": "afb9d8b1fbba34820c40f19b91a2c4eca2a332e1c0c17080917f1a389b2ee29f"
     },
     "LS-24D-PA-W": {
@@ -364,7 +364,7 @@
       "sourceFile": "443-02-00269-C.stp",
       "sourceSha256": "ea705860644ceae1c585a3ae21bdf9e9c9028d09d71cf5a8def2c4f6b647b343",
       "itemNumber": "443-02-00269",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/ls-24d-pa-w.pdf",
       "drawingSha256": "611a943fd5ec9a63539f0810151749656e93d7be732ca063da1a304ba4fc132e"
     },
     "LS-32D-PA-W": {
@@ -380,7 +380,7 @@
       "sourceFile": "443-02-00270-C.stp",
       "sourceSha256": "729f04e4ecf24ea6fb83a426b7c415ff43ce52c4678b8543528007961d0cdd55",
       "itemNumber": "443-02-00270",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/ls-32d-pa-w.pdf",
       "drawingSha256": "56f6d3ce8683cd0ecdc95428d6bcd9db00dbe86e7086c574f9aeeeaa901dad99"
     },
     "PMLS-U28-16D-PP-N": {
@@ -396,7 +396,7 @@
       "sourceFile": "443-02-00160-C.stp",
       "sourceSha256": "2330b6adb0951a4b272c79fff7d2e785bcb7a5a8dabd2ec530b93c7bf76f8d90",
       "itemNumber": "443-02-00160",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/pmls-u28-16d-pp-n.pdf",
       "drawingSha256": "1225289578535c124025d51e7f50ce6631bc54db1ac3a19b0dfab3ca99da1bbc"
     },
     "PMLS-U28-24D-PP-N": {
@@ -412,7 +412,7 @@
       "sourceFile": "443-02-00161-C.stp",
       "sourceSha256": "a936df3dcb1eea0a934a8991ded3475603d88414376d843dbcbb1e158e4daf26",
       "itemNumber": "443-02-00161",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/pmls-u28-24d-pp-n.pdf",
       "drawingSha256": "a486220dcc03b6b591ebd3e96b5a07a033b12d97fcc0b76e64e84dfdde59ffc5"
     },
     "PMLS-U28-16D-PA-W": {
@@ -428,7 +428,7 @@
       "sourceFile": "443-02-00271-C.stp",
       "sourceSha256": "2330b6adb0951a4b272c79fff7d2e785bcb7a5a8dabd2ec530b93c7bf76f8d90",
       "itemNumber": "443-02-00271",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/pmls-u28-16d-pa-w.pdf",
       "drawingSha256": "b56b3581e990cc5ed4e30471790550444f6a18a38da64e569c722aae92633bf1"
     },
     "PMLS-U28-24D-PA-W": {
@@ -444,7 +444,7 @@
       "sourceFile": "443-02-00272-C.stp",
       "sourceSha256": "d5e4d020320dc9f1efa691d773acb89cfd91619abe0175d09bc8012fcd3758c9",
       "itemNumber": "443-02-00272",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/pmls-u28-24d-pa-w.pdf",
       "drawingSha256": "6387cfb34be76236918d5c4b4b06d3ae49e58965a8c1517477f2b16d5e875ad9"
     },
     "PMLS-U28-32D-PA-W": {
@@ -460,7 +460,7 @@
       "sourceFile": "443-02-00273-C.stp",
       "sourceSha256": "89a18239541497a668b513a9fb3577a5e356e7ef083a221f4be5c5029d25715b",
       "itemNumber": "443-02-00273",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/pmls-u28-32d-pa-w.pdf",
       "drawingSha256": "10dbe25f00ff7711378ad593b99ceca7e846102314ea36f5c159f0f9ca52a194"
     },
     "LCR-PA-R": {
@@ -476,7 +476,7 @@
       "sourceFile": "443-02-00166-C.stp",
       "sourceSha256": "bb9309e3f301ac70d9da6056f2599c1bdd5319a1b38682b03e93f1053fecbbd3",
       "itemNumber": "443-02-00166",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lcr-pa-r.pdf",
       "drawingSha256": "e72ccaf118c1cbb1d2728bf213ec1ac40f6720a46ffd5bea2013ead743d4891d"
     },
     "LCR-PA-G": {
@@ -492,7 +492,7 @@
       "sourceFile": "443-02-00167-C.stp",
       "sourceSha256": "bb9309e3f301ac70d9da6056f2599c1bdd5319a1b38682b03e93f1053fecbbd3",
       "itemNumber": "443-02-00167",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lcr-pa-g.pdf",
       "drawingSha256": "8ce8e904c5a93a2a5fbf296201e177118e5de1f31a34196373769c3c92faf3ca"
     },
     "LCR-PA-U": {
@@ -508,7 +508,7 @@
       "sourceFile": "443-02-00168-C.stp",
       "sourceSha256": "bb9309e3f301ac70d9da6056f2599c1bdd5319a1b38682b03e93f1053fecbbd3",
       "itemNumber": "443-02-00168",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lcr-pa-u.pdf",
       "drawingSha256": "3ca18ca4119486f76a7908bc156d9ad3904f76434902f0fca86d0b46b5f154e1"
     },
     "LCR-PA-O": {
@@ -524,7 +524,7 @@
       "sourceFile": "443-02-00169-C.stp",
       "sourceSha256": "bb9309e3f301ac70d9da6056f2599c1bdd5319a1b38682b03e93f1053fecbbd3",
       "itemNumber": "443-02-00169",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lcr-pa-o.pdf",
       "drawingSha256": "eefafad7ed163ad02c6ea017b51d1b40e9f46457acba77a71ad4cab78df0708a"
     },
     "LCR-PA-Y": {
@@ -540,7 +540,7 @@
       "sourceFile": "443-02-00170-C.stp",
       "sourceSha256": "bb9309e3f301ac70d9da6056f2599c1bdd5319a1b38682b03e93f1053fecbbd3",
       "itemNumber": "443-02-00170",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lcr-pa-y.pdf",
       "drawingSha256": "5a88d7a9929a3026cf5c381b8a68539a38293bcba058da540efb28635f319981"
     },
     "LCR-PA-B": {
@@ -556,7 +556,7 @@
       "sourceFile": "443-02-00165-C.stp",
       "sourceSha256": "bb9309e3f301ac70d9da6056f2599c1bdd5319a1b38682b03e93f1053fecbbd3",
       "itemNumber": "443-02-00165",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lcr-pa-b.pdf",
       "drawingSha256": "dd29bd3c34b8c6aee5dd565ab7cdefd32e63f1a367b23d4b84772b91d54642e2"
     },
     "LCR-PA-W": {
@@ -572,7 +572,7 @@
       "sourceFile": "443-02-00164-C.stp",
       "sourceSha256": "bb9309e3f301ac70d9da6056f2599c1bdd5319a1b38682b03e93f1053fecbbd3",
       "itemNumber": "443-02-00164",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lcr-pa-w.pdf",
       "drawingSha256": "47700eb8594a97c594eb4e71e7bca186e4fd48cb1dd7be19ce29514135b573a2"
     },
     "LCR-PP-N": {
@@ -588,7 +588,7 @@
       "sourceFile": "443-02-00163-C.stp",
       "sourceSha256": "bb9309e3f301ac70d9da6056f2599c1bdd5319a1b38682b03e93f1053fecbbd3",
       "itemNumber": "443-02-00163",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lcr-pp-n.pdf",
       "drawingSha256": "8d86a910b7f9eecbb097f54bec7c42d3c860807159e71a33519b3fba5cc4d568"
     },
     "LNS-U28-PA-R": {
@@ -604,7 +604,7 @@
       "sourceFile": "443-02-00182-C.stp",
       "sourceSha256": "eb7c0f1a8b8d1b8991e99dd19329dfc47cd9914e7116d1ea27cf0cbed7672106",
       "itemNumber": "443-02-00182",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lns-u28-pa-r.pdf",
       "drawingSha256": "52ec3cb87c6fbd89590c8bb96d36aae4effdf68e71a39c5e13923949e6657bf1"
     },
     "LNS-U28-PA-G": {
@@ -620,7 +620,7 @@
       "sourceFile": "443-02-00183-C.stp",
       "sourceSha256": "eb7c0f1a8b8d1b8991e99dd19329dfc47cd9914e7116d1ea27cf0cbed7672106",
       "itemNumber": "443-02-00183",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lns-u28-pa-g.pdf",
       "drawingSha256": "8e44a39512f638da0b3d48e60707f11adcbfa67f4cf28d1ac2502584294c148a"
     },
     "LNS-U28-PA-U": {
@@ -636,7 +636,7 @@
       "sourceFile": "443-02-00184-C.stp",
       "sourceSha256": "eb7c0f1a8b8d1b8991e99dd19329dfc47cd9914e7116d1ea27cf0cbed7672106",
       "itemNumber": "443-02-00184",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lns-u28-pa-u.pdf",
       "drawingSha256": "03a145b2dfef05b96436e56e2f96de73ddebd52f34fcd63b0f91f0cb63cd0396"
     },
     "LNS-U28-PA-O": {
@@ -652,7 +652,7 @@
       "sourceFile": "443-02-00185-C.stp",
       "sourceSha256": "eb7c0f1a8b8d1b8991e99dd19329dfc47cd9914e7116d1ea27cf0cbed7672106",
       "itemNumber": "443-02-00185",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lns-u28-pa-o.pdf",
       "drawingSha256": "4967834c80ad9ab0734544ad7e9b1e5154e293e64d826842eb721e031fb5d2da"
     },
     "LNS-U28-PA-Y": {
@@ -668,7 +668,7 @@
       "sourceFile": "443-02-00186-C.stp",
       "sourceSha256": "eb7c0f1a8b8d1b8991e99dd19329dfc47cd9914e7116d1ea27cf0cbed7672106",
       "itemNumber": "443-02-00186",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lns-u28-pa-y.pdf",
       "drawingSha256": "8d72d006603fba09c723cf48ad53c710d4b0480a55b51808ed193632d9a1cdec"
     },
     "LNS-U28-PA-B": {
@@ -684,7 +684,7 @@
       "sourceFile": "443-02-00181-C.stp",
       "sourceSha256": "eb7c0f1a8b8d1b8991e99dd19329dfc47cd9914e7116d1ea27cf0cbed7672106",
       "itemNumber": "443-02-00181",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lns-u28-pa-b.pdf",
       "drawingSha256": "372e29aa10390b0c943026ef7b9513f6732f9af7ef0ec2bd226e2a09b0d739d4"
     },
     "LNS-U28-PA-W": {
@@ -700,7 +700,7 @@
       "sourceFile": "443-02-00180-C.stp",
       "sourceSha256": "eb7c0f1a8b8d1b8991e99dd19329dfc47cd9914e7116d1ea27cf0cbed7672106",
       "itemNumber": "443-02-00180",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lns-u28-pa-w.pdf",
       "drawingSha256": "c29eb0a6ca9b91981da602ae6874cbda6fb3f442a7400c24384ec5132b5d13e0"
     },
     "LNS-U28-PP-N": {
@@ -716,7 +716,7 @@
       "sourceFile": "443-02-00179-C.stp",
       "sourceSha256": "eb7c0f1a8b8d1b8991e99dd19329dfc47cd9914e7116d1ea27cf0cbed7672106",
       "itemNumber": "443-02-00179",
-      "drawingUrl": "",
+      "drawingUrl": "/models/products/fittings/luer-fittings/cad/drawings/lns-u28-pp-n.pdf",
       "drawingSha256": "89e2bc64e12d1f833c897cc8799e73795a100c0d6291e779da9fe5eb51984880"
     }
   }

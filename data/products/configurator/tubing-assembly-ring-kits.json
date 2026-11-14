@@ -1,0 +1,126 @@
+[
+  {
+    "model": "CL-1S-16",
+    "productCode": "809801",
+    "kind": "卡环组件",
+    "material": "SUS + PEEK",
+    "materialLabel": "SUS 压套 + PEEK 密封垫圈",
+    "color": "本色",
+    "tubeOuterDiameters": [
+      1.6
+    ],
+    "cadUrl": "/models/products/tubing-assemblies/cad/assembly-cl-1s-16.fcad.gz",
+    "sources": [
+      {
+        "file": "卡环套件\\515-00-03399-C.stp",
+        "sourcePart": "515-00-03399_ASM",
+        "sha256": "be7330a80cb596814e65b6404d3ca310f19095b2d0b627cbde0689a8f8866fca"
+      }
+    ]
+  },
+  {
+    "model": "CL-1S-20",
+    "productCode": "809802",
+    "kind": "卡环组件",
+    "material": "SUS + PEEK",
+    "materialLabel": "SUS 压套 + PEEK 密封垫圈",
+    "color": "本色",
+    "tubeOuterDiameters": [
+      2
+    ],
+    "cadUrl": "/models/products/tubing-assemblies/cad/assembly-cl-1s-20.fcad.gz",
+    "sources": [
+      {
+        "file": "卡环套件\\441-09-00100-c.stp",
+        "sourcePart": "441-09-00100-C",
+        "sha256": "465e0ec969847d1d3cf81e492d817afd1a73b4c34a850d4de785b01e665f71dc"
+      },
+      {
+        "file": "卡环套件\\441-09-00105-c.stp",
+        "sourcePart": "441-09-00105-C",
+        "sha256": "8864489aba2a93f9ab93cfa0934fbe53873bb17a1f51e395867c4fa7b68d0329"
+      }
+    ]
+  },
+  {
+    "model": "CL-1S-25",
+    "productCode": "809803",
+    "kind": "卡环组件",
+    "material": "SUS + PEEK",
+    "materialLabel": "SUS 压套 + PEEK 密封垫圈",
+    "color": "本色",
+    "tubeOuterDiameters": [
+      2.5
+    ],
+    "cadUrl": "/models/products/tubing-assemblies/cad/assembly-cl-1s-25.fcad.gz",
+    "sources": [
+      {
+        "file": "卡环套件\\515-00-03401-C.stp",
+        "sourcePart": "515-00-03401_ASM",
+        "sha256": "f98fc4f66d838fde27d0a0ef35dfd087e5acc529fd53b5caefc83b186351c6fa"
+      }
+    ]
+  },
+  {
+    "model": "CL-1S-30",
+    "productCode": "809804",
+    "kind": "卡环组件",
+    "material": "SUS + PEEK",
+    "materialLabel": "SUS 压套 + PEEK 密封垫圈",
+    "color": "本色",
+    "tubeOuterDiameters": [
+      3
+    ],
+    "cadUrl": "/models/products/tubing-assemblies/cad/assembly-cl-1s-30.fcad.gz",
+    "sources": [
+      {
+        "file": "卡环套件\\441-09-00102-c.stp",
+        "sourcePart": "441-09-00102-C",
+        "sha256": "5ff68fd6868a64bd5ef2116731b15e80301c008b7739768a4dc06c30d2fe92d3"
+      },
+      {
+        "file": "卡环套件\\441-09-00107-c.stp",
+        "sourcePart": "441-09-00107-C",
+        "sha256": "701374b83288666f3d8f48c4f0b1012d4f99d4df2c56e65006eea3519be9ef40"
+      }
+    ]
+  },
+  {
+    "model": "CL-1S-32",
+    "productCode": "809805",
+    "kind": "卡环组件",
+    "material": "SUS + PEEK",
+    "materialLabel": "SUS 压套 + PEEK 密封垫圈",
+    "color": "本色",
+    "tubeOuterDiameters": [
+      3.2
+    ],
+    "cadUrl": "/models/products/tubing-assemblies/cad/assembly-cl-1s-32.fcad.gz",
+    "sources": [
+      {
+        "file": "卡环套件\\515-00-03403-C.stp",
+        "sourcePart": "515-00-03403_ASM",
+        "sha256": "60bef87b3e16db672ae1bbecd99c4faca82e6ce9583edb5690eefd3bd8e6e81c"
+      }
+    ]
+  },
+  {
+    "model": "CL-1X-16",
+    "productCode": "809653",
+    "kind": "卡环组件",
+    "material": "SUS + PEEK",
+    "materialLabel": "SUS 压套 + PEEK 密封垫圈",
+    "color": "本色",
+    "tubeOuterDiameters": [
+      1.6
+    ],
+    "cadUrl": "/models/products/tubing-assemblies/cad/assembly-cl-1x-16.fcad.gz",
+    "sources": [
+      {
+        "file": "卡环套件\\515-00-02866-C.stp",
+        "sourcePart": "515-00-02866_ASM",
+        "sha256": "d9f9c3e11459884879013671c12d949c87983aba129c2c905787668c738ce211"
+      }
+    ]
+  }
+]

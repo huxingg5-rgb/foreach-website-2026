@@ -1,5 +1,7 @@
 "use client";
 
+import DrawingRequirements from "./DrawingRequirements";
+import { drawingRequirementsLine, normalizeDrawingTypes } from "@/data/products/detail/drawing-requirements";
 import {
   useEffect,
   useMemo,
@@ -58,7 +60,9 @@ export default function ProductVariantConfigurator({
   onConfirm,
   isVariantSelected,
   onToggleVariant,
+  drawingRequirements = false, initialDrawingTypes,
 }: ProductVariantConfiguratorProps) {
+  const [drawings, setDrawings] = useState(() => normalizeDrawingTypes(initialDrawingTypes));
   const config = useMemo(
     () =>
       localizeProductConfiguratorConfig(
@@ -218,7 +222,7 @@ export default function ProductVariantConfigurator({
     matchingVariant &&
     isVariantSelected
       ? isVariantSelected(
-          matchingVariant
+          matchingVariant, drawingRequirements ? drawings : undefined
         )
       : false;
 
@@ -271,17 +275,15 @@ export default function ProductVariantConfigurator({
       return;
     }
 
+    const text = drawingRequirements ? `${matchingVariant.model}\n${drawingRequirementsLine({ drawingTypes: drawings }, locale)}` : matchingVariant.model;
     try {
-      await navigator.clipboard.writeText(
-        matchingVariant.model
-      );
+      await navigator.clipboard.writeText(text);
     }
     catch {
       const textarea =
         document.createElement("textarea");
 
-      textarea.value =
-        matchingVariant.model;
+      textarea.value = text;
 
       textarea.style.position = "fixed";
       textarea.style.left = "-9999px";
@@ -722,6 +724,7 @@ export default function ProductVariantConfigurator({
               ) : null}
               {/* TPU_SIMPLIFIED_DUPLICATE_SELECTION_END */}
 
+              {drawingRequirements ? <DrawingRequirements locale={locale} value={drawings} onChange={value => { setDrawings(value); setCopyFeedback(false); }} /> : null}
               <div
                 className={styles.modelResult}
               >
@@ -782,7 +785,7 @@ export default function ProductVariantConfigurator({
                   }
 
                   onToggleVariant(
-                    matchingVariant
+                    matchingVariant, drawingRequirements ? drawings : undefined
                   );
                 }}
               >
@@ -801,7 +804,7 @@ export default function ProductVariantConfigurator({
                   return;
                 }
 
-                onConfirm(matchingVariant);
+                onConfirm(matchingVariant, drawingRequirements ? drawings : undefined);
               }}
             >
               {uiText.confirmAndReturn}

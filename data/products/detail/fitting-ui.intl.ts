@@ -8,6 +8,13 @@ type Row = readonly [string, string, string, string, string, string];
 // Complete UI messages and parameterized messages. Catalog values never drive
 // SKU matching; the original codes and event-handler values remain unchanged.
 const rows: Row[] = [
+  ["配套接头：", "Mating coupling: ", "Acoplamiento complementario: ", "Raccord complémentaire : ", "상대 커플링: ", "Ответная часть: "],
+  ["请选择配套接头", "Select a mating coupling", "Seleccione el acoplamiento complementario", "Choisir le raccord complémentaire", "상대 커플링 선택", "Выберите ответную часть"],
+  ["选择配套接头", "Select mating coupling", "Seleccionar acoplamiento complementario", "Choisir le raccord complémentaire", "상대 커플링 선택", "Выбрать ответную часть"],
+  ["重新选择配套接头", "Change mating coupling", "Cambiar acoplamiento complementario", "Changer le raccord complémentaire", "상대 커플링 변경", "Изменить ответную часть"],
+  ["配合母端选型", "Select a coupling body", "Seleccionar cuerpo hembra", "Choisir un corps femelle", "암형 커플링 선택", "Выбрать ответную розетку"],
+  ["配合公端选型", "Select a coupling insert", "Seleccionar inserto macho", "Choisir un embout mâle", "수형 커플링 선택", "Выбрать ответный штекер"],
+  ["{0} 公母端可按两侧工况分别组合", "Choose the two {0} coupling halves for the conditions on each side of the fluid path.", "Seleccione las dos mitades {0} según las condiciones de cada lado del circuito.", "Choisissez les deux moitiés {0} selon les conditions de chaque côté du circuit.", "유로 양쪽의 사용 조건에 맞게 {0} 수형·암형 커플링을 조합하세요.", "Подберите две ответные части {0} с учётом условий на каждой стороне линии."],
   ["3D 模型准备中", "Preparing 3D model", "Preparando modelo 3D", "Préparation du modèle 3D", "3D 모델 준비 중", "Подготовка 3D-модели"],
   ["产品资料", "Product information", "Información del producto", "Informations produit", "제품 자료", "Информация о продукте"],
   ["选型与使用", "Selection and use", "Selección y uso", "Choix et utilisation", "선정 및 사용", "Подбор и применение"],
@@ -288,6 +295,9 @@ export function fittingText(text: string, localeValue: string): string {
   const leading = text.match(/^\s*/)?.[0] || "", trailing = text.match(/\s*$/)?.[0] || "";
   const value = text.trim(), row = exact.get(value);
   if (row) return leading + row[localeIndex[locale]] + trailing;
+  // Assembly legends combine a translated role with an unchanged tube dimension.
+  const dimension = /^(.+?)\s+(\d+(?:\.\d+)?\s*mm)$/.exec(value);
+  if (dimension) return leading + fittingText(dimension[1], locale) + " " + dimension[2] + trailing;
   for (const {row,pattern} of templates) {
     const match = pattern.exec(value);
     if (match) return leading + row[localeIndex[locale]].replace(/\{(\d+)\}/g, (_, i: string) => fittingText(match[Number(i)+1],locale)) + trailing;

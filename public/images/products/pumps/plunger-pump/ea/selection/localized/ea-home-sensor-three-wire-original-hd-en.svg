@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2250" viewBox="0 0 1500 1125">
+<title>EA wiring / stroke reference</title>
+<desc>Original terminal names, wire colors, circuit symbols and connections are preserved.</desc>
+<rect width="1500" height="1125" fill="white"/>
+<g fill="none" stroke="#111" stroke-width="1.15" stroke-linecap="butt" stroke-linejoin="miter">
+<style>text{font-family:Arial,"Microsoft YaHei",sans-serif;fill:#111;stroke:none;font-weight:400}</style>
+<g transform="translate(75 210) scale(2.62)"><path d="M2 63 H124 V124 H2 V104 H41 V82 H2 Z" />
+<path d="M54 63 V35 H106 V63 M54 124 V150 H106 V124" />
+<line x1="15" y1="63" x2="15" y2="82" stroke="#888"/>
+<line x1="15" y1="104" x2="15" y2="124" stroke="#888"/>
+<circle cx="80" cy="49" r="8.5" stroke="#777"/>
+<circle cx="80" cy="136" r="8.5" stroke="#777"/>
+<circle cx="73" cy="97" r="6.5" stroke="#777"/>
+<path d="M124 83 H128 Q132 83 132 88 V99 Q132 104 128 104 H124" stroke="#666"/>
+<rect x="132" y="88" width="28" height="11" stroke="#666"/>
+<path d="M160 88 Q164 92 161 93 Q165 97 160 99" stroke="#666"/>
+<path d="M161 93 L228 22 H425 V89 M161 93 L228 69 H294 V57 M161 93 L228 117 H359 V77 M161 93 L228 164 H425 V99" stroke="#777"/>
+<line x1="294" y1="22" x2="294" y2="38" stroke="#777"/>
+<line x1="359" y1="22" x2="359" y2="58" stroke="#777"/>
+<rect x="276" y="38" width="36" height="19" fill="#e8e8e8"/>
+<rect x="341" y="58" width="36" height="19" fill="#e8e8e8"/>
+<circle cx="294" cy="22" r="1.6" fill="#111" stroke="none"/>
+<circle cx="359" cy="22" r="1.6" fill="#111" stroke="none"/>
+<line x1="415" y1="89" x2="435" y2="89" />
+<rect x="419" y="93" width="12" height="6" fill="#111" stroke="none"/>
+<text x="408" y="84" font-size="13" >+</text>
+<text x="408" y="110" font-size="13" >−</text>
+<text x="231" y="18" font-size="10.4" >Brown</text>
+<text x="231" y="64" font-size="10.4" >Black</text>
+<text x="231" y="112" font-size="10.4" >White</text>
+<text x="231" y="159" font-size="13" >Blue</text>
+<text x="294" y="51.5" font-size="12" text-anchor="middle">Load</text>
+<text x="359" y="71.5" font-size="12" text-anchor="middle">Load</text>
+<text x="439" y="91" font-size="13" >5～24V DC</text>
+<text x="440" y="106" font-size="13" >±10%</text></g><g transform="translate(280 675) scale(1.42)"><text x="24" y="32" font-size="16" style="fill:#0065a5">Output state</text>
+<rect x="24" y="48" width="620" height="36" fill="#e8e8e8" stroke="none"/>
+<rect x="24" y="84" width="207" height="74" fill="#e8e8e8" stroke="none"/>
+<path d="M24 48 H644 M24 84 H644 M24 121 H644 M24 158 H644 M231 48 V158 M438 48 V158 M24 48 L231 84" stroke-width="1.2"/>
+<text x="334.5" y="74" font-size="17.6" text-anchor="middle">Wire color</text>
+<text x="541" y="74" font-size="14.666666666666666" text-anchor="middle">Output state</text>
+<text x="127.5" y="110" font-size="13.75" text-anchor="middle">Output 1</text>
+<text x="334.5" y="110" font-size="8.8" text-anchor="middle">Black</text>
+<text x="541" y="110" font-size="22" text-anchor="middle">Light-ON</text>
+<text x="127.5" y="147" font-size="13.75" text-anchor="middle">Output 2</text>
+<text x="334.5" y="147" font-size="8.8" text-anchor="middle">White</text>
+<text x="541" y="147" font-size="22" text-anchor="middle">Dark-ON</text></g>
+</g></svg>

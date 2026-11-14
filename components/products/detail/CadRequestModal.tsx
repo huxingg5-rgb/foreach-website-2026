@@ -1,441 +1,290 @@
 "use client";
 
-import {
-  useEffect,
-  useState,
-  type FormEvent,
-} from "react";
+import DrawingRequirements from "@/components/products/configurator/DrawingRequirements";
+import { normalizeDrawingTypes } from "@/data/products/detail/drawing-requirements";
+import { useEffect, useId, useRef, useState, type FormEvent } from "react";
+import ConfiguratorButton from "@/components/products/configurator/ConfiguratorButton";
+import ConfiguratorDialogFrame from "@/components/products/configurator/ConfiguratorDialogFrame";
+import formStyles from "@/components/products/configurator/FlangedTubingConfigurator.module.css";
+import { cadRequestMessage, getCadRequestCopy, type CadDrawingType, type CadRequestConfiguration } from "@/data/products/detail/cad-request";
+import { getSelectionWorkspaceCopy } from "@/data/products/detail/selection-workspace-copy";
+import type { ProductDetailResourceLocale } from "@/data/products/detail/product-detail-resources";
+import { getProductDetailResourceCopy } from "@/data/products/detail/product-detail-resources";
+import styles from "./PistonCadRequestModal.module.css";
 
-import {
-  getProductDetailResourceCopy,
-  type ProductDetailResourceLocale,
-} from "@/data/products/detail/product-detail-resources";
-
-import requestStyles from "@/components/forms/company-info-request/CompanyInfoRequestModal.module.css";
-
-const EMAIL_CODE_COOLDOWN_SECONDS = 60;
-
-type InquiryApiResponse = {
-  success?: boolean;
-  error?: string;
-  referenceId?: string;
-};
-
-type CadRequestModalProps = {
+type Props = {
   locale: ProductDetailResourceLocale;
-  productName: string;
-  productSeries: string;
-  productModel: string;
+  productName: string; productSeries: string; productModel: string; productType?: string;
+  configurations?: CadRequestConfiguration[]; initialConfigurationId?: string | null;
+  referenceConfiguration?: CadRequestConfiguration;
+  onDrawingTypesChange?: (id: string, value: CadDrawingType[]) => void;
   onClose: () => void;
 };
 
-async function postInquiryApi(
-  url: string,
-  payload: Record<string, unknown>,
-): Promise<InquiryApiResponse> {
+type Phase = "idle" | "sending" | "verifying" | "submitting";
+
+async function postInquiry(url: string, payload: Record<string, unknown>) {
   const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    credentials: "same-origin",
-    body: JSON.stringify(payload),
+    method: "POST", credentials: "same-origin",
+    headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
   });
-
-  const data = (await response
-    .json()
-    .catch(() => ({}))) as InquiryApiResponse;
-
-  if (!response.ok || data.success !== true) {
-    throw new Error(data.error || "request_failed");
-  }
-
-  return data;
+  const result = await response.json().catch(() => ({})) as {
+    success?: boolean; error?: string; referenceId?: string;
+  };
+  if (!response.ok || result.success !== true) throw new Error(result.error || "request_failed");
+  return result;
 }
 
-function getErrorMessage(
-  error: unknown,
-  locale: ProductDetailResourceLocale,
-): string {
+function errorMessage(error: unknown, locale: ProductDetailResourceLocale) {
   const copy = getProductDetailResourceCopy(locale);
   const code = error instanceof Error ? error.message : "request_failed";
-
-  if (code === "invalid_email") return copy.invalidEmail;
-  if (code === "company_required") return copy.companyRequired;
-  if (code === "send_too_frequently") return copy.sendTooFrequently;
-  if (code === "invalid_verification_data") return copy.enterCode;
-  if (code === "verification_code_incorrect") return copy.codeIncorrect;
-  if (
-    code === "verification_code_missing" ||
-    code === "verification_code_expired"
-  ) {
-    return copy.codeExpired;
-  }
-  if (
-    code === "email_not_verified" ||
-    code === "email_verification_expired"
-  ) {
-    return copy.verificationExpired;
-  }
-  if (
-    code === "storage_not_configured" ||
-    code === "email_service_not_configured"
-  ) {
-    return copy.serviceUnavailable;
-  }
-
-  return copy.requestFailed;
+  const messages: Record<string, string> = {
+    invalid_email: copy.invalidEmail,
+    company_required: copy.companyRequired,
+    send_too_frequently: copy.sendTooFrequently,
+    invalid_verification_data: copy.enterCode,
+    verification_code_incorrect: copy.codeIncorrect,
+    verification_code_missing: copy.codeExpired,
+    verification_code_expired: copy.codeExpired,
+    verification_code_invalid: copy.codeExpired,
+    email_not_verified: copy.verificationExpired,
+    email_verification_expired: copy.verificationExpired,
+    storage_not_configured: copy.serviceUnavailable,
+    email_service_not_configured: copy.serviceUnavailable,
+  };
+  return messages[code] || copy.requestFailed;
 }
 
-export default function CadRequestModal({
-  locale,
-  productName,
-  productSeries,
-  productModel,
-  onClose,
-}: CadRequestModalProps) {
-  const copy = getProductDetailResourceCopy(locale);
+/** All detail pages share the EA CAD dialog, including configuration and drawing selection. */
+export default function CadRequestModal({ locale, productName, productSeries, productModel, productType,
+  configurations: savedConfigurations = [], initialConfigurationId, referenceConfiguration, onDrawingTypesChange, onClose }: Props) {
+  const copy = getProductDetailResourceCopy(locale), cadCopy = getCadRequestCopy(locale);
+  const workspaceCopy = getSelectionWorkspaceCopy(locale);
+  const drawingOptions: { value: CadDrawingType; label: string }[] = [
+    { value: "2d", label: cadCopy.twoD }, { value: "3d", label: cadCopy.threeD },
+  ];
+  const prefix = useId();
+  const [selectedId, setSelectedId] = useState(() =>
+    savedConfigurations.find(item => item.id === initialConfigurationId)?.id ?? savedConfigurations[0]?.id ?? "",
+  );
+  const [drawingOverrides, setDrawingOverrides] = useState<Record<string, CadDrawingType[]>>({});
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
-  const [verificationCode, setVerificationCode] = useState("");
-  const [message, setMessage] = useState("");
-  const [hasCodeSent, setHasCodeSent] = useState(false);
-  const [countdown, setCountdown] = useState(0);
+  const [code, setCode] = useState("");
+  const [notes, setNotes] = useState("");
+  const [sentTo, setSentTo] = useState("");
   const [verifiedEmail, setVerifiedEmail] = useState("");
-  const [isSendingCode, setIsSendingCode] = useState(false);
-  const [isVerifying, setIsVerifying] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [countdown, setCountdown] = useState(0);
+  const [phase, setPhase] = useState<Phase>("idle");
+  const [error, setError] = useState("");
+  const [submitted, setSubmitted] = useState(false);
   const [referenceId, setReferenceId] = useState("");
-  const [formError, setFormError] = useState("");
-
+  const busyRef = useRef(false);
+  const dialogRef = useRef<HTMLElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const codeRef = useRef<HTMLInputElement>(null);
+  const successRef = useRef<HTMLHeadingElement>(null);
+  const onCloseRef = useRef(onClose);
+  const busy = phase !== "idle";
   const normalizedEmail = email.trim().toLowerCase();
-  const isEmailVerified =
-    Boolean(normalizedEmail) && verifiedEmail === normalizedEmail;
+  const hasCodeSent = Boolean(sentTo) && sentTo === normalizedEmail;
+  const isVerified = Boolean(verifiedEmail) && verifiedEmail === normalizedEmail;
+  const selectedIndex = savedConfigurations.findIndex(item => item.id === selectedId);
+  const selected = savedConfigurations[selectedIndex];
+  const configuration: CadRequestConfiguration = selected ?? referenceConfiguration ?? { id: "reference", model: productModel,
+    rows: [], productType, productSeries };
+  const drawings = drawingOverrides[configuration.id] ?? normalizeDrawingTypes(configuration.drawingTypes);
+  function setDrawings(value: CadDrawingType[]) {
+    const next = normalizeDrawingTypes(value);
+    setDrawingOverrides(previous => ({ ...previous, [configuration.id]: next }));
+    onDrawingTypesChange?.(configuration.id, next);
+    setError("");
+  }
+  const rows = configuration.rows;
+  const model = configuration.model;
+  const configurationLabel = configuration.label || (selected ? workspaceCopy.configuration(selectedIndex + 1) : cadCopy.current);
+  const requestMessage = cadRequestMessage(locale, configuration, selectedIndex + 1, drawings, notes);
 
+  useEffect(() => { onCloseRef.current = onClose; }, [onClose]);
+  useEffect(() => {
+    const previousFocus = document.activeElement;
+    const overflow = document.body.style.overflow;
+    const backdrop = dialogRef.current?.parentElement;
+    const background = Array.from(document.body.children)
+      .filter((element): element is HTMLElement => element instanceof HTMLElement && element !== backdrop)
+      .map(element => ({ element, inert: element.inert }));
+    background.forEach(({ element }) => { element.inert = true; });
+    document.body.style.overflow = "hidden";
+    closeRef.current?.focus({ preventScroll: true });
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.defaultPrevented) return;
+      if (event.key === "Escape" && !(event.target instanceof HTMLSelectElement)) {
+        event.preventDefault();
+        if (!busyRef.current) onCloseRef.current();
+      }
+      if (event.key !== "Tab") return;
+      const controls = Array.from(dialogRef.current?.querySelectorAll<HTMLElement>("button, input, select, textarea, summary, [tabindex]") || [])
+        .filter(element => !element.matches(":disabled") && element.tabIndex >= 0 && element.getClientRects().length);
+      if (event.shiftKey && document.activeElement === controls[0]) { event.preventDefault(); controls.at(-1)?.focus(); }
+      else if (!event.shiftKey && document.activeElement === controls.at(-1)) { event.preventDefault(); controls[0]?.focus(); }
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = overflow;
+      background.forEach(({ element, inert }) => { element.inert = inert; });
+      if (previousFocus instanceof HTMLElement && previousFocus.isConnected) previousFocus.focus({ preventScroll: true });
+    };
+  }, []);
   useEffect(() => {
     if (countdown <= 0) return;
-
-    const timer = window.setTimeout(() => {
-      setCountdown((current) => Math.max(0, current - 1));
-    }, 1000);
-
+    const timer = window.setTimeout(() => setCountdown(value => Math.max(0, value - 1)), 1000);
     return () => window.clearTimeout(timer);
   }, [countdown]);
+  useEffect(() => { if (hasCodeSent) codeRef.current?.focus(); }, [hasCodeSent]);
+  useEffect(() => { if (submitted) successRef.current?.focus(); }, [submitted]);
 
-  async function handleSendCode() {
-    if (!/^\S+@\S+\.\S+$/.test(normalizedEmail)) {
-      setFormError(copy.invalidEmail);
-      return;
+  function close() {
+    if (busyRef.current) { setError(cadCopy.wait); return; }
+    onClose();
+  }
+
+  function updateEmail(value: string) {
+    if (value.trim().toLowerCase() !== normalizedEmail) {
+      setSentTo(""); setVerifiedEmail(""); setCode(""); setCountdown(0);
     }
+    setEmail(value); setError("");
+  }
 
-    setIsSendingCode(true);
-    setFormError("");
-    setVerifiedEmail("");
-
+  async function sendCode() {
+    if (busyRef.current || countdown > 0) return;
+    if (!/^\S+@\S+\.\S+$/.test(normalizedEmail)) { setError(copy.invalidEmail); return; }
+    busyRef.current = true;
+    setPhase("sending"); setError("");
     try {
-      await postInquiryApi("/api/inquiry/send-code", {
-        email: normalizedEmail,
-      });
-
-      setHasCodeSent(true);
-      setVerificationCode("");
-      setCountdown(EMAIL_CODE_COOLDOWN_SECONDS);
-    } catch (error) {
-      setFormError(getErrorMessage(error, locale));
+      await postInquiry("/api/inquiry/send-code", { email: normalizedEmail });
+      setVerifiedEmail(""); setCode(""); setSentTo(normalizedEmail); setCountdown(60);
+    } catch (failure) {
+      if (failure instanceof Error && failure.message === "send_too_frequently") setCountdown(60);
+      setError(errorMessage(failure, locale));
     } finally {
-      setIsSendingCode(false);
+      busyRef.current = false; setPhase("idle");
     }
   }
 
-  async function handleVerifyEmail() {
-    if (!hasCodeSent) {
-      setFormError(copy.requestCodeFirst);
-      return;
-    }
-
-    if (!/^\d{6}$/.test(verificationCode)) {
-      setFormError(copy.enterCode);
-      return;
-    }
-
-    setIsVerifying(true);
-    setFormError("");
-
-    try {
-      await postInquiryApi("/api/inquiry/verify-code", {
-        email: normalizedEmail,
-        code: verificationCode,
-      });
-
-      setVerifiedEmail(normalizedEmail);
-    } catch (error) {
-      setVerifiedEmail("");
-      setFormError(getErrorMessage(error, locale));
-    } finally {
-      setIsVerifying(false);
-    }
-  }
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
-    if (!company.trim()) {
-      setFormError(copy.companyRequired);
-      return;
-    }
-
-    if (!isEmailVerified) {
-      setFormError(copy.requestCodeFirst);
-      return;
-    }
-
-    setIsSubmitting(true);
-    setFormError("");
-
+    if (busyRef.current || submitted) return;
+    if (!drawings.length) { setError(cadCopy.selectDrawing); return; }
+    if (!company.trim()) { setError(copy.companyRequired); return; }
+    if (!/^\S+@\S+\.\S+$/.test(normalizedEmail)) { setError(copy.invalidEmail); return; }
+    // The existing API accepts up to 4,000 characters. Never silently truncate a configuration.
+    if (requestMessage.length > 4000) { setError(cadCopy.tooLong); return; }
+    if (!isVerified && !hasCodeSent) { setError(copy.requestCodeFirst); return; }
+    if (!isVerified && !/^\d{6}$/.test(code)) { setError(copy.enterCode); codeRef.current?.focus(); return; }
+    busyRef.current = true;
+    setError("");
     try {
-      const response = await postInquiryApi("/api/inquiry/submit", {
-        company: company.trim(),
-        email: normalizedEmail,
-        requestType: "CAD",
-        productType: productName || productSeries || productModel,
-        targetModel: productModel,
-        message: message.trim(),
-        locale,
-        productName,
-        productSeries,
-        productModel,
+      if (!isVerified) {
+        setPhase("verifying");
+        await postInquiry("/api/inquiry/verify-code", { email: normalizedEmail, code });
+        // A successful verification consumes the code. Keep it for retries if submission fails.
+        setVerifiedEmail(normalizedEmail);
+      }
+      setPhase("submitting");
+      const result = await postInquiry("/api/inquiry/submit", {
+        company: company.trim(), email: normalizedEmail, requestType: "CAD", locale,
+        productType: configuration.productType || productType || productName,
+        productName, productSeries: configuration.productSeries || productSeries,
+        productModel: model, targetModel: model, message: requestMessage,
         currentUrl: window.location.href,
       });
-
-      setReferenceId(response.referenceId || "");
-      setIsSubmitted(true);
-    } catch (error) {
-      const errorCode = error instanceof Error ? error.message : "";
-
-      if (
-        errorCode === "email_not_verified" ||
-        errorCode === "email_verification_expired"
-      ) {
-        setVerifiedEmail("");
-        setHasCodeSent(false);
+      setReferenceId(result.referenceId || ""); setSubmitted(true);
+    } catch (failure) {
+      const reason = failure instanceof Error ? failure.message : "";
+      if (["email_not_verified", "email_verification_expired", "verification_code_missing", "verification_code_expired", "verification_code_invalid"].includes(reason)) {
+        setVerifiedEmail(""); setSentTo(""); setCode("");
       }
-
-      setFormError(getErrorMessage(error, locale));
+      setError(errorMessage(failure, locale));
     } finally {
-      setIsSubmitting(false);
+      busyRef.current = false; setPhase("idle");
     }
   }
 
-  return (
-    <div
-      className={requestStyles.modalLayer}
-      data-product-cad-request-modal="true"
-    >
-      <button
-        className={requestStyles.modalMask}
-        type="button"
-        aria-label={copy.close}
-        onClick={onClose}
-      />
+  return <ConfiguratorDialogFrame
+    dialogRef={dialogRef} closeRef={closeRef} locale={locale} className={styles.dialog}
+    titleId={`${prefix}-title`} descriptionId={`${prefix}-description`}
+    title={copy.cadTitle} description={cadCopy.description}
+    closeLabel={copy.close} onClose={close}
+    notice={submitted ? "" : cadCopy.notice}
+    actions={submitted ? <ConfiguratorButton onClick={close}>{copy.closeSuccess}</ConfiguratorButton> : <>
+      <ConfiguratorButton onClick={close} disabled={busy}>{workspaceCopy.cancel}</ConfiguratorButton>
+      <ConfiguratorButton type="submit" form={`${prefix}-form`} variant="primary" disabled={busy}>
+        {phase === "verifying" ? copy.verifyingEmail : phase === "submitting" ? copy.submittingCad : copy.submitCad}
+      </ConfiguratorButton>
+    </>}
+  >
+    {submitted ? <div className={`${styles.body} ${styles.success}`} role="status">
+      <h3 ref={successRef} tabIndex={-1}>{copy.successTitle}</h3>
+      <p>{copy.successDescription} <strong>{normalizedEmail}</strong></p>
+      <p>{model} · {drawingOptions.filter(option => drawings.includes(option.value)).map(option => option.label).join(" + ")}</p>
+      {referenceId ? <p className={styles.hint}>{cadCopy.referenceId}: {referenceId}</p> : null}
+    </div> : <form id={`${prefix}-form`} className={`${formStyles.body} ${styles.body}`} onSubmit={submit} aria-busy={busy}>
+      <fieldset className={styles.fields} disabled={busy}>
+        <div className={styles.product}>
+          <div className={styles.productHeading}>
+            <div><span className={styles.hint}>{cadCopy.reference}</span><h3>{model}</h3></div>
+            {savedConfigurations.length ? <div className={`${formStyles.field} ${styles.configurationPicker}`}>
+              <label htmlFor={`${prefix}-configuration`}>{cadCopy.requestFor}</label>
+              <select id={`${prefix}-configuration`} value={selectedId} onChange={event => { setSelectedId(event.target.value); setError(""); }}>
 
-      <section
-        className={requestStyles.modal}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="product-cad-request-title"
-      >
-        <div className={requestStyles.modalHead}>
-          <div>
-            <span>CAD</span>
-            <h2 id="product-cad-request-title">{copy.cadTitle}</h2>
-            <p>{copy.cadDescription}</p>
+                {savedConfigurations.map((item, index) => <option key={item.id} value={item.id}>
+                  {item.label || workspaceCopy.configuration(index + 1)}
+                </option>)}
+              </select>
+            </div> : <span className={styles.hint}>{configurationLabel}</span>}
           </div>
-
-          <button type="button" onClick={onClose} aria-label={copy.close}>
-            <svg
-              viewBox="0 0 20 20"
-              width="18"
-              height="18"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              focusable="false"
-              aria-hidden="true"
-            >
-              <path d="M5 5L15 15M15 5L5 15" />
-            </svg>
-          </button>
+          <p className={styles.overview}>{rows.slice(0, 3).map(([, value]) => value).join(" · ")}</p>
+          {rows.length ? <details key={selectedId} className={styles.details}>
+            <summary>{cadCopy.details}</summary>
+            <dl>{rows.map(([label, value], index) => <div key={`${index}:${label}`}><dt>{label}</dt><dd>{value}</dd></div>)}
+            </dl>
+          </details> : null}
         </div>
-
-        {isSubmitted ? (
-          <div className={requestStyles.success}>
-            <strong>{copy.successTitle}</strong>
-            <p>{copy.successDescription}</p>
-            {referenceId ? <p>Reference: {referenceId}</p> : null}
-            <div className={requestStyles.successActions}>
-              <button type="button" onClick={onClose}>
-                {copy.closeSuccess}
-              </button>
+        <DrawingRequirements locale={locale} value={drawings} onChange={setDrawings} />
+        <div className={styles.contactFields}>
+          <div className={formStyles.field}>
+            <label htmlFor={`${prefix}-company`}>{copy.company} *</label>
+            <input id={`${prefix}-company`} name="company" autoComplete="organization" required maxLength={200}
+              value={company} onChange={event => setCompany(event.target.value)} placeholder={copy.companyPlaceholder} />
+          </div>
+          <div className={formStyles.field}>
+            <label htmlFor={`${prefix}-email`}>{copy.businessEmail} *</label>
+            <div className={styles.emailRow}>
+              <input id={`${prefix}-email`} name="email" type="email" autoComplete="email" required maxLength={254}
+                value={email} onChange={event => updateEmail(event.target.value)} placeholder={copy.businessEmailPlaceholder} />
+              <ConfiguratorButton disabled={busy || countdown > 0} onClick={sendCode}>
+                {phase === "sending" ? copy.sendingCode : countdown > 0 ? cadCopy.resend(countdown) : hasCodeSent ? copy.resendCode : copy.sendCode}
+              </ConfiguratorButton>
             </div>
           </div>
-        ) : (
-          <form className={requestStyles.form} onSubmit={handleSubmit}>
-            <div className={requestStyles.itemList}>
-              <article className={requestStyles.requestItem}>
-                <span>CAD</span>
-                <div>
-                  <strong>{productName || productModel}</strong>
-                </div>
-              </article>
-            </div>
-
-            <div className={requestStyles.fields}>
-              <label className={requestStyles.fieldWide}>
-                <span>
-                  {copy.company}
-                  <em className={requestStyles.requiredMark}>*</em>
-                </span>
-                <input
-                  type="text"
-                  value={company}
-                  placeholder={copy.companyPlaceholder}
-                  required
-                  onChange={(event) => {
-                    setCompany(event.target.value);
-                    setFormError("");
-                  }}
-                />
-              </label>
-
-              <label className={requestStyles.emailField}>
-                <span>
-                  {copy.businessEmail}
-                  <em className={requestStyles.requiredMark}>*</em>
-                </span>
-                <div className={requestStyles.emailInputGroup}>
-                  <input
-                    type="email"
-                    value={email}
-                    placeholder={copy.businessEmailPlaceholder}
-                    required
-                    onChange={(event) => {
-                      setEmail(event.target.value);
-                      setVerificationCode("");
-                      setHasCodeSent(false);
-                      setVerifiedEmail("");
-                      setFormError("");
-                    }}
-                  />
-                  <button
-                    type="button"
-                    onClick={handleSendCode}
-                    disabled={
-                      countdown > 0 ||
-                      isSendingCode ||
-                      isVerifying ||
-                      isSubmitting
-                    }
-                  >
-                    {isSendingCode
-                      ? copy.sendingCode
-                      : countdown > 0
-                        ? `${countdown}s`
-                        : hasCodeSent
-                          ? copy.resendCode
-                          : copy.sendCode}
-                  </button>
-                </div>
-                {hasCodeSent || isEmailVerified ? (
-                  <em className={requestStyles.emailCodeHint} aria-live="polite">
-                    {isEmailVerified ? copy.emailVerified : copy.codeSent}
-                  </em>
-                ) : null}
-              </label>
-
-              <label className={requestStyles.emailField}>
-                <span>
-                  {copy.verificationCode}
-                  <em className={requestStyles.requiredMark}>*</em>
-                </span>
-                <div className={requestStyles.emailInputGroup}>
-                  <input
-                    type="text"
-                    inputMode="numeric"
-                    autoComplete="one-time-code"
-                    value={verificationCode}
-                    placeholder={copy.verificationCodePlaceholder}
-                    required
-                    disabled={isEmailVerified}
-                    onChange={(event) => {
-                      setVerificationCode(
-                        event.target.value.replace(/\D/g, "").slice(0, 6),
-                      );
-                      setVerifiedEmail("");
-                      setFormError("");
-                    }}
-                  />
-                  <button
-                    type="button"
-                    onClick={handleVerifyEmail}
-                    disabled={
-                      !hasCodeSent ||
-                      verificationCode.length !== 6 ||
-                      isEmailVerified ||
-                      isVerifying ||
-                      isSubmitting
-                    }
-                  >
-                    {isVerifying ? copy.verifyingEmail : copy.verifyEmail}
-                  </button>
-                </div>
-              </label>
-
-              <label className={requestStyles.fieldWide}>
-                <span>{copy.message}</span>
-                <textarea
-                  value={message}
-                  placeholder={copy.messagePlaceholder}
-                  rows={4}
-                  onChange={(event) => {
-                    setMessage(event.target.value);
-                    setFormError("");
-                  }}
-                />
-              </label>
-            </div>
-
-            {formError ? (
-              <div className={requestStyles.formError} role="alert">
-                {formError}
-              </div>
-            ) : null}
-
-            <div className={requestStyles.actions}>
-              <button
-                className={requestStyles.submitButton}
-                type="submit"
-                disabled={
-                  !isEmailVerified ||
-                  isSendingCode ||
-                  isVerifying ||
-                  isSubmitting
-                }
-              >
-                {isSubmitting ? copy.submittingCad : copy.submitCad}
-              </button>
-              <button
-                className={requestStyles.backButton}
-                type="button"
-                onClick={onClose}
-              >
-                {copy.closeSuccess}
-              </button>
-            </div>
-          </form>
-        )}
-      </section>
-    </div>
-  );
+        </div>
+        {hasCodeSent ? <div className={styles.codeRow}>
+          <div className={formStyles.field}>
+            <label htmlFor={`${prefix}-code`}>{copy.verificationCode} *</label>
+            <input ref={codeRef} id={`${prefix}-code`} name="code" inputMode="numeric" autoComplete="one-time-code"
+              maxLength={6} value={code} disabled={isVerified} placeholder={copy.verificationCodePlaceholder}
+              onChange={event => { setCode(event.target.value.replace(/\D/g, "")); setError(""); }} />
+          </div>
+          <p className={styles.hint} role="status">{isVerified ? copy.emailVerified : copy.codeSent}</p>
+        </div> : null}
+        <div className={formStyles.field}>
+          <label htmlFor={`${prefix}-notes`}>{cadCopy.notes}</label>
+          <textarea id={`${prefix}-notes`} name="notes" rows={2} maxLength={1000} value={notes} onChange={event => setNotes(event.target.value)}
+            placeholder={cadCopy.placeholder} />
+        </div>
+      </fieldset>
+      {error ? <p className={`${styles.error} ${formStyles.error}`} role="alert">{error}</p> : null}
+    </form>}
+  </ConfiguratorDialogFrame>;
 }

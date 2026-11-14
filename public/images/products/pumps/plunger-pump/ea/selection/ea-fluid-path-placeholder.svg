@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1125" viewBox="0 0 1500 1125" role="img" aria-labelledby="title desc">
+<title id="title">完整配管图待补</title><desc id="desc">预留与实际配置相符的泵、切换阀、硬管、接头与容器连接示例</desc>
+<rect width="1500" height="1125" fill="#f6f9fc"/><rect x="60" y="60" width="1380" height="1005" rx="12" fill="none" stroke="#b7c5d8" stroke-width="3" stroke-dasharray="14 12"/>
+<g fill="none" stroke="#91a2ba" stroke-width="10"><rect x="650" y="315" width="200" height="145" rx="12"/><path d="m680 315 22-30h96l22 30"/><circle cx="750" cy="388" r="42"/></g>
+<g text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif"><text x="750" y="580" fill="#173368" font-size="46" font-weight="600">泵、阀与管路配套</text><text x="750" y="660" fill="#53657e" font-size="32">完整配管图待补</text><text x="750" y="740" fill="#65768c" font-size="25">按实际供货配置补充阀路、接管与容器关系</text></g></svg>

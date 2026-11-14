@@ -1,0 +1,57 @@
+.content { margin-top: 36px; color: #111; font-size: 16px; line-height: 1.85; overflow-wrap: anywhere; }
+.content h2 { margin: 0 0 18px; font-size: 26px; font-weight: 600; line-height: 1.35; }
+.content h3 { margin: 0 0 14px; font-size: 20px; font-weight: 600; line-height: 1.5; }
+.content h4 { margin: 0 0 8px; font-size: 17px; font-weight: 600; line-height: 1.6; }
+.content p { margin: 0 0 14px; }
+.lead { max-width: 980px; }
+.content .answer { max-width: 1040px; margin-bottom: 18px; color: #173368; font-weight: 500; }
+.content .note { margin-top: 16px; color: #465369; font-size: 14px; line-height: 1.8; }
+.section { padding: 28px 0; border-top: 1px solid #dbe3ee; scroll-margin-top: 110px; }
+.number { margin-right: 12px; font-variant-numeric: tabular-nums; }
+.guideNav { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 22px 0 26px; }
+.guideNav a, .content .link { color: #173368; text-underline-offset: 5px; }
+.guideNav a:hover, .content .link:hover { color: #066c82; }
+.guideNav a:focus-visible, .link:focus-visible { outline: 2px solid #173368; outline-offset: 4px; }
+.tableWrap { max-width: 100%; overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; text-align: left; }
+.table th, .table td { padding: 16px 20px; border-bottom: 1px solid #dbe3ee; vertical-align: top; }
+.table thead { background: #f6f9fc; }
+.table tbody th { width: 25%; font-weight: 500; }
+.comparison { min-width: 640px; table-layout: fixed; }
+.comparison thead th:first-child, .comparison tbody th { width: 22%; }
+.comparison thead th:nth-child(2) { width: 34%; }
+.tableWrap:focus-visible { outline: 2px solid #173368; outline-offset: 4px; }
+.content .scrollHint { display: none; }
+.rows { margin: 0 0 18px; }
+.rows > div { display: grid; grid-template-columns: minmax(120px, 1fr) minmax(0, 4fr); gap: 24px; padding: 16px 0; border-bottom: 1px solid #dbe3ee; }
+.rows dt { font-weight: 500; }
+.rows dd { margin: 0; }
+.steps { padding-left: 28px; margin: 0; }
+.steps li { padding: 6px 0 14px 10px; }
+.steps li::marker { color: #173368; font-weight: 600; }
+.steps li:last-child, .steps li:last-child p { padding-bottom: 0; margin-bottom: 0; }
+.deliveryRow { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 40px; padding: 32px 0; border-top: 1px solid #dbe3ee; }
+.photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: 16px; min-width: 0; }
+.photos figure { margin: 0; min-width: 0; }
+.photos img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; border: 1px solid #e6ebf1; background: #fff; }
+.photos figcaption { margin-top: 9px; color: #465369; font-size: 14px; line-height: 1.6; }
+
+@media (max-width: 900px) {
+  .deliveryRow { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
+@media (max-width: 600px) {
+  .content { margin-top: 26px; font-size: 15px; }
+  .content h2 { font-size: 23px; }
+  .content h3 { font-size: 18px; }
+  .content h4 { font-size: 16px; }
+  .section { padding: 24px 0; }
+  .table th, .table td { padding: 12px 10px; }
+  .table tbody th { width: 31%; }
+  .comparison tbody th { width: 22%; }
+  .content .scrollHint { display: block; margin: 16px 0 8px; color: #465369; font-size: 13px; }
+  .rows > div { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .guideNav { gap: 10px 18px; }
+  .deliveryRow { padding: 26px 0; }
+  .photos { gap: 10px; }
+  .photos figcaption { font-size: 12px; }
+}

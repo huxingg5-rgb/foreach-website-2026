@@ -218,5 +218,121 @@
   "/images/products/tubing-assemblies/flanged-tubing/fep/foreach-fep-flanged-tubing-assembly-end-detail.webp": {
     "width": 1500,
     "height": 1500
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/bagged-tubing-assemblies.webp": {
+    "width": 1500,
+    "height": 1125
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/tubing-assemblies-inner-box.webp": {
+    "width": 1500,
+    "height": 1125
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/tubing-assemblies-foam-protection.webp": {
+    "width": 1500,
+    "height": 1125
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/tubing-assembly-box-label.webp": {
+    "width": 1500,
+    "height": 1125
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/tubing-assembly-packing-list.webp": {
+    "width": 1500,
+    "height": 1125
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/tubing-assembly-shipment-cartons.webp": {
+    "width": 1500,
+    "height": 1125
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/tubing-assembly-end-dimension-inspection.webp": {
+    "width": 1500,
+    "height": 1125
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/tubing-assembly-length-check.webp": {
+    "width": 1500,
+    "height": 1125
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/tubing-assembly-configuration-example.webp": {
+    "width": 2038,
+    "height": 1243
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/delivery/tubing-assembly-drawing-bom-example.webp": {
+    "width": 1272,
+    "height": 965
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-sealing-components.webp": {
+    "width": 1500,
+    "height": 1000
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-flat-and-conical-port.webp": {
+    "width": 1500,
+    "height": 1717
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-tubing-configurable-components.webp": {
+    "width": 1500,
+    "height": 483
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/selection/hf-fitting-dimensions.webp": {
+    "width": 1500,
+    "height": 829
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/selection/hf6-fitting-dimensions.webp": {
+    "width": 1500,
+    "height": 859
+  },
+  "/images/products/fittings/thread-to-barbed-fittings/details-zh/t-st-torque-driver.webp": {
+    "width": 1500,
+    "height": 1500
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/selection/t-st-torque-driver.webp": {
+    "width": 1500,
+    "height": 888
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-flat-port-section.webp": {
+    "width": 1500,
+    "height": 579
+  },
+  "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-conical-port-section.webp": {
+    "width": 1500,
+    "height": 347
+  },
+  "/images/products/tubing-assemblies/selection/ferrule-connection-exploded.webp": {
+    "width": 1500,
+    "height": 980
+  },
+  "/images/products/tubing-assemblies/selection/retaining-ring-sealing-components.webp": {
+    "width": 1500,
+    "height": 824
+  },
+  "/images/products/tubing-assemblies/selection/t-sf-4-ss-ring-installation-pliers.webp": {
+    "width": 1500,
+    "height": 1119
+  },
+  "/images/products/tubing-assemblies/selection/hn-standard-fitting-dimensions.webp": {
+    "width": 1500,
+    "height": 867
+  },
+  "/images/products/tubing-assemblies/selection/hn6-compact-fitting-dimensions.webp": {
+    "width": 1500,
+    "height": 820
+  },
+  "/images/products/tubing-assemblies/selection/hsf6-pps-fitting-dimensions.webp": {
+    "width": 1500,
+    "height": 759
+  },
+  "/images/products/tubing-assemblies/selection/cl-1-ring-kit-components.webp": {
+    "width": 1500,
+    "height": 1310
+  },
+  "/images/products/tubing-assemblies/selection/fep-ferrule-kits-guide-photo.webp": {
+    "width": 1500,
+    "height": 1500
+  },
+  "/images/products/tubing-assemblies/selection/ptfe-retaining-ring-kits-guide-photo.webp": {
+    "width": 1500,
+    "height": 1106
+  },
+  "/images/products/tubing-assemblies/selection/black-ptfe-retaining-ring-kits-guide-photo.webp": {
+    "width": 1500,
+    "height": 1500
   }
 }

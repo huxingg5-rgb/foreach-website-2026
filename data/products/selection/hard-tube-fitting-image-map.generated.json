@@ -1281,5 +1281,61 @@
     "sourceFiles": [
       "PUT-U32-05-SS-N.webp"
     ]
+  },
+  "HBL6-U28-PS-B": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-card.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-main.webp"
+    ]
+  },
+  "HBL6-M6-PS-B": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-card.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-main.webp"
+    ]
+  },
+  "HBL-U28-PV-N": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-card.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-main.webp"
+    ]
+  },
+  "HBL-U28-PV-B": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-card.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-main.webp"
+    ]
+  },
+  "HBL-M6-PV-N": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-card.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-main.webp"
+    ]
+  },
+  "HBL-M6-PV-B": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-card.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-main.webp"
+    ]
+  },
+  "HBL6X-M6-PV-N": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-card.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-main.webp"
+    ]
+  },
+  "HBL6X-U28-PV-N": {
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-card.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-main.webp",
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-main.webp"
+    ]
   }
 }

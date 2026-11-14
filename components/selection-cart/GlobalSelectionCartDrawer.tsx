@@ -23,8 +23,12 @@
       - 打印区域通过 portal 挂到 body 最高层，避免多页空白
 ========================================================= */
 
+import DrawingRequirements from "@/components/products/configurator/DrawingRequirements";
+import { drawingRequirementsLine, drawingRequirementsText, getDrawingTypes } from "@/data/products/detail/drawing-requirements";
+import { defaultInquiryAccessoryName, defaultInquirySubmission, getDefaultInquiryCopy } from "@/data/products/detail/default-inquiry";
 import { hardTubeProductCodeText } from "@/data/products/configurator/hard-tube-accessories";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { createPortal } from "react-dom";
 import {
@@ -51,6 +55,15 @@ import styles from "./GlobalSelectionCartDrawer.module.css";
 import { useSelectionCart } from "./SelectionCartProvider";
 import { getSelectionCartCopy } from "./selection-cart.i18n";
 import { getCartGroups } from "./selection-cart-bundles";
+import type { SelectionCartItem } from "./selection-cart.types";
+import { useCartPdfAttachments } from "./use-cart-pdf-attachments";
+import { appendInquiryAttachments } from "@/lib/inquiry/pdf-attachments";
+import { assemblyText } from "@/data/products/configurator/tubing-assembly.intl";
+import { flangedConfigurationInquirySummary, flangedConfigurationProductName } from "@/data/products/configurator/flanged-tubing-cart";
+import { pistonText } from "@/data/products/detail/piston-pump-ui.intl";
+import { eaPumpInquiryRows, eaPumpInquirySummary } from "@/data/products/configurator/ea-pump-inquiry";
+
+const ConfigurationPdfAttachments = dynamic(() => import("@/components/products/tubing-assemblies/ConfigurationPdfAttachments"), { ssr: false });
 
 /* =========================================================
    PDF 页眉 / 页脚 SVG 路径
@@ -120,8 +133,11 @@ function getLocalizedCartProductName(
   productName: string,
   sourceType: string,
   locale: LocaleCode,
+  item?: SelectionCartItem,
 ) {
-  if (sourceType !== "pump-selection") return productName;
+  const accessoryName = item && defaultInquiryAccessoryName(item, locale);
+  if (accessoryName) return accessoryName;
+  if (sourceType !== "pump-selection" && sourceType !== "tubing-selection") return productName;
 
   return getLocalizedFilterOptionLabel(productName, locale);
 }
@@ -141,8 +157,7 @@ export default function GlobalSelectionCartDrawer() {
     openCart,
     closeCart,
     changeQuantity,
-    toggleDrawingNeed,
-    setAllDrawingNeeds,
+    setDrawingTypes,
     removeItem,
     clearCart,
     copyCartText,
@@ -151,6 +166,9 @@ export default function GlobalSelectionCartDrawer() {
   } = useSelectionCart();
   const cartGroups = useMemo(() => getCartGroups(items), [items]);
   const orderedItems = useMemo(() => cartGroups.flatMap(group => group.items), [cartGroups]);
+  const hasEaConfiguration = orderedItems.some(item => item.eaPumpConfiguration);
+  const defaultInquiry = defaultInquirySubmission(orderedItems);
+  const defaultInquiryCopy = getDefaultInquiryCopy(locale);
 
   /* =========================================================
      是否已经在浏览器端挂载
@@ -164,7 +182,7 @@ export default function GlobalSelectionCartDrawer() {
 
   /* 已经标记“已添加图纸”的型号 */
   const requestDrawingItems = useMemo(() => {
-    return orderedItems.filter((item) => item.needDrawing);
+    return orderedItems.filter((item) => item.needDrawing || item.drawingAttachment);
   }, [orderedItems]);
 
   /* 图纸需求数量 */
@@ -177,6 +195,12 @@ export default function GlobalSelectionCartDrawer() {
   const [isDrawingRequestModalOpen, setIsDrawingRequestModalOpen] =
     useState(false);
   const [drawingRequestFiles, setDrawingRequestFiles] = useState<File[]>([]);
+  const [submissionItems, setSubmissionItems] = useState<SelectionCartItem[]>([]);
+  const isEaQuoteRequest = submissionItems.some(item => item.eaPumpConfiguration);
+  const defaultInquiryRequest = defaultInquirySubmission(submissionItems);
+  const configurationPdfs = useCartPdfAttachments(submissionItems, isDrawingRequestModalOpen, locale);
+  const configurationPdfEntries = submissionItems.flatMap(item => item.flangedConfiguration && item.drawingAttachment
+    ? [{ record: item.flangedConfiguration, attachment: item.drawingAttachment }] : []);
 
   /* 用于记录清单变化，避免页面初次加载时触发动效 */
   const previousCartSignatureRef = useRef("");
@@ -194,32 +218,40 @@ export default function GlobalSelectionCartDrawer() {
      3. 后续规格书申请也可以用类似方式转换数据
   ========================================================= */
   const drawingRequestModalItems = useMemo<CompanyInfoRequestItem[]>(() => {
-    return requestDrawingItems.map((item) => {
+    const isProductInquiry = Boolean(defaultInquirySubmission(submissionItems));
+    return submissionItems.map((item) => {
       const localizedProductName = getLocalizedCartProductName(
         item.productName,
         item.sourceType,
         locale,
+        item,
       );
 
       return {
         id: item.id,
         title: item.foreachModel,
-        metaLines:
-          item.sourceType === "pump-selection"
+        metaLines: [drawingRequirementsLine(item, locale), ...(
+          item.flangedConfiguration && item.drawingAttachment ? [
+            flangedConfigurationProductName(item.flangedConfiguration, locale),
+            `${item.flangedConfiguration.name} · R${item.flangedConfiguration.revision}`,
+            `${assemblyText("数量", locale)}: ${item.quantity}`,
+            `${assemblyText("PDF 附件", locale)}: ${item.drawingAttachment.name}`,
+          ] : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
             ? [
                 `${isEnglish ? t("Product Type") : "产品类型"}: ${localizedProductName}`,
                 `${isEnglish ? t("Product Model") : "产品型号"}: ${item.foreachModel}`,
-                ...(item.bundleId ? [`${isEnglish ? t("Product Code") : "商品编码"}: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}`] : []),
+                ...(item.eaPumpConfiguration ? eaPumpInquiryRows(item.eaPumpConfiguration, locale).map(([label, value]) => `${label}${isEnglish ? ": " : "："}${value}`) : []),
+                ...(item.bundleId || isProductInquiry ? [`${isEnglish ? t("Product Code") : "商品编码"}: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}`] : []),
                 `${isEnglish ? t("Quantity") : "数量"}: ${item.quantity}`,
               ]
             : [
                 `${isEnglish ? t("Product Code") : "商品编码"}: ${item.productCode}`,
                 `${isEnglish ? t("Compatible Models") : "兼容编码"}: ${item.competitorModels.join(" / ") || "-"}`,
                 `${isEnglish ? t("Quantity") : "数量"}: ${item.quantity}`,
-              ],
+              ])],
       };
     });
-  }, [isEnglish, locale, requestDrawingItems]);
+  }, [isEnglish, locale, submissionItems]);
 
   /* =========================================================
      右下角清单按钮轻动效
@@ -266,21 +298,14 @@ export default function GlobalSelectionCartDrawer() {
      3. 不使用浏览器 alert，体验更像官网表单
   ========================================================= */
   function handleOpenDrawingRequestModal() {
+    // Freeze both parameters and PDF references at the start of this request.
+    setSubmissionItems(JSON.parse(JSON.stringify(orderedItems)));
     setDrawingRequestFiles([]);
-    /*
-     * “申请图纸”代表客户希望为当前清单统一申请图纸。
-     *
-     * 因此点击后：
-     * 1. 把当前清单全部标记为需要图纸
-     * 2. 弹窗会通过同一个 SelectionCartProvider 读取这些型号
-     * 3. 弹窗项目数量与当前产品清单数量保持一致
-     * 4. 弹窗有项目后，发送验证码按钮自动解除禁用
-     */
     if (items.length > 0) {
-      setAllDrawingNeeds(true);
+      // Preserve each configuration’s explicit 2D/3D choices, including no request.
       trackBeginInquiry({
-        formId: "drawing_request_form",
-        formType: "drawing_request",
+        formId: defaultInquiry?.formId || (hasEaConfiguration ? "ea_configuration_inquiry_form" : "drawing_request_form"),
+        formType: defaultInquiry?.formType || (hasEaConfiguration ? "product_inquiry" : "drawing_request"),
         sourceSection: "global_selection_cart",
         locale,
         itemCount: items.length,
@@ -364,25 +389,35 @@ export default function GlobalSelectionCartDrawer() {
   async function handleSubmitDrawingRequest(
     formValue: CompanyInfoFormValue,
   ) {
-    if (requestDrawingItems.length === 0) {
+    if (submissionItems.length === 0) {
       throw new Error("required_fields_missing");
     }
 
-    const requestedDrawingLines = requestDrawingItems.map(
+    if (configurationPdfs.blocked) throw new Error(assemblyText(configurationPdfs.error || "配置图纸尚未准备完成，请稍后重试。", locale));
+
+    const requestedDrawingLines = submissionItems.map(
       (item, index) => {
         const localizedProductName = getLocalizedCartProductName(
           item.productName,
           item.sourceType,
           locale,
+          item,
         );
 
-        if (item.sourceType === "pump-selection") {
+        if (item.flangedConfiguration && item.drawingAttachment) return [
+          `${index + 1}. ${flangedConfigurationInquirySummary(item.flangedConfiguration, locale)}`,
+          `${assemblyText("数量", locale)}: ${item.quantity}`, `PDF: ${item.drawingAttachment.name}`, `PDF SHA-256: ${item.drawingAttachment.sha256}`,
+        ].join("\n");
+
+        if ((item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")) {
           return [
             `${index + 1}. ${item.foreachModel}`,
             `Product Type: ${localizedProductName}`,
             `Product Model: ${item.foreachModel}`,
-            ...(item.bundleId ? [`Product Code: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}`] : []),
+            ...(item.eaPumpConfiguration ? [eaPumpInquirySummary(item.eaPumpConfiguration, locale)] : []),
+            ...(item.bundleId || defaultInquiryRequest ? [`Product Code: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}`] : []),
             `Quantity: ${item.quantity}`,
+            ...(isEaQuoteRequest ? [`Drawing Required: ${item.needDrawing ? "Yes" : "No"}`] : []),
           ].join("\n");
         }
 
@@ -396,28 +431,29 @@ export default function GlobalSelectionCartDrawer() {
           `Quantity: ${item.quantity}`,
         ].join("\n");
       },
-    );
+    ).map((line, index) => `${line}\n${drawingRequirementsLine(submissionItems[index], locale)}`);
 
     const productTypeText = Array.from(
       new Set(
-        requestDrawingItems.map((item) =>
+        submissionItems.map((item) =>
           getLocalizedCartProductName(
             item.productName,
             item.sourceType,
             locale,
+            item,
           ),
         ),
       ),
     ).join(" / ");
 
-    const targetModelText = requestDrawingItems
+    const targetModelText = submissionItems
       .map((item) => item.foreachModel)
       .join(" / ");
 
     const requirementText = [
       `Country / Region: ${formValue.country.trim() || "-"}`,
       "",
-      "Requested Drawing Items:",
+      defaultInquiryRequest?.itemsHeading || (isEaQuoteRequest ? "Quotation Items:" : "Requested Drawing Items:"),
       requestedDrawingLines.join("\n\n"),
       formValue.message.trim()
         ? `\nNotes:\n${formValue.message.trim()}`
@@ -426,25 +462,28 @@ export default function GlobalSelectionCartDrawer() {
       .filter(Boolean)
       .join("\n");
 
+    // The inquiry endpoint accepts 4,000 characters; do not silently lose configurations.
+    if (isEaQuoteRequest && requirementText.length > 4000) {
+      throw new Error(pistonText("配置与补充需求较长，请精简文字或分批询价，详细要求可作为附件上传。当前内容尚未提交。", locale));
+    }
+
     const submission = new FormData();
     const fields = {
       name: formValue.name.trim(),
       company: formValue.company.trim(),
       email: formValue.email.trim(),
       phone: formValue.phone.trim(),
-      requestType: "Drawing Request",
+      requestType: defaultInquiryRequest?.requestType || (isEaQuoteRequest ? "Product Inquiry" : "Drawing Request"),
       productType: productTypeText.slice(0, 200) || "Selected Products",
       targetModel: targetModelText.slice(0, 200),
-      projectStage: "Drawing Request Review",
+      projectStage: defaultInquiryRequest?.projectStage || (isEaQuoteRequest ? "Configuration Quotation Review" : "Drawing Request Review"),
       message: requirementText,
       locale,
     };
     Object.entries(fields).forEach(([key, value]) => {
       submission.append(key, value);
     });
-    drawingRequestFiles.forEach((file) => {
-      submission.append("attachments", file, file.name);
-    });
+    appendInquiryAttachments(submission, configurationPdfs.files || [], drawingRequestFiles);
 
     const response = await fetch("/api/inquiry/submit", {
       method: "POST",
@@ -468,7 +507,7 @@ export default function GlobalSelectionCartDrawer() {
      * 只取消本次成功提交型号的图纸标记。
      * 选型产品本身继续保留，便于客户后续生成 PDF 或提交报价需求。
      */
-    setAllDrawingNeeds(false);
+    // Saved drawing requirements remain available after a successful inquiry.
     setDrawingRequestFiles([]);
   }
   /* =========================================================
@@ -536,30 +575,29 @@ export default function GlobalSelectionCartDrawer() {
                     <tr key={item.id}>
                       <td>{group.accessories.length ? `${groupIndex + 1}.${partIndex + 1}` : groupIndex + 1}</td>
                       <td>
-                        {item.sourceType === "pump-selection"
+                        {(item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
                           ? cartCopy.sourceLabels.products
                           : cartCopy.sourceLabels.fittingReplacement}
                       </td>
                       <td>
-                        {item.sourceType === "pump-selection"
+                        {(item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
                           ? getLocalizedCartProductName(
                               item.productName,
                               item.sourceType,
                               locale,
+                              item,
                             )
                           : item.productCode}
                       </td>
                       <td>
-                        {item.sourceType === "pump-selection"
+                        {item.eaPumpConfiguration ? <span style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>{eaPumpInquirySummary(item.eaPumpConfiguration, locale)}</span> : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
                           ? item.bundleId ? `${isEnglish ? t("Product Code") : "商品编码"}: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}` : cartCopy.configuredProduct
                           : item.competitorModels.join(" / ") || "-"}
                       </td>
                       <td>{item.foreachModel}</td>
                       <td>{item.quantity}</td>
                       <td>
-                        {item.needDrawing
-                          ? cartCopy.required
-                          : cartCopy.notRequired}
+                        {drawingRequirementsText(getDrawingTypes(item), locale)}
                       </td>
                     </tr>
                   );
@@ -628,7 +666,7 @@ export default function GlobalSelectionCartDrawer() {
             <div className={styles.head}>
               <div>
                 <h2>{isEnglish ? t("Product Selection List") : "选型清单"}</h2>
-                <p>{cartCopy.headerDescription}</p>
+                <p>{defaultInquiry ? defaultInquiryCopy.listDescription : cartCopy.headerDescription}</p>
               </div>
 
               <button
@@ -679,11 +717,11 @@ export default function GlobalSelectionCartDrawer() {
                   <div className={styles.list}>
                     {cartGroups.map((group) => {
                       const item = group.primary;
-                      const needsDrawing = group.items.some(part => part.needDrawing);
                       const localizedProductName = getLocalizedCartProductName(
                         item.productName,
                         item.sourceType,
                         locale,
+                        item,
                       );
 
                       return (
@@ -714,12 +752,12 @@ export default function GlobalSelectionCartDrawer() {
                           <div className={styles.itemHead}>
                             <div>
                               <span>
-                                {item.sourceType === "pump-selection"
+                                {item.flangedConfiguration ? assemblyText("管组件搭配选型", locale) : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
                                   ? cartCopy.sourceLabels.products
                                   : cartCopy.sourceLabels.fittingReplacement}
                               </span>
 
-                              {item.detailHref && item.sourceType !== "pump-selection" ? (
+                              {item.detailHref && (item.sourceType !== "pump-selection" && item.sourceType !== "tubing-selection") ? (
                                 <Link
                                   className={styles.itemTitleLink}
                                   href={getCartDetailHref(item.detailHref, locale) ?? "#"}
@@ -734,24 +772,17 @@ export default function GlobalSelectionCartDrawer() {
                               )}
                             </div>
 
-                            <button
-                              className={
-                                needsDrawing
-                                  ? `${styles.drawingButton} ${styles.active}`
-                                  : styles.drawingButton
-                              }
-                              type="button"
-                              onClick={() => {
-                                toggleDrawingNeed(item.id, !needsDrawing);
-                              }}
-                            >
-                              {needsDrawing
-                                ? isEnglish ? t("Drawing Added") : "已添加图纸"
-                                : isEnglish ? t("Add Drawing") : "添加图纸"}
-                            </button>
                           </div>
 
-                          {item.sourceType === "pump-selection" ? (
+                          {item.sourceType !== "tubing-selection" || item.flangedConfiguration ? <div className={styles.itemDrawings}>
+                            <DrawingRequirements locale={locale} value={getDrawingTypes(item)}
+                              onChange={value => setDrawingTypes(item.id, value)} />
+                          </div> : null}
+
+                          {item.flangedConfiguration ? <>
+                            <details className={styles.configurationDetails}><summary>{assemblyText("查看配置参数", locale)}</summary><pre>{flangedConfigurationInquirySummary(item.flangedConfiguration, locale)}</pre></details>
+                            {item.drawingAttachment ? <ConfigurationPdfAttachments locale={locale} entries={[{ record: item.flangedConfiguration, attachment: item.drawingAttachment }]} international={isEnglish} /> : <p role="alert">{assemblyText("配置 PDF 附件缺失，请返回配置重新加入清单。", locale)}</p>}
+                          </> : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection") ? (
                             <div className={styles.infoRow}>
                               <span>{isEnglish ? t("Product Type") : "产品类型"}</span>
                               <strong>{localizedProductName}</strong>
@@ -772,12 +803,17 @@ export default function GlobalSelectionCartDrawer() {
                             </>
                           )}
 
+                          {item.eaPumpConfiguration ? <details className={styles.configurationDetails} open>
+                            <summary>{pistonText("本次询价配置", locale)}</summary>
+                            <pre>{eaPumpInquirySummary(item.eaPumpConfiguration, locale)}</pre>
+                          </details> : null}
+
                           {group.accessories.map(accessory => (
                             <div className={styles.bundleAccessory} key={accessory.id}>
                               <h3>{accessory.foreachModel}</h3>
                               <div className={styles.infoRow}>
                                 <span>{isEnglish ? t("Product Type") : "产品类型"}</span>
-                                <strong>{getLocalizedCartProductName(accessory.productName, accessory.sourceType, locale)}</strong>
+                                <strong>{getLocalizedCartProductName(accessory.productName, accessory.sourceType, locale, accessory)}</strong>
                               </div>
                             </div>
                           ))}
@@ -809,7 +845,8 @@ export default function GlobalSelectionCartDrawer() {
 
               <div className={styles.note}>
                 <strong>{cartCopy.noteTitle}</strong>
-                <p>{cartCopy.noteDescription}</p>
+                <p>{defaultInquiry ? defaultInquiryCopy.listNote : hasEaConfiguration ? pistonText("清单保存在当前浏览器。所选配置、数量与补充需求将在询价时一并提交；图纸按勾选需求处理，已有配置 PDF 将自动附加。", locale) : items.some(item => item.flangedConfiguration) ? assemblyText("清单保存在当前浏览器。配置 PDF 将自动附加并随需求提交；其他产品的图纸需求按所选项目处理。", locale)
+                  : cartCopy.noteDescription}</p>
               </div>
             </div>
 
@@ -819,7 +856,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={handleOpenDrawingRequestModal}
               >
-                {cartCopy.requestQuote}
+                {defaultInquiry ? defaultInquiryCopy.action : cartCopy.requestQuote}
               </button>
 
               <button
@@ -856,30 +893,42 @@ export default function GlobalSelectionCartDrawer() {
       <CompanyInfoRequestModal
         locale={locale}
         isOpen={isDrawingRequestModalOpen}
-        title={isEnglish ? t("Request Drawings") : "申请图纸"}
-        description={drawingCopy.description}
+        title={defaultInquiryRequest ? defaultInquiryCopy.title : isEaQuoteRequest ? pistonText("柱塞泵配置询价", locale) : isEnglish ? t("Request Drawings") : "申请图纸"}
+        description={defaultInquiryRequest ? defaultInquiryCopy.description : isEaQuoteRequest ? pistonText("请核对配置与数量，并填写联系信息。我们将结合您的使用条件确认供货方案与报价。", locale) : drawingCopy.description}
+        copyOverrides={defaultInquiryRequest ? {
+          summary: defaultInquiryCopy.summary, emailPlaceholder: defaultInquiryCopy.emailPlaceholder,
+          notes: defaultInquiryCopy.notes, notesPlaceholder: defaultInquiryCopy.notesPlaceholder,
+        } : isEaQuoteRequest ? {
+          summary: pistonText("所选配置与补充需求已带入。请填写公司信息并验证邮箱，以便接收选型与报价回复。", locale),
+          emailPlaceholder: pistonText("请输入接收选型与报价回复的邮箱", locale),
+          notes: pistonText("其他询价要求", locale),
+          notesPlaceholder: pistonText("可补充项目进度、交付时间或商务要求", locale),
+        } : undefined}
+        submissionBlocked={configurationPdfs.blocked}
         renderAttachments={(disabled) => (
-          <InquiryAttachmentField
+          <>{configurationPdfEntries.length || configurationPdfs.error ? <ConfigurationPdfAttachments locale={locale} entries={configurationPdfEntries} pending={configurationPdfs.pending} error={configurationPdfs.error} onRetry={configurationPdfs.retry} disabled={disabled} international={isEnglish} packageFile={configurationPdfs.files?.[0]} /> : null}<InquiryAttachmentField
             key={locale}
             locale={locale}
             files={drawingRequestFiles}
             disabled={disabled}
             onChange={setDrawingRequestFiles}
-          />
+            reservedFiles={configurationPdfs.files || (configurationPdfEntries.length ? [{ size: 0 }] : [])}
+          /></>
         )}
         items={drawingRequestModalItems}
         emptyTitle={drawingCopy.emptyTitle}
         emptyDescription={drawingCopy.emptyDescription}
-        submitLabel={drawingCopy.submit}
-        successTitle={drawingCopy.successTitle}
-        successDescription={drawingCopy.successDescription}
+        submitLabel={defaultInquiryRequest ? defaultInquiryCopy.submit : isEaQuoteRequest ? pistonText("提交询价", locale) : drawingCopy.submit}
+        successTitle={defaultInquiryRequest ? defaultInquiryCopy.successTitle : isEaQuoteRequest ? pistonText("询价已提交", locale) : drawingCopy.successTitle}
+        successDescription={defaultInquiryRequest ? defaultInquiryCopy.successDescription : isEaQuoteRequest ? pistonText("我们已收到您的配置与需求，将通过所留联系方式跟进。", locale) : drawingCopy.successDescription}
         enableEmailVerification
-        analyticsFormId="drawing_request_form"
-        analyticsFormType="drawing_request"
+        analyticsFormId={defaultInquiryRequest?.formId || (isEaQuoteRequest ? "ea_configuration_inquiry_form" : "drawing_request_form")}
+        analyticsFormType={defaultInquiryRequest?.formType || (isEaQuoteRequest ? "product_inquiry" : "drawing_request")}
         analyticsSourceSection="global_selection_cart"
         onClose={() => {
           setIsDrawingRequestModalOpen(false);
           setDrawingRequestFiles([]);
+          setSubmissionItems([]);
         }}
         onSubmitPreview={handleSubmitDrawingRequest}
       />

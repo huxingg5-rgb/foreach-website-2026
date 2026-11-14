@@ -1,5 +1,7 @@
 "use client";
 
+import DrawingRequirements from "./DrawingRequirements";
+import { drawingRequirementsLine, normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import Link from "next/link";
 import { getHardTubeAccessory, hardTubeProductCodeText, describeHardTubeAccessory, formatTubeDiameters, type HardTubeAccessoryConfig, type HardTubeAccessoryChoice } from "@/data/products/configurator/hard-tube-accessories";
@@ -12,15 +14,17 @@ import styles from "./HardTubeWasherConfigurator.module.css";
 type Props = {
   config: HardTubeAccessoryConfig;
   value: HardTubeAccessoryChoice | null;
+  drawingTypes?: CadDrawingType[];
   onClose: () => void;
-  onConfirm: (choice: HardTubeAccessoryChoice) => void;
-  onAdd: (choice: HardTubeAccessoryChoice) => void;
-  isAdded: (choice: HardTubeAccessoryChoice) => boolean;
+  onConfirm: (choice: HardTubeAccessoryChoice, drawingTypes: CadDrawingType[]) => void;
+  onAdd: (choice: HardTubeAccessoryChoice, drawingTypes: CadDrawingType[]) => void;
+  isAdded: (choice: HardTubeAccessoryChoice, drawingTypes: CadDrawingType[]) => boolean;
 };
 
 // Mounted only while open, so reopening starts from the last confirmed choice.
-export default function HardTubeWasherConfigurator({ config, value, onClose, onConfirm, onAdd, isAdded }: Props) {
+export default function HardTubeWasherConfigurator({ config, value, drawingTypes: initialDrawings, onClose, onConfirm, onAdd, isAdded }: Props) {
   const [choice, setChoice] = useState<HardTubeAccessoryChoice | null>(value);
+  const [drawings, setDrawings] = useState(() => normalizeDrawingTypes(initialDrawings));
   const [copyStatus, setCopyStatus] = useState("");
   const dialogRef = useRef<HTMLElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -38,7 +42,7 @@ export default function HardTubeWasherConfigurator({ config, value, onClose, onC
   const diameterLabel = formatTubeDiameters(config.tubeOuterDiameters);
   const withWasher = choice !== "none";
   const ready = choice === "none" || Boolean(washer);
-  const added = ready && choice !== null && isAdded(choice);
+  const added = ready && choice !== null && isAdded(choice, drawings);
 
   useEffect(() => { onCloseRef.current = onClose; }, [onClose]);
   useEffect(() => {
@@ -54,7 +58,7 @@ export default function HardTubeWasherConfigurator({ config, value, onClose, onC
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") { event.preventDefault(); onCloseRef.current(); }
       if (event.key !== "Tab") return;
-      const focusable = dialogRef.current?.querySelectorAll<HTMLElement>("button:not(:disabled), a[href]");
+      const focusable = dialogRef.current?.querySelectorAll<HTMLElement>("button:not(:disabled), a[href], input:not(:disabled)");
       if (!focusable?.length) return;
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
@@ -92,6 +96,7 @@ export default function HardTubeWasherConfigurator({ config, value, onClose, onC
     const selectionText = [
       `${copy.fitting}: ${config.model} · ${copy.code}: ${config.productCode} · ${config.material} · ${config.thread} · ${copy.tubeFit} ${diameterLabel}`,
       washer ? `${text(copy.paired)}: ${washer.model} · ${copy.code}: ${accessoryCode(washer)} · ${accessoryDescription(washer)}` : `${copy.fittingOnly} · ${text(copy.without)}`,
+      drawingRequirementsLine({ drawingTypes: drawings }, locale),
     ].join("\n");
     try {
       await navigator.clipboard.writeText(selectionText);
@@ -117,8 +122,8 @@ export default function HardTubeWasherConfigurator({ config, value, onClose, onC
       onClose={onClose}
       notice={<>{copy.supportBefore}<Link href={`${locale === "zh" ? "" : `/${locale}`}/contact/#form`}>{copy.contact}</Link>{text(copy.supportAfter)}</>}
       actions={<>
-        <ConfiguratorButton variant="secondary" active={added} disabled={!ready || added} onClick={() => { if (ready && choice !== null) onAdd(choice); }}>{added ? copy.added : copy.add}</ConfiguratorButton>
-        <ConfiguratorButton variant="primary" disabled={!ready} onClick={() => { if (ready && choice !== null) onConfirm(choice); }}>{copy.confirm}</ConfiguratorButton>
+        <ConfiguratorButton variant="secondary" active={added} disabled={!ready || added} onClick={() => { if (ready && choice !== null) onAdd(choice, drawings); }}>{added ? copy.added : copy.add}</ConfiguratorButton>
+        <ConfiguratorButton variant="primary" disabled={!ready} onClick={() => { if (ready && choice !== null) onConfirm(choice, drawings); }}>{copy.confirm}</ConfiguratorButton>
       </>}
     >
       <div className={`${shared.main} ${styles.main}`}>
@@ -193,8 +198,10 @@ export default function HardTubeWasherConfigurator({ config, value, onClose, onC
 
             <p className={styles.selectionNote}>{text(withWasher ? copy.selectionNote : copy.fittingOnlyNote)}</p>
 
+            <DrawingRequirements locale={locale} value={drawings} onChange={value => { setDrawings(value); setCopyStatus(""); }} />
             <div className={styles.result} aria-live="polite">
               <div className={styles.resultHeader}><span>{copy.selected}</span><button className={shared.copyButton} type="button" disabled={!ready} onClick={copySelection}>{copyStatus || copy.copy}</button></div>
+              <p translate="no">{drawingRequirementsLine({ drawingTypes: drawings }, locale)}</p>
               <div className={styles.resultRow}><span>{copy.fitting}</span><div><strong>{config.model}</strong><small>{copy.code} {config.productCode} · {config.material}</small></div></div>
               <div className={styles.resultRow}><span>{kindLabel}</span><div><strong className={!washer ? styles.pending : undefined}>{washer?.model || (withWasher ? text(copy.chooseMaterial) : copy.notIncluded)}</strong>{washer && <small>{copy.code} {accessoryCode(washer)} · {accessoryDescription(washer)}</small>}</div></div>
             </div>

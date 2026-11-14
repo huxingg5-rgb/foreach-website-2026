@@ -10,6 +10,8 @@ import styles from "./QuickConnectDetailContent.module.css";
 import HflM616PvNZhContent from "./HflM616PvNZhContent";
 import HardTubeSeriesZhContent from "./HardTubeSeriesZhContent";
 import { getHardTubeZhProfile } from "@/data/products/detail/hard-tube-content.zh";
+import { isHardTubePlug } from "@/data/products/detail/hard-tube-plugs";
+import HardTubePlugDetailContent from "./HardTubePlugDetailContent";
 
 type DetailIdentity = {
   slug?: string;
@@ -88,6 +90,7 @@ export default function HardTubeDetailContent({ data, section }: {
   section: "product" | "selection";
 }) {
   const model = String(data.model || data.foreachModel || data.slug || "").toUpperCase();
+  if (isHardTubePlug(data)) return <HardTubePlugDetailContent data={data} section={section} />;
   if (data.slug === "hfl-m6-16-pv-n" && model === "HFL-M6-16-PV-N") {
     return <HflM616PvNZhContent section={section} config={getHardTubeAccessoryConfig(data, "zh")} />;
   }

@@ -1,3 +1,4 @@
+import type { CadDrawingType } from "@/data/products/detail/drawing-requirements";
 export type ProductConfiguratorValue =
   | string
   | number;
@@ -137,8 +138,10 @@ export type ProductVariantConfiguratorProps = {
   locale?: ProductConfiguratorLocale;
   value?: ProductConfiguratorVariant | null;
   onClose: () => void;
+  drawingRequirements?: boolean;
+  initialDrawingTypes?: CadDrawingType[];
   onConfirm: (
-    variant: ProductConfiguratorVariant
+    variant: ProductConfiguratorVariant, drawingTypes?: CadDrawingType[]
   ) => void;
 
   /*
@@ -146,7 +149,7 @@ export type ProductVariantConfiguratorProps = {
    * 每个商品编码独立判断。
    */
   isVariantSelected?: (
-    variant: ProductConfiguratorVariant
+    variant: ProductConfiguratorVariant, drawingTypes?: CadDrawingType[]
   ) => boolean;
 
   /*
@@ -154,6 +157,6 @@ export type ProductVariantConfiguratorProps = {
    * 执行后不关闭选型弹窗。
    */
   onToggleVariant?: (
-    variant: ProductConfiguratorVariant
+    variant: ProductConfiguratorVariant, drawingTypes?: CadDrawingType[]
   ) => void;
 };

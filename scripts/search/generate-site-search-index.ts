@@ -1,4 +1,5 @@
 import { replaceSmtp4SearchItems } from "../../data/search/smtp4-search";
+import { replaceHardTubePlugSearchItems } from "../../data/search/hard-tube-plug-search";
 import { getPistonPumpMarketingCopy } from "../../data/products/piston-pump-marketing-copy";
 import { replaceSmtp2SearchItems } from "../../data/search/smtp2-search";
 import pistonMarketingCatalog from "../../data/products/piston-pump-marketing-copy.json";
@@ -745,8 +746,9 @@ function deduplicate(items: SiteSearchItem[]): SiteSearchItem[] {
   return [...map.values()];
 }
 
-function buildOutput(items: SiteSearchItem[]): string {
-  items = replaceSmtp4SearchItems(replaceSmtp2SearchItems(items));
+function buildOutput(items: SiteSearchItem[], plugsOnly = false): string {
+  if (!plugsOnly) items = replaceSmtp4SearchItems(replaceSmtp2SearchItems(items));
+  items = replaceHardTubePlugSearchItems(items);
   /*
     不直接输出超大的数组字面量。
     否则 TypeScript 会尝试推导数千条记录形成的联合类型，
@@ -811,6 +813,13 @@ function normalizeConfiguredPistonSearchItem(item: SiteSearchItem): SiteSearchIt
 }
 
 async function main() {
+  if (process.argv.includes("--hard-tube-plugs-only")) {
+    const {siteSearchIndex} = await import("../../data/search/site-search-index.generated");
+    const output = buildOutput(siteSearchIndex, true);
+    if (CHECK_MODE) { if(fs.readFileSync(OUTPUT_PATH,"utf8") !== output) throw new Error("Hard-tube plug search index is stale"); }
+    else fs.writeFileSync(OUTPUT_PATH,output,"utf8");
+    console.log("Hard-tube plug search updated; other entries preserved");return;
+  }
   if (process.argv.includes("--smtp2-only") || process.argv.includes("--smtp4-only")) {
     const { siteSearchIndex } = await import("../../data/search/site-search-index.generated");
     const output = buildOutput(siteSearchIndex);

@@ -36,8 +36,8 @@
 .tabs button[aria-selected="true"] { background: #173368; color: #00c9a7; }
 .tabs button:focus-visible, .drawingSelect:focus-visible { outline: 2px solid #173368; outline-offset: 3px; }
 
-/* Keep localized resource tabs above the iframe's own model controls. */
-.modelPanel { padding-top: 56px; }
+/* The CAD frames reserve horizontal space for these tabs in their toolbar row. */
+.modelPanel { padding-top: 0; }
 
 .empty {
   display: grid;

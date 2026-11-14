@@ -2,7 +2,7 @@
   "sourcePath": "F:\\WebsiteProjects\\foreach-website-2026\\data-source\\product-center\\fittings\\FRGD-140D-2606-0002_001_cn_连接件标品在售清单.xlsx",
   "sheetName": "01_硬管接头",
   "sourceRows": 216,
-  "generatedProducts": 147,
+  "generatedProducts": 158,
   "skippedRows": [],
   "seriesCounts": {
     "标滚平底接头": 38,
@@ -10,6 +10,9 @@
     "标滚卡箍接头": 37,
     "紧凑卡箍接头": 29,
     "卡环接头": 8,
-    "高压接头": 3
+    "高压接头": 6,
+    "紧凑螺纹堵头": 2,
+    "标滚螺纹堵头": 4,
+    "顶丝堵头": 2
   }
 }

@@ -411,6 +411,11 @@
 .bundleItem .itemHead > div { min-width: 0; }
 .bundleItem .itemHead h3 { overflow-wrap: anywhere; }
 
+.itemDrawings {
+  margin: 10px 0;
+  min-width: 0;
+}
+
 .bundleAccessory {
   margin-top: 8px;
   padding-top: 8px;
@@ -523,6 +528,10 @@
   align-items: center;
   gap: 10px;
 }
+
+.configurationDetails { margin-top: 12px; color: #173368; font-size: 12px; }
+.configurationDetails summary { cursor: pointer; }
+.configurationDetails pre { margin: 8px 0; white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.6; }
 
 .quantityRow label {
   color: #5e6b80;

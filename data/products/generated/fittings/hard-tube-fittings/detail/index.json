@@ -5,6 +5,1142 @@
     "categoryId": "fittings",
     "categoryLabel": "接头系列",
     "productTypeId": "hard-tube-fittings",
+    "productTypeName": "标滚螺纹堵头",
+    "productId": "809400",
+    "productCode": "809400",
+    "seriesId": "standard-threaded-plug",
+    "slug": "hbl-m6-pv-b",
+    "model": "HBL-M6-PV-B",
+    "sourcePart": "443-00-00146",
+    "detailMode": "standard_model",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-card.webp",
+    "plugMainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-main.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-main.webp",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "/downloads/products/fittings/2d-drawings/01/443-00-00146-c.pdf",
+    "drawingPdfUrl": "/downloads/products/fittings/2d-drawings/01/443-00-00146-c.pdf",
+    "specs": [
+      {
+        "label": "产品型号",
+        "value": "HBL-M6-PV-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809400"
+      },
+      {
+        "label": "产品系列",
+        "value": "标滚螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6×1"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      },
+      {
+        "label": "料号",
+        "value": "443-00-00146"
+      }
+    ],
+    "sectionTitleMap": {
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "__locale": "zh",
+    "seriesName": "标滚螺纹堵头",
+    "name": "标滚螺纹堵头",
+    "title": "HBL-M6-PV-B",
+    "description": "HBL-M6-PV-B 是一款PVDF标滚螺纹堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "shortDescription": "HBL-M6-PV-B 是一款PVDF标滚螺纹堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "foreachModel": "HBL-M6-PV-B",
+    "modelDisplay": "HBL-M6-PV-B",
+    "displayModel": "HBL-M6-PV-B",
+    "image": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-main.webp",
+    "imageAlt": "HBL-M6-PV-B 标滚螺纹堵头 — PVDF 黑色 — 产品渲染图",
+    "imageAltEn": "HBL-M6-PV-B Standard Threaded Plug — PVDF",
+    "additionalImages": [],
+    "additionalImageAlts": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-b-main.webp"
+    ],
+    "advantages": [
+      "液路端口封堵",
+      "螺纹规格: M6×1",
+      "主体材质: PVDF"
+    ],
+    "commonApplications": [
+      "仪器闲置端口封堵",
+      "液路支路配置",
+      "设备维护与接口管理"
+    ],
+    "specifications": [
+      {
+        "label": "产品型号",
+        "value": "HBL-M6-PV-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809400"
+      },
+      {
+        "label": "产品系列",
+        "value": "标滚螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6×1"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      },
+      {
+        "label": "料号",
+        "value": "443-00-00146"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "堵头需要选择接管外径吗？",
+        "answer": "按螺纹和匹配密封结构选择。堵头承担封堵作用，不能沿用通管接头的接管外径或卡箍选型规则。"
+      },
+      {
+        "question": "同一种螺纹能直接互换吗？",
+        "answer": "还需核对接收端口的密封结构、孔深和有效配合长度。仅有相同螺纹不能证明装配兼容。"
+      },
+      {
+        "question": "可以直接沿用其他接头的耐压或扭矩吗？",
+        "answer": "应按本型号、配合端口、材料与实际工况确认，不直接套用其他系列的耐压或锁紧扭矩。"
+      }
+    ],
+    "bottomCtaTitle": "确认堵头与接收端口",
+    "bottomCtaDescription": "将型号加入清单，并提供端口图纸、介质、温度、压力及拆装要求，便于确认配合。",
+    "bottomCtaButtonText": "联系工程师",
+    "bottomCtaHref": "/contact/",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl-m6-pv-b/",
+    "href": "/products/fittings/hard-tube-fittings/hbl-m6-pv-b/",
+    "selectionHref": "/products/fittings/hard-tube-fittings/",
+    "seo": {
+      "title": "HBL-M6-PV-B 标滚螺纹堵头 | FOREACH",
+      "description": "HBL-M6-PV-B 是一款PVDF标滚螺纹堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "标滚螺纹堵头",
+    "productId": "809180",
+    "productCode": "809180",
+    "seriesId": "standard-threaded-plug",
+    "slug": "hbl-m6-pv-n",
+    "model": "HBL-M6-PV-N",
+    "sourcePart": "443-00-00200",
+    "detailMode": "standard_model",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-card.webp",
+    "plugMainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-main.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-main.webp",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "/downloads/products/fittings/2d-drawings/01/443-00-00200-c.pdf",
+    "drawingPdfUrl": "/downloads/products/fittings/2d-drawings/01/443-00-00200-c.pdf",
+    "specs": [
+      {
+        "label": "产品型号",
+        "value": "HBL-M6-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809180"
+      },
+      {
+        "label": "产品系列",
+        "value": "标滚螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6×1"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "料号",
+        "value": "443-00-00200"
+      }
+    ],
+    "sectionTitleMap": {
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "__locale": "zh",
+    "seriesName": "标滚螺纹堵头",
+    "name": "标滚螺纹堵头",
+    "title": "HBL-M6-PV-N",
+    "description": "HBL-M6-PV-N 是一款PVDF标滚螺纹堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "shortDescription": "HBL-M6-PV-N 是一款PVDF标滚螺纹堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "foreachModel": "HBL-M6-PV-N",
+    "modelDisplay": "HBL-M6-PV-N",
+    "displayModel": "HBL-M6-PV-N",
+    "image": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-main.webp",
+    "imageAlt": "HBL-M6-PV-N 标滚螺纹堵头 — PVDF 本色 — 产品渲染图",
+    "imageAltEn": "HBL-M6-PV-N Standard Threaded Plug — PVDF",
+    "additionalImages": [],
+    "additionalImageAlts": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl-m6-pv-n-main.webp"
+    ],
+    "advantages": [
+      "液路端口封堵",
+      "螺纹规格: M6×1",
+      "主体材质: PVDF"
+    ],
+    "commonApplications": [
+      "仪器闲置端口封堵",
+      "液路支路配置",
+      "设备维护与接口管理"
+    ],
+    "specifications": [
+      {
+        "label": "产品型号",
+        "value": "HBL-M6-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809180"
+      },
+      {
+        "label": "产品系列",
+        "value": "标滚螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6×1"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "料号",
+        "value": "443-00-00200"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "堵头需要选择接管外径吗？",
+        "answer": "按螺纹和匹配密封结构选择。堵头承担封堵作用，不能沿用通管接头的接管外径或卡箍选型规则。"
+      },
+      {
+        "question": "同一种螺纹能直接互换吗？",
+        "answer": "还需核对接收端口的密封结构、孔深和有效配合长度。仅有相同螺纹不能证明装配兼容。"
+      },
+      {
+        "question": "可以直接沿用其他接头的耐压或扭矩吗？",
+        "answer": "应按本型号、配合端口、材料与实际工况确认，不直接套用其他系列的耐压或锁紧扭矩。"
+      }
+    ],
+    "bottomCtaTitle": "确认堵头与接收端口",
+    "bottomCtaDescription": "将型号加入清单，并提供端口图纸、介质、温度、压力及拆装要求，便于确认配合。",
+    "bottomCtaButtonText": "联系工程师",
+    "bottomCtaHref": "/contact/",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl-m6-pv-n/",
+    "href": "/products/fittings/hard-tube-fittings/hbl-m6-pv-n/",
+    "selectionHref": "/products/fittings/hard-tube-fittings/",
+    "seo": {
+      "title": "HBL-M6-PV-N 标滚螺纹堵头 | FOREACH",
+      "description": "HBL-M6-PV-N 是一款PVDF标滚螺纹堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "标滚螺纹堵头",
+    "productId": "809390",
+    "productCode": "809390",
+    "seriesId": "standard-threaded-plug",
+    "slug": "hbl-u28-pv-b",
+    "model": "HBL-U28-PV-B",
+    "sourcePart": "443-00-00156",
+    "detailMode": "standard_model",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-card.webp",
+    "plugMainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-main.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-main.webp",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "/downloads/products/fittings/2d-drawings/01/443-00-00156-c.pdf",
+    "drawingPdfUrl": "/downloads/products/fittings/2d-drawings/01/443-00-00156-c.pdf",
+    "specs": [
+      {
+        "label": "产品型号",
+        "value": "HBL-U28-PV-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809390"
+      },
+      {
+        "label": "产品系列",
+        "value": "标滚螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      },
+      {
+        "label": "料号",
+        "value": "443-00-00156"
+      }
+    ],
+    "sectionTitleMap": {
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "__locale": "zh",
+    "seriesName": "标滚螺纹堵头",
+    "name": "标滚螺纹堵头",
+    "title": "HBL-U28-PV-B",
+    "description": "HBL-U28-PV-B 是一款PVDF标滚螺纹堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "shortDescription": "HBL-U28-PV-B 是一款PVDF标滚螺纹堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "foreachModel": "HBL-U28-PV-B",
+    "modelDisplay": "HBL-U28-PV-B",
+    "displayModel": "HBL-U28-PV-B",
+    "image": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-main.webp",
+    "imageAlt": "HBL-U28-PV-B 标滚螺纹堵头 — PVDF 黑色 — 产品渲染图",
+    "imageAltEn": "HBL-U28-PV-B Standard Threaded Plug — PVDF",
+    "additionalImages": [],
+    "additionalImageAlts": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-b-main.webp"
+    ],
+    "advantages": [
+      "液路端口封堵",
+      "螺纹规格: 1/4-28 UNF",
+      "主体材质: PVDF"
+    ],
+    "commonApplications": [
+      "仪器闲置端口封堵",
+      "液路支路配置",
+      "设备维护与接口管理"
+    ],
+    "specifications": [
+      {
+        "label": "产品型号",
+        "value": "HBL-U28-PV-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809390"
+      },
+      {
+        "label": "产品系列",
+        "value": "标滚螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      },
+      {
+        "label": "料号",
+        "value": "443-00-00156"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "堵头需要选择接管外径吗？",
+        "answer": "按螺纹和匹配密封结构选择。堵头承担封堵作用，不能沿用通管接头的接管外径或卡箍选型规则。"
+      },
+      {
+        "question": "同一种螺纹能直接互换吗？",
+        "answer": "还需核对接收端口的密封结构、孔深和有效配合长度。仅有相同螺纹不能证明装配兼容。"
+      },
+      {
+        "question": "可以直接沿用其他接头的耐压或扭矩吗？",
+        "answer": "应按本型号、配合端口、材料与实际工况确认，不直接套用其他系列的耐压或锁紧扭矩。"
+      }
+    ],
+    "bottomCtaTitle": "确认堵头与接收端口",
+    "bottomCtaDescription": "将型号加入清单，并提供端口图纸、介质、温度、压力及拆装要求，便于确认配合。",
+    "bottomCtaButtonText": "联系工程师",
+    "bottomCtaHref": "/contact/",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl-u28-pv-b/",
+    "href": "/products/fittings/hard-tube-fittings/hbl-u28-pv-b/",
+    "selectionHref": "/products/fittings/hard-tube-fittings/",
+    "seo": {
+      "title": "HBL-U28-PV-B 标滚螺纹堵头 | FOREACH",
+      "description": "HBL-U28-PV-B 是一款PVDF标滚螺纹堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "标滚螺纹堵头",
+    "productId": "809178",
+    "productCode": "809178",
+    "seriesId": "standard-threaded-plug",
+    "slug": "hbl-u28-pv-n",
+    "model": "HBL-U28-PV-N",
+    "sourcePart": "443-00-00145",
+    "detailMode": "standard_model",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-card.webp",
+    "plugMainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-main.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-main.webp",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "/downloads/products/fittings/2d-drawings/01/443-00-00145-c.pdf",
+    "drawingPdfUrl": "/downloads/products/fittings/2d-drawings/01/443-00-00145-c.pdf",
+    "specs": [
+      {
+        "label": "产品型号",
+        "value": "HBL-U28-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809178"
+      },
+      {
+        "label": "产品系列",
+        "value": "标滚螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "料号",
+        "value": "443-00-00145"
+      }
+    ],
+    "sectionTitleMap": {
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "__locale": "zh",
+    "seriesName": "标滚螺纹堵头",
+    "name": "标滚螺纹堵头",
+    "title": "HBL-U28-PV-N",
+    "description": "HBL-U28-PV-N 是一款PVDF标滚螺纹堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "shortDescription": "HBL-U28-PV-N 是一款PVDF标滚螺纹堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "foreachModel": "HBL-U28-PV-N",
+    "modelDisplay": "HBL-U28-PV-N",
+    "displayModel": "HBL-U28-PV-N",
+    "image": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-main.webp",
+    "imageAlt": "HBL-U28-PV-N 标滚螺纹堵头 — PVDF 本色 — 产品渲染图",
+    "imageAltEn": "HBL-U28-PV-N Standard Threaded Plug — PVDF",
+    "additionalImages": [],
+    "additionalImageAlts": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl-u28-pv-n-main.webp"
+    ],
+    "advantages": [
+      "液路端口封堵",
+      "螺纹规格: 1/4-28 UNF",
+      "主体材质: PVDF"
+    ],
+    "commonApplications": [
+      "仪器闲置端口封堵",
+      "液路支路配置",
+      "设备维护与接口管理"
+    ],
+    "specifications": [
+      {
+        "label": "产品型号",
+        "value": "HBL-U28-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809178"
+      },
+      {
+        "label": "产品系列",
+        "value": "标滚螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "料号",
+        "value": "443-00-00145"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "堵头需要选择接管外径吗？",
+        "answer": "按螺纹和匹配密封结构选择。堵头承担封堵作用，不能沿用通管接头的接管外径或卡箍选型规则。"
+      },
+      {
+        "question": "同一种螺纹能直接互换吗？",
+        "answer": "还需核对接收端口的密封结构、孔深和有效配合长度。仅有相同螺纹不能证明装配兼容。"
+      },
+      {
+        "question": "可以直接沿用其他接头的耐压或扭矩吗？",
+        "answer": "应按本型号、配合端口、材料与实际工况确认，不直接套用其他系列的耐压或锁紧扭矩。"
+      }
+    ],
+    "bottomCtaTitle": "确认堵头与接收端口",
+    "bottomCtaDescription": "将型号加入清单，并提供端口图纸、介质、温度、压力及拆装要求，便于确认配合。",
+    "bottomCtaButtonText": "联系工程师",
+    "bottomCtaHref": "/contact/",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl-u28-pv-n/",
+    "href": "/products/fittings/hard-tube-fittings/hbl-u28-pv-n/",
+    "selectionHref": "/products/fittings/hard-tube-fittings/",
+    "seo": {
+      "title": "HBL-U28-PV-N 标滚螺纹堵头 | FOREACH",
+      "description": "HBL-U28-PV-N 是一款PVDF标滚螺纹堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "紧凑螺纹堵头",
+    "productId": "809189",
+    "productCode": "809189",
+    "seriesId": "compact-threaded-plug",
+    "slug": "hbl6-m6-ps-b",
+    "model": "HBL6-M6-PS-B",
+    "sourcePart": "443-02-00664",
+    "detailMode": "standard_model",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-card.webp",
+    "plugMainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-main.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-main.webp",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "/downloads/products/fittings/2d-drawings/01/443-02-00664-c.pdf",
+    "drawingPdfUrl": "/downloads/products/fittings/2d-drawings/01/443-02-00664-c.pdf",
+    "specs": [
+      {
+        "label": "产品型号",
+        "value": "HBL6-M6-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809189"
+      },
+      {
+        "label": "产品系列",
+        "value": "紧凑螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6×1"
+      },
+      {
+        "label": "主体材质",
+        "value": "PPS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00664"
+      }
+    ],
+    "sectionTitleMap": {
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "__locale": "zh",
+    "seriesName": "紧凑螺纹堵头",
+    "name": "紧凑螺纹堵头",
+    "title": "HBL6-M6-PS-B",
+    "description": "HBL6-M6-PS-B 是一款PPS紧凑螺纹堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "shortDescription": "HBL6-M6-PS-B 是一款PPS紧凑螺纹堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "foreachModel": "HBL6-M6-PS-B",
+    "modelDisplay": "HBL6-M6-PS-B",
+    "displayModel": "HBL6-M6-PS-B",
+    "image": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-main.webp",
+    "imageAlt": "HBL6-M6-PS-B 紧凑螺纹堵头 — PPS 黑色 — 产品渲染图",
+    "imageAltEn": "HBL6-M6-PS-B Compact Threaded Plug — PPS",
+    "additionalImages": [],
+    "additionalImageAlts": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl6-m6-ps-b-main.webp"
+    ],
+    "advantages": [
+      "液路端口封堵",
+      "螺纹规格: M6×1",
+      "主体材质: PPS"
+    ],
+    "commonApplications": [
+      "仪器闲置端口封堵",
+      "液路支路配置",
+      "设备维护与接口管理"
+    ],
+    "specifications": [
+      {
+        "label": "产品型号",
+        "value": "HBL6-M6-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809189"
+      },
+      {
+        "label": "产品系列",
+        "value": "紧凑螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6×1"
+      },
+      {
+        "label": "主体材质",
+        "value": "PPS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00664"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "堵头需要选择接管外径吗？",
+        "answer": "按螺纹和匹配密封结构选择。堵头承担封堵作用，不能沿用通管接头的接管外径或卡箍选型规则。"
+      },
+      {
+        "question": "同一种螺纹能直接互换吗？",
+        "answer": "还需核对接收端口的密封结构、孔深和有效配合长度。仅有相同螺纹不能证明装配兼容。"
+      },
+      {
+        "question": "可以直接沿用其他接头的耐压或扭矩吗？",
+        "answer": "应按本型号、配合端口、材料与实际工况确认，不直接套用其他系列的耐压或锁紧扭矩。"
+      }
+    ],
+    "bottomCtaTitle": "确认堵头与接收端口",
+    "bottomCtaDescription": "将型号加入清单，并提供端口图纸、介质、温度、压力及拆装要求，便于确认配合。",
+    "bottomCtaButtonText": "联系工程师",
+    "bottomCtaHref": "/contact/",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl6-m6-ps-b/",
+    "href": "/products/fittings/hard-tube-fittings/hbl6-m6-ps-b/",
+    "selectionHref": "/products/fittings/hard-tube-fittings/",
+    "seo": {
+      "title": "HBL6-M6-PS-B 紧凑螺纹堵头 | FOREACH",
+      "description": "HBL6-M6-PS-B 是一款PPS紧凑螺纹堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "紧凑螺纹堵头",
+    "productId": "809184",
+    "productCode": "809184",
+    "seriesId": "compact-threaded-plug",
+    "slug": "hbl6-u28-ps-b",
+    "model": "HBL6-U28-PS-B",
+    "sourcePart": "443-02-00663",
+    "detailMode": "standard_model",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-card.webp",
+    "plugMainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-main.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-main.webp",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "/downloads/products/fittings/2d-drawings/01/443-02-00663-c.pdf",
+    "drawingPdfUrl": "/downloads/products/fittings/2d-drawings/01/443-02-00663-c.pdf",
+    "specs": [
+      {
+        "label": "产品型号",
+        "value": "HBL6-U28-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809184"
+      },
+      {
+        "label": "产品系列",
+        "value": "紧凑螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "主体材质",
+        "value": "PPS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00663"
+      }
+    ],
+    "sectionTitleMap": {
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "__locale": "zh",
+    "seriesName": "紧凑螺纹堵头",
+    "name": "紧凑螺纹堵头",
+    "title": "HBL6-U28-PS-B",
+    "description": "HBL6-U28-PS-B 是一款PPS紧凑螺纹堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "shortDescription": "HBL6-U28-PS-B 是一款PPS紧凑螺纹堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "foreachModel": "HBL6-U28-PS-B",
+    "modelDisplay": "HBL6-U28-PS-B",
+    "displayModel": "HBL6-U28-PS-B",
+    "image": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-main.webp",
+    "imageAlt": "HBL6-U28-PS-B 紧凑螺纹堵头 — PPS 黑色 — 产品渲染图",
+    "imageAltEn": "HBL6-U28-PS-B Compact Threaded Plug — PPS",
+    "additionalImages": [],
+    "additionalImageAlts": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl6-u28-ps-b-main.webp"
+    ],
+    "advantages": [
+      "液路端口封堵",
+      "螺纹规格: 1/4-28 UNF",
+      "主体材质: PPS"
+    ],
+    "commonApplications": [
+      "仪器闲置端口封堵",
+      "液路支路配置",
+      "设备维护与接口管理"
+    ],
+    "specifications": [
+      {
+        "label": "产品型号",
+        "value": "HBL6-U28-PS-B"
+      },
+      {
+        "label": "商品编码",
+        "value": "809184"
+      },
+      {
+        "label": "产品系列",
+        "value": "紧凑螺纹堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "主体材质",
+        "value": "PPS"
+      },
+      {
+        "label": "颜色",
+        "value": "黑色"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00663"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "堵头需要选择接管外径吗？",
+        "answer": "按螺纹和匹配密封结构选择。堵头承担封堵作用，不能沿用通管接头的接管外径或卡箍选型规则。"
+      },
+      {
+        "question": "同一种螺纹能直接互换吗？",
+        "answer": "还需核对接收端口的密封结构、孔深和有效配合长度。仅有相同螺纹不能证明装配兼容。"
+      },
+      {
+        "question": "可以直接沿用其他接头的耐压或扭矩吗？",
+        "answer": "应按本型号、配合端口、材料与实际工况确认，不直接套用其他系列的耐压或锁紧扭矩。"
+      }
+    ],
+    "bottomCtaTitle": "确认堵头与接收端口",
+    "bottomCtaDescription": "将型号加入清单，并提供端口图纸、介质、温度、压力及拆装要求，便于确认配合。",
+    "bottomCtaButtonText": "联系工程师",
+    "bottomCtaHref": "/contact/",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl6-u28-ps-b/",
+    "href": "/products/fittings/hard-tube-fittings/hbl6-u28-ps-b/",
+    "selectionHref": "/products/fittings/hard-tube-fittings/",
+    "seo": {
+      "title": "HBL6-U28-PS-B 紧凑螺纹堵头 | FOREACH",
+      "description": "HBL6-U28-PS-B 是一款PPS紧凑螺纹堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "顶丝堵头",
+    "productId": "809526",
+    "productCode": "809526",
+    "seriesId": "slotted-fitting-plug",
+    "slug": "hbl6x-m6-pv-n",
+    "model": "HBL6X-M6-PV-N",
+    "sourcePart": "443-02-00105",
+    "detailMode": "standard_model",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-card.webp",
+    "plugMainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-main.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-main.webp",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "/downloads/products/fittings/2d-drawings/01/443-02-00105-c.pdf",
+    "drawingPdfUrl": "/downloads/products/fittings/2d-drawings/01/443-02-00105-c.pdf",
+    "specs": [
+      {
+        "label": "产品型号",
+        "value": "HBL6X-M6-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809526"
+      },
+      {
+        "label": "产品系列",
+        "value": "顶丝堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6×1"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00105"
+      }
+    ],
+    "sectionTitleMap": {
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "__locale": "zh",
+    "seriesName": "顶丝堵头",
+    "name": "顶丝堵头",
+    "title": "HBL6X-M6-PV-N",
+    "description": "HBL6X-M6-PV-N 是一款PVDF顶丝堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "shortDescription": "HBL6X-M6-PV-N 是一款PVDF顶丝堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "foreachModel": "HBL6X-M6-PV-N",
+    "modelDisplay": "HBL6X-M6-PV-N",
+    "displayModel": "HBL6X-M6-PV-N",
+    "image": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-main.webp",
+    "imageAlt": "HBL6X-M6-PV-N 顶丝堵头 — PVDF 本色 — 产品渲染图",
+    "imageAltEn": "HBL6X-M6-PV-N Slotted Fitting Plug — PVDF",
+    "additionalImages": [],
+    "additionalImageAlts": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-m6-pv-n-main.webp"
+    ],
+    "advantages": [
+      "液路端口封堵",
+      "螺纹规格: M6×1",
+      "主体材质: PVDF"
+    ],
+    "commonApplications": [
+      "仪器闲置端口封堵",
+      "液路支路配置",
+      "设备维护与接口管理"
+    ],
+    "specifications": [
+      {
+        "label": "产品型号",
+        "value": "HBL6X-M6-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809526"
+      },
+      {
+        "label": "产品系列",
+        "value": "顶丝堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "M6×1"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00105"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "堵头需要选择接管外径吗？",
+        "answer": "按螺纹和匹配密封结构选择。堵头承担封堵作用，不能沿用通管接头的接管外径或卡箍选型规则。"
+      },
+      {
+        "question": "同一种螺纹能直接互换吗？",
+        "answer": "还需核对接收端口的密封结构、孔深和有效配合长度。仅有相同螺纹不能证明装配兼容。"
+      },
+      {
+        "question": "可以直接沿用其他接头的耐压或扭矩吗？",
+        "answer": "应按本型号、配合端口、材料与实际工况确认，不直接套用其他系列的耐压或锁紧扭矩。"
+      }
+    ],
+    "bottomCtaTitle": "确认堵头与接收端口",
+    "bottomCtaDescription": "将型号加入清单，并提供端口图纸、介质、温度、压力及拆装要求，便于确认配合。",
+    "bottomCtaButtonText": "联系工程师",
+    "bottomCtaHref": "/contact/",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl6x-m6-pv-n/",
+    "href": "/products/fittings/hard-tube-fittings/hbl6x-m6-pv-n/",
+    "selectionHref": "/products/fittings/hard-tube-fittings/",
+    "seo": {
+      "title": "HBL6X-M6-PV-N 顶丝堵头 | FOREACH",
+      "description": "HBL6X-M6-PV-N 是一款PVDF顶丝堵头，采用 M6×1 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
+    "productTypeName": "顶丝堵头",
+    "productId": "809527",
+    "productCode": "809527",
+    "seriesId": "slotted-fitting-plug",
+    "slug": "hbl6x-u28-pv-n",
+    "model": "HBL6X-U28-PV-N",
+    "sourcePart": "443-02-00106",
+    "detailMode": "standard_model",
+    "imageCard": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-card.webp",
+    "plugMainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-main.webp",
+    "mainImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-main.webp",
+    "hideModelAction": false,
+    "showConfigurator": false,
+    "showDatasheetRequest": false,
+    "showDrawingRequest": true,
+    "show3DRequest": false,
+    "drawing2dUrl": "/downloads/products/fittings/2d-drawings/01/443-02-00106-c.pdf",
+    "drawingPdfUrl": "/downloads/products/fittings/2d-drawings/01/443-02-00106-c.pdf",
+    "specs": [
+      {
+        "label": "产品型号",
+        "value": "HBL6X-U28-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809527"
+      },
+      {
+        "label": "产品系列",
+        "value": "顶丝堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00106"
+      }
+    ],
+    "sectionTitleMap": {
+      "applications": "常见应用",
+      "faq": "常见问题"
+    },
+    "__locale": "zh",
+    "seriesName": "顶丝堵头",
+    "name": "顶丝堵头",
+    "title": "HBL6X-U28-PV-N",
+    "description": "HBL6X-U28-PV-N 是一款PVDF顶丝堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "shortDescription": "HBL6X-U28-PV-N 是一款PVDF顶丝堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。",
+    "foreachModel": "HBL6X-U28-PV-N",
+    "modelDisplay": "HBL6X-U28-PV-N",
+    "displayModel": "HBL6X-U28-PV-N",
+    "image": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-main.webp",
+    "heroImage": "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-main.webp",
+    "imageAlt": "HBL6X-U28-PV-N 顶丝堵头 — PVDF 本色 — 产品渲染图",
+    "imageAltEn": "HBL6X-U28-PV-N Slotted Fitting Plug — PVDF",
+    "additionalImages": [],
+    "additionalImageAlts": [],
+    "images": [
+      "/images/products/fittings/hard-tube-fittings/plugs/hbl6x-u28-pv-n-main.webp"
+    ],
+    "advantages": [
+      "液路端口封堵",
+      "螺纹规格: 1/4-28 UNF",
+      "主体材质: PVDF"
+    ],
+    "commonApplications": [
+      "仪器闲置端口封堵",
+      "液路支路配置",
+      "设备维护与接口管理"
+    ],
+    "specifications": [
+      {
+        "label": "产品型号",
+        "value": "HBL6X-U28-PV-N"
+      },
+      {
+        "label": "商品编码",
+        "value": "809527"
+      },
+      {
+        "label": "产品系列",
+        "value": "顶丝堵头"
+      },
+      {
+        "label": "螺纹规格",
+        "value": "1/4-28 UNF"
+      },
+      {
+        "label": "主体材质",
+        "value": "PVDF"
+      },
+      {
+        "label": "颜色",
+        "value": "本色"
+      },
+      {
+        "label": "料号",
+        "value": "443-02-00106"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "堵头需要选择接管外径吗？",
+        "answer": "按螺纹和匹配密封结构选择。堵头承担封堵作用，不能沿用通管接头的接管外径或卡箍选型规则。"
+      },
+      {
+        "question": "同一种螺纹能直接互换吗？",
+        "answer": "还需核对接收端口的密封结构、孔深和有效配合长度。仅有相同螺纹不能证明装配兼容。"
+      },
+      {
+        "question": "可以直接沿用其他接头的耐压或扭矩吗？",
+        "answer": "应按本型号、配合端口、材料与实际工况确认，不直接套用其他系列的耐压或锁紧扭矩。"
+      }
+    ],
+    "bottomCtaTitle": "确认堵头与接收端口",
+    "bottomCtaDescription": "将型号加入清单，并提供端口图纸、介质、温度、压力及拆装要求，便于确认配合。",
+    "bottomCtaButtonText": "联系工程师",
+    "bottomCtaHref": "/contact/",
+    "detailHref": "/products/fittings/hard-tube-fittings/hbl6x-u28-pv-n/",
+    "href": "/products/fittings/hard-tube-fittings/hbl6x-u28-pv-n/",
+    "selectionHref": "/products/fittings/hard-tube-fittings/",
+    "seo": {
+      "title": "HBL6X-U28-PV-N 顶丝堵头 | FOREACH",
+      "description": "HBL6X-U28-PV-N 是一款PVDF顶丝堵头，采用 1/4-28 UNF 螺纹，用于匹配端口或接头的液路封堵。选型时需同时核对接收端的密封结构、有效螺纹与安装深度。"
+    }
+  },
+  {
+    "sourceType": "fitting-detail",
+    "category": "fittings",
+    "categoryId": "fittings",
+    "categoryLabel": "接头系列",
+    "productTypeId": "hard-tube-fittings",
     "productTypeName": "标滚平底接头",
     "productId": "809717",
     "productCode": "809717",

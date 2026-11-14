@@ -1,0 +1,47 @@
+[
+  {
+    "key": "fl-double",
+    "sourceFile": "PSD-FL系列双头(1).pdf",
+    "sourceSha256": "cf920b4484199f3d7674b83231048c09d647e20a965ab61d139e0d1266c80254",
+    "widthPoints": 776.88,
+    "heightPoints": 587.76,
+    "viewWidth": 1511,
+    "viewHeight": 1143
+  },
+  {
+    "key": "fl-single",
+    "sourceFile": "PSD-FL单头.pdf",
+    "sourceSha256": "fc09ae5a94c32a6308b208825756e0fa7ba4342c18598740c7c451e7f5f77df6",
+    "widthPoints": 781.44,
+    "heightPoints": 587.76,
+    "viewWidth": 1520,
+    "viewHeight": 1143
+  },
+  {
+    "key": "fl6-double",
+    "sourceFile": "PSD-FL6系列-双头.pdf",
+    "sourceSha256": "a375929f1eddebf5f5893c97fe9a5af86a3696b5baa4abea9daf69da7221c5b4",
+    "widthPoints": 776.88,
+    "heightPoints": 587.76,
+    "viewWidth": 1511,
+    "viewHeight": 1143
+  },
+  {
+    "key": "fl6-single",
+    "sourceFile": "PSD-FL6单头.pdf",
+    "sourceSha256": "c57981c27fc8f9bd26b92a08fdd39f4407bcb965d14f832dd8ea5ac83971b23c",
+    "widthPoints": 781.44,
+    "heightPoints": 587.76,
+    "viewWidth": 1520,
+    "viewHeight": 1143
+  },
+  {
+    "key": "mixed-double",
+    "sourceFile": "PSD-FL6&FL系列-双头.pdf",
+    "sourceSha256": "ce311fee5b2f33ff563e093257a2c8ebcab1fa3b5bf8e4c2e739b82fd3927dda",
+    "widthPoints": 776.88,
+    "heightPoints": 587.76,
+    "viewWidth": 1511,
+    "viewHeight": 1143
+  }
+]

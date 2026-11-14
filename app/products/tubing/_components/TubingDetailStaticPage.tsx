@@ -3,12 +3,19 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import TubingDeliveryContent from "@/components/products/detail/TubingDeliveryContent";
+import TubingSelectionContent from "@/components/products/detail/TubingSelectionContent";
+import { tubingSelectionProfiles, type TubingGuideMaterial } from "@/data/products/tubing/selection-guides.zh";
+import {
+  PvcTubingSelectionContent,
+} from "@/components/products/detail/PvcTubingDetailContent";
 import tubingDetailData from "@/data/products/generated/tubing/detail/index.json";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import { getTubingMaterialCopy } from "@/data/products/tubing/content";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
 import { getTubingAlternates } from "@/data/products/tubing/metadata";
 import { getTubingGalleryData } from "@/data/products/tubing/gallery";
+import { getTpuSelectionGuideData } from "@/data/products/tubing/tpu-selection-guide";
 
 type FaqItem = {
   question?: string;
@@ -50,6 +57,8 @@ const records = tubingDetailData as TubingDetailRecord[];
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: ReturnType<typeof toClientData>;
   afterContent?: ReactNode;
+  customerCategoryMode?: "tubing-zh" | "tubing";
+  customerCategoryContent?: Partial<Record<"product" | "selection" | "delivery", ReactNode>>;
 }>;
 
 function findDetail(slug: string) {
@@ -180,6 +189,9 @@ function toClientData(detail: TubingDetailRecord, locale: string) {
     contactHref: detail.bottomCtaHref || "/contact",
     ...authored,
     ...getTubingGalleryData(detail.slug, locale),
+    ...(detail.slug === "tpu-tubing"
+      ? { tpuSelectionGuide: getTpuSelectionGuideData() }
+      : {}),
   };
 }
 
@@ -234,9 +246,24 @@ export default function TubingDetailStaticPage({
     notFound();
   }
 
+  const useTpuSections = slug === "tpu-tubing";
+  const usePvcSections = slug === "pvc-tubing";
+  const clientData = toClientData(detail, locale);
+  const useTubingSections = ["zh", "zh-CN", "en", "es", "fr", "ko", "ru"].includes(locale);
+  const guideMaterial = Object.keys(tubingSelectionProfiles).find(material => slug === `${material}-tubing`) as TubingGuideMaterial | undefined;
+
   return (
     <div data-tubing-detail-page="true">
-      <ProductDetailView data={toClientData(detail, locale)} afterContent={afterContent} />
+      <ProductDetailView
+        data={clientData}
+        afterContent={afterContent}
+        customerCategoryMode={useTubingSections ? "tubing" : undefined}
+        customerCategoryContent={useTubingSections ? {
+          selection: usePvcSections ? <PvcTubingSelectionContent locale={locale} />
+            : useTpuSections ? undefined : guideMaterial ? <TubingSelectionContent material={guideMaterial} locale={locale} /> : undefined,
+          delivery: <TubingDeliveryContent locale={locale} />,
+        } : undefined}
+      />
     </div>
   );
 }

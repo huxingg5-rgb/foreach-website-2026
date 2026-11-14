@@ -1,6 +1,10 @@
 import { notFound } from "next/navigation";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import TubingAssemblyRelatedArticles from "@/components/products/tubing-assemblies/TubingAssemblyRelatedArticles";
+import FepFlangedTubingDetailContent from "@/components/products/tubing-assemblies/FepFlangedTubingDetailContent";
+import FepFlangedTubingDeliveryContent from "@/components/products/tubing-assemblies/FepFlangedTubingDeliveryContent";
+import TubingAssemblyDetailContent from "@/components/products/tubing-assemblies/TubingAssemblyDetailContent";
+import TubingAssemblyDeliveryContent from "@/components/products/tubing-assemblies/TubingAssemblyDeliveryContent";
 import { getPublishedAssemblyConfigurations, isPublishedAssemblyConfiguration } from "@/data/products/tubing-assemblies/publication";
 import { getLocalizedAssemblyDetail, getLocalizedAssemblyMetadata } from "@/data/products/tubing-assemblies/localized";
 import { tubingAssemblyTypes } from "@/data/products/tubing-assemblies.en";
@@ -26,6 +30,13 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function Page({ params }: Props) {
   const { type, configuration } = await resolveData(params);
+  const useFittingTemplate = type === "flanged-tubing" && configuration === "fep";
   return <ProductDetailClient data={getLocalizedAssemblyDetail("zh-CN", type, configuration)}
+    customerCategoryMode="tubing-assembly-zh"
+    customerCategoryContent={{
+      product: useFittingTemplate ? <FepFlangedTubingDetailContent section="product" /> : <TubingAssemblyDetailContent family={type} configuration={configuration} section="product" />,
+      selection: useFittingTemplate ? <FepFlangedTubingDetailContent section="selection" /> : <TubingAssemblyDetailContent family={type} configuration={configuration} section="selection" />,
+      delivery: useFittingTemplate ? <FepFlangedTubingDeliveryContent /> : <TubingAssemblyDeliveryContent family={type} configuration={configuration} />,
+    }}
     afterContent={<TubingAssemblyRelatedArticles type={type} locale="zh-CN" />} />;
 }

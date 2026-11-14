@@ -1,0 +1,55 @@
+/* Shared EA-style CAD dialog: reuse the selector shell, controls and buttons. */
+.dialog.dialog {
+  width: min(880px, 100%);
+  height: auto;
+  max-height: calc(100dvh - 48px);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.dialog.dialog > header { padding: 20px 24px; align-items: center; gap: 16px; }
+.dialog.dialog > header h2 { font-size: 24px; font-weight: 500; }
+.dialog.dialog > header p { display: block; }
+.dialog.dialog > footer { min-height: 76px; padding: 16px 24px; gap: 20px; }
+.body.body { min-height: 0; padding: 18px 24px; overflow-y: auto; }
+.fields { display: grid; gap: 18px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.product { min-width: 0; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.productHeading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.product h3 { margin: 2px 0 0; color: var(--brand-blue); font-size: 20px; font-weight: 500; line-height: 1.4; overflow-wrap: anywhere; }
+.configurationPicker { width: 320px; max-width: 52%; }
+.overview { margin: 10px 0 6px; font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.hint { margin: 0; color: var(--text-sub); font-size: 12px; line-height: 1.5; }
+.details { font-size: 12px; line-height: 1.6; }
+.details summary { width: fit-content; color: var(--brand-blue); cursor: pointer; }
+.details summary:hover { color: var(--brand-cyan); }
+.details dl { margin: 8px 0 0; }
+.details dl > div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 12px; padding: 4px 0; }
+.details dt { color: var(--text-sub); }
+.details dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.drawingTypes { min-width: 0; margin: 0; padding: 0; border: 0; font-size: 14px; }
+.drawingTypes legend { padding: 0; margin-bottom: 8px; font-weight: 500; }
+.drawingTypes > div { display: flex; flex-wrap: wrap; gap: 12px 28px; }
+.drawingTypes label { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+.drawingTypes input { width: 16px; height: 16px; margin: 0; accent-color: var(--brand-blue); }
+.contactFields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 16px; }
+.emailRow { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; }
+.emailRow button { min-height: 36px; padding: 0 12px; font-size: 12px; white-space: nowrap; }
+.body input:not([type="checkbox"]), .body select { min-height: 36px; }
+.body textarea { min-height: 64px; max-height: 140px; }
+.codeRow { display: grid; grid-template-columns: 160px minmax(0, 1fr); align-items: center; gap: 16px; }
+.error { margin: 14px 0 0; font-size: 13px; line-height: 1.5; }
+.success { padding-top: 32px; padding-bottom: 32px; overflow-wrap: anywhere; }
+.success h3 { margin: 0 0 12px; color: var(--brand-blue); font-size: 20px; font-weight: 500; }
+.success p { font-size: 14px; line-height: 1.7; }
+
+@media (max-width: 600px) {
+  .dialog.dialog { width: 100%; max-height: 100dvh; border: 0; }
+  .dialog.dialog > header { padding: 16px; }
+  .dialog.dialog > header h2 { font-size: 21px; }
+  .dialog.dialog > footer { padding: 12px 16px max(12px, env(safe-area-inset-bottom)); gap: 10px; }
+  .body.body { padding: 16px; }
+  .productHeading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .configurationPicker { width: 100%; max-width: none; }
+  .contactFields { grid-template-columns: minmax(0, 1fr); }
+  .codeRow { grid-template-columns: 120px minmax(0, 1fr); gap: 12px; }
+  .details dl > div { grid-template-columns: minmax(0, 1fr); gap: 0; }
+}

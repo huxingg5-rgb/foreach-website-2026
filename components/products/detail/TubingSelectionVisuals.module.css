@@ -1,0 +1,90 @@
+.figure {
+  min-width: 0;
+  margin: 24px 0;
+}
+
+.figure > a {
+  display: block;
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid #dbe3ee;
+  background: #fff;
+}
+
+.figure > a:focus-visible {
+  outline: 2px solid #173368;
+  outline-offset: 4px;
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.figure img.contain {
+  object-fit: contain;
+}
+
+.figure img.closeup {
+  transform: scale(1.7);
+  transform-origin: 50% 55%;
+}
+
+.figure figcaption {
+  margin-top: 12px;
+  color: #465369;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.figure figcaption strong {
+  display: block;
+  color: #173368;
+  font-size: 16px;
+}
+
+.figure figcaption span {
+  display: block;
+  margin-top: 4px;
+}
+
+.compact {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  align-items: center;
+  gap: 28px;
+}
+
+.compact figcaption {
+  margin: 0;
+}
+
+.photoPair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.photoPair > .figure {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .compact,
+  .photoPair {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .compact > a {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}

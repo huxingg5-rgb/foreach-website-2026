@@ -1,0 +1,372 @@
+{
+  "en": {
+    "flangeSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/flange-sealing.webp",
+      "width": 1409,
+      "height": 919,
+      "sha256": "6d2bbfc7496cec10004c038f13dca296527a171296c175d0663eb662d17d1509"
+    },
+    "flangeConfiguration": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/flange-configuration.webp",
+      "width": 1500,
+      "height": 581,
+      "sha256": "89334f37818baeb818071feb7316b499b1c07b144c4948ad40332c0294f4d0f4"
+    },
+    "ferruleSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/ferrule-sealing.webp",
+      "width": 1209,
+      "height": 760,
+      "sha256": "6a3f131009908997187d8579e33b55994932c3cf0abd9c1f22961c0321e8fd4b"
+    },
+    "flangeStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/flangeStandardDimensions.webp",
+      "width": 1484,
+      "height": 799,
+      "sha256": "7ebaf5e77714c234b19ef17eca7ab33b3e4d407f75fd9ba920fdf76bef66cf8f"
+    },
+    "flangeCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/flangeCompactDimensions.webp",
+      "width": 1477,
+      "height": 829,
+      "sha256": "0a0482eb5bd24c51eef9a17d42cb722b1964e7a723bbb8c46a576d0c5ad8fa28"
+    },
+    "ferruleStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/ferruleStandardDimensions.webp",
+      "width": 1484,
+      "height": 837,
+      "sha256": "c66bd192170a1e4334ad95afe11973e9756a213802cf05123f486d8d0956bf45"
+    },
+    "ferruleCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/ferruleCompactDimensions.webp",
+      "width": 1477,
+      "height": 790,
+      "sha256": "2b436ff0b5ddbb83f9c9c8880c32e927dbf354079ec9c14547a0b403c6f51381"
+    },
+    "ringPpsDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/ringPpsDimensions.webp",
+      "width": 1484,
+      "height": 729,
+      "sha256": "26730faafab836e724aff2cf462da4c95ac8f1a9ec126fafbfc56fceb46a6415"
+    },
+    "flatPort": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/flat-port.webp",
+      "width": 1484,
+      "height": 563,
+      "sha256": "b0a33f7261777652eab9fabd860aa19a939c4ba5562523b766c4ce2bdcf28271"
+    },
+    "ringComponents": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/cl-1-kit-dimensions.webp",
+      "width": 1500,
+      "height": 432,
+      "sha256": "89d49cba6359e10fd193a82f7ca85f3e725569fda076a213ea4ddab759e52492"
+    },
+    "drawingExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/drawing-example.webp",
+      "width": 1500,
+      "height": 1135,
+      "sha256": "678f9bfff954baa46fa9d2ec6e3d364838875854c67b584848cc6abf05100a29"
+    },
+    "configurationExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/en/configuration-example.webp",
+      "width": 1800,
+      "height": 869,
+      "sha256": "3d13a4a246ac487c28852e988aa568d99ae0eb2db5e6fa6800b9bad21b62c5a5"
+    }
+  },
+  "es": {
+    "flangeSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/flange-sealing.webp",
+      "width": 1443,
+      "height": 913,
+      "sha256": "afd1d486e112fc3f7406ff9603c2a3c6b0ea2503244fe6433a9a977c5e614886"
+    },
+    "flangeConfiguration": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/flange-configuration.webp",
+      "width": 1500,
+      "height": 581,
+      "sha256": "c09185aa6a37159b6062e28f885df60abd154ed7a1c400e31a05a39920b97a1b"
+    },
+    "ferruleSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/ferrule-sealing.webp",
+      "width": 1209,
+      "height": 757,
+      "sha256": "c04b39a3697a43f321b884ae020bd94a5297865bbb430e6c8352bafdfbfdc0aa"
+    },
+    "flangeStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/flangeStandardDimensions.webp",
+      "width": 1484,
+      "height": 799,
+      "sha256": "d076628d81b2c49fd05c0a0c93e6e96b3ad645bb02dcde277a8886f1358652cb"
+    },
+    "flangeCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/flangeCompactDimensions.webp",
+      "width": 1477,
+      "height": 829,
+      "sha256": "98c02341dc341b0563e682cbe3042333ed0746bce3e22d03c397774ac84655f4"
+    },
+    "ferruleStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/ferruleStandardDimensions.webp",
+      "width": 1484,
+      "height": 837,
+      "sha256": "5dba5c0ebedd01699bdb2e6a573bc915e9c888fe9c961e1e7d363adc479b958b"
+    },
+    "ferruleCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/ferruleCompactDimensions.webp",
+      "width": 1477,
+      "height": 790,
+      "sha256": "04b88cf83ff7521d656589691247401d9be69e27883a2d643b6f995515c4faa3"
+    },
+    "ringPpsDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/ringPpsDimensions.webp",
+      "width": 1484,
+      "height": 729,
+      "sha256": "8eb48e2604f34900dfcab3845440c76a6fc1e953795e0200691314e16832e477"
+    },
+    "flatPort": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/flat-port.webp",
+      "width": 1484,
+      "height": 563,
+      "sha256": "5a395592354aff3130c30db31d1dce5c47d0896172d3b4bc37cc748ede7b4e0f"
+    },
+    "ringComponents": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/cl-1-kit-dimensions.webp",
+      "width": 1500,
+      "height": 432,
+      "sha256": "89d49cba6359e10fd193a82f7ca85f3e725569fda076a213ea4ddab759e52492"
+    },
+    "drawingExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/drawing-example.webp",
+      "width": 1500,
+      "height": 1135,
+      "sha256": "e6bb76ba0435755ea5553722e872e7587cd31f38e9287503c236f5ec61955df6"
+    },
+    "configurationExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/es/configuration-example.webp",
+      "width": 1800,
+      "height": 869,
+      "sha256": "fd628f2cfe53afaddf9a6f7c2595a8bd9ce18a5dffc9d92b5c79a0df53228936"
+    }
+  },
+  "fr": {
+    "flangeSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/flange-sealing.webp",
+      "width": 1419,
+      "height": 913,
+      "sha256": "9a4c4ffeaa25bd02066e977b03a7c09166b891ce29380602d42b71b901c18dc9"
+    },
+    "flangeConfiguration": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/flange-configuration.webp",
+      "width": 1500,
+      "height": 581,
+      "sha256": "d8e1583d9cf22adcccea397593a67a7c1a5f8c960a868b6486886ef4710b59a3"
+    },
+    "ferruleSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/ferrule-sealing.webp",
+      "width": 1209,
+      "height": 762,
+      "sha256": "b05cb8576aa7119d9594c1e80136e1ebe14e5b31fa37a6569bf66f6a142e4758"
+    },
+    "flangeStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/flangeStandardDimensions.webp",
+      "width": 1484,
+      "height": 799,
+      "sha256": "94bfc57d38afac3e013f78fab2bb1bb2290b05550bdd4d008c04a4abb25f878b"
+    },
+    "flangeCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/flangeCompactDimensions.webp",
+      "width": 1477,
+      "height": 829,
+      "sha256": "630066933c2f5344a265bcc8bfbe60cc53fd036b3b8a53b165012a51c84259b4"
+    },
+    "ferruleStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/ferruleStandardDimensions.webp",
+      "width": 1484,
+      "height": 837,
+      "sha256": "4d1a3b9c0b1bb64d378d2ac0b6358ac375e28e57779ee5c5cc62939c536de6f2"
+    },
+    "ferruleCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/ferruleCompactDimensions.webp",
+      "width": 1477,
+      "height": 790,
+      "sha256": "332b3d8f2b9e8cf3bb4782682baa61184f0908481da92386bdc4fbcfedb18eb5"
+    },
+    "ringPpsDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/ringPpsDimensions.webp",
+      "width": 1484,
+      "height": 729,
+      "sha256": "e040d9b22e7865f5237402dd63187e7d6c94a1f4565adf7e09e229796c6571a3"
+    },
+    "flatPort": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/flat-port.webp",
+      "width": 1484,
+      "height": 563,
+      "sha256": "66cb055a64481a8c873d648107d9940cbd188a0308195400d61375b3bf0f8895"
+    },
+    "ringComponents": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/cl-1-kit-dimensions.webp",
+      "width": 1500,
+      "height": 432,
+      "sha256": "89d49cba6359e10fd193a82f7ca85f3e725569fda076a213ea4ddab759e52492"
+    },
+    "drawingExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/drawing-example.webp",
+      "width": 1500,
+      "height": 1135,
+      "sha256": "15954983e0cda329ec0028182e2995916659b9f638a73048e4306e616f9ef5fa"
+    },
+    "configurationExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/fr/configuration-example.webp",
+      "width": 1800,
+      "height": 869,
+      "sha256": "4b27f3072cfdbc816849f26226e1e8272e4411b9f4303aba87e2d356e6dda5fc"
+    }
+  },
+  "ko": {
+    "flangeSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/flange-sealing.webp",
+      "width": 1409,
+      "height": 916,
+      "sha256": "9832f9d2df6d5e0ce22e9692d4b686f2801dbd3b49a307c502525c1ea15e71ff"
+    },
+    "flangeConfiguration": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/flange-configuration.webp",
+      "width": 1500,
+      "height": 581,
+      "sha256": "b5f3ba1d550c7ec7a3eb24d317a8bab4fd9403e6e56aa7498428582579cb0678"
+    },
+    "ferruleSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/ferrule-sealing.webp",
+      "width": 1209,
+      "height": 765,
+      "sha256": "33ac965b82c8bf31664d953a3b6a77ef7dc093a1cf159c3fd81f7b6d524a7622"
+    },
+    "flangeStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/flangeStandardDimensions.webp",
+      "width": 1484,
+      "height": 802,
+      "sha256": "7891f5e5921b2b28c98cdd997ee7fdd9fc5404de268960344428d7ada0f1f9f6"
+    },
+    "flangeCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/flangeCompactDimensions.webp",
+      "width": 1475,
+      "height": 832,
+      "sha256": "ddac54cb7c40c9c3862f083f8032b0afdcca0ecefec5e02027c4b142064e98b8"
+    },
+    "ferruleStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/ferruleStandardDimensions.webp",
+      "width": 1484,
+      "height": 840,
+      "sha256": "675e6ae00f12ab7c4838bca8a046412e825994d8e73ee7243e9f990f82609f45"
+    },
+    "ferruleCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/ferruleCompactDimensions.webp",
+      "width": 1475,
+      "height": 793,
+      "sha256": "d3b7913c086589b96c67a0d6d25bfe41ddda71b216d84aca2b5b07a9cb9b5f89"
+    },
+    "ringPpsDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/ringPpsDimensions.webp",
+      "width": 1484,
+      "height": 732,
+      "sha256": "7c8bf9bfa359045fde2f31c7c9da689abe1b4cb227f2f3e59bd019e989e63369"
+    },
+    "flatPort": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/flat-port.webp",
+      "width": 1484,
+      "height": 563,
+      "sha256": "ad12a139f86cba576efa6d59fec7ea1e458fe753cb0139fbc9d46d38b460c996"
+    },
+    "ringComponents": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/cl-1-kit-dimensions.webp",
+      "width": 1500,
+      "height": 432,
+      "sha256": "89d49cba6359e10fd193a82f7ca85f3e725569fda076a213ea4ddab759e52492"
+    },
+    "drawingExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/drawing-example.webp",
+      "width": 1500,
+      "height": 1135,
+      "sha256": "4164b54fd375160f4092c2c7a2b208fa1bf89064bc8ab1589860882a1802cc24"
+    },
+    "configurationExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ko/configuration-example.webp",
+      "width": 1800,
+      "height": 869,
+      "sha256": "d498abf3456328fe2c5516e76fe3937ed9dca601820eff52933aa40a83cf3d18"
+    }
+  },
+  "ru": {
+    "flangeSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/flange-sealing.webp",
+      "width": 1444,
+      "height": 919,
+      "sha256": "64249ed20ba6dd16e84b61c0178ed97cf961eaa0c1cdce84391190657b5b2bc3"
+    },
+    "flangeConfiguration": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/flange-configuration.webp",
+      "width": 1500,
+      "height": 581,
+      "sha256": "fd9b1006437062d2a03682b934f3a9a1850220c1e6be721711588b577842f2bd"
+    },
+    "ferruleSealing": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/ferrule-sealing.webp",
+      "width": 1231,
+      "height": 765,
+      "sha256": "4f1dbb25d26b11199cecd789503b38f6fcc3cbc09f1c32525f1a12702ed37854"
+    },
+    "flangeStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/flangeStandardDimensions.webp",
+      "width": 1484,
+      "height": 805,
+      "sha256": "9740be776e27db656c5e404778bea44aac88a0c081022b2924fb48af0a94db96"
+    },
+    "flangeCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/flangeCompactDimensions.webp",
+      "width": 1477,
+      "height": 835,
+      "sha256": "ecce8dbf4d304649235efcfe5a16dc84f586115c7be2b286aa8d0767822d0dd0"
+    },
+    "ferruleStandardDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/ferruleStandardDimensions.webp",
+      "width": 1484,
+      "height": 843,
+      "sha256": "9ca9d56e09a544ebe5f387914aff13b274356d6de76459ce2dd80d118a584d18"
+    },
+    "ferruleCompactDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/ferruleCompactDimensions.webp",
+      "width": 1477,
+      "height": 796,
+      "sha256": "52475827c9f5e5cfcc377cba4c20d33b6c1682a3b9088a5f20390a91236c3f65"
+    },
+    "ringPpsDimensions": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/ringPpsDimensions.webp",
+      "width": 1484,
+      "height": 735,
+      "sha256": "4b6808a11c5209cac63dfe0a5c100a7c47eafe0a0fa6a131db54743e16a3f561"
+    },
+    "flatPort": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/flat-port.webp",
+      "width": 1484,
+      "height": 563,
+      "sha256": "521868355d83b4f25ecbdee3b6355689f6eef1b5ce7e884ebd5e8ca2afe55dca"
+    },
+    "ringComponents": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/cl-1-kit-dimensions.webp",
+      "width": 1500,
+      "height": 432,
+      "sha256": "89d49cba6359e10fd193a82f7ca85f3e725569fda076a213ea4ddab759e52492"
+    },
+    "drawingExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/drawing-example.webp",
+      "width": 1500,
+      "height": 1135,
+      "sha256": "0620f2a2aa7c3f23ae50096153b17c961572d60930c596ba50b115b945ca9806"
+    },
+    "configurationExample": {
+      "src": "/images/products/tubing-assemblies/detail-locales/ru/configuration-example.webp",
+      "width": 1800,
+      "height": 869,
+      "sha256": "5a6b8191fc53f0333dc33c31d74112b0162c926f6cb8f9e642bdad179e684275"
+    }
+  }
+}

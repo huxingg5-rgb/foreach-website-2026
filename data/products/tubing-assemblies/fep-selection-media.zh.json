@@ -1,0 +1,160 @@
+{
+  "manual": {
+    "path": "public/downloads/resources/datasheets/zh-CN/Tubing-and-Fittings/foreach-fittings-and-elastomer-tubing-catalog-a02-cn.pdf",
+    "sha256": "27250b44cfd6af0a171ef6fc0c670f4efe13f1ae302f2218f9aac17e820e7d8f"
+  },
+  "maxWidth": 1500,
+  "padding": 8,
+  "images": {
+    "sealing": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-sealing-components.webp",
+      "source": {
+        "kind": "raster",
+        "path": "public/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/flanged-sealing-structure.png",
+        "crop": [
+          0,
+          0.004,
+          0.7,
+          0.996
+        ]
+      },
+      "padding": 0,
+      "alt": "翻边管端、支撑垫片和螺纹接头的分解装配示意",
+      "caption": "翻边、支撑垫片与接头的装配关系",
+      "width": 1500,
+      "height": 1000
+    },
+    "flatPort": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-flat-port-section.webp",
+      "source": {
+        "kind": "manual",
+        "page": 9,
+        "crop": [
+          0.094,
+          0.139,
+          0.235,
+          0.069
+        ]
+      },
+      "alt": "平底端口的翻边密封剖面，端部贴合平整底面并标示内螺纹避空位尺寸",
+      "caption": "翻边与平底密封面贴合",
+      "width": 1500,
+      "height": 579
+    },
+    "conicalPort": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-conical-port-section.webp",
+      "source": {
+        "kind": "manual",
+        "page": 9,
+        "crop": [
+          0.094,
+          0.225,
+          0.231,
+          0.047
+        ]
+      },
+      "alt": "锥底端口剖面，展示平底翻边结构与锥形底面不能均匀贴合的位置",
+      "caption": "锥形底孔不能提供匹配的平底密封面",
+      "width": 1500,
+      "height": 347
+    },
+    "fep": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/foreach-fep-flanged-tubing-assembly-end-detail.webp",
+      "source": {
+        "kind": "existing"
+      },
+      "alt": "透明 FEP 管组件实拍，可见管体、翻边端与配套接头",
+      "caption": "透明 FEP 管组件",
+      "width": 1500,
+      "height": 1500
+    },
+    "ptfe": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+      "source": {
+        "kind": "existing"
+      },
+      "alt": "本色 PTFE 管组件实拍，可见管体与翻边连接端部",
+      "caption": "本色 PTFE 管组件",
+      "width": 1500,
+      "height": 1500
+    },
+    "pfa": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-angled.webp",
+      "source": {
+        "kind": "existing"
+      },
+      "alt": "PFA 管组件实拍，可见透明管体与翻边连接端部",
+      "caption": "PFA 管组件",
+      "width": 1500,
+      "height": 1500
+    },
+    "configuration": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/flanged-tubing-configurable-components.webp",
+      "source": {
+        "kind": "manual",
+        "page": 9,
+        "crop": [
+          0.402,
+          0.088,
+          0.5,
+          0.121
+        ]
+      },
+      "alt": "管组件配置示意，标明法兰翻边、垫片、接头、O 型圈限位管及管标的位置",
+      "caption": "管端零件、限位与管标的配置关系",
+      "width": 1500,
+      "height": 483
+    },
+    "hfDimensions": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/hf-fitting-dimensions.webp",
+      "source": {
+        "kind": "manual",
+        "page": 6,
+        "crop": [
+          0.398,
+          0.298,
+          0.294,
+          0.12
+        ]
+      },
+      "alt": "HF 平底接头尺寸图，标注头部外径 8.2 mm、总长 20.5 mm 与前端避空尺寸",
+      "caption": "HF 接头尺寸示例，单位 mm",
+      "width": 1500,
+      "height": 829
+    },
+    "hf6Dimensions": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/hf6-fitting-dimensions.webp",
+      "source": {
+        "kind": "manual",
+        "page": 7,
+        "crop": [
+          0.399,
+          0.093,
+          0.292,
+          0.12
+        ]
+      },
+      "alt": "HF6 紧凑平底接头尺寸图，标注头部外径 6.4 mm、总长 17.6 mm 与前端避空尺寸",
+      "caption": "HF6 紧凑接头尺寸示例，单位 mm",
+      "width": 1500,
+      "height": 859
+    },
+    "torque": {
+      "src": "/images/products/tubing-assemblies/flanged-tubing/fep/selection/t-st-torque-driver.webp",
+      "source": {
+        "kind": "raster",
+        "path": "public/images/products/fittings/thread-to-barbed-fittings/details-zh/t-st-torque-driver.webp",
+        "crop": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "alt": "FOREACH T-ST 可调扭力批实物，用于配合对应接头批头控制锁紧扭矩",
+      "caption": "T-ST 扭力批，批头按接头系列选配",
+      "width": 1500,
+      "height": 888
+    }
+  }
+}

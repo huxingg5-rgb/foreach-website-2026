@@ -67,6 +67,12 @@ export function getFittingImageTypeSlug(productType: string): string {
   return slug;
 }
 
+/** Shared product names keep detail copy and descriptive image text consistent. */
+export function getFittingTypeName(productType: string, locale: string): string | undefined {
+  const language = fittingImageLocale(locale);
+  return language === "zh" ? productType : types[productType]?.[localeIndex[language]];
+}
+
 export function buildFittingImageAlt(record: FittingImageRecord, locale: string): string {
   const language = fittingImageLocale(locale);
   const typeName = language === "zh" ? record.productType : types[record.productType]?.[localeIndex[language]];

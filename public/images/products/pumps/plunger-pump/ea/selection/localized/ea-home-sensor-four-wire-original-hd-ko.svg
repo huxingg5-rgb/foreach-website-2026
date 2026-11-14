@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2250" viewBox="0 0 1500 1125">
+<title>EA 배선 / 스트로크 참조</title>
+<desc>원본의 단자, 전선 색상, 회로 기호 및 연결 관계를 유지합니다.</desc>
+<rect width="1500" height="1125" fill="white"/>
+<g fill="none" stroke="#111" stroke-width="1.15" stroke-linecap="butt" stroke-linejoin="miter">
+<style>text{font-family:Arial,"Microsoft YaHei",sans-serif;fill:#111;stroke:none;font-weight:400}</style>
+<g transform="translate(240 150) scale(4.1)"><line x1="59" y1="36" x2="59" y2="84" />
+<polygon points="43,84 75,84 59,109" fill="#111" stroke="#111"/>
+<line x1="43" y1="109" x2="75" y2="109" />
+<line x1="59" y1="109" x2="59" y2="164" />
+<path d="M176 36 V70 L145 88 M145 77 V119 M145 107 L176 124 V164" />
+<polygon points="157,109 176,124 151,118" fill="#111" stroke="#111"/>
+<path d="M85 104 L105 87 L102 106 L128 92" stroke-width="0.85"/>
+<polygon points="128,92 111,96 117,105" fill="#111" stroke="#111"/>
+<circle cx="59" cy="36" r="4" fill="#111" stroke="none"/>
+<circle cx="59" cy="164" r="4" fill="#111" stroke="none"/>
+<circle cx="176" cy="36" r="4" fill="#111" stroke="none"/>
+<circle cx="176" cy="164" r="4" fill="#111" stroke="none"/>
+<text x="19" y="18" font-size="9.454545454545455" >애노드-빨강</text>
+<text x="132" y="18" font-size="13" >컬렉터-흰색</text>
+<text x="12" y="190" font-size="11.818181818181818" >캐소드-검정</text>
+<text x="137" y="190" font-size="11.818181818181818" >이미터-초록</text></g>
+</g></svg>

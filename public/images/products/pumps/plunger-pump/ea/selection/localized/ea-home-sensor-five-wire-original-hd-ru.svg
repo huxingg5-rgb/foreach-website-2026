@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2250" viewBox="0 0 1500 1125">
+<title>EA: подключение / ход</title>
+<desc>Сохранены исходные клеммы, цвета проводов, условные обозначения и соединения.</desc>
+<rect width="1500" height="1125" fill="white"/>
+<g fill="none" stroke="#111" stroke-width="1.15" stroke-linecap="butt" stroke-linejoin="miter">
+<style>text{font-family:Arial,"Microsoft YaHei",sans-serif;fill:#111;stroke:none;font-weight:400}</style>
+<g transform="translate(55 275) scale(2.35)"><path d="M113 26 H130 V181 M130 198 V230 H113" />
+<polygon points="118,181 142,181 130,198" fill="#111" stroke="#111"/>
+<line x1="119" y1="198" x2="141" y2="198" />
+<path d="M146 176 L154 180 L151 184 L165 189" stroke-width="1"/>
+<polygon points="165,189 156,187 159,183" fill="#111" stroke="#111"/>
+<rect x="195" y="10" width="89" height="58" />
+<text x="239.5" y="44" font-size="7.875" text-anchor="middle" font-stretch="condensed">СТАБИЛИЗАТОР</text>
+<path d="M195 39 H170 V57 M164 57 H176 M166 60 H174 M168 63 H172" />
+<path d="M284 26 H459 M284 51 H323 V147 M182 230 H459" />
+<path d="M182 230 V198 M182 182 V100 H202 L205 94 L209 106 L214 94 L219 106 L224 94 L229 106 L234 94 L239 100 H284 V164" />
+<line x1="171" y1="182" x2="193" y2="182" />
+<polygon points="171,198 193,198 182,182" fill="#111" stroke="#111"/>
+<path d="M182 164 H218 M218 132 L272 164 L218 196 Z M272 164 H298" />
+<text x="237" y="170" font-size="4" text-anchor="middle">УСИЛИТЕЛЬ</text>
+<path d="M239 144 V120 H323 M240 183 V230" />
+<path d="M298 132 L351 164 L298 196 Z M323 181 V230" />
+<path d="M305 176 H313 L320 154 H325 M309 176 L316 154 H324" stroke-width="1"/>
+<circle cx="358" cy="164" r="7" fill="white"/>
+<path d="M365 164 H409 M378 164 V143" />
+<path d="M363 143 H393 L378 121 Z M378 110 V98 H409" />
+<circle cx="378" cy="116" r="5.5" fill="white"/>
+<path d="M430 26 V33 L426 36 L434 40 L426 44 L434 48 L426 52 L434 56 L426 60 L434 64 L430 68 V78 L409 89 M409 83 V111 M409 106 L433 117 V142 L409 154 M409 147 V177 M409 170 L433 183 V230 M433 128 H459" />
+<polygon points="421,108 433,117 422,116" fill="#111" stroke="#111"/>
+<polygon points="421,175 433,183 422,182" fill="#111" stroke="#111"/>
+<circle cx="182" cy="164" r="2" fill="#111" stroke="none"/>
+<circle cx="240" cy="230" r="2" fill="#111" stroke="none"/>
+<circle cx="323" cy="120" r="2" fill="#111" stroke="none"/>
+<circle cx="323" cy="230" r="2" fill="#111" stroke="none"/>
+<circle cx="284" cy="164" r="2" fill="#111" stroke="none"/>
+<circle cx="378" cy="164" r="2" fill="#111" stroke="none"/>
+<circle cx="430" cy="26" r="2" fill="#111" stroke="none"/>
+<circle cx="433" cy="230" r="2" fill="#111" stroke="none"/>
+<circle cx="106.5" cy="26" r="6.5" fill="white"/>
+<circle cx="106.5" cy="230" r="6.5" fill="white"/>
+<circle cx="466" cy="26" r="6.5" fill="white"/>
+<circle cx="466" cy="128" r="6.5" fill="white"/>
+<circle cx="466" cy="230" r="6.5" fill="white"/>
+<text x="91" y="32" font-size="10" text-anchor="end">Анод-Красный</text>
+<text x="91" y="236" font-size="12.5" text-anchor="end">Катод-Чёрный</text>
+<text x="484" y="32" font-size="10" >Белый-VCC</text>
+<text x="484" y="134" font-size="12.272727272727273" >Синий-Выход</text>
+<text x="484" y="236" font-size="10.384615384615385" >Зелёный-Общий</text></g>
+</g></svg>

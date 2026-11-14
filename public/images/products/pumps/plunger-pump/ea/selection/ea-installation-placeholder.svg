@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1125" viewBox="0 0 1500 1125" role="img" aria-labelledby="title desc">
+<title id="title">安装固定实拍待补</title><desc id="desc">预留泵体支架、安装面、出液口方向与线束余量的实拍位置</desc>
+<rect width="1500" height="1125" fill="#f6f9fc"/><rect x="60" y="60" width="1380" height="1005" rx="12" fill="none" stroke="#b7c5d8" stroke-width="3" stroke-dasharray="14 12"/>
+<g fill="none" stroke="#91a2ba" stroke-width="10"><rect x="650" y="315" width="200" height="145" rx="12"/><path d="m680 315 22-30h96l22 30"/><circle cx="750" cy="388" r="42"/></g>
+<g text-anchor="middle" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif"><text x="750" y="580" fill="#173368" font-size="46" font-weight="600">支架固定与出管方向</text><text x="750" y="660" fill="#53657e" font-size="32">安装实拍待补</text><text x="750" y="740" fill="#65768c" font-size="25">展示安装面、固定支架、出口朝向与线束余量</text></g></svg>

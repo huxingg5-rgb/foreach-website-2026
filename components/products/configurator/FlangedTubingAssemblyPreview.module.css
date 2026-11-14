@@ -1,0 +1,24 @@
+.figure { margin: 6px 0 0; min-width: 0; }
+.graphViewport { min-width: 0; overflow-x: auto; }
+.stage { position: relative; width: 100%; aspect-ratio: 1020 / 220; background: #fff; }
+.canvas { position: absolute; top: 0; left: 0; width: 100%; height: 96.591%; }
+.annotations { display: block; position: relative; width: 100%; height: 100%; overflow: visible; font-family: "HarmonyOS Sans SC", "Microsoft YaHei", Arial, sans-serif; }
+.dimension { stroke: #000; stroke-width: 1.1; fill: none; color: #000; cursor: pointer; outline: none; }
+.dimensionSelected { stroke: var(--brand-cyan, #09e9b4); color: var(--brand-cyan, #09e9b4); }
+.dimension:focus-visible text { text-decoration: underline; }
+.dimension text { fill: #173368; stroke: none; font-size: 15px; }
+.dimensionNotice { fill: #b54708; font-size: 11px; }
+.leader { fill: none; stroke: #000; stroke-width: 1.1; pointer-events: none; }
+.callout { cursor: pointer; outline: none; }
+.calloutTitle { fill: #173368; font-size: 14px; font-weight: 400; }
+.annotations [data-end-label] { fill: #000; }
+.calloutDetail { fill: #667085; font-size: 13px; }
+.selected .leader, .calloutGroup:has(.callout:hover) .leader, .calloutGroup:has(.callout:focus-visible) .leader { stroke: var(--brand-cyan, #09e9b4); }
+.selected .calloutTitle, .callout:hover .calloutTitle, .callout:focus-visible .calloutTitle { fill: #173368; }
+.callout:focus-visible .calloutTitle { text-decoration: underline; }
+.status { position: absolute; inset: 0; display: grid; place-items: center; background: #fff; color: #667085; font-size: 13px; }
+.caption { margin: 0; padding: 8px 20px 12px; color: #7a8796; font-size: 12px; line-height: 1.6; }
+@media (max-width: 760px) {
+  .stage { min-width: 760px; }
+  .caption { padding: 8px 16px 12px; }
+}

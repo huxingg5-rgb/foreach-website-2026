@@ -13,6 +13,7 @@ interface TubingAssemblyCustomRequestModalProps {
   productId: string;
   productName: string;
   quantity: number;
+  configurationSummary?: string;
   onClose: () => void;
 }
 
@@ -22,6 +23,7 @@ export default function TubingAssemblyCustomRequestModal({
   productId,
   productName,
   quantity,
+  configurationSummary,
   onClose,
 }: TubingAssemblyCustomRequestModalProps) {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -83,6 +85,7 @@ export default function TubingAssemblyCustomRequestModal({
         message: [
           productName,
           `${copy.quantity}: ${quantity}`,
+          configurationSummary,
           formValue.message.trim(),
         ].filter(Boolean).join("\n"),
         locale,
@@ -111,12 +114,15 @@ export default function TubingAssemblyCustomRequestModal({
       description={copy.description}
       copyOverrides={copy}
       renderAttachments={(disabled) => (
+        <>
+        {configurationSummary ? <details open><summary>已选管组件配置</summary><pre style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere", font: "inherit", fontSize: 12, lineHeight: 1.7 }}>{configurationSummary}</pre></details> : null}
         <InquiryAttachmentField
           locale={locale}
           files={selectedFiles}
           disabled={disabled}
           onChange={setSelectedFiles}
         />
+        </>
       )}
       items={productName ? [{
         id: productId,

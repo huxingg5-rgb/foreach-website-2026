@@ -1,3 +1,5 @@
+import { isHardTubePlug, getHardTubePlugPresentation } from "./hard-tube-plugs";
+
 type HardTubeSeoSource = {
   productTypeId?: string;
   seriesId?: string;
@@ -79,6 +81,10 @@ function galleryAlt(src: string, series: string, locale: HardTubeSeoLocale) {
 // The source series ID determines the fitting type; model prefixes do not.
 export function getHardTubeSeo(data: HardTubeSeoSource, locale: string) {
   if (!Object.prototype.hasOwnProperty.call(SERIES_NAMES, locale) || data.productTypeId !== "hard-tube-fittings") return null;
+  if (isHardTubePlug(data)) {
+    const p = getHardTubePlugPresentation(data, locale);
+    return {title:`${p.model} ${p.name} | FOREACH`,description:p.description,imageAlt:`${p.model} ${p.name} — ${p.material} ${p.color}`,additionalImageAlts:[]};
+  }
   const language = locale as HardTubeSeoLocale;
   const series = SERIES_NAMES[language][String(data.seriesId || "")];
   if (!series) return null;

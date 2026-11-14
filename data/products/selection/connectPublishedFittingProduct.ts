@@ -8,6 +8,7 @@ import { getThreadToBarbedFittingGallery } from "@/data/products/detail/thread-t
 import { getFemaleThreadAdapterGallery } from "@/data/products/detail/female-thread-adapter-gallery";
 import { getBulkheadBarbedFittingGallery } from "@/data/products/detail/bulkhead-barbed-fitting-gallery";
 import { getFittingSeriesGallery } from "@/data/products/detail/fitting-series-gallery";
+import { isHardTubePlug } from "@/data/products/detail/hard-tube-plugs";
 
 function text(value: unknown): string {
   return String(value ?? "").trim();
@@ -73,6 +74,9 @@ export function connectPublishedFittingProduct<
       formalProduct.detailHref ||
       text(product.detailHref),
   } as T;
+  if (isHardTubePlug(product) && typeof product.plugMainImage === "string") {
+    return {...connected,mainImage:product.plugMainImage,image:product.plugMainImage,heroImage:product.plugMainImage,images:[product.plugMainImage],additionalImages:[]} as T;
+  }
   return {
     ...connected,
     ...getFittingSeriesGallery({ ...connected, productTypeId: formalProduct.productTypeId }),

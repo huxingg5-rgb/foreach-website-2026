@@ -1,0 +1,32 @@
+.content { min-width: 0; }
+.drawingModel { display: block; color: #667085; font-size: 12px; font-weight: 400; margin-top: 4px; }
+.selectionColumns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; margin: 20px 0; }
+.selectionColumns > * { min-width: 0; }
+.selectionFigure { min-width: 0; width: 100%; margin: 0; }
+.selectionFigure img { display: block; width: 100%; height: auto; background: #fff; }
+.selectionFigure figcaption { margin-top: 9px; color: #5d687a; font-size: 13px; line-height: 1.6; }
+.selectionColumns > .selectionFigure { max-width: 560px; justify-self: start; }
+.selectionColumns > .selectionFigure[data-fep-selection-media="torque"] { max-width: 500px; }
+.portComparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin: 24px 0; }
+.portComparison > article { min-width: 0; padding-top: 16px; border-top: 2px solid #173368; }
+.content .portComparison h3 { margin: 0 0 10px; color: #173368; font-size: 18px; font-weight: 500; line-height: 1.5; }
+.portComparison p { margin-bottom: 20px; }
+.portComparison .selectionFigure { max-width: 600px; }
+.materialGallery, .dimensionGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 24px 0; }
+.dimensionGallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.configurationFigure { max-width: 720px; margin: 24px auto; }
+.customMedia { display: none; }
+.pressureExample, .torqueReference { border: 1px solid #dbe3ee; padding: 24px; margin: 24px 0 16px; }
+.pressureExample h3, .torqueReference h3 { margin-bottom: 12px; color: #173368; font-size: 18px; }
+.pressureExample > p, .torqueReference > p { font-size: 14px; }
+.pressureExample > p:last-child, .torqueReference > p:last-child { margin-bottom: 0; }
+.pressureExample table { font-variant-numeric: tabular-nums; }
+.torqueReference .torqueValue { color: #173368; font-size: 32px; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.3; }
+.torqueValue span { font-size: 18px; font-weight: 400; }
+@media (max-width: 600px) {
+  .selectionColumns, .portComparison { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .dimensionGallery { grid-template-columns: minmax(0, 1fr); }
+  .materialGallery { gap: 10px; }
+  .pressureExample, .torqueReference { padding: 18px; }
+  .torqueReference .torqueValue { font-size: 28px; }
+}

@@ -46,5 +46,5 @@ test('all published galleries preserve source data, deduplicate photos and provi
       }
     }
   }
-  assert.equal(checked.size, 33);
+  assert.equal(checked.size, 34);
 });

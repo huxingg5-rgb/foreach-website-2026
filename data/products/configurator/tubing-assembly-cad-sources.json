@@ -1,0 +1,258 @@
+{
+  "HF6-U28-20": {
+    "file": "新版硬管接头\\旧文件\\紧凑平底\\HF6-U28-20.stp",
+    "sourcePart": "443-02-00362",
+    "gripAt": "negative-y"
+  },
+  "HF6-U28-25": {
+    "file": "新版硬管接头\\旧文件\\紧凑平底\\HF6-U28-25.stp",
+    "sourcePart": "443-02-00363",
+    "gripAt": "negative-y"
+  },
+  "HN-U28-16": {
+    "file": "新版硬管接头\\旧文件\\标滚卡箍\\HN-U28-16.stp",
+    "sourcePart": "443-02-00368",
+    "gripAt": "negative-y"
+  },
+  "HN-U28-32": {
+    "file": "新版硬管接头\\旧文件\\标滚卡箍\\HN-U28-32.stp",
+    "sourcePart": "443-02-00369",
+    "gripAt": "negative-y"
+  },
+  "HNF-M6-16": {
+    "file": "卡箍接头\\HNF-M6-16.stp",
+    "sourcePart": "443-00-00205",
+    "gripAt": "negative-y"
+  },
+  "HNF-M6-20": {
+    "file": "卡箍接头\\HNF-M6-20.stp",
+    "sourcePart": "443-00-00208",
+    "gripAt": "negative-y"
+  },
+  "HNF-M6-25": {
+    "file": "卡箍接头\\HNF-M6-25.stp",
+    "sourcePart": "443-00-00206",
+    "gripAt": "negative-y"
+  },
+  "HNF-M6-30": {
+    "file": "卡箍接头\\HNF-M6-30.stp",
+    "sourcePart": "443-00-00228",
+    "gripAt": "negative-y"
+  },
+  "HNF-M6-32": {
+    "file": "卡箍接头\\HNF-M6-32.stp",
+    "sourcePart": "443-00-00207",
+    "gripAt": "negative-y"
+  },
+  "HNF-U28-16": {
+    "file": "卡箍接头\\HNF-U28-16.stp",
+    "sourcePart": "443-00-00058",
+    "gripAt": "negative-y"
+  },
+  "HNF-U28-20": {
+    "file": "卡箍接头\\HNF-U28-20.stp",
+    "sourcePart": "443-00-00224",
+    "gripAt": "negative-y"
+  },
+  "HNF-U28-25": {
+    "file": "卡箍接头\\HNF-U28-25.stp",
+    "sourcePart": "443-00-00223",
+    "gripAt": "negative-y"
+  },
+  "HNF-U28-30": {
+    "file": "卡箍接头\\HNF-U28-30.stp",
+    "sourcePart": "443-00-00226",
+    "gripAt": "negative-y"
+  },
+  "HNF-U28-32": {
+    "file": "卡箍接头\\HNF-U28-32.stp",
+    "sourcePart": "443-00-00059",
+    "gripAt": "negative-y"
+  },
+  "HNF6-M6-16": {
+    "file": "卡箍接头\\HNF6-M6-16.stp",
+    "sourcePart": "443-00-00379",
+    "gripAt": "negative-y"
+  },
+  "HNF6-M6-20": {
+    "file": "卡箍接头\\HNF6-M6-20.stp",
+    "sourcePart": "443-00-00382",
+    "gripAt": "negative-y"
+  },
+  "HNF6-M6-25": {
+    "file": "卡箍接头\\HNF6-M6-25.stp",
+    "sourcePart": "443-00-00380",
+    "gripAt": "negative-y"
+  },
+  "HNF6-M6-30": {
+    "file": "卡箍接头\\HNF6-M6-30.stp",
+    "sourcePart": "443-00-00383",
+    "gripAt": "negative-y"
+  },
+  "HNF6-M6-32": {
+    "file": "卡箍接头\\HNF6-M6-32.stp",
+    "sourcePart": "443-00-00381",
+    "gripAt": "negative-y"
+  },
+  "HNF6-U28-16": {
+    "file": "卡箍接头\\HNF6-U28-16.stp",
+    "sourcePart": "443-00-00487",
+    "gripAt": "negative-y"
+  },
+  "HNF6-U28-20": {
+    "file": "卡箍接头\\HNF6-U28-20.stp",
+    "sourcePart": "443-00-00372",
+    "gripAt": "negative-y"
+  },
+  "HNF6-U28-25": {
+    "file": "卡箍接头\\HNF6-U28-25.stp",
+    "sourcePart": "443-00-00486",
+    "gripAt": "negative-y"
+  },
+  "HNF6-U28-30": {
+    "file": "卡箍接头\\HNF6-U28-30.stp",
+    "sourcePart": "443-00-00373",
+    "gripAt": "negative-y"
+  },
+  "HNF6-U28-32": {
+    "file": "卡箍接头\\HNF6-U28-32.stp",
+    "sourcePart": "443-00-00484",
+    "gripAt": "negative-y"
+  },
+  "HNE6-U28-32": {
+    "file": "443-02-00677.stp",
+    "sourcePart": "443-02-00677",
+    "gripAt": "negative-y"
+  },
+  "HSF6-M6-16": {
+    "file": "卡环接头\\443-02-00499-C.stp",
+    "sourcePart": "443-02-00499",
+    "gripAt": "negative-y",
+    "requiredBoreDiameters": [
+      1.8,
+      4.1
+    ]
+  },
+  "HSF6-M6-18": {
+    "file": "新版硬管接头\\模型\\443-02-00708-C.stp",
+    "sourcePart": "443-02-00708",
+    "gripAt": "negative-y"
+  },
+  "HSF6-U28-16": {
+    "file": "卡环接头\\443-02-00497-C.stp",
+    "sourcePart": "443-02-00497",
+    "gripAt": "negative-y",
+    "requiredBoreDiameters": [
+      1.8,
+      4.1
+    ]
+  },
+  "HSF6-U28-32": {
+    "file": "卡环接头\\443-02-00498-C.stp",
+    "sourcePart": "443-02-00498",
+    "gripAt": "negative-y",
+    "requiredBoreDiameters": [
+      3.4,
+      4.1
+    ]
+  },
+  "CL-0-16": {
+    "file": "卡箍，垫片\\CL-0-16.stp",
+    "sourcePart": "443-00-00032",
+    "kind": "accessory",
+    "axis": "z",
+    "rotationEuler": [
+      -1.5707963267948966,
+      0,
+      0
+    ]
+  },
+  "CL-0-20": {
+    "file": "卡箍，垫片\\CL-0-20.stp",
+    "sourcePart": "443-00-00147",
+    "kind": "accessory",
+    "axis": "z",
+    "rotationEuler": [
+      -1.5707963267948966,
+      0,
+      0
+    ]
+  },
+  "CL-0-25": {
+    "file": "卡箍，垫片\\CL-0-25.stp",
+    "sourcePart": "443-00-00035",
+    "kind": "accessory",
+    "axis": "z",
+    "rotationEuler": [
+      -1.5707963267948966,
+      0,
+      0
+    ]
+  },
+  "CL-0-30": {
+    "file": "卡箍，垫片\\CL-0-30.stp",
+    "sourcePart": "443-00-00188",
+    "kind": "accessory",
+    "axis": "z",
+    "rotationEuler": [
+      -1.5707963267948966,
+      0,
+      0
+    ]
+  },
+  "CL-0-32": {
+    "file": "卡箍，垫片\\CL-0-32.stp",
+    "sourcePart": "443-00-00034",
+    "kind": "accessory",
+    "axis": "z",
+    "rotationEuler": [
+      -1.5707963267948966,
+      0,
+      0
+    ]
+  },
+  "HSF6-M6-32": {
+    "file": "卡环接头\\443-02-00500-C.stp",
+    "sourcePart": "443-02-00500",
+    "gripAt": "negative-y",
+    "requiredBoreDiameters": [
+      3.4,
+      4.1
+    ]
+  },
+  "HSF6-U28-16-PK-N": {
+    "file": "卡环接头\\441-09-00222-C.stp",
+    "sourcePart": "441-09-00222",
+    "axis": "x",
+    "rotationEuler": [
+      0,
+      0,
+      -1.5707963267948966
+    ],
+    "requiredBoreDiameters": [
+      1.7,
+      4
+    ]
+  },
+  "WSS-32-SS-N": {
+    "file": "卡环接头\\441-09-00128-C.stp",
+    "filePart": "441-09-00128",
+    "sourcePart": "441-09-00120",
+    "axis": "z",
+    "rotationEuler": [
+      1.5707963267948966,
+      0,
+      0
+    ],
+    "expectedSize": [
+      4.6,
+      4.6,
+      4
+    ],
+    "verifiedDrawing": "441-09-00128-C.pdf",
+    "verification": "Drawing 809813 WSS-32-SS-N and STEP have 3.3 bore, 4.6 flange, 4 mm length and the same oblique relief; STEP retains the earlier internal name 441-09-00120.",
+    "requiredBoreDiameters": [
+      3.3
+    ]
+  }
+}

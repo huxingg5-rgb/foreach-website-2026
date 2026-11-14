@@ -57,13 +57,5 @@ export function getTubingMaterialHeading(slug: string, locale: string) {
   if (!description) return undefined;
 
   const label = key.toUpperCase();
-  const hasMaterialLabel = description
-    .toUpperCase()
-    .split(/[^A-Z0-9]+/)
-    .includes(label);
-  return {
-    label,
-    description,
-    h1: hasMaterialLabel ? description : `${label} ${description}`,
-  };
+  return { label, description, h1: `${label} ${description}` };
 }

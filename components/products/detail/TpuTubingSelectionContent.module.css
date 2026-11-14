@@ -1,0 +1,52 @@
+/* Typography, sections, cards, callouts and tables come from the fitting template. */
+.guide { min-width: 0; }
+.section, .subsection { scroll-margin-top: 165px; }
+.subsection { margin-top: 32px; }
+.subsection > h3:first-child { margin-top: 0; }
+.guide .twoColumns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.guide .note { margin-top: 16px; }
+.controls { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px 24px; margin: 0 0 16px; }
+.controlGroup { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.controlGroup > strong { margin-right: 4px; }
+.controlGroup button { padding: 8px 14px; border: 1px solid var(--fx-card-line); border-radius: 0; color: var(--fx-navy); background: #fff; cursor: pointer; font: inherit; font-size: 14px; line-height: 1.5; }
+.controlGroup button[aria-pressed="true"] { border-color: var(--fx-navy); color: #fff; background: var(--fx-navy); }
+.guide button:focus-visible, .guide a:focus-visible, .guide input:focus-visible, .rulerViewport:focus-visible, .sizeGrid:focus-visible { outline: 2px solid var(--fx-teal-2); outline-offset: 3px; }
+.sizeGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0 0 16px; }
+.sizeCard { display: flex; flex-direction: column; align-items: center; min-width: 0; padding: 20px; border: 1px solid var(--fx-card-line); border-radius: 0; background: #fff; color: var(--fx-ink); font: inherit; cursor: pointer; }
+.sizeCard[aria-pressed="true"] { border-color: var(--fx-teal-2); box-shadow: inset 0 -3px var(--fx-teal-2); }
+.sizeCard:hover { border-color: var(--fx-navy); }
+.sizeCard > strong { font-size: 17px; }
+.sizeCard > span:last-child { font-size: 14px; line-height: 1.65; color: var(--fx-muted); margin-top: 5px; }
+.circleStage { display: flex; align-items: center; justify-content: center; width: 100%; height: 174px; flex-shrink: 0; overflow-x: auto; }
+.circleStage svg { display: block; max-width: none; flex-shrink: 0; }
+.currentSize { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; margin-bottom: 16px; padding: 12px 0; border-top: 1px solid var(--fx-line); border-bottom: 1px solid var(--fx-line); }
+.currentSize > span { font-size: 14px; color: var(--fx-muted); overflow-wrap: anywhere; }
+.calibration { margin: 0 0 16px; padding: 16px 20px; border: 1px solid var(--fx-card-line); background: var(--fx-bg); }
+.guide .calibration > h3:first-child { margin-top: 0; }
+.rulerViewport { width: 100%; overflow-x: auto; padding: 22px 8px 16px; margin: 10px 0; }
+.ruler { position: relative; height: 35px; border-top: 2px solid var(--fx-navy); margin-top: 8px; flex-shrink: 0; }
+.ruler::before, .ruler::after { content: ""; position: absolute; top: -9px; width: 1px; height: 16px; background: var(--fx-navy); }
+.ruler::before { left: 0; }
+.ruler::after { right: 0; }
+.ruler > span { position: absolute; top: 5px; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 14px; }
+.scaleControl { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.scaleControl input { width: min(100%, 360px); accent-color: var(--fx-navy); }
+.confirmCalibration { display: flex; align-items: flex-start; gap: 10px; margin-top: 18px; }
+.confirmCalibration input { flex-shrink: 0; margin-top: 7px; accent-color: var(--fx-navy); width: 16px; height: 16px; }
+.matchStatus { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; margin-bottom: 12px; }
+.matchStatus > span { color: var(--fx-muted); font-size: 14px; }
+.matchTable { min-width: 720px; }
+.matchTable td:first-child { white-space: nowrap; }
+.emptyMatch { padding: 16px 20px; background: var(--fx-bg); border-left: 3px solid var(--fx-teal); margin-bottom: 16px; }
+.installation { list-style: decimal; margin: 0 0 14px; padding-left: 24px; }
+.toolRow { margin-top: 32px; }
+@media (max-width: 1024px) {
+  .sizeGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .guide .twoColumns { grid-template-columns: 1fr; }
+  .sizeGrid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 206px; gap: 16px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x proximity; }
+  .sizeCard > strong { font-size: 16px; }
+  .controlGroup button { padding: 8px 10px; }
+  .calibration { padding: 16px; }
+}

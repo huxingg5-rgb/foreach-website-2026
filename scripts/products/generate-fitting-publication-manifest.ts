@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { FITTING_PUBLISHED_PRODUCTS as currentPublished, FITTING_OFFLINE_PRODUCTS as currentOffline } from "../../data/products/selection/fitting-publication.generated";
 import fs from "node:fs";
 import path from "node:path";
 import { getDescriptiveFittingImageUrl } from "../../data/products/detail/fitting-image-description";
@@ -498,6 +499,8 @@ export function isPublishedFittingDetailRoute(
 
 function main() {
   const sourceRecords = readSourceRecords();
+  const plugsOnly = process.argv.includes("--hard-tube-plugs-only");
+  const plugCodes = new Set(sourceRecords.filter(record => /^HBL(?:6X|6)?-/.test(record.foreachModel)).map(record => record.productCode));
   const selectionRecords = readSelectionRecords();
   const detailRecords = readDetailRecords();
 
@@ -704,10 +707,18 @@ function main() {
       .map(([code]) => code)
   );
 
+  if (plugsOnly) {
+    const validPlugs = [...publishedCodes].filter(code => plugCodes.has(code));
+    publishedCodes.clear();
+    currentPublished.filter(record => !plugCodes.has(record.productCode)).forEach(record => publishedCodes.add(record.productCode));
+    validPlugs.forEach(code => publishedCodes.add(code));
+  }
+
   const publishedProducts: PublicationRecord[] = [
     ...publishedCodes,
   ]
     .map((code) => {
+      if (plugsOnly && !plugCodes.has(code)) return currentPublished.find(record => record.productCode === code) || null;
       const record = selectionByCode.get(code)?.[0];
       if (!record) return null;
 
@@ -740,7 +751,7 @@ function main() {
       })
     );
 
-  const publishedDetailRouteKeys = detailRecords
+  let publishedDetailRouteKeys = detailRecords
     .filter((record) => {
       const codes = collectDetailCodes(record);
       return (
@@ -757,7 +768,16 @@ function main() {
     .filter((key, index, array) => array.indexOf(key) === index)
     .sort();
 
-  const offlineRecords = [...reasonsByCode]
+  if (plugsOnly) {
+    const previous = fs.readFileSync(OUTPUT_TS,"utf8");
+    const start = previous.indexOf("[",previous.indexOf("const publishedDetailRouteKeySet"));
+    const end = previous.indexOf("]",start)+1;
+    const oldKeys = JSON.parse(previous.slice(start,end)) as string[];
+    const isPlugKey = (key:string) => /^hard-tube-fittings\/hbl(?:6x|6)?-/i.test(key);
+    publishedDetailRouteKeys = [...new Set([...oldKeys.filter(key=>!isPlugKey(key)),...publishedDetailRouteKeys.filter(isPlugKey)])].sort();
+  }
+
+  let offlineRecords = [...reasonsByCode]
     .filter(([, reasons]) => reasons.size > 0)
     .map(([code, reasons]) => {
       const selection = selectionByCode.get(code)?.[0];
@@ -777,6 +797,11 @@ function main() {
         numeric: true,
       })
     );
+
+  if (plugsOnly) {
+    offlineRecords = [...currentOffline.filter(record=>!plugCodes.has(record.productCode)),...offlineRecords.filter(record=>plugCodes.has(record.productCode))]
+      .sort((a,b)=>a.productCode.localeCompare(b.productCode,"en",{numeric:true}));
+  }
 
   const hasReason = (reason: OfflineReason) =>
     offlineRecords.filter((record) => record.reasons.includes(reason))

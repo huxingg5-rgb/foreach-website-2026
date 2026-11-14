@@ -35,7 +35,7 @@ const PANEL_INSTALLATION_HTML = String.raw`<div class="fx-sec" id="fx-panel-inst
     <li><strong>最后核对操作空间：</strong>对接方向留出插入、拔出的行程，母端按键旁留出手指空间，面板背面留出螺母工具和软管弯曲空间。</li>
   </ul>
   <p class="fx-muted">3.3 mm 与 8.5 mm 表示可夹持的面板厚度，不是相邻安装孔的中心距，也不是两块面板之间的距离。多个接口并排布置时，应结合完整接头、配合端和操作空间确定孔距；加工前核对完整零件图。</p>
-  <ul class="fx-links"><li><a href="/downloads/resources/selection-support/fitting-replacement/q20/drawings/Q2001-PMV-SACN.pdf" target="_blank" rel="noreferrer">查看 Q2001-PMV-SACN 完整 2D 图纸</a></li></ul>
+  <ul class="fx-links"><li><a href="/downloads/products/fittings/quick-connect-fittings/q2001-pmv-sacn.pdf" target="_blank" rel="noreferrer">查看 Q2001-PMV-SACN 完整 2D 图纸</a></li></ul>
 </div>`;
 
 const STYLE_HTML = String.raw`<style>

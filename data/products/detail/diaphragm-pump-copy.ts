@@ -575,7 +575,10 @@ export function applyDiaphragmPumpDetailCopy<
     applicationScenarios: applications,
     faqs,
     faq: faqs,
-    breadcrumbs: copy.breadcrumbs.map((label) => ({ label })),
+    // Route data owns the localized hierarchy and its canonical parent links.
+    breadcrumbs: Array.isArray(data.breadcrumbs) && data.breadcrumbs.length
+      ? data.breadcrumbs
+      : copy.breadcrumbs.map((label) => ({ label })),
     ...(Array.isArray(data.specs) ? { specs } : {}),
     ...(Array.isArray(data.specifications) ? { specifications } : {}),
     ...(Array.isArray(data.specList) ? { specList } : {}),

@@ -1,0 +1,332 @@
+[
+  {
+    "name": "ea-motor-42-four-wire-original-hd",
+    "locale": "en",
+    "geometryUnchanged": true,
+    "sourceSha256": "93b0ccc90f476ed87b0c2ef9f8e38e798aaec2f85fb031e3a9e17b087282a9f2"
+  },
+  {
+    "name": "ea-motor-42-four-wire-original-hd",
+    "locale": "es",
+    "geometryUnchanged": true,
+    "sourceSha256": "93b0ccc90f476ed87b0c2ef9f8e38e798aaec2f85fb031e3a9e17b087282a9f2"
+  },
+  {
+    "name": "ea-motor-42-four-wire-original-hd",
+    "locale": "fr",
+    "geometryUnchanged": true,
+    "sourceSha256": "93b0ccc90f476ed87b0c2ef9f8e38e798aaec2f85fb031e3a9e17b087282a9f2"
+  },
+  {
+    "name": "ea-motor-42-four-wire-original-hd",
+    "locale": "ko",
+    "geometryUnchanged": true,
+    "sourceSha256": "93b0ccc90f476ed87b0c2ef9f8e38e798aaec2f85fb031e3a9e17b087282a9f2"
+  },
+  {
+    "name": "ea-motor-42-four-wire-original-hd",
+    "locale": "ru",
+    "geometryUnchanged": true,
+    "sourceSha256": "93b0ccc90f476ed87b0c2ef9f8e38e798aaec2f85fb031e3a9e17b087282a9f2"
+  },
+  {
+    "name": "ea-motor-a-four-wire-original-hd",
+    "locale": "en",
+    "geometryUnchanged": true,
+    "sourceSha256": "e32977f6d4a6fe8a0d790a8a80a6787c357956a1b4a207e216a97a6fa8bf89dd"
+  },
+  {
+    "name": "ea-motor-a-four-wire-original-hd",
+    "locale": "es",
+    "geometryUnchanged": true,
+    "sourceSha256": "e32977f6d4a6fe8a0d790a8a80a6787c357956a1b4a207e216a97a6fa8bf89dd"
+  },
+  {
+    "name": "ea-motor-a-four-wire-original-hd",
+    "locale": "fr",
+    "geometryUnchanged": true,
+    "sourceSha256": "e32977f6d4a6fe8a0d790a8a80a6787c357956a1b4a207e216a97a6fa8bf89dd"
+  },
+  {
+    "name": "ea-motor-a-four-wire-original-hd",
+    "locale": "ko",
+    "geometryUnchanged": true,
+    "sourceSha256": "e32977f6d4a6fe8a0d790a8a80a6787c357956a1b4a207e216a97a6fa8bf89dd"
+  },
+  {
+    "name": "ea-motor-a-four-wire-original-hd",
+    "locale": "ru",
+    "geometryUnchanged": true,
+    "sourceSha256": "e32977f6d4a6fe8a0d790a8a80a6787c357956a1b4a207e216a97a6fa8bf89dd"
+  },
+  {
+    "name": "ea-motor-b-four-wire-original-hd",
+    "locale": "en",
+    "geometryUnchanged": true,
+    "sourceSha256": "e9c3e2b8a130a748b526d3e7e902b8c64603ef71dd4ccbc64bfe453aa84f7485"
+  },
+  {
+    "name": "ea-motor-b-four-wire-original-hd",
+    "locale": "es",
+    "geometryUnchanged": true,
+    "sourceSha256": "e9c3e2b8a130a748b526d3e7e902b8c64603ef71dd4ccbc64bfe453aa84f7485"
+  },
+  {
+    "name": "ea-motor-b-four-wire-original-hd",
+    "locale": "fr",
+    "geometryUnchanged": true,
+    "sourceSha256": "e9c3e2b8a130a748b526d3e7e902b8c64603ef71dd4ccbc64bfe453aa84f7485"
+  },
+  {
+    "name": "ea-motor-b-four-wire-original-hd",
+    "locale": "ko",
+    "geometryUnchanged": true,
+    "sourceSha256": "e9c3e2b8a130a748b526d3e7e902b8c64603ef71dd4ccbc64bfe453aa84f7485"
+  },
+  {
+    "name": "ea-motor-b-four-wire-original-hd",
+    "locale": "ru",
+    "geometryUnchanged": true,
+    "sourceSha256": "e9c3e2b8a130a748b526d3e7e902b8c64603ef71dd4ccbc64bfe453aa84f7485"
+  },
+  {
+    "name": "ea-motor-six-wire-original-hd",
+    "locale": "en",
+    "geometryUnchanged": true,
+    "sourceSha256": "2c16bad1d61ea9fc06941d4f5ab89b895dfabcb2b19b4393efead5e70a4daac4"
+  },
+  {
+    "name": "ea-motor-six-wire-original-hd",
+    "locale": "es",
+    "geometryUnchanged": true,
+    "sourceSha256": "2c16bad1d61ea9fc06941d4f5ab89b895dfabcb2b19b4393efead5e70a4daac4"
+  },
+  {
+    "name": "ea-motor-six-wire-original-hd",
+    "locale": "fr",
+    "geometryUnchanged": true,
+    "sourceSha256": "2c16bad1d61ea9fc06941d4f5ab89b895dfabcb2b19b4393efead5e70a4daac4"
+  },
+  {
+    "name": "ea-motor-six-wire-original-hd",
+    "locale": "ko",
+    "geometryUnchanged": true,
+    "sourceSha256": "2c16bad1d61ea9fc06941d4f5ab89b895dfabcb2b19b4393efead5e70a4daac4"
+  },
+  {
+    "name": "ea-motor-six-wire-original-hd",
+    "locale": "ru",
+    "geometryUnchanged": true,
+    "sourceSha256": "2c16bad1d61ea9fc06941d4f5ab89b895dfabcb2b19b4393efead5e70a4daac4"
+  },
+  {
+    "name": "ea-home-sensor-three-wire-original-hd",
+    "locale": "en",
+    "geometryUnchanged": true,
+    "sourceSha256": "068ce9bd28d2a7281ccd5684126dfd170aaa005a21813533f455e7f70fc09fbe"
+  },
+  {
+    "name": "ea-home-sensor-three-wire-original-hd",
+    "locale": "es",
+    "geometryUnchanged": true,
+    "sourceSha256": "068ce9bd28d2a7281ccd5684126dfd170aaa005a21813533f455e7f70fc09fbe"
+  },
+  {
+    "name": "ea-home-sensor-three-wire-original-hd",
+    "locale": "fr",
+    "geometryUnchanged": true,
+    "sourceSha256": "068ce9bd28d2a7281ccd5684126dfd170aaa005a21813533f455e7f70fc09fbe"
+  },
+  {
+    "name": "ea-home-sensor-three-wire-original-hd",
+    "locale": "ko",
+    "geometryUnchanged": true,
+    "sourceSha256": "068ce9bd28d2a7281ccd5684126dfd170aaa005a21813533f455e7f70fc09fbe"
+  },
+  {
+    "name": "ea-home-sensor-three-wire-original-hd",
+    "locale": "ru",
+    "geometryUnchanged": true,
+    "sourceSha256": "068ce9bd28d2a7281ccd5684126dfd170aaa005a21813533f455e7f70fc09fbe"
+  },
+  {
+    "name": "ea-home-sensor-four-wire-original-hd",
+    "locale": "en",
+    "geometryUnchanged": true,
+    "sourceSha256": "500ff3767b80f6bb0c4ad90d05965afd1d71e43108f0e701d6c203b49ae611f6"
+  },
+  {
+    "name": "ea-home-sensor-four-wire-original-hd",
+    "locale": "es",
+    "geometryUnchanged": true,
+    "sourceSha256": "500ff3767b80f6bb0c4ad90d05965afd1d71e43108f0e701d6c203b49ae611f6"
+  },
+  {
+    "name": "ea-home-sensor-four-wire-original-hd",
+    "locale": "fr",
+    "geometryUnchanged": true,
+    "sourceSha256": "500ff3767b80f6bb0c4ad90d05965afd1d71e43108f0e701d6c203b49ae611f6"
+  },
+  {
+    "name": "ea-home-sensor-four-wire-original-hd",
+    "locale": "ko",
+    "geometryUnchanged": true,
+    "sourceSha256": "500ff3767b80f6bb0c4ad90d05965afd1d71e43108f0e701d6c203b49ae611f6"
+  },
+  {
+    "name": "ea-home-sensor-four-wire-original-hd",
+    "locale": "ru",
+    "geometryUnchanged": true,
+    "sourceSha256": "500ff3767b80f6bb0c4ad90d05965afd1d71e43108f0e701d6c203b49ae611f6"
+  },
+  {
+    "name": "ea-home-sensor-five-wire-original-hd",
+    "locale": "en",
+    "geometryUnchanged": true,
+    "sourceSha256": "f10e49887bf5bc380acb630e367c470f07d79ad04757c5ca47e09677467c8969"
+  },
+  {
+    "name": "ea-home-sensor-five-wire-original-hd",
+    "locale": "es",
+    "geometryUnchanged": true,
+    "sourceSha256": "f10e49887bf5bc380acb630e367c470f07d79ad04757c5ca47e09677467c8969"
+  },
+  {
+    "name": "ea-home-sensor-five-wire-original-hd",
+    "locale": "fr",
+    "geometryUnchanged": true,
+    "sourceSha256": "f10e49887bf5bc380acb630e367c470f07d79ad04757c5ca47e09677467c8969"
+  },
+  {
+    "name": "ea-home-sensor-five-wire-original-hd",
+    "locale": "ko",
+    "geometryUnchanged": true,
+    "sourceSha256": "f10e49887bf5bc380acb630e367c470f07d79ad04757c5ca47e09677467c8969"
+  },
+  {
+    "name": "ea-home-sensor-five-wire-original-hd",
+    "locale": "ru",
+    "geometryUnchanged": true,
+    "sourceSha256": "f10e49887bf5bc380acb630e367c470f07d79ad04757c5ca47e09677467c8969"
+  },
+  {
+    "name": "ea-stroke-positions-hd",
+    "locale": "en",
+    "geometryUnchanged": true,
+    "sourceSha256": "93524310cc62c24f6dae775ff91aabd8c536498d80eab8f1bcd3f7165b15d263"
+  },
+  {
+    "name": "ea-stroke-positions-hd",
+    "locale": "es",
+    "geometryUnchanged": true,
+    "sourceSha256": "93524310cc62c24f6dae775ff91aabd8c536498d80eab8f1bcd3f7165b15d263"
+  },
+  {
+    "name": "ea-stroke-positions-hd",
+    "locale": "fr",
+    "geometryUnchanged": true,
+    "sourceSha256": "93524310cc62c24f6dae775ff91aabd8c536498d80eab8f1bcd3f7165b15d263"
+  },
+  {
+    "name": "ea-stroke-positions-hd",
+    "locale": "ko",
+    "geometryUnchanged": true,
+    "sourceSha256": "93524310cc62c24f6dae775ff91aabd8c536498d80eab8f1bcd3f7165b15d263"
+  },
+  {
+    "name": "ea-stroke-positions-hd",
+    "locale": "ru",
+    "geometryUnchanged": true,
+    "sourceSha256": "93524310cc62c24f6dae775ff91aabd8c536498d80eab8f1bcd3f7165b15d263"
+  },
+  {
+    "name": "dpl30h-flow-pressure-curve",
+    "locale": "en",
+    "plotPixelsUnchanged": true,
+    "ticks": [
+      -30,
+      -20,
+      -10,
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600
+    ],
+    "sourceSha256": "98037f2dbb586fc200e1b3d1c8710af35a777e1e5ccdf193d5a05e44bf7df02c"
+  },
+  {
+    "name": "dpl30h-flow-pressure-curve",
+    "locale": "es",
+    "plotPixelsUnchanged": true,
+    "ticks": [
+      -30,
+      -20,
+      -10,
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600
+    ],
+    "sourceSha256": "98037f2dbb586fc200e1b3d1c8710af35a777e1e5ccdf193d5a05e44bf7df02c"
+  },
+  {
+    "name": "dpl30h-flow-pressure-curve",
+    "locale": "fr",
+    "plotPixelsUnchanged": true,
+    "ticks": [
+      -30,
+      -20,
+      -10,
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600
+    ],
+    "sourceSha256": "98037f2dbb586fc200e1b3d1c8710af35a777e1e5ccdf193d5a05e44bf7df02c"
+  },
+  {
+    "name": "dpl30h-flow-pressure-curve",
+    "locale": "ko",
+    "plotPixelsUnchanged": true,
+    "ticks": [
+      -30,
+      -20,
+      -10,
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600
+    ],
+    "sourceSha256": "98037f2dbb586fc200e1b3d1c8710af35a777e1e5ccdf193d5a05e44bf7df02c"
+  },
+  {
+    "name": "dpl30h-flow-pressure-curve",
+    "locale": "ru",
+    "plotPixelsUnchanged": true,
+    "ticks": [
+      -30,
+      -20,
+      -10,
+      0,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600
+    ],
+    "sourceSha256": "98037f2dbb586fc200e1b3d1c8710af35a777e1e5ccdf193d5a05e44bf7df02c"
+  }
+]

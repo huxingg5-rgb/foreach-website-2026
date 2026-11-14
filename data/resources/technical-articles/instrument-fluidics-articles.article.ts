@@ -1,4 +1,5 @@
 import { flowTranslations } from "./instrument-fluidics/flow-locales";
+import { isTechnicalArticleLocaleAvailable } from "./technical-article-availability";
 import { pressureTranslations } from "./instrument-fluidics/pressure-locales";
 import { diaphragmOverviewTranslations } from "./instrument-fluidics/diaphragm-overview-locales";
 import { copy as flow } from "./instrument-fluidics/quick-disconnect-coupling-flow-pressure-drop.zh";
@@ -10,6 +11,8 @@ import { getDiaphragmPumpCardPhoto, getDiaphragmPumpReferenceByProductId } from 
 import { getDiaphragmPumpPath } from "@/data/products/detail/diaphragm-pump-routes";
 import type { EngineeringArticleBlock } from "./diaphragm-pump-engineering-article.types";
 import type { TechnicalArticleItem, TechnicalArticleLocale } from "./technical-articles.types";
+import { copy as noise } from "./instrument-fluidics/noise-test.zh";
+import { copy as application } from "./instrument-fluidics/chemiluminescence.zh";
 import { copy as diaphragmOverview } from "./instrument-fluidics/what-is-a-diaphragm-pump.zh";
 
 // Model cards are configuration examples, not the unidentified catalogue test samples.
@@ -20,6 +23,12 @@ const definitions = [
   { slug: "quick-disconnect-coupling-pressure-rating", copy: pressure, category: "fittings-tubing", series: "q20,q40,q60", date: "2026-10-27",
     models: ["Q6006-SNV-SPPE", "Q6008-PNV-SPPE", "Q6012-SNV-SPPE", "Q4006-PNV-SPPE", "Q2002-PNV-SACN"], pumpIds: [],
     anchors: ["pressure-ratings", "size-vs-pressure", "pressure-vs-drop", "pressure-checks", "temperature", "disconnect-safely", "q60-installation", "sample-validation", "further-reading"] },
+  { slug: "diaphragm-pump-noise-test-conditions", copy: noise, category: "pumps-valves", series: "", date: "2026-10-22",
+    models: [], pumpIds: ["diaphragm-dpl30-brushless", "diaphragm-dpl60-brushless"],
+    anchors: ["noise-sources", "installation-noise", "test-setup", "test-results", "video-method"] },
+  { slug: "chemiluminescence-analyzer-diaphragm-pump-wash-waste", copy: application, category: "applications", series: "", date: "2026-10-22",
+    models: [], pumpIds: ["diaphragm-dpl60-brushless", "diaphragm-dpgl800-ff", "diaphragm-dpl30-brushless"],
+    anchors: ["fluid-path", "wash-supply", "waste-aspiration", "wetted-materials", "integration", "sample-validation"] },
   { slug: "what-is-a-diaphragm-pump", copy: diaphragmOverview, category: "pumps-valves", series: "", date: "2026-11-03",
     models: [], pumpIds: ["diaphragm-dpl30-brushless", "diaphragm-dpgl800-ff", "diaphragm-dpl60-brushless"],
     anchors: ["working-principle", "types", "pros-cons", "applications", "selection", "summary"] },
@@ -55,6 +64,7 @@ const translatedArticles = {
 
 function definitionsForLocale(locale: TechnicalArticleLocale) {
   return definitions
+    .filter(item => isTechnicalArticleLocaleAvailable(item.slug, locale))
     .filter(item => locale === "zh-CN" || item.slug in translatedArticles)
     .map(item => ({ ...item, copy: locale === "zh-CN" ? item.copy
       : translatedArticles[item.slug as keyof typeof translatedArticles]?.[locale] ?? item.copy }));

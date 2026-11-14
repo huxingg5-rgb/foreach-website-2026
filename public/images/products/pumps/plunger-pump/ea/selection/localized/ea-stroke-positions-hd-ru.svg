@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2250" viewBox="0 0 1500 1125">
+<title>EA: подключение / ход</title>
+<desc>A — верхний механический предел; B — переключение оптодатчика; C — полношаговая точка полного хода; D — нижний механический предел. AB и CD — красные концевые зоны; BC — синяя рабочая зона.</desc>
+<rect width="1500" height="1125" fill="white"/>
+<rect x="290" y="130" width="38" height="75" fill="#f00000"/>
+<rect x="290" y="205" width="38" height="670" fill="#082962"/>
+<rect x="290" y="875" width="38" height="75" fill="#f00000"/>
+<g fill="none" stroke="#111" stroke-width="3">
+<path d="M328 130H1250 M328 205H1250 M328 875H1250 M328 950H1250"/>
+</g>
+<g font-family="Arial,Microsoft YaHei,sans-serif" font-size="44" fill="#111" font-weight="400">
+<text x="440" y="106">Верхний механический предел (A)</text>
+<text x="440" y="184">Точка переключения оптодатчика (B)</text>
+<text x="440" y="852">Полношаговая точка полного хода (C)</text>
+<text x="440" y="1020">Нижний механический предел (D)</text>
+</g>
+</svg>

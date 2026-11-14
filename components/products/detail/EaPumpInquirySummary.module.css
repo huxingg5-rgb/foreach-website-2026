@@ -1,0 +1,8 @@
+.workspace { min-width: 0; }
+.workspace [hidden] { display: none; }
+.buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; min-width: 0; }
+.buttons button { flex: 0 0 auto; white-space: nowrap; }
+
+@media (max-width: 760px) {
+  .buttons { flex-wrap: nowrap; overflow-x: auto; padding: 3px 2px 7px; scrollbar-width: thin; }
+}
