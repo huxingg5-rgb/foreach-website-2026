@@ -580,28 +580,28 @@ const TARGET_LOCALE_A11Y_TEXT: Partial<
     productTypeOverviewSuffix: ": descripción general del tipo de producto",
     currentPrefix: "Actual: ",
     paginationAriaLabel: "Paginación de productos",
-    barbedPortLabel: "Diámetro interior de espiga",
+    barbedPortLabel: "DI del tubo",
   },
   fr: {
     breadcrumbAriaLabel: "Fil d’Ariane",
     productTypeOverviewSuffix: " : présentation du type de produit",
     currentPrefix: "Sélection actuelle : ",
     paginationAriaLabel: "Pagination des produits",
-    barbedPortLabel: "Diamètre intérieur de cannelure",
+    barbedPortLabel: "DI du tube",
   },
   ko: {
     breadcrumbAriaLabel: "이동 경로",
     productTypeOverviewSuffix: " 제품 유형 개요",
     currentPrefix: "현재 선택: ",
     paginationAriaLabel: "제품 페이지 탐색",
-    barbedPortLabel: "바브 내경",
+    barbedPortLabel: "튜브 내경",
   },
   ru: {
     breadcrumbAriaLabel: "Навигационная цепочка",
     productTypeOverviewSuffix: ": обзор типа продукции",
     currentPrefix: "Текущий выбор: ",
     paginationAriaLabel: "Навигация по страницам продукции",
-    barbedPortLabel: "Внутренний диаметр штуцера",
+    barbedPortLabel: "Внутренний диаметр трубки",
   },
 };
 
@@ -5704,7 +5704,7 @@ function isFilterOptionActive(
               productTypeResultCount={showProductTypeResultCount ? matchedProducts.length : undefined}
               filterGroups={activeProductTypeId === "hard-tube-fittings" && [...(selectedFilters.filter01 || [])].some(value => hardTubePlugCopy.zh.names.includes(value)) ? filterGroups.filter(group => group.key !== "filter03") : filterGroups}
               mobileOpenFilterGroups={mobileOpenFilterGroups}
-              currentPrefix={targetLocaleA11yText?.currentPrefix}
+              currentPrefix={locale === "en" ? "Current: " : targetLocaleA11yText?.currentPrefix}
               barbedPortLabel={targetLocaleA11yText?.barbedPortLabel}
               onToggleMobileGroup={toggleMobileFilterGroup}
               isOptionActive={isFilterOptionActive}

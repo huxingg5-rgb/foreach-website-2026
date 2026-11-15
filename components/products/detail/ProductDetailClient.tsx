@@ -3778,7 +3778,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             ) : (
               <p className={styles.productDesc}>
                 {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
-                {luerPairConfig?.allowCoreAssembly && luerPairConfig.baseRole === "core" ? `搭配 LPT 锁圈，可组成${luerPairConfig.base.family === "LRL" ? "旋转" : "固定"}锁圈公鲁尔接头。` : null}
+                {luerPairConfig?.allowCoreAssembly && luerPairConfig.baseRole === "core" ? fittingText(`搭配 LPT 锁圈，可组成${luerPairConfig.base.family === "LRL" ? "旋转" : "固定"}锁圈公鲁尔接头。`, configuratorLocale) : null}
               </p>
             )}
 

@@ -272,7 +272,11 @@ function buildAssemblySheets(record: FlangedConfiguration): string[] {
     const stopNumber = number(`${prefix} 侧限位件`), sx = a ? 420 : 940;
     if (e.stop !== "无") s += stop(sx, y, e.stop, stopNumber) + part(stopNumber, sx, 610, `M${sx} 598V${y + 18}`, text(sx + 22, 615, e.stop, 16));
   }
-  if (v.mode === "single") s += text(1165, 580, "B 端 · 自由管端", 19, "middle");
+  if (v.mode === "single") {
+    // Keep complete localized labels inside the main view, clear of the title column at x=1290.
+    s += `<g data-free-end-label="true">` + wrap("B 端 · 自由管端", 240, 19)
+      .map((value, i) => text(1140, 580 + i * 24, value, 19, "middle", 240)).join("") + "</g>";
+  }
   for (const [enabled, x, value, side] of [[v.labelA, 510, v.textA, "A"], [v.labelB, 785, v.textB, "B"]] as const) {
     if (enabled) s += pipeLabel(x, y, value, number(`${side} 侧管标`)) + part(number(`${side} 侧管标`), x + 43, 460, `M${x + 43} 472V${y - 18}`, fitted(x - 25, 443, `${side} 管标：${value}`, 220, 15));
   }

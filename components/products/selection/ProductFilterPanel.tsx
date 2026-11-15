@@ -329,14 +329,14 @@ export default function ProductFilterPanel({
                   }
                 >
                   <span>
-                        {barbedPortLabel || /[\u3400-\u9fff]/.test(
+                        {barbedPortLabel || (/[\u3400-\u9fff]/.test(
                           filterGroups.find(
                             (item) =>
                               item.key === "filter02"
                           )?.title || ""
                         )
                           ? "接管内径"
-                          : "Barb ID"}
+                          : "Tubing ID")}
                       </span>
 
                   <span
