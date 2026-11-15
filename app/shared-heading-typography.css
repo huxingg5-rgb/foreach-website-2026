@@ -38,19 +38,19 @@
 }
 
 @media (min-width: 1001px) and (max-width: 1599px) {
-  html:not([lang^="zh"]) {
+  html:not([lang^="zh"]), .home-hero-inner, .home-hero-scroll-shell {
     --shared-hero-heading-size: clamp(40px, 3vw, 46px);
   }
 }
 
 @media (min-width: 1600px) and (max-width: 1920px) {
-  html:not([lang^="zh"]) {
+  html:not([lang^="zh"]), .home-hero-inner, .home-hero-scroll-shell {
     --shared-hero-heading-size: clamp(44px, 2.7vw, 52px);
   }
 }
 
 @media (min-width: 1921px), (min-width: 1600px) and (min-resolution: 1.25dppx) {
-  html:not([lang^="zh"]) {
+  html:not([lang^="zh"]), .home-hero-inner, .home-hero-scroll-shell {
     --shared-hero-heading-size: clamp(74px, 3.8vw, 88px);
   }
 }
