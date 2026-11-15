@@ -2,21 +2,32 @@ import vectorParts from "./tubing-assembly-vector-parts.json";
 import cadParts from "./tubing-assembly-cad-vectors.json";
 import legacyParts from "./flanged-vector-parts.json";
 import ringPdfParts from "./tubing-assembly-ring-pdf-vectors.json";
+import drawingUnits from "./tubing-assembly-drawing-units.json";
 import { assemblyAccessory, getAssemblyFitting } from "./tubing-assembly-catalog";
 
 type Command = [string, ...number[]];
-export type AssemblyVectorPart = { width: number; height: number; axisY: number; paths: Command[][]; source: string; strokeWidths?: number[]; bbox?: number[]; viewAsset?: string; viewPadding?: number; sourceSha256?: string };
+export type AssemblyVectorPart = { width: number; height: number; axisY: number; paths: Command[][]; source: string; strokeWidths?: number[]; bbox?: number[]; viewAsset?: string; viewPadding?: number; sourceSha256?: string; millimetresPerUnit?: number };
 type VectorPart = AssemblyVectorPart;
 const parts = vectorParts as unknown as Record<string, VectorPart>;
 const cad = cadParts as unknown as Record<string, VectorPart>;
 const ringPdf = ringPdfParts as unknown as Record<string, VectorPart>;
+const units = drawingUnits as Record<string, { width: number; height: number; millimetresPerUnit?: number }>;
 export function getAssemblyFittingVector(model?: string) {
   const fitting = getAssemblyFitting(model);
-  return fitting && ((fitting.drawingUrl && ringPdf[fitting.drawingUrl]) || (fitting.preferCadVector && fitting.cadUrl && cad[fitting.cadUrl]) || (fitting.drawingUrl && parts[fitting.drawingUrl]) || (fitting.cadUrl && cad[fitting.cadUrl])) || undefined;
+  if (!fitting) return undefined;
+  const source = (fitting.drawingUrl && ringPdf[fitting.drawingUrl]) || (fitting.preferCadVector && fitting.cadUrl && cad[fitting.cadUrl]) || (fitting.drawingUrl && parts[fitting.drawingUrl]) || (fitting.cadUrl && cad[fitting.cadUrl]);
+  if (!source) return undefined;
+  if ((fitting.drawingUrl && ringPdf[fitting.drawingUrl] === source) || (fitting.cadUrl && cad[fitting.cadUrl] === source)) return { ...source, millimetresPerUnit: 1 };
+  return { ...source, millimetresPerUnit: units[source.source]?.millimetresPerUnit };
 }
 export function getAssemblyAccessoryVector(model?: string, code?: string) {
   const accessory = assemblyAccessory(model, code);
-  return accessory?.cadUrl ? cad[accessory.cadUrl] : undefined;
+  const source = accessory?.cadUrl ? cad[accessory.cadUrl] : undefined;
+  return source ? { ...source, millimetresPerUnit: 1 } : undefined;
+}
+export function assemblyVectorSizeMm(part: AssemblyVectorPart | undefined) {
+  const scale = part?.millimetresPerUnit;
+  return part && scale && scale > 0 ? { width: part.width * scale, height: part.height * scale, axisY: part.axisY * scale } : undefined;
 }
 export function getLegacyFlangedVector(series: string): VectorPart | undefined {
   const source = legacyParts[series as "FL" | "FL6"];

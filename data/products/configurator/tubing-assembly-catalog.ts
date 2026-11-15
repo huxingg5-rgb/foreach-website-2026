@@ -57,7 +57,7 @@ const cadGeometries = cadManifest.geometries as Record<string, CadGeometry>;
 const cadAccessories = cadManifest.accessories as Record<string, { geometryId: string; finish: string }>;
 const supplementalCad = assemblyCadImports as Record<string, CadGeometry>;
 const exactHsfCad = hsfNativeCad as Record<string, CadGeometry>;
-const drawings = drawingManifest.products["hard-tube-fittings"] as Record<string, { url: string; geometryKey: string }>;
+const drawings = drawingManifest.products["hard-tube-fittings"] as Record<string, { url: string; originalUrl?: string; geometryKey: string }>;
 type AssemblyAccessory = Omit<HardTubeAccessory, "kind"> & { kind: HardTubeAccessory["kind"] | "卡环组件"; cadUrl?: string; finish?: string };
 export type AssemblyFitting = { model: string; code: string; family: string; connection: AssemblyConnection; connections: AssemblyConnection[];
   thread: string; material: string; color: string; outerDiameters: number[]; image?: string; cadUrl?: string; sourcePart?: string; drawingUrl?: string; preferCadVector?: boolean; accessories: AssemblyAccessory[] };
@@ -99,7 +99,7 @@ const catalogFittings: AssemblyFitting[] = hardTubeFittingSelectionProducts.filt
     outerDiameters,
     image: p.imageCard, cadUrl: geometry?.model3dUrl,
     sourcePart: geometry?.sourcePart,
-    drawingUrl: drawing?.url, preferCadVector:model === "HFL6-U40-16-PK-N",
+    drawingUrl: drawing?.originalUrl || drawing?.url, preferCadVector:model === "HFL6-U40-16-PK-N",
     accessories,
   };
 });

@@ -37,13 +37,13 @@ assert.equal(JSON.stringify(copy.store), beforeDelete, "deletion must not mutate
 assert.throws(() => parseFlangedConfigurationStore('{"version":1,"nextNumber":1,"configurations":[{}]}'));
 assert.throws(() => saveFlangedConfiguration(copy.store, { ...choice, length: "0" }, "bad", null));
 const sheets = buildFlangedDrawingSheets(edit.record);
-assert.equal(sheets.length, 2);
+assert.equal(sheets.length, 1, "short requirements fit on the main drawing");
 assert.ok(sheets[0].includes("1600 ±5"));
 assert.ok(sheets[0].includes("&lt;script&gt;&amp;试剂 A"));
 assert.ok(sheets.join("").includes('data-source-model="HFL-U28-16-PV-N"'));
 assert.ok(sheets.join("").includes('data-source-kind="original-pdf-vector"'));
 assert.ok(!sheets.join("").includes('data-source-kind="raster-outline-trace"'));
-assert.ok(sheets[1].includes("配置补充说明"));
+assert.ok(sheets[0].includes("工程确认要求"));
 assert.ok(sheets[0].includes('data-template-key="fl-double"'));
 assert.ok(sheets[0].includes('data-bom-part="4"'));
 assert.ok(sheets[0].includes('data-vector-drawing="true"'));

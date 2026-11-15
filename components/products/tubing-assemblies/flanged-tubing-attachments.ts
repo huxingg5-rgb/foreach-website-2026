@@ -6,7 +6,7 @@ import { attachmentDigest, findPdfAttachment, readPdfAttachment, storePdfAttachm
 import { buildFlangedDrawingSheets, createFlangedDrawingPdf } from "./flanged-tubing-drawing";
 
 const pending = new Map<string, Promise<GeneratedPdfAttachment>>();
-const RENDERER_VERSION = "tubing-original-pdf-v15";
+const RENDERER_VERSION = "tubing-original-pdf-v16";
 export function flangedDrawingFilename(record: FlangedConfiguration, locale = "zh") {
   return `${record.name}-R${record.revision}-${assemblyText("管组件矢量选型图", locale)}.pdf`.replace(/[\\/:*?"<>|\u0000-\u001f]/g, "_");
 }

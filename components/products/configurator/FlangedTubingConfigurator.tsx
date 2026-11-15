@@ -8,7 +8,6 @@ import FlangedTubingAssemblyPreview from "./FlangedTubingAssemblyPreview";
 import buttonStyles from "./ConfiguratorButton.module.css";
 import { assemblyCompatibilityWarnings, assemblySizeError, compatibleAssemblyTubes, assemblyEndFinishes, assemblyEndFinishLabel, defaultFlangedTubingChoice, endConnection, reconcileAssemblyEnd, selectAssemblyConnection, selectAssemblyEndAttribute, selectAssemblyEndFinish, flangedTubingBom, normalizeFlangedChoice, validateFlangedChoice, type FlangedEnd, type FlangedTubingChoice } from "@/data/products/configurator/flanged-tubing";
 import { assemblyConnections, assemblyFamilies, assemblyFamilyAvailability, assemblyFamilyLabel, assemblyFittingAccessories, compatibleAssemblyFittings, assemblyTubeSizeKey, assemblyTubeSizes, getAssemblyFitting, getAssemblyTube, selectAssemblyTubeAttribute, selectAssemblyTubeSize, type AssemblyTube } from "@/data/products/configurator/tubing-assembly-catalog";
-import { assemblyVectorPaths, getAssemblyFittingVector } from "@/data/products/configurator/tubing-assembly-vectors";
 import styles from "./FlangedTubingConfigurator.module.css";
 import { assemblyView } from "../tubing-assemblies/assembly-view";
 import { assemblyText, assemblyHtmlLocale } from "@/data/products/configurator/tubing-assembly.intl";
@@ -89,7 +88,6 @@ export default function FlangedTubingConfigurator({ locale = "zh", value, needDr
   const sizeTubes = materialTubes.filter(t => t.outer === tube.outer && t.inner === tube.inner);
   const tubeVariants = sizeTubes.filter(t => t.color === tube.color && t.hardness === tube.hardness);
   const warnings = assemblyCompatibilityWarnings(choice);
-  const referenceFittings = (form.mode === "double" ? [form.a, form.b] : [form.a]).flatMap(e => { const fitting = getAssemblyFitting(e.fittingModel); return fitting?.outerDiameters.includes(tube.outer) ? [fitting] : []; });
   function changeTube(model: string) {
     const next = getAssemblyTube(model)!;
     setForm(current => ({ ...current, tubeModel: next.key, a: reconcileAssemblyEnd(current.a, next.outer), b: reconcileAssemblyEnd(current.b, next.outer) }));
@@ -218,20 +216,6 @@ export default function FlangedTubingConfigurator({ locale = "zh", value, needDr
           <label className={`${styles.field} ${styles.requirementsNotes}`}><span>特殊要求</span><textarea aria-label="特殊要求" maxLength={800} value={form.notes} placeholder="管标位置、限位尺寸或检验要求" onChange={event => update("notes", event.target.value)} /></label>
         </div></section>
         <details><summary>部件用量明细（{flangedTubingBom(choice).length} 项）</summary><table className={styles.bom} aria-label="管组件配置明细"><thead><tr><th>部件</th><th>配置要求</th><th>数量</th></tr></thead><tbody>{flangedTubingBom(choice).map(row => <tr key={row.part}><td>{row.part}</td><td translate={/管标/.test(row.part) || row.part === "B 端" ? "no" : undefined}>{/管标/.test(row.part) ? row.specification : row.part === "B 端" ? `${assemblyText("自由管端", locale)}${choice.freeEndNote ? ` · ${choice.freeEndNote}` : ""}` : row.specification}</td><td>{row.quantity}</td></tr>)}</tbody></table></details>
-        <details><summary>实物与外形参考</summary><p>接头及配套件引用对应产品图、CAD 或正式二维图纸。</p><div className={styles.referencePhotos}>
-          {referenceFittings.length ? referenceFittings.map((f,i) => { const vector = getAssemblyFittingVector(f.model); return <figure key={`${i}-${f.model}`}>
-            {f.image && !f.image.includes("/logo/") ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={f.image} alt={`${f.model} ${f.connection}接头产品图`} />
-            ) : vector ? <svg viewBox="0 0 260 180" role="img" aria-label={`${f.model} 原图轮廓`}>{assemblyVectorPaths(vector,130,90,230,130).map((d,j)=><path key={j} d={d} fill="none" stroke="#172033" strokeWidth=".7" />)}</svg> : <p>此型号外形资料待补充</p>}
-            <figcaption>{f.model}</figcaption>
-          </figure>; }) : <>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/products/tubing-assemblies/flanged-tubing/fep/flanged-tube-fitting-washer-layout.webp" alt="翻边管组件接头、支撑环件与管端翻边的实物展开参考" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/products/tubing-assemblies/flanged-tubing/fep/flanged-tubing-support-washers.webp" alt="翻边管组件配套垫片与垫圈的实物参考" />
-          </>}
-        </div></details>
       </div>
     </div>
   </ConfiguratorDialogFrame>, locale);

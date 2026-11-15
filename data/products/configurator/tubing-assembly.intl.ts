@@ -5,6 +5,10 @@ import { assemblyMessageRows } from "./tubing-assembly-errors.intl";
 // data/products/tubing-assemblies/locales.ts (ferrule / compression-ring / flanged).
 type Row = readonly [string, string, string, string, string, string];
 export const assemblyUiRows: Row[] = [
+  ["卡箍外形资料待补充", "Ferrule geometry unavailable", "Geometría de la férula no disponible", "Géométrie de la ferrule indisponible", "페룰 형상 자료 없음", "Геометрия феррулы отсутствует"],
+  ["端部展开示意", "Exploded end views", "Vista explosionada de los extremos", "Vue éclatée des extrémités", "끝단 분해도", "Разнесённые виды концов"],
+  ["见续页", "See continuation sheet", "Ver hoja siguiente", "Voir feuille suivante", "다음 시트 참조", "См. лист продолжения"],
+  ["管长以 L 标注为准；端部间距仅作展开示意。", "L specifies the tube length. Gaps at the ends are for the exploded view only.", "L indica la longitud del tubo. Las separaciones de los extremos solo corresponden a la vista explosionada.", "L indique la longueur du tube. Les espacements aux extrémités servent uniquement à la vue éclatée.", "튜브 길이는 L로 표시합니다. 끝단 간격은 분해도 표현을 위한 것입니다.", "Длина трубки указана размером L. Зазоры на концах показаны только для разнесённого вида."],
   ["新增配置", "New configuration", "Nueva configuración", "Nouvelle configuration", "새 구성", "Новая конфигурация"],
   ["保存在当前浏览器，点击编号查看，再次点击收起。", "Saved in this browser. Select a number to view; select it again to collapse.", "Guardado en este navegador. Seleccione un número para ver; vuelva a seleccionarlo para contraer.", "Enregistré dans ce navigateur. Sélectionnez un numéro pour afficher, puis à nouveau pour réduire.", "이 브라우저에 저장됩니다. 번호를 누르면 펼쳐지고 다시 누르면 접힙니다.", "Сохранено в этом браузере. Нажмите на номер для просмотра; повторное нажатие свернёт конфигурацию."],
   ["点击“新增配置”选择管径、长度和两端配件。", "Select “New configuration” to choose tube dimensions, length and end fittings.", "Seleccione «Nueva configuración» para definir las dimensiones, la longitud y los racores de los extremos.", "Sélectionnez «Nouvelle configuration» pour définir les dimensions, la longueur et les raccords d’extrémité.", "“새 구성”을 눌러 관경, 길이 및 양 끝 피팅을 선택하세요.", "Нажмите «Новая конфигурация», чтобы выбрать размеры и длину трубки и концевые фитинги."],
@@ -36,8 +40,6 @@ export const assemblyUiRows: Row[] = [
   ["管组件配置明细", "Assembly configuration details", "Detalles del conjunto", "Détails de l’ensemble", "어셈블리 구성 상세", "Параметры конфигурации сборки"],
   ["数量", "Quantity", "Cantidad", "Quantité", "수량", "Количество"],
   ["项", "items", "elementos", "éléments", "항목", "поз."],
-  ["翻边管组件接头、支撑环件与管端翻边的实物展开参考", "Flanged fitting, support washer and flanged tube-end reference", "Referencia del racor con reborde, arandela y extremo del tubo", "Référence du raccord à collet, de la rondelle et de l’extrémité du tube", "플랜지 피팅, 지지 와셔 및 튜브 플랜지 실물 참고", "Фитинг, опорная шайба и отбортованный конец трубки"],
-  ["翻边管组件配套垫片与垫圈的实物参考", "Matching washers for flanged tubing assemblies", "Arandelas compatibles para tubos con reborde", "Rondelles compatibles pour tubes à collet", "플랜지 튜빙 어셈블리용 호환 와셔 참고", "Совместимые шайбы для сборок с отбортовкой"],
   ["删除", "Delete", "Eliminar", "Supprimer", "삭제", "Удалить"],
   ["取消", "Cancel", "Cancelar", "Annuler", "취소", "Отмена"],
   ["请进入配置修改。", "Open the configuration to edit.", "Abra la configuración para editar.", "Ouvrez la configuration pour modifier.", "구성을 열어 편집하세요.", "Откройте конфигурацию для редактирования."],
@@ -148,8 +150,6 @@ export const assemblyUiRows: Row[] = [
   ["部件用量明细", "Bill of materials", "Lista de materiales", "Nomenclature", "부품 명세서", "Спецификация компонентов"],
   ["配置要求", "Configuration requirements", "Requisitos de configuración", "Exigences de configuration", "구성 요구 사항", "Требования к конфигурации"],
   ["部件", "Part", "Pieza", "Pièce", "부품", "Деталь"],
-  ["实物与外形参考", "Product & geometry references", "Referencias de producto y geometría", "Références produit et géométrie", "제품 및 형상 참고", "Изделия и геометрия"],
-  ["接头及配套件引用对应产品图、CAD 或正式二维图纸。", "Fittings and accessories use the corresponding product images, CAD or formal 2D drawings.", "Los racores y accesorios utilizan sus imágenes, CAD o planos 2D oficiales correspondientes.", "Les raccords et accessoires utilisent les images, fichiers CAO ou plans 2D officiels correspondants.", "피팅 및 액세서리는 해당 제품 이미지, CAD 또는 정식 2D 도면을 사용합니다.", "Для фитингов и компонентов используются соответствующие изображения, CAD или официальные 2D-чертежи."],
   ["选择下方参数，实时查看组合。", "Select parameters below to update the preview.", "Seleccione parámetros para actualizar la vista.", "Choisissez les paramètres pour actualiser l’aperçu.", "아래 매개변수를 선택하면 미리보기가 갱신됩니다.", "Выберите параметры ниже для обновления предпросмотра."],
   ["复制配置", "Copy configuration", "Copiar configuración", "Copier la configuration", "구성 복사", "Копировать конфигурацию"],
   ["保存配置", "Save configuration", "Guardar configuración", "Enregistrer la configuration", "구성 저장", "Сохранить конфигурацию"],

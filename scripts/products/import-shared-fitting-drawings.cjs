@@ -109,6 +109,17 @@ function main(args) {
       catalogueModels:Object.keys(products[family]).length,
       sharedDrawings:new Set(Object.values(products[family]).map(product=>product.url)).size};
   }
+  // Keep explicitly reviewed SKU originals in addition to the shared geometry
+  // URL. A subsequent import must not silently replace a model's title block.
+  const previous = read('data/products/detail/fitting-drawing-manifest.json');
+  for (const [family, models] of Object.entries(products)) for (const [slug, product] of Object.entries(models)) {
+    const originalUrl = previous.products[family]?.[slug]?.originalUrl;
+    if (originalUrl) {
+      const exact = rows.find(row => row.family === family && row.slug === slug && row.source?.url === originalUrl);
+      if (!exact) throw Error(`Reviewed original no longer matches its workbook SKU: ${family}/${slug}`);
+      product.originalUrl = originalUrl;
+    }
+  }
   const manifest = {schemaVersion:1, products};
   if (write) fs.writeFileSync(path.join(root,'data/products/detail/fitting-drawing-manifest.json'), JSON.stringify(manifest,null,2)+'\n');
   const used = new Set(Object.values(products).flatMap(family=>Object.values(family).map(product=>product.url)));

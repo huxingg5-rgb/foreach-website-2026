@@ -25,6 +25,12 @@ test('all mapped PDFs exist and variants of each geometry use a single URL', () 
   for (const [family, products] of Object.entries(manifest.products)) {
     const urlsByGeometry = new Map();
     for (const [slug, product] of Object.entries(products)) {
+      if (product.originalUrl) {
+        const cad = require('../../data/products/detail/hard-tube-fitting-cad-manifest.json').products[slug];
+        assert.ok(cad, `${slug}: an SKU-specific original needs its approved source part`);
+        assert.equal(path.basename(product.originalUrl), `${cad.part.toLowerCase()}-c.pdf`);
+        files.add(product.originalUrl);
+      }
       const exactPlug = family === 'hard-tube-fittings' && plugDrawings.products[slug];
       if (exactPlug) {
         assert.equal(path.basename(product.url), `${exactPlug.part.toLowerCase()}-c.pdf`, `${slug}: preserve its approved original drawing`);

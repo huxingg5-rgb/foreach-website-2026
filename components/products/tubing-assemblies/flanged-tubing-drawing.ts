@@ -5,6 +5,7 @@ import type { FlangedConfiguration } from "@/data/products/configurator/flanged-
 import { assemblyText, assemblyHtmlLocale } from "@/data/products/configurator/tubing-assembly.intl";
 import { protectAssemblyUserText } from "@/data/products/configurator/tubing-assembly-presentation";
 import sourceParts from "@/data/products/configurator/flanged-vector-parts.json";
+import { assemblyEndDrawingLayout } from "./assembly-end-drawing-layout";
 
 /** Original selection-sheet layout with exact HFL/HFL6 catalog part vectors. */
 export type FlangedTemplateKey = "fl-double" | "fl-single" | "fl6-double" | "fl6-single" | "mixed-double" | "assembly";
@@ -47,8 +48,8 @@ function fitted(x: number, y: number, value: string, width: number, size = 14, m
   if (display !== value) display = `${display.slice(0, -1)}…`;
   return text(x, y, { localizedText: display }, fs, "start", width);
 }
-function wrap(value: string, width: number, size: number): LocalizedText[] {
-  value = tr(value);
+function wrap(input: string | LocalizedText, width: number, size: number): LocalizedText[] {
+  const value = tr(input);
   const result: string[] = []; let current = "";
   const tokens = locale === "zh" ? [...value] : value.match(/[^\s]+[ \t]*|\n|[ \t]+/gu) || [];
   for (const token of tokens) {
@@ -72,7 +73,7 @@ function sourceView(source: AssemblyVectorPart, cx: number, cy: number, width: n
   const x = cx - source.width * scale / 2, y = cy - source.axisY * scale;
   const native = original ? ` data-original-pdf="${escape(original.url)}" data-source-bounds="${original.sourceBox.join(" ")}" data-original-bounds="${original.box.join(" ")}" data-original-placement="${[x - original.padding * scale, y - original.padding * scale, (source.width + original.padding * 2) * scale, (source.height + original.padding * 2) * scale].map(num).join(" ")}" data-original-mirror="${mirror}" data-original-opaque="${opaque}"` : "";
   const weights = assemblyVectorStrokes(source, width, height);
-  return `<g ${attributes} data-source-file="${escape(source.source)}" data-source-kind="${source.source.endsWith(".pdf") ? "original-pdf-vector" : "exact-cad-projection"}"${native}>` +
+  return `<g ${attributes} data-source-file="${escape(source.source)}" data-display-bounds="${[x, y, source.width * scale, source.height * scale].map(num).join(" ")}"${source.millimetresPerUnit ? ` data-mm-per-unit="${source.millimetresPerUnit}"` : ""} data-source-kind="${source.source.endsWith(".pdf") ? "original-pdf-vector" : "exact-cad-projection"}"${native}>` +
     (opaque ? rect(x, y, source.width * scale, source.height * scale, "#fff", "none", 0) : "") +
     assemblyVectorPaths(source, cx, cy, width, height, mirror).map((d, i) => path(d, "none", "#111", weights[i])).join("") + "</g>";
 }
@@ -111,7 +112,7 @@ function fixedBom(v: FlangedTubingChoice) {
     const accessory = assemblyAccessory(end.fittingModel, end.accessoryCode);
     return accessory?.productCodePending ? "" : accessory?.productCode || "";
   };
-  if (!legacyDrawing(v)) return flangedTubingBom(v).map((r, i) => ({ n: i + 1, code: i === 0 ? getAssemblyTube(v.tubeModel)?.code || "" : r.part === "A 端接头" ? getAssemblyFitting(v.a.fittingModel)?.code || "" : r.part === "B 端接头" ? getAssemblyFitting(v.b.fittingModel)?.code || "" : r.part.startsWith("A 端") ? accessoryCode(v.a) : r.part.startsWith("B 端") ? accessoryCode(v.b) : "", specification: `${r.part}：${r.specification} ×${r.quantity}` }));
+  if (!legacyDrawing(v)) return flangedTubingBom(v).map((r, i) => ({ n: i + 1, code: i === 0 ? getAssemblyTube(v.tubeModel)?.code || "" : r.part === "A 端接头" ? getAssemblyFitting(v.a.fittingModel)?.code || "" : r.part === "B 端接头" ? getAssemblyFitting(v.b.fittingModel)?.code || "" : ["A 端垫片", "A 端卡箍", "A 端卡环组件"].includes(r.part) ? accessoryCode(v.a) : ["B 端垫片", "B 端卡箍", "B 端卡环组件"].includes(r.part) ? accessoryCode(v.b) : "", specification: `${r.part}：${r.specification} ×${r.quantity}` }));
   const tube = getAssemblyTube(v.tubeModel)!;
   const fit = (e: FlangedEnd) => `${describeFlangedEnd(e)} ×1件`;
   const rows = [
@@ -129,6 +130,43 @@ function fixedBom(v: FlangedTubingChoice) {
   );
   return rows;
 }
+/** Use the same cell capacity when painting the BOM and deciding on overflow. */
+function bomCell(v: FlangedTubingChoice, specification: string, rowCount: number) {
+  if (legacyDrawing(v)) return { size: 12, lines: null, overflow: measure(specification, 9) > 374 || tr(specification).includes("\n") };
+  const rowHeight = 218 / rowCount;
+  for (const size of [10, 9.5, 9]) {
+    const lines = wrap(specification, 374, size), capacity = Math.max(1, Math.floor((rowHeight - 4) / (size + 1)));
+    if (lines.length <= capacity) return { size, lines, overflow: false };
+    if (size === 9) return { size, lines: lines.slice(0, capacity).map((line, index) => index === capacity - 1 ? { localizedText: `${line.localizedText.slice(0, -1)}…` } : line), overflow: true };
+  }
+  throw new Error("Invalid BOM text layout.");
+}
+/** Only information that cannot fit the main sheet is carried onto another. */
+function drawingDetails(record: FlangedConfiguration, legacy: boolean) {
+  const v = record.choice, rows = fixedBom(v), international = locale !== "zh";
+  const fields = [
+    { value: v.company || "", label: "公司", width: international ? 337 : 440 },
+    { value: v.contact || "", label: "联系人", width: international ? 337 : 225 },
+    { value: v.application, label: "应用机型", width: international ? 243 : 347 },
+    { value: v.customerPart || "", label: "客户零件号", width: 338 },
+    { value: record.name, label: "配置名称", width: 340, displayed: `${record.name} · ${getAssemblyTube(v.tubeModel)?.material} 管组件` },
+  ];
+  const overflow = fields.filter(field => measure(field.displayed || field.value, 10) > field.width || tr(field.value).includes("\n")).map(field => `${field.label}：${field.value}`);
+  overflow.push(...rows.filter(row => row.specification && bomCell(v, row.specification, rows.length).overflow).map(row => `部件 ${row.n}：${row.specification}`));
+  const warnings = assemblyCompatibilityWarnings(v);
+  const notes = [
+    warnings.length ? `配套待确认：${warnings.join(" ")}` : "",
+    v.mode === "single" && (v.freeEnd !== "其他" || v.freeEndNote) ? `B 端客户应用：${v.freeEnd}${v.freeEndNote ? `；${v.freeEndNote}` : ""}` : "",
+    v.notes ? `特殊要求：${v.notes}` : "",
+  ].filter(Boolean).flatMap(value => wrap(value, legacy ? 735 : 1165, 14));
+  const capacity = legacy ? 2 : 3, continued = notes.length > capacity || overflow.length > 0;
+  const visible = notes.slice(0, continued ? capacity - 1 : capacity);
+  const remainder = notes.slice(visible.length).flatMap(value => wrap(value, 1120, 16));
+  remainder.push(...overflow.flatMap(value => wrap(value, 1120, 16)));
+  const inline = `<g data-drawing-notes="true">${visible.map((value, i) => text(105, (legacy ? 841 : 825) + i * 20, value, 14, "start", legacy ? 735 : 1165)).join("")}${continued ? text(105, (legacy ? 841 : 825) + visible.length * 20, "见续页", 14) : ""}</g>`;
+  return { inline, continuation: Array.from({ length: Math.ceil(remainder.length / 23) }, (_, i) => remainder.slice(i * 23, (i + 1) * 23)) };
+}
+const continuationContent = (values: LocalizedText[]) => `<g data-continuation-content="true">${values.map((value, i) => text(110, 282 + i * 24, value, 16, "start", 1120)).join("")}</g>`;
 function endCallouts(v: FlangedTubingChoice, side: "a" | "b") {
   const a = side === "a", e = v[side], wx = a ? 148 : locale === "zh" ? 1195 : 1160, wy = a ? 390 : 388;
   const source = sourceParts[sourceKey(e)], fittingBottom = 540 + source.height - source.axisY;
@@ -162,8 +200,8 @@ function frame(record: FlangedConfiguration, page: number, total: number) {
   s += rect(90, y, 610, h) + line(150, y, 150, y + h) + line(310, y, 310, y + h) + line(90, y + header, 700, y + header);
   s += text(120, y + 19, "序号#", 14, "middle") + text(230, y + 19, "物料编码", 14, "middle") + text(505, y + 19, "物料名称及规格", 14, "middle");
   rows.forEach((r, i) => {
-    const top = y + header + i * rh, lines = legacyDrawing(v) ? null : wrap(r.specification, 374, 10).slice(0, 2);
-    const specification = lines ? lines.map((value, j) => text(318, top + rh / 2 + (j - (lines.length - 1) / 2) * 11 + 3, value, 10)).join("") : fitted(318, top + rh / 2 + 4, r.specification, 374, 12, 9);
+    const top = y + header + i * rh, cell = bomCell(v, r.specification, rows.length), { lines } = cell;
+    const specification = lines ? lines.map((value, j) => text(318, top + rh / 2 + (j - (lines.length - 1) / 2) * (cell.size + 1) + 3, value, cell.size, "start", 374)).join("") : fitted(318, top + rh / 2 + 4, r.specification, 374, 12, 9);
     s += `<g data-bom-part="${r.n}">` + line(90, top + rh, 700, top + rh) + text(120, top + rh / 2 + 4, r.n, 13, "middle") + fitted(158, top + rh / 2 + 4, r.code, 145, 12) + specification + "</g>";
   });
   s += rect(700, 907, 590, 218) + line(920, 907, 920, 1125) + line(770, 907, 770, 1082) + line(850, 907, 850, 1082);
@@ -191,50 +229,46 @@ function buildSheets(record: FlangedConfiguration): string[] {
     s += path("M1230 550V620L1170 655") + text(1050, 677, "客户应用", 20);
     ["卡箍", "针", "其他"].forEach((label, i) => { s += checkbox(1070, 716 + i * 35, label, v.freeEnd === label); });
   }
-  const details = [
-    `配置名称：${record.name}   配置版本：R${record.revision}`, v.company ? `公司：${v.company}` : "", v.contact ? `联系人：${v.contact}` : "", v.application ? `应用机型：${v.application}` : "", v.customerPart ? `客户零件号：${v.customerPart}` : "",
-    ...fixedBom(v).filter(row => row.specification).map(row => `部件 ${row.n}：${row.specification}`),
-    single ? `B 端客户应用：${v.freeEnd}${v.freeEndNote ? `；${v.freeEndNote}` : ""}` : "", v.notes ? `特殊要求：${v.notes}` : "",
-  ].filter(Boolean).flatMap(value => wrap(value, 1120, 16));
-  const more = Boolean(fixedBom(v).some(row => measure(row.specification, 9) > 374) || v.notes || (single && v.freeEndNote) || measure(v.company || "", 16) > 440 || measure(v.contact || "", 16) > 225 || measure(v.application, 16) > 347 || measure(v.customerPart || "", 14) > 338 || measure(record.name, 16) > 260 || (v.labelA && measure(v.textA, 12) > 76) || (v.labelB && measure(v.textB, 12) > 76));
-  const continuation = more ? Array.from({ length: Math.ceil(details.length / 23) }, (_, i) => details.slice(i * 23, (i + 1) * 23)) : [];
+  const { inline, continuation } = drawingDetails(current, true);
+  s += inline;
   const total = 1 + continuation.length;
   const shell = (content: string, page: number) => `<svg xmlns="http://www.w3.org/2000/svg" width="${t.pageWidth}pt" height="${t.pageHeight}pt" viewBox="0 0 1511 1143" role="img" lang="${assemblyHtmlLocale(locale)}" aria-label="${escape(tr(t.label))}" data-template-key="${t.key}" data-vector-drawing="true"><metadata>FOREACH HFL/HFL6 selection-sheet layout. FL/FL6 are customer-confirmed abbreviated series names. Exact catalog fitting and accessory vectors; installation lengths are diagrammatic.</metadata>${rect(0, 0, 1511, 1143, "#fff", "none", 0)}${frame(current, page, total)}${content}</svg>`;
-  return [shell(s, 1), ...continuation.map((values, i) => shell(values.map((value, j) => text(110, 282 + j * 24, value, 16)).join(""), i + 2))];
+  return [shell(s, 1), ...continuation.map((values, i) => shell(continuationContent(values), i + 2))];
 }
 /** Generic mixed-end selection sheet. Fitting paths come from each exact bore/
  * thread drawing; tube length is diagrammatic and its specified L is authoritative. */
 function buildAssemblySheets(record: FlangedConfiguration): string[] {
   const v = normalizeFlangedChoice(record.choice), current = { ...record, choice: v }, tube = getAssemblyTube(v.tubeModel)!, rows = flangedTubingBom(v);
   const number = (partName: string) => rows.findIndex(r => r.part === partName) + 1;
-  const y = 520;
+  const y = 520, physicalScale = 9.4, tubeHeight = tube.outer * physicalScale;
   let s = line(105, 282, 1245, 282) + path("M105 282l10 -4v8Z M1245 282l-10 -4v8Z", "#111", "none", 0) + line(105, 260, 105, 500) + line(1245, 260, 1245, 500);
   s += rect(535, 259, 300, 39, "#fff", "none", 0) + text(685, 285, `L = ${v.length} ±${v.tolerance} mm`, 22, "middle");
   s += text(685, 334, `${tube.material} · ${tube.color} · ID ${tube.inner} × OD ${tube.outer} mm`, 21, "middle") + text(685, 364, `${tube.model}${tube.hardness ? ` · ${tube.hardness}` : ""}`, 16, "middle");
-  s += part(1, 685, 392, "M685 404V505", "");
-  s += `<g data-vector-assembly="true" data-mode="${v.mode}">` + rect(105, y - 6, 1140, 12, "#fff") + "</g>";
+  s += part(1, 685, 392, `M685 404V${y - tubeHeight / 2 - 3}`, "");
+  s += text(105, 374, "端部展开示意", 16);
+  s += `<g data-vector-assembly="true" data-view-layout="exploded" data-mm-scale="${physicalScale}" data-mode="${v.mode}">` + rect(105, y - tubeHeight / 2, 1140, tubeHeight, "#fff") + "</g>";
   const ends = v.mode === "double" ? [["a", v.a], ["b", v.b]] as const : [["a", v.a]] as const;
   for (const [side, e] of ends) {
-    const a = side === "a", prefix = a ? "A" : "B", cx = a ? 280 : 1080, f = getAssemblyFitting(e.fittingModel), source = getAssemblyFittingVector(e.fittingModel);
-    // Ring fittings and their CAD-projected kits use millimetres, so preserve
-    // one common display scale instead of fitting each part to a separate box.
-    const partScale=f?.preferCadVector?9.4:undefined;
+    const a = side === "a", prefix = a ? "A" : "B", f = getAssemblyFitting(e.fittingModel), source = getAssemblyFittingVector(e.fittingModel);
+    const layout = assemblyEndDrawingLayout(e, side, a ? 105 : 1245, physicalScale);
+    const cx = layout?.fittingX ?? (a ? 280 : 1080), labelX = a ? Math.max(105, cx - 90) : 930;
     if (!e.fittingModel) s += fitting(e, side, y);
     else if (source) {
-      s += sourceView(source, cx, y, partScale ? source.width * partScale : 188, partScale ? source.height * partScale : 82, a, `data-source-model="${escape(e.fittingModel)}"`, true);
+      s += sourceView(source, cx, y, layout?.width ?? 188, layout?.height ?? 82, a, `data-source-model="${escape(e.fittingModel)}"`, true);
     } else s += text(cx, y - 22, "该型号外形资料待补充", 16, "middle");
     const fittingNumber = number(`${prefix} 端接头`);
-    s += part(fittingNumber, cx, 680, `M${cx} 668V${y + 46}`, text(cx - 90, 716, `${prefix} 端 · ${endConnection(e)}`, 20) + fitted(cx - 90, 744, e.fittingModel || `${e.series} · ${e.thread}`, 330, 17) + text(cx - 90, 772, [f?.material || (e.series === "FL6" ? e.material : ""), e.color].filter(Boolean).join(" · "), 16));
-    const accessory = assemblyAccessory(e.fittingModel, e.accessoryCode), ax = a ? 140 : 1210, an = number(`${prefix} 端${endConnection(e) === "翻边" ? "垫片" : endConnection(e) === "卡箍" ? "卡箍" : "卡环组件"}`);
+    s += part(fittingNumber, cx, 680, `M${cx} 668V${y + (layout?.height ?? 82) / 2 + 3}`, text(labelX, 716, `${prefix} 端 · ${endConnection(e)}`, 20) + fitted(labelX, 744, e.fittingModel || `${e.series} · ${e.thread}`, 330, 17) + text(labelX, 772, [f?.material || (e.series === "FL6" ? e.material : ""), e.color].filter(Boolean).join(" · "), 16));
+    const accessory = assemblyAccessory(e.fittingModel, e.accessoryCode), ax = layout?.accessoryX ?? (a ? 140 : 1210), an = number(`${prefix} 端${endConnection(e) === "翻边" ? "垫片" : endConnection(e) === "卡箍" ? "卡箍" : "卡环组件"}`);
     const accessoryVector = getAssemblyAccessoryVector(e.fittingModel, e.accessoryCode);
-    if (accessoryVector) s += sourceView(accessoryVector, ax, y, partScale ? accessoryVector.width * partScale : 22, partScale ? accessoryVector.height * partScale : 36, a, `data-accessory-model="${escape(accessory!.model)}"`);
+    if (accessoryVector) s += sourceView(accessoryVector, ax, y, layout?.accessoryWidth || 22, layout?.accessoryHeight || 36, a, `data-accessory-model="${escape(accessory!.model)}"`, true);
+    else if (endConnection(e) === "卡箍") s += text(a ? 125 : 1230, y - (layout?.height ?? 82) / 2 - 18, "卡箍外形资料待补充", 14, a ? "start" : "end");
     if (endConnection(e) === "翻边") {
       s += rect(a ? 103 : 1243, y - 15, 4, 30, "#fff");
       if (!e.fittingModel) s += washer(ax, y, an);
     }
     // Missing exact accessory geometry stays explicitly unillustrated; a clamp
     // or ring is never fabricated by modifying a flange washer drawing.
-    s += part(an, a ? 150 : 1120, 408, `M${a ? 150 : 1120} 420L${ax} ${y - 22}`, fitted(a ? 180 : 830, 410, endConnection(e) === "卡环" ? `${prefix} 端 ${accessory?.model || "套件待补充"} · SUS 压套 + PEEK 垫圈` : `${prefix} 端 ${accessory?.model || e.washer || "配套件待确认"}`, 350, 15));
+    s += part(an, a ? 150 : 1120, 408, `M${a ? 150 : 1120} 420L${ax} ${y - (layout?.accessoryHeight || 36) / 2 - 3}`, fitted(a ? 180 : 830, 410, endConnection(e) === "卡环" ? `${prefix} 端 ${accessory?.model || "套件待补充"} · SUS 压套 + PEEK 垫圈` : `${prefix} 端 ${accessory?.model || e.washer || "配套件待确认"}`, 350, 15));
     const stopNumber = number(`${prefix} 侧限位件`), sx = a ? 420 : 940;
     if (e.stop !== "无") s += stop(sx, y, e.stop, stopNumber) + part(stopNumber, sx, 610, `M${sx} 598V${y + 18}`, text(sx + 22, 615, e.stop, 16));
   }
@@ -242,17 +276,12 @@ function buildAssemblySheets(record: FlangedConfiguration): string[] {
   for (const [enabled, x, value, side] of [[v.labelA, 510, v.textA, "A"], [v.labelB, 785, v.textB, "B"]] as const) {
     if (enabled) s += pipeLabel(x, y, value, number(`${side} 侧管标`)) + part(number(`${side} 侧管标`), x + 43, 460, `M${x + 43} 472V${y - 18}`, fitted(x - 25, 443, `${side} 管标：${value}`, 220, 15));
   }
-  const warnings = assemblyCompatibilityWarnings(v);
-  s += text(105, 827, "图示不按比例；连接结构、配套、长度测量基准及签核按工程确认。", 15);
-  if (warnings.length) s += fitted(105, 853, `配套待确认：${warnings.join(" ")}`, 1165, 14);
-  const detailLines = [
-    `${record.name} · R${record.revision}`, ...rows.map((r, i) => `${i + 1}. ${r.part}：${r.specification} · ${r.quantity}`), ...warnings,
-    ...ends.map(([side, e]) => `${side.toUpperCase()} 端图形来源：${getAssemblyFittingVector(e.fittingModel)?.source || (e.fittingModel ? "缺少对应正式图纸" : `客户提供 ${e.series} 选型图`)}`),
-    v.notes ? `特殊要求：${v.notes}` : "", v.freeEndNote && v.mode === "single" ? `自由端说明：${v.freeEndNote}` : "",
-  ].filter(Boolean).flatMap(value => wrap(value, 1120, 16));
-  const continuation = Array.from({ length: Math.ceil(detailLines.length / 23) }, (_, i) => detailLines.slice(i * 23, (i + 1) * 23));
-  const shell = (body: string, page: number) => `<svg xmlns="http://www.w3.org/2000/svg" width="776.88pt" height="587.76pt" viewBox="0 0 1511 1143" role="img" lang="${assemblyHtmlLocale(locale)}" data-template-key="assembly" data-vector-drawing="true"><metadata>Exact original fitting PDF paths. Parametric tube and optional installation positions are diagrammatic, not inferred manufacturing dimensions.</metadata>${rect(0, 0, 1511, 1143, "#fff", "none", 0)}${frame(current, page, continuation.length + 1)}${body}</svg>`;
-  return [shell(s, 1), ...continuation.map((values, i) => shell(values.map((value, j) => text(110, 282 + j * 24, value, 16)).join(""), i + 2))];
+  s += fitted(105, 804, "管长以 L 标注为准；端部间距仅作展开示意。", 1165, 15);
+  const { inline, continuation } = drawingDetails(current, false);
+  s += inline;
+  const total = continuation.length + 1;
+  const shell = (body: string, page: number) => `<svg xmlns="http://www.w3.org/2000/svg" width="776.88pt" height="587.76pt" viewBox="0 0 1511 1143" role="img" lang="${assemblyHtmlLocale(locale)}" data-template-key="assembly" data-vector-drawing="true"><metadata>Original fitting PDF paths and matching CAD accessories share physical millimetre units. Tube length and exploded gaps are diagrammatic.</metadata>${rect(0, 0, 1511, 1143, "#fff", "none", 0)}${frame(current, page, total)}${body}</svg>`;
+  return [shell(s, 1), ...continuation.map((values, i) => shell(continuationContent(values), i + 2))];
 }
   return { buildSheets };
 }

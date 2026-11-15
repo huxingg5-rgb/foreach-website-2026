@@ -50,11 +50,6 @@ label.field > span:first-child { white-space: nowrap; }
 .requirementsSection { flex-basis: 100%; min-width: 0; }
 .requirements { --field-label-width: 72px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 20px; }
 .requirementsNotes { grid-column: 1 / -1; }
-.referencePhotos { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); gap: 20px; }
-.referencePhotos img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
-.referencePhotos figure { margin: 0; }
-.referencePhotos svg { width: 100%; display: block; }
-.referencePhotos figcaption { margin-top: 4px; }
 .bom { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
 .bom th, .bom td { padding: 8px 10px; text-align: left; border-bottom: 1px solid #e5ebf2; }
 .bom th { font-weight: 400; color: #667085; }

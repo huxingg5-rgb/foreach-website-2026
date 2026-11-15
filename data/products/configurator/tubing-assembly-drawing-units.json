@@ -1,0 +1,718 @@
+{
+  "/models/products/fittings/ferrule/cad/ferrule-hn-m6-16.fcad.gz": {
+    "width": 18.1,
+    "height": 8.2,
+    "sourceSha256": "0f33332cd366c35bdc10fe0976c62ea458b91ae1a0997ac3dcc280735597df5a"
+  },
+  "/models/products/fittings/ferrule/cad/ferrule-hn-m6-32.fcad.gz": {
+    "width": 18.1,
+    "height": 8.2,
+    "sourceSha256": "052c0671e2cd6d557884f28b139de7997c3eec83b0b79f89f37cea3b791f05b6"
+  },
+  "/models/products/fittings/ferrule/cad/ferrule-hn6-m6-16.fcad.gz": {
+    "width": 15.5,
+    "height": 6.4,
+    "sourceSha256": "0965dfa730911bc6d94d9458fb36e3decc7fc8d25bf2c6ae6cd8349b4fc66ecd"
+  },
+  "/models/products/fittings/ferrule/cad/ferrule-hn6-m6-32.fcad.gz": {
+    "width": 15.5,
+    "height": 6.4,
+    "sourceSha256": "635ebbcd50a3b784548d8ef5fbbb90e32df688bc0336a153665c095283663495"
+  },
+  "/models/products/fittings/ferrule/cad/ferrule-hn6-u28-16.fcad.gz": {
+    "width": 15.5,
+    "height": 6.4,
+    "sourceSha256": "554e6329d24b6a6291f932c5b67e10c638deae64eaf451fbebb6b2634dbccad1"
+  },
+  "/models/products/fittings/ferrule/cad/ferrule-hn6-u28-32.fcad.gz": {
+    "width": 15.5,
+    "height": 6.4,
+    "sourceSha256": "26d762ea1524f809a1e8cebceb0c3b585eb52b47657514da788c489edbc6034d"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-m6-20.fcad.gz": {
+    "width": 20.5,
+    "height": 8.2,
+    "sourceSha256": "3efba479da867ff88bb8468b733fc4d3cdcc11b82c035c9b708d5230a820c916"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-m6-25.fcad.gz": {
+    "width": 20.5,
+    "height": 8.2,
+    "sourceSha256": "8812a31ff7e175bb0a18b99856b1ce363b95feb251817d5977c51b342e5f2365"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-m6-32.fcad.gz": {
+    "width": 20.5,
+    "height": 8.2,
+    "sourceSha256": "c09edc2528cdca5ad9b8ebf8890c65d8e03c4f9722699318149a42392f85faf1"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-u28-20.fcad.gz": {
+    "width": 20.5,
+    "height": 8.2,
+    "sourceSha256": "32e3bb803080af14566f3c42c72786def5defee00b45ec753dc25d84387e4f1b"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-u28-25.fcad.gz": {
+    "width": 20.5,
+    "height": 8.2,
+    "sourceSha256": "93eb9000606503524bc3436301021c9c55fe4920233af1bdc14f156fe56a28de"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf-u28-32.fcad.gz": {
+    "width": 20.5,
+    "height": 8.2,
+    "sourceSha256": "7ea006e1038f0a29d19e87b41697f8275d7022543080bbaab6fbd4dcec39489a"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf6-m6-20.fcad.gz": {
+    "width": 17.6,
+    "height": 6.4,
+    "sourceSha256": "95f6d906a950c91c669493c9b00088226077947e91b8f3c0d64001954457da57"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf6-m6-25.fcad.gz": {
+    "width": 17.6,
+    "height": 6.4,
+    "sourceSha256": "0e2500166d3649062d20d608f0d5aa1e06dc907a6cc821d2f9e1282a6a486600"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf6-m6-32.fcad.gz": {
+    "width": 17.6,
+    "height": 6.4,
+    "sourceSha256": "257e77a689a2bfd0cd8b2569f21dd888665a8121295eea76ce1c898f145e9a12"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hf6-u28-32.fcad.gz": {
+    "width": 17.6,
+    "height": 6.4,
+    "sourceSha256": "9c61464f36608d24702635e7e50d8a6e71b2b07611a5f7f23efc91f1932c94f0"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-16.fcad.gz": {
+    "width": 16.8,
+    "height": 9.8273,
+    "sourceSha256": "35ec08fd598f3ee2991066ec594ea9c520832ad81443111688c5d62378fa354e"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-20.fcad.gz": {
+    "width": 16.8,
+    "height": 9.8273,
+    "sourceSha256": "2ef53068d76aeb9a62a4bc31cb7f17ec1322aed592cda797c7fbf6d94e59ef0f"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-25.fcad.gz": {
+    "width": 16.8,
+    "height": 9.8273,
+    "sourceSha256": "0d4ef049823f134bb05204e55f7bfd32af4f1636af4d791f2dafb82521874d56"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-30.fcad.gz": {
+    "width": 16.8,
+    "height": 9.8273,
+    "sourceSha256": "4e1191446bf930459d7f6677247d5f2bc44f8961f9c2412b0b6e83722774d6f8"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-m6-32.fcad.gz": {
+    "width": 16.8,
+    "height": 9.8273,
+    "sourceSha256": "da4a41f4c161b9b67587889e3a8c819a70c809efbe989f98ca09d179d6c48a92"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-16.fcad.gz": {
+    "width": 16.5,
+    "height": 9.8273,
+    "sourceSha256": "7b78247a7cea4848b606897ab739a6908b87965128a8fad31b3e15d216b6f4e9"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-20.fcad.gz": {
+    "width": 16.5,
+    "height": 9.8273,
+    "sourceSha256": "ac202558e06be5f26c474d20cfc22ae93887cf0ef9087423e7d5c8abf55c93fa"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-25.fcad.gz": {
+    "width": 16.5,
+    "height": 9.8273,
+    "sourceSha256": "0ee56a2439b2372a73e29ae794dd5686250657cda0f5f4143557edece2693168"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-30.fcad.gz": {
+    "width": 16.5,
+    "height": 9.8273,
+    "sourceSha256": "f2729591ae3fd9fd382b6d9bb1624a418c77e00989b0e35fcb441f41ab5bb12d"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl-u28-32.fcad.gz": {
+    "width": 16.5,
+    "height": 9.8273,
+    "sourceSha256": "7eb017dc0d31b851b2767ef87ff77b261b37f13a7d8d5a0663154617928ec6e3"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-16.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "55c1a89acc2d4757e4bfb3443096f46ca24e3263406fe633dc7cd6c4dcc9047e"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-20.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "e2a99867e2d9f832e0c3961fc6b6bba42c7a3a712c8c55d341317ec93eebd129"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-25.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "ea9d9c4bd23c525f36643319e8feedf81101be0df2be85836c294e9abbb1962f"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-30.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "93c1919bc81dffe4e641f5135e11af318bb37e741185fdf0c3bb8a3048abe168"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-m6-32.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "fbb21db50c470800da618fb0f490329ec20575433cea0b86ddfc47fc89f6dce3"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-16.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "dcfb1e61f5da4083c809764d47c2e2df28d639e420eecb5a1d6d98f153ffcb78"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-20.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "ace523b64c25f4f4220ecb625346a217f472b751792bb6710f39175cb7b425df"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-25.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "ed3644b98bbf5eb31d5785b9e28cd748aa859a0c05f3bde657f506ab9661e4c9"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-30.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "772f327641d36bda27945bccf57af3b760f3977ee8117b64a09060afd22f0e94"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u28-32.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "382959e5a18f6ca891bb63b99cafbd7134a402e46a6d3088e6910fd4fc437c30"
+  },
+  "/models/products/fittings/flat-bottom/cad/flat-bottom-hfl6-u40-16.fcad.gz": {
+    "width": 9,
+    "height": 4.2,
+    "sourceSha256": "c9d98b9b4b08dfa387a3c69fbae8544631aa7873c1e03a38250b3f12fd87bead"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hf6-u28-20.fcad.gz": {
+    "width": 17.6,
+    "height": 6.4,
+    "sourceSha256": "10121b1573f48be2ecf60078d67c7aa4426b9d62466dff11720fc761ef690574"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hf6-u28-25.fcad.gz": {
+    "width": 17.6,
+    "height": 6.4,
+    "sourceSha256": "ec6b042dd94426dfcd6396896c3ba4ac778ae77fd63844541adb4e55ab3bcba2"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hn-u28-16.fcad.gz": {
+    "width": 18.1,
+    "height": 8.2,
+    "sourceSha256": "23abc68a19e87c0088f3fe159ffb40659fb99d19c247d9520ab9acd204dcf094"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hn-u28-32.fcad.gz": {
+    "width": 18.1,
+    "height": 8.2,
+    "sourceSha256": "aa10dc620cbf35448d92a82dad6711a1bd2a8ebbbd3fdcd7b695e8f73758b312"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hne6-u28-32.fcad.gz": {
+    "width": 24,
+    "height": 7.17764,
+    "sourceSha256": "b36a9248eefa71a2405881e6b3bf24cb9d1e757dc23ac303f4c1d5d278a38b97"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-m6-16.fcad.gz": {
+    "width": 16.8,
+    "height": 9.4,
+    "sourceSha256": "c9122c212abc6ea4f57bafe27fe1adba9275ccb1aa70ef30487c11e0044d028f"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-m6-20.fcad.gz": {
+    "width": 16.8,
+    "height": 9.4,
+    "sourceSha256": "190087ee86a2d0cbea40ba456fb99560eef49e684939e1e0d61d38b2e4f00eed"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-m6-25.fcad.gz": {
+    "width": 16.8,
+    "height": 9.4,
+    "sourceSha256": "9e599f46b600b1a77711b73b6afa41fe569342ac01c63425456985956ae79299"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-m6-30.fcad.gz": {
+    "width": 16.8,
+    "height": 9.4,
+    "sourceSha256": "3ee7c9e5761e03eb851c3dacf02795e9dceac15f13b37655155727c6e4dd781f"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-m6-32.fcad.gz": {
+    "width": 16.8,
+    "height": 9.4,
+    "sourceSha256": "bcd6a861363743370ecff2e26066c857b36a4310f54e51686de50e9faf6b6ab4"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-u28-16.fcad.gz": {
+    "width": 16.5,
+    "height": 9.4,
+    "sourceSha256": "ba9c011d8ca0b0876f06508523929c4abc0d709171638dd10b280b01280eb7f1"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-u28-20.fcad.gz": {
+    "width": 16.5,
+    "height": 9.4,
+    "sourceSha256": "3659f27265e8e8751167c78033c31f83b7c5234d0ca4648366b82ab321cfb868"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-u28-25.fcad.gz": {
+    "width": 16.5,
+    "height": 9.4,
+    "sourceSha256": "61eb1497e61f09ea184aa9507a35f98e92502cca0c05ee67cb22c832b893b83b"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-u28-30.fcad.gz": {
+    "width": 16.5,
+    "height": 9.4,
+    "sourceSha256": "7e61d4cab14e6a40aa11e58cc14e057b89f41e6953bb9e4407ac4648aa3e9fbe"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf-u28-32.fcad.gz": {
+    "width": 16.5,
+    "height": 9.4,
+    "sourceSha256": "dfa93715a833d6f8c78176dd22e3f7ad48f72a5c0db601de7636eff57b1b75e2"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-16.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "5e4b521adfa425b4b84160dcecf00f4520587bbc7c89237c8a08da6e2e937d53"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-20.fcad.gz": {
+    "width": 20.1,
+    "height": 6,
+    "sourceSha256": "48a01a9874c0cea97d8ae4fb2631322e798061b9ba1361e5ffaf799f6c7386b1"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-25.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "e8ff7c2e4c7c85c108d08b2550650d14528990ea2e6f22cf0b489b0866dd7cab"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-30.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "f3d7a06e3434e01081a156ccc7893c7ec1b9f17eda01ad1ba187c1dd08dd2199"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-m6-32.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "64a353868857a3e776cdce467e5b8fd62589ba76b38ca60a25c7b7b8a575278a"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-16.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "0024c7ea03696b818ada0434dae51e52752273ca47d007e578f75533c83d8c56"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-20.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "bce1b9f39078698f692f83cbb94c54e067736cc8dd576caf695c522932fb1f3f"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-25.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "bfedf8dbe100a79137dce892bcbf113ba333c98a5f8bb86b9e78e41f336a37d8"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-30.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "8d49e64c62a29b0a193d80fe9c1e15451e0660410826b79b62f47531c81faf39"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hnf6-u28-32.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "846167d04e72de11c52dc93b182769441d5f681ad08dd5cd1d53503924f07586"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hsf-u28-16-pk-n.fcad.gz": {
+    "width": 20.5,
+    "height": 8.2,
+    "sourceSha256": "b90b2fc1119e61ce15f10428c9228adafc1782a1e879620410bf87ce35d935d0"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hsf-u28-32-peek-n.fcad.gz": {
+    "width": 18.1,
+    "height": 8.2,
+    "sourceSha256": "ad8c290860a85ac1973c58050c6ec77f48fceacafde24655705dd214a3cf63eb"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hsf6-m6-16.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "c4748c2204edf770c49e50167ce78ba5b771eb754313407d01059234e39914ec"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hsf6-m6-18.fcad.gz": {
+    "width": 20,
+    "height": 6.3,
+    "sourceSha256": "f4bb8317d36953686087b21a5194e47b90a9a1631cd197fa09a7a39afd135731"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hsf6-m6-32.fcad.gz": {
+    "width": 20,
+    "height": 6,
+    "sourceSha256": "ef1f7a7deeb0d47a89040764bdb7e93575bfb9651045639428e82028d909341b"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hsf6-u28-16-pk-n.fcad.gz": {
+    "width": 15.5,
+    "height": 6.4,
+    "sourceSha256": "9142373bd24c130de6980603d195408a4176e00526bb5d51e8d91e70f4649705"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hsf6-u28-16.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "e2d51e68ebb2eabf6131b7c27c527ce15e2d820b8f5321cd0debc36bdd485f9a"
+  },
+  "/models/products/tubing-assemblies/cad/assembly-hsf6-u28-32.fcad.gz": {
+    "width": 20,
+    "height": 6.1,
+    "sourceSha256": "42d12ed1c5954d0b472db14f00206ff61358bceaa9aec96ff4771bc50a995bfd"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00761_001_cn-c.pdf": {
+    "width": 20.356547777777774,
+    "height": 8.199402222222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "9a3e2621fbbb419395be3d2e8d78ecd3ee78c94676844605faad9b30305decc9"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00357_001_cn-c.pdf": {
+    "width": 20.356547777777774,
+    "height": 8.199402222222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "ffeda789ef1ab096eace5e4adcebc6c0200ad00d3aeceacc466b6e1c8f54be21"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00760_001_cn-c.pdf": {
+    "width": 20.356547777777774,
+    "height": 8.199402222222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "53376c5fb22df00fa42d9e3254ec71e676586624934bcb099ae3a8fa486cfb02"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00201-c.pdf": {
+    "width": 16.797372777777777,
+    "height": 9.39637722222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "0bcf80848881745c88b81d3a7a405ab0d3f6a0d936c9b0348fb0bcfc2e625d78"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00204-c.pdf": {
+    "width": 16.797866666666668,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "c2ff680db56af39324fcdb6754fb678d84cf751cac99be09c2ea6d03d80bf422"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00202-c.pdf": {
+    "width": 16.797372777777777,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "19e9f00f818cafc1a16556b6a7cf53cf633d64f9dbbc7ac412fce566bf57d9a5"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00227-c.pdf": {
+    "width": 16.797866666666668,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "206aa65716492f3312671db66ad3e2761d2f9da743be0c59c74dad10a59b725d"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00203-c.pdf": {
+    "width": 16.797866666666668,
+    "height": 9.39637722222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "b88fb572c32a156495d5c3dbe4c7a9301eba062a25f989f846ce87544179965e"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00056-c.pdf": {
+    "width": 16.49779388888889,
+    "height": 9.401739444444443,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "1d7a5b7b30be21f8051e7080b45d24f60785c587ee6c9dff8d1893cd28250d61"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00222-c.pdf": {
+    "width": 16.497864444444446,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "3af34ce243726b7cdea20584f95f5a1df9d5fa34f97e5b1edd5cc146fb71b195"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00221-c.pdf": {
+    "width": 16.495447916666667,
+    "height": 9.402674305555555,
+    "millimetresPerUnit": 0.08819444444444444,
+    "sourceSha256": "b88706652c324adcd2d82930d0da5a10a3bfcb822c4a7b2b23e412e41b849080"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00225-c.pdf": {
+    "width": 16.49779388888889,
+    "height": 9.401668888888889,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "4c3036bf08cc1a81ca1bdf457047200e123520eb0bc07787a706b8d04ab30ba9"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00057-c.pdf": {
+    "width": 16.497864444444446,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "c6689d5f0bf8472921346354e72dc3e3426ca7ada9473587a77f595fc1e901b4"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00365-c.pdf": {
+    "width": 17.60008333333333,
+    "height": 6.395014444444445,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "534fb3f5dd9d2c3bb8b30d68c7a064822a5f5b66114f2ecd0a01ea936f7da56c"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00366-c.pdf": {
+    "width": 17.60008333333333,
+    "height": 6.395014444444445,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "48623a0d5bb3a7a52802d4f57eb08cb1071bc5fa600fbdd2f59bc24d588094ef"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00367-c.pdf": {
+    "width": 17.60008333333333,
+    "height": 6.395014444444445,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "e5e99ec6c180d11d70bdb658aa2481f72927e453af00410caff789821b073cb1"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00750-c.pdf": {
+    "width": 17.594791666666666,
+    "height": 6.399741666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "74f14f4f1ae6101260b0d299c35e09f77f081b302a7e97a62df85897d66be4ff"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00751-c.pdf": {
+    "width": 17.594791666666666,
+    "height": 6.399741666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "10fe76aeab5e2dde2dbd9b0d892f9714d093a6dce3a57bcce77e8df323734bf1"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00364-c.pdf": {
+    "width": 17.595356111111112,
+    "height": 6.399741666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "c5f08694f9171a2421df030e5f8a611c5b920f22eee6d212f95b2494d4bcbc8b"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00652-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "5f23ba765384ebc1ed97c04142f8ca65247f4bd2661399f6736f8c3da70b97f9"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00649-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "68aaff93342e60425b8b5617c731c688169c307e02138fe165ef4f5228dca09f"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00651-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "e3db782894838b8d923020161fabe91b41bfdbb7b31db61b9b98bbfd81f06d59"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00648-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "1911b1b5a2108b4275732c23f11b006980a5bfd7844cd8d4d8d8a5fb7a9cffd1"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00650-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "6a5020d118770cf1e0af87428774d361c1660b2ce8837984b94fe0b4b4245640"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00647-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "2dda52006f40dde4af78fa9637c57ca19f89268d054643c3bcee7c7065fa09b3"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00644-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "27bdedf96f9d5b2197b6fda84f2c12c6d2b4c4a60dd5f05efd3f19cde2a77eb8"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00646-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "3995da38a7b59be1bac2f35327a715e15ce3a21791679fad305e71417e1ff8eb"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00643-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "e2fd529628699dcff9c46952f5ae394e63504f8f658d94c08387bca3b73d094e"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00645-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "18c996b656162e79c3f4eb379e4fcf6330f49215fa6b4d6742aac9590b0934fb"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00434-c.pdf": {
+    "width": 18.098064444444443,
+    "height": 8.197849999999999,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "a3a9070422d1d836aab1cfb18a45d43d8aab1b46e144129f09689de8054de1a5"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00435-c.pdf": {
+    "width": 18.097993888888887,
+    "height": 8.197849999999999,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "47e63673e8375d4aa840db77b4de7621fe09c6b43aa6b6189ddd69c40c57fbe0"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00371-c.pdf": {
+    "width": 18.097993888888887,
+    "height": 8.197849999999999,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "afd091f4fa188a4c488cd4be89c46634ebfc9c7a9ce1e106ce6964d4fbfe49d9"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00205-c.pdf": {
+    "width": 16.79779611111111,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "b0451934746d43295abf6fd6705985dabafcd970e3cf2d5944faa208ad25c642"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00208-c.pdf": {
+    "width": 16.79779611111111,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "3c64c49a0fce68f8af2c25e678243e3221bcee823700b4798c6122f87f36d16b"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00206-c.pdf": {
+    "width": 16.79779611111111,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "5377f92950610d961deef521f6c0733f3ef4b3dabcb096a242dd292b1835af8e"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00228-c.pdf": {
+    "width": 16.79779611111111,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "954eccbec9087fed96f5af1f3945351e780f8a9fe63aab5b41b91ea41ff1e2c5"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00207-c.pdf": {
+    "width": 16.79779611111111,
+    "height": 9.396447777777777,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "c74e14a7cfb57e349051a2e2a70ff4fad34a1cbf429ddfab689528fc996cac7c"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00058-c.pdf": {
+    "width": 16.49779388888889,
+    "height": 9.39637722222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "6849b6e6b382f0755efcc6f3bb78aa034f22bcdb17e183005b7e549fa62eaf4f"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00224-c.pdf": {
+    "width": 16.49779388888889,
+    "height": 9.39637722222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "7bfd7e0fe8531e8c8c4e208bf0da98aea804ab2c97cacc799550d4403fa0117b"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00223-c.pdf": {
+    "width": 16.49779388888889,
+    "height": 9.39637722222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "b179b9d9ad82331911e1af319bdbb0608004cd6a2c5eaeee98a41b9bd0a77642"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00226-c.pdf": {
+    "width": 16.49779388888889,
+    "height": 9.39637722222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "98563b165754dde0fe0ac36a16f64344c6c149e694409fd65c818e5cc16cf10a"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-00-00059-c.pdf": {
+    "width": 16.49779388888889,
+    "height": 9.39637722222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "9164f597435dd89f1bffd6d26d89311f2915609c2dae793c0359f638a04af90c"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00690-c.pdf": {
+    "width": 16.49779388888889,
+    "height": 9.39637722222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "03f5d7743341f5e05185d779144e6c4297e5493c1dd9c5826f47d4a72c57acde"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00374_001_cn-c.pdf": {
+    "width": 15.499856111111109,
+    "height": 6.396002222222222,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "3780a8f76c7d5c80c343652f10333c7eb62049c27ffbc8d0100fde8cca46eeb2"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00375_001_cn-c.pdf": {
+    "width": 15.499291666666666,
+    "height": 6.400799999999999,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "68ee5c729b66a91bcb2342faf2f7d21c3ec06f903b7dd978e224135f3e7168e6"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00749_001_cn-c.pdf": {
+    "width": 15.504583333333333,
+    "height": 6.400799999999999,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "3429fb2edc636ffc1a4046b5b3ab282973853438c616ba115678d7781002b39b"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00678_001_cn-c.pdf": {
+    "width": 15.504583333333333,
+    "height": 6.400799999999999,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "b4ea27ac9488bb878ca8ff93ce6e16c82164efeaf9fa679e1f68296bb34ce8d7"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00662-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "704ea4ee1d8d6803ab083fb58ffa09f8a6849dc5e50c3e4a935fa6bb446fab13"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00660-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "eae9aa8b119d642f91cee62a099b0c685b6ea6b607ec13009ffd883e50bdb23f"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00661-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "f6fa452927a30a1602507f9abb59e74d9b8b07b7dd79364af355502ca54c651d"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00658-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "1fb4b591d134959f3be7f47840493fa3bf5151d1a65674f4be422fa50efa590c"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00659-c.pdf": {
+    "width": 19.997702222222223,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "bb47e5ceda98fa81eca2d85400dc7dc2e8870ca2223ea0b0902c0593eb59fc08"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00657-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "d59b14a459680dca6ce891a86ce69511459fc1e867e2448d4758d7e0a1fbdeb2"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00655-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "92342a170afec2cf62130f16abb757f8a5d6017baf44609e2d065e6c23449de2"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00656-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "b65ebbc2d71f28d903ee2980031f8747d5a35d1c1dd72e13142c0c1815696358"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00653-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "a87e1fbcdce1ca92f71508efd934e0f2bf1b6acdcbc942116db48bd2d4c703de"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00654-c.pdf": {
+    "width": 19.997772777777776,
+    "height": 6.298141666666666,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "1d732b639522862c503cce8396ec4e085468e75370e4bc3987407ba40181d1ce"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00677-c.pdf": {
+    "width": 23.99964861111111,
+    "height": 6.349294444444444,
+    "millimetresPerUnit": 0.08819444444444444,
+    "sourceSha256": "9f170b887821cef24f62e2663ab0b9584cf53107786fa2c004ab1672d1481b11"
+  },
+  "/downloads/products/fittings/2d-drawings/01/441-09-00260-c.pdf": {
+    "width": 20.35330222222222,
+    "height": 8.197849999999999,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "93bdb7ae7c5370039d55f3fb26ae6280557cedba7de464211c01b3dcb37495eb"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00758-c.pdf": {
+    "width": 17.955683333333333,
+    "height": 8.197849999999999,
+    "millimetresPerUnit": 0.07055555555555555,
+    "sourceSha256": "efcedcfe94031f6f7a0eee302e4b778665bdc45f45cc99c7d34d35f00de3d854"
+  },
+  "/downloads/products/fittings/2d-drawings/01/443-02-00708-c.pdf": {
+    "width": 19.999854166666665,
+    "height": 6.29840625,
+    "millimetresPerUnit": 0.08819444444444444,
+    "sourceSha256": "0287ac07036295ad3f320eeb3c949a77a436ceb83149ec22defd0eeb4e595c17"
+  }
+}
