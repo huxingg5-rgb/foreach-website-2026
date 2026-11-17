@@ -9,6 +9,7 @@ import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instr
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { getInstrumentProductSections } from "@/components/products/detail/InstrumentProductSections";
 import syringePumpDetails from "@/data/products/generated/pumps/syringe-pumps/detail/index.json";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
@@ -77,6 +78,7 @@ export default async function SyringePumpDetailPage({
   return (
     <ProductDetailClient
       data={applyInstrumentFluidicsChineseCopy(getSyringePumpProductDetailData(detail), "zh") as ComponentProps<typeof ProductDetailClient>["data"]}
+      {...getInstrumentProductSections(detail.slug, renderLocale)}
       afterContent={
         <RelatedResources
           sourceType="product"

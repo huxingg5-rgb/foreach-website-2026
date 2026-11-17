@@ -1,6 +1,6 @@
 "use client";
 
-import { useId } from "react";
+import { useEffect, useId, useRef } from "react";
 import Link from "next/link";
 import categoryTabStyles from "@/components/common/product-category-tab.module.css";
 
@@ -26,6 +26,29 @@ export default function ProductCategoryTabs({
   onCategoryChange,
 }: ProductCategoryTabsProps) {
   const categoryTabsId = useId();
+  const categoryTabsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const revealActiveCategory = () => {
+      if (window.innerWidth > 760) return;
+
+      const tabs = categoryTabsRef.current;
+      const activeTab = tabs?.querySelector<HTMLElement>(".category-tab.active");
+      if (!tabs || !activeTab) return;
+
+      const tabsBounds = tabs.getBoundingClientRect();
+      const activeBounds = activeTab.getBoundingClientRect();
+      if (activeBounds.left < tabsBounds.left) {
+        tabs.scrollLeft += activeBounds.left - tabsBounds.left;
+      } else if (activeBounds.right > tabsBounds.right) {
+        tabs.scrollLeft += activeBounds.right - tabsBounds.right;
+      }
+    };
+
+    revealActiveCategory();
+    window.addEventListener("resize", revealActiveCategory);
+    return () => window.removeEventListener("resize", revealActiveCategory);
+  }, [activeCategoryId, activeCategoryLabel]);
 
   return (
     <section
@@ -49,7 +72,7 @@ export default function ProductCategoryTabs({
         </span>
       </button>
 
-      <div className="category-tabs" id={categoryTabsId}>
+      <div className="category-tabs" id={categoryTabsId} ref={categoryTabsRef}>
         {categories.map((category) => (
           category.href ? <Link
             key={category.id}

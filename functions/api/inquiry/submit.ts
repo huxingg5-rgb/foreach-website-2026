@@ -1,9 +1,7 @@
+import { buildInquiryEmails } from "../../../lib/email/inquiry-email";
 import {
-  buildEmailShell,
-  buildTableRow,
   cleanText,
   ensureSameOrigin,
-  escapeHtml,
   handleInquiryError,
   InquiryRequestError,
   isValidEmail,
@@ -390,45 +388,6 @@ function normalizeAttachments(
     );
 }
 
-function formatFileSize(
-  bytes: number,
-): string {
-  if (bytes >= 1024 * 1024) {
-    return `${(
-      bytes /
-      1024 /
-      1024
-    ).toFixed(2)} MB`;
-  }
-
-  if (bytes >= 1024) {
-    return `${(
-      bytes /
-      1024
-    ).toFixed(2)} KB`;
-  }
-
-  return `${bytes} B`;
-}
-
-function buildAttachmentText(
-  attachments: AttachmentMetadata[],
-): string {
-  if (attachments.length === 0) {
-    return "No attachment selected.";
-  }
-
-  return attachments
-    .map((attachment, index) => {
-      return (
-        `${index + 1}. ${attachment.name}` +
-        ` · ${attachment.type || "unknown type"}` +
-        ` · ${formatFileSize(attachment.size)}`
-      );
-    })
-    .join("\n");
-}
-
 /**
  * POST /api/inquiry/submit
  *
@@ -558,18 +517,6 @@ export const onRequestPost:
         requestType.toUpperCase() ===
         "CAD";
 
-      const displayedName =
-        name ||
-        (isCadRequest
-          ? "Customer"
-          : "");
-
-      const displayedMessage =
-        message ||
-        (isCadRequest
-          ? "No additional CAD requirements provided."
-          : "");
-
       const attachments =
         preparedAttachments.length > 0
           ? preparedAttachments.map(
@@ -689,11 +636,6 @@ export const onRequestPost:
         );
       }
 
-      const attachmentText =
-        buildAttachmentText(
-          attachments,
-        );
-
       const formFingerprint =
         await sha256(
           JSON.stringify([
@@ -725,215 +667,30 @@ export const onRequestPost:
           .slice(0, 12)
           .toUpperCase();
 
-      const isDistributor =
-        requestType ===
-        "Distributor Partnership";
-
-      const notificationHtml =
-        buildEmailShell(
-          isDistributor
-            ? "New Distributor Partnership Application"
-            : "New Website Inquiry",
-          `
-            <p style="margin:0 0 22px;font-size:16px;line-height:1.7;color:#263a59;">
-              A new verified request has been submitted through the FOREACH website.
-            </p>
-
-            <p style="margin:0 0 22px;font-size:13px;color:#67758a;">
-              Reference:
-              <strong>${escapeHtml(referenceId)}</strong>
-            </p>
-
-            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e1e7ee;border-collapse:collapse;font-size:14px;line-height:1.6;">
-              ${buildTableRow("Name", name || "-")}
-              ${buildTableRow("Company", company)}
-              ${buildTableRow("Email", email)}
-              ${buildTableRow("Phone / WhatsApp", phone)}
-              ${buildTableRow("Country / Region", region)}
-              ${buildTableRow("Request Type", requestType)}
-              ${buildTableRow("Product Type", productType)}
-              ${buildTableRow("Target / Website / Model", targetModel)}
-              ${buildTableRow("Industry / Project Stage", projectStage)}
-              ${buildTableRow("Website Language", locale)}
-              ${buildTableRow("Product Name", productName)}
-              ${buildTableRow("Product Series", productSeries)}
-              ${buildTableRow("Product Model", productModel)}
-              ${buildTableRow("Current URL", currentUrl)}
-              ${buildTableRow("Requirement", displayedMessage)}
-              ${buildTableRow("Selected Files", attachmentText)}
-            </table>
-
-            ${
-              preparedAttachments.length > 0
-                ? `
-                  <p style="margin:24px 0 0;font-size:13px;line-height:1.7;color:#67758a;">
-                    The original customer files are attached to this notification.
-                  </p>
-                `
-                : attachments.length > 0
-                  ? `
-                    <p style="margin:24px 0 0;font-size:13px;line-height:1.7;color:#67758a;">
-                      Selected file names are listed for reference only.
-                      The original files were not included in this submission.
-                    </p>
-                  `
-                  : ""
-            }
-
-            <p style="margin:12px 0 0;font-size:13px;line-height:1.7;color:#67758a;">
-              Reply directly to this email to contact the customer.
-            </p>
-          `,
-        );
-
-      const confirmationHtml =
-        buildEmailShell(
-          isDistributor
-            ? "Application Received"
-            : "Inquiry Received",
-          `
-            <p style="margin:0 0 18px;font-size:16px;line-height:1.7;color:#263a59;">
-              Dear ${escapeHtml(displayedName)},
-            </p>
-
-            <p style="margin:0 0 18px;font-size:16px;line-height:1.7;color:#263a59;">
-              Thank you for contacting FOREACH.
-              We have received your request and our team will review it shortly.
-            </p>
-
-            <div style="margin:22px 0;padding:18px;background:#f4f7fa;border-left:4px solid #09e9b4;font-size:14px;line-height:1.8;color:#263a59;">
-              <strong>Reference:</strong>
-              ${escapeHtml(referenceId)}
-              <br />
-
-              <strong>Request Type:</strong>
-              ${escapeHtml(requestType)}
-              <br />
-
-              <strong>Product:</strong>
-              ${escapeHtml(
-                productType ||
-                  targetModel ||
-                  "-",
-              )}
-            </div>
-
-            ${
-              preparedAttachments.length > 0
-                ? `
-                  <p style="margin:0;font-size:14px;line-height:1.7;color:#596980;">
-                    Your selected files have been received successfully.
-                  </p>
-                `
-                : attachments.length > 0
-                  ? `
-                    <p style="margin:0;font-size:14px;line-height:1.7;color:#596980;">
-                      If required, please reply to this email with the original files.
-                    </p>
-                  `
-                  : ""
-            }
-
-            <p style="margin:20px 0 0;font-size:14px;line-height:1.7;color:#596980;">
-              感谢您的提交。恒永达团队将尽快查看需求并与您联系。
-            </p>
-          `,
-        );
-
-      const notificationText =
-        `New FOREACH website request\n` +
-        `Reference: ${referenceId}\n` +
-        `Name: ${name || "-"}\n` +
-        `Company: ${company}\n` +
-        `Email: ${email}\n` +
-        `Phone / WhatsApp: ${phone || "-"}\n` +
-        `Country / Region: ${region || "-"}\n` +
-        `Request Type: ${requestType}\n` +
-        `Product Type: ${productType || "-"}\n` +
-        `Target / Website / Model: ${targetModel || "-"}\n` +
-        `Industry / Project Stage: ${projectStage || "-"}\n` +
-        `Website Language: ${locale}\n` +
-        `Product Name: ${productName || "-"}\n` +
-        `Product Series: ${productSeries || "-"}\n` +
-        `Product Model: ${productModel || "-"}\n` +
-        `Current URL: ${currentUrl || "-"}\n` +
-        `Requirement: ${displayedMessage || "-"}\n` +
-        `Selected Files:\n${attachmentText}`;
-
-      const confirmationText =
-        `Dear ${displayedName},\n\n` +
-        "Thank you for contacting FOREACH. We have received your request.\n" +
-        `Reference: ${referenceId}\n` +
-        `Request Type: ${requestType}\n` +
-        `Product: ${productType || targetModel || "-"}\n\n` +
-                (
-          preparedAttachments.length > 0
-            ? "Your selected files have been received successfully.\n\n"
-            : attachments.length > 0
-              ? "If required, please reply to this email with the original files.\n\n"
-              : ""
-        ) +
-        "Our team will contact you as soon as possible.";
+      const { notification, confirmation } = buildInquiryEmails({
+        locale, referenceId, name, company, email, phone, region, requestType,
+        productType, targetModel, projectStage, productName, productSeries,
+        productModel, currentUrl, message, attachments,
+        filesReceived: preparedAttachments.length > 0,
+      });
 
       await Promise.all([
-        sendResendEmail(
-          env.RESEND_API_KEY,
-          {
-            from:
-              env.INQUIRY_FROM_EMAIL,
-
-            to:
-              env.INQUIRY_TO_EMAIL,
-
-            replyTo:
-              email,
-
-            subject:
-              isDistributor
-                ? `[FOREACH Distributor Application] ${company} · ${region || "Unknown Region"}`
-                : `[FOREACH Website Inquiry] ${company} · ${requestType}`,
-
-            html:
-              notificationHtml,
-
-            text:
-              notificationText,
-
-            attachments:
-              preparedAttachments.map(
-                (attachment) =>
-                  attachment.email,
-              ),
-
-            idempotencyKey:
-              `inquiry-notification-${formFingerprint}`,
-          },
-        ),
-
-        sendResendEmail(
-          env.RESEND_API_KEY,
-          {
-            from:
-              env.INQUIRY_FROM_EMAIL,
-
-            to:
-              email,
-
-            subject:
-              isDistributor
-                ? `We received your FOREACH distributor application · ${referenceId}`
-                : `We received your FOREACH inquiry · ${referenceId}`,
-
-            html:
-              confirmationHtml,
-
-            text:
-              confirmationText,
-
-            idempotencyKey:
-              `inquiry-confirmation-${formFingerprint}`,
-          },
-        ),
+        sendResendEmail(env.RESEND_API_KEY, {
+          from: env.INQUIRY_FROM_EMAIL,
+          to: env.INQUIRY_TO_EMAIL,
+          subject: notification.subject,
+          html: notification.html,
+          text: notification.text,
+          replyTo: email,
+          attachments: preparedAttachments.map(attachment => attachment.email),
+          idempotencyKey: `inquiry-notification-${formFingerprint}`,
+        }),
+        sendResendEmail(env.RESEND_API_KEY, {
+          from: env.INQUIRY_FROM_EMAIL,
+          to: email,
+          ...confirmation,
+          idempotencyKey: `inquiry-confirmation-${formFingerprint}`,
+        }),
       ]);
 
       await env.INQUIRY_KV.delete(

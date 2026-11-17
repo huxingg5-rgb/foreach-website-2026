@@ -78,6 +78,9 @@ export default function FittingReplacementDrawingPreview({
   previousPageVisibleLabel,
   nextPageVisibleLabel,
 }: FittingReplacementDrawingPreviewProps) {
+  const isImageDrawing = /\.(?:png|jpe?g|webp|svg)(?:[?#]|$)/i.test(drawingPdfPreviewHref);
+  const [imageState, setImageState] = useState<{ href: string; status: "ready" | "error" } | null>(null);
+  const imageStatus = imageState?.href === drawingPdfPreviewHref ? imageState.status : "loading";
   const desktopLoadSettleTimerRef =
     useRef<number | null>(null);
 
@@ -152,6 +155,7 @@ export default function FittingReplacementDrawingPreview({
 
   useEffect(() => {
     if (
+      isImageDrawing ||
       viewerMode !== "desktop" ||
       !isDrawingPreviewVisible ||
       !isDrawingLoading
@@ -170,6 +174,7 @@ export default function FittingReplacementDrawingPreview({
       window.clearTimeout(timer);
     };
   }, [
+    isImageDrawing,
     isDrawingLoading,
     isDrawingPreviewVisible,
     viewerMode,
@@ -224,7 +229,9 @@ export default function FittingReplacementDrawingPreview({
     <section className="frd-drawing-section">
       <div
         className="frd-drawing-viewer"
+        data-drawing-format={isImageDrawing ? "image" : "pdf"}
         data-mobile-canvas-active={
+          !isImageDrawing &&
           viewerMode === "mobile" &&
           isDrawingPreviewVisible
             ? "true"
@@ -243,7 +250,25 @@ export default function FittingReplacementDrawingPreview({
             : undefined
         }
       >
-        {viewerMode === "desktop" &&
+        {isImageDrawing && ((viewerMode === "desktop" && (!deferDesktopUntilOpen || isDrawingPreviewVisible)) ||
+          (viewerMode === "mobile" && isDrawingPreviewVisible)) ? (
+          <>
+            <LoadingProgress active={isDrawingPreviewVisible && imageStatus === "loading"} label={text.loadingLabel} />
+            {imageStatus === "error" ? <div className="frd-drawing-image-error" role="status">
+              <p>{errorLabel}</p>
+              <button type="button" onClick={() => setImageState(null)}>{retryLabel}</button>
+            </div> : (
+              // Preserve the original engineering image, without optimization or cropping.
+              // eslint-disable-next-line @next/next/no-img-element
+              <img key={drawingPdfPreviewHref} src={drawingPdfPreviewHref.split("#", 1)[0]}
+                className="frd-drawing-image" alt={`${productModel} · ${text.title}`}
+                onLoad={() => setImageState({ href: drawingPdfPreviewHref, status: "ready" })}
+                onError={() => setImageState({ href: drawingPdfPreviewHref, status: "error" })} />
+            )}
+          </>
+        ) : null}
+
+        {!isImageDrawing && viewerMode === "desktop" &&
         (!deferDesktopUntilOpen || isDrawingPreviewVisible) ? (
           <>
             <LoadingProgress
@@ -292,7 +317,7 @@ export default function FittingReplacementDrawingPreview({
           </>
         ) : null}
 
-        {viewerMode === "mobile" &&
+        {!isImageDrawing && viewerMode === "mobile" &&
         isDrawingPreviewVisible ? (
           <MobilePdfCanvasViewer
             pdfUrl={
@@ -346,7 +371,7 @@ export default function FittingReplacementDrawingPreview({
               data-analytics-resource-action="view"
               data-analytics-resource-id={analyticsResourceId}
               data-analytics-resource-type={analyticsResourceType}
-              data-analytics-resource-file-type="pdf"
+              data-analytics-resource-file-type={isImageDrawing ? "image" : "pdf"}
               data-analytics-section={analyticsSection}
               onClick={(event) => {
                 event.preventDefault();
@@ -377,7 +402,7 @@ export default function FittingReplacementDrawingPreview({
               data-analytics-resource-action="view"
               data-analytics-resource-id={analyticsResourceId}
               data-analytics-resource-type={analyticsResourceType}
-              data-analytics-resource-file-type="pdf"
+              data-analytics-resource-file-type={isImageDrawing ? "image" : "pdf"}
               data-analytics-section={analyticsSection}
               onClick={() => {
                 setIsDrawingPreviewVisible(

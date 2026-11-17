@@ -1,0 +1,122 @@
+{
+  "rpl-installation.webp": {
+    "width": 1500,
+    "height": 1024
+  },
+  "smtp2-adapter.webp": {
+    "width": 1500,
+    "height": 407
+  },
+  "smtp4-optocoupler.webp": {
+    "width": 1500,
+    "height": 727
+  },
+  "hmd-valve-paths.webp": {
+    "width": 1500,
+    "height": 1217
+  },
+  "mrv3-controller.webp": {
+    "width": 1500,
+    "height": 1472
+  },
+  "hp-flow-paths.webp": {
+    "width": 1500,
+    "height": 1610
+  },
+  "abd-pinout.webp": {
+    "width": 1500,
+    "height": 1693
+  },
+  "pdm5-pinout.webp": {
+    "width": 1500,
+    "height": 1220
+  },
+  "sv10-structure.webp": {
+    "width": 1500,
+    "height": 1934
+  },
+  "rpl-manual-working-cycle.webp": {
+    "width": 1500,
+    "height": 753
+  },
+  "rpl-p635-manual-components.webp": {
+    "width": 1500,
+    "height": 1381
+  },
+  "rpl-p15-manual-components.webp": {
+    "width": 1500,
+    "height": 1269
+  },
+  "rpl-p635-manual-range-adjustment.webp": {
+    "width": 1500,
+    "height": 1087
+  },
+  "rpl-p15-manual-range-adjustment.webp": {
+    "width": 1500,
+    "height": 1116
+  },
+  "rpl-manual-motor-wiring.webp": {
+    "width": 1500,
+    "height": 981
+  },
+  "rpl-manual-optocoupler-wiring.webp": {
+    "width": 1500,
+    "height": 985
+  },
+  "rpl-manual-start-stop.webp": {
+    "width": 1500,
+    "height": 971
+  },
+  "rpl-manual-gravimetric-setup.webp": {
+    "width": 1500,
+    "height": 758
+  },
+  "rpl-manual-installation-directions.webp": {
+    "width": 1500,
+    "height": 759
+  },
+  "rpl-p15-manual-start-stop.webp": {
+    "width": 1500,
+    "height": 971
+  },
+  "rpl-p4-components.webp": {
+    "width": 1500,
+    "height": 997
+  },
+  "rpl-p4-installation-directions.webp": {
+    "width": 1500,
+    "height": 759
+  },
+  "rpl-p4-motor-wiring.webp": {
+    "width": 1500,
+    "height": 1838
+  },
+  "rpl-p4-optocoupler-wiring.webp": {
+    "width": 1500,
+    "height": 986
+  },
+  "drpl-0109-structure.webp": {
+    "width": 1500,
+    "height": 1500
+  },
+  "drpl-0119-structure.webp": {
+    "width": 1500,
+    "height": 1500
+  },
+  "drpl-working-cycle.webp": {
+    "width": 1500,
+    "height": 753
+  },
+  "drpl-dimensions-ports.webp": {
+    "width": 1500,
+    "height": 1151
+  },
+  "drpl-motor-wiring.webp": {
+    "width": 1500,
+    "height": 635
+  },
+  "drpl-optocoupler-wiring.webp": {
+    "width": 1500,
+    "height": 985
+  }
+}

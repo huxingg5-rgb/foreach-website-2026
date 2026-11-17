@@ -95,7 +95,7 @@ export default function HomeInquirySection({ locale }: HomeInquirySectionProps) 
         headers: { // 设置请求头
           "Content-Type": "application/json", // 告诉后端当前提交的是 JSON 数据
         }, // 请求头结束
-        body: JSON.stringify({ email }), // 把邮箱提交给后端
+        body: JSON.stringify({ email, locale }), // 把邮箱和页面语言提交给后端
       }); // fetch 请求结束
 
       const data = (await res.json().catch(() => ({}))) as ApiResponse; // 读取接口返回 JSON，如果读取失败就使用空对象

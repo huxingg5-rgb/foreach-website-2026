@@ -26,9 +26,8 @@ export default function HomeApplicationsSection({ data }: { data: HomeApplicatio
           <div className={styles.applicationDetails}>
             <p className="home-company-intro-copy">{copy.introduction}</p>
             <div id="home-application-list" className={styles.applicationRows}>
-              {applications.slice(0, 4).map((application, index) => (
+              {applications.slice(0, 4).map((application) => (
                 <Link key={application.slug} href={application.href} prefetch={false} className={styles.applicationRow}>
-                  <span className={styles.number} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                   <span><strong>{application.name}</strong><small>{application.description}</small></span>
                   <span aria-hidden="true">↗</span>
                 </Link>

@@ -22,6 +22,24 @@ async function sourceCad(url) {
   return cadCache.get(url);
 }
 
+async function assemblySources(config) {
+  const ends = (config.mode === 'double' ? [['a', config.a], ['b', config.b]] : [['a', config.a]]).filter(([, end]) => end.enabled !== false);
+  const sources = await Promise.all(ends.map(async ([, end]) => {
+    // Bodies and accessories are independent; start every selected source now.
+    const [body, accessory] = await Promise.all([
+      end.cadUrl ? sourceCad(end.cadUrl) : null,
+      end.accessoryCadUrl ? sourceCad(end.accessoryCadUrl) : null,
+    ]);
+    return { body, accessory };
+  }));
+  return { ends, sources };
+}
+
+/** Populate the same in-flight/decoded cache without creating a WebGL canvas. */
+export async function preloadFlangedAssembly(config) {
+  await assemblySources(config);
+}
+
 function freeObject(group) {
   group.traverse(item => {
     item.geometry?.dispose();
@@ -114,12 +132,8 @@ export function createFlangedAssemblyRenderer(canvas) {
 
   async function render(config) {
     const request = ++sequence;
-    const ends = (config.mode === 'double' ? [['a', config.a], ['b', config.b]] : [['a', config.a]]).filter(([, end]) => end.enabled !== false);
-    const sources = await Promise.all(ends.map(async ([, end]) => ({
-      body: end.cadUrl ? await sourceCad(end.cadUrl).catch(() => null) : null,
-      accessory: end.accessoryCadUrl ? await sourceCad(end.accessoryCadUrl).catch(() => null) : null,
-    })));
-    if (disposed || sequence !== request) return;
+    const { ends, sources } = await assemblySources(config);
+    if (disposed || sequence !== request) return false;
     const group = new THREE.Group();
     const radius = config.outer / 2 * DISPLAY_SCALE;
     // Parametric tube and optional accessories show their role and location;
@@ -153,6 +167,7 @@ export function createFlangedAssemblyRenderer(canvas) {
     }
     if (assembly) { scene.remove(assembly); freeObject(assembly); }
     assembly = group; scene.add(group); renderer.render(scene, camera);
+    return true;
   }
   return {
     render,

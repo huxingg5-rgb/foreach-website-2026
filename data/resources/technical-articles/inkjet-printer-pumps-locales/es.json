@@ -1,0 +1,116 @@
+{
+  "title": "Bombas para impresoras de inyección de tinta: microbombas de diafragma para una alimentación estable",
+  "seoTitle": "Bombas de inyección de tinta y microbombas de diafragma | FOREACH",
+  "description": "Microbombas de diafragma para alimentación y circulación de tinta: comparación de bombas, presión, pulsaciones, cavitación, diagnóstico y selección de modelos.",
+  "coverAlt": "Esquema técnico en blanco y negro de depósito, bomba de diafragma de alimentación, filtrado y amortiguación, cabezal con recirculación y bomba de retorno, con conexión independiente de control de presión",
+  "deck": "Los ingenieros que trabajan con equipos de inyección de tinta conocen bien las impresiones borrosas, las gotas dispersas y las líneas interrumpidas. La primera reacción suele ser cambiar la tinta o limpiar el cabezal. El diagnóstico también debe incluir la presión del circuito: su estabilidad depende de la salida real de la bomba, la resistencia al flujo y la coordinación con el control. La microbomba de diafragma es una parte de ese circuito que a menudo pasa desapercibida.",
+  "scope": "Se utiliza como ejemplo un equipo industrial de inyección de tinta con circuitos de alimentación y retorno para explicar el papel de la bomba de diafragma. Los ajustes de presión y procedimientos concretos deben seguir los manuales del equipo y del cabezal.",
+  "sections": [
+    {
+      "title": "Bombas de tinta UV: por qué importan la viscosidad y la resistencia del circuito",
+      "tocLabel": "Viscosidad y alimentación",
+      "paragraphs": [
+        "La viscosidad de la tinta UV cambia con la formulación y la temperatura; algunas formulaciones se espesan a baja temperatura. Cuando la resistencia de filtros y tubos es elevada, la alimentación por gravedad puede resultar insuficiente. La bomba debe extraer tinta del depósito e impulsarla a través del filtrado grueso, el filtrado fino y las conducciones hacia la alimentación del cabezal. Si la diferencia de presión de impulsión o el caudal de trabajo no bastan, la reposición no sigue el consumo y las líneas interrumpidas pueden acentuarse.",
+        "La bomba de diafragma separa el líquido del accionamiento sin necesitar que un eje giratorio atraviese un cierre dinámico hacia la cámara en contacto con el líquido. Las piezas en contacto con el líquido incluyen cabezal de la bomba, diafragma, válvulas y juntas correspondientes. Los modelos concretos que permiten autocebado, funcionamiento en seco o regulación de velocidad pueden configurarse en ramales de alimentación o retorno según el equipo. La compatibilidad duradera con la tinta UV prevista debe confirmarse mediante ensayos de materiales y del fluido real."
+      ],
+      "table": {
+        "headers": ["Tipo de bomba", "Características comparativas", "Limitaciones que evaluar"],
+        "rows": [
+          ["Bomba de engranajes", "Salida relativamente uniforme para transferencia continua", "Evaluar el efecto de partículas de pigmento, holguras y desgaste sobre la salida"],
+          ["Bomba de diafragma", "Separación entre líquido y accionamiento; algunos modelos permiten autocebado, marcha en seco o regulación", "El movimiento alternativo genera pulsaciones; evaluar amortiguación y compensación. Las capacidades dependen del modelo"],
+          ["Bomba peristáltica", "Solo el tubo contacta con el líquido, lo que facilita sustituir el recorrido en contacto con el fluido", "El tubo es un consumible; fatiga, envejecimiento y compresión afectan al caudal y la presión"]
+        ]
+      }
+    },
+    {
+      "title": "Bombas de circulación de tinta: presión de alimentación, presión del menisco y retorno",
+      "tocLabel": "Tres funciones de presión",
+      "paragraphs": [
+        "En el circuito interviene más de una condición de presión. La presión positiva de alimentación mueve la tinta a través de filtros y tubos; muchos cabezales de gota bajo demanda mantienen el menisco de la boquilla con una ligera presión negativa controlada. La diferencia entre alimentación y retorno mantiene la circulación, ayuda a reducir el estancamiento de pigmento y transporta burbujas libres hacia el punto de eliminación de aire.",
+        "Las bombas de diafragma para líquidos pueden transferir tinta en la alimentación y el retorno, mientras que la ligera presión negativa en las boquillas se establece mediante el circuito completo y su regulación. Presión de alimentación, presión del menisco y diferencia de presión entre alimentación y retorno están relacionadas, pero no son el mismo valor. La presión nominal de la bomba no debe utilizarse directamente como ajuste del cabezal."
+      ],
+      "figure": {
+        "caption": "Relaciones de presión del circuito: las gotas caen verticalmente del cabezal al sustrato. Las líneas continuas indican líquido y la discontinua resume una relación de control o de aire. Es una arquitectura funcional de recirculación, no un plano de montaje de una máquina concreta."
+      },
+      "links": [
+        {"key": "supply", "label": "Distinguir la posición de las bombas de alimentación, circulación y retorno"}
+      ],
+      "afterParagraphs": [
+        "El intervalo admisible de presión negativa y sus límites de fluctuación dependen del cabezal, la tinta y las condiciones de funcionamiento. Salirse de esos requisitos puede alterar el menisco o la alimentación. Compruebe los ajustes en el manual correspondiente en lugar de aplicar un intervalo empírico universal."
+      ]
+    },
+    {
+      "title": "Pulsaciones y riesgo de cavitación de las bombas de diafragma en sistemas de inyección de tinta",
+      "tocLabel": "Pulsaciones y cavitación",
+      "paragraphs": [
+        "El primer problema son las pulsaciones. El mecanismo alternativo de una bomba de diafragma produce pulsaciones de caudal, y el circuito de tinta puede ser sensible a las fluctuaciones de presión. Por ello deben evaluarse acumuladores, amortiguadores u otras medidas de compensación para mantener la fluctuación en el cabezal dentro de sus límites. Mida la respuesta real de presión; no se base solo en el valor medio ni convierta un único umbral en una norma para todos los cabezales.",
+        "El segundo grupo de problemas aparece en la entrada. Una alimentación insuficiente antes de la bomba o la presencia de gas pueden causar caída de caudal, burbujas continuas o gorgoteo. Revise el nivel del depósito y la conducción de entrada antes de seguir ajustando el panel. La entrada de aire, la liberación de gas disuelto y la cavitación son fenómenos distintos. Para determinar si hay cavitación también deben considerarse presión de entrada, temperatura y volatilidad de la tinta."
+      ],
+      "links": [
+        {"key": "pulsation", "label": "Consultar métodos para reducir las pulsaciones de caudal de microbombas de diafragma"}
+      ]
+    },
+    {
+      "title": "Diagnóstico de bombas de impresoras de tinta: comprobar primero el circuito",
+      "tocLabel": "Diagnóstico",
+      "paragraphs": [
+        "Compruebe primero la alimentación: bomba, nivel, filtros y tubos. Después revise la entrada y eliminación de aire, luego el cabezal y, por último, los ajustes de presión conforme al equipo. Si hay burbujas continuas o restricciones, cambiar solo la presión suele impedir identificar la causa. Para comprobar fugas o mantener presión estática, utilice la presión, duración y caída admisible especificadas por el equipo. Cambie una sola variable cada vez.",
+        "La tabla recoge síntomas habituales y el orden de comprobación prioritario. Sirve para acotar la investigación; un síntoma aislado no basta para diagnosticar una avería de bomba o cabezal."
+      ],
+      "table": {
+        "headers": ["Síntoma", "Comprobaciones prioritarias", "Orientación de actuación"],
+        "rows": [
+          ["No sale tinta", "Tubo doblado, filtro obstruido, nivel bajo o bomba sin llenar de líquido", "Restablecer suministro y paso libre, llenar y purgar según el procedimiento y medir caudal"],
+          ["Sale tinta, pero faltan líneas en el patrón de comprobación de boquillas", "Estado de boquillas, burbujas y capacidad de reposición", "Revisar mantenimiento del cabezal y alimentación; conservar patrones anteriores y posteriores"],
+          ["Fluctuaciones de presión pronunciadas", "Entrada de aire, nivel, pulsaciones y respuesta del control", "Resolver primero alimentación y sellado; después revisar amortiguación y control"],
+          ["La presión negativa deriva de forma continua en una dirección", "Paso del retorno, nivel, juntas y puntos de medida", "Comprobar alimentación, retorno y medición; después revisar el control de presión"],
+          ["Gotas dispersas o bordes de caracteres irregulares", "Cabezal, temperatura y viscosidad de tinta y presión del menisco", "Valorar el patrón de boquillas junto con la presión medida y seguir los requisitos del cabezal"],
+          ["Caracteres débiles o pálidos", "Caudal real de alimentación, pérdida en filtros y condiciones de impresión", "Comprobar si la reposición sigue el consumo, recuperar el circuito y repetir la prueba"]
+        ]
+      },
+      "links": [
+        {"key": "troubleshooting", "label": "Seguir la guía detallada de falta de tinta y registros de medición"}
+      ]
+    },
+    {
+      "title": "Selección de microbombas de diafragma: materiales y control de pulsaciones",
+      "tocLabel": "Prioridades de selección",
+      "paragraphs": [
+        "El valor de la bomba de diafragma en inyección de tinta va más allá de transportar tinta: trabaja con el circuito y el control para mantener condiciones adecuadas de suministro, circulación y presión. Empiece por dos prioridades: que los materiales en contacto con el fluido sean aptos para la tinta y que la supresión de pulsaciones cumpla los requisitos del cabezal.",
+        "La revisión de materiales incluye cabezal de la bomba, diafragma, válvulas y juntas, teniendo en cuenta concentración, temperatura y tiempo de contacto de tintas UV, de disolvente o acuosas y sus limpiadores. Las pulsaciones se miden con la tubería y carga de impresión reales. Compruebe también el punto de funcionamiento caudal-presión, las condiciones de entrada y el ciclo de servicio, y complete la validación del prototipo con purga y registros adecuados."
+      ]
+    },
+    {
+      "title": "Bombas de diafragma FOREACH para alimentación y retorno de tinta",
+      "tocLabel": "Opciones de bomba",
+      "paragraphs": [
+        "Las microbombas de diafragma para líquidos de FOREACH pueden evaluarse como candidatas según el caudal y la presión del circuito. DPL30 y DPL60 responden a diferentes necesidades de caudal en ramales de alimentación o retorno; DPL30H permite evaluar un tramo de transferencia previo con mayores requisitos de presión."
+      ],
+      "productTable": {
+        "headers": ["Modelo candidato", "Caudal libre", "Presión nominal", "Función del circuito que evaluar"],
+        "modelKeys": ["dpl30", "dpl60", "dpl30h"],
+        "purposes": [
+          "Tramos de alimentación, retorno y circulación con menor demanda de caudal",
+          "Tramos de alimentación o retorno con mayor demanda de caudal",
+          "Transferencia previa con tubos largos o filtros de alta resistencia; no aplicar directamente la presión nominal al cabezal"
+        ]
+      },
+      "afterParagraphs": [
+        "El caudal libre y la presión nominal corresponden a condiciones distintas. No significan que se garantice el caudal libre a presión nominal. Compruebe parámetros completos, conexiones y combinación de materiales del modelo concreto.",
+        "Las especificaciones formales de las tres series indican agua purificada como medio de trabajo; otros líquidos requieren evaluación real del cliente. Al considerar configuraciones con PPS, EPDM, PTFE o FFKM, valídelas frente a composición, concentración, temperatura y tiempo de contacto de la tinta y el líquido de limpieza. El nombre de un material no demuestra compatibilidad duradera con la tinta."
+      ],
+      "note": "Los intervalos de presión negativa, incrementos de ajuste y periodos de cambio de filtros varían según cabezal, tinta y arquitectura. Los ajustes reales deben seguir los manuales y requisitos del fabricante de tinta.",
+      "links": [
+        {"key": "dpl30", "label": "Consultar parámetros y configuración de DPL30-DB"},
+        {"key": "dpl60", "label": "Consultar parámetros y configuración de DPL60-DB"},
+        {"key": "dpl30h", "label": "Consultar parámetros y configuración de DPL30H-DS"}
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Evaluar una microbomba de diafragma para su circuito de tinta",
+    "description": "Indique tinta y líquido de limpieza, temperatura, caudal requerido, condiciones de entrada, contrapresión y ciclo de servicio para planificar ensayos con los materiales y controles adecuados.",
+    "contactLabel": "Consultar el circuito",
+    "productsLabel": "Ver bombas de diafragma para líquidos"
+  }
+}

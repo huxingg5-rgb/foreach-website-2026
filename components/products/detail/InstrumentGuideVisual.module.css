@@ -1,0 +1,41 @@
+.visual { margin: 20px 0; color: inherit; min-width: 0; }
+.visual h3 { font-size: 16px; margin: 0 0 12px; color: inherit; font-weight: 600; }
+.visual h4 { margin: 0 0 12px; font-size: 16px; font-weight: 500; line-height: 1.6; }
+.visual p { margin: 0; }
+.panel { min-width: 0; }
+.panel + .panel { margin-top: 20px; }
+.twoColumns, .positions { display: grid; gap: 28px; align-items: start; }
+.twoColumns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.positions { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 900px; }
+.twoColumns > .panel { margin: 0; }
+.tableWrap { min-width: 0; max-width: 100%; overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; text-align: left; background: #fff; }
+.table caption { padding: 0 0 12px; text-align: left; font-size: 16px; font-weight: 600; color: inherit; }
+.table th, .table td { padding: 12px 16px; border-bottom: 1px solid #dbe3ee; vertical-align: top; line-height: 1.65; }
+.table thead { background: #f6f9fc; }
+.table tbody th { width: 18%; font-weight: 600; }
+.table td { color: inherit; }
+.materialTable { min-width: 480px; }
+.materialTable tbody th { width: 25%; }
+.visual .note { color: #465369; font-size: 14px; line-height: 1.8; margin-top: 12px; }
+.facts strong { font-weight: 600; margin-right: 24px; }
+.facts span { display: inline-block; }
+.definitions { margin: 0; max-width: 900px; }
+.definitions > div { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(0, 2fr); gap: 20px; padding: 10px 0; border-bottom: 1px solid #dbe3ee; }
+.definitions dt { font-weight: 500; }
+.definitions dd { margin: 0; overflow-wrap: anywhere; }
+.position { min-width: 0; text-align: center; }
+.position svg { width: 100%; max-width: 260px; height: auto; display: block; margin: 0 auto; font-size: 16px; fill: #173368; font-family: inherit; }
+.connectionLabel { font-size: 14px; }
+.portRow { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid #dbe3ee; }
+.portRow strong { font-weight: 500; }
+.cycle { margin: 0; padding-left: 1.5em; }
+.cycle li { padding: 5px 0 5px 6px; }
+.cycle strong { font-weight: 600; margin-right: 14px; }
+@media (max-width: 700px) {
+  .twoColumns, .positions { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .table th, .table td { padding: 10px 12px; }
+  .definitions > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .portRow { grid-template-columns: 1fr 1fr; }
+  .portRow > span:last-child { grid-column: 2; }
+}

@@ -40,6 +40,7 @@ const isCloudflarePagesBuild =
   process.env.CLOUDFLARE_PAGES_BUILD === "1";
 
 const nextConfig: NextConfig = {
+  devIndicators: false,
   // Give concurrent local previews separate generated caches when requested.
   ...(process.env.NODE_ENV === "development" && process.env.NEXT_DEV_DIST_DIR
     ? { distDir: process.env.NEXT_DEV_DIST_DIR }

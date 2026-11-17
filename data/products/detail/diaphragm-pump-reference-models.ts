@@ -521,6 +521,30 @@ export function isLegacyDiaphragmPumpSlug(slug: unknown) {
   return Boolean(getDiaphragmPumpReferenceByLegacySlug(slug));
 }
 
+const DIAPHRAGM_PUMP_PHOTO_LABEL: Record<DiaphragmPumpReferenceLocale, string> = {
+  zh: "隔膜泵实物照片",
+  en: "diaphragm pump product photo",
+  es: "fotografía de la bomba de diafragma",
+  fr: "photo de la pompe à membrane",
+  ko: "다이어프램 펌프 실물 사진",
+  ru: "фотография мембранного насоса",
+};
+
+/** Use the approved model photo in article cards without changing other products. */
+export function applyDiaphragmPumpReferencePhoto<
+  T extends { id: string; href: string; imageSrc: string; imageAlt: string },
+>(product: T, locale: unknown): T {
+  const reference = getDiaphragmPumpReferenceFromIdentity(product);
+  const imageSrc = reference && getDiaphragmPumpMainPhoto(reference.copyKey);
+  if (!reference || !imageSrc) return product;
+  const language = normalizeDiaphragmPumpLocale(locale);
+  return {
+    ...product,
+    imageSrc,
+    imageAlt: `FOREACH ${reference.model} ${DIAPHRAGM_PUMP_PHOTO_LABEL[language]}`,
+  };
+}
+
 export function getDiaphragmPumpReferenceRouteSegments() {
   return diaphragmPumpReferenceModels.map((item) => [...DIAPHRAGM_PUMP_ROUTE_PREFIX, item.slug]);
 }

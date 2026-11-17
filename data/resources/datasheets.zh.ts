@@ -136,6 +136,7 @@ export const datasheetZhFilterOptions: DatasheetFilterOption[] = [
   { label: "阀系列", value: "valve" },
   { label: "针系列", value: "needle" },
   { label: "管路及连接件系列", value: "tubing" },
+  { label: "智控系列", value: "smart" },
 ];
 
 /* ================================
@@ -143,6 +144,41 @@ export const datasheetZhFilterOptions: DatasheetFilterOption[] = [
 ================================ */
 
 export const datasheetZhItems: DatasheetItem[] = [
+  {
+    id: "pdm5-pressure-sensor", category: "smart", keywords: "PDM5 压力检测模块 压力传感器 绝压 I2C 选型",
+    title: "PDM5 压力检测模块标准规格书", label: "智控系列", language: "中文", version: "A02", update: "—",
+    description: "涵盖四档绝压量程、接液材料、电气连接和 PDM5 标准型号选型表。",
+    image: "/images/products/control/foreach-pdm5-pressure-sensor.webp", productHref: "/products/control/pdm5-pressure-sensor/",
+    downloadHref: "/downloads/resources/datasheets/zh-CN/Smart-Control-Modules/ps-110b-2508-00001-a02-cn-pdm5-pressure-sensor.pdf", actionType: "download",
+  },
+  {
+    id: "abd-air-bubble-detector", category: "smart", keywords: "ABD 气泡检测器 气泡检测模块 透明管外径 选型",
+    title: "ABD 气泡检测器规格书", label: "智控系列", language: "中文", version: "A01", update: "2025-06",
+    description: "涵盖透明管外径、检测条件、电气接口及 ABD 型号订购信息。",
+    image: "/images/products/control/foreach-abd-air-bubble-detector.webp", productHref: "/products/control/air-bubble-detectors/abd/",
+    downloadHref: "/downloads/resources/datasheets/zh-CN/Smart-Control-Modules/ps-110b-2407-00002-a01-cn-abd-air-bubble-detector.pdf", actionType: "download",
+  },
+  {
+    id: "smtp2-pipetting-pump", category: "pump", keywords: "SMTP2 500 510 520 1000 μL 可编程 气体置换式移液泵 选型",
+    title: "SMTP2 可编程移液泵规格书", label: "泵系列", language: "中文", version: "A08", update: "—",
+    description: "涵盖 SMTP2 的容量、吸头适配器、通信与检测功能、性能条件及型号订购信息。",
+    image: "/images/products/pumps/pipetting-pumps/foreach-smtp2-500-lte008-8mm.webp", productHref: "/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/",
+    downloadHref: "/downloads/resources/datasheets/zh-CN/Pumps/ps-smtp-011-a08-cn-smtp2-pipetting-pump.pdf", actionType: "download",
+  },
+  {
+    id: "smtp4-pipetting-pump", category: "pump", keywords: "SMTP4 气体置换式 移液泵 自动脱吸头 OEM",
+    title: "SMTP4 气体置换式移液泵规格书", label: "泵系列", language: "中文", version: "002", update: "—",
+    description: "涵盖 SMTP4 的容量、驱动、吸头安装、光耦接线及型号订购信息。",
+    image: "/images/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.webp", productHref: "/products/pumps/pipetting-pumps/smtp4-pipetting-module/",
+    downloadHref: "/downloads/resources/datasheets/zh-CN/Pumps/ps-130a-003-002-cn-smtp4-pipetting-pump.pdf", actionType: "download",
+  },
+  {
+    id: "smtp4-500ul-pipetting-pump", category: "pump", keywords: "SMTP4 500 μL 移液泵 电机 光耦 线序",
+    title: "SMTP4-500 μL 移液泵规格书", label: "泵系列", language: "中文", version: "001", update: "—",
+    description: "SMTP4-500 μL 专用规格，包含工作参数、外形尺寸、电机、光耦及线序信息。",
+    image: "/images/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.webp", productHref: "/products/pumps/pipetting-pumps/smtp4-pipetting-module/smtp4-500ul/",
+    downloadHref: "/downloads/resources/datasheets/zh-CN/Pumps/ps-130a-005-001-cn-smtp4-500ul-pipetting-pump.pdf", actionType: "download",
+  },
   {
     id: "sm-piston-pump",
     category: "pump",

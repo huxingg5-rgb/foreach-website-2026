@@ -1,0 +1,147 @@
+{
+  "title": "Manque d’alimentation en encre : diagnostiquer les défauts d’impression jet d’encre",
+  "seoTitle": "Manque d’encre en impression jet d’encre : diagnostic | FOREACH",
+  "description": "Diagnostiquez les interruptions d’encre en contrôlant niveau, filtres, entrée d’air, débit réel de la pompe et pression de la tête. Vérifiez les limites de sélection des DPL30 et DPL60.",
+  "coverAlt": "Schéma de diagnostic reliant réservoir, pompe, filtre et tête pour localiser niveau bas, bulles et lignes manquantes",
+  "deck": "Lorsqu’une imprimante manque d’alimentation en encre, conservez d’abord le motif de contrôle des buses et les conditions de fonctionnement. Examinez réservoir, filtres et tuyaux pour trouver une restriction ou une entrée d’air, puis mesurez débit réel, pressions d’alimentation et de retour et pression du ménisque aux buses. Rétablissez le circuit et effectuez l’amorçage prescrit avant de modifier la pression ou d’intervenir sur la tête. Un moteur en rotation ou une valeur normale sur l’écran ne prouve pas une alimentation suffisante et stable.",
+  "scope": "Ce guide concerne principalement les équipements industriels piézoélectriques à goutte à la demande (DOD), avec réservoirs, conduites d’encre et régulation de pression, en cas d’alimentation en liquide insuffisante. Les circuits avec et sans recirculation doivent être vérifiés selon leurs propres schémas. L’ordre des composants, l’amorçage, la purge d’air et les limites de pression relèvent des manuels de la machine et de la tête. Le jet continu (CIJ) nécessite sa propre procédure de maintenance.",
+  "sections": [
+    {
+      "title": "Une absence de projection par les buses indique-t-elle un manque d’alimentation en encre ?",
+      "tocLabel": "Identifier les indices du défaut",
+      "paragraphs": [
+        "Le manque d’alimentation, ou ink starvation, signifie que le débit d’encre ne couvre pas la demande de la tête. Le nozzle dropout désigne des buses qui n’éjectent plus correctement les gouttes. Un manque d’alimentation peut en être la cause, mais aussi une obstruction, un défaut de commande ou les réglages d’impression ; des lignes ou couleurs manquantes ne suffisent donc pas à incriminer la pompe.",
+        "Relevez couleur affectée, positions de buses manquantes, durée avant le défaut et éventuelle récupération après une pause. Comparez à encre, température et mode d’impression constants, en changeant une seule variable à la fois. Ces indices orientent les contrôles ; aucun ne confirme seul une pompe ou une tête défectueuse."
+      ],
+      "table": {
+        "headers": ["Observation", "Contrôle prioritaire", "Éléments à conserver"],
+        "rows": [
+          ["La couleur faiblit en continu puis revient brièvement après une pause", "Réapprovisionnement, perte de charge du filtre, niveau et mise à l’air", "Charge d’impression, délai et récupération"],
+          ["Les mêmes positions de buses manquent à chaque contrôle", "Motif de buses, entretien et commande de tête", "Motifs avant et après dans les mêmes conditions"],
+          ["Le défaut suit un changement d’encre, de filtre ou de tuyau", "Joints, sens du débit et amorçage", "Pièces changées et premier point d’apparition des bulles"],
+          ["Plusieurs têtes d’une même branche deviennent défaillantes ensemble", "Réservoir, filtration, alimentation et régulation communs", "Plan de branche, pressions et chronologie"]
+        ]
+      }
+    },
+    {
+      "title": "Dans quel ordre contrôler le circuit d’alimentation en encre ?",
+      "tocLabel": "Suivre le circuit réel",
+      "paragraphs": [
+        "Dessinez le circuit à partir de la documentation : réservoir principal, réservoir secondaire, pompe, filtres, amortisseur ou régulateur, tête et retour. Les filtres peuvent précéder ou suivre la pompe. Certaines machines utilisent la différence de niveau et une dépression pneumatique ; un schéma unique ne convient donc pas à tous les systèmes.",
+        "Progressez de l’amont vers l’aval pour repérer où l’alimentation se dégrade. Avant de débrancher ou de remplacer un composant, appliquez la procédure d’arrêt, d’isolement et de dépressurisation et conservez les réglages et raccordements d’origine."
+      ],
+      "checks": [
+        "Vérifiez niveau, immersion de la prise et mise à l’air du réservoir, y compris au niveau bas autorisé.",
+        "Contrôlez position des vannes, sens du débit, plis, pincements et filtres ou joints récemment remplacés.",
+        "Observez les tronçons accessibles autorisés, notez les premières bulles et effectuez l’amorçage prévu.",
+        "À la charge provoquant le défaut, relevez les mesures disponibles à l’entrée, à la sortie de pompe et côté tête.",
+        "Après rétablissement de l’alimentation, contrôlez les buses et réglez la commande dans les limites de la machine."
+      ],
+      "links": [{ "key": "supply", "label": "Fonctions des pompes d’alimentation, de retour et de circulation d’encre" }]
+    },
+    {
+      "title": "Comment filtres et tuyaux peuvent-ils provoquer un manque d’encre pendant une longue impression ?",
+      "tocLabel": "Contrôler filtres et résistance",
+      "paragraphs": [
+        "Le réapprovisionnement doit couvrir la consommation à la perte de charge réelle du circuit. Filtre chargé, diamètre réduit, pli, vanne partiellement fermée et variation de viscosité avec la température modifient la résistance. Un bref contrôle de buses réussi ne démontre pas une marge suffisante en impression continue.",
+        "Si des prises de pression existent de part et d’autre du filtre, comparez à température identique et débits comparables. Des lectures à des débits différents ne quantifient pas directement le colmatage. Tout filtre de remplacement doit conserver finesse, matériau et sens prescrits, puis être correctement amorcé."
+      ],
+      "table": {
+        "headers": ["Emplacement", "Comparaison", "Vérification suivante"],
+        "rows": [
+          ["Filtre", "Perte de charge et historique à conditions équivalentes", "Après remplacement autorisé, vérifier débit et impression"],
+          ["Aspiration et réservoir", "Mise à l’air, hauteur, immersion et pincement", "Rétablir l’entrée avant de juger la pompe"],
+          ["Refoulement et vannes", "Diamètre intérieur, longueur, ouverture et éléments ajoutés", "Vérifier la marge de pression au débit demandé"]
+        ]
+      },
+      "note": "Conservez la filtration prescrite en production. Les essais d’isolement de composants nécessitent un circuit approuvé protégeant la tête de toute encre non filtrée."
+    },
+    {
+      "title": "Comment localiser l’origine de bulles récurrentes dans les tuyaux d’encre ?",
+      "tocLabel": "Localiser l’entrée d’air",
+      "paragraphs": [
+        "Distinguez l’air résiduel après entretien des bulles ajoutées pendant le fonctionnement. Si elles reviennent après amorçage, examinez prise d’aspiration, raccords amont, joints du filtre et connexions manipulées. L’absence de fuite d’encre vers l’extérieur ne prouve pas l’étanchéité d’un raccord à l’aspiration.",
+        "Comparez l’ordre d’apparition des bulles entre points d’observation autorisés. Contrôlez insertion, adaptation et maintien du tuyau, puis isolez les raccords suspects avec la méthode de recherche de fuite approuvée. Bruit ou bulles ne distinguent pas à eux seuls entrée d’air, dégazage et vaporisation locale ; ils ne suffisent pas à conclure à une cavitation.",
+        "L’amorçage (priming) remplit le circuit d’encre ; le dégazage (degassing) retire les gaz dissous. Ce sont deux opérations différentes : éliminer les bulles visibles ne prouve pas que les gaz dissous ont été retirés. Si un dégazeur en ligne est installé, contrôlez le dispositif et son côté vide selon son manuel."
+      ],
+      "checks": [
+        "Vérifiez si la prise se découvre ou si remplissage et agitation amènent de l’air à l’entrée.",
+        "Contrôlez joints du filtre, fermeture des purges et amorçage après entretien.",
+        "Isolez les raccords suspects un par un en gardant les autres conditions constantes.",
+        "Après correction, réamorcez et comparez débit, pression et impression."
+      ]
+    },
+    {
+      "title": "Que mesurer si la pompe tourne mais que l’alimentation reste insuffisante ?",
+      "tocLabel": "Mesurer le point de fonctionnement",
+      "paragraphs": [
+        "Le point de fonctionnement (operating point) associe le débit réel à la différence de pression entre l’entrée et la sortie de la pompe. Relevez aussi l’encre, la température, l’alimentation du moteur et le signal de commande effectif. La rotation ou le bruit du moteur ne prouvent pas le débit reçu par la charge.",
+        "Utilisez un circuit de mesure autorisé et compatible avec l’encre. Débrancher un tuyau pour remplir une éprouvette modifie la contre-pression ; cette mesure ne représente pas le filtre, la régulation et la tête raccordés. Vérifiez aussi plage, étalonnage du fluide, échantillonnage et sensibilité aux bulles du débitmètre."
+      ],
+      "table": {
+        "headers": ["Mesure", "Conditions à préciser", "Utilité diagnostique"],
+        "rows": [
+          ["Débit et quantité cumulée", "Point, durée, température et charge d’impression", "Réapprovisionnement continu par rapport à la demande"],
+          ["Pressions d’entrée, de sortie et du filtre", "Référence, unités et positions", "Entrée insuffisante ou résistance aval accrue"],
+          ["Alimentation et commande moteur", "Mesure en charge et interface exacte", "Variation d’alimentation, consigne ou commande"],
+          ["Bulles et signal de pression", "Variations originales avant et pendant le défaut", "Débit réel, pulsation et filtrage d’affichage"]
+        ]
+      },
+      "links": [{ "key": "noFlow", "label": "Diagnostic d’une pompe à membrane dont le moteur tourne sans débit de liquide" }]
+    },
+    {
+      "title": "Comment vérifier ensemble alimentation, retour et pression du ménisque aux buses ?",
+      "tocLabel": "Vérifier pression et régulation",
+      "paragraphs": [
+        "La différence entre les pressions d’alimentation et de retour entraîne la recirculation. La pression du ménisque est celle de l’encre à la buse par rapport à l’ambiance et influe sur la stabilité de projection. De nombreuses têtes piézoélectriques DOD maintiennent le ménisque par une légère dépression, avec une consigne propre à la tête. Interprétez les mesures selon la conception de la tête, leur hauteur et les définitions du fabricant ; la pression de refoulement de la pompe n’est pas la pression du ménisque.",
+        "Bulles, pulsation de pompe, variation de résistance du filtre et régulation peuvent perturber la pression. Rétablissez l’alimentation et supprimez l’entrée d’air récurrente avant d’évaluer amortissement et commande. Un filtrage d’affichage renforcé change la lecture, pas le circuit. En cas de dépression excessive, suintement ou pression anormale, suivez la procédure de la machine."
+      ],
+      "note": "Limites de dépression, pas de réglage et fluctuations admissibles doivent correspondre à la tête, à l’encre et aux conditions. Ce guide ne donne pas de pression universelle.",
+      "links": [{ "key": "pulsation", "label": "Mesurer et réduire la pulsation des pompes à membrane miniatures" }]
+    },
+    {
+      "title": "Comment évaluer DPL30 et DPL60 avant de remplacer une pompe à encre ?",
+      "tocLabel": "Évaluer les pompes candidates",
+      "paragraphs": [
+        "Si les mesures montrent une marge insuffisante avec l’encre et la pression différentielle réelles, les FOREACH DPL30 et DPL60 peuvent être évaluées pour le transfert. Leurs fiches officielles indiquent respectivement 300 mL/min et 600 mL/min en débit libre, avec une pression nominale de 100 kPa pour les deux. Il ne s’agit ni d’un réglage de tête ni d’une garantie de débit installé. Le débit libre et la pression nominale de 100 kPa ne constituent pas un même point de fonctionnement. Consultez la courbe débit-pression à la tension concernée pour la différence de pression requise, puis validez avec l’encre réelle et le circuit complet.",
+        "Les deux fiches spécifient de l’eau purifiée et imposent une évaluation par le client pour les autres liquides. Encres aqueuses, solvantées et UV exigent un contrôle des matériaux mouillés de la configuration choisie et des essais de viscosité, température, chargement du filtre, fonctionnement continu et redémarrage. Le catalogue ne démontre ni compatibilité avec une encre ni faible pulsation."
+      ],
+      "table": {
+        "headers": ["Série candidate", "Débit libre spécifié", "À confirmer dans le circuit"],
+        "rows": [
+          ["DPL30", "300 mL/min", "Débit avec l’encre, la pression différentielle et la commande réelles"],
+          ["DPL60", "600 mL/min", "Marge de débit, pressions aller-retour et fluctuations en charge"]
+        ]
+      },
+      "links": [
+        { "key": "dpl30", "label": "Données et documentation DPL30-DB" },
+        { "key": "dpl60", "label": "Données et documentation DPL60-DB" },
+        { "key": "flow", "label": "Choix 300 / 600 mL/min pour alimentation et circulation d’encre" }
+      ]
+    },
+    {
+      "title": "Comment valider la réparation et documenter le défaut pour un fournisseur ?",
+      "tocLabel": "Recontrôler et documenter",
+      "paragraphs": [
+        "Reprenez le mode d’impression, la température et la charge continue représentative qui provoquaient le défaut. Comparez motifs de buses, débit, pression et retour des bulles. Incluez niveau bas autorisé, arrêts-redémarrages et sortie de veille. Un bref contrôle ne suffit pas ; les critères doivent venir des exigences de la machine et de la tête dans des conditions définies.",
+        "Transmettez les éléments ci-dessous au fournisseur de pompe ou à l’intégrateur. Pour l’encre blanche, sédimentation et variation de concentration après attente demandent aussi un examen des chemins de circulation et de la stratégie d’arrêt."
+      ],
+      "table": {
+        "headers": ["Groupe de données", "Informations utiles"],
+        "rows": [
+          ["Fluide et équipement", "Référence et composition de l’encre, viscosité, température, modèles de tête et de machine"],
+          ["Circuit et pompe", "Schéma, configuration complète, diamètre et longueur des tuyaux, filtre et hauteur du réservoir"],
+          ["Défaut et mesures", "Charge, délai, points de débit et de pression, alimentation, commande et origine des bulles"],
+          ["Action et validation", "Une variable modifiée par essai, motifs avant et après, résultats en continu"]
+        ]
+      },
+      "links": [{ "key": "white", "label": "Circulation d’encre blanche, sédimentation et redémarrage" }]
+    }
+  ],
+  "cta": {
+    "title": "Évaluer la pompe avec les conditions réelles du défaut",
+    "description": "Transmettez encre, température, débit de travail, pressions aller-retour, filtre, tuyaux et relevés avant et après pour définir les candidates et les essais de prototype.",
+    "contactLabel": "Transmettre les conditions d’alimentation",
+    "productsLabel": "Voir les pompes à membrane miniatures pour liquides"
+  }
+}

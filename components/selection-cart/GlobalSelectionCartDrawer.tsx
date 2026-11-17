@@ -62,6 +62,7 @@ import { assemblyText } from "@/data/products/configurator/tubing-assembly.intl"
 import { flangedConfigurationInquirySummary, flangedConfigurationProductName } from "@/data/products/configurator/flanged-tubing-cart";
 import { pistonText } from "@/data/products/detail/piston-pump-ui.intl";
 import { eaPumpInquiryRows, eaPumpInquirySummary } from "@/data/products/configurator/ea-pump-inquiry";
+import { instrumentInquiryProductName, instrumentInquiryRows, instrumentInquirySummary } from "@/data/products/configurator/instrument-inquiry";
 
 const ConfigurationPdfAttachments = dynamic(() => import("@/components/products/tubing-assemblies/ConfigurationPdfAttachments"), { ssr: false });
 
@@ -135,6 +136,7 @@ function getLocalizedCartProductName(
   locale: LocaleCode,
   item?: SelectionCartItem,
 ) {
+  if (item?.instrumentConfiguration) return instrumentInquiryProductName(item.instrumentConfiguration.family, locale);
   const accessoryName = item && defaultInquiryAccessoryName(item, locale);
   if (accessoryName) return accessoryName;
   if (sourceType !== "pump-selection" && sourceType !== "tubing-selection") return productName;
@@ -241,7 +243,8 @@ export default function GlobalSelectionCartDrawer() {
                 `${isEnglish ? t("Product Type") : "产品类型"}: ${localizedProductName}`,
                 `${isEnglish ? t("Product Model") : "产品型号"}: ${item.foreachModel}`,
                 ...(item.eaPumpConfiguration ? eaPumpInquiryRows(item.eaPumpConfiguration, locale).map(([label, value]) => `${label}${isEnglish ? ": " : "："}${value}`) : []),
-                ...(item.bundleId || isProductInquiry ? [`${isEnglish ? t("Product Code") : "商品编码"}: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}`] : []),
+                ...(item.instrumentConfiguration ? instrumentInquiryRows(item.instrumentConfiguration, locale).slice(1).map(([label, value]) => `${label}: ${value}`) : []),
+                ...(!item.instrumentConfiguration && (item.bundleId || isProductInquiry) ? [`${isEnglish ? t("Product Code") : "商品编码"}: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}`] : []),
                 `${isEnglish ? t("Quantity") : "数量"}: ${item.quantity}`,
               ]
             : [
@@ -415,6 +418,7 @@ export default function GlobalSelectionCartDrawer() {
             `Product Type: ${localizedProductName}`,
             `Product Model: ${item.foreachModel}`,
             ...(item.eaPumpConfiguration ? [eaPumpInquirySummary(item.eaPumpConfiguration, locale)] : []),
+            ...(item.instrumentConfiguration ? [instrumentInquirySummary(item.instrumentConfiguration, locale)] : []),
             ...(item.bundleId || defaultInquiryRequest ? [`Product Code: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}`] : []),
             `Quantity: ${item.quantity}`,
             ...(isEaQuoteRequest ? [`Drawing Required: ${item.needDrawing ? "Yes" : "No"}`] : []),
@@ -590,7 +594,7 @@ export default function GlobalSelectionCartDrawer() {
                           : item.productCode}
                       </td>
                       <td>
-                        {item.eaPumpConfiguration ? <span style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>{eaPumpInquirySummary(item.eaPumpConfiguration, locale)}</span> : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
+                        {item.instrumentConfiguration ? <span style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>{instrumentInquirySummary(item.instrumentConfiguration, locale)}</span> : item.eaPumpConfiguration ? <span style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>{eaPumpInquirySummary(item.eaPumpConfiguration, locale)}</span> : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
                           ? item.bundleId ? `${isEnglish ? t("Product Code") : "商品编码"}: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}` : cartCopy.configuredProduct
                           : item.competitorModels.join(" / ") || "-"}
                       </td>
@@ -807,6 +811,10 @@ export default function GlobalSelectionCartDrawer() {
                             <summary>{pistonText("本次询价配置", locale)}</summary>
                             <pre>{eaPumpInquirySummary(item.eaPumpConfiguration, locale)}</pre>
                           </details> : null}
+                          {item.instrumentConfiguration ? <details className={styles.configurationDetails} open>
+                            <summary>{pistonText("本次询价配置", locale)}</summary>
+                            <pre>{instrumentInquirySummary(item.instrumentConfiguration, locale)}</pre>
+                          </details> : null}
 
                           {group.accessories.map(accessory => (
                             <div className={styles.bundleAccessory} key={accessory.id}>
@@ -943,6 +951,3 @@ export default function GlobalSelectionCartDrawer() {
     </>
   );
 }
-
-
-

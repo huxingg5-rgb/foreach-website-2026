@@ -587,6 +587,17 @@ export const homeApplicationFlowData = {
         ru: "Соединения",
       },
     },
+    {
+      key: "sampling-probe",
+      label: {
+        "zh-CN": "采样针",
+        en: "Sampling Probe",
+        es: "Aguja de muestreo",
+        fr: "Aiguille de prélèvement",
+        ko: "샘플링 프로브",
+        ru: "Пробоотборник",
+      },
+    },
   ],
 
   /* ================================
@@ -789,6 +800,42 @@ export const homeApplicationFlowData = {
     },
   ] satisfies HomeFlowProcessCard[],
 };
+
+// 中文首页的选型工具入口，独立于外语首页复用的流程说明卡片。
+export const homeSelectionToolCards = [
+  {
+    key: "tubing-assembly-selection",
+    title: { "zh-CN": "管组件图纸自动生成" },
+    description: {
+      "zh-CN": "选择管材、管径、长度及两端接口，配置所需管组件。",
+    },
+    href: "/products/tubing-assemblies/flanged-tubing/details/?configure=1",
+  },
+  {
+    key: "fitting-assembly-3d",
+    title: { "zh-CN": "快插接头组合3D预览" },
+    description: {
+      "zh-CN": "以快插组合为示范，鲁尔、硬管等接头也可在对应产品页选型与3D预览。",
+    },
+    href: "/products/fittings/quick-connect-fittings/q2001-pmv-sacn/?configure=1",
+  },
+  {
+    key: "fitting-replacement-selection",
+    title: { "zh-CN": "接头替换选型" },
+    description: {
+      "zh-CN": "输入现用型号，查询对应的 Q20 接头及接口参数。",
+    },
+    href: "/resources/selection-support/fitting-replacement/",
+  },
+  {
+    key: "fluid-resistance-calculation",
+    title: { "zh-CN": "流阻计算" },
+    description: {
+      "zh-CN": "根据介质、流量和管路参数，估算液路压降与流阻。",
+    },
+    href: "/resources/calculators/fluid-resistance/",
+  },
+] satisfies (HomeFlowProcessCard & { href: string })[];
 
 /* ================================
    多语言读取函数

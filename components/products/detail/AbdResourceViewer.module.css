@@ -1,0 +1,4 @@
+.root { min-width: 0; }
+.reference { margin: 0; padding: 18px 18px 0; color: #637087; font-size: 13px; line-height: 1.7; }
+.root :global([data-mobile-pdf-pagination][data-total-pages="1"]) { display: none; }
+@media (max-width: 600px) { .reference { padding: 12px 12px 0; } }

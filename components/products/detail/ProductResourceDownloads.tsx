@@ -7,9 +7,9 @@ import { getProductResourceDownloads } from "@/data/products/detail/product-reso
 import { ProductDetailActionButton } from "./ProductDetailActions";
 import styles from "./ProductDetailActions.module.css";
 
-export default function ProductResourceDownloads({ datasheet, locale = "en" }: { datasheet: ProductDatasheet | null; locale?: string }) {
+export default function ProductResourceDownloads({ datasheet, locale = "en", includeChinese = false }: { datasheet: ProductDatasheet | null; locale?: string; includeChinese?: boolean }) {
   const copy = getSelectionWorkspaceCopy(locale.toLowerCase().split("-")[0]);
-  const items = getProductResourceDownloads(datasheet, locale);
+  const items = getProductResourceDownloads(datasheet, locale, { includeChinese });
   const [open, setOpen] = useState(false);
   const menuId = useId();
   const rootRef = useRef<HTMLDivElement>(null);

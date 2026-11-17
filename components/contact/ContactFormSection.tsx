@@ -45,8 +45,6 @@ export default function ContactFormSection({
             <div className="contact-guide-list">
               {data.guide.items.map((item) => (
                 <div className="contact-guide-item" key={item.number}>
-                  <div className="contact-guide-number">{item.number}</div>
-
                   <div className="contact-guide-copy">
                     <h4>{item.title}</h4>
                     <p>{item.description}</p>

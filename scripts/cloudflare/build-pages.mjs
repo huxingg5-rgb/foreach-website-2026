@@ -64,12 +64,10 @@ const nextCliPath = path.join(
   "next",
 );
 
-const typeScriptCliPath = path.join(
+const typeCheckScriptPath = path.join(
   projectRoot,
-  "node_modules",
-  "typescript",
-  "bin",
-  "tsc",
+  "scripts",
+  "typecheck.mjs",
 );
 
 const outputPath = path.join(
@@ -180,9 +178,9 @@ if (!existsSync(nextCliPath)) {
   );
 }
 
-if (!existsSync(typeScriptCliPath)) {
+if (!existsSync(typeCheckScriptPath)) {
   throw new Error(
-    "没有找到 TypeScript CLI，请确认 node_modules 是否完整。",
+    "没有找到共享类型检查脚本 scripts/typecheck.mjs。",
   );
 }
 
@@ -198,12 +196,8 @@ console.log("");
 
 const typeScriptExitCode =
   runNodeCli(
-    typeScriptCliPath,
-    [
-      "--noEmit",
-      "--pretty",
-      "false",
-    ],
+    typeCheckScriptPath,
+    [],
   );
 
 if (typeScriptExitCode !== 0) {

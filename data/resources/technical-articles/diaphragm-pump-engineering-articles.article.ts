@@ -26,6 +26,8 @@ import type {
 import { inkCirculationSupplyReturnPumpCopies } from "./ink-circulation-supply-return-pump.article";
 import { inkCirculationFlowSelectionCopies } from "./ink-circulation-flow-selection.article";
 import { whiteInkCirculationPumpCopies } from "./white-ink-circulation-pump.article";
+import { inkStarvationCopies, inkStarvationTroubleshootingSlug } from "./ink-starvation-troubleshooting.article";
+import { inkjetPrinterPumpsCopies, inkjetPrinterPumpsSlug } from "./inkjet-printer-pumps.article";
 import {
   ivdCleaningWashRinsePumpCopies,
 } from "./ivd-cleaning-wash-rinse-pump.article";
@@ -250,6 +252,8 @@ const copyByLocale: Record<
 > = {
   "zh-CN": {
     "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticZh,
+    [inkStarvationTroubleshootingSlug]: inkStarvationCopies["zh-CN"],
+    [inkjetPrinterPumpsSlug]: inkjetPrinterPumpsCopies["zh-CN"],
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideZhCopy,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationZhCopy,
     ...diaphragmPumpRdArticles["zh-CN"],
@@ -294,6 +298,8 @@ const copyByLocale: Record<
   },
   en: {
     "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticEn,
+    [inkStarvationTroubleshootingSlug]: inkStarvationCopies.en,
+    [inkjetPrinterPumpsSlug]: inkjetPrinterPumpsCopies.en,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.en,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.en,
     ...diaphragmPumpRdArticles["en"],
@@ -336,6 +342,8 @@ const copyByLocale: Record<
   },
   es: {
     "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticEs,
+    [inkStarvationTroubleshootingSlug]: inkStarvationCopies.es,
+    [inkjetPrinterPumpsSlug]: inkjetPrinterPumpsCopies.es,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.es,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.es,
     ...diaphragmPumpRdArticles["es"],
@@ -371,6 +379,8 @@ const copyByLocale: Record<
   },
   fr: {
     "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticFr,
+    [inkStarvationTroubleshootingSlug]: inkStarvationCopies.fr,
+    [inkjetPrinterPumpsSlug]: inkjetPrinterPumpsCopies.fr,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.fr,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.fr,
     ...diaphragmPumpRdArticles["fr"],
@@ -406,6 +416,8 @@ const copyByLocale: Record<
   },
   ko: {
     "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticKo,
+    [inkStarvationTroubleshootingSlug]: inkStarvationCopies.ko,
+    [inkjetPrinterPumpsSlug]: inkjetPrinterPumpsCopies.ko,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.ko,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.ko,
     ...diaphragmPumpRdArticles["ko"],
@@ -441,6 +453,8 @@ const copyByLocale: Record<
   },
   ru: {
     "diaphragm-pump-vs-peristaltic-pump": diaphragmVsPeristalticRu,
+    [inkStarvationTroubleshootingSlug]: inkStarvationCopies.ru,
+    [inkjetPrinterPumpsSlug]: inkjetPrinterPumpsCopies.ru,
     [foreachDiaphragmPumpOemIntegrationSlug]: foreachDiaphragmPumpOemIntegrationIntlCopies.ru,
     [fluidResistanceCalculatorGuideSlug]: fluidResistanceCalculatorGuideIntlCopies.ru,
     ...diaphragmPumpRdArticles["ru"],
@@ -547,6 +561,22 @@ export function getDiaphragmPumpEngineeringArticles(
     createTechnicalArticle("diaphragm-pump-vs-peristaltic-pump", locale, ["series:dpl30", "series:dpl60"], 129, "2026-10-13"),
   ];
   const inkjetArticles = [
+          createTechnicalArticle(
+            inkjetPrinterPumpsSlug,
+            locale,
+            ["series:dpl30", "series:dpl60", "series:dpl30h"],
+            131,
+            "2026-11-16",
+            "applications",
+          ),
+          createTechnicalArticle(
+            inkStarvationTroubleshootingSlug,
+            locale,
+            ["series:dpl30", "series:dpl60"],
+            130,
+            "2026-11-16",
+            "applications",
+          ),
           createTechnicalArticle(
             inkCirculationSupplyReturnPumpSlug,
             locale,

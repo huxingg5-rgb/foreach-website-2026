@@ -9,6 +9,7 @@ import { valvelessPumpSeries, getValvelessPumpSeries, getValvelessPumpSeriesMeta
 import "../../../products.css";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { getInstrumentProductSections } from "@/components/products/detail/InstrumentProductSections";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import { getRplSelectionGuide, rplSelectionModelSlugs, rplSelectionRelationKeys } from "@/data/resources/technical-articles/rpl-selection-links";
 import details from "@/data/products/generated/pumps/valveless-pumps/detail/index.json";
@@ -207,6 +208,7 @@ export default async function ValvelessPumpDetailPage({
   return (
     <ProductDetailClient
       data={data as any}
+      {...getInstrumentProductSections(slug, renderLocale)}
       afterContent={articleRelationKeys.length ? (
         <RelatedResources
           sourceType="product"

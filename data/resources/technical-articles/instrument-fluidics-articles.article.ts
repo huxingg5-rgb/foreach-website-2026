@@ -14,9 +14,16 @@ import type { TechnicalArticleItem, TechnicalArticleLocale } from "./technical-a
 import { copy as noise } from "./instrument-fluidics/noise-test.zh";
 import { copy as application } from "./instrument-fluidics/chemiluminescence.zh";
 import { copy as diaphragmOverview } from "./instrument-fluidics/what-is-a-diaphragm-pump.zh";
+import { copy as virtualLeaks, virtualLeaksArticleSlug } from "./instrument-fluidics/virtual-leaks-causes-diagnosis-prevention.zh";
+import { virtualLeaksTranslations } from "./instrument-fluidics/virtual-leaks-locales";
+import { virtualLeaksMentions } from "./instrument-fluidics/virtual-leaks-locales/shared";
+import { getHardTubeGuideProducts } from "./hard-tube-fittings-related-products";
 
 // Model cards are configuration examples, not the unidentified catalogue test samples.
 const definitions = [
+  { slug: virtualLeaksArticleSlug, copy: virtualLeaks, category: "fittings-tubing", series: "", date: "2026-11-17",
+    models: [], pumpIds: [],
+    anchors: ["leak-types", "gas-load", "trapped-volumes", "materials-outgassing", "field-diagnosis", "design-prevention", "further-reading"] },
   { slug: "quick-disconnect-coupling-flow-pressure-drop", copy: flow, category: "fittings-tubing", series: "q20,q40,q60", date: "2026-10-27",
     models: ["Q2002-PNV-SPPE", "Q2004-PNV-SPPE", "Q4004-PNV-SPPE", "Q4006-PNV-SPPE", "Q6006-SNV-SPPE", "Q6008-PNV-SPPE"], pumpIds: [],
     anchors: ["flow-factors", "read-curves", "flow-tables", "kv-cv-calculation", "valve-pressure-drop", "model-size-codes", "suction-side", "parallel-branches", "fluid-properties", "sample-validation", "further-reading"] },
@@ -57,6 +64,7 @@ function relationKeys(item: Pick<typeof definitions[number], "series" | "pumpIds
 
 // Articles with a full set of translations; every other article here stays Chinese-only.
 const translatedArticles = {
+  [virtualLeaksArticleSlug]: virtualLeaksTranslations,
   "quick-disconnect-coupling-flow-pressure-drop": flowTranslations,
   "quick-disconnect-coupling-pressure-rating": pressureTranslations,
   "what-is-a-diaphragm-pump": diaphragmOverviewTranslations,
@@ -121,9 +129,18 @@ export function getInstrumentFluidicsArticle(slug: string, locale: TechnicalArti
         : locale === "zh-CN" ? `恒永达 ${ref.model} 微型隔膜泵` : `FOREACH ${ref.model} — ${pumpNames[locale]}`,
       imageAspectRatio: useCategoryCards && ref.copyKey !== "dpgl800-brushless" ? 4 / 3 : 1 }] : [];
   });
-  const products = [...fittings, ...pumps];
-  return { ...article, products, sidebarProducts: products.slice(0, 2), footerProducts: products,
-    subject: { about: [article.copy.metadata.title], mentions: article.series ? article.series.toUpperCase().split(",") : pumpMentions[locale] },
+  // Connection examples do not imply a high-vacuum rating or a measured leak rate.
+  const isVirtualLeaksArticle = article.slug === virtualLeaksArticleSlug;
+  const products = isVirtualLeaksArticle
+    ? getHardTubeGuideProducts(locale).products.map(product => ({ ...product, imageAspectRatio: 1 }))
+    : [...fittings, ...pumps];
+  const sidebarProducts = isVirtualLeaksArticle
+    ? products.filter((_, index) => index === 0 || index === 2).map(product => ({ ...product, imageFill: true }))
+    : products.slice(0, 2);
+  return { ...article, products, sidebarProducts, footerProducts: products,
+    subject: { about: [article.copy.metadata.title], mentions: isVirtualLeaksArticle
+      ? virtualLeaksMentions[locale]
+      : article.series ? article.series.toUpperCase().split(",") : pumpMentions[locale] },
     navigation: article.copy.sections.map((section, index) => ({ id: article.anchors[index], label: section.title })),
   };
 }

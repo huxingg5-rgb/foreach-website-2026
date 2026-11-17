@@ -19,6 +19,7 @@ import type { CadDrawingType } from "@/data/products/detail/drawing-requirements
 import type { FlangedConfiguration } from "@/data/products/configurator/flanged-tubing-configurations";
 import type { GeneratedPdfAttachment } from "@/lib/inquiry/pdf-attachments";
 import type { EaPumpInquiryConfiguration } from "@/data/products/configurator/ea-pump-inquiry";
+import type { InstrumentInquiryConfiguration } from "@/data/products/configurator/instrument-inquiry";
 
 export type SelectionCartSourceType =
   | "fitting-replacement"
@@ -75,6 +76,7 @@ export interface SelectionCartItem {
   drawingAttachment?: GeneratedPdfAttachment;
   /** Customer requirements, kept separate from the reference product model. */
   eaPumpConfiguration?: EaPumpInquiryConfiguration;
+  instrumentConfiguration?: InstrumentInquiryConfiguration;
 }
 
 /* 加入清单时的输入结构

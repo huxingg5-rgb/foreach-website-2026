@@ -29,6 +29,7 @@ import { Suspense } from "react";
 
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { applyInstrumentProductChineseSpecs, getInstrumentProductSections } from "@/components/products/detail/InstrumentProductSections";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import { getLocalizedSiteHref } from "@/lib/seo/site-url";
@@ -237,7 +238,8 @@ export default async function ProductDetailRoutePage({
 
     return (
       <ProductDetailClient
-        data={getControlModuleProductDetailData(controlDetail)}
+        data={applyInstrumentProductChineseSpecs(getControlModuleProductDetailData(controlDetail))}
+        {...getInstrumentProductSections(controlDetail.slug)}
       />
     );
   }

@@ -244,6 +244,11 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "diaphragm-pump-noise-test-conditions": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["noise-vibration", "testing-validation", "installation"], "relatedProducts": ["DPL30", "DPL60"]},
   "chemiluminescence-analyzer-diaphragm-pump-wash-waste": {"primaryCategory": "applications-solutions", "secondaryCategory": "ivd-medical-devices", "tagKeys": ["selection", "testing-validation"], "relatedProducts": ["DPL30", "DPL60", "DPGL800"]},
   "what-is-a-diaphragm-pump": {"primaryCategory": "pumps", "secondaryCategory": "miniature-diaphragm-pumps", "tagKeys": ["selection", "liquid-pump", "self-priming", "pulsation"], "relatedProducts": ["DPL30", "DPL60", "DPGL800"]},
+  "virtual-leaks-causes-diagnosis-prevention": {
+    primaryCategory: "general-fluidics", secondaryCategory: "sealing-leakage",
+    tagKeys: ["sealing-leakage", "troubleshooting", "testing-validation"],
+    relatedProducts: ["HFL-M6-16-PV-N", "HN6-M6-16-PV-N"],
+  },
 
   "how-does-a-rotary-selector-valve-work": {
     primaryCategory: "valves", secondaryCategory: "multi-port-valves",
@@ -389,6 +394,32 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
     }, relatedProducts: ["DPL30", "DPL60"] },
   "300-vs-600-ml-min-ink-circulation-return-pump-selection": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "flow", "operating-point", "tubing-resistance", "pressure-drop", "selection"], literalTags: ["300 mL/min", "600 mL/min"], relatedProducts: ["DPL30", "DPL60"] },
   "white-ink-circulation-pump-selection-sedimentation": { primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet", tagKeys: ["inkjet", "ink-circulation", "white-ink", "pigment-sedimentation", "material-compatibility", "testing-validation"], literalTags: ["TiO₂"], relatedProducts: ["DPL30", "DPL60"] },
+  "inkjet-printer-pumps-micro-diaphragm-pumps": {
+    primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet",
+    tagKeys: ["inkjet", "ink-circulation", "liquid-pump", "pressure", "material-compatibility", "selection"],
+    relatedProducts: ["DPL30", "DPL60"],
+    localizedLiteralTags: {
+      "zh-CN": ["喷墨打印机泵", "微型隔膜泵", "UV 墨水泵"],
+      en: ["Inkjet printer pump", "Micro diaphragm pump", "UV ink pump"],
+      es: ["Bomba de inyección de tinta", "Microbomba de diafragma", "Bomba de tinta UV"],
+      fr: ["Pompe jet d’encre", "Micropompe à membrane", "Pompe pour encre UV"],
+      ko: ["잉크젯 프린터 펌프", "소형 다이어프램 펌프", "UV 잉크 펌프"],
+      ru: ["Насос струйного принтера", "Мембранный микронасос", "Насос для УФ-чернил"],
+    },
+  },
+  "ink-starvation-inkjet-troubleshooting": {
+    primaryCategory: "applications-solutions", secondaryCategory: "printing-inkjet",
+    tagKeys: ["inkjet", "troubleshooting", "liquid-pump", "flow", "pressure", "testing-validation"],
+    relatedProducts: ["DPL30", "DPL60"],
+    localizedLiteralTags: {
+      "zh-CN": ["供墨不足", "断墨", "管路进气"],
+      en: ["Ink starvation", "Ink dropout", "Air in ink lines"],
+      es: ["Falta de suministro de tinta", "Pérdida de inyectores", "Aire en los tubos de tinta"],
+      fr: ["Manque d’alimentation en encre", "Buses manquantes", "Air dans les tuyaux d’encre"],
+      ko: ["잉크 공급 부족", "노즐 누락", "잉크 배관 공기 유입"],
+      ru: ["Недостаточная подача чернил", "Пропуски дюз", "Воздух в чернильных трубках"],
+    },
+  },
   "ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump": { primaryCategory: "applications-solutions", secondaryCategory: "cleaning-waste", tagKeys: ["ivd", "waste-handling", "gas-liquid", "liquid-pump", "selection", "self-priming", "material-compatibility", "pressure"], localizedLiteralTags: {
       "zh-CN": ["废液泵", "废液抽吸泵", "真空"],
       "en": ["Waste liquid pump", "Waste aspiration pump", "Vacuum"],

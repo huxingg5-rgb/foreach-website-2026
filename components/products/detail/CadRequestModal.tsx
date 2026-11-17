@@ -162,7 +162,7 @@ export default function CadRequestModal({ locale, productName, productSeries, pr
     busyRef.current = true;
     setPhase("sending"); setError("");
     try {
-      await postInquiry("/api/inquiry/send-code", { email: normalizedEmail });
+      await postInquiry("/api/inquiry/send-code", { email: normalizedEmail, locale });
       setVerifiedEmail(""); setCode(""); setSentTo(normalizedEmail); setCountdown(60);
     } catch (failure) {
       if (failure instanceof Error && failure.message === "send_too_frequently") setCountdown(60);

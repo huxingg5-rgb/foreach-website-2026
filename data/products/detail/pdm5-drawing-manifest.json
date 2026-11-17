@@ -1,0 +1,48 @@
+{
+  "zh": {
+    "model": "PDM5",
+    "language": "zh",
+    "specification": "PS-110B-2508-00001_A02_cn",
+    "sourcePdfUrl": "/downloads/resources/datasheets/zh-CN/Smart-Control-Modules/ps-110b-2508-00001-a02-cn-pdm5-pressure-sensor.pdf",
+    "sourcePage": 3,
+    "sourceSha256": "18f025cc0e0f1a4b1795d401333e614d9a34ebacb575d2ddcaab426db1c4f214",
+    "cropFromTopLeftPt": [
+      25,
+      70,
+      550,
+      540
+    ],
+    "sourceViewImageSha256": [
+      "2254867e75f539478faea4c220e82b7655c15d50bbaacb4f7f109a0201ad0f35",
+      "9bcf76bbbcaf09fc4324f820b4c65596787b027ddc82076b8cb391fe28f14ef4",
+      "ae6b3d0d54bb2c18796f93b2972e4c248b55970ebbb40294f6b59f13783e8c91",
+      "c6ba8ee18395483c32e128debc630fd032b7b13f1b67f9365ba61d8e6432670e"
+    ],
+    "drawingPdfUrl": "/documents/products/control/pdm5/pdm5-outline-drawing-zh.pdf",
+    "sha256": "66ca68f5da1a855477d52f1dc8ee1295a1bcc98b2ab4a9e5e28aaaa6b239f359",
+    "bytes": 151391
+  },
+  "en": {
+    "model": "PDM5",
+    "language": "en",
+    "specification": "PS-110B-2607-00001_A00_en",
+    "sourcePdfUrl": "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2607-00001-a00-en-pdm5-pressure-sensor.pdf",
+    "sourcePage": 3,
+    "sourceSha256": "b5dab460ef5d83537f6f4e3799b59dc4a263a05842b4d32557485b2ad5f19a90",
+    "cropFromTopLeftPt": [
+      25,
+      70,
+      550,
+      540
+    ],
+    "sourceViewImageSha256": [
+      "2254867e75f539478faea4c220e82b7655c15d50bbaacb4f7f109a0201ad0f35",
+      "9bcf76bbbcaf09fc4324f820b4c65596787b027ddc82076b8cb391fe28f14ef4",
+      "ae6b3d0d54bb2c18796f93b2972e4c248b55970ebbb40294f6b59f13783e8c91",
+      "c6ba8ee18395483c32e128debc630fd032b7b13f1b67f9365ba61d8e6432670e"
+    ],
+    "drawingPdfUrl": "/documents/products/control/pdm5/pdm5-outline-drawing-en.pdf",
+    "sha256": "b41e85cbcb167c7a97aa57f0eacd06874e62895a5c60ec5e874cfb228f2d2eb5",
+    "bytes": 68426
+  }
+}

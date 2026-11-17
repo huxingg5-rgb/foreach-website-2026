@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "tessellation": {
+    "linearUnit": "millimeter",
+    "linearDeflectionType": "absolute_value",
+    "linearDeflection": 0.03,
+    "angularDeflection": 0.2
+  },
+  "coordinateDecimals": 5,
+  "geometryPolicy": "All source meshes, BREP faces and triangle indices retained; coordinates rounded to 0.00001 mm.",
+  "models": [
+    {
+      "tubeOdCode": "16",
+      "model": "ABD-06M-V16",
+      "viewerId": "abd-06m-v16",
+      "model3dUrl": "/models/products/control/abd/cad/abd-06m-v16.fcad.gz",
+      "sourceFile": "ABD-06M-V16.stp",
+      "sourceSha256": "803728b56394542f30f9faa683d60590d37713468b694c78004b80b4e0489995",
+      "assetSha256": "b30889932c3796cb89c6827bde75e9117703f6a4a482c3c15af6d4effb5ced3d",
+      "bytes": 116935,
+      "meshCount": 19,
+      "triangles": 23454,
+      "sourceSizeMm": [
+        29.4,
+        35.4,
+        19.6
+      ]
+    },
+    {
+      "tubeOdCode": "20",
+      "model": "ABD-06M-V20",
+      "viewerId": "abd-06m-v20",
+      "model3dUrl": "/models/products/control/abd/cad/abd-06m-v20.fcad.gz",
+      "sourceFile": "ABD-06M-V20.stp",
+      "sourceSha256": "24bd99dbf03cb3f1db53fc2165be4882697f9f2f5af8a1272cad356a2cf01e0c",
+      "assetSha256": "85e0385c0395a4521d6cc031f7bbec6bb21bd837509eb73af56564e1e75930ef",
+      "bytes": 145994,
+      "meshCount": 20,
+      "triangles": 28336,
+      "sourceSizeMm": [
+        29.4,
+        35.4,
+        19.6
+      ]
+    },
+    {
+      "tubeOdCode": "25",
+      "model": "ABD-06M-V25",
+      "viewerId": "abd-06m-v25",
+      "model3dUrl": "/models/products/control/abd/cad/abd-06m-v25.fcad.gz",
+      "sourceFile": "ABD-06M-V25.stp",
+      "sourceSha256": "8aeb6635cdb858e5423798da6af96fb7c05c8dbf64409db0932b0fbd7ac830e4",
+      "assetSha256": "512011a0603ea7499b7f394b256b4e330b4ed29fe258f80cc66b76a9f5fa8b7f",
+      "bytes": 140835,
+      "meshCount": 19,
+      "triangles": 27720,
+      "sourceSizeMm": [
+        29.4,
+        35.4,
+        19.6
+      ]
+    },
+    {
+      "tubeOdCode": "32",
+      "model": "ABD-06M-V32",
+      "viewerId": "abd-06m-v32",
+      "model3dUrl": "/models/products/control/abd/cad/abd-06m-v32.fcad.gz",
+      "sourceFile": "ABD-06M-V32.stp",
+      "sourceSha256": "0e5921885ad29cfe90db81cd5428355e53e7eec9b547bd488500280898948a47",
+      "assetSha256": "9a2f30eee8d60caef663468b07b746dd6aa1fd8148f435b7e8922c9142d7b125",
+      "bytes": 144774,
+      "meshCount": 19,
+      "triangles": 28174,
+      "sourceSizeMm": [
+        29.4,
+        35.4,
+        19.6
+      ]
+    },
+    {
+      "tubeOdCode": "48",
+      "model": "ABD-06M-V48",
+      "viewerId": "abd-06m-v48",
+      "model3dUrl": "/models/products/control/abd/cad/abd-06m-v48.fcad.gz",
+      "sourceFile": "ABD-06M-V48.stp",
+      "sourceSha256": "997f0be499fbffa39aede8a6bda00be06e220b361ab798791359ec425a36f255",
+      "assetSha256": "332f6c158da33b0301a99bcef91cf95186e390d7e919d06c8d2f0a7128ae5a6d",
+      "bytes": 146102,
+      "meshCount": 19,
+      "triangles": 28318,
+      "sourceSizeMm": [
+        29.4,
+        35.4,
+        19.6
+      ]
+    },
+    {
+      "tubeOdCode": "60",
+      "model": "ABD-06M-V60",
+      "viewerId": "abd-06m-v60",
+      "model3dUrl": "/models/products/control/abd/cad/abd-06m-v60.fcad.gz",
+      "sourceFile": "ABD-06M-V60.stp",
+      "sourceSha256": "5570e86c6e0ec2deb8d87c10e1aab9625f4dd9ad57928a684fa0adf483fe1d6f",
+      "assetSha256": "e295937d5f1e17c1d27c1e8cf5cb8316f34817ef89ef3762d33c248ed8e3d68b",
+      "bytes": 128672,
+      "meshCount": 18,
+      "triangles": 26832,
+      "sourceSizeMm": [
+        29.4,
+        35.4,
+        19.6
+      ]
+    },
+    {
+      "tubeOdCode": "64",
+      "model": "ABD-06M-V64",
+      "viewerId": "abd-06m-v64",
+      "model3dUrl": "/models/products/control/abd/cad/abd-06m-v64.fcad.gz",
+      "sourceFile": "ABD-06M-V64.stp",
+      "sourceSha256": "107db9c8f06678866a11d73848921393cadf324e1917c2a6da9aa9d8e708becb",
+      "assetSha256": "c170a83589f664e4d3df92dedb4ff863f98710e487520dba29236a0d9ad4e851",
+      "bytes": 143434,
+      "meshCount": 20,
+      "triangles": 27976,
+      "sourceSizeMm": [
+        29.4,
+        35.4,
+        19.6
+      ]
+    }
+  ],
+  "drawings": [
+    {
+      "tubeOdCode": "16",
+      "model": "ABD-06M-V16",
+      "drawingNumber": "M-515-00-04559",
+      "drawingProductCode": "809903",
+      "revision": "001",
+      "drawingPdfUrl": "/documents/products/control/abd/abd-06m-v16-m-515-00-04559-rev001.pdf",
+      "sourceFile": "515-00-04559-C.pdf",
+      "sha256": "3222d813a2a0e7b7c9b729a141971daf2d4af4dd1e658666d0e30ce630ba7104",
+      "bytes": 47451
+    },
+    {
+      "tubeOdCode": "25",
+      "model": "ABD-06M-V25",
+      "drawingNumber": "M-515-00-04243",
+      "drawingProductCode": "449052",
+      "revision": "001",
+      "drawingPdfUrl": "/documents/products/control/abd/abd-06m-v25-m-515-00-04243-rev001.pdf",
+      "sourceFile": "515-00-0243-C_001.pdf",
+      "sha256": "a62be449400bafaed9a43555fd014f8af85b3c14877b305eddba5b942cf7b7b2",
+      "bytes": 78400
+    }
+  ]
+}

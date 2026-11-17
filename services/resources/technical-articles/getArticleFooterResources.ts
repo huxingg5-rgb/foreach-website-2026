@@ -1,4 +1,5 @@
 import { getTubingMaterialArticle } from "@/data/resources/technical-articles/ptfe-tubing.article";
+import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
 import { hasFittingOverviewVideo, isFittingOverviewVideo } from "@/data/resources/installation-guide/fitting-video-relations";
 import { getSolenoidContent } from "@/data/products/detail/solenoid-content";
 import { getSolenoidConfigurationImage } from "@/data/products/detail/solenoid-images";
@@ -18,8 +19,11 @@ import { getValvelessMeteringPumpOverviewProducts } from "@/data/resources/techn
 import { getValveEngineeringArticle } from "@/data/resources/technical-articles/valve-engineering-articles.article";
 import { pipettingBasicsRelatedProductIds } from "@/data/resources/technical-articles/what-is-pipetting.article";
 import { getRelatedResourcesData } from "@/services/resources/getRelatedResourcesData";
+import { applyDiaphragmPumpReferencePhoto } from "@/data/products/detail/diaphragm-pump-reference-models";
 
 const featuredProductIds: Record<string, readonly string[]> = {
+  "inkjet-printer-pumps-micro-diaphragm-pumps": ["diaphragm-dpl30-brushed", "diaphragm-dpl60-brushed", "diaphragm-dpl30h-brushed"],
+  "ink-starvation-inkjet-troubleshooting": ["diaphragm-dpl30-brushed", "diaphragm-dpl60-brushed"],
   "what-is-pipetting": pipettingBasicsRelatedProductIds,
   // Pressure-drop articles cover the pump and restrictive flow-path components.
   "fluid-resistance-calculator-liquid-path-design-guide": ["diaphragm-dpl30-brushed", "6010-solenoid-valve", "mrv3-ceramic-rotary-valve"],
@@ -29,7 +33,7 @@ const featuredProductIds: Record<string, readonly string[]> = {
 function selectArticleResources(data: RelatedResourcesData): RelatedResourcesData {
   const ids = new Set<string>();
   const hrefs = new Set<string>();
-  const products = data.products.filter(product => {
+  const products = data.products.map(product => applyDiaphragmPumpReferencePhoto(product, data.locale)).filter(product => {
     const href = product.href?.replace(/\/$/, "");
     if (!href || !product.title || !product.imageSrc || ids.has(product.id) || hrefs.has(href)) return false;
     ids.add(product.id);
@@ -114,6 +118,21 @@ export function getArticleFooterResources(article: TechnicalArticleItem, locale:
     default: data = getRelatedResourcesData({ sourceType: "article", sourceId: article.id,
       sourceSlug: article.slug, relationKeys: article.relationKeys, locale,
       featuredProductIds: featuredProductIds[article.slug] ?? getValveEngineeringArticle(article.slug, locale)?.productIds });
+  }
+  if (article.slug === "ink-starvation-inkjet-troubleshooting") {
+    // This installation video supports the article's tubing-connection inspection.
+    // Do not attach every motor, mounting or pressure demonstration for these series.
+    data.videos = data.videos.filter(video =>
+      video.id === "youtube-diaphragm-pump-hose-barb-protection" &&
+      Boolean(getVideoGuideDetail(locale, video.id)));
+  }
+  if (article.slug === "inkjet-printer-pumps-micro-diaphragm-pumps") {
+    data.products = data.products.map(product => ({ ...product, imageAspectRatio: 1 }));
+    // The available selection video supports the final section, not an inkjet test claim.
+    // Other locales remain empty until an actual localized video detail is available.
+    data.videos = data.videos.filter(video =>
+      video.id === "youtube-diaphragm-selection" &&
+      Boolean(getVideoGuideDetail(locale, video.id)));
   }
   // Preserve each article's product selection while exposing the newly added fitting videos.
   if (hasFittingOverviewVideo(article.relationKeys)) {

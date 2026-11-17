@@ -2,6 +2,7 @@ import { valvelessPumpSelectionProducts } from "../selection/valveless-pump-sele
 import type { ProductApplicationsContent } from "./product-detail.types";
 import { applyRplP4ChineseDetailCopy } from "./rpl-p4-copy.zh";
 import { applyValvelessPumpReviewedChineseCopy } from "./valveless-pump-content.zh";
+import { applyDrplChineseSpecification } from "./drpl-specification.zh";
 /** Chinese detail introductions; other locales retain their existing authored copy. */
 const descriptions: Record<string, string> = {
   "rpl-p4": "恒永达 RPL-P4 是单圈排量为 12–80 μL/rev 的单头陶瓷柱塞无阀泵，用于小体积液体的定量输送与分配。产品可用于微量试剂加注、滴定加液和小体积液体分装，面向自动化分析仪器、滴定设备和实验室液体处理模块，适合单圈排量需求较小、需要重复定量加液的液路。",
@@ -37,7 +38,8 @@ export function applyValvelessPumpChineseCopy<T extends {
   // Foreign routes retain the exact legacy source before localization.
   const title = renderLocale === "zh" ? titles[data.slug!] : titles[data.slug!].replaceAll("采用聚偏二氟乙烯（PVDF）泵头", "采用 PVDF 泵头");
   const legacy = { ...corrected, breadcrumbLabel: card?.cardTitle.zh || data.slug, breadcrumbParentLabel: "无阀泵", breadcrumbParentHref: "/products/pumps/valveless-pumps/", description, model: title, title, name: title, applicationDetails, commonApplications: applicationDetails.items.map((item) => item.title) };
-  return applyRplP4ChineseDetailCopy(applyValvelessPumpReviewedChineseCopy(legacy, renderLocale), renderLocale);
+  const reviewed = applyRplP4ChineseDetailCopy(applyValvelessPumpReviewedChineseCopy(legacy, renderLocale), renderLocale);
+  return renderLocale === "zh" ? applyDrplChineseSpecification(reviewed) : reviewed;
 }
 
 // Keep detail H1 identical to the corresponding Chinese card H3, with the brand prefix.

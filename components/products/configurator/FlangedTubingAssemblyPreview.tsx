@@ -1,67 +1,76 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { describeFlangedEndFinish, endConnection, normalizeFlangedChoice, type FlangedEnd, type FlangedTubingChoice } from "@/data/products/configurator/flanged-tubing";
-import { assemblyFittingAccessories, getAssemblyFitting, getAssemblyTube } from "@/data/products/configurator/tubing-assembly-catalog";
-import { assemblyPreviewAsset, assemblyExteriorPreviewAsset } from "@/data/products/configurator/tubing-assembly-preview";
+import { flushSync } from "react-dom";
+import { describeFlangedEndFinish, endConnection, normalizeFlangedChoice, type FlangedTubingChoice } from "@/data/products/configurator/flanged-tubing";
+import { getAssemblyTube } from "@/data/products/configurator/tubing-assembly-catalog";
+import { assemblyPreviewConfig } from "@/data/products/configurator/tubing-assembly-preview";
+import { loadFlangedAssemblyPreview, type AssemblyPreviewRenderer } from "./flanged-tubing-preview-loader";
 import { assemblyView } from "../tubing-assemblies/assembly-view";
 import { assemblyText } from "@/data/products/configurator/tubing-assembly.intl";
 import styles from "./FlangedTubingAssemblyPreview.module.css";
 
-type RenderEnd = FlangedEnd & { enabled: boolean; cadUrl?: string; exteriorSourceModel?: string; accessoryCadUrl?: string; accessoryColor?: string; accessoryMissing?: boolean };
-type RenderConfig = { mode: string; inner: number; outer: number; tubeColor: string; tubeMaterial: string; labelA: boolean; labelB: boolean; a: RenderEnd; b: RenderEnd };
-type Renderer = { render: (config: RenderConfig) => Promise<void>; dispose: () => void };
+type PreviewFrame = { key: string; annotations: string; choice: FlangedTubingChoice; notice?: string };
 type Panel = "tube" | "a" | "b" | "extra";
 type Callout = { part: number; panel: Panel; x: number; y: number; path: string; title: string; detail?: string; anchor?: "start" | "middle" | "end" };
 
 function short(text: string, max = 24) { return text.length > max ? `${text.slice(0, max)}…` : text; }
 
-export default function FlangedTubingAssemblyPreview({ locale = "zh", choice: inputChoice, activePart, dimensionNotice, onSelectPanel }: {
+export default function FlangedTubingAssemblyPreview({ locale = "zh", choice: inputChoice, activePart, dimensionNotice: inputNotice, onSelectPanel }: {
   locale?: string; choice: FlangedTubingChoice; activePart: number | null; dimensionNotice?: string; onSelectPanel: (panel: Panel, part?: number) => void;
 }) {
   const t = (text: string) => assemblyText(text, locale);
-  const choice = normalizeFlangedChoice(inputChoice);
-  const tube = getAssemblyTube(choice.tubeModel)!;
+  const requestedChoice = normalizeFlangedChoice(inputChoice);
+  const renderKey = JSON.stringify(assemblyPreviewConfig(requestedChoice));
+  const annotations = JSON.stringify({ choice: requestedChoice, notice: inputNotice });
   const canvas = useRef<HTMLCanvasElement>(null);
-  const instance = useRef<Promise<Renderer> | null>(null);
-  const [renderedKey, setRenderedKey] = useState("");
+  const instance = useRef<(() => Promise<AssemblyPreviewRenderer>) | null>(null);
+  const [frame, setFrame] = useState<PreviewFrame | null>(null);
   const [errorKey, setErrorKey] = useState<string | null>(null);
-  const renderEnd = (end: FlangedEnd): RenderEnd => {
-    const f = getAssemblyFitting(end.fittingModel);
-    const accessory = assemblyFittingAccessories(f, endConnection(end), tube.outer).find(a => a.productCode === end.accessoryCode);
-    const enabled = Boolean(f?.family === end.series && accessory);
-    const preview = enabled ? assemblyPreviewAsset(end, tube.outer) : null;
-    const exterior = enabled && !preview ? assemblyExteriorPreviewAsset(end, tube.outer) : null;
-    return { ...end, enabled, connection: endConnection(end), cadUrl: preview?.url || exterior?.url, exteriorSourceModel: exterior?.sourceModel,
-      accessoryCadUrl: enabled && accessory?.tubeOuterDiameters.includes(tube.outer) ? accessory.cadUrl : undefined, accessoryColor: accessory?.color,
-      accessoryMissing: Boolean(enabled && accessory?.tubeOuterDiameters.includes(tube.outer) && !accessory.cadUrl) };
-  };
-  const config: RenderConfig = {
-    mode: choice.mode, inner: tube.inner, outer: tube.outer, tubeColor: tube.color, tubeMaterial: tube.material, labelA: choice.labelA, labelB: choice.labelB,
-    a: renderEnd(choice.a), b: renderEnd(choice.b),
-  };
-  const renderKey = JSON.stringify(config);
+  const [retry, setRetry] = useState(0);
+  const pending = frame?.key !== renderKey;
   const error = errorKey === renderKey;
+  const choice = pending && frame ? frame.choice : requestedChoice;
+  const dimensionNotice = pending && frame ? frame.notice : inputNotice;
+  const tube = getAssemblyTube(choice.tubeModel)!;
+  const config = assemblyPreviewConfig(choice);
   const dimensionLabel = `L = ${choice.length || t("待填写")} mm${choice.tolerance ? ` ±${choice.tolerance} mm` : ""}`;
   const dimensionLabelWidth = [...dimensionLabel].reduce((width, char) => width + (/[\u0000-\u00ff]/.test(char) ? 9 : 15), 24);
+  // Length and label text need no CAD reload, but belong to the retained frame.
+  if (frame?.key === renderKey && frame.annotations !== annotations) {
+    setFrame({ key: renderKey, annotations, ...JSON.parse(annotations) });
+  }
   useEffect(() => {
     const target = canvas.current!;
     let released = false;
-    const moduleUrl = "/models/products/tubing-assemblies/flanged-assembly-renderer.mjs?v=16-hsf-exact-cad";
-    const pending: Promise<Renderer> = import(/* webpackIgnore: true */ moduleUrl).then(module => {
-      // Do not create a second WebGL renderer on a canvas released during a
-      // pending import (including React's development effect replay).
-      if (released) throw new Error("Preview released before initialization");
-      return module.createFlangedAssemblyRenderer(target);
-    });
-    instance.current = pending;
-    return () => { released = true; void pending.then(renderer => renderer.dispose()).catch(() => undefined); if (instance.current === pending) instance.current = null; };
+    let request: Promise<AssemblyPreviewRenderer> | null = null;
+    const getRenderer = () => {
+      if (!request) {
+        const next = loadFlangedAssemblyPreview().then(runtime => {
+          if (released) throw new Error("Preview released before initialization");
+          return runtime.createFlangedAssemblyRenderer(target);
+        });
+        request = next;
+        void next.catch(() => { if (request === next) request = null; });
+      }
+      return request;
+    };
+    instance.current = getRenderer;
+    return () => { released = true; void request?.then(renderer => renderer.dispose()).catch(() => undefined); if (instance.current === getRenderer) instance.current = null; };
   }, []);
   useEffect(() => {
     let canceled = false;
-    void instance.current?.then(renderer => renderer.render(JSON.parse(renderKey))).then(() => { if (!canceled) { setErrorKey(null); setRenderedKey(renderKey); } }).catch(() => { if (!canceled) setErrorKey(renderKey); });
+    void instance.current?.().then(renderer => renderer.render(JSON.parse(renderKey))).then(committed => {
+      if (!canceled && committed) {
+        // WebGL and SVG annotations change in the same paint, including rapid
+        // selection changes. An older request must never mark a new one ready.
+        flushSync(() => { setErrorKey(null); setFrame({ key: renderKey, annotations, ...JSON.parse(annotations) }); });
+      }
+    }).catch(() => { if (!canceled) setErrorKey(renderKey); });
     return () => { canceled = true; };
-  }, [renderKey]);
+    // Annotation-only edits are synchronized above without rebuilding CAD.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [renderKey, retry]);
 
   const summaryY = 205;
   const callouts: Callout[] = [
@@ -81,10 +90,10 @@ export default function FlangedTubingAssemblyPreview({ locale = "zh", choice: in
     if (config.b.enabled && choice.b.stop !== "无") callouts.push({ part: 7, panel: "b", x: 691, y: 154, path: "M691 113V136", title: `${choice.b.stop}限位` });
   } else callouts.push({ part: 6, panel: "b", x: 980, y: summaryY, anchor: "end", path: "M978 113V186", title: "B 端 · 自由管端" });
 
-  return assemblyView(<figure className={styles.figure} data-flanged-cad-preview="true" data-exterior-source-a={config.a.exteriorSourceModel} data-exterior-source-b={choice.mode === "double" ? config.b.exteriorSourceModel : undefined} data-render-ready={String(renderedKey === renderKey && !error)}>
-    <div className={styles.graphViewport}><div className={styles.stage}>
+  return assemblyView(<figure className={styles.figure} data-flanged-cad-preview="true" data-exterior-source-a={config.a.exteriorSourceModel} data-exterior-source-b={choice.mode === "double" ? config.b.exteriorSourceModel : undefined} data-render-ready={String(!pending && !error)} data-preview-state={error ? "error" : pending ? frame ? "updating" : "loading" : "ready"} aria-busy={pending && !error}>
+    <div className={styles.previewShell}><div className={styles.graphViewport}><div className={styles.stage}>
+      <div className={styles.frame} data-has-frame={Boolean(frame)} data-updating={pending && Boolean(frame)} inert={pending || undefined} aria-hidden={!frame || undefined}>
       <canvas ref={canvas} className={styles.canvas} role="img" aria-label={`${t("管组件渲染预览")} · ${tube.material} · A: ${config.a.enabled ? choice.a.series : t("待匹配")} · B: ${choice.mode === "double" ? config.b.enabled ? choice.b.series : t("待匹配") : t("自由管端")}`} />
-      {renderedKey !== renderKey || error ? <div className={styles.status} role="status">{error ? "预览暂时无法加载，请重新打开选型。" : "正在加载组件预览…"}</div> : null}
       <svg className={styles.annotations} viewBox="0 0 1020 220" aria-label="管组件直接参数标注" role="group">
         <text className={styles.calloutTitle} x="170" y="57" textAnchor="middle" data-end-label="a">A 端</text>
         <text className={styles.calloutTitle} x={choice.mode === "double" ? 850 : 978} y="57" textAnchor={choice.mode === "double" ? "middle" : "end"} data-end-label="b">B 端</text>
@@ -118,6 +127,16 @@ export default function FlangedTubingAssemblyPreview({ locale = "zh", choice: in
           </g>;
         })}
       </svg>
+      </div>
     </div></div>
+    {pending || error ? <div className={styles.status} data-has-frame={Boolean(frame)} role="status" aria-live="polite">
+      {!frame && !error ? <div className={styles.skeleton} aria-hidden="true"><span /><span /><span /></div> : null}
+      <div className={styles.statusMessage}>
+        {!error ? <span className={styles.spinner} aria-hidden="true" /> : null}
+        <span>{error ? frame ? "预览更新失败，仍显示上次预览。" : "预览暂时无法加载。" : frame ? "正在更新预览…" : "正在加载组件预览…"}</span>
+        {error ? <button type="button" onClick={() => { setErrorKey(null); setRetry(value => value + 1); }}>重试</button> : null}
+      </div>
+    </div> : null}
+    </div>
   </figure>, locale);
 }

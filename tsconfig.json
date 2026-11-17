@@ -35,11 +35,16 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    ".next/middleware.ts"
+    ".next/tubing-preview-20261115/types/**/*.ts",
+    ".next/tubing-preview-20261115/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
     "_backup",
-    "**/_backup/**"
+    "**/_backup/**",
+    ".next/dev/**",
+    ".next-*/**",
+    ".next/*/types/**",
+    ".next/*/dev/types/**"
   ]
 }

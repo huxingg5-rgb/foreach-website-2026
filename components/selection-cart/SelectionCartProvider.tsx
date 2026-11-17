@@ -3,6 +3,7 @@ import { drawingRequirementsLine, getDrawingTypes, normalizeDrawingTypes, type C
 import { changeCartGroupDrawingTypes } from "./selection-cart-bundles";
 import { normalizeFlangedChoice, validateFlangedChoice } from "@/data/products/configurator/flanged-tubing";
 import { eaPumpInquirySummary } from "@/data/products/configurator/ea-pump-inquiry";
+import { instrumentInquiryProductName, instrumentInquirySummary, normalizeInstrumentInquiry, resolveInstrumentInquiry } from "@/data/products/configurator/instrument-inquiry";
 
 /* =========================================================
    SelectionCartProvider.tsx
@@ -274,7 +275,7 @@ function buildCartText(
   const lines = getCartGroups(items).flatMap((group, groupIndex) => group.items.map((item, partIndex) => {
     const number = group.accessories.length ? `${groupIndex + 1}.${partIndex + 1}` : `${groupIndex + 1}`;
     const isProductSelection = item.sourceType === "pump-selection" || item.sourceType === "tubing-selection";
-    const localizedProductName = isProductSelection
+    const localizedProductName = item.instrumentConfiguration ? instrumentInquiryProductName(item.instrumentConfiguration.family, locale) : isProductSelection
       ? getLocalizedFilterOptionLabel(item.productName, locale)
       : item.productName;
     const sourceLabel = getCartText(
@@ -290,6 +291,7 @@ function buildCartText(
         `${getCartText(locale, "Product Type", "产品类型")}: ${localizedProductName}`,
         `${getCartText(locale, "Product Model", "产品型号")}: ${item.foreachModel}`,
         ...(item.eaPumpConfiguration ? [eaPumpInquirySummary(item.eaPumpConfiguration, locale)] : []),
+        ...(item.instrumentConfiguration ? [instrumentInquirySummary(item.instrumentConfiguration, locale)] : []),
         ...(item.bundleId ? [`${getCartText(locale, "Product Code", "商品编码")}: ${hardTubeProductCodeText(item, getCartText(locale, "To be confirmed", "待确认"))}`] : []),
         `${getCartText(locale, "Quantity", "数量")}: ${item.quantity}`,
         drawingRequirementsLine(item, locale),
@@ -343,8 +345,15 @@ export function SelectionCartProvider({
           migrateLegacyHflBundle(parsedGlobalCart
             .filter(isPublishedCartItem)
             .map((item) => {
+              const previous = item.instrumentConfiguration;
+              const instrumentConfiguration = previous && ["PDM5", "ABD", "SMTP2", "SMTP4"].includes(previous.family)
+                && previous.choice && typeof previous.choice === "object" ? normalizeInstrumentInquiry(previous) : undefined;
+              const reference = instrumentConfiguration ? resolveInstrumentInquiry(instrumentConfiguration) : undefined;
               return {
                 ...item,
+                // Keep saved quantities and IDs while removing obsolete selection fields
+                // and correcting references that are no longer backed by an assigned SKU.
+                ...(instrumentConfiguration && reference ? { instrumentConfiguration, foreachModel: reference.model, productCode: reference.productCode } : {}),
                 quantity: Math.max(1, Number(item.quantity || 1)),
                 needDrawing: Boolean(item.needDrawing), drawingTypes: getDrawingTypes(item),
               };
@@ -676,8 +685,3 @@ export function useSelectionCart() {
 
   return context;
 }
-
-
-
-
-

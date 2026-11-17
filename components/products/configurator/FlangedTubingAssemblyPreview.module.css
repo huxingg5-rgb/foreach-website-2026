@@ -1,6 +1,10 @@
 .figure { margin: 6px 0 0; min-width: 0; }
+.previewShell { position: relative; }
 .graphViewport { min-width: 0; overflow-x: auto; }
 .stage { position: relative; width: 100%; aspect-ratio: 1020 / 220; background: #fff; }
+.frame { width: 100%; height: 100%; }
+.frame[data-has-frame="false"] { visibility: hidden; }
+.frame[data-updating="true"] { opacity: .38; pointer-events: none; }
 .canvas { position: absolute; top: 0; left: 0; width: 100%; height: 96.591%; }
 .annotations { display: block; position: relative; width: 100%; height: 100%; overflow: visible; font-family: "HarmonyOS Sans SC", "Microsoft YaHei", Arial, sans-serif; }
 .dimension { stroke: #000; stroke-width: 1.1; fill: none; color: #000; cursor: pointer; outline: none; }
@@ -16,7 +20,16 @@
 .selected .leader, .calloutGroup:has(.callout:hover) .leader, .calloutGroup:has(.callout:focus-visible) .leader { stroke: var(--brand-cyan, #09e9b4); }
 .selected .calloutTitle, .callout:hover .calloutTitle, .callout:focus-visible .calloutTitle { fill: #173368; }
 .callout:focus-visible .calloutTitle { text-decoration: underline; }
-.status { position: absolute; inset: 0; display: grid; place-items: center; background: #fff; color: #667085; font-size: 13px; }
+.status { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; color: #173368; font-size: 13px; }
+.statusMessage { position: relative; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px; max-width: calc(100% - 24px); padding: 10px 14px; background: rgba(255,255,255,.94); text-align: center; line-height: 1.5; }
+.statusMessage button { pointer-events: auto; padding: 4px 10px; border: 1px solid #cbd5e5; color: #173368; background: #fff; cursor: pointer; font: inherit; }
+.spinner { flex: 0 0 auto; width: 16px; height: 16px; box-sizing: border-box; border: 2px solid #d7e2ed; border-top-color: #173368; border-radius: 50%; animation: previewSpin .8s linear infinite; }
+.skeleton { position: absolute; inset: 25% 7%; display: flex; align-items: center; opacity: .65; }
+.skeleton span { height: 14px; background: #e8edf2; }
+.skeleton span:first-child, .skeleton span:last-child { width: 12%; height: 40px; border: 1px solid #e0e6ed; }
+.skeleton span:nth-child(2) { flex: 1; }
+@keyframes previewSpin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
 .caption { margin: 0; padding: 8px 20px 12px; color: #7a8796; font-size: 12px; line-height: 1.6; }
 @media (max-width: 760px) {
   .stage { min-width: 760px; }

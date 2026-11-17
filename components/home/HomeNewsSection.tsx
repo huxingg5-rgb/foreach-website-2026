@@ -170,16 +170,9 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
             </div> {/* 右侧新闻列表卡片容器结束 */}
 
             <div className="home-news-bottom-actions"> {/* 右下角查看更多按钮区域 */}
-              {locale === "zh-CN" ? (
-                <Link className="home-news-view-all-btn"
-                  href={getHomeNewsHref(homeNewsData.moreNewsHref, locale)} prefetch={false}>
-                  {getHomeNewsText(homeNewsData.moreNewsLabel, locale)} <span>›</span>
-                </Link>
-              ) : (
-                <HomeSectionMoreLink href={getHomeNewsHref(homeNewsData.moreNewsHref, locale)}>
-                  {getHomeNewsText(homeNewsData.moreNewsLabel, locale)}
-                </HomeSectionMoreLink>
-              )}
+              <HomeSectionMoreLink href={getHomeNewsHref(homeNewsData.moreNewsHref, locale)}>
+                {getHomeNewsText(homeNewsData.moreNewsLabel, locale)}
+              </HomeSectionMoreLink>
             </div> {/* 右下角查看更多按钮区域结束 */}
           </aside> {/* 右侧：新闻列表结束 */}
         </div> {/* 新闻模块三栏布局结束 */}

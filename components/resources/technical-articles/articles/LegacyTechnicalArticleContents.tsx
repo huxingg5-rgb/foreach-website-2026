@@ -7,6 +7,7 @@ import editorial from "./RplSelectionArticle.module.css";
 import styles from "./TechnicalArticleBody.module.css";
 
 type Entry = { id: string; label: string; numbered: boolean };
+const numberedPrefix = /^(?:\d+[.、．)）\s]|[一二三四五六七八九十]+[、．.])/;
 
 /** Optional navigation enhancement. The full original article is server rendered. */
 export default function LegacyTechnicalArticleContents({ articleId, locale }: { articleId: string; locale: TechnicalArticleLocale }) {
@@ -17,8 +18,9 @@ export default function LegacyTechnicalArticleContents({ articleId, locale }: { 
     if (!root) return;
     const headings = [...root.querySelectorAll<HTMLHeadingElement>("[data-article-body] h2")];
     const next = headings.map((heading, index) => {
-      const label = heading.textContent?.trim() ?? "";
-      const numbered = /^(?:\d+[.、．)）\s]|[一二三四五六七八九十]+[、．.])/.test(label);
+      const headingText = heading.textContent?.trim() ?? "";
+      const label = heading.dataset.tocLabel?.trim() || headingText;
+      const numbered = numberedPrefix.test(headingText);
       // Existing anchors and all heading text remain untouched.
       if (!heading.id) {
         const base = `${articleId}-section-${index + 1}`;
@@ -27,7 +29,7 @@ export default function LegacyTechnicalArticleContents({ articleId, locale }: { 
         heading.id = id;
       }
       if (!numbered) heading.dataset.sectionNumber = String(index + 1).padStart(2, "0");
-      return { id: heading.id, label, numbered };
+      return { id: heading.id, label, numbered: numberedPrefix.test(label) };
     });
     const initialFrame = requestAnimationFrame(() => setEntries(next));
     let frame = 0;

@@ -162,15 +162,19 @@ export default function DiaphragmPumpEngineeringArticle({
   locale,
 }: DiaphragmPumpEngineeringArticleProps) {
   const copy = getDiaphragmPumpEngineeringArticleCopy(articleSlug, locale);
-  return <EngineeringArticleContent copy={copy} locale={locale} />;
+  return <EngineeringArticleContent copy={copy} locale={locale}
+    useShortTocLabels={articleSlug === "ink-starvation-inkjet-troubleshooting" ||
+      articleSlug === "inkjet-printer-pumps-micro-diaphragm-pumps"} />;
 }
 
 export function EngineeringArticleContent({
   copy,
   locale,
+  useShortTocLabels = false,
 }: {
   copy: DiaphragmPumpEngineeringArticleCopy;
   locale: TechnicalArticleLocale;
+  useShortTocLabels?: boolean;
 }) {
   return (
     <div className={newsStyles.technicalArticleBody}>
@@ -182,7 +186,7 @@ export function EngineeringArticleContent({
 
       {copy.sections.map((section) => (
         <section className={newsStyles.contentBlock} key={section.title}>
-          <h2>{section.title}</h2>
+          <h2 data-toc-label={useShortTocLabels ? section.tocLabel : undefined}>{section.title}</h2>
           {section.blocks.map((block, index) => (
             <ArticleBlock
               block={block}

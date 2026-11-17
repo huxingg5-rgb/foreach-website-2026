@@ -1,0 +1,2022 @@
+{
+  "en": [
+    {
+      "id": "sv10-solenoid-valve-overview",
+      "title": "SV10 Miniature Solenoid Valves: Product Overview",
+      "cover": "https://i.ytimg.com/vi/ayaTLByvWgE/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ayaTLByvWgE?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "series:6010"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "youtube-piston-pump-liquid-dispensing",
+      "title": "Precision Piston Pumps for Liquid Dispensing",
+      "cover": "/images/resources/installation-guide/youtube/piston-pump-liquid-dispensing-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/_nD17YG7Nw8?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "series:ea"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-flexible-tubing-laboratory-fluid-lines",
+      "title": "Flexible Tubing for Laboratory Fluid Lines",
+      "cover": "/images/resources/installation-guide/youtube/flexible-tubing-laboratory-fluid-lines-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/9JHmGMsBFMg?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "category:pvc-tubing",
+        "category:tpu-tubing"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-sealing-compatibility",
+      "title": "Quick-Connect Fittings: Sealing and Mating Compatibility",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-sealing-compatibility-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/-GOja7f3460?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-coupling-types",
+      "title": "Quick-Connect Fitting Sizes: Flow Size vs. Tubing Size",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-coupling-types-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/skwIaK1N4f4?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-f-ss-water-circulation-filter",
+      "title": "Water Circulation Filter for Recirculating Water Loops",
+      "cover": "/images/resources/installation-guide/youtube/f-ss-water-circulation-filter-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/2K0r5MMFcHs?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "topic:f-ss-water-circulation"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-thread-to-barb-fittings",
+      "title": "Thread-to-Barb Fittings for Flexible Tubing Connections",
+      "cover": "/images/resources/installation-guide/youtube/thread-to-barb-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/i7Gr86k5xoI?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "category:thread-to-barbed-fittings"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-rigid-tubing-fittings",
+      "title": "Rigid Tubing Fittings for Fluid System Connections",
+      "cover": "/images/resources/installation-guide/youtube/rigid-tubing-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/20BZArgyibY?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "category:hard-tube-fittings",
+        "series:hf",
+        "series:hf6",
+        "series:hfl",
+        "series:hfl6",
+        "series:hn",
+        "series:hn6",
+        "series:hnf",
+        "series:hnf6",
+        "series:hsf",
+        "series:hsf6"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-syringe-installation",
+      "title": "Syringe Pump: Syringe Installation Guide",
+      "cover": "https://i.ytimg.com/vi/llwyaeH9Ti4/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/llwyaeH9Ti4?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "series:hld6",
+        "category:syringe-pumps"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-q60-quick-fitting",
+      "title": "Quick Disconnect Fittings: Valved, Non-Valved and Panel-Mount Options",
+      "cover": "https://i.ytimg.com/vi/tmwsLxhxBPQ/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/tmwsLxhxBPQ?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-female-thread-conversion",
+      "title": "Female Thread Adapters for M6 and 1/4-28 Fluid Connections",
+      "cover": "https://i.ytimg.com/vi/W1FQgD9sVK8/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/W1FQgD9sVK8?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "category:female-thread-adapters"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-bubble-detection-module",
+      "title": "Air Bubble Detection in Transparent Tubing",
+      "cover": "https://i.ytimg.com/vi/iafwYrNZs9k/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/iafwYrNZs9k?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "series:abd"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-vs-dpl30h",
+      "title": "How to Choose a Liquid Diaphragm Pump for Higher Backpressure",
+      "cover": "https://i.ytimg.com/vi/ReMmjMTZgjM/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ReMmjMTZgjM?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpgl800-vacuum-test",
+      "title": "Miniature Diaphragm Vacuum Pump Test for Waste Aspiration",
+      "cover": "https://i.ytimg.com/vi/zIRjV3F279I/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zIRjV3F279I?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl-series-introduction",
+      "title": "Miniature Liquid Diaphragm Pumps for Instrument Fluid Transfer",
+      "cover": "https://i.ytimg.com/vi/FfOkY6ZA8yc/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FfOkY6ZA8yc?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-lld-liquid-level-detection",
+      "title": "Liquid Level Detection for Automated Pipetting",
+      "cover": "https://i.ytimg.com/vi/TlwZ3Ba6H_M/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/TlwZ3Ba6H_M?rel=0&playsinline=1&hl=en&cc_lang_pref=en",
+      "relationKeys": [
+        "category:sampling-probes",
+        "series:smtp2"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-pressure-test",
+      "title": "Brushed Liquid Diaphragm Pump Pressure Test: 600 mL/min Class",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/yeOkzvD86xI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-flow-rate-test",
+      "title": "600 mL/min Brushed Liquid Diaphragm Pump Flow Test",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/WRBdbi1A83U?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushless-flow-rate-test",
+      "title": "600 mL/min Brushless Liquid Diaphragm Pump Flow Test",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/pZV2uQOMt5I?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-pressure-test",
+      "title": "Brushed Micro Liquid Diaphragm Pump Pressure Test",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p5_Brvhf9Qo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-pressure-test",
+      "title": "Brushless Micro Liquid Diaphragm Pump Pressure Test",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/Lzox2V0DiYs?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-flow-rate-test",
+      "title": "300 mL/min Brushless Liquid Diaphragm Pump Flow Test",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/esCbqosu9NU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-flow-rate-test",
+      "title": "300 mL/min Brushed Liquid Diaphragm Pump Flow Test",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/RqgFil-5YAo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-five-wire-brushless-control-wires",
+      "title": "5-Wire Brushless Diaphragm Pump Wiring: PWM and Speed Feedback",
+      "cover": "/images/resources/installation-guide/youtube/five-wire-brushless-control-wires-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/hIR9dg47_wU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-two-wire-brushless-diaphragm-pump",
+      "title": "2-Wire Brushless Diaphragm Pumps: Power Connections and Selection",
+      "cover": "/images/resources/installation-guide/youtube/two-wire-brushless-diaphragm-pump-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p3PlAdfx9Sk?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-hose-barb-protection",
+      "title": "How to Prevent Diaphragm Pump Hose Barb Breakage",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-hose-barb-protection-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/rSFDAexeFmU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-placement-stability",
+      "title": "Why Does a Miniature Diaphragm Pump Rock on a Flat Surface?",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-placement-stability-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ag48EKqdPyU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-installation",
+      "title": "How to Install a Miniature Liquid Diaphragm Pump",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-001-6cadad8155.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/bVbg038KImo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-800-series-gas-liquid",
+      "title": "Gas-Liquid Diaphragm Pumps for Waste Aspiration and Vacuum Handling",
+      "cover": "/images/resources/installation-guide/youtube/800-series-gas-liquid-cover-fixed-v006.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/UwleXANBWvQ?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-brushed-vs-brushless-lifespan",
+      "title": "Brushed vs. Brushless Pump Motors: Wear, Cleanliness and EMI",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/EUt7BG3WWwA?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-60-series-pressure",
+      "title": "Diaphragm Pump Maximum Pressure vs. Working Pressure",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-003-57a6bc1c94.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/fH9ofJfE4Us?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-motor-selection",
+      "title": "How to Choose a Brushed or Brushless Diaphragm Pump Motor",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FGQFrcs9cWI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-30h-series-pressure",
+      "title": "High-Pressure Miniature Liquid Diaphragm Pump Test",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-002-a92d2b71b4.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ntivZyFe1B0?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-selection",
+      "title": "How to Choose a Miniature Diaphragm Pump for Your Fluid System",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-004-5733a4bdad.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zgP7udU0asI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=en&hl=en",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h",
+        "series:dpgl800"
+      ],
+      "priority": 0
+    }
+  ],
+  "es": [
+    {
+      "id": "sv10-solenoid-valve-overview",
+      "title": "Presentación de las electroválvulas miniatura SV10",
+      "cover": "https://i.ytimg.com/vi/ayaTLByvWgE/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ayaTLByvWgE?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "series:6010"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "youtube-piston-pump-liquid-dispensing",
+      "title": "Bombas de pistón de precisión para dosificación de líquidos",
+      "cover": "/images/resources/installation-guide/youtube/piston-pump-liquid-dispensing-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/_nD17YG7Nw8?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "series:ea"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-flexible-tubing-laboratory-fluid-lines",
+      "title": "Tubos flexibles para circuitos de laboratorio",
+      "cover": "/images/resources/installation-guide/youtube/flexible-tubing-laboratory-fluid-lines-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/9JHmGMsBFMg?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "category:pvc-tubing",
+        "category:tpu-tubing"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-sealing-compatibility",
+      "title": "Racores rápidos: estanqueidad y compatibilidad de acoplamiento",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-sealing-compatibility-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/-GOja7f3460?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-coupling-types",
+      "title": "Tamaños de racores rápidos: paso interno y tamaño del tubo",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-coupling-types-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/skwIaK1N4f4?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-f-ss-water-circulation-filter",
+      "title": "Filtro de circulación de agua F-SS para circuitos de recirculación",
+      "cover": "/images/resources/installation-guide/youtube/f-ss-water-circulation-filter-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/2K0r5MMFcHs?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "topic:f-ss-water-circulation"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-thread-to-barb-fittings",
+      "title": "Racores roscados con espiga para conectar tubos flexibles",
+      "cover": "/images/resources/installation-guide/youtube/thread-to-barb-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/i7Gr86k5xoI?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "category:thread-to-barbed-fittings"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-rigid-tubing-fittings",
+      "title": "Racores para tubos rígidos en sistemas de fluidos",
+      "cover": "/images/resources/installation-guide/youtube/rigid-tubing-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/20BZArgyibY?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "category:hard-tube-fittings",
+        "series:hf",
+        "series:hf6",
+        "series:hfl",
+        "series:hfl6",
+        "series:hn",
+        "series:hn6",
+        "series:hnf",
+        "series:hnf6",
+        "series:hsf",
+        "series:hsf6"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-syringe-installation",
+      "title": "Bomba de jeringa: guía de instalación de la jeringa",
+      "cover": "https://i.ytimg.com/vi/llwyaeH9Ti4/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/llwyaeH9Ti4?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "series:hld6",
+        "category:syringe-pumps"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-q60-quick-fitting",
+      "title": "Conectores rápidos de la serie Q60",
+      "cover": "https://i.ytimg.com/vi/tmwsLxhxBPQ/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/tmwsLxhxBPQ?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-female-thread-conversion",
+      "title": "Soluciones de adaptación de roscas hembra",
+      "cover": "https://i.ytimg.com/vi/W1FQgD9sVK8/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/W1FQgD9sVK8?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "category:female-thread-adapters"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-bubble-detection-module",
+      "title": "Módulo de detección de burbujas",
+      "cover": "https://i.ytimg.com/vi/iafwYrNZs9k/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/iafwYrNZs9k?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "series:abd"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-vs-dpl30h",
+      "title": "DPL30 y DPL30H: selección de microbombas de diafragma para líquidos",
+      "cover": "https://i.ytimg.com/vi/ReMmjMTZgjM/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ReMmjMTZgjM?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpgl800-vacuum-test",
+      "title": "DPGL800: ensayo de vacío de la bomba de diafragma de doble cabezal para gas y líquido",
+      "cover": "https://i.ytimg.com/vi/zIRjV3F279I/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zIRjV3F279I?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl-series-introduction",
+      "title": "Presentación de las bombas de diafragma de la serie DPL",
+      "cover": "https://i.ytimg.com/vi/FfOkY6ZA8yc/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FfOkY6ZA8yc?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-lld-liquid-level-detection",
+      "title": "Detección de nivel de líquido LLD para pipeteo automatizado",
+      "cover": "https://i.ytimg.com/vi/TlwZ3Ba6H_M/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/TlwZ3Ba6H_M?rel=0&playsinline=1&hl=es&cc_lang_pref=es",
+      "relationKeys": [
+        "category:sampling-probes",
+        "series:smtp2"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-pressure-test",
+      "title": "Prueba de presión de la microbomba de diafragma con escobillas de 600 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/yeOkzvD86xI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-flow-rate-test",
+      "title": "Prueba de caudal de la bomba de diafragma con escobillas de 600 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/WRBdbi1A83U?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushless-flow-rate-test",
+      "title": "Prueba de caudal de la microbomba de diafragma sin escobillas de 600 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/pZV2uQOMt5I?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-pressure-test",
+      "title": "Prueba de presión de la microbomba de diafragma DPL30 con escobillas",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p5_Brvhf9Qo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-pressure-test",
+      "title": "Prueba de presión de la bomba de diafragma sin escobillas de 300 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/Lzox2V0DiYs?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-flow-rate-test",
+      "title": "Prueba de rendimiento de caudal de la bomba de diafragma sin escobillas de 300 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/esCbqosu9NU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-flow-rate-test",
+      "title": "Prueba de caudal de la bomba de diafragma DPL30 con escobillas",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/RqgFil-5YAo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-five-wire-brushless-control-wires",
+      "title": "¿Qué función cumplen los cables de control de una bomba de diafragma sin escobillas de 5 hilos?",
+      "cover": "/images/resources/installation-guide/youtube/five-wire-brushless-control-wires-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/hIR9dg47_wU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-two-wire-brushless-diaphragm-pump",
+      "title": "¿Por qué elegir una bomba de diafragma sin escobillas de 2 hilos?",
+      "cover": "/images/resources/installation-guide/youtube/two-wire-brushless-diaphragm-pump-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p3PlAdfx9Sk?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-hose-barb-protection",
+      "title": "Cómo evitar que se rompa la espiga de la bomba de diafragma",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-hose-barb-protection-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/rSFDAexeFmU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-placement-stability",
+      "title": "¿Por qué la bomba de diafragma es inestable cuando se coloca?",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-placement-stability-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ag48EKqdPyU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-installation",
+      "title": "Instalación de una bomba de diafragma y precauciones",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-001-6cadad8155.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/bVbg038KImo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-800-series-gas-liquid",
+      "title": "Bomba de diafragma gas-líquido serie 800 | 6 L/min y motor sin escobillas de 24 V",
+      "cover": "/images/resources/installation-guide/youtube/800-series-gas-liquid-cover-fixed-v006.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/UwleXANBWvQ?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-brushed-vs-brushless-lifespan",
+      "title": "Motores con y sin escobillas: la diferencia no es solo la vida útil",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/EUt7BG3WWwA?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-60-series-pressure",
+      "title": "Prueba de presión máxima de la bomba de diafragma serie 60",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-003-57a6bc1c94.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/fH9ofJfE4Us?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-motor-selection",
+      "title": "¿Motor con o sin escobillas para una bomba de diafragma?",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FGQFrcs9cWI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-30h-series-pressure",
+      "title": "Resistencia a la presión medida de la bomba de diafragma serie 30H",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-002-a92d2b71b4.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ntivZyFe1B0?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-selection",
+      "title": "Cómo elegir una bomba de diafragma",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-004-5733a4bdad.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zgP7udU0asI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=es&hl=es",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h",
+        "series:dpgl800"
+      ],
+      "priority": 0
+    }
+  ],
+  "fr": [
+    {
+      "id": "sv10-solenoid-valve-overview",
+      "title": "Présentation des électrovannes miniatures SV10",
+      "cover": "https://i.ytimg.com/vi/ayaTLByvWgE/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ayaTLByvWgE?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "series:6010"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "youtube-piston-pump-liquid-dispensing",
+      "title": "Pompes à piston de précision pour le dosage de liquides",
+      "cover": "/images/resources/installation-guide/youtube/piston-pump-liquid-dispensing-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/_nD17YG7Nw8?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "series:ea"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-flexible-tubing-laboratory-fluid-lines",
+      "title": "Tubes souples pour circuits de laboratoire",
+      "cover": "/images/resources/installation-guide/youtube/flexible-tubing-laboratory-fluid-lines-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/9JHmGMsBFMg?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "category:pvc-tubing",
+        "category:tpu-tubing"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-sealing-compatibility",
+      "title": "Raccords rapides : étanchéité et compatibilité d’accouplement",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-sealing-compatibility-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/-GOja7f3460?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-coupling-types",
+      "title": "Dimensions des raccords rapides : passage interne et tube",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-coupling-types-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/skwIaK1N4f4?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-f-ss-water-circulation-filter",
+      "title": "Filtre de circulation d’eau F-SS pour circuits en boucle",
+      "cover": "/images/resources/installation-guide/youtube/f-ss-water-circulation-filter-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/2K0r5MMFcHs?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "topic:f-ss-water-circulation"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-thread-to-barb-fittings",
+      "title": "Raccords filetés à embout cannelé pour tubes souples",
+      "cover": "/images/resources/installation-guide/youtube/thread-to-barb-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/i7Gr86k5xoI?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "category:thread-to-barbed-fittings"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-rigid-tubing-fittings",
+      "title": "Raccords pour tubes rigides dans les circuits de fluides",
+      "cover": "/images/resources/installation-guide/youtube/rigid-tubing-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/20BZArgyibY?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "category:hard-tube-fittings",
+        "series:hf",
+        "series:hf6",
+        "series:hfl",
+        "series:hfl6",
+        "series:hn",
+        "series:hn6",
+        "series:hnf",
+        "series:hnf6",
+        "series:hsf",
+        "series:hsf6"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-syringe-installation",
+      "title": "Pompe à seringue : guide d’installation de la seringue",
+      "cover": "https://i.ytimg.com/vi/llwyaeH9Ti4/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/llwyaeH9Ti4?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "series:hld6",
+        "category:syringe-pumps"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-q60-quick-fitting",
+      "title": "Raccords rapides de la série Q60",
+      "cover": "https://i.ytimg.com/vi/tmwsLxhxBPQ/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/tmwsLxhxBPQ?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-female-thread-conversion",
+      "title": "Solutions d’adaptation de filetages femelles",
+      "cover": "https://i.ytimg.com/vi/W1FQgD9sVK8/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/W1FQgD9sVK8?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "category:female-thread-adapters"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-bubble-detection-module",
+      "title": "Module de détection de bulles",
+      "cover": "https://i.ytimg.com/vi/iafwYrNZs9k/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/iafwYrNZs9k?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "series:abd"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-vs-dpl30h",
+      "title": "DPL30 ou DPL30H : choisir une micropompe à membrane pour liquides",
+      "cover": "https://i.ytimg.com/vi/ReMmjMTZgjM/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ReMmjMTZgjM?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpgl800-vacuum-test",
+      "title": "DPGL800 : essai de vide de la pompe à membrane à double tête pour gaz et liquides",
+      "cover": "https://i.ytimg.com/vi/zIRjV3F279I/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zIRjV3F279I?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl-series-introduction",
+      "title": "Présentation des pompes à membrane de la série DPL",
+      "cover": "https://i.ytimg.com/vi/FfOkY6ZA8yc/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FfOkY6ZA8yc?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-lld-liquid-level-detection",
+      "title": "Détection de niveau de liquide LLD pour le pipetage automatisé",
+      "cover": "https://i.ytimg.com/vi/TlwZ3Ba6H_M/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/TlwZ3Ba6H_M?rel=0&playsinline=1&hl=fr&cc_lang_pref=fr",
+      "relationKeys": [
+        "category:sampling-probes",
+        "series:smtp2"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-pressure-test",
+      "title": "Essai de pression de la micropompe à membrane à balais de 600 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/yeOkzvD86xI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-flow-rate-test",
+      "title": "Essai de débit de la pompe à membrane à balais de 600 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/WRBdbi1A83U?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushless-flow-rate-test",
+      "title": "Essai de débit de la micropompe à membrane brushless de 600 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/pZV2uQOMt5I?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-pressure-test",
+      "title": "Essai de pression de la micropompe à membrane DPL30 à balais",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p5_Brvhf9Qo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-pressure-test",
+      "title": "Essai de pression de la pompe à membrane brushless de 300 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/Lzox2V0DiYs?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-flow-rate-test",
+      "title": "Essai de performance de débit de la pompe à membrane brushless de 300 mL/min",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/esCbqosu9NU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-flow-rate-test",
+      "title": "Essai de débit de la pompe à membrane DPL30 à balais",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/RqgFil-5YAo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-five-wire-brushless-control-wires",
+      "title": "À quoi servent les fils de commande d’une pompe à membrane brushless à 5 fils ?",
+      "cover": "/images/resources/installation-guide/youtube/five-wire-brushless-control-wires-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/hIR9dg47_wU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-two-wire-brushless-diaphragm-pump",
+      "title": "Pourquoi choisir une pompe à membrane brushless à 2 fils ?",
+      "cover": "/images/resources/installation-guide/youtube/two-wire-brushless-diaphragm-pump-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p3PlAdfx9Sk?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-hose-barb-protection",
+      "title": "Comment éviter la rupture de l’embout cannelé d’une pompe à membrane",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-hose-barb-protection-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/rSFDAexeFmU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-placement-stability",
+      "title": "Pourquoi la pompe à membrane est-elle instable lorsqu’elle est posée ?",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-placement-stability-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ag48EKqdPyU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-installation",
+      "title": "Installation d’une pompe à membrane et précautions",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-001-6cadad8155.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/bVbg038KImo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-800-series-gas-liquid",
+      "title": "Pompe à membrane gaz-liquide série 800 | 6 L/min et moteur brushless 24 V",
+      "cover": "/images/resources/installation-guide/youtube/800-series-gas-liquid-cover-fixed-v006.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/UwleXANBWvQ?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-brushed-vs-brushless-lifespan",
+      "title": "Moteurs à balais ou brushless : la différence ne se limite pas à la durée de vie",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/EUt7BG3WWwA?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-60-series-pressure",
+      "title": "Test de pression maximale de la pompe à membrane série 60",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-003-57a6bc1c94.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/fH9ofJfE4Us?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-motor-selection",
+      "title": "Moteur à balais ou brushless pour une pompe à membrane ?",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FGQFrcs9cWI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-30h-series-pressure",
+      "title": "Résistance à la pression mesurée de la pompe à membrane série 30H",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-002-a92d2b71b4.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ntivZyFe1B0?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-selection",
+      "title": "Comment choisir une pompe à membrane",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-004-5733a4bdad.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zgP7udU0asI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=fr&hl=fr",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h",
+        "series:dpgl800"
+      ],
+      "priority": 0
+    }
+  ],
+  "ko": [
+    {
+      "id": "sv10-solenoid-valve-overview",
+      "title": "SV10 소형 솔레노이드 밸브 제품 소개",
+      "cover": "https://i.ytimg.com/vi/ayaTLByvWgE/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ayaTLByvWgE?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "series:6010"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "youtube-piston-pump-liquid-dispensing",
+      "title": "정밀 액체 분주용 피스톤 펌프",
+      "cover": "/images/resources/installation-guide/youtube/piston-pump-liquid-dispensing-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/_nD17YG7Nw8?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "series:ea"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-flexible-tubing-laboratory-fluid-lines",
+      "title": "실험실 유로용 유연한 튜브",
+      "cover": "/images/resources/installation-guide/youtube/flexible-tubing-laboratory-fluid-lines-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/9JHmGMsBFMg?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "category:pvc-tubing",
+        "category:tpu-tubing"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-sealing-compatibility",
+      "title": "퀵 커넥터: 밀봉과 암수 결합 호환성",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-sealing-compatibility-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/-GOja7f3460?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-coupling-types",
+      "title": "퀵 커넥트 피팅 치수: 유로 크기와 튜브 치수의 차이",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-coupling-types-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/skwIaK1N4f4?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-f-ss-water-circulation-filter",
+      "title": "F-SS 순환수 필터: 순환수 회로 여과",
+      "cover": "/images/resources/installation-guide/youtube/f-ss-water-circulation-filter-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/2K0r5MMFcHs?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "topic:f-ss-water-circulation"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-thread-to-barb-fittings",
+      "title": "나사-호스 바브 피팅: 연질 튜브와 나사 포트 연결",
+      "cover": "/images/resources/installation-guide/youtube/thread-to-barb-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/i7Gr86k5xoI?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "category:thread-to-barbed-fittings"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-rigid-tubing-fittings",
+      "title": "경질 튜브 피팅: 유체 시스템 연결",
+      "cover": "/images/resources/installation-guide/youtube/rigid-tubing-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/20BZArgyibY?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "category:hard-tube-fittings",
+        "series:hf",
+        "series:hf6",
+        "series:hfl",
+        "series:hfl6",
+        "series:hn",
+        "series:hn6",
+        "series:hnf",
+        "series:hnf6",
+        "series:hsf",
+        "series:hsf6"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-syringe-installation",
+      "title": "시린지 펌프의 시린지 설치 가이드",
+      "cover": "https://i.ytimg.com/vi/llwyaeH9Ti4/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/llwyaeH9Ti4?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "series:hld6",
+        "category:syringe-pumps"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-q60-quick-fitting",
+      "title": "Q60 시리즈 퀵 커넥터 소개",
+      "cover": "https://i.ytimg.com/vi/tmwsLxhxBPQ/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/tmwsLxhxBPQ?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-female-thread-conversion",
+      "title": "암나사 변환 연결 솔루션",
+      "cover": "https://i.ytimg.com/vi/W1FQgD9sVK8/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/W1FQgD9sVK8?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "category:female-thread-adapters"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-bubble-detection-module",
+      "title": "기포 감지 모듈 소개",
+      "cover": "https://i.ytimg.com/vi/iafwYrNZs9k/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/iafwYrNZs9k?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "series:abd"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-vs-dpl30h",
+      "title": "DPL30과 DPL30H 소형 액체 다이어프램 펌프 선정 비교",
+      "cover": "https://i.ytimg.com/vi/ReMmjMTZgjM/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ReMmjMTZgjM?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpgl800-vacuum-test",
+      "title": "DPGL800 듀얼 헤드 기체·액체 다이어프램 펌프 진공 시험",
+      "cover": "https://i.ytimg.com/vi/zIRjV3F279I/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zIRjV3F279I?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl-series-introduction",
+      "title": "DPL 시리즈 다이어프램 펌프 소개",
+      "cover": "https://i.ytimg.com/vi/FfOkY6ZA8yc/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FfOkY6ZA8yc?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-lld-liquid-level-detection",
+      "title": "자동 피펫팅을 위한 LLD 액면 감지 모듈",
+      "cover": "https://i.ytimg.com/vi/TlwZ3Ba6H_M/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/TlwZ3Ba6H_M?rel=0&playsinline=1&hl=ko&cc_lang_pref=ko",
+      "relationKeys": [
+        "category:sampling-probes",
+        "series:smtp2"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-pressure-test",
+      "title": "600 mL/min 브러시형 미니 다이어프램 펌프 압력 테스트",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/yeOkzvD86xI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-flow-rate-test",
+      "title": "600 mL/min 브러시형 다이어프램 펌프 유량 테스트",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/WRBdbi1A83U?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushless-flow-rate-test",
+      "title": "600 mL/min 브러시리스 미니 다이어프램 펌프 유량 테스트",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/pZV2uQOMt5I?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-pressure-test",
+      "title": "DPL30 브러시형 미니 다이어프램 펌프 압력 테스트",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p5_Brvhf9Qo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-pressure-test",
+      "title": "300 mL/min 브러시리스 다이어프램 펌프 압력 테스트",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/Lzox2V0DiYs?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-flow-rate-test",
+      "title": "300 mL/min 브러시리스 다이어프램 펌프 유량 성능 테스트",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/esCbqosu9NU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-flow-rate-test",
+      "title": "DPL30 브러시형 다이어프램 펌프 유량 테스트",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/RqgFil-5YAo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-five-wire-brushless-control-wires",
+      "title": "5선식 브러시리스 다이어프램 펌프 제어선의 기능은 무엇인가요?",
+      "cover": "/images/resources/installation-guide/youtube/five-wire-brushless-control-wires-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/hIR9dg47_wU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-two-wire-brushless-diaphragm-pump",
+      "title": "2선식 브러시리스 다이어프램 펌프를 선택하는 이유",
+      "cover": "/images/resources/installation-guide/youtube/two-wire-brushless-diaphragm-pump-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p3PlAdfx9Sk?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-hose-barb-protection",
+      "title": "다이어프램 펌프 호스 바브 파손을 방지하는 방법",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-hose-barb-protection-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/rSFDAexeFmU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-placement-stability",
+      "title": "다이어프램 펌프를 놓았을 때 불안정한 이유는 무엇인가요?",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-placement-stability-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ag48EKqdPyU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-installation",
+      "title": "다이어프램 펌프 설치 방법 및 주의사항",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-001-6cadad8155.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/bVbg038KImo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-800-series-gas-liquid",
+      "title": "800 시리즈 기액 다이어프램 펌프 | 6 L/min 유량, 24V 브러시리스 모터",
+      "cover": "/images/resources/installation-guide/youtube/800-series-gas-liquid-cover-fixed-v006.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/UwleXANBWvQ?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-brushed-vs-brushless-lifespan",
+      "title": "브러시 모터와 브러시리스 모터: 차이는 수명만이 아닙니다",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/EUt7BG3WWwA?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-60-series-pressure",
+      "title": "60 시리즈 다이어프램 펌프 최대 압력 테스트",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-003-57a6bc1c94.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/fH9ofJfE4Us?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-motor-selection",
+      "title": "다이어프램 펌프에는 브러시 모터와 브러시리스 모터 중 무엇을 선택해야 할까요?",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FGQFrcs9cWI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-30h-series-pressure",
+      "title": "30H 시리즈 다이어프램 펌프 내압 측정",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-002-a92d2b71b4.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ntivZyFe1B0?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-selection",
+      "title": "다이어프램 펌프 선택 방법",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-004-5733a4bdad.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zgP7udU0asI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ko&hl=ko",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h",
+        "series:dpgl800"
+      ],
+      "priority": 0
+    }
+  ],
+  "ru": [
+    {
+      "id": "sv10-solenoid-valve-overview",
+      "title": "Обзор миниатюрных электромагнитных клапанов SV10",
+      "cover": "https://i.ytimg.com/vi/ayaTLByvWgE/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ayaTLByvWgE?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "series:6010"
+      ],
+      "priority": 100
+    },
+    {
+      "id": "youtube-piston-pump-liquid-dispensing",
+      "title": "Прецизионные плунжерные насосы для дозирования жидкостей",
+      "cover": "/images/resources/installation-guide/youtube/piston-pump-liquid-dispensing-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/_nD17YG7Nw8?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "series:ea"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-flexible-tubing-laboratory-fluid-lines",
+      "title": "Гибкие трубки для лабораторных жидкостных трактов",
+      "cover": "/images/resources/installation-guide/youtube/flexible-tubing-laboratory-fluid-lines-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/9JHmGMsBFMg?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "category:pvc-tubing",
+        "category:tpu-tubing"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-sealing-compatibility",
+      "title": "Быстроразъёмные соединения: герметичность и совместимость",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-sealing-compatibility-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/-GOja7f3460?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-quick-connect-coupling-types",
+      "title": "Размеры быстросъёмных соединений: проход и размер трубки",
+      "cover": "/images/resources/installation-guide/youtube/quick-connect-coupling-types-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/skwIaK1N4f4?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "category:quick-connect-fittings",
+        "series:q20",
+        "series:q40",
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-f-ss-water-circulation-filter",
+      "title": "Фильтр F-SS для рециркуляционных водяных контуров",
+      "cover": "/images/resources/installation-guide/youtube/f-ss-water-circulation-filter-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/2K0r5MMFcHs?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "topic:f-ss-water-circulation"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-thread-to-barb-fittings",
+      "title": "Резьбовые штуцеры для соединения гибких трубок с резьбовыми портами",
+      "cover": "/images/resources/installation-guide/youtube/thread-to-barb-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/i7Gr86k5xoI?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "category:thread-to-barbed-fittings"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-rigid-tubing-fittings",
+      "title": "Фитинги для жёстких трубок в жидкостных системах",
+      "cover": "/images/resources/installation-guide/youtube/rigid-tubing-fittings-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/20BZArgyibY?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "category:hard-tube-fittings",
+        "series:hf",
+        "series:hf6",
+        "series:hfl",
+        "series:hfl6",
+        "series:hn",
+        "series:hn6",
+        "series:hnf",
+        "series:hnf6",
+        "series:hsf",
+        "series:hsf6"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-syringe-installation",
+      "title": "Шприцевой насос: руководство по установке шприца",
+      "cover": "https://i.ytimg.com/vi/llwyaeH9Ti4/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/llwyaeH9Ti4?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "series:hld6",
+        "category:syringe-pumps"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-q60-quick-fitting",
+      "title": "Быстроразъёмные соединения серии Q60",
+      "cover": "https://i.ytimg.com/vi/tmwsLxhxBPQ/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/tmwsLxhxBPQ?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "series:q60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-female-thread-conversion",
+      "title": "Переходники с внутренней резьбой",
+      "cover": "https://i.ytimg.com/vi/W1FQgD9sVK8/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/W1FQgD9sVK8?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "category:female-thread-adapters"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-bubble-detection-module",
+      "title": "Модуль обнаружения пузырьков",
+      "cover": "https://i.ytimg.com/vi/iafwYrNZs9k/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/iafwYrNZs9k?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "series:abd"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-vs-dpl30h",
+      "title": "DPL30 и DPL30H: выбор миниатюрного мембранного насоса для жидкости",
+      "cover": "https://i.ytimg.com/vi/ReMmjMTZgjM/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ReMmjMTZgjM?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpgl800-vacuum-test",
+      "title": "DPGL800: вакуумное испытание двухголовочного мембранного насоса для газа и жидкости",
+      "cover": "https://i.ytimg.com/vi/zIRjV3F279I/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zIRjV3F279I?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl-series-introduction",
+      "title": "Обзор мембранных насосов серии DPL",
+      "cover": "https://i.ytimg.com/vi/FfOkY6ZA8yc/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FfOkY6ZA8yc?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-lld-liquid-level-detection",
+      "title": "Обнаружение уровня жидкости LLD для автоматического пипетирования",
+      "cover": "https://i.ytimg.com/vi/TlwZ3Ba6H_M/hqdefault.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/TlwZ3Ba6H_M?rel=0&playsinline=1&hl=ru&cc_lang_pref=ru",
+      "relationKeys": [
+        "category:sampling-probes",
+        "series:smtp2"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-pressure-test",
+      "title": "Испытание давления щёточного микромембранного насоса 600 мл/мин",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/yeOkzvD86xI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushed-flow-rate-test",
+      "title": "Испытание расхода щёточного мембранного насоса 600 мл/мин",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/WRBdbi1A83U?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "product:dpl60-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl60-brushless-flow-rate-test",
+      "title": "Испытание расхода бесщёточного микромембранного насоса 600 мл/мин",
+      "cover": "/images/resources/installation-guide/youtube/dpl60-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/pZV2uQOMt5I?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-pressure-test",
+      "title": "Испытание давления щёточного микромембранного насоса DPL30",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p5_Brvhf9Qo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-pressure-test",
+      "title": "Испытание давления бесщёточного мембранного насоса 300 мл/мин",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-pressure-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/Lzox2V0DiYs?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushless-flow-rate-test",
+      "title": "Испытание производительности по расходу бесщёточного мембранного насоса 300 мл/мин",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushless-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/esCbqosu9NU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "product:dpl30-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-dpl30-brushed-flow-rate-test",
+      "title": "Испытание расхода щёточного мембранного насоса DPL30",
+      "cover": "/images/resources/installation-guide/youtube/dpl30-brushed-flow-rate-test-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/RqgFil-5YAo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "product:dpl30-db"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-five-wire-brushless-control-wires",
+      "title": "Для чего нужны управляющие провода в 5-проводном бесщёточном мембранном насосе?",
+      "cover": "/images/resources/installation-guide/youtube/five-wire-brushless-control-wires-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/hIR9dg47_wU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-two-wire-brushless-diaphragm-pump",
+      "title": "Почему стоит выбрать 2-проводной бесщёточный мембранный насос?",
+      "cover": "/images/resources/installation-guide/youtube/two-wire-brushless-diaphragm-pump-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/p3PlAdfx9Sk?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "product:dpl60-bb"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-hose-barb-protection",
+      "title": "Как предотвратить поломку штуцера мембранного насоса",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-hose-barb-protection-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/rSFDAexeFmU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-pump-placement-stability",
+      "title": "Почему мембранный насос неустойчив при установке?",
+      "cover": "/images/resources/installation-guide/youtube/diaphragm-pump-placement-stability-cover.jpg",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ag48EKqdPyU?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-installation",
+      "title": "Установка мембранного насоса и меры предосторожности",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-001-6cadad8155.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/bVbg038KImo?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-800-series-gas-liquid",
+      "title": "Газожидкостный мембранный насос серии 800 | 6 л/мин и бесщёточный двигатель 24 В",
+      "cover": "/images/resources/installation-guide/youtube/800-series-gas-liquid-cover-fixed-v006.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/UwleXANBWvQ?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "series:dpgl800"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-brushed-vs-brushless-lifespan",
+      "title": "Щёточные и бесщёточные двигатели: разница не только в сроке службы",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/EUt7BG3WWwA?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "series:dpl30"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-60-series-pressure",
+      "title": "Испытание максимального давления мембранного насоса серии 60",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-003-57a6bc1c94.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/fH9ofJfE4Us?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-motor-selection",
+      "title": "Какой двигатель выбрать для мембранного насоса: щёточный или бесщёточный?",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-005-c4e9e2aa2a.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/FGQFrcs9cWI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-30h-series-pressure",
+      "title": "Измеренная стойкость к давлению мембранного насоса серии 30H",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-002-a92d2b71b4.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/ntivZyFe1B0?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "series:dpl30h"
+      ],
+      "priority": 0
+    },
+    {
+      "id": "youtube-diaphragm-selection",
+      "title": "Как выбрать мембранный насос",
+      "cover": "/images/resources/installation-guide/zh/zh-tutorial-004-5733a4bdad.png",
+      "kind": "youtube",
+      "src": "https://www.youtube.com/embed/zgP7udU0asI?rel=0&playsinline=1&cc_load_policy=1&cc_lang_pref=ru&hl=ru",
+      "relationKeys": [
+        "series:dpl30",
+        "series:dpl60",
+        "series:dpl30h",
+        "series:dpgl800"
+      ],
+      "priority": 0
+    }
+  ]
+}

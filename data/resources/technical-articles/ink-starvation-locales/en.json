@@ -1,0 +1,147 @@
+{
+  "title": "Ink Starvation in Inkjet Printers: Causes and Troubleshooting",
+  "seoTitle": "Ink Starvation: Inkjet Supply Troubleshooting | FOREACH",
+  "description": "Troubleshoot ink starvation and intermittent nozzle loss by checking ink level, filters, air ingress, pump operating flow and printhead pressure. Review the limits of DPL30 and DPL60 pump selection.",
+  "coverAlt": "Ink supply diagnostic diagram tracing the reservoir, pump, filter and printhead to locate low level, bubbles and missing print lines",
+  "deck": "When an inkjet printer loses ink delivery, save the nozzle-check pattern and operating conditions first. Check the reservoir, filters and tubing for restricted supply or incoming air, then measure pump operating flow, supply and return pressures and nozzle meniscus pressure. Restore the flow path and complete the approved priming procedure before adjusting pressure or servicing the head. A running motor or a normal panel reading alone does not establish adequate, stable ink delivery.",
+  "scope": "This guide primarily covers industrial piezoelectric drop-on-demand (DOD) equipment with reservoirs, ink lines and pressure-control stages. It focuses on insufficient liquid delivery. Recirculating and non-recirculating supplies must be checked against their own circuit diagrams; component order, priming, air removal and pressure limits depend on the machine and printhead manuals. Continuous inkjet (CIJ) equipment requires its own maintenance procedure.",
+  "sections": [
+    {
+      "title": "Does nozzle dropout indicate ink starvation?",
+      "tocLabel": "Identify the fault pattern",
+      "paragraphs": [
+        "Ink starvation describes ink delivery that cannot meet printhead demand. Nozzle dropout describes some nozzles failing to eject drops normally. Starvation can cause dropout, but nozzle blockage, drive faults or print settings can also cause missing lines or color; dropout alone does not identify a faulty ink pump.",
+        "Record the affected color, repeatable missing-nozzle positions, printing time before failure and any temporary recovery after a pause. Compare under the same ink, temperature and print mode, changing one variable at a time. These observations guide diagnosis; none alone proves a failed pump or printhead."
+      ],
+      "table": {
+        "headers": ["Observation", "Check first", "Evidence to retain"],
+        "rows": [
+          ["Color fades during a continuous run and briefly recovers after a pause", "Replenishment, filter pressure drop, reservoir level and venting", "Print load, time to failure and recovery sequence"],
+          ["The same nozzle positions are missing on every check", "Nozzle pattern, maintenance history and head drive status", "Before-and-after patterns under matching conditions"],
+          ["Loss starts just after changing ink, a filter or tubing", "Seals, flow direction and priming procedure", "Changed components and the first location where bubbles appear"],
+          ["Several heads on one supply branch fail together", "Shared reservoir, filtering, supply and control stages", "Branch layout, pressure measurements and fault sequence"]
+        ]
+      }
+    },
+    {
+      "title": "What order should an ink supply inspection follow?",
+      "tocLabel": "Trace the supply path",
+      "paragraphs": [
+        "Draw the actual circuit from the machine documentation: main reservoir, sub-tank, pump, filters, damper or regulator, printhead and return branch. Filters may be upstream or downstream of the pump. Some machines rely on liquid level and pneumatic vacuum, so one supply-return diagram cannot describe every inkjet system.",
+        "Work from upstream to downstream to locate where delivery changes. Before disconnecting lines or replacing components, follow the machine's shutdown, isolation and pressure-release procedure and preserve the original settings and connections."
+      ],
+      "checks": [
+        "Check ink level, intake submergence and reservoir venting, including changes at low operating level.",
+        "Check valve positions, flow direction, kinks, pinched tubing and recently replaced filters or seals.",
+        "Observe accessible, approved sections of tubing; record where bubbles first appear and complete the specified priming procedure.",
+        "Under the failing print load, record available pump inlet, outlet and head-side measurements.",
+        "After restoring supply, check the nozzle pattern and adjust controls only within the equipment limits."
+      ],
+      "links": [{ "key": "supply", "label": "Ink supply, return and circulation pump functions" }]
+    },
+    {
+      "title": "How can filter and tubing resistance cause starvation during longer runs?",
+      "tocLabel": "Check filters and resistance",
+      "paragraphs": [
+        "Replenishment must meet consumption at the real circuit pressure drop. A loaded filter, smaller tubing, a kink, a partly closed valve or temperature-related viscosity changes can alter resistance. A short, successful nozzle check does not establish adequate replenishment margin during continuous printing.",
+        "Where filter pressure taps are available, compare differential pressure at the same ink temperature and a comparable flow. Readings at different flows cannot directly establish blockage. Replacement filters must retain the specified rating, material and direction, followed by proper priming."
+      ],
+      "table": {
+        "headers": ["Location", "Comparison", "Follow-up"],
+        "rows": [
+          ["Filter", "Pressure drop versus historical readings under matching conditions", "After approved replacement, recheck both flow and printing"],
+          ["Intake and reservoir", "Venting, lift, submergence and pinched tubing", "Restore inlet supply before judging pump output"],
+          ["Discharge tubing and valves", "ID, length, valve positions and added components", "Check pressure-drop margin at the required flow"]
+        ]
+      },
+      "note": "Keep the specified filtration in production. Component-isolation comparisons require an approved test circuit that protects the printhead from unfiltered ink."
+    },
+    {
+      "title": "How do you locate recurring air bubbles in ink lines?",
+      "tocLabel": "Locate incoming air",
+      "paragraphs": [
+        "Distinguish air left after maintenance from bubbles continuously added during operation. If bubbles return after priming, inspect the intake, suction-side fittings, filter seals and recent disconnections. The absence of visible ink leaking outward does not establish a sound suction-side seal.",
+        "Compare the order in which bubbles appear in adjacent approved observation points. Check insertion, tubing fit and support, then isolate suspect joints using the equipment's approved leak-test method. Noise or bubbles alone cannot distinguish air ingress, dissolved-gas release and local vapor formation; they do not establish cavitation.",
+        "Priming fills the ink circuit with liquid; degassing removes dissolved gases from the ink. They are different operations, and clearing visible bubbles does not establish that dissolved gas has been removed. Where an inline degasser is fitted, check the degasser and its vacuum side according to its manual."
+      ],
+      "checks": [
+        "Check whether the intake becomes exposed and whether filling or agitation brings air to it.",
+        "Recheck filter seals, closed bleed ports and complete priming after maintenance.",
+        "Isolate suspect connections one at a time while keeping other conditions unchanged.",
+        "After correcting the source, prime again and compare flow, pressure and print results."
+      ]
+    },
+    {
+      "title": "What should you measure when the ink pump runs but delivery remains low?",
+      "tocLabel": "Measure the operating point",
+      "paragraphs": [
+        "A pump operating point must pair the actual flow with the pressure difference between the pump inlet and outlet. Record the ink, temperature, motor supply and effective control signal as well. Motor rotation and sound cannot establish the liquid flow reaching the load.",
+        "Use an approved, ink-compatible measurement circuit. Disconnecting a line into a measuring cup changes backpressure; that reading does not represent the installed filter, regulator and printhead load. Check flowmeter range, fluid calibration, sampling and bubble sensitivity as well."
+      ],
+      "table": {
+        "headers": ["Record", "Conditions to include", "Diagnostic purpose"],
+        "rows": [
+          ["Flow and cumulative delivery", "Location, time window, ink temperature and print load", "Whether replenishment continuously meets demand"],
+          ["Inlet, outlet and filter pressures", "Reference, units and measurement positions", "Inadequate intake versus increased downstream resistance"],
+          ["Motor supply and control", "Measurements under load and the exact motor interface", "Changes in power, speed command or control state"],
+          ["Bubbles and pressure waveform", "Original changes before and during failure", "Real flow changes, pulsation and display filtering"]
+        ]
+      },
+      "links": [{ "key": "noFlow", "label": "Further diagnosis of a diaphragm pump motor running with no liquid flow" }]
+    },
+    {
+      "title": "How should supply, return and nozzle meniscus pressures be checked together?",
+      "tocLabel": "Check pressure and control",
+      "paragraphs": [
+        "The difference between supply and return pressures drives recirculating flow. Nozzle meniscus pressure is the ink pressure at the nozzle relative to ambient and affects jetting stability. Many piezoelectric DOD heads use a slight negative pressure to maintain the meniscus, with a head-specific setpoint. Supply and return readings must be interpreted using the head design, measurement height and manufacturer definitions; pump discharge pressure is not nozzle meniscus pressure.",
+        "Bubbles, pump pulsation, changing filter resistance and control behavior can all disturb pressure. Restore supply and stop recurring air ingress before evaluating buffering and controls. Heavier display filtering changes the reading, not the liquid path. Follow the machine procedure when excessive vacuum, weeping or abnormal pressure occurs."
+      ],
+      "note": "Vacuum limits, adjustment steps and acceptable fluctuation must match the printhead, ink and operating conditions. There is no universal pressure setting in this guide.",
+      "links": [{ "key": "pulsation", "label": "Measuring and reducing miniature diaphragm pump flow pulsation" }]
+    },
+    {
+      "title": "How should DPL30 and DPL60 be evaluated before replacing an ink pump?",
+      "tocLabel": "Evaluate replacement candidates",
+      "paragraphs": [
+        "If measurements show inadequate pump margin with the target ink and installed differential pressure, FOREACH DPL30 and DPL60 can enter a liquid-transfer evaluation. Their official specifications state free-flow values of 300 mL/min and 600 mL/min respectively, with 100 kPa rated pressure for both. These figures are not printhead pressure settings or installed-flow guarantees. Do not combine a free-flow value and the 100 kPa rated pressure into one operating point. Check the flow-pressure curve at the relevant voltage for the required differential pressure, then validate with the actual ink and complete circuit.",
+        "Both datasheets specify purified water and require customer evaluation for other liquids. Water-based, solvent and UV inks require configuration-specific wetted-material checks and tests covering viscosity, temperature, filter loading, continuous operation and restart. Catalogue values alone do not establish ink compatibility or low-pulsation performance."
+      ],
+      "table": {
+        "headers": ["Candidate series", "Specified free-flow value", "Confirm in the installed circuit"],
+        "rows": [
+          ["DPL30", "300 mL/min", "Operating flow with the target ink, differential pressure and control conditions"],
+          ["DPL60", "600 mL/min", "Flow margin, supply-return pressure and fluctuation at the actual load"]
+        ]
+      },
+      "links": [
+        { "key": "dpl30", "label": "DPL30-DB product data and documentation" },
+        { "key": "dpl60", "label": "DPL60-DB product data and documentation" },
+        { "key": "flow", "label": "300 / 600 mL/min flow selection for ink supply and circulation" }
+      ]
+    },
+    {
+      "title": "How do you verify a repair and document ink starvation for a supplier?",
+      "tocLabel": "Retest and document",
+      "paragraphs": [
+        "Return to the print mode, ink temperature and representative continuous load that produced the fault. Compare nozzle patterns, flow, pressure and recurring bubbles. Include permitted low-level, start-stop and standby-recovery conditions rather than accepting one short nozzle check. Acceptance limits must come from the machine and head requirements, with defined conditions.",
+        "Provide the records below when asking a pump or machine supplier to investigate. White-ink settling and concentration changes after idle periods also require a separate check of circulation paths and shutdown strategy."
+      ],
+      "table": {
+        "headers": ["Record group", "Useful information"],
+        "rows": [
+          ["Fluid and equipment", "Ink identity and composition data, viscosity, temperature, head and machine model"],
+          ["Circuit and pump", "Diagram, complete pump configuration, tube ID and length, filter and reservoir elevation"],
+          ["Fault and measurements", "Load, time to failure, flow and pressure locations, power/control and bubble origin"],
+          ["Action and verification", "One changed variable per trial, before-and-after nozzle checks and continuous-run results"]
+        ]
+      },
+      "links": [{ "key": "white", "label": "White-ink circulation, settling and restart considerations" }]
+    }
+  ],
+  "cta": {
+    "title": "Evaluate an ink pump using the actual fault conditions",
+    "description": "Share ink and temperature data, target working flow, supply-return pressure, filter and tubing details, and before-and-after fault records to define candidate pumps and prototype tests.",
+    "contactLabel": "Send ink supply conditions",
+    "productsLabel": "Explore miniature liquid diaphragm pumps"
+  }
+}

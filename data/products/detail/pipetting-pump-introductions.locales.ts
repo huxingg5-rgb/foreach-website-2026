@@ -176,13 +176,15 @@ export function applyPipettingPumpIntroduction<T extends Record<string, any>>(da
       imageAltEn: `FOREACH ${specs[0].value}`, mainImageAlt: `FOREACH ${specs[0].value}`, imageAlt: `FOREACH ${specs[0].value}`,
     } : {}),
     ...(smtp4 ? {
-      smtp4AuthoredContent: true, model: smtp4.heading, h1Title: smtp4.heading,
+      smtp4AuthoredContent: true, model: smtp4.heading,
+      h1Title: smtp4.heading.includes(smtp4.model.split(" ")[0]) ? smtp4.heading : `${smtp4.model} ${smtp4.heading}`,
       title: smtp4.heading, pageTitle: smtp4.heading, productName: smtp4.heading,
       name: smtp4.model, modelDisplay: smtp4.model, displayModel: smtp4.model, foreachModel: smtp4.model,
       applicationDetails: smtp4.applicationDetails,
     } : {}),
     ...(variant ? {
-      smtp2Variant: true, model: variant.heading, h1Title: variant.heading,
+      smtp2Variant: true, model: variant.heading,
+      h1Title: variant.heading.includes(variant.model) ? variant.heading : `${variant.model} ${variant.heading}`,
       name: variant.model, productName: variant.heading, productCode: variant.model,
       modelDisplay: variant.model, displayModel: variant.model, foreachModel: variant.model,
       mainImage: variant.image, imageCard: variant.cardImage,

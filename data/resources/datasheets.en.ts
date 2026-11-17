@@ -189,7 +189,7 @@ export const datasheetEnItems: DatasheetItem[] = [
       "/images/products/pumps/product-types/pipetting-pumps/foreach-pipetting-pumps-product-type-intro.webp",
     productHref: "/en/products/pumps/pipetting-pumps",
     downloadHref:
-      "/downloads/resources/datasheets/en/Pumps/ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump.pdf",
+      "/downloads/resources/datasheets/en/Pumps/ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump-web.pdf",
     actionType: "download",
   },
   {
@@ -408,25 +408,25 @@ export const datasheetEnItems: DatasheetItem[] = [
       "/images/products/control/foreach-abd-air-bubble-detector.webp",
     productHref: "/en/products/control/air-bubble-detectors/abd",
     downloadHref:
-      "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2507-00001-001-en-abd-air-bubble-detector.pdf",
+      "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2507-00001-001-en-abd-air-bubble-detector-web.pdf",
     actionType: "download",
   },
   {
     id: "pdm5-pressure-sensor",
     category: "smart",
-    keywords: "PDM5 pressure sensor user manual I2C fluid pressure monitoring",
-    title: "PDM5 Pressure Sensor User Manual",
+    keywords: "PDM5 pressure sensor specification absolute pressure I2C model selection",
+    title: "PDM5 Pressure Detection Module Specification Sheet",
     label: "Smart Control Modules",
     language: "English",
-    version: "001",
-    update: "2025-07",
+    version: "A00",
+    update: "2026-07",
     description:
-      "PDM5 pressure sensor user manual covering installation, I2C communication, specifications, and fluid-pressure monitoring.",
+      "PDM5 specification sheet covering four absolute-pressure ranges, wetted materials, electrical connections and ordering models.",
     image:
       "/images/products/control/foreach-pdm5-pressure-sensor.webp",
     productHref: "/en/products/control/pdm5-pressure-sensor",
     downloadHref:
-      "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2507-00002-001-en-pdm5-pressure-sensor-user-manual.pdf",
+      "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2607-00001-a00-en-pdm5-pressure-sensor.pdf",
     actionType: "download",
   },
   {

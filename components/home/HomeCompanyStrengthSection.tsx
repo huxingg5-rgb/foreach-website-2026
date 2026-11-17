@@ -4,7 +4,6 @@
 "use client"; // 这个组件需要数字动画、IntersectionObserver 和浏览器动画帧，所以必须是客户端组件
 
 import { homeUiText } from "@/data/home-ui.intl";
-import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
 import { useEffect, useRef, useState } from "react"; // 引入 React Hook，用于 DOM 引用、状态和副作用
 
 import HomeCompanyVideo from "@/components/home/HomeCompanyVideo"; // 引入公司介绍视频组件
@@ -233,15 +232,9 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
               </div> {/* 数据卡片网格结束 */}
 
               <div className="home-company-about-actions"> {/* 公司介绍按钮区域 */}
-                {locale === "zh-CN" ? (
-                  <Link className={`home-news-view-all-btn ${styles.aboutMoreLink}`} href={aboutForeachHref} prefetch={false}>
-                    {getHomeCompanyText(aboutData.contactButton, locale)} <span aria-hidden="true">›</span>
-                  </Link>
-                ) : (
-                  <HomeSectionMoreLink href={aboutForeachHref}>
-                    {getHomeCompanyText(aboutData.contactButton, locale)}
-                  </HomeSectionMoreLink>
-                )}
+                <HomeSectionMoreLink href={aboutForeachHref}>
+                  {getHomeCompanyText(aboutData.contactButton, locale)}
+                </HomeSectionMoreLink>
               </div> {/* 公司介绍按钮区域结束 */}
             </div> {/* 右侧：公司介绍 + 数据卡片 + 联系按钮结束 */}
           </div> {/* 公司介绍主要内容布局结束 */}

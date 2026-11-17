@@ -1,0 +1,62 @@
+{
+  "rpl-manual-gravimetric-setup.webp": {
+    "width": 1500,
+    "height": 758
+  },
+  "rpl-manual-installation-directions.webp": {
+    "width": 1500,
+    "height": 759
+  },
+  "rpl-manual-motor-wiring.webp": {
+    "width": 1500,
+    "height": 981
+  },
+  "rpl-manual-optocoupler-wiring.webp": {
+    "width": 1500,
+    "height": 554
+  },
+  "rpl-manual-start-stop.webp": {
+    "width": 1500,
+    "height": 971
+  },
+  "rpl-manual-working-cycle.webp": {
+    "width": 1500,
+    "height": 753
+  },
+  "rpl-p15-manual-components.webp": {
+    "width": 1500,
+    "height": 1269
+  },
+  "rpl-p15-manual-range-adjustment.webp": {
+    "width": 1500,
+    "height": 1116
+  },
+  "rpl-p15-manual-start-stop.webp": {
+    "width": 1500,
+    "height": 971
+  },
+  "rpl-p4-components.webp": {
+    "width": 1500,
+    "height": 997
+  },
+  "rpl-p4-installation-directions.webp": {
+    "width": 1500,
+    "height": 759
+  },
+  "rpl-p4-motor-wiring.webp": {
+    "width": 1500,
+    "height": 1388
+  },
+  "rpl-p4-optocoupler-wiring.webp": {
+    "width": 1500,
+    "height": 554
+  },
+  "rpl-p635-manual-components.webp": {
+    "width": 1500,
+    "height": 1381
+  },
+  "rpl-p635-manual-range-adjustment.webp": {
+    "width": 1500,
+    "height": 1087
+  }
+}

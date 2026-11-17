@@ -6,5 +6,8 @@ export function getSmtp4CadAssets(slug: string) {
     model: slug.toUpperCase().replace("UL", " μL"),
     viewerId: slug,
     model3dUrl: `/models/products/pumps/pipetting-pumps/cad/${slug}.fcad.gz`,
+    // Generated catalog drawing paths were planned names, not supplied files.
+    // None of the SMTP4 variants has a verified standalone drawing in public/.
+    drawingPdfUrl: undefined,
   };
 }

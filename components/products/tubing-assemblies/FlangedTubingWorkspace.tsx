@@ -1,14 +1,16 @@
 "use client";
 
 import { drawingRequirementsLine, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import ConfiguratorButton from "@/components/products/configurator/ConfiguratorButton";
 import buttonStyles from "@/components/products/configurator/ConfiguratorButton.module.css";
 import FlangedTubingConfigurator from "@/components/products/configurator/FlangedTubingConfigurator";
+import { scheduleFlangedAssemblyPreview } from "@/components/products/configurator/flanged-tubing-preview-loader";
 import { defaultAssemblyChoice, endConnection, normalizeFlangedChoice, validateFlangedChoice, type FlangedTubingChoice } from "@/data/products/configurator/flanged-tubing";
 import { getAssemblyTube } from "@/data/products/configurator/tubing-assembly-catalog";
 import { assemblyChoiceMatchesEntry } from "@/data/products/configurator/tubing-assembly-entry";
-import { deleteFlangedConfiguration, emptyFlangedConfigurationStore, FLANGED_CONFIGURATION_STORAGE_KEY, parseFlangedConfigurationStore, saveFlangedConfiguration, type FlangedConfiguration, type FlangedConfigurationStore } from "@/data/products/configurator/flanged-tubing-configurations";
+import { deleteFlangedConfiguration, FLANGED_CONFIGURATION_STORAGE_KEY, parseFlangedConfigurationStore, saveFlangedConfiguration, type FlangedConfiguration } from "@/data/products/configurator/flanged-tubing-configurations";
+import { flangedWorkspaceRequest, readFlangedWorkspace, type FlangedWorkspaceEditor } from "@/data/products/configurator/flanged-tubing-workspace-state";
 import FlangedTubingDrawingDialog from "./FlangedTubingDrawingDialog";
 import { assemblyView } from "./assembly-view";
 import { assemblyText, assemblyFormat, assemblyHtmlLocale } from "@/data/products/configurator/tubing-assembly.intl";
@@ -18,16 +20,23 @@ import { getSelectionWorkspacePresentation } from "@/data/products/detail/select
 type Props = { locale?: string; compact?: boolean; open: boolean; requestDrawing: boolean; entrySlug: string; onClose: () => void; onChoiceChange: (choice: FlangedTubingChoice | null) => void; onAdd: (record: FlangedConfiguration) => Promise<void> };
 export default function FlangedTubingWorkspace({ locale = "zh", compact = false, open, requestDrawing, entrySlug, onClose, onChoiceChange, onAdd }: Props) {
   const presentation = getSelectionWorkspacePresentation(locale, "assembly");
-  const [store, setStore] = useState<FlangedConfigurationStore>(emptyFlangedConfigurationStore);
+  // ProductDetailClient loads this workspace with ssr:false. The initializer
+  // reads once per mount, with no write or migration of saved configurations.
+  const [workspace, setWorkspace] = useState(() => readFlangedWorkspace(() => typeof window === "undefined" ? null : window.localStorage.getItem(FLANGED_CONFIGURATION_STORAGE_KEY)));
+  const { store, error } = workspace;
+  const setStore = (next: typeof store) => setWorkspace(current => ({ ...current, store: next }));
+  const setError = (next: string) => setWorkspace(current => ({ ...current, error: next }));
   const panelId = useId();
   const [expandedId, setExpandedId] = useState<string | null>(null);
-  const [ready, setReady] = useState(false), [error, setError] = useState("");
-  const [editor, setEditor] = useState<{ record: FlangedConfiguration | null; choice: FlangedTubingChoice | null; name: string } | null>(null);
+  const [editor, setEditor] = useState<FlangedWorkspaceEditor | null>(null);
   const [drawing, setDrawing] = useState<FlangedConfiguration | null>(null);
   const [pendingDeletion, setPendingDeletion] = useState<FlangedConfiguration | null>(null);
-  const externalOpenHandled = useRef(false);
+  const externalRequest = useMemo(() => open ? flangedWorkspaceRequest(store, entrySlug, requestDrawing, locale) : null, [open, store, entrySlug, requestDrawing, locale]);
+  const activeEditor = editor ?? externalRequest?.editor ?? null;
+  const activeDrawing = drawing ?? (editor ? null : externalRequest?.drawing) ?? null;
   const [adding, setAdding] = useState<string | null>(null), [feedback, setFeedback] = useState("");
   const addInProgress = useRef(false);
+  useEffect(() => scheduleFlangedAssemblyPreview(defaultAssemblyChoice(entrySlug)), [entrySlug]);
   async function add(record: FlangedConfiguration) {
     if (addInProgress.current) return;
     addInProgress.current = true; setAdding(record.id); setError(""); setFeedback("");
@@ -36,40 +45,25 @@ export default function FlangedTubingWorkspace({ locale = "zh", compact = false,
     finally { addInProgress.current = false; setAdding(null); }
   }
   useEffect(() => {
-    try { setStore(parseFlangedConfigurationStore(window.localStorage.getItem(FLANGED_CONFIGURATION_STORAGE_KEY))); }
-    catch { setError("已保存配置读取失败，请检查浏览器存储权限。原数据未被覆盖。"); }
-    setReady(true);
-  }, []);
-  useEffect(() => {
     const active = store.configurations.find(r => r.id === store.activeId);
-    if (ready) onChoiceChange(active && assemblyChoiceMatchesEntry(active.choice, entrySlug) ? active.choice : null);
-  }, [ready, store, entrySlug, onChoiceChange]);
-  useEffect(() => {
-    if (!open) { externalOpenHandled.current = false; return; }
-    if (!ready || externalOpenHandled.current) return;
-    externalOpenHandled.current = true;
-    const active = store.configurations.find(r => r.id === store.activeId) || null;
-    if (requestDrawing && active && assemblyChoiceMatchesEntry(active.choice, entrySlug)) { setDrawing(active); onClose(); return; }
-    // The product entry starts a new assembly with that page's defaults.
-    // Saved cards have their own explicit "进入配置" action for editing.
-    setEditor({ record: null, choice: defaultAssemblyChoice(entrySlug), name: `${assemblyText("配置", locale)} ${store.nextNumber}` });
-  }, [open, ready, requestDrawing, store, entrySlug, onClose, locale]);
+    onChoiceChange(active && assemblyChoiceMatchesEntry(active.choice, entrySlug) ? active.choice : null);
+  }, [store, entrySlug, onChoiceChange]);
   function closeEditor() { setEditor(null); onClose(); }
   function newConfiguration() {
     setError(""); setFeedback(""); setPendingDeletion(null);
     setEditor({ record: null, choice: defaultAssemblyChoice(entrySlug), name: `${assemblyText("配置", locale)} ${store.nextNumber}` });
   }
   function save(choice: FlangedTubingChoice, asNew = false, drawings?: CadDrawingType[]) {
-    if (!editor) return null;
+    if (!activeEditor) return null;
     try {
       // Re-read before saving so another tab's newer configuration is preserved.
       const latest = parseFlangedConfigurationStore(window.localStorage.getItem(FLANGED_CONFIGURATION_STORAGE_KEY));
-      if (!asNew && editor.record) {
-        const current = latest.configurations.find(r => r.id === editor.record!.id);
-        if (current && current.revision !== editor.record.revision) throw new Error("此配置已在其他窗口更新，请重新打开后编辑。");
+      if (!asNew && activeEditor.record) {
+        const current = latest.configurations.find(r => r.id === activeEditor.record!.id);
+        if (current && current.revision !== activeEditor.record.revision) throw new Error("此配置已在其他窗口更新，请重新打开后编辑。");
       }
-      const name = asNew && editor.name === editor.record?.name ? `${assemblyText("配置", locale)} ${latest.nextNumber}` : editor.name;
-      const result = saveFlangedConfiguration(latest, choice, name, asNew ? null : editor.record?.id || null, undefined, undefined, drawings);
+      const name = asNew && activeEditor.name === activeEditor.record?.name ? `${assemblyText("配置", locale)} ${latest.nextNumber}` : activeEditor.name;
+      const result = saveFlangedConfiguration(latest, choice, name, asNew ? null : activeEditor.record?.id || null, undefined, undefined, drawings);
       window.localStorage.setItem(FLANGED_CONFIGURATION_STORAGE_KEY, JSON.stringify(result.store));
       setStore(result.store); setError(""); if (compact) setExpandedId(result.record.id); onChoiceChange(result.record.choice); closeEditor(); return result.record;
     } catch (cause) { setError(cause instanceof DOMException ? "配置保存失败，请检查浏览器存储权限或可用空间。" : cause instanceof Error ? cause.message : "配置保存失败，请检查浏览器存储权限。"); return null; }
@@ -100,7 +94,7 @@ export default function FlangedTubingWorkspace({ locale = "zh", compact = false,
         variant={expandedId === record.id ? "primary" : "secondary"} title={record.name}
         aria-expanded={expandedId === record.id} aria-controls={panelId}
         onClick={() => { setExpandedId(current => current === record.id ? null : record.id); setPendingDeletion(null); }}>配置{record.number}</ConfiguratorButton>)}
-      <ConfiguratorButton disabled={!ready} onClick={newConfiguration}>新增配置</ConfiguratorButton>
+      <ConfiguratorButton onClick={newConfiguration}>新增配置</ConfiguratorButton>
     </div> : null}
     {error ? <p className={styles.error} role="alert">{error}</p> : null}
     {feedback ? <p role="status" translate="no">{feedback}</p> : null}
@@ -114,9 +108,9 @@ export default function FlangedTubingWorkspace({ locale = "zh", compact = false,
         <button type="button" disabled={adding !== null} onClick={() => setPendingDeletion(null)}>取消</button>
       </div> : null}
     </article>; })}</div>}
-    {editor ? <FlangedTubingConfigurator locale={locale} value={editor.choice} needDrawing={false} initialDrawingTypes={editor.record?.drawingTypes} configurationName={editor.name} onNameChange={name => setEditor(current => current ? { ...current, name } : current)} saveLabel="保存配置" saveError={error}
-      onClose={closeEditor} onConfirm={(choice, drawings) => { const record = save(choice, false, drawings); if (record && requestDrawing && open) setDrawing(record); }} onSaveAs={editor.record ? (choice, drawings) => { save(choice, true, drawings); } : undefined}
+    {activeEditor ? <FlangedTubingConfigurator locale={locale} value={activeEditor.choice} needDrawing={false} initialDrawingTypes={activeEditor.record?.drawingTypes} configurationName={activeEditor.name} onNameChange={name => setEditor({ ...activeEditor, name })} saveLabel="保存配置" saveError={error}
+      onClose={closeEditor} onConfirm={(choice, drawings) => { const record = save(choice, false, drawings); if (record && requestDrawing && open) setDrawing(record); }} onSaveAs={activeEditor.record ? (choice, drawings) => { save(choice, true, drawings); } : undefined}
       onGenerateDrawing={(choice, drawings) => { const record = save(choice, false, drawings); if (record) setDrawing(record); }} onAdd={(choice, drawings) => { const record = save(choice, false, drawings); if (record) void add(record); }} isAdded={() => false} /> : null}
-    {drawing ? <FlangedTubingDrawingDialog locale={locale} record={drawing} onClose={() => setDrawing(null)} /> : null}
+    {activeDrawing ? <FlangedTubingDrawingDialog locale={locale} record={activeDrawing} onClose={() => { setDrawing(null); if (externalRequest?.drawing) onClose(); }} /> : null}
   </section>, locale);
 }

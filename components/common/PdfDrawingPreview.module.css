@@ -54,6 +54,40 @@
   display: block;
 }
 
+.scope :global(.frd-drawing-viewer[data-drawing-format="image"]) {
+  overflow: auto;
+  background: #262626;
+}
+
+.scope :global(.frd-drawing-image) {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-inline: auto;
+  background: #fff;
+}
+
+.scope :global(.frd-drawing-image-error) {
+  display: grid;
+  min-height: 300px;
+  padding: 24px;
+  place-content: center;
+  gap: 12px;
+  background: #fff;
+  color: #5e6b80;
+  text-align: center;
+}
+
+.scope :global(.frd-drawing-image-error button) {
+  justify-self: center;
+  padding: 8px 14px;
+  border: 1px solid #173368;
+  background: #fff;
+  color: #173368;
+  font: inherit;
+  cursor: pointer;
+}
+
 .scope :global(.frd-drawing-preview-card) {
   position: absolute;
   inset: 0;

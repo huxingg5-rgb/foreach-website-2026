@@ -8,6 +8,8 @@
  * 4. 所有密钥均从 Cloudflare 环境变量读取
  */
 
+import { inquiryEmailAssets } from "../email/inquiry-email-assets";
+
 export interface InquiryKvNamespace {
   get(key: string): Promise<string | null>;
 
@@ -52,6 +54,7 @@ export class InquiryRequestError extends Error {
 type ResendEmailAttachment = {
   filename: string;
   content: string;
+  content_id?: string;
 };
 
 type ResendEmailInput = {
@@ -328,12 +331,14 @@ export async function sendResendEmail(
     payload.reply_to = input.replyTo;
   }
 
-  if (
-    input.attachments &&
-    input.attachments.length > 0
-  ) {
-    payload.attachments = input.attachments;
-  }
+  // CID MIME parts keep the approved PNG artwork out of the HTML body and
+  // avoid remote-image loading and unsupported SVG/data-URI image sources.
+  const inlineImages = inquiryEmailAssets.filter(asset =>
+    input.html.includes(`src="cid:${asset.content_id}"`) &&
+    !input.attachments?.some(attachment => attachment.content_id === asset.content_id),
+  );
+  const attachments = [...(input.attachments || []), ...inlineImages];
+  if (attachments.length > 0) payload.attachments = attachments;
 
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",

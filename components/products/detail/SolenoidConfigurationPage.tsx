@@ -2,6 +2,7 @@ import {getSolenoidConfiguration, getSolenoidDrawingAsset} from "@/data/products
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import ProductDetailClient from "./ProductDetailClient";
+import { getInstrumentProductSections } from "./InstrumentProductSections";
 import RelatedResourcesLoader from "@/components/common/related-resources/RelatedResourcesLoader";
 import { getRelatedResourcesData } from "@/services/resources/getRelatedResourcesData";
 import { getSv10RelatedVideo } from "@/data/resources/installation-guide/installation-guide.sv10.en";
@@ -54,7 +55,7 @@ export default function SolenoidConfigurationPage({slug, locale}: {slug: string;
       imageSrc: `/images/products/tubing-assemblies/related/${card.productId}-square.webp`,
       imageAlt: card.imageAlt || card.cardTitle,
     })) : configuration?.connection === "barbed" ? getBarbedSolenoidRelatedProducts(resourceLocale) : [];
-  return <ProductDetailClient data={data} afterContent={
+  return <ProductDetailClient data={data} {...getInstrumentProductSections(slug, language)} afterContent={
     <>
     <RelatedResourcesLoader {...resources} />
     <RelatedProducts locale={resourceLocale} products={relatedProducts} />

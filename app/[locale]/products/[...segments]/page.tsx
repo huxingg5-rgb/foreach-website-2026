@@ -77,6 +77,7 @@ import FilterDetailPage from "@/app/products/fittings/filters/[slug]/page";
 import QuickConnectFittingDetailPage from "@/app/products/fittings/quick-connect-fittings/[slug]/page";
 import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { getInstrumentProductSections } from "@/components/products/detail/InstrumentProductSections";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import DiaphragmPumpDetailPage, {
   getDiaphragmPumpMetadata,
@@ -610,15 +611,12 @@ export default async function ProductLocaleRoutePage({
   const [category, slug, seriesSlug] = segments;
   const controlDetailSlug = getControlModuleDetailSlugFromSegments(segments);
   if (controlDetailSlug) {
-    if (locale === "en") {
       const detail = getControlModuleDetailBySlug(controlDetailSlug);
       if (!detail) notFound();
-      return <ProductDetailClient data={getControlModuleProductDetailData(detail)} afterContent={
+      return <ProductDetailClient data={getControlModuleProductDetailData(detail)} {...getInstrumentProductSections(controlDetailSlug, locale)} afterContent={
         <RelatedResources sourceType="product" sourceId={`control-${controlDetailSlug}`} sourceSlug={controlDetailSlug}
-          relationKeys={[`series:${controlDetailSlug.split("-")[0]}`]} locale="en" />
+          relationKeys={[`series:${controlDetailSlug.split("-")[0]}`]} locale={locale} />
       } />;
-    }
-    return ProductDetailRoutePage({ params: Promise.resolve({ category: "control", slug: controlDetailSlug }) });
   }
 
   if (segments.length === 1) {
@@ -657,10 +655,9 @@ export default async function ProductLocaleRoutePage({
       if (locale === "en") {
         return <TubingSelectionPage material={slug} locale="en" />;
       }
-      return <>
-        <TubingDetailStaticPage slug={slug} locale={locale} />
-        <FittingRelatedResources productTypeId={slug} locale={locale} />
-      </>;
+      return <TubingDetailStaticPage slug={slug} locale={locale}
+        afterContent={<FittingRelatedResources productTypeId={slug} locale={locale} />}
+      />;
     }
 
     return ProductDetailRoutePage({

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>管组件 3D 模型</title>
+<!-- SHARED_CAD_STYLES -->
+<style>
+.tabs{display:none!important}.model-legend{position:absolute;left:270px;right:22px;bottom:14px;color:var(--brand);font-size:12px;line-height:1.7;pointer-events:none}
+.model-legend strong{display:block;font-size:15px;color:#111}.model-legend p{margin:3px 0;color:var(--muted)}
+.model-legend [data-missing]{color:#b54708}.dimension-line,.dimension-extension{stroke:#111;stroke-width:1}.dimension-label{fill:#111}
+.missing-view{position:absolute;inset:70px 20px 30px;display:grid;place-items:center;text-align:center;color:var(--muted);pointer-events:none}.missing-view[hidden]{display:none}
+.quick-connect-selected-models{overflow-wrap:anywhere}.model-meta{font-size:12px;line-height:1.7;color:var(--muted)}
+.model-meta strong{color:var(--brand)}.model-meta p{margin:8px 0}.fitting-selected-detail h3{color:#111}
+@media(max-width:900px) and (min-width:601px){.model-legend{left:222px}}
+@media(max-width:600px){.quick-connect-selector{top:104px;padding:10px}.has-quick-connect-selector .stage{top:180px;bottom:120px}.model-legend{left:14px;right:14px;font-size:11px}.model-legend strong{font-size:13px}}
+</style></head><body>
+<main id="viewer" class="viewer has-quick-connect-selector" data-status="loading">
+ <div id="busy" class="loading" role="status" aria-live="polite"><div class="loading-inner"><span class="loading-spinner" aria-hidden="true"></span><strong id="busy-label">正在加载管组件 3D 模型…</strong><div class="loading-track"><div class="loading-bar"></div></div><button id="retry" hidden>重新加载</button></div></div>
+ <div id="stage" class="stage" aria-label="可旋转的管组件 3D 模型"><div id="missing-view" class="missing-view" hidden></div></div>
+ <!-- SHARED_CAD_TOOLBARS -->
+ <!-- SHARED_CAD_PANELS -->
+ <aside id="assembly-selector" class="fitting-selector quick-connect-selector" aria-label="查看方式">
+  <h2 id="choice-title">查看方式</h2><div id="choices" class="fitting-choices" role="radiogroup" aria-labelledby="choice-title"></div><select id="mobile-choice" class="fitting-mobile-select" aria-label="查看方式"></select>
+  <div class="fitting-selected-detail"><h3 id="detail-heading">整套管组件</h3><div id="selected-models" class="quick-connect-selected-models"></div><dl id="measurements"></dl><div id="model-meta" class="model-meta"></div></div>
+ </aside>
+ <div id="legend" class="model-legend"></div>
+</main><script src="./viewer.js?v=tubing-assembly-2"></script></body></html>

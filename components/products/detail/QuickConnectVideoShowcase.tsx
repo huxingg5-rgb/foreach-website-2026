@@ -2,6 +2,7 @@
 
 import {
   useEffect,
+  useId,
   useRef,
   useState,
   type CSSProperties,
@@ -29,6 +30,13 @@ export type ShowcaseGroup = {
   key: string;
   label: string;
   videos: ShowcaseVideo[];
+  emptyText?: string;
+  emptyLink?: { href: string; label: string };
+};
+
+type ShowcaseLabels = { play: string; select: string; carousel: string; previous: string; next: string };
+const DEFAULT_LABELS: ShowcaseLabels = {
+  play: "播放视频", select: "切换视频", carousel: "左右拖动或按方向键切换视频", previous: "上一个视频", next: "下一个视频",
 };
 
 // 与 CSS 里 .track 的 transition 时长一致，动画结束后把位置拉回中间那组。
@@ -45,16 +53,20 @@ function withAutoplay(src: string) {
 
 type DragState = { pointerId: number; startX: number; startY: number; active: boolean };
 
-export default function QuickConnectVideoShowcase({ title, groups }: { title: string; groups: ShowcaseGroup[] }) {
-  const visibleGroups = groups.filter(group => group.videos.length > 0);
-  const [groupKey, setGroupKey] = useState(visibleGroups[0]?.key ?? "");
+export default function QuickConnectVideoShowcase({ title, groups, labels = DEFAULT_LABELS, onPlay }: {
+  title: string; groups: ShowcaseGroup[]; labels?: ShowcaseLabels; onPlay?: (video: ShowcaseVideo) => void;
+}) {
+  const sectionId = useId();
+  const visibleGroups = groups.filter(group => group.videos.length > 0 || group.emptyText);
+  const initialGroup = visibleGroups.find(item => item.videos.length > 0) ?? visibleGroups[0];
+  const [groupKey, setGroupKey] = useState(initialGroup?.key ?? "");
   const group = visibleGroups.find(item => item.key === groupKey) ?? visibleGroups[0];
   const videos = group?.videos ?? [];
   const count = videos.length;
   const loop = count > 1;
 
   // 循环：视频列表复制成三份，始终停在中间那份；走到两侧的复制品后，无动画地跳回中间对应位置。
-  const [pos, setPos] = useState(loop ? count : 0);
+  const [pos, setPos] = useState(initialGroup && initialGroup.videos.length > 1 ? initialGroup.videos.length : 0);
   const [animate, setAnimate] = useState(false);
   const [playingPos, setPlayingPos] = useState<number | null>(null);
   const [dragX, setDragX] = useState(0);
@@ -156,9 +168,9 @@ export default function QuickConnectVideoShowcase({ title, groups }: { title: st
   }
 
   return (
-    <section className={styles.section} aria-labelledby="product-video-showcase-title">
+    <section className={styles.section} aria-labelledby={`${sectionId}-title`} data-product-videos data-active-video-group={group.key}>
       <div className={styles.head}>
-        <h2 id="product-video-showcase-title">{title}</h2>
+        <h2 id={`${sectionId}-title`}>{title}</h2>
         {visibleGroups.length > 1 ? (
           <div className={styles.tabs} role="tablist" aria-label={title}>
             {visibleGroups.map(item => (
@@ -166,6 +178,8 @@ export default function QuickConnectVideoShowcase({ title, groups }: { title: st
                 key={item.key}
                 type="button"
                 role="tab"
+                id={`${sectionId}-${item.key}-tab`}
+                aria-controls={`${sectionId}-panel`}
                 aria-selected={item.key === group.key}
                 className={item.key === group.key ? styles.tabActive : styles.tab}
                 onClick={() => switchGroup(item.key)}
@@ -178,13 +192,14 @@ export default function QuickConnectVideoShowcase({ title, groups }: { title: st
       </div>
 
       <div
+        id={`${sectionId}-panel`}
+        role={visibleGroups.length > 1 ? "tabpanel" : loop ? "region" : undefined}
+        aria-labelledby={visibleGroups.length > 1 ? `${sectionId}-${group.key}-tab` : undefined}
         className={styles.viewport}
         style={{ "--i": pos, "--drag": `${dragX}px` } as CSSProperties}
         data-draggable={loop || undefined}
         data-dragging={dragging || undefined}
-        role={loop ? "region" : undefined}
-        aria-roledescription={loop ? "轮播" : undefined}
-        aria-label={loop ? `${group.label}，左右拖动或按方向键切换` : undefined}
+        aria-label={loop ? `${group.label}. ${labels.carousel}` : undefined}
         tabIndex={loop ? 0 : undefined}
         onKeyDown={loop ? handleKeyDown : undefined}
         onPointerDown={handlePointerDown}
@@ -193,6 +208,10 @@ export default function QuickConnectVideoShowcase({ title, groups }: { title: st
         onPointerCancel={handlePointerEnd}
         onDragStart={event => event.preventDefault()}
       >
+        {count === 0 ? <div className={styles.empty}>
+          <p>{group.emptyText}</p>
+          {group.emptyLink ? <a href={group.emptyLink.href}>{group.emptyLink.label}</a> : null}
+        </div> : null}
         <div className={styles.track} data-static={animate && !dragging ? undefined : true}>
           {slides.map((video, slideIndex) => {
             const active = slideIndex === pos;
@@ -214,15 +233,18 @@ export default function QuickConnectVideoShowcase({ title, groups }: { title: st
                       referrerPolicy="strict-origin-when-cross-origin"
                     />
                   ) : (
-                    <video src={video.src} poster={video.cover} controls autoPlay playsInline />
+                    <video src={video.src} poster={video.cover} controls autoPlay playsInline preload="metadata" />
                   )
                 ) : (
                   <button
                     type="button"
                     className={styles.cover}
                     tabIndex={active ? 0 : -1}
-                    aria-label={active ? `播放：${video.title}` : `切换到：${video.title}`}
-                    onClick={() => (active ? setPlayingPos(pos) : go(slideIndex - pos))}
+                    aria-label={`${active ? labels.play : labels.select}: ${video.title}`}
+                    onClick={() => {
+                      if (active) { setPlayingPos(pos); onPlay?.(video); }
+                      else go(slideIndex - pos);
+                    }}
                   >
                     {video.cover ? <img src={video.cover} alt="" loading="lazy" decoding="async" draggable={false} /> : null}
                     {active ? <span className={styles.play} aria-hidden="true" /> : null}
@@ -234,6 +256,11 @@ export default function QuickConnectVideoShowcase({ title, groups }: { title: st
           })}
         </div>
       </div>
+      {loop ? <div className={styles.navigation}>
+        <button type="button" aria-label={labels.previous} onClick={() => go(-1)}>‹</button>
+        <span aria-live="polite" aria-atomic="true">{((pos % count) + count) % count + 1} / {count}</span>
+        <button type="button" aria-label={labels.next} onClick={() => go(1)}>›</button>
+      </div> : null}
     </section>
   );
 }

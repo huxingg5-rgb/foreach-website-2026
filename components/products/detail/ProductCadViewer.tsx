@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import LoadingProgress from "@/components/common/LoadingProgress";
 import styles from "./ProductCadViewer.module.css";
 import type { FittingCadFinish } from "@/data/products/detail/flat-bottom-fitting-cad-assets";
+import type { ProductResourceSelection } from "./ProductResourceSelector";
 
 type CadViewerProps = {
   modelId?: string;
@@ -19,6 +20,7 @@ type CadViewerProps = {
   fittingAccessory?: string;
   quickConnectMate?: string;
   externalResourceTabs?: boolean;
+  productSelection?: ProductResourceSelection;
 };
 const loadingCopy = {
   zh: ["3D 模型加载中", "3D 模型加载失败，请重试。", "重新加载"],
@@ -59,7 +61,7 @@ function LoadedCadViewer(props: CadViewerProps) {
   </div>;
 }
 
-function CadFrame({ modelId, title, locale, active, drawingUrl, productFamily, headMaterial, fittingFinish, fittingProduct, fittingAccessory, quickConnectMate, externalResourceTabs, attempt = 0, onState }: CadViewerProps & {
+function CadFrame({ modelId, title, locale, active, drawingUrl, productFamily, headMaterial, fittingFinish, fittingProduct, fittingAccessory, quickConnectMate, externalResourceTabs, productSelection, attempt = 0, onState }: CadViewerProps & {
   attempt?: number;
   onState?: (status: "ready" | "error") => void;
 }) {
@@ -83,6 +85,10 @@ function CadFrame({ modelId, title, locale, active, drawingUrl, productFamily, h
     const send = () => frame.current?.contentWindow?.postMessage({ type: "solenoid-active", active }, window.location.origin);
     const ready = (event: MessageEvent) => {
       if (event.origin !== window.location.origin || event.source !== frame.current?.contentWindow) return;
+      if (event.data?.type === "product-model-selection" && typeof event.data.value === "string" &&
+        productSelection?.options.some(option => option.value === event.data.value && !option.disabled)) {
+        productSelection.onChange(event.data.value);
+      }
       if (event.data?.type === "solenoid-ready") {
         send();
         if (latestMate.current) frame.current?.contentWindow?.postMessage({ type: "quick-connect-mate", slug: latestMate.current }, window.location.origin);
@@ -93,10 +99,13 @@ function CadFrame({ modelId, title, locale, active, drawingUrl, productFamily, h
     };
     send(); window.addEventListener("message", ready);
     return () => window.removeEventListener("message", ready);
-  }, [active, modelId, onState]);
+  }, [active, modelId, onState, productSelection]);
+  const selectionQuery = productSelection ? `&selection=${encodeURIComponent(JSON.stringify({
+    label: productSelection.label, value: productSelection.value, options: productSelection.options,
+  }))}` : "";
   return <iframe ref={frame} key={viewerModelId}
-    src={`/models/valves/6010/viewer.html?v=fitting-plugs-20261111-1&loader=parent&model=${encodeURIComponent(viewerModelId)}&lang=${encodeURIComponent(locale)}${externalResourceTabs ? "&resources=external" : ""}${placeholder ? "&placeholder=true" : ""}${drawingUrl ? `&drawing=${encodeURIComponent(drawingUrl)}` : ""}${initialMate ? `&mate=${encodeURIComponent(initialMate)}` : ""}${headMaterial ? `&head=${headMaterial}` : ""}${fittingFinish ? `&finish=${fittingFinish}` : ""}${fittingProduct ? `&product=${encodeURIComponent(fittingProduct)}` : ""}${initialAccessory ? `&accessory=${encodeURIComponent(initialAccessory)}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
+    src={`/models/valves/6010/viewer.html?v=abd-choices-20261117-1&loader=parent&model=${encodeURIComponent(viewerModelId)}&lang=${encodeURIComponent(locale)}${selectionQuery}${externalResourceTabs ? "&resources=external" : ""}${placeholder ? "&placeholder=true" : ""}${drawingUrl ? `&drawing=${encodeURIComponent(drawingUrl)}` : ""}${initialMate ? `&mate=${encodeURIComponent(initialMate)}` : ""}${headMaterial ? `&head=${headMaterial}` : ""}${fittingFinish ? `&finish=${fittingFinish}` : ""}${fittingProduct ? `&product=${encodeURIComponent(fittingProduct)}` : ""}${initialAccessory ? `&accessory=${encodeURIComponent(initialAccessory)}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
     onError={() => onState?.("error")}
     title={`${title} 3D`} allow="fullscreen"
-    style={{ display: "block", width: "100%", height: "min(680px, 75svh)", minHeight: isQuickConnect ? 640 : 440, border: 0, borderRadius: 12 }} />;
+    style={{ display: "block", width: "100%", height: "min(680px, 75svh)", minHeight: isQuickConnect || !productFamily ? 640 : 440, border: 0, borderRadius: 12 }} />;
 }

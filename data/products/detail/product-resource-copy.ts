@@ -1,0 +1,13 @@
+const copy = {
+  zh: { wireReference: "不含电线。安装尺寸请以二维图纸为准。", view: "查看方式", whole: "完整产品", model: "当前模型", dimensions: "外形尺寸", length: "长 L", width: "宽 W", height: "高 H", reference: "尺寸为 3D 模型外包络参考值，工程安装以二维图纸为准。", drawing: "二维图纸", drawingReference: "请按图纸中的尺寸、单位与技术要求核对安装。" },
+  en: { wireReference: "Excluding wires. Use the 2D drawing for installation dimensions.", view: "View", whole: "Complete product", model: "Current model", dimensions: "Overall dimensions", length: "Length L", width: "Width W", height: "Height H", reference: "Reference 3D envelope. Use the 2D drawing for installation dimensions.", drawing: "2D drawing", drawingReference: "Check installation against the dimensions, units and technical requirements in the drawing." },
+  es: { wireReference: "Sin cables. Consulte el plano 2D para las dimensiones de instalación.", view: "Vista", whole: "Producto completo", model: "Modelo actual", dimensions: "Dimensiones exteriores", length: "Largo L", width: "Ancho W", height: "Alto H", reference: "Envolvente 3D de referencia. Consulte el plano 2D para la instalación.", drawing: "Plano 2D", drawingReference: "Compruebe la instalación según las dimensiones, unidades y requisitos técnicos del plano." },
+  fr: { wireReference: "Hors câbles. Utilisez le plan 2D pour les dimensions de montage.", view: "Affichage", whole: "Produit complet", model: "Modèle actuel", dimensions: "Dimensions hors tout", length: "Longueur L", width: "Largeur W", height: "Hauteur H", reference: "Encombrement 3D indicatif. Utilisez le plan 2D pour le montage.", drawing: "Plan 2D", drawingReference: "Vérifiez le montage selon les dimensions, les unités et les exigences techniques du plan." },
+  ko: { wireReference: "전선을 제외한 치수입니다. 설치 치수는 2D 도면을 확인하세요.", view: "보기 방식", whole: "전체 제품", model: "현재 모델", dimensions: "외형 치수", length: "길이 L", width: "너비 W", height: "높이 H", reference: "3D 외형 참고 치수입니다. 설치 치수는 2D 도면을 확인하세요.", drawing: "2D 도면", drawingReference: "도면의 치수, 단위 및 기술 요구 사항에 따라 설치를 확인하세요." },
+  ru: { wireReference: "Без проводов. Монтажные размеры указаны на чертеже 2D.", view: "Режим просмотра", whole: "Изделие целиком", model: "Текущая модель", dimensions: "Габаритные размеры", length: "Длина L", width: "Ширина W", height: "Высота H", reference: "Справочные габариты 3D. Монтажные размеры указаны на чертеже 2D.", drawing: "Чертёж 2D", drawingReference: "Проверьте монтаж по размерам, единицам измерения и техническим требованиям чертежа." },
+};
+
+export function getProductResourceCopy(locale: string) {
+  const key = locale.toLowerCase().split("-")[0] as keyof typeof copy;
+  return copy[key] || copy.en;
+}

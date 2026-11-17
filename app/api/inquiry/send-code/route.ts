@@ -1,5 +1,5 @@
+import { buildVerificationEmail } from "@/lib/email/inquiry-email";
 import {
-  buildEmailShell,
   createRandomHex,
   createSixDigitCode,
   ensureSameOrigin,
@@ -111,45 +111,16 @@ export async function POST(request: Request): Promise<Response> {
 
     const emailConfig = getInquiryEmailConfig();
 
-    const html = buildEmailShell(
-      "Email Verification",
-      `
-        <p style="margin:0 0 20px;font-size:16px;line-height:1.7;color:#263a59;">
-          Use the following verification code to continue your FOREACH website inquiry.
-        </p>
-
-        <div style="margin:24px 0;padding:22px;text-align:center;background:#f4f7fa;border-left:4px solid #09e9b4;font-size:34px;font-weight:700;letter-spacing:8px;color:#173368;">
-          ${code}
-        </div>
-
-        <p style="margin:0;font-size:14px;line-height:1.7;color:#596980;">
-          This verification code is valid for 10 minutes.
-          If you did not request this code, you may ignore this email.
-        </p>
-
-        <p style="margin:22px 0 0;font-size:14px;line-height:1.7;color:#596980;">
-          验证码有效期为 10 分钟。如非本人操作，请忽略本邮件。
-        </p>
-      `,
-    );
+    const verificationEmail = buildVerificationEmail(code, body.locale);
 
     try {
-      await sendResendEmail(
-        emailConfig.apiKey,
-        {
-          from: emailConfig.from,
-          to: email,
-          subject:
-            `FOREACH website verification code: ${code}`,
-          html,
-          text:
-            `FOREACH website verification code: ${code}\n` +
-            "This code is valid for 10 minutes.\n" +
-            "验证码有效期为 10 分钟。",
-          idempotencyKey:
-            `verification-${emailStorageId.slice(0, 24)}-${codeHash.slice(0, 24)}`,
-        },
-      );
+      await sendResendEmail(emailConfig.apiKey, {
+        from: emailConfig.from,
+        to: email,
+        ...verificationEmail,
+        idempotencyKey:
+          `verification-${emailStorageId.slice(0, 24)}-${codeHash.slice(0, 24)}`,
+      });
     } catch (error) {
       /*
        * 邮件发送失败时清除验证码和发送锁，

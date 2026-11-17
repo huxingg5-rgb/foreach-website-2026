@@ -543,32 +543,16 @@
 
 .contact-guide-item {
     display: grid;
-    /* 鍗曟潯璇存槑浣跨敤宸﹀彸缁撴瀯 */
-    grid-template-columns: 70px 1fr;
-    /* 宸︿晶缂栧彿 70px锛屽彸渚у唴瀹硅嚜閫傚簲 */
-    min-height: 118px;
+    /* Keep the guide copy in one full-width column. */
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
     /* 鍗曟潯璇存槑鏈€灏忛珮搴?*/
     border-bottom: 1px solid var(--contact-line);
     /* 鍗曟潯璇存槑搴曢儴鍒嗗壊绾?*/
 }
 
-.contact-guide-number {
-    padding-top: 24px;
-    /* 缂栧彿椤堕儴璺濈 */
-    border-right: 1px solid var(--contact-line);
-    /* 缂栧彿鍜屽唴瀹逛箣闂寸殑鍒嗗壊绾?*/
-    color: var(--contact-cyan);
-    /* 缂栧彿浣跨敤鑽у厜闈?*/
-    font-size: 14px;
-    /* 缂栧彿瀛楀彿 */
-    font-weight: 500;
-    /* 缂栧彿鍔犵矖 */
-    text-align: center;
-    /* 缂栧彿灞呬腑 */
-}
-
 .contact-guide-copy {
-    padding: 22px 24px;
+    padding: 16px 24px;
     /* 璇存槑鍐呭鍐呰竟璺?*/
 }
 
@@ -597,7 +581,7 @@
 .contact-guide-note {
     margin: 0;
     /* 娓呴櫎榛樿澶栬竟璺?*/
-    padding: 22px 24px;
+    padding: 16px 24px;
     /* 搴曢儴鎻愮ず鍐呰竟璺?*/
     border-top: 1px solid var(--contact-line);
     /* 搴曢儴鎻愮ず涓婂垎鍓茬嚎 */
@@ -1305,8 +1289,18 @@
 
 @media (max-width: 900px) {
     .contact-email-row {
-        grid-template-columns: 1fr;
-        /* 灏忓睆骞曢偖绠遍獙璇佺爜鏀逛负鍗曞垪 */
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: stretch;
+        /* Pair each input with its action button on mobile. */
+    }
+
+    .contact-email-row > input {
+        min-width: 0;
+    }
+
+    .contact-email-row > .contact-mini-button {
+        max-width: 140px;
+        white-space: normal;
     }
 
     .contact-submit-row {
@@ -1356,17 +1350,9 @@
         /* 鎵嬫満绔鏄庨」鍜岃仈绯绘柟寮忚鏀逛负鍗曞垪 */
     }
 
-    .contact-guide-number,
     .contact-info-row>div:first-child {
         border-right: 0;
         /* 鎵嬫満绔幓鎺夊彸渚у垎鍓茬嚎 */
-    }
-
-    .contact-guide-number {
-        padding: 20px 24px 0;
-        /* 鎵嬫満绔紪鍙峰唴杈硅窛 */
-        text-align: left;
-        /* 鎵嬫満绔紪鍙烽潬宸?*/
     }
 
     .contact-form,
@@ -3658,19 +3644,19 @@
 @media (max-width: 768px) {
   /*
     手机端填写说明：
-    编号和标题同一行，正文紧跟其后。
+    标题与正文单列对齐，正文紧跟其后。
   */
   .contact-guide-item {
     display: grid !important;
 
     grid-template-columns:
-      max-content minmax(0, 1fr) !important;
+      minmax(0, 1fr) !important;
 
     grid-template-rows:
       max-content max-content !important;
 
     column-gap: 8px !important;
-    row-gap: 12px !important;
+    row-gap: 8px !important;
 
     align-items: baseline !important;
     align-content: start !important;
@@ -3683,29 +3669,7 @@
     min-height: 0 !important;
 
     margin: 0 !important;
-    padding: 20px 18px !important;
-  }
-
-  /*
-    编号仅占自身宽度。
-  */
-  .contact-guide-number {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-
-    display: block !important;
-
-    width: auto !important;
-    min-width: 0 !important;
-    height: auto !important;
-    min-height: 0 !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    font-size: 14px !important;
-    line-height: 1.25 !important;
-    white-space: nowrap !important;
+    padding: 16px 18px !important;
   }
 
   /*
@@ -3716,7 +3680,7 @@
   }
 
   .contact-guide-copy h4 {
-    grid-column: 2 !important;
+    grid-column: 1 !important;
     grid-row: 1 !important;
 
     align-self: baseline !important;

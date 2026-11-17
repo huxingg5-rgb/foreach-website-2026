@@ -8,6 +8,7 @@ import RelatedResources from "@/components/common/related-resources/RelatedResou
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { getInstrumentProductSections } from "./InstrumentProductSections";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import valveDetailData from "@/data/products/generated/valves/detail/index.json";
 
@@ -352,7 +353,7 @@ export default function HpValveDetailPage({locale}:{locale:string}) {
           margin-top: 0 !important;
         }
       ` }} />
-      <ProductDetailView data={data}
+      <ProductDetailView data={data} {...getInstrumentProductSections("high-pressure-valves", language)}
         afterContent={
           <RelatedResources sourceType="product" sourceSlug={slug}
             relationKeys={["series:hp"]} locale={language === "zh" ? "zh-CN" : language} />

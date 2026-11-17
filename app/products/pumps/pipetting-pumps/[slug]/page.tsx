@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import type { ComponentProps } from "react";
 import type { Metadata } from "next";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import { getInstrumentProductSections } from "@/components/products/detail/InstrumentProductSections";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import type { RelatedResourcesLocale } from "@/data/resources/related-resources/related-resources.intl";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
@@ -244,6 +245,7 @@ export default async function PipettingPumpDetailPage({ params, renderLocale = "
   return (
     <ProductDetailClient
       data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh") as ComponentProps<typeof ProductDetailClient>["data"]}
+      {...getInstrumentProductSections(detail.slug, renderLocale)}
       afterContent={
         <RelatedResources
           sourceType="product"

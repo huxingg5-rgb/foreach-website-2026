@@ -111,8 +111,8 @@
 .products-selection-page .filter-panel {
   position: sticky;
   top: 24px;
-  border: 1px solid var(--line);
-  background: #ffffff;
+  border: 0;
+  background: transparent;
 }
 
 .products-selection-page .filter-head {
@@ -273,10 +273,10 @@
 
 .products-selection-page .product-toolbar {
   margin-bottom: 18px;
-  padding: 14px 16px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #ffffff;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -319,7 +319,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1px solid rgba(9, 233, 180, 0.28);
   background: rgba(9, 233, 180, 0.11);
   color: var(--brand-blue);
@@ -351,7 +351,7 @@
 .products-selection-page .toolbar-reset {
   min-height: 34px;
   padding: 0 13px;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1px solid rgba(23, 51, 104, 0.16);
   background: #ffffff;
   color: var(--brand-blue);
@@ -796,7 +796,7 @@
 /* 鍙充晶宸ュ叿鏍?*/
 .products-selection-page .product-toolbar {
   margin-bottom: 14px;
-  padding: 12px 14px;
+  padding: 0;
 }
 
 .products-selection-page .product-area-title {
@@ -1297,8 +1297,8 @@
 .products-selection-page .filter-panel {
   position: sticky;
   top: 24px;
-  border: 1px solid var(--line);
-  background: #ffffff;
+  border: 0;
+  background: transparent;
 }
 
 .products-selection-page .filter-panel-head {
@@ -1326,6 +1326,10 @@
 .products-selection-page .filter-group {
   padding: 0;
   border-bottom: 1px solid var(--line);
+}
+
+.products-selection-page .filter-panel .filter-group:last-child {
+  border-bottom: 0;
 }
 
 .products-selection-page .filter-group-title,
@@ -1376,7 +1380,7 @@
   gap: 12px;
   border: 1px solid transparent;
   border-radius: 0;
-  background: #f3f6f9;
+  background: transparent;
   color: var(--text-main);
   cursor: pointer;
   font-family: inherit;
@@ -1392,13 +1396,13 @@
 
 .products-selection-page .filter-option:hover,
 .products-selection-page .filter-btn:hover {
-  background: #f8fffd;
+  background: transparent;
   color: var(--brand-blue);
 }
 
 .products-selection-page .filter-option.active,
 .products-selection-page .filter-btn.active {
-  background: #eefbf7;
+  background: transparent;
   color: var(--brand-blue);
 }
 
@@ -1502,9 +1506,9 @@
 /* 鍙充晶宸ュ叿鏍?*/
 .products-selection-page .product-toolbar {
   margin-bottom: 18px;
-  padding: 14px 16px;
-  border: 1px solid var(--line);
-  background: #ffffff;
+  padding: 0;
+  border: 0;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1530,7 +1534,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1px solid rgba(9, 233, 180, 0.28);
   background: rgba(9, 233, 180, 0.11);
   color: var(--brand-blue);
@@ -1557,7 +1561,7 @@
 .products-selection-page .toolbar-reset {
   min-height: 34px;
   padding: 0 13px;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1px solid rgba(23, 51, 104, 0.16);
   background: #ffffff;
   color: var(--brand-blue);
@@ -1838,8 +1842,41 @@
   }
 
   .products-selection-page .product-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .products-selection-page .product-toolbar > div:first-child {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+
+  .products-selection-page .product-toolbar .selected-tags {
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 2px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .products-selection-page .product-toolbar .selected-tags::-webkit-scrollbar {
+    display: none;
+  }
+
+  .products-selection-page .product-toolbar .selected-tag {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .products-selection-page .product-toolbar .toolbar-reset {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 
   .products-selection-page .product-grid {
@@ -3725,8 +3762,8 @@
 .products-selection-page
   .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
   .filter-option:disabled {
-  border-color: #e4e8ed !important;
-  background: #f1f3f6 !important;
+  border-color: transparent !important;
+  background: transparent !important;
   color: #a5adba !important;
   cursor: not-allowed !important;
   opacity: 1 !important;
@@ -3751,8 +3788,8 @@
 .products-selection-page
   .filter-panel[data-product-type-id="thread-to-barbed-fittings"]
   .filter-option:disabled:hover {
-  border-color: #e4e8ed !important;
-  background: #f1f3f6 !important;
+  border-color: transparent !important;
+  background: transparent !important;
   color: #a5adba !important;
   transform: none !important;
 }
@@ -3772,8 +3809,8 @@
   .filter-option.is-disabled,
 .filter-panel[data-product-type-id="luer-fittings"]
   .filter-option:disabled {
-  border-color: #e4e8ed !important;
-  background: #f1f3f6 !important;
+  border-color: transparent !important;
+  background: transparent !important;
   color: #a8b0bc !important;
   cursor: not-allowed !important;
   opacity: 1 !important;
@@ -3794,8 +3831,8 @@
   .filter-option.is-disabled:hover,
 .filter-panel[data-product-type-id="luer-fittings"]
   .filter-option:disabled:hover {
-  border-color: #e4e8ed !important;
-  background: #f1f3f6 !important;
+  border-color: transparent !important;
+  background: transparent !important;
   color: #a8b0bc !important;
   transform: none !important;
 }
@@ -3982,151 +4019,84 @@
 }
 
 /* MOBILE_FILTER_SYMBOL_FINAL_UNIFY_END */
-/* MOBILE_CATEGORY_COLLAPSE_FINAL_START */
+/* MOBILE_CATEGORY_HORIZONTAL_SCROLL_START */
 
 @media (max-width: 760px) {
-  /*
-   * Match the white bordered mobile product-type accordion.
-   */
   .products-selection-page
     .category-tabs-wrap {
     display: block !important;
     width: 100% !important;
+    min-width: 0 !important;
     min-height: 0 !important;
     height: auto !important;
-    margin: 0 0 28px !important;
+    margin: 12px 0 16px !important;
     padding: 0 !important;
-    border: 1px solid var(--line) !important;
+    border: 0 !important;
     outline: 0 !important;
     box-shadow: none !important;
-    background: #ffffff !important;
+    background: transparent !important;
     overflow: visible !important;
   }
 
-  /*
-   * Main mobile category trigger.
-   */
   .products-selection-page
     .mobile-category-trigger {
-    display: flex !important;
-    width: 100% !important;
-    min-height: 46px !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 16px !important;
-    margin: 0 !important;
-    padding: 12px 16px !important;
-    border: 0 !important;
-    outline: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    background: #ffffff !important;
-    color: var(--brand-blue, #173368) !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    line-height: 1.35 !important;
-    text-align: left !important;
-    cursor: pointer !important;
-  }
-
-  .products-selection-page
-    .mobile-category-trigger:focus,
-  .products-selection-page
-    .mobile-category-trigger:focus-visible,
-  .products-selection-page
-    .mobile-category-trigger:active {
-    border: 0 !important;
-    outline: 0 !important;
-    box-shadow: none !important;
-  }
-
-  /*
-   * Use the same blue plus/minus as the product-type accordion.
-   */
-  .products-selection-page
-    .mobile-category-symbol {
-    display: inline-flex !important;
-    width: 26px !important;
-    height: 26px !important;
-    flex: 0 0 26px !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    color: var(--brand-blue, #173368) !important;
-    font-size: 28px !important;
-    font-weight: 800 !important;
-    line-height: 1 !important;
-  }
-
-  /*
-   * Fully remove the category list from layout when collapsed.
-   */
-  .products-selection-page
-    .category-tabs-wrap:not(.is-mobile-open)
-    .category-tabs {
     display: none !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    overflow: hidden !important;
   }
 
-  /*
-   * Show the category list only after opening.
-   */
+  .products-selection-page
+    .category-tabs-wrap
+    .category-tabs,
   .products-selection-page
     .category-tabs-wrap.is-mobile-open
     .category-tabs {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
     gap: 8px !important;
     width: 100% !important;
+    min-width: 0 !important;
     height: auto !important;
     min-height: 0 !important;
     margin: 0 !important;
-    padding: 12px !important;
+    padding: 2px 2px 4px !important;
     border: 0 !important;
-    border-top: 1px solid var(--line) !important;
-    background: #ffffff !important;
+    background: transparent !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
+  .products-selection-page .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .products-selection-page
+    .category-tabs-wrap
+    .category-tab,
   .products-selection-page
     .category-tabs-wrap.is-mobile-open
     .category-tab {
-    width: 100% !important;
-    min-height: 46px !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: max-content;
+    min-height: 42px !important;
+    white-space: nowrap !important;
   }
 }
 
-/* MOBILE_CATEGORY_COLLAPSE_FINAL_END */
-/* MOBILE_CATEGORY_SIZE_POSITION_FIX_START */
+/* MOBILE_CATEGORY_HORIZONTAL_SCROLL_END */
+/* MOBILE_PRODUCT_CARD_TWO_COLUMNS_START */
 
 @media (max-width: 760px) {
   /*
-   * 产品大类区域整体向下移动 24px。
-   */
-  .products-selection-page
-    .category-tabs-wrap {
-    margin-top: 24px !important;
-    margin-bottom: 28px !important;
-  }
-
-}
-
-/* MOBILE_CATEGORY_SIZE_POSITION_FIX_END */
-/* MOBILE_PRODUCT_CARD_ONE_COLUMN_START */
-
-@media (max-width: 760px) {
-  /*
-   * 手机端产品卡片统一一行一张。
+   * 手机端产品卡片统一一行两张。
    */
   .products-selection-page
     .product-grid {
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 16px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
   }
 
   .products-selection-page
@@ -4135,9 +4105,43 @@
     min-width: 0 !important;
     max-width: none !important;
   }
+
+  .products-selection-page .product-card .product-body {
+    min-height: 0 !important;
+    padding: 12px 10px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .products-selection-page .product-card .product-body > .product-title {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .products-selection-page .product-card .product-body > :is(.product-card-summary, .product-card-specs) {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .products-selection-page .product-card .product-body > .product-actions > :is(.product-link, .list-toggle) {
+    min-width: 0;
+    height: auto !important;
+    padding: 6px 4px !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
 }
 
-/* MOBILE_PRODUCT_CARD_ONE_COLUMN_END */
+@media (max-width: 480px) {
+  .products-selection-page .product-card .product-body > .product-actions {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+/* MOBILE_PRODUCT_CARD_TWO_COLUMNS_END */
 /* PC_FILTER_GROUPS_ALWAYS_OPEN_START */
 
 /*
@@ -4490,8 +4494,8 @@
 .products-selection-page
   .filter-panel
   .filter-option[aria-disabled="true"] {
-  border-color: #e4e8ed !important;
-  background: #f1f3f6 !important;
+  border-color: transparent !important;
+  background: transparent !important;
   color: #a8b0bc !important;
   -webkit-text-fill-color: #a8b0bc !important;
   cursor: not-allowed !important;
@@ -4551,8 +4555,8 @@
 .products-selection-page
   .filter-panel
   .filter-option[aria-disabled="true"]:active {
-  border-color: #e4e8ed !important;
-  background: #f1f3f6 !important;
+  border-color: transparent !important;
+  background: transparent !important;
   color: #a8b0bc !important;
   -webkit-text-fill-color: #a8b0bc !important;
   box-shadow: none !important;
@@ -4634,4 +4638,148 @@
   width: 80% !important;
   height: 80% !important;
   object-fit: contain !important;
+}
+
+/* Shrink unscaled fitting images by 15% on desktop and mobile.
+   Preserve existing inline scales and the separate hard-tube/Luer settings. */
+.products-selection-page .product-card:is(
+  [data-product-type-id="barbed-fittings"],
+  [data-product-type-id="thread-to-barbed-fittings"],
+  [data-product-type-id="quick-connect-fittings"],
+  [data-product-type-id="female-thread-adapters"],
+  [data-product-type-id="bulkhead-barbed-fittings"],
+  [data-product-type-id="filters"],
+  [data-product-type-id="check-valves"]
+) .product-image img:not([style]) {
+  scale: 0.85;
+}
+
+/* Keep the existing hard-tube scale and apply it consistently on mobile. */
+.products-selection-page .product-card[data-product-type-id="hard-tube-fittings"] .product-image img {
+  scale: 0.9;
+}
+
+/* Compact desktop product cards and filters while preserving mobile spacing. */
+@media (min-width: 901px) and (hover: hover) and (pointer: fine) {
+  .products-selection-page .product-toolbar {
+    border-bottom: 1px solid var(--line, #e5ebf2);
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+  }
+
+  /* Share the compact content spacing across all product listing cards. */
+  .products-selection-page .product-card .product-body {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 12px 14px !important;
+  }
+
+  .products-selection-page .product-card .product-title {
+    margin-bottom: 4px !important;
+  }
+
+  .products-selection-page .product-card .product-body > .product-card-summary {
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  .products-selection-page .product-card .product-card-specs {
+    min-height: 0;
+    margin: 0;
+    row-gap: 2px;
+  }
+
+  .products-selection-page .product-card .product-body > dl {
+    margin: 6px 0 0;
+  }
+
+  .products-selection-page .product-card .product-body > dl > div {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .products-selection-page .product-card .product-actions {
+    padding-top: 8px !important;
+  }
+
+  .products-selection-page .filter-panel .filter-group > .filter-group-title,
+  .products-selection-page .filter-panel .filter-group > .filter-group-trigger,
+  .products-selection-page .filter-panel .filter-group > .filter-group-trigger span:not(.filter-group-symbol) {
+    font-weight: 600 !important;
+  }
+
+  .products-selection-page .filter-panel .filter-group > .filter-group-title,
+  .products-selection-page .filter-panel .filter-group > .filter-group-trigger {
+    padding-top: 10px;
+    padding-bottom: 6px;
+  }
+
+  .products-selection-page .filter-panel .filter-group > .filter-options {
+    row-gap: 2px;
+    padding-bottom: 10px;
+  }
+
+  .products-selection-page .filter-panel .filter-option,
+  .products-selection-page .filter-panel .filter-btn {
+    min-height: 30px;
+    padding-right: 6px;
+    column-gap: 6px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Let translated labels determine item width and move whole items onto new rows. */
+  .products-selection-page .filter-panel .filter-group > .filter-options.two {
+    display: flex !important;
+    flex-wrap: wrap;
+    column-gap: 8px;
+  }
+
+  .products-selection-page .filter-panel .filter-options.two > .filter-option,
+  .products-selection-page .filter-panel .filter-options.two > .filter-btn {
+    flex: 1 1 auto;
+    width: max-content;
+    min-width: calc((100% - 8px) / 2);
+    max-width: 100%;
+  }
+
+  .products-selection-page .filter-panel .filter-option > span:not(.filter-check):not(.filter-control),
+  .products-selection-page .filter-panel .filter-btn > span:not(.filter-check):not(.filter-control) {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* English pump types fit in two columns when the shorter column sizes to its labels. */
+  html[lang^="en"] .products-selection-page .filter-panel[data-category-id="pumps"]
+    .product-type-filter-group > .filter-options.two {
+    display: grid !important;
+    grid-template-columns: max-content minmax(0, 1fr);
+  }
+
+  html[lang^="en"] .products-selection-page .filter-panel[data-category-id="pumps"]
+    .product-type-filter-group > .filter-options.two > :is(.filter-option, .filter-btn) {
+    width: auto;
+    min-width: 0;
+  }
+}
+
+/* Compact the mobile filter groups while preserving their collapse behavior. */
+@media (max-width: 760px) {
+  .products-selection-page .filter-panel .filter-group > .filter-group-trigger {
+    min-height: 36px;
+    padding: 6px 12px;
+  }
+
+  .products-selection-page .filter-panel .filter-group > .filter-options {
+    gap: 2px;
+    padding: 0 12px 8px;
+  }
+
+  .products-selection-page .filter-panel .filter-option,
+  .products-selection-page .filter-panel .filter-btn {
+    min-height: 34px;
+    padding: 4px;
+    gap: 8px;
+  }
 }

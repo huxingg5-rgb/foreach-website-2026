@@ -1,0 +1,116 @@
+{
+  "title": "Pompes pour imprimantes jet d’encre : micropompes à membrane pour une alimentation stable",
+  "seoTitle": "Pompes jet d’encre : micropompes à membrane | FOREACH",
+  "description": "Micropompes à membrane pour l’alimentation, la pression et la circulation d’encre : comparaison, pulsations, cavitation, diagnostic et choix des modèles.",
+  "coverAlt": "Schéma technique en noir et blanc : réservoir, pompe à membrane d’alimentation, filtration et amortissement, tête à recirculation et pompe de retour, avec une liaison distincte de régulation de pression",
+  "deck": "Les ingénieurs du jet d’encre connaissent les impressions floues, les gouttes parasites et les lignes interrompues. Sur le terrain, le premier réflexe consiste souvent à changer l’encre ou à nettoyer la tête. Le diagnostic doit aussi porter sur la pression du circuit : sa stabilité dépend de la sortie réelle de la pompe, de la résistance à l’écoulement et de la coordination avec la régulation. La micropompe à membrane est un élément de ce circuit que l’on oublie facilement.",
+  "scope": "L’article prend pour exemple un système industriel à circuits d’alimentation et de retour afin d’expliquer le rôle de la pompe à membrane. Les réglages de pression et procédures précis doivent suivre les manuels de l’équipement et de la tête.",
+  "sections": [
+    {
+      "title": "Pompes pour encre UV : rôle de la viscosité et de la résistance du circuit",
+      "tocLabel": "Viscosité et alimentation",
+      "paragraphs": [
+        "La viscosité de l’encre UV varie avec sa formulation et sa température ; certaines formulations deviennent plus visqueuses à basse température. Lorsque filtres et conduites présentent une forte résistance, la gravité seule peut ne pas suffire. La pompe doit prélever l’encre dans le réservoir et la pousser à travers préfiltration, filtration fine et conduites vers l’alimentation de la tête. Si la différence de pression de transfert ou le débit utile est insuffisant, le réapprovisionnement ne suit plus la consommation et les lignes interrompues peuvent s’accentuer.",
+        "Une pompe à membrane sépare le liquide de l’entraînement sans nécessiter un arbre rotatif traversant une étanchéité dynamique vers la chambre mouillée. Les pièces en contact avec le liquide comprennent la tête de pompe, la membrane, les clapets et les joints concernés. Les modèles spécifiques permettant auto-amorçage, marche à sec ou variation de vitesse peuvent équiper les branches d’alimentation ou de retour selon les besoins. La compatibilité durable avec l’encre UV visée doit être confirmée par des essais sur les matériaux et le fluide réel."
+      ],
+      "table": {
+        "headers": ["Type de pompe", "Caractéristiques comparatives", "Limites à évaluer"],
+        "rows": [
+          ["Pompe à engrenages", "Débit relativement régulier pour le transfert continu", "Évaluer l’effet des particules de pigment, des jeux et de l’usure sur la sortie"],
+          ["Pompe à membrane", "Séparation liquide-entraînement ; certains modèles permettent auto-amorçage, marche à sec ou variation de vitesse", "Le mouvement alternatif crée des pulsations ; évaluer amortissement et volumes tampons. Les capacités dépendent du modèle"],
+          ["Pompe péristaltique", "Seul le tube est en contact avec le liquide, ce qui facilite le remplacement du circuit en contact avec le fluide", "Le tube est un consommable ; fatigue, vieillissement et compression influencent débit et pression"]
+        ]
+      }
+    },
+    {
+      "title": "Pompes de circulation d’encre : pression d’alimentation, pression du ménisque et débit de retour",
+      "tocLabel": "Trois rôles de pression",
+      "paragraphs": [
+        "Le circuit d’encre présente plusieurs conditions de pression. La pression positive d’alimentation fait traverser filtres et conduites à l’encre ; de nombreuses têtes à goutte à la demande maintiennent le ménisque des buses par une légère dépression contrôlée. La différence entre alimentation et retour entretient la circulation, aide à réduire la stagnation des pigments et conduit les bulles libres vers un point d’évacuation.",
+        "Les pompes à membrane pour liquides peuvent assurer les transferts d’alimentation et de retour, tandis que la légère dépression aux buses est établie par le circuit complet et sa régulation. Pression d’alimentation, pression du ménisque et différence entre alimentation et retour sont liées, mais ne représentent pas la même valeur. La pression nominale de la pompe ne doit pas servir directement de consigne pour la tête."
+      ],
+      "figure": {
+        "caption": "Relations de pression : les gouttes descendent verticalement de la tête vers le support. Les traits pleins indiquent le liquide et les pointillés résument une liaison de commande ou d’air. Il s’agit d’une architecture fonctionnelle à recirculation, pas du plan d’assemblage d’une machine précise."
+      },
+      "links": [
+        {"key": "supply", "label": "Distinguer la position des pompes d’alimentation, de circulation et de retour"}
+      ],
+      "afterParagraphs": [
+        "La plage de dépression et les fluctuations admissibles dépendent de la tête, de l’encre et des conditions de fonctionnement. Une pression hors de ces limites peut perturber le ménisque ou l’alimentation. Vérifier les réglages dans le manuel applicable plutôt que d’adopter une plage empirique universelle."
+      ]
+    },
+    {
+      "title": "Pulsations et risques de cavitation des pompes à membrane en jet d’encre",
+      "tocLabel": "Pulsations et cavitation",
+      "paragraphs": [
+        "Le premier problème concerne les pulsations. Le mécanisme alternatif d’une pompe à membrane produit des pulsations de débit, auxquelles le circuit jet d’encre peut être sensible sous forme de fluctuations de pression. Accumulateurs, amortisseurs ou autres volumes tampons doivent donc être évalués pour respecter les limites de la tête. Mesurer la réponse réelle de pression plutôt que de se fier à une moyenne ; une valeur fixe de fluctuation ne constitue pas une norme pour toutes les têtes.",
+        "Le second groupe de problèmes se situe à l’aspiration. Une alimentation insuffisante en amont ou du gaz dans le liquide peuvent provoquer baisse de débit, bulles continues ou gargouillement. Contrôler le niveau du réservoir et la conduite d’entrée avant de poursuivre les réglages au panneau. Entrée d’air, dégagement de gaz dissous et cavitation sont des phénomènes distincts. Pour établir une cavitation, il faut aussi considérer pression d’entrée, température et volatilité de l’encre."
+      ],
+      "links": [
+        {"key": "pulsation", "label": "Consulter les méthodes de réduction des pulsations de débit d’une micropompe à membrane"}
+      ]
+    },
+    {
+      "title": "Diagnostic des pompes jet d’encre : vérifier d’abord le circuit",
+      "tocLabel": "Diagnostic",
+      "paragraphs": [
+        "Contrôler d’abord l’alimentation : pompe, niveau, filtres et conduites. Vérifier ensuite les entrées et l’évacuation d’air, puis la tête et enfin les réglages de pression selon les exigences de l’équipement. Avec des bulles continues ou une restriction, modifier seulement la pression permet rarement d’identifier la cause. Pour une recherche de fuite ou un maintien statique en pression, respecter pression, durée et chute admissible spécifiées par l’équipement. Ne changer qu’une variable à la fois.",
+        "Le tableau présente les symptômes courants et les contrôles prioritaires pour orienter le diagnostic. Un symptôme isolé ne suffit pas à conclure à une défaillance de pompe ou de tête."
+      ],
+      "table": {
+        "headers": ["Symptôme", "Contrôles prioritaires", "Orientation de l’intervention"],
+        "rows": [
+          ["Aucune alimentation en encre", "Conduite pincée, filtre colmaté, niveau bas ou pompe non remplie", "Rétablir l’alimentation et le passage, remplir et purger selon la procédure, puis mesurer le débit"],
+          ["Encre présente, mais lignes manquantes au test des buses", "État des buses, bulles et capacité de réapprovisionnement", "Vérifier entretien de la tête et alimentation ; conserver les tests avant et après intervention"],
+          ["Fortes fluctuations de pression", "Entrée d’air, niveau, pulsations de pompe et réponse de la régulation", "Résoudre d’abord alimentation et étanchéité, puis contrôler amortissement et régulation"],
+          ["Dérive continue de la dépression dans un sens", "Passage du retour, niveau, joints et points de mesure", "Vérifier alimentation, retour et mesure avant le contrôle de la régulation"],
+          ["Gouttes parasites ou contours de caractères irréguliers", "Tête, température et viscosité de l’encre, pression du ménisque", "Examiner ensemble le test des buses et la pression mesurée, puis suivre les exigences de la tête"],
+          ["Caractères faibles ou pâles", "Débit réel d’alimentation, perte des filtres et conditions d’impression", "Vérifier si l’apport suit la consommation, rétablir le circuit et refaire l’essai"]
+        ]
+      },
+      "links": [
+        {"key": "troubleshooting", "label": "Suivre le diagnostic détaillé du manque d’encre et les relevés de mesure"}
+      ]
+    },
+    {
+      "title": "Choix d’une micropompe à membrane : matériaux et maîtrise des pulsations",
+      "tocLabel": "Critères de choix",
+      "paragraphs": [
+        "La pompe à membrane ne sert pas uniquement à transférer l’encre : elle participe avec le circuit et la régulation au maintien de bonnes conditions de transfert, de circulation et de pression. Commencer par deux priorités : l’adéquation des matériaux mouillés à l’encre et une réduction des pulsations conforme aux exigences de la tête.",
+        "La vérification des matériaux porte sur tête de pompe, membrane, clapets et joints, en tenant compte de la concentration, de la température et de la durée de contact des encres UV, solvantées ou aqueuses et de leurs nettoyants. Les pulsations se mesurent avec les conduites et la charge d’impression réelles. Vérifier aussi le point débit-pression, les conditions d’entrée et le cycle de service, puis valider le prototype avec une purge et des relevés adaptés."
+      ]
+    },
+    {
+      "title": "Pompes à membrane FOREACH pour l’alimentation et le retour d’encre",
+      "tocLabel": "Choix de pompes",
+      "paragraphs": [
+        "Les micropompes à membrane pour liquides FOREACH peuvent être évaluées comme candidates selon le débit et la pression du circuit. DPL30 et DPL60 répondent à des besoins de débit différents en alimentation ou en retour ; DPL30H permet d’évaluer un transfert en amont exigeant davantage de pression."
+      ],
+      "productTable": {
+        "headers": ["Modèle candidat", "Débit à vide", "Pression nominale", "Rôle à évaluer dans le circuit"],
+        "modelKeys": ["dpl30", "dpl60", "dpl30h"],
+        "purposes": [
+          "Alimentation, retour et circulation avec un besoin de débit inférieur",
+          "Alimentation ou retour avec un besoin de débit supérieur",
+          "Transfert en amont avec conduites longues ou forte résistance des filtres ; ne pas appliquer directement la pression nominale à la tête"
+        ]
+      },
+      "afterParagraphs": [
+        "Débit à vide et pression nominale décrivent des conditions distinctes. Ils ne garantissent pas le débit à vide à la pression nominale. Vérifier les paramètres complets, les raccordements et la combinaison de matériaux du modèle précis.",
+        "Les spécifications formelles des trois séries indiquent l’eau purifiée comme fluide de travail ; les autres liquides nécessitent une évaluation réelle par le client. Pour une configuration comportant PPS, EPDM, PTFE ou FFKM, valider composition et concentration de l’encre, température, durée de contact et nettoyant. Le seul nom d’un matériau ne prouve pas une compatibilité durable avec l’encre."
+      ],
+      "note": "Plages de dépression, incréments de réglage et intervalles de remplacement des filtres varient selon tête, encre et architecture. Les réglages réels doivent suivre les manuels et les exigences du fabricant d’encre.",
+      "links": [
+        {"key": "dpl30", "label": "Consulter les paramètres et la configuration DPL30-DB"},
+        {"key": "dpl60", "label": "Consulter les paramètres et la configuration DPL60-DB"},
+        {"key": "dpl30h", "label": "Consulter les paramètres et la configuration DPL30H-DS"}
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Évaluer une micropompe à membrane pour votre circuit d’encre",
+    "description": "Précisez encre et nettoyant, température, débit requis, conditions d’entrée, contre-pression et cycle de service pour préparer les essais avec les matériaux et commandes adaptés.",
+    "contactLabel": "Échanger sur votre circuit",
+    "productsLabel": "Voir les pompes à membrane pour liquides"
+  }
+}

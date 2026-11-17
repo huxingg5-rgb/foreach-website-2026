@@ -10,7 +10,7 @@ export type ProductResourceDownload = {
 };
 
 /** Keep localized link labels separate from the language of the real resource file. */
-export function getProductResourceDownloads(datasheet: ProductDatasheet | null, locale = "en"): ProductResourceDownload[] {
+export function getProductResourceDownloads(datasheet: ProductDatasheet | null, locale = "en", options: { includeChinese?: boolean } = {}): ProductResourceDownload[] {
   const language = locale.toLowerCase().split("-")[0];
   if (language === "zh") return [];
   const copy = getSelectionWorkspaceCopy(language);
@@ -18,8 +18,9 @@ export function getProductResourceDownloads(datasheet: ProductDatasheet | null, 
   const englishDatasheet = datasheet?.language === "en"
     || (datasheet?.language !== "zh" && datasheet?.file.includes("/datasheets/en/"));
 
-  if (datasheet && englishDatasheet) {
-    items.push({ id: datasheet.id, kind: "datasheet", label: copy.datasheet, href: datasheet.file, download: true });
+  if (datasheet && (englishDatasheet || (language === "zh" && options.includeChinese && datasheet.language === "zh"))) {
+    const fileLanguage = datasheet.language === "zh" ? "中文" : "EN";
+    items.push({ id: datasheet.id, kind: "datasheet", label: options.includeChinese ? `${copy.datasheet} (${fileLanguage})` : copy.datasheet, href: datasheet.file, download: true });
   }
   items.push({ id: PRODUCT_CATALOG_EN.id, kind: "catalog", label: copy.fullCatalog,
     href: PRODUCT_CATALOG_EN.file, download: "FOREACH-Product-Catalog-EN.pdf" });

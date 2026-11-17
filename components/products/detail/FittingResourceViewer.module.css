@@ -71,6 +71,35 @@
   background: #fff;
 }
 .drawing .empty { min-height: 570px; }
+.drawingContent { min-width: 0; }
+.productLayout .drawing { display: grid; grid-template-columns: 228px minmax(0, 1fr); gap: 20px; padding: 60px 22px 18px; }
+.drawingSummary { padding: 16px; border: 1px solid #dbe3ee; background: #f8fafd; color: #173368; font-size: 12px; }
+.drawingSummary h3 { margin: 0 0 10px; font-size: 14px; font-weight: 600; }
+.drawingSelected { padding: 10px 12px; border: 1px solid #173368; border-left-width: 4px; background: #edf3fc; font-weight: 600; }
+.specSelector { min-width: 0; }
+.specSelector [role="radiogroup"] { display: flex; flex-direction: column; gap: 7px; padding: 2px; }
+.specSelector button { width: 100%; min-height: 36px; padding: 8px 10px; border: 1px solid #dce3eb; border-radius: 0; background: #fff; color: #435069; font: inherit; font-weight: 600; text-align: left; cursor: pointer; }
+.specSelector button[aria-checked="true"] { border-color: #173368; background: #edf3fc; box-shadow: inset 3px 0 #173368; color: #173368; }
+.specSelector button:disabled { opacity: .45; cursor: not-allowed; }
+.specSelector button:focus-visible, .specSelector select:focus-visible { outline: 2px solid #173368; outline-offset: 1px; }
+.specSelector select { display: none; }
+.drawingModel { display: grid; gap: 6px; border-top: 1px solid #dbe3ee; margin-top: 10px; padding-top: 10px; overflow-wrap: anywhere; }
+.drawingModel span { color: #637087; font-size: 11px; }
+.drawingSummary p { margin: 14px 0 0; color: #637087; font-size: 11px; line-height: 1.65; }
+.productLayout :global([data-mobile-pdf-pagination][data-total-pages="1"]) { display: none; }
+
+.drawingOnly .viewport { min-height: 0; }
+.drawingOnly :global([data-mobile-pdf-canvas-viewer]) { max-width: 880px; margin-inline: auto; }
+.drawingOnly :global([data-mobile-pdf-pagination][data-total-pages="1"]) { display: none; }
+
+/* Desktop drawings use the same full-width preview and top selector as fittings. */
+@media (min-width: 761px) {
+  .productLayout .productDrawing { display: block; padding: 56px 14px 14px; }
+  .productDrawing > .drawingSummary { display: none; }
+}
+@media (max-width: 760px) {
+  .desktopProductSelect { display: none; }
+}
 
 .preview { padding: 0; }
 .preview .viewport, .preview .empty { min-height: 290px; }
@@ -85,12 +114,25 @@
 .previewButton:focus-visible { outline: 2px solid #173368; outline-offset: 3px; }
 
 @media (max-width: 800px) { .tabs { left: 14px; } }
+@media (max-width: 900px) and (min-width: 601px) {
+  .productLayout .drawing { grid-template-columns: 194px minmax(0, 1fr); padding-inline: 14px; gap: 14px; }
+  .drawingSummary { padding: 12px; }
+}
 @media (max-width: 600px) {
   .resource { padding: 12px; }
   .tabs { left: 12px; }
   .tabs button { height: 32px; font-size: 11px; }
   .drawing { padding: 56px 0 12px; }
   .drawingSelect { right: 0; height: 42px; max-width: calc(100% - 150px); padding: 6px; }
+  .productLayout .drawing { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 56px 12px 12px; }
+  .drawingSummary { padding: 10px; }
+  .drawingSummary h3, .drawingSelected, .drawingModel span { display: none; }
+  .drawingSummary:has(.specSelector) h3 { display: block; font-size: 12px; margin-bottom: 6px; }
+  .drawingSummary:has(.specSelector) .drawingModel { margin-top: 8px; }
+  .specSelector [role="radiogroup"] { display: none; }
+  .specSelector select { display: block; width: 100%; min-width: 0; min-height: 42px; padding: 8px 12px; border: 1px solid #173368; border-radius: 0; background: #fff; color: #173368; font: inherit; font-weight: 600; }
+  .drawingModel { border: 0; margin: 0; padding: 0; }
+  .drawingSummary p { margin-top: 6px; font-size: 10px; }
 }
 @media (max-width: 420px) {
   .drawing:has(.drawingSelect) { padding-top: 104px; }

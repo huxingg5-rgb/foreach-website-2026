@@ -498,6 +498,7 @@ export default function CompanyInfoRequestModal({
     try {
       await postInquiryApi("/api/inquiry/send-code", {
         email,
+        locale,
       });
 
       setHasEmailCodeSent(true);

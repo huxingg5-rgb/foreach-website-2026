@@ -1,0 +1,589 @@
+{
+  "syringe30mm": {
+    "families": [],
+    "slugs": [
+      "hmd3-30mm-solenoid-syringe-pump",
+      "hld3-30mm-rotary-valve-syringe-pump"
+    ],
+    "imageRoot": "/images/products/pumps/syringe-pumps/delivery/30mm/",
+    "intro": "产品经出厂检验后进行防护包装，装箱时核对型号、数量及随货资料，完成封箱与标识检查后安排发货。",
+    "rows": [
+      {
+        "title": "内包装与产品防护",
+        "paragraphs": [
+          "产品防护：根据确认的泵体结构配置泡棉内衬，为泵头与接口留出空间，减少运输中的碰撞与挤压。",
+          "型号核对：收货时按订单核对泵体铭牌、料号及数量。"
+        ],
+        "photos": [
+          {
+            "file": "syringe-30mm-pump-and-inner-carton.webp",
+            "source": "codex-clipboard-9e6998da-3f6e-44eb-81d0-825e0634cdce.jpg",
+            "alt": "30 mm 行程注射泵产品防护",
+            "caption": "产品防护"
+          },
+          {
+            "file": "syringe-30mm-foam-fitted-pump.webp",
+            "source": "codex-clipboard-f5ba95ca-8fc1-4449-b6a9-d4f242bc91bb.jpg",
+            "alt": "30 mm 行程注射泵缓冲包装",
+            "caption": "缓冲包装"
+          }
+        ]
+      },
+      {
+        "title": "泡棉盖板与内盒封装",
+        "paragraphs": [
+          "泡棉保护：泵体放置后覆盖泡棉盖板，再合上独立内盒。"
+        ],
+        "photos": [
+          {
+            "file": "syringe-30mm-protective-foam-cover.webp",
+            "source": "codex-clipboard-16d99b5b-e219-44a6-b02c-c8b3db642cb9.jpg",
+            "alt": "30 mm 行程注射泵缓冲包装",
+            "caption": "缓冲包装"
+          },
+          {
+            "file": "syringe-30mm-closed-inner-carton.webp",
+            "source": "codex-clipboard-e9fc6087-5268-4b14-9b46-9fa366ff8d77.jpg",
+            "alt": "30 mm 行程注射泵内盒封装",
+            "caption": "内盒封装"
+          }
+        ]
+      },
+      {
+        "title": "外箱装运与收货核对",
+        "paragraphs": [
+          "缓冲装箱：独立内盒装入外箱，周边使用泡棉缓冲。",
+          "发货安排：按确认的订单交期与运输方式发货，并提供物流信息。",
+          "收货核对：检查外箱状态、型号与数量；发现运输损伤或缺件时保留包装及照片并及时联系。"
+        ],
+        "photos": [
+          {
+            "file": "syringe-30mm-inner-cartons-in-shipping-box.webp",
+            "source": "codex-clipboard-9d4c91a7-69a9-4100-8860-428af879aeff.jpg",
+            "alt": "30 mm 行程注射泵缓冲包装",
+            "caption": "缓冲包装"
+          },
+          {
+            "file": "syringe-30mm-sealed-shipping-carton.webp",
+            "source": "codex-clipboard-63dfa15b-1ff4-4c32-8d33-ebcfa1203057.jpg",
+            "alt": "30 mm 行程注射泵封箱待发",
+            "caption": "封箱待发"
+          }
+        ]
+      }
+    ]
+  },
+  "syringe60mm": {
+    "families": [],
+    "slugs": [
+      "hmd6-60mm-solenoid-syringe-pump",
+      "hld6-60mm-rotary-valve-syringe-pump"
+    ],
+    "imageRoot": "/images/products/pumps/syringe-pumps/delivery/60mm/",
+    "intro": "产品经出厂检验后进行防护包装，装箱时核对型号、数量及随货资料，完成封箱与标识检查后安排发货。",
+    "rows": [
+      {
+        "title": "内包装与泡棉防护",
+        "paragraphs": [
+          "产品防护：泵体袋装后放入泡棉内衬，减少运输中与包装材料的直接摩擦及碰撞。",
+          "上层保护：装箱后覆盖泡棉盖板，检查产品放置与周边缓冲状态。"
+        ],
+        "photos": [
+          {
+            "file": "syringe-60mm-bagged-pump-in-foam.webp",
+            "source": "codex-clipboard-80a35a2a-aa3b-4acb-9e55-3f2e143814c9.jpg",
+            "alt": "60 mm 行程注射泵产品防护",
+            "caption": "产品防护"
+          },
+          {
+            "file": "syringe-60mm-protective-foam-cover.webp",
+            "source": "codex-clipboard-d1a40eb6-a69f-4003-8ac2-19588ca93758.jpg",
+            "alt": "60 mm 行程注射泵缓冲包装",
+            "caption": "缓冲包装"
+          }
+        ]
+      },
+      {
+        "title": "外箱装箱与包装检查",
+        "paragraphs": [
+          "缓冲装箱：内包装与泡棉配合放置，减少运输中的碰撞与挤压。",
+          "包装检查：封箱前核对产品、配套附件及包装状态，确认后再封箱。"
+        ],
+        "photos": [
+          {
+            "file": "syringe-60mm-carton-and-cushioning.webp",
+            "source": "codex-clipboard-ee3c03c3-4297-4bca-82b5-b33955eb239e.jpg",
+            "alt": "60 mm 行程注射泵缓冲包装",
+            "caption": "缓冲包装"
+          },
+          {
+            "file": "syringe-60mm-packing-operation.webp",
+            "source": "codex-clipboard-2d2efc7d-0680-4a8c-a1d4-4aeb0b43256c.jpg",
+            "alt": "60 mm 行程注射泵包装作业",
+            "caption": "包装作业"
+          }
+        ]
+      },
+      {
+        "title": "外箱标识与发货核对",
+        "paragraphs": [
+          "产品标识：通过外箱物料卡核对型号、料号、装箱数量及追溯信息。",
+          "发货与收货：按确认交期和运输方式发货；收货时核对外箱状态、型号与数量，异常时保留包装及照片并联系。"
+        ],
+        "photos": [
+          {
+            "file": "syringe-60mm-sealed-labelled-carton.webp",
+            "source": "codex-clipboard-1e9e1292-94fd-4059-ad82-d0ca154175e7.jpg",
+            "alt": "60 mm 行程注射泵包装标识",
+            "caption": "包装标识"
+          },
+          {
+            "file": "syringe-60mm-shipping-cartons.webp",
+            "source": "codex-clipboard-c680a3a0-43c3-4f32-8ef5-0f42dbb903fa.jpg",
+            "alt": "60 mm 行程注射泵封箱待发",
+            "caption": "封箱待发"
+          }
+        ]
+      }
+    ]
+  },
+  "abd": {
+    "families": [
+      "abd"
+    ],
+    "slugs": [],
+    "imageRoot": "/images/products/control/abd/delivery/",
+    "intro": "产品经出厂检验后进行防护包装，装箱时核对型号、数量及随货资料，完成封箱与标识检查后安排发货。",
+    "rows": [
+      {
+        "title": "产品与线束防护",
+        "paragraphs": [
+          "内包装：产品使用缓冲材料包裹，配套线束按确认配置提供并妥善放置。",
+          "缓冲装箱：独立内盒与外层泡棉配合，减少运输中的碰撞和挤压。"
+        ],
+        "photos": [
+          {
+            "file": "abd-bubble-wrap-and-cable.webp",
+            "source": "codex-clipboard-7be7ba33-aac9-415d-8b2d-9a9c0390892b.jpg",
+            "alt": "ABD 气泡传感器产品防护",
+            "caption": "产品防护"
+          },
+          {
+            "file": "abd-inner-carton-in-foam.webp",
+            "source": "codex-clipboard-3b988d3a-1a76-4414-9ef0-ffd8a3aa1d01.jpg",
+            "alt": "ABD 气泡传感器缓冲包装",
+            "caption": "缓冲包装"
+          }
+        ]
+      },
+      {
+        "title": "检验资料与型号核对",
+        "paragraphs": [
+          "随货资料：检验记录等资料随产品一同装箱。",
+          "型号核对：核对内盒上的型号和料号，并与订单及随货资料对应。"
+        ],
+        "photos": [
+          {
+            "file": "abd-fqc-inspection-record.webp",
+            "source": "codex-clipboard-c4b744ec-8b30-41b8-8ffc-33b21f21458f.jpg",
+            "alt": "ABD 气泡传感器随货资料",
+            "caption": "随货资料"
+          },
+          {
+            "file": "abd-inner-carton-model-label.webp",
+            "source": "codex-clipboard-c28ef156-1386-42d8-8fa7-08fa2ff948ec.jpg",
+            "alt": "ABD 气泡传感器包装标识",
+            "caption": "包装标识"
+          }
+        ]
+      },
+      {
+        "title": "外包装与收货核对",
+        "paragraphs": [
+          "外箱标识：通过物料标识卡核对产品、数量及追溯信息。",
+          "收货检查：核对包装状态、型号、数量及线束；发现运输损伤或缺件时保留包装及照片并及时联系。"
+        ],
+        "photos": [
+          {
+            "file": "abd-carton-material-label.webp",
+            "source": "codex-clipboard-4381c31b-facf-4dd8-9867-446888908ed2.jpg",
+            "alt": "ABD 气泡传感器包装标识",
+            "caption": "包装标识"
+          },
+          {
+            "file": "abd-closed-shipping-carton.webp",
+            "source": "codex-clipboard-969531b6-0cb5-461a-8056-2f51da3634e6.jpg",
+            "alt": "ABD 气泡传感器内盒封装",
+            "caption": "内盒封装"
+          }
+        ]
+      }
+    ]
+  },
+  "pipetting": {
+    "families": [
+      "smtp2",
+      "smtp4"
+    ],
+    "slugs": [],
+    "imageRoot": "/images/products/pumps/pipetting-pumps/delivery/",
+    "intro": "产品经出厂检验后进行防护包装，装箱时核对型号、数量及随货资料，完成封箱与标识检查后安排发货。",
+    "rows": [
+      {
+        "title": "产品与配套线束",
+        "paragraphs": [
+          "产品防护：移液泵袋装后放入泡棉内衬，保护泵体与连接部位。",
+          "配套附件：线束装袋随货，收货时核对连接器、数量和供货清单。"
+        ],
+        "photos": [
+          {
+            "file": "pipetting-bagged-pump-and-cables.webp",
+            "source": "codex-clipboard-1ae1f981-dd4f-4518-9a29-7e35b2e8b19a.jpg",
+            "alt": "移液泵产品防护",
+            "caption": "产品防护"
+          },
+          {
+            "file": "pipetting-fqc-inspection-record.webp",
+            "source": "codex-clipboard-5734c3de-a1d9-4b61-ab97-15a0d13a4071.jpg",
+            "alt": "移液泵随货资料",
+            "caption": "随货资料"
+          }
+        ]
+      },
+      {
+        "title": "泡棉盖板与内盒保护",
+        "paragraphs": [
+          "缓冲防护：产品放置后覆盖泡棉盖板，再合上内盒，减少碰撞与挤压。",
+          "搬运提示：按包装上的搬运标识轻拿轻放。"
+        ],
+        "photos": [
+          {
+            "file": "pipetting-protective-foam-cover.webp",
+            "source": "codex-clipboard-aad3d17d-f577-47e4-8abf-834820346031.jpg",
+            "alt": "移液泵缓冲包装",
+            "caption": "缓冲包装"
+          },
+          {
+            "file": "pipetting-handling-warning-carton.webp",
+            "source": "codex-clipboard-60e2ada3-ac46-4f87-b9ff-28c43ee6a8cc.jpg",
+            "alt": "移液泵内盒封装",
+            "caption": "内盒封装"
+          }
+        ]
+      },
+      {
+        "title": "封箱发货与收货核对",
+        "paragraphs": [
+          "发货安排：按确认的订单交期和运输方式发货，发货后提供物流信息。",
+          "收货核对：检查型号、数量、线束、随货资料和包装状态；如有运输损伤或缺件，保留包装及照片并及时联系。"
+        ],
+        "photos": [
+          {
+            "file": "pipetting-carton-sealing.webp",
+            "source": "codex-clipboard-205b6bc7-9094-4122-99bd-06f458e0062a.jpg",
+            "alt": "移液泵包装作业",
+            "caption": "包装作业"
+          },
+          {
+            "file": "pipetting-shipping-cartons.webp",
+            "source": "codex-clipboard-82986294-b78c-436f-a6f0-dbddf3ff1e46.jpg",
+            "alt": "移液泵封箱待发",
+            "caption": "封箱待发"
+          }
+        ]
+      }
+    ]
+  },
+  "pdm": {
+    "families": [
+      "pdm5"
+    ],
+    "slugs": [],
+    "imageRoot": "/images/products/control/pdm/delivery/",
+    "intro": "产品经出厂检验后进行防护包装，装箱时核对型号、数量及随货资料，完成封箱与标识检查后安排发货。",
+    "rows": [
+      {
+        "title": "静电防护与检验资料",
+        "paragraphs": [
+          "产品防护：模块采用防静电袋包装。",
+          "检验资料：产品检验记录随货提供。"
+        ],
+        "photos": [
+          {
+            "file": "pdm-esd-protective-bag.webp",
+            "source": "codex-clipboard-fb5f7e1d-8b75-47e5-b04f-2e96df6d2c2d.jpg",
+            "alt": "PDM 压力检测模块产品防护",
+            "caption": "产品防护"
+          },
+          {
+            "file": "pdm-fqc-inspection-record.webp",
+            "source": "codex-clipboard-bf5bb332-5fa0-4a74-a5f8-8cc2f042239c.jpg",
+            "alt": "PDM 压力检测模块随货资料",
+            "caption": "随货资料"
+          }
+        ]
+      },
+      {
+        "title": "独立内盒与缓冲装箱",
+        "paragraphs": [
+          "型号核对：核对独立内盒的型号、料号及供货数量，并与订单对应。",
+          "缓冲装箱：独立内盒与泡棉共同放入外箱，随货资料妥善放置。"
+        ],
+        "photos": [
+          {
+            "file": "pdm-inner-carton-model-label.webp",
+            "source": "codex-clipboard-5da22901-3570-44e1-8fb3-31b9542ef677.jpg",
+            "alt": "PDM 压力检测模块包装标识",
+            "caption": "包装标识"
+          },
+          {
+            "file": "pdm-cushioned-cartons-and-documents.webp",
+            "source": "codex-clipboard-2ffe67b1-bb84-44a7-9842-d98d7f19aede.jpg",
+            "alt": "PDM 压力检测模块缓冲包装",
+            "caption": "缓冲包装"
+          }
+        ]
+      },
+      {
+        "title": "外箱标识与收货核对",
+        "paragraphs": [
+          "外箱标识：通过物料标识卡核对产品名称、规格、数量及追溯信息。",
+          "收货检查：核对外箱、独立内盒及随货资料，发现运输损伤或缺件时保留包装及照片并及时联系。"
+        ],
+        "photos": [
+          {
+            "file": "pdm-carton-material-label.webp",
+            "source": "codex-clipboard-0a5653e6-5a4a-48ad-a9e7-a7cd4b18925e.jpg",
+            "alt": "PDM 压力检测模块包装标识",
+            "caption": "包装标识"
+          },
+          {
+            "file": "pdm-shipping-cartons.webp",
+            "source": "codex-clipboard-7a9953e4-affa-44f1-b56c-165d5d99c068.png",
+            "alt": "PDM 压力检测模块封箱待发",
+            "caption": "封箱待发"
+          }
+        ]
+      }
+    ]
+  },
+  "rotaryValves": {
+    "families": [
+      "mrv3"
+    ],
+    "slugs": [],
+    "imageRoot": "/images/products/valves/rotary-valves/delivery/",
+    "intro": "产品经出厂检验后进行防护包装，装箱时核对型号、数量及随货资料，完成封箱与标识检查后安排发货。",
+    "rows": [
+      {
+        "title": "产品与线束分区防护",
+        "paragraphs": [
+          "内包装：旋转阀与配套线束分别装袋，放入泡棉内衬的独立区域，减少相互碰撞和挤压。",
+          "上层保护：产品与线束放置后覆盖泡棉盖板，确认位置与缓冲状态后合盖。"
+        ],
+        "photos": [
+          {
+            "file": "rotary-valves-valve-and-cables-in-foam.webp",
+            "source": "codex-clipboard-bae6d80b-aea7-4ba7-8706-26ec9fe6a240.jpg",
+            "alt": "旋转阀产品防护",
+            "caption": "产品防护"
+          },
+          {
+            "file": "rotary-valves-protective-foam-cover.webp",
+            "source": "codex-clipboard-54b5e58d-1730-4c44-9da1-b36d14227fb9.jpg",
+            "alt": "旋转阀缓冲包装",
+            "caption": "缓冲包装"
+          }
+        ]
+      },
+      {
+        "title": "内盒封装与物料标识",
+        "paragraphs": [
+          "独立内盒：内盒保护产品与配套附件。",
+          "型号核对：核对包装物料卡中的型号、数量与追溯信息，并与订单及随货资料对应。"
+        ],
+        "photos": [
+          {
+            "file": "rotary-valves-closed-inner-carton.webp",
+            "source": "codex-clipboard-64539f53-6340-4155-86d6-1920d16269c2.jpg",
+            "alt": "旋转阀内盒封装",
+            "caption": "内盒封装"
+          },
+          {
+            "file": "rotary-valves-carton-material-label.webp",
+            "source": "codex-clipboard-809aaf38-c5cc-4560-8f44-47176c920e2f.jpg",
+            "alt": "旋转阀包装标识",
+            "caption": "包装标识"
+          }
+        ]
+      },
+      {
+        "title": "封箱发货与收货核对",
+        "paragraphs": [
+          "发货安排：按确认交期与运输方式发货，并提供物流信息。",
+          "收货检查：检查型号、数量、线束和包装状态；发现运输损伤或缺件时保留包装及照片并及时联系。"
+        ],
+        "photos": [
+          {
+            "file": "rotary-valves-packing-illustration.webp",
+            "source": "codex-clipboard-31b6a941-9fba-46e8-8fd0-241266daba32.jpg",
+            "alt": "旋转阀包装作业",
+            "caption": "包装作业"
+          },
+          {
+            "file": "rotary-valves-shipping-cartons.webp",
+            "source": "codex-clipboard-9ba2c130-8d4b-451f-8f0e-fff9a64cbd93.png",
+            "alt": "旋转阀封箱待发",
+            "caption": "封箱待发"
+          }
+        ]
+      }
+    ]
+  },
+  "solenoidValves": {
+    "families": [
+      "sv10"
+    ],
+    "slugs": [],
+    "imageRoot": "/images/products/valves/solenoid-valves/delivery/",
+    "intro": "产品经出厂检验后进行防护包装，装箱时核对型号、数量及随货资料，完成封箱与标识检查后安排发货。",
+    "rows": [
+      {
+        "title": "分隔槽位与泡棉防护",
+        "paragraphs": [
+          "产品防护：电磁阀分别放入泡棉槽位，线束妥善收拢，减少产品之间的碰撞和挤压。",
+          "上层保护：放置完成后覆盖泡棉盖板，再封装内盒。"
+        ],
+        "photos": [
+          {
+            "file": "solenoid-valves-valves-separated-in-foam.webp",
+            "source": "codex-clipboard-dde44147-568e-4b62-8801-e91f87c31e1d.jpg",
+            "alt": "电磁阀产品防护",
+            "caption": "产品防护"
+          },
+          {
+            "file": "solenoid-valves-protective-foam-cover.webp",
+            "source": "codex-clipboard-adf0f11a-6efa-4aa6-919d-96963e7a295c.jpg",
+            "alt": "电磁阀缓冲包装",
+            "caption": "缓冲包装"
+          }
+        ]
+      },
+      {
+        "title": "内盒封装与型号核对",
+        "paragraphs": [
+          "包装提示：搬运时遵循包装上的轻拿轻放等标识。",
+          "物料核对：收货时核对型号、料号、数量及追溯信息。"
+        ],
+        "photos": [
+          {
+            "file": "solenoid-valves-handling-warning-carton.webp",
+            "source": "codex-clipboard-f6f29d8e-26ac-487a-b05f-45be562211e3.jpg",
+            "alt": "电磁阀内盒封装",
+            "caption": "内盒封装"
+          },
+          {
+            "file": "solenoid-valves-carton-material-label.webp",
+            "source": "codex-clipboard-e59257af-1925-4322-8461-b53aca93aad5.png",
+            "alt": "电磁阀包装标识",
+            "caption": "包装标识"
+          }
+        ]
+      },
+      {
+        "title": "封箱发货与收货核对",
+        "paragraphs": [
+          "发货安排：按确认的订单交期与运输方式发货，发货后提供物流信息。",
+          "收货检查：检查外箱及泡棉状态，核对型号、数量与线束；异常时保留包装及照片并及时联系。"
+        ],
+        "photos": [
+          {
+            "file": "solenoid-valves-carton-sealing.webp",
+            "source": "codex-clipboard-e76f404c-d45a-47b3-8ee4-b9811b350c8f.jpg",
+            "alt": "电磁阀包装作业",
+            "caption": "包装作业"
+          },
+          {
+            "file": "solenoid-valves-shipping-cartons.webp",
+            "source": "codex-clipboard-be7ee3a0-6873-45a7-b719-00649e800088.jpg",
+            "alt": "电磁阀封箱待发",
+            "caption": "封箱待发"
+          }
+        ]
+      }
+    ]
+  },
+  "highPressureValves": {
+    "families": [
+      "hp"
+    ],
+    "slugs": [],
+    "imageRoot": "/images/products/valves/high-pressure-valves/delivery/",
+    "intro": "产品经出厂检验后进行防护包装，装箱时核对型号、数量及随货资料，完成封箱与标识检查后安排发货。",
+    "rows": [
+      {
+        "title": "产品袋装与随货检验",
+        "paragraphs": [
+          "产品防护：高压阀袋装后配合泡棉内衬保护，减少搬运中的表面摩擦、碰撞与挤压。",
+          "随货资料：检验记录随产品一同装箱。"
+        ],
+        "photos": [
+          {
+            "file": "high-pressure-valves-bagged-valve-and-carton.webp",
+            "source": "codex-clipboard-2b6d86e6-ecf4-4d8f-9207-a4b828dcce88.jpg",
+            "alt": "高压阀产品防护",
+            "caption": "产品防护"
+          },
+          {
+            "file": "high-pressure-valves-fqc-inspection-record.webp",
+            "source": "codex-clipboard-b779996f-8254-481b-8c97-a89c5154728f.jpg",
+            "alt": "高压阀随货资料",
+            "caption": "随货资料"
+          }
+        ]
+      },
+      {
+        "title": "泡棉缓冲与物料标识",
+        "paragraphs": [
+          "缓冲装箱：泡棉内衬与盖板配合保护产品。",
+          "型号核对：核对外箱物料卡中的型号、料号、数量及追溯信息，并与订单及随货资料对应。"
+        ],
+        "photos": [
+          {
+            "file": "high-pressure-valves-protective-foam-cover.webp",
+            "source": "codex-clipboard-de21c787-7841-40bd-a47f-57832da17322.jpg",
+            "alt": "高压阀缓冲包装",
+            "caption": "缓冲包装"
+          },
+          {
+            "file": "high-pressure-valves-carton-material-label.webp",
+            "source": "codex-clipboard-d6312893-ed87-4dfb-af6f-ba71560f96e9.png",
+            "alt": "高压阀包装标识",
+            "caption": "包装标识"
+          }
+        ]
+      },
+      {
+        "title": "封箱发货与收货核对",
+        "paragraphs": [
+          "发货安排：按确认的订单交期和运输方式发货，并提供物流信息。",
+          "收货检查：检查外箱状态、型号、数量及随货资料；如发现运输损伤或缺件，保留包装及照片并及时联系。"
+        ],
+        "photos": [
+          {
+            "file": "high-pressure-valves-carton-sealing.webp",
+            "source": "codex-clipboard-1ca9c852-2d7d-4433-a535-ffb3b1ecb01d.jpg",
+            "alt": "高压阀包装作业",
+            "caption": "包装作业"
+          },
+          {
+            "file": "high-pressure-valves-sealed-shipping-carton.webp",
+            "source": "codex-clipboard-5ad56c38-fae9-413c-88bc-b44504c495aa.jpg",
+            "alt": "高压阀封箱待发",
+            "caption": "封箱待发"
+          }
+        ]
+      }
+    ]
+  }
+}

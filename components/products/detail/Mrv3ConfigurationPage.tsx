@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import ProductDetailClient from "./ProductDetailClient";
+import { getInstrumentProductSections } from "./InstrumentProductSections";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import type { ProductDetailPageData } from "@/data/products/detail/product-detail.types";
 import { getMrv3Content, mrv3BasePath } from "@/data/products/detail/mrv3-content";
@@ -41,7 +42,7 @@ export default function Mrv3ConfigurationPage({ slug, locale }: { slug: string; 
     drawing2dUrl: "", model3dUrl: "", datasheetUrl: "",
   } as unknown as ProductDetailPageData;
   const language = normalizeValveLocale(locale);
-  return <ProductDetailClient data={data} afterContent={
+  return <ProductDetailClient data={data} {...getInstrumentProductSections(slug, language)} afterContent={
     <RelatedResources sourceType="product" sourceSlug={slug} relationKeys={["series:mrv3"]}
       locale={language === "zh" ? "zh-CN" : language} />
   } />;

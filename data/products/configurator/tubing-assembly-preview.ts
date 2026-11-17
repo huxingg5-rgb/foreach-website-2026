@@ -1,5 +1,31 @@
-import { endConnection, resolveAssemblyEndAlias, type FlangedEnd } from "./flanged-tubing";
-import { getAssemblyFitting } from "./tubing-assembly-catalog";
+import { endConnection, normalizeFlangedChoice, resolveAssemblyEndAlias, type FlangedEnd, type FlangedTubingChoice } from "./flanged-tubing";
+import { assemblyFittingAccessories, getAssemblyFitting, getAssemblyTube } from "./tubing-assembly-catalog";
+
+export type AssemblyPreviewEnd = FlangedEnd & {
+  enabled: boolean; cadUrl?: string; exteriorSourceModel?: string;
+  accessoryCadUrl?: string; accessoryColor?: string; accessoryMissing?: boolean;
+};
+export type AssemblyPreviewConfig = {
+  mode: string; inner: number; outer: number; tubeColor: string; tubeMaterial: string;
+  labelA: boolean; labelB: boolean; a: AssemblyPreviewEnd; b: AssemblyPreviewEnd;
+};
+
+/** Warm-up and the visible preview must resolve the same catalog parts. */
+export function assemblyPreviewConfig(input: FlangedTubingChoice): AssemblyPreviewConfig {
+  const choice = normalizeFlangedChoice(input), tube = getAssemblyTube(choice.tubeModel)!;
+  const renderEnd = (end: FlangedEnd): AssemblyPreviewEnd => {
+    const fitting = getAssemblyFitting(end.fittingModel);
+    const accessory = assemblyFittingAccessories(fitting, endConnection(end), tube.outer).find(a => a.productCode === end.accessoryCode);
+    const enabled = Boolean(fitting?.family === end.series && accessory);
+    const preview = enabled ? assemblyPreviewAsset(end, tube.outer) : null;
+    const exterior = enabled && !preview ? assemblyExteriorPreviewAsset(end, tube.outer) : null;
+    return { ...end, enabled, connection: endConnection(end), cadUrl: preview?.url || exterior?.url, exteriorSourceModel: exterior?.sourceModel,
+      accessoryCadUrl: enabled && accessory?.tubeOuterDiameters.includes(tube.outer) ? accessory.cadUrl : undefined, accessoryColor: accessory?.color,
+      accessoryMissing: Boolean(enabled && accessory?.tubeOuterDiameters.includes(tube.outer) && !accessory.cadUrl) };
+  };
+  return { mode: choice.mode, inner: tube.inner, outer: tube.outer, tubeColor: tube.color, tubeMaterial: tube.material,
+    labelA: choice.labelA, labelB: choice.labelB, a: renderEnd(choice.a), b: renderEnd(choice.b) };
+}
 
 /** Preview and drawing share the resolved catalog identity, with separate renderers. */
 export function assemblyPreviewAsset(end: FlangedEnd, outer: number): { url: string; kind: "exact-cad" } | null {

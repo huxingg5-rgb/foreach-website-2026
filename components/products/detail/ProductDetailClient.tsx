@@ -1,4 +1,5 @@
 "use client";
+import type { InstrumentCategoryUi } from "@/data/products/detail/rpl-guide-ui.intl";
 import { getDrawingTypes, normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import { useModelDrawingRequirements } from "@/data/products/configurator/model-drawing-requirements";
 import { tubingText } from "@/data/products/tubing/detail-locales";
@@ -11,7 +12,6 @@ import BottomCtaButton from "@/components/common/BottomCtaButton";
 import QuickConnectPreviewNote from "./QuickConnectPreviewNote";
 import FittingDeliveryZh from "./FittingDeliveryZh";
 import { applyProbeDetailCopy, getLocalizedProbeGuide, probeText } from "@/data/products/detail/probe-guide.intl";
-import MobilePdfCanvasViewer from "@/components/common/MobilePdfCanvasViewer";
 import { getControlModuleDetailHeading } from "@/data/products/selection/control-module-card-copy";
 import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
 import { getProbeControlBreadcrumbsEn } from "@/lib/seo/probe-control-breadcrumbs";
@@ -78,6 +78,11 @@ import {
 } from "@/data/products/configurator/ea-pump-inquiry-configurations";
 import { pistonText } from "@/data/products/detail/piston-pump-ui.intl";
 import EaPumpInquirySummary from "./EaPumpInquirySummary";
+import InstrumentInquiryWorkspace from "./InstrumentInquiryWorkspace";
+import AbdResourceViewer from "./AbdResourceViewer";
+import { getPdm5DrawingAsset } from "@/data/products/detail/pdm5-drawing-assets";
+import { getInstrumentInquiryFamily } from "@/data/products/configurator/instrument-inquiry";
+import { ProductDetailVideoContext } from "./product-detail-video-context";
 import TubingConfigurationWorkspace from "./TubingConfigurationWorkspace";
 import { useTubingConfigurations } from "@/data/products/configurator/tubing-configurations";
 /* =========================================================
@@ -154,7 +159,7 @@ import {
   trackResourceView,
 } from "@/lib/analytics/track-event";
 import ProductModelViewer from "./ProductModelViewer";
-import SolenoidAssets from "./SolenoidAssets";
+import SolenoidAssets, { SolenoidVariantSelector } from "./SolenoidAssets";
 import ProductCadViewer from "./ProductCadViewer";
 import ModelPreviewTrigger from "./ModelPreviewTrigger";
 import { getValvelessPumpAssets } from "@/data/products/detail/valveless-pump-assets";
@@ -331,7 +336,8 @@ type ProductDetailClientProps = {
   analyticsProductId?: string;
   beforeFaqContent?: ReactNode;
   afterContent?: ReactNode;
-  customerCategoryMode?: "quick-connect-zh" | "fitting-zh" | "luer-zh" | "hard-tube-zh" | "tubing-zh" | "tubing" | "tubing-assembly-zh" | "tubing-assembly" | "piston-pump-zh" | "piston-pump" | "diaphragm-pump";
+  customerCategoryMode?: "quick-connect-zh" | "fitting-zh" | "luer-zh" | "hard-tube-zh" | "tubing-zh" | "tubing" | "tubing-assembly-zh" | "tubing-assembly" | "piston-pump-zh" | "piston-pump" | "diaphragm-pump" | "instrument-product-zh" | "instrument-product";
+  customerCategoryUi?: InstrumentCategoryUi;
   customerCategoryContent?: Partial<Record<"product" | "selection" | "delivery", ReactNode>>;
 };
 
@@ -1609,6 +1615,7 @@ const ProbeSelectionContent = dynamic(() => import("./ProbeDetailContent").then(
 const ProbeDeliveryContent = dynamic(() => import("./ProbeDetailContent").then(module => module.ProbeDeliveryContent));
 const ProbeCustomInquiryModal = dynamic(() => import("./ProbeCustomInquiryModal"), { ssr: false });
 const EaPumpInquiryConfigurator = dynamic(() => import("@/components/products/configurator/EaPumpInquiryConfigurator"), { ssr: false });
+const ProductDetailVideos = dynamic(() => import("./ProductDetailVideos"));
 
 export default function ProductDetailClient({
   data: sourceData,
@@ -1616,6 +1623,7 @@ export default function ProductDetailClient({
   beforeFaqContent,
   afterContent,
   customerCategoryMode,
+  customerCategoryUi,
   customerCategoryContent,
 }: ProductDetailClientProps) {
   const pathname = usePathname();
@@ -1763,12 +1771,14 @@ export default function ProductDetailClient({
     : null, [sourceData, configuratorLocale]);
   const isProbeCustomerCategoryPage = Boolean(probeGuide);
   const isDiaphragmPumpCustomerCategoryPage = customerCategoryMode === "diaphragm-pump";
+  const isInstrumentCustomerCategoryPage = customerCategoryMode === "instrument-product" ||
+    (customerCategoryMode === "instrument-product-zh" && configuratorLocale === "zh");
   const diaphragmGuideCopy = getDiaphragmPumpGuideCopy(configuratorLocale);
   const actionDatasheet = datasheet;
   const hasResourceDownloads = configuratorLocale !== "zh";
   // Piston pumps and localized fittings follow the Chinese information layout:
   // specifications and the shared 2D/3D viewer, without a separate datasheet panel.
-  const hasDatasheetTab = Boolean(resourceLocale !== "zh" && !isTubingDetailData(sourceData) && !isTubingAssembly && !isPistonPumpCustomerCategoryPage && !isDiaphragmPumpCustomerCategoryPage && !isProbeCustomerCategoryPage &&
+  const hasDatasheetTab = Boolean(resourceLocale !== "zh" && !isTubingDetailData(sourceData) && !isTubingAssembly && !isPistonPumpCustomerCategoryPage && !isInstrumentCustomerCategoryPage && !isDiaphragmPumpCustomerCategoryPage && !isProbeCustomerCategoryPage &&
     !(isEnglish && (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings")));
   const productDetailTabCount =
     (data.productTypeId === "quick-connect-fittings" && !getQuickConnectFittingCadAssets(data.slug) ? 2 : 3) +
@@ -1778,6 +1788,8 @@ export default function ProductDetailClient({
   );
   const pumpFileDisplayLocale = isLocalizedDetail ? "en" : "zh";
   const isPumpDetail = isPumpDetailData(data);
+  const useProductResourceLayout = isPumpDetail || isValveDetailData(data) ||
+    [sourceData.category, sourceData.categoryId].some(category => ["control", "control-modules"].includes(String(category)));
   const rplAssets = data.productTypeId === "valveless-pump" ? getValvelessPumpAssets(data.slug) : undefined;
   const diaphragmCadAssets = isDiaphragmPage ? getDiaphragmPumpCadAssets(data.slug) : undefined;
   const pistonCadAssets = getPistonPumpCadAssets(data.slug);
@@ -1805,9 +1817,10 @@ export default function ProductDetailClient({
     ? getQuickConnectDrawingHref(data.model || data.foreachModel || data.slug)
     : null;
   const standaloneFittingDrawingUrl = standaloneFittingCadAssets?.drawingPdfUrl || null;
+  const pdm5Drawing = getPdm5DrawingAsset(sourceData.slug || data.slug, configuratorLocale);
   const drawingPreviewUrl = getProductDrawingPreviewUrl(
     data.slug,
-    data.productTypeId === "valveless-pump" ? rplAssets?.drawingPdfUrl || "" :
+    smtp4CadAssets ? smtp4CadAssets.drawingPdfUrl : pdm5Drawing?.drawingPdfUrl || (data.productTypeId === "valveless-pump" ? rplAssets?.drawingPdfUrl || "" :
     luerCadAssets?.drawingPdfUrl || remainingFittingCadAssets?.drawingPdfUrl ||
     getFittingDrawingHref(String(data.productTypeId), data.slug) ||
     quickConnectDrawingUrl ||
@@ -1815,7 +1828,7 @@ export default function ProductDetailClient({
     data.drawing2dUrl ||
       data.drawingPdfUrl ||
       data.partDrawingUrl ||
-      data.resources?.drawing2dUrl,
+      data.resources?.drawing2dUrl),
   );
   const drawingDocumentUrl = drawingPreviewUrl.split("#", 1)[0];
   const isCustomProduct =
@@ -2083,7 +2096,7 @@ const isAssemblyCustomerCategoryPage = isTubingAssembly && (
   customerCategoryMode === "tubing-assembly" ||
   (customerCategoryMode === "tubing-assembly-zh" && configuratorLocale === "zh")
 );
-const isCustomerCategoryPage = customerCategoryMode === "quick-connect-zh" || customerCategoryMode === "fitting-zh" || customerCategoryMode === "luer-zh" || isHardTubeCustomerCategoryPage || isTubingCustomerCategoryPage || isAssemblyCustomerCategoryPage || isPistonPumpCustomerCategoryPage || isDiaphragmPumpCustomerCategoryPage || isProbeCustomerCategoryPage;
+const isCustomerCategoryPage = customerCategoryMode === "quick-connect-zh" || customerCategoryMode === "fitting-zh" || customerCategoryMode === "luer-zh" || isHardTubeCustomerCategoryPage || isTubingCustomerCategoryPage || isAssemblyCustomerCategoryPage || isPistonPumpCustomerCategoryPage || isDiaphragmPumpCustomerCategoryPage || isProbeCustomerCategoryPage || isInstrumentCustomerCategoryPage;
 // All locales use the shared fitting delivery component; its regional copy is separate.
 const showSharedFittingDelivery =
   (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings");
@@ -2105,6 +2118,13 @@ const showModelPreview =
   openedModelUrl !== model3dUrl &&
   !showFlatProductResources;
 const [solenoidVariant, setSolenoidVariant] = useState(0);
+  const instrumentResourceModel: FittingModelSource = data.solenoidAuthoredContent
+    ? { kind: "custom", render: active => <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="3d"
+        active={active} variant={solenoidVariant} onVariant={setSolenoidVariant} externalResourceTabs /> }
+    : cadAssets
+      ? { kind: "cad", props: { modelId: cadAssets.viewerId, title: cadAssets.model || data.displayModel || data.slug,
+          drawingUrl: drawingPreviewUrl || undefined, headMaterial: pistonCadAssets?.headMaterial, locale: configuratorLocale } }
+      : model3dUrl ? { kind: "file", slug: data.slug, model: data.displayModel || data.model, url: model3dUrl } : null;
   const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
   const [cadConfigurationId, setCadConfigurationId] = useState<string | null>(null);
   const [cadRequestedModel, setCadRequestedModel] = useState("");
@@ -2115,6 +2135,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   const [flangedTubingChoice, setFlangedTubingChoice] = useState<FlangedTubingChoice | null>(null);
   const [isFlangedTubingOpen, setIsFlangedTubingOpen] = useState(false);
   const pistonInquiryProduct = getEaInquiryProduct(sourceData.slug);
+  const instrumentInquiryFamily = getInstrumentInquiryFamily(sourceData.slug || "");
+  const [abdPreviewTubeOd, setAbdPreviewTubeOd] = useState("16");
   const isEaInquiryEnabled = Boolean(pistonInquiryProduct) && isPlungerPumpDetailData(data);
   const [eaConfigurations, setEaConfigurations] = useState(emptyEaPumpConfigurations);
   const [eaExpandedConfigurationId, setEaExpandedConfigurationId] = useState<string | null>(null);
@@ -2218,6 +2240,26 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   const quickConnectPairOption = quickConnectPairConfig?.options.find(option => option.model === quickConnectPairSelection) || null;
   const quickConnectViewerMate = isQuickConnectSingleSelection ? "none" : quickConnectPairOption?.model.toLowerCase();
 
+  const configuratorEntryRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (!isAssemblyConfigurator && !isQuickConnectPairingEnabled) return;
+    if (new URLSearchParams(window.location.search).get("configure") !== "1") return;
+    const entryPath = pathname || window.location.pathname;
+    if (configuratorEntryRef.current === entryPath) return;
+
+    // Open the existing selector once after hydration; never save a configuration here.
+    const frame = window.requestAnimationFrame(() => {
+      configuratorEntryRef.current = entryPath;
+      if (isAssemblyConfigurator) {
+        setFlangedNeedDrawing(false);
+        setIsFlangedTubingOpen(true);
+      } else {
+        setIsQuickConnectPairConfiguratorOpen(true);
+      }
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [isAssemblyConfigurator, isQuickConnectPairingEnabled, pathname]);
+
   const luerPairConfig = getLuerPairConfig(data, configuratorLocale);
   const isLuerPairingEnabled = Boolean(luerPairConfig);
   const [luerPairSelection, setLuerPairSelection] = useState<LuerPairChoice | null>(() => luerPairConfig?.defaultChoice || null);
@@ -2273,15 +2315,15 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     || (isDetailModelConfiguratorEnabled && !selectedDetailVariant);
 
   const isFittingCombinationWorkspace = isHardTubeConfiguratorEnabled || isLuerPairingEnabled || isQuickConnectPairingEnabled;
-  const isFixedConfigurationWorkspace = !isFittingCombinationWorkspace && !isEaInquiryEnabled && !isDetailModelConfiguratorEnabled
+  const isFixedConfigurationWorkspace = !instrumentInquiryFamily && !isFittingCombinationWorkspace && !isEaInquiryEnabled && !isDetailModelConfiguratorEnabled
     && !isTubingConfiguratorEnabled && !isAssemblyConfigurator && !isAssemblyCustomerCategoryPage && !isProbeCustomerCategoryPage
     && !isQuickConnectSeriesDetail && hasConcreteDisplayModel && Boolean(isCadRequestAvailable || actionDatasheet);
-  const isInquiryResourceWorkspace = !isFittingCombinationWorkspace && !isEaInquiryEnabled && !isDetailModelConfiguratorEnabled
+  const isInquiryResourceWorkspace = !instrumentInquiryFamily && !isFittingCombinationWorkspace && !isEaInquiryEnabled && !isDetailModelConfiguratorEnabled
     && !isTubingConfiguratorEnabled && !isAssemblyConfigurator && !isAssemblyCustomerCategoryPage && !isProbeCustomerCategoryPage
     && !isQuickConnectSeriesDetail && isCustomProduct && Boolean(isCadRequestAvailable || actionDatasheet);
   const isAdditionalConfigurationWorkspace = isFittingCombinationWorkspace || isFixedConfigurationWorkspace || isInquiryResourceWorkspace;
-  const usesCompactConfigurationLayout = isAdditionalConfigurationWorkspace || isEaInquiryEnabled || isDetailModelConfiguratorEnabled;
-  const hasStandaloneProductActions = !isAssemblyConfigurator && !isTubingConfiguratorEnabled;
+  const usesCompactConfigurationLayout = Boolean(instrumentInquiryFamily) || isAdditionalConfigurationWorkspace || isEaInquiryEnabled || isDetailModelConfiguratorEnabled;
+  const hasStandaloneProductActions = !instrumentInquiryFamily && !isAssemblyConfigurator && !isTubingConfiguratorEnabled;
   const workspacePresentation = getSelectionWorkspacePresentation(configuratorLocale,
     isFittingCombinationWorkspace ? "fittings"
       : isInquiryResourceWorkspace || isProbeCustomerCategoryPage ? "custom"
@@ -3807,10 +3849,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             )}
 
             <div id="product-detail-actions" data-configuration-layout={usesCompactConfigurationLayout || undefined} className={styles.operationArea}>
-              {!isEaInquiryEnabled && !isDetailModelConfiguratorEnabled && !isTubingConfiguratorEnabled && !isAssemblyCustomerCategoryPage && !isAdditionalConfigurationWorkspace && (hasResourceDownloads || isCadRequestAvailable || isProbeCustomerCategoryPage) ? <div className={`${styles.selectionWorkspaceHeading} ${selectionWorkspaceStyles.workspaceHeading}`}>
+              {!instrumentInquiryFamily && !isEaInquiryEnabled && !isDetailModelConfiguratorEnabled && !isTubingConfiguratorEnabled && !isAssemblyCustomerCategoryPage && !isAdditionalConfigurationWorkspace && (hasResourceDownloads || isCadRequestAvailable || isProbeCustomerCategoryPage) ? <div className={`${styles.selectionWorkspaceHeading} ${selectionWorkspaceStyles.workspaceHeading}`}>
                 <div><h3>{workspacePresentation.title}</h3><p>{workspacePresentation.description}</p></div>
               </div> : null}
-              {!isDetailModelConfiguratorEnabled && !isEaInquiryEnabled && !isTubingConfiguratorEnabled && !isAssemblyCustomerCategoryPage && !isProbeCustomerCategoryPage && !isAdditionalConfigurationWorkspace ? <div
+              {!instrumentInquiryFamily && !isDetailModelConfiguratorEnabled && !isEaInquiryEnabled && !isTubingConfiguratorEnabled && !isAssemblyCustomerCategoryPage && !isProbeCustomerCategoryPage && !isAdditionalConfigurationWorkspace ? <div
                 data-product-model-row="true"
                 data-concrete-model={hasConcreteDisplayModel ? "true" : undefined}
                 className={styles.modelLine}
@@ -4061,9 +4103,14 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 onCollapse={() => { setEaPreviewConfigurationId(null); setEaExpandedConfigurationId(null); }}
                 onNew={() => openEaInquiryEditor(true)} onDelete={deleteEaConfiguration}
               /> : null}
+              {instrumentInquiryFamily ? <InstrumentInquiryWorkspace
+                key={`${sourceData.slug}:${resourceLocale}`} slug={sourceData.slug || ""} family={instrumentInquiryFamily} locale={resourceLocale}
+                detailHref={pathname || data.detailHref || ""} imagePath={String(data.mainImage || "")}
+                onConfigurationSelect={instrumentInquiryFamily === "ABD" ? configuration => setAbdPreviewTubeOd(configuration.choice.tubeOd) : undefined}
+                resourceDownloads={hasResourceDownloads ? <ProductResourceDownloads datasheet={actionDatasheet} locale={configuratorLocale} includeChinese /> : undefined} /> : null}
               {isAssemblyConfigurator ? <FlangedTubingWorkspace locale={configuratorLocale} compact={isAssemblyCustomerCategoryPage} entrySlug={sourceData.slug} open={isFlangedTubingOpen} requestDrawing={flangedNeedDrawing}
                 onClose={() => setIsFlangedTubingOpen(false)} onChoiceChange={setFlangedTubingChoice} onAdd={addFlangedTubingChoice} /> : null}
-              {(hasResourceDownloads || (hasStandaloneProductActions && (!showEaInquiryWorkspace || (isCadRequestAvailable && resourceCopy)))) ? <ProductDetailActions>
+              {((hasResourceDownloads && !instrumentInquiryFamily) || (hasStandaloneProductActions && (!showEaInquiryWorkspace || (isCadRequestAvailable && resourceCopy)))) ? <ProductDetailActions>
                 {hasStandaloneProductActions && data.showDrawingRequest && !showEaInquiryWorkspace && !isDetailModelConfiguratorEnabled && !isProbeCustomerCategoryPage && !isAdditionalConfigurationWorkspace ? (
                   <ProductDetailActionButton
                     disabled={isDetailVariantRequired}
@@ -4083,8 +4130,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   </ProductDetailActionButton>
                 ) : null}
 
-                {hasResourceDownloads ? (
-                  <ProductResourceDownloads datasheet={actionDatasheet} locale={configuratorLocale} />
+                {hasResourceDownloads && !instrumentInquiryFamily ? (
+                  <ProductResourceDownloads datasheet={actionDatasheet} locale={configuratorLocale} includeChinese={Boolean(instrumentInquiryFamily)} />
                 ) : null}
 
                 {hasStandaloneProductActions && !showEaInquiryWorkspace && !isDetailModelConfiguratorEnabled && !isAdditionalConfigurationWorkspace ? <ProductDetailActionButton
@@ -4114,7 +4161,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             <nav
               className={styles.customerCategoryNav}
               lang={configuratorLocale}
-              aria-label={isTubingCustomerCategoryPage ? tubingText("产品内容分类", configuratorLocale) : isProbeCustomerCategoryPage ? probeText("产品内容分类", configuratorLocale) : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.navigation : isPistonPumpCustomerCategoryPage ? pistonText("产品内容分类", configuratorLocale) : isAssemblyCustomerCategoryPage ? assemblyText("产品内容分类", configuratorLocale) : "产品内容分类"}
+              aria-label={isTubingCustomerCategoryPage ? tubingText("产品内容分类", configuratorLocale) : isProbeCustomerCategoryPage ? probeText("产品内容分类", configuratorLocale) : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.navigation : isPistonPumpCustomerCategoryPage ? pistonText("产品内容分类", configuratorLocale) : isAssemblyCustomerCategoryPage ? assemblyText("产品内容分类", configuratorLocale) : customerCategoryUi?.navigation || "产品内容分类"}
             >
               {([
                 ["product", "产品资料"],
@@ -4133,7 +4180,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   aria-pressed={activeCustomerCategory === key}
                   onClick={() => setActiveCustomerCategory(key)}
                 >
-                  {isTubingCustomerCategoryPage ? tubingText(label, configuratorLocale) : isProbeCustomerCategoryPage ? probeText(label, configuratorLocale) : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.nav[key === "product" ? 0 : key === "selection" ? 1 : 2] : isPistonPumpCustomerCategoryPage ? pistonText(label, configuratorLocale) : isAssemblyCustomerCategoryPage ? assemblyText(label, configuratorLocale) : label}
+                  {isTubingCustomerCategoryPage ? tubingText(label, configuratorLocale) : isProbeCustomerCategoryPage ? probeText(label, configuratorLocale) : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.nav[key === "product" ? 0 : key === "selection" ? 1 : 2] : isPistonPumpCustomerCategoryPage ? pistonText(label, configuratorLocale) : isAssemblyCustomerCategoryPage ? assemblyText(label, configuratorLocale) : customerCategoryUi?.[key] || label}
                 </button>
               ))}
             </nav>
@@ -4305,6 +4352,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 </table>}
                 {isPistonPumpCustomerCategoryPage ? customerCategoryContent?.product : null}
                 {isDiaphragmPumpCustomerCategoryPage ? customerCategoryContent?.product : null}
+                {isInstrumentCustomerCategoryPage && (customerCategoryMode === "instrument-product" || !rplP4Copy?.specNotes?.length) ? customerCategoryContent?.product : null}
                 {isTubingAssembly && data.tubingAssemblySizeTable ? (
                   <TubingAssemblySizeTable data={data.tubingAssemblySizeTable} copy={data.tubingAssemblyUi} />
                 ) : null}
@@ -4318,7 +4366,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               </div>
             </div>
 
-            {applicationDetails && !isTubingCustomerCategoryPage && !isAssemblyCustomerCategoryPage && !isPistonPumpCustomerCategoryPage && !isDiaphragmPumpCustomerCategoryPage ? (
+            {applicationDetails && !isTubingCustomerCategoryPage && !isAssemblyCustomerCategoryPage && !isPistonPumpCustomerCategoryPage && !isDiaphragmPumpCustomerCategoryPage && !isInstrumentCustomerCategoryPage ? (
               <div
                 className={[
                   styles.panel,
@@ -4336,15 +4384,21 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
             {!isTubingCustomerCategoryPage && !isAssemblyCustomerCategoryPage && !isProbeCustomerCategoryPage ? (
             <div className={styles.modelDrawingGroup}>
-            {useSharedFittingResources || isPistonPumpCustomerCategoryPage || (isDiaphragmPumpCustomerCategoryPage && diaphragmCadAssets) ? (
+            {instrumentInquiryFamily === "ABD" ? (
+              <AbdResourceViewer locale={configuratorLocale} tubeOdCode={abdPreviewTubeOd} onTubeOdChange={setAbdPreviewTubeOd} active={showProductResourceTabs} />
+            ) : useSharedFittingResources || useProductResourceLayout ? (
               <FittingResourceViewer locale={configuratorLocale} key={`${configuratorLocale}:${data.slug}`}
-                drawings={isPistonPumpCustomerCategoryPage || isDiaphragmPumpCustomerCategoryPage ? [{
-                  role: "pump", label: isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.drawing : "柱塞泵图纸", model: String(sourceData.displayModel || data.slug), url: drawingPreviewUrl,
+                drawingOnly={Boolean(pdm5Drawing)} productLayout={useProductResourceLayout}
+                controls={data.solenoidAuthoredContent ? <SolenoidVariantSelector slug={data.slug} locale={configuratorLocale} variant={solenoidVariant} onVariant={setSolenoidVariant} /> : undefined}
+                drawings={useProductResourceLayout ? [{
+                  role: isInstrumentCustomerCategoryPage ? "product" : "pump", label: isInstrumentCustomerCategoryPage ? customerCategoryUi?.drawing || "产品图纸" : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.drawing : "柱塞泵图纸", model: String(cadAssets?.model || sourceData.displayModel || data.model || data.slug), url: drawingPreviewUrl,
                 }] : fittingResourceDrawings}
-                drawingPreview={(isPistonPumpCustomerCategoryPage || isDiaphragmPumpCustomerCategoryPage) && drawingPreviewUrl ? (
-                  <MobilePdfCanvasViewer pdfUrl={drawingPreviewUrl} documentTitle={String(sourceData.displayModel || data.slug)} />
+                drawingUnavailableMessage={isInstrumentCustomerCategoryPage ? customerCategoryUi?.drawingUnavailable || "当前型号暂无公开 2D 图纸，请联系技术支持确认可提供的图纸。" : undefined}
+                drawingPreview={isInstrumentCustomerCategoryPage && data.solenoidAuthoredContent ? (
+                  <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="drawing" active={showProductResourceTabs}
+                    variant={solenoidVariant} onVariant={setSolenoidVariant} externalResourceTabs />
                 ) : undefined}
-                modelSource={isPistonPumpCustomerCategoryPage && pistonCadAssets ? {
+                modelSource={pdm5Drawing ? null : isPistonPumpCustomerCategoryPage && pistonCadAssets ? {
                   kind: "cad", props: {
                     modelId: pistonCadAssets.viewerId,
                     title: String(sourceData.displayModel || data.slug),
@@ -4359,7 +4413,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     drawingUrl: drawingPreviewUrl || undefined,
                     locale: configuratorLocale,
                   },
-                } : fittingResourceModel} active={showProductResourceTabs} />
+                } : useProductResourceLayout ? instrumentResourceModel : fittingResourceModel} active={showProductResourceTabs} />
             ) : (<>
             {!isQuickConnectFitting || quickConnectCadAssets ? (
             <div
@@ -4587,7 +4641,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               </div>
             ) : null}
           </div>
-          {hasCustomerCategoryNavigation && activeCustomerCategory !== "product" && !(isPistonPumpCustomerCategoryPage && activeCustomerCategory === "selection") ? (
+          {hasCustomerCategoryNavigation && activeCustomerCategory !== "product" && !((isPistonPumpCustomerCategoryPage || isInstrumentCustomerCategoryPage) && activeCustomerCategory === "selection") ? (
             <div className={styles.customerCategoryContent}>
               {activeCustomerCategory === "selection"
                 ? (isTubingCustomerCategoryPage && customerCategoryContent?.selection
@@ -4602,7 +4656,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   : isTubingCustomerCategoryPage && applicationDetails
                   ? <ProductApplicationsPanel content={applicationDetails} />
                   : probeGuide ? <ProbeSelectionContent guide={probeGuide} locale={configuratorLocale} />
-                  : isPistonPumpCustomerCategoryPage ? null : customerCategoryContent?.selection)
+                  : isPistonPumpCustomerCategoryPage || isInstrumentCustomerCategoryPage ? null : customerCategoryContent?.selection)
                 : null}
               {activeCustomerCategory === "delivery"
                 ? (probeGuide ? <ProbeDeliveryContent guide={probeGuide} locale={configuratorLocale} /> : showSharedFittingDelivery ? <FittingDeliveryZh locale={configuratorLocale} productModel={String(data.model || data.foreachModel || "")} /> : customerCategoryContent?.delivery)
@@ -4610,7 +4664,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             </div>
           ) : null}
         </section>
-        {isPistonPumpCustomerCategoryPage ? (
+        {isPistonPumpCustomerCategoryPage || isInstrumentCustomerCategoryPage ? (
           <div className={styles.customerCategoryContent} hidden={activeCustomerCategory !== "selection"}>
             {customerCategoryContent?.selection}
           </div>
@@ -4707,6 +4761,16 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
         {beforeFaqContent}
 
+        {configuratorLocale !== "zh" ? <ProductDetailVideos
+          key={`${configuratorLocale}:${sourceData.slug}`}
+          locale={configuratorLocale}
+          pathname={pathname}
+          identity={{ slug: sourceData.slug, model: sourceData.model, foreachModel: sourceData.foreachModel,
+            productId: diaphragmReference?.slug || sourceData.productId, category: String(sourceData.category),
+            productTypeId: sourceData.productTypeId, seriesId: sourceData.seriesId,
+            specSeriesKey: sourceData.specSeriesKey, relationKeys: sourceData.relationKeys }}
+        /> : null}
+
         {data.faqs && data.faqs.length > 0 ? (
           <section className={styles.faqSection}>
             <div className={styles.faqHeader}>
@@ -4764,7 +4828,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           </section>
         ) : null}
 
-        {afterContent}
+        <ProductDetailVideoContext value={configuratorLocale !== "zh"}>
+          {afterContent}
+        </ProductDetailVideoContext>
 
         {data.faqs && data.faqs.length > 0 ? (
           <PlungerPumpBottomCta data={data} localePrefix={localePrefix} />

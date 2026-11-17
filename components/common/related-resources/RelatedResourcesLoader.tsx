@@ -1,7 +1,8 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { Component, type ReactNode, type ErrorInfo } from "react";
+import { Component, useContext, type ReactNode, type ErrorInfo } from "react";
+import { ProductDetailVideoContext } from "@/components/products/detail/product-detail-video-context";
 import { getRelatedResourcesText } from "@/data/resources/related-resources/related-resources.intl";
 import type { RelatedResourcesData } from "./related-resources.types";
 import styles from "./RelatedResources.module.css";
@@ -21,8 +22,9 @@ export class RelatedResourcesBoundary extends Component<
 }
 
 export default function RelatedResourcesLoader(resources: RelatedResourcesData) {
+  const productDetailVideosProvided = useContext(ProductDetailVideoContext);
   // Also cover callers that supply their own curated videos and the error fallback.
-  const data = resources.locale === "zh-CN" ? { ...resources, videos: [] } : resources;
+  const data = resources.locale === "zh-CN" || productDetailVideosProvided ? { ...resources, videos: [] } : resources;
   if (!data.videos.length && !data.products.length && !data.articles.length) return null;
   const ui = getRelatedResourcesText(data.uiLocale ?? data.locale);
   const prefix = data.locale === "zh-CN" ? "" : `/${data.locale}`;

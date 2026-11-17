@@ -8,7 +8,7 @@ import { getHardTubeGuideProducts } from "@/data/resources/technical-articles/ha
 import { getRplSelectionProducts } from "@/data/resources/technical-articles/rpl-valveless-metering-pump-selection.article";
 import { getValvelessMeteringPumpOverviewProducts } from "@/data/resources/technical-articles/what-is-a-valveless-metering-pump.article";
 import { pipettingBasicsRelatedProductIds } from "@/data/resources/technical-articles/what-is-pipetting.article";
-import { getDiaphragmPumpReferenceByProductId } from "@/data/products/detail/diaphragm-pump-reference-models";
+import { applyDiaphragmPumpReferencePhoto, getDiaphragmPumpReferenceByProductId } from "@/data/products/detail/diaphragm-pump-reference-models";
 
 export type ArticleRelatedProduct = RelatedResourcesData["products"][number] & { imageFill?: boolean };
 
@@ -23,13 +23,11 @@ const articleProductIds: Record<string, readonly string[]> = {
   "what-is-pipetting": pipettingBasicsRelatedProductIds,
 };
 
-const diaphragmComparisonProductPhotos: Partial<Record<string, Pick<ArticleRelatedProduct, "title" | "imageSrc" | "imageAlt"> & {
+const diaphragmComparisonProductTitles: Partial<Record<string, Pick<ArticleRelatedProduct, "title"> & {
   localizedTitles: Record<Exclude<TechnicalArticleLocale, "zh-CN">, string>;
 }>> = {
   "diaphragm-dpl30h-brushless": {
     title: "DPL30H 无刷高压微型隔膜泵",
-    imageSrc: "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushless-diaphragm-liquid-supply-pump.webp",
-    imageAlt: "FOREACH DPL30H-BS 无刷高压微型隔膜泵实物图",
     localizedTitles: {
       en: "DPL30H-BS Brushless High-Pressure Miniature Liquid Diaphragm Pump",
       es: "DPL30H-BS Bomba miniatura de diafragma de alta presión para líquidos, sin escobillas",
@@ -40,8 +38,6 @@ const diaphragmComparisonProductPhotos: Partial<Record<string, Pick<ArticleRelat
   },
   "diaphragm-dpl60-brushed": {
     title: "DPL60 微型液体隔膜泵",
-    imageSrc: "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushed-miniature-liquid-diaphragm-pump-front-side.webp",
-    imageAlt: "FOREACH DPL60-DB 有刷微型液体隔膜泵实物图",
     localizedTitles: {
       en: "DPL60-DB Miniature Liquid Diaphragm Pump",
       es: "DPL60-DB Bomba miniatura de diafragma para líquidos",
@@ -106,7 +102,7 @@ export function getArticleRelatedProducts(article: TechnicalArticleItem, locale:
   }
 
   const seen = new Set<string>();
-  const selected = products.filter(product => {
+  const selected = products.map(product => applyDiaphragmPumpReferencePhoto(product, locale)).filter(product => {
     if (!product.href || !product.imageSrc || !product.title) return false;
     // Use product identity, not translated title parsing, for series deduplication.
     // Explicit editorial selections may intentionally compare variants of one series.
@@ -116,18 +112,23 @@ export function getArticleRelatedProducts(article: TechnicalArticleItem, locale:
     return true;
   }).slice(0, 2);
   return selected.map(product => {
-    const photo = article.slug === "diaphragm-pump-vs-peristaltic-pump"
-      ? diaphragmComparisonProductPhotos[product.id]
+    const comparisonTitle = article.slug === "diaphragm-pump-vs-peristaltic-pump"
+      ? diaphragmComparisonProductTitles[product.id]
       : undefined;
-    if (photo) {
-      const title = locale === "zh-CN" ? photo.title : photo.localizedTitles[locale];
-      return { ...product, title, imageSrc: photo.imageSrc, imageAlt: locale === "zh-CN" ? photo.imageAlt : `FOREACH ${title}`, imageFill: true };
+    if (comparisonTitle) {
+      const title = locale === "zh-CN" ? comparisonTitle.title : comparisonTitle.localizedTitles[locale];
+      return { ...product, title, imageFill: true };
     }
     const reference = getDiaphragmPumpReferenceByProductId(product.id);
     if (!reference) return product;
     const copy = reference.localized[locale === "zh-CN" ? "zh" : locale];
     // Show the descriptive product name; the card link still targets the exact model.
     const title = locale === "zh-CN" ? copy.cardSubtitle.split("，")[0] : copy.cardSubtitle;
-    return { ...product, title };
+    return {
+      ...product,
+      title,
+      ...(article.slug === "ink-starvation-inkjet-troubleshooting" ||
+        article.slug === "inkjet-printer-pumps-micro-diaphragm-pumps" ? { imageAspectRatio: 1 } : {}),
+    };
   });
 }

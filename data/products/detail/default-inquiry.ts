@@ -40,11 +40,12 @@ export function defaultInquiryDrawingTypes(canRequestCad: boolean, saved?: Drawi
   return canRequestCad ? ["2d", "3d"] : [];
 }
 
-type InquiryCartItem = DefaultInquiryIdentity & Pick<SelectionCartItem, "bundleId" | "bundleRole" | "inquiryMode" | "eaPumpConfiguration">;
+type InquiryCartItem = DefaultInquiryIdentity & Pick<SelectionCartItem, "bundleId" | "bundleRole" | "inquiryMode" | "eaPumpConfiguration" | "instrumentConfiguration">;
 const publishedIdentities = new Set(FITTING_PUBLISHED_PRODUCTS.map(item => `${item.foreachModel}:${item.productCode}`));
 function isProductInquiryItem(item: InquiryCartItem) {
-  return Boolean(item.foreachModel && item.productCode && (item.inquiryMode === "product"
-    || (item.sourceType === "pump-selection" && publishedIdentities.has(`${item.foreachModel}:${item.productCode}`))));
+  return Boolean(item.foreachModel && ((item.instrumentConfiguration && item.inquiryMode === "product")
+    || (item.productCode && (item.inquiryMode === "product"
+      || (item.sourceType === "pump-selection" && publishedIdentities.has(`${item.foreachModel}:${item.productCode}`))))));
 }
 export function isDefaultInquiryCart(items: readonly InquiryCartItem[]): boolean {
   const primaryItems = items.filter(item => item.bundleRole !== "accessory");

@@ -377,7 +377,7 @@ export default function DistributorPageContent({
           "Content-Type": "application/json",
         },
         credentials: "same-origin",
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, locale }),
       });
 
       const result = (await response.json().catch(() => ({}))) as {
