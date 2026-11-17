@@ -51,7 +51,6 @@ function HpPosition({ mode, title }: { mode: "home" | "working" | "vent"; title:
 export default function InstrumentGuideVisual({ family, section, locale = "zh", model }: {
   family: InstrumentProductGuide["family"]; section: string; locale?: string; model: string;
 }) {
-  if (locale !== "zh" && locale !== "zh-CN") return null;
   const t = (key: InstrumentVisualTextKey) => instrumentVisualText(locale, key);
   const labels = [t("pin"), t("signal")];
   let content: ReactNode = null;

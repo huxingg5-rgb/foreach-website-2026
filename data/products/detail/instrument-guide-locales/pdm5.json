@@ -1,0 +1,762 @@
+[
+  [
+    "PDM{0} 输出液路的绝对压力数字信号。先明确测压范围、安装位置和需要判断的过程，再选择量程及采样方式；堵塞判断与停泵保护由设备控制程序实现。",
+    "PDM{0} outputs digital absolute pressure for a fluid path. Define pressure range, mounting point and monitored process before choosing range and sampling. The instrument program implements blockage decisions and pump-stop protection.",
+    "PDM{0} entrega presión absoluta digital del circuito. Defina rango, ubicación y proceso antes de elegir escala y muestreo. El programa del equipo determina obstrucciones y parada de bomba.",
+    "PDM{0} fournit la pression absolue numérique du circuit. Définissez plage, position et processus avant gamme et échantillonnage. Le programme de l’instrument gère obstruction et arrêt de pompe.",
+    "PDM{0}은 유로의 절대압 디지털 신호를 출력합니다. 측압 범위, 설치 위치와 판단할 과정을 정한 뒤 측정 범위·샘플링을 선택하세요. 막힘 판단과 펌프 정지 보호는 장비 프로그램에서 구현합니다.",
+    "PDM{0} выдаёт цифровое абсолютное давление линии. Задайте диапазон, место и контролируемый процесс, затем диапазон и выборку. Решение о засорении и защитную остановку насоса реализует программа прибора."
+  ],
+  [
+    "绝对压力测量",
+    "Absolute-pressure measurement",
+    "Medición de presión absoluta",
+    "Mesure de pression absolue",
+    "절대압 측정",
+    "Измерение абсолютного давления"
+  ],
+  [
+    "量程以绝压定义，大气环境下的读数不应直接按表压零点理解。",
+    "The range is absolute. An ambient-air reading is not a gauge-pressure zero.",
+    "El rango es absoluto. La lectura al aire no es el cero manométrico.",
+    "La gamme est absolue. La lecture à l’air ambiant n’est pas un zéro relatif.",
+    "범위는 절대압 기준입니다. 대기 중 판독값을 게이지압 영점으로 해석하지 마세요.",
+    "Диапазон абсолютный. Показание на воздухе не является нулём избыточного давления."
+  ],
+  [
+    "小体积接液流道",
+    "Low-volume wetted passage",
+    "Paso mojado de bajo volumen",
+    "Passage mouillé de faible volume",
+    "소용적 접액 유로",
+    "Малообъёмный контактирующий канал"
+  ],
+  [
+    "PEEK 外壳、{0}L 芯体接触面及 FKM 密封一起核对介质，不只判断 PEEK 相容性。",
+    "Check the liquid against PEEK housing, {0}L sensing-surface contact and FKM seals together, not PEEK alone.",
+    "Verifique líquido con carcasa PEEK, superficie de sensor {0}L y sellos FKM, no solo PEEK.",
+    "Vérifiez le liquide avec boîtier PEEK, surface sensible {0}L et joints FKM, pas seulement PEEK.",
+    "PEEK 하우징, {0}L 센서 접촉면과 FKM 씰을 함께 확인하세요. PEEK 적합성만 판단하지 마세요.",
+    "Проверяйте среду совместно с корпусом PEEK, контактной поверхностью {0}L и уплотнениями FKM, а не только PEEK."
+  ],
+  [
+    "I{0}C 数字输出",
+    "I{0}C digital output",
+    "Salida digital I{0}C",
+    "Sortie numérique I{0}C",
+    "I{0}C 디지털 출력",
+    "Цифровой выход I{0}C"
+  ],
+  [
+    "默认 {0}-bit 地址 {1}x{2}D，主控需正确处理上拉、电平、寄存器及单位。",
+    "Default {0}-bit address {1}x{2}D. The controller must correctly handle pull-ups, levels, registers and units.",
+    "Dirección de {0} bits por defecto {1}x{2}D. Gestione correctamente pull-up, niveles, registros y unidades.",
+    "Adresse {0} bits par défaut {1}x{2}D. Le contrôleur doit gérer rappels, niveaux, registres et unités.",
+    "기본 {0}비트 주소는 {1}x{2}D입니다. 주 제어기에서 풀업, 레벨, 레지스터와 단위를 올바르게 처리해야 합니다.",
+    "Адрес по умолчанию {0}-битный {1}x{2}D. Контроллер должен верно обрабатывать подтяжки, уровни, регистры и единицы."
+  ],
+  [
+    "压力过程验证",
+    "Validate the pressure process",
+    "Valide el proceso de presión",
+    "Valider le profil de pression",
+    "압력 과정 검증",
+    "Проверяйте профиль давления"
+  ],
+  [
+    "采样与阈值应对应泵的动作和管路位置，不能仅凭一个瞬时压力值判断堵塞。",
+    "Align sampling and thresholds with pump motion and tubing location. One instantaneous pressure value cannot establish blockage.",
+    "Alinee muestreo y umbrales con bomba y ubicación. Un valor instantáneo no determina obstrucción.",
+    "Adaptez échantillonnage et seuils au mouvement de pompe et à la position. Une valeur instantanée ne suffit pas à conclure à une obstruction.",
+    "샘플링·임계값을 펌프 동작과 배관 위치에 맞추세요. 순간 압력 한 값만으로 막힘을 판단하지 마세요.",
+    "Согласуйте выборку и пороги с насосом и местом установки. Одного мгновенного значения недостаточно для определения засорения."
+  ],
+  [
+    "量程与误差",
+    "Range and error",
+    "Rango y error",
+    "Plage et erreur",
+    "측정 범위 및 오차",
+    "Диапазон и погрешность"
+  ],
+  [
+    "标准规格列出 {0}–{1}／{2}／{3}／{4} kPa 绝压范围，绝对总误差随量程不同，按订货型号核对。",
+    "Standard absolute ranges are {0}–{1}/{2}/{3}/{4} kPa. Total absolute error varies by range; verify the order model.",
+    "Rangos absolutos estándar {0}–{1}/{2}/{3}/{4} kPa. El error absoluto total varía; verifique modelo.",
+    "Plages absolues standard {0}–{1}/{2}/{3}/{4} kPa. L’erreur absolue totale varie ; vérifier la référence.",
+    "표준 절대압 범위는 {0}–{1}/{2}/{3}/{4} kPa입니다. 절대 총오차는 범위별로 다르므로 주문 모델로 확인하세요.",
+    "Стандартные абсолютные диапазоны {0}–{1}/{2}/{3}/{4} kPa. Полная абсолютная погрешность зависит от диапазона; сверяйте модель."
+  ],
+  [
+    "接液材料与接口",
+    "Wetted materials and port",
+    "Materiales mojados y puerto",
+    "Matériaux mouillés et port",
+    "접액 재질 및 포트",
+    "Контактирующие материалы и порт"
+  ],
+  [
+    "PEEK、FKM、{0}L；{1}/{2}-{3} UNF-{4}B 内螺纹，接口深度 {5} mm、通径 {6} mm。",
+    "PEEK, FKM, {0}L; {1}/{2}-{3} UNF-{4}B female thread, depth {5} mm, bore {6} mm.",
+    "PEEK, FKM, {0}L; rosca hembra {1}/{2}-{3} UNF-{4}B, profundidad {5} mm, paso {6} mm.",
+    "PEEK, FKM, {0}L ; taraudage {1}/{2}-{3} UNF-{4}B, profondeur {5} mm, passage {6} mm.",
+    "PEEK, FKM, {0}L. {1}/{2}-{3} UNF-{4}B 암나사, 깊이 {5} mm, 통경 {6} mm.",
+    "PEEK, FKM, {0}L; внутренняя резьба {1}/{2}-{3} UNF-{4}B, глубина {5} mm, проход {6} mm."
+  ],
+  [
+    "电气与采样",
+    "Electrical data and sampling",
+    "Datos eléctricos y muestreo",
+    "Données électriques et échantillonnage",
+    "전기 및 샘플링",
+    "Электрические данные и выборка"
+  ],
+  [
+    "推荐 {0} V，工作范围 {1}–{2} V，I{3}C {4} kbps；采样方式按固件版本和控制需求确认。",
+    "Recommended {0} V, operating {1}–{2} V, I{3}C {4} kbps. Confirm sampling for the supplied firmware and control needs.",
+    "Recomendado {0} V, trabajo {1}–{2} V, I{3}C {4} kbps. Confirme muestreo según firmware y control.",
+    "Conseillé {0} V, service {1}–{2} V, I{3}C {4} kbps. Confirmez l’échantillonnage selon micrologiciel et commande.",
+    "권장 {0} V, 작동 범위 {1}–{2} V, I{3}C {4} kbps입니다. 샘플링은 공급 펌웨어·제어 요구에 맞춰 확인하세요.",
+    "Рекомендуется {0} V, рабочее {1}–{2} V, I{3}C {4} kbps. Выборку уточняйте по прошивке и требованиям управления."
+  ],
+  [
+    "工作与结构边界",
+    "Operating and structural limits",
+    "Límites de trabajo y estructura",
+    "Limites de service et structurelles",
+    "작동 및 구조 한계",
+    "Рабочие и конструктивные пределы"
+  ],
+  [
+    "标准规格工作温度 {0}–{1} ℃，耐压与爆裂压力为不同定义，不能当作测量量程或连续使用目标。",
+    "Standard operating temperature {0}–{1} °C. Proof and burst pressure have different meanings; neither is the measurement range or a continuous-use target.",
+    "Temperatura estándar {0}–{1} °C. Presión de prueba y de rotura son distintas; no son rango de medida ni objetivo continuo.",
+    "Température standard {0}–{1} °C. Pressions d’épreuve et d’éclatement sont distinctes ; ce ne sont ni plage de mesure ni cible continue.",
+    "표준 작동 온도는 {0}–{1} °C입니다. 내압과 파열압은 다른 정의이며 측정 범위나 연속 운전 목표가 아닙니다.",
+    "Рабочая температура {0}–{1} °C. Проверочное давление и давление разрушения различны; это не диапазон измерения и не цель непрерывной работы."
+  ],
+  [
+    "量程、绝压与误差怎么选",
+    "Choosing range, absolute pressure and error",
+    "Selección de rango, presión absoluta y error",
+    "Choisir plage, pression absolue et erreur",
+    "측정 범위, 절대압 및 오차 선정",
+    "Выбор диапазона, абсолютного давления и погрешности"
+  ],
+  [
+    "先确定正常压力、最低压力、启动峰值及需要判断的变化量，再选择量程，避免只按耐压值选型。",
+    "Define normal/minimum pressure, startup peaks and changes to detect, then choose the range. Do not select by proof pressure alone.",
+    "Defina presión normal/mínima, picos y variación a detectar; elija rango. No seleccione solo por resistencia.",
+    "Définissez pression normale/minimale, pointes et variations à détecter, puis plage. Ne choisissez pas selon la seule tenue.",
+    "정상·최저 압력, 기동 피크와 판별할 변화량을 정한 뒤 범위를 선택하세요. 내압만으로 선정하지 마세요.",
+    "Определите нормальное/минимальное давление, пусковые пики и искомые изменения, затем диапазон. Не выбирайте только по стойкости."
+  ],
+  [
+    "量程选项",
+    "Range options",
+    "Opciones de rango",
+    "Gammes disponibles",
+    "측정 범위 옵션",
+    "Варианты диапазона"
+  ],
+  [
+    "{0}–{1}／{2}／{3}／{4} kPa，绝压",
+    "{0}–{1}/{2}/{3}/{4} kPa absolute",
+    "{0}–{1}/{2}/{3}/{4} kPa absolutos",
+    "{0}–{1}/{2}/{3}/{4} kPa absolus",
+    "{0}–{1}/{2}/{3}/{4} kPa 절대압",
+    "{0}–{1}/{2}/{3}/{4} kPa абсолютного давления"
+  ],
+  [
+    "以完整型号和对应量程资料确认；型号后缀表示量程档位，不能仅凭后缀推定最低可测压力为零。",
+    "Verify full model and range documentation. The suffix denotes a range option; it does not imply a zero lower measurement limit.",
+    "Verifique modelo y ficha. El sufijo identifica escala, no un límite inferior de cero.",
+    "Vérifiez référence et documentation. Le suffixe indique une gamme, pas une limite basse nulle.",
+    "전체 모델·범위 자료로 확인하세요. 접미사는 범위 등급이며 측정 하한이 0임을 뜻하지 않습니다.",
+    "Сверьте полную модель и диапазон. Суффикс обозначает диапазон, а не нулевой нижний предел."
+  ],
+  [
+    "绝压与表压",
+    "Absolute and gauge pressure",
+    "Presión absoluta y manométrica",
+    "Pression absolue et relative",
+    "절대압 및 게이지압",
+    "Абсолютное и избыточное давление"
+  ],
+  [
+    "绝压以真空为参考",
+    "Absolute pressure is referenced to vacuum",
+    "La presión absoluta se refiere al vacío",
+    "La pression absolue se réfère au vide",
+    "절대압은 진공 기준",
+    "Абсолютное давление отсчитывается от вакуума"
+  ],
+  [
+    "在大气环境读到约一个大气压属于绝压概念；需要表压时另测参考压力并采用一致单位换算。",
+    "About one atmosphere in ambient air is an absolute-pressure reading. For gauge pressure, measure reference pressure separately and convert with consistent units.",
+    "Aproximadamente una atmósfera al aire es lectura absoluta. Para manométrica, mida referencia aparte y convierta con unidades coherentes.",
+    "Environ une atmosphère à l’air correspond à l’absolu. Pour du relatif, mesurez séparément la référence et convertissez en unités cohérentes.",
+    "대기 중 약 1기압 판독은 절대압 개념입니다. 게이지압이 필요하면 기준 압력을 따로 측정하고 단위를 맞춰 환산하세요.",
+    "Около одной атмосферы на воздухе соответствует абсолютному давлению. Для избыточного отдельно измерьте опорное давление и используйте одинаковые единицы."
+  ],
+  [
+    "总误差与分辨率",
+    "Total error and resolution",
+    "Error total y resolución",
+    "Erreur totale et résolution",
+    "총오차 및 분해능",
+    "Полная погрешность и разрешение"
+  ],
+  [
+    "TEB 与压力分辨率分别阅读",
+    "Read TEB separately from pressure resolution",
+    "Lea TEB aparte de resolución",
+    "Lire TEB séparément de la résolution",
+    "TEB와 압력 분해능 구분",
+    "Рассматривайте TEB отдельно от разрешения"
+  ],
+  [
+    "分辨率为 {0} Pa 不代表绝对误差只有 {1} Pa；标准规格的绝对总误差按量程档位分别给出。",
+    "A resolution of {0} Pa does not mean absolute error is only {1} Pa. Standard total absolute errors are specified by range.",
+    "Resolución de {0} Pa no significa error absoluto de {1} Pa. Los errores totales se dan por escala.",
+    "Une résolution de {0} Pa ne signifie pas une erreur absolue de {1} Pa. Les erreurs totales sont indiquées par gamme.",
+    "분해능 {0} Pa가 절대오차 {1} Pa를 의미하지 않습니다. 표준 절대 총오차는 범위별로 제시됩니다.",
+    "Разрешение {0} Pa не означает абсолютную погрешность всего {1} Pa. Полная погрешность задаётся отдельно по диапазонам."
+  ],
+  [
+    "耐压与爆裂压力",
+    "Proof and burst pressure",
+    "Presión de prueba y de rotura",
+    "Pressions d’épreuve et d’éclatement",
+    "내압 및 파열압",
+    "Проверочное давление и давление разрушения"
+  ],
+  [
+    "与测量量程分开",
+    "Separate from measurement range",
+    "Distintas del rango de medida",
+    "Distinctes de la plage de mesure",
+    "측정 범위와 구분",
+    "Отдельно от диапазона измерения"
+  ],
+  [
+    "耐压是规定的非损伤边界，爆裂压力不作为试验或连续运行目标，整机应控制瞬态压力。",
+    "Proof pressure is a specified non-damage limit. Burst pressure is not a testing or continuous-operation target; control system transients.",
+    "La presión de prueba es límite sin daño definido. La de rotura no es objetivo de ensayo ni servicio; controle transitorios.",
+    "La pression d’épreuve est une limite sans dommage définie. L’éclatement n’est pas une cible d’essai ou de service ; maîtrisez les transitoires.",
+    "내압은 규정된 비손상 한계입니다. 파열압을 시험·연속 운전 목표로 삼지 말고 장비에서 과도 압력을 제어하세요.",
+    "Проверочное давление — заданный предел без повреждения. Давление разрушения не является целью испытаний или работы; ограничивайте переходные пики."
+  ],
+  [
+    "接液材料、接头与安装位置",
+    "Wetted materials, fittings and mounting location",
+    "Materiales mojados, racores y ubicación",
+    "Matériaux mouillés, raccords et implantation",
+    "접액 재질, 피팅 및 설치 위치",
+    "Контактирующие материалы, фитинги и место установки"
+  ],
+  [
+    "PDM{0} 是接液测压模块，应同时核对介质相容性、密封和安装位置。",
+    "PDM{0} is a wetted pressure module. Check liquid compatibility, sealing and location together.",
+    "PDM{0} es un módulo mojado. Compruebe compatibilidad, sellado y ubicación conjuntamente.",
+    "PDM{0} est un module en contact avec le fluide. Vérifiez ensemble compatibilité, étanchéité et position.",
+    "PDM{0}은 접액형 측압 모듈입니다. 액체 적합성, 밀봉과 설치 위치를 함께 확인하세요.",
+    "PDM{0} — контактирующий с жидкостью модуль давления. Совместно проверьте совместимость, герметичность и место."
+  ],
+  [
+    "材料",
+    "Materials",
+    "Materiales",
+    "Matériaux",
+    "재질",
+    "Материалы"
+  ],
+  [
+    "PEEK 外壳、FKM 密封、{0}L 芯体接触面",
+    "PEEK housing, FKM seals, {0}L sensing-surface contact",
+    "Carcasa PEEK, sellos FKM, superficie de sensor {0}L",
+    "Boîtier PEEK, joints FKM, surface sensible {0}L",
+    "PEEK 하우징, FKM 씰, {0}L 센서 접촉면",
+    "Корпус PEEK, уплотнения FKM, контактная поверхность {0}L"
+  ],
+  [
+    "工作液与清洗液均需核对，不只采用 PEEK 的材料特性。",
+    "Check both working and cleaning liquids, not only PEEK material properties.",
+    "Verifique trabajo y limpieza, no solo propiedades de PEEK.",
+    "Vérifiez liquides de travail et de nettoyage, pas seulement PEEK.",
+    "작업액과 세척액을 모두 확인하세요. PEEK 특성만으로 판단하지 마세요.",
+    "Проверьте рабочие и промывочные жидкости, а не только свойства PEEK."
+  ],
+  [
+    "{0}/{1}-{2} UNF-{3}B，深度 {4} mm",
+    "{0}/{1}-{2} UNF-{3}B, depth {4} mm",
+    "{0}/{1}-{2} UNF-{3}B, profundidad {4} mm",
+    "{0}/{1}-{2} UNF-{3}B, profondeur {4} mm",
+    "{0}/{1}-{2} UNF-{3}B, 깊이 {4} mm",
+    "{0}/{1}-{2} UNF-{3}B, глубина {4} mm"
+  ],
+  [
+    "使用匹配接头、密封件及管外径，标准规格推荐锁紧扭矩 {0}–{1} N·m。",
+    "Match fittings, seals and tubing OD. Standard recommended tightening torque is {0}–{1} N·m.",
+    "Combine racor, sello y diámetro exterior. Par estándar recomendado {0}–{1} N·m.",
+    "Adaptez raccords, joints et diamètre extérieur. Couple standard conseillé {0}–{1} N·m.",
+    "피팅, 씰과 튜브 외경을 맞추세요. 표준 권장 체결 토크는 {0}–{1} N·m입니다.",
+    "Согласуйте фитинги, уплотнения и наружный диаметр. Рекомендуемый момент {0}–{1} N·m."
+  ],
+  [
+    "安装位置",
+    "Mounting location",
+    "Ubicación de montaje",
+    "Position de montage",
+    "설치 위치",
+    "Место установки"
+  ],
+  [
+    "根据要监测的泵后或目标支路选择",
+    "Select downstream of the pump or in the target branch to be monitored",
+    "Seleccione salida de bomba o ramal a supervisar",
+    "Choisir l’aval de pompe ou la branche à surveiller",
+    "감시할 펌프 후단 또는 목표 분기에 배치",
+    "Выберите участок после насоса или контролируемую ветвь"
+  ],
+  [
+    "模块位置会改变看到的压力过程；比较有无堵塞时应保持相同管路、速度和温度。",
+    "Location changes the observed pressure profile. Keep tubing, speed and temperature identical when comparing blockage/no blockage.",
+    "La ubicación cambia el perfil. Mantenga tubos, velocidad y temperatura al comparar con/sin obstrucción.",
+    "La position modifie le profil. Gardez tubes, vitesse et température identiques pour comparer avec/sans obstruction.",
+    "모듈 위치에 따라 압력 과정이 달라집니다. 막힘 유무 비교 시 같은 배관, 속도와 온도를 유지하세요.",
+    "Место меняет наблюдаемый профиль. Для сравнения с засорением/без него сохраняйте трубки, скорость и температуру."
+  ],
+  [
+    "通径与残留",
+    "Bore and residual volume",
+    "Paso y residuos",
+    "Passage et résidus",
+    "통경 및 잔류",
+    "Проход и остатки"
+  ],
+  [
+    "通径 {0} mm，内体积 ≤{1} μL",
+    "Bore {0} mm; internal volume ≤{1} μL",
+    "Paso {0} mm; volumen interno ≤{1} μL",
+    "Passage {0} mm ; volume interne ≤{1} μL",
+    "통경 {0} mm, 내부 용적 ≤{1} μL",
+    "Проход {0} mm; внутренний объём ≤{1} μL"
+  ],
+  [
+    "纳入系统阻力和清洗置换设计，不把内容积直接当作整机残留指标。",
+    "Include in system resistance and flushing design. Internal volume is not a complete-system carryover specification.",
+    "Incluya en resistencia y lavado. El volumen interno no especifica residuos de todo el sistema.",
+    "Intégrez résistance et rinçage. Le volume interne n’est pas un indicateur de résidus du système complet.",
+    "시스템 저항과 세척 치환 설계에 반영하세요. 내부 용적을 전체 장비 잔류 지표로 보지 마세요.",
+    "Учитывайте в сопротивлении и промывке. Внутренний объём не задаёт перенос всей системы."
+  ],
+  [
+    "{0} V 供电、引脚与 I{1}C 接线",
+    "{0} V supply, pins and I{1}C wiring",
+    "Fuente {0} V, pines y cableado I{1}C",
+    "Alimentation {0} V, broches et câblage I{1}C",
+    "{0} V 전원, 핀 및 I{1}C 배선",
+    "Питание {0} V, выводы и подключение I{1}C"
+  ],
+  [
+    "电源、总线电平与上拉应按主控和模块一起设计，不能只接两根通信线就判断通信条件满足。",
+    "Design supply, bus levels and pull-ups for controller and module together. Connecting two signal wires alone is insufficient.",
+    "Diseñe fuente, niveles y pull-up para módulo y controlador. Dos cables de señal no bastan.",
+    "Concevez alimentation, niveaux et rappels pour module et contrôleur. Deux fils de signal ne suffisent pas.",
+    "전원, 버스 레벨과 풀업을 주 제어기·모듈에 맞춰 함께 설계하세요. 통신선 두 가닥 연결만으로 조건이 충족되지는 않습니다.",
+    "Совместно согласуйте питание, уровни и подтяжки контроллера и модуля. Двух сигнальных проводов недостаточно."
+  ],
+  [
+    "PDM{0} 六针端子的 VCC、GND、SCLK、SDA 及空脚定义图",
+    "PDM{0} six-pin VCC, GND, SCLK, SDA and unused-pin definitions",
+    "Definición de seis pines VCC, GND, SCLK, SDA y sin uso PDM{0}",
+    "Brochage six points PDM{0} : VCC, GND, SCLK, SDA et non connecté",
+    "PDM{0} 6핀의 VCC, GND, SCLK, SDA 및 미사용 핀 정의",
+    "Назначение шести выводов PDM{0}: VCC, GND, SCLK, SDA и свободный"
+  ],
+  [
+    "六针端子与引脚定义。连接前核对线色和连接器方向。",
+    "Six-pin connector and pin definitions. Check wire colors and connector orientation before connecting.",
+    "Conector de seis pines. Revise colores y orientación antes de conectar.",
+    "Connecteur six points. Vérifier couleurs et orientation avant raccordement.",
+    "6핀 커넥터 및 핀 정의입니다. 연결 전에 선 색상과 커넥터 방향을 확인하세요.",
+    "Шестиконтактный разъём и назначения. Перед подключением проверьте цвета и ориентацию."
+  ],
+  [
+    "推荐 {0} V，工作范围 {1}–{2} V，电流按 {3} mA 峰值核对。",
+    "Recommended {0} V, operating {1}–{2} V; size for {3} mA peak current.",
+    "Recomendado {0} V, trabajo {1}–{2} V; dimensione para pico de {3} mA.",
+    "Conseillé {0} V, service {1}–{2} V ; prévoir une pointe de {3} mA.",
+    "권장 {0} V, 작동 {1}–{2} V, 피크 전류 {3} mA 기준으로 확인하세요.",
+    "Рекомендуется {0} V, рабочее {1}–{2} V; учитывайте пик {3} mA."
+  ],
+  [
+    "SCLK／SDA／空脚",
+    "SCLK/SDA/unused pin",
+    "SCLK/SDA/pin sin uso",
+    "SCLK/SDA/broche non connectée",
+    "SCLK/SDA/미사용 핀",
+    "SCLK/SDA/свободный вывод"
+  ],
+  [
+    "默认不带总线上拉，主控应配置适当电阻并核对允许电平，空脚不作其他用途。",
+    "No bus pull-ups by default. Fit appropriate controller-side resistors and check levels; leave the unused pin unused.",
+    "Sin pull-up de serie. Instale resistencias adecuadas y revise niveles; no use el pin libre.",
+    "Pas de rappel par défaut. Ajoutez des résistances adaptées et vérifiez les niveaux ; laissez la broche libre inutilisée.",
+    "기본 버스 풀업이 없습니다. 주 제어기에 적절한 저항을 구성하고 허용 레벨을 확인하세요. 미사용 핀을 다른 용도로 쓰지 마세요.",
+    "По умолчанию подтяжек нет. Добавьте подходящие резисторы и проверьте уровни; свободный вывод не используйте."
+  ],
+  [
+    "地址与速率",
+    "Address and bus rate",
+    "Dirección y velocidad",
+    "Adresse et débit du bus",
+    "주소 및 버스 속도",
+    "Адрес и скорость шины"
+  ],
+  [
+    "{0}-bit 地址 {1}x{2}D，I{3}C {4} kbps",
+    "{0}-bit address {1}x{2}D; I{3}C {4} kbps",
+    "Dirección {0} bits {1}x{2}D; I{3}C {4} kbps",
+    "Adresse {0} bits {1}x{2}D ; I{3}C {4} kbps",
+    "{0}비트 주소 {1}x{2}D, I{3}C {4} kbps",
+    "Адрес {0} бит {1}x{2}D; I{3}C {4} kbps"
+  ],
+  [
+    "带读写位的 {0}xDA 与 {1}-bit 地址不是两个设备；按主控接口所需格式设置。",
+    "{0}xDA with the R/W bit and the {1}-bit address do not denote two devices. Use the format required by the controller API.",
+    "{0}xDA con bit R/W y la dirección de {1} bits no son dos dispositivos. Use formato del controlador.",
+    "{0}xDA avec bit R/W et l’adresse {1} bits ne sont pas deux appareils. Utilisez le format du contrôleur.",
+    "읽기·쓰기 비트를 포함한 {0}xDA와 {1}비트 주소는 서로 다른 장치가 아닙니다. 주 제어기 인터페이스 형식에 맞추세요.",
+    "{0}xDA с битом чтения/записи и {1}-битный адрес не обозначают два устройства. Используйте формат контроллера."
+  ],
+  [
+    "总线布置",
+    "Bus layout",
+    "Diseño del bus",
+    "Implantation du bus",
+    "버스 배치",
+    "Разводка шины"
+  ],
+  [
+    "保持接地和信号完整",
+    "Maintain ground and signal integrity",
+    "Mantenga tierra e integridad de señal",
+    "Préserver masse et intégrité du signal",
+    "접지 및 신호 무결성 유지",
+    "Сохраняйте общий провод и целостность сигнала"
+  ],
+  [
+    "多模块先排除地址冲突，按线长和负载验证通信，不将较长线束直接等同于可用现场总线。",
+    "Resolve address conflicts first with multiple modules. Validate cable length and load; a long cable does not make a usable fieldbus.",
+    "Resuelva conflictos de dirección. Valide longitud y carga; un cable largo no equivale a bus de campo utilizable.",
+    "Éliminez les conflits d’adresse. Validez longueur et charge ; un câble long ne crée pas un bus de terrain utilisable.",
+    "다중 모듈은 주소 충돌을 먼저 제거하세요. 선 길이·부하에 맞춰 검증하고 긴 배선을 사용 가능한 필드버스와 동일시하지 마세요.",
+    "Для нескольких модулей исключите конфликт адресов. Проверьте длину и нагрузку; длинный кабель сам по себе не является пригодной полевой шиной."
+  ],
+  [
+    "读取压力、采样与堵塞判断",
+    "Pressure reading, sampling and blockage decisions",
+    "Lectura, muestreo y detección de obstrucción",
+    "Lecture, échantillonnage et détection d’obstruction",
+    "압력 판독, 샘플링 및 막힘 판단",
+    "Чтение, выборка и определение засорения"
+  ],
+  [
+    "优先按供货固件的推荐读数方式实现，再把压力信号与泵动作关联；原始 AD 换算公式不能跨量程和型号套用。",
+    "Use the supplied firmware’s recommended reading method, then correlate pressure with pump motion. Do not reuse raw-ADC formulas across ranges/models.",
+    "Use lectura recomendada por firmware y relacione presión y bomba. No copie fórmulas ADC entre rangos/modelos.",
+    "Utilisez la lecture recommandée par le micrologiciel puis associez pression et pompe. Ne transposez pas les formules ADC entre gammes/modèles.",
+    "공급 펌웨어의 권장 판독법을 먼저 구현하고 압력과 펌프 동작을 연계하세요. 원시 AD 환산식을 다른 범위·모델에 적용하지 마세요.",
+    "Используйте рекомендованное прошивкой чтение, затем сопоставьте давление с насосом. Не переносите формулы сырого АЦП между диапазонами и моделями."
+  ],
+  [
+    "压力读取",
+    "Pressure reading",
+    "Lectura de presión",
+    "Lecture de pression",
+    "압력 판독",
+    "Чтение давления"
+  ],
+  [
+    "推荐从 {0}xF{1} 连续读取 {2} 字节",
+    "Recommended: read {2} consecutive bytes from {0}xF{1}",
+    "Recomendado: leer {2} bytes consecutivos desde {0}xF{1}",
+    "Conseillé : lire {2} octets consécutifs depuis {0}xF{1}",
+    "권장: {0}xF{1}에서 연속 {2}바이트 읽기",
+    "Рекомендуется читать {2} последовательных байт с {0}xF{1}"
+  ],
+  [
+    "前 {0} 字节为压力 Pa，后 {1} 字节为温度，按当前固件的数据格式解析，再统一换算 kPa。",
+    "First {0} bytes: pressure in Pa; last {1}: temperature. Parse the current firmware format, then convert consistently to kPa.",
+    "Primeros {0} bytes: presión en Pa; últimos {1}: temperatura. Analice el formato actual y convierta a kPa.",
+    "{0} premiers octets : pression en Pa ; {1} derniers : température. Décodez selon micrologiciel puis convertissez en kPa.",
+    "앞 {0}바이트는 압력 Pa, 뒤 {1}바이트는 온도입니다. 현재 펌웨어 형식으로 해석하고 kPa로 통일 환산하세요.",
+    "Первые {0} байт — давление Pa, последние {1} — температура. Разберите формат прошивки и согласованно переведите в kPa."
+  ],
+  [
+    "采样时序",
+    "Sampling timing",
+    "Temporización de muestreo",
+    "Temporisation d’échantillonnage",
+    "샘플링 타이밍",
+    "Синхронизация выборки"
+  ],
+  [
+    "读取间隔与转换状态配合",
+    "Coordinate reading interval with conversion state",
+    "Coordine intervalo y estado de conversión",
+    "Coordonner intervalle et état de conversion",
+    "판독 간격 및 변환 상태 연동",
+    "Согласуйте интервал чтения и состояние преобразования"
+  ],
+  [
+    "建议一轮读取后延时大于 {0} ms；核对固件采样和滤波设置，不把总线速率当作压力采样率。",
+    "Allow more than {0} ms after each read cycle. Verify firmware sampling/filter settings; bus bitrate is not pressure sampling rate.",
+    "Espere más de {0} ms tras cada lectura. Revise muestreo/filtro; el bitrate no es frecuencia de presión.",
+    "Attendez plus de {0} ms après chaque lecture. Vérifiez échantillonnage/filtrage ; débit du bus et fréquence de mesure diffèrent.",
+    "한 차례 판독 후 {0} ms보다 길게 대기하는 것을 권장합니다. 펌웨어 샘플링·필터를 확인하고 버스 속도를 압력 샘플링률로 보지 마세요.",
+    "После цикла чтения выдерживайте более {0} ms. Проверьте выборку/фильтры прошивки; скорость шины не равна частоте давления."
+  ],
+  [
+    "过程判断",
+    "Process assessment",
+    "Evaluación del proceso",
+    "Analyse du processus",
+    "과정 판단",
+    "Оценка процесса"
+  ],
+  [
+    "比较正常与异常压力曲线",
+    "Compare normal and abnormal pressure curves",
+    "Compare curvas normales y anómalas",
+    "Comparer courbes normales et anormales",
+    "정상·이상 압력 곡선 비교",
+    "Сравнивайте нормальные и аномальные кривые"
+  ],
+  [
+    "按实际泵速、液体、管路及阀动作建立阈值和持续时间，区分正常脉动与堵塞。",
+    "Set thresholds and duration for actual pump speed, liquid, tubing and valve motion. Distinguish normal pulsation from blockage.",
+    "Defina umbrales y duración para velocidad, líquido, tubos y válvulas reales. Distinga pulsación normal y obstrucción.",
+    "Définissez seuils et durée selon vitesse, liquide, tubes et vannes réels. Distinguez pulsations normales et obstruction.",
+    "실제 펌프 속도, 액체, 배관과 밸브 동작으로 임계값·지속 시간을 정하고 정상 맥동과 막힘을 구분하세요.",
+    "Задайте пороги и длительность для скорости насоса, среды, трубок и клапанов. Различайте нормальную пульсацию и засорение."
+  ],
+  [
+    "保护动作",
+    "Protective response",
+    "Respuesta de protección",
+    "Actions de protection",
+    "보호 동작",
+    "Защитная реакция"
+  ],
+  [
+    "报警、停泵与泄压由设备控制实现",
+    "The instrument implements alarm, pump stop and depressurization",
+    "El equipo ejecuta alarma, parada y despresurización",
+    "L’instrument gère alarme, arrêt et dépressurisation",
+    "경보, 펌프 정지 및 감압은 장비 제어로 구현",
+    "Прибор реализует тревогу, остановку и сброс давления"
+  ],
+  [
+    "验证通信中断、压力超限及传感器读数异常时的整机行为，不把模块当作独立安全阀。",
+    "Test instrument behavior for lost communication, pressure limits and abnormal sensor data. The module is not a standalone relief valve.",
+    "Ensaye pérdida de comunicación, sobrepresión y datos anómalos. El módulo no es válvula de seguridad independiente.",
+    "Testez perte de communication, dépassement de pression et données anormales. Le module n’est pas une soupape autonome.",
+    "통신 단절, 압력 초과와 센서 이상값 시 전체 장비 동작을 검증하세요. 모듈을 독립 안전 밸브로 보지 마세요.",
+    "Проверьте реакцию на потерю связи, превышение давления и аномальные данные. Модуль не является самостоятельным предохранительным клапаном."
+  ],
+  [
+    "首次安装与测压验证",
+    "Initial installation and pressure validation",
+    "Instalación inicial y validación de presión",
+    "Première installation et validation de pression",
+    "최초 설치 및 측압 검증",
+    "Первый монтаж и проверка давления"
+  ],
+  [
+    "先在已知压力条件下核对读数，再接入正式液路验证动态过程。安装和拆卸前应泄压断电。",
+    "Verify readings under known pressure before dynamic tests in the working line. Depressurize and isolate power before installation/removal.",
+    "Verifique presión conocida antes de dinámica en circuito. Despresurice y desconecte antes de montar/retirar.",
+    "Vérifiez sous pression connue avant les essais dynamiques. Dépressurisez et coupez l’alimentation avant montage/démontage.",
+    "알려진 압력에서 판독을 확인한 뒤 실제 유로에서 동적 과정을 검증하세요. 설치·탈착 전에 감압·전원 차단하세요.",
+    "Сверьте показания при известном давлении до динамических испытаний. Перед монтажом/снятием сбросьте давление и питание."
+  ],
+  [
+    "核对完整型号",
+    "Check the full model",
+    "Compruebe el modelo completo",
+    "Vérifier la référence complète",
+    "전체 모델 확인",
+    "Проверьте полную модель"
+  ],
+  [
+    "确认量程、绝压定义、材料和供货固件，记录所选参考压力与单位。",
+    "Confirm range, absolute reference, materials and firmware. Record reference pressure and units.",
+    "Confirme rango, referencia absoluta, materiales y firmware. Registre presión de referencia y unidades.",
+    "Confirmez plage, référence absolue, matériaux et micrologiciel. Consignez référence et unités.",
+    "범위, 절대압 정의, 재질과 공급 펌웨어를 확인하고 기준 압력·단위를 기록하세요.",
+    "Подтвердите диапазон, абсолютную базу, материалы и прошивку. Запишите опорное давление и единицы."
+  ],
+  [
+    "连接液路与总线",
+    "Connect fluid path and bus",
+    "Conecte circuito y bus",
+    "Raccorder circuit et bus",
+    "유로 및 버스 연결",
+    "Подключите жидкостный путь и шину"
+  ],
+  [
+    "按图装接头并检查密封，核对 {0} V、上拉、共地、I{1}C 地址与速率。",
+    "Fit to the drawing and check sealing; verify {0} V, pull-ups, common ground and I{1}C address/rate.",
+    "Monte según plano y revise sellado, {0} V, pull-up, tierra y dirección/velocidad I{1}C.",
+    "Montez selon plan et contrôlez étanchéité, {0} V, rappels, masse et adresse/débit I{1}C.",
+    "도면대로 피팅·밀봉을 점검하고 {0} V, 풀업, 공통 접지와 I{1}C 주소·속도를 확인하세요.",
+    "Установите по чертежу, проверьте герметичность, {0} V, подтяжки, общий провод, адрес и скорость I{1}C."
+  ],
+  [
+    "静态比对",
+    "Static comparison",
+    "Comparación estática",
+    "Comparaison statique",
+    "정적 비교",
+    "Статическое сравнение"
+  ],
+  [
+    "以合适的参考仪表在多个压力点比较，不在大气环境下将绝压读数直接清零当表压。",
+    "Compare several pressures with a suitable reference instrument. Do not zero absolute pressure in ambient air and treat it as gauge pressure.",
+    "Compare varios puntos con referencia adecuada. No ponga a cero la absoluta al aire como si fuera manométrica.",
+    "Comparez plusieurs points avec une référence adaptée. Ne remettez pas à zéro l’absolu à l’air pour en faire du relatif.",
+    "적절한 기준 계기로 여러 압력점을 비교하세요. 대기 중 절대압을 바로 영점 조정해 게이지압으로 사용하지 마세요.",
+    "Сравните несколько точек с подходящим эталоном. Не обнуляйте абсолютное давление на воздухе, считая его избыточным."
+  ],
+  [
+    "动态验证",
+    "Dynamic validation",
+    "Validación dinámica",
+    "Validation dynamique",
+    "동적 검증",
+    "Динамическая проверка"
+  ],
+  [
+    "在实际泵速和介质下记录正常、启停及受控异常的压力变化，确认采样、滤波、报警和停泵。",
+    "Record normal, start/stop and controlled-fault pressure at actual speed/liquid. Verify sampling, filtering, alarms and pump stop.",
+    "Registre normalidad, arranque/parada y fallo controlado con líquido/velocidad reales. Verifique muestreo, filtro, alarma y parada.",
+    "Relevez fonctionnement normal, marche/arrêt et défauts contrôlés en conditions réelles. Vérifiez échantillonnage, filtre, alarmes et arrêt.",
+    "실제 속도·액체에서 정상, 시작·정지와 제어된 이상 압력 변화를 기록하고 샘플링, 필터, 경보와 펌프 정지를 확인하세요.",
+    "Запишите нормальные, пусковые/остановочные и контролируемые аварийные изменения при реальной скорости и среде. Проверьте выборку, фильтр, тревогу и остановку."
+  ],
+  [
+    "读数异常、泄漏与维护",
+    "Abnormal readings, leaks and maintenance",
+    "Lecturas anómalas, fugas y mantenimiento",
+    "Lectures anormales, fuites et entretien",
+    "판독 이상, 누설 및 유지보수",
+    "Аномальные показания, утечки и обслуживание"
+  ],
+  [
+    "先区分单位与参考压力问题、通信问题及真实液路变化，再安排模块处理。",
+    "Distinguish units/reference-pressure errors, communication issues and real fluid-path changes before servicing the module.",
+    "Distinga unidades/referencia, comunicación y cambios reales antes de intervenir.",
+    "Distinguez erreurs d’unités/référence, communication et changements réels avant intervention.",
+    "단위·기준 압력 문제, 통신 문제와 실제 유로 변화를 구분한 뒤 모듈 처리를 결정하세요.",
+    "До обслуживания различайте ошибки единиц/базы, связи и реальные изменения линии."
+  ],
+  [
+    "读数相差约一个大气压",
+    "Reading differs by about one atmosphere",
+    "Diferencia de aproximadamente una atmósfera",
+    "Écart d’environ une atmosphère",
+    "약 1기압 차이 판독",
+    "Отклонение примерно на одну атмосферу"
+  ],
+  [
+    "绝压／表压与 Pa／kPa 单位",
+    "Absolute/gauge reference and Pa/kPa units",
+    "Referencia absoluta/manométrica y Pa/kPa",
+    "Référence absolue/relative et unités Pa/kPa",
+    "절대압·게이지압 및 Pa·kPa 단위",
+    "Абсолютная/избыточная база и единицы Pa/kPa"
+  ],
+  [
+    "确认压力参考和换算，不先修改标定参数。",
+    "Check pressure reference and conversion before changing calibration parameters.",
+    "Revise referencia y conversión antes de modificar calibración.",
+    "Vérifiez référence et conversion avant de modifier l’étalonnage.",
+    "압력 기준·환산을 먼저 확인하고 교정 파라미터부터 변경하지 마세요.",
+    "Проверьте базу и пересчёт до изменения калибровочных параметров."
+  ],
+  [
+    "不应答或数据异常",
+    "No reply or abnormal data",
+    "Sin respuesta o datos anómalos",
+    "Pas de réponse ou données anormales",
+    "무응답 또는 데이터 이상",
+    "Нет ответа или аномальные данные"
+  ],
+  [
+    "供电、上拉、地址、读写位和字节格式",
+    "Supply, pull-ups, address, R/W bit and byte format",
+    "Fuente, pull-up, dirección, bit R/W y bytes",
+    "Alimentation, rappels, adresse, bit R/W et format des octets",
+    "전원, 풀업, 주소, 읽기·쓰기 비트 및 바이트 형식",
+    "Питание, подтяжки, адрес, бит чтения/записи и формат байт"
+  ],
+  [
+    "单台核对通信及固件说明，避免使用其他量程的原始 AD 换算公式。",
+    "Check one module’s communication and firmware instructions. Do not use raw-ADC formulas for other ranges.",
+    "Revise comunicación y firmware de una unidad. No use fórmulas ADC de otras escalas.",
+    "Vérifiez communication et micrologiciel d’un module. N’utilisez pas les formules ADC d’autres gammes.",
+    "단독 통신·펌웨어 설명을 확인하고 다른 범위의 원시 AD 환산식을 사용하지 마세요.",
+    "Проверьте связь одного модуля и инструкцию прошивки. Не используйте формулы сырого АЦП других диапазонов."
+  ],
+  [
+    "波动或报警过多",
+    "Excessive fluctuation or alarms",
+    "Fluctuaciones o alarmas excesivas",
+    "Fluctuations ou alarmes excessives",
+    "과도한 변동 또는 경보",
+    "Чрезмерные колебания или тревоги"
+  ],
+  [
+    "真实泵脉动、采样、滤波和阈值持续时间",
+    "Real pump pulsation, sampling, filtering and threshold duration",
+    "Pulsación real, muestreo, filtro y duración del umbral",
+    "Pulsations réelles, échantillonnage, filtre et durée du seuil",
+    "실제 펌프 맥동, 샘플링, 필터 및 임계값 지속 시간",
+    "Реальная пульсация насоса, выборка, фильтр и длительность порога"
+  ],
+  [
+    "对照正常压力曲线和参考仪表调整整机判断，不仅靠提高报警阈值。",
+    "Adjust instrument decisions against normal curves and a reference gauge, not only by raising alarm thresholds.",
+    "Ajuste la lógica con curva normal e instrumento de referencia, no solo elevando umbrales.",
+    "Ajustez la logique selon courbes normales et référence, pas seulement en relevant les seuils.",
+    "정상 곡선·기준 계기로 장비 판단을 조정하고 경보 임계값만 높이지 마세요.",
+    "Настраивайте логику по нормальным кривым и эталону, а не только повышением порогов."
+  ],
+  [
+    "接口泄漏",
+    "Port leakage",
+    "Fuga en puerto",
+    "Fuite au port",
+    "포트 누설",
+    "Утечка порта"
+  ],
+  [
+    "接头、密封、插入深度与扭矩",
+    "Fitting, seal, insertion depth and torque",
+    "Racor, sello, inserción y par",
+    "Raccord, joint, insertion et couple",
+    "피팅, 씰, 삽입 깊이 및 토크",
+    "Фитинг, уплотнение, глубина и момент"
+  ],
+  [
+    "停机泄压后处理，不带压拆卸或继续加力。",
+    "Stop and depressurize before correction. Do not dismantle under pressure or apply more force.",
+    "Pare y despresurice antes de corregir. No desmonte bajo presión ni fuerce más.",
+    "Arrêtez et dépressurisez avant intervention. Ne démontez pas sous pression et ne forcez pas.",
+    "정지·감압 후 처리하세요. 가압 상태에서 분해하거나 힘을 더 가하지 마세요.",
+    "Перед устранением остановите и сбросьте давление. Не разбирайте под давлением и не прилагайте дополнительную силу."
+  ]
+]

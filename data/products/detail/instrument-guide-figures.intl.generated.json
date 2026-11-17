@@ -1,0 +1,58 @@
+{
+  "smtp2-adapter.webp": {
+    "width": 1500,
+    "height": 407
+  },
+  "smtp4-optocoupler.webp": {
+    "width": 570,
+    "height": 310
+  },
+  "hmd-valve-paths.webp": {
+    "width": 1500,
+    "height": 1217
+  },
+  "mrv3-controller.webp": {
+    "width": 1500,
+    "height": 1472
+  },
+  "hp-flow-paths.webp": {
+    "width": 1500,
+    "height": 1380
+  },
+  "abd-pinout.webp": {
+    "width": 1500,
+    "height": 1010
+  },
+  "pdm5-pinout.webp": {
+    "width": 1500,
+    "height": 545
+  },
+  "sv10-structure.webp": {
+    "width": 1500,
+    "height": 720
+  },
+  "drpl-motor-wiring.webp": {
+    "width": 1500,
+    "height": 635
+  },
+  "drpl-optocoupler-wiring.webp": {
+    "width": 1500,
+    "height": 554
+  },
+  "drpl-working-cycle.webp": {
+    "width": 1500,
+    "height": 753
+  },
+  "drpl-0109-structure.webp": {
+    "width": 1500,
+    "height": 1500
+  },
+  "drpl-0119-structure.webp": {
+    "width": 1500,
+    "height": 1500
+  },
+  "drpl-dimensions-ports.webp": {
+    "width": 1500,
+    "height": 1151
+  }
+}

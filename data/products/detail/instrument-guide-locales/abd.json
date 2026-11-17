@@ -1,0 +1,626 @@
+[
+  [
+    "ABD 通过透明管路的光学信号变化检测气液状态。先确定管外径、管材透光性和需要识别的气泡，再选择输出和报警阈值，并在实际管路中验证。",
+    "ABD detects gas/liquid states from optical changes through transparent tubing. Define tubing OD, light transmission and target bubbles before selecting outputs and alarm thresholds; validate in the actual line.",
+    "ABD detecta gas/líquido por cambios ópticos en tubos transparentes. Defina diámetro exterior, transmisión y burbujas objetivo; seleccione salidas/umbrales y valide en el circuito real.",
+    "ABD détecte gaz/liquide par variation optique à travers un tube transparent. Définissez diamètre extérieur, transmission et bulles cibles, puis sorties/seuils ; validez sur le circuit réel.",
+    "ABD는 투명 튜브의 광학 신호 변화로 기체·액체 상태를 검출합니다. 튜브 외경, 투광성 및 목표 기포를 정하고 출력·경보 임계값을 선택한 뒤 실제 배관에서 검증하세요.",
+    "ABD определяет газ/жидкость по оптическим изменениям прозрачной трубки. Задайте наружный диаметр, светопропускание и целевые пузырьки, выберите выходы/пороги и проверьте реальную линию."
+  ],
+  [
+    "不接触液体",
+    "No liquid contact",
+    "Sin contacto con el líquido",
+    "Sans contact avec le liquide",
+    "비접액 검출",
+    "Без контакта с жидкостью"
+  ],
+  [
+    "检测模块夹持在透明管外侧，不给液路增加接液流道；仍需保证管材和夹持位置匹配。",
+    "The module clamps outside transparent tubing and adds no wetted passage. Tubing and clamp position must still match.",
+    "El módulo abraza el exterior y no añade paso mojado. Aun así, tubo y posición de sujeción deben coincidir.",
+    "Le module se fixe autour du tube sans ajouter de passage mouillé. Tube et position de serrage doivent néanmoins correspondre.",
+    "모듈은 투명 튜브 외부에 고정되어 접액 유로를 추가하지 않습니다. 튜브와 고정 위치의 적합성은 확인해야 합니다.",
+    "Модуль зажимает трубку снаружи, не добавляя контактирующего канала. Трубка и место зажима должны соответствовать."
+  ],
+  [
+    "按管外径选型号",
+    "Select by tubing outside diameter",
+    "Seleccione por diámetro exterior",
+    "Choisir selon le diamètre extérieur",
+    "튜브 외경 기준 모델 선정",
+    "Выбирайте по наружному диаметру трубки"
+  ],
+  [
+    "{0}／{1}／{2}／{3}／{4}／{5}／{6}／{7} mm 为系列夹管外径选项，不能按内径选择。",
+    "Series clamp-OD options: {0}/{1}/{2}/{3}/{4}/{5}/{6}/{7} mm. Do not select by inside diameter.",
+    "Opciones de diámetro exterior: {0}/{1}/{2}/{3}/{4}/{5}/{6}/{7} mm. No seleccione por diámetro interior.",
+    "Options de diamètre extérieur : {0}/{1}/{2}/{3}/{4}/{5}/{6}/{7} mm. Ne choisissez pas selon le diamètre intérieur.",
+    "계열 클램프 외경 옵션은 {0}/{1}/{2}/{3}/{4}/{5}/{6}/{7} mm입니다. 내경으로 선택하지 마세요.",
+    "Варианты наружного диаметра: {0}/{1}/{2}/{3}/{4}/{5}/{6}/{7} mm. Не выбирайте по внутреннему диаметру."
+  ],
+  [
+    "多种信号路径",
+    "Multiple signal paths",
+    "Varias vías de señal",
+    "Plusieurs voies de signal",
+    "여러 신호 경로",
+    "Несколько сигнальных путей"
+  ],
+  [
+    "提供模拟电压、报警输出和 TTL 电平通信；输出电平与主控输入需分别匹配。",
+    "Provides analog voltage, alarm output and TTL-level communication. Match each output level to its controller input.",
+    "Ofrece tensión analógica, alarma y comunicación TTL. Adapte cada nivel de salida a su entrada.",
+    "Tension analogique, alarme et communication TTL. Adaptez chaque niveau de sortie à l’entrée du contrôleur.",
+    "아날로그 전압, 경보 출력과 TTL 통신을 제공합니다. 출력 레벨과 주 제어기 입력을 각각 맞추세요.",
+    "Предусмотрены аналоговое напряжение, тревога и связь TTL. Согласуйте каждый выходной уровень со входом контроллера."
+  ],
+  [
+    "实际管路标定",
+    "Calibrate in the actual line",
+    "Calibre en el circuito real",
+    "Étalonner sur le circuit réel",
+    "실제 배관에서 교정",
+    "Калибруйте на реальной линии"
+  ],
+  [
+    "液体颜色、管壁、污染和环境光影响检测，代表性响应时间不等于所有工况的保证值。",
+    "Liquid color, tubing wall, contamination and ambient light affect detection. A representative response time is not guaranteed for every condition.",
+    "Color, pared, suciedad y luz ambiente afectan la detección. Una respuesta representativa no garantiza todas las condiciones.",
+    "Couleur, paroi, contamination et lumière ambiante influencent la détection. Un temps représentatif n’est pas garanti partout.",
+    "액체 색상, 관벽, 오염과 주변광이 검출에 영향을 줍니다. 대표 응답 시간이 모든 조건의 보장값은 아닙니다.",
+    "Цвет, стенка трубки, загрязнение и освещение влияют на обнаружение. Типичное время отклика не гарантируется во всех условиях."
+  ],
+  [
+    "夹管型号",
+    "Tubing-clamp model",
+    "Modelo de abrazadera",
+    "Modèle de pince pour tube",
+    "튜브 클램프 모델",
+    "Модель зажима трубки"
+  ],
+  [
+    "核对实际管外径与夹管槽，不只确认管材名称。",
+    "Check actual tubing OD against the groove, not just the material name.",
+    "Compare diámetro exterior real y ranura, no solo el material.",
+    "Comparez diamètre extérieur réel et rainure, pas seulement le matériau.",
+    "재질 이름만 보지 말고 실제 외경과 클램프 홈을 확인하세요.",
+    "Сверяйте фактический наружный диаметр с пазом, а не только материал."
+  ],
+  [
+    "检测边界",
+    "Detection limits",
+    "Límites de detección",
+    "Limites de détection",
+    "검출 한계",
+    "Границы обнаружения"
+  ],
+  [
+    "气泡宽度指标针对跨越管内径的气泡；微小气泡、液滴或液柱可能无法正确识别。",
+    "Bubble-width specifications concern bubbles spanning the tubing ID. Tiny bubbles, droplets or liquid columns may not be identified correctly.",
+    "La anchura se refiere a burbujas que abarcan el diámetro interior. Microburbujas, gotas o columnas pueden no identificarse bien.",
+    "La largeur concerne les bulles traversant le diamètre intérieur. Microbulles, gouttes ou colonnes liquides peuvent être mal identifiées.",
+    "기포 폭 사양은 관 내경을 가로지르는 기포 기준입니다. 미세 기포, 액적 또는 액주는 올바르게 식별되지 않을 수 있습니다.",
+    "Ширина относится к пузырькам поперёк внутреннего диаметра. Мелкие пузырьки, капли или столбики жидкости могут распознаваться неверно."
+  ],
+  [
+    "供电与信号",
+    "Supply and signals",
+    "Alimentación y señales",
+    "Alimentation et signaux",
+    "전원 및 신호",
+    "Питание и сигналы"
+  ],
+  [
+    "{0} VDC ±{1}%，模拟 {2}–{3} V、报警输出及 TTL Rx／Tx 分别连接，IO 输出按要求上拉。",
+    "{0} VDC ±{1}%; wire {2}–{3} V analog, alarm and TTL Rx/Tx separately. Add the required IO pull-up.",
+    "{0} VDC ±{1}%; conecte analógica {2}–{3} V, alarma y TTL Rx/Tx por separado. Añada pull-up IO requerido.",
+    "{0} VDC ±{1} % ; câbler séparément analogique {2}–{3} V, alarme et TTL Rx/Tx. Ajouter le rappel IO requis.",
+    "{0} VDC ±{1}%, 아날로그 {2}–{3} V, 경보와 TTL Rx/Tx를 각각 배선하고 IO에 필요한 풀업을 적용하세요.",
+    "{0} VDC ±{1}%; отдельно подключайте аналоговый {2}–{3} V, тревогу и TTL Rx/Tx. Добавьте требуемую подтяжку IO."
+  ],
+  [
+    "验证条件",
+    "Validation conditions",
+    "Condiciones de validación",
+    "Conditions de validation",
+    "검증 조건",
+    "Условия проверки"
+  ],
+  [
+    "记录管材、壁厚、透明度、液体颜色、流速、气泡和环境光，重新标定后才用于设备报警。",
+    "Record material, wall thickness, transparency, liquid color, speed, bubbles and ambient light. Recalibrate before using instrument alarms.",
+    "Registre material, espesor, transparencia, color, velocidad, burbujas y luz. Recalibre antes de usar alarmas del equipo.",
+    "Consignez matériau, épaisseur, transparence, couleur, débit, bulles et lumière. Réétalonnez avant utilisation en alarme.",
+    "관 재질·벽두께·투명도, 액체 색상, 유속, 기포와 주변광을 기록하고 재교정 후 장비 경보에 사용하세요.",
+    "Запишите материал, толщину, прозрачность, цвет, скорость, пузырьки и освещение. Перед применением тревоги выполните калибровку."
+  ],
+  [
+    "管外径、管材与检测对象怎么选",
+    "Choosing tubing OD, material and detection target",
+    "Selección de diámetro, material y objeto detectado",
+    "Choisir diamètre extérieur, matériau et cible",
+    "튜브 외경, 재질 및 검출 대상 선정",
+    "Выбор наружного диаметра, материала и объекта обнаружения"
+  ],
+  [
+    "先用真实软管和液体做夹持与检测评估。外径相同不代表壁厚、透光性和信号基线相同。",
+    "Test clamping and detection with real tubing and liquid. Equal OD does not imply equal wall thickness, transmission or baseline.",
+    "Ensaye sujeción y detección con tubo/líquido reales. Igual diámetro exterior no significa igual espesor, transmisión o base.",
+    "Testez serrage et détection avec tube/liquide réels. Un même diamètre ne garantit pas épaisseur, transmission ou niveau de base identiques.",
+    "실제 튜브·액체로 고정·검출을 평가하세요. 외경이 같아도 벽두께, 투광성과 신호 기준값은 다를 수 있습니다.",
+    "Проверьте зажим и обнаружение с реальными трубкой и средой. Равный наружный диаметр не означает одинаковую стенку, прозрачность или базовый сигнал."
+  ],
+  [
+    "管外径",
+    "Tubing OD",
+    "Diámetro exterior del tubo",
+    "Diamètre extérieur du tube",
+    "튜브 외경",
+    "Наружный диаметр трубки"
+  ],
+  [
+    "按夹管槽对应规格选择",
+    "Select the size matching the clamp groove",
+    "Seleccione la medida de la ranura",
+    "Choisir la dimension correspondant à la rainure",
+    "클램프 홈 규격에 맞춰 선택",
+    "Выбирайте размер под паз зажима"
+  ],
+  [
+    "管径过小、过大或夹持不到位都会改变光路；不要按管内径购买检测器。",
+    "Undersize, oversize or incomplete seating changes the optical path. Do not order the detector by tubing ID.",
+    "Tubo pequeño, grande o mal asentado cambia la óptica. No pida el detector por diámetro interior.",
+    "Un tube trop petit, trop grand ou mal placé modifie l’optique. Ne commandez pas selon le diamètre intérieur.",
+    "과소·과대 외경이나 불완전 고정은 광로를 바꿉니다. 튜브 내경으로 검출기를 구매하지 마세요.",
+    "Малый/большой размер и неполная посадка меняют оптический путь. Не заказывайте по внутреннему диаметру."
+  ],
+  [
+    "管材",
+    "Tubing material",
+    "Material del tubo",
+    "Matériau du tube",
+    "튜브 재질",
+    "Материал трубки"
+  ],
+  [
+    "PU／PVC／PTFE／PFA／FEP 透明管为列示范围",
+    "Listed transparent tubing: PU/PVC/PTFE/PFA/FEP",
+    "Tubos transparentes listados: PU/PVC/PTFE/PFA/FEP",
+    "Tubes transparents listés : PU/PVC/PTFE/PFA/FEP",
+    "명시된 투명 튜브: PU/PVC/PTFE/PFA/FEP",
+    "Указанные прозрачные трубки: PU/PVC/PTFE/PFA/FEP"
+  ],
+  [
+    "实际批次的透明度、表面和壁厚仍需测试，其他材质或粗糙表面不直接套用结论。",
+    "Test batch-specific transparency, surface and wall thickness. Do not extend results directly to other materials or rough surfaces.",
+    "Ensaye transparencia, superficie y espesor del lote. No extrapole a otros materiales o superficies rugosas.",
+    "Testez transparence, surface et épaisseur du lot. Ne transposez pas aux autres matériaux ou surfaces rugueuses.",
+    "실제 로트의 투명도, 표면과 벽두께를 시험하세요. 다른 재질이나 거친 표면에 결과를 그대로 적용하지 마세요.",
+    "Проверьте прозрачность, поверхность и стенку конкретной партии. Не переносите выводы на иные материалы и шероховатости."
+  ],
+  [
+    "气泡尺寸",
+    "Bubble size",
+    "Tamaño de burbuja",
+    "Taille des bulles",
+    "기포 크기",
+    "Размер пузырька"
+  ],
+  [
+    "代表性条件为 {0} mm 以上宽度",
+    "Representative condition: width at least {0} mm",
+    "Condición representativa: anchura de al menos {0} mm",
+    "Condition représentative : largeur d’au moins {0} mm",
+    "대표 조건: 폭 {0} mm 이상",
+    "Типичное условие: ширина не менее {0} mm"
+  ],
+  [
+    "该宽度针对横跨管内径的气泡，不代表能识别所有直径 {0} mm 的微气泡。",
+    "This width concerns bubbles spanning the tubing ID; it does not mean every {0} mm-diameter microbubble is detectable.",
+    "Esta anchura corresponde a burbujas que cruzan el tubo; no significa detectar cualquier microburbuja de {0} mm.",
+    "Cette largeur vise les bulles traversant le tube ; elle ne signifie pas détecter toute microbulle de {0} mm.",
+    "이 폭은 관 내경을 가로지르는 기포 기준이며 직경 {0} mm의 모든 미세 기포 검출을 의미하지 않습니다.",
+    "Это ширина пузырька поперёк внутреннего диаметра, а не возможность обнаружить любую микропузырьковую частицу диаметром {0} mm."
+  ],
+  [
+    "检测位置",
+    "Detection location",
+    "Ubicación de detección",
+    "Position de détection",
+    "검출 위치",
+    "Место обнаружения"
+  ],
+  [
+    "保持管路固定、表面清洁并控制环境光",
+    "Secure tubing, clean its surface and control ambient light",
+    "Fije tubo, limpie superficie y controle luz",
+    "Fixer le tube, nettoyer la surface et maîtriser la lumière",
+    "배관 고정, 표면 청결 및 주변광 관리",
+    "Закрепите трубку, очистите поверхность и контролируйте освещение"
+  ],
+  [
+    "避免管路在槽内松动，污染或附着液滴时先清理，再重新检查信号。",
+    "Prevent movement in the groove. Remove contamination or attached droplets, then recheck signals.",
+    "Evite movimiento en la ranura. Retire suciedad o gotas y revise señales.",
+    "Évitez le mouvement dans la rainure. Retirez salissures ou gouttes, puis revérifiez les signaux.",
+    "홈 내부 유동을 막고 오염·부착 액적을 먼저 제거한 뒤 신호를 다시 확인하세요.",
+    "Исключите движение в пазу. Удалите загрязнение и капли, затем перепроверьте сигнал."
+  ],
+  [
+    "供电、模拟输出与 TTL 通信",
+    "Power, analog output and TTL communication",
+    "Alimentación, salida analógica y comunicación TTL",
+    "Alimentation, sortie analogique et communication TTL",
+    "전원, 아날로그 출력 및 TTL 통신",
+    "Питание, аналоговый выход и связь TTL"
+  ],
+  [
+    "先确认主控要读取模拟电压、IO 报警还是通信寄存器，再接对应引脚；Modbus RTU 是协议，不表示可以直接接 RS{0} 电气接口。",
+    "Choose analog voltage, IO alarm or registers before wiring the respective pins. Modbus RTU is a protocol, not permission to connect directly to RS{0} electrical levels.",
+    "Elija tensión analógica, alarma IO o registros antes de cablear. Modbus RTU es protocolo, no interfaz eléctrica RS{0} directa.",
+    "Choisissez tension analogique, alarme IO ou registres avant câblage. Modbus RTU est un protocole, pas une interface électrique RS{0} directe.",
+    "아날로그 전압, IO 경보 또는 레지스터 중 주 제어기가 읽을 방식을 정하고 해당 핀을 연결하세요. Modbus RTU는 프로토콜이며 RS{0} 전기 인터페이스 직접 연결을 뜻하지 않습니다.",
+    "До подключения выберите аналоговый сигнал, IO или регистры. Modbus RTU — протокол, а не совместимость с электрическими уровнями RS{0}."
+  ],
+  [
+    "ABD 气泡检测器外形、夹管结构与六针供电、模拟输出、TTL 和 IO 接口定义",
+    "ABD outline, tube clamp and six-pin power, analog, TTL and IO definitions",
+    "Forma ABD, abrazadera y definición de seis pines de fuente, analógica, TTL e IO",
+    "Dimensions ABD, pince et brochage six points : alimentation, analogique, TTL et IO",
+    "ABD 외형, 튜브 클램프 및 6핀 전원·아날로그·TTL·IO 정의",
+    "Габариты ABD, зажим и шесть выводов питания, аналога, TTL и IO"
+  ],
+  [
+    "ABD 原始接口定义；IO 上拉和主控电平按实际接线要求设计。",
+    "ABD interface definitions. Design IO pull-up and controller levels for the actual connection.",
+    "Interfaz ABD. Diseñe pull-up IO y niveles según conexión real.",
+    "Interface ABD. Dimensionner rappel IO et niveaux selon raccordement réel.",
+    "ABD 인터페이스 정의입니다. 실제 연결 요구에 맞게 IO 풀업과 주 제어기 레벨을 설계하세요.",
+    "Назначения интерфейсов ABD. Подтяжку IO и уровни контроллера задавайте по фактическому подключению."
+  ],
+  [
+    "{0} V 电源正／GND",
+    "{0} V supply positive/GND",
+    "Positivo {0} V/GND",
+    "Positif alimentation {0} V/GND",
+    "{0} V 전원 +/GND",
+    "Плюс питания {0} V/GND"
+  ],
+  [
+    "检查 {0} V ±{1}% 供电及共地，不能接 {2} V。",
+    "Check {0} V ±{1}% supply and common ground. Do not apply {2} V.",
+    "Verifique {0} V ±{1}% y tierra común. No aplique {2} V.",
+    "Vérifier {0} V ±{1} % et masse commune. Ne pas appliquer {2} V.",
+    "{0} V ±{1}% 전원·공통 접지를 확인하세요. {2} V를 연결하지 마세요.",
+    "Проверьте питание {0} V ±{1}% и общий провод. Не подавайте {2} V."
+  ],
+  [
+    "{0}–{1} V 光电转换模拟信号",
+    "{0}–{1} V photoelectric analog signal",
+    "Señal analógica fotoeléctrica {0}–{1} V",
+    "Signal analogique photoélectrique {0}–{1} V",
+    "{0}–{1} V 광전 변환 아날로그 신호",
+    "Фотоэлектрический аналоговый сигнал {0}–{1} V"
+  ],
+  [
+    "核对主控 ADC 允许电压，并比较实际液体与空气状态的电压。",
+    "Check controller ADC voltage limits and compare voltages with actual liquid versus air.",
+    "Revise límites del ADC y compare tensión con líquido real y aire.",
+    "Vérifiez les limites ADC et comparez les tensions liquide réel/air.",
+    "주 제어기 ADC 허용 전압을 확인하고 실제 액체·공기 상태의 전압을 비교하세요.",
+    "Проверьте допустимое напряжение АЦП и сравните сигналы реальной жидкости и воздуха."
+  ],
+  [
+    "Rx／Tx，TTL 电平",
+    "Rx/Tx at TTL levels",
+    "Rx/Tx a nivel TTL",
+    "Rx/Tx en niveaux TTL",
+    "Rx/Tx, TTL 레벨",
+    "Rx/Tx с уровнями TTL"
+  ],
+  [
+    "交叉连接主控 Tx／Rx，并配置协议和地址；不直接连接标准 RS{0} 或 RS{1} 电平。",
+    "Cross-connect controller Tx/Rx and configure protocol/address. Do not connect directly to standard RS{0} or RS{1} levels.",
+    "Cruce Tx/Rx y configure protocolo/dirección. No conecte directamente a niveles RS{0} o RS{1}.",
+    "Croisez Tx/Rx et réglez protocole/adresse. Ne raccordez pas directement aux niveaux RS{0} ou RS{1}.",
+    "주 제어기의 Tx/Rx를 교차 연결하고 프로토콜·주소를 설정하세요. 표준 RS{0}·RS{1} 레벨에 직접 연결하지 마세요.",
+    "Перекрестно соедините Tx/Rx, настройте протокол и адрес. Не подключайте напрямую уровни RS{0} или RS{1}."
+  ],
+  [
+    "IO 报警，须上拉",
+    "IO alarm; pull-up required",
+    "Alarma IO; requiere pull-up",
+    "Alarme IO ; rappel requis",
+    "IO 경보, 풀업 필요",
+    "Выход тревоги IO; требуется подтяжка"
+  ],
+  [
+    "按输出电路、允许电压和电流设计，不将输出脚直接作为负载供电。",
+    "Design for the output circuit and permitted voltage/current. Do not power a load directly from the output pin.",
+    "Diseñe según circuito y tensión/corriente admisibles. No alimente cargas directamente del pin.",
+    "Respectez circuit, tension et courant autorisés. N’alimentez pas une charge directement depuis la broche.",
+    "출력 회로와 허용 전압·전류에 맞게 설계하고 출력 핀을 부하 전원으로 직접 사용하지 마세요.",
+    "Учитывайте выходную схему, допустимые напряжение и ток. Не используйте вывод как непосредственное питание нагрузки."
+  ],
+  [
+    "阈值、信号极性与报警逻辑",
+    "Thresholds, polarity and alarm logic",
+    "Umbrales, polaridad y lógica de alarma",
+    "Seuils, polarité et logique d’alarme",
+    "임계값, 신호 극성 및 경보 로직",
+    "Пороги, полярность и логика тревоги"
+  ],
+  [
+    "先测正常液体和空气经过时的信号，再设置阈值。阈值和报警输出极性是两个设置，应分别测试。",
+    "Measure normal-liquid and air signals before setting thresholds. Threshold and alarm polarity are separate settings; test each.",
+    "Mida líquido normal y aire antes de fijar umbrales. Umbral y polaridad son ajustes distintos; ensaye ambos.",
+    "Mesurez liquide normal et air avant réglage. Seuil et polarité sont distincts ; testez chacun.",
+    "정상 액체·공기 통과 신호를 측정한 뒤 임계값을 설정하세요. 임계값과 경보 극성은 서로 다른 설정이므로 각각 시험하세요.",
+    "До настройки измерьте сигналы жидкости и воздуха. Порог и полярность тревоги — отдельные настройки; проверяйте обе."
+  ],
+  [
+    "正常基线",
+    "Normal baseline",
+    "Referencia normal",
+    "Niveau de base normal",
+    "정상 기준값",
+    "Нормальный базовый уровень"
+  ],
+  [
+    "液体通常对应较高数值，气泡对应较低数值",
+    "Liquid generally gives higher values; bubbles lower values",
+    "El líquido suele dar valores altos y burbujas bajos",
+    "Le liquide donne généralement des valeurs plus hautes, les bulles plus basses",
+    "일반적으로 액체는 높은 값, 기포는 낮은 값",
+    "Жидкость обычно даёт большие значения, пузырьки — меньшие"
+  ],
+  [
+    "在实际管材、液体和流速下记录分布，不能使用一个通用阈值覆盖所有试剂。",
+    "Record distributions at actual tubing, liquid and speed. One universal threshold does not cover all reagents.",
+    "Registre distribuciones con tubo, líquido y velocidad reales. Un umbral universal no cubre todos los reactivos.",
+    "Relevez les distributions avec tube, liquide et débit réels. Un seuil universel ne couvre pas tous les réactifs.",
+    "실제 튜브·액체·유속에서 분포를 기록하세요. 모든 시약에 공통 임계값 하나를 사용하지 마세요.",
+    "Запишите распределения для реальных трубки, среды и скорости. Один порог не подходит всем реагентам."
+  ],
+  [
+    "触发阈值",
+    "Trigger threshold",
+    "Umbral de disparo",
+    "Seuil de déclenchement",
+    "트리거 임계값",
+    "Порог срабатывания"
+  ],
+  [
+    "按正常与气泡信号的实际差异设置",
+    "Set from the actual difference between normal and bubble signals",
+    "Ajuste según diferencia real entre líquido y burbujas",
+    "Régler selon l’écart réel entre signaux normaux et bulles",
+    "정상·기포 신호의 실제 차이로 설정",
+    "Настраивайте по реальной разнице нормального сигнала и пузырька"
+  ],
+  [
+    "测试最小目标气泡、连续气泡及液体颜色变化，确认误报与漏报。",
+    "Test smallest target bubbles, consecutive bubbles and color changes. Check false positives and missed detections.",
+    "Ensaye burbujas mínimas, consecutivas y cambios de color. Compruebe falsas alarmas y omisiones.",
+    "Testez bulles minimales, successives et changements de couleur. Vérifiez faux positifs et non-détections.",
+    "최소 목표 기포, 연속 기포와 액체 색상 변화를 시험해 오경보·미검출을 확인하세요.",
+    "Испытайте минимальные целевые, последовательные пузырьки и смену цвета. Проверьте ложные и пропущенные срабатывания."
+  ],
+  [
+    "输出极性",
+    "Output polarity",
+    "Polaridad de salida",
+    "Polarité de sortie",
+    "출력 극성",
+    "Полярность выхода"
+  ],
+  [
+    "根据设备输入与 Setting 配置检查",
+    "Check instrument inputs and the Setting configuration",
+    "Revise entradas y configuración Setting",
+    "Vérifier entrées et configuration Setting",
+    "장비 입력 및 Setting 구성 확인",
+    "Проверьте входы прибора и параметр Setting"
+  ],
+  [
+    "同时测试有气泡、正常液体、未接线及断电状态，由整机实现异常处理。",
+    "Test bubbles, normal liquid, disconnected wiring and power loss. The instrument must implement fault handling.",
+    "Ensaye burbujas, líquido, desconexión y corte eléctrico. El equipo debe gestionar anomalías.",
+    "Testez bulles, liquide normal, déconnexion et coupure. L’instrument assure la gestion des défauts.",
+    "기포, 정상 액체, 배선 미연결과 정전 상태를 함께 시험하세요. 이상 처리는 장비가 구현해야 합니다.",
+    "Проверьте пузырьки, жидкость, отключённую линию и потерю питания. Обработку отказов реализует прибор."
+  ],
+  [
+    "安装、标定与首次使用",
+    "Installation, calibration and first use",
+    "Instalación, calibración y primer uso",
+    "Installation, étalonnage et première utilisation",
+    "설치, 교정 및 최초 사용",
+    "Монтаж, калибровка и первый запуск"
+  ],
+  [
+    "验证应覆盖整条检测链：气泡经过、模块输出、主控读取、设备报警和处理动作。",
+    "Validate the complete chain: bubble passage, module output, controller reading, instrument alarm and response.",
+    "Valide toda la cadena: paso de burbuja, salida, lectura, alarma y respuesta.",
+    "Validez toute la chaîne : passage de bulle, sortie, lecture, alarme et action.",
+    "기포 통과, 모듈 출력, 주 제어기 판독, 장비 경보와 후속 동작의 전체 검출 체인을 검증하세요.",
+    "Проверьте всю цепочку: пузырёк, выход модуля, чтение контроллера, тревога и реакция прибора."
+  ],
+  [
+    "夹管与固定",
+    "Clamp and secure the tube",
+    "Sujete y fije el tubo",
+    "Serrer et fixer le tube",
+    "튜브 클램프 및 고정",
+    "Зажмите и закрепите трубку"
+  ],
+  [
+    "确认外径匹配，管路完整进入槽位且不扭曲，固定线束并清洁光路。",
+    "Match OD, fully seat tubing without twist, secure wiring and clean the optical path.",
+    "Ajuste diámetro, asiente sin torsión, fije cables y limpie óptica.",
+    "Adaptez le diamètre, placez sans torsion, fixez les câbles et nettoyez l’optique.",
+    "외경 적합성을 확인하고 비틀림 없이 홈에 완전히 넣으세요. 배선을 고정하고 광로를 청소하세요.",
+    "Согласуйте диаметр, полностью уложите без перекручивания, закрепите жгут и очистите оптический путь."
+  ],
+  [
+    "检查电气",
+    "Check electrical connections",
+    "Revise conexiones eléctricas",
+    "Vérifier les connexions électriques",
+    "전기 연결 확인",
+    "Проверьте электрические соединения"
+  ],
+  [
+    "按图接入电源与所需输出，核对上拉、共地及通信电平。",
+    "Connect power and required outputs to the drawing. Check pull-ups, common ground and communication levels.",
+    "Conecte fuente y salidas según plano; revise pull-up, tierra y niveles.",
+    "Raccordez alimentation et sorties selon plan ; vérifiez rappels, masse et niveaux.",
+    "도면에 맞춰 전원·필요 출력을 연결하고 풀업, 공통 접지와 통신 레벨을 확인하세요.",
+    "Подключите питание и выходы по чертежу. Проверьте подтяжки, общий провод и уровни связи."
+  ],
+  [
+    "建立液体和空气信号",
+    "Establish liquid and air signals",
+    "Obtenga señales de líquido y aire",
+    "Établir les signaux liquide et air",
+    "액체·공기 신호 수립",
+    "Запишите сигналы жидкости и воздуха"
+  ],
+  [
+    "以实际液体和管路记录正常与目标气泡信号，再设置阈值及极性。",
+    "Record normal and target-bubble signals with actual liquid/tubing, then set threshold and polarity.",
+    "Registre líquido normal y burbuja objetivo con circuito real; ajuste umbral y polaridad.",
+    "Relevez signaux normaux et bulles cibles sur circuit réel, puis seuil et polarité.",
+    "실제 액체·배관으로 정상·목표 기포 신호를 기록한 뒤 임계값과 극성을 설정하세요.",
+    "С реальными жидкостью и трубкой запишите нормальный сигнал и пузырёк, затем задайте порог и полярность."
+  ],
+  [
+    "验证报警过程",
+    "Validate the alarm sequence",
+    "Valide la secuencia de alarma",
+    "Valider la chaîne d’alarme",
+    "경보 과정 검증",
+    "Проверьте последовательность тревоги"
+  ],
+  [
+    "分别测试连续流动、启停、不同流速、低储液量和断电重启，确认设备动作。",
+    "Test continuous flow, start/stop, different flow speeds, low reservoir level and power-cycle restart. Confirm instrument action.",
+    "Ensaye flujo continuo, arranque/parada, velocidades, depósito bajo y reinicio eléctrico. Confirme respuesta.",
+    "Testez débit continu, marche/arrêt, vitesses, réservoir bas et redémarrage électrique. Confirmez les actions.",
+    "연속 유동, 시작·정지, 여러 유속, 낮은 저장량과 전원 재시작을 각각 시험하고 장비 동작을 확인하세요.",
+    "Проверьте непрерывный поток, пуск/остановку, скорости, низкий уровень и перезапуск питания. Подтвердите реакцию прибора."
+  ],
+  [
+    "误报、漏检与日常维护",
+    "False alarms, missed bubbles and maintenance",
+    "Falsas alarmas, omisiones y mantenimiento",
+    "Fausses alarmes, non-détections et entretien",
+    "오경보, 미검출 및 일상 정비",
+    "Ложные тревоги, пропуски и обслуживание"
+  ],
+  [
+    "异常时先检查管路和光路，再检查阈值和通信，不先将全部现象归因于传感器故障。",
+    "Check tubing and optics before thresholds and communication. Do not assume every symptom is a sensor fault.",
+    "Revise tubos y óptica antes de umbrales y comunicación. No atribuya todo al sensor.",
+    "Vérifiez tubes et optique avant seuils et communication. N’attribuez pas tout au capteur.",
+    "튜브·광로를 먼저 확인하고 임계값·통신을 점검하세요. 모든 현상을 센서 고장으로 단정하지 마세요.",
+    "Сначала проверяйте трубку и оптику, затем пороги и связь. Не считайте каждый симптом неисправностью датчика."
+  ],
+  [
+    "持续报警",
+    "Continuous alarm",
+    "Alarma continua",
+    "Alarme permanente",
+    "지속 경보",
+    "Постоянная тревога"
+  ],
+  [
+    "空管、夹持不到位、污染或阈值",
+    "Empty tube, incomplete seating, contamination or threshold",
+    "Tubo vacío, mal asentado, suciedad o umbral",
+    "Tube vide, mauvais placement, contamination ou seuil",
+    "빈 튜브, 불완전 고정, 오염 또는 임계값",
+    "Пустая трубка, неполная посадка, загрязнение или порог"
+  ],
+  [
+    "恢复稳定液体状态并比较模拟值，确认主控读取与报警极性。",
+    "Restore steady liquid and compare analog values. Confirm controller reading and alarm polarity.",
+    "Restablezca líquido estable y compare valores analógicos. Confirme lectura y polaridad.",
+    "Rétablissez un liquide stable et comparez l’analogique. Confirmez lecture et polarité.",
+    "안정적인 액체 상태를 복구해 아날로그 값을 비교하고 주 제어기 판독·경보 극성을 확인하세요.",
+    "Восстановите стабильную жидкость и сравните аналоговые значения. Проверьте чтение и полярность тревоги."
+  ],
+  [
+    "目标气泡漏检",
+    "Target bubble not detected",
+    "Burbuja objetivo no detectada",
+    "Bulle cible non détectée",
+    "목표 기포 미검출",
+    "Целевой пузырёк не обнаружен"
+  ],
+  [
+    "气泡是否跨越管内径、流速与采样",
+    "Bubble span across the tube ID, flow speed and sampling",
+    "Cobertura del diámetro interior, velocidad y muestreo",
+    "Traversée du diamètre intérieur, vitesse et échantillonnage",
+    "기포의 내경 횡단 여부, 유속 및 샘플링",
+    "Перекрытие внутреннего диаметра, скорость потока и выборка"
+  ],
+  [
+    "检查检测对象是否在规格边界内，再验证主控采样及滤波是否丢失信号。",
+    "Confirm the target is within specifications, then check whether controller sampling or filtering loses the signal.",
+    "Confirme objeto dentro de ficha; revise si muestreo o filtrado pierde señal.",
+    "Confirmez la cible dans les limites, puis vérifiez pertes par échantillonnage ou filtrage.",
+    "검출 대상이 사양 범위 안에 있는지 확인하고 제어기 샘플링·필터링이 신호를 놓치는지 검증하세요.",
+    "Подтвердите соответствие объекта спецификации, затем проверьте потери сигнала при выборке или фильтрации."
+  ],
+  [
+    "换管或换液后异常",
+    "Fault after changing tubing or liquid",
+    "Anomalía tras cambiar tubo o líquido",
+    "Anomalie après changement de tube ou liquide",
+    "튜브·액체 교체 후 이상",
+    "Сбой после смены трубки или жидкости"
+  ],
+  [
+    "透光度、壁厚、液体颜色与基线变化",
+    "Transmission, wall thickness, liquid color and baseline change",
+    "Transmisión, espesor, color y cambio de referencia",
+    "Transmission, épaisseur, couleur et variation du niveau de base",
+    "투광도, 벽두께, 액체 색상 및 기준값 변화",
+    "Светопропускание, стенка, цвет и сдвиг базового уровня"
+  ],
+  [
+    "重新记录信号和标定，不直接复用旧阈值。",
+    "Record signals and recalibrate; do not directly reuse old thresholds.",
+    "Registre y recalibre; no reutilice umbrales antiguos directamente.",
+    "Relevez les signaux et réétalonnez ; ne reprenez pas directement les anciens seuils.",
+    "신호를 다시 기록하고 교정하세요. 이전 임계값을 그대로 재사용하지 마세요.",
+    "Заново запишите сигналы и откалибруйте; не переносите старые пороги напрямую."
+  ],
+  [
+    "通信异常",
+    "Communication fault",
+    "Fallo de comunicación",
+    "Défaut de communication",
+    "통신 이상",
+    "Сбой связи"
+  ],
+  [
+    "TTL 电平、地址、Rx／Tx 和 CRC",
+    "TTL levels, address, Rx/Tx and CRC",
+    "Niveles TTL, dirección, Rx/Tx y CRC",
+    "Niveaux TTL, adresse, Rx/Tx et CRC",
+    "TTL 레벨, 주소, Rx/Tx 및 CRC",
+    "Уровни TTL, адрес, Rx/Tx и CRC"
+  ],
+  [
+    "先单台测试电气与协议，不通过任意升高电压处理。",
+    "Test one unit’s electrical interface and protocol first. Do not solve faults by arbitrarily increasing voltage.",
+    "Ensaye primero interfaz y protocolo de una unidad. No aumente tensión arbitrariamente.",
+    "Testez d’abord l’interface et le protocole d’une unité. N’augmentez pas arbitrairement la tension.",
+    "단독 전기 인터페이스·프로토콜부터 시험하세요. 임의 전압 증가로 해결하지 마세요.",
+    "Сначала проверьте электрическую часть и протокол одного устройства. Не устраняйте сбой произвольным повышением напряжения."
+  ]
+]

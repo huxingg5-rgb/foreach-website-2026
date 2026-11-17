@@ -1,0 +1,978 @@
+[
+  [
+    "DRPL-{0} 以同一驱动带动两个计量头，按 {1}:{2} 的名义体积比输送浓缩液和稀释液。每圈输出 {3} μL＋{4} μL，先分别验证两路液量，再接入汇流和混合。",
+    "DRPL-{0} drives two metering heads with one drive, delivering concentrate and diluent at a nominal {1}:{2} volume ratio. Output per revolution is {3} μL + {4} μL. Verify both outputs separately before combining and mixing.",
+    "DRPL-{0} acciona dos cabezales con un mismo motor y entrega concentrado/diluyente a proporción nominal {1}:{2}. Por vuelta: {3} μL + {4} μL. Verifique cada salida antes de combinar y mezclar.",
+    "DRPL-{0} entraîne deux têtes avec un entraînement commun et délivre concentré/diluant au rapport nominal {1}:{2}. Par tour : {3} μL + {4} μL. Vérifiez chaque sortie avant réunion et mélange.",
+    "DRPL-{0}은 하나의 구동으로 두 계량 헤드를 움직여 농축액·희석액을 공칭 체적비 {1}:{2}로 이송합니다. 회전당 {3} μL + {4} μL이며 각 유량을 검증한 뒤 합류·혼합하세요.",
+    "DRPL-{0} одним приводом перемещает две дозирующие головки, подавая концентрат и разбавитель в номинальном отношении {1}:{2}. За оборот: {3} μL + {4} μL. Проверьте выходы отдельно до объединения и смешивания."
+  ],
+  [
+    "双头同步驱动",
+    "Synchronous dual-head drive",
+    "Accionamiento síncrono de dos cabezales",
+    "Entraînement synchrone à deux têtes",
+    "이중 헤드 동기 구동",
+    "Синхронный привод двух головок"
+  ],
+  [
+    "两个计量头由同一驱动带动。整体调速改变两路输送量，名义体积比由两路排量组合确定。",
+    "Both heads share one drive. Speed changes both outputs; the displacement pair determines the nominal volume ratio.",
+    "Los cabezales comparten accionamiento. La velocidad cambia ambas salidas; la pareja de cilindradas fija la proporción nominal.",
+    "Les têtes partagent l’entraînement. La vitesse change les deux débits ; leurs cylindrées fixent le rapport nominal.",
+    "두 헤드는 공통 구동을 사용합니다. 전체 속도 조절은 두 이송량을 바꾸며 공칭 체적비는 각 배제량 조합으로 정해집니다.",
+    "Обе головки имеют общий привод. Скорость меняет обе подачи; номинальное отношение задаёт пара рабочих объёмов."
+  ],
+  [
+    "明确单圈输出",
+    "Defined output per revolution",
+    "Salida definida por vuelta",
+    "Volume défini par tour",
+    "회전당 토출량 명시",
+    "Заданный объём на оборот"
+  ],
+  [
+    "A 路 {0} μL，B 路 {1} μL，名义合计 {2} mL；单圈输出与每分钟流量分别核对。",
+    "A: {0} μL; B: {1} μL; nominal total {2} mL. Check volume per revolution separately from flow per minute.",
+    "A: {0} μL; B: {1} μL; total nominal {2} mL. Distinga volumen por vuelta y caudal por minuto.",
+    "A : {0} μL ; B : {1} μL ; total nominal {2} mL. Distinguez volume par tour et débit par minute.",
+    "A {0} μL, B {1} μL, 공칭 합계 {2} mL입니다. 회전당 토출량과 분당 유량을 구분하세요.",
+    "A: {0} μL; B: {1} μL; номинально всего {2} mL. Объём за оборот и расход за минуту проверяйте отдельно."
+  ],
+  [
+    "两路接口不同",
+    "Different ports for the two paths",
+    "Conexiones distintas en ambos circuitos",
+    "Raccordements différents pour les deux voies",
+    "두 경로의 포트 구분",
+    "Разные порты двух линий"
+  ],
+  [
+    "A 路工作接口为 {0}/{1}-{2} UNF-{3}B，B 路为 G{4}/{5}；两路清洗接口均为 {6}/{7}-{8} UNF-{9}B。",
+    "A working ports: {0}/{1}-{2} UNF-{3}B; B: G{4}/{5}. Both rinse paths use {6}/{7}-{8} UNF-{9}B.",
+    "Trabajo A: {0}/{1}-{2} UNF-{3}B; B: G{4}/{5}. Ambas vías de lavado: {6}/{7}-{8} UNF-{9}B.",
+    "Ports de travail A : {0}/{1}-{2} UNF-{3}B ; B : G{4}/{5}. Deux rinçages : {6}/{7}-{8} UNF-{9}B.",
+    "A 작업 포트 {0}/{1}-{2} UNF-{3}B, B G{4}/{5}, 두 세척 포트 {6}/{7}-{8} UNF-{9}B입니다.",
+    "Рабочие порты A: {0}/{1}-{2} UNF-{3}B; B: G{4}/{5}. Обе промывки: {6}/{7}-{8} UNF-{9}B."
+  ],
+  [
+    "旋钮调整量程",
+    "Knob-adjusted displacement",
+    "Cilindrada ajustable con mando",
+    "Cylindrée réglable par molette",
+    "노브로 배제량 조절",
+    "Регулировка рабочего объёма ручкой"
+  ],
+  [
+    "旋钮改变泵头偏角与柱塞行程，无需拆解泵体。调整后分别测量两路输出，重新核对配比与总量。",
+    "The knob changes head angle and plunger stroke without disassembly. After adjustment, measure both outputs and recheck ratio and total.",
+    "El mando cambia inclinación y carrera sin desmontar. Tras ajustar, mida ambas salidas y revise proporción y total.",
+    "La molette modifie angle et course sans démontage. Après réglage, mesurez les deux sorties et vérifiez rapport et total.",
+    "노브는 분해 없이 헤드 각도와 플런저 스트로크를 바꿉니다. 조절 후 두 토출량을 각각 측정하고 비율·총량을 재확인하세요.",
+    "Ручка меняет угол головки и ход без разборки. После регулировки измерьте обе подачи, перепроверьте отношение и сумму."
+  ],
+  [
+    "订货配置",
+    "Order configuration",
+    "Configuración de pedido",
+    "Configuration commandée",
+    "주문 구성",
+    "Заказная комплектация"
+  ],
+  [
+    "DRPL-{0}-{1}，商品编码 {2}；浓缩液 {3} μL＋稀释液 {4} μL，名义合计 {5} mL。",
+    "DRPL-{0}-{1}, product code {2}; concentrate {3} μL + diluent {4} μL, nominal total {5} mL.",
+    "DRPL-{0}-{1}, código {2}; concentrado {3} μL + diluyente {4} μL, total nominal {5} mL.",
+    "DRPL-{0}-{1}, code produit {2} ; concentré {3} μL + diluant {4} μL, total nominal {5} mL.",
+    "DRPL-{0}-{1}, 제품 코드 {2}. 농축액 {3} μL + 희석액 {4} μL, 공칭 합계 {5} mL.",
+    "DRPL-{0}-{1}, код {2}; концентрат {3} μL + разбавитель {4} μL, номинально {5} mL."
+  ],
+  [
+    "接口配置",
+    "Port configuration",
+    "Configuración de puertos",
+    "Configuration des ports",
+    "포트 구성",
+    "Комплектация портов"
+  ],
+  [
+    "A 路工作接口 {0}/{1}-{2} UNF-{3}B，B 路 G{4}/{5}；两路清洗接口 {6}/{7}-{8} UNF-{9}B。",
+    "A working ports {0}/{1}-{2} UNF-{3}B; B G{4}/{5}; both rinse paths {6}/{7}-{8} UNF-{9}B.",
+    "Trabajo A {0}/{1}-{2} UNF-{3}B; B G{4}/{5}; ambos lavados {6}/{7}-{8} UNF-{9}B.",
+    "Ports A {0}/{1}-{2} UNF-{3}B ; B G{4}/{5} ; deux rinçages {6}/{7}-{8} UNF-{9}B.",
+    "A 작업 포트 {0}/{1}-{2} UNF-{3}B, B G{4}/{5}, 두 세척 포트 {6}/{7}-{8} UNF-{9}B.",
+    "Рабочие A {0}/{1}-{2} UNF-{3}B; B G{4}/{5}; обе промывки {6}/{7}-{8} UNF-{9}B."
+  ],
+  [
+    "性能条件",
+    "Performance conditions",
+    "Condiciones de rendimiento",
+    "Conditions de performance",
+    "성능 조건",
+    "Условия определения характеристик"
+  ],
+  [
+    "准确性、重复性及寿命的测试条件为纯水、{0} rpm、液路压力 ≤{1} kPa，电机从正面看顺时针旋转。两路液量、比例及混合后浓度分别核验，换液或更改管路后重新测量。",
+    "Accuracy, repeatability and life tests use pure water, {0} rpm, fluid pressure ≤{1} kPa and clockwise motor rotation viewed from the front. Validate each volume, ratio and mixed concentration separately; remeasure after liquid or tubing changes.",
+    "Ensayos de exactitud, repetibilidad y vida: agua pura, {0} rpm, presión ≤{1} kPa y giro horario visto de frente. Verifique volúmenes, proporción y concentración por separado; remida tras cambiar líquido o tubos.",
+    "Essais d’exactitude, répétabilité et durée de vie : eau pure, {0} rpm, pression ≤{1} kPa, rotation horaire vue de face. Validez séparément volumes, rapport et concentration ; remesurez après changement de fluide ou tubes.",
+    "정확도·반복성·수명 시험은 순수, {0} rpm, 유로 압력 ≤{1} kPa, 모터 정면 기준 시계 방향 조건입니다. 두 액량, 비율과 혼합 농도를 각각 검증하고 액체·배관 변경 후 재측정하세요.",
+    "Испытания точности, повторяемости и ресурса: чистая вода, {0} rpm, давление ≤{1} kPa, вращение по часовой стрелке спереди. Отдельно проверяйте дозы, отношение и концентрацию; повторяйте после смены среды или трубок."
+  ],
+  [
+    "装机与控制",
+    "Installation and control",
+    "Instalación y control",
+    "Installation et commande",
+    "설치 및 제어",
+    "Монтаж и управление"
+  ],
+  [
+    "核对共用驱动、位置反馈、泵头固定和两路管线，再设置预充、计量与停机流程。",
+    "Verify shared drive, position feedback, head mounting and both lines before defining prime, meter and shutdown sequences.",
+    "Revise accionamiento común, posición, fijación y ambas líneas antes de cebado, dosificación y parada.",
+    "Vérifiez entraînement commun, retour de position, fixation et deux lignes avant amorçage, dosage et arrêt.",
+    "공통 구동, 위치 피드백, 헤드 고정과 두 배관을 확인한 뒤 예비 충전·계량·정지 절차를 설정하세요.",
+    "Проверьте общий привод, обратную связь, крепление и обе линии до задания заполнения, дозирования и остановки."
+  ],
+  [
+    "双泵头怎样完成两路供液",
+    "How two heads deliver two liquids",
+    "Cómo dos cabezales suministran dos líquidos",
+    "Comment deux têtes alimentent deux liquides",
+    "두 헤드의 이중 액체 공급",
+    "Как две головки подают две жидкости"
+  ],
+  [
+    "两个计量头分别连接浓缩液与稀释液，由同一驱动完成运行周期。安装时先标识 A、B 两路，再连接各自的工作接口与清洗接口。",
+    "The heads connect separately to concentrate and diluent and share one operating cycle. Label A/B before connecting working and rinse ports.",
+    "Los cabezales conectan concentrado y diluyente por separado y comparten ciclo. Marque A/B antes de conectar trabajo y lavado.",
+    "Les têtes reçoivent séparément concentré et diluant et partagent un cycle. Repérez A/B avant les ports de travail et rinçage.",
+    "두 헤드는 농축액·희석액에 각각 연결되며 하나의 구동 주기를 공유합니다. A·B를 먼저 표시하고 각 작업·세척 포트를 연결하세요.",
+    "Головки отдельно соединены с концентратом и разбавителем и выполняют общий цикл. Обозначьте A/B перед подключением рабочих и промывочных портов."
+  ],
+  [
+    "DRPL-{0} 双计量头、共用驱动与安装底座的产品结构",
+    "DRPL-{0} dual heads, shared drive and mounting-base structure",
+    "Estructura de dos cabezales, accionamiento común y base DRPL-{0}",
+    "Structure DRPL-{0} : deux têtes, entraînement commun et base",
+    "DRPL-{0} 이중 헤드, 공통 구동 및 설치 베이스 구조",
+    "Две головки, общий привод и основание DRPL-{0}"
+  ],
+  [
+    "双计量头与共用驱动。接口用途按 A、B 标识连接。",
+    "Dual heads and shared drive. Connect each port according to A/B identification.",
+    "Dos cabezales y accionamiento común. Conecte según identificación A/B.",
+    "Deux têtes et entraînement commun. Raccordez selon les repères A/B.",
+    "이중 헤드와 공통 구동입니다. A·B 표시에 맞춰 각 포트 용도를 연결하세요.",
+    "Две головки и общий привод. Подключайте порты по обозначениям A/B."
+  ],
+  [
+    "商品编码 {0}，对应当前展示的标准排量组合。",
+    "Product code {0}, for the standard displacement pair shown.",
+    "Código {0}, para la pareja de cilindradas mostrada.",
+    "Code produit {0}, pour les cylindrées standard présentées.",
+    "제품 코드 {0}, 표시된 표준 배제량 조합에 해당합니다.",
+    "Код {0}, соответствует показанной стандартной паре рабочих объёмов."
+  ],
+  [
+    "当前组合",
+    "Current combination",
+    "Combinación actual",
+    "Association actuelle",
+    "현재 조합",
+    "Текущее сочетание"
+  ],
+  [
+    "A 路 {0} μL/圈；B 路 {1} μL/圈",
+    "A: {0} μL/rev; B: {1} μL/rev",
+    "A: {0} μL/vuelta; B: {1} μL/vuelta",
+    "A : {0} μL/tour ; B : {1} μL/tour",
+    "A {0} μL/회전, B {1} μL/회전",
+    "A: {0} μL/об; B: {1} μL/об"
+  ],
+  [
+    "两路排量共同形成配比；不能仅凭泵头外观或大小判断某个接口的用途。",
+    "Both displacements establish the ratio. Do not infer port function from head appearance or size alone.",
+    "Ambas cilindradas forman la proporción. No deduzca función por aspecto o tamaño del cabezal.",
+    "Les deux cylindrées établissent le rapport. Ne déduisez pas le rôle d’un port de l’apparence ou taille.",
+    "두 배제량이 함께 비율을 만듭니다. 헤드 외형·크기만으로 포트 용도를 판단하지 마세요.",
+    "Отношение задаётся обеими головками. Не определяйте назначение порта только по виду или размеру."
+  ],
+  [
+    "整体调速",
+    "Shared speed adjustment",
+    "Ajuste conjunto de velocidad",
+    "Réglage commun de vitesse",
+    "전체 속도 조절",
+    "Общая регулировка скорости"
+  ],
+  [
+    "{0}–{1} rpm，名义合计流量 {2}–{3} mL/min",
+    "{0}–{1} rpm; nominal total flow {2}–{3} mL/min",
+    "{0}–{1} rpm; caudal total nominal {2}–{3} mL/min",
+    "{0}–{1} rpm ; débit total nominal {2}–{3} mL/min",
+    "{0}–{1} rpm, 공칭 합계 유량 {2}–{3} mL/min",
+    "{0}–{1} rpm; номинальный суммарный расход {2}–{3} mL/min"
+  ],
+  [
+    "调速改变两路总输送量，不等同于两路独立调速或任意改变配比。",
+    "Speed changes the two-path total delivery. It does not provide independent speeds or arbitrary ratio adjustment.",
+    "La velocidad cambia el suministro total, no permite velocidades independientes ni proporción arbitraria.",
+    "La vitesse change le débit total, sans vitesses indépendantes ni rapport arbitraire.",
+    "속도 조절은 두 경로의 총 이송량을 바꿉니다. 독립 속도 제어나 임의 비율 변경과는 다릅니다.",
+    "Скорость меняет общую подачу двух линий. Она не даёт независимых скоростей и произвольного отношения."
+  ],
+  [
+    "结构尺寸",
+    "Structural dimensions",
+    "Dimensiones estructurales",
+    "Dimensions structurelles",
+    "구조 치수",
+    "Габаритные размеры"
+  ],
+  [
+    "接口展开图另有 {0} mm 的横向尺寸标注。布置时结合泵头偏角、接头和管路余量，不只按 {1} mm 留出空间。",
+    "The unfolded port drawing also shows a {0} mm transverse dimension. Include head angle, fittings and tubing clearance; do not allow only {1} mm.",
+    "El plano de puertos también indica {0} mm transversales. Incluya inclinación, racores y tubos; no reserve solo {1} mm.",
+    "Le plan des ports indique aussi {0} mm en largeur. Prévoyez angle, raccords et tubes, pas seulement {1} mm.",
+    "포트 전개도에 가로 치수 {0} mm도 표시됩니다. 헤드 각도, 피팅·배관 여유를 반영하고 {1} mm만 확보하지 마세요.",
+    "На развёрнутом чертеже портов есть поперечный размер {0} mm. Учтите угол головок, фитинги и трубки, не ограничивайтесь {1} mm."
+  ],
+  [
+    "柱塞旋转与往复怎样完成计量",
+    "Metering by plunger rotation and reciprocation",
+    "Medición por giro y vaivén del émbolo",
+    "Dosage par rotation et va-et-vient du piston",
+    "플런저 회전·왕복 계량 원리",
+    "Дозирование вращением и возвратным ходом плунжера"
+  ],
+  [
+    "电机通过联轴器和关节轴承带动柱塞旋转、往复。旋转完成入口与出口切换，往复运动改变计量腔容积；泵头偏角与传动几何共同影响行程和排量。",
+    "The motor rotates and reciprocates the plunger through a coupling and spherical bearing. Rotation switches inlet/outlet; reciprocation changes chamber volume. Head angle and transmission geometry determine stroke and displacement.",
+    "El motor gira y desplaza el émbolo por acoplamiento y rótula. El giro conmuta entrada/salida; el vaivén cambia la cámara. Inclinación y geometría determinan carrera y cilindrada.",
+    "Le moteur entraîne le piston en rotation et va-et-vient via accouplement et rotule. La rotation commute entrée/sortie ; le va-et-vient change le volume. Angle et géométrie définissent course et cylindrée.",
+    "모터가 커플링·구면 베어링을 통해 플런저를 회전·왕복시킵니다. 회전은 입·출구를 전환하고 왕복은 계량실 용적을 바꿉니다. 헤드 각도·전달 형상이 스트로크와 배제량에 영향을 줍니다.",
+    "Двигатель через муфту и сферический подшипник вращает плунжер и перемещает его возвратно. Вращение переключает вход/выход, ход меняет объём камеры. Угол и геометрия определяют ход и рабочий объём."
+  ],
+  [
+    "DRPL 单个计量头吸入、吸入完成、排出和排出完成的四阶段循环",
+    "DRPL single-head four-stage cycle: aspiration, aspiration complete, discharge, discharge complete",
+    "Ciclo de una cabeza DRPL: aspiración, fin de aspiración, descarga, fin de descarga",
+    "Cycle d’une tête DRPL : aspiration, fin d’aspiration, refoulement, fin de refoulement",
+    "DRPL 단일 헤드의 흡입·흡입 완료·배출·배출 완료 4단계 주기",
+    "Четыре стадии головки DRPL: всасывание, конец всасывания, нагнетание, конец нагнетания"
+  ],
+  [
+    "单个计量头的吸排循环。两路配比由各计量头的排量设置共同确定。",
+    "Single-head aspiration/discharge cycle. The two heads’ displacement settings jointly establish the ratio.",
+    "Ciclo de una cabeza. Los ajustes de ambas cilindradas determinan la proporción.",
+    "Cycle d’une tête. Les cylindrées des deux têtes déterminent ensemble le rapport.",
+    "단일 헤드의 흡입·배출 주기입니다. 두 헤드의 배제량 설정이 비율을 결정합니다.",
+    "Цикл одной головки. Отношение совместно задают рабочие объёмы обеих головок."
+  ],
+  [
+    "调整旋钮改变排量，改变转速调整运行时间与平均流量。调节后应分别测量两路液量，不将调速代替排量校对。",
+    "The knob changes displacement; speed changes operating time and average flow. Measure both outputs after adjustment; speed control is not displacement calibration.",
+    "El mando cambia cilindrada; la velocidad, tiempo y caudal medio. Mida ambas salidas tras ajustar; variar velocidad no calibra cilindrada.",
+    "La molette change la cylindrée, la vitesse change durée et débit moyen. Mesurez les deux sorties après réglage ; la vitesse ne remplace pas l’étalonnage.",
+    "노브는 배제량을, 회전 속도는 시간·평균 유량을 바꿉니다. 조절 후 두 액량을 각각 측정하고 속도 조절로 배제량 검증을 대신하지 마세요.",
+    "Ручка меняет рабочий объём, скорость — время и средний расход. После регулировки измерьте обе линии; скорость не заменяет проверку рабочего объёма."
+  ],
+  [
+    "配比、单圈输出与批量配液",
+    "Ratio, volume per revolution and batch preparation",
+    "Proporción, volumen por vuelta y preparación por lotes",
+    "Rapport, volume par tour et préparation par lots",
+    "배합비, 회전당 토출량 및 배치 조제",
+    "Отношение, объём на оборот и приготовление порций"
+  ],
+  [
+    "DRPL-{0}-{1} 的标准组合为 {2}:{3}，即 {4} 份浓缩液加 {5} 份稀释液。在体积可相加且稀释液不含目标组分时，理论稀释倍数为 {6}。",
+    "DRPL-{0}-{1} has a standard {2}:{3} ratio: {4} part concentrate plus {5} parts diluent. If volumes are additive and diluent contains no target component, the theoretical dilution factor is {6}.",
+    "DRPL-{0}-{1}: proporción estándar {2}:{3}, {4} parte de concentrado y {5} de diluyente. Si los volúmenes son aditivos y el diluyente no contiene el componente, el factor teórico es {6}.",
+    "DRPL-{0}-{1} : rapport standard {2}:{3}, soit {4} part de concentré et {5} de diluant. Si les volumes sont additifs et le diluant sans composant cible, le facteur théorique est {6}.",
+    "DRPL-{0}-{1}의 표준 조합은 {2}:{3}, 즉 농축액 {4}부분과 희석액 {5}부분입니다. 체적이 가산되고 희석액에 목표 성분이 없으면 이론 희석 배수는 {6}입니다.",
+    "Стандарт DRPL-{0}-{1}: {2}:{3}, то есть {4} часть концентрата и {5} частей разбавителя. При аддитивности объёмов и отсутствии целевого компонента в разбавителе коэффициент разведения {6}."
+  ],
+  [
+    "完整周期",
+    "Complete cycle",
+    "Ciclo completo",
+    "Cycle complet",
+    "전체 주기",
+    "Полный цикл"
+  ],
+  [
+    "每圈 {0} μL＋{1} μL＝{2} mL",
+    "Per revolution: {0} μL + {1} μL = {2} mL",
+    "Por vuelta: {0} μL + {1} μL = {2} mL",
+    "Par tour : {0} μL + {1} μL = {2} mL",
+    "회전당 {0} μL + {1} μL = {2} mL",
+    "За оборот: {0} μL + {1} μL = {2} mL"
+  ],
+  [
+    "目标总量先换算为完整运行圈数；部分转角下的两路输出关系需单独验证。",
+    "Convert target total to complete revolutions first. Partial-angle output relationships require separate validation.",
+    "Convierta total a vueltas completas. Las relaciones a ángulo parcial requieren ensayo aparte.",
+    "Convertissez le total en tours complets. Les relations à angle partiel exigent une validation distincte.",
+    "목표 총량을 먼저 완전 회전 수로 환산하세요. 부분 회전각의 두 출력 관계는 따로 검증해야 합니다.",
+    "Сначала переведите общий объём в полные обороты. Соотношения при неполном обороте проверяйте отдельно."
+  ],
+  [
+    "批量示例",
+    "Batch example",
+    "Ejemplo por lotes",
+    "Exemple de lot",
+    "배치 예시",
+    "Пример партии"
+  ],
+  [
+    "{0} 圈名义合计 {1} mL",
+    "{0} revolutions: nominal total {1} mL",
+    "{0} vueltas: total nominal {1} mL",
+    "{0} tours : total nominal {1} mL",
+    "{0}회전 공칭 합계 {1} mL",
+    "{0} оборотов: номинально {1} mL"
+  ],
+  [
+    "其中浓缩液 {0} mL、稀释液 {1} mL。这是按完整周期计算的名义值，实际输出在出口测量。",
+    "Includes {0} mL concentrate and {1} mL diluent. These are nominal complete-cycle calculations; measure actual delivery at the outlet.",
+    "Incluye {0} mL de concentrado y {1} mL de diluyente. Son cálculos nominales por ciclos completos; mida salida real.",
+    "Dont {0} mL de concentré et {1} mL de diluant. Valeurs nominales calculées en cycles complets ; mesurer en sortie.",
+    "농축액 {0} mL, 희석액 {1} mL입니다. 전체 주기로 계산한 공칭값이며 실제 토출은 출구에서 측정하세요.",
+    "Включает {0} mL концентрата и {1} mL разбавителя. Это номинальный расчёт полных циклов; фактическую подачу измеряйте на выходе."
+  ],
+  [
+    "运行时间",
+    "Operating time",
+    "Tiempo de funcionamiento",
+    "Durée de fonctionnement",
+    "운전 시간",
+    "Время работы"
+  ],
+  [
+    "匀速运行时间＝圈数÷转速",
+    "Constant-speed time = revolutions ÷ speed",
+    "Tiempo uniforme = vueltas ÷ velocidad",
+    "Durée à vitesse constante = tours ÷ vitesse",
+    "정속 시간 = 회전 수 ÷ 회전 속도",
+    "Время при постоянной скорости = обороты ÷ скорость"
+  ],
+  [
+    "{0} 圈以 {1} rpm 匀速运行的理论时间为 {2} 秒；整机节拍还包括预充、启停、接液和混合等待。",
+    "{0} revolutions at {1} rpm theoretically take {2} seconds. Instrument timing also includes priming, start/stop, collection and mixing dwell.",
+    "{0} vueltas a {1} rpm tardan teóricamente {2} segundos. Añada cebado, arranque/parada, recogida y espera de mezcla.",
+    "{0} tours à {1} rpm prennent théoriquement {2} secondes. Ajoutez amorçage, marche/arrêt, collecte et attente de mélange.",
+    "{0}회전을 {1} rpm으로 정속 운전하면 이론 시간은 {2}초입니다. 장비 주기에는 예비 충전, 시작·정지, 수집·혼합 대기도 포함됩니다.",
+    "{0} оборотов при {1} rpm теоретически занимают {2} секунды. Цикл прибора также включает заполнение, пуск/остановку, сбор и выдержку смешивания."
+  ],
+  [
+    "连续配液",
+    "Continuous preparation",
+    "Preparación continua",
+    "Préparation continue",
+    "연속 조제",
+    "Непрерывное приготовление"
+  ],
+  [
+    "名义总流量＝单圈合计×rpm",
+    "Nominal total flow = total per revolution × rpm",
+    "Caudal nominal total = volumen por vuelta × rpm",
+    "Débit total nominal = total par tour × rpm",
+    "공칭 총유량 = 회전당 합계 × rpm",
+    "Номинальный суммарный расход = сумма на оборот × rpm"
+  ],
+  [
+    "同时核对两路供液、背压和下游消耗。平均流量不代表无脉动，也不能代替混合后浓度测试。",
+    "Check both supplies, backpressures and downstream consumption. Average flow is not pulsation-free and does not replace mixed-concentration testing.",
+    "Compruebe ambas entradas, contrapresiones y consumo. Caudal medio no significa sin pulsación ni sustituye el ensayo de concentración.",
+    "Vérifiez deux alimentations, contre-pressions et consommation. Le débit moyen n’est pas sans pulsations et ne remplace pas l’essai de concentration.",
+    "두 공급, 배압과 후단 소비를 확인하세요. 평균 유량이 무맥동을 의미하지 않으며 혼합 농도 시험도 대신하지 않습니다.",
+    "Проверьте обе подачи, противодавления и потребление. Средний расход не означает отсутствие пульсаций и не заменяет проверку концентрации."
+  ],
+  [
+    "超出标准流量",
+    "Beyond standard flow",
+    "Fuera del caudal estándar",
+    "Au-delà du débit standard",
+    "표준 유량 초과",
+    "Превышение стандартного расхода"
+  ],
+  [
+    "标准名义合计流量 {0}–{1} mL/min",
+    "Standard nominal total flow {0}–{1} mL/min",
+    "Caudal total nominal estándar {0}–{1} mL/min",
+    "Débit total nominal standard {0}–{1} mL/min",
+    "표준 공칭 합계 유량 {0}–{1} mL/min",
+    "Стандартный номинальный общий расход {0}–{1} mL/min"
+  ],
+  [
+    "需求超过标准最大流量时，提供目标流量和接管尺寸等条件进行性能评估，不直接提高转速或扩大承诺范围。",
+    "For higher requirements, submit target flow, tubing sizes and conditions for evaluation. Do not simply raise speed or extend performance claims.",
+    "Para mayores caudales, aporte objetivo, tubos y condiciones para evaluación. No aumente velocidad ni extienda garantías directamente.",
+    "Pour un besoin supérieur, fournissez débit, tubes et conditions pour évaluation. N’augmentez pas simplement la vitesse ou les engagements.",
+    "표준 최대 유량 초과 시 목표 유량·배관 치수 등 조건으로 성능 평가를 받으세요. 임의 속도 증가나 보장 범위 확장을 하지 마세요.",
+    "При потребности выше стандарта предоставьте расход, размеры трубок и условия для оценки. Не повышайте просто скорость и не расширяйте заявленные пределы."
+  ],
+  [
+    "接口、清洗液路与安装空间",
+    "Ports, rinse paths and installation space",
+    "Puertos, lavado y espacio de montaje",
+    "Ports, rinçage et espace de montage",
+    "포트, 세척 유로 및 설치 공간",
+    "Порты, промывка и монтажное пространство"
+  ],
+  [
+    "两种试剂分别核对材料相容性、管径与连接方式。工作液路和清洗液路承担不同任务，接头螺纹相同也不能混接。",
+    "Check each reagent’s compatibility, tube size and connections separately. Working and rinse paths have different roles; equal threads do not make them interchangeable.",
+    "Revise cada reactivo, tubo y conexión. Trabajo y lavado tienen funciones distintas; igual rosca no permite intercambiarlos.",
+    "Vérifiez chaque réactif, tube et raccordement. Travail et rinçage ont des rôles distincts ; un filetage identique ne les rend pas interchangeables.",
+    "두 시약의 재질 적합성·관경·연결을 각각 확인하세요. 작업·세척 유로는 역할이 다르며 나사산이 같아도 혼용하지 마세요.",
+    "Отдельно проверьте каждый реагент, трубки и соединения. Рабочие и промывочные пути различны; одинаковая резьба не делает их взаимозаменяемыми."
+  ],
+  [
+    "DRPL 的 IA、OA、IB、OB 工作接口、RIA、ROA、RIB、ROB 清洗接口与安装尺寸",
+    "DRPL working ports IA/OA/IB/OB, rinse ports RIA/ROA/RIB/ROB and mounting dimensions",
+    "Puertos IA/OA/IB/OB, lavado RIA/ROA/RIB/ROB y dimensiones DRPL",
+    "Ports IA/OA/IB/OB, rinçages RIA/ROA/RIB/ROB et dimensions DRPL",
+    "DRPL 작업 IA/OA/IB/OB, 세척 RIA/ROA/RIB/ROB 포트 및 설치 치수",
+    "Рабочие IA/OA/IB/OB, промывочные RIA/ROA/RIB/ROB и размеры DRPL"
+  ],
+  [
+    "识别两路工作口和清洗口，按泵头偏角与接管空间安排安装。",
+    "Identify both working and rinse paths. Allow head angle and tubing clearance when mounting.",
+    "Identifique trabajo y lavado de ambos lados. Deje espacio para inclinación y tubos.",
+    "Identifiez travail et rinçage des deux voies. Prévoyez inclinaison et dégagement des tubes.",
+    "두 작업·세척 포트를 식별하고 헤드 각도와 배관 여유로 설치 공간을 정하세요.",
+    "Определите обе рабочие и промывочные линии; предусмотрите угол головок и зазоры трубок."
+  ],
+  [
+    "A 路工作口",
+    "A working ports",
+    "Puertos de trabajo A",
+    "Ports de travail A",
+    "A 작업 포트",
+    "Рабочие порты A"
+  ],
+  [
+    "连接浓缩液的入口与出口，确认接头、密封面和管材；固定接管，避免管路拉扯泵头。",
+    "Connect concentrate inlet/outlet; check fittings, sealing faces and tubing. Support tubing so it does not pull on the head.",
+    "Conecte entrada/salida de concentrado; revise racores, sellos y tubo. Sujete para no tirar del cabezal.",
+    "Raccordez entrée/sortie de concentré ; vérifiez raccords, joints et tubes. Soutenez les tubes sans traction sur la tête.",
+    "농축액 입·출구를 연결하고 피팅·밀봉면·튜브를 확인하세요. 배관을 고정해 헤드를 당기지 않게 하세요.",
+    "Подключите вход/выход концентрата, проверьте фитинги, уплотняющие поверхности и трубки. Поддержите трубки без нагрузки на головку."
+  ],
+  [
+    "B 路工作口",
+    "B working ports",
+    "Puertos de trabajo B",
+    "Ports de travail B",
+    "B 작업 포트",
+    "Рабочие порты B"
+  ],
+  [
+    "IB／OB，G{0}/{1}，默认带金属快插接头",
+    "IB/OB, G{0}/{1}, metal push-in fittings by default",
+    "IB/OB, G{0}/{1}, racores metálicos de inserción de serie",
+    "IB/OB, G{0}/{1}, raccords instantanés métalliques par défaut",
+    "IB/OB, G{0}/{1}, 기본 금속 원터치 피팅",
+    "IB/OB, G{0}/{1}, по умолчанию металлические цанговые фитинги"
+  ],
+  [
+    "连接稀释液的入口与出口，按所配快插接头选管，并检查插入深度与密封。",
+    "Connect diluent inlet/outlet. Match tubing to the supplied push-in fittings and check insertion and sealing.",
+    "Conecte diluyente; adapte tubo a los racores suministrados y revise inserción/sellado.",
+    "Raccordez le diluant. Adaptez les tubes aux raccords fournis et vérifiez insertion/étanchéité.",
+    "희석액 입·출구를 연결하고 공급 원터치 피팅에 맞는 튜브·삽입 깊이·밀봉을 확인하세요.",
+    "Подключите вход/выход разбавителя. Подберите трубки к фитингам, проверьте глубину и герметичность."
+  ],
+  [
+    "两路清洗口",
+    "Rinse ports for both heads",
+    "Puertos de lavado de ambas cabezas",
+    "Ports de rinçage des deux têtes",
+    "두 헤드 세척 포트",
+    "Промывочные порты обеих головок"
+  ],
+  [
+    "RIA／ROA、RIB／ROB，均为 {0}/{1}-{2} UNF-{3}B",
+    "RIA/ROA and RIB/ROB, both {0}/{1}-{2} UNF-{3}B",
+    "RIA/ROA y RIB/ROB, ambos {0}/{1}-{2} UNF-{3}B",
+    "RIA/ROA et RIB/ROB, tous {0}/{1}-{2} UNF-{3}B",
+    "RIA/ROA, RIB/ROB, 모두 {0}/{1}-{2} UNF-{3}B",
+    "RIA/ROA, RIB/ROB, все {0}/{1}-{2} UNF-{3}B"
+  ],
+  [
+    "分别标识冲洗管线，不与试剂接口混用。冲洗介质同时兼容残留配方与全部接液部件。",
+    "Label rinse lines separately; do not mix with reagent ports. Cleaner must suit residual formulation and all wetted parts.",
+    "Identifique lavado aparte del reactivo. El limpiador debe ser compatible con residuos y todas las piezas mojadas.",
+    "Repérez séparément les rinçages et réactifs. Le nettoyant doit convenir aux résidus et à toutes les pièces mouillées.",
+    "세척 배관을 각각 표시하고 시약 포트와 혼용하지 마세요. 세척액은 잔류 조성·전체 접액부와 모두 호환돼야 합니다.",
+    "Отдельно обозначьте промывку, не путайте с реагентными портами. Промывка должна быть совместима с остатками и всеми деталями."
+  ],
+  [
+    "接液材料",
+    "Wetted materials",
+    "Materiales mojados",
+    "Matériaux en contact avec le fluide",
+    "접액 재질",
+    "Контактирующие материалы"
+  ],
+  [
+    "两路分别核对泵头、陶瓷、密封、管路和接头",
+    "Check head, ceramic, seals, tubing and fittings for each path",
+    "Revise cabezal, cerámica, sellos, tubos y racores de cada vía",
+    "Vérifier tête, céramique, joints, tubes et raccords de chaque voie",
+    "각 경로의 헤드·세라믹·씰·튜브·피팅 확인",
+    "Проверьте головку, керамику, уплотнения, трубки и фитинги каждой линии"
+  ],
+  [
+    "浓缩液、稀释液及其混合物可能有不同的腐蚀、结晶或起泡表现；换液前先评估相容性。",
+    "Concentrate, diluent and mixture may differ in corrosion, crystallization and foaming. Evaluate compatibility before liquid changes.",
+    "Concentrado, diluyente y mezcla pueden diferir en corrosión, cristalización y espuma. Evalúe antes del cambio.",
+    "Concentré, diluant et mélange peuvent différer en corrosion, cristallisation et mousse. Évaluez avant changement.",
+    "농축액, 희석액과 혼합액의 부식·결정화·기포 특성은 다를 수 있습니다. 교체 전에 적합성을 평가하세요.",
+    "Концентрат, разбавитель и смесь могут различаться по коррозии, кристаллизации и пенообразованию. До смены оцените совместимость."
+  ],
+  [
+    "两路供液、汇流与下游混合",
+    "Two-path supply, combining and downstream mixing",
+    "Suministro doble, unión y mezcla posterior",
+    "Double alimentation, réunion et mélange en aval",
+    "이중 공급, 합류 및 후단 혼합",
+    "Две подачи, объединение и последующее смешивание"
+  ],
+  [
+    "先将两路分别引至接液容器，完成充液排气和单路测量，再连接下游汇流及混合部件。预充和异常阶段的液体不进入正式工作液容器。",
+    "Route each outlet to a separate vessel for priming, venting and measurement, then connect combining/mixing parts. Keep priming and fault-stage liquid out of the working-solution vessel.",
+    "Dirija cada salida a recipiente separado para cebar, purgar y medir; después conecte unión/mezcla. No envíe líquido de cebado o fallo al depósito final.",
+    "Dirigez chaque sortie vers un récipient séparé pour amorçage, purge et mesure, puis raccordez réunion/mélange. Écartez les liquides d’amorçage ou défaut du récipient de travail.",
+    "두 출구를 따로 용기에 보내 충전·기포 제거·개별 측정을 마친 뒤 후단 합류·혼합 부품을 연결하세요. 초기 충전·이상 단계 액체는 정식 작업액 용기에 넣지 마세요.",
+    "Сначала выведите линии в отдельные сосуды для заполнения, удаления воздуха и измерения, затем подключайте объединение/смеситель. Стартовую и аварийную жидкость не направляйте в рабочий раствор."
+  ],
+  [
+    "入口供液",
+    "Inlet supply",
+    "Suministro de entrada",
+    "Alimentation d’entrée",
+    "흡입 공급",
+    "Подача на входе"
+  ],
+  [
+    "两路储液瓶、液位和吸入阻力分别检查",
+    "Check each reservoir, level and suction resistance separately",
+    "Revise depósitos, niveles y resistencia por separado",
+    "Vérifier chaque réservoir, niveau et résistance d’aspiration",
+    "저장 용기, 액면 및 흡입 저항 각각 확인",
+    "Отдельно проверьте ёмкости, уровни и сопротивление всасывания"
+  ],
+  [
+    "一路缺液或入口吸气会改变实际配比；不能用另一路仍有输出判断整机供液正常。",
+    "Liquid shortage or air ingress on one path changes the ratio. Flow from the other path does not prove both supplies are correct.",
+    "Falta de líquido o aire en una vía cambia proporción. La otra salida no demuestra alimentación correcta de ambas.",
+    "Manque de liquide ou prise d’air d’une voie modifie le rapport. L’autre débit ne prouve pas les deux alimentations.",
+    "한쪽 부족·공기 유입은 실제 비율을 바꿉니다. 다른 쪽 토출만으로 전체 공급이 정상이라고 판단하지 마세요.",
+    "Недостаток жидкости или подсос в одной линии меняет отношение. Наличие другой подачи не подтверждает исправность обеих."
+  ],
+  [
+    "出口与背压",
+    "Outlet and backpressure",
+    "Salida y contrapresión",
+    "Sortie et contre-pression",
+    "출구 및 배압",
+    "Выход и противодавление"
+  ],
+  [
+    "A、B 端耐压值均为 Max {0} kPa",
+    "A and B pressure resistance: Max {0} kPa",
+    "Resistencia A y B: Max {0} kPa",
+    "Tenue A et B : Max {0} kPa",
+    "A·B 내압 모두 Max {0} kPa",
+    "Стойкость A и B: Max {0} kPa"
+  ],
+  [
+    "耐压值不等于所有工况下已验证的连续工作点。两路阻力不同，接入混合器后重新测量输出。",
+    "Pressure resistance is not a validated continuous operating point for all conditions. The paths differ in resistance; remeasure after adding a mixer.",
+    "La resistencia no valida servicio continuo universal. Las vías difieren; vuelva a medir tras añadir mezclador.",
+    "La tenue ne valide pas un point continu universel. Les résistances diffèrent ; remesurez après ajout du mélangeur.",
+    "내압이 모든 조건의 연속 작동점 검증을 뜻하지 않습니다. 두 유로 저항은 다르므로 혼합기 연결 후 재측정하세요.",
+    "Стойкость не означает подтверждённую непрерывную рабочую точку во всех условиях. Сопротивления различны; измеряйте после подключения смесителя."
+  ],
+  [
+    "混合与接液",
+    "Mixing and collection",
+    "Mezcla y recogida",
+    "Mélange et collecte",
+    "혼합 및 수집",
+    "Смешивание и сбор"
+  ],
+  [
+    "由外部汇流、混合器或接液容器配合",
+    "Use external combining, mixer or collection vessel",
+    "Use unión externa, mezclador o recipiente",
+    "Utiliser jonction, mélangeur ou récipient externe",
+    "외부 합류, 혼합기 또는 수집 용기 사용",
+    "Используйте внешнее объединение, смеситель или сборный сосуд"
+  ],
+  [
+    "检查总量、浓度和均匀性，不能把固定比例输送直接当作均匀混合或闭环浓度控制。",
+    "Verify total volume, concentration and uniformity. Fixed-ratio delivery is not uniform mixing or closed-loop concentration control.",
+    "Verifique total, concentración y uniformidad. Entregar proporción fija no implica mezcla uniforme ni control cerrado de concentración.",
+    "Vérifiez total, concentration et homogénéité. Un rapport fixe ne garantit ni mélange homogène ni régulation de concentration en boucle fermée.",
+    "총량, 농도와 균일성을 확인하세요. 고정 비율 이송이 균일 혼합이나 농도 폐루프 제어를 의미하지 않습니다.",
+    "Проверяйте сумму, концентрацию и однородность. Фиксированное отношение подачи не равно однородному смешиванию или замкнутому регулированию концентрации."
+  ],
+  [
+    "四线电机、光耦与起停控制",
+    "Four-wire motor, optocoupler and start/stop control",
+    "Motor de cuatro hilos, optoacoplador y arranque/parada",
+    "Moteur quatre fils, optocoupleur et marche/arrêt",
+    "4선 모터, 광커플러 및 시작·정지 제어",
+    "Четырёхпроводный двигатель, оптопара и пуск/остановка"
+  ],
+  [
+    "DRPL 采用两相四线式步进电机，额定电流 {0} A/相，步进角 {1}°/整步。电机和光耦分别接线，光耦供电不能当作电机驱动电源。",
+    "DRPL uses a two-phase four-wire stepper, rated {0} A/phase and {1}°/full step. Wire motor and optocoupler separately; sensor power is not motor-drive power.",
+    "DRPL usa motor de dos fases/cuatro hilos, {0} A/fase y {1}°/paso completo. Cablee por separado; la fuente del sensor no es la del motor.",
+    "DRPL utilise un moteur biphasé quatre fils, {0} A/phase et {1}°/pas entier. Câblez séparément moteur et optocoupleur ; leurs alimentations diffèrent.",
+    "DRPL은 2상 4선 스테퍼 모터, 정격 {0} A/상, {1}°/풀스텝을 사용합니다. 모터·광커플러를 따로 연결하고 광커플러 전원을 모터 구동 전원으로 사용하지 마세요.",
+    "DRPL: двухфазный четырёхпроводный шаговый двигатель, {0} A/фазу, {1}°/полный шаг. Двигатель и оптопару подключайте отдельно; питание датчика не является питанием привода."
+  ],
+  [
+    "DRPL 电机连接器针号及红绿一组、黄蓝一组的四线绕组接法",
+    "DRPL connector pins and four-wire windings: red/green pair and yellow/blue pair",
+    "Pines y bobinados DRPL: pareja rojo/verde y amarillo/azul",
+    "Brochage et enroulements DRPL : rouge/vert et jaune/bleu",
+    "DRPL 핀 번호 및 빨강·초록, 노랑·파랑 4선 권선",
+    "Выводы и обмотки DRPL: красный/зелёный и жёлтый/синий"
+  ],
+  [
+    "DRPL 电机：红线与绿线一组，黄线与蓝线一组。",
+    "DRPL motor: red/green one winding; yellow/blue the other.",
+    "Motor DRPL: rojo/verde un bobinado; amarillo/azul el otro.",
+    "Moteur DRPL : rouge/vert un enroulement ; jaune/bleu l’autre.",
+    "DRPL 모터: 빨강·초록 한 권선, 노랑·파랑 다른 권선.",
+    "Двигатель DRPL: красный/зелёный — одна обмотка, жёлтый/синий — другая."
+  ],
+  [
+    "DRPL 光耦的电源、地、黑白输出线及输出动作关系",
+    "DRPL optocoupler power, ground, black/white outputs and output-state relationships",
+    "Fuente, tierra, salidas negra/blanca y estados del optoacoplador DRPL",
+    "Alimentation, masse, sorties noire/blanche et états de l’optocoupleur DRPL",
+    "DRPL 광커플러 전원·접지·검정·흰색 출력 및 동작 관계",
+    "Питание, общий, чёрный/белый выходы и состояния оптопары DRPL"
+  ],
+  [
+    "光耦供电与输出。黑线对应入光时 ON，白线对应遮光时 ON。",
+    "Optocoupler power and outputs: black ON when light passes; white ON when blocked.",
+    "Fuente y salidas: negro ON con luz; blanco ON al bloquear.",
+    "Alimentation et sorties : noir ON éclairé ; blanc ON occulté.",
+    "광커플러 전원·출력: 검정은 입광 시 ON, 흰색은 차광 시 ON.",
+    "Питание и выходы: чёрный ON при свете, белый ON при перекрытии."
+  ],
+  [
+    "电机与驱动",
+    "Motor and driver",
+    "Motor y controlador",
+    "Moteur et pilote",
+    "모터 및 드라이버",
+    "Двигатель и драйвер"
+  ],
+  [
+    "两相四线式步进电机，{0} A/相，{1}°/整步",
+    "Two-phase four-wire stepper, {0} A/phase, {1}°/full step",
+    "Motor de dos fases/cuatro hilos, {0} A/fase, {1}°/paso completo",
+    "Moteur biphasé quatre fils, {0} A/phase, {1}°/pas entier",
+    "2상 4선 스테퍼, {0} A/상, {1}°/풀스텝",
+    "Двухфазный четырёхпроводный шаговый, {0} A/фазу, {1}°/полный шаг"
+  ],
+  [
+    "按两相绕组接入所选驱动器，再设置运行方向、加减速和完整计量周期。",
+    "Connect the two phase windings to the selected driver, then set direction, acceleration/deceleration and complete cycles.",
+    "Conecte bobinados al controlador elegido y programe sentido, rampas y ciclos completos.",
+    "Raccordez les deux phases au pilote choisi, puis réglez sens, accélération/décélération et cycles complets.",
+    "2상 권선을 선택 드라이버에 연결한 뒤 방향, 가감속과 전체 계량 주기를 설정하세요.",
+    "Подключите две фазы к драйверу, задайте направление, разгон/торможение и полные циклы."
+  ],
+  [
+    "绕组与角度",
+    "Windings and angle",
+    "Bobinados y ángulo",
+    "Enroulements et angle",
+    "권선 및 각도",
+    "Обмотки и угол"
+  ],
+  [
+    "相电阻 {0} Ω ±{1}%/相（{2} ℃）",
+    "Phase resistance {0} Ω ±{1}%/phase at {2} °C",
+    "Resistencia {0} Ω ±{1}%/fase a {2} °C",
+    "Résistance {0} Ω ±{1} %/phase à {2} °C",
+    "상저항 {0} Ω ±{1}%/상, {2} °C",
+    "Сопротивление {0} Ω ±{1}%/фазу при {2} °C"
+  ],
+  [
+    "静止角度误差 ±{0}° Max（不含磁滞误差）；这是电机角度指标，不等同于输出液量误差。",
+    "Static angle error ±{0}° Max, excluding hysteresis. This is a motor-angle specification, not delivered-volume error.",
+    "Error angular estático ±{0}° Max, sin histéresis. Es especificación angular, no error volumétrico.",
+    "Erreur angulaire statique ±{0}° Max, hors hystérésis. Il s’agit d’un angle moteur, pas d’une erreur de volume.",
+    "정지 각도 오차 ±{0}° Max, 히스테리시스 제외입니다. 모터 각도 사양이며 토출 액량 오차가 아닙니다.",
+    "Статическая ошибка угла ±{0}° Max без гистерезиса. Это показатель двигателя, а не погрешность объёма."
+  ],
+  [
+    "连接器与线色",
+    "Connector and wire colors",
+    "Conector y colores",
+    "Connecteur et couleurs",
+    "커넥터 및 선 색상",
+    "Разъём и цвета проводов"
+  ],
+  [
+    "红绿为一组绕组，黄蓝为另一组。按连接器针号和所配线束核对，再接入驱动器。",
+    "Red/green form one winding, yellow/blue the other. Verify pin numbers and supplied harness before driver connection.",
+    "Rojo/verde forman un bobinado y amarillo/azul otro. Revise pines y cable antes de conectar.",
+    "Rouge/vert forment un enroulement, jaune/bleu l’autre. Vérifiez broches et faisceau avant raccordement.",
+    "빨강·초록이 한 권선, 노랑·파랑이 다른 권선입니다. 핀 번호·공급 배선을 확인하고 드라이버에 연결하세요.",
+    "Красный/зелёный — одна обмотка, жёлтый/синий — другая. До подключения сверьте выводы и жгут."
+  ],
+  [
+    "光耦供电与负载",
+    "Optocoupler supply and load",
+    "Fuente y carga del optoacoplador",
+    "Alimentation et charge de l’optocoupleur",
+    "광커플러 전원 및 부하",
+    "Питание и нагрузка оптопары"
+  ],
+  [
+    "输出端最大流入电流 <{0} mA，外加电压 <{1} V；核对主控输入，不将信号线直接用于负载供电。",
+    "Output sink current <{0} mA, applied voltage <{1} V. Match controller input; do not use the signal as load power.",
+    "Corriente de sumidero <{0} mA, tensión aplicada <{1} V. Adapte entrada; no alimente cargas de la señal.",
+    "Courant absorbé <{0} mA, tension appliquée <{1} V. Adaptez l’entrée ; n’alimentez pas de charge depuis le signal.",
+    "출력 싱크 전류 <{0} mA, 외부 인가 전압 <{1} V입니다. 주 제어기 입력을 맞추고 신호선을 부하 전원으로 사용하지 마세요.",
+    "Ток стока <{0} mA, приложенное напряжение <{1} V. Согласуйте вход; не питайте нагрузку сигнальной линией."
+  ],
+  [
+    "输出状态与定位",
+    "Output states and positioning",
+    "Estados y posicionamiento",
+    "États de sortie et positionnement",
+    "출력 상태 및 위치 제어",
+    "Выходные состояния и позиционирование"
+  ],
+  [
+    "褐色电源、蓝色 {0} V；黑色入光 ON、白色遮光 ON",
+    "Brown supply, blue {0} V; black light-ON, white dark-ON",
+    "Marrón alimentación, azul {0} V; negro ON con luz, blanco ON sin luz",
+    "Brun alimentation, bleu {0} V ; noir ON éclairé, blanc ON occulté",
+    "갈색 전원, 파랑 {0} V, 검정 입광 ON, 흰색 차광 ON",
+    "Коричневый питание, синий {0} V; чёрный ON при свете, белый ON без света"
+  ],
+  [
+    "未使用的输出线须绝缘。确认信号与初始位置后再执行完整计量周期，液量仍在实际出口验证。",
+    "Insulate unused outputs. Confirm signal and initial position before complete cycles; verify volume at the actual outlet.",
+    "Aísle salidas no usadas. Confirme señal y posición antes de ciclos; mida volumen en la salida real.",
+    "Isolez les sorties inutilisées. Confirmez signal et position avant cycles ; mesurez le volume à la sortie réelle.",
+    "미사용 출력은 절연하세요. 신호·초기 위치 확인 후 전체 계량 주기를 실행하고 액량은 실제 출구에서 검증하세요.",
+    "Изолируйте свободные выходы. Подтвердите сигнал и исходное положение до полных циклов; объём проверяйте на выходе."
+  ],
+  [
+    "调整线束前断电，上电前复核针号、绕组和光耦极性。两路缺液、暂停与换液后的首份输出，由设备控制程序完成检测和处理。",
+    "Power off before wiring changes. Recheck pins, windings and sensor polarity before power-up. The instrument program detects/handles low liquid, pauses and first doses after reagent changes.",
+    "Desconecte antes de modificar cables; revise pines, bobinados y polaridad. El programa detecta/gestiona falta de líquido, pausas y primeras dosis tras cambiar reactivo.",
+    "Coupez avant modification ; revérifiez broches, enroulements et polarité. Le programme détecte/gère manque de liquide, pauses et premières doses après changement.",
+    "배선 변경 전 전원을 끄고 인가 전 핀·권선·광커플러 극성을 재확인하세요. 액체 부족, 일시 정지와 교체 후 첫 출력의 검출·처리는 장비 프로그램이 담당합니다.",
+    "Перед изменением жгута отключите питание; сверьте выводы, обмотки и полярность. Недостаток среды, паузы и первые дозы после смены реагента обрабатывает программа прибора."
+  ],
+  [
+    "首次配液与配比验证",
+    "First preparation and ratio validation",
+    "Primera preparación y validación de proporción",
+    "Première préparation et validation du rapport",
+    "최초 조제 및 비율 검증",
+    "Первое приготовление и проверка отношения"
+  ],
+  [
+    "按“分别预充、分别计量、接入混合、验证启停”的顺序调试。先确认两路定量，再判断混合后的浓度。",
+    "Commission in order: prime separately, meter separately, connect mixing, validate start/stop. Confirm both doses before judging mixed concentration.",
+    "Orden: cebar por separado, medir, conectar mezcla y validar arranque/parada. Confirme ambas dosis antes de concentración.",
+    "Ordre : amorçage séparé, dosage séparé, mélange, validation marche/arrêt. Confirmez les volumes avant la concentration.",
+    "개별 충전 → 개별 계량 → 혼합 연결 → 시작·정지 검증 순서로 시운전하세요. 두 정량을 확인한 뒤 혼합 농도를 판단하세요.",
+    "Порядок: раздельное заполнение, измерение, подключение смешивания, проверка пуска/остановки. Подтвердите обе дозы до оценки концентрации."
+  ],
+  [
+    "分别预充",
+    "Prime separately",
+    "Cebe por separado",
+    "Amorcer séparément",
+    "개별 충전",
+    "Заполняйте отдельно"
+  ],
+  [
+    "两路使用相容介质充液排气，检查吸入口密封、管路气泡、出口回缩和接口泄漏。",
+    "Prime and vent both paths with compatible liquid. Check inlet sealing, bubbles, outlet retraction and connection leaks.",
+    "Cebe y purgue ambas vías con líquido compatible. Revise sellos, burbujas, retroceso y fugas.",
+    "Amorcez et purgez les deux voies avec un fluide compatible. Vérifiez joints, bulles, retrait et fuites.",
+    "두 경로를 호환 액체로 충전·기포 제거하고 흡입 밀봉, 배관 기포, 출구 역수축과 누설을 점검하세요.",
+    "Заполните и удалите воздух из обеих линий совместимой средой. Проверьте входы, пузырьки, втягивание на выходе и утечки."
+  ],
+  [
+    "分别称量",
+    "Weigh separately",
+    "Pese por separado",
+    "Peser séparément",
+    "개별 중량 측정",
+    "Взвешивайте отдельно"
+  ],
+  [
+    "保持相同运行程序，分别收集两路输出，与 {0} μL/圈和 {1} μL/圈的名义值比较；按各路液体温度和密度换算体积。",
+    "Use the same program and collect each output separately. Compare with nominal {0} μL/rev and {1} μL/rev, converting mass using each liquid’s temperature and density.",
+    "Use igual programa y recoja por separado. Compare {0} μL/vuelta y {1} μL/vuelta; convierta masa con temperatura y densidad de cada líquido.",
+    "Gardez le même programme et recueillez séparément. Comparez {0} μL/tour et {1} μL/tour ; convertissez avec température et densité de chaque liquide.",
+    "같은 프로그램으로 두 출력을 따로 수집해 공칭 {0} μL/회전, {1} μL/회전과 비교하세요. 각 액체 온도·밀도로 부피를 환산하세요.",
+    "С одной программой соберите выходы отдельно. Сравните с {0} μL/об и {1} μL/об; пересчитайте массу по температуре и плотности каждой среды."
+  ],
+  [
+    "计算配比并混合",
+    "Calculate ratio and mix",
+    "Calcule proporción y mezcle",
+    "Calculer le rapport et mélanger",
+    "비율 계산 및 혼합",
+    "Рассчитайте отношение и смешайте"
+  ],
+  [
+    "用实测体积计算 A:B，确认接近目标 {0}:{1}，再接入混合部件复测总量、浓度及均匀性。",
+    "Calculate A:B from measured volumes and check the {0}:{1} target. Then add mixing parts and retest total, concentration and uniformity.",
+    "Calcule A:B medido y compruebe objetivo {0}:{1}. Añada mezcla y repita total, concentración y uniformidad.",
+    "Calculez A:B mesuré et vérifiez la cible {0}:{1}. Ajoutez le mélange et revérifiez total, concentration et homogénéité.",
+    "실측 체적으로 A:B를 계산해 목표 {0}:{1}에 근접하는지 확인하세요. 혼합부 연결 후 총량·농도·균일성을 다시 시험하세요.",
+    "Рассчитайте A:B по объёмам и проверьте цель {0}:{1}. Затем подключите смешивание и повторите сумму, концентрацию и однородность."
+  ],
+  [
+    "验证启停与换液",
+    "Validate start/stop and liquid changes",
+    "Valide arranque/parada y cambios",
+    "Valider marche/arrêt et changements de liquide",
+    "시작·정지 및 액체 교체 검증",
+    "Проверьте пуск/остановку и смену среды"
+  ],
+  [
+    "分别记录连续运行、暂停重启、低储液量和更换试剂后的首份与连续份，确认报警和停机逻辑。",
+    "Record first/consecutive doses in continuous operation, pause/restart, low reservoir level and after reagent changes. Verify alarm and stop logic.",
+    "Registre primeras/consecutivas en continuo, pausa/reinicio, depósito bajo y cambio. Revise alarmas y parada.",
+    "Consignez premières doses/suivantes en continu, reprise, niveau bas et changement. Vérifiez alarmes et arrêt.",
+    "연속 운전, 정지 후 재시작, 낮은 저장량과 시약 교체 후의 첫·연속 출력을 기록하고 경보·정지 로직을 확인하세요.",
+    "Запишите первые и последующие дозы при непрерывной работе, перезапуске, низком уровне и смене реагента. Проверьте тревоги и остановку."
+  ],
+  [
+    "配比偏差、缺液与日常维护",
+    "Ratio drift, low liquid and maintenance",
+    "Desviación de proporción, falta de líquido y mantenimiento",
+    "Dérive du rapport, manque de liquide et entretien",
+    "비율 편차, 액체 부족 및 일상 정비",
+    "Отклонение отношения, недостаток среды и обслуживание"
+  ],
+  [
+    "分别记录 A、B 两路现象，先定位单路变化，再检查混合后的工作液。清洗和停机同时覆盖两路，尤其留意浓缩液侧残留。",
+    "Record A/B symptoms separately. Locate one-path changes before checking the mixture. Clean and shut down both paths, especially concentrate residues.",
+    "Registre A/B por separado. Localice cambios antes de revisar mezcla. Limpie y pare ambas vías, sobre todo residuos de concentrado.",
+    "Consignez A/B séparément. Localisez les changements avant le mélange. Nettoyez et arrêtez les deux voies, surtout les résidus de concentré.",
+    "A·B 현상을 따로 기록하고 한 경로 변화를 먼저 찾은 뒤 혼합액을 확인하세요. 세척·정지는 양쪽을 포함하며 농축액 잔류에 특히 유의하세요.",
+    "Записывайте A/B отдельно. Сначала найдите изменение одной линии, затем проверяйте смесь. Промывка и остановка охватывают обе линии, особенно остатки концентрата."
+  ],
+  [
+    "总量正常，浓度不对",
+    "Correct total, incorrect concentration",
+    "Total correcto, concentración incorrecta",
+    "Total correct, concentration incorrecte",
+    "총량 정상, 농도 이상",
+    "Сумма верна, концентрация неверна"
+  ],
+  [
+    "两路实测比例、原液配方和混合状态",
+    "Measured ratio, concentrate formulation and mixing state",
+    "Proporción medida, fórmula y mezcla",
+    "Rapport mesuré, formulation et mélange",
+    "실측 비율, 원액 조성 및 혼합 상태",
+    "Измеренное отношение, состав концентрата и смешивание"
+  ],
+  [
+    "分别接液复测，排查一路欠液、另一路过量或混合不足，不只调整整机总转速。",
+    "Collect separately and retest for underdelivery, overdelivery or poor mixing. Do not adjust only total motor speed.",
+    "Recoja separado y compruebe déficit, exceso o mezcla insuficiente. No ajuste solo velocidad global.",
+    "Recueillez séparément pour sous-débit, surdébit ou mélange insuffisant. Ne réglez pas seulement la vitesse globale.",
+    "따로 수집해 한쪽 부족, 다른 쪽 과다 또는 혼합 부족을 재확인하세요. 전체 회전 속도만 조절하지 마세요.",
+    "Соберите отдельно и проверьте недоподачу, переподачу или плохое смешивание. Не регулируйте только общую скорость."
+  ],
+  [
+    "启动阶段比例漂移",
+    "Ratio drift during startup",
+    "Deriva al arrancar",
+    "Dérive du rapport au démarrage",
+    "기동 단계 비율 변동",
+    "Дрейф отношения при запуске"
+  ],
+  [
+    "两路预充长度、气泡和出口回缩",
+    "Priming lengths, bubbles and outlet retraction on both paths",
+    "Longitudes de cebado, burbujas y retroceso en ambas vías",
+    "Longueurs d’amorçage, bulles et retrait des deux voies",
+    "두 경로 예비 충전 길이, 기포 및 출구 역수축",
+    "Длины заполнения, пузырьки и втягивание на обоих выходах"
+  ],
+  [
+    "比较首次有效出液时间，排净气泡后重新安排预充与有效接液切换。",
+    "Compare first effective output times. Remove bubbles, then redefine transition from priming to usable collection.",
+    "Compare primer flujo útil. Purgue y redefina transición entre cebado y recogida útil.",
+    "Comparez les premiers écoulements utiles. Purgez puis redéfinissez la transition amorçage/collecte utile.",
+    "최초 유효 출력 시점을 비교하세요. 기포 제거 후 초기 충전·유효 수집 전환을 다시 설정하세요.",
+    "Сравните время первой полезной подачи. Удалите воздух и заново задайте переход от заполнения к рабочему сбору."
+  ],
+  [
+    "一路流量逐渐下降",
+    "One path’s flow gradually declines",
+    "Caudal de una vía desciende",
+    "Débit d’une voie en baisse progressive",
+    "한 경로 유량의 점진 감소",
+    "Расход одной линии постепенно падает"
+  ],
+  [
+    "瓶内液位、吸入口密封、结晶与堵塞",
+    "Reservoir level, inlet sealing, crystals and blockage",
+    "Nivel, sellado de entrada, cristales y obstrucción",
+    "Niveau, étanchéité d’entrée, cristaux et obstruction",
+    "용기 액면, 흡입 밀봉, 결정화 및 막힘",
+    "Уровень, герметичность входа, кристаллы и засорение"
+  ],
+  [
+    "暂停配液，分别检查供液和清洗。出现渗漏、卡滞或异响时停止驱动并联系技术支持。",
+    "Pause preparation and check supply/cleaning separately. Stop drive for leaks, seizure or unusual noise and contact support.",
+    "Pause y revise alimentación/limpieza por separado. Pare ante fugas, bloqueo o ruido y contacte soporte.",
+    "Suspendez et vérifiez alimentation/nettoyage séparément. Arrêtez en cas de fuite, blocage ou bruit et contactez l’assistance.",
+    "조제를 중지하고 공급·세척을 각각 점검하세요. 누설, 걸림 또는 이상음 시 구동을 멈추고 기술 지원팀에 문의하세요.",
+    "Приостановите приготовление, отдельно проверьте подачу и промывку. При утечке, заклинивании или шуме остановите привод и обратитесь в поддержку."
+  ],
+  [
+    "停机与换液",
+    "Shutdown and liquid changes",
+    "Parada y cambio de líquido",
+    "Arrêt et changement de liquide",
+    "정지 및 액체 교체",
+    "Остановка и смена среды"
+  ],
+  [
+    "两路残液置换及相容清洗",
+    "Displace residues and clean both paths compatibly",
+    "Desplace residuos y limpie ambas vías con líquido compatible",
+    "Évacuer les résidus et nettoyer les deux voies avec un fluide compatible",
+    "두 잔류액 치환 및 호환 세척",
+    "Вытесните остатки и совместимо промойте обе линии"
+  ],
+  [
+    "避免浓缩液残留干燥结晶；恢复运行先预充排气，再复测两路比例和混合后浓度。",
+    "Prevent concentrate from drying/crystallizing. Reprime and vent on restart, then retest both-path ratio and mixed concentration.",
+    "Evite secado/cristalización del concentrado. Cebe y purgue al reiniciar; verifique proporción y concentración.",
+    "Évitez séchage/cristallisation du concentré. Réamorcez et purgez, puis vérifiez rapport et concentration.",
+    "농축액 잔류의 건조·결정화를 피하세요. 복구 시 예비 충전·기포 제거 후 두 비율·혼합 농도를 재시험하세요.",
+    "Не допускайте высыхания/кристаллизации концентрата. При запуске заполните, удалите воздух, повторно проверьте отношение и концентрацию."
+  ]
+]

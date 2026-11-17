@@ -1,0 +1,250 @@
+[
+  [
+    "SMTP{0}-{1} μL 是气体置换式移液模块，标称容量 {2} μL。先确定目标液量、液体性质、吸头与容器，再选择吸排液参数、安装位置和控制方式。",
+    "SMTP{0}-{1} μL is an air-displacement pipetting module with a nominal capacity of {2} μL. Define target volumes, liquid, tip and vessel before selecting aspiration/dispense settings, mounting and control.",
+    "SMTP{0}-{1} μL es un módulo de pipeteo por desplazamiento de aire de {2} μL nominales. Defina volúmenes, líquido, punta y recipiente antes de elegir parámetros, montaje y control.",
+    "SMTP{0}-{1} μL est un module de pipetage à déplacement d’air de capacité nominale {2} μL. Définissez volumes, liquide, pointe et récipient avant les paramètres, le montage et la commande.",
+    "SMTP{0}-{1} μL은 공칭 용량 {2} μL의 공기 치환식 피펫팅 모듈입니다. 목표 액량, 액체 특성, 팁과 용기를 정한 뒤 흡입·분주 조건, 설치 및 제어를 선택하세요.",
+    "SMTP{0}-{1} μL — модуль пипетирования с воздушным вытеснением, номинальный объём {2} μL. Определите дозы, жидкость, наконечник и сосуд, затем параметры аспирации/дозирования, монтаж и управление."
+  ],
+  [
+    "配套设备驱动控制",
+    "Drive and control provided by the instrument",
+    "Accionamiento y control a cargo del equipo",
+    "Entraînement et commande par l’instrument",
+    "장비 측 구동 및 제어 구성",
+    "Привод и управление со стороны прибора"
+  ],
+  [
+    "采用步进驱动及自动脱吸头机构；驱动器、位置光耦电路和动作程序由设备集成配套。",
+    "Uses a stepper drive and automatic tip-ejection mechanism. The instrument integrator provides the driver, position-optocoupler circuit and motion program.",
+    "Incorpora accionamiento paso a paso y expulsión automática de punta. El integrador aporta controlador, circuito de optoacoplador de posición y programa.",
+    "Entraînement pas à pas et éjection automatique de pointe. L’intégrateur fournit pilote, circuit d’optocoupleur de position et programme de mouvement.",
+    "스테퍼 구동과 자동 팁 배출 기구를 사용합니다. 드라이버, 위치 광커플러 회로와 동작 프로그램은 장비 통합 시 구성해야 합니다.",
+    "Используются шаговый привод и автоматический сброс наконечника. Драйвер, цепь оптопары положения и программу движения обеспечивает интегратор."
+  ],
+  [
+    "{0} μL 容量配置",
+    "{0} μL capacity configuration",
+    "Configuración de {0} μL",
+    "Configuration de capacité {0} μL",
+    "{0} μL 용량 구성",
+    "Исполнение на {0} μL"
+  ],
+  [
+    "不同容量对应不同运动换算。先确定当前型号，再设置满行程和脱头动作，不跨型号套用步数。",
+    "Motion conversion differs by capacity. Confirm the model before setting full stroke and ejection; do not transfer step counts between models.",
+    "La conversión varía con la capacidad. Confirme el modelo antes de programar carrera y expulsión; no copie pasos entre modelos.",
+    "La conversion dépend de la capacité. Confirmez le modèle avant course totale et éjection ; ne transposez pas les nombres de pas.",
+    "용량에 따라 구동 환산이 다릅니다. 현재 모델을 확인한 뒤 전체 스트로크와 배출 동작을 설정하고 다른 모델의 스텝 수를 적용하지 마세요.",
+    "Пересчёт зависит от вместимости. Подтвердите модель до задания полного хода и сброса; не переносите число шагов между моделями."
+  ],
+  [
+    "SMTP{0}-{1} μL，容量 {2} μL；适配吸头按确认配置核对。",
+    "SMTP{0}-{1} μL, capacity {2} μL; verify tips against the confirmed configuration.",
+    "SMTP{0}-{1} μL, capacidad {2} μL; verifique las puntas según la configuración confirmada.",
+    "SMTP{0}-{1} μL, capacité {2} μL ; vérifier les pointes selon la configuration validée.",
+    "SMTP{0}-{1} μL, 용량 {2} μL. 확인된 구성에 맞춰 팁을 검토하세요.",
+    "SMTP{0}-{1} μL, вместимость {2} μL; наконечники сверяйте с согласованной комплектацией."
+  ],
+  [
+    "核对步进电机、位置与检测光耦、转接线序和外接驱动电路，光耦不是直接接 {0} V 的成品开关。",
+    "Check the stepper motor, position/detection optocouplers, adapter pinout and external driver. An optocoupler is not a ready-made switch for direct {0} V connection.",
+    "Revise motor, optoacopladores de posición/detección, pinout y controlador externo. El optoacoplador no es un interruptor acabado para conectar directamente a {0} V.",
+    "Vérifiez moteur, optocoupleurs de position/détection, brochage et pilote externe. L’optocoupleur n’est pas un capteur prêt à brancher directement sur {0} V.",
+    "스테퍼 모터, 위치·검출 광커플러, 변환 배선과 외부 구동 회로를 확인하세요. 광커플러는 {0} V에 바로 연결하는 완제품 스위치가 아닙니다.",
+    "Проверьте шаговый двигатель, оптопары положения/обнаружения, распиновку и внешний драйвер. Оптопара не является готовым выключателем для прямого подключения к {0} V."
+  ],
+  [
+    "{0} 步对应 {1} μL，名义 {2} μL/步",
+    "{0} steps for {1} μL; nominal {2} μL/step",
+    "{0} pasos para {1} μL; nominal {2} μL/paso",
+    "{0} pas pour {1} μL ; nominalement {2} μL/pas",
+    "{0} 스텝에 {1} μL, 공칭 {2} μL/스텝",
+    "{0} шагов на {1} μL; номинально {2} μL/шаг"
+  ],
+  [
+    "吸头适配按项目需求确认。装头力、接口密封与脱头余量都属于设备安装设计，不能只确认吸头能套上。",
+    "Confirm tip fit for the project. Loading force, sealing and ejection clearance are installation requirements; fitting onto the adapter alone is insufficient.",
+    "Confirme las puntas para el proyecto. Fuerza de carga, sellado y margen de expulsión son requisitos de montaje; no basta con que encajen.",
+    "Confirmez les pointes pour le projet. Force d’emmanchement, étanchéité et marge d’éjection relèvent du montage ; le simple emboîtement ne suffit pas.",
+    "프로젝트 요구에 맞춰 팁 적합성을 확인하세요. 장착력, 연결 밀봉과 배출 여유도 설치 설계에 포함되며 단순히 끼워지는지만 확인해서는 안 됩니다.",
+    "Совместимость наконечника подтверждайте для проекта. Усилие установки, герметичность и запас сброса входят в монтажный расчёт; одного совпадения посадки недостаточно."
+  ],
+  [
+    "按确认的吸头接口与材质组合",
+    "Use the confirmed tip interface and material combination",
+    "Use la combinación confirmada de interfaz y material",
+    "Respecter l’interface et les matériaux de pointe validés",
+    "확인된 팁 연결부 및 재질 조합 적용",
+    "Используйте согласованное сочетание соединения и материалов"
+  ],
+  [
+    "步进电机、位置光耦与驱动接线",
+    "Stepper motor, position optocoupler and drive wiring",
+    "Motor paso a paso, optoacoplador y cableado",
+    "Moteur pas à pas, optocoupleur de position et câblage",
+    "스테퍼 모터, 위치 광커플러 및 구동 배선",
+    "Шаговый двигатель, оптопара положения и подключение привода"
+  ],
+  [
+    "电机绕组和光耦电路分别接线。电机使用驱动器，光耦发光侧需要限流，接收侧需要上拉，并核对信号极性。",
+    "Wire motor windings and optocouplers separately. Use a motor driver, current limiting on the LED side and a pull-up on the receiver side; check polarity.",
+    "Cablee bobinados y optoacopladores por separado. Use controlador de motor, limitación de corriente en el LED y resistencia pull-up en el receptor; verifique polaridad.",
+    "Câblez séparément enroulements et optocoupleurs. Utilisez un pilote moteur, une limitation de courant côté LED et un rappel côté récepteur ; vérifiez la polarité.",
+    "모터 권선과 광커플러 회로는 따로 배선하세요. 모터에는 드라이버를, 발광 측에는 전류 제한을, 수광 측에는 풀업을 적용하고 신호 극성을 확인하세요.",
+    "Подключайте обмотки и оптопары отдельно. Нужны драйвер двигателя, ограничение тока светодиода и подтяжка приёмника; проверьте полярность."
+  ],
+  [
+    "SMTP{0} 光耦的限流电阻、上拉电阻及 A、K、C、E 接线说明",
+    "SMTP{0} optocoupler current-limiting and pull-up resistors and A, K, C, E connections",
+    "Resistencias limitadora y pull-up y conexiones A, K, C, E del optoacoplador SMTP{0}",
+    "Résistances de limitation et de rappel, connexions A, K, C, E de l’optocoupleur SMTP{0}",
+    "SMTP{0} 광커플러 전류 제한·풀업 저항 및 A, K, C, E 배선",
+    "Ограничительный и подтягивающий резисторы, выводы A, K, C, E оптопары SMTP{0}"
+  ],
+  [
+    "{0} V 条件下的推荐电阻仅适用于图示电路；更换电压时重新核算。",
+    "Recommended resistors at {0} V apply only to the illustrated circuit. Recalculate for any supply-voltage change.",
+    "Las resistencias recomendadas a {0} V solo sirven para el circuito mostrado. Recalcule al cambiar tensión.",
+    "Les résistances recommandées sous {0} V ne concernent que ce circuit. Recalculez si la tension change.",
+    "{0} V 조건의 권장 저항은 그림의 회로에만 적용됩니다. 전압 변경 시 다시 계산하세요.",
+    "Рекомендованные резисторы при {0} V относятся только к показанной схеме. При изменении питания пересчитайте их."
+  ],
+  [
+    "电机",
+    "Motor",
+    "Motor",
+    "Moteur",
+    "모터",
+    "Двигатель"
+  ],
+  [
+    "四线双极步进电机，额定单相电流 {0} A",
+    "Four-wire bipolar stepper motor, rated current {0} A per phase",
+    "Motor bipolar de cuatro hilos, corriente nominal {0} A/fase",
+    "Moteur pas à pas bipolaire à quatre fils, courant nominal {0} A/phase",
+    "4선 바이폴라 스테퍼 모터, 정격 상전류 {0} A",
+    "Четырёхпроводный биполярный шаговый двигатель, номинальный ток {0} A/фазу"
+  ],
+  [
+    "按当前线序配对 A、B 绕组，驱动器电流设置还需结合接法与运行条件确认。",
+    "Pair A/B windings using the supplied pinout. Confirm driver current for the wiring method and operating conditions.",
+    "Empareje bobinados A/B según el pinout suministrado. Confirme corriente del controlador para conexión y condiciones reales.",
+    "Repérez les enroulements A/B selon le brochage fourni. Confirmez le courant du pilote selon câblage et conditions.",
+    "현재 배선 순서로 A·B 권선을 짝지으세요. 드라이버 전류 설정은 연결 방식과 운전 조건에 맞춰 확인하세요.",
+    "Сопоставьте обмотки A/B по поставленной распиновке. Ток драйвера согласуйте со схемой подключения и условиями работы."
+  ],
+  [
+    "发光侧 A／K",
+    "LED side A/K",
+    "Lado emisor A/K",
+    "Côté émetteur A/K",
+    "발광 측 A/K",
+    "Светодиодная сторона A/K"
+  ],
+  [
+    "A 接限流电阻，K 接地",
+    "A through a current-limiting resistor; K to ground",
+    "A mediante resistencia limitadora; K a tierra",
+    "A via résistance de limitation ; K à la masse",
+    "A는 전류 제한 저항, K는 접지에 연결",
+    "A через ограничительный резистор; K на общий провод"
+  ],
+  [
+    "{0} V 条件下推荐 Rf 为 {1}–{2} kΩ；更换供电时重新设计，不能直接把电源接到发光管。",
+    "At {0} V, recommended Rf is {1}–{2} kΩ. Redesign for another supply; never connect power directly to the LED.",
+    "A {0} V, Rf recomendado es {1}–{2} kΩ. Rediseñe para otra alimentación; no conecte tensión directamente al LED.",
+    "Sous {0} V, Rf recommandé : {1}–{2} kΩ. Recalculez pour une autre alimentation ; ne branchez jamais la LED directement.",
+    "{0} V에서 권장 Rf는 {1}–{2} kΩ입니다. 전원 변경 시 재설계하고 발광 소자에 전원을 직접 연결하지 마세요.",
+    "При {0} V рекомендуется Rf {1}–{2} kΩ. Для другого питания пересчитайте; не подключайте светодиод напрямую к питанию."
+  ],
+  [
+    "接收侧 C／E",
+    "Receiver side C/E",
+    "Lado receptor C/E",
+    "Côté récepteur C/E",
+    "수광 측 C/E",
+    "Приёмная сторона C/E"
+  ],
+  [
+    "C 接上拉电阻，E 接地",
+    "C through a pull-up resistor; E to ground",
+    "C mediante resistencia pull-up; E a tierra",
+    "C via résistance de rappel ; E à la masse",
+    "C는 풀업 저항, E는 접지에 연결",
+    "C через подтягивающий резистор; E на общий провод"
+  ],
+  [
+    "{0} V 示例的 RL 为 {1} kΩ，转接板未配备这些电阻；核对主控允许电平。",
+    "The {0} V example uses RL = {1} kΩ. These resistors are absent from the adapter board; check controller input levels.",
+    "El ejemplo de {0} V usa RL = {1} kΩ. La placa adaptadora no incluye estas resistencias; verifique niveles del controlador.",
+    "L’exemple sous {0} V utilise RL = {1} kΩ. La carte adaptatrice ne comporte pas ces résistances ; vérifiez les niveaux d’entrée.",
+    "{0} V 예시의 RL은 {1} kΩ입니다. 변환 보드에는 이 저항들이 없으므로 주 제어기 허용 레벨을 확인하세요.",
+    "В примере {0} V используется RL = {1} kΩ. На переходной плате этих резисторов нет; проверьте уровни входов контроллера."
+  ],
+  [
+    "位置与脱头检测",
+    "Position and tip-ejection detection",
+    "Detección de posición y expulsión",
+    "Détection de position et d’éjection",
+    "위치 및 팁 배출 검출",
+    "Обнаружение положения и сброса"
+  ],
+  [
+    "分别确认对应的光耦线序和动作",
+    "Verify each optocoupler’s pinout and operation separately",
+    "Verifique por separado pinout y acción de cada optoacoplador",
+    "Vérifier séparément brochage et fonctionnement de chaque optocoupleur",
+    "각 광커플러 배선 순서와 동작 개별 확인",
+    "Отдельно проверьте распиновку и действие каждой оптопары"
+  ],
+  [
+    "SMTP{0} 不沿用 SMTP{1} 的集成液面探测、压力检测或通信控制能力。",
+    "SMTP{0} does not inherit SMTP{1} integrated liquid-level sensing, pressure detection or communication control.",
+    "SMTP{0} no incorpora la detección de nivel, presión ni el control de comunicación integrados de SMTP{1}.",
+    "SMTP{0} ne reprend pas la détection intégrée de niveau, de pression ni la commande par communication de SMTP{1}.",
+    "SMTP{0}에는 SMTP{1}의 통합 액면·압력 검출 또는 통신 제어 기능이 그대로 적용되지 않습니다.",
+    "SMTP{0} не обладает встроенными функциями обнаружения уровня, давления и управления по связи SMTP{1}."
+  ],
+  [
+    "验证位置异常、脱头失败、驱动失步及暂停重启时的整机处理，不以运动指令完成代替实际液量合格。",
+    "Test instrument handling of position faults, ejection failure, missed steps and restart. A completed motion command does not prove correct liquid volume.",
+    "Ensaye la respuesta a fallos de posición, expulsión, pérdida de pasos y reinicio. Una orden completada no demuestra volumen correcto.",
+    "Testez la gestion des défauts de position, d’éjection, des pertes de pas et du redémarrage. Une commande terminée ne prouve pas le volume correct.",
+    "위치 이상, 팁 배출 실패, 탈조와 정지 후 재시작 시 장비 처리를 검증하세요. 구동 명령 완료를 실제 액량 합격으로 간주하지 마세요.",
+    "Проверьте реакцию прибора на сбой положения, сброса, пропуск шагов и перезапуск. Завершение команды не подтверждает правильность дозы."
+  ],
+  [
+    "光耦信号异常",
+    "Abnormal optocoupler signal",
+    "Señal anómala del optoacoplador",
+    "Signal d’optocoupleur anormal",
+    "광커플러 신호 이상",
+    "Аномальный сигнал оптопары"
+  ],
+  [
+    "限流、上拉、信号电平与光耦位置",
+    "Current limiting, pull-up, signal level and optocoupler position",
+    "Limitación, pull-up, nivel y posición del optoacoplador",
+    "Limitation de courant, rappel, niveau et position",
+    "전류 제한, 풀업, 신호 레벨 및 광커플러 위치",
+    "Ограничение тока, подтяжка, уровень сигнала и положение оптопары"
+  ],
+  [
+    "断电检查接线后再低速测试，禁止用提高电压的方法强行获得信号。",
+    "Inspect wiring with power off, then test at low speed. Do not raise voltage to force a signal.",
+    "Revise el cableado sin tensión y pruebe a baja velocidad. No aumente tensión para forzar señal.",
+    "Contrôlez hors tension, puis testez à faible vitesse. N’augmentez pas la tension pour forcer un signal.",
+    "전원을 끄고 배선을 확인한 뒤 저속 시험하세요. 신호를 얻기 위해 전압을 높이지 마세요.",
+    "Проверьте подключение при отключённом питании, затем испытайте на малой скорости. Не повышайте напряжение ради получения сигнала."
+  ],
+  [
+    "按 {0} μL 配置的供货行程资料设置",
+    "Use the supplied stroke data for the {0} μL configuration",
+    "Use los datos de carrera suministrados para {0} μL",
+    "Utiliser les données de course fournies pour {0} μL",
+    "{0} μL 구성의 공급 스트로크 자료에 맞춰 설정",
+    "Используйте данные хода, поставленные для исполнения {0} μL"
+  ]
+]

@@ -1,0 +1,850 @@
+[
+  [
+    "HMD{0} 采用 {1} mm 行程驱动注射器，配套电磁阀组织吸液、分配与清洗路径。选型应同时确定注射器容量、阀路连接和运动节拍。",
+    "HMD{0} drives a syringe over a {1} mm stroke, using solenoid valves for aspiration, dispensing and cleaning paths. Select syringe capacity, valve connections and cycle timing together.",
+    "HMD{0} acciona una jeringa con carrera de {1} mm y electroválvulas para aspiración, dispensación y limpieza. Seleccione conjuntamente capacidad, conexiones y ciclo.",
+    "HMD{0} entraîne une seringue sur {1} mm, avec électrovannes pour aspiration, distribution et nettoyage. Choisissez ensemble capacité, raccordement des vannes et cadence.",
+    "HMD{0}은 {1} mm 스트로크로 주사기를 구동하고 솔레노이드 밸브로 흡입·분주·세척 경로를 구성합니다. 주사기 용량, 밸브 연결과 동작 주기를 함께 선정하세요.",
+    "HMD{0} перемещает поршень шприца на {1} mm; электромагнитные клапаны задают пути аспирации, дозирования и промывки. Вместимость, соединения клапанов и цикл выбирайте совместно."
+  ],
+  [
+    "{0} mm 驱动行程",
+    "{0} mm drive stroke",
+    "Carrera de accionamiento de {0} mm",
+    "Course d’entraînement de {0} mm",
+    "{0} mm 구동 스트로크",
+    "Ход привода {0} mm"
+  ],
+  [
+    "容量由所装注射器决定。相同行程配不同容量，单位位移对应的液量不同。",
+    "Capacity depends on the fitted syringe. Different capacities give different liquid volumes per unit travel, even with the same stroke.",
+    "La capacidad depende de la jeringa instalada. Con igual carrera, distintas capacidades producen diferente volumen por unidad de desplazamiento.",
+    "La capacité dépend de la seringue montée. À course égale, différentes capacités donnent des volumes différents par unité de déplacement.",
+    "용량은 장착한 주사기에 따라 결정됩니다. 같은 스트로크라도 용량이 다르면 단위 변위당 액량이 달라집니다.",
+    "Вместимость определяется установленным шприцем. При одинаковом ходе разные шприцы дают разный объём на единицу перемещения."
+  ],
+  [
+    "电磁阀液路切换",
+    "Solenoid-valve fluid-path switching",
+    "Conmutación mediante electroválvulas",
+    "Commutation du circuit par électrovannes",
+    "솔레노이드 밸브 유로 전환",
+    "Переключение потока электромагнитными клапанами"
+  ],
+  [
+    "区分两端口、三端口及分配型结构，阀状态与活塞动作需要按程序配合。",
+    "Distinguish two-port, three-port and distribution designs. Coordinate valve states and plunger motion in the program.",
+    "Distinga diseños de dos puertos, tres puertos y distribución. Coordine estados de válvula y movimiento del émbolo.",
+    "Distinguez versions à deux ports, trois ports et de distribution. Coordonnez états des vannes et mouvement du piston.",
+    "2포트, 3포트 및 분배형 구조를 구분하고 밸브 상태와 플런저 동작을 프로그램으로 연동하세요.",
+    "Различайте двухпортовую, трёхпортовую и распределительную конструкции. Согласуйте состояния клапанов с движением поршня."
+  ],
+  [
+    "集成运动控制",
+    "Integrated motion control",
+    "Control de movimiento integrado",
+    "Commande de mouvement intégrée",
+    "모션 제어 통합",
+    "Встроенное управление движением"
+  ],
+  [
+    "支持按设备程序设置速度和动作顺序，完成后查询状态；多台设备需配置地址并协调通信。",
+    "Set speed and motion order through the instrument program and query completion status. Multiple units require addressing and coordinated communication.",
+    "Programe velocidad y secuencia y consulte el estado de finalización. Varias unidades requieren direcciones y comunicación coordinada.",
+    "Réglez vitesse et séquence dans le programme, puis interrogez l’état de fin. Plusieurs unités nécessitent adresses et communication coordonnée.",
+    "장비 프로그램에서 속도와 동작 순서를 설정하고 완료 후 상태를 조회하세요. 여러 장치는 주소 설정과 통신 조정이 필요합니다.",
+    "Задайте скорость и последовательность программой прибора, затем запросите завершение. Для нескольких устройств настройте адреса и согласуйте связь."
+  ],
+  [
+    "按目标液量验收",
+    "Acceptance at the target volume",
+    "Aceptación al volumen objetivo",
+    "Validation au volume cible",
+    "목표 액량 기준 검수",
+    "Приёмка по целевой дозе"
+  ],
+  [
+    "额定行程下的指标不覆盖任意小液量；注射器、阀、管路与针头共同影响实际输出。",
+    "Rated-stroke figures do not cover every small dose. Syringe, valves, tubing and needle jointly affect actual delivery.",
+    "Las cifras a carrera nominal no cubren cualquier microdosis. Jeringa, válvulas, tubos y aguja afectan conjuntamente a la salida real.",
+    "Les chiffres à course nominale ne couvrent pas toutes les petites doses. Seringue, vannes, tubes et aiguille influencent le volume réel.",
+    "정격 스트로크 성능이 모든 소량 분주를 포함하지는 않습니다. 주사기, 밸브, 튜브와 니들이 실제 토출량에 함께 영향을 줍니다.",
+    "Показатели при номинальном ходе не распространяются на любую малую дозу. Фактический выход зависит от шприца, клапанов, трубок и иглы."
+  ],
+  [
+    "型号与容量",
+    "Model and capacity",
+    "Modelo y capacidad",
+    "Modèle et capacité",
+    "모델 및 용량",
+    "Модель и вместимость"
+  ],
+  [
+    "HMD{0}，{1} mm 行程；注射器容量、通道数与阀配置分别确认。",
+    "HMD{0}, {1} mm stroke; confirm syringe capacity, channel count and valve configuration separately.",
+    "HMD{0}, carrera {1} mm; confirme por separado capacidad, canales y válvula.",
+    "HMD{0}, course {1} mm ; confirmer séparément capacité, nombre de voies et configuration de vanne.",
+    "HMD{0}, 스트로크 {1} mm. 주사기 용량, 채널 수와 밸브 구성을 각각 확인하세요.",
+    "HMD{0}, ход {1} mm; отдельно подтвердите вместимость шприца, число каналов и комплектацию клапанов."
+  ],
+  [
+    "液路与接口",
+    "Fluid paths and connections",
+    "Circuitos y conexiones",
+    "Circuits et raccordements",
+    "유로 및 연결부",
+    "Жидкостные пути и соединения"
+  ],
+  [
+    "提供吸液、分配和清洗流路图，标注储液瓶、注射器、阀口及出口；按对应阀型核对压力限制。",
+    "Provide aspiration, dispensing and cleaning diagrams identifying reservoirs, syringes, valve ports and outlets. Check pressure limits for each valve type.",
+    "Aporte esquemas de aspiración, dispensación y limpieza con depósitos, jeringa, puertos y salidas. Verifique límites de presión por tipo de válvula.",
+    "Fournissez les schémas d’aspiration, distribution et nettoyage : réservoirs, seringue, ports et sorties. Vérifiez les limites de pression du type de vanne.",
+    "흡입·분주·세척 유로도에 저장 용기, 주사기, 밸브 포트와 출구를 표시하세요. 해당 밸브형의 압력 한계를 확인하세요.",
+    "Предоставьте схемы аспирации, дозирования и промывки с ёмкостями, шприцем, портами и выходами. Проверьте давление для соответствующих клапанов."
+  ],
+  [
+    "供电与控制",
+    "Power and control",
+    "Alimentación y control",
+    "Alimentation et commande",
+    "전원 및 제어",
+    "Питание и управление"
+  ],
+  [
+    "按供货版本核对 {0} V 电源、电流需求、通信接口、地址与协议。",
+    "Verify the {0} V supply, required current, communication interface, address and protocol for the supplied version.",
+    "Verifique alimentación de {0} V, corriente, interfaz, dirección y protocolo de la versión suministrada.",
+    "Vérifiez alimentation {0} V, courant, interface, adresse et protocole de la version fournie.",
+    "공급 버전에 맞춰 {0} V 전원, 전류 요구량, 통신 인터페이스, 주소와 프로토콜을 확인하세요.",
+    "Для поставленной версии проверьте питание {0} V, ток, интерфейс, адрес и протокол."
+  ],
+  [
+    "性能与验证",
+    "Performance and validation",
+    "Rendimiento y validación",
+    "Performances et validation",
+    "성능 및 검증",
+    "Характеристики и проверка"
+  ],
+  [
+    "额定行程准确度和重复性需连同注射器容量阅读，实际目标量通过装机测试确认。",
+    "Read rated-stroke accuracy and repeatability with syringe capacity. Confirm the actual target volume through installed-system tests.",
+    "Lea exactitud y repetibilidad a carrera nominal junto con la capacidad. Confirme el volumen objetivo mediante ensayos del sistema instalado.",
+    "Lisez exactitude et répétabilité à course nominale avec la capacité de seringue. Validez le volume cible sur le système monté.",
+    "정격 스트로크 정확도·반복성은 주사기 용량과 함께 읽으세요. 실제 목표 액량은 장착 후 시험으로 확인하세요.",
+    "Точность и повторяемость при номинальном ходе рассматривайте с вместимостью шприца. Целевую дозу проверяйте испытанием в приборе."
+  ],
+  [
+    "注射器容量、行程与速度怎么选",
+    "Choosing syringe capacity, stroke and speed",
+    "Selección de capacidad, carrera y velocidad",
+    "Choisir capacité de seringue, course et vitesse",
+    "주사기 용량, 스트로크 및 속도 선정",
+    "Выбор шприца, хода и скорости"
+  ],
+  [
+    "先确定单次最小量、单次最大量、连续分注次数和补液节拍，再选注射器；不要只按最大容量决定整套配置。",
+    "Define minimum/maximum doses, consecutive dispenses and refill timing before choosing a syringe. Maximum capacity alone is insufficient.",
+    "Defina dosis mínima/máxima, dispensaciones consecutivas y recarga antes de elegir jeringa. No decida solo por capacidad máxima.",
+    "Définissez doses minimale/maximale, distributions successives et remplissage avant de choisir la seringue. La capacité maximale ne suffit pas.",
+    "최소·최대 단회량, 연속 분주 횟수와 재충전 주기를 먼저 정하세요. 최대 용량만으로 전체 구성을 결정하지 마세요.",
+    "До выбора шприца задайте минимальную/максимальную дозы, число последовательных порций и время наполнения. Одной максимальной вместимости недостаточно."
+  ],
+  [
+    "标称容量",
+    "Nominal capacity",
+    "Capacidad nominal",
+    "Capacité nominale",
+    "공칭 용량",
+    "Номинальная вместимость"
+  ],
+  [
+    "{0} mm 系列提供 {1} μL–{2} mL 容量选项",
+    "The {0} mm series offers capacities from {1} μL to {2} mL",
+    "La serie de {0} mm ofrece de {1} μL a {2} mL",
+    "La série {0} mm propose de {1} μL à {2} mL",
+    "{0} mm 계열은 {1} μL–{2} mL 용량 제공",
+    "Серия {0} mm: вместимость от {1} μL до {2} mL"
+  ],
+  [
+    "较大注射器可减少补液次数，但相同位移对应的体积也更大，小液量性能需单独确认。",
+    "A larger syringe reduces refills but delivers more volume per unit travel. Verify small-volume performance separately.",
+    "Una jeringa mayor reduce recargas, pero da más volumen por desplazamiento. Verifique aparte las dosis pequeñas.",
+    "Une seringue plus grande réduit les remplissages mais augmente le volume par déplacement. Vérifiez les petits volumes séparément.",
+    "큰 주사기는 재충전 횟수를 줄이지만 같은 변위당 액량도 커집니다. 소량 성능은 따로 확인하세요.",
+    "Большой шприц уменьшает число наполнений, но увеличивает объём на перемещение. Малые дозы проверяйте отдельно."
+  ],
+  [
+    "满行程与细分",
+    "Full stroke and microstepping",
+    "Carrera completa y micropasos",
+    "Course totale et micropas",
+    "전체 스트로크 및 마이크로스텝",
+    "Полный ход и микрошаг"
+  ],
+  [
+    "{0} mm 是机械工作行程",
+    "{0} mm is the mechanical working stroke",
+    "{0} mm es la carrera mecánica útil",
+    "{0} mm correspond à la course mécanique utile",
+    "{0} mm는 기계적 작동 스트로크",
+    "{0} mm — механический рабочий ход"
+  ],
+  [
+    "按实际注射器容量换算运动指令；微步分辨率不等于最小可靠分注体积。",
+    "Convert commands using the actual syringe capacity. Microstep resolution is not the minimum reliable dispensing volume.",
+    "Convierta órdenes según la jeringa real. La resolución en micropasos no es el volumen mínimo fiable.",
+    "Convertissez les commandes selon la seringue réelle. La résolution en micropas n’est pas le volume minimal fiable.",
+    "실제 주사기 용량으로 구동 명령을 환산하세요. 마이크로스텝 분해능은 최소 신뢰 분주량과 다릅니다.",
+    "Пересчитывайте команды по фактической вместимости. Микрошаговое разрешение не равно минимальной достоверной дозе."
+  ],
+  [
+    "加液时间",
+    "Dispensing time",
+    "Tiempo de dispensación",
+    "Temps de distribution",
+    "분주 시간",
+    "Время дозирования"
+  ],
+  [
+    "把吸液、换阀、分注和等待纳入完整周期",
+    "Include aspiration, valve switching, dispensing and dwell in the complete cycle",
+    "Incluya aspiración, conmutación, dispensación y esperas",
+    "Inclure aspiration, commutation, distribution et attentes",
+    "전체 주기에 흡입, 밸브 전환, 분주 및 대기 포함",
+    "Учитывайте аспирацию, переключение, дозирование и выдержки"
+  ],
+  [
+    "小流量、黏性液体和较长管路需分别验证速度与加减速，不能仅用最快全行程时间计算产能。",
+    "Validate speed and ramps for low flow, viscous liquids and long tubing separately. Do not calculate throughput from the fastest full-stroke time alone.",
+    "Valide velocidad y rampas para bajo caudal, líquidos viscosos y tubos largos. No calcule producción solo con la carrera más rápida.",
+    "Validez vitesse et rampes pour faible débit, liquides visqueux et tubes longs. Ne calculez pas la cadence sur la seule course la plus rapide.",
+    "저유량, 점성 액체와 긴 튜브는 속도·가감속을 각각 검증하세요. 최단 전체 스트로크 시간만으로 처리량을 계산하지 마세요.",
+    "Для малого расхода, вязких жидкостей и длинных трубок отдельно проверяйте скорость и разгон. Не рассчитывайте производительность только по самому быстрому полному ходу."
+  ],
+  [
+    "多通道",
+    "Multiple channels",
+    "Varios canales",
+    "Plusieurs voies",
+    "다중 채널",
+    "Несколько каналов"
+  ],
+  [
+    "通道数量与具体阀路、安装配置一起核对",
+    "Check channel count with valve paths and mounting configuration",
+    "Compruebe canales, circuitos de válvula y montaje",
+    "Vérifier nombre de voies, circuits et montage",
+    "채널 수, 밸브 유로 및 설치 구성 함께 확인",
+    "Сверяйте число каналов со схемой клапанов и монтажом"
+  ],
+  [
+    "并行结构不代表各通道可以任意独立动作，应明确共用驱动和阀切换的关系。",
+    "Parallel construction does not imply arbitrary independent channel motion. Define the relationship between shared drive and valve switching.",
+    "La estructura paralela no implica movimientos independientes arbitrarios. Defina la relación entre accionamiento común y conmutación.",
+    "Une structure parallèle ne signifie pas des mouvements indépendants à volonté. Définissez la relation entraînement commun/commutation.",
+    "병렬 구조가 각 채널의 임의 독립 동작을 의미하지는 않습니다. 공통 구동과 밸브 전환의 관계를 명확히 하세요.",
+    "Параллельная конструкция не означает произвольное независимое движение каналов. Определите связь общего привода и переключения клапанов."
+  ],
+  [
+    "电磁阀配置与活塞动作顺序",
+    "Solenoid-valve configuration and plunger sequence",
+    "Electroválvulas y secuencia del émbolo",
+    "Configuration des électrovannes et séquence du piston",
+    "솔레노이드 밸브 구성 및 플런저 동작 순서",
+    "Комплектация электромагнитных клапанов и последовательность поршня"
+  ],
+  [
+    "同样的端口数量可能对应不同内部流道。选型需确认各阀状态下，注射器实际连到哪一段管路。",
+    "The same port count can conceal different internal paths. Confirm the syringe connection in every valve state.",
+    "El mismo número de puertos puede tener circuitos internos distintos. Confirme la conexión de jeringa en cada estado.",
+    "Un même nombre de ports peut correspondre à des circuits différents. Confirmez le raccordement de la seringue pour chaque état.",
+    "같은 포트 수라도 내부 유로는 다를 수 있습니다. 각 밸브 상태에서 주사기가 어느 배관에 연결되는지 확인하세요.",
+    "Одинаковое число портов может скрывать разные внутренние пути. Проверьте соединение шприца в каждом состоянии клапанов."
+  ],
+  [
+    "HMD{0} 两端口和三端口电磁阀配置下，注射器与 IN、OUT、Bypass 的流路关系",
+    "HMD{0} syringe connections to IN, OUT and Bypass with two-/three-port solenoid valves",
+    "Conexiones de jeringa HMD{0} a IN, OUT y Bypass con electroválvulas de dos/tres puertos",
+    "Connexions HMD{0} entre seringue, IN, OUT et Bypass avec électrovannes à deux/trois ports",
+    "HMD{0} 2·3포트 솔레노이드 밸브 구성에서 주사기와 IN, OUT, Bypass 유로",
+    "Соединения шприца HMD{0} с IN, OUT и Bypass при двух-/трёхпортовых клапанах"
+  ],
+  [
+    "HMD{0} 流路示例；HMD{1} 的阀配置和控制条件需单独核对。",
+    "HMD{0} path example; verify HMD{1} valve configurations and control conditions separately.",
+    "Ejemplo HMD{0}; verifique por separado válvulas y control de HMD{1}.",
+    "Exemple HMD{0} ; vérifier séparément les vannes et conditions de commande HMD{1}.",
+    "HMD{0} 유로 예시입니다. HMD{1} 밸브 구성과 제어 조건은 별도로 확인하세요.",
+    "Пример схемы HMD{0}; комплектацию и управление HMD{1} проверяйте отдельно."
+  ],
+  [
+    "吸液",
+    "Aspiration",
+    "Aspiración",
+    "Aspiration",
+    "흡입",
+    "Аспирация"
+  ],
+  [
+    "注射器连接储液源",
+    "Connect the syringe to the liquid source",
+    "Conecte la jeringa al depósito",
+    "Relier la seringue à la source de liquide",
+    "주사기를 액체 공급원에 연결",
+    "Соедините шприц с источником жидкости"
+  ],
+  [
+    "确认液源通路已打开，再移动活塞；吸液时观察气泡与液源缺液。",
+    "Open the source path before moving the plunger. Watch for bubbles and insufficient supply during aspiration.",
+    "Abra el circuito de alimentación antes de mover el émbolo. Observe burbujas y falta de líquido al aspirar.",
+    "Ouvrez le circuit d’alimentation avant de déplacer le piston. Surveillez bulles et manque de liquide à l’aspiration.",
+    "공급 유로가 열린 것을 확인한 뒤 플런저를 움직이세요. 흡입 중 기포와 액체 부족을 관찰하세요.",
+    "Откройте путь источника до движения поршня. При аспирации следите за пузырьками и недостатком жидкости."
+  ],
+  [
+    "分配",
+    "Dispensing",
+    "Dispensación",
+    "Distribution",
+    "분주",
+    "Дозирование"
+  ],
+  [
+    "注射器连接目标出口",
+    "Connect the syringe to the target outlet",
+    "Conecte la jeringa a la salida prevista",
+    "Relier la seringue à la sortie cible",
+    "주사기를 목표 출구에 연결",
+    "Соедините шприц с целевым выходом"
+  ],
+  [
+    "切换到目标路径并确认状态后开始分配，避免阀仍在运动时推动活塞。",
+    "Switch to the target path and verify state before dispensing. Do not move the plunger while the valve is still switching.",
+    "Conmute al circuito deseado y confirme el estado antes de dispensar. No mueva el émbolo durante la conmutación.",
+    "Commutez vers le circuit cible et confirmez l’état avant distribution. Ne déplacez pas le piston pendant la commutation.",
+    "목표 유로로 전환하고 상태를 확인한 뒤 분주하세요. 밸브 전환 중에는 플런저를 밀지 마세요.",
+    "Переключите на нужный путь и подтвердите состояние до дозирования. Не двигайте поршень во время переключения."
+  ],
+  [
+    "旁路与清洗",
+    "Bypass and cleaning",
+    "Bypass y limpieza",
+    "Dérivation et nettoyage",
+    "바이패스 및 세척",
+    "Байпас и промывка"
+  ],
+  [
+    "三端口的 Bypass 及分配型配置分别核对",
+    "Check three-port Bypass and distribution configurations separately",
+    "Revise por separado Bypass de tres puertos y distribución",
+    "Vérifier séparément Bypass à trois ports et versions de distribution",
+    "3포트 Bypass 및 분배형 구성 각각 확인",
+    "Проверяйте Bypass трёхпортовой и распределительные комплектации отдельно"
+  ],
+  [
+    "清洗应覆盖阀内与出口管路，不能只清洗注射器就判断整条液路合格。",
+    "Cleaning must cover valve internals and outlet tubing. Cleaning the syringe alone does not validate the entire fluid path.",
+    "Limpie interior de válvulas y tubos de salida. Limpiar solo la jeringa no valida todo el circuito.",
+    "Le nettoyage doit couvrir l’intérieur des vannes et les tubes de sortie. La seringue seule ne valide pas tout le circuit.",
+    "세척은 밸브 내부와 출구 튜브까지 포함해야 합니다. 주사기만 세척하고 전체 유로가 적합하다고 판단하지 마세요.",
+    "Промывайте внутренности клапанов и выходные трубки. Промывка одного шприца не подтверждает чистоту всего пути."
+  ],
+  [
+    "封闭状态",
+    "Closed path",
+    "Circuito cerrado",
+    "Circuit fermé",
+    "폐쇄 상태",
+    "Закрытый путь"
+  ],
+  [
+    "任何活塞动作前确认液路可通",
+    "Confirm an open fluid path before any plunger movement",
+    "Confirme una vía abierta antes de mover el émbolo",
+    "Confirmer un passage ouvert avant tout mouvement du piston",
+    "플런저 동작 전 유로 개방 확인",
+    "Проверяйте открытый путь перед любым движением поршня"
+  ],
+  [
+    "禁止在无可用通路时推动活塞；对 HMD 分配型尤其应避免所有电磁阀关闭时运行。",
+    "Never drive the plunger without an available path. In particular, do not run HMD distribution units with every solenoid valve closed.",
+    "No accione el émbolo sin una vía disponible. En HMD de distribución, evite especialmente funcionar con todas las electroválvulas cerradas.",
+    "N’actionnez jamais le piston sans passage disponible. Sur HMD de distribution, ne fonctionnez pas avec toutes les électrovannes fermées.",
+    "가용 유로가 없을 때 플런저를 밀지 마세요. 특히 HMD 분배형에서 모든 솔레노이드 밸브가 닫힌 상태로 구동하지 마세요.",
+    "Не двигайте поршень без открытого пути. Особенно не запускайте распределительный HMD при закрытых электромагнитных клапанах."
+  ],
+  [
+    "接液材料、接口与压力边界",
+    "Wetted materials, connections and pressure limits",
+    "Materiales mojados, conexiones y límites de presión",
+    "Matériaux en contact, raccordements et limites de pression",
+    "접액 재질, 연결부 및 압력 한계",
+    "Контактирующие материалы, соединения и пределы давления"
+  ],
+  [
+    "注射器、活塞密封、阀、接头与管路共同构成接液系统。工作液和清洗液应同时核对材料相容性。",
+    "Syringe, plunger seal, valves, fittings and tubing form the wetted system. Check compatibility with both working and cleaning liquids.",
+    "Jeringa, sello del émbolo, válvulas, racores y tubos forman el sistema mojado. Verifique compatibilidad con fluido de trabajo y limpieza.",
+    "Seringue, joint de piston, vannes, raccords et tubes forment le circuit mouillé. Vérifiez la compatibilité avec liquide de travail et de nettoyage.",
+    "주사기, 플런저 씰, 밸브, 피팅과 튜브가 접액 시스템을 구성합니다. 작업액과 세척액 모두 재질 적합성을 확인하세요.",
+    "Шприц, уплотнение поршня, клапаны, фитинги и трубки образуют контактирующую систему. Проверьте совместимость рабочих и промывочных жидкостей."
+  ],
+  [
+    "按当前注射器及阀的完整配置核对",
+    "Verify the complete fitted syringe and valve configuration",
+    "Verifique la configuración completa de jeringa y válvula",
+    "Vérifier la configuration complète seringue/vannes",
+    "현재 주사기 및 밸브의 전체 구성 확인",
+    "Проверьте полную комплектацию шприца и клапанов"
+  ],
+  [
+    "不将某一种阀头或密封材料的特性当作整泵适用性；含盐介质同时安排停机冲洗。",
+    "One valve-head or seal material does not establish whole-pump suitability. Include shutdown flushing for saline media.",
+    "Un material de cabezal o sello no demuestra compatibilidad de toda la bomba. Incluya lavado de parada para medios salinos.",
+    "Un matériau de tête ou de joint ne définit pas la compatibilité de toute la pompe. Prévoyez un rinçage à l’arrêt avec les milieux salins.",
+    "특정 밸브 헤드나 씰 재질의 특성을 전체 펌프 적합성으로 보지 마세요. 염류 함유 액체는 정지 시 세척도 계획하세요.",
+    "Свойства одной головки или уплотнения не определяют пригодность всего насоса. Для солевых сред предусмотрите промывку перед остановкой."
+  ],
+  [
+    "工作压力",
+    "Operating pressure",
+    "Presión de trabajo",
+    "Pression de service",
+    "작동 압력",
+    "Рабочее давление"
+  ],
+  [
+    "取注射器、阀、管路和接头的适用边界",
+    "Respect the limits of syringe, valves, tubing and fittings",
+    "Respete los límites de jeringa, válvulas, tubos y racores",
+    "Respecter les limites de seringue, vannes, tubes et raccords",
+    "주사기, 밸브, 튜브 및 피팅의 한계 적용",
+    "Соблюдайте пределы шприца, клапанов, трубок и фитингов"
+  ],
+  [
+    "注射器耐压不能覆盖阀的工作压力，不将某一种 HMD 阀的限值套给全部 HLD 配置。",
+    "Syringe pressure resistance does not cover valve operating limits. Do not apply one HMD valve limit to every HLD configuration.",
+    "La resistencia de la jeringa no cubre el límite de la válvula. No aplique un límite HMD a todas las configuraciones HLD.",
+    "La tenue de la seringue ne couvre pas les limites des vannes. Ne transposez pas une limite HMD à toutes les versions HLD.",
+    "주사기 내압이 밸브 작동 압력을 대체하지 않습니다. 특정 HMD 밸브 한계를 모든 HLD 구성에 적용하지 마세요.",
+    "Прочность шприца не заменяет рабочий предел клапана. Не переносите предел одного клапана HMD на все HLD."
+  ],
+  [
+    "管路连接",
+    "Tubing connections",
+    "Conexiones de tubos",
+    "Raccordement des tubes",
+    "튜브 연결",
+    "Соединения трубок"
+  ],
+  [
+    "螺纹、密封结构与插入深度成套核对",
+    "Match thread, sealing design and insertion depth as a set",
+    "Combine rosca, sellado y profundidad de inserción",
+    "Vérifier ensemble filetage, étanchéité et insertion",
+    "나사산, 밀봉 구조 및 삽입 깊이 일괄 확인",
+    "Согласуйте резьбу, уплотнение и глубину ввода"
+  ],
+  [
+    "接管后检查受力与泄漏，并让储液、清洗和排废路径可辨认。",
+    "Check connection loads and leaks; clearly identify supply, cleaning and waste paths.",
+    "Revise esfuerzos y fugas; identifique alimentación, limpieza y desagüe.",
+    "Vérifiez contraintes et fuites ; identifiez alimentation, nettoyage et déchets.",
+    "연결 후 하중과 누설을 확인하고 공급·세척·폐액 경로를 구분 가능하게 표시하세요.",
+    "Проверьте нагрузки и утечки; обозначьте пути подачи, промывки и отходов."
+  ],
+  [
+    "供电、通信与初始化",
+    "Power, communication and initialization",
+    "Alimentación, comunicación e inicialización",
+    "Alimentation, communication et initialisation",
+    "전원, 통신 및 초기화",
+    "Питание, связь и инициализация"
+  ],
+  [
+    "先验证单台供电和通信，再运行初始化。发送命令、收到应答与机械动作完成是不同阶段，应查询状态后再执行下一步。",
+    "Verify one unit’s power and communication before initialization. Command transmission, acknowledgement and mechanical completion are separate stages; query status before the next step.",
+    "Verifique alimentación y comunicación de una unidad antes de inicializar. Envío, respuesta y fin mecánico son etapas distintas; consulte estado antes del siguiente paso.",
+    "Vérifiez alimentation et communication d’une unité avant initialisation. Envoi, acquittement et fin mécanique sont distincts ; interrogez l’état avant la suite.",
+    "단독 전원·통신을 검증한 뒤 초기화하세요. 명령 전송, 응답 수신과 기계 동작 완료는 다른 단계이므로 상태 조회 후 다음 동작을 실행하세요.",
+    "Проверьте питание и связь одного устройства до инициализации. Передача, подтверждение и завершение механического движения — разные этапы; запрашивайте статус перед следующим шагом."
+  ],
+  [
+    "电源",
+    "Power supply",
+    "Alimentación",
+    "Alimentation",
+    "전원",
+    "Питание"
+  ],
+  [
+    "{0} V 供电，电流按当前阀与通道配置核对",
+    "{0} V supply; confirm current for the fitted valves and channels",
+    "Alimentación {0} V; confirme corriente según válvulas y canales",
+    "Alimentation {0} V ; confirmer le courant selon vannes et voies",
+    "{0} V 전원, 현재 밸브·채널 구성에 맞는 전류 확인",
+    "Питание {0} V; ток уточняйте по клапанам и каналам"
+  ],
+  [
+    "电源容量同时考虑运动峰值和阀切换，断电接好电源与通信线后再上电。",
+    "Size the supply for motion peaks and valve switching. Connect power and communication with power off before energizing.",
+    "Dimensione la fuente para picos de movimiento y conmutación. Conecte alimentación y comunicación sin tensión antes de encender.",
+    "Dimensionnez l’alimentation pour pointes de mouvement et commutation. Raccordez puissance et communication hors tension.",
+    "전원 용량에 구동 피크와 밸브 전환을 모두 반영하세요. 전원·통신선을 전원 차단 상태에서 연결한 뒤 켜세요.",
+    "Учитывайте пики привода и переключение клапанов. Подключайте питание и связь при отключённом напряжении, затем включайте."
+  ],
+  [
+    "通信",
+    "Communication",
+    "Comunicación",
+    "Communication",
+    "통신",
+    "Связь"
+  ],
+  [
+    "RS{0}／RS{1}／CAN 按实际供货接口选择",
+    "Choose RS{0}/RS{1}/CAN for the supplied interface",
+    "Seleccione RS{0}/RS{1}/CAN según la interfaz suministrada",
+    "Choisir RS{0}/RS{1}/CAN selon l’interface fournie",
+    "공급 인터페이스에 따라 RS{0}/RS{1}/CAN 선택",
+    "Выбирайте RS{0}/RS{1}/CAN по поставленному интерфейсу"
+  ],
+  [
+    "核对电气接口、地址、波特率和数据格式；不能将 TTL 信号直接接到 RS{0} 端口。",
+    "Check electrical interface, address, baud rate and data format. Never connect TTL directly to RS{0}.",
+    "Verifique interfaz eléctrica, dirección, velocidad y formato. No conecte TTL directamente a RS{0}.",
+    "Vérifiez interface électrique, adresse, débit et format. Ne raccordez pas TTL directement à RS{0}.",
+    "전기적 인터페이스, 주소, 통신 속도와 데이터 형식을 확인하세요. TTL 신호를 RS{0}에 직접 연결하지 마세요.",
+    "Проверьте электрический интерфейс, адрес, скорость и формат данных. Не подключайте TTL напрямую к RS{0}."
+  ],
+  [
+    "初始化",
+    "Initialization",
+    "Inicialización",
+    "Initialisation",
+    "초기화",
+    "Инициализация"
+  ],
+  [
+    "活塞与阀按所选配置执行复位",
+    "Home the plunger and valves for the chosen configuration",
+    "Referencie émbolo y válvulas según la configuración",
+    "Référencer piston et vannes selon la configuration",
+    "선택 구성에 따라 플런저·밸브 원점 복귀",
+    "Выполните возврат поршня и клапанов по комплектации"
+  ],
+  [
+    "清除运动范围内的干涉，完成初始化并确认无错误，再进入正式吸排液。",
+    "Clear mechanical interference, complete initialization and confirm no errors before normal aspiration and dispensing.",
+    "Elimine interferencias, inicialice y confirme ausencia de errores antes de aspirar y dispensar.",
+    "Éliminez les interférences, terminez l’initialisation et confirmez l’absence d’erreur avant aspiration/distribution.",
+    "구동 범위의 간섭을 제거하고 초기화 완료 및 오류 없음을 확인한 뒤 정식 흡입·분주를 시작하세요.",
+    "Устраните помехи, завершите инициализацию и проверьте отсутствие ошибок до штатной аспирации/дозирования."
+  ],
+  [
+    "动作联锁",
+    "Motion interlocks",
+    "Interbloqueos de movimiento",
+    "Interverrouillages de mouvement",
+    "동작 인터록",
+    "Блокировки движений"
+  ],
+  [
+    "阀位置、运动完成与异常状态分别确认",
+    "Confirm valve position, motion completion and fault states separately",
+    "Confirme posición, fin de movimiento y anomalías por separado",
+    "Confirmer séparément position, fin de mouvement et défauts",
+    "밸브 위치, 동작 완료 및 이상 상태 각각 확인",
+    "Отдельно подтверждайте положение, завершение движения и отказы"
+  ],
+  [
+    "通信超时、失步或阀异常时停止当前流程，恢复状态后重新充液与校验。",
+    "Stop the sequence on communication timeout, missed steps or valve faults. Restore state, then reprime and verify.",
+    "Detenga la secuencia ante tiempo agotado, pérdida de pasos o fallo de válvula. Recupere estado, vuelva a cebar y verifique.",
+    "Arrêtez la séquence en cas de délai de communication, perte de pas ou défaut de vanne. Rétablissez l’état, réamorcez et vérifiez.",
+    "통신 시간 초과, 탈조 또는 밸브 이상 시 현재 절차를 중지하세요. 상태 복구 후 다시 충전하고 검증하세요.",
+    "Остановите цикл при тайм-ауте связи, пропуске шагов или неисправности клапана. Восстановите состояние, заново заполните и проверьте."
+  ],
+  [
+    "注射器安装、首次充液与剂量验证",
+    "Syringe installation, first priming and dose validation",
+    "Montaje de jeringa, primer cebado y validación",
+    "Montage de seringue, premier amorçage et validation des doses",
+    "주사기 설치, 최초 충전 및 분주량 검증",
+    "Установка шприца, первое заполнение и проверка дозы"
+  ],
+  [
+    "安装和更换注射器前，先将活塞移至合适位置，并在断电、泄压后操作，避免玻璃受侧向力或密封被强行拉动。",
+    "Move the plunger to a suitable position before fitting/replacing a syringe, then isolate power and release pressure. Avoid side loads on glass or forcibly pulling seals.",
+    "Sitúe el émbolo antes de instalar/cambiar jeringa; desconecte y despresurice. Evite esfuerzos laterales sobre vidrio y tirar de sellos a la fuerza.",
+    "Positionnez le piston avant montage/remplacement, puis coupez le courant et dépressurisez. Évitez efforts latéraux sur le verre et traction forcée des joints.",
+    "설치·교체 전에 플런저를 적절한 위치로 이동시키고 전원 차단·감압 후 작업하세요. 유리에 측면 힘을 가하거나 씰을 강제로 당기지 마세요.",
+    "Перед установкой/заменой переведите поршень в нужное положение, отключите питание и сбросьте давление. Избегайте боковых нагрузок на стекло и силового вытягивания уплотнений."
+  ],
+  [
+    "固定并核对注射器",
+    "Secure and check the syringe",
+    "Fije y compruebe la jeringa",
+    "Fixer et vérifier la seringue",
+    "주사기 고정 및 확인",
+    "Закрепите и проверьте шприц"
+  ],
+  [
+    "确认容量、行程、接口和活塞连接，检查玻璃、密封与紧固状态。",
+    "Check capacity, stroke, ports and plunger coupling, plus glass, seals and fastening.",
+    "Compruebe capacidad, carrera, puertos, unión del émbolo, vidrio, sellos y fijación.",
+    "Vérifiez capacité, course, ports, liaison du piston, verre, joints et fixation.",
+    "용량, 스트로크, 포트와 플런저 연결을 확인하고 유리, 씰과 체결 상태를 점검하세요.",
+    "Проверьте вместимость, ход, порты, соединение поршня, стекло, уплотнения и крепление."
+  ],
+  [
+    "通信与复位",
+    "Communication and homing",
+    "Comunicación y referencia",
+    "Communication et référencement",
+    "통신 및 원점 복귀",
+    "Связь и возврат в исходное положение"
+  ],
+  [
+    "完成地址、协议和初始化设置，查询阀及活塞状态，验证动作方向。",
+    "Set address, protocol and initialization, query valve/plunger status and verify direction.",
+    "Configure dirección, protocolo e inicialización; consulte estado y verifique sentido.",
+    "Réglez adresse, protocole et initialisation ; interrogez vannes/piston et vérifiez le sens.",
+    "주소·프로토콜·초기화를 설정하고 밸브·플런저 상태를 조회하여 동작 방향을 확인하세요.",
+    "Настройте адрес, протокол и инициализацию, запросите клапаны/поршень и проверьте направление."
+  ],
+  [
+    "低速充液排气",
+    "Prime and vent at low speed",
+    "Cebe y purgue a baja velocidad",
+    "Amorcer et purger à faible vitesse",
+    "저속 충전 및 기포 제거",
+    "Заполняйте и удаляйте воздух на малой скорости"
+  ],
+  [
+    "以相容介质按吸液和排液路径运行，检查注射器、阀和管路内气泡及接口泄漏。",
+    "Run compatible liquid through aspiration and discharge paths. Check syringe, valves and tubing for bubbles and connection leaks.",
+    "Circule líquido compatible por aspiración y descarga. Revise burbujas en jeringa, válvulas y tubos y fugas en conexiones.",
+    "Faites circuler un liquide compatible par aspiration et refoulement. Contrôlez bulles dans seringue, vannes et tubes, et fuites aux raccords.",
+    "호환 액체로 흡입·배출 경로를 가동하고 주사기, 밸브와 튜브 내 기포 및 연결 누설을 점검하세요.",
+    "Прокачайте совместимую жидкость через пути аспирации и выхода. Проверьте пузырьки в шприце, клапанах и трубках и утечки соединений."
+  ],
+  [
+    "测量目标剂量",
+    "Measure target doses",
+    "Mida las dosis objetivo",
+    "Mesurer les doses cibles",
+    "목표 분주량 측정",
+    "Измеряйте целевые дозы"
+  ],
+  [
+    "在最小、常用和最大目标量下重复收集，分别检查首次、连续分注和暂停后的输出。",
+    "Collect repeated minimum, routine and maximum doses. Check first, consecutive and post-pause outputs separately.",
+    "Recoja repetidamente dosis mínima, habitual y máxima. Verifique primera, consecutivas y tras pausa por separado.",
+    "Recueillez plusieurs doses minimales, courantes et maximales. Vérifiez séparément première dose, suivantes et reprise après pause.",
+    "최소·일상·최대 목표량을 반복 채취하고 첫 분주, 연속 분주와 일시 정지 후 토출을 각각 확인하세요.",
+    "Повторно собирайте минимальные, рабочие и максимальные дозы. Отдельно проверяйте первую, последовательные и порции после паузы."
+  ],
+  [
+    "验证清洗与重启",
+    "Validate cleaning and restart",
+    "Valide limpieza y reinicio",
+    "Valider nettoyage et redémarrage",
+    "세척 및 재시작 검증",
+    "Проверьте промывку и перезапуск"
+  ],
+  [
+    "按实际试剂确认清洗效果、残留与停机流程，更换注射器或阀配置后重新标定。",
+    "Validate cleaning, carryover and shutdown using actual reagents. Recalibrate after syringe or valve changes.",
+    "Valide limpieza, residuos y parada con reactivos reales. Recalibre tras cambiar jeringa o válvula.",
+    "Validez nettoyage, résidus et arrêt avec les réactifs réels. Réétalonnez après changement de seringue ou de vannes.",
+    "실제 시약으로 세척 효과, 잔류와 정지 절차를 확인하고 주사기 또는 밸브 구성을 바꾼 뒤 재교정하세요.",
+    "Проверяйте промывку, остатки и остановку с рабочими реагентами. После замены шприца или клапанов калибруйте заново."
+  ],
+  [
+    "清洗维护与常见异常",
+    "Cleaning, maintenance and common faults",
+    "Limpieza, mantenimiento y anomalías",
+    "Nettoyage, entretien et défauts courants",
+    "세척 유지보수 및 일반 이상",
+    "Промывка, обслуживание и типовые неисправности"
+  ],
+  [
+    "维护周期结合实际介质、动作次数和测试结果安排。接液部分泄漏、运动受阻或玻璃损伤时停止运行。",
+    "Set maintenance intervals from actual media, cycle count and test results. Stop for wetted-part leaks, obstructed motion or damaged glass.",
+    "Fije mantenimiento según medio, ciclos y ensayos. Pare ante fugas en partes mojadas, movimiento bloqueado o vidrio dañado.",
+    "Définissez l’entretien selon milieu, cycles et essais. Arrêtez en cas de fuite mouillée, mouvement bloqué ou verre endommagé.",
+    "실제 액체, 동작 횟수와 시험 결과로 정비 주기를 정하세요. 접액부 누설, 구동 방해 또는 유리 손상 시 정지하세요.",
+    "Назначайте обслуживание по среде, числу циклов и испытаниям. Остановитесь при утечке контактирующих частей, затруднении движения или повреждении стекла."
+  ],
+  [
+    "液量偏差或持续气泡",
+    "Volume error or persistent bubbles",
+    "Error de volumen o burbujas persistentes",
+    "Écart de volume ou bulles persistantes",
+    "액량 편차 또는 지속 기포",
+    "Ошибка дозы или постоянные пузырьки"
+  ],
+  [
+    "吸入口密封、注射器连接、阀位与预充状态",
+    "Inlet sealing, syringe coupling, valve position and priming",
+    "Sellado de entrada, unión de jeringa, posición y cebado",
+    "Étanchéité d’entrée, liaison seringue, position et amorçage",
+    "흡입구 밀봉, 주사기 연결, 밸브 위치 및 충전",
+    "Герметичность входа, соединение шприца, положение клапана и заполнение"
+  ],
+  [
+    "先恢复稳定充液，再检查速度和补偿，避免用增加步数掩盖漏气。",
+    "Restore stable priming before checking speed or compensation. Do not mask air leaks with extra steps.",
+    "Restablezca cebado estable antes de velocidad o compensación. No oculte fugas de aire aumentando pasos.",
+    "Rétablissez un remplissage stable avant vitesse ou compensation. Ne masquez pas une fuite d’air par davantage de pas.",
+    "먼저 안정적으로 충전한 뒤 속도·보정을 확인하세요. 스텝 수를 늘려 공기 누설을 숨기지 마세요.",
+    "Сначала восстановите устойчивое заполнение, затем проверяйте скорость и компенсацию. Не скрывайте подсос увеличением шагов."
+  ],
+  [
+    "阀切换后无液",
+    "No liquid after valve switching",
+    "Sin líquido tras conmutar",
+    "Absence de liquide après commutation",
+    "밸브 전환 후 액체 없음",
+    "Нет жидкости после переключения"
+  ],
+  [
+    "端口连接、阀状态与出口堵塞",
+    "Port connections, valve state and outlet blockage",
+    "Conexiones, estado y obstrucción de salida",
+    "Raccordements, état de vanne et sortie obstruée",
+    "포트 연결, 밸브 상태 및 출구 막힘",
+    "Соединения портов, состояние клапана и засорение выхода"
+  ],
+  [
+    "检查所选路径是否与流路图一致，确认通路可用后再运行活塞。",
+    "Compare the selected path with the diagram. Move the plunger only after confirming an open path.",
+    "Compare el circuito seleccionado con el esquema. Mueva el émbolo solo con vía abierta confirmada.",
+    "Comparez le circuit sélectionné au schéma. N’actionnez le piston qu’après confirmation d’un passage ouvert.",
+    "선택 유로가 유로도와 일치하는지 점검하고 통로가 열린 것을 확인한 뒤 플런저를 구동하세요.",
+    "Сравните выбранный путь со схемой. Двигайте поршень только после подтверждения открытого пути."
+  ],
+  [
+    "运动或复位错误",
+    "Motion or homing error",
+    "Error de movimiento o referencia",
+    "Défaut de mouvement ou référencement",
+    "구동 또는 원점 복귀 오류",
+    "Ошибка движения или возврата"
+  ],
+  [
+    "机械干涉、供电、注射器容量和初始化设置",
+    "Interference, power, syringe capacity and initialization settings",
+    "Interferencias, alimentación, capacidad e inicialización",
+    "Interférences, alimentation, capacité et initialisation",
+    "기구 간섭, 전원, 주사기 용량 및 초기화 설정",
+    "Помехи, питание, вместимость и параметры инициализации"
+  ],
+  [
+    "停止动作并查询错误记录，不强拉活塞或反复强制复位。",
+    "Stop and inspect error records. Do not pull the plunger forcibly or repeatedly force homing.",
+    "Pare y consulte errores. No tire del émbolo ni fuerce repetidamente la referencia.",
+    "Arrêtez et consultez les erreurs. Ne tirez pas le piston et ne forcez pas des référencements répétés.",
+    "동작을 멈추고 오류 기록을 조회하세요. 플런저를 강제로 당기거나 강제 원점 복귀를 반복하지 마세요.",
+    "Остановитесь и изучите ошибки. Не тяните поршень силой и не повторяйте принудительный возврат."
+  ],
+  [
+    "渗漏与磨损",
+    "Leakage and wear",
+    "Fugas y desgaste",
+    "Fuites et usure",
+    "누설 및 마모",
+    "Утечки и износ"
+  ],
+  [
+    "注射器、密封和阀的使用次数及介质残留",
+    "Syringe/seal/valve cycle counts and liquid residues",
+    "Ciclos de jeringa, sellos y válvula y residuos",
+    "Cycles de seringue, joints et vannes, et résidus",
+    "주사기·씰·밸브 사용 횟수 및 액체 잔류",
+    "Число циклов шприца, уплотнений и клапанов, остатки среды"
+  ],
+  [
+    "记录部位和工况，联系技术支持确认耗损件的更换和拆修方案。",
+    "Record location and conditions; contact technical support to agree wear-part replacement and servicing.",
+    "Registre punto y condiciones; acuerde con soporte sustitución de piezas de desgaste y reparación.",
+    "Consignez emplacement et conditions ; convenez avec l’assistance du remplacement des pièces d’usure et de la réparation.",
+    "발생 부위와 조건을 기록하고 소모 부품 교체·분해 수리는 기술 지원팀과 확인하세요.",
+    "Запишите место и условия; согласуйте с поддержкой замену изнашиваемых деталей и ремонт."
+  ],
+  [
+    "{0} mm 系列按对应注射器与通道配置选择",
+    "Select the {0} mm series with the corresponding syringe and channel configuration",
+    "Seleccione la serie {0} mm según jeringa y canales",
+    "Choisir la série {0} mm selon seringue et voies",
+    "{0} mm 계열은 해당 주사기·채널 구성에 맞춰 선택",
+    "Выбирайте серию {0} mm по шприцу и числу каналов"
+  ],
+  [
+    "HMD{0} 多于 {1} 通道时不支持 {2} mL 和 {3} mL 注射器",
+    "HMD{0} with more than {1} channel does not support {2} mL or {3} mL syringes",
+    "HMD{0} con más de {1} canal no admite jeringas de {2} mL ni {3} mL",
+    "HMD{0} à plus de {1} voie n’accepte pas les seringues de {2} mL ou {3} mL",
+    "HMD{0}은 {1}채널 초과 구성에서 {2} mL 및 {3} mL 주사기를 지원하지 않습니다.",
+    "HMD{0} при числе каналов больше {1} не поддерживает шприцы {2} mL и {3} mL"
+  ],
+  [
+    "HLD{0} 采用 {1} mm 行程驱动注射器，配套旋转阀组织吸液、分配与清洗路径。选型应同时确定注射器容量、阀路连接和运动节拍。",
+    "HLD{0} drives a syringe over a {1} mm stroke, using a rotary valve for aspiration, dispensing and cleaning paths. Select capacity, valve connections and cycle timing together.",
+    "HLD{0} acciona una jeringa con carrera {1} mm y válvula rotativa para aspiración, dispensación y limpieza. Seleccione capacidad, conexiones y ciclo conjuntamente.",
+    "HLD{0} entraîne une seringue sur {1} mm avec vanne rotative pour aspiration, distribution et nettoyage. Choisissez ensemble capacité, raccordements et cadence.",
+    "HLD{0}은 {1} mm 스트로크로 주사기를 구동하고 로터리 밸브로 흡입·분주·세척 경로를 구성합니다. 용량, 밸브 연결과 동작 주기를 함께 선정하세요.",
+    "HLD{0} перемещает поршень шприца на {1} mm; ротационный клапан задаёт аспирацию, дозирование и промывку. Вместимость, соединения и цикл выбирайте совместно."
+  ],
+  [
+    "多位置选路",
+    "Multi-position path selection",
+    "Selección multiposición",
+    "Sélection multiposition",
+    "다위치 유로 선택",
+    "Многопозиционный выбор пути"
+  ],
+  [
+    "按公共口、可选端口与内部流道图设计试剂和清洗路径，不能只按接口数量选阀。",
+    "Design reagent/cleaning paths from the common port, selectable ports and internal diagram, not connection count alone.",
+    "Diseñe circuitos de reactivo/limpieza según puerto común, puertos seleccionables y esquema interno, no solo por número de conexiones.",
+    "Concevez les circuits réactif/nettoyage selon port commun, ports sélectionnables et schéma interne, pas seulement leur nombre.",
+    "공통 포트, 선택 포트와 내부 유로도로 시약·세척 경로를 설계하세요. 연결부 개수만으로 밸브를 선정하지 마세요.",
+    "Проектируйте пути реагентов/промывки по общему порту, выбираемым портам и внутренней схеме, а не только числу соединений."
+  ],
+  [
+    "HLD{0}，{1} mm 行程；注射器容量、通道数与阀配置分别确认。",
+    "HLD{0}, {1} mm stroke; confirm syringe capacity, channel count and valve configuration separately.",
+    "HLD{0}, carrera {1} mm; confirme capacidad, canales y válvula por separado.",
+    "HLD{0}, course {1} mm ; confirmer séparément capacité, voies et vanne.",
+    "HLD{0}, 스트로크 {1} mm. 주사기 용량, 채널 수와 밸브 구성을 각각 확인하세요.",
+    "HLD{0}, ход {1} mm; отдельно подтвердите вместимость, число каналов и клапан."
+  ],
+  [
+    "旋转阀端口与吸排液路径",
+    "Rotary-valve ports and aspiration/dispense paths",
+    "Puertos de válvula rotativa y circuitos",
+    "Ports de vanne rotative et circuits d’aspiration/distribution",
+    "로터리 밸브 포트 및 흡입·분주 유로",
+    "Порты ротационного клапана и пути аспирации/дозирования"
+  ],
+  [
+    "先在流路图上标出注射器公共连接、各储液口、分配口与清洗口，再按对应阀的连接关系安排位置。",
+    "Mark the syringe common connection, reservoirs, dispensing and cleaning ports on the diagram, then assign positions from the chosen valve’s connections.",
+    "Marque conexión común de jeringa, depósitos, dispensación y limpieza; asigne posiciones según las conexiones de la válvula.",
+    "Repérez liaison commune de seringue, réservoirs, distribution et nettoyage ; attribuez les positions selon les connexions de la vanne.",
+    "유로도에 주사기 공통 연결, 각 저장 포트, 분주·세척 포트를 표시하고 해당 밸브의 연결 관계에 맞춰 위치를 정하세요.",
+    "Отметьте общее соединение шприца, ёмкости, дозирующие и промывочные порты; назначьте положения по соединениям выбранного клапана."
+  ],
+  [
+    "按所选旋转阀流道图确定可用路径",
+    "Determine available paths from the selected rotary-valve diagram",
+    "Determine las vías según el esquema de la válvula rotativa elegida",
+    "Déterminer les circuits selon le schéma de la vanne choisie",
+    "선택 로터리 밸브 유로도로 가용 경로 확인",
+    "Определяйте доступные пути по схеме выбранного ротационного клапана"
+  ]
+]

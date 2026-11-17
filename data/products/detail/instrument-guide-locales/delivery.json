@@ -1,0 +1,938 @@
+[
+  [
+    "产品经出厂检验后进行防护包装，装箱时核对型号、数量及随货资料，完成封箱与标识检查后安排发货。",
+    "Products undergo outgoing inspection and protective packaging. The model, quantity and accompanying documents are checked during packing, followed by carton sealing and label checks before dispatch.",
+    "Tras la inspección final, los productos se acondicionan con un embalaje de protección. Durante el embalaje se verifican el modelo, la cantidad y la documentación adjunta; después se comprueban el cierre y el etiquetado antes del envío.",
+    "Après le contrôle final, les produits sont placés dans un emballage de protection. Le modèle, la quantité et les documents joints sont vérifiés lors de la mise en carton, puis la fermeture et l’étiquetage sont contrôlés avant l’expédition.",
+    "출하 검사를 마친 제품을 보호 포장합니다. 포장 시 모델, 수량 및 동봉 자료를 확인하고, 상자 밀봉과 라벨 확인을 완료한 후 발송합니다.",
+    "После выходного контроля изделия упаковывают с применением защитных материалов. При упаковке проверяют модель, количество и сопроводительные документы, затем проверяют заклейку коробки и маркировку перед отправкой."
+  ],
+  [
+    "内包装与产品防护",
+    "Inner packaging and product protection",
+    "Embalaje interior y protección",
+    "Emballage intérieur et protection",
+    "내부 포장 및 제품 보호",
+    "Внутренняя упаковка и защита"
+  ],
+  [
+    "产品防护：根据确认的泵体结构配置泡棉内衬，为泵头与接口留出空间，减少运输中的碰撞与挤压。",
+    "Protection: foam inserts match the confirmed pump structure, with clearance for heads and ports to reduce impact and compression during transport.",
+    "Protección: espuma adaptada a la bomba, con espacio para cabezal y puertos para reducir golpes y compresión.",
+    "Protection : calage adapté à la pompe avec dégagement pour tête et ports, afin de limiter chocs et écrasement.",
+    "제품 보호: 확인된 펌프 구조에 맞는 폼으로 헤드·포트 공간을 확보해 운송 충격·압축을 줄입니다.",
+    "Защита: пеновкладыш под конструкцию насоса оставляет место головке и портам, снижая удары и сжатие в пути."
+  ],
+  [
+    "型号核对：收货时按订单核对泵体铭牌、料号及数量。",
+    "Model check: compare pump nameplate, part number and quantity with the order on receipt.",
+    "Modelo: compare placa, referencia y cantidad con el pedido al recibir.",
+    "Vérification : comparez plaque, référence et quantité à la commande à réception.",
+    "모델 확인: 수령 시 주문과 명판, 품번·수량을 대조하세요.",
+    "Проверка: при получении сверяйте табличку, артикул и количество с заказом."
+  ],
+  [
+    "{0} mm 行程注射泵产品防护",
+    "{0} mm-stroke syringe pump: product protection",
+    "Bomba de jeringa de {0} mm de carrera: protección del producto",
+    "Pompe à seringue, course de {0} mm : protection du produit",
+    "{0} mm 스트로크 시린지 펌프 제품 보호",
+    "Шприцевой насос с ходом {0} mm — защита изделия"
+  ],
+  [
+    "产品防护",
+    "Product protection",
+    "Protección del producto",
+    "Protection du produit",
+    "제품 보호",
+    "Защита изделия"
+  ],
+  [
+    "{0} mm 行程注射泵缓冲包装",
+    "{0} mm-stroke syringe pump: cushioning",
+    "Bomba de jeringa de {0} mm de carrera: embalaje amortiguador",
+    "Pompe à seringue, course de {0} mm : calage de protection",
+    "{0} mm 스트로크 시린지 펌프 완충 포장",
+    "Шприцевой насос с ходом {0} mm — амортизирующая упаковка"
+  ],
+  [
+    "缓冲包装",
+    "Cushioning",
+    "Embalaje amortiguador",
+    "Calage de protection",
+    "완충 포장",
+    "Амортизирующая упаковка"
+  ],
+  [
+    "泡棉盖板与内盒封装",
+    "Foam cover and inner-carton closure",
+    "Tapa de espuma y cierre interior",
+    "Couvercle en mousse et fermeture intérieure",
+    "폼 덮개 및 내부 상자 봉함",
+    "Пенокрышка и закрытие внутренней коробки"
+  ],
+  [
+    "泡棉保护：泵体放置后覆盖泡棉盖板，再合上独立内盒。",
+    "Foam protection: cover the positioned pump with a foam lid, then close its individual carton.",
+    "Espuma: cubra la bomba con la tapa antes de cerrar la caja individual.",
+    "Mousse : couvrez la pompe d’un couvercle en mousse puis fermez sa boîte.",
+    "폼 보호: 펌프 배치 후 폼 덮개를 씌우고 개별 상자를 닫습니다.",
+    "Защита: после укладки насоса закройте пенокрышку, затем индивидуальную коробку."
+  ],
+  [
+    "{0} mm 行程注射泵内盒封装",
+    "{0} mm-stroke syringe pump: inner carton",
+    "Bomba de jeringa de {0} mm de carrera: caja interior",
+    "Pompe à seringue, course de {0} mm : boîte intérieure",
+    "{0} mm 스트로크 시린지 펌프 내부 상자 포장",
+    "Шприцевой насос с ходом {0} mm — внутренняя коробка"
+  ],
+  [
+    "内盒封装",
+    "Inner carton",
+    "Caja interior",
+    "Boîte intérieure",
+    "내부 상자 포장",
+    "Внутренняя коробка"
+  ],
+  [
+    "外箱装运与收货核对",
+    "Shipping carton and receipt checks",
+    "Caja de transporte y recepción",
+    "Carton d’expédition et contrôles à réception",
+    "외부 배송 상자 및 수령 확인",
+    "Транспортная коробка и приёмка"
+  ],
+  [
+    "缓冲装箱：独立内盒装入外箱，周边使用泡棉缓冲。",
+    "Cushioning: individual inner cartons are placed in the shipping carton with foam cushioning around them.",
+    "Amortiguación: las cajas interiores se colocan en la caja de envío con espuma alrededor.",
+    "Calage : les boîtes intérieures sont placées dans le carton d’expédition avec un calage en mousse autour.",
+    "완충 포장: 개별 내부 상자를 외부 상자에 넣고 주변을 폼으로 완충합니다.",
+    "Амортизация: отдельные внутренние коробки укладывают во внешнюю коробку с пеноматериалом вокруг них."
+  ],
+  [
+    "发货安排：按确认的订单交期与运输方式发货，并提供物流信息。",
+    "Dispatch: ship to the confirmed schedule and transport method and provide logistics information.",
+    "Envío: según plazo y transporte confirmados, con información logística.",
+    "Expédition : selon délai et transport confirmés, avec informations logistiques.",
+    "발송: 확정 납기·운송 방식에 따라 발송하고 물류 정보를 제공합니다.",
+    "Отправка: по согласованным сроку и способу, с логистической информацией."
+  ],
+  [
+    "收货核对：检查外箱状态、型号与数量；发现运输损伤或缺件时保留包装及照片并及时联系。",
+    "Receipt: check carton condition, model and quantity. Preserve packaging and photographs and contact us promptly for transit damage or missing items.",
+    "Recepción: revise caja, modelo y cantidad. Conserve embalaje y fotos y contacte ante daños o faltantes.",
+    "Réception : vérifiez carton, modèle et quantité. Conservez emballage et photos et contactez-nous en cas de dommage ou manque.",
+    "수령: 상자 상태, 모델·수량을 확인하세요. 운송 손상·누락 시 포장·사진을 보관하고 즉시 연락하세요.",
+    "Приёмка: проверьте коробку, модель и количество. При повреждении или недостаче сохраните упаковку и фото и сразу свяжитесь с нами."
+  ],
+  [
+    "{0} mm 行程注射泵封箱待发",
+    "{0} mm-stroke syringe pump: ready for dispatch",
+    "Bomba de jeringa de {0} mm de carrera: listo para el envío",
+    "Pompe à seringue, course de {0} mm : prêt à expédier",
+    "{0} mm 스트로크 시린지 펌프 밀봉 후 출하 대기",
+    "Шприцевой насос с ходом {0} mm — готово к отправке"
+  ],
+  [
+    "封箱待发",
+    "Ready for dispatch",
+    "Listo para el envío",
+    "Prêt à expédier",
+    "밀봉 후 출하 대기",
+    "Готово к отправке"
+  ],
+  [
+    "内包装与泡棉防护",
+    "Inner packaging and foam protection",
+    "Embalaje interior y espuma",
+    "Emballage intérieur et mousse",
+    "내부 포장 및 폼 보호",
+    "Внутренняя упаковка и пенозащита"
+  ],
+  [
+    "产品防护：泵体袋装后放入泡棉内衬，减少运输中与包装材料的直接摩擦及碰撞。",
+    "Protection: the bagged pump rests in foam to reduce direct rubbing against packaging and transport impacts.",
+    "Protección: bomba embolsada en espuma para reducir roce con embalaje y golpes.",
+    "Protection : pompe ensachée dans la mousse pour réduire frottements et chocs.",
+    "제품 보호: 펌프를 봉투에 넣고 폼에 배치해 포장재와의 직접 마찰·충격을 줄입니다.",
+    "Защита: насос в пакете помещён в пеновкладыш для снижения трения об упаковку и ударов."
+  ],
+  [
+    "上层保护：装箱后覆盖泡棉盖板，检查产品放置与周边缓冲状态。",
+    "Top protection: add the foam cover after packing and check product placement and surrounding cushioning.",
+    "Protección superior: coloque tapa de espuma y compruebe posición y acolchado.",
+    "Protection supérieure : ajoutez le couvercle et vérifiez position et calage.",
+    "상부 보호: 포장 후 폼 덮개를 씌우고 제품 배치·주변 완충을 점검합니다.",
+    "Верхняя защита: накройте пенокрышкой и проверьте укладку и амортизацию вокруг."
+  ],
+  [
+    "外箱装箱与包装检查",
+    "Carton packing and inspection",
+    "Embalaje exterior e inspección",
+    "Mise en carton et contrôle",
+    "외부 포장 및 포장 점검",
+    "Укладка и проверка упаковки"
+  ],
+  [
+    "缓冲装箱：内包装与泡棉配合放置，减少运输中的碰撞与挤压。",
+    "Cushioning: inner packaging and foam are arranged together to reduce impacts and compression during transport.",
+    "Amortiguación: el embalaje interior y la espuma se colocan de forma que reduzcan los golpes y la compresión durante el transporte.",
+    "Calage : l’emballage intérieur et la mousse sont disposés pour réduire les chocs et la compression pendant le transport.",
+    "완충 포장: 내부 포장과 폼을 함께 배치하여 운송 중 충격과 눌림을 줄입니다.",
+    "Амортизация: внутренняя упаковка и пеноматериал уменьшают удары и сдавливание при перевозке."
+  ],
+  [
+    "包装检查：封箱前核对产品、配套附件及包装状态，确认后再封箱。",
+    "Packing check: verify product, accessories and packaging before sealing the carton.",
+    "Control: revise producto, accesorios y embalaje antes de sellar.",
+    "Contrôle : vérifiez produit, accessoires et emballage avant fermeture.",
+    "포장 점검: 제품, 부속품·포장 상태를 확인한 뒤 봉함합니다.",
+    "Проверка: до запечатывания проверьте изделие, принадлежности и упаковку."
+  ],
+  [
+    "{0} mm 行程注射泵包装作业",
+    "{0} mm-stroke syringe pump: packing",
+    "Bomba de jeringa de {0} mm de carrera: embalaje",
+    "Pompe à seringue, course de {0} mm : mise en carton",
+    "{0} mm 스트로크 시린지 펌프 포장 작업",
+    "Шприцевой насос с ходом {0} mm — упаковка"
+  ],
+  [
+    "包装作业",
+    "Packing",
+    "Embalaje",
+    "Mise en carton",
+    "포장 작업",
+    "Упаковка"
+  ],
+  [
+    "外箱标识与发货核对",
+    "Carton labels and dispatch checks",
+    "Etiquetas y verificación de envío",
+    "Étiquettes et contrôle d’expédition",
+    "외부 라벨 및 발송 확인",
+    "Этикетки и проверка отправки"
+  ],
+  [
+    "产品标识：通过外箱物料卡核对型号、料号、装箱数量及追溯信息。",
+    "Identification: check model, part number, carton quantity and traceability on the outer label.",
+    "Identificación: revise modelo, referencia, cantidad y trazabilidad en etiqueta.",
+    "Identification : vérifiez modèle, référence, quantité et traçabilité sur l’étiquette.",
+    "식별: 외부 라벨로 모델, 품번, 포장 수량과 추적 정보를 확인하세요.",
+    "Маркировка: сверяйте модель, артикул, количество и прослеживаемость по внешней этикетке."
+  ],
+  [
+    "发货与收货：按确认交期和运输方式发货；收货时核对外箱状态、型号与数量，异常时保留包装及照片并联系。",
+    "Dispatch/receipt: ship as agreed; on receipt check carton, model and quantity. Retain packaging/photos and contact us for discrepancies.",
+    "Envío/recepción: según acuerdo; revise caja, modelo y cantidad. Guarde embalaje/fotos y comunique anomalías.",
+    "Expédition/réception : selon accord ; vérifiez carton, modèle et quantité. Conservez emballage/photos et signalez toute anomalie.",
+    "발송·수령: 확정 조건으로 발송하며 수령 시 상자, 모델·수량을 확인하세요. 이상 시 포장·사진을 보관하고 연락하세요.",
+    "Отправка/приёмка: по договорённости; проверьте коробку, модель и количество. При отклонении сохраните упаковку/фото и свяжитесь с нами."
+  ],
+  [
+    "{0} mm 行程注射泵包装标识",
+    "{0} mm-stroke syringe pump: package labeling",
+    "Bomba de jeringa de {0} mm de carrera: etiquetado del embalaje",
+    "Pompe à seringue, course de {0} mm : étiquetage de l’emballage",
+    "{0} mm 스트로크 시린지 펌프 포장 라벨",
+    "Шприцевой насос с ходом {0} mm — маркировка упаковки"
+  ],
+  [
+    "包装标识",
+    "Package labeling",
+    "Etiquetado del embalaje",
+    "Étiquetage de l’emballage",
+    "포장 라벨",
+    "Маркировка упаковки"
+  ],
+  [
+    "产品与线束防护",
+    "Product and harness protection",
+    "Protección de producto y cables",
+    "Protection du produit et des faisceaux",
+    "제품 및 배선 보호",
+    "Защита изделия и жгутов"
+  ],
+  [
+    "内包装：产品使用缓冲材料包裹，配套线束按确认配置提供并妥善放置。",
+    "Inner packaging: cushioning wraps the product; harnesses follow the confirmed configuration and are secured appropriately.",
+    "Interior: material amortiguador envuelve el producto; cables según configuración, colocados correctamente.",
+    "Intérieur : produit enveloppé de protection ; faisceaux selon configuration, rangés correctement.",
+    "내부: 완충재로 제품을 감싸고 확인 구성의 배선을 안전하게 배치합니다.",
+    "Внутри: изделие обёрнуто защитой; жгуты по комплектации надёжно уложены."
+  ],
+  [
+    "缓冲装箱：独立内盒与外层泡棉配合，减少运输中的碰撞和挤压。",
+    "Cushioned packing: individual cartons and outer foam reduce transport impact and compression.",
+    "Cajas individuales y espuma exterior reducen golpes y compresión.",
+    "Boîtes individuelles et mousse extérieure limitent chocs et compression.",
+    "개별 상자와 외부 폼으로 운송 충격·압축을 줄입니다.",
+    "Индивидуальные коробки и внешняя пенозащита снижают удары и сжатие."
+  ],
+  [
+    "ABD 气泡传感器产品防护",
+    "ABD air bubble detector: product protection",
+    "Detector de burbujas ABD: protección del producto",
+    "Détecteur de bulles ABD : protection du produit",
+    "ABD 기포 감지기 제품 보호",
+    "Датчик пузырьков ABD — защита изделия"
+  ],
+  [
+    "ABD 气泡传感器缓冲包装",
+    "ABD air bubble detector: cushioning",
+    "Detector de burbujas ABD: embalaje amortiguador",
+    "Détecteur de bulles ABD : calage de protection",
+    "ABD 기포 감지기 완충 포장",
+    "Датчик пузырьков ABD — амортизирующая упаковка"
+  ],
+  [
+    "检验资料与型号核对",
+    "Inspection records and model checks",
+    "Registros e identificación de modelo",
+    "Relevés de contrôle et vérification du modèle",
+    "검사 자료 및 모델 확인",
+    "Протоколы контроля и проверка модели"
+  ],
+  [
+    "随货资料：检验记录等资料随产品一同装箱。",
+    "Documents: inspection records and other accompanying documents are packed with the product.",
+    "Documentación: los registros de inspección y otros documentos se embalan junto con el producto.",
+    "Documents : les relevés de contrôle et autres documents joints sont placés dans le carton avec le produit.",
+    "동봉 자료: 검사 기록 등의 자료를 제품과 함께 포장합니다.",
+    "Документы: протоколы контроля и другие сопроводительные документы упаковывают вместе с изделием."
+  ],
+  [
+    "型号核对：核对内盒上的型号和料号，并与订单及随货资料对应。",
+    "Model check: compare the inner-carton model and part number with the order and supplied documents.",
+    "Modelo: compare modelo/referencia de caja con pedido y documentos.",
+    "Vérification : comparez référence de boîte, commande et documents joints.",
+    "모델 확인: 개별 상자의 모델·품번을 주문·동봉 문서와 대조하세요.",
+    "Проверка: сопоставьте модель и артикул коробки с заказом и документами."
+  ],
+  [
+    "ABD 气泡传感器随货资料",
+    "ABD air bubble detector: accompanying documents",
+    "Detector de burbujas ABD: documentación adjunta",
+    "Détecteur de bulles ABD : documents joints",
+    "ABD 기포 감지기 동봉 자료",
+    "Датчик пузырьков ABD — сопроводительные документы"
+  ],
+  [
+    "随货资料",
+    "Accompanying documents",
+    "Documentación adjunta",
+    "Documents joints",
+    "동봉 자료",
+    "Сопроводительные документы"
+  ],
+  [
+    "ABD 气泡传感器包装标识",
+    "ABD air bubble detector: package labeling",
+    "Detector de burbujas ABD: etiquetado del embalaje",
+    "Détecteur de bulles ABD : étiquetage de l’emballage",
+    "ABD 기포 감지기 포장 라벨",
+    "Датчик пузырьков ABD — маркировка упаковки"
+  ],
+  [
+    "外包装与收货核对",
+    "Outer packaging and receipt checks",
+    "Embalaje exterior y recepción",
+    "Emballage extérieur et réception",
+    "외부 포장 및 수령 확인",
+    "Внешняя упаковка и приёмка"
+  ],
+  [
+    "外箱标识：通过物料标识卡核对产品、数量及追溯信息。",
+    "Carton identification: check product, quantity and traceability against the material label.",
+    "Etiqueta: revise producto, cantidad y trazabilidad.",
+    "Identification : vérifiez produit, quantité et traçabilité sur l’étiquette.",
+    "외부 식별: 물품 라벨로 제품, 수량·추적 정보를 확인하세요.",
+    "Маркировка: проверьте изделие, количество и прослеживаемость по этикетке."
+  ],
+  [
+    "收货检查：核对包装状态、型号、数量及线束；发现运输损伤或缺件时保留包装及照片并及时联系。",
+    "Receipt: check packaging, model, quantity and harnesses. Keep packaging/photos and contact us promptly for damage or missing items.",
+    "Recepción: revise embalaje, modelo, cantidad y cables. Guarde embalaje/fotos y contacte ante daños o faltantes.",
+    "Réception : vérifiez emballage, modèle, quantité et faisceaux. Conservez emballage/photos et signalez dommages ou manques.",
+    "수령: 포장, 모델·수량·배선을 확인하세요. 손상·누락 시 포장·사진을 보관하고 즉시 연락하세요.",
+    "Приёмка: проверьте упаковку, модель, количество и жгуты. При повреждении/недостаче сохраните упаковку/фото и свяжитесь с нами."
+  ],
+  [
+    "ABD 气泡传感器内盒封装",
+    "ABD air bubble detector: inner carton",
+    "Detector de burbujas ABD: caja interior",
+    "Détecteur de bulles ABD : boîte intérieure",
+    "ABD 기포 감지기 내부 상자 포장",
+    "Датчик пузырьков ABD — внутренняя коробка"
+  ],
+  [
+    "产品与配套线束",
+    "Product and supplied harnesses",
+    "Producto y cables suministrados",
+    "Produit et faisceaux fournis",
+    "제품 및 공급 배선",
+    "Изделие и комплектные жгуты"
+  ],
+  [
+    "产品防护：移液泵袋装后放入泡棉内衬，保护泵体与连接部位。",
+    "Protection: the bagged pipetting pump rests in foam protecting its body and connections.",
+    "Protección: bomba embolsada en espuma que protege cuerpo y conexiones.",
+    "Protection : pompe ensachée dans la mousse, protégeant corps et raccordements.",
+    "보호: 펌프를 봉투에 넣고 폼에 배치해 본체·연결부를 보호합니다.",
+    "Защита: насос в пакете размещён в пеновкладыше для защиты корпуса и соединений."
+  ],
+  [
+    "配套附件：线束装袋随货，收货时核对连接器、数量和供货清单。",
+    "Accessories: harnesses are supplied in bags. On receipt, check the connectors, quantities and packing list.",
+    "Accesorios: los cables se suministran en bolsas. Al recibirlos, compruebe los conectores, las cantidades y la lista de empaque.",
+    "Accessoires : les faisceaux sont fournis en sachets. À réception, vérifiez les connecteurs, les quantités et la liste de colisage.",
+    "부속품: 배선을 봉투에 넣어 동봉합니다. 수령 시 커넥터, 수량 및 공급 목록을 확인하세요.",
+    "Принадлежности: жгуты проводов поставляются в пакетах. При получении проверьте разъёмы, количество и упаковочный лист."
+  ],
+  [
+    "移液泵产品防护",
+    "Pipetting pump: product protection",
+    "Bomba de pipeteo: protección del producto",
+    "Pompe de pipetage : protection du produit",
+    "피펫팅 펌프 제품 보호",
+    "Насос для пипетирования — защита изделия"
+  ],
+  [
+    "移液泵随货资料",
+    "Pipetting pump: accompanying documents",
+    "Bomba de pipeteo: documentación adjunta",
+    "Pompe de pipetage : documents joints",
+    "피펫팅 펌프 동봉 자료",
+    "Насос для пипетирования — сопроводительные документы"
+  ],
+  [
+    "泡棉盖板与内盒保护",
+    "Foam cover and inner-carton protection",
+    "Tapa de espuma y protección interior",
+    "Couvercle en mousse et protection intérieure",
+    "폼 덮개 및 내부 상자 보호",
+    "Пенокрышка и защита внутренней коробки"
+  ],
+  [
+    "缓冲防护：产品放置后覆盖泡棉盖板，再合上内盒，减少碰撞与挤压。",
+    "Cushioning: add the foam cover and close the inner carton to reduce impact and compression.",
+    "Protección: añada tapa y cierre interior para reducir golpes y compresión.",
+    "Calage : ajoutez le couvercle et fermez la boîte pour limiter chocs et compression.",
+    "완충: 제품 배치 후 폼 덮개·상자를 닫아 충격·압축을 줄입니다.",
+    "Защита: накройте пенокрышкой и закройте коробку, снижая удары и сжатие."
+  ],
+  [
+    "搬运提示：按包装上的搬运标识轻拿轻放。",
+    "Handling: handle with care and follow the markings on the packaging.",
+    "Manipulación: maneje con cuidado y siga las indicaciones del embalaje.",
+    "Manutention : manipulez avec précaution et respectez les indications sur l’emballage.",
+    "취급: 포장에 표시된 취급 지침에 따라 조심해서 다루세요.",
+    "Обращение: обращайтесь осторожно и соблюдайте указания на упаковке."
+  ],
+  [
+    "移液泵缓冲包装",
+    "Pipetting pump: cushioning",
+    "Bomba de pipeteo: embalaje amortiguador",
+    "Pompe de pipetage : calage de protection",
+    "피펫팅 펌프 완충 포장",
+    "Насос для пипетирования — амортизирующая упаковка"
+  ],
+  [
+    "移液泵内盒封装",
+    "Pipetting pump: inner carton",
+    "Bomba de pipeteo: caja interior",
+    "Pompe de pipetage : boîte intérieure",
+    "피펫팅 펌프 내부 상자 포장",
+    "Насос для пипетирования — внутренняя коробка"
+  ],
+  [
+    "封箱发货与收货核对",
+    "Sealing, dispatch and receipt checks",
+    "Sellado, envío y recepción",
+    "Fermeture, expédition et réception",
+    "봉함, 발송 및 수령 확인",
+    "Запечатывание, отправка и приёмка"
+  ],
+  [
+    "发货安排：按确认的订单交期和运输方式发货，发货后提供物流信息。",
+    "Dispatch: ship to the confirmed order schedule and transport method; provide logistics information after dispatch.",
+    "Envío: plazo y transporte confirmados; información logística tras salida.",
+    "Expédition : délai et transport confirmés ; suivi après départ.",
+    "발송: 확정 납기·운송 방식에 따라 발송 후 물류 정보를 제공합니다.",
+    "Отправка: по сроку и способу заказа; после отправки предоставляется логистическая информация."
+  ],
+  [
+    "收货核对：检查型号、数量、线束、随货资料和包装状态；如有运输损伤或缺件，保留包装及照片并及时联系。",
+    "Receipt: check model, quantity, harnesses, documents and packaging. Keep packaging/photos and contact us promptly for damage or shortages.",
+    "Recepción: revise modelo, cantidad, cables, documentos y embalaje. Conserve embalaje/fotos y contacte ante daños o faltantes.",
+    "Réception : vérifiez modèle, quantité, faisceaux, documents et emballage. Conservez emballage/photos et signalez dommages ou manques.",
+    "수령: 모델·수량·배선·문서·포장을 확인하세요. 손상·누락 시 포장·사진을 보관하고 즉시 연락하세요.",
+    "Приёмка: проверьте модель, количество, жгуты, документы и упаковку. При повреждении/недостаче сохраните упаковку/фото и свяжитесь с нами."
+  ],
+  [
+    "移液泵包装作业",
+    "Pipetting pump: packing",
+    "Bomba de pipeteo: embalaje",
+    "Pompe de pipetage : mise en carton",
+    "피펫팅 펌프 포장 작업",
+    "Насос для пипетирования — упаковка"
+  ],
+  [
+    "移液泵封箱待发",
+    "Pipetting pump: ready for dispatch",
+    "Bomba de pipeteo: listo para el envío",
+    "Pompe de pipetage : prêt à expédier",
+    "피펫팅 펌프 밀봉 후 출하 대기",
+    "Насос для пипетирования — готово к отправке"
+  ],
+  [
+    "静电防护与检验资料",
+    "ESD protection and inspection records",
+    "Protección ESD y registros",
+    "Protection ESD et relevés de contrôle",
+    "정전기 보호 및 검사 자료",
+    "Защита ESD и протоколы контроля"
+  ],
+  [
+    "产品防护：模块采用防静电袋包装。",
+    "Product protection: the module is packed in an ESD protective bag.",
+    "Protección del producto: el módulo se embala en una bolsa de protección contra descargas electrostáticas.",
+    "Protection du produit : le module est conditionné dans un sachet de protection contre les décharges électrostatiques.",
+    "제품 보호: 모듈을 정전기 방지 봉투에 포장합니다.",
+    "Защита изделия: модуль упакован в пакет для защиты от электростатического разряда."
+  ],
+  [
+    "检验资料：产品检验记录随货提供。",
+    "Inspection documents: product inspection records accompany the shipment.",
+    "Documentación de inspección: los registros de inspección del producto acompañan al envío.",
+    "Documents de contrôle : les relevés de contrôle du produit accompagnent l’expédition.",
+    "검사 자료: 제품 검사 기록을 동봉합니다.",
+    "Документы контроля: протоколы контроля изделия прилагаются к поставке."
+  ],
+  [
+    "PDM 压力检测模块产品防护",
+    "PDM pressure detection module: product protection",
+    "Módulo de detección de presión PDM: protección del producto",
+    "Module de détection de pression PDM : protection du produit",
+    "PDM 압력 검출 모듈 제품 보호",
+    "Модуль измерения давления PDM — защита изделия"
+  ],
+  [
+    "PDM 压力检测模块随货资料",
+    "PDM pressure detection module: accompanying documents",
+    "Módulo de detección de presión PDM: documentación adjunta",
+    "Module de détection de pression PDM : documents joints",
+    "PDM 압력 검출 모듈 동봉 자료",
+    "Модуль измерения давления PDM — сопроводительные документы"
+  ],
+  [
+    "独立内盒与缓冲装箱",
+    "Individual cartons and cushioned packing",
+    "Cajas individuales y protección",
+    "Boîtes individuelles et calage",
+    "개별 상자 및 완충 포장",
+    "Индивидуальные коробки и амортизация"
+  ],
+  [
+    "型号核对：核对独立内盒的型号、料号及供货数量，并与订单对应。",
+    "Model check: compare inner-carton model, part number and supplied quantity with the order.",
+    "Modelo: compare modelo, referencia y cantidad interior con pedido.",
+    "Vérification : comparez modèle, référence et quantité à la commande.",
+    "모델: 개별 상자의 모델·품번·공급 수량을 주문과 대조하세요.",
+    "Проверка: сверяйте модель, артикул и количество внутренней коробки с заказом."
+  ],
+  [
+    "缓冲装箱：独立内盒与泡棉共同放入外箱，随货资料妥善放置。",
+    "Cushioning: individual inner cartons and foam are placed in the shipping carton, with accompanying documents secured inside.",
+    "Amortiguación: las cajas interiores y la espuma se colocan en la caja de envío, con la documentación bien protegida.",
+    "Calage : les boîtes intérieures et la mousse sont placées dans le carton d’expédition, avec les documents joints soigneusement rangés.",
+    "완충 포장: 개별 내부 상자와 폼을 외부 상자에 함께 넣고 동봉 자료를 안전하게 배치합니다.",
+    "Амортизация: внутренние коробки и пеноматериал укладывают во внешнюю коробку, аккуратно размещая сопроводительные документы."
+  ],
+  [
+    "PDM 压力检测模块包装标识",
+    "PDM pressure detection module: package labeling",
+    "Módulo de detección de presión PDM: etiquetado del embalaje",
+    "Module de détection de pression PDM : étiquetage de l’emballage",
+    "PDM 압력 검출 모듈 포장 라벨",
+    "Модуль измерения давления PDM — маркировка упаковки"
+  ],
+  [
+    "PDM 压力检测模块缓冲包装",
+    "PDM pressure detection module: cushioning",
+    "Módulo de detección de presión PDM: embalaje amortiguador",
+    "Module de détection de pression PDM : calage de protection",
+    "PDM 압력 검출 모듈 완충 포장",
+    "Модуль измерения давления PDM — амортизирующая упаковка"
+  ],
+  [
+    "外箱标识与收货核对",
+    "Outer labels and receipt checks",
+    "Etiquetas exteriores y recepción",
+    "Étiquettes et réception",
+    "외부 라벨 및 수령 확인",
+    "Внешние этикетки и приёмка"
+  ],
+  [
+    "外箱标识：通过物料标识卡核对产品名称、规格、数量及追溯信息。",
+    "Identification: check product name, specifications, quantity and traceability from the material label.",
+    "Identificación: revise nombre, especificaciones, cantidad y trazabilidad.",
+    "Identification : vérifiez nom, spécifications, quantité et traçabilité.",
+    "식별: 물품 라벨로 제품명, 사양·수량·추적 정보를 확인하세요.",
+    "Маркировка: проверьте название, спецификацию, количество и прослеживаемость по этикетке."
+  ],
+  [
+    "收货检查：核对外箱、独立内盒及随货资料，发现运输损伤或缺件时保留包装及照片并及时联系。",
+    "Receipt: check outer/inner cartons and documents. Preserve packaging/photos and contact us promptly for transit damage or missing items.",
+    "Recepción: revise exterior/interior y documentos. Guarde embalaje/fotos y comunique daños o faltantes.",
+    "Réception : vérifiez cartons et documents. Conservez emballage/photos et signalez dommages ou manques.",
+    "수령: 외부·개별 상자 및 문서를 확인하세요. 운송 손상·누락 시 포장·사진을 보관하고 즉시 연락하세요.",
+    "Приёмка: проверьте внешнюю/внутреннюю упаковку и документы. При повреждении/недостаче сохраните упаковку/фото и свяжитесь с нами."
+  ],
+  [
+    "PDM 压力检测模块封箱待发",
+    "PDM pressure detection module: ready for dispatch",
+    "Módulo de detección de presión PDM: listo para el envío",
+    "Module de détection de pression PDM : prêt à expédier",
+    "PDM 압력 검출 모듈 밀봉 후 출하 대기",
+    "Модуль измерения давления PDM — готово к отправке"
+  ],
+  [
+    "产品与线束分区防护",
+    "Separate product and harness protection",
+    "Protección separada de producto y cables",
+    "Protection séparée produit/faisceaux",
+    "제품 및 배선 분리 보호",
+    "Раздельная защита изделия и жгута"
+  ],
+  [
+    "内包装：旋转阀与配套线束分别装袋，放入泡棉内衬的独立区域，减少相互碰撞和挤压。",
+    "Inner packaging: valve and harness are bagged separately in individual foam compartments to reduce collision and compression.",
+    "Interior: válvula y cable en bolsas y compartimentos separados para reducir choques y compresión.",
+    "Intérieur : vanne et faisceau en sachets et compartiments séparés pour réduire chocs et compression.",
+    "내부: 밸브·배선을 각각 봉투에 넣고 독립 폼 공간에 배치해 충돌·압축을 줄입니다.",
+    "Внутри: клапан и жгут в отдельных пакетах и отсеках пены для снижения ударов и сжатия."
+  ],
+  [
+    "上层保护：产品与线束放置后覆盖泡棉盖板，确认位置与缓冲状态后合盖。",
+    "Top protection: add the foam cover after positioning valve/harness; check placement and cushioning before closure.",
+    "Protección superior: añada tapa tras colocar válvula/cable; revise posición y acolchado.",
+    "Protection supérieure : ajoutez le couvercle, vérifiez position et calage avant fermeture.",
+    "상부: 밸브·배선 배치 후 폼 덮개를 씌우고 위치·완충 확인 후 닫습니다.",
+    "Сверху: после укладки клапана/жгута накройте пенокрышкой, проверьте положение и защиту."
+  ],
+  [
+    "旋转阀产品防护",
+    "Rotary valve: product protection",
+    "Válvula rotativa: protección del producto",
+    "Vanne rotative : protection du produit",
+    "로터리 밸브 제품 보호",
+    "Поворотный клапан — защита изделия"
+  ],
+  [
+    "旋转阀缓冲包装",
+    "Rotary valve: cushioning",
+    "Válvula rotativa: embalaje amortiguador",
+    "Vanne rotative : calage de protection",
+    "로터리 밸브 완충 포장",
+    "Поворотный клапан — амортизирующая упаковка"
+  ],
+  [
+    "内盒封装与物料标识",
+    "Inner-carton closure and identification",
+    "Cierre e identificación interior",
+    "Fermeture et identification intérieure",
+    "개별 상자 봉함 및 물품 식별",
+    "Закрытие и маркировка внутренней коробки"
+  ],
+  [
+    "独立内盒：内盒保护产品与配套附件。",
+    "Inner carton: the inner carton protects the product and its accessories.",
+    "Caja interior: protege el producto y sus accesorios.",
+    "Boîte intérieure : elle protège le produit et ses accessoires.",
+    "내부 상자: 제품과 부속품을 보호합니다.",
+    "Внутренняя коробка: защищает изделие и принадлежности."
+  ],
+  [
+    "型号核对：核对包装物料卡中的型号、数量与追溯信息，并与订单及随货资料对应。",
+    "Model check: compare model, quantity and traceability on the label with order and supplied documents.",
+    "Modelo: compare modelo, cantidad y trazabilidad con pedido y documentos.",
+    "Vérification : comparez modèle, quantité et traçabilité avec commande et documents.",
+    "모델: 라벨의 모델·수량·추적 정보를 주문·문서와 대조하세요.",
+    "Проверка: сравните модель, количество и прослеживаемость с заказом и документами."
+  ],
+  [
+    "旋转阀内盒封装",
+    "Rotary valve: inner carton",
+    "Válvula rotativa: caja interior",
+    "Vanne rotative : boîte intérieure",
+    "로터리 밸브 내부 상자 포장",
+    "Поворотный клапан — внутренняя коробка"
+  ],
+  [
+    "旋转阀包装标识",
+    "Rotary valve: package labeling",
+    "Válvula rotativa: etiquetado del embalaje",
+    "Vanne rotative : étiquetage de l’emballage",
+    "로터리 밸브 포장 라벨",
+    "Поворотный клапан — маркировка упаковки"
+  ],
+  [
+    "发货安排：按确认交期与运输方式发货，并提供物流信息。",
+    "Dispatch: confirmed schedule and transport method, with logistics information.",
+    "Envío: plazo y transporte confirmados, con información logística.",
+    "Expédition : délai et transport confirmés, avec suivi.",
+    "발송: 확정 납기·운송에 따라 발송하고 물류 정보를 제공합니다.",
+    "Отправка: по согласованным сроку и способу, с логистической информацией."
+  ],
+  [
+    "收货检查：检查型号、数量、线束和包装状态；发现运输损伤或缺件时保留包装及照片并及时联系。",
+    "Receipt: check model, quantity, harnesses and packaging. Keep packaging/photos and contact us promptly for damage or shortages.",
+    "Recepción: revise modelo, cantidad, cables y embalaje. Guarde embalaje/fotos y comunique daños o faltantes.",
+    "Réception : vérifiez modèle, quantité, faisceaux et emballage. Conservez emballage/photos et signalez dommages ou manques.",
+    "수령: 모델·수량·배선·포장을 확인하고 손상·누락 시 포장·사진을 보관해 즉시 연락하세요.",
+    "Приёмка: проверьте модель, количество, жгуты и упаковку. При повреждении/недостаче сохраните упаковку/фото и свяжитесь с нами."
+  ],
+  [
+    "旋转阀包装作业",
+    "Rotary valve: packing",
+    "Válvula rotativa: embalaje",
+    "Vanne rotative : mise en carton",
+    "로터리 밸브 포장 작업",
+    "Поворотный клапан — упаковка"
+  ],
+  [
+    "旋转阀封箱待发",
+    "Rotary valve: ready for dispatch",
+    "Válvula rotativa: listo para el envío",
+    "Vanne rotative : prêt à expédier",
+    "로터리 밸브 밀봉 후 출하 대기",
+    "Поворотный клапан — готово к отправке"
+  ],
+  [
+    "分隔槽位与泡棉防护",
+    "Separate foam slots and protection",
+    "Compartimentos separados y protección",
+    "Compartiments séparés et protection",
+    "분리 홈 및 폼 보호",
+    "Раздельные отсеки и пенозащита"
+  ],
+  [
+    "产品防护：电磁阀分别放入泡棉槽位，线束妥善收拢，减少产品之间的碰撞和挤压。",
+    "Protection: valves occupy separate foam slots and leads are gathered securely to reduce collision and compression.",
+    "Protección: válvulas en ranuras separadas y cables recogidos para reducir golpes y compresión.",
+    "Protection : vannes séparées dans la mousse, fils rangés pour limiter chocs et compression.",
+    "보호: 밸브를 각 폼 홈에 넣고 배선을 모아 제품 간 충돌·압축을 줄입니다.",
+    "Защита: клапаны в отдельных отсеках, провода собраны для снижения ударов и сжатия."
+  ],
+  [
+    "上层保护：放置完成后覆盖泡棉盖板，再封装内盒。",
+    "Top protection: after positioning the products, add the foam cover and close the inner carton.",
+    "Protección superior: después de colocar los productos, añada la cubierta de espuma y cierre la caja interior.",
+    "Protection supérieure : une fois les produits en place, ajoutez la plaque de mousse et fermez la boîte intérieure.",
+    "상부 보호: 제품 배치 후 폼 덮개를 올리고 내부 상자를 닫습니다.",
+    "Верхняя защита: после укладки изделий устанавливают крышку из пеноматериала и закрывают внутреннюю коробку."
+  ],
+  [
+    "电磁阀产品防护",
+    "Solenoid valve: product protection",
+    "Electroválvula: protección del producto",
+    "Électrovanne : protection du produit",
+    "솔레노이드 밸브 제품 보호",
+    "Электромагнитный клапан — защита изделия"
+  ],
+  [
+    "电磁阀缓冲包装",
+    "Solenoid valve: cushioning",
+    "Electroválvula: embalaje amortiguador",
+    "Électrovanne : calage de protection",
+    "솔레노이드 밸브 완충 포장",
+    "Электромагнитный клапан — амортизирующая упаковка"
+  ],
+  [
+    "内盒封装与型号核对",
+    "Inner-carton closure and model check",
+    "Cierre interior y comprobación de modelo",
+    "Fermeture intérieure et vérification du modèle",
+    "내부 상자 봉함 및 모델 확인",
+    "Закрытие коробки и проверка модели"
+  ],
+  [
+    "包装提示：搬运时遵循包装上的轻拿轻放等标识。",
+    "Handling: follow package markings such as handle with care.",
+    "Manipulación: siga las indicaciones del embalaje, como manipular con cuidado.",
+    "Manutention : respectez les indications sur l’emballage, telles que « manipuler avec précaution ».",
+    "취급: 포장에 표시된 취급 주의 등의 지침을 따르세요.",
+    "Обращение: соблюдайте указания на упаковке, в том числе «обращаться осторожно»."
+  ],
+  [
+    "物料核对：收货时核对型号、料号、数量及追溯信息。",
+    "Material check: on receipt, verify the model, part number, quantity and traceability information.",
+    "Verificación del material: al recibirlo, compruebe el modelo, la referencia, la cantidad y la información de trazabilidad.",
+    "Vérification du matériel : à réception, vérifiez le modèle, la référence, la quantité et les informations de traçabilité.",
+    "물품 확인: 수령 시 모델, 품번, 수량 및 추적 정보를 확인하세요.",
+    "Проверка поставки: при получении сверьте модель, артикул, количество и сведения для прослеживаемости."
+  ],
+  [
+    "电磁阀内盒封装",
+    "Solenoid valve: inner carton",
+    "Electroválvula: caja interior",
+    "Électrovanne : boîte intérieure",
+    "솔레노이드 밸브 내부 상자 포장",
+    "Электромагнитный клапан — внутренняя коробка"
+  ],
+  [
+    "电磁阀包装标识",
+    "Solenoid valve: package labeling",
+    "Electroválvula: etiquetado del embalaje",
+    "Électrovanne : étiquetage de l’emballage",
+    "솔레노이드 밸브 포장 라벨",
+    "Электромагнитный клапан — маркировка упаковки"
+  ],
+  [
+    "发货安排：按确认的订单交期与运输方式发货，发货后提供物流信息。",
+    "Dispatch: ship to the confirmed order schedule and transport method, with logistics information after dispatch.",
+    "Envío: plazo y transporte del pedido, con información logística posterior.",
+    "Expédition : délai et transport confirmés, avec suivi après départ.",
+    "발송: 확정 납기·운송에 따라 발송 후 물류 정보를 제공합니다.",
+    "Отправка: по сроку и способу заказа, после отправки предоставляется логистическая информация."
+  ],
+  [
+    "收货检查：检查外箱及泡棉状态，核对型号、数量与线束；异常时保留包装及照片并及时联系。",
+    "Receipt: inspect carton and foam, and check model, quantity and leads. Retain packaging/photos and contact us for discrepancies.",
+    "Recepción: revise caja, espuma, modelo, cantidad y cables. Conserve embalaje/fotos y comunique anomalías.",
+    "Réception : vérifiez carton, mousse, modèle, quantité et fils. Conservez emballage/photos et signalez les anomalies.",
+    "수령: 외부 상자·폼, 모델·수량·리드를 확인하세요. 이상 시 포장·사진을 보관하고 연락하세요.",
+    "Приёмка: проверьте коробку, пену, модель, количество и провода. При отклонениях сохраните упаковку/фото и свяжитесь с нами."
+  ],
+  [
+    "电磁阀包装作业",
+    "Solenoid valve: packing",
+    "Electroválvula: embalaje",
+    "Électrovanne : mise en carton",
+    "솔레노이드 밸브 포장 작업",
+    "Электромагнитный клапан — упаковка"
+  ],
+  [
+    "电磁阀封箱待发",
+    "Solenoid valve: ready for dispatch",
+    "Electroválvula: listo para el envío",
+    "Électrovanne : prêt à expédier",
+    "솔레노이드 밸브 밀봉 후 출하 대기",
+    "Электромагнитный клапан — готово к отправке"
+  ],
+  [
+    "产品袋装与随货检验",
+    "Bagged product and inspection documents",
+    "Producto embolsado y documentos",
+    "Produit ensaché et documents de contrôle",
+    "제품 봉투 포장 및 검사 문서",
+    "Изделие в пакете и контрольные документы"
+  ],
+  [
+    "产品防护：高压阀袋装后配合泡棉内衬保护，减少搬运中的表面摩擦、碰撞与挤压。",
+    "Protection: bagged valves and foam reduce surface rubbing, impact and compression during handling.",
+    "Protección: bolsa y espuma reducen roce, golpes y compresión.",
+    "Protection : sachet et mousse réduisent frottements, chocs et compression.",
+    "보호: 봉투·폼으로 취급 중 표면 마찰, 충격과 압축을 줄입니다.",
+    "Защита: пакет и пена уменьшают трение поверхности, удары и сжатие."
+  ],
+  [
+    "随货资料：检验记录随产品一同装箱。",
+    "Documents: inspection records are packed with the product.",
+    "Documentación: los registros de inspección se embalan junto con el producto.",
+    "Documents : les relevés de contrôle sont placés dans le carton avec le produit.",
+    "동봉 자료: 검사 기록을 제품과 함께 포장합니다.",
+    "Документы: протоколы контроля упаковывают вместе с изделием."
+  ],
+  [
+    "高压阀产品防护",
+    "High-pressure valve: product protection",
+    "Válvula de alta presión: protección del producto",
+    "Vanne haute pression : protection du produit",
+    "고압 밸브 제품 보호",
+    "Клапан высокого давления — защита изделия"
+  ],
+  [
+    "高压阀随货资料",
+    "High-pressure valve: accompanying documents",
+    "Válvula de alta presión: documentación adjunta",
+    "Vanne haute pression : documents joints",
+    "고압 밸브 동봉 자료",
+    "Клапан высокого давления — сопроводительные документы"
+  ],
+  [
+    "泡棉缓冲与物料标识",
+    "Foam cushioning and identification",
+    "Espuma e identificación",
+    "Calage et identification",
+    "폼 완충 및 물품 식별",
+    "Пенозащита и маркировка"
+  ],
+  [
+    "缓冲装箱：泡棉内衬与盖板配合保护产品。",
+    "Cushioning: foam inserts and a foam cover protect the product.",
+    "Amortiguación: los insertos y la cubierta de espuma protegen el producto.",
+    "Calage : les inserts et la plaque de mousse protègent le produit.",
+    "완충 포장: 폼 내장재와 덮개로 제품을 보호합니다.",
+    "Амортизация: вкладыши и крышка из пеноматериала защищают изделие."
+  ],
+  [
+    "型号核对：核对外箱物料卡中的型号、料号、数量及追溯信息，并与订单及随货资料对应。",
+    "Model check: compare carton model, part number, quantity and traceability with the order and documents.",
+    "Modelo: compare modelo, referencia, cantidad y trazabilidad con pedido y documentos.",
+    "Vérification : comparez modèle, référence, quantité et traçabilité avec commande et documents.",
+    "모델: 외부 라벨의 모델·품번·수량·추적 정보를 주문·문서와 대조하세요.",
+    "Проверка: сопоставьте модель, артикул, количество и прослеживаемость коробки с заказом и документами."
+  ],
+  [
+    "高压阀缓冲包装",
+    "High-pressure valve: cushioning",
+    "Válvula de alta presión: embalaje amortiguador",
+    "Vanne haute pression : calage de protection",
+    "고압 밸브 완충 포장",
+    "Клапан высокого давления — амортизирующая упаковка"
+  ],
+  [
+    "高压阀包装标识",
+    "High-pressure valve: package labeling",
+    "Válvula de alta presión: etiquetado del embalaje",
+    "Vanne haute pression : étiquetage de l’emballage",
+    "고압 밸브 포장 라벨",
+    "Клапан высокого давления — маркировка упаковки"
+  ],
+  [
+    "发货安排：按确认的订单交期和运输方式发货，并提供物流信息。",
+    "Dispatch: confirmed order schedule and transport method, with logistics information.",
+    "Envío: plazo y transporte confirmados, con información logística.",
+    "Expédition : délai et transport confirmés, avec suivi.",
+    "발송: 확정 납기·운송에 따르며 물류 정보를 제공합니다.",
+    "Отправка: согласованные сроки и способ, с логистической информацией."
+  ],
+  [
+    "收货检查：检查外箱状态、型号、数量及随货资料；如发现运输损伤或缺件，保留包装及照片并及时联系。",
+    "Receipt: check carton, model, quantity and documents. Preserve packaging/photos and contact us promptly for damage or missing items.",
+    "Recepción: revise caja, modelo, cantidad y documentos. Guarde embalaje/fotos y comunique daños o faltantes.",
+    "Réception : vérifiez carton, modèle, quantité et documents. Conservez emballage/photos et signalez dommages ou manques.",
+    "수령: 외부 상자·모델·수량·문서를 확인하세요. 손상·누락 시 포장·사진을 보관하고 즉시 연락하세요.",
+    "Приёмка: проверьте коробку, модель, количество и документы. При повреждении/недостаче сохраните упаковку/фото и свяжитесь с нами."
+  ],
+  [
+    "高压阀包装作业",
+    "High-pressure valve: packing",
+    "Válvula de alta presión: embalaje",
+    "Vanne haute pression : mise en carton",
+    "고압 밸브 포장 작업",
+    "Клапан высокого давления — упаковка"
+  ],
+  [
+    "高压阀封箱待发",
+    "High-pressure valve: ready for dispatch",
+    "Válvula de alta presión: listo para el envío",
+    "Vanne haute pression : prêt à expédier",
+    "고압 밸브 밀봉 후 출하 대기",
+    "Клапан высокого давления — готово к отправке"
+  ]
+]

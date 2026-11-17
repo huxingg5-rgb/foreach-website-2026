@@ -7,11 +7,15 @@ import {
 import { siteFooterData } from "@/data/site-footer";
 import figureSizes from "@/data/products/detail/instrument-guide-figures.generated.json";
 import rplFigureSizes from "@/data/products/detail/rpl-guide-figures.intl.generated.json";
+import instrumentFigureSizes from "@/data/products/detail/instrument-guide-figures.intl.generated.json";
 import { getLocalizedRplGuide } from "@/data/products/detail/rpl-product-guides.intl";
+import { getLocalizedInstrumentGuide, type InstrumentGuideLocale } from "@/data/products/detail/instrument-product-guides.intl";
+import { getInstrumentRatioCopy } from "@/data/products/detail/instrument-guide-locales/figures";
 import { getRplGuideUi } from "@/data/products/detail/rpl-guide-ui.intl";
 import deliveryPhotoSets from "@/data/products/detail/instrument-delivery-photos.zh.json";
 import InstrumentProductAfterSalesForm from "./InstrumentProductAfterSalesForm";
 import RplProductDeliveryContent from "./RplProductDeliveryContent";
+import InstrumentLocalizedDeliveryContent from "./InstrumentLocalizedDeliveryContent";
 import InstrumentGuideVisual, { isNativeInstrumentFigure } from "./InstrumentGuideVisual";
 import base from "./EaPumpDetailContent.module.css";
 import styles from "./InstrumentProductSections.module.css";
@@ -19,8 +23,8 @@ import styles from "./InstrumentProductSections.module.css";
 function GuideFigures({ figures, wide = false, locale = "zh" }: { figures: readonly GuideFigure[]; wide?: boolean; locale?: string }) {
   if (!figures.length) return null;
   const localized = locale !== "zh" && locale !== "zh-CN";
-  const dimensions: Record<string, { width: number; height: number }> = localized ? rplFigureSizes : figureSizes;
-  const imageHref = (file: string) => `/images/products/detail-guides/${localized ? "rpl-intl" : "zh"}/${file}`;
+  const dimensions: Record<string, { width: number; height: number }> = localized ? { ...rplFigureSizes, ...instrumentFigureSizes } : figureSizes;
+  const imageHref = (file: string) => `/images/products/detail-guides/${localized ? file in instrumentFigureSizes ? "instrument-intl" : "rpl-intl" : "zh"}/${file}`;
   const ui = getRplGuideUi(locale);
   return <div className={[styles.figures, figures.length > 1 ? styles.figuresPaired : "", wide ? styles.figuresWide : ""].filter(Boolean).join(" ")}>
     {figures.map(figure => <figure className={styles.figure} key={figure.file}>
@@ -35,17 +39,19 @@ function GuideFigures({ figures, wide = false, locale = "zh" }: { figures: reado
   </div>;
 }
 
-function RatioDiagram({ concentrate, diluent }: { concentrate: number; diluent: number }) {
+function RatioDiagram({ concentrate, diluent, locale = "zh" }: { concentrate: number; diluent: number; locale?: string }) {
   const total = concentrate + diluent;
   const parts = diluent / concentrate;
+  const copy = getInstrumentRatioCopy(locale);
+  const chinese = locale === "zh" || locale === "zh-CN";
   return <div className={styles.ratio} data-drpl-ratio-diagram="true">
     <dl className={styles.ratioValues}>
-      <div><dt>浓缩液 A</dt><dd>{concentrate} μL/圈</dd></div>
-      <div><dt>稀释液 B</dt><dd>{diluent} μL/圈</dd></div>
-      <div><dt>名义合计</dt><dd>{(total / 1000).toFixed(1)} mL/圈</dd></div>
+      <div><dt>{copy.concentrate} A</dt><dd>{concentrate} μL{copy.perRev}</dd></div>
+      <div><dt>{copy.diluent} B</dt><dd>{diluent} μL{copy.perRev}</dd></div>
+      <div><dt>{copy.nominal}</dt><dd>{(total / 1000).toFixed(1)} mL{copy.perRev}</dd></div>
     </dl>
-    <p className={styles.ratioLegend}>体积比 · 1:{parts}</p>
-    <p className={styles.note}>{`${concentrate} μL 浓缩液 + ${diluent} μL 稀释液，名义合计 ${(total / 1000).toFixed(1)} mL。混合均匀性由下游混合过程验证。`}</p>
+    <p className={styles.ratioLegend}>{copy.ratio} · 1:{parts}</p>
+    <p className={styles.note}>{chinese ? `${concentrate} μL 浓缩液 + ${diluent} μL 稀释液，名义合计 ${(total / 1000).toFixed(1)} mL。混合均匀性由下游混合过程验证。` : `${concentrate} μL ${copy.concentrate} + ${diluent} μL ${copy.diluent}; ${copy.nominal} ${(total / 1000).toFixed(1)} mL. ${copy.validation}`}</p>
   </div>;
 }
 
@@ -61,7 +67,7 @@ function SelectionSection({ section, guide, locale = "zh" }: { section: GuideSec
       <div className={split ? styles.explanation : undefined}>
         <p>{section.intro}</p>
         <InstrumentGuideVisual family={guide.family} section={section.id} model={guide.model} locale={locale} />
-        {section.ratioDiagram ? <RatioDiagram {...section.ratioDiagram} /> : null}
+        {section.ratioDiagram ? <RatioDiagram {...section.ratioDiagram} locale={locale} /> : null}
         {!split ? <GuideFigures figures={figures} wide={section.layout === "wide"} locale={locale} /> : null}
         {section.rows ? split ? <dl className={styles.details}>
           {section.rows.map(([title, value, explanation]) => <div key={title}>
@@ -201,7 +207,7 @@ export function InstrumentProductDeliveryContent({ guide }: { guide: InstrumentP
 /** Compose on the server and retain existing RPL translations verbatim. */
 export function getInstrumentProductSections(slug: string, locale = "zh") {
   if (locale !== "zh" && locale !== "zh-CN") {
-    const localizedGuide = getLocalizedRplGuide(slug, locale);
+    const localizedGuide = getLocalizedRplGuide(slug, locale) || getLocalizedInstrumentGuide(slug, locale);
     if (!localizedGuide) return {};
     return {
       customerCategoryMode: "instrument-product" as const,
@@ -209,7 +215,9 @@ export function getInstrumentProductSections(slug: string, locale = "zh") {
       customerCategoryContent: {
         product: <InstrumentProductDocuments guide={localizedGuide} locale={locale} />,
         selection: <InstrumentProductSelectionContent guide={localizedGuide} locale={locale} />,
-        delivery: <RplProductDeliveryContent guide={localizedGuide} locale={locale} />,
+        delivery: localizedGuide.family === "rpl" || localizedGuide.family === "drpl"
+          ? <RplProductDeliveryContent guide={localizedGuide} locale={locale} />
+          : <InstrumentLocalizedDeliveryContent guide={localizedGuide} locale={locale as InstrumentGuideLocale} />,
       },
     };
   }

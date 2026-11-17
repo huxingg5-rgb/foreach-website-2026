@@ -1,0 +1,914 @@
+[
+  [
+    "SV{0}-P-{1} 采用摆臂隔膜结构控制液路开闭或切换。先按断电时的液路状态、端口用途和安装方式选择，再核对介质材料、电压与动作节拍。",
+    "SV{0}-P-{1} uses a rocker-diaphragm mechanism to open, close or switch fluid paths. Select the de-energized state, port functions and mounting first, then check wetted materials, voltage and cycle timing.",
+    "SV{0}-P-{1} abre, cierra o conmuta el líquido mediante diafragma basculante. Seleccione estado sin tensión, función de puertos y montaje; verifique materiales, tensión y ciclo.",
+    "SV{0}-P-{1} ouvre, ferme ou commute le circuit par membrane à bascule. Choisissez état hors tension, fonction des ports et montage, puis matériaux, tension et cadence.",
+    "SV{0}-P-{1}은 로커 다이어프램 구조로 유로를 개폐·전환합니다. 무전원 상태, 포트 용도와 설치 방식을 정한 뒤 접액 재질, 전압과 동작 주기를 확인하세요.",
+    "SV{0}-P-{1} открывает, закрывает или переключает поток качающейся мембраной. Сначала выберите обесточенное состояние, функции портов и монтаж, затем материалы, напряжение и цикл."
+  ],
+  [
+    "端口状态决定流路",
+    "Port states define the fluid path",
+    "El estado de puertos define el circuito",
+    "L’état des ports détermine le circuit",
+    "포트 상태로 유로 결정",
+    "Путь определяется состоянием портов"
+  ],
+  [
+    "三通结构区分公共口 COM、常闭口 NC 和常开口 NO，按通断电状态组织两条路径。",
+    "The three-way design has common COM, normally closed NC and normally open NO ports. Energization selects between two paths.",
+    "La versión de tres vías tiene COM común, NC normalmente cerrado y NO normalmente abierto. La alimentación selecciona una de dos vías.",
+    "La version trois voies distingue COM commun, NC normalement fermé et NO normalement ouvert. L’alimentation sélectionne deux circuits.",
+    "3방향 구조는 공통 COM, 상시 닫힘 NC, 상시 열림 NO 포트를 구분하며 전원 인가 여부로 두 경로를 구성합니다.",
+    "В трёхходовой конструкции есть общий COM, нормально закрытый NC и нормально открытый NO. Питание выбирает один из двух путей."
+  ],
+  [
+    "按连接方式集成",
+    "Integrate for the connection type",
+    "Integre según la conexión",
+    "Intégrer selon le raccordement",
+    "연결 방식에 맞춘 통합",
+    "Интеграция по типу соединения"
+  ],
+  [
+    "基板型需匹配客户阀座、密封面和定位孔。",
+    "Base-mounted versions require a matching customer manifold, sealing face and locating holes.",
+    "La versión sobre base requiere colector, superficie de sellado y orificios de posicionamiento compatibles.",
+    "La version sur embase exige un support client, une face d’étanchéité et des trous de positionnement adaptés.",
+    "베이스형은 고객 측 매니폴드, 밀봉면과 위치 결정 구멍이 맞아야 합니다.",
+    "Для версии на основании согласуйте коллектор заказчика, уплотняющую поверхность и установочные отверстия."
+  ],
+  [
+    "膜片与密封成套选择",
+    "Select diaphragm and seals as a set",
+    "Seleccione diafragma y sellos como conjunto",
+    "Choisir membrane et joints ensemble",
+    "다이어프램 및 씰 일괄 선정",
+    "Выбирайте мембрану и уплотнения комплектом"
+  ],
+  [
+    "EPDM、FKM、FFKM 为系列材料选项，实际阀座与底板组合按订货型号确认。",
+    "EPDM, FKM and FFKM are series material options. Confirm the actual seat/base combination from the complete order model.",
+    "EPDM, FKM y FFKM son opciones de la serie. Confirme la combinación real de asiento/base con el modelo completo.",
+    "EPDM, FKM et FFKM sont des options de série. Confirmez l’association siège/embase selon la référence complète.",
+    "EPDM, FKM, FFKM은 계열 재질 옵션입니다. 실제 밸브 시트·베이스 조합은 전체 주문 모델로 확인하세요.",
+    "EPDM, FKM и FFKM — варианты материалов серии. Фактическое сочетание седла и основания сверяйте с полной заказной моделью."
+  ],
+  [
+    "响应时间有测试条件",
+    "Response time depends on test conditions",
+    "La respuesta depende del ensayo",
+    "Le temps de réponse dépend des essais",
+    "응답 시간의 시험 조건 확인",
+    "Время отклика зависит от условий испытаний"
+  ],
+  [
+    "标准型与节能回路不同，响应还受流体、压力、温度和管路影响。",
+    "Standard and power-saving circuits differ. Response also depends on fluid, pressure, temperature and tubing.",
+    "Los circuitos estándar y de ahorro difieren. Fluido, presión, temperatura y tubos también afectan a la respuesta.",
+    "Circuits standard et économiseur diffèrent. Fluide, pression, température et tuyauterie influencent aussi la réponse.",
+    "표준형과 절전 회로는 다릅니다. 유체, 압력, 온도와 배관도 응답에 영향을 줍니다.",
+    "Стандартная и энергосберегающая схемы различаются. Отклик также зависит от среды, давления, температуры и трубок."
+  ],
+  [
+    "通道与状态",
+    "Ways and states",
+    "Vías y estados",
+    "Voies et états",
+    "유로 및 상태",
+    "Число ходов и состояния"
+  ],
+  [
+    "SV{0}-P-{1}；三通配置。",
+    "SV{0}-P-{1}; three-way configuration.",
+    "SV{0}-P-{1}; configuración de tres vías.",
+    "SV{0}-P-{1} ; version trois voies.",
+    "SV{0}-P-{1}, 3방향 구성.",
+    "SV{0}-P-{1}; трёхходовая комплектация."
+  ],
+  [
+    "工作条件",
+    "Operating conditions",
+    "Condiciones de trabajo",
+    "Conditions de service",
+    "작동 조건",
+    "Условия эксплуатации"
+  ],
+  [
+    "使用压力范围 −{0} kPa–{1} MPa；{2} MPa 是规定条件下的极限耐压，不作为连续工作压力。",
+    "Operating pressure −{0} kPa to {1} MPa. The {2} MPa ultimate pressure resistance applies under specified conditions, not continuous operation.",
+    "Presión de trabajo de −{0} kPa a {1} MPa. Los {2} MPa son resistencia límite en condiciones definidas, no presión continua.",
+    "Pression de service de −{0} kPa à {1} MPa. La tenue limite de {2} MPa vaut sous conditions spécifiées, pas en continu.",
+    "사용 압력은 −{0} kPa–{1} MPa입니다. {2} MPa는 규정 조건의 한계 내압이며 연속 작동 압력이 아닙니다.",
+    "Рабочее давление от −{0} kPa до {1} MPa. Предельная стойкость {2} MPa относится к заданным условиям, а не непрерывной работе."
+  ],
+  [
+    "电气配置",
+    "Electrical configuration",
+    "Configuración eléctrica",
+    "Configuration électrique",
+    "전기 구성",
+    "Электрическая комплектация"
+  ],
+  [
+    "DC {0}／{1} V ±{2}%，标准型与带节能回路配置分开核对；红正黑负。",
+    "DC {0}/{1} V ±{2}%. Check standard and power-saving versions separately; red is positive, black negative.",
+    "DC {0}/{1} V ±{2}%. Distinga versión estándar y de ahorro; rojo positivo, negro negativo.",
+    "DC {0}/{1} V ±{2} %. Vérifier séparément versions standard et économiseur ; rouge positif, noir négatif.",
+    "DC {0}/{1} V ±{2}%. 표준형·절전형을 따로 확인하세요. 빨강은 +, 검정은 −입니다.",
+    "DC {0}/{1} V ±{2}%. Стандартную и энергосберегающую версии проверяйте отдельно; красный плюс, чёрный минус."
+  ],
+  [
+    "材料与性能",
+    "Materials and performance",
+    "Materiales y rendimiento",
+    "Matériaux et performances",
+    "재질 및 성능",
+    "Материалы и характеристики"
+  ],
+  [
+    "膜片、O 圈、底板和阀座分别确认；{0} μL 为阀室内容积，不能作为每次分配量。",
+    "Confirm diaphragm, O-ring, base and seat separately. {0} μL is the valve-chamber volume, not the dispensed dose.",
+    "Confirme diafragma, junta tórica, base y asiento por separado. {0} μL es volumen de cámara, no dosis dispensada.",
+    "Confirmez séparément membrane, joint torique, embase et siège. {0} μL désigne le volume de chambre, pas une dose.",
+    "다이어프램, O링, 베이스와 시트를 각각 확인하세요. {0} μL는 밸브실 내부 용적이며 단회 분주량이 아닙니다.",
+    "Отдельно подтвердите мембрану, O-кольцо, основание и седло. {0} μL — объём камеры клапана, а не доза."
+  ],
+  [
+    "二通、三通与断电状态怎么选",
+    "Choosing two/three ways and de-energized state",
+    "Selección de dos/tres vías y estado sin tensión",
+    "Choisir deux/trois voies et l’état hors tension",
+    "2·3방향 및 무전원 상태 선정",
+    "Выбор двух-/трёхходового исполнения и обесточенного состояния"
+  ],
+  [
+    "先画出设备停止、通电工作和故障断电时的液路，再选阀状态，避免安装后靠反接管路弥补状态选择。",
+    "Draw fluid paths for stopped, energized and power-failure states before choosing the valve. Do not compensate for the wrong state by reversing tubing after installation.",
+    "Dibuje circuitos en parada, funcionamiento y corte eléctrico antes de elegir. No compense un estado incorrecto invirtiendo tubos tras instalar.",
+    "Dessinez les circuits à l’arrêt, sous tension et en panne avant le choix. Ne compensez pas un mauvais état en inversant les tubes après montage.",
+    "정지, 통전 운전과 고장 정전 시 유로를 먼저 그린 뒤 밸브 상태를 선택하세요. 설치 후 배관을 뒤집어 잘못된 선정을 보완하지 마세요.",
+    "Сначала нарисуйте пути при остановке, питании и аварийном отключении. Не исправляйте неверный выбор перестановкой трубок после монтажа."
+  ],
+  [
+    "SV{0} 电磁阀端口 NC、COM、NO、红正黑负引线及接液部件结构图",
+    "SV{0} solenoid-valve NC/COM/NO ports, red-positive/black-negative leads and wetted-part structure",
+    "Puertos NC/COM/NO, cables rojo positivo/negro negativo y partes mojadas de SV{0}",
+    "Ports NC/COM/NO, fils rouge positif/noir négatif et pièces mouillées SV{0}",
+    "SV{0} 솔레노이드 밸브의 NC·COM·NO 포트, 빨강 +·검정 − 리드 및 접액부 구조",
+    "Порты NC/COM/NO, красный плюсовой/чёрный минусовой провода и контактирующие части SV{0}"
+  ],
+  [
+    "三通结构示例；二通配置只有两个工作端口，接口和材料按具体型号核对。",
+    "Three-way structure example. Two-way versions have only two working ports; check connections and materials for the exact model.",
+    "Ejemplo de tres vías. Las versiones de dos vías solo tienen dos puertos; compruebe conexiones y materiales del modelo exacto.",
+    "Exemple trois voies. Les versions deux voies n’ont que deux ports de travail ; vérifier raccordements et matériaux du modèle précis.",
+    "3방향 구조 예시입니다. 2방향 구성에는 작동 포트가 두 개뿐이며 연결부·재질은 해당 모델로 확인하세요.",
+    "Пример трёхходовой конструкции. У двухходовой только два рабочих порта; соединения и материалы проверяйте для точной модели."
+  ],
+  [
+    "二通常闭 NC",
+    "Two-way normally closed (NC)",
+    "Dos vías normalmente cerrada (NC)",
+    "Deux voies normalement fermée (NC)",
+    "2방향 상시 닫힘(NC)",
+    "Двухходовой нормально закрытый (NC)"
+  ],
+  [
+    "断电关闭，通电打开",
+    "Closed de-energized; open energized",
+    "Cerrada sin tensión; abierta con tensión",
+    "Fermée hors tension ; ouverte sous tension",
+    "무전원 시 닫힘, 통전 시 열림",
+    "Без питания закрыт; под питанием открыт"
+  ],
+  [
+    "适用于断电时需要关闭该支路的设计，仍应验证实际压差与残液状态。",
+    "For branches that must close on power loss; still validate actual pressure differential and residual liquid.",
+    "Para ramales que deben cerrar sin tensión; valide igualmente presión diferencial y líquido residual.",
+    "Pour les branches devant se fermer hors tension ; validez aussi pression différentielle et liquide résiduel.",
+    "정전 시 해당 분기를 닫아야 하는 설계에 사용하되 실제 차압과 잔류액 상태도 검증하세요.",
+    "Для ветвей, закрывающихся при потере питания; фактический перепад и остатки жидкости всё равно проверяйте."
+  ],
+  [
+    "二通常开 NO",
+    "Two-way normally open (NO)",
+    "Dos vías normalmente abierta (NO)",
+    "Deux voies normalement ouverte (NO)",
+    "2방향 상시 열림(NO)",
+    "Двухходовой нормально открытый (NO)"
+  ],
+  [
+    "断电打开，通电关闭",
+    "Open de-energized; closed energized",
+    "Abierta sin tensión; cerrada con tensión",
+    "Ouverte hors tension ; fermée sous tension",
+    "무전원 시 열림, 통전 시 닫힘",
+    "Без питания открыт; под питанием закрыт"
+  ],
+  [
+    "适用于断电时需要保持该支路连通的设计，不能沿用常闭阀的停机逻辑。",
+    "For branches that must remain open on power loss. Do not reuse normally closed shutdown logic.",
+    "Para ramales que deben seguir abiertos sin tensión. No reutilice la lógica de parada NC.",
+    "Pour les branches restant ouvertes hors tension. Ne reprenez pas la logique d’arrêt d’une vanne NC.",
+    "정전 시에도 분기를 개방해야 하는 설계에 사용합니다. NC 밸브의 정지 로직을 그대로 적용하지 마세요.",
+    "Для ветвей, остающихся открытыми при потере питания. Не переносите логику остановки NC."
+  ],
+  [
+    "三通",
+    "Three-way",
+    "Tres vías",
+    "Trois voies",
+    "3방향",
+    "Трёхходовой"
+  ],
+  [
+    "断电时 COM 接 NO，通电时 COM 接 NC；按实物端口标识和具体流路图检查连接。",
+    "De-energized: COM to NO; energized: COM to NC. Verify physical port markings and the specific path diagram.",
+    "Sin tensión: COM–NO; con tensión: COM–NC. Verifique marcas físicas y esquema concreto.",
+    "Hors tension : COM–NO ; sous tension : COM–NC. Vérifiez marquage réel et schéma spécifique.",
+    "무전원 시 COM–NO, 통전 시 COM–NC가 연결됩니다. 실제 포트 표시와 해당 유로도로 배관을 점검하세요.",
+    "Без питания COM соединён с NO, под питанием — с NC. Сверяйте маркировку портов и конкретную схему."
+  ],
+  [
+    "节拍",
+    "Cycle timing",
+    "Cadencia",
+    "Cadence",
+    "동작 주기",
+    "Длительность цикла"
+  ],
+  [
+    "标准型与节能回路分别验证",
+    "Validate standard and power-saving circuits separately",
+    "Valide circuito estándar y de ahorro por separado",
+    "Valider séparément circuits standard et économiseur",
+    "표준형과 절전 회로 별도 검증",
+    "Проверяйте стандартную и энергосберегающую схемы отдельно"
+  ],
+  [
+    "响应时间对应规定测试条件，更换液体、压差或温度后应复测动作与实际出液。",
+    "Response time refers to specified tests. Recheck actuation and actual flow after changing liquid, differential pressure or temperature.",
+    "El tiempo corresponde al ensayo definido. Reensaye actuación y caudal al cambiar líquido, diferencial o temperatura.",
+    "Le temps correspond aux essais spécifiés. Revérifiez actionnement et écoulement après changement de liquide, différentiel ou température.",
+    "응답 시간은 규정 시험 조건 기준입니다. 액체, 차압 또는 온도 변경 후 동작과 실제 유출을 다시 시험하세요.",
+    "Время отклика относится к заданным испытаниям. После смены жидкости, перепада или температуры проверяйте срабатывание и фактический поток."
+  ],
+  [
+    "膜片、O 圈和阀座材料",
+    "Diaphragm, O-ring and seat materials",
+    "Materiales de diafragma, junta tórica y asiento",
+    "Matériaux de membrane, joint torique et siège",
+    "다이어프램, O링 및 시트 재질",
+    "Материалы мембраны, O-кольца и седла"
+  ],
+  [
+    "同时提供试剂和清洗液的成分、浓度、温度及接触时间，按全部接液部件确认材料组合。",
+    "Provide reagent and cleaning-liquid composition, concentration, temperature and contact time. Confirm the material combination for all wetted parts.",
+    "Aporte composición, concentración, temperatura y contacto de reactivo y limpiador. Confirme todos los materiales mojados.",
+    "Indiquez composition, concentration, température et durée de contact des réactifs et nettoyants. Confirmez tous les matériaux mouillés.",
+    "시약·세척액의 성분, 농도, 온도와 접촉 시간을 제공하고 전체 접액 부품의 재질 조합을 확인하세요.",
+    "Укажите состав, концентрацию, температуру и время контакта реагента и промывки. Согласуйте материалы всех контактирующих частей."
+  ],
+  [
+    "膜片与 O 圈",
+    "Diaphragm and O-ring",
+    "Diafragma y junta tórica",
+    "Membrane et joint torique",
+    "다이어프램 및 O링",
+    "Мембрана и O-кольцо"
+  ],
+  [
+    "EPDM／FKM／FFKM 按型号配套",
+    "EPDM/FKM/FFKM matched to the model",
+    "EPDM/FKM/FFKM según modelo",
+    "EPDM/FKM/FFKM selon modèle",
+    "모델에 맞는 EPDM/FKM/FFKM",
+    "EPDM/FKM/FFKM по модели"
+  ],
+  [
+    "材料代号不能只替换其中一件；FFKM 在低于 {0} ℃ 时响应时间可能明显增加，应纳入低温测试。",
+    "Do not change only one component under a material code. FFKM response can become much slower below {0} °C; include low-temperature testing.",
+    "No sustituya una sola pieza bajo un código de material. FFKM puede responder mucho más lento bajo {0} °C; incluya ensayo en frío.",
+    "Ne remplacez pas une seule pièce selon le code matière. Le FFKM peut ralentir nettement sous {0} °C ; prévoyez des essais à froid.",
+    "재질 코드 변경 시 일부 부품만 바꾸지 마세요. FFKM은 {0} °C 미만에서 응답 시간이 크게 늘 수 있으므로 저온 시험에 반영하세요.",
+    "Не заменяйте по коду материала только одну деталь. Ниже {0} °C отклик FFKM может значительно замедляться; предусмотрите холодовые испытания."
+  ],
+  [
+    "基板与倒刺型",
+    "Base-mounted and barbed versions",
+    "Versiones sobre base y espiga",
+    "Versions sur embase et cannelées",
+    "베이스형 및 바브형",
+    "Версии на основании и со штуцером «ёлочка»"
+  ],
+  [
+    "默认 PEEK 底板，无独立阀座材料选项",
+    "PEEK base by default; no separate seat-material option",
+    "Base PEEK de serie; sin opción independiente de asiento",
+    "Embase PEEK par défaut ; pas d’option distincte de matériau de siège",
+    "기본 PEEK 베이스, 독립 시트 재질 옵션 없음",
+    "Основание PEEK по умолчанию; отдельного выбора материала седла нет"
+  ],
+  [
+    "不将螺纹阀座型可选材料当作这两类产品的默认可选组合。",
+    "Threaded-seat material options are not default combinations for these two versions.",
+    "Las opciones de asiento roscado no son combinaciones de serie para estas dos versiones.",
+    "Les options du siège fileté ne sont pas des combinaisons standard pour ces deux versions.",
+    "나사형 시트의 재질 옵션을 이 두 형식의 기본 선택 조합으로 적용하지 마세요.",
+    "Варианты материала резьбового седла не являются стандартными сочетаниями этих двух версий."
+  ],
+  [
+    "螺纹阀座型",
+    "Threaded-seat version",
+    "Versión de asiento roscado",
+    "Version à siège fileté",
+    "나사형 시트 버전",
+    "Версия с резьбовым седлом"
+  ],
+  [
+    "阀座与底板分别核对",
+    "Check seat and base separately",
+    "Verifique asiento y base por separado",
+    "Vérifier siège et embase séparément",
+    "시트 및 베이스 각각 확인",
+    "Проверяйте седло и основание отдельно"
+  ],
+  [
+    "PFA 等配置需确认可供组合；不能仅凭阀座一种材料判断整阀相容性。",
+    "Confirm available combinations such as PFA. Seat material alone does not establish whole-valve compatibility.",
+    "Confirme combinaciones disponibles, como PFA. Un material de asiento no acredita compatibilidad de toda la válvula.",
+    "Confirmez les associations disponibles, dont PFA. Le siège seul ne détermine pas la compatibilité de toute la vanne.",
+    "PFA 등 공급 가능한 조합을 확인하세요. 시트 한 가지 재질만으로 전체 밸브 적합성을 판단하지 마세요.",
+    "Уточняйте доступные сочетания, включая PFA. Один материал седла не определяет совместимость всего клапана."
+  ],
+  [
+    "基板、倒刺与螺纹连接",
+    "Base, barbed and threaded connections",
+    "Conexiones sobre base, espiga y roscadas",
+    "Raccordements sur embase, cannelés et filetés",
+    "베이스, 바브 및 나사 연결",
+    "Соединения на основании, «ёлочка» и резьбовые"
+  ],
+  [
+    "连接方式决定密封与固定结构，应根据当前配置逐项检查，并给线束与拆装保留空间。",
+    "Connection type determines sealing and mounting. Check the current configuration and allow cable and servicing clearance.",
+    "La conexión determina sellado y fijación. Revise la configuración y deje espacio para cables y mantenimiento.",
+    "Le raccordement détermine étanchéité et fixation. Vérifiez la configuration et prévoyez câbles et démontage.",
+    "연결 방식에 따라 밀봉·고정 구조가 달라집니다. 현재 구성을 확인하고 배선 및 탈착 공간을 확보하세요.",
+    "Тип соединения определяет уплотнение и крепление. Проверьте комплектацию, оставьте место для жгутов и обслуживания."
+  ],
+  [
+    "基板型",
+    "Base-mounted",
+    "Sobre base",
+    "Sur embase",
+    "베이스형",
+    "На основании"
+  ],
+  [
+    "端口位置、定位销与密封面",
+    "Port positions, locating pins and sealing face",
+    "Posición de puertos, pasadores y sellado",
+    "Position des ports, pions et face d’étanchéité",
+    "포트 위치, 위치 결정 핀 및 밀봉면",
+    "Положения портов, установочные штифты и уплотняющая поверхность"
+  ],
+  [
+    "常开和常闭配置的口位与定位关系需按图纸设计，不以外形相似判断阀座通用。",
+    "Design NO/NC port positions and locating features from the drawing. Similar appearance does not make seats interchangeable.",
+    "Diseñe puertos y localización NO/NC según plano. Un aspecto similar no hace intercambiables los asientos.",
+    "Concevez ports et positionnement NO/NC selon plan. Une apparence similaire ne rend pas les sièges interchangeables.",
+    "NO·NC 구성의 포트·위치 결정 관계는 도면으로 설계하세요. 외형이 비슷하다고 시트가 공용인 것은 아닙니다.",
+    "Проектируйте порты и позиционирование NO/NC по чертежу. Сходство внешнего вида не означает взаимозаменяемость сёдел."
+  ],
+  [
+    "倒刺型",
+    "Barbed",
+    "Espiga",
+    "Cannelé",
+    "바브형",
+    "Штуцер «ёлочка»"
+  ],
+  [
+    "推荐软管内径 {0}–{1} mm、硬度 {2}–{3}A，外径 <{4} mm",
+    "Recommended tubing ID {0}–{1} mm, hardness {2}–{3}A, OD <{4} mm",
+    "Tubo recomendado: DI {0}–{1} mm, dureza {2}–{3}A, DE <{4} mm",
+    "Tube conseillé : DI {0}–{1} mm, dureté {2}–{3}A, DE <{4} mm",
+    "권장 튜브 내경 {0}–{1} mm, 경도 {2}–{3}A, 외경 <{4} mm",
+    "Трубка: внутр. Ø {0}–{1} mm, твёрдость {2}–{3}A, наруж. Ø <{4} mm"
+  ],
+  [
+    "确认软管能完整套入、无裂纹和松脱；换材料或硬度后重新做密封和保持测试。",
+    "Ensure full engagement without cracks or loosening. Repeat sealing and retention tests after changes in material or hardness.",
+    "Asegure inserción completa sin grietas ni holgura. Repita sellado y retención tras cambiar material o dureza.",
+    "Vérifiez l’emmanchement complet sans fissure ni desserrage. Répétez étanchéité et tenue après changement de matériau ou dureté.",
+    "튜브를 완전히 끼우고 균열·이탈이 없는지 확인하세요. 재질·경도 변경 후 밀봉 및 유지력 시험을 다시 하세요.",
+    "Обеспечьте полную посадку без трещин и ослабления. После смены материала или твёрдости повторите герметичность и удержание."
+  ],
+  [
+    "螺纹型",
+    "Threaded",
+    "Roscada",
+    "Fileté",
+    "나사형",
+    "Резьбовой"
+  ],
+  [
+    "M{0} 或 {1}/{2}-{3} UNF，建议配合深度 {4} mm",
+    "M{0} or {1}/{2}-{3} UNF; recommended engagement {4} mm",
+    "M{0} o {1}/{2}-{3} UNF; acoplamiento recomendado {4} mm",
+    "M{0} ou {1}/{2}-{3} UNF ; engagement conseillé {4} mm",
+    "M{0} 또는 {1}/{2}-{3} UNF, 권장 결합 깊이 {4} mm",
+    "M{0} или {1}/{2}-{3} UNF; рекомендуемая глубина {4} mm"
+  ],
+  [
+    "使用匹配接头与垫片；推荐锁紧扭矩 {0}–{1} N·m，不能靠继续加力处理漏液。",
+    "Use matched fittings and washers; recommended torque {0}–{1} N·m. Do not cure leaks by applying more force.",
+    "Use racores y juntas compatibles; par recomendado {0}–{1} N·m. No elimine fugas apretando más.",
+    "Utilisez raccords et joints adaptés ; couple conseillé {0}–{1} N·m. Ne corrigez pas une fuite en forçant.",
+    "맞는 피팅과 가스켓을 사용하세요. 권장 토크는 {0}–{1} N·m이며 힘을 계속 늘려 누액을 해결하지 마세요.",
+    "Используйте согласованные фитинги и прокладки; момент {0}–{1} N·m. Не устраняйте утечки дополнительной силой."
+  ],
+  [
+    "电压、极性与节能回路",
+    "Voltage, polarity and power-saving circuit",
+    "Tensión, polaridad y ahorro de energía",
+    "Tension, polarité et circuit économiseur",
+    "전압, 극성 및 절전 회로",
+    "Напряжение, полярность и энергосбережение"
+  ],
+  [
+    "SV{0}／{1} 接线有正负极，先确认订货电压和节能配置，再接入驱动输出。",
+    "SV{0}/{1} wiring is polarized. Confirm ordered voltage and power-saving configuration before connecting the driver output.",
+    "El cableado SV{0}/{1} tiene polaridad. Confirme tensión y opción de ahorro antes del controlador.",
+    "Le câblage SV{0}/{1} est polarisé. Confirmez tension et option économiseur avant raccordement au pilote.",
+    "SV{0}/{1} 배선에는 극성이 있습니다. 주문 전압과 절전 구성을 확인한 뒤 구동 출력에 연결하세요.",
+    "Подключение SV{0}/{1} полярное. Проверьте заказное напряжение и энергосберегающую схему до подключения драйвера."
+  ],
+  [
+    "电压与极性",
+    "Voltage and polarity",
+    "Tensión y polaridad",
+    "Tension et polarité",
+    "전압 및 극성",
+    "Напряжение и полярность"
+  ],
+  [
+    "DC {0}／{1} V ±{2}%，红正黑负",
+    "DC {0}/{1} V ±{2}%; red positive, black negative",
+    "DC {0}/{1} V ±{2}%; rojo positivo, negro negativo",
+    "DC {0}/{1} V ±{2} % ; rouge positif, noir négatif",
+    "DC {0}/{1} V ±{2}%, 빨강 +, 검정 −",
+    "DC {0}/{1} V ±{2}%; красный плюс, чёрный минус"
+  ],
+  [
+    "按供货标签选电源；不要使用旧 {0} 的无极性接线说明。",
+    "Choose power from the supplied label. Do not use the legacy {0} non-polarized wiring instructions.",
+    "Elija fuente según etiqueta. No use instrucciones antiguas {0} sin polaridad.",
+    "Choisissez selon l’étiquette fournie. N’utilisez pas l’ancienne notice {0} sans polarité.",
+    "공급 라벨에 맞춰 전원을 선택하세요. 구형 {0}의 무극성 배선 설명을 적용하지 마세요.",
+    "Выбирайте питание по этикетке. Не используйте старую инструкцию {0} без полярности."
+  ],
+  [
+    "标准型与节能型",
+    "Standard and power-saving versions",
+    "Versiones estándar y de ahorro",
+    "Versions standard et économiseur",
+    "표준형 및 절전형",
+    "Стандартная и энергосберегающая версии"
+  ],
+  [
+    "节能型启动与保持功率不同",
+    "Power-saving versions have different start and holding power",
+    "La potencia de arranque y mantenimiento difiere",
+    "Puissances de démarrage et maintien distinctes",
+    "절전형의 기동·유지 전력 구분",
+    "У энергосберегающей версии различаются пусковая и удерживающая мощности"
+  ],
+  [
+    "按完整型号核对带 Y 的节能回路配置，不能把保持功率直接作为启动供电能力。",
+    "Verify the Y power-saving option from the full model. Holding power does not define the required starting supply capability.",
+    "Verifique opción Y en el modelo completo. La potencia de mantenimiento no dimensiona el arranque.",
+    "Vérifiez l’option Y sur la référence complète. La puissance de maintien ne dimensionne pas l’alimentation de démarrage.",
+    "전체 모델에서 Y 절전 회로를 확인하세요. 유지 전력을 기동 시 전원 공급 능력으로 간주하지 마세요.",
+    "Проверьте опцию Y по полному коду. Удерживающая мощность не определяет требуемую пусковую способность питания."
+  ],
+  [
+    "断电检查",
+    "Power-off check",
+    "Comprobación sin tensión",
+    "Contrôle hors tension",
+    "무전원 점검",
+    "Проверка отключения"
+  ],
+  [
+    "核对驱动输出是否真正关闭",
+    "Confirm the driver output is actually off",
+    "Confirme que la salida está realmente apagada",
+    "Confirmer la coupure réelle de la sortie du pilote",
+    "구동 출력의 완전 차단 확인",
+    "Убедитесь, что выход драйвера действительно отключён"
+  ],
+  [
+    "存在残余电压或驱动输出异常时，阀可能不能按预期复位；先测供电与驱动状态。",
+    "Residual voltage or driver faults can prevent return to the expected state. Measure supply and driver state first.",
+    "Tensión residual o fallos pueden impedir el retorno. Mida primero alimentación y estado del controlador.",
+    "Tension résiduelle ou défaut du pilote peuvent empêcher le retour. Mesurez d’abord alimentation et état du pilote.",
+    "잔류 전압이나 구동 출력 이상으로 복귀하지 않을 수 있습니다. 전원과 구동 상태부터 측정하세요.",
+    "Остаточное напряжение или неисправность драйвера могут мешать возврату. Сначала измерьте питание и состояние выхода."
+  ],
+  [
+    "首次通液与动作验证",
+    "First fluid operation and actuation validation",
+    "Primer paso de líquido y validación",
+    "Première mise en fluide et validation",
+    "최초 통액 및 동작 검증",
+    "Первый пропуск жидкости и проверка срабатывания"
+  ],
+  [
+    "先检查接线和通断电状态，再接入相容介质，并在实际压差下观察液路变化。",
+    "Check wiring and energized/de-energized states first. Introduce compatible liquid and observe path changes at actual differential pressure.",
+    "Revise cableado y estados primero. Introduzca líquido compatible y observe cambios al diferencial real.",
+    "Vérifiez câblage et états, puis introduisez un liquide compatible et observez les circuits au différentiel réel.",
+    "배선과 통전·무전원 상태를 먼저 확인한 뒤 호환 액체를 연결하고 실제 차압에서 유로 변화를 관찰하세요.",
+    "Сначала проверьте подключение и состояния, затем подайте совместимую жидкость и наблюдайте пути при рабочем перепаде."
+  ],
+  [
+    "核对型号和端口",
+    "Check model and ports",
+    "Compruebe modelo y puertos",
+    "Vérifier modèle et ports",
+    "모델 및 포트 확인",
+    "Проверьте модель и порты"
+  ],
+  [
+    "确认常开／常闭、COM／NC／NO、供电及材料，按图纸接管。",
+    "Confirm NO/NC, COM/NC/NO, supply and materials; connect tubing to the drawing.",
+    "Confirme NO/NC, COM/NC/NO, fuente y materiales; conecte según plano.",
+    "Confirmez NO/NC, COM/NC/NO, alimentation et matériaux ; raccordez selon plan.",
+    "NO·NC, COM·NC·NO, 전원과 재질을 확인하고 도면대로 연결하세요.",
+    "Подтвердите NO/NC, COM/NC/NO, питание и материалы; подключите по чертежу."
+  ],
+  [
+    "低压检查密封",
+    "Check sealing at low pressure",
+    "Compruebe sellado a baja presión",
+    "Vérifier l’étanchéité à basse pression",
+    "저압 밀봉 확인",
+    "Проверьте герметичность на малом давлении"
+  ],
+  [
+    "检查接口、软管或基板密封，再按工作条件逐步确认压力边界。",
+    "Inspect port, tubing or base seals, then progressively verify pressure limits under the working conditions.",
+    "Revise sellos de puertos, tubo o base y confirme gradualmente presión según condiciones.",
+    "Contrôlez joints des ports, tubes ou embase, puis vérifiez progressivement les limites en conditions de service.",
+    "연결부, 튜브 또는 베이스 밀봉을 점검한 뒤 작동 조건에 따라 압력 한계를 단계적으로 확인하세요.",
+    "Проверьте уплотнения портов, трубок или основания, затем постепенно подтвердите пределы в рабочих условиях."
+  ],
+  [
+    "测试通断电",
+    "Test energizing and de-energizing",
+    "Ensaye encendido y apagado",
+    "Tester mise sous/hors tension",
+    "통전·무전원 시험",
+    "Проверьте включение и отключение"
+  ],
+  [
+    "分别验证断电、通电和连续切换时的实际流路，记录响应及泄漏现象。",
+    "Check actual paths when off, on and switching continuously. Record response and leakage.",
+    "Verifique vías sin tensión, con tensión y en conmutación continua. Registre respuesta y fugas.",
+    "Vérifiez les circuits hors tension, sous tension et en commutation continue. Consignez réponse et fuites.",
+    "무전원, 통전 및 연속 전환의 실제 유로를 각각 검증하고 응답과 누설을 기록하세요.",
+    "Проверьте пути без питания, под питанием и при непрерывном переключении. Запишите отклик и утечки."
+  ],
+  [
+    "纳入整机节拍",
+    "Integrate into instrument timing",
+    "Integre en el ciclo del equipo",
+    "Intégrer à la cadence de l’instrument",
+    "장비 전체 주기에 반영",
+    "Включите в цикл прибора"
+  ],
+  [
+    "与泵动作配合测试启停、清洗和断电状态，避免仅用听到动作声判断液路合格。",
+    "Test pump-coordinated start/stop, cleaning and power loss. Actuation sound alone does not validate fluid-path performance.",
+    "Ensaye arranque/parada, limpieza y corte junto con la bomba. Oír la actuación no valida el circuito.",
+    "Testez marche/arrêt, nettoyage et coupure avec la pompe. Le bruit d’actionnement ne valide pas le circuit.",
+    "펌프와 연동하여 시작·정지, 세척과 정전을 시험하세요. 작동음만으로 유로 적합성을 판단하지 마세요.",
+    "Проверьте пуск/остановку, промывку и потерю питания совместно с насосом. Одного звука срабатывания недостаточно."
+  ],
+  [
+    "开闭异常、泄漏与维护",
+    "Switching faults, leakage and maintenance",
+    "Fallos de apertura/cierre, fugas y mantenimiento",
+    "Défauts d’ouverture/fermeture, fuites et entretien",
+    "개폐 이상, 누설 및 유지보수",
+    "Сбои открытия/закрытия, утечки и обслуживание"
+  ],
+  [
+    "先判断电气动作和实际通液状态是否一致，再逐项排查。",
+    "First compare electrical actuation with actual liquid passage, then troubleshoot item by item.",
+    "Compare primero actuación eléctrica y paso real; diagnostique después por etapas.",
+    "Comparez d’abord actionnement électrique et passage réel, puis recherchez les causes.",
+    "전기 동작과 실제 통액 상태가 일치하는지 먼저 판단한 뒤 순서대로 점검하세요.",
+    "Сначала сопоставьте электрическое срабатывание с фактическим потоком, затем проверяйте причины."
+  ],
+  [
+    "通电不动作",
+    "No actuation with power on",
+    "No actúa con tensión",
+    "Pas d’actionnement sous tension",
+    "통전 시 작동하지 않음",
+    "Нет срабатывания под питанием"
+  ],
+  [
+    "电压、极性、驱动和连接接触",
+    "Voltage, polarity, driver and connector contact",
+    "Tensión, polaridad, controlador y contactos",
+    "Tension, polarité, pilote et contacts",
+    "전압, 극성, 구동 및 접촉 상태",
+    "Напряжение, полярность, драйвер и контакты"
+  ],
+  [
+    "按额定条件测量供电，不提高电压强行驱动。",
+    "Measure supply under rated conditions. Do not increase voltage to force operation.",
+    "Mida a condiciones nominales. No aumente tensión para forzar actuación.",
+    "Mesurez aux conditions nominales. N’augmentez pas la tension pour forcer le mouvement.",
+    "정격 조건에서 전원을 측정하세요. 강제 구동을 위해 전압을 높이지 마세요.",
+    "Измеряйте питание при номинальных условиях. Не повышайте напряжение ради срабатывания."
+  ],
+  [
+    "断电不复位",
+    "No return when de-energized",
+    "No retorna sin tensión",
+    "Pas de retour hors tension",
+    "전원 차단 후 복귀하지 않음",
+    "Нет возврата без питания"
+  ],
+  [
+    "残余电压、管路压差与阀状态",
+    "Residual voltage, pressure differential and valve state",
+    "Tensión residual, diferencial y estado",
+    "Tension résiduelle, différentiel et état",
+    "잔류 전압, 배관 차압 및 밸브 상태",
+    "Остаточное напряжение, перепад и состояние клапана"
+  ],
+  [
+    "确认输出完全关闭，再核对当前是常开还是常闭。",
+    "Confirm complete output shutdown, then check whether the unit is NO or NC.",
+    "Confirme corte completo y compruebe si es NO o NC.",
+    "Confirmez la coupure totale, puis vérifiez la version NO ou NC.",
+    "출력 완전 차단을 확인한 뒤 현재 구성이 NO인지 NC인지 확인하세요.",
+    "Подтвердите полное отключение выхода, затем проверьте NO или NC."
+  ],
+  [
+    "接口渗漏",
+    "Connection leakage",
+    "Fuga en conexión",
+    "Fuite au raccordement",
+    "연결부 누설",
+    "Утечка соединения"
+  ],
+  [
+    "密封件、软管规格、插入与扭矩",
+    "Seals, tubing specification, insertion and torque",
+    "Sellos, tubo, inserción y par",
+    "Joints, tube, insertion et couple",
+    "씰, 튜브 사양, 삽입 및 토크",
+    "Уплотнения, параметры трубки, ввод и момент"
+  ],
+  [
+    "泄压断电后处理，避免过度锁紧或拉扯接管。",
+    "Release pressure and isolate power before servicing. Avoid overtightening and tubing strain.",
+    "Despresurice y desconecte antes de intervenir. Evite sobreapriete y tracción de tubos.",
+    "Dépressurisez et coupez l’alimentation avant intervention. Évitez serrage excessif et traction.",
+    "감압·전원 차단 후 처리하고 과도한 체결이나 튜브 당김을 피하세요.",
+    "Перед работами сбросьте давление и питание. Не перетягивайте соединения и не нагружайте трубки."
+  ],
+  [
+    "仍无法正常开闭",
+    "Still fails to open/close correctly",
+    "Sigue sin abrir/cerrar bien",
+    "Ouverture/fermeture toujours incorrecte",
+    "계속 정상 개폐 불가",
+    "По-прежнему неверно открывается/закрывается"
+  ],
+  [
+    "记录型号、介质、压力与电气测量",
+    "Record model, medium, pressure and electrical measurements",
+    "Registre modelo, medio, presión y medidas eléctricas",
+    "Consigner modèle, fluide, pression et mesures électriques",
+    "모델, 액체, 압력 및 전기 측정값 기록",
+    "Запишите модель, среду, давление и электрические измерения"
+  ],
+  [
+    "停止使用，联系技术支持安排处理，不自行拆解隔膜机构。",
+    "Stop use and contact technical support. Do not dismantle the diaphragm mechanism yourself.",
+    "Deje de usar y contacte soporte. No desmonte el mecanismo de diafragma.",
+    "Arrêtez et contactez l’assistance. Ne démontez pas le mécanisme à membrane.",
+    "사용을 중지하고 기술 지원팀에 문의하세요. 다이어프램 기구를 임의 분해하지 마세요.",
+    "Прекратите работу и обратитесь в поддержку. Не разбирайте мембранный механизм самостоятельно."
+  ],
+  [
+    "SV{0}-B{1}-{2} 采用摆臂隔膜结构控制液路开闭或切换。先按断电时的液路状态、端口用途和安装方式选择，再核对介质材料、电压与动作节拍。",
+    "SV{0}-B{1}-{2} uses a rocker-diaphragm mechanism to open, close or switch fluid paths. Select the de-energized state, port functions and mounting first, then check wetted materials, voltage and cycle timing.",
+    "SV{0}-B{1}-{2} abre, cierra o conmuta el líquido mediante diafragma basculante. Seleccione estado sin tensión, función de puertos y montaje; verifique materiales, tensión y ciclo.",
+    "SV{0}-B{1}-{2} ouvre, ferme ou commute le circuit par membrane à bascule. Choisissez état hors tension, fonction des ports et montage, puis matériaux, tension et cadence.",
+    "SV{0}-B{1}-{2}은 로커 다이어프램 구조로 유로를 개폐·전환합니다. 무전원 상태, 포트 용도와 설치 방식을 정한 뒤 접액 재질, 전압과 동작 주기를 확인하세요.",
+    "SV{0}-B{1}-{2} открывает, закрывает или переключает поток качающейся мембраной. Сначала выберите обесточенное состояние, функции портов и монтаж, затем материалы, напряжение и цикл."
+  ],
+  [
+    "倒刺型需匹配软管内径、外径及硬度。",
+    "Match barbed versions to tubing ID, OD and hardness.",
+    "Adapte espigas al diámetro interior, exterior y dureza del tubo.",
+    "Adaptez les versions cannelées au diamètre intérieur, extérieur et à la dureté du tube.",
+    "바브형은 튜브 내경, 외경과 경도가 맞아야 합니다.",
+    "Для штуцера «ёлочка» согласуйте внутренний/наружный диаметры и твёрдость трубки."
+  ],
+  [
+    "SV{0}-B{1}-{2}；三通配置。",
+    "SV{0}-B{1}-{2}; three-way configuration.",
+    "SV{0}-B{1}-{2}; configuración de tres vías.",
+    "SV{0}-B{1}-{2} ; version trois voies.",
+    "SV{0}-B{1}-{2}, 3방향 구성.",
+    "SV{0}-B{1}-{2}; трёхходовая комплектация."
+  ],
+  [
+    "SV{0}-M{1}/U{2}-{3} 采用摆臂隔膜结构控制液路开闭或切换。先按断电时的液路状态、端口用途和安装方式选择，再核对介质材料、电压与动作节拍。",
+    "SV{0}-M{1}/U{2}-{3} uses a rocker-diaphragm mechanism to open, close or switch fluid paths. Select the de-energized state, port functions and mounting first, then check wetted materials, voltage and cycle timing.",
+    "SV{0}-M{1}/U{2}-{3} abre, cierra o conmuta el líquido mediante diafragma basculante. Seleccione estado sin tensión, función de puertos y montaje; verifique materiales, tensión y ciclo.",
+    "SV{0}-M{1}/U{2}-{3} ouvre, ferme ou commute le circuit par membrane à bascule. Choisissez état hors tension, fonction des ports et montage, puis matériaux, tension et cadence.",
+    "SV{0}-M{1}/U{2}-{3}은 로커 다이어프램 구조로 유로를 개폐·전환합니다. 무전원 상태, 포트 용도와 설치 방식을 정한 뒤 접액 재질, 전압과 동작 주기를 확인하세요.",
+    "SV{0}-M{1}/U{2}-{3} открывает, закрывает или переключает поток качающейся мембраной. Сначала выберите обесточенное состояние, функции портов и монтаж, затем материалы, напряжение и цикл."
+  ],
+  [
+    "螺纹型需区分 M{0} 与 {1}/{2}-{3} UNF，配套平底密封结构。",
+    "For threaded versions distinguish M{0} from {1}/{2}-{3} UNF and use flat-bottom seals.",
+    "Distinga M{0} de {1}/{2}-{3} UNF y use sellado de fondo plano.",
+    "Distinguez M{0} de {1}/{2}-{3} UNF avec étanchéité à fond plat.",
+    "나사형은 M{0}와 {1}/{2}-{3} UNF를 구분하고 평저 밀봉 구조를 맞추세요.",
+    "Различайте M{0} и {1}/{2}-{3} UNF и применяйте плоскодонное уплотнение."
+  ],
+  [
+    "SV{0}-M{1}/U{2}-{3}；三通配置。",
+    "SV{0}-M{1}/U{2}-{3}; three-way configuration.",
+    "SV{0}-M{1}/U{2}-{3}; configuración de tres vías.",
+    "SV{0}-M{1}/U{2}-{3} ; version trois voies.",
+    "SV{0}-M{1}/U{2}-{3}, 3방향 구성.",
+    "SV{0}-M{1}/U{2}-{3}; трёхходовая комплектация."
+  ],
+  [
+    "SV{0}-P-{1}NC 采用摆臂隔膜结构控制液路开闭或切换。先按断电时的液路状态、端口用途和安装方式选择，再核对介质材料、电压与动作节拍。",
+    "SV{0}-P-{1}NC uses a rocker-diaphragm mechanism to open, close or switch fluid paths. Select the de-energized state, port functions and mounting first, then check wetted materials, voltage and cycle timing.",
+    "SV{0}-P-{1}NC abre, cierra o conmuta el líquido mediante diafragma basculante. Seleccione estado sin tensión, función de puertos y montaje; verifique materiales, tensión y ciclo.",
+    "SV{0}-P-{1}NC ouvre, ferme ou commute le circuit par membrane à bascule. Choisissez état hors tension, fonction des ports et montage, puis matériaux, tension et cadence.",
+    "SV{0}-P-{1}NC은 로커 다이어프램 구조로 유로를 개폐·전환합니다. 무전원 상태, 포트 용도와 설치 방식을 정한 뒤 접액 재질, 전압과 동작 주기를 확인하세요.",
+    "SV{0}-P-{1}NC открывает, закрывает или переключает поток качающейся мембраной. Сначала выберите обесточенное состояние, функции портов и монтаж, затем материалы, напряжение и цикл."
+  ],
+  [
+    "二通开闭控制",
+    "Two-way on/off control",
+    "Control de apertura/cierre de dos vías",
+    "Commande tout-ou-rien deux voies",
+    "2방향 개폐 제어",
+    "Двухходовое управление открытием/закрытием"
+  ],
+  [
+    "常闭配置断电关闭、通电导通。断电关闭不代替整机泄压或残液控制。",
+    "NC is closed without power and open with power. Power-off closure does not replace instrument depressurization or residual-liquid control.",
+    "NC cierra sin tensión y abre con tensión. El cierre no sustituye despresurización ni control de residuos.",
+    "NC est fermée hors tension et ouverte sous tension. La fermeture ne remplace pas dépressurisation ni gestion des liquides résiduels.",
+    "NC는 무전원 시 닫히고 통전 시 열립니다. 무전원 닫힘이 장비 감압이나 잔류액 제어를 대신하지 않습니다.",
+    "NC закрыт без питания и открыт под питанием. Закрытие не заменяет сброс давления и управление остаточной жидкостью прибора."
+  ],
+  [
+    "SV{0}-P-{1}NC；二通常闭。",
+    "SV{0}-P-{1}NC; two-way normally closed.",
+    "SV{0}-P-{1}NC; dos vías normalmente cerrada.",
+    "SV{0}-P-{1}NC ; deux voies normalement fermée.",
+    "SV{0}-P-{1}NC, 2방향 상시 닫힘.",
+    "SV{0}-P-{1}NC; двухходовой нормально закрытый."
+  ],
+  [
+    "SV{0}-B{1}-{2}NC 采用摆臂隔膜结构控制液路开闭或切换。先按断电时的液路状态、端口用途和安装方式选择，再核对介质材料、电压与动作节拍。",
+    "SV{0}-B{1}-{2}NC uses a rocker-diaphragm mechanism to open, close or switch fluid paths. Select the de-energized state, port functions and mounting first, then check wetted materials, voltage and cycle timing.",
+    "SV{0}-B{1}-{2}NC abre, cierra o conmuta el líquido mediante diafragma basculante. Seleccione estado sin tensión, función de puertos y montaje; verifique materiales, tensión y ciclo.",
+    "SV{0}-B{1}-{2}NC ouvre, ferme ou commute le circuit par membrane à bascule. Choisissez état hors tension, fonction des ports et montage, puis matériaux, tension et cadence.",
+    "SV{0}-B{1}-{2}NC은 로커 다이어프램 구조로 유로를 개폐·전환합니다. 무전원 상태, 포트 용도와 설치 방식을 정한 뒤 접액 재질, 전압과 동작 주기를 확인하세요.",
+    "SV{0}-B{1}-{2}NC открывает, закрывает или переключает поток качающейся мембраной. Сначала выберите обесточенное состояние, функции портов и монтаж, затем материалы, напряжение и цикл."
+  ],
+  [
+    "SV{0}-B{1}-{2}NC；二通常闭。",
+    "SV{0}-B{1}-{2}NC; two-way normally closed.",
+    "SV{0}-B{1}-{2}NC; dos vías normalmente cerrada.",
+    "SV{0}-B{1}-{2}NC ; deux voies normalement fermée.",
+    "SV{0}-B{1}-{2}NC, 2방향 상시 닫힘.",
+    "SV{0}-B{1}-{2}NC; двухходовой нормально закрытый."
+  ],
+  [
+    "SV{0}-M{1}/U{2}-{3}NC 采用摆臂隔膜结构控制液路开闭或切换。先按断电时的液路状态、端口用途和安装方式选择，再核对介质材料、电压与动作节拍。",
+    "SV{0}-M{1}/U{2}-{3}NC uses a rocker-diaphragm mechanism to open, close or switch fluid paths. Select the de-energized state, port functions and mounting first, then check wetted materials, voltage and cycle timing.",
+    "SV{0}-M{1}/U{2}-{3}NC abre, cierra o conmuta el líquido mediante diafragma basculante. Seleccione estado sin tensión, función de puertos y montaje; verifique materiales, tensión y ciclo.",
+    "SV{0}-M{1}/U{2}-{3}NC ouvre, ferme ou commute le circuit par membrane à bascule. Choisissez état hors tension, fonction des ports et montage, puis matériaux, tension et cadence.",
+    "SV{0}-M{1}/U{2}-{3}NC은 로커 다이어프램 구조로 유로를 개폐·전환합니다. 무전원 상태, 포트 용도와 설치 방식을 정한 뒤 접액 재질, 전압과 동작 주기를 확인하세요.",
+    "SV{0}-M{1}/U{2}-{3}NC открывает, закрывает или переключает поток качающейся мембраной. Сначала выберите обесточенное состояние, функции портов и монтаж, затем материалы, напряжение и цикл."
+  ],
+  [
+    "SV{0}-M{1}/U{2}-{3}NC；二通常闭。",
+    "SV{0}-M{1}/U{2}-{3}NC; two-way normally closed.",
+    "SV{0}-M{1}/U{2}-{3}NC; dos vías normalmente cerrada.",
+    "SV{0}-M{1}/U{2}-{3}NC ; deux voies normalement fermée.",
+    "SV{0}-M{1}/U{2}-{3}NC, 2방향 상시 닫힘.",
+    "SV{0}-M{1}/U{2}-{3}NC; двухходовой нормально закрытый."
+  ],
+  [
+    "SV{0}-P-{1}NO 采用摆臂隔膜结构控制液路开闭或切换。先按断电时的液路状态、端口用途和安装方式选择，再核对介质材料、电压与动作节拍。",
+    "SV{0}-P-{1}NO uses a rocker-diaphragm mechanism to open, close or switch fluid paths. Select the de-energized state, port functions and mounting first, then check wetted materials, voltage and cycle timing.",
+    "SV{0}-P-{1}NO abre, cierra o conmuta el líquido mediante diafragma basculante. Seleccione estado sin tensión, función de puertos y montaje; verifique materiales, tensión y ciclo.",
+    "SV{0}-P-{1}NO ouvre, ferme ou commute le circuit par membrane à bascule. Choisissez état hors tension, fonction des ports et montage, puis matériaux, tension et cadence.",
+    "SV{0}-P-{1}NO은 로커 다이어프램 구조로 유로를 개폐·전환합니다. 무전원 상태, 포트 용도와 설치 방식을 정한 뒤 접액 재질, 전압과 동작 주기를 확인하세요.",
+    "SV{0}-P-{1}NO открывает, закрывает или переключает поток качающейся мембраной. Сначала выберите обесточенное состояние, функции портов и монтаж, затем материалы, напряжение и цикл."
+  ],
+  [
+    "常开配置断电导通、通电关闭。应把断电后的液路状态纳入设备停机设计。",
+    "NO is open without power and closed with power. Include the power-off fluid path in shutdown design.",
+    "NO abre sin tensión y cierra con tensión. Incluya el circuito sin tensión en el diseño de parada.",
+    "NO est ouverte hors tension et fermée sous tension. Intégrez le circuit hors tension à la conception de l’arrêt.",
+    "NO는 무전원 시 열리고 통전 시 닫힙니다. 전원 차단 후 유로 상태를 장비 정지 설계에 반영하세요.",
+    "NO открыт без питания и закрыт под питанием. Учтите путь при потере питания в проектировании остановки."
+  ],
+  [
+    "SV{0}-P-{1}NO；二通常开。",
+    "SV{0}-P-{1}NO; two-way normally open.",
+    "SV{0}-P-{1}NO; dos vías normalmente abierta.",
+    "SV{0}-P-{1}NO ; deux voies normalement ouverte.",
+    "SV{0}-P-{1}NO, 2방향 상시 열림.",
+    "SV{0}-P-{1}NO; двухходовой нормально открытый."
+  ],
+  [
+    "SV{0}-B{1}-{2}NO 采用摆臂隔膜结构控制液路开闭或切换。先按断电时的液路状态、端口用途和安装方式选择，再核对介质材料、电压与动作节拍。",
+    "SV{0}-B{1}-{2}NO uses a rocker-diaphragm mechanism to open, close or switch fluid paths. Select the de-energized state, port functions and mounting first, then check wetted materials, voltage and cycle timing.",
+    "SV{0}-B{1}-{2}NO abre, cierra o conmuta el líquido mediante diafragma basculante. Seleccione estado sin tensión, función de puertos y montaje; verifique materiales, tensión y ciclo.",
+    "SV{0}-B{1}-{2}NO ouvre, ferme ou commute le circuit par membrane à bascule. Choisissez état hors tension, fonction des ports et montage, puis matériaux, tension et cadence.",
+    "SV{0}-B{1}-{2}NO은 로커 다이어프램 구조로 유로를 개폐·전환합니다. 무전원 상태, 포트 용도와 설치 방식을 정한 뒤 접액 재질, 전압과 동작 주기를 확인하세요.",
+    "SV{0}-B{1}-{2}NO открывает, закрывает или переключает поток качающейся мембраной. Сначала выберите обесточенное состояние, функции портов и монтаж, затем материалы, напряжение и цикл."
+  ],
+  [
+    "SV{0}-B{1}-{2}NO；二通常开。",
+    "SV{0}-B{1}-{2}NO; two-way normally open.",
+    "SV{0}-B{1}-{2}NO; dos vías normalmente abierta.",
+    "SV{0}-B{1}-{2}NO ; deux voies normalement ouverte.",
+    "SV{0}-B{1}-{2}NO, 2방향 상시 열림.",
+    "SV{0}-B{1}-{2}NO; двухходовой нормально открытый."
+  ],
+  [
+    "SV{0}-M{1}/U{2}-{3}NO 采用摆臂隔膜结构控制液路开闭或切换。先按断电时的液路状态、端口用途和安装方式选择，再核对介质材料、电压与动作节拍。",
+    "SV{0}-M{1}/U{2}-{3}NO uses a rocker-diaphragm mechanism to open, close or switch fluid paths. Select the de-energized state, port functions and mounting first, then check wetted materials, voltage and cycle timing.",
+    "SV{0}-M{1}/U{2}-{3}NO abre, cierra o conmuta el líquido mediante diafragma basculante. Seleccione estado sin tensión, función de puertos y montaje; verifique materiales, tensión y ciclo.",
+    "SV{0}-M{1}/U{2}-{3}NO ouvre, ferme ou commute le circuit par membrane à bascule. Choisissez état hors tension, fonction des ports et montage, puis matériaux, tension et cadence.",
+    "SV{0}-M{1}/U{2}-{3}NO은 로커 다이어프램 구조로 유로를 개폐·전환합니다. 무전원 상태, 포트 용도와 설치 방식을 정한 뒤 접액 재질, 전압과 동작 주기를 확인하세요.",
+    "SV{0}-M{1}/U{2}-{3}NO открывает, закрывает или переключает поток качающейся мембраной. Сначала выберите обесточенное состояние, функции портов и монтаж, затем материалы, напряжение и цикл."
+  ],
+  [
+    "SV{0}-M{1}/U{2}-{3}NO；二通常开。",
+    "SV{0}-M{1}/U{2}-{3}NO; two-way normally open.",
+    "SV{0}-M{1}/U{2}-{3}NO; dos vías normalmente abierta.",
+    "SV{0}-M{1}/U{2}-{3}NO ; deux voies normalement ouverte.",
+    "SV{0}-M{1}/U{2}-{3}NO, 2방향 상시 열림.",
+    "SV{0}-M{1}/U{2}-{3}NO; двухходовой нормально открытый."
+  ],
+  [
+    "当前为二通合并入口，订货时须确认常开或常闭；两者断电状态不同。",
+    "This is a combined two-way entry. Confirm NO or NC when ordering; their power-off states differ.",
+    "Esta entrada agrupa dos vías. Confirme NO o NC al pedir; difieren sin tensión.",
+    "Cette entrée regroupe les deux voies. Confirmez NO ou NC à la commande ; les états hors tension diffèrent.",
+    "현재 항목은 2방향 통합 항목입니다. 주문 시 NO·NC를 확인하세요. 무전원 상태가 다릅니다.",
+    "Это объединённая позиция двухходовых версий. При заказе подтвердите NO или NC: их обесточенные состояния различаются."
+  ],
+  [
+    "SV{0}-P-{1}；二通状态须按订货配置确认。",
+    "SV{0}-P-{1}; confirm the two-way state from the order configuration.",
+    "SV{0}-P-{1}; confirme estado de dos vías según pedido.",
+    "SV{0}-P-{1} ; confirmer l’état deux voies selon la commande.",
+    "SV{0}-P-{1}, 2방향 상태는 주문 구성으로 확인.",
+    "SV{0}-P-{1}; состояние двухходового исполнения уточняйте по заказу."
+  ],
+  [
+    "SV{0}-B{1}-{2}；二通状态须按订货配置确认。",
+    "SV{0}-B{1}-{2}; confirm the two-way state from the order configuration.",
+    "SV{0}-B{1}-{2}; confirme estado de dos vías según pedido.",
+    "SV{0}-B{1}-{2} ; confirmer l’état deux voies selon la commande.",
+    "SV{0}-B{1}-{2}, 2방향 상태는 주문 구성으로 확인.",
+    "SV{0}-B{1}-{2}; состояние двухходового исполнения уточняйте по заказу."
+  ],
+  [
+    "SV{0}-M{1}/U{2}-{3}；二通状态须按订货配置确认。",
+    "SV{0}-M{1}/U{2}-{3}; confirm the two-way state from the order configuration.",
+    "SV{0}-M{1}/U{2}-{3}; confirme estado de dos vías según pedido.",
+    "SV{0}-M{1}/U{2}-{3} ; confirmer l’état deux voies selon la commande.",
+    "SV{0}-M{1}/U{2}-{3}, 2방향 상태는 주문 구성으로 확인.",
+    "SV{0}-M{1}/U{2}-{3}; состояние двухходового исполнения уточняйте по заказу."
+  ]
+]

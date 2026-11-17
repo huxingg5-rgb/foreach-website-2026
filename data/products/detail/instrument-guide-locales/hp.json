@@ -1,0 +1,610 @@
+[
+  [
+    "HP 为二位六通带排气高压旋转阀。先按进样、切换和排气任务确定各口的连接，再核对高压接头、运动定位与材料，避免把低压选路阀的安装和操作方法直接套用。",
+    "HP is a two-position, six-port high-pressure rotary valve with venting. Define port connections for injection, switching and venting, then verify high-pressure fittings, positioning and materials. Do not transfer low-pressure selector-valve installation or operation directly.",
+    "HP es una válvula rotativa de alta presión de dos posiciones y seis puertos con purga. Defina conexiones de inyección, conmutación y purga; revise racores, posición y materiales. No copie directamente instalación y operación de selectores de baja presión.",
+    "HP est une vanne rotative haute pression à deux positions et six ports avec purge. Définissez injection, commutation et purge, puis raccords, positionnement et matériaux. Ne transposez pas directement les méthodes des sélecteurs basse pression.",
+    "HP는 배기 기능을 갖춘 2위치 6포트 고압 로터리 밸브입니다. 주입·전환·배기 작업에 따라 포트 연결을 정하고 고압 피팅, 위치 제어와 재질을 확인하세요. 저압 선택 밸브의 설치·운전법을 그대로 적용하지 마세요.",
+    "HP — двухпозиционный шестипортовый ротационный клапан высокого давления с удалением воздуха. Задайте соединения для ввода пробы, переключения и удаления воздуха, затем фитинги, позиционирование и материалы. Не переносите напрямую методы низкого давления."
+  ],
+  [
+    "六通流路与排气位置",
+    "Six-port paths and venting position",
+    "Circuitos de seis puertos y purga",
+    "Circuits six ports et position de purge",
+    "6포트 유로 및 배기 위치",
+    "Шестипортовые пути и положение удаления воздуха"
+  ],
+  [
+    "按复位位置、常用位置和排气关系设计控制，不靠外部口数推断内部连通。",
+    "Design control from home, working and venting connections. External port count does not define internal connectivity.",
+    "Diseñe control según referencia, trabajo y purga. El número exterior de puertos no define conexiones internas.",
+    "Concevez la commande selon référence, travail et purge. Le nombre de ports ne définit pas les liaisons internes.",
+    "원점, 작동 및 배기 연결 관계로 제어를 설계하세요. 외부 포트 수만으로 내부 연결을 추정하지 마세요.",
+    "Управление задавайте по исходному, рабочим и продувочному положениям. Число внешних портов не определяет внутренние связи."
+  ],
+  [
+    "高压连接",
+    "High-pressure connections",
+    "Conexiones de alta presión",
+    "Raccordements haute pression",
+    "고압 연결",
+    "Соединения высокого давления"
+  ],
+  [
+    "工作压力上限 {0} MPa，{1}-{2} UNF 接口配合锥形接头安装；整套液路以最低适用边界为准。",
+    "Maximum working pressure {0} MPa; {1}-{2} UNF ports use conical fittings. The lowest applicable component limit governs the complete fluid path.",
+    "Presión máxima {0} MPa; puertos {1}-{2} UNF con racores cónicos. El límite más bajo de los componentes rige todo el circuito.",
+    "Pression maximale {0} MPa ; ports {1}-{2} UNF avec raccords coniques. Le composant le plus restrictif limite le circuit complet.",
+    "최대 작동 압력 {0} MPa이며 {1}-{2} UNF 포트에 원추형 피팅을 사용합니다. 전체 유로는 가장 낮은 부품 한계를 따릅니다.",
+    "Максимальное давление {0} MPa; порты {1}-{2} UNF под конические фитинги. Весь путь ограничен наименьшим допустимым пределом компонента."
+  ],
+  [
+    "小内容积",
+    "Small internal volume",
+    "Volumen interno reducido",
+    "Faible volume interne",
+    "작은 내부 용적",
+    "Малый внутренний объём"
+  ],
+  [
+    "{0} μL 为阀内容积，{1} mm 为通道直径；两者都不是进样量或保证的系统残留。",
+    "{0} μL is valve internal volume; {1} mm is channel diameter. Neither is injection volume or guaranteed system carryover.",
+    "{0} μL es volumen interno y {1} mm diámetro del canal. Ninguno es volumen de inyección ni residuo garantizado del sistema.",
+    "{0} μL est le volume interne ; {1} mm le diamètre du canal. Ni l’un ni l’autre ne représente volume injecté ou résidu garanti du système.",
+    "{0} μL는 밸브 내부 용적, {1} mm는 유로 직경입니다. 주입량이나 보장된 시스템 잔류량을 의미하지 않습니다.",
+    "{0} μL — внутренний объём, {1} mm — диаметр канала. Это не объём пробы и не гарантированный перенос системы."
+  ],
+  [
+    "独立驱动与反馈",
+    "Separate drive and feedback",
+    "Accionamiento y realimentación independientes",
+    "Entraînement et retour distincts",
+    "독립 구동 및 피드백",
+    "Отдельные привод и обратная связь"
+  ],
+  [
+    "核对步进电机、减速比与复位光耦，完成定位后再组织进样和排气过程。",
+    "Check stepper motor, reduction ratio and home optocoupler. Complete positioning before injection and venting sequences.",
+    "Revise motor, reducción y optoacoplador de referencia. Complete posicionamiento antes de inyectar o purgar.",
+    "Vérifiez moteur, réduction et optocoupleur de référence. Terminez le positionnement avant injection et purge.",
+    "스테퍼 모터, 감속비와 원점 광커플러를 확인하고 위치 결정 완료 후 주입·배기 절차를 실행하세요.",
+    "Проверьте шаговый двигатель, редукцию и оптопару исходного положения. Завершите позиционирование до ввода и удаления воздуха."
+  ],
+  [
+    "供货型号",
+    "Supplied model",
+    "Modelo suministrado",
+    "Modèle fourni",
+    "공급 모델",
+    "Поставленная модель"
+  ],
+  [
+    "按 HP-{0}SSU{1} 等具体订货配置核对阀头、转子、驱动及图纸版本。",
+    "Verify head, rotor, drive and drawing revision against the exact ordered configuration, such as HP-{0}SSU{1}.",
+    "Verifique cabezal, rotor, accionamiento y plano según configuración exacta, como HP-{0}SSU{1}.",
+    "Vérifiez tête, rotor, entraînement et révision du plan selon la commande précise, telle HP-{0}SSU{1}.",
+    "HP-{0}SSU{1} 등 정확한 주문 구성으로 헤드, 로터, 구동 및 도면 버전을 확인하세요.",
+    "Головку, ротор, привод и ревизию чертежа сверяйте с точным заказом, например HP-{0}SSU{1}."
+  ],
+  [
+    "液路图",
+    "Fluid-path diagram",
+    "Esquema del circuito",
+    "Schéma fluidique",
+    "유로도",
+    "Жидкостная схема"
+  ],
+  [
+    "标出 {0}–{1} 号口、定量管或其他外接管路、流向及排气去向，核对每个动作位置的连通关系。",
+    "Identify ports {0}–{1}, sample loop or other tubing, flow direction and vent destination. Check connectivity at every commanded position.",
+    "Identifique puertos {0}–{1}, bucle de muestra u otros tubos, sentido y destino de purga. Revise conexiones en cada posición.",
+    "Repérez ports {0}–{1}, boucle d’injection ou tubes, sens et destination de purge. Vérifiez chaque position.",
+    "{0}–{1}번 포트, 샘플 루프 또는 외부 배관, 유동 방향과 배기 목적지를 표시하고 각 동작 위치의 연결을 확인하세요.",
+    "Обозначьте порты {0}–{1}, петлю пробы или трубки, направление и выход удаления воздуха. Проверьте связи в каждом положении."
+  ],
+  [
+    "材料与接口",
+    "Materials and ports",
+    "Materiales y puertos",
+    "Matériaux et ports",
+    "재질 및 포트",
+    "Материалы и порты"
+  ],
+  [
+    "定子 SUS{0}L、转子高分子材料；{1}-{2} UNF 锥形连接，不能按平底接头安装。",
+    "SUS{0}L stator and polymer rotor; {1}-{2} UNF conical connections. Do not install flat-bottom fittings.",
+    "Estator SUS{0}L y rotor polimérico; conexiones cónicas {1}-{2} UNF. No use racores de fondo plano.",
+    "Stator SUS{0}L et rotor polymère ; raccords coniques {1}-{2} UNF. Ne pas monter de raccords à fond plat.",
+    "SUS{0}L 스테이터와 고분자 로터, {1}-{2} UNF 원추형 연결입니다. 평저 피팅 방식으로 설치하지 마세요.",
+    "Статор SUS{0}L, полимерный ротор; коническое соединение {1}-{2} UNF. Плоскодонные фитинги не применяйте."
+  ],
+  [
+    "寿命中的一个周期包含注液位、抽样位与排气位，测试介质和转速需连同寿命评估，不按一次相邻切换计数。",
+    "One life-test cycle includes filling, sampling and venting positions. Assess test liquid and speed with service life; one adjacent switch is not a complete cycle.",
+    "Un ciclo de vida incluye llenado, muestreo y purga. Evalúe líquido y velocidad junto con vida útil; un cambio adyacente no equivale a ciclo completo.",
+    "Un cycle de durée de vie comprend remplissage, prélèvement et purge. Évaluez fluide et vitesse avec la durée de vie ; une commutation adjacente n’est pas un cycle.",
+    "수명 시험의 한 주기에는 주입·샘플링·배기 위치가 포함됩니다. 시험액과 회전 속도를 함께 평가하고 인접 위치 전환 한 번을 한 주기로 세지 마세요.",
+    "Цикл ресурса включает заполнение, отбор и удаление воздуха. Учитывайте тестовую среду и скорость; одно соседнее переключение не равно циклу."
+  ],
+  [
+    "进样、复位与排气流路",
+    "Injection, home and venting paths",
+    "Circuitos de inyección, referencia y purga",
+    "Circuits d’injection, de référence et de purge",
+    "주입, 원점 및 배기 유로",
+    "Пути ввода, исходного положения и удаления воздуха"
+  ],
+  [
+    "先依据系统流路图定义各口用途，再把程序位置与实际连通关系对应。观察方向以定子数字面为基准。",
+    "Define port roles from the system diagram, then match program positions to actual connections. View from the numbered stator face.",
+    "Defina funciones según esquema y relacione programa con conexión real. Observe desde la cara numerada del estator.",
+    "Définissez les ports selon le schéma puis associez positions et liaisons réelles. Vue depuis la face numérotée du stator.",
+    "시스템 유로도로 포트 용도를 정한 뒤 프로그램 위치와 실제 연결을 대응시키세요. 관찰 방향은 스테이터 숫자면 기준입니다.",
+    "Задайте роли портов по схеме, затем сопоставьте программные положения и реальные связи. Вид со стороны цифр статора."
+  ],
+  [
+    "HP 高压旋转阀复位位置、两种常用位置及排气口角度关系图",
+    "HP high-pressure rotary-valve home, two working positions and vent-port angular relationships",
+    "Posición de referencia, dos posiciones de trabajo y ángulos de purga de la válvula HP",
+    "Positions de référence, deux positions de travail et angles de purge de la vanne HP",
+    "HP 고압 로터리 밸브 원점, 두 작동 위치 및 배기 포트 각도 관계",
+    "Исходное, два рабочих положения и углы порта удаления воздуха клапана HP"
+  ],
+  [
+    "进样、复位与排气位置。外部端口连接和动作顺序应与整机流路对应。",
+    "Injection, home and venting positions. External connections and sequence must match the instrument fluid diagram.",
+    "Posiciones de inyección, referencia y purga. Conexiones y secuencia deben coincidir con el circuito del equipo.",
+    "Positions d’injection, référence et purge. Les raccordements et la séquence doivent suivre le schéma de l’instrument.",
+    "주입·원점·배기 위치입니다. 외부 연결과 동작 순서를 장비 유로에 맞추세요.",
+    "Положения ввода, исходное и удаления воздуха. Внешние соединения и последовательность согласуйте со схемой прибора."
+  ],
+  [
+    "复位位置",
+    "Home position",
+    "Posición de referencia",
+    "Position de référence",
+    "원점 위치",
+    "Исходное положение"
+  ],
+  [
+    "{0}–{1}、{2}–{3}、{4}–{5} 连通",
+    "{0}–{1}, {2}–{3} and {4}–{5} connected",
+    "{0}–{1}, {2}–{3} y {4}–{5} conectados",
+    "{0}–{1}, {2}–{3} et {4}–{5} reliés",
+    "{0}–{1}, {2}–{3}, {4}–{5} 연결",
+    "Соединены {0}–{1}, {2}–{3} и {4}–{5}"
+  ],
+  [
+    "先完成复位并检查反馈，再以该位置为基准组织后续动作。",
+    "Home and check feedback first, then use this position as the reference for subsequent motion.",
+    "Referencie y compruebe respuesta; use esta posición como base de los movimientos siguientes.",
+    "Référencez et vérifiez le retour, puis utilisez cette position pour la suite.",
+    "원점 복귀와 피드백 확인 후 해당 위치를 기준으로 다음 동작을 구성하세요.",
+    "Сначала выполните возврат и проверьте сигнал, затем используйте положение как базу дальнейших движений."
+  ],
+  [
+    "常用位置",
+    "Working positions",
+    "Posiciones de trabajo",
+    "Positions de travail",
+    "작동 위치",
+    "Рабочие положения"
+  ],
+  [
+    "按图确认转子与相邻端口关系",
+    "Check rotor and adjacent-port relationships in the drawing",
+    "Compruebe rotor y puertos adyacentes según plano",
+    "Vérifier rotor et ports adjacents selon plan",
+    "도면으로 로터와 인접 포트 관계 확인",
+    "Проверьте ротор и соседние порты по чертежу"
+  ],
+  [
+    "阀位置与电机角度不能简单等同，需计入 {0}:{1} 减速比。",
+    "Valve position is not equal to motor angle; account for the {0}:{1} reduction ratio.",
+    "La posición no equivale al ángulo motor; incluya la reducción {0}:{1}.",
+    "La position de vanne n’est pas l’angle moteur ; tenir compte du rapport {0}:{1}.",
+    "밸브 위치와 모터 각도는 같지 않습니다. 감속비 {0}:{1}를 반영하세요.",
+    "Положение клапана не равно углу двигателя; учитывайте редукцию {0}:{1}."
+  ],
+  [
+    "排气",
+    "Venting",
+    "Purga",
+    "Purge",
+    "배기",
+    "Удаление воздуха"
+  ],
+  [
+    "确认排气位置与排出液去向",
+    "Confirm vent position and discharged-liquid destination",
+    "Confirme posición y destino del líquido purgado",
+    "Confirmer position de purge et destination du liquide",
+    "배기 위치 및 배출액 목적지 확인",
+    "Подтвердите положение и выход удаляемой жидкости"
+  ],
+  [
+    "排气与正常进样分开测试，检查是否将气泡或不合格启动液带入后续分析。",
+    "Test venting separately from normal injection. Check whether bubbles or off-spec startup liquid enter downstream analysis.",
+    "Ensaye purga aparte de inyección. Compruebe entrada de burbujas o líquido inicial no conforme al análisis posterior.",
+    "Testez la purge séparément de l’injection. Vérifiez l’arrivée de bulles ou de liquide initial non conforme en analyse.",
+    "배기와 정상 주입을 따로 시험하고 기포나 부적합 초기 액체가 후속 분석으로 유입되는지 확인하세요.",
+    "Проверяйте удаление воздуха отдельно от ввода. Убедитесь, что пузырьки или некондиционная стартовая жидкость не попадают в анализ."
+  ],
+  [
+    "工作压力、材料与高压接头",
+    "Pressure, materials and high-pressure fittings",
+    "Presión, materiales y racores de alta presión",
+    "Pression, matériaux et raccords haute pression",
+    "작동 압력, 재질 및 고압 피팅",
+    "Давление, материалы и фитинги высокого давления"
+  ],
+  [
+    "高压连接需要阀、管材、接头与密封结构共同匹配；任何一件的适用边界较低时，以该件为约束。",
+    "Valve, tubing, fittings and seals must all match. The component with the lowest applicable rating limits the assembly.",
+    "Válvula, tubos, racores y sellos deben ser compatibles. El componente de menor límite restringe el conjunto.",
+    "Vanne, tubes, raccords et joints doivent correspondre. Le composant le moins résistant limite l’ensemble.",
+    "밸브, 튜브, 피팅과 밀봉 구조를 함께 맞추세요. 한 부품의 한계가 낮으면 그 부품이 전체 한계를 정합니다.",
+    "Клапан, трубки, фитинги и уплотнения должны соответствовать друг другу. Узел ограничен наименьшим допустимым пределом детали."
+  ],
+  [
+    "最大工作压力 {0} MPa",
+    "Maximum working pressure {0} MPa",
+    "Presión máxima de trabajo {0} MPa",
+    "Pression maximale de service {0} MPa",
+    "최대 작동 압력 {0} MPa",
+    "Максимальное рабочее давление {0} MPa"
+  ],
+  [
+    "按实际介质、温度和整套连接件确认，不以阀上限代替系统耐压验收。",
+    "Verify actual liquid, temperature and the complete connection assembly. Valve rating does not replace system pressure acceptance testing.",
+    "Verifique líquido, temperatura y todas las conexiones. El límite de la válvula no sustituye el ensayo del sistema.",
+    "Vérifiez fluide, température et ensemble des raccordements. La limite de vanne ne remplace pas l’épreuve du système.",
+    "실제 액체, 온도와 전체 연결 조합을 확인하세요. 밸브 상한이 시스템 내압 검수를 대신하지 않습니다.",
+    "Проверьте среду, температуру и весь комплект соединений. Предел клапана не заменяет приёмочное испытание системы давлением."
+  ],
+  [
+    "{0}-{1} UNF，配锥形系列接头",
+    "{0}-{1} UNF with conical-series fittings",
+    "{0}-{1} UNF con racores cónicos",
+    "{0}-{1} UNF avec raccords coniques",
+    "{0}-{1} UNF, 원추형 피팅 적용",
+    "{0}-{1} UNF с коническими фитингами"
+  ],
+  [
+    "同时核对螺纹、密封锥面、管外径和插入位置；不能把 {0}/{1}-{2} UNF 平底密封件用于此接口。",
+    "Match thread, sealing cone, tubing OD and insertion. Do not use {0}/{1}-{2} UNF flat-bottom seals in this port.",
+    "Combine rosca, cono, diámetro exterior e inserción. No use sellos planos {0}/{1}-{2} UNF aquí.",
+    "Vérifiez filetage, cône, diamètre extérieur et insertion. N’utilisez pas de joints à fond plat {0}/{1}-{2} UNF.",
+    "나사산, 밀봉 원추면, 튜브 외경과 삽입 위치를 확인하세요. {0}/{1}-{2} UNF 평저 밀봉 부품을 이 포트에 사용하지 마세요.",
+    "Согласуйте резьбу, конус, наружный диаметр и ввод. Не используйте плоскодонные уплотнения {0}/{1}-{2} UNF в этом порту."
+  ],
+  [
+    "SUS{0}L 定子与高分子转子",
+    "SUS{0}L stator and polymer rotor",
+    "Estator SUS{0}L y rotor polimérico",
+    "Stator SUS{0}L et rotor polymère",
+    "SUS{0}L 스테이터 및 고분자 로터",
+    "Статор SUS{0}L и полимерный ротор"
+  ],
+  [
+    "按工作液与清洗液核对材料相容性，高分子具体配置以订单资料确认。",
+    "Check compatibility with working and cleaning liquids. Confirm the exact polymer configuration in the order documents.",
+    "Compruebe compatibilidad con trabajo y limpieza. Confirme polímero concreto en el pedido.",
+    "Vérifiez la compatibilité travail/nettoyage. Confirmez le polymère précis dans la commande.",
+    "작업액·세척액 재질 적합성을 확인하고 구체적인 고분자 구성은 주문 자료로 확인하세요.",
+    "Проверьте совместимость рабочих и промывочных сред. Конкретный полимер уточняйте по заказу."
+  ],
+  [
+    "装拆",
+    "Assembly and disassembly",
+    "Montaje y desmontaje",
+    "Montage et démontage",
+    "조립 및 분해",
+    "Монтаж и демонтаж"
+  ],
+  [
+    "停机、隔离液源并确认完全泄压",
+    "Stop, isolate liquid supply and confirm full depressurization",
+    "Pare, aísle suministro y confirme despresurización total",
+    "Arrêter, isoler la source et confirmer la dépressurisation totale",
+    "정지, 액체 공급 격리 및 완전 감압 확인",
+    "Остановите, изолируйте подачу и подтвердите полный сброс давления"
+  ],
+  [
+    "任何松管、换接头或维护操作前，先确认残余压力已经释放，不能靠关闭泵判断已无压。",
+    "Confirm residual pressure is released before loosening tubing, replacing fittings or servicing. Pump shutdown alone does not prove zero pressure.",
+    "Confirme presión residual liberada antes de aflojar tubos, cambiar racores o intervenir. Parar la bomba no demuestra presión cero.",
+    "Confirmez la libération de pression résiduelle avant desserrage, remplacement ou entretien. L’arrêt de la pompe ne prouve pas l’absence de pression.",
+    "튜브 풀기, 피팅 교체 또는 정비 전에 잔압 해제를 확인하세요. 펌프 정지만으로 무압 상태를 판단하지 마세요.",
+    "До ослабления трубок, замены фитинга или обслуживания убедитесь в сбросе остаточного давления. Остановка насоса не означает нулевого давления."
+  ],
+  [
+    "电机、光耦与位置控制",
+    "Motor, optocoupler and position control",
+    "Motor, optoacoplador y posición",
+    "Moteur, optocoupleur et positionnement",
+    "모터, 광커플러 및 위치 제어",
+    "Двигатель, оптопара и позиционирование"
+  ],
+  [
+    "供电、绕组和光耦应按实际供货接口分别连接；参数表中的 {0} V、{1} A 不能直接作为裸光耦供电。",
+    "Connect power, windings and optocoupler separately to the supplied pinout. The listed {0} V/{1} A is not a bare-optocoupler supply specification.",
+    "Conecte fuente, bobinados y optoacoplador según pinout. Los {0} V/{1} A no especifican alimentación del optoacoplador desnudo.",
+    "Raccordez séparément alimentation, enroulements et optocoupleur selon brochage. Les {0} V/{1} A ne sont pas l’alimentation de l’optocoupleur nu.",
+    "전원, 권선과 광커플러를 공급 인터페이스에 따라 따로 연결하세요. 표의 {0} V·{1} A는 광커플러 직접 전원 사양이 아닙니다.",
+    "Питание, обмотки и оптопару подключайте раздельно по распиновке. Указанные {0} V/{1} A не являются питанием отдельной оптопары."
+  ],
+  [
+    "电机与传动",
+    "Motor and transmission",
+    "Motor y transmisión",
+    "Moteur et transmission",
+    "모터 및 전달 기구",
+    "Двигатель и передача"
+  ],
+  [
+    "减速比 {0}:{1}",
+    "Reduction ratio {0}:{1}",
+    "Reducción {0}:{1}",
+    "Rapport de réduction {0}:{1}",
+    "감속비 {0}:{1}",
+    "Передаточное отношение {0}:{1}"
+  ],
+  [
+    "按电机与驱动设置换算阀芯角度，检查运动方向、加减速和到位状态。",
+    "Convert rotor angle using motor/driver settings. Verify direction, ramps and in-position status.",
+    "Convierta ángulo según motor/controlador. Verifique sentido, rampas y llegada.",
+    "Convertissez l’angle selon moteur/pilote. Vérifiez sens, rampes et état en position.",
+    "모터·드라이버 설정으로 로터 각도를 환산하고 방향, 가감속과 도달 상태를 확인하세요.",
+    "Пересчитайте угол ротора по двигателю/драйверу. Проверьте направление, разгон и достижение положения."
+  ],
+  [
+    "复位光耦",
+    "Home optocoupler",
+    "Optoacoplador de referencia",
+    "Optocoupleur de référencement",
+    "원점 광커플러",
+    "Оптопара исходного положения"
+  ],
+  [
+    "按图确认电源、地与信号端",
+    "Check supply, ground and signal pins against the drawing",
+    "Revise alimentación, tierra y señal según plano",
+    "Vérifier alimentation, masse et signaux selon plan",
+    "도면으로 전원, 접지 및 신호 단자 확인",
+    "Сверьте питание, общий и сигнальные выводы с чертежом"
+  ],
+  [
+    "核对发光侧限流和主控输入电平，先低速验证复位信号再运行正式动作。",
+    "Check LED current limiting and controller input level. Verify homing at low speed before normal operation.",
+    "Revise limitación del LED y nivel de entrada. Verifique referencia a baja velocidad antes de operar.",
+    "Vérifiez limitation LED et niveau d’entrée. Validez le référencement à faible vitesse avant fonctionnement.",
+    "발광 측 전류 제한과 주 제어기 입력 레벨을 확인하세요. 저속으로 원점 신호를 검증한 뒤 정식 동작하세요.",
+    "Проверьте ограничение тока светодиода и входной уровень контроллера. Сначала проверьте возврат на малой скорости."
+  ],
+  [
+    "程序联锁",
+    "Program interlocks",
+    "Interbloqueos del programa",
+    "Interverrouillages du programme",
+    "프로그램 인터록",
+    "Программные блокировки"
+  ],
+  [
+    "位置、压力与泵动作协调",
+    "Coordinate position, pressure and pump operation",
+    "Coordine posición, presión y bomba",
+    "Coordonner position, pression et pompe",
+    "위치, 압력 및 펌프 동작 연동",
+    "Согласуйте положение, давление и работу насоса"
+  ],
+  [
+    "在指定位置和允许系统状态下执行后续动作，异常时停止流程并保留记录。",
+    "Proceed only at specified positions and permitted system states. Stop the sequence and preserve records on faults.",
+    "Continúe solo en posiciones y estados permitidos. Pare la secuencia y guarde registros ante anomalías.",
+    "Poursuivez seulement aux positions et états autorisés. Arrêtez et conservez les données en cas de défaut.",
+    "지정 위치와 허용 시스템 상태에서 후속 동작을 실행하세요. 이상 시 절차를 중지하고 기록을 보관하세요.",
+    "Продолжайте только в заданном положении и допустимом состоянии системы. При сбое остановите цикл и сохраните записи."
+  ],
+  [
+    "安装、充液排气与首次验证",
+    "Installation, priming, venting and initial validation",
+    "Instalación, cebado, purga y validación inicial",
+    "Installation, amorçage, purge et validation initiale",
+    "설치, 충전·배기 및 최초 검증",
+    "Монтаж, заполнение, удаление воздуха и первая проверка"
+  ],
+  [
+    "先在适当低压条件下确认流路与密封，再按整机验收方案逐步进入目标工况。",
+    "Check paths and sealing at an appropriate low pressure first, then approach target conditions under the instrument acceptance plan.",
+    "Compruebe vías y sellado a baja presión adecuada; alcance gradualmente condiciones objetivo según plan del equipo.",
+    "Vérifiez circuits et étanchéité à basse pression appropriée, puis montez selon le plan de validation de l’instrument.",
+    "적절한 저압에서 유로·밀봉을 확인한 뒤 장비 검수 계획에 따라 목표 조건으로 단계적으로 진입하세요.",
+    "Сначала проверьте пути и герметичность при подходящем низком давлении, затем переходите к целевым условиям по плану приёмки."
+  ],
+  [
+    "核对配置并固定",
+    "Check and secure the configuration",
+    "Revise y fije la configuración",
+    "Vérifier et fixer la configuration",
+    "구성 확인 및 고정",
+    "Проверьте комплектацию и закрепите"
+  ],
+  [
+    "按图纸确认安装孔、接口和线束空间，检查口号与实际管路标识。",
+    "Check mounting holes, ports and cable clearance against the drawing, and match port numbers to tubing labels.",
+    "Revise taladros, puertos y cables según plano y relacione números con etiquetas de tubos.",
+    "Vérifiez trous, ports et câbles selon plan ; associez numéros des ports et repères des tubes.",
+    "도면으로 설치 홀, 포트와 배선 공간을 확인하고 포트 번호·실제 배관 표시를 대조하세요.",
+    "Сверьте отверстия, порты и место жгутов с чертежом; сопоставьте номера и маркировку трубок."
+  ],
+  [
+    "断电连接驱动",
+    "Connect drive with power off",
+    "Conecte accionamiento sin tensión",
+    "Raccorder le pilote hors tension",
+    "전원 차단 후 구동 연결",
+    "Подключайте привод без питания"
+  ],
+  [
+    "核对电机、光耦和控制线，完成复位方向与基准位置检查。",
+    "Verify motor, optocoupler and control wiring, homing direction and reference position.",
+    "Revise motor, optoacoplador, control, sentido de referencia y posición base.",
+    "Vérifiez moteur, optocoupleur, câblage, sens et position de référence.",
+    "모터, 광커플러와 제어선을 확인하고 원점 방향·기준 위치를 점검하세요.",
+    "Проверьте двигатель, оптопару, управление, направление возврата и базовое положение."
+  ],
+  [
+    "充液与排气",
+    "Fill and vent",
+    "Llene y purgue",
+    "Remplir et purger",
+    "충전 및 배기",
+    "Заполните и удалите воздух"
+  ],
+  [
+    "使用相容介质按确定路径排气，确认废液收集与接口无渗漏。",
+    "Vent compatible liquid through the defined paths. Confirm waste collection and leak-free connections.",
+    "Purgue líquido compatible por vías definidas. Compruebe recogida de residuos y ausencia de fugas.",
+    "Purgez un liquide compatible par les circuits définis. Vérifiez collecte des déchets et absence de fuite.",
+    "호환 액체로 지정 경로를 배기하고 폐액 수거와 연결부 누설 여부를 확인하세요.",
+    "Удалите воздух совместимой жидкостью по заданным путям. Проверьте сбор отходов и отсутствие утечек."
+  ],
+  [
+    "验证各位置",
+    "Validate every position",
+    "Valide cada posición",
+    "Valider chaque position",
+    "각 위치 검증",
+    "Проверьте каждое положение"
+  ],
+  [
+    "逐项核对复位、常用和排气位置的实际通液关系，再测试进样与连续循环。",
+    "Check actual connections at home, working and vent positions, then test injection and repeated cycles.",
+    "Compruebe vías en referencia, trabajo y purga; ensaye inyección y ciclos repetidos.",
+    "Vérifiez les connexions en référence, travail et purge, puis injection et cycles répétés.",
+    "원점·작동·배기 위치의 실제 연결을 확인한 뒤 주입과 연속 주기를 시험하세요.",
+    "Проверьте реальные связи в исходном, рабочих и продувочном положениях, затем ввод и повторные циклы."
+  ],
+  [
+    "记录工作点",
+    "Record the operating point",
+    "Registre el punto de trabajo",
+    "Consigner le point de fonctionnement",
+    "작동점 기록",
+    "Запишите рабочую точку"
+  ],
+  [
+    "按实际压力、流量、介质和定量管配置测量重复运行与残留，形成整机验收记录。",
+    "Measure repeated operation and carryover at actual pressure, flow, liquid and sample-loop configuration; retain instrument acceptance records.",
+    "Mida repetición y residuos con presión, caudal, líquido y bucle reales; conserve registro de aceptación.",
+    "Mesurez répétitions et résidus à pression, débit, fluide et boucle réels ; conservez la validation de l’instrument.",
+    "실제 압력, 유량, 액체와 샘플 루프 구성에서 반복 운전·잔류를 측정하고 장비 검수 기록을 남기세요.",
+    "Измеряйте повторные циклы и перенос при фактических давлении, расходе, среде и петле пробы; оформите приёмочный протокол."
+  ],
+  [
+    "高压渗漏、定位异常与维护",
+    "High-pressure leaks, positioning faults and maintenance",
+    "Fugas de alta presión, fallos de posición y mantenimiento",
+    "Fuites haute pression, défauts de position et entretien",
+    "고압 누설, 위치 이상 및 유지보수",
+    "Утечки высокого давления, сбои положения и обслуживание"
+  ],
+  [
+    "发现渗漏、异响或定位异常时停止运行，先安全泄压，再进行外部检查。",
+    "Stop for leaks, unusual noise or positioning faults. Depressurize safely before external inspection.",
+    "Pare ante fugas, ruido o fallo de posición. Despresurice con seguridad antes de inspeccionar.",
+    "Arrêtez en cas de fuite, bruit ou défaut de position. Dépressurisez avant inspection externe.",
+    "누설, 이상음 또는 위치 이상 시 정지하고 안전하게 감압한 뒤 외부를 점검하세요.",
+    "При утечке, необычном шуме или сбое положения остановитесь. Безопасно сбросьте давление до внешнего осмотра."
+  ],
+  [
+    "接头类型、管路插入位置和密封面",
+    "Fitting type, tubing insertion and sealing face",
+    "Tipo de racor, inserción y sellado",
+    "Type de raccord, insertion et surface d’étanchéité",
+    "피팅 형식, 튜브 삽입 위치 및 밀봉면",
+    "Тип фитинга, ввод трубки и поверхность уплотнения"
+  ],
+  [
+    "泄压后处理，不在带压状态继续拧紧接头。",
+    "Depressurize before correction; do not tighten fittings further while pressurized.",
+    "Corrija tras despresurizar; no apriete más bajo presión.",
+    "Intervenez après dépressurisation ; ne resserrez pas sous pression.",
+    "감압 후 처리하세요. 압력이 있는 상태에서 피팅을 계속 조이지 마세요.",
+    "Устраняйте после сброса давления; не подтягивайте фитинг под давлением."
+  ],
+  [
+    "排气不充分",
+    "Insufficient venting",
+    "Purga insuficiente",
+    "Purge insuffisante",
+    "배기 부족",
+    "Недостаточное удаление воздуха"
+  ],
+  [
+    "储液状态、排气路径、安装与管路高点",
+    "Reservoir condition, vent path, mounting and tubing high points",
+    "Depósito, circuito de purga, montaje y puntos altos",
+    "Réservoir, circuit de purge, montage et points hauts",
+    "저장 상태, 배기 경로, 설치 및 배관 고점",
+    "Состояние ёмкости, путь удаления воздуха, монтаж и верхние точки трубок"
+  ],
+  [
+    "分别检查进入阀前的气泡和阀后残留，重新验证排气动作。",
+    "Check bubbles before the valve and residues downstream separately, then revalidate venting.",
+    "Revise por separado burbujas antes y residuos después; revalide purga.",
+    "Vérifiez séparément bulles en amont et résidus en aval, puis revalidez la purge.",
+    "밸브 전단 기포와 후단 잔류를 각각 확인하고 배기를 다시 검증하세요.",
+    "Отдельно проверьте пузырьки до клапана и остатки после него; повторно проверьте удаление воздуха."
+  ],
+  [
+    "位置或进样不一致",
+    "Inconsistent position or injection",
+    "Posición o inyección inconsistente",
+    "Position ou injection irrégulière",
+    "위치 또는 주입 불일치",
+    "Нестабильное положение или ввод"
+  ],
+  [
+    "复位光耦、驱动角度、传动与流路连接",
+    "Home optocoupler, drive angle, transmission and fluid connections",
+    "Optoacoplador de referencia, ángulo, transmisión y conexiones",
+    "Optocoupleur de référence, angle, transmission et raccordements",
+    "원점 광커플러, 구동 각도, 전달 기구 및 유로 연결",
+    "Оптопара возврата, угол привода, передача и жидкостные соединения"
+  ],
+  [
+    "记录程序、反馈和实际结果，不自行改变内部定位结构。",
+    "Record program, feedback and actual results. Do not modify internal positioning parts.",
+    "Registre programa, respuesta y resultados. No modifique posicionamiento interno.",
+    "Consignez programme, retour et résultats. Ne modifiez pas le positionnement interne.",
+    "프로그램, 피드백과 실제 결과를 기록하고 내부 위치 기구를 임의로 바꾸지 마세요.",
+    "Запишите программу, обратную связь и результат. Не изменяйте внутренний механизм позиционирования."
+  ],
+  [
+    "需要维护",
+    "Maintenance required",
+    "Mantenimiento necesario",
+    "Entretien nécessaire",
+    "정비 필요",
+    "Требуется обслуживание"
+  ],
+  [
+    "转子、密封及运行周期记录",
+    "Rotor, seals and operating-cycle records",
+    "Rotor, sellos y registro de ciclos",
+    "Rotor, joints et historique des cycles",
+    "로터, 씰 및 작동 주기 기록",
+    "Ротор, уплотнения и учёт циклов"
+  ],
+  [
+    "联系技术支持处理耗损件，不把标称寿命当作无需检查的承诺。",
+    "Contact technical support for wear parts. Nominal service life is not a promise of inspection-free operation.",
+    "Contacte soporte para piezas de desgaste. La vida nominal no implica funcionamiento sin inspecciones.",
+    "Contactez l’assistance pour les pièces d’usure. La durée nominale ne dispense pas des contrôles.",
+    "마모 부품 처리는 기술 지원팀에 문의하세요. 공칭 수명을 점검 불필요 보장으로 보지 마세요.",
+    "По изнашиваемым деталям обратитесь в поддержку. Номинальный ресурс не гарантирует работу без проверок."
+  ]
+]
