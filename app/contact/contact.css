@@ -1813,7 +1813,7 @@
 ========================================================= */
 
 .distributor-hero {
-  --distributor-hero-min-height: 920px;
+  --distributor-hero-min-height: 620px;
   min-height: var(--distributor-hero-min-height);
   position: relative;
   padding: calc(var(--site-header-height) + 112px) 0 120px;
@@ -3687,8 +3687,8 @@
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 760px) {
   .distributor-hero {
-    --distributor-hero-min-height: 820px;
+    --distributor-hero-min-height: 540px;
   }
 }
