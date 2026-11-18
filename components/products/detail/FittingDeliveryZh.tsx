@@ -5,7 +5,8 @@ import { fittingLocale } from "@/data/products/detail/fitting-ui.intl";
 import { FITTING_DELIVERY_POLICY as policy, FITTING_DELIVERY_POLICY_SOURCE as source } from "@/data/products/detail/fitting-delivery.intl";
 import { siteFooterData } from "@/data/site-footer";
 
-const FittingAfterSalesForm = dynamic(() => import("./FittingAfterSalesForm"));
+// Keep the delivery section visible while its form loads on the first tab visit.
+const FittingAfterSalesForm = dynamic(() => import("./FittingAfterSalesForm"), { loading: () => null });
 
 const IMAGE_ROOT = "/images/products/fittings/quick-connect-fittings/q2001-pmv-sacn/delivery/";
 

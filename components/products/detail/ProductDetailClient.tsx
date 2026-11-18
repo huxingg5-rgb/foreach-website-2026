@@ -1779,7 +1779,7 @@ export default function ProductDetailClient({
   // Piston pumps and localized fittings follow the Chinese information layout:
   // specifications and the shared 2D/3D viewer, without a separate datasheet panel.
   const hasDatasheetTab = Boolean(resourceLocale !== "zh" && !isTubingDetailData(sourceData) && !isTubingAssembly && !isPistonPumpCustomerCategoryPage && !isInstrumentCustomerCategoryPage && !isDiaphragmPumpCustomerCategoryPage && !isProbeCustomerCategoryPage &&
-    !(isEnglish && (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings")));
+    !(String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings"));
   const productDetailTabCount =
     (data.productTypeId === "quick-connect-fittings" && !getQuickConnectFittingCadAssets(data.slug) ? 2 : 3) +
     (hasApplicationDetails ? 1 : 0) + (hasDatasheetTab ? 1 : 0);
@@ -4178,7 +4178,14 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     .join(" ")}
                   type="button"
                   aria-pressed={activeCustomerCategory === key}
-                  onClick={() => setActiveCustomerCategory(key)}
+                  onClick={(event) => {
+                    setActiveCustomerCategory(key);
+                    const button = event.currentTarget;
+                    const nav = button.parentElement;
+                    if (nav && nav.scrollWidth > nav.clientWidth) {
+                      button.scrollIntoView({ block: "nearest", inline: "nearest" });
+                    }
+                  }}
                 >
                   {isTubingCustomerCategoryPage ? tubingText(label, configuratorLocale) : isProbeCustomerCategoryPage ? probeText(label, configuratorLocale) : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.nav[key === "product" ? 0 : key === "selection" ? 1 : 2] : isPistonPumpCustomerCategoryPage ? pistonText(label, configuratorLocale) : isAssemblyCustomerCategoryPage ? assemblyText(label, configuratorLocale) : customerCategoryUi?.[key] || label}
                 </button>

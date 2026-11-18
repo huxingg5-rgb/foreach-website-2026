@@ -227,32 +227,49 @@
   outline-offset: 2px;
 }
 
+@media (max-width: 768px) {
+  .head {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .head h2 {
+    flex: 0 0 auto;
+    font-size: clamp(18px, 5.5vw, 22px);
+  }
+
+  .tabs {
+    min-width: 0;
+    padding: 0;
+  }
+
+  .tabs [role="tab"] {
+    min-width: 0;
+    height: auto;
+    min-height: 36px;
+    padding: 4px 6px;
+    font-size: clamp(12px, 3.25vw, 13px);
+    line-height: 1.25;
+  }
+
+  /* Announce the current slide without reserving a visible row under the video. */
+  .navigation {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .navigation button { display: none; }
+}
+
 @media (max-width: 760px) {
   .viewport {
     --w: 86%;
     --gap: 10px;
-  }
-
-  .head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 16px;
-  }
-
-  .head h2 {
-    font-size: 22px;
-  }
-
-  .tabs { width: 100%; }
-  .tab, .tabActive {
-    flex: 1;
-    min-width: 0;
-    height: auto;
-    min-height: 36px;
-    padding: 8px 10px;
-    font-size: 13px;
-    line-height: 1.4;
   }
 
   .caption {

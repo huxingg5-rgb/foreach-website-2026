@@ -45,6 +45,11 @@ export default function ProductResourceDownloads({ datasheet, locale = "en", inc
         }
       }}
       onBlur={(event) => {
+        // GlobalTouchInteractions blurs the trigger after a tap. Outside taps close the menu separately.
+        if (
+          !event.relatedTarget && triggerRef.current?.contains(event.target) &&
+          document.documentElement.dataset.globalTouchDevice === "true"
+        ) return;
         if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
       }}
       onKeyDown={(event) => {

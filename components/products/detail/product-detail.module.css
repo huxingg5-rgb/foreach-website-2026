@@ -1491,13 +1491,17 @@
 }
 
 @media (max-width: 768px) {
-  .customerCategoryNav {
+  .detailSection .customerCategoryNav {
     justify-content: flex-start;
-    gap: 24px;
-    overflow-x: auto;
+    gap: 12px;
+    /* The product breadcrumb shell clips every nested nav on phones. */
+    overflow-x: auto !important;
+    overscroll-behavior-x: contain;
   }
 
   .customerCategoryButton {
+    flex: 1 0 auto;
+    min-height: 44px;
     font-size: 20px;
   }
 
@@ -2949,8 +2953,7 @@
   }
 }
 
-/* Keep translated section labels visible on phones and tablets. */
-@media (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .customerCategoryNav {
     display: grid;
     grid-auto-flow: column;
@@ -2964,6 +2967,9 @@
     overflow-wrap: anywhere;
     line-height: 1.4;
   }
+}
+
+@media (max-width: 1024px) {
   .customerCategoryNav:not(:lang(zh)) .customerCategoryButton {
     font-size: clamp(12px, 3.5vw, 20px);
   }
