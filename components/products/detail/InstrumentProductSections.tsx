@@ -4,6 +4,7 @@ import {
   type GuideSection,
   type InstrumentProductGuide,
 } from "@/data/products/detail/instrument-product-guides.zh";
+import { getChinesePipettingSelectionGuide } from "@/data/products/detail/pipetting-selection-guide.zh";
 import { instrumentDetailProfiles, getInstrumentDeliveryRows } from "@/data/products/detail/instrument-detail-content.zh";
 import { siteFooterData } from "@/data/site-footer";
 import figureSizes from "@/data/products/detail/instrument-guide-figures.generated.json";
@@ -14,6 +15,7 @@ import { getLocalizedInstrumentGuide, type InstrumentGuideLocale } from "@/data/
 import { getInstrumentRatioCopy } from "@/data/products/detail/instrument-guide-locales/figures";
 import { getRplGuideUi } from "@/data/products/detail/rpl-guide-ui.intl";
 import deliveryPhotoSets from "@/data/products/detail/instrument-delivery-photos.zh.json";
+import PipettingSelectionContent from "./PipettingSelectionContent";
 import InstrumentSelectionGuideContent from "./InstrumentSelectionGuideContent";
 import InstrumentProductAfterSalesForm from "./InstrumentProductAfterSalesForm";
 import RplProductDeliveryContent from "./RplProductDeliveryContent";
@@ -170,17 +172,19 @@ const packagingRows = [
 
 export function InstrumentProductDeliveryContent({ guide }: { guide: InstrumentProductGuide }) {
   const isValveless = guide.family === "rpl" || guide.family === "drpl";
+  const isPipetting = guide.family === "smtp2" || guide.family === "smtp4";
   const deliveryCopy = getInstrumentDeliveryRows(guide.family);
-  const compact = Boolean(deliveryCopy);
+  const compact = isPipetting || Boolean(deliveryCopy);
   const productPackaging = Object.values(deliveryPhotoSets).find(group =>
     (group.slugs as string[]).includes(guide.slug) || (group.families as string[]).includes(guide.family));
   const photoRoot = productPackaging?.imageRoot ?? (isValveless ? "/images/products/pumps/valveless-pumps/delivery/" : imageRoot);
   const rows = productPackaging?.rows.map((row, index) => ({ ...row,
+    ...("copyZh" in row ? row.copyZh : {}),
     ...deliveryCopy?.[index],
     photos: row.photos.map(({ file, alt, caption }) => [file, alt, caption] as const),
   })) ?? packagingRows;
   const localizedIntro = deliveryCopy ? `${guide.model} 按订单确认的型号、数量和配置交付。`
-    : productPackaging?.intro;
+    : productPackaging && "introZh" in productPackaging ? productPackaging.introZh : productPackaging?.intro;
   const packagingIntro = localizedIntro ?? (isValveless
     ? "以下为无阀泵系列包装实拍，内衬、附件、装箱数量和随货资料按订单配置安排。"
     : "以下包装照片为 EA 系列柱塞泵实拍示例，实际产品的内衬、附件、装箱数量和随货资料按订单配置安排。");
@@ -238,9 +242,11 @@ export function getInstrumentProductSections(slug: string, locale = "zh") {
     customerCategoryMode: "instrument-product-zh" as const,
     customerCategoryContent: {
       product: <InstrumentProductDocuments guide={guide} />,
-      selection: instrumentDetailProfiles[guide.family]
-        ? <InstrumentSelectionGuideContent guide={guide} />
-        : <InstrumentProductSelectionContent guide={guide} />,
+      selection: guide.family === "smtp2" || guide.family === "smtp4"
+        ? <PipettingSelectionContent guide={getChinesePipettingSelectionGuide(guide)} />
+        : instrumentDetailProfiles[guide.family]
+          ? <InstrumentSelectionGuideContent guide={guide} />
+          : <InstrumentProductSelectionContent guide={guide} />,
       delivery: <InstrumentProductDeliveryContent guide={guide} />,
     },
   };

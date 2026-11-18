@@ -427,18 +427,25 @@ const productMegaDropdown: MegaDropdown = {
           t("连续定量输送与比例加液", "Continuous metering and proportional dispensing", "Dosificación continua y dispensación proporcional", "Dosage continu et distribution proportionnelle", "연속 정량 이송 및 비례 분주", "Непрерывное дозирование и пропорциональная подача"),
           localizedPath("/products/pumps/valveless-pumps")
         ),
-        productImage(
-          "/images/products/pumps/diaphragm-pump.webp",
-          t("隔膜泵", "Diaphragm Pump", "Bomba de diafragma", "Pompe à membrane", "다이어프램 펌프", "Мембранный насос"),
-          t("连续供液、清洗与废液处理", "Continuous supply, washing, and waste handling", "Suministro continuo, lavado y gestión de residuos", "Alimentation continue, lavage et gestion des déchets", "연속 공급, 세척 및 폐액 처리", "Непрерывная подача, промывка и обработка отходов"),
-          localizedPath("/products/pumps/miniature-diaphragm-pumps")
-        ),
-        productImage(
-          "/images/products/pumps/pipetting-pump.jpg",
-          t("移液泵", "Pipetting Pump", "Bomba de pipeteo", "Pompe de pipetage", "피펫팅 펌프", "Пипеточный насос"),
-          t("连续定量输送与比例加液", "Automated pipetting and dispensing", "Pipeteo y dispensación automatizados", "Pipetage et distribution automatisés", "자동 피펫팅 및 분주", "Автоматическое пипетирование и дозирование"),
-          localizedPath("/products/pumps/pipetting-pumps")
-        ),
+        {
+          ...productImage(
+            "/images/products/pumps/diaphragm-pump-menu-180.webp",
+            t("隔膜泵", "Diaphragm Pump", "Bomba de diafragma", "Pompe à membrane", "다이어프램 펌프", "Мембранный насос"),
+            t("连续供液、清洗与废液处理", "Continuous supply, washing, and waste handling", "Suministro continuo, lavado y gestión de residuos", "Alimentation continue, lavage et gestion des déchets", "연속 공급, 세척 및 폐액 처리", "Непрерывная подача, промывка и обработка отходов"),
+            localizedPath("/products/pumps/miniature-diaphragm-pumps")
+          ),
+          width: 180,
+          height: 180,
+        },
+        {
+          src: "/images/products/pumps/pipetting-pumps/foreach-smtp2-510-lte045-45mm-menu-180.webp",
+          alt: t("SMTP2-510 移液泵", "SMTP2-510 pipetting pump", "Bomba de pipeteo SMTP2-510", "Pompe de pipetage SMTP2-510", "SMTP2-510 피펫팅 펌프", "Пипеточный насос SMTP2-510"),
+          title: t("移液泵", "Pipetting Pump", "Bomba de pipeteo", "Pompe de pipetage", "피펫팅 펌프", "Пипеточный насос"),
+          description: t("连续定量输送与比例加液", "Automated pipetting and dispensing", "Pipeteo y dispensación automatizados", "Pipetage et distribution automatisés", "자동 피펫팅 및 분주", "Автоматическое пипетирование и дозирование"),
+          href: localizedPath("/products/pumps/pipetting-pumps"),
+          width: 180,
+          height: 180,
+        },
       ],
       order: 1,
       enabled: true,

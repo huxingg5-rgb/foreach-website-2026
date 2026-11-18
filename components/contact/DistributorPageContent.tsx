@@ -387,22 +387,16 @@ export default function DistributorPageContent({
 
       if (!response.ok || result.success !== true) {
         if (result.error === "send_too_frequently") {
-          setEmailTip(
-            "A verification code was sent recently. Please wait before trying again.",
-          );
+          setEmailTip(content.toast.sendTooFrequently);
         } else {
-          setEmailTip(
-            "The verification email could not be sent. Please try again later.",
-          );
+          setEmailTip(content.toast.codeSendFailed);
         }
 
         return;
       }
 
       setEmailCodeSent(true);
-      setEmailTip(
-        "Verification code sent. Please check your email.",
-      );
+      setEmailTip(content.toast.codeSent);
 
       setSendCountdown(60);
 
@@ -422,9 +416,7 @@ export default function DistributorPageContent({
         error,
       );
 
-      setEmailTip(
-        "The verification email could not be sent. Please try again later.",
-      );
+      setEmailTip(content.toast.codeSendFailed);
     } finally {
       setIsSendingCode(false);
     }
@@ -479,9 +471,7 @@ export default function DistributorPageContent({
         ) {
           setEmailCodeSent(false);
 
-          setEmailTip(
-            "The verification code has expired. Please request a new code.",
-          );
+          setEmailTip(content.toast.codeExpired);
         } else {
           setEmailTip(content.toast.wrongCode);
         }
@@ -512,9 +502,7 @@ export default function DistributorPageContent({
 
       setEmailCodeVerified(false);
 
-      setEmailTip(
-        "The verification code could not be checked. Please try again later.",
-      );
+      setEmailTip(content.toast.codeVerifyFailed);
     } finally {
       setIsVerifyingCode(false);
     }
@@ -534,7 +522,7 @@ export default function DistributorPageContent({
 
     files.forEach((file) => {
       if (file.size > maxFileSize) {
-        window.alert(`File ${file.name} ${content.toast.fileTooLarge}`);
+        window.alert(`${file.name}\n${content.toast.fileTooLarge}`);
         return;
       }
 
@@ -607,7 +595,7 @@ export default function DistributorPageContent({
 
     if (!iframeDocument || !iframe.contentWindow) {
       document.body.removeChild(iframe);
-      window.alert("The browser blocked the PDF preview window.");
+      window.alert(content.toast.pdfPreviewBlocked);
       return false;
     }
 
@@ -756,9 +744,7 @@ export default function DistributorPageContent({
           setEmailCodeSent(false);
           setEmailCodeVerified(false);
 
-          setEmailTip(
-            "Email verification has expired. Please request a new code.",
-          );
+          setEmailTip(content.toast.verificationExpired);
         }
 
         throw new Error(
@@ -796,9 +782,7 @@ export default function DistributorPageContent({
         error,
       );
 
-      window.alert(
-        "The distributor application could not be submitted. Please try again later or contact us by email.",
-      );
+      window.alert(content.toast.submitFailed);
 
       const errorCode = error instanceof Error ? error.message : "";
       let analyticsErrorType: InquiryErrorType = "api_error";
@@ -820,7 +804,7 @@ export default function DistributorPageContent({
   }
 
   return (
-    <main className="distributor-page">
+    <main className="distributor-page" lang={locale}>
       {/* =====================================================
           顶部 Banner
       ===================================================== */}
@@ -840,19 +824,6 @@ export default function DistributorPageContent({
             </h1>
 
             <p>{content.hero.desc}</p>
-
-            <div className="distributor-hero-actions">
-              <a href="#form" className="distributor-btn distributor-btn-ghost">
-                {content.hero.primaryButton}
-              </a>
-
-              <a
-                href="#products"
-                className="distributor-btn distributor-btn-ghost"
-              >
-                {content.hero.secondaryButton}
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -1092,9 +1063,9 @@ export default function DistributorPageContent({
                     disabled={sendCountdown > 0 || isSendingCode || isSubmitting}
                   >
                     {isSendingCode
-                      ? "Sending..."
+                      ? content.toast.sending
                       : sendCountdown > 0
-                        ? `${sendCountdown}s`
+                        ? `${sendCountdown}${content.toast.secondsSuffix}`
                         : content.form.sendCode}
                   </button>
 
@@ -1120,11 +1091,11 @@ export default function DistributorPageContent({
                     }
                   >
                     {isVerifyingCode
-                      ? "Verifying..."
+                      ? content.toast.verifying
                       : emailCodeVerified
                         ? content.form.verified
                         : verifyCountdown > 0
-                          ? `${verifyCountdown}s`
+                          ? `${verifyCountdown}${content.toast.secondsSuffix}`
                           : content.form.verify}
                   </button>
                 </div>
@@ -1220,7 +1191,7 @@ export default function DistributorPageContent({
                   className="distributor-submit-btn brand-navy-button-motion"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Submitting..." : content.form.submitButton}
+                  {isSubmitting ? content.toast.submitting : content.form.submitButton}
                 </button>
               </div>
 
@@ -1277,7 +1248,7 @@ export default function DistributorPageContent({
           className="contact-success-modal"
           role="dialog"
           aria-modal="true"
-          aria-label="Submitted Successfully"
+          aria-label={content.toast.submittedTitle}
           data-internal-file-name={internalArchiveFileName}
           onClick={() => setShowSuccessModal(false)}
         >
@@ -1287,20 +1258,16 @@ export default function DistributorPageContent({
           >
             <div className="contact-success-icon">✓</div>
 
-            <h3>Submitted Successfully</h3>
+            <h3>{content.toast.submittedTitle}</h3>
 
-            <p>
-              We have received your partnership application. The Foreach team
-              will review your information and follow up based on your market
-              region, product interest, and cooperation needs.
-            </p>
+            <p>{content.toast.submitted}</p>
 
             <button
               className="contact-success-button"
               type="button"
               onClick={() => setShowSuccessModal(false)}
             >
-              Got it
+              {content.toast.dismissSuccess}
             </button>
           </div>
         </div>

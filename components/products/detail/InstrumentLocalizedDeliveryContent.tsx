@@ -14,7 +14,7 @@ export default function InstrumentLocalizedDeliveryContent({ guide, locale }: { 
   if (!photos || !support) return null;
   const copy = getInstrumentDeliveryCommon(locale);
   const title = getRplGuideUi(locale).delivery;
-  const compact = Boolean(instrumentDetailProfiles[guide.family]);
+  const compact = guide.family === "smtp2" || guide.family === "smtp4" || Boolean(instrumentDetailProfiles[guide.family]);
   const warranty = compact
     ? [copy.warranty(guide.pump ? 18 : 12)]
     : guide.pump ? support.warrantyParagraphs : [copy.otherWarranty, ...support.warrantyParagraphs.slice(1)];

@@ -1,7 +1,19 @@
 import { instrumentInquiryText as text } from "./instrument-inquiry.intl";
 import { getSelectionWorkspaceCopy } from "../detail/selection-workspace-copy";
+import { syringeModelRoutes } from "../selection/syringe-pump-routes";
+import {
+  getSyringePumpInquiryFields,
+  isSyringePumpInquiryFamily,
+  resolveSyringePumpInquiry,
+  syringePumpInquiryFixedRows,
+  type SyringePumpInquiryFamily,
+} from "./syringe-pump-inquiry";
 
-export type InstrumentInquiryFamily = "PDM5" | "ABD" | "SMTP2" | "SMTP4";
+const existingInstrumentFamilies = ["PDM5", "ABD", "SMTP2", "SMTP4"] as const;
+export type InstrumentInquiryFamily = typeof existingInstrumentFamilies[number] | SyringePumpInquiryFamily;
+export function isInstrumentInquiryFamily(value: unknown): value is InstrumentInquiryFamily {
+  return existingInstrumentFamilies.some(family => family === value) || isSyringePumpInquiryFamily(value);
+}
 export type InstrumentInquiryChoice = Record<string, string>;
 export type InstrumentInquiryConfiguration = { version: 1; family: InstrumentInquiryFamily; choice: InstrumentInquiryChoice; requirements: string };
 export type InstrumentInquiryField = { key: string; label: string; options: readonly (readonly [string, string])[] };
@@ -29,14 +41,20 @@ export function getInstrumentInquiryFamily(slug: string): InstrumentInquiryFamil
   if (["abd-air-bubble-detector", "abd"].includes(slug)) return "ABD";
   if (["smtp2-500", "smtp2-510", "smtp2-520", "smtp2-1000ul"].includes(slug)) return "SMTP2";
   if (["smtp4-100ul", "smtp4-250ul", "smtp4-500ul"].includes(slug)) return "SMTP4";
+  const syringe = syringeModelRoutes.find(route => route.legacy === slug || route.model === slug);
+  const family = syringe?.model.toUpperCase();
+  if (isSyringePumpInquiryFamily(family)) return family;
 }
 export function instrumentInquiryProductName(family: InstrumentInquiryFamily, locale = "zh") {
+  if (isSyringePumpInquiryFamily(family)) return `${family} ${text("syringeType", locale)}`;
   return `${family} ${text(family === "PDM5" ? "pdmType" : family === "ABD" ? "abdType" : "smtpType", locale)}`;
 }
 export function instrumentInquiryNote(family: InstrumentInquiryFamily, locale = "zh") {
+  if (isSyringePumpInquiryFamily(family)) return text(family === "HMD6" ? "hmd6Note" : "syringeNote", locale);
   return text(family === "PDM5" ? "pdmNote" : family === "ABD" ? "abdNote" : family === "SMTP2" ? "smtp2Note" : "smtp4Note", locale);
 }
-export function getInstrumentInquiryFields(family: InstrumentInquiryFamily, locale = "zh"): InstrumentInquiryField[] {
+export function getInstrumentInquiryFields(family: InstrumentInquiryFamily, locale = "zh", choice: InstrumentInquiryChoice = {}): InstrumentInquiryField[] {
+  if (isSyringePumpInquiryFamily(family)) return getSyringePumpInquiryFields(family, locale, choice);
   const t = (key: Parameters<typeof text>[0]) => text(key, locale);
   const unsure = ["unsure", t("unsure")] as const;
   if (family === "PDM5") return [
@@ -59,17 +77,18 @@ export function getInstrumentInquiryDefaults(slug: string): InstrumentInquiryCon
   return { version: 1, family, choice, requirements: "" };
 }
 export function normalizeInstrumentInquiry(configuration: InstrumentInquiryConfiguration): InstrumentInquiryConfiguration {
-  const choice = Object.fromEntries(getInstrumentInquiryFields(configuration.family).map(field => [field.key,
+  const choice = Object.fromEntries(getInstrumentInquiryFields(configuration.family, "zh", configuration.choice).map(field => [field.key,
     field.options.some(([value]) => value === configuration.choice?.[field.key]) ? configuration.choice[field.key] : "unsure"]));
   return { version: 1, family: configuration.family, choice, requirements: String(configuration.requirements || "").trim().slice(0, 2000) };
 }
 export function validateInstrumentInquiry(configuration: InstrumentInquiryConfiguration, quantity: number) {
   if (!Number.isSafeInteger(quantity) || quantity < 1 || quantity > 1000000) return "quantityError" as const;
-  if (getInstrumentInquiryFields(configuration.family).some(field => !field.options.some(([value]) => value === configuration.choice[field.key]))) return "invalid" as const;
+  if (getInstrumentInquiryFields(configuration.family, "zh", configuration.choice).some(field => !field.options.some(([value]) => value === configuration.choice[field.key]))) return "invalid" as const;
   return null;
 }
 export function resolveInstrumentInquiry(configuration: InstrumentInquiryConfiguration) {
   const { family, choice } = normalizeInstrumentInquiry(configuration);
+  if (isSyringePumpInquiryFamily(family)) return resolveSyringePumpInquiry(family, choice);
   let model = family as string, productCode = "";
   if (family === "PDM5") {
     const option = pdm5OrderModels.find(([value]) => value === choice.range);
@@ -91,7 +110,8 @@ export function instrumentInquiryRows(configuration: InstrumentInquiryConfigurat
   const normalized = normalizeInstrumentInquiry(configuration), copy = getSelectionWorkspaceCopy(locale);
   const { model, productCode } = resolveInstrumentInquiry(normalized);
   const rows: Array<[string, string]> = [[copy.model, model], [copy.productCode, productCode || text("pending", locale)]];
-  for (const field of getInstrumentInquiryFields(normalized.family, locale)) rows.push([field.label, field.options.find(([value]) => value === normalized.choice[field.key])![1]]);
+  for (const field of getInstrumentInquiryFields(normalized.family, locale, normalized.choice)) rows.push([field.label, field.options.find(([value]) => value === normalized.choice[field.key])![1]]);
+  if (isSyringePumpInquiryFamily(normalized.family)) rows.push(...syringePumpInquiryFixedRows(normalized.family, normalized.choice, locale));
   if (normalized.family === "PDM5") rows.push([text("port", locale), "1/4-28 UNF-2B"], [text("materials", locale), "PEEK / FKM / 316L"], [text("protocol", locale), "I2C · 40N"], [text("voltage", locale), "5 V DC"]);
   if (normalized.family === "ABD") rows.push([text("structure", locale), text("vertical", locale)], [text("protocol", locale), "TTL232 / IO · Modbus RTU · 06M"], [text("voltage", locale), "5 V DC"]);
   if (normalized.family === "SMTP2") rows.push([text("capacity", locale), "1000 μL"], [text("communication", locale), "RS-232 / RS-485 / CAN"], [text("lld", locale), "pLLD / cLLD / hLLD"]);

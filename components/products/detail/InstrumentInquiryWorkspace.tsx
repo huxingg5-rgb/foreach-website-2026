@@ -9,6 +9,7 @@ import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvi
 import { useInstrumentInquiries, type SavedInstrumentInquiry } from "@/data/products/configurator/instrument-inquiry-configurations";
 import { getInstrumentInquiryDefaults, instrumentInquiryCartId, instrumentInquiryProductName, instrumentInquiryRows, resolveInstrumentInquiry, type InstrumentInquiryConfiguration, type InstrumentInquiryFamily } from "@/data/products/configurator/instrument-inquiry";
 import { instrumentInquiryText as text } from "@/data/products/configurator/instrument-inquiry.intl";
+import { isSyringePumpInquiryFamily } from "@/data/products/configurator/syringe-pump-inquiry";
 import { getSelectionWorkspaceCopy } from "@/data/products/detail/selection-workspace-copy";
 import { getCadRequestCopy } from "@/data/products/detail/cad-request";
 import { getProductDetailResourceCopy, type ProductDetailResourceLocale } from "@/data/products/detail/product-detail-resources";
@@ -28,6 +29,7 @@ export default function InstrumentInquiryWorkspace({ slug, family, locale, detai
   const router = useRouter();
   const { items, addItem, changeQuantity, setDrawingTypes, openCart } = useSelectionCart();
   const copy = getSelectionWorkspaceCopy(locale), productName = instrumentInquiryProductName(family, locale);
+  const title = isSyringePumpInquiryFamily(family) ? `${family} · ${text("syringeConfigure", locale)}` : copy.heading(family);
   const selected = collection.configurations.find(item => item.id === editor?.id) || null;
   function findCartItem(configuration: InstrumentInquiryConfiguration) {
     const id = instrumentInquiryCartId(configuration), { model } = resolveInstrumentInquiry(configuration);
@@ -69,7 +71,7 @@ export default function InstrumentInquiryWorkspace({ slug, family, locale, detai
     productType: productName, productSeries: family, drawingTypes: saved.drawingTypes }));
   const reference = getInstrumentInquiryDefaults(slug);
   return <div data-instrument-inquiry-workspace={family}>
-    <DetailSelectionWorkspace locale={locale} title={copy.heading(family)} configurations={configurations}
+    <DetailSelectionWorkspace locale={locale} title={title} configurations={configurations}
       helperText={!configurations.length ? text("description", locale) : undefined}
       onSelect={id => { const saved = collection.configurations.find(item => item.id === id); if (saved) onConfigurationSelect?.(saved.configuration); }}
       onNew={() => setEditor({ id: null })} onEdit={id => setEditor({ id })}

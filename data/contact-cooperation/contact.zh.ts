@@ -43,7 +43,8 @@ export const contactZhData: ContactPageData = {
      顶部 Banner
   ================================ */
   hero: {
-    titlePrefix: "联系恒永达，获取", // Banner 标题前半段
+    titleFirstLine: "联系恒永达",
+    titlePrefix: "获取", // Banner 第二段开头
     highlightText: "产品选型", // Banner 标题重点高亮文字
     titleSuffix: "与技术支持", // Banner 标题后半段
 
@@ -52,16 +53,6 @@ export const contactZhData: ContactPageData = {
       alt: "恒永达微流体产品技术沟通与合作支持", // Banner 图片 alt 文案
     },
 
-    buttons: {
-      support: {
-        label: "查看支持", // 第一个按钮文字
-        href: "#support", // 点击后跳转到支持内容模块
-      },
-      form: {
-        label: "提交需求", // 第二个按钮文字
-        href: "#form", // 点击后跳转到表单模块
-      },
-    },
   },
 
   /* ================================

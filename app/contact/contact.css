@@ -89,15 +89,13 @@
             rgba(23, 51, 104, 0.78) 42%,
             rgba(23, 51, 104, 0.28) 100%),
         /* 宸︽繁鍙虫祬鐨勬繁钃濋伄缃╋紝淇濊瘉宸︿晶鏍囬鍙 */
-        radial-gradient(circle at 82% 24%, rgba(9, 233, 180, 0.2), transparent 34%),
-        /* 鍙充笂瑙掕崸鍏夐潚姘涘洿鍏?*/
         url("/images/contact-cooperation/contact-hero.webp"),
         /* Banner 鐪熷疄鍥剧墖璺緞 */
         linear-gradient(135deg, #081d43 0%, #173368 56%, #102b5e 100%);
     /* 鍥剧墖缂哄け鏃剁殑娣辫摑鍏滃簳鑳屾櫙 */
-    background-size: cover, auto, cover, cover;
+    background-size: cover;
     /* 鍚勫眰鑳屾櫙灏哄璁剧疆 */
-    background-position: center, center, center right, center;
+    background-position: center, center right, center;
     /* 鍥剧墖鍋忓彸鏄剧ず锛屽乏渚х暀鏂囧瓧绌洪棿 */
     background-repeat: no-repeat;
     /* 鑳屾櫙涓嶉噸澶?*/
@@ -125,14 +123,13 @@
 .contact-hero-inner {
     --contact-hero-min-height: 620px;
     --contact-hero-padding-top: 186px;
+    min-height: var(--contact-hero-min-height);
     position: relative;
     /* 璁╁唴瀹规诞鍦ㄨ楗板眰涓婇潰 */
     z-index: 1;
     /* 鍐呭灞傜骇楂樹簬 ::before */
     max-width: var(--contact-content-width);
     /* 鍐呭鏈€澶у搴?*/
-    min-height: var(--contact-hero-min-height);
-    /* Banner 鍚堢悊楂樺害 */
     margin: 0 auto;
     /* 鍐呭鍖哄煙姘村钩灞呬腑 */
     padding: var(--contact-hero-padding-top) 28px 176px;
@@ -146,43 +143,33 @@
 }
 
 .contact-hero-content {
-    max-width: 760px;
-    /* 闄愬埗鏍囬瀹藉害锛岄伩鍏嶅お闀?*/
+    min-width: 0;
 }
 
 .contact-hero-title {
-    max-width: 760px;
-    /* 鏍囬鏈€澶у搴?*/
     margin: 0;
     /* 娓呴櫎榛樿澶栬竟璺?*/
     color: #ffffff;
     /* 鏍囬涓绘枃瀛楃櫧鑹?*/
-    font-size: var(--shared-inner-banner-heading-size);
-    /* 鍝嶅簲寮忔爣棰樺瓧鍙?*/
+    font-size: 54px;
     line-height: var(--shared-inner-banner-heading-line-height);
     /* 鏍囬琛岄珮 */
     font-weight: 500;
     /* 鏍囬鍔犵矖 */
     letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
     /* 鏍囬瀛楄窛鐣ユ敹绱э紝澧炲己楂樼骇鎰?*/
+}
+
+.contact-hero-title:lang(zh) {
+    max-width: 760px;
+    letter-spacing: 0;
 }
 
 .contact-hero-title span {
     color: var(--contact-cyan);
     /* 鏍囬涓殑閲嶇偣鏂囧瓧浣跨敤鑽у厜闈?*/
 }
-
-.contact-hero-actions {
-    margin-top: 30px;
-    /* 鎸夐挳缁勫拰鏍囬涔嬮棿鐨勮窛绂?*/
-    display: flex;
-    /* 鎸夐挳妯悜鎺掑垪 */
-    flex-wrap: wrap;
-    /* 灏忓睆骞曞厑璁告崲琛?*/
-    gap: 12px;
-    /* 鎸夐挳涔嬮棿鐨勯棿璺?*/
-}
-
 
 /* =========================================================
    3. 鎸夐挳缁熶竴鏍峰紡
@@ -235,21 +222,10 @@
     /* 缁熶竴鎸夐挳鍔ㄦ晥 */
 }
 
-.contact-hero .contact-button {
-    font-weight: 500;
-    border-color: rgba(255, 255, 255, 0.52);
-    /* Banner 涓婃寜閽娇鐢ㄧ櫧鑹插崐閫忔槑杈规 */
-    background: rgba(255, 255, 255, 0.08);
-    /* Banner 涓婃寜閽粯璁ら€忔槑鐧藉簳 */
-    color: #ffffff;
-    /* Banner 涓婃寜閽粯璁ょ櫧鑹叉枃瀛?*/
-}
-
 .contact-button:hover,
 .contact-mini-button:hover,
 .contact-file-button:hover,
-.contact-submit-button:hover,
-.contact-hero .contact-button:hover {
+.contact-submit-button:hover {
     background: var(--contact-cyan);
     /* 榧犳爣鎮仠鍙樿崸鍏夐潚搴?*/
     color: var(--contact-blue);
@@ -280,11 +256,9 @@
     }
 
     :is(
-        .contact-hero .contact-button,
         .contact-bottom-cta .contact-button
     ):hover:not([data-global-touch-pressed="true"]),
     :is(
-        .contact-hero .contact-button,
         .contact-bottom-cta .contact-button
     ):focus:not([data-global-touch-pressed="true"]) {
         border-color: rgba(255, 255, 255, 0.52);
@@ -1326,7 +1300,6 @@
     .contact-hero-inner {
         --contact-hero-min-height: 540px;
         --contact-hero-padding-top: 158px;
-        /* 鎵嬫満绔?Banner 楂樺害 */
         padding: var(--contact-hero-padding-top) 18px 156px;
         /* 鎵嬫満绔?Banner 鍐呰竟璺?*/
     }
@@ -1775,6 +1748,23 @@
   line-height: 1.85;
 }
 
+:is(.distributor-advantage-section, .distributor-products-section, .distributor-partner-section)
+  .distributor-section-head:lang(ru) {
+  max-width: 1240px;
+}
+
+:is(.distributor-advantage-section, .distributor-products-section, .distributor-partner-section)
+  .distributor-section-head:lang(ru) h2 {
+  --shared-section-heading-size: clamp(28px, 3.2vw, 52px);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+:is(.distributor-advantage-section, .distributor-products-section, .distributor-partner-section)
+  .distributor-section-head:lang(ru) p {
+  max-width: 860px;
+}
+
 .distributor-section-head-light h2 {
   color: #fff;
 }
@@ -1805,19 +1795,6 @@
     transform 0.25s ease;
 }
 
-.distributor-btn-ghost {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.36);
-}
-
-.distributor-btn-ghost:hover {
-  color: var(--distributor-blue-deep);
-  background: var(--distributor-cyan);
-  border-color: var(--distributor-cyan);
-  transform: none;
-}
-
 .distributor-btn-main {
   color: var(--distributor-blue);
   background: #fff;
@@ -1837,8 +1814,9 @@
 
 .distributor-hero {
   --distributor-hero-min-height: 920px;
-  position: relative;
   min-height: var(--distributor-hero-min-height);
+  position: relative;
+  padding: calc(var(--site-header-height) + 112px) 0 120px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1853,53 +1831,29 @@
     url("/images/contact-cooperation/distributor-hero.webp") center / cover no-repeat;
 }
 
-.distributor-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 78% 24%, rgba(9, 233, 180, 0.12), transparent 26%),
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: auto, 56px 56px, 56px 56px;
-  opacity: 0.7;
-}
-
 .distributor-hero-inner {
   position: relative;
   z-index: 1;
-  margin-block: 100px;
 }
 
 .distributor-hero-content {
-  max-width: 780px;
+  max-width: 920px;
 }
 
 .distributor-hero-content h1 {
+  max-width: 780px;
+  overflow-wrap: anywhere;
   font-size: var(--shared-inner-banner-heading-size);
   line-height: var(--shared-inner-banner-heading-line-height);
   letter-spacing: -0.04em;
   font-weight: 500;
 }
 
-.distributor-hero-content h1 span {
-  color: var(--distributor-cyan);
-}
-
 .distributor-hero-content p {
-  max-width: 680px;
-  margin-top: 24px;
+  margin-top: 16px;
   color: rgba(255, 255, 255, 0.76);
   font-size: var(--shared-inner-banner-body-size);
-  line-height: var(--shared-inner-banner-body-line-height);
-}
-
-.distributor-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 34px;
+  line-height: 1.5;
 }
 
 /* =========================================================
@@ -2082,7 +2036,7 @@
   color: var(--distributor-blue);
   background: rgba(23, 51, 104, 0.06);
   border: 1px solid rgba(23, 51, 104, 0.08);
-  border-radius: 6px;
+  border-radius: 0;
   font-size: 12px;
   font-weight: 500;
 }
@@ -2325,7 +2279,7 @@
   color: var(--distributor-text);
   background: #fff;
   border: 1px solid rgba(23, 51, 104, 0.2);
-  border-radius: 8px;
+  border-radius: 0;
   outline: none;
   font-size: 14px;
   transition:
@@ -2371,7 +2325,7 @@
   color: var(--distributor-blue);
   background: #fff;
   border: 1px solid rgba(23, 51, 104, 0.18);
-  border-radius: 8px;
+  border-radius: 0;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -2428,7 +2382,7 @@
   color: var(--distributor-blue);
   background: rgba(23, 51, 104, 0.06);
   border: 1px solid rgba(23, 51, 104, 0.08);
-  border-radius: 6px;
+  border-radius: 0;
   font-size: 12px;
   cursor: pointer;
 }
@@ -2475,6 +2429,10 @@
    10. Toast
 ========================================================= */
 
+.distributor-page :is(.contact-success-card, .contact-amap-status) {
+  border-radius: 0;
+}
+
 .distributor-toast {
   position: fixed;
   left: 50%;
@@ -2485,7 +2443,7 @@
   color: #fff;
   background: rgba(6, 26, 58, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 8px;
+  border-radius: 0;
   font-size: 14px;
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
 }
@@ -2529,10 +2487,6 @@
 
   .distributor-section-inner {
     width: min(var(--distributor-width), calc(100% - 32px));
-  }
-
-  .distributor-hero {
-    --distributor-hero-min-height: 820px;
   }
 
   .distributor-section-head h2 {
@@ -3730,5 +3684,11 @@
     line-height: 1.25;
     white-space: normal;
     text-align: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .distributor-hero {
+    --distributor-hero-min-height: 820px;
   }
 }

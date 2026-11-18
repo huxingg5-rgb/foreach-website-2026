@@ -3,7 +3,7 @@ import { drawingRequirementsLine, getDrawingTypes, normalizeDrawingTypes, type C
 import { changeCartGroupDrawingTypes } from "./selection-cart-bundles";
 import { normalizeFlangedChoice, validateFlangedChoice } from "@/data/products/configurator/flanged-tubing";
 import { eaPumpInquirySummary } from "@/data/products/configurator/ea-pump-inquiry";
-import { instrumentInquiryProductName, instrumentInquirySummary, normalizeInstrumentInquiry, resolveInstrumentInquiry } from "@/data/products/configurator/instrument-inquiry";
+import { instrumentInquiryProductName, instrumentInquirySummary, isInstrumentInquiryFamily, normalizeInstrumentInquiry, resolveInstrumentInquiry } from "@/data/products/configurator/instrument-inquiry";
 
 /* =========================================================
    SelectionCartProvider.tsx
@@ -346,7 +346,7 @@ export function SelectionCartProvider({
             .filter(isPublishedCartItem)
             .map((item) => {
               const previous = item.instrumentConfiguration;
-              const instrumentConfiguration = previous && ["PDM5", "ABD", "SMTP2", "SMTP4"].includes(previous.family)
+              const instrumentConfiguration = previous && isInstrumentInquiryFamily(previous.family)
                 && previous.choice && typeof previous.choice === "object" ? normalizeInstrumentInquiry(previous) : undefined;
               const reference = instrumentConfiguration ? resolveInstrumentInquiry(instrumentConfiguration) : undefined;
               return {

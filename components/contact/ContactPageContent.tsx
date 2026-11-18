@@ -118,35 +118,19 @@ export default function ContactPageContent({ data, locale }: ContactPageContentP
         <div className="contact-hero-inner">
           <div className="contact-hero-content">
             {/* 椤甸潰涓绘爣棰?*/}
-            <h1 className="contact-hero-title">
+            <h1 className="contact-hero-title" lang={locale}>
+              {data.hero.titleFirstLine && (
+                <>
+                  {data.hero.titleFirstLine}
+                  <br />
+                </>
+              )}
               {data.hero.titlePrefix}
-              {locale === "zh-CN" ? "" : " "}
+              {locale !== "zh-CN" && data.hero.titlePrefix && " "}
               <span>{data.hero.highlightText}</span>
               {locale === "zh-CN" ? "" : " "}
               {data.hero.titleSuffix}
             </h1>
-
-            {/* Banner 鎸夐挳缁?*/}
-            <div className="contact-hero-actions">
-              <button
-                className="contact-button"
-                type="button"
-                onClick={() => scrollToSection("support")}
-              >
-                {data.hero.buttons.support.label}
-              </button>
-
-              <button
-                className="contact-button"
-                type="button"
-                onClick={() => {
-                  trackContactFormEntry("contact_hero");
-                  scrollToSection("form");
-                }}
-              >
-                {data.hero.buttons.form.label}
-              </button>
-            </div>
           </div>
         </div>
       </section>

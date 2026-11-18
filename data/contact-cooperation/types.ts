@@ -72,14 +72,11 @@ export type ContactButtonData = {
 ========================================================= */
 
 export type ContactHeroData = {
+   titleFirstLine?: string;
    titlePrefix: string;
    highlightText: string;
    titleSuffix: string;
    image: ContactImageData;
-   buttons: {
-      support: ContactButtonData;
-      form: ContactButtonData;
-   };
 };
 
 /* =========================================================

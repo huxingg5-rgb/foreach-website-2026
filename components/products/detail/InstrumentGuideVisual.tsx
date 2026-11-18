@@ -25,6 +25,39 @@ function PinTable({ title, labels, rows }: { title: string; labels: readonly str
   </div>;
 }
 
+// SMTP4 24 VDC reference circuit, PS-130A-003_002_cn p. 4.
+function OptocouplerCircuit({ label }: { label: string }) {
+  return <svg className={styles.optoCircuit} viewBox="0 0 360 254" role="img" aria-label={label}>
+    <rect x="74" y="113" width="214" height="88" fill="none" stroke="currentColor" strokeDasharray="5 4" />
+    <g fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M118 37 V58 l-5 4 10 6 -10 6 10 6 -5 4 V136 M118 155 V217" />
+      <path d="M107 136 H129 L118 154 Z M107 155 H129" fill="currentColor" />
+      <path d="M242 37 V58 l-5 4 10 6 -10 6 10 6 -5 4 V130 l-24 13 M218 132 V177 M218 161 l24 17 V217" />
+      <path d="M232 170 L242 178 L231 177 Z" fill="currentColor" />
+      <path d="M242 102 H304" />
+      <circle cx="242" cy="102" r="2.6" fill="currentColor" />
+      <circle cx="118" cy="37" r="3.5" fill="#fff" />
+      <circle cx="242" cy="37" r="3.5" fill="#fff" />
+      <circle cx="304" cy="102" r="3.5" fill="#fff" />
+      <path d="M143 138 l48 12 M184 145 l7 5 -9 1 M146 153 l48 12 M187 160 l7 5 -9 1" />
+      <path d="M106 217 h24 M111 222 h14 M116 227 h4 M230 217 h24 M235 222 h14 M240 227 h4" />
+    </g>
+    <g fill="currentColor" textAnchor="middle">
+      <text x="118" y="24">+24 VDC</text>
+      <text x="242" y="24">+24 VDC</text>
+      <text x="87" y="77">Rf</text>
+      <text x="270" y="77">RL</text>
+      <text x="325" y="106">OUT</text>
+      <text x="96" y="130">A</text>
+      <text x="96" y="181">K</text>
+      <text x="267" y="139">C</text>
+      <text x="267" y="181">E</text>
+      <text x="118" y="244">GND</text>
+      <text x="242" y="244">GND</text>
+    </g>
+  </svg>;
+}
+
 function HpPosition({ mode, title }: { mode: "home" | "working" | "vent"; title: string }) {
   const point = (degrees: number, radius = 68) => [120 + Math.cos(degrees * Math.PI / 180) * radius, 118 + Math.sin(degrees * Math.PI / 180) * radius];
   const arcs = mode === "home" ? [[60, 120], [-60, 0], [-180, -120]] : mode === "working" ? [[0, 60], [-120, -60], [120, 180]] : [];
@@ -85,13 +118,19 @@ export default function InstrumentGuideVisual({ family, section, locale = "zh", 
     </dl><p className={styles.note}>{t("adapterNote")}</p>
   </Panel>;
 
-  // PS-130A-003_002_cn p. 4. Two separate sides; no galvanic wire across the optical gap.
-  if (family === "smtp4" && section === "control") content = <Panel title={t("opto")}>
-    <dl className={styles.definitions}>
-      <div><dt>{t("led")}</dt><dd>+24 V → Rf → A; K → GND</dd></div>
-      <div><dt>{t("receiver")}</dt><dd>+24 V → RL → C / Output; E → GND</dd></div>
-    </dl><p className={styles.note}>{t("resistor")}</p>
-  </Panel>;
+  if (family === "smtp4" && section === "control") content = <>
+    <h4>{t("opto")} · 24 VDC</h4>
+    <div className={styles.optoLayout}>
+      <PinTable title={t("optoTerminals")} labels={labels} rows={[
+        [`A · ${t("led")}`, "+24 VDC → Rf (1–2 kΩ) → A"],
+        [`K · ${t("led")}`, "K → GND"],
+        [`C · ${t("receiver")}`, "+24 VDC → RL (10 kΩ) → C / OUT"],
+        [`E · ${t("receiver")}`, "E → GND"],
+      ]} />
+      <OptocouplerCircuit label={`${t("opto")} · 24 VDC`} />
+    </div>
+    <p className={styles.note}>{t("resistor")}</p>
+  </>;
 
   // PS-SDRV-007_003_cn p. 6. HLD has a rotary valve and does not use these HMD examples.
   if (family === "syringe" && section === "valves" && model.startsWith("HMD")) content = <>

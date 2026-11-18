@@ -17,6 +17,20 @@
 .table td { color: inherit; }
 .materialTable { min-width: 480px; }
 .materialTable tbody th { width: 25%; }
+.optoLayout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 20px; max-width: 900px; align-items: center; }
+.optoLayout thead { background: var(--brand-blue, #173368); color: #fff; }
+.optoLayout .table th { font-weight: 400; }
+.optoLayout tbody th { width: 34%; }
+.optoCircuit {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin-inline: auto;
+  border: 1px solid #d4d4d4;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+}
 .visual .note { color: #465369; font-size: 14px; line-height: 1.8; margin-top: 12px; }
 .facts strong { font-weight: 600; margin-right: 24px; }
 .facts span { display: inline-block; }
@@ -33,7 +47,7 @@
 .cycle li { padding: 5px 0 5px 6px; }
 .cycle strong { font-weight: 600; margin-right: 14px; }
 @media (max-width: 700px) {
-  .twoColumns, .positions { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .twoColumns, .positions, .optoLayout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .table th, .table td { padding: 10px 12px; }
   .definitions > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .portRow { grid-template-columns: 1fr 1fr; }

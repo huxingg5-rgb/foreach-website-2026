@@ -59,12 +59,11 @@ type ContactIntlText = {
   seoTitle: string;
   seoDescription: string;
 
+  heroTitleFirstLine: string;
   heroTitlePrefix: string;
   heroHighlightText: string;
   heroTitleSuffix: string;
   heroImageAlt: string;
-  heroSupportButton: string;
-  heroFormButton: string;
 
   supportTitle: string;
   supportDescription: string;
@@ -201,13 +200,12 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     seoDescription:
       "Contact Foreach for product selection, technical support, sample testing, drawing requests, BOM review, and microfluidic system project communication.",
 
-    heroTitlePrefix: "Contact Foreach for",
+    heroTitleFirstLine: "Contact Foreach",
+    heroTitlePrefix: "for",
     heroHighlightText: "Product Selection",
     heroTitleSuffix: "and Technical Support",
     heroImageAlt:
       "Foreach microfluidic product technical communication and cooperation support",
-    heroSupportButton: "View Support",
-    heroFormButton: "Submit Inquiry",
 
     supportTitle: "Support Options",
     supportDescription:
@@ -473,13 +471,12 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     seoDescription:
       "Contacte con Foreach para selección de productos, soporte técnico, pruebas de muestras, solicitud de planos, revisión de BOM y comunicación de proyectos microfluídicos.",
 
-    heroTitlePrefix: "Contacte con Foreach para",
+    heroTitleFirstLine: "Contacte con Foreach",
+    heroTitlePrefix: "para",
     heroHighlightText: "selección de productos",
     heroTitleSuffix: "y soporte técnico",
     heroImageAlt:
       "Soporte técnico y comunicación de proyectos de productos microfluídicos de Foreach",
-    heroSupportButton: "Ver soporte",
-    heroFormButton: "Enviar consulta",
 
     supportTitle: "Opciones de soporte",
     supportDescription:
@@ -746,13 +743,12 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     seoDescription:
       "Contactez Foreach pour la sélection de produits, le support technique, les essais d’échantillons, les demandes de plans, la revue de BOM et les projets microfluidiques.",
 
-    heroTitlePrefix: "Contactez Foreach pour",
+    heroTitleFirstLine: "Contactez Foreach",
+    heroTitlePrefix: "pour",
     heroHighlightText: "la sélection produit",
     heroTitleSuffix: "et le support technique",
     heroImageAlt:
       "Support technique et communication de projet pour les produits microfluidiques Foreach",
-    heroSupportButton: "Voir le support",
-    heroFormButton: "Envoyer une demande",
 
     supportTitle: "Options de support",
     supportDescription:
@@ -1020,13 +1016,12 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     seoDescription:
       "제품 선정, 기술 지원, 샘플 테스트, 도면 요청, BOM 검토 및 마이크로플루이딕 시스템 프로젝트 상담을 위해 Foreach에 문의하세요.",
 
-    heroTitlePrefix: "Foreach에 문의하여",
+    heroTitleFirstLine: "Foreach에 문의하여",
+    heroTitlePrefix: "",
     heroHighlightText: "제품 선정",
     heroTitleSuffix: "및 기술 지원을 받으세요",
     heroImageAlt:
       "Foreach 마이크로플루이딕 제품 기술 상담 및 프로젝트 지원",
-    heroSupportButton: "지원 보기",
-    heroFormButton: "문의 제출",
 
     supportTitle: "지원 항목",
     supportDescription:
@@ -1288,13 +1283,12 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     seoDescription:
       "Свяжитесь с Foreach по вопросам подбора продукции, технической поддержки, испытания образцов, запроса чертежей, проверки BOM и микрофлюидных проектов.",
 
-    heroTitlePrefix: "Свяжитесь с Foreach для",
+    heroTitleFirstLine: "Свяжитесь с Foreach",
+    heroTitlePrefix: "для",
     heroHighlightText: "подбора продукции",
     heroTitleSuffix: "и технической поддержки",
     heroImageAlt:
       "Техническая коммуникация и поддержка проектов микрофлюидной продукции Foreach",
-    heroSupportButton: "Посмотреть поддержку",
-    heroFormButton: "Отправить запрос",
 
     supportTitle: "Варианты поддержки",
     supportDescription:
@@ -1648,28 +1642,13 @@ export function getContactIntlData(
     },
 
     hero: {
-      ...contactZhData.hero,
+      titleFirstLine: text.heroTitleFirstLine,
       titlePrefix: text.heroTitlePrefix,
       highlightText: text.heroHighlightText,
       titleSuffix: text.heroTitleSuffix,
       image: {
         ...contactZhData.hero.image,
         alt: text.heroImageAlt,
-      },
-      buttons: {
-        support: {
-          ...contactZhData.hero.buttons.support,
-          label: text.heroSupportButton,
-          href: buildIntlContactHref(
-            locale,
-            contactZhData.hero.buttons.support.href,
-          ),
-        },
-        form: {
-          ...contactZhData.hero.buttons.form,
-          label: text.heroFormButton,
-          href: buildIntlContactHref(locale, contactZhData.hero.buttons.form.href),
-        },
       },
     },
 
@@ -1853,4 +1832,4 @@ export function getContactIntlData(
       },
     },
   };
-} 
+}

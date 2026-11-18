@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { getInstrumentInquiryDefaults, getInstrumentInquiryFields, instrumentInquiryNote, instrumentInquiryProductName, instrumentInquiryRows, normalizeInstrumentInquiry, resolveInstrumentInquiry, validateInstrumentInquiry, type InstrumentInquiryConfiguration } from "@/data/products/configurator/instrument-inquiry";
 import type { SavedInstrumentInquiry } from "@/data/products/configurator/instrument-inquiry-configurations";
 import { instrumentInquiryText as text } from "@/data/products/configurator/instrument-inquiry.intl";
+import { isSyringePumpInquiryFamily } from "@/data/products/configurator/syringe-pump-inquiry";
 import { getSelectionWorkspaceCopy } from "@/data/products/detail/selection-workspace-copy";
 import { getCadRequestCopy } from "@/data/products/detail/cad-request";
 import { normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
@@ -28,6 +29,8 @@ export default function InstrumentInquiryConfigurator({ slug, locale, initial, l
   const prefix = useId(), copy = getSelectionWorkspaceCopy(locale);
   const t = (key: Parameters<typeof text>[0]) => text(key, locale);
   const name = instrumentInquiryProductName(configuration.family, locale);
+  const syringePump = isSyringePumpInquiryFamily(configuration.family);
+  const configureText = t(syringePump ? "syringeConfigure" : "configure");
   useEffect(() => { closeCallback.current = onClose; }, [onClose]);
   useEffect(() => {
     const previousFocus = document.activeElement, overflow = document.body.style.overflow;
@@ -55,10 +58,17 @@ export default function InstrumentInquiryConfigurator({ slug, locale, initial, l
     if (invalid) { setError(t(invalid)); return; }
     onConfirm(normalizeInstrumentInquiry(configuration), Number(quantity), drawings, addToList);
   }
+  function updateChoice(key: string, value: string) {
+    setConfiguration(previous => {
+      const next = { ...previous, choice: { ...previous.choice, [key]: value } };
+      return syringePump ? { ...next, choice: normalizeInstrumentInquiry(next).choice } : next;
+    });
+    setError("");
+  }
   if (typeof document === "undefined") return null;
   return <ConfiguratorDialogFrame dialogRef={dialogRef} closeRef={closeRef} locale={locale} className={fitting.selector}
-    titleId={`${prefix}-title`} descriptionId={`${prefix}-description`} title={`${name} · ${t("configure")}`}
-    description={`${label} · ${t("description")}`} closeLabel={t("close")} onClose={onClose}
+    titleId={`${prefix}-title`} descriptionId={`${prefix}-description`} title={`${name} · ${configureText}`}
+    description={`${label} · ${t("description")}`} closeLabel={t(syringePump ? "syringeClose" : "close")} onClose={onClose}
     notice={error ? <span className={form.error} role="alert">{error}</span> : t("notice")}
     actions={<><ConfiguratorButton onClick={() => confirm(true)}>{copy.addToList}</ConfiguratorButton><ConfiguratorButton variant="primary" onClick={() => confirm(false)}>{t("confirm")}</ConfiguratorButton></>}>
     <div className={`${shared.main} ${fitting.main}`} data-instrument-inquiry-dialog={configuration.family}>
@@ -70,22 +80,21 @@ export default function InstrumentInquiryConfigurator({ slug, locale, initial, l
         </div>
       </aside>
       <section className={`${shared.config} ${fitting.config}`}>
-        <div className={shared.sectionHead}><h3>{t("configure")}</h3><span>{t("description")}</span></div>
+        <div className={shared.sectionHead}><h3>{configureText}</h3><span>{t("description")}</span></div>
         <div className={fitting.configBody}>
           <DrawingRequirements locale={locale} value={drawings} onChange={setDrawings} />
-          <fieldset className={shared.optionGroup} aria-label={t("configure")}><div className={fitting.options}><div className={form.endFields}>
-            {getInstrumentInquiryFields(configuration.family, locale).map(field => <div className={form.field} key={field.key}>
+          <fieldset className={shared.optionGroup} aria-label={configureText}><div className={fitting.options}><div className={form.endFields}>
+            {getInstrumentInquiryFields(configuration.family, locale, configuration.choice).map(field => <div className={form.field} key={field.key}>
               <label htmlFor={`${prefix}-${field.key}`}>{field.label}</label>
-              <select id={`${prefix}-${field.key}`} value={configuration.choice[field.key]} onChange={event => {
-                const value = event.target.value;
-                setConfiguration(previous => ({ ...previous, choice: { ...previous.choice, [field.key]: value } })); setError("");
-              }}>{field.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>
+              <select id={`${prefix}-${field.key}`} value={configuration.choice[field.key]} onChange={event => updateChoice(field.key, event.target.value)}>
+                {field.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+              </select>
             </div>)}
             <div className={form.field}><label htmlFor={`${prefix}-quantity`}>{getCadRequestCopy(locale).quantity}</label>
               <input id={`${prefix}-quantity`} type="number" min={1} max={1000000} step={1} inputMode="numeric" value={quantity} onChange={event => { setQuantity(event.target.value); setError(""); }} /></div>
           </div><p className={fitting.selectionNote}>{instrumentInquiryNote(configuration.family, locale)}</p></div></fieldset>
           <fieldset className={shared.optionGroup}><legend><label htmlFor={`${prefix}-requirements`}>{t("requirements")}</label></legend>
-            <div className={fitting.options}><div className={form.field}><textarea id={`${prefix}-requirements`} rows={4} maxLength={2000} placeholder={t("placeholder")}
+            <div className={fitting.options}><div className={form.field}><textarea id={`${prefix}-requirements`} rows={4} maxLength={2000} placeholder={t(syringePump ? "syringePlaceholder" : "placeholder")}
               value={configuration.requirements} onChange={event => setConfiguration(previous => ({ ...previous, requirements: event.target.value }))} /></div></div>
           </fieldset>
         </div>

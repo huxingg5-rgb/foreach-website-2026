@@ -67,6 +67,45 @@ section.guide h3 { margin-bottom: 8px; font-size: 16px; font-weight: 600; }
 
 .wrappingModelCode .codeValue { width: 100%; }
 
+.adapterCodes { display: flex; flex-wrap: wrap; gap: 0 20px; }
+.adapterCodes span { white-space: nowrap; }
+.modelSubheading { margin: 20px 0 8px; font-size: 16px; font-weight: 500; }
+
+.adapterComparison {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.adapterComparison figure {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #dbe3ee;
+  text-align: center;
+}
+
+.adapterComparison img {
+  display: block;
+  width: min(100%, 236px);
+  height: auto;
+  margin-inline: auto;
+}
+
+.mountingComparison img { width: min(100%, 170px); filter: grayscale(1); }
+
+.adapterComparison figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px 12px;
+  margin-top: 8px;
+  color: var(--brand-blue, #173368);
+  font-size: 14px;
+}
+
+.adapterComparison figcaption > * { white-space: nowrap; }
+.orderTable th:nth-child(2) { width: 22%; }
+
 .figure {
   width: min(100%, 760px);
   margin: 16px 0;
@@ -108,4 +147,10 @@ section.guide h3 { margin-bottom: 8px; font-size: 16px; font-weight: 600; }
   section.guide h2 { font-size: 18px; }
   .phase + .phase { margin-top: 22px; padding-top: 18px; }
   .table th, .table td { padding: 8px; }
+}
+
+@media (max-width: 600px) {
+  .adapterComparison { grid-template-columns: 1fr; gap: 8px; }
+  .orderTable th:first-child { width: 35%; }
+  .orderTable th:nth-child(2) { width: 24%; }
 }

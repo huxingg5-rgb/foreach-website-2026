@@ -338,7 +338,6 @@ html:has(.site-announcement) .contact-hero-inner {
 /* 6. 经销商页横幅为公告条预留空间 */
 html:has(.site-announcement) .distributor-hero {
   min-height: calc(var(--distributor-hero-min-height) + var(--site-announcement-height));
-  padding-top: var(--site-announcement-height);
 }
 
 /* 7. 电脑端 Resources / 外语版 Contact & Partnership 下拉：
