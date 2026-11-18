@@ -1,5 +1,6 @@
 import { getInstrumentProductGuide, type GuideFigure, type InstrumentProductGuide } from "./instrument-product-guides.zh";
 import { fittingText } from "./fitting-ui.intl";
+import { getInstrumentGuideSectionSource } from "./instrument-detail-content.zh";
 import drpl from "./instrument-guide-locales/drpl.json";
 import smtp2 from "./instrument-guide-locales/smtp2.json";
 import smtp4 from "./instrument-guide-locales/smtp4.json";
@@ -44,13 +45,16 @@ export function getLocalizedInstrumentGuide(slug: string, locale: string): Instr
     lead: t(source.lead),
     features: source.features.map(([title, body]) => [t(title), t(body)]),
     documents: source.documents.map(([title, body]) => [t(title), t(body)]),
-    sections: source.sections.map(section => ({ ...section, title: t(section.title), intro: t(section.intro),
+    sections: source.sections.map(section => getInstrumentGuideSectionSource(source, section, locale)).map(section => ({ ...section, title: t(section.title), intro: t(section.intro),
       ...(section.note ? { note: t(section.note) } : {}),
       ...(section.rows ? { rows: section.rows.map(([label, value, explanation]) => [t(label), t(value), t(explanation)] as const) } : {}),
       ...(section.steps ? { steps: section.steps.map(([title, body]) => [t(title), t(body)] as const) } : {}),
       ...(section.figure ? { figure: figure(section.figure) } : {}),
       ...(section.figures ? { figures: section.figures.map(figure) } : {}),
-      ...(section.links ? { links: section.links.map(link => ({ href: `/${locale}${link.href}`, label: t(link.label) })) } : {}),
+      ...(section.links ? { links: section.links.map(link => ({
+        href: link.href.startsWith("/documents/") ? link.href : `/${locale}${link.href}`,
+        label: t(link.label),
+      })) } : {}),
     })),
   };
 }

@@ -1,11 +1,11 @@
 [
   [
     "HP 为二位六通带排气高压旋转阀。先按进样、切换和排气任务确定各口的连接，再核对高压接头、运动定位与材料，避免把低压选路阀的安装和操作方法直接套用。",
-    "HP is a two-position, six-port high-pressure rotary valve with venting. Define port connections for injection, switching and venting, then verify high-pressure fittings, positioning and materials. Do not transfer low-pressure selector-valve installation or operation directly.",
-    "HP es una válvula rotativa de alta presión de dos posiciones y seis puertos con purga. Defina conexiones de inyección, conmutación y purga; revise racores, posición y materiales. No copie directamente instalación y operación de selectores de baja presión.",
-    "HP est une vanne rotative haute pression à deux positions et six ports avec purge. Définissez injection, commutation et purge, puis raccords, positionnement et matériaux. Ne transposez pas directement les méthodes des sélecteurs basse pression.",
-    "HP는 배기 기능을 갖춘 2위치 6포트 고압 로터리 밸브입니다. 주입·전환·배기 작업에 따라 포트 연결을 정하고 고압 피팅, 위치 제어와 재질을 확인하세요. 저압 선택 밸브의 설치·운전법을 그대로 적용하지 마세요.",
-    "HP — двухпозиционный шестипортовый ротационный клапан высокого давления с удалением воздуха. Задайте соединения для ввода пробы, переключения и удаления воздуха, затем фитинги, позиционирование и материалы. Не переносите напрямую методы низкого давления."
+    "The HP is a two-position, six-port high-pressure injection valve with a vent port. Map the injection, loading and vent paths, then verify the high-pressure fittings, wetted materials and valve positioning for your system.",
+    "HP es una válvula de inyección de alta presión de seis puertos y dos posiciones, con puerto de purga. Trace los circuitos de inyección, carga y purga, y después verifique los racores de alta presión, los materiales en contacto con el fluido y el posicionamiento de la válvula en el equipo.",
+    "HP est une vanne d’injection haute pression à deux positions et six ports, munie d’un évent. Définissez les circuits d’injection, de chargement et de purge, puis vérifiez les raccords haute pression, les matériaux en contact avec le liquide et le positionnement de la vanne.",
+    "HP는 배기 포트가 있는 2위치 6포트 고압 주입 밸브입니다. 주입·시료 충전·배기 유로를 정한 후, 장비에 적용할 고압 피팅, 접액부 재질과 밸브 위치 제어를 확인하세요.",
+    "HP — двухпозиционный шестипортовый клапан впрыска высокого давления с портом для сброса воздуха. Определите контуры впрыска, загрузки и сброса, затем проверьте фитинги высокого давления, материалы деталей в контакте с жидкостью и позиционирование клапана в системе."
   ],
   [
     "六通流路与排气位置",
@@ -65,11 +65,11 @@
   ],
   [
     "核对步进电机、减速比与复位光耦，完成定位后再组织进样和排气过程。",
-    "Check stepper motor, reduction ratio and home optocoupler. Complete positioning before injection and venting sequences.",
-    "Revise motor, reducción y optoacoplador de referencia. Complete posicionamiento antes de inyectar o purgar.",
-    "Vérifiez moteur, réduction et optocoupleur de référence. Terminez le positionnement avant injection et purge.",
-    "스테퍼 모터, 감속비와 원점 광커플러를 확인하고 위치 결정 완료 후 주입·배기 절차를 실행하세요.",
-    "Проверьте шаговый двигатель, редукцию и оптопару исходного положения. Завершите позиционирование до ввода и удаления воздуха."
+    "Verify the stepper motor, gear reduction and home-position optocoupler. Confirm repeatable positioning before running injection and vent cycles.",
+    "Compruebe el motor paso a paso, la relación de reducción y el optoacoplador de origen. Verifique que la válvula se posicione de forma repetible antes de ejecutar los ciclos de inyección y purga.",
+    "Vérifiez le moteur pas à pas, le rapport de réduction et l’optocoupleur de référencement. Vérifiez la répétabilité du positionnement avant de lancer les cycles d’injection et de purge.",
+    "스테핑 모터, 감속비 및 원점 검출용 포토커플러를 확인하세요. 위치가 반복 재현되는지 확인한 후 주입 및 배기 사이클을 실행하세요.",
+    "Проверьте шаговый двигатель, передаточное отношение редуктора и оптопару исходного положения. Перед циклами впрыска и сброса убедитесь в повторяемости позиционирования."
   ],
   [
     "供货型号",
@@ -169,11 +169,11 @@
   ],
   [
     "{0}–{1}、{2}–{3}、{4}–{5} 连通",
-    "{0}–{1}, {2}–{3} and {4}–{5} connected",
-    "{0}–{1}, {2}–{3} y {4}–{5} conectados",
-    "{0}–{1}, {2}–{3} et {4}–{5} reliés",
-    "{0}–{1}, {2}–{3}, {4}–{5} 연결",
-    "Соединены {0}–{1}, {2}–{3} и {4}–{5}"
+    "Port pairs {0}–{1}, {2}–{3} and {4}–{5} are connected",
+    "Quedan comunicados los pares de puertos {0}–{1}, {2}–{3} y {4}–{5}",
+    "Les orifices {0}–{1}, {2}–{3} et {4}–{5} communiquent par paires",
+    "포트 {0}–{1}, {2}–{3}, {4}–{5}가 각각 연결됩니다",
+    "Попарно соединены порты {0}–{1}, {2}–{3} и {4}–{5}"
   ],
   [
     "先完成复位并检查反馈，再以该位置为基准组织后续动作。",
@@ -225,19 +225,19 @@
   ],
   [
     "排气与正常进样分开测试，检查是否将气泡或不合格启动液带入后续分析。",
-    "Test venting separately from normal injection. Check whether bubbles or off-spec startup liquid enter downstream analysis.",
-    "Ensaye purga aparte de inyección. Compruebe entrada de burbujas o líquido inicial no conforme al análisis posterior.",
-    "Testez la purge séparément de l’injection. Vérifiez l’arrivée de bulles ou de liquide initial non conforme en analyse.",
-    "배기와 정상 주입을 따로 시험하고 기포나 부적합 초기 액체가 후속 분석으로 유입되는지 확인하세요.",
-    "Проверяйте удаление воздуха отдельно от ввода. Убедитесь, что пузырьки или некондиционная стартовая жидкость не попадают в анализ."
+    "Test the vent circuit separately. Verify that air and the liquid discharged during start-up are routed away from the analytical flow path.",
+    "Pruebe el circuito de purga por separado. Compruebe que el aire y el líquido descargado durante el arranque queden fuera del circuito analítico.",
+    "Testez le circuit de purge séparément. Vérifiez que l’air et le liquide évacué au démarrage sont dirigés hors du circuit d’analyse.",
+    "배기 유로를 별도로 시험하세요. 기동 시 배출되는 공기와 액체가 분석 유로로 유입되지 않는지 확인하세요.",
+    "Испытайте контур сброса отдельно. Убедитесь, что воздух и жидкость, отводимая при запуске, уходят за пределы аналитического контура."
   ],
   [
     "工作压力、材料与高压接头",
-    "Pressure, materials and high-pressure fittings",
-    "Presión, materiales y racores de alta presión",
-    "Pression, matériaux et raccords haute pression",
-    "작동 압력, 재질 및 고압 피팅",
-    "Давление, материалы и фитинги высокого давления"
+    "Working pressure, wetted materials and high-pressure fittings",
+    "Presión de trabajo, materiales en contacto con el fluido y racores de alta presión",
+    "Pression de service, matériaux en contact et raccords haute pression",
+    "사용 압력, 접액부 재질 및 고압 피팅",
+    "Рабочее давление, контактирующие материалы и фитинги высокого давления"
   ],
   [
     "高压连接需要阀、管材、接头与密封结构共同匹配；任何一件的适用边界较低时，以该件为约束。",
@@ -321,11 +321,11 @@
   ],
   [
     "电机、光耦与位置控制",
-    "Motor, optocoupler and position control",
-    "Motor, optoacoplador y posición",
-    "Moteur, optocoupleur et positionnement",
-    "모터, 광커플러 및 위치 제어",
-    "Двигатель, оптопара и позиционирование"
+    "Motor, optocoupler and valve positioning",
+    "Motor, optoacoplador y posicionamiento de la válvula",
+    "Moteur, optocoupleur et positionnement de la vanne",
+    "모터, 광커플러 및 밸브 위치 제어",
+    "Двигатель, оптопара и позиционирование клапана"
   ],
   [
     "供电、绕组和光耦应按实际供货接口分别连接；参数表中的 {0} V、{1} A 不能直接作为裸光耦供电。",
@@ -409,19 +409,19 @@
   ],
   [
     "安装、充液排气与首次验证",
-    "Installation, priming, venting and initial validation",
-    "Instalación, cebado, purga y validación inicial",
-    "Installation, amorçage, purge et validation initiale",
-    "설치, 충전·배기 및 최초 검증",
-    "Монтаж, заполнение, удаление воздуха и первая проверка"
+    "Mounting, priming and commissioning",
+    "Montaje, cebado y puesta en servicio",
+    "Montage, amorçage et mise en service",
+    "장착, 충액·기포 제거 및 시운전",
+    "Монтаж, заполнение и пусконаладка"
   ],
   [
     "先在适当低压条件下确认流路与密封，再按整机验收方案逐步进入目标工况。",
-    "Check paths and sealing at an appropriate low pressure first, then approach target conditions under the instrument acceptance plan.",
-    "Compruebe vías y sellado a baja presión adecuada; alcance gradualmente condiciones objetivo según plan del equipo.",
-    "Vérifiez circuits et étanchéité à basse pression appropriée, puis montez selon le plan de validation de l’instrument.",
-    "적절한 저압에서 유로·밀봉을 확인한 뒤 장비 검수 계획에 따라 목표 조건으로 단계적으로 진입하세요.",
-    "Сначала проверьте пути и герметичность при подходящем низком давлении, затем переходите к целевым условиям по плану приёмки."
+    "Confirm port connections and check for leaks at low pressure. Increase to the intended operating conditions in stages, following the instrument’s acceptance test procedure.",
+    "Confirme las conexiones y compruebe la estanqueidad a baja presión. Pase por etapas a las condiciones de servicio previstas según el procedimiento de aceptación del equipo.",
+    "Vérifiez les raccordements et l’étanchéité à basse pression. Passez progressivement aux conditions de service prévues, en suivant la procédure d’essai de réception de l’instrument.",
+    "저압에서 포트 연결과 누설 여부를 확인하세요. 장비 인수 시험 절차에 따라 목표 운전 조건까지 단계적으로 높이십시오.",
+    "Проверьте соединения и герметичность при низком давлении. Выходите на рабочий режим поэтапно, согласно методике приёмочных испытаний прибора."
   ],
   [
     "核对配置并固定",
@@ -481,11 +481,11 @@
   ],
   [
     "逐项核对复位、常用和排气位置的实际通液关系，再测试进样与连续循环。",
-    "Check actual connections at home, working and vent positions, then test injection and repeated cycles.",
-    "Compruebe vías en referencia, trabajo y purga; ensaye inyección y ciclos repetidos.",
-    "Vérifiez les connexions en référence, travail et purge, puis injection et cycles répétés.",
-    "원점·작동·배기 위치의 실제 연결을 확인한 뒤 주입과 연속 주기를 시험하세요.",
-    "Проверьте реальные связи в исходном, рабочих и продувочном положениях, затем ввод и повторные циклы."
+    "Check which ports communicate in the inject (home), load and vent positions. Then test injection and repeated cycling.",
+    "Compruebe qué puertos se comunican en las posiciones de inyección (origen), carga y purga. Después, pruebe la inyección y la repetición de ciclos.",
+    "Vérifiez quels ports communiquent en position d’injection (référence), de chargement et de purge. Testez ensuite l’injection et le fonctionnement sur plusieurs cycles.",
+    "주입(원점), 시료 충전, 배기 위치에서 각 포트의 연결을 확인하세요. 이후 주입과 반복 사이클을 시험하세요.",
+    "Сверьте соединения портов в положениях впрыска (исходном), загрузки и сброса воздуха. Затем проверьте впрыск и работу в серии циклов."
   ],
   [
     "记录工作点",
@@ -506,10 +506,10 @@
   [
     "高压渗漏、定位异常与维护",
     "High-pressure leaks, positioning faults and maintenance",
-    "Fugas de alta presión, fallos de posición y mantenimiento",
-    "Fuites haute pression, défauts de position et entretien",
-    "고압 누설, 위치 이상 및 유지보수",
-    "Утечки высокого давления, сбои положения и обслуживание"
+    "Fugas a alta presión, fallos de posicionamiento y mantenimiento",
+    "Fuites sous haute pression, défauts de positionnement et entretien",
+    "고압 누설·위치 이상·유지보수",
+    "Утечки под высоким давлением, сбои позиционирования и обслуживание"
   ],
   [
     "发现渗漏、异响或定位异常时停止运行，先安全泄压，再进行外部检查。",
@@ -606,5 +606,85 @@
     "Contactez l’assistance pour les pièces d’usure. La durée nominale ne dispense pas des contrôles.",
     "마모 부품 처리는 기술 지원팀에 문의하세요. 공칭 수명을 점검 불필요 보장으로 보지 마세요.",
     "По изнашиваемым деталям обратитесь в поддержку. Номинальный ресурс не гарантирует работу без проверок."
+  ],
+  [
+    "进样、装样与排气位置",
+    "Inject, load and vent positions",
+    "Posiciones de inyección, carga y purga",
+    "Positions d’injection, de chargement et de purge",
+    "주입·시료 로딩·기포 배출 위치",
+    "Положения ввода пробы, загрузки и удаления воздуха"
+  ],
+  [
+    "先按实际流路区分样液、定量管与排气出口，再将程序位置与下列通路逐一对应。",
+    "Identify the sample inlet, sample loop and vent outlet on the instrument’s flow diagram. Match each command position to the port connections below.",
+    "Identifique en el esquema del equipo la entrada de muestra, el bucle de muestreo y la salida de purga. Asigne a cada posición del programa la conexión de vías que le corresponda.",
+    "Repérez l’entrée de l’échantillon, la boucle d’échantillonnage et la sortie de purge sur le schéma de l’appareil. Faites correspondre chaque position de commande aux liaisons indiquées ci-dessous.",
+    "장비 유로도에서 시료 입구, 샘플 루프, 기포 배출구를 구분하세요. 제어 프로그램의 각 위치를 아래 포트 연결과 대응시키세요.",
+    "На схеме прибора обозначьте вход пробы, дозирующую петлю и выход для удаления воздуха. Сопоставьте каждое положение в программе с соединениями портов ниже."
+  ],
+  [
+    "进样位",
+    "Inject position",
+    "Posición de inyección",
+    "Position d’injection",
+    "주입 위치",
+    "Ввод пробы"
+  ],
+  [
+    "装样位",
+    "Load position",
+    "Posición de carga",
+    "Position de chargement",
+    "시료 로딩 위치",
+    "Загрузка пробы"
+  ],
+  [
+    "排气位",
+    "Vent position",
+    "Posición de purga",
+    "Position de purge",
+    "기포 배출 위치",
+    "Удаление воздуха"
+  ],
+  [
+    "复位并对中后，{0}–{1}、{2}–{3}、{4}–{5} 连通",
+    "Once the valve has homed and centered, ports {0}–{1}, {2}–{3} and {4}–{5} are connected in pairs",
+    "Tras el retorno al origen y el centrado, quedan comunicados los puertos {0}–{1}, {2}–{3} y {4}–{5}",
+    "Après le retour à l’origine et le centrage, les orifices {0}–{1}, {2}–{3} et {4}–{5} communiquent par paires",
+    "원점 복귀와 센터링 후 포트 {0}–{1}, {2}–{3}, {4}–{5}가 각각 연결됩니다",
+    "После возврата в исходное положение и центрирования попарно соединены порты {0}–{1}, {2}–{3} и {4}–{5}"
+  ],
+  [
+    "{0}–{1} 连通",
+    "Ports {0} and {1} are connected",
+    "Comunican los puertos {0} y {1}",
+    "Les orifices {0} et {1} communiquent",
+    "포트 {0}과 {1}이 연결됩니다",
+    "Соединены порты {0} и {1}"
+  ],
+  [
+    "先确认复位信号，再执行进样。",
+    "Confirm the home-position signal before injecting.",
+    "Compruebe la señal de origen antes de inyectar la muestra.",
+    "Vérifiez le signal de position d’origine avant l’injection.",
+    "원점 신호를 확인한 뒤 시료를 주입하세요.",
+    "Перед вводом пробы убедитесь, что получен сигнал исходного положения."
+  ],
+  [
+    "按阀头端面方向与规格书的角度设置切换动作。",
+    "Use the valve-head face as the viewing reference and program the angles specified in the datasheet.",
+    "Tome como referencia la vista frontal del cabezal y programe el ángulo de conmutación indicado en la ficha técnica.",
+    "Prenez la vue de face de la tête de vanne comme repère et programmez l’angle de commutation indiqué dans la fiche technique.",
+    "밸브 헤드 정면을 기준으로 방향을 잡고 데이터시트에 명시된 전환 각도를 설정하세요.",
+    "Используйте вид со стороны торца головки как ориентир и задайте угол переключения по техническому паспорту."
+  ],
+  [
+    "确认排出液去向并单独验证排气路径。",
+    "Confirm where the vent discharges and test that path separately.",
+    "Confirme el destino del efluente y pruebe el circuito de purga por separado.",
+    "Vérifiez où débouche la conduite de purge et testez ce circuit séparément.",
+    "배출액의 경로를 확인하고 기포 배출 유로를 별도로 검증하세요.",
+    "Уточните, куда отводится жидкость, и отдельно проверьте канал удаления воздуха."
   ]
 ]

@@ -123,17 +123,19 @@
 }
 
 .contact-hero-inner {
+    --contact-hero-min-height: 620px;
+    --contact-hero-padding-top: 186px;
     position: relative;
     /* 璁╁唴瀹规诞鍦ㄨ楗板眰涓婇潰 */
     z-index: 1;
     /* 鍐呭灞傜骇楂樹簬 ::before */
     max-width: var(--contact-content-width);
     /* 鍐呭鏈€澶у搴?*/
-    min-height: 420px;
+    min-height: var(--contact-hero-min-height);
     /* Banner 鍚堢悊楂樺害 */
     margin: 0 auto;
     /* 鍐呭鍖哄煙姘村钩灞呬腑 */
-    padding: 86px 28px 76px;
+    padding: var(--contact-hero-padding-top) 28px 176px;
     /* 涓娿€佸乏鍙炽€佷笅鍐呰竟璺?*/
     display: flex;
     /* 浣跨敤 flex 鎺у埗鍐呭浣嶇疆 */
@@ -1322,9 +1324,10 @@
 
 @media (max-width: 760px) {
     .contact-hero-inner {
-        min-height: 340px;
+        --contact-hero-min-height: 540px;
+        --contact-hero-padding-top: 158px;
         /* 鎵嬫満绔?Banner 楂樺害 */
-        padding: 58px 18px 56px;
+        padding: var(--contact-hero-padding-top) 18px 156px;
         /* 鎵嬫満绔?Banner 鍐呰竟璺?*/
     }
 
@@ -1833,8 +1836,9 @@
 ========================================================= */
 
 .distributor-hero {
+  --distributor-hero-min-height: 920px;
   position: relative;
-  min-height: 720px;
+  min-height: var(--distributor-hero-min-height);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1865,6 +1869,7 @@
 .distributor-hero-inner {
   position: relative;
   z-index: 1;
+  margin-block: 100px;
 }
 
 .distributor-hero-content {
@@ -2527,7 +2532,7 @@
   }
 
   .distributor-hero {
-    min-height: 620px;
+    --distributor-hero-min-height: 820px;
   }
 
   .distributor-section-head h2 {

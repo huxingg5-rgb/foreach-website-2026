@@ -113,11 +113,11 @@
   ],
   [
     "DC {0}／{1} V ±{2}%，标准型与带节能回路配置分开核对；红正黑负。",
-    "DC {0}/{1} V ±{2}%. Check standard and power-saving versions separately; red is positive, black negative.",
-    "DC {0}/{1} V ±{2}%. Distinga versión estándar y de ahorro; rojo positivo, negro negativo.",
-    "DC {0}/{1} V ±{2} %. Vérifier séparément versions standard et économiseur ; rouge positif, noir négatif.",
-    "DC {0}/{1} V ±{2}%. 표준형·절전형을 따로 확인하세요. 빨강은 +, 검정은 −입니다.",
-    "DC {0}/{1} V ±{2}%. Стандартную и энергосберегающую версии проверяйте отдельно; красный плюс, чёрный минус."
+    "DC {0}/{1} V (±{2}%). Check the supply requirements for the standard or power-saving version. Connect red to positive and black to negative.",
+    "Alimentación de {0}/{1} V CC (±{2} %). Compruebe los requisitos de la versión estándar o con circuito de ahorro de energía. Conecte el rojo al positivo y el negro al negativo.",
+    "Alimentation {0}/{1} V CC (±{2} %). Vérifiez les exigences de la version standard ou avec circuit d’économie d’énergie. Raccordez le fil rouge au positif et le noir au négatif.",
+    "전원은 {0}/{1} V DC(±{2}%)입니다. 표준형과 절전 회로 내장형은 각각의 전원 사양을 확인하세요. 적색은 양극, 흑색은 음극에 연결하세요.",
+    "Питание: {0}/{1} В постоянного тока (±{2} %). Уточните требования для стандартного исполнения или исполнения с энергосберегающей схемой. Красный провод подключите к плюсу, чёрный — к минусу."
   ],
   [
     "材料与性能",
@@ -169,19 +169,19 @@
   ],
   [
     "二通常闭 NC",
-    "Two-way normally closed (NC)",
-    "Dos vías normalmente cerrada (NC)",
-    "Deux voies normalement fermée (NC)",
-    "2방향 상시 닫힘(NC)",
-    "Двухходовой нормально закрытый (NC)"
+    "2-way, normally closed (NC)",
+    "2 vías, normalmente cerrada (NC)",
+    "2 voies, fermée au repos (NC)",
+    "2포트 상시 닫힘(NC)",
+    "Двухходовой, нормально закрытый (NC)"
   ],
   [
     "断电关闭，通电打开",
-    "Closed de-energized; open energized",
-    "Cerrada sin tensión; abierta con tensión",
-    "Fermée hors tension ; ouverte sous tension",
-    "무전원 시 닫힘, 통전 시 열림",
-    "Без питания закрыт; под питанием открыт"
+    "Closed when de-energized and open when energized",
+    "Se cierra sin tensión y se abre al alimentar la bobina",
+    "Fermée hors tension, ouverte lorsque la bobine est alimentée",
+    "무통전 시 닫히고 통전 시 열립니다",
+    "Без питания закрыт, при подаче питания открывается"
   ],
   [
     "适用于断电时需要关闭该支路的设计，仍应验证实际压差与残液状态。",
@@ -193,19 +193,19 @@
   ],
   [
     "二通常开 NO",
-    "Two-way normally open (NO)",
-    "Dos vías normalmente abierta (NO)",
-    "Deux voies normalement ouverte (NO)",
-    "2방향 상시 열림(NO)",
-    "Двухходовой нормально открытый (NO)"
+    "2-way, normally open (NO)",
+    "2 vías, normalmente abierta (NO)",
+    "2 voies, ouverte au repos (NO)",
+    "2포트 상시 열림(NO)",
+    "Двухходовой, нормально открытый (NO)"
   ],
   [
     "断电打开，通电关闭",
-    "Open de-energized; closed energized",
-    "Abierta sin tensión; cerrada con tensión",
-    "Ouverte hors tension ; fermée sous tension",
-    "무전원 시 열림, 통전 시 닫힘",
-    "Без питания открыт; под питанием закрыт"
+    "Open when de-energized and closed when energized",
+    "Se abre sin tensión y se cierra al alimentar la bobina",
+    "Ouverte hors tension, fermée lorsque la bobine est alimentée",
+    "무통전 시 열리고 통전 시 닫힙니다",
+    "Без питания открыт, при подаче питания закрывается"
   ],
   [
     "适用于断电时需要保持该支路连通的设计，不能沿用常闭阀的停机逻辑。",
@@ -225,11 +225,11 @@
   ],
   [
     "断电时 COM 接 NO，通电时 COM 接 NC；按实物端口标识和具体流路图检查连接。",
-    "De-energized: COM to NO; energized: COM to NC. Verify physical port markings and the specific path diagram.",
-    "Sin tensión: COM–NO; con tensión: COM–NC. Verifique marcas físicas y esquema concreto.",
-    "Hors tension : COM–NO ; sous tension : COM–NC. Vérifiez marquage réel et schéma spécifique.",
-    "무전원 시 COM–NO, 통전 시 COM–NC가 연결됩니다. 실제 포트 표시와 해당 유로도로 배관을 점검하세요.",
-    "Без питания COM соединён с NO, под питанием — с NC. Сверяйте маркировку портов и конкретную схему."
+    "COM connects to NO without power and to NC with the coil energized. Check the markings on the valve against its flow diagram.",
+    "Sin tensión, COM comunica con NO. Cuando se alimenta la bobina, COM comunica con NC. Compruebe las marcas del cuerpo y el esquema de circulación del modelo.",
+    "Hors tension, COM communique avec NO. Lorsque la bobine est alimentée, COM communique avec NC. Vérifiez les repères sur la vanne et le schéma de circulation du modèle.",
+    "무통전 시 COM은 NO와 연결되고, 통전 시에는 NC와 연결됩니다. 밸브 본체의 포트 표기와 해당 모델의 유로도를 대조하세요.",
+    "Без питания COM соединён с NO. При подаче питания на катушку COM соединяется с NC. Сверьте маркировку портов на корпусе со схемой выбранного исполнения."
   ],
   [
     "节拍",
@@ -257,11 +257,11 @@
   ],
   [
     "膜片、O 圈和阀座材料",
-    "Diaphragm, O-ring and seat materials",
-    "Materiales de diafragma, junta tórica y asiento",
-    "Matériaux de membrane, joint torique et siège",
-    "다이어프램, O링 및 시트 재질",
-    "Материалы мембраны, O-кольца и седла"
+    "Diaphragm, O-ring and valve-seat materials",
+    "Materiales del diafragma, las juntas tóricas y el asiento",
+    "Matériaux de la membrane, du joint torique et du siège",
+    "다이어프램·O링·밸브 시트 재질",
+    "Материалы мембраны, уплотнительного кольца и седла"
   ],
   [
     "同时提供试剂和清洗液的成分、浓度、温度及接触时间，按全部接液部件确认材料组合。",
@@ -345,19 +345,19 @@
   ],
   [
     "基板、倒刺与螺纹连接",
-    "Base, barbed and threaded connections",
-    "Conexiones sobre base, espiga y roscadas",
-    "Raccordements sur embase, cannelés et filetés",
-    "베이스, 바브 및 나사 연결",
-    "Соединения на основании, «ёлочка» и резьбовые"
+    "Manifold, hose-barb and threaded connections",
+    "Montaje en bloque, espigas y conexiones roscadas",
+    "Montage sur embase, embouts cannelés et raccords filetés",
+    "매니폴드·바브·나사 연결",
+    "Монтаж на плите, штуцеры под шланг и резьбовые соединения"
   ],
   [
     "连接方式决定密封与固定结构，应根据当前配置逐项检查，并给线束与拆装保留空间。",
-    "Connection type determines sealing and mounting. Check the current configuration and allow cable and servicing clearance.",
-    "La conexión determina sellado y fijación. Revise la configuración y deje espacio para cables y mantenimiento.",
-    "Le raccordement détermine étanchéité et fixation. Vérifiez la configuration et prévoyez câbles et démontage.",
-    "연결 방식에 따라 밀봉·고정 구조가 달라집니다. 현재 구성을 확인하고 배선 및 탈착 공간을 확보하세요.",
-    "Тип соединения определяет уплотнение и крепление. Проверьте комплектацию, оставьте место для жгутов и обслуживания."
+    "Check the mounting method and seal for the selected connection type. Leave enough room to route the leads and remove the valve for service.",
+    "Compruebe la fijación y la junta correspondientes a la conexión seleccionada. Deje espacio para el cableado y para desmontar la válvula durante el mantenimiento.",
+    "Vérifiez le mode de fixation et le joint adaptés au raccordement choisi. Prévoyez le passage des fils et l’espace nécessaire à la dépose de la vanne.",
+    "선택한 포트 형식에 맞는 고정 방식과 씰을 확인하세요. 배선을 정리하고 정비 시 밸브를 탈거할 공간을 확보하세요.",
+    "Проверьте способ крепления и уплотнение для выбранного типа присоединения. Оставьте место для проводов и демонтажа клапана при обслуживании."
   ],
   [
     "基板型",
@@ -433,11 +433,11 @@
   ],
   [
     "电压、极性与节能回路",
-    "Voltage, polarity and power-saving circuit",
-    "Tensión, polaridad y ahorro de energía",
-    "Tension, polarité et circuit économiseur",
-    "전압, 극성 및 절전 회로",
-    "Напряжение, полярность и энергосбережение"
+    "Coil voltage, polarity and power-saving circuit",
+    "Tensión y polaridad de la bobina, y circuito de ahorro",
+    "Tension et polarité de la bobine, circuit d’économie d’énergie",
+    "코일 전압, 극성 및 절전 회로",
+    "Напряжение и полярность катушки, энергосберегающая схема"
   ],
   [
     "SV{0}／{1} 接线有正负极，先确认订货电压和节能配置，再接入驱动输出。",
@@ -489,11 +489,11 @@
   ],
   [
     "按完整型号核对带 Y 的节能回路配置，不能把保持功率直接作为启动供电能力。",
-    "Verify the Y power-saving option from the full model. Holding power does not define the required starting supply capability.",
-    "Verifique opción Y en el modelo completo. La potencia de mantenimiento no dimensiona el arranque.",
-    "Vérifiez l’option Y sur la référence complète. La puissance de maintien ne dimensionne pas l’alimentation de démarrage.",
-    "전체 모델에서 Y 절전 회로를 확인하세요. 유지 전력을 기동 시 전원 공급 능력으로 간주하지 마세요.",
-    "Проверьте опцию Y по полному коду. Удерживающая мощность не определяет требуемую пусковую способность питания."
+    "Use the complete model code to verify whether the valve has the Y power-saving circuit. Size the power supply for the load at switch-on as well as the holding load.",
+    "Compruebe en el código completo si la válvula lleva el circuito de ahorro de energía Y. Dimensione la fuente para la demanda de arranque y la de mantenimiento.",
+    "Vérifiez la présence du circuit d’économie d’énergie Y dans la référence complète. Dimensionnez l’alimentation pour l’appel de courant à l’enclenchement et le régime de maintien.",
+    "전체 모델 코드에서 Y 절전 회로 적용 여부를 확인하세요. 전원 용량은 기동 부하와 유지 부하를 모두 고려하여 선정하세요.",
+    "По полному коду модели проверьте наличие энергосберегающей схемы Y. При выборе источника питания учитывайте пусковую нагрузку и нагрузку в режиме удержания."
   ],
   [
     "断电检查",
@@ -521,19 +521,19 @@
   ],
   [
     "首次通液与动作验证",
-    "First fluid operation and actuation validation",
-    "Primer paso de líquido y validación",
-    "Première mise en fluide et validation",
-    "최초 통액 및 동작 검증",
-    "Первый пропуск жидкости и проверка срабатывания"
+    "Initial flow and switching checks",
+    "Primera puesta en servicio y comprobación de la conmutación",
+    "Première mise en fluide et contrôle de la commutation",
+    "초기 통액 및 개폐 확인",
+    "Проверка потока и переключения при первом пуске"
   ],
   [
     "先检查接线和通断电状态，再接入相容介质，并在实际压差下观察液路变化。",
-    "Check wiring and energized/de-energized states first. Introduce compatible liquid and observe path changes at actual differential pressure.",
-    "Revise cableado y estados primero. Introduzca líquido compatible y observe cambios al diferencial real.",
-    "Vérifiez câblage et états, puis introduisez un liquide compatible et observez les circuits au différentiel réel.",
-    "배선과 통전·무전원 상태를 먼저 확인한 뒤 호환 액체를 연결하고 실제 차압에서 유로 변화를 관찰하세요.",
-    "Сначала проверьте подключение и состояния, затем подайте совместимую жидкость и наблюдайте пути при рабочем перепаде."
+    "Verify the wiring and valve states with power on and off. Then introduce a compatible liquid and check which ports communicate at the operating differential pressure.",
+    "Compruebe el cableado y los estados de la válvula con y sin alimentación. Después, introduzca un líquido compatible y verifique qué puertos se comunican con la presión diferencial de servicio.",
+    "Vérifiez le câblage et les états de la vanne sous tension et hors tension. Introduisez ensuite un liquide compatible et vérifiez quels ports communiquent à la pression différentielle de service.",
+    "배선과 통전·무통전 상태를 확인하세요. 이후 재질에 적합한 액체를 흘려 보내고 실제 운전 차압에서 어떤 포트가 연결되는지 확인하세요.",
+    "Проверьте подключение и положения клапана при подаче и снятии питания. Затем подайте совместимую жидкость и проверьте, какие порты сообщаются при рабочем перепаде давления."
   ],
   [
     "核对型号和端口",
@@ -593,19 +593,19 @@
   ],
   [
     "与泵动作配合测试启停、清洗和断电状态，避免仅用听到动作声判断液路合格。",
-    "Test pump-coordinated start/stop, cleaning and power loss. Actuation sound alone does not validate fluid-path performance.",
-    "Ensaye arranque/parada, limpieza y corte junto con la bomba. Oír la actuación no valida el circuito.",
-    "Testez marche/arrêt, nettoyage et coupure avec la pompe. Le bruit d’actionnement ne valide pas le circuit.",
-    "펌프와 연동하여 시작·정지, 세척과 정전을 시험하세요. 작동음만으로 유로 적합성을 판단하지 마세요.",
-    "Проверьте пуск/остановку, промывку и потерю питания совместно с насосом. Одного звука срабатывания недостаточно."
+    "Run the valve and pump together through start-up, shutdown, flushing and power loss. Verify the fluid path at each stage.",
+    "Pruebe la válvula y la bomba juntas durante el arranque, la parada, el enjuague y un corte de alimentación. Verifique el recorrido del fluido en cada etapa.",
+    "Testez la vanne et la pompe ensemble au démarrage, à l’arrêt, au rinçage et en cas de coupure d’alimentation. Vérifiez le cheminement du liquide à chaque étape.",
+    "밸브와 펌프를 함께 구동하며 기동, 정지, 세척 및 전원 차단을 시험하세요. 각 단계에서 액체가 흐르는 경로를 확인하세요.",
+    "Проверьте совместную работу клапана и насоса при пуске, остановке, промывке и отключении питания. На каждом этапе проверяйте, по какому каналу проходит жидкость."
   ],
   [
     "开闭异常、泄漏与维护",
-    "Switching faults, leakage and maintenance",
-    "Fallos de apertura/cierre, fugas y mantenimiento",
-    "Défauts d’ouverture/fermeture, fuites et entretien",
-    "개폐 이상, 누설 및 유지보수",
-    "Сбои открытия/закрытия, утечки и обслуживание"
+    "Switching faults, leaks and maintenance",
+    "Fallos de apertura y cierre, fugas y mantenimiento",
+    "Défauts d’ouverture ou de fermeture, fuites et entretien",
+    "개폐 이상·누설·유지보수",
+    "Отказы переключения, утечки и обслуживание"
   ],
   [
     "先判断电气动作和实际通液状态是否一致，再逐项排查。",
@@ -910,5 +910,21 @@
     "SV{0}-M{1}/U{2}-{3} ; confirmer l’état deux voies selon la commande.",
     "SV{0}-M{1}/U{2}-{3}, 2방향 상태는 주문 구성으로 확인.",
     "SV{0}-M{1}/U{2}-{3}; состояние двухходового исполнения уточняйте по заказу."
+  ],
+  [
+    "通路与断电状态",
+    "Port configuration and de-energized state",
+    "Configuración de vías y estado sin tensión",
+    "Configuration des voies et état hors tension",
+    "포트 구성과 무통전 상태",
+    "Схема подключения и положение без питания"
+  ],
+  [
+    "先定断电时哪条支路应保持连通，再核对端口、连接形式及响应时间。",
+    "Decide which line must remain open when power is off. Then check the port layout, process connection and response time for the selected valve.",
+    "Determine qué línea debe permanecer abierta al cortar la alimentación. A continuación, compruebe la disposición de las vías, la conexión y el tiempo de respuesta de la electroválvula elegida.",
+    "Déterminez quelle branche doit rester ouverte hors tension. Vérifiez ensuite la disposition des orifices, le raccordement et le temps de réponse de l’électrovanne choisie.",
+    "전원이 꺼졌을 때 어느 유로가 열려 있어야 하는지 먼저 정하세요. 그런 다음 선정한 밸브의 포트 배치, 연결 방식, 응답 시간을 확인하세요.",
+    "Определите, какая линия должна оставаться открытой при снятии питания. Затем проверьте расположение портов, способ подключения и время срабатывания выбранного клапана."
   ]
 ]

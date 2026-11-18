@@ -65,11 +65,11 @@
   ],
   [
     "内容积帮助评估置换需求，清洗量和残留仍需按介质与完整液路验证。",
-    "Internal volume helps estimate displacement requirements. Validate flush volume and carryover for the liquid and complete fluid path.",
-    "El volumen interno ayuda a estimar el desplazamiento. Valide lavado y residuos con el líquido y circuito completo.",
-    "Le volume interne aide à estimer le renouvellement. Validez rinçage et résidus sur le liquide et circuit complet.",
-    "내부 용적은 치환량 평가에 도움이 됩니다. 세척량과 잔류는 액체 및 전체 유로로 검증하세요.",
-    "Внутренний объём помогает оценить вытеснение. Промывочный объём и перенос проверяйте для среды и всего пути."
+    "Use the valve’s internal volume to estimate how much liquid must be displaced. Establish the flush volume and allowable carryover by testing the complete fluid path with the intended liquids.",
+    "Utilice el volumen interno de la válvula para estimar cuánto líquido hay que desplazar. Verifique el volumen de enjuague y el arrastre residual con los líquidos de trabajo en todo el circuito.",
+    "Le volume interne de la vanne permet d’estimer le volume de liquide à déplacer. Déterminez le volume de rinçage et le résidu acceptable en testant le circuit complet avec les liquides utilisés.",
+    "밸브 내부 체적으로 교체해야 할 액체의 양을 추정하세요. 실제 사용 액체로 전체 유로를 시험하여 세척량과 허용 잔류량을 정하세요.",
+    "По внутреннему объёму клапана оцените, сколько жидкости нужно вытеснить. Объём промывки и допустимый остаточный перенос определяйте испытанием всего контура с рабочими жидкостями."
   ],
   [
     "配置差异",
@@ -201,19 +201,19 @@
   ],
   [
     "阀头材料与清洗路径",
-    "Valve-head materials and cleaning paths",
-    "Materiales del cabezal y limpieza",
-    "Matériaux de tête et circuits de nettoyage",
-    "밸브 헤드 재질 및 세척 유로",
-    "Материалы головки и пути промывки"
+    "Valve-head materials and rinse routing",
+    "Materiales del cabezal y circuito de lavado",
+    "Matériaux de la tête de vanne et circuit de rinçage",
+    "밸브 헤드 재질과 세척 유로",
+    "Материалы головки клапана и схема промывки"
   ],
   [
     "按试剂和清洗液的成分、浓度、温度及接触时间核对阀头、定子、转子和连接管路。",
-    "Check head, stator, rotor and tubing against reagent/cleaner composition, concentration, temperature and contact time.",
-    "Revise cabezal, estator, rotor y tubos según composición, concentración, temperatura y contacto de reactivos y limpiadores.",
-    "Vérifiez tête, stator, rotor et tubes selon composition, concentration, température et durée de contact des fluides.",
-    "시약·세척액 성분, 농도, 온도와 접촉 시간으로 헤드, 스테이터, 로터와 튜브를 확인하세요.",
-    "Проверьте головку, статор, ротор и трубки по составу, концентрации, температуре и контакту реагента/промывки."
+    "Check valve head, stator, rotor and tubing compatibility with both reagents and cleaning solutions. Include composition, concentration, temperature and contact time.",
+    "Compruebe que el cabezal, el estator, el rotor y los tubos sean compatibles con los reactivos y las soluciones de limpieza. Tenga en cuenta la composición, la concentración, la temperatura y el tiempo de contacto.",
+    "Vérifiez la compatibilité de la tête de vanne, du stator, du rotor et des tubes avec les réactifs et les solutions de nettoyage. Tenez compte de la composition, de la concentration, de la température et du temps de contact.",
+    "밸브 헤드, 스테이터, 로터와 튜브가 시약 및 세척액에 적합한지 확인하세요. 액체의 조성, 농도, 온도와 접촉 시간을 함께 검토하세요.",
+    "Проверьте совместимость головки, статора, ротора и трубок с реагентами и промывочными растворами. Учитывайте состав, концентрацию, температуру и длительность контакта."
   ],
   [
     "阀头材料",
@@ -289,19 +289,19 @@
   ],
   [
     "电机、光耦、驱动器与通信接线",
-    "Motor, optocoupler, driver and communication wiring",
-    "Cableado de motor, optoacoplador, controlador y comunicación",
-    "Câblage moteur, optocoupleur, pilote et communication",
+    "Motor, optocoupler and driver connections",
+    "Conexiones del motor, los optoacopladores y la electrónica de control",
+    "Raccordement du moteur, des optocoupleurs et de l’électronique de commande",
     "모터, 광커플러, 드라이버 및 통신 배선",
-    "Подключение двигателя, оптопары, драйвера и связи"
+    "Подключение двигателя, оптопар, драйвера и интерфейса связи"
   ],
   [
     "先确认购买的是带配套驱动器还是独立电机配置，再按对应接口接线；{0} V 电源与光耦供电是不同电路。",
-    "Confirm matched-driver or standalone-motor supply before wiring. The {0} V supply and optocoupler supply are separate circuits.",
-    "Confirme controlador incluido o motor independiente antes de cablear. La alimentación de {0} V y la del optoacoplador son circuitos distintos.",
-    "Confirmez pilote associé ou moteur seul avant câblage. L’alimentation {0} V et celle de l’optocoupleur sont distinctes.",
-    "전용 드라이버 포함형인지 독립 모터형인지 확인한 뒤 배선하세요. {0} V 전원과 광커플러 전원은 서로 다른 회로입니다.",
-    "До подключения уточните исполнение с драйвером или отдельным двигателем. Питание {0} V и оптопары — разные цепи."
+    "Confirm whether the valve was supplied with its matching driver or as a standalone motor assembly before wiring. The {0} V power supply and the optocoupler supply are separate circuits.",
+    "Antes de conectar el equipo, confirme si se suministró con el accionador correspondiente o solo con el motor. La alimentación de {0} V y la del optoacoplador corresponden a circuitos distintos.",
+    "Avant le câblage, vérifiez si la vanne est fournie avec sa commande ou en version avec moteur seul. L’alimentation {0} V et celle de l’optocoupleur relèvent de circuits distincts.",
+    "배선 전에 전용 드라이버 포함형인지 모터 단독형인지 확인하세요. {0} V 전원과 포토커플러 전원은 서로 다른 회로입니다.",
+    "Перед подключением уточните исполнение: с комплектным драйвером или только с двигателем. Линия питания {0} В и питание оптопары относятся к разным цепям."
   ],
   [
     "MRV{0} J{1} 电源及 J{2} RS{3}、RS{4} 接口定义与接插件位置",
@@ -417,19 +417,19 @@
   ],
   [
     "安装、复位与泵阀时序",
-    "Mounting, homing and pump/valve timing",
-    "Montaje, referencia y sincronización bomba/válvula",
-    "Montage, référencement et séquence pompe/vanne",
-    "설치, 원점 복귀 및 펌프·밸브 시퀀스",
-    "Монтаж, возврат и последовательность насоса/клапана"
+    "Mounting, homing and pump–valve sequencing",
+    "Montaje, referencia de posición y sincronización con la bomba",
+    "Montage, prise d’origine et séquence pompe–vanne",
+    "장착, 원점 복귀 및 펌프·밸브 동작 순서",
+    "Монтаж, поиск исходного положения и согласование работы с насосом"
   ],
   [
     "先按阀头标识连接公共口与各支路，保持接管不受侧向拉力，并给电源、通信和维护留出空间。",
-    "Connect common and branch ports by head markings. Avoid lateral tubing loads and allow power, communication and maintenance access.",
-    "Conecte común y ramales según marcas. Evite cargas laterales y deje acceso a alimentación, comunicación y mantenimiento.",
-    "Raccordez commun et branches selon marquage. Évitez les efforts latéraux et gardez accès à puissance, communication et entretien.",
-    "헤드 표시에 따라 공통·분기 포트를 연결하고 배관 측면 하중을 피하세요. 전원·통신·정비 공간을 확보하세요.",
-    "Подключите общий порт и ветви по маркировке. Исключите боковые нагрузки трубок, оставьте доступ к питанию, связи и обслуживанию."
+    "Use the markings on the valve head to identify the common port and individual channels. Route tubing without imposing side loads, and leave access for wiring and maintenance.",
+    "Identifique el puerto común y los canales por las marcas del cabezal. Tienda los tubos sin ejercer cargas laterales y deje acceso para el cableado y el mantenimiento.",
+    "Repérez le port commun et les différents canaux à l’aide des marquages sur la tête. Posez les tubes sans effort latéral et laissez l’accès au câblage et à la maintenance.",
+    "밸브 헤드의 표시를 기준으로 공통 포트와 각 채널을 연결하세요. 튜브에 횡하중이 걸리지 않도록 배치하고 배선 및 정비 공간을 확보하세요.",
+    "Подсоедините общий порт и каналы согласно маркировке на головке. Проложите трубки без боковой нагрузки и оставьте доступ к разъёмам и обслуживаемым деталям."
   ],
   [
     "核对流路与固定",
@@ -497,19 +497,19 @@
   ],
   [
     "验证切换、残留与清洗效果",
-    "Validate switching, carryover and cleaning",
-    "Valide conmutación, residuos y limpieza",
-    "Valider commutation, résidus et nettoyage",
-    "전환, 잔류 및 세척 효과 검증",
-    "Проверка переключения, переноса и промывки"
+    "Verifying valve switching, carryover and rinse performance",
+    "Verificación de la conmutación, el arrastre y la eficacia del lavado",
+    "Vérification de la commutation, de la contamination résiduelle et du rinçage",
+    "유로 전환, 잔류량 및 세척 효과 검증",
+    "Проверка переключения, переноса остатков и эффективности промывки"
   ],
   [
     "切换命令成功不代表液体已经置换到出口。验收应覆盖实际阀、管长、泵、试剂及目标节拍。",
-    "A successful command does not mean fresh liquid reached the outlet. Test the actual valve, tubing length, pump, reagent and target timing.",
-    "Una orden correcta no significa líquido renovado en la salida. Ensaye válvula, longitud de tubo, bomba, reactivo y ciclo reales.",
-    "Une commande réussie ne signifie pas que le liquide a été renouvelé à la sortie. Testez vanne, longueur, pompe, réactif et cadence réels.",
-    "전환 명령 성공이 출구까지 액체 치환 완료를 뜻하지는 않습니다. 실제 밸브, 배관 길이, 펌프, 시약과 목표 주기를 포함해 검수하세요.",
-    "Успешная команда не означает обновление жидкости на выходе. Проверяйте фактические клапан, длину трубок, насос, реагент и цикл."
+    "Verify that fresh liquid reaches the outlet after switching. For acceptance testing, use the actual valve, tubing length, pump, reagent and required cycle time.",
+    "Verifique que el líquido nuevo llegue a la salida después de la conmutación. Para la validación, utilice la válvula, la longitud de tubo, la bomba, el reactivo y el tiempo de ciclo previstos.",
+    "Vérifiez que le nouveau liquide atteint la sortie après la commutation. Réalisez les essais de réception avec la vanne, la longueur de tube, la pompe, le réactif et le temps de cycle prévus.",
+    "전환 후 새 액체가 출구까지 도달했는지 확인하세요. 검증에는 실제 밸브, 튜브 길이, 펌프, 시약과 목표 사이클 시간을 적용하세요.",
+    "Проверьте, что после переключения новая жидкость доходит до выхода. При приёмочных испытаниях используйте штатные клапан, длину трубок, насос, реагент и время цикла."
   ],
   [
     "位置",
@@ -578,10 +578,10 @@
   [
     "日常维护与异常排查",
     "Routine maintenance and troubleshooting",
-    "Mantenimiento diario y diagnóstico",
-    "Entretien courant et dépannage",
-    "일상 정비 및 이상 점검",
-    "Регулярное обслуживание и диагностика"
+    "Mantenimiento habitual y diagnóstico de fallos",
+    "Entretien courant et diagnostic des pannes",
+    "정기 유지보수 및 이상 점검",
+    "Плановое обслуживание и поиск неисправностей"
   ],
   [
     "出现位置、通信或流路异常时，先停止相关泵动作，避免在不确定通路下继续供液。",
@@ -694,5 +694,45 @@
     "MRV{0}-D{1} : {2} voies, passage {3} mm, volume interne {4} μL, ports {5}-{6} UNF.",
     "MRV{0}-D{1}: {2}채널, 통경 {3} mm, 내부 용적 {4} μL, {5}-{6} UNF 포트.",
     "MRV{0}-D{1}: {2} каналов, проход {3} mm, объём {4} μL, порты {5}-{6} UNF."
+  ],
+  [
+    "通道数、通径与接口对照",
+    "Channel count, bore and port threads",
+    "Comparación de canales, diámetros de paso y roscas",
+    "Comparatif du nombre de voies, du diamètre de passage et des raccordements",
+    "채널 수·유로 내경·포트 나사 비교",
+    "Число каналов, проходное сечение и резьба портов"
+  ],
+  [
+    "先统计试剂、清洗液和预留支路，再按规格表对照公共口通径、阀内体积与接头。每次按阀位选通相应支路。",
+    "List the reagent, rinse and spare lines first. Compare the common-port bore, internal volume and fitting threads. The valve position determines which line communicates with the common port.",
+    "Haga primero una lista de las líneas de reactivos, lavado y reserva. Compare el diámetro de paso, el volumen interno y la rosca de las conexiones. Cada posición comunica una línea con el puerto común.",
+    "Recensez d’abord les lignes de réactif, de rinçage et de réserve. Comparez le diamètre de passage, le volume interne et le filetage des raccords. Chaque position relie une voie à l’orifice commun.",
+    "시약, 세척액, 예비 라인에 필요한 채널 수를 먼저 정하세요. 공통 포트의 유로 내경, 밸브 내부 용적, 피팅 나사를 비교하세요. 밸브 위치에 따라 공통 포트에 연결되는 유로가 달라집니다.",
+    "Сначала определите, сколько линий нужно для реагентов, промывки и резерва. Сравните диаметр прохода, внутренний объём и резьбу соединений. Положение клапана определяет, какая линия соединена с общим портом."
+  ],
+  [
+    "{0} 通道，通径 {1} mm，内容积 {2} μL",
+    "{0} channels, {1} mm bore and {2} µL internal volume",
+    "{0} canales, paso de {1} mm y volumen interno de {2} µL",
+    "{0} voies, passage de {1} mm et volume interne de {2} µL",
+    "{0}채널, 유로 내경 {1} mm, 내부 용적 {2} µL",
+    "{0} каналов, проход {1} мм, внутренний объём {2} мкл"
+  ],
+  [
+    "接口为 {0}/{1}-{2} UNF。",
+    "Port thread: {0}/{1}-{2} UNF.",
+    "Rosca de conexión: {0}/{1}-{2} UNF.",
+    "Filetage des orifices : {0}/{1}-{2} UNF.",
+    "포트 나사는 {0}/{1}-{2} UNF입니다.",
+    "Резьба портов: {0}/{1}-{2} UNF."
+  ],
+  [
+    "接口为 {0}-{1} UNF。",
+    "Port thread: {0}-{1} UNF.",
+    "Rosca de conexión: {0}-{1} UNF.",
+    "Filetage des orifices : {0}-{1} UNF.",
+    "포트 나사는 {0}-{1} UNF입니다.",
+    "Резьба портов: {0}-{1} UNF."
   ]
 ]

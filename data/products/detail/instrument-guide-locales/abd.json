@@ -1,11 +1,11 @@
 [
   [
     "ABD 通过透明管路的光学信号变化检测气液状态。先确定管外径、管材透光性和需要识别的气泡，再选择输出和报警阈值，并在实际管路中验证。",
-    "ABD detects gas/liquid states from optical changes through transparent tubing. Define tubing OD, light transmission and target bubbles before selecting outputs and alarm thresholds; validate in the actual line.",
-    "ABD detecta gas/líquido por cambios ópticos en tubos transparentes. Defina diámetro exterior, transmisión y burbujas objetivo; seleccione salidas/umbrales y valide en el circuito real.",
-    "ABD détecte gaz/liquide par variation optique à travers un tube transparent. Définissez diamètre extérieur, transmission et bulles cibles, puis sorties/seuils ; validez sur le circuit réel.",
-    "ABD는 투명 튜브의 광학 신호 변화로 기체·액체 상태를 검출합니다. 튜브 외경, 투광성 및 목표 기포를 정하고 출력·경보 임계값을 선택한 뒤 실제 배관에서 검증하세요.",
-    "ABD определяет газ/жидкость по оптическим изменениям прозрачной трубки. Задайте наружный диаметр, светопропускание и целевые пузырьки, выберите выходы/пороги и проверьте реальную линию."
+    "The ABD detects air bubbles by monitoring changes in light transmitted through transparent tubing. Match the sensor to the tubing OD and optical properties, then verify the output and alarm threshold with the bubbles you need to detect in the installed flow path.",
+    "El detector ABD identifica burbujas de aire a partir de los cambios en la luz que atraviesa un tubo transparente. Seleccione el sensor según el diámetro exterior y la transmisión óptica del tubo. Compruebe la salida y el umbral de alarma con las burbujas que deba detectar en el circuito instalado.",
+    "Le détecteur ABD repère les bulles d’air en mesurant les variations de la lumière transmise par un tube transparent. Choisissez le détecteur en fonction du diamètre extérieur et des propriétés optiques du tube. Vérifiez la sortie et le seuil d’alarme avec les bulles à détecter dans le circuit installé.",
+    "ABD는 투명 튜브를 통과하는 빛의 변화를 감지하여 기포를 검출합니다. 튜브 외경과 투광 특성에 맞는 모델을 선정한 후, 실제 유로에서 검출 대상 기포로 출력과 알람 임계값을 확인하세요.",
+    "ABD обнаруживает пузырьки воздуха по изменению света, проходящего через прозрачную трубку. Подберите датчик по наружному диаметру и оптическим свойствам трубки. Проверьте выходной сигнал и порог срабатывания на пузырьках, которые требуется обнаруживать в установленном контуре."
   ],
   [
     "不接触液体",
@@ -249,7 +249,7 @@
   ],
   [
     "供电、模拟输出与 TTL 通信",
-    "Power, analog output and TTL communication",
+    "Power supply, analog output and TTL communications",
     "Alimentación, salida analógica y comunicación TTL",
     "Alimentation, sortie analogique et communication TTL",
     "전원, 아날로그 출력 및 TTL 통신",
@@ -257,11 +257,11 @@
   ],
   [
     "先确认主控要读取模拟电压、IO 报警还是通信寄存器，再接对应引脚；Modbus RTU 是协议，不表示可以直接接 RS{0} 电气接口。",
-    "Choose analog voltage, IO alarm or registers before wiring the respective pins. Modbus RTU is a protocol, not permission to connect directly to RS{0} electrical levels.",
-    "Elija tensión analógica, alarma IO o registros antes de cablear. Modbus RTU es protocolo, no interfaz eléctrica RS{0} directa.",
-    "Choisissez tension analogique, alarme IO ou registres avant câblage. Modbus RTU est un protocole, pas une interface électrique RS{0} directe.",
-    "아날로그 전압, IO 경보 또는 레지스터 중 주 제어기가 읽을 방식을 정하고 해당 핀을 연결하세요. Modbus RTU는 프로토콜이며 RS{0} 전기 인터페이스 직접 연결을 뜻하지 않습니다.",
-    "До подключения выберите аналоговый сигнал, IO или регистры. Modbus RTU — протокол, а не совместимость с электрическими уровнями RS{0}."
+    "Determine whether your controller will read the analog voltage, the alarm output or a communications register, then wire the corresponding pins. For an RS-{0} controller, use an appropriate converter between the module’s TTL interface and the bus.",
+    "Determine si el controlador leerá la tensión analógica, la salida de alarma o un registro de comunicación. Conecte los pines correspondientes. Para un controlador RS-{0}, utilice un convertidor adecuado entre la interfaz TTL del módulo y el bus.",
+    "Identifiez la sortie à lire par le contrôleur : tension analogique, sortie d’alarme ou registre de communication. Raccordez les broches correspondantes. Pour un contrôleur RS-{0}, prévoyez un convertisseur adapté entre l’interface TTL du module et le bus.",
+    "제어기에서 아날로그 전압, 알람 출력, 통신 레지스터 중 무엇을 읽을지 정한 후 해당 핀에 연결하세요. RS-{0} 제어기를 사용할 때는 모듈의 TTL 인터페이스와 버스 사이에 적합한 변환기를 사용하세요.",
+    "Определите, какой сигнал будет считывать контроллер: аналоговое напряжение, выход сигнализации или регистр связи. Подключите соответствующие контакты. Для контроллера RS-{0} используйте подходящий преобразователь между интерфейсом TTL модуля и шиной."
   ],
   [
     "ABD 气泡检测器外形、夹管结构与六针供电、模拟输出、TTL 和 IO 接口定义",
@@ -345,19 +345,19 @@
   ],
   [
     "阈值、信号极性与报警逻辑",
-    "Thresholds, polarity and alarm logic",
-    "Umbrales, polaridad y lógica de alarma",
-    "Seuils, polarité et logique d’alarme",
-    "임계값, 신호 극성 및 경보 로직",
-    "Пороги, полярность и логика тревоги"
+    "Detection threshold, output polarity and alarm logic",
+    "Umbral de detección, polaridad de salida y lógica de alarma",
+    "Seuil de détection, polarité de sortie et logique d’alarme",
+    "검출 임계값, 출력 극성 및 경보 로직",
+    "Порог обнаружения, полярность сигнала и логика тревоги"
   ],
   [
     "先测正常液体和空气经过时的信号，再设置阈值。阈值和报警输出极性是两个设置，应分别测试。",
-    "Measure normal-liquid and air signals before setting thresholds. Threshold and alarm polarity are separate settings; test each.",
-    "Mida líquido normal y aire antes de fijar umbrales. Umbral y polaridad son ajustes distintos; ensaye ambos.",
-    "Mesurez liquide normal et air avant réglage. Seuil et polarité sont distincts ; testez chacun.",
-    "정상 액체·공기 통과 신호를 측정한 뒤 임계값을 설정하세요. 임계값과 경보 극성은 서로 다른 설정이므로 각각 시험하세요.",
-    "До настройки измерьте сигналы жидкости и воздуха. Порог и полярность тревоги — отдельные настройки; проверяйте обе."
+    "Record the signals with liquid and with air in the tube before setting the threshold. Verify the switching threshold and alarm-output polarity separately.",
+    "Registre las señales con líquido y con aire en el tubo antes de fijar el umbral. Compruebe por separado el umbral de conmutación y la polaridad de la salida de alarma.",
+    "Relevez le signal avec du liquide, puis avec de l’air dans le tube avant de régler le seuil. Vérifiez séparément le seuil de commutation et la polarité de la sortie d’alarme.",
+    "임계값을 설정하기 전에 튜브에 액체가 있을 때와 공기가 있을 때의 신호를 기록하세요. 검출 임계값과 알람 출력 극성은 각각 검증하세요.",
+    "Перед настройкой порога запишите сигналы для жидкости и воздуха в трубке. Порог срабатывания и полярность выхода сигнализации проверьте отдельно."
   ],
   [
     "正常基线",
@@ -377,11 +377,11 @@
   ],
   [
     "在实际管材、液体和流速下记录分布，不能使用一个通用阈值覆盖所有试剂。",
-    "Record distributions at actual tubing, liquid and speed. One universal threshold does not cover all reagents.",
-    "Registre distribuciones con tubo, líquido y velocidad reales. Un umbral universal no cubre todos los reactivos.",
-    "Relevez les distributions avec tube, liquide et débit réels. Un seuil universel ne couvre pas tous les réactifs.",
-    "실제 튜브·액체·유속에서 분포를 기록하세요. 모든 시약에 공통 임계값 하나를 사용하지 마세요.",
-    "Запишите распределения для реальных трубки, среды и скорости. Один порог не подходит всем реагентам."
+    "Record the range of signals using the actual tubing, liquid and flow rate. Set and verify the threshold for each reagent used.",
+    "Registre el intervalo de señales con el tubo, el líquido y el caudal de trabajo. Ajuste y verifique el umbral para cada reactivo utilizado.",
+    "Relevez la plage de signaux avec le tube, le liquide et le débit réels. Réglez et vérifiez le seuil pour chaque réactif utilisé.",
+    "실제 튜브, 액체 및 유량 조건에서 신호 범위를 기록하세요. 사용하는 시약별로 임계값을 설정하고 검증하세요.",
+    "Запишите диапазон сигналов при штатных трубке, жидкости и расходе. Настройте и проверьте порог для каждого используемого реагента."
   ],
   [
     "触发阈值",
@@ -433,11 +433,11 @@
   ],
   [
     "安装、标定与首次使用",
-    "Installation, calibration and first use",
-    "Instalación, calibración y primer uso",
-    "Installation, étalonnage et première utilisation",
-    "설치, 교정 및 최초 사용",
-    "Монтаж, калибровка и первый запуск"
+    "Mounting, calibration and commissioning",
+    "Montaje, calibración y puesta en servicio",
+    "Montage, étalonnage et mise en service",
+    "장착, 교정 및 시운전",
+    "Монтаж, калибровка и пусконаладка"
   ],
   [
     "验证应覆盖整条检测链：气泡经过、模块输出、主控读取、设备报警和处理动作。",
@@ -514,10 +514,10 @@
   [
     "误报、漏检与日常维护",
     "False alarms, missed bubbles and maintenance",
-    "Falsas alarmas, omisiones y mantenimiento",
-    "Fausses alarmes, non-détections et entretien",
-    "오경보, 미검출 및 일상 정비",
-    "Ложные тревоги, пропуски и обслуживание"
+    "Falsas alarmas, burbujas sin detectar y mantenimiento",
+    "Fausses alarmes, bulles non détectées et entretien",
+    "오경보, 미검출 및 유지보수",
+    "Ложные тревоги, пропуски пузырьков и обслуживание"
   ],
   [
     "异常时先检查管路和光路，再检查阈值和通信，不先将全部现象归因于传感器故障。",
@@ -569,11 +569,11 @@
   ],
   [
     "检查检测对象是否在规格边界内，再验证主控采样及滤波是否丢失信号。",
-    "Confirm the target is within specifications, then check whether controller sampling or filtering loses the signal.",
-    "Confirme objeto dentro de ficha; revise si muestreo o filtrado pierde señal.",
-    "Confirmez la cible dans les limites, puis vérifiez pertes par échantillonnage ou filtrage.",
-    "검출 대상이 사양 범위 안에 있는지 확인하고 제어기 샘플링·필터링이 신호를 놓치는지 검증하세요.",
-    "Подтвердите соответствие объекта спецификации, затем проверьте потери сигнала при выборке или фильтрации."
+    "Check that the bubbles to be detected are within the specified limits. Then verify that the controller’s sampling and filtering retain the relevant signal.",
+    "Compruebe que las burbujas que se deben detectar estén dentro de los límites especificados. A continuación, verifique que el muestreo y el filtrado del controlador conserven la señal de detección.",
+    "Vérifiez que les bulles à détecter entrent dans les limites spécifiées. Assurez-vous ensuite que l’échantillonnage et le filtrage du contrôleur préservent le signal utile.",
+    "검출 대상 기포가 사양 범위에 드는지 확인하세요. 이후 제어기의 샘플링과 필터링 과정에서 검출 신호가 누락되지 않는지 확인하세요.",
+    "Убедитесь, что пузырьки соответствуют заданным пределам обнаружения. Затем проверьте, что дискретизация и фильтрация контроллера сохраняют полезный сигнал."
   ],
   [
     "换管或换液后异常",
@@ -622,5 +622,21 @@
     "Testez d’abord l’interface et le protocole d’une unité. N’augmentez pas arbitrairement la tension.",
     "단독 전기 인터페이스·프로토콜부터 시험하세요. 임의 전압 증가로 해결하지 마세요.",
     "Сначала проверьте электрическую часть и протокол одного устройства. Не устраняйте сбой произвольным повышением напряжения."
+  ],
+  [
+    "夹管尺寸与检测条件",
+    "Tubing fit and detection conditions",
+    "Compatibilidad del tubo y condiciones de detección",
+    "Dimensions de tube et conditions de détection",
+    "튜브 규격과 검출 조건",
+    "Подбор трубки и условия обнаружения"
+  ],
+  [
+    "量取实际管外径后选择夹管槽位。用试剂、管材和实际流速建立检测信号基线。",
+    "Measure the actual tubing OD and select the matching ABD slot. Establish a detection baseline with the specified reagent, tubing and operating flow rate.",
+    "Mida el diámetro exterior real del tubo y elija la ranura ABD correspondiente. Registre la señal de referencia con el reactivo, el tubo y el caudal de trabajo.",
+    "Mesurez le diamètre extérieur réel du tube et choisissez le logement ABD correspondant. Établissez le signal de référence avec le réactif, le tube et le débit prévus.",
+    "튜브 외경을 실측한 뒤 그 규격에 맞는 ABD 슬롯을 선택하세요. 실제 시약, 튜브 재질, 운전 유량에서 검출 기준 신호를 확보하세요.",
+    "Измерьте наружный диаметр трубки и выберите соответствующий паз датчика ABD. Определите базовый сигнал на рабочем реагенте, трубке и при заданном расходе."
   ]
 ]

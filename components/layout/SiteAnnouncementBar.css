@@ -329,29 +329,16 @@ html:has(.site-announcement) .site-header .site-header-inner {
   }
 }
 
-/* 5. 联系我们页 Banner：原上边距、最小高度写死（app/contact/contact.css），各加一个公告条高度 */
+/* 5. 联系我们页横幅为公告条预留空间 */
 html:has(.site-announcement) .contact-hero-inner {
-  min-height: calc(420px + var(--site-announcement-height));
-  padding-top: calc(86px + var(--site-announcement-height));
+  min-height: calc(var(--contact-hero-min-height) + var(--site-announcement-height));
+  padding-top: calc(var(--contact-hero-padding-top) + var(--site-announcement-height));
 }
 
-@media (max-width: 760px) {
-  html:has(.site-announcement) .contact-hero-inner {
-    min-height: calc(340px + var(--site-announcement-height));
-    padding-top: calc(58px + var(--site-announcement-height));
-  }
-}
-
-/* 6. 经销商页 Banner：垂直居中 + 写死的最小高度（app/contact/contact.css），整体下移一个公告条高度 */
+/* 6. 经销商页横幅为公告条预留空间 */
 html:has(.site-announcement) .distributor-hero {
-  min-height: calc(720px + var(--site-announcement-height));
+  min-height: calc(var(--distributor-hero-min-height) + var(--site-announcement-height));
   padding-top: var(--site-announcement-height);
-}
-
-@media (max-width: 680px) {
-  html:has(.site-announcement) .distributor-hero {
-    min-height: calc(620px + var(--site-announcement-height));
-  }
 }
 
 /* 7. 电脑端 Resources / 外语版 Contact & Partnership 下拉：

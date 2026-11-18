@@ -321,11 +321,11 @@
   ],
   [
     "随货资料",
-    "Accompanying documents",
-    "Documentación adjunta",
-    "Documents joints",
-    "동봉 자료",
-    "Сопроводительные документы"
+    "Documentation supplied",
+    "Documentación incluida",
+    "Documents fournis",
+    "제공 자료",
+    "Сопроводительная документация"
   ],
   [
     "ABD 气泡传感器包装标识",
@@ -462,6 +462,14 @@
     "Expédition : délai et transport confirmés ; suivi après départ.",
     "발송: 확정 납기·운송 방식에 따라 발송 후 물류 정보를 제공합니다.",
     "Отправка: по сроку и способу заказа; после отправки предоставляется логистическая информация."
+  ],
+  [
+    "海外配送：运费由客户承担，可在下单时指定快递公司。",
+    "International shipping: the customer pays the shipping costs and can specify a carrier when placing the order.",
+    "Envíos internacionales: el cliente asume los gastos de envío y puede indicar el transportista al hacer el pedido.",
+    "Livraison internationale : les frais de transport sont à la charge du client, qui peut choisir le transporteur lors de la commande.",
+    "해외 배송: 배송비는 고객 부담이며, 주문 시 배송사를 지정할 수 있습니다.",
+    "Международная доставка: расходы на доставку оплачивает клиент. Перевозчика можно указать при оформлении заказа."
   ],
   [
     "收货核对：检查型号、数量、线束、随货资料和包装状态；如有运输损伤或缺件，保留包装及照片并及时联系。",
@@ -934,5 +942,197 @@
     "Vanne haute pression : prêt à expédier",
     "고압 밸브 밀봉 후 출하 대기",
     "Клапан высокого давления — готово к отправке"
+  ],
+  [
+    "按订单确认的型号、数量和配置交付。",
+    "We ship the model, quantity and configuration specified in your order confirmation.",
+    "El suministro se ajusta al modelo, la cantidad y la configuración confirmados en el pedido.",
+    "Le modèle, la quantité et la configuration livrés correspondent à la confirmation de commande.",
+    "주문서에서 확정한 모델, 수량 및 구성으로 납품합니다.",
+    "Модель, количество и комплектацию поставки сверяем с подтверждённым заказом."
+  ],
+  [
+    "供货内容",
+    "Scope of supply",
+    "Contenido del suministro",
+    "Contenu de la livraison",
+    "공급 범위",
+    "Комплектация поставки"
+  ],
+  [
+    "发货与收货",
+    "Shipping and receipt",
+    "Envío y recepción",
+    "Expédition et réception",
+    "발송 및 수령",
+    "Отправка и приёмка"
+  ],
+  [
+    "检验资料：产品检验记录按订单约定提供。",
+    "Inspection records are supplied as agreed in the order.",
+    "El informe de inspección se facilita según lo acordado en el pedido.",
+    "Les relevés de contrôle sont fournis selon les dispositions de la commande.",
+    "제품 검사 기록은 주문 시 합의한 범위에 따라 제공합니다.",
+    "Протокол контроля предоставляется в соответствии с условиями заказа."
+  ],
+  [
+    "交期与物流：按确认的交期发货，发货后提供物流信息。",
+    "We ship on the agreed schedule and provide tracking details after dispatch.",
+    "Enviamos el pedido en el plazo acordado y facilitamos los datos de seguimiento tras la expedición.",
+    "L’expédition suit le calendrier convenu. Les informations de suivi sont communiquées après l’envoi.",
+    "확정한 납기에 맞춰 발송하며, 발송 후 배송 조회 정보를 제공합니다.",
+    "Отправляем заказ в согласованный срок. После отправки предоставляем данные для отслеживания."
+  ],
+  [
+    "收货核对：核对型号、数量、附件和随货资料。发现运输损伤或缺件时，请保留包装和照片并及时联系。",
+    "On receipt, check the model, quantity, accessories and documentation against the order. If anything is damaged or missing, keep the packaging, take photos and contact us promptly.",
+    "Al recibir el pedido, compruebe el modelo, la cantidad, los accesorios y la documentación. Si detecta daños de transporte o faltantes, conserve el embalaje, haga fotografías y avísenos cuanto antes.",
+    "À réception, vérifiez le modèle, la quantité, les accessoires et les documents. En cas de dommages liés au transport ou de pièces manquantes, conservez l’emballage, prenez des photos et contactez-nous rapidement.",
+    "제품을 받으면 모델, 수량, 부속품, 동봉 자료가 주문 내용과 일치하는지 확인하세요. 운송 중 파손되었거나 누락된 품목이 있으면 포장재와 사진을 보관하고 신속히 문의해 주세요.",
+    "При получении сверьте модель, количество, принадлежности и документы с заказом. При повреждении или недостаче сохраните упаковку, сделайте фотографии и сразу свяжитесь с нами."
+  ],
+  [
+    "电磁阀：按确认的通路状态、连接形式、电压和接液材料配置供货。",
+    "The solenoid valve is supplied in the confirmed circuit function, connection style, coil voltage and wetted-material configuration.",
+    "La electroválvula se suministra con la función de circuito, el tipo de conexión, la tensión de bobina y los materiales en contacto con el fluido acordados.",
+    "L’électrovanne est livrée avec la fonction, le raccordement, la tension de bobine et les matériaux en contact avec le fluide convenus.",
+    "확정한 유로 동작, 연결 방식, 코일 전압 및 접액부 재질에 맞춰 솔레노이드 밸브를 공급합니다.",
+    "Электромагнитный клапан поставляется с согласованной функцией, типом соединения, напряжением катушки и материалами деталей, контактирующих со средой."
+  ],
+  [
+    "配套附件：密封件、接头及线束按订单约定提供。",
+    "Seals, fittings and wiring harnesses are included as specified in the order.",
+    "Las juntas, los racores y los mazos de cables se incluyen según el pedido.",
+    "Les joints, les raccords et les faisceaux sont fournis selon la commande.",
+    "씰, 피팅 및 와이어 하니스는 주문 시 합의한 구성에 따라 제공합니다.",
+    "Уплотнения, фитинги и кабельные жгуты поставляются в соответствии с заказом."
+  ],
+  [
+    "技术资料：按所选连接形式和电气配置提供对应的安装图纸、接管和接线资料。",
+    "Mounting drawings, tubing connection details and wiring instructions correspond to the selected mechanical and electrical configuration.",
+    "Los planos de montaje y las indicaciones de conexión de los tubos y del cableado corresponden a la configuración seleccionada.",
+    "Les plans de montage et les instructions de raccordement des tubes et du câblage correspondent à la configuration retenue.",
+    "선택한 기계적 연결 방식과 전기 사양에 맞는 장착 도면, 배관 연결 자료 및 배선 안내를 제공합니다.",
+    "Предоставляем монтажные чертежи и схемы подключения трубок и проводки для выбранного механического и электрического исполнения."
+  ],
+  [
+    "旋转阀：按订单提供所选通道数及接口的阀总成或阀头。",
+    "Order an assembled rotary selector valve or a valve head with the specified channel count and port threads.",
+    "El pedido puede incluir la válvula selectora rotativa completa o solo el cabezal, con el número de vías y las roscas de conexión especificados.",
+    "La commande peut porter sur la vanne de sélection rotative complète ou sur sa tête, avec le nombre de voies et les filetages spécifiés.",
+    "주문 구성에 따라 지정한 채널 수와 포트 나사의 로터리 셀렉터 밸브 완제품 또는 밸브 헤드를 공급합니다.",
+    "По заказу поставляется роторный клапан-селектор в сборе или его головка с заданным числом каналов и резьбой портов."
+  ],
+  [
+    "驱动配套：电机、驱动器和线束按确认的供货范围提供。",
+    "The motor, driver and harness are supplied when included in the confirmed scope of supply.",
+    "El motor, el controlador y el mazo de cables se suministran cuando forman parte del pedido confirmado.",
+    "Le moteur, le module de commande et le faisceau sont fournis lorsqu’ils figurent dans la commande confirmée.",
+    "모터, 드라이버, 와이어 하니스는 확정한 공급 범위에 포함된 경우 제공합니다.",
+    "Двигатель, драйвер и кабельный жгут поставляются, если они включены в подтверждённую комплектацию."
+  ],
+  [
+    "技术资料：按实际供货版本提供流路、安装及接口资料。配套驱动器的通信资料对应所选驱动版本。",
+    "We provide flow diagrams, mounting details and interface documentation for the supplied valve. Communication instructions apply to the driver version ordered.",
+    "Facilitamos el esquema de circulación, los datos de montaje y las conexiones de la válvula suministrada. Las instrucciones de comunicación corresponden al controlador pedido.",
+    "Nous fournissons le schéma de circulation, les indications de montage et les interfaces de la vanne livrée. Les instructions de communication correspondent à la version du module de commande commandée.",
+    "납품형 밸브에 맞는 유로도, 장착 정보 및 인터페이스 자료를 제공합니다. 통신 문서는 주문한 드라이버 버전에 맞춰 제공됩니다.",
+    "Предоставляем схему потоков, монтажные данные и описание интерфейсов для поставленного клапана. Руководство по обмену данными соответствует заказанной версии драйвера."
+  ],
+  [
+    "高压阀：按确认的阀体、传动和接口配置供货。",
+    "The high-pressure valve is supplied with the agreed valve body, drive and port configuration.",
+    "La válvula de alta presión se entrega con el cuerpo, el accionamiento y las conexiones acordados.",
+    "La vanne haute pression est livrée avec le corps, l’entraînement et les raccordements convenus.",
+    "확정한 밸브 본체, 구동부 및 포트 구성에 맞춰 고압 밸브를 공급합니다.",
+    "Клапан высокого давления поставляется с согласованными корпусом, приводом и конфигурацией портов."
+  ],
+  [
+    "配套附件：锥形接头、管路和线束按订单约定提供。",
+    "Tapered fittings, tubing and wiring harnesses are supplied as specified in the order.",
+    "Los racores cónicos, los tubos y los mazos de cables se incluyen según lo indicado en el pedido.",
+    "Les raccords coniques, les tubes et les faisceaux sont fournis selon la commande.",
+    "테이퍼 피팅, 튜브 및 와이어 하니스는 주문 시 합의한 구성에 따라 제공합니다.",
+    "Конические фитинги, трубки и кабельные жгуты поставляются в соответствии с заказом."
+  ],
+  [
+    "技术资料：按供货版本提供阀头流路、安装尺寸与驱动接线资料。",
+    "The supplied version determines which valve-head flow diagram, mounting drawing and drive wiring instructions apply.",
+    "El esquema de circulación del cabezal, el plano de montaje y las instrucciones de cableado del accionamiento corresponden a la versión suministrada.",
+    "Le schéma de circulation de la tête, le plan de montage et le câblage de l’entraînement correspondent à la version livrée.",
+    "공급 모델의 밸브 헤드 유로도, 장착 치수 및 구동부 배선 자료를 제공합니다.",
+    "Предоставляем схему потоков в головке, монтажные размеры и схему подключения привода для поставленного исполнения."
+  ],
+  [
+    "注射泵：按订单确认的行程、通道数和阀配置供货。",
+    "The syringe pump is supplied with the stroke, channel count and valve configuration confirmed in the order.",
+    "La bomba de jeringa se suministra con la carrera, el número de canales y la configuración de válvulas acordados.",
+    "La pompe à seringue est livrée avec la course, le nombre de canaux et la configuration de vannes confirmés à la commande.",
+    "주문에서 확정한 스트로크, 채널 수와 밸브 구성으로 시린지 펌프를 공급합니다.",
+    "Шприцевой насос поставляется с ходом поршня, числом каналов и конфигурацией клапанов, указанными в подтверждённом заказе."
+  ],
+  [
+    "配套部件：注射器、线束及接管附件按确认配置提供。",
+    "Syringes, wiring harnesses and tubing accessories are supplied if specified in the confirmed configuration.",
+    "Las jeringas, los mazos de cables y los accesorios para tubos se incluyen según la configuración confirmada.",
+    "Les seringues, les faisceaux et les accessoires de raccordement sont fournis selon la configuration confirmée.",
+    "시린지, 와이어 하니스 및 배관 부속품은 확정 구성에 따라 제공합니다.",
+    "Шприцы, кабельные жгуты и принадлежности для подключения трубок входят в поставку согласно согласованной комплектации."
+  ],
+  [
+    "技术资料：按所选泵和阀配置提供安装、流路、接线和控制资料。",
+    "Installation drawings, fluid diagrams, wiring and control instructions match the pump and valve selected.",
+    "Los planos de montaje, los esquemas del circuito y las instrucciones de cableado y control corresponden a la bomba y la válvula elegidas.",
+    "Les plans de montage, les schémas fluidiques et les consignes de raccordement et de commande correspondent à la pompe et à la vanne choisies.",
+    "선택한 펌프와 밸브에 맞는 장착 도면, 유로도, 배선 및 제어 자료를 제공합니다.",
+    "Монтажные чертежи, схемы потоков и указания по подключению и управлению соответствуют выбранным насосу и клапану."
+  ],
+  [
+    "气泡检测模块：按确认的夹管外径和结构配置供货。",
+    "The ABD air bubble detector is supplied for the confirmed tubing OD and mounting configuration.",
+    "El detector de burbujas de aire ABD se suministra para el diámetro exterior del tubo y el montaje confirmados.",
+    "Le détecteur de bulles d’air ABD est fourni pour le diamètre extérieur de tube et le montage convenus.",
+    "확정한 튜브 외경과 장착 방식에 맞춰 ABD 기포 감지 모듈을 공급합니다.",
+    "Датчик пузырьков воздуха ABD поставляется под согласованный наружный диаметр трубки и вариант монтажа."
+  ],
+  [
+    "配套附件：线束和连接件以订单约定为准。",
+    "Harnesses and connectors are included as specified in the order.",
+    "Los mazos de cables y los conectores se incluyen según el pedido.",
+    "Les faisceaux et connecteurs sont fournis selon les indications de la commande.",
+    "와이어 하니스와 커넥터는 주문 시 합의한 범위에 따라 제공합니다.",
+    "Кабельные жгуты и соединительные детали поставляются по условиям заказа."
+  ],
+  [
+    "技术资料：按供货版本提供安装图纸、针脚定义及输出和通信资料。",
+    "For the version supplied, we provide mounting drawings, pin assignments, output specifications and communication instructions.",
+    "Facilitamos los planos de montaje, la asignación de pines y las instrucciones de salida y comunicación de la versión suministrada.",
+    "Nous fournissons les plans de montage, le brochage et la documentation sur les sorties et la communication pour la version livrée.",
+    "납품 버전에 맞는 장착 도면, 핀 배치, 출력 사양 및 통신 자료를 제공합니다.",
+    "Для поставленного исполнения предоставляем монтажные чертежи, назначение выводов, характеристики выходов и инструкции по обмену данными."
+  ],
+  [
+    "压力检测模块：按确认的绝压量程、接口和型号供货。",
+    "We supply the PDM5 pressure sensor in the confirmed model, absolute-pressure range and port configuration.",
+    "El sensor de presión PDM5 se suministra con el modelo, el rango de presión absoluta y la conexión confirmados.",
+    "Le capteur de pression PDM5 est livré avec la référence, la plage de pression absolue et le raccordement confirmés.",
+    "확정한 모델, 절대압 측정 범위 및 포트 사양에 맞춰 PDM5 압력 센서를 공급합니다.",
+    "Датчик давления PDM5 поставляется в согласованном исполнении, с заданным диапазоном абсолютного давления и подключением."
+  ],
+  [
+    "配套附件：接头、密封件和线束按订单约定提供。",
+    "Fittings, seals and the wiring harness are provided as agreed in the order.",
+    "Los racores, las juntas y el mazo de cables se suministran según lo acordado en el pedido.",
+    "Le raccord, les joints et le faisceau sont fournis selon les dispositions de la commande.",
+    "피팅, 씰 및 와이어 하니스는 주문 시 합의한 범위에 따라 제공합니다.",
+    "Фитинги, уплотнения и кабельный жгут поставляются согласно заказу."
+  ],
+  [
+    "技术资料：按所选量程和供货版本提供安装、接线及压力读数资料。",
+    "Mounting, electrical connection and pressure-readout documentation matches the range and version supplied.",
+    "La documentación de montaje, conexión eléctrica y lectura de presión corresponde al rango y a la versión suministrados.",
+    "La documentation de montage, de raccordement électrique et de lecture de la pression correspond à la plage et à la version livrées.",
+    "선택한 측정 범위와 납품 버전에 맞는 장착, 배선 및 압력 읽기 자료를 제공합니다.",
+    "Документация по монтажу, подключению и считыванию давления соответствует выбранному диапазону и поставленной версии."
   ]
 ]

@@ -1,4 +1,5 @@
 import type { InstrumentProductGuide } from "@/data/products/detail/instrument-product-guides.zh";
+import { instrumentDetailProfiles } from "@/data/products/detail/instrument-detail-content.zh";
 import { getInstrumentDeliveryCommon, getInstrumentDeliveryPhotos } from "@/data/products/detail/instrument-delivery.intl";
 import { getRplDeliveryCopy } from "@/data/products/detail/rpl-product-delivery.intl";
 import { getRplGuideUi } from "@/data/products/detail/rpl-guide-ui.intl";
@@ -13,8 +14,12 @@ export default function InstrumentLocalizedDeliveryContent({ guide, locale }: { 
   if (!photos || !support) return null;
   const copy = getInstrumentDeliveryCommon(locale);
   const title = getRplGuideUi(locale).delivery;
-  const warranty = guide.pump ? support.warrantyParagraphs : [copy.otherWarranty, ...support.warrantyParagraphs.slice(1)];
-  return <section lang={locale} className={styles.content} aria-label={`${guide.model} — ${title}`}
+  const compact = Boolean(instrumentDetailProfiles[guide.family]);
+  const warranty = compact
+    ? [copy.warranty(guide.pump ? 18 : 12)]
+    : guide.pump ? support.warrantyParagraphs : [copy.otherWarranty, ...support.warrantyParagraphs.slice(1)];
+  const contactSeparator = locale === "fr" ? "\u00a0: " : ": ";
+  return <section lang={locale} className={compact ? `${styles.content} ${styles.compactDelivery}` : styles.content} aria-label={`${guide.model} · ${title}`}
     data-instrument-product-delivery={guide.slug} data-instrument-delivery-source="FR-QR-YX-011:A00">
     <h2>{title}</h2>
     <p className={styles.lead}>{photos.intro}</p>
@@ -31,8 +36,8 @@ export default function InstrumentLocalizedDeliveryContent({ guide, locale }: { 
     <section className={styles.guideSection}>
       <h3><span className={styles.number}>04</span>{support.warranty}</h3>
       {warranty.map(text => <p key={text}>{text}</p>)}
-      <p>{support.email}: <a className={styles.contactLink} href={siteFooterData.emailHref.global}>{siteFooterData.email.global}</a></p>
-      <p>{support.phone}: <a className={styles.contactLink} href={siteFooterData.phoneHref.global}>{siteFooterData.phone.global}</a></p>
+      <p>{support.email}{contactSeparator}<a className={styles.contactLink} href={siteFooterData.emailHref.global}>{siteFooterData.email.global}</a></p>
+      <p>{support.phone}{contactSeparator}<a className={styles.contactLink} href={siteFooterData.phoneHref.global}>{siteFooterData.phone.global}</a></p>
       <p>{support.hours}</p><p>{support.support}</p>
     </section>
     <InstrumentProductAfterSalesForm locale={locale} productModel={guide.model} productType={guide.productType} />

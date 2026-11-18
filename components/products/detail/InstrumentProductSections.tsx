@@ -4,6 +4,7 @@ import {
   type GuideSection,
   type InstrumentProductGuide,
 } from "@/data/products/detail/instrument-product-guides.zh";
+import { instrumentDetailProfiles, getInstrumentDeliveryRows } from "@/data/products/detail/instrument-detail-content.zh";
 import { siteFooterData } from "@/data/site-footer";
 import figureSizes from "@/data/products/detail/instrument-guide-figures.generated.json";
 import rplFigureSizes from "@/data/products/detail/rpl-guide-figures.intl.generated.json";
@@ -13,6 +14,7 @@ import { getLocalizedInstrumentGuide, type InstrumentGuideLocale } from "@/data/
 import { getInstrumentRatioCopy } from "@/data/products/detail/instrument-guide-locales/figures";
 import { getRplGuideUi } from "@/data/products/detail/rpl-guide-ui.intl";
 import deliveryPhotoSets from "@/data/products/detail/instrument-delivery-photos.zh.json";
+import InstrumentSelectionGuideContent from "./InstrumentSelectionGuideContent";
 import InstrumentProductAfterSalesForm from "./InstrumentProductAfterSalesForm";
 import RplProductDeliveryContent from "./RplProductDeliveryContent";
 import InstrumentLocalizedDeliveryContent from "./InstrumentLocalizedDeliveryContent";
@@ -168,16 +170,21 @@ const packagingRows = [
 
 export function InstrumentProductDeliveryContent({ guide }: { guide: InstrumentProductGuide }) {
   const isValveless = guide.family === "rpl" || guide.family === "drpl";
+  const deliveryCopy = getInstrumentDeliveryRows(guide.family);
+  const compact = Boolean(deliveryCopy);
   const productPackaging = Object.values(deliveryPhotoSets).find(group =>
     (group.slugs as string[]).includes(guide.slug) || (group.families as string[]).includes(guide.family));
   const photoRoot = productPackaging?.imageRoot ?? (isValveless ? "/images/products/pumps/valveless-pumps/delivery/" : imageRoot);
-  const rows = productPackaging?.rows.map(row => ({ ...row,
+  const rows = productPackaging?.rows.map((row, index) => ({ ...row,
+    ...deliveryCopy?.[index],
     photos: row.photos.map(({ file, alt, caption }) => [file, alt, caption] as const),
   })) ?? packagingRows;
-  const packagingIntro = productPackaging?.intro ?? (isValveless
+  const localizedIntro = deliveryCopy ? `${guide.model} 按订单确认的型号、数量和配置交付。`
+    : productPackaging?.intro;
+  const packagingIntro = localizedIntro ?? (isValveless
     ? "以下为无阀泵系列包装实拍，内衬、附件、装箱数量和随货资料按订单配置安排。"
     : "以下包装照片为 EA 系列柱塞泵实拍示例，实际产品的内衬、附件、装箱数量和随货资料按订单配置安排。");
-  return <section lang="zh-CN" className={base.content} aria-label={`${guide.model} 交付与售后`} data-instrument-product-delivery={guide.slug}>
+  return <section lang="zh-CN" className={compact ? `${base.content} ${base.compactDelivery}` : base.content} aria-label={`${guide.model} 交付与售后`} data-instrument-product-delivery={guide.slug}>
     <h2>交付与售后</h2>
     <p className={base.lead}>{productPackaging ? packagingIntro : `${guide.model} 按确认的型号与配置交付。${packagingIntro}`}</p>
     {rows.map((row, index) => {
@@ -193,8 +200,10 @@ export function InstrumentProductDeliveryContent({ guide }: { guide: InstrumentP
     <section className={base.guideSection}>
       <h3><span className={base.number}>04</span>保修与售后支持</h3>
       <p>保修期限：{guide.pump ? "泵产品保修期为 18 个月" : "阀及检测模块等其他产品保修期为 12 个月"}，自产品首次销售之日起计算。</p>
-      <p>保修范围：适用于产品工艺和材料缺陷；误用、擅自改装、不符合安装与使用要求，以及正常磨损导致的问题不在保修范围内。</p>
-      <p>返厂处理：请先联系并获得许可，再按确认要求退回。接液产品需清除化学品及其他有害残留；退回包装、附件、费用与风险按销售条款和双方确认的方案处理。定制品及非标产品的退换按销售条款执行。</p>
+      {!compact && <>
+        <p>保修范围：适用于产品工艺和材料缺陷；误用、擅自改装、不符合安装与使用要求，以及正常磨损导致的问题不在保修范围内。</p>
+        <p>返厂处理：请先联系并获得许可，再按确认要求退回。接液产品需清除化学品及其他有害残留；退回包装、附件、费用与风险按销售条款和双方确认的方案处理。定制品及非标产品的退换按销售条款执行。</p>
+      </>}
       <p>联系邮箱：<a className={base.contactLink} href={siteFooterData.emailHref.china}>{siteFooterData.email.china}</a></p>
       <p>联系电话：<a className={base.contactLink} href={siteFooterData.phoneHref.china}>{siteFooterData.phone.china}</a></p>
       <p>服务时间：周一至周五 08:30–18:00（北京时间）。</p>
@@ -214,7 +223,9 @@ export function getInstrumentProductSections(slug: string, locale = "zh") {
       customerCategoryUi: getRplGuideUi(locale),
       customerCategoryContent: {
         product: <InstrumentProductDocuments guide={localizedGuide} locale={locale} />,
-        selection: <InstrumentProductSelectionContent guide={localizedGuide} locale={locale} />,
+        selection: instrumentDetailProfiles[localizedGuide.family]
+          ? <InstrumentSelectionGuideContent guide={localizedGuide} locale={locale} />
+          : <InstrumentProductSelectionContent guide={localizedGuide} locale={locale} />,
         delivery: localizedGuide.family === "rpl" || localizedGuide.family === "drpl"
           ? <RplProductDeliveryContent guide={localizedGuide} locale={locale} />
           : <InstrumentLocalizedDeliveryContent guide={localizedGuide} locale={locale as InstrumentGuideLocale} />,
@@ -227,7 +238,9 @@ export function getInstrumentProductSections(slug: string, locale = "zh") {
     customerCategoryMode: "instrument-product-zh" as const,
     customerCategoryContent: {
       product: <InstrumentProductDocuments guide={guide} />,
-      selection: <InstrumentProductSelectionContent guide={guide} />,
+      selection: instrumentDetailProfiles[guide.family]
+        ? <InstrumentSelectionGuideContent guide={guide} />
+        : <InstrumentProductSelectionContent guide={guide} />,
       delivery: <InstrumentProductDeliveryContent guide={guide} />,
     },
   };

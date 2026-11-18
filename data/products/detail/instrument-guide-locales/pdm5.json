@@ -1,11 +1,11 @@
 [
   [
     "PDM{0} 输出液路的绝对压力数字信号。先明确测压范围、安装位置和需要判断的过程，再选择量程及采样方式；堵塞判断与停泵保护由设备控制程序实现。",
-    "PDM{0} outputs digital absolute pressure for a fluid path. Define pressure range, mounting point and monitored process before choosing range and sampling. The instrument program implements blockage decisions and pump-stop protection.",
-    "PDM{0} entrega presión absoluta digital del circuito. Defina rango, ubicación y proceso antes de elegir escala y muestreo. El programa del equipo determina obstrucciones y parada de bomba.",
-    "PDM{0} fournit la pression absolue numérique du circuit. Définissez plage, position et processus avant gamme et échantillonnage. Le programme de l’instrument gère obstruction et arrêt de pompe.",
-    "PDM{0}은 유로의 절대압 디지털 신호를 출력합니다. 측압 범위, 설치 위치와 판단할 과정을 정한 뒤 측정 범위·샘플링을 선택하세요. 막힘 판단과 펌프 정지 보호는 장비 프로그램에서 구현합니다.",
-    "PDM{0} выдаёт цифровое абсолютное давление линии. Задайте диапазон, место и контролируемый процесс, затем диапазон и выборку. Решение о засорении и защитную остановку насоса реализует программа прибора."
+    "The PDM{0} pressure sensor reports absolute pressure in the fluid path as a digital reading. Specify the pressure range, sensor location and events to detect before choosing the range and sampling mode. Detection of blockages and pump shutdown are handled by the instrument controller.",
+    "El sensor PDM{0} proporciona una lectura digital de la presión absoluta del circuito. Antes de elegir el rango y el modo de muestreo, defina las presiones, la ubicación del sensor y los eventos que se deben detectar. El controlador del equipo se encarga de detectar obstrucciones y detener la bomba.",
+    "Le capteur PDM{0} fournit une mesure numérique de la pression absolue du circuit. Avant de choisir la plage et le mode d’échantillonnage, déterminez les pressions, l’emplacement du capteur et les événements à détecter. Le contrôleur de l’instrument gère la détection des obstructions et l’arrêt de la pompe.",
+    "PDM{0} 압력 센서는 유로의 절대압을 디지털 값으로 출력합니다. 측정할 압력, 센서 설치 위치와 검출할 상황을 먼저 정한 뒤 측정 범위와 샘플링 방식을 선택하세요. 막힘 판단과 펌프 정지는 장비 제어기가 처리합니다.",
+    "Датчик PDM{0} передаёт цифровые показания абсолютного давления в контуре. Перед выбором диапазона и режима опроса определите рабочие давления, место установки и события, которые нужно выявлять. Обнаружение засорения и остановку насоса выполняет контроллер прибора."
   ],
   [
     "绝对压力测量",
@@ -250,10 +250,10 @@
   [
     "接液材料、接头与安装位置",
     "Wetted materials, fittings and mounting location",
-    "Materiales mojados, racores y ubicación",
-    "Matériaux mouillés, raccords et implantation",
-    "접액 재질, 피팅 및 설치 위치",
-    "Контактирующие материалы, фитинги и место установки"
+    "Materiales en contacto con el fluido, racores y punto de montaje",
+    "Matériaux en contact avec le fluide, raccords et emplacement de montage",
+    "접액부 재질, 피팅 및 장착 위치",
+    "Контактирующие материалы, фитинг и точка установки"
   ],
   [
     "PDM{0} 是接液测压模块，应同时核对介质相容性、密封和安装位置。",
@@ -345,19 +345,19 @@
   ],
   [
     "纳入系统阻力和清洗置换设计，不把内容积直接当作整机残留指标。",
-    "Include in system resistance and flushing design. Internal volume is not a complete-system carryover specification.",
-    "Incluya en resistencia y lavado. El volumen interno no especifica residuos de todo el sistema.",
-    "Intégrez résistance et rinçage. Le volume interne n’est pas un indicateur de résidus du système complet.",
-    "시스템 저항과 세척 치환 설계에 반영하세요. 내부 용적을 전체 장비 잔류 지표로 보지 마세요.",
-    "Учитывайте в сопротивлении и промывке. Внутренний объём не задаёт перенос всей системы."
+    "Account for the flow restriction and internal volume when designing the system and its flush cycle. Determine carryover by testing the complete fluid path.",
+    "Tenga en cuenta la restricción al flujo y el volumen interno al diseñar el circuito y su ciclo de enjuague. Determine el arrastre residual mediante ensayos en todo el circuito.",
+    "Tenez compte de la restriction à l’écoulement et du volume interne pour concevoir le circuit et son cycle de rinçage. Évaluez le résidu par des essais sur le circuit complet.",
+    "유로와 세척 사이클을 설계할 때 유동 저항과 내부 체적을 반영하세요. 잔류량은 전체 유로를 시험하여 확인하세요.",
+    "При проектировании контура и цикла промывки учитывайте гидравлическое сопротивление и внутренний объём. Остаточный перенос определяйте испытанием всего контура."
   ],
   [
     "{0} V 供电、引脚与 I{1}C 接线",
-    "{0} V supply, pins and I{1}C wiring",
-    "Fuente {0} V, pines y cableado I{1}C",
-    "Alimentation {0} V, broches et câblage I{1}C",
-    "{0} V 전원, 핀 및 I{1}C 배선",
-    "Питание {0} V, выводы и подключение I{1}C"
+    "{0} V supply and I²C pinout",
+    "Alimentación de {0} V y conexiones de I²C",
+    "Alimentation {0} V et raccordement I²C",
+    "{0} V 전원 및 I²C 핀 배치",
+    "Питание {0} В и подключение I²C"
   ],
   [
     "电源、总线电平与上拉应按主控和模块一起设计，不能只接两根通信线就判断通信条件满足。",
@@ -401,11 +401,11 @@
   ],
   [
     "默认不带总线上拉，主控应配置适当电阻并核对允许电平，空脚不作其他用途。",
-    "No bus pull-ups by default. Fit appropriate controller-side resistors and check levels; leave the unused pin unused.",
-    "Sin pull-up de serie. Instale resistencias adecuadas y revise niveles; no use el pin libre.",
-    "Pas de rappel par défaut. Ajoutez des résistances adaptées et vérifiez les niveaux ; laissez la broche libre inutilisée.",
-    "기본 버스 풀업이 없습니다. 주 제어기에 적절한 저항을 구성하고 허용 레벨을 확인하세요. 미사용 핀을 다른 용도로 쓰지 마세요.",
-    "По умолчанию подтяжек нет. Добавьте подходящие резисторы и проверьте уровни; свободный вывод не используйте."
+    "The module has no I²C pull-ups as standard. Add suitable resistors on the controller side, check the allowed logic levels and leave the unused pin unconnected.",
+    "El módulo no incluye resistencias de pull-up para I²C de serie. Instale resistencias adecuadas en el controlador, compruebe los niveles lógicos permitidos y deje sin conectar el pin libre.",
+    "Le module est fourni sans résistances de tirage sur le bus I²C. Installez des résistances adaptées côté contrôleur, vérifiez les niveaux logiques admissibles et laissez la broche inutilisée déconnectée.",
+    "모듈에는 I²C 풀업 저항이 기본 제공되지 않습니다. 제어기 쪽에 적절한 풀업 저항을 추가하고 허용 논리 레벨을 확인하세요. 미사용 핀은 연결하지 마세요.",
+    "В стандартном исполнении на модуле нет подтяжки линий I²C. Установите подходящие резисторы со стороны контроллера, проверьте допустимые логические уровни и оставьте свободный контакт неподключённым."
   ],
   [
     "地址与速率",
@@ -457,11 +457,11 @@
   ],
   [
     "读取压力、采样与堵塞判断",
-    "Pressure reading, sampling and blockage decisions",
-    "Lectura, muestreo y detección de obstrucción",
-    "Lecture, échantillonnage et détection d’obstruction",
-    "압력 판독, 샘플링 및 막힘 판단",
-    "Чтение, выборка и определение засорения"
+    "Reading pressure and detecting a blockage",
+    "Lectura de presión, muestreo y detección de obstrucciones",
+    "Lecture de la pression, échantillonnage et détection d’obstruction",
+    "압력 읽기, 샘플링 및 막힘 판정",
+    "Чтение давления, выборка и обнаружение засоров"
   ],
   [
     "优先按供货固件的推荐读数方式实现，再把压力信号与泵动作关联；原始 AD 换算公式不能跨量程和型号套用。",
@@ -513,11 +513,11 @@
   ],
   [
     "建议一轮读取后延时大于 {0} ms；核对固件采样和滤波设置，不把总线速率当作压力采样率。",
-    "Allow more than {0} ms after each read cycle. Verify firmware sampling/filter settings; bus bitrate is not pressure sampling rate.",
-    "Espere más de {0} ms tras cada lectura. Revise muestreo/filtro; el bitrate no es frecuencia de presión.",
-    "Attendez plus de {0} ms après chaque lecture. Vérifiez échantillonnage/filtrage ; débit du bus et fréquence de mesure diffèrent.",
-    "한 차례 판독 후 {0} ms보다 길게 대기하는 것을 권장합니다. 펌웨어 샘플링·필터를 확인하고 버스 속도를 압력 샘플링률로 보지 마세요.",
-    "После цикла чтения выдерживайте более {0} ms. Проверьте выборку/фильтры прошивки; скорость шины не равна частоте давления."
+    "The datasheet recommends allowing more than {0} ms after each read cycle. Check the firmware’s sampling and filter settings separately from the bus bitrate.",
+    "La ficha técnica recomienda esperar más de {0} ms después de cada ciclo de lectura. Compruebe los ajustes de muestreo y filtrado del firmware por separado de la velocidad del bus.",
+    "La fiche technique recommande d’attendre plus de {0} ms après chaque cycle de lecture. Vérifiez les réglages d’échantillonnage et de filtrage du micrologiciel séparément du débit du bus.",
+    "사양서에서는 한 번 읽은 뒤 {0} ms보다 길게 대기하도록 권장합니다. 펌웨어의 샘플링 및 필터 설정은 버스 전송 속도와 별도로 확인하세요.",
+    "Согласно техническому паспорту, рекомендуемая пауза после каждого цикла чтения превышает {0} мс. Частоту выборки и фильтрацию в прошивке проверяйте отдельно от скорости шины."
   ],
   [
     "过程判断",
@@ -569,19 +569,19 @@
   ],
   [
     "首次安装与测压验证",
-    "Initial installation and pressure validation",
-    "Instalación inicial y validación de presión",
-    "Première installation et validation de pression",
-    "최초 설치 및 측압 검증",
-    "Первый монтаж и проверка давления"
+    "Installation and pressure verification",
+    "Montaje y verificación de la medida de presión",
+    "Montage et vérification de la mesure de pression",
+    "설치 및 압력 측정 검증",
+    "Монтаж и проверка показаний давления"
   ],
   [
     "先在已知压力条件下核对读数，再接入正式液路验证动态过程。安装和拆卸前应泄压断电。",
-    "Verify readings under known pressure before dynamic tests in the working line. Depressurize and isolate power before installation/removal.",
-    "Verifique presión conocida antes de dinámica en circuito. Despresurice y desconecte antes de montar/retirar.",
-    "Vérifiez sous pression connue avant les essais dynamiques. Dépressurisez et coupez l’alimentation avant montage/démontage.",
-    "알려진 압력에서 판독을 확인한 뒤 실제 유로에서 동적 과정을 검증하세요. 설치·탈착 전에 감압·전원 차단하세요.",
-    "Сверьте показания при известном давлении до динамических испытаний. Перед монтажом/снятием сбросьте давление и питание."
+    "Verify the reading against a known pressure, then test dynamic response in the actual fluid path. Relieve pressure and disconnect power before fitting or removing the module.",
+    "Compare la lectura con una presión conocida y después compruebe la respuesta dinámica en el circuito de trabajo. Despresurice y corte la alimentación antes de instalar o desmontar el módulo.",
+    "Vérifiez la mesure à une pression connue, puis testez la réponse dynamique dans le circuit réel. Dépressurisez le circuit et coupez l’alimentation avant de monter ou de déposer le module.",
+    "알려진 압력으로 측정값을 확인한 뒤 실제 유로에서 동적 응답을 시험하세요. 모듈을 장착하거나 분리하기 전에 압력을 해제하고 전원을 차단하세요.",
+    "Сверьте показания с известным давлением, затем проверьте динамический отклик в рабочем контуре. Перед монтажом или снятием модуля сбросьте давление и отключите питание."
   ],
   [
     "核对完整型号",
@@ -651,9 +651,9 @@
     "读数异常、泄漏与维护",
     "Abnormal readings, leaks and maintenance",
     "Lecturas anómalas, fugas y mantenimiento",
-    "Lectures anormales, fuites et entretien",
-    "판독 이상, 누설 및 유지보수",
-    "Аномальные показания, утечки и обслуживание"
+    "Mesures anormales, fuites et entretien",
+    "측정 이상, 누설 및 유지보수",
+    "Отклонения показаний, утечки и обслуживание"
   ],
   [
     "先区分单位与参考压力问题、通信问题及真实液路变化，再安排模块处理。",
@@ -758,5 +758,29 @@
     "Arrêtez et dépressurisez avant intervention. Ne démontez pas sous pression et ne forcez pas.",
     "정지·감압 후 처리하세요. 가압 상태에서 분해하거나 힘을 더 가하지 마세요.",
     "Перед устранением остановите и сбросьте давление. Не разбирайте под давлением и не прилагайте дополнительную силу."
+  ],
+  [
+    "绝压量程与测量误差",
+    "Absolute-pressure range and measurement error",
+    "Rango de presión absoluta y error de medición",
+    "Plage de pression absolue et erreur de mesure",
+    "절대압 측정 범위와 오차",
+    "Диапазон абсолютного давления и погрешность измерения"
+  ],
+  [
+    "先列最低、常用和峰值压力，按绝压范围选择档位，再核对该档位的总误差和实际需要识别的压力变化。",
+    "List the minimum, typical and peak pressures. Select an absolute-pressure range, then compare its total error band (TEB) with the pressure change your instrument needs to detect.",
+    "Determine las presiones mínima, habitual y máxima. Seleccione una escala de presión absoluta y compare su banda de error total (TEB) con la variación que debe detectar el equipo.",
+    "Relevez les pressions minimale, habituelle et de pointe. Choisissez une plage de pression absolue, puis comparez son erreur totale (TEB) à la variation que l’appareil doit détecter.",
+    "최소·정상·피크 압력을 먼저 정하세요. 절대압 측정 범위를 선택한 뒤 총 오차 범위(TEB)가 장비에서 감지해야 할 압력 변화에 적합한지 확인하세요.",
+    "Определите минимальное, типовое и пиковое давление. Выберите диапазон абсолютного давления и сопоставьте его суммарную погрешность (TEB) с изменением давления, которое должен обнаруживать прибор."
+  ],
+  [
+    "{0}–{1}、{2}–{3}、{4}–{5}、{6}–{7} kPa（绝压）",
+    "{0}–{1}, {2}–{3}, {4}–{5} or {6}–{7} kPa absolute",
+    "{0}–{1}, {2}–{3}, {4}–{5} o {6}–{7} kPa de presión absoluta",
+    "{0}–{1}, {2}–{3}, {4}–{5} ou {6}–{7} kPa en pression absolue",
+    "{0}–{1}, {2}–{3}, {4}–{5}, {6}–{7} kPa(절대압)",
+    "{0}–{1}, {2}–{3}, {4}–{5} или {6}–{7} кПа (абсолютное давление)"
   ]
 ]

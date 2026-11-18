@@ -27,21 +27,21 @@ function PinTable({ title, labels, rows }: { title: string; labels: readonly str
 
 function HpPosition({ mode, title }: { mode: "home" | "working" | "vent"; title: string }) {
   const point = (degrees: number, radius = 68) => [120 + Math.cos(degrees * Math.PI / 180) * radius, 118 + Math.sin(degrees * Math.PI / 180) * radius];
-  const arcs = mode === "home" ? [[60, 120], [-60, 0], [-180, -120]] : mode === "working" ? [[0, 60], [-120, -60], [120, 180]] : [[30, 90], [-90, -30], [150, 210]];
-  const angle = mode === "home" ? 150 : mode === "working" ? 90 : 0;
-  const end = point(angle);
-  const connection = mode === "home" ? "1 ↔ 2 · 3 ↔ 4 · 5 ↔ 6" : mode === "working" ? "1 ↔ 6 · 2 ↔ 3 · 4 ↔ 5" : "7 ↔ 3";
+  const arcs = mode === "home" ? [[60, 120], [-60, 0], [-180, -120]] : mode === "working" ? [[0, 60], [-120, -60], [120, 180]] : [];
+  const end = point(0);
+  const connection = mode === "home" ? "1 ↔ 2 · 3 ↔ 4 · 5 ↔ 6" : mode === "working" ? "1 ↔ 6 · 2 ↔ 3 · 4 ↔ 5" : "3 ↔ 7";
+  const ink = "#000";
   return <div className={styles.position}>
     <h4>{title}</h4>
-    <svg viewBox="0 0 240 240" role="img" aria-label={`${title}: ${connection}`}>
-      <circle cx="120" cy="118" r="94" fill="white" stroke="#dbe3ee" strokeWidth="2" />
-      {arcs.map(([start, finish]) => { const a = point(start); const b = point(finish); return <path key={start} d={`M ${a.join(" ")} A 68 68 0 0 1 ${b.join(" ")}`} stroke="#008c78" strokeWidth="9" strokeLinecap="round" fill="none" />; })}
-      <path d={`M 120 118 L ${end.join(" ")}`} stroke="#008c78" strokeWidth="8" strokeLinecap="round" />
+    <svg viewBox="0 0 240 240" role="img" aria-label={`${title}: ${connection}`} style={{ fill: ink }}>
+      <circle cx="120" cy="118" r="94" fill="white" stroke="#bcbcbc" strokeWidth="2" />
+      {arcs.map(([start, finish]) => { const a = point(start); const b = point(finish); return <path key={start} d={`M ${a.join(" ")} A 68 68 0 0 1 ${b.join(" ")}`} stroke={ink} strokeWidth="3" strokeLinecap="round" fill="none" />; })}
+      {mode === "vent" && <path d={`M 120 118 L ${end.join(" ")}`} stroke={ink} strokeWidth="3" strokeLinecap="round" />}
       {[120, 60, 0, -60, -120, 180].map((degrees, index) => { const p = point(degrees); const label = point(degrees, 87); return <g key={index}>
-        <circle cx={p[0]} cy={p[1]} r="7" fill="white" stroke="#173368" strokeWidth="2" />
+        <circle cx={p[0]} cy={p[1]} r="7" fill="white" stroke={ink} strokeWidth="2" />
         <text x={label[0]} y={label[1]} textAnchor="middle" dominantBaseline="central">{index + 1}</text>
       </g>; })}
-      <circle cx="120" cy="118" r="7" fill="white" stroke="#173368" strokeWidth="2" />
+      <circle cx="120" cy="118" r="7" fill="white" stroke={ink} strokeWidth="2" />
       <text x="120" y="98" textAnchor="middle">7</text>
     </svg>
     <p className={styles.connectionLabel}>{connection}</p>
@@ -113,8 +113,11 @@ export default function InstrumentGuideVisual({ family, section, locale = "zh", 
   // PS-120C-2604-00001_A02_cn p. 5: stator-face view, original three groove positions.
   if (family === "hp" && section === "paths") content = <>
     <div className={styles.positions}>
-      <HpPosition mode="home" title={t("home")} /><HpPosition mode="working" title={`${t("working")} 1`} /><HpPosition mode="vent" title={`${t("working")} 2`} />
-    </div><p className={styles.note}>{t("hpNote")}</p><p className={styles.note}>{t("schematic")}</p>
+      <HpPosition mode="home" title={t("hpInject")} />
+      <HpPosition mode="working" title={t("hpLoad")} />
+      <HpPosition mode="vent" title={t("hpVent")} />
+    </div>
+    <p className={styles.note}>{t("hpFlowNote")}</p>
   </>;
 
   // PS-110B-2407-00002_A01_cn p. 3. Dimensions remain in the product's 2D viewer.

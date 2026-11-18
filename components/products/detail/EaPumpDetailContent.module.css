@@ -48,8 +48,24 @@
 .photos img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; border: 1px solid #e6ebf1; background: #fff; }
 .photos figcaption { margin-top: 9px; color: #465369; font-size: 14px; line-height: 1.6; }
 
+.content.compactDelivery { margin-top: 24px; }
+.content.compactDelivery > h2 { margin-bottom: 12px; font-size: 20px; }
+.compactDelivery :is(.deliveryRow, .guideSection) h3 { margin-bottom: 8px; font-size: 16px; }
+.compactDelivery > p,
+.compactDelivery .deliveryRow p,
+.compactDelivery .guideSection p { margin-bottom: 8px; line-height: 1.6; }
+.compactDelivery .deliveryRow,
+.compactDelivery .guideSection { padding-block: 20px; }
+
 @media (max-width: 900px) {
   .deliveryRow { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
+
+@media (max-width: 760px) {
+  .content.compactDelivery { margin-top: 14px; }
+  .content.compactDelivery > h2 { font-size: 18px; }
+  .compactDelivery .deliveryRow,
+  .compactDelivery .guideSection { padding-block: 16px; }
 }
 
 @media (max-width: 600px) {
