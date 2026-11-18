@@ -117,8 +117,8 @@ export const englishHomeProducts = [
     "group": "Valves",
     "name": "Rotary Valves",
     "description": "Select and switch between fluid pathways.",
-    "image": "/images/home/products/mrv3-rotary-valve-card.webp",
-    "imageAlt": "FOREACH 24-channel rotary valve with valve head, motor and controller",
+    "image": "/images/home/products/mrv3-rotary-valve-pair-card.webp",
+    "imageAlt": "Two FOREACH MRV3 rotary valves with different valve heads",
     "href": "/en/products/valves/rotary-valves/",
     "featured": false,
     "illustrative": false

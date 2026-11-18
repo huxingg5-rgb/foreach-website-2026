@@ -2,7 +2,7 @@
 import ProductCadViewer from "./ProductCadViewer";
 import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
 import {fittingText} from "@/data/products/detail/fitting-ui.intl";
-import {getSolenoidConfiguration, getSolenoidDrawingAsset, solenoidConfigurationName} from "@/data/products/detail/solenoid-configurations";
+import {getSolenoidConfiguration, getSolenoidDrawingPdfUrl, solenoidConfigurationName} from "@/data/products/detail/solenoid-configurations";
 const labels = {
   zh: ["常闭 NC", "常开 NO", "该配置的 3D 模型暂未提供", "暂时没有图纸", "阀形式"],
   en: ["Normally closed (NC)", "Normally open (NO)", "3D model not yet available for this configuration", "Drawing not yet available for this configuration", "Valve function"],
@@ -28,12 +28,12 @@ export default function SolenoidAssets({slug, locale, mode, active, variant, onV
 }) {
   const config = getSolenoidConfiguration(slug);
   const text = labels[locale as keyof typeof labels] || labels.en;
-  const id = mode === "drawing" ? getSolenoidDrawingAsset(slug, variant) : config?.assets[variant as 0 | 1] || config?.assets[0];
+  const id = mode === "drawing" ? getSolenoidDrawingPdfUrl(slug, locale, variant) : config?.assets[variant as 0 | 1] || config?.assets[0];
   if (!config) return null;
   return <div data-solenoid-assets={mode}>
     {!externalResourceTabs && <SolenoidVariantSelector slug={slug} locale={locale} variant={variant} onVariant={onVariant} />}
     {!id ? <div role="status" style={{minHeight: 300, display: "grid", placeItems: "center", textAlign: "center", color: "#637087"}}>{text[mode === "3d" ? 2 : 3]}</div>
-      : mode === "drawing" ? <PdfDrawingPreview pdfPreviewUrl={`/models/valves/6010/${id}.png`} autoOpen deferDesktopUntilOpen showPreviewDescription={false}
+      : mode === "drawing" ? <PdfDrawingPreview pdfPreviewUrl={`${id}#toolbar=0&navpanes=0&scrollbar=1`} autoOpen deferDesktopUntilOpen showPreviewDescription={false}
           documentTitle={`${solenoidConfigurationName(slug, locale)} ${config.key === "two" ? text[config.state === "no" ? 1 : config.state === "nc" ? 0 : variant] : ""}`}
           text={{title: fittingText("2D 图纸", locale), loadingLabel: fittingText("2D 图纸加载中", locale), previewButton: fittingText("点击预览图纸", locale), description: "", errorLabel: fittingText("图纸加载失败，请刷新页面后重试", locale), retryLabel: fittingText("重新加载", locale)}} />
       : <ProductCadViewer modelId={id} title={solenoidConfigurationName(slug, locale)} locale={locale} active={active} externalResourceTabs={externalResourceTabs} />}

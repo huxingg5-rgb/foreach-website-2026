@@ -1793,8 +1793,8 @@ export default function ProductDetailClient({
   const rplAssets = data.productTypeId === "valveless-pump" ? getValvelessPumpAssets(data.slug) : undefined;
   const diaphragmCadAssets = isDiaphragmPage ? getDiaphragmPumpCadAssets(data.slug) : undefined;
   const pistonCadAssets = getPistonPumpCadAssets(data.slug);
-  const smtp2CadAssets = getSmtp2CadAssets(data.slug);
-  const smtp4CadAssets = getSmtp4CadAssets(data.slug);
+  const smtp2CadAssets = getSmtp2CadAssets(data.slug, configuratorLocale);
+  const smtp4CadAssets = getSmtp4CadAssets(data.slug, configuratorLocale);
   const fittingCadAssets = data.productTypeId === "hard-tube-fittings" ? getHardTubeFittingCadAssets(data.slug) : undefined;
   const luerCadAssets = data.productTypeId === "luer-fittings"
     ? getLuerCadAssets(data.slug) : undefined;
@@ -1818,7 +1818,7 @@ export default function ProductDetailClient({
     : null;
   const standaloneFittingDrawingUrl = standaloneFittingCadAssets?.drawingPdfUrl || null;
   const pdm5Drawing = getPdm5DrawingAsset(sourceData.slug || data.slug, configuratorLocale);
-  const drawingPreviewUrl = getProductDrawingPreviewUrl(
+  const drawingPreviewUrl = smtp2CadAssets?.drawingPdfUrl || getProductDrawingPreviewUrl(
     data.slug,
     smtp4CadAssets ? smtp4CadAssets.drawingPdfUrl : pdm5Drawing?.drawingPdfUrl || (data.productTypeId === "valveless-pump" ? rplAssets?.drawingPdfUrl || "" :
     luerCadAssets?.drawingPdfUrl || remainingFittingCadAssets?.drawingPdfUrl ||

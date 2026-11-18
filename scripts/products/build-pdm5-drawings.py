@@ -1,4 +1,4 @@
-"""Extract the PDM5 outline figure from page 3 of the published CN/EN datasheets.
+"""Extract the PDM5 outline and terminal pinout from the published CN/EN datasheets.
 
 Usage: python scripts/products/build-pdm5-drawings.py STAGING_DIRECTORY
 The original page objects and embedded drawing images are preserved; only the
@@ -18,6 +18,15 @@ SOURCES = {
     "en": ("PS-110B-2607-00001_A00_en", "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2607-00001-a00-en-pdm5-pressure-sensor.pdf"),
 }
 CROP = (25, 70, 550, 540)  # PDF points, measured from the original page's top-left.
+TERMINAL_CROPS = {"zh": (0, 70, 595, 528), "en": (0, 70, 595, 512)}
+
+
+def crop(page, coordinates):
+    height = float(page.mediabox.height)
+    left, top, right, bottom = coordinates
+    box = RectangleObject((left, height - bottom, right, height - top))
+    page.cropbox = box
+    page.mediabox = box
 
 
 def build(staging: Path):
@@ -33,20 +42,22 @@ def build(staging: Path):
         assert ("外观尺寸" if language == "zh" else "Outline") in text
         image_hashes = sorted(sha256(image.data).hexdigest() for image in page.images)
         assert len(image_hashes) == 4, "The reviewed outline page must contain four source views."
-        height = float(page.mediabox.height)
-        left, top, right, bottom = CROP
-        box = RectangleObject((left, height - bottom, right, height - top))
-        page.cropbox = box
-        page.mediabox = box
+        crop(page, CROP)
+        terminal = reader.pages[3]
+        terminal_text = terminal.extract_text()
+        assert all(pin in terminal_text for pin in ("VCC", "GND", "SCLK", "SDA"))
+        crop(terminal, TERMINAL_CROPS[language])
         writer = PdfWriter()
         writer.add_page(page)
-        writer.add_metadata({"/Title": "PDM5 Outline Dimensions", "/Subject": f"{specification}, page 3; original outline figure", "/Author": "FOREACH"})
+        writer.add_page(terminal)
+        writer.add_metadata({"/Title": "PDM5 外形尺寸与端子定义" if language == "zh" else "PDM5 Outline Dimensions and Terminal Pinout",
+                             "/Subject": f"{specification}, pages 3–4; original outline and terminal pinout", "/Author": "FOREACH"})
         filename = f"pdm5-outline-drawing-{language}.pdf"
         target = staging / filename
         with target.open("wb") as stream:
             writer.write(stream)
         extracted = PdfReader(target)
-        assert len(extracted.pages) == 1
+        assert len(extracted.pages) == 2
         assert sorted(sha256(image.data).hexdigest() for image in extracted.pages[0].images) == image_hashes
         assert source.read_bytes() == source_bytes
         output = target.read_bytes()
@@ -54,6 +65,7 @@ def build(staging: Path):
             "model": "PDM5", "language": language, "specification": specification,
             "sourcePdfUrl": source_url, "sourcePage": 3, "sourceSha256": sha256(source_bytes).hexdigest(),
             "cropFromTopLeftPt": CROP, "sourceViewImageSha256": image_hashes,
+            "terminalSourcePage": 4, "terminalCropFromTopLeftPt": TERMINAL_CROPS[language],
             "drawingPdfUrl": f"/documents/products/control/pdm5/{filename}",
             "sha256": sha256(output).hexdigest(), "bytes": len(output),
         }

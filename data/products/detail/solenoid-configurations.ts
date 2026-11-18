@@ -39,6 +39,15 @@ export function getSolenoidDrawingAsset(slug: string, variant = 0) {
   const id = c?.assets[variant] || c?.assets[0];
   return id && originalDrawingAssets.has(id) ? id : undefined;
 }
+
+export function getSolenoidDrawingPdfUrl(slug: string, locale: string, variant = 0) {
+  const configuration = getSolenoidConfiguration(slug);
+  const asset = getSolenoidDrawingAsset(slug, variant);
+  if (!asset) return undefined;
+  const drawing = configuration?.key === "two" && configuration.connection === "barbed" ? "barbed-2" : asset;
+  const language = locale.toLowerCase().split("-")[0] === "zh" ? "zh-cn" : "en";
+  return `/documents/products/valves/6010/sv10-${drawing}-${language}.pdf`;
+}
 const names = {
   zh: ["三通基板式", "三通倒刺式", "三通螺纹式", "二通基板式", "二通倒刺式", "二通螺纹式"],
   en: ["3-Way Manifold-Mount", "3-Way Barbed", "3-Way Threaded", "2-Way Manifold-Mount", "2-Way Barbed", "2-Way Threaded"],

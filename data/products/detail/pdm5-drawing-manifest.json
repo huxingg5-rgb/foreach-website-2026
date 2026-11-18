@@ -18,9 +18,16 @@
       "ae6b3d0d54bb2c18796f93b2972e4c248b55970ebbb40294f6b59f13783e8c91",
       "c6ba8ee18395483c32e128debc630fd032b7b13f1b67f9365ba61d8e6432670e"
     ],
+    "terminalSourcePage": 4,
+    "terminalCropFromTopLeftPt": [
+      0,
+      70,
+      595,
+      528
+    ],
     "drawingPdfUrl": "/documents/products/control/pdm5/pdm5-outline-drawing-zh.pdf",
-    "sha256": "66ca68f5da1a855477d52f1dc8ee1295a1bcc98b2ab4a9e5e28aaaa6b239f359",
-    "bytes": 151391
+    "sha256": "e58e0f56662991ccfe3a48c142af308bd7ca35bf1d8ebc9e764b00b3ebc5ed0d",
+    "bytes": 213998
   },
   "en": {
     "model": "PDM5",
@@ -28,7 +35,7 @@
     "specification": "PS-110B-2607-00001_A00_en",
     "sourcePdfUrl": "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2607-00001-a00-en-pdm5-pressure-sensor.pdf",
     "sourcePage": 3,
-    "sourceSha256": "b5dab460ef5d83537f6f4e3799b59dc4a263a05842b4d32557485b2ad5f19a90",
+    "sourceSha256": "8e8f018d832d95892fac788bd136c8a8b8df0512b62960aff840ad22062c6ed2",
     "cropFromTopLeftPt": [
       25,
       70,
@@ -41,8 +48,15 @@
       "ae6b3d0d54bb2c18796f93b2972e4c248b55970ebbb40294f6b59f13783e8c91",
       "c6ba8ee18395483c32e128debc630fd032b7b13f1b67f9365ba61d8e6432670e"
     ],
+    "terminalSourcePage": 4,
+    "terminalCropFromTopLeftPt": [
+      0,
+      70,
+      595,
+      512
+    ],
     "drawingPdfUrl": "/documents/products/control/pdm5/pdm5-outline-drawing-en.pdf",
-    "sha256": "b41e85cbcb167c7a97aa57f0eacd06874e62895a5c60ec5e874cfb228f2d2eb5",
-    "bytes": 68426
+    "sha256": "a6bbdfe7fb43b05b106d5bb0ddce1e402a42619f4c3976e06b9005296db613cc",
+    "bytes": 103685
   }
 }

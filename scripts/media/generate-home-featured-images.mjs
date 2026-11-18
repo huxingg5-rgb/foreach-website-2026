@@ -53,7 +53,14 @@ const assets = [
   { id: 'ptfe', source: '/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp', target: '/images/home/products/ptfe-tubing-card.webp', position: 'centre' },
   { id: 'peek', source: '/images/products/tubing/peek-tubing/foreach-chemical-resistant-peek-tubing-color-options.webp', target: '/images/home/products/peek-tubing-card.webp', position: 'north' },
   { id: 'pfa', source: '/images/products/tubing/pfa-tubing/pfa-tubing-main.webp', target: '/images/home/products/pfa-tubing-card.webp', position: 'south' },
-  { id: 'rotary', source: '/images/products/valves/rotary-valves/foreach-rotary-valve-24-channel-assembly.webp', target: '/images/home/products/mrv3-rotary-valve-card.webp', position: 'centre' },
+  {
+    id: 'rotary',
+    source: '/images/products/valves/rotary-valves/foreach-rotary-valve-valve-assemblies.webp',
+    target: '/images/home/products/mrv3-rotary-valve-pair-card.webp',
+    region: { left: 0, top: 60, width: 1500, height: 1440 },
+    fit: 'contain',
+    position: 'east',
+  },
   { id: 'flanged', source: '/images/home/flanged-tubing-white-shadow.png', target: '/images/home/products/flanged-tubing-card.webp', region: { left: 1, top: 99, width: 1252, height: 939 } },
   { id: 'retaining-ring', source: '/images/home/retaining-ring-kit-white-shadow.png', target: '/images/home/products/retaining-ring-kit-card.webp', position: 'centre' },
   { id: 'ferrule', source: '/images/home/ferrule-kit-white-shadow.png', target: '/images/home/products/ferrule-kit-card.webp', position: 'centre' },
@@ -73,7 +80,7 @@ async function main() {
       const image = sharp(source).rotate().flatten({ background: '#ffffff' });
       if (asset.region) image.extract(asset.region);
       await image
-        .resize(2000, 1500, { fit: asset.position ? 'cover' : 'contain', position: asset.position, background: '#ffffff' })
+        .resize(2000, 1500, { fit: asset.fit ?? (asset.position ? 'cover' : 'contain'), position: asset.position, background: '#ffffff' })
         .webp({ quality: 90, effort: 6 }).toFile(target);
     }
     const result = await sharp(target).metadata();

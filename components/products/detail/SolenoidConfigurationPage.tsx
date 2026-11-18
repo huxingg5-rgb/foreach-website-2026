@@ -1,4 +1,4 @@
-import {getSolenoidConfiguration, getSolenoidDrawingAsset} from "@/data/products/detail/solenoid-configurations";
+import {getSolenoidConfiguration, getSolenoidDrawingPdfUrl} from "@/data/products/detail/solenoid-configurations";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import ProductDetailClient from "./ProductDetailClient";
@@ -35,11 +35,11 @@ export default function SolenoidConfigurationPage({slug, locale}: {slug: string;
   if (!copy || !base) notFound();
   const configuration = getSolenoidConfiguration(slug);
   const asset = configuration?.assets[0];
-  const drawingAsset = getSolenoidDrawingAsset(slug);
+  const drawingPdfUrl = getSolenoidDrawingPdfUrl(slug, locale);
   const data = {...base, ...copy, mainImage: copy.mainImage || base.image, imageAlt: copy.imageAlt || copy.title,
     additionalImages: copy.additionalImages, additionalImageAlts: copy.additionalImageAlts, thumbnails: [], images: [],
     showDrawingRequest: true, show3DRequest: false, showDatasheetRequest: false,
-    drawing2dUrl: drawingAsset ? `/models/valves/6010/${drawingAsset}.png` : "", model3dUrl: asset ? `/models/valves/6010/viewer.html?v=fcadl01-20261026&model=${asset}&lang=${locale}` : "", datasheetUrl: "",
+    drawing2dUrl: drawingPdfUrl || "", model3dUrl: asset ? `/models/valves/6010/viewer.html?v=fcadl01-20261026&model=${asset}&lang=${locale}` : "", datasheetUrl: "",
   } as unknown as ProductDetailPageData;
   const language = normalizeValveLocale(locale);
   const resourceLocale = language === "zh" ? "zh-CN" : language;
