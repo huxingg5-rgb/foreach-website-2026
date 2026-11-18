@@ -76,11 +76,13 @@
     },
     "mrv": {
       "name": "Vannes rotatives",
-      "description": "Sélection et commutation des circuits fluidiques."
+      "description": "Sélection et commutation des circuits fluidiques.",
+      "imageAlt": "Vanne rotative FOREACH à 24 voies avec tête, moteur et contrôleur"
     },
     "family2": {
       "name": "Électrovannes",
-      "description": "Commande électrique des circuits fluidiques d’instruments."
+      "description": "Commande électrique des circuits fluidiques d’instruments.",
+      "imageAlt": "Électrovannes FOREACH SV10 avec raccordements sur embase, cannelés et filetés"
     },
     "family3": {
       "name": "Vannes haute pression",

@@ -3,9 +3,9 @@ import { tubingAssemblyTypes, tubingAssembliesDescription, getTubingAssemblyPath
 export const productGroups = ["Featured", "Pumps", "Valves", "Probes", "Tubing", "Fittings", "Smart Control", "Tubing Assemblies"] as const;
 
 const tubingAssemblyHomeImages = {
-  "flanged-tubing": "/images/home/flanged-tubing-white-shadow.png",
-  "retaining-ring-kits": "/images/home/retaining-ring-kit-white-shadow.png",
-  "ferrule-kits": "/images/home/ferrule-kit-white-shadow.png",
+  "flanged-tubing": "/images/home/products/flanged-tubing-card.webp",
+  "retaining-ring-kits": "/images/home/products/retaining-ring-kit-card.webp",
+  "ferrule-kits": "/images/home/products/ferrule-kit-card.webp",
 } satisfies Record<(typeof tubingAssemblyTypes)[number]["id"], string>;
 
 export const englishHomeProducts = [
@@ -117,7 +117,8 @@ export const englishHomeProducts = [
     "group": "Valves",
     "name": "Rotary Valves",
     "description": "Select and switch between fluid pathways.",
-    "image": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+    "image": "/images/home/products/mrv3-rotary-valve-card.webp",
+    "imageAlt": "FOREACH 24-channel rotary valve with valve head, motor and controller",
     "href": "/en/products/valves/rotary-valves/",
     "featured": false,
     "illustrative": false
@@ -127,7 +128,8 @@ export const englishHomeProducts = [
     "group": "Valves",
     "name": "Solenoid Valves",
     "description": "Electrical control of instrument fluid pathways.",
-    "image": "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+    "image": "/images/products/valves/solenoid-valves/foreach-sv10-connection-options-intro.webp",
+    "imageAlt": "FOREACH SV10 solenoid valves with manifold-mount, barbed and threaded connections",
     "href": "/en/products/valves/solenoid-valves/",
     "featured": false,
     "illustrative": false
@@ -187,7 +189,7 @@ export const englishHomeProducts = [
     "group": "Tubing",
     "name": "PVC Tubing",
     "description": "Explore material and dimension options.",
-    "image": "/images/products/tubing/pvc-tubing/pvc-tubing-main.webp",
+    "image": "/images/home/products/pvc-tubing-card.webp",
     "href": "/en/products/tubing/pvc-tubing/",
     "featured": false,
     "illustrative": false
@@ -197,7 +199,7 @@ export const englishHomeProducts = [
     "group": "Tubing",
     "name": "TPU Tubing",
     "description": "Explore material and dimension options.",
-    "image": "/images/products/tubing/tpu-tubing/tpu-tubing-main.webp",
+    "image": "/images/home/products/tpu-tubing-card.webp",
     "href": "/en/products/tubing/tpu-tubing/",
     "featured": false,
     "illustrative": false
@@ -207,7 +209,7 @@ export const englishHomeProducts = [
     "group": "Tubing",
     "name": "FEP Tubing",
     "description": "Explore material and dimension options.",
-    "image": "/images/products/tubing/fep-tubing/fep-tubing-main.webp",
+    "image": "/images/home/products/fep-tubing-card.webp",
     "href": "/en/products/tubing/fep-tubing/",
     "featured": false,
     "illustrative": false
@@ -217,7 +219,7 @@ export const englishHomeProducts = [
     "group": "Tubing",
     "name": "PTFE Tubing",
     "description": "Explore material and dimension options.",
-    "image": "/images/products/tubing/ptfe-tubing/ptfe-tubing-main.webp",
+    "image": "/images/home/products/ptfe-tubing-card.webp",
     "href": "/en/products/tubing/ptfe-tubing/",
     "featured": false,
     "illustrative": false
@@ -227,7 +229,7 @@ export const englishHomeProducts = [
     "group": "Tubing",
     "name": "PEEK Tubing",
     "description": "Explore material and dimension options.",
-    "image": "/images/products/tubing/peek-tubing/peek-tubing-main.webp",
+    "image": "/images/home/products/peek-tubing-card.webp",
     "href": "/en/products/tubing/peek-tubing/",
     "featured": false,
     "illustrative": false
@@ -237,7 +239,7 @@ export const englishHomeProducts = [
     "group": "Tubing",
     "name": "PFA Tubing",
     "description": "Explore material and dimension options.",
-    "image": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+    "image": "/images/home/products/pfa-tubing-card.webp",
     "href": "/en/products/tubing/pfa-tubing/",
     "featured": false,
     "illustrative": false

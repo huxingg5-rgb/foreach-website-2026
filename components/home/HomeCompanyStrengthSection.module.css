@@ -12,7 +12,14 @@
 }
 
 @media (min-width: 1921px) {
-  .singleLineTitle:global(.home-company-about-title) { font-size: 68px !important; }
+  .singleLineTitle:global(.home-company-about-title),
+  .responsiveAbout:lang(ru) :global(.home-company-about-left .home-company-about-title) { font-size: 68px !important; }
+}
+
+.responsiveAbout:lang(ru) :global(.home-company-about-title) { white-space: nowrap; }
+.responsiveAbout:lang(ru) :global(.home-company-about-title span) { white-space: normal; }
+@media (max-width: 360px) {
+  .responsiveAbout:lang(ru) :global(.home-company-about-left .home-company-about-title) { font-size: min(30px, 8.5vw) !important; }
 }
 
 /* 最终值始终保留，并为动画数字及后缀预留稳定宽度。 */

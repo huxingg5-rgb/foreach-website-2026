@@ -16,6 +16,7 @@ export default function HomeProductsSection({ data }: { data: HomeProductsSectio
       : product.group === activeGroup && !["needle", "tube", "assembly"].includes(product.id),
   );
   const { copy } = data;
+  const categoryCovers = ["Tubing", "Valves", "Tubing Assemblies"].includes(activeGroup);
 
   return (
     <section id="products" className={styles.section} aria-labelledby="home-products-title">
@@ -37,13 +38,13 @@ export default function HomeProductsSection({ data }: { data: HomeProductsSectio
             <HomeSectionMoreLink href={data.productCenterHref}>{copy.productCenter}</HomeSectionMoreLink>
           </div>
         </div>
-        <div id="home-product-grid" className={styles.productGrid}>
+        <div id="home-product-grid" className={styles.productGrid} data-category-covers={categoryCovers || undefined}>
           {products.map((product) => (
             <Link key={product.id} href={product.href} prefetch={false} className={styles.product}
               aria-label={(product.illustrative ? copy.discuss : copy.explore).replace('{name}', product.name)}>
               <div className={`${styles.visual} ${product.id === "assembly" ? styles.visualCoverAssembly : product.id === "tube" ? styles.visualCoverTubing : ""}`}>
                 <Image src={product.image} alt={product.illustrative ? copy.conceptAlt : product.imageAlt ?? `${product.name} — FOREACH`}
-                  fill sizes="(max-width: 760px) 46vw, (max-width: 1600px) 23vw, 350px" />
+                  fill sizes={categoryCovers ? "(max-width: 760px) 46vw, (max-width: 1696px) 32vw, 520px" : "(max-width: 760px) 46vw, (max-width: 1600px) 23vw, 350px"} />
                 {product.illustrative && <span className={styles.conceptLabel}>{copy.conceptLabel}</span>}
               </div>
               <div className={styles.productText}>

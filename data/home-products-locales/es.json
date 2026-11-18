@@ -76,11 +76,13 @@
     },
     "mrv": {
       "name": "Válvulas rotativas",
-      "description": "Selección y conmutación de los circuitos de fluidos."
+      "description": "Selección y conmutación de los circuitos de fluidos.",
+      "imageAlt": "Válvula rotativa FOREACH de 24 canales con cabezal, motor y controlador"
     },
     "family2": {
       "name": "Electroválvulas",
-      "description": "Control eléctrico de los circuitos de fluidos del instrumento."
+      "description": "Control eléctrico de los circuitos de fluidos del instrumento.",
+      "imageAlt": "Electroválvulas FOREACH SV10 con conexiones de base, de espiga y roscadas"
     },
     "family3": {
       "name": "Válvulas de alta presión",

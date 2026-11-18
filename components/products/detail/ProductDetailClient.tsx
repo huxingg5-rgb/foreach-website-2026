@@ -1897,7 +1897,6 @@ export default function ProductDetailClient({
         frontView: "Front view",
         sideView: "Side view",
         portDetail: "Port detail",
-        applications: "Typical Applications:",
         model: "Model:",
         configurator: "Configure",
         datasheet: "Add Datasheet",
@@ -1942,7 +1941,6 @@ export default function ProductDetailClient({
         frontView: "主视图",
         sideView: "侧视图",
         portDetail: "接口细节",
-        applications: "常见应用：",
         model: "型号：",
         configurator: "配置选择",
         datasheet: "添加规格书",
@@ -3822,30 +3820,6 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
                 {luerPairConfig?.allowCoreAssembly && luerPairConfig.baseRole === "core" ? fittingText(`搭配 LPT 锁圈，可组成${luerPairConfig.base.family === "LRL" ? "旋转" : "固定"}锁圈公鲁尔接头。`, configuratorLocale) : null}
               </p>
-            )}
-
-            {!(data.solenoidAuthoredContent && configuratorLocale === "zh") && (
-              <div className={styles.application}>
-                <p className={styles.applicationTitle} data-assembly-page-heading={isAssemblyCustomerCategoryPage || undefined}>
-                  {(isEnglish || data.solenoidAuthoredContent) && data.applicationAreas?.length
-                    ? data.applicationAreasTitle || "Application Areas:"
-                    : isLocalizedDetail
-                    ? copy.applications
-                    : getDbSectionTitle("applications", copy.applications)}
-                </p>
-                <p className={styles.applicationText}>
-                  {(isEnglish || data.solenoidAuthoredContent) && data.applicationAreas?.length
-                    ? data.applicationAreas.map((area, index) => (
-                        <span key={area.href}>
-                          {index > 0 ? ", " : null}
-                          <a className={styles.applicationAreaLink} href={area.href}>
-                            {area.label}
-                          </a>
-                        </span>
-                      ))
-                    : data.commonApplications.join(isLocalizedDetail ? ", " : "、")}
-                </p>
-              </div>
             )}
 
             <div id="product-detail-actions" data-configuration-layout={usesCompactConfigurationLayout || undefined} className={styles.operationArea}>
