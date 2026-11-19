@@ -16,7 +16,10 @@
 
 "use client";
 
-import { useMemo, useState } from "react";
+import { getLocaleFromPathname } from "@/lib/i18n";
+import { trackFilterApply, trackInteraction } from "@/lib/analytics/track-event";
+
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
@@ -233,21 +236,21 @@ export default function MaterialCompatibilityClient({
   /* =========================================================
      材料兼容表筛选结果
   ========================================================= */
-  const filteredCompatibilityRows = useMemo(() => {
-    const normalizedKeyword = normalizeSearchText(keyword);
+  function getCompatibilityRows(value: string) {
+    const normalizedKeyword = normalizeSearchText(value);
 
     if (!normalizedKeyword) return data.compatibilityRows;
 
     return data.compatibilityRows.filter((row) =>
       normalizeSearchText(row.name).includes(normalizedKeyword),
     );
-  }, [data.compatibilityRows, keyword]);
+  }
 
   /* =========================================================
      材料特性表筛选结果
   ========================================================= */
-  const filteredFeatureRows = useMemo(() => {
-    const normalizedKeyword = normalizeSearchText(keyword);
+  function getFeatureRows(value: string) {
+    const normalizedKeyword = normalizeSearchText(value);
 
     if (!normalizedKeyword) return data.materialFeatureRows;
 
@@ -262,13 +265,13 @@ export default function MaterialCompatibilityClient({
 
       return normalizeSearchText(searchText).includes(normalizedKeyword);
     });
-  }, [data.materialFeatureRows, keyword]);
+  }
 
   /* =========================================================
      材质证明表筛选结果
   ========================================================= */
-  const filteredCertificationRows = useMemo(() => {
-    const normalizedKeyword = normalizeSearchText(keyword);
+  function getCertificationRows(value: string) {
+    const normalizedKeyword = normalizeSearchText(value);
 
     if (!normalizedKeyword) return data.certificationRows;
 
@@ -281,12 +284,17 @@ export default function MaterialCompatibilityClient({
 
       return normalizeSearchText(searchText).includes(normalizedKeyword);
     });
-  }, [data.certificationColumns, data.certificationRows, keyword]);
+  }
 
   /* =========================================================
      切换 Tab
   ========================================================= */
   function handleTabChange(tab: MaterialCompatibilityTab) {
+    if (tab === activeTab) return;
+    trackFilterApply({
+      locale: getLocaleFromPathname(pathname), filterCategory: "material_compatibility",
+      filterName: "table", filterValue: tab, sourceSection: "material_compatibility",
+    });
     setActiveTab(tab);
     setKeyword("");
   }
@@ -360,7 +368,19 @@ export default function MaterialCompatibilityClient({
             <ResourceSearchBar
               value={keyword}
               onChange={setKeyword}
-              onSearch={setKeyword}
+              onSearch={(value) => {
+                setKeyword(value);
+                if (!value.trim()) return;
+                const resultCount = {
+                  compatibility: getCompatibilityRows,
+                  features: getFeatureRows,
+                  certification: getCertificationRows,
+                }[activeTab](value).length;
+                trackInteraction("tool_use", {
+                  locale: getLocaleFromPathname(pathname), sourceSection: "material_compatibility",
+                  action: activeTab, outcome: resultCount ? "success" : "no_results", resultCount,
+                });
+              }}
               placeholder={currentSearchCopy.placeholder}
               searchButtonText={commonCopy.searchButtonText}
               recentLabel={commonCopy.recentLabel}
@@ -390,7 +410,7 @@ export default function MaterialCompatibilityClient({
 
             {activeTab === "compatibility" && (
               <CompatibilityTable
-                rows={filteredCompatibilityRows}
+                rows={getCompatibilityRows(keyword)}
                 materialColumns={data.materialColumns}
                 chemicalMediumLabel={commonCopy.chemicalMedium}
                 emptyText={commonCopy.emptyCompatibility}
@@ -399,7 +419,7 @@ export default function MaterialCompatibilityClient({
 
             {activeTab === "features" && (
               <FeatureTable
-                rows={filteredFeatureRows}
+                rows={getFeatureRows(keyword)}
                 columns={commonCopy.featureColumns}
                 emptyText={commonCopy.emptyFeatures}
               />
@@ -407,7 +427,7 @@ export default function MaterialCompatibilityClient({
 
             {activeTab === "certification" && (
               <CertificationTable
-                rows={filteredCertificationRows}
+                rows={getCertificationRows(keyword)}
                 columns={data.certificationColumns}
                 emptyText={commonCopy.emptyCertification}
               />

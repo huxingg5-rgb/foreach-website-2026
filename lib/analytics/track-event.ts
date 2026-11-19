@@ -41,6 +41,7 @@ export type ProductAnalyticsInput = {
   variant?: string;
   listId?: string;
   listName?: string;
+  sourceSection?: string;
   index?: number;
   locale: string;
 };
@@ -154,6 +155,11 @@ function trackEvent(
 
   const cleanedParameters = cleanParameters(parameters);
   trackMetricaGoal(eventName, cleanedParameters);
+  const gaParameters = {
+    ...cleanedParameters,
+    ...(cleanedParameters.locale === "zh" ? { locale: "zh-CN" } : {}),
+    page_location: getAnalyticsPageUrl(window.location.href),
+  };
   const gtag = getReadyGtag();
 
   if (!gtag) {
@@ -165,12 +171,12 @@ function trackEvent(
 
     pendingEvents.push({
       eventName,
-      parameters: cleanedParameters,
+      parameters: gaParameters,
     });
     return;
   }
 
-  gtag("event", eventName, cleanedParameters);
+  gtag("event", eventName, gaParameters);
 }
 
 /** Google Tag 完成 config 后发送当前页面内存中的全部待发送事件。 */
@@ -213,6 +219,89 @@ function sanitizeSearchTerm(value: string) {
   return normalized.slice(0, 100);
 }
 
+const CAMPAIGN_PARAMETER = /^(utm_(source|medium|campaign|id|term|content|source_platform|creative_format|marketing_tactic)|gclid|dclid|gbraid|wbraid)$/i;
+const AD_CLICK_PARAMETER = /^(gclid|dclid|gbraid|wbraid)$/i;
+const ANALYTICS_SECTION_ID = /^[a-z0-9_]{1,80}$/;
+
+export function getAnalyticsPageUrl(value: string) {
+  if (!/^https?:\/\//i.test(value)) return "";
+  let url: URL;
+  try {
+    url = new URL(value);
+  } catch {
+    return "";
+  }
+  const campaign = new URLSearchParams();
+  for (const [key, rawValue] of url.searchParams) {
+    if (!CAMPAIGN_PARAMETER.test(key)) continue;
+    const normalized = AD_CLICK_PARAMETER.test(key)
+      ? (/^[a-z0-9_-]{1,512}$/i.test(rawValue) ? rawValue : "")
+      : sanitizeSearchTerm(rawValue);
+    if (normalized) campaign.append(key, normalized);
+  }
+  url.search = campaign.toString();
+  url.hash = "";
+  return url.href;
+}
+
+export function getAnalyticsProductId(href: string) {
+  const parts = href.split(/[?#]/, 1)[0].split("/").filter(Boolean);
+  if (parts.at(-1) === "details") parts.pop();
+  return parts.at(-1) || "products";
+}
+
+export function getAnalyticsSourceSection(element: Element) {
+  const explicit = element.closest<HTMLElement>("[data-analytics-section]")
+    ?.dataset.analyticsSection;
+  if (explicit && ANALYTICS_SECTION_ID.test(explicit)) return explicit;
+  if (element.closest("header")) return "site_header";
+  if (element.closest("footer")) return "site_footer";
+  const segments = window.location.pathname.split("/").filter(Boolean);
+  if (/^(en|es|fr|ko|ru)$/.test(segments[0] ?? "")) segments.shift();
+  const section = ({
+    about: "about_page",
+    applications: "application_page",
+    contact: "contact_page",
+    products: "product_page",
+    resources: "resource_page",
+    search: "site_search_results",
+  } as Record<string, string>)[segments[0]] ?? (segments.length ? "page_content" : "home_page");
+  if (section === "resource_page" && /^[a-z0-9-]+$/.test(segments[1] ?? "")) {
+    return "resource_" + segments[1].replaceAll("-", "_");
+  }
+  return section;
+}
+
+type InteractionName =
+  | "home_hero_select"
+  | "configurator_open"
+  | "configurator_confirm"
+  | "drawing_request_select"
+  | "tool_use"
+  | "video_play";
+
+export function trackInteraction(eventName: InteractionName, input: {
+  locale: string;
+  sourceSection: string;
+  action?: string;
+  productId?: string;
+  configurationType?: string;
+  resourceId?: string;
+  outcome?: "success" | "no_results" | "invalid" | "error";
+  resultCount?: number;
+}) {
+  trackEvent(eventName, {
+    locale: input.locale,
+    source_section: input.sourceSection,
+    action: input.action,
+    product_id: input.productId,
+    configuration_type: input.configurationType,
+    resource_id: input.resourceId,
+    outcome: input.outcome,
+    result_count: input.resultCount,
+  });
+}
+
 function normalizeFilterValue(value: string | string[]) {
   const values = Array.isArray(value) ? value : [value];
   return values.map((item) => item.trim()).filter(Boolean).sort().join("|");
@@ -238,6 +327,8 @@ export function trackProductSelect(input: ProductAnalyticsInput) {
   trackEvent("select_item", {
     item_list_id: input.listId,
     item_list_name: input.listName,
+    source_section: input.sourceSection,
+    product_id: input.productId,
     locale: input.locale,
     items: [createAnalyticsItem(input)],
   });
@@ -254,7 +345,7 @@ export function trackFilterApply(input: {
   filterCategory: string;
   filterName: string;
   filterValue: string | string[];
-  resultCount: number;
+  resultCount?: number;
   sourceSection: string;
   locale: string;
 }) {
@@ -309,6 +400,16 @@ export function trackSiteSearch(input: {
     locale: input.locale,
     result_count: input.resultCount,
   });
+}
+
+export function trackSearchWithResults(input: {
+  searchTerm: string;
+  searchLocation: string;
+  locale: string;
+  resultCount: number;
+}) {
+  trackSiteSearch(input);
+  if (input.resultCount === 0) trackSearchNoResults(input);
 }
 
 export function trackSearchNoResults(input: {
@@ -414,6 +515,7 @@ export function trackFormStart(input: {
   sourceSection: string;
   locale: string;
   itemCount?: number;
+  productId?: string;
 }) {
   trackEvent("form_start", {
     form_id: input.formId,
@@ -421,6 +523,7 @@ export function trackFormStart(input: {
     source_section: input.sourceSection,
     locale: input.locale,
     item_count: input.itemCount,
+    product_id: input.productId,
   });
 }
 
@@ -449,6 +552,7 @@ export function trackInquirySubmitError(input: {
   locale: string;
   errorType: InquiryErrorType;
   submissionStage: string;
+  productId?: string;
 }) {
   trackEvent("inquiry_submit_error", {
     form_id: input.formId,
@@ -457,6 +561,7 @@ export function trackInquirySubmitError(input: {
     locale: input.locale,
     error_type: input.errorType,
     submission_stage: input.submissionStage,
+    product_id: input.productId,
   });
 }
 
@@ -519,6 +624,7 @@ export function trackContactClick(input: {
     | "whatsapp"
     | "wechat"
     | "contact_form"
+    | "distributor"
     | "other";
   sourceSection: string;
   locale: string;

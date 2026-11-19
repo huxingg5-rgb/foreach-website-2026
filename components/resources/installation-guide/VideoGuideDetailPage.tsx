@@ -17,6 +17,10 @@ import "@/app/resources/news/news.css";
 
 export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetail }) {
   const locale = video.locale;
+  const embed = new URL(video.embedUrl);
+  if (/(^|\.)youtube(?:-nocookie)?\.com$/.test(embed.hostname)) {
+    embed.searchParams.set("enablejsapi", "1");
+  }
   const ui = videoGuideUi[locale];
   const prefix = locale === "zh-CN" ? "" : `/${locale}`;
   const useUpdatedLayout = !["sv10-solenoid-valve-overview", "youtube-syringe-installation"].includes(video.id);
@@ -83,13 +87,16 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
       <section className={styles.contentBlock} aria-labelledby={`${video.sectionId}-video`}>
         <h2 id={`${video.sectionId}-video`}>{video.watchHeading}</h2>
         <figure className={styles.figure}>
-          <iframe src={video.embedUrl} title={video.media?.title ?? video.title}
+          <iframe src={embed.href} title={video.media?.title ?? video.title}
             style={{ display: "block", width: "100%", aspectRatio: "16 / 9", border: 0 }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
           <figcaption>{video.caption} · {video.durationLabel} · FOREACH</figcaption>
         </figure>
-        <p><a href={video.watchUrl} target="_blank" rel="noopener noreferrer">{ui.watch} ↗</a></p>
+        <p><a href={video.watchUrl}
+          data-analytics-resource-action="view" data-analytics-resource-id={video.id}
+          data-analytics-resource-type="video_external" data-analytics-resource-file-type="youtube"
+          data-analytics-section="video_guide_detail" target="_blank" rel="noopener noreferrer">{ui.watch} ↗</a></p>
       </section>
       <section className={styles.contentBlock} aria-labelledby={`${video.sectionId}-overview`}>
         <h2 id={`${video.sectionId}-overview`}>{video.highlightsHeading ?? ui.highlights}</h2>

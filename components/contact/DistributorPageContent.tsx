@@ -267,23 +267,30 @@ export default function DistributorPageContent({
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formStartedRef = useRef(false);
+  const inquiryEnteredRef = useRef(false);
   const nativeValidationReportedRef = useRef(false);
 
   function getAnalyticsLocale() {
     return document.documentElement.lang || "en";
   }
 
-  function trackFirstFormInteraction() {
-    if (formStartedRef.current) return;
-
-    formStartedRef.current = true;
-    const locale = getAnalyticsLocale();
+  function trackInquiryEntry() {
+    if (inquiryEnteredRef.current) return;
+    inquiryEnteredRef.current = true;
     trackBeginInquiry({
       formId: "distributor_application_form",
       formType: "distributor_application",
       sourceSection: "distributor_form_panel",
-      locale,
+      locale: getAnalyticsLocale(),
     });
+  }
+
+  function trackFirstFormInteraction() {
+    if (formStartedRef.current) return;
+
+    trackInquiryEntry();
+    formStartedRef.current = true;
+    const locale = getAnalyticsLocale();
     trackFormStart({
       formId: "distributor_application_form",
       formType: "distributor_application",
@@ -776,6 +783,7 @@ export default function DistributorPageContent({
         locale: currentLang,
       });
       formStartedRef.current = false;
+      inquiryEnteredRef.current = false;
     } catch (error) {
       console.error(
         "Distributor request submission failed:",
@@ -971,6 +979,9 @@ export default function DistributorPageContent({
           <form
             className="distributor-form-panel"
             onSubmit={handleSubmit}
+            onFocusCapture={(event) => {
+              if ((event.target as HTMLElement).matches("input, select, textarea")) trackInquiryEntry();
+            }}
             onInvalidCapture={handleNativeValidationFailure}
           >
             <h3>{content.form.title}</h3>

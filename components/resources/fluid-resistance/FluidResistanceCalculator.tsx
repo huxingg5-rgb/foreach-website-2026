@@ -1,5 +1,7 @@
 "use client";
 
+import { trackInteraction, trackResourceDownload } from "@/lib/analytics/track-event";
+
 import { useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 
@@ -1152,15 +1154,25 @@ export default function FluidResistanceCalculator({
     setSelectedRowId(null);
   }
 
+  function trackCalculation(outcome: "success" | "invalid" | "error") {
+    trackInteraction("tool_use", {
+      locale, sourceSection: "fluid_resistance",
+      action: calculationMode === "已知流量（求压降）" ? "calculate_pressure_drop" : "calculate_flow",
+      outcome,
+    });
+  }
+
   function runCalculation() {
     const normalizedRows = rows
       .map((row) => ({ ...row, type: normalizedType(row.type) }));
 
     if (!normalizedRows.length) {
+      trackCalculation("invalid");
       window.alert(t("Enter valid fluid-path data.", "请输入有效的管路数据"));
       return;
     }
     if (!validateRows(normalizedRows)) {
+      trackCalculation("invalid");
       setCalculation(null);
       return;
     }
@@ -1199,6 +1211,7 @@ export default function FluidResistanceCalculator({
         cvModel,
       );
       if (solved.flow <= 0) {
+        trackCalculation("error");
         window.alert(
           t(
             "The calculation did not converge. Check the input parameters.",
@@ -1291,6 +1304,7 @@ export default function FluidResistanceCalculator({
         : `${t("Reverse calculation complete. Flow =", "反算完成！流量 =")} ${calculator.fmt_num(currentFlow, 3)} ml/min, ${t("actual pressure drop =", "实际压降 =")} ${calculator.fmt_num(systemResult.total_dPt, 2)} Pa`;
 
     setCalculation({ summary, currentFlow, resultRows, statistics, pqData, polynomial });
+    trackCalculation("success");
     setActiveTab("results");
   }
 
@@ -1351,6 +1365,10 @@ export default function FluidResistanceCalculator({
     XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(summaryRows), t("Summary", "统计摘要"));
     XLSX.utils.book_append_sheet(workbook, XLSX.utils.json_to_sheet(pqRows), t("PQ Curve Data", "PQ 曲线数据"));
     XLSX.writeFile(workbook, t("fluid-resistance-calculation.xlsx", "管内流动阻尼计算结果.xlsx"));
+    trackResourceDownload({
+      locale, sourceSection: "fluid_resistance",
+      resourceType: "calculator_export", fileType: "xlsx", resourceId: "fluid_resistance_results",
+    });
   }
 
   return (

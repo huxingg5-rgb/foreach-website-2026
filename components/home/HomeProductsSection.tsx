@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getAnalyticsProductId, trackFilterApply } from "@/lib/analytics/track-event";
 import type { HomeProductsSectionData } from "@/data/home-products.types";
 import categoryTabStyles from "@/components/common/product-category-tab.module.css";
 import styles from "./EnglishHomeSections.module.css";
@@ -30,7 +31,14 @@ export default function HomeProductsSection({ data }: { data: HomeProductsSectio
           {data.groups.map((group) => (
             <button key={group.id} type="button" className={categoryTabStyles.tab}
               aria-pressed={activeGroup === group.id} aria-controls="home-product-grid"
-              onClick={() => setActiveGroup(group.id)}>{group.label}</button>
+              onClick={() => {
+                if (activeGroup === group.id) return;
+                setActiveGroup(group.id);
+                trackFilterApply({
+                  locale: data.locale, filterCategory: "home_catalog", filterName: "product_group",
+                  filterValue: group.id, sourceSection: "home_catalog",
+                });
+              }}>{group.label}</button>
           ))}
           </div>
           <div className={styles.catalogNote}>
@@ -40,6 +48,9 @@ export default function HomeProductsSection({ data }: { data: HomeProductsSectio
         <div id="home-product-grid" className={styles.productGrid}>
           {products.map((product) => (
             <Link key={product.id} href={product.href} prefetch={false} className={styles.product}
+              data-analytics-section="home_catalog"
+              data-analytics-product-id={!product.illustrative ? getAnalyticsProductId(product.href) : undefined}
+              data-analytics-product-name={!product.illustrative ? product.name : undefined}
               aria-label={(product.illustrative ? copy.discuss : copy.explore).replace('{name}', product.name)}>
               <div className={`${styles.visual} ${product.id === "assembly" ? styles.visualCoverAssembly : product.id === "tube" ? styles.visualCoverTubing : ""}`}>
                 <Image src={product.image} alt={product.illustrative ? copy.conceptAlt : product.imageAlt ?? `${product.name} — FOREACH`}

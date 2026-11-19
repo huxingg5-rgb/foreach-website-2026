@@ -1,10 +1,14 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import {
+  getAnalyticsProductId,
+  getAnalyticsSourceSection,
   trackContactClick,
+  trackInteraction,
+  trackProductSelect,
   trackContentSelect,
   trackResourceDownload,
   trackResourceView,
@@ -38,19 +42,6 @@ function safeDecode(value: string) {
   } catch {
     return value;
   }
-}
-
-function getSourceSection(element: Element) {
-  const explicitSection = element.closest<HTMLElement>("[data-analytics-section]")
-    ?.dataset.analyticsSection;
-
-  if (explicitSection) return explicitSection;
-  if (element.closest("header")) return "site_header";
-  if (element.closest("footer")) return "site_footer";
-  if (element.closest("[class*='product']")) return "product_content";
-  if (element.closest("[class*='resource']")) return "resource_content";
-  if (element.closest("[class*='contact']")) return "contact_content";
-  return "page_content";
 }
 
 function getResourceType(pathname: string) {
@@ -100,6 +91,7 @@ type ResourceAction = "view" | "download";
 export default function AnalyticsInteractionTracker() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
+  const playedVideos = useRef(new WeakSet<HTMLVideoElement>());
 
   useEffect(() => {
     function handleDocumentClick(event: MouseEvent) {
@@ -107,6 +99,23 @@ export default function AnalyticsInteractionTracker() {
       if (!(target instanceof Element)) return;
 
       if (target.closest('[data-analytics-skip="true"]')) return;
+
+      const marked = target.closest<HTMLElement>("[data-analytics-product-id], [data-analytics-hero-action]");
+      if (marked && !marked.matches(":disabled, [aria-disabled='true']")) {
+        const sourceSection = getAnalyticsSourceSection(marked);
+        if (marked.dataset.analyticsHeroAction) {
+          trackInteraction("home_hero_select", {
+            locale, sourceSection, action: marked.dataset.analyticsHeroAction,
+          });
+        }
+        if (marked.dataset.analyticsProductId) {
+          trackProductSelect({
+            locale, sourceSection, listId: sourceSection,
+            productId: marked.dataset.analyticsProductId,
+            productName: marked.dataset.analyticsProductName,
+          });
+        }
+      }
 
       const resourceActionElement =
         target.closest<HTMLElement>("[data-analytics-resource-action]");
@@ -123,7 +132,7 @@ export default function AnalyticsInteractionTracker() {
       const sourceElement = resourceActionElement ?? anchor;
       if (!sourceElement) return;
 
-      const sourceSection = getSourceSection(sourceElement);
+      const sourceSection = getAnalyticsSourceSection(sourceElement);
       const lowerHref = rawHref.toLowerCase();
 
       if (lowerHref.startsWith("mailto:")) {
@@ -166,7 +175,9 @@ export default function AnalyticsInteractionTracker() {
 
       if (anchor && /^\/contact(?:\/|$)/.test(normalizedPath)) {
         trackContactClick({
-          contactChannel: "contact_form",
+          contactChannel: /^\/contact\/distributor(?:\/|$)/.test(normalizedPath)
+            ? "distributor"
+            : "contact_form",
           sourceSection,
           locale,
         });
@@ -217,6 +228,15 @@ export default function AnalyticsInteractionTracker() {
         return;
       }
 
+      if (!marked?.dataset.analyticsProductId && anchor?.closest("main") &&
+          url?.origin === window.location.origin && normalizedPath.startsWith("/products/") &&
+          /^\/(?:applications|resources\/(?:technical-articles|installation-guide))\//.test(normalizedCurrentPath)) {
+        trackProductSelect({
+          locale, sourceSection, listId: sourceSection,
+          productId: getAnalyticsProductId(normalizedPath),
+        });
+      }
+
       const contentType = getContentType(normalizedPath);
       if (!contentType || normalizedPath === normalizedCurrentPath) return;
 
@@ -232,8 +252,23 @@ export default function AnalyticsInteractionTracker() {
       });
     }
 
+    function handleVideoPlaying(event: Event) {
+      const video = event.target;
+      if (!(video instanceof HTMLVideoElement) || !video.dataset.analyticsVideoId ||
+          playedVideos.current.has(video)) return;
+      playedVideos.current.add(video);
+      trackInteraction("video_play", {
+        locale, sourceSection: getAnalyticsSourceSection(video),
+        resourceId: video.dataset.analyticsVideoId, action: "html5",
+      });
+    }
+
     document.addEventListener("click", handleDocumentClick);
-    return () => document.removeEventListener("click", handleDocumentClick);
+    document.addEventListener("playing", handleVideoPlaying, true);
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+      document.removeEventListener("playing", handleVideoPlaying, true);
+    };
   }, [locale, pathname]);
 
   return null;

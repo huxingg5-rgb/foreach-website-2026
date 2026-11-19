@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { FlangedConfiguration } from "@/data/products/configurator/flanged-tubing-configurations";
 import { readPdfAttachment, type GeneratedPdfAttachment } from "@/lib/inquiry/pdf-attachments";
 import { prepareFlangedPdfAttachment } from "./flanged-tubing-attachments";
+import { trackResourceDownload } from "@/lib/analytics/track-event";
 import { downloadDrawingFile } from "./flanged-tubing-drawing";
 import FlangedTubingDrawingDialog from "./FlangedTubingDrawingDialog";
 import styles from "./ConfigurationPdfAttachments.module.css";
@@ -40,7 +41,13 @@ export default function ConfigurationPdfAttachments({ entries, pending, error, o
   const [downloadError, setDownloadError] = useState("");
   async function download(attachment: GeneratedPdfAttachment) {
     setDownloadError("");
-    try { downloadDrawingFile(await readPdfAttachment(attachment), attachment.name); }
+    try {
+      downloadDrawingFile(await readPdfAttachment(attachment), attachment.name);
+      trackResourceDownload({
+        locale, sourceSection: "configuration_attachments",
+        resourceType: "2d_drawing", fileType: "pdf", resourceId: "configuration_pdf",
+      });
+    }
     catch (cause) { setDownloadError(assemblyText(cause instanceof Error ? cause.message : "附件读取失败，请重试。", locale)); }
   }
   return assemblyView(<section className={styles.field} aria-label="配置图纸附件">
@@ -52,7 +59,13 @@ export default function ConfigurationPdfAttachments({ entries, pending, error, o
     </div>)}
     {error || downloadError ? <p className={styles.error} role="alert"><span translate="no">{error || downloadError}</span> {onRetry ? <button type="button" disabled={disabled} onClick={onRetry}>重试</button> : null}</p> : null}
     {entries.length > 1 ? <p>提交时会合并为一个 PDF 图纸包，保留各配置的全部页面。</p> : null}
-    {entries.length > 1 && packageFile ? <div className={styles.file}><div><span>提交附件：<span translate="no">{packageFile.name}</span></span><small>{(packageFile.size / 1024).toFixed(1)} KB</small></div><button type="button" disabled={disabled} onClick={() => downloadDrawingFile(packageFile, packageFile.name)}>下载图纸包</button></div> : null}
-    {preview ? <FlangedTubingDrawingDialog locale={preview.locale} record={preview.record} onClose={() => setPreview(null)} /> : null}
+    {entries.length > 1 && packageFile ? <div className={styles.file}><div><span>提交附件：<span translate="no">{packageFile.name}</span></span><small>{(packageFile.size / 1024).toFixed(1)} KB</small></div><button type="button" disabled={disabled} onClick={() => {
+      downloadDrawingFile(packageFile, packageFile.name);
+      trackResourceDownload({
+        locale, sourceSection: "configuration_attachments",
+        resourceType: "drawing_package", fileType: "pdf", resourceId: "configuration_drawing_package",
+      });
+    }}>下载图纸包</button></div> : null}
+    {preview ? <FlangedTubingDrawingDialog locale={preview.locale} record={preview.record} sourceSection="configuration_attachments" onClose={() => setPreview(null)} /> : null}
   </section>, locale);
 }

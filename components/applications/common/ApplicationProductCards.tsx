@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getAnalyticsProductId } from "@/lib/analytics/track-event";
 import styles from "./ApplicationProductCards.module.css";
 
 export type ApplicationProductCard = {
@@ -20,7 +21,10 @@ export default function ApplicationProductCards({ products, viewDetails }: {
   return <div className={styles.productLinks} data-application-product-cards>
     <ul className={styles.cards}>
       {products.map(product => <li key={`${product.href}-${product.title}`}>
-        <Link className={styles.card} href={product.href} prefetch={false}>
+        <Link className={styles.card} href={product.href} prefetch={false}
+          data-analytics-section="application_products"
+          data-analytics-product-id={getAnalyticsProductId(product.href)}
+          data-analytics-product-name={product.title}>
           <div className={styles.image} data-application-product-image>
             <div className={styles.imageInner}>
               <Image src={product.imageSrc} alt={product.imageAlt || product.title} fill sizes="(max-width: 600px) 100vw, 280px" style={product.imageScale ? { transform: `scale(${product.imageScale})` } : undefined} />

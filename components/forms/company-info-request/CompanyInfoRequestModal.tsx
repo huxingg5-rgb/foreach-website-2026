@@ -279,6 +279,7 @@ interface CompanyInfoRequestModalProps {
   analyticsFormId?: string;
   analyticsFormType?: string;
   analyticsSourceSection?: string;
+  analyticsProductId?: string;
 
   /* 关闭弹窗 */
   onClose: () => void;
@@ -328,6 +329,7 @@ export default function CompanyInfoRequestModal({
   analyticsFormId = "company_info_request_form",
   analyticsFormType = "resource_request",
   analyticsSourceSection = "company_info_request_modal",
+  analyticsProductId,
   onClose,
   onSubmitPreview,
 }: CompanyInfoRequestModalProps) {
@@ -431,6 +433,7 @@ export default function CompanyInfoRequestModal({
         formId: analyticsFormId,
         formType: analyticsFormType,
         sourceSection: analyticsSourceSection,
+        productId: analyticsProductId,
         locale,
         itemCount: items.length,
       });
@@ -462,6 +465,7 @@ export default function CompanyInfoRequestModal({
       formId: analyticsFormId,
       formType: analyticsFormType,
       sourceSection: analyticsSourceSection,
+      productId: analyticsProductId,
       locale,
       errorType: "validation_error",
       submissionStage: "client_validation",
@@ -536,6 +540,7 @@ export default function CompanyInfoRequestModal({
           formId: analyticsFormId,
           formType: analyticsFormType,
           sourceSection: analyticsSourceSection,
+          productId: analyticsProductId,
           locale,
           errorType: "captcha_error",
           submissionStage: "email_verification",
@@ -553,6 +558,7 @@ export default function CompanyInfoRequestModal({
           formId: analyticsFormId,
           formType: analyticsFormType,
           sourceSection: analyticsSourceSection,
+          productId: analyticsProductId,
           locale,
           errorType: "captcha_error",
           submissionStage: "email_verification",
@@ -591,6 +597,7 @@ export default function CompanyInfoRequestModal({
         formId: analyticsFormId,
         formType: analyticsFormType,
         sourceSection: analyticsSourceSection,
+        productId: analyticsProductId,
         locale,
       });
       formStartedRef.current = false;
@@ -632,6 +639,7 @@ export default function CompanyInfoRequestModal({
         formId: analyticsFormId,
         formType: analyticsFormType,
         sourceSection: analyticsSourceSection,
+        productId: analyticsProductId,
         locale,
         errorType: analyticsErrorType,
         submissionStage: "api_submit",

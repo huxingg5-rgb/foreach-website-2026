@@ -16,7 +16,8 @@ export default function ArticleRelatedProducts({ products, locale, title }: {
     <div className={styles.sticky}>
       <h2 className={styles.heading}>{title ?? ui.relatedProducts}</h2>
       <div className={styles.cards}>
-        {products.map(product => <Link className={styles.card} href={product.href} key={product.id}>
+        {products.map(product => <Link className={styles.card} href={product.href} key={product.id}
+          data-analytics-section="article_sidebar_products" data-analytics-product-id={product.id} data-analytics-product-name={product.title}>
           <div className={styles.image} data-fill={product.imageFill || undefined}
             data-natural-ratio={product.imageAspectRatio || undefined}
             style={product.imageAspectRatio ? { aspectRatio: product.imageAspectRatio } : undefined}>

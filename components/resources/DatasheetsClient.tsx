@@ -1,5 +1,8 @@
 "use client";
 
+import { getLocaleFromPathname } from "@/lib/i18n";
+import { trackFilterApply, trackSearchWithResults } from "@/lib/analytics/track-event";
+
 /* =========================================================
    DatasheetsClient.tsx
    恒永达官网｜资源中心 - 规格书下载客户端组件
@@ -26,7 +29,7 @@
 ========================================================= */
 
 import BottomCtaButton from "@/components/common/BottomCtaButton";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
@@ -143,8 +146,8 @@ export default function DatasheetsClient({
      3. searchableText 中包含标题、标签、说明、关键词、语言、版本、更新时间
   ========================================================= */
 
-  const filteredItems = useMemo(() => {
-    const keyword = normalizeText(searchKeyword);
+  function filterItems(value: string) {
+    const keyword = normalizeText(value);
 
     return datasheetItems.filter((item) => {
       const categoryMatched =
@@ -158,7 +161,8 @@ export default function DatasheetsClient({
 
       return categoryMatched && keywordMatched;
     });
-  }, [activeCategory, searchKeyword, datasheetItems]);
+  }
+  const filteredItems = filterItems(searchKeyword);
 
   /* 字段分隔符：中文默认使用 ： */
   const fieldSeparator = pageText.labels.fieldSeparator ?? "：";
@@ -217,7 +221,13 @@ export default function DatasheetsClient({
       <ResourceSearchBar
         value={searchKeyword}
         onChange={setSearchKeyword}
-        onSearch={setSearchKeyword}
+        onSearch={(value) => {
+          setSearchKeyword(value);
+          trackSearchWithResults({
+            searchTerm: value, searchLocation: "datasheet_library",
+            locale: getLocaleFromPathname(window.location.pathname), resultCount: filterItems(value).length,
+          });
+        }}
         placeholder={pageText.search.placeholder}
         searchButtonText={pageText.search.buttonText}
         showRecentKeywords={false}
@@ -242,7 +252,14 @@ export default function DatasheetsClient({
                 }`}
                 type="button"
                 key={item.value}
-                onClick={() => setActiveCategory(item.value)}
+                onClick={() => {
+                  if (item.value === activeCategory) return;
+                  setActiveCategory(item.value);
+                  trackFilterApply({
+                    locale: getLocaleFromPathname(window.location.pathname), filterCategory: "datasheet_library",
+                    filterName: "product_category", filterValue: item.value, sourceSection: "datasheet_library",
+                  });
+                }}
               >
                 {item.label}
               </button>

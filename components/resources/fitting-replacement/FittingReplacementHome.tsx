@@ -1,5 +1,7 @@
 "use client";
 
+import { trackInteraction, trackProductSelect } from "@/lib/analytics/track-event";
+
 import { useEffect, useMemo, useState } from "react";
 
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
@@ -164,8 +166,16 @@ export default function FittingReplacementHome({
 
   function handleSearchChange(value: string) {
     setSearchValue(value);
-    setSubmittedKeyword(value.trim());
+    const keyword = value.trim();
+    setSubmittedKeyword(keyword);
     setCurrentPage(1);
+    if (keyword) {
+      const resultCount = findProductsByCompatibleModel(data.products, keyword).length;
+      trackInteraction("tool_use", {
+        locale: pageLocale, sourceSection: "fitting_replacement", action: "lookup",
+        outcome: resultCount ? "success" : "no_results", resultCount,
+      });
+    }
   }
 
   function handleOpenDetail(product: FittingReplacementProduct) {
@@ -176,6 +186,10 @@ export default function FittingReplacementHome({
 
     if (!detailHref) return;
 
+    trackProductSelect({
+      locale: pageLocale, sourceSection: "fitting_replacement", listId: "fitting_replacement",
+      productId: product.productCode,
+    });
     window.open(detailHref, "_blank", "noopener,noreferrer");
   }
 

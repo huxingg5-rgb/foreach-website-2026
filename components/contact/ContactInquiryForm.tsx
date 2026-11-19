@@ -30,6 +30,7 @@ import {
   type ContactFormState,
 } from "@/components/contact/buildContactPdfHtml";
 import {
+  trackBeginInquiry,
   trackFormStart,
   trackInquirySubmitError,
   trackLeadGenerated,
@@ -48,7 +49,9 @@ type ContactInquiryFormProps = {
   variant?: "page" | "modal";
   onSuccessClose?: () => void;
   onDraftStart?: () => void;
+  analyticsFormId?: string;
   analyticsSourceSection?: string;
+  onAnalyticsStart?: () => void;
 };
 
 type InquiryApiResponse = {
@@ -510,7 +513,9 @@ export default function ContactInquiryForm({
   variant = "page",
   onSuccessClose,
   onDraftStart,
+  analyticsFormId = "contact_inquiry_form",
   analyticsSourceSection = "contact_form_section",
+  onAnalyticsStart,
 }: ContactInquiryFormProps) {
   const [formData, setFormData] = useState<ContactFormState>(() =>
     ({
@@ -544,6 +549,7 @@ export default function ContactInquiryForm({
 
   const [referenceId, setReferenceId] = useState("");
   const formStartedRef = useRef(false);
+  const inquiryEnteredRef = useRef(false);
   const nativeValidationReportedRef = useRef(false);
   const successRef = useRef<HTMLDivElement>(null);
 
@@ -557,13 +563,29 @@ export default function ContactInquiryForm({
     return document.documentElement.lang || "zh-CN";
   }
 
+  function trackInquiryEntry() {
+    if (variant !== "page" || inquiryEnteredRef.current) return;
+    inquiryEnteredRef.current = true;
+    if (onAnalyticsStart) {
+      onAnalyticsStart();
+      return;
+    }
+    trackBeginInquiry({
+      formId: analyticsFormId,
+      formType: "general_inquiry",
+      sourceSection: analyticsSourceSection,
+      locale: getAnalyticsLocale(),
+    });
+  }
+
   function trackFirstFormInteraction() {
     if (formStartedRef.current) return;
 
     formStartedRef.current = true;
+    trackInquiryEntry();
     onDraftStart?.();
     trackFormStart({
-      formId: "contact_inquiry_form",
+      formId: analyticsFormId,
       formType: "general_inquiry",
       sourceSection: analyticsSourceSection,
       locale: getAnalyticsLocale(),
@@ -575,7 +597,7 @@ export default function ContactInquiryForm({
     submissionStage: string,
   ) {
     trackInquirySubmitError({
-      formId: "contact_inquiry_form",
+      formId: analyticsFormId,
       formType: "general_inquiry",
       sourceSection: analyticsSourceSection,
       locale: getAnalyticsLocale(),
@@ -1104,12 +1126,13 @@ export default function ContactInquiryForm({
 
       setShowSuccessModal(true);
       trackLeadGenerated({
-        formId: "contact_inquiry_form",
+        formId: analyticsFormId,
         formType: "general_inquiry",
         sourceSection: analyticsSourceSection,
         locale: currentLang,
       });
       formStartedRef.current = false;
+      inquiryEnteredRef.current = false;
     } catch (error) {
       const message =
         getInquiryApiErrorMessage(
@@ -1189,6 +1212,9 @@ export default function ContactInquiryForm({
       <form
         className="contact-form"
         onSubmit={handleSubmit}
+        onFocusCapture={(event) => {
+          if ((event.target as HTMLElement).matches("input, select, textarea")) trackInquiryEntry();
+        }}
         onInvalidCapture={handleNativeValidationFailure}
       >
         <div className="contact-form-grid">

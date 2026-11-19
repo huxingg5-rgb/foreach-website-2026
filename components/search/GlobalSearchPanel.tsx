@@ -16,6 +16,7 @@ import {
   type SearchModule,
 } from "@/components/search/global-search-index";
 import { getInternationalUiText } from "@/lib/international-ui";
+import { getAnalyticsProductId, trackProductSelect, trackSearchWithResults } from "@/lib/analytics/track-event";
 import type { LocaleCode } from "@/lib/i18n";
 
 type GlobalSearchPanelProps = {
@@ -546,6 +547,19 @@ export default function GlobalSearchPanel({
     0
   );
 
+  const lastTrackedSearch = useRef("");
+  useEffect(() => {
+    if (!isOpen || !queryIsLongEnough) {
+      lastTrackedSearch.current = "";
+      return;
+    }
+    const term = debouncedQuery.trim();
+    const key = `${locale}:${term}`;
+    if (loadState !== "ready" || !items || query.trim() !== term || key === lastTrackedSearch.current) return;
+    lastTrackedSearch.current = key;
+    trackSearchWithResults({ searchTerm: term, searchLocation: "global_search_overlay", locale, resultCount: totalCount });
+  }, [debouncedQuery, isOpen, items, loadState, locale, query, queryIsLongEnough, totalCount]);
+
   if (!isOpen || typeof document === "undefined") {
     return null;
   }
@@ -819,6 +833,12 @@ export default function GlobalSearchPanel({
                           data-analytics-section="global_search_results"
                           key={`${item.m}-${item.h}-${item.t}`}
                           onClick={(event) => {
+                            if (item.m === "products") {
+                              trackProductSelect({
+                                locale, listId: "global_search_overlay", sourceSection: "global_search_results",
+                                productId: getAnalyticsProductId(item.h), productName: item.t,
+                              });
+                            }
                             /*
                               MOBILE_SEARCH_LINK_FIX_20260713
 

@@ -278,6 +278,9 @@ export default function RelatedResourcesClient({
                   <Link
                     className={styles.relatedProductCard}
                     href={product.href}
+                    data-analytics-section="related_products"
+                    data-analytics-product-id={product.id}
+                    data-analytics-product-name={title}
                   >
                     <div className={styles.relatedProductImage}
                       data-natural-ratio={product.imageAspectRatio || undefined}

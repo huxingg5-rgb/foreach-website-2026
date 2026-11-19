@@ -81,6 +81,7 @@ function getYouTubeEmbedUrl(sourceUrl: string, autoplay: boolean) {
     return appendUrlParameters(sourceUrl, {
       autoplay: autoplay ? "1" : "0",
       rel: "0",
+      enablejsapi: "1",
     });
   }
 
@@ -93,7 +94,7 @@ function getYouTubeEmbedUrl(sourceUrl: string, autoplay: boolean) {
 
   return `https://www.youtube.com/embed/${videoId}?autoplay=${
     autoplay ? "1" : "0"
-  }&rel=0`;
+  }&rel=0&enablejsapi=1`;
 }
 
 function getBilibiliEmbedUrl(sourceUrl: string, autoplay: boolean) {
@@ -237,6 +238,8 @@ export default function TutorialVideoPlayerModal({
               key={`${guide.id}-${playRequestId}`}
               ref={videoRef}
               className="installation-guide-modal-video"
+              data-analytics-section="installation_guide_player"
+              data-analytics-video-id={guide.id}
               src={playerSource.src}
               controls
               autoPlay

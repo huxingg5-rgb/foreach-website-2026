@@ -200,6 +200,10 @@ export default function GlobalSelectionCartDrawer() {
   const [submissionItems, setSubmissionItems] = useState<SelectionCartItem[]>([]);
   const isEaQuoteRequest = submissionItems.some(item => item.eaPumpConfiguration);
   const defaultInquiryRequest = defaultInquirySubmission(submissionItems);
+  const analyticsInquiryProductId = (entries: SelectionCartItem[]) => {
+    const item = entries.length === 1 ? entries[0] : undefined;
+    return item && !item.flangedConfiguration ? item.productCode : undefined;
+  };
   const configurationPdfs = useCartPdfAttachments(submissionItems, isDrawingRequestModalOpen, locale);
   const configurationPdfEntries = submissionItems.flatMap(item => item.flangedConfiguration && item.drawingAttachment
     ? [{ record: item.flangedConfiguration, attachment: item.drawingAttachment }] : []);
@@ -312,6 +316,7 @@ export default function GlobalSelectionCartDrawer() {
         sourceSection: "global_selection_cart",
         locale,
         itemCount: items.length,
+        productId: analyticsInquiryProductId(orderedItems),
       });
     }
 
@@ -933,6 +938,7 @@ export default function GlobalSelectionCartDrawer() {
         analyticsFormId={defaultInquiryRequest?.formId || (isEaQuoteRequest ? "ea_configuration_inquiry_form" : "drawing_request_form")}
         analyticsFormType={defaultInquiryRequest?.formType || (isEaQuoteRequest ? "product_inquiry" : "drawing_request")}
         analyticsSourceSection="global_selection_cart"
+        analyticsProductId={analyticsInquiryProductId(submissionItems)}
         onClose={() => {
           setIsDrawingRequestModalOpen(false);
           setDrawingRequestFiles([]);

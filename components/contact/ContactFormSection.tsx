@@ -10,7 +10,7 @@ type ContactFormSectionProps = {
   id?: string;
   className?: string;
   showHeading?: boolean;
-  formProps?: Pick<ComponentProps<typeof ContactInquiryForm>, "initialValues" | "idPrefix" | "variant" | "analyticsSourceSection">;
+  formProps?: Pick<ComponentProps<typeof ContactInquiryForm>, "initialValues" | "idPrefix" | "variant" | "analyticsFormId" | "analyticsSourceSection" | "onAnalyticsStart">;
 };
 
 export default function ContactFormSection({

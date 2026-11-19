@@ -30,6 +30,10 @@ export default function HomeContactInquirySection({
         data={data}
         id="form"
         className="home-contact-inquiry-form-section"
+        formProps={{
+          analyticsFormId: "home_inquiry_form",
+          analyticsSourceSection: "home_inquiry_section",
+        }}
       />
     </div>
   );

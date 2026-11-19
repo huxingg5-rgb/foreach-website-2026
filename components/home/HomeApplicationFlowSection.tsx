@@ -265,6 +265,8 @@ export default function HomeApplicationFlowSection({
                 <Link
                   key={tag.key}
                   href={getHomeFlowProductHref(tag.key, locale)}
+                  data-analytics-section="home_application_flow"
+                  data-analytics-product-id={tag.key}
                   prefetch={false}
                   className="home-flow-inline-link"
                   aria-label={getHomeFlowText(tag.label, locale)}

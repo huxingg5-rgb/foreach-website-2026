@@ -9,7 +9,7 @@ import {
   useRef,
 } from "react";
 
-import { flushPendingAnalyticsEvents } from "@/lib/analytics/track-event";
+import { flushPendingAnalyticsEvents, getAnalyticsPageUrl } from "@/lib/analytics/track-event";
 import {
   COOKIE_CONSENT_EVENT_NAME,
   readCookieConsent,
@@ -69,28 +69,37 @@ function GoogleAnalyticsInner() {
       return;
     }
 
-    const pagePath = `${window.location.pathname}${window.location.search}${window.location.hash}`;
-    if (previousPageRef.current === pagePath) return;
-
     if (pageViewTimerRef.current !== null) {
       window.clearTimeout(pageViewTimerRef.current);
+      pageViewTimerRef.current = null;
     }
+
+    const pageLocation = getAnalyticsPageUrl(window.location.href);
+    if (previousPageRef.current === pageLocation) return;
 
     pageViewTimerRef.current = window.setTimeout(() => {
       pageViewTimerRef.current = null;
 
       if (
         typeof window.gtag !== "function" ||
-        previousPageRef.current === pagePath
+        previousPageRef.current === pageLocation
       ) {
         return;
       }
 
-      previousPageRef.current = pagePath;
+      const pageReferrer = previousPageRef.current || getAnalyticsPageUrl(document.referrer);
+      previousPageRef.current = pageLocation;
+      window.gtag("config", measurementId, {
+        update: true,
+        send_page_view: false,
+        page_location: pageLocation,
+        page_referrer: pageReferrer,
+      });
       window.gtag("event", "page_view", {
         page_title: document.title,
-        page_location: window.location.href,
-        page_path: pagePath,
+        page_location: pageLocation,
+        page_referrer: pageReferrer,
+        page_path: new URL(pageLocation).pathname,
       });
     }, 0);
   }, []);
@@ -110,6 +119,8 @@ function GoogleAnalyticsInner() {
     updateConsentMode(analyticsGrantedRef.current);
     window.gtag("config", measurementId, {
       send_page_view: false,
+      page_location: getAnalyticsPageUrl(window.location.href),
+      page_referrer: getAnalyticsPageUrl(document.referrer),
     });
 
     configuredRef.current = true;
@@ -136,21 +147,15 @@ function GoogleAnalyticsInner() {
       analyticsGrantedRef.current = nextGranted;
     }
 
-    function handleHashChange() {
-      schedulePageView();
-    }
-
     window.addEventListener(COOKIE_CONSENT_EVENT_NAME, handleConsentUpdated);
-    window.addEventListener("hashchange", handleHashChange);
     return () => {
       window.removeEventListener(COOKIE_CONSENT_EVENT_NAME, handleConsentUpdated);
-      window.removeEventListener("hashchange", handleHashChange);
 
       if (pageViewTimerRef.current !== null) {
         window.clearTimeout(pageViewTimerRef.current);
       }
     };
-  }, [configureAnalytics, schedulePageView]);
+  }, [configureAnalytics]);
 
   useEffect(() => {
     schedulePageView();

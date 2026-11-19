@@ -36,7 +36,7 @@ import TutorialVideoPlayerModal, {
   getGuidePlayerSource,
 } from "@/components/resources/installation-guide/TutorialVideoPlayerModal";
 import { getRelatedResourcesText } from "@/data/resources/related-resources/related-resources.intl";
-import { trackResourceView } from "@/lib/analytics/track-event";
+import { trackFilterApply, trackResourceView, trackSearchWithResults } from "@/lib/analytics/track-event";
 import {
   hasSharedRelationKey,
   normalizeRelationKey,
@@ -259,9 +259,8 @@ export default function InstallationGuideClient({
      教程筛选
   ========================================================= */
 
-  const filteredGuides = useMemo(() => {
-    const nextKeyword =
-      keyword.trim().toLowerCase();
+  const filterGuides = useCallback((value: string) => {
+    const nextKeyword = value.trim().toLowerCase();
 
     return pageData.guides.filter(
       (guide: InstallationGuideCard) => {
@@ -299,12 +298,8 @@ export default function InstallationGuideClient({
         return matchFilter && matchKeyword && matchRelationKey;
       },
     );
-  }, [
-    activeFilter,
-    keyword,
-    pageData.guides,
-    relationKey,
-  ]);
+  }, [activeFilter, pageData.guides, relationKey]);
+  const filteredGuides = useMemo(() => filterGuides(keyword), [filterGuides, keyword]);
 
   const hasFilters = activeFilter.type !== "all" || Boolean(keyword.trim()) || Boolean(relationKey);
   const filterKey = JSON.stringify([activeFilter.type, activeFilter.id, keyword, relationKey]);
@@ -322,6 +317,12 @@ export default function InstallationGuideClient({
     item: InstallationGuideTreeItem,
   ) {
     setFilteredPagination({ key: "", page: 1 });
+    if (activeFilter.id !== item.id || activeFilter.type !== item.type) {
+      trackFilterApply({
+        locale: pageData.locale, filterCategory: "installation_guides",
+        filterName: item.type, filterValue: item.id, sourceSection: "installation_guides",
+      });
+    }
     setActiveFilter({
       type: item.type,
       id: item.id,
@@ -343,6 +344,12 @@ export default function InstallationGuideClient({
     childId: string,
   ) {
     setFilteredPagination({ key: "", page: 1 });
+    if (activeFilter.id !== childId || activeFilter.type !== "series") {
+      trackFilterApply({
+        locale: pageData.locale, filterCategory: "installation_guides",
+        filterName: "series", filterValue: childId, sourceSection: "installation_guides",
+      });
+    }
     setActiveFilter({
       type: "series",
       id: childId,
@@ -436,7 +443,13 @@ export default function InstallationGuideClient({
       <ResourceSearchBar
         value={keyword}
         onChange={handleSearch}
-        onSearch={handleSearch}
+        onSearch={(value) => {
+          handleSearch(value);
+          trackSearchWithResults({
+            searchTerm: value, searchLocation: "installation_guides",
+            locale: pageData.locale, resultCount: filterGuides(value).length,
+          });
+        }}
         placeholder={pageData.search.placeholder}
         searchButtonText={pageData.search.buttonText}
         recentLabel={pageData.search.recentLabel}

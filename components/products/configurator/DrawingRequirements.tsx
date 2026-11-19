@@ -1,5 +1,6 @@
 "use client";
 
+import { getAnalyticsSourceSection, trackInteraction } from "@/lib/analytics/track-event";
 import { useId } from "react";
 import { getDrawingRequirementsCopy, normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import styles from "../detail/PistonCadRequestModal.module.css";
@@ -14,7 +15,15 @@ export default function DrawingRequirements({ locale, value, onChange, disabled 
     <div>
       {(["2d", "3d"] as const).map(type => <label key={type} htmlFor={`${id}-${type}`}>
         <input id={`${id}-${type}`} type="checkbox" value={type} checked={value.includes(type)}
-          onChange={event => onChange(normalizeDrawingTypes(event.target.checked ? [...value, type] : value.filter(item => item !== type)))} />
+          onChange={event => {
+            const { checked } = event.currentTarget;
+            onChange(normalizeDrawingTypes(checked ? [...value, type] : value.filter(item => item !== type)));
+            if (checked) {
+              trackInteraction("drawing_request_select", {
+                locale, sourceSection: getAnalyticsSourceSection(event.currentTarget), action: type,
+              });
+            }
+          }} />
         <span>{type === "2d" ? copy.twoD : copy.threeD}</span>
       </label>)}
     </div>

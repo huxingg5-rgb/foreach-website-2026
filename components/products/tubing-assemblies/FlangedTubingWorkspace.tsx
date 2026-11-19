@@ -1,5 +1,7 @@
 "use client";
 
+import { trackInteraction } from "@/lib/analytics/track-event";
+
 import { drawingRequirementsLine, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import ConfiguratorButton from "@/components/products/configurator/ConfiguratorButton";
@@ -34,6 +36,16 @@ export default function FlangedTubingWorkspace({ locale = "zh", compact = false,
   const externalRequest = useMemo(() => open ? flangedWorkspaceRequest(store, entrySlug, requestDrawing, locale) : null, [open, store, entrySlug, requestDrawing, locale]);
   const activeEditor = editor ?? externalRequest?.editor ?? null;
   const activeDrawing = drawing ?? (editor ? null : externalRequest?.drawing) ?? null;
+  const editorOpen = Boolean(activeEditor);
+  const trackedEditor = useRef(false);
+  useEffect(() => {
+    if (editorOpen && !trackedEditor.current) {
+      trackInteraction("configurator_open", {
+        locale, sourceSection: "flanged_tubing_workspace", configurationType: "flanged_tubing",
+      });
+    }
+    trackedEditor.current = editorOpen;
+  }, [editorOpen, locale]);
   const [adding, setAdding] = useState<string | null>(null), [feedback, setFeedback] = useState("");
   const addInProgress = useRef(false);
   useEffect(() => scheduleFlangedAssemblyPreview(defaultAssemblyChoice(entrySlug)), [entrySlug]);
@@ -65,6 +77,10 @@ export default function FlangedTubingWorkspace({ locale = "zh", compact = false,
       const name = asNew && activeEditor.name === activeEditor.record?.name ? `${assemblyText("配置", locale)} ${latest.nextNumber}` : activeEditor.name;
       const result = saveFlangedConfiguration(latest, choice, name, asNew ? null : activeEditor.record?.id || null, undefined, undefined, drawings);
       window.localStorage.setItem(FLANGED_CONFIGURATION_STORAGE_KEY, JSON.stringify(result.store));
+      trackInteraction("configurator_confirm", {
+        locale, sourceSection: "flanged_tubing_workspace", configurationType: "flanged_tubing",
+        action: asNew ? "save_as" : "save",
+      });
       setStore(result.store); setError(""); if (compact) setExpandedId(result.record.id); onChoiceChange(result.record.choice); closeEditor(); return result.record;
     } catch (cause) { setError(cause instanceof DOMException ? "配置保存失败，请检查浏览器存储权限或可用空间。" : cause instanceof Error ? cause.message : "配置保存失败，请检查浏览器存储权限。"); return null; }
   }

@@ -80,11 +80,13 @@ export default function ContactPageContent({ data, locale }: ContactPageContentP
     data.form.requestTypes[0] ?? "",
   ); // 褰撳墠閫変腑鐨勯渶姹傜被鍨嬶紝榛樿鍙栭渶姹傜被鍨嬬涓€涓€夐」
   const inquiryStartedRef = useRef(false);
+  const [analyticsSourceSection, setAnalyticsSourceSection] = useState("contact_form_section");
 
   function trackContactFormEntry(sourceSection: string) {
     if (inquiryStartedRef.current) return;
 
     inquiryStartedRef.current = true;
+    setAnalyticsSourceSection(sourceSection);
     trackBeginInquiry({
       formId: "contact_inquiry_form",
       formType: "general_inquiry",
@@ -178,6 +180,10 @@ export default function ContactPageContent({ data, locale }: ContactPageContentP
       <ContactFormSection
         data={data}
         presetRequestType={selectedRequestType}
+        formProps={{
+          analyticsSourceSection,
+          onAnalyticsStart: () => trackContactFormEntry("contact_form_section"),
+        }}
       />
 
       {/* =====================================================

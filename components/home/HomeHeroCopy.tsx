@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 
 type HomeHeroCopyProps = {
   heading: "h1" | "h2";
+  analyticsSection: string;
   titleLine1: string;
   titleLine2?: string;
   description: string;
@@ -18,6 +19,7 @@ type HomeHeroCopyProps = {
 
 export default function HomeHeroCopy({
   heading: Heading,
+  analyticsSection,
   titleLine1,
   titleLine2,
   description,
@@ -38,10 +40,10 @@ export default function HomeHeroCopy({
       </Heading>
       <p className="home-hero-subtitle" data-home-hero-subtitle="true">{description}</p>
       <div className="home-hero-actions">
-        <Link href={primaryHref} className="home-hero-btn home-hero-btn-primary" tabIndex={inactive ? -1 : undefined}>
+        <Link href={primaryHref} data-analytics-section={analyticsSection} data-analytics-hero-action="primary_cta" className="home-hero-btn home-hero-btn-primary" tabIndex={inactive ? -1 : undefined}>
           {primaryLabel}
         </Link>
-        <Link href={secondaryHref} className="home-hero-btn home-hero-btn-secondary" tabIndex={inactive ? -1 : undefined}>
+        <Link href={secondaryHref} data-analytics-section={analyticsSection} data-analytics-hero-action="secondary_cta" className="home-hero-btn home-hero-btn-secondary" tabIndex={inactive ? -1 : undefined}>
           {secondaryLabel}
         </Link>
       </div>

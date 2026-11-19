@@ -50,6 +50,8 @@ export default function HomeCompanyVideo({ // 定义并导出 HomeCompanyVideo �
       <video
         ref={companyVideoRef}
         className="home-company-video-media"
+        data-analytics-section="home_company_video"
+        data-analytics-video-id="home_company_video"
         controls={!isCompanyVideoPosterVisible}
         preload="none"
         playsInline

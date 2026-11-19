@@ -154,6 +154,7 @@ import {
 import {
   trackBeginInquiry,
   trackContactClick,
+  trackInteraction,
   trackProductTabSelect,
   trackProductView,
   trackResourceView,
@@ -2291,7 +2292,36 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     setIsQuickConnectSeriesSelectorOpen(true);
   }
 
+  const openConfiguratorType = ([
+    [isEaInquiryOpen, "ea_piston_pump"],
+    [isStandaloneFittingSelectorOpen, "standalone_fitting"],
+    [isHardTubeConfiguratorOpen, "hard_tube_fitting"],
+    [isLuerPairSelectorOpen, "luer_pair"],
+    [isQuickConnectSeriesSelectorOpen, "quick_connect_model"],
+    [isQuickConnectPairConfiguratorOpen, "quick_connect_pair"],
+    [Boolean(openDetailModelConfiguratorId), "product_variant"],
+    [isTubingEditorOpen, "tubing"],
+  ] as const).find(([isOpen]) => isOpen)?.[1];
+  const previousConfiguratorType = useRef<typeof openConfiguratorType>(undefined);
+  useEffect(() => {
+    if (openConfiguratorType === previousConfiguratorType.current) return;
+    previousConfiguratorType.current = openConfiguratorType;
+    if (!openConfiguratorType) return;
+    trackInteraction("configurator_open", {
+      locale: analyticsLocale, sourceSection: "product_detail",
+      productId: analyticsProductId, configurationType: openConfiguratorType,
+    });
+  }, [openConfiguratorType, analyticsLocale, analyticsProductId]);
+
+  function trackConfigurationConfirmed(configurationType: string, action = "confirm") {
+    trackInteraction("configurator_confirm", {
+      locale: analyticsLocale, sourceSection: "product_detail",
+      productId: analyticsProductId, configurationType, action,
+    });
+  }
+
   function confirmQuickConnectSeriesModel(model: string) {
+    trackConfigurationConfirmed("quick_connect_model");
     const row = quickConnectSeriesRows.find(item => item.model === model);
     setQuickConnectSeriesModelSelection(model);
     setIsQuickConnectSeriesSelectorOpen(false);
@@ -2413,6 +2443,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
   function rememberFittingChoice(value: FittingConfigurationChoice, drawingTypes?: CadDrawingType[]) {
     if (!isValidFittingChoice(value)) return;
+    trackConfigurationConfirmed(value.kind.replaceAll("-", "_"));
     updateFittingConfigurations(current => saveFittingConfiguration(current, value, editingFittingConfigurationId, drawingTypes));
     setEditingFittingConfigurationId(null);
   }
@@ -3025,6 +3056,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
 
   function handleAddDrawing() {
+    trackInteraction("drawing_request_select", {
+      locale: analyticsLocale, sourceSection: "product_detail", productId: analyticsProductId,
+      action: "drawing_entry",
+    });
     if (isEaInquiryEnabled) {
       if (currentDetailCartItem) toggleDrawingNeed(currentDetailCartItem.id, !currentDetailCartItem.needDrawing);
       else { openEaInquiryEditor(false, true); }
@@ -3169,6 +3204,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
   function rememberDetailVariant(variant: ProductConfiguratorVariant, editingId: string | null = null, drawingTypes?: CadDrawingType[]) {
     if (!detailModelConfigurator?.variants.some(item => item.id === variant.id)) return;
+    trackConfigurationConfirmed("product_variant");
     updateDetailConfigurations(current => saveDetailConfiguration(current, variant.id, editingId, drawingTypes));
     setEditingDetailVariantId(null);
     setNewDetailConfiguration(false);
@@ -3234,6 +3270,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     saveEaPumpInquiryDraft(sourceSlug, configuration, quantity, drawings);
     const saved = readEaPumpInquiryDraft(sourceSlug);
     if (saved) {
+      trackConfigurationConfirmed("ea_piston_pump", "save");
       setEaInquiryDraft({ ...saved, slug: sourceSlug });
       const collection = saveEaPumpConfigurations(upsertEaPumpConfiguration(eaConfigurations, saved,
         isNewEaConfiguration ? null : eaConfigurations.activeId), sourceSlug);
@@ -3417,6 +3454,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           sourceType={detailCartSourceType}
           onClose={() => setIsStandaloneFittingSelectorOpen(false)}
           onConfirm={option => {
+            trackConfigurationConfirmed("standalone_fitting");
             setIsStandaloneFittingSelectorOpen(false);
             if (option.model !== String(data.foreachModel || data.model)) router.push(localizeInternalHref(option.detailHref, localePrefix), {scroll: false});
           }}
@@ -4368,7 +4406,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             {instrumentInquiryFamily === "ABD" ? (
               <AbdResourceViewer locale={configuratorLocale} tubeOdCode={abdPreviewTubeOd} onTubeOdChange={setAbdPreviewTubeOd} active={showProductResourceTabs} />
             ) : useSharedFittingResources || useProductResourceLayout ? (
-              <FittingResourceViewer locale={configuratorLocale} key={`${configuratorLocale}:${data.slug}`}
+              <FittingResourceViewer locale={configuratorLocale} analyticsProductId={analyticsProductId} key={`${configuratorLocale}:${data.slug}`}
                 drawingOnly={Boolean(pdm5Drawing)} productLayout={useProductResourceLayout}
                 controls={data.solenoidAuthoredContent ? <SolenoidVariantSelector slug={data.slug} locale={configuratorLocale} variant={solenoidVariant} onVariant={setSolenoidVariant} /> : undefined}
                 drawings={useProductResourceLayout ? [{

@@ -48,7 +48,7 @@ const SWIPE_MAX_PX = 80;
 const SWIPE_RATIO = 0.15;
 
 function withAutoplay(src: string) {
-  return `${src}${src.includes("?") ? "&" : "?"}autoplay=1`;
+  return `${src}${src.includes("?") ? "&" : "?"}autoplay=1&enablejsapi=1`;
 }
 
 type DragState = { pointerId: number; startX: number; startY: number; active: boolean };
@@ -233,7 +233,8 @@ export default function QuickConnectVideoShowcase({ title, groups, labels = DEFA
                       referrerPolicy="strict-origin-when-cross-origin"
                     />
                   ) : (
-                    <video src={video.src} poster={video.cover} controls autoPlay playsInline preload="metadata" />
+                    <video src={video.src} poster={video.cover} controls autoPlay playsInline preload="metadata"
+                      data-analytics-section="product_detail_videos" data-analytics-video-id={video.id} />
                   )
                 ) : (
                   <button

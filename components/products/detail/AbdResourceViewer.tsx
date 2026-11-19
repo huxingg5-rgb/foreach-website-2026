@@ -22,7 +22,7 @@ export default function AbdResourceViewer({ locale, tubeOdCode, onTubeOdChange, 
     ],
   };
   return <section className={styles.root} data-abd-resources="true" data-abd-model={model} aria-label={copy.preview}>
-    <FittingResourceViewer locale={locale} active={active} productLayout productSelection={selection}
+    <FittingResourceViewer locale={locale} active={active} productLayout productSelection={selection} analyticsProductId={model}
       drawings={[{ role: "abd", label: copy.drawing, model, url: drawingUrl }]}
       drawingUnavailableMessage={copy.missingDrawing}
       modelSource={cad ? { kind: "cad", props: { modelId: cad.viewerId, title: cad.model, locale } } : null} />

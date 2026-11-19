@@ -1,5 +1,6 @@
 "use client";
 
+import { trackProductTabSelect, trackResourceView } from "@/lib/analytics/track-event";
 import { fittingView } from "@/components/products/detail/fitting-view";
 import { fittingText } from "@/data/products/detail/fitting-ui.intl";
 import { getProductResourceCopy } from "@/data/products/detail/product-resource-copy";
@@ -37,7 +38,7 @@ function drawingPreviewHref(url: string) {
 }
 
 /** One activation lifecycle for every fitting detail, regardless of CAD renderer. */
-export default function FittingResourceViewer({ locale = "zh", drawings, modelSource, active, preview = false, drawingOnly = false, productLayout = false, productSelection, controls, drawingPreview, drawingUnavailableMessage }: {
+export default function FittingResourceViewer({ locale = "zh", drawings, modelSource, active, preview = false, drawingOnly = false, productLayout = false, productSelection, controls, drawingPreview, drawingUnavailableMessage, analyticsProductId }: {
   locale?: string;
   drawings: FittingDrawing[];
   modelSource: FittingModelSource;
@@ -49,6 +50,7 @@ export default function FittingResourceViewer({ locale = "zh", drawings, modelSo
   controls?: ReactNode;
   drawingPreview?: ReactNode;
   drawingUnavailableMessage?: string;
+  analyticsProductId?: string;
 }) {
   const id = useId();
   const copy = getProductResourceCopy(locale);
@@ -127,6 +129,18 @@ export default function FittingResourceViewer({ locale = "zh", drawings, modelSo
   const activate = (next: "2d" | "3d") => {
     manualChoice.current = true;
     cancelAutomatic.current?.();
+    if (analyticsProductId && next !== view) {
+      trackProductTabSelect({ locale, tabName: next, productId: analyticsProductId });
+      const available = next === "2d" ? Boolean(drawing?.url || drawingPreview) : hasModel;
+      if (available) {
+        trackResourceView({
+          locale, sourceSection: "product_resource_viewer", productId: analyticsProductId,
+          resourceId: [analyticsProductId, next, next === "2d" ? drawing?.role : undefined].filter(Boolean).join(":"),
+          resourceType: next === "2d" ? "2d_drawing" : "3d_model",
+          fileType: next === "2d" ? drawing?.url?.split(/[?#]/, 1)[0].split(".").at(-1) || "unknown" : "unknown",
+        });
+      }
+    }
     setView(next);
     setOpened(current => current[next] ? current : { ...current, [next]: true });
   };

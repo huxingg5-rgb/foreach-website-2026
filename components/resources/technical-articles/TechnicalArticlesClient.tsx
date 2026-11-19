@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { trackSearchWithResults } from "@/lib/analytics/track-event";
+
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import type { ComponentType } from "react";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
@@ -207,8 +209,8 @@ export default function TechnicalArticlesClient({
     return { primary, secondary };
   }, [pageData.articles, pageData.taxonomy]);
 
-  const filteredArticles = useMemo(() => {
-    const normalizedKeyword = keyword.trim().toLowerCase();
+  const filterArticles = useCallback((value: string) => {
+    const normalizedKeyword = value.trim().toLowerCase();
 
     return pageData.articles.filter((article) => {
       const matchCategory =
@@ -236,7 +238,8 @@ export default function TechnicalArticlesClient({
         (!normalizedKeyword || searchableText.includes(normalizedKeyword))
       );
     });
-  }, [activeFilter, keyword, pageData]);
+  }, [activeFilter, pageData]);
+  const filteredArticles = useMemo(() => filterArticles(keyword), [filterArticles, keyword]);
 
   const totalPages = Math.max(
     1,
@@ -347,7 +350,13 @@ export default function TechnicalArticlesClient({
         <ResourceSearchBar
           value={keyword}
           onChange={handleKeywordChange}
-          onSearch={handleKeywordChange}
+          onSearch={(value) => {
+            handleKeywordChange(value);
+            trackSearchWithResults({
+              searchTerm: value, searchLocation: "technical_articles",
+              locale: pageData.locale, resultCount: filterArticles(value).length,
+            });
+          }}
           placeholder={pageData.search.placeholder}
           searchButtonText={
             ui?.search ?? (pageData.locale === "zh-CN" ? "搜索" : "Search")

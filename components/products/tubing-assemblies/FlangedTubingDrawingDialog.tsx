@@ -1,5 +1,6 @@
 "use client";
 
+import { trackResourceDownload, trackResourceView } from "@/lib/analytics/track-event";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import ConfiguratorButton from "../configurator/ConfiguratorButton";
@@ -13,13 +14,27 @@ import { assemblyView } from "./assembly-view";
 import { assemblyText, assemblyHtmlLocale } from "@/data/products/configurator/tubing-assembly.intl";
 import styles from "./FlangedTubingWorkspace.module.css";
 
-export default function FlangedTubingDrawingDialog({ record, onClose, locale = "zh" }: { locale?: string; record: FlangedConfiguration; onClose: () => void }) {
+export default function FlangedTubingDrawingDialog({ record, onClose, locale = "zh", sourceSection = "flanged_tubing_workspace" }: {
+  locale?: string;
+  record: FlangedConfiguration;
+  onClose: () => void;
+  sourceSection?: string;
+}) {
   const [page, setPage] = useState(0), [busy, setBusy] = useState(false), [error, setError] = useState("");
   const ref = useRef<HTMLDialogElement>(null), closeRef = useRef<HTMLButtonElement>(null);
   const invalid = validateFlangedChoice(normalizeFlangedChoice(record.choice));
   const sheets = invalid ? [] : buildFlangedDrawingSheets(record, locale);
   const activePage = Math.min(page, Math.max(sheets.length - 1, 0));
   const template = getFlangedDrawingTemplate(record.choice);
+  const hasTrackedPreview = useRef(false);
+  useEffect(() => {
+    if (invalid || !sheets.length || hasTrackedPreview.current) return;
+    hasTrackedPreview.current = true;
+    trackResourceView({
+      locale, sourceSection,
+      resourceType: "2d_drawing", fileType: "pdf", resourceId: "flanged_tubing_generated_drawing",
+    });
+  }, [invalid, locale, sheets.length, sourceSection]);
   const filename = `${record.name}-R${record.revision}-${assemblyText("管组件矢量选型图", locale)}`;
   useEffect(() => {
     const focus = document.activeElement as HTMLElement | null, overflow = document.body.style.overflow;
@@ -30,7 +45,14 @@ export default function FlangedTubingDrawingDialog({ record, onClose, locale = "
   async function pdf() {
     if (invalid) { setError(invalid); return; }
     setBusy(true); setError("");
-    try { const bytes = await createFlangedDrawingPdf(sheets, filename); downloadDrawingFile(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }), `${filename}.pdf`); }
+    try {
+      const bytes = await createFlangedDrawingPdf(sheets, filename);
+      downloadDrawingFile(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }), `${filename}.pdf`);
+      trackResourceDownload({
+        locale, sourceSection,
+        resourceType: "2d_drawing", fileType: "pdf", resourceId: "flanged_tubing_generated_drawing",
+      });
+    }
     catch (error) { console.error("Flanged vector PDF export failed", error); setError("矢量 PDF 生成失败，请重试。"); }
     finally { setBusy(false); }
   }

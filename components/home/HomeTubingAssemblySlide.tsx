@@ -57,7 +57,7 @@ export default function HomeTubingAssemblySlide({ locale, active, reduceMotion, 
     <div className={styles.copy}>
       <h2>{copy.titleLine1}<br />{copy.titleLine2}</h2>
       <p>{copy.descriptionLine1}{locale === "zh-CN" ? null : " "}{copy.descriptionLine2}</p>
-      <Link className={styles.cta} href={replacePathLocale("/products/tubing-assemblies/flanged-tubing/details/", locale)}>{copy.button}</Link>
+      <Link className={styles.cta} data-analytics-section="home_hero_tubing_assembly" data-analytics-hero-action="tubing_assembly_cta" href={replacePathLocale("/products/tubing-assemblies/flanged-tubing/details/", locale)}>{copy.button}</Link>
     </div>
     <div className={styles.visual}>
       <div className={styles.artwork} role="group" aria-label={copy.drawingLabel} onFocusCapture={interact}>

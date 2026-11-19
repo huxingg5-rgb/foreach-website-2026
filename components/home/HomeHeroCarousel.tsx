@@ -112,6 +112,7 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
       <HomeHeroCopy
         className="home-hero-primary-copy"
         heading="h1"
+        analyticsSection="home_hero_main"
         titleLine1={copy.heroTitleLine1}
         titleLine2={copy.heroTitleLine2}
         description={copy.heroSubtitle}
@@ -131,6 +132,7 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
       <HomeHeroCopy
         className="home-hero-primary-copy"
         heading="h2"
+        analyticsSection="home_hero_fluid_resistance"
         titleLine1={heroText.flow.titleLine1}
         titleLine2={heroText.flow.titleLine2 || undefined}
         description={heroText.flow.description}
@@ -144,7 +146,10 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
       {slideNames.map((name, index) => <button key={name} type="button" className={styles.dot}
         disabled={!ready}
         aria-label={`${uiText.showBanner(index + 1)}${locale === "zh-CN" ? "：" : ": "}${name}`} aria-current={requested === index ? "true" : undefined}
-        data-active={requested === index} onClick={() => { if (index !== active) setPaused(false); selectSlide(index); }}><span /></button>)}
+        data-active={requested === index}
+        data-analytics-section="home_hero"
+        data-analytics-hero-action={requested === index ? undefined : ["slide_main", "slide_tubing_assembly", "slide_fluid_resistance"][index]}
+        onClick={() => { if (index !== active) setPaused(false); selectSlide(index); }}><span /></button>)}
     </div>
   </section>;
 }
