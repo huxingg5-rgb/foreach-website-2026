@@ -4176,7 +4176,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               aria-label={isTubingCustomerCategoryPage ? tubingText("产品内容分类", configuratorLocale) : isProbeCustomerCategoryPage ? probeText("产品内容分类", configuratorLocale) : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.navigation : isPistonPumpCustomerCategoryPage ? pistonText("产品内容分类", configuratorLocale) : isAssemblyCustomerCategoryPage ? assemblyText("产品内容分类", configuratorLocale) : customerCategoryUi?.navigation || "产品内容分类"}
             >
               {([
-                ["product", "产品资料"],
+                ["product", "图纸与资料"],
                 ["selection", "选型与使用"],
                 ["delivery", "交付与售后"],
               ] as Array<[CustomerCategoryKey, string]>).filter(([key]) => key !== "selection" || isCustomerCategoryPage).map(([key, label]) => (
@@ -4199,7 +4199,13 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     }
                   }}
                 >
-                  {isTubingCustomerCategoryPage ? tubingText(label, configuratorLocale) : isProbeCustomerCategoryPage ? probeText(label, configuratorLocale) : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.nav[key === "product" ? 0 : key === "selection" ? 1 : 2] : isPistonPumpCustomerCategoryPage ? pistonText(label, configuratorLocale) : isAssemblyCustomerCategoryPage ? assemblyText(label, configuratorLocale) : customerCategoryUi?.[key] || label}
+                  {key === "product" ? fittingText(label, configuratorLocale)
+                    : isTubingCustomerCategoryPage ? tubingText(label, configuratorLocale)
+                    : isProbeCustomerCategoryPage ? probeText(label, configuratorLocale)
+                    : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.nav[key === "selection" ? 1 : 2]
+                    : isPistonPumpCustomerCategoryPage ? pistonText(label, configuratorLocale)
+                    : isAssemblyCustomerCategoryPage ? assemblyText(label, configuratorLocale)
+                    : customerCategoryUi?.[key] || label}
                 </button>
               ))}
             </nav>

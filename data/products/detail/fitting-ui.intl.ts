@@ -17,6 +17,7 @@ const rows: Row[] = [
   ["{0} 公母端可按两侧工况分别组合", "Choose the two {0} coupling halves for the conditions on each side of the fluid path.", "Seleccione las dos mitades {0} según las condiciones de cada lado del circuito.", "Choisissez les deux moitiés {0} selon les conditions de chaque côté du circuit.", "유로 양쪽의 사용 조건에 맞게 {0} 수형·암형 커플링을 조합하세요.", "Подберите две ответные части {0} с учётом условий на каждой стороне линии."],
   ["3D 模型准备中", "Preparing 3D model", "Preparando modelo 3D", "Préparation du modèle 3D", "3D 모델 준비 중", "Подготовка 3D-модели"],
   ["产品资料", "Product information", "Información del producto", "Informations produit", "제품 자료", "Информация о продукте"],
+  ["图纸与资料", "Drawings and documentation", "Planos y documentación", "Plans et documentation", "도면 및 자료", "Чертежи и документация"],
   ["选型与使用", "Selection and use", "Selección y uso", "Choix et utilisation", "선정 및 사용", "Подбор и применение"],
   ["交付与售后", "Delivery and support", "Entrega y posventa", "Livraison et SAV", "배송 및 사후 지원", "Поставка и сервис"],
   ["产品内容分类", "Product sections", "Secciones del producto", "Rubriques produit", "제품 항목", "Разделы продукта"],
