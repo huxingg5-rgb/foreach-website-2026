@@ -5,6 +5,7 @@ import { getTubingAssemblyPath } from "@/data/products/tubing-assemblies.en";
 import type { TubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
 import {
   hardTubeFittingsSlug as hard, flangedTubingAssembliesSlug as flanged,
+  tubingAssemblyConfiguratorSlug as configurator,
   ferruleFittingSlug as ferrule, compressionRingFittingSlug as ring,
   barbedFittingSlug as barbed, luerFittingSlug as luer,
   quickDisconnectFittingSlug as quick, threadedHoseBarbFittingsSlug as threaded,
@@ -22,6 +23,7 @@ export const fittingArticleRelations: readonly (readonly [ArticleEndpoint, Artic
   [[hard, "structures"], [ring, "comparison"]],
   [[hard, "selection-example"], [female, "connection"]],
   [[hard, "tubing"], [material, "operating-conditions"]],
+  [[flanged, "inquiry"], [configurator, "end-connections"]],
   [[flanged, "sealing"], [ferrule, "comparison"]],
   [[flanged, "sealing"], [ring, "comparison"]],
   [[ferrule, "comparison"], [ring, "comparison"]],
@@ -41,7 +43,7 @@ export const fittingArticleRelations: readonly (readonly [ArticleEndpoint, Artic
 ];
 
 export const tubingAssemblyArticleSlugs = {
-  "flanged-tubing": [flanged, hard],
+  "flanged-tubing": [flanged, configurator, hard],
   "retaining-ring-kits": [ring, hard],
   "ferrule-kits": [ferrule, hard],
 } as const;

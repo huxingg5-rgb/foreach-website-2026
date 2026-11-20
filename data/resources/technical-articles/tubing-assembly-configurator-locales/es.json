@@ -1,0 +1,66 @@
+{
+  "coverAlt": "Detalle del extremo abocardado de un conjunto de tubos, con un racor roscado blanco y una arandela metálica",
+  "title": "Cómo configurar un conjunto de tubos para instrumentos y generar un plano 2D",
+  "seoTitle": "Configurador de conjuntos de tubos y planos 2D | FOREACH",
+  "description": "Seleccione material, diámetros, longitud y racores A/B en el configurador FOREACH. Previsualice el conjunto y descargue un plano 2D para revisión o prototipos.",
+  "deck": "Configure el tubo, la longitud final y los racores de ambos extremos. Genere un plano 2D acotado con lista de materiales. El ejemplo de FEP utiliza una rosca distinta en cada extremo.",
+  "lead": "Una línea de reactivo en un instrumento analítico requiere definir el material del tubo, sus diámetros interior y exterior, la longitud final y las conexiones de ambos extremos. Una válvula y un módulo de fluidos pueden tener distintas roscas o superficies de sellado. Con el configurador de FOREACH puede ajustar los extremos A y B por separado, previsualizar el conjunto y generar un plano 2D con cotas, referencias de los racores y lista de materiales. Ingeniería, montaje y compras pueden revisar la misma revisión del PDF.",
+  "parametersTitle": "¿Qué parámetros necesita el configurador de conjuntos de tubos?",
+  "parametersToc": "Parámetros de configuración",
+  "parametersIntro": "Modifique el ejemplo de FEP de arriba o introduzca los datos de su proyecto a partir del esquema del circuito y los planos de ambos puertos.",
+  "savedLink": "Ver las configuraciones guardadas en la ficha del conjunto",
+  "steps": [
+    "Seleccione el material y los diámetros. El configurador muestra los tamaños disponibles en el orden OD × ID. El diámetro exterior (OD) determina la compatibilidad con racores y accesorios. El diámetro interior (ID) se elige según la resistencia al flujo y el volumen interno requeridos.",
+    "Introduzca la longitud final L y su tolerancia. Determine la longitud según el recorrido previsto y acuerde las referencias de medición al revisar el plano. Si hay curvas, indique el recorrido de medición y la holgura necesaria para el montaje.",
+    "Configure A y B por separado. Identifique el puerto de cada extremo y seleccione el tipo de conexión, la serie de racor, la rosca y el material. En un conjunto de dos extremos, cada uno se ajusta por separado. En un conjunto de un solo extremo, instale el racor en A y especifique los requisitos del extremo libre B.",
+    "Especifique los accesorios y las etiquetas. Compruebe las arandelas de apoyo u otros accesorios para cada conexión. Identifique los tubos similares para que se puedan reconocer en el esquema. Si dispone de una referencia de pieza del cliente, inclúyala en los datos del plano."
+  ],
+  "endsTitle": "¿Cómo se configura un conjunto de tubos con puertos distintos en cada extremo?",
+  "endsToc": "Configuración de A y B",
+  "endsIntro": "Consulte los planos de los puertos y verifique por separado la rosca, la superficie de sellado y el espacio de montaje. El configurador admite conexiones con reborde, férula y anillo de compresión. Los racores y accesorios disponibles dependen del diámetro exterior y de la conexión elegida. En una unión con reborde, la rosca aplica la fuerza de apriete y el extremo rebordeado apoya sobre el fondo plano del puerto. Compruebe que el reborde y la arandela reciban la carga en la posición correcta.",
+  "guideLink": "Consultar la guía de selección de conjuntos de tubos con reborde",
+  "exampleIntro": "En este ejemplo, el extremo A se une a un puerto de fondo plano de 1/4-28 UNF y el B a otro de M6×1. La configuración de FEP muestra cómo se traduce cada requisito en una referencia de racor.",
+  "headers": [
+    "Parámetro",
+    "Valor del ejemplo"
+  ],
+  "rows": [
+    [
+      "Material y tamaño del tubo",
+      "FEP transparente, OD 1,6 mm, ID 0,3 mm"
+    ],
+    [
+      "Longitud final",
+      "L = 250 mm, tolerancia ±5 mm"
+    ],
+    [
+      "Extremo A",
+      "Con reborde, 1/4-28 UNF, racor HFL-U28-16-PV-N y arandela de apoyo SUS"
+    ],
+    [
+      "Extremo B",
+      "Con reborde, M6×1, racor HFL-M6-16-PV-N y arandela de apoyo SUS"
+    ]
+  ],
+  "configAlt": "Configurador FOREACH con tubo de FEP, roscas 1/4-28 UNF y M6×1 y longitud final de 250 ±5 mm",
+  "configCaption": "Ejemplo de FEP en el configurador FOREACH. La vista previa y los campos muestran los racores A y B y las dimensiones del tubo. Abrir imagen a tamaño completo",
+  "exampleCheck": "Compare la vista del conjunto y la lista de materiales con el esquema del circuito. El diámetro, la longitud y la tolerancia son ilustrativos. Para el equipo final, decídalos según el fluido, el caudal, el recorrido y el montaje.",
+  "drawingTitle": "¿Cómo se lee el plano 2D generado para el conjunto de tubos?",
+  "drawingToc": "Generación y revisión del plano",
+  "drawingIntro": "Seleccione «Generar plano 2D» y luego «Descargar PDF». Los contornos de los racores se toman de los planos originales de las piezas. Los diámetros, la longitud final y la lista de materiales se actualizan con la configuración. El ejemplo muestra 250 ±5 mm y las dos referencias de racor para compararlas con los planos de los puertos.",
+  "drawingAlt": "Plano 2D del conjunto de FEP con dimensiones del tubo, longitud de 250 ±5 mm, roscas y lista de materiales",
+  "drawingCaption": "El plano de selección muestra las cotas, los racores, las arandelas, la lista de materiales y la revisión R1. Abrir imagen a tamaño completo",
+  "reviews": [
+    "Ingeniería comprueba interfaces y dimensiones. Verifique las roscas y sellos, las referencias de longitud, el recorrido, el espacio para curvas y el acceso de las herramientas.",
+    "Montaje comprueba orientación y accesorios. Identifique el destino de A y B, confirme que estén todas las arandelas y compruebe que las etiquetas permitan reconocer el tubo.",
+    "Compras comprueba la revisión y las piezas. Vincule el nombre y la revisión del conjunto con la referencia de pieza del cliente. Adjunte los planos de los puertos e indique la cantidad al pedir un presupuesto o prototipo."
+  ],
+  "versions": "Al generar el plano, la configuración se guarda en el navegador actual. Puede volver a editarla o guardar otra versión. Comparta el PDF de la revisión evaluada. Si cambian los racores o la longitud, actualice la configuración y genere un plano nuevo.",
+  "sampleTitle": "¿Qué se debe confirmar antes de fabricar un prototipo del conjunto de tubos?",
+  "sampleToc": "Antes del prototipo",
+  "sample": "Use el plano de selección para revisar el diseño o solicitar un presupuesto. Antes de fabricar muestras, facilite los planos de los puertos, las referencias de medición, los fluidos de proceso y limpieza, la temperatura y presión o vacío, la cantidad de muestras y los criterios de aceptación. Añada un plano de montaje si el espacio es limitado. FOREACH puede revisar con usted la configuración y el plano definitivo. Valide el sellado, el paso del fluido y el montaje en el equipo bajo las condiciones previstas.",
+  "ctaTitle": "Configure el conjunto de tubos y genere su plano",
+  "ctaDescription": "Introduzca las dimensiones, la longitud y las conexiones de ambos extremos para obtener un primer plano de selección.",
+  "contact": "Contactar con ingeniería",
+  "start": "Empezar la configuración"
+}

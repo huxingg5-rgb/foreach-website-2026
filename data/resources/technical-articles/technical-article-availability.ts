@@ -2,6 +2,7 @@ import type { TechnicalArticleLocale } from "./technical-articles.types";
 
 export const hardTubeFittingsSlug = "hard-tube-fittings-selection-guide";
 export const flangedTubingAssembliesSlug = "flanged-tubing-assemblies-selection-guide";
+export const tubingAssemblyConfiguratorSlug = "tubing-assembly-configurator-guide";
 export const ferruleFittingSlug = "what-is-a-ferrule-fitting";
 export const compressionRingFittingSlug = "what-is-a-compression-ring-fitting";
 export const luerFittingSlug = "what-is-a-luer-fitting";

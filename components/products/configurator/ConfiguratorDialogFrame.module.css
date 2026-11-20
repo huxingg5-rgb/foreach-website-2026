@@ -33,3 +33,43 @@
   .dialog > header h2 { font-size: 21px; }
   .footer { padding: 12px 16px max(12px, env(safe-area-inset-bottom)); }
 }
+
+.dialog.inline {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  margin-top: 24px;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: minmax(0, 1fr);
+  container-type: inline-size;
+  overflow: visible;
+}
+
+.dialog.inline > header,
+.dialog.inline > footer { padding: 16px 20px; }
+
+.dialog.inline > header h2 {
+  margin: 0;
+  color: var(--brand-blue);
+  font-size: 22px;
+}
+
+.dialog.inline > header p { margin: 6px 0 0; }
+
+.dialog.inline > footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dialog.inline > footer > div:last-child {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dialog.inline > footer button {
+  min-width: 0;
+  padding-inline: 12px;
+  white-space: nowrap;
+}

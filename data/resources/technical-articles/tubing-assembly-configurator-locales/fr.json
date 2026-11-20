@@ -1,0 +1,66 @@
+{
+  "coverAlt": "Gros plan sur l’extrémité évasée d’un ensemble de tubes, avec un raccord fileté blanc et une rondelle métallique",
+  "title": "Comment configurer un ensemble de tubes pour instrument et générer un plan 2D",
+  "seoTitle": "Configurateur d’ensembles de tubes et plans 2D | FOREACH",
+  "description": "Sélectionnez le matériau, les diamètres, la longueur et les raccords A/B en ligne. Prévisualisez l’ensemble FOREACH et téléchargez un plan 2D pour la revue ou le prototypage.",
+  "deck": "Configurez le tube, sa longueur finie et ses raccords, puis générez un plan 2D coté avec nomenclature. L’exemple en FEP utilise deux filetages différents.",
+  "lead": "Une ligne de réactif dans un instrument d’analyse se définit par le matériau du tube, ses diamètres intérieur et extérieur, sa longueur finie et ses raccordements. Une vanne et un module fluidique peuvent avoir des filetages ou des surfaces d’étanchéité différents. Le configurateur FOREACH permet de régler séparément les extrémités A et B, de prévisualiser l’ensemble et de générer un plan 2D avec les cotes, les références des raccords et la nomenclature. Le bureau d’études, le montage et les achats peuvent ainsi examiner la même révision du PDF.",
+  "parametersTitle": "Quels paramètres faut-il renseigner dans le configurateur d’ensembles de tubes ?",
+  "parametersToc": "Paramètres de configuration",
+  "parametersIntro": "Modifiez l’exemple en FEP ci-dessus ou saisissez vos paramètres à partir du schéma fluidique et des plans des deux ports.",
+  "savedLink": "Voir les configurations enregistrées sur la fiche produit",
+  "steps": [
+    "Choisissez le matériau et les diamètres. Le configurateur présente les dimensions disponibles dans l’ordre OD × ID. Le diamètre extérieur (OD) permet d’associer les raccords et accessoires. Le diamètre intérieur (ID) influe sur la résistance hydraulique et le volume interne.",
+    "Renseignez la longueur finie L et la tolérance. Déterminez cette longueur en fonction du cheminement prévu. Lors de la revue du plan, précisez les références de mesure. Si le tube comporte une courbe, indiquez le trajet de mesure et la marge de montage.",
+    "Configurez les extrémités A et B séparément. Repérez les ports sur le schéma, puis choisissez le principe de raccordement, la série, le filetage et le matériau. Pour un ensemble à deux extrémités raccordées, renseignez chacune d’elles. Avec un seul raccord, configurez A et précisez les besoins concernant l’extrémité libre B.",
+    "Précisez les accessoires et le repérage. Vérifiez les rondelles d’appui ou autres pièces associées au raccord sélectionné. Le marquage permet de différencier les lignes similaires selon le schéma. Reportez la référence pièce client dans les données du plan si elle existe."
+  ],
+  "endsTitle": "Comment configurer un ensemble de tubes quand les deux ports sont différents ?",
+  "endsToc": "Configuration des côtés A et B",
+  "endsIntro": "À partir des plans des ports, vérifiez séparément le filetage, la surface d’étanchéité et le dégagement de montage. Le configurateur propose des raccordements à collet, à ferrule ou à bague de compression. Le choix des pièces dépend du diamètre extérieur et de la configuration de chaque côté. Dans un raccordement à collet, le filetage assure le serrage et le collet du tube s’appuie sur la face d’étanchéité du port à fond plat. Vérifiez que le collet et la rondelle sont chargés au bon endroit une fois le raccord engagé.",
+  "guideLink": "Consulter le guide de sélection des ensembles de tubes à collet",
+  "exampleIntro": "Dans cet exemple, le côté A rejoint un port à fond plat 1/4-28 UNF et le côté B un port à fond plat M6×1. La configuration en FEP montre comment associer chaque port à une référence de raccord.",
+  "headers": [
+    "Paramètre",
+    "Valeur d’exemple"
+  ],
+  "rows": [
+    [
+      "Matériau et dimensions",
+      "FEP transparent, OD 1,6 mm et ID 0,3 mm"
+    ],
+    [
+      "Longueur finie",
+      "L = 250 mm, tolérance ±5 mm"
+    ],
+    [
+      "Côté A",
+      "À collet, 1/4-28 UNF, raccord HFL-U28-16-PV-N et rondelle d’appui SUS"
+    ],
+    [
+      "Côté B",
+      "À collet, M6×1, raccord HFL-M6-16-PV-N et rondelle d’appui SUS"
+    ]
+  ],
+  "configAlt": "Configurateur FOREACH avec tube FEP, filetages 1/4-28 UNF et M6×1 et longueur finie de 250 ±5 mm",
+  "configCaption": "Exemple en FEP dans le configurateur FOREACH. L’aperçu et les champs indiquent les raccords A et B ainsi que les dimensions du tube. Ouvrir l’image en taille réelle",
+  "exampleCheck": "Vérifiez l’aperçu et la nomenclature par rapport au schéma fluidique. Les dimensions et la tolérance de l’exemple sont indicatives. Choisissez celles de votre instrument suivant les fluides, le débit, le cheminement et le montage.",
+  "drawingTitle": "Comment lire le plan 2D généré pour l’ensemble de tubes ?",
+  "drawingToc": "Génération et revue du plan",
+  "drawingIntro": "Cliquez sur « Générer le plan 2D », puis sur « Télécharger le PDF ». Le contour des raccords s’appuie sur les plans de pièces d’origine. Le plan reprend les dimensions du tube, sa longueur finie et la nomenclature de la configuration. Dans l’exemple, les deux références de raccords et la cote de 250 ±5 mm peuvent être comparées avec les plans des ports.",
+  "drawingAlt": "Plan 2D de l’ensemble FEP avec dimensions, longueur de 250 ±5 mm, filetages des extrémités et nomenclature",
+  "drawingCaption": "Le plan de sélection présente les cotes, les raccords, les rondelles d’appui, la nomenclature et la révision R1. Ouvrir l’image en taille réelle",
+  "reviews": [
+    "Le bureau d’études vérifie les interfaces et les dimensions. Confirmez les filetages, les principes d’étanchéité et les références de mesure, puis vérifiez le cheminement, la place pour les courbes et l’accès des outils.",
+    "Le montage vérifie le sens et les accessoires. Identifiez la destination de A et B, contrôlez les pièces associées et assurez-vous que le marquage permet de reconnaître la ligne.",
+    "Les achats vérifient la révision et les pièces. Associez le nom et la révision de l’ensemble à la référence client. Ajoutez la quantité prévue et les plans des ports lors d’une demande de devis ou de prototype."
+  ],
+  "versions": "La génération du plan enregistre la configuration dans le navigateur actif. Vous pouvez la rouvrir ou enregistrer une variante. Partagez le PDF de la révision examinée. Si les raccords ou la longueur changent, mettez à jour la configuration et générez un nouveau plan.",
+  "sampleTitle": "Que faut-il vérifier avant de prototyper un ensemble de tubes sur mesure ?",
+  "sampleToc": "Avant le prototypage",
+  "sample": "Le plan de sélection sert à la revue de conception ou à la demande de devis. Avant de réaliser les échantillons, indiquez les plans des ports, les références de mesure, les fluides de procédé et de nettoyage, la température, la pression ou le vide, la quantité d’échantillons et les critères d’acceptation. Joignez un plan d’implantation si l’espace est limité. FOREACH peut vérifier avec vous la configuration et le plan définitif. Validez l’étanchéité, le débit et le montage dans les conditions prévues sur l’instrument.",
+  "ctaTitle": "Configurez un ensemble de tubes et générez son plan",
+  "ctaDescription": "Renseignez les dimensions du tube, la longueur et les raccordements pour obtenir un premier plan de sélection.",
+  "contact": "Contacter un ingénieur",
+  "start": "Commencer la configuration"
+}

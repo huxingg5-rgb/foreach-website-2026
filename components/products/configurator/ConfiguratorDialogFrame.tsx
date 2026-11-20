@@ -15,7 +15,8 @@ type Props = {
   title: ReactNode;
   description: ReactNode;
   closeLabel: string;
-  onClose: () => void;
+  onClose?: () => void;
+  inline?: boolean;
   className?: string;
   children: ReactNode;
   notice: ReactNode;
@@ -33,36 +34,38 @@ export default function ConfiguratorDialogFrame({
   description,
   closeLabel,
   onClose,
+  inline = false,
   className,
   children,
   notice,
   actions,
 }: Props) {
-  return createPortal(
-    <div className={`${shared.overlay} ${styles.overlay}`}>
-      <section
-        ref={dialogRef}
-        className={[shared.selector, styles.dialog, className].filter(Boolean).join(" ")}
-        lang={locale}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby={titleId}
-        aria-describedby={descriptionId}
-      >
-        <header className={shared.header}>
-          <div className={shared.headerText}>
-            <h2 id={titleId}>{title}</h2>
-            <p id={descriptionId}>{description}</p>
-          </div>
-          <ConfiguratorButton ref={closeRef} variant="close" aria-label={closeLabel} onClick={onClose} />
-        </header>
-        {children}
-        <footer className={`${shared.footer} ${styles.footer}`}>
-          <div className={`${shared.notice} ${styles.notice}`}>{notice}</div>
-          <div className={shared.actions}>{actions}</div>
-        </footer>
-      </section>
-    </div>,
+  const panel = (
+    <section
+      ref={dialogRef}
+      className={[shared.selector, styles.dialog, inline && shared.theme, inline && styles.inline, className].filter(Boolean).join(" ")}
+      lang={locale}
+      role={inline ? undefined : "dialog"}
+      aria-modal={inline ? undefined : true}
+      aria-labelledby={titleId}
+      aria-describedby={descriptionId}
+    >
+      <header className={shared.header}>
+        <div className={shared.headerText}>
+          <h2 id={titleId}>{title}</h2>
+          <p id={descriptionId}>{description}</p>
+        </div>
+        {!inline && <ConfiguratorButton ref={closeRef} variant="close" aria-label={closeLabel} onClick={onClose} />}
+      </header>
+      {children}
+      <footer className={`${shared.footer} ${styles.footer}`}>
+        <div className={`${shared.notice} ${styles.notice}`}>{notice}</div>
+        <div className={shared.actions}>{actions}</div>
+      </footer>
+    </section>
+  );
+  return inline ? panel : createPortal(
+    <div className={`${shared.overlay} ${styles.overlay}`}>{panel}</div>,
     document.body,
   );
 }

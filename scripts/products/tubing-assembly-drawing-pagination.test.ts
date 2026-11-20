@@ -18,7 +18,7 @@ function check(record: FlangedConfiguration, locale: string, expected?: number) 
   const before = JSON.stringify(record), pages = buildFlangedDrawingSheets(record, locale);
   if (expected !== undefined) assert.equal(pages.length, expected, `${record.choice.a.series}/${record.choice.mode}/${locale}`);
   pages.forEach((svg, index) => {
-    assert.ok(svg.includes(`SHEET ${index + 1} OF ${pages.length}`));
+    assert.ok(texts(svg).includes(assemblyText(`第 ${index + 1} / ${pages.length} 页`, locale)));
     assert.ok(!/data-detail-end=|<image\b|NaN|undefined/.test(svg));
     assert.ok(!/\/downloads\/|图形来源|geometry source/.test(texts(svg)), "internal source URLs do not create customer-facing pages");
     if (index > 0) {

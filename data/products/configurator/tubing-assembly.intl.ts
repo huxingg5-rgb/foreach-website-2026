@@ -5,6 +5,11 @@ import { assemblyMessageRows } from "./tubing-assembly-errors.intl";
 // data/products/tubing-assemblies/locales.ts (ferrule / compression-ring / flanged).
 type Row = readonly [string, string, string, string, string, string];
 export const assemblyUiRows: Row[] = [
+  ["FEP 双端管组件示例","Double-ended FEP assembly example","Ejemplo de conjunto FEP","Exemple d’ensemble FEP","FEP 양단형 튜빙 어셈블리 예제","Пример двухсторонней сборки FEP"],
+  ["最近保存版本 R{0}","Last saved revision R{0}","Última revisión guardada R{0}","Dernière révision enregistrée R{0}","최근 저장한 개정 R{0}","Последняя сохранённая версия R{0}"],
+  ["此配置已在其他页面更新或删除。请刷新文章后保存新配置。","This configuration was updated or deleted in another tab. Refresh the article to save a new configuration.","La configuración se actualizó o eliminó en otra pestaña. Recargue el artículo para guardar una configuración nueva.","Cette configuration a été modifiée ou supprimée dans un autre onglet. Rechargez l’article pour enregistrer une nouvelle configuration.","다른 탭에서 이 구성을 수정하거나 삭제했습니다. 새 구성을 저장하려면 문서를 새로고침하세요.","Конфигурация изменена или удалена в другой вкладке. Обновите статью, чтобы сохранить новую конфигурацию."],
+  ["比例","Scale","Escala","Échelle","축척","Масштаб"],
+  ["无比例","Not to scale","Sin escala","Sans échelle","축척 없음","Без масштаба"],
   ["卡箍外形资料待补充", "Ferrule geometry unavailable", "Geometría de la férula no disponible", "Géométrie de la ferrule indisponible", "페룰 형상 자료 없음", "Геометрия феррулы отсутствует"],
   ["端部展开示意", "Exploded end views", "Vista explosionada de los extremos", "Vue éclatée des extrémités", "끝단 분해도", "Разнесённые виды концов"],
   ["见续页", "See continuation sheet", "Ver hoja siguiente", "Voir feuille suivante", "다음 시트 참조", "См. лист продолжения"],

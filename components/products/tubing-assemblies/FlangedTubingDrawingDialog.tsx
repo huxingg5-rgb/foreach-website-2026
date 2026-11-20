@@ -46,7 +46,7 @@ export default function FlangedTubingDrawingDialog({ record, onClose, locale = "
     if (invalid) { setError(invalid); return; }
     setBusy(true); setError("");
     try {
-      const bytes = await createFlangedDrawingPdf(sheets, filename);
+      const bytes = await createFlangedDrawingPdf(sheets, filename, locale);
       downloadDrawingFile(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }), `${filename}.pdf`);
       trackResourceDownload({
         locale, sourceSection,

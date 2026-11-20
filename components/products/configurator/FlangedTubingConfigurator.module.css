@@ -106,3 +106,64 @@ label.field > span:first-child { white-space: nowrap; }
   .dialog:not(:lang(zh-CN)):not(:lang(zh)) .mode { flex: 1 1 100%; min-width: 0; flex-direction: column; align-items: flex-start; gap: 8px; }
   .dialog:not(:lang(zh-CN)):not(:lang(zh)) .modeButtons { max-width: 100%; flex-wrap: wrap; }
 }
+
+.previewPlaceholder {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1020 / 220;
+  min-height: 72px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.inline .body {
+  padding: 14px 16px;
+  overflow: visible;
+}
+
+.inline .controls {
+  grid-template-columns: minmax(0, 1fr) 205px minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.inline .tubeCard {
+  --field-label-width: 73px;
+  padding-inline: 10px;
+}
+
+.inline .endFields,
+.inline .accessoryRow { grid-template-columns: minmax(0, 1fr); }
+
+.inline .cardHeading h3 { margin: 0; font-size: 15px; }
+.inline .matchedModel { margin: 8px 0 0; }
+.inline .feedback { margin: 0 0 10px; }
+.inline .tags { gap: 12px; padding-inline: 0; }
+.inline .more { gap: 8px 18px; }
+.inline .more > details { min-width: 0; max-width: 100%; }
+.inline .requirementsSection { flex-basis: auto; }
+.inline .requirements { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 12px; }
+.inline .bom { min-width: 0; table-layout: fixed; overflow-wrap: anywhere; }
+.inline .bom :is(th, td) { padding: 8px; }
+
+@container (max-width: 665px) {
+  .inline .controls { grid-template-columns: minmax(0, 1fr); }
+  .inline .tubeCard { padding: 12px 0; border-inline: 0; border-block: 1px solid #e5ebf2; }
+}
+
+@container (max-width: 460px) {
+  .inline .configurationIdentity label { width: 100%; }
+  .inline .configurationIdentity label .sectionTitle { white-space: nowrap; }
+  .inline .tags,
+  .inline .requirements { grid-template-columns: minmax(0, 1fr); }
+}
+
+.inline:not(:lang(zh-CN)) .configurationIdentity label { flex-wrap: wrap; }
+.inline:not(:lang(zh-CN)) :is(label.field, .choiceField) { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+.inline:not(:lang(zh-CN)) :is(label.field, .choiceField) > span:first-child { white-space: normal; }
+.inline:not(:lang(zh-CN)) .tagToggle { white-space: normal; }
+
+@container (max-width: 460px) {
+  .inline:not(:lang(zh-CN)) .mode { flex: 1 1 100%; min-width: 0; flex-wrap: wrap; }
+  .inline:not(:lang(zh-CN)) .modeButtons { flex-wrap: wrap; max-width: 100%; }
+}

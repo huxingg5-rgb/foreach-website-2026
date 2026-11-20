@@ -4,7 +4,7 @@ import { drawingRequirementsLine, normalizeDrawingTypes, type CadDrawingType } f
 import { useEffect, useId, useRef, useState } from "react";
 import ConfiguratorDialogFrame from "./ConfiguratorDialogFrame";
 import ConfiguratorButton from "./ConfiguratorButton";
-import FlangedTubingAssemblyPreview from "./FlangedTubingAssemblyPreview";
+import dynamic from "next/dynamic";
 import buttonStyles from "./ConfiguratorButton.module.css";
 import { assemblyCompatibilityWarnings, assemblySizeError, compatibleAssemblyTubes, assemblyEndFinishes, assemblyEndFinishLabel, defaultFlangedTubingChoice, endConnection, reconcileAssemblyEnd, selectAssemblyConnection, selectAssemblyEndAttribute, selectAssemblyEndFinish, flangedTubingBom, normalizeFlangedChoice, validateFlangedChoice, type FlangedEnd, type FlangedTubingChoice } from "@/data/products/configurator/flanged-tubing";
 import { assemblyConnections, assemblyFamilies, assemblyFamilyAvailability, assemblyFamilyLabel, assemblyFittingAccessories, compatibleAssemblyFittings, assemblyTubeSizeKey, assemblyTubeSizes, getAssemblyFitting, getAssemblyTube, selectAssemblyTubeAttribute, selectAssemblyTubeSize, type AssemblyTube } from "@/data/products/configurator/tubing-assembly-catalog";
@@ -13,19 +13,27 @@ import { assemblyView } from "../tubing-assemblies/assembly-view";
 import { assemblyText, assemblyHtmlLocale } from "@/data/products/configurator/tubing-assembly.intl";
 import { localizedAssemblySummary } from "@/data/products/configurator/tubing-assembly-presentation";
 
+const FlangedTubingAssemblyPreview = dynamic(() => import("./FlangedTubingAssemblyPreview"), {
+  ssr: false,
+  loading: () => <div className={styles.previewPlaceholder} aria-hidden="true" />,
+});
+
 type Props = {
   locale?: string;
   value: FlangedTubingChoice | null;
   needDrawing: boolean;
   initialDrawingTypes?: CadDrawingType[];
-  onClose: () => void;
+  inline?: boolean;
+  onClose?: () => void;
   onConfirm: (value: FlangedTubingChoice, drawingTypes: CadDrawingType[]) => void;
-  onAdd: (value: FlangedTubingChoice, drawingTypes: CadDrawingType[]) => void;
-  isAdded: (value: FlangedTubingChoice) => boolean;
+  onAdd?: (value: FlangedTubingChoice, drawingTypes: CadDrawingType[]) => void;
+  isAdded?: (value: FlangedTubingChoice) => boolean;
   configurationName?: string;
   onNameChange?: (name: string) => void;
   saveLabel?: string;
   saveError?: string;
+  saveStatus?: string;
+  onChoiceChange?: (choice: FlangedTubingChoice) => void;
   onSaveAs?: (value: FlangedTubingChoice, drawingTypes: CadDrawingType[]) => void;
   onGenerateDrawing?: (value: FlangedTubingChoice, drawingTypes: CadDrawingType[]) => void;
 };
@@ -48,9 +56,10 @@ function SelectField({ label, name, options, value, part, onChange, emptyLabel =
   </select></label>, locale);
 }
 
-export default function FlangedTubingConfigurator({ locale = "zh", value, needDrawing, initialDrawingTypes, onClose, onConfirm, onAdd, isAdded, configurationName, onNameChange, saveLabel, saveError, onSaveAs, onGenerateDrawing }: Props) {
+export default function FlangedTubingConfigurator({ locale = "zh", value, needDrawing, initialDrawingTypes, inline = false, onClose, onConfirm, onAdd, isAdded, configurationName, onNameChange, saveLabel, saveError, saveStatus, onSaveAs, onGenerateDrawing, onChoiceChange }: Props) {
   const drawings = normalizeDrawingTypes(initialDrawingTypes);
   const [form, setForm] = useState<FlangedTubingChoice>(() => normalizeFlangedChoice(value || defaultFlangedTubingChoice()));
+  useEffect(() => { onChoiceChange?.(form); }, [form, onChoiceChange]);
   const [activePart, setActivePart] = useState<number | null>(null);
   const [feedback, setFeedback] = useState(value && assemblySizeError(value) ? "旧配置已按当前管外径重新核对，请完成两端选项后保存。" : "");
   const id = useId();
@@ -58,6 +67,7 @@ export default function FlangedTubingConfigurator({ locale = "zh", value, needDr
   const closeRef = useRef(onClose);
   useEffect(() => { closeRef.current = onClose; }, [onClose]);
   useEffect(() => {
+    if (inline) return;
     const focus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const overflow = document.body.style.overflow;
     const backdrop = dialog.current?.parentElement;
@@ -67,7 +77,7 @@ export default function FlangedTubingConfigurator({ locale = "zh", value, needDr
     closeButton.current?.focus();
     function keydown(event: KeyboardEvent) {
       if (event.defaultPrevented) return;
-      if (event.key === "Escape" && !(event.target instanceof HTMLSelectElement)) { event.preventDefault(); closeRef.current(); }
+      if (event.key === "Escape" && !(event.target instanceof HTMLSelectElement)) { event.preventDefault(); closeRef.current?.(); }
       if (event.key !== "Tab") return;
       const elements = dialog.current?.querySelectorAll<HTMLElement>("button:not(:disabled), a[href], input:not(:disabled), select:not(:disabled), textarea:not(:disabled), summary");
       if (!elements?.length) return;
@@ -77,7 +87,7 @@ export default function FlangedTubingConfigurator({ locale = "zh", value, needDr
     }
     document.addEventListener("keydown", keydown);
     return () => { document.removeEventListener("keydown", keydown); document.body.style.overflow = overflow; background.forEach(({ element, inert }) => { element.inert = inert; }); if (focus?.isConnected) focus.focus(); };
-  }, []);
+  }, [inline]);
 
   function update<K extends keyof FlangedTubingChoice>(key: K, next: FlangedTubingChoice[K]) { setForm(current => ({ ...current, [key]: next })); setFeedback(""); }
   const choice = normalizeFlangedChoice(form);
@@ -98,7 +108,7 @@ export default function FlangedTubingConfigurator({ locale = "zh", value, needDr
     if (selected) changeTube(selected.key);
   }
   const tubeOptions = (rows: AssemblyTube[], key: "color" | "hardness") => [...new Set(rows.map(t => String(t[key])))];
-  const error = configurationName !== undefined && !configurationName.trim() ? "请填写配置名称。" : validateFlangedChoice(choice), added = isAdded(choice);
+  const error = configurationName !== undefined && !configurationName.trim() ? "请填写配置名称。" : validateFlangedChoice(choice), added = isAdded?.(choice);
   const dimensionError = error && (error.includes("成品长度") || error.includes("长度公差")) ? error.replace(/。$/, "") : undefined;
   function focusPart(part = 1) {
     setActivePart(part);
@@ -157,11 +167,13 @@ export default function FlangedTubingConfigurator({ locale = "zh", value, needDr
     catch { setFeedback("复制未完成，请重试或确认配置后加入清单。"); }
   }
 
-  return assemblyView(<ConfiguratorDialogFrame locale={assemblyHtmlLocale(locale)} dialogRef={dialog} closeRef={closeButton} className={`${styles.dialog} ${buttonStyles.blueWhite}`}
+  const RequirementsPanel = inline ? "details" : "section";
+  return assemblyView(<ConfiguratorDialogFrame inline={inline} locale={assemblyHtmlLocale(locale)} dialogRef={dialog} closeRef={closeButton}
+    className={`${inline ? styles.inline : styles.dialog} ${buttonStyles.blueWhite}`}
     titleId={`${id}-title`} descriptionId={`${id}-description`} title="管组件搭配选型"
     description="选择管材，两端独立搭配翻边、卡箍或卡环连接。保存后可重新编辑或生成二维图纸。" closeLabel="关闭管组件选型" onClose={onClose}
-    notice={<><span>配置保存在当前浏览器 · 支持再次编辑</span><br />按原图结构组合生成矢量图纸。</>}
-    actions={<><ConfiguratorButton onClick={copy}>复制配置</ConfiguratorButton>{onGenerateDrawing ? <ConfiguratorButton disabled={Boolean(error)} onClick={() => onGenerateDrawing(choice, drawings)}>生成2D图纸</ConfiguratorButton> : <ConfiguratorButton disabled={Boolean(error) || added} active={added} onClick={() => onAdd(choice, drawings)}>{added ? "已加入清单" : needDrawing ? "加入清单并申请图纸" : "加入清单"}</ConfiguratorButton>}{onSaveAs ? <ConfiguratorButton disabled={Boolean(error)} onClick={() => onSaveAs(choice, drawings)}>另存为新配置</ConfiguratorButton> : null}<ConfiguratorButton className={styles.saveButton} variant="primary" disabled={Boolean(error)} onClick={() => onConfirm(choice, drawings)}>{saveLabel || "保存配置"}</ConfiguratorButton></>}>
+    notice={<><span>配置保存在当前浏览器 · 支持再次编辑</span><br />按原图结构组合生成矢量图纸。{saveStatus && <><br /><span role="status">{saveStatus}</span></>}</>}
+    actions={<><ConfiguratorButton onClick={copy}>复制配置</ConfiguratorButton>{onGenerateDrawing ? <ConfiguratorButton disabled={Boolean(error)} onClick={() => onGenerateDrawing(choice, drawings)}>生成2D图纸</ConfiguratorButton> : onAdd ? <ConfiguratorButton disabled={Boolean(error) || added} active={added} onClick={() => onAdd(choice, drawings)}>{added ? "已加入清单" : needDrawing ? "加入清单并申请图纸" : "加入清单"}</ConfiguratorButton> : null}{onSaveAs ? <ConfiguratorButton disabled={Boolean(error)} onClick={() => onSaveAs(choice, drawings)}>另存为新配置</ConfiguratorButton> : null}<ConfiguratorButton className={styles.saveButton} variant="primary" disabled={Boolean(error)} onClick={() => onConfirm(choice, drawings)}>{saveLabel || "保存配置"}</ConfiguratorButton></>}>
     <div className={styles.body} data-flanged-tubing-configurator="true" onFocusCapture={event => {
       const part = event.target instanceof Element ? event.target.closest<HTMLElement>("[data-flanged-part]")?.dataset.flangedPart : undefined;
       if (part) setActivePart(Number(part));
@@ -208,13 +220,16 @@ export default function FlangedTubingConfigurator({ locale = "zh", value, needDr
       </div>
       {warnings.length ? <div className={styles.compatibility} role="status">{warnings.map(w => <p key={w}>{w}</p>)}</div> : null}
       <div className={styles.more}>
-        <section className={styles.requirementsSection} aria-label="公司、图纸信息与特殊要求"><div className={styles.cardHeading}><h3>公司、图纸信息与特殊要求</h3></div><div className={styles.requirements}>
+        <RequirementsPanel className={styles.requirementsSection} aria-label="公司、图纸信息与特殊要求">
+          {inline ? <summary>公司、图纸信息与特殊要求</summary> : <div className={styles.cardHeading}><h3>公司、图纸信息与特殊要求</h3></div>}
+          <div className={styles.requirements}>
           <label className={styles.field}><span>公司</span><input aria-label="图纸公司名称" maxLength={120} value={form.company || ""} onChange={event => update("company", event.target.value)} /></label>
           <label className={styles.field}><span>联系人</span><input aria-label="图纸联系人" maxLength={120} value={form.contact || ""} onChange={event => update("contact", event.target.value)} /></label>
           <label className={styles.field}><span>客户零件号</span><input aria-label="图纸客户零件号" maxLength={120} value={form.customerPart || ""} onChange={event => update("customerPart", event.target.value)} /></label>
           <label className={styles.field}><span>应用机型</span><input aria-label="应用机型" maxLength={120} value={form.application} onChange={event => update("application", event.target.value)} /></label>
           <label className={`${styles.field} ${styles.requirementsNotes}`}><span>特殊要求</span><textarea aria-label="特殊要求" maxLength={800} value={form.notes} placeholder="管标位置、限位尺寸或检验要求" onChange={event => update("notes", event.target.value)} /></label>
-        </div></section>
+          </div>
+        </RequirementsPanel>
         <details><summary>部件用量明细（{flangedTubingBom(choice).length} 项）</summary><table className={styles.bom} aria-label="管组件配置明细"><thead><tr><th>部件</th><th>配置要求</th><th>数量</th></tr></thead><tbody>{flangedTubingBom(choice).map(row => <tr key={row.part}><td>{row.part}</td><td translate={/管标/.test(row.part) || row.part === "B 端" ? "no" : undefined}>{/管标/.test(row.part) ? row.specification : row.part === "B 端" ? `${assemblyText("自由管端", locale)}${choice.freeEndNote ? ` · ${choice.freeEndNote}` : ""}` : row.specification}</td><td>{row.quantity}</td></tr>)}</tbody></table></details>
       </div>
     </div>

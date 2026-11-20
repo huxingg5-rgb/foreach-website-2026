@@ -239,7 +239,15 @@ export default function TechnicalArticlesClient({
       );
     });
   }, [activeFilter, pageData]);
-  const filteredArticles = useMemo(() => filterArticles(keyword), [filterArticles, keyword]);
+  const filteredArticles = useMemo(() => {
+    const articles = filterArticles(keyword);
+
+    if (activeFilter.type === "all") {
+      articles.sort((left, right) => right.date.localeCompare(left.date));
+    }
+
+    return articles;
+  }, [activeFilter.type, filterArticles, keyword]);
 
   const totalPages = Math.max(
     1,

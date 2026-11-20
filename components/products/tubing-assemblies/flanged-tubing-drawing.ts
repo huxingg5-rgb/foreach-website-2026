@@ -2,7 +2,7 @@ import { assemblyCompatibilityWarnings, describeFlangedEnd, endConnection, flang
 import { assemblyAccessory, getAssemblyFitting, getAssemblyTube } from "@/data/products/configurator/tubing-assembly-catalog";
 import { assemblyOriginalPdfView, assemblyVectorPaths, assemblyVectorStrokes, getAssemblyAccessoryVector, getAssemblyFittingVector, type AssemblyVectorPart } from "@/data/products/configurator/tubing-assembly-vectors";
 import type { FlangedConfiguration } from "@/data/products/configurator/flanged-tubing-configurations";
-import { assemblyText, assemblyHtmlLocale } from "@/data/products/configurator/tubing-assembly.intl";
+import { assemblyText, assemblyHtmlLocale, assemblyLocale } from "@/data/products/configurator/tubing-assembly.intl";
 import { protectAssemblyUserText } from "@/data/products/configurator/tubing-assembly-presentation";
 import sourceParts from "@/data/products/configurator/flanged-vector-parts.json";
 import { assemblyEndDrawingLayout } from "./assembly-end-drawing-layout";
@@ -209,7 +209,7 @@ function frame(record: FlangedConfiguration, page: number, total: number) {
   s += text(708, 1110, `版本  R${record.revision}`, 15);
   s += text(930, 928, "Foreach 组件编码#", 13) + line(920, 966, 1290, 966) + text(930, 985, "组件名称", 13) + fitted(937, 1013, `${record.name} · ${getAssemblyTube(v.tubeModel)?.material} 管组件`, 340, 18);
   s += line(920, 1028, 1290, 1028) + text(930, 1047, "客户零件号#", 13) + fitted(937, 1073, v.customerPart || "", 338, 16) + line(920, 1088, 1290, 1088);
-  s += text(930, 1112, "SCALE", 11) + text(1025, 1112, "NONE", 11) + line(1130, 1088, 1130, 1125) + text(1144, 1112, `SHEET ${page} OF ${total}`, 11);
+  s += text(930, 1112, "比例", 11, "start", 90) + text(1025, 1112, "无比例", 11, "start", 100) + line(1130, 1088, 1130, 1125) + text(1144, 1112, `第 ${page} / ${total} 页`, 11, "start", 135);
   return s;
 }
 function buildSheets(record: FlangedConfiguration): string[] {
@@ -291,7 +291,7 @@ function buildAssemblySheets(record: FlangedConfiguration): string[] {
 }
 export function buildFlangedDrawingSheets(record: FlangedConfiguration, locale = "zh"): string[] {
   const masked = protectAssemblyUserText(record);
-  return drawingRenderer(locale, masked.restore).buildSheets(masked.record);
+  return drawingRenderer(assemblyLocale(locale), masked.restore).buildSheets(masked.record);
 }
 export function downloadDrawingFile(blob: Blob, name: string) {
   const href = URL.createObjectURL(blob), link = document.createElement("a");
@@ -344,10 +344,13 @@ export async function portableFlangedDrawingSvg(svg: string) {
   return new XMLSerializer().serializeToString(doc.documentElement);
 }
 /** Keep approved part PDFs as native PDF content, including their line weights. */
-export async function createFlangedDrawingPdf(sheets: string[], title: string): Promise<Uint8Array> {
+export async function createFlangedDrawingPdf(sheets: string[], title: string, locale = "zh"): Promise<Uint8Array> {
   const url = "/vendor/flanged-drawing/pdf-lib-1.17.1.mjs", { PDFDocument, rgb, pushGraphicsState, popGraphicsState, translate, rotateDegrees, scale } = await import(/* webpackIgnore: true */ url);
   const source = await vectorFont(), pdf = await PDFDocument.create();
-  pdf.setTitle(title); pdf.setSubject("FOREACH tubing assembly drawing with original part PDF views"); pdf.setCreator("FOREACH tubing assembly configurator");
+  pdf.setTitle(title);
+  pdf.setSubject(assemblyText("恒永达管组件选型表", locale));
+  pdf.setLanguage(assemblyHtmlLocale(locale));
+  pdf.setCreator("FOREACH");
   const originalDocuments = new Map<string, Promise<Awaited<ReturnType<typeof PDFDocument.load>>>>();
   const originalDocument = (url: string) => {
     if (!/^\/assets\/products\/tubing-assemblies\/part-drawing-views\/[\w-]+\.json$/.test(url)) throw new Error("Invalid original drawing source.");

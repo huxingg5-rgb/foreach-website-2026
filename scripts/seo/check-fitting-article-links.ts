@@ -4,6 +4,8 @@ import { getTechnicalArticlesPageData } from "../../services/resources/technical
 import { getTubingAssemblySelectionContent } from "../../data/products/tubing-assemblies/localized";
 import { allTubingAssemblyLocales } from "../../data/products/tubing-assemblies/locales";
 import { getConnectorSelectionArticle } from "../../data/resources/technical-articles/connector-selection-articles.article";
+import { getInstrumentFluidicsArticle } from "../../data/resources/technical-articles/instrument-fluidics-articles.article";
+import { tubingAssemblyConfiguratorSlug } from "../../data/resources/technical-articles/technical-article-availability";
 import { getBarbedFittingCopy, getBarbedFittingNavigation } from "../../data/resources/technical-articles/what-is-a-barbed-fitting.zh";
 import { getLuerFittingCopy, getLuerFittingNavigation } from "../../data/resources/technical-articles/what-is-a-luer-fitting.zh";
 import { getFerruleFittingCopy, getFerruleFittingNavigation } from "../../data/resources/technical-articles/what-is-a-ferrule-fitting.zh";
@@ -32,7 +34,7 @@ const navigationFactories: Record<string, (locale: TechnicalArticleLocale) => re
 const hrefs = (blocks: readonly EngineeringArticleBlock[]) => blocks.flatMap(block =>
   block.type === "links" ? block.items.map(item => item.href) : block.type === "figure" && block.link ? [block.link.href] : []);
 const slugs = [...new Set(fittingArticleRelations.flatMap(pair => pair.map(endpoint => endpoint[0])))];
-assert.equal(slugs.length, 12, "The complete recent fitting cluster must be covered");
+assert.equal(slugs.length, 13, "The complete recent fitting cluster must be covered");
 
 let verified = 0;
 for (const locale of allTubingAssemblyLocales) {
@@ -40,15 +42,16 @@ for (const locale of allTubingAssemblyLocales) {
   const { articles } = getTechnicalArticlesPageData(locale);
   const assemblyContent = getTubingAssemblySelectionContent(locale);
   for (const slug of slugs) {
-    const connector = getConnectorSelectionArticle(slug, locale);
+    const isConfigurator = slug === tubingAssemblyConfiguratorSlug;
+    const connector = getConnectorSelectionArticle(slug, locale) ?? getInstrumentFluidicsArticle(slug, locale);
     const source = connector?.copy ?? copyFactories[slug](locale);
     const navigation = connector?.navigation ?? navigationFactories[slug](locale);
     const sourceSnapshot = JSON.stringify(source);
     const relations = getFittingArticleRelations(slug);
-    assert(relations.length >= 2, `${locale}/${slug}: missing topic neighbors`);
+    assert(relations.length >= (isConfigurator ? 1 : 2), `${locale}/${slug}: missing topic neighbors`);
     const cards = selectFittingArticleCards(articles, relations.map(item => item.slug));
     assert.equal(cards.length, relations.length, `${locale}/${slug}: unpublished or duplicate destination`);
-    const assemblyLinks = getFittingAssemblyLinks(slug, assemblyContent);
+    const assemblyLinks = isConfigurator ? [] : getFittingAssemblyLinks(slug, assemblyContent);
     const copy = withFittingArticleLinks(source, slug, locale, navigation, articles, assemblyLinks);
     const links = hrefs([...copy.leadBlocks, ...copy.sections.flatMap(section => section.blocks)]);
     for (const relation of relations) {
@@ -67,7 +70,7 @@ for (const locale of allTubingAssemblyLocales) {
   for (const card of assemblyContent.cards) {
     const family = card.productTypeId as keyof typeof tubingAssemblyArticleSlugs;
     const guides = selectFittingArticleCards(articles, tubingAssemblyArticleSlugs[family]);
-    assert.equal(guides.length, 2, `${locale}/${family}: missing product articles`);
+    assert.equal(guides.length, family === "flanged-tubing" ? 3 : 2, `${locale}/${family}: missing product articles`);
     assert(getFittingAssemblyLinks(guides[0].slug, assemblyContent).some(link => link.href === card.detailHref), `${locale}/${card.productId}: missing article-to-product link`);
   }
 }

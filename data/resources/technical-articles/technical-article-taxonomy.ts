@@ -469,6 +469,20 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
   "piston-pump-accuracy-repeatability-resolution": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "precision", "dosing", "testing-validation"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 110 },
   "micro-plunger-pump-selection": { primaryCategory: "pumps", secondaryCategory: "plunger-pumps", tagKeys: ["plunger-pump", "dosing", "precision", "selection"], relatedProducts: ["EA", "SM", "TM"], relationKeys: ["series:ea", "series:sm", "series:tm"], relationPriority: 100 },
   "solenoid-valves-in-microfluidic-systems": { primaryCategory: "valves", secondaryCategory: "solenoid-valves", tagKeys: ["solenoid-valve", "fluid-switching", "fluidic-system", "selection"], relatedProducts: [] },
+  "tubing-assembly-configurator-guide": {
+    primaryCategory: "fittings-tubing",
+    secondaryCategory: "tubing-accessories",
+    tagKeys: ["fittings", "tubing", "selection"],
+    localizedLiteralTags: {
+      "zh-CN": ["仪器管组件", "在线配置", "2D 图纸"],
+      en: ["Instrument tubing assemblies", "Online configuration", "2D drawings"],
+      es: ["Conjuntos de tubos para instrumentos", "Configuración en línea", "Planos 2D"],
+      fr: ["Ensembles de tubes pour instruments", "Configuration en ligne", "Plans 2D"],
+      ko: ["기기용 튜빙 어셈블리", "온라인 구성", "2D 도면"],
+      ru: ["Трубные сборки для приборов", "Онлайн-конфигурация", "2D-чертежи"],
+    },
+    relatedProducts: [],
+  },
   "hard-tube-fittings-selection-guide": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"], literalTags: ["FEP", "PTFE", "PEEK"], relatedProducts: ["HFL-M6-25-PV-B", "HSF6-M6-32-PS-B"] },
   "flanged-tubing-assemblies-selection-guide": { primaryCategory: "fittings-tubing", secondaryCategory: "fittings", tagKeys: ["fittings", "selection", "sealing-leakage", "tubing", "installation"], localizedLiteralTags: {
       "zh-CN": ["翻边管组件", "M6", "1/4-28"],

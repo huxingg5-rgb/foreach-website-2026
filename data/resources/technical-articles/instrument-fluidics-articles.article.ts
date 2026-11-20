@@ -1,5 +1,10 @@
 import { flowTranslations } from "./instrument-fluidics/flow-locales";
-import { isTechnicalArticleLocaleAvailable } from "./technical-article-availability";
+import { isTechnicalArticleLocaleAvailable, tubingAssemblyConfiguratorSlug } from "./technical-article-availability";
+import { tubingAssemblyConfiguratorCopy } from "./tubing-assembly-configurator-guide.zh";
+import { tubingAssemblyConfiguratorTranslations } from "./tubing-assembly-configurator-locales";
+import { assemblyText } from "@/data/products/configurator/tubing-assembly.intl";
+import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
+import { tubingAssemblyCard } from "./tubing-article-support";
 import { pressureTranslations } from "./instrument-fluidics/pressure-locales";
 import { diaphragmOverviewTranslations } from "./instrument-fluidics/diaphragm-overview-locales";
 import { copy as flow } from "./instrument-fluidics/quick-disconnect-coupling-flow-pressure-drop.zh";
@@ -21,6 +26,17 @@ import { getHardTubeGuideProducts } from "./hard-tube-fittings-related-products"
 
 // Model cards are configuration examples, not the unidentified catalogue test samples.
 const definitions = [
+  {
+    slug: tubingAssemblyConfiguratorSlug,
+    copy: tubingAssemblyConfiguratorCopy,
+    category: "fittings-tubing",
+    series: "",
+    date: "2026-11-20",
+    models: [],
+    pumpIds: [],
+    assemblyMaterials: ["fep", "ptfe", "pfa"],
+    anchors: ["configuration-parameters", "end-connections", "generate-drawing", "sample-review"],
+  },
   { slug: virtualLeaksArticleSlug, copy: virtualLeaks, category: "fittings-tubing", series: "", date: "2026-11-17",
     models: [], pumpIds: [],
     anchors: ["leak-types", "gas-load", "trapped-volumes", "materials-outgassing", "field-diagnosis", "design-prevention", "further-reading"] },
@@ -64,6 +80,7 @@ function relationKeys(item: Pick<typeof definitions[number], "series" | "pumpIds
 
 // Articles with a full set of translations; every other article here stays Chinese-only.
 const translatedArticles = {
+  [tubingAssemblyConfiguratorSlug]: tubingAssemblyConfiguratorTranslations,
   [virtualLeaksArticleSlug]: virtualLeaksTranslations,
   "quick-disconnect-coupling-flow-pressure-drop": flowTranslations,
   "quick-disconnect-coupling-pressure-rating": pressureTranslations,
@@ -131,16 +148,34 @@ export function getInstrumentFluidicsArticle(slug: string, locale: TechnicalArti
   });
   // Connection examples do not imply a high-vacuum rating or a measured leak rate.
   const isVirtualLeaksArticle = article.slug === virtualLeaksArticleSlug;
-  const products = isVirtualLeaksArticle
-    ? getHardTubeGuideProducts(locale).products.map(product => ({ ...product, imageAspectRatio: 1 }))
-    : [...fittings, ...pumps];
+  const products = "assemblyMaterials" in article
+    ? article.assemblyMaterials.map(material => tubingAssemblyCard(material, locale))
+    : isVirtualLeaksArticle
+      ? getHardTubeGuideProducts(locale).products.map(product => ({ ...product, imageAspectRatio: 1 }))
+      : [...fittings, ...pumps];
   const sidebarProducts = isVirtualLeaksArticle
     ? products.filter((_, index) => index === 0 || index === 2).map(product => ({ ...product, imageFill: true }))
     : products.slice(0, 2);
+  if (article.slug === tubingAssemblyConfiguratorSlug) {
+    const card = getTubingAssemblySelectionContent(locale).cards.find(
+      product => product.productId === "tubing-assembly-retaining-ring-black-ptfe",
+    );
+    if (card?.detailHref && card.imageCard) {
+      sidebarProducts[0] = {
+        id: card.productId,
+        title: card.cardTitle,
+        href: card.detailHref,
+        imageSrc: card.imageCard,
+        imageAlt: card.imageAlt,
+        imageAspectRatio: 1,
+      };
+    }
+  }
   return { ...article, products, sidebarProducts, footerProducts: products,
     subject: { about: [article.copy.metadata.title], mentions: isVirtualLeaksArticle
       ? virtualLeaksMentions[locale]
-      : article.series ? article.series.toUpperCase().split(",") : pumpMentions[locale] },
+      : "assemblyMaterials" in article ? ["FEP", assemblyText("管组件", locale), assemblyText("选型图纸", locale)]
+        : article.series ? article.series.toUpperCase().split(",") : pumpMentions[locale] },
     navigation: article.copy.sections.map((section, index) => ({ id: article.anchors[index], label: section.title })),
   };
 }
