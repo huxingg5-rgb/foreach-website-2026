@@ -5,6 +5,19 @@ import {getSolenoidConfiguration} from "../../data/products/detail/solenoid-conf
 import {getSolenoidCardCopy, getSolenoidStateCopy} from "../../data/products/detail/solenoid-card-copy";
 import {getSolenoidContent, expandSolenoidCards, solenoidConfigurations, solenoidConnectionConfigurations, solenoidPageConfigurations, solenoidLocales} from "../../data/products/detail/solenoid-content";
 
+const approvedEnglishDetailHeadings = new Map([
+  ["2-way-no-barbed", "SV10-B16-2NO 2-Way Normally Open Diaphragm Solenoid Valve with Barbed Ports"],
+]);
+
+const approvedP2NoDetailHeadings = new Map([
+  ["zh", "SV10-P-2NO 歧管直装式两通常开隔膜电磁阀"],
+  ["en", "SV10-P-2NO 2-Way Normally Open Manifold-Mount Diaphragm Solenoid Valve"],
+  ["es", "SV10-P-2NO Electroválvula de diafragma de 2 vías normalmente abierta para montaje en colector"],
+  ["fr", "SV10-P-2NO Électrovanne à membrane 2 voies normalement ouverte à montage sur collecteur"],
+  ["ko", "SV10-P-2NO 매니폴드 장착형 2방향 상시 열림 다이어프램 솔레노이드 밸브"],
+  ["ru", "SV10-P-2NO Двухходовой нормально открытый мембранный электромагнитный клапан для монтажа на коллектор"],
+]);
+
 async function main() {
   const closedName = {zh: "常闭", en: "normally closed", es: "normalmente cerrada", fr: "normalement fermée", ko: "상시 닫힘", ru: "нормально закрытый"};
   for (const locale of solenoidLocales) {
@@ -15,7 +28,19 @@ async function main() {
       const configuration = getSolenoidConfiguration(card.productId)!;
       const copy = getSolenoidCardCopy(card.productId, locale)!;
       assert(copy && !/\n|undefined/.test(copy.heading));
-      assert.equal(getValveCardCopy(card, locale)?.heading, copy.heading, "Selection and detail headings share the approved copy");
+      const approvedDetailHeading = (card.productId === "2-way-no-base" ? approvedP2NoDetailHeadings.get(locale) : undefined)
+        ?? (locale === "en" ? approvedEnglishDetailHeadings.get(card.productId) : undefined);
+      const approvedCardHeading = approvedDetailHeading?.slice(copy.model.length + 1) ?? copy.heading;
+      const displayedCard = getValveCardCopy(card, locale)!;
+      assert.equal(displayedCard.model, copy.model);
+      if (card.productId === "2-way-no-base" || card.productId === "2-way-no-barbed") {
+        assert(displayedCard.heading && !displayedCard.heading.includes(copy.model), "Show the model only once in the card text");
+        if (card.productId === "2-way-no-barbed" || approvedDetailHeading) {
+          assert.equal(displayedCard.heading, approvedCardHeading.replace(`${copy.model} `, ""));
+        }
+      } else {
+        assert.equal(displayedCard.heading, approvedCardHeading, "Use the approved selection-card heading");
+      }
       if (configuration.state === "nc") {
         const showClosed = configuration.connection !== "threaded";
         assert.equal(copy.heading.toLowerCase().includes(closedName[locale]), showClosed, "Base and barbed cards include NC in every language; threaded headings keep the approved shorter wording");
@@ -51,7 +76,10 @@ async function main() {
       if (c) {
         assert.equal(copy.valveIntroductionParagraphs.length, 2, "configuration introductions keep two coherent paragraphs");
         assert(copy.valveIntroductionParagraphs[0].includes(c.model), "Introduction identifies the specific product model");
-        assert.equal(copy.h1Title, getSolenoidCardCopy(slug, locale)!.heading, "Preserve the original complete heading sentence");
+        const approvedHeading = (slug === "2-way-no-base" ? approvedP2NoDetailHeadings.get(locale) : undefined)
+          ?? (locale === "en" ? approvedEnglishDetailHeadings.get(slug) : undefined)
+          ?? getSolenoidCardCopy(slug, locale)!.heading;
+        assert.equal(copy.h1Title, approvedHeading, "Use the approved detail heading for the page locale");
         assert.equal(getValveDetailHeading(slug, locale), copy.h1Title);
         if (c.state === "nc") {
           const showClosed = c.connection !== "threaded";

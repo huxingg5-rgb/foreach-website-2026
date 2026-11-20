@@ -29,10 +29,14 @@ const imageAltByLocale: Record<SelectionLocale, (ways: "2" | "3") => string> = {
   ru: ways => `Миниатюрный ${ways}-ходовой электромагнитный клапан FOREACH SV10-${ways} с резьбовыми портами и уплотнениями основания`,
 };
 
+const twoWayNoBarbedImagePrefix = "/images/products/valves/solenoid-valves/foreach-sv10-b16-2no";
+
 export function getSolenoidConfigurationImage(slug: string, locale: SelectionLocale) {
   const c = getSolenoidConfiguration(slug);
   if (c) return {
-    src: `/images/products/valves/solenoid-valves/foreach-sv10-${c.imageSlug}-main.webp`,
+    src: c.slug === "2-way-no-barbed"
+      ? `${twoWayNoBarbedImagePrefix}-main.webp`
+      : `/images/products/valves/solenoid-valves/foreach-sv10-${c.imageSlug}-main.webp`,
     cardSrc: `/images/products/valves/solenoid-valves/foreach-sv10-${c.imageSlug}-card.webp`,
     alt: `FOREACH ${c.model} ${getSolenoidCardCopy(slug, locale)?.name || solenoidConfigurationName(slug, locale)}`,
   };
@@ -201,8 +205,56 @@ const threeWayThreadedValveSeatAlts: Record<SelectionLocale, string> = {
   ru: "Миниатюрный трёхходовой мембранный электромагнитный клапан FOREACH SV10-M6/U28-3 с корпусом и резьбовым седлом",
 };
 
+const twoWayNoBarbedPortsCloseupAlts: Record<SelectionLocale, string> = {
+  zh: "FOREACH SV10-B16-2NO 电磁阀的两个宝塔式软管接口特写",
+  en: "Close-up of the two barbed tubing ports on the FOREACH SV10-B16-2NO solenoid valve",
+  es: "Detalle de las dos conexiones de espiga para tubos de la electroválvula FOREACH SV10-B16-2NO",
+  fr: "Gros plan des deux embouts cannelés pour tuyaux de l’électrovanne FOREACH SV10-B16-2NO",
+  ko: "FOREACH SV10-B16-2NO 솔레노이드 밸브의 튜브용 바브 포트 2개 확대 사진",
+  ru: "Два штуцера «ёлочка» для трубок на электромагнитном клапане FOREACH SV10-B16-2NO крупным планом",
+};
+
+const twoWayConnectionComparisonGallery: ReadonlyArray<readonly [string, Record<SelectionLocale, string>]> = [
+  ["manifold-and-barbed-angle", {
+    zh: "FOREACH SV10 基板安装式与宝塔接口式电磁阀的斜视对比",
+    en: "Angled view of FOREACH SV10 manifold-mount and barbed solenoid valves",
+    es: "Vista en ángulo de las electroválvulas FOREACH SV10 para montaje en colector y con conexiones de espiga",
+    fr: "Vue de trois quarts des électrovannes FOREACH SV10 à montage sur collecteur et à embouts cannelés",
+    ko: "FOREACH SV10 매니폴드 장착형 및 바브 포트형 솔레노이드 밸브의 사선 사진",
+    ru: "Электромагнитные клапаны FOREACH SV10 для монтажа на коллектор и со штуцерами «ёлочка», вид под углом",
+  }],
+  ["manifold-and-barbed-front", {
+    zh: "FOREACH SV10 基板安装式与宝塔接口式电磁阀的接口正视对比",
+    en: "Front view of FOREACH SV10 manifold-mount and barbed solenoid valve ports",
+    es: "Vista frontal de los puertos de las electroválvulas FOREACH SV10 para montaje en colector y con conexiones de espiga",
+    fr: "Vue de face des orifices des électrovannes FOREACH SV10 à montage sur collecteur et à embouts cannelés",
+    ko: "FOREACH SV10 매니폴드 장착형 및 바브 포트형 솔레노이드 밸브 포트의 정면 사진",
+    ru: "Порты электромагнитных клапанов FOREACH SV10 для монтажа на коллектор и со штуцерами «ёлочка», вид спереди",
+  }],
+  ["connection-options", {
+    zh: "FOREACH SV10 电磁阀的宝塔接口式、基板安装式与螺纹式连接对比",
+    en: "FOREACH SV10 solenoid valves with barbed, manifold-mount, and threaded connections",
+    es: "Electroválvulas FOREACH SV10 con conexiones de espiga, para montaje en colector y roscadas",
+    fr: "Électrovannes FOREACH SV10 à embouts cannelés, à montage sur collecteur et à raccords filetés",
+    ko: "FOREACH SV10 솔레노이드 밸브의 바브 포트형, 매니폴드 장착형 및 나사 연결형 비교",
+    ru: "Электромагнитные клапаны FOREACH SV10 со штуцерами «ёлочка», с монтажом на коллектор и с резьбовыми портами",
+  }],
+];
+
 export function getSolenoidConfigurationGallery(slug: string, locale: SelectionLocale) {
   const c = getSolenoidConfiguration(slug);
+  if (c?.slug === "2-way-no-barbed") {
+    return {
+      additionalImages: [
+        `${twoWayNoBarbedImagePrefix}-barbed-ports-closeup.webp`,
+        ...twoWayConnectionComparisonGallery.map(([view]) => `${twoWayNoBarbedImagePrefix}-${view}.webp`),
+      ],
+      additionalImageAlts: [
+        twoWayNoBarbedPortsCloseupAlts[locale],
+        ...twoWayConnectionComparisonGallery.map(([, alts]) => alts[locale]),
+      ],
+    };
+  }
   if (c) {
     const additionalImages: string[] = [];
     const additionalImageAlts: string[] = [];
@@ -231,6 +283,12 @@ export function getSolenoidConfigurationGallery(slug: string, locale: SelectionL
     if (c.connection === "base") {
       additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-base-manifold-assembly-gallery.webp");
       additionalImageAlts.push(baseManifoldAssemblyAlts[locale]);
+    }
+    if (c.slug === "2-way-no-base") {
+      for (const [view, alts] of twoWayConnectionComparisonGallery) {
+        additionalImages.push(`${twoWayNoBarbedImagePrefix}-${view}.webp`);
+        additionalImageAlts.push(alts[locale]);
+      }
     }
     if (c.slug === "3-way-threaded") {
       additionalImages.push("/images/products/valves/solenoid-valves/foreach-sv10-3-way-threaded-valve-seat-gallery.webp");

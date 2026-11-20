@@ -1,17 +1,9 @@
-import { getPistonPumpSpecNotes, type PistonPumpGuide } from "@/data/products/detail/piston-pump-guide.zh";
+import type { PistonPumpGuide } from "@/data/products/detail/piston-pump-guide.zh";
 export { default as EaPumpSelectionContent } from "./EaPumpSelectionContent";
 import { pistonView } from "./piston-view";
 import { siteFooterData } from "@/data/site-footer";
 import EaPumpAfterSalesForm from "./EaPumpAfterSalesForm";
 import styles from "./EaPumpDetailContent.module.css";
-
-export function PistonPumpSpecNotes({ guide, locale = "zh" }: { guide: PistonPumpGuide; locale?: string }) {
-  return pistonView(
-    <div className={styles.specNotes}>
-      {getPistonPumpSpecNotes(guide).map((note) => <p key={note}>{note}</p>)}
-    </div>, locale
-  );
-}
 
 const imageRoot = "/images/products/pumps/plunger-pump/ea/delivery/";
 

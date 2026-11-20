@@ -29,9 +29,6 @@ export default function TubingAssemblySizeTable({ data, copy }: { data: TubingAs
           ))}
         </tbody>
       </table>
-      <div className={styles.notes}>
-        {data.notes.map(note => <p key={note}>{note}</p>)}
-      </div>
     </section>
   );
 }

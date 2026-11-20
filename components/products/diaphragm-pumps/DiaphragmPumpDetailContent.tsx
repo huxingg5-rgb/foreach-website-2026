@@ -11,17 +11,6 @@ type Props = { guide: DiaphragmPumpGuide; locale: string };
 const photoRoot = "/images/products/pumps/diaphragm-pumps/delivery/";
 const photos = ["diaphragm-pumps-foam-compartments.webp", "diaphragm-pump-label-and-packaging.webp", "diaphragm-pumps-foam-cover.webp", "diaphragm-pumps-packing-list.webp", "diaphragm-pumps-carton-packing.webp", "diaphragm-pumps-sealed-carton-labels.webp"];
 
-export function DiaphragmPumpProductNotes({ guide, locale }: Props) {
-  const copy = getDiaphragmPumpGuideCopy(locale, guide);
-  return <div data-diaphragm-product-notes={guide.model}>
-    <div className={base.specNotes}>
-      <p>{copy.notes[guide.gasLiquid ? 1 : 0]}</p>
-      <p>{copy.notes[2]}</p>
-      <p>{copy.lifeNote}</p>
-    </div>
-  </div>;
-}
-
 export function DiaphragmPumpSelectionContent({ guide, locale }: Props & { applications?: ProductApplicationsContent }) {
   return <DiaphragmPumpSelectionGuide guide={guide} locale={locale} />;
 }

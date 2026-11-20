@@ -142,6 +142,19 @@ const mrv3Cards: Record<SelectionLocale, { name: string; heading: string }> = {
   },
 };
 
+const englishSolenoidHeadings = new Map([
+  ["2-way-no-barbed", "2-Way Normally Open Diaphragm Solenoid Valve with Barbed Ports"],
+]);
+
+const sv10P2NoCardHeadings: Record<SelectionLocale, string> = {
+  zh: "歧管直装式两通常开隔膜电磁阀",
+  en: "2-Way Normally Open Manifold-Mount Diaphragm Solenoid Valve",
+  es: "Electroválvula de diafragma de 2 vías normalmente abierta para montaje en colector",
+  fr: "Électrovanne à membrane 2 voies normalement ouverte à montage sur collecteur",
+  ko: "매니폴드 장착형 2방향 상시 열림 다이어프램 솔레노이드 밸브",
+  ru: "Двухходовой нормально открытый мембранный электромагнитный клапан для монтажа на коллектор",
+};
+
 export function getValveCardCopy(
   product: Pick<ProductSelectionProduct, "productId" | "seriesId">,
   locale: SelectionLocale,
@@ -160,7 +173,16 @@ export function getValveCardCopy(
   if (product.productId === "hp-3-position-7-port-high-pressure-valve") return valveCards[locale].hp;
   if (product.seriesId === "6010") {
     const card = getSolenoidCardCopy(product.productId, locale);
-    if (card) return card;
+    if (card) {
+      if (product.productId === "2-way-no-base") {
+        return { ...card, heading: sv10P2NoCardHeadings[locale] };
+      }
+      const heading = locale === "en" ? englishSolenoidHeadings.get(product.productId) : undefined;
+      if (product.productId === "2-way-no-barbed") {
+        return { ...card, heading: (heading ?? card.heading).replace(`${card.model} `, "") };
+      }
+      return heading ? { ...card, heading } : card;
+    }
     if (product.productId === "2-way") return valveCards[locale].two;
     if (product.productId === "3-way") return valveCards[locale].three;
   }
@@ -169,7 +191,13 @@ export function getValveCardCopy(
 
 export function getValveDetailHeading(slug: string, locale: SelectionLocale): string | undefined {
   const solenoidCard = getSolenoidCardCopy(slug, locale);
-  if (solenoidCard) return solenoidCard.heading;
+  if (solenoidCard) {
+    if (slug === "2-way-no-base") {
+      return `${solenoidCard.model} ${sv10P2NoCardHeadings[locale]}`;
+    }
+    const heading = locale === "en" ? englishSolenoidHeadings.get(slug) : undefined;
+    return heading ? `${solenoidCard.model} ${heading}` : solenoidCard.heading;
+  }
   if (/^mrv3-d(10|16|24)$/.test(slug)) {
     return getValveCardCopy({ productId: slug, seriesId: "MRV3" }, locale)?.heading;
   }

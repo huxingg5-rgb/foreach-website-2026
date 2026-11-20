@@ -30,6 +30,13 @@ export const solenoidConfigurations: SolenoidConfiguration[] = [
 ];
 export const solenoidPageConfigurations = [...solenoidConfigurations, ...solenoidLegacyConfigurations];
 export const getSolenoidConfiguration = (slug: string) => solenoidPageConfigurations.find(c => c.slug === slug);
+export function getSolenoidModelAsset(slug: string, variant = 0) {
+  // The reference display model is shared across languages.
+  if (slug === "2-way-no-barbed") return "barbed-2no";
+  const assets = getSolenoidConfiguration(slug)?.assets;
+  return assets?.[variant] || assets?.[0];
+}
+
 // Only original drawings actually supplied for these configurations are available.
 const originalDrawingAssets = new Set(["base-3", "base-2nc", "base-2no", "threaded-3", "threaded-2nc", "threaded-2no"]);
 export function getSolenoidDrawingAsset(slug: string, variant = 0) {

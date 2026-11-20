@@ -113,7 +113,7 @@ if(usesParentLoader && parent!==window)document.getElementById('loading').hidden
 
 async function start() {
 const params=new URLSearchParams(location.search), id=params.get('model');
-const allowed=['base-2nc','base-2no','base-3','threaded-2nc','threaded-2no','threaded-3','barbed-3',...rplIds,...diaphragmIds,...pistonIds,...pipettingIds,...abdIds,...fittingIds,...quickConnectIds];
+const allowed=['base-2nc','base-2no','base-3','threaded-2nc','threaded-2no','threaded-3','barbed-3','barbed-2no',...rplIds,...diaphragmIds,...pistonIds,...pipettingIds,...abdIds,...fittingIds,...quickConnectIds];
 if(!allowed.includes(id))throw new Error('Unknown model');
 const quickConnectProduct=isQuickConnect?getQuickConnectProduct(params):null;
 const quickConnectPreview=isQuickConnectPilot(quickConnectProduct);

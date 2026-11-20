@@ -3,7 +3,7 @@ import type { ComponentType, ReactNode } from "react";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import DiaphragmPumpSeriesOptions from "@/components/products/diaphragm-pumps/DiaphragmPumpSeriesOptions";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
-import { DiaphragmPumpProductNotes, DiaphragmPumpSelectionContent, DiaphragmPumpDeliveryContent } from "./DiaphragmPumpDetailContent";
+import { DiaphragmPumpSelectionContent, DiaphragmPumpDeliveryContent } from "./DiaphragmPumpDetailContent";
 import { getDiaphragmPumpGuide } from "@/data/products/detail/diaphragm-pump-guide";
 import { diaphragmText } from "@/data/products/detail/diaphragm-pump-ui.intl";
 import { PRODUCT_CENTER_BREADCRUMB_LABELS } from "@/lib/seo/product-breadcrumb-label";
@@ -1306,7 +1306,6 @@ export default async function DiaphragmPumpDetailPage({
       data={data}
       customerCategoryMode={guide ? "diaphragm-pump" : undefined}
       customerCategoryContent={guide ? {
-        product: <DiaphragmPumpProductNotes guide={guide} locale={locale} />,
         selection: <>
           <DiaphragmPumpSelectionContent guide={guide} locale={locale} applications={data.applicationDetails} />
           <DiaphragmPumpSeriesOptions locale={locale} seriesSlug={data.slug} />

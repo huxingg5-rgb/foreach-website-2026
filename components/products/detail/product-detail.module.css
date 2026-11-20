@@ -231,26 +231,34 @@
   max-width: none;
   margin: 18px 0 0;
   color: #333333;
-  font-size: 17px;
-  line-height: 1.72;
+  font-size: 18px;
+  line-height: 1.4;
   font-weight: 400;
 }
 
-.productDescParagraphs p {
+.productDesc:lang(zh, ko) {
+  line-height: 30px;
+}
+
+.productDescParagraphs {
+  display: grid;
+  row-gap: 8px;
+}
+
+.productDescParagraphs > p {
   margin: 0;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-.productDescParagraphs p + p {
-  margin-top: 12px;
-}
+@media (max-width: 420px) {
+  .productDesc {
+    font-size: 17px;
+  }
 
-.container .productDescParagraphs[data-valveless-model^="rpl-"] > p {
-  margin: 0 !important;
-  line-height: 1.35 !important;
-}
-
-.container .productDescParagraphs[data-valveless-model^="rpl-"] > p + p {
-  margin-top: 6px !important;
+  .productDesc:lang(zh, ko) {
+    line-height: 29px;
+  }
 }
 
 .application {
@@ -490,15 +498,6 @@
   background: #ffffff;
 }
 
-/* Used only by the Chinese RPL-P4 specification notes. */
-.rplP4SpecNote {
-  margin: 14px 0 0;
-  color: #596579;
-  font-size: 14px;
-  line-height: 1.75;
-  text-align: left;
-}
-
 .specTable {
   width: 100%;
   border: 1px solid #cbd5e3;
@@ -618,7 +617,6 @@
     font-size: 24px;
   }
 
-  .productDesc,
   .applicationText {
     font-size: 15px;
     line-height: 1.72;
@@ -1951,7 +1949,7 @@
     letter-spacing: -0.02em !important;
   }
 
-  .container .productInfo p {
+  .container .productInfo p:not(:where(.productDesc, .productDescParagraphs > p)) {
     margin-top: 0 !important;
     margin-bottom: 14px !important;
     font-size: 17px !important;
@@ -2128,7 +2126,7 @@
     line-height: 1.2 !important;
   }
 
-  .container .productInfo p {
+  .container .productInfo p:not(:where(.productDesc, .productDescParagraphs > p)) {
     font-size: 16px !important;
     line-height: 1.68 !important;
   }
@@ -2771,19 +2769,9 @@
 
 /* ===== FOREACH RUSSIAN PRODUCT TITLE TYPOGRAPHY END ===== */
 
-/* Keep piston-pump introductions compact without changing shared detail typography. */
+/* Preserve the spacing below authored piston-pump titles. */
 .page[data-authored-piston-detail="true"] .container .productDesc {
-  margin: 12px 0 0 !important;
-  line-height: 1.5 !important;
-}
-
-.page[data-authored-piston-detail="true"] .container .productDescParagraphs > p {
-  margin: 0 !important;
-  line-height: 1.5 !important;
-}
-
-.page[data-authored-piston-detail="true"] .container .productDescParagraphs > p + p {
-  margin-top: 8px !important;
+  margin: 12px 0 0;
 }
 
 .page[data-authored-piston-detail="true"] .container .application {
@@ -2881,7 +2869,6 @@
     line-height: 1.25 !important;
   }
   :global(html[lang^="zh"]) .page[data-product-detail-page] .container .productModelTitle { line-height: 1.4 !important; }
-  .page .container .productDesc,
   .page .container .applicationText { font-size: clamp(16px, calc(0.18vw + 13.54px), 17px); line-height: 1.7; }
   .page .container .applicationTitle,
   .page .container [data-ea-inquiry-summary] h3,

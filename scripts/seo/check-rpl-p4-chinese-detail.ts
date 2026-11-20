@@ -96,7 +96,7 @@ async function checkHttp() {
   }
   assert.ok(main.includes(rplP4DescriptionZh));
   assert.equal([...main.matchAll(/data-product-spec-row="true"/g)].length, original.specs.length);
-  assert.equal([...main.matchAll(/data-product-spec-note="true"/g)].length, 2);
+  assert.doesNotMatch(main, /data-product-(?:spec|flow)-note="true"/);
   assert.ok(main.includes("加入图纸需求"));
   assert.ok(main.includes(rplP4PresentationZh.drawingUnavailable));
   assert.ok(main.includes(rplP4PresentationZh.bottomCta.title));

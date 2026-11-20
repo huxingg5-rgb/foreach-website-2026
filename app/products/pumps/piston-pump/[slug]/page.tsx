@@ -9,7 +9,7 @@ import { Suspense, type ComponentType, type ReactNode } from "react";
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
-import { PistonPumpDeliveryContent, EaPumpSelectionContent, PistonPumpSpecNotes } from "@/components/products/detail/EaPumpDetailContent";
+import { PistonPumpDeliveryContent, EaPumpSelectionContent } from "@/components/products/detail/EaPumpDetailContent";
 import CompactPistonPumpSelectionContent from "@/components/products/detail/CompactPistonPumpSelectionContent";
 import { pistonText } from "@/data/products/detail/piston-pump-ui.intl";
 import { applyPistonPumpGuide, getPistonPumpGuide } from "@/data/products/detail/piston-pump-guide.zh";
@@ -744,7 +744,6 @@ export default async function PlungerPumpDetailPage({
       analyticsProductId={analyticsProductId}
       customerCategoryMode={guide ? "piston-pump" : undefined}
       customerCategoryContent={guide ? {
-        product: <PistonPumpSpecNotes locale={locale} guide={guide} />,
         selection: guide.series === "EA"
           ? <EaPumpSelectionContent locale={locale} key={guide.slug} guide={guide} />
           : <CompactPistonPumpSelectionContent locale={locale} key={guide.slug} guide={guide} />,

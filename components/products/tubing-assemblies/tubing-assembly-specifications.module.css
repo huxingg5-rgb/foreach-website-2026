@@ -23,17 +23,6 @@
   text-align: left;
 }
 
-.notes {
-  margin-top: 14px;
-  color: #596579;
-  font-size: 14px;
-  line-height: 1.75;
-}
-
-.notes p {
-  margin: 5px 0 0;
-}
-
 @media (max-width: 720px) {
   .sectionTitle {
     font-size: 18px;

@@ -243,7 +243,7 @@ const chineseConfigurationHeadings: Record<string, string> = {
   "2-way-nc-barbed": "二通常闭微型隔膜电磁阀 SV10-B16-2NC，倒刺接口，结构紧凑。",
   "2-way-nc-threaded": "螺纹二通微型电磁阀 SV10-M6/U28-2NC，膜片可选 FKM、FFKM，可提供 OEM 解决方案。",
   "2-way-no-base": "二通常开微型隔膜电磁阀 SV10-P-2NO，基板安装，低死容积摇臂结构。",
-  "2-way-no-barbed": "二通常开微型隔膜电磁阀 SV10-B16-2NO，宝塔接口，适用于医疗和实验室仪器。",
+  "2-way-no-barbed": "SV10-B16-2NO 宝塔接口二通常开隔膜电磁阀",
   "2-way-no-threaded": "二通常开微型电磁阀 SV10-M6/U28-2NO，螺纹接口，适用于采样和清洗。",
 };
 
@@ -269,7 +269,7 @@ const localizedConfigurationHeadings: Record<Exclude<SelectionLocale, "zh">, Rec
     "2-way-nc-barbed": "Microelectroválvula de diafragma de 2 vías normalmente cerrada SV10-B16-2NC, diseño compacto con conexiones de espiga",
     "2-way-nc-threaded": "Electroválvula miniatura de diafragma de 2 vías SV10-M6/U28-2NC, conexiones roscadas y diafragmas FKM o FFKM para integración OEM",
     "2-way-no-base": "Electroválvula miniatura de diafragma de 2 vías normalmente abierta SV10-P-2NO, montaje en base y mecanismo basculante de bajo volumen muerto",
-    "2-way-no-barbed": "Microelectroválvula de diafragma de 2 vías normalmente abierta SV10-B16-2NO, conexiones de espiga para equipos médicos y de laboratorio",
+    "2-way-no-barbed": "SV10-B16-2NO Electroválvula de diafragma de 2 vías normalmente abierta con conexiones de espiga",
     "2-way-no-threaded": "Electroválvula miniatura de diafragma de 2 vías normalmente abierta SV10-M6/U28-2NO, conexiones roscadas para muestreo y lavado",
   },
   fr: {
@@ -280,7 +280,7 @@ const localizedConfigurationHeadings: Record<Exclude<SelectionLocale, "zh">, Rec
     "2-way-nc-barbed": "Micro-électrovanne à membrane 2 voies normalement fermée SV10-B16-2NC, conception compacte avec embouts cannelés",
     "2-way-nc-threaded": "Électrovanne miniature à membrane 2 voies SV10-M6/U28-2NC, ports filetés et membranes FKM ou FFKM pour intégration OEM",
     "2-way-no-base": "Électrovanne miniature à membrane 2 voies normalement ouverte SV10-P-2NO, montage sur embase et mécanisme à bascule à faible volume mort",
-    "2-way-no-barbed": "Micro-électrovanne à membrane 2 voies normalement ouverte SV10-B16-2NO, embouts cannelés pour instruments médicaux et de laboratoire",
+    "2-way-no-barbed": "SV10-B16-2NO Électrovanne à membrane 2 voies normalement ouverte avec embouts cannelés",
     "2-way-no-threaded": "Électrovanne miniature à membrane 2 voies normalement ouverte SV10-M6/U28-2NO, ports filetés pour échantillonnage et rinçage",
   },
   ko: {
@@ -291,7 +291,7 @@ const localizedConfigurationHeadings: Record<Exclude<SelectionLocale, "zh">, Rec
     "2-way-nc-barbed": "2방향 상시 닫힘 소형 다이어프램 솔레노이드 밸브 SV10-B16-2NC, 바브 포트와 콤팩트한 구조",
     "2-way-nc-threaded": "OEM 통합용 나사 연결형 2방향 소형 다이어프램 솔레노이드 밸브 SV10-M6/U28-2NC, FKM·FFKM 다이어프램 옵션",
     "2-way-no-base": "2방향 상시 열림 소형 다이어프램 솔레노이드 밸브 SV10-P-2NO, 베이스 장착형, 낮은 데드 볼륨의 로커 구조",
-    "2-way-no-barbed": "의료 및 실험실 기기용 2방향 상시 열림 마이크로 다이어프램 솔레노이드 밸브 SV10-B16-2NO, 바브 포트",
+    "2-way-no-barbed": "SV10-B16-2NO 바브 포트형 2방향 상시 열림 다이어프램 솔레노이드 밸브",
     "2-way-no-threaded": "샘플링 및 세척용 2방향 상시 열림 소형 다이어프램 솔레노이드 밸브 SV10-M6/U28-2NO, 나사 포트",
   },
   ru: {
@@ -302,7 +302,7 @@ const localizedConfigurationHeadings: Record<Exclude<SelectionLocale, "zh">, Rec
     "2-way-nc-barbed": "Двухходовой нормально закрытый миниатюрный мембранный электромагнитный клапан SV10-B16-2NC, компактный корпус со штуцерами под шланг",
     "2-way-nc-threaded": "Двухходовой миниатюрный мембранный электромагнитный клапан SV10-M6/U28-2NC с резьбовыми портами, мембраны FKM или FFKM для OEM-интеграции",
     "2-way-no-base": "Двухходовой нормально открытый миниатюрный мембранный электромагнитный клапан SV10-P-2NO для монтажа на коллектор, коромысловая конструкция с малым мёртвым объёмом",
-    "2-way-no-barbed": "Двухходовой нормально открытый миниатюрный мембранный электромагнитный клапан SV10-B16-2NO со штуцерами под шланг для медицинских и лабораторных приборов",
+    "2-way-no-barbed": "SV10-B16-2NO Двухходовой нормально открытый мембранный электромагнитный клапан со штуцерами «ёлочка»",
     "2-way-no-threaded": "Двухходовой нормально открытый миниатюрный мембранный электромагнитный клапан SV10-M6/U28-2NO с резьбовыми портами для отбора проб и промывки",
   },
 };

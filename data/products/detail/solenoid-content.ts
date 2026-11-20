@@ -5,6 +5,7 @@ import fr from "./solenoid-locales/fr.json";
 import ko from "./solenoid-locales/ko.json";
 import ru from "./solenoid-locales/ru.json";
 import type { ProductSelectionProduct } from "../selection/product-selection.types";
+import { getValveDetailHeading } from "../selection/valve-card-copy";
 import { getSolenoidConfigurationImage, getSolenoidConfigurationGallery } from "./solenoid-images";
 import { getSolenoidApplicationAreas } from "./applications/solenoid-application-areas";
 
@@ -98,7 +99,8 @@ export function getSolenoidContent(slug: string, locale: string) {
     } : {}),
     ...(c ? getSolenoidConfigurationGallery(c.slug, locale) : {additionalImages: [], additionalImageAlts: []}),
     productTypeId: "solenoid-valves", productTypeSlug: "solenoid-valves", productTypeName: t.productType,
-    model: title, title, name: title, h1Title: cardCopy?.heading || title.replace(/^FOREACH\s+/i, ""), pageTitle: title, productName: title,
+    model: title, title, name: title, pageTitle: title, productName: title,
+    h1Title: (c ? getValveDetailHeading(slug, locale) : undefined) ?? title.replace(/^FOREACH\s+/i, ""),
     cardHeading: heading || f?.heading || m?.heading || t.seriesTitle, cardName: cardCopy?.name || familyName || shortModel,
     modelName: shortModel, displayModel: shortModel, modelDisplay: shortModel, productCode: shortModel,
     breadcrumbLabel: c || connection ? shortModel : t.seriesLabel, breadcrumbCategoryLabel: t.valves, breadcrumbSeriesLabel: t.seriesLabel,

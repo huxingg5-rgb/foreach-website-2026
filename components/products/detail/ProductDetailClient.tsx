@@ -4369,19 +4369,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     ))}
                   </tbody>
                 </table>}
-                {isPistonPumpCustomerCategoryPage ? customerCategoryContent?.product : null}
-                {isDiaphragmPumpCustomerCategoryPage ? customerCategoryContent?.product : null}
-                {isInstrumentCustomerCategoryPage && (customerCategoryMode === "instrument-product" || !rplP4Copy?.specNotes?.length) ? customerCategoryContent?.product : null}
                 {isTubingAssembly && data.tubingAssemblySizeTable ? (
                   <TubingAssemblySizeTable data={data.tubingAssemblySizeTable} copy={data.tubingAssemblyUi} />
                 ) : null}
                 {isAssemblyCustomerCategoryPage ? customerCategoryContent?.product : null}
-                {rplP4Copy?.specNotes.map((note: string) => (
-                  <p key={note} className={styles.rplP4SpecNote} data-product-spec-note="true">{note}</p>
-                ))}
-                {configuratorLocale === "zh" && isValvelessPumpDetailData(data) && data.valvelessFlowNote ? (
-                  <p className={styles.rplP4SpecNote} data-product-flow-note="true">{data.valvelessFlowNote}</p>
-                ) : null}
               </div>
             </div>
 

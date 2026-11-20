@@ -87,7 +87,7 @@ type WorkspacePresentation = { title: string; description: string };
 
 const PRESENTATION: Record<string, Record<SelectionWorkspaceContext, WorkspacePresentation>> = {
   zh: {
-    configuration: { title: "{name} 配置", description: "选择所需选项（{parameters}），保存配置用于询价。" },
+    configuration: { title: "{name} 配置", description: "选择所需选项，保存配置用于询价。" },
     fittings: { title: "接头与配件选配", description: "按连接需要选配密封件或对接件，保存组合用于询价。" },
     support: { title: "图纸与技术支持", description: "核对当前型号和接口要求，可申请 CAD 或将产品加入询价清单。" },
     model: { title: "型号确认与询价", description: "核对当前型号及规格，将所需产品加入询价清单。" },
@@ -96,7 +96,7 @@ const PRESENTATION: Record<string, Record<SelectionWorkspaceContext, WorkspacePr
     piston: { title: "{name} 柱塞泵配置", description: "选择容量、泵头材质及配套要求，保存不同配置用于询价。" },
   },
   en: {
-    configuration: { title: "{name} configurations", description: "Select the required options ({parameters}) and save the configuration for your inquiry." },
+    configuration: { title: "{name} configurations", description: "Select the required options and save the configuration for your inquiry." },
     fittings: { title: "Fittings and accessory selection", description: "Choose compatible sealing components or mating connectors and save the combination for your inquiry." },
     support: { title: "Drawings and technical support", description: "Check the model and interface requirements, then request CAD files or add the product to your inquiry list." },
     model: { title: "Model review and inquiry", description: "Check the model and specifications, then add the required product to your inquiry list." },
@@ -105,7 +105,7 @@ const PRESENTATION: Record<string, Record<SelectionWorkspaceContext, WorkspacePr
     piston: { title: "{name} piston pump configurations", description: "Select capacity, pump head material and accessories, then save different configurations for your inquiry." },
   },
   es: {
-    configuration: { title: "Configuraciones de {name}", description: "Seleccione las opciones necesarias ({parameters}) y guarde la configuración para solicitar una oferta." },
+    configuration: { title: "Configuraciones de {name}", description: "Seleccione las opciones necesarias y guarde la configuración para solicitar una oferta." },
     fittings: { title: "Selección de racores y accesorios", description: "Elija los elementos de estanqueidad o conectores de acoplamiento compatibles y guarde el conjunto para solicitar una oferta." },
     support: { title: "Planos y asistencia técnica", description: "Compruebe el modelo y los requisitos de conexión; después, solicite los archivos CAD o añada el producto a su lista de consulta." },
     model: { title: "Revisión del modelo y consulta", description: "Compruebe el modelo y las especificaciones y añada el producto que necesita a su lista de consulta." },
@@ -114,7 +114,7 @@ const PRESENTATION: Record<string, Record<SelectionWorkspaceContext, WorkspacePr
     piston: { title: "Configuraciones de la bomba de pistón {name}", description: "Seleccione la capacidad, el material del cabezal y los accesorios y guarde las configuraciones para solicitar una oferta." },
   },
   fr: {
-    configuration: { title: "Configurations {name}", description: "Choisissez les options souhaitées ({parameters}), puis enregistrez la configuration pour votre demande de devis." },
+    configuration: { title: "Configurations {name}", description: "Choisissez les options souhaitées, puis enregistrez la configuration pour votre demande de devis." },
     fittings: { title: "Choix des raccords et accessoires", description: "Choisissez les éléments d’étanchéité ou les raccords complémentaires compatibles, puis enregistrez l’ensemble pour votre demande de devis." },
     support: { title: "Plans et assistance technique", description: "Vérifiez le modèle et les interfaces, puis demandez les fichiers CAO ou ajoutez le produit à votre liste de demande de devis." },
     model: { title: "Vérification du modèle et demande de devis", description: "Vérifiez le modèle et ses caractéristiques, puis ajoutez le produit souhaité à votre liste de demande de devis." },
@@ -123,7 +123,7 @@ const PRESENTATION: Record<string, Record<SelectionWorkspaceContext, WorkspacePr
     piston: { title: "Configurations de la pompe à piston {name}", description: "Choisissez la capacité, le matériau de la tête de pompe et les accessoires, puis enregistrez les configurations pour votre demande de devis." },
   },
   ko: {
-    configuration: { title: "{name} 구성", description: "필요한 옵션({parameters})을 선택한 후 견적 요청용 구성을 저장하세요." },
+    configuration: { title: "{name} 구성", description: "필요한 옵션을 선택한 후 견적 요청용 구성을 저장하세요." },
     fittings: { title: "피팅 및 액세서리 선정", description: "호환되는 씰링 부품이나 연결용 커넥터를 선택하고 견적 요청용 조합을 저장하세요." },
     support: { title: "도면 및 기술 지원", description: "모델과 인터페이스 요구 사항을 확인한 후 CAD 파일을 요청하거나 견적 요청 목록에 제품을 추가하세요." },
     model: { title: "모델 확인 및 견적 문의", description: "모델과 사양을 확인한 후 필요한 제품을 견적 요청 목록에 추가하세요." },
@@ -132,7 +132,7 @@ const PRESENTATION: Record<string, Record<SelectionWorkspaceContext, WorkspacePr
     piston: { title: "{name} 피스톤 펌프 구성", description: "용량, 펌프 헤드 재질 및 액세서리를 선택하고 견적 요청용 구성을 저장하세요." },
   },
   ru: {
-    configuration: { title: "Конфигурации {name}", description: "Выберите нужные параметры ({parameters}) и сохраните конфигурацию для запроса цены." },
+    configuration: { title: "Конфигурации {name}", description: "Выберите нужные параметры и сохраните конфигурацию для запроса цены." },
     fittings: { title: "Подбор фитингов и принадлежностей", description: "Выберите совместимые уплотнительные элементы или ответные соединители и сохраните комплект для запроса цены." },
     support: { title: "Чертежи и техническая поддержка", description: "Проверьте модель и требования к соединениям, затем запросите файлы CAD или добавьте изделие в список для запроса цены." },
     model: { title: "Проверка модели и запрос цены", description: "Проверьте модель и характеристики и добавьте нужное изделие в список для запроса цены." },
@@ -143,14 +143,11 @@ const PRESENTATION: Record<string, Record<SelectionWorkspaceContext, WorkspacePr
 };
 
 /** Describe the controls available on this page; leave product values and selection rules unchanged. */
-export function getSelectionWorkspacePresentation(locale: string, context: SelectionWorkspaceContext, name = "", parameters: string[] = []): WorkspacePresentation {
+export function getSelectionWorkspacePresentation(locale: string, context: SelectionWorkspaceContext, name = ""): WorkspacePresentation {
   const language = Object.hasOwn(PRESENTATION, locale) ? locale : "zh";
   const copy = PRESENTATION[language][context];
-  const labels = [...new Set(parameters.map(value => value.trim()).filter(Boolean))];
-  const parameterList = new Intl.ListFormat(language, { style: "long", type: "conjunction" }).format(labels);
   return {
     title: copy.title.replace("{name}", name).trim(),
-    description: (parameterList ? copy.description.replace("{parameters}", parameterList)
-      : copy.description.replace(/\s*[（(]\{parameters\}[）)]/g, "")).trim(),
+    description: copy.description,
   };
 }

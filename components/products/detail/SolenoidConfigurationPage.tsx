@@ -1,4 +1,4 @@
-import {getSolenoidConfiguration, getSolenoidDrawingPdfUrl} from "@/data/products/detail/solenoid-configurations";
+import {getSolenoidConfiguration, getSolenoidDrawingPdfUrl, getSolenoidModelAsset} from "@/data/products/detail/solenoid-configurations";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import ProductDetailClient from "./ProductDetailClient";
@@ -34,7 +34,7 @@ export default function SolenoidConfigurationPage({slug, locale}: {slug: string;
   const base = valveDetails.find(item => item.slug === "solenoid-valves");
   if (!copy || !base) notFound();
   const configuration = getSolenoidConfiguration(slug);
-  const asset = configuration?.assets[0];
+  const asset = getSolenoidModelAsset(slug);
   const drawingPdfUrl = getSolenoidDrawingPdfUrl(slug, locale);
   const data = {...base, ...copy, mainImage: copy.mainImage || base.image, imageAlt: copy.imageAlt || copy.title,
     additionalImages: copy.additionalImages, additionalImageAlts: copy.additionalImageAlts, thumbnails: [], images: [],

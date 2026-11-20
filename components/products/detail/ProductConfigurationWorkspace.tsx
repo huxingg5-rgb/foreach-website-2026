@@ -20,8 +20,7 @@ export default function ProductConfigurationWorkspace({ locale, drawingTypes, co
   const variant = (id: string) => config.variants.find(item => item.id === id)!;
   const saved = savedIds.map(id => config.variants.find(item => item.id === id)).filter((item): item is ProductConfiguratorVariant => Boolean(item));
   const configurations = saved.map(item => ({ ...variantCadConfiguration(config, item, locale), drawingTypes: drawingTypes?.[item.id] || [] }));
-  const parameters = config.dimensions.filter(dimension => new Set(config.variants.map(item => item.attributes[dimension.key])).size > 1).map(dimension => dimension.label);
-  const presentation = getSelectionWorkspacePresentation(locale, fixed ? canRequestCad ? "support" : "model" : "configuration", config.productName, parameters);
+  const presentation = getSelectionWorkspacePresentation(locale, fixed ? canRequestCad ? "support" : "model" : "configuration", config.productName);
   return <DetailSelectionWorkspace locale={locale} title={presentation.title} configurations={configurations}
     helperText={!saved.length || fixed ? presentation.description : undefined}
     fixed={fixed} onSelect={onSelect} onNew={!fixed || !saved.length ? onNew : undefined} newLabel={fixed ? copy.view : copy.add}

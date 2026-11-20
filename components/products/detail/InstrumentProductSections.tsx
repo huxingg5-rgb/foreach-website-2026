@@ -105,19 +105,6 @@ export function InstrumentProductSelectionContent({ guide, locale = "zh" }: { gu
   </div>;
 }
 
-function InstrumentProductDocuments({ guide, locale = "zh" }: { guide: InstrumentProductGuide; locale?: string }) {
-  const noteLabels = new Set([
-    "性能数据的使用条件", "移液性能", "性能与验证", "工作条件", "材料与性能",
-    "性能条件", "检测边界", "量程与误差", "工作与结构边界",
-  ]);
-  const sourceDocuments = getInstrumentProductGuide(guide.slug)?.documents ?? guide.documents;
-  const notes = guide.documents.filter((_, index) => noteLabels.has(sourceDocuments[index]?.[0]));
-  if (!notes.length) return null;
-  return <div lang={locale === "zh" ? "zh-CN" : locale} className={base.specNotes} data-instrument-spec-notes={guide.slug}>
-    {notes.map(([title, text]) => <p key={title}>{text}</p>)}
-  </div>;
-}
-
 const imageRoot = "/images/products/pumps/plunger-pump/ea/delivery/";
 type DeliveryPhoto = readonly [file: string, alt: string, caption: string, height?: number];
 const valvelessPackagingPhotos: readonly (readonly DeliveryPhoto[])[] = [
@@ -226,7 +213,6 @@ export function getInstrumentProductSections(slug: string, locale = "zh") {
       customerCategoryMode: "instrument-product" as const,
       customerCategoryUi: getRplGuideUi(locale),
       customerCategoryContent: {
-        product: <InstrumentProductDocuments guide={localizedGuide} locale={locale} />,
         selection: instrumentDetailProfiles[localizedGuide.family]
           ? <InstrumentSelectionGuideContent guide={localizedGuide} locale={locale} />
           : <InstrumentProductSelectionContent guide={localizedGuide} locale={locale} />,
@@ -241,7 +227,6 @@ export function getInstrumentProductSections(slug: string, locale = "zh") {
   return {
     customerCategoryMode: "instrument-product-zh" as const,
     customerCategoryContent: {
-      product: <InstrumentProductDocuments guide={guide} />,
       selection: guide.family === "smtp2" || guide.family === "smtp4"
         ? <PipettingSelectionContent guide={getChinesePipettingSelectionGuide(guide)} />
         : instrumentDetailProfiles[guide.family]

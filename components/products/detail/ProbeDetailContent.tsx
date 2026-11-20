@@ -23,7 +23,6 @@ export function ProbeProductContent({ guide, specs, locale = "zh" }: { guide: Pr
     <p>{guide.structureNote}</p>
     <h3>{t("定制确认项")}</h3>
     <CheckTable locale={locale} rows={specs.map(item => [item.label, item.value])} />
-    <p className={styles.note}>{t("本页展示定制方向与需求确认项。具体材质、尺寸、公差、表面处理和使用条件，以双方确认的图纸、样件及检验要求为准。")}</p>
     <section className={styles.section}>
       <h3>{t("图纸与配套资料")}</h3>
       <dl className={styles.rows}>
