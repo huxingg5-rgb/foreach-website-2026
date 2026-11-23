@@ -30,8 +30,10 @@ import { trackFilterApply, trackSearchWithResults } from "@/lib/analytics/track-
 
 import BottomCtaButton from "@/components/common/BottomCtaButton";
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
+import catalogStyles from "@/components/home/EnglishHomeSections.module.css";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 
 import type {
@@ -61,26 +63,6 @@ type DatasheetsClientProps = {
     thumbnail: string;
   };
 };
-
-/* =========================================================
-   DownloadIcon
-   下载图标组件
-
-   说明：
-   1. 使用 SVG，不额外引入图片
-   2. fill 使用 currentColor，颜色跟随按钮文字
-========================================================= */
-
-function DownloadIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        fill="currentColor"
-        d="M11 4h2v9.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17V4Zm-5 15h12v2H6v-2Z"
-      />
-    </svg>
-  );
-}
 
 /* =========================================================
    DatasheetsClient
@@ -163,9 +145,6 @@ export default function DatasheetsClient({
     });
   }
   const filteredItems = filterItems(searchKeyword);
-
-  /* 字段分隔符：中文默认使用 ： */
-  const fieldSeparator = pageText.labels.fieldSeparator ?? "：";
 
   return (
     <main className="datasheets-page">
@@ -284,77 +263,55 @@ export default function DatasheetsClient({
         </div>
 
         {filteredItems.length > 0 ? (
-          <div className="datasheet-list">
+          <div className={catalogStyles.productGrid}>
             {filteredItems.map((item) => (
-              <article className="datasheet-row" key={item.id}>
-                {/* 左侧产品缩略图 */}
-                <div className="product-thumb">
-                  <img
+              <article className={`${catalogStyles.product} datasheet-card`} key={item.id}>
+                <div className={catalogStyles.visual}>
+                  <Image
                     src={item.image}
                     alt={`${item.title}${
                       accessibilityLabels?.thumbnail ?? " thumbnail"
                     }`}
+                    fill
+                    sizes="(max-width: 760px) 46vw, (max-width: 1600px) 23vw, 400px"
+                    style={
+                      item.id === "fittings-and-tubing-catalog" || item.id === "sample-probe"
+                        ? { objectFit: "cover" }
+                        : undefined
+                    }
                   />
                 </div>
 
-                {/* 中间文字信息 */}
-                <div className="row-main">
-                  <div className="row-title-line">
-                    <h3 className="row-title">{item.title}</h3>
+                <div className={catalogStyles.productText}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
 
-                    <span className="row-label">{item.label}</span>
+                  <div className="datasheet-card-actions">
+                    {item.productHref ? (
+                      <Link className="datasheet-card-action" href={item.productHref}>
+                        {pageText.labels.viewProduct}
+                      </Link>
+                    ) : null}
+
+                    {item.actionType === "custom" ? (
+                      <Link className="datasheet-card-action" href={item.downloadHref}>
+                        {pageText.labels.custom}
+                      </Link>
+                    ) : (
+                      <a
+                        className="datasheet-card-action"
+                        href={encodeURI(item.downloadHref)}
+                        download={getDatasheetFileName(item.downloadHref)}
+                        data-analytics-resource-action="download"
+                        data-analytics-resource-id={item.id}
+                        data-analytics-resource-type="datasheet"
+                        data-analytics-resource-file-type="pdf"
+                        data-analytics-section="datasheet_library"
+                      >
+                        {pageText.labels.download}
+                      </a>
+                    )}
                   </div>
-
-                  <div className="row-meta">
-                    <span>
-                      {pageText.labels.language}
-                      {fieldSeparator}
-                      {item.language}
-                    </span>
-
-                    <span>
-                      {pageText.labels.version}
-                      {fieldSeparator}
-                      {item.version}
-                    </span>
-
-                    <span>
-                      {pageText.labels.update}
-                      {fieldSeparator}
-                      {item.update}
-                    </span>
-                  </div>
-
-                  <p className="row-desc">{item.description}</p>
-                </div>
-
-                {/* 右侧按钮 */}
-                <div className="row-actions">
-                  {item.productHref ? (
-                    <Link className="row-link" href={item.productHref}>
-                      {pageText.labels.viewProduct}
-                    </Link>
-                  ) : null}
-
-                  {item.actionType === "custom" ? (
-                    <Link className="row-custom" href={item.downloadHref}>
-                      {pageText.labels.custom}
-                    </Link>
-                  ) : (
-                    <a
-                      className="row-download"
-                      href={encodeURI(item.downloadHref)}
-                      download={getDatasheetFileName(item.downloadHref)}
-                      data-analytics-resource-action="download"
-                      data-analytics-resource-id={item.id}
-                      data-analytics-resource-type="datasheet"
-                      data-analytics-resource-file-type="pdf"
-                      data-analytics-section="datasheet_library"
-                    >
-                      {pageText.labels.download}
-                      <DownloadIcon />
-                    </a>
-                  )}
                 </div>
               </article>
             ))}
@@ -374,8 +331,6 @@ export default function DatasheetsClient({
       <section className="support-section">
         <div className="support-inner">
           <div>
-            <div className="support-kicker">{pageText.support.kicker}</div>
-
             <h2 className="support-title">{pageText.support.title}</h2>
 
             <p className="support-desc">{pageText.support.description}</p>

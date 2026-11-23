@@ -3,6 +3,7 @@
 
 "use client"; // 这个组件需要数字动画、IntersectionObserver 和浏览器动画帧，所以必须是客户端组件
 
+import { getIsoCertificateImage } from "@/data/iso-certificate-images";
 import { homeUiText } from "@/data/home-ui.intl";
 import { useEffect, useRef, useState } from "react"; // 引入 React Hook，用于 DOM 引用、状态和副作用
 
@@ -22,20 +23,16 @@ type HomeCompanyStrengthSectionProps = { // 定义 HomeCompanyStrengthSection �
 }; // 组件参数类型定义结束
 
 /* HOME_HONOR_CERTIFICATE_IMAGE_MAP_START */
-const HOME_HONOR_CERTIFICATE_IMAGE_BY_KEY: Record<string, string> = {
-  "national-high-tech":
-    "/images/home/company-honors/national-high-tech.webp",
-  "engineering-center":
-    "/images/home/company-honors/engineering-center.webp",
-  "little-giant":
-    "/images/home/company-honors/little-giant.webp",
-  "gazelle-enterprise":
-    "/images/home/company-honors/gazelle-enterprise.webp",
-  "iso-13485":
-    "/images/home/company-honors/iso-13485.webp",
-  "iso-9001":
-    "/images/home/company-honors/iso-9001.webp",
-};
+function getHomeHonorCertificateImages(locale: LocaleCode): Record<string, string> {
+  return {
+    "national-high-tech": "/images/home/company-honors/national-high-tech.webp",
+    "engineering-center": "/images/home/company-honors/engineering-center.webp",
+    "little-giant": "/images/home/company-honors/little-giant.webp",
+    "gazelle-enterprise": "/images/home/company-honors/gazelle-enterprise.webp",
+    "iso-13485": getIsoCertificateImage("13485", locale, "home"),
+    "iso-9001": getIsoCertificateImage("9001", locale, "home"),
+  };
+}
 /* HOME_HONOR_CERTIFICATE_IMAGE_MAP_END */
 
 // Intentional desktop line breaks; title wording remains sourced from the locale data.
@@ -66,6 +63,8 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
   const metrics = homeCompanyStrengthData.metrics; // 读取公司数据卡片数据
   const honors = homeCompanyStrengthData.honors; // 读取公司能力与资质轮播数据
   const advantages = homeCompanyStrengthData.advantages; // 读取企业优势卡片数据
+
+  const honorCertificateImages = getHomeHonorCertificateImages(locale);
 
   const metricsGridRef = useRef<HTMLDivElement | null>(null); // 数据卡片区域 DOM 引用，用于判断是否进入视口
   const advantagesSectionRef = useRef<HTMLElement | null>(null); // 企业优势进入视口附近后再加载背景图
@@ -256,7 +255,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
                     <div className="home-honor-image">
                       <img
                         src={
-                          HOME_HONOR_CERTIFICATE_IMAGE_BY_KEY[honor.key] ??
+                          honorCertificateImages[honor.key] ??
                           "/images/about/foreach/honors/honor-main-certificate.webp"
                         }
                         alt={getHomeCompanyText(honor.title, locale)}

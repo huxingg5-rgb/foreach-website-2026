@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
+import { getIsoCertificateImage } from "@/data/iso-certificate-images";
 
 /* =========================================================
    文件路径：
@@ -224,16 +225,7 @@ const honorMainCertificate = {
   src: "/images/about/foreach/honors/honor-main-certificate.webp",
 };
 
-const honorTopCertificates = [
-  {
-    title: { "zh-CN": "ISO 13485", en: "ISO 13485", es: "ISO 13485", fr: "ISO 13485", ko: "ISO 13485", ru: "ISO 13485" },
-    src: "/images/about/foreach/honors/honor-row2-iso13485.webp",
-  },
-  {
-    title: { "zh-CN": "ISO 9001", en: "ISO 9001", es: "ISO 9001", fr: "ISO 9001", ko: "ISO 9001", ru: "ISO 9001" },
-    src: "/images/about/foreach/honors/honor-row2-iso9001.webp",
-  },
-];
+const honorTopCertificates = ["13485", "9001"] as const;
 
 const honorMiddleImages = [
   {
@@ -619,11 +611,11 @@ export default function AboutForeachClient({
                   />
                 </div>
 
-                {honorTopCertificates.map((item) => (
+                {honorTopCertificates.map((standard) => (
                   <LocalImageWithFallback
-                    key={item.src}
-                    src={item.src}
-                    alt={getLocalizedText(item.title, locale)}
+                    key={standard}
+                    src={getIsoCertificateImage(standard, locale)}
+                    alt={`ISO ${standard}`}
                     className="about-foreach-honor-iso-cert"
                   />
                 ))}

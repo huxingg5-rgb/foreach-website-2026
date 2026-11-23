@@ -101,7 +101,6 @@ const foreignPageTextMap: Record<
       custom: "Personalizar",
     },
     support: {
-      kicker: "Soporte",
       title: "¿No encuentra la ficha técnica que necesita?",
       description:
         "Envíe el nombre del producto, el escenario de aplicación o la solicitud de documentación, y le ayudaremos a obtener la ficha técnica correspondiente junto con el soporte de selección necesario.",
@@ -154,7 +153,6 @@ const foreignPageTextMap: Record<
       custom: "Sur mesure",
     },
     support: {
-      kicker: "Support",
       title: "Vous ne trouvez pas la fiche technique recherchée ?",
       description:
         "Indiquez le nom du produit, le scénario d’application ou votre besoin documentaire, et nous vous aiderons à obtenir la fiche technique correspondante avec le support de sélection nécessaire.",
@@ -207,7 +205,6 @@ const foreignPageTextMap: Record<
       custom: "맞춤 요청",
     },
     support: {
-      kicker: "지원 필요",
       title: "필요한 사양서를 찾지 못하셨나요?",
       description:
         "제품명, 적용 시나리오 또는 자료 요청 내용을 제출해 주시면 해당 제품 사양서와 필요한 선정 지원을 제공해 드립니다.",
@@ -260,7 +257,6 @@ const foreignPageTextMap: Record<
       custom: "Под заказ",
     },
     support: {
-      kicker: "Поддержка",
       title: "Не нашли нужную спецификацию?",
       description:
         "Отправьте название продукта, сценарий применения или запрос на документацию, и мы поможем получить соответствующую спецификацию и рекомендации по подбору.",
@@ -745,6 +741,7 @@ const currentItemGenericKey: Record<string, string> = {
   "hmd6-syringe-pump": "syringe-pump",
   "dpl30-diaphragm-pump": "diaphragm-pump",
   "dpl60-diaphragm-pump": "diaphragm-pump",
+  "dpl30h-diaphragm-pump": "diaphragm-pump",
   "dpgl800-diaphragm-pump": "diaphragm-pump",
   "mrv3-multi-channel-rotary-valve": "rotary-valve",
   "hp-2-position-6-port-high-pressure-valve": "high-pressure-valve",
@@ -770,6 +767,7 @@ const currentItemTranslations: Record<
     "hmd6-syringe-pump": { title: "Ficha técnica de la bomba de jeringa HMD6 con electroválvula", description: "Bomba de jeringa HMD6 con carrera de 60 mm y electroválvulas integradas para manipulación multicanal de líquidos." },
     "dpl30-diaphragm-pump": { title: "Ficha técnica de la bomba de diafragma DPL30", description: "Bomba de diafragma DPL30 para transferencia compacta de líquidos, con caudales de hasta 300 mL/min." },
     "dpl60-diaphragm-pump": { title: "Ficha técnica de la bomba de diafragma DPL60", description: "Bomba de diafragma DPL60 para suministro y transferencia de líquidos, con caudales de hasta 600 mL/min." },
+    "dpl30h-diaphragm-pump": { title: "Ficha técnica de la bomba de diafragma de alta presión DPL30H", description: "Bomba de diafragma DPL30H para filtración, pulverización y transferencia de líquidos en instrumentos, con una presión nominal de 600 kPa." },
     "dpgl800-diaphragm-pump": { title: "Ficha técnica de la bomba de diafragma gas-líquido DPGL800", description: "Bomba DPGL800 para aspiración de gas y mezclas gas-líquido, generación de vacío y evacuación de residuos líquidos." },
     "mrv3-multi-channel-rotary-valve": { title: "Ficha técnica de la válvula rotativa multicanal MRV3", description: "Válvula rotativa multicanal MRV3 para conmutación multipuerto, distribución de reactivos e integración fluídica." },
     "hp-2-position-6-port-high-pressure-valve": { title: "Ficha técnica de la válvula de alta presión HP de 2 posiciones y 6 puertos con venteo", description: "Válvula HP de alta presión, 2 posiciones y 6 puertos, con vía de venteo para conmutación de circuitos resistentes a la presión." },
@@ -790,6 +788,7 @@ const currentItemTranslations: Record<
     "hmd6-syringe-pump": { title: "Fiche technique de la pompe à seringue HMD6 avec électrovanne", description: "Pompe à seringue HMD6 avec course de 60 mm et électrovannes intégrées pour la manipulation multicanal des liquides." },
     "dpl30-diaphragm-pump": { title: "Fiche technique de la pompe à membrane DPL30", description: "Pompe à membrane DPL30 pour les applications compactes de transfert de liquides, avec un débit maximal de 300 mL/min." },
     "dpl60-diaphragm-pump": { title: "Fiche technique de la pompe à membrane DPL60", description: "Pompe à membrane DPL60 pour l’alimentation et le transfert de liquides, avec un débit maximal de 600 mL/min." },
+    "dpl30h-diaphragm-pump": { title: "Fiche technique de la pompe à membrane haute pression DPL30H", description: "Pompe à membrane DPL30H pour la filtration, la pulvérisation et le transfert de liquides dans les instruments, avec une pression nominale de 600 kPa." },
     "dpgl800-diaphragm-pump": { title: "Fiche technique de la pompe à membrane gaz-liquide DPGL800", description: "Pompe DPGL800 pour l’aspiration de gaz et de mélanges gaz-liquide, la création de vide et l’évacuation des effluents." },
     "mrv3-multi-channel-rotary-valve": { title: "Fiche technique de la vanne rotative multicanal MRV3", description: "Vanne rotative multicanal MRV3 pour la commutation multipport, la distribution de réactifs et l’intégration fluidique." },
     "hp-2-position-6-port-high-pressure-valve": { title: "Fiche technique de la vanne haute pression HP 2 positions, 6 voies avec évent", description: "Vanne HP haute pression à 2 positions et 6 voies avec évent pour la commutation de circuits résistants à la pression." },
@@ -810,6 +809,7 @@ const currentItemTranslations: Record<
     "hmd6-syringe-pump": { title: "Техническое описание шприцевого насоса HMD6 с электромагнитным клапаном", description: "Насос HMD6 с ходом 60 mm и встроенными электромагнитными клапанами для многоканальной подачи." },
     "dpl30-diaphragm-pump": { title: "Техническое описание мембранного насоса DPL30", description: "Насос DPL30 для компактных систем перекачивания жидкости с расходом до 300 mL/min." },
     "dpl60-diaphragm-pump": { title: "Техническое описание мембранного насоса DPL60", description: "Насос DPL60 для подачи и перекачивания жидкости с расходом до 600 mL/min." },
+    "dpl30h-diaphragm-pump": { title: "Техническое описание мембранного насоса высокого давления DPL30H", description: "Мембранный насос DPL30H для фильтрации, распыления и перекачивания жидкостей в приборах. Номинальное давление 600 кПа." },
     "dpgl800-diaphragm-pump": { title: "Техническое описание газожидкостного мембранного насоса DPGL800", description: "Насос DPGL800 для аспирации газа и газожидкостных смесей, создания вакуума и удаления отработанной жидкости." },
     "mrv3-multi-channel-rotary-valve": { title: "Техническое описание многоканального поворотного клапана MRV3", description: "Клапан MRV3 для многопортового переключения потоков, распределения реагентов и интеграции гидравлической системы." },
     "hp-2-position-6-port-high-pressure-valve": { title: "Техническое описание клапана высокого давления HP: 2 положения, 6 портов и сброс", description: "Клапан HP с 2 положениями, 6 портами и каналом сброса для переключения жидкостных трактов высокого давления." },
@@ -830,6 +830,7 @@ const currentItemTranslations: Record<
     "hmd6-syringe-pump": { title: "솔레노이드 밸브형 HMD6 시린지 펌프 데이터시트", description: "다채널 액체 처리를 위한 60 mm 스트로크와 통합 솔레노이드 밸브 구성의 HMD6 시린지 펌프입니다." },
     "dpl30-diaphragm-pump": { title: "DPL30 다이어프램 펌프 데이터시트", description: "최대 300 mL/min 유량을 지원하는 콤팩트 액체 이송용 DPL30 다이어프램 펌프입니다." },
     "dpl60-diaphragm-pump": { title: "DPL60 다이어프램 펌프 데이터시트", description: "최대 600 mL/min 유량을 지원하는 액체 공급 및 이송용 DPL60 다이어프램 펌프입니다." },
+    "dpl30h-diaphragm-pump": { title: "DPL30H 고압 다이어프램 펌프 데이터시트", description: "기기의 여과, 분사 및 액체 이송에 사용하는 DPL30H 다이어프램 펌프입니다. 정격 압력은 600 kPa입니다." },
     "dpgl800-diaphragm-pump": { title: "DPGL800 기액 혼합 다이어프램 펌프 데이터시트", description: "기체 및 기액 혼합물 흡인, 진공 형성, 폐액 배출용 DPGL800 다이어프램 펌프입니다." },
     "mrv3-multi-channel-rotary-valve": { title: "MRV3 다채널 로터리 밸브 데이터시트", description: "다중 포트 유로 전환, 시약 분배 및 유체 시스템 통합을 위한 MRV3 다채널 로터리 밸브입니다." },
     "hp-2-position-6-port-high-pressure-valve": { title: "벤트형 HP 2포지션 6포트 고압 밸브 데이터시트", description: "내압 유로 전환을 위한 벤트 유로 포함 HP 2포지션 6포트 고압 밸브입니다." },

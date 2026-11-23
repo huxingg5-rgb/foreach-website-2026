@@ -196,7 +196,7 @@
   color: #173368;
   font-size: 24px;
   line-height: 1.25;
-  font-weight: 900;
+  font-weight: 500;
   letter-spacing: -0.04em;
 }
 
@@ -248,7 +248,7 @@
   background: #ffffff;
   color: #173368;
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 500;
   cursor: pointer;
   transition:
     background 0.18s ease,
@@ -272,7 +272,7 @@
   text-align: center;
   color: #173368;
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 /* =========================================================
@@ -336,8 +336,7 @@
     font-size: 16px;
   }
 
-  .frp-tab-bar,
-  .frp-card-grid {
+  .frp-tab-bar {
     grid-template-columns: 1fr;
   }
 
@@ -786,17 +785,10 @@
   }
 }
 
-/* 平板端：2 列 */
+/* 平板和手机端：2 列 */
 @media (max-width: 1080px) {
   .fitting-replacement-page .frp-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-
-/* 手机端：1 列 */
-@media (max-width: 720px) {
-  .fitting-replacement-page .frp-card-grid { 
-    grid-template-columns: 1fr !important;
   }
 }
 
@@ -832,26 +824,35 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transform: none !important;
 }
 
 .fitting-replacement-page .frp-compatible-card-visual img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   display: block;
   object-fit: contain;
   object-position: center;
 }
 
-.fitting-replacement-page
-  .frp-compatible-card:hover
-  .frp-compatible-card-visual {
-  transform: none !important;
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .fitting-replacement-page .frp-compatible-card-visual {
+    transform: none !important;
+    transition: none;
+  }
 }
 
 .fitting-replacement-page .frp-compatible-card-body {
+  --product-card-font-weight: 500;
+  --product-card-meta-margin-top: 6px;
+  --product-card-meta-gap: 2px;
+  --product-card-meta-line-height: 18px;
   min-height: 190px;
   padding: 18px 20px 20px;
+  border-top: 1px solid var(--line, #e5ebf2);
+}
+
+.fitting-replacement-page .frp-compatible-card-body h3 {
+  line-height: 26px;
 }
 
 @media (max-width: 1080px) {
@@ -861,13 +862,25 @@
 }
 
 @media (max-width: 720px) {
+  .fitting-replacement-page .frp-card-grid {
+    gap: 10px !important;
+  }
+
   .fitting-replacement-page .frp-compatible-card-image {
     max-height: 320px;
-    padding: 18px;
+    padding: 10px;
   }
 
   .fitting-replacement-page .frp-compatible-card-body {
     min-height: 0;
+    padding: 10px 8px 12px;
+  }
+
+  .fitting-replacement-page .frp-compatible-card-body h3 {
+    font-size: 16px;
+    line-height: 22px;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 }
 /* COMPATIBLE_MODEL_CARD_MEDIA_END */
@@ -955,7 +968,7 @@
   接头兼容型号查询页：
   手机端“查看详情”和“加入清单”保持同一排。
 */
-@media (max-width: 720px) {
+@media (max-width: 760px) {
   /*
     按钮区域是产品卡片正文中的最后一个直接子元素。
     这里只影响兼容型号查询页，不影响其他公共产品卡片。
@@ -965,9 +978,9 @@
     > div:last-child {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 8px !important;
+    gap: 4px !important;
     width: 100%;
-    padding-top: 14px;
+    padding-top: 10px;
   }
 
   .fitting-replacement-page
@@ -980,10 +993,14 @@
     > a {
     width: 100%;
     min-width: 0;
-    height: 44px;
-    padding: 0 8px;
-    font-size: 14px;
-    white-space: nowrap;
+    min-height: 32px;
+    height: auto;
+    padding: 0 2px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 }
 /* FRP_MOBILE_TWO_ACTIONS_END */
@@ -1194,7 +1211,7 @@
   .fitting-replacement-page .frp-compatible-card-body h3 {
     min-width: 0 !important;
     font-size: 17px !important;
-    line-height: 1.3 !important;
+    line-height: 20px !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -1215,20 +1232,6 @@
     padding: 0 6px !important;
     font-size: 13px !important;
     white-space: nowrap !important;
-  }
-}
-
-/* 平板端：两列 */
-@media (min-width: 721px) and (max-width: 1080px) {
-  .fitting-replacement-page .frp-card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-
-/* 手机端：一列 */
-@media (max-width: 720px) {
-  .fitting-replacement-page .frp-card-grid {
-    grid-template-columns: 1fr !important;
   }
 }
 

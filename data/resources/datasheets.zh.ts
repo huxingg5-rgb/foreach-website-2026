@@ -117,7 +117,6 @@ export const datasheetsZhPageText = {
   },
 
   support: {
-    kicker: "需要支持",
     title: "没有找到需要的规格书？",
     description:
       "提交产品名称、应用场景或资料需求，我们将协助您获取对应产品规格书，并提供必要的选型建议与技术支持。",
@@ -145,41 +144,6 @@ export const datasheetZhFilterOptions: DatasheetFilterOption[] = [
 
 export const datasheetZhItems: DatasheetItem[] = [
   {
-    id: "pdm5-pressure-sensor", category: "smart", keywords: "PDM5 压力检测模块 压力传感器 绝压 I2C 选型",
-    title: "PDM5 压力检测模块标准规格书", label: "智控系列", language: "中文", version: "A02", update: "—",
-    description: "涵盖四档绝压量程、接液材料、电气连接和 PDM5 标准型号选型表。",
-    image: "/images/products/control/foreach-pdm5-pressure-sensor.webp", productHref: "/products/control/pdm5-pressure-sensor/",
-    downloadHref: "/downloads/resources/datasheets/zh-CN/Smart-Control-Modules/ps-110b-2508-00001-a02-cn-pdm5-pressure-sensor.pdf", actionType: "download",
-  },
-  {
-    id: "abd-air-bubble-detector", category: "smart", keywords: "ABD 气泡检测器 气泡检测模块 透明管外径 选型",
-    title: "ABD 气泡检测器规格书", label: "智控系列", language: "中文", version: "A01", update: "2025-06",
-    description: "涵盖透明管外径、检测条件、电气接口及 ABD 型号订购信息。",
-    image: "/images/products/control/foreach-abd-air-bubble-detector.webp", productHref: "/products/control/air-bubble-detectors/abd/",
-    downloadHref: "/downloads/resources/datasheets/zh-CN/Smart-Control-Modules/ps-110b-2407-00002-a01-cn-abd-air-bubble-detector.pdf", actionType: "download",
-  },
-  {
-    id: "smtp2-pipetting-pump", category: "pump", keywords: "SMTP2 500 510 520 1000 μL 可编程 气体置换式移液泵 选型",
-    title: "SMTP2 可编程移液泵规格书", label: "泵系列", language: "中文", version: "A08", update: "—",
-    description: "涵盖 SMTP2 的容量、吸头适配器、通信与检测功能、性能条件及型号订购信息。",
-    image: "/images/products/pumps/pipetting-pumps/foreach-smtp2-500-lte008-8mm.webp", productHref: "/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/",
-    downloadHref: "/downloads/resources/datasheets/zh-CN/Pumps/ps-smtp-011-a08-cn-smtp2-pipetting-pump.pdf", actionType: "download",
-  },
-  {
-    id: "smtp4-pipetting-pump", category: "pump", keywords: "SMTP4 气体置换式 移液泵 自动脱吸头 OEM",
-    title: "SMTP4 气体置换式移液泵规格书", label: "泵系列", language: "中文", version: "002", update: "—",
-    description: "涵盖 SMTP4 的容量、驱动、吸头安装、光耦接线及型号订购信息。",
-    image: "/images/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.webp", productHref: "/products/pumps/pipetting-pumps/smtp4-pipetting-module/",
-    downloadHref: "/downloads/resources/datasheets/zh-CN/Pumps/ps-130a-003-002-cn-smtp4-pipetting-pump.pdf", actionType: "download",
-  },
-  {
-    id: "smtp4-500ul-pipetting-pump", category: "pump", keywords: "SMTP4 500 μL 移液泵 电机 光耦 线序",
-    title: "SMTP4-500 μL 移液泵规格书", label: "泵系列", language: "中文", version: "001", update: "—",
-    description: "SMTP4-500 μL 专用规格，包含工作参数、外形尺寸、电机、光耦及线序信息。",
-    image: "/images/products/pumps/pipetting-pumps/foreach-smtp4-500ul-gas-displacement-pipetting-pump.webp", productHref: "/products/pumps/pipetting-pumps/smtp4-pipetting-module/smtp4-500ul/",
-    downloadHref: "/downloads/resources/datasheets/zh-CN/Pumps/ps-130a-005-001-cn-smtp4-500ul-pipetting-pump.pdf", actionType: "download",
-  },
-  {
     id: "sm-piston-pump",
     category: "pump",
     keywords: "SM 柱塞泵 微型柱塞泵 piston pump 精密定量 自动化仪器",
@@ -197,6 +161,102 @@ export const datasheetZhItems: DatasheetItem[] = [
     actionType: "download",
   },
   {
+    id: "dpl30-diaphragm-pump",
+    category: "pump",
+    keywords: "DPL30 隔膜泵 diaphragm pump 自吸 供液 清洗液",
+    title: "DPL30 隔膜泵规格书",
+    label: "泵系列",
+    language: "中文",
+    version: "A04",
+    update: "2026-07",
+    description: "DPL30 隔膜泵适用于自动化仪器中的液体供给、自吸输送、清洗循环与废液处理。",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-db-brushed-liquid-diaphragm-pump-front-20261027-card.webp",
+    productHref:
+      "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
+    downloadHref:
+      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpl60-diaphragm-pump",
+    category: "pump",
+    keywords: "DPL60 隔膜泵 diaphragm pump 600 mL/min 自吸 液体输送",
+    title: "DPL60 隔膜泵规格书",
+    label: "泵系列",
+    language: "中文",
+    version: "A02",
+    update: "2026-07",
+    description: "DPL60 隔膜泵适用于仪器中的液体供给、清洗循环、废液排放与辅助液体输送。",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-db-brushed-liquid-diaphragm-pump-front-20261027-card.webp",
+    productHref:
+      "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpl30h-diaphragm-pump",
+    category: "pump",
+    keywords: "DPL30H 高压隔膜泵 diaphragm pump 600 kPa 液体输送",
+    title: "DPL30H 高压隔膜泵规格书",
+    label: "泵系列",
+    language: "中文",
+    version: "A00",
+    update: "2026-03",
+    description: "DPL30H 高压隔膜泵适用于需要较高输出压力的仪器液路、过滤、喷淋与液体输送任务。",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-ds-brushed-liquid-diaphragm-pump-front-20261027-card.webp",
+    productHref:
+      "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpgl800-diaphragm-pump",
+    category: "pump",
+    keywords: "DPGL800 气液混合泵 diaphragm pump 6 L/min 真空 抽吸",
+    title: "DPGL800 气液混合隔膜泵规格书",
+    label: "泵系列",
+    language: "中文",
+    version: "A00",
+    update: "2026-03",
+    description: "DPGL800 气液混合隔膜泵适用于气体、气液混合物抽吸、负压建立与废液抽排。",
+    image:
+      "/images/resource/datasheets/thumbnails/foreach-dpgl800-brushless-diaphragm-pump-angled-photo-card.webp",
+    productHref:
+      "/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2506-00001_A00_cn_DPGL800气液混合泵规格书.pdf",
+    actionType: "download",
+  },
+  {
+    id: "fittings-and-tubing-catalog",
+    category: "tubing",
+    keywords: "连接件 橡塑管 管路 接头 tubing fittings catalog",
+    title: "连接件及橡塑管产品目录",
+    label: "管路及连接件系列",
+    language: "中文",
+    version: "A02",
+    update: "2026-07",
+    description: "涵盖恒永达连接件、接头、橡塑管及常用管路组件的中文产品目录。",
+    image:
+      "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-tubing-fitting-v002.webp",
+    productHref: "/products/fittings",
+    downloadHref:
+      "/downloads/resources/datasheets/zh-CN/Tubing-and-Fittings/foreach-fittings-and-elastomer-tubing-catalog-a02-cn.pdf",
+    actionType: "download",
+  },
+  {
+    id: "smtp2-pipetting-pump", category: "pump", keywords: "SMTP2 500 510 520 1000 μL 可编程 气体置换式移液泵 选型",
+    title: "SMTP2 可编程移液泵规格书", label: "泵系列", language: "中文", version: "A08", update: "—",
+    description: "涵盖 SMTP2 的容量、吸头适配器、通信与检测功能、性能条件及型号订购信息。",
+    image: "/images/products/pumps/pipetting-pumps/foreach-smtp2-500-lte008-8mm.webp", productHref: "/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/",
+    downloadHref: "/downloads/resources/datasheets/zh-CN/Pumps/ps-smtp-011-a08-cn-smtp2-pipetting-pump.pdf", actionType: "download",
+  },
+  {
     id: "rpl-p635-valveless-pump",
     category: "pump",
     keywords: "RPL-P6.35 无阀计量泵 valveless metering pump 试剂分配 滴定加液",
@@ -212,6 +272,27 @@ export const datasheetZhItems: DatasheetItem[] = [
     downloadHref:
       "/downloads/resources/datasheets/zh-CN/Pumps/ps-121b-011-a01-cn-rpl-p635-valveless-pump.pdf",
     actionType: "download",
+  },
+  {
+    id: "pdm5-pressure-sensor", category: "smart", keywords: "PDM5 压力检测模块 压力传感器 绝压 I2C 选型",
+    title: "PDM5 压力检测模块标准规格书", label: "智控系列", language: "中文", version: "A02", update: "—",
+    description: "涵盖四档绝压量程、接液材料、电气连接和 PDM5 标准型号选型表。",
+    image: "/images/resource/datasheets/thumbnails/foreach-pdm5-pressure-sensor-angled-photo-card.webp", productHref: "/products/control/pdm5-pressure-sensor/",
+    downloadHref: "/downloads/resources/datasheets/zh-CN/Smart-Control-Modules/ps-110b-2508-00001-a02-cn-pdm5-pressure-sensor.pdf", actionType: "download",
+  },
+  {
+    id: "abd-air-bubble-detector", category: "smart", keywords: "ABD 气泡检测器 气泡检测模块 透明管外径 选型",
+    title: "ABD 气泡检测器规格书", label: "智控系列", language: "中文", version: "A01", update: "2025-06",
+    description: "涵盖透明管外径、检测条件、电气接口及 ABD 型号订购信息。",
+    image: "/images/products/control/foreach-abd-air-bubble-detector.webp", productHref: "/products/control/air-bubble-detectors/abd/",
+    downloadHref: "/downloads/resources/datasheets/zh-CN/Smart-Control-Modules/ps-110b-2407-00002-a01-cn-abd-air-bubble-detector.pdf", actionType: "download",
+  },
+  {
+    id: "smtp4-pipetting-pump", category: "pump", keywords: "SMTP4 气体置换式 移液泵 自动脱吸头 OEM",
+    title: "SMTP4 气体置换式移液泵规格书", label: "泵系列", language: "中文", version: "002", update: "—",
+    description: "涵盖 SMTP4 的容量、驱动、吸头安装、光耦接线及型号订购信息。",
+    image: "/images/products/pumps/pipetting-pumps/foreach-smtp4-100ul-gas-displacement-pipetting-pump.webp", productHref: "/products/pumps/pipetting-pumps/smtp4-pipetting-module/",
+    downloadHref: "/downloads/resources/datasheets/zh-CN/Pumps/ps-130a-003-002-cn-smtp4-pipetting-pump.pdf", actionType: "download",
   },
   {
     id: "hmd3-syringe-pump",
@@ -248,78 +329,6 @@ export const datasheetZhItems: DatasheetItem[] = [
     actionType: "download",
   },
   {
-    id: "dpl30-diaphragm-pump",
-    category: "pump",
-    keywords: "DPL30 隔膜泵 diaphragm pump 自吸 供液 清洗液",
-    title: "DPL30 隔膜泵规格书",
-    label: "泵系列",
-    language: "中文",
-    version: "A04",
-    update: "2026-07",
-    description: "DPL30 隔膜泵适用于自动化仪器中的液体供给、自吸输送、清洗循环与废液处理。",
-    image:
-      "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
-    productHref:
-      "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
-    downloadHref:
-      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
-    actionType: "download",
-  },
-  {
-    id: "dpl60-diaphragm-pump",
-    category: "pump",
-    keywords: "DPL60 隔膜泵 diaphragm pump 600 mL/min 自吸 液体输送",
-    title: "DPL60 隔膜泵规格书",
-    label: "泵系列",
-    language: "中文",
-    version: "A02",
-    update: "2026-07",
-    description: "DPL60 隔膜泵适用于仪器中的液体供给、清洗循环、废液排放与辅助液体输送。",
-    image:
-      "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp",
-    productHref:
-      "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
-    downloadHref:
-      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
-    actionType: "download",
-  },
-  {
-    id: "dpl30h-diaphragm-pump",
-    category: "pump",
-    keywords: "DPL30H 高压隔膜泵 diaphragm pump 600 kPa 液体输送",
-    title: "DPL30H 高压隔膜泵规格书",
-    label: "泵系列",
-    language: "中文",
-    version: "A00",
-    update: "2026-03",
-    description: "DPL30H 高压隔膜泵适用于需要较高输出压力的仪器液路、过滤、喷淋与液体输送任务。",
-    image:
-      "/images/products/pumps/diaphragm-pumps/dpl30h/images/dpl30h-brushed-liquid-diaphragm-pump-main.webp",
-    productHref:
-      "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
-    downloadHref:
-      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
-    actionType: "download",
-  },
-  {
-    id: "dpgl800-diaphragm-pump",
-    category: "pump",
-    keywords: "DPGL800 气液混合泵 diaphragm pump 6 L/min 真空 抽吸",
-    title: "DPGL800 气液混合隔膜泵规格书",
-    label: "泵系列",
-    language: "中文",
-    version: "A00",
-    update: "2026-03",
-    description: "DPGL800 气液混合隔膜泵适用于气体、气液混合物抽吸、负压建立与废液抽排。",
-    image:
-      "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp",
-    productHref:
-      "/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
-    downloadHref:
-      "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2506-00001_A00_cn_DPGL800气液混合泵规格书.pdf",
-    actionType: "download",
-  },
-  {
     id: "hp-2-position-6-port-high-pressure-valve",
     category: "valve",
     keywords: "HP 二位六通 带排气 高压旋转阀 高压阀 流路切换",
@@ -337,23 +346,6 @@ export const datasheetZhItems: DatasheetItem[] = [
     actionType: "download",
   },
   {
-    id: "fittings-and-tubing-catalog",
-    category: "tubing",
-    keywords: "连接件 橡塑管 管路 接头 tubing fittings catalog",
-    title: "连接件及橡塑管产品目录",
-    label: "管路及连接件系列",
-    language: "中文",
-    version: "A02",
-    update: "2026-07",
-    description: "涵盖恒永达连接件、接头、橡塑管及常用管路组件的中文产品目录。",
-    image:
-      "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-tubing-fitting-v002.webp",
-    productHref: "/products/fittings",
-    downloadHref:
-      "/downloads/resources/datasheets/zh-CN/Tubing-and-Fittings/foreach-fittings-and-elastomer-tubing-catalog-a02-cn.pdf",
-    actionType: "download",
-  },
-  {
     id: "sample-probe",
     category: "needle",
     keywords: "针系列 sample probe 来图定制 定制 采样针 加样针",
@@ -364,7 +356,7 @@ export const datasheetZhItems: DatasheetItem[] = [
     update: "—",
     description: "暂无规格书，支持根据图纸或样品进行定制沟通。",
     image:
-      "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-sample-probe-v001.webp",
+      "/images/resource/datasheets/thumbnails/foreach-sampling-probe-series-diagonal-photo-card.webp",
     productHref: "/products/probes",
     downloadHref: "/contact?type=custom-probe",
     actionType: "custom",

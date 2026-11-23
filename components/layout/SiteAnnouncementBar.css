@@ -297,10 +297,9 @@ html:has(.site-announcement) .site-header .site-header-inner {
   height: calc(var(--site-header-height) - var(--site-announcement-height)) !important;
 }
 
-/* 3. 手机 / 平板菜单与遮罩：原来写死在导航下方，整体再下移一个公告条高度 */
+/* 3. 手机 / 平板菜单随公告条下移 */
 @media (max-width: 1000px) {
-  html:has(.site-announcement) .site-header .mobile-nav,
-  html:has(.site-announcement) .site-header .mobile-nav-backdrop {
+  html:has(.site-announcement) .site-header .mobile-nav {
     top: calc(82px + var(--site-announcement-height)) !important;
   }
 }
@@ -310,8 +309,7 @@ html:has(.site-announcement) .site-header .site-header-inner {
     --mobile-header-height: calc(60px + var(--site-announcement-height));
   }
 
-  html:has(.site-announcement) .site-header .mobile-nav,
-  html:has(.site-announcement) .site-header .mobile-nav-backdrop {
+  html:has(.site-announcement) .site-header .mobile-nav {
     top: var(--mobile-header-height) !important;
   }
 }

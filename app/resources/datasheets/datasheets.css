@@ -355,7 +355,7 @@
   color: var(--brand-blue);
   font-size: 30px;
   line-height: 1.25;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.02em;
 }
 
@@ -377,178 +377,74 @@
    8. 规格书列表
 ================================ */
 
-.datasheets-page .datasheet-list {
-  border: 1px solid var(--line);
-  background: #ffffff;
+.datasheets-page .datasheet-card {
+  overflow-wrap: anywhere;
 }
 
-.datasheets-page .datasheet-row {
-  position: relative;
+.datasheets-page .datasheet-card-actions {
   display: grid;
-  grid-template-columns: 126px minmax(0, 1fr) auto;
-  gap: 22px;
-  align-items: stretch;
-  min-height: 138px;
-  padding: 0 26px 0 0;
-  border-bottom: 1px solid var(--line);
-  background: #ffffff;
-  transition: background var(--ease-fast);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 92px), 1fr));
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 12px;
 }
 
-.datasheets-page .datasheet-row:last-child {
-  border-bottom: 0;
-}
-
-.datasheets-page .datasheet-row::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 3;
-  width: 3px;
-  height: 100%;
-  background: var(--brand-cyan);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform var(--ease-normal);
-}
-
-.datasheets-page .product-thumb {
-  position: relative;
-  z-index: 1;
-  width: 126px;
-  min-height: 138px;
-  height: 100%;
-  display: block;
-  border-right: 1px solid #e3eaf3;
-  background: #ffffff;
-  overflow: hidden;
-}
-
-.datasheets-page .product-thumb img {
-  width: 100%;
-  height: 100%;
-  min-height: 138px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform var(--ease-normal);
-}
-
-.datasheets-page .row-main {
+.datasheets-page .datasheet-card-action {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   min-width: 0;
-  padding: 24px 0;
-}
-
-.datasheets-page .row-title-line {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px 12px;
-  margin-bottom: 8px;
-}
-
-.datasheets-page .row-title {
-  margin: 0;
-  color: var(--brand-blue);
-  font-size: 20px;
-  line-height: 1.35;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-.datasheets-page .row-label {
-  display: inline-flex;
-  align-items: center;
-  height: 24px;
-  padding: 0 9px;
-  background: rgba(23, 51, 104, 0.06);
-  color: var(--brand-blue);
-  font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.datasheets-page .row-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 10px;
-  color: var(--text-sub);
-  font-size: 13px;
-}
-
-.datasheets-page .row-meta span {
-  display: inline-flex;
-  align-items: center;
-}
-
-.datasheets-page .row-meta span:not(:last-child)::after {
-  content: "·";
-  margin-left: 7px;
-  color: #b6c0ce;
-}
-
-.datasheets-page .row-desc {
-  max-width: 760px;
-  margin: 0;
-  color: var(--text-sub);
-  font-size: 14px;
-  line-height: 1.75;
-}
-
-.datasheets-page .row-actions {
-  display: flex;
-  align-items: center;
-  align-self: center;
-  gap: 10px;
-  white-space: nowrap;
-}
-
-.datasheets-page .row-link,
-.datasheets-page .row-download,
-.datasheets-page .row-custom {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  padding: 0 18px;
+  min-height: 36px;
+  padding: 6px;
   border: 1px solid var(--brand-blue);
-  border-radius: 0;
   background: #ffffff;
   color: var(--brand-blue);
-  font-size: 14px;
-  font-weight: 400;
-  transition:
-    color var(--ease-fast),
-    background var(--ease-fast),
-    border-color var(--ease-fast);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  transition: color var(--ease-fast), background var(--ease-fast);
 }
 
-/* DATASHEETS_ACTION_BUTTON_POINTER_HOVER_START */
-/*
-  只有真正支持鼠标悬停的设备才启用按钮 Hover。
-  手机和平板点击后不会残留 Hover 状态。
-*/
+.datasheets-page .datasheet-card-action:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+.datasheets-page .datasheet-card-action:active {
+  background: var(--brand-blue);
+  color: var(--brand-cyan);
+}
+
 @media (hover: hover) and (pointer: fine) {
-  .datasheets-page .row-link:hover,
-  .datasheets-page .row-download:hover,
-  .datasheets-page .row-custom:hover {
+  .datasheets-page .datasheet-card-action:hover {
     background: var(--brand-blue);
     color: var(--brand-cyan);
-    border-color: var(--brand-blue);
   }
 }
-/* DATASHEETS_ACTION_BUTTON_POINTER_HOVER_END */
 
-.datasheets-page .row-download svg {
-  width: 15px;
-  height: 15px;
-  margin-left: 8px;
-  color: currentColor;
+@media (hover: none), (pointer: coarse) {
+  .datasheets-page .datasheet-card:hover {
+    border-color: #e5ebf2;
+  }
+
+  .datasheets-page .datasheet-card:hover::before {
+    opacity: 0;
+    animation: none;
+  }
+
+  .datasheets-page .datasheet-card:hover img {
+    transform: none;
+  }
+
+  .datasheets-page .datasheet-card:hover h3 {
+    color: var(--brand-blue);
+  }
+
+  .datasheets-page .datasheet-card-action {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
 }
 
 /* ================================
@@ -608,15 +504,6 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 42px;
-}
-
-.datasheets-page .support-kicker {
-  margin-bottom: 12px;
-  color: var(--brand-cyan);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
 }
 
 .datasheets-page .support-title {
@@ -685,16 +572,24 @@
 .datasheets-page .search-btn,
 .datasheets-page .filter-btn,
 .datasheets-page .filter-btn:hover,
-.datasheets-page .filter-btn.is-active,
-.datasheets-page .row-link,
-.datasheets-page .row-download,
-.datasheets-page .row-custom {
+.datasheets-page .filter-btn.is-active {
   font-weight: 600 !important;
 }
 
 /* ================================
    12. 响应式适配
 ================================ */
+
+@media (min-width: 1101px) and (max-width: 1600px) {
+  .datasheets-page .datasheet-card h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .datasheets-page .datasheet-card p {
+    line-height: 20px;
+  }
+}
 
 @media (max-width: 1080px) {
   .datasheets-page .section-head {
@@ -704,34 +599,6 @@
   .datasheets-page .result-count {
     margin-top: 10px;
     text-align: left;
-  }
-
-  .datasheets-page .datasheet-row {
-    grid-template-columns: 110px 1fr;
-    min-height: 126px;
-    padding: 0 18px 0 0;
-  }
-
-  .datasheets-page .product-thumb {
-    width: 110px;
-    min-height: 126px;
-  }
-
-  .datasheets-page .product-thumb img {
-    width: 100%;
-    height: 100%;
-    min-height: 126px;
-    object-fit: cover;
-  }
-
-  .datasheets-page .row-main {
-    padding: 18px 0;
-  }
-
-  .datasheets-page .row-actions {
-    grid-column: 2;
-    justify-content: flex-start;
-    padding-bottom: 18px;
   }
 
   .datasheets-page .support-inner {
@@ -819,46 +686,6 @@
     text-align: left;
   }
 
-  .datasheets-page .datasheet-row {
-    grid-template-columns: 88px 1fr;
-    gap: 14px;
-    min-height: 110px;
-    padding: 0 16px 0 0;
-  }
-
-  .datasheets-page .product-thumb {
-    width: 88px;
-    min-height: 110px;
-  }
-
-  .datasheets-page .product-thumb img {
-    width: 100%;
-    height: 100%;
-    min-height: 110px;
-    object-fit: cover;
-  }
-
-  .datasheets-page .row-main {
-    padding: 14px 0;
-  }
-
-  .datasheets-page .row-title {
-    font-size: 18px;
-  }
-
-  .datasheets-page .row-actions {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 0 0 16px 16px;
-  }
-
-  .datasheets-page .row-link,
-  .datasheets-page .row-download,
-  .datasheets-page .row-custom {
-    width: 100%;
-  }
-
   .datasheets-page .support-title {
     font-size: 28px;
   }
@@ -885,117 +712,3 @@
 .datasheets-page {
   --content-width: 1600px;
 }
-
-/* DATASHEETS_POINTER_HOVER_ONLY_START */
-/*
-  规格书卡片交互规则：
-
-  只有真正支持鼠标悬停的设备才启用 Hover。
-  手机和平板点击卡片时不出现背景、绿色线和图片放大。
-*/
-@media (hover: hover) and (pointer: fine) {
-  .datasheets-page .datasheet-row:hover {
-    background: #f9fcfd;
-  }
-
-  .datasheets-page .datasheet-row:hover::before {
-    transform: scaleY(1);
-  }
-
-  .datasheets-page .datasheet-row:hover .product-thumb img {
-    transform: scale(1.04);
-  }
-}
-/* DATASHEETS_POINTER_HOVER_ONLY_END */
-
-/* DATASHEETS_MOBILE_CARD_NO_PRESS_MOVE_START */
-/*
-  手机端规格书卡片本体保持静止。
-
-  这里只处理 article.datasheet-row，
-  不处理卡片内部的查看产品、下载和来图定制按钮。
-*/
-@media (hover: none), (pointer: coarse) {
-  html body .datasheets-page .datasheet-row,
-  html body .datasheets-page .datasheet-row:hover,
-  html body .datasheets-page .datasheet-row:active,
-  html body .datasheets-page .datasheet-row:focus,
-  html body .datasheets-page .datasheet-row:focus-visible,
-  html body .datasheets-page .datasheet-row:focus-within {
-    border-left: 0 !important;
-
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-
-    transform: none !important;
-    translate: none !important;
-    scale: none !important;
-
-    outline: none !important;
-    -webkit-tap-highlight-color: transparent !important;
-  }
-}
-/* DATASHEETS_MOBILE_CARD_NO_PRESS_MOVE_END */
-
-/* DATASHEETS_MOBILE_ACTION_PRESS_START */
-/*
-  规格书操作按钮手机端按压反馈：
-
-  1. 按住时显示深蓝底、荧光绿文字
-  2. 松开后立即恢复默认状态
-  3. 不产生缩放、位移或阴影变化
-  4. 防止触屏浏览器残留 hover / focus 状态
-*/
-@media (hover: none), (pointer: coarse) {
-  .datasheets-page .row-link,
-  .datasheets-page .row-download,
-  .datasheets-page .row-custom {
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-
-  /*
-    松开手指以后，即使浏览器残留 hover 或 focus，
-    也强制恢复按钮默认样式。
-  */
-  .datasheets-page .row-link:hover:not(:active),
-  .datasheets-page .row-link:focus:not(:active),
-  .datasheets-page .row-link:focus-visible:not(:active),
-  .datasheets-page .row-download:hover:not(:active),
-  .datasheets-page .row-download:focus:not(:active),
-  .datasheets-page .row-download:focus-visible:not(:active),
-  .datasheets-page .row-custom:hover:not(:active),
-  .datasheets-page .row-custom:focus:not(:active),
-  .datasheets-page .row-custom:focus-visible:not(:active) {
-    background: #ffffff !important;
-    color: var(--brand-blue) !important;
-    border-color: var(--brand-blue) !important;
-
-    transform: none !important;
-    translate: none !important;
-    scale: none !important;
-
-    box-shadow: none !important;
-    outline: none !important;
-  }
-
-  /*
-    只有手指正在按住按钮时显示点击反馈。
-  */
-  .datasheets-page .row-link:active,
-  .datasheets-page .row-download:active,
-  .datasheets-page .row-custom:active {
-    background: var(--brand-blue) !important;
-    color: var(--brand-cyan) !important;
-    border-color: var(--brand-blue) !important;
-
-    transform: none !important;
-    translate: none !important;
-    scale: none !important;
-
-    box-shadow: none !important;
-    outline: none !important;
-    transition-duration: 0ms !important;
-  }
-}
-/* DATASHEETS_MOBILE_ACTION_PRESS_END */

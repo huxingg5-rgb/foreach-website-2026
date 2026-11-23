@@ -9,6 +9,8 @@
    4. 后期对接后台时，可以把这里的数据替换成接口数据
 ================================ */
 
+import { getIsoCertificateImage } from "@/data/iso-certificate-images";
+
 /* ================================
    1. 页面支持语言
 ================================ */
@@ -102,8 +104,10 @@ export const aboutQualityImages = {
   equipmentConfocal:
     "/images/about/quality-equipment/confocal-microscope.webp",
 
-  certificateIso13485: "/images/about/foreach/honors/honor-row2-iso13485.webp",
-  certificateIso9001: "/images/about/foreach/honors/honor-row2-iso9001.webp",
+  certificateIso13485: getIsoCertificateImage("13485", "zh-CN"),
+  certificateIso9001: getIsoCertificateImage("9001", "zh-CN"),
+  certificateIso13485En: getIsoCertificateImage("13485", "en"),
+  certificateIso9001En: getIsoCertificateImage("9001", "en"),
 };
 
 /* ================================
@@ -405,14 +409,14 @@ export const aboutQualityContent: Record<
         name: "ISO 13485 Medical Device Quality Management System Certification",
         description:
           "Supports quality management requirements for medical device-related products and services, providing a basis for customer project introduction and quality audits.",
-        image: aboutQualityImages.certificateIso13485,
+        image: aboutQualityImages.certificateIso13485En,
         alt: "Foreach ISO 13485 quality management system certification",
       },
       {
         name: "ISO 9001 Quality Management System Certification",
         description:
           "Supports standardized management across R&D, manufacturing, inspection, delivery and continuous improvement.",
-        image: aboutQualityImages.certificateIso9001,
+        image: aboutQualityImages.certificateIso9001En,
         alt: "Foreach ISO 9001 quality management system certification",
       },
     ],
@@ -550,14 +554,14 @@ export const aboutQualityContent: Record<
         name: "Certificación ISO 13485 de gestión de calidad para dispositivos médicos",
         description:
           "Apoya los requisitos de gestión de calidad para productos y servicios relacionados con dispositivos médicos.",
-        image: aboutQualityImages.certificateIso13485,
+        image: aboutQualityImages.certificateIso13485En,
         alt: "Certificación ISO 13485 de Foreach",
       },
       {
         name: "Certificación ISO 9001 de gestión de calidad",
         description:
           "Respalda la gestión estandarizada de I+D, fabricación, inspección, entrega y mejora continua.",
-        image: aboutQualityImages.certificateIso9001,
+        image: aboutQualityImages.certificateIso9001En,
         alt: "Certificación ISO 9001 de Foreach",
       },
     ],
@@ -695,14 +699,14 @@ export const aboutQualityContent: Record<
         name: "Certification ISO 13485 pour dispositifs médicaux",
         description:
           "Soutient les exigences de gestion qualité pour les produits et services liés aux dispositifs médicaux.",
-        image: aboutQualityImages.certificateIso13485,
+        image: aboutQualityImages.certificateIso13485En,
         alt: "Certification ISO 13485 Foreach",
       },
       {
         name: "Certification ISO 9001 de gestion qualité",
         description:
           "Soutient la gestion standardisée de la R&D, de la fabrication, de l’inspection, de la livraison et de l’amélioration continue.",
-        image: aboutQualityImages.certificateIso9001,
+        image: aboutQualityImages.certificateIso9001En,
         alt: "Certification ISO 9001 Foreach",
       },
     ],
@@ -830,14 +834,14 @@ export const aboutQualityContent: Record<
         name: "ISO 13485 의료기기 품질경영시스템 인증",
         description:
           "의료기기 관련 제품과 서비스 과정의 품질 관리 요구를 지원합니다.",
-        image: aboutQualityImages.certificateIso13485,
+        image: aboutQualityImages.certificateIso13485En,
         alt: "Foreach ISO 13485 인증",
       },
       {
         name: "ISO 9001 품질경영시스템 인증",
         description:
           "연구개발, 제조, 검사, 납품 및 지속 개선 과정의 표준화 관리를 지원합니다.",
-        image: aboutQualityImages.certificateIso9001,
+        image: aboutQualityImages.certificateIso9001En,
         alt: "Foreach ISO 9001 인증",
       },
     ],
@@ -974,14 +978,14 @@ export const aboutQualityContent: Record<
         name: "Сертификация ISO 13485 для медицинских изделий",
         description:
           "Поддерживает требования к управлению качеством для продуктов и услуг, связанных с медицинскими изделиями.",
-        image: aboutQualityImages.certificateIso13485,
+        image: aboutQualityImages.certificateIso13485En,
         alt: "Сертификация ISO 13485 Foreach",
       },
       {
         name: "Сертификация ISO 9001 системы менеджмента качества",
         description:
           "Поддерживает стандартизированное управление НИОКР, производством, проверкой, поставкой и улучшением.",
-        image: aboutQualityImages.certificateIso9001,
+        image: aboutQualityImages.certificateIso9001En,
         alt: "Сертификация ISO 9001 Foreach",
       },
     ],

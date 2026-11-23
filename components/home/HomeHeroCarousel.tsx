@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type PointerEvent } from "react";
 import { homeI18n, replacePathLocale, type LocaleCode } from "@/lib/i18n";
 import { homeHeroText } from "@/data/home-hero.intl";
 import { homeCarouselRole, homeUiText } from "@/data/home-ui.intl";
@@ -28,12 +28,14 @@ const subscribeReady = () => () => {};
 
 export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
   const root = useRef<HTMLElement>(null);
+  const swipeStart = useRef<{ pointerId: number; x: number; y: number } | null>(null);
   const [active, setActive] = useState(0);
   const [transition, setTransition] = useState<{ from: number; to: number } | null>(null);
   const [queued, setQueued] = useState<number | null>(null);
   const [paused, setPaused] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
+  const [touching, setTouching] = useState(false);
   const [inView, setInView] = useState(true);
   const reduceMotion = useSyncExternalStore(subscribeMotion, reducedMotionSnapshot, () => false);
   const pageVisible = useSyncExternalStore(subscribeVisibility, visibilitySnapshot, () => true);
@@ -48,6 +50,7 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
   };
   const uiText = homeUiText[locale];
   const slideNames = heroText.slideNames;
+  const slideCount = slideNames.length;
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.15 });
@@ -81,17 +84,46 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
   }, [queued, selectSlide, transition]);
 
   useEffect(() => {
-    if (paused || hovered || focused || !inView || !pageVisible || reduceMotion || transition || queued !== null) return;
+    if (paused || hovered || focused || touching || !inView || !pageVisible || reduceMotion || transition || queued !== null) return;
     // The tubing slide has time to demonstrate the three steps and hold the result.
-    const timer = window.setTimeout(() => selectSlide((active + 1) % 3), active === 1 ? 10000 : 5000);
+    const timer = window.setTimeout(() => selectSlide((active + 1) % slideCount), active === 1 ? 10000 : 5000);
     return () => window.clearTimeout(timer);
-  }, [active, focused, hovered, inView, pageVisible, paused, queued, reduceMotion, selectSlide, transition]);
+  }, [active, focused, hovered, inView, pageVisible, paused, queued, reduceMotion, selectSlide, slideCount, touching, transition]);
 
   const pauseForInteraction = useCallback(() => setPaused(true), []);
   const requested = queued ?? transition?.to ?? active;
 
+  function handleSwipeStart(event: PointerEvent<HTMLElement>) {
+    if (event.pointerType !== "touch" || !event.isPrimary || !window.matchMedia("(max-width: 1000px)").matches) return;
+    if ((event.target as Element).closest("a, button, input, label, select, textarea")) return;
+    swipeStart.current = { pointerId: event.pointerId, x: event.clientX, y: event.clientY };
+    setTouching(true);
+  }
+
+  function clearSwipe(event: PointerEvent<HTMLElement>) {
+    const start = swipeStart.current;
+    if (start?.pointerId !== event.pointerId) return;
+    swipeStart.current = null;
+    setTouching(false);
+    return start;
+  }
+
+  function handleSwipeEnd(event: PointerEvent<HTMLElement>) {
+    const start = clearSwipe(event);
+    if (!start) return;
+    const dx = event.clientX - start.x;
+    const dy = event.clientY - start.y;
+    if (Math.abs(dx) < 44 || Math.abs(dx) <= Math.abs(dy) * 1.25) return;
+    const step = dx < 0 ? 1 : -1;
+    setPaused(false);
+    selectSlide((requested + step + slideCount) % slideCount);
+  }
+
   function slideProperties(index: number) {
-    const offset = transition ? index === transition.to ? 0 : index === transition.from ? -100 : 100 : index === active ? 0 : 100;
+    const next = (active + 1) % slideCount;
+    let offset = index === active ? 0 : index === next ? 100 : -100;
+    if (transition?.to === index) offset = 0;
+    if (transition?.from === index) offset = transition.to === next ? -100 : 100;
     return {
       className: `${styles.panel} home-hero-slide${index === 0 ? " home-hero-product-slide" : index === 2 ? " home-hero-fluid-resistance-slide" : ""}`,
       "aria-hidden": index !== active || Boolean(transition),
@@ -109,6 +141,7 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
 
   return <section ref={root} className={`${styles.root} home-hero-scroll-shell`} lang={locale} role="region" aria-roledescription={homeCarouselRole[locale]} aria-label={uiText.banners}
     data-home-active-banner={active} data-home-header-theme={requested === 1 ? "light" : "dark"} data-home-carousel-paused={paused}
+    onPointerDown={handleSwipeStart} onPointerUp={handleSwipeEnd} onPointerCancel={clearSwipe}
     onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
     onFocusCapture={() => setFocused(true)}
     onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setFocused(false); }}>

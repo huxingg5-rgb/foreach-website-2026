@@ -87,7 +87,6 @@ export type DatasheetsLabels = {
 
 /* 底部联系支持区 */
 export type DatasheetsSupport = {
-  kicker: string;
   title: string;
   description: string;
   buttonText: string;

@@ -101,6 +101,7 @@
 }
 @media (max-width: 1000px) {
   .root { display: grid; height: auto; min-height: max(calc(760px + var(--site-header-height, 82px)), 100svh); --home-hero-tubing-copy-width: 100%; }
+  .root { touch-action: pan-y pinch-zoom; }
   .root [data-home-hero-copy] > :global(.home-hero-title) > [data-home-hero-copy-text="tubing"] { font-size: clamp(27px, 4.4vw, 38px); line-height: 1.35; letter-spacing: -0.035em; }
   .root [data-home-hero-copy] > :global(.home-hero-subtitle) > [data-home-hero-copy-text="tubing"] { font-size: clamp(15px, 2.5vw, 19px); line-height: 1.6; letter-spacing: 0.01em; }
   .panel { position: relative; inset: auto; grid-area: 1 / 1; min-width: 0; height: auto; }

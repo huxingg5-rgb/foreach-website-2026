@@ -2876,6 +2876,12 @@
   .page .container .modelCode { font-size: clamp(20px, calc(0.72vw + 10.16px), 24px) !important; }
   .page .container .tabNav .tabButton { font-size: clamp(18px, calc(1.08vw + 3.25px), 24px) !important; }
 }
+@media (min-width: 1025px) and (max-width: 1599px) {
+  .container [data-product-main-stage="true"]:has(> [data-product-main-image="true"]) {
+    max-width: 90%;
+  }
+}
+
 @media (min-width: 1025px) and (max-width: 1366px) {
   .page .container .thumbRow { height: 80px !important; }
   .page .container .thumbViewport > .thumb {

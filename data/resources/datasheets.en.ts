@@ -75,7 +75,6 @@ export const datasheetsEnPageText = {
   },
 
   support: {
-    kicker: "Need Support",
     title: "Cannot find the datasheet you need?",
     description:
       "Submit the product name, application scenario, or document request. We will help you obtain the corresponding datasheet and provide selection or technical support if needed.",
@@ -157,21 +156,97 @@ export const datasheetEnItems: DatasheetItem[] = [
     actionType: "download",
   },
   {
-    id: "rpl-p635-p15-valveless-pump",
+    id: "dpl30-diaphragm-pump",
     category: "pump",
-    keywords: "RPL P6.35 P15 valveless metering pump ceramic piston reagent dispensing titration filling",
-    title: "RPL-P6.35 / RPL-P15 Valveless Metering Pump Datasheet",
+    keywords: "DPL30 diaphragm pump 300 mL min self priming liquid transfer",
+    title: "DPL30 Diaphragm Pump Datasheet",
     label: "Pumps",
     language: "English",
-    version: "001",
-    update: "2025-07",
+    version: "A03",
+    update: "2026-08",
     description:
-      "Combined RPL-P6.35 / RPL-P15 valveless metering pump datasheet, version 001 (2025-07), covering displacement, wetted materials, ports, installation and drive configuration.",
+      "DPL30 diaphragm pump for compact liquid-transfer applications, with flow rates up to 300 mL/min.",
     image:
-      "/images/products/pumps/product-types/valveless-pumps/foreach-valveless-pumps-product-type-intro.webp",
-    productHref: "/en/products/pumps/valveless-metering-pump/",
+      "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-db-brushed-liquid-diaphragm-pump-front-20261027-card.webp",
+    productHref:
+      "/en/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
     downloadHref:
-      "/downloads/resources/datasheets/en/Pumps/ps-121b-2507-00001-001-en-rpl-valveless-pump.pdf",
+      "/downloads/resources/datasheets/en/Pumps/PS-150B-2507-00001_A03_en_DPL30 Diaphragm Pump Specification Sheet.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpl60-diaphragm-pump",
+    category: "pump",
+    keywords: "DPL60 diaphragm pump 600 mL min self priming liquid transfer",
+    title: "DPL60 Diaphragm Pump Datasheet",
+    label: "Pumps",
+    language: "English",
+    version: "A00",
+    update: "2026-07",
+    description:
+      "DPL60 diaphragm pump for liquid supply and transfer applications, with flow rates up to 600 mL/min.",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-db-brushed-liquid-diaphragm-pump-front-20261027-card.webp",
+    productHref:
+      "/en/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
+    downloadHref:
+      "/downloads/resources/datasheets/en/Pumps/PS-150B-2607-00001_A00_en_DPL60 Diaphragm Pump Specification Sheet.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpl30h-diaphragm-pump",
+    category: "pump",
+    keywords: "DPL30H DS BS high-pressure diaphragm pump 600 kPa liquid transfer",
+    title: "DPL30H High-Pressure Diaphragm Pump Datasheet",
+    label: "Pumps",
+    language: "English",
+    version: "A00",
+    update: "2026-11",
+    description:
+      "DPL30H high-pressure diaphragm pump for filtration, spray delivery, and liquid transfer in instruments, with a rated pressure of 600 kPa.",
+    image:
+      "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-ds-brushed-liquid-diaphragm-pump-front-20261027-card.webp",
+    productHref:
+      "/en/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/en/Pumps/PS-150B-2504-00001_A00_en_DPL30H High-Pressure Diaphragm Pump Specification Sheet.pdf",
+    actionType: "download",
+  },
+  {
+    id: "dpgl800-diaphragm-pump",
+    category: "pump",
+    keywords: "DPGL800 diaphragm pump gas liquid 6 L min vacuum aspiration",
+    title: "DPGL800 Diaphragm Pump Specification Sheet",
+    label: "Pumps",
+    language: "English",
+    version: "A00",
+    update: "2026-08",
+    description:
+      "DPGL800 gas-liquid diaphragm pump for gas and gas-liquid aspiration, vacuum generation, and waste-fluid removal.",
+    image:
+      "/images/resource/datasheets/thumbnails/foreach-dpgl800-brushless-diaphragm-pump-angled-photo-card.webp",
+    productHref:
+      "/en/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
+    downloadHref:
+      "/downloads/resources/datasheets/en/Pumps/PS-150B-2608-00005_A00_en_DPGL800 Diaphragm Pump Specification Sheet.pdf",
+    actionType: "download",
+  },
+  {
+    id: "fittings-and-tubing-catalog",
+    category: "tubing",
+    keywords: "fittings tubing connectors catalog rigid flexible tubing assemblies",
+    title: "Fittings & Tubing Catalog",
+    label: "Tubing & Fittings",
+    language: "English",
+    version: "A02",
+    update: "—",
+    description:
+      "A combined English catalog covering Foreach fittings, connectors, rigid tubing, flexible tubing, and tubing assemblies.",
+    image:
+      "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-tubing-fitting-v002.webp",
+    productHref: "/en/products/fittings",
+    downloadHref:
+      "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf",
     actionType: "download",
   },
   {
@@ -190,6 +265,24 @@ export const datasheetEnItems: DatasheetItem[] = [
     productHref: "/en/products/pumps/pipetting-pumps",
     downloadHref:
       "/downloads/resources/datasheets/en/Pumps/ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump-web.pdf",
+    actionType: "download",
+  },
+  {
+    id: "rpl-p635-p15-valveless-pump",
+    category: "pump",
+    keywords: "RPL P6.35 P15 valveless metering pump ceramic piston reagent dispensing titration filling",
+    title: "RPL Valveless Metering Pump Datasheet",
+    label: "Pumps",
+    language: "English",
+    version: "001",
+    update: "2025-07",
+    description:
+      "Combined RPL-P6.35 / RPL-P15 valveless metering pump datasheet, version 001 (2025-07), covering displacement, wetted materials, ports, installation and drive configuration.",
+    image:
+      "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-metering-pump-front-angle-card.webp",
+    productHref: "/en/products/pumps/valveless-metering-pump/",
+    downloadHref:
+      "/downloads/resources/datasheets/en/Pumps/ps-121b-2507-00001-001-en-rpl-valveless-pump.pdf",
     actionType: "download",
   },
   {
@@ -265,63 +358,6 @@ export const datasheetEnItems: DatasheetItem[] = [
     actionType: "download",
   },
   {
-    id: "dpl30-diaphragm-pump",
-    category: "pump",
-    keywords: "DPL30 diaphragm pump 300 mL min self priming liquid transfer",
-    title: "DPL30 Diaphragm Pump Datasheet",
-    label: "Pumps",
-    language: "English",
-    version: "A03",
-    update: "2026-08",
-    description:
-      "DPL30 diaphragm pump for compact liquid-transfer applications, with flow rates up to 300 mL/min.",
-    image:
-      "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushed-liquid-diaphragm-pump-main.webp",
-    productHref:
-      "/en/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
-    downloadHref:
-      "/downloads/resources/datasheets/en/Pumps/PS-150B-2507-00001_A03_en_DPL30 Diaphragm Pump Specification Sheet.pdf",
-    actionType: "download",
-  },
-  {
-    id: "dpl60-diaphragm-pump",
-    category: "pump",
-    keywords: "DPL60 diaphragm pump 600 mL min self priming liquid transfer",
-    title: "DPL60 Diaphragm Pump Datasheet",
-    label: "Pumps",
-    language: "English",
-    version: "A00",
-    update: "2026-07",
-    description:
-      "DPL60 diaphragm pump for liquid supply and transfer applications, with flow rates up to 600 mL/min.",
-    image:
-      "/images/products/pumps/diaphragm-pumps/dpl60/images/dpl60-brushed-liquid-diaphragm-pump-main.webp",
-    productHref:
-      "/en/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps",
-    downloadHref:
-      "/downloads/resources/datasheets/en/Pumps/PS-150B-2607-00001_A00_en_DPL60 Diaphragm Pump Specification Sheet.pdf",
-    actionType: "download",
-  },
-  {
-    id: "dpgl800-diaphragm-pump",
-    category: "pump",
-    keywords: "DPGL800 diaphragm pump gas liquid 6 L min vacuum aspiration",
-    title: "DPGL800 Diaphragm Pump Specification Sheet",
-    label: "Pumps",
-    language: "English",
-    version: "A00",
-    update: "2026-08",
-    description:
-      "DPGL800 gas-liquid diaphragm pump for gas and gas-liquid aspiration, vacuum generation, and waste-fluid removal.",
-    image:
-      "/images/products/pumps/diaphragm-pumps/dpgl800/images/dpgl800-gas-liquid-diaphragm-pump-main.webp",
-    productHref:
-      "/en/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
-    downloadHref:
-      "/downloads/resources/datasheets/en/Pumps/PS-150B-2608-00005_A00_en_DPGL800 Diaphragm Pump Specification Sheet.pdf",
-    actionType: "download",
-  },
-  {
     id: "mrv3-multi-channel-rotary-valve",
     category: "valve",
     keywords: "MRV3 multi-channel rotary valve multi-port flow path switching",
@@ -333,7 +369,7 @@ export const datasheetEnItems: DatasheetItem[] = [
     description:
       "MRV3 multi-channel rotary valve for multi-port flow-path switching, reagent distribution, and fluidic integration.",
     image:
-      "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+      "/images/home/products/mrv3-rotary-valve-pair-card.webp",
     productHref: "/en/products/valves/rotary-valves",
     downloadHref:
       "/downloads/resources/datasheets/en/Valves/ps-120c-2507-00003-001-en-mrv3-multi-channel-rotary-valve.pdf",
@@ -361,36 +397,18 @@ export const datasheetEnItems: DatasheetItem[] = [
     id: "6010-solenoid-valve",
     category: "valve",
     keywords: "6010 SV10 solenoid valve substrate threaded barbed 2-way 3-way",
-    title: "6010 Solenoid Valve Datasheet",
+    title: "SV10 (6010) Solenoid Valve Datasheet",
     label: "Valves",
     language: "English",
     version: "001",
     update: "2025-07",
     description:
-      "6010 solenoid valve datasheet covering substrate, threaded, and barbed configurations for 2-way and 3-way control.",
+      "SV10 (6010) solenoid valve datasheet covering substrate, threaded, and barbed configurations for 2-way and 3-way control.",
     image:
-      "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp",
+      "/images/products/valves/solenoid-valves/foreach-sv10-connection-options-intro.webp",
     productHref: "/en/products/valves/solenoid-valves",
     downloadHref:
       "/downloads/resources/datasheets/en/Valves/ps-122a-2507-00001-001-en-6010-solenoid-valve.pdf",
-    actionType: "download",
-  },
-  {
-    id: "fittings-and-tubing-catalog",
-    category: "tubing",
-    keywords: "fittings tubing connectors catalog rigid flexible tubing assemblies",
-    title: "Fittings & Tubing Catalog",
-    label: "Tubing & Fittings",
-    language: "English",
-    version: "A02",
-    update: "—",
-    description:
-      "A combined English catalog covering Foreach fittings, connectors, rigid tubing, flexible tubing, and tubing assemblies.",
-    image:
-      "/images/products/fittings/barbed-fittings/products/1-6mm-tube-id-pa-equal-straight-barbed-fitting-ba-16c-pa-w.webp",
-    productHref: "/en/products/fittings",
-    downloadHref:
-      "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf",
     actionType: "download",
   },
   {
@@ -423,7 +441,7 @@ export const datasheetEnItems: DatasheetItem[] = [
     description:
       "PDM5 specification sheet covering four absolute-pressure ranges, wetted materials, electrical connections and ordering models.",
     image:
-      "/images/products/control/foreach-pdm5-pressure-sensor.webp",
+      "/images/resource/datasheets/thumbnails/foreach-pdm5-pressure-sensor-angled-photo-card.webp",
     productHref: "/en/products/control/pdm5-pressure-sensor",
     downloadHref:
       "/downloads/resources/datasheets/en/Smart-Control-Modules/ps-110b-2607-00001-a00-en-pdm5-pressure-sensor.pdf",
@@ -441,7 +459,7 @@ export const datasheetEnItems: DatasheetItem[] = [
     description:
       "Datasheet is not currently available. Drawing-based customization is supported based on drawings or samples.",
     image:
-      "/images/resource/datasheets/thumbnails/resource-datasheet-thumb-sample-probe-v001.webp",
+      "/images/resource/datasheets/thumbnails/foreach-sampling-probe-series-diagonal-photo-card.webp",
     productHref: "/en/products/probes",
     downloadHref: "/en/contact?type=custom-probe",
     actionType: "custom",

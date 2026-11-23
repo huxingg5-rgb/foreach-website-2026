@@ -4779,19 +4779,26 @@
   }
 }
 
-/* Keep each product type together and wrap whole options as the sidebar narrows. */
-@media (width > 900px) {
+/* Keep each product type together, with at most two options per row. */
+.products-selection-page .filter-panel .filter-group.product-type-filter-group > .filter-options {
+  --product-type-column-gap: 8px;
+  column-gap: var(--product-type-column-gap);
+  flex-wrap: wrap;
+}
+
+.products-selection-page .filter-panel .product-type-filter-group > .filter-options > .filter-option {
+  /* Reserve just over a third per item so a row cannot hold three options. */
+  flex: 1 1 calc((100% - 2 * var(--product-type-column-gap)) / 3 + 1px);
+  width: auto;
+  min-width: fit-content;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 761px) {
   .products-selection-page .filter-panel .filter-group.product-type-filter-group > .filter-options {
     display: flex !important;
-    flex-wrap: wrap;
-    column-gap: 8px;
-  }
-
-  .products-selection-page .filter-panel .product-type-filter-group > .filter-options > :is(.filter-option, .filter-btn) {
-    flex: 0 1 auto;
-    width: max-content;
-    min-width: 0;
-    max-width: 100%;
   }
 }
 
@@ -4834,6 +4841,10 @@
   .products-selection-page .filter-panel .filter-group > .filter-options {
     gap: 2px;
     padding: 0 12px 8px;
+  }
+
+  .products-selection-page .filter-panel .product-type-filter-group.is-mobile-open > .filter-options {
+    display: flex !important;
   }
 
   .products-selection-page .filter-panel .filter-option,
