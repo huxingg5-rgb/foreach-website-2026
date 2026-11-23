@@ -34,10 +34,11 @@
 .visualCoverTubing img { scale: 1.04; }
 .product:is(:hover, :focus-visible) .visual img { transform: scale(1.045); }
 .conceptLabel { position: absolute; top: 12px; right: 12px; font-size: 10px; color: #778699; }
-.productText { display: flex; flex-direction: column; flex: 1; padding: 24px; }
-.productText h3 { margin: 0 0 12px; color: #173368; font-size: 22px; font-weight: 500; line-height: 1.3; transition: color .2s ease; }
+.productText { display: flex; flex-direction: column; flex: 1; padding: 14px 24px 24px; }
+.productText h3 { margin: 0 0 6px; color: #173368; font-size: 22px; font-weight: 500; line-height: 1.3; transition: color .2s ease; }
 .product:is(:hover, :focus-visible) h3 { color: #09e9b4; }
-.productText p { margin: 0; color: #788493; font-size: 14px; line-height: 1.75; }
+.productText p { margin: 0; color: #788493; font-size: 14px; }
+.productText p, .taskCard p { line-height: 22px; }
 .catalogNote { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 30px; color: #78899e; font-size: 13px; line-height: 1.6; }
 .catalogNote a { margin-left: auto; color: var(--brand-blue); text-decoration: none; font-weight: 600; }
 .catalogNote a:is(:hover, :focus-visible) { color: var(--brand-cyan); }
@@ -77,10 +78,12 @@
 }
 .taskGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; margin-top: 72px; }
 .taskCard { padding: 24px; border: 1px solid #e5ebf2; border-radius: 0; background: #fff; }
-.taskCard h3 { margin: 0 0 12px; color: #000; font-size: 20px; font-weight: 600; line-height: 1.4; }
-.taskCard p { margin: 0; color: rgba(23, 51, 104, .72); font-size: 15px; line-height: 1.8; }
+.taskCard h3 { margin: 0 0 12px; color: #000; font-size: 18px; font-weight: 500; line-height: 1.4; }
+.taskCard p { margin: 0; color: rgba(23, 51, 104, .72); font-size: 15px; }
+.applicationRows[data-limited] { overflow: clip; }
 .applicationRow { display: grid; grid-template-columns: minmax(0, 1fr) 20px; align-items: center; gap: 16px; padding: 18px 0; border-top: 1px solid #d9e2ec; color: var(--brand-blue); font-size: 20px; text-decoration: none; transition: color .2s ease; }
-.applicationRow strong { display: block; color: #000; font-size: 20px; font-weight: 600; line-height: 1.4; }
+.applicationRow[data-overflow] { visibility: hidden; }
+.applicationRow strong { display: block; color: #000; font-size: 18px; font-weight: 500; line-height: 1.4; }
 .applicationRow small { display: block; margin-top: 4px; font-size: 15px; color: var(--brand-blue); line-height: 1.5; }
 .applicationRow:is(:hover, :focus-visible),
 .applicationRow:is(:hover, :focus-visible) strong { color: var(--brand-cyan); }
@@ -110,20 +113,21 @@
   .applicationLayout { row-gap: 16px !important; }
   .section:global(#applications) .applicationDetails :global(.home-company-intro-copy) { line-height: 1.7; margin-bottom: 16px !important; }
   .applicationRow { padding-block: 6px; }
-  .applicationRow strong { font-size: 18px; }
+  .applicationRow strong { font-size: 17px; }
   .applicationRow small { font-size: 14px; }
   .taskCard { padding: 14px; }
-  .taskCard h3 { font-size: 18px; margin-bottom: 8px; }
-  .taskCard p { font-size: 14px; line-height: 1.6; }
+  .taskCard h3 { font-size: 17px; margin-bottom: 8px; }
+  .taskCard p { font-size: 14px; }
 }
 .product:focus-visible, .applicationRow:focus-visible, .applicationMore:focus-visible, .catalogNote a:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 4px; }
+.applicationRows[data-limited] .applicationRow:focus-visible { outline-offset: -2px; }
 .srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 1180px) {
   .applicationCopy { padding-top: 0 !important; }
 }
 @media (max-width: 1100px) {
   .productGrid { gap: 16px; }
-  .productText { padding: 18px; }
+  .productText { padding: 12px 18px 18px; }
   .productText h3 { font-size: 19px; }
 }
 @media (max-width: 900px) {
@@ -153,9 +157,10 @@
     white-space: nowrap;
   }
   .productGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
-  .productText { padding: 15px 12px 18px; }
+  .productText { padding: 9px 12px 18px; }
   .productText h3 { font-size: 17px; overflow-wrap: break-word; }
   .productText p { font-size: 12px; }
+  .productText p, .taskCard p { line-height: 18px; }
   .conceptLabel { top: 6px; right: 6px; font-size: 8px; }
   .catalogNote { flex-direction: column; align-items: flex-start; gap: 12px; }
   .taskGrid {
@@ -178,10 +183,10 @@
     scroll-snap-align: start;
     overflow-wrap: break-word;
   }
-  .taskCard h3 { margin-bottom: 6px; font-size: 16px; line-height: 1.3; }
-  .taskCard p { font-size: 13px; line-height: 1.5; }
+  .taskCard h3 { margin-bottom: 6px; font-size: 15px; line-height: 1.3; }
+  .taskCard p { font-size: 13px; }
   .applicationRow { gap: 10px; }
-  .applicationRow strong { font-size: 18px; }
+  .applicationRow strong { font-size: 17px; }
   .applicationRow small { font-size: 14px; }
   .eyebrow { font-size: 10px; letter-spacing: 1.5px; }
   .intro br { display: none; }

@@ -3546,9 +3546,9 @@ html[lang="ru"] .home-hero-btn:hover {
   margin: 0;
 
   color: #111827;
-  font-size: clamp(30px, 2.2vw, 42px);
+  font-size: clamp(28px, calc(2.2vw - 2px), 40px);
   line-height: 1.22;
-  font-weight: 520;
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 
@@ -3942,7 +3942,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-company-intro-title {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   /*
@@ -4451,7 +4451,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-company-intro-title {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.25;
   }
 
@@ -7295,7 +7295,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-company-intro-title {
-    font-size: clamp(24px, 2vw, 32px) !important;
+    font-size: clamp(22px, calc(2vw - 2px), 30px) !important;
   }
 
   .home-company-intro-desc {
@@ -8392,7 +8392,7 @@ html[lang="ru"] .home-hero-btn:hover {
   }
 
   .home-company-intro-title {
-    font-size: clamp(23px, 2vw, 31px) !important;
+    font-size: clamp(21px, calc(2vw - 2px), 29px) !important;
   }
 
   .home-company-intro-desc {

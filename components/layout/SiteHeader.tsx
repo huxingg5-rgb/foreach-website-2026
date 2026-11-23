@@ -1713,41 +1713,6 @@ const isFittingReplacementDetailPage =
                     );
                   })}
                 </div>
-
-                {/* 底部入口区 */}
-                <div
-                  className="site-nav-mega-footer"
-                  style={{ display: currentLocale !== "zh-CN" && activeMegaItem.key === "applications" ? undefined : "none" }}
-                >
-                  <span>
-                    {getLocalizedText(
-                      activeMegaItem.megaDropdown.footerText,
-                      currentLocale,
-                    )}
-                  </span>
-
-                  <Link
-                    href={getLocalizedHref(
-                      currentLocale !== "zh-CN" && activeMegaItem.key === "applications"
-                        ? activeMegaItem.megaDropdown.footerHref
-                        : activeMegaCards[0]?.href ?? activeMegaItem.megaDropdown.footerHref,
-                      currentLocale,
-                    )}
-                    onClick={closeAllPanels}
-                  >
-                    {currentLocale !== "zh-CN" && activeMegaItem.key === "applications"
-                      ? getLocalizedText(activeMegaItem.megaDropdown.footerLinkLabel, currentLocale)
-                      : activeMegaCards[0]?.title
-                      ? `${getLocalizedText(
-                        activeMegaCards[0].title,
-                        currentLocale,
-                      )} →`
-                      : getLocalizedText(
-                        activeMegaItem.megaDropdown.footerLinkLabel,
-                        currentLocale,
-                      )}
-                  </Link>
-                </div>
               </div>
             </div>
           </div>

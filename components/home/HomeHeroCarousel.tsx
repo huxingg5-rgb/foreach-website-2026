@@ -40,6 +40,12 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
   const ready = useSyncExternalStore(subscribeReady, () => true, () => false);
   const copy = homeI18n[locale];
   const heroText = homeHeroText[locale];
+  const mainCopy = { titleLine1: copy.heroTitleLine1, titleLine2: copy.heroTitleLine2, description: copy.heroSubtitle };
+  const tubingCopy = {
+    titleLine1: heroText.tubing.titleLine1,
+    titleLine2: heroText.tubing.titleLine2,
+    description: [heroText.tubing.descriptionLine1, heroText.tubing.descriptionLine2].join(locale === "zh-CN" ? "" : " "),
+  };
   const uiText = homeUiText[locale];
   const slideNames = heroText.slideNames;
 
@@ -113,9 +119,8 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
         className="home-hero-primary-copy"
         heading="h1"
         analyticsSection="home_hero_main"
-        titleLine1={copy.heroTitleLine1}
-        titleLine2={copy.heroTitleLine2}
-        description={copy.heroSubtitle}
+        {...mainCopy}
+        alignWith={{ variant: "main", copy: tubingCopy }}
         primaryHref={replacePathLocale("/products/", locale)}
         primaryLabel={copy.productButton}
         secondaryHref={replacePathLocale("/contact/", locale)}
@@ -123,7 +128,7 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
       />
     </article>
     <article {...slideProperties(1)} aria-label={slideNames[1]}>
-      <HomeTubingAssemblySlide locale={locale} active={active === 1 && !transition && inView && pageVisible}
+      <HomeTubingAssemblySlide locale={locale} heroCopy={tubingCopy} mainCopy={mainCopy} active={active === 1 && !transition && inView && pageVisible}
         reduceMotion={reduceMotion} onInteraction={pauseForInteraction} />
     </article>
     <article {...slideProperties(2)} aria-label={slideNames[2]}>

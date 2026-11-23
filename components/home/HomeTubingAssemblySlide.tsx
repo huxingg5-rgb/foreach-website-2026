@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState, type CSSProperties } from "react";
 import { replacePathLocale, type LocaleCode } from "@/lib/i18n";
 import { homeHeroText } from "@/data/home-hero.intl";
+import HomeHeroCopy, { type HomeHeroCopyText } from "./HomeHeroCopy";
 import styles from "./HomeTubingAssemblySlide.module.css";
 
 const DEMO_TEXT = "FEP · 500 mm";
@@ -21,8 +21,13 @@ function position(x: number, y: number, width?: number): CSSProperties {
   return { left: `${(x - 100) / 390 * 100}%`, top: `${(y - 336) / 374 * 100}%`, ...(width ? { width: `${width / 390 * 100}%` } : {}) };
 }
 
-export default function HomeTubingAssemblySlide({ locale, active, reduceMotion, onInteraction }: {
-  locale: LocaleCode; active: boolean; reduceMotion: boolean; onInteraction: () => void;
+export default function HomeTubingAssemblySlide({ locale, heroCopy, mainCopy, active, reduceMotion, onInteraction }: {
+  locale: LocaleCode;
+  heroCopy: HomeHeroCopyText;
+  mainCopy: HomeHeroCopyText;
+  active: boolean;
+  reduceMotion: boolean;
+  onInteraction: () => void;
 }) {
   const copy = homeHeroText[locale].tubing;
   const [ring, setRing] = useState(false);
@@ -54,11 +59,17 @@ export default function HomeTubingAssemblySlide({ locale, active, reduceMotion, 
   const inputSize = Math.min(13, 78 / Math.max(units, 1));
 
   return <div className={styles.slide} data-home-tubing-demo="true" data-demo-finished={finished} data-demo-manual={manual} data-home-tubing-stage={step}>
-    <div className={styles.copy}>
-      <h2>{copy.titleLine1}<br />{copy.titleLine2}</h2>
-      <p>{copy.descriptionLine1}{locale === "zh-CN" ? null : " "}{copy.descriptionLine2}</p>
-      <Link className={styles.cta} data-analytics-section="home_hero_tubing_assembly" data-analytics-hero-action="tubing_assembly_cta" href={replacePathLocale("/products/tubing-assemblies/flanged-tubing/details/", locale)}>{copy.button}</Link>
-    </div>
+    <HomeHeroCopy
+      className={`home-hero-primary-copy ${styles.copy}`}
+      heading="h2"
+      {...heroCopy}
+      alignWith={{ variant: "tubing", copy: mainCopy }}
+      analyticsSection="home_hero_tubing_assembly"
+      primaryAction="tubing_assembly_cta"
+      primaryClassName={styles.cta}
+      primaryHref={replacePathLocale("/products/tubing-assemblies/flanged-tubing/details/", locale)}
+      primaryLabel={copy.button}
+    />
     <div className={styles.visual}>
       <div className={styles.artwork} role="group" aria-label={copy.drawingLabel} onFocusCapture={interact}>
         <svg className={styles.drawing} viewBox="100 336 390 374" aria-hidden="true">
