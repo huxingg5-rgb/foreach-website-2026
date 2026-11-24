@@ -101,6 +101,7 @@ type ContactIntlText = {
   messageLabel: string;
   messagePlaceholder: string;
 
+  optionalLabel: string;
   requestTypeLabel: string;
   productTypeLabel: string;
   projectStageLabel: string;
@@ -250,8 +251,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     ],
 
     formTitle: "Submit Inquiry",
-    formDescription:
-      "Please provide your application scenario, target product, key parameters, current project stage, and attachments so that we can evaluate your request and arrange follow-up quickly.",
+    formDescription: "Enter your name, company name, and email address. All other fields are optional.",
     formPanelTitle: "Inquiry Submission Form",
     fileTip:
       "Supports drawings, PDF files, BOM, images, and other documents. Each file should not exceed 20 MB.",
@@ -280,6 +280,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     messagePlaceholder:
       "Please describe your application scenario, target product, key parameters, or document request.",
 
+    optionalLabel: "(optional)",
     requestTypeLabel: "Request Type",
     productTypeLabel: "Target Product / Component Type",
     projectStageLabel: "Current Stage",
@@ -521,8 +522,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     ],
 
     formTitle: "Enviar consulta",
-    formDescription:
-      "Indique el escenario de aplicación, producto objetivo, parámetros clave, etapa actual del proyecto y archivos adjuntos para que podamos evaluar su solicitud rápidamente.",
+    formDescription: "Indique su nombre, empresa y correo electrónico. Los demás campos son opcionales.",
     formPanelTitle: "Formulario de consulta",
     fileTip:
       "Admite planos, archivos PDF, BOM, imágenes y otros documentos. Cada archivo no debe superar los 20 MB.",
@@ -551,6 +551,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     messagePlaceholder:
       "Describa su escenario de aplicación, producto objetivo, parámetros clave o solicitud de documentos.",
 
+    optionalLabel: "(opcional)",
     requestTypeLabel: "Tipo de solicitud",
     productTypeLabel: "Producto / componente objetivo",
     projectStageLabel: "Etapa actual",
@@ -793,8 +794,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     ],
 
     formTitle: "Envoyer une demande",
-    formDescription:
-      "Veuillez indiquer votre scénario d’application, le produit cible, les paramètres clés, l’étape actuelle du projet et les pièces jointes afin que nous puissions évaluer rapidement votre demande.",
+    formDescription: "Renseignez votre nom, votre entreprise et votre adresse e-mail. Les autres champs sont facultatifs.",
     formPanelTitle: "Formulaire de demande",
     fileTip:
       "Prend en charge les plans, fichiers PDF, BOM, images et autres documents. Chaque fichier ne doit pas dépasser 20 MB.",
@@ -823,6 +823,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     messagePlaceholder:
       "Décrivez votre scénario d’application, le produit cible, les paramètres clés ou la demande de documents.",
 
+    optionalLabel: "(facultatif)",
     requestTypeLabel: "Type de demande",
     productTypeLabel: "Produit / composant cible",
     projectStageLabel: "Étape actuelle",
@@ -1066,8 +1067,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     ],
 
     formTitle: "문의 제출",
-    formDescription:
-      "애플리케이션 시나리오, 대상 제품, 주요 파라미터, 현재 프로젝트 단계 및 첨부 파일을 입력해 주시면 요청을 빠르게 평가하고 후속 대응을 진행하겠습니다.",
+    formDescription: "이름, 회사명, 이메일 주소를 입력해 주세요. 나머지 항목은 선택 사항입니다.",
     formPanelTitle: "문의 제출 양식",
     fileTip:
       "도면, PDF, BOM, 이미지 및 기타 문서를 지원합니다. 각 파일은 20 MB를 초과하지 않아야 합니다.",
@@ -1096,6 +1096,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     messagePlaceholder:
       "애플리케이션 시나리오, 대상 제품, 주요 파라미터 또는 자료 요청 내용을 입력하세요.",
 
+    optionalLabel: "(선택)",
     requestTypeLabel: "요청 유형",
     productTypeLabel: "대상 제품 / 부품 유형",
     projectStageLabel: "현재 단계",
@@ -1333,8 +1334,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     ],
 
     formTitle: "Отправить запрос",
-    formDescription:
-      "Укажите сценарий применения, целевой продукт, ключевые параметры, текущий этап проекта и вложения, чтобы мы могли быстро оценить ваш запрос.",
+    formDescription: "Укажите имя, название компании и адрес электронной почты. Остальные поля необязательны.",
     formPanelTitle: "Форма запроса",
     fileTip:
       "Поддерживаются чертежи, PDF, BOM, изображения и другие документы. Каждый файл не должен превышать 20 MB.",
@@ -1363,6 +1363,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
     messagePlaceholder:
       "Опишите сценарий применения, целевой продукт, ключевые параметры или запрос документов.",
 
+    optionalLabel: "(необязательно)",
     requestTypeLabel: "Тип запроса",
     productTypeLabel: "Целевой продукт / компонент",
     projectStageLabel: "Текущий этап",
@@ -1712,6 +1713,7 @@ export function getContactIntlData(
 
       labels: {
         ...contactZhData.form.labels,
+        optional: text.optionalLabel,
         requestType: text.requestTypeLabel,
         productType: text.productTypeLabel,
         projectStage: text.projectStageLabel,

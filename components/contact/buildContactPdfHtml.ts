@@ -45,7 +45,6 @@ export type ContactFormState = {
   name: string; // 姓名
   company: string; // 公司名称
   email: string; // 邮箱
-  emailCode: string; // 邮箱验证码
   phone: string; // 中文：电话 / 微信；英文：Phone / WhatsApp
   requestType: string; // 需求类型
   productType: string; // 目标产品 / 部件类型

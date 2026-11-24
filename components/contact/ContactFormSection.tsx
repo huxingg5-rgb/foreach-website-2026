@@ -21,9 +21,6 @@ export default function ContactFormSection({
   showHeading = true,
   formProps,
 }: ContactFormSectionProps) {
-  const finalPresetRequestType =
-    presetRequestType || data.form.requestTypes[0] || "";
-
   return (
     <section
       className={`contact-section contact-form-section ${className}`.trim()}
@@ -58,7 +55,7 @@ export default function ContactFormSection({
 
           <ContactInquiryForm
             data={data}
-            presetRequestType={finalPresetRequestType}
+            presetRequestType={presetRequestType}
             {...formProps}
           />
         </div>

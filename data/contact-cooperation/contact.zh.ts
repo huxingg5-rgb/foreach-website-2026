@@ -115,7 +115,7 @@ export const contactZhData: ContactPageData = {
   form: {
     title: "提交需求", // 表单模块标题
     description:
-      "请补充应用场景、目标产品、关键参数、当前阶段和附件资料，便于我们快速判断需求并安排跟进。", // 表单模块说明
+      "请填写姓名、公司名称和邮箱，其余信息可按需补充。", // 表单模块说明
 
     panelTitle: "需求提交表单", // 表单右侧面板标题
 
@@ -162,6 +162,7 @@ export const contactZhData: ContactPageData = {
     },
 
     labels: {
+      optional: "（选填）",
       requestType: "需求类型", // 需求类型字段标签
       productType: "目标产品 / 部件类型", // 产品类型字段标签
       projectStage: "当前阶段", // 当前阶段字段标签

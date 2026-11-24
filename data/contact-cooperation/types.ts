@@ -174,6 +174,7 @@ export type ContactFormData = {
    };
 
    labels: {
+      optional: string;
       requestType: string; // 需求类型标签
       productType: string; // 目标产品 / 部件类型标签
       projectStage: string; // 当前阶段标签

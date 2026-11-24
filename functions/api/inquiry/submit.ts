@@ -1,6 +1,7 @@
 import { buildInquiryEmails } from "../../../lib/email/inquiry-email";
 import {
   cleanText,
+  CONTACT_INQUIRY_RATE_LIMIT,
   ensureSameOrigin,
   handleInquiryError,
   InquiryRequestError,
@@ -393,7 +394,7 @@ function normalizeAttachments(
  *
  * 同时兼容：
  * 1. 首页简版询盘
- * 2. 联系我们详细询盘
+ * 2. 联系我们表单（仅姓名、公司及邮箱必填，无需验证码）
  * 3. 图纸申请
  * 4. 经销商合作申请
  *
@@ -517,6 +518,11 @@ export const onRequestPost:
         requestType.toUpperCase() ===
         "CAD";
 
+      const isGeneralInquiry =
+        body.formType === "general_inquiry" &&
+        !isCadRequest &&
+        requestType !== "Distributor Partnership";
+
       const attachments =
         preparedAttachments.length > 0
           ? preparedAttachments.map(
@@ -557,10 +563,7 @@ export const onRequestPost:
         );
       }
 
-      if (
-        !productType ||
-        (!message && !isCadRequest)
-      ) {
+      if (!isGeneralInquiry && (!productType || (!message && !isCadRequest))) {
         return jsonResponse(
           {
             success: false,
@@ -571,74 +574,90 @@ export const onRequestPost:
         );
       }
 
-      const emailStorageId =
-        await sha256(email);
+      let verifiedKey = "";
+      if (isGeneralInquiry) {
+        const clientIp = request.headers.get("CF-Connecting-IP");
+        if (clientIp) {
+          const rateKey = `inquiry:general:ip:${await sha256(clientIp)}`;
+          const submissions = Number(await env.INQUIRY_KV.get(rateKey) || "0");
+          if (submissions >= CONTACT_INQUIRY_RATE_LIMIT.maxPerWindow) {
+            return jsonResponse({ success: false, error: "too_many_requests" }, 429);
+          }
+          await env.INQUIRY_KV.put(rateKey, String(submissions + 1), {
+            expirationTtl: CONTACT_INQUIRY_RATE_LIMIT.windowSeconds,
+          });
+        }
+      } else {
+        const emailStorageId =
+          await sha256(email);
 
-      const verifiedKey =
-        `inquiry:verified:${emailStorageId}`;
+        verifiedKey =
+          `inquiry:verified:${emailStorageId}`;
 
-      const rawVerifiedRecord =
-        await env.INQUIRY_KV.get(
-          verifiedKey,
-        );
+        const rawVerifiedRecord =
+          await env.INQUIRY_KV.get(
+            verifiedKey,
+          );
 
-      if (!rawVerifiedRecord) {
-        return jsonResponse(
-          {
-            success: false,
-            error:
-              "email_not_verified",
-          },
-          403,
-        );
-      }
+        if (!rawVerifiedRecord) {
+          return jsonResponse(
+            {
+              success: false,
+              error:
+                "email_not_verified",
+            },
+            403,
+          );
+        }
 
-      let verifiedRecord:
-        VerifiedRecord;
+        let verifiedRecord:
+          VerifiedRecord;
 
-      try {
-        verifiedRecord =
-          JSON.parse(
-            rawVerifiedRecord,
-          ) as VerifiedRecord;
-      }
-      catch {
-        await env.INQUIRY_KV.delete(
-          verifiedKey,
-        );
+        try {
+          verifiedRecord =
+            JSON.parse(
+              rawVerifiedRecord,
+            ) as VerifiedRecord;
+        }
+        catch {
+          await env.INQUIRY_KV.delete(
+            verifiedKey,
+          );
 
-        return jsonResponse(
-          {
-            success: false,
-            error:
-              "email_not_verified",
-          },
-          403,
-        );
-      }
+          return jsonResponse(
+            {
+              success: false,
+              error:
+                "email_not_verified",
+            },
+            403,
+          );
+        }
 
-      if (
-        verifiedRecord.email !== email ||
-        verifiedRecord.expiresAt <=
-          Date.now()
-      ) {
-        await env.INQUIRY_KV.delete(
-          verifiedKey,
-        );
+        if (
+          verifiedRecord.email !== email ||
+          verifiedRecord.expiresAt <=
+            Date.now()
+        ) {
+          await env.INQUIRY_KV.delete(
+            verifiedKey,
+          );
 
-        return jsonResponse(
-          {
-            success: false,
-            error:
-              "email_verification_expired",
-          },
-          403,
-        );
+          return jsonResponse(
+            {
+              success: false,
+              error:
+                "email_verification_expired",
+            },
+            403,
+          );
+        }
       }
 
       const formFingerprint =
         await sha256(
           JSON.stringify([
+            ...(isGeneralInquiry ? ["general_inquiry"] : []),
             name,
             company,
             email,
@@ -672,6 +691,7 @@ export const onRequestPost:
         productType, targetModel, projectStage, productName, productSeries,
         productModel, currentUrl, message, attachments,
         filesReceived: preparedAttachments.length > 0,
+        emailVerified: !isGeneralInquiry,
       });
 
       await Promise.all([
@@ -693,9 +713,9 @@ export const onRequestPost:
         }),
       ]);
 
-      await env.INQUIRY_KV.delete(
-        verifiedKey,
-      );
+      if (verifiedKey) {
+        await env.INQUIRY_KV.delete(verifiedKey);
+      }
 
       return jsonResponse({
         success: true,

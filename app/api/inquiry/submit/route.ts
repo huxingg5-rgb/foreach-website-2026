@@ -1,6 +1,7 @@
 import { buildInquiryEmails } from "@/lib/email/inquiry-email";
 import {
   cleanText,
+  CONTACT_INQUIRY_RATE_LIMIT,
   ensureSameOrigin,
   handleInquiryError,
   InquiryRequestError,
@@ -176,7 +177,7 @@ function normalizeAttachments(
  *
  * 功能：
  * 1. 校验表单字段
- * 2. 检查邮箱是否已经验证
+ * 2. 联系我们表单免验证码，其余请求检查邮箱验证状态
  * 3. 给公司邮箱发送询盘通知
  * 4. 给客户发送确认邮件
  * 5. 成功后删除邮箱验证状态
@@ -249,6 +250,11 @@ export async function POST(request: Request): Promise<Response> {
     const isCadRequest =
       requestType.toUpperCase() === "CAD";
 
+    const isGeneralInquiry =
+      body.formType === "general_inquiry" &&
+      !isCadRequest &&
+      requestType !== "Distributor Partnership";
+
     const attachments = preparedAttachments.length > 0
       ? preparedAttachments.map((attachment) => attachment.metadata)
       : normalizeAttachments(body.attachments);
@@ -283,7 +289,7 @@ export async function POST(request: Request): Promise<Response> {
       );
     }
 
-    if (!productType || (!message && !isCadRequest)) {
+    if (!isGeneralInquiry && (!productType || (!message && !isCadRequest))) {
       return jsonResponse(
         {
           success: false,
@@ -294,41 +300,57 @@ export async function POST(request: Request): Promise<Response> {
     }
 
     const redis = getInquiryRedis();
-    const emailStorageId = await sha256(email);
+    let verifiedKey = "";
+    if (isGeneralInquiry) {
+      const clientIp = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
+      if (clientIp) {
+        const rateKey = `inquiry:general:ip:${await sha256(clientIp)}`;
+        const submissions = await redis.incr(rateKey);
+        if (submissions === 1) {
+          await redis.expire(rateKey, CONTACT_INQUIRY_RATE_LIMIT.windowSeconds);
+        }
+        if (submissions > CONTACT_INQUIRY_RATE_LIMIT.maxPerWindow) {
+          return jsonResponse({ success: false, error: "too_many_requests" }, 429);
+        }
+      }
+    } else {
+      const emailStorageId = await sha256(email);
 
-    const verifiedKey =
-      `inquiry:verified:${emailStorageId}`;
+      verifiedKey =
+        `inquiry:verified:${emailStorageId}`;
 
-    const verifiedRecord =
-      await redis.get<VerifiedRecord>(verifiedKey);
+      const verifiedRecord =
+        await redis.get<VerifiedRecord>(verifiedKey);
 
-    if (!verifiedRecord) {
-      return jsonResponse(
-        {
-          success: false,
-          error: "email_not_verified",
-        },
-        403,
-      );
-    }
+      if (!verifiedRecord) {
+        return jsonResponse(
+          {
+            success: false,
+            error: "email_not_verified",
+          },
+          403,
+        );
+      }
 
-    if (
-      verifiedRecord.email !== email ||
-      verifiedRecord.expiresAt <= Date.now()
-    ) {
-      await redis.del(verifiedKey);
+      if (
+        verifiedRecord.email !== email ||
+        verifiedRecord.expiresAt <= Date.now()
+      ) {
+        await redis.del(verifiedKey);
 
-      return jsonResponse(
-        {
-          success: false,
-          error: "email_verification_expired",
-        },
-        403,
-      );
+        return jsonResponse(
+          {
+            success: false,
+            error: "email_verification_expired",
+          },
+          403,
+        );
+      }
     }
 
     const formFingerprint = await sha256(
       JSON.stringify([
+          ...(isGeneralInquiry ? ["general_inquiry"] : []),
         name,
         company,
         email,
@@ -362,6 +384,7 @@ export async function POST(request: Request): Promise<Response> {
       productType, targetModel, projectStage, productName, productSeries,
       productModel, currentUrl, message, attachments,
       filesReceived: preparedAttachments.length > 0,
+      emailVerified: !isGeneralInquiry,
     });
 
     await Promise.all([
@@ -383,7 +406,9 @@ export async function POST(request: Request): Promise<Response> {
       }),
     ]);
 
-    await redis.del(verifiedKey);
+    if (verifiedKey) {
+      await redis.del(verifiedKey);
+    }
 
     return jsonResponse({
       success: true,

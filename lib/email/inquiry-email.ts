@@ -21,6 +21,7 @@ export type InquiryEmailData = {
   message?: string;
   attachments: readonly { name: string }[];
   filesReceived: boolean;
+  emailVerified?: boolean;
 };
 
 const NAVY = "#173368";
@@ -133,6 +134,7 @@ export function buildInquiryEmails(data: InquiryEmailData): { notification: Inqu
   const isDistributor = data.requestType === "Distributor Partnership";
   const requestLabel = isCad ? (zh ? "图纸资料申请" : "Drawing request") : isDistributor ? (zh ? "经销商合作申请" : "Distributor partnership") : data.requestType;
   const pendingFiles = data.attachments.length > 0 && !data.filesReceived;
+  const emailVerified = data.emailVerified !== false;
   const contact = inquiryEmailContact(locale);
   const refLabel = zh ? (isCad || isDistributor ? "申请编号：" : "询盘编号：") : "Reference: ";
   const reference = paragraph(`${refLabel}<strong style="font-weight:600;color:#596679;">${escapeHtml(data.referenceId)}</strong>`, 12, "#7b8594", 8);
@@ -152,7 +154,7 @@ export function buildInquiryEmails(data: InquiryEmailData): { notification: Inqu
   let lead: string;
   if (isCad) lead = zh ? "您的图纸资料申请已收到。我们会核对产品与所需资料，并通过邮件与您联系。" : "We have received your drawing request. Our team will review the product and requested documents, then contact you by email.";
   else if (isDistributor) lead = zh ? "感谢您关注 FOREACH 经销商合作。您的申请已收到，我们会查看公司的业务与合作需求，并与您联系。" : "Thank you for your interest in becoming a FOREACH distributor. We have received your application and will review your business and partnership requirements.";
-  else if (pendingFiles) lead = zh ? "感谢联系 FOREACH，您的询盘已收到。请将下方列出的原始文件补充发送给我们，以便进一步确认需求。" : "Thank you for contacting FOREACH. We have received your inquiry. Please send the original files listed below so we can review your requirements.";
+  else if (pendingFiles) lead = zh ? "感谢联系 FOREACH，您的询盘已收到。请将原始文件补充发送给我们，以便进一步确认需求。" : "Thank you for contacting FOREACH. We have received your inquiry. Please send the original files so we can review your requirements.";
   else if (data.filesReceived && data.attachments.length) lead = zh ? "感谢联系 FOREACH，您的询盘及附件已收到。我们会结合您提供的资料查看需求并与您联系。" : "Thank you for contacting FOREACH. We have received your inquiry and files. Our team will review the details and contact you.";
   else lead = zh ? "感谢联系 FOREACH，您的询盘已成功提交。我们会查看需求并与您联系。" : "Thank you for contacting FOREACH. We have received your inquiry. Our team will review your requirements and contact you.";
   const followup = isCad
@@ -164,8 +166,13 @@ export function buildInquiryEmails(data: InquiryEmailData): { notification: Inqu
   const eyebrow = isCad ? (zh ? "图纸资料申请" : "DRAWING REQUEST") : isDistributor ? (zh ? "经销商合作申请" : "PARTNERSHIP APPLICATION") : (zh ? "询盘提交确认" : "INQUIRY CONFIRMATION");
   const greeting = zh ? "您好：" : "Hello,";
   const heading = isCad || isDistributor ? (zh ? "申请摘要" : "Request summary") : (zh ? "您的需求" : "Your request");
-  const body = paragraph(greeting) + paragraph(lead, 15, "#263a59", 10) + reference + table(`<tr><td style="padding-top:24px;padding-bottom:10px;">${paragraph(heading, 13, NAVY)}</td></tr>`, 576) + summary(customerRows, locale) + paragraph(escapeHtml(followup).replace(escapeHtml(contact), emailLink(contact)), 13, "#5e6a79", 20) + paragraph(zh ? "FOREACH 团队" : "The FOREACH Team", 13, "#263a59", 20);
-  const confirmation = finish(locale, title, eyebrow, body, `${greeting}\n\n${lead}\n${refLabel}${data.referenceId}\n\n${plainSummary(customerRows, locale)}\n\n${followup}`, `FOREACH | ${title} · ${data.referenceId}`);
+  // Only verified recipients receive a copy of the visitor-entered details.
+  const customerSummary = emailVerified
+    ? table(`<tr><td style="padding-top:24px;padding-bottom:10px;">${paragraph(heading, 13, NAVY)}</td></tr>`, 576) + summary(customerRows, locale)
+    : "";
+  const customerPlainSummary = emailVerified ? `\n\n${plainSummary(customerRows, locale)}` : "";
+  const body = paragraph(greeting) + paragraph(lead, 15, "#263a59", 10) + reference + customerSummary + paragraph(escapeHtml(followup).replace(escapeHtml(contact), emailLink(contact)), 13, "#5e6a79", 20) + paragraph(zh ? "FOREACH 团队" : "The FOREACH Team", 13, "#263a59", 20);
+  const confirmation = finish(locale, title, eyebrow, body, `${greeting}\n\n${lead}\n${refLabel}${data.referenceId}${customerPlainSummary}\n\n${followup}`, `FOREACH | ${title} · ${data.referenceId}`);
 
   const notificationRows: Row[] = [
     { zh: "姓名", en: "Name", value: data.name },
@@ -185,7 +192,9 @@ export function buildInquiryEmails(data: InquiryEmailData): { notification: Inqu
     { zh: "需求描述", en: "Requirements", value: data.message },
     fileRow,
   ].filter(row => Boolean(row.value));
-  const notificationLead = zh ? "收到一条通过 FOREACH 官网提交的新询盘，客户邮箱已验证。" : "A new verified request has been submitted through the FOREACH website.";
+  const notificationLead = emailVerified
+    ? (zh ? "收到一条通过 FOREACH 官网提交的新询盘，客户邮箱已验证。" : "A new verified request has been submitted through the FOREACH website.")
+    : (zh ? "收到一条通过 FOREACH 官网提交的新询盘，邮箱由访客填写。" : "A new request has been submitted through the FOREACH website. The email address was provided by the visitor.");
   const notificationTitle = isDistributor ? (zh ? "新的经销商合作申请" : "New Partnership Application") : (zh ? "新的官网询盘" : "New Website Inquiry");
   const notification = finish(locale, notificationTitle, zh ? "官网询盘通知" : "INQUIRY NOTIFICATION", paragraph(notificationLead) + reference + table(`<tr><td style="padding-top:24px;">${summary(notificationRows, locale)}</td></tr>`, 576) + (pendingFiles ? paragraph(zh ? "以上仅记录所选文件名，客户仍需补充原始文件。" : "Only the selected file names were recorded. The original files still need to be provided.", 13, "#5e6a79", 20) : ""), `${notificationLead}\n${refLabel}${data.referenceId}\n\n${plainSummary(notificationRows, locale)}${pendingFiles ? (zh ? "\n\n以上仅记录文件名，尚未收到原始文件。" : "\n\nOnly file names were recorded. The original files have not been received.") : ""}`, zh ? `【FOREACH 官网询盘】${data.company} · ${data.requestType}` : `[FOREACH Website Inquiry] ${data.company} · ${data.requestType}`);
   return { notification, confirmation };

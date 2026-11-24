@@ -4,7 +4,7 @@ import { build } from "esbuild";
 import { runInNewContext } from "node:vm";
 import { buildInquiryEmails, buildVerificationEmail, resolveInquiryEmailLocale } from "../../lib/email/inquiry-email";
 import { inquiryEmailAssets } from "../../lib/email/inquiry-email-assets";
-import { sendResendEmail, sha256, type InquiryKvNamespace } from "../../lib/cloudflare/inquiry";
+import { CONTACT_INQUIRY_RATE_LIMIT, sendResendEmail, sha256, type InquiryKvNamespace } from "../../lib/cloudflare/inquiry";
 import { onRequestPost as submitCloudflare } from "../../functions/api/inquiry/submit";
 import { onRequestPost as sendCodeCloudflare } from "../../functions/api/inquiry/send-code";
 import { inquiryEmailFixtures, inquiryFixture } from "./inquiry-email.fixtures";
@@ -98,13 +98,28 @@ test("transport sends provider-supported CID parts and preserves actual customer
 
 test("Cloudflare and Next endpoints send both locales, real files and pending-file receipts without network delivery", async () => {
   const verified = { email: "engineer@example.com", verifiedAt: Date.now(), expiresAt: Date.now() + 600_000 };
+  const verifiedKey = "inquiry:verified:" + await sha256(verified.email);
+  const clientIp = "192.0.2.15";
+  const rateKey = "inquiry:general:ip:" + await sha256(clientIp);
+  let submissions = 0;
   const deleted: string[] = [];
   const kv: InquiryKvNamespace = {
-    get: async key => key.startsWith("inquiry:verified:") ? JSON.stringify(verified) : null,
-    put: async () => undefined,
+    get: async key => {
+      if (key === rateKey) return String(submissions);
+      return key === verifiedKey ? JSON.stringify(verified) : null;
+    },
+    put: async (key, value) => {
+      if (key === rateKey) submissions = Number(value);
+    },
     delete: async key => { deleted.push(key); },
   };
-  const redis = { get: async () => verified, set: async () => "OK", del: async (key: string) => { deleted.push(key); return 1; } };
+  const redis = {
+    get: async (key: string) => key === verifiedKey ? verified : null,
+    set: async () => "OK",
+    del: async (key: string) => { deleted.push(key); return 1; },
+    incr: async (key: string) => { assert.equal(key, rateKey); return ++submissions; },
+    expire: async () => 1,
+  };
   const calls: Record<string, unknown>[] = [];
   const mockFetch: typeof fetch = async (input, init) => {
     assert.equal(String(input), "https://api.resend.com/emails", "No external requests are permitted in this test");
@@ -169,7 +184,50 @@ test("Cloudflare and Next endpoints send both locales, real files and pending-fi
         assert.equal(response.status, invalid.expected);
       }
     }
+    for (const platform of ["cloudflare", "next"] as const) {
+      const submit = (request: Request) => platform === "cloudflare"
+        ? submitCloudflare({ request, env })
+        : nextSubmit(request);
+      const requestUrl = "https://example.com/api/inquiry/submit";
+      const fields = { formType: "general_inquiry", name: "Contact Person", company: "Contact Company", email: "no-code@example.com" };
+
+      submissions = 0;
+      const headers = { "CF-Connecting-IP": clientIp, "x-forwarded-for": clientIp };
+      const body = new FormData();
+      for (const [key, value] of Object.entries(fields)) body.set(key, value);
+      const before = calls.length;
+      const response = await submit(new Request(requestUrl, { method: "POST", headers, body }));
+      assert.equal(response.status, 200, platform);
+      assert.equal(calls.length - before, 2);
+      const [notification, receipt] = calls.slice(before);
+      assert.equal(notification.reply_to, fields.email);
+      assert.match(String(notification.text), /Contact Person/);
+      assert.match(String(notification.text), /Contact Company/);
+      assert.doesNotMatch(String(notification.text), /verified request/);
+      assert.doesNotMatch(String(receipt.text), /Contact Person|Contact Company/);
+
+      const cases = [
+        { payload: { ...fields, name: " " }, status: 400, error: "name_required" },
+        { payload: { ...fields, company: " " }, status: 400, error: "company_required" },
+        { payload: { ...fields, email: "invalid" }, status: 400, error: "invalid_email" },
+        { payload: { ...fields, requestType: "CAD", productType: "Pump" }, status: 403, error: "email_not_verified" },
+        { payload: { ...fields, requestType: "Distributor Partnership", productType: "Pump", message: "Partner request" }, status: 403, error: "email_not_verified" },
+      ];
+      for (const { payload, status, error } of cases) {
+        const failure = await submit(new Request(requestUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }));
+        assert.equal(failure.status, status, platform);
+        assert.equal((await failure.json()).error, error, platform);
+      }
+      submissions = CONTACT_INQUIRY_RATE_LIMIT.maxPerWindow;
+      const throttled = await submit(new Request(requestUrl, { method: "POST", headers, body }));
+      assert.equal(throttled.status, 429, platform);
+      assert.equal(calls.length - before, 2, "Invalid and throttled submissions must not send email");
+    }
     assert(deleted.includes(`inquiry:verified:${await sha256(verified.email)}`));
-    assert.equal(calls.length, 28);
+    assert.equal(calls.length, 32);
   } finally { globalThis.fetch = originalFetch; }
 });

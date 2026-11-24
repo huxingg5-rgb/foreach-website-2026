@@ -10,6 +10,11 @@
 
 import { inquiryEmailAssets } from "../email/inquiry-email-assets";
 
+export const CONTACT_INQUIRY_RATE_LIMIT = {
+  maxPerWindow: 20,
+  windowSeconds: 3600,
+};
+
 export interface InquiryKvNamespace {
   get(key: string): Promise<string | null>;
 

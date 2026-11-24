@@ -76,9 +76,7 @@ function scrollToSection(targetId: string) {
 export default function ContactPageContent({ data, locale }: ContactPageContentProps) {
   const breadcrumbCopy = contactBreadcrumbCopy[locale];
   const homeHref = locale === "zh-CN" ? "/" : `/${locale}/`;
-  const [selectedRequestType, setSelectedRequestType] = useState(
-    data.form.requestTypes[0] ?? "",
-  ); // 褰撳墠閫変腑鐨勯渶姹傜被鍨嬶紝榛樿鍙栭渶姹傜被鍨嬬涓€涓€夐」
+  const [selectedRequestType, setSelectedRequestType] = useState("");
   const inquiryStartedRef = useRef(false);
   const [analyticsSourceSection, setAnalyticsSourceSection] = useState("contact_form_section");
 
