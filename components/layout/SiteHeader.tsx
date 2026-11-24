@@ -111,7 +111,7 @@ export default function SiteHeader() {
   const router = useRouter();
   const normalizedPathname = pathname.replace(/\/+$/, "");
   const isLocalizedApplicationDomainPage =
-    /^\/(?:en|es|fr|ko|ru)\/applications\/(?:ivd|life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology)(?:\/|$)/.test(normalizedPathname);
+    /^\/(?:en|es|fr|ko|ru)\/applications\/(?:ivd|life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology|industrial-inkjet-printing)(?:\/|$)/.test(normalizedPathname);
 
   /**
    * 当前顶部栏显示语言
@@ -1302,7 +1302,7 @@ const isFittingReplacementDetailPage =
               <button
                 className="mobile-menu-btn"
                 type="button"
-                aria-label={headerText.mobileMenuAriaLabel}
+                aria-label={isMobileMenuOpen && headerText.mobileMenuCloseAriaLabel ? headerText.mobileMenuCloseAriaLabel : headerText.mobileMenuAriaLabel}
                 aria-expanded={isMobileMenuOpen}
                 onClick={handleMobileMenuClick}
               >
@@ -1723,7 +1723,7 @@ const isFittingReplacementDetailPage =
           <button
             className="mobile-nav-backdrop"
             type="button"
-            aria-label="关闭顶部展开菜单"
+            aria-label={headerText.mobileMenuCloseAriaLabel ?? "关闭顶部展开菜单"}
             onClick={closeAllPanels}
           />
         )}

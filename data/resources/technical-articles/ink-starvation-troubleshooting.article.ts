@@ -4,6 +4,7 @@ import es from "./ink-starvation-locales/es.json";
 import fr from "./ink-starvation-locales/fr.json";
 import ko from "./ink-starvation-locales/ko.json";
 import ru from "./ink-starvation-locales/ru.json";
+import inkjetRoutes from "@/data/applications/industrial-inkjet-routes.json";
 import { getDiaphragmPumpReferenceByProductId } from "@/data/products/detail/diaphragm-pump-reference-models";
 import { getDiaphragmPumpPath } from "@/data/products/detail/diaphragm-pump-routes";
 import type { TechnicalArticleLocale } from "./technical-articles.types";
@@ -15,6 +16,9 @@ import type {
 export const inkStarvationTroubleshootingSlug =
   "ink-starvation-inkjet-troubleshooting" as const;
 
+type GuideLink = { key: string; label: string; prefix?: string; suffix?: string };
+type GuideFigure = Omit<Extract<EngineeringArticleBlock, { type: "figure" }>, "type">;
+
 type GuideText = {
   title: string;
   seoTitle: string;
@@ -25,11 +29,12 @@ type GuideText = {
   sections: {
     title: string;
     tocLabel: string;
-    paragraphs: string[];
+    paragraphs: (string | GuideLink)[];
+    figure?: GuideFigure;
     table?: { headers: string[]; rows: string[][] };
     checks?: string[];
     note?: string;
-    links?: { key: string; label: string }[];
+    links?: GuideLink[];
   }[];
   cta: { title: string; description: string; contactLabel: string; productsLabel: string };
 };
@@ -53,7 +58,17 @@ const sourceLinks: Record<string, string> = {
   white: "/resources/technical-articles/white-ink-circulation-pump-selection-sedimentation/",
   pulsation: "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
   noFlow: "/resources/technical-articles/300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow/",
+  filtrationGuide: inkjetRoutes.inkFiltration.slice("/en".length),
+  inlineFilter: "/products/fittings/filters/f-pe-60-32-pp-n/",
+  airDetector: "/products/control/air-bubble-detectors/abd/",
+  pressureSensor: "/products/control/pdm5-pressure-sensor/",
 };
+
+function resolveLink({ key, ...text }: GuideLink) {
+  const href = sourceLinks[key];
+  if (!href) throw new Error(`Unknown ink-starvation source link: ${key}`);
+  return { href, ...text };
+}
 
 function buildCopy(text: GuideText): DiaphragmPumpEngineeringArticleCopy {
   return {
@@ -67,15 +82,16 @@ function buildCopy(text: GuideText): DiaphragmPumpEngineeringArticleCopy {
     deck: text.deck,
     leadBlocks: [{ type: "notice", text: text.scope }],
     sections: text.sections.map(section => {
-      const blocks: EngineeringArticleBlock[] = section.paragraphs.map(paragraph => ({ type: "paragraph", text: paragraph }));
+      const blocks: EngineeringArticleBlock[] = section.paragraphs.map(paragraph =>
+        typeof paragraph === "string"
+          ? { type: "paragraph", text: paragraph }
+          : { type: "links", items: [resolveLink(paragraph)] }
+      );
+      if (section.figure) blocks.push({ type: "figure", ...section.figure });
       if (section.table) blocks.push({ type: "table", ...section.table });
       if (section.checks) blocks.push({ type: "list", ordered: true, items: section.checks });
       if (section.note) blocks.push({ type: "notice", text: section.note });
-      if (section.links) blocks.push({ type: "links", items: section.links.map(link => {
-        const href = sourceLinks[link.key];
-        if (!href) throw new Error(`Unknown ink-starvation source link: ${link.key}`);
-        return { href, label: link.label };
-      }) });
+      if (section.links) blocks.push({ type: "links", items: section.links.map(resolveLink) });
       return { title: section.title, tocLabel: section.tocLabel, blocks };
     }),
     // The article answers the diagnostic questions in context; no duplicate FAQ block.

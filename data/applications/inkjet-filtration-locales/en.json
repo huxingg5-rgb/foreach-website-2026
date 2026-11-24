@@ -1,0 +1,102 @@
+{
+  "title": "Ink Filtration for Industrial Inkjet Printers",
+  "description": "Select an inkjet ink filter for the fill line or printhead inlet, measure pressure drop under load, and check for backflow after the pump stops.",
+  "eyebrow": "Application guide",
+  "keywords": [
+    "ink filtration",
+    "inkjet ink filter",
+    "inkjet ink filtration",
+    "filter pressure drop",
+    "ink supply check valve"
+  ],
+  "intro": "An inkjet ink filtration system can have a filter in the tank refill line and another just before the printhead. The first must pass enough ink to replenish the tank during printing. The second must protect the head while keeping its inlet pressure within specification. Locate the source of contamination, then test the filter at the highest sustained ink demand the printer is designed to meet.",
+  "contactDescription": "Share your ink and flush chemistry, printhead filtration specification, target flow, and pressure readings on either side of the filter.",
+  "sensorTitle": "PDM5 absolute pressure sensor",
+  "sensorAlt": "Front view of the PDM5 pressure sensor showing the housing and fluid connections",
+  "location": {
+    "title": "Where should the ink filter go?",
+    "toc": "Filter location and rating",
+    "table": {
+      "caption": "Filter duties in an industrial inkjet system",
+      "headers": [
+        "Position",
+        "What reaches it",
+        "What to specify"
+      ],
+      "rows": [
+        [
+          "Bulk tank or refill line",
+          "Debris introduced when filling the tank or reconnecting a container.",
+          "Particle retention and dirt capacity at the required refill flow. Check that the sub-tank recovers its level while the printer is using ink."
+        ],
+        [
+          "Recirculation loop, where fitted",
+          "Particles that form or enter downstream of the bulk supply, including pigment agglomerates.",
+          "Check the loop flow and allowable pressure drop. For pigmented ink, ask the ink supplier which particles must pass through the filter and which agglomerates it should capture."
+        ],
+        [
+          "Final filter near the printhead",
+          "Particles carried to the head from the supply circuit.",
+          "The head manufacturer’s required retention efficiency, test rating and inlet pressure window. Check whether the head already has an integral last-chance filter."
+        ]
+      ]
+    },
+    "coarse": "For coarse upstream filtration on a line with 3.2 mm ID tubing, the F-PE-60-32-PP-N inline filter is a candidate. It has an HDPE element, a polypropylene housing and a listed filtration range of 40–60 µm. For a final filter, obtain the printhead manufacturer’s specification and the filter supplier’s retention data at the relevant particle size. The marked micron range alone does not establish final-filter performance.",
+    "filterLink": "F-PE-60-32-PP-N inline filter"
+  },
+  "pressure": {
+    "title": "How much pressure drop can the ink circuit tolerate?",
+    "toc": "Measure pressure drop",
+    "measurement": "Use pressure taps immediately upstream and downstream of the filter, or include them in the prototype test circuit. Subtract downstream pressure from upstream pressure to obtain the filter pressure drop (ΔP). With a clean element, record ΔP, ink temperature, delivered flow and sub-tank refill time. If the filter feeds the printhead directly, also record head inlet pressure at sustained print demand and compare it with the head specification.",
+    "sensors": "A differential pressure instrument can measure ΔP directly. With two PDM5 absolute pressure sensors, select a range for each tap and check that the combined measurement uncertainty is small enough to resolve the change of interest. Use simultaneous readings from the two taps and verify wetted-material compatibility with the ink and flushing fluid.",
+    "sensorLink": "PDM5 absolute pressure sensors",
+    "sensorCard": "Check the range and accuracy for each pressure tap.",
+    "table": {
+      "caption": "Interpreting a change from the clean-filter baseline",
+      "headers": [
+        "Observation",
+        "Next check"
+      ],
+      "rows": [
+        [
+          "ΔP rises at the same flow and ink temperature.",
+          "Fit an approved clean element and repeat the run. If ΔP and refill time recover, investigate filter loading and the source of debris before setting a replacement interval."
+        ],
+        [
+          "Refill slows while ΔP stays near baseline.",
+          "Measure delivered flow and check the tank vent, suction line, fittings and fluid level. A restriction or air leak elsewhere can produce the same print symptom."
+        ],
+        [
+          "Pressure at the head falls only on sustained high-coverage prints.",
+          "Record head inlet pressure and filter ΔP together as the nozzles start to drop out. Check whether the sub-tank level falls during the same run."
+        ]
+      ]
+    },
+    "diagnosis": "Follow the ink starvation troubleshooting guide if head pressure falls while filter ΔP stays near baseline. It explains how to trace slow refill and air ingress from the tank to the affected head.",
+    "diagnosisLink": "ink starvation troubleshooting guide"
+  },
+  "backflow": {
+    "title": "When does the supply line need a check valve?",
+    "toc": "Backflow after shutdown",
+    "valve": "If the sub-tank level falls after the pump stops, record both tank levels and confirm the route ink takes. Account for ink used by the printer, siphoning through another branch and external leaks. Where ink returns along the refill line, the CV-BE-32-PP-N diaphragm check valve is a candidate for 3.2 mm ID tubing. Its polypropylene housing and EPDM diaphragm both need to be compatible with the ink and cleaning fluid.",
+    "valveLink": "CV-BE-32-PP-N diaphragm check valve",
+    "restart": "The valve drawing lists cracking pressure as ≥1 kPa. That lower bound leaves the actual opening pressure to be verified. With the valve installed in the specified direction, measure how much ink returns over the intended idle period at the greatest expected reverse level difference. Then restart at the lowest available forward pressure and time the refill. A valve that limits backflow can still delay refill if the pump has too little pressure available to open it."
+  },
+  "validation": {
+    "title": "Validate the assembly with the production ink",
+    "toc": "Ink and restart tests",
+    "steps": [
+      "Run the specified ink and cleaning fluid through a representative assembly. After the intended exposure and idle time, inspect the media, diaphragm and housing for swelling, shedding or leaks.",
+      "Repeat the clean-filter baseline with a representative service-loaded element at the same flow and temperature. Check refill time and head inlet pressure against the printer’s limits during the most demanding sustained print cycle.",
+      "Record the remaining pressure margin, idle backflow and restart time. Use these results and the component limits to set the machine’s filter change criterion and restart acceptance test."
+    ]
+  },
+  "sources": {
+    "imagexpert": "ImageXpert — All About Ink Filtration",
+    "pall": "Pall — Ink Formulation Filtration",
+    "filter": "FOREACH F-PE-60-32-PP-N inline filter specifications",
+    "sensor": "FOREACH PDM5 pressure sensor specifications",
+    "valve": "FOREACH CV-BE-32-PP-N diaphragm check valve specifications",
+    "drawing": "FOREACH CV-BE-32-PP-N dimensional drawing and opening pressure (PDF)"
+  }
+}

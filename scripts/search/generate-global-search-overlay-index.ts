@@ -4,6 +4,9 @@ import {buildCompactSolenoidSearchItems, isSolenoidSearchHref} from "../../data/
 import { getLocalizedApplicationDocument } from '../../services/applications/international-localized';
 import { localizedApplicationHref } from '../../data/applications/international-locales/routes';
 import { getApplicationIndexData } from '../../data/applications/application-index-locales';
+import { getLocalizedInkjetPage, inkjetRouteKeys } from '../../data/applications/industrial-inkjet-localized';
+import type { InkjetLocale } from '../../data/applications/inkjet-guide-navigation';
+import inkjetRoutes from '../../data/applications/industrial-inkjet-routes.json';
 import { getEnglishApplicationDocument } from "../../services/applications/english-localized";
 import { getReviewDocument, isFinalizedEnglishReference } from "../../services/applications/english-review";
 import { getReviewHub } from "../../data/applications/english-review";
@@ -96,7 +99,7 @@ const CHECK_MODE = process.argv.includes("--check");
 const ENGLISH_APPLICATIONS_ONLY = process.argv.includes("--english-applications-only");
 const APPLICATIONS_ONLY = process.argv.includes("--applications-only");
 const englishReviewRoutes = applicationRoutes.filter(route => route.kind !== 'ivd' && route.template === 'review' && !isFinalizedEnglishReference(route.kind, route.slug));
-const englishApplicationPaths = new Set([...englishReviewRoutes.map(route => route.path), ...ivdRoutes.map(route => ivdDocumentHref('en', route.slug))].map(href => href.replace(/\/+$/, '')));
+const englishApplicationPaths = new Set([...englishReviewRoutes.map(route => route.path), ...ivdRoutes.map(route => ivdDocumentHref('en', route.slug)), ...Object.values(inkjetRoutes)].map(href => href.replace(/\/+$/, '')));
 function isLocalizedEnglishApplication(item: CompactSearchItem) {
   const raw = item.h.split(/[?#]/)[0];
   const pathname = resolveApplicationHref(raw.startsWith('/en/') ? raw : '/en' + raw).replace(/\/+$/, '');
@@ -1061,6 +1064,23 @@ function deduplicate(items: CompactSearchItem[]): CompactSearchItem[] {
   return [...map.values()];
 }
 
+function buildInkjetSearchItem(
+  locale: InkjetLocale,
+  { document, href }: ReturnType<typeof getLocalizedInkjetPage>,
+): CompactSearchItem {
+  return {
+    m: 'applications', t: document.title, d: document.description, h: href,
+    x: buildSearchText([document.title, document.description, document.keywords, document.sections.map(section => section.title)]),
+    k: buildSearchText([...document.keywords]), a: getModuleCopy(locale, 'applications').action,
+  };
+}
+
+function buildInkjetSearchItems(locale: InkjetLocale) {
+  return inkjetRouteKeys.map(key =>
+    buildInkjetSearchItem(locale, getLocalizedInkjetPage(locale, key)),
+  );
+}
+
 async function buildLocaleIndex(
   locale: SearchLocale
 ): Promise<CompactSearchItem[]> {
@@ -1079,9 +1099,12 @@ async function buildLocaleIndex(
     ...loadApplications(locale),
     ...loadApplicationWorkflows(locale),
     ...loadNews(locale),
-    ...loadSitePages(locale),
+    ...loadSitePages(locale).filter(item =>
+      locale === 'zh-CN' || !item.h.startsWith(`/${locale}/applications/industrial-inkjet-printing`)
+    ),
   ].map((item) => locale === "en" ? { ...item, h: resolveApplicationHref(item.h) } : item);
-  if (locale === "zh-CN") return deduplicate(items);
+  if (locale === 'zh-CN') return deduplicate(items);
+  const inkjetItems = buildInkjetSearchItems(locale);
   if (locale !== 'en') {
     const documents: CompactSearchItem[] = await Promise.all(applicationRoutes.map(async route => {
       const document = await getLocalizedApplicationDocument(locale, route.kind, route.slug);
@@ -1090,11 +1113,11 @@ async function buildLocaleIndex(
         x: buildSearchText([document.title, document.description, document.keywords, document.sections.map(section => section.title)]),
         k: buildSearchText([...document.keywords]), a: getModuleCopy(locale, 'applications').action };
     }));
-    const { copy } = getApplicationIndexData(locale);
+    const { copy, areas } = getApplicationIndexData(locale);
     const index: CompactSearchItem = { m: 'applications', t: copy.seoTitle, d: copy.seoDescription, h: '/' + locale + '/applications/',
-      x: buildSearchText([copy.heading, copy.intro, Object.values(copy.areas).map(area => [area.title, area.description, area.topics])]),
-      k: buildSearchText(Object.values(copy.areas).map(area => area.title)), a: getModuleCopy(locale, 'applications').action };
-    return deduplicate([...items.filter(item => item.m !== 'applications'), index, ...documents]);
+      x: buildSearchText([copy.heading, copy.intro, areas.map(area => [area.title, area.description, area.topics.map(topic => topic.label)])]),
+      k: buildSearchText(areas.map(area => area.title)), a: getModuleCopy(locale, 'applications').action };
+    return deduplicate([...items.filter(item => item.m !== 'applications'), index, ...documents, ...inkjetItems]);
   }
   const ivdItems: CompactSearchItem[] = await Promise.all(ivdRoutes.map(async route => {
     const document = await getLocalizedIvdDocument(locale, route.slug);
@@ -1112,7 +1135,7 @@ async function buildLocaleIndex(
       x: buildSearchText([document.title, document.description, document.keywords, document.sections.map(section => section.title)]),
       k: buildSearchText([...document.keywords]), a: getModuleCopy('en', 'applications').action };
   }));
-  return deduplicate([...localizedItems.filter(item => !isLocalizedEnglishApplication(item)), ...ivdItems, ...reviewItems]);
+  return deduplicate([...localizedItems.filter(item => !isLocalizedEnglishApplication(item)), ...ivdItems, ...reviewItems, ...inkjetItems]);
 }
 
 function getOutputPath(locale: SearchLocale): string {

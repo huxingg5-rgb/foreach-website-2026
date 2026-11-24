@@ -1,0 +1,13 @@
+{
+  "hub": "/en/applications/industrial-inkjet-printing/",
+  "guide": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/",
+  "supply": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/ink-supply/",
+  "recirculation": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/ink-recirculation/",
+  "cleaning": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/printhead-cleaning/",
+  "connectionGuide": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/tubing-and-fittings/",
+  "fixedInkLines": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/tubing-and-fittings/fixed-ink-lines/",
+  "inkTankQuickDisconnects": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/tubing-and-fittings/ink-tank-quick-disconnects/",
+  "flowControlGuide": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/filtration-and-flow-control/",
+  "inkFiltration": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/filtration-and-flow-control/ink-filtration-and-check-valves/",
+  "cleaningFluidSwitching": "/en/applications/industrial-inkjet-printing/guide-inkjet-printer/filtration-and-flow-control/cleaning-fluid-switching/"
+}

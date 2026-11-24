@@ -1,12 +1,19 @@
 /** Structured application copy. HTML and runtime rendering are kept out of the content source. */
-export type ApplicationLink = { label: string; href: string; description?: string };
+export type ApplicationLink = { label: string; href: string; description?: string; anchorId?: string };
 export type ApplicationInlineLink = { text: string; href: string; title?: string };
+export type ApplicationFlowPath = { nodes: readonly string[]; focusIndex?: number };
 export type ApplicationBlock = (
   | { type: "paragraph"; text: string }
   | { type: "subheading"; title: string }
   | { type: "table"; caption: string; headers: readonly string[]; rows: readonly (readonly string[])[]; note?: string }
   | { type: "list"; items: readonly string[]; ordered?: boolean }
-  | { type: "flow"; caption: string; nodes: readonly string[]; focusIndex?: number; note?: string }
+  | (ApplicationFlowPath & {
+      type: "flow";
+      caption: string;
+      label?: string;
+      branches?: readonly (ApplicationFlowPath & { label: string })[];
+      note?: string;
+    })
   | { type: "callout"; title?: string; text: string }
   | { type: "links"; items: readonly ApplicationLink[] }
 ) & {
@@ -15,7 +22,12 @@ export type ApplicationBlock = (
   inlineLinks?: readonly ApplicationInlineLink[];
 };
 
-export type ApplicationSection = { id: string; title: string; blocks: readonly ApplicationBlock[] };
+export type ApplicationSection = {
+  id: string;
+  title: string;
+  tocLabel?: string;
+  blocks: readonly ApplicationBlock[];
+};
 export type ApplicationReference = { id: string; title: string; href: string };
 export type ApplicationDocumentBody = {
   intro: readonly ApplicationBlock[];

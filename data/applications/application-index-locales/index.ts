@@ -1,5 +1,9 @@
 import { ivdDocumentHref } from '../ivd-locales/routes';
 import { applicationAreas, applicationChoices } from '../application-index';
+import { industrialInkjetPrinting } from '../industrial-inkjet-printing';
+import inkjetRoutes from '../industrial-inkjet-routes.json';
+import { getInkjetNav, inkjetSceneKeys } from '../inkjet-guide-navigation';
+import { getLocalizedSiteHref } from '@/lib/seo/site-url';
 import type { EnglishApplicationKind } from '../application-english';
 import { en } from './en';
 import { es } from './es';
@@ -54,5 +58,28 @@ export function getApplicationIndexData(locale: ApplicationIndexLocale) {
       href: `${basePath}${route.kind}/`,
     })),
   }));
-  return { copy, areas, choices, homeHref: `/${locale}/`, contactHref: `/${locale}/contact/` };
+  const inkjet = industrialInkjetPrinting;
+  const nav = getInkjetNav(locale);
+  const inkjetArea = {
+    kind: inkjet.slug,
+    title: nav.labels.hub,
+    description: nav.summary,
+    image: inkjet.scenes[0].image,
+    imageAlt: nav.imageAlt,
+    href: getLocalizedSiteHref(inkjet.href, locale),
+    topics: inkjetSceneKeys.map(key => ({
+      label: nav.labels[key], href: getLocalizedSiteHref(inkjetRoutes[key], locale),
+    })),
+  };
+  const inkjetChoice = {
+    title: nav.choiceTitle,
+    routes: (['guide', 'inkFiltration'] as const).map((key, index) => ({
+      kind: key, label: nav.choicePrompts[index], domain: nav.labels[key],
+      href: getLocalizedSiteHref(inkjetRoutes[key], locale),
+    })),
+  };
+  return {
+    copy, areas: [...areas, inkjetArea], choices: [...choices, inkjetChoice],
+    homeHref: `/${locale}/`, contactHref: `/${locale}/contact/`,
+  };
 }

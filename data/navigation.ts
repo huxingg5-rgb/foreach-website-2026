@@ -3,6 +3,8 @@ import { getLocalizedSiteHref } from "@/lib/seo/site-url";
 import { tubingAssemblyTypes } from "@/data/products/tubing-assemblies.en";
 import { isTubingAssemblyLocale, tubingAssemblyLocales, tubingAssemblyNavigation } from "@/data/products/tubing-assemblies/locales";
 import { resolveEnglishApplicationArticleHref } from "@/data/applications/application-article-links";
+import { industrialInkjetPrinting } from "@/data/applications/industrial-inkjet-printing";
+import { getInkjetNav, inkjetSceneKeys, type InkjetLocale } from "@/data/applications/inkjet-guide-navigation";
 import { VALVELESS_PUMP_CATEGORY_LABEL_ZH } from "@/data/products/selection/valveless-pump-routes";
 import { getValvelessPumpNames } from "@/data/products/detail/valveless-pump-names";
 
@@ -1495,6 +1497,7 @@ function getMobileCategoryHref(
     "analytical-instruments": "/applications/analytical-instruments",
     "environmental-monitoring": "/applications/environmental-monitoring",
     "synthetic-biology": "/applications/synthetic-biology",
+    [industrialInkjetPrinting.slug]: industrialInkjetPrinting.href.slice("/en".length),
   };
 
   return localizedPath(
@@ -2456,6 +2459,10 @@ const tubingAssemblyMenuImages: Record<string, NavigationImage> = {
   },
 };
 
+function inkjetMenuText(read: (locale: InkjetLocale) => string): LocalizedText {
+  return { "zh-CN": "", en: read("en"), es: read("es"), fr: read("fr"), ko: read("ko"), ru: read("ru") };
+}
+
 export function getVisibleNavigationItems(locale = "zh-CN"): NavigationItem[] {
   return navigationItems
     .filter((item) => item.enabled)
@@ -2501,12 +2508,36 @@ export function getVisibleNavigationItems(locale = "zh-CN"): NavigationItem[] {
       }
       if (item.key === "applications" && ["en", "es", "fr", "ko", "ru"].includes(locale)) {
         const indexHref = { ...localizedPath("/applications/"), "zh-CN": "/applications/ivd/" };
+        const megaDropdown = item.megaDropdown && { ...item.megaDropdown, footerHref: indexHref };
+        if (megaDropdown) {
+          const inkjet = industrialInkjetPrinting;
+          const inkjetCategory: MegaCategoryItem = {
+            key: inkjet.slug,
+            title: inkjetMenuText(code => getInkjetNav(code).labels.hub),
+            description: inkjetMenuText(code => getInkjetNav(code).summary),
+            order: 7,
+            enabled: true,
+          };
+          megaDropdown.categories = [...megaDropdown.categories, inkjetCategory];
+          megaDropdown.cards = [...megaDropdown.cards, {
+            ...inkjetCategory,
+            key: `${inkjet.slug}-card`,
+            categoryKey: inkjet.slug,
+            href: localizedPath(inkjet.href),
+            images: inkjet.scenes.map((scene, index) => ({
+              src: scene.menuPhoto.src,
+              title: inkjetMenuText(code => getInkjetNav(code).labels[inkjetSceneKeys[index]]),
+              alt: inkjetMenuText(code => getInkjetNav(code).sceneAlts[inkjetSceneKeys[index]]),
+              href: localizedPath(scene.href),
+              width: 600,
+              height: 400,
+            })),
+          }];
+        }
         return {
           ...item,
           href: indexHref,
-          megaDropdown: item.megaDropdown
-            ? { ...item.megaDropdown, footerHref: indexHref }
-            : undefined,
+          megaDropdown,
           mobileChildren: [
             {
               key: "mobile-applications-all",
@@ -2515,7 +2546,9 @@ export function getVisibleNavigationItems(locale = "zh-CN"): NavigationItem[] {
               order: 0,
               enabled: true,
             },
-            ...(item.mobileChildren ?? []),
+            ...(megaDropdown
+              ? createMobileChildrenFromMegaCategories(megaDropdown, "applications", "mobile-applications")
+              : item.mobileChildren ?? []),
           ],
         };
       }

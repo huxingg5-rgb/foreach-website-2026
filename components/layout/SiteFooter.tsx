@@ -15,6 +15,9 @@ import {
   siteFooterData,
 } from "@/data/site-footer";
 
+import { getInkjetNav } from "@/data/applications/inkjet-guide-navigation";
+import inkjetRoutes from "@/data/applications/industrial-inkjet-routes.json";
+import { getLocalizedSiteHref } from "@/lib/seo/site-url";
 import styles from "./SiteFooterSocial.module.css";
 
 type SiteFooterProps = {
@@ -130,6 +133,13 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                         </Link>
                       </li>
                     ))}
+                    {activeLocale !== "zh-CN" && column.key === "applications" && (
+                      <li>
+                        <Link href={getLocalizedSiteHref(inkjetRoutes.hub, activeLocale)} prefetch={false}>
+                          {getInkjetNav(activeLocale).labels.hub}
+                        </Link>
+                      </li>
+                    )}
                     {isTubingAssemblyLocale(activeLocale) && column.key === "products" ? (
                       <li><Link href={`${getTubingAssemblyLocalePrefix(activeLocale)}/products/tubing-assemblies/`} prefetch={false}>{tubingAssemblyNavigation[activeLocale].title}</Link></li>
                     ) : null}
@@ -286,6 +296,17 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               >
                 {legalCopy.cookieSettings}
               </button>
+              {activeLocale !== "zh-CN" && (
+                <>
+                  <span className="site-footer__legal-separator" aria-hidden="true">·</span>
+                  <a
+                    className="site-footer__legal-link"
+                    href="/images/applications/industrial-inkjet-printing/menu/photo-credits.txt"
+                  >
+                    {getInkjetNav(activeLocale).photoCredits}
+                  </a>
+                </>
+              )}
             </p>
           </div>
         </div>

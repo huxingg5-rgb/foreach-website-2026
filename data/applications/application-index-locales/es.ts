@@ -3,11 +3,11 @@ import type { ApplicationIndexCopy } from './types';
 /** Localized from the current English application index. */
 export const es: ApplicationIndexCopy = {
   "seoTitle": "Componentes fluídicos por aplicación | FOREACH",
-  "seoDescription": "Encuentre bombas, válvulas, sondas, tubos y racores para diagnóstico, investigación, análisis y medioambiente. Consulte guías de aplicaciones y procesos.",
+  "seoDescription": "Encuentre bombas, válvulas, sondas, tubos y racores para instrumentos y equipos industriales. Consulte las guías por aplicación y proceso.",
   "heroEyebrow": "FOREACH · Aplicaciones",
   "heroTitle": "Componentes fluídicos",
   "heroHighlight": "por aplicación",
-  "heroDescription": "Bombas, válvulas, sondas, tubos y racores para equipos de diagnóstico, investigación, análisis y monitorización ambiental.",
+  "heroDescription": "Bombas, válvulas, sondas, tubos y racores para el manejo preciso de fluidos en instrumentos y equipos industriales.",
   "heroImageAlt": "Personal de laboratorio trabajando con equipos de diagnóstico",
   "breadcrumbHome": "Inicio",
   "breadcrumbCurrent": "Aplicaciones",

@@ -1,0 +1,102 @@
+{
+  "title": "Filtration de l’encre en impression jet d’encre industrielle",
+  "description": "Choisissez l’emplacement du filtre, mesurez sa perte de charge au débit d’impression et vérifiez le reflux à l’arrêt ainsi que le temps de remplissage au redémarrage.",
+  "eyebrow": "Guide d’application",
+  "keywords": [
+    "filtration de l’encre",
+    "filtre à encre pour imprimante industrielle",
+    "filtration en impression jet d’encre",
+    "perte de charge du filtre à encre",
+    "clapet anti-retour pour encre"
+  ],
+  "intro": "Une imprimante jet d’encre industrielle peut comporter un filtre sur la ligne de remplissage du réservoir secondaire et un autre juste avant la tête d’impression. Le premier doit laisser passer assez d’encre pour compenser la consommation en cours d’impression. Le second doit protéger la tête tout en maintenant sa pression d’entrée dans la plage prescrite. Repérez l’origine des contaminants, puis testez le filtre au débit d’encre maximal que la machine doit pouvoir fournir en continu.",
+  "contactDescription": "Précisez la composition de l’encre et du liquide de rinçage, les exigences de filtration de la tête, le débit visé et les pressions mesurées de part et d’autre du filtre.",
+  "sensorTitle": "Capteur de pression absolue PDM5",
+  "sensorAlt": "Vue de face du capteur de pression PDM5 montrant son boîtier et ses raccords fluidiques",
+  "location": {
+    "title": "Où placer le filtre à encre ?",
+    "toc": "Emplacement et finesse de filtration",
+    "table": {
+      "caption": "Rôle du filtre selon son emplacement dans le circuit d’encre",
+      "headers": [
+        "Emplacement",
+        "Contaminants susceptibles d’y parvenir",
+        "Caractéristiques à préciser"
+      ],
+      "rows": [
+        [
+          "Réservoir principal ou ligne de remplissage",
+          "Débris introduits lors du remplissage ou du rebranchement d’un bidon.",
+          "Vérifiez la rétention des particules et la capacité de rétention des impuretés au débit de remplissage requis. Le réservoir secondaire doit pouvoir retrouver son niveau pendant que l’imprimante consomme de l’encre."
+        ],
+        [
+          "Boucle de recirculation, si présente",
+          "Particules introduites ou formées en aval de l’alimentation principale, notamment les agglomérats de pigments.",
+          "Vérifiez le débit de la boucle et la perte de charge admissible. Avec une encre pigmentée, demandez au fournisseur quelles particules le filtre doit laisser passer et quels agglomérats il doit retenir."
+        ],
+        [
+          "Filtre final à proximité de la tête",
+          "Particules transportées jusqu’à la tête par le circuit d’alimentation.",
+          "Relevez l’efficacité de rétention, la finesse de filtration et les conditions d’essai exigées par le fabricant de la tête, ainsi que la plage de pression d’entrée. Vérifiez si la tête intègre déjà un filtre de protection final."
+        ]
+      ]
+    },
+    "coarse": "Pour la préfiltration grossière sur une conduite de 3,2 mm de diamètre intérieur, on peut évaluer le filtre en ligne F-PE-60-32-PP-N. Il comporte un élément filtrant en polyéthylène haute densité (PEHD) et un corps en polypropylène. Sa plage de filtration annoncée est de 40 à 60 µm. Pour la filtration finale, demandez les spécifications du fabricant de la tête et les données de rétention du fournisseur du filtre pour la taille de particules visée. La seule indication d’une plage en micromètres ne suffit pas à établir l’efficacité du filtre final.",
+    "filterLink": "filtre en ligne F-PE-60-32-PP-N"
+  },
+  "pressure": {
+    "title": "Quelle perte de charge le circuit d’encre peut-il accepter ?",
+    "toc": "Mesurer la perte de charge",
+    "measurement": "Utilisez des prises de pression immédiatement en amont et en aval du filtre, ou prévoyez-les sur le circuit d’essai du prototype. Soustrayez la pression aval de la pression amont pour obtenir la perte de charge du filtre (ΔP). Avec un élément propre, relevez ΔP, la température de l’encre, le débit fourni et le temps de remplissage du réservoir secondaire. Si le filtre alimente directement la tête, relevez aussi la pression à son entrée en impression continue et comparez-la aux valeurs prescrites.",
+    "sensors": "Un instrument de pression différentielle permet de mesurer directement ΔP. Si vous utilisez deux capteurs de pression absolue PDM5, choisissez une étendue de mesure adaptée à chaque prise et vérifiez que l’incertitude combinée permet de distinguer la variation recherchée. Effectuez les deux relevés simultanément et vérifiez la compatibilité des matériaux en contact avec l’encre et le liquide de rinçage.",
+    "sensorLink": "capteurs de pression absolue PDM5",
+    "sensorCard": "Vérifiez l’étendue de mesure et l’exactitude requises à chaque prise de pression.",
+    "table": {
+      "caption": "Interpréter un écart par rapport aux mesures sur filtre propre",
+      "headers": [
+        "Observation",
+        "Contrôle à effectuer"
+      ],
+      "rows": [
+        [
+          "ΔP augmente à débit et température d’encre identiques.",
+          "Installez un élément propre approuvé et répétez l’essai. Si ΔP et le temps de remplissage reviennent aux valeurs initiales, examinez l’encrassement du filtre et l’origine des débris avant de fixer une périodicité de remplacement."
+        ],
+        [
+          "Le remplissage ralentit alors que ΔP reste proche de la valeur initiale.",
+          "Mesurez le débit fourni et contrôlez la mise à l’air du réservoir, la conduite d’aspiration, les raccords et le niveau d’encre. Une restriction ou une prise d’air ailleurs dans le circuit peut produire le même défaut d’impression."
+        ],
+        [
+          "La pression à l’entrée de la tête baisse uniquement lors de tirages prolongés à fort taux de couverture.",
+          "Relevez simultanément la pression à l’entrée de la tête et la ΔP du filtre dès que certaines buses cessent d’imprimer. Vérifiez si le niveau du réservoir secondaire baisse au même moment."
+        ]
+      ]
+    },
+    "diagnosis": "Si la pression à l’entrée de la tête baisse alors que la ΔP du filtre reste proche de sa valeur initiale, consultez le guide de diagnostic des défauts d’alimentation en encre. Il décrit comment suivre le circuit du réservoir à la tête concernée pour localiser un remplissage trop lent ou une prise d’air.",
+    "diagnosisLink": "guide de diagnostic des défauts d’alimentation en encre"
+  },
+  "backflow": {
+    "title": "Quand faut-il un clapet anti-retour sur la ligne de remplissage ?",
+    "toc": "Reflux après l’arrêt",
+    "valve": "Si le niveau du réservoir secondaire baisse après l’arrêt de la pompe, relevez les niveaux des deux réservoirs et déterminez où va l’encre. Tenez compte de la consommation de l’imprimante, d’un éventuel siphonnage par une autre branche et des fuites externes. Si l’encre reflue par la conduite de remplissage, le clapet anti-retour à membrane CV-BE-32-PP-N peut être évalué sur un tube de 3,2 mm de diamètre intérieur. Son corps en polypropylène et sa membrane en EPDM doivent être compatibles avec l’encre et le liquide de nettoyage.",
+    "valveLink": "clapet anti-retour à membrane CV-BE-32-PP-N",
+    "restart": "Le plan du clapet indique une pression d’ouverture ≥ 1 kPa. Il s’agit d’une borne inférieure et la pression d’ouverture réelle reste à vérifier. Montez le clapet dans le sens indiqué et mesurez le volume qui reflue pendant la durée d’arrêt prévue, avec la plus grande différence de niveau attendue dans le sens inverse. Redémarrez ensuite à la pression disponible la plus faible dans le sens passant et chronométrez le remplissage. Un clapet qui limite le reflux peut néanmoins ralentir le remplissage si la pompe fournit trop peu de pression pour l’ouvrir."
+  },
+  "validation": {
+    "title": "Valider l’ensemble avec l’encre de production",
+    "toc": "Essais avec l’encre et au redémarrage",
+    "steps": [
+      "Faites circuler l’encre spécifiée et le liquide de nettoyage dans un montage représentatif. Après les durées de contact et d’arrêt prévues, recherchez tout gonflement, relargage de particules ou fuite au niveau du média filtrant, de la membrane et du corps.",
+      "Reprenez l’essai de référence au même débit et à la même température avec un élément présentant un encrassement représentatif du service. Vérifiez le temps de remplissage et la pression à l’entrée de la tête par rapport aux limites de l’imprimante pendant le cycle d’impression continue le plus exigeant.",
+      "Consignez la marge de pression restante, le volume de reflux à l’arrêt et la durée de redémarrage. Servez-vous de ces résultats et des limites des composants pour définir le critère de remplacement du filtre et les conditions d’acceptation au redémarrage de la machine."
+    ]
+  },
+  "sources": {
+    "imagexpert": "ImageXpert — Comprendre la filtration de l’encre",
+    "pall": "Pall — Filtration lors de la formulation des encres",
+    "filter": "FOREACH — Caractéristiques du filtre en ligne F-PE-60-32-PP-N",
+    "sensor": "FOREACH — Caractéristiques du capteur de pression PDM5",
+    "valve": "FOREACH — Caractéristiques du clapet anti-retour à membrane CV-BE-32-PP-N",
+    "drawing": "FOREACH — Plan coté et pression d’ouverture du CV-BE-32-PP-N (PDF)"
+  }
+}

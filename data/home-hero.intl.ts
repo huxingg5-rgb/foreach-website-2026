@@ -49,7 +49,7 @@ export const homeHeroText: Record<LocaleCode, HomeHeroText> = {
     },
   },
   es: {
-    slideNames: ["Componentes microfluídicos", "Configurador de conjuntos de tubos", "Calculadora de resistencia al flujo"],
+    slideNames: ["Componentes fluídicos", "Configurador de conjuntos de tubos", "Calculadora de resistencia al flujo"],
     flow: {
       titleLine1: "Calculadora de", titleLine2: "resistencia al flujo",
       description: "Calcule la pérdida de presión o el caudal en tubos, válvulas y conectores.",
@@ -66,7 +66,7 @@ export const homeHeroText: Record<LocaleCode, HomeHeroText> = {
     },
   },
   fr: {
-    slideNames: ["Composants microfluidiques", "Configurateur d’assemblages de tubes", "Calculateur de perte de charge"],
+    slideNames: ["Composants fluidiques", "Configurateur d’assemblages de tubes", "Calculateur de perte de charge"],
     flow: {
       titleLine1: "Calculateur de", titleLine2: "perte de charge",
       description: "Calculez la perte de charge ou le débit des tubes, vannes et raccords.",
@@ -83,7 +83,7 @@ export const homeHeroText: Record<LocaleCode, HomeHeroText> = {
     },
   },
   ko: {
-    slideNames: ["미세유체 제품 안내", "튜빙 어셈블리 구성", "유체 저항 계산기"],
+    slideNames: ["유체 부품 안내", "튜빙 어셈블리 구성", "유체 저항 계산기"],
     flow: {
       titleLine1: "유체 저항 계산기", titleLine2: "",
       description: "튜빙, 밸브와 피팅의 압력 강하 또는 유량을 계산합니다.",
@@ -100,7 +100,7 @@ export const homeHeroText: Record<LocaleCode, HomeHeroText> = {
     },
   },
   ru: {
-    slideNames: ["Микрофлюидные компоненты", "Конфигуратор трубных сборок", "Калькулятор гидросопротивления"],
+    slideNames: ["Компоненты жидкостных систем", "Конфигуратор трубных сборок", "Калькулятор гидросопротивления"],
     flow: {
       titleLine1: "Калькулятор", titleLine2: "гидросопротивления",
       description: "Рассчитайте перепад давления или расход для трубок, клапанов и фитингов.",

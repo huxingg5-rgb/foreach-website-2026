@@ -12,8 +12,9 @@ export type ApplicationGuideNavigationItem = {
 export type ApplicationGuideNavigationGroup = {
   id: string;
   label: string;
-  overview: ApplicationGuideNavigationItem;
+  overview?: ApplicationGuideNavigationItem;
   children: readonly ApplicationGuideNavigationItem[];
+  defaultExpanded?: boolean;
 };
 
 type ApplicationGuideNavigationProps = {
@@ -24,6 +25,7 @@ type ApplicationGuideNavigationProps = {
   currentHref: string;
   mobileTitle: string;
   mobileMeta?: string;
+  desktopGroupToggles?: boolean;
   drawerEyebrow: string;
   drawerTitle: string;
   browseLabel?: string;
@@ -35,9 +37,10 @@ function Chevron({ className }: { className?: string }) {
 }
 
 function initialExpandedGroups(groups: readonly ApplicationGuideNavigationGroup[], currentHref: string) {
+  const currentPath = currentHref.split("#", 1)[0];
   return Object.fromEntries(groups.map((group) => [
     group.id,
-    group.overview.href === currentHref || group.children.some((entry) => entry.href === currentHref),
+    group.overview?.href.split("#", 1)[0] === currentPath || group.children.some((entry) => entry.href === currentHref),
   ]));
 }
 
@@ -54,6 +57,7 @@ export default function ApplicationGuideNavigation({
   currentHref,
   mobileTitle,
   mobileMeta,
+  desktopGroupToggles = false,
   drawerEyebrow,
   drawerTitle,
   browseLabel = "Browse",
@@ -122,7 +126,7 @@ export default function ApplicationGuideNavigation({
   };
 
   return (
-    <div className={styles.navigationRoot} id={id} data-open={open ? "true" : "false"}>
+    <div className={styles.navigationRoot} id={id} data-open={open ? "true" : "false"} data-desktop-toggles={desktopGroupToggles || undefined}>
       <button
         ref={triggerRef}
         type="button"
@@ -205,22 +209,50 @@ export default function ApplicationGuideNavigation({
 
             {groups.map((group) => {
               const branchActive = group.children.some((entry) => entry.href === currentHref);
-              const expanded = expandedGroups[group.id] ?? false;
+              const hasChildren = group.children.length > 0;
               const childrenId = `${id}-${group.id}-children`;
+              const parentClassName = `${styles.navParent}${branchActive ? ` ${styles.branchActive}` : ""}`;
+              const childLinks = hasChildren ? (
+                <div className={styles.navChildren} id={childrenId} aria-label={desktopGroupToggles ? group.label : `${group.label} tasks`}>
+                  {group.children.map((entry) => (
+                    <Link
+                      key={entry.href}
+                      href={entry.href}
+                      prefetch={false}
+                      className={styles.navChild}
+                      aria-current={entry.href === currentHref ? "page" : undefined}
+                    >
+                      <span>{entry.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              ) : null;
 
+              if (!group.overview) {
+                return (
+                  <details key={group.id} className={styles.navGroup} open={branchActive || group.defaultExpanded}>
+                    <summary className={`${parentClassName} ${styles.navDisclosure}`} data-has-children={hasChildren ? "true" : undefined}>
+                      <span>{group.label}</span>
+                    </summary>
+                    {childLinks}
+                  </details>
+                );
+              }
+
+              const expanded = expandedGroups[group.id] ?? false;
               return (
                 <div key={group.id} className={styles.navGroup} data-expanded={expanded ? "true" : "false"}>
                   <div className={styles.navParentRow}>
                     <Link
                       href={group.overview.href}
                       prefetch={false}
-                      className={`${styles.navParent}${branchActive ? ` ${styles.branchActive}` : ""}`}
-                      data-has-children={group.children.length > 0 ? "true" : undefined}
+                      className={parentClassName}
+                      data-has-children={hasChildren ? "true" : undefined}
                       aria-current={currentHref === group.overview.href ? "page" : undefined}
                     >
                       <span>{group.label}</span>
                     </Link>
-                    {group.children.length > 0 ? <button
+                    {hasChildren ? <button
                       type="button"
                       className={styles.mobileGroupToggle}
                       aria-controls={childrenId}
@@ -231,20 +263,7 @@ export default function ApplicationGuideNavigation({
                       <Chevron className={styles.groupChevron} />
                     </button> : null}
                   </div>
-
-                  {group.children.length > 0 ? <div className={styles.navChildren} id={childrenId} aria-label={`${group.label} tasks`}>
-                    {group.children.map((entry) => (
-                      <Link
-                        key={entry.href}
-                        href={entry.href}
-                        prefetch={false}
-                        className={styles.navChild}
-                        aria-current={entry.href === currentHref ? "page" : undefined}
-                      >
-                        <span>{entry.label}</span>
-                      </Link>
-                    ))}
-                  </div> : null}
+                  {childLinks}
                 </div>
               );
             })}

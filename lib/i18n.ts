@@ -42,6 +42,7 @@ export type HeaderText = {
   searchAriaLabel: string; // 搜索输入框无障碍说明
   searchButtonAriaLabel: string; // 搜索按钮无障碍说明
   languageAriaLabel: string; // 语言按钮无障碍说明
+  mobileMenuCloseAriaLabel?: string;
   mobileMenuAriaLabel: string; // 手机菜单按钮无障碍说明
   currentLanguageLabel: string; // 当前语言按钮显示文字
   languageSwitchTitle: string; // 语言菜单鼠标悬停提示
@@ -109,6 +110,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
     searchButtonAriaLabel: "Search",
     languageAriaLabel: "Change language",
     mobileMenuAriaLabel: "Open navigation menu",
+    mobileMenuCloseAriaLabel: "Close menu",
     currentLanguageLabel: "English",
     languageSwitchTitle: "Change language",
   },
@@ -122,6 +124,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
     searchButtonAriaLabel: "Buscar",
     languageAriaLabel: "Cambiar idioma",
     mobileMenuAriaLabel: "Abrir menú de navegación",
+    mobileMenuCloseAriaLabel: "Cerrar el menú",
     currentLanguageLabel: "Español",
     languageSwitchTitle: "Cambiar idioma",
   },
@@ -135,6 +138,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
     searchButtonAriaLabel: "Rechercher",
     languageAriaLabel: "Changer de langue",
     mobileMenuAriaLabel: "Ouvrir le menu de navigation",
+    mobileMenuCloseAriaLabel: "Fermer le menu",
     currentLanguageLabel: "Français",
     languageSwitchTitle: "Changer de langue",
   },
@@ -148,6 +152,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
     searchButtonAriaLabel: "검색",
     languageAriaLabel: "언어 변경",
     mobileMenuAriaLabel: "내비게이션 메뉴 열기",
+    mobileMenuCloseAriaLabel: "메뉴 닫기",
     currentLanguageLabel: "한국어",
     languageSwitchTitle: "언어 변경",
   },
@@ -161,6 +166,7 @@ export const headerI18n: Record<LocaleCode, HeaderText> = {
     searchButtonAriaLabel: "Поиск",
     languageAriaLabel: "Сменить язык",
     mobileMenuAriaLabel: "Открыть меню навигации",
+    mobileMenuCloseAriaLabel: "Закрыть меню",
     currentLanguageLabel: "Русский",
     languageSwitchTitle: "Сменить язык",
   },
@@ -192,7 +198,7 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
     heroTitleLine1: "Fluidic Components",
     heroTitleLine2: "for OEM Instruments",
     heroSubtitle:
-      "Pumps, valves, probes, sensors and fluidic connections for precision fluid handling in diagnostic, research, analytical and environmental instruments.",
+      "Pumps, valves, probes, sensors, tubing and fittings for precision fluid handling in instruments and industrial equipment.",
     productButton: "View Products",
     contactButton: "Contact Support",
     testTitle: "From Core Components to Fluidic Systems",
@@ -201,10 +207,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   es: {
-    heroTitleLine1: "Componentes y soluciones",
-    heroTitleLine2: "microfluídicas",
+    heroTitleLine1: "Componentes fluídicos",
+    heroTitleLine2: "para instrumentos OEM",
     heroSubtitle:
-      "Control de fluidos y soporte de sistemas para diagnóstico, ciencias de la vida y automatización de laboratorio.",
+      "Bombas, válvulas, sondas, sensores, tubos y racores para el manejo preciso de fluidos en instrumentos y equipos industriales.",
     productButton: "Ver productos",
     contactButton: "Contactar soporte",
     testTitle: "De componentes clave a sistemas fluídicos",
@@ -213,10 +219,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   fr: {
-    heroTitleLine1: "Composants et solutions",
-    heroTitleLine2: "microfluidiques",
+    heroTitleLine1: "Composants fluidiques",
+    heroTitleLine2: "pour instruments OEM",
     heroSubtitle:
-      "Contrôle précis des fluides et support système pour le diagnostic, les sciences de la vie et l’automatisation de laboratoire.",
+      "Pompes, vannes, sondes, capteurs, tubes et raccords pour la gestion précise des fluides dans les instruments et les équipements industriels.",
     productButton: "Voir les produits",
     contactButton: "Contacter le support",
     testTitle: "Des composants clés aux systèmes fluidiques",
@@ -225,10 +231,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   ko: {
-    heroTitleLine1: "미세유체 부품 및",
-    heroTitleLine2: "유체 솔루션",
+    heroTitleLine1: "OEM 기기용",
+    heroTitleLine2: "유체 부품",
     heroSubtitle:
-      "진단, 생명과학 및 실험실 자동화를 위한 정밀 유체 제어 부품과 시스템 지원을 제공합니다.",
+      "계측 기기와 산업 장비의 정밀 유체 처리를 위한 펌프, 밸브, 프로브, 센서, 튜브 및 피팅을 제공합니다.",
     productButton: "제품 보기",
     contactButton: "기술 지원 문의",
     testTitle: "핵심 부품에서 유체 시스템까지",
@@ -237,10 +243,10 @@ export const homeI18n: Record<LocaleCode, HomeText> = {
   },
 
   ru: {
-    heroTitleLine1: "Компоненты и решения",
-    heroTitleLine2: "для микрофлюидики",
+    heroTitleLine1: "Компоненты жидкостных систем",
+    heroTitleLine2: "для производителей приборов",
     heroSubtitle:
-      "Компоненты управления жидкостями и системная поддержка для диагностики, наук о жизни и лабораторной автоматизации.",
+      "Насосы, клапаны, зонды, датчики, трубки и фитинги для точной работы с жидкостями в приборах и промышленном оборудовании.",
     productButton: "Смотреть продукцию",
     contactButton: "Связаться с поддержкой",
     testTitle: "От ключевых компонентов к жидкостным системам",

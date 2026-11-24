@@ -14,10 +14,13 @@ const output = path.resolve(argument('--output') ?? 'out');
 const reportPath = argument('--json');
 const origin = 'https://www.foreachtek.com';
 const locales = ['en', 'es', 'fr', 'ko', 'ru'];
+const inkjetRoutes = JSON.parse(readFileSync('data/applications/industrial-inkjet-routes.json', 'utf8'));
+const internationalInkjetPaths = Object.values(inkjetRoutes).map(href => href.slice(3));
 const { entries } = JSON.parse(readFileSync('data/applications/application-route-map.json', 'utf8'));
 const kinds = [...new Set(entries.map(entry => entry.kind))];
 const routes = new Set([
   ...locales.map(locale => `/${locale}/applications/`),
+  ...internationalInkjetPaths.flatMap(base => locales.map(locale => `/${locale}${base}`)),
   ...entries.flatMap(entry => locales.map(locale => entry.path.replace(/^\/en\//, `/${locale}/`))),
   ...kinds.map(kind => `/applications/${kind}/`),
 ]);
@@ -55,6 +58,9 @@ for (const route of routes) {
 
   const alternates = links.filter(link => link.rel?.toLowerCase() === 'alternate' && link.hreflang);
   const base = locale === 'zh-CN' ? route : route.replace(/^\/(en|es|fr|ko|ru)/, '');
+  if (internationalInkjetPaths.includes(base)) {
+    assert(!alternates.some(link => link.hreflang === 'zh-CN'), route, 'No Chinese counterpart for this inkjet guide');
+  }
   const expectedAlternates = locales.map(language => [language, `${origin}/${language}${base}`]);
   if (kinds.some(kind => base === `/applications/${kind}/`)) expectedAlternates.push(['zh-CN', origin + base]);
   for (const [language, href] of expectedAlternates) {

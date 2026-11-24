@@ -3,27 +3,27 @@ import type { LocaleCode } from "@/lib/i18n";
 export const homeMetadata: Record<Exclude<LocaleCode, "zh-CN">, { title: string; description: string; ogLocale: string }> = {
   en: {
     title: "Fluidic Components for OEM Instruments | FOREACH",
-    description: "Explore FOREACH pumps, valves, probes, sensors and fluidic connections for OEM instruments, with application guides for selection and integration.",
+    description: "Explore FOREACH pumps, valves, probes, sensors, tubing and fittings for instruments and industrial equipment, with guides to component selection and integration.",
     ogLocale: "en_US",
   },
   es: {
-    title: "Foreach Technology | Componentes microfluídicos y soluciones de fluidos",
-    description: "Foreach Technology desarrolla bombas, válvulas, sondas, conectores, tubos, sensores y módulos de control para diagnóstico in vitro, ciencias de la vida y automatización de laboratorio.",
+    title: "Componentes fluídicos para instrumentos OEM | FOREACH",
+    description: "Explore las bombas, válvulas, sondas, sensores, tubos y racores de FOREACH para instrumentos y equipos industriales. Consulte las guías de selección e integración.",
     ogLocale: "es_ES",
   },
   fr: {
-    title: "Foreach Technology | Composants microfluidiques et solutions fluidiques",
-    description: "Foreach Technology développe des pompes, vannes, sondes, raccords, tubes, capteurs et modules de commande pour le diagnostic in vitro, les sciences de la vie et l’automatisation de laboratoire.",
+    title: "Composants fluidiques pour instruments OEM | FOREACH",
+    description: "Découvrez les pompes, vannes, sondes, capteurs, tubes et raccords FOREACH pour instruments et équipements industriels, ainsi que nos guides de choix et d’intégration.",
     ogLocale: "fr_FR",
   },
   ko: {
-    title: "Foreach Technology | 미세유체 부품 및 유체 시스템 솔루션",
-    description: "Foreach Technology는 체외진단, 생명과학, 분석 기기, 합성생물학 및 실험실 자동화를 위한 펌프, 밸브, 프로브, 피팅, 튜브, 센서 및 제어 모듈을 개발합니다.",
+    title: "OEM 기기용 유체 부품 | FOREACH",
+    description: "계측 기기와 산업 장비용 FOREACH 펌프, 밸브, 프로브, 센서, 튜브 및 피팅을 살펴보고 적용 가이드에서 부품 선정과 시스템 통합 방법을 확인하세요.",
     ogLocale: "ko_KR",
   },
   ru: {
-    title: "Foreach Technology | Микрофлюидные компоненты и решения",
-    description: "Foreach Technology разрабатывает насосы, клапаны, зонды, фитинги, трубки, датчики и модули управления для диагностики in vitro, наук о жизни и автоматизации лабораторий.",
+    title: "Компоненты для жидкостных систем OEM-приборов | FOREACH",
+    description: "Насосы, клапаны, зонды, датчики, трубки и фитинги FOREACH для приборов и промышленного оборудования. Руководства по выбору компонентов и их интеграции.",
     ogLocale: "ru_RU",
   },
 };

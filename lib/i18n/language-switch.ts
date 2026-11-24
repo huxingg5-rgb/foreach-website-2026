@@ -140,6 +140,9 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
 
 /** One destination for normal clicks, modified clicks and native link actions. */
 export function getLanguageHref(pathname: string, locale: LocaleCode, suffix = "") {
+  if (locale === "zh-CN" && /^\/(en|es|fr|ko|ru)\/applications\/industrial-inkjet-printing(?:\/|[?#]|$)/.test(pathname)) {
+    return "/#applications";
+  }
   const domain = pathname.match(/^\/(?:en|es|fr|ko|ru)\/applications\/(life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology)\/[^/]+/)?.[1];
   const useDomainHub = Boolean(domain && locale === "zh-CN");
   // Chinese lists still use their original client pagination, so the foreign

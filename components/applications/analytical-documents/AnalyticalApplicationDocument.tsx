@@ -20,6 +20,7 @@ import {
 import type {
   ApplicationBlock,
   ApplicationDocument,
+  ApplicationFlowPath,
   ApplicationInlineLink,
   ApplicationLink,
   ApplicationReference,
@@ -83,7 +84,7 @@ function Citations({ ids, referenceMap, referenceLabel }: { ids?: readonly strin
 }
 
 function LinkList({ items, productLinkCards }: { items: readonly ApplicationLink[]; productLinkCards?: ProductLinkCardsOptions }) {
-  if (productLinkCards && items.length && items.every(item => productLinkCards.imagesByHref[item.href])) {
+  if (productLinkCards && items.length && items.every(item => !item.anchorId && productLinkCards.imagesByHref[item.href])) {
     return <ApplicationProductCards
       products={items.map(item => ({
         title: item.label, href: item.href, imageSrc: productLinkCards.imagesByHref[item.href], imageScale: productLinkCards.imageScalesByHref?.[item.href], description: item.description,
@@ -94,7 +95,7 @@ function LinkList({ items, productLinkCards }: { items: readonly ApplicationLink
   return (
     <ul className={styles.linkList}>
       {items.map((item) => (
-        <li key={`${item.href}-${item.label}`}>
+        <li key={`${item.href}-${item.label}`} id={item.anchorId}>
           <ContentLink href={item.href}>{item.label}</ContentLink>
           {item.description ? <p>{item.description}</p> : null}
         </li>
@@ -174,6 +175,19 @@ function InlineLinkedText({
   return <>{output}</>;
 }
 
+function FlowPath({ nodes, focusIndex, label }: ApplicationFlowPath & { label: string }) {
+  return (
+    <div className={styles.flowDiagram} data-node-count={nodes.length} role="list" aria-label={label}>
+      {nodes.map((node, index) => (
+        <Fragment key={index}>
+          {index > 0 ? <span className={styles.flowArrow} aria-hidden="true">→</span> : null}
+          <span className={`${styles.flowNode}${index === focusIndex ? ` ${styles.flowFocus}` : ""}`} role="listitem">{node}</span>
+        </Fragment>
+      ))}
+    </div>
+  );
+}
+
 function Block({ block, referenceMap, labels, productLinkCards }: { block: ApplicationBlock; referenceMap: ReferenceMap; labels: ApplicationDocumentLabels; productLinkCards?: ProductLinkCardsOptions }) {
   const citations = <Citations ids={block.references} referenceMap={referenceMap} referenceLabel={labels.reference} />;
   switch (block.type) {
@@ -211,21 +225,25 @@ function Block({ block, referenceMap, labels, productLinkCards }: { block: Appli
         </div>
       );
     }
-    case "flow":
+    case "flow": {
+      const mainPath = { nodes: block.nodes, focusIndex: block.focusIndex, label: block.label ?? block.caption };
       return (
         <figure className={styles.flow}>
-          <div className={styles.flowDiagram} data-node-count={block.nodes.length} role="list" aria-label={block.caption}>
-            {block.nodes.map((node, index) => (
-              <Fragment key={index}>
-                {index > 0 ? <span className={styles.flowArrow} aria-hidden="true">→</span> : null}
-                <span className={`${styles.flowNode}${index === block.focusIndex ? ` ${styles.flowFocus}` : ""}`} role="listitem">{node}</span>
-              </Fragment>
-            ))}
-          </div>
+          {block.branches?.length ? (
+            <div className={styles.flowBranches}>
+              {[mainPath, ...block.branches].map(path => (
+                <div className={styles.flowBranch} key={path.label}>
+                  <span className={styles.flowBranchLabel} aria-hidden="true">{path.label}</span>
+                  <FlowPath {...path} />
+                </div>
+              ))}
+            </div>
+          ) : <FlowPath {...mainPath} />}
           <figcaption>{block.caption}{citations}</figcaption>
           {block.note ? <p className={styles.note}>{block.note}</p> : null}
         </figure>
       );
+    }
     case "callout":
       return (
         <aside className={styles.callout}>
@@ -299,7 +317,7 @@ function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
       })),
   }));
   const currentGroup = groups.find((group) => (
-    group.overview.href === analyticalDocumentHref(currentSlug)
+    group.overview?.href === analyticalDocumentHref(currentSlug)
     || group.children.some((entry) => entry.href === analyticalDocumentHref(currentSlug))
   ));
   const compactGroupTitle = currentGroup
@@ -329,18 +347,20 @@ function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
 
 function Outline({ document, labels, localized = false }: { document: ApplicationDocument; labels: ApplicationDocumentLabels; localized?: boolean }) {
   return (
-    <nav aria-label={localized ? labels.onThisPage : "On this page"} className={styles.outlineNavigation}>
-      <p className={styles.outlineTitle}>{labels.onThisPage}</p>
-      <div className={styles.outlineLinks}>
-        {document.sections.map((section) => (
-          <a key={section.id} href={`#${section.id}`} data-outline-link={section.id}>
-            {section.title}
-          </a>
-        ))}
-        {document.references.length ? <a href="#references" data-outline-link="references">{labels.references}</a> : null}
-        {document.related?.length ? <a href="#related-guides" data-outline-link="related-guides">{labels.related}</a> : null}
-      </div>
-    </nav>
+    <aside className={styles.outline}>
+      <nav aria-label={localized ? labels.onThisPage : "On this page"} className={styles.outlineNavigation}>
+        <p className={styles.outlineTitle}>{labels.onThisPage}</p>
+        <div className={styles.outlineLinks}>
+          {document.sections.map((section) => (
+            <a key={section.id} href={`#${section.id}`} data-outline-link={section.id}>
+              {section.tocLabel ?? section.title}
+            </a>
+          ))}
+          {document.references.length ? <a href="#references" data-outline-link="references">{labels.references}</a> : null}
+          {document.related?.length ? <a href="#related-guides" data-outline-link="related-guides">{labels.related}</a> : null}
+        </div>
+      </nav>
+    </aside>
   );
 }
 
@@ -417,9 +437,7 @@ export default function AnalyticalApplicationDocument({
             {navigation ?? <DocumentNavigation currentSlug={document.slug} />}
           </aside>
 
-          <aside className={styles.outline}>
-            <Outline document={document} labels={labels} localized={Boolean(customLabels)} />
-          </aside>
+          <Outline document={document} labels={labels} localized={Boolean(customLabels)} />
 
           <article
             className={styles.articleBody}

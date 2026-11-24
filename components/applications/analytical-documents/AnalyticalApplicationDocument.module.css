@@ -169,10 +169,16 @@
 .flowNode.flowFocus { color: #fff; border-color: var(--brand-blue); background: var(--brand-blue); }
 .flowArrow { color: var(--brand-blue); }
 .flow figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; }
+.flowBranches { border-top: 2px solid #222; border-bottom: 1px solid var(--line); }
+.flowBranch { padding: 12px 0; }
+.flowBranch + .flowBranch { border-top: 1px solid var(--line); }
+.flowBranchLabel { display: block; margin: 0 12px 6px; color: var(--brand-blue); font-size: 14px; font-weight: 500; }
+.flowBranch .flowDiagram { padding: 4px 12px; border: 0; }
 
 .root .linkList { list-style: none; padding: 0; border-top: 1px solid var(--line); margin: 16px 0 0; }
 .root .linkList li { margin: 0; padding: 0; border-bottom: 1px solid var(--line); }
 .root .linkList li:last-child { border-bottom: 0; }
+.linkList li[id] { scroll-margin-top: calc(var(--header-height) + 24px); }
 .linkList a { display: block; padding: 10px 4px; text-decoration: none; }
 .root .linkList p { margin: 0 4px 12px; color: var(--muted); font-size: 14px; }
 .articleBody section p > a { text-decoration: none; }
@@ -259,6 +265,10 @@
   .flowDiagram { grid-template-columns: 1fr; justify-items: stretch; }
   .flowNode { width: 100%; }
   .flowArrow { text-align: center; transform: rotate(90deg); }
+  .flowBranchLabel { margin-inline: 0; }
+  .flowBranch .flowDiagram { display: flex; gap: 4px; padding-inline: 0; }
+  .flowBranch .flowNode { flex: 1; width: auto; min-width: 0; padding: 6px 4px; font-size: 13px; text-wrap: balance; }
+  .flowBranch .flowArrow { flex: 0 0 auto; transform: none; }
 }
 @media print {
   .page { padding-top: 0; }

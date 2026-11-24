@@ -1,0 +1,102 @@
+{
+  "title": "Filtración de tinta en impresoras industriales de inyección",
+  "description": "Elija dónde filtrar la tinta, mida la pérdida de carga al caudal de impresión y compruebe si una válvula antirretorno evita el retorno sin retrasar el llenado.",
+  "eyebrow": "Guía de aplicación",
+  "keywords": [
+    "filtración de tinta",
+    "filtro de tinta para impresora industrial",
+    "filtración en impresión por inyección de tinta",
+    "pérdida de carga del filtro de tinta",
+    "válvula antirretorno de tinta"
+  ],
+  "intro": "Una impresora industrial de inyección de tinta puede incorporar un filtro en la línea de llenado del depósito secundario y otro justo antes del cabezal. El primero debe dejar pasar suficiente tinta para reponer la que se consume durante la impresión. El segundo debe proteger el cabezal y mantener su presión de entrada dentro del intervalo especificado. Identifique dónde se origina la contaminación y pruebe el filtro con la máxima demanda de tinta que la impresora deba sostener.",
+  "contactDescription": "Indíquenos la composición de la tinta y del líquido de limpieza, la especificación de filtración del cabezal, el caudal requerido y las presiones medidas a ambos lados del filtro.",
+  "sensorTitle": "Sensor de presión absoluta PDM5",
+  "sensorAlt": "Vista frontal del sensor de presión PDM5 con su carcasa y las conexiones de fluido",
+  "location": {
+    "title": "¿Dónde se debe instalar el filtro de tinta?",
+    "toc": "Ubicación y grado de filtración",
+    "table": {
+      "caption": "Función del filtro según su posición en el circuito de tinta",
+      "headers": [
+        "Posición",
+        "Qué llega al filtro",
+        "Qué se debe especificar"
+      ],
+      "rows": [
+        [
+          "Depósito principal o línea de llenado",
+          "Residuos que entran al llenar el depósito o volver a conectar un recipiente.",
+          "Retención de partículas y capacidad de acumulación de suciedad al caudal de llenado requerido. Compruebe que el depósito secundario recupere su nivel mientras la impresora consume tinta."
+        ],
+        [
+          "Circuito de recirculación, si lo hay",
+          "Partículas que se forman o entran después del suministro principal, incluidos los aglomerados de pigmento.",
+          "Compruebe el caudal del circuito y la pérdida de carga admisible. Con tintas pigmentadas, consulte al proveedor qué partículas deben atravesar el filtro y qué aglomerados debe retener."
+        ],
+        [
+          "Filtro final cerca del cabezal",
+          "Partículas que el circuito de alimentación arrastra hasta el cabezal.",
+          "Consulte la eficiencia de retención, el grado de filtración y el método de ensayo exigidos por el fabricante del cabezal, así como el intervalo de presión de entrada. Compruebe si el propio cabezal incorpora un filtro de protección final."
+        ]
+      ]
+    },
+    "coarse": "En una línea con tubo de 3,2 mm de diámetro interior se puede evaluar el filtro en línea F-PE-60-32-PP-N para una primera filtración gruesa. Tiene un elemento de polietileno de alta densidad (HDPE), una carcasa de polipropileno y un intervalo de filtración declarado de 40–60 µm. Para elegir el filtro final, obtenga la especificación del fabricante del cabezal y los datos de retención del proveedor del filtro para el tamaño de partícula de interés. El intervalo en micras por sí solo no indica la eficacia de protección del cabezal.",
+    "filterLink": "filtro en línea F-PE-60-32-PP-N"
+  },
+  "pressure": {
+    "title": "¿Qué pérdida de carga admite el circuito de tinta?",
+    "toc": "Medición de la pérdida de carga",
+    "measurement": "Utilice tomas de presión inmediatamente antes y después del filtro o prevea ambas en el circuito de ensayo del prototipo. Reste la presión de salida a la de entrada para obtener la pérdida de carga del filtro (ΔP). Con el elemento filtrante limpio, registre ΔP, temperatura de la tinta, caudal suministrado y tiempo de llenado del depósito secundario. Si el filtro alimenta el cabezal directamente, registre también la presión de entrada al cabezal durante una tirada sostenida y compárela con la especificación.",
+    "sensors": "Un instrumento de presión diferencial permite medir ΔP directamente. Si utiliza dos sensores de presión absoluta PDM5, seleccione el rango para cada toma y compruebe que la incertidumbre combinada permita distinguir la variación que desea medir. Registre las dos presiones al mismo tiempo y verifique que los materiales en contacto con el fluido sean compatibles con la tinta y el líquido de limpieza.",
+    "sensorLink": "sensores de presión absoluta PDM5",
+    "sensorCard": "Compruebe el rango de medida y la exactitud necesarios en cada toma.",
+    "table": {
+      "caption": "Cómo interpretar las variaciones respecto al filtro limpio",
+      "headers": [
+        "Observación",
+        "Qué comprobar a continuación"
+      ],
+      "rows": [
+        [
+          "ΔP aumenta con el mismo caudal y la misma temperatura de tinta.",
+          "Instale un elemento limpio aprobado y repita la prueba. Si ΔP y el tiempo de llenado recuperan sus valores iniciales, investigue la acumulación de residuos y su procedencia antes de fijar el intervalo de sustitución."
+        ],
+        [
+          "El llenado se ralentiza y ΔP se mantiene cerca del valor inicial.",
+          "Mida el caudal suministrado y revise el respiradero del depósito, el tubo de aspiración, los racores y el nivel de tinta. Una restricción o entrada de aire en otro punto puede producir el mismo defecto de impresión."
+        ],
+        [
+          "La presión de entrada al cabezal solo cae en tiradas prolongadas de alta cobertura.",
+          "Registre a la vez la presión de entrada al cabezal y la ΔP del filtro cuando aparezcan las primeras líneas ausentes en la impresión. Observe si baja el nivel del depósito secundario en ese mismo momento."
+        ]
+      ]
+    },
+    "diagnosis": "Si cae la presión de entrada al cabezal mientras la ΔP del filtro permanece cerca de su valor inicial, consulte la guía de diagnóstico de falta de tinta en el cabezal. Permite seguir el recorrido desde el depósito hasta el cabezal afectado para localizar un llenado lento o una entrada de aire.",
+    "diagnosisLink": "guía de diagnóstico de falta de tinta en el cabezal"
+  },
+  "backflow": {
+    "title": "¿Cuándo necesita la línea de llenado una válvula antirretorno?",
+    "toc": "Retorno de tinta tras la parada",
+    "valve": "Si baja el nivel del depósito secundario después de parar la bomba, registre el nivel de ambos depósitos y averigüe por dónde sale la tinta. Tenga en cuenta el consumo de la impresora, el sifonado a través de otra rama y las fugas externas. Si la tinta retrocede por la línea de llenado, se puede evaluar la válvula antirretorno de membrana CV-BE-32-PP-N para tubos de 3,2 mm de diámetro interior. Tanto su carcasa de polipropileno como la membrana de EPDM deben ser compatibles con la tinta y el líquido de limpieza.",
+    "valveLink": "válvula antirretorno de membrana CV-BE-32-PP-N",
+    "restart": "El plano indica una presión de apertura ≥1 kPa. Se trata de un límite inferior y se debe verificar la presión de apertura real. Instale la válvula en el sentido indicado y mida el volumen que retrocede durante la parada prevista, con el mayor desnivel esperado en sentido inverso. Después, vuelva a arrancar con la menor presión disponible en el sentido de flujo y cronometre el llenado. Una válvula que retenga la tinta puede retrasar el llenado si la bomba apenas dispone de presión para abrirla."
+  },
+  "validation": {
+    "title": "Cómo validar el conjunto con la tinta de producción",
+    "toc": "Pruebas de tinta y rearranque",
+    "steps": [
+      "Haga circular la tinta especificada y el líquido de limpieza por un conjunto representativo. Tras los tiempos de contacto y de parada previstos, compruebe si el material filtrante, la membrana o la carcasa presentan hinchamiento, desprendimiento de partículas o fugas.",
+      "Repita el ensayo de referencia con un elemento que presente una carga de suciedad representativa del servicio, manteniendo el caudal y la temperatura. Compruebe el tiempo de llenado y la presión de entrada al cabezal frente a los límites de la impresora durante el ciclo de impresión sostenida más exigente.",
+      "Registre el margen de presión restante, el volumen que retrocede durante la parada y el tiempo de rearranque. Con esos resultados y los límites de los componentes, defina cuándo cambiar el filtro y cómo aceptar el rearranque de la máquina."
+    ]
+  },
+  "sources": {
+    "imagexpert": "ImageXpert — Filtración de tinta",
+    "pall": "Pall — Filtración durante la formulación de tintas",
+    "filter": "FOREACH — Especificaciones del filtro en línea F-PE-60-32-PP-N",
+    "sensor": "FOREACH — Especificaciones del sensor de presión PDM5",
+    "valve": "FOREACH — Especificaciones de la válvula antirretorno de membrana CV-BE-32-PP-N",
+    "drawing": "FOREACH — Plano dimensional y presión de apertura de la CV-BE-32-PP-N (PDF)"
+  }
+}

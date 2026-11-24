@@ -3,11 +3,11 @@ import type { ApplicationIndexCopy } from './types';
 /** Localized from the current English application index. */
 export const ko: ApplicationIndexCopy = {
   "seoTitle": "응용 분야별 유체 부품 | FOREACH",
-  "seoDescription": "진단·연구·분석·환경 장비에 적합한 펌프, 밸브, 프로브, 튜빙 및 피팅을 살펴보십시오. 응용 분야와 작업 흐름별 가이드를 제공합니다.",
+  "seoDescription": "계측기와 산업 장비에 사용하는 펌프, 밸브, 프로브, 튜브 및 피팅을 응용 분야와 작업 공정별로 살펴보십시오.",
   "heroEyebrow": "FOREACH · 응용 분야",
   "heroTitle": "유체 부품",
   "heroHighlight": "응용 분야별 안내",
-  "heroDescription": "진단·연구·분석·환경 장비용 펌프, 밸브, 프로브, 튜빙 및 피팅.",
+  "heroDescription": "계측기와 산업 장비의 유체를 정밀하게 이송·제어하는 펌프, 밸브, 프로브, 튜브 및 피팅입니다.",
   "heroImageAlt": "진단 장비를 사용하는 실험실 직원",
   "breadcrumbHome": "홈",
   "breadcrumbCurrent": "응용 분야",

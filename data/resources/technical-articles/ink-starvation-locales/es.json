@@ -1,17 +1,17 @@
 {
-  "title": "Falta de suministro de tinta en impresión inkjet: causas y diagnóstico",
-  "seoTitle": "Falta de tinta en inkjet: diagnóstico del suministro | FOREACH",
-  "description": "Diagnostique pérdidas intermitentes de impresión revisando nivel de tinta, filtros, entrada de aire, caudal real de la bomba y presión del cabezal. Conozca los límites de selección de DPL30 y DPL60.",
+  "title": "Falta de suministro de tinta en impresoras de inyección: causas y diagnóstico",
+  "seoTitle": "Falta de suministro de tinta en impresoras de inyección | FOREACH",
+  "description": "Localice la causa de los fallos de suministro en tiradas largas con una prueba de inyectores, el nivel de tinta, la caída de presión del filtro, las burbujas y el caudal real.",
   "coverAlt": "Esquema de diagnóstico del depósito, bomba, filtro y cabezal para localizar nivel bajo, burbujas y líneas sin imprimir",
-  "deck": "Cuando falla la alimentación de tinta, conserve primero el patrón de inyectores y las condiciones de trabajo. Revise depósito, filtros y tubos para localizar restricciones o entrada de aire; después mida caudal real, presiones de suministro y retorno y presión del menisco en los inyectores. Restablezca el circuito y complete el cebado autorizado antes de ajustar presiones o intervenir en el cabezal. Que el motor gire o el panel muestre una presión normal no demuestra un suministro suficiente y estable.",
-  "scope": "Esta guía se centra en equipos industriales piezoeléctricos de gota bajo demanda (DOD), con depósitos, tuberías de tinta y regulación de presión, cuando el suministro de líquido es insuficiente. Los circuitos con y sin recirculación deben revisarse según sus propios esquemas. El orden de componentes, cebado, purga de aire y límites de presión dependen de los manuales del equipo y del cabezal. Los sistemas de chorro continuo (CIJ) requieren su propio procedimiento de mantenimiento.",
+  "deck": "Si al cabezal llega menos tinta de la que consume, el suministro resulta insuficiente. Cuando un color pierde intensidad en tiradas largas de alta cobertura y se recupera tras una pausa, guarde la prueba de inyectores y observe el nivel del depósito mientras aparece el fallo. A continuación, busque restricciones o entradas de aire en la línea y mida el caudal con la carga de impresión que provocó el defecto.",
+  "scope": "Esta guía se aplica a equipos industriales de inyección piezoeléctrica de gota bajo demanda. Identifique en el esquema de la máquina los depósitos, los controles de presión y la línea de retorno, si la hay. Siga el procedimiento de cebado y los límites de presión del fabricante del cabezal. Los equipos de chorro continuo tienen otro circuito de tinta y su propio procedimiento de mantenimiento.",
   "sections": [
     {
       "title": "¿La falta de disparo de los inyectores indica un suministro de tinta insuficiente?",
       "tocLabel": "Identificar el patrón del fallo",
       "paragraphs": [
-        "La falta de suministro, o ink starvation, significa que la alimentación de tinta no cubre la demanda del cabezal. El fallo de disparo de algunos inyectores, o nozzle dropout, describe que no expulsan gotas correctamente. La falta de suministro puede causarlo, pero también una obstrucción, un fallo de accionamiento o los ajustes de impresión; la ausencia de líneas o color no identifica por sí sola una bomba averiada.",
-        "Registre el color afectado, las posiciones que faltan repetidamente, el tiempo de impresión hasta el fallo y cualquier recuperación tras una pausa. Compare con la misma tinta, temperatura y modo de impresión, cambiando una sola variable por prueba. Estas señales orientan la revisión; ninguna confirma por sí sola una bomba o un cabezal averiado."
+        "Compare una prueba de inyectores tomada antes de imprimir con otra tomada en cuanto el color empiece a perder intensidad. Si el número de inyectores ausentes aumenta con la cobertura y se recuperan tras una pausa, investigue el suministro. Si fallan exactamente los mismos inyectores al arrancar en frío y después de una pausa, revise la placa de boquillas y el diagnóstico del accionamiento del cabezal antes de abrir el circuito de tinta.",
+        "Anote si el defecto afecta a un color, a un solo cabezal o a todos los cabezales de un mismo colector. Así sabrá si conviene empezar por el ramal de un cabezal o por la alimentación común."
       ],
       "table": {
         "headers": ["Observación", "Revisar primero", "Evidencia que conservar"],
@@ -27,8 +27,8 @@
       "title": "¿En qué orden conviene inspeccionar el circuito de tinta?",
       "tocLabel": "Seguir el circuito",
       "paragraphs": [
-        "Dibuje el circuito real a partir de la documentación: depósito principal, depósito secundario, bomba, filtros, amortiguador o regulador, cabezal y retorno. Los filtros pueden estar antes o después de la bomba. Algunos equipos trabajan con diferencia de nivel y vacío neumático; un único esquema no representa todos los sistemas.",
-        "Avance desde la alimentación hacia el cabezal para localizar dónde cambia el suministro. Antes de desconectar tubos o sustituir piezas, siga el procedimiento de parada, aislamiento y despresurización del equipo y registre los ajustes y conexiones originales."
+        "Empiece por el depósito que abastece al color afectado. Si el equipo tiene un depósito intermedio, observe si su nivel desciende durante toda la tirada en la que aparece el fallo y vuelve a subir durante la pausa. En ese caso, revise primero el ramal de reposición. Si el nivel permanece dentro de su intervalo normal, siga la línea desde ese depósito hasta los cabezales afectados.",
+        { "prefix": "Trace los ", "key": "supply", "label": "recorridos de alimentación, retorno y recirculación", "suffix": " en el esquema de la máquina. Identifique, en su orden real, el respiradero del depósito, la bomba, los filtros, las válvulas y los posibles amortiguadores o reguladores. Registre las posiciones de las válvulas y los ajustes de control antes de aislar o abrir una línea conforme al procedimiento de mantenimiento." }
       ],
       "checks": [
         "Revise nivel, inmersión de la toma y ventilación del depósito, también al nivel mínimo de funcionamiento permitido.",
@@ -36,15 +36,15 @@
         "Observe los tramos accesibles autorizados, localice las primeras burbujas y complete el cebado indicado.",
         "Con la carga que provoca el fallo, registre las medidas disponibles en aspiración, descarga y lado del cabezal.",
         "Tras recuperar la alimentación, revise el patrón de inyectores y ajuste el control dentro de los límites del equipo."
-      ],
-      "links": [{ "key": "supply", "label": "Funciones de las bombas de suministro, retorno y circulación de tinta" }]
+      ]
     },
     {
       "title": "¿Cómo provocan los filtros y los tubos falta de tinta durante tiradas largas?",
       "tocLabel": "Revisar filtros y resistencia",
       "paragraphs": [
-        "La reposición debe cubrir el consumo con la pérdida de presión real del circuito. Un filtro cargado, tubos más estrechos, un doblez, una válvula parcialmente cerrada o cambios de viscosidad con la temperatura modifican la resistencia. Una prueba corta de inyectores correcta no confirma margen suficiente durante una tirada continua.",
-        "Si existen tomas antes y después del filtro, compare la presión diferencial con la misma temperatura y caudales comparables. Dos lecturas a caudales distintos no determinan directamente el grado de obstrucción. Mantenga el grado de filtración, el material y el sentido especificados al sustituir el filtro y vuelva a cebar el circuito."
+        "Un filtro parcialmente obstruido puede suministrar tinta suficiente para una prueba de inyectores y restringir el paso al imprimir una superficie de color uniforme. Mida la presión en las tomas autorizadas a ambos lados del filtro y reste la presión aguas abajo de la presión aguas arriba. Compare esta caída con la de un filtro limpio al mismo caudal medido y a la misma temperatura de la tinta. Si el caudal ya ha bajado, incluso un filtro cargado puede presentar una caída de presión moderada.",
+        { "prefix": "Consulte la ", "key": "filtrationGuide", "label": "guía de filtración y válvulas antirretorno para impresión industrial por inyección", "suffix": " para distinguir el prefiltro de la línea de alimentación del filtro final prescrito para el cabezal. Si entre las tomas de presión hay además tubería, una válvula o un racor, compruebe también esos elementos." },
+        { "prefix": "En un ramal de reposición con tubo de 3,2 mm de diámetro interior, el ", "key": "inlineFilter", "label": "filtro en línea F-PE-60-32-PP-N", "suffix": " es una opción para la filtración gruesa. El intervalo especificado de 40–60 µm corresponde al elemento filtrante. Compruebe la compatibilidad con la tinta y el líquido de limpieza y mida la caída de presión al caudal de reposición. Mantenga la filtración final especificada por el fabricante del cabezal." }
       ],
       "table": {
         "headers": ["Punto", "Comparación", "Comprobación posterior"],
@@ -60,23 +60,30 @@
       "title": "¿Cómo localizar el origen de burbujas recurrentes en los tubos de tinta?",
       "tocLabel": "Localizar la entrada de aire",
       "paragraphs": [
-        "Distinga el aire residual de mantenimiento de las burbujas que se incorporan continuamente. Si reaparecen tras el cebado, revise toma de aspiración, racores, juntas del filtro y conexiones manipuladas. La ausencia de tinta que salga al exterior no demuestra que una conexión de aspiración sea estanca.",
-        "Compare dónde aparecen primero las burbujas en puntos de observación autorizados. Revise inserción, ajuste y soporte de los tubos; después aísle las uniones sospechosas mediante el método de estanqueidad aprobado. El ruido o las burbujas no distinguen por sí solos entrada de aire, liberación de gas disuelto y formación local de vapor, por lo que no confirman cavitación.",
-        "El cebado (priming) llena el circuito de tinta; la desgasificación (degassing) elimina gases disueltos. Son operaciones distintas, y retirar las burbujas visibles no demuestra que se haya eliminado el gas disuelto. Si existe un desgasificador en línea, revise el dispositivo y su circuito de vacío según su manual."
+        "Después de cambiar un depósito, cebe la línea según el procedimiento indicado y anote dónde vuelven a aparecer las primeras burbujas. Si el tramo transparente anterior a un racor permanece lleno y las burbujas aparecen repetidamente justo después, examine el racor y su junta. Una unión en el lado de aspiración puede admitir aire aunque por fuera esté seca. Revise una conexión cada vez.",
+        { "prefix": "En una prueba autorizada con líquido y tubos transparentes, el ", "key": "airDetector", "label": "detector óptico de burbujas de aire ABD", "suffix": " permite registrar cuándo pasan las primeras burbujas por un punto de medida. Elija la ranura de acuerdo con el diámetro exterior del tubo y compruebe la alarma con el tamaño de burbuja que necesita detectar. Las condiciones ópticas publicadas requieren un medio transparente. Con tinta blanca opaca o tinta oscura, utilice la prueba de estanqueidad de la máquina y un método de medida validado para esa tinta." },
+        "Las burbujas visibles y el gas disuelto requieren comprobaciones distintas. El cebado desplaza las bolsas de aire con tinta. Si la máquina incorpora un desgasificador, revise por separado su circuito de vacío y la membrana según las indicaciones del fabricante."
       ],
       "checks": [
         "Compruebe si la toma queda descubierta o si el llenado y la agitación llevan aire a la entrada.",
         "Revise juntas del filtro, cierre de purgadores y cebado después del mantenimiento.",
         "Aísle conexiones sospechosas una a una sin cambiar las demás condiciones.",
         "Tras corregir la causa, vuelva a cebar y compare caudal, presión e impresión."
-      ]
+      ],
+      "figure": {
+        "src": "/images/products/control/foreach-abd-air-bubble-detectors-open-cover-front-view.webp",
+        "alt": "Tres detectores ópticos FOREACH ABD con las tapas abiertas y ranuras para tubos de distintos diámetros",
+        "width": 1500,
+        "height": 1500,
+        "caption": "El tubo transparente de ensayo se aloja en la ranura del detector. Elija la ranura según el diámetro exterior del tubo y compruebe la respuesta óptica con el líquido transparente autorizado."
+      }
     },
     {
       "title": "¿Qué medir si gira la bomba pero el caudal de tinta sigue siendo insuficiente?",
       "tocLabel": "Medir el punto de trabajo",
       "paragraphs": [
-        "El punto de funcionamiento (operating point) debe asociar el caudal real con la diferencia de presión entre entrada y salida de la bomba. Registre también tinta, temperatura, alimentación del motor y señal efectiva de control. El giro y el ruido del motor no demuestran el caudal que llega a la carga.",
-        "Utilice un circuito de medición autorizado y compatible con la tinta. Descargar un tubo desconectado a una probeta cambia la contrapresión y no representa el conjunto de filtro, regulador y cabezal. Compruebe también rango, calibración para el fluido, muestreo y sensibilidad a burbujas del caudalímetro."
+        "Mida el caudal en el ramal afectado y registre al mismo tiempo las presiones de entrada y salida de la bomba. En un circuito de recirculación, distinga la tinta que vuelve al depósito de la que se consume al imprimir. El caudal total del circuito puede ocultar un déficit en un cabezal.",
+        { "prefix": "Si el motor gira y el caudal cae a cero, siga el ", "key": "noFlow", "label": "procedimiento de diagnóstico de una bomba de diafragma sin caudal", "suffix": " para revisar el cebado, la alimentación de entrada y el funcionamiento de las válvulas. Utilice un caudalímetro compatible con la tinta o el circuito de prueba de la máquina con una contrapresión representativa. Descargar libremente en un vaso elimina de la medida la carga del filtro y del cabezal." }
       ],
       "table": {
         "headers": ["Registro", "Condiciones necesarias", "Utilidad"],
@@ -86,45 +93,41 @@
           ["Alimentación y control del motor", "Medidas con carga e interfaz exacta", "Cambios de tensión, velocidad ordenada o control"],
           ["Burbujas y forma de onda de presión", "Cambios originales antes y durante el fallo", "Flujo real, pulsación y filtrado de pantalla"]
         ]
-      },
-      "links": [{ "key": "noFlow", "label": "Diagnóstico de una bomba de diafragma cuyo motor gira sin transportar líquido" }]
+      }
     },
     {
       "title": "¿Cómo comprobar conjuntamente suministro, retorno y presión del menisco?",
       "tocLabel": "Comprobar presión y control",
       "paragraphs": [
-        "La diferencia entre las presiones de suministro y retorno impulsa el caudal de recirculación. La presión del menisco es la presión de tinta en el inyector respecto al ambiente y afecta a la estabilidad de la eyección. Muchos cabezales piezoeléctricos DOD mantienen el menisco con una ligera presión negativa, con un valor específico para cada cabezal. Interprete las lecturas según el diseño del cabezal, la altura de medida y las definiciones del fabricante; la presión de descarga de la bomba no equivale a la del menisco.",
-        "El aire, la pulsación de la bomba, la resistencia del filtro y el control pueden alterar la presión. Restablezca la alimentación y elimine la entrada recurrente de aire antes de evaluar amortiguación y regulación. Un mayor filtrado de pantalla cambia la lectura, no el circuito. Ante vacío excesivo, goteo o presión anómala, aplique el procedimiento del equipo."
+        "En un cabezal con recirculación, la diferencia de presión entre la entrada y el retorno impulsa la tinta a través del cabezal. El menisco responde a la presión de la tinta respecto a la presión ambiente a la altura de las boquillas. Anote las posiciones de las tomas, la referencia de presión y los límites indicados por el fabricante. La presión medida a la salida de la bomba incluye la necesaria para vencer las pérdidas aguas abajo.",
+        { "prefix": "Para registrar la presión aguas arriba, evalúe el ", "key": "pressureSensor", "label": "sensor de presión absoluta PDM5", "suffix": " si sus materiales en contacto con el líquido, su intervalo, su precisión y su capacidad de muestreo se ajustan al ensayo. Para comparar una lectura absoluta con un límite de presión manométrica, reste la presión ambiente medida al mismo tiempo y tenga en cuenta la diferencia de altura. Utilice un instrumento con precisión suficiente para el estrecho intervalo de presión del menisco." },
+        { "prefix": "Si la presión oscila mientras el caudal medio se mantiene estable, registre la señal durante el fallo y compárela con el ", "key": "pulsation", "label": "procedimiento de medición de pulsaciones en bombas de diafragma", "suffix": ". Conserve con el registro la frecuencia de muestreo original y los ajustes de promediado de la pantalla." }
       ],
-      "note": "Los límites de vacío, pasos de ajuste y oscilación admisible dependen del cabezal, tinta y condiciones. Esta guía no establece una presión universal.",
-      "links": [{ "key": "pulsation", "label": "Medición y reducción de la pulsación en bombas miniatura de diafragma" }]
+      "note": "Compruebe primero la alimentación de tinta y cualquier entrada recurrente de aire. Ajuste la presión únicamente dentro de los límites indicados por los fabricantes de la máquina y del cabezal."
     },
     {
       "title": "¿Cómo evaluar DPL30 y DPL60 antes de sustituir una bomba de tinta?",
       "tocLabel": "Evaluar bombas candidatas",
       "paragraphs": [
-        "Si las medidas muestran falta de margen con la tinta y presión diferencial reales, DPL30 y DPL60 de FOREACH pueden incluirse en una evaluación de transporte de líquidos. Sus fichas oficiales indican caudales en descarga libre de 300 mL/min y 600 mL/min respectivamente, con presión nominal de 100 kPa en ambas. No son ajustes de presión del cabezal ni garantías de caudal instalado. No combine el caudal libre y la presión nominal de 100 kPa como un único punto de funcionamiento. Consulte la curva caudal-presión a la tensión correspondiente y al diferencial requerido; después valide con la tinta real y el circuito completo.",
-        "Las dos fichas especifican agua purificada y exigen evaluación por el cliente para otros líquidos. Las tintas acuosas, de disolvente y UV requieren verificar los materiales mojados de la configuración concreta y ensayar viscosidad, temperatura, carga del filtro, funcionamiento continuo y reinicio. Los valores de catálogo no demuestran compatibilidad con una tinta ni rendimiento de baja pulsación."
+        "Considere otra bomba si el caudal sigue por debajo del necesario con una entrada en buen estado, un filtro en condiciones y un cebado completo. Determine el caudal objetivo para la diferencia de presión y la tensión de alimentación de trabajo. Anote cuánto baja el nivel de tinta durante la tirada y en cuánto tiempo debe recuperarlo el ramal de reposición.",
+        { "prefix": "La ", "key": "dpl30", "label": "bomba de diafragma para líquidos DPL30-DB", "suffix": " tiene un caudal libre especificado de 300 mL/min con agua purificada. Consulte su curva de caudal en función de la presión para valorar si merece ensayarla con la carga medida." },
+        { "prefix": "La ", "key": "dpl60", "label": "bomba de diafragma para líquidos DPL60-DB", "suffix": " tiene un caudal libre especificado de 600 mL/min con el mismo medio de referencia. Ambas fichas indican por separado una presión nominal de 100 kPa. Ninguna especifica que su caudal libre se alcance a 100 kPa." },
+        { "prefix": "Utilice la ", "key": "flow", "label": "guía de selección de bombas de tinta de 300 y 600 mL/min", "suffix": " para comparar las dos opciones. Compruebe que los materiales en contacto con el líquido sean compatibles con la tinta y con el líquido de limpieza, y mida el caudal suministrado con el filtro, la tubería, la temperatura de trabajo y el ciclo de rearranque reales." }
       ],
       "table": {
-        "headers": ["Serie candidata", "Caudal especificado en descarga libre", "Confirmar en el circuito instalado"],
+        "headers": ["Modelo de bomba", "Caudal especificado en descarga libre", "Confirmar en el circuito instalado"],
         "rows": [
-          ["DPL30", "300 mL/min", "Caudal con la tinta, presión diferencial y control reales"],
-          ["DPL60", "600 mL/min", "Margen de caudal, presión de suministro-retorno y oscilación con carga"]
+          ["DPL30-DB", "300 mL/min con agua purificada", "Caudal con la tinta, presión diferencial y control reales"],
+          ["DPL60-DB", "600 mL/min con agua purificada", "Margen de caudal, presión de suministro-retorno y oscilación con carga"]
         ]
-      },
-      "links": [
-        { "key": "dpl30", "label": "Datos y documentación de DPL30-DB" },
-        { "key": "dpl60", "label": "Datos y documentación de DPL60-DB" },
-        { "key": "flow", "label": "Selección de 300 / 600 mL/min para suministro y circulación de tinta" }
-      ]
+      }
     },
     {
       "title": "¿Cómo verificar la reparación y documentar el fallo para el proveedor?",
       "tocLabel": "Repetir pruebas y documentar",
       "paragraphs": [
-        "Repita el modo de impresión, temperatura y carga continua representativa que provocaron el fallo. Compare patrones de inyectores, caudal, presión y reaparición de burbujas. Incluya nivel bajo permitido, arranques, paradas y recuperación de espera. Una sola prueba corta no sustituye la validación; los criterios deben proceder de los requisitos del equipo y cabezal con condiciones definidas.",
-        "Entregue los registros siguientes al proveedor de la bomba o del equipo. La sedimentación de tinta blanca y los cambios de concentración tras una parada requieren además revisar circulación y estrategia de parada."
+        "Repita el trabajo que causó el fallo con el mismo soporte, modo de impresión, temperatura de tinta y nivel inicial del depósito. Prolongue la tirada más allá del momento en que antes aparecía el defecto. Compare las pruebas de inyectores de antes y después junto con el nivel, el caudal y el registro de presión. La reparación debe restablecer un suministro continuo dentro de los límites de la máquina y eliminar el patrón de fallo original.",
+        { "prefix": "Si la tinta blanca pierde densidad tras un periodo de inactividad y el caudal y la presión siguen dentro de sus límites registrados, consulte el ", "key": "white", "label": "procedimiento de recirculación y rearranque con tinta blanca", "suffix": " para comprobar si el pigmento se ha sedimentado. Si reaparece el fallo, envíe los registros siguientes al proveedor de la bomba o de la máquina." }
       ],
       "table": {
         "headers": ["Grupo de datos", "Información útil"],
@@ -134,13 +137,12 @@
           ["Fallo y medidas", "Carga, tiempo hasta el fallo, puntos de caudal y presión, alimentación, control y origen de burbujas"],
           ["Acción y validación", "Una variable modificada por prueba, patrones antes y después y resultado de tirada continua"]
         ]
-      },
-      "links": [{ "key": "white", "label": "Circulación de tinta blanca, sedimentación y reinicio" }]
+      }
     }
   ],
   "cta": {
     "title": "Evalúe la bomba con las condiciones reales del fallo",
-    "description": "Comparta tinta y temperatura, caudal de trabajo, presiones de suministro-retorno, filtro, tubos y registros antes y después para definir candidatas y pruebas de prototipo.",
+    "description": "Indique el tipo y la temperatura de la tinta, el caudal de trabajo requerido, las presiones de alimentación y retorno y las características del filtro y los tubos. Adjunte los registros anteriores y posteriores al fallo para definir qué bombas evaluar y qué pruebas realizar en el prototipo.",
     "contactLabel": "Enviar condiciones de suministro",
     "productsLabel": "Ver bombas miniatura de diafragma para líquidos"
   }
