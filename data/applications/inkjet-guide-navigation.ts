@@ -10,6 +10,7 @@ type SceneKey = typeof inkjetSceneKeys[number];
 type InkjetNavigationCopy = {
   labels: Record<InkjetRouteKey, string>;
   pumpGroup: string;
+  groupOverview: string;
   sceneAlts: Record<SceneKey, string>;
   summary: string;
   imageAlt: string;
@@ -33,6 +34,7 @@ const navigation: Record<InkjetLocale, InkjetNavigationCopy> = {
       cleaningFluidSwitching: inkjet.flowControlGuide.tasks[1].title,
     },
     pumpGroup: 'Diaphragm pump selection',
+    groupOverview: 'Overview',
     sceneAlts: {
       supply: supply.menuPhoto.alt,
       recirculation: recirculation.menuPhoto.alt,
@@ -47,8 +49,8 @@ const navigation: Record<InkjetLocale, InkjetNavigationCopy> = {
   es: {
     labels: {
       hub: 'Impresión industrial por inyección de tinta', guide: 'Guía del circuito de tinta',
-      supply: 'Alimentación y reposición de tinta', recirculation: 'Recirculación y retorno de tinta',
-      cleaning: 'Limpieza del cabezal y recogida de tinta residual',
+      supply: 'Bombas de reposición de tinta', recirculation: 'Bombas de recirculación de tinta',
+      cleaning: 'Bombas de evacuación de tinta residual',
       connectionGuide: 'Selección de conjuntos de tubos y racores',
       fixedInkLines: 'Líneas fijas de tinta y conjuntos de tubos',
       inkTankQuickDisconnects: 'Acoplamientos rápidos para el cambio de depósitos',
@@ -57,6 +59,7 @@ const navigation: Record<InkjetLocale, InkjetNavigationCopy> = {
       cleaningFluidSwitching: 'Conmutación del líquido de limpieza y aislamiento de ramales',
     },
     pumpGroup: 'Selección de bombas de diafragma',
+    groupOverview: 'Descripción general',
     sceneAlts: {
       supply: 'Bolsas de tinta reemplazables tras la tapa transparente de una impresora plana Océ Arizona 480 GT',
       recirculation: 'Impresora plana Mimaki UJF-3042HG con recirculación automática de tinta blanca',
@@ -71,8 +74,8 @@ const navigation: Record<InkjetLocale, InkjetNavigationCopy> = {
   fr: {
     labels: {
       hub: 'Impression industrielle à jet d’encre', guide: 'Guide du circuit d’encre',
-      supply: 'Alimentation et appoint en encre', recirculation: 'Recirculation et retour d’encre',
-      cleaning: 'Nettoyage de la tête et collecte des encres usées',
+      supply: 'Pompes d’appoint en encre', recirculation: 'Pompes de recirculation d’encre',
+      cleaning: 'Pompes de récupération d’encre usagée',
       connectionGuide: 'Choix des assemblages de tubes et des raccords',
       fixedInkLines: 'Conduites d’encre fixes et assemblages de tubes',
       inkTankQuickDisconnects: 'Raccords rapides pour le changement de réservoir',
@@ -81,6 +84,7 @@ const navigation: Record<InkjetLocale, InkjetNavigationCopy> = {
       cleaningFluidSwitching: 'Commutation du liquide de nettoyage et isolement des branches',
     },
     pumpGroup: 'Choix des pompes à membrane',
+    groupOverview: 'Vue d’ensemble',
     sceneAlts: {
       supply: 'Poches d’encre remplaçables derrière le capot transparent d’une imprimante à plat Océ Arizona 480 GT',
       recirculation: 'Imprimante à plat Mimaki UJF-3042HG à recirculation automatique de l’encre blanche',
@@ -95,8 +99,8 @@ const navigation: Record<InkjetLocale, InkjetNavigationCopy> = {
   ko: {
     labels: {
       hub: '산업용 잉크젯 인쇄', guide: '산업용 잉크젯 프린터 잉크 회로 가이드',
-      supply: '잉크 공급 및 보충', recirculation: '잉크 순환 및 회수',
-      cleaning: '프린트헤드 세척 및 폐잉크 수거',
+      supply: '잉크 보충 펌프', recirculation: '잉크 순환 펌프',
+      cleaning: '폐잉크 회수 펌프',
       connectionGuide: '튜빙 어셈블리 및 피팅 선정',
       fixedInkLines: '고정식 잉크 라인과 튜빙 어셈블리',
       inkTankQuickDisconnects: '잉크 탱크 교체용 퀵 커플링',
@@ -105,6 +109,7 @@ const navigation: Record<InkjetLocale, InkjetNavigationCopy> = {
       cleaningFluidSwitching: '세척액 전환 및 분기 유로 차단',
     },
     pumpGroup: '다이어프램 펌프 선정',
+    groupOverview: '개요',
     sceneAlts: {
       supply: 'Océ Arizona 480 GT 평판 프린터의 투명 덮개 안에 있는 교체형 잉크 팩',
       recirculation: '흰색 잉크 자동 순환 기능이 있는 Mimaki UJF-3042HG 평판 프린터',
@@ -119,8 +124,8 @@ const navigation: Record<InkjetLocale, InkjetNavigationCopy> = {
   ru: {
     labels: {
       hub: 'Промышленная струйная печать', guide: 'Руководство по чернильному тракту принтера',
-      supply: 'Подача и пополнение чернил', recirculation: 'Рециркуляция и возврат чернил',
-      cleaning: 'Очистка головки и сбор отработанных чернил',
+      supply: 'Насосы долива чернил', recirculation: 'Насосы рециркуляции чернил',
+      cleaning: 'Насосы откачки отработанных чернил',
       connectionGuide: 'Выбор трубок в сборе и фитингов',
       fixedInkLines: 'Стационарные чернильные линии и трубки в сборе',
       inkTankQuickDisconnects: 'Быстроразъёмные соединения для замены ёмкостей',
@@ -129,6 +134,7 @@ const navigation: Record<InkjetLocale, InkjetNavigationCopy> = {
       cleaningFluidSwitching: 'Переключение подачи промывочной жидкости и отсечение ветвей',
     },
     pumpGroup: 'Выбор мембранного насоса',
+    groupOverview: 'Обзор',
     sceneAlts: {
       supply: 'Сменные пакеты с чернилами за прозрачной крышкой планшетного принтера Océ Arizona 480 GT',
       recirculation: 'Планшетный принтер Mimaki UJF-3042HG с автоматической рециркуляцией белых чернил',

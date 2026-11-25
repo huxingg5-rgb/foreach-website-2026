@@ -70,6 +70,69 @@
   font-weight: 400;
 }
 
+.singleLine {
+  position: relative;
+  flex-wrap: nowrap;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.singleLine > .item,
+.measureRow > .item {
+  flex: 0 0 auto;
+}
+
+.singleLine > .currentItem {
+  display: block;
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #173368;
+}
+
+.overflowToggle {
+  display: grid;
+  width: 28px;
+  min-height: 24px;
+  place-items: center;
+  color: #173368;
+  cursor: pointer;
+  list-style: none;
+}
+
+.overflowToggle::-webkit-details-marker { display: none; }
+
+.overflowLinks {
+  position: absolute;
+  z-index: 5;
+  inset-block-start: 100%;
+  inset-inline-start: 0;
+  width: max-content;
+  max-width: min(100%, 24rem);
+  margin: 4px 0 0;
+  padding: 4px 0;
+  border: 1px solid #e3e9f1;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(23, 51, 104, 0.12);
+  list-style: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.overflowLinks li > * { display: block; padding: 7px 12px; }
+.overflowLinks a:hover, .overflowLinks a:focus-visible { background: #f3f6fa; }
+
+.measureClip {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.measureRow { display: flex; width: max-content; }
+
 @media (max-width: 900px) {
   .breadcrumb {
     padding: 15px 0;

@@ -413,9 +413,10 @@ export const inkjetOverviewPageZh: InkjetApplicationPage = {
         tocLabel: '按部件选型',
         blocks: [{
           type: 'paragraph',
-          text: '已知每次要补多少墨、可用多少时间，可以从隔膜泵选型开始。设备改管或需要频繁换桶，先区分固定管段与可拆接口。遇到停泵回流、过滤后流量下降或清洗液进入错误支路，再按过滤、止回与阀位选择部件。记录所用墨水和清洗液，两者都会接触到的管壁、密封和阀腔应一起核对。',
+          text: '已知每次要补多少墨、可用多少时间，可以从隔膜泵选型开始。试用 DPL30-DB 时，在工作温度下让实际墨水通过选定的滤芯，测出规定时间内送入副墨箱的墨量。设备改管或需要频繁换桶，先区分固定管段与可拆接口。遇到停泵回流、过滤后流量下降或清洗液进入错误支路，再按过滤、止回与阀位选择部件。记录所用墨水和清洗液，两者都会接触到的管壁、密封和阀腔应一起核对。',
           inlineLinks: [
             { text: '隔膜泵选型', href: inkjetPumpGuideLinkZh.href },
+            { text: dpl30.model, href: getDiaphragmPumpPath('en', dpl30.slug) },
             { text: '固定管段与可拆接口', href: connectionGuide.href },
             { text: '过滤、止回与阀位', href: flowControlGuide.href },
           ],
@@ -570,9 +571,10 @@ export const inkjetEquipmentPageZh = makeInkjetPage({
       tocLabel: '过滤与流路控制',
       blocks: [{
         type: 'paragraph',
-        text: '上游滤芯主要承担截污，喷头附近的末级过滤按喷头要求单独选。若停泵后副墨箱液位持续下降，先确认实际回流路径，再评估止回阀的开启压差会不会拖慢下次补墨。涉及换液时，把打印、清洗与断电三种状态下相通的端口画出来。清洗液切换指南给出了阀位和废液去向的核对方法。',
+        text: '上游滤芯主要承担截污，喷头附近的末级过滤按喷头要求单独选。若停泵后副墨箱液位持续下降，先确认实际回流路径，若采用 3.2 mm 内径软管，可评估 CV-BE-32-PP-N，并在最低工作液位下检查开启压差会不会拖慢下次补墨。涉及换液时，把打印、清洗与断电三种状态下相通的端口画出来。清洗液切换指南给出了阀位和废液去向的核对方法。',
         inlineLinks: [
           { text: '末级过滤', href: inkFiltration.href },
+          { text: 'CV-BE-32-PP-N', href: inkCheckValve.href },
           { text: '清洗液切换指南', href: cleaningFluidSwitching.href },
         ],
         references: ['digital-printing-filtration', 'inkjet-solenoid-valves'],
@@ -832,7 +834,11 @@ export const inkjetConnectionGuidePageZh = makeInkjetPage({
         {
           type: 'paragraph',
           text: '泵出口到过滤器的固定管段，若两端都是配套的平底密封端口，可按端口图比较恒永达 FEP 法兰管组件的翻边与螺纹；若滤器自带倒刺，则按软管内径和倒刺尺寸配管。固定墨路与管组件指南给出了两端接口的记录方法。经常拆下的墨桶，可按墨桶更换与维护快接指南选截止方式。CPC 与 HP 在调压组件至喷头的可拆连接上分别考察了断开溢墨和复接进气，换桶接口也应分开测这两项。',
-          inlineLinks: [{ text: fixedInkLines.label, href: fixedInkLines.href }, { text: inkTankQuickDisconnects.label, href: inkTankQuickDisconnects.href }],
+          inlineLinks: [
+            { text: '恒永达 FEP 法兰管组件', href: inkLineAssemblies[0].href },
+            { text: fixedInkLines.label, href: fixedInkLines.href },
+            { text: inkTankQuickDisconnects.label, href: inkTankQuickDisconnects.href },
+          ],
           references: ['assembly-range', 'barbed-selection', 'ink-quick-connects'],
         },
         {
@@ -879,8 +885,13 @@ const inkjetFixedInkLinesPageZh = makeInkjetPage({
       blocks: [
         {
           type: 'paragraph',
-          text: '把泵出口记作 A 端、过滤器入口记作 B 端，分别抄录螺纹制式、密封面和端口图号。相同螺纹可以旋入，密封端面和压紧位置仍可能不同。平底端口按设备图评估翻边管组件；卡箍或卡环端接按各自配套的接头、压紧件与管外径选。若一端是软管倒刺接口，按软管内径配倒刺，并核对软管壁厚、硬度和装配后的抗拔表现。',
-          inlineLinks: [{ text: '翻边管组件', href: '/en/resources/technical-articles/flanged-tubing-assemblies-selection-guide/' }, { text: '软管倒刺接口', href: barbedFittings.href }],
+          text: '把泵出口记作 A 端、过滤器入口记作 B 端，分别抄录螺纹制式、密封面和端口图号。相同螺纹可以旋入，密封端面和压紧位置仍可能不同。平底端口按设备图评估翻边管组件；若端口图指定卡环，可用卡环式 PFA 管组件核对管外径与卡环。若指定卡箍，按卡箍式 PTFE 管组件的配套螺母和压紧件核对端接。若一端是软管倒刺接口，按软管内径配倒刺，并核对软管壁厚、硬度和装配后的抗拔表现。',
+          inlineLinks: [
+            { text: '翻边管组件', href: '/en/resources/technical-articles/flanged-tubing-assemblies-selection-guide/' },
+            { text: '卡环式 PFA 管组件', href: inkLineAssemblies[1].href },
+            { text: '卡箍式 PTFE 管组件', href: inkLineAssemblies[2].href },
+            { text: '软管倒刺接口', href: barbedFittings.href },
+          ],
           references: ['assembly-range', 'barbed-selection'],
         },
         {
@@ -1062,8 +1073,8 @@ export const inkjetFlowControlPageZh = makeInkjetPage({
       blocks: [
         {
           type: 'paragraph',
-          text: '若补墨超时只出现在持续打印期间，可先在相同墨温和流量下比较新旧滤器的前后压差。若停泵后液位下降，重新启动又需要很久才出墨，应同时观察停机期间墨水流向哪里。供墨过滤与止回给出两种试验的测点和判读方法。',
-          inlineLinks: [{ text: inkFiltration.label, href: inkFiltration.href }],
+          text: '若补墨超时只出现在持续打印期间，可先在相同墨温和流量下比较新旧滤器的前后压差。若在滤器两侧使用 PDM5 测量绝压，先确认两个测点均在量程内，并检查测量误差是否小于要识别的压差变化。若停泵后液位下降，重新启动又需要很久才出墨，应同时观察停机期间墨水流向哪里。供墨过滤与止回给出两种试验的测点和判读方法。',
+          inlineLinks: [{ text: 'PDM5', href: inkPressureSensor.href }, { text: inkFiltration.label, href: inkFiltration.href }],
         },
         {
           type: 'paragraph',

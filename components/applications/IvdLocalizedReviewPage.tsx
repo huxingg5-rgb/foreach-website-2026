@@ -8,6 +8,8 @@ import AnalyticalApplicationDocument from '@/components/applications/analytical-
 import RelatedResourcesLoader from '@/components/common/related-resources/RelatedResourcesLoader';
 import EnglishReviewQueryBridge from './EnglishReviewQueryBridge';
 import type { ApplicationDocument } from '@/data/applications/analytical-documents/types';
+import { addClinicalDegassingReview } from '@/data/applications/english-locales/degassing-review';
+import { addEnglishTaskParagraphLinks } from '@/data/applications/english-locales/task-contextual-links';
 import { ivdDocumentHref, type IvdLocale } from '@/data/applications/ivd-locales/routes';
 import { ivdUi } from '@/data/applications/ivd-locales/ui';
 import { reviewDomains } from '@/data/applications/english-review';
@@ -20,6 +22,7 @@ import styles from './EnglishReviewPage.module.css';
 import newsStyles from '@/components/resources/news/NewsArticleClient.module.css';
 
 export default async function IvdLocalizedReviewPage({ locale, document }: { locale: IvdLocale; document: ApplicationDocument }) {
+  const article = locale === 'en' ? addEnglishTaskParagraphLinks(addClinicalDegassingReview(document), 'ivd') : document;
   const ui = ivdUi[locale];
   const copy = getApplicationIndexData(locale).copy;
   const productLinkCards = {
@@ -44,7 +47,7 @@ export default async function IvdLocalizedReviewPage({ locale, document }: { loc
       <Link className={newsStyles.backLink} href={parent.href!} prefetch={false} aria-label={`${ui.back}: ${parent.label}`} data-application-back-link>{`< ${ui.back}`}</Link>
     </div>
     {document.kind === 'hub' ? <EnglishReviewQueryBridge targets={getIvdQueryTargets(locale)} /> : null}
-    <AnalyticalApplicationDocument document={document} embedded locale={locale} labels={ui} hideRelatedResources productLinkCards={productLinkCards} navigation={<ApplicationGuideNavigation
+    <AnalyticalApplicationDocument document={article} embedded locale={locale} labels={ui} hideRelatedResources productLinkCards={productLinkCards} navigation={<ApplicationGuideNavigation
       key={href} id="ivd-application-navigation" ariaLabel={ui.navigation} overview={navigation.overview} groups={navigation.groups} currentHref={href}
       mobileTitle={navigation.overview.label} drawerEyebrow={ui.guide} drawerTitle={navigation.overview.label} browseLabel={ui.browse} closeLabel={ui.close}
     />} />

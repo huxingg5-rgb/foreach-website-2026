@@ -163,11 +163,11 @@ export default function IndustrialInkjetReviewPage({ page }: { page: InkjetAppli
     id: 'inkjet-diaphragm-pumps', label: nav.pumpGroup, defaultExpanded: key === 'guide',
     children: inkjetSceneKeys.map(pageLink),
   }, {
-    id: 'inkjet-tubing-and-fittings', label: nav.labels.connectionGuide, overview: pageLink('connectionGuide'),
-    children: [pageLink('fixedInkLines'), pageLink('inkTankQuickDisconnects')],
+    id: 'inkjet-tubing-and-fittings', label: nav.labels.connectionGuide,
+    children: [{ ...pageLink('connectionGuide'), label: nav.groupOverview }, pageLink('fixedInkLines'), pageLink('inkTankQuickDisconnects')],
   }, {
-    id: 'inkjet-filtration-and-flow-control', label: nav.labels.flowControlGuide, overview: pageLink('flowControlGuide'),
-    children: [pageLink('inkFiltration'), pageLink('cleaningFluidSwitching')],
+    id: 'inkjet-filtration-and-flow-control', label: nav.labels.flowControlGuide,
+    children: [{ ...pageLink('flowControlGuide'), label: nav.groupOverview }, pageLink('inkFiltration'), pageLink('cleaningFluidSwitching')],
   }]) : companion ? [{
     id: companion.slug, label: companion.title,
     overview: { label: companion.title, href: getLocalizedSiteHref(`/resources/technical-articles/${companion.slug}/`, locale) },
@@ -176,7 +176,12 @@ export default function IndustrialInkjetReviewPage({ page }: { page: InkjetAppli
   return (
     <div className={`${reviewStyles.page} ${contentStyles.page}`} lang={locale} data-application-content-page data-review-locale={page.contentLocale ? undefined : locale}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
-      <SiteBreadcrumb variant="bar" ariaLabel={ui.breadcrumb} items={breadcrumbs} />
+      <SiteBreadcrumb
+        variant="bar"
+        ariaLabel={ui.breadcrumb}
+        items={breadcrumbs}
+        singleLine={locale === 'en' ? { overflowLabel: 'Show more breadcrumb links' } : undefined}
+      />
       <div className={`${newsStyles.page} ${reviewStyles.reviewStatus}`}>
         <Link className={newsStyles.backLink} href={parent.href} prefetch={false} aria-label={`${ui.back} ${parent.label}`} data-application-back-link>{`< ${ui.back}`}</Link>
       </div>

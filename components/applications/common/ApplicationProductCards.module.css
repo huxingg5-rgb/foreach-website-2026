@@ -44,4 +44,13 @@
 .action { display: block; margin-top: auto; text-align: right; font-size: 13px; line-height: 1.5; color: #173368; transition: color 150ms ease; }
 .productLinks .card:hover .action, .productLinks .card:focus-visible .action { color: var(--brand-cyan, #09e9b4); }
 
+@media (max-width: 600px) {
+  .productLinks .cards[data-multiple-products] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .productLinks .cards[data-multiple-products] .details { padding: 10px 12px 12px; }
+  .productLinks .cards[data-multiple-products] .card .title { display: block; }
+}
+
 @media (prefers-reduced-motion: reduce) { .productLinks .card, .action { transition: none; } }

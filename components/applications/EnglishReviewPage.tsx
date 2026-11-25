@@ -18,6 +18,7 @@ import { getReviewFooterPlan } from '@/data/applications/english-review-resource
 import { getReviewHierarchyNavigation, getReviewHierarchyTrail } from '@/data/applications/english-review-hierarchy';
 import { getEnglishApplicationDocument, getEnglishApplicationMetadata, getEnglishApplicationSchema, translateApplicationEnglish } from '@/services/applications/english-localized';
 import { refineEnglishGuideCta } from '@/data/applications/english-locales/refine-guides';
+import { addEnglishTaskParagraphLinks } from '@/data/applications/english-locales/task-contextual-links';
 
 export function reviewMetadata(document: ApplicationDocument, kind: EnglishApplicationKind): Metadata {
   return getEnglishApplicationMetadata(document, kind);
@@ -26,7 +27,7 @@ export function reviewMetadata(document: ApplicationDocument, kind: EnglishAppli
 export default function EnglishReviewPage({ kind, document: source = getReviewHub(kind), currentHref = reviewBase(kind) }: {
   kind: EnglishApplicationKind; document?: ApplicationDocument; currentHref?: string;
 }) {
-  const document = getEnglishApplicationDocument(source, kind);
+  const document = addEnglishTaskParagraphLinks(getEnglishApplicationDocument(source, kind), kind);
   const domain = translateApplicationEnglish(reviewDomains[kind]);
   const isHub = source.kind === 'hub';
   const isLc = source.slug === 'liquid-chromatography' || source.slug.startsWith('lc-');

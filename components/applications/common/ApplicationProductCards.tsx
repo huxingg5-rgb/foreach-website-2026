@@ -18,8 +18,11 @@ export default function ApplicationProductCards({ products, viewDetails }: {
   viewDetails: string;
 }) {
   if (!products.length) return null;
+  const hasMultipleProducts = products.length > 1;
+  const imageSizes = hasMultipleProducts ? "(max-width: 600px) 50vw, 280px" : "(max-width: 600px) 100vw, 280px";
+
   return <div className={styles.productLinks} data-application-product-cards>
-    <ul className={styles.cards}>
+    <ul className={styles.cards} data-multiple-products={hasMultipleProducts || undefined}>
       {products.map(product => <li key={`${product.href}-${product.title}`}>
         <Link className={styles.card} href={product.href} prefetch={false}
           data-analytics-section="application_products"
@@ -27,7 +30,7 @@ export default function ApplicationProductCards({ products, viewDetails }: {
           data-analytics-product-name={product.title}>
           <div className={styles.image} data-application-product-image>
             <div className={styles.imageInner}>
-              <Image src={product.imageSrc} alt={product.imageAlt || product.title} fill sizes="(max-width: 600px) 100vw, 280px" style={product.imageScale ? { transform: `scale(${product.imageScale})` } : undefined} />
+              <Image src={product.imageSrc} alt={product.imageAlt || product.title} fill sizes={imageSizes} style={product.imageScale ? { transform: `scale(${product.imageScale})` } : undefined} />
             </div>
           </div>
           <div className={styles.details}>

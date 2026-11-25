@@ -21,6 +21,7 @@
 
 import Link from "next/link";
 import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
+import SingleLineBreadcrumb from "./SingleLineBreadcrumb";
 
 import styles from "./SiteBreadcrumb.module.css";
 
@@ -38,6 +39,7 @@ type SiteBreadcrumbProps = {
   ariaLabel?: string;
   variant?: SiteBreadcrumbVariant;
   className?: string;
+  singleLine?: { overflowLabel: string };
 };
 
 function isResourcesRootHref(href?: string) {
@@ -56,47 +58,43 @@ export default function SiteBreadcrumb({
   ariaLabel = "Breadcrumb",
   variant = "bar",
   className = "",
+  singleLine,
 }: SiteBreadcrumbProps) {
   if (!items.length) {
     return null;
   }
+
+  const entries = items.map((item, index) => {
+    const label = normalizeProductBreadcrumbLabel(item.label, item.href);
+    const isLast = index === items.length - 1;
+    const content = item.href && !isResourcesRootHref(item.href) && (!isLast || item.linkCurrent) ? (
+      <Link href={item.href} aria-current={isLast ? "page" : undefined}>{label}</Link>
+    ) : isLast ? <strong>{label}</strong> : <span>{label}</span>;
+
+    return { label, content };
+  });
 
   return (
     <nav
       className={`${styles.breadcrumb} ${styles[variant]} ${className}`}
       aria-label={ariaLabel}
     >
-      <div className={styles.inner}>
-        {items.map((sourceItem, index) => {
-          const item = { ...sourceItem, label: normalizeProductBreadcrumbLabel(sourceItem.label, sourceItem.href) };
-          const isLast = index === items.length - 1;
-          const canLink = Boolean(
-            item.href &&
-            !isResourcesRootHref(item.href) &&
-            (!isLast || item.linkCurrent),
-          );
-
-          return (
+      {singleLine ? (
+        <SingleLineBreadcrumb items={entries} overflowLabel={singleLine.overflowLabel} />
+      ) : (
+        <div className={styles.inner}>
+          {entries.map((item, index) => (
             <span className={styles.item} key={`${item.label}-${index}`}>
-              {canLink ? (
-                <Link href={item.href!} aria-current={isLast ? "page" : undefined}>
-                  {item.label}
-                </Link>
-              ) : isLast ? (
-                <strong>{item.label}</strong>
-              ) : (
-                <span>{item.label}</span>
-              )}
-
-              {!isLast ? (
+              {item.content}
+              {index < entries.length - 1 ? (
                 <span className={styles.separator} aria-hidden="true">
                   /
                 </span>
               ) : null}
             </span>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }

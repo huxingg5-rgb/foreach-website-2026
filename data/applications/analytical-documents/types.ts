@@ -1,5 +1,11 @@
 /** Structured application copy. HTML and runtime rendering are kept out of the content source. */
-export type ApplicationLink = { label: string; href: string; description?: string; anchorId?: string };
+export type ApplicationLink = {
+  label: string;
+  href: string;
+  description?: string;
+  anchorId?: string;
+  cardImage?: { src: string; alt: string };
+};
 export type ApplicationInlineLink = { text: string; href: string; title?: string };
 export type ApplicationFlowPath = { nodes: readonly string[]; focusIndex?: number };
 export type ApplicationBlock = (
@@ -15,7 +21,7 @@ export type ApplicationBlock = (
       note?: string;
     })
   | { type: "callout"; title?: string; text: string }
-  | { type: "links"; items: readonly ApplicationLink[] }
+  | { type: "links"; items: readonly ApplicationLink[]; viewDetails?: string }
 ) & {
   references?: readonly string[];
   /** Explicit, first-occurrence links inside paragraph or callout copy. */
@@ -26,6 +32,7 @@ export type ApplicationSection = {
   id: string;
   title: string;
   tocLabel?: string;
+  lang?: string;
   blocks: readonly ApplicationBlock[];
 };
 export type ApplicationReference = { id: string; title: string; href: string };

@@ -83,13 +83,22 @@ function Citations({ ids, referenceMap, referenceLabel }: { ids?: readonly strin
   );
 }
 
-function LinkList({ items, productLinkCards }: { items: readonly ApplicationLink[]; productLinkCards?: ProductLinkCardsOptions }) {
-  if (productLinkCards && items.length && items.every(item => !item.anchorId && productLinkCards.imagesByHref[item.href])) {
+function LinkList({ items, productLinkCards, viewDetails }: {
+  items: readonly ApplicationLink[];
+  productLinkCards?: ProductLinkCardsOptions;
+  viewDetails?: string;
+}) {
+  if (productLinkCards && items.length && items.every(item => !item.anchorId && (item.cardImage?.src || productLinkCards.imagesByHref[item.href]))) {
     return <ApplicationProductCards
       products={items.map(item => ({
-        title: item.label, href: item.href, imageSrc: productLinkCards.imagesByHref[item.href], imageScale: productLinkCards.imageScalesByHref?.[item.href], description: item.description,
+        title: item.label,
+        href: item.href,
+        imageSrc: item.cardImage?.src ?? productLinkCards.imagesByHref[item.href],
+        imageAlt: item.cardImage?.alt,
+        imageScale: item.cardImage ? undefined : productLinkCards.imageScalesByHref?.[item.href],
+        description: item.description,
       }))}
-      viewDetails={productLinkCards.viewDetails}
+      viewDetails={viewDetails ?? productLinkCards.viewDetails}
     />;
   }
   return (
@@ -254,7 +263,7 @@ function Block({ block, referenceMap, labels, productLinkCards }: { block: Appli
     case "links":
       return (
         <div>
-          <LinkList items={block.items} productLinkCards={productLinkCards} />
+          <LinkList items={block.items} productLinkCards={productLinkCards} viewDetails={block.viewDetails} />
           {block.references?.length ? <p className={styles.citationRow}><span className={styles.visuallyHidden}>{labels.sources}:</span>{citations}</p> : null}
         </div>
       );
@@ -352,7 +361,7 @@ function Outline({ document, labels, localized = false }: { document: Applicatio
         <p className={styles.outlineTitle}>{labels.onThisPage}</p>
         <div className={styles.outlineLinks}>
           {document.sections.map((section) => (
-            <a key={section.id} href={`#${section.id}`} data-outline-link={section.id}>
+            <a key={section.id} href={`#${section.id}`} data-outline-link={section.id} lang={section.lang}>
               {section.tocLabel ?? section.title}
             </a>
           ))}
@@ -444,7 +453,7 @@ export default function AnalyticalApplicationDocument({
             aria-labelledby="application-document-title"
           >
           {document.sections.map((section, index) => (
-            <section key={section.id} id={section.id} data-document-section className={styles.documentSection} aria-labelledby={`${section.id}-heading`}>
+            <section key={section.id} id={section.id} data-document-section className={styles.documentSection} aria-labelledby={`${section.id}-heading`} lang={section.lang}>
               <h2 id={`${section.id}-heading`} className={styles.numberedHeading}>
                 <span className={styles.sectionNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                 <span>{section.title}</span>

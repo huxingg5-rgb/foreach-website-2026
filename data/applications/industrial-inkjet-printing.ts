@@ -50,7 +50,7 @@ export const industrialInkjetPrinting = {
     {
       id: 'ink-supply',
       href: inkjetRoutes.supply,
-      title: 'Ink Supply & Refill',
+      title: 'Ink Refill Pumps',
       image: '/images/applications/industrial-inkjet-printing/ink-supply.webp',
       menuPhoto: {
         src: '/images/applications/industrial-inkjet-printing/menu/ink-supply.webp',
@@ -63,7 +63,7 @@ export const industrialInkjetPrinting = {
     {
       id: 'ink-recirculation',
       href: inkjetRoutes.recirculation,
-      title: 'Ink Recirculation & Return',
+      title: 'Ink Recirculation Pumps',
       image: '/images/applications/industrial-inkjet-printing/ink-recirculation.webp',
       menuPhoto: {
         src: '/images/applications/industrial-inkjet-printing/menu/ink-recirculation.webp',
@@ -76,7 +76,7 @@ export const industrialInkjetPrinting = {
     {
       id: 'printhead-cleaning',
       href: inkjetRoutes.cleaning,
-      title: 'Printhead Cleaning & Waste Ink',
+      title: 'Waste Ink Pumps',
       image: '/images/applications/industrial-inkjet-printing/printhead-cleaning.webp',
       menuPhoto: {
         src: '/images/applications/industrial-inkjet-printing/menu/printhead-cleaning.webp',

@@ -1,6 +1,8 @@
 import type { LocaleCode } from '@/data/languages';
 import { getEnabledLocaleCodes } from '@/data/languages';
 import { getLocalizedSiteHref } from '@/lib/seo/site-url';
+import { inkSupplyDegassingReference, inkSupplyDegassingSection } from './english-locales/degassing-review';
+import { addEnglishInkjetContextualLinks } from './english-locales/inkjet-contextual-links';
 import { getInkjetFiltrationPage } from './industrial-inkjet-filtration';
 import { inkjetChildPagesZh, inkjetOverviewPageZh, type InkjetApplicationPage } from './industrial-inkjet-printing.zh';
 import type { InkjetLocale, InkjetRouteKey } from './inkjet-guide-navigation';
@@ -53,6 +55,17 @@ export function getLocalizedInkjetPage(locale: InkjetLocale, key: InkjetRouteKey
   const source = templates.get(routes[key]);
   if (!source) throw new Error(`Missing industrial inkjet page: ${key}`);
   const page = translate({ ...source, document: { ...source.document, seoTitle: '' } }, locale);
-  page.document.seoTitle = page.document.title + ' | FOREACH';
-  return { ...page, contentLocale: locale };
+  const localized = { ...page.document, seoTitle: page.document.title + ' | FOREACH' };
+  const document = locale === 'en' ? addEnglishInkjetContextualLinks(key, localized) : localized;
+  if (locale !== 'en' || key !== 'supply') return { ...page, contentLocale: locale, document };
+
+  return {
+    ...page,
+    contentLocale: locale,
+    document: {
+      ...document,
+      sections: document.sections.flatMap(section => section.id === 'ink-supply-validation' ? [section, inkSupplyDegassingSection] : [section]),
+      references: [...document.references, inkSupplyDegassingReference],
+    },
+  };
 }
