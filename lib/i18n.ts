@@ -74,7 +74,7 @@ export type HomeText = {
 // 3. 避免 /zh 和 / 冲突
 const siteLanguageFlags: Record<LocaleCode, string> = {
   "zh-CN": "cn",
-  en: "gb",
+  en: "us",
   es: "es",
   fr: "fr",
   ko: "kr",
