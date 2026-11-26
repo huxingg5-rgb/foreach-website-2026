@@ -24,6 +24,7 @@ export function getFlangedDrawingTemplate(choice: FlangedTubingChoice) {
 }
 const escape = (v: unknown) => String(v ?? "").replace(/[<>&"']/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;", "'": "&apos;" })[c]!);
 const num = (v: number) => Number(v.toFixed(3));
+const drawingReference = `<text x="1130" y="48" font-family="Noto Sans CJK SC,Microsoft YaHei,Arial,sans-serif" font-size="23" fill="#161c24" fill-opacity=".62">仅供选型参考</text><text x="1130" y="72" font-family="Arial,sans-serif" font-size="18" fill="#161c24" fill-opacity=".62">FOR REFERENCE ONLY</text>`;
 function drawingRenderer(locale: string, restore: (text: string) => string) {
   type LocalizedText = { localizedText: string };
   const tr = (value: unknown) => {
@@ -205,7 +206,9 @@ function frame(record: FlangedConfiguration, page: number, total: number) {
     s += `<g data-bom-part="${r.n}">` + line(90, top + rh, 700, top + rh) + text(120, top + rh / 2 + 4, r.n, 13, "middle") + fitted(158, top + rh / 2 + 4, r.code, 145, 12) + specification + "</g>";
   });
   s += rect(700, 907, 590, 218) + line(920, 907, 920, 1125) + line(770, 907, 770, 1082) + line(850, 907, 850, 1082);
-  ["选型", "制图", "审核", "工程", "批准"].forEach((role, i) => { const top = 907 + i * 35; s += text(708, top + 22, role, 13, "start", 58) + line(700, top + 35, 920, top + 35); if (i === 0) s += fitted(777, top + 22, v.contact || "", 66, 12) + text(854, top + 12, "日期", 9) + fitted(854, top + 27, record.updatedAt.slice(0, 10), 62, 10); });
+  for (const row of [942, 977, 1012, 1047, 1082]) {
+    s += line(700, row, 920, row);
+  }
   s += text(708, 1110, `版本  R${record.revision}`, 15);
   s += text(930, 928, "Foreach 组件编码#", 13) + line(920, 966, 1290, 966) + text(930, 985, "组件名称", 13) + fitted(937, 1013, `${record.name} · ${getAssemblyTube(v.tubeModel)?.material} 管组件`, 340, 18);
   s += line(920, 1028, 1290, 1028) + text(930, 1047, "客户零件号#", 13) + fitted(937, 1073, v.customerPart || "", 338, 16) + line(920, 1088, 1290, 1088);
@@ -232,7 +235,7 @@ function buildSheets(record: FlangedConfiguration): string[] {
   const { inline, continuation } = drawingDetails(current, true);
   s += inline;
   const total = 1 + continuation.length;
-  const shell = (content: string, page: number) => `<svg xmlns="http://www.w3.org/2000/svg" width="${t.pageWidth}pt" height="${t.pageHeight}pt" viewBox="0 0 1511 1143" role="img" lang="${assemblyHtmlLocale(locale)}" aria-label="${escape(tr(t.label))}" data-template-key="${t.key}" data-vector-drawing="true"><metadata>FOREACH HFL/HFL6 selection-sheet layout. FL/FL6 are customer-confirmed abbreviated series names. Exact catalog fitting and accessory vectors; installation lengths are diagrammatic.</metadata>${rect(0, 0, 1511, 1143, "#fff", "none", 0)}${frame(current, page, total)}${content}</svg>`;
+  const shell = (content: string, page: number) => `<svg xmlns="http://www.w3.org/2000/svg" width="${t.pageWidth}pt" height="${t.pageHeight}pt" viewBox="0 0 1511 1143" role="img" lang="${assemblyHtmlLocale(locale)}" aria-label="${escape(tr(t.label))}" data-template-key="${t.key}" data-vector-drawing="true"><metadata>FOREACH HFL/HFL6 selection-sheet layout. FL/FL6 are customer-confirmed abbreviated series names. Exact catalog fitting and accessory vectors; installation lengths are diagrammatic.</metadata>${rect(0, 0, 1511, 1143, "#fff", "none", 0)}${frame(current, page, total)}${content}${drawingReference}</svg>`;
   return [shell(s, 1), ...continuation.map((values, i) => shell(continuationContent(values), i + 2))];
 }
 /** Generic mixed-end selection sheet. Fitting paths come from each exact bore/
@@ -284,7 +287,7 @@ function buildAssemblySheets(record: FlangedConfiguration): string[] {
   const { inline, continuation } = drawingDetails(current, false);
   s += inline;
   const total = continuation.length + 1;
-  const shell = (body: string, page: number) => `<svg xmlns="http://www.w3.org/2000/svg" width="776.88pt" height="587.76pt" viewBox="0 0 1511 1143" role="img" lang="${assemblyHtmlLocale(locale)}" data-template-key="assembly" data-vector-drawing="true"><metadata>Original fitting PDF paths and matching CAD accessories share physical millimetre units. Tube length and exploded gaps are diagrammatic.</metadata>${rect(0, 0, 1511, 1143, "#fff", "none", 0)}${frame(current, page, total)}${body}</svg>`;
+  const shell = (body: string, page: number) => `<svg xmlns="http://www.w3.org/2000/svg" width="776.88pt" height="587.76pt" viewBox="0 0 1511 1143" role="img" lang="${assemblyHtmlLocale(locale)}" data-template-key="assembly" data-vector-drawing="true"><metadata>Original fitting PDF paths and matching CAD accessories share physical millimetre units. Tube length and exploded gaps are diagrammatic.</metadata>${rect(0, 0, 1511, 1143, "#fff", "none", 0)}${frame(current, page, total)}${body}${drawingReference}</svg>`;
   return [shell(s, 1), ...continuation.map((values, i) => shell(continuationContent(values), i + 2))];
 }
   return { buildSheets };
@@ -332,6 +335,8 @@ export async function portableFlangedDrawingSvg(svg: string) {
   for (const el of Array.from(doc.querySelectorAll("text"))) {
     const t = textLayout(el, font), group = doc.createElementNS("http://www.w3.org/2000/svg", "g");
     group.setAttribute("aria-label", t.value); group.setAttribute("fill", el.getAttribute("fill") || "#111");
+    const opacity = el.getAttribute("fill-opacity");
+    if (opacity) group.setAttribute("fill-opacity", opacity);
     if (t.rotation) group.setAttribute("transform", el.getAttribute("transform")!);
     let pen = 0;
     t.run.glyphs.forEach((glyph, i) => {
@@ -393,7 +398,7 @@ export async function createFlangedDrawingPdf(sheets: string[], title: string, l
         const glyphScale = t.size * sx / source.font.unitsPerEm;
         t.run.glyphs.forEach((glyph, index) => {
           const position = t.run.positions[index], d = glyph.path.toSVG();
-          if (d) page.drawSvgPath(d, { x: (pen + position.xOffset) * glyphScale, y: -position.yOffset * glyphScale, scale: glyphScale, color: fill || rgb(.067, .067, .067) });
+          if (d) page.drawSvgPath(d, { x: (pen + position.xOffset) * glyphScale, y: -position.yOffset * glyphScale, scale: glyphScale, color: fill || rgb(.067, .067, .067), opacity: el.hasAttribute("fill-opacity") ? n("fill-opacity") : undefined });
           pen += position.xAdvance;
         });
         page.pushOperators(popGraphicsState());

@@ -3,6 +3,7 @@
 import { trackResourceDownload, trackResourceView } from "@/lib/analytics/track-event";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import ProductDrawingReference from "@/components/common/ProductDrawingReference";
 import ConfiguratorButton from "../configurator/ConfiguratorButton";
 import buttonStyles from "../configurator/ConfiguratorButton.module.css";
 import frameStyles from "../configurator/ConfiguratorDialogFrame.module.css";
@@ -60,6 +61,7 @@ export default function FlangedTubingDrawingDialog({ record, onClose, locale = "
     <header className={shared.header}><div className={shared.headerText}><h2><span translate="no">{record.name}</span> · 2D 图纸</h2><p>R{record.revision} · {template.label} · 按原始零件图纸生成</p></div><ConfiguratorButton ref={closeRef} variant="close" aria-label="关闭2D图纸" onClick={onClose} /></header>
     <div className={styles.drawingToolbar}><div role="group" aria-label="图纸页面">{sheets.map((_, i) => <ConfiguratorButton key={i} active={activePage === i} aria-pressed={activePage === i} onClick={() => setPage(i)}>{i === 0 ? "选型图纸" : `补充说明 ${i}`}</ConfiguratorButton>)}</div><span>{invalid ? "需要重新匹配配置" : `第 ${activePage + 1} / ${sheets.length} 页`}</span></div>
     {invalid ? <p className={styles.error} role="alert">{invalid} 请返回配置重新匹配接头与管径。</p> : <div className={styles.drawingViewport} data-flanged-generated-drawing="true" dangerouslySetInnerHTML={{ __html: sheets[activePage] }} />}
-    <footer className={`${shared.footer} ${frameStyles.footer}`}><div className={`${shared.notice} ${frameStyles.notice}`} role="status">{error || invalid || "接头外形引用对应原始零件图。管长、规格及物料随当前配置更新；工程签核栏保留。"}</div><div className={shared.actions}><ConfiguratorButton disabled={busy || Boolean(invalid)} onClick={pdf}>{busy ? "正在导出…" : "下载PDF"}</ConfiguratorButton></div></footer>
+    {sheets.length > 0 ? <ProductDrawingReference /> : null}
+    <footer className={`${shared.footer} ${frameStyles.footer}`}><div className={`${shared.notice} ${frameStyles.notice}`} role="status">{error || invalid || "接头外形引用对应原始零件图。管长、规格及物料随当前配置更新。"}</div><div className={shared.actions}><ConfiguratorButton disabled={busy || Boolean(invalid)} onClick={pdf}>{busy ? "正在导出…" : "下载PDF"}</ConfiguratorButton></div></footer>
   </dialog>, locale), document.body);
 }

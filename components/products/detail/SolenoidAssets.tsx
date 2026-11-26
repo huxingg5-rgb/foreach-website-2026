@@ -33,7 +33,7 @@ export default function SolenoidAssets({slug, locale, mode, active, variant, onV
   return <div data-solenoid-assets={mode}>
     {!externalResourceTabs && <SolenoidVariantSelector slug={slug} locale={locale} variant={variant} onVariant={onVariant} />}
     {!id ? <div role="status" style={{minHeight: 300, display: "grid", placeItems: "center", textAlign: "center", color: "#637087"}}>{text[mode === "3d" ? 2 : 3]}</div>
-      : mode === "drawing" ? <PdfDrawingPreview pdfPreviewUrl={`${id}#toolbar=0&navpanes=0&scrollbar=1`} autoOpen deferDesktopUntilOpen showPreviewDescription={false}
+      : mode === "drawing" ? <PdfDrawingPreview productDrawing pdfPreviewUrl={`${id}#toolbar=0&navpanes=0&scrollbar=1`} autoOpen deferDesktopUntilOpen showPreviewDescription={false}
           documentTitle={`${solenoidConfigurationName(slug, locale)} ${config.key === "two" ? text[config.state === "no" ? 1 : config.state === "nc" ? 0 : variant] : ""}`}
           text={{title: fittingText("2D 图纸", locale), loadingLabel: fittingText("2D 图纸加载中", locale), previewButton: fittingText("点击预览图纸", locale), description: "", errorLabel: fittingText("图纸加载失败，请刷新页面后重试", locale), retryLabel: fittingText("重新加载", locale)}} />
       : <ProductCadViewer modelId={id} title={solenoidConfigurationName(slug, locale)} locale={locale} active={active} externalResourceTabs={externalResourceTabs} />}

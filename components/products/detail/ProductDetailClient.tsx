@@ -4550,7 +4550,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   }
                 >
                   <PdfDrawingPreview
-                    pdfPreviewUrl={drawingPreviewUrl}
+                    productDrawing pdfPreviewUrl={drawingPreviewUrl}
                     previewHref={resourceLocale ? drawingDocumentUrl : undefined}
                     deferDesktopUntilOpen={Boolean(resourceLocale || rplAssets)}
                     previousPageLabel={resourceCopy?.previousPage}
@@ -4572,7 +4572,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 </PumpUploadedFileGuard>
               ) : drawingPreviewUrl ? (
                 <PdfDrawingPreview
-                  pdfPreviewUrl={drawingPreviewUrl}
+                  productDrawing pdfPreviewUrl={drawingPreviewUrl}
                   previewHref={resourceLocale ? drawingDocumentUrl : undefined}
                   deferDesktopUntilOpen={Boolean(resourceLocale)}
                   previousPageLabel={resourceCopy?.previousPage}

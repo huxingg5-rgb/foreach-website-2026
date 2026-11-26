@@ -1,3 +1,4 @@
+import ProductDrawingReference from "@/components/common/ProductDrawingReference";
 import type { TubingAssemblyLocale } from "@/data/products/tubing-assemblies/locales";
 import { getAssemblyDetailMedia } from "@/data/products/tubing-assemblies/detail-media";
 import { assemblyDetailView } from "./assembly-detail-view";
@@ -78,6 +79,7 @@ export default function TubingAssemblyDetailContent({family,configuration,sectio
           {row.drawings.length>1 ? `${drawing.materials} · PDF` : "查看 PDF"}<span className={layout.drawingModel}>{drawing.model}</span>
         </a>)}</div> : "按所选型号确认",
       ])} />
+      {fittingRows.some(row => row.drawings.length) ? <ProductDrawingReference /> : null}
     </Section>
   </section>, locale, [AssemblyGuideFigure]);
 

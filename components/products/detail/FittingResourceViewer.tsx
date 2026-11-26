@@ -217,7 +217,7 @@ export default function FittingResourceViewer({ locale = "zh", drawings, modelSo
             {drawings.map(item => <option key={item.role} value={item.role}>{item.label} · {item.model}</option>)}
           </select>}
           {drawing?.url ? drawingPreview ?? <PdfDrawingPreview
-            pdfPreviewUrl={drawingPreviewHref(drawing.url)} documentTitle={drawing.model} autoOpen deferDesktopUntilOpen
+            productDrawing pdfPreviewUrl={drawingPreviewHref(drawing.url)} documentTitle={drawing.model} autoOpen deferDesktopUntilOpen
             showPreviewDescription={false} text={{ title: fittingText("2D 图纸", locale), loadingLabel: fittingText("2D 图纸加载中", locale), previewButton: fittingText("点击预览图纸",locale), description: "", errorLabel: fittingText("图纸加载失败，请刷新页面后重试",locale), pageLabel: fittingText("页",locale), retryLabel: fittingText("重新加载",locale) }}
             previousPageLabel={fittingText("上一页",locale)} nextPageLabel={fittingText("下一页",locale)}
             previousPageVisibleLabel={fittingText("上一页",locale)} nextPageVisibleLabel={fittingText("下一页",locale)}

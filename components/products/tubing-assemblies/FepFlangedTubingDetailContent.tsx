@@ -1,3 +1,4 @@
+import ProductDrawingReference from "@/components/common/ProductDrawingReference";
 import type { TubingAssemblyLocale } from "@/data/products/tubing-assemblies/locales";
 import { getAssemblyDetailMedia } from "@/data/products/tubing-assemblies/detail-media";
 import { assemblyDetailView } from "./assembly-detail-view";
@@ -69,6 +70,7 @@ export default function FepFlangedTubingDetailContent({ section, locale = "zh-CN
         item.drawing ? <a href={item.drawing.drawingUrl} key={item.drawing.model} target="_blank" rel="noopener noreferrer"
           aria-label={`查看 ${item.family} ${item.thread} 接管外径 1.6 mm 接头二维图纸`}>查看 PDF<span className={styles.drawingModel}>{item.drawing.model}</span></a> : "按所选型号确认",
       ])} />
+      {referenceFittings.some(item => item.drawing) ? <ProductDrawingReference /> : null}
     </Section>
   </section>, locale, [SelectionFigure]);
 

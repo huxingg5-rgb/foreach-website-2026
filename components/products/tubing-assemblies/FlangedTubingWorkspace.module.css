@@ -43,6 +43,7 @@
 .drawingDialog::backdrop { background: #17336866; }
 .drawingDialog > header { flex-shrink: 0; min-height: 102px; }
 .drawingDialog > footer { flex-shrink: 0; min-height: 86px; }
+.drawingDialog > [data-product-drawing-reference] { flex-shrink: 0; margin-inline: 16px; }
 .drawingToolbar { display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 24px; font-size: 12px; }
 .drawingToolbar > div { display: flex; flex-wrap: wrap; gap: 6px; }
 .drawingToolbar > span { flex-shrink: 0; }

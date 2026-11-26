@@ -13,6 +13,7 @@
 
 import FittingReplacementDrawingPreview from "@/components/resources/fitting-replacement/FittingReplacementDrawingPreview";
 
+import ProductDrawingReference from "./ProductDrawingReference";
 import styles from "./PdfDrawingPreview.module.css";
 
 type PdfDrawingPreviewText = {
@@ -33,6 +34,7 @@ type PdfDrawingPreviewProps = {
   autoOpen?: boolean;
   deferDesktopUntilOpen?: boolean;
   showPreviewDescription?: boolean;
+  productDrawing?: boolean;
   analyticsResourceId?: string;
   analyticsResourceType?: string;
   analyticsSection?: string;
@@ -50,6 +52,7 @@ export default function PdfDrawingPreview({
   autoOpen = false,
   deferDesktopUntilOpen = false,
   showPreviewDescription = true,
+  productDrawing = false,
   analyticsResourceId,
   analyticsResourceType,
   analyticsSection,
@@ -86,6 +89,7 @@ export default function PdfDrawingPreview({
         previousPageVisibleLabel={previousPageVisibleLabel}
         nextPageVisibleLabel={nextPageVisibleLabel}
       />
+      {productDrawing && pdfPreviewUrl ? <ProductDrawingReference /> : null}
     </div>
   );
 }
