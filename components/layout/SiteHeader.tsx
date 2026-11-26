@@ -3,6 +3,7 @@
 import Image from "next/image"; // 引入 Next.js 图片组件，用于导航栏产品图片展示
 import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于站内跳转
 import dynamic from "next/dynamic";
+import headerToolStyles from "./SiteHeaderTools.module.css";
 import tubingMenuStyles from "./SiteHeaderTubingMenu.module.css";
 import { usePathname, useRouter } from "next/navigation"; // 引入路径和路由工具，用于语言判断与按意图预取
 import {
@@ -1224,7 +1225,7 @@ const isFittingReplacementDetailPage =
             {/* PC 端搜索按钮：点击后中间导航区域切换为搜索模式 */}
             <button
               ref={searchTriggerRef}
-              className="site-search-trigger"
+              className={`site-search-trigger ${headerToolStyles.control}`}
               type="button"
               aria-label={headerText.searchButtonAriaLabel}
               aria-expanded={isSearchOpen}
@@ -1245,25 +1246,30 @@ const isFittingReplacementDetailPage =
             {/* 语言栏 */}
             <div
               ref={languageSwitcherRef}
-              className={`language-switcher ${isLanguageOpen ? "language-switcher-open" : ""
+              className={`language-switcher ${headerToolStyles.languageSwitcher} ${isLanguageOpen ? "language-switcher-open" : ""
                 }`}
               onMouseEnter={handleLanguageMouseEnter}
               onMouseLeave={handleLanguageMouseLeave}
             >
               <button
-                className="language-summary"
+                className={`language-summary ${headerToolStyles.control}`}
                 type="button"
                 aria-label={headerText.languageAriaLabel}
                 aria-expanded={isLanguageOpen}
                 onClick={handleLanguageButtonClick}
                 title={headerText.languageSwitchTitle}
               >
-                {/* 语言栏固定显示英文单词 Language */}
-                <span className="language-summary-label">Language</span>
-
-                <span className="language-summary-arrow" aria-hidden="true">
-                  ▾
-                </span>
+                <svg
+                  className="language-summary-icon"
+                  viewBox="0 0 1024 1024"
+                  width={22}
+                  height={22}
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M631.872 905.6c-11.328-21.568-23.424-52.928-16.768-71.68a49.024 49.024 0 0 1 19.392-26.88c12.224-9.984 28.992-23.616 42.304-58.176 5.12-13.376 8.512-26.816 11.712-39.744 11.776-47.04 16-54.272 50.112-50.368 25.6 3.072 41.472 15.36 59.84 29.632 18.048 14.016 38.592 28.864 66.816 33.728a412.16 412.16 0 0 1-233.408 183.424m-472.768-182.72c29.76-3.584 62.272-13.952 85.504-39.296 25.664-28.032 25.856-64.64 25.984-93.952 0.192-40 2.432-51.008 22.656-58.56 27.648-10.24 40.192-0.448 66.176 22.592 15.232 13.568 32.512 28.928 55.488 35.968 27.072 8.32 59.52 4.48 86.656-10.432 27.072-14.72 47.168-39.744 55.68-69.44h0.192l0.256-0.96 0.256-0.768c0.32-1.024 0.32-1.92 0.64-2.944 1.984-6.976 3.392-14.016 4.288-20.992 0.448-3.136 0.64-5.952 0.832-8.96 0.192-2.432 0.512-4.864 0.64-7.232a333.696 333.696 0 0 0-0.896-47.36 361.728 361.728 0 0 1-1.152-20.928 35.328 35.328 0 0 1 4.672-18.432c5.632-2.688 20.608-5.376 30.912-7.168 28.608-5.056 63.616-11.456 84.736-36.288l0.32-0.192h-0.064c1.28-1.536 2.624-2.816 3.776-4.48 35.712-50.304 33.536-102.336-5.632-135.744a129.408 129.408 0 0 0-9.664-7.168c-23.04-16-32.896-27.328-26.176-48.128 1.984-6.272 4.16-11.712 6.272-16.64A411.264 411.264 0 0 1 923.456 512c0 49.536-9.28 96.832-25.28 140.8a76.544 76.544 0 0 1-15.168 2.944c-14.08 0-24.32-7.36-42.496-21.568-22.016-17.088-49.408-38.272-93.888-43.52-95.872-11.392-113.984 59.52-124.608 101.76-2.688 10.816-5.312 21.76-9.28 31.872-6.72 17.536-12.288 22.08-21.568 29.632-12.032 9.856-28.544 23.296-40.576 56.96-13.44 37.312-1.216 79.104 12.16 109.056-16.64 2.112-33.536 3.52-50.752 3.52a410.88 410.88 0 0 1-352.832-200.64m352.768-622.272c24.96 0 49.216 2.56 72.896 6.848a209.6 209.6 0 0 0-4.928 13.504c-23.488 72.768 33.6 112.448 52.288 125.44l4.288 3.008c4.16 3.584 14.784 13.12-3.84 41.088-6.656 5.696-13.44 6.72-30.08 7.488-22.272 1.088-55.872 2.688-85.696 35.84l-0.128 0.192-0.064 0.064-0.384 0.32c-0.64 0.704-1.024 1.472-1.6 2.176-15.808 18.56-20.288 38.848-20.8 58.752a334.08 334.08 0 0 0 0.896 39.04c0.832 13.76 1.6 26.944 0.448 38.656a125.44 125.44 0 0 1-3.328 16.832 46.976 46.976 0 0 1-23.36 29.184c-10.88 6.016-24.128 8-33.408 5.12-8.768-2.752-19.2-11.968-30.272-21.76-27.136-24.128-68.224-60.608-135.552-35.584-66.816 24.96-67.072 83.584-67.264 122.432-0.128 20.352-0.256 39.552-8 48-14.336 15.68-43.712 19.008-67.2 18.432A409.088 409.088 0 0 1 100.608 512 411.456 411.456 0 0 1 512 100.544M512 32C247.296 32 32 247.296 32 512s215.296 480 480 480 480-215.296 480-480S776.704 32 512 32" />
+                </svg>
               </button>
 
               <div className="language-details-menu site-nav-simple-dropdown">
@@ -1271,6 +1277,8 @@ const isFittingReplacementDetailPage =
                   <a
                     key={language.code}
                     href={getLanguageHref(pathname || "/", language.code, locationSuffix)}
+                    lang={language.code}
+                    aria-current={language.code === currentLocale ? "true" : undefined}
                     className={`site-nav-simple-dropdown-link language-details-item ${language.code === currentLocale
                       ? "language-details-item-active"
                       : ""
@@ -1279,15 +1287,16 @@ const isFittingReplacementDetailPage =
                       handleLanguageItemClick(event, language.code)
                     }
                   >
-                    <span
-                      className="language-details-item-label"
-                      style={{
-                        display: "block",
-                        width: "100%",
-                        textAlign: "center",
-                      }}
-                    >
-                      {language.label}
+                    <span className={headerToolStyles.languageOptionContent}>
+                      <Image
+                        className="language-option-flag"
+                        src={`/images/flags/${language.flag}.png`}
+                        width={22}
+                        height={16}
+                        alt=""
+                        unoptimized
+                      />
+                      <span>{language.label}</span>
                     </span>
                   </a>
                 ))}

@@ -1,0 +1,167 @@
+.control {
+  --header-tool-size: 46px;
+}
+
+@media (max-width: 1000px) {
+  .control {
+    --header-tool-size: 42px;
+  }
+}
+
+@media (max-width: 768px), (1025px <= width <= 1599px) {
+  .control {
+    --header-tool-size: 36px;
+  }
+}
+
+:global(html[lang] body .site-header .site-header-inner .site-header-actions) button.control {
+  position: relative;
+  box-sizing: border-box !important;
+  width: var(--header-tool-size) !important;
+  min-width: var(--header-tool-size) !important;
+  max-width: var(--header-tool-size) !important;
+  height: var(--header-tool-size) !important;
+  min-height: var(--header-tool-size) !important;
+  max-height: var(--header-tool-size) !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+:global(html[lang] body .site-header .site-header-inner .site-header-actions) button.control:focus-visible {
+  outline: none !important;
+}
+
+.control:focus-visible::after {
+  position: absolute;
+  inset-block-end: 2px;
+  inset-inline: 0;
+  width: 18px;
+  margin-inline: auto;
+  border-block-end: 2px solid currentColor;
+  pointer-events: none;
+  content: "";
+}
+
+.languageOptionContent {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 14px;
+  box-sizing: border-box;
+  padding-inline-start: 8px;
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.languageOptionContent > :global(.language-option-flag) {
+  transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+  :global(.site-header .site-header-actions .site-search-trigger).control > :global(.site-search-icon) {
+    width: 18px;
+    height: 18px;
+  }
+
+  :global(.site-header .site-header-actions .site-search-trigger).control > :global(.site-search-icon)::after {
+    right: -5px;
+    bottom: -4px;
+    width: 7px;
+  }
+
+  :global(.site-header .site-header-actions) .languageSwitcher :global(.language-details-menu.site-nav-simple-dropdown) {
+    --mobile-header-nav-font-size: clamp(12px, 3.6vw, 14px);
+    --mobile-header-nav-font-weight: 500;
+    position: fixed !important;
+    inset-block-start: var(--site-header-height, 60px) !important;
+    inset-inline: 0 !important;
+    min-width: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 8px 8px !important;
+    background: #fff !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px 6px;
+    transform: none !important;
+  }
+
+  :global(.site-header .site-header-actions) .languageSwitcher:global(.language-switcher-open) :global(.language-details-menu.site-nav-simple-dropdown) {
+    display: grid !important;
+  }
+
+  :global(.site-header .site-header-actions) .languageSwitcher :global(.language-details-menu .language-details-item.site-nav-simple-dropdown-link) {
+    display: flex !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 4px !important;
+    background: transparent !important;
+    color: var(--brand-blue) !important;
+  }
+
+  :global(.site-header .site-header-actions) .languageSwitcher :global(.language-details-menu .language-details-item.site-nav-simple-dropdown-link[aria-current="true"]) {
+    color: var(--brand-cyan) !important;
+  }
+
+  .languageOptionContent {
+    grid-template-columns: 20px minmax(0, 1fr);
+    column-gap: 6px;
+    padding-inline-start: 0;
+  }
+
+  .languageOptionContent > :global(.language-option-flag) {
+    width: 20px;
+    transform: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :global(html[lang] body .site-header .site-header-inner .site-header-actions)
+    button.control:hover > :is(:global(.site-search-icon), :global(.language-summary-icon)),
+  :global(html[lang] body .site-header .site-header-inner .site-header-actions)
+    button.control:hover > :global(.site-search-icon)::after {
+    color: var(--brand-cyan) !important;
+  }
+
+  :global(html[lang] body .site-header .site-header-inner .site-header-actions)
+    button.control:hover > :global(.site-search-icon) {
+    border-color: currentColor !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .control > :is(:global(.site-search-icon), :global(.language-summary-icon)) {
+    transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transform-origin: center;
+  }
+
+  .control > :global(.site-search-icon)::after {
+    transition: color 0.2s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .control:hover > :is(:global(.site-search-icon), :global(.language-summary-icon)) {
+      transform: scale(1.15);
+    }
+  }
+
+  .control:active > :is(:global(.site-search-icon), :global(.language-summary-icon)) {
+    transform: scale(0.9);
+    transition-duration: 0.08s, 0.2s, 0.2s;
+  }
+}
+
+@media (768px < width < 1025px) {
+  :global(html[lang] body .site-header .site-header-actions)
+    .languageSwitcher
+    :global(.language-details-menu.site-nav-simple-dropdown),
+  :global(html[lang] body .site-header .site-header-actions) .languageSwitcher::after {
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
+    transform: none !important;
+  }
+}

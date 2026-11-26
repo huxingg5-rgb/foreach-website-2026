@@ -28,6 +28,7 @@ export type LanguageItem = {
   code: LocaleCode; // 语言代码
   label: string; // 语言显示名称
   href: string; // 点击后跳转路径
+  flag: string;
 };
 
 /* ================================
@@ -71,11 +72,21 @@ export type HomeText = {
 // 1. 不在这里手写 /zh、/en 等路径
 // 2. 统一从 data/languages.ts 读取
 // 3. 避免 /zh 和 / 冲突
+const siteLanguageFlags: Record<LocaleCode, string> = {
+  "zh-CN": "cn",
+  en: "gb",
+  es: "es",
+  fr: "fr",
+  ko: "kr",
+  ru: "ru",
+};
+
 export const languageItems: LanguageItem[] = getEnabledLanguages().map(
   (language) => ({
     code: language.code, // 语言代码
     label: language.label, // 语言显示名称
     href: language.href, // 语言首页路径
+    flag: siteLanguageFlags[language.code],
   })
 );
 

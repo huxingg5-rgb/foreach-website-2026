@@ -15619,7 +15619,8 @@ html[lang="ru"] .home-hero-btn:hover {
 /* 闂傚倸鍊搁崐鎼佸磹閻戣姤鍤勯柛顐ｆ礀缁犵娀鏌熼幑鎰靛殭閻熸瑱绠撻幃妤呮晲鎼粹€愁潻闂佹悶鍔嶇换鍫ョ嵁閺嶎灔搴敆閳ь剚淇婇懖鈺冩／闁诡垎浣镐划闂佸搫鏈ú妯兼崲濞戙垺鍊锋い鎺嶈兌瑜板懘姊绘担铏瑰笡闁告梹娲熼弫鍐敂閸繆鎽曢梺鎸庣箓椤︻垳绮诲☉銏♀拻闁割偆鍠撻埥澶嬨亜椤愵偄浜版慨濠冩そ楠炴牠鎮欓幓鎺濈€烽梻浣告啞椤棝宕卞Δ鍐ㄢ偓鎺楁⒒閸屾瑧鍔嶉柟顔肩埣瀹曟洟顢涢悙鑼槷闁硅壈鎻徊鎸庣▔瀹ュ鐓涚€广儱楠搁獮妤呮煕婵犲嫭鏆柡灞剧洴閳ワ箓骞嬪┑鍛嚬闂備胶绮幐鍫曞磿閻㈢绠犻柨婵嗩槸缁犳盯鏌℃径搴㈢《濡ょ姴娲娲礈閹绘帊鑸梺绋款儏鐎氼厾绮嬪鍛斀閻庯綆鍋嗛崢?*/
 .site-header.site-header-solid-page .site-search-icon,
 .site-header.site-header-solid-page .site-search-icon::before,
-.site-header.site-header-solid-page .site-search-icon::after {
+.site-header.site-header-solid-page .site-search-icon::after,
+.site-header.site-header-solid-page .language-summary-icon {
   color: #173368 !important;
   border-color: #173368 !important;
 }
@@ -22087,4 +22088,15 @@ html[data-global-touch-device="true"]
   .home-company-video-poster-image {
     border-radius: 0 !important;
   }
+}
+
+.site-header .language-details-menu.site-nav-simple-dropdown {
+  max-block-size: calc(100dvh - var(--site-header-height, 72px) - 28px);
+  overflow-y: auto;
+}
+
+.language-option-flag {
+  inline-size: 22px;
+  block-size: 16px;
+  object-fit: contain;
 }
