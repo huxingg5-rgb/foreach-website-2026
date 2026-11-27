@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "title": "Come scegliere una pompa a membrana miniaturizzata per strumenti di scienze della vita: DPL60 per lavaggio, drenaggio e scarichi",
+    "seoTitle": "Scelta della pompa a membrana DPL60 per circuiti di strumenti di scienze della vita | Foreach Technology",
+    "seoDescription": "Valuta le pompe a membrana miniaturizzate per liquidi DPL60 per lavaggio, risciacquo, drenaggio e scarichi negli strumenti di scienze della vita, verificando portata effettiva, contropressione, autoadescamento, materiali e vita utile.",
+    "coverAlt": "Pompa a membrana miniaturizzata per liquidi Foreach DPL60 per circuiti di lavaggio e scarico di strumenti di scienze della vita",
+    "coverImage": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/article-cover.webp"
+  },
+  "deck": "Gli strumenti per le scienze della vita dosano con precisione i campioni, lavano le camere di reazione, risciacquano i tubi, rimuovono gli scarichi, adescano le linee e fanno circolare liquidi. Per scegliere una pompa a membrana, considerare resistenza complessiva del circuito, condizioni di aspirazione, materiali bagnati e servizio prolungato oltre alla portata massima di catalogo.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Sistemi di estrazione degli acidi nucleici, analizzatori per immunodosaggi, piattaforme di analisi cellulare e apparecchiature di automazione di laboratorio combinano spesso dosaggio preciso e rapido trasferimento dei liquidi. Pompe a pistone o a siringa dosano i volumi. Le pompe a membrana miniaturizzate per liquidi sono impiegate di frequente per lavaggio, risciacquo, drenaggio, adescamento e ricircolo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Con la Foreach DPL60 come esempio, la guida spiega come valutare una pompa della classe 600 mL/min in base a funzione effettiva nello strumento, punto di lavoro, condizioni di autoadescamento, comportamento con gas e liquidi, compatibilità dei materiali, vita utile e integrazione meccanica."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Definire la funzione della pompa a membrana nello strumento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Prima di scegliere una pompa, stabilire il compito che dovrà svolgere nel ciclo dello strumento. Tra le funzioni più comuni:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Prelevare soluzione di pulizia o tampone da un serbatoio e inviarli ai moduli a valle.",
+            "Risciacquare camere di reazione, celle a flusso, sonde, tubi o collettori di valvole per ridurre il tempo di ricambio del liquido.",
+            "Drenare il fluido nel recipiente di scarico, limitando il liquido residuo e la contaminazione crociata.",
+            "Adescare linee lunghe ed espellere l’aria intrappolata all’avvio, alla sostituzione del flacone o dopo manutenzione.",
+            "Far circolare un tampone, un liquido di pulizia o un liquido di termoregolazione compatibile entro le condizioni operative convalidate."
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/life-science-fluid-path.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Schema tecnico dei circuiti di lavaggio, risciacquo, ricircolo e scarico di uno strumento di scienze della vita",
+          "caption": "Pompa, valvole, filtri, camera di reazione, tubi e quota del serbatoio determinano insieme il punto di lavoro del circuito installato."
+        },
+        {
+          "type": "notice",
+          "label": "Definire prima il compito:",
+          "text": "Erogazione ad alta accuratezza, pulsazioni molto basse o gradienti controllati possono richiedere una tecnologia di dosaggio differente. Per lavaggio rapido, drenaggio, adescamento e ricircolo, una pompa della classe DPL60 è un punto di partenza pratico."
+        }
+      ]
+    },
+    {
+      "title": "2. Perché partire da una pompa a membrana DPL60 della classe 600 mL/min?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando lavaggio e drenaggio devono finire entro un tempo di ciclo limitato, DPL60 offre un riferimento iniziale per confrontare classe di portata, pressione ammissibile, ingombro, potenza elettrica, rumore e vita utile. Valutare i dati di catalogo nel circuito completo."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/dpl60-product.webp",
+          "width": 1200,
+          "height": 675,
+          "alt": "Pompa a membrana miniaturizzata brushless per liquidi Foreach DPL60",
+          "caption": "Pompa a membrana miniaturizzata per liquidi Foreach DPL60. Le figure del circuito sono schemi tecnici."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Criterio di scelta",
+            "Dati rappresentativi di DPL60 brushless",
+            "Interpretazione tecnica"
+          ],
+          "rows": [
+            [
+              "Tipo di pompa",
+              "Pompa a membrana per liquidi",
+              "Adatta a trasferimento, risciacquo, drenaggio, adescamento e ricircolo"
+            ],
+            [
+              "Tensione nominale",
+              "24 V DC ±10%. Disponibile anche la versione 12 V DC ±10%",
+              "Verificare la compatibilità con alimentazione e metodo di controllo dello strumento"
+            ],
+            [
+              "Potenza nominale",
+              "≤8.4 W",
+              "Controllare potenza disponibile, caduta di tensione nei cavi e dissipazione termica"
+            ],
+            [
+              "Portata libera",
+              "600 mL/min",
+              "Portata di riferimento a bassa resistenza. Misurare la portata nello strumento"
+            ],
+            [
+              "Pressione nominale",
+              "100 kPa",
+              "Limite di pressione, da valutare a un punto di lavoro distinto dalla portata libera"
+            ],
+            [
+              "Altezza di autoadescamento",
+              "3 mH₂O",
+              "Ripetere la prova con livello minimo, linea di aspirazione più lunga e avvio a secco"
+            ],
+            [
+              "Connessione del tubo",
+              "Compatibile con tubo di diametro interno 3.2 mm",
+              "Verificare anche lunghezza, curve e diametro minimo di passaggio di raccordi e valvole"
+            ],
+            [
+              "Materiali bagnati rappresentativi",
+              "Testa in PPS, membrana in EPDM o PTFE, valvola di ritegno in EPDM o FFKM",
+              "Validare tutte le parti bagnate con fluido, temperatura e durata di esposizione effettivi"
+            ],
+            [
+              "Vita utile di riferimento",
+              "10,000 h per la versione brushless",
+              "Vale alle condizioni specificate di tensione, fluido, carico e ciclo di lavoro"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Questi valori servono alla selezione preliminare. Verificare le prestazioni nell’apparecchiatura, dove proprietà del fluido, pressione, temperatura, orientamento di montaggio, strategia di commutazione e differenze fra esemplari possono cambiare i risultati."
+        }
+      ]
+    },
+    {
+      "title": "3. Verificare la portata installata oltre al valore di 600 mL/min",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il valore di 600 mL/min descrive in genere la portata libera a basso carico, nelle condizioni specificate. Nello strumento, tubi di aspirazione, valvole, raccordi, filtri, celle a flusso, dislivelli e contropressione lato scarico creano resistenza. La portata effettiva risulta dall’intersezione della curva della pompa con quella del circuito."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/bench-vs-instrument-fluid-path.webp",
+          "width": 1600,
+          "height": 900,
+          "alt": "Confronto tra un circuito di prova a bassa resistenza e il circuito completo di uno strumento di scienze della vita",
+          "caption": "Un circuito lungo, con dislivello, valvole, filtri e cella a flusso, fornisce di solito una portata inferiore rispetto a un circuito di banco corto e a bassa resistenza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Definire la portata effettiva richiesta e misurare o stimare depressione in ingresso e contropressione in uscita. Se ci sono filtri, provare un filtro nuovo, uno parzialmente carico e la resistenza in prossimità della sostituzione."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Approfondimento:",
+              "label": "Come leggere la curva portata-pressione di una pompa a membrana miniaturizzata",
+              "suffix": ".",
+              "href": "/en/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Valutare l’autoadescamento insieme a posizione del flacone e avvio con linea asciutta",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’altezza di autoadescamento dipende dal circuito di aspirazione. Quota del serbatoio, diametro interno, lunghezza e curve del tubo, raccordi a passaggio ridotto, aria intrappolata e posizione della pompa influiscono sui tempi di avvio a secco e riadescamento."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Misurare il dislivello effettivo tra il livello minimo ammesso del fluido e l’ingresso della pompa.",
+            "Provare diametro, lunghezza e raggio di curvatura dei tubi e combinazione di raccordi definitivi.",
+            "Verificare i punti alti per eventuale aria intrappolata e cercare schiacciamenti o pieghe nella linea di aspirazione.",
+            "Includere primo avvio a secco, sostituzione del flacone e riadescamento dopo manutenzione.",
+            "Registrare il tempo prima di ottenere un’erogazione stabile di liquido, oltre a verificare che l’adescamento riesca."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Nel drenaggio degli scarichi si passa da liquido a miscela gas-liquido e poi ad aria",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La linea di scarico può essere parzialmente piena. Verso la fine del drenaggio possono comparire bolle, poi una miscela gas-liquido e infine soprattutto aria. Questi stati cambiano portata, rumore, pulsazioni, aumento di temperatura e risposta delle valvole di ritegno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Validare con scarico, quantità di schiuma e sequenza di drenaggio effettivi. Se il compito principale diventa l’aspirazione prolungata di una miscela gas-liquido, valutare una pompa a membrana progettata per gas e liquidi. I dati di DPL60 per liquidi non descrivono da soli questo compito."
+        }
+      ]
+    },
+    {
+      "title": "6. Verificare la compatibilità di tutti i materiali bagnati, compresi i componenti in PTFE",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il fluido entra in contatto con testa, membrana, valvole di ritegno, tubi, raccordi e guarnizioni. La presenza di un componente in PTFE non stabilisce la compatibilità dell’intero percorso bagnato. I dati DPL60 pubblicati usano acqua purificata come riferimento. Validare a parte tamponi, detergenti, disinfettanti e fluidi contenenti tensioattivi."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Nome esatto del fluido, formulazione o componenti principali.",
+            "Concentrazione di esercizio e temperature minima e massima.",
+            "Durata della singola esposizione, numero di cicli giornalieri e ore di esercizio accumulate.",
+            "Fluidi usati per pulizia, disinfezione o immersione durante le soste.",
+            "Limiti accettabili di rigonfiamento, rilascio di sostanze, adsorbimento, permeazione e generazione di particelle."
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limiti di validazione:",
+          "text": "Le tabelle di compatibilità aiutano nella valutazione preliminare. Confermare la scelta con immersione, ricircolo e nuove verifiche alla temperatura e con il fluido effettivi."
+        }
+      ]
+    },
+    {
+      "title": "7. Considerare vita del motore, ciclo di lavoro e intervalli di manutenzione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La vita utile della pompa dipende dalle condizioni di impiego oltre che dalla vita prevista dello strumento. Ore di esercizio, commutazioni, contropressione, corrente, temperatura, fluido e durata del funzionamento a secco influiscono su motore, cuscinetti, membrana e valvole."
+        },
+        {
+          "type": "paragraph",
+          "text": "La DPL60 con motore a spazzole ha in genere una vita di riferimento di 3,000 h. La versione brushless raggiunge in genere 10,000 h alle condizioni specificate. Esercizio continuo, cicli frequenti e contropressione elevata possono produrre distribuzioni di durata diverse a parità di ore accumulate."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Guida tecnica correlata:",
+              "label": "Per quanto tempo può funzionare in continuo una pompa a membrana miniaturizzata?",
+              "suffix": ".",
+              "href": "/en/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Considerare pulsazioni, elasticità dei tubi e risposta delle valvole",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le pompe a membrana erogano un flusso periodico. Elasticità dei tubi, volume interno, dinamica delle valvole di ritegno e camere a valle modificano oscillazioni di pressione e portata istantanea. Per il tempo di lavaggio può contare soprattutto la portata media, mentre celle a flusso, sensori o geometrie del getto sensibili richiedono anche una valutazione delle pulsazioni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scegliere un volume tampone, uno smorzatore o tubi diversi quando lo giustificano la sensibilità a valle e le misure. Un volume aggiuntivo può allungare il ricambio del fluido e aumentare il liquido residuo."
+        }
+      ]
+    },
+    {
+      "title": "9. Verificare montaggio e rumore nello strumento completo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La stessa pompa può produrre un rumore diverso su una lamiera, una staffa in plastica o in un involucro chiuso. Rigidità del montaggio, isolamento delle vibrazioni, sollecitazioni dei tubi, risonanza dell’involucro, aria trascinata e contropressione modificano rumore percepito e trasmissione delle vibrazioni."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Provare orientamento e punti di fissaggio definitivi evitando carichi laterali sugli attacchi della pompa.",
+            "Controllare raggio di curvatura dei tubi, sollecitazioni delle connessioni e accumulo di aria nei punti alti.",
+            "Registrare il rumore durante adescamento a secco, trasferimento stabile di liquido, flusso gas-liquido e drenaggio finale.",
+            "Chiudere l’involucro e controllare le interazioni fra pompa, staffa, cablaggio e tubi."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "10. Quando valutare un’alternativa alla DPL60?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La DPL60 copre alcune funzioni dei circuiti per scienze della vita. Valutare una pompa diversa quando cambia il vincolo principale del sistema."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Requisito del circuito",
+            "Opzione da valutare",
+            "Criterio di scelta"
+          ],
+          "rows": [
+            [
+              "Lavaggio, risciacquo, drenaggio o ricircolo ordinari con ricambio rapido di liquido",
+              "DPL60",
+              "Partire dalla classe di portata libera 600 mL/min e validare il punto di lavoro effettivo"
+            ],
+            [
+              "Portata più bassa e vincoli di ingombro e potenza più rigidi",
+              "DPL30",
+              "Una classe di portata inferiore può limitare l’erogazione in eccesso e ridurre l’ingombro"
+            ],
+            [
+              "Alta resistenza dovuta a tubi stretti, aghi, filtri o camere in pressione",
+              "DPL30H",
+              "Verificare la portata effettiva residua alla pressione di esercizio richiesta"
+            ],
+            [
+              "Miscela gas-liquido prolungata, aspirazione degli scarichi o maggiore portata richiesta",
+              "DPGL800 o un’altra pompa per gas e liquidi",
+              "Scegliere in base a frazione effettiva di gas, condizioni di evacuazione e profilo del compito"
+            ]
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Scopri",
+              "label": "Pompa a membrana per liquidi DPL60",
+              "href": "/en/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              "suffix": "."
+            },
+            {
+              "prefix": "Scopri",
+              "label": "Pompa a membrana per liquidi DPL30",
+              "href": "/en/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              "suffix": "."
+            },
+            {
+              "prefix": "Scopri",
+              "label": "Pompa a membrana ad alta pressione per liquidi DPL30H",
+              "href": "/en/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+              "suffix": "."
+            },
+            {
+              "prefix": "Scopri",
+              "label": "Pompa a membrana per gas e liquidi DPGL800",
+              "href": "/en/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "11. Completare almeno sei gruppi di verifiche sul prototipo",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Verifica del punto di lavoro. Usare tubi, valvole, filtri, camere e dislivello definitivi. Registrare pressioni in ingresso e in uscita, portata, tensione e corrente.",
+            "Verifica dell’autoadescamento. Includere livello minimo del serbatoio, linea di aspirazione più lunga, primo avvio a secco, cambi di flacone e riadescamento dopo manutenzione.",
+            "Verifica di bolle e drenaggio. Osservare bolle all’avvio, flusso gas-liquido, comportamento a fine drenaggio, volume residuo, rumore e tempo di ripristino.",
+            "Verifica della compatibilità. Immergere e far circolare tamponi, detergenti e disinfettanti effettivi, poi ripetere i controlli prestazionali e visivi.",
+            "Verifica di ciclo di lavoro e vita utile. Riprodurre tempi di avvio e arresto, contropressione, temperatura e ore giornaliere effettive. Definire i criteri di guasto prima della prova.",
+            "Verifica dell’integrazione meccanica. Esaminare rumore, aumento di temperatura, risonanze, sollecitazioni dei tubi e interferenze di montaggio con fissaggio, involucro e cablaggio definitivi."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "notice",
+          "text": "Registrare fluido, pressione, livello del serbatoio, tubi, tensione di alimentazione, temperatura e programma di lavoro. Il fatto che la pompa si avvii è solo uno dei dati."
+        }
+      ]
+    },
+    {
+      "title": "Conclusione: tracciare l’intero circuito prima di scegliere DPL60",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per scegliere una pompa a membrana miniaturizzata per uno strumento di scienze della vita, partire dai compiti di lavaggio, drenaggio, scarico, adescamento o ricircolo oltre che dalla portata di catalogo. Validare insieme fluido, tubi, valvole, filtri, dislivello, contropressione, ciclo di lavoro e installazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una pompa a membrana miniaturizzata per liquidi della classe DPL60, da 600 mL/min, è un punto di partenza per lavaggio e drenaggio. Se le prove sul prototipo evidenziano come vincolo prevalente un ingombro ridotto a bassa portata, contropressione alta o gestione prolungata di gas e liquidi, passare a un’architettura più adatta."
+        },
+        {
+          "type": "notice",
+          "label": "Nota sulle specifiche:",
+          "text": "I valori DPL60 riflettono le informazioni di prodotto disponibili. Portata effettiva, tempo di autoadescamento, durata, compatibilità chimica e prestazioni dello strumento vanno validati nelle condizioni dell’applicazione."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulla scelta di DPL60 per strumenti di scienze della vita",
+  "faqItems": [
+    {
+      "question": "La DPL60 installata eroga sempre i 600 mL/min nominali?",
+      "answer": "Il valore si riferisce alla portata libera a bassa resistenza. Depressione in ingresso, contropressione in uscita, valvole, filtri, celle a flusso, tubazioni e dislivelli determinano il punto di lavoro effettivo."
+    },
+    {
+      "question": "La DPL60 è adatta al dosaggio di campioni ad alta accuratezza?",
+      "answer": "È indicata soprattutto per lavaggio, risciacquo, drenaggio, adescamento e ricircolo. Se il volume dosato deve essere preciso, valutare una pompa a pistone o a siringa."
+    },
+    {
+      "question": "Un autoadescamento dichiarato di 3 mH₂O garantisce un dislivello di progetto di 3 m?",
+      "answer": "Validare il tempo effettivo di adescamento al livello minimo, con tubo di aspirazione, raccordi e valvole definitivi, durante avvio a secco e sostituzione del flacone."
+    },
+    {
+      "question": "La DPL60 può trasferire qualsiasi tampone, detergente o disinfettante?",
+      "answer": "Validare tutti i componenti bagnati della pompa, tubi, raccordi e guarnizioni alle concentrazioni, temperature e durate di contatto effettive e secondo le procedure di pulizia o immersione."
+    },
+    {
+      "question": "La DPL60 può gestire scarichi con molte bolle?",
+      "answer": "Provare la frazione effettiva di gas e la sequenza di drenaggio. Le bolle di breve durata a fine drenaggio possono essere gestibili. La presenza continua di gas e liquidi può richiedere una pompa dedicata."
+    },
+    {
+      "question": "Come confrontare DPL60 a spazzole e brushless?",
+      "answer": "Confrontare le vite di riferimento di circa 3,000 h e 10,000 h insieme a ore accumulate, frequenza di commutazione, metodo di controllo, rumore, intervallo di manutenzione e costo di progetto."
+    },
+    {
+      "question": "Serve sempre uno smorzatore o un volume tampone a valle?",
+      "answer": "Prima di aggiungere componenti che aumentano il volume interno, misurare sensibilità alle pulsazioni a valle, tempo di ricambio del fluido e volume residuo ammesso."
+    },
+    {
+      "question": "Quale orientamento di montaggio usare?",
+      "answer": "Seguire il disegno ufficiale di installazione e validare lo strumento completo. Evitare carichi laterali sugli attacchi, aria intrappolata, curve troppo strette e risonanze strutturali."
+    },
+    {
+      "question": "Perché cambiare i tubi o l’involucro può modificare il rumore della pompa?",
+      "answer": "Rigidità di montaggio, forma della staffa, vincoli dei tubi, risonanza dell’involucro, quantità di gas e contropressione cambiano la trasmissione delle vibrazioni e il rumore percepito."
+    },
+    {
+      "question": "Quali informazioni fornire per la scelta tecnica?",
+      "answer": "Indicare fluido, concentrazione, temperatura, portata effettiva richiesta, depressione in ingresso, contropressione in uscita, altezza di aspirazione, dimensioni dei tubi, valvole, raccordi, filtri, ciclo di lavoro, obiettivo di rumore e spazio di installazione."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi validare il circuito di lavaggio o di scarico di uno strumento di scienze della vita?",
+    "description": "Indica fluido, portata obiettivo, dimensioni dei tubi, valvole, filtri, dislivello, contropressione, ciclo di lavoro e spazio disponibile. Un tecnico potrà valutare DPL60 o una pompa più adatta.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Scopri le pompe a membrana"
+  }
+}

@@ -12,7 +12,7 @@
 ========================================================= */
 
 /* 官网当前支持的语言 */
-export type DatasheetLocale = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
+export type DatasheetLocale = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru" | "de";
 
 /* 规格书分类 */
 export type DatasheetCategory =
@@ -148,6 +148,8 @@ export type DatasheetItem = {
      2. 所以这里做成可选
   */
   productHref?: string;
+  productHrefLang?: DatasheetLocale | "it" | "hi";
+  productLinkLabel?: string;
 };
 
 /* 规格书页面最终给组件使用的数据 */
@@ -155,4 +157,4 @@ export type DatasheetsPageData = {
   pageText: DatasheetsPageText;
   filterOptions: DatasheetFilterOption[];
   datasheetItems: DatasheetItem[];
-}; 
+};

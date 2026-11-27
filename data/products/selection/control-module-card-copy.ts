@@ -1,10 +1,11 @@
 import type { SelectionLocale } from "./product-selection.types";
 import { controlModuleCardsZh } from "./control-module-card-copy.zh";
 
+type ControlModuleCopyLocale = SelectionLocale | "it" | "hi";
 type ControlModuleCardCopy = { model: string; name: string; heading: string };
 
 // Card H3 and detail H1 share the same localized description.
-const controlModuleCards: Record<SelectionLocale, Record<string, ControlModuleCardCopy>> = {
+const controlModuleCards: Record<ControlModuleCopyLocale, Record<string, ControlModuleCardCopy>> = {
   zh: controlModuleCardsZh,
   en: {
     "abd-air-bubble-detector": {
@@ -15,7 +16,31 @@ const controlModuleCards: Record<SelectionLocale, Record<string, ControlModuleCa
     "pdm5-pressure-sensor": {
       model: "PDM5",
       name: "Pressure Sensing Module",
-      heading: "PDM5 Pressure Sensing Module for fluid-path pressure monitoring, with a 10–1200 kPa range, a PEEK flow path and I²C communication",
+      heading: "PDM5 Pressure Sensing Module for fluid-path pressure monitoring, with four absolute pressure ranges up to 1200 kPa, a PEEK flow path and I²C communication",
+    },
+  },
+  hi: {
+    "abd-air-bubble-detector": {
+      model: "ABD",
+      name: "हवा के बुलबुले पहचानने वाला सेंसर",
+      heading: "ABD सेंसर पारदर्शी ट्यूब में बुलबुले, बूँदें और गैस या द्रव की मौजूदगी पहचानता है। 1.6–6.4 mm बाहरी व्यास वाली पारदर्शी लचीली ट्यूब के लिए कॉन्फ़िगरेशन उपलब्ध हैं।",
+    },
+    "pdm5-pressure-sensor": {
+      model: "PDM5",
+      name: "दाब सेंसर",
+      heading: "PDM5 द्रव पथ के निरपेक्ष दाब की निगरानी करता है। 1200 kPa तक के चार विकल्प, PEEK का द्रव पथ और I²C संचार।",
+    },
+  },
+  it: {
+    "abd-air-bubble-detector": {
+      model: "ABD",
+      name: "Rilevatore di bolle d’aria",
+      heading: "Rilevatore ABD per bolle, gocce e presenza di aria o liquido in tubi trasparenti. Sono disponibili configurazioni per tubi flessibili trasparenti con diametro esterno di 1.6–6.4 mm.",
+    },
+    "pdm5-pressure-sensor": {
+      model: "PDM5",
+      name: "Sensore di pressione",
+      heading: "Sensore PDM5 per la pressione assoluta nel circuito fluidico, con quattro campi fino a 1200 kPa, percorso fluidico in PEEK e comunicazione I²C.",
     },
   },
   es: {
@@ -68,11 +93,11 @@ const controlModuleCards: Record<SelectionLocale, Record<string, ControlModuleCa
   },
 };
 
-export function getControlModuleCardCopy(locale: SelectionLocale, slug: string) {
+export function getControlModuleCardCopy(locale: ControlModuleCopyLocale, slug: string) {
   return controlModuleCards[locale]?.[slug];
 }
 
-export function getControlModuleDetailHeading(slug: string, locale: SelectionLocale) {
+export function getControlModuleDetailHeading(slug: string, locale: ControlModuleCopyLocale) {
   const copy = getControlModuleCardCopy(locale, slug);
   return copy ? `FOREACH ${copy.heading}` : undefined;
 }

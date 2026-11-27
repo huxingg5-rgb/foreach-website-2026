@@ -1,0 +1,324 @@
+{
+  "metadata": {
+    "title": "Scelta di una pompa miniaturizzata a membrana autoadescante per liquidi: altezza, tempo di adescamento e avvio a secco o bagnato",
+    "seoTitle": "Scelta di una pompa miniaturizzata a membrana autoadescante per liquidi | Foreach Technology",
+    "seoDescription": "Scegli una pompa miniaturizzata autoadescante verificando altezza di aspirazione, tempo al primo arrivo del liquido, avvio a secco o bagnato ed erogazione stabile. Usa le specifiche DPL30, DPL60 e DPL30H per definire la prova sullo strumento.",
+    "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-port-side-photo.jpg",
+    "coverAlt": "Vista dal lato delle porte della pompa miniaturizzata a membrana Foreach DPL30 con motore e attacchi fluidici"
+  },
+  "deck": "Scegli una pompa miniaturizzata autoadescante verificando altezza di aspirazione, tempo al primo arrivo del liquido, avvio a secco o bagnato ed erogazione stabile. Usa le specifiche DPL30, DPL60 e DPL30H per definire la prova sullo strumento.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Uno strumento può dover erogare liquido di lavaggio subito dopo l'accensione. Anche con il serbatoio sotto la pompa a un dislivello inferiore all'altezza di aspirazione specificata, il primo ciclo può essere troppo lento, la sostituzione del flacone può richiedere più avvii o all'uscita possono restare bolle dopo la comparsa del liquido dalla pompa."
+    },
+    {
+      "type": "paragraph",
+      "text": "L'altezza di aspirazione descrive un aspetto dell'autoadescamento. In sviluppo occorre definire stato iniziale di camera e tubi, possibilità di espulsione dell'aria, primo arrivo del liquido e inizio dell'erogazione stabile allo strumento. Valutare tutto insieme alla portata di esercizio effettiva di una pompa Foreach DPL."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Definire un requisito misurabile di autoadescamento per lo strumento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La membrana cambia il volume della camera mentre le valvole di ingresso e uscita dirigono aspirazione e mandata. In una linea di aspirazione inizialmente vuota passa prima aria, poi gas e liquido alternati e infine solo liquido a linea piena. Tenuta delle valvole, comprimibilità e volume spostato effettivo variano tra le fasi."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'altezza raggiungibile e il tempo di erogazione al punto di utilizzo richiedono criteri di accettazione distinti."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Grandezza",
+            "Definizione proposta",
+            "Domanda di progetto"
+          ],
+          "rows": [
+            [
+              "Altezza geometrica di aspirazione",
+              "Dislivello tra livello minimo ammesso nel serbatoio e ingresso della pompa",
+              "Quale carico statico di aspirazione aggiunge l'installazione?"
+            ],
+            [
+              "Tempo al primo arrivo del liquido",
+              "Tempo dal comando effettivo di avvio al primo liquido in un punto di osservazione definito",
+              "Quanto dura il riempimento iniziale o il cambio del flacone?"
+            ],
+            [
+              "Tempo per avere un'erogazione stabile",
+              "Dall'avvio al rientro di portata e bolle entro i limiti concordati nel punto di utilizzo",
+              "Quando può iniziare l'azione successiva dello strumento?"
+            ],
+            [
+              "Ripristino dopo riavvio",
+              "Avvii ripetuti dopo un tempo di inattività e con uno stato del liquido residuo definiti",
+              "Dopo arresti e riavvii ordinari, l'erogazione si ripristina in modo affidabile?"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Specificare il punto di osservazione. La presenza di liquido all'uscita della pompa non dimostra il riempimento di un tubo a valle, di una camera valvola o di un ago di lavaggio. Definire variazione ammessa della portata, durata dell'osservazione e criteri per le bolle secondo la funzione dello strumento. Una goccia visibile non basta."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-rd/it/diaphragm-pump-working-principle-clean.webp",
+          "alt": "Animazione della pompa a membrana: la valvola di ingresso si apre in aspirazione e quella di uscita in mandata.",
+          "width": 1100,
+          "height": 535,
+          "caption": "Ciclo di aspirazione e mandata. Lo schema non misura il tempo di autoadescamento."
+        }
+      ]
+    },
+    {
+      "title": "Leggere le specifiche Foreach come grandezze distinte",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I valori provengono dalla pagina 5 delle rispettive specifiche in cinese. Sono voci distinte e non un punto di lavoro simultaneo. [F1–F3]"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Serie",
+            "Portata a vuoto",
+            "Pressione nominale",
+            "Altezza di autoadescamento",
+            "Attacco standard"
+          ],
+          "rows": [
+            [
+              "DPL30",
+              "300 mL/min",
+              "100 kPa",
+              "6 mH₂O",
+              "Tubo flessibile con diametro interno di 3.2 mm"
+            ],
+            [
+              "DPL60",
+              "600 mL/min",
+              "100 kPa",
+              "3 mH₂O",
+              "Tubo flessibile con diametro interno di 3.2 mm"
+            ],
+            [
+              "DPL30H",
+              "300 mL/min",
+              "600 kPa",
+              "3 mH₂O",
+              "Raccordo a compressione per tubo rigido da 6 × 4 mm, diametro esterno × interno"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Una portata a vuoto maggiore non implica automaticamente più altezza di aspirazione. Una pressione di mandata nominale maggiore non sostituisce la verifica in aspirazione. Confrontare la DPL60 per maggiore capacità di erogazione e la DPL30H per contropressione di mandata più alta, poi ricontrollare livello minimo e condizioni di avvio in entrambi i casi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le tabelle non indicano il tempo al primo arrivo del liquido, lo stato iniziale secco o bagnato né il circuito completo di prova. Il valore di 6 mH₂O quindi non dimostra un autoadescamento rapido da 6 m con qualsiasi fluido e tubo e da solo non consente di prevedere l'avvio dello strumento."
+        }
+      ]
+    },
+    {
+      "title": "Perché anche un tubo più grande può adescarsi lentamente",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dopo il riempimento, diametro, lunghezza e restrizioni locali determinano parte delle perdite in aspirazione. Durante l'adescamento conta anche il volume d'aria da rimuovere. Aumentare il diametro può ridurre la resistenza al flusso del liquido ma aumentare il volume da riempire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esempio geometrico: un tubo diritto di 1 m con diametro interno di 3.2 mm contiene circa 8.0 mL. Con diametro interno di 4.0 mm contiene circa 12.6 mL. Sono volumi calcolati per il tubo, escludendo raccordi, valvole e camera pompa. Non sono misure sulla pompa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per stimare il tempo di adescamento non dividere quei volumi per la portata a vuoto del liquido. All'avvio contano capacità di evacuare l'aria, tenuta delle valvole e pressione di mandata. Mantenere l'aspirazione più corta possibile e ridurre raccordi non necessari e volume di riempimento. Se l'adescamento è difficile, controllare separatamente ingressi d'aria, valvole o filtri ostruiti, aria intrappolata nella testa e pressione in uscita."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un serbatoio aperto aumenta il carico statico man mano che il livello scende. Per uno chiuso valutare anche l'ingresso d'aria. Prelevando liquido può calare la pressione nello spazio di testa anche a dislivello geometrico invariato. Punti alti, camere valvola e raccordi possono trattenere quantità d'aria diverse nei successivi avvii."
+        }
+      ]
+    },
+    {
+      "title": "Provare separatamente l'avvio a secco e l'avvio bagnato",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un avvio bagnato indica in genere che camera o superfici critiche delle valvole sono già bagnate. Per l'avvio a secco, definire se camera e aspirazione sono entrambe vuote, come si svuotano e come si ripristina lo stato iniziale. Tenere distinti i risultati."
+        },
+        {
+          "type": "paragraph",
+          "text": "La bagnatura può modificare il contatto delle valvole, i percorsi locali del gas e l'evacuazione iniziale. Un riavvio riuscito con pre-riempimento non dimostra le prestazioni dopo un lungo stoccaggio. Provare separatamente unità nuove o svuotate deliberatamente, brevi arresti dopo uso, inattività prolungata e ingresso d'aria al cambio del flacone."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'autoadescamento non autorizza il funzionamento a secco senza limiti. Confermare durata ammessa, ciclo di lavoro e aumento di temperatura per il modello e la funzione. Lo svuotamento ripetuto o la commutazione gas-liquido richiedono una valutazione dedicata. La DPGL800 è specificata per gas e miscele gas-liquido. La sua portata gas a vuoto da 6 L/min con una testa non serve a calcolare il tempo di adescamento di un circuito liquido DPL. [F4]"
+        }
+      ]
+    },
+    {
+      "title": "Individuare il limite con confronti controllati",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Partire dall'acqua purificata prevista, con tubi corti, aspirazione poco alta e configurazione di riferimento a tenuta. Aggiungere progressivamente il sistema effettivo, modificando una sola variabile principale per volta. Conservare modello, combinazione di materiali a contatto, alimentazione e stato iniziale di bagnatura. Registrare pressioni di ingresso e uscita, tensione ai capi della pompa, tempi al primo liquido e all'erogazione stabile e posizione delle bolle."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Confronto",
+            "Che cosa osservare",
+            "Che cosa indagare"
+          ],
+          "rows": [
+            [
+              "Linea di riferimento corta e aspirazione effettiva",
+              "Tempo di adescamento e pressione di ingresso",
+              "Resistenza, volume di riempimento o perdite"
+            ],
+            [
+              "Livello normale e minimo del serbatoio",
+              "Erogazione ritardata o instabile al punto di utilizzo",
+              "Carico statico e margine di aspirazione"
+            ],
+            [
+              "Uscita a bassa contropressione e uscita effettiva",
+              "Comportamento all'avvio con linea vuota",
+              "Espulsione dell'aria, stato delle valvole e contropressione all'avvio"
+            ],
+            [
+              "Stato pre-riempito e stato vuoto definito",
+              "Differenze tra primo avvio e riavvio",
+              "Bagnatura, aria intrappolata e stato iniziale"
+            ],
+            [
+              "Acqua purificata e fluido effettivo",
+              "Tempo, pressione e bolle",
+              "Viscosità, rilascio di gas e compatibilità"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le prese di misura aggiungono volume e possibili vie di perdita. Verificarne la tenuta dopo il montaggio. Usare componenti compatibili con fluido e pressione. Evitare prove al limite con mandata chiusa a lungo o funzionamento a secco prolungato arbitrariamente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Registrare lo sviluppo della depressione separatamente dall'effettivo arrivo del liquido. Rotazione o calo della pressione di ingresso indicano che il processo è in corso. Il raggiungimento del punto specificato va verificato a parte."
+        }
+      ]
+    },
+    {
+      "title": "Che cosa deve dimostrare il verbale di selezione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Al livello minimo del liquido, alla temperatura specificata e con l'uscita effettiva, identificare modello e materiali che completano l'adescamento, variazione tra avvii e necessità di sequenza valvole o pre-riempimento. Applicare numero di campioni, ripetizioni e fasi di vita previsti dal progetto. Un solo avvio riuscito di una pompa nuova non basta per l'accettazione in produzione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per valutare Foreach DPL30, DPL60 o DPL30H indicare altezza del serbatoio, volume e resistenza del circuito, portata richiesta, contropressione in uscita, formulazione del fluido, stato iniziale secco o bagnato e attesa ammessa."
+        }
+      ]
+    },
+    {
+      "title": "Specifiche e riferimenti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I parametri del prodotto provengono dalle specifiche Foreach qui sotto. Verificare spiegazioni tecniche e prove proposte per modello e condizioni operative effettivi."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+              "label": "[F1] Specifica Foreach DPL30 in cinese (A04)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+              "label": "[F2] Specifica Foreach DPL60 in cinese (A02)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
+              "label": "[F3] Specifica Foreach DPL30H in cinese (A00)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2506-00001_A00_cn_DPGL800气液混合泵规格书.pdf",
+              "label": "[F4] Specifica Foreach DPGL800 in cinese (A00)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Guide correlate per selezione e convalida",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+              "label": "Misurare e ridurre le pulsazioni di portata"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-noise-vibration-reduction/",
+              "label": "Riduzione di rumore e vibrazioni"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-backflow-check-valve/",
+              "label": "Riflusso a pompa ferma e prevenzione del sifonamento"
+            },
+            {
+              "href": "/resources/technical-articles/micro-diaphragm-pump-materials-selection/",
+              "label": "Compatibilità dei materiali a contatto"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Curve portata-pressione e punti di lavoro"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "Scelta delle pompe miniaturizzate a membrana per liquidi"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/",
+              "label": "Gamma di pompe miniaturizzate a membrana"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "La maggiore altezza di aspirazione della DPL30 rende sempre più facile l'avvio rispetto alla DPL60?",
+      "answer": "Il tempo di adescamento dipende anche da volume del circuito, stato delle valvole, fluido e contropressione effettiva. Confrontare i modelli dallo stesso stato iniziale."
+    },
+    {
+      "question": "Il funzionamento dopo il pre-riempimento dimostra che la pompa è adatta?",
+      "answer": "Aiuta la diagnosi. Verificare se lo strumento consente il pre-riempimento e se avvio da nuovo, avvio dopo invecchiamento e cambio flacone soddisfano la funzione."
+    },
+    {
+      "question": "Con altezza installata inferiore a quella specificata si può evitare la prova in aspirazione?",
+      "answer": "La prova resta necessaria. La sola altezza non tiene conto di ingressi d'aria, perdite nei tubi, ingresso d'aria nel serbatoio e percorso dell'aria espulsa."
+    }
+  ],
+  "cta": {
+    "title": "Valuta la scelta della pompa a membrana per liquidi",
+    "description": "Indica fluido effettivo, portata richiesta, pressioni di ingresso e mandata, tubi e condizioni di avviamento e arresto per definire modello, materiali e verifiche.",
+    "contactLabel": "Contatta l'assistenza tecnica",
+    "productsLabel": "Visualizza le pompe miniaturizzate a membrana per liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

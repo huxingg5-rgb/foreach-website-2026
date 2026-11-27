@@ -1,9 +1,16 @@
 import Link from "next/link";
 import SitePageShell from "@/components/layout/SitePageShell";
 import RelatedResourcesLoader from "@/components/common/related-resources/RelatedResourcesLoader";
+import { localizeItalianRelatedResources } from "@/components/common/related-resources/RelatedResources";
 import ArticleRelatedProducts from "@/components/resources/technical-articles/ArticleRelatedProducts";
 import { getRelatedResourcesData } from "@/services/resources/getRelatedResourcesData";
 import { getVideoGuideRelatedProducts } from "@/services/resources/installation-guide/getVideoGuideRelatedProducts";
+import { getGermanRelatedArticles } from "@/services/resources/technical-articles/getGermanRelatedArticles";
+import { localizeHindiRelatedVideos } from "@/components/common/related-resources/RelatedResources";
+import { getHindiDraftLink, hindiEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
+import { getHindiGuideArticleTitle } from "@/data/resources/installation-guide/installation-guide.hi";
+import { getHindiTechnicalArticlesPageData } from "@/services/resources/technical-articles/getHindiTechnicalArticlesPageData";
+import { getItalianGuideFallbackArticleCopy } from "@/data/resources/installation-guide/installation-guide.it";
 import LegacyTechnicalArticleLayout from "@/components/resources/technical-articles/articles/LegacyTechnicalArticleLayout";
 import editorial from "@/components/resources/technical-articles/articles/RplSelectionArticle.module.css";
 import styles from "@/components/resources/technical-articles/articles/TechnicalArticleBody.module.css";
@@ -27,8 +34,39 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
   const products = getVideoGuideRelatedProducts(video.id, "sidebar", locale);
   const footerProducts = getVideoGuideRelatedProducts(video.id, "footer", locale);
   const relatedResources = getRelatedResourcesData({
-    sourceType: "video", sourceId: video.id, relationKeys: video.relationKeys, locale,
+    sourceType: "video", sourceId: video.id, relationKeys: video.relationKeys, locale: locale === "de" || locale === "it" || locale === "hi" ? "en" : locale,
   });
+  if (locale === "de") {
+    relatedResources.uiLocale = "de";
+    relatedResources.articles = getGermanRelatedArticles(relatedResources.articles);
+  }
+  if (locale === "it") {
+    relatedResources.uiLocale = "it";
+    const localized = localizeItalianRelatedResources(relatedResources);
+    relatedResources.articles = localized.articles.map(article => {
+      if (article.contentLanguage === "it") return article;
+      const fallback = getItalianGuideFallbackArticleCopy(article.slug, article.title);
+      return fallback ? { ...article, ...fallback, contentLanguage: "it" } : article;
+    });
+  }
+  if (locale === "hi") {
+    const articles = new Map(getHindiTechnicalArticlesPageData().articles.map(item => [item.slug, item]));
+    relatedResources.uiLocale = "hi";
+    relatedResources.videoLocale = "hi";
+    relatedResources.videoLibraryHref = getHindiDraftLink("/en/resources/installation-guide/").href;
+    relatedResources.videos = localizeHindiRelatedVideos(relatedResources.videos);
+    relatedResources.articles = relatedResources.articles.map(article => {
+      const link = getHindiDraftLink("/en/resources/technical-articles/" + article.slug + "/");
+      const native = link.hrefLang === "hi" ? articles.get(article.slug) : undefined;
+      return {
+        ...article, href: link.href, destinationLanguage: link.hrefLang,
+        title: native?.title ?? getHindiGuideArticleTitle(article.title),
+        summary: native?.summary ?? article.summary,
+        contentLanguage: native ? "hi" : "en",
+      };
+    });
+  }
+  const contact = locale === "hi" ? getHindiDraftLink("/en/contact/") : undefined;
   const url = getCanonicalUrl(video.detailHref);
   const videoSchema = {
     "@type": "VideoObject",
@@ -49,12 +87,12 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
     { label: video.breadcrumbLabel },
   ];
 
-  return <div className={`newsArticleDetailPage ${editorial.pageSurface} ${useUpdatedLayout ? videoLayout.page : ""}`} data-video-guide-detail data-show-footer-products data-locale={video.locale} data-article-slug={video.id} lang={locale}>
+  return <div className={`newsArticleDetailPage ${editorial.pageSurface} ${useUpdatedLayout ? videoLayout.page : ""}`} data-video-guide-detail data-show-footer-products data-locale={video.locale} data-article-slug={video.id} lang={locale === "hi" ? "hi-IN" : locale}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [...HOME_SITE_IDENTITY["@graph"], videoSchema,
       ...(video.leadParagraphs ? [{ "@type": "WebPage", "@id": url,
-        url, name: video.title, description: video.description, inLanguage: locale,
+        url, name: video.title, description: video.description, inLanguage: locale === "hi" ? "hi-IN" : locale,
         mainEntity: { "@id": `${url}#video` }, publisher: { "@id": SITE_ORGANIZATION_ID },
       }] : []),
       { "@type": "BreadcrumbList",
@@ -64,7 +102,7 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
         })) },
       ],
     }).replace(/</g, "\\u003c") }} />
-    <SitePageShell breadcrumbItems={breadcrumbItems}>
+    <SitePageShell breadcrumbItems={breadcrumbItems} breadcrumbAriaLabel={locale === "hi" ? "पेज का नेविगेशन पथ" : locale === "de" ? "Brotkrümelnavigation" : locale === "it" ? "Percorso di navigazione" : undefined}>
     <LegacyTechnicalArticleLayout
       articleId={video.id}
       locale={locale}
@@ -80,14 +118,14 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
         bottomBanner: {
           title: video.support.title,
           description: video.support.description,
-          actions: [{ label: ui.contact, href: `${prefix}/contact/` }],
+          actions: [{ label: ui.contact + (contact?.hrefLang === "en" ? hindiEnglishFallbackSuffix : ""), href: contact?.href ?? `${prefix}/contact/` }],
         },
       }}
     >
       <section className={styles.contentBlock} aria-labelledby={`${video.sectionId}-video`}>
         <h2 id={`${video.sectionId}-video`}>{video.watchHeading}</h2>
         <figure className={styles.figure}>
-          <iframe src={embed.href} title={video.media?.title ?? video.title}
+          <iframe src={embed.href} title={locale === "hi" ? video.title : video.media?.title ?? video.title}
             style={{ display: "block", width: "100%", aspectRatio: "16 / 9", border: 0 }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
@@ -105,7 +143,9 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
           {video.highlights.map(highlight => <li key={highlight.title}>
             <p>
               {highlight.start !== undefined && highlight.time ? <><a href={`${video.watchUrl}&t=${highlight.start}s`} target="_blank" rel="noopener noreferrer"
-                aria-label={`Watch ${highlight.title.toLowerCase()} at ${highlight.time} on YouTube`}>
+                aria-label={locale === "hi" ? highlight.time + " पर " + highlight.title + " YouTube पर देखें (अंग्रेज़ी में)" : locale === "it" ? "Guarda " + highlight.title + " a " + highlight.time + " su YouTube" :
+                  locale === "de" ? highlight.title + " bei " + highlight.time + " auf YouTube ansehen" :
+                  `Watch ${highlight.title.toLowerCase()} at ${highlight.time} on YouTube`}>
                 {highlight.time}
               </a>{" — "}</> : null}<strong>{highlight.title}</strong>
               <br />{highlight.description}
@@ -117,16 +157,16 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
         key={section.id} aria-labelledby={`${video.sectionId}-${section.id}`}>
         <h2 id={`${video.sectionId}-${section.id}`}>{section.title}</h2>
         {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
-        {section.links?.map(link => <p key={link.href}><Link href={link.href}>{link.title}</Link></p>)}
+        {section.links?.map(link => <p key={link.href}><Link href={link.href} hrefLang={link.hrefLang}>{link.title}</Link></p>)}
       </section>)}
       <section className={styles.contentBlock} aria-labelledby={`${video.sectionId}-products`}>
         <h2 id={`${video.sectionId}-products`}>{video.productHeading}</h2>
         <p>{video.productIntroduction}</p>
         <div className={styles.linkList}>
           {video.products.map(product => <p key={product.href}>
-            <Link href={product.href}>{product.title}</Link>
+            <Link href={product.href} hrefLang={product.hrefLang}>{product.title}</Link>
           </p>)}
-          {video.seriesLink ? <p><Link href={video.seriesLink.href}>{video.seriesLink.title}</Link></p> : null}
+          {video.seriesLink ? <p><Link href={video.seriesLink.href} hrefLang={video.seriesLink.hrefLang}>{video.seriesLink.title}</Link></p> : null}
         </div>
       </section>
     </LegacyTechnicalArticleLayout>

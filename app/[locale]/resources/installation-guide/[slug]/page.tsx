@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜多语言安装教程详情页临时入口
@@ -25,8 +26,9 @@ import VideoGuideDetailPage from "@/components/resources/installation-guide/Vide
 import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
 import { isVideoGuideLocaleAvailable } from "@/data/resources/installation-guide/video-guide-route-availability";
 import { getVideoGuideMetadata } from "@/data/resources/installation-guide/video-guide-metadata";
+import { INSTALLATION_GUIDE_LOCALES } from "@/data/resources/installation-guide/installation-guide-pagination";
 
-const INSTALLATION_GUIDE_DETAIL_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
+const INSTALLATION_GUIDE_DETAIL_LOCALES = INSTALLATION_GUIDE_LOCALES;
 
 type InstallationGuideDetailLocale =
   (typeof INSTALLATION_GUIDE_DETAIL_LOCALES)[number];
@@ -38,7 +40,7 @@ type InstallationGuideIntlDetailPageProps = {
   }>;
 };
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: InstallationGuideIntlDetailPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -117,3 +119,5 @@ export default async function InstallationGuideIntlDetailPage({
     </main>
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/resources/installation-guide/[slug]/", getPageMetadata);

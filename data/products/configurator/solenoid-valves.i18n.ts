@@ -1,5 +1,9 @@
 import type { ProductConfiguratorConfig, ProductConfiguratorLocale, ProductConfiguratorUiText } from "@/components/products/configurator/product-variant-configurator.types";
 
+import german from "@/data/products/detail/solenoid-locales/configurator.de.json";
+import italian from "@/data/products/detail/solenoid-locales/configurator.it.json";
+import hindi from "@/data/products/detail/solenoid-locales/configurator.hi.json";
+
 type Copy = {
   title: string;
   description: string;
@@ -18,7 +22,10 @@ const labelKeys = ["使用电压", "膜片材质", "底板材质", "节能回路
 const valueKeys = ["标准型（无节能回路）", "带节能回路（Y）", "三通", "二通常开", "二通常闭", "P · 基板型", "B16 · 倒刺（宝塔）", "无", "1/4-28 UNF（U28）"];
 const uiKeys = ["closeAriaLabel", "currentSelection", "finalModel", "productCode", "configuration", "matchedModel", "copyModel", "copied", "addToList", "addedToList", "confirmAndReturn"] as const;
 
-const translations: Record<Exclude<ProductConfiguratorLocale, "zh">, Copy> = {
+const translations: Record<Exclude<ProductConfiguratorLocale, "zh"> | "de" | "it" | "hi", Copy> = {
+  de: german,
+  it: italian,
+  hi: hindi,
   en: {
     title: "Model Selection",
     description: "Select a configuration for this valve to view the complete model number and product code.",
@@ -81,11 +88,11 @@ const translations: Record<Exclude<ProductConfiguratorLocale, "zh">, Copy> = {
   },
 };
 
-export function getSolenoidViewConfigurationText(locale: ProductConfiguratorLocale) {
+export function getSolenoidViewConfigurationText(locale: ProductConfiguratorLocale | "de" | "it" | "hi") {
   return locale === "zh" ? "查看配置" : translations[locale].viewConfiguration;
 }
 
-export function localizeSolenoidConfigurator(config: ProductConfiguratorConfig, locale: ProductConfiguratorLocale): ProductConfiguratorConfig {
+export function localizeSolenoidConfigurator(config: ProductConfiguratorConfig, locale: ProductConfiguratorLocale | "de" | "it" | "hi"): ProductConfiguratorConfig {
   if (locale === "zh") return config;
   const text = translations[locale];
   const labels = Object.fromEntries(labelKeys.map((key, i) => [key, text.labels[i]]));
@@ -97,7 +104,7 @@ export function localizeSolenoidConfigurator(config: ProductConfiguratorConfig, 
     defaultNoticeTitle: text.noticeTitle, defaultNotice: text.notice,
   };
   return {
-    ...config, localizedLocale: locale,
+    ...config, localizedLocale: locale === "de" || locale === "it" || locale === "hi" ? "en" : locale,
     title: `${config.productName} · ${text.title}`,
     description: config.id.includes("barbed") ? text.barbedDescription : text.description,
     emptySelectionText: text.empty, noticeTitle: text.noticeTitle, notice: text.notice, uiText,

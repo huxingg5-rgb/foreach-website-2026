@@ -21,18 +21,28 @@
    ru 俄语
 ========================================================= */
 
+import { fittingReplacementDetailDe } from "./q20.de";
+import { fittingReplacementDetailHi } from "./q20.hi";
+import { fittingReplacementDetailIt } from "./q20.it";
+
 export type FittingReplacementDetailLocale =
   | "zh"
   | "en"
   | "es"
   | "fr"
   | "ko"
-  | "ru";
+  | "ru"
+  | "de"
+  | "it"
+  | "hi";
 
 /* =========================================================
    Q20 详情页多语言文案
 ========================================================= */
 export const fittingReplacementQuickConnectQ20DetailIntl = {
+  de: fittingReplacementDetailDe,
+  it: fittingReplacementDetailIt,
+  hi: fittingReplacementDetailHi,
   zh: {
     breadcrumbs: [
       {

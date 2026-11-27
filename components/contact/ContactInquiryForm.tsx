@@ -16,6 +16,7 @@
 
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import type { ContactPageData } from "@/data/contact-cooperation";
+import { getInquiryTransportLocale } from "@/data/contact-cooperation/inquiry-transport";
 import {
   buildContactPdfHtml,
   formatFileSize,
@@ -45,6 +46,7 @@ type ContactInquiryFormProps = {
   analyticsSourceSection?: string;
   onAnalyticsStart?: () => void;
 };
+
 
 type InquiryApiResponse = {
   success: boolean;
@@ -108,6 +110,9 @@ async function postInquiryApi(
 type InquiryRuntimeLocale =
   | "zh-CN"
   | "en"
+  | "de"
+  | "it"
+  | "hi"
   | "es"
   | "fr"
   | "ko"
@@ -145,6 +150,30 @@ const INQUIRY_RUNTIME_TEXT: Record<
       "The email service has not been configured. Please contact the website administrator.",
     genericError:
       "The operation failed. Please try again later or contact us by email.",
+  },
+
+  de: {
+    requiredFieldsMissing: "Geben Sie Ihren Namen, den Firmennamen und Ihre E-Mail-Adresse ein.",
+    rateLimited: "Zu viele Anfragen in kurzer Zeit. Versuchen Sie es später erneut.",
+    networkError: "Die Anfrage konnte nicht gesendet werden. Prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+    configurationError: "Der E-Mail-Dienst ist noch nicht eingerichtet. Wenden Sie sich an den Website-Administrator.",
+    genericError: "Der Vorgang ist fehlgeschlagen. Versuchen Sie es später erneut oder kontaktieren Sie uns per E-Mail.",
+  },
+
+  hi: {
+    requiredFieldsMissing: "अपना नाम, कंपनी का नाम और ईमेल पता दर्ज करें।",
+    rateLimited: "बहुत कम समय में कई अनुरोध भेजे गए। कुछ समय बाद फिर कोशिश करें।",
+    networkError: "अनुरोध नहीं भेजा जा सका। नेटवर्क कनेक्शन जाँचें और फिर कोशिश करें।",
+    configurationError: "ईमेल सेवा अभी सेट नहीं है। वेबसाइट के व्यवस्थापक से संपर्क करें।",
+    genericError: "कार्रवाई पूरी नहीं हुई। बाद में फिर कोशिश करें या ईमेल से संपर्क करें।",
+  },
+
+  it: {
+    requiredFieldsMissing: "Inserisci il tuo nome, il nome dell’azienda e l’indirizzo e-mail.",
+    rateLimited: "Hai inviato troppe richieste. Riprova più tardi.",
+    networkError: "La richiesta non è stata inviata. Controlla la connessione e riprova.",
+    configurationError: "Il servizio e-mail non è ancora configurato. Contatta l’amministratore del sito.",
+    genericError: "L’operazione non è riuscita. Riprova più tardi o contattaci via e-mail.",
   },
 
   es: {
@@ -205,6 +234,16 @@ function getInquiryRuntimeLocale():
 
   if (rawLocale.startsWith("zh")) {
     return "zh-CN";
+  }
+
+  if (rawLocale.startsWith("de")) {
+    return "de";
+  }
+
+  if (rawLocale.startsWith("hi")) return "hi";
+
+  if (rawLocale.startsWith("it")) {
+    return "it";
   }
 
   if (rawLocale.startsWith("es")) {
@@ -701,6 +740,7 @@ export default function ContactInquiryForm({
       const submissionFormData =
         new FormData();
 
+      const { submissionValues } = data.form;
       const submissionFields:
         Record<string, string> = {
           formType: "general_inquiry",
@@ -709,15 +749,15 @@ export default function ContactInquiryForm({
           email: formData.email,
           phone: formData.phone,
           requestType:
-            formData.requestType,
+            submissionValues?.requestType[formData.requestType] ?? formData.requestType,
           productType:
-            formData.productType,
+            submissionValues?.productType[formData.productType] ?? formData.productType,
           targetModel:
             formData.targetModel,
           projectStage:
-            formData.projectStage,
+            submissionValues?.projectStage[formData.projectStage] ?? formData.projectStage,
           message: formData.message,
-          locale: currentLang,
+          locale: getInquiryTransportLocale(currentLang),
         };
 
       Object.entries(

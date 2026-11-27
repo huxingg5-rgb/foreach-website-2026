@@ -188,12 +188,16 @@ export const remainingPumpArticlesEs = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "Página del producto DPL30"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "Para el trasvase al depósito secundario, pruebe la ",
+                "label": "bomba de diafragma DPL30-DB",
+                "suffix": " con el depósito principal en su nivel mínimo de trabajo. Mida cuánta tinta llega al depósito secundario en un ciclo de llenado."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "Página del producto DPL60"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "Si una línea de retorno independiente debe transportar más tinta, evalúe la ",
+                "label": "DPL60-DB",
+                "suffix": " en esa línea al caudal y a la contrapresión requeridos."
               }
             ]
           }
@@ -494,12 +498,16 @@ export const remainingPumpArticlesEs = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "Página de DPL30, clase 300 mL/min"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "Para un caudal de trabajo inferior a 300 mL/min, consulte la curva de la ",
+                "label": "DPL30-DB",
+                "suffix": " a la pérdida de presión medida en el circuito."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "Página de DPL60, clase 600 mL/min"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "Si el objetivo se acerca a 300 mL/min y la bomba pequeña tiene poco margen, repita la medición con la ",
+                "label": "DPL60-DB",
+                "suffix": " y el filtro cerca de su límite de sustitución."
               },
               {
                 "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
@@ -768,12 +776,16 @@ export const remainingPumpArticlesEs = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "Página del producto DPL30"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "Al evaluar la ",
+                "label": "DPL30-DB",
+                "suffix": " en un circuito de tinta blanca de bajo caudal, mida el caudal y compruebe si hay depósitos en las válvulas tras el periodo de parada previsto."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "Página del producto DPL60"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "Si el circuito requiere mayor caudal, pruebe la ",
+                "label": "DPL60-DB",
+                "suffix": " con la misma tinta y el mismo filtro. Compruebe la recuperación del caudal al arrancar y la presión en el cabezal."
               },
               {
                 "href": "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection/",

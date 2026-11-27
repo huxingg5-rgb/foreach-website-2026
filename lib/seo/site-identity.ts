@@ -70,6 +70,18 @@ const ORGANIZATION_COPY: Record<string, { description: string; contactName: stri
     description: "FOREACH develops core components and fluid-path solutions for microfluidic systems used in IVD, life science, analytical instruments, synthetic biology and laboratory automation.",
     contactName: "Product inquiries and selection support",
   },
+  de: {
+    description: "FOREACH entwickelt Kernkomponenten und Lösungen für Flüssigkeitskreisläufe in mikrofluidischen Systemen für die In-vitro-Diagnostik, Life Sciences, Analysengeräte, synthetische Biologie und Laborautomation.",
+    contactName: "Produktanfragen und Unterstützung bei der Auswahl",
+  },
+  hi: {
+    description: "FOREACH IVD, जीवन विज्ञान, विश्लेषणात्मक उपकरणों, सिंथेटिक बायोलॉजी और प्रयोगशाला ऑटोमेशन के लिए मुख्य माइक्रोफ्लुइडिक घटक और फ्लुइड पाथ समाधान विकसित करती है।",
+    contactName: "उत्पाद की पूछताछ और चयन में सहायता",
+  },
+  it: {
+    description: "FOREACH sviluppa componenti chiave e soluzioni per circuiti microfluidici nella diagnostica in vitro, nelle scienze della vita, nella strumentazione analitica, nella biologia sintetica e nell’automazione di laboratorio.",
+    contactName: "Richieste sui prodotti e assistenza nella scelta",
+  },
   es: {
     description: "FOREACH desarrolla componentes y soluciones para circuitos microfluídicos utilizados en diagnóstico in vitro, ciencias de la vida, instrumentación analítica, biología sintética y automatización de laboratorio.",
     contactName: "Consultas de productos y asistencia en la selección",
@@ -89,7 +101,7 @@ const ORGANIZATION_COPY: Record<string, { description: string; contactName: stri
 };
 
 export function getSiteIdentity(locale: string) {
-  const language = locale === "en-US" ? "en" : locale;
+  const language = locale === "en-US" ? "en" : locale === "de-DE" ? "de" : locale === "it-IT" ? "it" : locale === "hi-IN" ? "hi" : locale;
   const copy = ORGANIZATION_COPY[language];
   if (!copy) return HOME_SITE_IDENTITY;
   return {

@@ -1,0 +1,94 @@
+{
+  "name": "Membrane Degasser",
+  "navName": "Membrane Degassers",
+  "navDescription": "Inline vacuum degassing for liquid circuits",
+  "title": "Hollow-Fiber Membrane Degassing Module for Inkjet Ink",
+  "seoTitle": "EF-AG3-B Hollow-Fiber Membrane Degassing Module for Inkjet Ink | FOREACH",
+  "description": "EF-AG3-B removes dissolved gases from industrial inkjet ink inline. Two liquid ports and one vacuum port use NPT 1/8 female threads.",
+  "introduction": "The EF-AG3-B degasses ink inline in industrial inkjet supply lines. Ink flows outside the hollow fibers, and the vacuum draws dissolved gases through the membrane to reduce bubble formation downstream. Both liquid ports and the vacuum port use NPT 1/8 female threads. Verify degassing and liquid-side pressure drop for the actual ink, flow rate, temperature and vacuum-side absolute pressure, and check compatibility with ink and cleaning fluids.",
+  "cardAlt": "EF-AG3-B membrane degassing module and its threaded ports",
+  "galleryAlts": [
+    "Front view of the EF-AG3-B membrane degassing module, showing its cylindrical housing and side liquid port",
+    "EF-AG3-B membrane degassing module standing vertically",
+    "Opposite angled view of the EF-AG3-B membrane degassing module",
+    "End and side threaded ports of the EF-AG3-B membrane degassing module"
+  ],
+  "breadcrumbs": ["Home", "Products", "Fittings"],
+  "modelLabel": "Model",
+  "typeLabel": "Product type",
+  "searchKeywords": "membrane degasser membrane degassing module degassing module degassing membrane hollow fiber inline vacuum degassing inkjet ink EF-AG3-B",
+  "specificationGroups": [
+    {"title": "Construction and ports", "rows": [
+      ["Dimensions", "159 mm × Ø42 mm"],
+      ["Weight", "Approx. 100 g"],
+      ["Membrane area", "Approx. 0.2 m²"],
+      ["Initial priming volume", "Approx. 40 mL (EF-AG3 series reference value)"],
+      ["Hollow-fiber membrane", "Poly(4-methyl-1-pentene) (PMP)"],
+      ["Housing and end caps", "Polypropylene (PP), stainless steel (SUS)"],
+      ["Potting resin", "Epoxy resin"],
+      ["Ports", "Two liquid ports and one vacuum port, all NPT 1/8"]
+    ]},
+    {"title": "Operating conditions", "rows": [
+      ["Liquid and ambient operating temperature", "5–45 °C"],
+      ["Maximum liquid-side pressure (gauge)", "200 kPa"],
+      ["Vacuum-side pressure for aqueous liquids (absolute)", "From the liquid's saturated vapor pressure at operating temperature to 100 kPa"],
+      ["Vacuum-side pressure for nonaqueous liquids (absolute)", "1–100 kPa"]
+    ]},
+    {"title": "Water-test results", "rows": [
+      ["Water test: dissolved oxygen after treatment", "< 1.9 mg/L"],
+      ["Water test: module pressure drop", "< 0.1 kPa"]
+    ]}
+  ],
+  "selection": {
+    "ariaLabel": "Membrane degasser selection and use",
+    "phaseTitles": ["Selection and configuration", "Ports and installation"],
+    "intro": "EF-AG3-B uses an external-perfusion design: liquid flows outside the hollow fibers, and dissolved gases pass through the membrane and are drawn away on the vacuum side. First establish the operating flow rate, degassing target and allowable pressure drop, then check liquid temperature, fluid compatibility and available vacuum conditions.",
+    "columns": ["Selection item", "Configuration and checks"],
+    "inputs": {"title": "Operating flow rate and degassing target", "intro": "Define the following inputs for actual equipment operation, then check the target operating point against the reference curves.", "rows": [
+      ["Operating flow rate", "Record the usual and maximum equipment flow rates", "Check both continuous liquid delivery and start/stop conditions."],
+      ["Degassing target", "Assess performance using dissolved oxygen concentrations before and after treatment", "Validate against printhead jetting or equipment operation."],
+      ["Allowable pressure drop", "Check the module's liquid-side pressure drop at the target flow rate", "Include pressure losses through filters, tubing and fittings."],
+      ["Liquid temperature and vacuum conditions", "Select a reference curve for the actual liquid temperature and vacuum-side absolute pressure", "Check operating vacuum conditions against the liquid's saturated vapor pressure."]
+    ]},
+    "materials": {"title": "Wetted materials and fluid compatibility", "intro": "Check both the process liquid and the cleaning liquid. Record their composition, concentration, temperature and contact time.", "paragraph": "The hollow fibers are PMP; the housing and end caps use PP and stainless steel, with epoxy potting resin. Confirm compatibility against the complete combination of wetted materials."},
+    "curves": {
+      "title": "Flow rate, degassing performance and liquid-side pressure drop",
+      "intro": "At the target flow rate, read dissolved oxygen removal at the relevant vacuum condition and the corresponding liquid-side pressure drop. Series water tests show decreasing oxygen removal and increasing pressure drop as flow rises. At the same temperature and flow, curves at lower vacuum-side absolute pressure indicate higher reference removal rates.",
+      "note": "The curves are approximate redrawings of series water-test reference graphs. Validate the actual equipment with its intended fluid, liquid temperature and target operating point.",
+      "alts": ["Reference curves of flow rate versus dissolved oxygen removal: water at 25 °C and 2.7, 6.7 or 13.3 kPa absolute, plus water at 45 °C and 6.7 kPa absolute", "Series reference curve showing liquid-side pressure drop rising with flow rate in water tests at 25 °C"],
+      "captions": ["Flow rate and dissolved oxygen removal. Select the curve for liquid temperature and vacuum-side absolute pressure, then read removal at the target flow rate.", "Flow rate and liquid-side pressure drop. Read the pressure drop at the same flow rate and compare it with the equipment's available pressure margin."],
+      "exampleTitle": "Reading example",
+      "example": "For water at 25 °C and 1,000 mL/min, the 6.7 kPa vacuum-side absolute-pressure curve indicates approximately 58% dissolved oxygen removal. At the same flow rate, water-test liquid-side pressure drop is approximately 2.3 kPa. Both values are approximate readings from series reference graphs.",
+      "flowAxis": "Liquid flow rate (mL/min)",
+      "oxygenAxis": "Dissolved oxygen removal (%)",
+      "pressureAxis": "Liquid-side pressure drop (kPa)",
+      "water": "water",
+      "absolute": "abs.",
+      "pressureLegend": "25 °C water · liquid-side pressure drop"
+    },
+    "ports": {"title": "Port identification and installation clearance", "intro": "Both liquid ports and the vacuum port are NPT 1/8. The side port and one end port carry liquid; the other end port connects to vacuum. Check the port markings before connecting tubing. Allow space for connections based on the 159 mm overall length, Ø42 mm end-cap diameter and side-port location."},
+    "connections": {"title": "Ink supply and vacuum lines", "intro": "First determine the module's position in the ink supply circuit. A filter is recommended in the liquid circuit; its location follows the equipment design.", "rows": [
+      ["Example ink supply circuit", "Ink tank → supply pump → membrane degassing module → reservoir → printhead", "In this example, liquid enters through the lower side port and exits through the upper end port. Some systems locate the module between the reservoir and printhead; follow the actual ink circuit."],
+      ["Vacuum line", "Vacuum port → liquid trap → vacuum pump", "Fit a vacuum gauge to read absolute pressure. The liquid trap collects condensate or leaking liquid, helping identify leaks and protect the vacuum pump. For aqueous ink applications, orienting the vacuum port downwards is recommended."]
+    ]},
+    "commissioning": {"title": "Initial priming and operating-point validation", "intro": "Check orientation and port connections, fill and vent the module, then verify degassing performance and pressure drop at the target flow rate.", "steps": [
+      ["Check connections", "Confirm the liquid inlet, liquid outlet and vacuum port against their markings, and check that the liquid trap and vacuum gauge are connected."],
+      ["Fill slowly from the lower liquid port", "Introduce liquid gradually to displace air from the module; applied vacuum can assist venting. Initial priming volume is approximately 40 mL, a series reference value."],
+      ["Set vacuum conditions for the actual liquid temperature", "During operation, vacuum-side absolute pressure should not fall below the liquid's saturated vapor pressure at the operating temperature, to avoid excessive evaporation affecting the liquid composition or vacuum pump."],
+      ["Validate at the target flow rate", "Record the fluid, liquid temperature, flow rate and vacuum-side absolute pressure. Measure dissolved oxygen before and after treatment with a dissolved oxygen meter and record liquid-side pressure drop with a differential pressure gauge. Check the degassing target and available circuit pressure margin."]
+    ]},
+    "storage": {"title": "Routine checks and storage", "intro": "After changes in operating conditions, record flow rate, liquid temperature, vacuum-side absolute pressure and liquid-side pressure drop again. Check the trap for condensate or signs of liquid leakage.", "paragraph": "Store indoors in a dry location below 45 °C and away from direct sunlight. Prevent any water remaining in the module after use from freezing."}
+  },
+  "delivery": {
+    "introduction": "Delivery of the EF-AG3-B membrane degassing module is arranged according to the confirmed order.",
+    "groups": [
+      {"title": "Inner packaging", "paragraphs": ["Module protection: bubble wrap cushions the module and reduces direct contact with the carton during handling.", "Damage on unpacking: retain the inner and outer packaging and provide photographs if the module is damaged when opened."], "photos": [{"alt": "Bubble-wrap bag bearing the FOREACH mark for a membrane degassing module", "caption": "Bubble-wrap protection for the module"}, {"alt": "Operator removing a bubble-wrapped membrane degassing module from its carton", "caption": "Removing the membrane degassing module"}]},
+      {"title": "Outer packaging", "paragraphs": ["Cushioned packing: a carton and cushioning materials protect the module.", "External identification: check the material label on the carton against the order on receipt.", "Accompanying documents: supplied as agreed in the order."], "photos": [{"alt": "Opened membrane degassing module carton with bubble wrap and cushioning", "caption": "Membrane degassing module unpacking"}, {"alt": "FOREACH material identification label on the membrane degassing module carton", "caption": "External material identification label"}]},
+      {"title": "Courier service", "paragraphs": ["Courier arrangements: domestic orders within China include SF Express shipping by default.", "Before shipment: confirm recipient details, delivery arrangements and any special transport requirements.", "After shipment: tracking information is provided. For a shipping issue, contact FOREACH with the order and tracking numbers."], "photos": [{"alt": "FOREACH operator handling an air-pump carton at the packing station", "caption": "Packing process example (air pump)"}, {"alt": "FOREACH operator arranging piston-pump cartons for dispatch", "caption": "Dispatch process example (piston pump)"}]}
+    ],
+    "warranty": "Agreed in writing based on fluid compatibility test results.",
+    "support": "After-sales support: contact us by phone, email or the form below with the model, order number or batch, fluid and reported symptoms. Confirm return arrangements with after-sales support before sending a module back.",
+    "replyTime": "Service hours: 08:30–18:00 on working days (Beijing time). Leave a message online; we will reply and follow up within 24 working hours.",
+    "labels": {"title": "Delivery and after-sales service", "warrantyTitle": "Warranty and support", "warrantyLabel": "Warranty terms:", "email": "Email:", "phone": "Phone:"}
+  }
+}

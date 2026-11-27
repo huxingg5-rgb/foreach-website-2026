@@ -3,6 +3,10 @@ import type { ComponentType } from "react";
 import { notFound } from "next/navigation";
 
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
+import SamplingProbeProductReading from "@/components/products/detail/SamplingProbeProductReading";
+import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+import { germanProbeDetailBody, hindiProbeDetailBody, italianProbeDetailBody, probeHref, probeText } from "@/data/products/detail/probe-guide.intl";
+import type { GermanProductDetailContent } from "@/data/products/detail/product-detail-content.de";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import probeDetailData from "@/data/products/generated/probes/detail/index.json";
 
@@ -40,6 +44,8 @@ const details = probeDetailData as ProbeDetailRecord[];
 
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: { locale: "it" | "hi"; copy: GermanProductDetailContent };
 }>;
 
 export const dynamicParams = false;
@@ -57,6 +63,10 @@ type ProbeDetailPageProps = {
   params: Promise<{
     slug: string;
   }>;
+  renderLocale?: TechnicalArticleLocale;
+  germanDraft?: boolean;
+  italianDraft?: boolean;
+  hindiDraft?: boolean;
 };
 
 function getDetailBySlug(slug: string) {
@@ -235,7 +245,7 @@ export async function generateMetadata({ params }: ProbeDetailPageProps) {
   };
 }
 
-export default async function ProbeDetailPage({ params }: ProbeDetailPageProps) {
+export default async function ProbeDetailPage({ params, renderLocale = "zh-CN", germanDraft = false, italianDraft = false, hindiDraft = false }: ProbeDetailPageProps) {
   const { slug } = await params;
   const detail = getDetailBySlug(slug);
 
@@ -243,6 +253,17 @@ export default async function ProbeDetailPage({ params }: ProbeDetailPageProps) 
     notFound();
   }
 
+  const language = germanDraft ? "de" : italianDraft ? "it" : hindiDraft ? "hi" : undefined;
+  const body = germanDraft ? germanProbeDetailBody[slug] : italianDraft ? italianProbeDetailBody[slug] : hindiDraft ? hindiProbeDetailBody[slug] : undefined;
+  const localizedCopy: GermanProductDetailContent | undefined = body && language ? {
+    title: body.title, description: body.meta, imageAlt: body.cardTitle,
+    faqs: detail.faq.map(item => ({ question: probeText(item.question, language), answer: probeText(item.answer, language) })),
+    ...(detail.bottomCtaTitle && detail.bottomCtaDescription && detail.bottomCtaButtonText ? { bottomCta: {
+      title: probeText(detail.bottomCtaTitle, language), description: probeText(detail.bottomCtaDescription, language),
+      buttonText: probeText(detail.bottomCtaButtonText, language), href: germanDraft ? "/de/contact/" : hindiDraft ? probeHref("/contact/", "hi") : "/en/contact/",
+    } } : {}),
+  } : undefined;
+  const clientData = toClientData(detail);
   return (
     <div data-probe-detail-page="true">
       <style
@@ -265,7 +286,12 @@ export default async function ProbeDetailPage({ params }: ProbeDetailPageProps) 
           `,
         }}
       />
-      <ProductDetailView data={toClientData(detail)} />
+      <ProductDetailView data={language === "hi" || language === "it" ? { ...clientData, __locale: language } : clientData}
+        germanDetail={germanDraft ? localizedCopy : undefined}
+        localizedDetail={(language === "it" || language === "hi") && localizedCopy ? { locale: language, copy: localizedCopy } : undefined} />
+      {(slug === "sampling-probes" || slug === "piercing-probes") && (
+        <SamplingProbeProductReading product={slug} locale={renderLocale} germanDraft={germanDraft} italianDraft={italianDraft} hindiDraft={hindiDraft} />
+      )}
     </div>
   );
 }

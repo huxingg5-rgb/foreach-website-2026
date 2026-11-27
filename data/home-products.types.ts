@@ -1,9 +1,13 @@
 import type { LocaleCode } from '@/lib/i18n';
 import type { englishHomeProducts, productGroups } from './home-products.en';
 
-export type HomeProductsLocale = Exclude<LocaleCode, 'zh-CN'>;
+export type HomeProductsLocale = Exclude<LocaleCode, 'zh-CN'> | 'de' | 'it' | 'hi';
 export type HomeProductGroup = (typeof productGroups)[number];
-export type HomeProduct = (typeof englishHomeProducts)[number] & { imageAlt?: string };
+export type HomeProduct = (typeof englishHomeProducts)[number] & {
+  imageAlt?: string;
+  hrefLang?: "de" | "en" | "it" | "hi";
+  title?: string;
+};
 export type HomeProductsCopy = {
   title: string;
   categoriesAriaLabel: string;

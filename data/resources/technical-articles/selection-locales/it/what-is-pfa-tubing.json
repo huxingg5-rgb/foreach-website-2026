@@ -1,0 +1,468 @@
+{
+  "kind": "selection",
+  "family": "tubing",
+  "footerProducts": [
+    {
+      "id": "pfa-tubing",
+      "title": "Tubi in polimero perfluoroalcossilico (PFA)",
+      "href": "/en/products/tubing/pfa-tubing/details/",
+      "imageSrc": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+      "imageAlt": "Rotolo di tubo traslucido FOREACH in PFA con estremità visibile",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tubing-assembly-pfa-flanged",
+      "title": "Assemblaggio di tubo flangiato in PFA",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/pfa/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-pfa-flanged-square.webp",
+      "imageAlt": "Assemblaggio flangiato in PFA con estremità trasparente, raccordo filettato traslucido e rondella di sostegno metallica",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "ptfe-tubing",
+      "title": "Tubi in politetrafluoroetilene (PTFE)",
+      "href": "/en/products/tubing/ptfe-tubing/details/",
+      "imageSrc": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-natural-coil.webp",
+      "imageAlt": "Rotolo di tubo FOREACH in PTFE naturale con estremità tagliata",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "fep-tubing",
+      "title": "Tubi in etilene propilene fluorurato (FEP)",
+      "href": "/en/products/tubing/fep-tubing/details/",
+      "imageSrc": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+      "imageAlt": "Tubi FOREACH in FEP nelle versioni trasparente e nera",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "peek-tubing",
+      "title": "Tubi in polietereterchetone (PEEK)",
+      "href": "/en/products/tubing/peek-tubing/details/",
+      "imageSrc": "/images/products/tubing/peek-tubing/foreach-chemical-resistant-peek-tubing-color-options.webp",
+      "imageAlt": "Tubi FOREACH in PEEK resistenti agli agenti chimici, in giallo, arancione e verde",
+      "imageAspectRatio": 1
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Che cos'è un tubo in PFA? Materiale, pulizia e circuiti fluidici degli strumenti",
+      "seoTitle": "Che cos'è un tubo in PFA? Proprietà, confronto con il FEP e assemblaggi | FOREACH",
+      "seoDescription": "Scegli tubi in PFA per trasferimento di reagenti, preparazione dei campioni e lavaggio. Distingui la resistenza chimica dalla pulizia del tubo finito, confronta FEP e PTFE e abbina dimensioni e collegamenti.",
+      "coverImage": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-side.webp",
+      "coverAlt": "Foto laterale di un assemblaggio flangiato FOREACH in PFA con tubo trasparente e raccordi terminali"
+    },
+    "deck": "Il tubo in PFA è un tubo in fluoropolimero a base di polimero perfluoroalcossilico lavorabile allo stato fuso. Nei circuiti analitici, verificare insieme compatibilità con i fluidi, volume interno, collegamenti e segnale di fondo per definire l'assemblaggio completo.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Il tubo in PFA è in polimero perfluoroalcossilico, un fluoropolimero con ampia resistenza chimica che si può estrudere allo stato fuso in tubi a piccolo diametro. Negli strumenti analitici serve a trasferire reagenti, preparare campioni e alimentare il lavaggio, collegando serbatoi, pompe, valvole e componenti di rilevamento."
+      },
+      {
+        "type": "paragraph",
+        "text": "I tubi in PFA si possono realizzare anche in assemblaggi a lunghezza fissa con terminali flangiati, con anello di ritegno o con ogiva, secondo porte e percorso nello strumento. Quando contano il segnale di fondo e i residui di campione, considerare tubi, raccordi e pulizia come un unico circuito a contatto con il fluido. Scegliere dimensioni e configurazione in funzione del volume da trasferire e della geometria delle porte."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Di che cosa è fatto un tubo in PFA e come si distingue la lavorazione da quella del PTFE?",
+        "tocLabel": "Materiale e lavorazione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il PFA è un polimero perfluoroalcossilico ottenuto copolimerizzando tetrafluoroetilene con monomeri di perfluoroalchil vinil etere. Combina l'ampia resistenza chimica dei polimeri perfluorurati con la lavorabilità allo stato fuso e si può estrudere in tubi a piccolo diametro."
+          },
+          {
+            "type": "paragraph",
+            "text": "PFA e PTFE sono materiali diversi. Per i tubi in PTFE a piccolo diametro si usano in genere estrusione in pasta e sinterizzazione. Il PFA si può estrudere allo stato fuso. Queste differenze influiscono su lavorazione e formatura delle estremità. Per tolleranze, qualità superficiale e proprietà meccaniche effettive, consultare i dati del tubo finito."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un tubo in PFA può apparire trasparente o traslucido. La visibilità dipende da diametro, spessore della parete, colore e illuminazione. La trasparenza non definisce grado della resina, pulizia o pressione sopportabile. Servono i registri del materiale e del lotto."
+          }
+        ]
+      },
+      {
+        "title": "Come confrontare i tubi in PFA, FEP e PTFE in base alle condizioni di esercizio?",
+        "tocLabel": "Confronto dei materiali",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "N.",
+              "Fattore di confronto",
+              "Metodo di scelta"
+            ],
+            "rows": [
+              [
+                "1",
+                "Compatibilità con i fluidi",
+                "Elencare reagenti, liquidi di lavaggio e liquidi che restano nel circuito durante l'arresto. Valutare tutti e tre i materiali per concentrazione, temperatura e tempo di contatto"
+              ],
+              [
+                "2",
+                "Combinazione temperatura e pressione",
+                "Usare le condizioni ammissibili per misura del tubo e raccordi specifici. Controllare separatamente esercizio continuo e picchi di pressione"
+              ],
+              [
+                "3",
+                "Requisiti di visibilità",
+                "Confrontare la visibilità di livello, colore del liquido e bolle su campioni effettivi, oltre a considerare il materiale"
+              ],
+              [
+                "4",
+                "Segnale di fondo analitico",
+                "Confrontare bianchi, sostanze estraibili e adsorbimento con lo stesso liquido, durata di contatto e metodo analitico"
+              ],
+              [
+                "5",
+                "Montaggio e manutenzione",
+                "Confrontare accoppiamento alla porta, lavorazione delle estremità, raggio di curvatura e tenuta dopo rimontaggio"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "FEP e PFA si lavorano allo stato fuso. Per PTFE, FEP e PFA servono comunque le specifiche del prodotto finito. Per l'uso a temperatura elevata, verificare prima i valori nominali di tubo e raccordi a quella temperatura. Per osservare il liquido, confrontare campioni effettivi. La presunta superiorità del PFA non sostituisce queste verifiche."
+          },
+          {
+            "type": "paragraph",
+            "text": "Anche a parità di materiale, resistenza idraulica, permeazione e tenuta possono variare con spessore, lunghezza e raccordi. Se il FEP o il PTFE in uso soddisfano i requisiti fluidici, analitici e di durata, definire quale parametro si vuole migliorare passando al PFA e verificarlo a condizioni equivalenti."
+          }
+        ]
+      },
+      {
+        "title": "Come si valuta la pulizia dei tubi in PFA?",
+        "tocLabel": "Pulizia e residui",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La resistenza chimica descrive l'idoneità al contatto con un fluido. La pulizia dipende da resina, estrusione, lavaggio, confezionamento e contatti durante il montaggio. La sigla PFA da sola non dimostra alta purezza, assenza di estraibili o un basso segnale di fondo. Per analisi in tracce, definire la pulizia con criteri di accettazione misurabili."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Definire le grandezze da controllare: a seconda del metodo analitico, considerare fondo di metalli o composti organici, particelle, adsorbimento dell'analita o contaminazione residua.",
+              "Definire i bianchi: confrontare il bianco del reagente originale, il liquido dopo contatto con il tubo e il bianco di sistema dopo contatto con raccordi, pompe, valvole e circuito completo.",
+              "Controllare l'esposizione: registrare composizione, concentrazione, temperatura, tempo e area di contatto. Risultati in condizioni diverse non permettono un confronto diretto tra i materiali.",
+              "Verificare lavaggio e ripristino: usare la procedura di pulizia dello strumento per misurare volume di risciacquo, tempo di ripristino e residui nel campione successivo.",
+              "Controllare lotti e montaggio: conservare registri di materiale, lotto dei tubi, pulizia e confezionamento e gestire la contaminazione durante il taglio e l'installazione dei raccordi."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il PFA è un materiale candidato a contatto con il fluido per l'analisi di elementi in tracce. Il bianco dipende però dal circuito completo. Sostituire soltanto il tubo lasciando raccordi, liquidi di lavaggio o contenitori inadeguati non risolve il fondo di sistema."
+          }
+        ]
+      },
+      {
+        "title": "Per quali funzioni fluidiche degli strumenti si usano i tubi in PFA?",
+        "tocLabel": "Punti di impiego",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Funzione fluidica",
+              "Aspetto da valutare per il PFA",
+              "Controlli d'installazione"
+            ],
+            "rows": [
+              [
+                "Alimentazione dei reagenti negli strumenti analitici",
+                "Compatibilità con il fluido, trasferimento a piccolo diametro e accoppiamento alla porta",
+                "Resistenza in aspirazione, bolle e tenuta in depressione dei raccordi"
+              ],
+              [
+                "Collegamenti per preparare i campioni",
+                "Idoneità al contatto con campione e liquido di lavaggio",
+                "Bianchi, adsorbimento, ricambio e contaminazione residua"
+              ],
+              [
+                "Tratti a contatto con il fluido per analisi in tracce",
+                "Requisiti di materiali e pulizia del metodo analitico",
+                "Bianchi del materiale, dei collegamenti e del sistema"
+              ],
+              [
+                "Linee di lavaggio o risciacquo",
+                "Detergente, temperatura e numero di cicli",
+                "Variazioni di dimensioni, tenuta e segnale di fondo dopo il trattamento"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per queste funzioni servono configurazioni scelte in base alle condizioni specifiche. Non sono impieghi garantiti per ogni modello. Nei circuiti con pompe peristaltiche, distinguere il tratto della testa pompa sottoposto a compressione ripetuta dai collegamenti a monte e a valle. Un normale tubo in PFA a piccolo diametro non va usato direttamente nel tratto a rulli."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per reagenti fotosensibili, progettare la schermatura per le lunghezze d'onda, la durata di esposizione e i tratti esposti. I tubi trasparenti facilitano l'osservazione e non offrono protezione dalla luce. Per liquidi degassati, ridurre i tratti esposti non necessari e controllare ingressi d'aria dai raccordi e variazioni del gas disciolto."
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere diametri, spessore e lunghezza dei tubi in PFA?",
+        "tocLabel": "Dimensioni e volume interno",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Scegliere il diametro interno per portata e volume trattenuto e il diametro esterno per compatibilità con il raccordo e spessore. A diametro esterno fisso, aumentare quello interno riduce lo spessore della parete. Lo stesso diametro esterno non garantisce la stessa resistenza alla pressione o le stesse condizioni di lavorazione delle estremità."
+          },
+          {
+            "type": "formula",
+            "expression": "Spessore della parete t = (D − d) / 2; volume interno V = πd²L / 4",
+            "note": "D: diametro esterno; d: diametro interno; L: lunghezza. Il volume interno è un valore geometrico. Il volume effettivo di ricambio durante il lavaggio dipende anche dalla miscelazione, dai volumi morti dei raccordi e dalla procedura di pulizia."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per un confronto geometrico con diametro esterno di 1.6 mm, i diametri interni di 0.5 mm e 1.0 mm danno spessori di 0.55 mm e 0.30 mm. Su 1 m di lunghezza, i volumi interni sono circa 0.196 mL e 0.785 mL. A diametro esterno fisso, cambiare quello interno modifica sia il volume di ricambio sia la geometria della parete."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per un fluido newtoniano incomprimibile in moto laminare stazionario pienamente sviluppato, la resistenza di un tubo circolare è inversamente proporzionale alla quarta potenza del diametro interno. Ricalcolare la perdita di carico per aumenti di portata o viscosità, includendo valvole, filtri, raccordi e dislivelli. Il solo diametro esterno richiesto dalla porta dello strumento non basta per scegliere il tubo."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Calcola dimensioni, lunghezza dei tubi e perdita di carico del circuito",
+                "href": "/en/resources/calculators/fluid-resistance/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Come abbinare gli assemblaggi in PFA ai raccordi e alla geometria delle estremità?",
+        "tocLabel": "Raccordi e foto degli assemblaggi",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I tubi FOREACH in PFA sono disponibili in assemblaggi flangiati, con anello di ritegno e con ogiva. Scegliere la configurazione in funzione di porta corrispondente, misura del tubo, metodo di tenuta e requisiti di montaggio. Per i collegamenti flangiati controllare l'accoppiamento tra estremità formata e rondella. Per anelli di ritegno e ogive seguire i rispettivi requisiti di presa e tenuta."
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/tubing-assemblies/flanged-tubing/pfa/foreach-pfa-flanged-tubing-assembly-side.webp",
+            "alt": "Foto laterale di un assemblaggio flangiato FOREACH in PFA con tubo trasparente e raccordi terminali",
+            "width": 1500,
+            "height": 1500,
+            "caption": "Foto di un assemblaggio flangiato FOREACH in PFA. Il tubo trasparente e i raccordi filettati alle estremità formano un assemblaggio a lunghezza fissa, con dimensioni, lunghezza e terminali secondo il disegno.",
+            "captionHref": "/en/products/tubing-assemblies/flanged-tubing/details/pfa/"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Identificare modelli dei raccordi A/B, filettature, superfici di tenuta e rondelle necessarie. La sola misura del filetto non definisce l'interfaccia completa.",
+              "Specificare diametri interno ed esterno, tolleranza, lunghezza finita e riferimenti di misura, includendo tratti rettilinei, percorso e punti di fissaggio.",
+              "Verificare lavorazione delle estremità e montaggio rispetto alla porta per evitare tagli irregolari, eccentricità, compressione eccessiva o restringimento del passaggio.",
+              "Valutare insieme tubo, raccordi e tenute. Verificare temperatura e pressione di esercizio, tenuta in depressione e stato dopo il rimontaggio."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "1.6 mm e 1/16 di pollice sono quote distinte. Anche se il tubo entra nel raccordo o il filetto ingrana, controllare diametro ammesso, profondità della porta e posizione di tenuta prima di confermare la compatibilità."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Visualizza le configurazioni degli assemblaggi di tubi",
+                "href": "/en/products/tubing-assemblies/"
+              },
+              {
+                "label": "Guida alla scelta dei raccordi per tubi rigidi",
+                "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Come convalidare temperatura, pressione e funzionamento prolungato dei tubi in PFA?",
+        "tocLabel": "Convalida delle condizioni di esercizio",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il limite termico della resina è distinto dalla temperatura di lavoro dell'assieme. La pressione di scoppio a temperatura ambiente è distinta dalla pressione di esercizio prolungato. Per misura, lunghezza e terminali scelti, controllare pressione e durata ammissibili alla temperatura di esercizio, includendo le variazioni dovute a commutazione delle valvole, avviamento e arresto della pompa e ostruzioni."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sotto carico e temperatura prolungati un tubo polimerico può cambiare dimensioni, modificando presa e sollecitazione di tenuta alle estremità. Valutare nel tempo tenuta in pressione, cicli termici, supporto del percorso, ritegno dei raccordi e stato dopo i cicli di pulizia. Aumentare il serraggio non sostituisce la compatibilità geometrica."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Definire le condizioni di esercizio: fluidi di processo e di lavaggio, temperatura, portata, pressione continua e di picco e depressione in aspirazione.",
+              "Controllare i componenti dell'assieme: registrare modelli, dimensioni, porte e metodo di serraggio. Costruire i campioni con lo stesso processo.",
+              "Convalidare il funzionamento: misurare tenuta, portata, bolle, ricambio e segnale di fondo entro le condizioni ammesse dell'assieme.",
+              "Ispezionare dopo l'uso: controllare deformazioni delle estremità, allentamento, perdite e risultati analitici. Includere i criteri di accettazione nei requisiti della configurazione."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Modelli e dimensioni dei tubi FOREACH in PFA",
+        "tocLabel": "Specifiche FOREACH",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I tubi FOREACH in PFA a piccolo diametro hanno un diametro esterno di 1.6 mm e diametri interni di 0.5, 0.8 o 1.0 mm. Modelli, codici articolo e confezioni sotto corrispondono ai dati di selezione del sito."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Modello",
+              "Codice articolo",
+              "Diametro interno × diametro esterno (mm)",
+              "Confezione"
+            ],
+            "rows": [
+              [
+                "SF403002",
+                "439081",
+                "0.5 × 1.6",
+                "100 m/rotolo"
+              ],
+              [
+                "SF403003",
+                "439082",
+                "0.8 × 1.6",
+                "100 m/rotolo"
+              ],
+              [
+                "SF403004",
+                "439080",
+                "1 × 1.6",
+                "100 m/rotolo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per i rotoli conservare modello e unità di confezione. Per gli assemblaggi a lunghezza fissa indicare anche lunghezza, disegni dei due terminali, condizioni operative e requisiti analitici. Se è richiesta una classe di pulizia, indicare espressamente metodo di prova e criteri di accettazione."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Visualizza tutte le specifiche e le opzioni dei tubi in PFA",
+                "href": "/en/products/tubing/pfa-tubing/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Altri materiali per tubi da strumento",
+        "tocLabel": "Materiali correlati per tubi",
+        "blocks": [
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "label": "Tubi in PTFE: materiale, resistenza al flusso e scelta dei raccordi",
+                "href": "/en/resources/technical-articles/what-is-ptfe-tubing/"
+              },
+              {
+                "label": "Tubi in FEP: piccolo diametro, trasparenza e raccordi flangiati",
+                "href": "/en/resources/technical-articles/what-is-fep-tubing/"
+              },
+              {
+                "label": "Tubi in PVC: durezza, posa e raccordi per tubi flessibili",
+                "href": "/en/resources/technical-articles/what-is-pvc-tubing/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulla scelta dei tubi in PFA",
+    "faqItems": [
+      {
+        "question": "1. Tra quali punti si misura la lunghezza sul disegno di un assemblaggio in PFA?",
+        "answer": "Misurare tra i due riferimenti indicati nel disegno. La lunghezza del tubo tagliato precede la lavorazione delle estremità e il montaggio. La lunghezza totale dell'assieme si misura tra i riferimenti esterni specificati. La distanza tra le superfici di tenuta si misura tra le due superfici indicate. Sono quote distinte. Specificare tipo di lunghezza, riferimenti e tolleranza. Nelle pose curve, indicare se la lunghezza segue l'asse del tubo o la retta tra due punti."
+      }
+    ],
+    "cta": {
+      "title": "Abbinare i tubi in PFA alle porte dello strumento",
+      "description": "Indicare fluido, dimensioni, lunghezza, temperatura e pressione, disegni delle due estremità e requisiti del segnale di fondo. FOREACH può aiutare a valutare tubi e configurazioni di assemblaggio.",
+      "contactLabel": "Contatta un tecnico",
+      "productsLabel": "Visualizza le specifiche dei tubi in PFA",
+      "productsHref": "/en/products/tubing/pfa-tubing/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "material-processing",
+      "label": "Materiale e lavorazione"
+    },
+    {
+      "id": "material-comparison",
+      "label": "Confronto dei materiali"
+    },
+    {
+      "id": "cleanliness",
+      "label": "Pulizia e residui"
+    },
+    {
+      "id": "instrument-applications",
+      "label": "Punti di impiego"
+    },
+    {
+      "id": "diameter-volume",
+      "label": "Dimensioni e volume interno"
+    },
+    {
+      "id": "fittings-assemblies",
+      "label": "Raccordi e foto degli assemblaggi"
+    },
+    {
+      "id": "operating-validation",
+      "label": "Convalida delle condizioni di esercizio"
+    },
+    {
+      "id": "foreach-sizes",
+      "label": "Specifiche FOREACH"
+    },
+    {
+      "id": "related-tubing",
+      "label": "Materiali correlati per tubi"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Tubi in PFA",
+      "Scelta del circuito fluidico dello strumento"
+    ],
+    "mentions": [
+      "Tubi in PTFE",
+      "Tubi in FEP",
+      "Tubi in PFA",
+      "Resistenza idraulica dei tubi",
+      "Assemblaggi di tubi tagliati a misura"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "pfa-tubing",
+      "title": "Tubi in polimero perfluoroalcossilico (PFA)",
+      "href": "/en/products/tubing/pfa-tubing/details/",
+      "imageSrc": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+      "imageAlt": "Rotolo di tubo traslucido FOREACH in PFA con estremità visibile",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tubing-assembly-pfa-flanged",
+      "title": "Assemblaggio di tubo flangiato in PFA",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/pfa/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-pfa-flanged-square.webp",
+      "imageAlt": "Assemblaggio flangiato in PFA con estremità trasparente, raccordo filettato traslucido e rondella di sostegno metallica",
+      "imageAspectRatio": 1
+    }
+  ]
+}

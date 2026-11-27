@@ -1,0 +1,489 @@
+{
+  "kind": "selection",
+  "family": "tubing",
+  "footerProducts": [
+    {
+      "id": "pvc-tubing",
+      "title": "Tubi in cloruro di polivinile (PVC)",
+      "href": "/en/products/tubing/pvc-tubing/details/",
+      "imageSrc": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+      "imageAlt": "Rotolo di tubo flessibile trasparente in PVC FOREACH con estremità visibile",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    },
+    {
+      "id": "equal-straight-barbed-fittings",
+      "title": "Raccordo portagomma diritto a diametri uguali",
+      "href": "/en/products/fittings/barbed-fittings/",
+      "imageSrc": "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-dark.webp",
+      "imageAlt": "Portagomma diritti della famiglia C/D con passaggio uguale: sei raccordi in PA bianca e PP naturale su tessuto scuro. Foto di famiglia con materiali diversi",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Perché i tubi si sfilano dai raccordi portagomma? Prove di pressione e sfilamento del PVC",
+      "seoTitle": "Sfilamento dai raccordi portagomma: pressione e scoppio dei tubi in PVC | FOREACH",
+      "seoDescription": "Confronta i risultati delle prove di tenuta in pressione, scoppio, pressione di esercizio e sfilamento per due misure di tubo in PVC, anche dopo 42 giorni di invecchiamento a 70°C. Verifica le combinazioni di raccordi e i limiti per la convalida IVD.",
+      "coverImage": "/images/resources/technical-articles/pvc-tubing-pressure-rating-pull-off-force/clear-pvc-tubing-on-barbed-fitting-cover.webp",
+      "coverAlt": "Dettaglio di un tubo in PVC trasparente collegato a un raccordo portagomma"
+    },
+    "deck": "Un raccordo può cedere prima che il tubo in PVC scoppi. Una forza di sfilamento elevata non determina direttamente la pressione di esercizio. Le prove FOREACH su due misure mostrano come misurare e interpretare pressione e ritegno dopo l'invecchiamento, prima di convalidare il circuito fluidico IVD installato.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Quando un tubo si sfila dal portagomma, esaminare le dimensioni del tubo e del raccordo, lo stato del montaggio, la pressione di esercizio e le trazioni esterne. Un tubo integro non dimostra il ritegno del collegamento. Una forza iniziale di sfilamento elevata può cambiare dopo l'esposizione alla temperatura o al fluido. Prima di definire il campo di esercizio di un assieme IVD, convalidare separatamente tenuta in pressione del collegamento, scoppio del tubo e sfilamento dal raccordo."
+      },
+      {
+        "type": "paragraph",
+        "text": "Le dimensioni approssimative dei tubi, diametro interno × diametro esterno, sono 1.6×3.2 mm e 3.2×6.4 mm. Le medie in tabella provengono da prove su campioni e raccordi specifici e servono alla selezione e alla convalida. Non rappresentano pressioni nominali per un'intera serie o per combinazioni arbitrarie."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Perché un tubo si sfila da un portagomma? Accoppiamento, picchi di pressione e trazione esterna",
+        "tocLabel": "Cause dello sfilamento del tubo",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I raccordi portagomma trattengono il tubo per deformazione e contatto attorno al profilo del portagomma. Il diametro interno, lo spessore della parete, la durezza e il profilo determinano l'accoppiamento. Inserimento insufficiente, estremità danneggiate o carichi laterali possono modificare il ritegno. Stabilire prima se lo sfilamento segue il montaggio, la commutazione di pompe o valvole oppure gli spostamenti per manutenzione, quindi scegliere i controlli."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sintomi dello sfilamento dal portagomma e controlli diagnostici"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Quando si allenta",
+              "Primi controlli",
+              "Convalida successiva"
+            ],
+            "rows": [
+              [
+                "Si sfila facilmente dopo il montaggio",
+                "Diametro interno effettivo, dimensioni del portagomma, durezza, profondità di innesto e stato dell'estremità del tubo",
+                "Prove di sfilamento e tenuta sull'assieme finale"
+              ],
+              [
+                "Sfilamento all'avviamento o all'arresto della pompa o alla commutazione delle valvole",
+                "Picchi di pressione, ostruzioni e ritegno supplementare",
+                "Tenuta in pressione dell'assieme e cicli di pressione effettivi"
+              ],
+              [
+                "Il collegamento cambia dopo il contatto con il fluido o il riscaldamento",
+                "Fluido, temperatura e variazioni delle dimensioni e della durezza del tubo",
+                "Tenuta in pressione, assenza di perdite e sfilamento dopo l'esposizione"
+              ],
+              [
+                "Allentamento dopo la manutenzione o uno spostamento",
+                "Curve, gioco, sostegni e trazione esterna",
+                "Riprodurre la posa e i carichi di manutenzione effettivi"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Una fascetta non risolve ogni caso. Verificare il ritegno supplementare in base a tubo, raccordo e spazio disponibile, quindi convalidare l'assetto finale. Distinguere tenuta in pressione del collegamento, scoppio del tubo e sfilamento assiale evita di ricondurre ogni distacco a un solo valore di pressione."
+          }
+        ]
+      },
+      {
+        "title": "Pressione di esercizio, tenuta in pressione, pressione di scoppio e forza di sfilamento dei tubi in PVC: che cosa cambia?",
+        "tocLabel": "Termini per pressione e sfilamento",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Indicatore",
+              "Elemento misurato o definito",
+              "Domanda a cui risponde"
+            ],
+            "rows": [
+              [
+                "Risultato della tenuta in pressione del collegamento",
+                "Combinazione specifica di tubo e raccordo, in unità come MPa",
+                "Se si sfila o raggiunge un altro criterio di guasto nelle condizioni di pressione e tempo definite"
+              ],
+              [
+                "Pressione di scoppio del tubo",
+                "Pressione alla rottura della parete del tubo",
+                "A quale pressione cede il campione nelle condizioni di prova"
+              ],
+              [
+                "Forza di sfilamento dal raccordo",
+                "Forza assiale che separa il tubo dal raccordo, in N",
+                "Resistenza dell'assemblaggio specifico alla trazione assiale"
+              ],
+              [
+                "Pressione nominale di esercizio",
+                "Prodotto o assieme in condizioni definite di fluido, temperatura e impiego",
+                "Campo di esercizio consentito per il progetto, supportato da specifiche e convalida"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "In un collegamento portagomma interagiscono pressione interna, deformazione del tubo e innesto sul raccordo. Se il collegamento cede per primo, il tubo può non raggiungere la pressione di scoppio. Anche il ritegno supplementare usato per arrivare allo scoppio cambia l'assemblaggio. Valutare sempre il punto di cedimento e il metodo di montaggio insieme al risultato."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nel progetto del dispositivo considerare i picchi di pressione dovuti ad avviamento e arresto della pompa, commutazione delle valvole e ostruzioni. Una singola media a temperatura ambiente non sostituisce la verifica della temperatura, dell'esposizione a detergenti, dei cicli di pressione o della variabilità tra lotti. Dividere il valore per un fattore fisso arbitrario non determina una pressione nominale."
+          }
+        ]
+      },
+      {
+        "title": "Come si provano tenuta in pressione e scoppio dei tubi in PVC? Perché conta il ritegno sul portagomma",
+        "tocLabel": "Metodi di prova di tenuta in pressione e scoppio",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Un banco idrostatico manuale ha applicato una pressione crescente a temperatura e umidità ambiente. Il piano prevedeva 5 campioni per misura, lunghi circa 300 mm. Per i tubi con diametro interno di 1.6 mm si sono usati portagomma BA-16F-PP-N e per quelli da 3.2 mm portagomma BA-32F-PP-N. La differenza tra le prove era la possibilità di aggiungere un ritegno al raccordo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Differenze tra prova di tenuta in pressione del collegamento e prova di scoppio del tubo"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Prova",
+              "Preparazione del collegamento e registrazione"
+            ],
+            "rows": [
+              [
+                "Tenuta in pressione tra tubo e raccordo",
+                "Nessun fissaggio supplementare al portagomma. Registrare la pressione mantenuta per più di 60 secondi senza sfilamento"
+              ],
+              [
+                "Scoppio del tubo",
+                "Ritegno supplementare ammesso per evitare lo sfilamento prematuro. Continuare a pressurizzare e registrare la pressione di scoppio del tubo"
+              ],
+              [
+                "Registrazione dei campioni",
+                "Conservare letture individuali e medie. Alcune misure avevano meno di 5 letture valide allo scoppio. Il numero previsto di campioni può differire dal numero valido per ciascuna prova"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Questa distinzione separa il ritegno dalla resistenza della parete del tubo. Citare un risultato di scoppio più elevato senza specificare il ritegno supplementare potrebbe far presumere che il portagomma senza ritegno sopporti la stessa pressione. Convalidare l'assieme completo previsto per la fornitura."
+          }
+        ]
+      },
+      {
+        "title": "Quanta pressione sopporta un tubo in PVC? Risultati idrostatici per due misure",
+        "tocLabel": "Risultati di pressione per i tubi in PVC",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La tabella riassume le medie idrostatiche a temperatura ambiente. Le dimensioni sono diametro interno × diametro esterno in mm e la pressione è in MPa. E36 e M36 identificano rispettivamente i tubi FOREACH da 65A e 55A. TYGON ND-100-65 è il riferimento commerciale specificato. I confronti valgono per quel grado di tubo, senza estenderli ad altri prodotti o fasce di prezzo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Medie idrostatiche a temperatura ambiente per le combinazioni di tubo e raccordo specificate"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Tubo",
+              "Diametro interno × diametro esterno",
+              "Pressione media mantenuta per 60 secondi senza sfilamento",
+              "Pressione media di scoppio del tubo"
+            ],
+            "rows": [
+              [
+                "TYGON ND-100-65",
+                "1.6×3.2",
+                "0.70 MPa",
+                "1.50 MPa"
+              ],
+              [
+                "M3602002／55A",
+                "1.6×3.2",
+                "0.86 MPa",
+                "1.88 MPa"
+              ],
+              [
+                "E3602002／65A",
+                "1.6×3.2",
+                "1.61 MPa",
+                "2.76 MPa"
+              ],
+              [
+                "TYGON ND-100-65",
+                "3.2×6.4",
+                "0.76 MPa",
+                "1.46 MPa"
+              ],
+              [
+                "M3602007／55A",
+                "3.2×6.4",
+                "1.20 MPa",
+                "2.22 MPa"
+              ],
+              [
+                "E3602007／65A",
+                "3.2×6.4",
+                "1.48 MPa",
+                "2.62 MPa"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per E3602007 da 3.2×6.4 mm, la tenuta media in pressione del collegamento era di 1.48 MPa e lo scoppio medio del tubo di 2.62 MPa. Le prove usavano ritegni diversi. Il secondo valore non rappresenta la capacità del raccordo senza ritegno. Per valutare la pressione servono misura, raccordo, metodo di montaggio, temperatura e fluido."
+          },
+          {
+            "type": "paragraph",
+            "text": "La tabella confronta i campioni nelle condizioni specificate, ma non permette di attribuire tutte le differenze alla durezza. Incidono anche mescola, dimensioni misurate e accoppiamento sul portagomma. Ricontrollare nuovi profili o misure di portagomma anche a parità di diametro interno nominale."
+          }
+        ]
+      },
+      {
+        "title": "L'invecchiamento influisce sulla forza di sfilamento dei tubi in PVC? Prova a 70°C per 42 giorni",
+        "tocLabel": "Sfilamento dopo l'invecchiamento del tubo",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La prova di sfilamento ha usato raccordi diversi: SB-U28-16-PP-N per il tubo più piccolo e SB-U28-32-PP-N per quello più grande. Dopo le misure iniziali, i tubi sono stati invecchiati in una camera a 70°C, rimossi ogni settimana, montati sul portagomma idoneo e misurati al banco di trazione fino al giorno 42. Non è stato usato un fissaggio supplementare."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il metodo misura tubi montati dopo l'invecchiamento termico. Si distingue dall'invecchiamento di un raccordo continuamente montato e pressurizzato, esposto al detergente. Pressione di esercizio e durata richiedono una convalida sul dispositivo. Una prova a 70°C per 42 giorni da sola non determina la durata di un anno di esercizio."
+          },
+          {
+            "type": "paragraph",
+            "text": "Risultati di sfilamento per i tubi montati dopo l'invecchiamento a 70°C"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Tubo / diametro interno × diametro esterno, mm",
+              "Media iniziale",
+              "Media al giorno 42",
+              "Riduzione rispetto alla media iniziale"
+            ],
+            "rows": [
+              [
+                "TYGON ND-100-65／1.6×3.2",
+                "21.4 N",
+                "16.0 N",
+                "Circa 25.2%"
+              ],
+              [
+                "M3602002／1.6×3.2",
+                "27.2 N",
+                "24.8 N",
+                "Circa 8.8%"
+              ],
+              [
+                "E3602002／1.6×3.2",
+                "38.1 N",
+                "34.6 N",
+                "Circa 9.2%"
+              ],
+              [
+                "TYGON ND-100-65／3.2×6.4",
+                "53.5 N",
+                "32.9 N",
+                "Circa 38.5%"
+              ],
+              [
+                "M3602007／3.2×6.4",
+                "56.0 N",
+                "40.0 N",
+                "Circa 28.6%"
+              ],
+              [
+                "E3602007／3.2×6.4",
+                "54.1 N",
+                "48.4 N",
+                "Circa 10.5%"
+              ]
+            ]
+          },
+          {
+            "type": "formula",
+            "expression": "Riduzione = (media iniziale − media al giorno 42) ÷ media iniziale × 100%",
+            "note": "Calcolo basato sulle medie arrotondate in tabella. Il confronto descrive i risultati e non modella il decadimento durante la vita utile."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/pvc-tubing-pressure-rating-pull-off-force/pull-off-force-1-6mm-original.webp",
+            "alt": "Forza di sfilamento media dal giorno 0 al giorno 42 per tubi in PVC da 1.6×3.2 mm: ND-100-65, M3602002 ed E3602002",
+            "imageTitle": "Forza di sfilamento del PVC · 1.6×3.2 mm (diametro interno × diametro esterno)",
+            "width": 1015,
+            "height": 578,
+            "caption": "Forza di sfilamento per tubi da 1.6×3.2 mm (diametro interno × diametro esterno). Asse orizzontale: tempo di invecchiamento a 70°C, in giorni. Asse verticale: forza di sfilamento media, in N. Dopo l'invecchiamento, i tubi sono stati rimossi e poi montati per la misura."
+          },
+          {
+            "type": "paragraph",
+            "text": "Contano anche i punti intermedi. E3602002 aveva una media di 31.3 N al giorno 7, inferiore ai 34.6 N del giorno 42. Il tubo di riferimento più piccolo aveva una media di 11.0 N al giorno 7 e 16.0 N al giorno 42. I soli estremi non rilevano i valori intermedi più bassi. Per definire l'accettazione considerare l'intero intervallo, la variazione tra campioni e i carichi di trazione effettivi."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/pvc-tubing-pressure-rating-pull-off-force/pull-off-force-3-2mm-original.webp",
+            "alt": "Forza di sfilamento media dal giorno 0 al giorno 42 per tubi in PVC da 3.2×6.4 mm: ND-100-65, M3602007 ed E3602007",
+            "imageTitle": "Forza di sfilamento del PVC · 3.2×6.4 mm (diametro interno × diametro esterno)",
+            "width": 1015,
+            "height": 579,
+            "caption": "Forza di sfilamento per tubi da 3.2×6.4 mm (diametro interno × diametro esterno). Asse orizzontale: tempo di invecchiamento a 70°C, in giorni. Asse verticale: forza di sfilamento media, in N. I punti rappresentano le misure iniziali e settimanali."
+          }
+        ]
+      },
+      {
+        "title": "Si può convertire la forza di sfilamento dal portagomma in pressione? Carico assiale e pressione del fluido",
+        "tocLabel": "Forza di sfilamento e pressione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Pressione e forza hanno unità e modalità di carico diverse. F = P × A può stimare la forza assiale su un'area efficace nel caso ideale. Nei collegamenti reali incidono anche dilatazione del tubo, distribuzione del contatto, flessione, attrito e variabilità di montaggio. L'area efficace non si può ricavare automaticamente da una quota nominale. Il calcolo aiuta ad analizzare il carico; la prova idrostatica dell'assieme rimane necessaria."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il superamento della prova di scoppio del tubo non sostituisce la prova di sfilamento. Montaggio, apertura di un coperchio, movimento del fascio di tubi e sostituzione dei consumabili possono generare trazione anche in una linea a bassa pressione. Prevedere gioco, sostegni e curve ben posizionate per evitare che il raccordo sopporti continuamente i carichi di movimento o manutenzione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le prove idrostatiche e di sfilamento qui riportate usano modelli di portagomma diversi. Le tabelle non si possono combinare in una specifica completa per un solo assemblaggio. Riunire i requisiti finali di tubo, raccordo e montaggio in un unico piano di convalida."
+          }
+        ]
+      },
+      {
+        "title": "Come prevenire lo sfilamento dei tubi nei dispositivi IVD? Convalida dell'assemblaggio portagomma e della linea installata",
+        "tocLabel": "Convalida del collegamento IVD",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Durante lo sviluppo, preselezionare campioni di materiali e raccordi. Provare quindi l'assieme effettivo nelle condizioni previste più gravose. La sequenza aiuta a distinguere problemi di materiale, accoppiamento, pressione e carichi esterni e a ottenere campioni confrontabili dai fornitori."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Definire la combinazione: codice del tubo, diametri interno ed esterno, tolleranze, durezza, codice completo del raccordo, profondità di innesto, ritegno supplementare e trattamento prima del montaggio.",
+              "Registrare le condizioni di pressione: esercizio normale, avviamento e arresto, commutazione delle valvole e ostruzioni previste. Definire picchi e cicli da convalidare.",
+              "Includere fluido e temperatura effettivi: esporre l'assieme alla concentrazione del detergente, alla temperatura massima e al ciclo di inattività, quindi verificare tenuta, tenuta in pressione e sfilamento.",
+              "Riprodurre il percorso dei tubi: curve, lunghezza, punti di sostegno e trazione durante la manutenzione. Registrare se il guasto consiste in perdita, sfilamento o rottura del tubo.",
+              "Definire l'accettazione dell'assieme: conservare risultati individuali, numero di campioni, lotti e criteri decisionali prima di stabilire il campo di esercizio del dispositivo."
+            ],
+            "ordered": true
+          },
+          {
+            "type": "paragraph",
+            "text": "Si possono valutare insieme tubi in PVC e raccordi portagomma FOREACH. Le prove illustrano metodi e risultati per combinazioni specifiche. Riconvalidare l'assieme finale da fornire dopo un cambio di tubo, misura, raccordo o ritegno. Le schede prodotto forniscono specifiche. L'evidenza di convalida dell'assieme resta specifica del progetto."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Compatibilità dei tubi in PVC con i liquidi di lavaggio IVD",
+                "href": "/en/resources/technical-articles/pvc-tubing-cleaning-fluid-compatibility/"
+              },
+              {
+                "label": "Progettazione dei portagomma, accoppiamento del tubo e montaggio",
+                "href": "/en/resources/technical-articles/what-is-a-barbed-fitting/"
+              },
+              {
+                "label": "Durezza, posa e collegamenti dei tubi in PVC",
+                "href": "/en/resources/technical-articles/what-is-pvc-tubing/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Che cosa riprovare dopo un cambio di tubo in PVC o di raccordo portagomma?",
+        "tocLabel": "Nuove prove dopo una modifica del collegamento",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Lo stesso diametro interno nominale non garantisce un accoppiamento identico tra tubi e raccordi. Dopo una modifica di mescola, durezza, tolleranze, profilo del portagomma, profondità di innesto o ritegno, ricontrollare montaggio, tenuta, tenuta in pressione e sfilamento sulla nuova combinazione finale."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per introdurre l'assieme in produzione, includere nei requisiti di accettazione tubo, raccordo, metodo di montaggio e condizioni di esercizio convalidati. Conservare i risultati individuali e le informazioni sui lotti. Valutare le modifiche sull'assieme corrispondente senza riutilizzare un singolo dato di pressione del tubo precedente."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [],
+    "cta": {
+      "title": "Verificare la combinazione finale di tubo e raccordo",
+      "description": "Indicare diametro interno × diametro esterno, durezza, modello del raccordo, fluido, temperatura, picchi di pressione e carichi di manutenzione per valutare campioni e metodi di convalida.",
+      "contactLabel": "Invia le condizioni del collegamento",
+      "productsLabel": "Visualizza le specifiche dei tubi in PVC",
+      "productsHref": "/en/products/tubing/pvc-tubing/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "barbed-fitting-pull-off-causes",
+      "label": "Cause dello sfilamento del tubo"
+    },
+    {
+      "id": "pressure-force-terms",
+      "label": "Termini per pressione e sfilamento"
+    },
+    {
+      "id": "hydraulic-test-method",
+      "label": "Metodi di prova di tenuta in pressione e scoppio"
+    },
+    {
+      "id": "pressure-results",
+      "label": "Risultati di pressione per i tubi in PVC"
+    },
+    {
+      "id": "aging-pull-off",
+      "label": "Sfilamento dopo l'invecchiamento del tubo"
+    },
+    {
+      "id": "force-vs-pressure",
+      "label": "Forza di sfilamento e pressione"
+    },
+    {
+      "id": "component-validation",
+      "label": "Convalida del collegamento IVD"
+    },
+    {
+      "id": "evidence-sources",
+      "label": "Nuove prove dopo una modifica del collegamento"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Tubi in PVC",
+      "Scelta del circuito fluidico dello strumento"
+    ],
+    "mentions": [
+      "raccordi portagomma",
+      "pressione nominale dei tubi in PVC",
+      "pressione di scoppio",
+      "pressione di esercizio",
+      "forza di sfilamento dei tubi"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "pvc-tubing",
+      "title": "Tubi in cloruro di polivinile (PVC)",
+      "href": "/en/products/tubing/pvc-tubing/details/",
+      "imageSrc": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+      "imageAlt": "Rotolo di tubo flessibile trasparente in PVC FOREACH con estremità visibile",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    },
+    {
+      "id": "equal-straight-barbed-fittings",
+      "title": "Raccordo portagomma diritto a diametri uguali",
+      "href": "/en/products/fittings/barbed-fittings/",
+      "imageSrc": "/images/products/fittings/barbed-fittings/photos/equal-straight-barbed-fittings-mixed-lineup-dark.webp",
+      "imageAlt": "Portagomma diritti della famiglia C/D con passaggio uguale: sei raccordi in PA bianca e PP naturale su tessuto scuro. Foto di famiglia con materiali diversi",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    }
+  ]
+}

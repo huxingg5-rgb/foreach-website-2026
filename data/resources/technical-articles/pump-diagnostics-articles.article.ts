@@ -4,6 +4,7 @@ import es from "./pump-diagnostics-articles.es.json";
 import fr from "./pump-diagnostics-articles.fr.json";
 import ko from "./pump-diagnostics-articles.ko.json";
 import ru from "./pump-diagnostics-articles.ru.json";
+import { germanPumpDiagnosticsDrafts, germanPumpDiagnosticsUi } from "./pump-diagnostics-articles.de";
 import { pumpDiagnosticsSlugs, type DiagnosticsDraft, type DiagnosticsUi } from "./pump-diagnostics-articles.types";
 import type { DiaphragmPumpEngineeringArticleCopy, EngineeringArticleBlock } from "./diaphragm-pump-engineering-article.types";
 import type { TechnicalArticleItem, TechnicalArticleLocale } from "./technical-articles.types";
@@ -53,12 +54,14 @@ const ui: DiagnosticsUi = {
   ru: { faq: "Частые вопросы", references: "Технические источники", related: "Связанные материалы и спецификации", cta: "Нужно проверить реальный жидкостный тракт?", description: "Передайте Foreach данные о жидкости, объёме или расходе, давлениях, геометрии и управлении для проверки конфигурации и условий испытаний.", contact: "Техническая консультация", products: "Посмотреть насосы", referenceLabels: ["Hamilton: контроль давления и пузырьков", "Tecan: руководство; настройки платформы не переносятся напрямую", "KNF: волны расхода и давления", "KNF: обнаружение и предотвращение кавитации", "Berrebi и соавторы, 2004: ошибка выборки; проверена аннотация", "Руководство KROHNE IFC090: только для указанного прибора"] },
 };
 
-export function getPumpDiagnosticsArticleCopy(slug: string, locale: TechnicalArticleLocale): DiaphragmPumpEngineeringArticleCopy | null {
+export function getPumpDiagnosticsArticleCopy(slug: string, locale: TechnicalArticleLocale | "de"): DiaphragmPumpEngineeringArticleCopy | null {
   const index = pumpDiagnosticsSlugs.findIndex((value) => value === slug);
   if (index < 0) return null;
   if (locale === "zh-CN") return pumpDiagnosticsChineseArticles[index];
-  const draft = drafts[locale][index];
-  const labels = ui[locale];
+  const draft = locale === "de" ? germanPumpDiagnosticsDrafts[pumpDiagnosticsSlugs[index]] : drafts[locale][index];
+  if (!draft) return null;
+  const labels = locale === "de" ? germanPumpDiagnosticsUi : ui[locale];
+  const specificationLabel = locale === "de" ? "Offizielle FOREACH-Spezifikation (Chinesisch)" : formalSpecificationLabel[locale];
   const src = `/images/resources/technical-articles/pump-diagnostics/${String(index + 1).padStart(2, "0")}.svg`;
   const sections = draft.sections.map((section, sectionIndex) => {
     const blocks: EngineeringArticleBlock[] = section.paragraphs.map((text) => ({ type: "paragraph", text }));
@@ -73,7 +76,7 @@ export function getPumpDiagnosticsArticleCopy(slug: string, locale: TechnicalArt
   });
   sections.push({ title: labels.references, blocks: [{ type: "links", items: sourceIds[index].map((id) => ({
     href: sources[id],
-    label: id < 6 ? labels.referenceLabels[id] : `${formalSpecificationLabel[locale]} — ${["DPL30 A04", "DPL60 A02", "DPL30H A00"][id - 6]}`,
+    label: id < 6 ? labels.referenceLabels[id] : `${specificationLabel} — ${["DPL30 A04", "DPL60 A02", "DPL30H A00"][id - 6]}`,
   })) }] });
   return {
     metadata: { title: draft.title, seoTitle: draft.seo, seoDescription: draft.description, coverImage: src, coverAlt: draft.diagram },

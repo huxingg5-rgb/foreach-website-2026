@@ -277,6 +277,9 @@ try {
 
     CLOUDFLARE_PAGES_BUILD:
       "1",
+
+    NEXT_PUBLIC_FOREACH_TRANSLATIONS:
+      "1",
   };
 
   buildExitCode =

@@ -14,6 +14,8 @@ type TutorialVideoCardProps = {
    */
   variant?: "default" | "related";
   playInline?: boolean;
+  detailHrefLang?: "de" | "it" | "hi" | "en";
+  fallbackLabel?: { text: string; lang: string };
 };
 
 export default function TutorialVideoCard({
@@ -22,6 +24,8 @@ export default function TutorialVideoCard({
   onSelect,
   variant = "default",
   playInline = false,
+  detailHrefLang,
+  fallbackLabel = { text: " (Englisch)", lang: "de" },
 }: TutorialVideoCardProps) {
   const imageStyle: CSSProperties | undefined = guide.thumbnail
     ? { backgroundImage: `url(${guide.thumbnail})` }
@@ -42,7 +46,10 @@ export default function TutorialVideoCard({
       </div>
 
       <div className="installation-guide-card-body">
-        <h3>{guide.title}</h3>
+        <h3>
+          {guide.title}
+          {detailHrefLang === "en" && guide.detailHref && !playInline ? <span lang={fallbackLabel.lang}>{fallbackLabel.text}</span> : null}
+        </h3>
 
         {guide.tags.length > 0 ? (
           <div className="installation-guide-card-tags">
@@ -56,7 +63,7 @@ export default function TutorialVideoCard({
   );
 
   if (guide.detailHref && !playInline) {
-    return <Link href={guide.detailHref} className={className}
+    return <Link href={guide.detailHref} hrefLang={detailHrefLang} className={className}
       style={{ display: "block", color: "inherit", textDecoration: "none" }}>
       {content}
     </Link>;

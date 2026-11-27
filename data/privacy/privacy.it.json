@@ -1,0 +1,113 @@
+{
+  "eyebrow": "Privacy e protezione dei dati",
+  "title": "Informativa sulla privacy",
+  "intro": "Shenzhen FOREACH Technology Co., Ltd. («Foreach», «noi», «ci» o «nostro») rispetta la tua privacy. Questa informativa spiega come raccogliamo, utilizziamo, conserviamo e proteggiamo le informazioni quando visiti o utilizzi questo sito.",
+  "lastUpdated": "Ultimo aggiornamento: 21 luglio 2026",
+  "home": "Home",
+  "translationNotice": "Nota sulla traduzione. Il nostro team ha tradotto e revisionato questa versione con l’aiuto di strumenti di traduzione. Contattaci se qualche passaggio non è chiaro.",
+  "sections": [
+    {
+      "title": "1. Ambito di applicazione",
+      "paragraphs": [
+        "Questa informativa riguarda il sito ufficiale Foreach e le sue funzionalità di ricerca prodotti, strumenti tecnici, download, richieste e contatti.",
+        "I siti, le piattaforme e i servizi di terzi raggiungibili da collegamenti esterni trattano le informazioni secondo le proprie informative sulla privacy."
+      ]
+    },
+    {
+      "title": "2. Informazioni che possiamo raccogliere",
+      "paragraphs": [
+        "Trattiamo le informazioni nella misura ragionevolmente necessaria per gestire il sito, rispondere a richieste commerciali o tecniche e migliorare l’esperienza d’uso."
+      ],
+      "bullets": [
+        "Informazioni che ci fornisci, come nome, azienda, paese o regione, indirizzo e-mail, numero di telefono, requisiti del prodotto, dettagli della richiesta e allegati che scegli di caricare.",
+        "Informazioni tecniche necessarie per il funzionamento e la sicurezza, come tipo di browser, tipo di dispositivo, ora di accesso, stato delle richieste e informazioni di rete.",
+        "Informazioni sull’uso del sito generate dopo il consenso ai cookie di analisi, come pagine visitate, pagina di provenienza, categoria di dispositivo e browser e interazioni con le funzionalità.",
+        "Dati immessi nella ricerca, negli strumenti di scelta dei prodotti o nei calcolatori, necessari per fornire il risultato richiesto."
+      ]
+    },
+    {
+      "title": "3. Come utilizziamo le informazioni",
+      "paragraphs": [
+        "Possiamo utilizzare le informazioni pertinenti per i seguenti scopi."
+      ],
+      "bullets": [
+        "Rispondere a richieste sui prodotti, domande tecniche, proposte di collaborazione e altre comunicazioni.",
+        "Fornire la ricerca dei prodotti e dei raccordi sostitutivi, i calcoli delle perdite di carico, i download e le altre funzionalità del sito.",
+        "Registrare e gestire le richieste e organizzare le successive attività commerciali o tecniche.",
+        "Garantire la sicurezza, diagnosticare gli errori, prevenire gli abusi e migliorare le prestazioni del sito.",
+        "Con il tuo consenso, analizzare le visite e l’utilizzo delle funzionalità per migliorare i contenuti e l’esperienza d’uso.",
+        "Rispettare i requisiti applicabili e tutelare gli interessi legittimi di Foreach, dei suoi clienti e di altre parti."
+      ]
+    },
+    {
+      "title": "4. Cookie e Google Analytics",
+      "paragraphs": [
+        "Il sito usa un cookie essenziale per ricordare le tue preferenze di privacy e carica Google Analytics solo dopo il tuo consenso.",
+        "Il cookie essenziale «foreach_cookie_consent_v1» registra se hai autorizzato i cookie di analisi e attualmente viene conservato fino a 180 giorni. Resta attivo nel pannello delle impostazioni perché serve a ricordare la tua scelta.",
+        "Se autorizzi i cookie di analisi, Google Analytics può utilizzare i relativi cookie e le informazioni sull’uso del sito per rilevare le visite alle pagine e l’uso delle funzionalità. Non trasmettiamo intenzionalmente a Google Analytics nomi, indirizzi e-mail, numeri di telefono, testi delle richieste o contenuti degli allegati.",
+        "L’archiviazione per la personalizzazione pubblicitaria è attualmente disattivata. Puoi modificare o revocare il consenso all’analisi da «Impostazioni dei cookie» nel piè di pagina."
+      ]
+    },
+    {
+      "title": "5. Condivisione e fornitori di servizi",
+      "paragraphs": [
+        "Possiamo affidarci a fornitori per hosting, sicurezza, comunicazioni e-mail e analisi del sito. Trattano le informazioni nella misura ragionevolmente necessaria a erogare i loro servizi.",
+        "Quando utilizziamo Google Analytics, Google può trattare le relative informazioni di analisi secondo i propri termini di servizio e le proprie pratiche sulla privacy.",
+        "Comunichiamo a terzi estranei le informazioni personali ricevute solo in presenza di un motivo valido, ad esempio per un obbligo di legge, per tutelare interessi legittimi, in relazione a un’operazione societaria o con la tua autorizzazione."
+      ]
+    },
+    {
+      "title": "6. Trattamento internazionale",
+      "paragraphs": [
+        "Poiché il sito serve clienti in tutto il mondo, alcuni fornitori o team che ricevono richieste commerciali possono trovarsi fuori dal tuo paese o dalla tua regione.",
+        "Quando le informazioni sono trattate oltre confine, adottiamo misure ragionevoli nel rispetto dei requisiti applicabili e dei relativi accordi di servizio."
+      ]
+    },
+    {
+      "title": "7. Conservazione",
+      "paragraphs": [
+        "Conserviamo le informazioni per il tempo necessario alle finalità di questa informativa, agli obblighi commerciali, alla risoluzione delle controversie e ai requisiti di legge o di conformità applicabili.",
+        "La conservazione delle richieste e dei recapiti aziendali dipende dallo stato della comunicazione, dal rapporto con il cliente e dagli obblighi di conservazione dei documenti aziendali. I dati di Google Analytics seguono il periodo impostato nella nostra proprietà GA4.",
+        "Quando le informazioni non servono più, adottiamo misure ragionevoli per eliminarle, anonimizzarle o limitarne l’uso ulteriore."
+      ]
+    },
+    {
+      "title": "8. Le tue scelte e i tuoi diritti",
+      "paragraphs": [
+        "In base alla normativa applicabile, puoi avere il diritto di chiedere accesso, rettifica, cancellazione o limitazione del trattamento dei dati personali, opporti a determinati trattamenti, revocare il consenso o chiedere una copia delle informazioni pertinenti.",
+        "La revoca del consenso all’analisi lascia impregiudicata la liceità del trattamento precedente alla revoca. Puoi cambiare la tua scelta da «Impostazioni dei cookie» nel piè di pagina.",
+        "Per proteggere le informazioni, potremmo dover verificare la tua identità e l’ambito della richiesta prima di rispondere."
+      ]
+    },
+    {
+      "title": "9. Sicurezza",
+      "paragraphs": [
+        "Adottiamo misure tecniche e organizzative ragionevoli per ridurre il rischio di accesso, divulgazione, modifica, perdita o uso improprio delle informazioni.",
+        "Nessun metodo di trasmissione via Internet o di archiviazione elettronica può garantire una sicurezza assoluta."
+      ]
+    },
+    {
+      "title": "10. Minori",
+      "paragraphs": [
+        "Il sito è destinato principalmente a clienti aziendali, ingegneri e professionisti del settore. Non è rivolto ai minori.",
+        "Non raccogliamo consapevolmente dati personali di minori tramite il sito. Contattaci se tali informazioni sono state inviate per errore."
+      ]
+    },
+    {
+      "title": "11. Modifiche all’informativa",
+      "paragraphs": [
+        "Possiamo aggiornare l’informativa quando cambiano le funzionalità del sito, i fornitori o i requisiti applicabili.",
+        "Pubblicheremo la versione aggiornata su questa pagina con una nuova data. Possiamo comunicare modifiche sostanziali anche con un avviso sul sito o con altro mezzo appropriato."
+      ]
+    }
+  ],
+  "contact": {
+    "title": "12. Contatti",
+    "intro": "Per domande sull’informativa, sulle impostazioni dei cookie o sul trattamento dei dati personali, contatta Foreach.",
+    "companyLabel": "Società",
+    "company": "Shenzhen FOREACH Technology Co., Ltd.",
+    "emailLabel": "E-mail",
+    "addressLabel": "Indirizzo",
+    "address": "1301, edificio 2, Yufengda Industrial Park, n. 1008 Guangqiao Avenue, comunità di Yulv, sottodistretto di Yutang, distretto di Guangming, Shenzhen, Guangdong, Cina"
+  }
+}

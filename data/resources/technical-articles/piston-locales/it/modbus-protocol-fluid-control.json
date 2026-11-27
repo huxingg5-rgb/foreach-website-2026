@@ -1,0 +1,211 @@
+{
+  "slug": "modbus-protocol-fluid-control",
+  "title": "Protocollo Modbus: nozioni di base su RTU, ASCII e TCP",
+  "summary": "Scopri Modbus RTU, ASCII e TCP, le differenze rispetto a RS-485, l’indirizzamento seriale, i codici funzione, le mappe dei registri e le verifiche di comunicazione per dispositivi di controllo dei fluidi.",
+  "seoTitle": "Protocollo Modbus: nozioni di base su RTU, ASCII e TCP | FOREACH",
+  "seoDescription": "Scopri Modbus RTU, ASCII e TCP, le differenze rispetto a RS-485, l’indirizzamento seriale, i codici funzione, le mappe dei registri e le verifiche di comunicazione per dispositivi di controllo dei fluidi.",
+  "date": "2026-09-06",
+  "coverImage": "/images/resources/technical-articles/covers/pressure-flow-material-compatibility.webp",
+  "coverAlt": "Pompa di precisione FOREACH per sistemi fluidici con tubi collegati",
+  "intro": [],
+  "sections": [
+    {
+      "title": "Che cos’è Modbus e in cosa si distingue da RS-485?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Modbus è un protocollo di messaggistica a livello applicativo per lo scambio di dati tra controllori e dispositivi. RS-485 e RS-232 definiscono interfacce elettriche. Modbus RTU e ASCII sono modalità di trasmissione seriale, mentre Modbus TCP trasporta i messaggi Modbus su TCP/IP. Per confermare il supporto Modbus serve la documentazione del dispositivo, anche se è presente un’interfaccia RS-485."
+        },
+        {
+          "type": "paragraph",
+          "text": "In un sistema di controllo dei fluidi, Modbus può leggere lo stato del dispositivo o trasmettere parametri di comando. Consulta il manuale di comunicazione del modello esatto di controllore per verificare protocollo, funzioni supportate e definizioni dei registri. Conferma le interfacce disponibili per ogni prodotto e configurazione FOREACH."
+        }
+      ]
+    },
+    {
+      "title": "Che differenza c’è tra Modbus RTU, ASCII e TCP?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Per identificare la modalità di comunicazione, consulta la documentazione oltre al connettore. Nella comunicazione seriale entrambe le estremità devono usare la stessa modalità di trasmissione, lo stesso baud rate e le stesse impostazioni del formato carattere. Per TCP, controlla la connessione di rete e le impostazioni del servizio sul dispositivo."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Modalità",
+            "Struttura del messaggio",
+            "Elementi da verificare"
+          ],
+          "rows": [
+            [
+              "Modbus RTU",
+              "Indirizzo del dispositivo + Codice funzione + Dati + CRC",
+              "Impostazioni seriali, indirizzo del dispositivo e intervallo tra frame"
+            ],
+            [
+              "Modbus ASCII",
+              "Messaggio con codifica ASCII, LRC e caratteri definiti di inizio e fine",
+              "Impostazioni seriali, codifica e LRC"
+            ],
+            [
+              "Modbus TCP",
+              "Intestazione MBAP + Codice funzione + Dati, senza aggiunta del CRC RTU",
+              "Indirizzo IP, porta, identificatore di transazione e identificatore di unità"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Come funzionano gli indirizzi seriali dei dispositivi e gli scambi richiesta-risposta?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Su una linea Modbus seriale gli indirizzi dei singoli server (slave) vanno da 1 a 247. L’indirizzo 0 è riservato al broadcast e gli indirizzi da 248 a 255 sono riservati. Il client (master) invia una richiesta unicast e il dispositivo indirizzato risponde. Le richieste di scrittura in broadcast non ricevono risposta. Un campo di indirizzo a 8 bit può contenere valori da 0 a 255, con i limiti di indirizzamento individuale indicati sopra."
+        },
+        {
+          "type": "paragraph",
+          "text": "Queste regole valgono per la comunicazione seriale. Modbus TCP include un identificatore di unità nell’intestazione MBAP. Quando un gateway inoltra messaggi, il significato del campo dipende dall’implementazione del dispositivo. Consulta il manuale per interpretarlo nella connessione TCP specifica."
+        }
+      ]
+    },
+    {
+      "title": "Come leggere insieme codici funzione e mappe dei registri Modbus?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Il codice della funzione identifica la categoria dei dati e l’operazione di lettura o scrittura. Il campo dati contiene indirizzi, quantità o valori pertinenti. Due dispositivi compatibili con Modbus possono utilizzare mappe dei registri diverse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prima della messa in servizio, controlla l’eventuale scostamento tra i numeri dei registri nel manuale e gli indirizzi di partenza codificati nei messaggi. Verifica inoltre larghezza dei dati, rappresentazione con o senza segno, fattori di scala, unità e ordine delle parole per valori su più registri. Velocità, posizione e volume di liquido sono grandezze distinte."
+        },
+        {
+          "type": "figures",
+          "items": [
+            {
+              "src": "/images/resources/technical-articles/modbus-protocol-fluid-control/modbus-request-response.en.svg",
+              "alt": "Diagramma Modbus RTU e ASCII di richiesta-risposta seriale unicast, con campi del messaggio e codici funzione esadecimali comuni",
+              "caption": "Scambio seriale unicast normale e codici funzione Modbus comuni. RTU usa CRC, ASCII usa LRC. Le richieste broadcast non ricevono risposta. La tabella sopra riporta il formato TCP.",
+              "width": 1200,
+              "height": 1030
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Codice funzione (esadecimale)",
+            "Operazione"
+          ],
+          "rows": [
+            [
+              "01",
+              "Legge i bit di uscita (coil)"
+            ],
+            [
+              "02",
+              "Legge gli ingressi discreti"
+            ],
+            [
+              "03",
+              "Legge i registri di mantenimento (holding register)"
+            ],
+            [
+              "04",
+              "Legge i registri di ingresso"
+            ],
+            [
+              "05",
+              "Scrive un bit di uscita (coil)"
+            ],
+            [
+              "06",
+              "Scrive un singolo registro"
+            ],
+            [
+              "0F",
+              "Scrive più bit di uscita (coil)"
+            ],
+            [
+              "10",
+              "Scrive più registri"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "Il diagramma mostra uno scambio seriale unicast normale. Le richieste broadcast non ricevono risposta. Le risposte di eccezione usano un codice funzione di eccezione e un codice di eccezione. Per TCP usa il formato con intestazione MBAP mostrato sopra. Per le funzioni supportate dal dispositivo, consulta il relativo manuale di comunicazione."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Calcolo e scelta del motore passo-passo",
+              "href": "/resources/technical-articles/stepper-motor-calculation-selection/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Come mettere in servizio un dispositivo di controllo dei fluidi con Modbus?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Verifica prima cablaggio e alimentazione, poi imposta i parametri di comunicazione secondo il manuale. Inizia leggendo un valore di stato noto. Controlla indirizzo del dispositivo, codice funzione e significato dei dati restituiti prima di provare scritture di parametri e comandi di movimento ammessi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verifica separatamente comunicazione riuscita, accettazione del comando, completamento del movimento e volume richiesto erogato. Dopo l’accettazione della scrittura, controlla lo stato del movimento. In caso di timeout, verifica lo stato del dispositivo prima di ripetere il comando di erogazione per evitare una doppia dose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Registra richieste, risposte, codici di eccezione e condizioni di timeout. Per individuare un guasto, controlla segnali di finecorsa, ricerca del riferimento, stati delle valvole e tempi del movimento. Per comandi, indirizzi e unità di conteggio esatti, consulta il manuale di comunicazione del dispositivo."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Accelerazione e decelerazione delle pompe a pistone",
+              "href": "/resources/technical-articles/piston-pump-acceleration-deceleration-curves/"
+            },
+            {
+              "label": "Compensazione del gioco nelle pompe a pistone",
+              "href": "/resources/technical-articles/precision-piston-pump-backlash-compensation/"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "referencesTitle": "Riferimenti",
+  "references": [
+    {
+      "label": "Modbus Organization: specifica e guida di implementazione per linea seriale V1.02",
+      "href": "https://www.modbus.org/file/secure/modbusoverserial.pdf"
+    },
+    {
+      "label": "Modbus Organization: guida di implementazione della messaggistica su TCP/IP V1.0b",
+      "href": "https://www.modbus.org/file/secure/messagingimplementationguide.pdf"
+    }
+  ],
+  "cta": {
+    "title": "Conferma insieme impostazioni di comunicazione e requisiti di movimento",
+    "description": "Fornisci il modello del controllore, il manuale di comunicazione, la mappa dei registri, lo schema elettrico e la sequenza di movimento richiesta. Conferma interfaccia supportata e unità di comando prima di integrare il dispositivo.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Visualizza le pompe a pistone"
+  },
+  "subject": {
+    "about": [
+      "comunicazione Modbus",
+      "messa in servizio dei dispositivi di controllo dei fluidi"
+    ],
+    "mentions": [
+      "Modbus RTU",
+      "Modbus ASCII",
+      "Modbus TCP",
+      "RS-485"
+    ]
+  }
+}

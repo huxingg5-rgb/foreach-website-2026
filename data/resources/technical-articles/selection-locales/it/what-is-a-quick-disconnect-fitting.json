@@ -1,0 +1,609 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos'è un raccordo a sgancio rapido? Accoppiamento maschio-femmina, valvole e selezione",
+      "seoTitle": "Raccordi a sgancio rapido: accoppiamento, valvole e scelta | FOREACH",
+      "seoDescription": "Scopri come funzionano i raccordi a sgancio rapido, confronta le versioni con e senza valvola e scegli i raccordi FOREACH Q20, Q40 e Q60 per il collegamento dei tubi e il montaggio a pannello.",
+      "coverImage": "/images/resources/technical-articles/quick-disconnect-fitting/quick-disconnect-fittings-photo.webp",
+      "coverAlt": "Foto di tre raccordi a sgancio rapido FOREACH di dimensioni e configurazioni diverse"
+    },
+    "deck": "Per scegliere un raccordo a sgancio rapido per il circuito di uno strumento, controlla l'interfaccia di accoppiamento, i requisiti di intercettazione, i tubi, le tenute e lo spazio di montaggio.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Un raccordo a sgancio rapido è formato da una metà maschio e una metà femmina accoppiabili. L'innesto crea un percorso continuo per il fluido. Azionando lo sgancio si separano rapidamente le due metà. Si usano ad esempio per sostituire serbatoi, rimuovere moduli fluidici e fare manutenzione agli strumenti. Questi prodotti sono chiamati anche innesti rapidi.",
+        "lead": "Un raccordo a sgancio rapido è formato da una metà maschio e una metà femmina accoppiabili."
+      },
+      {
+        "type": "paragraph",
+        "text": "Questa guida riguarda i raccordi che si separano tra le due metà dell'innesto. I raccordi a innesto per tubo, indicati talvolta anch'essi come raccordi rapidi, liberano invece il tubo da un meccanismo di presa. Determinare prima se la manutenzione richiede di separare l'innesto o estrarre il tubo."
+      },
+      {
+        "type": "paragraph",
+        "text": "I raccordi FOREACH Q20, Q40 e Q60 offrono attacchi per tubi, filettature, montaggi e configurazioni di valvola differenti. Q20 e Q40 comprendono corpi in PP e POM. Il corpo Q60 a catalogo è in PP. La serie identifica la famiglia di accoppiamento, mentre il codice completo identifica la configurazione delle singole metà."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come funziona uno sgancio rapido e come si accoppiano le metà maschio e femmina?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Uno sgancio rapido unisce il percorso del fluido tramite innesto maschio-femmina, ritegno meccanico e anello di tenuta. L'inserto maschio entra nella sede femmina, il cui fermo lo trattiene in posizione. La tenuta sul maschio entra a contatto con la superficie femmina. Gli attacchi posteriori si collegano ai tubi o alle porte dell'apparecchio. Qui maschio e femmina descrivono l'interfaccia di innesto e sono indipendenti dalle filettature esterne o interne.",
+            "lead": "Uno sgancio rapido unisce il percorso del fluido tramite innesto maschio-femmina, ritegno meccanico e anello di tenuta."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 1000,
+            "height": 470,
+            "quickDisconnectDiagram": "pair",
+            "alt": "Viste originali dei componenti Q20 con inserto maschio, sede femmina, tenuta, fermo di sgancio e attacchi per tubi",
+            "caption": "Figura 1 | Maschio Q2001-PNV-SPPE e femmina da pannello Q2001-SMV-SPPE. Le viste laterali sono originali. Quella del maschio è rovesciata per spiegare l'innesto. La freccia indica la direzione di montaggio. Schema fuori scala."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ritegno, tenuta e intercettazione hanno funzioni diverse. Il fermo impedisce la separazione durante l'uso normale. La tenuta di accoppiamento isola il percorso del fluido dall'esterno. Una metà con valvola chiude anche il proprio passaggio quando è scollegata. Valutare le tre funzioni separatamente."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 1200,
+            "height": 300,
+            "alt": "Sequenza dello sgancio rapido: allineare, bloccare e verificare il flusso, poi depressurizzare e scollegare",
+            "caption": "Controllare separatamente l'innesto e il funzionamento delle valvole. Dopo il bloccaggio, verificare la tenuta e il flusso nel circuito effettivo.",
+            "flowNodes": [
+              {
+                "label": "Allineare e collegare",
+                "detail": "Usare componenti della stessa famiglia di accoppiamento, ispezionare le tenute e pulire le interfacce"
+              },
+              {
+                "label": "Bloccare e verificare il flusso",
+                "detail": "Confermare l'innesto completo, la tenuta e il flusso nel punto di utilizzo"
+              },
+              {
+                "label": "Depressurizzare e scollegare",
+                "detail": "Sbloccare il fermo. L'intercettazione dipende dalle valvole presenti"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La serie Q usa un fermo di sgancio a pressione. Il riscontro acustico o tattile può agevolare il montaggio, ma occorre verificare il ritegno e la tenuta. Durante la manutenzione ordinaria si separano le due metà senza dover sfilare ogni volta il tubo dal portagomma. Si riducono così le dilatazioni ripetute dell'estremità del tubo."
+          }
+        ]
+      },
+      {
+        "title": "Che differenza c'è tra sganci rapidi con e senza valvola?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Una metà con valvola ha un dispositivo di intercettazione che chiude automaticamente il suo passaggio quando viene scollegata. L'accoppiamento corretto e l'innesto completo aprono la valvola e consentono il flusso. Una metà senza valvola è priva di intercettazione automatica e resta aperta dopo la separazione. Il fermo esterno di sgancio e la valvola interna sono elementi distinti.",
+            "lead": "Una metà con valvola ha un dispositivo di intercettazione che chiude automaticamente il suo passaggio quando viene scollegata."
+          },
+          {
+            "type": "paragraph",
+            "text": "I due esempi di femmina Q20 da pannello sono Q2001-SMX-SPPE senza valvola e Q2001-SMV-SPPE con valvola. Hanno le stesse dimensioni del tubo, lo stesso montaggio e la stessa combinazione di materiali. In questa posizione nel codice X indica la versione senza valvola e V quella con valvola. Verificare il codice completo senza basarsi solo su corpo o fermo."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 1000,
+            "height": 1120,
+            "quickDisconnectDiagram": "valves",
+            "alt": "Confronto Q20 con e senza valvola con viste di femmine passaparete, con portagomma diritto, con portagomma a gomito e filettate. Le linee blu indicano i passaggi, i segni rossi l'intercettazione",
+            "caption": "Figura 2 | In basso, esempi Q20 femmina con portagomma da pannello, portagomma diritto, portagomma a gomito e attacco filettato. X indica assenza di valvola, V indica presenza di valvola. Le linee mostrano solo lo stato dei passaggi. Immagini fuori scala."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dopo lo scollegamento, il lato dell'apparecchio, il lato del modulo rimovibile o entrambi devono trattenere il liquido? Le configurazioni seguenti riguardano una coppia. La designazione con valvola su un singolo modello indica la presenza della valvola in quella metà."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Configurazione della coppia",
+              "Stato dei passaggi dopo la separazione",
+              "Esigenze da valutare"
+            ],
+            "rows": [
+              [
+                "Entrambe le metà senza valvola",
+                "Entrambi i passaggi restano aperti. Il controllo del liquido spetta ad altri componenti del circuito",
+                "Collegamenti di servizio che si possono svuotare e lasciare aperti"
+              ],
+              [
+                "Una metà con valvola",
+                "Il lato con valvola si chiude. L'altro resta aperto",
+                "Collegamenti che richiedono l'intercettazione solo dal lato dell'apparecchio o del serbatoio"
+              ],
+              [
+                "Entrambe le metà con valvola",
+                "Ogni metà chiude il proprio passaggio",
+                "Collegamenti in cui sia il modulo sia l'apparecchio devono limitare la perdita di liquido"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La doppia intercettazione non garantisce l'assenza di fuoriuscite. Una parte del liquido residuo nella cavità di accoppiamento può uscire durante la separazione e il ricollegamento può introdurre aria. Nei circuiti sensibili alla perdita di campione, alla contaminazione incrociata o alle bolle, verificare separatamente fuoriuscita allo sgancio, ingresso d'aria e tempo di ripristino dopo il ricollegamento."
+          },
+          {
+            "type": "paragraph",
+            "text": "I progetti a disconnessione a secco (dry-break) o senza fuoriuscite dipendono anche dalla geometria del fronte valvola, dal volume della cavità e dalla sequenza di movimento di valvole e tenute. La presenza di due valvole da sola non stabilisce una prestazione senza fuoriuscite. Per collegare o scollegare sotto pressione occorre rispettare i requisiti operativi del modello e del circuito."
+          }
+        ]
+      },
+      {
+        "title": "I raccordi a sgancio rapido FOREACH sono compatibili con prodotti simili di marchi internazionali?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I raccordi a sgancio rapido FOREACH possono accoppiarsi con prodotti analoghi delle serie corrispondenti dei principali marchi internazionali. Verificare la compatibilità dei singoli modelli.",
+            "lead": "I raccordi a sgancio rapido FOREACH possono accoppiarsi con prodotti analoghi delle serie corrispondenti dei principali marchi internazionali."
+          },
+          {
+            "type": "paragraph",
+            "text": "L'intercambiabilità dipende dall'interfaccia di accoppiamento maschio-femmina. La stessa misura del tubo, l'aspetto simile o la possibilità di inserire una metà non bastano a garantire ritegno, tenuta e apertura della valvola. Verificare la famiglia di accoppiamento e le dimensioni dell'interfaccia, quindi convalidare il collegamento effettivo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ogni metà ha due interfacce distinte: un'estremità per accoppiarsi all'altra metà e un attacco per il tubo o per una porta filettata dell'apparecchio. L'estremità di innesto dipende da serie, geometria maschio-femmina e combinazione di valvole. L'attacco dipende dal diametro interno del tubo o dalla filettatura. Due metà compatibili con lo stesso tubo possono non accoppiarsi tra loro."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Interfaccia",
+              "Dati da registrare",
+              "Errore comune"
+            ],
+            "rows": [
+              [
+                "Estremità di accoppiamento maschio-femmina",
+                "Serie, profilo, fermo, posizione della tenuta e combinazione di valvole",
+                "Ritenere che aspetto simile o inserimento dimostrino un'intercambiabilità affidabile"
+              ],
+              [
+                "Attacco portagomma",
+                "Diametri interno ed esterno, materiale, durezza del tubo e lunghezza di innesto",
+                "Confondere il diametro interno del tubo con il passaggio minimo del raccordo o con il diametro esterno del tubo"
+              ],
+              [
+                "Attacco filettato",
+                "Filetto interno o esterno, norma, passo, profondità della porta e tipo di tenuta",
+                "Registrare solo 1/8 o 1/4 omettendo NPT, UNF o altri dettagli della filettatura"
+              ],
+              [
+                "Montaggio a pannello",
+                "Spessore del pannello, foro, fissaggio e spazio operativo",
+                "Trattare la filettatura di montaggio come una filettatura per il fluido"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Scegliere le metà Q20, Q40 e Q60 all'interno delle rispettive famiglie di accoppiamento. Per sostituire una metà con una di serie o marca diversa, controllare comunque le dimensioni di innesto, la compressione della tenuta e la corsa della valvola, quindi verificare ritegno, perdite e flusso. L'aspetto o una tabella di corrispondenza tra serie da soli non confermano la sostituzione diretta."
+          }
+        ]
+      },
+      {
+        "title": "Come dimensionare uno sgancio rapido e distinguere il diametro interno del tubo dal diametro di passaggio?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Scegliere il portagomma in base al diametro interno del tubo e l'attacco filettato in base a norma e misura del filetto. Verificare quindi la famiglia di innesto e la perdita di carico del collegamento completo alla portata di progetto. Il diametro interno del tubo è distinto dal passaggio minimo del raccordo e dal diametro esterno del tubo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Gli esempi distinguono le configurazioni di serie, tubi e montaggio. Ogni riga corrisponde a un codice modello completo. Materiali, valvola e montaggio di quel codice non valgono per tutti i prodotti della serie."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Codice modello completo",
+              "Diametro interno del tubo",
+              "Estremità di innesto e montaggio",
+              "Valvola e materiali"
+            ],
+            "rows": [
+              [
+                "Q2001-PNV-SPPE",
+                "1.6 mm",
+                "Q20 maschio diritto, senza montaggio a pannello",
+                "Con valvola, corpo in PP e tenuta in EPDM"
+              ],
+              [
+                "Q2001-SMV-SPPE",
+                "1.6 mm",
+                "Q20 femmina diritta per montaggio a pannello",
+                "Con valvola, corpo in PP e tenuta in EPDM"
+              ],
+              [
+                "Q4004-PNV-SPPE",
+                "6.4 mm",
+                "Q40 maschio diritto, senza montaggio a pannello",
+                "Con valvola, corpo in PP e tenuta in EPDM"
+              ],
+              [
+                "Q6006-SNV-SPPE",
+                "9.5 mm",
+                "Q60 femmina diritta, senza montaggio a pannello",
+                "Con valvola, corpo in PP e tenuta in EPDM"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "In Q2001-PNV-SPPE, Q20 identifica la serie e 01 corrisponde a un tubo da 1.6 mm per questo modello. P significa maschio, N indica che è senza montaggio a pannello e V significa con valvola. Il suffisso S, PP ed E indica la forma diritta, il corpo in PP e la tenuta in EPDM. Nel codice della metà Q2001-SMV-SPPE, S significa femmina e M indica il montaggio a pannello. Il significato della lettera dipende dalla sua posizione nel codice completo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il diametro interno del tubo è distinto dal passaggio minimo dell'innesto completo. La resistenza dipende anche dai passaggi interni, dalla struttura della valvola, dalla combinazione delle metà e dalla viscosità del fluido. Aumentare la misura dell'attacco per tubo può lasciare invariata una restrizione nella valvola o in un altro punto."
+          }
+        ]
+      },
+      {
+        "title": "Come montare uno sgancio rapido a pannello e scegliere foro e spessore del pannello?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Un raccordo da pannello serra il pannello tra la battuta del corpo e il dado. Lo spessore massimo per le metà femmina Q20, Q40 e Q60 è rispettivamente di 8.5 mm, 11.5 mm e 7.5 mm. Le metà maschio Q20 e Q40 ammettono rispettivamente 3.3 mm e 5.5 mm. Applicare a ciascun maschio il proprio limite."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 1000,
+            "height": 680,
+            "quickDisconnectDiagram": "panel",
+            "alt": "Vista originale della femmina Q20 e schema di montaggio: pannello tra battuta e dado, spessore massimo di 8.5 mm, con spazio di collegamento e posa dei tubi su entrambi i lati",
+            "caption": "Figura 3 | Il Q2001-SMV-SPPE illustra il montaggio a pannello con t ≤ 8.5 mm. Lo schema inferiore è fuori scala. I limiti di foro e spessore delle tre serie sono riportati sotto."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Serie",
+              "Dimensioni del foro (mm)",
+              "Spessore massimo del pannello per la femmina (mm)",
+              "Spessore massimo del pannello per il maschio (mm)"
+            ],
+            "rows": [
+              [
+                "Q20",
+                "A D: Ø13 (0 / −0.3); distanza dal piano al bordo opposto 12.1 (0 / −0.1)",
+                "8.5",
+                "3.3"
+              ],
+              [
+                "Q40",
+                "A D: Ø18 (0 / −0.5); distanza dal piano al bordo opposto 17 (0 / −0.3)",
+                "11.5",
+                "5.5"
+              ],
+              [
+                "Q60",
+                "Rotondo: Ø31 (0 / −0.5)",
+                "7.5",
+                "Non indicato a catalogo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "I valori provengono dalle note di montaggio del catalogo A02. Le parentesi riportano gli scostamenti superiore e inferiore. Ad esempio, Ø13 (0 / −0.3) significa 12.7–13.0 mm. Per Q20 e Q40 va rispettata anche la quota del piano. Filettature di fissaggio al pannello: Q20 1/2″-24UNS, Q40 11/16″-24UNS, Q60 M30×3.5."
+          },
+          {
+            "type": "paragraph",
+            "text": "Montaggio a pannello e valvola sono opzioni indipendenti. Il montaggio riguarda il fissaggio al pannello, la valvola l'intercettazione automatica dopo la separazione. Dopo aver scelto la serie, scegliere separatamente maschio o femmina, montaggio a pannello o libero e presenza o assenza della valvola."
+          },
+          {
+            "type": "paragraph",
+            "text": "Lo spessore del pannello è lo spessore del materiale serrato tra battuta e dado. Lunghezza del filetto e profondità di innesto sono quote distinte. Lasciare spazio all'esterno per inserimento, rimozione e azionamento del fermo, e all'interno per serrare il dado, collegare il tubo e curvarlo."
+          }
+        ]
+      },
+      {
+        "title": "Come incidono compatibilità con il fluido, pressione e portata sulla scelta degli sganci rapidi?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Scegliere prima i materiali a contatto con il fluido, compatibili sia con il fluido di processo sia con i detergenti. Verificare pressione alla temperatura di esercizio, picchi all'avviamento e all'arresto e condizioni di depressione, quindi valutare la perdita di carico alla portata di progetto. Materiale, pressione e portata vanno considerati insieme. La misura del tubo o un singolo valore massimo non bastano."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Condizione",
+              "Verifica per la selezione",
+              "Effetto sullo strumento"
+            ],
+            "rows": [
+              [
+                "Fluido e detergenti",
+                "Identità, concentrazione, temperatura e tempo di contatto. Verificare separatamente corpo, tenute e altre parti a contatto con il fluido",
+                "La resistenza del corpo non dimostra quella delle tenute o delle parti della valvola"
+              ],
+              [
+                "Pressione e temperatura",
+                "Esercizio normale, transitori, depressione e pressione residua in manutenzione. Verificare i valori nominali della coppia completa",
+                "I singoli valori massimi non definiscono contemporaneamente tutte le condizioni operative"
+              ],
+              [
+                "Portata e perdita di carico",
+                "Misurare la pressione differenziale e la portata al punto di utilizzo nelle condizioni previste",
+                "La resistenza in aspirazione modifica le condizioni all'ingresso della pompa. Quella in mandata riduce il margine di pressione"
+              ],
+              [
+                "Manutenzione e contaminazione",
+                "Frequenza di scollegamento, liquido residuo, ingressi d'aria, pulizia e protezione dalla polvere",
+                "Incide sui tempi di manutenzione, sull'adescamento e sul controllo della contaminazione incrociata"
+              ],
+              [
+                "Ingombri del pannello e percorso dei tubi",
+                "Foro, spessore, spazio per il fermo, raggio di curvatura e scarico dei carichi sui tubi",
+                "Incide sull'innesto completo e sulla tenuta nel tempo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La scelta dei materiali deve considerare sia l'esercizio sia la pulizia. Con un corpo in PP e tenute in EPDM, valutare separatamente entrambi i materiali. La dicitura raccordo in PP descrive solo il corpo. Per una tenuta in un altro materiale, selezionare un modello completo documentato. Un'opzione della serie può variare da modello a modello."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/fitting-material-selection-guide/",
+                "label": "Materiali dei raccordi: corpo, tenute e compatibilità con i fluidi",
+                "prefix": "Per approfondire: "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come ridurre le perdite di liquido quando si scollega un serbatoio?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Determinare quale lato deve trattenere il liquido. Valutare una sola metà con valvola se l'intercettazione serve solo dal lato dell'apparecchio, oppure due metà con valvola se serve sia all'apparecchio sia al serbatoio. Le valvole interrompono lo scarico dalle rispettive linee, ma il liquido può rimanere nella cavità di accoppiamento. Misurare le fuoriuscite allo sgancio anche con doppia intercettazione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Si consideri uno strumento con tubi di diametro interno 1.6 mm tra un modulo serbatoio rimovibile e il pannello dell'apparecchio, con intercettazione richiesta su entrambi i lati. Se il fluido è compatibile con PP, EPDM e le altre parti a contatto, Q2001-PNV-SPPE e Q2001-SMV-SPPE sono una possibile coppia: il maschio senza montaggio a pannello è sul tubo del modulo rimovibile e la femmina da pannello è fissata allo strumento."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Verificare entrambe le metà: maschio e femmina Q20, entrambi con valvola. Registrare codice modello completo e codice articolo di ogni metà nella distinta base.",
+              "Verificare i tubi: usare un diametro interno di 1.6 mm sui due lati, registrare diametro esterno, spessore della parete, durezza e materiale e convalidare l'innesto sul portagomma.",
+              "Verificare il montaggio a pannello: usare il disegno di montaggio della femmina Q20 per controllare foro, spessore e fissaggio del dado, con spazio per sbloccare, estrarre e posare il tubo sul retro.",
+              "Verificare l'esercizio: eseguire una prova di tenuta alla portata, alla temperatura e alla pressione previste. All'ingresso di una pompa controllare anche l'ingresso d'aria in depressione e la portata al punto di utilizzo.",
+              "Verificare la manutenzione: arrestare e depressurizzare prima di separare. Osservare l'intercettazione e il liquido residuo sui due lati. Dopo il ricollegamento misurare l'aria introdotta e il tempo di ripristino dell'adescamento.",
+              "Documentare l'accoppiamento raccordo-tubo approvato, la revisione del disegno, il metodo di montaggio e i criteri di accettazione per riordini e manutenzione."
+            ],
+            "ordered": true
+          },
+          {
+            "type": "paragraph",
+            "text": "L'esempio ricava una configurazione candidata dai requisiti applicativi. Compatibilità con il fluido, perdita di carico e durata agli sganci richiedono comunque una convalida nelle condizioni dello strumento. Se l'intercettazione serve solo dal lato dell'apparecchio, valutare una coppia con una sola valvola. Per fuoriuscite molto ridotte servono progetti adatti e dati di prova."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per la sostituzione di serbatoi e la manutenzione dei moduli, esaminare le operazioni di alimentazione, lavaggio e manutenzione di queste applicazioni. Convalidare l'idoneità del raccordo sul circuito effettivo."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/applications/ivd/",
+                "label": "Diagnostica in vitro (IVD)",
+                "prefix": ""
+              },
+              {
+                "href": "/en/applications/lab-automation/",
+                "label": "Automazione di laboratorio",
+                "prefix": " · "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Che cosa controllare se uno sgancio rapido perde, non si innesta o limita la portata?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Prima della diagnosi, arrestare l'apparecchio, isolare i tratti di circuito interessati e depressurizzare. Per perdite all'innesto, controllare tenuta e accoppiamento. Se le metà non si innestano, verificare compatibilità, presenza di residui e pressione residua. Per portata ridotta, verificare apertura della valvola, ostruzioni e curve strette. Se il liquido continua a uscire dopo la separazione, stabilire prima se la metà interessata è dotata di valvola."
+          },
+          {
+            "type": "subheading",
+            "title": "Controllare prima il montaggio e lo scollegamento"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Prima del montaggio, controllare entrambi i codici modello, il fermo, le tenute, le superfici di accoppiamento e i tubi. Eliminare graffi, crepe, componenti mancanti o contaminazione prima di procedere.",
+              "Completare prima il montaggio del tubo e del pannello. Spingere il tubo in asse sul portagomma fino alla posizione richiesta e sostenerlo, in modo che il suo peso non tiri continuamente il raccordo di lato.",
+              "Allineare e accoppiare completamente le due metà secondo le indicazioni, quindi verificare il ritegno. Se occorre una forza anomala, interrompere l'operazione e controllare compatibilità, residui, valvola sotto pressione o danni alla tenuta.",
+              "Verificare tenuta e portata nelle condizioni specificate. Prima della manutenzione, arrestare, isolare e scaricare la pressione residua, quindi azionare il fermo e separare le metà.",
+              "Proteggere le interfacce esposte dalle particelle. Ispezionare tenute ed estremità dei tubi prima del ricollegamento e ricontrollare il funzionamento dopo la manutenzione."
+            ],
+            "ordered": true
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Sintomo",
+              "Primo controllo",
+              "Verifica dopo la correzione"
+            ],
+            "rows": [
+              [
+                "Non si innesta o non si blocca",
+                "Famiglia di accoppiamento, coppia maschio-femmina, fermo, residui e pressione residua",
+                "Confermare l'innesto completo ed evitare di forzare una coppia incompatibile"
+              ],
+              [
+                "Perdita all'interfaccia di innesto",
+                "Superficie di tenuta, faccia di accoppiamento e profondità di innesto",
+                "Sostituire le parti danneggiate e ripetere la prova alla pressione e alla temperatura di esercizio"
+              ],
+              [
+                "Il liquido continua a uscire dopo la separazione",
+                "Presenza della valvola sulla metà che perde. Residui o danni alla sede della valvola",
+                "Distinguere la breve fuoriuscita residua da un difetto di intercettazione. Ispezionare entrambe le metà"
+              ],
+              [
+                "Più bolle dopo il ricollegamento",
+                "Aria nella cavità di accoppiamento, alimentazione a monte e tenuta in depressione degli attacchi",
+                "Controllare i singoli tratti del circuito e registrare il ripristino dell'adescamento"
+              ],
+              [
+                "Portata ridotta",
+                "Apertura della valvola, passaggi interni, curve strette del tubo e contaminazione",
+                "Confrontare portata effettiva e perdita di carico prima e dopo il montaggio del raccordo"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sui raccordi a sgancio rapido",
+    "faqItems": [
+      {
+        "question": "Qual è la differenza tra raccordi a sgancio rapido con e senza valvola?",
+        "answer": "Dopo la separazione una metà con valvola chiude automaticamente il suo passaggio, mentre una metà senza valvola resta aperta. Se serve l'intercettazione sui due lati, scegliere una valvola sul maschio e una sulla femmina. La valvola non garantisce l'assenza di fuoriuscite."
+      },
+      {
+        "question": "Che differenza c'è tra uno sgancio rapido e un raccordo a innesto per tubo?",
+        "answer": "Lo sgancio rapido si separa tra le metà maschio e femmina. Un raccordo a innesto per tubo libera il tubo dal raccordo. Q20, Q40 e Q60 usano metà accoppiabili, quindi nello scollegamento ordinario il tubo rimane sull'attacco posteriore."
+      },
+      {
+        "question": "Si possono accoppiare raccordi a sgancio rapido di marche diverse?",
+        "answer": "L'aspetto o la misura del tubo da soli non bastano. Verificare dimensioni di accoppiamento, ritegno e posizione della tenuta. Nelle versioni con valvola, confermare l'apertura completa dopo l'innesto. Una corrispondenza tra serie non sostituisce la convalida della coppia effettiva."
+      }
+    ],
+    "cta": {
+      "title": "Definire una coppia completa di sganci rapidi per il circuito",
+      "description": "Per valutare modelli accoppiabili, materiali delle tenute e convalida dei campioni, indicare entrambe le interfacce, i requisiti di intercettazione, il fluido, la pressione, la temperatura e i vincoli del pannello.",
+      "contactLabel": "Richiedi assistenza per la scelta del raccordo",
+      "productsLabel": "Visualizza i modelli di raccordi a sgancio rapido",
+      "productsHref": "/en/products/fittings/quick-connect-fittings/"
+    },
+    "navigationLabels": [
+      "Funzionamento e innesto",
+      "Con e senza valvola",
+      "Compatibilità con marchi internazionali",
+      "Diametro interno del tubo e passaggio",
+      "Montaggio e spessore del pannello",
+      "Materiali e condizioni operative",
+      "Sostituzione del serbatoio e fuoriuscite",
+      "Perdite e problemi di innesto"
+    ],
+    "about": [
+      "Raccordi a sgancio rapido",
+      "Accoppiamento maschio-femmina",
+      "Configurazioni delle valvole per gli sganci rapidi"
+    ],
+    "productTitles": [
+      "Raccordo Q20 maschio con valvola, senza montaggio a pannello",
+      "Raccordo Q20 femmina da pannello con valvola",
+      "Raccordo Q40 maschio diritto con valvola",
+      "Raccordo Q60 femmina diritto con valvola"
+    ]
+  },
+  "navigation": [
+    {
+      "id": "connection",
+      "label": "Funzionamento e innesto"
+    },
+    {
+      "id": "valves",
+      "label": "Con e senza valvola"
+    },
+    {
+      "id": "mating",
+      "label": "Compatibilità con marchi internazionali"
+    },
+    {
+      "id": "models",
+      "label": "Diametro interno del tubo e passaggio"
+    },
+    {
+      "id": "panel-mount",
+      "label": "Montaggio e spessore del pannello"
+    },
+    {
+      "id": "conditions",
+      "label": "Materiali e condizioni operative"
+    },
+    {
+      "id": "selection-example",
+      "label": "Sostituzione del serbatoio e fuoriuscite"
+    },
+    {
+      "id": "installation",
+      "label": "Perdite e problemi di innesto"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Raccordi a sgancio rapido",
+      "Accoppiamento maschio-femmina",
+      "Configurazioni delle valvole per gli sganci rapidi"
+    ],
+    "mentions": [
+      "Q20",
+      "Q40",
+      "Q60",
+      "PP",
+      "POM",
+      "EPDM"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "839078",
+      "title": "Raccordo Q20 maschio con valvola, senza montaggio a pannello Q2001-PNV-SPPE",
+      "href": "/en/products/fittings/quick-connect-fittings/q2001-pnv-sppe/",
+      "imageSrc": "/images/products/fittings/quick-connect-fittings/products/q2001-pnv-sppe-main.webp",
+      "imageAlt": "FOREACH Q2001-PNV-SPPE: raccordo Q20 maschio con valvola, senza montaggio a pannello"
+    },
+    {
+      "id": "839074",
+      "title": "Raccordo Q20 femmina da pannello con valvola Q2001-SMV-SPPE",
+      "href": "/en/products/fittings/quick-connect-fittings/q2001-smv-sppe/",
+      "imageSrc": "/images/products/fittings/quick-connect-fittings/products/q2001-smv-sppe-main.webp",
+      "imageAlt": "FOREACH Q2001-SMV-SPPE: raccordo Q20 femmina da pannello con valvola"
+    }
+  ],
+  "footerProducts": [
+    {
+      "id": "839078",
+      "title": "Raccordo Q20 maschio con valvola, senza montaggio a pannello Q2001-PNV-SPPE",
+      "href": "/en/products/fittings/quick-connect-fittings/q2001-pnv-sppe/",
+      "imageSrc": "/images/products/fittings/quick-connect-fittings/products/q2001-pnv-sppe-main.webp",
+      "imageAlt": "FOREACH Q2001-PNV-SPPE: raccordo Q20 maschio con valvola, senza montaggio a pannello"
+    },
+    {
+      "id": "839074",
+      "title": "Raccordo Q20 femmina da pannello con valvola Q2001-SMV-SPPE",
+      "href": "/en/products/fittings/quick-connect-fittings/q2001-smv-sppe/",
+      "imageSrc": "/images/products/fittings/quick-connect-fittings/products/q2001-smv-sppe-main.webp",
+      "imageAlt": "FOREACH Q2001-SMV-SPPE: raccordo Q20 femmina da pannello con valvola"
+    },
+    {
+      "id": "849061",
+      "title": "Raccordo Q40 maschio diritto con valvola Q4004-PNV-SPPE",
+      "href": "/en/products/fittings/quick-connect-fittings/q4004-pnv-sppe/",
+      "imageSrc": "/images/products/fittings/quick-connect-fittings/products/q4004-pnv-sppe-main.webp",
+      "imageAlt": "FOREACH Q4004-PNV-SPPE: raccordo Q40 maschio diritto con valvola"
+    },
+    {
+      "id": "869021",
+      "title": "Raccordo Q60 femmina diritto con valvola Q6006-SNV-SPPE",
+      "href": "/en/products/fittings/quick-connect-fittings/q6006-snv-sppe/",
+      "imageSrc": "/images/products/fittings/quick-connect-fittings/products/q6006-snv-sppe-main.webp",
+      "imageAlt": "FOREACH Q6006-SNV-SPPE: raccordo Q60 femmina diritto con valvola"
+    }
+  ]
+}

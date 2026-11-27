@@ -156,6 +156,7 @@ export default function HistoryPageContent({
         <p
           className="about-history-bottom-slogan"
           aria-label="MAKE FLOW EASY"
+          lang={locale === "de" || locale === "it" ? "en" : undefined}
         >
           <span>MAKE</span>
           <span className="about-history-bottom-slogan-flow">

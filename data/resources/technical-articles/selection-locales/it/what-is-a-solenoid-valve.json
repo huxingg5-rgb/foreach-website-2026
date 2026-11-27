@@ -1,0 +1,440 @@
+{
+  "kind": "selection",
+  "family": "valve",
+  "footerProducts": [
+    {
+      "id": "2-way-nc-barbed",
+      "title": "SV10-B16-2NC · Elettrovalvola miniaturizzata a membrana, 2 vie con portagomma",
+      "href": "/en/products/valves/solenoid-valves/2-way-nc-barbed/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-2-way-barbed-main.webp",
+      "imageAlt": "FOREACH SV10-B16-2NC: Elettrovalvola miniaturizzata a membrana, 2 vie con portagomma",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "3-way-barbed",
+      "title": "SV10-B16-3 · Elettrovalvola miniaturizzata a membrana, 3 vie con portagomma",
+      "href": "/en/products/valves/solenoid-valves/3-way-barbed/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-3-way-barbed-main.webp",
+      "imageAlt": "FOREACH SV10-B16-3: Elettrovalvola miniaturizzata a membrana, 3 vie con portagomma",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "2-way-nc-base",
+      "title": "SV10-P-2NC · Elettrovalvola miniaturizzata a membrana, 2 vie per collettore",
+      "href": "/en/products/valves/solenoid-valves/2-way-nc-base/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-2-way-base-main.webp",
+      "imageAlt": "FOREACH SV10-P-2NC: Elettrovalvola miniaturizzata a membrana, 2 vie per collettore",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "3-way-base",
+      "title": "SV10-P-3 · Elettrovalvola miniaturizzata a membrana, 3 vie per collettore",
+      "href": "/en/products/valves/solenoid-valves/3-way-base/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-3-way-base-main.webp",
+      "imageAlt": "FOREACH SV10-P-3: Elettrovalvola miniaturizzata a membrana, 3 vie per collettore",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "2-way-nc-threaded",
+      "title": "SV10-M6/U28-2NC · Elettrovalvola miniaturizzata a membrana, 2 vie con attacco filettato",
+      "href": "/en/products/valves/solenoid-valves/2-way-nc-threaded/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-2-way-threaded-main.webp",
+      "imageAlt": "FOREACH SV10-M6/U28-2NC: Elettrovalvola miniaturizzata a membrana, 2 vie con attacco filettato",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "3-way-threaded",
+      "title": "SV10-M6/U28-3 · Elettrovalvola miniaturizzata a membrana, 3 vie con attacco filettato",
+      "href": "/en/products/valves/solenoid-valves/3-way-threaded/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-3-way-threaded-main.webp",
+      "imageAlt": "FOREACH SV10-M6/U28-3: Elettrovalvola miniaturizzata a membrana, 3 vie con attacco filettato",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "2-way-no-barbed",
+      "title": "SV10-B16-2NO · Elettrovalvola miniaturizzata a membrana, 2 vie normalmente aperta con portagomma",
+      "href": "/en/products/valves/solenoid-valves/2-way-no-barbed/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-b16-2no-main.webp",
+      "imageAlt": "FOREACH SV10-B16-2NO: Elettrovalvola miniaturizzata a membrana, 2 vie normalmente aperta con portagomma",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "2-way-no-base",
+      "title": "SV10-P-2NO · Elettrovalvola miniaturizzata a membrana, 2 vie normalmente aperta per collettore",
+      "href": "/en/products/valves/solenoid-valves/2-way-no-base/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-2-way-base-main.webp",
+      "imageAlt": "FOREACH SV10-P-2NO: Elettrovalvola miniaturizzata a membrana, 2 vie normalmente aperta per collettore",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "2-way-no-threaded",
+      "title": "SV10-M6/U28-2NO · Elettrovalvola miniaturizzata a membrana, 2 vie normalmente aperta con attacco filettato",
+      "href": "/en/products/valves/solenoid-valves/2-way-no-threaded/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-2-way-threaded-main.webp",
+      "imageAlt": "FOREACH SV10-M6/U28-2NO: Elettrovalvola miniaturizzata a membrana, 2 vie normalmente aperta con attacco filettato",
+      "imageAspectRatio": 1
+    }
+  ],
+  "sidebarProducts": [
+    {
+      "id": "2-way-nc-barbed",
+      "title": "SV10-B16-2NC · Elettrovalvola miniaturizzata a membrana, 2 vie con portagomma",
+      "href": "/en/products/valves/solenoid-valves/2-way-nc-barbed/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-2-way-barbed-main.webp",
+      "imageAlt": "FOREACH SV10-B16-2NC: Elettrovalvola miniaturizzata a membrana, 2 vie con portagomma",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "3-way-barbed",
+      "title": "SV10-B16-3 · Elettrovalvola miniaturizzata a membrana, 3 vie con portagomma",
+      "href": "/en/products/valves/solenoid-valves/3-way-barbed/",
+      "imageSrc": "/images/products/valves/solenoid-valves/foreach-sv10-3-way-barbed-main.webp",
+      "imageAlt": "FOREACH SV10-B16-3: Elettrovalvola miniaturizzata a membrana, 3 vie con portagomma",
+      "imageAspectRatio": 1
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Che cos'è un'elettrovalvola? Principio di funzionamento e controllo fluidico a 2 e 3 vie",
+      "seoTitle": "Che cos'è un'elettrovalvola? Stati normalmente aperto e chiuso e funzionamento a 2 e 3 vie | FOREACH",
+      "seoDescription": "Gli esempi di erogazione dei reagenti e commutazione del lavaggio spiegano il funzionamento delle elettrovalvole, gli stati normalmente aperto e chiuso e le versioni a 2 e 3 vie. Vedi come tempo di risposta, pressione e potenza di azionamento si collegano al volume erogato.",
+      "coverImage": "/images/products/valves/solenoid-valves/foreach-sv10-connection-options-intro.webp",
+      "coverAlt": "Elettrovalvola miniaturizzata FOREACH SV10"
+    },
+    "deck": "Segui il percorso del fluido dopo l'alimentazione della bobina per capire come le elettrovalvole a 2 e 3 vie gestiscono erogazione dei reagenti e lavaggio, insieme a pompe e programmi di controllo.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Un'elettrovalvola usa la forza elettromagnetica per muovere un elemento di tenuta, aprendo, chiudendo o commutando un percorso del fluido. Alimentare o disalimentare la bobina muove il meccanismo e cambia il collegamento. La differenza di pressione che muove il fluido è in genere generata da pompa, serbatoio pressurizzato o dislivello del liquido."
+      },
+      {
+        "type": "paragraph",
+        "text": "Negli apparecchi di erogazione automatizzata, un'elettrovalvola a 2 vie apre o chiude un ramo. Una a 3 vie commuta una porta comune tra due rami. Per distinguerne le funzioni, considerare insieme stato elettrico, collegamenti tra porte e direzione del fluido."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Che cosa accade nella valvola quando si alimenta la bobina?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Alimentando la bobina si crea un campo magnetico che aziona un meccanismo mobile, ad esempio un'armatura, e cambia il contatto tra tenuta e sede. Il ritorno dopo la disalimentazione dipende dalla costruzione. Il modello SV10 controlla il percorso con un bilanciere e una membrana. Altre elettrovalvole possono usare un otturatore lineare."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "Un comando elettrico modifica il collegamento del fluido tramite bobina e meccanismo della valvola",
+            "caption": "Lo schema mostra la sequenza di controllo. Il flusso effettivo dipende anche da differenza di pressione, proprietà del fluido e tubi esterni.",
+            "flowNodes": [
+              {
+                "label": "Controllore",
+                "detail": "Invia un comando di attivazione o disattivazione"
+              },
+              {
+                "label": "Bobina",
+                "detail": "Applica o rimuove la forza magnetica"
+              },
+              {
+                "label": "Meccanismo della valvola",
+                "detail": "Modifica la posizione di tenuta"
+              },
+              {
+                "label": "Percorso del fluido",
+                "detail": "Si apre, si chiude o commuta"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Uno scatto udibile può indicare che il meccanismo si è mosso. Il passaggio del fluido va verificato a parte. Durante la messa in servizio, controllare anche direzione dei tubi, pressione, bolle e ostruzioni e verificare l'erogazione effettiva all'uscita."
+          }
+        ]
+      },
+      {
+        "title": "Come si distinguono valvole normalmente aperte, normalmente chiuse e a 3 vie?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Normalmente aperta e normalmente chiusa descrivono lo stato senza alimentazione della bobina, indipendentemente dalla frequenza di apertura o chiusura in esercizio."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Configurazione",
+              "Senza alimentazione",
+              "Con alimentazione",
+              "Funzione nel circuito"
+            ],
+            "rows": [
+              [
+                "2 vie normalmente chiusa (NC)",
+                "Collegamento tra le due porte chiuso",
+                "Collegamento tra le due porte aperto",
+                "Lascia passare il fluido nel ramo quando è alimentata"
+              ],
+              [
+                "2 vie normalmente aperta (NO)",
+                "Collegamento tra le due porte aperto",
+                "Collegamento tra le due porte chiuso",
+                "Interrompe il flusso nel ramo quando è alimentata"
+              ],
+              [
+                "SV10 a 3 vie",
+                "COM collegata a NO",
+                "COM collegata a NC",
+                "Commuta la porta comune tra due rami"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Una valvola normalmente chiusa può servire un ramo che deve chiudersi alla perdita di alimentazione. Una normalmente aperta può servire un ramo che deve restare aperto. Lo stato sicuro dell'apparecchio senza alimentazione dipende anche da altre valvole, valvole di ritegno, pressione residua e dislivelli. Il nome di una sola valvola non lo definisce."
+          },
+          {
+            "type": "paragraph",
+            "text": "Una valvola a 3 vie commuta i percorsi, a differenza di un raccordo a T con tre porte sempre comunicanti. Nella configurazione mostrata, un lato è chiuso quando COM è collegata all'altro. Confermare numerazione delle porte e direzioni di flusso ammesse per il prodotto specifico."
+          }
+        ]
+      },
+      {
+        "title": "Esempio: commutare una pompa tra reagente e liquido di lavaggio",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Nella configurazione SV10 a 3 vie, la porta 1 è NC, la porta 2 è COM e la porta 3 è NO. Collegare il flacone del reagente alla porta 1, quello del liquido di lavaggio alla porta 3 e la porta 2 all'ingresso della pompa. Collegare l'uscita della pompa all'ago di erogazione. In questo esempio, con la bobina disalimentata si seleziona il lavaggio e con la bobina alimentata si seleziona il reagente."
+          },
+          {
+            "type": "subheading",
+            "title": "Fase 1: selezionare il reagente ed erogare"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il controllore alimenta la valvola. Dopo aver confermato il percorso 2—1, azionare la pompa per aspirare il liquido. Prima della prima erogazione, espellere aria e liquido sostituito allo scarico. Spostare quindi l'ago sul recipiente di destinazione ed erogare la dose."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "Con la SV10 a 3 vie alimentata, il reagente passa attraverso le porte 1 e 2 alla pompa e poi all'ago di erogazione",
+            "caption": "Il ramo di lavaggio sulla porta 3 è chiuso in questo stato. Il volume dipende dal sistema di dosaggio e dal comportamento effettivo dell'intero circuito.",
+            "flowNodes": [
+              {
+                "label": "Flacone del reagente",
+                "detail": "Collegato alla porta 1, NC"
+              },
+              {
+                "label": "Valvola a 3 vie",
+                "detail": "Alimentata: collegamento 1—2"
+              },
+              {
+                "label": "Pompa",
+                "detail": "Aspira dalla porta 2"
+              },
+              {
+                "label": "Ago di erogazione",
+                "detail": "Eroga nel recipiente di destinazione"
+              }
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Fase 2: selezionare il liquido di lavaggio e risciacquare il percorso condiviso"
+          },
+          {
+            "type": "paragraph",
+            "text": "Dopo l'erogazione, terminare il dosaggio della pompa e portare il circuito nelle condizioni che consentono la commutazione. Spostare l'ago allo scarico, quindi disalimentare la valvola. Una volta collegato il percorso 2—3, la pompa aspira il liquido di lavaggio e risciacqua il percorso comune attraverso pompa e ago. Prima dell'erogazione successiva, sostituire il liquido di lavaggio con reagente per evitare di diluire la prima aliquota."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "Con la SV10 a 3 vie disalimentata, il liquido di lavaggio passa attraverso le porte 3 e 2 nella pompa, poi allo scarico",
+            "caption": "Qui si lava soltanto il percorso collegato. Il ramo del reagente isolato richiede un sistema proprio di lavaggio o ricambio.",
+            "flowNodes": [
+              {
+                "label": "Liquido di lavaggio",
+                "detail": "Collegato alla porta 3, NO"
+              },
+              {
+                "label": "Valvola a 3 vie",
+                "detail": "Disalimentata: collegamento 3—2"
+              },
+              {
+                "label": "Pompa e ago di erogazione",
+                "detail": "Risciacquano il percorso condiviso"
+              },
+              {
+                "label": "Recipiente di scarico",
+                "detail": "Raccoglie il liquido di lavaggio"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Perché 1 secondo di alimentazione non eroga sempre lo stesso volume?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Quando una differenza di pressione fa fluire il liquido a valle della valvola, si può stimare il volume come portata per tempo di apertura se la portata è stabile e i transitori di apertura e chiusura sono trascurabili. La portata effettiva varia con livello, pressione di alimentazione, contropressione all'uscita, viscosità e resistenza dei tubi. Durante la commutazione ci sono transitori."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per esempio, il volume può cambiare man mano che scende il livello del serbatoio anche se il programma mantiene lo stesso tempo di apertura. Sugli impulsi brevi incidono anche risposta dell'azionamento, deformazione del tubo e gocce residue. Per erogare piccoli volumi in modo uniforme, scegliere un dosaggio adatto e misurare volume medio e ripetibilità con il fluido effettivo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Se il sistema usa già una pompa a siringa o un altro dosatore, in genere la pompa eroga il volume previsto e l'elettrovalvola stabilisce il percorso nel momento opportuno. Il programma deve evitare che la pompa continui a lavorare contro un percorso chiuso o si colleghi a un ramo non previsto."
+          }
+        ]
+      },
+      {
+        "title": "Come interpretare pressione, tempo di risposta e potenza per l'integrazione?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Gli esempi riguardano le configurazioni SV10 corrispondenti. Controllare il modello specifico durante la selezione."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Parametro",
+              "Condizioni del prodotto",
+              "Che cosa verificare nell'apparecchio"
+            ],
+            "rows": [
+              [
+                "Pressione di esercizio",
+                "da −75 kPa a 0.25 MPa",
+                "Verificare se pressione di aspirazione, contropressione in uscita e transitori di commutazione rientrano nei limiti"
+              ],
+              [
+                "Alimentazione",
+                "12 V o 24 V CC, scostamento ammesso dalla tensione nominale ±10%",
+                "Scegliere la tensione nominale corretta e controllare tensione effettiva alla valvola e polarità del cablaggio"
+              ],
+              [
+                "Tempo di risposta",
+                "≤15 ms a vuoto per la configurazione standard",
+                "Il tempo di stabilizzazione della portata all'uscita va verificato a parte. Controllare temperatura, fluido e differenza di pressione"
+              ],
+              [
+                "Consumo di potenza",
+                "Configurazione standard: 2.5 W. Circuito a risparmio energetico: 2.5 W all'avvio e 1 W di mantenimento",
+                "Verificare che azionamento di avvio e mantenimento siano compatibili e che la dissipazione termica sia sufficiente con alimentazione continua"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le condizioni dichiarate per il tempo di risposta comprendono fluido e ambiente a 25°C, tensione nominale, pressione massima di esercizio con aria e pressione applicata alla porta comune. Il tempo di azionamento a vuoto non sostituisce la misura della risposta del fluido dopo aver installato i tubi. Controllare anche materiale della tenuta, temperatura e metodo di azionamento. La pressione di prova è distinta da quella ammessa per l'esercizio continuo."
+          },
+          {
+            "type": "paragraph",
+            "text": "I materiali a contatto devono essere idonei al reagente e al liquido di lavaggio, considerando concentrazione, temperatura e durata di contatto. Per raccordi a collettore, filettati o portagomma, controllare anche tenuta di montaggio, sollecitazioni dei tubi e spazio per la manutenzione. Un attacco adatto non garantisce da solo la compatibilità con i fluidi."
+          }
+        ]
+      },
+      {
+        "title": "Prodotti correlati e fasi di convalida",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Disegnare prima i percorsi a bobina disalimentata e alimentata e verificare la corrispondenza di COM, NC e NO con le porte reali.",
+              "Provare circuito di azionamento, fluidi e condizioni di pressione effettivi. Osservare la risposta alla commutazione, le perdite interne ed esterne e le gocce residue in uscita.",
+              "Convalidare la prima erogazione, quelle successive e la prima dopo il lavaggio nel ciclo dell'apparecchio. Registrare separatamente scostamento medio e ripetibilità.",
+              "Controllare la gestione di mancanza di alimentazione, riavvio, valvola bloccata e pompa ancora in funzione. Verificare che il fluido arrivi alla destinazione prevista."
+            ]
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/products/valves/solenoid-valves/",
+                "label": "Serie SV10 di elettrovalvole miniaturizzate"
+              },
+              {
+                "href": "/en/products/valves/solenoid-valves/?solenoid=2-way",
+                "label": "Elettrovalvole a 2 vie: apertura e chiusura di un ramo"
+              },
+              {
+                "href": "/en/products/valves/solenoid-valves/?solenoid=3-way",
+                "label": "Elettrovalvole a 3 vie: commutazione della porta comune"
+              },
+              {
+                "href": "/en/resources/technical-articles/what-is-a-programmable-syringe-pump/",
+                "label": "Come collabora una pompa a siringa programmabile con le valvole per dosare?"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "Un'elettrovalvola si può usare come pompa?",
+        "answer": "L'elettrovalvola cambia principalmente i collegamenti del circuito. Il pompaggio continuo richiede una pompa, un serbatoio pressurizzato o un dislivello che generi la differenza di pressione."
+      },
+      {
+        "question": "Una valvola a 3 vie può miscelare contemporaneamente due reagenti?",
+        "answer": "La SV10 a 3 vie qui descritta seleziona il ramo COM–NC oppure COM–NO. Le due entrate non si aprono contemporaneamente come in una valvola miscelatrice. La miscelazione richiede anche controllo del volume di ciascun fluido, sequenza di aggiunta e spazio di miscelazione."
+      },
+      {
+        "question": "Una valvola più rapida rende più precisa l'erogazione?",
+        "answer": "La risposta dell'azionamento è uno dei fattori. La precisione di erogazione dipende anche da metodo di dosaggio, variazioni di portata, bolle, elasticità dei tubi e gocce residue. Misurare le prestazioni al volume previsto nel circuito effettivo. Il solo tempo di risposta non determina l'errore di volume."
+      }
+    ],
+    "cta": {
+      "title": "Conferma la configurazione della valvola per il tuo circuito",
+      "description": "Indica fluidi, campo di pressione, attacchi e sequenza operativa per individuare una configurazione adatta.",
+      "contactLabel": "Contatta FOREACH",
+      "productsLabel": "Visualizza le serie di valvole",
+      "productsHref": "/en/products/valves/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "solenoid-principle",
+      "label": "Principio di funzionamento dell'elettrovalvola"
+    },
+    {
+      "id": "solenoid-states",
+      "label": "Stati normalmente aperto e chiuso a 2 e 3 vie"
+    },
+    {
+      "id": "solenoid-workflow",
+      "label": "Esempio di commutazione reagente e lavaggio"
+    },
+    {
+      "id": "solenoid-volume",
+      "label": "Tempo di apertura e volume di fluido"
+    },
+    {
+      "id": "solenoid-conditions",
+      "label": "Pressione, risposta e azionamento"
+    },
+    {
+      "id": "solenoid-checks",
+      "label": "Prodotti e fasi di convalida"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Principio di funzionamento dell'elettrovalvola",
+      "Normalmente aperta e normalmente chiusa",
+      "Elettrovalvole a 2 e 3 vie"
+    ],
+    "mentions": [
+      "SV10",
+      "Commutazione tra reagente e liquido di lavaggio"
+    ]
+  }
+}

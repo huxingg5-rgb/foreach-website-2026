@@ -34,6 +34,7 @@ import {
   datasheetsEnPageText,
 } from "@/data/resources/datasheets.en";
 
+import { datasheetsDeData } from "./datasheets.de";
 import type {
   DatasheetFilterOption,
   DatasheetItem,
@@ -54,7 +55,7 @@ import type {
 ========================================================= */
 
 const foreignPageTextMap: Record<
-  Exclude<DatasheetLocale, "zh-CN" | "en">,
+  Exclude<DatasheetLocale, "zh-CN" | "en" | "de">,
   DatasheetsPageText
 > = {
   es: {
@@ -276,7 +277,7 @@ const foreignPageTextMap: Record<
 ========================================================= */
 
 const foreignFilterLabelMap: Record<
-  Exclude<DatasheetLocale, "zh-CN" | "en">,
+  Exclude<DatasheetLocale, "zh-CN" | "en" | "de">,
   Record<string, string>
 > = {
   es: {
@@ -323,7 +324,7 @@ const foreignFilterLabelMap: Record<
 ========================================================= */
 
 const foreignItemTextMap: Record<
-  Exclude<DatasheetLocale, "zh-CN" | "en">,
+  Exclude<DatasheetLocale, "zh-CN" | "en" | "de">,
   Record<
     string,
     Pick<
@@ -752,7 +753,7 @@ const currentItemGenericKey: Record<string, string> = {
 };
 
 const currentItemTranslations: Record<
-  Exclude<DatasheetLocale, "zh-CN" | "en">,
+  Exclude<DatasheetLocale, "zh-CN" | "en" | "de">,
   Record<string, Pick<DatasheetItem, "title" | "description">>
 > = {
   es: {
@@ -852,7 +853,7 @@ const currentItemTranslations: Record<
 ========================================================= */
 
 function localizeFilterOptions(
-  locale: DatasheetLocale,
+  locale: Exclude<DatasheetLocale, "de">,
 ): DatasheetFilterOption[] {
   if (locale === "zh-CN") {
     return datasheetZhFilterOptions;
@@ -882,7 +883,7 @@ function localizeFilterOptions(
    5. probe / needle 这种暂无规格书的项目，跳转到对应语言联系页
 ========================================================= */
 
-function localizeItems(locale: DatasheetLocale): DatasheetItem[] {
+function localizeItems(locale: Exclude<DatasheetLocale, "de">): DatasheetItem[] {
   if (locale === "zh-CN") {
     return datasheetZhItems;
   }
@@ -934,7 +935,7 @@ function localizeItems(locale: DatasheetLocale): DatasheetItem[] {
 ========================================================= */
 
 function getDatasheetsStaticPageText(
-  locale: DatasheetLocale,
+  locale: Exclude<DatasheetLocale, "de">,
 ): DatasheetsPageText {
   if (locale === "zh-CN") {
     return {
@@ -976,6 +977,7 @@ function getDatasheetsStaticPageText(
 export function getDatasheetsStaticPageData(
   locale: DatasheetLocale,
 ): DatasheetsPageData {
+  if (locale === "de") return datasheetsDeData;
   return {
     pageText: getDatasheetsStaticPageText(locale),
     filterOptions: localizeFilterOptions(locale),

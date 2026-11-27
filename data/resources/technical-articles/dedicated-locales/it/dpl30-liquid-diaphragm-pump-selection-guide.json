@@ -1,0 +1,456 @@
+{
+  "copy": {
+    "metadata": {
+      "title": "Come scegliere una pompa a membrana per liquidi da 300 mL/min: funzionamento e modelli DPL30",
+      "seoTitle": "Come scegliere una pompa a membrana per liquidi da 300 mL/min | Guida DPL30",
+      "seoDescription": "Scopri il principio di funzionamento della pompa a membrana per liquidi DPL30, la portata a scarico libero di 300 mL/min, la pressione nominale di 100 kPa, la curva portata-pressione, i materiali bagnati, le versioni a spazzole e brushless e i criteri di scelta del modello."
+    },
+    "diagram": {
+      "ariaLabel": "Schema di aspirazione e mandata del liquido in una pompa a membrana per liquidi",
+      "suctionTitle": "Aspirazione",
+      "dischargeTitle": "Mandata",
+      "inletOpen": "Valvola di ingresso aperta",
+      "outletClosed": "Valvola di uscita chiusa",
+      "suctionDescription": "Il volume aumenta e il liquido entra",
+      "inletClosed": "Valvola di ingresso chiusa",
+      "outletOpen": "Valvola di uscita aperta",
+      "dischargeDescription": "Il volume diminuisce e il liquido esce",
+      "caption": "Principio di aspirazione e mandata della pompa a membrana per liquidi"
+    },
+    "section1": {
+      "title": "1. Come aspira ed eroga il liquido una pompa a membrana?",
+      "paragraphs": [
+        "Una pompa a membrana per liquidi è una pompa volumetrica che trasferisce il liquido mediante il moto alternato di una membrana flessibile. I componenti principali sono camera di pompaggio, membrana, valvola di ingresso, valvola di uscita e meccanismo di azionamento.",
+        "Il motore muove la membrana avanti e indietro mediante un eccentrico, facendo variare ciclicamente il volume della camera di pompaggio. Nella corsa di aspirazione, il movimento della membrana aumenta il volume della camera e ne riduce la pressione al di sotto di quella all’ingresso. La valvola di ingresso si apre, quella di uscita si chiude e il liquido entra nella camera. Nella corsa di mandata, la membrana inverte il movimento, riducendo il volume della camera e aumentandone la pressione. La valvola di ingresso si chiude, quella di uscita si apre e il liquido viene spinto nella linea a valle.",
+        "La membrana separa inoltre il fluido trasportato dal meccanismo di azionamento. Il liquido entra soprattutto in contatto con la testa della pompa, la membrana e le lamelle delle valvole, per cui si possono valutare diverse combinazioni di materiali bagnati in base al liquido.",
+        "Il moto alternato genera pulsazioni di portata e pressione. L’intensità dipende da geometria della camera, velocità, corsa della membrana, risposta delle valvole, elasticità dei tubi, contropressione del sistema e dispositivi di smorzamento. Per le apparecchiature con requisiti rigorosi di stabilità della portata, esegui la verifica nell’intero circuito fluidico."
+      ]
+    },
+    "section2": {
+      "title": "2. Che cosa confermare nella scelta di una pompa a membrana per liquidi?",
+      "intro": "La sola indicazione «300 mL/min» non basta per scegliere la pompa. Per una selezione affidabile occorre confermare liquido, condizioni di prova della portata, pressione del sistema, altezza di autoadescamento, materiali bagnati, tipo di motore, tempo di funzionamento e resistenza del circuito.",
+      "headers": [
+        "Criterio di selezione",
+        "Che cosa confermare",
+        "Errore comune"
+      ],
+      "rows": [
+        [
+          "Fluido liquido",
+          "Tipo di liquido, concentrazione, temperatura, viscosità, particelle e durata del contatto continuo",
+          "Presumere che PTFE o FFKM rendano la pompa compatibile con ogni sostanza chimica"
+        ],
+        [
+          "Portata",
+          "Verificare se il valore dichiarato è a scarico libero, nominale, massimo o riferito all’esercizio a una pressione specificata",
+          "Scambiare la portata a scarico libero per la portata reale nello strumento"
+        ],
+        [
+          "Pressione",
+          "Resistenza di filtri, tubi, raccordi, valvole e ugelli a valle e differenza di livello del liquido",
+          "Considerare solo la pressione massima senza verificare la portata alla pressione obiettivo"
+        ],
+        [
+          "Autoadescamento",
+          "Dislivello tra il livello del liquido e l’ingresso della pompa e stato iniziale della linea, piena o vuota",
+          "Considerare l’altezza di adescamento della scheda tecnica una garanzia di aspirazione stabile in tutte le condizioni"
+        ],
+        [
+          "Materiali bagnati",
+          "Materiali della testa della pompa, della membrana e delle lamelle delle valvole",
+          "Controllare solo la membrana e trascurare valvole e testa della pompa"
+        ],
+        [
+          "Motore e vita utile",
+          "12 V o 24 V, tempo di funzionamento giornaliero e servizio continuo o intermittente",
+          "Usare i dati di durata senza considerare le relative condizioni di prova"
+        ],
+        [
+          "Condizioni dei tubi",
+          "Diametro interno, lunghezza, curve, filtri e numero di raccordi",
+          "Ignorare l’effetto della resistenza della linea sulla portata effettiva"
+        ],
+        [
+          "Pulsazioni e rumore",
+          "Verificare se il sistema prevede requisiti di stabilità della portata, vibrazioni e rumore",
+          "Descrivere una pompa a membrana come del tutto priva di pulsazioni o silenziosa"
+        ]
+      ]
+    },
+    "section3": {
+      "title": "3. Perché non basta il valore di 300 mL/min per scegliere DPL30?",
+      "paragraphs": [
+        "Il valore «300 mL/min» va interpretato insieme alle condizioni di prova. Può riferirsi alla portata a scarico libero, massima, nominale o in esercizio a una pressione specificata.",
+        "Dopo l’installazione della pompa, tubi, filtri, raccordi, valvole, ugelli e dislivello del liquido generano resistenza nel circuito. La portata effettiva varia al crescere del vuoto all’ingresso o della pressione all’uscita.",
+        "«Una pompa con portata a scarico libero di circa 300 mL/min» e «300 mL/min alla pressione effettiva del sistema» sono dunque requisiti distinti. Nel secondo caso, conferma prima la pressione del sistema, quindi ricava il punto di lavoro dalla curva portata-pressione e dalle prove a montaggio avvenuto."
+      ],
+      "noticeStrong": "Il valore di 300 mL/min nella scheda tecnica DPL30 indica la portata a scarico libero.",
+      "noticeText": "La pressione nominale è di 100 kPa. I due dati non indicano lo stesso punto di lavoro e non significano che DPL30 eroghi ancora 300 mL/min a 100 kPa."
+    },
+    "section4": {
+      "title": "4. Specifiche tecniche complete di DPL30",
+      "intro": "DPL30 è disponibile nelle versioni da 12 V e 24 V con motori a spazzole o brushless. I valori seguenti sono ripresi dalla scheda tecnica DPL30 attuale.",
+      "headers": [
+        "Parametro",
+        "Versione a spazzole",
+        "Versione brushless"
+      ],
+      "rows": [
+        {
+          "label": "Nome del prodotto",
+          "value": "Pompa a membrana per liquidi DPL30"
+        },
+        {
+          "label": "Modelli base",
+          "brushed": "DPL30-24DB, DPL30-12DB",
+          "brushless": "DPL30-24BB, DPL30-12BB"
+        },
+        {
+          "label": "Tipo di motore",
+          "brushed": "Motore a spazzole in corrente continua",
+          "brushless": "Motore brushless in corrente continua"
+        },
+        {
+          "label": "Tensione nominale",
+          "value": "DC 12V ±10% o DC 24V ±10%"
+        },
+        {
+          "label": "Potenza nominale",
+          "value": "≤8W"
+        },
+        {
+          "label": "Portata a scarico libero",
+          "value": "300 mL/min"
+        },
+        {
+          "label": "Pressione nominale",
+          "value": "100 kPa"
+        },
+        {
+          "label": "Altezza di autoadescamento",
+          "value": "6 mH₂O"
+        },
+        {
+          "label": "Fluido di esercizio",
+          "value": "Acqua purificata. Per gli altri liquidi, il cliente deve valutare le condizioni operative effettive"
+        },
+        {
+          "label": "Temperatura del fluido",
+          "value": "da +5℃ a +80℃"
+        },
+        {
+          "label": "Attacco del tubo",
+          "value": "Per tubi con diametro interno di 3.2 mm"
+        },
+        {
+          "label": "Materiale della testa della pompa",
+          "value": "PPS"
+        },
+        {
+          "label": "Materiale della membrana",
+          "value": "EPDM o PTFE"
+        },
+        {
+          "label": "Materiale delle valvole",
+          "value": "EPDM o FFKM"
+        },
+        {
+          "label": "Massa",
+          "brushed": "Circa 160 g",
+          "brushless": "Circa 185 g"
+        },
+        {
+          "label": "Vita utile",
+          "brushed": "3000 h alla tensione nominale, in funzionamento continuo",
+          "brushless": "10000 h alla tensione nominale, in funzionamento continuo"
+        },
+        {
+          "label": "Rumorosità",
+          "value": "≤80 dB"
+        },
+        {
+          "label": "Temperatura ambiente di esercizio",
+          "value": "da +5℃ a +40℃"
+        },
+        {
+          "label": "Umidità relativa di esercizio",
+          "value": "da 30% a 85% UR, senza condensa"
+        },
+        {
+          "label": "Temperatura di stoccaggio",
+          "value": "da -10℃ a +40℃"
+        },
+        {
+          "label": "Umidità relativa di stoccaggio",
+          "value": "da 10% a 90% UR, senza condensa"
+        }
+      ]
+    },
+    "section5": {
+      "title": "5. Come leggere la curva portata-pressione di DPL30?",
+      "paragraphs": [
+        "La curva portata-pressione mostra come varia la portata di DPL30 con il vuoto all’ingresso e la pressione positiva all’uscita. A sinistra dell’asse orizzontale è riportato il vuoto all’ingresso, a destra la pressione all’uscita. L’asse verticale indica la portata.",
+        "In condizioni prossime allo scarico libero, la portata di DPL30 è di circa 300 mL/min. La portata effettiva diminuisce gradualmente all’aumentare della pressione all’uscita. Cala anche quando cresce il vuoto all’ingresso e l’aspirazione diventa più difficile."
+      ],
+      "figureAlt": "Curva portata-pressione della pompa a membrana per liquidi DPL30",
+      "figureCaption": "Curva portata-pressione DPL30",
+      "notice": "La curva portata-pressione aiuta nella selezione preliminare. Sul punto di lavoro effettivo incidono anche viscosità del liquido, misure dei tubi, filtri, valvole, raccordi, metodo di montaggio e dislivello del liquido. Confermalo nel circuito fluidico effettivo."
+    },
+    "section6": {
+      "title": "6. Come scegliere i materiali bagnati di DPL30?",
+      "intro": "Le parti bagnate principali di DPL30 sono testa della pompa, membrana e lamelle delle valvole. La compatibilità va valutata per l’intera combinazione di materiali bagnati.",
+      "headers": [
+        "Parte bagnata",
+        "Materiale disponibile",
+        "Corrispondenza con il codice modello"
+      ],
+      "rows": [
+        [
+          "Testa della pompa",
+          "Solfuro di polifenilene (PPS)",
+          "PS"
+        ],
+        [
+          "Membrana",
+          "EPDM o PTFE",
+          "EPDM in EP/PS. PTFE in FF/PS"
+        ],
+        [
+          "Lamelle delle valvole",
+          "EPDM o FFKM",
+          "EPDM in EP/PS. FFKM in FF/PS"
+        ]
+      ],
+      "epTitle": "Combinazione di materiali EP/PS",
+      "epText": "EP/PS indica membrana in EPDM, lamelle delle valvole in EPDM e testa della pompa in PPS. Può essere usata come configurazione iniziale da valutare per acqua purificata e alcuni liquidi di uso comune.",
+      "ffTitle": "Combinazione di materiali FF/PS",
+      "ffText": "FF/PS indica membrana in PTFE, lamelle delle valvole in FFKM e testa della pompa in PPS. Può essere valutata per applicazioni con requisiti di compatibilità dei materiali più severi.",
+      "noticeStrong": "Il nome di un materiale non basta a stabilire la compatibilità dell’intera pompa.",
+      "noticeText": "Prima della selezione, fornisci tipo di liquido, formulazione, concentrazione, temperatura, durata del contatto continuo, metodo di pulizia e condizioni di esercizio. Valuta l’intero percorso bagnato."
+    },
+    "section7": {
+      "title": "7. Come scegliere tra versione a spazzole e brushless?",
+      "intro": "Le versioni a spazzole e brushless usano motori diversi, con differenze di vita utile, massa, lunghezza totale e cablaggio.",
+      "headers": [
+        "Voce di confronto",
+        "Versione a spazzole",
+        "Versione brushless"
+      ],
+      "rows": [
+        [
+          "Tipo di motore",
+          "Motore a spazzole in corrente continua",
+          "Motore brushless in corrente continua"
+        ],
+        [
+          "Vita utile specificata",
+          "3000 h alla tensione nominale, in funzionamento continuo",
+          "10000 h alla tensione nominale, in funzionamento continuo"
+        ],
+        [
+          "Impiego tipico",
+          "Apparecchiature con tempi di esercizio limitati e obiettivi di costo più contenuti",
+          "Apparecchiature con tempi di esercizio più lunghi e requisiti più elevati di durata dello strumento"
+        ],
+        [
+          "Massa",
+          "Circa 160 g",
+          "Circa 185 g"
+        ],
+        [
+          "Modalità di comando",
+          "Collegamento di alimentazione positivo e negativo",
+          "A seconda della configurazione, sono possibili PWM, comando del senso di rotazione o retroazione della velocità"
+        ]
+      ],
+      "afterTable": "I dati di durata vanno letti insieme alle condizioni di prova. Contropressione del sistema, variazioni dell’alimentazione, temperatura ambiente, avvii e arresti frequenti, dissipazione termica del montaggio e condizioni del liquido possono influire sulla durata effettiva.",
+      "brushedTitle": "Dimensioni della versione a spazzole",
+      "brushedAlt": "Dimensioni della pompa a membrana per liquidi DPL30 a spazzole",
+      "brushedCaption": "Dimensioni della versione DPL30 a spazzole",
+      "brushedText": "La versione a spazzole è lunga circa 83.2 mm e alta 57.3 mm, con larghezza massima del corpo di circa 30 mm e larghezza del corpo della testa di circa 26 mm. Il diametro esterno del portagomma è di circa φ4.5 mm per tubi con diametro interno di 3.2 mm. Usa il disegno quotato ufficiale per fori di montaggio, quote e orientamento esatti delle porte.",
+      "brushlessTitle": "Dimensioni della versione brushless",
+      "brushlessAlt": "Dimensioni della pompa a membrana per liquidi DPL30 brushless",
+      "brushlessCaption": "Dimensioni della versione DPL30 brushless",
+      "brushlessText": "La versione brushless può usare due motori equivalenti, A e B, con gli stessi parametri elettrici e prestazioni in uscita. La differenza principale è l’ingombro di montaggio. La lunghezza del corpo è circa 70 mm o 68 mm, l’altezza totale circa 57.3 mm e la larghezza massima del corpo circa 30 mm."
+    },
+    "section8": {
+      "title": "8. Codice modello di DPL30 e configurazioni disponibili",
+      "intro": "Un codice DPL30 completo comprende serie del prodotto, tensione di esercizio, tipo di motore, cablaggio, tipo di collegamento, orientamento delle porte, materiali di membrana, valvole e testa della pompa e un codice di personalizzazione.",
+      "noticeStrong": "DPL30 - 24 - D - 2 - B - C - EP/PS - X",
+      "noticeText": "Serie del prodotto · Tensione di esercizio · Tipo di motore · Cablaggio · Collegamento · Orientamento delle porte · Materiali bagnati · Personalizzazione speciale",
+      "headers": [
+        "Campo",
+        "Codice",
+        "Significato"
+      ],
+      "rows": [
+        [
+          "Serie del prodotto",
+          "DPL30",
+          "Serie DPL30 di pompe a membrana per liquidi"
+        ],
+        [
+          "Tensione di esercizio",
+          "24 / 12",
+          "DC 24V / DC 12V"
+        ],
+        [
+          "Tipo di motore",
+          "D / B / C / BP",
+          "D: motore a spazzole in corrente continua. B: motore brushless in corrente continua. C: motore senza nucleo. BP: motore brushless in corrente continua con PWM esterno"
+        ],
+        [
+          "Cablaggio",
+          "2 / 3 / 5",
+          "2, 3 o 5 fili. Il codice predefinito a 2 fili può essere omesso"
+        ],
+        [
+          "Collegamento",
+          "B / S",
+          "B: attacco portagomma. S: attacco filettato"
+        ],
+        [
+          "Orientamento delle porte",
+          "3 / 6 / 9 / C",
+          "3: destra. 6: basso. 9: sinistra. C: alto, omissibile quando è l’orientamento predefinito"
+        ],
+        [
+          "Materiali di membrana, valvole e testa della pompa",
+          "EP/PS / FF/PS",
+          "EP/PS: membrana e valvole in EPDM con testa in PPS. FF/PS: membrana in PTFE, valvole in FFKM e testa in PPS"
+        ],
+        [
+          "Personalizzazione speciale",
+          "X",
+          "Codice personalizzato. Fa fede il documento finale di conferma del progetto"
+        ]
+      ],
+      "exampleTitle": "Esempio di modello: DPL30-24DB-EP/PS",
+      "exampleText": "Il codice si può espandere in DPL30-24-D-2-B-C-EP/PS: serie DPL30, DC 24V, motore a spazzole in corrente continua, 2 fili, attacco portagomma, porte verso l’alto, membrana e lamelle delle valvole in EPDM e testa della pompa in PPS.",
+      "notice": "«DB» non è un codice unico. D indica un motore a spazzole in corrente continua e B un attacco portagomma. Analogamente, in DPL30-24BB-EP/PS, la prima B indica il motore brushless e la seconda B l’attacco portagomma."
+    },
+    "section9": {
+      "title": "9. Procedura completa di selezione di DPL30",
+      "steps": [
+        [
+          "Conferma la portata obiettivo",
+          "Distingui una portata a scarico libero di circa 300 mL/min dalla portata di esercizio richiesta alla pressione effettiva del sistema."
+        ],
+        [
+          "Conferma la pressione del sistema",
+          "Stima la resistenza generata da filtri, tubi, raccordi, valvole, ugelli e dislivello del liquido. Usa poi la curva portata-pressione."
+        ],
+        [
+          "Conferma il liquido",
+          "Indica tipo di liquido, formulazione, concentrazione, temperatura, viscosità, particelle e durata del contatto continuo."
+        ],
+        [
+          "Scegli la tensione di esercizio",
+          "Scegli DC 12V o DC 24V in base all’alimentazione dello strumento."
+        ],
+        [
+          "Scegli il tipo di motore",
+          "Valuta la versione a spazzole per tempi di funzionamento limitati e obiettivi di costo più contenuti. Dai priorità alla versione brushless per tempi più lunghi o requisiti di durata maggiori."
+        ],
+        [
+          "Conferma il cablaggio e il comando",
+          "Verifica i requisiti a 2, 3 o 5 fili e la necessità delle funzioni PWM, DIR e FG."
+        ],
+        [
+          "Conferma il collegamento fluidico",
+          "Scegli un attacco portagomma o filettato in funzione del tubo e della struttura del circuito."
+        ],
+        [
+          "Conferma l’orientamento delle porte",
+          "Scegli alto, destra, basso o sinistra in base allo spazio di montaggio, alla posa dei tubi, al raggio di curvatura e all’accesso per la manutenzione."
+        ],
+        [
+          "Conferma i materiali bagnati",
+          "Scegli EP/PS o FF/PS in base alla compatibilità e valuta l’intero percorso bagnato."
+        ],
+        [
+          "Completa la verifica di montaggio",
+          "Conferma lo spazio di montaggio dal disegno quotato e prova portata, pressione, rumorosità, durata e stabilità di funzionamento nel circuito fluidico effettivo."
+        ]
+      ]
+    },
+    "section10": {
+      "title": "10. Possibili applicazioni e limiti d’impiego",
+      "intro": "DPL30 si può valutare per il trasferimento di liquidi in strumenti IVD, apparecchiature analitiche da laboratorio e apparecchiature mediche, compresi trasferimento di acqua purificata, linee di lavaggio e risciacquo e trasferimento di liquidi di scarto.",
+      "headers": [
+        "Voce",
+        "Spiegazione"
+      ],
+      "rows": [
+        [
+          "Candidata per la selezione dell’apparecchiatura",
+          "L’idoneità a uno strumento specifico va verificata in base a liquido, portata, pressione, tempo di esercizio e requisiti complessivi dell’apparecchiatura."
+        ],
+        [
+          "Ambito della certificazione per i dispositivi medici",
+          "La scelta per l’uso all’interno di un’apparecchiatura medica non implica che la pompa abbia ottenuto la certificazione per un dispositivo medico completo."
+        ],
+        [
+          "Gli altri liquidi richiedono una valutazione",
+          "Il fluido di esercizio dichiarato è acqua purificata. Per altri liquidi servono una valutazione di compatibilità e prove su campioni."
+        ],
+        [
+          "Funzionamento a secco prolungato da confermare",
+          "Le specifiche attuali non forniscono una garanzia esplicita di funzionamento a secco prolungato. Le applicazioni che lo richiedono vanno confermate espressamente."
+        ],
+        [
+          "I dati di durata richiedono le condizioni di prova",
+          "I valori di 3000 h e 10000 h si basano sulla tensione nominale e sul funzionamento continuo. Carico, temperatura e frequenza degli avvii e arresti influiscono sulla durata effettiva."
+        ],
+        [
+          "La conferma finale richiede prove di sistema",
+          "Curve, dimensioni e dati dei materiali aiutano nella selezione. La conferma finale va completata nel circuito fluidico e nello strumento effettivi."
+        ]
+      ]
+    },
+    "section11": {
+      "title": "Conclusione",
+      "paragraphs": [
+        "Per scegliere DPL30 non basta il valore «300 mL/min». Conferma prima portata di esercizio obiettivo e pressione del sistema. Definisci poi la configurazione in base a liquido, materiali bagnati, alimentazione, vita utile del motore, tipo di collegamento, orientamento e spazio disponibile per il montaggio.",
+        "Prima di scegliere, prepara i dati di portata di esercizio obiettivo, pressione di esercizio normale, tipo e concentrazione del liquido, temperatura del fluido, tempo di funzionamento giornaliero, tensione di alimentazione, diametro interno e lunghezza dei tubi, configurazione di filtri e valvole, spazio di montaggio e orientamento delle porte. Questi dati consentono di confermare la configurazione DPL30 appropriata."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "items": [
+      {
+        "question": "Che cosa indica la portata di 300 mL/min di DPL30?",
+        "answer": "Il valore di 300 mL/min è la portata a scarico libero indicata nella scheda tecnica DPL30 attuale alle condizioni di prova specificate. Non significa che la pompa eroghi 300 mL/min con ogni contropressione, altezza di aspirazione, tubo o fluido. Per determinare la portata effettiva, considera la resistenza del circuito, la curva portata-pressione e il punto di lavoro."
+      },
+      {
+        "question": "DPL30 eroga ancora 300 mL/min a 100 kPa?",
+        "answer": "No. 300 mL/min è la portata a scarico libero e 100 kPa è la pressione nominale. I valori sono parametri distinti e non indicano che DPL30 mantenga 300 mL/min a 100 kPa. Conferma la portata in pressione dalla curva portata-pressione e nel circuito effettivo."
+      },
+      {
+        "question": "Qual è l’altezza di autoadescamento di DPL30?",
+        "answer": "Nelle condizioni di prova specificate, DPL30 ha un’altezza di autoadescamento di 6 mH₂O. Le prestazioni effettive possono variare a seconda di proprietà del fluido, diametro e lunghezza del tubo, resistenza all’ingresso, dislivello, tenuta del sistema e condizioni di montaggio. Verifica le prestazioni finali nel circuito effettivo."
+      },
+      {
+        "question": "DPL30 è adatta come pompa per liquidi di scarto in apparecchiature mediche o IVD?",
+        "answer": "DPL30 può essere valutata come candidata per lo scarico di liquidi di scarto in strumenti IVD, apparecchiature analitiche e sistemi di automazione da laboratorio. L’idoneità finale va confermata in base alle proprietà del liquido di scarto, alla portata di esercizio, alla contropressione, all’autoadescamento richiesto, ai materiali bagnati, al tempo di funzionamento e allo spazio di montaggio, con prove nel circuito effettivo."
+      },
+      {
+        "question": "Come scegliere tra le versioni DPL30 a spazzole e brushless?",
+        "answer": "Per apparecchiature con tempi di esercizio limitati e una maggiore sensibilità al costo, valuta prima la versione a spazzole. Per tempi più lunghi e requisiti di durata più elevati, privilegia la versione brushless. Nella scheda tecnica attuale sono riportati 3000 h per la versione a spazzole e 10000 h per la brushless, entrambe alla tensione nominale in funzionamento continuo. Sono valori di riferimento alle condizioni di prova specificate e non garanzie assolute per ogni applicazione."
+      },
+      {
+        "question": "Quali liquidi può trasferire DPL30?",
+        "answer": "Il fluido di esercizio standard della scheda tecnica attuale è acqua purificata. Per gli altri liquidi, valuta l’intera combinazione di materiali bagnati, compresi testa della pompa in PPS, membrana in EPDM o PTFE e lamelle delle valvole in EPDM o FFKM. Conferma inoltre tipo di liquido, concentrazione, temperatura, durata del contatto e metodo di pulizia. La compatibilità della pompa non si può ricavare dal solo nome PTFE o FFKM."
+      },
+      {
+        "question": "Dove posso consultare la scheda tecnica di DPL30?",
+        "answer": "Seleziona il prodotto DPL30 appropriato nella sezione Prodotti correlati qui sotto e apri la scheda di dettaglio per vedere la scheda tecnica associata. Usa la pagina per il tipo di motore e il modello effettivi per evitare di confondere i documenti di configurazioni diverse."
+      },
+      {
+        "question": "Come posso richiedere un disegno CAD / 3D per DPL30?",
+        "answer": "Seleziona il modello DPL30 appropriato nei Prodotti correlati qui sotto, apri la scheda di dettaglio e invia la richiesta di disegno CAD / 3D da lì. Le dimensioni di montaggio possono variare con tipo di motore e configurazione. Richiedi quindi il disegno del modello scelto in via definitiva."
+      }
+    ]
+  }
+}

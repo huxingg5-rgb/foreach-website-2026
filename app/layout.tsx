@@ -13,6 +13,7 @@
 ========================================================= */
 
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import Script from "next/script";
 import type { ReactNode } from "react";
 
@@ -32,6 +33,9 @@ import AnalyticsInteractionTracker from "@/components/analytics/AnalyticsInterac
 import { SelectionCartProvider } from "@/components/selection-cart/SelectionCartProvider";
 import GlobalSelectionCartDrawer from "@/components/selection-cart/GlobalSelectionCartDrawer";
 import { SITE_URL } from "@/lib/seo/site-url";
+import { draftLanguages, germanLocalizedDraftPaths, languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { publishedTranslationBuild } from "@/lib/i18n/published-translations";
+import { germanFittingDraftPathPattern } from "@/data/products/detail/german-fitting-draft-routes";
 import "./products/products.css";
 
 const gaMeasurementId =
@@ -62,13 +66,22 @@ export const metadata: Metadata = {
    3. 不要在这里根据 Cookie 判断语言
    4. 不要直接写原生 <script>，浏览器脚本统一用 next/script
 ========================================================= */
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: ReactNode;
 }) {
+  const draftDocumentLanguage = languageDraftsEnabled
+    && process.env.CF_PAGES !== "1"
+    && process.env.CLOUDFLARE_PAGES_BUILD !== "1"
+    ? (await headers()).get("x-foreach-draft-document-language")
+    : null;
+  const documentLanguage = draftDocumentLanguage === "de-DE" || draftDocumentLanguage === "it-IT" || draftDocumentLanguage === "hi-IN" || draftDocumentLanguage === "en"
+    ? draftDocumentLanguage
+    : "zh-CN";
+
   return (
-    <html lang="zh-CN" suppressHydrationWarning>
+    <html lang={documentLanguage} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
         <link
@@ -84,11 +97,24 @@ export default function RootLayout({
         <Script id="foreach-document-language" strategy="beforeInteractive">
                     {`
                       (function () {
-                        var firstSegment = window.location.pathname.split('/').filter(Boolean)[0];
+                        var segments = window.location.pathname.split('/').filter(Boolean);
+                        var firstSegment = segments[0];
                         var supported = ['en', 'es', 'fr', 'ko', 'ru'];
-                        document.documentElement.lang = supported.indexOf(firstSegment) >= 0
-                          ? firstSegment
-                          : 'zh-CN';
+                        var drafts = ${JSON.stringify(languageDraftsEnabled ? Object.keys(draftLanguages) : [])};
+                        var germanPaths = ${JSON.stringify(languageDraftsEnabled ? germanLocalizedDraftPaths : [])};
+                        var germanFittings = ${JSON.stringify(languageDraftsEnabled ? germanFittingDraftPathPattern : "")};
+                        var relativePath = '/' + (segments.slice(1).length ? segments.slice(1).join('/') + '/' : '');
+                        var isGerman = germanPaths.indexOf(relativePath) >= 0 || (germanFittings && new RegExp('^/(?:' + germanFittings + ')/$').test(relativePath));
+                        var renderedDraftLanguage = ${JSON.stringify(draftDocumentLanguage ? documentLanguage : null)};
+                        var publishedLanguageTags = ${JSON.stringify(publishedTranslationBuild
+                          ? Object.fromEntries(Object.entries(draftLanguages).map(([code, language]) => [code, language.languageTag]))
+                          : {})};
+                        document.documentElement.lang = drafts.indexOf(firstSegment) >= 0 && renderedDraftLanguage
+                          ? renderedDraftLanguage
+                          : publishedLanguageTags[firstSegment] ? publishedLanguageTags[firstSegment]
+                          : firstSegment === 'de' && isGerman ? 'de-DE'
+                          : drafts.indexOf(firstSegment) >= 0 ? 'en'
+                          : supported.indexOf(firstSegment) >= 0 ? firstSegment : 'zh-CN';
                       })();
                     `}
                   </Script>
@@ -117,7 +143,7 @@ export default function RootLayout({
           <AnalyticsInteractionTracker />
 
           {/* Header 自己管理滚动、移动菜单和语言菜单，避免重复监听。 */}
-          <SiteHeader />
+          <SiteHeader fittingPathPattern={languageDraftsEnabled ? germanFittingDraftPathPattern : undefined} />
 
           {children}
 
@@ -126,10 +152,10 @@ export default function RootLayout({
             后续如果需要 Footer 也根据 /en、/fr 自动切换，
             再把语言判断放到具体页面或前端组件里处理。
           */}
-          <SiteFooter />
+          <SiteFooter fittingPathPattern={languageDraftsEnabled ? germanFittingDraftPathPattern : undefined} />
 
           {/* Cookie 同意管理与用户同意后加载的 GA4 */}
-          <CookieConsent />
+          <CookieConsent fittingPathPattern={languageDraftsEnabled ? germanFittingDraftPathPattern : undefined} />
           <GoogleAnalytics />
           <YandexMetrica />
 
@@ -140,7 +166,7 @@ export default function RootLayout({
             2. 首页、详情页、后续产品页都共用这一套清单
             3. 后续页面内部不再单独渲染 FittingSelectionCart
           */}
-          <GlobalSelectionCartDrawer />
+          <GlobalSelectionCartDrawer fittingPathPattern={languageDraftsEnabled ? germanFittingDraftPathPattern : undefined} />
         </SelectionCartProvider>
       </body>
 

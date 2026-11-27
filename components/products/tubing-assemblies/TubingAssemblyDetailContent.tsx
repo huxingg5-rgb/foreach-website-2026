@@ -1,5 +1,5 @@
 import ProductDrawingReference from "@/components/common/ProductDrawingReference";
-import type { TubingAssemblyLocale } from "@/data/products/tubing-assemblies/locales";
+import type { TubingAssemblyDetailLocale } from "@/data/products/tubing-assemblies/locales";
 import { getAssemblyDetailMedia } from "@/data/products/tubing-assemblies/detail-media";
 import { assemblyDetailView } from "./assembly-detail-view";
 import { assemblyDetailText } from "@/data/products/tubing-assemblies/detail-localization";
@@ -20,7 +20,7 @@ export function getAssemblyGuideImage(key: string): GuideImage {
   if(!image) throw new Error(`Missing tubing assembly guide image: ${key}`);
   return image;
 }
-export function AssemblyGuideFigure({name,maxWidth,caption,locale="zh-CN"}: {name:string;maxWidth?:number;caption?:string;locale?:TubingAssemblyLocale}) {
+export function AssemblyGuideFigure({name,maxWidth,caption,locale="zh-CN"}: {name:string;maxWidth?:number;caption?:string;locale?:TubingAssemblyDetailLocale}) {
   const image=getAssemblyDetailMedia(locale,name,getAssemblyGuideImage(name));
   return <figure className={layout.selectionFigure} data-assembly-guide-image={name} style={maxWidth ? {maxWidth} : undefined}>
     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -31,7 +31,7 @@ export function AssemblyGuideFigure({name,maxWidth,caption,locale="zh-CN"}: {nam
   </figure>;
 }
 
-function RingKitDimensions({locale}: {locale:TubingAssemblyLocale}) {
+function RingKitDimensions({locale}: {locale:TubingAssemblyDetailLocale}) {
   const text=(value:string)=>assemblyDetailText(value,locale);
   const rows=[
     ["CL-1S-16","1.6","1.6","HSF6-M6(U28)-16"],
@@ -59,7 +59,7 @@ function Table({headers,rows}: {headers:string[];rows:ReactNode[][]}) {
   </table></div>;
 }
 
-export default function TubingAssemblyDetailContent({family,configuration,section,locale="zh-CN"}: {family:AssemblyFamily;configuration?:AssemblyConfiguration;section:"product"|"selection";locale?:TubingAssemblyLocale}) {
+export default function TubingAssemblyDetailContent({family,configuration,section,locale="zh-CN"}: {family:AssemblyFamily;configuration?:AssemblyConfiguration;section:"product"|"selection";locale?:TubingAssemblyDetailLocale}) {
   const profile=assemblyFamilyGuides[family];
   const material=getAssemblyGuideMaterial(configuration ?? "fep");
   const productLabel=`${configuration ? material.name : ""}${profile.name}`;

@@ -1,4 +1,6 @@
-import Link from "next/link";
+import Link from "@/components/i18n/DraftLink";
+import NativeLink from "next/link";
+import { hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
 import type { CSSProperties } from "react";
 
 export type HomeHeroCopyText = {
@@ -10,6 +12,8 @@ export type HomeHeroCopyText = {
 type HomeHeroCopyProps = HomeHeroCopyText & {
   heading: "h1" | "h2";
   analyticsSection: string;
+  italian?: boolean;
+  hindi?: boolean;
   primaryAction?: string;
   primaryClassName?: string;
   primaryHref: string;
@@ -26,6 +30,8 @@ type HomeHeroCopyProps = HomeHeroCopyText & {
 export default function HomeHeroCopy({
   heading: Heading,
   analyticsSection,
+  italian = false,
+  hindi = false,
   primaryAction = "primary_cta",
   primaryClassName = "home-hero-btn home-hero-btn-primary",
   titleLine1,
@@ -41,6 +47,9 @@ export default function HomeHeroCopy({
   hidden,
   inactive,
 }: HomeHeroCopyProps) {
+  const PrimaryLink = italian || hindi ? NativeLink : Link;
+  const primaryIsEnglish = (italian || hindi) && primaryHref.startsWith("/en/");
+  const secondaryIsEnglish = (italian || hindi) && secondaryHref?.startsWith("/en/");
   const title = <>{titleLine1}{titleLine2 !== undefined ? <><br />{titleLine2}</> : null}</>;
   const variant = alignWith?.variant === "main" ? "tubing" : "main";
   return (
@@ -60,12 +69,12 @@ export default function HomeHeroCopy({
         </> : description}
       </p>
       <div className="home-hero-actions">
-        <Link href={primaryHref} data-analytics-section={analyticsSection} data-analytics-hero-action={primaryAction} className={primaryClassName} tabIndex={inactive ? -1 : undefined}>
-          {primaryLabel}
-        </Link>
-        {secondaryHref && secondaryLabel && <Link href={secondaryHref} data-analytics-section={analyticsSection} data-analytics-hero-action="secondary_cta" className="home-hero-btn home-hero-btn-secondary" tabIndex={inactive ? -1 : undefined}>
-          {secondaryLabel}
-        </Link>}
+        <PrimaryLink href={primaryHref} hrefLang={primaryIsEnglish ? "en" : undefined} data-analytics-section={analyticsSection} data-analytics-hero-action={primaryAction} className={primaryClassName} tabIndex={inactive ? -1 : undefined}>
+          {primaryLabel}{primaryIsEnglish ? italianEnglishFallbackSuffix : null}
+        </PrimaryLink>
+        {secondaryHref && secondaryLabel && <PrimaryLink href={secondaryHref} hrefLang={secondaryIsEnglish ? "en" : undefined} data-analytics-section={analyticsSection} data-analytics-hero-action="secondary_cta" className="home-hero-btn home-hero-btn-secondary" tabIndex={inactive ? -1 : undefined}>
+          {secondaryLabel}{secondaryIsEnglish ? italianEnglishFallbackSuffix : null}
+        </PrimaryLink>}
       </div>
     </div>
   );

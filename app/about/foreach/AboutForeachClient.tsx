@@ -41,15 +41,23 @@ import { getIsoCertificateImage } from "@/data/iso-certificate-images";
    public/images/home/tv-foreach.png
 ========================================================= */
 
+import italianForeachCopy from "@/data/about-it/foreach.json";
+import hindiForeachCopy from "@/data/about-hi/foreach.json";
+
 /* 官网支持的语言 */
-const SUPPORTED_LOCALES = ["zh-CN", "en", "es", "fr", "ko", "ru"] as const;
+const SUPPORTED_LOCALES = ["zh-CN", "en", "es", "fr", "ko", "ru", "de"] as const;
 
-type Locale = (typeof SUPPORTED_LOCALES)[number];
+type SourceLocale = (typeof SUPPORTED_LOCALES)[number];
+type Locale = SourceLocale | "it" | "hi";
 
-type LocalizedText = Record<Locale, string>;
+type LocalizedText = Record<SourceLocale, string>;
+const foreachHiCopy: Record<string, string> = hindiForeachCopy;
+const foreachItCopy: Record<string, string> = italianForeachCopy;
 
 /* 读取多语言文本 */
 function getLocalizedText(text: LocalizedText, locale: Locale) {
+  if (locale === "hi") return foreachHiCopy[text.en] ?? text.en;
+  if (locale === "it") return foreachItCopy[text.en] ?? text.en;
   return text[locale] || text.en || text["zh-CN"];
 }
 
@@ -60,6 +68,7 @@ const pageText = {
   heroTitle: {
     "zh-CN": "MAKE FLOW EASY",
     en: "MAKE FLOW EASY",
+    de: "MAKE FLOW EASY",
     es: "MAKE FLOW EASY",
     fr: "MAKE FLOW EASY",
     ko: "MAKE FLOW EASY",
@@ -69,6 +78,7 @@ const pageText = {
     "zh-CN":
       "恒永达科技专注于微流体系统核心零部件与液路解决方案，面向 IVD、生命科学、高端分析仪器、合成生物和实验室自动化等领域，提供关键流体控制产品与系统级支持。",
     en: "Foreach Technology focuses on core microfluidic components and fluidic system solutions, providing key fluid control products and system-level support for IVD, life sciences, high-end analytical instruments, synthetic biology, and laboratory automation.",
+    de: "Foreach Technology entwickelt mikrofluidische Kernkomponenten und Lösungen für Flüssigkeitskreisläufe. Wir bieten Produkte zur Fluidsteuerung und unterstützen bei der Systemintegration in der In-vitro-Diagnostik (IVD), den Biowissenschaften, der Geräteanalytik, der synthetischen Biologie und der Laborautomation.",
     es: "Foreach Technology se centra en componentes microfluídicos clave y soluciones de sistemas de fluidos, proporcionando productos de control de fluidos y soporte a nivel de sistema para IVD, ciencias de la vida, instrumentos analíticos avanzados, biología sintética y automatización de laboratorios.",
     fr: "Foreach Technology se concentre sur les composants microfluidiques essentiels et les solutions de systèmes fluidiques, en fournissant des produits clés de contrôle des fluides et un support au niveau système pour le DIV, les sciences de la vie, les instruments d’analyse haut de gamme, la biologie de synthèse et l’automatisation de laboratoire.",
     ko: "Foreach Technology는 미세유체 시스템 핵심 부품과 유체 시스템 솔루션에 집중하며, IVD, 생명과학, 고급 분석 장비, 합성생물학 및 실험실 자동화 분야에 핵심 유체 제어 제품과 시스템 수준의 지원을 제공합니다.",
@@ -77,6 +87,7 @@ const pageText = {
   introTitle: {
     "zh-CN": "恒永达科技",
     en: "Foreach Technology",
+    de: "Foreach Technology",
     es: "Foreach Technology",
     fr: "Foreach Technology",
     ko: "Foreach Technology",
@@ -86,6 +97,7 @@ const pageText = {
     "zh-CN":
       "恒永达科技（股票代码：874030）成立于 2012 年，作为国家级专精特新“小巨人”企业、深圳市瞪羚企业、国家高新技术企业及广东省工程技术研究中心认定单位，始终以微流体系统领域的创新引领者姿态，深耕于微流体核心部件的研发与制造。公司构建了覆盖自动化分析仪器液路系统全链条的产品矩阵，涵盖泵、阀、采样针、连接件、橡塑管、驱动器、传感器等关键零部件，广泛应用于生命科学、合成生物、高端检测等多个领域，形成了高精度、全场景的微流体解决方案体系。",
     en: "Founded in 2012, Foreach Technology, stock code 874030, is recognized as a National Specialized and Sophisticated “Little Giant” enterprise, a Shenzhen Gazelle enterprise, a National High-Tech Enterprise, and a Guangdong Engineering Technology Research Center. As an innovation leader in the field of microfluidic systems, Foreach has long been dedicated to the R&D and manufacturing of core microfluidic components. The company has built a product matrix covering the full chain of fluidic systems for automated analytical instruments, including pumps, valves, sampling needles, fittings, elastomeric tubing, drivers, sensors, and other key components. Its products are widely used in life sciences, synthetic biology, high-end testing, and other fields, forming a high-precision and full-scenario microfluidic solution system.",
+    de: "Foreach Technology wurde 2012 gegründet und hat die Wertpapierkennung 874030. Das Unternehmen ist in China als spezialisiertes und innovatives „Little Giant“-Unternehmen und als nationales Hightech-Unternehmen anerkannt. Es ist außerdem als Gazellenunternehmen der Stadt Shenzhen ausgezeichnet und als ingenieurtechnisches Forschungszentrum der Provinz Guangdong anerkannt. Foreach zählt zu den Innovationstreibern für mikrofluidische Systeme und entwickelt und fertigt seit vielen Jahren deren Kernkomponenten. Das Angebot deckt den gesamten Flüssigkeitskreislauf automatisierter Analysegeräte ab. Es umfasst Pumpen, Ventile, Probenahmesonden, Fluidik-Fittings, Elastomerschläuche, Ansteuermodule, Sensoren und weitere Kernkomponenten. Damit unterstützt Foreach hochpräzise mikrofluidische Anwendungen in den Biowissenschaften, in der synthetischen Biologie, bei anspruchsvollen Prüfungen und in weiteren Bereichen.",
     es: "Fundada en 2012, Foreach Technology, código bursátil 874030, es reconocida como una empresa nacional especializada y sofisticada “Little Giant”, una empresa Gazelle de Shenzhen, una empresa nacional de alta tecnología y un Centro de Investigación de Tecnología de Ingeniería de Guangdong. Como líder innovador en el campo de los sistemas microfluídicos, Foreach se ha dedicado durante años a la I+D y fabricación de componentes microfluídicos clave. La empresa ha construido una matriz de productos que cubre toda la cadena de sistemas de fluidos para instrumentos analíticos automatizados, incluidos bombas, válvulas, agujas de muestreo, conectores, tubos elastoméricos, controladores, sensores y otros componentes clave. Sus productos se utilizan ampliamente en ciencias de la vida, biología sintética, pruebas de alta gama y otros campos, formando un sistema de soluciones microfluídicas de alta precisión y para múltiples escenarios.",
     fr: "Fondée en 2012, Foreach Technology, code boursier 874030, est reconnue comme une entreprise nationale spécialisée et innovante « Little Giant », une entreprise Gazelle de Shenzhen, une entreprise nationale de haute technologie et un centre de recherche en technologie d’ingénierie du Guangdong. En tant que leader de l’innovation dans le domaine des systèmes microfluidiques, Foreach se consacre depuis longtemps à la R&D et à la fabrication de composants microfluidiques clés. L’entreprise a construit une matrice de produits couvrant toute la chaîne des systèmes fluidiques pour instruments d’analyse automatisés, notamment les pompes, valves, aiguilles de prélèvement, raccords, tubes élastomères, modules de commande, capteurs et autres composants essentiels. Ses produits sont largement utilisés dans les sciences de la vie, la biologie de synthèse, les tests haut de gamme et d’autres domaines, formant un système de solutions microfluidiques de haute précision et adapté à de multiples scénarios.",
     ko: "2012년에 설립된 Foreach Technology는 주식 코드 874030으로, 국가급 전문·정밀·특색·혁신 ‘작은 거인’ 기업, 선전시 가젤 기업, 국가 첨단기술기업 및 광둥성 공정기술연구센터 인정 기업입니다. Foreach는 미세유체 시스템 분야의 혁신 리더로서 핵심 미세유체 부품의 연구개발과 제조에 지속적으로 집중해 왔습니다. 회사는 자동화 분석 장비의 유체 시스템 전반을 포괄하는 제품 매트릭스를 구축했으며, 펌프, 밸브, 샘플링 니들, 피팅, 탄성 튜빙, 드라이버, 센서 등 핵심 부품을 포함합니다. 해당 제품은 생명과학, 합성생물학, 고급 검사 등 다양한 분야에 널리 적용되며, 고정밀·전방위 미세유체 솔루션 체계를 형성하고 있습니다.",
@@ -95,6 +107,7 @@ const pageText = {
   honorTitle: {
     "zh-CN": "荣誉资质",
     en: "Honors & Qualifications",
+    de: "Auszeichnungen und Qualifikationen",
     es: "Honores y certificaciones",
     fr: "Distinctions et qualifications",
     ko: "인증 및 수상",
@@ -103,6 +116,7 @@ const pageText = {
   honorSummaryTitle: {
     "zh-CN": "拥有多项企业资质\n技术荣誉",
     en: "Multiple corporate qualifications\nand technical honors",
+    de: "Zertifizierungen\nund technische Auszeichnungen",
     es: "Múltiples certificaciones empresariales\ny reconocimientos técnicos",
     fr: "Multiples qualifications d’entreprise\net distinctions techniques",
     ko: "다양한 기업 인증과\n기술 수상",
@@ -117,6 +131,7 @@ const advantageStats = [
     label: {
       "zh-CN": "行业深耕",
       en: "Years of Focus",
+      de: "Jahre Erfahrung",
       es: "Años de experiencia",
       fr: "Années d’expérience",
       ko: "산업 경험",
@@ -128,6 +143,7 @@ const advantageStats = [
     label: {
       "zh-CN": "知识产权",
       en: "Intellectual Property",
+      de: "Schutzrechte",
       es: "Propiedad intelectual",
       fr: "Propriété intellectuelle",
       ko: "지식재산권",
@@ -139,6 +155,7 @@ const advantageStats = [
     label: {
       "zh-CN": "累计服务客户",
       en: "Customers Served",
+      de: "Betreute Kunden",
       es: "Clientes atendidos",
       fr: "Clients servis",
       ko: "누적 고객사",
@@ -150,6 +167,7 @@ const advantageStats = [
     label: {
       "zh-CN": "产品规格",
       en: "Product Specifications",
+      de: "Produktspezifikationen",
       es: "Especificaciones de producto",
       fr: "Spécifications produits",
       ko: "제품 사양",
@@ -165,6 +183,7 @@ const honorStats = [
     label: {
       "zh-CN": "企业资质",
       en: "Qualifications",
+      de: "Qualifikationen",
       es: "Certificaciones",
       fr: "Qualifications",
       ko: "기업 인증",
@@ -176,6 +195,7 @@ const honorStats = [
     label: {
       "zh-CN": "企业荣誉",
       en: "Honors",
+      de: "Auszeichnungen",
       es: "Reconocimientos",
       fr: "Distinctions",
       ko: "기업 수상",
@@ -187,6 +207,7 @@ const honorStats = [
     label: {
       "zh-CN": "知识产权",
       en: "Intellectual Property",
+      de: "Schutzrechte",
       es: "Propiedad intelectual",
       fr: "Propriété intellectuelle",
       ko: "지식재산권",
@@ -217,6 +238,7 @@ const honorMainCertificate = {
   title: {
     "zh-CN": "高新技术企业证书",
     en: "High-Tech Enterprise Certificate",
+    de: "Zertifikat als Hightech-Unternehmen",
     es: "Certificado de empresa de alta tecnología",
     fr: "Certificat d'entreprise de haute technologie",
     ko: "하이테크 기업 인증서",
@@ -229,50 +251,50 @@ const honorTopCertificates = ["13485", "9001"] as const;
 
 const honorMiddleImages = [
   {
-    title: { "zh-CN": "广东省工程技术研究中心", en: "Guangdong Engineering Technology Research Center", es: "Guangdong Engineering Technology Research Center", fr: "Guangdong Engineering Technology Research Center", ko: "Guangdong Engineering Technology Research Center", ru: "Guangdong Engineering Technology Research Center" },
+    title: { "zh-CN": "广东省工程技术研究中心", en: "Guangdong Engineering Technology Research Center", de: "Ingenieurtechnisches Forschungszentrum der Provinz Guangdong", es: "Guangdong Engineering Technology Research Center", fr: "Guangdong Engineering Technology Research Center", ko: "Guangdong Engineering Technology Research Center", ru: "Guangdong Engineering Technology Research Center" },
     src: "/images/about/foreach/honors/honor-row2-engineering-center.webp",
   },
   {
-    title: { "zh-CN": "瞪羚企业", en: "Gazelle Enterprise", es: "Gazelle Enterprise", fr: "Gazelle Enterprise", ko: "Gazelle Enterprise", ru: "Gazelle Enterprise" },
+    title: { "zh-CN": "瞪羚企业", en: "Gazelle Enterprise", de: "Gazellenunternehmen", es: "Gazelle Enterprise", fr: "Gazelle Enterprise", ko: "Gazelle Enterprise", ru: "Gazelle Enterprise" },
     src: "/images/about/foreach/honors/honor-row2-gazelle.webp",
   },
   {
-    title: { "zh-CN": "专精特新小巨人企业", en: "Specialized and Innovative Little Giant Enterprise", es: "Specialized and Innovative Little Giant Enterprise", fr: "Specialized and Innovative Little Giant Enterprise", ko: "Specialized and Innovative Little Giant Enterprise", ru: "Specialized and Innovative Little Giant Enterprise" },
+    title: { "zh-CN": "专精特新小巨人企业", en: "Specialized and Innovative Little Giant Enterprise", de: "Spezialisiertes und innovatives „Little Giant“-Unternehmen", es: "Specialized and Innovative Little Giant Enterprise", fr: "Specialized and Innovative Little Giant Enterprise", ko: "Specialized and Innovative Little Giant Enterprise", ru: "Specialized and Innovative Little Giant Enterprise" },
     src: "/images/about/foreach/honors/honor-row2-little-giant.webp",
   },
 ];
 
 const honorBottomImages = [
   {
-    title: { "zh-CN": "团体标准 01", en: "Group Standard 01", es: "Group Standard 01", fr: "Group Standard 01", ko: "Group Standard 01", ru: "Group Standard 01" },
+    title: { "zh-CN": "团体标准 01", en: "Group Standard 01", de: "Verbandsnorm 01", es: "Group Standard 01", fr: "Group Standard 01", ko: "Group Standard 01", ru: "Group Standard 01" },
     src: "/images/about/foreach/honors/honor-row3-national-standard-01.webp",
   },
   {
-    title: { "zh-CN": "团体标准 02", en: "Group Standard 02", es: "Group Standard 02", fr: "Group Standard 02", ko: "Group Standard 02", ru: "Group Standard 02" },
+    title: { "zh-CN": "团体标准 02", en: "Group Standard 02", de: "Verbandsnorm 02", es: "Group Standard 02", fr: "Group Standard 02", ko: "Group Standard 02", ru: "Group Standard 02" },
     src: "/images/about/foreach/honors/honor-row3-national-standard-02.webp",
   },
   {
-    title: { "zh-CN": "团体标准 03", en: "Group Standard 03", es: "Group Standard 03", fr: "Group Standard 03", ko: "Group Standard 03", ru: "Group Standard 03" },
+    title: { "zh-CN": "团体标准 03", en: "Group Standard 03", de: "Verbandsnorm 03", es: "Group Standard 03", fr: "Group Standard 03", ko: "Group Standard 03", ru: "Group Standard 03" },
     src: "/images/about/foreach/honors/honor-row3-national-standard-03.webp",
   },
   {
-    title: { "zh-CN": "发明专利证书 01", en: "Invention Patent Certificate 01", es: "Invention Patent Certificate 01", fr: "Invention Patent Certificate 01", ko: "Invention Patent Certificate 01", ru: "Invention Patent Certificate 01" },
+    title: { "zh-CN": "发明专利证书 01", en: "Invention Patent Certificate 01", de: "Patenturkunde 01", es: "Invention Patent Certificate 01", fr: "Invention Patent Certificate 01", ko: "Invention Patent Certificate 01", ru: "Invention Patent Certificate 01" },
     src: "/images/about/foreach/honors/honor-row3-invention-patent-01.webp",
   },
   {
-    title: { "zh-CN": "发明专利证书 02", en: "Invention Patent Certificate 02", es: "Invention Patent Certificate 02", fr: "Invention Patent Certificate 02", ko: "Invention Patent Certificate 02", ru: "Invention Patent Certificate 02" },
+    title: { "zh-CN": "发明专利证书 02", en: "Invention Patent Certificate 02", de: "Patenturkunde 02", es: "Invention Patent Certificate 02", fr: "Invention Patent Certificate 02", ko: "Invention Patent Certificate 02", ru: "Invention Patent Certificate 02" },
     src: "/images/about/foreach/honors/honor-row3-invention-patent-02.webp",
   },
   {
-    title: { "zh-CN": "发明专利证书 03", en: "Invention Patent Certificate 03", es: "Invention Patent Certificate 03", fr: "Invention Patent Certificate 03", ko: "Invention Patent Certificate 03", ru: "Invention Patent Certificate 03" },
+    title: { "zh-CN": "发明专利证书 03", en: "Invention Patent Certificate 03", de: "Patenturkunde 03", es: "Invention Patent Certificate 03", fr: "Invention Patent Certificate 03", ko: "Invention Patent Certificate 03", ru: "Invention Patent Certificate 03" },
     src: "/images/about/foreach/honors/honor-row3-invention-patent-03.webp",
   },
   {
-    title: { "zh-CN": "发明专利证书 04", en: "Invention Patent Certificate 04", es: "Invention Patent Certificate 04", fr: "Invention Patent Certificate 04", ko: "Invention Patent Certificate 04", ru: "Invention Patent Certificate 04" },
+    title: { "zh-CN": "发明专利证书 04", en: "Invention Patent Certificate 04", de: "Patenturkunde 04", es: "Invention Patent Certificate 04", fr: "Invention Patent Certificate 04", ko: "Invention Patent Certificate 04", ru: "Invention Patent Certificate 04" },
     src: "/images/about/foreach/honors/honor-row3-invention-patent-04.webp",
   },
   {
-    title: { "zh-CN": "发明专利证书 05", en: "Invention Patent Certificate 05", es: "Invention Patent Certificate 05", fr: "Invention Patent Certificate 05", ko: "Invention Patent Certificate 05", ru: "Invention Patent Certificate 05" },
+    title: { "zh-CN": "发明专利证书 05", en: "Invention Patent Certificate 05", de: "Patenturkunde 05", es: "Invention Patent Certificate 05", fr: "Invention Patent Certificate 05", ko: "Invention Patent Certificate 05", ru: "Invention Patent Certificate 05" },
     src: "/images/about/foreach/honors/honor-row3-invention-patent-05.webp",
   },
 ];
@@ -399,7 +421,7 @@ export default function AboutForeachClient({
   const breadcrumb = getAboutBreadcrumb(
     locale,
     getLocalizedText(
-      { "zh-CN": "关于恒永达", en: "About Foreach", es: "Sobre Foreach", fr: "À propos de Foreach", ko: "Foreach 소개", ru: "О Foreach" },
+      { "zh-CN": "关于恒永达", en: "About Foreach", de: "Über Foreach", es: "Sobre Foreach", fr: "À propos de Foreach", ko: "Foreach 소개", ru: "О Foreach" },
       locale,
     ),
   );
@@ -410,7 +432,7 @@ export default function AboutForeachClient({
   ).split("\n");
 
   return (
-    <main className="about-foreach-page">
+    <main className="about-foreach-page" lang={locale === "de" ? "de-DE" : locale === "it" ? "it-IT" : locale === "hi" ? "hi-IN" : undefined}>
       {/* ================================
           第一部分：Banner
       ================================ */}
@@ -426,6 +448,7 @@ export default function AboutForeachClient({
             {
               "zh-CN": "恒永达科技公司形象背景",
               en: "Foreach Technology corporate background",
+              de: "Unternehmensmotiv von Foreach Technology",
               es: "Imagen corporativa de Foreach Technology",
               fr: "Image institutionnelle de Foreach Technology",
               ko: "Foreach Technology 기업 이미지 배경",
@@ -438,7 +461,7 @@ export default function AboutForeachClient({
 
         <div className="about-foreach-hero-content about-center-banner__inner">
           <h1 className="about-center-banner__title">
-            <span>{getLocalizedText(pageText.heroTitle, locale)}</span>
+            <span lang={locale === "de" || locale === "it" ? "en" : undefined}>{getLocalizedText(pageText.heroTitle, locale)}</span>
           </h1>
 
           <p className="about-center-banner__description">
@@ -486,6 +509,7 @@ export default function AboutForeachClient({
               {
                 "zh-CN": "恒永达公司介绍视频",
                 en: "Foreach company introduction video",
+                de: "Unternehmensvideo von Foreach",
                 es: "Vídeo de presentación de Foreach",
                 fr: "Vidéo de présentation de Foreach",
                 ko: "Foreach 회사 소개 영상",
@@ -518,6 +542,7 @@ export default function AboutForeachClient({
               {
                 "zh-CN": "公司优势数据",
                 en: "Company advantage statistics",
+                de: "Unternehmenskennzahlen",
                 es: "Datos clave de la empresa",
                 fr: "Données clés de l’entreprise",
                 ko: "회사 강점 데이터",
@@ -573,6 +598,7 @@ export default function AboutForeachClient({
                   {
                     "zh-CN": "恒永达荣誉数据",
                     en: "Foreach honor statistics",
+                    de: "Anzahl der Auszeichnungen, Nachweise und Schutzrechte von Foreach",
                     es: "Datos de honores de Foreach",
                     fr: "Données sur les distinctions de Foreach",
                     ko: "Foreach honor statistics",
@@ -614,8 +640,8 @@ export default function AboutForeachClient({
                 {honorTopCertificates.map((standard) => (
                   <LocalImageWithFallback
                     key={standard}
-                    src={getIsoCertificateImage(standard, locale)}
-                    alt={`ISO ${standard}`}
+                    src={getIsoCertificateImage(standard, locale === "de" || locale === "it" || locale === "hi" ? "en" : locale)}
+                    alt={locale === "de" ? `Zertifikat nach ISO ${standard} (englisch)` : locale === "it" ? `Certificato ISO ${standard} (in inglese)` : `ISO ${standard}`}
                     className="about-foreach-honor-iso-cert"
                   />
                 ))}
@@ -623,7 +649,7 @@ export default function AboutForeachClient({
 
               <div
                 className="about-foreach-honor-middle-row"
-                aria-label="Horizontal enterprise honors"
+                aria-label={locale === "de" ? "Unternehmensauszeichnungen" : locale === "it" ? "Riconoscimenti aziendali" : locale === "hi" ? "कंपनी के सम्मान" : "Horizontal enterprise honors"}
               >
                 {honorMiddleImages.map((item) => (
                   <LocalImageWithFallback
@@ -639,7 +665,7 @@ export default function AboutForeachClient({
 
           <div
             className="about-foreach-honor-a4-row"
-            aria-label="Group standards and invention patents"
+            aria-label={locale === "de" ? "Verbandsnormen und Erfindungspatente" : locale === "it" ? "Norme associative e brevetti" : locale === "hi" ? "समूह मानक और आविष्कार पेटेंट" : "Group standards and invention patents"}
           >
             {honorBottomImages.map((item, index) => (
               <article

@@ -27,10 +27,12 @@ import type { ReactNode } from "react";
 import type { ComponentType } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useContentPathname } from "@/lib/i18n/use-content-pathname";
 
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 import { getAdlm2026OnsiteCopy } from "@/data/resources/news/adlm-2026-onsite";
+import { formatNewsDate } from "@/data/resources/news/news-date";
+import type { NewsResourceLocale } from "@/data/resources/news/news.types";
 
 import styles from "./NewsArticleClient.module.css";
 import Adlm2026DepartureArticle, { getAdlm2026DepartureSupportCopy } from "./articles/Adlm2026DepartureArticle";
@@ -101,7 +103,7 @@ type NewsArticlePageData = {
 ========================================================= */
 
 type NewsArticleClientProps = {
-  locale?: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
+  locale?: NewsResourceLocale;
   pagerContentType?: "news" | "article";
   article: NewsArticle;
   pageData: NewsArticlePageData;
@@ -138,8 +140,9 @@ const SupportCtaComponent = ResourceSupportCta as ComponentType<
 
 function getLocaleFromPathname(
   pathname: string | null,
-  fallbackLocale?: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru",
-): "zh-CN" | "en" | "es" | "fr" | "ko" | "ru" {
+  fallbackLocale?: NewsArticleClientProps["locale"],
+): NonNullable<NewsArticleClientProps["locale"]> {
+  if (fallbackLocale === "de" || fallbackLocale === "it" || fallbackLocale === "hi") return fallbackLocale;
   const firstSegment = String(pathname || "")
     .split("/")
     .filter(Boolean)[0];
@@ -175,9 +178,38 @@ function splitParagraphs(value?: string) {
 ========================================================= */
 
 function getNewsArticleUiText(
-  locale: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru",
+  locale: NonNullable<NewsArticleClientProps["locale"]>,
   contentType: "news" | "article" = "news",
 ) {
+  if (locale === "hi") {
+    return {
+      back: "वापस", previous: "पिछला", next: "अगला",
+      noPrevious: contentType === "article" ? "कोई पिछला लेख नहीं" : "कोई पिछली खबर नहीं",
+      noNext: contentType === "article" ? "कोई अगला लेख नहीं" : "कोई अगली खबर नहीं",
+      fallbackContact: "हमसे संपर्क करें", fallbackContactHref: "/hi/contact/", listHref: "/hi/resources/news/",
+    };
+  }
+  if (locale === "it") {
+    return {
+      back: "Indietro", previous: "Precedente", next: "Successivo",
+      noPrevious: contentType === "article" ? "Nessun articolo precedente" : "Nessuna notizia precedente",
+      noNext: contentType === "article" ? "Nessun articolo successivo" : "Nessuna notizia successiva",
+      fallbackContact: "Contattaci", fallbackContactHref: "/it/contact/", listHref: "/it/resources/news/",
+    };
+  }
+  if (locale === "de") {
+    return {
+      back: "Zurück",
+      previous: "Zurück",
+      next: "Weiter",
+      noPrevious: contentType === "article" ? "Kein vorheriger Fachartikel" : "Keine vorherige Meldung",
+      noNext: contentType === "article" ? "Kein weiterer Fachartikel" : "Keine weitere Meldung",
+      fallbackContact: "Kontakt aufnehmen",
+      fallbackContactHref: "/de/contact/",
+      listHref: "/de/resources/news/",
+    };
+  }
+
   if (locale === "en") {
     return {
       back: "Back",
@@ -265,11 +297,13 @@ function NewsPagerCard({
   emptyText,
   item,
   align,
+  locale,
 }: {
   label: string;
   emptyText: string;
   item?: NewsPagerItem | null;
   align: "prev" | "next";
+  locale: NewsResourceLocale;
 }) {
   if (!item) {
     return (
@@ -289,7 +323,7 @@ function NewsPagerCard({
     >
       <span>{label}</span>
       <strong>{item.title}</strong>
-      {item.date ? <em>{item.date}</em> : null}
+      {item.date ? <em>{formatNewsDate(item.date, locale)}</em> : null}
     </Link>
   );
 }
@@ -306,8 +340,8 @@ export function NewsArticlePager({ locale, previousArticle, nextArticle, content
     <section className={styles.pagerSection}>
       <div className={styles.container}>
         <div className={styles.pagerGrid}>
-          <NewsPagerCard label={uiText.previous} emptyText={uiText.noPrevious} item={previousArticle} align="prev" />
-          <NewsPagerCard label={uiText.next} emptyText={uiText.noNext} item={nextArticle} align="next" />
+          <NewsPagerCard label={uiText.previous} emptyText={uiText.noPrevious} item={previousArticle} align="prev" locale={locale} />
+          <NewsPagerCard label={uiText.next} emptyText={uiText.noNext} item={nextArticle} align="next" locale={locale} />
         </div>
       </div>
     </section>
@@ -330,7 +364,7 @@ export default function NewsArticleClient({
   afterContent,
   editorialArticle,
 }: NewsArticleClientProps) {
-  const pathname = usePathname();
+  const pathname = useContentPathname();
 
   /* 根据当前 URL 判断真实语言，解决外语返回仍显示中文的问题 */
   const currentLocale = getLocaleFromPathname(pathname, locale);
@@ -457,7 +491,7 @@ export default function NewsArticleClient({
 
             <h1 className={styles.title}>{article.title}</h1>
 
-            <time className={styles.date}>{article.date}</time>
+            <time className={styles.date} dateTime={currentLocale === "it" || currentLocale === "hi" ? article.date : undefined}>{formatNewsDate(article.date, currentLocale)}</time>
 
             {article.summary ? (
               <p className={styles.summary}>{article.summary}</p>

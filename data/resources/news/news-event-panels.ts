@@ -12,7 +12,7 @@
    6. 删除整条配置，新闻恢复普通文章样式
 ========================================================= */
 
-import type { NewsLocale } from "./news.types";
+import type { NewsResourceLocale } from "./news.types";
 
 export type NewsEventPanelCopy = {
   /** 信息卡：时间、开馆时间、地点、展位 */
@@ -27,9 +27,9 @@ export type NewsEventPanelConfig = {
   /** 是否显示预约按钮（预约表单做好后再打开；展会结束后关闭） */
   bookingOpen: boolean;
   /** 哪些语言显示信息卡 */
-  enabledLocales: readonly NewsLocale[];
+  enabledLocales: readonly NewsResourceLocale[];
   email: string;
-  copy: Record<NewsLocale, NewsEventPanelCopy>;
+  copy: Record<NewsResourceLocale, NewsEventPanelCopy>;
 };
 
 export const newsEventPanels: Readonly<Record<string, NewsEventPanelConfig>> = {
@@ -37,9 +37,39 @@ export const newsEventPanels: Readonly<Record<string, NewsEventPanelConfig>> = {
     /* 预约表单做好后改成 true */
     bookingOpen: false,
     /* 6 种语言正文已同步（展会信息由信息卡展示，正文不再单列） */
-    enabledLocales: ["zh-CN", "en", "es", "fr", "ko", "ru"],
+    enabledLocales: ["zh-CN", "en", "es", "fr", "ko", "ru", "de", "it", "hi"],
     email: "info@foreachtek.com",
     copy: {
+      hi: {
+        facts: [
+          { label: "तारीख़ें", value: "16–19 नवंबर 2026" },
+          { label: "खुलने का समय", value: "सोम–बुध 10:00–18:00, गुरु 10:00–16:00" },
+          { label: "स्थान", value: "Messe Düsseldorf, जर्मनी" },
+          { label: "बूथ", value: "1H39-1" },
+        ],
+        cta: "बैठक बुक करें",
+        emailPrefix: "या हमें ईमेल करें",
+      },
+      it: {
+        facts: [
+          { label: "Date", value: "16–19 novembre 2026" },
+          { label: "Orari di apertura", value: "Lun.–mer. 10:00–18:00, gio. 10:00–16:00" },
+          { label: "Sede", value: "Messe Düsseldorf, Germania" },
+          { label: "Stand", value: "1H39-1" },
+        ],
+        cta: "Prenota un incontro",
+        emailPrefix: "Oppure scrivici a",
+      },
+      de: {
+        facts: [
+          { label: "Datum", value: "16.–19. November 2026" },
+          { label: "Öffnungszeiten", value: "Mo.–Mi. 10:00–18:00 Uhr, Do. 10:00–16:00 Uhr" },
+          { label: "Veranstaltungsort", value: "Messe Düsseldorf, Deutschland" },
+          { label: "Stand", value: "1H39-1" },
+        ],
+        cta: "Termin vereinbaren",
+        emailPrefix: "Alternativ per E-Mail an",
+      },
       "zh-CN": {
         facts: [
           { label: "时间", value: "2026 年 11 月 16 – 19 日" },
@@ -104,7 +134,7 @@ export const newsEventPanels: Readonly<Record<string, NewsEventPanelConfig>> = {
   },
 };
 
-export function getNewsEventPanel(slug: string, locale: NewsLocale) {
+export function getNewsEventPanel(slug: string, locale: NewsResourceLocale) {
   const config = newsEventPanels[slug];
   return config && config.enabledLocales.includes(locale) ? config : undefined;
 }

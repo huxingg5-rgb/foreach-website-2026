@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "title": "Qual è la differenza tra pressione nominale di esercizio, massima in uscita, di prova e di scoppio per una pompa a membrana miniaturizzata?",
+    "seoTitle": "Pompe a membrana: pressione nominale, massima in uscita, di prova e di scoppio | Foreach Technology",
+    "seoDescription": "Pressione nominale, massima in uscita, di prova e di scoppio descrivono limiti diversi. Confronta i termini e verifica definizioni, condizioni di prova e dati di specifica delle pompe a membrana miniaturizzate.",
+    "coverImage": "/images/resources/technical-articles/diaphragm-pump-pressure-rating-terms/article-cover.webp",
+    "coverAlt": "Riprese di prove di pressione di una pompa a membrana miniaturizzata dal canale Douyin ufficiale di Foreach"
+  },
+  "deck": "Il significato di un valore di pressione dipende da definizione, fluido di prova, condizioni in ingresso, portata corrispondente, durata e criteri di accettazione. La pressione nominale di esercizio può indicare un limite operativo. Pressione massima in uscita, pressione di prova e pressione di scoppio richiedono una valutazione separata dal punto di lavoro in continuo.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "La documentazione delle pompe a membrana miniaturizzate usa spesso Rated Pressure (pressione nominale), Max. Pressure (pressione massima), Output Pressure (pressione in uscita), Proof Pressure (pressione di prova), Pressure Test (prova di pressione) e Burst Pressure (pressione di scoppio). Alcune pagine in cinese li raggruppano sotto termini generici come «pressione», «pressione massima» o «resistenza alla pressione». Una sola colonna può quindi mettere a confronto limiti di natura diversa."
+    },
+    {
+      "type": "paragraph",
+      "text": "Il valore numerico di pressione da solo è insufficiente per la scelta. Verificare almeno fluido di prova, temperatura, pressione in ingresso, portata corrispondente, durata, ciclo di lavoro e criteri di accettazione. Anche due valori di 600 kPa descrivono prestazioni diverse se cambiano le condizioni."
+    },
+    {
+      "type": "notice",
+      "label": "Conclusione tecnica:",
+      "text": "Pressione nominale di esercizio, pressione massima in uscita, pressione di prova e pressione di scoppio definiscono limiti distinti. Verificare specifica controllata e definizione di prova prima di fissare la pressione ammessa in continuo. I dati di prova o di scoppio non autorizzano da soli quel funzionamento."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Perché lo stesso valore di 600 kPa può indicare grandezze diverse",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La pressione effettiva di esercizio indica il differenziale che la pompa deve superare. La pressione nominale di esercizio descrive il campo ammesso o specificato dalla documentazione controllata in condizioni definite. La pressione massima in uscita indica in genere un estremo prestazionale. La pressione di prova verifica un limite strutturale e la pressione di scoppio indica una soglia di cedimento. Ciascun termine risponde a una domanda diversa."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-pressure-rating-terms/article-figure-it.svg",
+          "alt": "Cinque schede sulla pressione effettiva di esercizio, nominale, massima in uscita, di prova e di scoppio di una pompa a membrana miniaturizzata",
+          "width": 2560,
+          "height": 2040,
+          "caption": "Figura 5. I termini di pressione delle pompe a membrana miniaturizzate richiedono definizioni distinte prima di confrontarne i valori."
+        }
+      ]
+    },
+    {
+      "title": "2. Che cosa indica ciascuno dei cinque termini più comuni",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Termine",
+            "Significato tecnico",
+            "Si può usare direttamente come punto di lavoro in continuo?",
+            "Che cosa chiarire"
+          ],
+          "rows": [
+            [
+              "Pressione effettiva di esercizio",
+              "Differenziale reale tra ingresso e uscita della pompa durante il funzionamento dell’apparecchiatura",
+              "È un dato di esercizio da validare",
+              "Condizione stazionaria o transitoria, portata e condizioni in ingresso"
+            ],
+            [
+              "Pressione nominale di esercizio",
+              "Campo di pressione ammesso o indicato dalla specifica controllata alle condizioni definite",
+              "Può definire un limite rispettando tutte le condizioni applicabili",
+              "Fluido, temperatura, ciclo di lavoro e curva portata-pressione"
+            ],
+            [
+              "Pressione massima in uscita",
+              "Valore limite o campo di pressione in uscita raggiungibile o garantito dalla pompa",
+              "In genere occorrono altri dati",
+              "Se a quella pressione rimane una portata e per quanto tempo si può mantenere la condizione"
+            ],
+            [
+              "Pressione di collaudo o di prova",
+              "Pressione di verifica applicata alla struttura o alle tenute con fluido, durata e criteri di accettazione specificati",
+              "No",
+              "Fluido, durata e criteri di prova per perdite o deformazione"
+            ],
+            [
+              "Pressione di scoppio",
+              "Soglia alla quale il campione subisce danni permanenti o perde la funzionalità",
+              "Mai",
+              "Condizioni del campione, velocità di aumento della pressione e criteri di cedimento"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limiti della specifica controllata:",
+          "text": "Le pagine pubbliche aiutano nella valutazione preliminare e a formulare le domande. Per il progetto definitivo usare una revisione valida della specifica controllata. Se i valori di prova o di scoppio mancano, materiali, struttura o parametri simili non bastano per ricavarli."
+        }
+      ]
+    },
+    {
+      "title": "3. Perché un solo valore di pressione non definisce le prestazioni di esercizio",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per la pompa a membrana ad alta pressione per liquidi Foreach DPL30H, il sito indica una pressione nominale di 600 kPa. Interpretare il valore insieme a portata corrispondente, fluido, condizioni in ingresso, temperatura, ciclo di lavoro e curva portata-pressione completa. Per pressione di prova, pressione di scoppio e capacità di erogazione continua in altre condizioni servono dati specifici."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando la documentazione riporta Rated Pressure, Max. Pressure, Output Pressure, Pressure Test o Burst Pressure, verificare prima la definizione del campo e poi condizioni di prova e criteri di accettazione. Valori numericamente uguali dopo la conversione delle unità possono rappresentare limiti tecnici diversi."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Campo della specifica",
+            "Informazioni minime verificabili",
+            "Aspetti da confermare separatamente"
+          ],
+          "rows": [
+            [
+              "Rated Pressure / pressione nominale di esercizio",
+              "La specifica controllata definisce un limite di pressione operativa alle condizioni dichiarate",
+              "Se a questa pressione si mantiene la portata a vuoto e se il valore vale per tutti i fluidi"
+            ],
+            [
+              "Max. Pressure / Output Pressure",
+              "La documentazione indica il valore limite o il campo di pressione in uscita",
+              "Se il valore è ammesso per esercizio continuo prolungato"
+            ],
+            [
+              "Pressure Test / Proof Pressure",
+              "Struttura o tenute sono state sottoposte a verifica di pressione alle condizioni dichiarate",
+              "Se la pressione di prova corrisponde alla pressione nominale di esercizio o di scoppio"
+            ],
+            [
+              "Burst Pressure",
+              "Soglia di danno permanente o perdita di funzionalità del campione",
+              "Se si può aumentare la pressione di esercizio ammessa del sistema"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Chiarire almeno nove aspetti per verificare un dato di pressione",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Definizione formale del termine nella specifica controllata.",
+            "Fluido di prova, per esempio acqua, gas o un altro liquido.",
+            "Temperature del fluido e dell’ambiente.",
+            "Pressione in ingresso atmosferica, negativa o positiva.",
+            "Portata corrispondente alla pressione e disponibilità dell’intera curva portata-pressione.",
+            "Tipo di prova, stazionaria o transitoria, e sua durata.",
+            "Ciclo di lavoro continuo, intermittente o con ammissione della sola mandata chiusa per breve durata.",
+            "Criterio di accettazione: erogazione continua, assenza di perdite, deformazioni o scoppio.",
+            "Corrispondenza di numero di campioni, alimentazione, tubi e connessioni alle condizioni del progetto."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Come usare correttamente una specifica ambigua",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se una pagina pubblica riporta un solo valore di pressione, indicarlo come «parametro da confermare». Per classificarlo come nominale, di prova o di scoppio, attendere la definizione ufficiale. Nella tabella di progetto conservare il testo esatto della specifica controllata e aggiungere definizione, portata corrispondente, durata, ciclo di lavoro e criteri di accettazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Foreach segue questo criterio. Quando la specifica controllata pubblica la pressione nominale, il sito la indica come tale. Per i valori di prova e scoppio non pubblicati, struttura, materiali e parametri simili non consentono una stima valida. La pagina web spiega il metodo di scelta. Per definire i limiti di prodotto, usare la documentazione approvata."
+        }
+      ]
+    },
+    {
+      "title": "Risorse Foreach e limiti di validità",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Foreach: guida alla scelta della pompa a membrana ad alta pressione per liquidi DPL30H",
+              "href": "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide"
+            }
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limiti di validità:",
+          "text": "Le risorse pubbliche Foreach illustrano termini e metodi di selezione. Formule ed esempi sono per la valutazione tecnica preliminare. Per la scelta definitiva occorrono specifica controllata, valutazione con il fluido effettivo e validazione del prototipo completo."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulle pressioni delle pompe a membrana",
+  "faqItems": [
+    {
+      "question": "La pressione massima in uscita è quella a mandata chiusa?",
+      "answer": "Alcuni documenti la definiscono come estremo prestazionale vicino a portata zero. Per confermare che valga per il modello in esame, consultare specifica controllata, curva portata-pressione e metodo di prova."
+    },
+    {
+      "question": "Se la pressione di collaudo supera quella nominale, la pompa può lavorare continuamente alla pressione superiore?",
+      "answer": "No. Il collaudo o la prova di pressione stabiliscono in genere fluido, durata e criteri di accettazione. Verificano il limite strutturale o di tenuta. Prestazioni e vita utile in esercizio prolungato richiedono una prova distinta."
+    },
+    {
+      "question": "Una pressione di scoppio più alta indica una pompa migliore?",
+      "answer": "La pressione di scoppio indica il limite di cedimento. Per la scelta contano maggiormente pressione di esercizio ammessa alla portata obiettivo, compatibilità con il fluido, vita utile e limite di sicurezza dell’intero circuito."
+    },
+    {
+      "question": "6 bar e 600 kPa sono esattamente equivalenti?",
+      "answer": "Sì, 1 bar = 100 kPa. Per confrontare prestazioni fra pagine diverse, verificare inoltre terminologia, condizioni di prova e ciclo di lavoro. Valori equivalenti nella conversione possono avere definizioni diverse."
+    },
+    {
+      "question": "Come registrare i valori di pressione in una tabella di progetto?",
+      "answer": "Conservare la dicitura esatta della specifica controllata e il codice completo del modello. Aggiungere campi normalizzati per pressione nominale di esercizio, massima in uscita, di collaudo o di prova, di scoppio, portata alla pressione obiettivo, fluido, temperatura, condizioni in ingresso, durata, ciclo di lavoro e criteri di accettazione."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi verificare i parametri di pressione di una pompa a membrana miniaturizzata?",
+    "description": "Indica portata obiettivo, pressioni in ingresso e in uscita, temperatura, ciclo di lavoro e dettagli dell’intero circuito. Un tecnico potrà verificare il punto di lavoro candidato sulla specifica controllata e sulla curva.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Vedi le pompe a membrana"
+  }
+}

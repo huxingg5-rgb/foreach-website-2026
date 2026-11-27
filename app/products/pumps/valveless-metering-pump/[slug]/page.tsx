@@ -20,6 +20,9 @@ type ValvelessPumpDetail = (typeof details)[number];
 
 type ValvelessPumpDetailPageProps = {
   renderLocale?: string;
+  germanDraft?: boolean;
+  italianDraft?: boolean;
+  hindiDraft?: boolean;
   params: Promise<{
     slug: string;
   }>;
@@ -176,6 +179,9 @@ function toClientData(detail: ValvelessPumpDetail) {
 export default async function ValvelessPumpDetailPage({
   params,
   renderLocale = "zh",
+  germanDraft = false,
+  italianDraft = false,
+  hindiDraft = false,
 }: ValvelessPumpDetailPageProps) {
   const { slug } = await params;
   const series = getValvelessPumpSeries(slug);
@@ -197,9 +203,16 @@ export default async function ValvelessPumpDetailPage({
     notFound();
   }
 
+  const contentLocale = hindiDraft ? "hi" : italianDraft ? "it" : germanDraft ? "de" : renderLocale;
   const data = renderLocale === "zh"
     ? applyValvelessPumpChineseCopy(toClientData(detail), "zh")
-    : applyValvelessPumpLocalizedCopy(toClientData(detail), renderLocale);
+    : applyValvelessPumpLocalizedCopy(toClientData(detail), contentLocale);
+  const detailCopy = germanDraft || italianDraft || hindiDraft
+    ? { title: data.title, description: data.description, faqs: data.faqs, imageAlt: data.imageAlt }
+    : undefined;
+  const localizedDetail = (italianDraft || hindiDraft) && detailCopy
+    ? { locale: hindiDraft ? "hi" as const : "it" as const, copy: detailCopy }
+    : undefined;
   const articleRelationKeys = rplSelectionModelSlugs.includes(slug)
     ? rplSelectionRelationKeys
     : ["drpl-0109", "drpl-0119"].includes(slug)
@@ -208,13 +221,16 @@ export default async function ValvelessPumpDetailPage({
   return (
     <ProductDetailClient
       data={data as any}
-      {...getInstrumentProductSections(slug, renderLocale)}
+      germanDetail={germanDraft ? detailCopy : undefined}
+      localizedDetail={localizedDetail}
+      {...getInstrumentProductSections(slug, contentLocale)}
       afterContent={articleRelationKeys.length ? (
         <RelatedResources
           sourceType="product"
           sourceSlug={slug}
           relationKeys={articleRelationKeys}
           locale={getRplSelectionGuide(renderLocale).locale}
+          uiLocale={hindiDraft ? "hi" : italianDraft ? "it" : germanDraft ? "de" : undefined}
         />
       ) : undefined}
     />

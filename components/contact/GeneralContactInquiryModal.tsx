@@ -1,12 +1,12 @@
 "use client";
 
 import { useMemo } from "react";
-import type { LocaleCode } from "@/lib/i18n";
+import type { ContactInquiryLocale } from "@/lib/contact-inquiry-target";
 import { getContactInquiryData } from "@/data/contact-cooperation/inquiry-modal";
 import ContactInquiryModal from "./ContactInquiryModal";
 
 type Props = {
-  locale: LocaleCode;
+  locale: ContactInquiryLocale;
   analyticsSourceSection: string;
   isOpen: boolean;
   onClose: () => void;

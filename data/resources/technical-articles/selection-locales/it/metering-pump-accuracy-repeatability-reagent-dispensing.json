@@ -1,0 +1,320 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Dosaggio della pompa impreciso o irregolare? Cause e diagnosi",
+      "seoTitle": "Diagnosi di accuratezza e ripetibilità delle pompe dosatrici | FOREACH",
+      "seoDescription": "Individua le cause degli errori di dosaggio e della scarsa ripetibilità controllando bolle, alimentazione in ingresso, fluido, tubi, puntali e comando motore.",
+      "coverImage": "/images/products/pumps/valveless-pumps/foreach-rpl-p4-valveless-pump.webp",
+      "coverAlt": "Pompa dosatrice senza valvole FOREACH RPL-P4"
+    },
+    "deck": "Se lo stesso programma dà ancora volumi di erogazione instabili, identifica prima il tipo di errore. Controlla poi bolle, alimentazione in ingresso, proprietà del fluido, tubi, uscita e impostazioni del motore. Questa guida propone una prima procedura di diagnosi.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Se le dosi ripetute sono vicine tra loro ma si discostano sempre dall’obiettivo, il problema riguarda in genere l’accuratezza o uno scostamento sistematico. Controlla prima calibrazione, calcolo del volume spostato e punto di lavoro effettivo. Se i risultati variano molto con lo stesso programma, il problema riguarda in genere la ripetibilità. Controlla prima bolle, alimentazione in ingresso, cedevolezza dei tubi, puntale di erogazione e regolarità dell’azionamento. Se i risultati mostrano una deriva nel tempo, controlla temperatura, viscosità, cristallizzazione, contaminazione e usura. La cilindrata per giro e il volume minimo affidabile di erogazione sono grandezze distinte. Verifica le prestazioni finali con il fluido previsto e il circuito completo."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Identifica il probabile problema dall’andamento delle dosi",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Comportamento osservato",
+              "Primi controlli",
+              "Prima azione"
+            ],
+            "rows": [
+              [
+                "Tutte le dosi sono sopra o sotto l’obiettivo, con dispersione bassa",
+                "Punto di lavoro, calibrazione, valore obiettivo o conversione gravimetrica",
+                "Pesa di nuovo il fluido previsto e verifica volume spostato, giri e densità"
+              ],
+              [
+                "I risultati variano molto con lo stesso programma",
+                "Bolle, alimentazione insufficiente in ingresso, cedevolezza dei tubi o liquido trattenuto sul puntale",
+                "Adesca di nuovo il sistema e osserva ingresso, testata e puntale"
+              ],
+              [
+                "Le prime dosi sono imprecise, poi i risultati si stabilizzano",
+                "La testata o i tubi sono riempiti solo in parte",
+                "Aggiungi cicli di adescamento e inizia a registrare dopo la stabilizzazione"
+              ],
+              [
+                "I risultati cambiano gradualmente dopo un periodo di funzionamento",
+                "Temperatura, viscosità, cristallizzazione, contaminazione o usura",
+                "Mantieni costante la temperatura e confronta i risultati prima e dopo la pulizia"
+              ],
+              [
+                "Flusso intermittente, gocce sospese o schizzi",
+                "Ostruzione in ingresso, bolle, misura del puntale o accelerazione e decelerazione",
+                "Controlla filtri, raccordi, puntale e impostazioni delle rampe del motore"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Controlla circuito fluidico e impostazioni in questo ordine",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Controllo",
+              "Come verificare",
+              "Azione correttiva"
+            ],
+            "rows": [
+              [
+                "Testata della pompa e bolle",
+                "Adesca lentamente e cerca bolle che restano, si comprimono o si muovono avanti e indietro nella testata o nel tubo di ingresso",
+                "Adesca e sfiata di nuovo, poi verifica che i raccordi non aspirino altra aria"
+              ],
+              [
+                "Alimentazione in ingresso",
+                "Riduci temporaneamente l’altezza di aspirazione o accorcia il tubo di ingresso. Ripeti la prova e verifica se migliora",
+                "Riduci l’altezza di aspirazione, accorcia la linea di ingresso e verifica la resistenza del filtro"
+              ],
+              [
+                "Fluido e temperatura",
+                "Esegui lo stesso programma con il fluido previsto e uno di riferimento noto. Confronta i risultati dopo il cambio di fluido o temperatura",
+                "Mantieni costanti fluido e temperatura, poi calibra e prova nuovamente con il fluido previsto"
+              ],
+              [
+                "Uscita e puntale di erogazione",
+                "Cerca gocce sospese, liquido residuo o schizzi. Verifica che ogni goccia entri nel recipiente di destinazione",
+                "Pulisci o sostituisci il puntale. Mantieni fissi posizione, condizioni di uscita e impostazioni di avvio e arresto"
+              ],
+              [
+                "Cedevolezza dei tubi e raccordi",
+                "Lascia invariate le impostazioni della pompa e confronta i risultati con un tubo più corto o meno cedevole",
+                "Usa tubi più corti con diametro interno adatto e raccordi ben fissati"
+              ],
+              [
+                "Motore e programma",
+                "Verifica che giri, velocità, fase di avvio e arresto e accelerazione siano identici in tutte le prove",
+                "Prima di confrontare i risultati, mantieni fissi il ciclo completo della pompa e i parametri di azionamento"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Esegui un controllo rapido con 10 dosi",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Pulisci e adesca completamente la testata e i tubi, eliminando le bolle visibili.",
+              "Mantieni fissi fluido, temperatura, livello del serbatoio, tubi, filtro, puntale e posizione di uscita.",
+              "Registra modello, impostazione della cilindrata, giri, velocità, accelerazione e decelerazione.",
+              "Esegui 10 erogazioni consecutive con lo stesso programma e pesa ciascuna dose separatamente per registrare i singoli risultati.",
+              "Converti la massa in volume con la densità del fluido previsto, calcola la media e confrontala con l’obiettivo.",
+              "Calcola deviazione standard campionaria o RSD per valutare la dispersione dei risultati.",
+              "Modifica una sola condizione prima di ripetere la prova, per mantenere distinguibili le cause."
+            ]
+          },
+          {
+            "type": "formula",
+            "expression": "Scostamento medio dall’obiettivo (%) = (volume medio misurato − volume obiettivo) ÷ volume obiettivo × 100%",
+            "note": "Un risultato positivo indica una dose media superiore all’obiettivo. Un risultato negativo indica una media inferiore. Uno scostamento persistente richiede di controllare prima calibrazione, punto di lavoro e metodo di conversione."
+          },
+          {
+            "type": "formula",
+            "expression": "Volume misurato = massa netta del liquido ÷ densità del fluido previsto",
+            "note": "Usa unità compatibili per massa e densità. Per piccoli volumi, verifica che risoluzione della bilancia, evaporazione e tempi di pesata consentano la valutazione prevista."
+          },
+          {
+            "type": "formula",
+            "expression": "RSD (%) = deviazione standard campionaria ÷ volume medio misurato × 100%",
+            "note": "Un RSD elevato richiede di controllare prima bolle, alimentazione in ingresso, tubi, uscita e regolarità dell’azionamento."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Esito delle 10 prove",
+              "Possibili cause",
+              "Passo successivo"
+            ],
+            "rows": [
+              [
+                "I risultati sono poco dispersi ma la media resta alta o bassa",
+                "Calibrazione, conversione del volume spostato, densità del fluido o contropressione",
+                "Ricalibra con il fluido previsto e verifica il punto di lavoro"
+              ],
+              [
+                "La media è vicina all’obiettivo, ma i singoli risultati sono dispersi",
+                "Bolle, alimentazione in ingresso, cedevolezza dei tubi o regolarità dell’azionamento",
+                "Sfiata il sistema, poi stabilizza una per volta le condizioni del circuito e del controllo"
+              ],
+              [
+                "I primi risultati sono fuori obiettivo, poi si stabilizzano",
+                "Adescamento insufficiente o camera della pompa parzialmente riempita",
+                "Aggiungi cicli di adescamento ed erogazione verso lo scarico"
+              ],
+              [
+                "I risultati cambiano gradualmente con il tempo di funzionamento",
+                "Temperatura, viscosità, cristallizzazione, contaminazione o usura",
+                "Mantieni costante la temperatura e confronta i risultati prima e dopo la pulizia"
+              ],
+              [
+                "I risultati cambiano dopo aver sostituito il puntale o il tubo",
+                "Variazione della resistenza in uscita o del volume del circuito",
+                "Valida di nuovo nelle nuove condizioni del circuito"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Dieci misurazioni sono adatte alla diagnosi iniziale sul campo. Per la validazione formale, definisci numero dei campioni, scostamento ammesso e strumenti di misura secondo i requisiti del progetto."
+          }
+        ]
+      },
+      {
+        "title": "Ripeti la verifica dopo uno di questi cambiamenti",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Cambio di fluido, concentrazione, lotto o temperatura di esercizio",
+              "Cambio di tubi, filtri, raccordi, puntali o ugelli",
+              "Cambio di altezza del serbatoio, altezza di aspirazione, contropressione o posizione di uscita",
+              "Cambio di cilindrata, giri, velocità, accelerazione, decelerazione o programma di avvio e arresto",
+              "Pulizia della testata, sostituzione dei materiali a contatto con il fluido o rimozione di depositi cristallizzati",
+              "Scostamento della media, aumento della dispersione o deriva nel tempo"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per selezione o diagnosi, indica volume erogato o portata obiettivo, tempo di ciclo, fluido e temperatura, livello in ingresso, dimensioni dei tubi, contropressione in uscita, puntale e metodo di azionamento. Questi dati consentono di definire il punto di lavoro insieme al requisito percentuale di accuratezza della pompa."
+          }
+        ]
+      },
+      {
+        "title": "Usa la cilindrata RPL per la selezione iniziale del modello",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La cilindrata RPL per giro aiuta a definire un intervallo nominale di funzionamento. Prova l’erogazione effettiva con numero di giri, durata del ciclo, fluido e circuito completo previsti."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Modello",
+              "Cilindrata per giro",
+              "Applicazioni da valutare per prime"
+            ],
+            "rows": [
+              [
+                "RPL-P4",
+                "12–80 μL/rev",
+                "Piccole dosi di reagenti, erogazione di titolante e dosaggio ripetuto"
+              ],
+              [
+                "RPL-P6.35",
+                "50–300 μL/rev",
+                "Erogazione di reagenti, dosaggio di titolante e riempimento volumetrico"
+              ],
+              [
+                "RPL-P15",
+                "300–1200 μL/rev",
+                "Riempimento con volumi maggiori di reagenti, aggiunta di tampone ed erogazione quantitativa"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per determinare il volume minimo affidabile serve una verifica oltre al limite inferiore di cilindrata per giro. Dopo la scelta del modello, prova con il fluido, i tubi, la contropressione, il puntale e il programma previsti."
+          }
+        ]
+      },
+      {
+        "title": "Pagine correlate",
+        "blocks": [
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-valveless-metering-pump/",
+                "label": "Che cos’è una pompa dosatrice senza valvole? Principio, applicazioni e scelta"
+              },
+              {
+                "href": "/en/resources/technical-articles/rpl-valveless-metering-pump-selection-guide/",
+                "label": "Guida alla selezione delle pompe dosatrici senza valvole RPL a testata singola"
+              },
+              {
+                "href": "/en/products/pumps/valveless-metering-pump/",
+                "label": "Visualizza le pompe dosatrici senza valvole RPL e DRPL"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sui problemi di dosaggio",
+    "faqItems": [
+      {
+        "question": "Le misurazioni ripetute sono vicine ma restano sotto l’obiettivo. Cosa devo controllare?",
+        "answer": "La dispersione è bassa e il punto di lavoro presenta uno scostamento persistente. Con il fluido previsto, verifica cilindrata, giri, conversione con la densità, contropressione e calibrazione."
+      },
+      {
+        "question": "Perché il volume di erogazione cambia quando si cambia fluido?",
+        "answer": "Fluidi diversi hanno viscosità, densità, tensione superficiale e volatilità differenti. Queste proprietà influiscono sul riempimento della pompa, sulla resistenza dei tubi e sul distacco della goccia dal puntale. Dopo il cambio, adesca ed esegui una nuova verifica gravimetrica."
+      },
+      {
+        "question": "Il limite inferiore della cilindrata per giro coincide con il volume minimo affidabile di erogazione?",
+        "answer": "Il volume minimo affidabile dipende anche da posizionamento dell’azionamento, cicli completi della pompa, bolle, tubi, puntale e metodo di misura. Verificalo nel circuito effettivo."
+      }
+    ],
+    "cta": {
+      "title": "Serve assistenza per diagnosticare il dosaggio di reagenti o scegliere un modello RPL?",
+      "description": "Indica a FOREACH volume o portata obiettivo, tempo di ciclo, fluido, tubi, contropressione, puntale e metodo di azionamento per valutare punto di lavoro e condizioni di validazione.",
+      "contactLabel": "Discuti la scelta tecnica",
+      "productsLabel": "Visualizza le pompe dosatrici senza valvole",
+      "productsHref": "/en/products/pumps/valveless-metering-pump/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "symptoms",
+      "label": "Tipo di errore"
+    },
+    {
+      "id": "checks",
+      "label": "Circuito e comando"
+    },
+    {
+      "id": "quick-test",
+      "label": "Controllo con 10 dosi"
+    },
+    {
+      "id": "revalidation",
+      "label": "Quando ripetere la verifica"
+    },
+    {
+      "id": "rpl-selection",
+      "label": "Selezione RPL"
+    },
+    {
+      "id": "sources",
+      "label": "Pagine correlate"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Accuratezza della pompa dosatrice",
+      "Ripetibilità della pompa dosatrice"
+    ],
+    "mentions": [
+      "Erogazione di reagenti",
+      "Pompa dosatrice RPL senza valvole",
+      "Calibrazione gravimetrica",
+      "Scostamento medio e RSD"
+    ]
+  }
+}

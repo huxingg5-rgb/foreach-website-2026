@@ -1,18 +1,22 @@
+import { degassingModuleZh } from '@/data/products/detail/degassing-module.zh';
+import { getDegassingModulePath } from '@/data/products/detail/degassing-module-locales';
 import type { ApplicationBlock, ApplicationDocument, ApplicationReference, ApplicationSection } from '../analytical-documents/types';
 
-const moduleName = 'EF-AG3-B inline vacuum degassing module';
-const manufacturerSpecifications = 'https://www.separel.com/en/products/biochemical.html';
+const productLink = {
+  text: `${degassingModuleZh.model} inline vacuum degassing module`,
+  href: getDegassingModulePath('en'),
+};
 
 const productCard: ApplicationBlock = {
   type: 'links',
-  viewDetails: 'View DIC EF-AG3 series specifications',
+  viewDetails: 'View product details',
   items: [{
-    label: moduleName,
-    href: manufacturerSpecifications,
-    description: 'Application example from the EF-AG3 series. See DIC’s series specifications and confirm the configuration for your liquid.',
+    label: productLink.text,
+    href: productLink.href,
+    description: 'Port specifications, wetted materials and reference curves from water tests.',
     cardImage: {
-      src: '/images/applications/common/ef-ag3-b-inline-degassing-module.webp',
-      alt: 'Front view of the EF-AG3-B degassing module showing the cylindrical housing and side liquid port',
+      src: degassingModuleZh.gallery[0].src,
+      alt: `Front view of the ${degassingModuleZh.model} degassing module showing the cylindrical housing and side liquid port`,
     },
   }],
 };
@@ -20,7 +24,7 @@ const productCard: ApplicationBlock = {
 const clinicalDegassingReference: ApplicationReference = {
   id: 'separel-biochemical-degassing',
   title: 'DIC SEPAREL — Membrane contactors for clinical chemistry analyzers',
-  href: manufacturerSpecifications,
+  href: 'https://www.separel.com/en/products/biochemical.html',
 };
 
 const clinicalDegassingSection: ApplicationSection = {
@@ -30,7 +34,8 @@ const clinicalDegassingSection: ApplicationSection = {
   blocks: [
     {
       type: 'paragraph',
-      text: `If bubbles repeatedly appear before metering in a dedicated line that continuously supplies purified water, diluent or a reagent, first check the reservoir level, the seals on the suction-side fittings and priming after a bottle change. If warming or a local pressure drop is causing dissolved gas to come out of solution, evaluate the ${moduleName} upstream of the metering point.`,
+      text: `If bubbles repeatedly appear before metering in a dedicated line that continuously supplies purified water, diluent or a reagent, first check the reservoir level, the seals on the suction-side fittings and priming after a bottle change. If warming or a local pressure drop is causing dissolved gas to come out of solution, evaluate the ${productLink.text} upstream of the metering point.`,
+      inlineLinks: [productLink],
       references: [clinicalDegassingReference.id],
     },
     {
@@ -63,7 +68,8 @@ export const inkSupplyDegassingSection: ApplicationSection = {
   blocks: [
     {
       type: 'paragraph',
-      text: `If the refill flow rate and filter pressure drop meet the printer requirements and bubbles still recur upstream of the printhead, first check for air ingress on the suction side and verify priming after an ink container change. If dissolved gas is coming out of the ink, evaluate the ${moduleName} in the supply line upstream of the printhead. The vacuum draws away gas that passes through the membrane.`,
+      text: `If the refill flow rate and filter pressure drop meet the printer requirements and bubbles still recur upstream of the printhead, first check for air ingress on the suction side and verify priming after an ink container change. If dissolved gas is coming out of the ink, evaluate the ${productLink.text} in the supply line upstream of the printhead. The vacuum draws away gas that passes through the membrane.`,
+      inlineLinks: [productLink],
       references: [inkSupplyDegassingReference.id],
     },
     {

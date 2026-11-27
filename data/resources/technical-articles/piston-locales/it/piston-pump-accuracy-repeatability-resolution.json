@@ -1,0 +1,330 @@
+{
+  "slug": "piston-pump-accuracy-repeatability-resolution",
+  "title": "Accuratezza, ripetibilità e risoluzione delle pompe a pistone",
+  "summary": "Scoprite come accuratezza, ripetibilità, valvole, bolle e corsa utile influiscono sul dosaggio. La dose minima affidabile va verificata sul circuito reale, oltre a calcolare il volume teorico per passo.",
+  "seoTitle": "Accuratezza, ripetibilità e risoluzione delle pompe a pistone | Foreach Technology",
+  "seoDescription": "Comprendere l’accuratezza, la ripetibilità e la risoluzione della pompa a pistone, il motivo per cui i passi del motore non determinano la dose minima affidabile, e come validare i dosaggi in piccole quantità.",
+  "date": "2026-09-06",
+  "coverImage": "/images/resources/technical-articles/piston-pump/piston-pump-accuracy-repeatability-resolution-cover.webp",
+  "coverAlt": "Testa della pompa a pistone Foreach e tubazioni per il fluido",
+  "intro": [
+    {
+      "type": "paragraph",
+      "text": "Le specifiche delle pompe a pistone riportano spesso insieme capacità, passi a corsa completa, accuratezza e ripetibilità. Sono aspetti delle prestazioni di dosaggio che rispondono a domande diverse."
+    },
+    {
+      "type": "paragraph",
+      "text": "Tra gli errori comuni ci sono attribuire automaticamente maggiore accuratezza al liquido con più passi del motore e chiamare il volume teorico per passo «dose minima affidabile». L’erogazione effettiva dipende anche da meccanica, valvole, tubi, bolle, proprietà del fluido, controllo del movimento e metodo di misura."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Che cos’è la risoluzione di una pompa a pistone?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "La risoluzione è il più piccolo incremento teorico di spostamento comandato dal driver. Per una pompa con motore passo-passo, si può stimare il volume teorico per passo da capacità nominale e numero di passi a corsa completa."
+        },
+        {
+          "type": "formula",
+          "expression": "Volume teorico per passo = capacità nominale ÷ passi a corsa completa",
+          "note": "Per la configurazione EA-500-PMMA illustrata: 500 μL ÷ 2,000 passi ≈ 0.25 μL/passo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il valore di 0.25 μL è un incremento geometrico del comando. Non dimostra che la pompa eroghi in modo affidabile 0.25 μL per ogni liquido e circuito. La risoluzione non indica l’errore effettivo né la dose minima convalidata."
+        }
+      ]
+    },
+    {
+      "title": "Che cos’è l’accuratezza di una pompa a pistone?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "L’accuratezza indica quanto il risultato effettivamente erogato si avvicini al volume target. Deve essere interpretata tenendo conto del tipo di movimento della pompa, del volume target, del tipo di fluido e della sua temperatura, dell’intero percorso del fluido, del metodo di misurazione e delle condizioni operative specifiche."
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Movimento completo o parziale della pompa.",
+            "Volume target da erogare.",
+            "Tipo di fluido e temperatura in condizione di utilizzo.",
+            "Viti, tubazioni, accessori e uscite inclusi nel test.",
+            "Metodo gravimetrico, fotometrico o altro.",
+            "Bias medio, errore massimo singolo o altra definizione."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Che cos’è la ripetibilità di una pompa a pistone?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "La ripetibilità descrive la dispersione dei risultati ottenuti in condizioni identiche. Può essere espressa come intervallo, deviazione standard, deviazione standard relativa o coefficiente di variazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una buona ripetibilità non garantisce l’accuratezza. Con un obiettivo di 100 μL, risultati ripetuti intorno a 96 μL possono essere molto ravvicinati ma sistematicamente fuori obiettivo. Viceversa, una media vicina a 100 μL può nascondere una dispersione eccessiva."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Risultato osservato.",
+            "Accuratezza.",
+            "Ripetibilità.",
+            "Significato tecnico"
+          ],
+          "rows": [
+            [
+              "Valore medio vicino all’obiettivo; risultati concentrati",
+              "Buono",
+              "Buono",
+              "Prestazioni quantitative stabili"
+            ],
+            [
+              "Valore medio lontano dall’obiettivo; risultati concentrati",
+              "Scadente",
+              "Buono",
+              "Potrebbe essere necessaria la calibrazione o la correzione di bias sistematici"
+            ],
+            [
+              "Valore medio vicino all’obiettivo; risultati dispersi",
+              "Apparentemente buono",
+              "Scadente",
+              "La variazione casuale è eccessivamente elevata."
+            ],
+            [
+              "Il valore medio si discosta dall’obiettivo; i risultati sono disomogenei.",
+              "Scadente",
+              "Scadente",
+              "Ispezionare la pompa, le valvole, il percorso del fluido e i sistemi di controllo."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Perché un maggior numero di fasi di lavoro non migliora automaticamente l’accuratezza del dosaggio del liquido?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Il numero di passi determina la granularità del comando, mentre il fluido percorre un circuito completo. Effetti fissi e transitori possono far differire il volume erogato dallo spostamento teorico del pistone."
+        },
+        {
+          "type": "subsections",
+          "items": [
+            {
+              "title": "Ritorno meccanico e errori di trasmissione.",
+              "paragraphs": [
+                "Vite guidate, bulloni, giunti e componenti mobili possono presentare spazi di clearance. Dopo il cambio di direzione, alcune movimenti comandati possono richiedere il superamento di tali spazi prima che inizi effettivamente il dislocamento del fluido."
+              ]
+            },
+            {
+              "title": "Risposta e tempismo delle valvole.",
+              "paragraphs": [
+                "Se il movimento del pistone e l’apertura/chiusura delle valvole non sono coordinati, possono verificarsi ritorni di fluido, aspirazione d’aria, pressioni instabili o accumulo di liquido."
+              ]
+            },
+            {
+              "title": "Compatibilità delle bolle e dei tubi",
+              "paragraphs": [
+                "I gas compressibili e i tubi espansibili assorbono il volume di fluido e lo rilasciano in un secondo momento, causando una ridotta quantità di liquido erogata, ritardi e interazioni tra i cicli di funzionamento."
+              ]
+            },
+            {
+              "title": "Fluido ed ambiente",
+              "paragraphs": [
+                "Viscosità, tensione superficiale, volatilità, gas disciolti, particelle, processo di cristallizzazione e temperatura influenzano l’aspirazione, il rilascio del fluido e la separazione delle gocce."
+              ]
+            },
+            {
+              "title": "Metodo di movimento e di erogazione",
+              "paragraphs": [
+                "La velocità di aspirazione/erogazione, l’accelerazione, il tempo di stabilizzazione, la posizione della sonda e il tipo di erogazione (a contatto o senza contatto) possono essere più importanti di eventuali micropassaggi aggiuntivi."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Perché le prestazioni di una pompa in movimento completo non possono essere estese alle piccole dosi",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Il ritorno del movimento della valvola e la compressione delle bolle possono essere di piccola entità rispetto a un movimento completo, ma significativi in caso di movimenti brevi. Pertanto, una pompa può presentare diverse valori di accuratezza e ripetibilità a seconda del rapporto tra movimento completo e movimento breve."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Punto di test",
+            "Volume",
+            "Accuratezza.",
+            "Ripetibilità."
+          ],
+          "rows": [
+            [
+              "100% di corsa del pistone",
+              "500 μL",
+              "≤0.5%",
+              "≤0.5%"
+            ],
+            [
+              "2% di corsa del pistone",
+              "10 μL",
+              "≤2.0%",
+              "≤1.5%"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Valori limite dei parametri:",
+          "text": "Questi valori di EA-500-PMMA valgono nelle condizioni di prova specificate. Non estendete a 10 μL il risultato a corsa completa e non ricavate la dose minima affidabile dal volume teorico per passo di 0.25 μL."
+        }
+      ]
+    },
+    {
+      "title": "Come verificare l’accuratezza e la ripetibilità del dispositivo",
+      "parts": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "label": "Definire i volumi operativi critici",
+              "text": "Elencare le dosi minime, normali e massime, e individuare quale di esse influisce direttamente sul risultato del test, sul rapporto di reazione o sul rendimento del processo."
+            },
+            {
+              "label": "Definire le metriche di accettazione.",
+              "text": "Separare il bias medio, l’errore massimo, la deviazione standard, il coefficiente di variazione e qualsiasi requisito specifico del settore."
+            },
+            {
+              "label": "Costruire il percorso fluido effettivo.",
+              "text": "Includere, ove possibile, valvole di produzione, tubazioni, accessori, filtri, sonde o ugelli."
+            },
+            {
+              "label": "Utilizzare il fluido reale o un fluido rappresentativo.",
+              "text": "Assicurare che le caratteristiche del fluido (viscosità, tensione superficiale, volatilità, contenuto di particelle) siano compatibili con i requisiti del metodo di misurazione; registrare inoltre temperatura, contropressione, velocità e condizioni di avviamento del sistema."
+            },
+            {
+              "label": "Scegliere il metodo più appropriato per le misurazioni.",
+              "text": "Per i metodi gravimetrici, controllare la risoluzione, la densità, l’evaporazione e gli effetti ambientali; per volumi molto piccoli, utilizzare metodi fotometrici adeguati."
+            },
+            {
+              "label": "Riportare i valori misurati per ogni punto di funzionamento del sistema.",
+              "text": "Indicare separatamente la media, il bias e la dispersione almeno per i volumi minimi e massimi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Come leggere le specifiche di Foreach EA, SM e TM.",
+      "parts": [
+        {
+          "type": "table",
+          "headers": [
+            "Serie",
+            "Informazioni attuali.",
+            "Focus della selezione."
+          ],
+          "rows": [
+            [
+              "Pompa a pistone di precisione EA",
+              "2,000 passi a corsa completa nelle configurazioni base. Dati a corsa completa e al 2% di corsa nelle condizioni specificate.",
+              "Scegliere la capacità in base ai volumi di lavoro critici."
+            ],
+            [
+              "Pompa a pistone miniaturizzata SM",
+              "2,000 passi a corsa completa. Ripetibilità a corsa completa ≤0.5% nelle condizioni specificate. Confermate l’accuratezza per la singola configurazione.",
+              "Bilanciare spazio, volume, componenti fluidici e validazione del sistema."
+            ],
+            [
+              "Pompa a pistone ultracompatta TM",
+              "Le configurazioni illustrate usano 2,540 passi a corsa completa. Verificate accuratezza e ripetibilità per la singola configurazione.",
+              "Non si può dedurre le prestazioni di dosaggio esclusivamente dal numero di passaggi del pistone."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Per confrontare il numero di passi occorrono capacità, diametro del pistone, trasmissione e condizioni di prova. La pompa con la capacità più grande in grado di coprire la dose massima non è automaticamente la più adatta per la dose critica più piccola."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Consultare i fondamenti teorici in:",
+              "label": "Che cos’è una pompa a pistone di precisione?",
+              "href": "/resources/technical-articles/micro-plunger-pump-selection/",
+              "suffix": "."
+            },
+            {
+              "prefix": "Esaminare le varie configurazioni delle pompe a pistone.",
+              "label": "Configurazioni delle pompe a pistone Foreach",
+              "href": "/products/pumps/piston-pump/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faq": [
+    {
+      "question": "Il volume teorico per passo è il volume minimo erogabile?",
+      "answer": "No. È un incremento teorico di spostamento. La dose minima affidabile va provata con fluido, valvole, tubi, contropressione e comandi effettivi."
+    },
+    {
+      "question": "Un maggior numero di passi del motore è sempre preferibile?",
+      "answer": "Un maggior numero di passi rende il comando più fine. Accuratezza e ripetibilità vanno verificate separatamente."
+    },
+    {
+      "question": "Perché risultati ripetibili possono essere poco accurati?",
+      "answer": "Un errore sistematico costante può produrre risultati molto ravvicinati ma tutti discostati dal valore obiettivo."
+    },
+    {
+      "question": "L’accuratezza a corsa completa permette di prevedere le prestazioni al 10% o al 2% della corsa?",
+      "answer": "Non direttamente. Gli errori fissi e i transitori possono incidere in misura maggiore su una corsa breve."
+    },
+    {
+      "question": "Come migliorare le prestazioni a piccoli volumi?",
+      "answer": "Scegliete una capacità adeguata, adescate e degassate il circuito, ottimizzate tubi e velocità, coordinate le valvole, stabilizzate la temperatura ed eseguite la taratura con il fluido effettivo."
+    }
+  ],
+  "conclusion": {
+    "title": "Conclusione: definire il volume di lavoro effettivo prima di confrontare diverse pompe.",
+    "parts": [
+      {
+        "type": "paragraph",
+        "text": "Risoluzione, accuratezza e ripetibilità rispondono a domande diverse. La risoluzione è l’incremento teorico del comando, l’accuratezza indica la vicinanza all’obiettivo e la ripetibilità la coerenza fra misure ripetute."
+      },
+      {
+        "type": "paragraph",
+        "text": "Definire prima i volumi di lavoro minimi, normali e massimi, verificare poi l’accuratezza e la ripetibilità in tali condizioni. Il numero di passi del motore supporta la progettazione del movimento, ma non permette di determinare una dose minima affidabile né le prestazioni del sistema nel suo complesso."
+      }
+    ]
+  },
+  "cta": {
+    "title": "È necessario verificare l’accuratezza e la ripetibilità delle pompe a pistone?",
+    "description": "Per una valutazione di tipo EA, SM o TM, fornire il volume target, l’errore ammesso, i requisiti di ripetibilità, il tipo di fluido utilizzato, la temperatura, la contropressione, le valvole, i tubi, il tempo di ciclo e lo spazio di installazione.",
+    "contactLabel": "Contattare un ingegnere.",
+    "productsLabel": "Visualizzare le informazioni sulle pompe a pistone."
+  },
+  "subject": {
+    "about": [
+      "Accuratezza delle pompe a pistone.",
+      "Ripetibilità delle pompe a pistone.",
+      "Risoluzione delle pompe a pistone."
+    ],
+    "mentions": [
+      "Pompe a pistone per applicazioni di tipo EA.",
+      "Pompa a pistone SM",
+      "Pompa a pistone TM",
+      "Dose minima affidabile",
+      "Valutazione delle prestazioni per il trattamento dei liquidi"
+    ]
+  }
+}

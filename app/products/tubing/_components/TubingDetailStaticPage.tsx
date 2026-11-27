@@ -13,7 +13,9 @@ import tubingDetailData from "@/data/products/generated/tubing/detail/index.json
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import { getTubingMaterialCopy } from "@/data/products/tubing/content";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
+import { germanProductSpecLabel, germanProductSpecValue } from "@/data/products/detail/product-detail-ui.de";
 import { getTubingAlternates } from "@/data/products/tubing/metadata";
+import { tubingText } from "@/data/products/tubing/detail-locales";
 import { getTubingGalleryData } from "@/data/products/tubing/gallery";
 import { getTpuSelectionGuideData } from "@/data/products/tubing/tpu-selection-guide";
 
@@ -52,11 +54,28 @@ type TubingDetailRecord = {
   bottomCtaHref?: string;
 };
 
+const tubingSpecLabelsDe: Record<string,string> = {
+  "Density (g/cm³)": "Dichte (g/cm³)",
+  "Tensile Strength (MPa)": "Zugfestigkeit (MPa)",
+  "Flexural Strength (MPa)": "Biegefestigkeit (MPa)",
+  "Dielectric Strength (kV/mm)": "Durchschlagsfestigkeit (kV/mm)",
+  "Water Absorption (%)": "Wasseraufnahme (%)",
+  "Operating Temperature (℃)": "Betriebstemperatur (℃)",
+  "Coefficient of Thermal Expansion (cm/cm/°C)": "Wärmeausdehnungskoeffizient (cm/cm/°C)",
+  "Melting Temperature (°C)": "Schmelztemperatur (°C)",
+  "Low-Temperature Brittleness (°C)": "Kälteversprödung (°C)",
+  "Hardness (Shore D)": "Härte (Shore D)",
+  "Hardness (Shore)": "Härte (Shore)",
+  "Hardness (Shore A)": "Härte (Shore A)"
+};
+
 const records = tubingDetailData as TubingDetailRecord[];
 
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: ReturnType<typeof toClientData>;
   afterContent?: ReactNode;
+  germanDetail?: Parameters<typeof ProductDetailClient>[0]["germanDetail"];
+  localizedDetail?: Parameters<typeof ProductDetailClient>[0]["localizedDetail"];
   customerCategoryMode?: "tubing-zh" | "tubing";
   customerCategoryContent?: Partial<Record<"product" | "selection" | "delivery", ReactNode>>;
 }>;
@@ -93,6 +112,10 @@ function toClientData(detail: TubingDetailRecord, locale: string) {
 
   const copy = getTubingMaterialCopy(detail.slug, locale);
   const en = locale === "en";
+  const german = locale === "de";
+  const italian = locale === "it";
+  const hindi = locale === "hi";
+  const specs = (en || german || italian || hindi ? localizeProductDetailData(detail).specs : detail.specs) || [];
   const authored = copy ? {
     __locale: locale,
     tubingAuthoredContent: true,
@@ -100,7 +123,7 @@ function toClientData(detail: TubingDetailRecord, locale: string) {
     name: copy.h1,
     h1Title: copy.h1,
     pageTitle: copy.h1,
-    displayModel: en ? "Select a Size" : "请选择尺寸",
+    displayModel: hindi ? "आकार चुनें" : german ? "Größe auswählen" : italian ? "Seleziona una misura" : en ? "Select a Size" : "请选择尺寸",
     description: copy.intro.join(" "),
     shortDescription: copy.intro[0],
     tubingIntroductionParagraphs: copy.intro,
@@ -110,16 +133,17 @@ function toClientData(detail: TubingDetailRecord, locale: string) {
     advantages: copy.features,
     imageAlt: copy.imageAlt,
     alt: copy.imageAlt,
-    specs: (en ? localizeProductDetailData(detail).specs : detail.specs) || [],
+    specs: german ? specs.map(item => ({label:tubingSpecLabelsDe[item.label] || germanProductSpecLabel(item.label, false, item.value), value:germanProductSpecValue(item.label, item.value)}))
+      : italian || hindi ? specs.map(item => ({ label: tubingText(item.label, locale), value: tubingText(item.value, locale) })) : specs,
     applicationDetails: {
-      tabLabel: en ? "Applications" : "应用与连接",
-      title: en ? "Tubing Selection and Connections" : "管材选型与连接",
+      tabLabel: hindi ? "अनुप्रयोग" : italian ? "Applicazioni" : en ? "Applications" : "应用与连接",
+      title: hindi ? "ट्यूब और फिटिंग चुनना" : italian ? "Scelta di tubi e raccordi" : en ? "Tubing Selection and Connections" : "管材选型与连接",
       intro: [],
       items: [
-        { title: en ? "Selection Considerations" : "选型要点", paragraphs: copy.features },
-        { title: en ? "Application Evaluation" : "应用评估", paragraphs: copy.applications },
+        { title: hindi ? "चयन के बिंदु" : italian ? "Criteri di scelta" : en ? "Selection Considerations" : "选型要点", paragraphs: copy.features },
+        { title: hindi ? "काम के लिए उपयुक्तता" : italian ? "Valutazione dell’applicazione" : en ? "Application Evaluation" : "应用评估", paragraphs: copy.applications },
       ],
-      selectionNote: { title: en ? "Fitting Compatibility" : "接头匹配", paragraphs: [copy.connections] },
+      selectionNote: { title: hindi ? "फिटिंग की संगतता" : italian ? "Compatibilità dei raccordi" : en ? "Fitting Compatibility" : "接头匹配", paragraphs: [copy.connections] },
     },
     faq: copy.faqs,
     faqs: copy.faqs,
@@ -127,10 +151,10 @@ function toClientData(detail: TubingDetailRecord, locale: string) {
     detailFaqs: copy.faqs,
     bottomCtaTitle: copy.ctaTitle,
     bottomCtaDesc: copy.ctaDescription,
-    bottomCtaButton: en ? "Contact an Engineer" : "联系工程师",
-    bottomCtaHref: en ? "/en/contact/" : "/contact/",
-    customInquiryHref: en ? "/en/contact/" : "/contact/",
-    contactHref: en ? "/en/contact/" : "/contact/",
+    bottomCtaButton: hindi ? "इंजीनियर से संपर्क करें" : german ? "Technische Beratung anfragen" : italian ? "Contatta un tecnico" : en ? "Contact an Engineer" : "联系工程师",
+    bottomCtaHref: german || italian || hindi ? `/${locale}/contact/` : en ? "/en/contact/" : "/contact/",
+    customInquiryHref: german || italian || hindi ? `/${locale}/contact/` : en ? "/en/contact/" : "/contact/",
+    contactHref: german || italian || hindi ? `/${locale}/contact/` : en ? "/en/contact/" : "/contact/",
   } : {};
 
   return {
@@ -205,6 +229,13 @@ export function getTubingMetadata(slug: string, locale = "zh"): Metadata {
   }
   const copy = getTubingMaterialCopy(slug, locale);
   if (copy) {
+    if (locale === "de" || locale === "it" || locale === "hi") {
+      const canonical = `/${locale}/products/tubing/${slug}/details/`;
+      const social = buildProductSocialMetadata({data:{...detail,imageAlt:copy.imageAlt},title:copy.seoTitle,
+        description:copy.seoDescription,canonicalUrl:canonical});
+      return {...social,title:{absolute:copy.seoTitle},description:copy.seoDescription,alternates:{canonical},
+        robots:{index:false,follow:true},openGraph:{...social.openGraph,locale:locale === "hi" ? "hi_IN" : locale === "de" ? "de_DE" : "it_IT"}};
+    }
     const alternates = getTubingAlternates(slug, locale);
     return {
       title: { absolute: copy.seoTitle },
@@ -249,13 +280,30 @@ export default function TubingDetailStaticPage({
   const useTpuSections = slug === "tpu-tubing";
   const usePvcSections = slug === "pvc-tubing";
   const clientData = toClientData(detail, locale);
-  const useTubingSections = ["zh", "zh-CN", "en", "es", "fr", "ko", "ru"].includes(locale);
+  const useTubingSections = ["zh", "zh-CN", "en", "es", "fr", "ko", "ru", "de", "it", "hi"].includes(locale);
+  const german = locale === "de" ? getTubingMaterialCopy(slug, locale) : undefined;
+  const germanDetail = german ? {title:german.h1,description:german.intro.join(" "),faqs:slug === "pvc-tubing" ? [] : german.faqs,imageAlt:german.imageAlt,
+    bottomCta:{title:german.ctaTitle,description:german.ctaDescription,buttonText:"Technische Beratung anfragen",href:"/de/contact/"}} : undefined;
+  const draftLocale = locale === "hi" || locale === "it" ? locale : undefined;
+  const draft = draftLocale ? getTubingMaterialCopy(slug, draftLocale) : undefined;
+  const localizedDetail: Parameters<typeof ProductDetailClient>[0]["localizedDetail"] = draft && draftLocale ? {
+    locale: draftLocale,
+    copy: {
+      title: draft.h1,
+      description: draft.intro.join(" "),
+      faqs: slug === "pvc-tubing" ? [] : draft.faqs,
+      imageAlt: draft.imageAlt,
+      bottomCta: { title: draft.ctaTitle, description: draft.ctaDescription, buttonText: draftLocale === "hi" ? "इंजीनियर से संपर्क करें" : "Contatta un tecnico", href: "/" + draftLocale + "/contact/" },
+    },
+  } : undefined;
   const guideMaterial = Object.keys(tubingSelectionProfiles).find(material => slug === `${material}-tubing`) as TubingGuideMaterial | undefined;
 
   return (
     <div data-tubing-detail-page="true">
       <ProductDetailView
         data={clientData}
+        germanDetail={germanDetail}
+        localizedDetail={localizedDetail}
         afterContent={afterContent}
         customerCategoryMode={useTubingSections ? "tubing" : undefined}
         customerCategoryContent={useTubingSections ? {

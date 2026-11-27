@@ -1,12 +1,16 @@
 import { getLanguageHref } from '@/lib/i18n/language-switch';
+import { getGermanDraftLink, getItalianDraftLink, getHindiDraftLink } from '@/lib/i18n/draft-languages';
 import { englishHomeProducts, productGroups } from './home-products.en';
+import de from './home-products-locales/de';
+import it from './home-products-locales/it.json';
+import hi from './home-products-locales/hi.json';
 import es from './home-products-locales/es.json';
 import fr from './home-products-locales/fr.json';
 import ko from './home-products-locales/ko.json';
 import ru from './home-products-locales/ru.json';
 import type { HomeProductsCopy, HomeProductsLocale, HomeProductsSectionData } from './home-products.types';
 
-const localizedCopy: Record<Exclude<HomeProductsLocale, 'en'>, HomeProductsCopy> = { es, fr, ko, ru };
+const localizedCopy: Record<Exclude<HomeProductsLocale, 'en'>, HomeProductsCopy> = { es, fr, ko, ru, de, it, hi };
 
 const englishCopy: HomeProductsSectionData['copy'] = {
   title: 'Our Products',
@@ -45,9 +49,13 @@ export function getHomeProductsSectionData(locale: HomeProductsLocale): HomeProd
         ...product,
         ...translation,
         // Some localized categories use selection queries instead of English paths.
-        href: getLanguageHref(product.href, locale),
+        ...(locale === 'de'
+          ? getGermanDraftLink(getLanguageHref(product.href, 'en'))
+          : locale === 'it' ? getItalianDraftLink(getLanguageHref(product.href, 'en'))
+          : locale === 'hi' ? getHindiDraftLink(getLanguageHref(product.href, 'en'))
+          : { href: getLanguageHref(product.href, locale) }),
       };
     }),
-    productCenterHref: `/${locale}/products/`,
+    productCenterHref: locale === 'hi' ? getHindiDraftLink('/en/products/').href : locale === 'it' ? getItalianDraftLink('/en/products/').href : `/${locale}/products/`,
   };
 }

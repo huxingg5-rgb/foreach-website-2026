@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="2040" viewBox="0 0 2560 2040" role="img" aria-labelledby="title description" xml:lang="de">
+  <title id="title">Fünf Druckangaben bei Miniatur-Membranpumpen</title>
+  <desc id="description">Die Grafik erläutert den tatsächlichen Betriebsdruck, Nennbetriebsdruck, maximalen Ausgangsdruck, Prüfdruck und Berstdruck sowie die zugehörigen Prüfbedingungen.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #17335e; }
+      .title { font-size: 70px; font-weight: 700; }
+      .subtitle { font-size: 40px; fill: #58677c; }
+      .card { fill: #fff; stroke: #d6dee8; stroke-width: 4; }
+      .card-title { font-size: 48px; font-weight: 700; }
+      .card-text { font-size: 37px; fill: #58677c; }
+      .tag { font-size: 36px; font-weight: 700; text-anchor: middle; }
+      .note-title { font-size: 50px; font-weight: 700; }
+      .note-text { font-size: 42px; font-weight: 700; fill: #58677c; }
+      .footer { font-size: 30px; fill: #637389; text-anchor: end; }
+    </style>
+  </defs>
+  <rect width="2560" height="2040" fill="#fff"/>
+  <rect x="116" y="104" width="16" height="108" rx="8" fill="#00d9a7"/>
+  <text class="title" x="176" y="184">Fünf Druckangaben und ihre Bedeutung</text>
+  <text class="subtitle" x="176" y="264">Prüfen Sie die Definition, bevor Sie einen Wert als Grenze für den Dauerbetrieb ansetzen.</text>
+
+  <g transform="translate(100 350)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#00d9a7"/>
+    <text class="card-title" x="56" y="96">Tatsächlicher Betriebsdruck</text>
+    <text class="card-text" x="56" y="184">Druckdifferenz zwischen Einlass</text>
+    <text class="card-text" x="56" y="240">und Auslass der Pumpe im Betrieb</text>
+    <rect x="54" y="374" width="308" height="100" rx="50" fill="#e7fdf7"/>
+    <text class="tag" x="208" y="440">Betriebsdaten</text>
+  </g>
+  <g transform="translate(910 350)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#17335e"/>
+    <text class="card-title" x="56" y="96">Nennbetriebsdruck</text>
+    <text class="card-text" x="56" y="184">Laut freigegebener Spezifikation</text>
+    <text class="card-text" x="56" y="240">unter definierten Bedingungen</text>
+    <text class="card-text" x="56" y="296">zulässig oder festgelegt</text>
+    <rect x="54" y="374" width="308" height="100" rx="50" fill="#eaf0f8"/>
+    <text class="tag" x="208" y="440">Betriebsgrenze</text>
+  </g>
+  <g transform="translate(1720 350)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#7189a9"/>
+    <text class="card-title" x="56" y="96">Maximaler Ausgangsdruck</text>
+    <text class="card-text" x="56" y="184">Erreichbarer oder spezifizierter</text>
+    <text class="card-text" x="56" y="240">Druckgrenzpunkt. Der freie</text>
+    <text class="card-text" x="56" y="296">Volumenstrom ist separat definiert.</text>
+    <rect x="54" y="374" width="322" height="100" rx="50" fill="#eaf0f8"/>
+    <text class="tag" x="215" y="440">Druckgrenzpunkt</text>
+  </g>
+
+  <g transform="translate(490 940)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#7189a9"/>
+    <text class="card-title" x="56" y="96">Prüfdruck</text>
+    <text class="card-text" x="56" y="184">Prüfung von Festigkeit oder</text>
+    <text class="card-text" x="56" y="240">Dichtheit bei definiertem Medium,</text>
+    <text class="card-text" x="56" y="296">Prüfdauer und Abnahmekriterien</text>
+    <rect x="54" y="374" width="310" height="100" rx="50" fill="#eaf0f8"/>
+    <text class="tag" x="209" y="440">Prüfbedingung</text>
+  </g>
+  <g transform="translate(1330 940)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#17335e"/>
+    <text class="card-title" x="56" y="96">Berstdruck</text>
+    <text class="card-text" x="56" y="184">Grenze für bleibende Schäden</text>
+    <text class="card-text" x="56" y="240">oder Funktionsausfall. Für den</text>
+    <text class="card-text" x="56" y="296">Betrieb unzulässig.</text>
+    <rect x="54" y="374" width="328" height="100" rx="50" fill="#eaf0f8"/>
+    <text class="tag" x="218" y="440">Versagensgrenze</text>
+  </g>
+
+  <rect x="200" y="1540" width="2160" height="300" rx="22" fill="#e7fdf7" stroke="#00d9a7" stroke-width="4"/>
+  <rect x="200" y="1540" width="16" height="300" rx="8" fill="#00d9a7"/>
+  <text class="note-title" x="280" y="1630">Druckangaben richtig einordnen</text>
+  <text class="note-text" x="280" y="1720">Begriff, Prüfmedium, Einlassbedingungen und zugehörigen Volumenstrom prüfen.</text>
+  <text class="note-text" x="280" y="1782">Prüfdauer, Betriebszyklus und Abnahmekriterien bestätigen.</text>
+  <text class="footer" x="2440" y="1970">Für verbindliche Grenzen gilt die freigegebene Modellspezifikation.</text>
+</svg>

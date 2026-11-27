@@ -1,3 +1,5 @@
+
+
 /* =========================================================
    historyMilestones.ts
    恒永达官网｜发展历程多语言数据
@@ -8,6 +10,11 @@
    3. 后续新增年份，只需要在 historyMilestoneSources 里新增一条
    4. 后续接后端时，后端返回类似结构即可
 ========================================================= */
+
+import germanCopy from "./about-de/history.json";
+import italianCopy from "./about-it/history.json";
+import hindiCopy from "./about-hi/history.json";
+import { translateGermanAbout as translateAboutCopy } from "./about-de/translate-german-about";
 
 export const DEFAULT_HISTORY_LOCALE = "zh-CN" as const;
 
@@ -30,6 +37,8 @@ export const NON_DEFAULT_HISTORY_LOCALES = [
 
 export type SupportedHistoryLocale =
   (typeof SUPPORTED_HISTORY_LOCALES)[number];
+
+export type HistoryPageLocale = SupportedHistoryLocale | "de" | "it" | "hi";
 
 export type HistoryImageSide = "left" | "right";
 
@@ -122,8 +131,9 @@ export function getValidHistoryLocale(
 /* 获取某个多语言字段的当前语言文本 */
 function getLocalizedText(
   value: LocalizedText,
-  locale: SupportedHistoryLocale
+  locale: HistoryPageLocale
 ): string {
+  if (locale === "de" || locale === "it" || locale === "hi") return translateAboutCopy(value.en, locale === "de" ? germanCopy : locale === "hi" ? hindiCopy : italianCopy);
   return value[locale] || value.en || value["zh-CN"];
 }
 
@@ -189,8 +199,10 @@ const historyPageTextSource: HistoryPageTextSource = {
 
 /* 页面文案输出函数 */
 export function getHistoryPageText(
-  locale: SupportedHistoryLocale
+  locale: HistoryPageLocale
 ): HistoryPageText {
+  if (locale === "de" || locale === "it" || locale === "hi") return translateAboutCopy(getHistoryPageText("en"), locale === "de" ? germanCopy : locale === "hi" ? hindiCopy : italianCopy);
+
   return {
     title: [historyPageTextSource.titleMain[locale], historyPageTextSource.titleAccent[locale]].join(locale === "zh-CN" ? "" : " "),
     metadataTitle: getLocalizedText(historyPageTextSource.metadataTitle, locale),
@@ -760,8 +772,9 @@ const historyMilestoneSources: HistoryMilestoneSource[] = [
 
 /* 输出当前语言的发展历程数据 */
 export function getHistoryMilestones(
-  locale: SupportedHistoryLocale
+  locale: HistoryPageLocale
 ): HistoryMilestone[] {
+
   return historyMilestoneSources.map((item) => ({
     id: item.id,
     year: item.year,

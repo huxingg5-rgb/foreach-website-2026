@@ -1,0 +1,455 @@
+{
+  "metadata": {
+    "title": "Quanto può funzionare in continuo una pompa a membrana miniaturizzata? Ciclo di lavoro e durata",
+    "seoTitle": "Funzionamento continuo e durata delle pompe a membrana miniaturizzate | Foreach Technology",
+    "seoDescription": "Funzionamento continuo, durata dei motori con e senza spazzole, profilo di impiego, carico, cicli di avvio e arresto, criteri di guasto, prove di durata e affidabilità B10 delle pompe a membrana miniaturizzate.",
+    "coverImage": "/images/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/article-cover.webp",
+    "coverAlt": "Pompa a membrana miniaturizzata per liquidi Foreach durante una prova di esercizio continuo in laboratorio"
+  },
+  "deck": "L’idoneità all’esercizio continuo va valutata insieme alla durata. Capacità di funzionare in continuo, ore di esercizio accumulate, durata a calendario e affidabilità statistica rispondono a domande tecniche diverse. Tutte dipendono da carico, fluido, azionamento elettrico e ambiente dichiarati.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Per uno strumento OEM, verificare più della capacità del motore di girare per 24 ore. Durante il profilo di impiego effettivo, la pompa deve continuare ad avviarsi, erogare la portata richiesta alla pressione prevista, rimanere nei limiti di corrente e temperatura, evitare perdite e soddisfare i requisiti di rumore e controllo dello strumento."
+    },
+    {
+      "type": "notice",
+      "label": "Criterio di verifica:",
+      "text": "Leggere ogni dato di durata insieme a tensione, carico, fluido, temperatura, modalità di esercizio, numero di campioni e criteri di guasto."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/article-cover.webp",
+      "alt": "Pompa a membrana miniaturizzata collegata alla strumentazione di laboratorio per valutare l’esercizio continuo",
+      "width": 1304,
+      "height": 837,
+      "caption": "Il funzionamento continuo è una modalità di prova. La durata in esercizio è il tempo accumulato prima di raggiungere un limite funzionale o prestazionale definito."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Distinguere esercizio continuo e durata in servizio",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Termine",
+            "Che cosa descrive",
+            "Che cosa resta da verificare"
+          ],
+          "rows": [
+            [
+              "Esercizio continuo",
+              "La pompa può funzionare senza pause programmate nelle condizioni definite",
+              "Durata illimitata o idoneità a qualsiasi pressione e temperatura"
+            ],
+            [
+              "Durata di esercizio accumulata",
+              "Tempo totale di esercizio con alimentazione elettrica fino a un limite definito",
+              "Anni di calendario in uno strumento specifico"
+            ],
+            [
+              "Durata a calendario",
+              "Tempo trascorso, compresi stoccaggio e inattività",
+              "Numero di cicli di pompaggio o di avvii"
+            ],
+            [
+              "Resistenza ai cicli di avvio e arresto",
+              "Capacità di sopportare avvii ed eventi transitori ripetuti",
+              "Ore equivalenti di esercizio continuo"
+            ],
+            [
+              "Metrica di affidabilità",
+              "Risultato riferito a una popolazione, con definizione statistica",
+              "Conclusione basata su un solo campione che ha superato la prova"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Se una pompa funziona 24 ore al giorno, tutti i giorni, 3.000 ore accumulate equivalgono a circa 125 giorni e 10.000 ore a circa 417 giorni. Se la stessa pompa funziona due ore al giorno, equivalgono rispettivamente a 1.500 e 5.000 giorni di esercizio. In entrambi i casi occorre considerare separatamente avvii, carico e ambiente."
+        }
+      ]
+    },
+    {
+      "title": "2. Ricavare i requisiti della pompa dal profilo di impiego dello strumento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il profilo di impiego registra quando funziona la pompa, con quale frequenza si avvia, pressione e corrente in ogni stato, temperatura del fluido e condizioni ambientali. Permette di collegare il dato di durata della pompa all’impiego previsto dello strumento sul campo."
+        },
+        {
+          "type": "formula",
+          "expression": "Ttotal = Σ(Ni × ti)",
+          "note": "Ni è il numero di eventi nello stato operativo i e ti la durata con alimentazione elettrica di ciascun evento. Registrare separatamente il numero di avvii e la distribuzione del carico."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/duty-profile-lifetime-demand-it.svg",
+          "alt": "Profilo di impiego con ore di esercizio, numero di avvii e arresti e distribuzione del carico per pianificare la durata di una pompa a membrana",
+          "width": 1200,
+          "height": 675,
+          "caption": "Per definire la durata richiesta alla pompa, affiancare al tempo di calendario le ore con alimentazione elettrica, gli avvii e gli arresti, la pressione, la corrente, la temperatura e il tempo trascorso in ciascuno stato operativo."
+        }
+      ]
+    },
+    {
+      "title": "3. Perché le versioni con e senza spazzole hanno limiti di durata diversi",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In un motore CC con spazzole, la corrente passa per contatto fisico tra spazzole e collettore. Questa interfaccia può produrre usura da strisciamento, archi elettrici, resistenza di contatto e detriti. Un motore brushless commuta elettronicamente ed elimina l’usura delle spazzole. Restano possibili guasti a motore, cuscinetti, avvolgimenti, controller e testata."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/brushed-vs-brushless-commutation-it.svg",
+          "alt": "Confronto ingegneristico tra commutazione meccanica a spazzole e commutazione elettronica brushless",
+          "width": 1200,
+          "height": 675,
+          "caption": "La commutazione brushless elimina il meccanismo di usura delle spazzole. Occorre ancora verificare la durata di cuscinetti, avvolgimenti, elettronica, membrana e valvole."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Aspetto da valutare",
+            "Motore CC con spazzole",
+            "Motore CC brushless"
+          ],
+          "rows": [
+            [
+              "Commutazione",
+              "Contatto meccanico delle spazzole",
+              "Commutazione elettronica"
+            ],
+            [
+              "Fattore comune che limita la durata",
+              "Usura di spazzole e collettore",
+              "Cuscinetti, isolamento degli avvolgimenti ed elettronica"
+            ],
+            [
+              "Controllo",
+              "È comune un’alimentazione semplice a due fili",
+              "Regolazione di velocità, direzione o feedback secondo la configurazione"
+            ],
+            [
+              "EMC",
+              "Gli archi alle spazzole sono una fonte aggiuntiva di disturbi",
+              "PWM ed elettronica di commutazione generano comunque EMI"
+            ],
+            [
+              "Applicazioni più adatte",
+              "Ore limitate, controllo semplice o applicazioni sensibili al costo",
+              "Esercizio prolungato, maggiori esigenze di controllo o sostituzione costosa sul campo"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Anche la testata può limitare la durata della pompa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La durata del motore è solo una parte della durata della pompa. Un differenziale di pressione più alto aumenta la coppia richiesta e le perdite nel rame e modifica anche la sollecitazione della membrana, la dinamica delle valvole di non ritorno e la temperatura del fluido. Esposizione chimica, particelle, gas, funzionamento a secco e cicli di pressione possono far prevalere guasti in componenti diversi dal motore."
+        },
+        {
+          "type": "formula",
+          "expression": "Pcopper = I²R"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/lifetime-load-factors-it.svg",
+          "alt": "Catena causale dal carico fluidico a corrente, temperatura, sollecitazione dei componenti e distribuzione della durata della pompa a membrana",
+          "width": 1200,
+          "height": 675,
+          "caption": "Una prova di durata utile riproduce il carico idraulico ed elettrico effettivo. Le ore accumulate con uscita aperta e carico quasi nullo valgono per condizioni diverse."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Sollecitazione",
+            "Possibile effetto",
+            "Dati da registrare durante la verifica"
+          ],
+          "rows": [
+            [
+              "Contropressione o restrizione in ingresso",
+              "Carico più alto, riempimento incompleto o variazione dei tempi delle valvole",
+              "Pin, Pout, corrente, portata e temperatura"
+            ],
+            [
+              "Cicli di avvio e arresto",
+              "Corrente di spunto, coppia transitoria ed eventi di pressione ripetuti",
+              "Numero di avvii, avvii falliti e forma d’onda"
+            ],
+            [
+              "Controllo PWM",
+              "Variazioni di ondulazione della corrente, velocità e stato di commutazione",
+              "Frequenza, rapporto ciclico, topologia, ondulazione della corrente e velocità effettiva"
+            ],
+            [
+              "Fluido e temperatura",
+              "Variazioni di viscosità, compatibilità e invecchiamento dei materiali",
+              "Formulazione, temperatura del fluido e tempo di esposizione"
+            ],
+            [
+              "Installazione",
+              "Variazioni della dissipazione termica, delle vibrazioni e delle sollecitazioni dai tubi",
+              "Orientamento, temperatura ambiente e montaggio"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Definire il guasto prima di iniziare la prova di durata",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una pompa che gira ancora può avere già superato i limiti ammessi dallo strumento. Nelle prove di durata, definire limiti misurabili prima di avviare il primo campione."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Aspetto del guasto",
+            "Possibile misura",
+            "Esempio di criterio"
+          ],
+          "rows": [
+            [
+              "Avvio",
+              "Avvio a tensione, carico e temperatura specificati",
+              "Requisito minimo del prodotto o dello strumento"
+            ],
+            [
+              "Punto di lavoro",
+              "Portata, capacità di aspirazione e stabilità alla pressione prevista",
+              "Limite di degrado rispetto al valore iniziale o soglia di progetto"
+            ],
+            [
+              "Caratteristiche elettriche",
+              "Corrente di esercizio, corrente di spunto e segnale di feedback",
+              "Limiti del driver e del motore"
+            ],
+            [
+              "Caratteristiche meccaniche",
+              "Rumore, vibrazioni, grippaggio e condizioni dei cuscinetti",
+              "Limite di rilevamento ripetibile"
+            ],
+            [
+              "Integrità del circuito fluidico",
+              "Perdite, riflusso, perdita di adescamento o bolle anomale",
+              "Requisiti legati a fluido, pressione e rischio"
+            ],
+            [
+              "Funzione di controllo",
+              "Mantiene lo stato comandato e il feedback",
+              "Criteri di accettazione del piano di prova"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "Definire i criteri di guasto prima della prova, prima che il campione accumuli le ore previste."
+        }
+      ]
+    },
+    {
+      "title": "6. Predisporre un circuito di prova di durata tracciabile",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/durability-test-loop-it.svg",
+          "alt": "Circuito tracciabile di prova di durata per una pompa a membrana miniaturizzata per liquidi",
+          "width": 1200,
+          "height": 675,
+          "caption": "Riprodurre fluido, pressione, controllo e ambiente specificati. Registrare le variabili elettriche e idrauliche e ricontrollare le prestazioni di riferimento a intervalli definiti."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Tracciare ogni campione per configurazione, lotto, motore, materiali a contatto con il fluido e prestazioni iniziali.",
+            "Fissare tensione ai morsetti della pompa, limite di corrente, PWM e logica di avvio e arresto.",
+            "Controllare composizione del fluido, temperatura, contaminazione e intervallo di sostituzione.",
+            "Riprodurre pressioni in ingresso e in uscita, tubi, valvole, filtri e carico terminale.",
+            "Registrare tensione, corrente, pressione, portata, temperatura, velocità e condizioni anomale.",
+            "Ricontrollare avvio, portata, perdite, corrente e rumore a intervalli programmati.",
+            "Registrare tempo al guasto, modalità di guasto, riscontri dello smontaggio e conclusione sulla causa principale."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Un solo campione da 10.000 ore non dimostra la durata B10",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/reliability-evidence-levels-it.svg",
+          "alt": "Tre livelli di evidenza: prova di durata su una singola unità, dati di durata su più campioni e dichiarazione statistica di affidabilità",
+          "width": 1200,
+          "height": 675,
+          "caption": "Una singola unità che raggiunge il traguardo documenta la durata di quell’unità. Per stimare l’affidabilità della popolazione servono campioni, definizioni di guasto, trattamento dei dati e un modello statistico."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Livello di evidenza",
+            "Dati",
+            "Conclusione supportata"
+          ],
+          "rows": [
+            [
+              "Prova di durata su una singola unità",
+              "Una unità raggiunge la durata obiettivo",
+              "Il campione ha completato la prova nelle condizioni dichiarate"
+            ],
+            [
+              "Verifica della durata su più campioni",
+              "T1, T2, …, Tn",
+              "Si possono esaminare uniformità, guasti precoci e distribuzione della durata"
+            ],
+            [
+              "Dichiarazione di affidabilità",
+              "Guasti, osservazioni censurate, modello e livello di confidenza",
+              "B10 o affidabilità si possono dichiarare entro condizioni statistiche esplicite"
+            ]
+          ]
+        },
+        {
+          "type": "formula",
+          "expression": "R(t) = exp[-(t / η)^β]"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/micro-diaphragm-pump-continuous-duty-life/b10-weibull-reliability-it.svg",
+          "alt": "Curva concettuale di affidabilità Weibull con punto B10 in corrispondenza di R(t) uguale a 0,9",
+          "width": 1200,
+          "height": 675,
+          "caption": "B10 è il tempo in cui la quota cumulativa di guasti stimata dal modello raggiunge il 10%, quindi R(t)=0.9. Lo schema è concettuale e non contiene misure di durata di un modello Foreach."
+        },
+        {
+          "type": "formula",
+          "expression": "n ≥ ln(1 - C) / ln(R)",
+          "note": "Per una dimostrazione senza guasti a un singolo tempo obiettivo, un’affidabilità del 90% con confidenza unilaterale del 90% richiede almeno 22 unità indipendenti senza guasti. Questo risultato non determina il parametro di forma Weibull e non giustifica estrapolazioni nel tempo."
+        }
+      ]
+    },
+    {
+      "title": "8. La durata accelerata richiede un modello validato",
+      "blocks": [
+        {
+          "type": "notice",
+          "text": "La condizione accelerata deve mantenere il meccanismo di guasto dominante nell’uso normale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aumentare temperatura, pressione, velocità, tensione o frequenza di avvio può introdurre un nuovo guasto da sovraccarico. Per stabilire se una prova accelerata di 5.000 ore equivale a 10.000 ore di esercizio normale servono un modello di accelerazione validato e la corrispondenza dei meccanismi fisici di guasto."
+        }
+      ]
+    },
+    {
+      "title": "9. Scelta tra valori di durata di riferimento di 3.000 e 10.000 ore",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Condizione del progetto",
+            "Può essere adatta la versione con spazzole",
+            "Può essere adatta la versione brushless"
+          ],
+          "rows": [
+            [
+              "Ore accumulate",
+              "Durata operativa limitata con un piano di manutenzione definito",
+              "Esercizio prolungato o sostituzione difficile sul campo"
+            ],
+            [
+              "Controllo",
+              "Alimentazione di base e funzionamento acceso/spento",
+              "Occorrono regolazione della velocità o della direzione oppure feedback"
+            ],
+            [
+              "Manutenzione",
+              "Pompa accessibile e fermo per la sostituzione accettabile",
+              "Pompa chiusa nello strumento o assistenza sul campo costosa"
+            ],
+            [
+              "Priorità del progetto",
+              "Prevalgono costo e semplicità d’integrazione",
+              "Prevalgono durata, controllo e costo totale di manutenzione"
+            ],
+            [
+              "Integrazione",
+              "Interfaccia elettrica semplice",
+              "Sono stati verificati controller, cablaggio, EMC e spazio per la dissipazione termica"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un valore di riferimento di 10.000 ore può giustificare la valutazione di una versione brushless per uno strumento con requisito di 9.000 ore. La qualifica richiede ancora di confermare carico di prova, evidenze sui campioni, fluido, avvii, ambiente, margine di progetto e risultati di durata dello strumento."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Confronta le opzioni con spazzole e brushless nella ",
+              "label": "guida alla scelta della DPL30",
+              "href": "/en/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide",
+              "suffix": "."
+            },
+            {
+              "prefix": "Per una portata più alta, consulta la ",
+              "label": "guida alla pompa a membrana per liquidi DPL60",
+              "href": "/en/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Conclusione: verificare come è stato ottenuto il dato di durata",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’esercizio continuo è una modalità di funzionamento. Usare il profilo di impiego dello strumento per calcolare ore con alimentazione elettrica e numero di avvii, individuare il carico idraulico e termico effettivo, scegliere l’architettura motore, definire i criteri di guasto e validare l’insieme pompa-circuito. Il dato di durata è interpretabile quando condizioni della prova e livello delle evidenze sono chiari."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Una pompa a membrana miniaturizzata può funzionare 24 ore al giorno?",
+      "answer": "La configurazione si può considerare adatta all’esercizio continuo solo se è classificata e verificata per tensione, pressione, fluido, temperatura ambiente e raffreddamento specificati. Durante il funzionamento 24/7, le ore di esercizio continuano ad accumularsi."
+    },
+    {
+      "question": "3.000 ore significano che la pompa dura solo 125 giorni?",
+      "answer": "Solo con 24 ore di esercizio al giorno. Con due ore al giorno, 3.000 ore equivalgono a 1.500 giorni operativi. Avvii, carico, ambiente e invecchiamento a calendario richiedono valutazioni separate."
+    },
+    {
+      "question": "Perché le pompe brushless hanno spesso una durata di riferimento maggiore?",
+      "answer": "La commutazione brushless elimina il meccanismo di usura meccanica di spazzole e collettore. Cuscinetti, avvolgimenti, elettronica, membrana e valvole restano possibili fattori limitanti."
+    },
+    {
+      "question": "Un motore brushless elimina il rischio EMC?",
+      "answer": "No. Elimina gli archi alle spazzole, ma commutazione elettronica, PWM e dispositivi di commutazione continuano a generare disturbi elettromagnetici. Verificare l’EMC a livello di strumento."
+    },
+    {
+      "question": "Se una pompa raggiunge 10.000 ore, si può dichiarare B10 = 10.000 ore?",
+      "answer": "No. Una singola unità che supera la prova dimostra la durata di quella unità. B10 è una metrica di affidabilità della popolazione e richiede più campioni, criteri di guasto, dati di durata, trattamento statistico e livello di confidenza."
+    },
+    {
+      "question": "Una versione da 10.000 ore è automaticamente adatta a uno strumento con obiettivo di 9.000 ore?",
+      "answer": "No. Confrontare le condizioni della prova con carico, fluido, avvii, temperatura, PWM, piano di manutenzione e confidenza statistica richiesti per lo strumento. Considerare un margine di progetto adeguato."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi confrontare la durata delle versioni con spazzole e brushless per il tuo strumento?",
+    "description": "Indica gli anni di servizio previsti, le ore effettive al giorno, il numero di avvii, il fluido, le pressioni in ingresso e in uscita, il metodo PWM, la temperatura ambiente e la strategia di manutenzione. I tecnici Foreach possono aiutarti a individuare un’opzione DPL30 o DPL60 e definire un piano di verifica realistico.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Visualizza le pompe a membrana"
+  }
+}

@@ -8,6 +8,8 @@ export type RelatedResourcesLocale =
   | "ko"
   | "ru";
 
+export type RelatedResourcesUiLocale = RelatedResourcesLocale | "de" | "it" | "hi";
+
 export type RelatedResourcesText = {
   previous: string;
   next: string;
@@ -145,7 +147,63 @@ const relationDescriptionOverrides: Record<
   },
 };
 
-export function getRelatedResourcesText(locale: RelatedResourcesLocale) {
+const germanRelatedResourcesText: RelatedResourcesText = {
+  previous: "Zurück",
+  next: "Weiter",
+  relatedVideos: "Ähnliche Videos",
+  relatedProducts: "Ähnliche Produkte",
+  relatedArticles: "Fachartikel auf Englisch",
+  viewAll: "Mehr anzeigen",
+  viewDetails: "Artikel auf Englisch lesen",
+  activeSeriesFilter: "Anleitungen für diese Baureihe",
+  clearSeriesFilter: "Baureihenfilter zurücksetzen",
+  category: "Kategorie:",
+  defaultVideoDescription: "Weitere Anleitungen zu Montage, Auswahl und Anwendung.",
+  defaultProductDescription: "Produkte aus derselben Baureihe.",
+  defaultArticleDescription: "Fachartikel zu dieser Baureihe.",
+};
+
+const italianRelatedResourcesText: RelatedResourcesText = {
+  previous: "Precedente",
+  next: "Successivo",
+  relatedVideos: "Video correlati",
+  relatedProducts: "Prodotti correlati",
+  relatedArticles: "Articoli tecnici correlati",
+  viewAll: "Vedi tutti",
+  viewDetails: "Vedi dettagli",
+  activeSeriesFilter: "Guide filtrate per la serie corrente",
+  clearSeriesFilter: "Rimuovi il filtro per serie",
+  category: "Categoria:",
+  defaultVideoDescription: "Consulta le guide di installazione, selezione e applicazione correlate.",
+  defaultProductDescription: "Esplora i prodotti della stessa serie.",
+  defaultArticleDescription: "Leggi gli articoli tecnici relativi a questa serie.",
+};
+
+const hindiRelatedResourcesText: RelatedResourcesText = {
+  previous: "पिछला",
+  next: "अगला",
+  relatedVideos: "संबंधित वीडियो",
+  relatedProducts: "संबंधित उत्पाद",
+  relatedArticles: "संबंधित तकनीकी लेख",
+  viewAll: "सभी देखें",
+  viewDetails: "विवरण देखें",
+  activeSeriesFilter: "इस सीरीज़ की मार्गदर्शिकाएँ",
+  clearSeriesFilter: "सीरीज़ फ़िल्टर हटाएँ",
+  category: "श्रेणी:",
+  defaultVideoDescription: "इंस्टॉलेशन, चयन और अनुप्रयोग की संबंधित मार्गदर्शिकाएँ देखें।",
+  defaultProductDescription: "इसी सीरीज़ के उत्पाद देखें।",
+  defaultArticleDescription: "इस सीरीज़ से जुड़े तकनीकी लेख पढ़ें।",
+};
+
+export const germanRelatedArticleText = {
+  heading: "Weiterführende Fachartikel",
+  action: "Artikel lesen",
+} as const;
+
+export function getRelatedResourcesText(locale: RelatedResourcesUiLocale) {
+  if (locale === "de") return germanRelatedResourcesText;
+  if (locale === "it") return italianRelatedResourcesText;
+  if (locale === "hi") return hindiRelatedResourcesText;
   return relatedResourcesText[locale] ?? relatedResourcesText.en;
 }
 

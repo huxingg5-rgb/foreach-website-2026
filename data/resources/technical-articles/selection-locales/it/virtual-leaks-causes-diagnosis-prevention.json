@@ -1,0 +1,363 @@
+{
+  "kind": "selection",
+  "family": "instrument",
+  "copy": {
+    "metadata": {
+      "title": "Prove di tenuta: come individuare e prevenire le perdite virtuali",
+      "seoTitle": "Prove di tenuta: individuare e prevenire le perdite virtuali | FOREACH",
+      "seoDescription": "Evacuazione lenta senza segnale all’elio? Scopri come volumi intrappolati, fori ciechi filettati e degassamento influiscono sulle prove di tenuta e come diagnosticare e prevenire le perdite virtuali.",
+      "coverImage": "/images/resources/technical-articles/virtual-leaks/trapped-volume-neutral.webp",
+      "coverAlt": "Schema in sezione del gas intrappolato tra due saldature che entra lentamente in una camera a vuoto"
+    },
+    "deck": "Se la prova di tenuta non rileva perdite evidenti ma l’evacuazione rallenta, verificare anche volumi intrappolati interni e degassamento dei materiali. Fori ciechi filettati, tenute in tandem e spazi tra saldature possono trattenere gas e rilasciarlo attraverso passaggi stretti. Le curve di evacuazione e le prove di risalita della pressione orientano la diagnosi. Per escludere una perdita reale servono più riscontri, anche in assenza di risposta all’elio.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Nel collaudo finale di componenti o gruppi a tenuta di gas, la perdita misurata può oscillare intorno al limite di accettazione. Una prova rileva un valore basso, la successiva un valore più alto. Apparecchiature a vuoto e circuiti fluidici che lavorano sotto la pressione atmosferica possono mostrare un problema simile. Il cercafughe non indica un punto preciso, l’evacuazione richiede più tempo e la pressione di lavoro richiesta non viene raggiunta."
+      },
+      {
+        "type": "paragraph",
+        "text": "Cercare sia sorgenti di gas interne sia aperture verso l’esterno. Il gas intrappolato in produzione o durante il montaggio può uscire solo attraverso un passaggio ristretto. È un caso tipico di perdita virtuale da volume intrappolato. Degassamento dei materiali, desorbimento dell’umidità e rievaporazione del liquido residuo possono causare sintomi simili e vanno esaminati separatamente."
+      }
+    ],
+    "sections": [
+      {
+        "title": "In che cosa differiscono le perdite reali, esterne, interne e virtuali?",
+        "tocLabel": "Tipi di perdita",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I termini descrivono aspetti diversi. La distinzione fra reale e virtuale riguarda soprattutto l’origine del gas. Quella fra esterna e interna riguarda il percorso. Le quattro categorie possono sovrapporsi. Prima di scegliere una prova, stabilire da dove viene il gas e dove va."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Perdita reale: il gas fluisce da una pressione maggiore a una minore attraverso un foro, una crepa o un’interruzione nella tenuta. Un cercafughe può localizzarla con sensibilità, accesso del gas tracciante e tempo di risposta adeguati.",
+              "Perdita esterna: il gas attraversa il confine fra sistema e ambiente. Nei sistemi a vuoto il gas esterno entra di solito nel sistema. Nei circuiti fluidici in pressione positiva, il fluido può uscire nell’ambiente.",
+              "Perdita interna: il gas passa fra camere o linee che dovrebbero restare isolate, per esempio attraverso una valvola chiusa. Isolare i tratti, controllare mantenimento o risalita della pressione e introdurre il gas tracciante dal lato previsto dalla configurazione di prova.",
+              "Perdita virtuale: il gas accumulato in uno spazio morto interno entra lentamente nella camera a vuoto per un passaggio a bassa conduttanza, simulando una perdita persistente. Degassamento, desorbimento, rievaporazione e permeazione aumentano anch’essi il carico di gas e a volte vengono raggruppati sotto lo stesso termine. Distinguerli durante la diagnosi."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per una perdita reale, cercare il percorso della perdita. Per una perdita virtuale, cercare gas intrappolato e sorgenti interne di rilascio. L’assenza di risposta dopo l’applicazione di elio indica soltanto che nelle condizioni di prova non è emerso un segnale corrispondente. Servono altri riscontri per escludere una perdita reale."
+          }
+        ]
+      },
+      {
+        "title": "Perché una perdita virtuale può rallentare l’evacuazione senza produrre un segnale all’elio?",
+        "tocLabel": "Meccanismo della perdita virtuale",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Un collegamento più lungo e più stretto tra volume intrappolato e camera presenta in genere conduttanza inferiore. Il gas immagazzinato esce più lentamente. Quando la pressione nella camera è già bassa, il gas può ancora entrare dalla cavità e produrre una lunga coda nella curva di evacuazione."
+          },
+          {
+            "type": "formula",
+            "expression": "q_total ≈ S_eff × p",
+            "note": "Bilancio approssimato del gas in regime stazionario: q_total è il carico totale in mbar·L/s, S_eff è la velocità di pompaggio effettiva alla camera in L/s e p è la pressione assoluta in mbar. Usare questa relazione semplificata se sono trascurabili gli effetti della pressione di base della pompa e il carico di gas è quasi stazionario. Per S_eff serve la velocità effettiva alla camera, che può differire dal dato di targa."
+          },
+          {
+            "type": "paragraph",
+            "text": "A parità di carico di gas, una velocità di pompaggio effettiva maggiore può ridurre la pressione nella camera. La cavità rimane. Fra due saldature, quella esterna a tenuta può impedire all’elio di raggiungere la cavità, mentre un piccolo passaggio sul lato vuoto consente al gas intrappolato di uscire verso la camera. Una pressione anomala e l’assenza di un chiaro segnale all’elio possono quindi coesistere."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/virtual-leaks/trapped-volume-neutral.webp",
+            "width": 1200,
+            "height": 760,
+            "alt": "Perdita virtuale da volume intrappolato: il gas entra nella camera a vuoto, mentre la saldatura esterna blocca l’accesso dell’elio",
+            "caption": "1 Camera a vuoto. 2 Parete. 3 Cavità con gas intrappolato. 4 Rilascio lento attraverso una fessura sul lato vuoto. 5 Saldatura esterna a tenuta. 6 L’elio applicato all’esterno rimane fuori dalla cavità. Schema in sezione fuori scala. La geometria che trattiene il gas resta anche dopo l’evacuazione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Alcuni spazi morti si riempiono di nuovo quando il sistema torna alla pressione atmosferica. L’evacuazione successiva sviluppa una coda simile, che si può scambiare per una perdita reale stabile. Umidità adsorbita o condensa possono anche rimanere sulle superfici più fredde, desorbire o rievaporare più volte e allungare l’evacuazione."
+          }
+        ]
+      },
+      {
+        "title": "Quali strutture possono intrappolare gas e creare perdite virtuali?",
+        "tocLabel": "Volumi intrappolati",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Queste perdite virtuali spesso hanno origine nella progettazione o nel montaggio. Cercare sia un volume capace di trattenere gas sia un passaggio ristretto verso il lato a bassa pressione. Un foro cieco o due tenute da soli sono insufficienti per una diagnosi."
+          },
+          {
+            "type": "subheading",
+            "title": "Fori ciechi filettati: il gas sotto la vite esce attraverso il gioco della filettatura"
+          },
+          {
+            "type": "paragraph",
+            "text": "Una vite in un foro cieco filettato può intrappolare gas sotto la punta. Senza uno sfiato dedicato, il gas esce lentamente attraverso il gioco verso la camera e l’elio esterno non può raggiungere direttamente il fondo. Viti sfiatate o appositi fori di sfiato possono aiutare. Lo sfiato modifica la sezione resistente e la capacità di carico della vite, perciò verificare anche la resistenza meccanica."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/virtual-leaks/blind-thread-neutral.webp",
+            "width": 1200,
+            "height": 800,
+            "alt": "Il gas intrappolato sotto una vite in un foro cieco filettato passa lentamente attraverso il gioco della filettatura nella camera a vuoto",
+            "caption": "1 Camera a vuoto. 2 Testa della vite. 3 Parete. 4 Spazio morto sotto la vite. 5 Passaggio ristretto attraverso il gioco della filettatura. 6 Fondo chiuso del foro cieco. Filettature e giochi sono schematici. La parete esterna chiusa impedisce all’elio di raggiungere direttamente la cavità."
+          },
+          {
+            "type": "subheading",
+            "title": "Doppie saldature, tenute in tandem e superfici di accoppiamento delle flange: gas fra due barriere"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Doppi cordoni d’angolo: un cordone esterno a tenuta d’aria e un piccolo passaggio sul lato vuoto possono racchiudere una sacca di gas. In fase di progetto, definire confine a tenuta e percorso di sfiato. Valutare saldatura intermittente o sfiato dedicato in base a carichi meccanici, pulizia e tenuta.",
+              "Tenute in tandem: si può accumulare gas fra due O-ring se lo spazio intermedio è privo di sfiato o presa di monitoraggio. L’elio esterno può non raggiungere la tenuta interna. Quando il progetto lo consente, prevedere una presa intermedia per sfiato, pompaggio o prova e verificare ogni tenuta separatamente. Modificare le scanalature solo dopo aver verificato la tenuta.",
+              "Flange e guarnizioni: serraggio inadeguato, contatto localizzato o deformazione della guarnizione possono creare spazi poco ventilati. Controllare compressione e serraggio secondo i requisiti di montaggio. Risolvere i problemi di contatto o sfiato prima di aumentare la forza."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "In che modo il degassamento di materiali e superfici può somigliare a una perdita virtuale?",
+        "tocLabel": "Degassamento",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Materiali e superfici possono rilasciare gas anche in assenza di una cavità. La correzione dipende dalla sorgente. Scelta dei materiali, pulizia, asciugatura e un trattamento termico adeguato agiscono su alcune sorgenti di degassamento. Per volumi intrappolati spesso serve uno sfiato migliore."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Grassi, tenute e residui di pulizia: acqua, aria, solventi e altri gas trattenuti nei materiali possono contribuire al carico di gas per desorbimento, diffusione o evaporazione. Scegliere i materiali in base al vuoto obiettivo e ridurre quantità non necessarie e residui.",
+              "Tensione di vapore e temperatura: il rilascio di gas da lubrificanti, olio e acqua dipende dalla temperatura. Per alto e ultra-alto vuoto valutare anche metalli, leghe di saldatura e finiture superficiali. L’idoneità per il vuoto richiede verifiche specifiche oltre a quelle per i comuni circuiti di liquidi.",
+              "Strati anodizzati e porosi: le superfici porose offrono più possibilità di adsorbimento e ritenzione di gas. L’idoneità dipende dal processo di trattamento, dalla pulizia e dalla pressione obiettivo. La resistenza alla corrosione è un criterio distinto.",
+              "Ceramica, metalli e vetro: porosità e densità della ceramica dipendono dalla lavorazione. Anche i materiali densi acquisiscono strati superficiali adsorbiti dopo l’esposizione all’aria. Il trattamento termico può ridurre alcuni carichi di gas nei materiali compatibili. Per pori passanti, crepe o perdite reali occorrono interventi sulla tenuta."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Pulizia, asciugatura e trattamento termico devono rispettare i limiti di tenute, adesivi, sensori e altri componenti. Prima di aumentare la temperatura per accelerare il rilascio di gas, verificare i limiti di ogni componente del circuito."
+          }
+        ]
+      },
+      {
+        "title": "Come aiutano a diagnosticare le perdite virtuali le curve di evacuazione e le prove di risalita della pressione?",
+        "tocLabel": "Diagnosi e controlli",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Confrontare pressione e tempo con i dati di riferimento di un sistema integro, mantenendo il più possibile costanti volume della camera, pompa, posizioni delle valvole, tubi, temperatura e condizioni di sfiato precedenti. Un’evacuazione più lenta seguita da una pressione finale simile suggerisce degassamento o perdita virtuale. Una pressione di plateau più alta può dipendere da una perdita reale, un degassamento persistente o prestazioni di pompaggio diverse. Servono altre verifiche per stabilire la causa."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per una prova di risalita della pressione, evacuare la camera, isolarla dalla pompa e registrare la pressione assoluta nel tempo. Con volume e temperatura stabili e altri effetti controllati, una pendenza abbastanza costante suggerisce una sorgente continua di gas. Una pendenza decrescente è coerente con il degassamento o lo svuotamento graduale di una cavità. Continuare a pompare e ripetere la misura sullo stesso intervallo. Perdite reali e degassamento possono coesistere."
+          },
+          {
+            "type": "formula",
+            "expression": "q_apparent ≈ V × Δp / Δt",
+            "note": "V è il volume effettivo del gas isolato in L, Δp è la variazione di pressione assoluta in mbar, Δt è il tempo in s e q_apparent è espresso in mbar·L/s. Usare con volume e temperatura pressoché stabili. Il risultato è un carico di gas apparente finché non si distinguono perdite reali, degassamento, gas intrappolato e perdite della valvola di isolamento."
+          },
+          {
+            "type": "paragraph",
+            "text": "Usare la tabella per decidere quali verifiche fare per prime. Elaborare criteri di accettazione con evidenze che vadano oltre un singolo sintomo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Comportamento osservato",
+              "Prime ipotesi",
+              "Controlli successivi"
+            ],
+            "rows": [
+              [
+                "L’evacuazione è più lenta, ma prolungando il pompaggio si avvicina alla pressione finale precedente",
+                "Degassamento o perdita virtuale da volume intrappolato. Verificare anche il percorso di pompaggio",
+                "Verificare pompa, posizioni delle valvole, pulizia, asciugatura e spazi morti. Eseguire trattamenti nei limiti dei materiali"
+              ],
+              [
+                "La pressione si stabilizza più in alto e, in prove ripetute, la pendenza di risalita rimane pressoché costante",
+                "Perdita reale o altra sorgente continua di gas",
+                "Verificare temperatura e volume effettivo, isolare i tratti e localizzare le perdite con un gas tracciante idoneo"
+              ],
+              [
+                "Dopo aver chiuso la valvola, la pressione da un lato influisce ancora sulla camera isolata a bassa pressione",
+                "Perdita dalla valvola di isolamento o tra camere",
+                "Controllare separatamente i due lati e misurare la pressione per tratti. Applicare il gas tracciante al lato sospetto, se opportuno"
+              ],
+              [
+                "La prova statica sembra normale, ma compare un segnale di perdita durante il movimento",
+                "Tenuta mobile o variazione del carico meccanico",
+                "Provare con movimento e differenziale di pressione specificati. Controllare stelo, tenute e carichi sulle connessioni. Valutare un isolamento a soffietto se necessario"
+              ],
+              [
+                "L’evacuazione rallenta dopo esposizione a gas umido o dopo un lungo periodo all’aria",
+                "Adsorbimento, desorbimento o rievaporazione di acqua",
+                "Verificare alimentazione del gas e modalità di sfiato. Pulire, asciugare e prolungare il pompaggio, o eseguire un trattamento termico nei limiti dei componenti"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Se le letture oscillano, controllare anche calibrazione dello strumento, fondo, campo di misura, accesso del gas tracciante e tempo di attesa. L’assenza di risposta all’elio ha valore solo se il metodo di prova può raggiungere il punto sospetto e rilevarne il segnale."
+          }
+        ]
+      },
+      {
+        "title": "Come ridurre le perdite virtuali in progettazione e montaggio?",
+        "tocLabel": "Progettazione e prevenzione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Verificare la geometria individuando dove il gas può accumularsi e come può uscire. Prestare particolare attenzione a fori ciechi filettati, saldature sui due lati, tenute in tandem e superfici di accoppiamento delle flange. La presenza di uno spazio morto, da sola, è insufficiente per diagnosticare una perdita virtuale. Verificare i percorsi di evacuazione poco chiari."
+          },
+          {
+            "type": "paragraph",
+            "text": "Verificare che cosa il processo lascia nei materiali e sulle superfici e come rimuoverlo. Prima del montaggio definire pulizia, asciugatura, conservazione e degassamento compatibile per superfici che trattengono umidità, lubrificanti, residui e strati porosi. Dopo il montaggio conservare i riferimenti di evacuazione e risalita della pressione per distinguere in seguito contaminazione, cambiamenti strutturali e perdite reali."
+          },
+          {
+            "type": "paragraph",
+            "text": "Anche nelle connessioni dei circuiti fluidici di strumenti in depressione, verificare posizione delle tenute, accoppiamento dei tubi e spazi che si formano nel montaggio. I raccordi FOREACH per tubi rigidi indicati sotto sono esempi di strutture di connessione. Per determinarne eventuale idoneità all’alto o ultra-alto vuoto e tasso di perdita, occorrono la documentazione del modello e le condizioni operative reali. Gli schemi del vuoto illustrano solo il principio."
+          },
+          {
+            "type": "paragraph",
+            "text": "Affrontare le perdite virtuali è in genere più semplice durante la progettazione. Controllare in anticipo volumi intrappolati, percorsi di sfiato e stato dei materiali può ridurre prove di tenuta ripetute, smontaggi e pulizia dopo l’assemblaggio."
+          }
+        ]
+      },
+      {
+        "title": "Approfondimenti e riferimenti tecnici",
+        "tocLabel": "Riferimenti",
+        "blocks": [
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/",
+                "label": "Scelta dei raccordi per tubi rigidi: struttura, installazione e manutenzione"
+              },
+              {
+                "href": "/en/resources/technical-articles/fitting-material-selection-guide/",
+                "label": "Scelta dei materiali dei raccordi: corpo, tenute e fluidi"
+              },
+              {
+                "href": "https://www.pfeiffervacuum.com/il/en/knowledge/vacuum-technology/knowledge-book/3-mechanical-components-in-vacuum/3.3-connections.html",
+                "label": "Pfeiffer Vacuum Knowledge Book: connessioni e sfiato dei fori ciechi"
+              },
+              {
+                "href": "https://www.pfeiffervacuum.com/il/en/knowledge/vacuum-technology/knowledge-book/3-mechanical-components-in-vacuum/3.2-materials.html",
+                "label": "Pfeiffer Vacuum Knowledge Book: materiali e degassamento superficiale"
+              },
+              {
+                "href": "https://www.leybold.com/content/leybold/en/knowledge/vacuum-fundamentals/leak-detection/pressure-rise-and-drop-tests.html",
+                "label": "Leybold Vacuum Fundamentals: prove di risalita e calo della pressione"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [],
+    "cta": {
+      "title": "Verifica delle connessioni e delle tenute di un circuito a vuoto",
+      "description": "Indica fluido, pressione assoluta obiettivo, temperatura, disposizione delle connessioni e registrazioni pressione-tempo per definire condizioni di selezione e validazione.",
+      "contactLabel": "Contatta l’assistenza tecnica",
+      "productsLabel": "Scopri i prodotti per la gestione dei fluidi",
+      "productsHref": "/en/products/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "leak-types",
+      "label": "In che cosa differiscono le perdite reali, esterne, interne e virtuali?"
+    },
+    {
+      "id": "gas-load",
+      "label": "Perché una perdita virtuale può rallentare l’evacuazione senza produrre un segnale all’elio?"
+    },
+    {
+      "id": "trapped-volumes",
+      "label": "Quali strutture possono intrappolare gas e creare perdite virtuali?"
+    },
+    {
+      "id": "materials-outgassing",
+      "label": "In che modo il degassamento di materiali e superfici può somigliare a una perdita virtuale?"
+    },
+    {
+      "id": "field-diagnosis",
+      "label": "Come aiutano a diagnosticare le perdite virtuali le curve di evacuazione e le prove di risalita della pressione?"
+    },
+    {
+      "id": "design-prevention",
+      "label": "Come ridurre le perdite virtuali in progettazione e montaggio?"
+    },
+    {
+      "id": "further-reading",
+      "label": "Approfondimenti e riferimenti tecnici"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Prove di tenuta: come individuare e prevenire le perdite virtuali"
+    ],
+    "mentions": [
+      "Perdite virtuali",
+      "Volumi intrappolati",
+      "Degassamento",
+      "Fori ciechi filettati",
+      "Tenute in tandem",
+      "Prove di risalita della pressione"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "809032",
+      "title": "HFL-M6-16-PV-N · Flangiato",
+      "href": "/en/products/fittings/hard-tube-fittings/hfl-m6-16-pv-n",
+      "imageSrc": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-n-main.jpg",
+      "imageAlt": "HFL-M6-16-PV-N · Flangiato",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    },
+    {
+      "id": "809776",
+      "title": "HN6-M6-16-PV-N · A ogiva",
+      "href": "/en/products/fittings/hard-tube-fittings/hn6-m6-16-pv-n",
+      "imageSrc": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pv-n-main.jpg",
+      "imageAlt": "HN6-M6-16-PV-N · A ogiva",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    }
+  ],
+  "footerProducts": [
+    {
+      "id": "809032",
+      "title": "HFL-M6-16-PV-N · Flangiato",
+      "href": "/en/products/fittings/hard-tube-fittings/hfl-m6-16-pv-n",
+      "imageSrc": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hfl-m6-16-pv-n-main.jpg",
+      "imageAlt": "HFL-M6-16-PV-N · Flangiato",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "809758",
+      "title": "HF6-M6-20-PV-N · Flangiato",
+      "href": "/en/products/fittings/hard-tube-fittings/hf6-m6-20-pv-n",
+      "imageSrc": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pv-n-main.jpg",
+      "imageAlt": "HF6-M6-20-PV-N · Flangiato",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "809776",
+      "title": "HN6-M6-16-PV-N · A ogiva",
+      "href": "/en/products/fittings/hard-tube-fittings/hn6-m6-16-pv-n",
+      "imageSrc": "/images/products/fittings/hard-tube-fittings/compact-ferrule-fitting/hn6-m6-16-pv-n-main.jpg",
+      "imageAlt": "HN6-M6-16-PV-N · A ogiva",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "809108",
+      "title": "HNF-M6-16-PV-N · A ogiva",
+      "href": "/en/products/fittings/hard-tube-fittings/hnf-m6-16-pv-n",
+      "imageSrc": "/images/products/fittings/hard-tube-fittings/standard-ferrule-fitting/hnf-m6-16-pv-n-main.jpg",
+      "imageAlt": "HNF-M6-16-PV-N · A ogiva",
+      "imageAspectRatio": 1
+    }
+  ]
+}

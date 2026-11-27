@@ -1,4 +1,5 @@
 import type { SelectionLocale } from "./product-selection.types";
+import { getHindiValveSelectionIntro } from "./valve-selection.hi";
 
 type HpValveIntroCopy = {
   title: string;
@@ -8,7 +9,31 @@ type HpValveIntroCopy = {
 };
 
 // HP PS-120C-2604-00001-001: function on p. 4, product specifications on p. 6.
-const hpValveIntroCopy: Record<SelectionLocale, HpValveIntroCopy> = {
+const hpValveIntroCopy: Record<SelectionLocale | "de" | "it" | "hi", HpValveIntroCopy> = {
+  hi: {
+    title: getHindiValveSelectionIntro("high-pressure-valves")!.title,
+    paragraphs: getHindiValveSelectionIntro("high-pressure-valves")!.paragraphs.slice(0, 2),
+    imageAlt: getHindiValveSelectionIntro("high-pressure-valves")!.imageAlt,
+    detailLabel: "HP वाल्व के द्रव पथ, विनिर्देश और अनुप्रयोग देखें",
+  },
+  it: {
+    title: "HP · Valvola rotativa ad alta pressione a 6 vie e 2 posizioni, con sfiato per HPLC",
+    paragraphs: [
+      "La valvola rotativa ad alta pressione FOREACH HP è un componente fluidico OEM per campionatori automatici HPLC e strumenti analitici. Le due posizioni principali a sei vie lavorano con un loop di campionamento esterno. La posizione di caricamento prepara il campione, quella di iniezione collega il loop alla fase mobile. Una posizione separata apre il percorso di sfiato. La valvola si coordina con il meccanismo di caricamento, la pompa HPLC e il controllore.",
+      "HP ha pressione massima di esercizio di 25 MPa, diametro di passaggio di 0.4 mm, volume interno di 0.8 μL e attacchi 10-32 UNF. Verificare la compatibilità dei materiali a contatto con campione, fase mobile e liquidi di lavaggio. Valutare insieme loop, tubi e raccordi per confermare pressione del sistema, collegamenti e tempi di commutazione.",
+    ],
+    imageAlt: "FOREACH HP, valvola rotativa ad alta pressione a 2 posizioni e 6 vie con sfiato",
+    detailLabel: "Vedi percorsi fluidici, specifiche e applicazioni della valvola HP",
+  },
+  de: {
+    "title": "HP-Hochdruck-Drehschaltventil mit zwei Stellungen, sechs Anschlüssen und Entlüftung für die HPLC",
+    "paragraphs": [
+      "Das FOREACH HP-Hochdruck-Drehschaltventil ist ein OEM-Fluidikbauteil für HPLC-Autosampler und Analysengeräte. Die beiden Hauptstellungen mit sechs Anschlüssen arbeiten mit einer externen Probenschleife. In Ladestellung wird die Probe vorbereitet, in Injektionsstellung wird die Schleife in den Fluidpfad der mobilen Phase eingebunden. Eine separate Entlüftungsstellung öffnet den Entlüftungspfad. Das Ventil arbeitet mit der Probenladeeinheit, der HPLC-Pumpe und der Steuerung zusammen, um diese Schritte aufeinander abzustimmen.",
+      "Das HP-Ventil hat einen maximalen Betriebsdruck von 25 MPa, einen Durchgangsdurchmesser von 0.4 mm, ein internes Ventilvolumen von 0.8 μL und Anschlüsse mit 10-32 UNF. Prüfen Sie die Verträglichkeit der medienberührten Werkstoffe mit Probe, mobiler Phase und Reinigungsflüssigkeiten. Berücksichtigen Sie Probenschleife, Leitungen und Fittings gemeinsam, wenn Sie Systemdruck, Fluidikanschlüsse und Schaltzeiten festlegen."
+    ],
+    "imageAlt": "FOREACH HP-Hochdruck-Drehschaltventil mit zwei Stellungen, sechs Anschlüssen und Entlüftung",
+    "detailLabel": "Fluidpfade, technische Daten und Anwendungen des HP-Ventils ansehen"
+  },
   zh: {
     title: "用于 HPLC 自动进样的 HP 二位六通带排气高压旋转阀",
     paragraphs: [
@@ -65,7 +90,7 @@ const hpValveIntroCopy: Record<SelectionLocale, HpValveIntroCopy> = {
   },
 };
 
-export function getHpValveIntro(locale: SelectionLocale) {
+export function getHpValveIntro(locale: SelectionLocale | "de" | "it" | "hi") {
   const copy = hpValveIntroCopy[locale];
   const href = `${locale === "zh" ? "" : `/${locale}`}/products/valves/high-pressure-valves/hp/`;
   return {

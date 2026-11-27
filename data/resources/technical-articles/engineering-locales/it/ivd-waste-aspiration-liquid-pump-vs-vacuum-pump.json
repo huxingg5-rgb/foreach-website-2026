@@ -1,0 +1,434 @@
+{
+  "metadata": {
+    "title": "Aspirazione degli scarichi IVD: pompa per liquidi o per vuoto? Aspirazione diretta e indiretta",
+    "seoTitle": "Aspirazione degli scarichi IVD: pompa per liquidi o per vuoto? Metodi diretti e indiretti",
+    "seoDescription": "Scopri il pompaggio diretto, l’aspirazione indiretta a vuoto e le condizioni gas-liquido nel lavaggio delle sonde e negli scarichi delle cuvette IVD. Confronta percorso del fluido, portata, vuoto, protezione dal troppo pieno, compatibilità dei materiali e validazione del sistema.",
+    "coverImage": "/images/resources/technical-articles/ivd-waste-aspiration-pump-selection/ivd-direct-vs-vacuum-aspiration-it.svg",
+    "coverAlt": "Confronto del percorso del fluido nel pompaggio diretto e nell’aspirazione indiretta a vuoto degli scarichi IVD"
+  },
+  "deck": "Lavaggio delle sonde, pulizia delle cuvette di reazione e normale rimozione degli scarichi negli strumenti IVD rientrano nell’aspirazione degli scarichi. I criteri di scelta cambiano a seconda che lo scarico passi direttamente per una pompa per liquidi o entri prima in un recipiente di raccolta messo in depressione da una pompa per vuoto.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Prima di scegliere la pompa, rispondere a quattro domande. Lo scarico passa nella pompa? Dopo la rimozione del liquido continua a entrare aria? Il sistema richiede il trasferimento continuo del liquido o l’evacuazione in cicli brevi? Lo scarico contiene schiuma, particelle, residui cristallizzati o agenti di pulizia corrosivi?"
+    },
+    {
+      "type": "notice",
+      "label": "Distinzione principale:",
+      "text": "Nel pompaggio diretto la pompa trasferisce il liquido ed entra in contatto con tutto lo scarico. Nell’aspirazione indiretta a vuoto, la pompa rimuove soprattutto il gas sopra il liquido nel recipiente di raccolta, mentre lo scarico di solito rimane nel recipiente. La capacità di trattare insieme gas e liquidi riguarda il fluido. Le protezioni rimangono necessarie in entrambe le architetture."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Tracciare il percorso dello scarico prima di scegliere la pompa",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/ivd-waste-aspiration-pump-selection/ivd-direct-vs-vacuum-aspiration-it.svg",
+          "alt": "Confronto tra posizione della pompa, recipiente di raccolta e percorso di protezione dal troppo pieno nel pompaggio diretto e nell’aspirazione indiretta a vuoto degli scarichi IVD",
+          "width": 1600,
+          "height": 900,
+          "caption": "Figura 1 | Nel pompaggio diretto lo scarico passa attraverso la pompa. Nell’aspirazione indiretta, lo scarico rimane nel recipiente di raccolta e la pompa crea il vuoto dal lato gas. Le protezioni sono elementi del sistema da prevedere separatamente dalla pompa."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concetto",
+            "Fluido che entra principalmente in contatto con la pompa",
+            "Lo scarico attraversa la testa della pompa?",
+            "Funzione principale"
+          ],
+          "rows": [
+            [
+              "Pompaggio diretto del liquido",
+              "Scarico liquido, eventualmente con bolle trascinate",
+              "Sì",
+              "Trasferire lo scarico direttamente al recipiente"
+            ],
+            [
+              "Aspirazione indiretta a vuoto",
+              "Aria, umidità e aerosol",
+              "Di norma no",
+              "Creare e mantenere il vuoto nel recipiente di raccolta"
+            ],
+            [
+              "Capacità di trattare gas e liquidi",
+              "Alternanza fra liquido, bolle e aria",
+              "Dipende dall’architettura",
+              "Gestire aspirazione a secco, tappi di liquido o umidità. Il dosaggio di precisione richiede una funzione distinta"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La capacità di trattare gas e liquidi è utile nel pompaggio diretto o per tollerare eventi anomali dal lato vuoto. Definire comunque il fluido principale che entra nella pompa, e predisporre rilevamento del livello, protezione dal troppo pieno e filtrazione."
+        }
+      ]
+    },
+    {
+      "title": "2. Gli scarichi IVD raramente sono liquidi stabili e monofase",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La rimozione dello scarico da sonde e cuvette di reazione è in genere intermittente. Il liquido entra quando si apre una valvola, compaiono bolle al calare del livello e l’aspirazione può continuare dopo lo svuotamento per ridurre il residuo. I tensioattivi possono produrre schiuma. Residui proteici o di reagente possono depositarsi, cristallizzare o ostruire passaggi stretti."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Fase del ciclo",
+            "Stato del fluido",
+            "Errore frequente nell’interpretazione del parametro",
+            "Che cosa verificare"
+          ],
+          "rows": [
+            [
+              "Ingresso del liquido",
+              "Scarico liquido continuo o intermittente",
+              "Usare la portata libera di gas come portata di liquido",
+              "Volume effettivamente trasferito, contropressione, viscosità e liquido residuo"
+            ],
+            [
+              "Calo del livello del liquido",
+              "Alternanza fra tappi di liquido e bolle",
+              "Considerare solo la portata media",
+              "Oscillazioni di pressione, riadescamento e tempi delle valvole"
+            ],
+            [
+              "Aspirazione a secco",
+              "Prevalenza di aria",
+              "Supporre che il funzionamento a secco non abbia effetti",
+              "Durata ammessa dell’aspirazione a secco, aumento di temperatura, rumore e vita utile"
+            ],
+            [
+              "Inattività dopo la pulizia",
+              "Residui, depositi o cristallizzazione",
+              "Provare solo una pompa nuova con acqua pulita",
+              "Riavvio, ripristino dopo pulizia e tenuta a lungo termine"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limiti dei parametri:",
+          "text": "Portata libera di gas, portata continua di liquido e velocità effettiva di aspirazione dello scarico sono grandezze diverse. Per conoscere la portata al vuoto massimo occorrono dati alla pressione corrispondente. Misurare il tempo di evacuazione finale nel circuito effettivo."
+        }
+      ]
+    },
+    {
+      "title": "3. Pompaggio diretto: percorso più breve, con la pompa esposta a tutti gli scarichi",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nel pompaggio diretto, la pompa si trova sul percorso dello scarico. È adatto a sistemi con pochi rami, trasferimento continuo o controllo diretto dell’erogazione del liquido. Detergenti, residui di campione, schiuma, cristalli e particelle passano tutti attraverso la testa. Nella validazione includere quindi membrana, valvole, camera e contropressione a valle."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Aspetto",
+            "Vantaggi del pompaggio diretto",
+            "Aspetti da gestire"
+          ],
+          "rows": [
+            [
+              "Architettura",
+              "Percorso breve e numero relativamente ridotto di componenti",
+              "La pompa entra in contatto con tutto lo scarico"
+            ],
+            [
+              "Rimozione del liquido",
+              "Può trasferire il liquido in continuo al recipiente di scarico",
+              "Occorre controllare contropressione in uscita e riflusso"
+            ],
+            [
+              "Più rami",
+              "I singoli rami sono facili da verificare separatamente",
+              "Possono servire altre pompe o controlli delle valvole"
+            ],
+            [
+              "Manutenzione",
+              "Si evita lo svuotamento periodico di un recipiente di raccolta sotto vuoto",
+              "Residui nella pompa, pulizia e depositi nelle valvole diventano più importanti"
+            ],
+            [
+              "Aspirazione a secco",
+              "Può ridurre il liquido residuo a fine ciclo",
+              "Verificare che la pompa tolleri l’alternanza di gas e liquido e possa riadescarsi"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Oltre all’aspirazione iniziale del liquido, verificare la transizione dal funzionamento a umido all’aspirazione a secco, il riadescamento dopo il passaggio di aria, l’effetto dei depositi a lungo termine sulla tenuta delle valvole e il volume residuo finale nella condizione di scarico peggiore."
+        }
+      ]
+    },
+    {
+      "title": "4. Aspirazione indiretta a vuoto: la pompa è separata dallo scarico liquido e servono protezioni",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nell’aspirazione indiretta, la pompa per vuoto riduce la pressione del gas sopra il liquido nel recipiente. Il differenziale richiama lo scarico nel recipiente. Una sorgente di vuoto può servire più rami con un collettore di valvole e la pompa può operare senza contatto diretto con gran parte dello scarico. Recipiente, rilevamento del livello, filtrazione, protezione dal troppo pieno, sfiato e tempi delle valvole devono funzionare insieme."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Elemento di protezione",
+            "Scopo principale",
+            "Rischio tipico in sua assenza"
+          ],
+          "rows": [
+            [
+              "Recipiente di raccolta idoneo al vuoto",
+              "Contenere lo scarico e sopportare il differenziale di pressione",
+              "Deformazione del recipiente, perdite o ingresso di liquido nella linea del vuoto"
+            ],
+            [
+              "Rilevamento del livello del liquido",
+              "Attivare un allarme o un arresto quando il recipiente è pieno",
+              "Scarico e schiuma continuano a fluire a valle"
+            ],
+            [
+              "Protezione dal troppo pieno",
+              "Impedire che il liquido raggiunga la pompa in caso anomalo",
+              "Contaminazione della pompa, del filtro e dello scarico dell’aria"
+            ],
+            [
+              "Filtrazione idrofobica",
+              "Limitare il passaggio di gocce e aerosol a valle",
+              "Aumento della resistenza o perdita di protezione a valle"
+            ],
+            [
+              "Sfiato e rilascio della pressione",
+              "Eliminare il vuoto prima della manutenzione",
+              "Schizzi all’apertura o difficoltà ad aprire il recipiente"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "L’assenza di contatto fra pompa e scarico è un obiettivo progettuale durante il funzionamento normale. Schiuma, riempimento eccessivo, guasto del rilevamento del livello e condensa possono comunque far arrivare gocce al lato vuoto. Un sistema completo richiede protezioni oltre a una pompa per gas collegata a un recipiente vuoto."
+        }
+      ]
+    },
+    {
+      "title": "5. Quando includere la capacità di trattare gas e liquidi nei criteri di scelta?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Condizione da valutare",
+            "Capacità da verificare separatamente"
+          ],
+          "rows": [
+            [
+              "Alternanza ripetuta fra tappi di liquido e aria verso la fine del pompaggio diretto",
+              "Il dosaggio preciso di campioni o reagenti richiede una verifica distinta"
+            ],
+            [
+              "Bolle o schiuma nello scarico di lavaggio delle sonde",
+              "Verificare quantità ammessa di schiuma, particelle e tappi di liquido"
+            ],
+            [
+              "Evacuazione periodica della linea e brevi intervalli di aspirazione a secco",
+              "Verificare le prestazioni rispetto al trasferimento continuo di solo liquido"
+            ],
+            [
+              "Possibile esposizione all’umidità o a piccole quantità di condensa sul lato vuoto",
+              "Prevedere comunque raccolta, protezione dal troppo pieno e filtrazione"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Se il liquido deve attraversare la pompa, specificare rapporto gas-liquido, durata dei tappi di liquido, tempo di aspirazione a secco, particelle e schiuma. Se la pompa è a valle del recipiente di raccolta, specificare volume del gas, perdite, resistenza del filtro e limite di esposizione anomala al liquido. Entrambe le architetture richiedono la validazione dei materiali con il fluido reale."
+        },
+        {
+          "type": "notice",
+          "label": "Separazione delle funzioni:",
+          "text": "Rimozione degli scarichi e dosaggio dei reagenti hanno obiettivi di controllo diversi. Affidare il dosaggio preciso dei campioni o dei reagenti a una funzione separata dalla pompa di scarico o per vuoto. Per dimostrare basse pulsazioni o alta ripetibilità di erogazione occorrono verifiche dedicate anche con pompe capaci di trattare miscele gas-liquido."
+        }
+      ]
+    },
+    {
+      "title": "6. Aspirazione diretta o indiretta: scegliere in base alla funzione",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/ivd-waste-aspiration-pump-selection/ivd-waste-pump-decision-tree-it.svg",
+          "alt": "Diagramma decisionale per l’aspirazione degli scarichi IVD in base al passaggio del fluido nella pompa, al trasferimento continuo e dosato e all’alternanza tra gas e liquido",
+          "width": 1600,
+          "height": 900,
+          "caption": "Figura 2 | Verificare prima se lo scarico passa nella pompa. Stabilire poi se la funzione è trasferimento continuo, generazione del vuoto o gestione dell’alternanza gas-liquido. Portata libera di gas, portata dello scarico e vuoto massimo misurano grandezze diverse."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Criterio di scelta",
+            "Pompaggio diretto del liquido",
+            "Aspirazione indiretta a vuoto"
+          ],
+          "rows": [
+            [
+              "Lo scarico passa nella pompa?",
+              "Sì",
+              "Di norma no"
+            ],
+            [
+              "Rimozione continua del liquido",
+              "Relativamente semplice",
+              "Considerare lo svuotamento del recipiente di raccolta"
+            ],
+            [
+              "Estensione a più rami",
+              "Aggiungere pompe o comandi delle valvole",
+              "Una sorgente di vuoto può servire più rami con tempi di commutazione coordinati"
+            ],
+            [
+              "Rischio principale per i materiali",
+              "La pompa entra in contatto con tutto lo scarico",
+              "Umidità, aerosol e trascinamento anomalo di liquido"
+            ],
+            [
+              "Punto principale di manutenzione",
+              "Residui, valvole e membrana all’interno della pompa",
+              "Recipiente di raccolta, filtro, livello del liquido e tenute"
+            ],
+            [
+              "Prove di accettazione principali",
+              "Volume effettivo trasferito, aspirazione a secco e riadescamento",
+              "Tempo di evacuazione, interazione tra rami e protezione dal troppo pieno"
+            ]
+          ]
+        },
+        {
+          "type": "formula",
+          "expression": "Q_cycle = V_waste / t_cycle",
+          "note": "Q_cycle descrive il solo fabbisogno medio di scarico per ciclo. Per il pompaggio diretto considerare anche portata istantanea, contropressione in uscita e aspirazione a secco. Per l’aspirazione indiretta includere volume del gas nel recipiente, tempo di evacuazione, perdite e ripristino della pressione dopo l’apertura di una valvola."
+        }
+      ]
+    },
+    {
+      "title": "7. Sei errori frequenti e come prevenirli",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Errore frequente",
+            "Perché causa problemi",
+            "Prevenzione"
+          ],
+          "rows": [
+            [
+              "Usare la portata libera di gas come portata dello scarico liquido",
+              "Fluido e resistenza sono diversi nella prova",
+              "Misurare tempo di evacuazione e volume residuo nel circuito effettivo del liquido"
+            ],
+            [
+              "Confrontare solo il vuoto massimo",
+              "La velocità effettiva dipende da tubi, valvole, filtri e perdite",
+              "Registrare la curva pressione-tempo del sistema completo"
+            ],
+            [
+              "Dimensionare solo dal volume in ingresso del liquido di lavaggio",
+              "Dopo aver rimosso il liquido entra molta aria",
+              "Registrare insieme volume di liquido, durata dell’aspirazione a secco e tempi del ciclo"
+            ],
+            [
+              "Omettere la protezione dal troppo pieno nell’aspirazione indiretta",
+              "Schiuma e liquido in eccesso possono raggiungere il lato vuoto",
+              "Prevedere rilevamento del livello, arresto, filtrazione e protezione secondaria"
+            ],
+            [
+              "Basarsi solo sul nome dei materiali",
+              "Concentrazione, temperatura e durata del contatto cambiano il risultato",
+              "Validare immersione, cicli, pulizia e vita utile"
+            ],
+            [
+              "Usare una pompa di scarico per il dosaggio di precisione",
+              "Rimozione degli scarichi e dosaggio hanno obiettivi diversi",
+              "Progettare separatamente dosaggio dei reagenti e aspirazione degli scarichi"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Per valutare l’intero sistema, misurare tempo di evacuazione per ciclo, volume residuo finale, riadescamento dopo aspirazione a secco, interazione fra rami, perdita di carico del filtro, tempo di evacuazione del recipiente, modifiche dei materiali e risposta della protezione a recipiente pieno. La sola presenza di aspirazione è un dato insufficiente."
+        }
+      ]
+    },
+    {
+      "title": "8. Validazione del sistema installato, riferimenti e campo d’uso",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Specificare detergenti, residui di campione, schiuma, particelle, cristallizzazione e l’eventuale presenza di sostanze volatili pericolose.",
+            "Verificare se la pompa entra in contatto con lo scarico liquido o solo con l’umidità sopra il liquido nel recipiente di raccolta.",
+            "Provare con diametro e lunghezza dei tubi, valvole, filtri e livello di liquido effettivi nella condizione peggiore.",
+            "Misurare tempo di evacuazione per ciclo, volume residuo, durata dell’aspirazione a secco e capacità di riadescamento.",
+            "Verificare ripristino della pressione e interazione quando più rami funzionano insieme o in sequenza.",
+            "Verificare allarmi di livello, arresto a recipiente pieno, protezione dal troppo pieno, sfiato e procedure di manutenzione.",
+            "Completare la validazione di compatibilità dei materiali, pulizia, depositi, ciclo di lavoro continuo e vita utile."
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Applicazione correlata: ",
+              "label": "fluidica degli strumenti IVD",
+              "href": "/en/applications/ivd/",
+              "suffix": "."
+            },
+            {
+              "prefix": "Guida correlata: ",
+              "label": "pompa di scarico IVD, a membrana per liquidi o per gas e liquidi",
+              "href": "/en/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
+              "suffix": "."
+            }
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Campo d’uso:",
+          "text": "La guida descrive un circuito generico di scarico per strumenti IVD. Il dosaggio di precisione di campioni o reagenti ha requisiti distinti. Prima di integrare una pompa, validare rischi del sistema completo, materiali, vita utile, requisiti elettrici per apparecchiature medicali e requisiti del sistema qualità. Fluidi infiammabili, tossici o corrosivi richiedono una soluzione dedicata."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulla scelta dell’aspirazione degli scarichi IVD",
+  "faqItems": [
+    {
+      "question": "Un vuoto più spinto rende sempre più rapida l’aspirazione degli scarichi IVD?",
+      "answer": "La velocità effettiva dipende anche da diametro e lunghezza dei tubi, valvole, perdita di carico del filtro, perdite, volume del recipiente e proprietà del liquido. Una depressione eccessiva può anche aumentare schizzi e schiuma."
+    },
+    {
+      "question": "Si può convertire direttamente la portata libera di gas in portata dello scarico liquido?",
+      "answer": "La conversione diretta non è valida perché fluido, pressione e resistenza del circuito sono diversi. Misurare la portata dello scarico con tubi, valvole, livello del liquido e contropressione effettivi."
+    },
+    {
+      "question": "Una normale pompa per liquidi può aspirare direttamente lo scarico del lavaggio delle sonde?",
+      "answer": "Confermare che la pompa tolleri l’aspirazione a secco e l’alternanza gas-liquido previste, possa riadescarsi e abbia materiali compatibili. Validare anche schiuma, residui e depositi nel lungo periodo."
+    },
+    {
+      "question": "L’aspirazione indiretta garantisce che il liquido non raggiunga mai la pompa per vuoto?",
+      "answer": "Riempimento eccessivo, schiuma, condensa o guasti delle protezioni possono comunque far arrivare liquido al lato vuoto. Per questo servono rilevamento del livello, protezione dal troppo pieno e filtrazione."
+    },
+    {
+      "question": "Una sola pompa per vuoto può servire più rami di scarico contemporaneamente?",
+      "answer": "Si può valutare verificando numero di rami aperti contemporaneamente, tempi di commutazione, volume del recipiente, ripristino della pressione e interazione fra rami. Una perdita in un ramo può rallentare gli altri."
+    },
+    {
+      "question": "Come scegliere i materiali con scarichi contenenti ipoclorito, tensioattivi o residui proteici?",
+      "answer": "Nelle prove di immersione, funzionamento ciclico e durata, usare concentrazione, temperatura, tempo di contatto, ciclo di pulizia e depositi effettivi. Includere pompa, tubi, valvole e tenute. I nomi dei materiali da soli sono insufficienti."
+    }
+  ],
+  "cta": {
+    "title": "Stai confrontando aspirazione diretta e indiretta a vuoto per gli scarichi IVD?",
+    "description": "Indica volume di scarico per ciclo, tempo di aspirazione a secco, numero di rami, volume del recipiente di raccolta, tubi e valvole, fluido reale, schiuma e protezione a recipiente pieno. Questi dati servono a esaminare architettura, punto di lavoro e matrice di validazione.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Vedi le pompe a membrana per gas e liquidi",
+    "productsHref": "/en/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump"
+  }
+}

@@ -14,7 +14,7 @@ type ContactInquiryModalProps = {
   onDraftStart?: () => void;
   onComplete?: () => void;
   data: ContactPageData;
-  locale: LocaleCode;
+  locale: LocaleCode | "de" | "it" | "hi";
   initialValues?: { requestType?: string; productType?: string };
   analyticsSourceSection?: string;
 };

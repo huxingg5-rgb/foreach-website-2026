@@ -1,0 +1,411 @@
+{
+  "slug": "piston-pump-head-material-selection",
+  "title": "Come scegliere il materiale per la testa della pompa a pistone",
+  "summary": "Confrontate le testate in acrilico (PMMA), PCTG, PPS, PVDF, PP, PTFE, PEEK, acetale (POM) e polisulfone (PSU) e verificate l’intero circuito a contatto con il fluido.",
+  "seoTitle": "Materiali delle testate per pompe a pistone: PMMA, PEEK e altre opzioni | Foreach Technology",
+  "seoDescription": "Come scegliere il materiale della testata per una pompa a pistone? Confrontate acrilico (PMMA), PCTG, PPS, PVDF, PP, PTFE, PEEK, acetale (POM) e polisulfone (PSU), poi verificate l’intero circuito a contatto con il fluido.",
+  "date": "2026-09-06",
+  "coverImage": "/images/resources/technical-articles/piston-pump/piston-pump-head-material-selection-cover.webp",
+  "coverAlt": "Pompe a pistone Foreach serie EA, SM e TM per la scelta del materiale della testata",
+  "intro": [
+    {
+      "type": "paragraph",
+      "text": "La testata partecipa direttamente ad aspirazione, dosaggio e mandata. Il materiale può influire su compatibilità chimica, stabilità strutturale, tenuta, pulizia, durata e costi di progetto. Per la scelta occorre considerare fluido, temperatura, pressione, tempo di contatto e intero circuito a contatto con il fluido, oltre alla resistenza alla corrosione del singolo materiale."
+    },
+    {
+      "type": "paragraph",
+      "text": "Foreach può valutare copoliestere PCTG, acrilico (PMMA), polifenilensolfuro (PPS), polivinilidenfluoruro (PVDF), polipropilene (PP), politetrafluoroetilene (PTFE), polietere etere chetone (PEEK), acetale (POM), polisulfone (PSU) e altri tecnopolimeri per le testate delle pompe a pistone. Questa è una gamma di configurazioni. La disponibilità a magazzino per ciascun materiale e capacità va confermata. La combinazione finale dipende da fluido, geometria della testata, fattibilità produttiva, spazio di montaggio e requisiti del progetto."
+    },
+    {
+      "type": "notice",
+      "label": "Criterio di scelta: ",
+      "text": "Definite prima il fluido e le condizioni operative effettivi. Valutate poi testata, pistone, guarnizioni, valvole, tubi e raccordi come un unico circuito a contatto con il fluido."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Perché le pompe a pistone richiedono testate in materiali diversi?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Una pompa a pistone può trattare un tampone, una soluzione di lavaggio, un calibratore, un reagente biochimico o una formulazione con componenti organici. Rigonfiamento, fessurazione sotto sforzo, permeazione, sostanze estraibili e adsorbimento variano secondo il fluido. Temperatura, pressione e tempi di contatto prolungati possono cambiare il risultato."
+        },
+        {
+          "type": "paragraph",
+          "text": "La testa della pompa è anche una parte strutturale esposta a connessioni filettate, carichi di sigillazione e pressioni cicliche. Pertanto, la scelta del materiale rappresenta una decisione che tiene conto di aspetti chimici, meccanici, legati alla produzione e ai costi. Il fatto che un materiale sia indicato come compatibile in un tabellone di compatibilità non garantisce necessariamente il suo corretto funzionamento in un determinato design della testa della pompa."
+        }
+      ]
+    },
+    {
+      "title": "Confronto dei materiali più comuni utilizzati per le teste delle pompe a pistone",
+      "parts": [
+        {
+          "type": "table",
+          "headers": [
+            "Materiale",
+            "Direzioni tipiche per la valutazione delle caratteristiche del materiale",
+            "Aspetti da verificare"
+          ],
+          "rows": [
+            [
+              "Acrilico (PMMA)",
+              "Media convenzionali e condizioni operative, con particolare attenzione ai costi",
+              "Solventi organici, fenomeni di crepazione sotto stress, variazioni di temperatura e contatti prolungati"
+            ],
+            [
+              "Copoliestere PCTG",
+              "Percorsi fluidi generali che richiedono resistenza meccanica e facilità di produzione.",
+              "Formulazione specifica, agenti di pulizia e stabilità dimensionale."
+            ],
+            [
+              "Polifenilene sulfide (PPS).",
+              "Requisiti di resistenza alle alte temperature, rigidità o stabilità dimensionale.",
+              "Compatibilità, possibilità di lavorazione, superfici di sigillamento e costi."
+            ],
+            [
+              "Polivinilidene fluoruro (PVDF).",
+              "Soluzioni di acidi, alcali e sali selezionati.",
+              "Concentrazione chimica, temperatura, pressione e combinazione dei materiali di sigillamento."
+            ],
+            [
+              "Polipropilene (PP).",
+              "Percorsi idrici, acidi/alcali o chimici in generale selezionati.",
+              "Rigidezza, temperatura, filettature, carico preliminare e carico a lungo termine."
+            ],
+            [
+              "Politetrafluoroetilene (PTFE).",
+              "Applicazioni che richiedono una vasta resistenza chimica.",
+              "Creep, rigidezza, stabilità dimensionale e geometria idonea."
+            ],
+            [
+              "Polietere etero chetone (PEEK).",
+              "Esigenze più elevate in termini termici, meccanici e chimici.",
+              "Mezzo reale in cui verrà utilizzato, lavorazioni meccaniche, percorsi completamente bagnati e costi di realizzazione."
+            ],
+            [
+              "Acetato (POM).",
+              "Strutture che danno priorità alle proprietà meccaniche ed all’efficienza di lavorazione.",
+              "Acidi, alcali, ossidanti, temperature elevate e esposizioni prolungate."
+            ],
+            [
+              "Polisolfone (PSU).",
+              "Fluidiche di strumenti che richiedono rigidità e resistenza termica.",
+              "Chimici specifici, sollecitazioni meccaniche, processi di pulizia e qualità del materiale."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Queste sono indicazioni di selezione, non garanzie di compatibilità. Diversi gradi, residui di tensioni meccaniche e strutture di assemblaggio possono produrre risultati diversi, anche se il nome del polimero è lo stesso."
+        }
+      ]
+    },
+    {
+      "title": "Note di selezione per i singoli materiali.",
+      "parts": [
+        {
+          "type": "subsections",
+          "items": [
+            {
+              "title": "testate di pompaggio in acrilico (PMMA).",
+              "paragraphs": [
+                "Il polimetilmetacrilato (PMMA), comunemente noto come acrilico, rappresenta spesso una scelta economica per applicazioni in cui non sono richieste particolari proprietà di resistenza alla corrosione o al calore, a temperature e pressioni moderate, e in progetti senza requisiti specifici. Verificare le formulazioni contenenti solventi, chetoni o esteri esaminando la composizione e testando parti rappresentative del prodotto."
+              ]
+            },
+            {
+              "title": "testate di pompa in copoliestere PCTG",
+              "paragraphs": [
+                "Il PCTG è un copoliestere in grado di bilanciare tenacità, facilità di lavorazione e requisiti fluidodinamici generali. È necessario verificare la formula effettiva, la soluzione di pulizia utilizzata, la temperatura e i cambiamenti dimensionali dopo un’esposizione prolungata."
+              ]
+            },
+            {
+              "title": "testate di pompa in polipropilene (PP)",
+              "paragraphs": [
+                "Il polipropilene può essere utilizzato in applicazioni acquose, in ambienti acidi/alcalini o in contesti chimici generali. Tuttavia, l’utilizzo di tali testate richiede una sufficiente rigidità, una corretta capacità di tenuta delle filettature, una adeguata precarica delle guarnizioni e una buona stabilità sotto cicli di pressione."
+              ]
+            },
+            {
+              "title": "testate di pompa in acetato di polimetilene (POM)",
+              "paragraphs": [
+                "Il polioximetilene (POM), comunemente noto come acetato di polimetilene, permette la realizzazione di strutture meccanicamente stabili e facilmente lavorabili. Tuttavia, l’utilizzo in ambienti contenenti acidi, alcali, agenti ossidanti o in condizioni di esposizione chimica prolungata richiede test specifici in base al tipo di materiale e alle condizioni di utilizzo."
+              ]
+            },
+            {
+              "title": "testate di pompa in polifenilensolfuro (PPS)",
+              "paragraphs": [
+                "Il PPS può essere considerato come materiale idoneo quando sono fondamentali caratteristiche come la resistenza alla temperatura, la rigidità e la stabilità dimensionale. È necessario valutare insieme il fluido utilizzato, il processo di pulizia, le sollecitazioni strutturali, le superfici di tenuta e il grado del materiale stesso."
+              ]
+            },
+            {
+              "title": "testate di pompa in fluoruro di polivinilidene (PVDF)",
+              "paragraphs": [
+                "Il PVDF può essere adatto a determinati tipi di soluzioni acide, alcaline e salate. Tuttavia, la sua idoneità dipende ancora dall’identità chimica del fluido, dalla sua concentrazione, dalla temperatura, dalla pressione, dal tempo di contatto, nonché dalle caratteristiche dei sigilli e delle valvole utilizzate."
+              ]
+            },
+            {
+              "title": "testate di pompaggio in politetrafluoroetilene (PTFE)",
+              "paragraphs": [
+                "Il PTFE presenta una notevole resistenza chimica, ma le testate di pompaggio devono anche soddisfare requisiti riguardanti la rigidità, la deformazione sotto carico, le caratteristiche delle filettature, i sigilli e i metodi di produzione. La sola resistenza chimica non è sufficiente."
+              ]
+            },
+            {
+              "title": "testate di pompaggio in polietere eteroetere chetone (PEEK)",
+              "paragraphs": [
+                "Il PEEK è una delle opzioni per condizioni termiche, meccaniche, dimensionali e chimiche impegnative. La compatibilità non è universale. Verificate formulazione effettiva del fluido, temperatura, pressione, metodo di pulizia e intero circuito a contatto con il fluido, considerando anche lavorazione e costi."
+              ]
+            },
+            {
+              "title": "testate di pompaggio in polisolfone (PSU)",
+              "paragraphs": [
+                "Il PSU può essere utilizzato in dispositivi che richiedono rigidità, resistenza termica e stabilità dimensionale. È necessario verificare attentamente le caratteristiche chimiche del materiale, le sollecitazioni a cui è sottoposto, il metodo di pulizia, la qualità del prodotto e gli effetti dell’esposizione a lungo termine."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "EA-500-PMMA ed EA-500-PEEK: esempi di testate di pompaggio con capacità identica",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Foreach EA-500-PMMA e EA-500-PEEK illustrano due opzioni di materiale della testata a parità di capacità nominale di 500 μL. Le configurazioni illustrate prevedono attacchi 1/4-28 UNF o M6 e 2,000 passi a corsa completa. Nelle condizioni di prova specificate, accuratezza e ripetibilità a corsa completa sono entrambe ≤0.5%."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Articolo",
+            "EA-500-PMMA",
+            "EA-500-PEEK"
+          ],
+          "rows": [
+            [
+              "Capacità nominale",
+              "500 μL",
+              "500 μL"
+            ],
+            [
+              "Materiale del manometro visualizzato",
+              "Acrilico (PMMA)",
+              "PEEK"
+            ],
+            [
+              "Pistone visualizzato",
+              "Pistone in ceramica",
+              "Confermare la configurazione selezionata"
+            ],
+            [
+              "Porti idraulici",
+              "Dimensioni 1/4-28 UNF o M6",
+              "Dimensioni 1/4-28 UNF o M6"
+            ],
+            [
+              "passi a corsa completa",
+              "2,000",
+              "2,000"
+            ],
+            [
+              "Prestazioni alla corsa completa",
+              "Accuratezza e ripetibilità ≤0.5%",
+              "Accuratezza e ripetibilità ≤0.5%"
+            ],
+            [
+              "Direzione di funzionamento tipica",
+              "Materiali convenzionali e costi di produzione",
+              "Requisiti materiali più rigorosi"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Valori limite dei parametri:",
+          "text": "I valori valgono nelle condizioni di prova specificate. Cambiare materiale della testata non cambia automaticamente le prestazioni di dosaggio. I modelli illustrati non implicano disponibilità a magazzino per ogni combinazione di materiale e capacità."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Consultare le configurazioni attuali per…",
+              "label": "EA-500-PMMA",
+              "href": "/products/pumps/piston-pump/ea-500-pmma/",
+              "suffix": "E…"
+            },
+            {
+              "label": "EA-500-PEEK",
+              "href": "/products/pumps/piston-pump/ea-500-peek/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Valutare il pistone e l’intero percorso bagnato dal fluido.",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "La testata è solo una parte del circuito a contatto con il fluido. Foreach può valutare pistoni in ceramica di zirconia, ceramica di allumina, PEEK o zaffiro e abbinare attacchi, motori, retroazione ottica, valvole e controllori ai requisiti del progetto."
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Testa della pompa e canali di flusso interni.",
+            "Pistone e sua struttura di sigillamento.",
+            "Corpo della valvola, elementi di controllo, membrana o meccanismi di chiusura.",
+            "Tubazioni, accessori, filtri, sonde e ugelli.",
+            "Adesivi, lubrificanti e materiali ausiliari che possono entrare in contatto con il fluido"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cambiare solo la testata può lasciare problemi di rigonfiamento, adsorbimento, sostanze estraibili, perdite, ostruzioni o durata in altri punti del circuito."
+        }
+      ]
+    },
+    {
+      "title": "Dati necessari per la scelta del materiale",
+      "parts": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "label": "Fluido",
+              "text": "Nome, componenti principali, concentrazione, pH, solventi, particelle o rischio di cristallizzazione. Fornite una scheda di sicurezza (SDS) o un intervallo di formulazione, se opportuno."
+            },
+            {
+              "label": "Temperatura e tempo di contatto",
+              "text": "Distinguete temperature di esercizio, lavaggio, disinfezione, immersione e stoccaggio. Indicate se il fluido rimane nel circuito."
+            },
+            {
+              "label": "Volume e portata di flusso: indicare il volume di fluido trattato e la frequenza di utilizzo dell’apparecchio.",
+              "text": "Dose target, velocità di aspirazione/distribuzione, pressione o contropressione, nonché durata prevista di vita dell’apparecchio."
+            },
+            {
+              "label": "Percorso del fluido e struttura dell’apparecchio: descrivere in dettaglio il percorso del fluido all’interno del sistema e la composizione meccanica dell’apparecchio stesso.",
+              "text": "Porta standard, disposizione delle valvole, dimensioni dei tubi, progettazione del sigillo, spazio di installazione e carichi di assemblaggio."
+            },
+            {
+              "label": "Limitazioni progettuali.",
+              "text": "Quantità del prototipo, piano di produzione, requisiti normativi o legati alla pulizia e limiti di costo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Metodi per verificare la compatibilità dei materiali.",
+      "parts": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "label": "Valutazione della documentazione relativa ai materiali.",
+              "text": "Utilizzare dati specifici sui materiali riguardo alla composizione chimica, concentrazione e temperatura per escludere chiaramente i candidati non idonei."
+            },
+            {
+              "label": "Immergere campioni rappresentativi dei materiali.",
+              "text": "Controllate massa, dimensioni, aspetto, durezza, fessurazione, rigonfiamento, sostanze estraibili e colore per un tempo di contatto rappresentativo."
+            },
+            {
+              "label": "Controllare la struttura e l’efficacia del sigillo.",
+              "text": "Parti rappresentative della macchina e filettature di prova, superfici di sigillamento, carico prestazionale e cicli di pressione."
+            },
+            {
+              "label": "Avviare l’intero sistema.",
+              "text": "Utilizzare il fluido reale o un fluido rappresentativo, alle quantità, temperature, valvole, tubazioni, pressioni inverse, processi di pulizia e velocità di ciclo desiderati; misurare l’accuratezza, la ripetibilità, le perdite e la durata di vita del sistema."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faq": [
+    {
+      "question": "Acrilico (PMMA), PCTG e PEEK sono gli unici materiali Foreach per la testata?",
+      "answer": "No. Il PCTG copoliestere, l’acrilico (PMMA), il PPS, il PVDF, il PP, il PTFE, il PEEK, l’acetale (POM), il polisolfone (PSU) e altri materiali tecnici possono essere valutati in base alle specifiche del progetto."
+    },
+    {
+      "question": "Ogni materiale è disponibile come modello standard per tutte le capacità?",
+      "answer": "Non necessariamente. I modelli sul sito servono alla scelta iniziale. Confermate la combinazione di capacità e materiale in base a fluido, attacchi, valvole, ingombro e quantità previste dal progetto."
+    },
+    {
+      "question": "Qual è il materiale per le testate di pompaggio che offre la migliore resistenza alla corrosione?",
+      "answer": "Non esiste una risposta universale. La compatibilità dipende dalla composizione del materiale, dalla concentrazione del fluido, dalla temperatura, dalla pressione, dal tempo di contatto, dai processi di pulizia e dall’intero percorso di contatto con il fluido."
+    },
+    {
+      "question": "È ancora necessario effettuare test di compatibilità per una testata PEEK?",
+      "answer": "Sì. È necessario verificare il tipo di fluido e le condizioni di utilizzo attraverso analisi dei dati, test di immersione, controlli dimensionali e di tenuta ermetica, nonché la corretta funzionalità del sistema."
+    },
+    {
+      "question": "Può essere utilizzata una testata in PTFE per ogni tipo di sostanza chimica?",
+      "answer": "No. La testata deve inoltre soddisfare requisiti riguardanti la rigidità, la stabilità dimensionale, le caratteristiche del filo, la tenuta ermetica, la resistenza alla pressione e le procedure di produzione."
+    },
+    {
+      "question": "Cambiare il materiale della testata può influenzare le prestazioni di dosaggio?",
+      "answer": "Il materiale non è l’unico fattore determinante; anche la rigidità, la stabilità dimensionale, lo stato della superficie e l’interazione con le guarnizioni e le valvole possono influenzare i risultati del sistema. È necessario effettuare nuove verifiche in caso di modifiche al materiale o alla geometria della testata."
+    }
+  ],
+  "conclusion": {
+    "title": "Conclusione: non esiste un materiale ideale per le testate, senza considerare le condizioni di utilizzo specifiche.",
+    "parts": [
+      {
+        "type": "paragraph",
+        "text": "Il PMMA è spesso una scelta economica per fluidi convenzionali. PCTG, PP e POM rispondono a priorità tecniche diverse. PPS, PVDF, PTFE, PEEK e PSU ampliano la scelta per condizioni termiche, meccaniche o chimiche più impegnative. Il nome del materiale è solo un criterio preliminare."
+      },
+      {
+        "type": "paragraph",
+        "text": "Dopo aver scelto la testata, verificate pistone, guarnizioni, valvole, tubi, raccordi, attacchi e comandi. Provate quindi l’intero sistema al volume di lavoro richiesto."
+      },
+      {
+        "type": "links",
+        "items": [
+          {
+            "prefix": "Per i fondamenti, consultare…",
+            "label": "Che cos’è una pompa a pistone di precisione?",
+            "href": "/resources/technical-articles/micro-plunger-pump-selection/",
+            "suffix": "."
+          },
+          {
+            "prefix": "Per le definizioni relative alle prestazioni, consultare…",
+            "label": "Accuratezza, ripetibilità e risoluzione delle pompe a pistone",
+            "href": "/resources/technical-articles/piston-pump-accuracy-repeatability-resolution/",
+            "suffix": "."
+          },
+          {
+            "prefix": "Esaminare le varie configurazioni delle pompe a pistone.",
+            "label": "Configurazioni delle pompe a pistone Foreach",
+            "href": "/products/pumps/piston-pump/",
+            "suffix": "."
+          }
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "È necessario confermare le opzioni riguardanti la testa della pompa e i materiali a contatto con il fluido?",
+    "description": "Fornire la composizione del fluido, la sua concentrazione, la temperatura, il volume target, la pressione, il metodo di pulizia, i porti, le valvole, il ciclo di funzionamento e lo spazio di installazione per una valutazione completa del sistema.",
+    "contactLabel": "Contattare un ingegnere.",
+    "productsLabel": "Visualizzare le informazioni sulle pompe a pistone."
+  },
+  "subject": {
+    "about": [
+      "Materiali utilizzati per la testa della pompa a pistone",
+      "Compatibilità dei materiali a contatto con il fluido",
+      "Selezione dei materiali per la pompa a pistone"
+    ],
+    "mentions": [
+      "PMMA",
+      "PCTG",
+      "PPS",
+      "PVDF",
+      "PP",
+      "PTFE",
+      "PEEK",
+      "POM",
+      "PSU",
+      "EA-500-PMMA",
+      "EA-500-PEEK"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "copy": {
+    "names": [
+      "Miniatur-Membranmagnetventil mit 3 Wegen für Blockmontage",
+      "Miniatur-Membranmagnetventil mit 3 Wegen und Schlauchtüllen",
+      "Miniatur-Membranmagnetventil mit 3 Wegen und Gewindeanschlüssen",
+      "Miniatur-Membranmagnetventil mit 2 Wegen für Blockmontage",
+      "Miniatur-Membranmagnetventil mit 2 Wegen und Schlauchtüllen",
+      "Miniatur-Membranmagnetventil mit 2 Wegen und Gewindeanschlüssen",
+      "Stromlos offenes Miniatur-Membranmagnetventil mit 2 Wegen für Blockmontage",
+      "Stromlos offenes Miniatur-Membranmagnetventil mit 2 Wegen und Schlauchtüllen",
+      "Stromlos offenes Miniatur-Membranmagnetventil mit 2 Wegen und Gewindeanschlüssen"
+    ],
+    "descriptions": [
+      "mit PEEK-Grundplatte zur direkten Blockmontage und Umschaltung zwischen Reagenzien- und Spülpfaden in OEM-Geräten.",
+      "für den direkten Schlauchanschluss und das Umschalten zwischen Reagenzienversorgung und Leitungsspülung.",
+      "mit M6 oder 1/4-28 UNF und Ventilsitzen unter anderem aus PEEK, PTFE und PVDF zur Umschaltung einer gemeinsamen Leitung zwischen zwei Fließwegen.",
+      "mit PEEK-Grundplatte für die Blockmontage. Es schließt stromlos zur Steuerung der Reagenzienzufuhr in Fluidikmodulen mit mehreren Ventilen.",
+      "für den direkten Schlauchanschluss an Reagenzien- und Spülleitungen, die stromlos schließen müssen.",
+      "mit M6 oder 1/4-28 UNF und Membranen aus EPDM, FKM oder FFKM zum Öffnen und Schließen verschiedener Reagenzienleitungen.",
+      "für die direkte Blockmontage, stromlos offen und bei Bestromung geschlossen. Für Geräte mit einem im Grundzustand offenen Fließweg.",
+      "mit PEEK-Grundplatte und Schlauchtüllen für Versorgungsleitungen, die offen bleiben und bei einem Steuersignal vorübergehend schließen.",
+      "mit M6 oder 1/4-28 UNF für Reagenzien- oder Spülleitungen, die stromlos offen bleiben."
+    ],
+    "separator": " ",
+    "nc": {
+      "label": "2 Wege, stromlos geschlossen (NC)",
+      "operation": "Das stromlos geschlossene Ventil bleibt ohne Versorgung geschlossen und öffnet bei Bestromung. Verwenden Sie es für Fließwege, die bei abgeschalteter Versorgung geschlossen sein müssen. Das Ventil steuert die Verbindung. Eine Pumpe oder ein Druckunterschied bewegt die Flüssigkeit."
+    },
+    "no": {
+      "label": "2 Wege, stromlos offen (NO)",
+      "operation": "Das stromlos offene Ventil bleibt ohne Versorgung offen und schließt bei Bestromung. Verwenden Sie es für Fließwege, die bei abgeschalteter Versorgung offen bleiben müssen. Das Ventil steuert die Verbindung. Eine Pumpe oder ein Druckunterschied bewegt die Flüssigkeit."
+    },
+    "legacyNames": [
+      "Miniatur-Membranmagnetventil mit 2 Wegen für Blockmontage",
+      "Miniatur-Membranmagnetventil mit 2 Wegen und Schlauchtüllen",
+      "Miniatur-Membranmagnetventil mit 2 Wegen und Gewindeanschlüssen"
+    ]
+  },
+  "headings": {
+    "3-way-base": "Miniatur-Membranmagnetventil SV10-P-3 mit 3 Wegen für Blockmontage, Ansprechzeit ≤15 ms",
+    "3-way-barbed": "Mikro-Membranmagnetventil SV10-B16-3 mit 3 Wegen und Schlauchtüllen für medizinische und Laborgeräte",
+    "3-way-threaded": "Miniatur-Membranmagnetventil SV10-M6/U28-3 mit 3 Wegen, M6 oder 1/4-28 UNF und kurzer Ansprechzeit",
+    "2-way-nc-base": "Stromlos geschlossenes Mikro-Membranmagnetventil SV10-P-2NC mit 2 Wegen für Blockmontage, Probenahme und Spülung",
+    "2-way-nc-barbed": "Kompaktes stromlos geschlossenes Miniatur-Membranmagnetventil SV10-B16-2NC mit 2 Wegen und Schlauchtüllen",
+    "2-way-nc-threaded": "Mikro-Membranmagnetventil SV10-M6/U28-2NC mit 2 Wegen, Gewindeanschlüssen und Membranen aus FKM oder FFKM für OEM-Geräte",
+    "2-way-no-base": "Stromlos offenes Miniatur-Membranmagnetventil SV10-P-2NO mit 2 Wegen für Blockmontage und Wippenmembran mit geringem Totvolumen",
+    "2-way-no-barbed": "Stromlos offenes Mikro-Membranmagnetventil SV10-B16-2NO mit 2 Wegen und Schlauchtüllen für medizinische und Laborgeräte",
+    "2-way-no-threaded": "Stromlos offenes Miniatur-Membranmagnetventil SV10-M6/U28-2NO mit 2 Wegen und Gewindeanschlüssen für Probenahme und Spülung"
+  }
+}

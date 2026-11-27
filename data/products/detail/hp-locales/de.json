@@ -1,0 +1,157 @@
+{
+  "description": "Das FOREACH HP-26SSU3204 ist ein Hochdruck-Drehschaltventil mit 2 Schaltstellungen, 6 Anschlüssen, einer separaten Entlüftungsstellung und einem maximalen Betriebsdruck von 25 MPa. In HPLC-Autosamplern schaltet das Ventil zwischen den Fluidpfaden zum Laden, Injizieren und Entlüften um. Mit einer externen Probenschleife wird die Probe in der Ladestellung vorbereitet. In der Injektionsstellung wird die Schleife in den Fluidpfad der mobilen Phase eingebunden. Die Entlüftungsstellung öffnet einen separaten Entlüftungspfad.\n\nDas Ventil verfügt über Anschlüsse mit 10-32 UNF, einen Durchgang von 0.4 mm und ein internes Volumen von 0.8 μL. Der Stator besteht aus SUS316L, der Rotor aus Polymer. Prüfen Sie bei der Integration in ein Analysengerät das Fluidikschema, den maximalen Systemdruck, die Verträglichkeit mit Probe und mobiler Phase sowie den Ablauf von Umschaltung und Entlüftung.",
+  "commonApplications": [
+    "Automatische Probenaufgabe in der HPLC",
+    "Umschaltung der Probenschleife",
+    "Entlüftung des Fluidpfads"
+  ],
+  "applicationDetails": {
+    "tabLabel": "Anwendungen",
+    "title": "Typische Anwendungen",
+    "intro": [
+      "In einem Chromatographiesystem schaltet das Ventil die Fluidpfade um. Die Probenladeeinheit führt die Probe zu, die Pumpe der mobilen Phase sorgt für den Förderstrom unter Hochdruck. Bezeichnungen wie Injektionsventil, Umschaltventil für die Probenschleife oder Autosampler-Ventil beschreiben seine Funktion im jeweiligen Fluidikkreis."
+    ],
+    "items": [
+      {
+        "title": "Automatische Probenaufgabe in der HPLC: Umschalten zwischen Laden und Injizieren",
+        "paragraphs": [
+          "In der Ladestellung wird die Probe in die Probenschleife gefüllt. In der Injektionsstellung wird die Schleife mit der mobilen Phase verbunden und die Probe gelangt in den Chromatographie-Fluidpfad. Das Bauteil wird häufig als Injektionsventil oder Autosampler-Ventil bezeichnet.",
+          "Das HP-26SSU3204 bildet mit einer externen Probenschleife einen Injektionskreis mit zwei Stellungen und sechs Anschlüssen. Bei vollständiger Schleifenfüllung bestimmt die Probenschleife im Wesentlichen das injizierte Volumen. Bei Teilschleifeninjektion wird die Probe zusätzlich über die Probenladeeinheit dosiert. Stimmen Sie Soll-Injektionsvolumen, verfügbares Probenvolumen und Befüllmethode aufeinander ab."
+        ]
+      },
+      {
+        "title": "Analytische Fluidik: Eine externe Probenschleife zuschalten und abtrennen",
+        "paragraphs": [
+          "Die Umschaltung der Probenschleife ermöglicht es, ein festgelegtes Probenvolumen zu laden, bevor die Schleife in den Hauptstrom eingebunden wird. Zusätzliches Anschlussvolumen und schlecht abgestimmte Verbindungen können die Probenbandverbreiterung im weiteren Fluidpfad beeinflussen.",
+          "Bewerten Sie das Volumen außerhalb der Trennsäule anhand der tatsächlichen Leitungslänge, des Innendurchmessers und der Fittinggeometrie. Die sechs Anschlussverbindungen sind durch die Ventilkonstruktion vorgegeben. Dieses Modell bietet weder sechs unabhängig schaltbare Absperrventile noch eine Reagenzienauswahl mit mehreren Schaltstellungen."
+        ]
+      },
+      {
+        "title": "Injektionszyklen: Entlüften und Fluidpfad wiederherstellen",
+        "paragraphs": [
+          "Luftblasen können die Schleifenfüllung und Druckänderungen beeinflussen. In der dafür vorgesehenen Ventilstellung kann das Gerät vor den nächsten Lade- und Injektionsschritten einen Entlüftungspfad herstellen. Die Entlüftung dient der Wartung des Fluidpfads. Das Injektionsvolumen wird separat eingestellt.",
+          "Das HP-Ventil verfügt über eine separate Entlüftungsstellung. Schließen Sie die Entlüftungsleitung gemäß Fluidikschema und Betriebsanforderungen an und stimmen Sie die Druckbedingungen auf die Schaltbefehle ab. Der Entlüftungspfad ersetzt keinen automatischen Entgaser. Öffnen Sie ihn erst, wenn die Druckbedingungen geprüft sind."
+        ]
+      }
+    ],
+    "selectionNote": {
+      "title": "Angaben zur Auslegung",
+      "paragraphs": [
+        "Geben Sie den maximalen Betriebs- und Schaltdruck, das Soll-Injektionsvolumen, die Probenschleife und Befüllmethode, die Probe und mobile Phase, die Leitungsanschlüsse sowie den Entlüftungsablauf an. Prüfen Sie die Anschlussnummerierung und die Anforderungen an die Ansteuerung des HP-26SSU3204."
+      ]
+    }
+  },
+  "faqs": [
+    {
+      "question": "Was bedeuten zwei Stellungen, sechs Anschlüsse und Entlüftung?",
+      "answer": "Zwei Stellungen und sechs Anschlüsse beschreiben die Hauptverbindungen für Laden und Injizieren. Das Modell besitzt zusätzlich eine Entlüftungsstellung. Das Datenblatt definiert für die Injektion die Verbindungen 1–2, 3–4 und 5–6, für das Laden 1–6, 2–3 und 4–5 und für die Entlüftung 3–7. Prüfen Sie Anschlussnummerierung, Ventilstellung und Schaltzeiten anhand des Fluidikschemas dieses Modells."
+    },
+    {
+      "question": "Entspricht das interne Volumen von 0.8 μL dem Injektionsvolumen, und wie wird die Probenschleife ausgewählt?",
+      "answer": "0.8 μL ist das interne Ventilvolumen. Bei vollständiger Schleifenfüllung muss ausreichend Probe vorhanden sein, um die Flüssigkeit in der Schleife zu verdrängen. Die Probenschleife bestimmt im Wesentlichen das Volumen, das in den Analysenpfad gelangt. Bei Teilschleifeninjektion dosiert die Probenladeeinheit die Probe in eine dafür ausgelegte Schleife. Wählen Sie die Methode nach verfügbarem Probenvolumen, Wiederholbarkeit und Methodenvorgaben. Die gesamte beim Laden zugeführte Probenmenge gelangt dabei nicht zwangsläufig in den Analysenpfad."
+    },
+    {
+      "question": "Eignet sich die Druckangabe von 25 MPa für jedes HPLC- oder UHPLC-System?",
+      "answer": "Die Systembezeichnung allein reicht zur Beurteilung nicht aus. 25 MPa ist der maximale Betriebsdruck dieses Modells. Vergleichen Sie den stationären Druck und kurzzeitige Druckspitzen beim Schalten mit den zulässigen Werten von Leitungen, Probenschleife und Fittings. Das Bauteil mit der niedrigsten Druckgrenze bestimmt die Belastbarkeit des gesamten Fluidikkreises."
+    },
+    {
+      "question": "Kann jedes Fitting mit 10-32 UNF direkt angeschlossen werden?",
+      "answer": "Prüfen Sie neben dem Gewinde auch Leitungs-Außendurchmesser, Geometrie des Fittingendes, Einstecktiefe und Dichtungen. Ein passendes Gewinde allein gewährleistet weder eine kompatible Anschlussgeometrie noch eine zuverlässige Hochdruckabdichtung."
+    },
+    {
+      "question": "Was sollte bei Abweichungen zwischen wiederholten Injektionen zuerst geprüft werden?",
+      "answer": "Prüfen Sie die Schleifenfüllung, Luftblasen in Probe oder mobiler Phase, die Ventilstellung, die Verweildauer in der Injektionsstellung, undichte Anschlüsse und den Verschleiß der Rotordichtung. Die Wiederholbarkeit der Injektion hängt vom gesamten Probeninjektionskreis ab. Die Schaltzeit allein gibt darüber keinen Aufschluss."
+    },
+    {
+      "question": "Wie sind medienberührte Werkstoffe und Lebensdauer zu bewerten?",
+      "answer": "Das Modell verwendet einen Stator aus SUS316L und einen Rotor aus Polymer. Prüfen Sie die Verträglichkeit anhand von Lösemittelzusammensetzung, Konzentration, Temperatur und Reinigungsbedingungen. Die Datenblattangabe von 150 000 Zyklen stammt aus einer Prüfung mit Reinwasser und stellt keine Lebensdauergarantie für alle Medien dar."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Produktmodell",
+      "value": "HP-26SSU3204"
+    },
+    {
+      "label": "Nennspannung",
+      "value": "24 V"
+    },
+    {
+      "label": "Nennstrom",
+      "value": "2 A"
+    },
+    {
+      "label": "Nennleistung",
+      "value": "48 W"
+    },
+    {
+      "label": "Getriebeübersetzung",
+      "value": "5:1"
+    },
+    {
+      "label": "Ventilausführung",
+      "value": "2 Schaltstellungen, 6 Anschlüsse und separate Entlüftungsstellung"
+    },
+    {
+      "label": "Außenabmessungen",
+      "value": "L × B × H: 42 × 42 × 123.5 mm"
+    },
+    {
+      "label": "Einbaumaße und Gewinde",
+      "value": "Positioniermaße: 19 × 20 mm, Gewinde × Tiefe: M3 × 10 mm"
+    },
+    {
+      "label": "Anschlussgewinde",
+      "value": "10-32 UNF"
+    },
+    {
+      "label": "Maximaler Betriebsdruck",
+      "value": "25 MPa"
+    },
+    {
+      "label": "Durchgangsdurchmesser",
+      "value": "0.4 mm"
+    },
+    {
+      "label": "Schaltzeit zwischen benachbarten Anschlüssen",
+      "value": "100 ms"
+    },
+    {
+      "label": "Lebensdauer",
+      "value": "150 000 Zyklen (Reinwasser)"
+    },
+    {
+      "label": "Betriebsgeräusch",
+      "value": "<60 dB"
+    },
+    {
+      "label": "Internes Volumen",
+      "value": "0.8 μL"
+    },
+    {
+      "label": "Medienberührter Werkstoff des Stators",
+      "value": "SUS316L"
+    },
+    {
+      "label": "Medienberührter Werkstoff des Rotors",
+      "value": "Polymer"
+    },
+    {
+      "label": "Umgebungstemperatur",
+      "value": "0–40 °C (nicht kondensierend)"
+    },
+    {
+      "label": "Relative Luftfeuchte",
+      "value": "0–93% ±3 RH bei 40 °C (nicht kondensierend)"
+    },
+    {
+      "label": "Lager- und Transporttemperatur",
+      "value": "−40–55 °C (ohne Gefrieren oder Kondensation)"
+    }
+  ],
+  "bottomCta": {
+    "title": "HP-Ventil für Ihre Anwendung auslegen",
+    "description": "Geben Sie den maximalen Betriebs- und Schaltdruck, das Soll-Injektionsvolumen, die Probenschleife und Befüllmethode, die Probe und mobile Phase, die Leitungsanschlüsse sowie den Entlüftungsablauf an. Prüfen Sie die Anschlussnummerierung und die Anforderungen an die Ansteuerung des HP-26SSU3204.",
+    "buttonText": "Technische Beratung anfragen"
+  }
+}

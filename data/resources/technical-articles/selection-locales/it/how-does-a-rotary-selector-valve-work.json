@@ -1,0 +1,402 @@
+{
+  "kind": "selection",
+  "family": "valve",
+  "footerProducts": [
+    {
+      "id": "mrv3-ceramic-rotary-valve",
+      "title": "MRV3 Valvola rotativa multicanale in ceramica",
+      "href": "/en/products/valves/rotary-valves",
+      "imageSrc": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+      "imageAlt": "MRV3 Valvola rotativa multicanale in ceramica"
+    }
+  ],
+  "sidebarProducts": [
+    {
+      "id": "mrv3-ceramic-rotary-valve",
+      "title": "MRV3 Valvola rotativa multicanale in ceramica",
+      "href": "/en/products/valves/rotary-valves",
+      "imageSrc": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+      "imageAlt": "MRV3 Valvola rotativa multicanale in ceramica"
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Che cos'è una valvola rotativa? Principio di funzionamento, struttura e applicazioni",
+      "seoTitle": "Che cos'è una valvola rotativa? Principio e applicazioni fluidiche | FOREACH",
+      "seoDescription": "Scopri le valvole rotative nei circuiti degli strumenti. Gli schemi a 10, 16 e 24 canali distinguono porte di selezione, porta comune e posizioni di lavoro e illustrano selezione dei reagenti, lavaggio e iniezione.",
+      "coverImage": "/images/products/valves/rotary-valves/foreach-mrv3-d24-24-channel-ceramic-rotary-selector-valve.webp",
+      "coverAlt": "Serie FOREACH MRV3 di valvole rotative multicanale in ceramica"
+    },
+    "deck": "Scopri come gli strumenti commutano reagenti e soluzioni di lavaggio, come le valvole rotative collegano le linee e come lavorano con le pompe nella manipolazione automatizzata dei liquidi.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Una valvola rotativa è un componente di controllo dei fluidi che modifica i collegamenti tra porte ruotando un elemento interno. Negli strumenti analitici e nell'automazione di laboratorio seleziona una sorgente di liquido, devia l'erogazione o modifica i collegamenti tra tubi. Qui si considerano le valvole rotative per i circuiti degli strumenti."
+      },
+      {
+        "type": "paragraph",
+        "text": "Uno strumento può prelevare prima il reagente A, poi il reagente B e infine collegare una soluzione di lavaggio. Collegando le sorgenti a porte diverse, il programma può selezionare il percorso richiesto. La valvola sceglie il collegamento, la pompa aspira ed eroga il liquido e il controllore coordina la sequenza."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come cambia il percorso del liquido in una valvola rotativa?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Una tipica valvola rotativa a tenuta piana abbina un rotore scanalato a uno statore con porte. L'attuatore ruota il rotore e allinea le scanalature a porte diverse, modificando i collegamenti. In ogni posizione definita si stabilisce il percorso corrispondente."
+          },
+          {
+            "type": "paragraph",
+            "text": "Si consideri un selettore con una porta comune COM e più porte di selezione. I flaconi dei reagenti si collegano alle porte di selezione. COM si collega alla linea di erogazione condivisa. Per scegliere A, il rotore collega COM alla porta di A. Per scegliere B, passa a un'altra posizione. È una selezione sequenziale delle sorgenti."
+          },
+          {
+            "type": "paragraph",
+            "text": "Quando la porta comune centrale si collega a una porta periferica, il liquido può confluire dalla sorgente selezionata verso COM oppure andare da COM verso l'uscita scelta. Verificare se il modello consente flusso bidirezionale nelle condizioni del circuito."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "Una valvola rotativa di selezione collega il reagente A prima che la pompa lo invii all'ago di erogazione",
+            "caption": "Esempio di alimentazione in serie. Determinare direzione effettiva del flusso e posizione della pompa dallo schema fluidico specifico.",
+            "flowNodes": [
+              {
+                "label": "Reagente A",
+                "detail": "Collegato a una porta di selezione"
+              },
+              {
+                "label": "Valvola rotativa",
+                "detail": "La porta selezionata si collega a COM"
+              },
+              {
+                "label": "Pompa",
+                "detail": "Aspira ed eroga liquido"
+              },
+              {
+                "label": "Ago di erogazione",
+                "detail": "Eroga nel recipiente di destinazione"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La conferma della posizione indica che il collegamento è cambiato. Il nuovo reagente può ancora non essere arrivato all'uscita. Il tubo condiviso può contenere il liquido precedente. Se la pompa non ha ancora funzionato o è presente gas, all'uscita inizialmente può non esserci liquido. Gestire quindi separatamente conferma di posizione, trasporto e ricambio del liquido."
+          }
+        ]
+      },
+      {
+        "title": "Componenti principali: testa della valvola, coppia di tenuta e attuatore",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Una valvola rotativa svolge tre funzioni: collegare i tubi, stabilire un percorso e muovere l'elemento interno. La disposizione dei componenti può variare. L'esempio riguarda una tipica valvola rotativa ad azionamento elettrico con interfaccia di tenuta piana."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Componente o struttura",
+              "Funzione principale",
+              "Relazione con il circuito"
+            ],
+            "rows": [
+              [
+                "Testa della valvola e porte esterne",
+                "Collegano i tubi esterni e formano parte dei passaggi interni",
+                "Disposizione delle porte, collegamenti e materiali influiscono su installazione e compatibilità con i fluidi"
+              ],
+              [
+                "Statore e rotore",
+                "Cambiano i collegamenti tra passaggi mediante rotazione relativa",
+                "Scanalature e posizione delle porte definiscono quali percorsi si collegano in ogni posizione"
+              ],
+              [
+                "Interfaccia di tenuta",
+                "Mantiene tenuta e separazione tra i percorsi",
+                "Lo stato della tenuta influisce su trafilamenti interni, perdite esterne e separazione dei liquidi"
+              ],
+              [
+                "Motore, posizionamento e controllo dell'azionamento",
+                "Ricevono comandi e commutano la posizione della valvola",
+                "Devono coordinarsi con aspirazione, erogazione e gestione dei guasti del sistema"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La dicitura valvola rotativa in ceramica descrive in genere il materiale degli elementi di tenuta principali. La testa e le altre parti a contatto possono essere di materiali diversi. I dati FOREACH MRV3 specificano statore in zirconia e rotore in zaffiro, con testa in PEEK o PCTFE. Verificare la combinazione sul codice d'ordine completo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Esistono altre configurazioni rotative, tra cui le valvole a maschio. Consultare il disegno in sezione o lo schema fluidico del modello, poiché il sistema di tenuta varia tra i prodotti."
+          }
+        ]
+      },
+      {
+        "title": "Come si distinguono numero di porte, numero di posizioni e configurazione del percorso?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il numero di porte descrive i collegamenti fisici, quello di posizioni gli stati di lavoro selezionabili e la configurazione fluidica i collegamenti in ciascuno stato. Insieme definiscono le funzioni della valvola."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Termine",
+              "Significato",
+              "Che cosa verificare nella documentazione"
+            ],
+            "rows": [
+              [
+                "Numero di porte",
+                "Numero di collegamenti fisici per il fluido",
+                "Se il numero di canali dichiarato esclude la porta comune"
+              ],
+              [
+                "Numero di posizioni",
+                "Numero di posizioni di lavoro definite",
+                "Quali porte si collegano in ogni posizione"
+              ],
+              [
+                "Configurazione fluidica",
+                "Collegamenti tra porte in una posizione",
+                "Selezione di un solo percorso tramite COM o riconfigurazione simultanea di più coppie di porte"
+              ]
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Selezione con porta comune e 10, 16 e 24 canali"
+          },
+          {
+            "type": "paragraph",
+            "text": "Gli schemi escludono COM dal numero di canali di selezione. Alle 10, 16 e 24 porte periferiche si aggiunge sempre una porta comune, per un totale di 11, 17 e 25 porte. Ogni schema mostra COM collegata alla porta 2. Il blu indica il percorso attivo. Le altre porte restano isolate in questo esempio con vie non selezionate chiuse."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/rotary-valves/rotary-selector-10-channels.it.svg",
+            "width": 720,
+            "height": 760,
+            "alt": "Schema di selettore rotativo con 10 porte numerate da 1 a 10 e COM centrale, collegata soltanto alla porta 2",
+            "caption": "10 canali: 10 porte di selezione + 1 COM. Collegamento mostrato: COM ↔ porta 2."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/rotary-valves/rotary-selector-16-channels.it.svg",
+            "width": 720,
+            "height": 760,
+            "alt": "Schema di selettore rotativo con 16 porte numerate da 1 a 16 e COM centrale, collegata soltanto alla porta 2",
+            "caption": "16 canali: 16 porte di selezione + 1 COM. Collegamento mostrato: COM ↔ porta 2."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/rotary-valves/rotary-selector-24-channels.it.svg",
+            "width": 720,
+            "height": 760,
+            "alt": "Schema di selettore rotativo con 24 porte numerate da 1 a 24 e COM centrale, collegata soltanto alla porta 2",
+            "caption": "24 canali: 24 porte di selezione + 1 COM. Collegamento mostrato: COM ↔ porta 2."
+          },
+          {
+            "type": "paragraph",
+            "text": "Gli schemi originali illustrano numero di canali e collegamenti. Non riportano aspetto del prodotto, posizione delle porte, dimensioni interne o verso di numerazione effettivo. Verificare conteggio della porta comune, senso di rotazione e numerazione dei canali nello schema fluidico e nel protocollo di controllo del prodotto."
+          },
+          {
+            "type": "paragraph",
+            "text": "Lo stesso numero di canali o posizioni non garantisce collegamenti, materiali a contatto o pressioni nominali uguali. Il numero di canali indica se ci sono abbastanza collegamenti. Verificare a parte gli altri parametri."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ad esempio, una valvola di commutazione a due posizioni e sei porte alterna due stati di collegamento. Un selettore multiposizione collega COM a un solo percorso per volta. Entrambi ruotano, ma svolgono funzioni diverse. Per l'acquisto, la sola dicitura sei porte o multicanale spesso non basta."
+          },
+          {
+            "type": "paragraph",
+            "text": "Controllare anche la destinazione dei flussi non selezionati. Secondo la configurazione, possono essere bloccati, deviati verso un'altra uscita comune o mantenuti in flusso attraverso uscite singole. Gli schemi mostrano soltanto il caso con vie non selezionate chiuse."
+          },
+          {
+            "type": "paragraph",
+            "text": "Allo stesso modo, 24 canali selezionabili non consentono di dosare in modo indipendente su 24 percorsi contemporaneamente. Per elaborare campioni in parallelo servono anche una valutazione delle pompe e delle unità di dosaggio separate e dell'architettura fluidica completa."
+          }
+        ]
+      },
+      {
+        "title": "Quali funzioni svolgono le valvole rotative negli strumenti?",
+        "blocks": [
+          {
+            "type": "subheading",
+            "title": "Selezione dei reagenti: un solo meccanismo raggiunge liquidi diversi in sequenza"
+          },
+          {
+            "type": "paragraph",
+            "text": "Quando si devono erogare più reagenti in sequenza, collegarne le sorgenti alle porte di selezione. Il programma seleziona una sorgente prima che la pompa eroghi il liquido. Un solo percorso a valle può servire più sorgenti. Tenere conto dei liquidi residui e della pulizia."
+          },
+          {
+            "type": "subheading",
+            "title": "Preparazione dei campioni e lavaggio: collegare fasi di processo successive"
+          },
+          {
+            "type": "paragraph",
+            "text": "Campionamento, aggiunta di soluzioni di trattamento e lavaggio possono richiedere liquidi diversi. La valvola commuta i collegamenti a ogni fase. Pompa e sistema di posizionamento erogano il liquido nel recipiente di destinazione o allo scarico. Se i campioni passano nella valvola, valutare anche particelle, adesione e contaminazione residua."
+          },
+          {
+            "type": "subheading",
+            "title": "Iniezione cromatografica: riconfigurare i collegamenti dell'intero circuito"
+          },
+          {
+            "type": "paragraph",
+            "text": "Una valvola di iniezione adatta, con loop di campionamento esterno, cambia i collegamenti tra carico e iniezione. La funzione richiede percorsi e pressioni specifici. Un normale selettore di reagenti non va considerato idoneo all'iniezione ad alta pressione senza verifica."
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/how-does-an-hplc-injection-valve-work/",
+                "label": "Approfondisci i percorsi di carico e iniezione della valvola HPLC"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Esempio completo: passare dal reagente A al reagente B",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Si supponga che A, B e una soluzione di lavaggio occupino porte distinte e che COM sia collegata a una pompa e a un ago di erogazione. Per tenere il liquido di lavaggio fuori dal recipiente di reazione, portare l'ago allo scarico o predisporre un altro percorso di scarico verificato. L'esempio usa un ago mobile."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Terminare l'erogazione di A, portare pompa e circuito nelle condizioni che consentono la commutazione e spostare l'ago allo scarico.",
+              "Selezionare la soluzione di lavaggio, confermare la posizione della valvola e usare la pompa per lavare il percorso condiviso verso lo scarico.",
+              "Passare a B e usarlo per sostituire il liquido di lavaggio nel percorso comune. Inviare allo scarico il volume di ricambio.",
+              "Quando il ricambio soddisfa i requisiti di processo, riportare l'ago nel recipiente di destinazione e dosare B."
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "Il cambio di reagente richiede lavaggio e ricambio del liquido, oltre al movimento della valvola",
+            "caption": "Esempio progettuale delle funzioni dei componenti. Convalidare detergenti, volumi e tempi nel sistema effettivo.",
+            "flowNodes": [
+              {
+                "label": "Termina A",
+                "detail": "Predisponi le condizioni di commutazione"
+              },
+              {
+                "label": "Lava",
+                "detail": "Invia il lavaggio allo scarico"
+              },
+              {
+                "label": "Sostituisci con B",
+                "detail": "Rimuovi il liquido precedente"
+              },
+              {
+                "label": "Dosa il liquido",
+                "detail": "Eroga nel recipiente di destinazione"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il lavaggio dipende da tutto il circuito collegato: passaggi della valvola, tubi, raccordi, camera della pompa e ago di erogazione. Un volume interno ridotto limita il liquido trattenuto dalla valvola. L'assenza di contaminazione residua va verificata sul sistema."
+          }
+        ]
+      },
+      {
+        "title": "Dal principio di funzionamento alla selezione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Elencare sorgenti e destinazioni dei liquidi, quindi disegnare i collegamenti richiesti in ogni fase. Confrontare poi canali, diametro di passaggio, raccordi, condizioni di pressione e materiali a contatto. Le configurazioni MRV3 a 10, 16 o 24 canali sono candidate per la selezione sequenziale tra più sorgenti. L'idoneità dipende dalle condizioni effettive."
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/rotary-valve-selection-guide/",
+                "label": "Guida alla selezione delle valvole rotative: dal circuito alla convalida del sistema"
+              },
+              {
+                "href": "/en/resources/technical-articles/rotary-valve-wetted-materials-selection/",
+                "label": "Scelta dei materiali a contatto delle valvole rotative: testa, rotore ed elementi di tenuta"
+              },
+              {
+                "href": "/en/products/valves/rotary-valves/",
+                "label": "Serie FOREACH MRV3 di valvole rotative multicanale"
+              },
+              {
+                "href": "/downloads/resources/datasheets/en/Valves/ps-120c-2507-00003-001-en-mrv3-multi-channel-rotary-valve.pdf",
+                "label": "Scheda tecnica MRV3: struttura, specifiche e opzioni d'ordine (in inglese)"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulle valvole rotative",
+    "faqItems": [
+      {
+        "question": "Una valvola rotativa controlla direttamente il volume erogato a ogni ciclo?",
+        "answer": "La valvola rotativa cambia principalmente i collegamenti. Il volume erogato dipende in genere dal dosaggio della pompa, dalle condizioni del liquido e dal circuito installato. Volume interno della valvola e numero di commutazioni non determinano il volume erogato."
+      },
+      {
+        "question": "Che differenza c'è tra una valvola rotativa e un'elettrovalvola?",
+        "answer": "Una tipica valvola rotativa elettrica cambia i collegamenti ruotando un rotore. Un'elettrovalvola usa la forza elettromagnetica per aprire, chiudere o commutare percorsi. La funzione dipende anche dalla configurazione fluidica. Selezione, intercettazione indipendente e funzionamento simultaneo sono esigenze diverse. L'azionamento da solo non determina quale valvola sia più adatta."
+      },
+      {
+        "question": "Dopo un'interruzione dell'alimentazione si può riutilizzare l'ultimo numero di canale?",
+        "answer": "Determinare la posizione reale con la procedura di azzeramento e conferma della posizione prevista dal modello. Un numero di canale salvato nel software non dimostra che la posizione fisica sia rimasta invariata. Confermare la posizione prima di azionare la pompa."
+      }
+    ],
+    "cta": {
+      "title": "Conferma la configurazione della valvola rotativa per il tuo circuito",
+      "description": "Fornisci schema fluidico, reagenti e soluzioni di lavaggio, pressione, temperatura, ciclo di commutazione e requisiti dei raccordi per valutare canali e materiali a contatto.",
+      "contactLabel": "Invia i requisiti di selezione",
+      "productsLabel": "Visualizza le valvole rotative MRV3",
+      "productsHref": "/en/products/valves/rotary-valves/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "rotary-principle",
+      "label": "Principio di funzionamento"
+    },
+    {
+      "id": "rotary-structure",
+      "label": "Componenti principali"
+    },
+    {
+      "id": "rotary-ports",
+      "label": "Porte, posizioni e percorsi"
+    },
+    {
+      "id": "rotary-applications",
+      "label": "Applicazioni tipiche"
+    },
+    {
+      "id": "rotary-workflow",
+      "label": "Esempio di commutazione dei reagenti"
+    },
+    {
+      "id": "rotary-products",
+      "label": "Selezione e documentazione"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Valvola rotativa",
+      "Principio di funzionamento della valvola rotativa",
+      "Selezione multicanale dei percorsi fluidici"
+    ],
+    "mentions": [
+      "MRV3",
+      "Commutazione tra reagenti e soluzione di lavaggio"
+    ]
+  }
+}

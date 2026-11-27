@@ -1,0 +1,632 @@
+{
+  "kind": "selection",
+  "family": "instrument",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è una pompa a membrana? Principio, tipi, vantaggi, limiti e scelta",
+      "seoTitle": "Che cos’è una pompa a membrana? Funzionamento, tipi e scelta | FOREACH",
+      "seoDescription": "Scopri come funzionano le pompe a membrana, le differenze fra pompe AODD, elettriche, dosatrici, per vuoto e miniaturizzate, i vantaggi, i limiti, le applicazioni e i criteri di scelta.",
+      "coverImage": "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-bb-brushless-labeled-front-card.webp",
+      "coverAlt": "Pompa a membrana miniaturizzata per liquidi FOREACH DPL30"
+    },
+    "deck": "Una pompa a membrana è una pompa volumetrica che muove liquidi o gas mediante una membrana flessibile a moto alternativo e valvole di ritegno in ingresso e in uscita. La guida spiega funzionamento, tipi principali, vantaggi, limiti, applicazioni e criteri di scelta.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Una pompa a membrana è una pompa volumetrica. Una membrana flessibile si muove avanti e indietro. Con due valvole di ritegno, una all’ingresso e una all’uscita, aspira liquido o gas dall’ingresso e lo spinge verso l’uscita."
+      },
+      {
+        "type": "paragraph",
+        "text": "Il fluido entra in contatto solo con camera, membrana e valvole. Motore, cuscinetti e altri organi di azionamento sono separati dal fluido. L’assenza di tenute dinamiche riduce il rischio di perdita e rende queste pompe adatte a fluidi corrosivi, sensibili alla contaminazione o ad alta purezza, nei limiti dei materiali."
+      },
+      {
+        "type": "paragraph",
+        "text": "Il principio di funzionamento è lo stesso per una grande pompa pneumatica che trasporta sospensioni in un impianto chimico e per una pompa miniaturizzata che eroga da pochi a diverse centinaia di millilitri al minuto dentro uno strumento."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come funziona una pompa a membrana?",
+        "tocLabel": "Principio di funzionamento",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Ogni ciclo comprende una corsa di aspirazione e una di mandata. Il fluido si muove grazie alle variazioni del volume della camera e all’azione coordinata delle due valvole di ritegno."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/instrument-fluidics/what-is-a-diaphragm-pump/diaphragm-pump-working-principle-it.svg",
+            "alt": "Schema delle corse di aspirazione e mandata di una pompa a membrana",
+            "width": 1520,
+            "height": 640,
+            "caption": "Funzionamento della pompa a membrana: le barre rosse indicano le valvole di ritegno chiuse e le frecce blu mostrano la direzione del flusso."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Corsa di aspirazione: la membrana scende, il volume della camera aumenta e la pressione diminuisce. Il differenziale apre la valvola di ritegno in ingresso mentre quella di uscita resta chiusa. Il fluido entra nella camera.",
+              "Corsa di mandata: la membrana sale, il volume della camera diminuisce e la pressione aumenta. La valvola di ritegno in uscita si apre e quella in ingresso si chiude. Il fluido è spinto fuori dalla camera."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le due corse si alternano continuamente e producono un flusso pulsante. Una pompa a camera singola eroga liquido solo durante la mandata, con pulsazioni marcate. Nelle configurazioni a doppia membrana o a più camere, ciascuna camera eroga a turno e il flusso è più uniforme."
+          },
+          {
+            "type": "subheading",
+            "title": "Componenti principali"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Membrana: separa il fluido dall’azionamento e si flette ripetutamente per variare il volume della camera. I materiali comuni includono EPDM, FKM e PTFE, scelti in base alla corrosività e alla temperatura del fluido.",
+              "Valvole di ritegno: consentono il passaggio in una sola direzione. La qualità della tenuta influenza direttamente autoadescamento e portata effettiva.",
+              "Testa della pompa: forma la camera ed entra in contatto con il fluido. È in genere in tecnopolimeri quali PP, PPS o PVDF. Nelle pompe industriali si usano anche leghe di alluminio o acciaio inox.",
+              "Azionamento: muove la membrana tramite motore con eccentrico o biella, aria compressa o solenoide. Ogni azionamento definisce un tipo di pompa."
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Che cosa determina la portata?"
+          },
+          {
+            "type": "paragraph",
+            "text": "La portata teorica è il volume spostato in ogni corsa moltiplicato per la frequenza. Nell’impianto contano anche altezza di aspirazione, contropressione in uscita, dimensioni dei tubi e viscosità. La portata effettiva di solito è inferiore alla portata a vuoto in scheda."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per la scelta, usare la curva portata–pressione per verificare la portata residua alla pressione effettiva del circuito, oltre alla portata massima."
+          },
+          {
+            "type": "paragraph",
+            "text": "Qui sotto è riportata la curva portata–pressione della pompa a membrana miniaturizzata per liquidi FOREACH DPL30. A pressione zero la portata è leggermente superiore a 300 mL/min. Quando la contropressione in uscita raggiunge 100 kPa, la portata scende a circa 160 mL/min, quasi la metà. La portata cala anche se cresce la depressione in ingresso, per maggiore altezza di aspirazione o resistenza in ingresso."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/instrument-fluidics/what-is-a-diaphragm-pump/dpl30-flow-pressure-curve-it.svg",
+            "alt": "Curva portata–pressione della pompa a membrana miniaturizzata per liquidi FOREACH DPL30",
+            "width": 2080,
+            "height": 668,
+            "caption": "Curva portata–pressione DPL30: a sinistra sull’asse orizzontale è indicata la depressione in ingresso, a destra la pressione positiva in uscita. L’asse verticale riporta la portata.",
+            "link": {
+              "href": "/en/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Approfondimento: come leggere la curva portata–pressione di una pompa a membrana"
+            }
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Per stimare la perdita di carico nei tubi, usa il ",
+                "href": "/en/resources/calculators/fluid-resistance/",
+                "label": "calcolatore della resistenza fluidica",
+                "suffix": " con diametro, lunghezza e portata del tubo. Leggi poi sulla curva la portata a quella pressione."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quali tipi di pompe a membrana esistono?",
+        "tocLabel": "Tipi principali",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Le pompe a membrana si classificano soprattutto per azionamento e applicazione. Negli impianti industriali sono comuni le pompe pneumatiche a doppia membrana, mentre negli strumenti e nelle apparecchiature prevalgono le pompe elettriche miniaturizzate."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Tipo",
+              "Azionamento",
+              "Intervallo di portata",
+              "Usi tipici"
+            ],
+            "rows": [
+              [
+                "Pompa pneumatica a doppia membrana (AODD)",
+                "L’aria compressa aziona alternativamente due membrane",
+                "Alta: da decine a centinaia di litri al minuto",
+                "Trasferimento di prodotti chimici, rivestimenti, acque reflue e sospensioni"
+              ],
+              [
+                "Pompa elettrica a membrana",
+                "Un motore muove la membrana tramite un eccentrico o una biella",
+                "Molto ampio: da pochi millilitri a decine di litri al minuto",
+                "Trasferimento dentro apparecchiature, spruzzatura e depurazione dell’acqua"
+              ],
+              [
+                "Pompa a membrana a solenoide o pompa dosatrice a membrana",
+                "Azionamento con solenoide o motore, con corsa e frequenza regolabili",
+                "Da bassa a media, con attenzione all’accuratezza di dosaggio",
+                "Dosaggio di sostanze chimiche nel trattamento dell’acqua e alimentazione di prodotti chimici"
+              ],
+              [
+                "Pompa a membrana per vuoto o per gas",
+                "Azionamento a motore per trasferire gas",
+                "Classificata per velocità di pompaggio",
+                "Filtrazione a vuoto in laboratorio, campionamento di gas e aspirazione di liquidi a vuoto"
+              ],
+              [
+                "Pompa miniaturizzata a membrana",
+                "Pompa elettrica a membrana in scala ridotta con motore DC a spazzole o brushless",
+                "Da pochi a diverse centinaia di millilitri al minuto per liquidi",
+                "Strumenti analitici, automazione di laboratorio, monitoraggio ambientale e circuiti d’inchiostro"
+              ]
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Pompe pneumatiche a doppia membrana (AODD)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Una pompa AODD usa aria compressa per azionare alternativamente due membrane. Una aspira mentre l’altra eroga. L’azionamento non richiede elettricità, una caratteristica da considerare dove serve protezione contro le esplosioni. La pompa può gestire sospensioni con particelle e liquidi ad alta viscosità. Richiede alimentazione d’aria, consuma molta aria compressa e lo scarico è rumoroso."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/instrument-fluidics/what-is-a-diaphragm-pump/aodd-tapflo-t50.jpg",
+            "alt": "Pompa pneumatica a doppia membrana Tapflo T50",
+            "width": 900,
+            "height": 480,
+            "caption": "Pompa pneumatica a doppia membrana Tapflo T50. Foto: Aleksander Ma, CC BY-SA 4.0, tramite Wikimedia Commons."
+          },
+          {
+            "type": "subheading",
+            "title": "Pompe elettriche a membrana"
+          },
+          {
+            "type": "paragraph",
+            "text": "In una pompa elettrica, un motore muove la membrana avanti e indietro tramite un eccentrico o una biella. La portata dipende dalla velocità del motore e si può variare con la tensione di alimentazione o il controllore. Le grandi pompe elettriche a membrana si usano per il trasferimento industriale, quelle piccole si integrano in molti tipi di apparecchiature."
+          },
+          {
+            "type": "subheading",
+            "title": "Pompe a membrana a solenoide e pompe dosatrici a membrana"
+          },
+          {
+            "type": "paragraph",
+            "text": "Una pompa a membrana a solenoide usa un elettromagnete per premere la membrana e compie una corsa per ogni impulso elettrico. Si regola il dosaggio cambiando frequenza degli impulsi e lunghezza della corsa. Le pompe dosatrici a membrana privilegiano l’accuratezza di dosaggio e si usano spesso per dosare prodotti chimici nel trattamento dell’acqua e per la loro alimentazione."
+          },
+          {
+            "type": "subheading",
+            "title": "Pompe a membrana per vuoto e per gas"
+          },
+          {
+            "type": "paragraph",
+            "text": "Queste pompe trasferiscono gas. La camera è priva di olio, così il gas estratto non viene contaminato da olio. Si usano spesso per filtrazione a vuoto in laboratorio, campionamento di gas e aspirazione di liquidi a vuoto nelle apparecchiature."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/instrument-fluidics/what-is-a-diaphragm-pump/dpgl800-gas-flow-pressure-curve-it.svg",
+            "alt": "Curva portata–pressione del gas della pompa a membrana per gas e liquidi FOREACH DPGL800",
+            "width": 2363,
+            "height": 1100,
+            "caption": "Curva portata–pressione del gas FOREACH DPGL800: a pressione zero la portata di gas per singola testa è circa 6 L/min. La portata diminuisce all’aumentare del vuoto e tende a zero vicino a -90 kPa, il vuoto limite della pompa."
+          },
+          {
+            "type": "subheading",
+            "title": "Pompe miniaturizzate a membrana"
+          },
+          {
+            "type": "paragraph",
+            "text": "Le pompe a membrana miniaturizzate sono compatte, a basso consumo e alimentate in corrente continua, quindi si integrano facilmente in strumenti e apparecchiature. La scelta dipende soprattutto da tre distinzioni:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Pompe per liquidi e pompe per gas e liquidi. Le prime trasferiscono liquidi per lavaggio, reintegro e ricircolo. Le seconde trattano insieme gas e liquidi e sono adatte all’aspirazione degli scarichi e dei liquidi a vuoto.",
+              "Motori a spazzole e brushless. I brushless durano più a lungo e sono più silenziosi, adatti a lunghi periodi di lavoro continuo. I modelli a spazzole sono più semplici ed economici, adatti all’uso intermittente.",
+              "Pressione standard e alta pressione. Per circuiti con molta contropressione in uscita, per esempio tubi stretti, linee lunghe o ugelli, valutare un modello ad alta pressione."
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "La gamma di pompe a membrana miniaturizzate FOREACH segue gli stessi tre criteri: ",
+                "href": "/en/products/pumps/miniature-diaphragm-pumps/dpl30-bb/",
+                "label": "DPL30",
+                "suffix": " (300 mL/min) e "
+              },
+              {
+                "href": "/en/products/pumps/miniature-diaphragm-pumps/dpl60-bb/",
+                "label": "DPL60",
+                "suffix": " (600 mL/min) sono pompe per liquidi a pressione standard con pressione nominale di 100 kPa. La "
+              },
+              {
+                "href": "/en/products/pumps/miniature-diaphragm-pumps/dpl30h-bs/",
+                "label": "DPL30H",
+                "suffix": " è una pompa per liquidi ad alta pressione con pressione nominale di 600 kPa. Tutte e tre le serie sono disponibili con motori a spazzole o brushless. La "
+              },
+              {
+                "href": "/en/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/",
+                "label": "DPGL800",
+                "suffix": " è una pompa a membrana brushless da 24 V per gas e liquidi, con portata di gas a vuoto di 6 L/min per singola testa, per aspirazione degli scarichi e aspirazione di liquidi a vuoto. Il pompaggio di liquido al 100% è fuori dal campo d’uso previsto."
+              }
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-bb-brushless-labeled-front-card.webp",
+            "alt": "Pompa a membrana miniaturizzata per liquidi FOREACH DPL30",
+            "width": 2000,
+            "height": 1500,
+            "caption": "Pompa a membrana miniaturizzata per liquidi FOREACH DPL30."
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
+            "alt": "Pompa a membrana miniaturizzata per gas e liquidi FOREACH DPGL800",
+            "width": 1500,
+            "height": 1500,
+            "caption": "Pompa a membrana miniaturizzata per gas e liquidi FOREACH DPGL800."
+          }
+        ]
+      },
+      {
+        "title": "Vantaggi e limiti delle pompe a membrana",
+        "tocLabel": "Vantaggi e limiti",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Le pompe a membrana offrono tenuta affidabile e autoadescamento. La portata pulsa e varia con la contropressione. Valutare entrambi gli aspetti prima di scegliere."
+          },
+          {
+            "type": "subheading",
+            "title": "Vantaggi"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Tenute statiche e rischio ridotto di perdita. La membrana isola il fluido dall’azionamento, evitando punti di perdita come una tenuta sull’albero.",
+              "Autoadescamento. All’avvio la pompa evacua l’aria dal tubo in ingresso e poi aspira il liquido senza riempimento preliminare. L’altezza di aspirazione è limitata, in genere a pochi metri di colonna d’acqua per le pompe miniaturizzate.",
+              "Funzionamento a secco per brevi periodi in molti modelli. Un’interruzione temporanea del liquido nella linea difficilmente provoca danni entro i limiti indicati nel manuale.",
+              "Gestione di gas e miscele gas-liquido. I modelli progettati per queste miscele possono aspirare direttamente scarichi o liquidi a vuoto.",
+              "Materiali bagnati selezionabili. Membrana, valvole e testa si possono scegliere in base al fluido, inclusi acidi, basi, solventi e diversi reagenti.",
+              "Basso taglio. Rispetto alle pompe a ingranaggi o centrifughe, la pompa agita e sollecita meno il fluido, una caratteristica adatta ai fluidi sensibili al taglio."
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Limiti"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Portata pulsante. I circuiti che richiedono flusso regolare necessitano di uno smorzatore o di una pompa a più camere.",
+              "Portata variabile con la contropressione. Più il tubo è stretto e lungo, minore è la portata effettiva. Per dosaggio preciso è più adatta una pompa a pistone o a siringa.",
+              "Rumore e vibrazioni. Il montaggio e l’isolamento dalle vibrazioni incidono sul rumore complessivo dell’apparecchiatura.",
+              "Usura della membrana e delle valvole. Sono parti soggette a usura, la cui vita dipende da condizioni di esercizio e tipo di motore.",
+              "Sensibilità delle pompe miniaturizzate a particelle e alta viscosità. I giochi delle valvole sono piccoli. Verificare prima l’idoneità con fluidi contenenti particelle, molto viscosi o facilmente volatili."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Dove si usano le pompe a membrana?",
+        "tocLabel": "Applicazioni",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "In ambito industriale le pompe AODD si usano spesso per trasferire prodotti chimici, rivestimenti e acque reflue. Negli strumenti e nelle apparecchiature automatiche, le pompe a membrana miniaturizzate svolgono soprattutto lavaggio, reintegro, ricircolo e aspirazione degli scarichi:"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Settore",
+              "Funzione della pompa a membrana"
+            ],
+            "rows": [
+              [
+                "Strumenti analitici",
+                "Alimentazione del liquido di lavaggio, reintegro, ricircolo e aspirazione degli scarichi. Lavaggio degli aghi in cromatografia liquida"
+              ],
+              [
+                "Monitoraggio ambientale",
+                "Campionamento dell’acqua, erogazione di reagenti e drenaggio. Rimozione della condensa nel pretrattamento dei gas"
+              ],
+              [
+                "Automazione di laboratorio",
+                "Lavaggio di micropiastre in macchine dedicate e pulizia degli strumenti di preparazione dei campioni"
+              ],
+              [
+                "Scienze della vita",
+                "Ricambio del terreno nelle colture cellulari, lavaggio automatico e gestione degli scarichi"
+              ],
+              [
+                "Biologia sintetica",
+                "Alimentazione e rimozione degli scarichi nei microbioreattori"
+              ],
+              [
+                "Diagnostica in vitro (IVD)",
+                "Lavaggio e gestione degli scarichi negli analizzatori di chimica clinica, ematologia, immunodosaggio e coagulazione"
+              ],
+              [
+                "Stampa e circuiti d’inchiostro",
+                "Alimentazione e ricircolo di ritorno per limitare la sedimentazione dell’inchiostro bianco e di altri inchiostri"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Nello stesso strumento, lavaggio, reintegro e aspirazione degli scarichi richiedono spesso prestazioni diverse. Per il lavaggio contano portata e pressione. L’aspirazione degli scarichi può richiedere la gestione di miscele gas-liquido. Valutare la pompa per ogni compito separatamente."
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere una pompa a membrana",
+        "tocLabel": "Scelta della pompa",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Usare come punto di partenza il fluido e il circuito reale, oltre alla portata massima in scheda. Controllare nell’ordine i punti seguenti:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Qual è il fluido? Liquido, gas o miscela gas-liquido, eventuale corrosività e particelle, viscosità e temperatura. Da questi dipendono tipo di pompa e materiali bagnati.",
+              "Quale portata serve? Dimensionare per il punto di lavoro effettivo dopo l’installazione e prevedere un margine. Le portate a vuoto in scheda non bastano per il confronto.",
+              "Quali sono altezza di aspirazione e contropressione? Dislivello da superare all’ingresso e resistenza in uscita determinano se serve un modello standard o ad alta pressione.",
+              "I materiali bagnati sono compatibili? Controllare separatamente membrana, valvole e testa.",
+              "Motore e controllo: con spazzole o brushless, tensione di alimentazione ed eventuali esigenze di regolazione della velocità e di segnalazione dello stato.",
+              "Ciclo di lavoro e vita utile: esercizio continuo o intermittente e ore al giorno. Stimare la durata dalle condizioni reali.",
+              "Installazione e tubi: rumore, vibrazioni, pulsazioni, dimensioni dei tubi ed eventuale sfiato del serbatoio."
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Materiali bagnati comuni"
+          },
+          {
+            "type": "paragraph",
+            "text": "Materiali bagnati comuni delle pompe a membrana. Le indicazioni sono generali. Verificare ogni fluido per composizione, concentrazione e temperatura."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Materiale",
+              "Componenti tipici",
+              "Punti di forza",
+              "Limiti da considerare"
+            ],
+            "rows": [
+              [
+                "EPDM (gomma etilene-propilene-diene)",
+                "Membrana, valvole",
+                "Resiste ad acqua, acidi e basi diluiti e alcoli. Adatto a fluidi acquosi",
+                "Resistenza insufficiente a oli minerali, carburanti e solventi a base di idrocarburi"
+              ],
+              [
+                "FKM (fluoroelastomero)",
+                "Membrana, valvole",
+                "Resiste a oli, carburanti e alla maggior parte degli acidi",
+                "Resistenza insufficiente a chetoni come l’acetone, ammine e basi forti"
+              ],
+              [
+                "FFKM (perfluoroelastomero)",
+                "Valvole, guarnizioni",
+                "Resistenza chimica vicina a quella del PTFE, mantenendo l’elasticità della gomma",
+                "Costo elevato"
+              ],
+              [
+                "PTFE (politetrafluoroetilene)",
+                "Membrana",
+                "Molto inerte. Resiste alla maggior parte di acidi forti, basi forti e solventi organici",
+                "Meno elastico della gomma"
+              ],
+              [
+                "PPS (solfuro di polifenilene)",
+                "Testa della pompa",
+                "Resistente al calore e agli agenti chimici, dimensionalmente stabile",
+                "Compatibilità limitata con acido cloridrico concentrato, perossido di idrogeno e fluidi simili"
+              ],
+              [
+                "PP (polipropilene)",
+                "Testa della pompa",
+                "Resiste ad acidi, basi e solventi organici comuni. Costo contenuto",
+                "Limite di temperatura inferiore. Resistenza insufficiente a xilene, diclorometano e solventi simili"
+              ],
+              [
+                "PVDF (polivinilidenfluoruro)",
+                "Testa della pompa",
+                "Resistenza chimica e buona resistenza meccanica",
+                "Compatibilità limitata con chetoni come l’acetone"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le pompe a membrana miniaturizzate FOREACH per liquidi DPL30, DPL60 e DPL30H hanno la testa in PPS e due combinazioni di materiali bagnati: membrana e valvole in EPDM, oppure membrana in PTFE e valvole in FFKM. Per acqua purificata, valutare prima la combinazione in EPDM. Per reagenti e liquidi di pulizia, verificare entrambe in base a composizione, concentrazione e temperatura effettive, includendo tutti i fluidi usati per la pulizia."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Cerca il fluido specifico nella ",
+                "href": "/en/resources/material-compatibility/",
+                "label": "tabella di compatibilità dei materiali",
+                "suffix": " per PPS, PTFE e altri materiali. Per scegliere tra le due combinazioni, consulta "
+              },
+              {
+                "href": "/en/resources/technical-articles/micro-diaphragm-pump-materials-selection/",
+                "label": "Quali materiali sono disponibili per le pompe a membrana miniaturizzate?",
+                "suffix": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Durante la prototipazione, misurare portata e pressione nel circuito reale e confermare i risultati prima di finalizzare il progetto."
+          }
+        ]
+      },
+      {
+        "title": "In sintesi",
+        "tocLabel": "In sintesi",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Una pompa a membrana muove il fluido con una membrana a moto alternativo e due valvole di ritegno. Offre tenuta affidabile e autoadescamento e si usa dal trasferimento industriale ai circuiti fluidici degli strumenti. Per la scelta, definire prima fluido e punto di lavoro effettivo, poi verificare materiali, motore e condizioni di installazione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per integrare una pompa a membrana miniaturizzata nella tua apparecchiatura, FOREACH offre modelli per liquidi e per gas e liquidi. Indica fluido, portata obiettivo e schema dei tubi. I nostri tecnici potranno aiutarti a definire il punto di lavoro e il modello adatto."
+          },
+          {
+            "type": "subheading",
+            "title": "Approfondimenti"
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+                "label": "Come leggere la curva portata-pressione di una pompa a membrana e stimare la portata nell’impianto"
+              },
+              {
+                "href": "/en/resources/technical-articles/micro-diaphragm-pump-materials-selection/",
+                "label": "Quali materiali sono disponibili per le pompe a membrana miniaturizzate? Criteri di scelta"
+              },
+              {
+                "href": "/en/resources/technical-articles/diaphragm-pump-vs-peristaltic-pump/",
+                "label": "Pompe miniaturizzate a membrana e peristaltiche: vantaggi, limiti e scelta per la fluidica strumentale"
+              },
+              {
+                "href": "/en/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+                "label": "Ridurre le pulsazioni di portata nelle pompe a membrana miniaturizzate: misure e soluzioni"
+              },
+              {
+                "href": "/en/resources/technical-articles/self-priming-miniature-liquid-diaphragm-pump-selection/",
+                "label": "Scelta della pompa a membrana miniaturizzata autoadescante: altezza, tempo di adescamento e avvio a secco o a umido"
+              },
+              {
+                "href": "/en/resources/technical-articles/brushed-vs-brushless-diaphragm-pump-3000h-10000h/",
+                "label": "Perché le pompe a membrana a spazzole durano circa 3,000 ore e quelle brushless circa 10,000 ore?"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "Una pompa a membrana può funzionare a secco?",
+        "answer": "La maggior parte delle pompe a membrana tollera brevi periodi a secco, perché è priva di tenute dinamiche lubrificate dal liquido. Il funzionamento prolungato a secco accelera l’usura di membrana e valvole. Consultare il manuale per i limiti del modello."
+      },
+      {
+        "question": "Una pompa a membrana è autoadescante?",
+        "answer": "Sì. Può aspirare liquido anche con aria all’ingresso, entro un’altezza di aspirazione limitata. Per le pompe FOREACH per liquidi, è 6 mH₂O per DPL30 e 3 mH₂O per DPL60 e DPL30H. Se l’autoadescamento peggiora, le cause comuni includono infiltrazioni d’aria in ingresso o valvole usurate."
+      },
+      {
+        "question": "Perché la portata dopo l’installazione è inferiore al valore nominale?",
+        "answer": "La portata nominale è in genere la portata libera senza contropressione. Diametro e lunghezza dei tubi, altezza di aspirazione e contropressione riducono la portata nell’impianto. Anche un serbatoio privo di sfiato o un ingresso d’aria in aspirazione possono ridurla."
+      },
+      {
+        "question": "Pompa a membrana o peristaltica: quale scegliere?",
+        "answer": "La pompa peristaltica sposta il fluido comprimendo il tubo flessibile. La portata segue la velocità di rotazione e il tubo va cambiato periodicamente. Una pompa a membrana è autoadescante, non consuma un tubo di pompaggio ed eroga con pulsazioni. Le peristaltiche sono comuni nel dosaggio. Le pompe a membrana si usano per trasferimento prolungato, lavaggio e aspirazione degli scarichi con manutenzione contenuta."
+      },
+      {
+        "question": "Che differenza c’è tra pompe pneumatiche ed elettriche a membrana?",
+        "answer": "Le pneumatiche funzionano ad aria compressa, raggiungono portate elevate e si usano soprattutto per il trasferimento industriale. Le elettriche hanno un motore, possono essere molto piccole e sono semplici da comandare, caratteristiche adatte all’integrazione in strumenti e apparecchiature."
+      },
+      {
+        "question": "Una pompa a membrana può dosare con precisione?",
+        "answer": "La portata di una pompa a membrana standard varia con la contropressione. Per un dosaggio di precisione scegliere una pompa dosatrice a membrana, a pistone o a siringa."
+      },
+      {
+        "question": "Quanto dura una pompa a membrana?",
+        "answer": "La durata dipende soprattutto da motore e condizioni operative. Per le pompe a membrana miniaturizzate FOREACH, la vita nominale è circa 3,000 ore per le versioni a spazzole e circa 10,000 ore per quelle brushless. L’esercizio continuo, la contropressione alta e le temperature elevate possono ridurre la durata effettiva."
+      }
+    ],
+    "cta": {
+      "title": "Cerchi una pompa a membrana miniaturizzata per la tua apparecchiatura?",
+      "description": "Indica fluido, portata obiettivo, altezza di aspirazione, contropressione e schema dei tubi. Un tecnico FOREACH può aiutarti a individuare il punto di lavoro e il modello adatto.",
+      "contactLabel": "Contatta un tecnico",
+      "productsLabel": "Vedi le pompe a membrana miniaturizzate",
+      "productsHref": "/en/products/pumps/miniature-diaphragm-pumps/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "working-principle",
+      "label": "Come funziona una pompa a membrana?"
+    },
+    {
+      "id": "types",
+      "label": "Quali tipi di pompe a membrana esistono?"
+    },
+    {
+      "id": "pros-cons",
+      "label": "Vantaggi e limiti delle pompe a membrana"
+    },
+    {
+      "id": "applications",
+      "label": "Dove si usano le pompe a membrana?"
+    },
+    {
+      "id": "selection",
+      "label": "Come scegliere una pompa a membrana"
+    },
+    {
+      "id": "summary",
+      "label": "In sintesi"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Che cos’è una pompa a membrana? Principio, tipi, vantaggi, limiti e scelta"
+    ],
+    "mentions": [
+      "pompa a membrana",
+      "fluidica strumentale"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "diaphragm-dpl30-brushless",
+      "title": "DPL30-BB · pompa a membrana miniaturizzata per liquidi brushless a 2 fili · 300 mL/min",
+      "href": "/en/products/pumps/miniature-diaphragm-pumps/dpl30-bb/",
+      "imageSrc": "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-bb-brushless-labeled-front-card.webp",
+      "imageAlt": "FOREACH DPL30-BB, pompa a membrana miniaturizzata",
+      "imageAspectRatio": 1.3333333333333333
+    },
+    {
+      "id": "diaphragm-dpgl800-ff",
+      "title": "DPGL800-BS · pompa a membrana brushless 24V per gas e liquidi per aspirazione degli scarichi OEM",
+      "href": "/en/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/",
+      "imageSrc": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
+      "imageAlt": "FOREACH DPGL800-BS, pompa a membrana miniaturizzata",
+      "imageAspectRatio": 1
+    }
+  ],
+  "footerProducts": [
+    {
+      "id": "diaphragm-dpl30-brushless",
+      "title": "DPL30-BB · pompa a membrana miniaturizzata per liquidi brushless a 2 fili · 300 mL/min",
+      "href": "/en/products/pumps/miniature-diaphragm-pumps/dpl30-bb/",
+      "imageSrc": "/images/products/pumps/diaphragm-pumps/dpl30/images/foreach-dpl30-bb-brushless-labeled-front-card.webp",
+      "imageAlt": "FOREACH DPL30-BB, pompa a membrana miniaturizzata",
+      "imageAspectRatio": 1.3333333333333333
+    },
+    {
+      "id": "diaphragm-dpgl800-ff",
+      "title": "DPGL800-BS · pompa a membrana brushless 24V per gas e liquidi per aspirazione degli scarichi OEM",
+      "href": "/en/products/pumps/miniature-diaphragm-pumps/dpgl800-bs/",
+      "imageSrc": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
+      "imageAlt": "FOREACH DPGL800-BS, pompa a membrana miniaturizzata",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "diaphragm-dpl60-brushless",
+      "title": "DPL60-BB · pompa a membrana brushless per liquidi · 600 mL/min",
+      "href": "/en/products/pumps/miniature-diaphragm-pumps/dpl60-bb/",
+      "imageSrc": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-bb-brushless-liquid-diaphragm-pump-front-20261027-card.webp",
+      "imageAlt": "FOREACH DPL60-BB, pompa a membrana miniaturizzata",
+      "imageAspectRatio": 1.3333333333333333
+    }
+  ]
+}

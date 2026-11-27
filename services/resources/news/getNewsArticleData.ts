@@ -13,11 +13,11 @@ import { getNewsPageData } from "./getNewsPageData";
 
 import type {
   NewsArticle,
-  NewsLocale,
+  NewsResourceLocale,
 } from "@/data/resources/news/news.types";
 
 export function getNewsArticleData(
-  locale: NewsLocale,
+  locale: NewsResourceLocale,
   slug: string
 ): NewsArticle | null {
   const pageData = getNewsPageData(locale);
@@ -25,8 +25,8 @@ export function getNewsArticleData(
   return pageData.articles.find((article) => article.slug === slug) ?? null;
 }
 
-export function getNewsSlugs(locale: NewsLocale): string[] {
+export function getNewsSlugs(locale: NewsResourceLocale): string[] {
   const pageData = getNewsPageData(locale);
 
   return pageData.articles.map((article) => article.slug);
-} 
+}

@@ -420,8 +420,18 @@ export const inkCirculationFlowSelectionCopies = {
           {
             type: "links",
             items: [
-              { href: DPL30, label: "DPL30 300 mL/min-class product page" },
-              { href: DPL60, label: "DPL60 600 mL/min-class product page" },
+              {
+                href: "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                prefix: "For a duty point below 300 mL/min, check the ",
+                label: "DPL30-DB",
+                suffix: " curve at the measured pressure drop across the circuit.",
+              },
+              {
+                href: "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                prefix: "If the target is close to 300 mL/min and the smaller pump has little margin, repeat the measurement with the ",
+                label: "DPL60-DB",
+                suffix: " and the filter near its replacement limit.",
+              },
               { href: LIQUID_CATEGORY, label: "miniature liquid diaphragm pump category" },
             ],
           },

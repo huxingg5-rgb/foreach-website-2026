@@ -71,6 +71,13 @@
         "The filter range includes F-PE and F-PA inline filters and F-SS water-circulation filters, using HDPE media, PA media and stainless steel mesh, respectively, with model-specific housings and connections. Some inline filters fit 2.4 and 3.2 mm ID tubing. Water-circulation options include models for 12.7 mm ID tubing and assemblies with 3/8-18 NPT female threads that can accept matching barbed fittings or quick-connect fittings. Check valves include diaphragm and duckbill designs for tubing IDs of 1.6, 2.4, 3.2, 4.8, 6.4, 7.9 and 9.5 mm. Housing materials include PP and PVDF, and elastomeric seals include EPDM and FKM; FFKM is also available on selected diaphragm check valves. Select connection sizes and materials for the actual fluid path.",
         "HDPE-media models offer filtration ratings of 10 μm, 40–60 μm and 80–100 μm; PA-media models are rated at 250 μm and stainless steel mesh water-circulation models at 150 μm. Select filters according to particle size, required flow and allowable differential pressure. Select check valves according to cracking pressure, forward flow, reverse sealing and pressure requirements; cracking pressure is the differential pressure needed to begin forward flow. Follow the marked flow direction and provide access for filter inspection and replacement. Filter media, housings, diaphragms or duckbill seals and tubing must all suit the process fluid, cleaning fluid and working temperature. Combine filters and check valves according to actual flow, pressure and maintenance requirements."
       ]
+    },
+    "degassing-modules": {
+      "title": "Hollow-Fiber Membrane Degassing Module for Inkjet Ink",
+      "paragraphs": [
+        "The EF-AG3-B degasses ink inline in industrial inkjet supply lines. Ink flows outside the hollow fibers, and the vacuum draws dissolved gases through the membrane to reduce bubble formation downstream.",
+        "Both liquid ports and the vacuum port use NPT 1/8 female threads. Verify degassing and liquid-side pressure drop for the actual ink, flow rate, temperature and vacuum-side absolute pressure, and check compatibility with ink and cleaning fluids."
+      ]
     }
   },
   "es": {
@@ -144,6 +151,13 @@
         "Los filtros en línea y las válvulas de retención FOREACH proporcionan filtración de partículas y control del sentido de flujo en equipos IVD, de ciencias de la vida, de automatización de laboratorio y de análisis. Se utilizan en circuitos de reactivos, lavado, circulación y drenaje. Los filtros retienen partículas; las válvulas de retención, también llamadas válvulas antirretorno, impiden el flujo inverso. Se pueden utilizar por separado o en combinación según la función requerida. Las diferentes estructuras y conexiones permiten su instalación en tubos flexibles internos y sistemas de circulación de agua donde se necesite filtración o protección contra el retorno.",
         "La gama incluye filtros en línea F-PE y F-PA y filtros de circulación de agua F-SS, con medios de HDPE, PA y malla de acero inoxidable, respectivamente, y carcasas y conexiones según el modelo. Algunos filtros en línea admiten tubos de 2,4 y 3,2 mm de diámetro interior. Las opciones para circulación de agua incluyen modelos para tubo de 12,7 mm y conjuntos con rosca hembra 3/8-18 NPT para racores compatibles de espiga o conexión rápida. Las válvulas de retención incluyen diseños de diafragma y pico de pato para tubos de 1,6; 2,4; 3,2; 4,8; 6,4; 7,9 y 9,5 mm de diámetro interior. Las carcasas pueden ser de PP o PVDF y los elementos elastoméricos de EPDM o FKM; ciertas válvulas de diafragma también ofrecen FFKM. Los tamaños y materiales se seleccionan según el circuito real.",
         "Los filtros de HDPE ofrecen grados de filtración de 10 μm, 40–60 μm y 80–100 μm; los de PA, de 250 μm, y los de malla de acero inoxidable para circulación de agua, de 150 μm. El filtro se selecciona por tamaño de partícula, caudal y presión diferencial admisible. Para las válvulas se consideran la presión diferencial de apertura, el caudal directo, la estanqueidad inversa y la resistencia a la presión; la presión diferencial de apertura es la necesaria para iniciar el flujo en sentido directo. Se respeta el sentido marcado y se deja acceso para inspeccionar y sustituir el filtro. El medio, la carcasa, el diafragma o elemento de pico de pato y los tubos deben ser compatibles con los líquidos de proceso y limpieza y la temperatura. La combinación se determina según el caudal, la presión y el mantenimiento."
+      ]
+    },
+    "degassing-modules": {
+      "title": "Módulos de desgasificación en línea por vacío",
+      "paragraphs": [
+        "La desgasificación en línea por vacío elimina gases disueltos durante el suministro continuo de líquido y reduce la formación de burbujas aguas abajo. En el EF-AG3-B, el líquido circula por el exterior de las fibras huecas. Los gases disueltos atraviesan la membrana y se extraen por el lado de vacío. El módulo permite desgasificar el agua de alimentación de equipos y la tinta de impresoras industriales de inyección. Para suministrar agua purificada o reactivos a analizadores bioquímicos, se debe evaluar la idoneidad según el líquido y las condiciones de trabajo.",
+        "Las dos conexiones de líquido y la conexión de vacío tienen rosca hembra NPT 1/8. El líquido pasa por la conexión lateral y por una de las conexiones de extremo. La otra se conecta a la línea de vacío. Al instalar el módulo, compruebe las marcas de las conexiones y deje espacio para el racor lateral y el desmontaje. Compruebe la compatibilidad de los materiales en contacto con el fluido de proceso y el líquido de limpieza. Verifique la eficacia de desgasificación y la pérdida de carga del lado del líquido con el caudal, la temperatura del líquido y la presión absoluta del lado de vacío previstos."
       ]
     }
   },
@@ -219,6 +233,13 @@
         "La gamme comprend les filtres en ligne F-PE et F-PA et les filtres de circulation d’eau F-SS, à média HDPE, média PA et toile filtrante en acier inoxydable, respectivement, avec corps et raccordements selon le modèle. Certains filtres en ligne conviennent aux tubes de diamètre intérieur 2,4 et 3,2 mm. Les modèles pour circulation d’eau incluent des raccordements pour tube de 12,7 mm et des ensembles à filetage femelle 3/8-18 NPT pouvant recevoir des raccords cannelés ou rapides compatibles. Les clapets anti-retour existent à membrane ou à bec de canard pour des tubes de diamètre intérieur 1,6 ; 2,4 ; 3,2 ; 4,8 ; 6,4 ; 7,9 et 9,5 mm. Les corps peuvent être en PP ou PVDF, les éléments élastomères en EPDM ou FKM ; le FFKM est également proposé sur certains clapets à membrane. Choisir les dimensions et matériaux selon le circuit réel.",
         "Les filtres à média HDPE offrent des seuils de 10 μm, 40–60 μm et 80–100 μm ; ceux à média PA, 250 μm ; les modèles à toile inox pour circulation d’eau, 150 μm. Choisir le filtre selon la taille des particules, le débit et la pression différentielle admissible. Pour les clapets, considérer la pression différentielle d’ouverture, le débit direct, l’étanchéité en sens inverse et la tenue en pression ; la pression d’ouverture est le différentiel nécessaire pour amorcer l’écoulement dans le sens passant. Respecter le sens indiqué et prévoir l’accès pour l’inspection et le remplacement du filtre. Le média, le corps, la membrane ou le bec de canard et les tubes doivent convenir aux fluides de procédé et de nettoyage et à la température. Leur combinaison dépend du débit, de la pression et de la maintenance prévus."
       ]
+    },
+    "degassing-modules": {
+      "title": "Modules de dégazage en ligne sous vide",
+      "paragraphs": [
+        "Le dégazage en ligne sous vide retire les gaz dissous pendant l’alimentation continue en liquide et limite la formation de bulles en aval. Dans l’EF-AG3-B, le liquide circule à l’extérieur des fibres creuses. Les gaz dissous traversent la membrane et sont aspirés côté vide. Ce module peut dégazer l’eau d’alimentation des équipements et l’encre destinée à l’impression industrielle à jet d’encre. Pour l’alimentation des analyseurs biochimiques en eau purifiée ou en réactifs, évaluer l’adéquation du module au fluide et aux conditions de service.",
+        "Les deux orifices de liquide et l’orifice de vide sont à filetage femelle NPT 1/8. Le liquide passe par l’orifice latéral et par l’un des deux orifices d’extrémité. L’autre orifice d’extrémité est raccordé à la ligne de vide. Vérifier le repérage des orifices et prévoir un dégagement pour le raccord latéral et la dépose du module. Vérifier la compatibilité des fluides de service et de nettoyage avec les matériaux en contact. Valider l’efficacité du dégazage et la perte de charge côté liquide au débit, à la température du liquide et à la pression absolue côté vide visés."
+      ]
     }
   },
   "ko": {
@@ -293,6 +314,13 @@
         "필터 제품군에는 F-PE·F-PA 인라인 필터와 F-SS 물 순환용 필터가 있으며, 각각 HDPE 여재, PA 여재 및 스테인리스강 메시를 사용합니다. 하우징과 연결부는 모델별로 구성됩니다. 일부 인라인 필터는 내경 2.4, 3.2 mm 튜브에 대응하며, 물 순환용에는 내경 12.7 mm 튜브 모델과 3/8-18 NPT 암나사 어셈블리가 있어 적합한 바브 피팅 또는 퀵 커넥트 피팅을 조합할 수 있습니다. 체크 밸브는 다이어프램형과 덕빌형이 있으며, 튜브 내경은 1.6, 2.4, 3.2, 4.8, 6.4, 7.9, 9.5 mm 등의 규격을 제공합니다. 하우징 재질은 PP, PVDF 등이 있고, 탄성 씰 재질은 EPDM, FKM이며 일부 다이어프램형에는 FFKM도 제공됩니다. 실제 유로에 맞게 연결 치수와 재질을 선택합니다.",
         "HDPE 여재 모델은 10 μm, 40–60 μm, 80–100 μm, PA 여재 모델은 250 μm, 스테인리스강 메시 물 순환용 모델은 150 μm의 여과 등급을 제공합니다. 필터는 입자 크기, 필요한 유량 및 허용 차압에 따라 선정합니다. 체크 밸브는 개방 차압, 정방향 유량, 역방향 밀봉 및 내압 요구를 고려하며, 개방 차압(크래킹 압력)은 정방향 흐름이 시작되는 데 필요한 압력 차이입니다. 제품의 유동 방향 표시를 따라 설치하고 필터 점검·교체 공간을 확보합니다. 여재, 하우징, 다이어프램 또는 덕빌 씰과 튜브 재질은 모두 사용 유체, 세척액 및 작동 온도에 적합해야 합니다. 필터와 체크 밸브의 조합은 실제 유량, 압력 및 유지보수 요구에 따라 결정합니다."
       ]
+    },
+    "degassing-modules": {
+      "title": "인라인 진공 탈기 모듈",
+      "paragraphs": [
+        "인라인 진공 탈기 모듈은 액체를 연속 공급하는 동안 용존 가스를 제거해 하류 유로의 기포 발생을 줄입니다. EF-AG3-B에서는 액체가 중공사막 바깥쪽으로 흐르고 막을 통과한 가스는 진공 측으로 배출됩니다. 장비 급수 및 산업용 잉크젯 프린터의 잉크 공급 라인에서 탈기에 사용할 수 있습니다. 생화학 분석기의 순수 또는 시약 공급 라인에 적용할 때는 유체와 접액 재질의 적합성 및 실제 운전 조건을 확인합니다.",
+        "액체 포트 두 개와 진공 포트 한 개는 모두 NPT 1/8 암나사입니다. 측면 포트와 한쪽 끝단 포트는 액체용이며, 반대쪽 끝단 포트는 진공 라인에 연결합니다. 설치 시 포트 표시를 확인하고 측면 배관 연결 및 모듈 탈착 공간을 확보합니다. 작업액과 세정액이 접액 재질에 적합한지 확인합니다. 목표 유량, 액체 온도 및 진공 측 절대압에서 탈기 성능과 액체 측 압력 손실을 검증합니다."
+      ]
     }
   },
   "ru": {
@@ -366,6 +394,159 @@
         "Линейные фильтры и обратные клапаны FOREACH обеспечивают фильтрацию частиц и управление направлением потока в оборудовании IVD, для наук о жизни, автоматизации лабораторий и аналитических исследований. Они применяются в линиях реагентов, промывки, циркуляции и слива. Фильтры задерживают твёрдые загрязнения, обратные клапаны предотвращают обратное течение жидкости. Эти изделия можно использовать отдельно или совместно в зависимости от функции оборудования. Разные фильтрующие элементы, клапанные механизмы и размеры подключений позволяют устанавливать их в гибких внутренних линиях и системах циркуляции воды там, где нужна фильтрация или защита от обратного потока.",
         "Ассортимент включает линейные фильтры F-PE и F-PA и фильтры циркуляции воды F-SS с материалами HDPE, PA и сеткой из нержавеющей стали соответственно; корпуса и соединения определяются моделью. Некоторые линейные фильтры подходят для трубок с внутренним диаметром 2,4 и 3,2 мм. Для циркуляции воды предлагаются модели под трубку 12,7 мм и сборки с внутренней резьбой 3/8-18 NPT для подходящих штуцерных либо быстроразъёмных фитингов. Обратные клапаны представлены мембранными и щелевыми конструкциями типа «утиный клюв» для трубок с внутренними диаметрами 1,6; 2,4; 3,2; 4,8; 6,4; 7,9 и 9,5 мм. Корпуса могут быть из PP или PVDF, эластомерные уплотнения — из EPDM или FKM; отдельные мембранные модели также предлагаются с FFKM. Размеры и материалы выбирают под фактический жидкостный тракт.",
         "Фильтры HDPE предлагают тонкость фильтрации 10 мкм, 40–60 мкм и 80–100 мкм; PA — 250 мкм; водяные фильтры с нержавеющей сеткой — 150 мкм. Фильтр выбирают по размеру частиц, расходу и допустимому перепаду давления. Для обратного клапана учитывают перепад давления открытия, прямой расход, герметичность в обратном направлении и допустимое давление. Перепад открытия означает разность давлений, необходимую для начала потока в прямом направлении. При установке соблюдают маркировку направления и оставляют доступ для осмотра и замены фильтра. Фильтрующий материал, корпус, мембрана или щелевое уплотнение и трубки должны подходить для рабочих и промывочных жидкостей и температуры. Сочетание фильтров и клапанов определяют по фактическим расходу, давлению и требованиям к обслуживанию."
+      ]
+    },
+    "degassing-modules": {
+      "title": "Модули проточной вакуумной дегазации",
+      "paragraphs": [
+        "Проточная вакуумная дегазация удаляет растворённые газы при непрерывной подаче жидкости и уменьшает образование пузырьков ниже по потоку. В модуле EF-AG3-B жидкость обтекает полые волокна снаружи, а растворённые газы проходят через мембрану и отводятся со стороны вакуума. Модуль можно применять для дегазации воды, подаваемой к оборудованию, и чернил в системах промышленной струйной печати. Применимость в линиях подачи очищенной воды или реагентов биохимических анализаторов оценивают с учётом совместимости жидкости и рабочих условий.",
+        "Два жидкостных порта и вакуумный порт имеют внутреннюю резьбу NPT 1/8. Боковой и один торцевой порт предназначены для жидкости. Другой торцевой порт подключают к вакуумной линии. При монтаже сверяйтесь с маркировкой портов и оставляйте место для бокового подключения и демонтажа модуля. Проверьте совместимость рабочей и промывочной жидкостей с контактирующими с ними материалами. Подтвердите эффективность дегазации и перепад давления в жидкостном тракте при заданных расходе, температуре жидкости и абсолютном давлении на стороне вакуума."
+      ]
+    }
+  },
+  "de": {
+    "hard-tube-fittings": {
+      "groups": [
+        {
+          "title": "Flachboden-Fittings für gebördelte Leitungen",
+          "description": "Verbinden Sie eine Leitung mit vorgebördeltem Ende mit einem Gewindeanschluss mit flachem Boden. Stimmen Sie Leitungsaußendurchmesser, Anschlussgewinde und Dichtscheibe auf das Standard- oder Kompaktfitting ab."
+        },
+        {
+          "title": "Bördellose Klemmringverschraubungen für starre Leitungen",
+          "description": "Ein passender Klemmring hält und dichtet die Leitung ohne vorheriges Bördeln. Prüfen Sie Leitungsaußendurchmesser, Anschlussgewinde, Klemmring und Platz für den Schraubenschlüssel."
+        },
+        {
+          "title": "Spannring-Fittings und Spannring-Sätze für starre Leitungen",
+          "description": "Verbinden Sie starre Leitungen, die mit einem passenden Spannring-Satz vorbereitet wurden. Prüfen Sie Anschlussgewinde und Leitungsaußendurchmesser vor der Auswahl."
+        },
+        {
+          "title": "Hochdruck-Fittings für Analysengeräte",
+          "description": "PNC und PNC6 sind einteilige PEEK-Fittings. PNF ist ein Edelstahl-Fitting mit Klemmring. Die Ausführungen passen zu Leitungen mit 1.6 mm Außendurchmesser und konischen Anschlüssen mit 10-32 UNF. PU-Verbinder und PUT-T-Stücke eignen sich für gerade Verbindungen und Abzweige. Prüfen Sie zulässigen Druck, Durchlass und Anschlussgeometrie des jeweiligen Modells."
+        },
+        {
+          "title": "Gewinde-Verschlussstopfen für Fluidikanschlüsse",
+          "description": "Verschließen Sie ungenutzte Fluidikanschlüsse. Wählen Sie Gewinde, Dichtposition, Anschlusstiefe und Platz für das Werkzeug passend zum Stopfen."
+        }
+      ]
+    },
+    "barbed-fittings": {
+      "groups": [
+        {
+          "title": "Gerade Schlauchverbinder mit Tüllen",
+          "description": "Verbinden Sie zwei flexible Leitungen geradlinig. Wählen Sie einen Verbinder mit gleichen oder reduzierten Anschlüssen passend zu den Schlauchinnendurchmessern."
+        },
+        {
+          "title": "T-Schlauchverbinder mit Tüllen",
+          "description": "Ergänzen Sie einen seitlichen Abzweig an einer Hauptleitung. Stimmen Sie die beiden Tüllen der Hauptleitung und die Tülle am Abzweig auf die jeweiligen Schlauchinnendurchmesser ab."
+        },
+        {
+          "title": "Winkel-Schlauchverbinder mit Tüllen",
+          "description": "Führen Sie eine Leitung im rechten Winkel weiter. Prüfen Sie beide Schlauchinnendurchmesser und planen Sie Platz für die Montage und den Schlauchbogen ein."
+        },
+        {
+          "title": "Y-Schlauchverbinder mit Tüllen",
+          "description": "Verteilen oder vereinigen Sie flexible Leitungen in Y-Form. Stimmen Sie den gemeinsamen Anschluss und die Abzweige auf die jeweiligen Schlauchinnendurchmesser ab."
+        },
+        {
+          "title": "Verschlussstopfen mit Tülle für flexible Schläuche",
+          "description": "Verschließen Sie das Ende eines flexiblen Schlauchs. Wählen Sie den Stopfen nach Schlauchinnendurchmesser, Werkstoff und Passung."
+        }
+      ]
+    },
+    "thread-to-barbed-fittings": {
+      "groups": [
+        {
+          "title": "Gerade Gewinde-Schlauchtüllen mit Gewindedichtung",
+          "description": "Verwenden Sie ein SA-Fitting für eine gerade Verbindung, die am Gewinde abdichtet. Gleichen Sie den Anschluss und den Schlauchinnendurchmesser ab."
+        },
+        {
+          "title": "Gewinde-Schlauchtüllen mit Flachbodendichtung",
+          "description": "Verwenden Sie SB- oder SBS-Fittings mit einem passenden Flachbodenanschluss. Prüfen Sie Dichtfläche, Gewinde, Dichtung und Schlauchinnendurchmesser."
+        },
+        {
+          "title": "Winkel-Schlauchtüllen mit Gewinde",
+          "description": "Verwenden Sie einen SAL-Winkel, um den Schlauch am Gewindeanschluss umzulenken. Prüfen Sie Gewinde, Schlauchinnendurchmesser und Platzbedarf."
+        },
+        {
+          "title": "Ausrichtbare Schlauchtüllen mit Gewinde",
+          "description": "Mit einem SBR-Fitting können Sie den Schlauchausgang bei der Montage ausrichten. Stimmen Sie den Anschluss und den Schlauchinnendurchmesser ab, bevor Sie das Fitting befestigen."
+        },
+        {
+          "title": "Adapter mit Innengewinde und Schlauchtülle",
+          "description": "Verbinden Sie mit einem SC-Adapter ein Bauteil mit Außengewinde mit einem flexiblen Schlauch. Prüfen Sie Anschlussgewinde und Dichtung. Stimmen Sie anschließend die Tülle auf den Schlauchinnendurchmesser ab."
+        }
+      ]
+    },
+    "luer-fittings": {
+      "groups": [
+        {
+          "title": "Gerade Luer-Lock-Verbinder mit männlichem und weiblichem Anschluss",
+          "description": "Kombinieren Sie einen einteiligen männlichen Luer-Verbinder LP mit einem geraden weiblichen Luer-Verbinder LS, um zwei Schläuche zu verbinden. Prüfen Sie beide Schlauchinnendurchmesser und den Platz für die Verriegelung."
+        },
+        {
+          "title": "Luer-Lock-Verbinder mit drehbarem Verriegelungsring",
+          "description": "Kombinieren Sie einen männlichen Luer-Verbinder LPR mit drehbarem Verriegelungsring mit einem weiblichen Luer-Verbinder LS. Ziehen Sie den Ring bei der Montage unabhängig vom Schlauch an, damit der Schlauch ausgerichtet bleibt."
+        },
+        {
+          "title": "Luer-Lock-Verbinder für den Schalttafeleinbau",
+          "description": "Montieren Sie einen weiblichen PMLS-Luer-Verbinder in der Schalttafel und kombinieren Sie ihn mit einem männlichen LPR- oder LPS-Luer-Verbinder mit drehbarem beziehungsweise festem Verriegelungsring. Prüfen Sie Ausschnitt, Plattenstärke und Schlauchabmessungen."
+        },
+        {
+          "title": "Männliche Luer-Lock-Verschlussstopfen für weibliche Anschlüsse",
+          "description": "Verschließen Sie einen Reserveanschluss oder einen vorübergehend ungenutzten weiblichen Luer-Anschluss mit einem männlichen LPBL-Stopfen. Prüfen Sie die Geometrie der zueinander passenden Verriegelung."
+        }
+      ]
+    },
+    "quick-connect-fittings": {
+      "groups": [
+        {
+          "title": "Schnellkupplungen mit Schlauchtülle",
+          "description": "Stimmen Sie jede Tülle auf den Schlauchinnendurchmesser ab. Gerade, gewinkelte und für den Schalttafeleinbau ausgelegte Varianten passen zu unterschiedlichen Leitungsführungen."
+        },
+        {
+          "title": "Schnellkupplungen mit NPT-Gewinde",
+          "description": "Verwenden Sie am Geräteanschluss ein NPT-Außengewinde. Prüfen Sie die vollständige Gewindeangabe und wählen Sie einen passenden Stecker und eine passende Kupplung."
+        },
+        {
+          "title": "Schnellkupplungen für den Schalttafeleinbau",
+          "description": "Befestigen Sie die Trennstelle am Gerätegehäuse oder an einer Montageplatte. Prüfen Sie Ausschnitt, Plattenstärke und Platz zum Entriegeln."
+        },
+        {
+          "title": "Schnellkupplungen mit Absperrventil",
+          "description": "Eine Kupplungshälfte mit Ventil sperrt beim Trennen ihren eigenen Flüssigkeitsweg ab. Verwenden Sie auf beiden Seiten kompatible Hälften mit Ventil, wenn beide Leitungen abgesperrt werden sollen."
+        },
+        {
+          "title": "Schnellkupplungen für Schläuche mit 1/4″ Innendurchmesser",
+          "description": "Wählen Sie eine Tülle für einen Schlauch mit 1/4″ (6.4 mm) Innendurchmesser. Legen Sie anschließend Durchlass, Montageart und Absperrausführung fest."
+        }
+      ]
+    },
+    "female-thread-adapters": {
+      "groups": [
+        {
+          "title": "Innengewindeverbinder für Fluidikleitungen",
+          "description": "Verwenden Sie für eine gerade Verbindung mit zwei Anschlüssen einen Standardverbinder U oder quadratischen Verbinder US. Prüfen Sie die gemeinsame Gewindeangabe, den Durchlass und den Montagefreiraum."
+        },
+        {
+          "title": "T- und Y-Verbinder mit 1/4-28 UNF-Innengewinde",
+          "description": "Verwenden Sie ein T-Stück für einen seitlichen Abzweig oder einen Y-Verbinder für eine Y-förmige Verteilung oder Zusammenführung. Prüfen Sie die 1/4-28 UNF-Anschlüsse und den gewählten Durchlass."
+        },
+        {
+          "title": "Schottverbinder mit Innengewinde",
+          "description": "Der PMU-Verbinder hat zwei Flüssigkeitsanschlüsse mit 1/4-28 UNF-Innengewinde und einen Durchlass von 2.0 mm. Das M12×1.5-Montagegewinde und die Mutter befestigen ihn an der Schalttafel."
+        }
+      ]
+    },
+    "filters": {
+      "groups": [
+        {
+          "title": "Inline-Flüssigkeitsfilter für Gerätefluidik",
+          "description": "F-PE-Inlinefilter verwenden HDPE-Filtermedien und PP-Gehäuse für Schläuche mit 3.2 mm Innendurchmesser. Wählen Sie je nach Partikelgröße und zulässigem Druckverlust 40–60 μm oder 80–100 μm."
+        },
+        {
+          "title": "Membran-Rückschlagventil mit Schlauchtüllen",
+          "description": "Das CV-BE-Ventil hat eine EPDM-Membran in einem PP-Gehäuse mit Tüllen für Schläuche mit 3.2 mm Innendurchmesser. Prüfen Sie Öffnungsdruck, Vorwärtsdurchfluss und Dichtheit gegen Rückfluss."
+        }
       ]
     }
   }

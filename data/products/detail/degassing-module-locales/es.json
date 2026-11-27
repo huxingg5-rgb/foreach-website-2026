@@ -1,0 +1,94 @@
+{
+  "name": "Módulo desgasificador de membrana",
+  "navName": "Módulos desgasificadores",
+  "navDescription": "Desgasificación en línea por vacío para circuitos de líquido",
+  "title": "EF-AG3-B Módulo desgasificador de membrana",
+  "seoTitle": "EF-AG3-B | Desgasificador de membrana para tinta | FOREACH",
+  "description": "Módulo EF-AG3-B de membrana de fibra hueca para desgasificación en línea por vacío en circuitos de alimentación de tinta. Dos conexiones de líquido y una de vacío, con rosca hembra NPT 1/8.",
+  "introduction": "El EF-AG3-B es un módulo de membrana de fibra hueca para desgasificar líquidos en línea mediante vacío. Elimina continuamente gases disueltos durante el suministro y reduce las burbujas que se forman cuando esos gases salen de la disolución. Su aplicación típica es la alimentación de tinta en impresoras industriales de inyección. Para desgasificar agua o utilizarlo en circuitos de analizadores bioquímicos, se debe evaluar la compatibilidad del líquido y las condiciones de trabajo. Su diseño de perfusión externa incorpora dos conexiones de líquido y una de vacío, todas con rosca hembra NPT 1/8, para instalarlo en serie en la línea de alimentación y conectar el vacío de forma independiente.",
+  "cardAlt": "Módulo desgasificador de membrana EF-AG3-B y sus conexiones roscadas",
+  "galleryAlts": [
+    "Vista frontal del módulo desgasificador EF-AG3-B, con carcasa cilíndrica y conexión lateral de líquido",
+    "Módulo desgasificador de membrana EF-AG3-B colocado en vertical",
+    "Vista oblicua del lado opuesto del módulo desgasificador EF-AG3-B",
+    "Conexiones roscadas de extremo y lateral del módulo desgasificador EF-AG3-B"
+  ],
+  "breadcrumbs": ["Inicio", "Productos", "Racores"],
+  "modelLabel": "Modelo",
+  "typeLabel": "Tipo de producto",
+  "searchKeywords": "desgasificador de membrana módulo desgasificador desgasificación por membrana fibra hueca desgasificación en línea por vacío tinta impresión inyección EF-AG3-B",
+  "specificationGroups": [
+    {"title": "Estructura y conexiones", "rows": [
+      ["Dimensiones", "159 mm × Ø42 mm"],
+      ["Peso", "Aprox. 100 g"],
+      ["Superficie de membrana", "Aprox. 0,2 m²"],
+      ["Volumen de llenado inicial", "Aprox. 40 mL (valor de referencia de la serie EF-AG3)"],
+      ["Membrana de fibra hueca", "Poli(4-metil-1-penteno) (PMP)"],
+      ["Carcasa y tapas", "Polipropileno (PP), acero inoxidable (SUS)"],
+      ["Resina de encapsulado", "Resina epoxi"],
+      ["Conexiones", "Dos conexiones de líquido y una de vacío, todas NPT 1/8"]
+    ]},
+    {"title": "Condiciones de funcionamiento", "rows": [
+      ["Temperatura del líquido y del entorno de trabajo", "5–45 °C"],
+      ["Presión máxima del lado del líquido (manométrica)", "200 kPa"],
+      ["Presión del lado de vacío para líquidos acuosos (absoluta)", "Desde la presión de vapor saturado del líquido a la temperatura de trabajo hasta 100 kPa"],
+      ["Presión del lado de vacío para líquidos no acuosos (absoluta)", "1–100 kPa"]
+    ]},
+    {"title": "Resultados de ensayo con agua", "rows": [
+      ["Ensayo con agua: oxígeno disuelto después del tratamiento", "< 1,9 mg/L"],
+      ["Ensayo con agua: pérdida de carga del módulo", "< 0,1 kPa"]
+    ]}
+  ],
+  "selection": {
+    "ariaLabel": "Selección y uso del desgasificador de membrana",
+    "phaseTitles": ["Selección y configuración", "Conexiones e instalación"],
+    "intro": "El EF-AG3-B utiliza perfusión externa: el líquido circula por el exterior de las fibras huecas, mientras los gases disueltos atraviesan la membrana y se extraen por el lado de vacío. Determine primero el caudal de trabajo, el objetivo de desgasificación y la pérdida de carga admisible; después compruebe la temperatura, la compatibilidad del líquido y el vacío disponible.",
+    "columns": ["Criterio de selección", "Configuración y comprobaciones"],
+    "inputs": {"title": "Caudal de trabajo y objetivo de desgasificación", "intro": "Defina los siguientes datos para las condiciones reales del equipo y compruebe el punto de trabajo objetivo con las curvas de referencia.", "rows": [
+      ["Caudal de trabajo", "Registre el caudal habitual y el máximo del equipo", "Compruebe el suministro continuo y las condiciones de arranque y parada."],
+      ["Objetivo de desgasificación", "Evalúe el rendimiento mediante la concentración de oxígeno disuelto antes y después del tratamiento", "Valide también la salida de tinta del cabezal o el funcionamiento del equipo."],
+      ["Pérdida de carga admisible", "Compruebe la pérdida de carga del lado del líquido al caudal objetivo", "Incluya las pérdidas de filtros, tubos y racores."],
+      ["Temperatura y condiciones de vacío", "Seleccione la curva según la temperatura real del líquido y la presión absoluta del lado de vacío", "Compruebe el vacío de trabajo respecto a la presión de vapor saturado del líquido."]
+    ]},
+    "materials": {"title": "Materiales en contacto con el líquido y compatibilidad", "intro": "Compruebe tanto el líquido de proceso como el de limpieza. Registre composición, concentración, temperatura y tiempo de contacto.", "paragraph": "Las fibras son de PMP; la carcasa y las tapas emplean PP y acero inoxidable, con resina epoxi de encapsulado. Confirme la compatibilidad con el conjunto completo de materiales en contacto con el líquido."},
+    "curves": {
+      "title": "Caudal, eficacia de desgasificación y pérdida de carga",
+      "intro": "Al caudal objetivo, lea la eliminación de oxígeno disuelto para el vacío correspondiente y la pérdida de carga del lado del líquido. Los ensayos de la serie con agua muestran que, al aumentar el caudal, disminuye la eliminación de oxígeno y aumenta la pérdida de carga. A igual temperatura y caudal, las curvas con menor presión absoluta del lado de vacío indican una mayor eliminación de referencia.",
+      "note": "Las curvas se han redibujado mediante lecturas aproximadas de los gráficos de referencia de la serie con agua. Valide el equipo real con su líquido, temperatura y punto de trabajo objetivo.",
+      "alts": ["Curvas de caudal y eliminación de oxígeno disuelto: agua a 25 °C y 2,7, 6,7 o 13,3 kPa absolutos, y agua a 45 °C y 6,7 kPa absolutos", "Curva de referencia de la serie que muestra el aumento de la pérdida de carga con el caudal en agua a 25 °C"],
+      "captions": ["Caudal y eliminación de oxígeno disuelto. Seleccione la curva por temperatura y presión absoluta del lado de vacío, y lea la eliminación al caudal objetivo.", "Caudal y pérdida de carga del lado del líquido. Lea la pérdida al mismo caudal y compárela con el margen de presión disponible del equipo."],
+      "exampleTitle": "Ejemplo de lectura",
+      "example": "Para agua a 25 °C y 1.000 mL/min, la curva de 6,7 kPa de presión absoluta del lado de vacío indica aproximadamente un 58 % de eliminación de oxígeno disuelto. Al mismo caudal, la pérdida de carga del ensayo con agua es de unos 2,3 kPa. Ambos valores son lecturas aproximadas de gráficos de referencia de la serie.",
+      "flowAxis": "Caudal de líquido (mL/min)",
+      "oxygenAxis": "Eliminación de oxígeno disuelto (%)",
+      "pressureAxis": "Pérdida de carga del líquido (kPa)",
+      "water": "agua",
+      "absolute": "abs.",
+      "pressureLegend": "Agua a 25 °C · pérdida de carga"
+    },
+    "ports": {"title": "Identificación de conexiones y espacio de montaje", "intro": "Las dos conexiones de líquido y la de vacío son NPT 1/8. La conexión lateral y una de las de extremo conducen líquido; la otra conexión de extremo se destina al vacío. Compruebe las marcas antes de conectar los tubos. Reserve espacio según la longitud total de 159 mm, el diámetro de las tapas Ø42 mm y la posición de la conexión lateral."},
+    "connections": {"title": "Líneas de tinta y de vacío", "intro": "Determine primero la posición del módulo en el circuito de tinta. Se recomienda un filtro en el circuito de líquido, ubicado según el diseño del equipo.", "rows": [
+      ["Ejemplo de circuito de tinta", "Depósito de tinta → bomba de alimentación → módulo desgasificador de membrana → cámara de reserva → cabezal", "En este ejemplo, el líquido entra por la conexión lateral inferior y sale por la conexión superior de extremo. Algunos equipos sitúan el módulo entre la cámara de reserva y el cabezal; siga el circuito real."],
+      ["Línea de vacío", "Conexión de vacío → trampa de líquidos → bomba de vacío", "Instale un vacuómetro para leer la presión absoluta. La trampa retiene condensado o líquido de fuga, ayuda a detectar fugas y protege la bomba de vacío. Para tintas acuosas, se recomienda orientar la conexión de vacío hacia abajo."]
+    ]},
+    "commissioning": {"title": "Llenado inicial y validación del punto de trabajo", "intro": "Compruebe la orientación y las conexiones, llene y purgue el módulo y verifique la desgasificación y la pérdida de carga al caudal objetivo.", "steps": [
+      ["Comprobar las conexiones", "Identifique entrada, salida de líquido y conexión de vacío según sus marcas; compruebe que la trampa y el vacuómetro estén conectados."],
+      ["Llenar lentamente desde la conexión inferior de líquido", "Introduzca el líquido gradualmente para desplazar el aire; el vacío puede ayudar a purgarlo. El volumen inicial aproximado de 40 mL es un valor de referencia de la serie."],
+      ["Ajustar el vacío a la temperatura real del líquido", "Durante el funcionamiento, la presión absoluta del lado de vacío no debe ser inferior a la presión de vapor saturado del líquido a su temperatura de trabajo, para evitar una evaporación excesiva que afecte a la composición del líquido o a la bomba de vacío."],
+      ["Validar al caudal objetivo", "Registre líquido, temperatura, caudal y presión absoluta del lado de vacío. Mida el oxígeno disuelto antes y después con un medidor adecuado y registre la pérdida de carga con un manómetro diferencial. Compruebe el objetivo de desgasificación y el margen de presión del circuito."]
+    ]},
+    "storage": {"title": "Comprobaciones periódicas y almacenamiento", "intro": "Cuando cambien las condiciones de trabajo, vuelva a registrar caudal, temperatura, presión absoluta del lado de vacío y pérdida de carga del líquido. Revise la trampa para detectar condensación o fugas de líquido.", "paragraph": "Almacene el módulo en un lugar interior y seco, por debajo de 45 °C y protegido del sol. Evite que se congele el agua que quede en el módulo después del uso."}
+  },
+  "delivery": {
+    "introduction": "La entrega del módulo desgasificador EF-AG3-B se organiza según el pedido confirmado.",
+    "groups": [
+      {"title": "Embalaje interior", "paragraphs": ["Protección del módulo: se envuelve en plástico de burbujas para reducir el contacto directo con la caja durante la manipulación.", "Daños al desembalar: conserve el embalaje interior y exterior y facilite fotografías si el módulo llega dañado."], "photos": [{"alt": "Bolsa de burbujas para el módulo desgasificador con la marca FOREACH", "caption": "Protección del módulo con burbujas"}, {"alt": "Operario extrayendo de la caja el módulo desgasificador envuelto en burbujas", "caption": "Extracción del módulo desgasificador"}]},
+      {"title": "Embalaje exterior", "paragraphs": ["Embalaje con protección: una caja y materiales de relleno protegen el módulo.", "Identificación exterior: al recibirlo, coteje la etiqueta de material de la caja con el pedido.", "Documentación adjunta: se facilita según lo acordado en el pedido."], "photos": [{"alt": "Caja abierta del módulo desgasificador con bolsa de burbujas y relleno protector", "caption": "Desembalaje del módulo desgasificador"}, {"alt": "Etiqueta de identificación de material FOREACH en la caja del módulo", "caption": "Identificación de material en la caja"}]},
+      {"title": "Servicio de mensajería", "paragraphs": ["Mensajería: los pedidos nacionales dentro de China incluyen el envío por SF Express de forma predeterminada.", "Antes del envío: confirme los datos del destinatario, la entrega y cualquier requisito especial de transporte.", "Después del envío: se facilita información de seguimiento. Si surge una incidencia, contacte con FOREACH con el número de pedido y de seguimiento."], "photos": [{"alt": "Operario FOREACH manipulando una caja de bomba de aire en el puesto de embalaje", "caption": "Ejemplo de embalaje (bomba de aire)"}, {"alt": "Operario FOREACH preparando cajas de bombas de pistón para su expedición", "caption": "Ejemplo de expedición (bomba de pistón)"}]}
+    ],
+    "warranty": "Se acuerda por escrito según los resultados de los ensayos de compatibilidad del líquido.",
+    "support": "Posventa: contacte por teléfono, correo electrónico o el formulario inferior e indique modelo, pedido o lote, líquido utilizado y anomalía observada. Antes de devolver un módulo, confirme el procedimiento con el servicio posventa.",
+    "replyTime": "Horario: días laborables, de 08:30 a 18:00 (hora de Pekín). Puede dejar un mensaje en línea; responderemos y realizaremos el seguimiento en un plazo de 24 horas laborables.",
+    "labels": {"title": "Entrega y servicio posventa", "warrantyTitle": "Garantía y asistencia", "warrantyLabel": "Condiciones de garantía:", "email": "Correo electrónico:", "phone": "Teléfono:"}
+  }
+}

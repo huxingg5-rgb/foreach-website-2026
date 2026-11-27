@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="hi-IN" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>पाइपेटिंग क्या है?</title>
+  <rect width="100%" height="100%" fill="white" />
+  <text x="64" y="79" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="46" font-weight="700" fill="#171717" text-anchor="start">पाइपेटिंग क्या है?</text>
+  <text x="64" y="127" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#555" text-anchor="start">द्रव की तय मात्रा को स्रोत से गंतव्य तक पहुँचाएँ</text>
+  <text x="64" y="190" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="28" font-weight="700" fill="#171717" text-anchor="start">मैन्युअल पाइपेटिंग</text>
+  <text x="520" y="190" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="20" font-weight="400" fill="#555" text-anchor="start">ऑपरेटर हर चरण संभालता है</text>
+  <rect x="64" y="212" width="244" height="104" rx="4" fill="white" stroke="#444" stroke-width="1.5" />
+  <text x="186" y="253" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">द्रव</text>
+  <text x="186" y="283" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">खींचें</text>
+  <path d="M 315 264 h 14 m -2 -5 v 10 l 9 -5 z" stroke="#444" fill="#444" />
+  <rect x="340" y="212" width="244" height="104" rx="4" fill="white" stroke="#444" stroke-width="1.5" />
+  <text x="462" y="266" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">पाइपेट ले जाएँ</text>
+  <path d="M 591 264 h 14 m -2 -5 v 10 l 9 -5 z" stroke="#444" fill="#444" />
+  <rect x="616" y="212" width="244" height="104" rx="4" fill="white" stroke="#444" stroke-width="1.5" />
+  <text x="738" y="253" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">गंतव्य पात्र में</text>
+  <text x="738" y="283" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">डिस्पेंस करें</text>
+  <path d="M 867 264 h 14 m -2 -5 v 10 l 9 -5 z" stroke="#444" fill="#444" />
+  <rect x="892" y="212" width="244" height="104" rx="4" fill="white" stroke="#444" stroke-width="1.5" />
+  <text x="1014" y="266" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">अगला नमूना</text>
+  <text x="64" y="376" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="28" font-weight="700" fill="#171717" text-anchor="start">स्वचालित उदाहरण</text>
+  <text x="520" y="376" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="20" font-weight="400" fill="#555" text-anchor="start">प्रोग्राम उपकरणों का समन्वय करता है</text>
+  <rect x="64" y="398" width="244" height="104" rx="4" fill="white" stroke="#444" stroke-width="1.5" />
+  <text x="186" y="452" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">पंप द्रव खींचता है</text>
+  <path d="M 315 450 h 14 m -2 -5 v 10 l 9 -5 z" stroke="#444" fill="#444" />
+  <rect x="340" y="398" width="244" height="104" rx="4" fill="white" stroke="#444" stroke-width="1.5" />
+  <text x="462" y="452" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">वाल्व मार्ग बदलता है</text>
+  <path d="M 591 450 h 14 m -2 -5 v 10 l 9 -5 z" stroke="#444" fill="#444" />
+  <rect x="616" y="398" width="244" height="104" rx="4" fill="white" stroke="#444" stroke-width="1.5" />
+  <text x="738" y="439" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">पंप सुई से</text>
+  <text x="738" y="469" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">डिस्पेंस करता है</text>
+  <path d="M 867 450 h 14 m -2 -5 v 10 l 9 -5 z" stroke="#444" fill="#444" />
+  <rect x="892" y="398" width="244" height="104" rx="4" fill="white" stroke="#444" stroke-width="1.5" />
+  <text x="1014" y="439" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">ट्रे आगे</text>
+  <text x="1014" y="469" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="24" font-weight="400" fill="#171717" text-anchor="middle">बढ़ती है</text>
+  <text x="64" y="578" font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif" font-size="22" font-weight="400" fill="#555" text-anchor="start">आयतन की सेटिंग, संचालन का क्रम और वास्तविक नतीजा अलग-अलग जाँचें।</text>
+</svg>

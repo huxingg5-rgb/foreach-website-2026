@@ -1,0 +1,366 @@
+{
+  "metadata": {
+    "title": "Che cosa sono le pompe di pulizia, lavaggio e risciacquo nei sistemi IVD e perché si usano pompe miniaturizzate a membrana?",
+    "seoTitle": "Pompe IVD di pulizia, lavaggio e risciacquo: perché usare pompe a membrana? | Foreach Technology",
+    "seoDescription": "Scopri come lavorano le pompe di pulizia, lavaggio e risciacquo nei circuiti IVD, perché si usano spesso pompe miniaturizzate a membrana e come scegliere portata, pressione e tipo di pompa.",
+    "coverImage": "/images/resources/technical-articles/ivd-cleaning-wash-rinse-pump/ivd-cleaning-wash-rinse-pump-cover.webp",
+    "coverAlt": "Circuito di alimentazione del liquido di pulizia IVD con pompa miniaturizzata a membrana, filtro, collettore e ugelli di risciacquo"
+  },
+  "deck": "Pompa di pulizia, di lavaggio e di risciacquo indicano di solito compiti diversi nella sequenza di pulizia IVD. Il meccanismo della pompa dipende dall’applicazione. Per la scelta, partire da volume di lavaggio, frequenza dei cicli, resistenza della linea, materiali bagnati e funzione di alimentazione del liquido o di aspirazione dello scarico.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Negli analizzatori di chimica clinica, immunodosaggio, ematologia, coagulazione e diagnostica molecolare, i circuiti di pulizia irrigano sonde, cuvette, celle a flusso e tubi. Dietro nomi simili possono esserci punti di lavoro diversi. Alimentazione della soluzione di lavaggio, ciclo di lavaggio e risciacquo finale possono usare una stessa classe di pompe o pompe distinte."
+    },
+    {
+      "type": "links",
+      "items": [
+        {
+          "href": "/applications/ivd/",
+          "label": "applicazioni IVD e soluzioni fluidiche",
+          "prefix": "Consultare le ",
+          "suffix": " per valutare le specifiche della pompa nel ciclo completo dello strumento."
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Che cosa indicano pompa di pulizia, di lavaggio e di risciacquo?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Termine",
+            "Funzione tipica",
+            "Criteri di scelta"
+          ],
+          "rows": [
+            [
+              "Pompa di pulizia",
+              "Erogazione del liquido di pulizia o alimentazione di un programma di pulizia",
+              "Copertura, portata, pressione e fluido"
+            ],
+            [
+              "Pompa di lavaggio",
+              "Alimenta una stazione di lavaggio, una camera o una sonda",
+              "Tempo di ciclo, effetto del getto e portata di esercizio"
+            ],
+            [
+              "Pompa di risciacquo",
+              "Risciacquo finale, rimozione del liquido residuo o riduzione della contaminazione da trascinamento",
+              "Volume residuo, drenaggio e compatibilità dei materiali"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Terminologia",
+          "text": "I termini descrivono i compiti del sistema. Una pompa miniaturizzata a membrana può svolgerne uno o più, previa validazione nell’applicazione."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "pompe miniaturizzate a membrana per liquidi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Perché la pulizia IVD richiede criteri diversi dal dosaggio di precisione?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il dosaggio di campioni o reagenti richiede accuratezza a volumi ridotti, ripetibilità e calibrazione. La pulizia richiede un ricambio sufficiente di liquido entro un tempo definito, capacità di superare la resistenza del circuito, adescamento affidabile e pochi residui trascinati. Tempo di funzionamento e velocità del motore influenzano l’erogazione, ma da soli non forniscono un dosaggio di precisione a ciclo chiuso."
+        }
+      ]
+    },
+    {
+      "title": "3. Stimare la portata media di lavaggio con Q = V × N",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "Q = V × N = 1.2 mL/cycle × 100 cycles/min = 120 mL/min",
+          "note": "Q è la portata media richiesta, V il volume di lavaggio per ciclo e N il numero di cicli al minuto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il valore calcolato di 120 mL/min è una media teorica. Prevedere un margine adeguato per adescamento, commutazione delle valvole, perdite di carico, viscosità, invecchiamento e tolleranze di produzione. Verificare quindi il punto di lavoro nel circuito reale."
+        }
+      ]
+    },
+    {
+      "title": "4. Perché per 100–200 mL/min si può valutare la DPL30 della classe 300 mL/min?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per una portata di esercizio di circa 100–200 mL/min, la classe 300 mL/min offre un margine potenziale per la resistenza della linea e le variazioni di esercizio. Per DPL30, 300 mL/min indica la classe di portata a vuoto. La portata effettiva nella macchina dipende dalla curva della pompa e dalla resistenza del circuito."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
+              "label": "Pompa miniaturizzata a membrana per liquidi DPL30, 300 mL/min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Quando valutare la DPL60 della classe 600 mL/min?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valutare DPL60 se il progetto richiede un ciclo di lavaggio più breve, un volume maggiore o rami attivi contemporaneamente, oppure se una pompa della classe 300 mL/min non ha margine alla resistenza effettiva. DPL60 appartiene alla classe di portata a vuoto 600 mL/min. L’intervallo 300–600 mL/min indica le classi da considerare, mentre la portata al punto di lavoro va verificata."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
+              "label": "Pompa miniaturizzata a membrana per liquidi DPL60, 600 mL/min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Perché la portata effettiva è inferiore alla portata a vuoto?",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "ΔPsystem = ΔPtubing + ΔPvalves + ΔPfittings + ΔPnozzle/probe + ΔPfilter + ΔPelevation",
+          "note": "Il punto di lavoro si trova all’intersezione tra la curva della pompa e quella di resistenza del circuito."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tubi lunghi e stretti, riduzioni e piccoli ugelli aumentano la perdita di carico.",
+            "Valvole, filtri, collettori e dislivello contribuiscono al fabbisogno di pressione.",
+            "Anche viscosità, temperatura, bolle e contaminazione modificano la portata misurata."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. DPL30H per circuiti di pulizia ad alta resistenza",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se tubi, valvole, filtri o ugelli generano una contropressione elevata, usare il bilancio delle pressioni per stabilire se serve DPL30H. La serie supporta il trasferimento di liquidi ad alta pressione fino a 600 kPa. Serve a superare un fabbisogno di pressione di 300–600 kPa. La portata resta nella classe 300 mL/min e non passa alla classe 600 mL/min."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump/",
+              "label": "Pompa a membrana per liquidi DPL30H fino a 600 kPa"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Perché si usano spesso pompe miniaturizzate a membrana per alimentare la soluzione di lavaggio?",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "L’autoadescamento agevola il prelievo dal flacone e la ripresa dopo lo svuotamento della linea.",
+            "Il percorso a contatto con il liquido è separato dall’azionamento e può essere configurato per la compatibilità con il fluido.",
+            "L’ingombro ridotto semplifica l’integrazione negli analizzatori.",
+            "Tempi di accensione e spegnimento, durata di esercizio e regolazione della velocità, nelle versioni motore compatibili, consentono di coordinare la sequenza di lavaggio."
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Validazione",
+          "text": "Adescamento, portata, pressione, vita utile, rumore e pulsazioni dipendono dal sistema. Validarli con il circuito e la soluzione di pulizia previsti."
+        }
+      ]
+    },
+    {
+      "title": "9. Come abbinare la soluzione di pulizia ai materiali bagnati?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il nome «soluzione di pulizia» da solo non basta per selezionare i materiali. Verificare formulazione, concentrazione, pH, tensioattivi, ossidanti o disinfettanti, temperatura, tempo di immersione e ciclo di risciacquo. Le tabelle di compatibilità aiutano a una prima scelta. Validare tutti i materiali bagnati con il fluido reale mediante prove di immersione, portata, tenuta e durata."
+        }
+      ]
+    },
+    {
+      "title": "10. Come cambiano i controlli tra configurazioni a 2 fili, a 5 fili e brushless?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alcune versioni a 5 fili consentono di variare l’erogazione regolando la velocità del motore, per cicli di lavaggio a più livelli o dinamici. Le versioni a due fili e le configurazioni brushless attuali adottano interfacce che vanno verificate caso per caso. Confermare i segnali per modello e cablaggio esatti, compreso l’eventuale controllo PWM della pompa a 5 fili. Per il dosaggio di precisione a ciclo chiuso serve un sistema di misura e controllo oltre alla regolazione della velocità."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/",
+              "label": "Guida a cablaggio e controllo a 2 o 5 fili delle pompe a membrana brushless"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "11. Quali pompe sono adatte ai diversi compiti fluidici IVD?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Funzione fluidica",
+            "Obiettivo principale",
+            "Tipo di pompa da considerare",
+            "Verifiche principali"
+          ],
+          "rows": [
+            [
+              "Gestione dei campioni",
+              "Aspirazione e trasferimento di piccoli volumi",
+              "Meccanismo a siringa, pistone o pipettaggio",
+              "Accuratezza e ripetibilità del volume"
+            ],
+            [
+              "Erogazione dei reagenti",
+              "Erogazione dosata o temporizzata di liquido",
+              "Meccanismo dosatore o pompa per liquidi",
+              "Dose, compatibilità e pulsazioni"
+            ],
+            [
+              "Alimentazione per pulizia e risciacquo",
+              "Ricambio rapido di volume e lavaggio del circuito",
+              "Pompa miniaturizzata a membrana per liquidi",
+              "Portata di esercizio, pressione, adescamento e residui"
+            ],
+            [
+              "Aspirazione dello scarico",
+              "Evacuazione di gas, liquido o fasi miste",
+              "Pompa a membrana per liquidi o per gas e liquidi",
+              "Stato del fluido, vuoto e tempo di evacuazione"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "12. Alimentazione del liquido di pulizia e aspirazione dello scarico richiedono criteri diversi",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’alimentazione del liquido di pulizia è in genere un trasferimento continuo di liquido. Valutare prima una pompa a membrana per liquidi. Se dal lato scarico entrano aria, schiuma o miscele di gas e liquido, valutare una pompa a membrana per gas e liquidi. DPGL800 è una pompa brushless da 24 V per gas e miscele gas-liquido, con portata di gas a vuoto di 6 L/min per singola testa, pressione positiva massima circa +30 kPa e pressione negativa massima inferiore a -90 kPa. I 6 L/min riguardano esclusivamente la portata di gas."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/gas-liquid-diaphragm-pumps/",
+              "label": "pompe miniaturizzate a membrana per gas e liquidi"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump/",
+              "label": "Pompa a membrana DPGL800 per gas e miscele gas-liquido"
+            },
+            {
+              "href": "/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
+              "label": "Pompa di scarico IVD: a membrana per liquidi o per gas e liquidi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "13. Tabella per la scelta rapida di una pompa di pulizia IVD",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Requisito noto",
+            "Prima opzione da valutare",
+            "Verifiche da completare"
+          ],
+          "rows": [
+            [
+              "Circa 100–200 mL/min con resistenza della linea convenzionale",
+              "DPL30, classe 300 mL/min",
+              "Punto di lavoro e margine di portata"
+            ],
+            [
+              "Ciclo più breve, volume maggiore o margine di portata superiore",
+              "DPL60, classe 600 mL/min",
+              "Perdita di carico e ciclo di lavoro"
+            ],
+            [
+              "Circuito ad alta resistenza con fabbisogno di 300–600 kPa",
+              "DPL30H, classe alta pressione",
+              "Pressione in continuo e margine di sicurezza"
+            ],
+            [
+              "Il lato scarico aspira aria o fasi miste",
+              "DPGL800 o pompa per gas e liquidi",
+              "Vuoto, tempo di evacuazione e stato del fluido"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Conclusione: definire il compito fluidico prima di scegliere classe di portata, classe di pressione e tipo di pompa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pulizia, lavaggio e risciacquo indicano funzioni del processo. Per motivare la scelta, definire se si tratta di alimentazione o scarico, portata media richiesta Q = V × N, bilancio delle pressioni, fluido e materiali bagnati, interfaccia di controllo e vita utile richiesta. Selezionare poi fra DPL30, DPL60, DPL30H e DPGL800 e validare il circuito completo dello strumento."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulle pompe di pulizia IVD",
+  "faqItems": [
+    {
+      "question": "Le pompe di pulizia, lavaggio e risciacquo hanno tre meccanismi diversi?",
+      "answer": "Di solito questi termini indicano compiti della sequenza di pulizia. Una stessa pompa può svolgere uno o più compiti dopo la validazione nell’applicazione."
+    },
+    {
+      "question": "Per un fabbisogno di 120 mL/min si può usare una pompa nominale da 120 mL/min?",
+      "answer": "La sola portata media non basta. Considerare perdita di carico della linea, adescamento, commutazione delle valvole, proprietà del fluido, invecchiamento e tolleranze. Verificare sulla curva della pompa un margine documentato."
+    },
+    {
+      "question": "I 300 mL/min della DPL30 rappresentano la sua portata effettiva in esercizio?",
+      "answer": "Indicano la classe di portata a vuoto. La portata effettiva si trova all’intersezione tra la curva della pompa e quella di resistenza del circuito."
+    },
+    {
+      "question": "Quando la DPL60 è adatta a un circuito di pulizia IVD?",
+      "answer": "Valutare la DPL60 della classe 600 mL/min per cicli più brevi, volumi di lavaggio maggiori, rami in parallelo o se DPL30 non ha margine alla resistenza reale del circuito."
+    },
+    {
+      "question": "Perché DPL30H non implica una portata maggiore?",
+      "answer": "DPL30H è progettata per superare una contropressione superiore, con pressione massima di 600 kPa. Risponde a un fabbisogno di pressione, mentre la classe di portata 600 mL/min riguarda altri modelli."
+    },
+    {
+      "question": "Tutte le pompe a membrana a 5 fili supportano la regolazione PWM della velocità?",
+      "answer": "L’interfaccia dipende dal modello. Alcune versioni a 5 fili permettono di regolare la velocità del motore. Per versioni a due fili e configurazioni brushless attuali, verificare l’interfaccia specifica."
+    },
+    {
+      "question": "Si possono usare i 6 L/min di DPGL800 come portata del liquido di pulizia?",
+      "answer": "Indicano la portata di gas a vuoto per singola testa. Per aspirare gas o miscele gas-liquido, scegliere in base a vuoto, tempo di evacuazione e stato reale del fluido."
+    },
+    {
+      "question": "Il solo pH è sufficiente per approvare una soluzione di pulizia?",
+      "answer": "Valutare anche formulazione, concentrazione, temperatura, tensioattivi, ossidanti, tempo di immersione e cicli. Provare tutti i materiali bagnati con il fluido effettivo."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi verificare portata e bilancio delle pressioni per un circuito di pulizia IVD?",
+    "description": "Indica volume di lavaggio per ciclo, frequenza dei cicli, tubi, valvole, ugelli, formulazione del liquido di pulizia e funzione di alimentazione o scarico per definire la gamma di pompe da valutare.",
+    "contactLabel": "Invia una richiesta per la tua applicazione",
+    "productsLabel": "Vedi le pompe miniaturizzate a membrana per liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

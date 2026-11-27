@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "title": "Pompe per la stampa a getto d’inchiostro: micropompe a membrana per un’alimentazione stabile dell’inchiostro",
+    "seoTitle": "Pompe per stampa a getto d’inchiostro: micropompe a membrana per un’alimentazione stabile | FOREACH",
+    "seoDescription": "Scopri le micropompe a membrana per alimentazione, pressione e ricircolo dell’inchiostro. Confronto tra pompe, rischi di pulsazioni e cavitazione, diagnosi dei guasti e scelta del modello.",
+    "coverImage": "/images/resources/pump-application-guides/inkjet-printer-pumps/inkjet-fluid-path-it.svg",
+    "coverAlt": "Schema tecnico in bianco e nero. Il serbatoio dell’inchiostro alimenta una testina a ricircolo attraverso una pompa a membrana, la filtrazione e lo smorzamento delle pulsazioni. Sono raffigurate anche una pompa a membrana di ritorno e una linea tratteggiata separata per il controllo della pressione."
+  },
+  "deck": "Chi lavora con stampanti a getto d’inchiostro conosce bene la stampa sfocata, le gocce fuori posto e le righe interrotte. In officina si tende a cambiare l’inchiostro o pulire la testina. Controllare anche la pressione del circuito: la sua stabilità dipende dalla portata effettiva della pompa, dalla resistenza al flusso e dal coordinamento con il sistema di controllo. La micropompa a membrana è un componente del circuito che può passare inosservato.",
+  "leadBlocks": [
+    {
+      "type": "notice",
+      "text": "La guida illustra il ruolo della pompa a membrana con l’esempio di un impianto a getto d’inchiostro industriale con linee di alimentazione e ritorno. Consultare i manuali dell’apparecchiatura e della testina per impostazioni di pressione e procedure operative specifiche."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Pompe per inchiostri UV: perché contano la viscosità e la resistenza al flusso",
+      "tocLabel": "Viscosità e alimentazione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La viscosità degli inchiostri UV varia in base alla formulazione e alla temperatura. Alcune formulazioni diventano più viscose alle basse temperature. Se filtri e tubi oppongono molta resistenza, la sola alimentazione a gravità può essere insufficiente. La pompa aspira l’inchiostro dal serbatoio e lo spinge attraverso prefiltrazione, filtrazione fine e tubi verso l’alimentazione della testina. Se il differenziale disponibile o la portata di esercizio sono insufficienti, il reintegro nella testina non tiene il passo con il consumo e le righe interrotte possono diventare più evidenti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una pompa a membrana separa il liquido dall’azionamento senza far passare un albero rotante attraverso una tenuta dinamica nella camera bagnata. Testa, membrana, valvole e relative guarnizioni sono a contatto con il liquido. I modelli con autoadescamento, funzionamento a secco o regolazione della velocità possono essere configurati nei rami di alimentazione o ritorno in base all’apparecchiatura. Confermare la compatibilità a lungo termine con l’inchiostro UV previsto mediante prove sui materiali a contatto e con il liquido effettivo."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tipo di pompa",
+            "Caratteristiche a confronto",
+            "Limiti da valutare"
+          ],
+          "rows": [
+            [
+              "Pompa a ingranaggi",
+              "Erogazione relativamente uniforme per il trasferimento continuo",
+              "Valutare come particelle di pigmento, giochi di funzionamento e usura influenzano l’erogazione"
+            ],
+            [
+              "Pompa a membrana",
+              "Azionamento e lato liquido separati. Alcuni modelli consentono autoadescamento, funzionamento a secco o controllo della velocità",
+              "Il moto alternativo genera pulsazioni di portata. Valutare smorzamento e accumulo. Le prestazioni dipendono dal modello"
+            ],
+            [
+              "Pompa peristaltica",
+              "Il liquido tocca solo il tubo, agevolando la sostituzione del tratto bagnato",
+              "Il tubo è un consumabile. Fatica, invecchiamento e compressione influiscono su portata e pressione"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Pompe per il ricircolo dell’inchiostro: pressione di alimentazione, pressione del menisco e flusso di ritorno",
+      "tocLabel": "Tre funzioni della pressione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un circuito d’inchiostro comprende più condizioni di pressione. La pressione positiva in alimentazione muove l’inchiostro attraverso filtri e tubi. Molte testine drop-on-demand mantengono il menisco negli ugelli con una lieve depressione controllata. Il differenziale fra alimentazione e ritorno sostiene il ricircolo, contribuendo a ridurre il ristagno del pigmento e a convogliare le bolle libere verso un punto di separazione dell’aria."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le pompe a membrana per liquidi possono trasferire l’inchiostro in alimentazione e in ritorno. La lieve depressione agli ugelli è determinata dall’intero circuito fluidico e dalla regolazione della pressione. La pressione di alimentazione, quella del menisco e il differenziale fra alimentazione e ritorno sono grandezze correlate ma distinte. Impostare la testina in base alla sua specifica, indipendentemente dalla pressione nominale della pompa."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/pump-application-guides/inkjet-printer-pumps/inkjet-fluid-path-it.svg",
+          "alt": "Schema tecnico in bianco e nero. Il serbatoio dell’inchiostro alimenta una testina a ricircolo attraverso una pompa a membrana, la filtrazione e lo smorzamento delle pulsazioni. Sono raffigurate anche una pompa a membrana di ritorno e una linea tratteggiata separata per il controllo della pressione.",
+          "width": 1536,
+          "height": 1024,
+          "caption": "Pressioni nel circuito d’inchiostro: le gocce scendono verticalmente dalla testina al supporto. Le linee continue indicano il percorso del liquido. La linea tratteggiata rappresenta il collegamento di controllo o il lato aria. Lo schema illustra un’architettura funzionale a ricircolo di esempio, distinta dal disegno di montaggio di una macchina specifica."
+        },
+        {
+          "type": "paragraph",
+          "text": "L’intervallo ammesso di depressione e le oscillazioni ammesse dipendono dalla testina, dall’inchiostro e dalle condizioni d’esercizio. Una pressione fuori dai limiti può compromettere il menisco o l’alimentazione dell’inchiostro. Verificare le impostazioni sul manuale applicabile."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/ink-circulation-supply-return-pump-diaphragm-pump/",
+              "label": "Distinguere le posizioni delle pompe di alimentazione, ricircolo e ritorno dell’inchiostro"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Pulsazioni e rischi di cavitazione delle pompe a membrana nei sistemi a getto d’inchiostro",
+      "tocLabel": "Pulsazioni e cavitazione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il primo aspetto riguarda le pulsazioni. Il meccanismo alternativo della pompa a membrana genera pulsazioni di portata e i circuiti a getto d’inchiostro possono essere sensibili alle oscillazioni di pressione. Valutare accumulatori, smorzatori o altre misure per mantenere le oscillazioni alla testina entro i limiti. Misurare la risposta effettiva della pressione, anche oltre la sola media, e applicare i limiti della testina specifica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un secondo gruppo di problemi si presenta sul lato di ingresso. Un’alimentazione insufficiente a monte della pompa o la presenza di gas trascinato possono provocare cali di portata, bolle continue o gorgoglii. Controllare il livello nel serbatoio dell’inchiostro e il tubo di ingresso prima di modificare ancora le impostazioni. Infiltrazioni d’aria, rilascio di gas disciolti e cavitazione sono fenomeni distinti. Per verificare un’eventuale cavitazione, considerare anche la pressione in ingresso, la temperatura e la volatilità dell’inchiostro."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+              "label": "Metodi per ridurre le pulsazioni di portata di una pompa miniaturizzata a membrana"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Diagnosi nelle stampanti a getto d’inchiostro: controllare prima il circuito d’inchiostro",
+      "tocLabel": "Diagnosi dei guasti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Verificare prima l’alimentazione dell’inchiostro: pompa, livello del liquido, filtri e tubi. Cercare quindi infiltrazioni d’aria e verificare la corretta eliminazione dell’aria. Controllare poi la testina e confrontare le impostazioni di pressione con i requisiti dell’apparecchiatura. Con bolle continue o una restrizione, la sola regolazione della pressione spesso lascia la causa indeterminata. Per le prove di tenuta o di mantenimento della pressione statica, usare pressione, durata e calo ammesso specificati per l’apparecchiatura. Modificare una variabile alla volta."
+        },
+        {
+          "type": "paragraph",
+          "text": "La tabella riporta sintomi comuni e i controlli da fare per primi. Aiuta a restringere la ricerca. Per diagnosticare un guasto della pompa o della testina servono verifiche oltre al solo sintomo."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Sintomo",
+            "Primi controlli",
+            "Intervento da valutare"
+          ],
+          "rows": [
+            [
+              "L’inchiostro non arriva",
+              "Tubo piegato, filtro ostruito, livello basso o pompa ancora priva di liquido",
+              "Ripristinare alimentazione e passaggio, riempire e spurgare secondo procedura, quindi misurare la portata"
+            ],
+            [
+              "L’inchiostro arriva, ma mancano righe nel motivo di prova degli ugelli",
+              "Stato degli ugelli, bolle e capacità di reintegro",
+              "Controllare manutenzione della testina e alimentazione, conservando i motivi di prova prima e dopo l’intervento"
+            ],
+            [
+              "Oscillazioni marcate della pressione",
+              "Infiltrazioni d’aria, livello del liquido, pulsazioni della pompa e risposta del controllo",
+              "Risolvere prima i problemi di alimentazione e tenuta, quindi verificare smorzamento e controllo"
+            ],
+            [
+              "La depressione continua a derivare nella stessa direzione",
+              "Restrizioni nel ritorno, livello del liquido, tenuta e punti di misura della pressione",
+              "Verificare alimentazione, ritorno e condizioni di misura, quindi controllare la regolazione della pressione"
+            ],
+            [
+              "Gocce di inchiostro fuori posto o bordi irregolari dei caratteri",
+              "Stato della testina, temperatura e viscosità dell’inchiostro e pressione del menisco",
+              "Valutare il motivo di prova degli ugelli insieme alla pressione misurata e seguire i requisiti della testina"
+            ],
+            [
+              "Caratteri sbiaditi o poco marcati",
+              "Portata effettiva di alimentazione, perdita di carico nel filtro e condizioni di stampa",
+              "Verificare che il reintegro tenga il passo con il consumo, ripristinare le condizioni del circuito e ripetere la prova"
+            ]
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/ink-starvation-inkjet-troubleshooting/",
+              "label": "Consulta la guida alla diagnosi della carenza di inchiostro e alla registrazione delle misure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Scelta della micropompa a membrana: materiali e controllo delle pulsazioni",
+      "tocLabel": "Criteri prioritari",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nelle stampanti a getto d’inchiostro, la pompa a membrana trasferisce l’inchiostro e collabora con il circuito e il controllo per mantenere le condizioni di erogazione, ricircolo e pressione. Verificare prima la compatibilità dei materiali a contatto con l’inchiostro previsto e l’adeguatezza dello smorzamento delle pulsazioni ai requisiti della testina."
+        },
+        {
+          "type": "paragraph",
+          "text": "La verifica dei materiali riguarda testa, membrana, valvole e guarnizioni. Considerare concentrazione, temperatura e durata del contatto con l’inchiostro UV, a solvente o a base d’acqua e con i relativi liquidi di pulizia. Misurare le pulsazioni con i tubi e il carico di stampa effettivi. Verificare anche punto di lavoro portata-pressione, condizioni in ingresso e ciclo di lavoro, quindi convalidare il prototipo con spurgo corretto e registrazione delle misure."
+        }
+      ]
+    },
+    {
+      "title": "Pompe a membrana FOREACH per alimentazione e ritorno dell’inchiostro",
+      "tocLabel": "Pompe da valutare",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+              "prefix": "Per un ramo di reintegro, confrontare la portata richiesta al differenziale di pressione misurato con la curva della ",
+              "label": "pompa a membrana per liquidi DPL30-DB",
+              "suffix": ". Provare l’inchiostro previsto al livello minimo del serbatoio in esercizio."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+              "prefix": "Se la curva lascia un margine di reintegro insufficiente durante la stampa, confrontare la ",
+              "label": "pompa a membrana per liquidi DPL60-DB",
+              "suffix": " allo stesso differenziale di pressione. Misurare il tempo necessario per ripristinare il livello nel serbatoio secondario."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30h-ds/",
+              "prefix": "Se la maggior parte della perdita di carico proviene da una lunga linea a monte o da un filtro, valutare la ",
+              "label": "pompa a membrana ad alta pressione per liquidi DPL30H-DS",
+              "suffix": " a quel carico. Controllare a parte la pressione della testina nel punto indicato dal suo produttore."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Modello da valutare",
+            "Portata libera",
+            "Pressione nominale",
+            "Funzione nel circuito da valutare"
+          ],
+          "rows": [
+            [
+              "DPL30-DB",
+              "300 mL/min",
+              "100 kPa",
+              "Tratti di alimentazione, ritorno e ricircolo a portata richiesta inferiore"
+            ],
+            [
+              "DPL60-DB",
+              "600 mL/min",
+              "100 kPa",
+              "Tratti di alimentazione o ritorno a portata richiesta superiore"
+            ],
+            [
+              "DPL30H-DS",
+              "300 mL/min",
+              "600 kPa",
+              "Trasferimento a monte con tubi lunghi o un filtro ad alta resistenza. Regolare la pressione della testina in base ai suoi requisiti"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Portata libera e pressione nominale descrivono condizioni di specifica differenti. La portata alla pressione nominale va verificata in base ai dati del modello. Controllare parametri, connessioni e combinazione di materiali a contatto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le specifiche ufficiali delle tre serie indicano acqua purificata come liquido di lavoro. Il cliente deve valutare l’uso con altri liquidi nelle condizioni effettive. Per parti a contatto in PPS, EPDM, PTFE o FFKM, verificare composizione dell’inchiostro, concentrazione, temperatura, durata del contatto e liquido di pulizia. La compatibilità a lungo termine con l’inchiostro richiede prove oltre alla sola identificazione del materiale."
+        },
+        {
+          "type": "notice",
+          "text": "Gli intervalli di depressione, gli incrementi di regolazione e la frequenza di sostituzione dei filtri variano con la testina, l’inchiostro e l’architettura dell’apparecchiatura. Per le impostazioni effettive, seguire i manuali applicabili e i requisiti del produttore dell’inchiostro."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "",
+  "faqItems": [],
+  "cta": {
+    "title": "Valuta una micropompa a membrana per il tuo circuito d’inchiostro",
+    "description": "Indica inchiostro e liquido di pulizia, temperatura, portata richiesta, condizioni in ingresso, contropressione in uscita e ciclo di lavoro per pianificare le prove sul prototipo con materiali e controlli adeguati.",
+    "contactLabel": "Parliamo del tuo circuito fluidico",
+    "productsLabel": "Scopri le pompe a membrana per liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

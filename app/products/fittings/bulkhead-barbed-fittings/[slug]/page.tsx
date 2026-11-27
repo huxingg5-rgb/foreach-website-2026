@@ -1,5 +1,6 @@
 import FittingLocalizedSelectionContent from "@/components/products/detail/FittingLocalizedSelectionContent";
-import type { ComponentType, ReactNode } from "react";
+import type { GermanProductDetailContent } from "@/data/products/detail/product-detail-content.de";
+import type { ComponentProps, ComponentType, ReactNode } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -30,6 +31,8 @@ type DetailRecord = {
 };
 
 type PageProps = {
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: ComponentProps<typeof ProductDetailClient>["localizedDetail"];
   renderLocale?: TechnicalArticleLocale;
   params: Promise<{ slug: string }>;
 };
@@ -42,7 +45,7 @@ const details =
   });
 
 const ProductDetailView =
-  ProductDetailClient as unknown as ComponentType<{ data: Record<string, unknown>; afterContent?: ReactNode; customerCategoryMode?: "fitting-zh"; customerCategoryContent?: Partial<Record<"selection" | "delivery", ReactNode>> }>;
+  ProductDetailClient as unknown as ComponentType<{ data: Record<string, unknown>; afterContent?: ReactNode; germanDetail?: GermanProductDetailContent; localizedDetail?: ComponentProps<typeof ProductDetailClient>["localizedDetail"]; customerCategoryMode?: "fitting-zh"; customerCategoryContent?: Partial<Record<"selection" | "delivery", ReactNode>> }>;
 
 export const dynamicParams = false;
 
@@ -88,6 +91,8 @@ export async function generateMetadata({
 export default async function BulkheadBarbedFittingDetailPage({
   params,
   renderLocale = "zh-CN",
+  germanDetail,
+  localizedDetail,
 }: PageProps) {
   const { slug } = await params;
   const detail = findDetail(slug);
@@ -96,10 +101,10 @@ export default async function BulkheadBarbedFittingDetailPage({
     notFound();
   }
 
-  return <ProductDetailView data={renderLocale === "zh-CN" ? withRemainingFittingChineseData({ ...detail, productTypeId: "bulkhead-barbed-fittings" }) : renderLocale === "en" ? withRemainingFittingProductSpecs({ ...detail, productTypeId: "bulkhead-barbed-fittings" }) : detail}
+  return <ProductDetailView germanDetail={germanDetail} localizedDetail={localizedDetail} data={renderLocale === "zh-CN" ? withRemainingFittingChineseData({ ...detail, productTypeId: "bulkhead-barbed-fittings" }) : renderLocale === "en" ? withRemainingFittingProductSpecs({ ...detail, productTypeId: "bulkhead-barbed-fittings" }) : detail}
     customerCategoryMode="fitting-zh"
     customerCategoryContent={renderLocale === "zh-CN" ? {
       selection: <QuickConnectDetailContent data={{ ...detail, productTypeId: "bulkhead-barbed-fittings" }} section="selection" variant="standalone-fitting" />,
-    } : { selection: <FittingLocalizedSelectionContent data={{ ...detail, productTypeId: "bulkhead-barbed-fittings" }} locale={renderLocale} /> }}
-    afterContent={<FittingRelatedResources productTypeId="bulkhead-barbed-fittings" model={detail.model} locale={renderLocale} />} />;
+    } : { selection: <FittingLocalizedSelectionContent data={{ ...detail, productTypeId: "bulkhead-barbed-fittings" }} locale={renderLocale} germanDraft={!!germanDetail} contentLocale={localizedDetail?.locale} /> }}
+    afterContent={<FittingRelatedResources productTypeId="bulkhead-barbed-fittings" model={detail.model} locale={renderLocale} germanDraft={!!germanDetail} contentLocale={localizedDetail?.locale} />} />;
 }

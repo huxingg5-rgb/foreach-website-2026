@@ -9,6 +9,9 @@ import type {
 import { fittingReplacementQuickConnectQ20ZhData } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.zh";
 
 import { getFittingReplacementQuickConnectQ20PageIntl } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.page.intl";
+import { fittingReplacementHomeHi } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.hi";
+import { fittingReplacementHomeIt } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.it";
+import { fittingReplacementHomeDe } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.de";
 
 import {
   publishedFittingReplacementProducts,
@@ -31,6 +34,13 @@ export async function getFittingReplacementHomeData(
   _seriesKey: FittingReplacementSeriesKey = "q20",
   locale: string = "zh"
 ): Promise<FittingReplacementPageData> {
+  if (locale === "de" || locale === "it" || locale === "hi") {
+    return {
+      ...fittingReplacementQuickConnectQ20ZhData,
+      products: fittingReplacementHomeProducts,
+      ...(locale === "hi" ? fittingReplacementHomeHi : locale === "it" ? fittingReplacementHomeIt : fittingReplacementHomeDe),
+    };
+  }
   const pageText =
     getFittingReplacementQuickConnectQ20PageIntl(
       locale

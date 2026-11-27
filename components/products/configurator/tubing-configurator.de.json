@@ -1,0 +1,54 @@
+{
+  "description": {
+    "hardness": "Wählen Sie Härte, Innen- und Außendurchmesser aus, um das passende Modell zu ermitteln.",
+    "color": "Wählen Sie Innen- und Außendurchmesser und Farbe aus, um das passende Modell zu ermitteln.",
+    "diameters": "Wählen Sie Innen- und Außendurchmesser aus, um das passende Modell zu ermitteln."
+  },
+  "selectionHint": {
+    "hardness": "Wählen Sie Härte und Durchmesser aus. Sie können unterschiedliche Modelle zur Liste hinzufügen.",
+    "color": "Wählen Sie Durchmesser und Farbe aus. Sie können unterschiedliche Modelle zur Liste hinzufügen.",
+    "diameters": "Wählen Sie die Durchmesser aus. Sie können unterschiedliche Modelle zur Liste hinzufügen."
+  },
+  "dimensionLabels": {
+    "hardness": "Härte",
+    "innerDiameter": "Innendurchmesser",
+    "outerDiameter": "Außendurchmesser",
+    "color": "Farbe"
+  },
+  "material": "Werkstoff",
+  "packaging": "Verpackung",
+  "noSelection": "Keine Auswahl",
+  "variantChoiceLabel": "Modell auswählen",
+  "variantChoiceHint": "Mehrere Modelle entsprechen dieser Spezifikation. Wählen Sie Modell und Artikelnummer aus.",
+  "noticeTitle": "Kundenspezifische Serienbestellungen",
+  "notice": {
+    "pvc": "Für größere Bestellmengen sind andere Härten, Innen- und Außendurchmesser, Rollenlängen und weitere Spezifikationen möglich. Fragen Sie Mindestbestellmenge und Lieferzeit an.",
+    "tpu": "Für größere Bestellmengen sind andere Härten, Innen- und Außendurchmesser, Farben, Rollenlängen und weitere Spezifikationen möglich. Fragen Sie Mindestbestellmenge und Lieferzeit an.",
+    "ptfe": "Für größere Bestellmengen sind andere Innen- und Außendurchmesser, Farben, Rollenlängen und weitere Spezifikationen möglich. Fragen Sie Mindestbestellmenge und Lieferzeit an.",
+    "standard": "Für größere Bestellmengen sind andere Innen- und Außendurchmesser, Rollenlängen und weitere Spezifikationen möglich. Fragen Sie Mindestbestellmenge und Lieferzeit an."
+  },
+  "uiText": {
+    "closeAriaLabel": "Größenauswahl schließen",
+    "currentSelection": "Aktuelle Auswahl",
+    "finalModel": "Passendes Modell",
+    "productCode": "Artikelnummer",
+    "configuration": "Konfiguration auswählen",
+    "matchedModel": "Passendes Modell",
+    "noMatchedModel": "Kein passendes Modell",
+    "copyModel": "Modellcode kopieren",
+    "copied": "Kopiert",
+    "addToList": "Zur Liste hinzufügen",
+    "addedToList": "Zur Liste hinzugefügt",
+    "confirmAndReturn": "Bestätigen und zurück",
+    "defaultNoticeTitle": "Kundenspezifische Serienbestellungen",
+    "defaultNotice": "Für größere Bestellmengen sind abweichende Spezifikationen möglich. Fragen Sie Mindestbestellmenge und Lieferzeit an."
+  },
+  "values": {
+    "Natural": "Natur",
+    "Black": "Schwarz",
+    "Transparent": "Transparent",
+    "Blue": "Blau",
+    "Red": "Rot"
+  },
+  "roll": "Rolle"
+}

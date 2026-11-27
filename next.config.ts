@@ -52,6 +52,8 @@ const nextConfig: NextConfig = {
   ...(isCloudflarePagesBuild
     ? {
         output: "export" as const,
+        // Use the inlined prefetch payload to keep the multilingual export under the Pages asset limit.
+        experimental: { prefetchInlining: true },
       }
     : {}),
 

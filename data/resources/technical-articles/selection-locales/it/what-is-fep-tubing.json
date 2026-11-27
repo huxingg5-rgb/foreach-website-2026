@@ -1,0 +1,526 @@
+{
+  "kind": "selection",
+  "family": "tubing",
+  "footerProducts": [
+    {
+      "id": "fep-tubing",
+      "title": "Tubi in etilene propilene fluorurato (FEP)",
+      "href": "/en/products/tubing/fep-tubing/details/",
+      "imageSrc": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+      "imageAlt": "Tubi FOREACH in FEP nelle versioni trasparente e nera",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tubing-assembly-fep-flanged",
+      "title": "Assemblaggio di tubo flangiato in FEP",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/fep/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-fep-flanged-square.webp",
+      "imageAlt": "Assemblaggio flangiato in FEP in vista esplosa con estremità flangiata trasparente, raccordo filettato nero e rondella corrispondente",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "ptfe-tubing",
+      "title": "Tubi in politetrafluoroetilene (PTFE)",
+      "href": "/en/products/tubing/ptfe-tubing/details/",
+      "imageSrc": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-natural-coil.webp",
+      "imageAlt": "Rotolo di tubo FOREACH in PTFE naturale con estremità tagliata",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "pfa-tubing",
+      "title": "Tubi in polimero perfluoroalcossilico (PFA)",
+      "href": "/en/products/tubing/pfa-tubing/details/",
+      "imageSrc": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+      "imageAlt": "Rotolo di tubo traslucido FOREACH in PFA con estremità visibile",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "peek-tubing",
+      "title": "Tubi in polietereterchetone (PEEK)",
+      "href": "/en/products/tubing/peek-tubing/details/",
+      "imageSrc": "/images/products/tubing/peek-tubing/foreach-chemical-resistant-peek-tubing-color-options.webp",
+      "imageAlt": "Tubi FOREACH in PEEK resistenti agli agenti chimici, in giallo, arancione e verde",
+      "imageAspectRatio": 1
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Che cos'è un tubo in FEP? Proprietà, dimensioni e raccordi dei tubi trasparenti in fluoropolimero",
+      "seoTitle": "Che cos'è un tubo in FEP? Proprietà, confronto con il PTFE e assemblaggi | FOREACH",
+      "seoDescription": "Scopri come usare i tubi in FEP per trasferire reagenti, osservare i liquidi e alimentare il lavaggio. Confronta PTFE e PFA, quindi valuta diametri, resistenza al flusso, temperatura, pressione e terminali flangiati.",
+      "coverImage": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+      "coverAlt": "Tubi FOREACH trasparenti e neri in FEP"
+    },
+    "deck": "Il tubo in FEP è in etilene propilene fluorurato, un fluoropolimero con ampia resistenza chimica che si può lavorare in tubi trasparenti a piccolo diametro per osservare il fluido. Per il circuito dello strumento, scegliere insieme compatibilità con il fluido, diametri interno ed esterno, lunghezza e terminali.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Il tubo in FEP è in etilene propilene fluorurato, un fluoropolimero con ampia resistenza chimica che si può estrudere allo stato fuso in tubi a piccolo diametro. Il FEP trasparente facilita l'osservazione di riempimento, livello del liquido e bolle. Negli strumenti analitici si usa comunemente per trasferire reagenti, alimentare il lavaggio e collegare pompe e valvole."
+      },
+      {
+        "type": "paragraph",
+        "text": "Spesso il tubo in FEP si taglia alla lunghezza richiesta dal percorso e si dota di terminali flangiati, con anello di ritegno o con ogiva, per formare un assemblaggio con tubo e raccordi alle due estremità. Scegliere insieme diametri interno ed esterno, lunghezza finita e geometria delle porte. Selezionare colore e spessore della parete in base alla visibilità richiesta."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Di che cosa è fatto il tubo in FEP e perché può essere trasparente?",
+        "tocLabel": "Materiale e aspetto",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il FEP, etilene propilene fluorurato, è un copolimero di tetrafluoroetilene ed esafluoropropilene. Si può lavorare allo stato fuso ed estrudere in continuo in forma di tubo. FEP e PTFE sono fluoropolimeri, ma differiscono nella lavorazione e nel comportamento del tubo finito. Indicare il materiale esplicitamente al momento dell'acquisto. La sola dicitura tubo in fluoropolimero è incompleta."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un tubo in FEP trasparente aiuta a vedere colonne di liquido, fronti di riempimento e bolle più grandi. La visibilità effettiva dipende da spessore, misura e colore del tubo, colore del liquido e illuminazione. Le configurazioni nere e di altri colori rispondono a requisiti diversi e possono offrire una visibilità differente."
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+            "alt": "Tubi FOREACH trasparenti e neri in FEP",
+            "width": 1500,
+            "height": 1500,
+            "caption": "Foto di tubi FOREACH trasparenti e neri in FEP. Scegliere dimensioni e colore in base al modello.",
+            "captionHref": "/en/products/tubing/fep-tubing/details/"
+          },
+          {
+            "type": "paragraph",
+            "text": "Un tubo trasparente non costituisce di per sé una cella di flusso ottica. Per montare un tubo in FEP in un sensore di bolle, di livello o in un rilevatore ottico, abbinare dimensione, spessore e requisiti ottici al sensore. Verificare poi il rilevamento con il liquido d'interesse."
+          }
+        ]
+      },
+      {
+        "title": "Come influiscono le proprietà dei tubi in FEP sul circuito dello strumento?",
+        "tocLabel": "Proprietà e condizioni di esercizio",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "N.",
+              "Caratteristica",
+              "Ruolo nel progetto fluidico",
+              "Verifiche di compatibilità"
+            ],
+            "rows": [
+              [
+                "1",
+                "Ampia resistenza chimica",
+                "Scelta del materiale per trasferire reagenti, liquidi di lavaggio e solventi",
+                "Controllare composizione, concentrazione, temperatura e tempo di contatto del fluido"
+              ],
+              [
+                "2",
+                "Le configurazioni trasparenti facilitano l'osservazione",
+                "Osservare riempimento, livello del liquido e bolle",
+                "Controllare spessore della parete, colore, illuminazione e compatibilità del sensore"
+              ],
+              [
+                "3",
+                "Bassa energia superficiale",
+                "Valutare l'adesione e i requisiti di risciacquo",
+                "Valutare la pulizia con misure dei residui di campione e del bianco"
+              ],
+              [
+                "4",
+                "Lavorabilità allo stato fuso",
+                "Consente estrusione continua e una formatura adeguata delle estremità del tubo",
+                "Controllare tolleranze del tubo finito, dimensioni della flangia e geometria della porta"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Estendere i controlli di compatibilità chimica a tutto il circuito a contatto con il fluido. Anche se il tubo è compatibile con il reagente, corpi dei raccordi, rondelle di tenuta, tenute delle valvole o liquidi di lavaggio possono limitare l'impiego dell'assieme. Includere trasferimento, immersione durante l'arresto e pulizia nella valutazione dei materiali."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le proprietà superficiali del tubo non si traducono direttamente in una precisione di dosaggio. L'erogazione dipende anche da pompe, valvole, bolle, cedevolezza dei tubi, volumi morti e temporizzazione del controllo. Per volumi ridotti, misurare erogazione effettiva e ripetibilità nel circuito completo."
+          }
+        ]
+      },
+      {
+        "title": "Come confrontare i tubi in FEP, PTFE e PFA?",
+        "tocLabel": "Confronto tra tre fluoropolimeri",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Criterio di scelta",
+              "FEP",
+              "PTFE",
+              "PFA"
+            ],
+            "rows": [
+              [
+                "Materiale e lavorazione",
+                "Copolimero perfluorurato lavorabile allo stato fuso",
+                "Per i piccoli diametri si ricorre in genere a estrusione in pasta e sinterizzazione",
+                "Polimero perfluoroalcossilico lavorabile allo stato fuso"
+              ],
+              [
+                "Osservazione del liquido nel tubo",
+                "Le configurazioni trasparenti facilitano l'osservazione",
+                "Le configurazioni naturali sono spesso bianco latte o traslucide",
+                "Verificare la visibilità effettiva nelle configurazioni trasparenti o traslucide"
+              ],
+              [
+                "Trasferimento di reagenti",
+                "Scegliere in base al fluido specifico e alle condizioni dell'assieme",
+                "Scegliere in base al fluido specifico e alle condizioni dell'assieme",
+                "Scegliere in base al fluido specifico e alle condizioni dell'assieme"
+              ],
+              [
+                "Lunghezza fissa e terminali",
+                "Configurare collegamenti flangiati, con anello di ritegno o con ogiva secondo la misura del tubo",
+                "Considerare la lavorazione delle estremità e le condizioni di presa prolungata",
+                "Scegliere in base alla misura del tubo, alle dimensioni dell'estremità formata e alla porta corrispondente"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Escludere prima le configurazioni incompatibili con fluido, temperatura e pressione. Confrontare quindi visibilità, dimensioni, collegamenti e manutenzione. Il processo di produzione del FEP non garantisce tolleranze più strette di ogni tubo in PTFE. La sola sigla PFA non definisce il grado di pulizia di tutto il circuito. Confrontare le specifiche dei prodotti finiti alle stesse condizioni di accettazione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per i liquidi degassati o le misure sensibili all'ossigeno disciolto, confrontare il comportamento del gas interessato a parità di spessore, temperatura e lunghezza. Permeazione dalla parete, ingresso d'aria dai raccordi e rilascio di gas disciolto sono fenomeni distinti. Il solo cambio di materiale non sostituisce la diagnosi sulla linea di aspirazione."
+          }
+        ]
+      },
+      {
+        "title": "Dove si usano i tubi in FEP negli strumenti?",
+        "tocLabel": "Punti di impiego",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Linee di alimentazione dal flacone alla pompa o alla valvola: valutare insieme compatibilità con il fluido, tenuta in depressione e resistenza in aspirazione. I tubi trasparenti aiutano a osservare il riempimento iniziale.",
+              "Collegamenti da pompa o valvola alla sonda di campionamento: scegliere diametro interno e lunghezza secondo il volume per trasferimento, riducendo collegamenti non necessari e volumi di ritenzione.",
+              "Linee di liquido di lavaggio: controllare detergente, concentrazione, temperatura di risciacquo e tempo di contatto durante l'arresto.",
+              "Linee di solventi a bassa pressione negli strumenti analitici: definire il percorso in funzione del punto di degasaggio e della portata. Dopo l'esposizione al solvente controllare bolle, dimensioni e tenuta."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Un normale tubo di collegamento in FEP non sostituisce direttamente il tubo compresso dai rulli di una pompa peristaltica. In quel tratto servono compressione ripetuta, recupero e resistenza a fatica. Usare un tubo compatibile con la testa della pompa. Il FEP può collegare tratti a monte e a valle, includendo posizioni dei collegamenti e raccordi di transizione nel progetto."
+          }
+        ]
+      },
+      {
+        "title": "Come influiscono diametro interno e lunghezza dei tubi in FEP su resistenza al flusso e volume di ricambio?",
+        "tocLabel": "Dimensioni e resistenza al flusso",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il diametro interno determina la sezione di flusso. La lunghezza determina il percorso e il volume contenuto. Per flusso laminare pienamente sviluppato in un tubo circolare, la perdita di carico è più sensibile al diametro interno che alla lunghezza. A parità di portata, un diametro interno minore aumenta la perdita di carico. Un diametro maggiore aumenta il volume da riempire e sostituire."
+          },
+          {
+            "type": "formula",
+            "expression": "ΔP = 128μLQ / (πd⁴)；V = πd²L / 4",
+            "note": "ΔP: perdita di carico; μ: viscosità dinamica; L: lunghezza del tubo; Q: portata volumetrica; d: diametro interno; V: volume interno geometrico. Vale per fluidi newtoniani incomprimibili, in moto laminare stazionario pienamente sviluppato in un tubo circolare senza deformazioni significative. Valutare separatamente perdite dei raccordi, pulsazioni della pompa e bolle."
+          },
+          {
+            "type": "paragraph",
+            "text": "A pari lunghezza, portare il diametro interno da 0.5 mm a 1.0 mm riduce la resistenza idraulica laminare ideale a 1/16 e quadruplica il volume interno. È un effetto della geometria. Per la selezione effettiva, considerare insieme pressione differenziale disponibile dalla pompa, viscosità, residuo ammesso e procedura di pulizia."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Determinare portata di progetto, viscosità e pressione differenziale disponibile, quindi stimare il diametro interno.",
+              "Fissare la lunghezza secondo la disposizione dello strumento, calcolare volumi di riempimento e ricambio e controllare che le curve non strozzino il tubo.",
+              "Considerare la resistenza di raccordi, valvole e filtri. Verificare quindi portata e ricambio nel circuito effettivo."
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Apri il calcolatore della resistenza al flusso",
+                "href": "/en/resources/calculators/fluid-resistance/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Come configurare tubi in FEP, raccordi flangiati e assemblaggi a lunghezza fissa?",
+        "tocLabel": "Flange e assemblaggi di tubi",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il tubo in FEP si può configurare in assemblaggi flangiati o con collegamenti ad anello di ritegno o a ogiva, secondo la porta. Un collegamento flangiato abbina l'estremità formata del tubo alla rondella e al raccordo corrispondenti. I sistemi ad anello di ritegno e a ogiva hanno propri meccanismi di presa e tenuta. La stessa filettatura da sola non li rende intercambiabili."
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/tubing-assemblies/flanged-tubing/fep/foreach-fep-flanged-tubing-assembly-end-detail.webp",
+            "alt": "Assemblaggio flangiato FOREACH in FEP trasparente con flangia formata, rondella e raccordo filettato",
+            "width": 1500,
+            "height": 1500,
+            "caption": "Foto di un assemblaggio flangiato FOREACH in FEP. Flangia all'estremità del tubo, rondella e raccordo filettato formano il terminale.",
+            "captionHref": "/en/products/tubing-assemblies/flanged-tubing/details/fep/"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Specificare materiale e diametri interno ed esterno. Il diametro interno risponde a requisiti di portata e volume, quello esterno e la sua tolleranza determinano l'accoppiamento.",
+              "Identificare raccordi, filettature e superfici di tenuta delle porte alle estremità A e B. Verificare il rapporto tra geometria della flangia, rondelle e raccordi.",
+              "Quotare lunghezza totale e riferimenti di misura, flangiatura su uno o due lati, percorso e punti di fissaggio, affinché il disegno corrisponda all'installazione.",
+              "Montare secondo le indicazioni e verificare tenuta e ritegno alla pressione di esercizio, in depressione in aspirazione e durante i cicli termici."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Un diametro esterno di 1/16 di pollice equivale a 1.5875 mm, vicino a 1.6 mm ma distinto. Lo stesso raccordo può servire entrambe le misure solo se il suo intervallo ammissibile comprende il diametro effettivo. Aumentare la coppia non compensa porte o misure incompatibili."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Guida alla scelta degli assemblaggi di tubi flangiati",
+                "href": "/en/resources/technical-articles/flanged-tubing-assemblies-selection-guide/"
+              },
+              {
+                "label": "Guida alla scelta dei raccordi per tubi rigidi",
+                "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Come determinare temperatura, pressione e condizioni di pulizia per i tubi in FEP?",
+        "tocLabel": "Temperatura, pressione e pulizia",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La pressione di esercizio ammissibile dipende da diametro del tubo, spessore della parete, temperatura e terminali. Usare le condizioni di esercizio della combinazione di tubo e raccordi. Limite termico della resina, pressione di scoppio a temperatura ambiente e pressione di esercizio dell'assieme sono grandezze diverse. Includere i picchi dovuti ad avviamento e arresto della pompa, commutazione delle valvole e ostruzione dell'uscita."
+          },
+          {
+            "type": "paragraph",
+            "text": "In aspirazione in depressione, controllare anche deformazione della parete, strozzature e ingresso d'aria dai raccordi. L'assenza di perdite di liquido in pressione positiva non sostituisce la prova di tenuta in depressione. Curve strette e fermagli di montaggio serrati troppo possono alterare l'aspirazione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per pulizia o sterilizzazione, specificare fluido, temperatura, tempo di contatto e numero di cicli. Valutare poi dimensioni, stato meccanico e fondo del circuito a contatto. Il comportamento del materiale con un trattamento non dimostra l'idoneità di ogni tubo finito, raccordo o tenuta."
+          }
+        ]
+      },
+      {
+        "title": "Quali misure e assemblaggi di tubi FOREACH in FEP sono disponibili?",
+        "tocLabel": "Specifiche FOREACH",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Scegliere i tubi FOREACH in FEP in base alla combinazione diametro interno × diametro esterno riportata in tabella. Selezionare la configurazione associata al codice modello, senza combinare liberamente gli intervalli dimensionali."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Modello",
+              "Diametro interno × diametro esterno (mm)",
+              "Confezione"
+            ],
+            "rows": [
+              [
+                "BFT03001",
+                "0.3 × 1.6",
+                "100 m/rotolo"
+              ],
+              [
+                "BFT03002",
+                "0.5 × 1.6",
+                "100 m/rotolo"
+              ],
+              [
+                "BFT03003",
+                "0.8 × 1.6",
+                "100 m/rotolo"
+              ],
+              [
+                "BFT03004",
+                "1 × 1.6",
+                "100 m/rotolo"
+              ],
+              [
+                "BFT03007",
+                "1 × 2",
+                "100 m/rotolo"
+              ],
+              [
+                "BFT03008",
+                "1.5 × 2.5",
+                "100 m/rotolo"
+              ],
+              [
+                "BFT03010",
+                "1.6 × 3.2",
+                "100 m/rotolo"
+              ],
+              [
+                "BFT03009",
+                "2 × 3",
+                "100 m/rotolo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Oltre ai rotoli, il FEP è disponibile in assemblaggi di tubi flangiati, con anello di ritegno o con ogiva. Per una configurazione su misura indicare lunghezza, entrambi i terminali, disegni delle porte corrispondenti e condizioni di accettazione, così da trasformare il tubo selezionato in un assieme installabile."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Visualizza le specifiche dei tubi in FEP e scegli un modello",
+                "href": "/en/products/tubing/fep-tubing/"
+              },
+              {
+                "label": "Visualizza gli assemblaggi di tubi",
+                "href": "/en/products/tubing-assemblies/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Che cosa verificare prima di installare i tubi in FEP?",
+        "tocLabel": "Controlli d'installazione",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Controllare modello, diametri interno ed esterno, lunghezza e lotto. Ispezionare tagli, pareti, flange e aspetto.",
+              "Verificare la compatibilità con reagente e liquido di lavaggio effettivi, alla concentrazione d'uso, temperatura e tempo di contatto previsti.",
+              "Montare secondo il disegno della porta, quindi controllare la tenuta, il ritegno e la deformazione del tubo sia alla pressione di alimentazione sia in depressione in aspirazione.",
+              "Controllare il riempimento, il rilevamento delle bolle e la visibilità del livello nelle condizioni effettive di illuminazione e del sensore.",
+              "Dopo l'esercizio continuo e i cicli di pulizia ricontrollare portata, volume di ricambio, residui e stato delle estremità."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Nei registri di accettazione identificare il modello, il disegno di assemblaggio e le condizioni di esercizio. Cambiando diametro interno, lunghezza, colore o raccordi, rivalutare le funzioni di trasferimento e rilevamento interessate."
+          }
+        ]
+      },
+      {
+        "title": "Altri materiali per tubi da strumento",
+        "tocLabel": "Materiali correlati per tubi",
+        "blocks": [
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "label": "Tubi in PTFE: materiale, resistenza al flusso e scelta dei raccordi",
+                "href": "/en/resources/technical-articles/what-is-ptfe-tubing/"
+              },
+              {
+                "label": "Tubi in PFA: trasferimento di reagenti e controllo della pulizia",
+                "href": "/en/resources/technical-articles/what-is-pfa-tubing/"
+              },
+              {
+                "label": "Tubi in PVC: durezza, posa e raccordi per tubi flessibili",
+                "href": "/en/resources/technical-articles/what-is-pvc-tubing/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulla scelta dei tubi in FEP",
+    "faqItems": [
+      {
+        "question": "1. Quali dimensioni e dati dei raccordi servono per un assemblaggio flangiato in FEP su misura?",
+        "answer": "Indicare diametri interno ed esterno, tolleranze e colore del tubo in FEP. Definire la flangiatura su una o entrambe le estremità e identificare raccordi, filettature, rondelle e porte corrispondenti. Definire i riferimenti di misura e distinguere la lunghezza del tubo tagliato dalla lunghezza dell'assieme. Identificare separatamente le estremità A e B se differiscono. Indicare inoltre fluido, temperatura, pressione o depressione e requisiti dimensionali e di tenuta per l'accettazione."
+      }
+    ],
+    "cta": {
+      "title": "Scegliere i tubi in FEP e gli assemblaggi a lunghezza fissa",
+      "description": "Indicare fluido, diametri interno ed esterno, lunghezza, portata, temperatura e pressione e i disegni di entrambe le porte. FOREACH può aiutare ad abbinare tubi e configurazioni dei raccordi.",
+      "contactLabel": "Contatta un tecnico",
+      "productsLabel": "Visualizza le specifiche dei tubi in FEP",
+      "productsHref": "/en/products/tubing/fep-tubing/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "material-appearance",
+      "label": "Materiale e aspetto"
+    },
+    {
+      "id": "properties",
+      "label": "Proprietà e condizioni di esercizio"
+    },
+    {
+      "id": "material-comparison",
+      "label": "Confronto tra tre fluoropolimeri"
+    },
+    {
+      "id": "instrument-applications",
+      "label": "Punti di impiego"
+    },
+    {
+      "id": "diameter-volume",
+      "label": "Dimensioni e resistenza al flusso"
+    },
+    {
+      "id": "flanged-assemblies",
+      "label": "Flange e assemblaggi di tubi"
+    },
+    {
+      "id": "temperature-pressure",
+      "label": "Temperatura, pressione e pulizia"
+    },
+    {
+      "id": "foreach-sizes",
+      "label": "Specifiche FOREACH"
+    },
+    {
+      "id": "installation-validation",
+      "label": "Controlli d'installazione"
+    },
+    {
+      "id": "related-tubing",
+      "label": "Materiali correlati per tubi"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Tubi in FEP",
+      "Scelta del circuito fluidico dello strumento"
+    ],
+    "mentions": [
+      "Tubi in PTFE",
+      "Tubi in FEP",
+      "Tubi in PFA",
+      "Resistenza idraulica dei tubi",
+      "Assemblaggi di tubi tagliati a misura"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "fep-tubing",
+      "title": "Tubi in etilene propilene fluorurato (FEP)",
+      "href": "/en/products/tubing/fep-tubing/details/",
+      "imageSrc": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+      "imageAlt": "Tubi FOREACH in FEP nelle versioni trasparente e nera",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tubing-assembly-fep-flanged",
+      "title": "Assemblaggio di tubo flangiato in FEP",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/fep/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-fep-flanged-square.webp",
+      "imageAlt": "Assemblaggio flangiato in FEP in vista esplosa con estremità flangiata trasparente, raccordo filettato nero e rondella corrispondente",
+      "imageAspectRatio": 1
+    }
+  ]
+}

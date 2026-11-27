@@ -115,7 +115,7 @@ export default function TubingAssemblyCustomRequestModal({
       copyOverrides={copy}
       renderAttachments={(disabled) => (
         <>
-        {configurationSummary ? <details open><summary>已选管组件配置</summary><pre style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere", font: "inherit", fontSize: 12, lineHeight: 1.7 }}>{configurationSummary}</pre></details> : null}
+        {configurationSummary ? <details open><summary>{locale === "hi" ? "चुना हुआ ट्यूब असेंबली कॉन्फ़िगरेशन" : "已选管组件配置"}</summary><pre style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere", font: "inherit", fontSize: 12, lineHeight: 1.7 }}>{configurationSummary}</pre></details> : null}
         <InquiryAttachmentField
           locale={locale}
           files={selectedFiles}

@@ -36,15 +36,18 @@ import { trackBeginInquiry } from "@/lib/analytics/track-event";
 
 type ContactPageContentProps = {
   data: ContactPageData; // 褰撳墠璇█鐨勮仈绯绘垜浠〉闈㈡暟鎹?
-  locale: ContactLocale;
+  locale: ContactLocale | "de" | "it" | "hi";
 };
 
 const contactBreadcrumbCopy: Record<
-  ContactLocale,
+  ContactLocale | "de" | "it" | "hi",
   { home: string; contact: string; ariaLabel: string }
 > = {
   "zh-CN": { home: "首页", contact: "联系我们", ariaLabel: "面包屑导航" },
   en: { home: "Home", contact: "Contact Us", ariaLabel: "Breadcrumb" },
+  de: { home: "Startseite", contact: "Kontakt", ariaLabel: "Brotkrümelnavigation" },
+  hi: { home: "होम", contact: "संपर्क करें", ariaLabel: "पेज का रास्ता" },
+  it: { home: "Home", contact: "Contatti", ariaLabel: "Percorso di navigazione" },
   es: { home: "Inicio", contact: "Contáctenos", ariaLabel: "Ruta de navegación" },
   fr: { home: "Accueil", contact: "Contactez-nous", ariaLabel: "Fil d’Ariane" },
   ko: { home: "홈", contact: "문의하기", ariaLabel: "이동 경로" },

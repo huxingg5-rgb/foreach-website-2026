@@ -1,0 +1,502 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Come calcolare la dilatazione sul portagomma: misure del tubo, profili e accoppiamento",
+      "seoTitle": "Dilatazione sul portagomma: formula, esempi e accoppiamento del tubo | FOREACH",
+      "seoDescription": "Calcola la dilatazione sul portagomma con le quote FOREACH BA-32F, BL-32F e BL-32D. Confronta le opzioni di prova per tubi in silicone, PVC e TPU tenendo conto di durezza, spessore della parete e tolleranze.",
+      "coverImage": "/images/resources/technical-articles/barbed-fitting-expansion-ratio/barb-expansion-comparison-cover.webp",
+      "coverAlt": "Profili portagomma originali F e D con tubo di diametro interno 3.2 mm e risalti di 4.0/4.5 mm: dilatazione del 25% e circa 40.6%"
+    },
+    "deck": "Confronta il diametro massimo del risalto con il diametro interno del tubo prima del montaggio. Controlla poi il profilo, il materiale del tubo e le variazioni dimensionali. La dilatazione geometrica spiega le differenze di montaggio. Per stabilire pressione nominale e resistenza allo sfilamento servono verifiche separate.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "lead": "La dilatazione sul portagomma indica di quanto deve allargarsi il tubo per superare il risalto.",
+        "text": "La dilatazione sul portagomma indica di quanto deve allargarsi il tubo per superare il risalto. Il diametro massimo del risalto diviso per il diametro interno iniziale del tubo dà il rapporto tra diametri. La differenza relativa dà la percentuale di dilatazione. Un risalto da 4.0 mm e un tubo con diametro interno di 3.2 mm danno un rapporto di 1.25 e una dilatazione geometrica del 25%."
+      },
+      {
+        "type": "paragraph",
+        "text": "Per TPU più duro o PE/PP semirigido approvato per collegamenti portagomma, inizia le prove attorno al 25%. Per PVC morbido, silicone o TPE flessibile, confronta circa 25% con 40%–50%. Oltre il 50%, richiedi evidenze di montaggio per il tubo specifico. La sola denominazione «silicone» non è sufficiente. Segui questa sequenza: dimensioni, calcolo, profilo, materiale, tolleranze e validazione."
+      }
+    ],
+    "sections": [
+      {
+        "title": "La dilatazione sul portagomma si calcola con il diametro interno o esterno del tubo?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Usa al denominatore il diametro interno d del tubo prima del montaggio e al numeratore il diametro esterno massimo Db del risalto. La parete interna del tubo deve superare il risalto. Il diametro esterno del tubo e il foro del raccordo non sostituiscono queste quote."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/barbed-fitting-expansion-ratio/barb-profiles-c-f-d-v-x.webp",
+            "width": 1050,
+            "height": 620,
+            "barbExpansionDiagram": "assembly",
+            "alt": "Profilo originale F del portagomma in tre fasi: prima del montaggio, superamento del risalto e adesione dietro il risalto",
+            "caption": "Figura 1 | Montaggio del tubo. d è il diametro interno iniziale del tubo, Db il diametro esterno massimo del risalto. La forma del portagomma resta invariata. Il blu indica schematicamente la dilatazione e il contatto del tubo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Quota",
+              "Significato",
+              "Ruolo nella valutazione dell’accoppiamento"
+            ],
+            "rows": [
+              [
+                "Diametro interno iniziale d del tubo",
+                "Diametro interno prima del montaggio, nelle condizioni di misura specificate",
+                "Riferimento per la dilatazione. Controlla anche la tolleranza"
+              ],
+              [
+                "Diametro esterno massimo Db del risalto",
+                "Diametro esterno massimo che il tubo deve superare",
+                "Serve per il calcolo della dilatazione geometrica. Leggi il disegno di quell’estremità"
+              ],
+              [
+                "Diametro esterno e spessore della parete del tubo",
+                "Quota esterna e metà della differenza tra diametro esterno e interno",
+                "Incidono su deformazione, serraggio con fascetta e spazio di posa"
+              ],
+              [
+                "Foro del raccordo",
+                "Diametro del passaggio interno",
+                "Serve a valutare resistenza al flusso e passaggio delle particelle. Per la dilatazione si usano altre quote"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per BA-32F, 3.2 mm è il diametro interno del tubo compatibile. La quota A del disegno indica il diametro massimo del risalto di 4.0 mm e la quota B il foro di 2.4 mm. Nei disegni BL le lettere indicano quote diverse. Leggi le frecce di quotatura senza presumere che A indichi sempre il diametro massimo del risalto."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-barbed-fitting/#models",
+                "label": "Come leggere modelli e quote dei raccordi portagomma",
+                "prefix": "Per misure dei tubi e codici modello, vedi ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quali formule si usano per il rapporto tra diametri e la percentuale di dilatazione?",
+        "blocks": [
+          {
+            "type": "formula",
+            "expression": "Rapporto tra diametri λ = Db / d; dilatazione geometrica ε = (Db − d) / d × 100%",
+            "note": "Usa la stessa unità per Db e d. λ è adimensionale, ε è una percentuale. Con λ = 1.25 si ottiene ε = 25%. L’aumento non è del 125%."
+          },
+          {
+            "type": "paragraph",
+            "text": "Due gomiti FOREACH per tubi di diametro interno 3.2 mm illustrano la differenza geometrica tra i profili."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Modello",
+              "d / Db（mm）",
+              "Rapporto tra diametri λ",
+              "Dilatazione calcolata ε"
+            ],
+            "rows": [
+              [
+                "BL-32F-PP-N",
+                "3.2 / 4.0",
+                "1.25",
+                "25%"
+              ],
+              [
+                "BL-32D-PP-N",
+                "3.2 / 4.5",
+                "1.40625",
+                "≈ 40.6%"
+              ]
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/barbed-fitting-expansion-ratio/barb-profiles-c-f-d-v-x.webp",
+            "width": 760,
+            "height": 650,
+            "barbExpansionDiagram": "comparison",
+            "alt": "Profili originali F e D a confronto con tubo di diametro interno 3.2 mm e risalti da 4.0 e 4.5 mm: dilatazione geometrica del 25% e di circa 40.6%",
+            "caption": "Figura 2 | Dilatazione con lo stesso diametro interno del tubo. Si usano i profili originali e le quote di esempio BL-32F/BL-32D. L’illustrazione non sostituisce i disegni dei modelli. Le percentuali non indicano valori nominali di pressione o ritegno."
+          },
+          {
+            "type": "paragraph",
+            "text": "Entrambi i raccordi specificano lo stesso diametro interno nominale del tubo ma richiedono dilatazioni diverse per superare il risalto. Il confronto aiuta a pianificare le prove di montaggio. Non dimostra che D sopporti una pressione maggiore o che F abbia perdite. Controlla i profili completi e le altre quote."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il calcolo descrive una variazione geometrica del diametro interno. Allungamento a rottura, rigonfiamento volumetrico e dilatazione ammessa in pressione sono aspetti distinti. La deformazione effettiva della parete non è uniforme. L’aumento del diametro esterno non può sostituire la stessa percentuale."
+          }
+        ]
+      },
+      {
+        "title": "Come usare gli intervalli di dilatazione dei profili portagomma C, F, D, V e X?",
+        "blocks": [
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/barbed-fitting-expansion-ratio/barb-profiles-c-f-d-v-x.webp",
+            "width": 1364,
+            "height": 624,
+            "barbExpansionDiagram": "profiles",
+            "alt": "Profili portagomma FOREACH C, F, D, V e X e relativi intervalli di dilatazione",
+            "caption": "C/F/D/V/X identificano i profili. Gli intervalli descrivono le relative caratteristiche dimensionali. Gli identificativi di serie non indicano classi di pressione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Gli intervalli si sovrappongono: F va dal 25% al 32%, D dal 24% al 50%. Non assegnare 50% a tutti i raccordi D o 25% a tutti gli F. Calcola ciascuna estremità dal diametro massimo del risalto a disegno e dal diametro interno effettivo del tubo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Percentuali identiche non garantiscono lo stesso accoppiamento. Superficie d’invito, forma del risalto, zona di contatto dietro il risalto e condizioni superficiali influiscono sull’inserimento e sul contatto. Il tubo deve aderire bene dietro il risalto. Il solo diametro esterno massimo non descrive questa relazione di tenuta e ritegno."
+          },
+          {
+            "type": "paragraph",
+            "text": "Scegli la geometria dritta, a gomito o con derivazione per il circuito, poi confronta i profili terminali disponibili. Calcola e convalida separatamente ogni porta di una riduzione o di un raccordo a T o a Y."
+          }
+        ]
+      },
+      {
+        "title": "Quali intervalli di dilatazione provare con i diversi materiali dei tubi?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Parti da una dilatazione minore con i tubi più duri. Confronta valori maggiori con tubi morbidi ed elastici."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Dilatazione",
+              "Tubi da valutare per le prove iniziali"
+            ],
+            "rows": [
+              [
+                "Da circa 24% a 32%",
+                "PU/TPU più duro. PE o PP semirigidi approvati per collegamenti portagomma"
+              ],
+              [
+                "Oltre il 32% fino al 50%",
+                "PVC morbido, silicone non rinforzato, TPE flessibile e PU/TPU più morbido"
+              ],
+              [
+                "Oltre il 50% fino al 69%",
+                "Solo silicone morbido, TPE o altri tubi per cui sia stata confermata la capacità di sopportare questa dilatazione. Da valutare dopo altre opzioni"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Ad esempio, con un tubo di diametro interno 3.2 mm ed esterno 6.4 mm:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "PVC 55A: confronta BL-32F (25%) con BL-32D (circa 40.6%).",
+              "TPU 85A: parti da BL-32F (25%) e conferma l’inserimento completo senza danni."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Sono indicazioni per le prove iniziali. Conferma tenuta e ritegno con durezza, spessore della parete e condizioni di esercizio effettivi. Anche il silicone può usare una dilatazione ridotta. Per i tubi rigidi o con rinforzo intrecciato usa i sistemi di collegamento specificati."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/products/tubing/pvc-tubing/",
+                "label": "Specifiche dei tubi in PVC",
+                "prefix": "Vedi: ",
+                "suffix": " · "
+              },
+              {
+                "href": "/en/products/tubing/tpu-tubing/",
+                "label": "Specifiche dei tubi in TPU",
+                "suffix": " · "
+              },
+              {
+                "href": "/en/resources/technical-articles/fitting-material-selection-guide/",
+                "label": "Scelta dei materiali dei raccordi",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quanto cambiano la dilatazione le tolleranze sul diametro interno del tubo?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Le quote nominali possono nascondere variazioni di accoppiamento tra lotti. Un diametro interno minore aumenta la dilatazione calcolata, uno maggiore la riduce. Se anche il diametro del risalto ha una tolleranza, considera i due limiti dimensionali."
+          },
+          {
+            "type": "formula",
+            "expression": "εmin = (Db,min / dmax − 1) × 100%; εmax = (Db,max / dmin − 1) × 100%",
+            "note": "Questi sono limiti dimensionali. Valutali durante le prove di montaggio con il tubo e il portagomma pertinenti."
+          },
+          {
+            "type": "paragraph",
+            "text": "Esempio puramente ipotetico: diametro massimo del risalto 4.00 ± 0.05 mm e diametro interno del tubo 3.20 ± 0.10 mm. Non sono tolleranze di produzione dei raccordi FOREACH o di un tubo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Condizione",
+              "Quote usate (mm)",
+              "Dilatazione geometrica"
+            ],
+            "rows": [
+              [
+                "Quote nominali",
+                "4.00 / 3.20",
+                "25.0%"
+              ],
+              [
+                "Risalto minore, diametro interno maggiore",
+                "3.95 / 3.30",
+                "≈ 19.7%"
+              ],
+              [
+                "Risalto maggiore, diametro interno minore",
+                "4.05 / 3.10",
+                "≈ 30.6%"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il montaggio può quindi dare sensazioni diverse anche con tubi nominalmente da 3.2 mm. Registra il diametro interno con metodo e condizionamento concordati, senza allungare o schiacciare il tubo. Dopo l’approvazione, specifica grado del tubo, spessore della parete e tolleranze per una produzione ripetibile."
+          }
+        ]
+      },
+      {
+        "title": "Una dilatazione maggiore migliora sempre tenuta e ritegno?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Nessuna percentuale è migliore in assoluto. Un risalto maggiore richiede una deformazione più grande per lo stesso tubo. Difficoltà d’inserimento, tagli o svasatura permanente possono rendere inaffidabile un accoppiamento nominalmente più stretto. Una dilatazione minore non indica automaticamente un guasto. Valuta il contatto dietro il risalto e le prestazioni in esercizio."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Fattore aggiuntivo",
+              "Perché è importante",
+              "Come verificare"
+            ],
+            "rows": [
+              [
+                "Materiale, durezza e recupero elastico del tubo",
+                "La stessa dilatazione produce forze di inserimento e recuperi elastici diversi a seconda del materiale",
+                "Confronta montaggio, stato dell’estremità del tubo e ritegno usando il tubo effettivo"
+              ],
+              [
+                "Spessore della parete",
+                "Influisce sulla deformazione locale e sul serraggio. Il solo diametro interno non basta",
+                "Definisci i diametri interno ed esterno e conferma fascette e giochi"
+              ],
+              [
+                "Temperatura e fluido",
+                "I cambiamenti delle proprietà possono compromettere il mantenimento dell’accoppiamento iniziale",
+                "Ripeti la prova dopo esposizione alla temperatura di esercizio, contatto con il fluido e cicli di pulizia"
+              ],
+              [
+                "Superficie, profilo e posizione di inserimento",
+                "Graffi, bave o inserimento incompleto possono creare percorsi di perdita",
+                "Ispeziona la zona di contatto e verifica l’inserimento completo"
+              ]
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/fitting-material-selection-guide/",
+                "label": "Materiali dei raccordi: verifica congiunta di corpo, tenute e tubi",
+                "prefix": "Per variazioni di fluido o temperatura, vedi ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come convalidare l’accoppiamento tra portagomma e tubo?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Fissa il modello completo del raccordo e la specifica del tubo, quindi confronta i candidati nelle condizioni effettive. Monta i due profili BL con tubi dello stesso lotto. Evita di cambiare contemporaneamente materiale, spessore della parete e metodo di montaggio. Diventerebbe difficile individuare la causa delle differenze."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Montaggio: registra facilità e completezza dell’inserimento, tagli e deformazioni anomale. Per misurare la forza, fissa velocità, attrezzatura e metodo.",
+              "Tenuta: esegui la prova con fluido, temperatura e pressione obiettivo. Sulle linee di aspirazione controlla anche le infiltrazioni d’aria in condizioni di vuoto.",
+              "Ritegno: valuta l’allentamento con carichi di trazione, vibrazioni e condizioni di avvio e arresto effettivi. Se usi una fascetta, specificane posizione e misura.",
+              "Dopo l’uso: ripeti controlli di perdite, spostamento, ritegno e portata nel punto di utilizzo dopo la durata operativa o i cicli di pulizia concordati."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Definisci i criteri di accettazione prima delle prove e conserva revisioni dei disegni, lotti dei tubi e registrazioni di montaggio. I risultati valgono per una specifica combinazione di raccordo, tubo e ciclo di lavoro. Una dilatazione calcolata del 25% o 40.6% non attribuisce a tubi della stessa misura una pressione nominale o una durata comune."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-barbed-fitting/",
+                "label": "Struttura e scelta dei raccordi portagomma",
+                "prefix": "Per scegliere la forma del corpo, vedi ",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/resources/technical-articles/threaded-hose-barb-fittings-selection-guide/#threads",
+                "label": "Abbinamento di filettatura e tenuta per i raccordi filetto-portagomma",
+                "prefix": "Per una porta filettata dell’apparecchiatura all’altra estremità, consulta ",
+                "suffix": "."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per alimentazione di reagenti e lavaggio di micropiastre, usa questi esempi applicativi per definire le prove di esposizione al fluido, avvio e arresto e ritegno del tubo."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/applications/ivd/",
+                "label": "Diagnostica in vitro (IVD)",
+                "prefix": ""
+              },
+              {
+                "href": "/en/applications/lab-automation/",
+                "label": "Automazione di laboratorio",
+                "prefix": " · "
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulla dilatazione sul portagomma",
+    "faqItems": [
+      {
+        "question": "La durezza Shore consente di determinare la dilatazione necessaria?",
+        "answer": "No. La durezza aiuta a ordinare le prove. Ad esempio, con TPU più duro si può partire da valori più bassi. La durezza non si può però convertire direttamente in una percentuale fissa. Definisci grado del tubo, diametri interno ed esterno, tolleranze e condizioni di montaggio. Conferma l’inserimento senza danni e convalida tenuta e ritegno con fluido, temperatura e pressione effettivi."
+      },
+      {
+        "question": "Devo verificare la dilatazione anche quando uso una fascetta?",
+        "answer": "Sì. La fascetta modifica il vincolo esterno. Restano necessari diametro interno, profilo e materiale compatibili. Scegli la fascetta per il diametro esterno a montaggio avvenuto e la posizione di serraggio disponibile. Includila nei controlli di tenuta, ritegno e danni alla parete del tubo."
+      },
+      {
+        "question": "Posso riutilizzare il calcolo originale dopo aver rimosso il tubo?",
+        "answer": "Il calcolo iniziale usa il diametro interno prima del montaggio. L’estremità di un tubo rimosso può essere svasata, danneggiata o deformata in modo permanente. Ispezionala o sostituiscila secondo i requisiti di manutenzione e ripeti la validazione. Per scollegamenti frequenti, valuta un raccordo smontabile dedicato."
+      }
+    ],
+    "cta": {
+      "title": "Conferma l’accoppiamento del portagomma con il tuo tubo",
+      "description": "Indica diametri interno ed esterno, tolleranze, materiale e durezza del tubo, oltre a fluido, temperatura, pressione e requisiti di montaggio. Questi dati permettono di confrontare profili e modelli candidati.",
+      "contactLabel": "Confrontati con noi sulla validazione dell’accoppiamento",
+      "productsLabel": "Vedi i raccordi portagomma",
+      "productsHref": "/en/products/fittings/barbed-fittings/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "dimensions",
+      "label": "Quote necessarie"
+    },
+    {
+      "id": "calculation",
+      "label": "Formule ed esempi di modelli"
+    },
+    {
+      "id": "profiles",
+      "label": "Intervalli dei profili C/F/D/V/X"
+    },
+    {
+      "id": "tubing-selection",
+      "label": "Dilatazione e scelta del tubo"
+    },
+    {
+      "id": "tolerances",
+      "label": "Effetto delle tolleranze"
+    },
+    {
+      "id": "fit",
+      "label": "Tenuta, ritegno e tubo"
+    },
+    {
+      "id": "fit-testing",
+      "label": "Validazione della combinazione effettiva"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Come calcolare la dilatazione sul portagomma: misure del tubo, profili e accoppiamento"
+    ],
+    "mentions": [
+      "BL-32F",
+      "BL-32D",
+      "BA-32F",
+      "C/F/D/V/X"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "barbed-y-series-photo",
+      "title": "Raccordi portagomma a Y",
+      "href": "/en/products/fittings/barbed-fittings/",
+      "imageSrc": "/images/resources/technical-articles/barbed-fitting-expansion-ratio/y-barbed-fittings-series-square.webp",
+      "imageAlt": "Raccordi portagomma a Y. Foto di prodotti FOREACH in più misure",
+      "imageFill": true
+    },
+    {
+      "id": "barbed-elbow-series-photo",
+      "title": "Gomiti portagomma",
+      "href": "/en/products/fittings/barbed-fittings/",
+      "imageSrc": "/images/resources/technical-articles/barbed-fitting-expansion-ratio/elbow-barbed-fittings-series-square.webp",
+      "imageAlt": "Gomiti portagomma. Foto di prodotti FOREACH in più misure",
+      "imageFill": true
+    }
+  ],
+  "footerProducts": [
+    {
+      "id": "809359",
+      "title": "Gomito portagomma con profilo F BL-32F-PP-N",
+      "href": "/en/products/fittings/barbed-fittings/bl-32f-pp-n/",
+      "imageSrc": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-elbow-barbed-fitting-bl-32f-pp-n.webp",
+      "imageAlt": "FOREACH BL-32F-PP-N, gomito portagomma con profilo F"
+    },
+    {
+      "id": "809636",
+      "title": "Gomito portagomma con profilo D BL-32D-PP-N",
+      "href": "/en/products/fittings/barbed-fittings/bl-32d-pp-n/",
+      "imageSrc": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-elbow-barbed-fitting-bl-32d-pp-n.webp",
+      "imageAlt": "FOREACH BL-32D-PP-N, gomito portagomma con profilo D"
+    },
+    {
+      "id": "809278",
+      "title": "Raccordo portagomma dritto con profilo F BA-32F-PP-N",
+      "href": "/en/products/fittings/barbed-fittings/ba-32f-pp-n/",
+      "imageSrc": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-straight-barbed-fitting-ba-32f-pp-n.webp",
+      "imageAlt": "FOREACH BA-32F-PP-N, raccordo portagomma dritto con profilo F"
+    },
+    {
+      "id": "809467",
+      "title": "Raccordo filetto-portagomma SA-U28-32D-PP-N",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/sa-u28-32d-pp-n/",
+      "imageSrc": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-32d-pp-n.webp",
+      "imageAlt": "FOREACH SA-U28-32D-PP-N, raccordo filetto-portagomma"
+    }
+  ]
+}

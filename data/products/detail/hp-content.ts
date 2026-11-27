@@ -6,6 +6,9 @@ import es from "./hp-locales/es.json";
 import fr from "./hp-locales/fr.json";
 import ko from "./hp-locales/ko.json";
 import ru from "./hp-locales/ru.json";
+import de from "./hp-locales/de.json";
+import it from "./hp-locales/it.json";
+import hi from "./hp-locales/hi.json";
 
 type HpDetailCopy = {
   description: string;
@@ -18,11 +21,15 @@ type HpDetailCopy = {
 
 // Translations of the reviewed HP Chinese detail copy, including its limits.
 // Keep complete narratives out of the generic word-by-word translator.
-const copies: Record<Exclude<SelectionLocale, "zh">, HpDetailCopy> = { en, es, fr, ko, ru };
+type HpCopyLocale = Exclude<SelectionLocale, "zh"> | "de" | "it" | "hi";
+const copies: Record<HpCopyLocale, HpDetailCopy> = { en, es, fr, ko, ru, de, it, hi };
+export const germanHpValveCopy = copies.de;
+export const italianHpValveCopy = copies.it;
+export const hindiHpValveCopy = copies.hi;
 
 export function applyHpValveDetailCopy<T extends Record<string, any>>(data: T, locale: string): T {
   if (!data.hpAuthoredContent || locale === "zh" || !(locale in copies)) return data;
-  const language = locale as Exclude<SelectionLocale, "zh">;
+  const language = locale as HpCopyLocale;
   const copy = copies[language];
   const faqs = copy.faqs.map(item => ({ ...item, q: item.question, a: item.answer, title: item.question, content: item.answer }));
   return {

@@ -1,0 +1,316 @@
+{
+  "metadata": {
+    "title": "Come scegliere una sonda di campionamento: diametri, lunghezza utile, punta e fori laterali",
+    "seoTitle": "Come scegliere una sonda di campionamento: diametri, lunghezza utile, punta e fori laterali | FOREACH",
+    "seoDescription": "Guida per i progettisti di strumenti IVD e per l’automazione di laboratorio. Comprende diametri interno ed esterno, lunghezza utile, geometria della punta e fori laterali.",
+    "coverImage": "/images/products/probes/sampling-probes/foreach-sampling-probe-main.webp",
+    "coverAlt": "Sonde di campionamento personalizzate FOREACH per campioni e reagenti"
+  },
+  "deck": "Il diametro interno determina la perdita di carico e il volume interno. Il diametro esterno determina l’ingombro nel recipiente e la rigidità della sonda. La lunghezza utile determina l’accesso al livello minimo e la distanza dal fondo. Punta e fori laterali incidono sull’occlusione, sull’intasamento e sul residuo durante l’aspirazione in prossimità del fondo. Queste quattro scelte sono correlate. Partire dal volume richiesto, dal recipiente e dalla sequenza di movimento prima di definire le dimensioni. Ottimizzare un solo parametro può spostare il problema altrove.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Il diametro interno determina la perdita di carico e il volume interno. Il diametro esterno determina l’ingombro nel recipiente e la rigidità della sonda. La lunghezza utile determina l’accesso al livello minimo e la distanza dal fondo. Punta e fori laterali incidono sull’occlusione, sull’intasamento e sul residuo durante l’aspirazione in prossimità del fondo. Queste quattro scelte sono correlate. Partire dal volume richiesto, dal recipiente e dalla sequenza di movimento prima di definire le dimensioni. Ottimizzare un solo parametro può spostare il problema altrove."
+    },
+    {
+      "type": "paragraph",
+      "text": "Questa guida è rivolta a progettisti di sistemi fluidici, ingegneri meccanici e personale di assistenza tecnica che lavorano su dispositivi per IVD e automazione di laboratorio. Spiega cosa controllano ciascuno dei parametri dimensionali, analizzando in modo dettagliato diametro interno ed esterno, lunghezza utile, geometria dell’estremità e fori laterali, fornendo indicazioni pratiche per il calcolo e la verifica dei valori."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Cosa controllano le quattro dimensioni della sonda di campionamento?",
+      "tocLabel": "Quattro dimensioni di progettazione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Distinguere anzitutto due lunghezze. La lunghezza totale va dalla superficie di accoppiamento del portasonda alla punta. La lunghezza utile è la sporgenza dal riferimento di montaggio, ad esempio la faccia inferiore della flangia o l’estremità della boccola di guida, fino alla punta. Determina se la corsa dell’asse Z è sufficiente e se la sonda può aspirare al livello minimo. La differenza è il tratto di montaggio, che comprende flangia, curvature, boccola di guida e organi di tenuta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo spessore della parete può essere omesso nell’ordine dei dati, ma si calcola in base ai diametri:  \nt = (OD − ID) ÷ 2.  \nQuesto valore influisce sulla rigidità della parete e sul margine di resistenza durante le operazioni di saldatura o incollaggio al supporto."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/sampling-probe-selection-guide/sampling-probe-dimensions.webp",
+          "alt": "Sezione della sonda di campionamento con riferimento di montaggio, lume, spessore di parete, lunghezza utile, foro laterale e distanza dal fondo",
+          "width": 2576,
+          "height": 1736,
+          "caption": "Sezione verticale della sonda con la punta rivolta verso il basso. La lunghezza utile va dal riferimento di montaggio alla punta e deve coprire Δh (escursione del livello), s (dal foro laterale più basso alla punta) e c (distanza dal fondo). Le viste sono schematiche e fuori scala.",
+          "samplingProbeDiagram": "dimensions"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dimensione specifica.",
+            "Ciò che questa dimensione controlla.",
+            "Sintomi tipici quando i valori sono fuori dall’intervallo consentito."
+          ],
+          "rows": [
+            [
+              "Diametro esterno",
+              "Adattabilità del contenitore, forza di perforazione, rigidità di piegamento e diametro dell’elettrodo cLLD",
+              "Impossibilità di raggiungere il fondo; sfregamento contro le pareti o deformazione al contatto con il fondo"
+            ],
+            [
+              "Diametro interno",
+              "Volume del canale, velocità di flusso, perdita di carico e margine di intasamento",
+              "Fallimento dell’aspirazione, formazione di bolle o eccesso di residui"
+            ],
+            [
+              "Lunghezza utile",
+              "Escursione del livello, distanza dal fondo e corsa dell’asse Z",
+              "Impossibilità di aspirare al livello minimo o urto contro il fondo"
+            ],
+            [
+              "Punta e fori laterali",
+              "Posizione dell’ingresso vicino alla base: rischio di intasamento e volume morto",
+              "Estremità sigillata, porta bloccata o lavaggio incompleto"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Come determinare il diametro interno: volume e perdita di carico",
+      "tocLabel": "Diametro interno",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Determinare prima il diametro interno, poiché influisce sul volume del canale, sulla velocità del liquido e sulla perdita di carico. Stima questi valori prima di decidere se sia necessario un diametro maggiore per evitare intasamenti."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Volume del canale: V = π(D/2)² × L",
+            "Velocità del liquido: v = Q/π(D/2)²",
+            "Perdita di carico laminare: Δp = 128μLQ/(πD⁴)"
+          ],
+          "ordered": false
+        },
+        {
+          "type": "paragraph",
+          "text": "La terza equazione esprime la principale relazione di scala: la perdita di carico è inversamente proporzionale alla quarta potenza del diametro interno. Riducendo a metà il diametro del canale, mantenendo la stessa portata, la perdita di carico aumenta di sedici volte."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Diametro interno",
+            "Velocità del liquido",
+            "Numero di Reynolds Re",
+            "Perdita di carico laminare Δp (100 mm)"
+          ],
+          "rows": [
+            [
+              "0.4 mm",
+              "7.96 m/s",
+              "3183",
+              "159 kPa"
+            ],
+            [
+              "0.5 mm",
+              "5.09 m/s",
+              "2546",
+              "65 kPa"
+            ],
+            [
+              "0.6 mm",
+              "3.54 m/s",
+              "2122",
+              "31 kPa"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Esempio calcolativo, non valutazione di un prodotto. Assunzioni: acqua a 20 °C, μ ≈ 1 mPa·s, lunghezza del tubo di misurazione 100 mm e portata di aspirazione 1 mL/s."
+        },
+        {
+          "type": "paragraph",
+          "text": "La tabella ha due limiti. Primo, Re raggiunge il regime di transizione e il calcolo laminare fornisce una stima per difetto. Perdite all’ingresso, restrizione del foro laterale, rugosità della parete e bolle intrappolate possono aumentare la perdita effettiva. Secondo, i 159 kPa di depressione necessari per 0.4 mm superano il limite disponibile per l’acqua a 20 °C (circa 99 kPa, pari alla differenza tra pressione atmosferica e pressione di vapore). Nella sonda si formano bolle prima che si possa mantenere la portata specificata. Aumentare la depressione non compensa un’ulteriore riduzione del diametro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Aumentare il tempo di aspirazione è anch’esso efficace. Per lo stesso diametro del tubo di 0.5 mm, prolungare il tempo di aspirazione da 1 secondo a 3 secondi riduce la portata a circa 0.33 mL/s e, di conseguenza, anche la perdita di carico calcolata, a circa 22 kPa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sequenza di selezione del diametro interno del tubo di misurazione:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Determinare prima la portata: Q = volume desiderato ÷ tempo di aspirazione disponibile.",
+            "Calcolare il diametro interno della sonda in base alla pressione negativa ammissibile prima di selezionare una pompa adatta a tale diametro.",
+            "Per liquidi viscosi o contenenti fibre, coaguli o cellule, verificare congiuntamente la tendenza all’intasamento del lume e dei fori laterali. Valutare misure oltre al solo aumento della depressione."
+          ],
+          "ordered": false
+        }
+      ]
+    },
+    {
+      "title": "Come dimensionare il diametro esterno: ingombro, perforazione e rigidità",
+      "tocLabel": "Diametro esterno: il contenitore imposta il primo limite al diametro esterno; l’apertura di un microtubo, di un tubo conico o di una piattaforma a pozzo profondo stabilisce il limite superiore, tenendo conto di un margine di spazio sufficiente per il movimento laterale. In un contenitore conico, la punta della sonda può toccare le pareti prima di raggiungere la profondità desiderata.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il primo vincolo al diametro esterno è il recipiente. L’apertura di una microprovetta, di una provetta conica o di una piastra a pozzetti profondi definisce il limite superiore, lasciando un margine per lo scostamento laterale. In un recipiente conico la punta può toccare la parete prima di raggiungere la profondità prevista."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il secondo vincolo è la rigidità. In un elemento uniforme a sbalzo, la freccia cresce con il cubo della lunghezza e diminuisce all’aumentare del momento d’inerzia della sezione: δ ∝ L³/(OD⁴ − ID⁴). Riducendo OD da 1.0 a 0.8 mm a ID costante di 0.5 mm, il momento d’inerzia scende a circa il 37% e, a pari lunghezza libera, la freccia sale a circa 2.7 volte. Aumentando ID da 0.5 a 0.6 mm a OD invariato, resta circa il 93% del momento d’inerzia iniziale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per aumentare la rigidità, aumentare prima OD. Per favorire il flusso, aumentare prima ID, tenendo conto che così si assottiglia la parete. Se i requisiti sono in conflitto, rispettare prima l’ingombro nel recipiente e la rigidità, quindi migliorare l’afflusso con i fori laterali."
+        },
+        {
+          "type": "paragraph",
+          "text": "In terzo luogo, si considerino i metodi di perforazione e rilevamento del livello del liquido. Viene utilizzata una punta appuntita per perforare pellicole o tappi, con un diametro esterno sufficiente a resistere alla deformazione. Nel caso del rilevamento del livello del liquido mediante effetto capacitivo, la sonda funge da elettrodo; uno strato isolante esterno influisce sulla geometria capacitiva. Indicare sul disegno il diametro esterno rivestito, poiché anche questo influisce sullo spazio di inserimento della sonda."
+        }
+      ]
+    },
+    {
+      "title": "Come determinare la lunghezza utile dal livello minimo e dalla distanza dal fondo",
+      "tocLabel": "Lunghezza utile",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La lunghezza utile è determinata da tre parametri principali:"
+        },
+        {
+          "type": "formula",
+          "expression": "Lₑff ≥ Δh + s + c"
+        },
+        {
+          "type": "paragraph",
+          "text": "Δh rappresenta la differenza tra il livello massimo e quello minimo del liquido, compreso il valore soglia dell’allarme per il livello basso. s indica la parte della sonda utilizzata per il rilevamento, dal foro laterale inferiore fino alla punta. c rappresenta lo spazio di sicurezza tra la punta e il fondo del recipiente, determinato dalla geometria del fondo stesso, dall’espansione laterale e dalla ripetibilità della posizione lungo l’asse Z. La lunghezza totale della sonda include anche la parte di montaggio, come flange, curve e guida."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Indicare sul disegno tre livelli: il livello massimo del liquido, il livello minimo e il fondo del recipiente.",
+            "Scegliere c in base alla geometria del fondo e allo scostamento laterale. I fondi piatti, conici e a U richiedono valutazioni diverse. Un fondo conico può consentire un c minore una volta verificato anche lo scostamento laterale.",
+            "Aggiungere il valore di s per ottenere la lunghezza utile minima.",
+            "Sommare infine la parte di montaggio e le curve presenti nella sonda per calcolare la lunghezza totale.",
+            "Verificare la lunghezza libera. A parità di sezione, un aumento del 20% di L_eff aumenta la freccia di circa il 73% (1.2³ ≈ 1.73)."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "paragraph",
+          "text": "Esempio: una sonda in 316L con OD di 0.8 mm, ID di 0.5 mm e 20 mm di lunghezza libera flette di circa 41 µm sotto un carico laterale di 0.05 N. Con OD di 1.0 mm, a parità di altre condizioni, la freccia è di circa 15 µm. Portando la lunghezza libera della sonda iniziale a 24 mm, la freccia passa da 41 µm a circa 71 µm."
+        },
+        {
+          "type": "subheading",
+          "title": "Raggio di curvatura"
+        },
+        {
+          "type": "paragraph",
+          "text": "Secondo le norme JB/T 5000.11, per diametri esterni non superiori a 42 mm, il raggio tra i due segmenti della sonda deve essere almeno 2.5 volte il diametro esterno, con una tolleranza di ±3 mm. Pertanto, per un diametro esterno di 0.8 mm il raggio minimo è di 2.0 mm, mentre per 1.2 mm è di 3.0 mm."
+        },
+        {
+          "type": "paragraph",
+          "text": "La piegatura modifica sia la lunghezza utile sia l’orientamento della punta. Specificare nel disegno lunghezza sviluppata, raggio e direzione di piegatura. Un raggio stretto può ovalizzare il lume e creare zone di ristagno o difficili da lavare. Nella pratica si usano spesso raggi di 3–4 volte OD per tubi a parete sottile, verificando di nuovo la posizione della punta dopo il montaggio."
+        }
+      ]
+    },
+    {
+      "title": "Tipi di punte per le sonde di campionamento: appuntite, piatte e a incavo a V",
+      "tocLabel": "Geometria della punta",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La geometria della punta determina il punto in cui il liquido entra nel tubo e dove viene applicata la forza quando la punta della sonda entra in contatto con il fondo del recipiente."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/sampling-probe-selection-guide/sampling-probe-tip-geometries.webp",
+          "alt": "Punte appuntite, piatte, con intaglio a V e con foro laterale, riferite allo stesso fondo del recipiente",
+          "width": 2560,
+          "height": 1392,
+          "caption": "I quattro progetti condividono uno stesso riferimento inferiore. La punta appuntita concentra la pressione su un unico punto; la punta piatta utilizza un foro laterale per aspirare il fluido contro il fondo; la dentatura a forma di “V” modifica la sezione trasversale dell’apertura, riducendo il rischio di intasamento; il tratto sottostante il foro laterale rappresenta un volume morto. Il disegno originale include forme e etichette modificabili separatamente.",
+          "samplingProbeDiagram": "tips"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Appuntita: utilizzata per perforare pellicole o tappi; la pressione si concentra sulla punta, che risulta quindi vulnerabile al contatto con il fondo. È necessario valutare insieme la forza di perforazione, la posizione di inserimento e lo spessore della membrana.",
+            "Piatta: l’estremità piana semplifica l’impostazione dello strumento e la lettura delle indicazioni. Il contatto con il fondo piatto può formare una pellicola liquida sigillante; in questa configurazione, un foro laterale fornisce l’apertura per l’aspirazione.",
+            "A dentatura a forma di “V”: la sezione trasversale a forma di “V” riduce il rischio di intasamento in un unico punto e si adatta a fluidi viscosi o contenenti particelle; tuttavia, la punta è meno rigida, quindi è necessario valutare il rischio di urtare il fondo durante l’uso."
+          ],
+          "ordered": false
+        }
+      ]
+    },
+    {
+      "title": "Fori laterali: Diametro, posizione e volume di liquido residuo",
+      "tocLabel": "Fori laterali",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I fori laterali lasciano aperto un ingresso quando la faccia terminale aderisce al fondo, deviano l’aspirazione lateralmente per disturbare meno sedimenti e cellule e offrono una via alternativa se un foro si ostruisce."
+        },
+        {
+          "type": "paragraph",
+          "text": "La somma delle sezioni dei fori laterali deve essere almeno pari alla sezione del lume della sonda."
+        },
+        {
+          "type": "formula",
+          "expression": "n × (πdₕ²/4) ≥ πID²/4 ⇒ dₕ ≥ ID/√n"
+        },
+        {
+          "type": "paragraph",
+          "text": "Due porte richiedono che d_h ≥ 0.71 ID, mentre quattro porte richiedono che d_h ≥ 0.50 ID. Porte di dimensioni insufficienti limitano il flusso e possono causare un’aspirazione più intensa, formazione di bolle e aspirazioni intermittenti; ciò può essere scambiato per una capacità di pompaggio insufficiente."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il liquido residuo influisce sulla posizione delle porte. La sezione di altezza h, che va dalla porta più bassa alla punta dello strumento, rappresenta un volume morto: V_dead = π(ID/2)² × h. Con un diametro interno di 0.5 mm e un’altezza di h = 2 mm, questo valore è di circa 0.39 µL, ovvero il 2% di una dose da 20 µL o l’8% di una dose da 5 µL."
+        },
+        {
+          "type": "paragraph",
+          "text": "Orientare i fori lontano dalla parete e dai sedimenti, tipicamente verso l’alto o in diagonale. Più fori ripartiscono il flusso e rendono più difficile il lavaggio. Usare il numero minimo che soddisfa il criterio di area totale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Qualsiasi modifica alle porte deve essere applicata anche alla stazione di lavaggio: la loro posizione, la superficie interna e l’efficacia del lavaggio cambiano infatti. Per verificare se i residui siano accettabili, è necessario misurare la quantità di liquido rimasta dopo la pulizia."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqTocLabel": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Sono disponibili modelli standard di sonde di campionamento?",
+      "answer": "Le sonde di campionamento vengono solitamente realizzate in base ai disegni tecnici dell’apparecchio. Verificare il diametro esterno, interno, la lunghezza, la punta e i dettagli di montaggio rispetto ai disegni forniti. Il sito web descrive opzioni personalizzabili, ma non fornisce una tabella di specifiche standard."
+    },
+    {
+      "question": "Un diametro interno più piccolo garantisce un’aspirazione più pulita?",
+      "answer": "Un lume più piccolo aumenta la velocità, le sollecitazioni di taglio e la perdita di carico. Il taglio può introdurre errori nei campioni contenenti cellule o macromolecole. Il residuo dipende anche dal volume morto, dalla rugosità e dal lavaggio."
+    },
+    {
+      "question": "Posso aumentare la lunghezza utile se la sonda urta già il fondo?",
+      "answer": "È necessario verificare se la sonda sia troppo lunga o se abbia uno spazio insufficiente tra la punta e il fondo del contenitore. Aumentare la lunghezza della sonda aumenta la sua capacità di penetrazione e la probabilità di urtare le pareti del contenitore; prima di modificare la sonda o i parametri di funzionamento, è quindi importante verificare la ripetibilità dei risultati ottenuti con diverse configurazioni."
+    },
+    {
+      "question": "È vantaggioso disporre di più fori laterali?",
+      "answer": "I fori forniscono la sezione richiesta e una via alternativa in caso di ostruzione. Troppi fori ripartiscono il flusso, facilitano la ritenzione e complicano il lavaggio. Usare il numero minimo richiesto dal criterio di area."
+    },
+    {
+      "question": "È possibile sostituire direttamente una sonda rivestita in un sistema cLLD?",
+      "answer": "Il rivestimento modifica OD e geometria capacitiva e può spostare la soglia di intervento. Ricalibrare il rilevamento del livello dopo la sostituzione e verificare che la sonda rivestita entri ancora nel recipiente."
+    },
+    {
+      "question": "Cosa dovrebbe specificare il disegno tecnico del dispositivo?",
+      "answer": "Il disegno tecnico deve indicare con precisione il diametro esterno e interno della sonda, la sua lunghezza totale e operativa, i dati di montaggio, la direzione e l’angolo di curvatura, la geometria della punta, la posizione e il diametro delle fori laterali, il diametro esterno della sonda rivestita e la posizione della punta rispetto al fondo del contenitore."
+    }
+  ],
+  "cta": {
+    "title": "Selezione della sonda di campionamento e personalizzazione basata su disegni tecnici",
+    "description": "Sonde di campionamento per reagenti e campioni, compatibili con il rilevamento del livello del liquido",
+    "contactLabel": "Discussione sulla personalizzazione delle sonde di campionamento",
+    "productsLabel": "Esplorazione delle sonde di campionamento per reagenti e campioni",
+    "productsHref": "/en/products/probes/sampling-probes/"
+  }
+}

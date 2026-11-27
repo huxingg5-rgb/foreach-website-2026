@@ -1,0 +1,368 @@
+{
+  "metadata": {
+    "title": "Che cosa incide di più su una pompa a membrana miniaturizzata: la resistenza in aspirazione o in mandata?",
+    "seoTitle": "Pompa a membrana: resistenza in aspirazione o contropressione in mandata? | Foreach Technology",
+    "seoDescription": "Le resistenze in aspirazione e in mandata aumentano il differenziale di pressione che la pompa a membrana miniaturizzata deve sviluppare, con sintomi diversi. La guida usa la pressione assoluta in ingresso, la contropressione in uscita e la portata per distinguere mancato adescamento, cavitazione e pressione senza portata.",
+    "coverImage": "/images/resources/technical-articles/suction-vs-discharge-resistance-diaphragm-pump/article-cover.webp",
+    "coverAlt": "Riprese di prove di aspirazione e mandata di una pompa a membrana miniaturizzata dal canale Douyin ufficiale di Foreach"
+  },
+  "deck": "Una perdita di carico su entrambi i lati aumenta il differenziale di pressione che la pompa a membrana miniaturizzata deve sviluppare. Il lato più critico dipende dal circuito. In aspirazione la resistenza incide soprattutto sull’adescamento iniziale, sul riempimento della camera, sulla sensibilità alle infiltrazioni d’aria, sul rilascio di gas disciolti e sulla cavitazione. In mandata si manifesta più spesso con contropressione elevata, portata ridotta e funzionamento a mandata chiusa. Per la diagnosi, osservare pressione assoluta in ingresso, pressione in uscita e portata sullo stesso asse temporale.",
+  "leadBlocks": [
+    {
+      "type": "notice",
+      "text": "Per il punto di lavoro, le perdite su entrambi i lati aumentano il differenziale di pressione della pompa. Quanto ai guasti, il lato di aspirazione è vincolato anche dalla pressione assoluta in ingresso e dalla tenuta. Perdite di carico dello stesso valore possono quindi produrre sintomi molto diversi nell’impianto."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/suction-vs-discharge-resistance-diaphragm-pump/article-figure-it.svg",
+      "alt": "Confronto degli effetti delle resistenze in aspirazione e in mandata sul funzionamento della pompa a membrana",
+      "width": 2560,
+      "height": 1920,
+      "caption": "La resistenza sul lato di aspirazione abbassa la pressione assoluta all’ingresso della pompa. La resistenza sul lato di mandata aumenta la contropressione in uscita. Entrambe aumentano il differenziale di pressione che la pompa deve sviluppare, con indicatori diagnostici e limiti di rischio differenti."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Ricondurre le resistenze sui due lati alla stessa relazione di pressione",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "ΔPpump = Pout - Pin",
+          "note": "Pin e Pout devono avere lo stesso riferimento di pressione. Per il differenziale della pompa si possono usare pressioni relative o assolute in modo coerente. Per valutare la cavitazione serve inoltre la pressione assoluta in ingresso."
+        },
+        {
+          "type": "paragraph",
+          "text": "In un confronto approssimativo a parità delle altre condizioni, altri 20 kPa di perdita a monte della pompa o altri 20 kPa di contropressione a valle possono entrambi spostare il punto di lavoro verso una portata inferiore. La perdita in aspirazione riduce anche la pressione assoluta locale all’ingresso e nella camera della pompa, accentuando gli effetti di piccole infiltrazioni d’aria, del calo del livello del liquido e del rilascio di gas. Il solo differenziale di pressione totale non basta quindi a stabilire la gravità del guasto."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Confronto",
+            "Aumento della resistenza in aspirazione",
+            "Aumento della resistenza in mandata"
+          ],
+          "rows": [
+            [
+              "Variazione diretta della pressione",
+              "La pressione assoluta in ingresso diminuisce e la pressione relativa negativa aumenta in valore assoluto",
+              "La pressione relativa o assoluta in uscita aumenta"
+            ],
+            [
+              "Comportamento tipico all’avvio",
+              "L’adescamento iniziale rallenta e può diventare difficile stabilire una colonna di liquido stabile",
+              "In genere la pompa riesce ad adescarsi, con erogazione più lenta"
+            ],
+            [
+              "Comportamento tipico in esercizio",
+              "Bolle, oscillazioni della portata, rumore e peggioramento con il calo del livello del liquido",
+              "Pressione in uscita più alta, portata inferiore e funzionamento a mandata chiusa in caso di ostruzione"
+            ],
+            [
+              "Principali rischi aggiuntivi",
+              "Sensibilità alle infiltrazioni d’aria, riempimento incompleto della camera, rilascio di gas disciolti o cavitazione",
+              "Carico sul motore e sulla struttura, aumento della temperatura e limiti di pressione di filtri o tubi"
+            ],
+            [
+              "Misura principale",
+              "Pressione assoluta e andamento temporale vicino all’ingresso della pompa",
+              "Contropressione e andamento temporale vicino all’uscita della pompa"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Perché una resistenza eccessiva in aspirazione ostacola più facilmente l’adescamento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tubi di aspirazione più lunghi o con diametro interno più piccolo, più curve e perdite maggiori in una valvola, un filtro o un raccordo in ingresso tendono a ridurre la pressione assoluta all’ingresso della pompa. Il calo del livello del serbatoio o l’aumento dell’altezza di aspirazione aggiungono un effetto idrostatico. All’avvio il tubo contiene aria e la camera della pompa deve prima espellerla e stabilire una colonna di liquido. Il problema è quindi spesso più marcato che in regime stabile."
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Il tempo di adescamento iniziale aumenta notevolmente e torna temporaneamente ai valori abituali dopo il preriempimento o la riduzione dell’altezza di aspirazione.",
+            "Un raccordo di ingresso lascia filtrare una piccola quantità d’aria. Può non esserci alcuna fuoriuscita di liquido, mentre la pompa non riesce a stabilire una colonna di liquido stabile.",
+            "La portata scende al diminuire del livello nel serbatoio, oppure il funzionamento diventa meno stabile con liquidi caldi o volatili.",
+            "In un tratto di tubo trasparente si vedono bolle, le pulsazioni di pressione e portata aumentano e compare un rumore anomalo."
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "La pressione relativa negativa in ingresso non è direttamente confrontabile con la tensione di vapore del liquido. Per valutare la cavitazione occorrono la pressione assoluta e la tensione di vapore alla temperatura effettiva del liquido. Il valore di un sensore vicino all’ingresso della pompa differisce comunque dalla pressione locale minima istantanea nella camera. Prevedere un margine per gli effetti dinamici e per le perdite locali."
+        },
+        {
+          "type": "formula",
+          "expression": "Pin,abs = Patm + Pin,gauge",
+          "note": "Questa conversione vale quando il sensore di pressione relativa usa come zero la pressione atmosferica locale. Una pressione relativa negativa corrisponde a una pressione assoluta in ingresso inferiore a quella atmosferica locale. Con una sorgente chiusa e pressurizzata o altre condizioni di riferimento, usare il riferimento effettivo."
+        },
+        {
+          "type": "formula",
+          "expression": "Plocal,abs > Pvapor(T) + engineering margin",
+          "note": "La relazione esprime una condizione tecnica necessaria per evitare la vaporizzazione nelle zone di bassa pressione locale. Pvapor deve corrispondere al liquido e alla temperatura effettivi. Determinare il margine necessario in base alle pulsazioni di pressione, alla posizione di misura, alle perdite lungo la linea e ai risultati delle prove."
+        }
+      ]
+    },
+    {
+      "title": "3. Perché una resistenza eccessiva in mandata tende a produrre pressione con portata insufficiente",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tubi di piccolo diametro, valvole, filtri, aghi, ugelli e camere in pressione sul lato di mandata aumentano la contropressione in uscita. Al suo crescere, il punto di lavoro di una pompa a membrana miniaturizzata si sposta in genere lungo la curva portata-pressione verso una portata inferiore. Possono cambiare anche la corrente in esercizio, l’aumento di temperatura, le pulsazioni di pressione e il carico sulla struttura."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Sintomo nell’impianto",
+            "Indizi di resistenza eccessiva in mandata",
+            "Altre cause da escludere"
+          ],
+          "rows": [
+            [
+              "La pompa si adesca regolarmente ma eroga lentamente",
+              "La pressione in ingresso resta vicina al valore di riferimento e la contropressione in uscita aumenta sensibilmente",
+              "Viscosità del liquido, tensione ai morsetti della pompa ed errore del misuratore di portata"
+            ],
+            [
+              "La portata diminuisce dopo un certo periodo di utilizzo del filtro",
+              "Il differenziale di pressione ai capi del filtro cresce nel tempo",
+              "Perdita di carico in aspirazione dovuta a un filtro di ingresso"
+            ],
+            [
+              "La portata cambia bruscamente dopo la commutazione di una valvola",
+              "La pressione in uscita cambia contemporaneamente, nella posizione corrispondente della valvola",
+              "Orientamento della valvola, apertura incompleta o tempi di comando"
+            ],
+            [
+              "Con uscita ostruita, il sistema funziona a mandata chiusa o interviene la protezione",
+              "La pressione in uscita aumenta rapidamente mentre la portata tende a zero",
+              "Pressione nominale dell’intero circuito fluidico e misure per lo scarico sicuro della pressione"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La pressione nominale non autorizza il funzionamento continuo a mandata chiusa e non sostituisce la qualificazione del sistema in pressione. Per tubi flessibili, raccordi, valvole, filtri, sensori e camere verificare i rispettivi limiti riportati nei documenti controllati. I tecnici responsabili della pompa e dell’apparecchiatura devono confermare insieme la logica di protezione e la durata ammessa in caso di ostruzione."
+        }
+      ]
+    },
+    {
+      "title": "4. Combinare misure di pressione e sintomi per distinguere i guasti sui due lati",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Sintomo",
+            "Andamento della pressione in ingresso",
+            "Andamento della pressione in uscita",
+            "Primi controlli"
+          ],
+          "rows": [
+            [
+              "Adescamento iniziale lento o assente",
+              "Pressione assoluta in ingresso bassa o soggetta a oscillazioni anomale",
+              "L’aumento può essere trascurabile",
+              "Tubo di aspirazione, livello del liquido, infiltrazioni d’aria nei raccordi, valvola di ingresso e filtro di ingresso"
+            ],
+            [
+              "La pompa si è adescata, con portata ridotta",
+              "Vicina al valore di riferimento",
+              "Contropressione superiore al riferimento",
+              "Tubo di mandata, filtro, valvola, ago e camera a valle"
+            ],
+            [
+              "La portata oscilla e sono visibili bolle",
+              "Pressione assoluta o andamento temporale anomali",
+              "Può variare contemporaneamente",
+              "Rilascio di gas disciolti, infiltrazioni d’aria in ingresso, vaporizzazione locale, elementi delle valvole e deformazione dei tubi"
+            ],
+            [
+              "Riflusso o effetto sifone dopo l’arresto",
+              "Influenzata dalla pressione idrostatica e dalla tenuta",
+              "Scarico anomalo della pressione residua",
+              "Valvola di ritegno, quota di installazione, percorso del sifone e rischio di perdita"
+            ],
+            [
+              "Entrambe le pressioni si discostano dal riferimento",
+              "La pressione assoluta in ingresso diminuisce",
+              "La contropressione in uscita aumenta",
+              "Resistenza aggiuntiva sui due lati. Bypassare separatamente ogni tratto"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Posizionare i sensori il più vicino possibile all’ingresso e all’uscita della pompa e registrare le pressioni insieme a portata, livello del liquido, posizione delle valvole, tensione ai morsetti della pompa e tempo. Una sola misura di pressione lontana a valle esclude le perdite distribuite e localizzate fra sensore e pompa. Una media in regime stabile può non rilevare i transitori di avvio e commutazione."
+        }
+      ]
+    },
+    {
+      "title": "5. Filtro a monte o a valle della pompa? Valutare lo scopo e i limiti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La scelta della posizione del filtro richiede di definire lo scopo della filtrazione, l’origine delle particelle, la tolleranza della pompa alle particelle, le pressioni positiva e negativa ammesse dal mezzo filtrante e il differenziale di pressione nella condizione peggiore dopo l’intasamento. Stabilire inoltre se si debba proteggere la pompa o i componenti a valle. Collocare sempre in mandata i componenti più resistivi non è una regola generale."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Disposizione",
+            "Scopo possibile",
+            "Limite da validare"
+          ],
+          "rows": [
+            [
+              "Filtrazione in ingresso",
+              "Impedire alle particelle provenienti da monte di entrare nella pompa e proteggere gli elementi delle valvole e la camera",
+              "Pressione assoluta in ingresso a filtro carico, adescamento iniziale, tempo di autoadescamento, rischio di infiltrazioni d’aria e resistenza al collasso del mezzo filtrante"
+            ],
+            [
+              "Filtrazione in uscita",
+              "Proteggere i componenti a valle o eseguire una filtrazione fine dopo la pompa",
+              "Contropressione aggiuntiva, differenziale di pressione massimo in caso di ostruzione, pressione nominale del corpo del filtro, punto di lavoro della pompa e protezione da sovrapressione"
+            ],
+            [
+              "Filtro grossolano in ingresso e filtro fine in uscita",
+              "Gestire il rischio di particelle a monte e soddisfare i requisiti di pulizia a valle",
+              "Differenziale di pressione complessivo a fine vita e strategia di manutenzione di entrambi i filtri"
+            ],
+            [
+              "Senza filtro di uso generale",
+              "Il liquido è pulito e il sistema adotta altre misure di controllo della contaminazione",
+              "Confermare la tolleranza alle particelle della pompa e dei componenti a valle tramite la documentazione controllata"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "Con un filtro in ingresso, verificare pressione assoluta in ingresso e capacità di avvio nelle peggiori condizioni di carico del filtro. Con un filtro in uscita, verificare contropressione, punto di lavoro della pompa e pressione ammessa da ogni componente a valle nelle stesse condizioni. La posizione va determinata in base allo scopo della filtrazione e ai risultati delle prove."
+        }
+      ]
+    },
+    {
+      "title": "6. Sequenza pratica per progettare e validare il circuito fluidico",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Disegnare l’intero percorso dalla sorgente del liquido al punto di utilizzo, indicando dislivelli, diametri interni e lunghezze dei tubi, valvole, raccordi, filtri e diametri minimi di passaggio.",
+            "Collocare la pompa il più vicino possibile alla sorgente del liquido per limitare l’altezza di aspirazione. Usare un tubo di ingresso corto, di diametro adeguato, con poche curve e a tenuta affidabile.",
+            "Predisporre punti di misura in prossimità dell’ingresso e dell’uscita della pompa. Registrare la pressione assoluta in ingresso o usare un riferimento che consenta una conversione affidabile.",
+            "Stabilire prima un riferimento a bassa resistenza. Aggiungere separatamente i componenti in aspirazione e in mandata e usare bypass per singoli tratti per confermare le perdite di carico.",
+            "Ripetere le prove nelle condizioni peggiori, con livello minimo, temperatura effettiva del liquido, filtri carichi a fine vita, commutazione delle valvole e orientamento definitivo di montaggio.",
+            "Registrare insieme portata, andamento della pressione, tensione ai morsetti della pompa, corrente, tempo di adescamento, bolle, rumore e incremento di temperatura, così da rendere tracciabili i risultati di accettazione."
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per approfondire i punti di lavoro e le curve di pressione, vedere",
+              "label": "Come leggere la curva portata-pressione di una pompa a membrana",
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide",
+              "suffix": "."
+            },
+            {
+              "prefix": "Per circuiti liquidi della classe 300 mL/min, consultare la ",
+              "label": "serie DPL30 di pompe a membrana per liquidi",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              "suffix": "."
+            },
+            {
+              "prefix": "Per circuiti liquidi con portata più elevata, consultare la ",
+              "label": "serie DPL60 di pompe a membrana per liquidi",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              "suffix": "."
+            },
+            {
+              "prefix": "Se la resistenza in mandata comporta un punto di lavoro ad alta contropressione, consultare la ",
+              "label": "serie DPL30H di pompe a membrana ad alta pressione per liquidi",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Quali conclusioni richiedono ancora prove sul prodotto o conferma tecnica",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Aspetto da confermare",
+            "Perché la guida da sola non basta a definirlo",
+            "Evidenze consigliate"
+          ],
+          "rows": [
+            [
+              "Pressione assoluta ammessa in ingresso e limiti di autoadescamento",
+              "Dipendono da modello, regime di rotazione, liquido, temperatura, tubazioni e condizioni degli elementi delle valvole",
+              "Specifica controllata del modello e prove di avvio nel circuito fluidico reale"
+            ],
+            [
+              "Margine contro cavitazione o rilascio di gas disciolti",
+              "Una sola misura in ingresso non rappresenta pienamente la pressione minima istantanea nella camera della pompa",
+              "Andamento della pressione, tensione di vapore del liquido, osservazione nel tubo trasparente e prove di durata"
+            ],
+            [
+              "Contropressione massima continua in uscita",
+              "Pressione nominale, pressione massima e limiti di blocco di breve durata sono grandezze distinte",
+              "Specifica di prodotto e prove di aumento della temperatura, corrente, vita utile e strategia di protezione"
+            ],
+            [
+              "Posizione di installazione del filtro",
+              "Dipende dallo scopo della filtrazione, dal rischio legato alle particelle, dalla tolleranza della pompa e dalla pressione ammessa dal filtro",
+              "Analisi dei rischi e prove sul sistema completo fino al carico di fine vita"
+            ],
+            [
+              "Criteri di accettazione in caso di guasto",
+              "I requisiti dell’apparecchiatura variano per tempo di adescamento, oscillazioni di portata, rumore ed errore di dosaggio",
+              "Requisiti dell’apparecchiatura, criteri di verifica e dati statistici dei prototipi"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La guida propone un metodo per distinguere i modi di guasto. I valori garantiti per la singola pompa dipendono dal modello. Confrontare la pressione in ingresso, la contropressione, la posizione del filtro e le condizioni di esercizio continuo ammesse con la documentazione controllata del modello. Validarle usando il liquido definitivo e il circuito completo."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulle resistenze in aspirazione e sulla contropressione in mandata",
+  "faqItems": [
+    {
+      "question": "Una perdita aggiuntiva di 10 kPa in aspirazione e una di 10 kPa in mandata hanno esattamente lo stesso effetto?",
+      "answer": "Il contributo al differenziale di pressione totale della pompa può essere simile. I modi di guasto differiscono. La perdita in aspirazione abbassa anche la pressione assoluta in ingresso, aumentando i rischi di riempimento incompleto della camera, sensibilità alle infiltrazioni d’aria, rilascio di gas disciolti e cavitazione. La perdita in mandata tende a manifestarsi più direttamente come una contropressione più alta e una portata più bassa."
+    },
+    {
+      "question": "Il filtro va installato prima o dopo la pompa?",
+      "answer": "Dipende da scopo della filtrazione, origine delle particelle, tolleranza della pompa alle particelle e differenziale di pressione ammesso dal filtro. In ingresso occorre validare la pressione assoluta con filtro carico e l’adescamento iniziale. In uscita occorre validare la contropressione con filtro carico, la pressione ammessa dal corpo del filtro e la protezione da sovrapressione. La scelta dipende dal singolo circuito."
+    },
+    {
+      "question": "La pompa fa rumore e non esce liquido. Da quale lato iniziare i controlli?",
+      "answer": "Controllare prima la sorgente del liquido, il livello, il tubo di ingresso, le infiltrazioni d’aria nei raccordi, l’orientamento delle valvole e l’adescamento iniziale. Verificare poi che l’uscita non sia ostruita e che la contropressione non sia eccessiva. Il modo più rapido per distinguere le cause consiste nel misurare la pressione sia vicino all’ingresso sia vicino all’uscita della pompa, osservando le bolle in un tratto di tubo trasparente."
+    },
+    {
+      "question": "Si può valutare la cavitazione dalla sola pressione relativa negativa in ingresso?",
+      "answer": "Convertire la pressione in ingresso in pressione assoluta e confrontarla con la tensione di vapore saturo del liquido alla temperatura effettiva. Considerare anche la pressione locale minima istantanea nella camera della pompa, le pulsazioni di pressione e le perdite fra il punto di misura e la camera. Confermare con prove sul liquido reale."
+    },
+    {
+      "question": "È sempre meglio collocare la pompa sotto il livello del liquido?",
+      "answer": "Una pressione idrostatica positiva in ingresso generalmente favorisce il riempimento della camera. Valutare effetto sifone, riflusso dopo l’arresto, perdite, variazioni della pressione di alimentazione e limiti di sicurezza dell’apparecchiatura. Confermare la pressione ammessa in ingresso dalla pompa e dai componenti a monte."
+    },
+    {
+      "question": "Si può diagnosticare un problema del circuito fluidico misurando solo la pressione in uscita?",
+      "answer": "La pressione in uscita non rivela le perdite in aspirazione, le infiltrazioni d’aria o una pressione assoluta insufficiente in ingresso. Misurare insieme almeno pressione in ingresso, pressione in uscita e portata. Registrare anche livello del liquido, posizione delle valvole, temperatura del liquido e alimentazione ai morsetti della pompa."
+    }
+  ],
+  "cta": {
+    "title": "Serve distinguere difficoltà di aspirazione e contropressione eccessiva in uscita?",
+    "description": "Indicare il modello della pompa, il liquido e la sua temperatura, il dislivello, le dimensioni delle linee di aspirazione e mandata, la posizione del filtro, la pressione assoluta in ingresso, la contropressione in uscita e la portata misurata. Un tecnico potrà analizzare l’intero circuito fluidico.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Vedi le pompe a membrana",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps"
+  }
+}

@@ -115,7 +115,18 @@ const valveCards: Record<SelectionLocale, Record<"hp" | "two" | "three", ValveCa
   },
 };
 
-const mrv3Cards: Record<SelectionLocale, { name: string; heading: string }> = {
+const germanValveCards: Record<"hp" | "two" | "three", ValveCardCopy> = {
+  hp: {model:"HP", name:"Hochdruck-Drehschaltventil mit 2 Stellungen, 6 Anschlüssen und Entlüftung",
+    heading:"Hochdruck-Drehschaltventil mit 2 Stellungen und 6 Anschlüssen zum Laden der HPLC-Probenschleife und zur Injektion, mit separatem Entlüftungspfad."},
+  two: {model:"SV10-2", name:"Miniatur-Membranmagnetventil mit 2 Wegen",
+    heading:"Miniatur-Membranmagnetventil mit 2 Wegen zum Absperren und Freigeben von Verdünnungs- und Spülflüssigkeit, stromlos geschlossen oder offen."},
+  three: {model:"SV10-3", name:"Miniatur-Membranmagnetventil mit 3 Wegen",
+    heading:"Miniatur-Membranmagnetventil mit 3 Wegen zum Umschalten eines gemeinsamen Anschlusses zwischen zwei Fließwegen."},
+};
+
+const mrv3Cards: Record<SelectionLocale | "de", { name: string; heading: string }> = {
+  de: {name:"Keramik-Drehwahlventil mit {channels} Kanälen",
+    heading:"Keramik-Drehwahlventil mit {channels} Kanälen für die Reagenzienauswahl und das Umschalten auf den Spülpfad."},
   zh: {
     name: "{channels}通道陶瓷旋转阀",
     heading: "{channels}通道陶瓷旋转阀，用于试剂选择与清洗路径切换。",
@@ -143,10 +154,12 @@ const mrv3Cards: Record<SelectionLocale, { name: string; heading: string }> = {
 };
 
 const englishSolenoidHeadings = new Map([
+  ["2-way-base", "2-Way Manifold-Mount Diaphragm Solenoid Valve"],
   ["2-way-no-barbed", "2-Way Normally Open Diaphragm Solenoid Valve with Barbed Ports"],
 ]);
 
-const sv10P2NoCardHeadings: Record<SelectionLocale, string> = {
+const sv10P2NoCardHeadings: Record<SelectionLocale | "de", string> = {
+  de: "Stromlos offenes Membranmagnetventil mit 2 Wegen für Blockmontage",
   zh: "歧管直装式两通常开隔膜电磁阀",
   en: "2-Way Normally Open Manifold-Mount Diaphragm Solenoid Valve",
   es: "Electroválvula de diafragma de 2 vías normalmente abierta para montaje en colector",
@@ -157,8 +170,20 @@ const sv10P2NoCardHeadings: Record<SelectionLocale, string> = {
 
 export function getValveCardCopy(
   product: Pick<ProductSelectionProduct, "productId" | "seriesId">,
-  locale: SelectionLocale,
+  locale: SelectionLocale | "de" | "it",
 ): ValveCardCopy | undefined {
+  if (locale === "it") {
+    if (product.productId === "hp-3-position-7-port-high-pressure-valve") return {
+      model: "HP", name: "Valvola rotativa ad alta pressione a 6 vie e 2 posizioni con sfiato",
+      heading: "Valvola rotativa ad alta pressione a 2 posizioni e 6 vie per caricamento e iniezione con loop HPLC, con sfiato separato.",
+    };
+    const card = product.seriesId === "6010" ? getSolenoidCardCopy(product.productId, "it") : undefined;
+    if (!card) return undefined;
+    if (product.productId === "2-way-no-base") return { ...card, heading: "Elettrovalvola a membrana a 2 vie normalmente aperta per collettore" };
+    if (product.productId === "2-way-no-barbed") return { ...card, heading: "Elettrovalvola a membrana a 2 vie normalmente aperta con attacchi portagomma" };
+    return card;
+  }
+  const localizedValveCards = locale === "de" ? germanValveCards : valveCards[locale];
   const mrv3Channels = product.seriesId === "MRV3"
     ? /^mrv3-d(10|16|24)$/.exec(product.productId)?.[1]
     : undefined;
@@ -170,7 +195,7 @@ export function getValveCardCopy(
       heading: copy.heading.replace("{channels}", mrv3Channels),
     };
   }
-  if (product.productId === "hp-3-position-7-port-high-pressure-valve") return valveCards[locale].hp;
+  if (product.productId === "hp-3-position-7-port-high-pressure-valve") return localizedValveCards.hp;
   if (product.seriesId === "6010") {
     const card = getSolenoidCardCopy(product.productId, locale);
     if (card) {
@@ -183,13 +208,23 @@ export function getValveCardCopy(
       }
       return heading ? { ...card, heading } : card;
     }
-    if (product.productId === "2-way") return valveCards[locale].two;
-    if (product.productId === "3-way") return valveCards[locale].three;
+    if (product.productId === "2-way") return localizedValveCards.two;
+    if (product.productId === "3-way") return localizedValveCards.three;
   }
   return undefined;
 }
 
-export function getValveDetailHeading(slug: string, locale: SelectionLocale): string | undefined {
+export function getValveDetailHeading(slug: string, locale: SelectionLocale | "it"): string | undefined {
+  if (locale === "it") {
+    if (slug === "high-pressure-valves") return getValveCardCopy({ productId: "hp-3-position-7-port-high-pressure-valve" }, "it")?.heading;
+    const channels = /^mrv3-d(10|16|24)$/.exec(slug)?.[1];
+    if (channels) return `Valvola selettrice rotativa a ${channels} vie in ceramica per selezionare i reagenti e commutare il lavaggio`;
+    const valve = getValveCardCopy({ productId: slug, seriesId: "6010" }, "it");
+    if (!valve) return undefined;
+    return ["2-way-base", "2-way-no-base", "2-way-no-barbed"].includes(slug)
+      ? `${valve.model} ${valve.heading}`
+      : valve.heading;
+  }
   const solenoidCard = getSolenoidCardCopy(slug, locale);
   if (solenoidCard) {
     if (slug === "2-way-no-base") {

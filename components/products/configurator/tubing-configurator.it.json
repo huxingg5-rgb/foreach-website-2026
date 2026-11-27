@@ -1,0 +1,43 @@
+{
+  "description": {
+    "hardness": "Scegliete durezza, diametro interno e diametro esterno per trovare il modello corrispondente.",
+    "color": "Scegliete diametro interno, diametro esterno e colore per trovare il modello corrispondente.",
+    "diameters": "Scegliete diametro interno e diametro esterno per trovare il modello corrispondente."
+  },
+  "selectionHint": {
+    "hardness": "Scegliete durezza e diametri. Potete aggiungere modelli diversi all’elenco.",
+    "color": "Scegliete diametri e colore. Potete aggiungere modelli diversi all’elenco.",
+    "diameters": "Scegliete i diametri. Potete aggiungere modelli diversi all’elenco."
+  },
+  "dimensionLabels": { "hardness": "Durezza", "innerDiameter": "Diametro interno", "outerDiameter": "Diametro esterno", "color": "Colore" },
+  "material": "Materiale",
+  "packaging": "Formato di fornitura",
+  "noSelection": "Nessuna selezione",
+  "variantChoiceLabel": "Seleziona un modello",
+  "variantChoiceHint": "Più modelli corrispondono a questi valori. Selezionate il modello e il codice prodotto richiesti.",
+  "noticeTitle": "Fornitura su misura",
+  "notice": {
+    "pvc": "Per ordini di volume maggiore, si possono personalizzare durezza, diametri interno ed esterno, lunghezza del rotolo e altre specifiche. Contattateci per quantità minima e tempi di consegna.",
+    "tpu": "Per ordini di volume maggiore, si possono personalizzare durezza, diametri interno ed esterno, colore, lunghezza del rotolo e altre specifiche. Contattateci per quantità minima e tempi di consegna.",
+    "ptfe": "Per ordini di volume maggiore, si possono personalizzare diametri interno ed esterno, colore, lunghezza del rotolo e altre specifiche. Contattateci per quantità minima e tempi di consegna.",
+    "standard": "Per ordini di volume maggiore, si possono personalizzare diametri interno ed esterno, lunghezza del rotolo e altre specifiche. Contattateci per quantità minima e tempi di consegna."
+  },
+  "uiText": {
+    "closeAriaLabel": "Chiudi il selettore delle misure",
+    "currentSelection": "Selezione attuale",
+    "finalModel": "Modello corrispondente",
+    "productCode": "Codice prodotto",
+    "configuration": "Seleziona configurazione",
+    "matchedModel": "Modello corrispondente",
+    "noMatchedModel": "Nessun modello corrispondente",
+    "copyModel": "Copia modello",
+    "copied": "Copiato",
+    "addToList": "Aggiungi all’elenco",
+    "addedToList": "Aggiunto all’elenco",
+    "confirmAndReturn": "Conferma e torna indietro",
+    "defaultNoticeTitle": "Fornitura su misura",
+    "defaultNotice": "Per ordini di volume maggiore si possono personalizzare le specifiche. Contattateci per quantità minima e tempi di consegna."
+  },
+  "values": { "Natural": "Naturale", "Black": "Nero", "Transparent": "Trasparente", "Blue": "Blu", "Red": "Rosso" },
+  "roll": "rotolo"
+}

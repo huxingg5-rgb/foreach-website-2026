@@ -19,7 +19,7 @@
    3. 中文默认路径不要加 /zh-CN
 ========================================================= */
 
-import Link from "next/link";
+import Link from "@/components/i18n/DraftLink";
 import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
 import SingleLineBreadcrumb from "./SingleLineBreadcrumb";
 
@@ -28,6 +28,8 @@ import styles from "./SiteBreadcrumb.module.css";
 export type SiteBreadcrumbItem = {
   label: string;
   href?: string;
+  hrefLang?: "en" | "de" | "it" | "hi";
+  title?: string;
   /** Allow a detail page to keep its canonical current-page URL clickable. */
   linkCurrent?: boolean;
 };
@@ -50,12 +52,12 @@ function isResourcesRootHref(href?: string) {
   const [pathname = ""] = href.split(/[?#]/);
   const normalizedPath = pathname.replace(/\/+$/, "") || "/";
 
-  return /^\/(?:(?:en|es|fr|ko|ru)\/)?resources$/.test(normalizedPath);
+  return /^\/(?:(?:en|es|fr|ko|ru|de)\/)?resources$/.test(normalizedPath);
 }
 
 export default function SiteBreadcrumb({
   items,
-  ariaLabel = "Breadcrumb",
+  ariaLabel,
   variant = "bar",
   className = "",
   singleLine,
@@ -63,12 +65,17 @@ export default function SiteBreadcrumb({
   if (!items.length) {
     return null;
   }
+  const navigationLabel = ariaLabel ?? (
+    items.some(({ href }) => href && /^\/de\/resources(?:\/|$)/.test(href))
+      ? "Navigationspfad"
+      : "Breadcrumb"
+  );
 
   const entries = items.map((item, index) => {
     const label = normalizeProductBreadcrumbLabel(item.label, item.href);
     const isLast = index === items.length - 1;
     const content = item.href && !isResourcesRootHref(item.href) && (!isLast || item.linkCurrent) ? (
-      <Link href={item.href} aria-current={isLast ? "page" : undefined}>{label}</Link>
+      <Link href={item.href} hrefLang={item.hrefLang} title={item.title} aria-current={isLast ? "page" : undefined}>{label}</Link>
     ) : isLast ? <strong>{label}</strong> : <span>{label}</span>;
 
     return { label, content };
@@ -77,7 +84,7 @@ export default function SiteBreadcrumb({
   return (
     <nav
       className={`${styles.breadcrumb} ${styles[variant]} ${className}`}
-      aria-label={ariaLabel}
+      aria-label={navigationLabel}
     >
       {singleLine ? (
         <SingleLineBreadcrumb items={entries} overflowLabel={singleLine.overflowLabel} />

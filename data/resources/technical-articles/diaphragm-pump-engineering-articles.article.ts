@@ -541,6 +541,9 @@ function createTechnicalArticle(
     title: copy.metadata.title,
     summary: copy.deck,
     date,
+    ...(slug === inkStarvationTroubleshootingSlug
+      ? { dateModified: "2026-11-24" }
+      : {}),
     coverImage: copy.metadata.coverImage,
     coverAlt: copy.metadata.coverAlt,
     content: [

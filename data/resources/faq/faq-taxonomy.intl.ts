@@ -1,6 +1,9 @@
 import type { LocaleCode } from "@/lib/i18n";
 import { faqCategories } from "./faq-taxonomy.zh";
 import type { FaqCategory } from "./faq.types";
+import { germanFaqCategoryLabels } from "./faq.de";
+import { hindiFaqCategoryLabels } from "./faq.hi";
+import { italianFaqCategoryLabels } from "./faq.it";
 
 // Stable category IDs keep bookmarks and filters valid when switching language.
 const locales = ["en", "es", "fr", "ko", "ru"] as const;
@@ -57,12 +60,13 @@ const labels: Record<string, readonly [string, string, string, string, string]> 
   warranty: ["Warranty information", "Información de garantía", "Informations de garantie", "보증 안내", "Информация о гарантии"],
 };
 
-export function getFaqCategories(locale: LocaleCode): FaqCategory[] {
+export function getFaqCategories(locale: LocaleCode | "de" | "it" | "hi"): FaqCategory[] {
   if (locale === "zh-CN") return faqCategories;
-  const index = locales.indexOf(locale);
+  const index = locale === "de" || locale === "it" || locale === "hi" ? -1 : locales.indexOf(locale);
   const label = (key: string) => {
-    if (!labels[key]?.[index]) throw new Error(`Missing FAQ category: ${locale}/${key}`);
-    return labels[key][index];
+    const translated = locale === "de" ? germanFaqCategoryLabels[key] : locale === "it" ? italianFaqCategoryLabels[key] : locale === "hi" ? hindiFaqCategoryLabels[key] : labels[key]?.[index];
+    if (!translated) throw new Error(`Missing FAQ category: ${locale}/${key}`);
+    return translated;
   };
   return faqCategories.map(group => ({ ...group, label: label(group.key), children: group.children.map(child => ({ key: child.key, label: label(child.key) })) }));
 }

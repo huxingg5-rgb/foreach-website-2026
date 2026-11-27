@@ -3,11 +3,14 @@ export const tubingAssemblyLocales = ["en", "es", "fr", "ko", "ru"] as const;
 export const allTubingAssemblyLocales = ["zh-CN", ...tubingAssemblyLocales] as const;
 export type TubingAssemblyLocale = (typeof allTubingAssemblyLocales)[number];
 
+export type TubingAssemblySelectionLocale = TubingAssemblyLocale | "it" | "hi";
+export type TubingAssemblyDetailLocale = TubingAssemblySelectionLocale | "de";
+
 export function isTubingAssemblyLocale(value: string): value is TubingAssemblyLocale {
   return allTubingAssemblyLocales.some(locale => locale === value);
 }
 
-export function getTubingAssemblyLocalePrefix(locale: TubingAssemblyLocale) {
+export function getTubingAssemblyLocalePrefix(locale: TubingAssemblyDetailLocale) {
   return locale === "zh-CN" ? "" : `/${locale}`;
 }
 

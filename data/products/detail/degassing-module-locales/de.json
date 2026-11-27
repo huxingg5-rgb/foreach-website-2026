@@ -1,0 +1,276 @@
+{
+  "name": "Membran-Entgasungsmodul",
+  "navName": "Membran-Entgasungsmodule",
+  "navDescription": "Inline-Vakuumentgasung für Flüssigkeitskreisläufe",
+  "title": "EF-AG3-B Membran-Entgasungsmodul",
+  "seoTitle": "EF-AG3-B Membran-Entgasungsmodul für Inkjet-Tinte | FOREACH",
+  "description": "Das Hohlfaser-Membranmodul EF-AG3-B dient zur Inline-Vakuumentgasung in Flüssigkeitskreisläufen von Tintenstrahldruckern. Zwei Flüssigkeitsanschlüsse und ein Vakuumanschluss mit Innengewinde NPT 1/8.",
+  "introduction": "EF-AG3-B ist ein Hohlfaser-Membranmodul zur Inline-Vakuumentgasung von Flüssigkeiten. Es entfernt gelöste Gase während der kontinuierlichen Flüssigkeitszufuhr und verringert so die Blasenbildung durch entweichendes Gas. Eine typische Anwendung ist die Tintenversorgung industrieller Tintenstrahldrucker. Prüfen Sie bei der Entgasung von Wasser und beim Einsatz in Flüssigkeitskreisläufen biochemischer Analysengeräte die Medienverträglichkeit und die Betriebsbedingungen. Die Flüssigkeit umströmt die Hohlfasern von außen. Das Modul besitzt zwei Flüssigkeitsanschlüsse und einen Vakuumanschluss, jeweils mit Innengewinde NPT 1/8. Dadurch lässt es sich mit einem separaten Vakuumanschluss in Reihe in die Flüssigkeitszufuhr einbauen.",
+  "cardAlt": "Das Membran-Entgasungsmodul EF-AG3-B mit seinen Gewindeanschlüssen",
+  "galleryAlts": [
+    "Vorderansicht des Membran-Entgasungsmoduls EF-AG3-B mit zylindrischem Gehäuse und seitlichem Flüssigkeitsanschluss",
+    "Senkrecht aufgestelltes Membran-Entgasungsmodul EF-AG3-B",
+    "Schrägansicht des Membran-Entgasungsmoduls EF-AG3-B von der gegenüberliegenden Seite",
+    "Stirnseitige und seitliche Gewindeanschlüsse des Membran-Entgasungsmoduls EF-AG3-B"
+  ],
+  "breadcrumbs": [
+    "Startseite",
+    "Produkte",
+    "Fluidik-Fittings"
+  ],
+  "modelLabel": "Modell",
+  "typeLabel": "Produkttyp",
+  "searchKeywords": "Membranentgaser Membran-Entgasungsmodul Entgasungsmodul Entgasungsmembran Hohlfaser Inline-Vakuumentgasung Inkjet-Tinte EF-AG3-B",
+  "specificationGroups": [
+    {
+      "title": "Aufbau und Anschlüsse",
+      "rows": [
+        [
+          "Abmessungen",
+          "159 mm × Ø42 mm"
+        ],
+        [
+          "Gewicht",
+          "Ca. 100 g"
+        ],
+        [
+          "Membranfläche",
+          "Ca. 0.2 m²"
+        ],
+        [
+          "Volumen für die Erstbefüllung",
+          "Ca. 40 mL (Referenzwert der Baureihe EF-AG3)"
+        ],
+        [
+          "Hohlfasermembran",
+          "Poly(4-methyl-1-penten) (PMP)"
+        ],
+        [
+          "Gehäuse und Endkappen",
+          "Polypropylen (PP), Edelstahl (SUS)"
+        ],
+        [
+          "Vergussharz",
+          "Epoxidharz"
+        ],
+        [
+          "Anschlüsse",
+          "Zwei Flüssigkeitsanschlüsse und ein Vakuumanschluss, jeweils NPT 1/8"
+        ]
+      ]
+    },
+    {
+      "title": "Betriebsbedingungen",
+      "rows": [
+        [
+          "Betriebstemperatur der Flüssigkeit und der Umgebung",
+          "5–45 °C"
+        ],
+        [
+          "Maximaler flüssigkeitsseitiger Druck (Überdruck)",
+          "200 kPa"
+        ],
+        [
+          "Vakuumseitiger Druck bei wässrigen Flüssigkeiten (absolut)",
+          "Vom Sättigungsdampfdruck der Flüssigkeit bei Betriebstemperatur bis 100 kPa"
+        ],
+        [
+          "Vakuumseitiger Druck bei nicht wässrigen Flüssigkeiten (absolut)",
+          "1–100 kPa"
+        ]
+      ]
+    },
+    {
+      "title": "Ergebnisse aus Wasserprüfungen",
+      "rows": [
+        [
+          "Wasserprüfung: Gelöster Sauerstoff nach der Behandlung",
+          "< 1.9 mg/L"
+        ],
+        [
+          "Wasserprüfung: Druckverlust am Modul",
+          "< 0.1 kPa"
+        ]
+      ]
+    }
+  ],
+  "selection": {
+    "ariaLabel": "Auswahl und Einsatz des Membran-Entgasungsmoduls",
+    "phaseTitles": [
+      "Auswahl und Auslegung",
+      "Anschlüsse und Einbau"
+    ],
+    "intro": "Beim EF-AG3-B umströmt die Flüssigkeit die Hohlfasern von außen. Gelöste Gase treten durch die Membran und werden vakuumseitig abgeführt. Bestimmen Sie zuerst den Betriebsdurchfluss, das Entgasungsziel und den zulässigen Druckverlust. Prüfen Sie dann Flüssigkeitstemperatur, Medienverträglichkeit und verfügbare Vakuumbedingungen.",
+    "columns": [
+      "Auswahlkriterium",
+      "Auslegung und Prüfungen"
+    ],
+    "inputs": {
+      "title": "Betriebsdurchfluss und Entgasungsziel",
+      "intro": "Ermitteln Sie die folgenden Eingangsgrößen für den tatsächlichen Gerätebetrieb. Prüfen Sie den Zielbetriebspunkt anhand der Referenzkurven.",
+      "rows": [
+        [
+          "Betriebsdurchfluss",
+          "Üblichen und maximalen Durchfluss des Geräts erfassen",
+          "Kontinuierliche Förderung sowie Anlauf und Abschalten prüfen."
+        ],
+        [
+          "Entgasungsziel",
+          "Leistung anhand der Konzentrationen gelösten Sauerstoffs vor und nach der Behandlung bewerten",
+          "Das Ausstoßverhalten des Druckkopfs oder die Funktion des Geräts prüfen."
+        ],
+        [
+          "Zulässiger Druckverlust",
+          "Flüssigkeitsseitigen Druckverlust des Moduls beim Zieldurchfluss prüfen",
+          "Druckverluste in Filtern, Leitungen und Fittings einrechnen."
+        ],
+        [
+          "Flüssigkeitstemperatur und Vakuumbedingungen",
+          "Referenzkurve für die tatsächliche Flüssigkeitstemperatur und den vakuumseitigen Absolutdruck auswählen",
+          "Die Vakuumbedingungen im Betrieb mit dem Sättigungsdampfdruck der Flüssigkeit abgleichen."
+        ]
+      ]
+    },
+    "materials": {
+      "title": "Medienberührte Werkstoffe und Verträglichkeit",
+      "intro": "Prüfen Sie sowohl Prozess- als auch Reinigungsflüssigkeit. Erfassen Sie Zusammensetzung, Konzentration, Temperatur und Kontaktzeit.",
+      "paragraph": "Die Hohlfasern bestehen aus PMP. Gehäuse und Endkappen bestehen aus PP und Edelstahl, das Vergussharz aus Epoxidharz. Bestätigen Sie die Verträglichkeit für die gesamte Kombination medienberührter Werkstoffe."
+    },
+    "curves": {
+      "title": "Durchfluss, Entgasungsleistung und flüssigkeitsseitiger Druckverlust",
+      "intro": "Lesen Sie beim Zieldurchfluss ab, welcher Anteil gelösten Sauerstoffs unter den jeweiligen Vakuumbedingungen entfernt wird und welcher flüssigkeitsseitige Druckverlust entsteht. In den Wasserprüfungen der Baureihe nimmt mit steigendem Durchfluss der entfernte Sauerstoffanteil ab und der Druckverlust zu. Bei gleicher Temperatur und gleichem Durchfluss zeigen die Referenzkurven bei niedrigerem vakuumseitigem Absolutdruck eine höhere Sauerstoffentfernung.",
+      "note": "Die Kurven sind näherungsweise Nachzeichnungen der Referenzdiagramme aus Wasserprüfungen der Baureihe. Prüfen Sie das tatsächliche Gerät mit dem vorgesehenen Medium bei der Solltemperatur und am Zielbetriebspunkt.",
+      "alts": [
+        "Referenzkurven für Durchfluss und Entfernung gelösten Sauerstoffs bei Wasser mit 25 °C und 2.7, 6.7 oder 13.3 kPa absolut sowie bei Wasser mit 45 °C und 6.7 kPa absolut",
+        "Referenzkurve der Baureihe für den mit dem Durchfluss steigenden flüssigkeitsseitigen Druckverlust in Wasserprüfungen bei 25 °C"
+      ],
+      "captions": [
+        "Durchfluss und Entfernung gelösten Sauerstoffs. Wählen Sie die Kurve nach Flüssigkeitstemperatur und vakuumseitigem Absolutdruck aus. Lesen Sie den entfernten Anteil beim Zieldurchfluss ab.",
+        "Durchfluss und flüssigkeitsseitiger Druckverlust. Lesen Sie den Druckverlust beim selben Durchfluss ab und gleichen Sie ihn mit der verfügbaren Druckreserve des Geräts ab."
+      ],
+      "exampleTitle": "Ablesebeispiel",
+      "example": "Bei Wasser mit 25 °C und 1 000 mL/min zeigt die Kurve für einen vakuumseitigen Absolutdruck von 6.7 kPa, dass etwa 58 % des gelösten Sauerstoffs entfernt werden. Beim selben Durchfluss beträgt der flüssigkeitsseitige Druckverlust der Wasserprüfung etwa 2.3 kPa. Beide Werte wurden näherungsweise aus den Referenzdiagrammen der Baureihe abgelesen.",
+      "flowAxis": "Flüssigkeitsdurchfluss (mL/min)",
+      "oxygenAxis": "Entfernung gelösten Sauerstoffs (%)",
+      "pressureAxis": "Flüssigkeitsseitiger Druckverlust (kPa)",
+      "water": "Wasser",
+      "absolute": "abs.",
+      "pressureLegend": "Wasser bei 25 °C · Flüssigkeitsseitiger Druckverlust"
+    },
+    "ports": {
+      "title": "Anschlusskennzeichnung und Einbauraum",
+      "intro": "Beide Flüssigkeitsanschlüsse und der Vakuumanschluss haben die Größe NPT 1/8. Der seitliche und einer der stirnseitigen Anschlüsse führen Flüssigkeit. Der andere stirnseitige Anschluss dient dem Vakuum. Prüfen Sie die Anschlusskennzeichnungen, bevor Sie Leitungen anschließen. Berücksichtigen Sie bei der Planung des Anschlussraums die Gesamtlänge von 159 mm, den Endkappendurchmesser Ø42 mm und die Lage des seitlichen Anschlusses."
+    },
+    "connections": {
+      "title": "Tintenversorgung und Vakuumleitung",
+      "intro": "Legen Sie zuerst die Position des Moduls im Tintenkreislauf fest. Ein Filter im Flüssigkeitskreislauf wird empfohlen. Seine Position richtet sich nach der Gerätekonstruktion.",
+      "rows": [
+        [
+          "Beispiel für einen Tintenversorgungskreislauf",
+          "Tintentank → Versorgungspumpe → Membran-Entgasungsmodul → Vorratsbehälter → Druckkopf",
+          "Im Beispiel strömt die Flüssigkeit durch den unteren seitlichen Anschluss ein und durch den oberen stirnseitigen Anschluss aus. In einigen Anlagen sitzt das Modul zwischen Vorratsbehälter und Druckkopf. Richten Sie sich nach dem tatsächlichen Tintenkreislauf."
+        ],
+        [
+          "Vakuumleitung",
+          "Vakuumanschluss → Flüssigkeitsabscheider → Vakuumpumpe",
+          "Verwenden Sie ein Vakuummessgerät für den Absolutdruck. Der Flüssigkeitsabscheider sammelt Kondensat oder austretende Flüssigkeit. Das erleichtert die Lecksuche und schützt die Vakuumpumpe. Bei wässrigen Tinten wird eine Ausrichtung des Vakuumanschlusses nach unten empfohlen."
+        ]
+      ]
+    },
+    "commissioning": {
+      "title": "Erstbefüllung und Validierung des Betriebspunkts",
+      "intro": "Prüfen Sie Ausrichtung und Anschlüsse, befüllen und entlüften Sie das Modul und überprüfen Sie Entgasungsleistung und Druckverlust beim Zieldurchfluss.",
+      "steps": [
+        [
+          "Anschlüsse prüfen",
+          "Gleichen Sie Flüssigkeitseinlass, Flüssigkeitsauslass und Vakuumanschluss mit den Kennzeichnungen ab. Prüfen Sie den Anschluss von Flüssigkeitsabscheider und Vakuummessgerät."
+        ],
+        [
+          "Langsam über den unteren Flüssigkeitsanschluss befüllen",
+          "Führen Sie die Flüssigkeit schrittweise zu, um Luft aus dem Modul zu verdrängen. Angelegtes Vakuum kann die Entlüftung unterstützen. Für die Erstbefüllung sind ca. 40 mL erforderlich, ein Referenzwert der Baureihe."
+        ],
+        [
+          "Vakuumbedingungen nach der tatsächlichen Flüssigkeitstemperatur einstellen",
+          "Im Betrieb sollte der vakuumseitige Absolutdruck den Sättigungsdampfdruck der Flüssigkeit bei Betriebstemperatur nicht unterschreiten. Zu starke Verdunstung kann die Flüssigkeitszusammensetzung verändern oder die Vakuumpumpe beeinträchtigen."
+        ],
+        [
+          "Beim Zieldurchfluss validieren",
+          "Erfassen Sie Medium, Flüssigkeitstemperatur, Durchfluss und vakuumseitigen Absolutdruck. Messen Sie den gelösten Sauerstoff vor und nach der Behandlung mit einem Sauerstoffmessgerät. Erfassen Sie den flüssigkeitsseitigen Druckverlust mit einem Differenzdruckmessgerät. Prüfen Sie Entgasungsziel und verfügbare Druckreserve des Kreislaufs."
+        ]
+      ]
+    },
+    "storage": {
+      "title": "Regelmäßige Kontrollen und Lagerung",
+      "intro": "Erfassen Sie bei geänderten Betriebsbedingungen erneut Durchfluss, Flüssigkeitstemperatur, vakuumseitigen Absolutdruck und flüssigkeitsseitigen Druckverlust. Prüfen Sie den Abscheider auf Kondensat und Anzeichen für austretende Flüssigkeit.",
+      "paragraph": "Lagern Sie das Modul in geschlossenen Räumen trocken, vor direkter Sonneneinstrahlung geschützt und unter 45 °C. Verhindern Sie, dass nach der Nutzung im Modul verbliebenes Wasser gefriert."
+    }
+  },
+  "delivery": {
+    "introduction": "Die Lieferung des Membran-Entgasungsmoduls EF-AG3-B erfolgt entsprechend der bestätigten Bestellung.",
+    "groups": [
+      {
+        "title": "Innenverpackung",
+        "paragraphs": [
+          "Luftpolsterfolie schützt das Modul und verringert beim Transport den direkten Kontakt mit dem Karton.",
+          "Ist das Modul beim Auspacken beschädigt, bewahren Sie Innen- und Außenverpackung auf und stellen Sie Fotos bereit."
+        ],
+        "photos": [
+          {
+            "alt": "Luftpolsterbeutel mit FOREACH-Kennzeichnung für ein Membran-Entgasungsmodul",
+            "caption": "Schutz des Moduls in Luftpolsterfolie"
+          },
+          {
+            "alt": "Eine Person nimmt ein in Luftpolsterfolie verpacktes Membran-Entgasungsmodul aus dem Karton",
+            "caption": "Entnahme des Membran-Entgasungsmoduls"
+          }
+        ]
+      },
+      {
+        "title": "Außenverpackung",
+        "paragraphs": [
+          "Karton und Polstermaterial schützen das Modul.",
+          "Gleichen Sie nach Erhalt das Materialetikett auf dem Karton mit der Bestellung ab.",
+          "Begleitunterlagen werden wie in der Bestellung vereinbart bereitgestellt."
+        ],
+        "photos": [
+          {
+            "alt": "Geöffneter Karton des Membran-Entgasungsmoduls mit Luftpolsterfolie und Polstermaterial",
+            "caption": "Auspacken des Membran-Entgasungsmoduls"
+          },
+          {
+            "alt": "FOREACH-Materialetikett am Karton des Membran-Entgasungsmoduls",
+            "caption": "Äußere Materialkennzeichnung"
+          }
+        ]
+      },
+      {
+        "title": "Versanddienst",
+        "paragraphs": [
+          "Für Inlandsbestellungen innerhalb Chinas ist der Versand mit SF Express standardmäßig inbegriffen.",
+          "Bestätigen Sie vor dem Versand die Empfängerdaten, Liefervereinbarungen und etwaige besondere Transportanforderungen.",
+          "Nach dem Versand erhalten Sie Informationen zur Sendungsverfolgung. Wenden Sie sich bei Versandproblemen mit Bestell- und Sendungsnummer an FOREACH."
+        ],
+        "photos": [
+          {
+            "alt": "Eine Person bei FOREACH handhabt an der Packstation einen Karton für eine Luftpumpe",
+            "caption": "Beispiel für das Verpacken einer Luftpumpe"
+          },
+          {
+            "alt": "Eine Person bei FOREACH stellt Kartons für Kolbenpumpen zum Versand bereit",
+            "caption": "Beispiel für den Versand von Kolbenpumpen"
+          }
+        ]
+      }
+    ],
+    "warranty": "Die Bedingungen werden anhand der Ergebnisse der Medienverträglichkeitsprüfung schriftlich vereinbart.",
+    "support": "Wenden Sie sich telefonisch, per E-Mail oder über das unten stehende Formular an den Kundendienst. Geben Sie Modell, Bestellnummer oder Charge, Flüssigkeit und beobachtete Auffälligkeiten an. Stimmen Sie die Rücksendung mit dem Kundendienst ab, bevor Sie ein Modul zurücksenden.",
+    "replyTime": "Servicezeiten an Arbeitstagen: 08:30–18:00 Uhr (Pekinger Zeit). Wenn Sie online eine Nachricht hinterlassen, antworten wir innerhalb von 24 Arbeitsstunden und kümmern uns um Ihr Anliegen.",
+    "labels": {
+      "title": "Lieferung und Kundendienst",
+      "warrantyTitle": "Garantie und Kundendienst",
+      "warrantyLabel": "Garantiebedingungen:",
+      "email": "E-Mail:",
+      "phone": "Telefon:"
+    }
+  }
+}

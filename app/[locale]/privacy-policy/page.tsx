@@ -1,7 +1,10 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import PrivacyPolicyPage from "@/components/privacy/PrivacyPolicyPage";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { buildDraftPageMetadata } from "@/lib/seo/international-page-metadata";
 
 const PRIVACY_POLICY_LOCALES = [
   "en",
@@ -12,7 +15,7 @@ const PRIVACY_POLICY_LOCALES = [
 ] as const;
 
 type PrivacyPolicyLocale =
-  (typeof PRIVACY_POLICY_LOCALES)[number];
+  (typeof PRIVACY_POLICY_LOCALES)[number] | "de" | "it" | "hi";
 
 type LocalePrivacyPolicyPageProps = {
   params: Promise<{
@@ -27,6 +30,19 @@ const metadataMap: Record<
     description: string;
   }
 > = {
+  hi: {
+    title: "गोपनीयता नीति | FOREACH",
+    description: "जानें कि FOREACH वेबसाइट के इस्तेमाल पर जानकारी कैसे जुटाती, इस्तेमाल करती, रखती और सुरक्षित करती है।",
+  },
+  it: {
+    title: "Informativa sulla privacy | FOREACH",
+    description: "Scopri come Foreach tratta le richieste, i cookie, i dati di Google Analytics e le informazioni sull’uso del sito.",
+  },
+  de: {
+    title: "Datenschutzerklärung | FOREACH",
+    description:
+      "Erfahren Sie, wie FOREACH Anfragen, Cookies, Google Analytics und Nutzungsinformationen der Website verarbeitet.",
+  },
   en: {
     title: "Privacy Policy | Foreach Technology",
     description:
@@ -57,12 +73,12 @@ const metadataMap: Record<
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return PRIVACY_POLICY_LOCALES.map((locale) => ({
+  return [...PRIVACY_POLICY_LOCALES, ...(languageDraftsEnabled ? ["de", "it", "hi"] : [])].map((locale) => ({
     locale,
   }));
 }
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: LocalePrivacyPolicyPageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -71,6 +87,9 @@ export async function generateMetadata({
     return {};
   }
 
+  if (locale === "de" || locale === "it" || locale === "hi") {
+    return buildDraftPageMetadata({ locale, canonical: `/${locale}/privacy-policy/`, ...metadataMap[locale] });
+  }
   return metadataMap[locale];
 }
 
@@ -89,7 +108,10 @@ export default async function LocalePrivacyPolicyPage({
 function isPrivacyPolicyLocale(
   locale: string,
 ): locale is PrivacyPolicyLocale {
+  if (locale === "de" || locale === "it" || locale === "hi") return languageDraftsEnabled;
   return PRIVACY_POLICY_LOCALES.includes(
-    locale as PrivacyPolicyLocale,
+    locale as (typeof PRIVACY_POLICY_LOCALES)[number],
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/privacy-policy/", getPageMetadata);

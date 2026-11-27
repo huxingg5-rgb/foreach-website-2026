@@ -162,7 +162,7 @@ export type DistributorPageData = {
    public/images/contact-cooperation/distributor-products/
 ========================================================= */
 
-const distributorProductImages = {
+export const distributorProductImages = {
   pump: "/images/contact-cooperation/distributor-products/01-pump-series.webp",
   valve: "/images/contact-cooperation/distributor-products/02-valve-series.webp",
   control: "/images/contact-cooperation/distributor-products/03-control-module.webp",

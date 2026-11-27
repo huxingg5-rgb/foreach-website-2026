@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "title": "Riflusso dopo l'arresto di una pompa miniaturizzata a membrana: valvole di ritegno e protezione antisifone",
+    "seoTitle": "Riflusso delle pompe miniaturizzate a membrana e protezione antisifone | Foreach Technology",
+    "seoDescription": "Diagnostica il riflusso dopo l'arresto, distinguilo dal sifonamento in avanti e dal gocciolamento residuo e valuta ritegno, sequenza delle valvole e tenuta statica nel circuito completo.",
+    "coverImage": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
+    "coverAlt": "Foto della pompa miniaturizzata a membrana per liquidi Foreach DPL30 senza spazzole a due fili"
+  },
+  "deck": "Diagnostica il riflusso dopo l'arresto, distinguilo dal sifonamento in avanti e dal gocciolamento residuo e valuta ritegno, sequenza delle valvole e tenuta statica nel circuito completo.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "In caso di apparente riflusso dopo l'arresto, verificare prima che il liquido si sposti davvero a monte e individuare la differenza di pressione inversa. Poi valutare se serve un'altra valvola di ritegno. Se il flusso prosegue nella direzione originale, controllare il flusso per gravità o il sifonamento. Per un breve gocciolamento, controllare anche la pressione residua e il volume al punto di uscita."
+    },
+    {
+      "type": "paragraph",
+      "text": "Direzione, durata e pressione motrice determinano l'intervento. Aggiungere un comune ritegno per ogni problema all'arresto può essere inefficace e introdurre resistenza o difficoltà di avvio."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Fermare il motore lascia pressione e liquido accumulato nel circuito",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Con l'arresto del motore termina il pompaggio attivo. Dislivelli, pressione del serbatoio, gas compresso e deformazione elastica non scompaiono subito. Il liquido accumulato in un tubo flessibile in pressione o in uno smorzatore può continuare verso l'uscita."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le valvole della testa dirigono aspirazione e mandata. Per usarle come valvole di intercettazione servono verifiche specifiche. In assenza di dati su tenuta statica, pressione di apertura e trafilamento, la presenza di ritegni non garantisce un isolamento a tenuta a riposo. Valutare separatamente pressione di inizio apertura, capacità di flusso diretto e trafilamento interno a valvola chiusa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le specifiche DPL30, DPL60 e DPL30H riportano dati di esercizio e materiali, ma non definiscono una soglia di flusso diretto passivo, un tasso di trafilamento statico inverso o un volume dopo arresto in un intervallo definito sufficienti a garantire l'intercettazione. Definire e provare queste grandezze sullo strumento. [F1–F3]"
+        }
+      ]
+    },
+    {
+      "title": "Distinguere riflusso, sifonamento in avanti e gocciolamento",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Osservazione",
+            "Meccanismo possibile",
+            "Come distinguerlo"
+          ],
+          "rows": [
+            [
+              "Breve gocciolamento che si esaurisce",
+              "Liquido all'estremità, recupero elastico del tubo, smorzatore o rilascio di pressione del gas",
+              "La pressione in uscita cala e il volume extra cumulativo tende a un plateau"
+            ],
+            [
+              "Flusso che prosegue nel verso originale",
+              "Dislivello o pressione del recipiente, con possibile sifonamento",
+              "Il flusso cambia al variare di livello o pressione"
+            ],
+            [
+              "Il liquido si sposta verso il serbatoio di origine",
+              "Pressione a valle, dislivello inverso o trafilamento dalla valvola",
+              "Registrare flusso inverso e pressione. Escludere la redistribuzione elastica"
+            ],
+            [
+              "Alcune gocce si staccano dall'ugello",
+              "Bagnatura, tensione superficiale e liquido trattenuto",
+              "La pressione a monte è stabile e il liquido proviene soprattutto dal tratto terminale"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le categorie orientano la diagnosi senza dimostrare un guasto specifico. Una breve erogazione residua può avere più origini. Un piccolo spostamento all'indietro può redistribuire volume elastico. Non classificarlo automaticamente come trafilamento inverso attraverso la pompa."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-rd/it/04.svg",
+          "alt": "Erogazione cumulativa dopo l'arresto",
+          "width": 1000,
+          "height": 650,
+          "caption": "Schema di principio. Un plateau può indicare il rilascio di un volume accumulato finito. Un aumento continuo richiede la verifica della pressione motrice residua. Registrare a parte il riflusso."
+        }
+      ]
+    },
+    {
+      "title": "Perché un comune ritegno può lasciare proseguire il sifonamento in avanti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Con pressione o battente a monte sufficienti e una colonna liquida continua, il flusso può proseguire nel verso di pompaggio dopo l'arresto. Se il tubo supera un punto alto e scarica più in basso, verificare continuità del sifone, pressione al punto alto e gas intrappolato."
+        },
+        {
+          "type": "paragraph",
+          "text": "In un esempio con acqua, entrambe le estremità a pressione atmosferica e scarico libero, un livello della sorgente di 0.5 m sopra l'uscita dà circa 4.9 kPa di pressione motrice statica. Il calcolo usa densità di circa 1000 kg/m³ e gravità di circa 9.81 m/s², prima delle perdite. Non è una specifica Foreach di apertura o tenuta. Se lo scarico è immerso, usare invece il livello libero del recipiente di destinazione e le pressioni dei due spazi di testa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il verso libero di una valvola di ritegno coincide di solito con il verso di pompaggio. Il flusso può proseguire se la pressione statica residua la mantiene aperta. Valutare pressione di richiusura, isteresi, effetti della pressione in uscita e trafilamento da chiusa oltre alla pressione di inizio apertura. Un solo valore nominale di apertura non basta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Possibili interventi sono riposizionare serbatoio o scarico, usare un dispositivo antisifone o di contropressione adatto oppure una valvola di intercettazione comandata. Con un dispositivo a molla, controllare apertura, richiusura, precarico e perdita di carico alla portata richiesta. Confermare compatibilità con il fluido, pressione nominale e attacchi per tutto il circuito."
+        }
+      ]
+    },
+    {
+      "title": "Valutare il gocciolamento residuo separatamente dal trafilamento inverso",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se il volume scaricato tende a un plateau, esaminare pressione in uscita all'arresto, cedevolezza dei tubi, volume di gas, smorzatore e liquido tra intercettazione e ugello. Tubo elastico e gas compresso possono accumulare energia e rilasciarla dopo l'arresto. Uno smorzatore di pulsazioni può quindi prolungare l'erogazione residua."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un ritegno chiuso correttamente ma molto a monte non trattiene tutto il liquido già a valle. Per limiti severi di gocciolamento, valutare l'intercettazione più vicina all'uscita e la sequenza tra valvola e pompa, tenendo conto di volume trattenuto, pulizia e manutenzione. Il risucchio richiede un circuito o un attuatore che lo supporti. Un comando del verso del motore da solo non dimostra il pompaggio reversibile del liquido."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per il riflusso effettivo, individuare la sorgente di pressione prima di valutare tenuta delle valvole interne e ritegni aggiuntivi. Particelle, cristallizzazione, compatibilità chimica o deformazione nel tempo possono alterare il contatto. Verificarlo con confronti in condizioni pulite, con il fluido e a diverse fasi della vita utile."
+        }
+      ]
+    },
+    {
+      "title": "Ricalcolare il punto di lavoro prima di aggiungere una valvola",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una valvola aggiuntiva assorbe parte della pressione differenziale disponibile. Usare la sua curva di perdita di carico alla portata richiesta e con il fluido effettivo, verificando apertura e chiusura. Se la curva comprende già tutta la perdita della valvola aperta, non sommare di nuovo la pressione nominale di inizio apertura."
+        },
+        {
+          "type": "paragraph",
+          "text": "DPL30 e DPL60 dichiarano 100 kPa di pressione nominale e DPL30H 600 kPa. Questi valori sono distinti dalla portata a vuoto e non costituiscono prestazioni simultanee. [F1–F3] Aggiunto un dispositivo di contropressione, leggere o misurare la portata alla pressione richiesta e ripetere le prove di primo adescamento e livello minimo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Coordinare i comandi di valvola e pompa. Chiudere una valvola a valle mentre la pompa funziona può aumentare rapidamente la pressione di mandata. Limitare il funzionamento anomalo a mandata chiusa e predisporre la protezione richiesta dal circuito. Il limite dipende dalla pressione ammissibile più bassa dell'intero circuito. Valutare anche pressione residua e variazioni di temperatura del liquido intrappolato tra due elementi chiusi."
+        }
+      ]
+    },
+    {
+      "title": "Includere lo stato di arresto nella convalida",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Usare la geometria effettiva dell'uscita. Raggiungere la condizione di esercizio definita e attivare arresto e registrazione dallo stesso evento di controllo. Conservare pressione di mandata, alimentazione o segnale di abilitazione, comando valvola e volume raccolto dopo l'arresto. Per il riflusso serve uno strumento bidirezionale idoneo o un metodo definito e verificato per il volume della colonna liquida."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Prova",
+            "Condizioni da coprire",
+            "Risultato"
+          ],
+          "rows": [
+            [
+              "Flusso diretto passivo",
+              "Livello massimo alla sorgente, uscita più bassa e condizioni di pressione dei recipienti",
+              "Flusso residuo e differenza di pressione motrice"
+            ],
+            [
+              "Erogazione dopo l'arresto",
+              "Diverse contropressioni operative, tubi e smorzatori",
+              "Volume cumulativo nel tempo e istante d'arresto"
+            ],
+            [
+              "Tenuta in senso inverso",
+              "Pressioni inverse basse e più alte plausibili",
+              "Volume di riflusso nell'intervallo di inattività specificato"
+            ],
+            [
+              "Riavvio",
+              "Arresti brevi, attese normali e inattività prolungata",
+              "Ripristino dell'adescamento, bolle e volume del primo ciclo"
+            ],
+            [
+              "Dopo la prova di durata",
+              "Fluido effettivo, pulizia e fasi della vita utile richieste",
+              "Variazioni di perdite, volume dopo arresto e avviamento"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Attendere che la breve redistribuzione di pressione e volume si stabilizzi prima di interpretare un trafilamento persistente. Se si contano le gocce, calibrare il volume o pesare il liquido, perché fluido e ugello cambiano la dimensione delle gocce. Intervallo di misura, volume residuo ammesso e riflusso ammesso derivano dai requisiti dello strumento."
+        }
+      ]
+    },
+    {
+      "title": "Definire la funzione richiesta all'arresto per la scelta Foreach",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Indicare posizioni del serbatoio e dell'uscita, chiusura dei recipienti, contropressione a pompa ferma, valvole e ugello terminali, attesa massima e volumi residuo e inverso ammessi, oltre ai requisiti normali di portata. I dati standard definiscono i modelli candidati. Verificare il controllo d'arresto con valvole, tubi e sequenza effettivi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se lo strumento richiede isolamento all'arresto, assegnare la funzione a un componente o a una configurazione convalidata. La tenuta delle valvole della testa e l'utilità di eventuali resistenze extra vanno dimostrate sul circuito."
+        }
+      ]
+    },
+    {
+      "title": "Specifiche e riferimenti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I parametri del prodotto provengono dalle specifiche Foreach qui sotto. Verificare spiegazioni tecniche e prove proposte per modello e condizioni operative effettivi."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+              "label": "[F1] Specifica Foreach DPL30 in cinese (A04)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+              "label": "[F2] Specifica Foreach DPL60 in cinese (A02)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
+              "label": "[F3] Specifica Foreach DPL30H in cinese (A00)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Guide correlate per selezione e convalida",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/self-priming-miniature-liquid-diaphragm-pump-selection/",
+              "label": "Autoadescamento e tempi di avviamento"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+              "label": "Misurare e ridurre le pulsazioni di portata"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-noise-vibration-reduction/",
+              "label": "Riduzione di rumore e vibrazioni"
+            },
+            {
+              "href": "/resources/technical-articles/micro-diaphragm-pump-materials-selection/",
+              "label": "Compatibilità dei materiali a contatto"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Curve portata-pressione e punti di lavoro"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "Scelta delle pompe miniaturizzate a membrana per liquidi"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/",
+              "label": "Gamma di pompe miniaturizzate a membrana"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Una sola valvola di ritegno può impedire sifonamento e riflusso?",
+      "answer": "Dipende dal circuito. Una valvola di ritegno limita normalmente il riflusso. Per il flusso diretto, verificare anche battente motore e condizioni di apertura e richiusura."
+    },
+    {
+      "question": "Passare alla DPL30H riduce il gocciolamento dopo arresto?",
+      "answer": "La maggiore pressione ammissibile non dimostra una migliore tenuta statica. Individuare l'origine del liquido, quindi valutare pressione nominale, valvole e tubi."
+    },
+    {
+      "question": "Un piccolo volume dopo l'arresto indica una pompa guasta?",
+      "answer": "Può provenire dal liquido all'uscita o dal rilascio di pressione del circuito. Valutarlo in un intervallo definito rispetto al requisito dell'applicazione."
+    }
+  ],
+  "cta": {
+    "title": "Valuta la scelta della pompa a membrana per liquidi",
+    "description": "Indica fluido effettivo, portata richiesta, pressioni di ingresso e mandata, tubi e condizioni di avviamento e arresto per definire modello, materiali e verifiche.",
+    "contactLabel": "Contatta l'assistenza tecnica",
+    "productsLabel": "Visualizza le pompe miniaturizzate a membrana per liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

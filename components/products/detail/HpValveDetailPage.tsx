@@ -1,5 +1,7 @@
 import {getValveSelectionPath,getHpValveDetailPath,normalizeValveLocale,valveLocales,valveBreadcrumbLabels} from '@/data/products/selection/valve-routes';
 import {getHpValveIntro} from '@/data/products/selection/hp-valve-intro';
+import { applyHpValveDetailCopy, germanHpValveCopy, hindiHpValveCopy, italianHpValveCopy } from '@/data/products/detail/hp-content';
+import { germanHpValveDraftPath, languageDraftsEnabled } from '@/lib/i18n/draft-languages';
 import {getProductDetailTitleOverride} from '@/data/products/detail/product-detail-title-overrides';
 import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instrument-fluidics-copy.zh";
 import type { ComponentType, ReactNode } from "react";
@@ -10,6 +12,7 @@ import { notFound } from "next/navigation";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import { getInstrumentProductSections } from "./InstrumentProductSections";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
 import valveDetailData from "@/data/products/generated/valves/detail/index.json";
 
 type ValveDetailRecord = {
@@ -53,6 +56,8 @@ const details = valveDetailData as ValveDetailRecord[];
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
   afterContent?: ReactNode;
+  germanDetail?: Parameters<typeof ProductDetailClient>[0]["germanDetail"];
+  localizedDetail?: Parameters<typeof ProductDetailClient>[0]["localizedDetail"];
 }>;
 
 
@@ -256,6 +261,24 @@ function toClientData(detail: ValveDetailRecord) {
 export function getHpValveMetadata(locale: string) {
   const detail = getDetailBySlug('high-pressure-valves')!;
   const language = normalizeValveLocale(locale);
+  if (locale === "it" || locale === "hi") {
+    const intro = getHpValveIntro(locale);
+    const title = locale === "hi" ? intro.title + " | FOREACH" : "HP · Valvola rotativa ad alta pressione per HPLC | FOREACH";
+    const description = intro.paragraphs[0];
+    const canonical = getCanonicalUrl("/" + locale + getHpValveDetailPath("zh"));
+    const social = buildProductSocialMetadata({ data: { ...detail, imageAlt: intro.image.alt }, title, description, canonicalUrl: canonical });
+    return { ...social, title: { absolute: title }, description, alternates: { canonical },
+      robots: { index: false, follow: true }, openGraph: { ...social.openGraph, locale: locale === "hi" ? "hi_IN" : "it_IT" } };
+  }
+  if (locale === 'de' && languageDraftsEnabled) {
+    const intro = getHpValveIntro('de');
+    const title = 'HP-Hochdruck-Drehschaltventil für HPLC | FOREACH';
+    const description = intro.paragraphs[0];
+    const canonical = '/de' + germanHpValveDraftPath;
+    const social = buildProductSocialMetadata({data:{...detail,imageAlt:intro.image.alt}, title, description, canonicalUrl:canonical});
+    return {...social, title:{absolute:title}, description, alternates:{canonical},
+      robots:{index:false, follow:true}, openGraph:{...social.openGraph, locale:'de_DE'}};
+  }
   const title = getProductDetailTitleOverride(detail,language) || detail.seoTitle || detail.title;
   const description = language === 'zh' ? detail.seoDescription || detail.description : getHpValveIntro(language).paragraphs[0];
   const canonical = getHpValveDetailPath(language);
@@ -272,13 +295,40 @@ export default function HpValveDetailPage({locale}:{locale:string}) {
   const slug = 'high-pressure-valves';
   const detail = getDetailBySlug(slug);
   if (!detail) notFound();
-  const language = normalizeValveLocale(locale);
-  const labels = valveBreadcrumbLabels[language];
-  const data = {...applyInstrumentFluidicsChineseCopy(toClientData(detail), 'zh'),
+  const germanDraft = locale === 'de' && languageDraftsEnabled;
+  const draftLocale = locale === "it" || locale === "hi" ? locale : undefined;
+  const language = normalizeValveLocale(germanDraft || draftLocale ? 'en' : locale);
+  const labels = germanDraft ? {category:'Ventile',hp:'HP-Hochdruck-Drehschaltventil'}
+    : draftLocale === "hi" ? { category: "वाल्व", hp: "HP उच्च-दाब रोटरी वाल्व" }
+    : draftLocale === "it" ? { category: "Valvole", hp: "Valvola rotativa ad alta pressione HP" } : valveBreadcrumbLabels[language];
+  const intro = germanDraft ? getHpValveIntro('de') : undefined;
+  const germanDetail = intro ? {
+    title:intro.title, description:germanHpValveCopy.description,
+    faqs:germanHpValveCopy.faqs, imageAlt:intro.image.alt,
+    bottomCta:{...germanHpValveCopy.bottomCta, href:'/de/contact/'},
+  } : undefined;
+  const localizedIntro = draftLocale ? getHpValveIntro(draftLocale) : undefined;
+  const draftCopy = draftLocale === "hi" ? hindiHpValveCopy : italianHpValveCopy;
+  const localizedDetail: Parameters<typeof ProductDetailClient>[0]["localizedDetail"] = draftLocale && localizedIntro ? {
+    locale: draftLocale,
+    copy: {
+      title: localizedIntro.title, description: draftCopy.description,
+      faqs: draftCopy.faqs, imageAlt: localizedIntro.image.alt,
+      bottomCta: { ...draftCopy.bottomCta, href: `/${draftLocale}/contact/` },
+    },
+  } : undefined;
+  const base = applyInstrumentFluidicsChineseCopy(toClientData(detail), 'zh');
+  const data = {...base,
+    ...(draftLocale && localizedIntro ? {
+      ...applyHpValveDetailCopy({ ...base, hpAuthoredContent: true }, draftLocale),
+      __locale: draftLocale, title: localizedIntro.title, name: localizedIntro.title, model: localizedIntro.title,
+      h1Title: localizedIntro.title, productTypeName: labels.hp, categoryLabel: labels.category,
+    } : {}),
+    ...(germanDraft ? {__locale:'de'} : {}),
     hpAuthoredContent:true, breadcrumbLabel:'HP',
     breadcrumbCategoryLabel:labels.category, breadcrumbCategoryHref:getValveSelectionPath(language),
     breadcrumbSeriesLabel:labels.hp, breadcrumbSeriesHref:getValveSelectionPath(language,slug),
-    detailHref:getHpValveDetailPath(language), selectionHref:getValveSelectionPath(language,slug),
+    detailHref:draftLocale ? '/' + draftLocale + getHpValveDetailPath('zh') : germanDraft ? '/de' + germanHpValveDraftPath : getHpValveDetailPath(language), selectionHref:getValveSelectionPath(language,slug),
   };
   return (
     <div
@@ -353,10 +403,11 @@ export default function HpValveDetailPage({locale}:{locale:string}) {
           margin-top: 0 !important;
         }
       ` }} />
-      <ProductDetailView data={data} {...getInstrumentProductSections("high-pressure-valves", language)}
+      <ProductDetailView data={data} germanDetail={germanDetail} localizedDetail={localizedDetail}
+        {...getInstrumentProductSections("high-pressure-valves", draftLocale ?? (germanDraft ? "de" : language))}
         afterContent={
           <RelatedResources sourceType="product" sourceSlug={slug}
-            relationKeys={["series:hp"]} locale={language === "zh" ? "zh-CN" : language} />
+            relationKeys={["series:hp"]} locale={language === "zh" ? "zh-CN" : language} uiLocale={draftLocale ?? (germanDraft ? "de" : undefined)} />
         } />
     </div>
   );

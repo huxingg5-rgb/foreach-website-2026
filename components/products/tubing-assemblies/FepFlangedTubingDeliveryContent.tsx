@@ -1,4 +1,4 @@
-import type { TubingAssemblyLocale } from "@/data/products/tubing-assemblies/locales";
+import type { TubingAssemblyDetailLocale } from "@/data/products/tubing-assemblies/locales";
 import { getAssemblyDetailMedia } from "@/data/products/tubing-assemblies/detail-media";
 import { assemblyDetailView } from "./assembly-detail-view";
 import { siteFooterData } from "@/data/site-footer";
@@ -14,7 +14,7 @@ type DeliveryPhotoData = {
   height?: number;
 };
 
-function DeliveryPhoto({ photo, example = false, locale = "zh-CN" }: { photo: keyof typeof deliveryPhotos.photos; example?: boolean; locale?: TubingAssemblyLocale }) {
+function DeliveryPhoto({ photo, example = false, locale = "zh-CN" }: { photo: keyof typeof deliveryPhotos.photos; example?: boolean; locale?: TubingAssemblyDetailLocale }) {
   const data: DeliveryPhotoData = deliveryPhotos.photos[photo];
   const { filename, width: originalWidth = deliveryPhotos.width, height: originalHeight = deliveryPhotos.height } = data;
   const image = getAssemblyDetailMedia(locale, photo, { src: `${deliveryPhotos.imageRoot}${filename}`, width: originalWidth, height: originalHeight, alt: data.alt, caption: example && !data.caption.endsWith("示例") ? `${data.caption}示例` : data.caption });
@@ -33,7 +33,7 @@ function DeliveryPhoto({ photo, example = false, locale = "zh-CN" }: { photo: ke
 }
 
 /** Customer-facing delivery answers in the shared fitting layout. */
-export default function FepFlangedTubingDeliveryContent({ productLabel = "FEP 翻边管组件", configurationVisual, examplePhotos = false, locale = "zh-CN" }: { productLabel?: string; configurationVisual?: ReactNode; examplePhotos?: boolean; locale?: TubingAssemblyLocale } = {}) {
+export default function FepFlangedTubingDeliveryContent({ productLabel = "FEP 翻边管组件", configurationVisual, examplePhotos = false, locale = "zh-CN" }: { productLabel?: string; configurationVisual?: ReactNode; examplePhotos?: boolean; locale?: TubingAssemblyDetailLocale } = {}) {
   return assemblyDetailView(<section className={`${styles.delivery} ${styles.plainDelivery}`} data-assembly-content="delivery" data-fep-assembly-content={productLabel === "FEP 翻边管组件" ? "delivery" : undefined} data-fep-assembly-delivery-source="FR-QR-YX-011:A00" aria-label={`${productLabel}交付与售后`}>
     <h2>交付与售后</h2>
     <p>按确认配置完成出厂核对与包装，提供交付信息、随货资料及收货后的问题支持。</p>

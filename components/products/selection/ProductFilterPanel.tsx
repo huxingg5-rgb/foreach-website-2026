@@ -35,6 +35,7 @@ type ProductFilterPanelProps = {
     value: string
   ) => void;
   getOptionHref?: (group: ProductSelectionFilterGroup, value: string) => string | undefined;
+  getDisplayLabel?: (label: string, taxonomyId?: string) => string;
   onResetFilters?: () => void;
 };
 
@@ -81,12 +82,14 @@ function getBarbedPortCount(
 
 function BarbedPortFilterGroup({
   filterGroups,
+  getDisplayLabel,
   isOptionActive,
   isOptionDisabled,
   onFilterChange,
 }: {
   filterGroups:
     ProductSelectionFilterGroup[];
+  getDisplayLabel?: ProductFilterPanelProps["getDisplayLabel"];
 
   isOptionActive: (
     group:
@@ -141,7 +144,7 @@ function BarbedPortFilterGroup({
 
               return (
                 <div key={filterKey}>
-                  {groupTitle}
+                  {getDisplayLabel?.(groupTitle) ?? groupTitle}
                 </div>
               );
             })}
@@ -256,6 +259,7 @@ function BarbedPortFilterGroup({
 
 export default function ProductFilterPanel({
   getOptionHref,
+  getDisplayLabel,
   activeCategory,
   activeProductTypeId,
   productTypeResultCount,
@@ -352,6 +356,7 @@ export default function ProductFilterPanel({
                 <div className="barbed-port-filter-body">
                   <BarbedPortFilterGroup
                     filterGroups={filterGroups}
+                    getDisplayLabel={getDisplayLabel}
                     isOptionActive={isOptionActive}
                     isOptionDisabled={isOptionDisabled}
                     onFilterChange={(
@@ -407,6 +412,8 @@ export default function ProductFilterPanel({
                 : group.key === "filter01"
             );
 
+          const optionLabel = (option: ProductSelectionFilterGroup["options"][number]) =>
+            getDisplayLabel?.(option.label, isProductTypeGroup ? option.value : undefined) ?? option.label;
           const activeOption = group.options.find(
             (option) =>
               isOptionActive(group, option.value)
@@ -634,7 +641,7 @@ const inferredShouldUseTwoColumns =
                     onFilterChange(group, option.value);
                     if (mobileOpenFilterGroups?.[group.key]) onToggleMobileGroup?.(group.key);
                   } : undefined}
-                ><span className="filter-check" /><span>{option.label}</span></a>;
+                ><span className="filter-check" /><span>{optionLabel(option)}</span></a>;
                 return (
                   <button
                     className={[
@@ -684,7 +691,7 @@ const inferredShouldUseTwoColumns =
                     }}
                   >
                     <span className="filter-check" />
-                    <span>{option.label}</span>
+                    <span>{optionLabel(option)}</span>
                   </button>
                 );
               })}
@@ -707,9 +714,11 @@ const inferredShouldUseTwoColumns =
                 aria-expanded={isGroupOpen}
               >
                 <span>
-                  {group.title}
+                  {getDisplayLabel?.(group.title) ?? group.title}
                   {isProductTypeGroup && productTypeResultCount !== undefined ? (
-                    <span aria-live="polite" aria-atomic="true">（{productTypeResultCount}）</span>
+                    <span aria-live="polite" aria-atomic="true">
+                      {getDisplayLabel ? " (" : "（"}{productTypeResultCount}{getDisplayLabel ? ")" : "）"}
+                    </span>
                   ) : null}
                 </span>
 
@@ -743,7 +752,7 @@ const inferredShouldUseTwoColumns =
                   >
                     <span className="filter-check" />
                     <span>
-                      {currentPrefix || "当前："}{activeOption.label}
+                      {currentPrefix || "当前："}{optionLabel(activeOption)}
                     </span>
                   </button>
                 </div>

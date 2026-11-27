@@ -1,0 +1,630 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Guida alla scelta dei raccordi per tubi rigidi in microfluidica: collegamenti flangiati, con ogiva e con anello di compressione",
+      "seoTitle": "Guida alla scelta dei raccordi per tubi rigidi in microfluidica | FOREACH",
+      "seoDescription": "Confronta i raccordi FOREACH flangiati, con ogiva e con anello di compressione: tenuta, limiti di riutilizzo, condizioni di pressione, tubi in FEP e PTFE, schermatura dalla luce e protezione meccanica, con un esempio di scelta dell’assemblaggio.",
+      "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-fittings.webp",
+      "coverAlt": "Raccordi flangiati FOREACH HF / HFL per tubi rigidi"
+    },
+    "deck": "Criteri essenziali: controlla prima geometria della porta, diametro esterno del tubo e fluido, poi pressione, frequenza di manutenzione e preparazione dell’estremità. I raccordi flangiati premono la flangia del tubo contro una superficie di tenuta piana. Le ogive stringono il tubo durante il serraggio del raccordo. Le configurazioni con anello di compressione usano una boccola e un anello di tenuta. La sola corrispondenza di filettature e diametri del tubo non stabilisce la compatibilità.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Criteri essenziali: controlla prima geometria della porta, diametro esterno del tubo e fluido, poi pressione, frequenza di manutenzione e preparazione dell’estremità. I raccordi flangiati premono la flangia del tubo contro una superficie di tenuta piana. Le ogive stringono il tubo durante il serraggio del raccordo. Le configurazioni con anello di compressione usano una boccola e un anello di tenuta. La sola corrispondenza di filettature e diametri del tubo non stabilisce la compatibilità.",
+        "lead": "Criteri essenziali:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Per chi sviluppa apparecchiature, progetta circuiti fluidici o si occupa di manutenzione, questa guida aiuta a individuare i candidati in base a geometria di tenuta, interfacce, fluidi, pressione e requisiti di scollegamento. Un esempio di circuito combina poi tubo, schermatura dalla luce e protezione meccanica."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/hard-tube-fitting-assemblies.png",
+        "alt": "Assemblaggi reali di tubi con raccordi per tubi rigidi di colori diversi",
+        "width": 2901,
+        "height": 1585,
+        "caption": "Raccordi per tubi rigidi e tubi assemblati"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come realizzano la tenuta i tre tipi di collegamento?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I raccordi flangiati, con ogiva e con anello di compressione fissano e sigillano l’estremità del tubo in modi diversi. Definisci la preparazione dell’estremità e la posizione della superficie di tenuta prima di abbinare il raccordo e i suoi componenti."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-fittings.webp",
+            "alt": "Raccordi flangiati FOREACH HF HFL per tubi rigidi",
+            "width": 458,
+            "height": 375,
+            "caption": "Flangiati: serie HF / HFL",
+            "link": {
+              "href": "/en/products/fittings/hard-tube-fittings/?structure=flanged",
+              "label": "Vedi i raccordi flangiati"
+            }
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings.webp",
+            "alt": "Raccordi con ogiva FOREACH HN HNF per tubi rigidi",
+            "width": 455,
+            "height": 311,
+            "caption": "Con ogiva: serie HN / HNF",
+            "link": {
+              "href": "/en/products/fittings/hard-tube-fittings/?structure=ferrule",
+              "label": "Vedi i raccordi con ogiva"
+            }
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-fittings.webp",
+            "alt": "Componenti FOREACH HSF6 CL-1 con anello di compressione",
+            "width": 453,
+            "height": 313,
+            "caption": "Con anello di compressione: serie HSF6 / CL-1"
+          },
+          {
+            "type": "subheading",
+            "title": "Flangiati: una flangia all’estremità del tubo tocca la superficie di tenuta piana"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flanged-connection-structure-en.webp",
+            "alt": "Assemblaggio e quote di un raccordo compatto per fondo piatto, della rondella e della flangia del tubo",
+            "width": 1792,
+            "height": 878,
+            "caption": "Collegamento flangiato: assemblaggio del raccordo compatto per fondo piatto e quote illustrate"
+          },
+          {
+            "type": "paragraph",
+            "text": "Un tubo flangiabile, ad esempio in FEP o PTFE, viene prima formato all’estremità, poi assemblato con la rondella e il raccordo compatibili. In questa struttura la rondella si trova tra flangia e corpo del raccordo. Sostiene la flangia e trasmette la compressione. Il serraggio porta la flangia in appoggio sul fondo piatto della porta e realizza la tenuta."
+          },
+          {
+            "type": "subheading",
+            "title": "Con ogiva: il serraggio trattiene il tubo e realizza la tenuta sul fondo della porta"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-structure-en.webp",
+            "alt": "Assemblaggio e quote di un raccordo compatto con ogiva e della relativa ogiva",
+            "width": 1759,
+            "height": 894,
+            "caption": "Collegamento con ogiva: assemblaggio del raccordo compatto e quote illustrate"
+          },
+          {
+            "type": "paragraph",
+            "text": "Non serve flangiare l’estremità del tubo. Inserisci il raccordo e l’ogiva compatibile sul tubo tagliato perpendicolarmente e posizionali come specificato. Il serraggio comprime l’ogiva attorno alla parete del tubo e contro la superficie di tenuta della porta. Conferma misura, orientamento dell’ogiva e serie del raccordo compatibile prima del montaggio."
+          },
+          {
+            "type": "subheading",
+            "title": "Con anello di compressione: una boccola e un anello di tenuta formano l’estremità assemblata"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-connection-structure-en.webp",
+            "alt": "Assemblaggio di un raccordo con anello di compressione, boccola in acciaio inossidabile e anello di tenuta",
+            "width": 1719,
+            "height": 915,
+            "caption": "Collegamento con anello di compressione: raccordo, boccola in acciaio inossidabile e anello di tenuta"
+          },
+          {
+            "type": "paragraph",
+            "text": "Inserisci in sequenza raccordo, boccola e anello di tenuta. Allinea l’estremità del tubo a filo con la faccia dell’anello, poi comprimi secondo le istruzioni di montaggio. Il kit CL-1S abbina un anello di tenuta in PEEK a una boccola in acciaio inossidabile e al raccordo HSF6 corrispondente per la tenuta frontale. Durante il collegamento il raccordo può ruotare rispetto al tubo, riducendone la torsione durante il serraggio."
+          },
+          {
+            "type": "paragraph",
+            "text": "Segui le istruzioni di montaggio del modello specifico con anello di compressione. Le fasi di premontaggio e gli attrezzi speciali dipendono dal kit selezionato."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nota per la scelta: sia i raccordi con ogiva sia quelli con anello di compressione evitano la flangiatura dell’estremità del tubo, ma usano componenti e metodi di montaggio diversi. Controlla il raccordo compatibile e i componenti dell’ogiva o dell’anello. Filettature e diametri del tubo uguali non permettono una sostituzione diretta.",
+            "lead": "Nota per la scelta:"
+          }
+        ]
+      },
+      {
+        "title": "Quali sono i vantaggi e i limiti di riutilizzo delle diverse configurazioni?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Con un processo di flangiatura stabile, valuta prima i raccordi flangiati. Per il montaggio senza flangiatura, considera i raccordi con ogiva. Per tubi premontati e scollegabili durante la manutenzione, valuta i raccordi con anello di compressione. Verifica separatamente se si può ricollegare l’intero assemblaggio e se si possono rimontare gli elementi di tenuta rimossi.",
+            "lead": "Con un processo di flangiatura stabile, valuta prima i raccordi flangiati. Per il montaggio senza flangiatura, considera i raccordi con ogiva. Per tubi premontati e scollegabili durante la manutenzione, valuta i raccordi con anello di compressione."
+          },
+          {
+            "type": "subheading",
+            "title": "Flangiati: adatti ai tubi premontati, con qualità della flangia determinante"
+          },
+          {
+            "type": "paragraph",
+            "text": "La flangia formata definisce la posizione del collegamento e facilita prefabbricazione e montaggio ripetibili. I limiti riguardano il processo di formatura, la planarità della faccia terminale e la geometria del fondo della porta. Una flangia danneggiata, una compressione eccessiva o una porta conica incompatibile possono impedire il contatto di tenuta. Ispeziona flangia e rondella prima di ricollegare."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/flat-port-correct-zh.png",
+            "alt": "Sezione con la flangia del tubo in appoggio contro la superficie di tenuta piana della porta",
+            "width": 555,
+            "height": 145,
+            "caption": "Porta a fondo piatto: la flangia del tubo può appoggiare sul fondo e realizzare la tenuta"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/tapered-port-incorrect-zh.png",
+            "width": 555,
+            "height": 135,
+            "alt": "Sezione con la flangia del tubo che non riesce ad appoggiare contro una porta conica",
+            "caption": "Porta conica: la flangia non riesce a fare contatto affidabile con il fondo"
+          },
+          {
+            "type": "subheading",
+            "title": "Con ogiva: primo montaggio pratico, con limiti di installazione singola"
+          },
+          {
+            "type": "paragraph",
+            "text": "Un tubo tagliato perpendicolarmente si può montare senza flangiatura. Le ogive trattate qui sono destinate a un solo montaggio. Rimontarle può causare deformazioni plastiche irreversibili. Prepara nuove ogive compatibili per la manutenzione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Prima di ricollegare il tubo originale con la sua ogiva, procurati indicazioni scritte sul riutilizzo per quella combinazione esatta. Valuta separatamente il riuso del dado del raccordo in base alle sue condizioni e ai requisiti di montaggio."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-assembly-en.webp",
+            "alt": "Configurazione tipica di un raccordo con ogiva",
+            "width": 1736,
+            "height": 906,
+            "caption": "Ogiva: devono coincidere direzione di compressione e specifiche di accoppiamento"
+          },
+          {
+            "type": "subheading",
+            "title": "Con anello di compressione: i ricollegamenti ripetuti richiedono comunque l’ispezione dell’estremità"
+          },
+          {
+            "type": "paragraph",
+            "text": "Un’estremità completa assemblata con HSF6 e un kit di anello compatibile può essere scollegata e ricollegata secondo le istruzioni. È quindi una possibile scelta per circuiti fluidici prefabbricati progettati per la manutenzione. Ispezionala prima di ogni ricollegamento. Conferma il numero di cicli ammessi e la durata della combinazione esatta nelle condizioni operative. Per rimuovere una boccola usata e pressarla su un tubo nuovo, verifica separatamente che il kit consenta il rimontaggio."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-assembly-en.webp",
+            "alt": "Configurazione con boccola, anello di tenuta e raccordo con anello di compressione identificati",
+            "width": 1323,
+            "height": 1189,
+            "caption": "Posiziona e monta boccola e anello di tenuta come specificato"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Criterio di scelta",
+              "Flangiati",
+              "Con ogiva",
+              "Con anello di compressione"
+            ],
+            "rows": [
+              [
+                "Preparazione iniziale dell’estremità del tubo",
+                "Forma una flangia e usa una rondella compatibile",
+                "Estremità tagliata perpendicolarmente con ogiva compatibile",
+                "Estremità tagliata perpendicolarmente. Posiziona boccola e anello di tenuta"
+              ],
+              [
+                "Scollegamento e ricollegamento",
+                "Ricollega secondo le istruzioni con flangia e rondella integre",
+                "Sostituisci le ogive secondo i limiti di montaggio singolo",
+                "Ricollega l’assemblaggio completo secondo le istruzioni"
+              ],
+              [
+                "Controlli principali",
+                "Planarità della flangia e geometria del fondo della porta",
+                "Misura, orientamento e deformazione dell’ogiva",
+                "Posizione di pressatura, orientamento ed estremità del tubo a filo"
+              ],
+              [
+                "Esigenze da valutare per prime",
+                "Processo di flangiatura consolidato o premontaggio presso il fornitore",
+                "Assenza di flangiatura e sostituzione dell’ogiva durante la manutenzione",
+                "Tubi premontati e scollegamento per la manutenzione"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Componenti compatibili: HN / HN6 usano CL-0X. HNF / HNF6 usano CL-0. Verifica separatamente serie del raccordo e modello dell’ogiva al momento dell’ordine.",
+            "lead": "Componenti compatibili:"
+          }
+        ]
+      },
+      {
+        "title": "Come restringono la scelta pressione, vibrazioni e manutenzione?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Controlla prima l’interfaccia, poi fluidi, temperatura e pressione e infine i costi di montaggio e manutenzione. Ogni configurazione ha condizioni di impiego proprie. Valuta pressione ammessa e durata per lo specifico abbinamento di modello e collegamento.",
+            "lead": "Controlla prima l’interfaccia, poi fluidi, temperatura e pressione e infine i costi di montaggio e manutenzione."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Condizione nota",
+              "Passaggio successivo nella scelta"
+            ],
+            "rows": [
+              [
+                "Porta e diametro esterno del tubo definiti",
+                "Controlla filettature, fondo piatto o conico, posizione di tenuta e profondità di inserimento. Escludi le combinazioni geometricamente incompatibili."
+              ],
+              [
+                "Assenza di attrezzi di flangiatura o di un processo stabile",
+                "Valuta collegamenti senza flangiatura oppure tubi flangiati premontati dal fornitore."
+              ],
+              [
+                "Scollegamenti ripetuti in manutenzione",
+                "Valuta assemblaggi flangiati o con anello di compressione approvati per il ricollegamento e controlla le condizioni di riutilizzo. Includi le ogive di ricambio nei costi di manutenzione dei sistemi con ogiva."
+              ],
+              [
+                "Requisiti di pressione continua, temperatura o pulsazioni",
+                "Richiedi dati per la combinazione esatta di raccordo, tubo e porta. Mantieni come candidati da validare gli abbinamenti con dati insufficienti."
+              ],
+              [
+                "Il tubo si muove insieme al meccanismo",
+                "Valuta posa, margine di movimento, raggio di curvatura e scarico della trazione per evitare che i carichi dovuti al movimento si concentrino alla base del raccordo."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per una linea di aspirazione scollegata di rado, parti da tenuta all’aria, resistenza allo schiacciamento del tubo e accoppiamento dell’interfaccia. Per collegamenti sottoposti a manutenzione regolare, confronta le condizioni di ricollegamento dell’estremità completa e i costi di sostituzione delle tenute. In prossimità di meccanismi mobili, valuta separatamente spazio per il movimento, guida e scarico della trazione."
+          },
+          {
+            "type": "subheading",
+            "title": "Dopo la selezione preliminare, verifica i rischi effettivi di guasto"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Condizione operativa",
+              "Rischio principale",
+              "Prova di validazione"
+            ],
+            "rows": [
+              [
+                "Pressione mantenuta a lungo",
+                "Scorrimento viscoso del materiale e variazioni della forza di presa",
+                "Mantieni la pressione per la durata definita dal progetto usando il fluido previsto e la temperatura massima di esercizio. Controlla perdite, spostamenti e sfilamenti."
+              ],
+              [
+                "Avvio e arresto e pulsazioni di pressione",
+                "Allentamento o fatica dovuti a carichi ripetuti",
+                "Registra picchi di pressione e condizioni cicliche. Ispeziona le tenute prima e dopo i cicli."
+              ],
+              [
+                "Aspirazione in depressione",
+                "Piccole infiltrazioni d’aria, bolle e deformazione della parete del tubo",
+                "Controlla la tenuta all’aria del collegamento e la resistenza allo schiacciamento del tubo. Indaga l’origine delle eventuali bolle."
+              ],
+              [
+                "Vibrazioni e movimento dell’apparecchiatura",
+                "Trazione e usura concentrate all’estremità del tubo",
+                "Convalida supporti e scarico della trazione. Controlla allentamenti e perdite dopo le vibrazioni."
+              ],
+              [
+                "Scollegamento regolare",
+                "Danno alla flangia, all’anello di tenuta o all’ogiva",
+                "Definisci procedure di scollegamento, metodi di ispezione e criteri di sostituzione. Convalida poi il collegamento dopo la manutenzione."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Inserisci queste attività nel piano di validazione del sistema montato. Specifica temperatura di prova, pressioni continue e di picco, condizioni di vuoto, numero di cicli e perdita consentita. Valuta ciascun modello in base alle sue specifiche e ai risultati delle prove."
+          },
+          {
+            "type": "paragraph",
+            "text": "I circuiti fluidici ad alta pressione richiedono una selezione separata. La pressione massima di 34 MPa indicata nel manuale si applica a raccordi dedicati all’alta pressione e non alle normali configurazioni flangiate, con ogiva o con anello di compressione qui descritte. Usa i dati nominali del modello specifico per temperatura, tubo e condizioni di montaggio effettivi."
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere i tubi in FEP o PTFE e quando serve una schermatura dalla luce?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il diametro esterno del tubo determina la compatibilità con il raccordo. Diametro interno e lunghezza incidono sulla resistenza al flusso e sul volume interno. Il materiale determina l’idoneità di base rispetto al fluido e ai requisiti meccanici. Definisci composizione, concentrazione, temperatura massima e tempo di contatto dei fluidi di esercizio e di pulizia prima di scegliere tubo e materiali di tenuta bagnati.",
+            "lead": "Il diametro esterno del tubo determina la compatibilità con il raccordo. Diametro interno e lunghezza incidono sulla resistenza al flusso e sul volume interno. Il materiale determina l’idoneità di base rispetto al fluido e ai requisiti meccanici."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ad esempio, un tubo con diametro esterno di 2.5 mm e interno di 1.5 mm richiede un collegamento compatibile con il diametro esterno di 2.5 mm. Scegli il foro della rondella per la serie del raccordo e la specifica di accoppiamento. Il foro non deve necessariamente coincidere con il diametro esterno del tubo. Il volume residuo aggiuntivo nel collegamento dipende anche da posizione dell’estremità del tubo, profondità d’inserimento e allineamento del passaggio."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Tubo",
+              "Caratteristiche principali",
+              "Osservazione e schermatura dalla luce",
+              "Priorità di scelta"
+            ],
+            "rows": [
+              [
+                "FEP",
+                "Il tubo di colore naturale è relativamente trasparente e permette di osservare il circuito",
+                "Consente di osservare fluido e bolle. Valuta una schermatura aggiuntiva per i fluidi fotosensibili",
+                "Controlla fluido, parete, pressione e condizioni di curvatura. La resistenza all’invecchiamento da UV non significa che la radiazione UV venga bloccata."
+              ],
+              [
+                "PTFE",
+                "Elevata inerzia chimica, basso coefficiente di attrito ed estremità flangiabili",
+                "Sono disponibili versioni naturali, nere e specifiche tipologie trasparenti",
+                "Conferma colore e trasparenza in base al modello. Convalida la schermatura del tubo nero per le lunghezze d’onda e lo spessore della parete."
+              ]
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ptfe-tubing-photo.png",
+            "alt": "Campioni di tubo in PTFE naturale e nero",
+            "width": 1962,
+            "height": 1270,
+            "caption": "PTFE: tubi naturali e neri"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/fep-tubing-photo.png",
+            "alt": "Campioni di tubo trasparente in FEP",
+            "width": 2544,
+            "height": 1540,
+            "caption": "FEP: tubo trasparente"
+          },
+          {
+            "type": "paragraph",
+            "text": "I tubi in FEP e PTFE hanno una certa flessibilità. Rispetta il raggio minimo di curvatura previsto dalla specifica. Nelle sezioni in movimento continuo valuta piegatura, usura e fatica. La possibilità di curvare il tubo in condizioni statiche non ne dimostra l’idoneità a flessioni ripetute.",
+            "lead": "I tubi in FEP e PTFE hanno una certa flessibilità. Rispetta il raggio minimo di curvatura previsto dalla specifica."
+          },
+          {
+            "type": "subheading",
+            "title": "Quali specifiche del tubo sono candidate per un diametro esterno di 2.5 mm?"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Modello del tubo",
+              "Materiale / colore",
+              "Diametro esterno / interno",
+              "Aspetti di scelta"
+            ],
+            "rows": [
+              [
+                "BFT03008",
+                "FEP / naturale",
+                "2.5 / 1.5 mm",
+                "Misura candidata per osservare le bolle. Progetta separatamente la schermatura dalla luce."
+              ],
+              [
+                "TH2-PTFE-B-15-25",
+                "PTFE / nero",
+                "2.5 / 1.5 mm",
+                "Opzione per un tubo nero. Misura la schermatura alle lunghezze d’onda a cui il fluido è sensibile."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Entrambi i modelli elencati sono candidati con diametro esterno di 2.5 mm e interno di 1.5 mm. La scelta dipende anche da fluido, pressione ed esigenze di schermatura. Il modello trasparente in PTFE TH2-PTFE-T-20-32 è un’altra opzione, con quote e condizioni da verificare separatamente."
+          },
+          {
+            "type": "subheading",
+            "title": "Che cosa fare se servono sia schermatura dalla luce sia osservazione delle bolle?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Valuta un tubo trasparente con guaina interamente schermante oppure un breve tratto di osservazione in posizione controllata, coperto durante il normale funzionamento. Includi nella valutazione le zone esposte vicino ai raccordi, l’apertura della copertura in manutenzione e l’illuminazione effettiva. Decidi in base alle lunghezze d’onda a cui il fluido è sensibile, alla trasmissione, al tempo di esposizione e ai risultati di stabilità del fluido."
+          }
+        ]
+      },
+      {
+        "title": "Come proteggere il tubo da usura, curvatura e movimento?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Regola prima posa e supporti, poi proteggi i punti sottoposti a carico. Isola le superfici di sfregamento, guida le curve strette vicino alla base dei raccordi e consenti il movimento con dispositivi di scarico della trazione. Valuta la protezione meccanica separatamente dalla pressione ammessa dal raccordo.",
+            "lead": "Regola prima posa e supporti, poi proteggi i punti sottoposti a carico."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Punto a rischio",
+              "Misura suggerita",
+              "Controllo di validazione"
+            ],
+            "rows": [
+              [
+                "Il tubo tocca spigoli metallici o staffe",
+                "Modifica la posa e aggiungi guide lisce o guaine resistenti all’abrasione",
+                "Contatto con gli spigoli, spostamento della guaina e schiacciamento nei punti di supporto."
+              ],
+              [
+                "Curva stretta alla base del raccordo",
+                "Usa una guida a curvatura progressiva. Valuta una boccola di limitazione o una molla antischiacciamento adatta alla struttura",
+                "Raggio minimo di curvatura, pieghe locali e nuove concentrazioni di sollecitazione all’estremità della protezione."
+              ],
+              [
+                "Spostamento ciclico di parti mobili",
+                "Prevedi corsa, guida e scarico della trazione. Dove adatto, valuta un tubo spiralato retrattile",
+                "Corsa, forza di trazione, estensione massima e durata nei cicli di movimento."
+              ],
+              [
+                "Le vibrazioni mettono in trazione i raccordi",
+                "Posiziona correttamente le clip di fissaggio ed evita vincoli rigidi troppo ravvicinati",
+                "Usura nei punti di supporto, movimento dell’estremità del tubo, perdite e allentamenti dopo le vibrazioni."
+              ],
+              [
+                "Il fluido richiede schermatura dalla luce",
+                "Scegli un tubo schermante o una guaina e copri le zone esposte vicino ai collegamenti",
+                "Trasmissione alle lunghezze d’onda sensibili e integrità della schermatura dopo la manutenzione."
+              ]
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/prefabricated-tube-assembly-en.webp",
+            "alt": "Flangia del tubo, rondella, raccordo, boccola di limitazione ed etichetta del tubo identificati",
+            "width": 2172,
+            "height": 724,
+            "caption": "Tubo premontato: flangia, rondella, raccordo, boccola di limitazione e identificazione"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per i tubi premontati FOREACH si può usare come riferimento la configurazione illustrata con O-ring, boccola di limitazione e identificazione del tubo. Progetta guaine antiabrasione, molle antischiacciamento o tubi spiralati retrattili in funzione di spazio, corsa e carichi. Conferma separatamente forma e ambito della fornitura."
+          },
+          {
+            "type": "paragraph",
+            "text": "Guaine antiabrasione, protezioni antischiacciamento e margine di movimento riducono rispettivamente i rischi di sfregamento, curvatura stretta e trazione. Non aumentano la pressione di esercizio interna ammessa."
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere raccordi e tubi assemblati per un circuito fluidico completo?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Condizioni dell’esempio: diametro esterno del tubo di 2.5 mm, filettatura della porta M6×1, scollegamento per manutenzione e un tratto vicino a un meccanismo mobile. I fluidi fotosensibili richiedono anche schermatura. La selezione seguente individua le parti di collegamento e i tubi candidati, poi le condizioni operative da confermare prima della scelta finale.",
+            "lead": "Condizioni dell’esempio:"
+          },
+          {
+            "type": "subheading",
+            "title": "Controlla prima la porta, le condizioni operative e il metodo di manutenzione"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Conferma la porta. M6×1 specifica soltanto la filettatura. Controlla anche superficie di tenuta piana, profondità del foro, posizione dell’estremità del tubo e spazio di montaggio.",
+              "Conferma i fluidi e il circuito. Fornisci composizione dei fluidi di esercizio e pulizia, temperatura, portata obiettivo, lunghezza del tubo e perdita di carico ammessa per valutare l’idoneità del diametro interno di 1.5 mm.",
+              "Conferma la manutenzione. Per conservare un’estremità del tubo completa in manutenzione, confronta i tipi flangiato e con anello di compressione. Per il tipo con ogiva, prevedi una nuova ogiva nella procedura di manutenzione."
+            ]
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Soluzione candidata",
+              "Modello e quote di accoppiamento",
+              "Condizioni e verifiche ancora necessarie"
+            ],
+            "rows": [
+              [
+                "Opzione 1: tubo flangiato premontato",
+                "HFL-M6-25-PV-B: M6×1, diametro esterno di 2.5 mm, PVDF nero. Per la misura della serie di rondelle WS per tubi M6 / 2.5 mm, vedi WS-46-26.",
+                "Serve un processo di flangiatura qualificato. Seleziona il materiale della rondella per l’assemblaggio, verifica la porta e la pressione ammessa dell’intero assemblaggio."
+              ],
+              [
+                "Opzione 2: tubo premontato con anello di compressione",
+                "HSF6-M6-32-PS-B + CL-1S-25: raccordo M6×1 con kit ad anello di compressione da 2.5 mm, anello di tenuta in PEEK e boccola in acciaio inossidabile.",
+                "Questa specifica del raccordo HSF6 accetta tubi da 2.0 / 2.5 / 3.0 / 3.2 mm. L’esempio usa il kit da 2.5 mm. Posiziona e comprimi secondo le istruzioni."
+              ]
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Scegli poi tubo, schermatura e protezione del tratto mobile"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per osservare le bolle, valuta il tubo in FEP naturale BFT03008 con la schermatura richiesta dal fluido. Per un tubo nero, valuta TH2-PTFE-B-15-25 e convalida la schermatura effettiva. Entrambi i candidati hanno diametro esterno di 2.5 mm e interno di 1.5 mm. Conferma separatamente compatibilità del fluido e pressione di esercizio. Vicino a meccanismi mobili aggiungi supporti, margine di movimento e guide."
+          },
+          {
+            "type": "subheading",
+            "title": "Completa la selezione e la validazione finale"
+          },
+          {
+            "type": "paragraph",
+            "text": "Registra modelli dei raccordi, componenti compatibili, tubi e protezioni. Definisci pressioni continue e di picco, vuoto, temperatura, compatibilità con il fluido, perdita di carico ammessa e frequenza di scollegamento prima del riesame dei disegni e della valutazione dei campioni. Conferma pressione di esercizio e durata dell’intera combinazione nelle condizioni effettive."
+          },
+          {
+            "type": "paragraph",
+            "text": "Prima della scelta finale, includi nel piano di accettazione tenuta, tenuta all’aria in vuoto, ricollegamento, usura da movimento e schermatura. Registra condizioni e risultati, poi definisci la distinta base, il processo di montaggio e le regole di sostituzione in manutenzione."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/products/fittings/",
+                "label": "Vedi serie e specifiche dei raccordi per tubi rigidi",
+                "prefix": ""
+              },
+              {
+                "href": "/en/products/fittings/hard-tube-fittings/hfl-m6-25-pv-b/",
+                "label": "Vedi HFL-M6-25-PV-B",
+                "prefix": "",
+                "suffix": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "Una perdita si può risolvere serrando di più o aggiungendo adesivo per filetti?",
+        "answer": "Arresta il sistema, depressurizzalo e localizza la perdita. Ispeziona la porta, l’estremità del tubo e le tenute compatibili. In tutti e tre i collegamenti la tenuta si realizza attraverso l’estremità del tubo o i componenti di accoppiamento. I filetti forniscono soprattutto la compressione. Una forza maggiore può danneggiare flange, ogive o anelli. Sostituisci i filetti, le superfici di tenuta o le estremità dei tubi danneggiati secondo le indicazioni del modello e ripeti la prova. Non aggiungere adesivo, nastro per filetti o rondelle di sicurezza se le istruzioni di montaggio non lo consentono. Possono modificare profondità di montaggio, compatibilità o pulizia."
+      },
+      {
+        "question": "Perché un collegamento supera la prova statica ma perde quando la pompa o il tubo si muovono?",
+        "answer": "Una prova statica copre solo pressione, temperatura e carico di quel momento. Registra avvii, arresti e pulsazioni di pressione. Controlla trazione, torsione o curve strette alla base del raccordo. Rivedi posa, supporti e margine di corsa, poi riproduci il problema con fluido, temperatura e movimento effettivi. Confronta perdite, spostamento dell’estremità e portata prima e dopo la correzione. Il superamento di una prova statica di pressione non convalida il sistema montato."
+      },
+      {
+        "question": "Devo passare a un raccordo flangiato se la portata cala dopo aver montato un raccordo con ogiva?",
+        "answer": "La sola riduzione di portata non dimostra che il tipo con ogiva sia inadeguato. Controlla diametro interno del tubo e passaggio del raccordo, bave al taglio, posizione di inserimento, curve strette e compressione eccessiva dell’estremità. Confronta portata e perdita di carico con gli stessi fluido, temperatura, lunghezza del tubo e condizioni della pompa prima di cambiare montaggio, misura o tipo di collegamento. Lo stesso diametro esterno del tubo non implica lo stesso passaggio interno o la stessa resistenza al flusso."
+      },
+      {
+        "question": "Perché un collegamento provato con acqua perde con il fluido di esercizio o di pulizia?",
+        "answer": "La prova con acqua non sostituisce la validazione della compatibilità con i fluidi effettivi. Elenca fluidi di esercizio, detergenti ed eventuali miscele residue. Verifica tubo, raccordi e tenute in funzione di composizione, concentrazione, temperatura e tempo di contatto. Indaga rigonfiamenti, indurimento, crepe o variazioni dimensionali, sostituisci le parti incompatibili e convalida di nuovo tenuta e portata. Indicazioni generiche di resistenza ad acidi, basi o solventi non bastano."
+      },
+      {
+        "question": "Dopo la manutenzione si possono riutilizzare ogiva, kit con anello e raccordo originali?",
+        "answer": "Distingui il ricollegamento di un’estremità interamente assemblata dalla pressatura sul tubo di componenti già rimossi. Prepara nuove ogive in base al requisito di montaggio singolo. Per mantenere il tubo e l’ogiva originali al ricollegamento servono istruzioni scritte per quella combinazione. Un assemblaggio con anello di compressione ricollegabile non implica che boccola e anello possano passare a un nuovo tubo. Ispeziona separatamente filettatura, aspetto e condizioni di montaggio del raccordo e ripeti la prova dopo la manutenzione."
+      },
+      {
+        "question": "Il tubo nero risolve sia l’esposizione alla luce sia l’invecchiamento del tubo?",
+        "answer": "Il colore da solo non basta. Convalida la schermatura in base alle lunghezze d’onda sensibili per il fluido, allo spessore della parete e alla trasmissione. Indaga separatamente fessurazioni e durata in funzione di fluido, temperatura, pulsazioni di pressione e flessioni ripetute. Un tubo nero o una guaina schermante non sostituisce le prove di compatibilità e durata in movimento. Se le bolle devono restare visibili, valuta un breve tratto di osservazione controllato o una schermatura rimovibile. Verifica che la schermatura resti integra durante il funzionamento e dopo la manutenzione."
+      }
+    ],
+    "cta": {
+      "title": "Devi confermare la compatibilità di raccordi e tubi assemblati?",
+      "description": "Fornisci disegni delle interfacce, diametri esterno e interno del tubo, fluidi, temperatura, intervallo di pressione e requisiti di manutenzione per verificare le combinazioni candidate.",
+      "contactLabel": "Contattaci",
+      "productsLabel": "Vedi raccordi e tubi",
+      "productsHref": "/en/products/fittings/"
+    }
+  },
+  "sourceModule": "hard-tube-fittings-selection.zh.ts",
+  "navigation": [
+    {
+      "id": "structures",
+      "label": "Sistemi di tenuta"
+    },
+    {
+      "id": "tradeoffs",
+      "label": "Vantaggi e riutilizzo"
+    },
+    {
+      "id": "conditions",
+      "label": "Condizioni operative"
+    },
+    {
+      "id": "tubing",
+      "label": "Tubi e schermatura dalla luce"
+    },
+    {
+      "id": "protection",
+      "label": "Protezione meccanica"
+    },
+    {
+      "id": "selection-example",
+      "label": "Esempio di selezione"
+    }
+  ]
+}

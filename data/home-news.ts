@@ -1,4 +1,10 @@
+
 import type { LocaleCode } from "@/lib/i18n";
+import { getHindiDraftLink, getItalianDraftLink } from "@/lib/i18n/draft-languages";
+import hindiNewsCopy from "./home-news.hi.json";
+import italianNewsCopy from "./home-news.it.json";
+const newsHi: Record<string, string> = hindiNewsCopy;
+const newsIt: Record<string, string> = italianNewsCopy;
 
 /* ================================
    首页资讯中心数据
@@ -8,7 +14,7 @@ import type { LocaleCode } from "@/lib/i18n";
    3. 首页链接必须指向 /resources/news/[slug]
 ================================ */
 
-export type HomeNewsText = Partial<Record<LocaleCode, string>>;
+export type HomeNewsText = Partial<Record<LocaleCode | "de", string>>;
 export type HomeNewsHref = Partial<Record<LocaleCode, string>>;
 
 export type HomeNewsTab = {
@@ -36,6 +42,7 @@ export const homeNewsData = {
   title: {
     "zh-CN": "资讯中心",
     en: "News Center",
+    de: "Aktuelles",
     es: "Centro de noticias",
     fr: "Centre d’actualités",
     ko: "뉴스 센터",
@@ -45,6 +52,7 @@ export const homeNewsData = {
   tabsAriaLabel: {
     "zh-CN": "资讯分类切换",
     en: "News category switching",
+    de: "Nachrichtenkategorie wechseln",
     es: "Cambio de categoría de noticias",
     fr: "Changement de catégorie d’actualités",
     ko: "뉴스 카테고리 전환",
@@ -54,6 +62,7 @@ export const homeNewsData = {
   newsListAriaLabel: {
     "zh-CN": "新闻列表",
     en: "News list",
+    de: "Nachrichtenliste",
     es: "Lista de noticias",
     fr: "Liste des actualités",
     ko: "뉴스 목록",
@@ -63,6 +72,7 @@ export const homeNewsData = {
   moreNewsLabel: {
     "zh-CN": "更多新闻",
     en: "More News",
+    de: "Weitere Meldungen",
     es: "Más noticias",
     fr: "Plus d’actualités",
     ko: "더 많은 뉴스",
@@ -72,6 +82,7 @@ export const homeNewsData = {
   viewDetailLabel: {
     "zh-CN": "查看详情",
     en: "View Details",
+    de: "Details ansehen",
     es: "Ver detalles",
     fr: "Voir les détails",
     ko: "자세히 보기",
@@ -81,6 +92,7 @@ export const homeNewsData = {
   viewAnnouncementAriaLabel: {
     "zh-CN": "查看公告详情",
     en: "View announcement details",
+    de: "Details zur Meldung ansehen",
     es: "Ver detalles del anuncio",
     fr: "Voir les détails de l’annonce",
     ko: "공지 상세 보기",
@@ -90,6 +102,7 @@ export const homeNewsData = {
   viewNewsAriaLabel: {
     "zh-CN": "查看详情",
     en: "View details",
+    de: "Details ansehen",
     es: "Ver detalles",
     fr: "Voir les détails",
     ko: "자세히 보기",
@@ -111,6 +124,7 @@ export const homeNewsData = {
       label: {
         "zh-CN": "展会活动",
         en: "Exhibitions",
+        de: "Messen",
         es: "Exposiciones",
         fr: "Salons",
         ko: "전시회",
@@ -122,6 +136,7 @@ export const homeNewsData = {
       label: {
         "zh-CN": "公司动态",
         en: "Company Updates",
+        de: "Unternehmensmeldungen",
         es: "Noticias de la empresa",
         fr: "Actualités de l’entreprise",
         ko: "회사 소식",
@@ -133,6 +148,7 @@ export const homeNewsData = {
       label: {
         "zh-CN": "公告通知",
         en: "Announcements",
+        de: "Mitteilungen",
         es: "Anuncios",
         fr: "Annonces",
         ko: "공지사항",
@@ -149,6 +165,7 @@ export const homeNewsData = {
         "展会活动",
       en:
         "Exhibitions",
+      de: "Messen",
       es:
         "Exposiciones",
       fr:
@@ -165,6 +182,7 @@ export const homeNewsData = {
         "MEDICA 2026｜恒永达诚邀您莅临 1H39-\u20601 展位",
       en:
         "Meet Foreach at MEDICA 2026 | Booth\u00a01H39-\u20601",
+      de: "FOREACH auf der MEDICA 2026, Stand 1H39-⁠1",
       es:
         "Visite a Foreach en MEDICA 2026 | Stand\u00a01H39-\u20601",
       fr:
@@ -179,6 +197,7 @@ export const homeNewsData = {
         "恒永达将于 2026 年 11 月 16 日至 19 日参加德国杜塞尔多夫 MEDICA 2026，展位号 1H39-\u20601，欢迎新老客户及合作伙伴莅临交流。",
       en:
         "Foreach will exhibit at MEDICA 2026 in Düsseldorf, Germany, from November 16 to 19, 2026. Visit Booth\u00a01H39-\u20601 to discuss second-source options for pumps, valves, and fluidic components.",
+      de: "FOREACH ist vom 16. bis 19. November 2026 auf der MEDICA in Düsseldorf vertreten. An Stand 1H39-⁠1 erfahren Sie mehr über FOREACH als möglichen Zweitlieferanten für Pumpen, Ventile und Fluidikkomponenten.",
       es:
         "Foreach participará en MEDICA 2026 en Düsseldorf (Alemania) del 16 al 19 de noviembre de 2026. Visite el stand 1H39-\u20601 para hablar de opciones de segundo proveedor para bombas, válvulas y componentes fluídicos.",
       fr:
@@ -204,6 +223,7 @@ export const homeNewsData = {
     categoryLabel: {
       "zh-CN": "公司动态",
       en: "Company Updates",
+      de: "Unternehmensmeldungen",
       es: "Noticias de la empresa",
       fr: "Actualités de l’entreprise",
       ko: "회사 소식",
@@ -214,6 +234,7 @@ export const homeNewsData = {
     title: {
       "zh-CN": "创新再突破，恒永达科技荣膺“瞪羚企业”",
       en: "Foreach Recognized as a Gazelle Enterprise",
+      de: "FOREACH als Gazellenunternehmen ausgezeichnet",
       es: "Foreach reconocida como empresa gacela",
       fr: "Foreach reconnue comme entreprise Gazelle",
       ko: "Foreach, 가젤 기업으로 선정",
@@ -224,6 +245,7 @@ export const homeNewsData = {
         "恒永达凭借技术创新实力、成长速度和市场表现，获评深圳市瞪羚企业，企业资质与成长能力再次获得认可。",
       en:
         "Foreach was recognized as a Gazelle Enterprise, reflecting its innovation capability, growth momentum, and market performance.",
+      de: "Die Auszeichnung als Gazellenunternehmen würdigt die Innovationskraft, die Wachstumsdynamik und den Markterfolg von FOREACH.",
       es:
         "Foreach fue reconocida como empresa gacela por su capacidad de innovación, crecimiento y desempeño de mercado.",
       fr:
@@ -252,6 +274,7 @@ export const homeNewsData = {
           "展会活动",
         en:
           "Exhibitions",
+        de: "Messen",
         es:
           "Exposiciones",
         fr:
@@ -268,6 +291,7 @@ export const homeNewsData = {
           "ADLM 2026现场直击｜恒永达亮相4105号展位",
         en:
           "Live from ADLM 2026 | Meet Foreach at Booth 4105",
+        de: "Live von der ADLM 2026: FOREACH an Stand 4105",
         es:
           "En directo desde ADLM 2026 | Visite a Foreach en el stand 4105",
         fr:
@@ -282,6 +306,7 @@ export const homeNewsData = {
           "ADLM 2026 在美国阿纳海姆举行，恒永达团队在 4105 号展位与全球行业伙伴现场交流。",
         en:
           "ADLM 2026 is underway in Anaheim, California, and the Foreach team is ready at Booth 4105.",
+        de: "Die ADLM 2026 findet in Anaheim, Kalifornien, statt. Das FOREACH-Team freut sich an Stand 4105 auf Ihren Besuch.",
         es:
           "ADLM 2026 se celebra en Anaheim, California, y el equipo de Foreach le espera en el stand 4105.",
         fr:
@@ -306,6 +331,7 @@ export const homeNewsData = {
       categoryLabel: {
         "zh-CN": "展会活动",
         en: "Exhibitions",
+        de: "Messen",
         es: "Exposiciones",
         fr: "Salons",
         ko: "전시회",
@@ -316,6 +342,7 @@ export const homeNewsData = {
       title: {
         "zh-CN": "邀请函｜恒永达诚邀您参加 2026 CACLP",
         en: "Invitation: Meet Foreach at CACLP 2026",
+        de: "Einladung zur CACLP 2026",
         es: "Invitación: visite Foreach en CACLP 2026",
         fr: "Invitation : retrouvez Foreach au CACLP 2026",
         ko: "초청장: CACLP 2026에서 Foreach를 만나보세요",
@@ -326,6 +353,7 @@ export const homeNewsData = {
           "恒永达将于 2026 年 3 月 21 日至 23 日参加 CACLP，展位号 2-0424，欢迎新老客户莅临交流。",
         en:
           "Foreach will exhibit at CACLP 2026 from March 21 to 23 at Booth 2-0424.",
+        de: "FOREACH ist vom 21. bis 23. März auf der CACLP 2026 an Stand 2-0424 vertreten.",
         es:
           "Foreach participará en CACLP 2026 del 21 al 23 de marzo en el stand 2-0424.",
         fr:
@@ -350,6 +378,7 @@ export const homeNewsData = {
       categoryLabel: {
         "zh-CN": "展会活动",
         en: "Exhibitions",
+        de: "Messen",
         es: "Exposiciones",
         fr: "Salons",
         ko: "전시회",
@@ -360,6 +389,7 @@ export const homeNewsData = {
       title: {
         "zh-CN": "2026 ME 供应链生态展｜恒永达诚邀您的莅临指导",
         en: "Foreach to Exhibit at 2026 ME Supply Chain Expo",
+        de: "FOREACH auf der ME Supply Chain Expo 2026",
         es: "Foreach participará en 2026 ME Supply Chain Expo",
         fr: "Foreach participera au 2026 ME Supply Chain Expo",
         ko: "Foreach, 2026 ME 공급망 생태 전시회 참가",
@@ -370,6 +400,7 @@ export const homeNewsData = {
           "恒永达将参加 2026 ME 供应链生态展，展位号 2-M46，展示核心产品、技术能力及多场景应用方案。",
         en:
           "Foreach will exhibit at the 2026 ME Supply Chain Expo at Booth 2-M46.",
+        de: "FOREACH stellt auf der ME Supply Chain Expo 2026 an Stand 2-M46 aus.",
         es:
           "Foreach participará en 2026 ME Supply Chain Expo en el stand 2-M46.",
         fr:
@@ -394,6 +425,7 @@ export const homeNewsData = {
       categoryLabel: {
         "zh-CN": "展会活动",
         en: "Exhibitions",
+        de: "Messen",
         es: "Exposiciones",
         fr: "Salons",
         ko: "전시회",
@@ -404,6 +436,7 @@ export const homeNewsData = {
       title: {
         "zh-CN": "2026 广州高医展｜恒永达科技诚邀您莅临展位参观交流",
         en: "Foreach Invitation to Guangzhou High Medical Expo 2026",
+        de: "Einladung zur Guangzhou High Medical Expo 2026",
         es: "Invitación de Foreach a Guangzhou High Medical Expo 2026",
         fr: "Invitation de Foreach au Guangzhou High Medical Expo 2026",
         ko: "Foreach, 2026 광저우 고의료 전시회 초청",
@@ -414,6 +447,7 @@ export const homeNewsData = {
           "恒永达将于 2026 年 3 月 30 日至 4 月 1 日参加广州高医展，展位号 B529。",
         en:
           "Foreach will exhibit at Guangzhou High Medical Expo 2026 from March 30 to April 1 at Booth B529.",
+        de: "FOREACH ist vom 30. März bis 1. April 2026 auf der Guangzhou High Medical Expo an Stand B529 vertreten.",
         es:
           "Foreach participará en Guangzhou High Medical Expo 2026 del 30 de marzo al 1 de abril en el stand B529.",
         fr:
@@ -435,10 +469,22 @@ export const homeNewsData = {
   ] satisfies HomeNewsItem[],
 };
 
-export function getHomeNewsText(text: HomeNewsText, locale: LocaleCode) {
+export function getHomeNewsText(text: HomeNewsText, locale: LocaleCode | "de" | "it" | "hi") {
+  if (locale === "hi") return newsHi[text.en || ""] ?? text.en ?? "";
+  if (locale === "it") return newsIt[text.en || ""] ?? "";
+  if (locale === "de") return text.de ?? text.en ?? "";
   return text[locale] || text["zh-CN"] || text.en || "";
 }
 
-export function getHomeNewsHref(href: HomeNewsHref, locale: LocaleCode) {
+export function getHomeNewsHref(href: HomeNewsHref, locale: LocaleCode | "de" | "it" | "hi") {
+  if (locale === "hi") return getHindiDraftLink(href.en ?? "/en/resources/news/").href;
+  if (locale === "it") return getItalianDraftLink(href.en ?? "/en/resources/news/").href;
+  if (locale === "de") return href.en?.replace(/^\/en\//, "/de/") ?? "/de/resources/news/";
   return href[locale] || href["zh-CN"] || href.en || "/resources/news";
+}
+
+export function getHomeNewsDate(date: string, locale: LocaleCode | "de" | "it" | "hi") {
+  if (locale === "hi" || locale === "it") return date.replace(/^(\d{4})[/.-](\d{2})[/.-](\d{2})$/, "$3/$2/$1");
+  if (locale !== "de") return date;
+  return date.replace(/^(\d{4})[/.-](\d{2})[/.-](\d{2})$/, "$3.$2.$1");
 }

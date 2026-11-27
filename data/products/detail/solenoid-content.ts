@@ -1,5 +1,12 @@
 import zh from "./solenoid-locales/zh.json";
 import en from "./solenoid-locales/en.json";
+import de from "./solenoid-locales/de.json";
+import it from "./solenoid-locales/it.json";
+import hi from "./solenoid-locales/hi.json";
+import hindiGallery from "./solenoid-locales/gallery.hi.json";
+import italianGallery from "./solenoid-locales/gallery.it.json";
+import germanGallery from "./solenoid-locales/gallery.de.json";
+import { germanEnglishFallbackSuffix, getGermanDraftLink } from "@/lib/i18n/draft-languages";
 import es from "./solenoid-locales/es.json";
 import fr from "./solenoid-locales/fr.json";
 import ko from "./solenoid-locales/ko.json";
@@ -10,14 +17,14 @@ import { getSolenoidConfigurationImage, getSolenoidConfigurationGallery } from "
 import { getSolenoidApplicationAreas } from "./applications/solenoid-application-areas";
 
 export const solenoidLocales = ["zh", "en", "es", "fr", "ko", "ru"] as const;
-type Locale = typeof solenoidLocales[number];
+type Locale = typeof solenoidLocales[number] | "de" | "it" | "hi";
 type SolenoidMessages = typeof en & {
   seriesFunction?: string;
   seriesMaterials?: string;
   configurationIntroductions?: Record<string, string[]>;
 };
-const messages: Record<Locale, SolenoidMessages> = { zh, en, es, fr, ko, ru };
-export const isSolenoidLocale = (value: string): value is Locale => solenoidLocales.includes(value as Locale);
+const messages: Record<Locale, SolenoidMessages> = { zh, en, de, it, es, fr, ko, ru, hi };
+export const isSolenoidLocale = (value: string): value is Locale => value === "de" || value === "it" || value === "hi" || solenoidLocales.some(locale => locale === value);
 export const solenoidBasePath = "/products/valves/solenoid-valves/";
 export const solenoidImage = "/images/products/valves/solenoid-valves/foreach-solenoid-valve-main.webp";
 import {solenoidConfigurations, solenoidConfigurationName, getSolenoidConfiguration} from "./solenoid-configurations";
@@ -36,13 +43,18 @@ export function getSolenoidContent(slug: string, locale: string) {
   const c = getSolenoidConfiguration(slug);
   const connection = solenoidConnectionConfigurations.find(item => item.key === c?.connection);
   if (!c && !connection && slug !== "solenoid-valves") return null;
-  const configurationImage = c ? getSolenoidConfigurationImage(c.slug, locale) : undefined;
+  const translatedGallery = locale === "de" || locale === "it" || locale === "hi";
+  const assetLocale = translatedGallery ? "en" : locale;
+  const configurationImage = c ? getSolenoidConfigurationImage(c.slug, assetLocale) : undefined;
   const t = messages[locale];
   const introParagraphs = [
     t.seriesDescription, t.seriesFunction, t.seriesIntegration, t.seriesMaterials, t.seriesCompare,
   ].filter((paragraph): paragraph is string => Boolean(paragraph));
   const m = connection ? t.models[connection.key] : undefined;
   const cardCopy = getSolenoidCardCopy(slug, locale);
+  const gallery = c ? getSolenoidConfigurationGallery(c.slug, assetLocale) : {additionalImages: [], additionalImageAlts: []};
+  const galleryAlt: Readonly<Record<string, string>> = locale === "hi" ? hindiGallery : locale === "it" ? italianGallery : germanGallery;
+  const imageAlt = translatedGallery && c && cardCopy ? "FOREACH " + c.model + " " + cardCopy.name : configurationImage?.alt;
   const stateCopy = c?.state ? getSolenoidStateCopy(locale, c.state) : undefined;
   const familyFlow = c ? t.flowTypes[c.key] : undefined;
   const f = familyFlow && stateCopy ? {
@@ -65,8 +77,12 @@ export function getSolenoidContent(slug: string, locale: string) {
     joinSentences([m.installation, t.detailMaterials[connection.key]]),
   ] : introParagraphs);
   const description = paragraphs.join("\n\n");
+  const germanHeading = slug === "2-way-base" ? "SV10-P-2 Membranmagnetventil mit 2 Wegen für Blockmontage"
+    : slug === "2-way-no-base" ? "SV10-P-2NO Stromlos offenes Membranmagnetventil mit 2 Wegen für Blockmontage"
+    : slug === "2-way-no-barbed" ? "SV10-B16-2NO Stromlos offenes Membranmagnetventil mit 2 Wegen und Schlauchtüllen" : undefined;
   const detailHref = `${prefix}${solenoidBasePath}${c || connection ? `${slug}/` : ""}`;
-  const selectionHref = `${prefix}/products/valves/solenoid-valves/`;
+  const selectionLink = locale === "de" ? getGermanDraftLink("/en" + solenoidBasePath) : {href: prefix + solenoidBasePath};
+  const selectionHref = selectionLink.href;
   const values = [
     shortModel, t.structure, f?.functionValue || t.functions,
     m?.connection || solenoidConnectionConfigurations.map(item => t.models[item.key].connection).join("; "),
@@ -95,16 +111,17 @@ export function getSolenoidContent(slug: string, locale: string) {
     datasheetId: "sv10-series-en",
     ...(configurationImage ? {
       mainImage: configurationImage.src, image: configurationImage.src, imageCard: configurationImage.cardSrc,
-      imageAlt: configurationImage.alt, mainImageAlt: configurationImage.alt,
+      imageAlt, mainImageAlt: imageAlt,
     } : {}),
-    ...(c ? getSolenoidConfigurationGallery(c.slug, locale) : {additionalImages: [], additionalImageAlts: []}),
+    additionalImages: gallery.additionalImages,
+    additionalImageAlts: translatedGallery ? gallery.additionalImageAlts.map(alt => galleryAlt[alt] ?? alt) : gallery.additionalImageAlts,
     productTypeId: "solenoid-valves", productTypeSlug: "solenoid-valves", productTypeName: t.productType,
     model: title, title, name: title, pageTitle: title, productName: title,
-    h1Title: (c ? getValveDetailHeading(slug, locale) : undefined) ?? title.replace(/^FOREACH\s+/i, ""),
+    h1Title: (c ? locale === "de" ? germanHeading ?? cardCopy?.heading : locale === "hi" ? cardCopy?.heading : getValveDetailHeading(slug, locale) : undefined) ?? title.replace(/^FOREACH\s+/i, ""),
     cardHeading: heading || f?.heading || m?.heading || t.seriesTitle, cardName: cardCopy?.name || familyName || shortModel,
     modelName: shortModel, displayModel: shortModel, modelDisplay: shortModel, productCode: shortModel,
     breadcrumbLabel: c || connection ? shortModel : t.seriesLabel, breadcrumbCategoryLabel: t.valves, breadcrumbSeriesLabel: t.seriesLabel,
-    breadcrumbCategoryHref: `${prefix}/products/valves/`, breadcrumbSeriesHref: `${prefix}/products/valves/solenoid-valves/`,
+    breadcrumbCategoryHref: `${prefix}/products/valves/`, breadcrumbSeriesHref: selectionHref,
     seoTitle: heading ? `${heading} | ${shortModel} | FOREACH` : f ? `${f.heading} | ${shortModel} | FOREACH` : m ? `${shortModel} ${m.heading} | FOREACH` : `${t.seriesTitle} | FOREACH`,
     seoDescription: c ? joinSentences([t.metaFunction[c.state || c.key], t.metaConnection[c.connection]]) : t.seriesSeo,
     searchTerms: t.searchTerms,
@@ -120,7 +137,7 @@ export function getSolenoidContent(slug: string, locale: string) {
       tabLabel: t.applications, title: t.typicalApplications, intro: [f?.definition || t.applicationsIntro], items: applicationItems,
       selectionNote: { title: t.needsTitle, paragraphs: [t.needsText] },
       relatedGuides: {title: t.compareTitle, links: [
-        {label: t.allModels, href: selectionHref},
+        {label: t.allModels + ("hrefLang" in selectionLink && selectionLink.hrefLang === "en" ? germanEnglishFallbackSuffix : ""), href: selectionHref},
         ...solenoidConfigurations.filter(item => item.slug !== slug).map(item => ({
           label: solenoidConfigurationName(item.slug, locale), href: `${prefix}${solenoidBasePath}${item.slug}/`,
         })),

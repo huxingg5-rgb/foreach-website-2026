@@ -188,12 +188,16 @@ export const remainingPumpArticlesRu = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "Страница DPL30"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "Для подпитки промежуточного бака испытайте ",
+                "label": "мембранный насос DPL30-DB",
+                "suffix": " при минимальном рабочем уровне в основном баке. Измерьте объём чернил, поступивший в промежуточный бак за один цикл."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "Страница DPL60"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "Если по отдельной обратной линии нужно перекачивать больше чернил, испытайте ",
+                "label": "DPL60-DB",
+                "suffix": " на этой линии при требуемом расходе и противодавлении."
               }
             ]
           }
@@ -494,12 +498,16 @@ export const remainingPumpArticlesRu = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "Страница DPL30 класса 300 mL/min"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "Если рабочий расход ниже 300 мл/мин, проверьте по характеристике ",
+                "label": "DPL30-DB",
+                "suffix": ", какой расход насос обеспечивает при измеренном перепаде давления в контуре."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "Страница DPL60 класса 600 mL/min"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "Если требуемый расход близок к 300 мл/мин и запас мал, повторите измерение с ",
+                "label": "DPL60-DB",
+                "suffix": " и фильтром, перепад давления на котором близок к порогу замены."
               },
               {
                 "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
@@ -768,12 +776,16 @@ export const remainingPumpArticlesRu = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "Страница DPL30"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "При оценке ",
+                "label": "DPL30-DB",
+                "suffix": " для контура белых чернил с малым расходом измерьте расход после расчётного периода простоя и проверьте, нет ли отложений в клапанах."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "Страница DPL60"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "Если нужен больший расход, испытайте ",
+                "label": "DPL60-DB",
+                "suffix": " с теми же чернилами и фильтром. Проверьте восстановление расхода после пуска и давление у печатающей головки."
               },
               {
                 "href": "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection/",

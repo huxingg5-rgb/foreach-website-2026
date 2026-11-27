@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "title": "Perché le bolle d’aria ritardano o alterano l’erogazione di una pompa a pistone?",
+    "seoTitle": "Bolle d’aria nelle pompe a pistone: errori di erogazione e prove di adescamento",
+    "seoDescription": "Diagnosticare gli errori di erogazione dovuti alle bolle in una pompa a pistone misurando pressione e massa di ogni dose e controllando l’adescamento. Distinguere il gas intrappolato, l’ingresso di aria e il trasferimento delle gocce.",
+    "coverImage": "/images/resources/technical-articles/pump-diagnostics/01.svg",
+    "coverAlt": "Schema di principio. Lo spostamento del pistone comprime inizialmente una bolla. Il recupero della pressione può provocare un’erogazione ritardata di liquido. Le frecce indicano la direzione del flusso. Le dimensioni non corrispondono a un prodotto reale."
+  },
+  "deck": "Il completamento della corsa del pistone non dimostra che il volume previsto abbia raggiunto il recipiente. La compressione della bolla assorbe temporaneamente parte del volume spostato. L’espansione può poi causare un’erogazione ritardata o influire sul ciclo successivo. Individuare il punto in cui compaiono le prime bolle e confrontare, prima e dopo l’adescamento, le misure di pressione sincronizzate con le masse di ogni erogazione.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Il completamento della corsa del pistone non dimostra che il volume previsto abbia raggiunto il recipiente. La compressione della bolla assorbe temporaneamente parte del volume spostato. L’espansione può poi causare un’erogazione ritardata o influire sul ciclo successivo. Individuare il punto in cui compaiono le prime bolle e confrontare, prima e dopo l’adescamento, le misure di pressione sincronizzate con le masse di ogni erogazione."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Dove finisce il volume spostato?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il volume teorico spostato è pari all’area efficace del pistone moltiplicata per la corsa. Nel circuito effettivo, gas, tubi flessibili e cavità delle valvole possono assorbire parte del volume spostato. Il volume erogato è il liquido che raggiunge effettivamente la destinazione. Le corse brevi, la prima erogazione dopo un’inversione e il riavvio sono particolarmente sensibili."
+        },
+        {
+          "type": "paragraph",
+          "text": "A titolo di esempio, una bolla sigillata da 10 μL compressa da 100 a 120 kPa assoluti occupa circa 8.33 μL assumendo un gas ideale in condizioni isoterme. Circa 1.67 μL vengono assorbiti temporaneamente. Il valore non proviene da misurazioni Foreach e non stima un deficit permanente di erogazione. Il recupero della pressione può rilasciare quel volume più avanti nello stesso ciclo o in un ciclo successivo."
+        },
+        {
+          "type": "formula",
+          "expression": "P₁V₁ ≈ P₂V₂; ΔVgas = V₁(1 − P₁/P₂)",
+          "note": "Modello d’ordine di grandezza per un gas ideale confinato, in condizioni approssimativamente isoterme, senza dissoluzione o trasferimento di massa. Usare la pressione assoluta. ΔVgas è il volume assorbito temporaneamente per compressione e non permette di calcolare il deficit finale di erogazione."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/pump-diagnostics/01.svg",
+          "alt": "Schema di principio. Lo spostamento del pistone comprime inizialmente una bolla. Il recupero della pressione può provocare un’erogazione ritardata di liquido. Le frecce indicano la direzione del flusso. Le dimensioni non corrispondono a un prodotto reale.",
+          "caption": "Schema di principio. Lo spostamento del pistone comprime inizialmente una bolla. Il recupero della pressione può provocare un’erogazione ritardata di liquido. Le frecce indicano la direzione del flusso. Le dimensioni non corrispondono a un prodotto reale.",
+          "width": 1000,
+          "height": 560
+        }
+      ]
+    },
+    {
+      "title": "Usare posizione e momento di comparsa per formulare un’ipotesi",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Registrare se le bolle compaiono prima a monte, nella camera, intorno alla valvola o vicino all’uscita. Allineare le osservazioni con aspirazione, commutazione della valvola ed erogazione. Il tubo di osservazione deve aggiungere il minimo volume morto e la minima resistenza possibili. Un tubo trasparente non permette di escludere il gas in una camera opaca."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una prima erogazione insufficiente può avere diverse cause. Gioco meccanico, ritardo della valvola e cedevolezza dei tubi possono dare risultati simili. Un miglioramento ripetibile al variare delle condizioni del gas, mantenendo sotto controllo le altre variabili, costituisce un riscontro più solido."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Posizione o evento",
+            "Prima verifica",
+            "Limite di interpretazione"
+          ],
+          "rows": [
+            [
+              "Camera e prima erogazione dopo l’inversione",
+              "Adescamento e stabilizzazione della pressione",
+              "Può contribuire anche il gioco meccanico"
+            ],
+            [
+              "Bolle continue all’ingresso",
+              "Connessioni, livello e temperatura",
+              "Ingresso di aria e rilascio di gas possono coesistere"
+            ],
+            [
+              "Gocce dopo l’arresto",
+              "Volume assorbito dal gas o dai tubi e stato della valvola",
+              "Una perdita è solo una delle possibili cause"
+            ],
+            [
+              "Solo il pozzetto di destinazione riceve un volume insufficiente",
+              "Formazione e trasferimento della goccia",
+              "Mantenere equivalente la contropressione di riferimento"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Distinguere aria residua, ingresso di aria e rilascio di gas disciolto",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una stabilizzazione rapida dopo l’adescamento controllato suggerisce la presenza di aria residua dopo l’installazione o il cambio di fluido. Se le bolle persistono in corrispondenza di un raccordo all’ingresso, verificarne la tenuta in aspirazione. L’ingresso può aspirare aria senza mostrare perdite di liquido all’esterno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il riscaldamento o un calo locale di pressione possono liberare il gas disciolto. Confrontare lo stesso fluido prima e dopo la degassificazione a parità di temperatura, livello e condizioni di pressione. Un miglioramento indica un possibile contributo del gas. Variazioni simultanee di temperatura o viscosità impediscono di attribuire con chiarezza la causa."
+        }
+      ]
+    },
+    {
+      "title": "Verificare l’adescamento prima di introdurre correzioni fisse",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mantenere costanti il volume obiettivo, la temperatura, il livello del serbatoio, i tempi della valvola e il carico in uscita. Pesare ogni erogazione e registrare le pressioni in ingresso e in uscita. Confrontare stato iniziale, adescamento controllato, funzionamento prolungato e riavvio. Valutare separatamente le prime erogazioni e quelle a regime."
+        },
+        {
+          "type": "paragraph",
+          "text": "Definire per il progetto i criteri di accettazione dell’adescamento in base alla ripetibilità delle misure di massa, alle curve di pressione e alle condizioni osservabili del gas. Il numero di cicli o l’eventuale volume di erogazione aggiuntivo dipendono dal meccanismo che provoca le bolle. Verificare se il sintomo iniziale ricompare durante il funzionamento prolungato."
+        }
+      ]
+    },
+    {
+      "title": "Distinguere l’erogazione della pompa dal trasferimento della goccia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se il volume raccolto all’uscita è corretto ma al pozzetto di destinazione ne arriva meno, controllare gocce sospese, schizzi, bagnatura del puntale e tempi di trasferimento. Quando si modifica il sistema di raccolta, mantenere un carico equivalente all’uscita. La rimozione del puntale modifica anche la contropressione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se il progetto consente una prova di mantenimento della pressione, mantenere costanti la posizione della valvola, la pressione iniziale e la temperatura. Espansione del gas, rilassamento dei tubi e perdite interne influenzano tutti il calo di pressione. La sola pendenza della curva non permette di identificare un raccordo o una valvola difettosi."
+        }
+      ]
+    },
+    {
+      "title": "Valutare la camera EAS e ripetere la prova completa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La scheda tecnica ufficiale Foreach della serie EAS descrive una camera che facilita l’eliminazione dell’aria. La camera può ridurre l’aria intrappolata, ma l’assenza di bolle va verificata con il fluido, l’orientamento e il circuito valvole effettivi. Controllare capacità, interfacce e circuito effettivo delle valvole rispetto alla scheda ufficiale."
+        },
+        {
+          "type": "paragraph",
+          "text": "La configurazione EA-500-PMMA a catalogo è da 500 μL in 2000 passi interi, equivalenti a 0.25 μL teorici per passo. La risoluzione non determina l’accuratezza del volume di liquido erogato. Ripetere le prove con il fluido effettivo, il volume minimo previsto, la prima erogazione, il funzionamento a regime e il riavvio. La documentazione Hamilton sul monitoraggio della pressione e delle bolle è un riferimento per il metodo di osservazione e non attesta la presenza di sensori equivalenti nelle pompe Foreach."
+        },
+        {
+          "type": "subheading",
+          "title": "Approfondimenti e schede tecniche"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/piston-pump-accuracy-repeatability-resolution/",
+              "label": "Accuratezza, ripetibilità e risoluzione"
+            },
+            {
+              "href": "/resources/technical-articles/piston-pump-viscous-liquid-aspiration-speed/",
+              "label": "Velocità di aspirazione e tempo di attesa per liquidi viscosi"
+            },
+            {
+              "href": "/downloads/resources/datasheets/en/Pumps/ps-120b-2507-00002-001-en-eas-piston-pump.pdf",
+              "label": "Scheda tecnica ufficiale EAS in inglese"
+            },
+            {
+              "href": "/products/pumps/piston-pump/",
+              "label": "Categoria delle pompe a pistone di precisione"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Riferimenti tecnici",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "https://www.hamiltoncompany.com/syringe-pumps/smartsense",
+              "label": "Hamilton: monitoraggio di pressione e bolle"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Le bolle riducono sempre il volume di ogni erogazione?",
+      "answer": "No. Compressione ed espansione possono ritardare l’erogazione, rilasciare liquido in ritardo o influire sui cicli successivi. Il risultato finale dipende dallo stato delle valvole, dalla pressione e dai tempi di raccolta."
+    },
+    {
+      "question": "Basta osservare un ripristino dopo un adescamento aggiuntivo?",
+      "answer": "Ripetere le prove di funzionamento prolungato e riavvio. Un ingresso persistente di aria o il rilascio di gas possono ripresentare il problema. Identificarne l’origine."
+    },
+    {
+      "question": "Un’elevata risoluzione della pompa a pistone elimina gli errori dovuti alle bolle?",
+      "answer": "No. La risoluzione dello spostamento geometrico non elimina il volume assorbito da gas o tubi e non garantisce il trasferimento completo della goccia."
+    },
+    {
+      "question": "La serie EAS garantisce il funzionamento senza bolle con tutti i reagenti?",
+      "answer": "La geometria della camera non dà una garanzia universale. Verificare il fluido effettivo, l’orientamento, le cavità delle valvole e la sequenza di adescamento."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi esaminare il circuito fluidico effettivo?",
+    "description": "Indica a Foreach il fluido, il volume di lavoro o la portata, le pressioni, la geometria e la sequenza di controllo per valutare configurazione e condizioni di verifica.",
+    "contactLabel": "Parliamo della tua applicazione",
+    "productsLabel": "Scopri le pompe",
+    "productsHref": "/products/pumps/piston-pump/"
+  }
+}

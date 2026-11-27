@@ -3,8 +3,11 @@ import type { ProductApplicationAreaLink } from "../product-detail.types";
 
 // Match the sampling, reagent handling and wash-path tasks described for SV10.
 const areas = ["ivd", "lab-automation", "analytical-instruments"] as const;
-const copy: Record<SelectionLocale, {title: string; labels: [string, string, string]}> = {
+const copy: Record<SelectionLocale | "de" | "it" | "hi", {title: string; labels: [string, string, string]}> = {
   zh: { title: "应用领域：", labels: ["IVD 体外诊断", "实验室自动化", "分析仪器"] },
+  hi: { title: "अनुप्रयोग क्षेत्र", labels: ["इन-विट्रो डायग्नोस्टिक्स (IVD)", "लैब ऑटोमेशन", "विश्लेषण उपकरण"] },
+  it: { title: "Applicazioni", labels: ["Diagnostica in vitro (IVD)", "Automazione di laboratorio", "Strumentazione analitica"] },
+  de: { title: "Anwendungsbereiche", labels: ["In-vitro-Diagnostik", "Laborautomatisierung", "Analysegeräte"] },
   en: { title: "Application Areas:", labels: ["IVD", "Laboratory Automation", "Analytical Instruments"] },
   es: { title: "Áreas de aplicación:", labels: ["Diagnóstico in vitro", "Automatización de laboratorio", "Instrumentación analítica"] },
   fr: { title: "Domaines d’application :", labels: ["Diagnostic in vitro", "Automatisation de laboratoire", "Instruments analytiques"] },
@@ -12,7 +15,7 @@ const copy: Record<SelectionLocale, {title: string; labels: [string, string, str
   ru: { title: "Области применения:", labels: ["Диагностика in vitro", "Лабораторная автоматизация", "Аналитические приборы"] },
 };
 
-export function getSolenoidApplicationAreas(locale: SelectionLocale): {applicationAreasTitle: string; applicationAreas: ProductApplicationAreaLink[]} {
+export function getSolenoidApplicationAreas(locale: SelectionLocale | "de" | "it" | "hi"): {applicationAreasTitle: string; applicationAreas: ProductApplicationAreaLink[]} {
   const prefix = locale === "zh" ? "" : `/${locale}`;
   return {
     applicationAreasTitle: copy[locale].title,

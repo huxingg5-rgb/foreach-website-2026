@@ -1,11 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getGermanArticleDestination } from "@/lib/i18n/german-article-link";
+import { getHindiDraftLink, getItalianDraftLink, hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
 
 import {
   getDpl30ArticleCopy,
   getDpl30ArticleFaqCopy,
   type Dpl30ArticleCopy,
   type Dpl30FaqItem,
+  type Dpl30FaqCopy,
   type Dpl30SpecificationRow,
   type Dpl30ThreeColumnRow,
   type Dpl30TwoColumnRow,
@@ -188,14 +191,27 @@ function InternalArticleLink({
   suffix: string;
   href: string;
 }) {
+  const destination = href.startsWith("/de/")
+    ? getGermanArticleDestination(href.replace(/^\/de/, "/en"))
+    : { href };
+  const italianDestination = href.startsWith("/it/")
+    ? getItalianDraftLink(href.replace(/^\/it/, "/en"))
+    : undefined;
+  const hindiDestination = href.startsWith("/hi/")
+    ? getHindiDraftLink(href.replace(/^\/hi/, "/en"))
+    : undefined;
   return (
     <p>
       {prefix}{" "}
       <Link
-        href={href}
+        href={hindiDestination?.href ?? italianDestination?.href ?? destination.href}
+        hrefLang={hindiDestination?.hrefLang ?? italianDestination?.hrefLang}
         style={{ color: "#173368", fontWeight: 700, textDecoration: "underline" }}
       >
         {label}
+        {italianDestination?.hrefLang === "en" ? italianEnglishFallbackSuffix : ""}
+        {hindiDestination?.hrefLang === "en" ? hindiEnglishFallbackSuffix : ""}
+        {"destinationLanguage" in destination && destination.destinationLanguage === "en" ? " (Englisch)" : ""}
       </Link>
       {suffix}
     </p>
@@ -371,13 +387,14 @@ function WorkingPrincipleDiagram({
   );
 }
 
-function Dpgl800ArticleContent({
+export function Dpgl800ArticleContent({
   copy,
   localePrefix,
 }: {
   copy: Dpgl800ArticleCopy;
   localePrefix: string;
 }) {
+  const figureExt = localePrefix === "/de" ? "-de.svg" : localePrefix === "/hi" ? "-hi.svg" : ".webp";
   return (
     <div className={styles.technicalArticleBody}>
       <section className={styles.contentBlock}>
@@ -417,7 +434,7 @@ function Dpgl800ArticleContent({
           <p key={paragraph}>{paragraph}</p>
         ))}
         <ArticleFigure
-          src={`${DPGL800_ASSET_BASE}/dpgl800-gas-flow-pressure-curve.webp`}
+          src={`${DPGL800_ASSET_BASE}/dpgl800-gas-flow-pressure-curve${figureExt}`}
           alt={copy.section5.figureAlt}
           width={2363}
           height={1100}
@@ -432,7 +449,7 @@ function Dpgl800ArticleContent({
           <p key={paragraph}>{paragraph}</p>
         ))}
         <ArticleFigure
-          src={`${DPGL800_ASSET_BASE}/dpgl800-5l-vacuum-build-up-time-curve.webp`}
+          src={`${DPGL800_ASSET_BASE}/dpgl800-5l-vacuum-build-up-time-curve${figureExt}`}
           alt={copy.section6.figureAlt}
           width={2367}
           height={1025}
@@ -446,6 +463,14 @@ function Dpgl800ArticleContent({
         {copy.section7.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
+        {copy.section7.applicationLink && (
+          <InternalArticleLink
+            {...copy.section7.applicationLink}
+            href={localePrefix === "/it" || localePrefix === "/hi"
+              ? copy.section7.applicationLink.href.replace(/^\/en\//, localePrefix + "/")
+              : copy.section7.applicationLink.href}
+          />
+        )}
         <InternalArticleLink
           prefix={copy.section7.dpl60Prefix}
           label={copy.section7.dpl60Label}
@@ -460,7 +485,7 @@ function Dpgl800ArticleContent({
           <p key={paragraph}>{paragraph}</p>
         ))}
         <ArticleFigure
-          src={`${DPGL800_ASSET_BASE}/dpgl800-dimensions.webp`}
+          src={`${DPGL800_ASSET_BASE}/dpgl800-dimensions${figureExt}`}
           alt={copy.section8.figureAlt}
           width={3148}
           height={1420}
@@ -523,7 +548,7 @@ function Dpgl800ArticleContent({
   );
 }
 
-function Dpl30hArticleContent({
+export function Dpl30hArticleContent({
   copy,
   localePrefix,
 }: {
@@ -583,7 +608,7 @@ function Dpl30hArticleContent({
           <p key={paragraph}>{paragraph}</p>
         ))}
         <ArticleFigure
-          src={`${DPL30H_ASSET_BASE}/dpl30h-flow-pressure-curve.webp`}
+          src={`${DPL30H_ASSET_BASE}/dpl30h-flow-pressure-curve${localePrefix === "/de" ? "-de.webp" : localePrefix === "/it" || localePrefix === "/hi" ? `-${localePrefix.slice(1)}.svg` : ".webp"}`}
           alt={copy.section6.figureAlt}
           width={2354}
           height={715}
@@ -610,14 +635,14 @@ function Dpl30hArticleContent({
           <p key={paragraph}>{paragraph}</p>
         ))}
         <ArticleFigure
-          src={`${DPL30H_ASSET_BASE}/dpl30h-brushed-dimensions.webp`}
+          src={`${DPL30H_ASSET_BASE}/dpl30h-brushed-dimensions${localePrefix === "/de" || localePrefix === "/hi" ? `-${localePrefix.slice(1)}.svg` : ".webp"}`}
           alt={copy.section8.brushedFigureAlt}
           width={2365}
           height={1272}
           caption={copy.section8.brushedFigureCaption}
         />
         <ArticleFigure
-          src={`${DPL30H_ASSET_BASE}/dpl30h-brushless-dimensions.webp`}
+          src={`${DPL30H_ASSET_BASE}/dpl30h-brushless-dimensions${localePrefix === "/de" || localePrefix === "/hi" ? `-${localePrefix.slice(1)}.svg` : ".webp"}`}
           alt={copy.section8.brushlessFigureAlt}
           width={2364}
           height={1290}
@@ -731,7 +756,23 @@ export default function Dpl30LiquidDiaphragmPumpArticle({
   const faqCopy = dpl60Copy
     ? getDpl60ArticleFaqCopy(locale)
     : getDpl30ArticleFaqCopy(locale);
+  return <StandardDiaphragmArticleContent copy={copy} faqCopy={faqCopy} dpl60Copy={dpl60Copy} localePrefix={localePrefix} />;
+}
+
+export function StandardDiaphragmArticleContent({
+  copy,
+  faqCopy,
+  dpl60Copy = null,
+  localePrefix,
+}: {
+  copy: Dpl30ArticleCopy;
+  faqCopy: Dpl30FaqCopy;
+  dpl60Copy?: Dpl60ArticleCopy | null;
+  localePrefix: string;
+}) {
   const assetBase = dpl60Copy ? DPL60_ASSET_BASE : DPL30_ASSET_BASE;
+  const localizeArticleImages = localePrefix === "/de";
+  const labelSuffix = localizeArticleImages ? "-de.svg" : localePrefix === "/hi" ? "-hi.svg" : ".webp";
 
   return (
     <div className={styles.technicalArticleBody}>
@@ -780,7 +821,11 @@ export default function Dpl30LiquidDiaphragmPumpArticle({
         <h2>{copy.section5.title}</h2>
         <p>{copy.section5.paragraphs[0]}</p>
         <ArticleFigure
-          src={dpl60Copy ? DPL60_CURVE : `${assetBase}/dpl30-flow-pressure.jpg`}
+          src={dpl60Copy
+            ? (localePrefix === "/hi" || localizeArticleImages ? `${assetBase}/dpl60-flow-pressure-curve${labelSuffix}` : DPL60_CURVE)
+            : localizeArticleImages
+              ? "/images/resources/technical-articles/instrument-fluidics/what-is-a-diaphragm-pump/dpl30-flow-pressure-curve-de.webp"
+              : `${assetBase}/dpl30-flow-pressure${localePrefix === "/hi" ? "-hi.svg" : ".jpg"}`}
           alt={copy.section5.figureAlt}
           width={dpl60Copy ? 2366 : 750}
           height={dpl60Copy ? 778 : 610}
@@ -812,7 +857,7 @@ export default function Dpl30LiquidDiaphragmPumpArticle({
         <p>{copy.section7.afterTable}</p>
         <SectionTitle>{copy.section7.brushedTitle}</SectionTitle>
         <ArticleFigure
-          src={`${assetBase}/${dpl60Copy ? "dpl60" : "dpl30"}-brushed-dimensions.webp`}
+          src={`${assetBase}/${dpl60Copy ? "dpl60" : "dpl30"}-brushed-dimensions${labelSuffix}`}
           alt={copy.section7.brushedAlt}
           width={dpl60Copy ? 2363 : 1250}
           height={dpl60Copy ? 1224 : 1120}
@@ -821,7 +866,7 @@ export default function Dpl30LiquidDiaphragmPumpArticle({
         <p>{copy.section7.brushedText}</p>
         <SectionTitle>{copy.section7.brushlessTitle}</SectionTitle>
         <ArticleFigure
-          src={`${assetBase}/${dpl60Copy ? "dpl60" : "dpl30"}-brushless-dimensions.webp`}
+          src={`${assetBase}/${dpl60Copy ? "dpl60" : "dpl30"}-brushless-dimensions${labelSuffix}`}
           alt={copy.section7.brushlessAlt}
           width={dpl60Copy ? 2383 : 1270}
           height={dpl60Copy ? 1281 : 1050}
@@ -848,6 +893,16 @@ export default function Dpl30LiquidDiaphragmPumpArticle({
           />
         ) : null}
         <div className={styles.technicalNotice}>{copy.section8.notice}</div>
+        {dpl60Copy && (localePrefix === "/de" || localePrefix === "/it" || localePrefix === "/hi") ? (
+          <>
+            <SectionTitle>{dpl60Copy.section8.standardModelsTitle}</SectionTitle>
+            <p>{dpl60Copy.section8.standardModelsIntro}</p>
+            <MultiColumnTable
+              headers={dpl60Copy.section8.standardModelHeaders}
+              rows={dpl60Copy.section8.standardModelRows}
+            />
+          </>
+        ) : null}
       </section>
 
       <section className={styles.contentBlock}>

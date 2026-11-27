@@ -19,8 +19,9 @@
 import { getLocaleFromPathname } from "@/lib/i18n";
 import { trackFilterApply, trackInteraction } from "@/lib/analytics/track-event";
 
-import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useContentPathname } from "@/lib/i18n/use-content-pathname";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
@@ -39,6 +40,38 @@ import type {
 ========================================================= */
 interface MaterialCompatibilityClientProps {
   data: MaterialCompatibilityPageData;
+  localeOverride?: "de" | "it" | "hi";
+  chemicalNames?: Readonly<Record<string, string>>;
+}
+
+function MaterialCompatibilitySearchParams({
+  tabs,
+  chemicalNames,
+  setTab,
+  setKeyword,
+}: {
+  tabs: MaterialCompatibilityPageData["tabs"];
+  chemicalNames: Readonly<Record<string, string>>;
+  setTab: (tab: MaterialCompatibilityTab) => void;
+  setKeyword: (keyword: string) => void;
+}) {
+  const params = useSearchParams();
+  const tabValues = params.getAll("tab");
+  const queryValues = params.getAll("q");
+  const requestedTab = tabValues.length === 1
+    ? tabs.find((tab) => tab.key === tabValues[0])?.key
+    : undefined;
+  const requestedKeyword = queryValues.length === 1 ? queryValues[0] : "";
+  const keyword = requestedTab === "compatibility" && Object.hasOwn(chemicalNames, requestedKeyword)
+    ? chemicalNames[requestedKeyword]
+    : requestedKeyword;
+
+  useEffect(() => {
+    setTab(requestedTab ?? "compatibility");
+    setKeyword(keyword);
+  }, [requestedTab, keyword, setTab, setKeyword]);
+
+  return null;
 }
 
 /* =========================================================
@@ -94,9 +127,11 @@ function getLocalePrefix(pathname: string | null) {
 ========================================================= */
 export default function MaterialCompatibilityClient({
   data,
+  localeOverride,
+  chemicalNames,
 }: MaterialCompatibilityClientProps) {
-  const pathname = usePathname();
-  const localePrefix = getLocalePrefix(pathname);
+  const pathname = useContentPathname();
+  const localePrefix = localeOverride ? `/${localeOverride}` : getLocalePrefix(pathname);
 
   /*
     判断是否中文页面：
@@ -242,7 +277,7 @@ export default function MaterialCompatibilityClient({
     if (!normalizedKeyword) return data.compatibilityRows;
 
     return data.compatibilityRows.filter((row) =>
-      normalizeSearchText(row.name).includes(normalizedKeyword),
+      [row.name, ...(row.searchAliases ?? [])].some((name) => normalizeSearchText(name).includes(normalizedKeyword)),
     );
   }
 
@@ -330,6 +365,16 @@ export default function MaterialCompatibilityClient({
 
   return (
     <>
+      {chemicalNames ? (
+        <Suspense fallback={null}>
+          <MaterialCompatibilitySearchParams
+            tabs={data.tabs}
+            chemicalNames={chemicalNames}
+            setTab={setActiveTab}
+            setKeyword={setKeyword}
+          />
+        </Suspense>
+      ) : null}
       {/* =====================================================
           面包屑导航
       ===================================================== */}

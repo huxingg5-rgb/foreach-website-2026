@@ -1,0 +1,378 @@
+{
+  "metadata": {
+    "title": "Come scegliere una pompa a membrana per gas e liquidi: portata, vuoto e tempo di evacuazione per DPGL800",
+    "seoTitle": "Come scegliere una pompa a membrana per gas e liquidi | Guida al vuoto DPGL800 | FOREACH Technology",
+    "seoDescription": "Scegli la pompa a membrana DPGL800 per gas e liquidi considerando portata del gas a scarico libero di 6 L/min, vuoto ＜-90 kPa, pressione di 30 kPa e tempo di evacuazione con una camera di prova da 5 L.",
+    "coverAlt": "Pompa a membrana brushless FOREACH DPGL800 per gas e liquidi, con portata nominale di 6 L/min e vuoto ＜-90 kPa"
+  },
+  "section1": {
+    "title": "1. Perché DPGL800 richiede criteri diversi da una normale pompa per liquidi",
+    "paragraphs": [
+      "DPGL800 è destinata a gas e miscele di gas e liquido. Tra gli impieghi tipici vi sono l’aspirazione di liquidi di scarto con aria trascinata, l’evacuazione dei tubi, la generazione di vuoto e l’aspirazione continua in presenza di un arrivo intermittente di liquido.",
+      "La scelta richiede quindi più di un singolo valore di portata. Definisci lo stato del fluido, il vuoto obiettivo, il tempo di evacuazione ammesso, il volume del sistema, la pressione di mandata, le perdite di carico della linea, i materiali bagnati e l’interfaccia di montaggio. DPGL800-24BS è una piattaforma brushless da 24 V che funziona a DC 24 V ±10% e assorbe ≤17 W."
+    ]
+  },
+  "section2": {
+    "title": "2. Dati da definire prima della selezione",
+    "intro": "Questi dati determinano se i valori di 6 L/min e ＜-90 kPa corrispondono al servizio effettivo.",
+    "headers": [
+      "Voce",
+      "Informazioni richieste",
+      "Perché è importante"
+    ],
+    "rows": [
+      [
+        "Stato del fluido",
+        "Gas, miscela di gas e liquido o passaggi intermittenti di liquido. Presenza di schiuma o particelle",
+        "Determina tipo di pompa, materiali e validazione"
+      ],
+      [
+        "Obiettivo di aspirazione",
+        "Vuoto obiettivo e tempo disponibile per raggiungerlo",
+        "Vuoto finale e velocità di evacuazione sono parametri distinti"
+      ],
+      [
+        "Volume del sistema",
+        "Volume di gas effettivo di camera, tubi, filtri e accessori",
+        "Il volume incide direttamente sul tempo di evacuazione"
+      ],
+      [
+        "Condizione di mandata",
+        "Scarico libero o contropressione. Pressione positiva richiesta",
+        "La contropressione cambia la portata in esercizio"
+      ],
+      [
+        "Circuito fluidico",
+        "Lunghezza e diametro interno dei tubi, valvole, raccordi, filtri, tenute e tasso di perdita",
+        "Restrizioni e perdite rallentano l’evacuazione"
+      ],
+      [
+        "Fluido e temperatura",
+        "Composizione, concentrazione e temperatura di esercizio da +5℃ a +40℃",
+        "Necessario per verificare la compatibilità"
+      ],
+      [
+        "Montaggio",
+        "Spazio, porte femmina G1/8, orientamento delle porte e cablaggio",
+        "Conferma l’integrazione meccanica"
+      ]
+    ]
+  },
+  "section3": {
+    "title": "3. Che cosa significa 6 L/min?",
+    "paragraphs": [
+      "Il valore di 6 L/min indica la portata nominale del gas a scarico libero con una sola testa. Identifica la classe di prestazioni. La portata effettiva di puro liquido e la portata a ogni livello di vuoto o contropressione richiedono una valutazione a parte.",
+      "La portata cambia con l’aumento del vuoto in ingresso o della resistenza allo scarico. Tubazioni, valvole, raccordi, filtri, tenuta, passaggi intermittenti di liquido e stato del fluido influiscono sul risultato dopo il montaggio. Usa la curva per individuare il punto di pressione richiesto e convalida l’intero sistema."
+    ],
+    "noticeStrong": "6 L/min e ＜-90 kPa rappresentano due condizioni di esercizio diverse.",
+    "noticeText": "Il primo valore è la portata di riferimento del gas a scarico libero. Il secondo è il vuoto massimo. DPGL800 non è specificata per erogare 6 L/min a ＜-90 kPa."
+  },
+  "section4": {
+    "title": "4. Specifiche principali di DPGL800-24BS",
+    "intro": "Questi limiti restano invariati. Conferma materiali e orientamento delle porte in base al codice completo del modello.",
+    "headers": [
+      "Parametro",
+      "DPGL800-24BS"
+    ],
+    "rows": [
+      [
+        "Motore",
+        "Brushless in corrente continua"
+      ],
+      [
+        "Tensione di esercizio",
+        "DC 24 V ±10%"
+      ],
+      [
+        "Potenza",
+        "≤17 W"
+      ],
+      [
+        "Portata a scarico libero con una testa",
+        "6 L/min (portata del gas, distinta dalla portata effettiva di puro liquido)"
+      ],
+      [
+        "Pressione positiva massima",
+        "30 kPa"
+      ],
+      [
+        "Pressione negativa massima / vuoto",
+        "＜-90 kPa"
+      ],
+      [
+        "Fluidi",
+        "Gas e miscele di gas e liquido"
+      ],
+      [
+        "Temperatura del fluido / ambiente",
+        "da +5℃ a +40℃"
+      ],
+      [
+        "Porte",
+        "Filettatura femmina G1/8"
+      ],
+      [
+        "Massa",
+        "Circa 600 g"
+      ],
+      [
+        "Durata specificata",
+        "10000 h alla tensione nominale, in funzionamento continuo"
+      ],
+      [
+        "Materiali bagnati",
+        "Testa in solfuro di polifenilene (PPS), membrana in EPDM o PTFE e valvola in EPDM o FFKM, a seconda del modello"
+      ]
+    ]
+  },
+  "section5": {
+    "title": "5. Come leggere la curva portata-pressione del gas",
+    "paragraphs": [
+      "La curva mette in relazione portata del gas e pressione. La portata è di circa 6 L/min vicino a una pressione differenziale nulla, poi varia al crescere del vuoto in ingresso o della pressione in uscita.",
+      "Parti dall’intervallo di pressione richiesto dallo strumento e leggi la portata disponibile a quel punto, prevedendo un margine adeguato. Il grafico illustra l’andamento. Il limite ufficiale di pressione positiva massima resta 30 kPa."
+    ],
+    "figureAlt": "Curva portata-pressione del gas per DPGL800, con circa 6 L/min vicino alla pressione nulla e portata inferiore in vuoto o a pressione positiva",
+    "figureCaption": "Curva portata-pressione del gas di DPGL800. 6 L/min e ＜-90 kPa corrispondono a punti distinti.",
+    "notice": "Tubi, valvole, raccordi, filtri, tenuta e rapporto gas-liquido spostano il punto di lavoro effettivo. Convalida il circuito una volta montato."
+  },
+  "section6": {
+    "title": "6. Che cosa indica la curva del tempo di evacuazione per 5 L?",
+    "paragraphs": [
+      "La curva registra il tempo necessario per creare il vuoto in una camera di prova fissa da 5 L e in un circuito di prova definito. L’ultima parte dell’evacuazione normalmente richiede più tempo man mano che la pressione si avvicina al limite di vuoto della pompa. Il tempo non si calcola con una semplice proporzione lineare.",
+      "Il valore di 5 L è una condizione di prova. Non indica la capacità o un limite del prodotto o dell’applicazione. Sistemi reali da 0.5 L, 2 L o 10 L si comportano diversamente. Influiscono anche il volume dei tubi, le valvole, i raccordi, i filtri, la tenuta e le perdite."
+    ],
+    "figureAlt": "Curva del tempo di evacuazione di DPGL800 con camera di prova fissa da 5 L, da 0 a -90 kPa",
+    "figureCaption": "Evacuazione con DPGL800 in una camera di prova da 5 L. Il volume di 5 L è una condizione di prova e non un limite dell’applicazione.",
+    "notice": "Per calcolare i tempi di ciclo, prova la camera e il circuito effettivi con il tasso di perdita ammesso. Evita di scalare direttamente la curva da 5 L."
+  },
+  "section7": {
+    "title": "7. Aspirazione di miscele di gas e liquido e trasferimento continuo di solo liquido",
+    "paragraphs": [
+      "DPGL800 è adatta alla gestione dei gas, all’aspirazione di miscele di gas e liquido, allo scarico, all’evacuazione delle linee e alla generazione del vuoto. Il valore di 6 L/min è dichiarato per il gas. Non usarlo come portata dosata continua di solo liquido.",
+      "Per il trasferimento stabile di solo liquido, confronta le pompe in base alla portata del liquido in pressione, all’autoadescamento, alle pulsazioni e alla compatibilità dei materiali. Se il servizio comporta molta aria o un vuoto elevato, convalida DPGL800 nel circuito effettivo di gas e liquido."
+    ],
+    "applicationLink": {
+      "prefix": "Per uno scarico che aspira gas in modo intermittente, usa le",
+      "label": "verifiche di validazione dello scarico della condensa",
+      "suffix": " per controllare rimozione, tenuta e ripristino del percorso del gas campione nello strumento montato.",
+      "href": "/en/applications/environmental-monitoring/guide-gas-pretreatment/gas-pretreatment-diaphragm-pumps/gas-pretreatment-condensate/#acceptance"
+    },
+    "dpl60Prefix": "Per un’opzione di trasferimento continuo di liquidi nella classe da 600 mL/min, consulta la",
+    "dpl60Label": "guida alla scelta della pompa a membrana per liquidi DPL60",
+    "dpl60Suffix": "."
+  },
+  "section8": {
+    "title": "8. Porte G1/8, dimensioni e orientamento",
+    "paragraphs": [
+      "DPGL800 usa filettature femmina G1/8. Il foro del raccordo, il metodo di tenuta e il diametro della linea incidono su restrizioni e perdite. La sola designazione della filettatura è insufficiente. Prima dell’approvazione, verifica la lunghezza totale di circa 118.8 mm, i fori di montaggio, la massa di circa 600 g e lo spazio per il cavo.",
+      "Il codice modello identifica l’orientamento delle porte. Il disegno mostra gli orientamenti disponibili delle filettature. L’orientamento fornito deve corrispondere al modello completo e al disegno confermati."
+    ],
+    "figureAlt": "Disegno quotato di DPGL800 con porte femmina G1/8, fori di montaggio e ingombro totale",
+    "figureCaption": "Dimensioni di DPGL800. Per l’integrazione meccanica usa il disegno 2D approvato e il modello definitivo",
+    "headers": [
+      "Codice",
+      "Direzione",
+      "Verifica di integrazione"
+    ],
+    "rows": [
+      [
+        "3",
+        "Destra",
+        "Spazio sul lato destro per raccordo e manutenzione"
+      ],
+      [
+        "6",
+        "Verso il basso",
+        "Raggio di curvatura del tubo sul lato inferiore"
+      ],
+      [
+        "9",
+        "Sinistra",
+        "Spazio sul lato sinistro per raccordo e manutenzione"
+      ],
+      [
+        "C",
+        "Verso l’alto",
+        "Spazio superiore per tubo e involucro"
+      ]
+    ]
+  },
+  "section9": {
+    "title": "9. Codifica e interpretazione del modello DPGL800",
+    "intro": "Il codice completo definisce serie, tensione, motore, collegamento, orientamento delle porte, materiali bagnati e personalizzazioni specifiche.",
+    "modelCode": "DPGL800 - 24 - B - S - 6 - EP/PS - X",
+    "modelCodeDescription": "Serie · tensione · motore brushless · collegamento filettato · orientamento delle porte · materiali di membrana, valvola e testa · personalizzazione",
+    "headers": [
+      "Campo",
+      "Codice",
+      "Significato"
+    ],
+    "rows": [
+      [
+        "Serie",
+        "DPGL800",
+        "Pompa a membrana per gas e miscele di gas e liquido"
+      ],
+      [
+        "Tensione",
+        "24 / 12",
+        "DC 24 V. Il codice da 12 V è previsto nella regola di codifica"
+      ],
+      [
+        "Motore",
+        "B",
+        "Brushless in corrente continua"
+      ],
+      [
+        "Collegamento",
+        "S",
+        "Filettatura femmina G1/8"
+      ],
+      [
+        "Orientamento delle porte",
+        "3 / 6 / 9 / C",
+        "Destra / basso / sinistra / alto"
+      ],
+      [
+        "Materiali bagnati",
+        "EP/PS / FF/PS",
+        "EPDM+EPDM+PPS / PTFE+FFKM+PPS"
+      ],
+      [
+        "Personalizzazione",
+        "X",
+        "Identificativo di una configurazione speciale"
+      ]
+    ],
+    "exampleTitle": "Esempio: DPGL800-24BS6-EP/PS",
+    "exampleText": "Serie DPGL800, 24 V, motore brushless, filettatura femmina G1/8, porte verso il basso, membrana e valvola in EPDM e testa in PPS.",
+    "standardModelsTitle": "Tre modelli standard attuali",
+    "standardModelsIntro": "Codici articolo e modelli sono riportati come testo HTML ricercabile, per progettazione e acquisti.",
+    "standardModelHeaders": [
+      "Codice articolo",
+      "Modello standard",
+      "Tensione",
+      "Motore",
+      "Direzione",
+      "Membrana",
+      "Valvola",
+      "Testa"
+    ],
+    "standardModelRows": [
+      [
+        "459039",
+        "DPGL800-24BS6-EP/PS",
+        "24 V",
+        "Brushless",
+        "Verso il basso",
+        "EPDM",
+        "EPDM",
+        "PPS"
+      ],
+      [
+        "459040",
+        "DPGL800-24BS6-FF/PS",
+        "24 V",
+        "Brushless",
+        "Verso il basso",
+        "PTFE",
+        "FFKM",
+        "PPS"
+      ],
+      [
+        "459041",
+        "DPGL800-24BSC-EP/PS",
+        "24 V",
+        "Brushless",
+        "Verso l’alto",
+        "EPDM",
+        "EPDM",
+        "PPS"
+      ]
+    ],
+    "notice": "Nella codifica compare un codice da 12 V, ma attualmente non esiste un articolo standard da 12 V. Non dedurre né creare un modello standard da 12 V."
+  },
+  "section10": {
+    "title": "10. Sequenza completa di selezione di DPGL800",
+    "steps": [
+      [
+        "Definisci il fluido",
+        "Registra il rapporto gas-liquido, i passaggi intermittenti di liquido, la schiuma, le particelle e l’eventuale fase liquida continua."
+      ],
+      [
+        "Definisci il vuoto e il tempo di ciclo",
+        "Indica sia il vuoto obiettivo sia il tempo di evacuazione ammesso. Il solo valore ＜-90 kPa non basta."
+      ],
+      [
+        "Calcola il volume effettivo",
+        "Includi camera, tubi, filtri, valvole e accessori."
+      ],
+      [
+        "Definisci la contropressione allo scarico",
+        "Usa la curva per individuare il punto di lavoro effettivo."
+      ],
+      [
+        "Verifica i materiali bagnati",
+        "Scegli EP/PS o FF/PS in base a composizione, concentrazione, temperatura e tempo di contatto."
+      ],
+      [
+        "Scegli l’orientamento delle porte",
+        "Seleziona 3, 6, 9 o C e controlla raccordi G1/8, tubi e spazio per la manutenzione."
+      ],
+      [
+        "Controlla alimentazione e durata",
+        "Predisponi un’alimentazione DC 24 V ±10% e valuta la potenza ≤17 W e la condizione di funzionamento continuo per 10000 h."
+      ],
+      [
+        "Convalida il sistema",
+        "Prova vuoto, tempo di evacuazione, portata, perdite, rumore, aumento di temperatura e transizioni tra gas e liquido."
+      ]
+    ]
+  },
+  "section11": {
+    "title": "11. Combinazioni dei materiali e limiti",
+    "intro": "La compatibilità deve coprire l’intero percorso bagnato, compresi testa, membrana, valvola, raccordi, tenute e tubi.",
+    "headers": [
+      "Combinazione",
+      "Composizione",
+      "Nota di selezione"
+    ],
+    "rows": [
+      [
+        "EP/PS",
+        "Membrana EPDM + valvola EPDM + testa PPS",
+        "Combinazione di base per la valutazione. Convalida con il fluido effettivo"
+      ],
+      [
+        "FF/PS",
+        "Membrana PTFE + valvola FFKM + testa PPS",
+        "Per verifiche di compatibilità più esigenti. La compatibilità chimica va comunque verificata"
+      ],
+      [
+        "Temperatura",
+        "da +5℃ a +40℃",
+        "Fluido e ambiente devono entrambi restare nell’intervallo"
+      ],
+      [
+        "Durata",
+        "10000 h",
+        "Alla tensione nominale in funzionamento continuo. Carico, temperatura, cicli e fluido incidono sulla durata effettiva"
+      ]
+    ]
+  },
+  "conclusion": {
+    "title": "Conclusione",
+    "paragraphs": [
+      "Considera separatamente la portata del gas a scarico libero di 6 L/min, il vuoto massimo ＜-90 kPa e il tempo di evacuazione della camera di prova da 5 L. Applica poi i requisiti effettivi di volume, perdita di carico, tasso di perdita, fluido e materiali.",
+      "Per il trasferimento continuo di solo liquido, valuta pompe a membrana per liquidi come DPL60. Per attività con aria, aspirazione di liquidi di scarto, evacuazione o vuoto elevato, valuta DPGL800 e convalidala nel circuito effettivo."
+    ]
+  },
+  "internalLinks": {
+    "productPrefix": "Consulta configurazioni disponibili, quote e documenti nella",
+    "productLabel": "scheda DPGL800 della pompa a membrana per gas e liquidi",
+    "productSuffix": ".",
+    "categoryPrefix": "Per confrontare altri intervalli di portata, pressione e fluidi, torna alla categoria",
+    "categoryLabel": "pompe a membrana",
+    "categorySuffix": "."
+  }
+}

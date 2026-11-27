@@ -7,6 +7,7 @@ import styles from "./ApplicationGuideNavigation.module.css";
 export type ApplicationGuideNavigationItem = {
   label: string;
   href: string;
+  hrefLang?: "de" | "it" | "hi" | "en";
 };
 
 export type ApplicationGuideNavigationGroup = {
@@ -30,6 +31,7 @@ type ApplicationGuideNavigationProps = {
   drawerTitle: string;
   browseLabel?: string;
   closeLabel?: string;
+  tasksLabel?: string;
 };
 
 function Chevron({ className }: { className?: string }) {
@@ -62,6 +64,7 @@ export default function ApplicationGuideNavigation({
   drawerTitle,
   browseLabel = "Browse",
   closeLabel = "Close application guides",
+  tasksLabel = "tasks",
 }: ApplicationGuideNavigationProps) {
   const panelId = `${id}-panel`;
   const panelTitleId = `${id}-panel-title`;
@@ -200,6 +203,7 @@ export default function ApplicationGuideNavigation({
           >
             <Link
               href={overview.href}
+              hrefLang={overview.hrefLang}
               prefetch={false}
               className={styles.navOverview}
               aria-current={currentHref === overview.href ? "page" : undefined}
@@ -213,11 +217,12 @@ export default function ApplicationGuideNavigation({
               const childrenId = `${id}-${group.id}-children`;
               const parentClassName = `${styles.navParent}${branchActive ? ` ${styles.branchActive}` : ""}`;
               const childLinks = hasChildren ? (
-                <div className={styles.navChildren} id={childrenId} aria-label={desktopGroupToggles ? group.label : `${group.label} tasks`}>
+                <div className={styles.navChildren} id={childrenId} aria-label={desktopGroupToggles ? group.label : `${group.label} ${tasksLabel}`}>
                   {group.children.map((entry) => (
                     <Link
                       key={entry.href}
                       href={entry.href}
+                      hrefLang={entry.hrefLang}
                       prefetch={false}
                       className={styles.navChild}
                       aria-current={entry.href === currentHref ? "page" : undefined}
@@ -245,12 +250,13 @@ export default function ApplicationGuideNavigation({
                   <div className={styles.navParentRow}>
                     <Link
                       href={group.overview.href}
+                      hrefLang={group.overview.hrefLang}
                       prefetch={false}
                       className={parentClassName}
                       data-has-children={hasChildren ? "true" : undefined}
                       aria-current={currentHref === group.overview.href ? "page" : undefined}
                     >
-                      <span>{group.label}</span>
+                      <span>{group.overview.hrefLang ? group.overview.label : group.label}</span>
                     </Link>
                     {hasChildren ? <button
                       type="button"

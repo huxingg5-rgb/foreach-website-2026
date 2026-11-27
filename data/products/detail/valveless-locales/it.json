@@ -1,0 +1,341 @@
+{
+  "category": {
+    "title": "Pompe dosatrici di precisione a pistone senza valvole",
+    "metaDescription": "Scopri le pompe dosatrici FOREACH RPL e DRPL a pistone senza valvole per dispensazione di reagenti, titolazione, riempimento e diluizione. Confronta cilindrate, rapporti e materiali a contatto con il fluido.",
+    "paragraphs": [
+      "Le pompe dosatrici di precisione FOREACH a pistone senza valvole aspirano ed erogano il liquido mediante il moto rotatorio e alternativo di un pistone ceramico. Sono adatte alla dispensazione di reagenti, all'erogazione di titolante, al riempimento e alla preparazione in proporzione in strumenti analitici automatici, apparecchiature di laboratorio e sistemi di dispensazione. Le pompe RPL a una testa alimentano un circuito. Le DRPL a due teste erogano due liquidi secondo un rapporto volumetrico definito.",
+      "La denominazione dipende dal compito fluidico. La stessa pompa può erogare reagenti o titolanti oppure riempire contenitori. Nella diluizione di concentrati e nella preparazione di tamponi, la configurazione a due teste eroga concentrato e diluente nelle proporzioni previste. In tutti questi casi il principio di funzionamento rimane lo stesso.",
+      "La serie RPL copre le gamme di cilindrata di 12–80 μL/giro, 50–300 μL/giro e 300–1200 μL/giro. RPL-P6.35 e RPL-P15 consentono di regolare meccanicamente la cilindrata. La velocità del motore permette di adattare la portata. La cilindrata per giro, il [volume per erogazione](/en/resources/technical-articles/rpl-valveless-metering-pump-selection-guide/) e la portata al minuto sono grandezze distinte. Verifica accuratezza e ripetibilità con il liquido, la contropressione e la sequenza effettivi.",
+      "La serie DRPL offre rapporti volumetrici concentrato:diluente di 1:9 e 1:19 per la diluizione dei reagenti, la preparazione dei tamponi e il dosaggio proporzionale. Specifica il volume da erogare da ciascun circuito, il rapporto e il tempo di ciclo. La pompa eroga i due liquidi. Raccordi e dispositivi di miscelazione a valle determinano l'omogeneità della soluzione.",
+      "RPL-P6.35 usa una testata in polivinilidenfluoruro (PVDF) e un gruppo ceramico in biossido di zirconio (ZrO₂). RPL-P15 usa una testata in polivinilidenfluoruro (PVDF) e un gruppo ceramico in ossido di alluminio (Al₂O₃). Verifica la compatibilità di ogni componente a contatto con il reagente e il liquido di lavaggio. Prevedi la pulizia in caso di cristallizzazione o residui. Attacchi, comando dell'azionamento e montaggio dipendono dal modello e dalla configurazione.",
+      "Indica il volume di erogazione o la portata richiesta, il tempo di ciclo, la composizione del liquido, la contropressione e lo spazio di installazione. Per le preparazioni in proporzione, indica anche il rapporto volumetrico obiettivo e il volume da erogare da ciascun circuito, così da valutare la configurazione."
+    ]
+  },
+  "single": {
+    "title": "Pompe dosatrici RPL a pistone senza valvole a una testa",
+    "paragraphs": [
+      "Le pompe FOREACH RPL a una testa dosano il liquido in un singolo circuito di strumenti analitici, titolatori, moduli di dispensazione e sistemi di riempimento per reagenti. RPL-P4, RPL-P6.35 e RPL-P15 coprono rispettivamente 12–80 μL/giro, 50–300 μL/giro e 300–1200 μL/giro. Scegli la cilindrata in funzione del [volume da erogare e del tempo di ciclo](/en/resources/technical-articles/rpl-valveless-metering-pump-selection-guide/).",
+      "A seconda dell'applicazione, una pompa RPL può dosare reagenti, titolanti o tamponi, oppure effettuare riempimenti volumetrici. RPL-P4 è destinata a piccoli volumi, RPL-P6.35 alla dispensazione di reagenti e titolanti e RPL-P15 al riempimento e all'alimentazione che richiedono un volume per giro maggiore.",
+      "RPL-P6.35 e RPL-P15 consentono di regolare meccanicamente la cilindrata e di scegliere la velocità del motore in base alla portata. Determina separatamente la dose minima affidabile. Verifica l'erogazione con il liquido, la contropressione e la sequenza di dosaggio previsti dal sistema.",
+      "RPL-P6.35 usa una testata in polivinilidenfluoruro (PVDF), un gruppo ceramico in biossido di zirconio (ZrO₂) e un attacco del circuito di processo 1/4-28 UNF-2B. RPL-P15 usa una testata in polivinilidenfluoruro (PVDF), un gruppo ceramico in ossido di alluminio (Al₂O₃) e un attacco del circuito di processo G1/8. Verifica i requisiti di lavaggio, collegamento dei tubi e montaggio."
+    ]
+  },
+  "dual": {
+    "title": "Pompe dosatrici DRPL a pistone senza valvole a due teste",
+    "paragraphs": [
+      "Le pompe FOREACH DRPL a due teste erogano due liquidi in proporzione in moduli di diluizione per analizzatori, apparecchiature di laboratorio e sistemi di preparazione di reagenti. DRPL-0109 e DRPL-0119 forniscono rispettivamente rapporti volumetrici concentrato:diluente di 1:9 e 1:19.",
+      "A seconda del compito, questa configurazione può svolgere le funzioni di una pompa di diluizione per concentrati, di una pompa proporzionatrice o di una pompa dosatrice a due canali. Eroga concentrato e diluente nelle proporzioni richieste per diluire reagenti, preparare tamponi e dosare in proporzione.",
+      "Il rapporto 1:9 indica una parte di concentrato e nove di diluente. Il rapporto 1:19 indica una parte di concentrato e diciannove di diluente. Definisci l'erogazione dei due circuiti, il volume totale e il tempo di ciclo. Verifica l'omogeneità con la configurazione di miscelazione a valle della pompa.",
+      "Fornisci composizione, viscosità, condizioni all'ingresso e contropressione all'uscita di ciascun liquido, oltre a rapporto, tubi, comandi dell'azionamento e spazio disponibile. Verifica separatamente la configurazione e i materiali a contatto con il fluido per entrambi i circuiti."
+    ]
+  },
+  "materials": {
+    "pvdf": "polivinilidenfluoruro (PVDF)",
+    "alumina": "ossido di alluminio (Al₂O₃)",
+    "zirconia": "biossido di zirconio (ZrO₂)"
+  },
+  "cards": {
+    "p4": "P4 · Pompa miniaturizzata a pistone senza valvole per la dispensazione di reagenti negli analizzatori",
+    "p635": "P6.35 · Pompa OEM a pistone rotante senza valvole per la manipolazione dei liquidi in laboratorio",
+    "p15": "P15 · Pompa dosatrice a pistone ceramico per il riempimento di reagenti nelle scienze della vita",
+    "dual9": "DRPL-0109 · Pompa a pistone ceramico a due teste per la diluizione di reagenti IVD",
+    "dual19": "DRPL-0119 · Pompa a pistone a due teste per il dosaggio proporzionale in laboratorio"
+  },
+  "introductions": {
+    "p4": {
+      "title": "RPL-P4 · Pompa miniaturizzata a pistone senza valvole per la dispensazione di reagenti negli analizzatori",
+      "paragraphs": [
+        "RPL-P4 è una pompa dosatrice miniaturizzata a pistone ceramico senza valvole per dispensare reagenti in analizzatori IVD e di chimica clinica, dosare titolante e riempire fiale e provette di reagenti con piccoli volumi. La cilindrata è di 12–80 μL/giro, la velocità di esercizio di 5–300 rpm e la portata di 0.06–24 mL/min.",
+        "Il pistone ceramico ruota e si muove alternativamente nel cilindro, collegando la camera di pompaggio all'ingresso e all'uscita a turno. Un unico meccanismo eroga il fluido e commuta gli attacchi, eliminando le valvole di ritegno separate all'ingresso e all'uscita e la relativa manutenzione. La bassa cilindrata è adatta all'erogazione di piccoli volumi. Cilindrata e numero di giri determinano la dose teorica, mentre la velocità determina il tempo di erogazione.",
+        "La configurazione illustrata ha una testata in polivinilidenfluoruro (PVDF) e un gruppo pistone-cilindro in ossido di alluminio (Al₂O₃). Gli attacchi 1/4-28 UNF-2B accettano raccordi a fondo piatto e collegamenti per tubo compatibili. Le dimensioni di 57 × 57 × 115 mm e il peso di 500 g consentono l'integrazione nei moduli di dispensazione quando lo spazio è limitato."
+      ],
+      "commonApplications": [
+        "Analizzatori automatici per dispensare e dosare piccoli volumi di reagenti",
+        "Titolatori automatici per erogare titolante e dosare in incrementi successivi",
+        "Sistemi di riempimento da laboratorio per fiale e provette di reagenti"
+      ],
+      "metaDescription": "RPL-P4 è una pompa dosatrice a pistone ceramico senza valvole da 12–80 μL/giro per dispensare piccoli volumi di reagenti e titolare. Testata in PVDF e gruppo ceramico in allumina."
+    },
+    "p635": {
+      "title": "RPL-P6.35 · Pompa OEM a pistone rotante senza valvole per la manipolazione dei liquidi in laboratorio",
+      "paragraphs": [
+        "RPL-P6.35 è una pompa dosatrice a pistone ceramico senza valvole a una testa, con cilindrata regolabile meccanicamente da 50 a 300 μL/giro. A 5–300 rpm eroga 0.25–90 mL/min. È indicata per dispensare e dosare in sequenza reagenti negli analizzatori, alimentare titolanti e riempire volumetricamente provette e flaconi.",
+        "Il moto rotatorio e alternativo del pistone provvede all'aspirazione, alla mandata e alla commutazione degli attacchi senza valvole di ritegno separate. La regolazione meccanica cambia la corsa del pistone e la cilindrata. Il numero di giri determina la dose teorica e la velocità il tempo di erogazione. Per apparecchiature con più volumi di riempimento, scegliere la cilindrata in base al volume e al tempo di ciclo, poi calibrare l'erogazione a quel valore.",
+        "La configurazione illustrata abbina testata e tappi in polivinilidenfluoruro (PVDF) a un gruppo pistone-cilindro in biossido di zirconio (ZrO₂). Gli attacchi di processo e lavaggio sono entrambi 1/4-28 UNF-2B. Il circuito di lavaggio separato consente di sciacquare la zona del pistone quando si usano reagenti con sali o liquidi soggetti a cristallizzazione. Le dimensioni complessive sono 78 × 78 × 145 mm, per un peso di 750 g. La pompa si integra in analizzatori e moduli automatici di dispensazione."
+      ],
+      "commonApplications": [
+        "Analizzatori automatici per la dispensazione di reagenti e il dosaggio in più fasi",
+        "Titolatori di laboratorio per l'erogazione e il dosaggio di titolante",
+        "Sistemi di riempimento per dosare volumetricamente reagenti in provette e flaconi"
+      ],
+      "metaDescription": "RPL-P6.35 è una pompa dosatrice senza valvole da 50–300 μL/giro per dispensare reagenti, titolare e riempire. Testata in PVDF, gruppo ceramico in zirconia e attacchi di lavaggio del pistone."
+    },
+    "p15": {
+      "title": "RPL-P15 · Pompa dosatrice a pistone ceramico per il riempimento di reagenti nelle scienze della vita",
+      "paragraphs": [
+        "RPL-P15 è una pompa dosatrice a pistone ceramico senza valvole per volumi di erogazione maggiori e portate più elevate. La cilindrata regolabile meccanicamente di 300–1200 μL/giro e la velocità di 5–300 rpm danno una portata di 1.5–360 mL/min. Le applicazioni tipiche includono riempimento di flaconi di reagenti diagnostici, dispensazione di tamponi, reintegro dei serbatoi e alimentazione dosata degli strumenti analitici.",
+        "Il moto rotatorio e alternativo del pistone ceramico aspira il liquido, lo eroga e commuta gli attacchi senza valvole di ritegno separate. Una cilindrata maggiore riduce il numero di giri richiesto per lo stesso riempimento. Ad esempio, 10 giri a 1000 μL/giro danno un volume teorico di 10 mL. Per adattare il volume di riempimento si modifica il numero di giri o la cilindrata, quindi si calibra l'erogazione con il ciclo richiesto.",
+        "La configurazione illustrata abbina testata e tappi in polivinilidenfluoruro (PVDF) a un gruppo pistone-cilindro in ossido di alluminio (Al₂O₃). Gli attacchi di processo G1/8 collegano il circuito del fluido di lavoro. Gli attacchi di lavaggio 1/4-28 UNF-2B consentono il risciacquo attorno al pistone, limitando residui e cristallizzazione. La pompa misura 78 × 78 × 160 mm e pesa 900 g."
+      ],
+      "commonApplications": [
+        "Sistemi per il riempimento volumetrico di flaconi di reagenti",
+        "Postazioni di preparazione in laboratorio per dispensare tamponi premiscelati e reintegrare serbatoi",
+        "Moduli per l'alimentazione dosata di liquidi negli strumenti analitici"
+      ],
+      "metaDescription": "RPL-P15 è una pompa dosatrice senza valvole da 300–1200 μL/giro per il riempimento di reagenti e la dispensazione di tamponi. Testata in PVDF, gruppo ceramico in allumina e attacchi per il lavaggio del pistone."
+    },
+    "dual9": {
+      "title": "DRPL-0109 · Pompa a pistone ceramico a due teste per la diluizione di reagenti IVD",
+      "paragraphs": [
+        "DRPL-0109 è una pompa dosatrice a pistone ceramico senza valvole a due teste che eroga concentrato e diluente in rapporto volumetrico 1:9. La configurazione illustrata eroga 100 μL + 900 μL per giro. A 60–300 rpm, la portata complessiva è di 60–300 mL/min. È destinata alla diluizione di reagenti e soluzioni di lavaggio concentrate nello strumento, alla preparazione di tamponi a rapporto fisso e al dosaggio proporzionale nella produzione di reagenti.",
+        "Un azionamento comune muove entrambe le testate ed evita di dover sincronizzare due motori indipendenti. Ogni pistone ceramico dosa il proprio liquido con un moto rotatorio e alternativo. La velocità varia la portata complessiva, mentre le cilindrate impostate determinano il rapporto volumetrico nominale. Una parte di concentrato e nove di diluente consentono di ottenere una soluzione di lavoro 1× da una formulazione 10× compatibile. La miscelazione avviene a valle.",
+        "Il canale A ha attacchi di processo 1/4-28 UNF-2B. Il canale B ha attacchi G1/8 con raccordi a innesto rapido metallici di serie. Entrambi hanno attacchi di lavaggio 1/4-28 UNF-2B. Il gruppo misura 180 × 83.7 × 75 mm. Collegare le uscite ai componenti di confluenza e miscelazione a valle, calibrare i due canali separatamente e verificare concentrazione e omogeneità della soluzione preparata."
+      ],
+      "commonApplications": [
+        "Analizzatori automatici per la diluizione in linea dei reagenti con rapporto concentrato:diluente 1:9",
+        "Apparecchiature di laboratorio per preparare tamponi a rapporto fisso",
+        "Postazioni di produzione di reagenti per il dosaggio proporzionale di due liquidi in lotti"
+      ],
+      "metaDescription": "DRPL-0109 è una pompa dosatrice senza valvole a due teste per il dosaggio di concentrato e diluente in rapporto 1:9. Scopri i requisiti di diluizione, preparazione dei tamponi e miscelazione."
+    },
+    "dual19": {
+      "title": "DRPL-0119 · Pompa a pistone a due teste per il dosaggio proporzionale in laboratorio",
+      "paragraphs": [
+        "DRPL-0119 è una pompa dosatrice a pistone ceramico senza valvole a due teste per la diluizione di concentrati in rapporto volumetrico 1:19. La configurazione illustrata eroga 60 μL + 1140 μL per giro. A 60–300 rpm, la portata complessiva è di 72–360 mL/min. È indicata per diluire reagenti 20× e concentrati di lavaggio negli analizzatori, preparare soluzioni di lavoro in laboratorio e dosare due liquidi a rapporto fisso.",
+        "Le due testate condividono un azionamento. I pistoni ceramici dosano i due liquidi con un moto rotatorio e alternativo. Il rapporto 1:19 combina una parte di concentrato con diciannove di diluente per le formulazioni da diluire da 20× alla concentrazione d'uso. A parità di volume finale e concentrazione obiettivo, una formulazione 20× usa metà del volume di concentrato di una formulazione 10×. Ciò permette di ridurre le dimensioni del serbatoio o, a parità di capacità, prolungare l'intervallo tra i rifornimenti.",
+        "Il canale A ha attacchi di processo 1/4-28 UNF-2B. Il canale B ha attacchi G1/8 con raccordi a innesto rapido metallici di serie. Entrambi hanno attacchi di lavaggio 1/4-28 UNF-2B. Il gruppo misura 180 × 83.7 × 75 mm, come DRPL-0109. Con soli 60 μL di concentrato per giro, occorre calibrare i canali singolarmente per verificare il rapporto di diluizione. La miscelazione a valle e la sequenza di preparazione determinano l'omogeneità."
+      ],
+      "commonApplications": [
+        "Analizzatori automatici per la diluizione dei reagenti con rapporto concentrato:diluente 1:19",
+        "Sistemi di preparazione in laboratorio per soluzioni di lavoro a rapporto fisso",
+        "Postazioni di preparazione di reagenti per l'erogazione proporzionale di concentrato e diluente in lotti"
+      ],
+      "metaDescription": "DRPL-0119 è una pompa dosatrice senza valvole a due teste per il dosaggio di concentrato e diluente in rapporto 1:19. Scopri la diluizione e la preparazione di soluzioni di lavoro a rapporto fisso."
+    }
+  },
+  "intros": {
+    "p4": "RPL-P4 dosa piccoli volumi in un solo circuito. Lo stesso meccanismo può dispensare reagenti, dosare titolante o eseguire riempimenti volumetrici secondo l'applicazione. Negli esempi seguenti contano volume della dose, sequenza operativa e tempi.",
+    "p635": "RPL-P6.35 dispensa e riempie con reagenti in un unico circuito. La denominazione può variare con il compito, dalla dispensazione di reagenti all'erogazione di titolante o al riempimento. Ha una gamma di cilindrate più alta di RPL-P4. Sceglierla in funzione di volume e tempo richiesti.",
+    "p15": "RPL-P15 risponde alle esigenze di erogazione e riempimento con un volume per giro maggiore. Può riempire contenitori di reagenti, dispensare tamponi o alimentare lo strumento con una portata dosata. Nel riempimento si controlla il volume per contenitore, nell'alimentazione continua il volume per unità di tempo. Il reintegro del serbatoio va coordinato con il controllo di livello.",
+    "dual": "{{model}} prepara due liquidi con un rapporto volumetrico concentrato:diluente di {{ratio}}. Può svolgere le funzioni di pompa di diluizione dei concentrati, pompa proporzionatrice o pompa dosatrice a due canali. {{ratio}} indica il rapporto tra i volumi dei due liquidi. Il volume finale comprende anche il concentrato, oltre alle {{parts}} parti di diluente. Il rapporto è indipendente dalla velocità impostata."
+  },
+  "reagentSetup": {
+    "p4": "Mettere in servizio il circuito adescandolo e rimuovendo l'aria. Fissare cilindrata e numero di cicli, raccogliere dosi ripetute e correggere l'erogazione. Confrontare la dispensazione in continuo con la prima dose dopo una sosta. Se questa differisce, controllare bolle, gocce sulla punta e arretramento del liquido. Alimentare un reagente da un serbatoio e aspirare un campione da trasferire sono operazioni distinte.",
+    "p635": "L'adescamento del circuito di processo stabilizza la colonna di liquido. Il lavaggio nella zona del pistone rimuove i residui mediante un circuito dedicato. Per reagenti salini o soggetti a cristallizzazione, scegliere un liquido di lavaggio e una sequenza di arresto compatibili. La presenza di un attacco di lavaggio non garantisce compatibilità con tutti i liquidi corrosivi."
+  },
+  "applications": {
+    "reagent": {
+      "title": "Dispensazione di reagenti per l'analisi automatica e la diagnostica in vitro",
+      "paragraphs": [
+        "Negli analizzatori automatici e nei circuiti per reagenti di diagnostica in vitro (IVD), il liquido va dal flacone al recipiente di reazione passando per pompa, tubo e punta di dispensazione. Il componente può essere indicato come pompa di dispensazione o pompa dosatrice per reagenti. Definire volume e tempo disponibili per ogni fase dell'analisi, oltre alla portata al minuto.",
+        "La cilindrata e il numero di giri completi determinano la dose nominale. Ad esempio, {{exampleQ}} μL/giro × 5 giri = {{exampleDose}} μL. A 150 rpm costanti occorrono 2 secondi, esclusi accelerazione, arresto e altri movimenti della macchina. È un calcolo di dimensionamento. Misurare l'erogazione e ricalibrarla dopo ogni modifica della cilindrata.",
+        "{{reagentSetup}}"
+      ]
+    },
+    "titration": {
+      "title": "Dosaggio incrementale del titolante nella titolazione automatica",
+      "paragraphs": [
+        "Nei titolatori da laboratorio, la pompa eroga titolante nel recipiente sotto il controllo dello strumento. La sequenza prevede aggiunta, miscelazione e risposta dell'elettrodo, poi la decisione sull'aggiunta successiva. La pompa eroga il liquido e lo strumento rileva il punto finale.",
+        "Indicare separatamente la velocità iniziale di erogazione e il minimo incremento affidabile in prossimità del punto finale. A cilindrata e numero di giri completi costanti, ridurre la velocità aumenta soprattutto il tempo di erogazione. {{minimum}} μL/giro è il limite inferiore della cilindrata. Determinare sperimentalmente il minimo incremento di titolazione, senza dedurlo dividendo quel valore per i passi del motore.",
+        "Raccogliere e misurare più volte gli incrementi obiettivo con titolante, punta e tubo effettivi. Controllare le gocce residue dopo l'arresto e prevedere il tempo per miscelare e stabilizzare la lettura. Posizionamento dell'azionamento, avvio e arresto devono rispettare la sequenza. Verificare l'accuratezza analitica del titolatore completo."
+      ]
+    },
+    "smallfill": {
+      "title": "Riempimento di piccoli contenitori nella produzione di reagenti e nella dispensazione in laboratorio",
+      "paragraphs": [
+        "In una postazione per fiale o provette di reagenti, RPL-P4 può funzionare come pompa di riempimento o di dispensazione volumetrica. Dopo l'erogazione dalla punta, lo strumento posiziona il contenitore successivo. Misurare il volume effettivo per contenitore durante il funzionamento continuo e dopo le soste.",
+        "Suddividere il tempo di ciclo in erogazione della pompa, posizionamento del contenitore, movimento della punta e stabilizzazione. Nell'esempio da 400 μL a 80 μL/giro e 150 rpm, i 2 secondi riguardano soltanto il funzionamento teorico della pompa. La produttività di 30 flaconi al minuto va verificata. Se il ciclo è troppo lungo, valutare insieme cilindrata, velocità e movimenti della postazione.",
+        "Misurare separatamente i riempimenti iniziali, quelli consecutivi e il primo dopo una sosta. Per una verifica gravimetrica, convertire la massa in volume usando la densità del liquido alla temperatura di prova e una bilancia adatta. Con liquidi schiumogeni o che bagnano le pareti, verificare anche la ritenzione sulla punta e il distacco completo della goccia nel contenitore."
+      ]
+    },
+    "midfill": {
+      "title": "Postazioni di riempimento da microlitri a millilitri per la dispensazione di reagenti",
+      "paragraphs": [
+        "Nel riempimento ripetuto di provette e flaconi, RPL-P6.35 può essere usata per il riempimento di reagenti o per la dispensazione di liquidi. Un riempimento può sommare uno o più cicli completi, superando la cilindrata di un singolo giro. Coordinare l'erogazione con il posizionamento del contenitore e il movimento della punta.",
+        "Ad esempio, a 200 μL/giro servono 5 giri per un riempimento nominale di 1 mL. A 150 rpm costanti, il tempo teorico di funzionamento della pompa è di 2 secondi. Per calcolare il ciclo della postazione, aggiungere il posizionamento, il movimento della punta e la stabilizzazione. Verificare sperimentalmente produttività e accuratezza.",
+        "Provare i riempimenti consecutivi e quelli dopo il riavvio con tubo e punta previsti. Verificare gocciolamento e schiuma. Controllare la compatibilità della testata in polivinilidenfluoruro (PVDF) e del gruppo ceramico in biossido di zirconio (ZrO₂) con reagente e liquido di lavaggio, insieme a raccordi, tubi e altri componenti a contatto."
+      ]
+    },
+    "largefill": {
+      "title": "Riempimento volumetrico di flaconi nella produzione di reagenti diagnostici",
+      "paragraphs": [
+        "Nella produzione di reagenti o nel confezionamento in laboratorio, il liquido passa dal serbatoio di alimentazione alla pompa e alla punta, quindi entra in ciascun flacone. Valutare RPL-P15 come pompa di riempimento per reagenti o di dispensazione volumetrica. Bilanciare volume per contenitore e tempo di ciclo. Al variare della cilindrata cambia il numero di giri per lo stesso volume.",
+        "Ad esempio, per un riempimento nominale di 5 mL a 1000 μL/giro servono 5 giri completi. A 150 rpm costanti, il tempo teorico della pompa è di 2 secondi. A questo si aggiungono posizionamento del contenitore, accelerazione, arresto e movimento della punta. Verificare separatamente la produttività della linea e calibrare il volume erogato all'uscita.",
+        "Prima di aumentare la velocità, controllare alimentazione all'ingresso, restrizione della punta e distacco della goccia. Per i liquidi schiumogeni valutare anche altezza e movimento durante l'erogazione. Misurare i riempimenti consecutivi e il primo dopo una sosta per verificare l'intera postazione."
+      ]
+    },
+    "buffer": {
+      "title": "Dispensazione e reintegro dei tamponi in laboratorio",
+      "paragraphs": [
+        "Una pompa può distribuire tampone premiscelato nei contenitori oppure reintegrare un serbatoio intermedio. La preparazione del tampone da due liquidi è un'operazione distinta. RPL-P15 a una testa dosa un singolo liquido, perciò per controllare il rapporto concentrato:diluente serve un altro circuito.",
+        "Per erogazioni ripetute, abbinare volume, cilindrata e numero di cicli. Nel reintegro di un serbatoio, una misura del livello o un comando dello strumento determina avvio e arresto. Prevedere nel progetto il rilevamento del livello, la protezione dal funzionamento a secco e quella dal traboccamento.",
+        "Con tamponi contenenti sali, prevedere un risciacquo compatibile all'arresto per limitare l'essiccazione dei residui e la cristallizzazione attorno al pistone. L'attacco di processo G1/8 e quello di lavaggio 1/4-28 UNF-2B appartengono a circuiti distinti. Collegarli secondo il disegno della configurazione e verificare l'eventuale ingresso d'aria dopo il reintegro."
+      ]
+    },
+    "continuous": {
+      "title": "Alimentazione continua dosata degli strumenti analitici",
+      "paragraphs": [
+        "Se lo strumento richiede alimentazione prolungata, valutare RPL-P15 come pompa dosatrice o di alimentazione quantitativa. Per l'erogazione continua contano portata media, durata di esercizio e tolleranza del processo a valle alle fluttuazioni di portata.",
+        "Stimare la portata media nominale moltiplicando la cilindrata per la velocità di rotazione. Ad esempio, 500 μL/giro × 120 rpm = 60000 μL/min, pari a 60 mL/min. È una media. Misurare separatamente la portata istantanea con il liquido e la contropressione effettivi.",
+        "Misurare il volume raccolto in un intervallo definito alla resistenza effettiva in uscita. Verificare l'effetto delle pulsazioni sul processo a valle. Se si aggiunge un miscelatore o un'altra restrizione, controllare nuovamente contropressione e alimentazione all'ingresso. L'assenza di valvole non garantisce portata priva di pulsazioni né funzionamento continuo senza limiti."
+      ]
+    },
+    "dilution": {
+      "title": "Diluizione del concentrato negli analizzatori automatici",
+      "paragraphs": [
+        "Un circuito aspira il concentrato e l'altro il diluente. I flussi confluiscono e si miscelano prima del serbatoio della soluzione di lavoro. Per questo compito, {{model}} può essere specificata come pompa di diluizione di concentrati o reagenti. La pompa eroga i liquidi nelle proporzioni richieste e la miscelazione a valle determina l'omogeneità.",
+        "Il rapporto {{ratio}} indica una parte di concentrato e {{parts}} parti di diluente. Se i volumi sono additivi, il diluente è privo del soluto di interesse e non avvengono reazioni, il volume totale è {{factor}} volte quello del concentrato e la concentrazione del soluto diventa 1/{{factor}} di quella iniziale. La configurazione di {{concentrate}} μL + {{diluent}} μL eroga nominalmente {{total}} mL. Verificare la concentrazione misurando le erogazioni e analizzando il liquido preparato.",
+        "Adescare e rimuovere l'aria da entrambi i circuiti prima di valutare il liquido in ingresso al miscelatore, in particolare dopo l'avvio o il cambio di liquido. Un serbatoio vuoto o delle bolle in un circuito possono alterare la concentrazione anche se il volume totale sembra corretto. Misurare separatamente l'erogazione di ogni circuito prima di valutare la soluzione miscelata."
+      ]
+    },
+    "preparation": {
+      "title": "Diluizione dei tamponi a rapporto fisso in laboratorio e nella preparazione di reagenti",
+      "paragraphs": [
+        "Nelle apparecchiature di preparazione, un componente che combina concentrato e diluente può essere chiamato pompa per la preparazione di tamponi o pompa proporzionatrice. Scegliere {{model}} in base alla formulazione se questa richiede il rapporto volumetrico {{ratio}}.",
+        "Ad esempio, un lotto nominale di 100 mL al rapporto {{ratio}} richiede {{batchConcentrate}} mL di concentrato e {{batchDiluent}} mL di diluente. Sono quantità calcolate dalla formulazione. Verificare il liquido preparato rispetto ai requisiti di forza ionica, acidità e stato di dissoluzione.",
+        "Le proporzioni corrette vanno accompagnate da una miscelazione adeguata. Scegliere raccordo di confluenza, miscelatore e serbatoio in base al volume del lotto, ai tempi di erogazione e al tempo di permanenza. Provare le miscele soggette a precipitazione o schiuma. Verificare la compatibilità di tutti i componenti dei due circuiti, oltre al pistone ceramico."
+      ]
+    },
+    "batch": {
+      "title": "Dosaggio proporzionale in lotti nella produzione di reagenti",
+      "paragraphs": [
+        "Quando due liquidi entrano in un recipiente di preparazione in rapporto fisso, {{model}} può essere definita pompa proporzionatrice o pompa dosatrice a due canali. Specificare rapporto, volume totale del lotto e tempo massimo di preparazione. Il riempimento dei flaconi con il liquido preparato è un'operazione separata a valle della pompa a due teste.",
+        "Variare nella stessa misura l'erogazione di entrambi i circuiti lascia invariato il loro rapporto. La sola regolazione della velocità non consente di passare da 1:9 a 1:19. Per un'altra formulazione, rivalutare configurazione delle testate e cilindrate. All'avvio e all'arresto del lotto, considerare i volumi dei circuiti, i tempi di arrivo al miscelatore e i residui.",
+        "Gli attacchi di processo illustrati sono 1/4-28 UNF-2B per il reagente A e G1/8 per il reagente B. Entrambi gli attacchi di lavaggio sono 1/4-28 UNF-2B. Verificare l'assegnazione dei liquidi ai canali A e B sul disegno della configurazione. Controllare separatamente pressione e condizioni di alimentazione di entrambi i circuiti."
+      ]
+    }
+  },
+  "modelFaqs": {
+    "p635": [
+      {
+        "question": "Come scegliere tra RPL-P6.35 e RPL-P4?",
+        "answer": "Le gamme di cilindrata sono rispettivamente 50–300 μL/giro e 12–80 μL/giro. Stimare cilindrata e giri partendo da dose obiettivo e tempo disponibile. Confrontare poi l'erogazione delle piccole dosi e le opzioni di azionamento. Verificare l'accuratezza di ciascuna configurazione."
+      },
+      {
+        "question": "Su cosa agiscono la regolazione della cilindrata e la velocità del motore?",
+        "answer": "La regolazione meccanica modifica il volume nominale per giro completo. La velocità del motore varia il numero di giri per unità di tempo. Stimare la dose come cilindrata × numero di giri e la portata media come cilindrata × velocità. Calibrare poi l'erogazione effettiva."
+      },
+      {
+        "question": "Che differenza c'è tra gli attacchi di lavaggio e quelli di processo?",
+        "answer": "Nella configurazione illustrata, entrambi hanno filettatura 1/4-28 UNF-2B. Gli attacchi di processo portano il reagente in ingresso e in uscita dalla pompa. Quelli di lavaggio consentono il risciacquo attorno al pistone. Attenersi al disegno della configurazione fornita e mantenere separati i due circuiti."
+      }
+    ],
+    "p15": [
+      {
+        "question": "Qual è la differenza tra RPL-P15 e RPL-P6.35?",
+        "answer": "Le gamme di cilindrata sono rispettivamente 300–1200 μL/giro e 50–300 μL/giro. RPL-P15 è adatta al riempimento e all'alimentazione con volumi maggiori. Confrontare il volume di riempimento, il tempo di erogazione e i requisiti per piccole dosi, oltre alla portata."
+      },
+      {
+        "question": "300–1200 μL/giro indica la portata?",
+        "answer": "Il valore indica la cilindrata per giro. La portata dipende anche dalla velocità. Ad esempio, 500 μL/giro × 120 rpm forniscono una portata media nominale di 60 mL/min. Calibrare la portata con il liquido e la contropressione effettivi e misurare separatamente le pulsazioni."
+      },
+      {
+        "question": "RPL-P15 può preparare da sola una miscela di due liquidi?",
+        "answer": "La pompa a una testa dosa o dispensa un liquido. Per preparare due liquidi in proporzione occorrono un altro circuito e un comando adeguato. Per rapporti concentrato:diluente fissi di 1:9 o 1:19 si può valutare una configurazione DRPL a due teste."
+      }
+    ]
+  },
+  "faqSingle": [
+    {
+      "question": "Come si collegano le denominazioni d'uso alla pompa dosatrice senza valvole?",
+      "answer": "Pompa dosatrice senza valvole descrive il meccanismo e la funzione di dosaggio. Pompa per dispensazione di reagenti, per dosaggio di titolante o per riempimento descrivono compiti nello strumento. Per ciascun compito si possono usare meccanismi differenti."
+    },
+    {
+      "question": "{{range}} è il volume di ogni erogazione?",
+      "answer": "È la cilindrata per giro. Per giri completi, moltiplicare la cilindrata impostata per il numero di giri per stimare la dose nominale, poi calibrare all'uscita. Verificare sperimentalmente la dose minima affidabile e l'erogazione in corrispondenza di eventuali frazioni di giro."
+    },
+    {
+      "question": "Ridurre la velocità del motore diminuisce la dose?",
+      "answer": "A cilindrata e numero di giri completi costanti, una velocità inferiore aumenta soprattutto il tempo di erogazione. Per una dose minore servono cilindrata e comando adeguati. Analogamente, la portata media si stima moltiplicando la cilindrata per la velocità, ma l'erogazione effettiva va verificata con il liquido e il circuito reali."
+    },
+    {
+      "question": "Quali materiali e attacchi sono illustrati per {{model}}?",
+      "answer": "{{materialDetails}} Verificare la compatibilità del reagente e del liquido di lavaggio con tutti i componenti a contatto con il fluido. Confermare azionamento, montaggio e interfacce della configurazione fornita."
+    },
+    {
+      "question": "Come usare i valori di accuratezza, pressione e durata?",
+      "answer": "Verificare definizioni e condizioni di prova, tra cui liquido, temperatura, cilindrata, velocità e contropressione. Confermare separatamente la contropressione di esercizio ammessa e valutare la durata nel ciclo effettivo. Il circuito completo dello strumento può comunque richiedere valvole di commutazione o di intercettazione."
+    }
+  ],
+  "faqDual": [
+    {
+      "question": "A quale fattore di diluizione corrisponde {{ratio}}?",
+      "answer": "È il rapporto volumetrico tra una parte di concentrato e {{parts}} parti di diluente. Se i volumi sono additivi, il diluente è privo del soluto di interesse e non avvengono reazioni, il volume finale è di {{factor}} parti e la concentrazione diventa 1/{{factor}} di quella del concentrato. Distinguere il rapporto tra i liquidi dal fattore di diluizione finale."
+    },
+    {
+      "question": "Qual è il volume erogato da {{model}} nella configurazione illustrata?",
+      "answer": "La configurazione illustrata eroga {{concentrate}} μL di concentrato più {{diluent}} μL di diluente, per un totale nominale di {{total}} mL. Verificare l'erogazione del lotto con l'azionamento e la sequenza effettivi e convalidare il minimo erogabile nelle condizioni previste."
+    },
+    {
+      "question": "Il dosaggio proporzionale garantisce anche la miscelazione?",
+      "answer": "La pompa determina il rapporto tra i liquidi erogati. L'omogeneità a valle dipende da raccordi di confluenza, miscelazione e stoccaggio. Misurare separatamente l'erogazione dei due circuiti e analizzare il liquido preparato. Il volume complessivo da solo non conferma il rapporto o la concentrazione."
+    },
+    {
+      "question": "La velocità può cambiare il rapporto da 1:9 a 1:19?",
+      "answer": "Variando entrambe le erogazioni dello stesso fattore, il loro rapporto resta invariato. Per ottenere un altro rapporto, verificare la configurazione delle testate e le cilindrate. La regolazione della velocità varia l'erogazione complessiva."
+    },
+    {
+      "question": "Come si specificano i due circuiti?",
+      "answer": "Gli attacchi di processo A e B illustrati sono rispettivamente 1/4-28 UNF-2B e G1/8. Entrambi gli attacchi di lavaggio sono 1/4-28 UNF-2B. Verificare i materiali a contatto di ciascun circuito nelle specifiche della configurazione. Confermare separatamente la contropressione di esercizio ammessa."
+    }
+  ],
+  "materialDetails": {
+    "p4": "La configurazione illustrata usa una testata in polivinilidenfluoruro (PVDF), un gruppo ceramico in ossido di alluminio (Al₂O₃) e un attacco di processo 1/4-28 UNF-2B.",
+    "p635": "La configurazione illustrata usa testata e tappo in polivinilidenfluoruro (PVDF), un gruppo ceramico in biossido di zirconio (ZrO₂) e attacchi di processo e lavaggio 1/4-28 UNF-2B. I due circuiti hanno la stessa filettatura e funzioni distinte.",
+    "p15": "La configurazione illustrata usa testata e tappo in polivinilidenfluoruro (PVDF), un gruppo ceramico in ossido di alluminio (Al₂O₃), un attacco di processo G1/8 e un attacco di lavaggio 1/4-28 UNF-2B."
+  },
+  "selectionSingle": "Indicare composizione del liquido, volume della dose o portata continua, tempo di erogazione ammesso, durata giornaliera, condizioni all'ingresso, contropressione all'uscita e requisiti dell'azionamento. Dimensionare cilindrata e tempi su questi dati. Verificare l'erogazione nel circuito effettivo e convalidare ogni applicazione nello strumento previsto.",
+  "selectionDual": "Indicare i due liquidi, rapporto volumetrico obiettivo, volume del lotto o portata totale, tempo di preparazione, condizioni all'ingresso e contropressione di ciascun circuito, oltre alla miscelazione a valle. Valutare separatamente erogazione proporzionale, controllo dello strumento e omogeneità. Le applicazioni indicate servono alla scelta e vanno convalidate nello strumento effettivo.",
+  "specs": {
+    "产品类型": "Tipo di prodotto",
+    "排量范围": "Cilindrata per giro",
+    "转速": "Velocità di rotazione",
+    "准确度": "Accuratezza",
+    "准确性": "Accuratezza",
+    "重复性": "Ripetibilità",
+    "耐压": "Pressione nominale",
+    "寿命": "Durata",
+    "泵头材质": "Materiale della testata",
+    "堵头材质": "Materiale del tappo",
+    "陶瓷套件": "Gruppo ceramico",
+    "工作液路接口": "Attacco del circuito di processo",
+    "清洗液路接口": "Attacco del circuito di lavaggio",
+    "整体尺寸": "Dimensioni complessive",
+    "重量": "Peso",
+    "配置方式": "Configurazione",
+    "稀释比": "Rapporto volumetrico concentrato:diluente",
+    "浓缩液份数": "Parti di concentrato",
+    "稀释液份数": "Parti di diluente",
+    "浓缩液定量（μL）": "Volume di concentrato (μL)",
+    "稀释液定量（μL）": "Volume di diluente (μL)",
+    "配液量（mL）": "Volume totale (mL)",
+    "流量 QMin，mL/min": "Portata minima QMin (mL/min)",
+    "流量 QMax，mL/min": "Portata massima QMax (mL/min)",
+    "试剂A 工作液路接口": "Attacco di processo del reagente A",
+    "试剂B 工作液路接口": "Attacco di processo del reagente B",
+    "试剂A 清洗液路接口": "Attacco di lavaggio del reagente A",
+    "试剂B 清洗液路接口": "Attacco di lavaggio del reagente B",
+    "试剂A 端耐压": "Pressione nominale lato reagente A",
+    "试剂B 端耐压": "Pressione nominale lato reagente B",
+    "尺寸/mm": "Dimensioni (mm)"
+  },
+  "customConfiguration": "Configurazione personalizzata",
+  "metalFitting": "G1/8 (raccordo a innesto rapido metallico di serie)",
+  "applicationsTab": "Applicazioni",
+  "applicationsTitle": "Applicazioni tipiche",
+  "selectionTitle": "Definire il compito fluidico e la configurazione",
+  "ctaTitle": "Conferma la configurazione di {{model}} per il tuo strumento",
+  "ctaButton": "Invia i requisiti",
+  "drawingUnavailable": "Per {{model}} non è disponibile un disegno 2D pubblico. Aggiungi la richiesta del disegno alla lista di selezione e invia la richiesta di offerta. La configurazione e la revisione del disegno vanno confermate separatamente.",
+  "modelUnavailable": "Per {{model}} non è disponibile un modello 3D pubblico. Contattaci indicando lo spazio di installazione e la configurazione richiesta per ottenere il file adatto.",
+  "specNotesSingle": [
+    "Le gamme di portata sono calcolate in base a cilindrata per giro e velocità. Calibrare l'erogazione effettiva con il liquido, la contropressione e il circuito previsti.",
+    "Il volume per giro è la cilindrata. Verificare dose effettiva e volume minimo affidabile con azionamento, liquido e circuito reali.",
+    "Accuratezza, ripetibilità e durata vanno valutate nelle condizioni di prova applicabili. Confermare la contropressione di esercizio ammessa separatamente dalla pressione nominale."
+  ],
+  "specNotesDual": [
+    "La portata totale si calcola da cilindrata combinata delle due testate e velocità. Verificare l'erogazione dei due canali e il rapporto volumetrico con liquidi e pressioni previsti.",
+    "Il rapporto è quello fra il volume del concentrato e quello del diluente. Verificare separatamente l'erogazione di ciascun circuito. Per confermare la concentrazione occorre analizzare la miscela.",
+    "L'erogazione in proporzione e la miscelazione sono operazioni distinte. Confermare materiali a contatto con il fluido, contropressione di esercizio e condizioni prestazionali per ciascun circuito."
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "groups": {
+    "Featured": "In evidenza",
+    "Pumps": "Pompe",
+    "Valves": "Valvole",
+    "Probes": "Sonde",
+    "Tubing": "Tubi e capillari",
+    "Fittings": "Raccordi",
+    "Smart Control": "Sensori e moduli di controllo",
+    "Tubing Assemblies": "Assemblaggi di tubi"
+  },
+  "products": {
+    "plunger": {
+      "name": "Pompe a pistone",
+      "description": "Aspirazione ed erogazione controllate di campioni e reagenti per dosare e misurare i volumi nei dispositivi."
+    },
+    "dpl": {
+      "name": "Pompe a membrana",
+      "description": "Trasferimento di liquidi, adescamento e lavaggio per l’alimentazione e lo scarico nei dispositivi."
+    },
+    "smtp2": {
+      "name": "Modulo di pipettaggio SMTP2",
+      "description": "Meccanica di azionamento e controllo integrati, con rilevamento del livello del liquido, della presenza del puntale e di eventuali ostruzioni."
+    },
+    "rpl": {
+      "name": "Pompe dosatrici a pistone senza valvole",
+      "description": "Progettate senza valvole per erogare volumi misurati, dosare liquidi e trasferire reagenti nei dispositivi."
+    },
+    "assembly": {
+      "name": "Assemblaggi di tubi per circuiti fluidici",
+      "description": "Assemblaggi su misura con estremità bordate, kit con anello di serraggio e tenuta e kit a ogiva per i circuiti fluidici dei dispositivi."
+    },
+    "tube": {
+      "name": "Tubi e capillari",
+      "description": "Tubi rigidi e flessibili in PVC e altri materiali, con diametri interni ed esterni e lunghezze personalizzabili."
+    },
+    "quick": {
+      "name": "Raccordi rapidi",
+      "description": "Per tubi con diametro interno da 1,6 a 19,0 mm, in versione passaparete o in linea, con o senza valvola. Disponibili configurazioni personalizzate."
+    },
+    "needle": {
+      "name": "Sonde",
+      "description": "Geometrie personalizzabili per campionamento, perforazione e lavaggio."
+    },
+    "flanged-tubing": {
+      "name": "Tubi con estremità bordate",
+      "description": "Tubi su misura con una o entrambe le estremità bordate per raccordi a fondo piatto compatibili."
+    },
+    "retaining-ring-kits": {
+      "name": "Kit con anello di serraggio e tenuta",
+      "description": "Kit di collegamento per tubi con manicotti di serraggio e anelli di tenuta. Disponibili configurazioni personalizzate."
+    },
+    "ferrule-kits": {
+      "name": "Kit a ogiva",
+      "description": "Kit con raccordo e ogiva per collegare tubi senza bordatura preliminare. Disponibili configurazioni personalizzate."
+    },
+    "family0": {
+      "name": "Pompe a siringa",
+      "description": "Gruppi integrati con siringa e valvola."
+    },
+    "mrv": {
+      "name": "Valvole selettrici rotative",
+      "description": "Selezione e commutazione dei percorsi del fluido."
+    },
+    "family2": {
+      "name": "Elettrovalvole",
+      "description": "Comando elettrico dei circuiti fluidici dei dispositivi."
+    },
+    "family3": {
+      "name": "Valvole ad alta pressione",
+      "description": "Valvole per circuiti fluidici con requisiti gravosi."
+    },
+    "family4": {
+      "name": "Sonde di campionamento",
+      "description": "Aspirazione e trasferimento dei campioni."
+    },
+    "family5": {
+      "name": "Sonde di perforazione",
+      "description": "Sonde per applicazioni che richiedono la perforazione."
+    },
+    "family6": {
+      "name": "Sonde di lavaggio",
+      "description": "Sonde per le operazioni di lavaggio."
+    },
+    "family7": {
+      "name": "Palette di agitazione",
+      "description": "Componenti per la miscelazione nei dispositivi."
+    },
+    "family8": {
+      "name": "Tubi in PVC",
+      "description": "Scopri materiali e dimensioni disponibili."
+    },
+    "family9": {
+      "name": "Tubi in TPU",
+      "description": "Scopri materiali e dimensioni disponibili."
+    },
+    "family10": {
+      "name": "Tubi in FEP",
+      "description": "Scopri materiali e dimensioni disponibili."
+    },
+    "family11": {
+      "name": "Tubi in PTFE",
+      "description": "Scopri materiali e dimensioni disponibili."
+    },
+    "family12": {
+      "name": "Tubi in PEEK",
+      "description": "Scopri materiali e dimensioni disponibili."
+    },
+    "family13": {
+      "name": "Tubi in PFA",
+      "description": "Scopri materiali e dimensioni disponibili."
+    },
+    "family14": {
+      "name": "Raccordi per tubi rigidi e capillari",
+      "description": "Connessioni per tubi rigidi."
+    },
+    "family15": {
+      "name": "Raccordi portagomma",
+      "description": "Connessioni per tubi flessibili."
+    },
+    "family16": {
+      "name": "Raccordi portagomma filettati",
+      "description": "Collegano attacchi filettati ai tubi."
+    },
+    "family17": {
+      "name": "Raccordi Luer",
+      "description": "Diverse configurazioni di connessione Luer."
+    },
+    "family18": {
+      "name": "Adattatori con filettatura femmina",
+      "description": "Adattatori per connessioni filettate."
+    },
+    "family19": {
+      "name": "Raccordi portagomma passaparete",
+      "description": "Connessioni per tubi con montaggio a pannello."
+    },
+    "family20": {
+      "name": "Filtri e valvole di non ritorno",
+      "description": "Componenti per il circuito fluidico."
+    },
+    "family21": {
+      "name": "Rilevatori di bolle d’aria",
+      "description": "Rilevamento delle bolle d’aria all’interno dei tubi."
+    },
+    "family22": {
+      "name": "Sensori di pressione",
+      "description": "Monitoraggio della pressione nel circuito fluidico."
+    }
+  },
+  "title": "I nostri prodotti",
+  "categoriesAriaLabel": "Categorie di prodotto",
+  "productCenter": "Tutti i prodotti",
+  "explore": "Scopri {name}",
+  "discuss": "Parla con noi di {name}",
+  "conceptAlt": "Illustrazione di un assemblaggio di tubi",
+  "conceptLabel": "Illustrazione indicativa",
+  "resultCount": "Famiglie di prodotti visualizzate: {count}"
+}

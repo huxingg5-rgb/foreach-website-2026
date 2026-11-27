@@ -1,3 +1,4 @@
+
 // data/home-company-strength.ts
 // 首页第三 / 第四屏「公司介绍 + 企业优势」数据配置文件
 //
@@ -8,12 +9,16 @@
 // 4. 如果某个语言没有写，getHomeCompanyText 会自动回退到中文
 
 import type { LocaleCode } from "@/lib/i18n";
+import hindiCompanyCopy from "./home-company.hi.json";
+import italianCompanyCopy from "./home-company.it.json";
+const companyHi: Record<string, string> = hindiCompanyCopy;
+const companyIt: Record<string, string> = italianCompanyCopy;
 
 /* ================================
    多语言文本类型
 ================================ */
 
-export type HomeCompanyText = Partial<Record<LocaleCode, string>>;
+export type HomeCompanyText = Partial<Record<LocaleCode | "de", string>>;
 
 /* ================================
    公司数据卡片类型
@@ -68,6 +73,7 @@ export const homeCompanyStrengthData = {
     title: {
       "zh-CN": "走进恒永达科技",
       en: "ABOUT Foreach",
+      de: "Über FOREACH",
       es: "ACERCA DE Foreach",
       fr: "À PROPOS DE Foreach",
       ko: "Foreach 소개",
@@ -77,6 +83,7 @@ export const homeCompanyStrengthData = {
     subtitle: {
       "zh-CN": "研发 制造 销售 售后",
       en: "R&D · Manufacturing · Sales · Service",
+      de: "Entwicklung · Fertigung · Vertrieb · Service",
       es: "I+D · Fabricación · Ventas · Servicio",
       fr: "R&D · Fabrication · Ventes · Service",
       ko: "R&D · 제조 · 영업 · 서비스",
@@ -86,6 +93,7 @@ export const homeCompanyStrengthData = {
     videoAriaLabel: {
       "zh-CN": "公司能力展示",
       en: "Company capability showcase",
+      de: "Unternehmensvideo zu unseren Kompetenzen",
       es: "Presentación de capacidades de la empresa",
       fr: "Présentation des capacités de l’entreprise",
       ko: "회사 역량 소개",
@@ -95,6 +103,7 @@ export const homeCompanyStrengthData = {
     videoPlayAriaLabel: {
       "zh-CN": "播放公司视频",
       en: "Play company video",
+      de: "Unternehmensvideo abspielen",
       es: "Reproducir video de la empresa",
       fr: "Lire la vidéo de l’entreprise",
       ko: "회사 영상 재생",
@@ -107,6 +116,7 @@ export const homeCompanyStrengthData = {
   posterAlt: { // 公司介绍视频封面图片 alt 文案，方便 SEO 和无障碍识别
     "zh-CN": "恒永达科技公司介绍视频封面", // 中文封面 alt 文案
     en: "Foreach Technology company introduction video cover", // 英文封面 alt 文案
+    de: "Vorschaubild zum Unternehmensvideo von FOREACH",
     es: "Portada del video de presentación de Foreach Technology", // 西班牙语封面 alt 文案
     fr: "Couverture de la vidéo de présentation de Foreach Technology", // 法语封面 alt 文案
     ko: "Foreach Technology 회사 소개 영상 커버", // 韩语封面 alt 文案
@@ -117,6 +127,7 @@ export const homeCompanyStrengthData = {
     introTitle: {
       "zh-CN": "公司介绍",
       en: "Company Profile",
+      de: "Unternehmensprofil",
       es: "Perfil de la empresa",
       fr: "Profil de l’entreprise",
       ko: "회사 소개",
@@ -128,6 +139,7 @@ export const homeCompanyStrengthData = {
         "恒永达科技（股票代码：874030）成立于 2012 年，是国家级专精特新“小巨人”企业、深圳市瞪羚企业、国家高新技术企业及广东省工程技术研究中心认定单位。公司始终专注于微流体系统核心零部件与液路解决方案，深耕泵、阀、采样针、连接件、橡塑管、驱动器、传感器等关键零部件的研发与制造，产品广泛应用于生命科学、合成生物、高端检测、IVD 和实验室自动化等领域，形成高精度、全场景的微流体解决方案体系，并持续推动高端仪器设备核心流体零部件的国产化替代。",
       en:
         "Founded in 2012, Foreach Technology focuses on core microfluidic components and fluidic solutions. As a specialized and innovation-driven enterprise, the company develops and manufactures pumps, valves, sampling probes, fittings, tubing, drivers, sensors, and other key fluid control components for life sciences, synthetic biology, high-end testing, IVD, and laboratory automation applications.",
+      de: "Seit seiner Gründung 2012 konzentriert sich FOREACH auf Kernkomponenten für die Mikrofluidik und Lösungen für Flüssigkeitskreisläufe. Das spezialisierte Technologieunternehmen entwickelt und fertigt Pumpen, Ventile, Probenahmesonden, Fittings, Schläuche, Treiber, Sensoren und weitere Komponenten für die Fluidik. Sie kommen in den Life Sciences, der synthetischen Biologie, der anspruchsvollen Analytik, der In-vitro-Diagnostik und der Laborautomation zum Einsatz.",
       es:
         "Fundada en 2012, Foreach Technology se centra en componentes microfluídicos clave y soluciones fluídicas. La empresa desarrolla y fabrica bombas, válvulas, agujas de muestreo, conectores, tubos, controladores, sensores y otros componentes esenciales para ciencias de la vida, biología sintética, pruebas avanzadas, IVD y automatización de laboratorios.",
       fr:
@@ -141,6 +153,7 @@ export const homeCompanyStrengthData = {
 contactButton: {
   "zh-CN": "查看更多",
   en: "Learn More",
+  de: "Mehr über FOREACH",
   es: "Ver más",
   fr: "En savoir plus",
   ko: "더 보기",
@@ -159,6 +172,7 @@ contactButton: {
       suffix: {
         "zh-CN": "+",
         en: "+",
+        de: "+",
         es: "+",
         fr: "+",
         ko: "+",
@@ -167,6 +181,7 @@ contactButton: {
       label: {
         "zh-CN": "微流体领域经验",
         en: "years of microfluidic experience",
+        de: "Jahre Erfahrung in der Mikrofluidik",
         es: "años de experiencia en microfluídica",
         fr: "ans d’expérience en microfluidique",
         ko: "마이크로플루이딕 분야 경험",
@@ -179,6 +194,7 @@ contactButton: {
       suffix: {
         "zh-CN": "+",
         en: "+",
+        de: "+",
         es: "+",
         fr: "+",
         ko: "+",
@@ -187,6 +203,7 @@ contactButton: {
       label: {
         "zh-CN": "累计服务客户",
         en: "customers served",
+        de: "betreute Kunden",
         es: "clientes atendidos",
         fr: "clients servis",
         ko: "누적 고객 수",
@@ -199,6 +216,7 @@ contactButton: {
       suffix: {
         "zh-CN": "项",
         en: " IP rights",
+        de: " Schutzrechte",
         es: " derechos de PI",
         fr: " droits de PI",
         ko: "건",
@@ -207,6 +225,7 @@ contactButton: {
       label: {
         "zh-CN": "知识产权",
         en: "intellectual property rights",
+        de: "gewerbliche Schutzrechte",
         es: "derechos de propiedad intelectual",
         fr: "droits de propriété intellectuelle",
         ko: "지식재산권",
@@ -219,6 +238,7 @@ contactButton: {
       suffix: {
         "zh-CN": "+",
         en: "+",
+        de: "+",
         es: "+",
         fr: "+",
         ko: "+",
@@ -227,6 +247,7 @@ contactButton: {
       label: {
         "zh-CN": "产品种类",
         en: "product types",
+        de: "Produkttypen",
         es: "tipos de productos",
         fr: "types de produits",
         ko: "제품 종류",
@@ -242,6 +263,7 @@ contactButton: {
   honorsAriaLabel: {
     "zh-CN": "公司能力与资质",
     en: "Company capabilities and qualifications",
+    de: "Kompetenzen und Auszeichnungen von FOREACH",
     es: "Capacidades y cualificaciones de la empresa",
     fr: "Capacités et qualifications de l’entreprise",
     ko: "회사 역량 및 인증",
@@ -254,6 +276,7 @@ contactButton: {
       title: {
         "zh-CN": "国家高新技术企业",
         en: "National High-Tech Enterprise",
+        de: "Staatlich anerkanntes Hightech-Unternehmen",
         es: "Empresa nacional de alta tecnología",
         fr: "Entreprise nationale de haute technologie",
         ko: "국가 첨단기술기업",
@@ -265,6 +288,7 @@ contactButton: {
       title: {
         "zh-CN": "广东省工程技术研究中心",
         en: "Guangdong Engineering Technology Research Center",
+        de: "Forschungszentrum für Ingenieurtechnologie der Provinz Guangdong",
         es: "Centro de investigación de tecnología de ingeniería de Guangdong",
         fr: "Centre de recherche en technologie d’ingénierie du Guangdong",
         ko: "광둥성 공정기술 연구센터",
@@ -276,6 +300,7 @@ contactButton: {
       title: {
         "zh-CN": "国家级专精特新“小巨人”企业",
         en: "National Specialized and Innovative “Little Giant” Enterprise",
+        de: "Staatlich anerkanntes spezialisiertes und innovatives „Little Giant“-Unternehmen",
         es: "Empresa nacional especializada e innovadora «Little Giant»",
         fr: "Entreprise nationale spécialisée et innovante « Little Giant »",
         ko: "국가급 전정특신 ‘작은 거인’ 기업",
@@ -287,6 +312,7 @@ contactButton: {
       title: {
         "zh-CN": "深圳市瞪羚企业",
         en: "Shenzhen Gazelle Enterprise",
+        de: "Als Gazellenunternehmen in Shenzhen ausgezeichnet",
         es: "Empresa gacela de Shenzhen",
         fr: "Entreprise gazelle de Shenzhen",
         ko: "선전시 가젤 기업",
@@ -298,6 +324,7 @@ contactButton: {
       title: {
         "zh-CN": "ISO 13485 医疗器械质量管理体系",
         en: "ISO 13485 Medical Device Quality Management System",
+        de: "ISO 13485 – Qualitätsmanagement für Medizinprodukte",
         es: "Sistema de gestión de calidad de dispositivos médicos ISO 13485",
         fr: "Système de management de la qualité des dispositifs médicaux ISO 13485",
         ko: "ISO 13485 의료기기 품질경영시스템",
@@ -309,6 +336,7 @@ contactButton: {
       title: {
         "zh-CN": "ISO 9001 质量管理体系",
         en: "ISO 9001 Quality Management System",
+        de: "ISO 9001 – Qualitätsmanagementsystem",
         es: "Sistema de gestión de calidad ISO 9001",
         fr: "Système de management de la qualité ISO 9001",
         ko: "ISO 9001 품질경영시스템",
@@ -333,6 +361,7 @@ contactButton: {
     kicker: {
       "zh-CN": "",
       en: "",
+      de: "",
       es: "",
       fr: "",
       ko: "",
@@ -349,6 +378,7 @@ contactButton: {
     title: {
       "zh-CN": "让液路系统更稳更可控",
       en: "Making Complex Fluidic Systems More Stable and Controllable",
+      de: "Komplexe Fluidiksysteme stabiler betreiben und gezielter steuern",
       es: "Hacemos que los sistemas fluídicos complejos sean más estables y controlables",
       fr: "Rendre les systèmes fluidiques complexes plus stables et maîtrisables",
       ko: "복잡한 유체 시스템을 더 안정적이고 제어 가능하게",
@@ -368,6 +398,7 @@ contactButton: {
         "围绕研发、制造、质量与定制服务能力，为 IVD、生命科学、高端分析仪器和实验室自动化客户提供长期可靠的流体控制支持。",
       en:
         "Built on R&D, manufacturing, quality control, and customization capabilities, Foreach provides long-term fluid control support for IVD, life science, analytical instrument, and laboratory automation customers.",
+      de: "Mit Entwicklung, Fertigung, Qualitätskontrolle und kundenspezifischen Lösungen unterstützt FOREACH Unternehmen in der IVD, den Life Sciences, der Analytik und der Laborautomation langfristig bei der Fluidik.",
       es:
         "Con capacidades en I+D, fabricación, control de calidad y personalización, Foreach ofrece soporte fiable de control de fluidos para clientes de IVD, ciencias de la vida, instrumentos analíticos y automatización de laboratorio.",
       fr:
@@ -387,6 +418,7 @@ contactButton: {
       title: {
         "zh-CN": "研发能力",
         en: "R&D Capability",
+        de: "Forschung und Entwicklung",
         es: "Capacidad de I+D",
         fr: "Capacité R&D",
         ko: "R&D 역량",
@@ -396,6 +428,7 @@ contactButton: {
         "zh-CN": "围绕泵、阀、传感器和液路模块持续打磨产品结构。",
         en:
           "Continuously improving product structures around pumps, valves, sensors, and fluidic modules.",
+        de: "Wir entwickeln den Aufbau von Pumpen, Ventilen, Sensoren und Fluidikmodulen kontinuierlich weiter.",
         es:
           "Mejora continua de estructuras de producto alrededor de bombas, válvulas, sensores y módulos fluídicos.",
         fr:
@@ -409,6 +442,7 @@ contactButton: {
         "zh-CN": "支持从样机验证、参数匹配到批量应用的工程化协同。",
         en:
           "Supporting engineering collaboration from prototype validation and parameter matching to mass application.",
+        de: "Wir unterstützen Entwicklungsprojekte von der Validierung des Prototyps und der Abstimmung der Parameter bis zur Serienanwendung.",
         es:
           "Soporte de ingeniería desde validación de prototipos y ajuste de parámetros hasta aplicación en serie.",
         fr:
@@ -426,6 +460,7 @@ contactButton: {
       title: {
         "zh-CN": "制造交付",
         en: "Manufacturing & Delivery",
+        de: "Fertigung und Lieferung",
         es: "Fabricación y entrega",
         fr: "Fabrication et livraison",
         ko: "제조 및 납품",
@@ -434,6 +469,7 @@ contactButton: {
       brief: {
         "zh-CN": "建立稳定的装配、测试和交付流程。",
         en: "Establishing stable assembly, testing, and delivery processes.",
+        de: "Wir schaffen zuverlässige Abläufe für Montage, Prüfung und Lieferung.",
         es: "Procesos estables de ensamblaje, prueba y entrega.",
         fr: "Processus stables d’assemblage, de test et de livraison.",
         ko: "안정적인 조립, 테스트 및 납품 프로세스를 구축합니다.",
@@ -443,6 +479,7 @@ contactButton: {
         "zh-CN": "面向 IVD、生命科学和自动化设备客户提供持续供货支持。",
         en:
           "Providing continuous supply support for IVD, life science, and automation equipment customers.",
+        de: "Wir unterstützen die kontinuierliche Versorgung von Herstellern in der IVD, den Life Sciences und der Automation.",
         es:
           "Soporte de suministro continuo para clientes de IVD, ciencias de la vida y equipos automatizados.",
         fr:
@@ -460,6 +497,7 @@ contactButton: {
       title: {
         "zh-CN": "质量体系",
         en: "Quality System",
+        de: "Qualitätsmanagement",
         es: "Sistema de calidad",
         fr: "Système qualité",
         ko: "품질 시스템",
@@ -469,6 +507,7 @@ contactButton: {
         "zh-CN": "关注关键尺寸、流量、压力、寿命与一致性。",
         en:
           "Focusing on key dimensions, flow rate, pressure, lifetime, and consistency.",
+        de: "Im Fokus stehen kritische Abmessungen, Durchfluss, Druck, Lebensdauer und gleichbleibende Qualität.",
         es:
           "Enfoque en dimensiones clave, caudal, presión, vida útil y consistencia.",
         fr:
@@ -482,6 +521,7 @@ contactButton: {
         "zh-CN": "用过程管理和测试验证降低客户整机集成风险。",
         en:
           "Reducing customer integration risks through process management and testing validation.",
+        de: "Prozessmanagement, Prüfungen und Validierung verringern Risiken bei der Integration.",
         es:
           "Reducción del riesgo de integración mediante gestión de procesos y validación de pruebas.",
         fr:
@@ -499,6 +539,7 @@ contactButton: {
       title: {
         "zh-CN": "定制支持",
         en: "Customization Support",
+        de: "Kundenspezifische Lösungen",
         es: "Soporte personalizado",
         fr: "Support personnalisé",
         ko: "맞춤 지원",
@@ -508,6 +549,7 @@ contactButton: {
         "zh-CN": "可根据空间、接口、介质和控制方式调整方案。",
         en:
           "Solutions can be adjusted according to space, interfaces, media, and control methods.",
+        de: "Lösungen lassen sich an Bauraum, Anschlüsse, Medien und Ansteuerung anpassen.",
         es:
           "Las soluciones pueden ajustarse según espacio, interfaces, medios y métodos de control.",
         fr:
@@ -521,6 +563,7 @@ contactButton: {
         "zh-CN": "帮助客户把核心部件更顺畅地嵌入整机液路系统。",
         en:
           "Helping customers integrate core components more smoothly into complete fluidic systems.",
+        de: "Wir unterstützen Kunden dabei, Kernkomponenten in ihre Fluidiksysteme zu integrieren.",
         es:
           "Ayuda a integrar componentes clave con mayor fluidez en sistemas fluídicos completos.",
         fr:
@@ -538,6 +581,7 @@ contactButton: {
       title: {
         "zh-CN": "技术服务",
         en: "Technical Service",
+        de: "Technischer Service",
         es: "Servicio técnico",
         fr: "Service technique",
         ko: "기술 서비스",
@@ -547,6 +591,7 @@ contactButton: {
         "zh-CN": "从选型、测试到问题定位提供工程支持。",
         en:
           "Providing engineering support from selection and testing to issue diagnosis.",
+        de: "Technische Unterstützung von der Produktauswahl und Erprobung bis zur Fehlerdiagnose.",
         es:
           "Soporte de ingeniería desde selección y pruebas hasta diagnóstico de problemas.",
         fr:
@@ -560,6 +605,7 @@ contactButton: {
         "zh-CN": "让产品沟通不止停留在规格表，而是落到真实应用场景。",
         en:
           "Making product communication go beyond datasheets and into real application scenarios.",
+        de: "Wir erläutern die Produkte anhand konkreter Anwendungen über die Angaben im Datenblatt hinaus.",
         es:
           "Llevando la comunicación del producto más allá de la ficha técnica hacia aplicaciones reales.",
         fr:
@@ -583,6 +629,9 @@ contactButton: {
    4. 最后返回空字符串
 ================================ */
 
-export function getHomeCompanyText(text: HomeCompanyText, locale: LocaleCode) {
+export function getHomeCompanyText(text: HomeCompanyText, locale: LocaleCode | "de" | "it" | "hi") {
+  if (locale === "hi") return companyHi[text.en || ""] ?? text.en ?? "";
+  if (locale === "it") return companyIt[text.en || ""] ?? "";
+  if (locale === "de") return text.de ?? text.en ?? "";
   return text[locale] || text["zh-CN"] || text.en || "";
 }

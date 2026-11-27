@@ -20,12 +20,18 @@ import { getInstallationGuideIntlData } from "@/data/resources/installation-guid
 import { channelVideoCopy, getChannelVideoAdditions } from "@/data/resources/installation-guide/installation-guide.channel-additions";
 import { sv10EnglishGuide } from "@/data/resources/installation-guide/installation-guide.sv10.en";
 import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-guide-details.en";
+import { getGermanInstallationGuidePageData } from "@/data/resources/installation-guide/installation-guide.de";
+import { getHindiInstallationGuidePageData } from "@/data/resources/installation-guide/installation-guide.hi";
+import { getItalianInstallationGuidePageData } from "@/data/resources/installation-guide/installation-guide.it";
 
 export function getInstallationGuidePageData(
   locale: InstallationGuideLocale = "zh-CN",
 ): InstallationGuidePageData {
   // The Chinese hub keeps its original local tutorials without YouTube additions.
   if (locale === "zh-CN") return installationGuideZhData;
+  if (locale === "de") return getGermanInstallationGuidePageData(getInstallationGuidePageData("en"));
+  if (locale === "hi") return getHindiInstallationGuidePageData(getInstallationGuidePageData("en"));
+  if (locale === "it") return getItalianInstallationGuidePageData(getInstallationGuidePageData("en"));
   const base = getInstallationGuideIntlData(locale);
   const additions = [
     ...(locale === "en" ? [sv10EnglishGuide] : []),

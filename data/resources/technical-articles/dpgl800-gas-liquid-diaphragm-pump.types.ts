@@ -1,3 +1,4 @@
+import type { EngineeringArticleLink } from "./diaphragm-pump-engineering-article.types";
 import type { TechnicalArticleLocale } from "./technical-articles.types";
 
 export type Dpgl800TableRow = readonly string[];
@@ -52,6 +53,8 @@ export type Dpgl800ArticleCopy = {
     dpl60Prefix: string;
     dpl60Label: string;
     dpl60Suffix: string;
+    applicationLink?: EngineeringArticleLink &
+      Required<Pick<EngineeringArticleLink, "prefix" | "suffix">>;
   };
   section8: {
     title: string;

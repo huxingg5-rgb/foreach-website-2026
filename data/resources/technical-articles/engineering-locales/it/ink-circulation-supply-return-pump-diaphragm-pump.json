@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "title": "Qual è la differenza tra le pompe di ricircolo, di alimentazione e di ritorno dell’inchiostro?",
+    "seoTitle": "Pompe di ricircolo, alimentazione e ritorno dell’inchiostro | Foreach Technology",
+    "seoDescription": "Funzioni delle pompe per inchiostro, configurazioni dei circuiti, pressione alla testina, portata in esercizio e verifica delle pompe a membrana.",
+    "coverImage": "/images/resources/technical-articles/ink-circulation-supply-return-pump/ink-supply-return-circulation-cover.webp",
+    "coverAlt": "Minipompa a membrana per liquidi Foreach serie DPL nel video del prodotto"
+  },
+  "deck": "Alimentazione, ritorno e ricircolo sono funzioni del circuito dell’inchiostro. La pompa di alimentazione sposta l’inchiostro verso un serbatoio secondario o la testina, quella di ritorno riporta l’inchiostro non utilizzato a un serbatoio e quella di ricircolo mantiene il flusso in un circuito chiuso. Il numero di pompe dipende dalla testina, dai serbatoi, dal controllo a gravità o in depressione, dai filtri e dall’architettura di mandata e ritorno.",
+  "leadBlocks": [
+    {
+      "type": "notice",
+      "label": "In breve:",
+      "text": "Per stabilire quante pompe servono, tracciate il percorso effettivo: serbatoio → alimentazione → serbatoio secondario o smorzatore → testina → ritorno. Definite per ogni tratto portata, pressione, presenza d’aria e compatibilità dei materiali."
+    },
+    {
+      "type": "links",
+      "items": [
+        {
+          "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+          "label": "categoria delle minipompe a membrana per liquidi",
+          "prefix": "Consultate la ",
+          "suffix": " per individuare i modelli da valutare."
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Che cosa indicano i tre nomi?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Funzione",
+            "Compito tipico",
+            "Aspetti da verificare"
+          ],
+          "rows": [
+            [
+              "Pompa di alimentazione dell’inchiostro",
+              "Trasferisce l’inchiostro dal serbatoio principale a un serbatoio secondario, a uno stadio di regolazione della pressione o alla testina.",
+              "La pressurizzazione diretta della testina dipende dal circuito."
+            ],
+            [
+              "Pompa di ritorno dell’inchiostro",
+              "Riporta l’inchiostro non espulso dagli ugelli dal tratto a valle a un serbatoio secondario o al serbatoio principale.",
+              "La necessità di una pompa di ritorno separata dipende dall’architettura."
+            ],
+            [
+              "Pompa di ricircolo dell’inchiostro",
+              "Mantiene il flusso continuo o intermittente attraverso uno o più elementi del circuito: serbatoio, filtro, tubazioni e testina.",
+              "La funzione ammette diverse tecnologie e posizioni di montaggio."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Una sola pompa può provvedere all’alimentazione e al ricircolo. Due pompe possono regolare separatamente mandata e ritorno. Altri sistemi stabiliscono il punto di lavoro tramite il livello nel serbatoio secondario, la gravità, la depressione pneumatica, le valvole e gli smorzatori. I tre nomi descrivono i compiti del sistema, che può adottare diverse architetture meccaniche."
+        }
+      ]
+    },
+    {
+      "title": "2. Per alimentazione e ritorno servono sempre pompe separate?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "No. In un circuito a due pompe, la differenza tra la velocità di mandata e quella di ritorno può stabilire la pressione differenziale di ricircolo. Un’architettura tradizionale può usare serbatoi di compensazione in mandata e ritorno, mentre il livello del liquido e la depressione pneumatica stabilizzano il menisco alla testina. Alcune testine prive di flusso passante richiedono rabbocco e manutenzione senza far scorrere continuamente l’inchiostro al loro interno."
+        },
+        {
+          "type": "notice",
+          "label": "Campo di validità dello schema:",
+          "text": "Lo schema illustra le funzioni del circuito. La configurazione effettiva dipende dal tipo di stampante, per esempio DOD, CIJ, a scansione o a passaggio singolo."
+        }
+      ]
+    },
+    {
+      "title": "3. Perché alcuni sistemi a getto d’inchiostro usano il ricircolo?",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Mantenere in movimento i pigmenti soggetti a sedimentazione nelle zone attraversate dal flusso e ridurre i gradienti locali di concentrazione.",
+            "Nelle testine a flusso passante, portare il flusso vicino agli ugelli per ridurre i rischi di essiccazione, precipitazione o ristagno.",
+            "Insieme a degasaggio, filtrazione e controllo della temperatura, rendere più uniformi le condizioni dell’inchiostro alla testina.",
+            "Agevolare l’espulsione dell’aria dal circuito durante l’adescamento, il rabbocco o la manutenzione."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La necessità del ricircolo continuo dipende dal sistema. Con inchiostri a colorante, testine prive di flusso passante, percorsi brevi o sistemi di rabbocco della cartuccia o del serbatoio secondario si può adottare un ricircolo intermittente, limitato all’inchiostro bianco, oppure un’altra soluzione di manutenzione. Attenetevi ai requisiti dell’inchiostro e della testina."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/white-ink-circulation-pump-selection-sedimentation/",
+              "label": "guida al ricircolo dell’inchiostro bianco, alla sedimentazione dei pigmenti e alle zone di ristagno",
+              "prefix": "Per l’inchiostro bianco, consultate la ",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Perché si usano minipompe a membrana nei circuiti a getto d’inchiostro?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nei circuiti OEM con poco spazio, una minipompa a membrana per liquidi offre un trasferimento autoadescante in un ingombro ridotto, con portata regolabile tramite il motore o il controllo di sistema. Si può valutare per il rabbocco principale, l’alimentazione a bassa pressione, il ritorno o il ricircolo esterno."
+        },
+        {
+          "type": "notice",
+          "label": "Prestazioni da verificare per modello:",
+          "text": "Pulsazioni ridotte, funzionamento a secco, resistenza all’abrasione e ai solventi e idoneità al ricircolo prolungato dell’inchiostro bianco vanno dimostrati per il singolo modello e nelle condizioni di prova pertinenti. I dati pubblici di Foreach non bastano per stabilire se DPL30 o DPL60 siano adatte a un inchiostro specifico."
+        }
+      ]
+    },
+    {
+      "title": "5. Perché il dato di portata a scarico libero non basta?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La portata a scarico libero si misura con una resistenza ridotta. Nel circuito reale contano la viscosità dell’inchiostro, la perdita di carico del filtro, i moduli di degasaggio, diametro interno e lunghezza delle tubazioni, raccordi, valvole, passaggi nella testina e dislivelli. La portata in esercizio è determinata dall’intersezione tra la curva della pompa e quella del circuito."
+        },
+        {
+          "type": "formula",
+          "expression": "Installed operating point = Pump curve ∩ System curve",
+          "note": "Misurate la portata con l’inchiostro previsto e il circuito fluidico completo."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "guida alla curva portata-pressione delle pompe a membrana"
+            },
+            {
+              "href": "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection/",
+              "label": "guida alla scelta di una pompa per inchiostro da 300 o 600 mL/min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Perché una pressione più alta vicino alla testina non è un vantaggio?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nelle testine DOD, in genere il menisco va mantenuto in condizioni controllate. Una pressione positiva eccessiva può causare trafilamenti o gocciolamenti. Un’eccessiva depressione può far arretrare il menisco, ostacolare il riempimento o provocare aspirazione d’aria. La pressione differenziale di ricircolo e la pressione del menisco agli ugelli sono due grandezze di controllo collegate, da regolare distintamente."
+        },
+        {
+          "type": "notice",
+          "label": "Limiti di impiego della DPL30H:",
+          "text": "La capacità di lavorare fino a 600 kPa non rende una pompa più adatta ad alimentare direttamente la testina. Valutate una pompa ad alta pressione solo in uno stadio di trasferimento ad alta resistenza, isolato dalla zona sensibile alla pressione della testina, con regolazione, scarico della sovrapressione e prove delle condizioni di guasto."
+        }
+      ]
+    },
+    {
+      "title": "7. Come valutare DPL30 e DPL60?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Serie Foreach",
+            "Limiti di prodotto verificati",
+            "Valutazione per il getto d’inchiostro"
+          ],
+          "rows": [
+            [
+              "DPL30",
+              "Classe di portata a vuoto 300 mL/min, pressione nominale 100 kPa, diametro interno del tubo 3.2 mm",
+              "Da valutare per alimentazione, ritorno o ricircolo esterno a portate inferiori. Consultate la curva e verificate le prestazioni nel circuito reale."
+            ],
+            [
+              "DPL60",
+              "Classe di portata a vuoto 600 mL/min, pressione nominale 100 kPa, diametro interno del tubo 3.2 mm",
+              "Da valutare quando occorre una portata maggiore o più margine rispetto alla resistenza del circuito. Verificate gli effetti del filtro e della viscosità."
+            ]
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+              "prefix": "Per una linea che alimenta un serbatoio secondario, provate la ",
+              "label": "pompa a membrana per liquidi DPL30-DB",
+              "suffix": " al livello minimo di esercizio del serbatoio principale. Misurate quanto inchiostro raggiunge il serbatoio secondario in un ciclo di rabbocco."
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+              "prefix": "Se una linea di ritorno separata deve trasportare più inchiostro, valutate la ",
+              "label": "DPL60-DB",
+              "suffix": " su quella linea, alla portata e alla contropressione richieste."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. La compatibilità con l’inchiostro va verificata a parte",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Gli inchiostri a base acqua, a solvente, a polimerizzazione UV e pigmentati differiscono per solventi, monomeri, disperdenti, particelle, viscosità e temperatura. I nomi dei materiali da soli non sostituiscono le verifiche di concentrazione, temperatura, durata di immersione, ricircolo dinamico, avvio e arresto e precipitazione."
+        },
+        {
+          "type": "notice",
+          "label": "Risposta in breve:",
+          "text": "Una classe di portata adatta non dimostra, da sola, che DPL30 o DPL60 siano compatibili con un inchiostro bianco, UV o a solvente. La compatibilità specifica richiede una verifica."
+        }
+      ]
+    },
+    {
+      "title": "9. Verifiche per scegliere la pompa nel sistema a getto d’inchiostro",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Confermate se la stampa è DOD o CIJ, se la testina consente il flusso passante e quali sono i limiti di pressione per mandata, ritorno e menisco della testina.",
+            "Rappresentate serbatoio principale, serbatoio secondario, smorzatore, degasatore, filtro, valvole e linee di mandata e ritorno.",
+            "Definite la portata in esercizio per stampa, attesa, adescamento, pulizia, rimozione dell’aria e riavvio dopo un periodo di inattività.",
+            "Stimate la resistenza alla viscosità e alla temperatura effettive dell’inchiostro, quindi esaminate la curva ufficiale della pompa.",
+            "Verificate pulsazioni, bolle, carico sul filtro, zone di ristagno, variazioni del livello del liquido e guasti dei sensori di pressione.",
+            "Completate le prove di immersione sui materiali a contatto con il fluido e le prove di ricircolo dinamico prolungato prima di confermare durata e intervalli di manutenzione."
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/",
+              "label": "guida al controllo delle pompe a membrana brushless a 2 o 5 fili",
+              "prefix": "Per integrare il controllo, consultate la ",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulle pompe di ricircolo, alimentazione e ritorno dell’inchiostro",
+  "faqItems": [
+    {
+      "question": "Che cos’è una pompa di ricircolo dell’inchiostro?",
+      "answer": "Mantiene il flusso di inchiostro attraverso uno o più elementi: serbatoio, tubazioni, filtro e testina a flusso passante. Il nome indica una funzione che si può realizzare con diversi tipi di pompa e posizioni di montaggio."
+    },
+    {
+      "question": "Che cos’è una pompa di ritorno dell’inchiostro?",
+      "answer": "Riporta al serbatoio secondario o principale l’inchiostro non espulso dagli ugelli. Una pompa di ritorno separata si usa se l’architettura la richiede."
+    },
+    {
+      "question": "La pompa di alimentazione può servire anche al ricircolo?",
+      "answer": "Sì. Una sola pompa di alimentazione può generare il ricircolo. Un sistema a due pompe può invece regolare separatamente mandata e ritorno. La scelta dipende dal circuito effettivo."
+    },
+    {
+      "question": "Tutti i sistemi a getto d’inchiostro richiedono un ricircolo continuo?",
+      "answer": "No. Dipende dalla formulazione dell’inchiostro, dalla capacità della testina di consentire il flusso passante, dalla strategia di attesa e dalle procedure di manutenzione. Alcuni sistemi fanno ricircolare solo l’inchiostro bianco o solo a intervalli."
+    },
+    {
+      "question": "Perché non basta aumentare la pressione della pompa prima della testina?",
+      "answer": "Gli ugelli richiedono un menisco stabile. Una pressione di alimentazione eccessiva può causare trafilamenti, mentre una depressione eccessiva può ostacolare il riempimento o provocare aspirazione d’aria."
+    },
+    {
+      "question": "I valori dichiarati per DPL30 e DPL60 coincidono con la portata di ricircolo in esercizio?",
+      "answer": "No. I valori di 300 e 600 mL/min corrispondono alle classi di portata a vuoto. La portata in esercizio dipende dalla curva della pompa, dalla viscosità, dal filtro, dalle tubazioni e dalla differenza di pressione fra mandata e ritorno."
+    },
+    {
+      "question": "La DPL30 è automaticamente compatibile con l’inchiostro bianco?",
+      "answer": "No. La portata e la pressione consentono una prima valutazione della DPL30. Compatibilità chimica, particelle, sedimentazione, ricircolo prolungato e riavvio dopo l’inattività vanno verificati."
+    },
+    {
+      "question": "La DPL30H è più adatta ad alimentare la testina perché raggiunge una pressione maggiore?",
+      "answer": "Dipende dalla configurazione. La DPL30H è destinata ai circuiti fluidici ad alta resistenza. Un’elevata pressione, da sola, non rende una pompa idonea alla zona sensibile alla pressione di una testina."
+    }
+  ],
+  "cta": {
+    "title": "Valutate la pompa per inchiostro sul circuito effettivo di mandata e ritorno",
+    "description": "Indicate tipo di inchiostro, viscosità e temperatura, portata richiesta in esercizio, intervallo di pressione della testina, filtro, tubazioni, posizione della pompa e strategie di adescamento e arresto.",
+    "contactLabel": "Invia i requisiti del circuito a getto d’inchiostro",
+    "productsLabel": "Vedi le pompe a membrana per liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

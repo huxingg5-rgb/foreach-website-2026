@@ -1,3 +1,4 @@
+import { getGermanProductSearchTerms } from "@/data/search/german-product-search-terms";
 import {
   getTubingAssemblySearchItems,
   isTubingAssemblySearchPath,
@@ -24,6 +25,7 @@ export type CompactSearchItem = {
   x: string;
   k?: string;
   a?: string;
+  g?: true;
 };
 
 const SEARCH_INDEX_LOCALES = new Set([
@@ -45,11 +47,47 @@ const searchItemsPromises = new Map<
 >();
 
 function getSearchIndexUrl(locale: string): string {
+  if (locale === "de") return "/search-data/global-search-resource-overlay.de.v3.json";
   const indexLocale = SEARCH_INDEX_LOCALES.has(locale)
     ? locale
     : "zh-CN";
 
   return `/search-data/global-search-index.${indexLocale}.v3.json`;
+}
+
+function fetchSearchItems(url: string): Promise<CompactSearchItem[]> {
+  return fetch(url, { cache: "no-cache" }).then(response => {
+    if (!response.ok) throw new Error(`全站搜索索引加载失败：${response.status}`);
+    return response.json() as Promise<CompactSearchItem[]>;
+  });
+}
+
+function germanOverlayKey(item: CompactSearchItem): string {
+  const [pathname, query = ""] = item.h.split("?", 2);
+  const path = pathname.replace(/^\/(?:en|de)(?=\/|$)/, "").replace(/\/+$/, "");
+  const params = new URLSearchParams(query);
+  params.sort();
+  return `${item.m}:${path}?${params}`;
+}
+
+function mergeGermanResourceSearch(english: CompactSearchItem[], german: CompactSearchItem[]): CompactSearchItem[] {
+  const source = new Map(english.map(item => [germanOverlayKey(item), item]));
+  const translatedKeys = new Set<string>();
+  const replacements = german.map(item => {
+    const key = germanOverlayKey(item);
+    const original = source.get(key);
+    translatedKeys.add(key);
+    return original ? { ...item, x: item.x + " " + original.x } : item;
+  });
+  const remaining = english
+    .filter(item => !translatedKeys.has(germanOverlayKey(item)))
+    .map(item => {
+      if (item.m !== "products") return item;
+
+      const terms = getGermanProductSearchTerms(item.h);
+      return terms.length ? { ...item, k: [item.k, ...terms].filter(Boolean).join(" ") } : item;
+    });
+  return [...remaining, ...replacements];
 }
 
 export function getCachedGlobalSearchIndex(
@@ -74,23 +112,12 @@ export function preloadGlobalSearchIndex(
     return existingPromise;
   }
 
-  const searchItemsPromise = fetch(searchIndexUrl, {
-    /*
-      搜索索引使用固定文件名，内容会随产品与资讯更新。
-      必须向服务器重新验证，避免浏览器长期复用旧链接、
-      旧图片字段和缺失的新内容。
-    */
-    cache: "no-cache",
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`全站搜索索引加载失败：${response.status}`);
-      }
-
-      return response.json() as Promise<CompactSearchItem[]>;
-    })
+  const searchItemsPromise = (locale === "de"
+    ? Promise.all([preloadGlobalSearchIndex("en"), fetchSearchItems(searchIndexUrl)])
+      .then(([english, german]) => mergeGermanResourceSearch(english, german))
+    : fetchSearchItems(searchIndexUrl))
     .then((items) => {
-      const tubingItems = getTubingAssemblySearchItems(locale);
+      const tubingItems = locale === "de" ? [] : getTubingAssemblySearchItems(locale);
       if (tubingItems.length) {
         items = [
           ...items.filter(item => !isTubingAssemblySearchPath(item.h)),

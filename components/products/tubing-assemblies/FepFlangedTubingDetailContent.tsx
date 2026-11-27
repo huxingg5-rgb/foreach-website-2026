@@ -1,5 +1,5 @@
 import ProductDrawingReference from "@/components/common/ProductDrawingReference";
-import type { TubingAssemblyLocale } from "@/data/products/tubing-assemblies/locales";
+import type { TubingAssemblyDetailLocale } from "@/data/products/tubing-assemblies/locales";
 import { getAssemblyDetailMedia } from "@/data/products/tubing-assemblies/detail-media";
 import { assemblyDetailView } from "./assembly-detail-view";
 import Link from "next/link";
@@ -19,7 +19,7 @@ function MediaSpace({ name }: { name: string }) {
   return <div data-fep-guide-media-slot={name} hidden />;
 }
 
-function SelectionFigure({ name, locale = "zh-CN" }: { name: keyof typeof selectionMedia.images; locale?: TubingAssemblyLocale }) {
+function SelectionFigure({ name, locale = "zh-CN" }: { name: keyof typeof selectionMedia.images; locale?: TubingAssemblyDetailLocale }) {
   const image = getAssemblyDetailMedia(locale, name, selectionMedia.images[name]);
   return <figure className={styles.selectionFigure} data-fep-selection-media={name}>
     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -59,7 +59,7 @@ const pressureExamples = fepTubingVariants.filter(variant => Number(variant.attr
 const unique = (values: string[]) => [...new Set(values)].join("、");
 
 /** Chinese FEP sample: piston-pump information hierarchy with assembly-specific evidence. */
-export default function FepFlangedTubingDetailContent({ section, locale = "zh-CN" }: { section: "product" | "selection"; locale?: TubingAssemblyLocale }) {
+export default function FepFlangedTubingDetailContent({ section, locale = "zh-CN" }: { section: "product" | "selection"; locale?: TubingAssemblyDetailLocale }) {
   const className = `${base.content} ${guide.guide} ${styles.content}`;
   if (section === "product") return assemblyDetailView(<section className={className} data-section="product"
     data-fep-assembly-content="product" aria-label="FEP 翻边管组件产品资料">

@@ -1,5 +1,8 @@
 import { flowTranslations } from "./instrument-fluidics/flow-locales";
-import { isTechnicalArticleLocaleAvailable, tubingAssemblyConfiguratorSlug } from "./technical-article-availability";
+import { isTechnicalArticleLocaleAvailable, samplingProbeSectionIds, samplingProbeSelectionSlug, tubingAssemblyConfiguratorSlug } from "./technical-article-availability";
+import { probeIntrosZh } from "@/data/products/selection/probe-selection.zh";
+import { samplingProbeSelectionCopy } from "./sampling-probe-selection.zh";
+import { samplingProbeMentions, samplingProbeProductNames, samplingProbeTranslations } from "./sampling-probe-selection-locales";
 import { tubingAssemblyConfiguratorCopy } from "./tubing-assembly-configurator-guide.zh";
 import { tubingAssemblyConfiguratorTranslations } from "./tubing-assembly-configurator-locales";
 import { assemblyText } from "@/data/products/configurator/tubing-assembly.intl";
@@ -26,6 +29,17 @@ import { getHardTubeGuideProducts } from "./hard-tube-fittings-related-products"
 
 // Model cards are configuration examples, not the unidentified catalogue test samples.
 const definitions = [
+  {
+    slug: samplingProbeSelectionSlug,
+    copy: samplingProbeSelectionCopy,
+    category: "applications",
+    series: "",
+    date: "2026-11-26",
+    models: [],
+    pumpIds: [],
+    probeIds: ["sampling-probes", "piercing-probes"],
+    anchors: samplingProbeSectionIds,
+  },
   {
     slug: tubingAssemblyConfiguratorSlug,
     copy: tubingAssemblyConfiguratorCopy,
@@ -70,7 +84,8 @@ function blockText(block: EngineeringArticleBlock): string {
   }
 }
 
-function relationKeys(item: Pick<typeof definitions[number], "series" | "pumpIds">): string[] {
+function relationKeys(item: Pick<typeof definitions[number], "series" | "pumpIds"> & { probeIds?: readonly string[] }): string[] {
+  if (item.probeIds) return item.probeIds.map(id => `category:${id}`);
   // Relate only to concrete candidate series; do not claim these are tested samples.
   return item.series ? item.series.split(",").map(series => `series:${series}`) : item.pumpIds.flatMap(id => {
     const product = diaphragmPumpSelectionProducts.find(product => product.productId === id);
@@ -80,6 +95,7 @@ function relationKeys(item: Pick<typeof definitions[number], "series" | "pumpIds
 
 // Articles with a full set of translations; every other article here stays Chinese-only.
 const translatedArticles = {
+  [samplingProbeSelectionSlug]: samplingProbeTranslations,
   [tubingAssemblyConfiguratorSlug]: tubingAssemblyConfiguratorTranslations,
   [virtualLeaksArticleSlug]: virtualLeaksTranslations,
   "quick-disconnect-coupling-flow-pressure-drop": flowTranslations,
@@ -99,7 +115,9 @@ export function getInstrumentFluidicsArticles(locale: TechnicalArticleLocale): T
   return definitionsForLocale(locale).map(item => ({
     id: item.slug, slug: item.slug, category: item.category,
     ...item.copy.metadata, summary: item.copy.deck, date: item.date,
-    relationKeys: [...new Set(relationKeys(item))], relationPriority: 150,
+    // Detail pages add this guide explicitly. Sampling-probe filters also use the category relation.
+    relationKeys: item.slug === samplingProbeSelectionSlug && locale !== "zh-CN" ? [] : [...new Set(relationKeys(item))],
+    relationPriority: 150,
     content: [
       { title: "", content: item.copy.leadBlocks.map(blockText).join("\n\n") },
       ...item.copy.sections.map(section => ({ title: section.title, content: section.blocks.map(blockText).join("\n\n") })),
@@ -148,11 +166,26 @@ export function getInstrumentFluidicsArticle(slug: string, locale: TechnicalArti
   });
   // Connection examples do not imply a high-vacuum rating or a measured leak rate.
   const isVirtualLeaksArticle = article.slug === virtualLeaksArticleSlug;
+  const probes: RelatedResourcesData["products"] = "probeIds" in article
+    ? article.probeIds.map((id, index) => {
+        const probe = probeIntrosZh[id];
+        const title = locale === "zh-CN" ? probe.title : samplingProbeProductNames[locale][index];
+        const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
+        return {
+          id,
+          title,
+          href: `${localePrefix}/products/probes/${id}/`,
+          imageSrc: probe.image.src,
+          imageAlt: locale === "zh-CN" ? probe.image.alt : `FOREACH · ${title}`,
+          imageAspectRatio: 1,
+        };
+      })
+    : [];
   const products = "assemblyMaterials" in article
     ? article.assemblyMaterials.map(material => tubingAssemblyCard(material, locale))
     : isVirtualLeaksArticle
       ? getHardTubeGuideProducts(locale).products.map(product => ({ ...product, imageAspectRatio: 1 }))
-      : [...fittings, ...pumps];
+      : [...fittings, ...pumps, ...probes];
   const sidebarProducts = isVirtualLeaksArticle
     ? products.filter((_, index) => index === 0 || index === 2).map(product => ({ ...product, imageFill: true }))
     : products.slice(0, 2);
@@ -175,6 +208,7 @@ export function getInstrumentFluidicsArticle(slug: string, locale: TechnicalArti
     subject: { about: [article.copy.metadata.title], mentions: isVirtualLeaksArticle
       ? virtualLeaksMentions[locale]
       : "assemblyMaterials" in article ? ["FEP", assemblyText("管组件", locale), assemblyText("选型图纸", locale)]
+        : "probeIds" in article ? samplingProbeMentions[locale]
         : article.series ? article.series.toUpperCase().split(",") : pumpMentions[locale] },
     navigation: article.copy.sections.map((section, index) => ({ id: article.anchors[index], label: section.title })),
   };

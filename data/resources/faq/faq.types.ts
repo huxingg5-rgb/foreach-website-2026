@@ -13,7 +13,7 @@ export type FaqItem = {
   answer: string[];
   tags: string[];
   aliases: string[];
-  links: { label: string; href: string }[];
+  links: { label: string; href: string; hrefLang?: string }[];
 };
 
 export type ReviewedFaqItem = FaqItem & {

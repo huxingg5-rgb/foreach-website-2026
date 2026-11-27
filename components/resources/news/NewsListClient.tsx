@@ -20,7 +20,9 @@ import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import ResourceSearchBar from "@/components/resources/ResourceSearchBar";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 
+import { formatNewsDate } from "@/data/resources/news/news-date";
 import type {
+  NewsResourceLocale,
   NewsArticle,
   NewsCategory,
   NewsPageData,
@@ -49,6 +51,9 @@ const newsListUi: Record<string, {
   pageSummary: (page: number, totalPages: number, count: number) => string;
   empty: string;
 }> = {
+  de: { search: "Suchen", categoryFilters: "Nachrichten nach Kategorie filtern", pagination: "Nachrichtenseiten", previous: "Zurück", next: "Weiter", pageSummary: (page, total, count) => `Seite ${page} von ${total}, ${count} Meldungen`, empty: "Keine passenden Nachrichten gefunden. Versuchen Sie es mit einem anderen Suchbegriff oder einer anderen Kategorie." },
+  hi: { search: "खोजें", categoryFilters: "खबरों की श्रेणियाँ", pagination: "खबरों के पेज", previous: "पिछला", next: "अगला", pageSummary: (page, total, count) => "पेज " + page + " / " + total + ", खबरें " + count, empty: "मेल खाने वाली कोई खबर नहीं मिली। दूसरा शब्द खोजें या दूसरी श्रेणी चुनें।" },
+  it: { search: "Cerca", categoryFilters: "Filtra le notizie per categoria", pagination: "Pagine delle notizie", previous: "Indietro", next: "Avanti", pageSummary: (page, total, count) => `Pagina ${page} di ${total}, notizie: ${count}`, empty: "Nessuna notizia corrispondente. Prova con un’altra parola chiave o categoria." },
   es: { search: "Buscar", categoryFilters: "Filtros de categorías de noticias", pagination: "Paginación de noticias", previous: "Anterior", next: "Siguiente", pageSummary: (page, total, count) => `Página ${page} de ${total}, ${count} noticias`, empty: "No se encontraron noticias. Pruebe otra palabra clave o categoría." },
   fr: { search: "Rechercher", categoryFilters: "Filtres des catégories d’actualités", pagination: "Pagination des actualités", previous: "Précédente", next: "Suivante", pageSummary: (page, total, count) => `Page ${page} sur ${total}, ${count} actualités`, empty: "Aucune actualité correspondante. Essayez un autre mot-clé ou une autre catégorie." },
   ko: { search: "검색", categoryFilters: "뉴스 분류 필터", pagination: "뉴스 페이지", previous: "이전", next: "다음", pageSummary: (page, total, count) => `${total}페이지 중 ${page}페이지, 총 ${count}건`, empty: "일치하는 뉴스가 없습니다. 다른 키워드나 분류를 선택하세요." },
@@ -144,6 +149,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
       </section>
 
       <BreadcrumbComponent
+        ariaLabel={pageData.locale === "hi" ? "पेज का नेविगेशन पथ" : pageData.locale === "it" ? "Percorso di navigazione" : undefined}
         items={pageData.breadcrumbs}
         breadcrumbs={pageData.breadcrumbs}
         breadcrumbItems={pageData.breadcrumbs}
@@ -196,6 +202,7 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
                 <NewsCard
                   key={article.id}
                   article={article}
+                  locale={pageData.locale}
                   href={getNewsHref(pageData.locale, article.slug)}
                 />
               ))}
@@ -254,9 +261,10 @@ export default function NewsListClient({ pageData }: NewsListClientProps) {
 interface NewsCardProps {
   article: NewsArticle;
   href: string;
+  locale: NewsResourceLocale;
 }
 
-function NewsCard({ article, href }: NewsCardProps) {
+function NewsCard({ article, href, locale }: NewsCardProps) {
   return (
     <Link className="newsCard" href={href}>
       <div className="newsCard__image">
@@ -270,7 +278,7 @@ function NewsCard({ article, href }: NewsCardProps) {
 
       <div className="newsCard__body">
         <h3 className="newsCard__title">{article.title}</h3>
-        <time className="newsCard__date">{article.date}</time>
+        <time className="newsCard__date" dateTime={locale === "it" || locale === "hi" ? article.date : undefined}>{formatNewsDate(article.date, locale)}</time>
         <p className="newsCard__summary">{article.summary}</p>
       </div>
     </Link>

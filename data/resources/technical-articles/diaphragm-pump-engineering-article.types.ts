@@ -42,6 +42,7 @@ export type EngineeringArticleLink = {
   label: string;
   prefix?: string;
   suffix?: string;
+  hrefLang?: string;
 };
 
 export type EngineeringArticleBlock =
@@ -74,10 +75,12 @@ export type EngineeringArticleBlock =
       caption: string;
       /** Localized title displayed over the whitespace title band of an original test chart. */
       imageTitle?: string;
+      samplingProbeDiagram?: "dimensions" | "tips";
       captionHref?: string;
+      captionHrefLang?: string;
       quickDisconnectDiagram?: "pair" | "valves" | "panel";
       barbExpansionDiagram?: "assembly" | "comparison" | "profiles";
-      link?: { href: string; label: string };
+      link?: { href: string; label: string; hrefLang?: string };
       productViews?: readonly { src: string; alt: string; reverse?: boolean }[];
       flowNodes?: readonly { label: string; detail: string }[];
     }

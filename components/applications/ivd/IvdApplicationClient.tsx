@@ -28,6 +28,16 @@ import type {
   IvdInstrument,
 } from "@/data/applications/ivd/ivd-application.types";
 
+import SamplingProbeApplicationLink from "@/components/applications/SamplingProbeApplicationLink";
+import type { SamplingProbeApplication } from "@/data/resources/technical-articles/sampling-probe-guide-links";
+
+const samplingProbeContexts: Partial<Record<string, SamplingProbeApplication>> = {
+  "clinical-sample": "clinical-probes",
+  "clinical-reagent": "clinical-probes",
+  "immunoassay-sample": "immunoassay-probes",
+  "hematology-sample": "hematology-probes",
+};
+
 type IvdApplicationClientProps = {
   relatedVideos?: ReactNode;
   data: IvdApplicationPageData;
@@ -70,6 +80,7 @@ export default function IvdApplicationClient({ relatedVideos, data }: IvdApplica
     return activeInstrument.modules.find((item) => item.key === activeModuleKey) ?? activeInstrument.modules[0];
   }, [activeInstrument, activeModuleKey]);
 
+  const samplingProbeContext = samplingProbeContexts[activeModule.key];
   const visibleProductKeys = activeModule.products;
 
   const currentProductKey = visibleProductKeys.includes(activeProductKey)
@@ -242,6 +253,7 @@ export default function IvdApplicationClient({ relatedVideos, data }: IvdApplica
               <article className="ivd-module-summary">
                 <h3>{activeModule.title}</h3>
                 <p>{activeModule.description}</p>
+                {samplingProbeContext && <SamplingProbeApplicationLink context={samplingProbeContext} />}
 
                 <div className="ivd-need-tags" aria-label="液路关键词">
                   {activeModule.tags.map((tag) => (

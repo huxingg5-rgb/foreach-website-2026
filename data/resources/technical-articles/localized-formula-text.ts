@@ -1,0 +1,37 @@
+const germanFormulaText: Readonly<Record<string, string>> = {
+  "Fluid change: μ, ρ, P_vapour, γ, θ, dissolved gas": "Medienwechsel: μ, ρ, P_vapour, γ, θ, gelöstes Gas",
+  "ΔV, Δm, ΔH + dynamic sealing performance": "ΔV, Δm, ΔH + Dichtverhalten unter dynamischer Belastung",
+  "Target working flow ≠ Pump free flow": "Soll-Volumenstrom im Betrieb ≠ Volumenstrom der Pumpe ohne Gegendruck",
+  "Installed operating point = Pump curve ∩ System curve": "Betriebspunkt im Gerät = Pumpenkennlinie ∩ Anlagenkennlinie",
+  "Daily operating hours × operating days per year × target equipment lifetime in years = required accumulated operating hours": "Betriebsstunden pro Tag × Betriebstage pro Jahr × angestrebte Gerätelebensdauer in Jahren = erforderliche Gesamtbetriebsstunden",
+  "Stroke utilization ≈ commanded dose volume / corresponding full-stroke capacity": "Hubausnutzung ≈ vorgegebenes Dosiervolumen / Volumen bei entsprechendem Vollhub",
+  "Tbatch = Σ(Taspiration + Tvalve + Tdispense + Tsettling + Tmotion and other required actions)": "Tbatch = Σ(Taspiration + Tvalve + Tdispense + Tsettling + Tmotion und weitere erforderliche Vorgänge)",
+  "Required Pump Capability = Target Vacuum + Line Resistance + Height Difference + Aspiration Requirement": "Anforderungen an die Pumpe = Zielunterdruck + Leitungswiderstand + Höhendifferenz + Anforderungen an die Absaugung",
+  "Plocal,abs > Pvapor(T) + engineering margin": "Plocal,abs > Pvapor(T) + Auslegungsreserve",
+  "Decrease = (initial mean − day 42 mean) ÷ initial mean × 100%": "Abnahme = (anfänglicher Mittelwert − Mittelwert an Tag 42) ÷ anfänglicher Mittelwert × 100%",
+  "Wall thickness t = (D − d) / 2; internal volume V = πd²L / 4": "Wandstärke t = (D − d) / 2; Innenvolumen V = πd²L / 4",
+  "R = 128μL / (πd⁴); an ID deviation of ±5% changes resistance by about −18% to +23%": "R = 128μL / (πd⁴). Eine Abweichung des Innendurchmessers um ±5% ändert den Strömungswiderstand um etwa −18% bis +23%.",
+  "Pressure drop from flow: ΔP = SG × (Q ÷ Kv)²": "Druckverlust aus dem Volumenstrom: ΔP = SG × (Q ÷ Kv)²",
+  "Flow from allowable pressure drop: Q = Kv × √(ΔP ÷ SG)": "Volumenstrom beim zulässigen Druckverlust: Q = Kv × √(ΔP ÷ SG)",
+  "Q_inlet = Q_branch1 + Q_branch2 + … (simultaneously active branches only)": "Q_inlet = Q_branch1 + Q_branch2 + … (gleichzeitig aktive Zweige)",
+  "Diameter ratio λ = Db / d; geometric expansion ε = (Db − d) / d × 100%": "Durchmesserverhältnis λ = Db / d; geometrische Aufweitung ε = (Db − d) / d × 100%",
+  "Diameter ratio = maximum barb outside diameter ÷ tube inside diameter": "Durchmesserverhältnis = größter Außendurchmesser der Schlauchtülle ÷ Schlauchinnendurchmesser",
+  "Geometric expansion ratio = (barb crest OD − initial tubing ID) ÷ initial tubing ID × 100%": "Geometrische Aufweitung = (Außendurchmesser am Wulst − ursprünglicher Schlauchinnendurchmesser) ÷ ursprünglicher Schlauchinnendurchmesser × 100%",
+  "Theoretical straight-tube volume V = π × internal diameter² × length ÷ 4": "Theoretisches Volumen einer geraden Leitung V = π × Innendurchmesser² × Länge ÷ 4",
+  "Mean deviation from target (%) = (mean measured volume − target volume) ÷ target volume × 100%": "Mittlere Abweichung vom Sollwert (%) = (mittleres Messvolumen − Sollvolumen) ÷ Sollvolumen × 100%",
+  "Measured volume = net liquid mass ÷ target-fluid density": "Messvolumen = Nettomasse der Flüssigkeit ÷ Dichte des Prüfmediums",
+  "RSD (%) = sample standard deviation ÷ mean measured volume × 100%": "RSD (%) = Stichprobenstandardabweichung ÷ mittleres Messvolumen × 100%",
+  "Dose volume = displacement per revolution × revolutions": "Dosiervolumen = Verdrängungsvolumen pro Umdrehung × Anzahl der Umdrehungen",
+  "Average flow = displacement per revolution × rotational speed": "Mittlerer Volumenstrom = Verdrängungsvolumen pro Umdrehung × Drehzahl",
+  "Dose volume = displacement per revolution × number of revolutions": "Dosiervolumen = Verdrängungsvolumen pro Umdrehung × Anzahl der Umdrehungen",
+  "Average flow rate = displacement per revolution × rotational speed": "Mittlerer Volumenstrom = Verdrängungsvolumen pro Umdrehung × Drehzahl",
+  "Backlash magnitude = |x₂ − x₁|": "Umkehrspiel = |x₂ − x₁|",
+  "full steps ≈ b × N ÷ p; pulses ≈ b × N × m ÷ p": "Vollschritte ≈ b × N ÷ p; Impulse ≈ b × N × m ÷ p",
+  "Q = V × N = 1.2 mL/cycle × 100 cycles/min = 120 mL/min": "Q = V × N = 1,2 mL/Zyklus × 100 Zyklen/min = 120 mL/min",
+  "Pabs = Pgauge + Patm; Plocal,min,abs > Pvapor(T) + margin": "Pabs = Pgauge + Patm; Plocal,min,abs > Pvapor(T) + Sicherheitsreserve",
+  "ΔP = 128μLQ / (πd⁴)；V = πd²L / 4": "ΔP = 128μLQ / (πd⁴); V = πd²L / 4",
+};
+
+export function getLocalizedTechnicalFormula(expression: string, locale: string) {
+  return locale === "de" && Object.hasOwn(germanFormulaText, expression) ? germanFormulaText[expression] : expression;
+}

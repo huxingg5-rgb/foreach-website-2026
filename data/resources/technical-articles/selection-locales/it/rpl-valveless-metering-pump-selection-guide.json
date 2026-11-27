@@ -1,0 +1,457 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Guida alla selezione delle pompe dosatrici senza valvole: modelli e applicazioni FOREACH",
+      "seoTitle": "Guida alla selezione delle pompe dosatrici senza valvole: modelli e applicazioni FOREACH",
+      "seoDescription": "Confronta RPL-P4, RPL-P6.35 e RPL-P15 per volume di dose, tempo di erogazione, materiali a contatto con il fluido e condizioni del circuito, per dosaggio di reagenti, titolazione e riempimento.",
+      "coverImage": "/images/products/pumps/valveless-pumps/foreach-rpl-p635-valveless-pump.webp",
+      "coverAlt": "Pompa dosatrice senza valvole FOREACH RPL-P6.35 a testata singola"
+    },
+    "deck": "Per scegliere una pompa dosatrice senza valvole, definisci prima il volume per dose e il tempo disponibile. Verifica poi cilindrata per giro, velocità di azionamento, materiali a contatto con il fluido, contropressione e connessioni. Prova l’erogazione nel circuito reale. La scelta del modello richiede dati oltre alla portata o alla sola dicitura «pompa dosatrice».",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Per scegliere una pompa dosatrice senza valvole, definisci prima il volume per dose e il tempo disponibile. Verifica poi cilindrata per giro, velocità di azionamento, materiali a contatto con il fluido, contropressione e connessioni. Prova l’erogazione nel circuito reale. La scelta del modello richiede dati oltre alla portata o alla sola dicitura «pompa dosatrice»."
+      },
+      {
+        "type": "paragraph",
+        "text": "Con le pompe dosatrici senza valvole FOREACH RPL-P4, RPL-P6.35 e RPL-P15 a testata singola, la guida mostra come tradurre i requisiti di erogazione di reagenti, dosaggio di titolante e riempimento ripetuto in criteri confrontabili e verificabili."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Quali parametri contano nella scelta di una pompa dosatrice senza valvole?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Prima di confrontare le specifiche, annota il volume di liquido per operazione e il tempo disponibile per la pompa. La stessa dose può imporre requisiti diversi al motore e al circuito nel riempimento ripetuto, nell’erogazione intermittente o nella titolazione incrementale."
+          },
+          {
+            "type": "subheading",
+            "title": "Distinguere cilindrata per giro, volume di dose e portata media"
+          },
+          {
+            "type": "paragraph",
+            "text": "Tre parametri rispondono a esigenze diverse"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Parametro",
+              "Significato e unità",
+              "Cosa verificare"
+            ],
+            "rows": [
+              [
+                "Cilindrata per giro",
+                "Volume nominale erogato durante un ciclo di rotazione completo all’impostazione attuale, in μL/rev.",
+                "Volume per giro e numero di giri richiesti."
+              ],
+              [
+                "Volume della dose",
+                "Volume da erogare nel recipiente in un’unica operazione, in μL o mL.",
+                "Quantità di liquido richiesta dallo strumento a ogni operazione."
+              ],
+              [
+                "Portata media",
+                "Volume medio erogato per unità di tempo, in μL/min o mL/min.",
+                "Possibilità di completare l’erogazione nel tempo assegnato alla pompa."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per una stima nominale a cilindrata fissa e con cicli completi, il volume della dose dipende dalla cilindrata per giro e dal numero di giri. La velocità determina soprattutto il tempo per completare i cicli. La portata istantanea può variare attorno alla media."
+          },
+          {
+            "type": "formula",
+            "expression": "Volume della dose = cilindrata per giro × numero di giri"
+          },
+          {
+            "type": "formula",
+            "expression": "Portata media = cilindrata per giro × velocità di rotazione"
+          },
+          {
+            "type": "paragraph",
+            "text": "Mantieni coerenti le unità di volume nelle due equazioni. Sono stime nominali per cicli completi. L’erogazione su piccoli angoli di rotazione richiede una validazione dedicata."
+          },
+          {
+            "type": "subheading",
+            "title": "Esempio: quale portata serve per erogare 1 mL in 2 secondi?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Se la pompa ha 2 secondi netti per erogare 1 mL, la portata media richiesta durante l’erogazione è:"
+          },
+          {
+            "type": "formula",
+            "expression": "1 mL ÷ 2 s × 60 s/min = 30 mL/min"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il calcolo converte un requisito dello strumento in una portata. Per conoscere le prestazioni di un modello servono misure. Se una stazione completa un ciclo ogni 2 secondi ma impiega parte del tempo per posizionare il flacone, muovere l’ago o misurare, sottrai questi intervalli prima di ricalcolare."
+          },
+          {
+            "type": "subheading",
+            "title": "Controllare materiali a contatto con il fluido, connessioni e pulizia"
+          },
+          {
+            "type": "paragraph",
+            "text": "Elenca composizione, concentrazione e temperatura del liquido di lavoro e del liquido di pulizia. Controlla tutti i componenti a contatto con il fluido, compresi testata, parti in ceramica, raccordi e tubi. La compatibilità va verificata sull’intero circuito. Per liquidi che tendono a cristallizzare o a lasciare residui, definisci anche il lavaggio dopo l’arresto."
+          },
+          {
+            "type": "paragraph",
+            "text": "Oltre alla filettatura, controlla tipo di connessione, diametro del tubo e spazio di montaggio. Porte di lavoro e porte di pulizia svolgono funzioni diverse. Collega i tubi in base al disegno della configurazione, anche se le porte hanno la stessa filettatura."
+          },
+          {
+            "type": "subheading",
+            "title": "Includere contropressione, condizioni in ingresso e azionamento"
+          },
+          {
+            "type": "paragraph",
+            "text": "Registra livello del liquido in ingresso, altezza di aspirazione, lunghezza e diametro interno dei tubi e restrizioni in uscita come aghi e filtri. Per l’azionamento, conferma intervallo di velocità, comportamento di avvio e arresto e metodo di posizionamento. Verifica la portata media richiesta in queste condizioni."
+          },
+          {
+            "type": "paragraph",
+            "text": "Pressione nominale e condizioni delle prove di accuratezza sono dati distinti. La specifica inglese corrente di RPL-P6.35 e RPL-P15 usa acqua pura, indica una condizione di pressione del liquido non superiore a 50 kPa e specifica velocità di prova rispettivamente di 100 rpm e 300 rpm. Per reagenti e contropressioni diversi, verifica le prestazioni nelle condizioni effettive."
+          }
+        ]
+      },
+      {
+        "title": "Come si confrontano RPL-P4, RPL-P6.35 e RPL-P15?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Parti dalla cilindrata per giro e restringi le opzioni in base a tempo di erogazione, materiali e connessioni. Per dosi piccole verifica la compatibilità con la cilindrata effettiva. Lo stesso volume obiettivo si può ottenere combinando cilindrata e numero di giri in modi diversi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Specifiche di base della serie RPL a testata singola"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Specifica",
+              "RPL-P4",
+              "RPL-P6.35",
+              "RPL-P15"
+            ],
+            "rows": [
+              [
+                "Cilindrata per giro",
+                "12–80 μL/rev",
+                "50–300 μL/rev",
+                "300–1200 μL/rev"
+              ],
+              [
+                "Intervallo di velocità",
+                "5–300 rpm",
+                "5–300 rpm",
+                "5–300 rpm"
+              ],
+              [
+                "Materiale della testata",
+                "Fluoruro di polivinilidene (PVDF)",
+                "Fluoruro di polivinilidene (PVDF)",
+                "Fluoruro di polivinilidene (PVDF)"
+              ],
+              [
+                "Connessioni del fluido di lavoro",
+                "1/4-28 UNF-2B",
+                "1/4-28 UNF-2B",
+                "G1/8"
+              ]
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Fonti: ",
+                "label": "informazioni sul prodotto RPL-P4",
+                "href": "/en/products/pumps/valveless-metering-pump/rpl-p4/",
+                "suffix": " e la "
+              },
+              {
+                "label": "scheda tecnica inglese corrente di RPL-P6.35 e RPL-P15",
+                "href": "/downloads/resources/datasheets/en/Pumps/ps-121b-2507-00001-001-en-rpl-valveless-pump.pdf",
+                "suffix": ". Gli intervalli sono utili per una prima selezione. Impostazione della cilindrata e connessioni devono corrispondere al prodotto scelto."
+              }
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Per dosi piccole, partire dal volume obiettivo"
+          },
+          {
+            "type": "paragraph",
+            "text": "RPL-P4 ha una gamma di cilindrate per giro più piccole e si può valutare per aggiunta di piccoli volumi di reagente, incrementi di titolazione o dosaggio ripetuto. 12 μL/rev è il limite inferiore di cilindrata. Per stabilire la dose minima affidabile, verifica l’erogazione. Al diminuire del volume contano sempre più posizionamento, cedevolezza dei tubi, bolle e residui sulla punta dell’ago."
+          },
+          {
+            "type": "subheading",
+            "title": "Per dosi maggiori, confrontare giri e tempo complessivo"
+          },
+          {
+            "type": "paragraph",
+            "text": "RPL-P6.35 e RPL-P15 coprono intervalli di cilindrata diversi. Dato un volume obiettivo, stima il tempo nominale di movimento da cilindrata e velocità disponibili. Confronta poi il comportamento effettivo di avvio e arresto e il distacco delle gocce nel recipiente. Il tempo complessivo di riempimento dipende anche da queste fasi."
+          },
+          {
+            "type": "paragraph",
+            "text": "La scheda tecnica corrente indica cilindrate standard di 50, 100, 200 e 300 μL per RPL-P6.35 e 400, 800, 1000 e 1200 μL per RPL-P15. Ammette anche configurazioni non standard all’interno di ciascun intervallo. Conferma la cilindrata effettivamente impostata sul prodotto fornito."
+          },
+          {
+            "type": "subheading",
+            "title": "Materiali e porte possono determinare la scelta finale"
+          },
+          {
+            "type": "paragraph",
+            "text": "Le parti in ceramica della RPL-P6.35 sono in biossido di zirconio (ZrO₂), quelle della RPL-P15 in ossido di alluminio (Al₂O₃). Le connessioni di lavoro sono rispettivamente 1/4-28 UNF-2B e G1/8; entrambe indicano connessioni di pulizia 1/4-28 UNF-2B. Una volta soddisfatti volume e tempo, controlla anche compatibilità con il reagente, pulizia e connessioni dei tubi."
+          }
+        ]
+      },
+      {
+        "title": "Come cambiano le priorità tra dosaggio, titolazione e riempimento?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "«Pompa dosatrice senza valvole» descrive meccanismo e funzione, mentre «pompa per erogare reagente», «pompa dosatrice di titolante» e «pompa per riempimento di liquidi» indicano il compito nello strumento. Lo stesso meccanismo può servire a compiti diversi e ogni compito può essere svolto da meccanismi diversi. La distinzione di FMI tra erogazione e dosaggio e la denominazione VMP di IWAKI illustrano la terminologia basata sull’applicazione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Definisci il compito dello strumento prima di scegliere meccanismo e configurazione"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Settore o tipo di apparecchiatura",
+              "Denominazioni possibili",
+              "Da confermare per primo"
+            ],
+            "rows": [
+              [
+                "Strumenti analitici automatici e apparecchiature per preparare campioni",
+                "Pompa per erogazione o dosaggio di reagenti",
+                "Volume di reagente per dose, tempo disponibile e prima dose dopo una sosta."
+              ],
+              [
+                "Titolatori automatici e sistemi di titolazione da laboratorio",
+                "Pompa per dosaggio o erogazione del titolante",
+                "Incremento obiettivo minimo, intervalli di dosaggio e attese di miscelazione e lettura."
+              ],
+              [
+                "Apparecchiature per riempire reagenti e piccoli contenitori",
+                "Pompa di riempimento del reagente o pompa per aliquote",
+                "Volume per recipiente, uniformità, posizionamento e tempo di distacco della goccia."
+              ],
+              [
+                "Moduli di alimentazione continua di liquidi negli strumenti",
+                "Pompa dosatrice per liquidi o pompa di alimentazione controllata",
+                "Portata di lavoro, durata, contropressione e oscillazione ammessa della portata."
+              ]
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Erogazione di reagenti: misurare quello che entra effettivamente nel recipiente di reazione"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per una coppetta di reazione, definisci sia il volume obiettivo sia il tempo disponibile. In funzionamento intermittente, prova separatamente le erogazioni in sequenza e la prima dose dopo una sosta. Raccogli il liquido all’effettiva uscita dell’ago, mantenendo altezza di installazione e resistenza del circuito normali. Misurare solo alla porta della pompa può nascondere gocce residue, adesione alle pareti o bolle."
+          },
+          {
+            "type": "subheading",
+            "title": "Erogazione del titolante: verificare incrementi, risposta e sequenza di lettura"
+          },
+          {
+            "type": "paragraph",
+            "text": "Vicino al punto finale della titolazione, lo strumento può richiedere aggiunte minori. Elenca incrementi obiettivo del dosaggio grossolano e fine. Prova il volume effettivo per comando, la risposta ad avvio e arresto e il distacco delle gocce. Prevedi tempi separati per stabilizzazione della miscela e misura. La pompa eroga il liquido. Il sistema di rilevamento e controllo dello strumento determina il punto finale."
+          },
+          {
+            "type": "subheading",
+            "title": "Riempimento quantitativo: valutare il ciclo completo di lavoro"
+          },
+          {
+            "type": "paragraph",
+            "text": "Dopo aver definito il volume di riempimento, includi nel piano di ciclo posizionamento dei contenitori, movimento dell’ago, distacco delle gocce e ritardi necessari. Per liquidi schiumogeni o che bagnano le pareti, oltre a pesare verifica che tutta la dose entri nel contenitore. Per valutare l’uniformità, mantieni fissi posizione dell’uscita e metodo di raccolta e includi pause e riavvii reali."
+          },
+          {
+            "type": "subheading",
+            "title": "Alimentazione continua: verificare volume cumulativo e oscillazioni di portata"
+          },
+          {
+            "type": "paragraph",
+            "text": "Oltre alla portata media, definisci le oscillazioni ammesse a valle. La prova deve coprire la durata operativa prevista e le variazioni di livello in ingresso e resistenza in uscita. Se il processo è sensibile alla portata istantanea, richiedi una valutazione specifica anche quando la portata media è adatta."
+          }
+        ]
+      },
+      {
+        "title": "Come verificare l’erogazione effettiva?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "L’obiettivo è verificare che il liquido raggiunga il recipiente previsto nelle condizioni reali del circuito e del ciclo. I calcoli aiutano a selezionare i candidati. Le prove sul prototipo confermano la configurazione. Registra più misure nell’ordine seguente."
+          },
+          {
+            "type": "subheading",
+            "title": "Definire liquido e condizioni del circuito, poi adescare e sfiatare"
+          },
+          {
+            "type": "paragraph",
+            "text": "Registra composizione, concentrazione e temperatura del liquido, livello in ingresso, lunghezza e diametro interno dei tubi, specifica dell’ago, contropressione, impostazione della cilindrata e programma di azionamento. Controlla la tenuta dei raccordi e adesca fino all’uscita con il liquido di lavoro prima di misurare."
+          },
+          {
+            "type": "subheading",
+            "title": "Calcolare separatamente scostamento medio e ripetibilità"
+          },
+          {
+            "type": "paragraph",
+            "text": "Esegui più raccolte indipendenti alla stessa impostazione e riporta ogni risultato. Lo scostamento medio dice quanto il valore medio differisce dall’obiettivo. La ripetibilità descrive quanto sono raggruppati i risultati. Verifica la dispersione delle singole dosi anche se la media è vicina all’obiettivo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per la misura gravimetrica, sottrai la massa del recipiente e converti la massa del liquido in volume usando la densità alla temperatura di prova. Verifica quanto risoluzione della bilancia, evaporazione e tempi di manipolazione incidono sul risultato."
+          },
+          {
+            "type": "subheading",
+            "title": "Registrare separatamente la prima dose dopo una sosta"
+          },
+          {
+            "type": "paragraph",
+            "text": "Riprendi l’erogazione dopo la durata reale di sosta dello strumento e registra la prima dose separatamente dalle successive. In questo modo puoi individuare arretramento del liquido, gocce residue, bolle o scostamenti della prima dose, che una media a regime potrebbe nascondere."
+          },
+          {
+            "type": "subheading",
+            "title": "Ripetere la prova con ciclo completo e condizioni limite previste"
+          },
+          {
+            "type": "paragraph",
+            "text": "Reinserisci in sequenza posizionamento dei flaconi, movimento dell’ago, miscelazione e ritardi di misura. Includi le variazioni previste di livello in ingresso, temperatura e resistenza in uscita. Registra il tempo effettivo di arrivo del liquido e il tempo del ciclo completo per verificare volume e produttività."
+          },
+          {
+            "type": "paragraph",
+            "text": "Primi controlli per tre osservazioni comuni"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Osservazione",
+              "Primo controllo",
+              "Passo successivo"
+            ],
+            "rows": [
+              [
+                "Gli scostamenti ripetuti vanno nella stessa direzione",
+                "Valore impostato, conversione delle unità, calibrazione della cilindrata e densità del liquido.",
+                "Verifica questi fattori e misura di nuovo l’erogazione media."
+              ],
+              [
+                "Le singole dosi variano notevolmente",
+                "Bolle, alimentazione del liquido, tenuta dei raccordi e gocce sulla punta dell’ago.",
+                "Mantieni fisse le condizioni, valuta un fattore per volta e ripeti la prova."
+              ],
+              [
+                "Il dosaggio continuo è regolare e la prima dose dopo la sosta è anomala",
+                "Arretramento del liquido all’arresto, residui, gocciolamento e durata della sosta.",
+                "Riproduci la sosta e registra la prima dose separatamente."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le osservazioni orientano l’ordine dei controlli. Per identificare la causa occorrono verifiche. Concorda prima della prova numero di campioni, scostamento ammesso e criterio di ripetibilità."
+          }
+        ]
+      },
+      {
+        "title": "Domande frequenti sulla scelta di una pompa dosatrice senza valvole",
+        "blocks": [
+          {
+            "type": "subheading",
+            "title": "Ridurre la velocità riduce il volume per dose?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Se cilindrata e numero di giri completi restano invariati, la velocità inferiore allunga soprattutto il tempo di erogazione. Il volume nominale della dose resta invariato. Con un comando a tempo fisso, la velocità cambia il numero di giri e il volume erogato. In tal caso ricalibra il dosaggio."
+          },
+          {
+            "type": "subheading",
+            "title": "Il limite inferiore di cilindrata coincide con il volume minimo di dose?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il limite inferiore di cilindrata è un parametro nominale per un ciclo di rotazione completo. La dose minima affidabile dipende anche da posizionamento dell’azionamento, liquido, tubi e condizioni della punta dell’ago. Misurala nelle condizioni operative previste."
+          },
+          {
+            "type": "subheading",
+            "title": "Una testata in fluoruro di polivinilidene è adatta a qualsiasi reagente?"
+          },
+          {
+            "type": "paragraph",
+            "text": "La testata è una parte della valutazione. Controlla singolarmente ceramiche, raccordi, tubi e ogni altro componente a contatto con il fluido. Considera composizione, concentrazione, temperatura e durata di contatto di reagente e liquido di pulizia."
+          },
+          {
+            "type": "subheading",
+            "title": "La definizione «senza valvole» vale per tutto lo strumento?"
+          },
+          {
+            "type": "paragraph",
+            "text": "RPL combina la rotazione e il moto alternativo del pistone in ceramica per aspirare ed erogare senza valvole nel meccanismo di pompaggio. In base al progetto di alimentazione, pulizia e sicurezza, lo strumento completo può richiedere valvole di commutazione, di intercettazione o altri componenti fluidici."
+          },
+          {
+            "type": "subheading",
+            "title": "Una sola pompa RPL a testata singola può dosare due liquidi in modo indipendente?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Una pompa a testata singola ha un solo percorso dosato. Per controllare il rapporto di volume tra due percorsi, valuta un secondo circuito, un metodo di controllo dedicato o una configurazione DRPL a doppia testata. Verifica i requisiti di confluenza e miscelazione a valle."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulla scelta di una pompa dosatrice senza valvole",
+    "faqItems": [],
+    "cta": {
+      "title": "Serve assistenza per confermare una configurazione?",
+      "description": "Indica a FOREACH liquido, pressione, misure dei tubi, applicazione o disegni per la scelta del prodotto e la valutazione tecnica.",
+      "contactLabel": "Contattaci",
+      "productsLabel": "Visualizza i prodotti"
+    }
+  },
+  "modelLinks": [
+    {
+      "name": "RPL-P4",
+      "href": "/en/products/pumps/valveless-metering-pump/rpl-p4/"
+    },
+    {
+      "name": "RPL-P6.35",
+      "href": "/en/products/pumps/valveless-metering-pump/rpl-p635/"
+    },
+    {
+      "name": "RPL-P15",
+      "href": "/en/products/pumps/valveless-metering-pump/rpl-p15/"
+    }
+  ],
+  "schemaFaq": [
+    {
+      "question": "Ridurre la velocità riduce il volume per dose?",
+      "answer": "Se cilindrata e numero di giri completi restano invariati, la velocità inferiore allunga soprattutto il tempo di erogazione. Il volume nominale della dose resta invariato. Con un comando a tempo fisso, la velocità cambia il numero di giri e il volume erogato. In tal caso ricalibra il dosaggio."
+    },
+    {
+      "question": "Il limite inferiore di cilindrata coincide con il volume minimo di dose?",
+      "answer": "Il limite inferiore di cilindrata è un parametro nominale per un ciclo di rotazione completo. La dose minima affidabile dipende anche da posizionamento dell’azionamento, liquido, tubi e condizioni della punta dell’ago. Misurala nelle condizioni operative previste."
+    },
+    {
+      "question": "Una testata in fluoruro di polivinilidene è adatta a qualsiasi reagente?",
+      "answer": "La testata è una parte della valutazione. Controlla singolarmente ceramiche, raccordi, tubi e ogni altro componente a contatto con il fluido. Considera composizione, concentrazione, temperatura e durata di contatto di reagente e liquido di pulizia."
+    },
+    {
+      "question": "La definizione «senza valvole» vale per tutto lo strumento?",
+      "answer": "RPL combina la rotazione e il moto alternativo del pistone in ceramica per aspirare ed erogare senza valvole nel meccanismo di pompaggio. In base al progetto di alimentazione, pulizia e sicurezza, lo strumento completo può richiedere valvole di commutazione, di intercettazione o altri componenti fluidici."
+    },
+    {
+      "question": "Una sola pompa RPL a testata singola può dosare due liquidi in modo indipendente?",
+      "answer": "Una pompa a testata singola ha un solo percorso dosato. Per controllare il rapporto di volume tra due percorsi, valuta un secondo circuito, un metodo di controllo dedicato o una configurazione DRPL a doppia testata. Verifica i requisiti di confluenza e miscelazione a valle."
+    }
+  ]
+}

@@ -1,8 +1,11 @@
 import details from "../generated/pumps/valveless-pumps/detail/index.json";
 import { getValvelessPumpImageAlt } from "./valveless-pump-image-copy";
+import { de } from "./valveless-locales/de";
 import { en } from "./valveless-locales/en";
 import { es } from "./valveless-locales/es";
 import { fr } from "./valveless-locales/fr";
+import { hi } from "./valveless-locales/hi";
+import { it } from "./valveless-locales/it";
 import { ko } from "./valveless-locales/ko";
 import { ru } from "./valveless-locales/ru";
 import type { ValvelessForeignLocale, ValvelessScenario } from "./valveless-locales/types";
@@ -11,16 +14,20 @@ import type { ProductApplicationsContent } from "./product-detail.types";
 // This module must stay independent of the selection catalog and SEO title helper:
 // both use these authored strings. Identity and specifications come from the source records.
 const locales = { en, es, fr, ko, ru };
+type ValvelessContentLocale = ValvelessForeignLocale | "de" | "it" | "hi";
 const galleryViews = {
+  hi: { nameplate: "नेमप्लेट का व्यू", angled: "तिरछा व्यू" },
+  de: { nameplate: "Ansicht des Typenschilds", angled: "Schrägansicht" },
   en: { nameplate: "nameplate view", angled: "angled view" },
   es: { nameplate: "vista de la placa de identificación", angled: "vista en perspectiva" },
   fr: { nameplate: "vue de la plaque signalétique", angled: "vue en perspective" },
+  it: { nameplate: "vista della targhetta", angled: "vista in prospettiva" },
   ko: { nameplate: "명판 보기", angled: "사선 보기" },
   ru: { nameplate: "вид заводской таблички", angled: "вид под углом" },
 };
 export const valvelessForeignLocales = Object.keys(locales) as ValvelessForeignLocale[];
 export function getValvelessLocaleCopy(locale: string) {
-  return locales[locale as ValvelessForeignLocale];
+  return locale === "hi" ? hi : locale === "de" ? de : locale === "it" ? it : locales[locale as ValvelessForeignLocale];
 }
 
 const scenarios: Record<string, ValvelessScenario[]> = {
@@ -73,7 +80,8 @@ export function getValvelessForeignContent(slug: string, locale: string) {
     if (raw === "DRPL 双头无阀泵") return copy.dualName;
     if (raw === "定制配置") return copy.customConfiguration;
     if (raw === "G1/8（默认带金属快插接头）") return copy.metalFitting;
-    return raw.replace(/cycles/g, { en: "cycles", es: "ciclos", fr: "cycles", ko: "사이클", ru: "циклов" }[locale as ValvelessForeignLocale]);
+    if ((locale === "de" || locale === "it") && raw.startsWith("Max ")) return raw.replace("Max ", "max. ");
+    return raw.replace(/cycles/g, { hi: "चक्र", de: "Zyklen", en: "cycles", es: "ciclos", fr: "cycles", it: "cicli", ko: "사이클", ru: "циклов" }[locale as ValvelessContentLocale]);
   };
   const specs = source.specs.map(row => {
     const label = copy.specs[row.label];
@@ -86,7 +94,7 @@ export function getValvelessForeignContent(slug: string, locale: string) {
     : copy.faqSingle;
   const imageAlt = getValvelessPumpImageAlt(source.mainImage, locale)
     || `FOREACH ${model} ${dual ? copy.dualName : copy.singleName}`;
-  const views = galleryViews[locale as ValvelessForeignLocale];
+  const views = galleryViews[locale as ValvelessContentLocale];
   const additionalImageAlts = (source.additionalImages || []).map((image, index) => {
     const isNameplate = slug === "rpl-p15" && index === 0;
     const angle = slug === "rpl-p15" ? index : index + 1;

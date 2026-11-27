@@ -1,10 +1,25 @@
 import type { LocaleCode } from "@/lib/i18n";
 
-export const homeMetadata: Record<Exclude<LocaleCode, "zh-CN">, { title: string; description: string; ogLocale: string }> = {
+export const homeMetadata: Record<Exclude<LocaleCode, "zh-CN"> | "de" | "it" | "hi", { title: string; description: string; ogLocale: string }> = {
   en: {
     title: "Fluidic Components for OEM Instruments | FOREACH",
     description: "Explore FOREACH pumps, valves, probes, sensors, tubing and fittings for instruments and industrial equipment, with guides to component selection and integration.",
     ogLocale: "en_US",
+  },
+  hi: {
+    title: "OEM उपकरणों के लिए फ्लुइडिक घटक | FOREACH",
+    description: "उपकरणों और औद्योगिक सिस्टम के लिए FOREACH के पंप, वाल्व, प्रोब, सेंसर, ट्यूब और फिटिंग देखें। घटकों के चयन और इंटीग्रेशन की गाइड पढ़ें।",
+    ogLocale: "hi_IN",
+  },
+  it: {
+    title: "Componenti fluidici per strumenti OEM | FOREACH",
+    description: "Scopri pompe, valvole, sonde, sensori, tubi e raccordi FOREACH per strumenti e apparecchiature industriali, con guide per la scelta e l’integrazione dei componenti.",
+    ogLocale: "it_IT",
+  },
+  de: {
+    title: "Fluidikkomponenten für OEM-Geräte | FOREACH",
+    description: "Pumpen, Ventile, Sonden, Sensoren, Schläuche und Fluidik-Fittings von FOREACH für Instrumente und Industrieanlagen. Mit Leitfäden zur Auswahl und Integration.",
+    ogLocale: "de_DE",
   },
   es: {
     title: "Componentes fluídicos para instrumentos OEM | FOREACH",

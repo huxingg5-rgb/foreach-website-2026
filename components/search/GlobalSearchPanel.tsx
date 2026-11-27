@@ -15,6 +15,12 @@ import {
   type CompactSearchItem,
   type SearchModule,
 } from "@/components/search/global-search-index";
+import { getGermanNavigationText } from "@/data/navigation.de";
+import { getControlModuleSearchItems, isControlModuleSearchDetail } from "@/data/search/control-module-search";
+import { getHindiProductSearchAliases } from "@/data/search/hindi-product-search";
+import { getHindiNavigationText } from "@/data/navigation.hi";
+import { getItalianNavigationText } from "@/data/navigation.it";
+import { getDraftHrefForEnglish, getEnglishDraftSourcePath, getHindiDraftLink, hindiEnglishFallbackSuffix, getItalianDraftLink, isLocalizedGermanDraftPath, type DraftLocale } from "@/lib/i18n/draft-languages";
 import { getInternationalUiText } from "@/lib/international-ui";
 import { getAnalyticsProductId, trackProductSelect, trackSearchWithResults } from "@/lib/analytics/track-event";
 import type { LocaleCode } from "@/lib/i18n";
@@ -23,6 +29,11 @@ type GlobalSearchPanelProps = {
   isOpen: boolean;
   query: string;
   locale: string;
+  draftLocale?: DraftLocale;
+  germanUi?: boolean;
+  italianUi?: boolean;
+  hindiUi?: boolean;
+  fittingPathPattern?: string;
   onQueryChange: (value: string) => void;
   onClose: () => void;
 };
@@ -191,10 +202,11 @@ function useDebouncedValue(
 
 function scoreItem(
   item: CompactSearchItem,
-  normalizedQuery: string
+  normalizedQuery: string,
+  aliases: readonly string[] = []
 ): number {
   const searchText = normalize(item.x);
-  const keywords = normalize(item.k ?? "");
+  const keywords = normalize(aliases.length ? [item.k, ...aliases].filter(Boolean).join(" ") : item.k ?? "");
 
   if (
     !normalizedQuery ||
@@ -301,7 +313,7 @@ function getLocalizedHref(
     .filter(Boolean)[0];
 
   if (
-    ["en", "es", "fr", "ko", "ru"].includes(
+    ["en", "es", "fr", "ko", "ru", "de"].includes(
       firstSegment ?? ""
     )
   ) {
@@ -315,18 +327,29 @@ export default function GlobalSearchPanel({
   isOpen,
   query,
   locale,
+  draftLocale,
+  germanUi = false,
+  italianUi = false,
+  hindiUi = false,
+  fittingPathPattern,
   onQueryChange,
   onClose,
 }: GlobalSearchPanelProps) {
   // 每个语言加载自己的构建期索引，避免中文字段在外语界面降级显示。
   const isEnglish = locale !== "zh-CN" && locale !== "zh";
   const activeLocale = locale as LocaleCode;
-  const initialCachedItems = getCachedGlobalSearchIndex(locale);
-  const t = (text: string) => getInternationalUiText(activeLocale, text);
+  const searchIndexLocale = germanUi ? "de" : locale;
+  const initialCachedItems = getCachedGlobalSearchIndex(searchIndexLocale);
+  const t = (text: string) => germanUi ? getGermanNavigationText(text) : italianUi ? getItalianNavigationText(text) : hindiUi ? getHindiNavigationText(text) : getInternationalUiText(activeLocale, text);
   const moduleText = isEnglish
     ? Object.fromEntries(Object.entries(MODULE_TEXT_EN).map(([key, value]) => [key, { title: t(value.title), action: t(value.action) }])) as typeof MODULE_TEXT_EN
     : MODULE_TEXT;
-  const suggestions = isEnglish
+  const suggestions = hindiUi ? ["Q2002", "PMC1702", "पिस्टन पंप", "PEEK", "डेटाशीट", "ADLM"]
+    : italianUi
+    ? ["Q2002", "PMC1702", "pompa a pistone", "PEEK", "schede tecniche", "ADLM"]
+    : germanUi
+    ? ["Q2002", "PMC1702", "Kolbenpumpe", "PEEK", "Datenblätter", "ADLM"]
+    : isEnglish
     ? INITIAL_SUGGESTIONS_EN
     : INITIAL_SUGGESTIONS;
 
@@ -361,12 +384,12 @@ export default function GlobalSearchPanel({
     let cancelled = false;
 
     window.setTimeout(() => {
-      if (!cancelled && !getCachedGlobalSearchIndex(locale)) {
+      if (!cancelled && !getCachedGlobalSearchIndex(searchIndexLocale)) {
         setLoadState("loading");
       }
     }, 0);
 
-    void preloadGlobalSearchIndex(locale)
+    void preloadGlobalSearchIndex(searchIndexLocale)
       .then((loadedItems) => {
         if (cancelled) return;
 
@@ -382,7 +405,7 @@ export default function GlobalSearchPanel({
     return () => {
       cancelled = true;
     };
-  }, [isOpen, items, locale]);
+  }, [isOpen, items, searchIndexLocale]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -468,7 +491,28 @@ export default function GlobalSearchPanel({
   const queryIsLongEnough =
     isSearchQueryLongEnough(debouncedQuery);
 
-  const displayItems = items;
+  const controlSearchLocale = germanUi ? "de" : italianUi ? "it" : hindiUi ? "hi" : locale;
+  const displayItems = useMemo(() => {
+    if (!items) return items;
+
+    const controlItems = getControlModuleSearchItems(controlSearchLocale);
+    if (!controlItems.length) return items;
+
+    return [
+      ...items.filter(item => (item.m !== "pages" && item.m !== "products") || !isControlModuleSearchDetail(item.h)),
+      ...controlItems.map((item): CompactSearchItem => ({
+        m: item.module,
+        t: item.title,
+        d: item.description,
+        h: getEnglishDraftSourcePath(item.href),
+        i: item.image,
+        x: [item.title, item.description, ...item.keywords].join(" "),
+        k: item.keywords.join(" "),
+        a: item.actionLabel,
+        g: germanUi ? true : undefined,
+      })),
+    ];
+  }, [items, controlSearchLocale, germanUi]);
 
   const groupedResults = useMemo(() => {
     const grouped = new Map<
@@ -494,7 +538,8 @@ export default function GlobalSearchPanel({
     for (const item of displayItems) {
       const score = scoreItem(
         item,
-        normalizedQuery
+        normalizedQuery,
+        hindiUi ? getHindiProductSearchAliases(item.h) : undefined
       );
 
       if (score <= 0) continue;
@@ -514,7 +559,7 @@ export default function GlobalSearchPanel({
           b.score - a.score ||
           a.item.t.localeCompare(
             b.item.t,
-            "zh-CN"
+            germanUi ? "de" : italianUi ? "it" : hindiUi ? "hi-IN" : "zh-CN"
           )
         );
       });
@@ -526,6 +571,9 @@ export default function GlobalSearchPanel({
   }, [
     debouncedQuery,
     displayItems,
+    germanUi,
+    italianUi,
+    hindiUi,
     queryIsLongEnough,
   ]);
 
@@ -554,11 +602,11 @@ export default function GlobalSearchPanel({
       return;
     }
     const term = debouncedQuery.trim();
-    const key = `${locale}:${term}`;
+    const key = `${searchIndexLocale}:${term}`;
     if (loadState !== "ready" || !items || query.trim() !== term || key === lastTrackedSearch.current) return;
     lastTrackedSearch.current = key;
-    trackSearchWithResults({ searchTerm: term, searchLocation: "global_search_overlay", locale, resultCount: totalCount });
-  }, [debouncedQuery, isOpen, items, loadState, locale, query, queryIsLongEnough, totalCount]);
+    trackSearchWithResults({ searchTerm: term, searchLocation: "global_search_overlay", locale: searchIndexLocale, resultCount: totalCount });
+  }, [debouncedQuery, isOpen, items, loadState, query, queryIsLongEnough, searchIndexLocale, totalCount]);
 
   if (!isOpen || typeof document === "undefined") {
     return null;
@@ -616,7 +664,7 @@ export default function GlobalSearchPanel({
               loadState === "ready" ? (
                 <span>
                   {isEnglish
-                    ? `${totalCount} ${t("results")}`
+                    ? `${totalCount} ${totalCount === 1 && (germanUi || italianUi) ? (germanUi ? "Ergebnis" : "risultato") : t("results")}`
                     : `共 ${totalCount} 条结果`}
                 </span>
               ) : null}
@@ -626,7 +674,7 @@ export default function GlobalSearchPanel({
                 type="button"
                 aria-label={
                   isEnglish
-                    ? `${t("Close")} ${t("Site Search")}`
+                    ? germanUi ? "Website-Suche schließen" : italianUi ? "Chiudi la ricerca nel sito" : `${t("Close")} ${t("Site Search")}`
                     : "关闭全站搜索"
                 }
                 onClick={onClose}
@@ -814,108 +862,128 @@ export default function GlobalSearchPanel({
 
                   <div className="global-search-result-grid">
                     {visibleResults.map(
-                      ({ item }) => (
-                        <a
-                          className="global-search-result"
-                          href={getLocalizedHref(
-                            item.h,
-                            locale
-                          )}
-                          data-analytics-resource-action={
-                            item.m === "datasheets" ? "view" : undefined
-                          }
-                          data-analytics-resource-type={
-                            item.m === "datasheets" ? "datasheet" : undefined
-                          }
-                          data-analytics-resource-file-type={
-                            item.m === "datasheets" ? "pdf" : undefined
-                          }
-                          data-analytics-section="global_search_results"
-                          key={`${item.m}-${item.h}-${item.t}`}
-                          onClick={(event) => {
-                            if (item.m === "products") {
-                              trackProductSelect({
-                                locale, listId: "global_search_overlay", sourceSection: "global_search_results",
-                                productId: getAnalyticsProductId(item.h), productName: item.t,
-                              });
+                      ({ item }) => {
+                        const sourceHref = getLocalizedHref(item.h, locale);
+                        const draftHref = getDraftHrefForEnglish(sourceHref, draftLocale);
+                        const draftPath = draftHref.split(/[?#]/, 1)[0];
+                        const englishTarget = germanUi && draftPath.startsWith("/de/") &&
+                          !isLocalizedGermanDraftPath(draftPath, fittingPathPattern);
+                        const italianLink = italianUi ? getItalianDraftLink(sourceHref) : undefined;
+                        const hindiLink = hindiUi ? getHindiDraftLink(sourceHref) : undefined;
+                        const pdf = (germanUi || italianUi || hindiUi) && item.m === "datasheets" && /\.pdf(?:$|[?#])/i.test(sourceHref);
+                        const resultHref = hindiLink?.href ?? italianLink?.href ?? (englishTarget
+                          ? draftHref.replace(/^\/de(?=\/)/, "/en")
+                          : draftHref);
+                        const action = hindiUi
+                          ? pdf ? "PDF देखें (अंग्रेज़ी में)" : moduleText[module].action + (hindiLink?.hrefLang === "en" ? hindiEnglishFallbackSuffix : "")
+                          : italianUi
+                          ? pdf ? "Vedi PDF (in inglese)" : moduleText[module].action + (italianLink?.hrefLang === "en" ? " (in inglese)" : "")
+                          : pdf ? "PDF ansehen (Englisch)"
+                          : germanUi && item.m === "datasheets" ? "Sonderanfertigung anfragen"
+                          : englishTarget ? `${moduleText[module].action} (Englisch)`
+                          : germanUi ? moduleText[module].action
+                          : item.a ?? moduleText[module].action;
+                        const localizedControl = item.m === "products" && isControlModuleSearchDetail(item.h);
+                        const copyLanguage = ((hindiUi || italianUi) && !localizedControl) || (germanUi && !item.g) ? "en" : undefined;
+                        return (
+                          <a
+                            className="global-search-result"
+                            href={resultHref}
+                            hrefLang={englishTarget || pdf ? "en" : hindiLink?.hrefLang ?? italianLink?.hrefLang ?? (germanUi && draftPath.startsWith("/de/") ? "de" : undefined)}
+                            data-analytics-resource-action={
+                              item.m === "datasheets" ? "view" : undefined
                             }
-                            /*
-                              MOBILE_SEARCH_LINK_FIX_20260713
-
-                              手机端点击搜索结果时，明确执行页面跳转，
-                              避免搜索面板先卸载导致默认链接跳转被中断。
-                            */
-                            if (
-                              event.metaKey ||
-                              event.ctrlKey ||
-                              event.shiftKey ||
-                              event.altKey ||
-                              event.button !== 0
-                            ) {
-                              return;
+                            data-analytics-resource-type={
+                              item.m === "datasheets" ? "datasheet" : undefined
                             }
+                            data-analytics-resource-file-type={
+                              item.m === "datasheets" ? "pdf" : undefined
+                            }
+                            data-analytics-section="global_search_results"
+                            key={`${item.m}-${item.h}-${item.t}`}
+                            onClick={(event) => {
+                              if (item.m === "products") {
+                                trackProductSelect({
+                                  locale: searchIndexLocale, listId: "global_search_overlay", sourceSection: "global_search_results",
+                                  productId: getAnalyticsProductId(item.h), productName: item.t,
+                                });
+                              }
+                              /*
+                                MOBILE_SEARCH_LINK_FIX_20260713
 
-                            event.preventDefault();
+                                手机端点击搜索结果时，明确执行页面跳转，
+                                避免搜索面板先卸载导致默认链接跳转被中断。
+                              */
+                              if (
+                                event.metaKey ||
+                                event.ctrlKey ||
+                                event.shiftKey ||
+                                event.altKey ||
+                                event.button !== 0
+                              ) {
+                                return;
+                              }
 
-                            const nextHref =
-                              event.currentTarget.href;
+                              event.preventDefault();
 
-                            window.location.assign(nextHref);
-                          }}
-                        >
-                          {item.i ? (
-                            <span className="global-search-result-image">
-                              {/* eslint-disable-next-line @next/next/no-img-element -- 搜索索引图片路径为运行时数据，保留原生延迟加载图片。 */}
-                              <img
-                                src={item.i}
-                                alt={item.t}
-                                loading="lazy"
-                              />
-                            </span>
-                          ) : (
-                            <span
-                              className="global-search-result-image global-search-result-image-empty"
-                              aria-hidden="true"
-                            >
-                              F
-                            </span>
-                          )}
+                              const nextHref =
+                                event.currentTarget.href;
 
-                          <span className="global-search-result-copy">
-                            <strong>
-                              {highlightText(
-                                item.t,
-                                debouncedQuery
-                              )}
-                            </strong>
+                              window.location.assign(nextHref);
+                            }}
+                          >
+                            {item.i ? (
+                              <span className="global-search-result-image">
+                                {/* eslint-disable-next-line @next/next/no-img-element -- 搜索索引图片路径为运行时数据，保留原生延迟加载图片。 */}
+                                <img
+                                  src={item.i}
+                                  alt={item.t}
+                                  loading="lazy"
+                                />
+                              </span>
+                            ) : (
+                              <span
+                                className="global-search-result-image global-search-result-image-empty"
+                                aria-hidden="true"
+                              >
+                                F
+                              </span>
+                            )}
 
-                            {item.s ? (
-                              <span className="global-search-result-subtitle">
+                            <span className="global-search-result-copy">
+                              <strong lang={copyLanguage}>
                                 {highlightText(
-                                  item.s,
+                                  item.t,
                                   debouncedQuery
                                 )}
-                              </span>
-                            ) : null}
+                              </strong>
 
-                            {item.d ? (
-                              <span className="global-search-result-description">
-                                {item.d}
-                              </span>
-                            ) : null}
+                              {item.s ? (
+                                <span className="global-search-result-subtitle" lang={copyLanguage}>
+                                  {highlightText(
+                                    item.s,
+                                    debouncedQuery
+                                  )}
+                                </span>
+                              ) : null}
 
-                            <span className="global-search-result-action">
-                              {item.a ??
-                                moduleText[module]
-                                  .action}
+                              {item.d ? (
+                                <span className="global-search-result-description" lang={copyLanguage}>
+                                  {item.d}
+                                </span>
+                              ) : null}
 
-                              <span aria-hidden="true">
-                                →
+                              <span className="global-search-result-action">
+                                {action}
+
+                                <span aria-hidden="true">
+                                  →
+                                </span>
                               </span>
                             </span>
-                          </span>
-                        </a>
-                      )
+                          </a>
+                        );
+                      }
                     )}
                   </div>
 

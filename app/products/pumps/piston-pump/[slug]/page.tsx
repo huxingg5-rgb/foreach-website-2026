@@ -1,12 +1,18 @@
 import { getPistonPumpRedirect } from "@/lib/seo/piston-pump-migration";
 import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
 import { getPistonPumpMetadata } from "@/services/products/getPistonPumpMetadata";
+import { getHindiPistonPumpDetail } from "@/services/products/getHindiPistonPumpDetail";
+import { getItalianPistonPumpDetail } from "@/services/products/getItalianPistonPumpDetail";
+import { getGermanPistonPumpDetail } from "@/services/products/getGermanPistonPumpDetail";
+import type { GermanProductDetailContent } from "@/data/products/detail/product-detail-content.de";
 import { getPumpSeriesProductDetailAdapter } from "@/services/products/adapters/getPumpSeriesProductDetailAdapter";
 import nodePath from "node:path";
 import nodeFs from "node:fs";
 import { notFound } from "next/navigation";
 import { Suspense, type ComponentType, type ReactNode } from "react";
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
+import RelatedProducts from "@/components/common/related-resources/RelatedProducts";
+import { getHindiDraftLink, getItalianDraftLink } from "@/lib/i18n/draft-languages";
 import RelatedResources from "@/components/common/related-resources/RelatedResources";
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import { PistonPumpDeliveryContent, EaPumpSelectionContent } from "@/components/products/detail/EaPumpDetailContent";
@@ -17,6 +23,7 @@ import type { ProductDetailPageData } from "@/data/products/detail/product-detai
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
 import * as plungerPumpDetailModule from "@/data/products/detail/plunger-pump-detail.generated";
 import { selectionProducts } from "@/data/products/selection/product-selection.generated";
+import { getPistonPumpTubingAssemblyRelatedProducts } from "@/data/products/tubing-assemblies/related-products";
 import {
   getSeriesRouteParams,
   resolveSeriesRoute,
@@ -42,6 +49,9 @@ type PageParams = {
 type PageProps = {
   params: Promise<PageParams>;
   locale?: SelectionLocale;
+  germanDraft?: boolean;
+  italianDraft?: boolean;
+  hindiDraft?: boolean;
 };
 
 type DetailRecord = Record<string, any>;
@@ -49,6 +59,8 @@ type DetailRecord = Record<string, any>;
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
   analyticsProductId?: string;
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: { locale: "it" | "hi"; copy: GermanProductDetailContent };
   afterContent?: ReactNode;
   customerCategoryMode?: "piston-pump";
   customerCategoryContent?: Partial<Record<"product" | "selection" | "delivery", ReactNode>>;
@@ -696,6 +708,9 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function PlungerPumpDetailPage({
   params,
   locale = "zh",
+  germanDraft = false,
+  italianDraft = false,
+  hindiDraft = false,
 }: PageProps) {
   const resolvedParams = await params;
   const seriesRoute = getPlungerSeriesRoute(resolvedParams.slug);
@@ -713,7 +728,11 @@ export default async function PlungerPumpDetailPage({
     );
   }
 
-  const data = getPreferredProductDetailData(resolvedParams.slug, locale);
+  const germanData = germanDraft ? getGermanPistonPumpDetail(resolvedParams.slug) : null;
+  const italianData = italianDraft ? getItalianPistonPumpDetail(resolvedParams.slug) : null;
+  const hindiData = hindiDraft ? getHindiPistonPumpDetail(resolvedParams.slug) : null;
+  const data = germanData ?? italianData ?? hindiData ?? getPreferredProductDetailData(resolvedParams.slug, locale);
+  const presentationLocale = germanData ? "de" : italianData ? "it" : hindiData ? "hi" : locale;
 
   if (!data) {
     notFound();
@@ -727,13 +746,25 @@ export default async function PlungerPumpDetailPage({
   );
   const relationKeys = getPistonPumpRelationKeys(data);
   const relatedResourcesLocale = locale === "zh" ? "zh-CN" : locale;
+  const showTubingAssemblyProducts = relationKeys.includes("series:ea") || relationKeys.includes("series:sm");
+  const assemblyProducts = showTubingAssemblyProducts ? getPistonPumpTubingAssemblyRelatedProducts(germanData ? "de" : relatedResourcesLocale) : [];
+  const localizedAssemblyProducts = (italianData || hindiData) ? assemblyProducts.map(product => {
+    const destination = hindiData ? getHindiDraftLink(product.href) : getItalianDraftLink(product.href);
+    return {
+      ...product,
+      title: pistonText(product.title, presentationLocale),
+      imageAlt: pistonText(product.imageAlt, presentationLocale),
+      href: destination.href,
+      destinationLanguage: destination.hrefLang,
+    };
+  }) : assemblyProducts;
   const guide = getPistonPumpGuide(data.slug);
   const authored = guide ? applyPistonPumpGuide(data as ProductDetailPageData, guide) : undefined;
   const productData = {
     ...(authored ? locale === "zh" ? authored : {
       ...data,
-      specs: authored.specs.map(spec => ({ ...spec, label: pistonText(spec.label, locale), value: pistonText(spec.value, locale) })),
-      faqs: authored.faqs?.map(faq => ({ ...faq, question: pistonText(faq.question, locale), answer: pistonText(faq.answer, locale) })),
+      specs: authored.specs.map(spec => ({ ...spec, label: pistonText(spec.label, presentationLocale), value: pistonText(spec.value, presentationLocale) })),
+      faqs: authored.faqs?.map(faq => ({ ...faq, question: pistonText(faq.question, presentationLocale), answer: pistonText(faq.answer, presentationLocale) })),
     } : data),
     relationKeys,
   };
@@ -742,22 +773,73 @@ export default async function PlungerPumpDetailPage({
     <ProductDetailView
       data={productData}
       analyticsProductId={analyticsProductId}
+      germanDetail={germanData ? {
+        title: germanData.name,
+        description: germanData.description,
+        faqs: productData.faqs ?? [],
+        imageAlt: germanData.imageAlt,
+        bottomCta: {
+          title: "Kolbenpumpe passend zu Ihrem Gerät konfigurieren",
+          description: "Geben Sie Zielvolumen, Medienverträglichkeit, Anschlussart, Steuerungsart, verfügbaren Bauraum und Anforderungen an die Lebensdauer an. Das FOREACH-Engineeringteam unterstützt Sie bei der Abstimmung der Pumpenkonfiguration und der medienberührten Werkstoffe.",
+          buttonText: "Kontakt aufnehmen",
+          href: "/de/contact/",
+        },
+      } : undefined}
+      localizedDetail={hindiData ? {
+        locale: "hi",
+        copy: {
+          title: hindiData.name,
+          description: hindiData.description,
+          imageAlt: hindiData.imageAlt,
+          faqs: productData.faqs ?? [],
+          bottomCta: {
+            title: "अपने उपकरण के लिए पिस्टन पंप कॉन्फ़िगर करें",
+            description: "लक्ष्य आयतन, द्रव की अनुकूलता, पोर्ट, नियंत्रण, उपलब्ध जगह और सेवा अवधि की ज़रूरत बताएँ। FOREACH की तकनीकी टीम पंप कॉन्फ़िगरेशन और द्रव के संपर्क वाली सामग्री चुनने में आपकी मदद करेगी।",
+            buttonText: "हमसे संपर्क करें",
+            href: "/hi/contact/",
+          },
+        },
+      } : italianData ? {
+        locale: "it",
+        copy: {
+          title: italianData.name,
+          description: italianData.description,
+          imageAlt: italianData.imageAlt,
+          faqs: productData.faqs ?? [],
+          bottomCta: {
+            title: "Configurate la pompa a pistone per il vostro strumento",
+            description: "Indicate il volume richiesto, la compatibilità con il fluido, gli attacchi, il comando, lo spazio disponibile e la durata attesa. Il team tecnico FOREACH vi aiuta a scegliere la configurazione e i materiali a contatto con il fluido.",
+            buttonText: "Contattaci",
+            href: "/it/contact/",
+          },
+        },
+      } : undefined}
       customerCategoryMode={guide ? "piston-pump" : undefined}
       customerCategoryContent={guide ? {
         selection: guide.series === "EA"
-          ? <EaPumpSelectionContent locale={locale} key={guide.slug} guide={guide} />
-          : <CompactPistonPumpSelectionContent locale={locale} key={guide.slug} guide={guide} />,
-        delivery: <PistonPumpDeliveryContent locale={locale} guide={guide} />,
+          ? <EaPumpSelectionContent locale={presentationLocale} key={guide.slug} guide={guide} />
+          : <CompactPistonPumpSelectionContent locale={presentationLocale} key={guide.slug} guide={guide} />,
+        delivery: <PistonPumpDeliveryContent locale={presentationLocale} guide={guide} />,
       } : undefined}
       afterContent={
-        <RelatedResources
-          key="product-related-resources"
-          sourceType="product"
-          sourceId={analyticsProductId || resolvedDetailSlug}
-          sourceSlug={getText(productData.slug)}
-          relationKeys={relationKeys}
-          locale={relatedResourcesLocale}
-        />
+        <>
+          {showTubingAssemblyProducts ? (
+            <RelatedProducts
+              locale={relatedResourcesLocale}
+              uiLocale={germanData ? "de" : italianData ? "it" : hindiData ? "hi" : undefined}
+              products={localizedAssemblyProducts}
+            />
+          ) : null}
+          <RelatedResources
+            key="product-related-resources"
+            sourceType="product"
+            sourceId={analyticsProductId || resolvedDetailSlug}
+            sourceSlug={getText(productData.slug)}
+            relationKeys={relationKeys}
+            locale={relatedResourcesLocale}
+            uiLocale={germanData ? "de" : italianData ? "it" : hindiData ? "hi" : undefined}
+          />
+        </>
       }
     />
   );

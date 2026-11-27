@@ -1,0 +1,314 @@
+{
+  "metadata": {
+    "title": "300 o 600 mL/min? Come scegliere una pompa di ricircolo o di ritorno dell’inchiostro",
+    "seoTitle": "Scelta della pompa per inchiostro da 300 o 600 mL/min | Foreach Technology",
+    "seoDescription": "Valuta una pompa di ricircolo o ritorno dell’inchiostro da 300 o 600 mL/min in base a portata di lavoro, curva della pompa, viscosità, filtro, tubi e pressioni di mandata e ritorno.",
+    "coverImage": "/images/resources/technical-articles/ink-circulation-flow-selection/ink-pump-300-vs-600-flow-selection-cover.webp",
+    "coverAlt": "Pompe a membrana in miniatura per liquidi FOREACH DPL30 e DPL60 mostrate in un video di prodotto"
+  },
+  "deck": "Definisci la portata di lavoro nel circuito di ricircolo o di ritorno dell’inchiostro. Calcola o misura poi la differenza di pressione del sistema a quella portata. Per DPL30 e DPL60, i valori di 300 mL/min e 600 mL/min indicano le classi di portata senza carico. Con inchiostro, filtri, tubi e testina, la portata effettiva va verificata. Più l’obiettivo si avvicina al limite nominale, più contano la curva della pompa e le prove sul sistema installato.",
+  "leadBlocks": [
+    {
+      "type": "notice",
+      "label": "Prima valutazione:",
+      "text": "Sotto 300 mL/min valuta prima DPL30. Da 300 mL/min in su valuta in genere prima DPL60. Ogni fascia indica un candidato da verificare."
+    },
+    {
+      "type": "links",
+      "items": [
+        {
+          "href": "/resources/technical-articles/ink-circulation-supply-return-pump-diaphragm-pump/",
+          "label": "guida alle funzioni delle pompe di alimentazione, ritorno e ricircolo dell’inchiostro",
+          "prefix": "Se la funzione della pompa non è ancora definita, consulta la ",
+          "suffix": "."
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. 300 o 600 mL/min: quale pompa valutare per prima",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Portata di lavoro richiesta",
+            "Candidato iniziale",
+            "Verifiche"
+          ],
+          "rows": [
+            [
+              "0–100 mL/min",
+              "DPL30 da valutare",
+              "Stabilità a bassa velocità, pulsazioni, controllo e aumento di temperatura"
+            ],
+            [
+              ">100–200 mL/min",
+              "DPL30 candidate",
+              "Punto sulla curva della pompa alla differenza di pressione richiesta"
+            ],
+            [
+              ">200–<300 mL/min",
+              "DPL30 candidate",
+              "Margine nella fascia alta. Se necessario valuta anche DPL60."
+            ],
+            [
+              "300–400 mL/min",
+              "DPL60 da valutare",
+              "Filtro, viscosità e differenza di pressione fra mandata e ritorno"
+            ],
+            [
+              ">400–500 mL/min",
+              "DPL60 candidate",
+              "Margine sulla curva e condizioni a filtro parzialmente intasato"
+            ],
+            [
+              ">500–600 mL/min",
+              "DPL60 candidate",
+              "Molto vicino al limite senza carico. Esegui una prova e valuta una pompa più grande."
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Soglia di 300:",
+          "text": "Se l’obiettivo è esattamente 300 mL/min, verifica la portata effettiva della DPL30 pur essendo classificata a 300 mL/min. Con la differenza di pressione del circuito reale, valuta prima DPL60."
+        }
+      ]
+    },
+    {
+      "title": "2. Portata di lavoro e portata della pompa senza carico",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La portata di lavoro è quella necessaria per stampa, attesa o ricircolo alla differenza di pressione effettiva. La portata senza carico si misura in condizioni di prova definite, con bassa resistenza. Inchiostro, filtri, tubi, valvole, raccordi, degasatori e passaggi nella testina influiscono sul divario fra le due portate."
+        },
+        {
+          "type": "formula",
+          "expression": "Target working flow ≠ Pump free flow",
+          "note": "Nel sistema installato, il punto di lavoro da verificare è l’intersezione fra la curva della pompa e quella del circuito."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "guida alla curva portata-pressione"
+            },
+            {
+              "href": "/resources/technical-articles/300-vs-600-ml-min-diaphragm-pump-selection/",
+              "label": "criteri generali di scelta tra 300 e 600 mL/min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Come cambiano la portata viscosità, diametro interno e lunghezza dei tubi?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per il flusso laminare ideale e stazionario di un fluido newtoniano in un tubo diritto e circolare, la relazione di Hagen–Poiseuille spiega l’andamento. Viscosità, lunghezza del tubo e portata richiesta maggiori richiedono più pressione differenziale. Il diametro interno ha un effetto particolarmente marcato."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔP ∝ μLQ / D⁴",
+          "note": "μ è la viscosità dinamica, L la lunghezza, Q la portata e D il diametro interno. Usa il modello per stimare l’andamento. Per la scelta della pompa di una stampante serve un modello più completo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un circuito reale di stampa contiene anche filtri, raccordi, valvole, curve, degasatori, diramazioni e passaggi complessi nella testina. Alcuni inchiostri possono mostrare un comportamento dipendente dalla temperatura o non newtoniano. Usa l’equazione per una prima analisi di sensibilità, poi consulta le curve dei componenti e misura la pressione nel sistema installato."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/tube-inner-diameter-affects-diaphragm-pump-flow/",
+              "label": "perché il diametro interno del tubo incide molto sulla portata della pompa a membrana"
+            },
+            {
+              "href": "/resources/technical-articles/suction-vs-discharge-resistance-diaphragm-pump/",
+              "label": "resistenza nei tratti di aspirazione e mandata"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Dimensionamento anche con filtro in esercizio",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La perdita di carico del filtro cambia con grado di filtrazione, area, portata, viscosità, temperatura e quantità di contaminanti trattenuti. Gli inchiostri bianchi o molto pigmentati richiedono di considerare anche dispersione e depositi nel tempo. La scelta basata solo sul filtro pulito può perdere margine durante l’uso."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Registra la differenza di pressione con filtro pulito, con un carico tipico e in prossimità della soglia di sostituzione.",
+            "Misura insieme pressione all’ingresso e all’uscita della pompa, portata, corrente e temperatura dell’inchiostro.",
+            "Rispetta i requisiti di filtrazione dei fornitori di testina e inchiostro. Una pressione più alta non compensa una filtrazione errata."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Portata di mandata e ritorno e controllo della pressione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una testina DOD a flusso passante può dipendere dalla pressione di mandata, dalla pressione di ritorno, dalla loro differenza e dalla pressione al menisco degli ugelli. Un ricircolo più intenso richiede in genere una maggiore differenza di pressione. Un controllo o uno smorzamento insufficiente può alterare il menisco, far trasudare inchiostro, limitare il riempimento, aspirare aria o trasmettere pulsazioni."
+        },
+        {
+          "type": "notice",
+          "label": "Criterio di verifica:",
+          "text": "Valuta la pompa insieme a serbatoi secondari, smorzatori, sensori di pressione, dispositivi di scarico o bypass e strategia di controllo. Verifica sempre la pressione effettiva sulla testina e il suo intervallo ammissibile."
+        }
+      ]
+    },
+    {
+      "title": "6. Limiti documentati di DPL30 e DPL60",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Voce",
+            "DPL30",
+            "DPL60"
+          ],
+          "rows": [
+            [
+              "Classe di portata senza carico",
+              "300 mL/min",
+              "600 mL/min"
+            ],
+            [
+              "Pressione nominale",
+              "100 kPa",
+              "100 kPa"
+            ],
+            [
+              "Altezza di autoadescamento",
+              "6 mH₂O",
+              "3 mH₂O"
+            ],
+            [
+              "Attacco standard",
+              "Diametro interno del tubo 3.2 mm",
+              "Tubing ID 3.2 mm"
+            ],
+            [
+              "Valutazione per la stampa a getto d’inchiostro",
+              "Candidato per portate minori",
+              "Candidato per portate maggiori"
+            ]
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+              "prefix": "Per un punto di lavoro sotto 300 mL/min, consulta la curva di ",
+              "label": "DPL30-DB",
+              "suffix": " alla perdita di carico misurata nel circuito."
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+              "prefix": "Se l’obiettivo è vicino a 300 mL/min e la pompa più piccola ha poco margine, ripeti la misura con ",
+              "label": "DPL60-DB",
+              "suffix": " e con il filtro in prossimità della soglia di sostituzione."
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "gamma di pompe a membrana in miniatura per liquidi"
+            }
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limiti della verifica di compatibilità:",
+          "text": "La tabella non dimostra la compatibilità con l’inchiostro e non indica la portata senza carico a 100 kPa. Convalida la compatibilità con l’inchiostro specifico."
+        }
+      ]
+    },
+    {
+      "title": "7. Verifiche raccomandate al banco e nel sistema installato",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Distingui stampa, attesa, ricircolo, adescamento e pulizia, ciascuna con il suo intervallo di portata e pressione.",
+            "Misura la viscosità o richiedi i dati del fornitore alla temperatura minima, nominale e massima dell’inchiostro.",
+            "Riproduci la configurazione reale di tubi, filtro, valvole, raccordi, degasatore e dislivelli.",
+            "Inizia a bassa velocità e registra portata, pressione di mandata e di ritorno, menisco, pulsazioni, corrente e aumento di temperatura.",
+            "Convalida il sistema con filtri puliti e carichi, livello basso del serbatoio e ostruzione parziale.",
+            "Prima di scegliere definitivamente pompa e controllo, esegui prove di ricircolo prolungato, sedimentazione durante le pause e recupero dopo il riavvio."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Quando valutare alternative a DPL30 e DPL60?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Amplia la scelta o modifica l’architettura se l’obiettivo si avvicina o supera 600 mL/min, se la pressione differenziale non lascia margine sulla curva DPL60, se la testina richiede minori pulsazioni, se l’inchiostro contiene particelle sensibili a taglio o abrasione o se il ciclo di lavoro è particolarmente gravoso. Convalida la DPL60 nelle condizioni specifiche prima di sceglierla."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/white-ink-circulation-pump-selection-sedimentation/",
+              "label": "ulteriori verifiche per le pompe di ricircolo dell’inchiostro bianco",
+              "prefix": "Per l’inchiostro bianco, consulta le ",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulla scelta di una pompa per inchiostro da 300 o 600 mL/min",
+  "faqItems": [
+    {
+      "question": "Come scelgo tra 300 e 600 mL/min per il ricircolo dell’inchiostro?",
+      "answer": "Definisci prima portata di lavoro e differenza di pressione del sistema. Sotto 300 mL/min valuta prima DPL30. Da 300 mL/min in su, valuta in genere prima DPL60, poi controlla la curva e verifica il circuito installato."
+    },
+    {
+      "question": "Perché non posso usare direttamente la portata senza carico della pompa?",
+      "answer": "Filtri, viscosità, tubi, valvole, raccordi e passaggi della testina causano perdite di carico. La portata nel circuito installato corrisponde all’intersezione delle curve di pompa e circuito."
+    },
+    {
+      "question": "DPL30 garantisce una portata obiettivo di 250 mL/min?",
+      "answer": "No. Un obiettivo di 250 mL/min è vicino alla classe di portata senza carico di 300 mL/min. Controlla la curva alla differenza di pressione prevista e valuta anche DPL60."
+    },
+    {
+      "question": "Posso scegliere DPL30 per un obiettivo esattamente pari a 300 mL/min?",
+      "answer": "La sola portata nominale non basta. Le perdite effettive in genere annullano il margine rispetto alla portata senza carico. Valuta prima DPL60 e verifica il circuito installato."
+    },
+    {
+      "question": "DPL60 garantisce 500 mL/min nel ricircolo dell’inchiostro bianco?",
+      "answer": "No. È un candidato per quella fascia di portata. Verifica viscosità, filtro, pressione differenziale, compatibilità dei materiali e ricircolo a lungo termine."
+    },
+    {
+      "question": "Perché il diametro interno del tubo incide più della lunghezza?",
+      "answer": "Per il flusso laminare ideale, la perdita di carico è proporzionale alla lunghezza e inversamente proporzionale alla quarta potenza del diametro interno. Nei circuiti reali vanno considerate anche le perdite localizzate e le curve dei componenti."
+    },
+    {
+      "question": "Quando misurare la perdita di carico del filtro?",
+      "answer": "Misurala almeno a filtro pulito, con un carico tipico e vicino alla soglia di sostituzione. Usa la temperatura reale dell’inchiostro e la portata richiesta."
+    },
+    {
+      "question": "Una pressione maggiore può compensare qualsiasi carenza di portata?",
+      "answer": "No. La testina ha un intervallo di pressione del menisco e i componenti hanno limiti di esercizio. Rivedi resistenze, capacità della pompa e controllo della pressione prima di aumentarne il valore."
+    }
+  ],
+  "cta": {
+    "title": "Verifica il punto di lavoro per 300 o 600 mL/min",
+    "description": "Indica portata richiesta, viscosità e temperatura dell’inchiostro, perdita di carico del filtro, tubi, pressioni di mandata e ritorno e cicli di esercizio e pausa.",
+    "contactLabel": "Invia i dati del circuito dell’inchiostro",
+    "productsLabel": "Confronta DPL30 e DPL60",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

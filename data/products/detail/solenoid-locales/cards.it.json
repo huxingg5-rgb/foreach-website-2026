@@ -1,0 +1,51 @@
+{
+  "copy": {
+    "names": [
+      "Elettrovalvola miniaturizzata a membrana a 3 vie per collettore",
+      "Elettrovalvola miniaturizzata a membrana a 3 vie con attacchi portagomma",
+      "Elettrovalvola miniaturizzata a membrana a 3 vie con attacchi filettati",
+      "Elettrovalvola miniaturizzata a membrana a 2 vie per collettore",
+      "Elettrovalvola miniaturizzata a membrana a 2 vie con attacchi portagomma",
+      "Elettrovalvola miniaturizzata a membrana a 2 vie con attacchi filettati",
+      "Elettrovalvola miniaturizzata a membrana a 2 vie normalmente aperta per collettore",
+      "Elettrovalvola miniaturizzata a membrana a 2 vie normalmente aperta con attacchi portagomma",
+      "Elettrovalvola miniaturizzata a membrana a 2 vie normalmente aperta con attacchi filettati"
+    ],
+    "descriptions": [
+      "con base in PEEK per montaggio diretto su collettore e commutazione tra reagente e lavaggio negli strumenti OEM.",
+      "con attacchi portagomma per il collegamento diretto dei tubi e la commutazione tra alimentazione dei reagenti e lavaggio.",
+      "con attacchi M6 o 1/4-28 UNF e sedi anche in PEEK, PTFE e PVDF, per commutare una linea comune tra due circuiti.",
+      "con base in PEEK per integrazione su collettore, chiusa a riposo per controllare i reagenti in moduli a più valvole.",
+      "per collegamento diretto ai tubi nelle linee di reagente e lavaggio che devono chiudersi quando manca l'alimentazione.",
+      "con attacchi M6 o 1/4-28 UNF e membrane in EPDM, FKM o FFKM, per aprire e chiudere linee di reagenti.",
+      "per montaggio diretto su collettore, aperta a riposo e chiusa con alimentazione, per circuiti che devono rimanere normalmente aperti.",
+      "con base in PEEK e attacchi portagomma, per linee di alimentazione aperte a riposo e da chiudere temporaneamente con un comando.",
+      "con attacchi M6 o 1/4-28 UNF, per linee di reagente o lavaggio che restano aperte senza alimentazione."
+    ],
+    "separator": " ",
+    "nc": {
+      "label": "2 vie normalmente chiusa (NC)",
+      "operation": "La valvola normalmente chiusa è chiusa a riposo e si apre quando alimentata. Usarla dove il circuito deve chiudersi quando manca l'alimentazione. La valvola controlla il collegamento e il liquido è movimentato da una pompa o da una differenza di pressione."
+    },
+    "no": {
+      "label": "2 vie normalmente aperta (NO)",
+      "operation": "La valvola normalmente aperta è aperta a riposo e si chiude quando alimentata. Usarla dove il circuito deve rimanere aperto quando manca l'alimentazione. La valvola controlla il collegamento e il liquido è movimentato da una pompa o da una differenza di pressione."
+    },
+    "legacyNames": [
+      "Elettrovalvola miniaturizzata a membrana a 2 vie per collettore",
+      "Elettrovalvola miniaturizzata a membrana a 2 vie con attacchi portagomma",
+      "Elettrovalvola miniaturizzata a membrana a 2 vie con attacchi filettati"
+    ]
+  },
+  "headings": {
+    "3-way-base": "Elettrovalvola miniaturizzata a membrana SV10-P-3 a 3 vie, montaggio su collettore e risposta ≤15 ms",
+    "3-way-barbed": "Microelettrovalvola a membrana SV10-B16-3 a 3 vie con attacchi portagomma per strumenti medicali e di laboratorio",
+    "3-way-threaded": "Elettrovalvola miniaturizzata a membrana SV10-M6/U28-3 a 3 vie, risposta rapida e attacchi filettati M6 o 1/4-28 UNF",
+    "2-way-nc-base": "Microelettrovalvola SV10-P-2NC a membrana a 2 vie normalmente chiusa, montaggio su base per campionamento e lavaggio",
+    "2-way-nc-barbed": "Elettrovalvola miniaturizzata compatta SV10-B16-2NC a membrana a 2 vie normalmente chiusa, con attacchi portagomma",
+    "2-way-nc-threaded": "Microelettrovalvola filettata SV10-M6/U28-2NC a membrana a 2 vie, con membrane in FKM o FFKM per integrazione OEM",
+    "2-way-no-base": "Elettrovalvola miniaturizzata SV10-P-2NO a membrana a 2 vie normalmente aperta, per collettore con bilanciere a volume morto ridotto",
+    "2-way-no-barbed": "Microelettrovalvola a membrana SV10-B16-2NO a 2 vie normalmente aperta, con attacchi portagomma per strumenti medicali e di laboratorio",
+    "2-way-no-threaded": "Elettrovalvola miniaturizzata filettata SV10-M6/U28-2NO a membrana a 2 vie normalmente aperta, per campionamento e risciacquo"
+  }
+}

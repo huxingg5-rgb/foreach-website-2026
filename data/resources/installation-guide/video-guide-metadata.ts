@@ -6,13 +6,14 @@ import { getCanonicalUrl } from "@/lib/seo/site-url";
 export function getVideoGuideMetadata(video: VideoGuideDetail): Metadata {
   const url = getCanonicalUrl(video.detailHref);
   const locales = getVideoGuideDetailLocales(video.id);
-  const languages = locales ? Object.fromEntries([
+  const languages = locales && video.locale !== "de" && video.locale !== "it" && video.locale !== "hi" ? Object.fromEntries([
     ...locales.map(locale => [locale, getCanonicalUrl(`${locale === "zh-CN" ? "" : `/${locale}`}/resources/installation-guide/${video.id}/`)]),
     ["x-default", getCanonicalUrl(`/en/resources/installation-guide/${video.id}/`)],
   ]) : undefined;
-  const ogLocale = { "zh-CN": "zh_CN", en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU" }[video.locale];
+  const ogLocale = { "zh-CN": "zh_CN", en: "en_US", es: "es_ES", fr: "fr_FR", ko: "ko_KR", ru: "ru_RU", de: "de_DE", it: "it_IT", hi: "hi_IN" }[video.locale];
   return {
     title: video.seoTitle, description: video.description,
+    ...(video.locale === "de" || video.locale === "it" || video.locale === "hi" ? { robots: { index: false } } : {}),
     alternates: { canonical: url, ...(languages ? { languages } : {}) },
     openGraph: { title: video.title, description: video.description, url,
       type: "website", locale: ogLocale, images: [{ url: video.thumbnail, alt: video.title }] },

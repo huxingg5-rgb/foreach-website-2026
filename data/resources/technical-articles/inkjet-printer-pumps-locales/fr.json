@@ -84,7 +84,9 @@
       "title": "Pompes à membrane FOREACH pour l’alimentation et le retour d’encre",
       "tocLabel": "Choix de pompes",
       "paragraphs": [
-        "Les micropompes à membrane pour liquides FOREACH peuvent être évaluées comme candidates selon le débit et la pression du circuit. DPL30 et DPL60 répondent à des besoins de débit différents en alimentation ou en retour ; DPL30H permet d’évaluer un transfert en amont exigeant davantage de pression."
+        { "prefix": "Sur la ligne de remplissage, comparez le débit requis à la pression différentielle mesurée avec la courbe de la ", "key": "dpl30", "label": "pompe à membrane pour liquides DPL30-DB", "suffix": ". Faites l’essai avec l’encre prévue, au niveau minimal de fonctionnement du réservoir." },
+        { "prefix": "Si cette courbe laisse trop peu de marge pour remplir le réservoir pendant l’impression, évaluez la ", "key": "dpl60", "label": "pompe à membrane pour liquides DPL60-DB", "suffix": " à la même pression différentielle. Mesurez le temps nécessaire pour rétablir le niveau du réservoir secondaire." },
+        { "prefix": "Si une longue conduite de transfert ou un filtre en amont concentre l’essentiel de la perte de charge, évaluez la ", "key": "dpl30h", "label": "pompe à membrane haute pression DPL30H-DS", "suffix": " pour cette charge. Vérifiez séparément la pression de la tête au point de mesure indiqué par son fabricant." }
       ],
       "productTable": {
         "headers": ["Modèle candidat", "Débit à vide", "Pression nominale", "Rôle à évaluer dans le circuit"],
@@ -99,12 +101,7 @@
         "Débit à vide et pression nominale décrivent des conditions distinctes. Ils ne garantissent pas le débit à vide à la pression nominale. Vérifier les paramètres complets, les raccordements et la combinaison de matériaux du modèle précis.",
         "Les spécifications formelles des trois séries indiquent l’eau purifiée comme fluide de travail ; les autres liquides nécessitent une évaluation réelle par le client. Pour une configuration comportant PPS, EPDM, PTFE ou FFKM, valider composition et concentration de l’encre, température, durée de contact et nettoyant. Le seul nom d’un matériau ne prouve pas une compatibilité durable avec l’encre."
       ],
-      "note": "Plages de dépression, incréments de réglage et intervalles de remplacement des filtres varient selon tête, encre et architecture. Les réglages réels doivent suivre les manuels et les exigences du fabricant d’encre.",
-      "links": [
-        {"key": "dpl30", "label": "Consulter les paramètres et la configuration DPL30-DB"},
-        {"key": "dpl60", "label": "Consulter les paramètres et la configuration DPL60-DB"},
-        {"key": "dpl30h", "label": "Consulter les paramètres et la configuration DPL30H-DS"}
-      ]
+      "note": "Plages de dépression, incréments de réglage et intervalles de remplacement des filtres varient selon tête, encre et architecture. Les réglages réels doivent suivre les manuels et les exigences du fabricant d’encre."
     }
   ],
   "cta": {

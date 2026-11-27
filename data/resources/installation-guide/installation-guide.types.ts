@@ -17,7 +17,10 @@ export type InstallationGuideLocale =
   | "es"
   | "fr"
   | "ko"
-  | "ru";
+  | "ru"
+  | "de"
+  | "it"
+  | "hi";
 
 export type InstallationGuideFilterType = "all" | "category" | "series";
 

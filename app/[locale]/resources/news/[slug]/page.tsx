@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜外语公司新闻详情页入口
@@ -38,7 +39,11 @@ import {
 
 import "@/app/resources/news/news.css";
 
-import type { NewsLocale } from "@/data/resources/news/news.types";
+import type { NewsResourceLocale } from "@/data/resources/news/news.types";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { germanNewsArticleSlugs } from "@/data/resources/news/news-draft-slugs.de";
+import { hindiNewsArticleSlugs } from "@/data/resources/news/news.hi";
+import { italianNewsArticleSlugs } from "@/data/resources/news/news.it";
 
 /* =========================================================
    外语新闻语言类型
@@ -50,7 +55,7 @@ import type { NewsLocale } from "@/data/resources/news/news.types";
    4. 所以这里排除 zh-CN，避免面包屑文案索引报错
 ========================================================= */
 
-type NewsIntlLocale = Exclude<NewsLocale, "zh-CN">;
+type NewsIntlLocale = Exclude<NewsResourceLocale, "zh-CN">;
 
 /* =========================================================
    当前外语新闻详情页支持语言
@@ -128,8 +133,12 @@ const BreadcrumbComponent = SiteBreadcrumb as ComponentType<
    2. 通过这个函数后，locale 会被收窄为 NewsIntlLocale
 ========================================================= */
 
-function isSupportedLocale(locale: string): locale is NewsIntlLocale {
-  return SUPPORTED_LOCALES.includes(locale as NewsIntlLocale);
+function isSupportedLocale(locale: string, slug: string): locale is NewsIntlLocale {
+  if (locale === "hi") return languageDraftsEnabled && hindiNewsArticleSlugs.includes(slug);
+  if (locale === "it") return languageDraftsEnabled && italianNewsArticleSlugs.includes(slug);
+  return locale === "de"
+    ? languageDraftsEnabled && germanNewsArticleSlugs.some((translatedSlug) => translatedSlug === slug)
+    : SUPPORTED_LOCALES.includes(locale as NewsIntlLocale);
 }
 
 /* =========================================================
@@ -150,6 +159,13 @@ const NEWS_BREADCRUMB_LABELS: Record<
     news: string;
   }
 > = {
+  hi: { home: "होम", resources: "संसाधन", news: "कंपनी की खबरें" },
+  it: { home: "Home", resources: "Risorse", news: "Notizie aziendali" },
+  de: {
+    home: "Startseite",
+    resources: "Ressourcen",
+    news: "Unternehmensnachrichten",
+  },
   en: {
     home: "Home",
     resources: "Resources",
@@ -205,7 +221,7 @@ function getNewsBreadcrumbData(locale: NewsIntlLocale) {
     },
     {
       label: labels.resources,
-      href: resourcesHref,
+      href: locale === "it" || locale === "hi" ? undefined : resourcesHref,
     },
     {
       label: labels.news,
@@ -215,6 +231,7 @@ function getNewsBreadcrumbData(locale: NewsIntlLocale) {
 
   return {
     items,
+    ariaLabel: locale === "hi" ? "पेज का नेविगेशन पथ" : locale === "it" ? "Percorso di navigazione" : undefined,
 
     /* 兼容可能使用 breadcrumb 对象的统一组件 */
     breadcrumb: {
@@ -310,7 +327,8 @@ function getNewsPagerData(
 ========================================================= */
 
 export function generateStaticParams() {
-  return SUPPORTED_LOCALES.flatMap((locale) =>
+  const locales: NewsIntlLocale[] = languageDraftsEnabled ? [...SUPPORTED_LOCALES, "de", "it", "hi"] : SUPPORTED_LOCALES;
+  return locales.flatMap((locale) =>
     getNewsSlugs(locale).map((slug) => ({
       locale,
       slug,
@@ -327,12 +345,12 @@ export function generateStaticParams() {
    2. 如果没有，则回退到 title / summary
 ========================================================= */
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: NewsIntlArticlePageProps): Promise<Metadata> {
   const { locale, slug } = await params;
 
-  if (!isSupportedLocale(locale)) {
+  if (!isSupportedLocale(locale, slug)) {
     return {};
   }
 
@@ -340,6 +358,35 @@ export async function generateMetadata({
 
   if (!article) {
     return {};
+  }
+
+  if (locale === "hi") {
+    const title = (article.seoTitle ?? article.title) + " | कंपनी की खबरें | FOREACH";
+    const description = article.seoDescription ?? article.summary;
+    const canonical = "/hi/resources/news/" + slug + "/";
+    return {
+      title, description, alternates: { canonical },
+      openGraph: { title, description, url: canonical, locale: "hi_IN", siteName: "FOREACH", type: "article", publishedTime: article.date, images: [{ url: article.coverImage, alt: article.coverAlt ?? article.title }] },
+      robots: { index: false, follow: true },
+    };
+  }
+  if (locale === "it") {
+    const title = (article.seoTitle ?? article.title) + " | Notizie aziendali | FOREACH";
+    const description = article.seoDescription ?? article.summary;
+    const canonical = "/it/resources/news/" + slug + "/";
+    return {
+      title, description, alternates: { canonical },
+      openGraph: { title, description, url: canonical, locale: "it_IT", siteName: "FOREACH", type: "article", publishedTime: article.date, images: [{ url: article.coverImage, alt: article.coverAlt ?? article.title }] },
+      robots: { index: false, follow: true },
+    };
+  }
+  if (locale === "de") {
+    return {
+      title: `${article.seoTitle ?? article.title} | Unternehmensnachrichten | FOREACH`,
+      description: article.seoDescription ?? article.summary,
+      alternates: { canonical: `/de/resources/news/${slug}/` },
+      robots: { index: false },
+    };
   }
 
   return {
@@ -372,7 +419,7 @@ export default async function NewsIntlArticlePage({
 }: NewsIntlArticlePageProps) {
   const { locale, slug } = await params;
 
-  if (!isSupportedLocale(locale)) {
+  if (!isSupportedLocale(locale, slug)) {
     notFound();
   }
 
@@ -408,3 +455,5 @@ export default async function NewsIntlArticlePage({
     </div>
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/resources/news/[slug]/", getPageMetadata);

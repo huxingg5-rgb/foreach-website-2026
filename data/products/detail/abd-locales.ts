@@ -1,6 +1,6 @@
 import { controlModuleDetails } from "../control-modules/control-module-detail.generated";
 
-type AbdLocale = "en" | "es" | "fr" | "ko" | "ru";
+type AbdLocale = "hi" | "en" | "it" | "de" | "es" | "fr" | "ko" | "ru";
 type AbdCopy = {
   name: string; intro: string[]; applications: string[]; highlights: string[];
   labels: string[]; values: Record<string, string>;
@@ -25,6 +25,73 @@ const copies: Record<AbdLocale, AbdCopy> = {
       { question: "Which tubing diameters can ABD monitor?", answer: "Standard configurations cover transparent tubing ODs of 1.6, 2.0, 2.5, 3.2, 4.0, 4.8, 6.0 and 6.4 mm." },
       { question: "Does ABD support Modbus RTU?", answer: "Yes. The module uses a TTL electrical interface and supports the Modbus RTU communication protocol." },
       { question: "Can ABD detect very small microbubbles?", answer: "Check the actual bubble size. The specified detectable bubble or liquid width is > 0.8 mm; smaller bubbles or liquid columns may not be detected reliably." },
+    ],
+  },
+  hi: {
+    name: "ABD हवा के बुलबुले पहचानने वाला सेंसर",
+    intro: [
+      "ABD पारदर्शी ट्यूब में हवा के बुलबुले, द्रव की बूँदें और गैस या द्रव की मौजूदगी पहचानता है। यह गैस और द्रव की ऑप्टिकल प्रतिक्रिया में अंतर को बिना संपर्क वाले इन्फ़्रारेड सेंसर से पहचानता है। सेंसर द्रव को नहीं छूता, जिससे अतिरिक्त संदूषण और प्रवाह प्रतिरोध से बचा जा सकता है।",
+      "ABD का उपयोग IVD, लाइफ़ साइंस, लैब ऑटोमेशन, पर्यावरण निगरानी और खाद्य परीक्षण उपकरणों में द्रव लाइन की निगरानी के लिए किया जाता है। इससे बुलबुले की चेतावनी, बूँद की पहचान, रीएजेंट लाइन की स्थिति की निगरानी और उपकरण को खराबी से बचाने में मदद मिलती है। कॉन्फ़िगरेशन पारदर्शी ट्यूब के 1.6 mm से 6.4 mm तक के सामान्य बाहरी व्यास के लिए उपलब्ध हैं। वास्तविक बाहरी व्यास के अनुसार कॉन्फ़िगरेशन चुनें।",
+    ],
+    applications: ["बुलबुले की चेतावनी", "द्रव की बूँद की पहचान", "पारदर्शी ट्यूब की स्थिति की निगरानी", "रीएजेंट लाइन की स्थिति की पहचान", "द्रव सर्किट को खराबी से बचाना", "स्वचालित उपकरणों में ट्यूब की निगरानी"],
+    highlights: ["बिना संपर्क के बुलबुले और बूँद की पहचान", "1.6–6.4 mm बाहरी व्यास वाली पारदर्शी ट्यूब के लिए", "TTL इंटरफ़ेस / Modbus RTU प्रोटोकॉल", "UART/TTL डिजिटल सिग्नल, IO एनालॉग वोल्टेज आउटपुट और IO डिजिटल अलार्म आउटपुट", "पहचाने जा सकने वाले बुलबुले या द्रव की चौड़ाई > 0.8 mm", "बुलबुले की पहचान का प्रतिक्रिया समय: 6 ms", "द्रव की पहचान का प्रतिक्रिया समय: 6 ms"],
+    labels: ["उत्पाद प्रकार", "पहचान विधि", "पहचानी जाने वाली स्थितियाँ", "अनुकूल ट्यूब का बाहरी व्यास", "अनुकूल ट्यूब सामग्री", "पहचाने जाने वाले माध्यम", "पहचानी जा सकने वाली चौड़ाई", "संचार इंटरफ़ेस", "संचार प्रोटोकॉल", "आउटपुट", "ऑपरेटिंग वोल्टेज", "ऑपरेटिंग करंट", "प्रतिक्रिया समय", "ऑपरेटिंग तापमान", "भंडारण तापमान", "आयाम", "वज़न"],
+    values: { "气泡检测模块": "हवा के बुलबुले पहचानने वाला सेंसर", "非接触式红外检测": "बिना संपर्क के इन्फ़्रारेड से पहचान", "气泡 / 液滴 / 气液状态": "बुलबुले / द्रव की बूँदें / गैस या द्रव की मौजूदगी", "PU / PVC / PTFE / PFA / FEP 透明管": "पारदर्शी PU / PVC / PTFE / PFA / FEP ट्यूब", "> 0.8 mm 宽度": "चौड़ाई > 0.8 mm", "UART/TTL 数字信号、IO 模拟电压 0–5V、IO 数字报警信号": "UART/TTL डिजिटल सिग्नल, IO एनालॉग वोल्टेज 0–5V और IO डिजिटल अलार्म सिग्नल", "气泡检测 6 ms；液体检测 6 ms": "बुलबुले की पहचान 6 ms, द्रव की पहचान 6 ms" },
+    faqs: [
+      { question: "क्या ABD सेंसर द्रव को छूता है?", answer: "सेंसर पारदर्शी ट्यूब की दीवार के पार स्थिति पहचानता है। इससे द्रव सर्किट में संदूषण और अतिरिक्त प्रवाह प्रतिरोध का जोखिम कम होता है।" },
+      { question: "ABD किस बाहरी व्यास वाली ट्यूब की निगरानी कर सकता है?", answer: "मानक कॉन्फ़िगरेशन 1.6, 2.0, 2.5, 3.2, 4.0, 4.8, 6.0 और 6.4 mm बाहरी व्यास वाली पारदर्शी ट्यूब के लिए हैं।" },
+      { question: "क्या ABD Modbus RTU का समर्थन करता है?", answer: "हाँ। मॉड्यूल में TTL विद्युत इंटरफ़ेस है और यह Modbus RTU संचार प्रोटोकॉल का समर्थन करता है।" },
+      { question: "क्या ABD बेहद छोटे बुलबुले पहचान सकता है?", answer: "बुलबुले का वास्तविक आकार जाँचें। विनिर्देश के अनुसार पहचाने जा सकने वाले बुलबुले या द्रव की चौड़ाई > 0.8 mm है। इससे छोटे बुलबुले या द्रव स्तंभ भरोसेमंद तरीके से पहचाने न जा सकें।" },
+    ],
+  },
+  it: {
+    name: "Rilevatore di bolle d’aria ABD",
+    intro: [
+      "Il rilevatore di bolle d’aria ABD identifica bolle, gocce e la presenza di aria o liquido nei tubi trasparenti. Il rilevamento a infrarossi senza contatto distingue il gas dal liquido in base alla diversa risposta ottica. Il sensore resta all’esterno del tubo e non introduce contaminazione o resistenza al flusso nel circuito.",
+      "ABD monitora linee fluidiche in apparecchiature per diagnostica in vitro (IVD), scienze della vita, automazione di laboratorio, monitoraggio ambientale e analisi alimentare. Permette di rilevare bolle e gocce, monitorare le linee di reagenti e segnalare guasti. Le configurazioni coprono tubi trasparenti con diametro esterno da 1.6 mm a 6.4 mm. Scegliete quella che corrisponde al diametro esterno effettivo.",
+    ],
+    applications: ["Allarmi per bolle", "Rilevamento di gocce", "Monitoraggio dello stato del tubo trasparente", "Rilevamento dello stato delle linee dei reagenti", "Protezione del circuito fluidico in caso di guasti", "Monitoraggio dei tubi negli strumenti automatizzati"],
+    highlights: ["Rilevamento di bolle e gocce senza contatto", "Per tubi trasparenti con diametro esterno 1.6–6.4 mm", "Interfaccia TTL e protocollo Modbus RTU", "Segnale digitale UART/TTL, uscita analogica in tensione IO e uscita digitale di allarme IO", "Larghezza rilevabile della bolla o del liquido > 0.8 mm", "Risposta al rilevamento di bolle: 6 ms", "Risposta al rilevamento del liquido: 6 ms"],
+    labels: ["Tipo di prodotto", "Metodo di rilevamento", "Stati rilevati", "Diametro esterno del tubo compatibile", "Materiali dei tubi compatibili", "Fluidi rilevati", "Larghezza rilevabile", "Interfaccia di comunicazione", "Protocollo di comunicazione", "Uscite", "Tensione di esercizio", "Corrente di esercizio", "Tempo di risposta", "Temperatura di esercizio", "Temperatura di stoccaggio", "Dimensioni", "Peso"],
+    values: {
+      "气泡检测模块": "Rilevatore di bolle d’aria",
+      "非接触式红外检测": "Rilevamento a infrarossi senza contatto",
+      "气泡 / 液滴 / 气液状态": "Bolle / gocce / presenza di gas o liquido",
+      "PU / PVC / PTFE / PFA / FEP 透明管": "Tubo trasparente in PU / PVC / PTFE / PFA / FEP",
+      "Liquid / Gas": "Liquido / gas",
+      "> 0.8 mm 宽度": "Larghezza > 0.8 mm",
+      "UART/TTL 数字信号、IO 模拟电压 0–5V、IO 数字报警信号": "Segnale digitale UART/TTL, tensione analogica IO 0–5V e segnale digitale di allarme IO",
+      "气泡检测 6 ms；液体检测 6 ms": "Rilevamento di bolle: 6 ms. Rilevamento del liquido: 6 ms.",
+    },
+    faqs: [
+      { question: "Il rilevatore di bolle d’aria ABD entra a contatto con il liquido?", answer: "Il rilevamento avviene attraverso la parete del tubo trasparente. Questo riduce il rischio di contaminazione e di aumento della resistenza al flusso." },
+      { question: "Quali diametri dei tubi può monitorare ABD?", answer: "Le configurazioni standard coprono tubi trasparenti con diametro esterno di 1.6, 2.0, 2.5, 3.2, 4.0, 4.8, 6.0 e 6.4 mm." },
+      { question: "ABD supporta Modbus RTU?", answer: "Sì. Il modulo usa un’interfaccia elettrica TTL e supporta il protocollo di comunicazione Modbus RTU." },
+      { question: "ABD è in grado di rilevare microbolle molto piccole?", answer: "Controllate le dimensioni reali delle bolle. La larghezza della bolla o del liquido rilevabile è > 0.8 mm. Il rilevamento di bolle o colonne di liquido più piccole può essere inaffidabile." },
+    ],
+  },
+  de: {
+    name: "ABD-Luftblasendetektor",
+    intro: [
+      "Der ABD-Luftblasendetektor erkennt Luftblasen, Tropfen und Gas- oder Flüssigkeitszustände in transparenten Schläuchen. Der Sensor unterscheidet Gas und Flüssigkeit anhand ihrer unterschiedlichen optischen Eigenschaften mit berührungsloser Infraroterkennung. Er kommt nicht mit dem Medium in Kontakt und verursacht dadurch keine zusätzliche Verunreinigung oder Strömungsbehinderung.",
+      "ABD überwacht Flüssigkeitsleitungen in Geräten für In-vitro-Diagnostik, Life Sciences, Laborautomation, Umweltüberwachung und Lebensmittelanalytik. Das Modul unterstützt Luftblasenalarme, Tropfenerkennung, die Überwachung von Reagenzienleitungen und den Schutz vor Gerätestörungen. Ausführungen sind für transparente Schläuche mit Außendurchmessern von 1.6 mm bis 6.4 mm verfügbar. Wählen Sie die Ausführung passend zum tatsächlichen Außendurchmesser.",
+    ],
+    applications: ["Luftblasenalarme", "Tropfenerkennung", "Zustandsüberwachung transparenter Schläuche", "Überwachung von Reagenzienleitungen", "Schutz vor Störungen im Flüssigkeitsweg", "Schlauchüberwachung in automatisierten Geräten"],
+    highlights: ["Berührungslose Erkennung von Luftblasen und Tropfen", "Für transparente Schläuche mit 1.6–6.4 mm Außendurchmesser", "TTL-Schnittstelle / Modbus-RTU-Protokoll", "UART/TTL-Digitalsignal, analoger IO-Spannungsausgang und digitaler IO-Alarmausgang", "Erfassbare Luftblasen- oder Flüssigkeitsbreite > 0.8 mm", "Ansprechzeit bei Luftblasen: 6 ms", "Ansprechzeit bei Flüssigkeit: 6 ms"],
+    labels: ["Produkttyp", "Erkennungsverfahren", "Erfasste Zustände", "Passender Schlauchaußendurchmesser", "Geeignete Schlauchwerkstoffe", "Erfasste Medien", "Erfassbare Breite", "Kommunikationsschnittstelle", "Kommunikationsprotokoll", "Ausgänge", "Betriebsspannung", "Betriebsstrom", "Ansprechzeit", "Betriebstemperatur", "Lagertemperatur", "Abmessungen", "Gewicht"],
+    values: {
+      "气泡检测模块": "Luftblasendetektor", "非接触式红外检测": "Berührungslose Infraroterkennung",
+      "气泡 / 液滴 / 气液状态": "Luftblasen / Tropfen / Gas- oder Flüssigkeitszustand",
+      "PU / PVC / PTFE / PFA / FEP 透明管": "Transparente Schläuche aus PU / PVC / PTFE / PFA / FEP",
+      "Liquid / Gas": "Flüssigkeit / Gas", "> 0.8 mm 宽度": "Breite > 0.8 mm",
+      "UART/TTL 数字信号、IO 模拟电压 0–5V、IO 数字报警信号": "UART/TTL-Digitalsignal, analoges IO-Spannungssignal 0–5V, digitales IO-Alarmsignal",
+      "气泡检测 6 ms；液体检测 6 ms": "Luftblasenerkennung: 6 ms. Flüssigkeitserkennung: 6 ms.",
+    },
+    faqs: [
+      { question: "Berührt der ABD-Luftblasendetektor die Flüssigkeit?", answer: "Der Sensor erkennt den Inhalt durch die Wand eines transparenten Schlauchs. Dadurch verringert sich das Risiko für Verunreinigungen und zusätzlichen Strömungswiderstand im Flüssigkeitsweg." },
+      { question: "Welche Schlauchdurchmesser kann ABD überwachen?", answer: "Die Standardausführungen sind für transparente Schläuche mit Außendurchmessern von 1.6, 2.0, 2.5, 3.2, 4.0, 4.8, 6.0 und 6.4 mm vorgesehen." },
+      { question: "Unterstützt ABD Modbus RTU?", answer: "Ja. Das Modul verwendet eine elektrische TTL-Schnittstelle und unterstützt das Kommunikationsprotokoll Modbus RTU." },
+      { question: "Kann ABD sehr kleine Mikroblasen erkennen?", answer: "Prüfen Sie die tatsächliche Blasengröße. Die spezifizierte erfassbare Luftblasen- oder Flüssigkeitsbreite beträgt > 0.8 mm. Kleinere Luftblasen oder Flüssigkeitssäulen werden möglicherweise nicht zuverlässig erkannt." },
     ],
   },
   es: {
@@ -113,6 +180,7 @@ export function applyAbdLocaleCopy<T extends Record<string, unknown>>(source: T,
   return {
     ...localized, title: copy.name, name: copy.name, model: copy.name,
     foreachModel: copy.name, modelDisplay: copy.name, displayModel: copy.name,
+    ...(locale === "it" || locale === "hi" ? { model: "ABD", foreachModel: "ABD", modelDisplay: "ABD", displayModel: "ABD" } : {}),
     description: copy.intro.join("\n\n"), abdIntroductionParagraphs: copy.intro,
     specs: copy.specs, specifications: copy.specs, advantages: copy.highlights,
     commonApplications: copy.applications, faqs: copy.faqs, faq: copy.faqs,

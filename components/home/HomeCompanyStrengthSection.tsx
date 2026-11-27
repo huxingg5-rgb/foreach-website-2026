@@ -4,6 +4,7 @@
 "use client"; // 这个组件需要数字动画、IntersectionObserver 和浏览器动画帧，所以必须是客户端组件
 
 import { getIsoCertificateImage } from "@/data/iso-certificate-images";
+import { getHindiDraftLink, getItalianDraftLink } from "@/lib/i18n/draft-languages";
 import { homeUiText } from "@/data/home-ui.intl";
 import { useEffect, useRef, useState } from "react"; // 引入 React Hook，用于 DOM 引用、状态和副作用
 
@@ -19,7 +20,7 @@ import { // 从 data/home-company-strength.ts 中引入公司实力模块数据
 } from "@/data/home-company-strength"; // 公司实力数据文件路径
 
 type HomeCompanyStrengthSectionProps = { // 定义 HomeCompanyStrengthSection 组件接收的参数类型
-  locale: LocaleCode; // 当前语言，例如 zh-CN / en / es / fr / ko / ru
+  locale: LocaleCode | "de" | "it" | "hi";
 }; // 组件参数类型定义结束
 
 /* HOME_HONOR_CERTIFICATE_IMAGE_MAP_START */
@@ -36,8 +37,10 @@ function getHomeHonorCertificateImages(locale: LocaleCode): Record<string, strin
 /* HOME_HONOR_CERTIFICATE_IMAGE_MAP_END */
 
 // Intentional desktop line breaks; title wording remains sourced from the locale data.
-const advantageTitleFirstLines: Partial<Record<LocaleCode, Record<string, string>>> = {
+const advantageTitleFirstLines: Partial<Record<LocaleCode | "de" | "it" | "hi", Record<string, string>>> = {
   en: { rd: "R&D", manufacturing: "Manufacturing", quality: "Quality", custom: "Customization", service: "Technical" },
+  it: { rd: "Ricerca e", manufacturing: "Produzione", custom: "Supporto alla", service: "Assistenza" },
+  de: { rd: "Forschung und", manufacturing: "Fertigung", custom: "Kundenspezifische", service: "Technischer" },
   es: { rd: "Capacidad de", manufacturing: "Fabricación y", quality: "Sistema de", custom: "Soporte", service: "Servicio" },
   fr: { rd: "Capacité", manufacturing: "Fabrication et", quality: "Système", custom: "Support", service: "Service" },
   ru: { rd: "Возможности", manufacturing: "Производство", quality: "Система", custom: "Кастомизация", service: "Технический" },
@@ -64,7 +67,8 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
   const honors = homeCompanyStrengthData.honors; // 读取公司能力与资质轮播数据
   const advantages = homeCompanyStrengthData.advantages; // 读取企业优势卡片数据
 
-  const honorCertificateImages = getHomeHonorCertificateImages(locale);
+  const honorCertificateImages = getHomeHonorCertificateImages(locale === "de" || locale === "it" || locale === "hi" ? "en" : locale);
+  const titleFirstLines = advantageTitleFirstLines[locale];
 
   const metricsGridRef = useRef<HTMLDivElement | null>(null); // 数据卡片区域 DOM 引用，用于判断是否进入视口
   const advantagesSectionRef = useRef<HTMLElement | null>(null); // 企业优势进入视口附近后再加载背景图
@@ -75,7 +79,8 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
   const aboutForeachHref =
     locale === "zh-CN"
       ? "/about/foreach"
-      : `/${locale}/about/foreach`;
+      : locale === "hi" ? getHindiDraftLink("/en/about/foreach/").href
+      : locale === "it" ? getItalianDraftLink("/en/about/foreach/").href : `/${locale}/about/foreach`;
 
   useEffect(() => {
     const section = advantagesSectionRef.current;
@@ -231,7 +236,7 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
               </div> {/* 数据卡片网格结束 */}
 
               <div className="home-company-about-actions"> {/* 公司介绍按钮区域 */}
-                <HomeSectionMoreLink href={aboutForeachHref}>
+                <HomeSectionMoreLink href={aboutForeachHref} italian={locale === "it"} hindi={locale === "hi"}>
                   {getHomeCompanyText(aboutData.contactButton, locale)}
                 </HomeSectionMoreLink>
               </div> {/* 公司介绍按钮区域结束 */}
@@ -287,8 +292,8 @@ export default function HomeCompanyStrengthSection({ // 定义并导出首页公
               <div className="home-panel-content"> {/* 企业优势卡片内容容器 */}
                 <span className="home-panel-index">{advantage.index}</span> {/* 企业优势编号 */}
 
-                <h3 className={`home-panel-title ${advantageTitleFirstLines[locale] ? styles.twoLineAdvantageTitle : ""}`}> {/* 企业优势标题 */}
-                  <AdvantageTitle title={getHomeCompanyText(advantage.title, locale)} firstLine={advantageTitleFirstLines[locale]?.[advantage.key]} /> {/* 企业优势标题多语言文字 */}
+                <h3 className={`home-panel-title ${titleFirstLines ? styles.twoLineAdvantageTitle : ""}`}> {/* 企业优势标题 */}
+                  <AdvantageTitle title={getHomeCompanyText(advantage.title, locale)} firstLine={titleFirstLines?.[advantage.key]} /> {/* 企业优势标题多语言文字 */}
                 </h3> {/* 企业优势标题结束 */}
 
                 <span className="home-panel-line" /> {/* 企业优势卡片装饰线 */}

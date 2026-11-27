@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 ﻿import "@/app/contact/contact.css";
 /* ================================
    app/[locale]/page.tsx
@@ -21,6 +22,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { homeMetadata } from "@/data/home-metadata";
 import { SITE_NAME } from "@/lib/seo/site-identity";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
 
 import HomeStructuredData from "@/components/home/HomeStructuredData";
 import HomePageContent from "@/components/home/HomePageContent";
@@ -49,7 +51,9 @@ export const dynamicParams = false;
    3. routeSegment = "zh" -> 杩斿洖 null锛屽洜涓轰腑鏂囬粯璁よ矾寰勬槸 /
 ================================ */
 
-function getLocaleFromRouteSegment(routeSegment: string): LocaleCode | null {
+function getLocaleFromRouteSegment(routeSegment: string): LocaleCode | "de" | "it" | "hi" | null {
+  if ((routeSegment === "de" || routeSegment === "it" || routeSegment === "hi") && languageDraftsEnabled) return routeSegment;
+
   const matchedLanguage = getEnabledLanguages().find((language) => {
     if (language.isDefault) {
       return false;
@@ -79,6 +83,7 @@ export function generateStaticParams() {
     { locale: "fr" },
     { locale: "ko" },
     { locale: "ru" },
+    ...(languageDraftsEnabled ? [{ locale: "de" }, { locale: "it" }, { locale: "hi" }] : []),
   ];
 }
 
@@ -95,7 +100,7 @@ type LocalePageProps = {
   }>;
 };
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: LocalePageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -106,9 +111,12 @@ export async function generateMetadata({
   return {
     title,
     description,
+    ...(currentLocale === "de" || currentLocale === "it" || currentLocale === "hi" ? { robots: { index: false, follow: true } } : {}),
     alternates: {
       canonical: `/${locale}/`,
-      languages: { "zh-CN": "/", en: "/en/", es: "/es/", fr: "/fr/", ko: "/ko/", ru: "/ru/", "x-default": "/" },
+      ...(currentLocale === "de" || currentLocale === "it" || currentLocale === "hi" ? {} : {
+        languages: { "zh-CN": "/", en: "/en/", es: "/es/", fr: "/fr/", ko: "/ko/", ru: "/ru/", "x-default": "/" },
+      }),
     },
     openGraph: { type: "website", siteName: SITE_NAME, locale: ogLocale, url: `/${locale}/`, title, description, images: ["/images/home/home-hero-final-banner.webp"] },
     twitter: { card: "summary_large_image", title, description, images: ["/images/home/home-hero-final-banner.webp"] },
@@ -135,3 +143,5 @@ export default async function LocalePage({ params }: LocalePageProps) {
     </>
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/", getPageMetadata);

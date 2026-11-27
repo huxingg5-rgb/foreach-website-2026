@@ -32,7 +32,7 @@ type ChannelCopy = {
   videos: Record<VideoKey, readonly [title: string, tag: string, description?: string]>;
 };
 
-export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
+export const channelVideoCopy: Record<Exclude<InstallationGuideLocale, "de" | "it" | "hi">, ChannelCopy> = {
   "zh-CN": {
     companyCategory: "公司介绍", watchOnYouTube: "在 YouTube 观看", videoLabel: "FOREACH 视频",
     videos: {
@@ -161,7 +161,7 @@ export const channelVideoCopy: Record<InstallationGuideLocale, ChannelCopy> = {
   },
 };
 
-export function getChannelVideoAdditions(locale: InstallationGuideLocale): InstallationGuideCard[] {
+export function getChannelVideoAdditions(locale: Exclude<InstallationGuideLocale, "de" | "it" | "hi">): InstallationGuideCard[] {
   const copy = channelVideoCopy[locale];
   const language = locale === "zh-CN" ? "zh-Hans" : locale;
   return videos.map(video => {

@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "title": "Come scegliere EPDM, PTFE e FFKM per una micropompa a membrana?",
+    "seoTitle": "Scelta di EPDM, PTFE e FFKM per micropompe a membrana | Foreach Technology",
+    "seoDescription": "Confronta EPDM, PTFE e FFKM per una micropompa a membrana valutando compatibilità chimica, rigonfiamento, tenuta dinamica e convalida con il fluido effettivo.",
+    "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-wetted-material-inspection.webp",
+    "coverAlt": "Esempio di controllo dei componenti a contatto con il fluido in una micropompa a membrana FOREACH"
+  },
+  "deck": "EPDM, PTFE e FFKM non formano una graduatoria valida per tutti gli impieghi. EPDM e FFKM sono elastomeri, mentre il PTFE è un fluoropolimero. Membrana, valvole e testa svolgono funzioni meccaniche diverse. La scelta riguarda quindi l’intero insieme di componenti a contatto con il fluido e sottoposti a sollecitazioni dinamiche.",
+  "leadBlocks": [
+    {
+      "type": "notice",
+      "label": "Esempi di combinazioni di materiali per le micropompe a membrana FOREACH:",
+      "text": "Membrana in EPDM, valvole in EPDM e testa in PPS, oppure membrana in PTFE, valvole in FFKM e testa in PPS. L’articolo riguarda la scelta dei materiali per le pompe a membrana in generale. Queste combinazioni sono esempi disponibili su alcuni modelli FOREACH. Verifica le combinazioni effettivamente disponibili per ogni serie e modello."
+    },
+    {
+      "type": "paragraph",
+      "text": "Le valvole devono deformarsi, recuperare la forma e ripristinare rapidamente la tenuta. La membrana deve flettersi ripetutamente isolando il fluido. La testa deve mantenere la geometria e le superfici di tenuta. Una resistenza chimica più ampia non garantisce prestazioni dinamiche migliori in ogni componente."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Confronta la funzione dei componenti prima di valutare i materiali",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Materiale",
+            "Classe di materiale",
+            "Aspetti principali per la pompa",
+            "Conclusioni che richiedono verifica"
+          ],
+          "rows": [
+            [
+              "EPDM",
+              "Elastomero reticolato",
+              "Valutazione preliminare per fluidi acquosi e polari, recupero elastico, rigonfiamento ed estrazione",
+              "La sigla EPDM da sola non dimostra la compatibilità con tutte le formulazioni a base acquosa"
+            ],
+            [
+              "PTFE",
+              "Fluoropolimero",
+              "Ampia resistenza chimica, struttura della membrana, fatica a flessione e progettazione dei compositi",
+              "L’idoneità come materiale per valvole dinamiche e la compatibilità con il singolo fluido vanno verificate"
+            ],
+            [
+              "FFKM",
+              "Famiglia di perfluoroelastomeri",
+              "Ampia resistenza chimica e tenuta elastica, con comportamento che dipende dalla mescola",
+              "Il limite chimico o termico di un grado non vale per tutte le mescole FFKM"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Perché l’EPDM è spesso un primo candidato per fluidi a base acquosa?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’EPDM si usa comunemente con acqua calda, vapore, molti acidi, basi, detergenti e fluidi polari. In genere non è adatto a oli minerali di origine petrolifera e carburanti. Il comportamento effettivo dipende comunque da formulazione del materiale, temperatura, concentrazione e sollecitazioni."
+        },
+        {
+          "type": "formula",
+          "expression": "δ² = δ_D² + δ_P² + δ_H²",
+          "note": "I parametri di solubilità di Hansen distinguono le interazioni dispersive, polari e a legame idrogeno. Aiutano a interpretare affinità e tendenze al rigonfiamento. La mescola effettiva va comunque provata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un elastomero reticolato può resistere alla dissoluzione a differenza di un termoplastico non reticolato. Il liquido può però diffondersi nella sua rete, causando assorbimento e rigonfiamento. Può anche estrarre plastificanti o altri componenti solubili, modificando massa, durezza e recupero elastico."
+        }
+      ]
+    },
+    {
+      "title": "3. Il PTFE è chimicamente stabile e va verificato nella costruzione dinamica",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il politetrafluoroetilene (PTFE) ha una struttura fortemente fluorurata. I forti legami carbonio-fluoro e la schermatura esercitata dal fluoro attorno alla catena di carbonio contribuiscono alla sua elevata stabilità chimica e termica. La compatibilità dipende comunque dalle condizioni effettive."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il PTFE non è una gomma elastomerica. In una membrana a moto alternativo la convalida deve riguardare la costruzione effettiva, il supporto o gli strati compositi, la deformazione ammessa, la pressione differenziale, la frequenza e il numero di cicli previsto. La sola indicazione del PTFE non basta per valutare la membrana."
+        },
+        {
+          "type": "notice",
+          "label": "Ambito funzionale:",
+          "text": "Una membrana in PTFE cambia solo una parte dei componenti a contatto con il fluido. Occorre anche verificare le valvole in FFKM, la testa in PPS, i tubi e i raccordi."
+        }
+      ]
+    },
+    {
+      "title": "4. L’FFKM mantiene la tenuta elastica e richiede la scelta della mescola",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "FFKM indica una famiglia di perfluoroelastomeri che unisce ampia resistenza chimica e tenuta elastica. Comprende diverse formulazioni. La denominazione generica «perfluoroetere» e un unico limite di temperatura non la descrivono correttamente."
+        },
+        {
+          "type": "paragraph",
+          "text": "I gradi FFKM impiegano formulazioni diverse per acqua calda e vapore, acidi, ammine, temperature elevate o prestazioni meccaniche. Anche nella famiglia FFKM, variazione di volume e mantenimento delle proprietà possono differire a parità di esposizione chimica."
+        },
+        {
+          "type": "notice",
+          "label": "Come definire la specifica:",
+          "text": "Associa ogni indicazione su sostanza chimica, concentrazione e temperatura alla mescola o al grado specifico e alla costruzione effettiva del componente. Verifica poi il comportamento nelle condizioni operative previste."
+        }
+      ]
+    },
+    {
+      "title": "5. Prima fase: prova di immersione dei provini con criteri legati all’applicazione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le norme ISO 1817 e ASTM D471 confrontano le proprietà della gomma prima e dopo l’esposizione al liquido, tra cui massa, volume, dimensioni, durezza, resistenza a trazione e allungamento. Le prove devono coprire concentrazione, temperatura e tempo di contatto reali. Se rilevante, confronta prima e dopo l’essiccazione."
+        },
+        {
+          "type": "formula",
+          "expression": "Δm% = (m₁−m₀)/m₀×100% ; ΔV% = (V₁−V₀)/V₀×100% ; ΔH = H₁−H₀",
+          "note": "Si può anche registrare il mantenimento di resistenza a trazione e allungamento. Un metodo di confronto normalizzato non stabilisce un limite di accettazione universale di ±5% per valvole e membrane."
+        },
+        {
+          "type": "paragraph",
+          "text": "Definisci i limiti in base ai requisiti funzionali. Quanto possono variare spessore, durezza o recupero elastico di una valvola prima che perda tenuta? Quanto possono variare le proprietà di una membrana prima che non rispetti più i requisiti di corsa, pressione o durata?"
+        }
+      ]
+    },
+    {
+      "title": "6. Seconda fase: convalida dinamica della pompa completa",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "R_Q(t) = Q_t / Q_0 ; R_H(t) = H_t / H_0",
+          "note": "Controlla il mantenimento di portata e autoadescamento nel tempo insieme a pressione minima all’ingresso, perdite, corrente, rumorosità e risultati dell’ispezione dopo lo smontaggio."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Valuta i provini alla concentrazione e alla temperatura effettive, con il lotto di fluido più sfavorevole.",
+            "Sottoponi la combinazione reale dei materiali della testa a cicli continui e a cicli di avvio e arresto.",
+            "Includi periodi prolungati di contatto a pompa ferma, transizioni tra condizioni umide e asciutte, lavaggio e nuovo adescamento.",
+            "Confronta portata, pressione, autoadescamento e perdite a 0 h, a metà e a fine vita utile.",
+            "Controlla la battuta delle valvole, la deformazione delle membrane, i depositi, le crepe e le variazioni dimensionali.",
+            "Convalida pompa, tubi, raccordi, valvole esterne e guarnizioni come un unico insieme a contatto con il fluido."
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Caso tipico:",
+          "text": "Un provino può superare l’immersione mentre la valvola in movimento non supera la prova di durata. La compatibilità chimica statica, la fatica ciclica, il contatto con la sede e la velocità di recupero elastico sono aspetti distinti da convalidare."
+        }
+      ]
+    },
+    {
+      "title": "7. Come si integrano nel processo di scelta le combinazioni di materiali di una pompa a membrana?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Esempio di combinazione di materiali",
+            "Impiego da valutare",
+            "Aspetti ancora da verificare"
+          ],
+          "rows": [
+            [
+              "Membrana in EPDM + valvole in EPDM + testa in PPS",
+              "Un primo candidato per impieghi con fluidi acquosi e fluidi polari compatibili",
+              "Formulazione effettiva, concentrazione, temperatura, contatto a pompa ferma, durata dinamica e tutti i materiali esterni a contatto con il fluido"
+            ],
+            [
+              "Membrana in PTFE + valvole in FFKM + testa in PPS",
+              "Un candidato da valutare per fluidi chimicamente più complessi",
+              "Mescola FFKM specifica, limiti del PPS, costruzione della membrana e compatibilità di tubi e raccordi"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La tabella indica combinazioni da valutare. La compatibilità va verificata considerando composizione, concentrazione, temperatura, pressione, tempo di contatto, metodo di lavaggio e durata prevista."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti su EPDM, PTFE e FFKM nelle micropompe a membrana",
+  "faqItems": [
+    {
+      "question": "Il PTFE è sempre preferibile all’EPDM per la membrana di una pompa?",
+      "answer": "No. Il PTFE offre spesso una resistenza chimica più ampia, ma una membrana dinamica deve soddisfare anche i requisiti di costruzione, fatica a flessione, pressione e durata a cicli. Confronta le membrane finite tenendo conto di come sono costruite."
+    },
+    {
+      "question": "L’FFKM è compatibile con tutte le sostanze chimiche?",
+      "answer": "No. L’FFKM è una famiglia di materiali. Le mescole si differenziano per risposta chimica, intervallo di temperatura, variazione di volume e mantenimento delle proprietà meccaniche. Convalida il grado specifico nelle condizioni operative previste."
+    },
+    {
+      "question": "Se l’EPDM funziona con acqua, funzionerà con ogni reagente a base acquosa?",
+      "answer": "No. Una formulazione a base acquosa può contenere alcoli, tensioattivi, sali, acidi, basi, ossidanti o altri additivi. Concentrazione, temperatura e tempo di contatto influiscono sul risultato."
+    },
+    {
+      "question": "Un rigonfiamento limitato del provino è sufficiente per approvare la pompa completa?",
+      "answer": "No. Tenuta delle valvole, fatica della membrana, depositi, recupero dopo il lavaggio, transizioni tra condizioni umide e asciutte e durata a cicli richiedono una convalida dinamica della pompa completa."
+    },
+    {
+      "question": "Quali componenti rientrano nella convalida della compatibilità dei materiali?",
+      "answer": "Includi la testa, la membrana, le valvole d’ingresso e uscita, i tubi, i raccordi, le valvole esterne, i filtri e le guarnizioni. Il componente a contatto con il fluido con i limiti più restrittivi determina quelli del sistema."
+    }
+  ],
+  "cta": {
+    "title": "Stai scegliendo tra EPDM e PTFE/FFKM per una micropompa a membrana?",
+    "description": "Indica composizione del fluido, concentrazione, temperatura, pressione, tempo di contatto, metodo di lavaggio e durata prevista in cicli. Questi dati consentono di strutturare la valutazione preliminare, le prove di immersione e la convalida dinamica della pompa completa.",
+    "contactLabel": "Parla con un tecnico",
+    "productsLabel": "Vedi le micropompe a membrana",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
+  }
+}

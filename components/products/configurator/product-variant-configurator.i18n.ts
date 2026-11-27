@@ -3,11 +3,14 @@ import type {
   ProductConfiguratorLocale,
   ProductConfiguratorUiText,
 } from "./product-variant-configurator.types";
+import germanTubingConfigurator from "./tubing-configurator.de.json";
+import hindiTubingConfigurator from "./tubing-configurator.hi.json";
+import italianTubingConfigurator from "./tubing-configurator.it.json";
 
 type TargetConfiguratorLocale = Exclude<
   ProductConfiguratorLocale,
   "zh" | "en"
->;
+> | "de" | "it" | "hi";
 
 type DimensionSet =
   | "hardness"
@@ -36,6 +39,9 @@ const TARGET_CONFIGURATOR_COPY: Record<
   TargetConfiguratorLocale,
   ProductConfiguratorLocaleCopy
 > = {
+  de: {...germanTubingConfigurator,title:material => material + "-Leitung auswählen",productName:material => material + "-Leitung"},
+  hi: { ...hindiTubingConfigurator, title: material => material + " ट्यूब का चयन", productName: material => material + " ट्यूब" },
+  it: { ...italianTubingConfigurator, title: material => `Selezione del tubo in ${material}`, productName: material => `Tubo in ${material}` },
   es: {
     title: (material) => `Selector de dimensiones de tubo ${material}`,
     productName: (material) => `Tubo de ${material}`,
@@ -362,7 +368,7 @@ function getMaterialName(
 
 export function localizeProductConfiguratorConfig(
   config: ProductConfiguratorConfig,
-  locale: ProductConfiguratorLocale
+  locale: ProductConfiguratorLocale | "de" | "it" | "hi"
 ): ProductConfiguratorConfig {
   if (config.localizedLocale === locale || locale === "zh" || locale === "en") {
     return config;
@@ -408,7 +414,7 @@ export function localizeProductConfiguratorConfig(
 
 export function localizeProductConfiguratorValue(
   value: string,
-  locale: ProductConfiguratorLocale
+  locale: ProductConfiguratorLocale | "de" | "it" | "hi"
 ): string {
   if (locale === "zh" || locale === "en") {
     return value;

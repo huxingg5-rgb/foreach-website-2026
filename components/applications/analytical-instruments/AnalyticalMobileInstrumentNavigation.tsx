@@ -7,21 +7,26 @@ type AnalyticalInstrumentLink = {
   key: string;
   label: string;
   href: string;
+  hrefLang?: "de" | "en" | "hi";
 };
 
 type AnalyticalMobileInstrumentNavigationProps = {
   items: readonly AnalyticalInstrumentLink[];
+  heading?: string;
+  ariaLabel?: string;
 };
 
 export default function AnalyticalMobileInstrumentNavigation({
   items,
+  heading = "Analytical Instruments",
+  ariaLabel = "Analytical instrument types",
 }: AnalyticalMobileInstrumentNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav
       className="analytical-mobile-subnav site-footer__nav-wrap"
-      aria-label="Analytical instrument types"
+      aria-label={ariaLabel}
     >
       <div className={`site-footer__column ${isOpen ? "is-open" : ""}`}>
         <button
@@ -31,7 +36,7 @@ export default function AnalyticalMobileInstrumentNavigation({
           aria-controls="analytical-mobile-instrument-links"
           onClick={() => setIsOpen((current) => !current)}
         >
-          Analytical Instruments
+          {heading}
         </button>
 
         <ul className="site-footer__list" id="analytical-mobile-instrument-links">
@@ -39,6 +44,7 @@ export default function AnalyticalMobileInstrumentNavigation({
             <li key={item.key}>
               <Link
                 href={item.href}
+                hrefLang={item.hrefLang}
                 prefetch={false}
                 onClick={() => setIsOpen(false)}
               >

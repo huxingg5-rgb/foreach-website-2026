@@ -25,7 +25,10 @@ type WebsiteLocale =
   | "es"
   | "fr"
   | "ko"
-  | "ru";
+  | "ru"
+  | "de"
+  | "it"
+  | "hi";
 
 interface RootLanguageContext {
   request: Request;
@@ -47,6 +50,9 @@ const SUPPORTED_LOCALES: WebsiteLocale[] = [
   "fr",
   "ko",
   "ru",
+  "de",
+  "it",
+  "hi",
 ];
 
 const LOCALE_PATHS: Record<
@@ -59,6 +65,9 @@ const LOCALE_PATHS: Record<
   fr: "/fr/",
   ko: "/ko/",
   ru: "/ru/",
+  de: "/de/",
+  it: "/it/",
+  hi: "/hi/",
 };
 
 const PREFERENCE_COOKIE_NAMES = [
@@ -134,6 +143,11 @@ function normalizeLocale(
     normalized.startsWith("ru-")
   ) {
     return "ru";
+  }
+
+  const primaryLanguage = normalized.split("-", 1)[0];
+  if (primaryLanguage === "de" || primaryLanguage === "it" || primaryLanguage === "hi") {
+    return primaryLanguage;
   }
 
   return null;
@@ -308,8 +322,7 @@ function detectBrowserLocale(
   }
 
   /*
-   * 德语、日语、葡萄牙语、
-   * 意大利语等当前未支持语言进入英文。
+   * 当前未支持的浏览器语言进入英文。
    */
   return "en";
 }

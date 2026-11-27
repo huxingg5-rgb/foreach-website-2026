@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "title": "Come isolare le cause della deriva di erogazione di una pompa a pistone?",
+    "seoTitle": "Deriva di erogazione nelle pompe a pistone: andamento nel tempo e prove incrociate",
+    "seoDescription": "Isolare la deriva di erogazione di una pompa a pistone mediante andamento nel tempo, pressione, temperatura e prove incrociate tra pompe e circuiti, prima di attribuirla all’usura di valvole o tenute.",
+    "coverImage": "/images/resources/technical-articles/pump-diagnostics/03.svg",
+    "coverAlt": "Schema diagnostico. Esaminare l’andamento nel tempo e poi isolare le cause mediante adescamento, livello del serbatoio costante e prove incrociate. L’andamento è simulato e non proviene da prove di durata. P₁/P₂ indicano rispettivamente la pompa di riferimento e quella sospetta. C₁/C₂ indicano rispettivamente il circuito di riferimento e quello dello strumento."
+  },
+  "deck": "Un andamento progressivo del volume indica che le condizioni del sistema stanno cambiando. Per attribuirlo all’usura della pompa servono altre verifiche. Registrare ogni erogazione insieme a temperatura, livello, inversioni e adescamenti. Isolare poi le cause con adescamento controllato, livello fisso e prove con sostituzioni incrociate di pompa, valvole e circuito. Valutare lo scostamento medio dal valore obiettivo separatamente dal CV prima di concludere che i componenti meccanici o le tenute si siano deteriorati.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un andamento progressivo del volume indica che le condizioni del sistema stanno cambiando. Per attribuirlo all’usura della pompa servono altre verifiche. Registrare ogni erogazione insieme a temperatura, livello, inversioni e adescamenti. Isolare poi le cause con adescamento controllato, livello fisso e prove con sostituzioni incrociate di pompa, valvole e circuito. Valutare lo scostamento medio dal valore obiettivo separatamente dal CV prima di concludere che i componenti meccanici o le tenute si siano deteriorati."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Distinguere la deriva nel tempo dalla dispersione casuale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Calcolare l’errore relativo di ogni erogazione e conservarne l’ordine cronologico, oltre alle medie iniziali e finali. Un CV ridotto su un intervallo breve può coesistere con una media che cambia. Un valore anomalo isolato non indica necessariamente una deriva a lungo termine."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per la conversione gravimetrica, usare la densità alla temperatura effettiva del fluido. Controllare prima lo zero della bilancia, la sua deriva, l’evaporazione e la tecnica di raccolta. Variazioni nelle condizioni di misura possono simulare variazioni della pompa."
+        },
+        {
+          "type": "formula",
+          "expression": "eᵢ = (Vᵢ − Vtarget) / Vtarget × 100%",
+          "note": "Vtarget deve essere positivo. Conservare gli errori di erogazione in ordine cronologico e calcolare separatamente le medie su intervalli fissi e il CV. Un unico CV per l’intera prova può nascondere la deriva."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/pump-diagnostics/03.svg",
+          "alt": "Schema diagnostico. Esaminare l’andamento nel tempo e poi isolare le cause mediante adescamento, livello del serbatoio costante e prove incrociate. L’andamento è simulato e non proviene da prove di durata. P₁/P₂ indicano rispettivamente la pompa di riferimento e quella sospetta. C₁/C₂ indicano rispettivamente il circuito di riferimento e quello dello strumento.",
+          "caption": "Schema diagnostico. Esaminare l’andamento nel tempo e poi isolare le cause mediante adescamento, livello del serbatoio costante e prove incrociate. L’andamento è simulato e non proviene da prove di durata. P₁/P₂ indicano rispettivamente la pompa di riferimento e quella sospetta. C₁/C₂ indicano rispettivamente il circuito di riferimento e quello dello strumento.",
+          "width": 1000,
+          "height": 560
+        }
+      ]
+    },
+    {
+      "title": "Identificare gli eventi che possono innescare la deriva",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Registrare avvio, inversione del moto, riempimento, variazioni del livello del serbatoio, adescamento, arresto e riavvio. Associare a ogni erogazione la temperatura del fluido, quella vicino alla pompa e le pressioni in ingresso e in uscita. Andamenti simili possono avere cause diverse. Gli eventi registrati aiutano a scegliere la successiva prova controllata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un errore della prima erogazione dopo l’inversione suggerisce gioco meccanico, ritardo della valvola o stabilizzazione della pressione. Una deriva che dipende dal livello suggerisce un effetto del battente statico o dello sfiato del serbatoio. Un ripristino breve dopo l’adescamento, seguito dalla ricomparsa del problema, suggerisce l’ingresso o il rilascio continuo di gas. La sua origine va comunque verificata."
+        }
+      ]
+    },
+    {
+      "title": "Verificare prima le condizioni reversibili",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mantenere costanti programma, contropressione e temperatura durante le prove separate di adescamento controllato, livello fisso del serbatoio, sfiato del serbatoio e riduzione della velocità di aspirazione entro i limiti ammessi. Variare un solo fattore per volta e tornare alle condizioni di riferimento per distinguere la causa dagli effetti del tempo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evitare di sostituire insieme pompa, fluido e tubi. Il circuito di riferimento deve conservare la sequenza necessaria delle valvole e un carico equivalente in uscita. Altrimenti, un ripristino dimostra soltanto che le condizioni complessive sono cambiate."
+        }
+      ]
+    },
+    {
+      "title": "Eseguire prove incrociate tra pompe e circuiti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Provare la pompa sospetta e quella di riferimento nello stesso circuito di riferimento qualificato. Provare quindi entrambe nel circuito completo dello strumento per ottenere un confronto 2×2. Mantenere uguali volume obiettivo, temperatura del fluido, livello, azionamento e sequenza delle valvole. Confermare che anche la pompa di riferimento sia qualificata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se il problema segue una sola pompa, isolare successivamente i contributi di valvole, tenute e organi di movimento. Se entrambe le pompe mostrano deriva solo nel circuito dello strumento, esaminare prima il sistema. Un’interazione può dipendere dal carico o dall’abbinamento con il driver e richiedere una diagnosi congiunta di pompa e circuito."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Combinazione",
+            "Circuito di riferimento",
+            "Circuito dello strumento"
+          ],
+          "rows": [
+            [
+              "Pompa di riferimento",
+              "Confermare il riferimento qualificato",
+              "Il sistema innesca la deriva?"
+            ],
+            [
+              "Pompa sospetta",
+              "Il problema segue la pompa?",
+              "Riprodurre il sintomo iniziale"
+            ],
+            [
+              "Condizioni di controllo comuni",
+              "Stesso fluido, stessa temperatura, stesso programma",
+              "Carico equivalente in uscita. Registrare la pressione in ingresso."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Valutare i limiti della prova di mantenimento della pressione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se il progetto e la pressione nominale lo consentono, confrontare le prove di mantenimento a parità di pressione iniziale, stato delle valvole e temperatura, rispetto a un riferimento storico o a un componente nuovo. Un calo più rapido suggerisce una perdita o una variazione del volume assorbito. Da solo non identifica la sede della valvola difettosa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gas, rilassamento dei tubi, temperatura e posizione del sensore influiscono anch’essi sulla curva. Il gioco meccanico è di solito legato all’inversione e va verificato a parte. Aumentare ripetutamente la compensazione può mascherare problemi di temperatura, perdite o gas senza risolverli."
+        }
+      ]
+    },
+    {
+      "title": "Cercare riscontri convergenti prima di diagnosticare l’usura",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dopo aver escluso differenze di misura, adescamento, livello e controllo, i riscontri più solidi di usura sono un peggioramento ripetibile che segue il componente invecchiato, il ripristino dopo la sua sostituzione e un’ispezione coerente con il guasto osservato. Registrare separatamente contaminazione, cristallizzazione e alterazioni dei materiali."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conservare i risultati di riferimento con unità nuove, a diverse fasi della vita utile e dopo la manutenzione. Ripetere la qualifica alla durata in cui è comparso il problema e nelle condizioni sfavorevoli di fluido e temperatura. I dati a corsa completa per EA, EAS, SM o TM non definiscono limiti di deriva validi per ogni volume e reagente. I criteri di accettazione dipendono dai requisiti dello strumento e dall’incertezza di misura."
+        },
+        {
+          "type": "subheading",
+          "title": "Approfondimenti e schede tecniche"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/piston-pump-accuracy-repeatability-resolution/",
+              "label": "Accuratezza, ripetibilità e risoluzione"
+            },
+            {
+              "href": "/resources/technical-articles/precision-piston-pump-backlash-compensation/",
+              "label": "Compensazione del gioco meccanico nelle pompe a pistone"
+            },
+            {
+              "href": "/resources/technical-articles/piston-pump-head-material-selection/",
+              "label": "Scelta del materiale della testata della pompa a pistone"
+            },
+            {
+              "href": "/resources/technical-articles/piston-pump-air-bubbles-dispensing-error/",
+              "label": "Bolle ed errori di erogazione"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Riferimenti tecnici",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "https://www.hamiltoncompany.com/syringe-pumps/smartsense",
+              "label": "Hamilton: monitoraggio di pressione e bolle"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Una diminuzione progressiva dell’erogazione dimostra una perdita dalla valvola?",
+      "answer": "No. Livello, sfiato, gas, temperatura ed errori di misura possono provocare andamenti simili. Usare confronti controllati e prove di mantenimento della pressione."
+    },
+    {
+      "question": "Un CV entro i limiti esclude la deriva?",
+      "answer": "No. La dispersione su intervalli brevi può rimanere contenuta mentre la media varia. Esaminare lo scostamento medio e i dati in ordine cronologico."
+    },
+    {
+      "question": "Il ripristino dopo l’adescamento esclude l’usura?",
+      "answer": "Suggerisce il coinvolgimento del gas, senza escludere altri meccanismi. Proseguire il funzionamento, osservare se il problema ricompare e confrontare i componenti."
+    },
+    {
+      "question": "Come distinguere le cause legate alla pompa da quelle legate allo strumento?",
+      "answer": "Provare la pompa sospetta e quella di riferimento sia nel circuito di riferimento sia in quello dello strumento. Mantenere costanti fluido e programma e equivalente il carico. Isolare poi i singoli componenti."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi esaminare il circuito fluidico effettivo?",
+    "description": "Indica a Foreach il fluido, il volume di lavoro o la portata, le pressioni, la geometria e la sequenza di controllo per valutare configurazione e condizioni di verifica.",
+    "contactLabel": "Parliamo della tua applicazione",
+    "productsLabel": "Scopri le pompe",
+    "productsHref": "/products/pumps/piston-pump/"
+  }
+}

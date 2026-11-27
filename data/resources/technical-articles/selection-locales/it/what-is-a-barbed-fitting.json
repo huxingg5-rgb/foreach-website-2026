@@ -1,0 +1,713 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è un raccordo portagomma? Forme, compatibilità dei tubi e documentazione di qualità",
+      "seoTitle": "Scelta del raccordo portagomma: profili, tubi e qualità | FOREACH",
+      "seoDescription": "Scegli i raccordi portagomma FOREACH in base alla forma, al diametro interno del tubo e al profilo C/F/D/V/X. Approfondisci la dilatazione del tubo, i materiali PP e PA, i sistemi ISO e la documentazione REACH, RoHS e SDS.",
+      "coverImage": "/images/resources/technical-articles/what-is-a-barbed-fitting/barbed-fittings-group-blue.webp",
+      "coverAlt": "Raccordi portagomma FOREACH dritti, a gomito, a T e a Y di varie misure su fondo blu"
+    },
+    "deck": "La scelta di un raccordo portagomma richiede di definire insieme la configurazione del circuito fluidico, l’accoppiamento del tubo, la documentazione sui materiali e i requisiti di qualità produttiva. Lo stesso diametro interno nominale del tubo non implica lo stesso profilo del portagomma, comportamento in montaggio o condizioni operative.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Un raccordo portagomma collega i tubi flessibili inserendo nel tubo un codolo con risalti. Il tubo si dilata quando supera il profilo, poi recupera elasticamente e aderisce alla superficie del raccordo. Può collegare linee per liquidi di lavaggio, reagenti, liquidi di scarto o gas all’interno degli strumenti. L’idoneità dipende dal tubo, dal fluido, dalla pressione, dalla temperatura e dalla validazione del collegamento assemblato."
+      },
+      {
+        "type": "paragraph",
+        "text": "I raccordi portagomma FOREACH comprendono raccordi dritti BA, gomiti BL, raccordi a T BT, raccordi a Y BY, raccordi a croce BX4 e raccordi a più vie a forma di π BF4. I materiali principali sono PP e PA (nylon), con configurazioni a misura uguale o ridotte. Le lettere C/F/D/V/X dopo il codice della misura indicano il profilo del portagomma. Valori come 1.6, 2.4 e 3.2 mm indicano il diametro interno compatibile del tubo. Leggi separatamente le due indicazioni per specificare l’intero collegamento."
+      },
+      {
+        "type": "paragraph",
+        "text": "Per la produzione di apparecchiature, occorre inoltre tradurre un collegamento di prototipo in un modello, un disegno, una specifica del materiale e requisiti di controllo definiti. FOREACH ha ottenuto le certificazioni dei sistemi di gestione della qualità ISO 9001 e ISO 13485. È possibile valutare la documentazione REACH, RoHS e MSDS per la configurazione di raccordo prescelta. L’articolo spiega sia la struttura del raccordo sia lo scopo di questi documenti."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come si innesta un tubo su un portagomma e che differenza c’è tra tenuta e ritegno?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Durante il montaggio, l’estremità del tubo si dilata lungo la superficie d’invito, supera il risalto e avvolge il codolo dietro di esso. Il contatto tra la parete interna del tubo e la superficie del raccordo realizza la tenuta. L’interazione meccanica tra tubo e portagomma contribuisce a mantenere il collegamento. Il risalto non è una filettatura avvitata nel tubo e non è progettato per perforarne la parete."
+          },
+          {
+            "type": "paragraph",
+            "text": "Valuta separatamente inserimento, ritegno e tenuta. Una forza d’inserimento eccessiva può danneggiare l’estremità del tubo. Un innesto facile ma lasco può sfilarsi sotto trazione o con variazioni di pressione. Le prestazioni dipendono insieme dalla geometria del portagomma, dal diametro interno del tubo, dallo spessore della parete, dalla durezza e dal recupero elastico."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per le linee di aspirazione occorre controllare anche le infiltrazioni d’aria. L’assenza di gocce visibili all’esterno del raccordo non prova la tenuta all’aria in condizioni di vuoto. Analogamente, una rapida trazione manuale non sostituisce la verifica del ritegno nelle condizioni operative."
+          }
+        ]
+      },
+      {
+        "title": "Quali forme di raccordo FOREACH sono disponibili? Parti dal percorso del fluido",
+        "blocks": [
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/barbed-fittings-group-blue.webp",
+            "alt": "Raccordi portagomma FOREACH dritti, a gomito, a T e a Y di varie misure su fondo blu",
+            "width": 2375,
+            "height": 1237,
+            "caption": "Le diverse forme permettono di realizzare collegamenti dritti, cambi di direzione o derivazioni. Seleziona poi misure dei tubi, materiali e codici dei portagomma in base al modello specifico."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Serie e forma",
+              "Funzione del collegamento",
+              "Aspetti da considerare"
+            ],
+            "rows": [
+              [
+                "Raccordo dritto BA",
+                "Collega due tubi con diametri interni uguali o diversi",
+                "Collegamento a misura uguale o riduzione. Verifica la misura del tubo a ogni estremità"
+              ],
+              [
+                "Gomito BL",
+                "Cambia la direzione del tubo in uno spazio ristretto",
+                "Dimensioni del gomito, orientamento dell’uscita e spazio per la curvatura del tubo"
+              ],
+              [
+                "Raccordo a T BT",
+                "Realizza una linea principale con una derivazione laterale",
+                "Misure e posizione delle tre porte. Verifica la disposizione delle derivazioni sul disegno"
+              ],
+              [
+                "Raccordo a Y BY",
+                "Realizza una biforcazione o una confluenza a Y",
+                "Orientamento delle derivazioni e misure di tutti e tre i tubi, tenendo conto della direzione effettiva del flusso"
+              ],
+              [
+                "Croce BX4",
+                "Collega tubi in quattro direzioni",
+                "Disposizione delle porte, spazio di montaggio e identificazione delle linee"
+              ],
+              [
+                "Raccordo a forma di π BF4",
+                "Realizza un collegamento a più vie a forma di π",
+                "Verifica sul disegno la posizione delle porte e lo spazio disponibile nell’apparecchiatura"
+              ]
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/ba-straight.png",
+            "alt": "Illustrazione di un raccordo portagomma dritto BA",
+            "width": 435,
+            "height": 435,
+            "caption": "Dritto BA",
+            "captionHref": "/en/products/fittings/barbed-fittings/ba-32f-pp-n/"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bl-elbow.png",
+            "alt": "Illustrazione di un raccordo portagomma a gomito BL",
+            "width": 390,
+            "height": 390,
+            "caption": "Gomito BL",
+            "captionHref": "/en/products/fittings/barbed-fittings/bl-32f-pp-n/"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bt-tee.png",
+            "alt": "Illustrazione di un raccordo portagomma a T BT",
+            "width": 513,
+            "height": 366,
+            "caption": "Raccordo a T BT",
+            "captionHref": "/en/products/fittings/barbed-fittings/bt-32d-pp-n/"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/by-wye.png",
+            "alt": "Illustrazione di un raccordo portagomma a Y BY",
+            "width": 387,
+            "height": 459,
+            "caption": "Raccordo a Y BY",
+            "captionHref": "/en/products/fittings/barbed-fittings/by-32d-pp-n/"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bx4-cross.png",
+            "alt": "Illustrazione di un raccordo portagomma a croce BX4",
+            "width": 492,
+            "height": 543,
+            "caption": "Croce BX4",
+            "captionHref": "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf#page=32"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/bf4-pi.png",
+            "alt": "Illustrazione di un raccordo portagomma a più vie a forma di π BF4",
+            "width": 678,
+            "height": 285,
+            "caption": "A forma di π BF4",
+            "captionHref": "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf#page=32"
+          },
+          {
+            "type": "paragraph",
+            "text": "I raccordi a T, a Y e a più vie mettono in comunicazione le linee. Non ripartiscono automaticamente la portata in parti uguali e non impediscono il riflusso. La portata nelle derivazioni dipende anche dal diametro e dalla lunghezza dei tubi, dalla resistenza a valle e dal livello del liquido. Quando occorre prevenire il riflusso o controllare l’erogazione, specifica separatamente valvole o componenti di dosaggio adatti."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le espressioni misura uguale e riduzione indicano il diametro interno del tubo compatibile con ciascuna porta. Il modello BA-32F-PP-N collega due tubi con diametro interno di 3.2 mm. Il modello BA-24F-32F-PP-N raccorda un diametro interno di 2.4 mm a uno di 3.2 mm. Per i raccordi a T e a Y ridotti, verifica anche a quale porta corrisponde ogni posizione del codice del modello. I tre numeri da soli non indicano l’orientamento delle derivazioni."
+          },
+          {
+            "type": "paragraph",
+            "text": "I tappi portagomma BBL chiudono le estremità dei tubi e vanno distinti dai raccordi con foro passante. Gli adattatori filetto-portagomma, i portagomma passaparete e gli adattatori Luer-portagomma svolgono ulteriori funzioni di interfaccia. Le estremità portagomma devono sempre essere compatibili con il tubo. Occorre però verificare separatamente anche la tenuta della filettatura, il montaggio a pannello o la compatibilità Luer maschio-femmina."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/products/fittings/barbed-fittings/",
+                "label": "Vedi i modelli di raccordo portagomma",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/products/fittings/thread-to-barbed-fittings/",
+                "label": "Vedi i raccordi filetto-portagomma",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/resources/technical-articles/what-is-a-luer-fitting/",
+                "label": "Approfondisci i collegamenti Luer e le estremità portagomma"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Che cosa indicano C, F, D, V e X e come si interpreta la dilatazione?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "C/F/D/V/X sono i codici del profilo portagomma che seguono il codice della misura. Sono distinti dalle serie di forma BA, BL, BT e BY. I primi descrivono il profilo della superficie a contatto con il tubo, le seconde la geometria del circuito. Un raccordo dritto e un gomito possono avere lo stesso codice del profilo portagomma."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-barbed-fitting/barb-profiles-c-f-d-v-x.svg",
+            "alt": "Profili portagomma FOREACH C, F, D, V e X, con i rispettivi intervalli di dilatazione e identificativi di serie nella tabella sottostante",
+            "width": 900,
+            "height": 350,
+            "caption": "Confronto dei profili portagomma FOREACH. Classic, 400, 200, 500 e 600 sono identificativi di serie. Non indicano pressioni nominali o diametri dei tubi. Prima di sostituire un raccordo, verifica le dimensioni delle porte e la compatibilità del tubo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Codice del portagomma",
+              "Intervallo di dilatazione",
+              "Identificativo di serie"
+            ],
+            "rows": [
+              [
+                "C",
+                "42%–69%",
+                "Serie Classic"
+              ],
+              [
+                "F",
+                "25%–32%",
+                "Serie 400"
+              ],
+              [
+                "D",
+                "24%–50%",
+                "Serie 200"
+              ],
+              [
+                "V",
+                "32%–60%",
+                "Serie 500"
+              ],
+              [
+                "X",
+                "32%–50%",
+                "Serie 600"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Questi intervalli confrontano la dilatazione del tubo associata ai vari profili. Non indicano l’allungamento a rottura del materiale né la dilatazione ammessa durante l’esercizio. Si sovrappongono e non consentono di stabilire valori universali di tenuta, pressione o resistenza allo sfilamento. Valuta ciascun modello con le dimensioni e il materiale effettivi del tubo."
+          },
+          {
+            "type": "subheading",
+            "title": "Esempio dimensionale di dilatazione"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il confronto tra il diametro massimo del risalto del portagomma e il diametro interno del tubo prima del montaggio fornisce un rapporto geometrico per stimare la dilatazione necessaria durante l’inserimento. Descrive solo il rapporto tra diametri. Non calcola la forza di inserimento, la pressione di contatto della tenuta o la forza di ritegno a lungo termine."
+          },
+          {
+            "type": "formula",
+            "expression": "Percentuale geometrica di dilatazione = (diametro massimo del risalto − diametro interno iniziale del tubo) ÷ diametro interno iniziale del tubo × 100%",
+            "note": "Usa la stessa unità per entrambi i diametri, il disegno del modello specifico e le dimensioni reali del tubo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per il modello BA-32F, il diametro interno compatibile del tubo è 3.2 mm e il disegno riporta un diametro A alla sommità del risalto di 4.0 mm. Usando le dimensioni nominali, (4.0 − 3.2) ÷ 3.2 × 100% = 25%. Questo 25% è un esempio geometrico e non il risultato di una prova su un tubo specifico. Neppure i valori minimo e massimo dell’intervallo di un profilo vanno attribuiti a tutti i modelli con lo stesso codice."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per un dato tubo, una maggiore dilatazione influisce in generale sulla resistenza all’inserimento e sulla deformazione locale. Un valore maggiore non migliora necessariamente il collegamento. Confronta i profili candidati con la stessa specifica del tubo e registra le condizioni di montaggio, le perdite e il comportamento allo sfilamento prima di scegliere l’abbinamento."
+          }
+        ]
+      },
+      {
+        "title": "Lettura del codice modello: diametro interno del tubo, profilo portagomma e materiale",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Esempio di codice modello completo",
+              "Significato del codice",
+              "Funzione del collegamento"
+            ],
+            "rows": [
+              [
+                "BA-32F-PP-N",
+                "Raccordo dritto BA. 32 = diametro interno del tubo 3.2 mm. Profilo F. PP. N = colore naturale",
+                "Collega due tubi con diametro interno di 3.2 mm"
+              ],
+              [
+                "BA-24F-32F-PP-N",
+                "Diametri interni dei tubi 2.4 mm / 3.2 mm. Profilo F a entrambe le estremità",
+                "Raccorda tubi con diametri interni diversi"
+              ],
+              [
+                "BL-32F-PP-N",
+                "Gomito BL. Diametro interno del tubo 3.2 mm. Profilo F. PP naturale",
+                "Collega i tubi intorno a un angolo"
+              ],
+              [
+                "BT-32D-PP-N",
+                "Raccordo a T BT. Diametri interni dei tubi uguali di 3.2 mm. Profilo D. PP naturale",
+                "Realizza una derivazione a tre porte"
+              ],
+              [
+                "BY-32D-PP-N",
+                "Raccordo a Y BY. Diametri interni dei tubi uguali di 3.2 mm. Profilo D. PP naturale",
+                "Realizza un percorso del fluido a Y"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Nei modelli a misure uguali i codici ripetuti delle estremità sono omessi. Ad esempio, BL-32D-32D-PP-N può essere abbreviato in BL-32D-PP-N. Consulta la tabella del prodotto per conoscere la convenzione di codifica di ogni forma. Evita di aggiungere automaticamente lettere o il numero di porte. PA indica il nylon e W indica il bianco. Il colore identifica la configurazione del modello. Non rappresenta un grado di qualità."
+          },
+          {
+            "type": "subheading",
+            "title": "Il diametro interno del tubo di 3.2 mm è diverso dal diametro esterno di 3.2 mm"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il portagomma entra nel tubo, quindi verifica prima il diametro interno. Il diametro esterno aiuta a determinare lo spessore della parete, lo spazio di posa e le fascette esterne. Un tubo con diametro interno di 3.2 mm ed esterno di 6.4 mm ha uno spessore nominale della parete pari a (6.4 − 3.2) ÷ 2 = 1.6 mm. Il diametro esterno di 6.4 mm non lo rende adatto a un portagomma progettato per un tubo con diametro interno di 6.4 mm."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il diametro interno compatibile del tubo è diverso dal foro interno del raccordo. Il disegno di BA-32F indica un foro B di 2.4 mm e una lunghezza totale D di 23.0 mm. Il valore 3.2 mm identifica il tubo, mentre 2.4 mm è il diametro del foro specificato. Se contano la resistenza al flusso o il passaggio di particelle, controlla il passaggio effettivo del fluido senza assumere che il diametro interno del tubo sia il diametro minimo di tutto il circuito."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/products/fittings/barbed-fittings/ba-32f-pp-n/",
+                "label": "Prodotto BA-32F-PP-N e disegno",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/products/fittings/barbed-fittings/ba-24f-32f-pp-n/",
+                "label": "Modello ridotto BA-24F-32F-PP-N",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/products/fittings/barbed-fittings/bl-32f-pp-n/",
+                "label": "Modello a gomito BL-32F-PP-N"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere il tubo e il materiale del raccordo, PP o PA?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Un collegamento portagomma richiede che il tubo si dilati adeguatamente durante l’inserimento e rimanga poi aderente al codolo. Due tubi con lo stesso diametro interno possono innestarsi in modo diverso per materiale, durezza, spessore della parete o tolleranze dimensionali. Denominazioni come silicone, PVC o TPU non dimostrano da sole la compatibilità. La durezza consigliata da un altro produttore non va assunta come requisito universale per i portagomma FOREACH."
+          },
+          {
+            "type": "paragraph",
+            "text": "PP e PA sono le principali opzioni per i raccordi portagomma FOREACH. Le combinazioni disponibili variano in base al modello. Controlla la compatibilità sia del raccordo sia del tubo con il fluido effettivo, la concentrazione, la temperatura, la durata del contatto e il detergente. Verificare la sola resistenza del raccordo può lasciare irrisolti problemi di collegamento se non si valutano rigonfiamento, indurimento o variazioni del recupero elastico del tubo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per i tubi rigidi che non si dilatano facilmente, valuta un collegamento progettato per quel tipo di tubo. Se serve scollegare spesso la linea, considera un’interfaccia smontabile dedicata. Forzare ripetutamente il tubo sul portagomma e poi sfilarlo modifica le condizioni dell’estremità. Un primo montaggio riuscito non dimostra che il tubo si possa riutilizzare senza limiti."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/material-compatibility/",
+                "label": "Riferimento per la compatibilità dei materiali",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/",
+                "label": "Guida alla scelta dei raccordi per tubi rigidi"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Documentazione di qualità per raccordi destinati agli strumenti: certificazione, materiali e fornitura tracciabile",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Chi acquista raccordi portagomma per produrre apparecchiature dovrebbe valutare i costi di fermo, rilavorazione, perdita di reagente e manutenzione insieme al prezzo unitario. Confronta le prestazioni con gli stessi tubi e le stesse condizioni operative e verifica che il fornitore metta a disposizione specifiche chiare, informazioni sui materiali e documenti di qualità. Aspetto simile e prezzi diversi, da soli, non determinano l’idoneità per uno strumento."
+          },
+          {
+            "type": "subheading",
+            "title": "I sistemi di gestione della qualità supportano la qualifica del fornitore e l’avvio della produzione"
+          },
+          {
+            "type": "paragraph",
+            "text": "FOREACH ha ottenuto le certificazioni dei sistemi di gestione della qualità ISO 9001 e ISO 13485. Il campo di applicazione dichiarato copre progettazione, sviluppo, produzione e assistenza per componenti e accessori di controllo dei fluidi destinati alle apparecchiature mediche. I produttori possono usare questi documenti per valutare il sistema di gestione della qualità del fornitore insieme a disegni, requisiti di controllo e documenti di consegna."
+          },
+          {
+            "type": "paragraph",
+            "text": "La certificazione di sistema si applica all’organizzazione e al relativo campo certificato. Non indica che ogni raccordo portagomma sia certificato come dispositivo medico e non sostituisce la validazione per uno specifico fluido, una specifica pressione, la biocompatibilità o un processo di sterilizzazione. I progetti che richiedono queste proprietà necessitano di evidenze relative al materiale o al prodotto pertinente."
+          },
+          {
+            "type": "subheading",
+            "title": "Che cosa documentano REACH, RoHS e MSDS?"
+          },
+          {
+            "type": "paragraph",
+            "text": "La disponibilità di rapporti o informazioni REACH, RoHS e MSDS per i raccordi portagomma FOREACH può essere valutata in base a modello, materiale e requisiti di progetto. Abbina i documenti richiesti al modello e alla configurazione di materiale acquistati. Controlla la data, l’oggetto a cui si applicano e l’ambito della verifica o della dichiarazione."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Tipo di documento",
+              "Funzione principale",
+              "Che cosa verificare"
+            ],
+            "rows": [
+              [
+                "Certificati ISO 9001 / ISO 13485",
+                "Sistema di gestione della qualità e qualifica del fornitore",
+                "Organizzazione certificata, campo di applicazione, periodo di validità e stato attuale del certificato"
+              ],
+              [
+                "Documentazione REACH",
+                "Informazioni sulla conformità delle sostanze chimiche nell’ambito dichiarato o verificato",
+                "Materiale o prodotto pertinente, elenco delle sostanze, revisione e data"
+              ],
+              [
+                "Documentazione RoHS",
+                "Supporto alle verifiche sulle sostanze soggette a restrizioni nei progetti di apparecchiature",
+                "Descrizione del campione, elementi verificati, modelli interessati e ambito della dichiarazione"
+              ],
+              [
+                "MSDS / SDS",
+                "Informazioni sulla sicurezza del materiale e indicazioni per manipolazione e stoccaggio",
+                "Identità del materiale, fornitore e revisione. Il documento non certifica le prestazioni del prodotto"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Ogni documento ha una funzione specifica. Le sole informazioni RoHS o REACH non dimostrano l’idoneità al contatto prolungato con un reagente. Una MSDS non garantisce che il circuito funzioni senza perdite. Valuta la documentazione sui materiali insieme alle prove nelle condizioni operative per verificarne la completezza e accertare che il circuito funzioni come richiesto."
+          },
+          {
+            "type": "subheading",
+            "title": "Dai campioni alla produzione: uniformità dimensionale, aspetto e registrazioni"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il sistema di qualità FOREACH comprende la verifica dei materiali in ingresso, i controlli durante la produzione, il controllo finale e la registrazione delle consegne, con strumenti come la misurazione dimensionale ottica. Per i raccordi portagomma, i criteri di accettazione concordati possono comprendere il profilo, le quote critiche, l’assenza di ostruzioni nei passaggi, bave o danni superficiali e l’identificazione di modello e materiale. Livelli di campionamento, controlli e documentazione fornita devono seguire l’accordo di qualità del progetto."
+          },
+          {
+            "type": "paragraph",
+            "text": "Conserva l’approvazione dei campioni, le revisioni dei disegni e le specifiche convalidate dei tubi quando passi alla produzione. Valuta la necessità di ripetere la validazione quando cambia il materiale del tubo o del raccordo. Queste registrazioni permettono di ricondurre cambiamenti nel montaggio o in esercizio a modello, materiale, revisione e storico delle forniture. L’aspetto da solo non basta per individuare un ricambio equivalente."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/about/quality/",
+                "label": "Sistemi di qualità, certificazioni e capacità di controllo FOREACH",
+                "suffix": "; "
+              },
+              {
+                "href": "/downloads/resources/datasheets/en/Tubing-and-Fittings/fittings-and-tubing-catalog-a02.pdf#page=27",
+                "label": "Scarica il catalogo di raccordi e tubi (in inglese)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Esempio di selezione: collegare due tubi in una linea di lavaggio dello strumento",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Supponiamo che un circuito di lavaggio debba unire, in un punto fisso all’interno di uno strumento, due tubi con diametro interno di 3.2 mm. I modelli BA-32F-PP-N e BA-32D-PP-N sono due candidati iniziali per la configurazione. Entrambi sono adatti allo stesso diametro interno nominale, ma hanno profili portagomma diversi. La scelta finale richiede un confronto con il tubo effettivo."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Conferma la configurazione: valuta la serie BA per un collegamento dritto o la BL per un cambio di direzione. Prevedi spazio per il raccordo e per la curvatura del tubo.",
+              "Specifica il tubo: registra diametri interno ed esterno, tolleranze, materiale, durezza e specifica del fornitore. La sola indicazione «tubo 3.2» è insufficiente.",
+              "Verifica i materiali: valuta la compatibilità del PP, o di un altro materiale disponibile, con il liquido di lavaggio, il detergente, la concentrazione, la temperatura e il ciclo di esposizione.",
+              "Controlla le interfacce: verifica entrambi i codici dei portagomma, le quote del disegno, la posizione d’inserimento e il foro minimo. Anche un tubo montato correttamente può convivere con una resistenza al flusso eccessiva.",
+              "Convalida i campioni: valuta il montaggio, la tenuta, i carichi di trazione e le condizioni effettive di avvio e arresto. Comprendi la verifica delle infiltrazioni d’aria in condizioni di vuoto nei tratti di aspirazione.",
+              "Definisci i requisiti di fornitura: includi il modello completo, la specifica del tubo, la revisione del disegno e i documenti richiesti su materiali e qualità nelle registrazioni di acquisto e accettazione."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Se un tubo ha un diametro interno di 2.4 mm, valuta il modello BA-24F-32F-PP-N senza forzare il tubo più piccolo su un portagomma più grande. Questo è un esempio del processo di selezione e non dimostra che gli abbinamenti siano stati convalidati in uno strumento specifico."
+          }
+        ]
+      },
+      {
+        "title": "Come si montano i raccordi portagomma e quando serve una fascetta esterna?",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Controlla il modello e le superfici. Conferma la misura dei tubi e il codice di ciascun portagomma. Verifica che foro, superficie d’invito e risalto siano privi di residui, bave, crepe e graffi.",
+              "Taglia le estremità dei tubi perpendicolarmente. Rimuovi i residui di taglio ed evita di rimontare estremità vecchie che risultano schiacciate, crepate o visibilmente dilatate.",
+              "Inserisci in direzione assiale. Spingi il tubo fino alla posizione prevista, in modo che superi il risalto e si accoppi come richiesto. Se avverti una resistenza insolita, controlla dimensioni e materiali prima di proseguire.",
+              "Prevedi supporto e spazio di curvatura. Evita curve strette o trazione prolungata all’uscita del raccordo, soprattutto con numerose derivazioni o tubi pesanti.",
+              "Esegui una prova di tenuta nelle condizioni effettive. Includi la pressione, la temperatura e i cicli di avvio e arresto specificati. Controlla le infiltrazioni d’aria nei collegamenti di aspirazione e registra campioni e condizioni di prova."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La necessità di una fascetta esterna dipende dal tubo, dall’accoppiamento con il portagomma, dalle variazioni di pressione, dai carichi di trazione e dalle vibrazioni. Scegli una fascetta adatta al diametro esterno del tubo montato e al punto di serraggio efficace, evitando disallineamenti o compressioni eccessive. Una fascetta non corregge una misura di tubo errata e non si può presumere che ogni collegamento portagomma funzioni senza di essa."
+          },
+          {
+            "type": "paragraph",
+            "text": "Non usare grassi, solventi o riscaldamento per facilitare un inserimento difficile senza averne verificato l’idoneità. Questi trattamenti possono alterare i materiali o contaminare il circuito. Arresta e depressurizza il sistema prima di smontarlo. Dopo la manutenzione, ispeziona raccordo ed estremità del tubo e ripeti le verifiche necessarie sul collegamento."
+          }
+        ]
+      },
+      {
+        "title": "Che cosa controllare se il montaggio è difficile o si verificano perdite, ingresso d’aria o sfilamento?",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Sintomo",
+              "Controlli prioritari",
+              "Intervento e verifica"
+            ],
+            "rows": [
+              [
+                "Il tubo è difficile da inserire",
+                "Diametro esterno scambiato per quello interno oppure materiale, spessore della parete o profilo incompatibile",
+                "Controlla entrambe le specifiche e l’eventuale danno all’estremità del tubo, quindi confronta le combinazioni compatibili"
+              ],
+              [
+                "Perdita lenta dopo il montaggio",
+                "Posizione di inserimento, crepe all’estremità del tubo, graffi sul portagomma o residui superficiali",
+                "Sostituisci i componenti danneggiati, rimonta e ripeti la prova alla pressione e alla temperatura specificate"
+              ],
+              [
+                "Bolle durante l’aspirazione senza perdite di liquido visibili",
+                "Infiltrazione d’aria in condizioni di vuoto, livello del liquido a monte e altri collegamenti",
+                "Controlla il circuito un tratto alla volta per distinguere le perdite nei collegamenti da altre origini delle bolle"
+              ],
+              [
+                "Sfilamento durante i cicli di avvio e arresto o sotto trazione",
+                "Accoppiamento dimensionale, rammollimento o rilassamento del tubo, picchi di pressione e carichi esterni",
+                "Rivedi il funzionamento e il supporto lungo la posa, valuta il serraggio con fascetta e ripeti la validazione"
+              ],
+              [
+                "Montaggio percepito diversamente dopo il cambio del lotto del tubo",
+                "Variazioni del diametro interno, delle tolleranze, della durezza o della specifica del materiale",
+                "Confronta con campioni approvati e registrazioni, quindi ripeti la prova prestazionale del collegamento"
+              ],
+              [
+                "La portata diminuisce dopo l’aggiunta di un raccordo",
+                "Foro del raccordo, curve strette del tubo, ostruzione locale e resistenza complessiva del circuito",
+                "Controlla i passaggi effettivi del fluido e la portata nel punto di utilizzo, oltre al diametro interno del tubo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Definisci i criteri di accettazione prima della prova: perdita ammessa, requisiti di ritegno e variazione di portata consentita, con pressione, temperatura, fluido, durata e condizioni cicliche. La sola indicazione «provato senza perdite» è difficile da riprodurre e non è sufficiente per l’accettazione successiva in produzione."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulla scelta dei raccordi portagomma",
+    "faqItems": [
+      {
+        "question": "I raccordi portagomma si scelgono in base al diametro interno o esterno del tubo?",
+        "answer": "Scegli prima la misura di collegamento in base al diametro interno, quindi controlla diametro esterno, spessore della parete, tolleranze, materiale e durezza. Il modello BA-32F-PP-N è adatto a tubi con diametro interno di 3.2 mm. Questo non significa che il diametro massimo del portagomma sia di 3.2 mm. Il diametro esterno aiuta a determinare il serraggio e lo spazio di montaggio. Se lo stesso diametro interno del tubo è abbinato a profili diversi, controlla i disegni e convalida inserimento, tenuta e ritegno con il tubo effettivo."
+      },
+      {
+        "question": "Un collegamento portagomma richiede sempre una fascetta?",
+        "answer": "La necessità di una fascetta dipende dall’accoppiamento specifico tra portagomma e tubo e dalle condizioni operative. Valuta materiale e durezza del tubo, temperatura, picchi di pressione, vibrazioni e carichi esterni di trazione. Convalida quindi la tenuta e il ritegno secondo i requisiti dell’assemblaggio. Se necessaria, scegli una fascetta adatta al diametro esterno del tubo montato e al punto di serraggio efficace, senza danneggiare tubo o raccordo. Una fascetta non compensa una misura di tubo errata."
+      },
+      {
+        "question": "Come scegliere le due estremità di una riduzione portagomma?",
+        "answer": "Registra diametro interno, diametro esterno e materiale di ciascun tubo, quindi seleziona la riduzione corrispondente. Il modello BA-24F-32F-PP-N collega tubi con diametro interno di 2.4 mm e 3.2 mm. Controlla anche il codice di ciascun portagomma, le quote del disegno e il foro minimo. Per raccordi a T o a Y ridotti, identifica sul disegno la misura di ogni porta. La sequenza dei numeri da sola non indica la direzione della derivazione."
+      }
+    ],
+    "cta": {
+      "title": "Traduci i requisiti dei tubi in una specifica verificabile per il raccordo",
+      "description": "Indica diametri interno ed esterno, materiale e durezza dei tubi in corrispondenza di ogni porta, configurazione del circuito, fluido, pressione, temperatura e documenti richiesti su certificazioni e materiali per confermare modelli, disegni e requisiti di validazione del campione.",
+      "contactLabel": "Confrontati con noi su scelta e documentazione",
+      "productsLabel": "Vedi i modelli di raccordo portagomma",
+      "productsHref": "/en/products/fittings/barbed-fittings/"
+    },
+    "navigation": [
+      {
+        "id": "principle",
+        "label": "Collegamento e tenuta"
+      },
+      {
+        "id": "types",
+        "label": "Forme dei raccordi"
+      },
+      {
+        "id": "profiles",
+        "label": "Codici portagomma e dilatazione",
+        "children": [
+          {
+            "id": "expansion-example",
+            "label": "Esempio dimensionale"
+          }
+        ]
+      },
+      {
+        "id": "models",
+        "label": "Modelli e misure dei tubi",
+        "children": [
+          {
+            "id": "tube-id",
+            "label": "Diametro interno del tubo e foro del raccordo"
+          }
+        ]
+      },
+      {
+        "id": "materials",
+        "label": "Tubi e materiali"
+      },
+      {
+        "id": "quality",
+        "label": "Documentazione di qualità",
+        "children": [
+          {
+            "id": "quality-systems",
+            "label": "Sistemi di gestione della qualità"
+          },
+          {
+            "id": "material-documents",
+            "label": "REACH / RoHS / MSDS"
+          },
+          {
+            "id": "batch-quality",
+            "label": "Uniformità dimensionale e di fornitura"
+          }
+        ]
+      },
+      {
+        "id": "selection-example",
+        "label": "Esempio di selezione completa"
+      },
+      {
+        "id": "installation",
+        "label": "Montaggio e serraggio"
+      },
+      {
+        "id": "troubleshooting",
+        "label": "Diagnosi e validazione"
+      }
+    ],
+    "subjectAbout": [
+      "Raccordi portagomma",
+      "Collegamenti per tubi flessibili",
+      "Profili dei portagomma e dilatazione"
+    ],
+    "relatedProductTitles": {
+      "tee": "Raccordo a T portagomma in PA a misure uguali",
+      "elbow": "Gomito portagomma in PA a misure uguali"
+    }
+  },
+  "navigation": [
+    {
+      "id": "principle",
+      "label": "Collegamento e tenuta"
+    },
+    {
+      "id": "types",
+      "label": "Forme dei raccordi"
+    },
+    {
+      "id": "profiles",
+      "label": "Codici portagomma e dilatazione",
+      "children": [
+        {
+          "id": "expansion-example",
+          "label": "Esempio dimensionale"
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "label": "Modelli e misure dei tubi",
+      "children": [
+        {
+          "id": "tube-id",
+          "label": "Diametro interno del tubo e foro del raccordo"
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "label": "Tubi e materiali"
+    },
+    {
+      "id": "quality",
+      "label": "Documentazione di qualità",
+      "children": [
+        {
+          "id": "quality-systems",
+          "label": "Sistemi di gestione della qualità"
+        },
+        {
+          "id": "material-documents",
+          "label": "REACH / RoHS / MSDS"
+        },
+        {
+          "id": "batch-quality",
+          "label": "Uniformità dimensionale e di fornitura"
+        }
+      ]
+    },
+    {
+      "id": "selection-example",
+      "label": "Esempio di selezione completa"
+    },
+    {
+      "id": "installation",
+      "label": "Montaggio e serraggio"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Diagnosi e validazione"
+    }
+  ]
+}

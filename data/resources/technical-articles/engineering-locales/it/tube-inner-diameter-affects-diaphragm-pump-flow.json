@@ -1,0 +1,300 @@
+{
+  "metadata": {
+    "title": "Perché la portata effettiva cambia molto con tubi di misura diversa sulla stessa pompa miniaturizzata a membrana?",
+    "seoTitle": "Portata della pompa a membrana dopo la sostituzione dei tubi: individuare le restrizioni con misure di pressione | Foreach Technology",
+    "seoDescription": "Se la portata cala dopo la sostituzione dei tubi, come distinguere diametro interno, lunghezza, un raccordo restrittivo e un problema della pompa? La guida usa misure simultanee di pressione in ingresso, pressione in uscita e portata.",
+    "coverImage": "/images/resources/technical-articles/tube-inner-diameter-affects-diaphragm-pump-flow/article-cover.webp",
+    "coverAlt": "Ripresa del circuito e della prova di portata di una pompa miniaturizzata a membrana dal canale Douyin ufficiale Foreach"
+  },
+  "deck": "Anche con la stessa pompa, la portata installata può cambiare con diametro interno, lunghezza, curve e passaggio minimo dei raccordi. Se cala dopo la sostituzione dei tubi, misurare insieme pressione di ingresso, pressione di mandata e volume accumulato per individuare dove aumenta la resistenza.",
+  "leadBlocks": [
+    {
+      "type": "notice",
+      "text": "Confermare la variazione, quindi confrontare pressione a monte, pressione a valle e portata. Una diminuzione della pressione assoluta in ingresso indica un problema possibile in aspirazione. Una maggiore contropressione in uscita suggerisce un problema in mandata. Se le due pressioni restano vicine ai valori precedenti ma la portata è anomala, verificare ingressi d'aria, alimentazione, valvole, proprietà del fluido e metodo di misura."
+    },
+    {
+      "type": "paragraph",
+      "text": "Il diametro esterno determina soprattutto l'accoppiamento al raccordo. Il fluido scorre nel lume. Tubi con lo stesso diametro esterno possono avere diametri interni diversi per lo spessore della parete. Curve strette, fascette serrate troppo o inserimento eccessivo del raccordo possono creare un passaggio effettivo più piccolo del diametro nominale. Occorre rilevare il passaggio minimo effettivo e la perdita di carico di ogni tratto."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/tube-inner-diameter-affects-diaphragm-pump-flow/article-figure-it.svg",
+      "alt": "Una variazione del diametro interno sposta la curva del sistema e cambia il punto di lavoro della pompa miniaturizzata a membrana",
+      "width": 2560,
+      "height": 2160,
+      "caption": "Cambiare i tubi modifica la pressione differenziale richiesta dal sistema a ciascuna portata e sposta l'intersezione tra curva della pompa e del sistema. La curva della pompa resta distinta. Lo schema spiega la diagnosi e non riporta misure di un modello specifico."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Misurare in modo confrontabile il calo di portata dopo la sostituzione dei tubi",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La portata prima e dopo il cambio si confronta a condizioni coerenti. Tensione ai capi della pompa, fluido e temperatura, livello del serbatoio, terminale a valle, tempo di funzionamento e calcolo della portata possono confondere gli effetti del cambio. Conservare i tubi vecchi come riferimento ed eseguire un confronto A/B sulla stessa pompa."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Voce da mantenere costante o registrare",
+            "Dati da registrare",
+            "Errore di diagnosi da evitare"
+          ],
+          "rows": [
+            [
+              "Pompa e azionamento",
+              "Usare la stessa pompa e registrare tensione ai capi sotto carico, corrente e parametri PWM",
+              "Scambiare una caduta di tensione o un cambio di velocità per un effetto del diametro dei tubi"
+            ],
+            [
+              "Fluido e temperatura",
+              "Usare lo stesso lotto di fluido. Registrare temperatura, viscosità o stato della formulazione",
+              "Scambiare una variazione di viscosità per una differenza tra tubi"
+            ],
+            [
+              "Condizioni del circuito",
+              "Fissare livello, quota a valle, posizioni delle valvole, filtro e ago",
+              "Modificare più restrizioni insieme e perdere la possibilità di localizzare la causa"
+            ],
+            [
+              "Stato dei tubi",
+              "Registrare materiale, diametro interno misurato, lunghezza, lotto, raggio di curvatura e fissaggio",
+              "Confrontare soltanto diametro esterno o nome del prodotto"
+            ],
+            [
+              "Misura della portata",
+              "Usare lo stesso tempo di raccolta e, se serve, verificare con misura gravimetrica",
+              "Confrontare letture istantanee non equivalenti su flusso pulsante"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "Se tornando ai vecchi tubi la portata si ripristina e rimontando i nuovi il problema ricompare, si può concentrare la verifica su nuovi tubi, raccordi, posa e montaggio."
+        }
+      ]
+    },
+    {
+      "title": "2. Localizzare la restrizione con pressione di ingresso, pressione di mandata e portata",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Collocare i punti di misura il più vicino possibile all'ingresso e all'uscita della pompa. Prima e dopo il cambio usare lo stesso riferimento di pressione e registrare insieme la portata media stabilizzata. Il calo di portata dimostra che il punto di lavoro è cambiato. Le due pressioni aiutano a distinguere aspirazione, mandata e cause esterne al circuito."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPpump = Pout - Pin",
+          "note": "Pin e Pout devono usare lo stesso riferimento. Per la pressione differenziale si può usare in modo coerente pressione relativa o assoluta. Per la cavitazione serve la pressione assoluta."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Sintomo dopo il cambio dei tubi",
+            "Evidenza di pressione",
+            "Primo controllo"
+          ],
+          "rows": [
+            [
+              "Adescamento più lento e portata in calo",
+              "La pressione di ingresso cala rispetto al riferimento e quella di uscita non aumenta molto",
+              "Tubo di aspirazione troppo piccolo o lungo, curve schiacciate, raccordo di ingresso restrittivo o ingresso d'aria"
+            ],
+            [
+              "La pompa si adesca, ma la portata in mandata cala",
+              "L'ingresso resta vicino al riferimento mentre aumenta la contropressione di mandata",
+              "Tubo di mandata, raccordo di uscita, filtro, valvola, ago o camera a valle"
+            ],
+            [
+              "Pressione di ingresso più bassa e pressione di uscita più alta",
+              "La differenza di pressione attraverso la pompa cresce da entrambi i lati",
+              "Resistenza aggiunta in aspirazione e mandata o sostituzione di tutti i tubi"
+            ],
+            [
+              "Pressioni vicine al riferimento e portata ancora bassa",
+              "La pressione statica media ai due lati cambia poco",
+              "Ingressi d'aria in aspirazione, bolle, dinamica delle valvole, tensione ai capi della pompa, proprietà del fluido o risposta della misura"
+            ],
+            [
+              "La portata sale e scende ripetutamente",
+              "La forma d'onda della pressione oscilla nello stesso momento",
+              "Tubi che si appiattiscono a intermittenza, bolle, ingressi d'aria dai raccordi, orientamento delle valvole o misura di flusso pulsante"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La pressione media può nascondere le pulsazioni transitorie della pompa a membrana. Se il problema compare solo all'avvio, alla commutazione o ad alta portata, osservare forma d'onda della pressione, bolle in un tratto trasparente e deformazione del tubo, oltre al valore stabilizzato."
+        }
+      ]
+    },
+    {
+      "title": "3. Perché una piccola variazione del diametro interno può cambiare molto la perdita di carico",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per un tubo diritto circolare a diametro interno costante, un fluido newtoniano e un moto laminare pienamente sviluppato, usare la relazione di Hagen–Poiseuille per stimare la sensibilità della perdita di carico al diametro interno:"
+        },
+        {
+          "type": "formula",
+          "expression": "ΔP = 128μLQ / (πd⁴)",
+          "note": "μ è la viscosità dinamica, L la lunghezza del tubo, Q la portata volumetrica e d il diametro interno. La formula esclude ingresso, raccordi, valvole, filtri, deformazione dei tubi e pulsazioni. Serve alla preselezione quando valgono le ipotesi."
+        },
+        {
+          "type": "paragraph",
+          "text": "In teoria, a pari portata, lunghezza e viscosità, ridurre il diametro interno da 3.2 mm a 2.0 mm moltiplica la perdita nel tubo diritto per circa 6.55. Ridurlo a 1.6 mm la moltiplica per circa 16. Il diametro va controllato presto, ma la portata effettiva non diminuisce necessariamente di un fattore 6.55 o 16. Si stabilisce alla nuova intersezione tra curva del sistema e della pompa."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per la relazione completa tra curve della pompa, curve del sistema e punti di lavoro, leggi",
+              "label": "come leggere la curva portata-pressione di una pompa a membrana",
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide",
+              "suffix": "."
+            },
+            {
+              "prefix": "Per le stime iniziali del circuito, usa il",
+              "label": "calcolatore della resistenza al flusso",
+              "href": "/resources/calculators/fluid-resistance/",
+              "suffix": "; per la decisione finale serve comunque una prova sul circuito effettivo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Controllare il passaggio minimo anche dentro raccordi e componenti",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Restrizione possibile",
+            "Metodo di controllo sul posto",
+            "Evidenza"
+          ],
+          "rows": [
+            [
+              "Tubo",
+              "Misurare diametro interno effettivo, lunghezza totale e sezione dopo la curvatura",
+              "Se pressioni e portata si ripristinano con un tubo corto e diritto"
+            ],
+            [
+              "Portagomma o adattatore",
+              "Controllare passaggio interno minimo, gradini e profondità di innesto",
+              "Se la perdita di carico cala escludendo o sostituendo il raccordo"
+            ],
+            [
+              "Valvola e filtro",
+              "Provare separatamente riferimento, componente appena installato e stato a carico",
+              "Se la pressione differenziale sul componente diventa dominante"
+            ],
+            [
+              "Ago, ugello o capillare",
+              "Controllare diametro interno, lunghezza e geometria di ingresso",
+              "Anche un componente corto può dominare la resistenza totale"
+            ],
+            [
+              "Punto di fissaggio del tubo",
+              "Ispezionare fascette, fermagli, curve strette e tratti rammolliti dal calore",
+              "Se in esercizio si osserva un appiattimento locale o chiusura periodica"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La misura dell'attacco nella documentazione indica soprattutto la compatibilità del collegamento. La stessa portata non è garantita per tutte le lunghezze, i materiali e le pose. Se filtro, valvola o ago causano quasi tutta la perdita di carico, allargare un tubo diritto comune può servire poco."
+        }
+      ]
+    },
+    {
+      "title": "5. Procedura diagnostica per sostituzione di singoli tratti",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Con i tubi vecchi, registrare pressioni di ingresso e uscita, tensione ai capi, corrente, volume accumulato e tempo di adescamento per stabilire un riferimento ripetibile.",
+            "Sostituire i tubi di un solo lato mantenendo invariati l'altro lato e i componenti a valle. Provare prima l'aspirazione, poi la mandata.",
+            "Usare un tubo corto e diritto per provarlo da solo. Aggiungere poi curve, raccordi, valvole e filtro seguendo il percorso effettivo.",
+            "A ogni aggiunta registrare la variazione di pressione sul componente e la variazione di portata corrispondente, per individuare l'aumento maggiore della perdita di carico.",
+            "Se si sospetta un raccordo o una restrizione locale, sostituirli con un bypass di passaggio noto. Non basarsi sull'aspetto.",
+            "Riprovare nell'orientamento definitivo con livello, fluido e programma di controllo effettivi. Conservare lotto dei tubi, foto e versione dei dati."
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "La prova per tratti associa la variazione di portata a una variazione di pressione misurabile. L'evidenza fornisce limiti tecnici da riutilizzare se cambiano lotto, posa o componenti."
+        }
+      ]
+    },
+    {
+      "title": "6. Quando il problema non si può ancora attribuire al diametro interno",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se la prova A/B non riproduce il problema o le due pressioni non cambiano in modo coerente con i tubi, ampliare la diagnosi. Ingressi d'aria in aspirazione, aria residua, viscosità e temperatura, orientamento valvole, stato del filtro, alimentazione della pompa, usura e risposta del misuratore alle pulsazioni possono dare sintomi simili."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Controllo successivo",
+            "Evidenza consigliata",
+            "Aspetto da confermare tecnicamente"
+          ],
+          "rows": [
+            [
+              "Funzionamento della pompa",
+              "Ripetere con il fluido specificato in un circuito di riferimento a bassa resistenza",
+              "Limiti di accettazione da specifica controllata o standard di ispezione del modello"
+            ],
+            [
+              "Conformità dei nuovi tubi",
+              "Misurare diametro interno, spessore, durezza, lotto e deformazione in aspirazione",
+              "Confermare tolleranze dimensionali e dei materiali con approvvigionamento e sviluppo"
+            ],
+            [
+              "Idoneità del punto di lavoro allo strumento",
+              "Registrare continuamente portata, pressione, aumento di temperatura e avviamento nelle condizioni reali",
+              "Definire l'accettazione da tempo ciclo, precisione di dosaggio e durata richiesta"
+            ],
+            [
+              "Stabilità nell'uso prolungato",
+              "Riprovare con filtro a fine vita, livello minimo e temperature limite",
+              "Una prova breve con acqua non sostituisce la convalida di durata con il fluido effettivo"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulle variazioni di portata dopo il cambio dei tubi",
+  "faqItems": [
+    {
+      "question": "Perché tubi con lo stesso diametro esterno possono dare portate diverse dopo il cambio?",
+      "answer": "La tolleranza di spessore cambia il diametro interno. Durezza, curve e deformazione in aspirazione cambiano il passaggio effettivo. Registrare diametro interno misurato, lunghezza, raggio di curvatura e lotto, oltre al diametro esterno."
+    },
+    {
+      "question": "Sostituire tutti i tubi con un diametro interno maggiore aumenta sempre la portata?",
+      "answer": "Se ago, filtro, valvola, passaggio minimo del raccordo o camera a valle dominano la resistenza, allargare i tubi diritti può servire poco. Individuare prima la restrizione principale misurando la pressione differenziale per tratti."
+    },
+    {
+      "question": "La pompa sale automaticamente alla pressione nominale quando diminuisce il diametro interno?",
+      "answer": "Il cambio dei tubi sposta la curva del sistema e la pompa lavora all'intersezione tra la propria curva e quella nuova. Pressione e portata dipendono da circuito, azionamento e curva. La pressione nominale non è un punto di lavoro raggiunto automaticamente."
+    },
+    {
+      "question": "Anche una riduzione brusca e breve del passaggio può influire sensibilmente sulla portata?",
+      "answer": "Sì. Oltre all'attrito nel tratto stretto, una restrizione breve provoca perdite localizzate di contrazione ed espansione. Se il passaggio è molto più piccolo degli altri, può diventare il limite principale. Verificare con un bypass o un componente sostitutivo."
+    },
+    {
+      "question": "Come distinguere rapidamente un problema dei nuovi tubi da un problema della pompa?",
+      "answer": "Confrontare in modo ripetibile vecchi e nuovi tubi sulla stessa pompa, registrando pressioni di ingresso e mandata, tensione ai capi e volume accumulato. Se i vecchi ripristinano le prestazioni e i nuovi riproducono l'anomalia, l'evidenza indica il tubo nuovo o il suo montaggio."
+    }
+  ],
+  "cta": {
+    "title": "Portata anomala dopo il cambio dei tubi? Possiamo aiutarti a trovare la restrizione.",
+    "description": "Indica modello della pompa, fluido, diametro interno e lunghezza misurati, passaggio dei raccordi, pressioni di ingresso e uscita, tensione ai capi e portata prima e dopo il cambio. Un tecnico può così valutare il punto di lavoro effettivo.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Visualizza le pompe a membrana",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps"
+  }
+}

@@ -4,6 +4,9 @@ import { getPistonPumpIntroCopy, PISTON_SERIES_SLUGS } from "@/data/products/sel
 import { getPumpSeriesProductDetailAdapter } from "./adapters/getPumpSeriesProductDetailAdapter";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 
+import { germanPistonPumpSeriesCopy } from "@/data/products/selection/piston-pump-series-copy.de";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
+
 const LOCALES: SelectionLocale[] = ["zh", "en", "es", "fr", "ko", "ru"];
 
 const ENGLISH_SERIES_DESCRIPTIONS: Record<string, string> = {
@@ -13,19 +16,35 @@ const ENGLISH_SERIES_DESCRIPTIONS: Record<string, string> = {
   tm: "FOREACH TM ultra-compact piston pumps offer 50–500 μL configurations for instrument liquid dosing, with PMMA heads and 6-40 UNF fluid connections.",
 };
 
-export function getPistonPumpMetadata(slug = "", locale: SelectionLocale = "zh"): Metadata | null {
+export function getPistonPumpMetadata(slug = "", locale: SelectionLocale | "de" = "zh"): Metadata | null {
   const series = slug ? PISTON_SERIES_SLUGS[slug] : "category";
-  const intro = series ? getPistonPumpIntroCopy(series, locale) : undefined;
-  const detail = intro ? null : getPumpSeriesProductDetailAdapter(slug, locale);
+  const german = locale === "de" && series ? germanPistonPumpSeriesCopy[series] : undefined;
+  const intro = german ?? (series && locale !== "de" ? getPistonPumpIntroCopy(series, locale) : undefined);
+  const detail = intro || locale === "de" ? null : getPumpSeriesProductDetailAdapter(slug, locale);
   if (!intro && !detail) return null;
 
   const source = (detail || {}) as Record<string, unknown>;
   const rawTitle = intro?.title || String(source.seoTitle || source.model || "");
   const title = rawTitle.includes("Foreach Technology") ? rawTitle : `${rawTitle} | Foreach Technology`;
-  const description = (locale === "en" && series ? ENGLISH_SERIES_DESCRIPTIONS[series] : undefined)
+  const description = german?.metaDescription || (locale === "en" && series ? ENGLISH_SERIES_DESCRIPTIONS[series] : undefined)
     || intro?.paragraphs[0] || String(source.metaDescription || (Array.isArray(source.advantages) ? source.advantages[0] : "") || "");
   const path = `/products/pumps/piston-pump/${slug ? `${slug}/` : ""}`;
   const canonical = locale === "zh" ? path : `/${locale}${path}`;
+  if (german) {
+    const url = getCanonicalUrl(canonical);
+    const social = buildProductSocialMetadata({
+      data: { mainImage: "/images/products/pumps/product-types/plunger-pumps/foreach-plunger-pumps-product-type-intro.webp", imageAlt: german.imageAlt },
+      title, description, canonicalUrl: url,
+    });
+    return {
+      ...social,
+      title: { absolute: title },
+      description,
+      alternates: { canonical: url },
+      robots: { index: false, follow: true },
+      openGraph: { ...social.openGraph, locale: "de_DE" },
+    };
+  }
   const languages = Object.fromEntries(LOCALES.map((language) => [
     language === "zh" ? "zh-CN" : language === "en" ? "en-US" : language,
     language === "zh" ? path : `/${language}${path}`,

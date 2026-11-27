@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getHindiDraftLink, getItalianDraftLink, hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { quickDisconnectDiagramCopy } from "@/data/resources/technical-articles/quick-disconnect-fitting-locales/diagrams";
 import styles from "./QuickDisconnectDiagram.module.css";
@@ -64,9 +65,19 @@ function ValveComparison({ copy }: { copy: typeof quickDisconnectDiagramCopy.en 
 
 // Original product images are displayed through SVG viewports; no replacement geometry
 // is used for the product views. The panel section below is a separate assembly schematic.
-export default function QuickDisconnectDiagram({ kind, locale = "zh-CN" }: { kind: "pair" | "valves" | "panel"; locale?: TechnicalArticleLocale }) {
+export default function QuickDisconnectDiagram({ kind, locale = "zh-CN" }: { kind: "pair" | "valves" | "panel"; locale?: TechnicalArticleLocale | "de" | "it" | "hi" }) {
   const copy = quickDisconnectDiagramCopy[locale];
   const localizedProductRoot = `${locale === "zh-CN" ? "" : `/${locale}`}${productRoot}`;
+  function productLink(model: string, label: string) {
+    const relativePath = model.toLowerCase() + "/";
+    if (locale !== "it" && locale !== "hi") return <Link href={localizedProductRoot + relativePath}>{label} {model}</Link>;
+    const sourcePath = "/en" + productRoot + relativePath;
+    const destination = locale === "hi" ? getHindiDraftLink(sourcePath) : getItalianDraftLink(sourcePath);
+    const fallbackSuffix = locale === "hi" ? hindiEnglishFallbackSuffix : italianEnglishFallbackSuffix;
+    return <Link href={destination.href} hrefLang={destination.hrefLang} title={destination.title}>
+      {label} {model}{destination.hrefLang === "en" ? fallbackSuffix : ""}
+    </Link>;
+  }
   return <div data-quick-disconnect-diagram={kind} className={locale === "zh-CN" ? undefined : styles.translated}>
     <span className={styles.hint}>{copy.hint}</span>
     <div className={styles.scroll} tabIndex={0} role="region" aria-label={`${copy.regions[kind]}. ${copy.hint}`}>
@@ -120,12 +131,12 @@ export default function QuickDisconnectDiagram({ kind, locale = "zh-CN" }: { kin
       </svg>}
     </div>
     <div className={styles.links}>
-      {kind === "pair" && <Link href={`${localizedProductRoot}q2001-pnv-sppe/`}>{copy.viewMale} Q2001-PNV-SPPE</Link>}
-      {kind === "valves" && <Link href={`${localizedProductRoot}q2001-smx-sppe/`}>{copy.viewNonValved} Q2001-SMX-SPPE</Link>}
-      <Link href={`${localizedProductRoot}q2001-smv-sppe/`}>{kind === "valves" ? copy.viewValved : copy.viewPanel} Q2001-SMV-SPPE</Link>
+      {kind === "pair" && productLink("Q2001-PNV-SPPE", copy.viewMale)}
+      {kind === "valves" && productLink("Q2001-SMX-SPPE", copy.viewNonValved)}
+      {productLink("Q2001-SMV-SPPE", kind === "valves" ? copy.viewValved : copy.viewPanel)}
       {kind === "panel" && <>
-        <Link href={`${localizedProductRoot}q4004-smv-sppe/`}>{copy.viewPanel} Q4004-SMV-SPPE</Link>
-        <Link href={`${localizedProductRoot}q6006-smv-sppe/`}>{copy.viewPanel} Q6006-SMV-SPPE</Link>
+        {productLink("Q4004-SMV-SPPE", copy.viewPanel)}
+        {productLink("Q6006-SMV-SPPE", copy.viewPanel)}
       </>}
     </div>
   </div>;

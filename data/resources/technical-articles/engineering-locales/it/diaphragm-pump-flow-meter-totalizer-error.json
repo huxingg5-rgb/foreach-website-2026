@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "title": "Perché il totalizzatore di portata di una pompa a membrana non concorda con la massa raccolta?",
+    "seoTitle": "Errore del totalizzatore di portata nelle pompe a membrana: verifica gravimetrica",
+    "seoDescription": "Verificare l’errore del totalizzatore di portata di una pompa a membrana confrontandolo con la massa raccolta. Allineare le finestre temporali e tenere conto di densità, accumulo di liquido, erogazione dopo l’arresto, flusso inverso e campionamento.",
+    "coverImage": "/images/resources/technical-articles/pump-diagnostics/06.svg",
+    "coverAlt": "Catena di misura. La portata pulsante della pompa attraversa il misuratore e viene confrontata con la massa raccolta nella stessa finestra temporale. Considerare il liquido accumulato tra misuratore e recipiente. La traccia è un esempio illustrativo e non deriva da prove sul prodotto."
+  },
+  "deck": "Un valore visualizzato che oscilla e un totale errato sono due problemi diversi. Allineare le finestre di raccolta e le condizioni idrauliche, convertire la massa usando la densità effettiva del fluido e verificare variazioni del volume accumulato, liquido erogato dopo l’arresto, flusso inverso, campo di misura e campionamento. Per stabilire se filtraggio o smorzamento migliorano l’accuratezza di misura serve un riferimento indipendente.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un valore visualizzato che oscilla e un totale errato sono due problemi diversi. Allineare le finestre di raccolta e le condizioni idrauliche, convertire la massa usando la densità effettiva del fluido e verificare variazioni del volume accumulato, liquido erogato dopo l’arresto, flusso inverso, campo di misura e campionamento. Per stabilire se filtraggio o smorzamento migliorano l’accuratezza di misura serve un riferimento indipendente."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Confrontare la stessa grandezza misurata",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il misuratore rileva il liquido che attraversa il suo punto di misura. La bilancia misura il liquido che raggiunge il recipiente. Tra i due punti possono trovarsi tubi, uno smorzatore e un ugello. Il confronto diretto è appropriato a regime, con volume accumulato costante. In avvio e in arresto, considerare volume accumulato, diramazioni ed erogazione che continua dopo l’arresto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Usare la densità alla composizione e alla temperatura effettive. Controllare evaporazione, schizzi, gocce all’esterno ed errori di sincronizzazione. Lasciare in sede i componenti che generano contropressione durante la raccolta per mantenere il punto di lavoro della pompa."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/pump-diagnostics/06.svg",
+          "alt": "Catena di misura. La portata pulsante della pompa attraversa il misuratore e viene confrontata con la massa raccolta nella stessa finestra temporale. Considerare il liquido accumulato tra misuratore e recipiente. La traccia è un esempio illustrativo e non deriva da prove sul prodotto.",
+          "caption": "Catena di misura. La portata pulsante della pompa attraversa il misuratore e viene confrontata con la massa raccolta nella stessa finestra temporale. Considerare il liquido accumulato tra misuratore e recipiente. La traccia è un esempio illustrativo e non deriva da prove sul prodotto.",
+          "width": 1000,
+          "height": 560
+        }
+      ]
+    },
+    {
+      "title": "Calcolare il bilancio dei volumi nella stessa finestra temporale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Allineare gli istanti di inizio e fine di totalizzazione e raccolta e le unità di volume. In assenza di perdite, diramazioni o cambiamenti di fase tra sensore e recipiente, la differenza corrisponde alla variazione di liquido accumulato. Nei circuiti più complessi occorre contabilizzare esplicitamente diramazioni e perdite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ripetere misure a regime su finestre di uguale durata, quindi variare la durata. Se la differenza diminuisce con finestre più lunghe, esaminare ritardi fissi di sincronizzazione, accumulo ed erogazione dopo l’arresto. Uno scostamento relativo persistente richiede di verificare densità, taratura, campo di misura e idoneità dinamica."
+        },
+        {
+          "type": "formula",
+          "expression": "Qavg = 60 Δm / (ρ T); Vmeter − Vcollected = ΔVstored",
+          "note": "Per esprimere Qavg in mL/min, usare Δm in g, ρ in g/mL e T in s. Il bilancio presuppone la stessa finestra temporale, assenza di diramazioni, perdite e cambiamenti di fase e una densità approssimativamente uniforme tra misuratore e recipiente. A regime ΔVstored≈0. Nelle prove di avvio e arresto, includere accumulo ed erogazione dopo l’arresto."
+        }
+      ]
+    },
+    {
+      "title": "Verificare la gestione del flusso inverso e la saturazione ai picchi",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una portata media entro il campo nominale può coesistere con saturazioni istantanee. Possono verificarsi brevi inversioni del flusso. Un totalizzatore che conta solo il flusso diretto o azzera i valori negativi può sovrastimare il totale. Verificare la misura bidirezionale e le regole di accumulo con segno."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seguire i requisiti del misuratore per funzionamento a tubo pieno, taratura rispetto al fluido, orientamento, tratti rettilinei e pressione. La sensibilità a gas, viscosità e pulsazioni dipende dal principio di misura. Per l’installazione usare le indicazioni del misuratore specifico."
+        }
+      ]
+    },
+    {
+      "title": "Distinguere rilevamento, comunicazione e filtraggio del valore visualizzato",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Leggere più spesso un’uscita che rimane invariata non aggiunge informazioni. Registrare larghezza di banda del sensore, frequenza di aggiornamento e media interna, frequenza di comunicazione e filtri esterni. Integrare usando gli istanti di misura effettivi. Se gli intervalli variano, calcolare la media ponderata sul tempo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Campionare ripetutamente la stessa fase della forma d’onda può introdurre uno scostamento sistematico o un’oscillazione lenta apparente. Usare finestre che comprendano più periodi completi e verificare le misure anti-aliasing. Il doppio della frequenza più alta di interesse è un minimo teorico. Per rilevare con accuratezza picchi stretti servono verifiche ulteriori. Il riassunto dell’articolo citato supporta il miglioramento del calcolo della media per ridurre l’errore di campionamento. Per saturazione e non linearità del sensore occorrono interventi distinti."
+        }
+      ]
+    },
+    {
+      "title": "Scegliere filtraggio, smorzamento o un altro misuratore in base ai risultati",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se i totali coincidono con il riferimento di massa e oscilla solo il valore visualizzato, regolare la media del display preservando la risposta di rilevamento dei guasti. Se anche i totali differiscono, intervenire prima su campo di misura, bolle, installazione o elaborazione. Un filtraggio più forte non può recuperare informazioni già perse."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dopo avere aggiunto uno smorzatore, ripetere la pesata con la stessa finestra e lo stesso compito. Includere la portata media e il liquido erogato dopo l’arresto. Se la traccia diventa più uniforme ma l’errore di totalizzazione resta invariato, proseguire le verifiche. Le impostazioni per le pulsazioni riportate nel manuale KROHNE citato si riferiscono allo strumento descritto."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Osservazione",
+            "Prima verifica",
+            "Intervento successivo"
+          ],
+          "rows": [
+            [
+              "Il valore visualizzato oscilla, i totali concordano",
+              "Finestra temporale e incertezza",
+              "Impostare una media adatta all’applicazione"
+            ],
+            [
+              "Differenze più marcate con finestre brevi",
+              "Accumulo, sincronizzazione ed erogazione dopo l’arresto",
+              "Ripetere il ciclo completo di avvio e arresto"
+            ],
+            [
+              "Totale costantemente troppo alto",
+              "Segno del flusso inverso, picchi e densità",
+              "Correggere le impostazioni e ripetere la verifica"
+            ],
+            [
+              "Errori in presenza di bolle",
+              "Tubo pieno e origine del gas",
+              "Risolvere il problema del gas prima di valutare il misuratore"
+            ],
+            [
+              "Lo smorzamento stabilizza il valore visualizzato",
+              "Portata media e variazione del punto di lavoro",
+              "Confrontare nuovamente lo scostamento rispetto al riferimento gravimetrico"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Conservare una registrazione di misura riproducibile",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Conservare modello completo della pompa e versione del controllo, temperatura e densità del fluido, livello del serbatoio, dimensioni dei tubi, contropressione, modello, campo di misura e filtraggio del misuratore, istanti di misura, dati grezzi e pesate. Riportare per ogni finestra lo scostamento del volume e l’incertezza, distinguendo il funzionamento a regime dalle prove di avvio e arresto."
+        },
+        {
+          "type": "paragraph",
+          "text": "I 300 mL/min di DPL30 e i 600 mL/min di DPL60 sono portate senza carico. Per la taratura della portata nella configurazione installata serve un riferimento indipendente. Valutare il carico effettivo con il liquido raccolto. Variare la velocità solo sulle versioni con controllo esplicitamente supportato. Verificare tale supporto anche sui modelli brushless."
+        },
+        {
+          "type": "subheading",
+          "title": "Approfondimenti e schede tecniche"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-pulsation-damper-validation/",
+              "label": "Verifica A/B dello smorzatore di pulsazioni"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+              "label": "Guida generale alla misura delle pulsazioni di portata"
+            },
+            {
+              "href": "/resources/technical-articles/tube-inner-diameter-affects-diaphragm-pump-flow/",
+              "label": "Diametro dei tubi e punto di lavoro"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/",
+              "label": "Categoria delle pompe a membrana miniaturizzate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Riferimenti tecnici",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "https://doi.org/10.1016/j.flowmeasinst.2004.05.001",
+              "label": "Berrebi et al., 2004: errore di campionamento nella portata pulsante, riassunto verificato"
+            },
+            {
+              "href": "https://cdn.krohne.com/archive/MA_IFC090_e_72.pdf",
+              "label": "Manuale KROHNE IFC090: indicazioni specifiche per lo strumento"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+              "label": "Scheda tecnica ufficiale Foreach in cinese — DPL30 A04"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+              "label": "Scheda tecnica ufficiale Foreach in cinese — DPL60 A02"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Un valore visualizzato che oscilla indica un misuratore guasto?",
+      "answer": "Non necessariamente. Può riflettere pulsazioni effettive o il comportamento del campionamento e del display. Confrontare i totali con una raccolta gravimetrica indipendente nella stessa finestra temporale."
+    },
+    {
+      "question": "La media di dieci letture rappresenta la portata media effettiva?",
+      "answer": "Non necessariamente. Verificare gli aggiornamenti effettivi, le fasi coperte, gli intervalli reali e la dinamica del sensore. Più letture della stessa uscita corrispondono a un solo campione."
+    },
+    {
+      "question": "Un valore visualizzato stabile dopo lo smorzamento dimostra una maggiore accuratezza?",
+      "answer": "No. Confrontare nuovamente totale, massa, punto di lavoro e variazione del volume accumulato, utilizzando la stessa finestra temporale."
+    },
+    {
+      "question": "Perché lo scostamento è maggiore durante l’avvio?",
+      "answer": "Il liquido può inizialmente riempire i tubi o lo smorzatore. Il volume che attraversa il misuratore e quello raccolto differiscono quindi temporaneamente. Verificare anche sincronizzazione, diramazioni, erogazione residua dopo l’arresto e densità."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi esaminare il circuito fluidico effettivo?",
+    "description": "Indica a Foreach il fluido, il volume di lavoro o la portata, le pressioni, la geometria e la sequenza di controllo per valutare configurazione e condizioni di verifica.",
+    "contactLabel": "Parliamo della tua applicazione",
+    "productsLabel": "Scopri le pompe",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
+  }
+}

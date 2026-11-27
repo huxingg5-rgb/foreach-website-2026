@@ -1,0 +1,622 @@
+{
+  "kind": "selection",
+  "family": "tubing",
+  "footerProducts": [
+    {
+      "id": "ptfe-tubing",
+      "title": "Tubi in politetrafluoroetilene (PTFE)",
+      "href": "/en/products/tubing/ptfe-tubing/details/",
+      "imageSrc": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-natural-coil.webp",
+      "imageAlt": "Rotolo di tubo FOREACH in PTFE naturale con estremità tagliata",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tubing-assembly-ptfe-flanged",
+      "title": "Assemblaggio di tubo flangiato in PTFE",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/ptfe/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-ptfe-flanged-square.webp",
+      "imageAlt": "Riferimento per il collegamento mediante tubo flangiato. Tubo e accessori dipendono dalla configurazione",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "fep-tubing",
+      "title": "Tubi in etilene propilene fluorurato (FEP)",
+      "href": "/en/products/tubing/fep-tubing/details/",
+      "imageSrc": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+      "imageAlt": "Tubi FOREACH in FEP nelle versioni trasparente e nera",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "pfa-tubing",
+      "title": "Tubi in polimero perfluoroalcossilico (PFA)",
+      "href": "/en/products/tubing/pfa-tubing/details/",
+      "imageSrc": "/images/products/tubing/pfa-tubing/pfa-tubing-main.webp",
+      "imageAlt": "Rotolo di tubo traslucido FOREACH in PFA con estremità visibile",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "peek-tubing",
+      "title": "Tubi in polietereterchetone (PEEK)",
+      "href": "/en/products/tubing/peek-tubing/details/",
+      "imageSrc": "/images/products/tubing/peek-tubing/foreach-chemical-resistant-peek-tubing-color-options.webp",
+      "imageAlt": "Tubi FOREACH in PEEK resistenti agli agenti chimici, in giallo, arancione e verde",
+      "imageAspectRatio": 1
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Che cos'è un tubo in PTFE? Proprietà, limiti e scelta per i circuiti degli strumenti",
+      "seoTitle": "Che cos'è un tubo in PTFE? Proprietà, temperatura, pressione e scelta | FOREACH",
+      "seoDescription": "Esamina il tubo in PTFE per linee di reagenti, lavaggio e solventi. Distingui i limiti di temperatura del materiale dalla pressione nominale dell'assieme, confronta il PTFE con il PEEK e scegli dimensioni, raccordi e condizioni di esercizio.",
+      "coverImage": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-natural-coil.webp",
+      "coverAlt": "Rotolo di tubo FOREACH in PTFE naturale con estremità tagliata"
+    },
+    "deck": "Il tubo in PTFE è un tubo in fluoropolimero a base di politetrafluoroetilene, utilizzabile come candidato per linee di reagenti, liquidi di lavaggio e solventi negli strumenti. Valuta insieme compatibilità con i fluidi, diametri interno ed esterno, temperatura, pressione e raccordi per soddisfare i requisiti di trasferimento, tenuta e volume interno.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Il tubo in PTFE è in politetrafluoroetilene, un fluoropolimero con ampia resistenza chimica e bassa energia superficiale. Negli strumenti analitici e nelle apparecchiature di laboratorio, i tubi in PTFE a piccolo diametro trasferiscono reagenti, liquidi di lavaggio e solventi tra flaconi, pompe, valvole, sonde di campionamento e altri componenti fluidici."
+      },
+      {
+        "type": "paragraph",
+        "text": "Per l'integrazione negli strumenti, il tubo in PTFE può essere tagliato a misura e dotato di terminali flangiati, con anello di ritegno o con ogiva per formare assemblaggi di tubi. Diametro e lunghezza influiscono sulla resistenza idraulica e sul volume interno. I terminali devono essere compatibili con le porte dello strumento. Scegliere quindi materiale, dimensioni e metodo di collegamento insieme."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Di che cosa è fatto un tubo in PTFE e come si produce?",
+        "tocLabel": "Materiale e lavorazione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "PTFE significa politetrafluoroetilene. La struttura molecolare gli conferisce ampia resistenza chimica e bassa energia superficiale. Per i tubi da strumento, indicare materiale PTFE, modello esatto, diametri interno ed esterno e condizioni di esercizio, così da identificare il tubo finito richiesto."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il PTFE mantiene una viscosità del fuso molto alta anche sopra il punto di fusione. I tubi a piccolo diametro sono in genere estrusi in pasta: la polvere fine viene miscelata con un coadiuvante di processo e preformata, estrusa a forma di tubo, quindi trattata per rimuovere il coadiuvante e sinterizzata. La sinterizzazione lega le particelle nel prodotto finito. I vuoti nella polvere iniziale non rendono il normale tubo finito equivalente a una membrana filtrante porosa o al PTFE espanso."
+          },
+          {
+            "type": "paragraph",
+            "text": "Grado della resina, estrusione e sinterizzazione influiscono su dimensioni, aspetto e permeazione. Tubi dello stesso polimero possono differire per tolleranze, trasparenza, comportamento alla flessione e prestazioni dei raccordi. Incollaggio o formatura delle estremità richiedono un trattamento superficiale qualificato, un collegamento meccanico o una lavorazione dedicata. I metodi ordinari di unione mediante fusione dei termoplastici non si trasferiscono direttamente al PTFE."
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-natural-coil.webp",
+            "alt": "Rotolo di tubo FOREACH in PTFE naturale con estremità tagliata",
+            "width": 1500,
+            "height": 1500,
+            "caption": "Foto di un tubo FOREACH in PTFE. La foto ne mostra l'aspetto. Dimensioni, colore e confezione si scelgono per modello.",
+            "captionHref": "/en/products/tubing/ptfe-tubing/details/"
+          }
+        ]
+      },
+      {
+        "title": "Quali vantaggi e limiti ha un tubo in PTFE in un circuito fluidico?",
+        "tocLabel": "Proprietà e limiti",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Caratteristica del materiale o del tubo finito",
+              "Vantaggio per il circuito dello strumento",
+              "Limiti di selezione"
+            ],
+            "rows": [
+              [
+                "Ampia resistenza chimica",
+                "Materiale candidato per molti reagenti, liquidi di lavaggio e solventi",
+                "Controllare composizione, concentrazione, temperatura e tempo di contatto del fluido, anche per raccordi e tenute"
+              ],
+              [
+                "Bassa energia superficiale e basso attrito a contatto con solidi",
+                "Può aiutare a ridurre alcuni problemi di adesione",
+                "Non garantisce adsorbimento nullo per ogni campione né minore perdita di carico del liquido"
+              ],
+              [
+                "Ampio intervallo di temperatura del materiale",
+                "Possibile candidato quando serve resistenza termica",
+                "Il limite termico della resina non è un valore nominale comune al tubo finito e ai suoi raccordi"
+              ],
+              [
+                "Scorrimento viscoso sotto carico prolungato",
+                "Utilizzabile con sistemi di presa e terminali idonei",
+                "La sollecitazione di tenuta può cambiare sotto compressione prolungata. Verificare ritegno e tenuta"
+              ],
+              [
+                "Permeazione dei gas",
+                "Valutare il trasferimento ordinario rispetto alla quantità di gas ammissibile",
+                "Per liquidi degassati e rilevamenti sensibili all'ossigeno, considerare lunghezza, spessore della parete, temperatura e tempo di permanenza"
+              ],
+              [
+                "Il tubo naturale è in genere bianco latte, da traslucido a opaco",
+                "Scegliere il colore naturale o altri colori secondo l'applicazione",
+                "Verificare visibilità delle bolle e protezione dalla luce su campioni effettivi"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il basso coefficiente di attrito del PTFE riguarda in genere il contatto tra solidi. Non entra nel calcolo della resistenza al flusso del liquido. In regime laminare pienamente sviluppato in un tubo circolare, la perdita di carico dipende soprattutto da viscosità, portata, lunghezza e diametro interno. I residui di campione dipendono anche da adsorbimento all'interfaccia, volume morto dei raccordi, pulizia e tempo di permanenza. La sola antiaderenza non garantisce residui ridotti."
+          }
+        ]
+      },
+      {
+        "title": "Quali temperatura e pressione sopporta il tubo in PTFE? Limiti del materiale e valori nominali dell'assieme",
+        "tocLabel": "Temperatura e pressione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Determinare la temperatura di esercizio insieme a pressione, fluido e durata. Il limite termico della resina non equivale alla temperatura nominale dell'assieme. Il comportamento della parete sotto carico prolungato e i limiti di raccordi, ogive e tenute determinano insieme il campo di esercizio. Verificare le condizioni ammissibili del modello alla temperatura effettiva."
+          },
+          {
+            "type": "paragraph",
+            "text": "Non esiste una pressione nominale unica per tutte le misure di tubo in PTFE. Con diametro esterno fisso, un diametro interno maggiore riduce lo spessore della parete e generalmente riduce la pressione sopportabile a parità di materiale, temperatura e produzione. La pressione di scoppio è il punto di cedimento nelle condizioni di prova definite. Non è una pressione di esercizio continuo. Rinforzi e costruzioni speciali modificano le prestazioni, quindi i dati di pressione devono identificare modello di tubo e terminali."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Verifica",
+              "Condizioni o dati necessari",
+              "Criterio di progettazione"
+            ],
+            "rows": [
+              [
+                "Pressione continua e di picco",
+                "Trasferimento normale, commutazione delle valvole e uscita ostruita",
+                "Tutti gli stati di esercizio rientrano nel campo ammissibile dell'assieme"
+              ],
+              [
+                "Temperatura e durata",
+                "Temperatura del fluido, riscaldamento interno dell'apparecchio, pulizia e tempo di permanenza",
+                "Usare le condizioni ammissibili alla temperatura pertinente. Non combinare due massimi indipendenti"
+              ],
+              [
+                "Aspirazione in depressione",
+                "Depressione effettiva, spessore della parete, raggio di curvatura e sostegno",
+                "Verificare collasso, strozzature e ingresso d'aria dai raccordi. Una prova in pressione positiva da sola è insufficiente"
+              ],
+              [
+                "Collegamenti e montaggio ripetuto",
+                "Diametro esterno del tubo, tolleranza, geometria della porta, metodo di montaggio e cicli di rimontaggio",
+                "Confermare tenuta, ritegno e durata per la combinazione di tubo e terminale"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per i circuiti ad alta pressione, come l'HPLC, scegliere tubi e raccordi con dati di pressione di esercizio pertinenti. PEEK e acciaio inossidabile sono materiali candidati. Il passaggio al PEEK da solo non convalida la pressione. Diametri interno ed esterno, temperatura, fluido e raccordi devono comunque essere compatibili."
+          }
+        ]
+      },
+      {
+        "title": "Dove si usano i tubi in PTFE negli strumenti? Linee di reagenti, lavaggio e scarico",
+        "tocLabel": "Applicazioni negli strumenti",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Tratto di tubo o funzione",
+              "Perché considerare il PTFE",
+              "Controlli prioritari"
+            ],
+            "rows": [
+              [
+                "Linea di alimentazione dal flacone di reagente a pompe e valvole",
+                "Valutare la compatibilità con il fluido dei tubi resistenti agli agenti chimici",
+                "Resistenza in aspirazione, tenuta in depressione, livello del liquido e tempo di permanenza"
+              ],
+              [
+                "Collegamenti per liquidi di lavaggio e disinfettanti",
+                "Considerare fluidi di processo e liquidi di lavaggio",
+                "Concentrazione massima, temperatura di lavaggio e stato dell'estremità del tubo dopo esposizione prolungata"
+              ],
+              [
+                "Linee di solventi a bassa pressione per cromatografia o preparazione dei campioni",
+                "Tenere conto dell'esposizione ai solventi e della posa con diametro ridotto",
+                "Posizione del degasaggio, reingresso dei gas e prestazioni di aspirazione della pompa"
+              ],
+              [
+                "Linea di scarico di rifiuti misti",
+                "Valutare gli effetti di tutti i fluidi di scarto",
+                "Compatibilità delle miscele, depositi, quota dello scarico e pressione in caso di ostruzione"
+              ],
+              [
+                "Collegamenti tra pompe, valvole, sonde di campionamento o chip",
+                "Dimensionare in base a requisiti di portata e volume interno",
+                "Diametro interno, lunghezza, volume morto della porta, geometria del raccordo e lavorazione delle estremità del tubo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Queste posizioni sono possibili impieghi nel progetto fluidico. L'idoneità di una configurazione in PTFE va verificata per ogni strumento. I raccordi microfluidici si selezionano spesso in base al diametro esterno, ma un tubo che entra nella porta può non fare tenuta. Se un chip accetta soltanto tubi elastomerici, usare una transizione adatta alla porta."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un normale tubo di collegamento in PTFE per strumenti non va inserito direttamente nella sezione compressa dai rulli di una pompa peristaltica. Qui serve un recupero affidabile dopo compressioni ripetute. Usare tubi elastomerici o compositi per pompe, qualificati dal produttore della pompa. Anche PVC e silicone richiedono un grado adatto alla pompa e condizioni d'esercizio definite."
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere tra tubi in PTFE, PEEK, FEP e PFA? Requisiti di pressione e visibilità",
+        "tocLabel": "Confronto dei materiali",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La scelta tra PTFE e PEEK va oltre la distinzione tra tubi flessibili e rigidi. Il PTFE viene spesso considerato per il trasferimento a bassa pressione resistente agli agenti chimici. Il PEEK per collegamenti a piccolo diametro che richiedono più rigidità e pressioni nominali documentate. Verificare la compatibilità con i fluidi di entrambi prima di controllare il collegamento completo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Fattore di selezione",
+              "Tubo in PTFE",
+              "Tubo in PEEK"
+            ],
+            "rows": [
+              [
+                "Pressione e dimensioni",
+                "Verificare per lo spessore, la temperatura e i terminali specificati",
+                "Usare configurazioni con valori espliciti per l'alta pressione. Questi valori non valgono per tutti i modelli"
+              ],
+              [
+                "Fluido",
+                "Ampia resistenza chimica, con limiti per fluidi e condizioni specifici",
+                "Escludere o valutare in modo specifico acidi solforico e nitrico concentrati. THF, DMSO e diclorometano possono provocare rigonfiamento del tubo"
+              ],
+              [
+                "Collegamento meccanico",
+                "Considerare scorrimento viscoso e ritegno sotto compressione prolungata",
+                "Considerare rigidità, raggio di curvatura e interazione tra estremità del tubo ed elementi di tenuta"
+              ],
+              [
+                "Temperatura",
+                "La resistenza termica del materiale non sostituisce i valori nominali dell'assieme",
+                "Verificare anche la combinazione di temperatura e pressione per tubo finito e raccordi"
+              ],
+              [
+                "Funzioni fluidiche tipiche",
+                "Linee qualificate per trasferire reagenti, liquidi di lavaggio, solventi e scarti",
+                "Collegamenti a piccolo diametro per strumenti analitici, qualificati per le condizioni nominali"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per osservare livello del liquido o bolle, valutare tubi che consentano una migliore visibilità, come FEP o PFA. Verificare la visibilità con spessore della parete, colore e illuminazione scelti. Per applicazioni sensibili ai gas, confrontare i dati del gas interessato nelle stesse condizioni di geometria, temperatura e portata. FEP e PFA non sono sempre meno permeabili del PTFE. Cambiare materiale da solo non elimina l'ingresso d'aria dai raccordi né il rilascio di gas disciolto."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Caratteristiche e dimensioni dei tubi in PTFE",
+                "href": "/en/products/tubing/ptfe-tubing/details/"
+              },
+              {
+                "label": "Caratteristiche dei tubi in PEEK",
+                "href": "/en/products/tubing/peek-tubing/details/"
+              },
+              {
+                "label": "Caratteristiche dei tubi in FEP",
+                "href": "/en/products/tubing/fep-tubing/details/"
+              },
+              {
+                "label": "Caratteristiche dei tubi in PFA",
+                "href": "/en/products/tubing/pfa-tubing/details/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere diametro interno e lunghezza del tubo in PTFE? Calcolare insieme perdita di carico e volume interno",
+        "tocLabel": "Diametro interno e resistenza al flusso",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Partire da portata di progetto, viscosità, pressione disponibile e lunghezza del tubo, quindi scegliere il diametro interno. La relazione di Hagen–Poiseuille stima la perdita di carico distribuita per un fluido newtoniano incomprimibile, in moto laminare stazionario pienamente sviluppato in un tubo rigido circolare. Esclude perdite dei raccordi, effetti d'ingresso, pulsazioni della pompa e bolle. Non si applica direttamente a fluidi non newtoniani o a tubi sensibilmente deformati."
+          },
+          {
+            "type": "formula",
+            "expression": "ΔP = RQ = 128μLQ / (πd⁴)；V = πd²L / 4",
+            "note": "ΔP: perdita di carico (Pa); R: resistenza idraulica (Pa·s/m³); μ: viscosità dinamica (Pa·s); L: lunghezza del tubo (m); Q: portata volumetrica (m³/s); d: diametro interno (m); V: volume interno geometrico (m³)."
+          },
+          {
+            "type": "paragraph",
+            "text": "Esempio teorico: con viscosità di 1 mPa·s, lunghezza di 1 m e portata di 1 mL/min, un diametro interno di 0.5 mm dà circa 10.9 kPa di perdita di carico distribuita e 0.196 mL di volume interno. Con un diametro interno di 1.0 mm si ottengono circa 0.68 kPa e 0.785 mL. Un diametro più grande riduce quindi la perdita di carico ma aumenta il volume di liquido da sostituire. Sono calcoli per un tubo circolare ideale, distinti dalle misure sui prodotti FOREACH."
+          },
+          {
+            "type": "paragraph",
+            "text": "Con una tolleranza ipotetica di ±0.025 mm su un diametro interno di 0.5 mm, a viscosità e lunghezza invariate la resistenza idraulica varia di circa −18% a +23% rispetto al valore nominale. L'esempio mostra l'effetto della tolleranza e non costituisce una specifica FOREACH. Con azionamento a pressione costante cambia la portata. In un circuito con pompa dosatrice contano anche punto di lavoro, temporizzazione delle valvole, cedevolezza del tubo e bolle. Lo scostamento della resistenza non equivale direttamente a un errore di dosaggio."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Stima della perdita di carico del tubo con il calcolatore della resistenza al flusso",
+                "href": "/en/resources/calculators/fluid-resistance/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Come abbinare i raccordi ai tubi in PTFE? Scorrimento a freddo, tolleranza esterna e geometria delle estremità",
+        "tocLabel": "Raccordi e scorrimento a freddo",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I raccordi si abbinano in genere al diametro esterno del tubo e alla tolleranza ammessa. Il diametro interno influisce su resistenza e volume. Diametro esterno, spessore della parete e stato del materiale influiscono su tenuta e presa. Un diametro esterno di 1/16 di pollice è pari a 1.5875 mm, vicino a 1.6 mm ma distinto. Lo stesso collegamento è adatto solo se il suo intervallo dimensionale comprende il tubo effettivo. L'innesto del filetto da solo non garantisce la compatibilità con cono, fondo piano o sede di tenuta della porta."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sotto compressione prolungata il PTFE può subire scorrimento viscoso e modificare nel tempo la forma dell'estremità e la sollecitazione di tenuta. Un serraggio eccessivo può restringere il passaggio, danneggiare la parete o compromettere il ritegno. Seguire le istruzioni del raccordo per taglio, profondità di innesto, serraggio e sostegno, quindi verificare tenuta in pressione, tenuta in depressione e rimontaggio. Ogni nuovo serraggio deve rispettare i requisiti di montaggio. Il riserraggio periodico non è un metodo di manutenzione universale."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per gli assemblaggi a lunghezza fissa, riportare a disegno materiale, diametri interno ed esterno, lunghezza complessiva e riferimenti di misura, raccordi alle due estremità, filettature, lavorazione dei terminali e percorso. I terminali flangiati, con anello di ritegno o con ogiva fanno tenuta in modi diversi. La specifica del filetto da sola non definisce tutto il collegamento."
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/tubing-assemblies/flanged-tubing/ptfe/foreach-ptfe-flanged-tubing-assembly-angled.webp",
+            "alt": "Assemblaggio di tubo flangiato FOREACH in PTFE con tubo, raccordi filettati e rondelle frontali",
+            "width": 1500,
+            "height": 1500,
+            "caption": "Foto di un assemblaggio di tubo flangiato FOREACH in PTFE con tubo, raccordi filettati e rondelle frontali. Gli assemblaggi a lunghezza fissa si configurano secondo misura del tubo, lunghezza e porte di entrambi i lati.",
+            "captionHref": "/en/products/tubing-assemblies/flanged-tubing/details/ptfe/"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Guida alla scelta dei raccordi per tubi rigidi",
+                "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/"
+              },
+              {
+                "label": "Esplora i raccordi",
+                "href": "/en/products/fittings/"
+              },
+              {
+                "label": "Assemblaggi di tubi su misura",
+                "href": "/en/products/tubing-assemblies/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Il tubo in PTFE può contribuire alla formazione di bolle o residui? Permeazione, ingresso d'aria e rilascio di gas",
+        "tocLabel": "Bolle e pulizia",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I gas possono permeare attraverso le pareti dei tubi polimerici. La permeazione dipende dal gas, dalla differenza di pressione parziale, dalla temperatura, dallo spessore e dalla superficie esposta. Un liquido degassato che permane in un tubo lungo può riassorbire gas senza formare subito bolle visibili. La permeazione attraverso il normale PTFE finito si distingue dal flusso nei pori comunicanti di una membrana porosa. Le sole bolle non dimostrano la presenza di fori o perdite di liquido dalla parete."
+          },
+          {
+            "type": "paragraph",
+            "text": "Restando nelle condizioni ammesse, iniziare accorciando la linea di aspirazione e confrontando tratti di controllo con pari diametro interno e lunghezza. Verificare a parte la tenuta in depressione dei raccordi, il livello del liquido e le variazioni di temperatura. Se il rimontaggio di un raccordo cambia molto le bolle, verificare prima l'ingresso d'aria in quel punto. Se riscaldamento o maggiore depressione generano bolle, considerare anche il rilascio di gas disciolto. Quando è rilevante, misurare direttamente l'ossigeno disciolto oltre a osservare le bolle."
+          },
+          {
+            "type": "paragraph",
+            "text": "Basso assorbimento d'acqua e resistenza chimica non garantiscono assenza di estraibili o adsorbimento nullo. Per analisi in tracce o campioni sensibili all'adsorbimento, scegliere resina, colore e condizioni di pulizia, quindi confrontare liquido bianco, liquido esposto e campioni dopo risciacquo. Dopo un cambio di colore o lotto, ricontrollare fondo e residui pertinenti per il metodo. Anche la protezione dalla luce dei tubi neri va valutata per le lunghezze d'onda d'interesse e le caratteristiche della parete."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Valutazione preliminare della compatibilità dei materiali",
+                "href": "/en/resources/material-compatibility/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Quali specifiche dei tubi in PTFE FOREACH sono disponibili? Modelli, colori e confezioni",
+        "tocLabel": "Specifiche FOREACH",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Sono disponibili configurazioni naturali, nere e di altri colori, con diametri interni da 0.5–4.0 mm ed esterni da 1.6–6.0 mm nelle serie TH1 e TH2. Le combinazioni di diametri e colori dipendono dal modello. I tubi neri in PTFE sono candidati per linee di reagenti fotosensibili. La protezione va valutata alle lunghezze d'onda rilevanti per il reagente. I tubi sono disponibili in rotoli e le misure compatibili possono essere realizzate come assemblaggi flangiati, con anello di ritegno o con ogiva. Lunghezza, terminali su uno o due lati e raccordi A/B si possono definire a disegno per ridurre il lavoro in sede."
+          },
+          {
+            "type": "paragraph",
+            "text": "La tabella riporta alcune configurazioni in ordine diametro interno × diametro esterno, in mm. Verificare dimensioni, colore e confezione sul codice completo. TH1 e TH2 identificano le rispettive configurazioni."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Modello",
+              "Diametro interno × diametro esterno (mm)",
+              "Colore",
+              "Confezione"
+            ],
+            "rows": [
+              [
+                "TH1-PTFE-N-08-16-100FT",
+                "0.8 × 1.6",
+                "Naturale",
+                "100 ft/rotolo"
+              ],
+              [
+                "TH1-PTFE-B-08-16-100M",
+                "0.8 × 1.6",
+                "Nero",
+                "100 m/rotolo"
+              ],
+              [
+                "TH2-PTFE-N-05-16-100M",
+                "0.5 × 1.6",
+                "Naturale",
+                "100 m/rotolo"
+              ],
+              [
+                "TH2-PTFE-N-40-60-100M",
+                "4 × 6",
+                "Naturale",
+                "100 m/rotolo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Gli stessi diametri interno ed esterno possono essere disponibili in serie, colori o confezioni diverse. Indicare codice modello completo, codice articolo e unità di confezione negli ordini e nelle distinte base. Un rotolo da 100 ft corrisponde a 30.48 m e non a 100 m. La dicitura trasparente riguarda quel modello e non descrive l'aspetto o la visibilità delle bolle per tutti i tubi in PTFE."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Visualizza tutte le specifiche dei tubi in PTFE e scegli un modello",
+                "href": "/en/products/tubing/ptfe-tubing/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Come convalidare i campioni di tubo in PTFE? Dalle dimensioni all'esercizio prolungato",
+        "tocLabel": "Convalida del prototipo",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Controllare modello, colore, lotto e confezione. Misurare diametri interno ed esterno e lunghezza. Ispezionare tagli, curve e danni superficiali. Applicare le tolleranze confermate per quella configurazione.",
+              "Esporre i campioni al reagente e al liquido di lavaggio effettivi, registrando concentrazione, temperatura e tempo. Monitorare aspetto, dimensioni, massa e segnale di fondo.",
+              "Montare i raccordi effettivi e valutare tenuta statica, variazioni dinamiche di pressione e depressione in aspirazione entro i limiti confermati dell'assieme.",
+              "Alla portata di progetto e con il percorso effettivo, misurare perdita di carico, volume erogato, tempo di ricambio e bolle. Confrontare con calcoli e tubi di controllo se necessario.",
+              "Dopo l'esercizio continuo, i cicli termici e il rimontaggio di manutenzione previsti, ricontrollare tenuta, deformazione delle estremità, ritegno e risultati analitici. Conservare registri di accettazione tracciabili."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Materiale, dimensioni e collegamenti devono soddisfare insieme la funzione dello strumento. Indicare a FOREACH fluido e concentrazione, diametri interno ed esterno, lunghezza, portata, temperatura, pressione di esercizio e di picco o depressione, raccordi e disegni del percorso. Si possono così esaminare modelli e configurazioni di assemblaggio. Confermare l'idoneità con la convalida di un prototipo nelle condizioni concordate."
+          }
+        ]
+      },
+      {
+        "title": "Altri materiali per tubi da strumento",
+        "tocLabel": "Materiali correlati per tubi",
+        "blocks": [
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "label": "Tubi in FEP: piccolo diametro, trasparenza e raccordi flangiati",
+                "href": "/en/resources/technical-articles/what-is-fep-tubing/"
+              },
+              {
+                "label": "Tubi in PFA: trasferimento di reagenti e controllo della pulizia",
+                "href": "/en/resources/technical-articles/what-is-pfa-tubing/"
+              },
+              {
+                "label": "Tubi in PVC: durezza, posa e raccordi per tubi flessibili",
+                "href": "/en/resources/technical-articles/what-is-pvc-tubing/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulla scelta dei tubi in PTFE",
+    "faqItems": [
+      {
+        "question": "1. Quali condizioni specificare quando si scelgono tubi neri in PTFE per reagenti fotosensibili?",
+        "answer": "Specificare i requisiti di protezione del reagente dalla luce, la sorgente e la durata di esposizione, il tempo di permanenza nel tubo, le dimensioni e lo spessore della parete. Controllare la protezione anche ai raccordi e nelle transizioni. Il solo colore nero non dimostra l'efficacia della schermatura. Usare i dati di trasmittanza del tubo scelto o valutare la stabilità del reagente nelle condizioni effettive."
+      },
+      {
+        "question": "2. Quali dati servono oltre ai diametri interno ed esterno per definire un assemblaggio in PTFE su misura?",
+        "answer": "Indicare lunghezza del tubo, riferimenti di misura e tolleranze. Per le estremità A e B indicare modelli dei raccordi, filettature, geometria di tenuta e lavorazione richiesta. Aggiungere fluido di processo, liquido di lavaggio, temperatura, portata, pressione di esercizio e depressione in aspirazione. In spazi ristretti o con percorsi curvi, includere un disegno della posa e i punti di fissaggio. Per definire il collegamento servono anche le porte corrispondenti e le superfici di tenuta."
+      }
+    ],
+    "cta": {
+      "title": "Stai scegliendo tubi e raccordi in PTFE per il circuito di uno strumento?",
+      "description": "Indica fluido e concentrazione, diametri interno ed esterno, lunghezza, portata, temperatura, pressione o depressione e requisiti dei terminali. FOREACH può aiutarti a trovare modelli di tubo e configurazioni compatibili.",
+      "contactLabel": "Contatta un tecnico",
+      "productsLabel": "Visualizza le specifiche dei tubi in PTFE",
+      "productsHref": "/en/products/tubing/ptfe-tubing/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "material-processing",
+      "label": "Materiale e lavorazione"
+    },
+    {
+      "id": "properties-limits",
+      "label": "Proprietà e limiti"
+    },
+    {
+      "id": "temperature-pressure",
+      "label": "Temperatura e pressione"
+    },
+    {
+      "id": "instrument-applications",
+      "label": "Applicazioni negli strumenti"
+    },
+    {
+      "id": "ptfe-vs-peek",
+      "label": "Confronto dei materiali"
+    },
+    {
+      "id": "diameter-pressure-drop",
+      "label": "Diametro interno e resistenza al flusso"
+    },
+    {
+      "id": "fittings-creep",
+      "label": "Raccordi e scorrimento a freddo"
+    },
+    {
+      "id": "gas-cleanliness",
+      "label": "Bolle e pulizia"
+    },
+    {
+      "id": "foreach-sizes",
+      "label": "Specifiche FOREACH"
+    },
+    {
+      "id": "sample-validation",
+      "label": "Convalida del prototipo"
+    },
+    {
+      "id": "material-sources",
+      "label": "Materiali correlati per tubi"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Tubo in PTFE",
+      "Scelta del circuito fluidico dello strumento"
+    ],
+    "mentions": [
+      "Tubo in PTFE",
+      "Tubi in FEP",
+      "Tubi in PFA",
+      "Resistenza idraulica dei tubi",
+      "Assemblaggi di tubi tagliati a misura"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "ptfe-tubing",
+      "title": "Tubi in politetrafluoroetilene (PTFE)",
+      "href": "/en/products/tubing/ptfe-tubing/details/",
+      "imageSrc": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-natural-coil.webp",
+      "imageAlt": "Rotolo di tubo FOREACH in PTFE naturale con estremità tagliata",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tubing-assembly-ptfe-flanged",
+      "title": "Assemblaggio di tubo flangiato in PTFE",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/ptfe/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-ptfe-flanged-square.webp",
+      "imageAlt": "Riferimento per il collegamento mediante tubo flangiato. Tubo e accessori dipendono dalla configurazione",
+      "imageAspectRatio": 1
+    }
+  ]
+}

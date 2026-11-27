@@ -1,6 +1,9 @@
 import type { VideoGuideDetail } from "./video-guide-detail.types";
 import { sv10EnglishGuide, sv10Video } from "./installation-guide.sv10.en";
 import { additionalEnglishVideoGuideDetails } from "./video-guide-library.en";
+import { getGermanVideoGuideDetail } from "./installation-guide.de";
+import { getHindiVideoGuideDetail } from "./installation-guide.hi";
+import { getItalianVideoGuideDetail } from "./installation-guide.it";
 import { getProductVideoCopy, videoGuideUi } from "./product-video-copy";
 import { getLanguageHref } from "@/lib/i18n/language-switch";
 
@@ -144,9 +147,12 @@ export function getVideoGuideDetail(locale: string, id: string): VideoGuideDetai
   if (locale === "zh-CN") return undefined;
   const base = englishVideoGuideDetails.find(video => video.id === id);
   if (!base) return undefined;
+  if (locale === "de") return getGermanVideoGuideDetail(getVideoGuideDetail("en", id));
+  if (locale === "hi") return getHindiVideoGuideDetail(getVideoGuideDetail("en", id));
+  if (locale === "it") return getItalianVideoGuideDetail(getVideoGuideDetail("en", id));
   const copy = getProductVideoCopy(locale, id);
   if (!copy) return locale === "en" ? base : undefined;
-  const language = locale as VideoGuideDetail["locale"];
+  const language = locale as Exclude<VideoGuideDetail["locale"], "de" | "it" | "hi">;
   const { sections, productLinkTitle, ...fields } = copy;
   const localLink = (link: { title: string; href: string }, title?: string) => {
     // Preserve existing English references. The older size guide has a full

@@ -2,7 +2,7 @@ import { getVideoGuideDetail } from "@/data/resources/installation-guide/video-g
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import styles from "./FemaleThreadOverviewVideo.module.css";
 
-type VideoLocale = Exclude<TechnicalArticleLocale, "zh-CN">;
+type VideoLocale = Exclude<TechnicalArticleLocale, "zh-CN"> | "de" | "it" | "hi";
 
 const copy: Record<VideoLocale, { heading: string; caption: string; note: string; watch: string }> = {
   en: {
@@ -10,6 +10,24 @@ const copy: Record<VideoLocale, { heading: string; caption: string; note: string
     caption: "Female thread connector overview",
     note: "See the connector shapes and M6 / 1/4-28 UNF interface options before the connection and selection details below. For different-thread adapters, confirm the specific model and availability.",
     watch: "Watch on YouTube",
+  },
+  de: {
+    heading: "Videoübersicht: Fittings mit Innengewinde",
+    caption: "Fittings mit Innengewinde im Überblick",
+    note: "Das Video zeigt die Bauformen und Anschlussvarianten für M6 und 1/4-28 UNF. Prüfen Sie bei Übergängen zwischen verschiedenen Gewinden das konkrete Modell und dessen Verfügbarkeit.",
+    watch: "Auf YouTube ansehen",
+  },
+  it: {
+    heading: "Panoramica video dei raccordi con filettatura femmina",
+    caption: "Raccordi con filettatura femmina (video originale)",
+    note: "Il video mostra le forme dei raccordi e le opzioni di collegamento M6 e 1/4-28 UNF. Per passare da una filettatura a un'altra, verificare il modello specifico e la disponibilità.",
+    watch: "Guarda su YouTube",
+  },
+  hi: {
+    heading: "वीडियो: आंतरिक थ्रेड वाले कनेक्टर",
+    caption: "आंतरिक थ्रेड वाले कनेक्टर का परिचय (मूल वीडियो)",
+    note: "वीडियो में कनेक्टर की आकृतियाँ और M6 / 1/4-28 UNF पोर्ट के विकल्प देखें। अलग-अलग थ्रेड जोड़ने वाले एडैप्टर के लिए सटीक मॉडल और उसकी उपलब्धता की पुष्टि करें।",
+    watch: "YouTube पर देखें",
   },
   es: {
     heading: "Vídeo de presentación: racores de rosca hembra",

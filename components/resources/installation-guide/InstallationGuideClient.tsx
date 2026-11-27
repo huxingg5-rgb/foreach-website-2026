@@ -19,7 +19,8 @@ import {
   useMemo,
   useState,
 } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useContentPathname } from "@/lib/i18n/use-content-pathname";
 
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import pageShellStyles from "@/components/layout/SitePageShell.module.css";
@@ -70,7 +71,7 @@ export default function InstallationGuideClient({
   pageData,
   initialPage = 1,
 }: InstallationGuideClientProps) {
-  const pathname = usePathname();
+  const pathname = useContentPathname();
   const router = useRouter();
   const [keyword, setKeyword] = useState("");
   const [filteredPagination, setFilteredPagination] = useState({ key: "", page: 1 });

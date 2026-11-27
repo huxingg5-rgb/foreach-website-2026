@@ -2,11 +2,12 @@
 export type ApplicationLink = {
   label: string;
   href: string;
+  hrefLang?: "de" | "it" | "hi" | "en";
   description?: string;
   anchorId?: string;
   cardImage?: { src: string; alt: string };
 };
-export type ApplicationInlineLink = { text: string; href: string; title?: string };
+export type ApplicationInlineLink = { text: string; href: string; title?: string; hrefLang?: "de" | "it" | "hi" | "en" };
 export type ApplicationFlowPath = { nodes: readonly string[]; focusIndex?: number };
 export type ApplicationBlock = (
   | { type: "paragraph"; text: string }
@@ -35,7 +36,7 @@ export type ApplicationSection = {
   lang?: string;
   blocks: readonly ApplicationBlock[];
 };
-export type ApplicationReference = { id: string; title: string; href: string };
+export type ApplicationReference = { id: string; title: string; href: string; hrefLang?: "de" | "it" | "hi" | "en" };
 export type ApplicationDocumentBody = {
   intro: readonly ApplicationBlock[];
   sections: readonly ApplicationSection[];

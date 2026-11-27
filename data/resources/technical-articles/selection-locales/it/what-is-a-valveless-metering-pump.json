@@ -1,0 +1,311 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è una pompa dosatrice senza valvole? Funzionamento, applicazioni e scelta",
+      "seoTitle": "Pompa dosatrice senza valvole: come funziona | FOREACH",
+      "seoDescription": "Come una pompa dosatrice senza valvole usa la rotazione e il moto alternativo del pistone, come calcolare cilindrata e portata e come scegliere tra RPL e DRPL.",
+      "coverImage": "/images/products/pumps/product-types/valveless-pumps/foreach-valveless-pumps-product-type-intro.webp",
+      "coverAlt": "Pompe dosatrici senza valvole FOREACH RPL e DRPL con pistone in ceramica"
+    },
+    "deck": "Una pompa dosatrice senza valvole è una pompa volumetrica che combina rotazione e moto alternativo assiale del pistone per commutare il percorso, aspirare ed erogare liquido. Il meccanismo di pompaggio funziona senza le tradizionali valvole di non ritorno in ingresso e uscita. Può servire per dosaggio di reagenti, titolazione, riempimento ed erogazione proporzionale di due fluidi. Verifica comunque il dosaggio con fluido, pressione, tubazioni, azionamento e condizioni di pulizia effettivi.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Una pompa dosatrice senza valvole è una pompa volumetrica che combina rotazione e moto alternativo assiale del pistone per commutare il percorso, aspirare ed erogare liquido. Il meccanismo di pompaggio funziona senza le tradizionali valvole di non ritorno in ingresso e uscita. Può servire per dosaggio di reagenti, titolazione, riempimento ed erogazione proporzionale di due fluidi. Verifica comunque il dosaggio con fluido, pressione, tubazioni, azionamento e condizioni di pulizia effettivi."
+      },
+      {
+        "type": "notice",
+        "label": "Nota sul campo di applicazione:",
+        "text": "La definizione «senza valvole» riguarda il meccanismo di pompaggio. Secondo il progetto dello strumento, il circuito può richiedere valvole di commutazione, intercettazione o altri componenti di controllo dei fluidi."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come funziona una pompa dosatrice senza valvole?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il pistone in ceramica ruota e si muove contemporaneamente lungo il proprio asse. La rotazione allinea alternativamente la camera di dosaggio con ingresso e uscita; il moto assiale varia il volume della camera. Con i due movimenti nella relazione di fase prevista, la pompa ripete il ciclo di aspirazione ed erogazione."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-valveless-metering-pump/valveless-metering-pump-working-cycle-en.webp",
+            "alt": "Ciclo in quattro fasi di aspirazione ed erogazione di una pompa dosatrice senza valvole",
+            "width": 1390,
+            "height": 646,
+            "caption": "Ciclo di una pompa dosatrice senza valvole. La rotazione del pistone commuta ingresso e uscita, mentre il moto alternativo assiale aspira ed eroga il liquido."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Fase",
+              "Stato di pistone e porte",
+              "Azione sul fluido"
+            ],
+            "rows": [
+              [
+                "Preparazione all’aspirazione",
+                "La camera ruota verso l’ingresso e il pistone inizia ad arretrare",
+                "L’ingresso si collega alla camera"
+              ],
+              [
+                "Aspirazione",
+                "Il pistone continua ad arretrare e il volume della camera aumenta",
+                "Il liquido entra nella camera"
+              ],
+              [
+                "Commutazione del percorso",
+                "Il pistone ruota la camera dall’ingresso verso l’uscita",
+                "L’ingresso si chiude e l’uscita sta per aprirsi"
+              ],
+              [
+                "Erogazione",
+                "Il pistone avanza e il volume della camera diminuisce",
+                "Il liquido esce dalla porta di uscita"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Geometria delle porte, fase dei movimenti e regolazione della cilindrata dipendono dal progetto della testata. Il ciclo illustra il principio. Per la scelta, usa specifiche del modello e prove sul sistema."
+          }
+        ]
+      },
+      {
+        "title": "Cilindrata per giro, volume della dose e portata media",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Nelle pompe dosatrici senza valvole, la cilindrata si esprime comunemente in μL/rev, cioè il volume nominale erogato in un ciclo di rotazione completo all’impostazione corrente. Il volume della dose dipende anche dal numero di giri e la portata media anche dalla velocità di rotazione. Sono tre grandezze distinte."
+          },
+          {
+            "type": "formula",
+            "expression": "Volume della dose = cilindrata per giro × numero di giri",
+            "note": "Mantieni coerenti le unità di volume. È una stima nominale per cicli completi."
+          },
+          {
+            "type": "formula",
+            "expression": "Portata media = cilindrata per giro × velocità di rotazione",
+            "note": "Con μL/rev e giri/min si ottengono μL/min."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-valveless-metering-pump/rpl-manual-flow-adjustment.webp",
+            "alt": "Manopola di regolazione manuale della portata di una pompa dosatrice FOREACH RPL senza valvole",
+            "width": 1200,
+            "height": 1200,
+            "caption": "Regolazione manuale su una pompa dosatrice RPL senza valvole. Ruotare la manopola modifica l’impostazione meccanica della cilindrata."
+          },
+          {
+            "type": "notice",
+            "text": "Il limite inferiore di cilindrata e la dose minima affidabile sono dati distinti. Per piccoli volumi contano anche posizionamento dell’azionamento, gioco, fluido, bolle, cedevolezza dei tubi, liquido residuo sull’ago e metodo di misura. Valida accuratezza e ripetibilità nelle condizioni previste."
+          }
+        ]
+      },
+      {
+        "title": "Vantaggi e limiti del meccanismo senza valvole",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Aspetto tecnico",
+              "Vantaggio potenziale",
+              "Condizione da verificare"
+            ],
+            "rows": [
+              [
+                "Meccanismo di pompaggio privo delle tradizionali valvole di non ritorno",
+                "Riduce l’influenza della tenuta della sede e del moto dell’otturatore in ogni ciclo",
+                "Particelle, cristallizzazione e depositi possono comunque alterare gli accoppiamenti in ceramica e le porte"
+              ],
+              [
+                "Rotazione e moto alternativo accoppiati",
+                "Combina commutazione del percorso e spostamento volumetrico in una testata",
+                "Richiede posizionamento e fase corretti dell’azionamento e cicli di lavoro completi"
+              ],
+              [
+                "Gruppo pistone in ceramica",
+                "Favorisce un dosaggio ripetibile con materiali a contatto scelti per il fluido",
+                "La compatibilità dipende da concentrazione, temperatura, durata di esposizione e liquido di pulizia"
+              ],
+              [
+                "Regolazione meccanica di cilindrata e velocità",
+                "Adatta il volume di dose e i tempi di processo",
+                "Le impostazioni richiedono calibrazione gravimetrica o volumetrica nel circuito reale"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Verifica pulsazioni, possibilità di funzionamento a secco, rischio di ostruzione e limiti di viscosità e contropressione per la configurazione senza valvole scelta. Alimentazione insufficiente in ingresso, bolle, resistenza in uscita, depositi e pulizia inadeguata possono alterare stabilità dell’erogazione e durata."
+          }
+        ]
+      },
+      {
+        "title": "Dove si usano le pompe dosatrici senza valvole?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Tra i compiti comuni rientrano erogazione di reagenti, aggiunta di titolante, aggiunta di calibratori o tamponi, riempimento quantitativo ed erogazione proporzionale di due liquidi. La funzione nello strumento può essere svolta da meccanismi diversi. Scegli in base ai requisiti dell’applicazione."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Serie FOREACH",
+              "Configurazione mostrata",
+              "Compito tipico"
+            ],
+            "rows": [
+              [
+                "RPL-P4",
+                "12–80 μL/rev, testata singola",
+                "Aggiunta di piccoli volumi di reagente, titolazione ed erogazione ripetuta"
+              ],
+              [
+                "RPL-P6.35",
+                "50–300 μL/rev, testata singola",
+                "Erogazione di reagenti, titolazione e riempimento quantitativo"
+              ],
+              [
+                "RPL-P15",
+                "300–1200 μL/rev, testata singola",
+                "Aggiunta di volumi maggiori di liquido, aggiunta di tamponi e trasferimento dosato"
+              ],
+              [
+                "DRPL-0109",
+                "Doppia testata, 1:9, 100 μL + 900 μL",
+                "Erogazione proporzionale di concentrato e diluente"
+              ],
+              [
+                "DRPL-0119",
+                "Doppia testata, 1:19, 60 μL + 1140 μL",
+                "Erogazione di due liquidi con rapporto di diluizione più alto"
+              ]
+            ]
+          },
+          {
+            "type": "notice",
+            "text": "Una pompa DRPL dosa due flussi. L’uniformità finale della miscelazione dipende anche da punto di confluenza, miscelatore, volume a valle e tempi di controllo."
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere una pompa dosatrice senza valvole",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Definisci prima il compito: dosaggio discreto, titolazione, riempimento, alimentazione continua o erogazione proporzionale di due liquidi.",
+              "Stabilisci dose obiettivo, tempo concesso, numero di cicli giornalieri ed errore ammesso. Calcola cilindrata, giri e velocità necessari.",
+              "Registra tipo di fluido, concentrazione, viscosità, rischio di particelle o cristallizzazione, temperatura di lavoro, liquido di pulizia e tempo di inattività.",
+              "Registra livello del serbatoio, altezza di aspirazione, lunghezza e diametro interno dei tubi e restrizioni in uscita dovute a filtri, aghi, miscelatori e altri componenti.",
+              "Conferma materiali a contatto con il fluido, porte di lavoro e lavaggio, montaggio, motore e metodo di controllo. Distingui la configurazione mostrata dalle opzioni di progetto.",
+              "Prima di fissare i parametri di produzione, misura dose, ripetibilità e tempi e verifica bolle, perdite e ripristino dopo la pulizia nel circuito reale."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Controlli di installazione, messa in servizio e manutenzione",
+        "blocks": [
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-valveless-metering-pump/valveless-metering-pump-installation-orientation.png",
+            "alt": "Orientamenti di installazione ammessi e vietati per le pompe dosatrici senza valvole FOREACH",
+            "width": 2113,
+            "height": 1024,
+            "caption": "Orientamenti di montaggio per pompe dosatrici senza valvole. Usa quelli con spunta verde ed evita quello con X rossa. Segui le istruzioni del modello specifico."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Rimuovi l’aria dal tubo di ingresso e dalla camera prima di valutare l’accuratezza della dose, per distinguere l’effetto delle bolle dall’errore della pompa.",
+              "Mantieni stabile l’alimentazione in ingresso. Evita altezze di aspirazione eccessive, tubi lunghi e stretti o filtri ostruiti che causano una caduta di pressione in ingresso.",
+              "Verifica la contropressione continua ammessa separatamente dal valore di resistenza alla pressione. Usa la definizione della specifica e una prova del circuito effettivo.",
+              "Per fluidi che cristallizzano, lasciano depositi o cambiano spesso, definisci lavaggio all’arresto, compatibilità del liquido di pulizia e gestione degli scarti.",
+              "Documenta fluido, temperatura, impostazione della cilindrata, velocità, contropressione, cicli e metodo di misura affinché il risultato sia riproducibile."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Prodotti e altre guide alla selezione",
+        "blocks": [
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/products/pumps/valveless-metering-pump/",
+                "label": "Visualizza le pompe dosatrici senza valvole"
+              },
+              {
+                "href": "/en/resources/technical-articles/rpl-valveless-metering-pump-selection-guide/",
+                "label": "Leggi la guida alle pompe dosatrici senza valvole RPL a testata singola"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulle pompe dosatrici senza valvole",
+    "faqItems": [
+      {
+        "question": "In che cosa si distingue una pompa dosatrice senza valvole?",
+        "answer": "La differenza riguarda soprattutto il meccanismo di pompaggio e commutazione. Una pompa dosatrice senza valvole usa rotazione e moto alternativo del pistone per commutare ingresso e uscita e variare il volume della camera, senza valvole di non ritorno tradizionali. Altre pompe dosatrici possono usare valvole di non ritorno, membrane o altri meccanismi. La scelta dipende da dose, pressione, fluido e controllo."
+      },
+      {
+        "question": "Una cilindrata per giro minore implica sempre una dose minima più piccola?",
+        "answer": "La cilindrata per giro è l’erogazione nominale di un ciclo completo. La dose minima affidabile dipende anche da posizionamento motore, gioco, fluido, tubi, bolle, ago e metodo di misura. Confermala ripetendo il dosaggio nelle condizioni previste."
+      },
+      {
+        "question": "La definizione «senza valvole» vale per l’intero strumento?",
+        "answer": "«Senza valvole» descrive il meccanismo di pompaggio. Il circuito completo può comunque richiedere valvole di commutazione, intercettazione, antiriflusso o sicurezza in funzione di alimentazione, pulizia, ritorno e protezione."
+      },
+      {
+        "question": "Qual è la differenza tra RPL e DRPL?",
+        "answer": "RPL è una pompa dosatrice senza valvole a testata singola per un solo percorso dosato. DRPL ha due testate per erogare due liquidi secondo un rapporto volumetrico definito. Il dosaggio dei due flussi e la miscelazione a valle vanno validati separatamente."
+      }
+    ],
+    "cta": {
+      "title": "Vuoi valutare un’applicazione per una pompa dosatrice senza valvole?",
+      "description": "Indica a FOREACH dose o portata media obiettivo, tempo concesso, fluido, condizioni di ingresso e uscita, interfacce e comando per valutare una configurazione RPL o DRPL e le condizioni di validazione.",
+      "contactLabel": "Discuti l’applicazione",
+      "productsLabel": "Visualizza le pompe dosatrici senza valvole",
+      "productsHref": "/en/products/pumps/valveless-metering-pump/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "working-principle",
+      "label": "Funzionamento"
+    },
+    {
+      "id": "parameters",
+      "label": "Cilindrata, dose e portata"
+    },
+    {
+      "id": "benefits-limits",
+      "label": "Vantaggi e limiti"
+    },
+    {
+      "id": "applications",
+      "label": "Applicazioni e modelli"
+    },
+    {
+      "id": "selection",
+      "label": "Fasi della scelta"
+    },
+    {
+      "id": "installation",
+      "label": "Installazione e manutenzione"
+    },
+    {
+      "id": "resources",
+      "label": "Prodotti e guide"
+    }
+  ]
+}

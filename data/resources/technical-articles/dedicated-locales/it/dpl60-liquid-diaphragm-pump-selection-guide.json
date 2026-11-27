@@ -1,0 +1,547 @@
+{
+  "copy": {
+    "metadata": {
+      "title": "Come scegliere una pompa a membrana per liquidi da 600 mL/min: portata, pressione e modelli DPL60",
+      "seoTitle": "Scelta di una pompa a membrana per liquidi da 600 mL/min: punto di lavoro e modelli DPL60",
+      "seoDescription": "Scegli una pompa a membrana miniaturizzata FOREACH DPL60 per liquidi considerando portata a scarico libero, pressione nominale di 100 kPa, curva portata-pressione, motore, materiali bagnati, codice modello e criteri di configurazione e selezione."
+    },
+    "diagram": {
+      "ariaLabel": "Spiegazione del punto di lavoro della pompa a membrana DPL60 per liquidi",
+      "suctionTitle": "Condizione all’ingresso",
+      "dischargeTitle": "Condizione all’uscita",
+      "inletOpen": "Vuoto all’ingresso",
+      "outletClosed": "Resistenza del circuito",
+      "suctionDescription": "Le condizioni di aspirazione cambiano la portata erogata",
+      "inletClosed": "Contropressione all’uscita",
+      "outletOpen": "Portata erogata",
+      "dischargeDescription": "Le curve della pompa e del sistema definiscono il punto di lavoro",
+      "caption": "Spiegazione del punto di lavoro di DPL60"
+    },
+    "section1": {
+      "title": "1. Quale esigenza soddisfa DPL60 da 600 mL/min?",
+      "paragraphs": [
+        "DPL60 è la pompa a membrana miniaturizzata FOREACH per liquidi destinata ai circuiti strumentali a portata più elevata. È pensata per lavaggio, risciacquo, circolazione, trasferimento di volumi più grandi e rimozione dei liquidi di scarto quando il ricambio deve essere più rapido rispetto a un circuito della classe da 300 mL/min.",
+        "600 mL/min è la portata di riferimento a scarico libero. La pressione nominale è 100 kPa e l’altezza di autoadescamento 3 mH₂O. Le opzioni standard comprendono DC 12 V o 24 V, motori a spazzole o brushless e combinazioni di materiali bagnati EP/PS o FF/PS.",
+        "Come le altre pompe a membrana miniaturizzate per liquidi, usa il moto alternato della membrana e valvole di non ritorno. Per scegliere DPL60, il criterio determinante è il punto di lavoro una volta montata la pompa nel circuito fluidico effettivo.",
+        "Se l’applicazione richiede soprattutto una portata attorno a 300 mL/min, confronta DPL30. Se il limite è la contropressione, valuta una pompa per pressioni maggiori. La sola portata a scarico libero non basta per scegliere."
+      ]
+    },
+    "section2": {
+      "title": "2. Che cosa confermare prima di scegliere una pompa da 600 mL/min?",
+      "intro": "La classe di portata da sola non è una specifica di selezione. Definisci insieme punto di lavoro, fluido, condizioni di aspirazione, materiali bagnati, motore, ciclo di lavoro e resistenza totale del circuito.",
+      "headers": [
+        "Criterio di selezione",
+        "Che cosa confermare",
+        "Errore comune"
+      ],
+      "rows": [
+        [
+          "Portata obiettivo",
+          "Portata a scarico libero o portata richiesta a una pressione specificata",
+          "Trattare 600 mL/min come una portata fissa a montaggio avvenuto"
+        ],
+        [
+          "Pressione del sistema",
+          "Perdite di carico di filtri, valvole, raccordi, tubi stretti, ugelli e punto di erogazione",
+          "Leggere 100 kPa senza controllare la portata alla pressione obiettivo"
+        ],
+        [
+          "Condizioni di aspirazione",
+          "Dislivello del liquido, lunghezza della linea di aspirazione, tenuta all’aria e primo avvio",
+          "Presumere che 3 mH₂O siano garantiti in ogni installazione"
+        ],
+        [
+          "Materiali bagnati",
+          "Testa della pompa, membrana, valvole e condizioni del fluido nel loro insieme",
+          "Dedurre la compatibilità di tutta la pompa dalla sola presenza di PTFE o FFKM"
+        ],
+        [
+          "Motore e alimentazione",
+          "12 V o 24 V, a spazzole o brushless e segnali di comando richiesti",
+          "Scegliere solo in base al prezzo o alla vita utile nominale"
+        ],
+        [
+          "Configurazione del circuito",
+          "Lunghezza, curve e componenti usati con tubi dal diametro interno di 3.2 mm",
+          "Ignorare resistenza e perdite nel circuito montato"
+        ],
+        [
+          "Ciclo di lavoro",
+          "Funzionamento continuo o intermittente, ore giornaliere, avvii e condizioni termiche",
+          "Confrontare la durata senza considerare le condizioni di prova"
+        ]
+      ]
+    },
+    "section3": {
+      "title": "3. Perché 600 mL/min non è una portata fissa nel sistema?",
+      "paragraphs": [
+        "Il valore di 600 mL/min di DPL60 è il riferimento a scarico libero, nell’area con differenza di pressione minima. I 100 kPa sono una specifica di pressione separata. I due valori non indicano lo stesso punto di lavoro.",
+        "Dopo il montaggio, tubi, filtri, valvole, raccordi, restrizioni, dislivelli e proprietà del fluido determinano il vuoto all’ingresso e la pressione all’uscita. Al variare della pressione differenziale, la portata erogata segue la curva portata-pressione ufficiale.",
+        "Se uno strumento deve mantenere circa 600 mL/min, determina la pressione del sistema a quella portata, verifica il margine disponibile sulla curva e prova l’intero circuito."
+      ],
+      "noticeStrong": "DPL60 rientra nella classe da 600 mL/min. La sua portata in esercizio varia con la pressione.",
+      "noticeText": "Non combinare «600 mL/min a scarico libero» e «pressione nominale di 100 kPa» in una dichiarazione di 600 mL/min a 100 kPa."
+    },
+    "section4": {
+      "title": "4. Specifiche tecniche complete di DPL60",
+      "intro": "I valori seguenti provengono dalla specifica DPL60 attuale. Le versioni a spazzole e brushless condividono la classe di prestazioni, ma differiscono per massa e durata specificata.",
+      "headers": [
+        "Parametro",
+        "Versione a spazzole",
+        "Versione brushless"
+      ],
+      "rows": [
+        {
+          "label": "Prodotto",
+          "value": "Pompa a membrana per liquidi DPL60"
+        },
+        {
+          "label": "Esempi di modelli",
+          "brushed": "DPL60-24DB, DPL60-12DB",
+          "brushless": "DPL60-24BB, DPL60-12BB"
+        },
+        {
+          "label": "Motore",
+          "brushed": "Motore a spazzole in corrente continua",
+          "brushless": "Motore brushless in corrente continua"
+        },
+        {
+          "label": "Tensione nominale",
+          "value": "DC 12 V ±10% o DC 24 V ±10%"
+        },
+        {
+          "label": "Potenza nominale",
+          "value": "≤8.4 W"
+        },
+        {
+          "label": "Portata a scarico libero",
+          "value": "600 mL/min"
+        },
+        {
+          "label": "Pressione nominale",
+          "value": "100 kPa"
+        },
+        {
+          "label": "Altezza di autoadescamento",
+          "value": "3 mH₂O"
+        },
+        {
+          "label": "Fluido specificato",
+          "value": "Acqua purificata. Gli altri liquidi richiedono una valutazione dell’applicazione"
+        },
+        {
+          "label": "Temperatura del fluido",
+          "value": "da +5°C a +80°C"
+        },
+        {
+          "label": "Tubo",
+          "value": "Diametro interno di 3.2 mm"
+        },
+        {
+          "label": "Testa della pompa",
+          "value": "PPS"
+        },
+        {
+          "label": "Membrana",
+          "value": "EPDM o PTFE, secondo il modello"
+        },
+        {
+          "label": "Valvola",
+          "value": "EPDM o FFKM, secondo il modello"
+        },
+        {
+          "label": "Massa",
+          "brushed": "Circa 170 g",
+          "brushless": "Circa 195 g"
+        },
+        {
+          "label": "Vita utile specificata",
+          "brushed": "3 000 h alla tensione nominale, in funzionamento continuo",
+          "brushless": "10 000 h alla tensione nominale, in funzionamento continuo"
+        }
+      ]
+    },
+    "section5": {
+      "title": "5. Come leggere la curva portata-pressione di DPL60?",
+      "paragraphs": [
+        "La curva ufficiale mostra l’andamento della portata al variare del vuoto all’ingresso o della pressione positiva all’uscita. La portata è massima vicino a una pressione differenziale nulla e cambia se l’aspirazione diventa più difficile o aumenta la contropressione all’uscita.",
+        "Usa la curva per ricavare la portata disponibile alla pressione obiettivo. Il solo dato di 600 mL/min non è sufficiente. Nei circuiti con filtri, valvole a foro piccolo, tubi lunghi e stretti o camere in pressione, stima o misura prima la perdita di carico."
+      ],
+      "figureAlt": "Curva portata-pressione ufficiale della pompa a membrana per liquidi DPL60",
+      "figureCaption": "Curva portata-pressione DPL60. 600 mL/min è la portata di riferimento a scarico libero",
+      "notice": "La curva è uno dei dati di selezione. Viscosità, posa dei tubi, raccordi, valvole, filtri, montaggio e livello del liquido possono spostare il punto di lavoro effettivo. Verifica il circuito completo."
+    },
+    "section6": {
+      "title": "6. Come scegliere i materiali bagnati di DPL60?",
+      "intro": "Le principali parti bagnate sono testa della pompa in solfuro di polifenilene (PPS), membrana e valvole. Valuta la compatibilità per l’intera combinazione di materiali e nelle condizioni effettive del fluido.",
+      "headers": [
+        "Combinazione di materiali",
+        "Membrana / valvola",
+        "Testa della pompa e verifica"
+      ],
+      "rows": [
+        [
+          "EP/PS",
+          "Membrana EPDM + valvola EPDM",
+          "Testa in PPS. Conferma fluido, concentrazione, temperatura e tempo di contatto"
+        ],
+        [
+          "FF/PS",
+          "Membrana PTFE + valvola FFKM",
+          "Testa in PPS. Conferma fluido, concentrazione, temperatura e tempo di contatto"
+        ]
+      ],
+      "epTitle": "Combinazione di materiali EP/PS",
+      "epText": "EP/PS indica membrana e valvole in EPDM e testa della pompa in PPS. È una configurazione di partenza per acqua purificata e alcuni liquidi convenzionali, da valutare.",
+      "ffTitle": "Combinazione di materiali FF/PS",
+      "ffText": "FF/PS indica membrana in PTFE, valvole in FFKM e testa della pompa in PPS. Si può valutare per requisiti di compatibilità più severi. Verifica comunque la resistenza chimica dell’intera pompa per il fluido specifico.",
+      "noticeStrong": "Il fluido di esercizio specificato è acqua purificata.",
+      "noticeText": "Per un altro liquido, indica tipo, composizione, concentrazione, temperatura, durata del contatto continuo e procedura di pulizia. Valuta poi l’intero percorso bagnato e convalida un campione."
+    },
+    "section7": {
+      "title": "7. DPL60 a spazzole o brushless?",
+      "intro": "Le versioni si distinguono per vita utile specificata, massa, ingombro del motore, cablaggio e comando. Riserva lo spazio di montaggio indicato nel disegno ufficiale applicabile.",
+      "headers": [
+        "Confronto",
+        "A spazzole",
+        "Brushless"
+      ],
+      "rows": [
+        [
+          "Motore",
+          "A spazzole in corrente continua",
+          "Brushless in corrente continua"
+        ],
+        [
+          "Vita utile specificata",
+          "3 000 h",
+          "10 000 h"
+        ],
+        [
+          "Condizione di durata",
+          "Tensione nominale, funzionamento continuo",
+          "Tensione nominale, funzionamento continuo"
+        ],
+        [
+          "Impiego tipico",
+          "Tempo di funzionamento limitato, comando semplice e apparecchiature sensibili ai costi",
+          "Servizio prolungato, obiettivi di durata più elevati oppure comando e retroazione"
+        ],
+        [
+          "Massa",
+          "Circa 170 g",
+          "Circa 195 g"
+        ],
+        [
+          "Comando",
+          "Alimentazione di base / avvio e arresto",
+          "Funzioni PWM, DIR e FG in base alla configurazione"
+        ]
+      ],
+      "afterTable": "La durata va letta insieme alle condizioni di prova. Contropressione, variazioni dell’alimentazione, temperatura ambiente, frequenza di avvio, raffreddamento e stato del fluido possono cambiare la durata effettiva.",
+      "brushedTitle": "Dimensioni della versione a spazzole",
+      "brushedAlt": "Estratto del disegno quotato della pompa a membrana per liquidi DPL60 a spazzole",
+      "brushedCaption": "Disegno della versione DPL60 a spazzole. Per le quote di montaggio usa il disegno 2D ufficiale",
+      "brushedText": "Controlla sul disegno della versione a spazzole lunghezza totale, testa della pompa, fori di montaggio, portagomma e direzione del tubo. Non ricavare gli ingombri da DPL30 o dalla versione brushless.",
+      "brushlessTitle": "Dimensioni della versione brushless",
+      "brushlessAlt": "Estratto del disegno quotato della pompa a membrana per liquidi DPL60 brushless",
+      "brushlessCaption": "Disegno della versione DPL60 brushless. Per le quote di montaggio usa il disegno 2D ufficiale",
+      "brushlessText": "Il corpo del motore brushless, la lunghezza totale e il cablaggio differiscono dalla versione a spazzole. Le varianti equivalenti del motore elencate nella documentazione ufficiale possono avere differenze locali di montaggio. Conferma la versione di produzione prima dell’approvazione."
+    },
+    "section8": {
+      "title": "8. Codifica e interpretazione del modello DPL60",
+      "intro": "Un codice DPL60 completo identifica serie, tensione, motore, cablaggio, collegamento, orientamento delle porte, materiali di membrana, valvole e testa ed eventuali personalizzazioni.",
+      "noticeStrong": "DPL60 - 24 - D - 2 - B - C - EP/PS - X",
+      "noticeText": "Serie · Tensione · Motore · Cablaggio · Collegamento · Orientamento delle porte · Materiali bagnati · Personalizzazione",
+      "headers": [
+        "Campo",
+        "Codice",
+        "Significato"
+      ],
+      "rows": [
+        [
+          "Serie",
+          "DPL60",
+          "Pompa a membrana DPL60 per liquidi della classe da 600 mL/min"
+        ],
+        [
+          "Tensione",
+          "24 / 12",
+          "DC 24 V / DC 12 V"
+        ],
+        [
+          "Motore",
+          "D / B / C / BP",
+          "D: a spazzole in corrente continua. B: brushless in corrente continua. C: senza nucleo. BP: brushless in corrente continua con PWM esterno"
+        ],
+        [
+          "Fili",
+          "2 / 3 / 5",
+          "2, 3 o 5 fili. I campi predefiniti possono essere omessi dai nomi dei modelli standard"
+        ],
+        [
+          "Collegamento",
+          "B / S",
+          "B: portagomma. S: attacco filettato"
+        ],
+        [
+          "Orientamento delle porte",
+          "3 / 6 / 9 / C",
+          "3: destra. 6: basso. 9: sinistra. C: alto, omissibile quando è l’orientamento predefinito"
+        ],
+        [
+          "Materiali bagnati",
+          "EP/PS / FF/PS",
+          "EPDM + EPDM + PPS / PTFE + FFKM + PPS"
+        ],
+        [
+          "Personalizzazione",
+          "X",
+          "Codice specifico del progetto. È assente quando non si applicano personalizzazioni"
+        ]
+      ],
+      "exampleTitle": "Esempio: DPL60-24DB-EP/PS",
+      "exampleText": "Il modello standard si può espandere in DPL60-24-D-2-B-C-EP/PS. I campi predefiniti per due fili e porte verso l’alto sono omessi.",
+      "exampleHeaders": [
+        "Campo",
+        "Interpretazione"
+      ],
+      "exampleRows": [
+        [
+          "DPL60",
+          "Serie del prodotto, pompa a membrana per liquidi della classe da 600 mL/min"
+        ],
+        [
+          "24",
+          "DC 24 V"
+        ],
+        [
+          "D",
+          "Motore a spazzole in corrente continua"
+        ],
+        [
+          "2 (predefinito, omesso)",
+          "Due fili"
+        ],
+        [
+          "B",
+          "Attacco portagomma"
+        ],
+        [
+          "C (predefinito, omesso)",
+          "Porte verso l’alto"
+        ],
+        [
+          "EP/PS",
+          "Membrana EPDM + valvola EPDM + testa della pompa PPS"
+        ]
+      ],
+      "notice": "«DB» contiene due codici. D indica il motore a spazzole e B l’attacco portagomma. In DPL60-24BB-EP/PS, la prima B indica il motore brushless e la seconda B l’attacco portagomma.",
+      "standardModelsTitle": "Otto modelli standard DPL60 attuali",
+      "standardModelsIntro": "La tabella di selezione ufficiale copre 12 V / 24 V × a spazzole / brushless × EP/PS / FF/PS. Tutti i modelli e codici articolo sottostanti sono riportati come testo HTML ricercabile.",
+      "standardModelHeaders": [
+        "N.",
+        "Codice articolo",
+        "Modello standard",
+        "Tensione",
+        "Motore",
+        "Membrana",
+        "Valvola",
+        "Testa"
+      ],
+      "standardModelRows": [
+        [
+          "1",
+          "459003",
+          "DPL60-24DB-EP/PS",
+          "24 V",
+          "A spazzole",
+          "EPDM",
+          "EPDM",
+          "PPS"
+        ],
+        [
+          "2",
+          "459004",
+          "DPL60-24BB-EP/PS",
+          "24 V",
+          "Brushless",
+          "EPDM",
+          "EPDM",
+          "PPS"
+        ],
+        [
+          "3",
+          "459015",
+          "DPL60-12DB-EP/PS",
+          "12 V",
+          "A spazzole",
+          "EPDM",
+          "EPDM",
+          "PPS"
+        ],
+        [
+          "4",
+          "459016",
+          "DPL60-12BB-EP/PS",
+          "12 V",
+          "Brushless",
+          "EPDM",
+          "EPDM",
+          "PPS"
+        ],
+        [
+          "5",
+          "459030",
+          "DPL60-24DB-FF/PS",
+          "24 V",
+          "A spazzole",
+          "PTFE",
+          "FFKM",
+          "PPS"
+        ],
+        [
+          "6",
+          "459031",
+          "DPL60-24BB-FF/PS",
+          "24 V",
+          "Brushless",
+          "PTFE",
+          "FFKM",
+          "PPS"
+        ],
+        [
+          "7",
+          "459032",
+          "DPL60-12DB-FF/PS",
+          "12 V",
+          "A spazzole",
+          "PTFE",
+          "FFKM",
+          "PPS"
+        ],
+        [
+          "8",
+          "459033",
+          "DPL60-12BB-FF/PS",
+          "12 V",
+          "Brushless",
+          "PTFE",
+          "FFKM",
+          "PPS"
+        ]
+      ]
+    },
+    "section9": {
+      "title": "9. Sequenza completa di selezione di DPL60",
+      "steps": [
+        [
+          "Definisci la portata di lavoro richiesta",
+          "Distingui un obiettivo di 600 mL/min in condizioni prossime allo scarico libero dalla portata richiesta a una pressione di sistema specificata."
+        ],
+        [
+          "Determina la pressione del sistema",
+          "Considera tubi, raccordi, filtri, valvole, restrizioni, dislivelli del liquido e pressione nel punto di erogazione."
+        ],
+        [
+          "Leggi la curva ufficiale",
+          "Individua il punto di lavoro obiettivo e conferma che il margine prestazionale sia adeguato."
+        ],
+        [
+          "Definisci il liquido",
+          "Indica tipo, composizione, concentrazione, temperatura, viscosità, particelle e durata del contatto."
+        ],
+        [
+          "Definisci le condizioni di aspirazione",
+          "Registra dislivello, lunghezza e diametro della linea di aspirazione, tenuta all’aria e condizioni al primo avvio."
+        ],
+        [
+          "Scegli tensione e motore",
+          "Scegli 12 V o 24 V e motore a spazzole o brushless in funzione di alimentazione, ciclo di lavoro, durata e requisiti di comando."
+        ],
+        [
+          "Scegli i materiali bagnati",
+          "Valuta EP/PS o FF/PS in base alle condizioni complessive del fluido."
+        ],
+        [
+          "Controlla montaggio e porte",
+          "Verifica tubi con diametro interno di 3.2 mm, quote a disegno, orientamento delle porte, cablaggio e accesso per la manutenzione."
+        ],
+        [
+          "Convalida nello strumento",
+          "Prova portata, adescamento, rumorosità, aumento di temperatura, stabilità e funzionamento prolungato nel circuito effettivo."
+        ]
+      ]
+    },
+    "section10": {
+      "title": "10. Impieghi e limiti di applicazione",
+      "intro": "DPL60 si può valutare per la gestione di liquidi a portata più elevata in strumenti IVD, sistemi di automazione di laboratorio e strumenti analitici, compresi erogazione di liquido di lavaggio, risciacquo delle linee, circolazione, trasferimento di volumi maggiori e gestione dei liquidi di scarto.",
+      "headers": [
+        "Voce",
+        "Limite di impiego"
+      ],
+      "rows": [
+        [
+          "600 mL/min",
+          "Valore di riferimento a scarico libero. La portata cambia nelle diverse condizioni di montaggio."
+        ],
+        [
+          "100 kPa",
+          "Pressione nominale distinta dalla portata a scarico libero. Leggi la curva alla pressione obiettivo."
+        ],
+        [
+          "Altri liquidi",
+          "Il fluido specificato è acqua purificata. Per gli altri liquidi servono valutazione di compatibilità e prove su campioni."
+        ],
+        [
+          "Autoadescamento",
+          "Il valore di 3 mH₂O si riferisce alle condizioni specificate. L’avvio effettivo dipende dall’intero percorso di aspirazione."
+        ],
+        [
+          "Vita utile",
+          "Sia 3 000 h per la versione a spazzole sia 10 000 h per la brushless si riferiscono alla tensione nominale in funzionamento continuo."
+        ],
+        [
+          "Validazione finale",
+          "Specifiche, curve, disegni e materiali aiutano nella scelta. Conferma le prestazioni nello strumento effettivo."
+        ]
+      ]
+    },
+    "section11": {
+      "title": "Conclusione",
+      "paragraphs": [
+        "Per scegliere DPL60, distingui la classe della pompa da 600 mL/min dalla portata effettiva nel sistema. Definisci la configurazione considerando pressione nominale di 100 kPa, curva ufficiale, fluido, condizioni di aspirazione, materiali, alimentazione, durata del motore e ingombri di montaggio.",
+        "Se l’apparecchiatura deve mantenere una portata vicina a 600 mL/min con una contropressione significativa, usa come base il valore della curva alla pressione obiettivo e una prova dell’intero circuito. La portata a scarico libero da sola non basta."
+      ]
+    },
+    "internalLinks": {
+      "dpl30Prefix": "Per la sequenza completa di funzionamento di membrana e valvole di non ritorno o per un confronto con la classe da 300 mL/min, consulta la",
+      "dpl30Label": "guida alla scelta della pompa a membrana per liquidi DPL30",
+      "dpl30Suffix": ".",
+      "productPrefix": "Per configurazioni disponibili, disegni e documenti, apri la",
+      "productLabel": "scheda della pompa a membrana per liquidi DPL60",
+      "productSuffix": ".",
+      "categoryPrefix": "Per confrontare altre classi di portata e pressione, torna alla categoria delle",
+      "categoryLabel": "pompe a membrana per liquidi",
+      "categorySuffix": "."
+    }
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "items": [
+      {
+        "question": "600 mL/min è la portata di DPL60 a montaggio avvenuto?",
+        "answer": "No. È il valore di riferimento a scarico libero. La portata nel sistema varia in funzione di vuoto all’ingresso, pressione all’uscita, tubi, valvole, filtri, raccordi, livello del liquido e proprietà del fluido."
+      },
+      {
+        "question": "DPL60 eroga ancora 600 mL/min a 100 kPa?",
+        "answer": "La portata di 600 mL/min a scarico libero e la pressione nominale di 100 kPa non indicano lo stesso punto di lavoro. Leggi la curva portata-pressione ufficiale e verifica il circuito montato alla pressione richiesta."
+      },
+      {
+        "question": "Come scegliere tra le versioni DPL60 a spazzole e brushless?",
+        "answer": "La durata specificata è di 3 000 h per la versione a spazzole e 10 000 h per la brushless, entrambe alla tensione nominale in funzionamento continuo. Valuta le configurazioni brushless per servizi prolungati o quando servono PWM, comando del senso di rotazione o retroazione della velocità."
+      }
+    ]
+  },
+  "coverAlt": "Pompe a membrana FOREACH DPL60 per liquidi, a spazzole e brushless, da 600 mL/min"
+}

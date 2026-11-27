@@ -84,7 +84,9 @@
       "title": "Bombas de diafragma FOREACH para alimentación y retorno de tinta",
       "tocLabel": "Opciones de bomba",
       "paragraphs": [
-        "Las microbombas de diafragma para líquidos de FOREACH pueden evaluarse como candidatas según el caudal y la presión del circuito. DPL30 y DPL60 responden a diferentes necesidades de caudal en ramales de alimentación o retorno; DPL30H permite evaluar un tramo de transferencia previo con mayores requisitos de presión."
+        { "prefix": "En el ramal de reposición, compare el caudal necesario a la presión diferencial medida con la curva de la ", "key": "dpl30", "label": "bomba de diafragma para líquidos DPL30-DB", "suffix": ". Haga la prueba con la tinta prevista y el depósito en su nivel mínimo de trabajo." },
+        { "prefix": "Si esa curva deja poco margen para reponer tinta durante la impresión, evalúe la ", "key": "dpl60", "label": "bomba de diafragma para líquidos DPL60-DB", "suffix": " a la misma presión diferencial. Mida cuánto tarda el depósito secundario en recuperar su nivel de trabajo." },
+        { "prefix": "Si la mayor parte de la pérdida de presión se concentra en una línea larga de trasiego o en un filtro aguas arriba, evalúe la ", "key": "dpl30h", "label": "bomba de diafragma de alta presión DPL30H-DS", "suffix": " para esa carga. Compruebe por separado la presión del cabezal en el punto que indique su fabricante." }
       ],
       "productTable": {
         "headers": ["Modelo candidato", "Caudal libre", "Presión nominal", "Función del circuito que evaluar"],
@@ -99,12 +101,7 @@
         "El caudal libre y la presión nominal corresponden a condiciones distintas. No significan que se garantice el caudal libre a presión nominal. Compruebe parámetros completos, conexiones y combinación de materiales del modelo concreto.",
         "Las especificaciones formales de las tres series indican agua purificada como medio de trabajo; otros líquidos requieren evaluación real del cliente. Al considerar configuraciones con PPS, EPDM, PTFE o FFKM, valídelas frente a composición, concentración, temperatura y tiempo de contacto de la tinta y el líquido de limpieza. El nombre de un material no demuestra compatibilidad duradera con la tinta."
       ],
-      "note": "Los intervalos de presión negativa, incrementos de ajuste y periodos de cambio de filtros varían según cabezal, tinta y arquitectura. Los ajustes reales deben seguir los manuales y requisitos del fabricante de tinta.",
-      "links": [
-        {"key": "dpl30", "label": "Consultar parámetros y configuración de DPL30-DB"},
-        {"key": "dpl60", "label": "Consultar parámetros y configuración de DPL60-DB"},
-        {"key": "dpl30h", "label": "Consultar parámetros y configuración de DPL30H-DS"}
-      ]
+      "note": "Los intervalos de presión negativa, incrementos de ajuste y periodos de cambio de filtros varían según cabezal, tinta y arquitectura. Los ajustes reales deben seguir los manuales y requisitos del fabricante de tinta."
     }
   ],
   "cta": {

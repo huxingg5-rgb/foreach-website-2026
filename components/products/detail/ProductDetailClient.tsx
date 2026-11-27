@@ -11,7 +11,7 @@ import { fittingText } from "@/data/products/detail/fitting-ui.intl";
 import BottomCtaButton from "@/components/common/BottomCtaButton";
 import QuickConnectPreviewNote from "./QuickConnectPreviewNote";
 import FittingDeliveryZh from "./FittingDeliveryZh";
-import { applyProbeDetailCopy, getLocalizedProbeGuide, probeText } from "@/data/products/detail/probe-guide.intl";
+import { applyProbeDetailCopy, germanProbeDetailBody, hindiProbeDetailBody, italianProbeDetailBody, getLocalizedProbeGuide, probeText } from "@/data/products/detail/probe-guide.intl";
 import { getControlModuleDetailHeading } from "@/data/products/selection/control-module-card-copy";
 import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
 import { getProbeControlBreadcrumbsEn } from "@/lib/seo/probe-control-breadcrumbs";
@@ -76,7 +76,7 @@ import {
   emptyEaPumpConfigurations, readEaPumpConfigurations,
   removeEaPumpConfiguration, saveEaPumpConfigurations, upsertEaPumpConfiguration,
 } from "@/data/products/configurator/ea-pump-inquiry-configurations";
-import { pistonText } from "@/data/products/detail/piston-pump-ui.intl";
+import { pistonHref, pistonText } from "@/data/products/detail/piston-pump-ui.intl";
 import EaPumpInquirySummary from "./EaPumpInquirySummary";
 import InstrumentInquiryWorkspace from "./InstrumentInquiryWorkspace";
 import AbdResourceViewer from "./AbdResourceViewer";
@@ -125,6 +125,16 @@ import { useDetailConfigurations, saveDetailConfiguration, removeDetailConfigura
 import { getSelectionWorkspaceCopy, getSelectionWorkspacePresentation } from "@/data/products/detail/selection-workspace-copy";
 import selectionWorkspaceStyles from "@/components/products/tubing-assemblies/FlangedTubingWorkspace.module.css";
 import { usePathname, useRouter } from "next/navigation";
+import { getHindiDraftLink, getItalianDraftLink, germanEnglishFallbackSuffix, getDraftHrefForEnglish, getGermanDraftLink, isGermanProductDraftPath } from "@/lib/i18n/draft-languages";
+import { localizeItalianDiaphragmData, translateItalianDiaphragmCopy } from "@/data/products/detail/diaphragm-pump-content.it";
+import { germanDiaphragmText, localizeGermanDiaphragmData, translateGermanDiaphragmCopy } from "@/data/products/detail/diaphragm-pump-content.de";
+import { hindiDiaphragmText, localizeHindiDiaphragmData, translateHindiDiaphragmCopy } from "@/data/products/detail/diaphragm-pump-content.hi";
+import { hindiProductDetailText } from "@/data/products/detail/product-detail.hi";
+import { italianProductDetailText } from "@/data/products/detail/product-detail.it";
+import type { GermanProductDetailContent } from "@/data/products/detail/product-detail-content.de";
+import { resolveGermanDrawingFaq } from "@/data/products/detail/product-drawing-faq.de";
+import { germanProductBreadcrumbLabel, germanProductDetailCopy, germanProductDetailTabs, germanProductDetailText, germanProductSpecLabel, germanProductSpecValue } from "@/data/products/detail/product-detail-ui.de";
+import { useContentPathname } from "@/lib/i18n/use-content-pathname";
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -132,7 +142,7 @@ import type { CSSProperties, MouseEvent, ReactNode } from "react";
 import { applyPdm5LocaleCopy } from "@/data/products/detail/pdm5-locales";
 import { getAbdGalleryData } from "@/data/products/detail/abd-gallery";
 import { localizeProductDetailData } from "@/data/products/detail/product-detail.intl";
-import { applyFittingProductCopy } from "@/data/products/detail/fitting-product-copy.intl";
+import { applyFittingProductCopy, getFittingModelTopic } from "@/data/products/detail/fitting-product-copy.intl";
 import { applyAbdLocaleCopy } from "@/data/products/detail/abd-locales";
 import { getHardTubeSeo } from "@/data/products/detail/hard-tube-seo";
 import { applyHpValveDetailCopy } from "@/data/products/detail/hp-content";
@@ -186,9 +196,7 @@ import {
   ProductVariantConfigurator,
 } from "@/components/products/configurator";
 
-import type {
-  ProductConfiguratorVariant,
-} from "@/components/products/configurator";
+import type { ProductConfiguratorVariant } from "@/components/products/configurator";
 import { getSolenoidConfigurator } from "@/data/products/configurator/solenoid-valves";
 import { getValvelessPumpConfigurator } from "@/data/products/configurator/valveless-pumps";
 import { getDiaphragmPumpConfigurator } from "@/data/products/configurator/diaphragm-pumps";
@@ -337,9 +345,12 @@ type ProductDetailClientProps = {
   analyticsProductId?: string;
   beforeFaqContent?: ReactNode;
   afterContent?: ReactNode;
+  specificationNote?: ReactNode;
   customerCategoryMode?: "quick-connect-zh" | "fitting-zh" | "luer-zh" | "hard-tube-zh" | "tubing-zh" | "tubing" | "tubing-assembly-zh" | "tubing-assembly" | "piston-pump-zh" | "piston-pump" | "diaphragm-pump" | "instrument-product-zh" | "instrument-product";
   customerCategoryUi?: InstrumentCategoryUi;
   customerCategoryContent?: Partial<Record<"product" | "selection" | "delivery", ReactNode>>;
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: { locale: "it" | "hi"; copy: GermanProductDetailContent };
 };
 
 type CustomerCategoryKey = "product" | "selection" | "delivery";
@@ -1125,6 +1136,7 @@ const CUSTOM_PRODUCT_CATEGORY_IDS = new Set([
 ]);
 
 const CUSTOM_PRODUCT_NOTICE_COPY = {
+  de: { notice: "Dieses Produkt wird auf Anfrage konfiguriert", contact: "Kontakt aufnehmen" },
   zh: {
     notice: "该产品为定制品",
     contact: "联系我们",
@@ -1206,11 +1218,13 @@ function isPublishedDiaphragmPumpDetail(
 function PlungerPumpBottomCta({
   data,
   localePrefix,
+  copy,
 }: {
   data: any;
   localePrefix: string;
+  copy?: { title: string; desc: string; button: string; href: string };
 }) {
-  const cta = getPlungerPumpBottomCta(data);
+  const cta = copy ?? getPlungerPumpBottomCta(data);
 
   if (!cta) {
     return null;
@@ -1336,14 +1350,18 @@ function getDiaphragmPumpSchemaName(
   return `${productModel} ${cleanTitle}`.trim();
 }
 
-function buildProductPageStructuredData(data: any, pathname: string) {
-  const canonicalUrl = getCanonicalProductPageUrl(pathname);
+function buildProductPageStructuredData(data: any, pathname: string, germanCopy?: GermanProductDetailContent, draftCopy?: GermanProductDetailContent, draftLocale: "it" | "hi" = "it") {
+  const draftLink = draftLocale === "hi" ? getHindiDraftLink : getItalianDraftLink;
+  const draftText = draftLocale === "hi" ? hindiProductDetailText : italianProductDetailText;
+  const canonicalUrl = germanCopy
+    ? toAbsoluteProductUrl(getDraftHrefForEnglish(pathname, "de").replace(/\/+$/, "") + "/")
+    : draftCopy ? toAbsoluteProductUrl(draftLink(pathname).href.replace(/\/+$/, "") + "/") : getCanonicalProductPageUrl(pathname);
   const defaultProductName = String(
     (data.tubingAuthoredContent ? data.h1Title : undefined) || data.model || data.title || data.name || ""
   ).trim();
   const probeControlCopy = getProductPageLocale(pathname) === "en" && ["probes", "control"].includes(String(data.category))
     ? probeControlDetailCopyEn[String(data.slug || "")] : undefined;
-  const description = probeControlCopy?.description || String(data.description || "").trim();
+  const description = (germanCopy ?? draftCopy)?.description ?? (probeControlCopy?.description || String(data.description || "").trim());
   const productImages = Array.from(
     new Set(
       [
@@ -1374,7 +1392,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
       ? getDiaphragmPumpSchemaModel(pathname, rawProductModel)
       : rawProductModel;
   const locale = getProductPageLocale(pathname);
-  const productName = probeControlCopy?.h1 || (isDiaphragmPump
+  const productName = draftCopy ? defaultProductName + " – " + draftCopy.title : (isProbeDetailData(data) ? germanCopy?.title : undefined) || probeControlCopy?.h1 || (isDiaphragmPump
     ? getDiaphragmPumpSchemaName(data, pathname, locale, productModel)
     : defaultProductName);
   const productSku = String(
@@ -1382,7 +1400,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
       ? data.sku || data.internalSku || ""
       : data.sku || data.productCode || "",
   ).trim();
-  const faqs: Array<{ question: string; answer: string }> = Array.isArray(data.faqs)
+  const faqs: readonly { question: string; answer: string }[] = (germanCopy ?? draftCopy)?.faqs ?? (Array.isArray(data.faqs)
     ? data.faqs
         .map((item: any) => ({
           question: String(item?.question || "").trim(),
@@ -1391,7 +1409,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
         .filter((item: { question: string; answer: string }) =>
           item.question && item.answer
         )
-    : [];
+    : []);
   const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
   const breadcrumbCopy =
     PRODUCT_BREADCRUMB_COPY[locale] || PRODUCT_BREADCRUMB_COPY.en;
@@ -1473,7 +1491,7 @@ function buildProductPageStructuredData(data: any, pathname: string) {
     "@id": webpageId,
     url: canonicalUrl,
     name: productName,
-    inLanguage: locale,
+    inLanguage: germanCopy ? "de-DE" : draftCopy ? (draftLocale === "hi" ? "hi" : "it-IT") : locale,
     isPartOf: {
       "@id": websiteId,
     },
@@ -1502,8 +1520,8 @@ function buildProductPageStructuredData(data: any, pathname: string) {
       itemListElement: breadcrumbItems.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        name: normalizeProductBreadcrumbLabel(item.name, item.item),
-        item: item.item,
+        name: germanCopy ? germanProductBreadcrumbLabel(item.name) : draftCopy ? draftText(item.name) : normalizeProductBreadcrumbLabel(item.name, item.item),
+        item: germanCopy ? item.item.replace(/^(https:\/\/www\.foreachtek\.com)\/en(?=\/|$)/, "$1/de") : draftCopy && item.item.startsWith("https://www.foreachtek.com/") ? toAbsoluteProductUrl(draftLink(item.item.slice("https://www.foreachtek.com".length)).href) : item.item,
       })),
     },
     webPage,
@@ -1609,7 +1627,7 @@ function getScopedProductDisplayTitle(
 /* ===== FOREACH SCOPED PRODUCT DISPLAY TITLE END ===== */
 
 const StandaloneFittingSelector = dynamic(() => import("@/components/products/configurator/StandaloneFittingSelector"), {ssr: false});
-const FlangedTubingWorkspace = dynamic(() => import("@/components/products/tubing-assemblies/FlangedTubingWorkspace"), {ssr: false});
+const FlangedTubingWorkspace = dynamic(() => import("@/components/products/tubing-assemblies/FlangedTubingWorkspace"));
 const TpuTubingSelectionContent = dynamic(() => import("./TpuTubingSelectionContent"));
 const ProbeProductContent = dynamic(() => import("./ProbeDetailContent").then(module => module.ProbeProductContent));
 const ProbeSelectionContent = dynamic(() => import("./ProbeDetailContent").then(module => module.ProbeSelectionContent));
@@ -1623,16 +1641,57 @@ export default function ProductDetailClient({
   analyticsProductId: explicitAnalyticsProductId,
   beforeFaqContent,
   afterContent,
+  specificationNote,
   customerCategoryMode,
   customerCategoryUi,
   customerCategoryContent,
+  germanDetail,
+  localizedDetail,
 }: ProductDetailClientProps) {
-  const pathname = usePathname();
+  const pathname = useContentPathname();
+  const activeGermanDetail = isGermanProductDraftPath(usePathname()) ? germanDetail : undefined;
+  const isGermanProduct = Boolean(activeGermanDetail);
+  const italianDetail = localizedDetail?.locale === "it" ? localizedDetail.copy : undefined;
+  const draftDetail = localizedDetail?.copy;
+  const hindiDetail = localizedDetail?.locale === "hi" ? localizedDetail.copy : undefined;
+  const isHindiDiaphragm = Boolean(hindiDetail) && customerCategoryMode === "diaphragm-pump";
+  const draftDetailText = isHindiDiaphragm ? hindiDiaphragmText : hindiDetail ? hindiProductDetailText : italianProductDetailText;
+  const draftDetailLink = hindiDetail ? getHindiDraftLink : getItalianDraftLink;
+  const isItalianAuthoredValve = Boolean(italianDetail) && sourceData.__locale === "it" && Boolean(sourceData.mrv3AuthoredContent || sourceData.solenoidAuthoredContent || sourceData.hpAuthoredContent);
+  const isHindiMrv3 = Boolean(hindiDetail) && sourceData.__locale === "hi" && Boolean(sourceData.mrv3AuthoredContent);
+  const isHindiHp = Boolean(hindiDetail) && sourceData.__locale === "hi" && Boolean(sourceData.hpAuthoredContent);
+  const isHindiSolenoid = Boolean(hindiDetail) && sourceData.__locale === "hi" && Boolean(sourceData.solenoidAuthoredContent);
+  const isGermanAuthoredValve = isGermanProduct && sourceData.__locale === "de" && Boolean(sourceData.mrv3AuthoredContent || sourceData.solenoidAuthoredContent || sourceData.hpAuthoredContent);
+  const isGermanControl = isGermanProduct && String(sourceData.category) === "control";
+  const isHindiControl = Boolean(hindiDetail) && sourceData.__locale === "hi" && String(sourceData.category) === "control";
+  const isItalianControl = Boolean(italianDetail) && sourceData.__locale === "it" && String(sourceData.category) === "control";
+  const isGermanProbe = isGermanProduct && isProbeDetailData(sourceData);
+  const isHindiProbe = Boolean(hindiDetail) && sourceData.__locale === "hi" && isProbeDetailData(sourceData);
+  const isItalianProbe = Boolean(italianDetail) && sourceData.__locale === "it" && isProbeDetailData(sourceData);
+  const isGermanTubing = isGermanProduct && sourceData.__locale === "de" && isTubingDetailData(sourceData);
+  const isHindiTubing = Boolean(hindiDetail) && sourceData.__locale === "hi" && isTubingDetailData(sourceData);
+  const isItalianTubing = Boolean(italianDetail) && sourceData.__locale === "it" && isTubingDetailData(sourceData);
+  const isGermanPiston = isGermanProduct && customerCategoryMode === "piston-pump";
+  const isGermanDiaphragm = isGermanProduct && customerCategoryMode === "diaphragm-pump";
+  const isItalianDiaphragm = Boolean(italianDetail) && customerCategoryMode === "diaphragm-pump";
+  const isGermanPipetting = isGermanProduct && isPipettingPumpDetailData(sourceData) && sourceData.__locale === "de";
+  const isHindiInstrumentPump = Boolean(hindiDetail) && sourceData.__locale === "hi" &&
+    (isPipettingPumpDetailData(sourceData) || isSyringePumpDetailData(sourceData));
+  const isItalianPipetting = Boolean(italianDetail) && isPipettingPumpDetailData(sourceData) && sourceData.__locale === "it";
+  const isItalianSyringe = Boolean(italianDetail) && isSyringePumpDetailData(sourceData) && sourceData.__locale === "it";
+  const isGermanSyringe = isGermanProduct && isSyringePumpDetailData(sourceData) && sourceData.__locale === "de";
+  const isHindiValveless = Boolean(hindiDetail) && sourceData.valvelessDetailContent === true && sourceData.__locale === "hi";
+  const isItalianValveless = Boolean(italianDetail) && sourceData.valvelessDetailContent === true && sourceData.__locale === "it";
+  const isGermanValveless = isGermanProduct && sourceData.valvelessDetailContent === true && sourceData.__locale === "de";
+  const germanDetailHref = isGermanControl ? getDraftHrefForEnglish(pathname || "", "de") : undefined;
   const router = useRouter();
   const isTubingAssembly = sourceData.category === "tubing-assemblies";
+  const isGermanAssembly = isGermanProduct && isTubingAssembly && sourceData.__locale === "de";
+  const isItalianAssembly = Boolean(italianDetail) && isTubingAssembly && sourceData.__locale === "it";
+  const isHindiAssembly = Boolean(hindiDetail) && isTubingAssembly && sourceData.__locale === "hi";
   const isAssemblyChineseReview = isTubingAssembly && sourceData.__reviewLocale === "zh";
   const isEnglishPath = pathname === "/en" || pathname.startsWith("/en/");
-  const isEnglish = isEnglishPath && !isAssemblyChineseReview;
+  const isEnglish = (isEnglishPath) && !isAssemblyChineseReview;
   const pathnameLocale = String(pathname || "")
     .split("/")
     .filter(Boolean)[0] || "";
@@ -1642,15 +1701,22 @@ export default function ProductDetailClient({
   const isTargetLanguage = Boolean(targetLocale);
   const isLocalizedDetail = isEnglish || isTargetLanguage;
   const resourceLocale = isProductDetailResourceLocale(pathnameLocale) ? pathnameLocale : "zh";
+  const resourceCopyLocale = isGermanProduct ? "de" : localizedDetail?.locale ?? resourceLocale;
   const resourceCopy = resourceLocale
-    ? getProductDetailResourceCopy(resourceLocale)
+    ? getProductDetailResourceCopy(resourceCopyLocale)
     : null;
   const configuratorLocale =
     targetLocale || (isEnglish ? "en" : "zh");
-  const mobileTabLabels =
+  const assemblyPresentationLocale = isHindiAssembly ? "hi" : isGermanAssembly ? "de" : isItalianAssembly ? "it" : configuratorLocale;
+  const solenoidPresentationLocale = isHindiSolenoid ? "hi" : sourceData.solenoidAuthoredContent && isItalianAuthoredValve ? "it" : isGermanAuthoredValve && sourceData.solenoidAuthoredContent ? "de" : configuratorLocale;
+  const probePresentationLocale = isHindiProbe ? "hi" : isGermanProbe ? "de" : isItalianProbe ? "it" : configuratorLocale;
+  const tubingPresentationLocale = isHindiTubing ? "hi" : isGermanTubing ? "de" : isItalianTubing ? "it" : configuratorLocale;
+  const pistonPresentationLocale = isGermanPiston ? "de" : localizedDetail && customerCategoryMode === "piston-pump" ? localizedDetail.locale : configuratorLocale;
+  const mobileTabLabels = isGermanProduct ? germanProductDetailTabs :
     MOBILE_PRODUCT_TAB_LABELS[
       configuratorLocale as ProductDetailTabLocale
     ] || MOBILE_PRODUCT_TAB_LABELS.zh;
+  const fittingUiLocale = isGermanProduct ? "de" : localizedDetail?.locale ?? configuratorLocale;
   const localePrefix = isEnglishPath
     ? "/en"
     : targetLocale
@@ -1658,15 +1724,19 @@ export default function ProductDetailClient({
       : "";
   const data = useMemo(
     () => {
-      if (isHardTubePlug(sourceData)) return applyHardTubePlugCopy(sourceData, configuratorLocale);
-      const mrv3Copy = sourceData.category === "valves" ? (getMrv3Content(sourceData.slug, configuratorLocale) || getSolenoidContent(sourceData.slug, configuratorLocale)) : null;
+      if (isGermanValveless || isGermanSyringe || isGermanPipetting || isGermanAssembly || isItalianAssembly || isHindiAssembly || isGermanTubing || isItalianTubing || isHindiTubing || isItalianSyringe || isItalianPipetting || isItalianValveless || isItalianAuthoredValve || isHindiMrv3 || isHindiSolenoid || isHindiHp || isHindiInstrumentPump || isHindiValveless) return sourceData;
+      if (isHardTubePlug(sourceData)) return applyHardTubePlugCopy(sourceData, fittingUiLocale === "hi" ? "hi" : configuratorLocale);
+      const mrv3Copy = sourceData.category === "valves" ? (getMrv3Content(sourceData.slug, isGermanAuthoredValve ? "de" : configuratorLocale) || getSolenoidContent(sourceData.slug, solenoidPresentationLocale)) : null;
       if (mrv3Copy) {
         const mrv3Data: typeof sourceData = { ...sourceData, ...mrv3Copy, category: "valves" };
         return applyDiaphragmPumpDetailCopy(mrv3Data, configuratorLocale);
       }
-      const hasLocalizedPistonCopy = (sourceData.tubingAuthoredContent === true || sourceData.eaDetailContent === true || sourceData.compactDetailContent === true || sourceData.valvelessDetailContent === true) && sourceData.__locale === configuratorLocale;
+      const hasLocalizedPistonCopy = (sourceData.tubingAuthoredContent === true || sourceData.eaDetailContent === true || sourceData.compactDetailContent === true || sourceData.valvelessDetailContent === true || sourceData.degassingDetailContent === true) && sourceData.__locale === configuratorLocale;
       const isEnglishQuickConnect = sourceData.productTypeId === "quick-connect-fittings" && configuratorLocale === "en";
-      let localizedData = hasLocalizedPistonCopy ? sourceData : isEnglishQuickConnect
+      const hasDraftDegassingCopy = sourceData.degassingDetailContent === true && (
+        (isGermanProduct && sourceData.__locale === "de") || (fittingUiLocale === "hi" && sourceData.__locale === "hi")
+      );
+      let localizedData = hasLocalizedPistonCopy || hasDraftDegassingCopy ? sourceData : isEnglishQuickConnect
         ? localizeQuickConnectDetailData(sourceData)
         : targetLocale
         ? localizeTargetProductDetailData(sourceData, targetLocale, pathname || "")
@@ -1677,9 +1747,10 @@ export default function ProductDetailClient({
         : sourceData;
 
       localizedData = applyFittingProductCopy(sourceData, localizedData, configuratorLocale);
-      localizedData = applyPdm5LocaleCopy(sourceData, localizedData, configuratorLocale);
-      localizedData = applyAbdLocaleCopy(sourceData, localizedData, configuratorLocale);
-      if (isProbeDetailData(sourceData)) localizedData = applyProbeDetailCopy(localizedData, configuratorLocale);
+      const controlLocale = isGermanControl ? "de" : isItalianControl ? "it" : isHindiControl ? "hi" : configuratorLocale;
+      localizedData = applyPdm5LocaleCopy(sourceData, localizedData, controlLocale);
+      localizedData = applyAbdLocaleCopy(sourceData, localizedData, controlLocale);
+      if (isProbeDetailData(sourceData)) localizedData = applyProbeDetailCopy(localizedData, probePresentationLocale);
       // Fitting identities are catalog keys, never sentences to translate.
       // In particular, the generic English prose adapter may add a full stop.
       if (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") {
@@ -1687,7 +1758,7 @@ export default function ProductDetailClient({
           if (sourceData[key] !== undefined) localizedData[key] = sourceData[key];
         }
       }
-      localizedData = { ...localizedData, ...getAbdGalleryData(sourceData.slug, configuratorLocale) };
+      localizedData = { ...localizedData, ...getAbdGalleryData(sourceData.slug, controlLocale) };
 
       if (String(sourceData.category) === "tubing") {
         localizedData = { ...localizedData, ...getTubingGalleryData(sourceData.slug, configuratorLocale) };
@@ -1722,7 +1793,7 @@ export default function ProductDetailClient({
         for (const key of ["breadcrumbLabel", "breadcrumbCategoryLabel", "breadcrumbCategoryHref", "breadcrumbSeriesLabel", "breadcrumbSeriesHref", "detailHref", "selectionHref"]) {
           localizedData[key] = sourceData[key];
         }
-        localizedData = applyHpValveDetailCopy(localizedData, configuratorLocale);
+        localizedData = applyHpValveDetailCopy(localizedData, isGermanAuthoredValve ? "de" : configuratorLocale);
       }
 
       // Diaphragm routes already supply localized breadcrumb labels and links.
@@ -1730,17 +1801,19 @@ export default function ProductDetailClient({
         localizedData = { ...localizedData, breadcrumbs: sourceData.breadcrumbs };
       }
 
-      return applyDiaphragmPumpGuideSpecs(applyDiaphragmPumpDetailCopy(
+      const adapted = applyDiaphragmPumpGuideSpecs(applyDiaphragmPumpDetailCopy(
         applyPipettingPumpFaq(applyPipettingPumpIntroduction(applySyringePumpDetailCopy(applyValvelessEnglishMaterialNames(localizedData, configuratorLocale), configuratorLocale), configuratorLocale), configuratorLocale),
         configuratorLocale,
       ), configuratorLocale);
+      return isHindiDiaphragm ? localizeHindiDiaphragmData(adapted) : isItalianDiaphragm ? localizeItalianDiaphragmData(adapted) : isGermanDiaphragm ? localizeGermanDiaphragmData(adapted) : adapted;
     },
-    [configuratorLocale, isEnglish, pathname, sourceData, targetLocale]
+    [configuratorLocale, fittingUiLocale, isEnglish, isGermanAssembly, isGermanControl, isGermanDiaphragm, isGermanAuthoredValve, isGermanProduct, isGermanPipetting, isGermanSyringe, isGermanTubing, isGermanValveless, isHindiTubing, isHindiDiaphragm, isHindiMrv3, isHindiSolenoid, isHindiHp, isHindiInstrumentPump, isHindiValveless, isHindiControl, isItalianAuthoredValve, isItalianControl, isItalianDiaphragm, isItalianPipetting, isItalianSyringe, isItalianTubing, isItalianValveless, pathname, probePresentationLocale, solenoidPresentationLocale, sourceData, targetLocale]
   );
+  const fittingSpecs = data.specs;
   const hasAuthoredPistonCopy = sourceData.eaDetailContent === true || sourceData.compactDetailContent === true;
   const useAuthoredPistonCopy = hasAuthoredPistonCopy &&
     sourceData.__locale === configuratorLocale;
-  const useAuthoredValvelessCopy = sourceData.valvelessDetailContent === true && sourceData.__locale === configuratorLocale;
+  const useAuthoredValvelessCopy = isGermanValveless || isItalianValveless || isHindiValveless || (sourceData.valvelessDetailContent === true && sourceData.__locale === configuratorLocale);
   const rawApplicationDetails = (hasAuthoredPistonCopy && !useAuthoredPistonCopy
     ? undefined
     : data.applicationDetails) as
@@ -1764,17 +1837,17 @@ export default function ProductDetailClient({
     : null;
   const diaphragmCategoryCopy = getDiaphragmPumpCategoryCopy(configuratorLocale);
   const datasheet = getDetailDatasheet(sourceData, configuratorLocale);
-  const workspaceCopy = getSelectionWorkspaceCopy(configuratorLocale);
+  const workspaceCopy = getSelectionWorkspaceCopy(fittingUiLocale);
   const isPistonPumpCustomerCategoryPage = customerCategoryMode === "piston-pump" ||
     (customerCategoryMode === "piston-pump-zh" && configuratorLocale === "zh");
   const probeGuide = useMemo(() => isProbeDetailData(sourceData)
-    ? getLocalizedProbeGuide(sourceData.slug, configuratorLocale)
-    : null, [sourceData, configuratorLocale]);
+    ? getLocalizedProbeGuide(sourceData.slug, probePresentationLocale)
+    : null, [sourceData, probePresentationLocale]);
   const isProbeCustomerCategoryPage = Boolean(probeGuide);
   const isDiaphragmPumpCustomerCategoryPage = customerCategoryMode === "diaphragm-pump";
   const isInstrumentCustomerCategoryPage = customerCategoryMode === "instrument-product" ||
     (customerCategoryMode === "instrument-product-zh" && configuratorLocale === "zh");
-  const diaphragmGuideCopy = getDiaphragmPumpGuideCopy(configuratorLocale);
+  const diaphragmGuideCopy = getDiaphragmPumpGuideCopy(isHindiDiaphragm ? "hi" : isItalianDiaphragm ? "it" : isGermanDiaphragm ? "de" : configuratorLocale);
   const actionDatasheet = datasheet;
   const hasResourceDownloads = configuratorLocale !== "zh";
   // Piston pumps and localized fittings follow the Chinese information layout:
@@ -1832,16 +1905,20 @@ export default function ProductDetailClient({
       data.resources?.drawing2dUrl),
   );
   const drawingDocumentUrl = drawingPreviewUrl.split("#", 1)[0];
+  const hasDrawingPreview = drawingDocumentUrl.length > 0;
+  const germanContent = useMemo(
+    () => resolveGermanDrawingFaq(activeGermanDetail, hasDrawingPreview),
+    [activeGermanDetail, hasDrawingPreview],
+  );
+  const detailFaqs = (germanContent ?? draftDetail)?.faqs ?? data.faqs;
   const isCustomProduct =
     ((data.mrv3AuthoredContent || data.solenoidAuthoredContent) && isCustomInquiryMode(data)) || isDiaphragmPage || isCustomProductCategory(pathname, data);
-  const customProductCopy =
+  const customProductCopy = isHindiMrv3 || isHindiSolenoid || isHindiHp || isHindiValveless ? { notice: "ज़रूरत के अनुसार कॉन्फ़िगर किया जाने वाला उत्पाद", contact: "हमसे संपर्क करें" } : isItalianAuthoredValve ? { notice: "Prodotto configurato su richiesta", contact: "Contattaci" } : isGermanAuthoredValve || isGermanValveless || isGermanSyringe || isGermanPipetting ? CUSTOM_PRODUCT_NOTICE_COPY.de :
     CUSTOM_PRODUCT_NOTICE_COPY[
       configuratorLocale as keyof typeof CUSTOM_PRODUCT_NOTICE_COPY
     ] || CUSTOM_PRODUCT_NOTICE_COPY.zh;
-  const localizedContactHref = localizeInternalHref(
-    "/contact",
-    localePrefix,
-  );
+  const contactHref = localizeInternalHref("/contact", localePrefix);
+  const localizedContactHref = draftDetail ? draftDetailLink(contactHref).href : getDraftHrefForEnglish(contactHref, isGermanProduct ? "de" : undefined);
 
 
 // ===== FOREACH TARGET PRODUCT DISPLAY TITLE START =====
@@ -1851,17 +1928,20 @@ export default function ProductDetailClient({
    * - es / fr / ko / ru 可使用专用完整标题；
    * - 不改变型号选择区域的数据。
    */
-  const diaphragmCopy = getDiaphragmPumpCopy(data, configuratorLocale);
-  const reviewedIntroductionEn = configuratorLocale === "en" &&
+  const sourceDiaphragmCopy = getDiaphragmPumpCopy(data, configuratorLocale);
+  const diaphragmCopy = isHindiDiaphragm ? translateHindiDiaphragmCopy(sourceDiaphragmCopy) : isItalianDiaphragm ? translateItalianDiaphragmCopy(sourceDiaphragmCopy) : isGermanDiaphragm ? translateGermanDiaphragmCopy(sourceDiaphragmCopy) : sourceDiaphragmCopy;
+  const reviewedIntroductionEn = !isGermanProbe && !isItalianProbe && !isHindiProbe && !isGermanControl && !isItalianControl && !isHindiControl && configuratorLocale === "en" &&
     ["probes", "control"].includes(String(data.category || ""))
     ? productDetailIntrosEn[String(data.slug || "")]
     : undefined;
+  const reviewedProbe = isHindiProbe ? hindiProbeDetailBody[sourceData.slug] : isGermanProbe ? germanProbeDetailBody[sourceData.slug] : isItalianProbe ? italianProbeDetailBody[sourceData.slug] : undefined;
+  const reviewedIntroduction = reviewedProbe || reviewedIntroductionEn;
   const probeControlDetailCopy = reviewedIntroductionEn ? probeControlDetailCopyEn[String(data.slug || "")] : undefined;
   const controlDetailH1 = String(data.category) === "control"
-    ? getControlModuleDetailHeading(String(data.slug || ""), configuratorLocale)
+    ? getControlModuleDetailHeading(String(data.slug || ""), isItalianControl ? "it" : isHindiControl ? "hi" : configuratorLocale)
     : undefined;
   const displayProductTitle =
-    probeControlDetailCopy?.h1 || reviewedIntroductionEn?.title ||
+    reviewedProbe?.title || probeControlDetailCopy?.h1 || reviewedIntroductionEn?.title ||
     ((data.tubingAuthoredContent || data.mrv3AuthoredContent || data.solenoidAuthoredContent || data.smtp2Variant || data.smtp4AuthoredContent) ? data.h1Title : undefined) ||
     diaphragmCopy?.title ||
     (useAuthoredPistonCopy || useAuthoredValvelessCopy ? String(data.model || "") : getScopedProductDisplayTitle(
@@ -1875,16 +1955,24 @@ export default function ProductDetailClient({
   const syringeDetailH1 = pathname?.includes("/products/pumps/syringe-pumps/")
     ? syringePumpCardsLocales[getProductPageLocale(pathname)]?.[String(data.slug || "")]?.heading
     : undefined;
-  const valveDetailH1 = pathname?.includes("/products/valves/")
-    ? getValveDetailHeading(String(data.slug || ""), configuratorLocale)
-    : undefined;
+  const valveDetailH1 = isHindiMrv3 || isHindiSolenoid || isHindiHp ? sourceData.h1Title
+    : pathname?.includes("/products/valves/")
+      ? getValveDetailHeading(String(data.slug || ""), isItalianAuthoredValve ? "it" : configuratorLocale)
+      : undefined;
   const inheritedDetailH1 = valveDetailH1 || syringeDetailH1;
+  const fittingModelTopic = getFittingModelTopic(data, fittingUiLocale);
+  const fittingHeading = fittingModelTopic?.title ||
+    (data.productTypeId === "degassing-modules" ? data.h1Title : undefined);
+  const originalHeading = fittingHeading || (isHindiTubing || isHindiAssembly || isHindiInstrumentPump ? hindiDetail?.title : undefined) || (isItalianSyringe || isItalianTubing || isItalianAssembly ? italianDetail?.title : undefined) || formatProductHeading(controlDetailH1 || tubingDetailH1 || (inheritedDetailH1 ? `${data.solenoidAuthoredContent ? "" : "FOREACH "}${inheritedDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle));
+  const showsModelAsHeading = [data.model, data.foreachModel, data.modelDisplay, data.displayModel, data.modelCode]
+    .some(model => model && String(model).trim() === originalHeading);
+  const productHeading = germanContent && (isGermanControl || isGermanTubing || !showsModelAsHeading) ? germanContent.title : originalHeading;
   // ===== FOREACH TARGET PRODUCT DISPLAY TITLE END =====
   const structuredData = useMemo(
-    () => buildProductPageStructuredData(data, pathname || "/"),
-    [data, pathname]
+    () => buildProductPageStructuredData(data, pathname || "/", germanContent, draftDetail, localizedDetail?.locale),
+    [data, pathname, germanContent, draftDetail, localizedDetail?.locale]
   );
-  const copy = targetLocale
+  const copy = isGermanProduct ? germanProductDetailCopy : targetLocale
     ? HARD_TUBE_DETAIL_COPY[targetLocale]
     : isEnglish
     ? {
@@ -2026,9 +2114,23 @@ export default function ProductDetailClient({
             : displayProductTitle,
         },
       ]);
-  const productBreadcrumbItems = getFittingDetailBreadcrumbs(pathname, configuratorLocale, String(data.model || data.foreachModel || data.slug || "")) || (isQuickConnectFitting ? data.breadcrumbs : sourceData.breadcrumbs) || getTubingDetailBreadcrumbs(pathname || "", configuratorLocale) || getProbeControlBreadcrumbsEn(pathname) || getChineseProductPageBreadcrumbs(
-    pathname, configuratorLocale, legacyProductBreadcrumbItems.at(-1)?.label,
-  ) || legacyProductBreadcrumbItems;
+  const productBreadcrumbItems = isGermanProduct
+    ? legacyProductBreadcrumbItems.map(item => {
+      if ((isGermanDiaphragm || isGermanAuthoredValve || isGermanValveless || isGermanSyringe || isGermanPipetting || isGermanAssembly) && item.href) {
+        const link = getGermanDraftLink(item.href);
+        return { ...item, ...link, label: germanProductBreadcrumbLabel(item.label) + (link.hrefLang === "en" ? germanEnglishFallbackSuffix : "") };
+      }
+      return {
+        ...item,
+        label: isGermanDiaphragm ? germanDiaphragmText(germanProductBreadcrumbLabel(item.label)) : germanProductBreadcrumbLabel(item.label),
+        href: item.href ? getDraftHrefForEnglish(item.href, "de") : item.href,
+      };
+    })
+    : draftDetail ? (((isItalianProbe || isHindiProbe || isItalianControl || isHindiControl) ? getProbeControlBreadcrumbsEn(pathname) : undefined) ?? legacyProductBreadcrumbItems).map(item => ({
+        ...item,
+        label: draftDetailText(item.label),
+        ...(item.href ? draftDetailLink(item.href) : {}),
+      })) : legacyProductBreadcrumbItems;
   if (String(data.category) === "control" && data.slug === "abd-air-bubble-detector") {
     productBreadcrumbItems[productBreadcrumbItems.length - 1] = { ...productBreadcrumbItems[productBreadcrumbItems.length - 1], label: "ABD" };
   }
@@ -2055,7 +2157,7 @@ export default function ProductDetailClient({
       sourceData.specSeriesKey ||
       "",
   ).trim();
-  const analyticsLocale = configuratorLocale;
+  const analyticsLocale = fittingUiLocale;
   const productViewKey = analyticsProductId
     ? `${pathname || "/"}|${analyticsProductId}`
     : "";
@@ -2118,11 +2220,11 @@ const showModelPreview =
   !showFlatProductResources;
 const [solenoidVariant, setSolenoidVariant] = useState(0);
   const instrumentResourceModel: FittingModelSource = data.solenoidAuthoredContent
-    ? { kind: "custom", render: active => <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="3d"
+    ? { kind: "custom", render: active => <SolenoidAssets slug={data.slug} locale={solenoidPresentationLocale} mode="3d"
         active={active} variant={solenoidVariant} onVariant={setSolenoidVariant} externalResourceTabs /> }
     : cadAssets
       ? { kind: "cad", props: { modelId: cadAssets.viewerId, title: cadAssets.model || data.displayModel || data.slug,
-          drawingUrl: drawingPreviewUrl || undefined, headMaterial: pistonCadAssets?.headMaterial, locale: configuratorLocale } }
+          drawingUrl: drawingPreviewUrl || undefined, headMaterial: pistonCadAssets?.headMaterial, locale: pistonPresentationLocale } }
       : model3dUrl ? { kind: "file", slug: data.slug, model: data.displayModel || data.model, url: model3dUrl } : null;
   const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
   const [cadConfigurationId, setCadConfigurationId] = useState<string | null>(null);
@@ -2163,7 +2265,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     setEaInquiryNeedsDrawing(false);
   }, [sourceData.slug, isEaInquiryEnabled]);
   const [flangedNeedDrawing, setFlangedNeedDrawing] = useState(false);
-  const flangedConfigurationSummary = flangedTubingChoice ? localizedAssemblySummary(flangedTubingChoice, configuratorLocale) : "";
+  const flangedConfigurationSummary = flangedTubingChoice ? localizedAssemblySummary(flangedTubingChoice, assemblyPresentationLocale) : "";
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [activeThumb, setActiveThumb] = useState(0);
   const thumbViewportRef = useRef<HTMLDivElement | null>(null);
@@ -2181,13 +2283,14 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   const isPeekTubingConfiguratorEnabled = isPeekTubingDetailData(data);
   const isPfaTubingConfiguratorEnabled = isPfaTubingDetailData(data);
   const isTubingConfiguratorEnabled = isPvcTubingConfiguratorEnabled || isTpuTubingConfiguratorEnabled || isFepTubingConfiguratorEnabled || isPtfeTubingConfiguratorEnabled || isPeekTubingConfiguratorEnabled || isPfaTubingConfiguratorEnabled;
+  const useEnglishTubingConfigurator = isLocalizedDetail || isHindiTubing;
   const tubingConfigurator =
-    isPvcTubingConfiguratorEnabled ? (isLocalizedDetail ? pvcTubingConfiguratorEn : pvcTubingConfigurator)
-     : isTpuTubingConfiguratorEnabled ? (isLocalizedDetail ? tpuTubingConfiguratorEn : tpuTubingConfigurator)
-     : isFepTubingConfiguratorEnabled ? (isLocalizedDetail ? fepTubingConfiguratorEn : fepTubingConfigurator)
-     : isPtfeTubingConfiguratorEnabled ? (isLocalizedDetail ? ptfeTubingConfiguratorEn : ptfeTubingConfigurator)
-     : isPeekTubingConfiguratorEnabled ? (isLocalizedDetail ? peekTubingConfiguratorEn : peekTubingConfigurator)
-     : isPfaTubingConfiguratorEnabled ? (isLocalizedDetail ? pfaTubingConfiguratorEn : pfaTubingConfigurator)
+    isPvcTubingConfiguratorEnabled ? (useEnglishTubingConfigurator ? pvcTubingConfiguratorEn : pvcTubingConfigurator)
+     : isTpuTubingConfiguratorEnabled ? (useEnglishTubingConfigurator ? tpuTubingConfiguratorEn : tpuTubingConfigurator)
+     : isFepTubingConfiguratorEnabled ? (useEnglishTubingConfigurator ? fepTubingConfiguratorEn : fepTubingConfigurator)
+     : isPtfeTubingConfiguratorEnabled ? (useEnglishTubingConfigurator ? ptfeTubingConfiguratorEn : ptfeTubingConfigurator)
+     : isPeekTubingConfiguratorEnabled ? (useEnglishTubingConfigurator ? peekTubingConfiguratorEn : peekTubingConfigurator)
+     : isPfaTubingConfiguratorEnabled ? (useEnglishTubingConfigurator ? pfaTubingConfiguratorEn : pfaTubingConfigurator)
     : undefined;
   const [tubingConfigurations, updateTubingConfigurations] = useTubingConfigurations(
     isTubingConfiguratorEnabled ? String(sourceData.slug) : null, tubingConfigurator?.variants,
@@ -2197,14 +2300,15 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
   const detailModelConfigurator = useMemo(
     () => data.solenoidAuthoredContent
-      ? getSolenoidConfigurator(String(data.slug || ""), configuratorLocale)
+      ? getSolenoidConfigurator(String(data.slug || ""), solenoidPresentationLocale)
       : isDiaphragmPage
-        ? getDiaphragmPumpConfigurator(String(data.slug || ""), configuratorLocale)
+        ? getDiaphragmPumpConfigurator(String(data.slug || ""), isHindiDiaphragm ? "hi" : isItalianDiaphragm ? "it" : isGermanDiaphragm ? "de" : configuratorLocale)
         : isValvelessPumpDetailData(data)
-          ? getValvelessPumpConfigurator(String(data.slug || ""), configuratorLocale)
+          ? getValvelessPumpConfigurator(String(data.slug || ""), isHindiValveless ? "hi" : isItalianValveless ? "it" : isGermanValveless ? "de" : configuratorLocale)
           : undefined,
-    [data.solenoidAuthoredContent, data.productTypeId, data.slug, configuratorLocale, isDiaphragmPage],
+    [data.solenoidAuthoredContent, data.productTypeId, data.slug, configuratorLocale, isDiaphragmPage, isGermanDiaphragm, isGermanValveless, isHindiDiaphragm, isHindiValveless, isItalianAssembly, isItalianDiaphragm, isItalianValveless, solenoidPresentationLocale],
   );
+  const detailModelPresentationLocale = isHindiValveless || isHindiDiaphragm ? "hi" : isItalianDiaphragm || isItalianValveless ? "it" : isGermanDiaphragm || isGermanValveless ? "de" : solenoidPresentationLocale;
   const [openDetailModelConfiguratorId, setOpenDetailModelConfiguratorId] = useState<string | null>(null);
   const [detailConfigurations, updateDetailConfigurations] = useDetailConfigurations(detailModelConfigurator?.id ?? null, detailModelConfigurator?.variants);
   const [editingDetailVariantId, setEditingDetailVariantId] = useState<string | null>(null);
@@ -2218,7 +2322,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     variant => variant.id === (newDetailConfiguration ? null : editingDetailVariantId ?? detailConfigurations.activeId),
   ) ?? null;
   const isDetailModelConfiguratorEnabled = Boolean(detailModelConfigurator);
-  const hardTubeAccessoryConfig = getHardTubeAccessoryConfig(data, configuratorLocale);
+  const baseHardTubeAccessoryConfig = getHardTubeAccessoryConfig(data, localizedDetail?.locale ?? configuratorLocale);
+  const hardTubeAccessoryConfig = baseHardTubeAccessoryConfig && draftDetail
+    ? { ...baseHardTubeAccessoryConfig, productName: draftDetail.title }
+    : baseHardTubeAccessoryConfig;
   const hardTubeCopy = getHardTubeAccessoryCopy(configuratorLocale);
   const isHardTubeConfiguratorEnabled = Boolean(hardTubeAccessoryConfig);
   const [isHardTubeConfiguratorOpen, setIsHardTubeConfiguratorOpen] = useState(false);
@@ -2229,7 +2336,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   const hardTubeAccessoryChoice = hardTubeSelection?.productCode === hardTubeAccessoryConfig?.productCode
     && (hardTubeSelection?.choice === "none" || getHardTubeAccessory(hardTubeAccessoryConfig, hardTubeSelection?.choice ?? null))
     ? hardTubeSelection?.choice ?? null : null;
-  const quickConnectPairConfig = getQuickConnectPairConfig(data, configuratorLocale);
+  const quickConnectPairConfig = getQuickConnectPairConfig(data, fittingUiLocale === "hi" ? "hi" : configuratorLocale);
   const isQuickConnectPairingEnabled = Boolean(quickConnectPairConfig);
   const useSharedQuickConnectSelector = isQuickConnectPairingEnabled;
   const [isQuickConnectPairConfiguratorOpen, setIsQuickConnectPairConfiguratorOpen] = useState(false);
@@ -2259,9 +2366,12 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     return () => window.cancelAnimationFrame(frame);
   }, [isAssemblyConfigurator, isQuickConnectPairingEnabled, pathname]);
 
-  const luerPairConfig = getLuerPairConfig(data, configuratorLocale);
+  const luerPairConfig = useMemo(
+    () => getLuerPairConfig({ model: data.model, foreachModel: data.foreachModel, productTypeId: data.productTypeId }, configuratorLocale),
+    [data.model, data.foreachModel, data.productTypeId, configuratorLocale],
+  );
   const isLuerPairingEnabled = Boolean(luerPairConfig);
-  const [luerPairSelection, setLuerPairSelection] = useState<LuerPairChoice | null>(() => luerPairConfig?.defaultChoice || null);
+  const [luerPairSelection, setLuerPairSelection] = useState<LuerPairChoice | null>(luerPairConfig?.defaultChoice ?? null);
   const [showLuerAssembly, setShowLuerAssembly] = useState(true);
   const [isLuerPairSelectorOpen, setIsLuerPairSelectorOpen] = useState(false);
   const [luerDrawingRequest, setLuerDrawingRequest] = useState(false);
@@ -2274,7 +2384,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       : [{ role: "base", label: "零件", model: data.model || data.foreachModel || data.slug, url: drawingPreviewUrl }];
   const fittingResourceModel: FittingModelSource = quickConnectCadAssets
     ? { kind: "cad", props: { modelId: quickConnectCadAssets.viewerId, title: quickConnectCadAssets.model,
-        productFamily: "quick-connect", fittingProduct: data.slug, quickConnectMate: quickConnectViewerMate, locale: configuratorLocale } }
+        productFamily: "quick-connect", fittingProduct: data.slug, quickConnectMate: quickConnectViewerMate, locale: localizedDetail?.locale ?? configuratorLocale } }
     : luerCadAssets
       ? { kind: "luer", parts: luerSelectedParts || [luerCadAssets] }
       : fittingCadAssets || standaloneFittingCadAssets
@@ -2282,7 +2392,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             title: (fittingCadAssets || standaloneFittingCadAssets)!.model, productFamily: "fitting",
             fittingFinish: (fittingCadAssets || standaloneFittingCadAssets)!.fittingFinish,
             fittingProduct: fittingCadAssets?.fittingProduct || data.slug,
-            fittingAccessory: fittingCadAssets ? hardTubeAccessoryChoice ?? undefined : undefined, locale: configuratorLocale } }
+            fittingAccessory: fittingCadAssets ? hardTubeAccessoryChoice ?? undefined : undefined, locale: hindiDetail ? "hi" : configuratorLocale } }
         : model3dUrl ? { kind: "file", slug: data.slug, model: data.model, url: model3dUrl } : null;
   const [isQuickConnectSeriesSelectorOpen, setIsQuickConnectSeriesSelectorOpen] = useState(false);
   const [quickConnectSeriesModelSelection, setQuickConnectSeriesModelSelection] = useState<string | null>(null);
@@ -2350,9 +2460,11 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     && !isTubingConfiguratorEnabled && !isAssemblyConfigurator && !isAssemblyCustomerCategoryPage && !isProbeCustomerCategoryPage
     && !isQuickConnectSeriesDetail && isCustomProduct && Boolean(isCadRequestAvailable || actionDatasheet);
   const isAdditionalConfigurationWorkspace = isFittingCombinationWorkspace || isFixedConfigurationWorkspace || isInquiryResourceWorkspace;
-  const usesCompactConfigurationLayout = Boolean(instrumentInquiryFamily) || isAdditionalConfigurationWorkspace || isEaInquiryEnabled || isDetailModelConfiguratorEnabled;
+  const hasConfigurationActions = Boolean(instrumentInquiryFamily) || isAdditionalConfigurationWorkspace
+    || isEaInquiryEnabled || isDetailModelConfiguratorEnabled || isTubingConfiguratorEnabled || isAssemblyConfigurator
+    || isProbeCustomerCategoryPage || (data.showConfigurator && !isCustomProduct);
   const hasStandaloneProductActions = !instrumentInquiryFamily && !isAssemblyConfigurator && !isTubingConfiguratorEnabled;
-  const workspacePresentation = getSelectionWorkspacePresentation(configuratorLocale,
+  const workspacePresentation = getSelectionWorkspacePresentation(fittingUiLocale,
     isFittingCombinationWorkspace ? "fittings"
       : isInquiryResourceWorkspace || isProbeCustomerCategoryPage ? "custom"
         : isQuickConnectSeriesDetail || !isCadRequestAvailable ? "model" : "support");
@@ -2371,7 +2483,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   const detailCartSourceType = isTubingConfiguratorEnabled ? "tubing-selection" : "pump-selection";
   // Only a concrete product can be the default. Series and custom products still require selection.
   const isDefaultInquiryEnabled = isFittingCombinationWorkspace || isFixedConfigurationWorkspace;
-  const defaultInquiryCopy = getDefaultInquiryCopy(configuratorLocale, isFittingCombinationWorkspace);
+  const defaultInquiryCopy = getDefaultInquiryCopy(fittingUiLocale, isFittingCombinationWorkspace);
   const defaultInquiryIdentity = { sourceType: detailCartSourceType,
     productCode: getDetailCartProductCode(), foreachModel: String(data.modelDisplay || data.displayModel || baseModel).trim() } as const;
   const defaultInquiryCartItem = findDefaultInquiryCartItem(cartItems, defaultInquiryIdentity);
@@ -2396,7 +2508,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   }
   const baseConfiguration: CadRequestConfiguration = { id: "current", model: baseModel, drawingTypes: modelDrawings, rows: [
     ...(String(data.productCode || "").trim() ? [[workspaceCopy.productCode, String(data.productCode)] as [string, string]] : []),
-    ...data.specs.filter(row => row.value !== baseModel && row.value !== String(data.productCode || "")).slice(0, 6)
+    ...fittingSpecs.filter(row => row.value !== baseModel && row.value !== String(data.productCode || "")).slice(0, 6)
       .map(row => [row.label, row.value] as [string, string]),
   ] };
   function presentFittingConfiguration(id: string, value: FittingConfigurationChoice, drawingTypes?: CadDrawingType[]): CadRequestConfiguration {
@@ -2404,7 +2516,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     if (value.kind === "hard-tube") {
       const accessory = getHardTubeAccessory(hardTubeAccessoryConfig, value.choice);
       if (accessory) rows.push([getHardTubeAccessoryKindLabel(accessory.kind, configuratorLocale),
-        `${accessory.model} · ${workspaceCopy.productCode}: ${hardTubeProductCodeText(accessory, hardTubeCopy.pendingCode)} · ${describeHardTubeAccessory(accessory, configuratorLocale)}`]);
+        `${accessory.model} · ${workspaceCopy.productCode}: ${hardTubeProductCodeText(accessory, hardTubeCopy.pendingCode)} · ${describeHardTubeAccessory(accessory, localizedDetail?.locale ?? configuratorLocale)}`]);
       else rows.push([hardTubeCopy.pairing, hardTubeCopy.fittingOnly]);
     } else if (value.kind === "quick-connect") {
       const part = quickConnectPairConfig?.options.find(item => item.model === value.choice);
@@ -2432,7 +2544,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   };
   const cadConfigurations = detailModelConfigurator ? detailConfigurations.variantIds.flatMap(id => {
     const variant = detailModelConfigurator.variants.find(item => item.id === id);
-    return variant ? [{ ...variantCadConfiguration(detailModelConfigurator, variant, configuratorLocale), drawingTypes: normalizeDrawingTypes(detailConfigurations.drawingTypes?.[id]) }] : [];
+    return variant ? [{ ...variantCadConfiguration(detailModelConfigurator, variant, detailModelPresentationLocale), drawingTypes: normalizeDrawingTypes(detailConfigurations.drawingTypes?.[id]) }] : [];
   }) : isDefaultInquiryEnabled ? [{ ...defaultInquiryConfiguration, label: defaultInquiryCopy.defaultLabel },
     ...workspaceConfigurations.map((item, index) => ({ ...item, label: workspaceCopy.configuration(index + 1) }))] : additionalConfigurations;
 
@@ -2522,7 +2634,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     [sourceData, configuratorLocale],
   );
   const productImageAlt = String(
-    getFittingMainImageAlt(data, configuratorLocale) ||
+    draftDetail?.imageAlt || germanContent?.imageAlt ||
+      (germanContent ? `${data.model} – ${germanContent.title}` : "") ||
+      getFittingMainImageAlt(data, configuratorLocale) ||
       hardTubeSeo?.imageAlt ||
       (data as any).imageAltEn ||
       (data as any).mainImageAlt ||
@@ -2540,28 +2654,35 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           .trim(),
       )
     : [];
-  const galleryViewLabels = [copy.frontView, copy.sideView, copy.portDetail];
+  const galleryViewLabels = [copy.frontView, copy.sideView, copy.portDetail].map(label => draftDetail ? draftDetailText(label) : label);
   const getProductImageAlt = (index: number) => {
+    if (germanContent) {
+      const familyPhotoAlt = getThreadToBarbedFittingImageAlt(realImages[index], "de");
+      return familyPhotoAlt ?? (index === 0
+        ? productImageAlt
+        : `${productImageAlt} – ${galleryViewLabels[index] || `Ansicht ${index + 1}`}`);
+    }
+    const localizeImageAlt = (alt: string) => localizedDetail ? draftDetailText(alt) : alt;
     const barbedImageAlt = getBarbedFittingImageAlt(realImages[index], configuratorLocale);
     if (barbedImageAlt) {
-      return barbedImageAlt;
+      return localizeImageAlt(barbedImageAlt);
     }
     const threadToBarbedImageAlt = getThreadToBarbedFittingImageAlt(realImages[index], configuratorLocale);
     if (threadToBarbedImageAlt) {
-      return threadToBarbedImageAlt;
+      return localizeImageAlt(threadToBarbedImageAlt);
     }
     const femaleThreadAdapterImageAlt = getFemaleThreadAdapterImageAlt(realImages[index], configuratorLocale);
     if (femaleThreadAdapterImageAlt) {
-      return femaleThreadAdapterImageAlt;
+      return localizeImageAlt(femaleThreadAdapterImageAlt);
     }
     const bulkheadBarbedImageAlt = getBulkheadBarbedFittingImageAlt(realImages[index], configuratorLocale);
     if (bulkheadBarbedImageAlt) {
-      return bulkheadBarbedImageAlt;
+      return localizeImageAlt(bulkheadBarbedImageAlt);
     }
     const sharedPhotoAlt = getSharedFittingPhotoAlt(sourceData.sharedFittingPhotoSources, realImages[index], configuratorLocale);
-    if (sharedPhotoAlt) return sharedPhotoAlt;
+    if (sharedPhotoAlt) return localizeImageAlt(sharedPhotoAlt);
     if (realImages[index] === quickConnectSupplementaryImage) {
-      return getQuickConnectSupplementaryImageAlt(configuratorLocale);
+      return localizeImageAlt(getQuickConnectSupplementaryImageAlt(configuratorLocale));
     }
     if (index === 0) {
       return productImageAlt;
@@ -2570,7 +2691,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
     const explicitAlt = additionalImageAlts[index - 1];
 
     if (explicitAlt) {
-      return explicitAlt;
+      return localizeImageAlt(explicitAlt);
     }
 
     const viewLabel = galleryViewLabels[index] || String(index + 1);
@@ -3224,8 +3345,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   async function addFlangedTubingChoice(value: FlangedConfiguration) {
     const record = snapshotFlangedConfiguration(value);
     const { prepareFlangedPdfAttachment } = await import("@/components/products/tubing-assemblies/flanged-tubing-attachments");
-    const attachment = await prepareFlangedPdfAttachment(record, configuratorLocale);
-    addItem(createFlangedConfigurationCartItem(record, attachment, pathname || undefined, data.mainImage || undefined, configuratorLocale));
+    const attachment = await prepareFlangedPdfAttachment(record, assemblyPresentationLocale);
+    addItem(createFlangedConfigurationCartItem(record, attachment, isGermanAssembly ? getGermanDraftLink(pathname).href : isItalianAssembly ? getItalianDraftLink(pathname).href : isHindiAssembly ? getHindiDraftLink(pathname).href : pathname || undefined, data.mainImage || undefined, assemblyPresentationLocale));
     setFlangedTubingChoice(record.choice);
   }
 
@@ -3286,7 +3407,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       setIsEaInquiryOpen(false);
       if (target && target.slug !== sourceSlug) {
         saveEaPumpInquiryDraft(target.slug, configuration, quantity, drawings);
-        router.push(localizeInternalHref(target.detailHref, localePrefix));
+        router.push((isGermanPiston || pistonPresentationLocale === "hi") ? pistonHref(target.detailHref, pistonPresentationLocale) : localizeInternalHref(target.detailHref, localePrefix));
       }
     }
   }
@@ -3303,9 +3424,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       const target = getEaPumpInquiryTarget(configuration.choice);
       const series = getPistonInquirySeries(configuration.choice);
       addItem({ ...createDetailCartItem(drawings.length > 0, undefined, drawings), id,
-        productCode: target?.productId || "", productName: pistonText(`${series} 柱塞泵`, configuratorLocale),
-        foreachModel: pistonText(target ? `${target.model}（配置询价）` : `${series} ${eaPumpInquiryCapacityLabel(configuration)}（配置询价）`, configuratorLocale),
-        detailHref: target ? localizeInternalHref(target.detailHref, localePrefix) : undefined, imagePath: target?.imagePath || "",
+        productCode: target?.productId || "", productName: pistonText(`${series} 柱塞泵`, pistonPresentationLocale),
+        foreachModel: pistonText(target ? `${target.model}（配置询价）` : `${series} ${eaPumpInquiryCapacityLabel(configuration)}（配置询价）`, pistonPresentationLocale),
+        detailHref: target ? ((isGermanPiston || pistonPresentationLocale === "hi") ? pistonHref(target.detailHref, pistonPresentationLocale) : localizeInternalHref(target.detailHref, localePrefix)) : undefined, imagePath: target?.imagePath || "",
         quantity, eaPumpConfiguration: configuration });
     }
     setIsEaInquiryOpen(false);
@@ -3315,7 +3436,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
   return (
     fittingView(<div data-product-breadcrumb-shell="true" lang={isAssemblyChineseReview ? "zh-CN" : undefined}>
       {isEaInquiryEnabled && isEaInquiryOpen ? <EaPumpInquiryConfigurator
-        locale={configuratorLocale}
+        locale={pistonPresentationLocale}
         productSlug={sourceData.slug || ""}
         initialValue={isNewEaConfiguration ? null : eaInquiryConfiguration}
         initialQuantity={isNewEaConfiguration ? 1 : currentDetailCartItem?.quantity || eaInquiryQuantity}
@@ -3338,7 +3459,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       {isTubingAssembly && isAssemblyCustomRequestOpen ? (
         <TubingAssemblyCustomRequestModal
           key={analyticsProductId}
-          locale={configuratorLocale === "zh" ? "zh-CN" : configuratorLocale}
+          locale={isHindiAssembly ? "hi" : configuratorLocale === "zh" ? "zh-CN" : configuratorLocale}
           copyOverride={data.tubingCustomizationCopy}
           productId={analyticsProductId}
           productName={displayProductTitle}
@@ -3350,8 +3471,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
       {probeGuide && isProbeCustomInquiryOpen ? (
         <ProbeCustomInquiryModal
-          key={`${configuratorLocale}:${analyticsProductId}`}
-          locale={configuratorLocale}
+          key={`${probePresentationLocale}:${analyticsProductId}`}
+          locale={probePresentationLocale}
           productId={analyticsProductId}
           productName={displayProductTitle}
           drawingFocus={probeGuide.drawingFocus}
@@ -3362,6 +3483,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       {resourceLocale && isCadRequestOpen ? (
         isEaInquiryEnabled ? <PistonCadRequestModal
           locale={resourceLocale}
+          copyLocale={resourceCopyLocale}
           productSlug={sourceData.slug}
           savedConfigurations={eaConfigurations.configurations}
           initialConfigurationId={cadConfigurationId}
@@ -3374,9 +3496,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           onClose={() => setIsCadRequestOpen(false)}
         /> :
         <CadRequestModal
-          locale={resourceLocale}
+          locale={resourceCopyLocale}
           productName={String(
-            displayProductTitle || data.productName || data.name || "",
+            "",
           ).trim()}
           productSeries={String(
             sourceData.seriesName ||
@@ -3389,7 +3511,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           onDrawingTypesChange={saveCadDrawingTypes}
           initialConfigurationId={cadConfigurationId}
           referenceConfiguration={selectedDetailVariant && detailModelConfigurator
-            ? { ...variantCadConfiguration(detailModelConfigurator, selectedDetailVariant, configuratorLocale), drawingTypes: detailConfigurations.drawingTypes?.[selectedDetailVariant.id] || [] } : baseConfiguration}
+            ? { ...variantCadConfiguration(detailModelConfigurator, selectedDetailVariant, detailModelPresentationLocale), drawingTypes: detailConfigurations.drawingTypes?.[selectedDetailVariant.id] || [] } : baseConfiguration}
           productModel={cadRequestedModel || String(
             sourceData.modelDisplay ||
               sourceData.displayModel ||
@@ -3415,6 +3537,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
         <ProductVariantConfigurator
           key={`${detailModelConfigurator.id}:${openDetailModelConfiguratorId === detailModelConfigurator.id}:${newDetailConfiguration}:${editingDetailVariantId ?? detailConfigurations.activeId}`}
           locale={configuratorLocale}
+          uiLocale={detailModelPresentationLocale === "hi" || detailModelPresentationLocale === "de" || detailModelPresentationLocale === "it" ? detailModelPresentationLocale : undefined}
           open={openDetailModelConfiguratorId === detailModelConfigurator.id}
           config={detailModelConfigurator}
           value={selectedDetailVariant}
@@ -3456,13 +3579,15 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           onConfirm={option => {
             trackConfigurationConfirmed("standalone_fitting");
             setIsStandaloneFittingSelectorOpen(false);
-            if (option.model !== String(data.foreachModel || data.model)) router.push(localizeInternalHref(option.detailHref, localePrefix), {scroll: false});
+            if (option.model !== String(data.foreachModel || data.model)) {
+              router.push(localizeInternalHref(option.detailHref, localePrefix), { scroll: false });
+            }
           }}
         />
       ) : null}
       {isLuerPairSelectorOpen && luerPairConfig ? (
         <LuerPairSelector
-          locale={configuratorLocale}
+          locale={fittingUiLocale}
           key={luerPairConfig.base.model}
           config={luerPairConfig}
           presentation="compact"
@@ -3483,7 +3608,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       ) : null}
       {isQuickConnectPairingEnabled && isQuickConnectPairConfiguratorOpen && quickConnectPairConfig ? (
         <QuickConnectPairSelector
-          locale={configuratorLocale}
+          locale={localizedDetail?.locale ?? configuratorLocale}
           key={quickConnectPairConfig.baseModel}
           open={isQuickConnectPairConfiguratorOpen}
           config={quickConnectPairConfig}
@@ -3515,7 +3640,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
 
 
 <SitePageShell
-      breadcrumbAriaLabel={copy.breadcrumb}
+      breadcrumbAriaLabel={draftDetail ? draftDetailText(copy.breadcrumb) : copy.breadcrumb}
       breadcrumbItems={productBreadcrumbItems}
     >
       <main
@@ -3544,7 +3669,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               onMouseLeave={() => setIsZooming(false)}
               onMouseMove={handleMainImageMove}
             >
-              {luerPairConfig && showLuerAssembly ? <LuerAssemblyPreview locale={configuratorLocale} parts={luerSelectedParts} hero imageOnly assembleCore singleImage={luerPairSelection?.mode === "single"} /> : activeRealImage ? (
+              {luerPairConfig && showLuerAssembly ? <LuerAssemblyPreview locale={fittingUiLocale} parts={luerSelectedParts} hero imageOnly assembleCore singleImage={luerPairSelection?.mode === "single"} /> : activeRealImage ? (
                 <img data-product-main-image="true"
                   src={activeRealImage}
                   alt={getProductImageAlt(activeThumb)}
@@ -3794,12 +3919,14 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           <div className={styles.productInfo}>
             <div className={styles.titleGroup}>
               <h1 className={styles.productModelTitle}>
-                {formatProductHeading(controlDetailH1 || tubingDetailH1 || (inheritedDetailH1 ? `${data.solenoidAuthoredContent ? "" : "FOREACH "}${inheritedDetailH1.replace(/^FOREACH\s+/i, "")}` : displayProductTitle))}
+                {productHeading}
               </h1>
             </div>
 
 
-            {diaphragmCopy?.introductionParagraphs ? (
+            {fittingModelTopic ? (
+              <p className={styles.productDesc}>{fittingModelTopic.description}</p>
+            ) : diaphragmCopy?.introductionParagraphs ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-diaphragm-description="true">
                 {diaphragmCopy.introductionParagraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
               </div>
@@ -3807,9 +3934,9 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-abd-description="true">
                 {data.abdIntroductionParagraphs.map((paragraph: string) => <p key={paragraph}>{paragraph}</p>)}
               </div>
-            ) : reviewedIntroductionEn ? (
+            ) : reviewedIntroduction ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-reviewed-introduction="en">
-                {reviewedIntroductionEn.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+                {reviewedIntroduction.paragraphs.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
               </div>
             ) : Array.isArray(data.pdm5IntroductionParagraphs) ? (
               <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-pdm5-description="true">
@@ -3836,7 +3963,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 {data.valvelessIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
               </div>
             ) : Array.isArray(data.valveIntroductionParagraphs) ? (
-              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-solenoid-description="true">
+              <div className={`${styles.productDesc} ${styles.productDescParagraphs}`} data-solenoid-description="true" data-solenoid-configuration={data.slug}>
                 {data.valveIntroductionParagraphs.map((paragraph: string, index: number) => <p key={index}>{paragraph}</p>)}
               </div>
             ) : Array.isArray(data.mrv3IntroductionParagraphs) ? (
@@ -3854,13 +3981,13 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 ))}
               </div>
             ) : (
-              <p className={styles.productDesc}>
-                {(data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : "")}
+              <p className={styles.productDesc} lang={isGermanProduct && !germanContent ? "en" : undefined}>
+                {(germanContent ?? draftDetail)?.description ?? ((data as any).description || (Array.isArray(data.advantages) ? data.advantages.join("") : ""))}
                 {luerPairConfig?.allowCoreAssembly && luerPairConfig.baseRole === "core" ? fittingText(`搭配 LPT 锁圈，可组成${luerPairConfig.base.family === "LRL" ? "旋转" : "固定"}锁圈公鲁尔接头。`, configuratorLocale) : null}
               </p>
             )}
 
-            <div id="product-detail-actions" data-configuration-layout={usesCompactConfigurationLayout || undefined} className={styles.operationArea}>
+            <div id="product-detail-actions" data-configuration-layout={hasConfigurationActions || undefined} className={styles.operationArea}>
               {!instrumentInquiryFamily && !isEaInquiryEnabled && !isDetailModelConfiguratorEnabled && !isTubingConfiguratorEnabled && !isAssemblyCustomerCategoryPage && !isAdditionalConfigurationWorkspace && (hasResourceDownloads || isCadRequestAvailable || isProbeCustomerCategoryPage) ? <div className={`${styles.selectionWorkspaceHeading} ${selectionWorkspaceStyles.workspaceHeading}`}>
                 <div><h3>{workspacePresentation.title}</h3><p>{workspacePresentation.description}</p></div>
               </div> : null}
@@ -4001,7 +4128,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                       window.open(href, "_blank", "noopener,noreferrer");
                     }}
                   >
-                    {isEaInquiryEnabled ? eaInquiryConfiguration ? "修改基础选型" : "基础选型" : isAssemblyConfigurator ? assemblyText("管组件定制", configuratorLocale) : (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") &&
+                    {isEaInquiryEnabled ? eaInquiryConfiguration ? "修改基础选型" : "基础选型" : isAssemblyConfigurator ? assemblyText("管组件定制", assemblyPresentationLocale) : (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") &&
                       !isCustomProduct && !isCustomInquiryMode(data)
                       ? "搭配选型"
                       : isLuerPairingEnabled
@@ -4017,7 +4144,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                         ? "重新选择配套接头"
                         : "选择配套接头"
                       : singleDetailVariant
-                      ? getSolenoidViewConfigurationText(configuratorLocale)
+                      ? getSolenoidViewConfigurationText(solenoidPresentationLocale)
                       : isDetailModelConfiguratorEnabled
                       ? selectedDetailVariant ? copy.reselect : copy.selectModel
                       : isTubingAssembly
@@ -4045,10 +4172,10 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               </div> : null}
 
               {isAdditionalConfigurationWorkspace ? <DetailSelectionWorkspace
-                key={sourceData.slug} locale={configuratorLocale} title={workspacePresentation.title}
+                key={sourceData.slug} locale={fittingUiLocale} title={workspacePresentation.title}
                 configurations={workspaceConfigurations} fixed={isFixedConfigurationWorkspace}
                 helperText={isDefaultInquiryEnabled ? defaultInquiryCopy.helper
-                  : !additionalConfigurations.length || isFixedConfigurationWorkspace ? workspacePresentation.description : undefined}
+                    : !additionalConfigurations.length || isFixedConfigurationWorkspace ? workspacePresentation.description : undefined}
                 defaultSelection={isDefaultInquiryEnabled ? { label: defaultInquiryCopy.defaultLabel, configuration: defaultInquiryConfiguration,
                   added: Boolean(defaultInquiryCartItem), onToggle: toggleDefaultInquirySelection, cancelLabel: defaultInquiryCopy.cancel,
                   touchHelperText: defaultInquiryCopy.touchHelper } : undefined}
@@ -4068,7 +4195,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               /> : null}
               {detailModelConfigurator ? <ProductConfigurationWorkspace
                 key={`${detailModelConfigurator.id}:${detailConfigurationRevision}`}
-                locale={configuratorLocale} config={detailModelConfigurator}
+                locale={detailModelPresentationLocale} config={detailModelConfigurator}
                 canRequestCad={isCadRequestAvailable}
                 drawingTypes={detailConfigurations.drawingTypes}
                 savedIds={detailConfigurations.variantIds} activeId={detailConfigurations.activeId}
@@ -4090,7 +4217,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
               /> : null}
               {tubingConfigurator ? <TubingConfigurationWorkspace
                 key={sourceData.slug} config={tubingConfigurator}
-                material={String(sourceData.slug).replace(/-tubing$/, "").toUpperCase()} locale={configuratorLocale}
+                material={String(sourceData.slug).replace(/-tubing$/, "").toUpperCase()} locale={isHindiTubing ? "en" : configuratorLocale}
+                uiLocale={tubingPresentationLocale}
                 collection={tubingConfigurations} onChange={updateTubingConfigurations}
                 open={isTubingEditorOpen} onOpen={() => setIsTubingEditorOpen(true)} onClose={() => setIsTubingEditorOpen(false)}
                 isAdded={variant => Boolean(getItem("tubing-selection", variant.productCode))}
@@ -4101,7 +4229,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 }}
               /> : null}
               {showEaInquiryWorkspace ? <EaPumpInquirySummary
-                locale={configuratorLocale}
+                locale={pistonPresentationLocale}
                 series={pistonInquiryProduct!.series}
                 configuration={eaInquiryConfiguration} quantity={currentDetailCartItem?.quantity || eaInquiryQuantity}
                 showDrawing={Boolean(data.showDrawingRequest)} drawingSelected={isDetailDrawingSelected} addedToList={isDetailProductSelected}
@@ -4116,11 +4244,11 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 onNew={() => openEaInquiryEditor(true)} onDelete={deleteEaConfiguration}
               /> : null}
               {instrumentInquiryFamily ? <InstrumentInquiryWorkspace
-                key={`${sourceData.slug}:${resourceLocale}`} slug={sourceData.slug || ""} family={instrumentInquiryFamily} locale={resourceLocale}
-                detailHref={pathname || data.detailHref || ""} imagePath={String(data.mainImage || "")}
+                key={`${sourceData.slug}:${resourceCopyLocale}`} slug={sourceData.slug || ""} family={instrumentInquiryFamily} locale={resourceCopyLocale}
+                detailHref={(isGermanControl ? germanDetailHref : pathname) || data.detailHref || ""} imagePath={String(data.mainImage || "")}
                 onConfigurationSelect={instrumentInquiryFamily === "ABD" ? configuration => setAbdPreviewTubeOd(configuration.choice.tubeOd) : undefined}
-                resourceDownloads={hasResourceDownloads ? <ProductResourceDownloads datasheet={actionDatasheet} locale={configuratorLocale} includeChinese /> : undefined} /> : null}
-              {isAssemblyConfigurator ? <FlangedTubingWorkspace locale={configuratorLocale} compact={isAssemblyCustomerCategoryPage} entrySlug={sourceData.slug} open={isFlangedTubingOpen} requestDrawing={flangedNeedDrawing}
+                resourceDownloads={hasResourceDownloads ? <ProductResourceDownloads datasheet={actionDatasheet} locale={fittingUiLocale} includeChinese /> : undefined} /> : null}
+              {isAssemblyConfigurator ? <FlangedTubingWorkspace locale={assemblyPresentationLocale} compact={isAssemblyCustomerCategoryPage} entrySlug={sourceData.slug} open={isFlangedTubingOpen} requestDrawing={flangedNeedDrawing}
                 onClose={() => setIsFlangedTubingOpen(false)} onChoiceChange={setFlangedTubingChoice} onAdd={addFlangedTubingChoice} /> : null}
               {((hasResourceDownloads && !instrumentInquiryFamily) || (hasStandaloneProductActions && (!showEaInquiryWorkspace || (isCadRequestAvailable && resourceCopy)))) ? <ProductDetailActions>
                 {hasStandaloneProductActions && data.showDrawingRequest && !showEaInquiryWorkspace && !isDetailModelConfiguratorEnabled && !isProbeCustomerCategoryPage && !isAdditionalConfigurationWorkspace ? (
@@ -4143,11 +4271,11 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 ) : null}
 
                 {hasResourceDownloads && !instrumentInquiryFamily ? (
-                  <ProductResourceDownloads datasheet={actionDatasheet} locale={configuratorLocale} includeChinese={Boolean(instrumentInquiryFamily)} />
+                  <ProductResourceDownloads datasheet={actionDatasheet} locale={fittingUiLocale} includeChinese={Boolean(instrumentInquiryFamily)} />
                 ) : null}
 
                 {hasStandaloneProductActions && !showEaInquiryWorkspace && !isDetailModelConfiguratorEnabled && !isAdditionalConfigurationWorkspace ? <ProductDetailActionButton
-                  disabled={isDetailVariantRequired || ((isDetailModelConfiguratorEnabled || isHardTubeConfiguratorEnabled || isLuerPairingEnabled) && isDetailProductSelected)}
+                  disabled={isDetailVariantRequired || ((isHardTubeConfiguratorEnabled || isLuerPairingEnabled) && isDetailProductSelected)}
                   aria-pressed={isDetailProductSelected}
                   onClick={handleAddList}
                 >
@@ -4158,7 +4286,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   aria-expanded={isProbeCustomInquiryOpen}
                   onClick={handleProbeCustomInquiry}
                 >
-                  {probeText("来图定制", configuratorLocale)}
+                  {probeText("来图定制", probePresentationLocale)}
                 </ProductDetailActionButton> : null}
               </ProductDetailActions> : null}
             </div>
@@ -4172,8 +4300,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           {hasCustomerCategoryNavigation ? (
             <nav
               className={styles.customerCategoryNav}
-              lang={configuratorLocale}
-              aria-label={isTubingCustomerCategoryPage ? tubingText("产品内容分类", configuratorLocale) : isProbeCustomerCategoryPage ? probeText("产品内容分类", configuratorLocale) : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.navigation : isPistonPumpCustomerCategoryPage ? pistonText("产品内容分类", configuratorLocale) : isAssemblyCustomerCategoryPage ? assemblyText("产品内容分类", configuratorLocale) : customerCategoryUi?.navigation || "产品内容分类"}
+              lang={fittingUiLocale}
+              aria-label={isGermanProduct ? "Produktinformationen" : isTubingCustomerCategoryPage ? tubingText("产品内容分类", tubingPresentationLocale) : isProbeCustomerCategoryPage ? probeText("产品内容分类", probePresentationLocale) : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.navigation : isPistonPumpCustomerCategoryPage ? pistonText("产品内容分类", pistonPresentationLocale) : isAssemblyCustomerCategoryPage ? assemblyText("产品内容分类", assemblyPresentationLocale) : customerCategoryUi?.navigation || "产品内容分类"}
             >
               {([
                 ["product", "图纸与资料"],
@@ -4199,12 +4327,12 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     }
                   }}
                 >
-                  {key === "product" ? fittingText(label, configuratorLocale)
-                    : isTubingCustomerCategoryPage ? tubingText(label, configuratorLocale)
+                  {isGermanProduct ? germanProductDetailText(label) : isProbeCustomerCategoryPage && (isItalianProbe || isHindiProbe) ? probeText(key === "product" ? "Drawings and documentation" : label, probePresentationLocale) : key === "product" ? fittingText(label, configuratorLocale)
+                    : isTubingCustomerCategoryPage ? tubingText(label, tubingPresentationLocale)
                     : isProbeCustomerCategoryPage ? probeText(label, configuratorLocale)
                     : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.nav[key === "selection" ? 1 : 2]
-                    : isPistonPumpCustomerCategoryPage ? pistonText(label, configuratorLocale)
-                    : isAssemblyCustomerCategoryPage ? assemblyText(label, configuratorLocale)
+                    : isPistonPumpCustomerCategoryPage ? pistonText(label, pistonPresentationLocale)
+                    : isAssemblyCustomerCategoryPage ? assemblyText(label, assemblyPresentationLocale)
                     : customerCategoryUi?.[key] || label}
                 </button>
               ))}
@@ -4354,27 +4482,28 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   <h2 className={tubingAssemblySpecStyles.sectionTitle}>{data.tubingAssemblyUi?.parameters ?? "组件参数"}</h2>
                 ) : null}
                 {isTubingCustomerCategoryPage && !customerCategoryContent?.product ? (
-                  <h2 className={styles.flatPanelTitle}>{tubingText("材料参数", configuratorLocale)}</h2>
+                  <h2 className={styles.flatPanelTitle}>{tubingText("材料参数", tubingPresentationLocale)}</h2>
                 ) : null}
                 {isTubingCustomerCategoryPage && customerCategoryContent?.product ? customerCategoryContent.product
-                  : probeGuide ? <ProbeProductContent guide={probeGuide} specs={data.specs} locale={configuratorLocale} /> : <table className={styles.specTable}>
+                  : probeGuide ? <ProbeProductContent guide={probeGuide} specs={data.specs} locale={probePresentationLocale} /> : <table className={styles.specTable}>
                   <tbody>
-                    {data.specs.map((item) => (
+                    {fittingSpecs.map((item) => (
                       <tr data-product-spec-row="true" key={`${item.label}-${item.value}`}>
                         <th>
                           <span className={styles.specCellText}>
-                            {item.label}
+                            {isGermanProduct ? germanProductSpecLabel(item.label, data.productTypeId === "hard-tube-fittings", item.value) : draftDetail ? draftDetailText(item.label) : item.label}
                           </span>
                         </th>
                         <td>
                           <span className={styles.specCellText}>
-                            {item.value}
+                            {isGermanProduct ? germanProductSpecValue(item.label, item.value) : draftDetail ? draftDetailText(String(item.value)) : item.value}
                           </span>
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>}
+                {specificationNote}
                 {isTubingAssembly && data.tubingAssemblySizeTable ? (
                   <TubingAssemblySizeTable data={data.tubingAssemblySizeTable} copy={data.tubingAssemblyUi} />
                 ) : null}
@@ -4401,17 +4530,17 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             {!isTubingCustomerCategoryPage && !isAssemblyCustomerCategoryPage && !isProbeCustomerCategoryPage ? (
             <div className={styles.modelDrawingGroup}>
             {instrumentInquiryFamily === "ABD" ? (
-              <AbdResourceViewer locale={configuratorLocale} tubeOdCode={abdPreviewTubeOd} onTubeOdChange={setAbdPreviewTubeOd} active={showProductResourceTabs} />
+              <AbdResourceViewer locale={fittingUiLocale} tubeOdCode={abdPreviewTubeOd} onTubeOdChange={setAbdPreviewTubeOd} active={showProductResourceTabs} />
             ) : useSharedFittingResources || useProductResourceLayout ? (
-              <FittingResourceViewer locale={configuratorLocale} analyticsProductId={analyticsProductId} key={`${configuratorLocale}:${data.slug}`}
+              <FittingResourceViewer locale={fittingUiLocale} analyticsProductId={analyticsProductId} key={`${configuratorLocale}:${data.slug}`}
                 drawingOnly={Boolean(pdm5Drawing)} productLayout={useProductResourceLayout}
-                controls={data.solenoidAuthoredContent ? <SolenoidVariantSelector slug={data.slug} locale={configuratorLocale} variant={solenoidVariant} onVariant={setSolenoidVariant} /> : undefined}
+                controls={data.solenoidAuthoredContent ? <SolenoidVariantSelector slug={data.slug} locale={solenoidPresentationLocale} variant={solenoidVariant} onVariant={setSolenoidVariant} /> : undefined}
                 drawings={useProductResourceLayout ? [{
-                  role: isInstrumentCustomerCategoryPage ? "product" : "pump", label: isInstrumentCustomerCategoryPage ? customerCategoryUi?.drawing || "产品图纸" : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.drawing : "柱塞泵图纸", model: String(cadAssets?.model || sourceData.displayModel || data.model || data.slug), url: drawingPreviewUrl,
+                  role: isInstrumentCustomerCategoryPage ? "product" : "pump", label: isInstrumentCustomerCategoryPage ? customerCategoryUi?.drawing || "产品图纸" : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.drawing : "柱塞泵图纸", model: String(cadAssets?.model || (isGermanControl || isItalianControl || isHindiControl ? data.model : sourceData.displayModel) || data.model || data.slug), url: drawingPreviewUrl,
                 }] : fittingResourceDrawings}
                 drawingUnavailableMessage={isInstrumentCustomerCategoryPage ? customerCategoryUi?.drawingUnavailable || "当前型号暂无公开 2D 图纸，请联系技术支持确认可提供的图纸。" : undefined}
                 drawingPreview={isInstrumentCustomerCategoryPage && data.solenoidAuthoredContent ? (
-                  <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="drawing" active={showProductResourceTabs}
+                  <SolenoidAssets slug={data.slug} locale={solenoidPresentationLocale} mode="drawing" active={showProductResourceTabs}
                     variant={solenoidVariant} onVariant={setSolenoidVariant} externalResourceTabs />
                 ) : undefined}
                 modelSource={pdm5Drawing ? null : isPistonPumpCustomerCategoryPage && pistonCadAssets ? {
@@ -4420,7 +4549,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     title: String(sourceData.displayModel || data.slug),
                     drawingUrl: drawingPreviewUrl || undefined,
                     headMaterial: pistonCadAssets.headMaterial,
-                    locale: configuratorLocale,
+                    locale: pistonPresentationLocale,
                   },
                 } : isDiaphragmPumpCustomerCategoryPage && diaphragmCadAssets ? {
                   kind: "cad", props: {
@@ -4451,7 +4580,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 {showModelPreview ? (
                   <ModelPreviewTrigger
                     model={cadAssets?.model || data.model || data.productCode || data.slug}
-                    locale={configuratorLocale}
+                    locale={fittingUiLocale}
                     onOpen={handleOpenModel}
                   />
                 ) : isHardTubeCustomerCategoryPage && !fittingCadAssets && !model3dUrl ? (
@@ -4466,17 +4595,17 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     productFamily="quick-connect"
                     fittingProduct={data.slug}
                     quickConnectMate={quickConnectViewerMate}
-                    locale={configuratorLocale}
+                    locale={localizedDetail?.locale ?? configuratorLocale}
                     active={showFlatProductResources || activeTab === "model3d"}
                   />
                 ) : isLuerPairingEnabled && luerSelectedParts ? (
-                  <LuerCadViewer parts={luerSelectedParts} active={showFlatProductResources || activeTab === "model3d"} />
+                  <LuerCadViewer locale={isGermanProduct ? "de" : localizedDetail?.locale} parts={luerSelectedParts} active={showFlatProductResources || activeTab === "model3d"} />
                 ) : luerCadAssets ? (
-                  <LuerCadViewer parts={[luerCadAssets]} active={showFlatProductResources || activeTab === "model3d"} />
+                  <LuerCadViewer locale={isGermanProduct ? "de" : localizedDetail?.locale} parts={[luerCadAssets]} active={showFlatProductResources || activeTab === "model3d"} />
                 ) : hasOpenedModel || showFlatProductResources ? (data.solenoidAuthoredContent ? (
-                  <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="3d" active={showFlatProductResources || activeTab === "model3d"} variant={solenoidVariant} onVariant={setSolenoidVariant} />
+                  <SolenoidAssets slug={data.slug} locale={solenoidPresentationLocale} mode="3d" active={showFlatProductResources || activeTab === "model3d"} variant={solenoidVariant} onVariant={setSolenoidVariant} />
                 ) : cadAssets || showFlatProductResources ? (
-                  <ProductCadViewer modelId={cadAssets?.viewerId} title={cadAssets?.model || data.model || data.productCode || data.slug} drawingUrl={drawingPreviewUrl || undefined} productFamily={(fittingCadAssets || standaloneFittingCadAssets) ? "fitting" : undefined} headMaterial={pistonCadAssets?.headMaterial} fittingFinish={(fittingCadAssets || standaloneFittingCadAssets)?.fittingFinish} fittingProduct={fittingCadAssets?.fittingProduct || (standaloneFittingCadAssets ? data.slug : undefined)} fittingAccessory={fittingCadAssets ? hardTubeAccessoryChoice ?? undefined : undefined} locale={configuratorLocale} active={showFlatProductResources || activeTab === "model3d"} />
+                  <ProductCadViewer modelId={cadAssets?.viewerId} title={cadAssets?.model || data.model || data.productCode || data.slug} drawingUrl={drawingPreviewUrl || undefined} productFamily={(fittingCadAssets || standaloneFittingCadAssets) ? "fitting" : undefined} headMaterial={pistonCadAssets?.headMaterial} fittingFinish={(fittingCadAssets || standaloneFittingCadAssets)?.fittingFinish} fittingProduct={fittingCadAssets?.fittingProduct || (standaloneFittingCadAssets ? data.slug : undefined)} fittingAccessory={fittingCadAssets ? hardTubeAccessoryChoice ?? undefined : undefined} locale={hindiDetail ? "hi" : configuratorLocale} active={showFlatProductResources || activeTab === "model3d"} />
                 ) : isPumpDetail ? (
                   <PumpUploadedFileGuard
                     key={model3dUrl}
@@ -4529,7 +4658,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                 <h3 className={styles.flatPanelTitle}>{copy.technicalDrawing}</h3>
               ) : null}
               {data.solenoidAuthoredContent ? (
-                activeTab === "drawing" ? <SolenoidAssets slug={data.slug} locale={configuratorLocale} mode="drawing" active variant={solenoidVariant} onVariant={setSolenoidVariant} /> : null
+                activeTab === "drawing" ? <SolenoidAssets slug={data.slug} locale={solenoidPresentationLocale} mode="drawing" active variant={solenoidVariant} onVariant={setSolenoidVariant} /> : null
               ) : isPumpDetail ? (
                 <PumpUploadedFileGuard
                   key={drawingPreviewUrl}
@@ -4630,7 +4759,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             ) : null}
 
             {isQuickConnectFitting && quickConnectCadAssets && (showFlatProductResources || activeTab === "model3d") ? (
-              <QuickConnectPreviewNote model={quickConnectCadAssets.model} locale={configuratorLocale} />
+              <QuickConnectPreviewNote model={quickConnectCadAssets.model} locale={isGermanProduct ? "de" : localizedDetail?.locale ?? configuratorLocale} />
             ) : null}
 
             {hasDatasheetTab && resourceLocale ? (
@@ -4651,7 +4780,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     fallbackTitle={String(
                       displayProductTitle || data.model || data.name || "Product",
                     ).trim()}
-                    locale={resourceLocale}
+                    locale={resourceCopyLocale}
                   />
                 </div>
               </div>
@@ -4666,16 +4795,16 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                   ? <TpuTubingSelectionContent
                       key={selectedTubingVariant?.id || "tpu-guide"}
                       guide={data.tpuSelectionGuide}
-                      locale={configuratorLocale}
+                      locale={tubingPresentationLocale}
                       selectedProductCode={selectedTubingVariant?.productCode}
                     />
                   : isTubingCustomerCategoryPage && applicationDetails
                   ? <ProductApplicationsPanel content={applicationDetails} />
-                  : probeGuide ? <ProbeSelectionContent guide={probeGuide} locale={configuratorLocale} />
+                  : probeGuide ? <ProbeSelectionContent guide={probeGuide} locale={probePresentationLocale} />
                   : isPistonPumpCustomerCategoryPage || isInstrumentCustomerCategoryPage ? null : customerCategoryContent?.selection)
                 : null}
               {activeCustomerCategory === "delivery"
-                ? (probeGuide ? <ProbeDeliveryContent guide={probeGuide} locale={configuratorLocale} /> : showSharedFittingDelivery ? <FittingDeliveryZh locale={configuratorLocale} productModel={String(data.model || data.foreachModel || "")} /> : customerCategoryContent?.delivery)
+                ? (probeGuide ? <ProbeDeliveryContent guide={probeGuide} locale={probePresentationLocale} /> : customerCategoryContent?.delivery ?? (showSharedFittingDelivery ? <FittingDeliveryZh locale={configuratorLocale} productModel={String(data.model || data.foreachModel || "")} germanDraft={!!germanContent} contentLocale={localizedDetail?.locale} /> : null))
                 : null}
             </div>
           ) : null}
@@ -4780,6 +4909,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
         {configuratorLocale !== "zh" ? <ProductDetailVideos
           key={`${configuratorLocale}:${sourceData.slug}`}
           locale={configuratorLocale}
+          germanDraft={!!germanContent}
+          contentLocale={localizedDetail?.locale}
           pathname={pathname}
           identity={{ slug: sourceData.slug, model: sourceData.model, foreachModel: sourceData.foreachModel,
             productId: diaphragmReference?.slug || sourceData.productId, category: String(sourceData.category),
@@ -4787,7 +4918,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             specSeriesKey: sourceData.specSeriesKey, relationKeys: sourceData.relationKeys }}
         /> : null}
 
-        {data.faqs && data.faqs.length > 0 ? (
+        {detailFaqs && detailFaqs.length > 0 ? (
           <section className={styles.faqSection}>
             <div className={styles.faqHeader}>
               <h2 data-assembly-page-heading={isAssemblyCustomerCategoryPage || undefined}>
@@ -4798,7 +4929,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
             </div>
 
             <div className={styles.faqList}>
-              {data.faqs.map((item, index) => {
+              {detailFaqs.map((item, index) => {
                 const isOpen = openFaqIndex === index;
 
                 return (
@@ -4848,13 +4979,21 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
           {afterContent}
         </ProductDetailVideoContext>
 
-        {data.faqs && data.faqs.length > 0 ? (
-          <PlungerPumpBottomCta data={data} localePrefix={localePrefix} />
+        {detailFaqs && detailFaqs.length > 0 ? (
+          <PlungerPumpBottomCta data={data} localePrefix={germanContent || draftDetail ? "" : localePrefix} copy={draftDetail?.bottomCta ? {
+            title: draftDetail.bottomCta.title, desc: draftDetail.bottomCta.description,
+            button: draftDetail.bottomCta.buttonText, href: draftDetailLink(draftDetail.bottomCta.href).href,
+          } : germanContent && {
+            title: germanContent.bottomCta?.title ?? "Fittings für Serienbedarf und kundenspezifische Anwendungen",
+            desc: germanContent.bottomCta?.description ?? "FOREACH unterstützt Sie bei der Auswahl, Serienlieferung und Anpassung von Fittings anhand von Anschlussart, Leitungsgröße, Werkstoff, Dichtelement, Einbausituation und Einsatzbedingungen.",
+            button: germanContent.bottomCta?.buttonText ?? "Kontakt aufnehmen",
+            href: germanContent.bottomCta?.href ?? "/de/contact/",
+          }} />
         ) : null}
 
       </div>
     </main>
     </SitePageShell>
-</div>, (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") ? configuratorLocale : "zh")
+</div>, (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") ? configuratorLocale : "zh", isGermanProduct ? germanProductDetailText : draftDetail ? draftDetailText : undefined)
   );
 }

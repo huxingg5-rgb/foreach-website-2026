@@ -1,0 +1,42 @@
+{
+  "sampling-probes": {
+    "cardTitle": "Probenahmesonden",
+    "title": "Kundenspezifische Probenahmesonden für Proben und Reagenzien",
+    "meta": "Kundenspezifische FOREACH Probenahmesonden für Analysengeräte, mit passenden Spitzen, seitlichen Öffnungen, Befestigungen und Oberflächen für Proben und Reagenzien.",
+    "paragraphs": [
+      "Kundenspezifische FOREACH Probenahmesonden unterstützen das Ansaugen, Abgeben und dosierte Übertragen von Proben und Reagenzien in automatischen Analysengeräten. Geräteaufbau, Behältergeometrie, Flüssigkeitsvolumen und Bewegungsablauf bestimmen die Auslegung zusätzlich zu den Rohrabmessungen.",
+      "Geben Sie Innen- und Außendurchmesser, Gesamt- und Arbeitslänge, spitze, flache oder V-förmige Spitzen, seitliche Öffnungen, Biegungen und Befestigungsenden an. Die Eignung für die kapazitive Flüssigkeitsstandserkennung lässt sich anhand von Sondenaufbau, Kabelanschluss und Erkennungssystem des Geräts prüfen.",
+      "Innenpolitur, Außenbeschichtungen und Oberflächenbehandlungen werden anhand des Mediums und Reinigungsverfahrens bewertet. Stellen Sie Zeichnungen oder Muster, Ansaug- und Abgaberaten, Sollvolumina und Rückstandsanforderungen bereit, um Geometrie, Fertigung und Abnahmekriterien festzulegen. Prüfen Sie die Probenverschleppung im tatsächlichen Arbeitsablauf."
+    ]
+  },
+  "piercing-probes": {
+    "cardTitle": "Einstechsonden",
+    "title": "Kundenspezifische Einstechsonden für versiegelte Verbrauchsartikel",
+    "meta": "Kundenspezifische FOREACH Einstechsonden für Folien, Stopfen und versiegelte Verbrauchsartikel. Stimmen Sie Spitze, Flüssigkeitszugang, Entlüftung und Befestigung auf das Gerät ab.",
+    "paragraphs": [
+      "Kundenspezifische FOREACH Einstechsonden ermöglichen den Flüssigkeitszugang durch Folien oder Stopfen in verschlossenen Reagenzienbehältern, Probengefäßen und Verbrauchsartikeln. Die Sonde wird auf den Verbrauchsartikel, die Einstichtiefe und die Bewegungsbahn im automatischen Gerät abgestimmt.",
+      "Auslegungsoptionen umfassen Spitzenwinkel, Schneidenorientierung, seitliche Öffnungen, Entlüftungsbohrungen oder -nuten, Biegungen und Befestigungsenden. Prüfen Sie Gas- und Flüssigkeitspfade zusammen mit Materialdicke, Einstichkraft, Sondenfestigkeit und Ansaugposition.",
+      "Stellen Sie Zeichnungen oder Muster des Verbrauchsartikels, Angaben zum Medium, Zykluszeiten und Einbauraum bereit. Sondenwerkstoffe, Schweißverfahren und Oberflächenbearbeitung werden projektspezifisch festgelegt. Prüfen Sie Einstichstabilität, Flüssigkeitszugang und Entlüftung mit dem tatsächlichen Verbrauchsartikel und der Gerätebewegung."
+    ]
+  },
+  "wash-probes": {
+    "cardTitle": "Spülsonden",
+    "title": "Kundenspezifische Spülsonden für automatische Analysengeräte",
+    "meta": "Kundenspezifische FOREACH Spülsonden für Spülstationen mit passenden Sondenköpfen und Öffnungen für Spülung, Abfallabsaugung und Restflüssigkeitsentfernung.",
+    "paragraphs": [
+      "Kundenspezifische FOREACH Spülsonden werden in die Spülstationen automatischer Analysengeräte integriert. Sie dienen der Außen- und Innenspülung von Sonden sowie dem Absaugen von Abfall- und Restflüssigkeit. Die Spülmittel- und Abfallpfade bestimmen die Ausführung.",
+      "Ein-, Zwei- und Mehrkopfausführungen sowie Varianten mit seitlichen Öffnungen und Biegungen werden auf Bauraum und Spülablauf abgestimmt. Position, Größe und Richtung der Öffnungen richten sich nach Spülbereich, Abfallauslass und Absaugrichtung.",
+      "Stellen Sie Zeichnungen der Spülstation, Angaben zu Spül- und Abfallflüssigkeiten, Durchfluss, Zykluszeiten und Lebensdaueranforderungen bereit. Damit lassen sich Schweißverfahren, Politur, Beschichtungen und Oberflächenbehandlungen prüfen. Bestätigen Sie die erreichte Spülfläche, Restflüssigkeit und Probenverschleppung im vollständigen Spülablauf."
+    ]
+  },
+  "stirring-paddles": {
+    "cardTitle": "Rührpaddel",
+    "title": "Kundenspezifische Rührpaddel für Reaktionsgefäße",
+    "meta": "Kundenspezifische FOREACH Rührpaddel für Gefäße in Analysengeräten. Stimmen Sie Geometrie, Befestigung und Oberflächenbehandlung auf Medium, Gefäß und Mischaufgabe ab.",
+    "paragraphs": [
+      "Kundenspezifische FOREACH Rührpaddel mischen Proben, Reagenzien, Verdünnungsmittel und Reaktionsflüssigkeiten in automatischen Analysengeräten. Die Paddelgeometrie wird passend zu Reaktionsgefäß, Sollvolumen und Antriebsanordnung als Gerätebauteil entwickelt.",
+      "Zur Auswahl stehen flache, schraubenförmige und um 90° abgewinkelte Paddel. Legen Sie Paddelabmessungen, Arbeitsposition, Konzentrizität und Befestigungsenden anhand von Gefäßboden, Füllstand, Drehzahlbereich und verfügbarem Bewegungsraum fest.",
+      "Werkstoffe, Schweißverfahren und Beschichtungen werden hinsichtlich Medienverträglichkeit, Reinigung und Festigkeit beurteilt. Stellen Sie Gefäßzeichnungen, Mischdauer und Anforderungen an Blasen und Spritzer bereit. Bewerten Sie Mischleistung und Rückstände nach dem Reinigen mit dem tatsächlichen Medium und Gefäß."
+    ]
+  }
+}

@@ -26,7 +26,9 @@ import type {
   DiaphragmPumpEngineeringArticleCopy,
   EngineeringArticleBlock,
 } from "@/data/resources/technical-articles/diaphragm-pump-engineering-article.types";
-import type { NewsArticle, NewsLocale } from "@/data/resources/news/news.types";
+import type { NewsArticle, NewsResourceLocale } from "@/data/resources/news/news.types";
+
+import { getHindiDraftLink, getItalianDraftLink, hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
 
 export const EDITORIAL_NEWS_SLUGS: ReadonlySet<string> = new Set(["medica-2026"]);
 
@@ -34,9 +36,12 @@ export function isEditorialNewsArticle(slug: string) {
   return EDITORIAL_NEWS_SLUGS.has(slug);
 }
 
-const BACK_TEXT: Record<NewsLocale, string> = {
+const BACK_TEXT: Record<NewsResourceLocale, string> = {
   "zh-CN": "返回",
   en: "Back",
+  de: "Zurück",
+  it: "Indietro",
+  hi: "वापस",
   es: "Volver",
   fr: "Retour",
   ko: "돌아가기",
@@ -52,16 +57,18 @@ const IMAGE_PATTERN = /^!\[([^\]]*)\]\((\S+)\s+(\d+)x(\d+)\)$/;
 /* [文字](/链接) */
 const LINK_PATTERN = /\[([^\]]+)\]\(([^)\s]+)\)/g;
 
-function toLinksBlock(line: string): EngineeringArticleBlock | null {
+function toLinksBlock(line: string, locale: NewsResourceLocale): EngineeringArticleBlock | null {
   const matches = [...line.matchAll(LINK_PATTERN)];
   if (!matches.length) return null;
 
   let cursor = 0;
   const items = matches.map((match) => {
+    const link = locale === "hi" ? getHindiDraftLink(match[2]) : locale === "it" ? getItalianDraftLink(match[2]) : { href: match[2] };
     const item = {
       prefix: line.slice(cursor, match.index) || undefined,
-      label: match[1],
-      href: match[2],
+      label: match[1] + (link.hrefLang === "en" ? (locale === "hi" ? hindiEnglishFallbackSuffix : italianEnglishFallbackSuffix) : ""),
+      href: link.href,
+      hrefLang: link.hrefLang,
     };
     cursor = (match.index ?? 0) + match[0].length;
     return item;
@@ -75,7 +82,7 @@ function toLinksBlock(line: string): EngineeringArticleBlock | null {
   };
 }
 
-function toBlocks(content: string): EngineeringArticleBlock[] {
+function toBlocks(content: string, locale: NewsResourceLocale): EngineeringArticleBlock[] {
   return content
     .split(/\n+/)
     .map((line) => line.trim())
@@ -93,7 +100,7 @@ function toBlocks(content: string): EngineeringArticleBlock[] {
         };
       }
 
-      const links = toLinksBlock(line);
+      const links = toLinksBlock(line, locale);
       if (links) return links;
 
       const match = line.match(LEAD_PATTERN);
@@ -108,13 +115,13 @@ export default function NewsEditorialArticle({
   locale,
 }: {
   article: NewsArticle;
-  locale: NewsLocale;
+  locale: NewsResourceLocale;
 }) {
   const listHref = locale === "zh-CN" ? "/resources/news" : `/${locale}/resources/news`;
   const coverAlt = article.coverAlt ?? article.title;
   const eventPanel = getNewsEventPanel(article.slug, locale);
 
-  const summaryBlocks = article.summary ? toBlocks(article.summary) : [];
+  const summaryBlocks = article.summary ? toBlocks(article.summary, locale) : [];
   const coverBlocks: EngineeringArticleBlock[] = article.coverImage
     ? [{
         type: "figure",
@@ -139,10 +146,10 @@ export default function NewsEditorialArticle({
   /* 预约表单：≥1280px 为右侧第三栏（目录 / 正文 / 表单整体居中），<1280px 放在正文末尾 */
   const bookingEnabled = isBookingEnabled(article.slug);
   const bookingRail = bookingEnabled ? (
-    <ExhibitionBookingAside slug={article.slug} locale={locale} variant="rail" />
+    <ExhibitionBookingAside slug={article.slug} locale={locale === "hi" ? "en" : locale} variant="rail" />
   ) : undefined;
   const bookingInline = bookingEnabled ? (
-    <ExhibitionBookingAside slug={article.slug} locale={locale} variant="inline" />
+    <ExhibitionBookingAside slug={article.slug} locale={locale === "hi" ? "en" : locale} variant="inline" />
   ) : null;
   const afterBody = eventPanel ? (
     <>
@@ -163,7 +170,7 @@ export default function NewsEditorialArticle({
     leadBlocks,
     sections: article.content.map((block) => ({
       title: block.title,
-      blocks: toBlocks(block.content),
+      blocks: toBlocks(block.content, locale),
     })),
     faqTitle: "",
     faqItems: [],

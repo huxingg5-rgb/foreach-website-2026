@@ -1,0 +1,362 @@
+{
+  "metadata": {
+    "title": "Scelta di una pompa a pistone da 100, 250 o 500 μL per il dosaggio in chimica clinica",
+    "seoTitle": "Scelta della pompa a pistone da 100, 250 o 500 μL per la chimica clinica | Foreach Technology",
+    "seoDescription": "Confrontate volume della dose, utilizzo della corsa, numero di erogazioni e tempi di ricarica. Valutate poi le configurazioni Foreach EA, SM e TM sul circuito effettivo di chimica clinica.",
+    "coverImage": "/images/resources/technical-articles/pump-application-guides/piston-capacity-series.png",
+    "coverAlt": "Pompe a pistone Foreach di varie capacità, tra cui 100, 250 e 500 μL"
+  },
+  "deck": "Confrontate volume della dose, utilizzo della corsa, numero di erogazioni e tempi di ricarica. Valutate poi le configurazioni Foreach EA, SM e TM sul circuito effettivo di chimica clinica.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Per scegliere una pompa a pistone per la chimica clinica, identificate prima la funzione nel circuito: erogazione diretta del reagente, dosaggio del campione, aggiunta del diluente o azionamento del puntale con liquido di sistema. I valori di 100, 250 e 500 μL indicano capacità nominali. La scelta dipende dal volume effettivamente erogato per dose, dal numero di dosi richieste dopo una singola aspirazione e dal tempo a disposizione per la sequenza completa."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Definire i requisiti del dosaggio",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando il reagente attraversa la camera della pompa, la verifica di compatibilità deve coprire testata, pistone, guarnizioni e valvole. Se il liquido di sistema muove il campione nel puntale, valutate anche l’interfaccia tra i liquidi, il residuo di campione e il trasferimento completo. Comandi di volume simili possono quindi richiedere circuiti a contatto con il fluido e metodi di verifica diversi."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dato di ingresso",
+            "Dati da specificare",
+            "Decisione supportata"
+          ],
+          "rows": [
+            [
+              "Volumi per dose",
+              "Volume minimo, tipico e massimo erogato, in μL",
+              "Campo di corsa operativo e punti di prova"
+            ],
+            [
+              "Sequenza di erogazione",
+              "Dosi dopo ogni aspirazione, di volume uguale o variabile",
+              "Bilancio della capacità e numero di aspirazioni"
+            ],
+            [
+              "Finestra temporale",
+              "Aspirazione, commutazione della valvola, erogazione, stabilizzazione e ricarica",
+              "Fattibilità del ciclo completo"
+            ],
+            [
+              "Circuito del fluido",
+              "Composizione del liquido, temperatura, livelli, contropressione, valvole e puntale",
+              "Materiali ed erogazione effettiva"
+            ],
+            [
+              "Integrazione",
+              "Disegni CAD per capacità, interfacce, cavi e requisiti del driver",
+              "Scelta di serie e configurazione"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Completate la definizione del compito prima di confrontare le capacità. Il settore di utilizzo da solo non identifica la misura della pompa. Canali di dosaggio diversi dello stesso strumento possono richiedere capacità diverse."
+        }
+      ]
+    },
+    {
+      "title": "2. Un comando da 20 μL usa frazioni diverse della corsa",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "Utilizzo della corsa ≈ volume comandato per dose / capacità corrispondente a corsa completa",
+          "note": "È un confronto iniziale per spostamento e volume approssimativamente lineari, con la stessa definizione di comando e corsa utile. L’accuratezza del volume erogato va verificata separatamente."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Comando ipotetico da 20 μL",
+            "Capacità di 100 μL",
+            "Capacità di 250 μL",
+            "Capacità di 500 μL"
+          ],
+          "rows": [
+            [
+              "Utilizzo nominale della corsa",
+              "20%",
+              "8%",
+              "4%"
+            ],
+            [
+              "Aspetti da verificare",
+              "Erogazione effettiva di 20 μL e tempo di ciclo",
+              "Erogazione a corsa ridotta e dosaggio ripetuto",
+              "Erogazione a corsa ancora minore, vantaggio sulla ricarica e ingombro"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le percentuali descrivono solo l’intervallo di movimento. Non dimostrano una maggiore accuratezza della pompa da 100 μL e non giustificano l’applicazione della specifica a corsa completa a una corsa del 4%. Contano comportamento della trasmissione, tempi delle valvole, bolle, cedevolezza dei tubi, velocità di aspirazione ed erogazione e puntale di erogazione. La risoluzione del comando e il volume nominale per passo da soli non stabiliscono la dose minima affidabile."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/piston-pump-accuracy-repeatability-resolution/",
+              "label": "Accuratezza, ripetibilità e risoluzione"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Includere nel bilancio dosi ripetute e volume di riserva",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "n = floor((Vusable − Vreserve) / Vdose)",
+          "note": "Per dosi uguali, n è una prima stima delle erogazioni complete per aspirazione. Vusable è il volume aspirato effettivamente disponibile, Vreserve è la riserva di processo e Vdose è il volume comandato per dose. Vusable deve essere almeno pari a Vreserve e Vdose deve essere positivo."
+        },
+        {
+          "type": "notice",
+          "text": "Esempio di calcolo: erogare 20 μL in ciascuna di otto cuvette, riservare 10 μL dopo ogni aspirazione e assumere provvisoriamente che il volume aspirato utile coincida con la capacità nominale. La riserva di 10 μL non è una specifica comune Foreach. Verificate corsa utile, adescamento ed esigenze di riserva sul circuito effettivo.",
+          "label": "Ipotesi dell’esempio"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Capacità da valutare",
+            "Dosi complete per aspirazione",
+            "Aspirazioni per otto cuvette",
+            "Ricariche dopo l’aspirazione iniziale"
+          ],
+          "rows": [
+            [
+              "100 μL",
+              "4",
+              "2",
+              "1"
+            ],
+            [
+              "250 μL",
+              "12",
+              "1",
+              "0"
+            ],
+            [
+              "500 μL",
+              "24",
+              "1",
+              "0"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Sia 250 sia 500 μL coprono il bilancio ipotizzato per otto cuvette senza ulteriore ricarica. Una capacità maggiore oltre questa soglia non riduce le ricariche nel lotto. Confrontate poi prestazioni di dosaggio effettive, ingombro e requisiti di cambio del liquido. Ricalcolate i singoli comandi se il volume utile o le dosi cambiano."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/pump-application-guides/piston-cycle-it.svg",
+          "alt": "Serbatoio, valvola di commutazione e pompa a pistone che eroga in più cuvette",
+          "width": 1200,
+          "height": 500,
+          "caption": "Schema del circuito e della sequenza. Usate la configurazione effettiva di valvola e azionamento. Lo schema non indica che un modello specifico integri gli accessori illustrati."
+        }
+      ]
+    },
+    {
+      "title": "4. Confrontare la sequenza completa oltre alla velocità di erogazione",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "Tbatch = Σ(Taspiration + Tvalve + Tdispense + Tsettling + Tmotion e altre azioni richieste)",
+          "note": "Contate ogni azione come avviene realmente. Quando più azioni si sovrappongono, individuate il cammino critico nella sequenza di comando per evitare di contare due volte lo stesso intervallo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Evitare una ricarica fa risparmiare tempo solo se la ricarica è sul cammino critico. Uno strumento che aspira mentre un altro meccanismo si muove ha tempi diversi da uno che interrompe il dosaggio per ricaricare. Una pompa più grande può anche modificare corsa di aspirazione, collegamenti fluidici e vincoli di montaggio."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mantenete costanti dimensioni del lotto, dosi e liquido e conservate il registro completo dei comandi.",
+            "Distinguete la prima erogazione, la prima dopo la ricarica, le intermedie e l’ultima.",
+            "Verificate il volume erogato prima di confrontare i tempi di ciclo.",
+            "Quando aumentate la velocità, controllate bolle, risposta della valvola e fine erogazione. Il completamento del comando motore da solo non dimostra che il liquido sia stato erogato interamente nella cuvetta."
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/piston-pump-acceleration-deceleration-curves/",
+              "label": "Accelerazione e decelerazione nelle pompe a pistone"
+            },
+            {
+              "href": "/resources/technical-articles/precision-piston-pump-backlash-compensation/",
+              "label": "Inversione di direzione e compensazione del gioco"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Confrontare le configurazioni effettive EA, SM e TM",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le famiglie Foreach EA, SM e TM includono opzioni da 100, 250 e 500 μL. Valutate il ruolo della serie separatamente dalle caratteristiche della singola configurazione. A parità di capacità nominale, verificate dimensioni, materiali, interfacce, driver e condizioni di prestazione."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Serie",
+            "Confronto principale in questa fase",
+            "Dati da confermare"
+          ],
+          "rows": [
+            [
+              "Pompa a pistone di precisione EA",
+              "Scelta di una piattaforma con ampia gamma di capacità in base alla funzione del canale",
+              "Disegno, materiali, interfaccia e comando per la capacità specifica"
+            ],
+            [
+              "Pompa a pistone miniaturizzata SM",
+              "Posizionamento di pompa, valvola, tubi e cavi in uno strumento compatto",
+              "Ingombro di montaggio completo e prestazioni alla dose di lavoro"
+            ],
+            [
+              "Pompa a pistone ultracompatta TM",
+              "Integrazione con spazio ancora più limitato",
+              "Disegno del modello. La versione illustrata ha testata in acrilico (PMMA) e pistone in ceramica. Le altre configurazioni si valutano a parte."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le serie EA e SM prevedono attacchi fluidici 1/4-28 UNF o M6. Le configurazioni TM illustrate usano 6-40 UNF. Confermate il disegno effettivo e lasciate spazio per la sporgenza dei raccordi, le curve dei tubi e la manutenzione. I dati EA a corsa completa, quelli sulla ripetibilità SM e la convalida della singola configurazione TM valgono nelle rispettive condizioni."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/piston-pump/standard-piston-pump/",
+              "label": "Pompe a pistone di precisione EA"
+            },
+            {
+              "href": "/products/pumps/piston-pump/miniature-piston-pump/",
+              "label": "Pompe a pistone miniaturizzate SM"
+            },
+            {
+              "href": "/products/pumps/piston-pump/ultra-compact-piston-pump/",
+              "label": "Pompe a pistone ultracompatte TM"
+            },
+            {
+              "href": "/resources/technical-articles/piston-pump-head-material-selection/",
+              "label": "Scelta dei materiali della testata e dell’intero circuito a contatto con il fluido"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Verificare le dosi di lavoro oltre alla corsa completa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Coprite le dosi minima, tipica e massima effettivamente usate e gli stati operativi che possono modificare l’erogazione. Scegliete numero di ripetizioni e criteri di accettazione in base ai requisiti dello strumento e allo scopo della prova. Applicate il piano di accettazione del progetto."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Gruppo di dati",
+            "Dati da conservare"
+          ],
+          "rows": [
+            [
+              "Campione e circuito",
+              "Modello, configurazione, ID del campione, valvola, puntale, tubi, livelli di liquido e contropressione"
+            ],
+            [
+              "Liquido e misura",
+              "Fluido effettivo, temperatura, densità, strumento, metodo e incertezza"
+            ],
+            [
+              "Condizioni del comando",
+              "Dose o passi, velocità, tempi delle valvole, stabilizzazione e tempo di attesa"
+            ],
+            [
+              "Risultati grezzi",
+              "Singole masse o volumi, indicatori di prima dose, ricarica e regime stabile e anomalie"
+            ],
+            [
+              "Accettazione",
+              "Accuratezza, ripetibilità, tempo di erogazione, comportamento del puntale e base di ciascun criterio"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La prova gravimetrica richiede la densità del liquido alla temperatura di prova e il controllo di evaporazione, gocce trattenute e perdite di trasferimento. Una procedura formale deve considerare anche effetti come la correzione per la spinta dell’aria e l’incertezza di misura. Dividere una massa per la densità è solo un passaggio della taratura."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "https://www.nist.gov/publications/nistir-7383-selected-procedures-volumetric-calibrations-2019-ed",
+              "label": "Riferimento sul metodo: procedure NIST di taratura volumetrica. Il documento non certifica le prestazioni microlitriche della pompa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Documentare le ragioni della scelta",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Indicate requisiti di dose e tempi, motivi della scelta di capacità, serie e materiali, condizioni provate e verifiche ancora aperte. Nell’esempio di calcolo sopra, 250 μL è una capacità da valutare per ridurre le ricariche. La scelta per uno strumento di chimica clinica richiede una verifica sulle condizioni effettive."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/piston-pump/",
+              "label": "Consulta le serie e le pompe a pistone Foreach"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Perché non scegliere sempre 500 μL?",
+      "answer": "Se 250 μL coprono già le dosi ripetute richieste, 500 μL potrebbero non eliminare altre ricariche. Confrontate prestazioni effettive a piccole dosi, tempi, installazione e requisiti di cambio del liquido."
+    },
+    {
+      "question": "Una pompa da 100 μL eroga solo 100 μL per volta?",
+      "answer": "No. Capacità nominale e volume per dose sono diversi. L’intervallo di dosaggio utile dipende dai comandi, dalla corsa effettiva e dalla verifica dell’erogazione reale."
+    },
+    {
+      "question": "Si può usare nel firmware la riserva di 10 μL dell’esempio?",
+      "answer": "Solo dopo averla verificata. È un’ipotesi di calcolo e non un requisito del prodotto. Adescamento, corsa utile, percorsi delle valvole e strategia di erogazione determinano la riserva effettiva."
+    },
+    {
+      "question": "Pompe EA, SM e TM della stessa capacità sono intercambiabili?",
+      "answer": "La capacità da sola non determina l’intercambiabilità. Verificate disegni, interfacce, materiali, configurazione delle valvole e del driver e prestazioni alla dose e ai tempi effettivi."
+    },
+    {
+      "question": "Cosa si può fare prima delle prove con il reagente effettivo?",
+      "answer": "Usate le specifiche formali e calcoli con ipotesi dichiarate per selezionare le opzioni e preparare il circuito di prova. Restano da verificare la compatibilità con il fluido effettivo e le prestazioni sul volume erogato."
+    }
+  ],
+  "cta": {
+    "title": "Definisci una specifica di pompa verificabile a partire dalle condizioni operative",
+    "description": "Indicate liquido, volume o portata richiesti, tempi, circuito e vincoli di montaggio per valutare configurazione e metodo di verifica della pompa.",
+    "contactLabel": "Contatta l’assistenza tecnica",
+    "productsLabel": "Scopri i prodotti correlati",
+    "productsHref": "/products/pumps/piston-pump/"
+  }
+}

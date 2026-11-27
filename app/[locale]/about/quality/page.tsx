@@ -1,35 +1,14 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { draftAboutMetadata } from "@/lib/seo/german-about-metadata";
 import QualityPageContent from "@/components/about/QualityPageContent";
 import {
   aboutQualityLinks,
   getAboutQualityContent,
   type AboutQualityLocale,
 } from "@/data/about-quality";
-
-/* ================================
-   多语言质量体系与合规认证页面
-   路由：
-   /en/about/quality
-   /es/about/quality
-   /fr/about/quality
-   /ko/about/quality
-   /ru/about/quality
-
-   说明：
-   1. 这个文件现在只作为多语言页面入口
-   2. 页面结构统一放在 components/about/QualityPageContent.tsx
-   3. 页面文案统一放在 data/about-quality.ts
-   4. 后期改结构，不需要再分别改中英文两个页面
-================================ */
-
-/* ================================
-   多语言路由支持的语言
-   说明：
-   1. 中文不放在这里
-   2. 中文页面使用 /about/quality
-   3. 其他语言使用 /en/about/quality 这种路径
-================================ */
 const supportedLocales = ["en", "es", "fr", "ko", "ru"] as const;
 
 type SupportedLocale = (typeof supportedLocales)[number];
@@ -57,9 +36,10 @@ type PageProps = {
    静态生成多语言路径
 ================================ */
 export function generateStaticParams() {
-  return supportedLocales.map((locale) => ({
-    locale,
-  }));
+  return [
+    ...supportedLocales.map((locale) => ({ locale })),
+    ...(languageDraftsEnabled ? [{ locale: "de" }, { locale: "it" }, { locale: "hi" }] : []),
+  ];
 }
 
 /* ================================
@@ -69,10 +49,14 @@ export function generateStaticParams() {
    2. 如果西语、法语、韩语、俄语暂时没填完整，会先回退到英文内容
    3. alternates.languages 用于告诉搜索引擎不同语言版本的对应关系
 ================================ */
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = await params;
+  if (languageDraftsEnabled && (locale === "de" || locale === "it" || locale === "hi")) {
+    const pageData = getAboutQualityContent(locale);
+    return draftAboutMetadata(locale, "/about/quality/", pageData.metadataTitle, pageData.metadataDescription);
+  }
 
   if (!isSupportedLocale(locale)) {
     return {};
@@ -98,10 +82,13 @@ export async function generateMetadata({
 ================================ */
 export default async function QualityLocalePage({ params }: PageProps) {
   const { locale } = await params;
+  if (languageDraftsEnabled && (locale === "de" || locale === "it" || locale === "hi")) return <QualityPageContent locale={locale} />;
 
   if (!isSupportedLocale(locale)) {
     notFound();
   }
 
   return <QualityPageContent locale={locale as AboutQualityLocale} />;
-} 
+}
+
+export const generateMetadata = withPublishedTranslationMetadata("/about/quality/", getPageMetadata);

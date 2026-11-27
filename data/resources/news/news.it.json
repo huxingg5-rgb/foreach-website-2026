@@ -1,0 +1,389 @@
+{
+  "hub": {
+    "hero": {
+      "title": "Notizie aziendali",
+      "description": "Segui gli aggiornamenti di FOREACH su fiere, sviluppo aziendale, innovazione tecnologica, sistemi di gestione della qualità e comunicazioni importanti."
+    },
+    "breadcrumbs": [
+      {
+        "label": "Home"
+      },
+      {
+        "label": "Risorse"
+      },
+      {
+        "label": "Notizie aziendali"
+      }
+    ],
+    "search": {
+      "placeholder": "Inserisci parole chiave"
+    },
+    "categories": [
+      {
+        "label": "Tutte"
+      },
+      {
+        "label": "Fiere"
+      },
+      {
+        "label": "Aggiornamenti aziendali"
+      },
+      {
+        "label": "Comunicati"
+      }
+    ],
+    "sectionTitle": "Ultimi aggiornamenti",
+    "bottomBanner": {
+      "title": "Cerchi informazioni sui prodotti o sulle opportunità di collaborazione?",
+      "description": "Puoi inviarci i requisiti di prodotto, scaricare le schede tecniche o scoprire come FOREACH collabora con i distributori.",
+      "actions": [
+        {
+          "label": "Contattaci"
+        }
+      ]
+    }
+  },
+  "articles": {
+    "medica-2026": {
+      "title": "FOREACH a MEDICA 2026 | Stand 1H39-1",
+      "summary": "FOREACH aveva annunciato la propria partecipazione a MEDICA 2026, dal 16 al 19 novembre a Düsseldorf, in Germania, allo stand 1H39-1. L’invito riguardava il confronto con i produttori OEM di strumenti sulla qualifica di un secondo fornitore, sulle prove sui campioni e sulla fornitura a lungo termine di pompe, valvole e componenti fluidici.",
+      "coverAlt": "Ingresso della fiera di Düsseldorf",
+      "seoTitle": "FOREACH a MEDICA 2026 | Stand 1H39-1",
+      "seoDescription": "FOREACH a MEDICA 2026, stand 1H39-1, Düsseldorf, 16–19 novembre. Valutazione di un secondo fornitore, prove sui campioni e fornitura di pompe, valvole e componenti fluidici.",
+      "content": [
+        {
+          "title": "I temi dello stand 1H39-1",
+          "content": "MEDICA è una delle maggiori fiere B2B al mondo per il settore medico e si svolge insieme a COMPAMED, dedicata alla filiera dei dispositivi medici. Per questa edizione, FOREACH si rivolgeva ai produttori OEM di strumenti già in produzione o in fase di sviluppo. La possibilità di valutare e qualificare FOREACH come secondo fornitore per la fornitura a lungo termine aiuta a ridurre la dipendenza da un’unica fonte.\n\nQualifica del fornitore: assistenza nella valutazione dei nuovi fornitori e negli audit del sistema di gestione della qualità.\nProve rapide sui campioni: disponibilità in tempi brevi di campioni di pompe, valvole e componenti fluidici per la validazione sullo strumento.\nValutazione della compatibilità: confronto con i componenti in uso per valutarne interfacce, prestazioni e materiali.\nForniture in volume: continuità di approvvigionamento a lungo termine per i progetti di strumenti OEM."
+        },
+        {
+          "title": "Prodotti in programma allo stand",
+          "content": "In vista della fiera il nostro team si era reso disponibile per discutere di selezione, sostituzione e personalizzazione delle seguenti linee di prodotto:\n\n[Pompe](/en/products/pumps): dosaggio di precisione, alimentazione continua, pipettaggio automatico e trasferimento stabile dei liquidi\n[Valvole](/en/products/valves): controllo di apertura e chiusura, intercettazione su tubo e commutazione multicanale\n[Sonde](/en/products/probes): sonde di campionamento, lavaggio e perforazione, agitatori e gruppi sonda su misura\n[Raccordi](/en/products/fittings): connettori per tubi, raccordi per tubi rigidi, raccordi Luer, raccordi rapidi e assemblaggi di tubi su misura\n[Tubi](/en/products/tubing): tubi flessibili in diversi materiali, tubi rigidi e linee fluidiche trasparenti\n[Moduli di controllo intelligente](/en/products/control): monitoraggio della pressione del fluido, rilevamento delle bolle e protezione del sistema"
+        },
+        {
+          "title": "Qualità e riconoscimenti",
+          "content": "Per chi valuta un secondo fornitore, la costanza della qualità e il controllo dei processi sono essenziali.\n\nSistemi certificati: sistema di gestione della qualità ISO 9001 e sistema di gestione della qualità per i dispositivi medici ISO 13485.\nProduzione controllata: camera bianca di classe 100.000. I tubi sono prodotti nel reparto di estrusione interno alla camera bianca, con tolleranze definite per diametro interno ed esterno e una frequenza di campionamento stabilita per ciascuna specifica. Parti essenziali come i componenti strutturali delle pompe e delle valvole e i connettori sono realizzate nel nostro centro di lavorazione meccanica.\n![Centro di estrusione in camera bianca](/images/about/research-manufacturing/ability/extrusion-center.webp 1220x760)\n![Centro di lavorazione meccanica](/images/about/research-manufacturing/ability/machining-center.webp 1220x760)\n![Controllo della qualità](/images/about/quality-management.webp 1200x760)\nDocumenti di conformità: la documentazione sui materiali e sulla conformità, come i rapporti RoHS per i tubi, è disponibile su richiesta.\nRiconoscimenti aziendali: fondata nel 2012, FOREACH è riconosciuta in Cina come impresa nazionale specializzata e innovativa «Little Giant» e come Shenzhen Gazelle Enterprise. Gestisce inoltre un centro di ricerca e ingegneria riconosciuto dalla provincia del Guangdong.\n![Impresa nazionale specializzata e innovativa «Little Giant»](/images/about/foreach/honors/honor-row2-little-giant.webp 692x460)\n![Riconoscimento Shenzhen Gazelle Enterprise](/images/about/foreach/honors/honor-row2-gazelle.webp 634x460)\n![Centro di ricerca e ingegneria riconosciuto dalla provincia del Guangdong](/images/about/foreach/honors/honor-row2-engineering-center.webp 756x460)"
+        },
+        {
+          "title": "Contatti dopo la fiera",
+          "content": "MEDICA 2026 si è conclusa il 19 novembre. L’ultimo giorno, giovedì 19 novembre, i padiglioni hanno chiuso alle 16:00.\n\nSe cerchi un secondo fornitore per uno strumento già in produzione o stai selezionando pompe, valvole e raccordi per un nuovo progetto, puoi scriverci a info@foreachtek.com. Per agevolare il riscontro, indica i prodotti o i codici dei componenti in uso e gli argomenti da approfondire, come la valutazione di un’alternativa, le prove sui campioni o gli audit del fornitore."
+        }
+      ]
+    },
+    "adlm-2026-team-departure": {
+      "title": "FOREACH ad ADLM 2026",
+      "summary": "FOREACH aveva annunciato la partecipazione ad ADLM 2026 ad Anaheim dal 26 al 30 luglio 2026. Allo stand 4105 erano previsti componenti per il controllo di precisione dei fluidi e soluzioni fluidiche per diagnostica in vitro (IVD), scienze della vita, strumenti di analisi e automazione di laboratorio.",
+      "seoTitle": "FOREACH ad ADLM 2026 | Stand 4105",
+      "seoDescription": "L’annuncio di FOREACH per ADLM 2026 ad Anaheim presentava i componenti per il controllo di precisione dei fluidi e le soluzioni fluidiche in programma allo stand 4105.",
+      "content": [
+        {
+          "title": "FOREACH ad Anaheim",
+          "content": "FOREACH aveva annunciato la partecipazione ad ADLM 2026, in programma ad Anaheim, in California, dal 26 al 30 luglio 2026.\n\nAllo stand 4105 il team prevedeva di incontrare produttori di strumenti, ingegneri e partner del settore per discutere delle esigenze di controllo dei fluidi, della selezione dei componenti e dell’integrazione dei sistemi fluidici."
+        },
+        {
+          "title": "Prodotti e soluzioni in programma",
+          "content": "La presentazione prevista comprendeva pompe di precisione, valvole in miniatura, raccordi fluidici, tubi, sensori di pressione, rilevatori di bolle e soluzioni fluidiche su misura.\n\nQuesti prodotti supportano funzioni essenziali, come il dosaggio accurato dei liquidi, il trasferimento dei fluidi, la commutazione dei circuiti fluidici, il monitoraggio della pressione, il rilevamento delle bolle e la connessione affidabile delle linee."
+        },
+        {
+          "title": "Assistenza ingegneristica per le applicazioni strumentali",
+          "content": "FOREACH supporta le applicazioni nella diagnostica in vitro, nelle scienze della vita, nella strumentazione analitica e nell’automazione di laboratorio.\n\nOltre a fornire singoli componenti, il team di ingegneria assiste i clienti nella verifica della compatibilità dei materiali, nella selezione dei prodotti, nella valutazione di componenti alternativi e nell’integrazione dei sistemi fluidici."
+        },
+        {
+          "title": "Esperienza nel controllo di precisione dei fluidi",
+          "content": "FOREACH continua a sviluppare e industrializzare tecnologie di controllo di precisione dei fluidi per pompe, valvole, sonde, raccordi, tubi, sensori e soluzioni fluidiche integrate.\n\nL’azienda ha ottenuto in Cina riconoscimenti per l’innovazione specialistica e la crescita, grazie al suo continuo investimento nello sviluppo dei prodotti, nelle competenze ingegneristiche e nella produzione."
+        },
+        {
+          "title": "L’invito allo stand 4105",
+          "content": "L’invito allo stand 4105 era rivolto a chi cercava un nuovo componente fluidico, un’alternativa a un prodotto esistente o assistenza per la compatibilità dei materiali e l’integrazione dei sistemi.\n\nFiera: ADLM 2026\nDate: 26–30 luglio 2026\nLuogo: Anaheim, California, USA\nStand: 4105"
+        }
+      ]
+    },
+    "quality-manufacturing-capability-2026": {
+      "title": "Dalla validazione ingegneristica alla continuità delle forniture: produzione e qualità in FOREACH",
+      "summary": "FOREACH integra la gestione della qualità dal controllo dei fornitori alla validazione ingegneristica, fino alla produzione, al controllo finale, alla consegna e al riscontro dei clienti. Questo approccio sostiene la continuità delle forniture di componenti microfluidici.",
+      "seoTitle": "Produzione e gestione della qualità in FOREACH | Fornitura di componenti microfluidici",
+      "seoDescription": "Scopri come FOREACH combina controllo dei fornitori, validazione ingegneristica, produzione, misure di precisione e registri digitali per assicurare continuità nelle forniture di componenti microfluidici.",
+      "content": [
+        {
+          "title": "La qualità lungo il ciclo di vita del prodotto",
+          "content": "Anche se di piccole dimensioni, i componenti microfluidici incidono direttamente su portata, pressione, tenuta e stabilità dello strumento nel tempo. FOREACH applica requisiti di qualità alla gestione dei fornitori, alla verifica dei materiali, alla validazione ingegneristica, al montaggio, al controllo finale e alla consegna."
+        },
+        {
+          "title": "Processi standardizzati e registri digitali",
+          "content": "Con le piattaforme PDM, ERP, MES e SVN gestiamo materiali critici, informazioni di processo, registri di controllo, versioni dei documenti e dati di consegna. Questo migliora la tracciabilità e la possibilità di verifica lungo tutto il ciclo di vita del prodotto."
+        },
+        {
+          "title": "Controllo e validazione per forniture affidabili",
+          "content": "FOREACH verifica dimensioni critiche, aspetto, condizioni di montaggio, tenuta, pressione, portata e prestazioni elettriche con strumenti di misura di precisione, attrezzature dedicate e registri di processo."
+        },
+        {
+          "title": "Miglioramento continuo per le applicazioni dei clienti",
+          "content": "Le anomalie riscontrate nel controllo in ingresso, durante la produzione, nel controllo finale o nell’uso presso il cliente vengono gestite con un processo che comprende il controllo dei prodotti non conformi, l’analisi delle cause, le azioni correttive, un nuovo controllo e il miglioramento."
+        }
+      ]
+    },
+    "adlm-2026": {
+      "title": "Componenti microfluidici FOREACH ad ADLM 2026",
+      "summary": "FOREACH aveva annunciato la presentazione ad ADLM 2026 di pompe, valvole, raccordi, tubi, sensori e componenti fluidici per strumenti di diagnostica in vitro (IVD), automazione di laboratorio e scienze della vita.",
+      "seoTitle": "ADLM 2026 | Componenti microfluidici e soluzioni fluidiche FOREACH",
+      "seoDescription": "L’annuncio di FOREACH per ADLM 2026 riguardava componenti microfluidici e soluzioni fluidiche per strumenti IVD, automazione di laboratorio e scienze della vita.",
+      "content": [
+        {
+          "title": "Applicazioni IVD e automazione di laboratorio",
+          "content": "La presentazione prevista da FOREACH comprendeva componenti microfluidici come pompe a pistone, pompe a siringa, pompe a membrana, elettrovalvole, valvole rotative, raccordi, tubi e sensori."
+        },
+        {
+          "title": "Controllo affidabile del fluido per l’integrazione a lungo termine",
+          "content": "Tra i temi proposti ai clienti e ai partner durante la fiera figuravano la selezione dei prodotti, la compatibilità dei materiali, l’integrazione dei sistemi e le esigenze applicative."
+        },
+        {
+          "title": "Confronto con il team FOREACH",
+          "content": "L’invito era rivolto a chi opera nella diagnostica in vitro, nelle scienze della vita, nell’automazione di laboratorio e nella strumentazione analitica, per confrontarsi sul controllo dei fluidi, sull’integrazione delle connessioni e sui requisiti a livello di sistema."
+        }
+      ]
+    },
+    "me-supply-chain-expo-2026": {
+      "title": "FOREACH alla ME Supply Chain Expo 2026",
+      "summary": "FOREACH aveva annunciato la partecipazione alla ME Supply Chain Expo 2026, allo stand 2-M46, con i suoi prodotti principali, le capacità tecniche e soluzioni per diverse applicazioni.",
+      "seoTitle": "FOREACH alla ME Supply Chain Expo 2026 | Stand 2-M46",
+      "seoDescription": "L’annuncio di FOREACH per la ME Supply Chain Expo 2026 presentava i prodotti e le soluzioni previsti allo stand 2-M46.",
+      "content": [
+        {
+          "title": "Informazioni sulla fiera",
+          "content": "La ME Supply Chain Expo 2026 era prevista presso lo Shenzhen World Exhibition & Convention Center, in Cina. Lo stand di FOREACH era il 2-M46."
+        },
+        {
+          "title": "Prodotti e soluzioni in programma",
+          "content": "FOREACH aveva in programma di presentare i prodotti principali, le sue capacità tecniche e soluzioni per diverse applicazioni, mostrando ai visitatori le caratteristiche dei prodotti e i servizi disponibili."
+        },
+        {
+          "title": "Confronto in fiera",
+          "content": "L’invito allo stand 2-M46 era l’occasione per discutere con il team delle applicazioni dei prodotti, delle esigenze del mercato e delle opportunità di collaborazione."
+        }
+      ]
+    },
+    "guangzhou-high-med-expo-2026": {
+      "title": "Invito di FOREACH alla Guangzhou High Medical Expo 2026",
+      "summary": "FOREACH aveva annunciato la partecipazione alla Guangzhou High Medical Expo 2026, dal 30 marzo al 1º aprile, allo stand B529.",
+      "seoTitle": "FOREACH alla Guangzhou High Medical Expo 2026 | Stand B529",
+      "seoDescription": "L’annuncio di FOREACH per la Guangzhou High Medical Expo 2026 riguardava i prodotti e le soluzioni applicative previsti allo stand B529.",
+      "content": [
+        {
+          "title": "Informazioni sulla fiera",
+          "content": "La Guangzhou High Medical Expo 2026 era prevista dal 30 marzo al 1º aprile 2026 presso il Guangzhou Airport Expo Center, in Cina. Lo stand di FOREACH era il B529."
+        },
+        {
+          "title": "Prodotti e soluzioni in programma",
+          "content": "La presentazione prevista da FOREACH comprendeva i suoi prodotti principali, le capacità tecniche e le soluzioni applicative per il settore, per illustrare ai clienti le caratteristiche e i vantaggi delle soluzioni."
+        },
+        {
+          "title": "Invito allo stand",
+          "content": "FOREACH aveva invitato clienti, partner e professionisti del settore allo stand B529 per discutere di esigenze applicative, selezione dei prodotti e opportunità di collaborazione."
+        }
+      ]
+    },
+    "caclp-2026": {
+      "title": "Invito di FOREACH a CACLP 2026",
+      "summary": "FOREACH aveva annunciato la partecipazione a CACLP 2026, dal 21 al 23 marzo, allo stand 2-0424.",
+      "seoTitle": "Invito a CACLP 2026 | FOREACH, stand 2-0424",
+      "seoDescription": "L’invito di FOREACH a CACLP 2026 presentava i prodotti microfluidici, le capacità tecniche e le soluzioni applicative in programma allo stand 2-0424.",
+      "content": [
+        {
+          "title": "Informazioni sulla fiera",
+          "content": "CACLP 2026 era prevista dal 21 al 23 marzo 2026 presso lo Xiamen International Expo Center, in Cina. Lo stand di FOREACH era il 2-0424."
+        },
+        {
+          "title": "Prodotti e soluzioni in programma",
+          "content": "FOREACH aveva in programma di presentare allo stand i prodotti principali, le sue capacità tecniche e le soluzioni applicative per il settore, per far conoscere ai clienti le caratteristiche dei prodotti e i servizi disponibili."
+        },
+        {
+          "title": "Invito allo stand 2-0424",
+          "content": "FOREACH aveva invitato clienti, partner e professionisti del settore allo stand 2-0424 per parlare dei prodotti e delle opportunità di collaborazione."
+        }
+      ]
+    },
+    "whx-labs-dubai-2026": {
+      "title": "FOREACH a WHX Labs Dubai 2026",
+      "summary": "FOREACH aveva annunciato la partecipazione a WHX Labs Dubai 2026, allo stand H2.F34, con prodotti microfluidici, competenze tecniche e soluzioni applicative.",
+      "seoTitle": "FOREACH a WHX Labs Dubai 2026 | Stand H2.F34",
+      "seoDescription": "L’annuncio di FOREACH per WHX Labs Dubai 2026 presentava i prodotti microfluidici e le soluzioni applicative previsti allo stand H2.F34.",
+      "content": [
+        {
+          "title": "Informazioni sulla fiera",
+          "content": "WHX Labs Dubai 2026 era prevista dal 10 al 13 febbraio 2026 presso il Dubai World Trade Centre, negli Emirati Arabi Uniti. Lo stand di FOREACH era l’H2.F34."
+        },
+        {
+          "title": "Confronto con i mercati internazionali",
+          "content": "La fiera rappresentava un’occasione per ampliare i contatti internazionali di FOREACH. L’azienda aveva in programma di presentare prodotti, competenze tecniche e soluzioni per diverse applicazioni."
+        },
+        {
+          "title": "Incontri con il team",
+          "content": "I visitatori erano invitati a incontrare il team di FOREACH per discutere di caratteristiche dei prodotti, applicazioni, personalizzazioni e modalità di collaborazione."
+        }
+      ]
+    },
+    "specialized-new-conference-2025": {
+      "title": "FOREACH invitata alla conferenza 2025 per lo sviluppo delle PMI specializzate e innovative",
+      "summary": "FOREACH ha partecipato alla conferenza 2025 per lo sviluppo delle PMI specializzate e innovative come una delle imprese di Shenzhen invitate a rappresentare la città.",
+      "seoTitle": "FOREACH alla conferenza 2025 per lo sviluppo delle PMI specializzate e innovative",
+      "seoDescription": "FOREACH ha partecipato alla conferenza 2025 per lo sviluppo delle PMI specializzate e innovative come una delle imprese di Shenzhen invitate a rappresentare la città.",
+      "content": [
+        {
+          "title": "Un’impresa invitata a rappresentare Shenzhen",
+          "content": "La conferenza 2025 per lo sviluppo delle PMI specializzate e innovative si è aperta a Chongqing il 12 novembre. FOREACH ha partecipato tra le imprese di Shenzhen invitate a rappresentare la città."
+        },
+        {
+          "title": "La delegazione di Shenzhen",
+          "content": "La delegazione comprendeva rappresentanti delle istituzioni, dirigenti di associazioni di settore e rappresentanti delle imprese specializzate e innovative riconosciute a livello nazionale con il titolo «Little Giant»."
+        },
+        {
+          "title": "Un impegno continuo nella microfluidica",
+          "content": "Con il riconoscimento nazionale «Little Giant» per le imprese specializzate e innovative, FOREACH continua a concentrarsi sui componenti microfluidici essenziali, sull’assistenza per i sistemi fluidici e sull’innovazione per le applicazioni."
+        }
+      ]
+    },
+    "medical-device-innovation-2025": {
+      "title": "Invito di FOREACH alla Medical Device Innovation Expo 2025",
+      "summary": "FOREACH aveva annunciato la partecipazione alla Medical Device Innovation Expo 2025, dal 21 al 23 agosto, allo stand B36.",
+      "seoTitle": "FOREACH alla Medical Device Innovation Expo 2025 | Stand B36",
+      "seoDescription": "L’annuncio di FOREACH per la Medical Device Innovation Expo 2025 presentava i prodotti e le soluzioni applicative previsti allo stand B36.",
+      "content": [
+        {
+          "title": "Informazioni sulla fiera",
+          "content": "La Medical Device Innovation Expo 2025 era prevista dal 21 al 23 agosto 2025 presso il Suzhou International Expo Center, in Cina. Lo stand di FOREACH era il B36."
+        },
+        {
+          "title": "Prodotti in programma",
+          "content": "FOREACH aveva in programma di presentare i suoi prodotti principali, le competenze tecniche e le soluzioni applicative per il settore, per illustrare ai visitatori le caratteristiche dei prodotti e i servizi disponibili."
+        },
+        {
+          "title": "Invito allo stand",
+          "content": "FOREACH aveva invitato clienti, partner e professionisti del settore allo stand B36 per discutere di tendenze, esigenze applicative e opportunità di collaborazione."
+        }
+      ]
+    },
+    "gazelle-enterprise-2025": {
+      "title": "FOREACH ottiene il riconoscimento Gazelle Enterprise",
+      "summary": "FOREACH ha ottenuto il riconoscimento Gazelle Enterprise per la capacità di innovazione, il ritmo di crescita e i risultati di mercato.",
+      "seoTitle": "FOREACH ottiene il riconoscimento Gazelle Enterprise",
+      "seoDescription": "FOREACH ha ottenuto il riconoscimento Gazelle Enterprise per la capacità di innovazione, il ritmo di crescita e i risultati di mercato.",
+      "content": [
+        {
+          "title": "Un riconoscimento per crescita e innovazione",
+          "content": "Il riconoscimento Gazelle Enterprise assegnato a FOREACH valorizza la capacità di innovazione, il ritmo di crescita e i risultati di mercato dell’azienda."
+        },
+        {
+          "title": "Un impegno continuo nella tecnologia microfluidica",
+          "content": "FOREACH continua a sviluppare e industrializzare tecnologie di controllo microfluidico di precisione per applicazioni nella diagnostica medica, nel monitoraggio ambientale, nelle apparecchiature di laboratorio, nelle scienze della vita e nella biologia sintetica."
+        },
+        {
+          "title": "Innovazione per le applicazioni dei clienti",
+          "content": "FOREACH continua a migliorare pompe, valvole, sonde, raccordi, sensori e assistenza per i sistemi fluidici, per offrire prodotti affidabili e continuità nel servizio."
+        }
+      ]
+    },
+    "guangming-quality-cultivation-2024": {
+      "title": "FOREACH supera la valutazione del programma per l’eccellenza della qualità del distretto di Guangming",
+      "summary": "FOREACH ha superato la valutazione 2024 del programma per l’eccellenza della qualità del distretto di Guangming, che riconosce i progressi nella gestione della qualità e nell’innovazione tecnologica.",
+      "seoTitle": "FOREACH supera la valutazione del programma per l’eccellenza della qualità del distretto di Guangming",
+      "seoDescription": "Il superamento della valutazione 2024 del programma del distretto di Guangming riconosce il miglioramento continuo nella gestione della qualità di FOREACH.",
+      "content": [
+        {
+          "title": "Superamento della valutazione",
+          "content": "FOREACH ha superato la valutazione 2024 del programma per l’eccellenza della qualità del distretto di Guangming. Il risultato riconosce il lavoro dell’azienda nella gestione della qualità, nell’innovazione tecnologica e nel miglioramento continuo."
+        },
+        {
+          "title": "Miglioramento continuo della gestione della qualità",
+          "content": "La gestione della qualità favorisce la continuità delle forniture di componenti microfluidici essenziali. FOREACH continuerà a migliorare il proprio sistema di gestione della qualità e i servizi offerti."
+        },
+        {
+          "title": "Assistenza affidabile per i clienti",
+          "content": "FOREACH continuerà ad assistere i clienti della diagnostica in vitro (IVD), delle scienze della vita, dell’automazione di laboratorio e dei settori affini con prodotti affidabili e servizi professionali."
+        }
+      ]
+    },
+    "national-little-giant-2024": {
+      "title": "FOREACH ottiene il riconoscimento nazionale «Little Giant» per le imprese specializzate e innovative",
+      "summary": "FOREACH ha ottenuto un riconoscimento nazionale per la specializzazione, lo sviluppo tecnologico e l’innovazione nel controllo microfluidico.",
+      "seoTitle": "FOREACH riconosciuta a livello nazionale tra le imprese specializzate e innovative Little Giant",
+      "seoDescription": "FOREACH ha ottenuto un riconoscimento nazionale per la specializzazione e l’innovazione nei componenti microfluidici e nelle tecnologie di controllo dei fluidi.",
+      "content": [
+        {
+          "title": "Riconoscimento nazionale d’impresa",
+          "content": "FOREACH è stata inserita nell’elenco nazionale delle imprese «Little Giant», specializzate, tecnologicamente avanzate, distintive e innovative. Il riconoscimento premia lo sviluppo mirato e la capacità di innovazione nel controllo microfluidico."
+        },
+        {
+          "title": "Sviluppo a lungo termine di componenti microfluidici essenziali",
+          "content": "FOREACH sviluppa pompe, valvole, sonde, sensori, raccordi e componenti per tubazioni. Fornisce inoltre assistenza per i sistemi fluidici nella diagnostica in vitro (IVD), nelle scienze della vita, nell’automazione di laboratorio e nella strumentazione analitica."
+        },
+        {
+          "title": "Competenze tecniche per le applicazioni dei clienti",
+          "content": "Il riconoscimento riflette la specializzazione e la capacità di innovazione dell’azienda. FOREACH continuerà a investire in sviluppo dei prodotti, produzione, assicurazione della qualità e supporto ingegneristico."
+        }
+      ]
+    },
+    "iso-9001-certification": {
+      "title": "FOREACH ottiene la certificazione ISO 9001 del sistema di gestione della qualità",
+      "summary": "La certificazione ISO 9001 rafforza la gestione standardizzata in FOREACH, dallo sviluppo dei prodotti alla produzione, al controllo, alla consegna e al miglioramento continuo.",
+      "seoTitle": "FOREACH ottiene la certificazione ISO 9001",
+      "seoDescription": "FOREACH ha ottenuto la certificazione ISO 9001 per il sistema di gestione della qualità, a supporto della standardizzazione di sviluppo, produzione, controllo, consegna e miglioramento continuo.",
+      "content": [
+        {
+          "title": "Un sistema di gestione della qualità standardizzato",
+          "content": "Con la certificazione ISO 9001, FOREACH dispone di un quadro strutturato per gli obiettivi di qualità, il controllo dei processi, la gestione documentale, gli audit interni e il miglioramento continuo."
+        },
+        {
+          "title": "Sviluppo, produzione e consegna",
+          "content": "I requisiti di qualità si applicano al riesame dei requisiti, alla progettazione, alla gestione dei fornitori, alla produzione, ai controlli in processo, al rilascio finale e ai riscontri dei clienti."
+        },
+        {
+          "title": "Miglioramento continuo al servizio dei clienti",
+          "content": "Registri di processo, gestione delle anomalie fino alla loro risoluzione e interventi di miglioramento aiutano FOREACH ad aumentare la costanza dei prodotti, l’affidabilità delle forniture e la capacità di risposta ai clienti."
+        }
+      ]
+    },
+    "iso-13485-certification": {
+      "title": "FOREACH ottiene la certificazione ISO 13485 del sistema di gestione della qualità per i dispositivi medici",
+      "summary": "La certificazione ISO 13485 rafforza il controllo dei processi, la documentazione, la tracciabilità e il miglioramento continuo nei progetti dei clienti per dispositivi medici, diagnostica in vitro (IVD) e scienze della vita.",
+      "seoTitle": "FOREACH ottiene la certificazione ISO 13485",
+      "seoDescription": "FOREACH ha ottenuto la certificazione ISO 13485, rafforzando il controllo dei processi, la documentazione e la tracciabilità per le applicazioni nei dispositivi medici, nella diagnostica in vitro (IVD) e nelle scienze della vita.",
+      "content": [
+        {
+          "title": "Gestione della qualità per i dispositivi medici",
+          "content": "La ISO 13485 definisce i requisiti di gestione della qualità per i dispositivi medici e i servizi connessi. La certificazione rafforza i processi di FOREACH per la valutazione dei rischi, la gestione documentale, il controllo dei processi, i registri di qualità e il miglioramento continuo."
+        },
+        {
+          "title": "Assistenza ai progetti IVD e delle scienze della vita",
+          "content": "Pompe, valvole, sensori, sonde, raccordi e assemblaggi di tubi per microfluidica sono utilizzati in apparecchiature per la diagnostica in vitro (IVD), le scienze della vita e il laboratorio. Un sistema di gestione della qualità strutturato facilita gli audit dei fornitori, l’avvio dei progetti, la gestione dei lotti e la tracciabilità."
+        },
+        {
+          "title": "Controllo dei processi e tracciabilità",
+          "content": "Requisiti dei prodotti, validazione della progettazione, gestione dei fornitori, produzione, accettazione dopo il controllo e gestione delle non conformità rientrano nei processi di qualità documentati."
+        },
+        {
+          "title": "Ambito della certificazione",
+          "content": "La certificazione ISO 13485 riguarda il sistema di gestione della qualità. L’eventuale registrazione come dispositivo medico o certificazione del singolo prodotto FOREACH richiede una procedura separata."
+        }
+      ]
+    },
+    "cmef-icmd-2014": {
+      "title": "FOREACH conclude la partecipazione alla CMEF & ICMD dell’autunno 2014",
+      "summary": "Alla CMEF & ICMD dell’autunno 2014, FOREACH ha presentato nuove linee di prodotto e discusso con i clienti delle applicazioni per i sistemi microfluidici.",
+      "seoTitle": "FOREACH conclude la partecipazione alla CMEF & ICMD dell’autunno 2014",
+      "seoDescription": "Alla CMEF & ICMD dell’autunno 2014, FOREACH ha presentato nuove linee di prodotto e applicazioni per sistemi microfluidici.",
+      "content": [
+        {
+          "title": "La partecipazione alla fiera",
+          "content": "Alla CMEF & ICMD dell’autunno 2014, FOREACH ha presentato prodotti aggiornati e nuove linee, attirando l’interesse di numerosi visitatori e clienti."
+        },
+        {
+          "title": "Confronto tecnico",
+          "content": "Durante la fiera, FOREACH ha condiviso il proprio contributo tecnico al forum sull’innovazione tecnologica nei servizi personalizzati per la produzione di dispositivi medici, discutendo delle sfide del settore e delle possibili soluzioni."
+        },
+        {
+          "title": "Assistenza per la diagnostica in vitro e i settori affini",
+          "content": "Numerosi clienti hanno visitato lo stand di FOREACH per conoscere le linee di prodotto e i servizi per i sistemi microfluidici. FOREACH continuerà a supportare la diagnostica in vitro (IVD) e i settori affini con prodotti e assistenza tecnica."
+        }
+      ]
+    }
+  }
+}

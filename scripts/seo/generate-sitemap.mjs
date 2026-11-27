@@ -34,6 +34,9 @@ const supportedLocales = new Set([
   "fr",
   "ko",
   "ru",
+  "de",
+  "it",
+  "hi",
 ]);
 
 const excludedFileNames = new Set([
@@ -438,6 +441,9 @@ async function main() {
     fr: 0,
     ko: 0,
     ru: 0,
+    de: 0,
+    it: 0,
+    hi: 0,
   };
 
   for (const route of routes) {
@@ -467,6 +473,9 @@ async function main() {
   console.log(`法语：${languageCounts.fr}`);
   console.log(`韩语：${languageCounts.ko}`);
   console.log(`俄语：${languageCounts.ru}`);
+  console.log(`德语：${languageCounts.de}`);
+  console.log(`意大利语：${languageCounts.it}`);
+  console.log(`印地语：${languageCounts.hi}`);
   console.log(
     `自动排除：${excludedRoutes.length}`,
   );

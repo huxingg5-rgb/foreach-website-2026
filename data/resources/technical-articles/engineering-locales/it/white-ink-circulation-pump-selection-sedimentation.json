@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "title": "Perché il ricircolo dell’inchiostro bianco è più difficile e come si sceglie la pompa?",
+    "seoTitle": "Pompa di ricircolo dell’inchiostro bianco e sedimentazione | Foreach Technology",
+    "seoDescription": "Valutate sedimentazione del TiO₂, percorso e portata di ricircolo, zone di ristagno, filtri, viscosità, pressione e riavvio prima di esaminare DPL30 o DPL60.",
+    "coverImage": "/images/resources/technical-articles/white-ink-circulation-pump/white-ink-circulation-dead-zone-cover.webp",
+    "coverAlt": "Circuito di ricircolo dell’inchiostro bianco con serbatoio, pompa a membrana, filtro e diramazione con zone di ristagno ridotte"
+  },
+  "deck": "Per ottenere opacità, l’inchiostro bianco usa in genere pigmenti con indice di rifrazione e peso specifico elevati. Il TiO₂ è comune, ma la sedimentazione dipende da differenza di densità, dispersione, agglomerazione e tempo di inattività. Occorre un flusso controllato che raggiunga le zone critiche nel serbatoio, nelle tubazioni, nel filtro e presso la testina, rispettando i limiti di pressione, le condizioni dell’inchiostro e la compatibilità dei materiali.",
+  "leadBlocks": [
+    {
+      "type": "notice",
+      "label": "In breve:",
+      "text": "Scegliete la pompa di ricircolo dell’inchiostro bianco considerando formulazione, testina a flusso passante, circuito di ricircolo, filtro e strategia di arresto. DPL30 e DPL60 sono candidate per la loro classe di portata. La compatibilità con l’inchiostro specifico richiede una verifica."
+    },
+    {
+      "type": "links",
+      "items": [
+        {
+          "href": "/resources/technical-articles/ink-circulation-supply-return-pump-diaphragm-pump/",
+          "label": "guida all’architettura di alimentazione, ritorno e ricircolo dell’inchiostro",
+          "prefix": "Per definire la funzione della pompa, consultate prima la ",
+          "suffix": "."
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Perché la sedimentazione è più critica con l’inchiostro bianco?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per assicurare l’opacità su supporti scuri o trasparenti, l’inchiostro bianco usa spesso pigmenti inorganici come il TiO₂. Il TiO₂ è denso. Una forte differenza di densità fra pigmento e veicolo favorisce la sedimentazione per gravità. La stabilità reale dipende anche da dimensione delle particelle, agglomerazione, disperdenti, contenuto di solidi, viscosità del veicolo, temperatura e tempi di inattività."
+        },
+        {
+          "type": "notice",
+          "label": "Differenze fra inchiostri bianchi:",
+          "text": "Gli inchiostri bianchi a base acqua, a solvente e UV usano pigmenti, distribuzioni granulometriche, sistemi di dispersione e proprietà reologiche differenti. La viscosità e la velocità di sedimentazione dipendono dalla formulazione."
+        }
+      ]
+    },
+    {
+      "title": "2. Che cosa spiega la legge di Stokes sulla sedimentazione?",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "Vₛ ∝ (ρp − ρf)d² / μ",
+          "note": "In linea generale, una differenza di densità maggiore o particelle e agglomerati più grandi favoriscono la sedimentazione. Una maggiore viscosità della fase continua la rallenta."
+        },
+        {
+          "type": "paragraph",
+          "text": "La relazione presuppone particelle ideali e una sospensione diluita. Negli inchiostri bianchi concentrati possono intervenire distribuzione granulometrica, interazioni, flocculazione, tissotropia, flusso non newtoniano e sedimentazione ostacolata. La legge di Stokes serve a spiegare la tendenza. Per stabilire la portata di ricircolo, servono dati del fornitore dell’inchiostro e prove sul circuito."
+        }
+      ]
+    },
+    {
+      "title": "3. A che cosa serve il ricircolo dell’inchiostro bianco?",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Riduce i gradienti locali di concentrazione di pigmento in serbatoi, tubazioni e passaggi della testina.",
+            "Nelle testine a flusso passante, mantiene in movimento i fluidi soggetti a sedimentazione o rapida essiccazione vicino agli ugelli.",
+            "Insieme ad agitazione, controllo della temperatura, degasaggio e filtrazione mantiene più uniformi le condizioni dell’inchiostro.",
+            "Agevola la riomogeneizzazione e il riavvio dopo l’inattività, tenendo conto che alcuni depositi duri possono non ridisperdersi."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Il ricircolo può ridurre il rischio di sedimentazione, ma una formulazione instabile, una filtrazione inadatta, depositi induriti e zone di ristagno richiedono interventi specifici. L’agitazione del serbatoio e il ricircolo nel circuito esterno sono inoltre due compiti diversi e possono richiedere attuatori distinti."
+        }
+      ]
+    },
+    {
+      "title": "4. Perché le zone di ristagno contano più di un singolo valore di portata?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Anche se il circuito principale raggiunge la portata prevista, estremità delle diramazioni, cavità delle valvole, gradini nei raccordi, angoli del serbatoio, punti bassi, volumi sovradimensionati e bypass possono avere un flusso quasi nullo. Accorciate le diramazioni cieche, riducete il volume di ritenzione, evitate i punti bassi di accumulo e verificate che il flusso raggiunga la zona della testina da proteggere."
+        }
+      ]
+    },
+    {
+      "title": "5. Perché non basta aumentare la portata dell’inchiostro bianco?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aumentare la portata può migliorare il ricambio in certi tratti, ma aumenta anche la perdita di carico nei filtri e nei tubi di piccolo diametro. Se il controllo di mandata e ritorno è insufficiente, le variazioni di pressione possono raggiungere il menisco. Velocità eccessive possono anche aumentare pulsazioni, schiuma, rilascio di gas, riscaldamento o usura delle particelle e delle parti a contatto con il fluido. Con gli inchiostri UV, attenetevi ai limiti di esposizione a luce, temperatura e materiali stabiliti dal fornitore."
+        },
+        {
+          "type": "notice",
+          "label": "Obiettivo del ricircolo:",
+          "text": "Trovate la condizione di ricircolo minima efficace, che raggiunga i tratti critici, rispetti la finestra di pressione della testina e lasci margine per il progressivo intasamento del filtro."
+        }
+      ]
+    },
+    {
+      "title": "6. Come interagiscono filtro, viscosità, pressione e pigmento?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Variabile",
+            "Effetto sul ricircolo dell’inchiostro bianco",
+            "Verifica"
+          ],
+          "rows": [
+            [
+              "Viscosità e temperatura",
+              "Variazione della perdita di carico nei tubi, del punto di lavoro della pompa e delle condizioni di espulsione delle gocce",
+              "Misurare viscosità, portata e pressione nell’intero intervallo di temperatura"
+            ],
+            [
+              "Filtro",
+              "La perdita di carico aumenta con portata, viscosità e accumulo di materiale. Il grado di filtrazione dipende anche dai requisiti della testina.",
+              "Provare il filtro pulito, al carico tipico e alla soglia di sostituzione"
+            ],
+            [
+              "Pigmento e agglomerati",
+              "Incidono sul rischio di sedimentazione, ostruzione e abrasione",
+              "Verificare dimensioni, dispersione, sedimentazione e comportamento nel ricircolo prolungato"
+            ],
+            [
+              "Pressione di mandata e ritorno",
+              "Determina la pressione differenziale di ricircolo e influisce sul menisco",
+              "Misurare insieme pressione di mandata, di ritorno, differenziale e condizioni della testina"
+            ],
+            [
+              "Tubazioni e percorso",
+              "Determinano la distribuzione della velocità, la perdita di carico e le zone di ristagno",
+              "Usare un circuito di prova trasparente, misurare la pressione nei vari tratti e controllare la ripartizione delle portate"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. La DPL30 o la DPL60 si può usare per l’inchiostro bianco?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DPL30 e DPL60 si possono valutare inizialmente per la portata desiderata e la classe di pressione di 100 kPa. Per dichiararle idonee all’inchiostro bianco occorre una validazione. DPL30 è nella classe 300 mL/min e DPL60 in quella 600 mL/min. Sono valori di portata a vuoto, distinti dalla portata dell’inchiostro bianco in esercizio."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Modello candidato",
+            "Dato verificato per la valutazione iniziale",
+            "Aspetti ancora da verificare"
+          ],
+          "rows": [
+            [
+              "DPL30",
+              "Classe 300 mL/min, 100 kPa",
+              "Punto di lavoro, stabilità a bassa velocità, pulsazioni, particelle e materiali a contatto con il fluido"
+            ],
+            [
+              "DPL60",
+              "Classe 600 mL/min, 100 kPa",
+              "Punto di lavoro, margine sul filtro, ricircolo prolungato e materiali"
+            ],
+            [
+              "DPL30H",
+              "Classe 300 mL/min, versione ad alta pressione da 600 kPa",
+              "L’alta pressione da sola non rende la pompa idonea alla testina. Non è la candidata di riferimento per questo circuito."
+            ]
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+              "prefix": "Nel valutare la ",
+              "label": "DPL30-DB",
+              "suffix": " per un circuito di inchiostro bianco a bassa portata, misurate la portata e ispezionate le valvole per rilevare eventuali depositi dopo il periodo di inattività previsto."
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+              "prefix": "Se il circuito richiede una portata maggiore, provate la ",
+              "label": "DPL60-DB",
+              "suffix": " con lo stesso inchiostro e filtro. Controllate il recupero al riavvio e la pressione alla testina."
+            },
+            {
+              "href": "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection/",
+              "label": "scelta fra pompe per inchiostro da 300 e 600 mL/min"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "categoria delle minipompe a membrana per liquidi"
+            }
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Compatibilità da dimostrare:",
+          "text": "La compatibilità della DPL30 con l’inchiostro bianco non è automatica e la DPL60 non è una scelta predefinita per questo impiego. Occorre verificare la compatibilità con l’inchiostro specifico."
+        }
+      ]
+    },
+    {
+      "title": "8. Perché provare sia il ricircolo prolungato sia il riavvio dopo l’arresto?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una breve prova con acqua non rappresenta l’esposizione prolungata a pigmento, solvente o monomero, disperdente e temperatura. Nelle prove dinamiche, monitorate portata, pressione differenziale, pulsazioni, corrente, riscaldamento, variazioni dei materiali, depositi e carico del filtro. Le prove dopo l’inattività devono considerare sedimentazione, accumulo nei punti bassi, adesione delle valvole e tempo di riomogeneizzazione."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Usate cicli di esercizio, attesa e spegnimento rappresentativi della stampante.",
+            "Confrontate concentrazione o indicatori ottici in diversi punti di campionamento, prima e dopo il periodo di inattività.",
+            "Verificate sequenza di riavvio, durata di agitazione e ricircolo, rimozione dell’aria, pressione differenziale del filtro e condizioni della testina.",
+            "Ispezionate tubi, testata della pompa, membrana, valvole, tenute e parti incollate per individuare variazioni dimensionali e di durezza, rigonfiamento, screpolature ed estrazione di sostanze."
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/300-ml-min-micro-liquid-diaphragm-pump-epdm-ptfe-ffkm/",
+              "label": "guida alla verifica dei materiali EPDM, PTFE e FFKM",
+              "prefix": "Per la valutazione preliminare dei materiali, consultate la ",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9. Verifiche per scegliere la pompa di ricircolo dell’inchiostro bianco",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Chiedete al fornitore dell’inchiostro informazioni su pigmenti, viscosità in funzione della temperatura, filtrazione e condizioni ammesse di taglio e ricircolo.",
+            "Verificate se la testina consente il flusso passante, quale pressione differenziale ammette e l’intervallo di pressione del menisco.",
+            "Indicate sullo schema agitazione nel serbatoio, circuito principale, diramazioni, testina, punti bassi e tutte le zone di ristagno.",
+            "Valutate DPL30, DPL60 o altri modelli dalle curve della pompa. Per il punto di lavoro usate le condizioni del circuito reale.",
+            "Verificate filtri puliti e carichi, variazioni di livello, bolle, anomalie di pressione e intervallo di temperatura.",
+            "Prima del rilascio, completate le prove di ricircolo prolungato, sedimentazione a riposo, recupero al riavvio e compatibilità dei materiali a contatto con il fluido."
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulle pompe di ricircolo dell’inchiostro bianco",
+  "faqItems": [
+    {
+      "question": "Perché si fa ricircolare l’inchiostro bianco?",
+      "answer": "Il ricircolo aiuta a ridurre la sedimentazione locale e i gradienti di concentrazione dei pigmenti ad alto peso specifico in serbatoi, tubazioni e testine a flusso passante. Agevola anche il controllo della temperatura, la filtrazione e la rimozione dell’aria."
+    },
+    {
+      "question": "Perché il TiO₂ tende a sedimentare?",
+      "answer": "Le particelle di TiO₂ hanno una densità molto diversa da quella del veicolo. Nel caso ideale, particelle o agglomerati più grandi sedimentano più velocemente. Dispersione, contenuto di solidi e reologia cambiano il comportamento reale."
+    },
+    {
+      "question": "Il ricircolo può impedire del tutto la sedimentazione dell’inchiostro bianco?",
+      "answer": "Non si può garantire. Il ricircolo può ridurre la sedimentazione nei tratti raggiunti dal flusso, ma una formulazione instabile, depositi induriti e zone di ristagno possono ancora causare problemi."
+    },
+    {
+      "question": "Una portata di ricircolo più alta è sempre preferibile?",
+      "answer": "No. Aumenta la perdita di carico e può alterare le condizioni alla testina, le pulsazioni, la formazione di schiuma, la temperatura o l’usura. Verificate la condizione minima efficace."
+    },
+    {
+      "question": "Che cos’è una zona di ristagno nel circuito dell’inchiostro bianco?",
+      "answer": "È un tratto con flusso ridotto o nullo, per esempio una diramazione cieca, un punto basso, una cavità di una valvola, un angolo del serbatoio o un passaggio della testina che il ricircolo non raggiunge."
+    },
+    {
+      "question": "La legge di Stokes basta per determinare la portata di ricircolo?",
+      "answer": "No. Spiega la tendenza ideale alla sedimentazione. Negli inchiostri bianchi concentrati interazioni, agglomerazione e reologia non newtoniana richiedono prove."
+    },
+    {
+      "question": "La DPL30 è automaticamente compatibile con l’inchiostro bianco?",
+      "answer": "No. DPL30 è una candidata della classe 300 mL/min. Vanno verificati compatibilità dei materiali, particelle, filtrazione, ricircolo prolungato e prestazioni al riavvio."
+    },
+    {
+      "question": "Dopo lo spegnimento basta riavviare la pompa di ricircolo?",
+      "answer": "Dipende dal sistema. Possono servire agitazione nel serbatoio, ricircolo graduale a bassa velocità, rimozione dell’aria e manutenzione della testina. Determinate la sequenza con prove sull’inchiostro e sul sistema."
+    }
+  ],
+  "cta": {
+    "title": "Verificate pompa e circuito con l’inchiostro bianco effettivo",
+    "description": "Indicate composizione dell’inchiostro, dati su pigmenti e particelle, viscosità in funzione della temperatura, intervallo di pressione della testina, circuito di ricircolo, filtro e ciclo di inattività.",
+    "contactLabel": "Invia le condizioni di ricircolo dell’inchiostro bianco",
+    "productsLabel": "Vedi le pompe a membrana per liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

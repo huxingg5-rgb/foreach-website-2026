@@ -1,7 +1,8 @@
 import type { InstallationGuideLocale } from "./installation-guide.types";
+import { installationGuidePageSize } from "./german-installation-guide-routes";
 
-export const INSTALLATION_GUIDE_PAGE_SIZE = 6;
-export const INSTALLATION_GUIDE_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
+export const INSTALLATION_GUIDE_PAGE_SIZE = installationGuidePageSize;
+export const INSTALLATION_GUIDE_LOCALES = ["en", "es", "fr", "ko", "ru", "de", "it", "hi"] as const;
 
 export function getInstallationGuidePageHref(locale: InstallationGuideLocale, page = 1) {
   const base = `${locale === "zh-CN" ? "" : `/${locale}`}/resources/installation-guide/`;
@@ -17,4 +18,7 @@ export const guidePaginationCopy: Record<InstallationGuideLocale, {
   fr: { pagination: "Pagination des guides", previous: "Précédente", next: "Suivante", page: (n) => `Page ${n}` },
   ko: { pagination: "사용 가이드 페이지", previous: "이전", next: "다음", page: (n) => `${n}페이지` },
   ru: { pagination: "Страницы руководств", previous: "Назад", next: "Далее", page: (n) => `Страница ${n}` },
+  hi: { pagination: "गाइड के पेज", previous: "पिछला", next: "अगला", page: (n) => "पेज " + n },
+  it: { pagination: "Pagine delle guide", previous: "Indietro", next: "Avanti", page: (n) => "Pagina " + n },
+  de: { pagination: "Seitennavigation der Anleitungen", previous: "Zurück", next: "Weiter", page: (n) => "Seite " + n },
 };

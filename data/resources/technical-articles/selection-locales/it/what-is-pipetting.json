@@ -1,0 +1,459 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è il pipettaggio? Confronto tra flussi di lavoro manuali e automatizzati",
+      "seoTitle": "Che cos’è il pipettaggio? Flussi di lavoro manuali e automatizzati | FOREACH",
+      "seoDescription": "Scopri il pipettaggio con un esempio da 100 µL. Passaggi manuali, coordinamento di pompa e valvola, vantaggi, limiti, scostamento medio e CV di ripetibilità.",
+      "coverImage": "/images/resources/technical-articles/what-is-pipetting/manual-and-automated-pipetting-en.webp",
+      "coverAlt": "Flussi di lavoro del pipettaggio manuale e automatico. Un operatore trasferisce il liquido a mano. Una pompa a siringa, una valvola di commutazione, un ago e un vassoio erogano liquido in recipienti successivi."
+    },
+    "deck": "Il pipettaggio è il trasferimento di un volume definito di liquido da una posizione a un’altra. Per esempio, si possono trasferire 100 µL da una provetta a un recipiente di reazione o aggiungere campione e diluente in un rapporto definito.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Il pipettaggio è il trasferimento di un volume definito di liquido da una posizione a un’altra. Per esempio, si possono trasferire 100 µL da una provetta a un recipiente di reazione o aggiungere campione e diluente in un rapporto definito."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ogni trasferimento richiede sorgente, destinazione e volume noti, seguiti da aspirazione ed erogazione appropriate. Con uno strumento a mano, l’operatore esegue e coordina le azioni. In un processo completamente automatico, l’apparecchiatura segue una sequenza programmata. Lo stesso compito, trasferire 100 µL, aiuta a capire la differenza."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/what-is-pipetting/manual-and-automated-pipetting-en.webp",
+        "alt": "Flussi di lavoro del pipettaggio manuale e automatico. Un operatore trasferisce il liquido a mano. Una pompa a siringa, una valvola di commutazione, un ago e un vassoio erogano liquido in recipienti successivi.",
+        "width": 1200,
+        "height": 630,
+        "caption": "Entrambi i metodi trasferiscono un volume definito. Nel pipettaggio manuale coordina le azioni l’operatore. Nel pipettaggio automatico, un programma coordina le apparecchiature."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Pipettaggio manuale: l’operatore aspira e trasferisce il liquido",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Nel pipettaggio manuale l’operatore trasferisce il liquido con una pipetta a mano o con una pipetta e un pipettatore. Con una pipetta meccanica è l’operatore ad azionare aspirazione ed erogazione. Una pipetta elettronica può eseguire le azioni, mentre l’operatore seleziona il campione, sposta lo strumento e controlla la destinazione."
+          },
+          {
+            "type": "subheading",
+            "title": "Come si esegue un singolo trasferimento?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Considera il trasferimento di 100 µL da una provetta a un recipiente di reazione con una pipetta manuale e un puntale monouso."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Conferma il compito e scegli lo strumento. Controlla campione e destinazione, seleziona pipetta e puntale adatti al volume obiettivo e imposta 100 µL. Verifica che l’intervallo di lavoro comprenda quel volume e controlla le prestazioni a quel valore.",
+              "Monta il puntale e preparati ad aspirare. Verifica innesto e tenuta del puntale e completa la preparazione prevista dal metodo. Un accoppiamento inadeguato può alterare aspirazione ed erogazione.",
+              "Immergi il puntale e aspira. Controlla posizione, profondità di immersione e aspirazione, lasciando entrare il liquido nel puntale prima di estrarlo. Cerca bolle o perdite visibili.",
+              "Spostati alla destinazione ed eroga. Conferma il recipiente e segui il metodo per velocità di erogazione, posizione e tempo di sosta, affinché il liquido entri nel recipiente previsto.",
+              "Concludi il trasferimento e prepara il campione successivo. Cambia puntale secondo i requisiti del campione e del controllo della contaminazione. Registra il campione completato e prosegui."
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://milnepublishing.geneseo.edu/molecular-techniques/front-matter/pipetting/",
+                "label": "Riferimento: procedura di pipettaggio manuale"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "L’operatore prende le decisioni, posiziona lo strumento e controlla la sequenza. Esaminare il puntale può evidenziare problemi visibili. Per conoscere il volume effettivamente trasferito serve una misura."
+          },
+          {
+            "type": "subheading",
+            "title": "Vantaggi e limiti del pipettaggio manuale"
+          },
+          {
+            "type": "paragraph",
+            "text": "L’uso manuale è facile da adattare. L’operatore può intervenire quando un campione si sposta, serve un’aggiunta o il liquido richiede un’osservazione più attenta. La flessibilità è adatta allo sviluppo di metodi, a esperimenti ridotti e a campioni aggiuntivi occasionali. Gli strumenti manuali tradizionali occupano poco spazio e sono in genere più semplici da mettere in servizio di un sistema completamente automatizzato."
+          },
+          {
+            "type": "paragraph",
+            "text": "Gli strumenti multicanale ed elettronici riducono alcune azioni ripetitive. I multicanale operano su più posizioni insieme. Gli strumenti elettronici con erogazione ripetuta possono ridurre i cicli di aspirazione. L’operatore continua a identificare i campioni, spostare lo strumento e gestire il passaggio tra le attività."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le operazioni ripetitive richiedono tempo e attenzione. Ogni aspirazione, spostamento, erogazione e cambio di puntale richiede un’azione. Con il crescere del carico, l’operatore deve mantenere costante la tecnica, confermare l’ordine dei campioni e registrare le operazioni. Variazioni di ritmo, profondità del puntale e tempi di attesa possono modificare il volume erogato."
+          },
+          {
+            "type": "subheading",
+            "title": "Cosa significano accuratezza e ripetibilità nel pipettaggio?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per un trasferimento da 100 µL, valuta separatamente volume medio erogato e variazione dei risultati ripetuti."
+          },
+          {
+            "type": "notice",
+            "text": "I numeri seguenti illustrano un calcolo. Ipotizziamo trasferimenti ripetuti nelle stesse condizioni con volume medio di 99.5 µL e deviazione standard di 0.20 µL."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Metrica",
+              "Risultato dell’esempio",
+              "Interpretazione"
+            ],
+            "rows": [
+              [
+                "Scostamento medio",
+                "99.5 − 100 = −0.5 µL",
+                "Il volume medio trasferito è inferiore all’obiettivo di 0.5 µL."
+              ],
+              [
+                "Scostamento medio relativo",
+                "−0.5 ÷ 100 × 100% = −0.5%",
+                "Scostamento medio rispetto al volume obiettivo, usato per valutare l’errore sistematico."
+              ],
+              [
+                "CV di ripetibilità",
+                "0.20 ÷ 99.5 × 100% ≈ 0.20%",
+                "Dispersione dei risultati ripetuti rispetto alla loro media, nelle stesse condizioni."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il CV è la deviazione standard divisa per la media, qui espressa in percentuale. Un CV basso indica risultati ripetuti poco dispersi. Uno scostamento della media dall’obiettivo richiede comunque indagine e correzione. Con un CV di 0.20%, verifica separatamente se l’errore di ogni trasferimento rientra in ±0.20%."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/coefvari.htm",
+                "label": "Definizione di CV"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "L’accettazione dipende anche dallo scostamento ammesso per il compito. Per esempio, con uno scostamento medio relativo ammesso entro ±1%, i limiti di scostamento medio sono ±1 µL a 100 µL e ±0.1 µL a 10 µL. Il valore ±1% è un requisito illustrativo. I limiti di accettazione delle apparecchiature manuali o automatiche sono specifici del compito. I limiti di ripetibilità vanno definiti separatamente."
+          },
+          {
+            "type": "paragraph",
+            "text": "Valuta scostamento medio e ripetibilità al volume obiettivo con liquido e puntali effettivi. Per giudicare le prestazioni servono dati oltre all’intervallo nominale e al numero di decimali sul display."
+          }
+        ]
+      },
+      {
+        "title": "Pipettaggio completamente automatizzato: come si riempie una fila di coppette di reazione?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Supponiamo che ogni coppetta debba ricevere 100 µL dello stesso reagente. Con uno strumento a mano, l’operatore ripete aspirazione, spostamento ed erogazione. Un ago di erogazione fisso e coppette mobili illustrano come l’apparecchiatura possa automatizzare queste azioni. Il volume obiettivo dell’esempio è 100 µL."
+          },
+          {
+            "type": "subheading",
+            "title": "Quale componente esegue ciascuna azione?"
+          },
+          {
+            "type": "paragraph",
+            "text": "I tubi collegano il flacone del reagente a una valvola di commutazione a tre vie, comandata elettricamente. La porta comune è collegata alla siringa. Le altre due porte sono collegate al flacone e all’ago di erogazione. Le coppette di reazione sono su un vassoio motorizzato."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Componente",
+              "Ruolo nell’esempio"
+            ],
+            "rows": [
+              [
+                "Pompa a siringa motorizzata",
+                "Arretra lo stantuffo per aspirare il reagente e lo fa avanzare per erogarlo. La corsa programmata imposta il volume obiettivo."
+              ],
+              [
+                "Valvola a tre vie a comando elettrico",
+                "Collega flacone e siringa durante l’aspirazione e siringa e ago durante l’erogazione, isolando l’altro ramo."
+              ],
+              [
+                "Ago di erogazione fisso",
+                "Eroga il reagente nella coppetta sottostante."
+              ],
+              [
+                "Vassoio motorizzato",
+                "Posiziona le coppette successive sotto l’ago."
+              ],
+              [
+                "Programma di controllo",
+                "Coordina commutazione della valvola, movimento dello stantuffo e posizionamento del vassoio."
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Questa configurazione illustra l’erogazione automatica. Esistono altre architetture per il pipettaggio automatico. Nella letteratura sulla manipolazione automatica dei liquidi sono disponibili esempi che coordinano per programma volume della pompa a siringa, direzione del movimento e posizione della valvola."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "https://www.mdpi.com/1420-3049/27/19/6665",
+                "label": "Esempio di controllo programmato di pompa e valvola"
+              }
+            ]
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/products/pumps/syringe-pumps/solenoid-valve-syringe-pumps/",
+                "label": "Pompe a siringa FOREACH HMD con elettrovalvola",
+                "suffix": ": valuta il dosaggio a siringa con commutazione a elettrovalvola per applicazioni di erogazione con ago fisso."
+              },
+              {
+                "href": "/en/products/pumps/syringe-pumps/rotary-valve-syringe-pumps/",
+                "label": "Pompe a siringa FOREACH HLD con valvola rotativa",
+                "suffix": ": valuta un’altra configurazione di commutazione e confronta porte e connessioni fluidiche con il numero di sorgenti e uscite."
+              },
+              {
+                "href": "/en/products/valves/",
+                "label": "Valvole FOREACH per il controllo dei fluidi",
+                "suffix": ": per una valvola di commutazione separata, verifica connessioni delle porte, materiali a contatto con il fluido, pressione e modalità di comando."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il gruppo pompa-valvola dosa e dirige il liquido. Posizionamento delle coppette, movimento del vassoio e coordinamento delle azioni sono funzioni dello strumento completo. Per verificare le prestazioni volumetriche dell’esempio, usa siringa, tubi e ago selezionati."
+          },
+          {
+            "type": "subheading",
+            "title": "Come arriva il reagente in una coppetta?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Prima di iniziare, l’operatore carica reagente e coppette, imposta volume per coppetta e numero di coppette, poi adesca e degassa il circuito. L’ago resta sopra l’apertura della coppetta per l’erogazione senza contatto di questo esempio."
+          },
+          {
+            "type": "paragraph",
+            "text": "Passaggio 1: aspirare dal flacone del reagente. La valvola collega flacone e siringa e chiude il ramo verso l’ago. Il motore arretra lo stantuffo, aumentando il volume della camera della siringa e richiamando il reagente attraverso i tubi.",
+            "lead": "Passaggio 1: aspirare dal flacone del reagente."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-pipetting/automatic-pipetting-aspiration-en.svg",
+            "alt": "Percorso di aspirazione. Il motore arretra lo stantuffo della siringa e aspira il reagente dal flacone attraverso la valvola di commutazione.",
+            "width": 680,
+            "height": 166,
+            "caption": "Aspirazione: flacone del reagente → valvola di commutazione → siringa. Il ramo verso l’ago di erogazione è chiuso.",
+            "flowNodes": [
+              {
+                "label": "Flacone del reagente",
+                "detail": "Sorgente del liquido"
+              },
+              {
+                "label": "Valvola di commutazione",
+                "detail": "Ingresso collegato"
+              },
+              {
+                "label": "Siringa",
+                "detail": "Lo stantuffo arretra"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Passaggio 2: commutare il percorso ed erogare nella coppetta. Dopo l’aspirazione, la pompa a siringa si arresta. La valvola collega siringa e ago e chiude il ramo del flacone. Il vassoio posiziona la prima coppetta sotto l’ago e si arresta. Il motore fa avanzare lo stantuffo, spinge il reagente nella coppetta attraverso l’ago e si ferma al termine della corsa programmata per il volume obiettivo.",
+            "lead": "Passaggio 2: commutare il percorso ed erogare nella coppetta."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-pipetting/automatic-pipetting-dispensing-en.svg",
+            "alt": "Percorso di erogazione. Il motore fa avanzare lo stantuffo, inviando il reagente attraverso la valvola di commutazione e l’ago fisso alla coppetta di reazione.",
+            "width": 680,
+            "height": 166,
+            "caption": "Erogazione: siringa → valvola di commutazione → ago → coppetta di reazione. Il ramo del flacone è chiuso e il volume obiettivo è 100 µL.",
+            "flowNodes": [
+              {
+                "label": "Siringa",
+                "detail": "Lo stantuffo avanza"
+              },
+              {
+                "label": "Valvola di commutazione",
+                "detail": "Uscita collegata"
+              },
+              {
+                "label": "Ago di erogazione",
+                "detail": "Posizione fissa"
+              },
+              {
+                "label": "Coppetta di reazione",
+                "detail": "Riceve il reagente"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Passaggio 3: avanzare il vassoio e ripetere. Al termine dell’erogazione, il motore del vassoio porta la coppetta successiva sotto l’ago. Il programma commuta la valvola al ramo di ingresso e ripete aspirazione, commutazione ed erogazione fino al numero previsto di coppette.",
+            "lead": "Passaggio 3: avanzare il vassoio e ripetere."
+          },
+          {
+            "type": "paragraph",
+            "text": "La pompa a siringa muove il liquido, la valvola seleziona il percorso, il vassoio porta la coppetta successiva in posizione e il programma coordina i tempi. L’operatore prepara il sistema prima dell’avvio. L’apparecchiatura esegue aspirazioni, erogazioni e posizionamenti ripetitivi per tutto il lotto."
+          },
+          {
+            "type": "subheading",
+            "title": "Quali vantaggi offre questo flusso di lavoro automatico?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Quando si ripete l’erogazione dello stesso reagente allo stesso volume, il programma automatizza il prelievo, l’aspirazione e l’allineamento a ogni coppetta. Può ripetere corsa dello stantuffo, velocità di aspirazione ed erogazione e sequenza delle coppette dopo la verifica, riducendo l’effetto delle variazioni nei tempi manuali."
+          },
+          {
+            "type": "paragraph",
+            "text": "Prima di avviare lo strumento, definisci posizioni delle coppette e dell’ago e programma di erogazione. Quando si cambia reagente, gestisci il liquido residuo nei percorsi condivisi e verifica l’efficacia del lavaggio. Cambi della coppetta o del volume richiedono regolazione e verifica del metodo. Per attività piccole o che cambiano spesso, includi la preparazione nel calcolo del tempo totale."
+          },
+          {
+            "type": "subheading",
+            "title": "Se si impostano 100 µL, come si verifica il volume erogato?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Una pompa a siringa controlla l’erogazione attraverso lo spostamento dello stantuffo. In condizioni ideali, l’area efficace della sezione della siringa moltiplicata per la corsa dà il volume spostato. Bolle, perdite e residui nell’ago possono cambiare il volume che arriva alla coppetta. In questo esempio, adescamento e degassamento sono quindi essenziali."
+          },
+          {
+            "type": "paragraph",
+            "text": "Misura il volume effettivamente ricevuto dalle coppette, calcola scostamento medio e CV e confronta inizio, metà e fine lotto. Anche con una corsa programmata per 100 µL, misura se le singole coppette ricevono esattamente 100 µL."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il pipettaggio manuale consente all’operatore di adattare aspirazione, trasferimento ed erogazione. L’automazione assegna azioni ripetibili a componenti coordinati. Scegli in base alla stabilità del compito, alla frequenza di ripetizione e al tempo necessario per preparazione e pulizia."
+          },
+          {
+            "type": "subheading",
+            "title": "Approfondimenti"
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Per trasferire liquidi tra contenitori con puntali monouso, consulta la ",
+                "href": "/en/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/",
+                "label": "pompa automatica programmabile FOREACH SMTP2 per pipettaggio a spostamento d’aria",
+                "suffix": ". È un’altra configurazione di pipettaggio. Lo strumento completo deve comunque gestire il posizionamento e il flusso di lavoro, e le prestazioni vanno verificate per liquido, puntali e volume obiettivo."
+              }
+            ]
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-programmable-syringe-pump/",
+                "label": "Che cos’è una pompa a siringa programmabile? Come lavorano insieme pompa, valvola e azionamento"
+              },
+              {
+                "href": "/en/resources/technical-articles/what-is-a-programmable-pipetting-pump/",
+                "label": "Che cos’è una pompa automatica programmabile per pipettaggio a spostamento d’aria? Un’altra configurazione"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [],
+    "cta": {
+      "title": "Parti dal compito di pipettaggio",
+      "description": "Valuta le configurazioni di erogazione automatica in base a volume, liquido, contenitori e numero di ripetizioni.",
+      "contactLabel": "Contatta un tecnico",
+      "productsLabel": "Visualizza le pompe",
+      "productsHref": "/en/products/pumps/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "manual-pipetting",
+      "label": "Pipettaggio manuale",
+      "children": [
+        {
+          "id": "manual-pipetting-steps",
+          "label": "Passaggi operativi"
+        },
+        {
+          "id": "manual-pipetting-tradeoffs",
+          "label": "Vantaggi e limiti"
+        },
+        {
+          "id": "pipetting-accuracy",
+          "label": "Accuratezza e ripetibilità"
+        }
+      ]
+    },
+    {
+      "id": "automated-pipetting-example",
+      "label": "Pipettaggio automatico",
+      "children": [
+        {
+          "id": "automated-pipetting-components",
+          "label": "Ruolo dei componenti"
+        },
+        {
+          "id": "automated-pipetting-cycle",
+          "label": "Ciclo per ciascuna coppetta"
+        },
+        {
+          "id": "automated-pipetting-tradeoffs",
+          "label": "Vantaggi e limiti"
+        },
+        {
+          "id": "automated-pipetting-verification",
+          "label": "Verifica del volume"
+        },
+        {
+          "id": "pipetting-further-reading",
+          "label": "Approfondimenti"
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "label": "Pipettaggio manuale",
+      "description": "L’operatore coordina ogni passaggio",
+      "steps": [
+        "Aspira il liquido",
+        "Sposta lo strumento",
+        "Eroga a destinazione",
+        "Passa al campione successivo"
+      ]
+    },
+    {
+      "label": "Esempio automatizzato",
+      "description": "Un programma coordina le apparecchiature",
+      "steps": [
+        "La pompa aspira",
+        "La valvola commuta il percorso",
+        "La pompa eroga attraverso l’ago",
+        "Il vassoio avanza"
+      ]
+    }
+  ],
+  "subject": {
+    "about": [
+      "Pipettaggio",
+      "Pipettaggio manuale",
+      "Pipettaggio automatico"
+    ],
+    "mentions": [
+      "Pompa a siringa",
+      "Valvola di commutazione",
+      "Scostamento medio",
+      "Coefficiente di variazione CV"
+    ]
+  },
+  "sources": [
+    "https://milnepublishing.geneseo.edu/molecular-techniques/front-matter/pipetting/",
+    "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/coefvari.htm",
+    "https://www.mdpi.com/1420-3049/27/19/6665"
+  ]
+}

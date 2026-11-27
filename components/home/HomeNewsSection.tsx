@@ -5,7 +5,9 @@
 
 "use client"; // 这个组件需要点击分类按钮并切换 activeTab 状态，所以必须是客户端组件
 
-import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于新闻页面或新闻详情页跳转
+import DraftLink from "@/components/i18n/DraftLink";
+import NativeLink from "next/link";
+import { hindiEnglishFallbackSuffix } from "@/lib/i18n/draft-languages"; // 引入 Next.js 的 Link 组件，用于新闻页面或新闻详情页跳转
 import { useState } from "react"; // 引入 React 的 useState，用于控制顶部分类按钮选中状态
 
 import styles from "./HomeNewsSection.module.css";
@@ -16,13 +18,14 @@ import HomeNewsListItem from "@/components/home/HomeNewsListItem"; // 引入右�
 import type { LocaleCode } from "@/lib/i18n"; // 引入官网支持的语言代码类型，例如 zh-CN、en、es、fr、ko、ru
 
 import { // 从首页新闻数据文件中引入数据和读取函数
-  getHomeNewsHref, // 根据当前语言读取新闻链接
+  getHomeNewsHref,
+  getHomeNewsDate, // 根据当前语言读取新闻链接
   getHomeNewsText, // 根据当前语言读取新闻文字
   homeNewsData, // 首页新闻模块数据
 } from "@/data/home-news"; // 首页新闻数据文件路径
 
 type HomeNewsSectionProps = { // 定义 HomeNewsSection 组件接收的参数类型
-  locale: LocaleCode; // 当前页面语言，例如 zh-CN / en / es / fr / ko / ru
+  locale: LocaleCode | "de" | "it" | "hi";
 }; // HomeNewsSectionProps 类型定义结束
 
 export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // 定义并导出首页资讯中心组件
@@ -34,6 +37,10 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
 
   const sideNewsList = homeNewsData.newsList; // 读取右侧新闻列表数据
 
+  const Link = locale === "it" || locale === "hi" ? NativeLink : DraftLink;
+  const featureHref = getHomeNewsHref(featureNews.href, locale);
+  const highlightHref = getHomeNewsHref(highlightNews.href, locale);
+  const isEnglish = (href: string) => (locale === "it" || locale === "hi") && href.startsWith("/en/");
   const featureNewsImage = featureNews.image || "/images/home/news/news-feature-01.webp"; // 左侧主推新闻图片，如果数据为空则使用默认图
 
   return ( // 返回资讯中心模块结构
@@ -89,7 +96,7 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
                 </span> {/* 左侧主推新闻分类结束 */}
 
                 <span className="home-news-date"> {/* 左侧主推新闻日期 */}
-                  {featureNews.date} {/* 左侧主推新闻日期文字 */}
+                  {getHomeNewsDate(featureNews.date, locale)} {/* 左侧主推新闻日期文字 */}
                 </span> {/* 左侧主推新闻日期结束 */}
               </div> {/* 左侧主推新闻分类和日期行结束 */}
 
@@ -106,7 +113,7 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
               <div className="home-news-card-footer"> {/* 左侧主推新闻底部按钮区域 */}
                 <Link // 左侧主推新闻查看详情链接开始
                   className="home-news-text-link" // 查看详情链接 class
-                  href={getHomeNewsHref(featureNews.href, locale)} // 根据当前语言读取跳转链接
+                  href={featureHref} hrefLang={isEnglish(featureHref) ? "en" : undefined} title={locale === "hi" && isEnglish(featureHref) ? hindiEnglishFallbackSuffix.trim() : undefined} // 根据当前语言读取跳转链接
                   prefetch={false}
                 > {/* 左侧主推新闻查看详情链接开始标签结束 */}
                   {getHomeNewsText(homeNewsData.viewDetailLabel, locale)} {/* 查看详情按钮文字 */}
@@ -122,7 +129,7 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
               </span> {/* 中间公告分类结束 */}
 
               <span className="home-news-highlight-date"> {/* 中间公告日期 */}
-                {highlightNews.date} {/* 中间公告日期文字 */}
+                {getHomeNewsDate(highlightNews.date, locale)} {/* 中间公告日期文字 */}
               </span> {/* 中间公告日期结束 */}
             </div> {/* 中间公告分类和日期行结束 */}
 
@@ -139,7 +146,7 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
             <div className="home-news-highlight-footer"> {/* 中间公告底部按钮区域 */}
               <Link // 中间公告查看详情链接开始
                 className="home-news-highlight-btn" // 中间公告按钮 class
-                href={getHomeNewsHref(highlightNews.href, locale)} // 根据当前语言读取公告跳转链接
+                href={highlightHref} hrefLang={isEnglish(highlightHref) ? "en" : undefined} title={locale === "hi" && isEnglish(highlightHref) ? hindiEnglishFallbackSuffix.trim() : undefined} // 根据当前语言读取公告跳转链接
                 prefetch={false}
                 aria-label={getHomeNewsText(homeNewsData.viewAnnouncementAriaLabel, locale)} // 公告按钮无障碍说明
               > {/* 中间公告查看详情链接开始标签结束 */}
@@ -160,17 +167,18 @@ export default function HomeNewsSection({ locale }: HomeNewsSectionProps) { // �
                     id: item.key, // 新闻 ID
                     title: getHomeNewsText(item.title, locale), // 新闻标题
                     desc: item.description ? getHomeNewsText(item.description, locale) : "", // 新闻描述
-                    date: item.date, // 新闻日期
+                    date: getHomeNewsDate(item.date, locale), // 新闻日期
                     image: item.image || `/images/home/news/news-side-0${index + 1}.webp`, // 新闻缩略图，若数据为空则使用默认图
                     href: getHomeNewsHref(item.href, locale), // 新闻跳转链接
                   }} // item 数据结束
+                  italian={locale === "it"} hindi={locale === "hi"}
                   detailText={getHomeNewsText(homeNewsData.viewDetailLabel, locale)} // 查看详情按钮文字
                 /> // 右侧单条新闻列表卡片组件结束
               ))} {/* 右侧新闻列表遍历结束 */}
             </div> {/* 右侧新闻列表卡片容器结束 */}
 
             <div className="home-news-bottom-actions"> {/* 右下角查看更多按钮区域 */}
-              <HomeSectionMoreLink href={getHomeNewsHref(homeNewsData.moreNewsHref, locale)}>
+              <HomeSectionMoreLink href={getHomeNewsHref(homeNewsData.moreNewsHref, locale)} italian={locale === "it"} hindi={locale === "hi"}>
                 {getHomeNewsText(homeNewsData.moreNewsLabel, locale)}
               </HomeSectionMoreLink>
             </div> {/* 右下角查看更多按钮区域结束 */}

@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type PointerEvent } from "react";
-import { homeI18n, replacePathLocale, type LocaleCode } from "@/lib/i18n";
-import { homeHeroText } from "@/data/home-hero.intl";
+import { homeI18n } from "@/lib/i18n";
+import { getHomeHeroHref, homeHeroMainDe, homeHeroMainHi, homeHeroMainIt, homeHeroText, type HomeHeroLocale } from "@/data/home-hero.intl";
 import { homeCarouselRole, homeUiText } from "@/data/home-ui.intl";
 import HomeHeroCopy from "./HomeHeroCopy";
 import HomeTubingAssemblySlide from "./HomeTubingAssemblySlide";
@@ -26,7 +26,7 @@ function subscribeVisibility(update: () => void) {
 function visibilitySnapshot() { return document.visibilityState === "visible"; }
 const subscribeReady = () => () => {};
 
-export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
+export default function HomeHeroCarousel({ locale }: { locale: HomeHeroLocale }) {
   const root = useRef<HTMLElement>(null);
   const swipeStart = useRef<{ pointerId: number; x: number; y: number } | null>(null);
   const [active, setActive] = useState(0);
@@ -40,7 +40,8 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
   const reduceMotion = useSyncExternalStore(subscribeMotion, reducedMotionSnapshot, () => false);
   const pageVisible = useSyncExternalStore(subscribeVisibility, visibilitySnapshot, () => true);
   const ready = useSyncExternalStore(subscribeReady, () => true, () => false);
-  const copy = homeI18n[locale];
+  const copy = locale === "de" ? homeHeroMainDe : locale === "it" ? homeHeroMainIt : locale === "hi" ? homeHeroMainHi : homeI18n[locale];
+  const contactHref = getHomeHeroHref("/contact/", locale);
   const heroText = homeHeroText[locale];
   const mainCopy = { titleLine1: copy.heroTitleLine1, titleLine2: copy.heroTitleLine2, description: copy.heroSubtitle };
   const tubingCopy = {
@@ -152,11 +153,13 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
         className="home-hero-primary-copy"
         heading="h1"
         analyticsSection="home_hero_main"
+        italian={locale === "it"}
+        hindi={locale === "hi"}
         {...mainCopy}
         alignWith={{ variant: "main", copy: tubingCopy }}
-        primaryHref={replacePathLocale("/products/", locale)}
+        primaryHref={getHomeHeroHref("/products/", locale)}
         primaryLabel={copy.productButton}
-        secondaryHref={replacePathLocale("/contact/", locale)}
+        secondaryHref={contactHref}
         secondaryLabel={copy.contactButton}
       />
     </article>
@@ -171,12 +174,14 @@ export default function HomeHeroCarousel({ locale }: { locale: LocaleCode }) {
         className="home-hero-primary-copy"
         heading="h2"
         analyticsSection="home_hero_fluid_resistance"
+        italian={locale === "it"}
+        hindi={locale === "hi"}
         titleLine1={heroText.flow.titleLine1}
         titleLine2={heroText.flow.titleLine2 || undefined}
         description={heroText.flow.description}
-        primaryHref={replacePathLocale("/resources/calculators/fluid-resistance/", locale)}
+        primaryHref={getHomeHeroHref("/resources/calculators/fluid-resistance/", locale)}
         primaryLabel={heroText.flow.button}
-        secondaryHref={replacePathLocale("/contact/", locale)}
+        secondaryHref={contactHref}
         secondaryLabel={copy.contactButton}
       />
     </article>

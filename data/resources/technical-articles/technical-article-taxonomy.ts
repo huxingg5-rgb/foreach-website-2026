@@ -280,6 +280,20 @@ const articleClassifications: Record<string, ArticleClassificationDefinition> = 
     relatedProducts: ["HP"],
     relationKeys: ["series:hp", "category:high-pressure-valves"], relationPriority: 160,
   },
+  "sampling-probe-selection-guide": {
+    primaryCategory: "applications-solutions",
+    secondaryCategory: "reagent-sample-handling",
+    tagKeys: ["selection", "testing-validation"],
+    localizedLiteralTags: {
+      "zh-CN": ["采样针", "有效长度", "侧孔", "自动化分析仪器"],
+      en: ["Sampling probes", "Working length", "Side ports", "Automated analyzers"],
+      es: ["Agujas de muestreo", "Longitud útil", "Orificios laterales", "Analizadores automatizados"],
+      fr: ["Aiguilles de prélèvement", "Longueur utile", "Orifices latéraux", "Analyseurs automatisés"],
+      ko: ["샘플링 프로브", "유효 길이", "측면 홀", "자동 분석 장비"],
+      ru: ["Пробоотборные иглы", "Рабочая длина", "Боковые отверстия", "Автоматические анализаторы"],
+    },
+    relatedProducts: ["采样针", "穿刺针"],
+  },
   "what-is-pipetting": {
     primaryCategory: "applications-solutions",
     secondaryCategory: "reagent-sample-handling",

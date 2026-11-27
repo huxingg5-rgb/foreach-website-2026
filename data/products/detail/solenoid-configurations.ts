@@ -56,7 +56,10 @@ export function getSolenoidDrawingPdfUrl(slug: string, locale: string, variant =
   return `/documents/products/valves/6010/sv10-${drawing}-${language}.pdf`;
 }
 const names = {
+  hi: ["3-वे मैनिफ़ोल्ड माउंट", "3-वे बार्ब पोर्ट", "3-वे थ्रेड वाले पोर्ट", "2-वे मैनिफ़ोल्ड माउंट", "2-वे बार्ब पोर्ट", "2-वे थ्रेड वाले पोर्ट"],
+  de: ["3 Wege, Blockmontage", "3 Wege, Schlauchtüllen", "3 Wege, Gewindeanschlüsse", "2 Wege, Blockmontage", "2 Wege, Schlauchtüllen", "2 Wege, Gewindeanschlüsse"],
   zh: ["三通基板式", "三通倒刺式", "三通螺纹式", "二通基板式", "二通倒刺式", "二通螺纹式"],
+  it: ["3 vie per collettore", "3 vie portagomma", "3 vie filettata", "2 vie per collettore", "2 vie portagomma", "2 vie filettata"],
   en: ["3-Way Manifold-Mount", "3-Way Barbed", "3-Way Threaded", "2-Way Manifold-Mount", "2-Way Barbed", "2-Way Threaded"],
   es: ["3 vías, montaje en colector", "3 vías, espiga", "3 vías, conexión roscada", "2 vías, montaje en colector", "2 vías, espiga", "2 vías, conexión roscada"],
   fr: ["3 voies, montage sur collecteur", "3 voies, raccords cannelés", "3 voies, raccordements filetés", "2 voies, montage sur collecteur", "2 voies, raccords cannelés", "2 voies, raccordements filetés"],
@@ -70,6 +73,8 @@ export function solenoidConfigurationName(slug: string, locale: string) {
   const name = (names[locale as keyof typeof names] || names.en)[index];
   const states: Record<string, string[]> = {
     zh: ["常闭", "常开"], en: ["Normally Closed", "Normally Open"],
+    de: ["stromlos geschlossen", "stromlos offen"],
+    it: ["normalmente chiusa", "normalmente aperta"], hi: ["नॉर्मली क्लोज़्ड", "नॉर्मली ओपन"],
     es: ["normalmente cerrada", "normalmente abierta"], fr: ["normalement fermée", "normalement ouverte"],
     ko: ["상시 닫힘", "상시 열림"], ru: ["нормально закрытый", "нормально открытый"],
   };

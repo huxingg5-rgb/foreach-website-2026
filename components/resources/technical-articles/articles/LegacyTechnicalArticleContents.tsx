@@ -10,7 +10,7 @@ type Entry = { id: string; label: string; numbered: boolean };
 const numberedPrefix = /^(?:\d+[.、．)）\s]|[一二三四五六七八九十]+[、．.])/;
 
 /** Optional navigation enhancement. The full original article is server rendered. */
-export default function LegacyTechnicalArticleContents({ articleId, locale }: { articleId: string; locale: TechnicalArticleLocale }) {
+export default function LegacyTechnicalArticleContents({ articleId, locale }: { articleId: string; locale: TechnicalArticleLocale | "de" | "it" | "hi" }) {
   const [entries, setEntries] = useState<Entry[]>([]);
   const [activeId, setActiveId] = useState("");
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function LegacyTechnicalArticleContents({ articleId, locale }: { 
       window.removeEventListener("hashchange", onHashChange);
     };
   }, [articleId, locale]);
-  const label = rplArticleUi[locale].contents;
+  const label = locale === "de" ? "Inhalt" : locale === "hi" ? "विषय-सूची" : rplArticleUi[locale].contents;
   const links = entries.map((entry, index) => <a key={entry.id} href={`#${entry.id}`} aria-current={entry.id === activeId ? "location" : undefined}>
     {!entry.numbered && <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>}{entry.label}
   </a>);

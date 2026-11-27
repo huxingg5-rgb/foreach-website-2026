@@ -2,6 +2,13 @@ import "server-only";
 
 import Link from "next/link";
 import ApplicationProductCards from "@/components/applications/common/ApplicationProductCards";
+import SamplingProbeApplicationLink from "@/components/applications/SamplingProbeApplicationLink";
+import { getHindiDraftLink, getItalianDraftLink, hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
+import { getHindiApplicationTranslation, translateHindiApplication, type HindiApplicationCopy } from "@/services/applications/hindi-application";
+import { translateItalianApplication, type ItalianApplicationCopy } from "@/services/applications/italian-review";
+import { isSamplingProbeApplication } from "@/data/resources/technical-articles/sampling-probe-guide-links";
+import { getSamplingProbeGuideLocale } from "@/services/resources/technical-articles/getSamplingProbeGuideLocale";
+import { isSupportedLocale } from "@/lib/i18n";
 import { resolveApplicationHref } from "@/data/applications/application-routes";
 import { Fragment, type ReactNode } from "react";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
@@ -13,6 +20,9 @@ import {
 } from "@/data/applications/analytical-documents/registry";
 import { isLiquidChromatographySlug, liquidChromatographyDocuments } from "@/data/applications/analytical-documents/liquid-chromatography";
 import { getEnglishAnalyticalInstrumentLinks } from "@/data/applications/analytical-instruments/navigation";
+import { getGermanNavigationText } from "@/data/navigation.de";
+import { germanEnglishFallbackSuffix, getDraftHrefForEnglish, getGermanDraftLink } from "@/lib/i18n/draft-languages";
+import { translateGermanApplication, type GermanApplicationCopy } from "@/services/applications/german-review";
 import {
   isPistonApplicationSlug,
   PISTON_APPLICATION_RELATION_KEYS,
@@ -46,19 +56,21 @@ type ReferenceMap = ReadonlyMap<string, { reference: ApplicationReference; numbe
 
 function ContentLink({
   href,
+  hrefLang,
   children,
   className,
 }: {
   href: string;
+  hrefLang?: "de" | "it" | "hi" | "en";
   children: ReactNode;
   className?: string;
 }) {
   href = resolveApplicationHref(href);
   if (/^https?:\/\//i.test(href) || /\.pdf(?:[?#]|$)/i.test(href)) {
-    return <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
+    return <a className={className} href={href} hrefLang={hrefLang} target="_blank" rel="noopener noreferrer">{children}</a>;
   }
   if (href.startsWith("#")) return <a className={className} href={href}>{children}</a>;
-  return <Link className={className} href={href} prefetch={false}>{children}</Link>;
+  return <Link className={className} href={href} hrefLang={hrefLang} prefetch={false}>{children}</Link>;
 }
 
 function Citations({ ids, referenceMap, referenceLabel }: { ids?: readonly string[]; referenceMap: ReferenceMap; referenceLabel: string }) {
@@ -105,7 +117,7 @@ function LinkList({ items, productLinkCards, viewDetails }: {
     <ul className={styles.linkList}>
       {items.map((item) => (
         <li key={`${item.href}-${item.label}`} id={item.anchorId}>
-          <ContentLink href={item.href}>{item.label}</ContentLink>
+          <ContentLink href={item.href} hrefLang={item.hrefLang}>{item.label}</ContentLink>
           {item.description ? <p>{item.description}</p> : null}
         </li>
       ))}
@@ -173,7 +185,7 @@ function InlineLinkedText({
   matches.forEach(({ link, start, end }) => {
     if (start > cursor) output.push(text.slice(cursor, start));
     output.push(
-      <ContentLink className={styles.inlineLink} key={`${start}-${link.href}`} href={link.href}>
+      <ContentLink className={styles.inlineLink} key={`${start}-${link.href}`} href={link.href} hrefLang={link.hrefLang}>
         <span title={link.title}>{link.text}</span>
       </ContentLink>,
     );
@@ -274,7 +286,13 @@ function Block({ block, referenceMap, labels, productLinkCards }: { block: Appli
   }
 }
 
-function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
+function DocumentNavigation({ currentSlug, locale, germanCopy, italianCopy, hindiCopy }: {
+  currentSlug: string;
+  locale?: string;
+  germanCopy?: GermanApplicationCopy;
+  italianCopy?: ItalianApplicationCopy;
+  hindiCopy?: HindiApplicationCopy;
+}) {
   if (isIvdClinicalDocumentSlug(currentSlug)) {
     const overview = { label: "IVD fluidic workflows", href: "/en/applications/ivd/" };
     return <ApplicationGuideNavigation
@@ -289,22 +307,35 @@ function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
     />;
   }
   if (!currentSlug) {
+    const german = locale === "de";
+    const italian = locale === "it" && italianCopy;
+    const hindi = hindiCopy !== undefined;
     const instruments = getEnglishAnalyticalInstrumentLinks();
+    const title = german ? "Analysengeräte" : italian ? "Strumenti analitici" : hindi ? "विश्लेषणात्मक उपकरण" : "Analytical Instruments";
+    const categoryLabel = german ? "Kategorien von Analysengeräten" : italian ? "Categorie degli strumenti analitici" : hindi ? "विश्लेषणात्मक उपकरणों की श्रेणियाँ" : "Analytical instrument categories";
+    const overview = german ? { label: title, href: "/de/applications/analytical-instruments/" }
+      : { label: title, href: italian ? getItalianDraftLink(analyticalDocumentHref("")).href : hindi ? getHindiDraftLink(analyticalDocumentHref("")).href : analyticalDocumentHref("") };
     return <ApplicationGuideNavigation
       id="analytical-application-guide-navigation"
-      ariaLabel="Analytical instrument categories"
-      overview={{ label: "Analytical Instruments", href: analyticalDocumentHref("") }}
-      groups={instruments.map((item, index) => ({
-        id: `instrument-${index}`,
-        label: item.label,
-        overview: { label: item.label, href: item.href },
-        children: [],
-      }))}
-      currentHref={analyticalDocumentHref("")}
-      mobileTitle="Analytical instrument categories"
-      mobileMeta={`${instruments.length} instrument categories`}
-      drawerEyebrow="Applications"
-      drawerTitle="Analytical Instruments"
+      ariaLabel={categoryLabel}
+      overview={overview}
+      groups={instruments.map((item, index) => {
+        const link = german ? getGermanDraftLink(item.href) : italian ? getItalianDraftLink(item.href) : hindi ? getHindiDraftLink(item.href) : { href: item.href };
+        const label = german ? getGermanNavigationText(item.label) : italian ? translateItalianApplication(item.label, italian) : hindi ? getHindiApplicationTranslation(hindiCopy, item.label, "analytical-instruments navigation") : item.label;
+        return {
+          id: `instrument-${index}`,
+          label,
+          overview: { ...link, label: label + (link.hrefLang === "en" ? (italian ? italianEnglishFallbackSuffix : hindi ? hindiEnglishFallbackSuffix : germanEnglishFallbackSuffix) : "") },
+          children: [],
+        };
+      })}
+      currentHref={overview.href}
+      mobileTitle={categoryLabel}
+      mobileMeta={`${instruments.length} ${german ? "Gerätekategorien" : italian ? "categorie di strumenti" : hindi ? "उपकरण श्रेणियाँ" : "instrument categories"}`}
+      drawerEyebrow={german ? "Anwendungen" : italian ? "Applicazioni" : hindi ? "अनुप्रयोग" : "Applications"}
+      drawerTitle={title}
+      browseLabel={german ? "Kategorien ansehen" : italian ? "Sfoglia le categorie" : hindi ? "श्रेणियाँ देखें" : undefined}
+      closeLabel={german ? "Kategorienavigation schließen" : italian ? "Chiudi la navigazione delle categorie" : hindi ? "श्रेणी नेविगेशन बंद करें" : undefined}
     />;
   }
   const isLc = isLiquidChromatographySlug(currentSlug);
@@ -329,27 +360,40 @@ function DocumentNavigation({ currentSlug }: { currentSlug: string }) {
     group.overview?.href === analyticalDocumentHref(currentSlug)
     || group.children.some((entry) => entry.href === analyticalDocumentHref(currentSlug))
   ));
-  const compactGroupTitle = currentGroup
+  const englishCompactTitle = currentGroup
     ? `${currentGroup.label.replace(/ in analytical instruments$/i, "")} application guides`
     : isLc ? "Liquid chromatography application guides" : "Analytical instrument application guides";
+  const germanTopic = isLc ? "Flüssigchromatographie" : "Analysengeräte";
+  const italianTopic = isLc ? "Cromatografia liquida" : "Strumenti analitici";
+  const translateHindi = hindiCopy ? (text: string) => getHindiApplicationTranslation(hindiCopy, text, currentSlug) : undefined;
+  const hindiTopic = isLc ? "तरल क्रोमैटोग्राफ़ी" : "विश्लेषणात्मक उपकरण";
+  const compactGroupTitle = germanCopy
+    ? `Leitfäden: ${translateGermanApplication(currentGroup?.label ?? germanTopic, germanCopy)}`
+    : italianCopy ? `Guide: ${currentGroup ? translateItalianApplication(currentGroup.label, italianCopy) : italianTopic}` : translateHindi ? currentGroup ? translateHindi(currentGroup.label) + " की मार्गदर्शिकाएँ" : hindiTopic + " की मार्गदर्शिकाएँ" : englishCompactTitle;
+  const sourceOverview = { label: overview.navLabel, href: analyticalDocumentHref(overview.slug) };
+  const englishHref = analyticalDocumentHref(currentSlug);
 
   return (
     <ApplicationGuideNavigation
       key={currentSlug}
       id="analytical-application-guide-navigation"
-      ariaLabel={isLc ? "Liquid chromatography application guides" : "Analytical instrument application guides"}
-      overview={{
-        label: overview.navLabel,
-        href: analyticalDocumentHref(overview.slug),
-      }}
-      groups={groups}
-      currentHref={analyticalDocumentHref(currentSlug)}
+      ariaLabel={germanCopy ? `Anwendungsleitfäden: ${germanTopic}`
+        : italianCopy ? `Guide applicative: ${italianTopic}` : translateHindi ? hindiTopic + " की अनुप्रयोग मार्गदर्शिकाएँ" : isLc ? "Liquid chromatography application guides" : "Analytical instrument application guides"}
+      overview={germanCopy ? translateGermanApplication(sourceOverview, germanCopy) : italianCopy ? translateItalianApplication(sourceOverview, italianCopy) : translateHindi ? translateHindiApplication(sourceOverview, translateHindi) : sourceOverview}
+      groups={germanCopy ? translateGermanApplication(groups, germanCopy) : italianCopy ? translateItalianApplication(groups, italianCopy) : translateHindi ? translateHindiApplication(groups, translateHindi) : groups}
+      currentHref={germanCopy ? getDraftHrefForEnglish(englishHref, "de") : italianCopy ? getDraftHrefForEnglish(englishHref, "it") : translateHindi ? getDraftHrefForEnglish(englishHref, "hi") : englishHref}
       mobileTitle={compactGroupTitle}
-      mobileMeta={currentGroup
-        ? `${currentGroup.children.length} guide${currentGroup.children.length === 1 ? "" : "s"} in this series`
-        : `${groups.length} guide series`}
-      drawerEyebrow="Application guides"
-      drawerTitle={isLc ? "Liquid chromatography" : "Analytical instruments"}
+      mobileMeta={germanCopy
+        ? currentGroup ? `${currentGroup.children.length} Leitfäden in dieser Reihe` : `${groups.length} Leitfadenreihen`
+        : italianCopy ? currentGroup ? `${currentGroup.children.length} ${currentGroup.children.length === 1 ? "guida" : "guide"} nella serie` : `${groups.length} serie di guide`
+        : translateHindi ? currentGroup ? `इस श्रृंखला में ${currentGroup.children.length} मार्गदर्शिकाएँ` : `${groups.length} मार्गदर्शिका श्रृंखलाएँ`
+         : currentGroup ? `${currentGroup.children.length} guide${currentGroup.children.length === 1 ? "" : "s"} in this series`
+          : `${groups.length} guide series`}
+      drawerEyebrow={germanCopy ? "Anwendungsleitfäden" : italianCopy ? "Guide applicative" : translateHindi ? "अनुप्रयोग मार्गदर्शिकाएँ" : "Application guides"}
+      drawerTitle={germanCopy ? germanTopic : italianCopy ? italianTopic : translateHindi ? hindiTopic : isLc ? "Liquid chromatography" : "Analytical instruments"}
+      browseLabel={germanCopy ? "Leitfäden ansehen" : italianCopy ? "Sfoglia le guide" : translateHindi ? "मार्गदर्शिकाएँ देखें" : undefined}
+      closeLabel={germanCopy ? "Leitfadennavigation schließen" : italianCopy ? "Chiudi la navigazione delle guide" : translateHindi ? "मार्गदर्शिका नेविगेशन बंद करें" : undefined}
+      tasksLabel={germanCopy ? "Aufgaben" : italianCopy ? "attività" : translateHindi ? "कार्य" : undefined}
     />
   );
 }
@@ -373,7 +417,7 @@ function Outline({ document, labels, localized = false }: { document: Applicatio
   );
 }
 
-export default function AnalyticalApplicationDocument({
+export default async function AnalyticalApplicationDocument({
   document,
   embedded = false,
   navigation,
@@ -381,6 +425,10 @@ export default function AnalyticalApplicationDocument({
   locale,
   labels: customLabels,
   hideRelatedResources = false,
+  localizeRelatedResources,
+  germanCopy,
+  italianCopy,
+  hindiCopy,
   productLinkCards,
 }: {
   document: ApplicationDocument;
@@ -390,10 +438,16 @@ export default function AnalyticalApplicationDocument({
   locale?: string;
   labels?: ApplicationDocumentLabels;
   hideRelatedResources?: boolean;
+  localizeRelatedResources?: (resources: import("@/components/common/related-resources/related-resources.types").RelatedResourcesData) => import("@/components/common/related-resources/related-resources.types").RelatedResourcesData;
+  germanCopy?: GermanApplicationCopy;
+  italianCopy?: ItalianApplicationCopy;
+  hindiCopy?: HindiApplicationCopy;
   productLinkCards?: ProductLinkCardsOptions;
 }) {
   const labels: ApplicationDocumentLabels = customLabels ?? { onThisPage: reviewChinese ? '本页目录' : 'ON THIS PAGE', references: reviewChinese ? '参考资料' : 'References', related: reviewChinese ? '相关指南' : 'Related guides', viewReferences: reviewChinese ? '查看参考资料' : 'View references', sources: 'Sources', reference: 'Reference' };
   const referenceMap: ReferenceMap = new Map(document.references.map((reference, index) => [reference.id, { reference, number: index + 1 }]));
+  const probeContext = isSamplingProbeApplication(document.slug) ? document.slug : undefined;
+  const probeGuideLocale = probeContext && (locale === "hi-IN" || locale === "hi") ? "hi" : probeContext && locale === "it" ? "it" : probeContext && locale && isSupportedLocale(locale) ? await getSamplingProbeGuideLocale(locale) : undefined;
   const rootId = "analytical-application-document";
   const isHub = document.kind === "hub";
   const isIvd = isIvdClinicalDocumentSlug(document.slug);
@@ -413,13 +467,14 @@ export default function AnalyticalApplicationDocument({
         locale: "en",
       })
     : null;
-  const documentRelatedResources = !reviewChinese && !hideRelatedResources
+  const sourceResources = !reviewChinese && !hideRelatedResources
     ? withApplicationFittingResources(
         relatedResources ? { ...relatedResources, videos: [] } : { locale: "en", videos: [], products: [], articles: [] },
         isIvd ? "ivd" : "analytical-instruments",
         document,
       )
     : null;
+  const documentRelatedResources = sourceResources && localizeRelatedResources ? localizeRelatedResources(sourceResources) : sourceResources;
 
   return (
     <div className={`${styles.page}${embedded ? ` ${styles.embeddedPage}` : ""}`} id={rootId} lang={locale ?? (reviewChinese ? 'zh-CN' : 'en')}>
@@ -443,7 +498,7 @@ export default function AnalyticalApplicationDocument({
           </header>
 
           <aside className={styles.sidebar}>
-            {navigation ?? <DocumentNavigation currentSlug={document.slug} />}
+            {navigation ?? <DocumentNavigation currentSlug={document.slug} locale={locale} germanCopy={germanCopy} italianCopy={italianCopy} hindiCopy={hindiCopy} />}
           </aside>
 
           <Outline document={document} labels={labels} localized={Boolean(customLabels)} />
@@ -458,7 +513,14 @@ export default function AnalyticalApplicationDocument({
                 <span className={styles.sectionNumber} aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
                 <span>{section.title}</span>
               </h2>
-              {section.blocks.map((block, blockIndex) => <Block key={blockIndex} block={block} referenceMap={referenceMap} labels={labels} productLinkCards={productLinkCards} />)}
+              {section.blocks.map((block, blockIndex) => (
+                <Fragment key={blockIndex}>
+                  <Block block={block} referenceMap={referenceMap} labels={labels} productLinkCards={productLinkCards} />
+                  {probeContext && probeGuideLocale && section.id === "product-position" && blockIndex === 2 ? (
+                    <SamplingProbeApplicationLink context={probeContext} locale={probeGuideLocale} className={styles.inlineLink} />
+                  ) : null}
+                </Fragment>
+              ))}
             </section>
           ))}
 
@@ -470,7 +532,7 @@ export default function AnalyticalApplicationDocument({
                 {document.references.map((reference, index) => (
                   <li key={reference.id} id={`ref-${reference.id}`} tabIndex={-1} data-reference-item>
                     <span className={styles.referenceNumber}>[{index + 1}]</span>
-                    <ContentLink href={reference.href}>{reference.title}</ContentLink>
+                    <ContentLink href={reference.href} hrefLang={reference.hrefLang}>{reference.title}</ContentLink>
                   </li>
                 ))}
               </ol>

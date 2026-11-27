@@ -4,6 +4,8 @@ import type { LocaleCode } from "@/lib/i18n";
 
 import styles from "./PrivacyPolicyPage.module.css";
 import { YANDEX_METRICA_ID } from "@/lib/analytics/yandex-config";
+import hindiPrivacyCopy from "@/data/privacy/privacy.hi.json";
+import italianPrivacyCopy from "@/data/privacy/privacy.it.json";
 import { yandexMetricaPrivacyCopy } from "@/data/privacy/yandex-metrica-copy";
 
 type PolicySection = {
@@ -32,9 +34,128 @@ type PrivacyPolicyCopy = {
 };
 
 const privacyPolicyCopy: Record<
-  LocaleCode,
+  LocaleCode | "de" | "it" | "hi",
   PrivacyPolicyCopy
 > = {
+  it: italianPrivacyCopy,
+  hi: hindiPrivacyCopy,
+  de: {
+    eyebrow: "Privatsphäre und Datenschutz",
+    title: "Datenschutzerklärung",
+    intro:
+      "Shenzhen FOREACH Technology Co., Ltd. („FOREACH“, „wir“, „uns“ oder „unser“) respektiert Ihre Privatsphäre. Diese Erklärung beschreibt, wie wir Informationen erfassen, verwenden, speichern und schützen, wenn Sie diese Website besuchen oder nutzen.",
+    lastUpdated: "Zuletzt aktualisiert am 21. Juli 2026",
+    home: "Startseite",
+    translationNotice:
+      "Hinweis zur Übersetzung: Diese Fassung wurde mithilfe von Übersetzungswerkzeugen erstellt. Wenn eine Formulierung unklar ist, wenden Sie sich bitte an uns.",
+    sections: [
+      {
+        title: "1. Geltungsbereich",
+        paragraphs: [
+          "Diese Erklärung gilt für die offizielle Website von FOREACH und ihre Produktsuche, technischen Werkzeuge, Downloads, Anfrage- und Kontaktfunktionen.",
+          "Für Websites, Plattformen oder Dienste Dritter, die Sie über externe Links erreichen, gelten die jeweiligen Datenschutzerklärungen dieser Anbieter.",
+        ],
+      },
+      {
+        title: "2. Welche Informationen wir erfassen können",
+        paragraphs: [
+          "Wir verarbeiten Informationen nur in dem Umfang, der angemessenerweise für den Betrieb der Website, die Beantwortung geschäftlicher oder technischer Anfragen und die Verbesserung des Nutzungserlebnisses erforderlich ist.",
+        ],
+        bullets: [
+          "Von Ihnen übermittelte Angaben wie Name, Unternehmen, Land oder Region, E-Mail-Adresse, Telefonnummer, Produktanforderungen, Einzelheiten Ihrer Anfrage und freiwillig hochgeladene Anhänge.",
+          "Für Betrieb und Sicherheit benötigte technische Informationen, etwa Browsertyp, Gerätetyp, Zugriffszeit, Anfragestatus und Netzwerkinformationen.",
+          "Nach Ihrer Einwilligung in Analyse-Cookies anfallende Nutzungsinformationen, etwa aufgerufene Seiten, verweisende Seite, Geräte- und Browserkategorie sowie Interaktionen mit Websitefunktionen.",
+          "Eingaben in die Websitesuche, Produktauswahl oder Berechnungswerkzeuge, damit die Website das angeforderte Ergebnis bereitstellen kann.",
+        ],
+      },
+      {
+        title: "3. Wie wir Informationen verwenden",
+        paragraphs: [
+          "Wir können einschlägige Informationen für folgende Zwecke verwenden:",
+        ],
+        bullets: [
+          "Produktanfragen, technische Fragen, Anfragen zur Zusammenarbeit und sonstige Mitteilungen beantworten.",
+          "Produktsuche, Suche nach Ersatz für Fluidik-Fittings, Strömungswiderstandsberechnungen, Downloads und andere Websitefunktionen bereitstellen.",
+          "Anfragen erfassen und verwalten sowie geschäftliche oder technische Folgemaßnahmen organisieren.",
+          "Die Sicherheit gewährleisten, Fehler diagnostizieren, Missbrauch verhindern und die Leistung der Website verbessern.",
+          "Mit Ihrer Einwilligung Seitenaufrufe und die Nutzung von Funktionen analysieren, um Inhalte und Nutzungserlebnis zu verbessern.",
+          "Anwendbare Anforderungen erfüllen und die rechtmäßigen Interessen von FOREACH, unseren Kunden und anderen Beteiligten schützen.",
+        ],
+      },
+      {
+        title: "4. Cookies und Google Analytics",
+        paragraphs: [
+          "Die Website verwendet ein notwendiges Cookie, um Ihre Datenschutzeinstellung zu speichern. Google Analytics wird erst nach Ihrer Einwilligung geladen.",
+          "Das notwendige Cookie „foreach_cookie_consent_v1“ speichert, ob Analyse-Cookies zulässig sind, und bleibt derzeit bis zu 180 Tage gespeichert. Im Einstellungsfenster lässt es sich nicht deaktivieren, da es Ihre Auswahl speichert.",
+          "Wenn Sie Analyse-Cookies zulassen, kann Google Analytics zugehörige Cookies und Nutzungsinformationen verwenden, damit wir Seitenaufrufe und die Nutzung von Funktionen besser verstehen. Wir übermitteln Google Analytics nicht absichtlich Namen, E-Mail-Adressen, Telefonnummern, Anfrageinhalte oder Inhalte von Anhängen.",
+          "Die Speicherung für personalisierte Werbung ist auf dieser Website derzeit deaktiviert. Ihre Einwilligung zur Analyse können Sie über „Cookie-Einstellungen“ in der Fußzeile ändern oder widerrufen.",
+        ],
+      },
+      {
+        title: "5. Weitergabe und Dienstleister",
+        paragraphs: [
+          "Für Hosting, Sicherheit, E-Mail-Kommunikation und Websiteanalyse können wir Dienstleister einsetzen. Sie verarbeiten Informationen nur in dem Umfang, der für ihre Leistungen angemessenerweise erforderlich ist.",
+          "Beim Einsatz von Google Analytics können zugehörige Analysedaten von Google nach dessen Nutzungsbedingungen und Datenschutzbestimmungen verarbeitet werden.",
+          "Wir geben übermittelte personenbezogene Informationen nicht ohne berechtigten Grund an unbeteiligte Dritte weiter. Ausnahmen sind insbesondere eine gesetzliche Pflicht, der Schutz rechtmäßiger Interessen, eine Unternehmenstransaktion oder Ihre Genehmigung.",
+        ],
+      },
+      {
+        title: "6. Verarbeitung in anderen Ländern",
+        paragraphs: [
+          "Da sich die Website an Kunden weltweit richtet, können sich einige Dienstleister oder mit geschäftlichen Anfragen befasste Teams außerhalb Ihres Landes oder Ihrer Region befinden.",
+          "Bei grenzüberschreitender Verarbeitung treffen wir angemessene Maßnahmen nach den anwendbaren Anforderungen und den jeweiligen Dienstleistungsvereinbarungen.",
+        ],
+      },
+      {
+        title: "7. Speicherdauer",
+        paragraphs: [
+          "Wir speichern Informationen nur so lange, wie es für die hier beschriebenen Zwecke, geschäftliche Verpflichtungen, die Beilegung von Streitigkeiten und geltende Rechts- oder Compliance-Anforderungen erforderlich ist.",
+          "Die Speicherdauer für Anfragen und geschäftliche Kontaktdaten richtet sich nach dem Stand der Kommunikation, der Kundenbeziehung und den erforderlichen Aufbewahrungspflichten für Geschäftsunterlagen. Für Google Analytics gilt die in unserer GA4-Property konfigurierte Speicherdauer.",
+          "Sobald Informationen nicht mehr benötigt werden, treffen wir angemessene Maßnahmen zur Löschung, Anonymisierung oder Einschränkung der weiteren Nutzung.",
+        ],
+      },
+      {
+        title: "8. Ihre Wahlmöglichkeiten und Rechte",
+        paragraphs: [
+          "Je nach anwendbarem Recht können Sie Auskunft, Berichtigung, Löschung oder Einschränkung der Verarbeitung personenbezogener Informationen verlangen, gegen bestimmte Verarbeitungen Widerspruch einlegen, Ihre Einwilligung widerrufen oder eine Kopie der betreffenden Informationen anfordern.",
+          "Ein Widerruf der Analyse-Einwilligung lässt die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung unberührt. Über „Cookie-Einstellungen“ in der Fußzeile können Sie Ihre Auswahl ändern.",
+          "Zum Schutz der Informationen kann es erforderlich sein, Ihre Identität und den Umfang Ihrer Anfrage zu prüfen, bevor wir antworten.",
+        ],
+      },
+      {
+        title: "9. Sicherheit",
+        paragraphs: [
+          "Wir treffen angemessene technische und organisatorische Maßnahmen, um das Risiko unbefugter Zugriffe, Offenlegungen, Änderungen sowie von Verlust oder Missbrauch zu verringern.",
+          "Eine vollständige Sicherheit bei der Übertragung im Internet oder bei elektronischer Speicherung lässt sich nicht garantieren.",
+        ],
+      },
+      {
+        title: "10. Kinder",
+        paragraphs: [
+          "Diese Website richtet sich vor allem an Geschäftskunden, Ingenieurinnen und Ingenieure sowie Fachleute der Branche und ist nicht für Kinder bestimmt.",
+          "Wir erfassen über diese Website wissentlich keine personenbezogenen Informationen von Kindern. Falls solche Informationen versehentlich übermittelt wurden, wenden Sie sich bitte an uns.",
+        ],
+      },
+      {
+        title: "11. Änderungen dieser Erklärung",
+        paragraphs: [
+          "Wir können diese Erklärung aktualisieren, wenn sich Websitefunktionen, Dienstleister oder geltende Anforderungen ändern.",
+          "Die aktualisierte Fassung veröffentlichen wir mit geändertem Datum auf dieser Seite. Wesentliche Änderungen können wir zusätzlich durch einen Hinweis auf der Website oder auf angemessenem anderem Wege bekannt geben.",
+        ],
+      },
+    ],
+    contact: {
+      title: "12. Kontakt",
+      intro:
+        "Bei Fragen zu dieser Erklärung, den Cookie-Einstellungen oder unserem Umgang mit personenbezogenen Informationen wenden Sie sich bitte an FOREACH:",
+      companyLabel: "Unternehmen",
+      company: "Shenzhen FOREACH Technology Co., Ltd.",
+      emailLabel: "E-Mail",
+      addressLabel: "Adresse",
+      address:
+        "1301, Building 2, Yufengda Industrial Park, No. 1008 Guangqiao Avenue, Yulv Community, Yutang Subdistrict, Guangming District, Shenzhen, Guangdong, China",
+    },
+  },
   "zh-CN": {
     eyebrow: "Privacy & Data Protection",
     title: "隐私政策",
@@ -735,10 +856,10 @@ const privacyPolicyCopy: Record<
 };
 
 type PrivacyPolicyPageProps = {
-  locale: LocaleCode;
+  locale: LocaleCode | "de" | "it" | "hi";
 };
 
-function getHomeHref(locale: LocaleCode) {
+function getHomeHref(locale: PrivacyPolicyPageProps["locale"]) {
   return locale === "zh-CN" ? "/" : `/${locale}`;
 }
 
@@ -759,6 +880,7 @@ export default function PrivacyPolicyPage({
     <main className={styles.page}>
       <SiteBreadcrumb
         className={styles.breadcrumb}
+        ariaLabel={locale === "de" ? "Navigationspfad" : locale === "it" ? "Percorso di navigazione" : locale === "hi" ? "पेज का रास्ता" : undefined}
         variant="bar"
         items={[
           {

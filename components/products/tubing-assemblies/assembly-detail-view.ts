@@ -1,9 +1,9 @@
 import { Children, cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
 import { assemblyDetailHref, assemblyDetailText } from "@/data/products/tubing-assemblies/detail-localization";
-import type { TubingAssemblyLocale } from "@/data/products/tubing-assemblies/locales";
+import type { TubingAssemblyDetailLocale } from "@/data/products/tubing-assemblies/locales";
 
 /** Localize authored content without translating component state or model identifiers. */
-export function assemblyDetailView(node: ReactNode, locale: TubingAssemblyLocale, figures: readonly unknown[] = []): ReactNode {
+export function assemblyDetailView(node: ReactNode, locale: TubingAssemblyDetailLocale, figures: readonly unknown[] = []): ReactNode {
   if (locale === "zh-CN") return node;
   const translateChildren = (value: ReactNode): ReactNode => {
     const children: ReactNode[] = [];

@@ -13,6 +13,8 @@
    5. 后期接后端、CMS、数据库时，只需要主要改这个文件
 ========================================================= */
 
+import { getHindiDatasheetsPageData } from "@/data/resources/datasheets.hi";
+import { getItalianDatasheetsPageData } from "@/data/resources/datasheets.it";
 import { getDatasheetsStaticPageData } from "@/data/resources/datasheets.i18n";
 
 import type {
@@ -31,7 +33,7 @@ import type {
 ========================================================= */
 
 export function isDatasheetLocale(locale: string): locale is DatasheetLocale {
-  return ["zh-CN", "en", "es", "fr", "ko", "ru"].includes(locale);
+  return ["zh-CN", "en", "es", "fr", "ko", "ru", "de"].includes(locale);
 }
 
 /* =========================================================
@@ -49,7 +51,7 @@ export function isDatasheetLocale(locale: string): locale is DatasheetLocale {
 ========================================================= */
 
 export async function getDatasheetsPageData(
-  locale: DatasheetLocale,
+  locale: DatasheetLocale | "it" | "hi",
 ): Promise<DatasheetsPageData> {
   /*
      后期接后端时，可以把下面这一行：
@@ -72,5 +74,6 @@ export async function getDatasheetsPageData(
      return response.json();
   */
 
-  return getDatasheetsStaticPageData(locale);
-} 
+  if (locale === "hi") return getHindiDatasheetsPageData();
+  return locale === "it" ? getItalianDatasheetsPageData() : getDatasheetsStaticPageData(locale);
+}

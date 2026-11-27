@@ -1,4 +1,5 @@
-import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
+import { buildDraftPageMetadata, buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜外语公司新闻列表页入口
@@ -22,27 +23,59 @@ import { notFound } from "next/navigation";
 
 import NewsListClient from "@/components/resources/news/NewsListClient";
 import { getNewsPageData } from "@/services/resources/news/getNewsPageData";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
 
 import "@/app/resources/news/news.css";
 
-import type { NewsLocale } from "@/data/resources/news/news.types";
+import type { NewsLocale, NewsResourceLocale } from "@/data/resources/news/news.types";
 
 const SUPPORTED_LOCALES: NewsLocale[] = ["en", "es", "fr", "ko", "ru"];
 
 interface NewsIntlPageProps {
   params: Promise<{
-    locale: NewsLocale;
+    locale: NewsResourceLocale;
   }>;
 }
 
 export function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((locale) => ({
-    locale,
-  }));
+  const locales = languageDraftsEnabled ? [...SUPPORTED_LOCALES, "de", "it", "hi"] : SUPPORTED_LOCALES;
+  return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: NewsIntlPageProps): Promise<Metadata> {
+async function getPageMetadata({ params }: NewsIntlPageProps): Promise<Metadata> {
   const { locale } = await params;
+  if (locale === "hi") {
+    if (!languageDraftsEnabled) return {};
+    const { hero } = getNewsPageData(locale);
+    const title = hero.title + " | FOREACH";
+    const canonical = "/hi/resources/news/";
+    return {
+      title, description: hero.description, alternates: { canonical },
+      openGraph: { title, description: hero.description, url: canonical, locale: "hi_IN", siteName: "FOREACH", type: "website" },
+      robots: { index: false, follow: true },
+    };
+  }
+  if (locale === "it") {
+    if (!languageDraftsEnabled) return {};
+    const { hero } = getNewsPageData(locale);
+    const title = hero.title + " | FOREACH";
+    const canonical = "/it/resources/news/";
+    return {
+      title, description: hero.description, alternates: { canonical },
+      openGraph: { title, description: hero.description, url: canonical, locale: "it_IT", siteName: "FOREACH", type: "website" },
+      robots: { index: false, follow: true },
+    };
+  }
+  if (locale === "de") {
+    if (!languageDraftsEnabled) return {};
+    const { hero } = getNewsPageData(locale);
+    return buildDraftPageMetadata({
+      locale,
+      canonical: "/de/resources/news/",
+      title: `${hero.title} | FOREACH`,
+      description: hero.description,
+    });
+  }
   const pageData = getNewsPageData(locale);
   const sectionLabels: Record<NewsLocale, string> = {
     "zh-CN": "资源中心", en: "Resources", es: "Recursos", fr: "Ressources", ko: "자료", ru: "Ресурсы",
@@ -56,7 +89,7 @@ export async function generateMetadata({ params }: NewsIntlPageProps): Promise<M
 export default async function NewsIntlPage({ params }: NewsIntlPageProps) {
   const { locale } = await params;
 
-  if (!SUPPORTED_LOCALES.includes(locale)) {
+  if (locale === "de" || locale === "it" || locale === "hi" ? !languageDraftsEnabled : !SUPPORTED_LOCALES.includes(locale)) {
     notFound();
   }
 
@@ -64,3 +97,5 @@ export default async function NewsIntlPage({ params }: NewsIntlPageProps) {
 
   return <NewsListClient pageData={pageData} />;
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/resources/news/", getPageMetadata);

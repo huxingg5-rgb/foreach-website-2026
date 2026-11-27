@@ -20,9 +20,17 @@ import type {
   TechnicalArticleSecondaryCategory,
   TechnicalArticlesPageData,
 } from "@/data/resources/technical-articles/technical-articles.types";
+import type { GermanTechnicalArticlesPageData } from "@/services/resources/technical-articles/getGermanTechnicalArticlesPageData";
+
+import type { ItalianTechnicalArticlesPageData } from "@/services/resources/technical-articles/getItalianTechnicalArticlesPageData";
+import type { HindiTechnicalArticlesPageData } from "@/services/resources/technical-articles/getHindiTechnicalArticlesPageData";
+import { getHindiDraftLink, getItalianDraftLink } from "@/lib/i18n/draft-languages";
+
+type ArticleListPageData = TechnicalArticlesPageData | GermanTechnicalArticlesPageData | ItalianTechnicalArticlesPageData | HindiTechnicalArticlesPageData;
+type ArticleListLocale = TechnicalArticleLocale | "de" | "it" | "hi";
 
 interface TechnicalArticlesClientProps {
-  pageData: TechnicalArticlesPageData;
+  pageData: ArticleListPageData;
 }
 
 type SharedComponentProps = Record<string, unknown>;
@@ -51,9 +59,24 @@ const SupportCtaComponent =
 const TECHNICAL_ARTICLES_PAGE_SIZE = 6;
 
 const technicalArticlesPaginationUi: Partial<Record<
-  TechnicalArticleLocale,
+  ArticleListLocale,
   { pagination: string; previous: string; next: string }
 >> = {
+  hi: {
+    pagination: "तकनीकी लेखों के पेज",
+    previous: "पिछला",
+    next: "अगला",
+  },
+  de: {
+    pagination: "Fachartikelseiten",
+    previous: "Zurück",
+    next: "Weiter",
+  },
+  it: {
+    pagination: "Paginazione degli articoli tecnici",
+    previous: "Indietro",
+    next: "Avanti",
+  },
   es: {
     pagination: "Paginación de artículos técnicos",
     previous: "Anterior",
@@ -77,8 +100,38 @@ const technicalArticlesPaginationUi: Partial<Record<
 };
 
 const technicalArticlesUi: Partial<
-  Record<TechnicalArticleLocale, TechnicalArticlesUi>
+  Record<ArticleListLocale, TechnicalArticlesUi>
 > = {
+  hi: {
+    search: "खोजें",
+    recent: "हाल ही की खोजें",
+    recentKeywords: ["फिटिंग", "PEEK", "सामग्री की संगतता", "पिस्टन पंप", "IVD"],
+    categories: "तकनीकी श्रेणियाँ",
+    allArticles: "सभी तकनीकी लेख",
+    empty: "मेल खाने वाला कोई तकनीकी लेख नहीं मिला। दूसरा शब्द खोजें या दूसरी श्रेणी चुनें।",
+    tags: "कीवर्ड:",
+    contact: "हमसे संपर्क करें",
+  },
+  de: {
+    search: "Suchen",
+    recent: "Letzte Suchanfragen",
+    recentKeywords: ["Fittings", "PEEK", "Werkstoffverträglichkeit", "Kolbenpumpe", "IVD"],
+    categories: "Fachgebiete",
+    allArticles: "Alle Fachartikel",
+    empty: "Keine passenden Fachartikel gefunden. Verwenden Sie einen anderen Suchbegriff oder wählen Sie ein anderes Fachgebiet.",
+    tags: "Schlagwörter:",
+    contact: "Kontakt aufnehmen",
+  },
+  it: {
+    search: "Cerca",
+    recent: "Ricerche recenti",
+    recentKeywords: ["Raccordi", "PEEK", "Compatibilità dei materiali", "Pompa a pistone", "IVD"],
+    categories: "Categorie tecniche",
+    allArticles: "Tutti gli articoli tecnici",
+    empty: "Nessun articolo corrispondente. Prova un altro termine o seleziona un’altra categoria.",
+    tags: "Parole chiave:",
+    contact: "Contattaci",
+  },
   es: {
     search: "Buscar",
     recent: "Recientes",
@@ -121,15 +174,17 @@ const technicalArticlesUi: Partial<
   },
 };
 
-function isChinesePage(locale: TechnicalArticleLocale) {
+function isChinesePage(locale: ArticleListLocale) {
   return locale === "zh-CN";
 }
 
-function formatArticleCount(locale: TechnicalArticleLocale, count: number) {
+function formatArticleCount(locale: ArticleListLocale, count: number) {
   return isChinesePage(locale) ? `（${count}）` : ` (${count})`;
 }
 
-function getArticleHref(locale: TechnicalArticleLocale, slug: string) {
+function getArticleHref(locale: ArticleListLocale, slug: string) {
+  if (locale === "hi") return getHindiDraftLink("/en/resources/technical-articles/" + slug + "/").href;
+  if (locale === "it") return getItalianDraftLink("/en/resources/technical-articles/" + slug + "/").href;
   if (isChinesePage(locale)) {
     return `/resources/technical-articles/${slug}`;
   }
@@ -138,7 +193,7 @@ function getArticleHref(locale: TechnicalArticleLocale, slug: string) {
 }
 
 function getCategoryPathLabel(
-  pageData: TechnicalArticlesPageData,
+  pageData: ArticleListPageData,
   article: ClassifiedTechnicalArticleItem,
 ) {
   const primary = pageData.taxonomy.find(
@@ -155,7 +210,7 @@ function getCategoryPathLabel(
   return `${primary.label} / ${secondary.label}`;
 }
 
-function resolveCategoryFilter(pageData: TechnicalArticlesPageData, category: string | null): ActiveCategoryFilter {
+function resolveCategoryFilter(pageData: ArticleListPageData, category: string | null): ActiveCategoryFilter {
   for (const group of pageData.taxonomy) {
     if (group.key === category) return { type: "primary", key: group.key };
     const child = group.children.find((item) => item.key === category);
@@ -419,6 +474,8 @@ export default function TechnicalArticlesClient({
                     tags={article.tags}
                     href={getArticleHref(pageData.locale, article.slug)}
                     categoryLabel={getCategoryPathLabel(pageData, article)}
+                    sourceLanguage={"sourceLanguage" in article && article.sourceLanguage === "en" ? "en" : undefined}
+                    englishSourceLabel={pageData.locale === "it" ? "Articolo in inglese" : pageData.locale === "hi" ? "लेख अंग्रेज़ी में है" : undefined}
                   />
                 ))}
               </div>

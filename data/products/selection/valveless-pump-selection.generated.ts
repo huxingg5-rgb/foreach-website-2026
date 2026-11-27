@@ -207,7 +207,7 @@ export const valvelessPumpSelectionProducts: ProductSelectionProduct[] = baseVal
   const cardTitle = { ...product.cardTitle };
   const cardSubtitle = { ...product.cardSubtitle };
   const searchKeywords = { ...product.searchKeywords };
-  for (const locale of valvelessForeignLocales) {
+  for (const locale of [...valvelessForeignLocales, "it"] as const) {
     const copy = getValvelessForeignContent(product.detailSlug || "", locale);
     if (!copy) continue;
     cardTitle[locale] = copy.model;

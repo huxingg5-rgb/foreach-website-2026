@@ -1,0 +1,184 @@
+{
+  "slug": "stepper-motor-calculation-selection",
+  "title": "Calcolo e scelta del motore passo-passo per una pompa a pistone di precisione",
+  "summary": "Calcola frequenza degli impulsi, micropassi, rapporto di trasmissione e coppia di carico. Verifica poi velocità e coppia dinamica con l’esempio di una piattaforma a moto alternato da 400 mm.",
+  "seoTitle": "Guida al calcolo del motore passo-passo per pompe a pistone di precisione | FOREACH",
+  "seoDescription": "Guida pratica a frequenza degli impulsi, micropassi, rapporto di trasmissione, spostamento per impulso, coppia di carico e verifica della coppia dinamica.",
+  "date": "2026-09-06",
+  "coverImage": "/images/resources/technical-articles/piston-pump/precision-piston-pump-stepper-motor-selection-cover.webp",
+  "coverAlt": "Calcolo del motore passo-passo per un sistema di movimento fluidico di precisione",
+  "intro": [
+    {
+      "type": "paragraph",
+      "text": "L’azionamento di un motore passo-passo converte gli impulsi di comando in rotazione discreta. Il conteggio degli impulsi definisce lo spostamento teorico e la frequenza definisce la velocità. L’inseguimento del comando dipende anche da motore, azionamento, carico e profilo di accelerazione."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Partire dai requisiti di moto",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Definisci corsa, durata del ciclo, tempi di sosta, massa in movimento, attrito, forze esterne, requisiti di posizionamento e trasmissione. Per una pompa a pistone, includi carico idraulico e attrito delle tenute. Per la scelta servono dati oltre a taglia del motore e coppia di mantenimento."
+        }
+      ]
+    },
+    {
+      "title": "Coppia di mantenimento, coppia in moto e micropassi",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "La coppia di mantenimento indica la capacità di opporsi a una coppia esterna a motore alimentato e fermo. Per la scelta in funzionamento, usa la curva coppia-velocità con tensione, corrente e impostazioni di azionamento previste."
+        },
+        {
+          "type": "paragraph",
+          "text": "I micropassi riducono l’angolo teorico per impulso in ingresso e possono rendere il movimento più fluido. Accuratezza e ripetibilità reali vanno verificate sul motore, sul carico e sulla meccanica, anche quando la risoluzione del comando migliora."
+        }
+      ]
+    },
+    {
+      "title": "Formule di conversione comuni",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Per un angolo del passo intero θ, il numero di passi interi per giro è N = 360 ÷ θ. Con fattore di micropasso m e frequenza d’ingresso f, la velocità del motore è n = f ÷ (N × m) giri/s e rpm = 60 × n."
+        },
+        {
+          "type": "formula",
+          "expression": "N = 360 ÷ θ; n = f ÷ (N × m); rpm = 60 × n",
+          "note": "θ in gradi e f in hertz."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con rapporto di velocità motore-carico G e spostamento lineare per giro dell’asse del carico C, lo spostamento per impulso è δ = C ÷ (G × N × m). In una trasmissione a vite, usa l’avanzamento per giro come C."
+        },
+        {
+          "type": "formula",
+          "expression": "δ = C ÷ (G × N × m)",
+          "note": "Per riportare all’albero motore la coppia di carico e quella d’inerzia, considera rendimento e inerzia reali."
+        }
+      ]
+    },
+    {
+      "title": "Esempio: piattaforma orizzontale a moto alternato con corsa da 400 mm",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Si ipotizzano 400 mm di corsa in una direzione, 4 s di andata e ritorno senza sosta alle estremità, massa in movimento di 10 kg, trasmissione a cinghia, 0.1 s di accelerazione e 0.1 s di decelerazione per direzione, 1.8 s a velocità costante e coefficiente di attrito 0.1. I valori servono a illustrare il calcolo. La scelta finale richiede una verifica dell’attrezzatura."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il tempo in una direzione è 2 s. Dall’area del profilo trapezoidale di velocità, 0.4 = vmax × (0.1/2 + 1.8 + 0.1/2), quindi vmax ≈ 0.2105 m/s e accelerazione ≈ 2.105 m/s². L’attrito vale circa 9.8 N e la forza di accelerazione 21.05 N, per un totale di circa 30.85 N prima di considerare inerzia della puleggia e perdite."
+        },
+        {
+          "type": "formula",
+          "expression": "vmax = 0.4 ÷ (0.1/2 + 1.8 + 0.1/2) ≈ 0.2105 m/s",
+          "note": "Il moto in una direzione dura 2 s: 0.1 s di accelerazione, 1.8 s a velocità costante e 0.1 s di decelerazione."
+        }
+      ]
+    },
+    {
+      "title": "Rapporto di trasmissione, micropassi e velocità",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Una puleggia del carico da 30 mm ha una circonferenza di circa 94.25 mm. L’azionamento diretto con un motore da 1.8° richiede più di 9.42 micropassi per uno spostamento teorico inferiore a 0.05 mm per impulso. Questo confronto riguarda la risoluzione del comando."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con una riduzione 3:1, pari a tre giri del motore per giro dell’asse del carico, e quattro micropassi, lo spostamento per impulso è circa 94.25 ÷ (3 × 200 × 4) = 0.0393 mm/impulso."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Grandezza calcolata",
+            "Risultato dell’esempio"
+          ],
+          "rows": [
+            [
+              "Velocità massima dell’asse del carico",
+              "≈2.234 giri/s"
+            ],
+            [
+              "Velocità massima del motore con riduzione 3:1",
+              "≈6.70 giri/s o 402 rpm"
+            ],
+            [
+              "Frequenza degli impulsi in ingresso con 4 micropassi",
+              "≈5,361 impulsi/s"
+            ],
+            [
+              "Spostamento teorico per impulso",
+              "≈0.0393 mm/impulso"
+            ]
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per il moto perso all’inversione oltre la risoluzione di comando, consulta ",
+              "label": "Compensazione del gioco nelle pompe a pistone di precisione",
+              "href": "/resources/technical-articles/precision-piston-pump-backlash-compensation/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Verifica della coppia dinamica e accettazione finale",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Tralasciando inizialmente inerzia rotazionale e perdite, la coppia necessaria all’albero motore è circa 30.85 × 0.015 ÷ 3 = 0.154 N·m. Un margine preliminare di 2× dà 0.309 N·m. Occorre ancora aggiungere inerzia di puleggia e rotore, rendimento e perdite della trasmissione e forze esterne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Verifica la coppia dinamica di motore e azionamento in prossimità di 402 rpm e durante tutta l’accelerazione. Per accettare il motore di esempio 57HS09 servono verifiche oltre alla coppia di mantenimento di 0.9 N·m. Prova infine perdita di passi, aumento di temperatura, vibrazioni e posizionamento durante il moto alternato al carico più gravoso."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per scegliere il profilo di accelerazione, consulta ",
+              "label": "Curve di accelerazione e decelerazione delle pompe a pistone",
+              "href": "/resources/technical-articles/piston-pump-acceleration-deceleration-curves/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Conclusioni",
+    "parts": [
+      {
+        "type": "paragraph",
+        "text": "Lo spostamento per impulso descrive la risoluzione del comando. La scelta finale richiede la curva coppia-velocità con le impostazioni effettive di azionamento e la verifica di accelerazione, temperatura, vibrazioni, perdita di passi e posizionamento con il carico più gravoso."
+      }
+    ]
+  },
+  "referencesTitle": "Riferimenti",
+  "references": [],
+  "cta": {
+    "title": "Ti serve assistenza per verificare il punto di lavoro di un motore passo-passo?",
+    "description": "Per un calcolo tecnico, indica corsa, tempo di ciclo, carico, trasmissione, tensione e corrente dell’azionamento, micropassi e velocità obiettivo.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Visualizza le pompe a pistone"
+  },
+  "subject": {
+    "about": [
+      "calcolo del motore passo-passo",
+      "scelta del motore passo-passo"
+    ],
+    "mentions": [
+      "frequenza degli impulsi",
+      "micropassi",
+      "rapporto di trasmissione",
+      "spostamento per impulso",
+      "coppia dinamica"
+    ]
+  }
+}

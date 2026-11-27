@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "title": "Rumore delle pompe a membrana in miniatura: cause, isolamento delle vibrazioni e riduzione del rumore",
+    "seoTitle": "Riduzione di rumore e vibrazioni nelle pompe a membrana in miniatura | Foreach Technology",
+    "seoDescription": "Analizza il rumore di una pompa a membrana in miniatura allo stesso punto di lavoro. Controlla motore, testa, supporti, tubi e involucro, poi verifica le misure di riduzione del rumore rispetto a portata, aumento di temperatura e affidabilità.",
+    "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl30-brushless-bottom-photo.jpg",
+    "coverAlt": "Vista inferiore di una pompa a membrana in miniatura FOREACH DPL30 con base e fori di fissaggio"
+  },
+  "deck": "Analizzare il rumore della micropompa a membrana a parità di punto di lavoro. Controllare motore, testata, supporti, tubi e involucro, poi verificare gli interventi di riduzione del rumore rispetto a portata, aumento della temperatura e affidabilità.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Quando una pompa a membrana in miniatura è rumorosa, verifica prima le condizioni operative e i percorsi di trasmissione delle vibrazioni. Solo dopo valuta isolamento, modifiche ai supporti o smorzamento idraulico. Le misure al banco e nello strumento devono avere portata, pressione e condizioni acustiche comparabili."
+    },
+    {
+      "type": "paragraph",
+      "text": "Una pompa può essere poco rumorosa al banco e produrre ronzii, toni o colpi periodici una volta collegata alla base e ai tubi dello strumento. Verifica se è cambiata l’eccitazione alla sorgente o se il montaggio amplifica un’eccitazione già presente. Sostituire la pompa può essere utile come confronto. Con lo stesso percorso di trasmissione, un altro esemplare può però comportarsi allo stesso modo."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Separa le sorgenti di eccitazione dai percorsi di trasmissione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Rotazione del motore, azionamento e movimento della membrana generano eccitazioni meccaniche. Anche il funzionamento delle valvole e le variazioni di pressione del liquido eccitano il circuito. L’energia può raggiungere il microfono per via aerea oppure passare per supporti, morsetti, raccordi e involucro, le cui superfici più ampie possono irradiare suono."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il montaggio può cambiare le condizioni della pompa a causa di minore alimentazione all’ingresso, maggiore contropressione o tensione instabile. In altri casi il punto di lavoro resta simile, mentre aumentano la risposta strutturale e il suono irradiato. I due effetti possono coesistere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ridurre l’accoppiamento meccanico è un modo per limitare la trasmissione delle vibrazioni. Verifica anche come le oscillazioni di pressione eccitano tubi e involucro. Progetta l’isolamento in base agli attacchi, alle quote di montaggio e al carico effettivi della pompa FOREACH. Confronta i risultati a parità di punto di lavoro."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-rd/en/03.svg",
+          "alt": "Percorsi dall’eccitazione al suono",
+          "width": 1000,
+          "height": 650,
+          "caption": "Schema diagnostico. Le eccitazioni meccaniche e idrauliche possono raggiungere l’ascoltatore per vie diverse. Verifica ogni percorso a parità di punto di lavoro."
+        }
+      ]
+    },
+    {
+      "title": "Per interpretare un limite in decibel servono le condizioni di prova",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A pagina 5 delle specifiche cinesi di DPL30, DPL60 e DPL30H il rumore è riportato come ≤80 dB. I documenti esaminati non specificano distanza, ponderazione in frequenza o temporale, rumore di fondo, montaggio o condizioni idrauliche di prova. [F1–F3]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mantieni la dicitura originale. Non convertirla in 80 dB(A) a 1 m e non promettere lo stesso livello sonoro all’interno di ogni strumento. Il limite non rappresenta il valore tipico misurato per ciascuna pompa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Durante lo sviluppo puoi confrontare la pressione sonora ponderata A in una posizione concordata e usare spettri o registrazioni originali per la diagnosi. Per l’accettazione formale adotta il metodo previsto dal progetto. Il livello di pressione sonora dipende dalla posizione e dal campo acustico. Il livello di potenza sonora descrive la potenza acustica emessa. I due valori in decibel non sono intercambiabili. Registra e mantieni costanti il rumore di fondo, le riflessioni e le impostazioni di misura, così da attribuire le differenze alla modifica in esame."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Condizione",
+            "Da mantenere costante o registrare"
+          ],
+          "rows": [
+            [
+              "Pompa e azionamento",
+              "Modello completo, versione del motore, tensione ai morsetti, velocità o comando"
+            ],
+            [
+              "Punto di lavoro idraulico",
+              "Temperatura del fluido, pressione all’ingresso e all’uscita, portata media e bolle"
+            ],
+            [
+              "Montaggio",
+              "Supporto, punti di fissaggio, isolatori, elementi di fissaggio, morsetti e percorso dei cavi"
+            ],
+            [
+              "Misura acustica",
+              "Calibrazione, posizione del microfono, ponderazione, durata e rumore di fondo"
+            ],
+            [
+              "Strumento completo",
+              "Stato dell’involucro, altri motori e ventole, condizioni a freddo o a regime termico"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le registrazioni con il telefono possono aiutare a confrontare il carattere del rumore. Guadagno automatico, riduzione del rumore e risposta del microfono influiscono però sull’ampiezza. Per quantificare una riduzione in decibel servono misure calibrate."
+        }
+      ]
+    },
+    {
+      "title": "Aggiungi progressivamente gli elementi di montaggio",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Definisci un montaggio di riferimento ripetibile, poi passa per gradi allo strumento completo. Tenere la pompa sospesa a mano è poco ripetibile, perché la presa e i tessuti molli alterano le vibrazioni. Usa un supporto definito e registra i collegamenti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Confronta la pompa con un circuito di riferimento, poi con il supporto definitivo, i tubi e i morsetti effettivi e infine con l’involucro. Mantieni lo stesso punto di lavoro. Se un cambio di tubo modifica pressione e portata, registra la nuova condizione operativa prima di attribuire le differenze acustiche alla struttura."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Risultato",
+            "Primo controllo",
+            "Confronto successivo"
+          ],
+          "rows": [
+            [
+              "Una banda di frequenza aumenta dopo il montaggio",
+              "Rigidezza del supporto, fissaggio e modi propri della struttura",
+              "Modifica il supporto o l’isolamento e ripeti"
+            ],
+            [
+              "Morsetti o attacchi rigidi aumentano il rumore",
+              "Il tubo trasmette vibrazioni all’involucro",
+              "Isola progressivamente i percorsi di collegamento"
+            ],
+            [
+              "Il rumore cambia chiudendo l’involucro",
+              "Irradiazione dei pannelli, cavità acustica e accoppiamento dei componenti",
+              "Confronta le vibrazioni dell’involucro e gli spettri sonori"
+            ],
+            [
+              "Una variazione del rumore coincide con più bolle",
+              "Alimentazione all’ingresso, infiltrazioni o rilascio di gas",
+              "Pressione all’ingresso e stato osservabile del circuito"
+            ],
+            [
+              "La velocità o la tensione diventa instabile",
+              "Alimentazione, comando o azionamento",
+              "Registrazione dei segnali elettrici e verifica dell’alimentazione"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Esegui le modifiche strutturali a pompa ferma. Riutilizza le posizioni e le impostazioni della strumentazione di misura. Conserva misure ripetute per distinguere le variazioni di ambiente o montaggio."
+        }
+      ]
+    },
+    {
+      "title": "Varia la velocità per indagare le risonanze",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se la configurazione esatta supporta la regolazione, varia la velocità entro l’intervallo consentito misurando rumore, vibrazioni della struttura, portata media e le due pressioni. Una fascia ristretta di velocità più rumorosa può indicare un’eccitazione vicina a un picco della risposta strutturale. Escludi anche variazioni nel funzionamento delle valvole o nell’alimentazione a quella velocità."
+        },
+        {
+          "type": "paragraph",
+          "text": "Confronta gli spettri acustici con le frequenze legate alla rotazione, ai cicli di pompaggio e al comando. La velocità dell’albero determina una frequenza di un evento per giro. Per conoscere il numero effettivo di eventi di pompaggio per giro e gli impulsi di retroazione, consulta la documentazione del meccanismo e del motore. Le frequenze di PWM, retroazione della velocità e pulsazione del fluido non sono intercambiabili."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se una modifica al supporto sposta la fascia di velocità più rumorosa mentre le condizioni idrauliche ed elettriche restano simili, approfondisci la possibile risonanza. Una valutazione a orecchio da sola non la conferma."
+        }
+      ]
+    },
+    {
+      "title": "Verifica l’isolamento insieme alle prestazioni della pompa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un isolatore più morbido non è sempre migliore. Contano rigidezza, precarico, direzione del carico e frequenza di eccitazione. Un movimento eccessivo può sollecitare attacchi e cavi. Controlla i percorsi che aggirano l’isolamento, come il contatto con l’involucro, i tubi in tensione o i morsetti rigidi che trasmettono vibrazioni a un pannello."
+        },
+        {
+          "type": "paragraph",
+          "text": "DPL30 e DPL60 prevedono attacchi per tubi flessibili con diametro interno di 3.2 mm. DPL30H prevede un tubo rigido 6 × 4 mm con raccordi a compressione. Non sostituire l’attacco DPL30H con un tubo flessibile comune per ridurre le vibrazioni. Anche un tubo morbido e lungo modifica il circuito idraulico. [F1–F3]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Per le eccitazioni idrauliche valuta lo smorzamento e il tipo di tubo. Per la risposta dei pannelli confronta supporti, isolamento e trattamenti smorzanti. Se aggiungi materiale fonoassorbente o racchiudi la pompa, controlla aumento di temperatura del motore, ventilazione, visibilità delle perdite e accesso per la manutenzione. Adotta la soluzione solo se rumore, portata, temperatura e affidabilità rispondono insieme ai requisiti."
+        }
+      ]
+    },
+    {
+      "title": "Confronta i modelli FOREACH per lo stesso compito nello strumento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le versioni con spazzole e brushless differiscono per durata e modalità di controllo, ma la versione brushless non è necessariamente più silenziosa. Confrontare DPL30 e DPL60 a piena velocità senza carico non basta per determinare la scelta migliore per lo strumento."
+        },
+        {
+          "type": "paragraph",
+          "text": "Confronta rumore e prestazioni con la stessa portata richiesta, la contropressione effettiva, lo stesso fluido e lo stesso montaggio. Registra eventuali velocità diverse. La maggiore capacità in pressione di DPL30H non implica un vantaggio acustico in un circuito ordinario."
+        },
+        {
+          "type": "paragraph",
+          "text": "Documenta l’eccitazione principale, i percorsi di trasmissione più importanti e le condizioni equivalenti prima e dopo la modifica. Verifica che avvio, portata e temperatura rispettino ancora i requisiti. Per un confronto tecnico con FOREACH, includi fotografie del montaggio, uno schema del circuito e i dati del punto di lavoro oltre ai file audio."
+        }
+      ]
+    },
+    {
+      "title": "Specifiche e riferimenti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I parametri citati provengono dalle specifiche FOREACH qui riportate. Applica le spiegazioni tecniche e le prove proposte solo dopo averle verificate per il modello e le condizioni d’uso effettivi."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+              "label": "[F1] Specifica FOREACH DPL30 in cinese (A04)",
+              "suffix": "pagg. 5–6 per prestazioni e configurazione, pagg. 3–4 per il montaggio"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+              "label": "[F2] Specifica FOREACH DPL60 in cinese (A02)",
+              "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
+              "label": "[F3] Specifica FOREACH DPL30H in cinese (A00)",
+              "suffix": "pp. 5–6: performance and configuration; pp. 3–4: mounting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Guide correlate per la scelta e la convalida",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/self-priming-miniature-liquid-diaphragm-pump-selection/",
+              "label": "Autoadescamento e tempo di avvio"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+              "label": "Misura e riduzione della pulsazione di portata"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-backflow-check-valve/",
+              "label": "Riflusso a pompa ferma e progettazione antisifone"
+            },
+            {
+              "href": "/resources/technical-articles/micro-diaphragm-pump-materials-selection/",
+              "label": "Compatibilità dei materiali a contatto con il fluido"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Curve portata-pressione e punti di lavoro"
+            },
+            {
+              "href": "/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/",
+              "label": "Controllo delle pompe brushless a due e cinque fili"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "Scelta delle pompe a membrana in miniatura per liquidi"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/",
+              "label": "Gamma di pompe a membrana in miniatura"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Se la pompa è rumorosa solo dentro l’involucro, posso escludere un problema della pompa?",
+      "answer": "Non ancora. Confronta pressione, portata, tensione e presenza di bolle. Poi distingui una variazione dell’eccitazione da un’amplificazione dovuta al montaggio."
+    },
+    {
+      "question": "Passando a un motore brushless si riduce sempre il rumore?",
+      "answer": "No. Motore e comando influiscono sull’eccitazione. Velocità, testa della pompa, struttura e circuito determinano il rumore risultante."
+    },
+    {
+      "question": "Dopo aver ridotto il rumore, basta controllare il valore in decibel?",
+      "answer": "Ricontrolla anche portata al punto di lavoro, tempo di avvio, aumento di temperatura e affidabilità degli attacchi. Verifica se sono comparsi nuovi toni o effetti durante l’avvio e l’arresto."
+    }
+  ],
+  "cta": {
+    "title": "Parliamo della scelta della tua pompa a membrana per liquidi",
+    "description": "Indica fluido effettivo, portata richiesta, pressioni d’ingresso e uscita, tubi e condizioni di avvio e arresto per definire modello, materiali e convalida.",
+    "contactLabel": "Contatta l’assistenza tecnica",
+    "productsLabel": "Vedi le pompe a membrana in miniatura per liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

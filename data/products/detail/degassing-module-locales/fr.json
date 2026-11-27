@@ -1,0 +1,94 @@
+{
+  "name": "Module de dégazage à membrane",
+  "navName": "Modules de dégazage à membrane",
+  "navDescription": "Dégazage en ligne sous vide pour circuits de liquide",
+  "title": "EF-AG3-B Module de dégazage à membrane",
+  "seoTitle": "EF-AG3-B | Module de dégazage à membrane | FOREACH",
+  "description": "Module EF-AG3-B à membrane à fibres creuses pour le dégazage en ligne sous vide des circuits d’alimentation en encre. Deux orifices de liquide et un de vide, à filetage femelle NPT 1/8.",
+  "introduction": "L’EF-AG3-B est un module à membrane à fibres creuses destiné au dégazage en ligne sous vide. Il retire en continu les gaz dissous pendant l’alimentation en liquide et réduit la formation de bulles liée au dégagement de ces gaz. Son application type est l’alimentation en encre des imprimantes industrielles à jet d’encre. Pour le dégazage de l’eau ou les circuits d’analyseurs biochimiques, son adéquation doit être évaluée selon la compatibilité du liquide et les conditions de service. Sa conception à perfusion externe comporte deux orifices de liquide et un orifice de vide, tous à filetage femelle NPT 1/8, pour une installation en série dans la ligne d’alimentation avec un raccordement au vide indépendant.",
+  "cardAlt": "Module de dégazage à membrane EF-AG3-B et ses orifices filetés",
+  "galleryAlts": [
+    "Vue de face du module EF-AG3-B, montrant le corps cylindrique et l’orifice latéral de liquide",
+    "Module de dégazage à membrane EF-AG3-B en position verticale",
+    "Vue oblique du côté opposé du module de dégazage EF-AG3-B",
+    "Orifices filetés d’extrémité et latéral du module de dégazage EF-AG3-B"
+  ],
+  "breadcrumbs": ["Accueil", "Produits", "Raccords"],
+  "modelLabel": "Modèle",
+  "typeLabel": "Type de produit",
+  "searchKeywords": "module de dégazage dégazeur à membrane dégazage membranaire fibres creuses dégazage en ligne sous vide encre impression jet d’encre EF-AG3-B",
+  "specificationGroups": [
+    {"title": "Construction et raccordements", "rows": [
+      ["Dimensions", "159 mm × Ø42 mm"],
+      ["Masse", "Environ 100 g"],
+      ["Surface de membrane", "Environ 0,2 m²"],
+      ["Volume de remplissage initial", "Environ 40 mL (valeur de référence de la série EF-AG3)"],
+      ["Membrane à fibres creuses", "Poly(4-méthyl-1-pentène) (PMP)"],
+      ["Corps et embouts", "Polypropylène (PP), acier inoxydable (SUS)"],
+      ["Résine d’encapsulation", "Résine époxy"],
+      ["Orifices", "Deux orifices de liquide et un de vide, tous NPT 1/8"]
+    ]},
+    {"title": "Conditions de service", "rows": [
+      ["Température du liquide et de l’environnement de travail", "5–45 °C"],
+      ["Pression maximale côté liquide (relative)", "200 kPa"],
+      ["Pression côté vide pour liquides aqueux (absolue)", "De la pression de vapeur saturante du liquide à la température de service jusqu’à 100 kPa"],
+      ["Pression côté vide pour liquides non aqueux (absolue)", "1–100 kPa"]
+    ]},
+    {"title": "Résultats d’essais à l’eau", "rows": [
+      ["Essai à l’eau : oxygène dissous après traitement", "< 1,9 mg/L"],
+      ["Essai à l’eau : perte de charge du module", "< 0,1 kPa"]
+    ]}
+  ],
+  "selection": {
+    "ariaLabel": "Choix et utilisation du module de dégazage à membrane",
+    "phaseTitles": ["Choix et configuration", "Orifices et installation"],
+    "intro": "L’EF-AG3-B fonctionne par perfusion externe : le liquide circule à l’extérieur des fibres creuses, tandis que les gaz dissous traversent la membrane et sont aspirés côté vide. Définir d’abord le débit de service, l’objectif de dégazage et la perte de charge admissible, puis vérifier la température du liquide, sa compatibilité et les conditions de vide disponibles.",
+    "columns": ["Critère de choix", "Configuration et vérifications"],
+    "inputs": {"title": "Débit de service et objectif de dégazage", "intro": "Définir les données suivantes pour les conditions réelles de l’équipement, puis vérifier le point de fonctionnement visé à l’aide des courbes de référence.", "rows": [
+      ["Débit de service", "Relever le débit habituel et le débit maximal de l’équipement", "Vérifier l’alimentation continue ainsi que les phases de démarrage et d’arrêt."],
+      ["Objectif de dégazage", "Évaluer les performances par la concentration en oxygène dissous avant et après traitement", "Valider également l’éjection d’encre ou le fonctionnement de l’équipement."],
+      ["Perte de charge admissible", "Vérifier la perte de charge du module côté liquide au débit visé", "Inclure les pertes dans les filtres, tubes et raccords."],
+      ["Température et conditions de vide", "Choisir la courbe selon la température réelle du liquide et la pression absolue côté vide", "Vérifier les conditions de vide par rapport à la pression de vapeur saturante du liquide."]
+    ]},
+    "materials": {"title": "Matériaux en contact et compatibilité des fluides", "intro": "Vérifier le liquide de service et le liquide de nettoyage. Relever leur composition, concentration, température et durée de contact.", "paragraph": "Les fibres sont en PMP ; le corps et les embouts utilisent du PP et de l’acier inoxydable, avec une résine d’encapsulation époxy. Confirmer la compatibilité avec l’ensemble des matériaux en contact avec le liquide."},
+    "curves": {
+      "title": "Débit, efficacité du dégazage et perte de charge côté liquide",
+      "intro": "Au débit visé, lire l’élimination de l’oxygène dissous aux conditions de vide correspondantes et la perte de charge côté liquide. Les essais de série à l’eau montrent que l’élimination diminue et la perte de charge augmente lorsque le débit croît. À température et débit identiques, les courbes à pression absolue côté vide plus faible indiquent une élimination de référence plus élevée.",
+      "note": "Les courbes sont des tracés approximatifs obtenus par lecture des graphiques de référence d’essais de série à l’eau. Valider l’équipement réel avec le fluide, la température et le point de fonctionnement visés.",
+      "alts": ["Courbes débit et élimination de l’oxygène dissous : eau à 25 °C sous 2,7, 6,7 ou 13,3 kPa absolus, et eau à 45 °C sous 6,7 kPa absolus", "Courbe de référence de série montrant l’augmentation de la perte de charge côté liquide avec le débit, à l’eau à 25 °C"],
+      "captions": ["Débit et élimination de l’oxygène dissous. Choisir la courbe selon la température et la pression absolue côté vide, puis lire l’élimination au débit visé.", "Débit et perte de charge côté liquide. Lire la perte de charge au même débit et la comparer à la marge de pression disponible de l’équipement."],
+      "exampleTitle": "Exemple de lecture",
+      "example": "Pour de l’eau à 25 °C et 1 000 mL/min, la courbe à 6,7 kPa de pression absolue côté vide indique environ 58 % d’élimination de l’oxygène dissous. Au même débit, la perte de charge de l’essai à l’eau est d’environ 2,3 kPa. Les deux valeurs sont des lectures approximatives de graphiques de référence de série.",
+      "flowAxis": "Débit de liquide (mL/min)",
+      "oxygenAxis": "Élimination de l’oxygène dissous (%)",
+      "pressureAxis": "Perte de charge côté liquide (kPa)",
+      "water": "eau",
+      "absolute": "abs.",
+      "pressureLegend": "Eau à 25 °C · perte de charge"
+    },
+    "ports": {"title": "Repérage des orifices et encombrement de montage", "intro": "Les deux orifices de liquide et l’orifice de vide sont NPT 1/8. L’orifice latéral et l’un des orifices d’extrémité servent au liquide ; l’autre orifice d’extrémité est raccordé au vide. Vérifier le repérage avant raccordement. Prévoir le dégagement nécessaire en fonction de la longueur totale de 159 mm, du diamètre des embouts Ø42 mm et de la position de l’orifice latéral."},
+    "connections": {"title": "Circuit d’encre et ligne de vide", "intro": "Déterminer d’abord l’emplacement du module dans le circuit d’encre. Un filtre est recommandé dans le circuit de liquide ; son emplacement dépend de la conception de l’équipement.", "rows": [
+      ["Exemple de circuit d’encre", "Réservoir d’encre → pompe d’alimentation → module de dégazage à membrane → réserve intermédiaire → tête d’impression", "Dans cet exemple, le liquide entre par l’orifice latéral inférieur et sort par l’orifice d’extrémité supérieur. Certains équipements placent le module entre la réserve et la tête ; suivre le circuit réel."],
+      ["Ligne de vide", "Orifice de vide → piège à liquide → pompe à vide", "Installer un vacuomètre pour lire la pression absolue. Le piège recueille les condensats ou le liquide de fuite, aide à détecter les fuites et protège la pompe à vide. Pour les encres aqueuses, il est recommandé d’orienter l’orifice de vide vers le bas."]
+    ]},
+    "commissioning": {"title": "Remplissage initial et validation du point de fonctionnement", "intro": "Vérifier l’orientation et les orifices, remplir et purger le module, puis contrôler le dégazage et la perte de charge au débit visé.", "steps": [
+      ["Vérifier les raccordements", "Repérer l’entrée et la sortie de liquide ainsi que l’orifice de vide d’après leurs marques. Vérifier le raccordement du piège à liquide et du vacuomètre."],
+      ["Remplir lentement par l’orifice de liquide inférieur", "Introduire le liquide progressivement pour chasser l’air ; le vide peut faciliter la purge. Le volume initial d’environ 40 mL est une valeur de référence de série."],
+      ["Régler le vide selon la température réelle du liquide", "En service, la pression absolue côté vide ne doit pas être inférieure à la pression de vapeur saturante du liquide à sa température de fonctionnement, afin d’éviter une évaporation excessive affectant sa composition ou la pompe à vide."],
+      ["Valider au débit visé", "Relever le fluide, sa température, le débit et la pression absolue côté vide. Mesurer l’oxygène dissous avant et après traitement avec un oxymètre et la perte de charge avec un manomètre différentiel. Vérifier l’objectif de dégazage et la marge de pression du circuit."]
+    ]},
+    "storage": {"title": "Contrôles périodiques et stockage", "intro": "Après un changement des conditions de service, relever à nouveau le débit, la température du liquide, la pression absolue côté vide et la perte de charge côté liquide. Examiner le piège pour détecter condensats ou fuites.", "paragraph": "Stocker à l’intérieur, au sec, à une température inférieure à 45 °C et à l’abri du soleil. Empêcher le gel de l’eau restant dans le module après utilisation."}
+  },
+  "delivery": {
+    "introduction": "La livraison du module de dégazage EF-AG3-B est organisée selon la commande confirmée.",
+    "groups": [
+      {"title": "Emballage intérieur", "paragraphs": ["Protection du module : un film à bulles enveloppe le module pour limiter le contact direct avec le carton pendant la manutention.", "Dommage au déballage : conserver les emballages intérieur et extérieur et transmettre des photographies si le module est endommagé à l’ouverture."], "photos": [{"alt": "Sachet à bulles pour le module de dégazage portant le logo FOREACH", "caption": "Protection du module par film à bulles"}, {"alt": "Opérateur retirant du carton le module de dégazage enveloppé dans un sachet à bulles", "caption": "Sortie du module de son emballage"}]},
+      {"title": "Emballage extérieur", "paragraphs": ["Emballage avec calage : un carton et des matériaux de protection protègent le module.", "Identification extérieure : à réception, vérifier l’étiquette matière du carton par rapport à la commande.", "Documents joints : fournis selon les dispositions convenues dans la commande."], "photos": [{"alt": "Carton du module de dégazage ouvert, avec sachet à bulles et calage", "caption": "Déballage du module de dégazage"}, {"alt": "Étiquette d’identification FOREACH à l’extérieur du carton du module", "caption": "Identification matière sur le carton"}]},
+      {"title": "Service de livraison", "paragraphs": ["Transport : pour les commandes nationales en Chine, l’expédition par SF Express est incluse par défaut.", "Avant l’expédition : confirmer les coordonnées du destinataire, l’organisation de la livraison et les exigences particulières de transport.", "Après l’expédition : les informations de suivi sont communiquées. En cas d’anomalie, contacter FOREACH avec les numéros de commande et de suivi."], "photos": [{"alt": "Opérateur FOREACH manipulant un carton de pompe à air au poste d’emballage", "caption": "Exemple d’emballage (pompe à air)"}, {"alt": "Opérateur FOREACH préparant des cartons de pompes à piston pour l’expédition", "caption": "Exemple d’expédition (pompe à piston)"}]}
+    ],
+    "warranty": "Définies par écrit selon les résultats des essais de compatibilité du fluide.",
+    "support": "Service après-vente : nous contacter par téléphone, courriel ou formulaire ci-dessous en précisant le modèle, le numéro de commande ou le lot, le fluide et l’anomalie. Confirmer les modalités avec le service après-vente avant tout retour.",
+    "replyTime": "Horaires : jours ouvrés, de 08:30 à 18:00 (heure de Pékin). Vous pouvez laisser un message en ligne ; nous répondrons et assurerons le suivi sous 24 heures ouvrées.",
+    "labels": {"title": "Livraison et service après-vente", "warrantyTitle": "Garantie et assistance", "warrantyLabel": "Conditions de garantie :", "email": "Courriel :", "phone": "Téléphone :"}
+  }
+}

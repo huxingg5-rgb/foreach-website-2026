@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { useContentPathname } from "@/lib/i18n/use-content-pathname";
 import { getSiteIdentity } from "@/lib/seo/site-identity";
 import { getCanonicalUrl } from "@/lib/seo/site-url";
 import { normalizeProductBreadcrumbLabel } from "@/lib/seo/product-breadcrumb-label";
@@ -9,7 +10,7 @@ type Props = {
   locale: string;
   name: string;
   breadcrumbs: { label: string; href?: string }[];
-  items: { name: string; href: string }[];
+  items?: { name: string; href: string }[];
 };
 
 /** Describe the same localized breadcrumbs and cards rendered by the selector. */
@@ -19,13 +20,15 @@ export default function ProductSelectionStructuredData({
   breadcrumbs,
   items,
 }: Props) {
-  const pathname = usePathname();
+  const publicPathname = usePathname();
+  const contentPathname = useContentPathname();
+  const pathname = locale === "de-DE" || locale === "it-IT" ? publicPathname : contentPathname;
   if (!pathname) return null;
 
   const url = getCanonicalUrl(pathname);
   const listId = `${url}#product-list`;
   const breadcrumbId = `${url}#breadcrumb`;
-  const isProductCenter = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/)?products\/?$/.test(pathname);
+  const isProductCenter = /^\/(?:en\/|es\/|fr\/|ko\/|ru\/|it\/)?products\/?$/.test(pathname);
   const graph = {
     "@context": "https://schema.org",
     "@graph": [
@@ -38,7 +41,7 @@ export default function ProductSelectionStructuredData({
         inLanguage: locale === "zh" ? "zh-CN" : locale,
         isPartOf: { "@id": `${getCanonicalUrl("/")}#website` },
         breadcrumb: { "@id": breadcrumbId },
-        mainEntity: { "@id": listId },
+        ...(items ? { mainEntity: { "@id": listId } } : {}),
       },
       {
         "@type": "BreadcrumbList",
@@ -50,7 +53,7 @@ export default function ProductSelectionStructuredData({
           item: item.href ? getCanonicalUrl(item.href) : url,
         })),
       },
-      {
+      ...(items ? [{
         "@type": "ItemList",
         "@id": listId,
         // Only mark up the currently rendered page of cards, including after filtering.
@@ -61,7 +64,7 @@ export default function ProductSelectionStructuredData({
           name: item.name,
           url: getCanonicalUrl(item.href),
         })),
-      },
+      }] : []),
     ],
   };
 

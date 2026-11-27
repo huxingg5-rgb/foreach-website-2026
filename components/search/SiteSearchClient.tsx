@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import {
   FormEvent,
@@ -9,7 +9,14 @@ import {
 } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
+import { getGermanProductSearchTerms } from "@/data/search/german-product-search-terms";
+import { getControlModuleSearchItems, isControlModuleSearchDetail } from "@/data/search/control-module-search";
 import { siteSearchIndex } from "@/data/search/site-search-index.generated";
+import { getGermanNavigationText } from "@/data/navigation.de";
+import { getHindiProductSearchAliases } from "@/data/search/hindi-product-search";
+import { getHindiNavigationText } from "@/data/navigation.hi";
+import { getItalianNavigationText } from "@/data/navigation.it";
+import { getHindiDraftLink, hindiEnglishFallbackSuffix, getDraftHrefForEnglish, getItalianDraftLink, isLocalizedGermanDraftPath, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
 import {
   getTubingAssemblySearchItems,
   isTubingAssemblySearchPath,
@@ -37,6 +44,10 @@ import "./site-search.css";
 
 type SiteSearchClientProps = {
   locale?: string;
+  germanFittingTitles?: Readonly<Record<string, string>>;
+  germanDatasheetItems?: readonly SiteSearchItem[];
+  italianDatasheetItems?: readonly SiteSearchItem[];
+  hindiDatasheetItems?: readonly SiteSearchItem[];
 };
 
 const MODULE_ORDER: SiteSearchModule[] = [
@@ -93,6 +104,97 @@ const ENGLISH_RESULT_DESCRIPTIONS: Record<SiteSearchModule, string> = {
   "compatible-models": "View the corresponding Foreach compatible product.",
   datasheets: "View or download the available product datasheet.",
 };
+
+const GERMAN_SEARCH_TEXT: Readonly<Record<string, string>> = {
+  "Foreach SEARCH": "FOREACH SUCHE",
+  "Product models, product codes, names, and detail pages.": "Modelle, Artikelnummern, Produktnamen und Detailseiten.",
+  "No matching products were found.": "Keine passenden Produkte gefunden.",
+  "Find the corresponding Foreach product for an existing model.": "Ein passendes FOREACH-Produkt zu einem vorhandenen Modell finden.",
+  "No matching compatible models were found.": "Keine passenden kompatiblen Modelle gefunden.",
+  "Product datasheets, document titles, and related keywords.": "Produktdatenblätter, Dokumenttitel und zugehörige Stichwörter.",
+  "No matching datasheets were found.": "Keine passenden Datenblätter gefunden.",
+  "View product details and selection information.": "Produktdetails und Hinweise zur Auswahl ansehen.",
+  "View the corresponding Foreach compatible product.": "Das passende FOREACH-Produkt ansehen.",
+  "View or download the available product datasheet.": "Das verfügbare Produktdatenblatt ansehen oder herunterladen.",
+  "Search products, models, compatible models, and datasheets across the Foreach website.": "Durchsuchen Sie die FOREACH-Website nach Produkten, Modellen, kompatiblen Modellen und Datenblättern.",
+  "Search products, models, compatible models, or datasheets": "Produkte, Modelle, kompatible Modelle oder Datenblätter suchen",
+  "Enter a search term": "Suchbegriff eingeben",
+  "For example: Q2002, PMC1702, piston pump, or diaphragm pump datasheet.": "Zum Beispiel Q2002, PMC1702, Kolbenpumpe oder Datenblatt für Membranpumpen.",
+  "Search Term": "Suchbegriff",
+  "Check the model number or try a product name, series, or another keyword.": "Prüfen Sie die Modellnummer oder suchen Sie nach Produktname, Baureihe oder einem anderen Stichwort.",
+  "View Details": "Details ansehen",
+};
+
+function getGermanSearchText(text: string) {
+  return GERMAN_SEARCH_TEXT[text] ?? getGermanNavigationText(text);
+}
+
+const ITALIAN_SEARCH_TEXT: Readonly<Record<string, string>> = {
+  "Foreach SEARCH": "RICERCA FOREACH",
+  "Product models, product codes, names, and detail pages.": "Modelli, codici prodotto, nomi e pagine di dettaglio.",
+  "No matching products were found.": "Nessun prodotto corrispondente.",
+  "Find the corresponding Foreach product for an existing model.": "Trova il prodotto FOREACH corrispondente a un modello già in uso.",
+  "No matching compatible models were found.": "Nessun modello compatibile corrispondente.",
+  "Product datasheets, document titles, and related keywords.": "Schede tecniche, titoli dei documenti e parole chiave correlate.",
+  "No matching datasheets were found.": "Nessuna scheda tecnica corrispondente.",
+  "View product details and selection information.": "Consulta i dettagli del prodotto e le informazioni per la scelta.",
+  "View the corresponding Foreach compatible product.": "Consulta il prodotto FOREACH compatibile.",
+  "View or download the available product datasheet.": "Visualizza o scarica la scheda tecnica disponibile.",
+  "Search products, models, compatible models, and datasheets across the Foreach website.": "Cerca prodotti, modelli, modelli compatibili e schede tecniche nel sito FOREACH.",
+  "Search products, models, compatible models, or datasheets": "Cerca prodotti, modelli, modelli compatibili o schede tecniche",
+  "Enter a search term": "Inserisci un termine di ricerca",
+  "For example: Q2002, PMC1702, piston pump, or diaphragm pump datasheet.": "Ad esempio: Q2002, PMC1702, pompa a pistone o scheda tecnica della pompa a membrana.",
+  "Search Term": "Termine di ricerca",
+  "Check the model number or try a product name, series, or another keyword.": "Verifica il codice del modello oppure cerca per nome, serie o un’altra parola chiave.",
+  "View Details": "Vedi dettagli",
+};
+
+function getItalianSearchText(text: string) {
+  return ITALIAN_SEARCH_TEXT[text] ?? getItalianNavigationText(text);
+}
+
+const HINDI_SEARCH_TEXT: Readonly<Record<string, string>> = {
+  "Foreach SEARCH": "FOREACH खोज",
+  "Product models, product codes, names, and detail pages.": "उत्पाद के मॉडल, कोड, नाम और विवरण पेज।",
+  "No matching products were found.": "कोई मिलता-जुलता उत्पाद नहीं मिला।",
+  "Find the corresponding Foreach product for an existing model.": "मौजूदा मॉडल के लिए संगत FOREACH उत्पाद खोजें।",
+  "No matching compatible models were found.": "कोई संगत मॉडल नहीं मिला।",
+  "Product datasheets, document titles, and related keywords.": "उत्पाद की डेटाशीट, दस्तावेज़ों के शीर्षक और संबंधित खोज शब्द।",
+  "No matching datasheets were found.": "कोई मिलती-जुलती डेटाशीट नहीं मिली।",
+  "View product details and selection information.": "उत्पाद का विवरण और चयन की जानकारी देखें।",
+  "View the corresponding Foreach compatible product.": "संगत FOREACH उत्पाद देखें।",
+  "View or download the available product datasheet.": "उपलब्ध डेटाशीट देखें या डाउनलोड करें।",
+  "Search products, models, compatible models, and datasheets across the Foreach website.": "FOREACH साइट पर उत्पाद, मॉडल, संगत मॉडल और डेटाशीट खोजें।",
+  "Search products, models, compatible models, or datasheets": "उत्पाद, मॉडल, संगत मॉडल या डेटाशीट खोजें",
+  "Enter a search term": "खोज शब्द दर्ज करें",
+  "For example: Q2002, PMC1702, piston pump, or diaphragm pump datasheet.": "उदाहरण के लिए Q2002, PMC1702, पिस्टन पंप या डायफ्राम पंप की डेटाशीट।",
+  "Search Term": "खोज शब्द",
+  "Check the model number or try a product name, series, or another keyword.": "मॉडल नंबर जाँचें या उत्पाद का नाम, श्रृंखला या दूसरा खोज शब्द आज़माएँ।",
+  "View Details": "विवरण देखें",
+};
+
+function getHindiSearchText(text: string) {
+  return HINDI_SEARCH_TEXT[text] ?? getHindiNavigationText(text);
+}
+
+function getHindiSearchItem(sourceItem: SiteSearchItem): SiteSearchItem {
+  if (sourceItem.module === "datasheets") return sourceItem;
+
+  const item = getLocalizedSearchItem(sourceItem, "en");
+  const destination = getHindiDraftLink(item.href);
+  const action = item.module === "compatible-models" ? "View Compatible Product" : "View Product";
+  const title = getHindiSearchText(item.title);
+  const description = getHindiSearchText(ENGLISH_RESULT_DESCRIPTIONS[item.module]);
+  return {
+    ...item,
+    title,
+    subtitle: item.subtitle?.replace(/^Model: /, "मॉडल: "),
+    description,
+    href: destination.href,
+    actionLabel: getHindiSearchText(action) + (destination.hrefLang === "en" ? hindiEnglishFallbackSuffix : ""),
+    keywords: [...item.keywords, ...getHindiProductSearchAliases(item.href), title, description, getHindiSearchText(MODULE_TEXT_EN[item.module].title)],
+  };
+}
 
 function containsHan(value: string): boolean {
   return /[\u3400-\u9fff]/.test(value);
@@ -178,6 +280,57 @@ function getLocalizedSearchItem(item: SiteSearchItem, locale: string): SiteSearc
   };
 }
 
+function getGermanSearchItem(
+  sourceItem: SiteSearchItem,
+  fittingTitles: Readonly<Record<string, string>>,
+): SiteSearchItem {
+  if (sourceItem.module === "datasheets") return sourceItem;
+
+  const item = getLocalizedSearchItem(sourceItem, "en");
+  const germanHref = getDraftHrefForEnglish(item.href, "de");
+  const pathname = germanHref.split(/[?#]/, 1)[0];
+  const sourcePath = pathname.replace(/^\/de(?=\/)/, "").replace(/\/+$/, "");
+  const fittingTitle = fittingTitles[sourcePath];
+  const hasGermanPage = Boolean(fittingTitle) || isLocalizedGermanDraftPath(pathname);
+  const action = item.module === "compatible-models" ? "View Compatible Product" : "View Product";
+  const description = getGermanSearchText(ENGLISH_RESULT_DESCRIPTIONS[item.module]);
+
+  return {
+    ...item,
+    title: getGermanSearchText(item.title),
+    subtitle: fittingTitle ?? item.subtitle?.replace(/^Model: /, "Modell: "),
+    description,
+    href: hasGermanPage ? germanHref : item.href,
+    actionLabel: getGermanSearchText(action) + (hasGermanPage ? "" : " (Englisch)"),
+    keywords: [
+      ...item.keywords,
+      getGermanSearchText(MODULE_TEXT_EN[item.module].title),
+      ...(fittingTitle ? [fittingTitle] : []),
+      ...getGermanProductSearchTerms(item.href),
+    ],
+  };
+}
+
+function getItalianSearchItem(sourceItem: SiteSearchItem): SiteSearchItem {
+  if (sourceItem.module === "datasheets") return sourceItem;
+
+  const item = getLocalizedSearchItem(sourceItem, "en");
+  const productLink = getItalianDraftLink(item.href);
+  const action = item.module === "compatible-models" ? "View Compatible Product" : "View Product";
+  const description = getItalianSearchText(ENGLISH_RESULT_DESCRIPTIONS[item.module]);
+  const title = getItalianSearchText(item.title);
+
+  return {
+    ...item,
+    title,
+    subtitle: item.subtitle?.replace(/^Model: /, "Modello: "),
+    description,
+    href: productLink.href,
+    actionLabel: getItalianSearchText(action) + (productLink.hrefLang === "en" ? italianEnglishFallbackSuffix : ""),
+    keywords: [...item.keywords, title, description, getItalianSearchText(MODULE_TEXT_EN[item.module].title)],
+  };
+}
+
 function normalize(value: string): string {
   return value
     .trim()
@@ -243,6 +396,7 @@ function SearchResultItem({
     <a
       className="site-search-result-card"
       href={item.href}
+      hrefLang={locale === "de" || locale === "it" || locale === "hi" ? (item.href.startsWith("/" + locale + "/") ? locale : "en") : undefined}
       data-analytics-resource-action={
         item.module === "datasheets" ? "view" : undefined
       }
@@ -309,6 +463,10 @@ function SearchResultItem({
 
 export default function SiteSearchClient({
   locale = "zh-CN",
+  germanFittingTitles,
+  germanDatasheetItems,
+  italianDatasheetItems,
+  hindiDatasheetItems,
 }: SiteSearchClientProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -320,7 +478,10 @@ export default function SiteSearchClient({
   // 四国语言内容缺失时统一回退英文，禁止显示中文；路由仍保留当前 Locale。
   const isEnglish = locale !== "zh-CN" && locale !== "zh";
   const activeLocale = locale as LocaleCode;
-  const t = (text: string) => getInternationalUiText(activeLocale, text);
+  const isGerman = locale === "de";
+  const isItalian = locale === "it";
+  const isHindi = locale === "hi";
+  const t = (text: string) => isGerman ? getGermanSearchText(text) : isItalian ? getItalianSearchText(text) : isHindi ? getHindiSearchText(text) : getInternationalUiText(activeLocale, text);
   const moduleText = isEnglish
     ? Object.fromEntries(Object.entries(MODULE_TEXT_EN).map(([key, value]) => [key, { title: t(value.title), description: t(value.description), empty: t(value.empty) }])) as typeof MODULE_TEXT_EN
     : MODULE_TEXT;
@@ -334,20 +495,27 @@ export default function SiteSearchClient({
 
     if (!queryFromUrl) return result;
 
-    const tubingItems = getTubingAssemblySearchItems(locale);
+    const sourceLocale = isGerman || isItalian || isHindi ? "en" : locale;
+    const tubingItems = getTubingAssemblySearchItems(sourceLocale);
+    const controlItems = getControlModuleSearchItems(locale);
     const sourceItems = tubingItems.length
       ? [...siteSearchIndex.filter(item => !isTubingAssemblySearchPath(item.href)), ...tubingItems]
       : siteSearchIndex;
+    const localizedDatasheetItems = isGerman ? germanDatasheetItems : isItalian ? italianDatasheetItems : isHindi ? hindiDatasheetItems : undefined;
+    const localizedSources = localizedDatasheetItems
+      ? [...sourceItems.filter(item => item.module !== "datasheets"), ...localizedDatasheetItems]
+      : sourceItems;
     const tubingPaths = new Set<string>();
 
-    for (const sourceItem of sourceItems) {
+    for (const sourceItem of localizedSources) {
+      if (controlItems.length && sourceItem.module === "products" && isControlModuleSearchDetail(sourceItem.href)) continue;
       if (isTubingAssemblySearchPath(sourceItem.href)) {
         if (tubingPaths.has(sourceItem.href)) continue;
         tubingPaths.add(sourceItem.href);
       }
       const scopedSourceItem = applyDiaphragmPumpReferenceSearchItem(
         sourceItem,
-        locale,
+        sourceLocale,
       );
       const isDiaphragmProductItem =
         sourceItem.module === "products" &&
@@ -360,9 +528,11 @@ export default function SiteSearchClient({
         continue;
       }
 
-      const item = isEnglish
-        ? getLocalizedSearchItem(scopedSourceItem, locale)
-        : scopedSourceItem;
+      const item = isGerman
+        ? getGermanSearchItem(scopedSourceItem, germanFittingTitles ?? {})
+        : isItalian ? getItalianSearchItem(scopedSourceItem)
+        : isHindi ? getHindiSearchItem(scopedSourceItem)
+        : isEnglish ? getLocalizedSearchItem(scopedSourceItem, locale) : scopedSourceItem;
       const score = scoreItem(item, queryFromUrl);
       if (score <= 0) continue;
 
@@ -386,23 +556,29 @@ export default function SiteSearchClient({
       } as SiteSearchItem & { __score: number });
     }
 
+    for (const item of controlItems) {
+      const score = scoreItem(item, queryFromUrl);
+      if (score > 0) result.products.push({ ...item, __score: score } as SiteSearchItem & { __score: number });
+    }
+
     for (const moduleId of MODULE_ORDER) {
       result[moduleId] = result[moduleId]
         .sort((a, b) => {
           const scoreA = (a as SiteSearchItem & { __score: number }).__score;
           const scoreB = (b as SiteSearchItem & { __score: number }).__score;
 
-          return scoreB - scoreA || a.title.localeCompare(b.title, isEnglish ? "en" : "zh-CN");
+          return scoreB - scoreA || a.title.localeCompare(b.title, isGerman ? "de" : isItalian ? "it" : isHindi ? "hi-IN" : isEnglish ? "en" : "zh-CN");
         })
         .slice(0, 24);
     }
 
     return result;
-  }, [isEnglish, locale, queryFromUrl]);
+  }, [germanDatasheetItems, germanFittingTitles, isEnglish, isGerman, isItalian, isHindi, italianDatasheetItems, hindiDatasheetItems, locale, queryFromUrl]);
 
   const totalResults = MODULE_ORDER.reduce((sum, module) => {
     return sum + groupedResults[module].length;
   }, 0);
+  const resultCountLabel = totalResults === 1 && (isGerman || isItalian || isHindi) ? (isGerman ? "Ergebnis" : isItalian ? "risultato" : "नतीजा") : t("results");
 
   useEffect(() => {
     if (!queryFromUrl) return;
@@ -469,7 +645,7 @@ export default function SiteSearchClient({
     <main className="site-search-page">
       <section className="site-search-hero">
         <div className="site-search-container">
-          <p className="site-search-eyebrow">Foreach SEARCH</p>
+          <p className="site-search-eyebrow">{isGerman || isItalian || isHindi ? t("Foreach SEARCH") : "Foreach SEARCH"}</p>
           <h1>{isEnglish ? t("Site Search") : "全站搜索"}</h1>
           <p>
             {isEnglish
@@ -515,7 +691,7 @@ export default function SiteSearchClient({
               </div>
               <p>
                 {isEnglish
-                  ? `${totalResults} ${t("results")}`
+                  ? `${totalResults} ${resultCountLabel}`
                   : `共找到 ${totalResults} 条结果`}
               </p>
             </div>

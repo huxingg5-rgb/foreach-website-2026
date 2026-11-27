@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜多语言接头替代查询 Q20 详情页入口
@@ -20,6 +21,7 @@
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
 
 import FittingReplacementDetail from "@/components/resources/fitting-replacement/FittingReplacementDetail";
 
@@ -42,7 +44,7 @@ const FITTING_REPLACEMENT_DETAIL_LOCALES = [
 ] as const;
 
 type FittingReplacementDetailLocale =
-  (typeof FITTING_REPLACEMENT_DETAIL_LOCALES)[number];
+  (typeof FITTING_REPLACEMENT_DETAIL_LOCALES)[number] | "de" | "it" | "hi";
 
 /* 当前详情页系列配置 */
 const SERIES_CONFIG = Q20_FITTING_REPLACEMENT_SERIES_CONFIG;
@@ -60,8 +62,8 @@ interface FittingReplacementLocaleDetailPageProps {
 function isSupportedLocale(
   locale: string
 ): locale is FittingReplacementDetailLocale {
-  return FITTING_REPLACEMENT_DETAIL_LOCALES.includes(
-    locale as FittingReplacementDetailLocale
+  return locale === "de" || locale === "it" || locale === "hi" ? languageDraftsEnabled : FITTING_REPLACEMENT_DETAIL_LOCALES.includes(
+    locale as (typeof FITTING_REPLACEMENT_DETAIL_LOCALES)[number]
   );
 }
 
@@ -73,7 +75,7 @@ export function generateStaticParams() {
     SERIES_CONFIG.seriesKey
   );
 
-  return FITTING_REPLACEMENT_DETAIL_LOCALES.flatMap((locale) => {
+  return [...FITTING_REPLACEMENT_DETAIL_LOCALES, ...(languageDraftsEnabled ? ["de", "it", "hi"] : [])].flatMap((locale) => {
     return productParams.map((product) => {
       return {
         locale,
@@ -86,7 +88,7 @@ export function generateStaticParams() {
 /* =========================================================
    多语言页面 SEO 信息
 ========================================================= */
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: FittingReplacementLocaleDetailPageProps): Promise<Metadata> {
   const { locale, productCode } = await params;
@@ -110,6 +112,9 @@ export async function generateMetadata({
   }
 
   const productLabels = {
+    de: "Fluidik-Fitting",
+    it: "Raccordo per circuiti fluidici",
+    hi: "फ्लुइडिक फिटिंग",
     en: "Fitting Product",
     es: "Producto de racores",
     fr: "Produit de raccordement",
@@ -117,6 +122,9 @@ export async function generateMetadata({
     ru: "Фитинг",
   } as const;
   const descriptions = {
+    de: `Artikelnummer, kompatible Modelle, technische Daten und 2D-Zeichnung zu ${pageData.product.foreachModel} ansehen.`,
+    hi: pageData.product.foreachModel + " के उत्पाद कोड, संगत मॉडल, विवरण और 2D ड्रॉइंग देखें।",
+    it: "Consulta il codice prodotto, i modelli compatibili, i dettagli e il disegno 2D di " + pageData.product.foreachModel + ".",
     en: `View product code, compatible models, model details, and 2D drawing information for ${pageData.product.foreachModel}.`,
     es: `Consulte el código de producto, los modelos compatibles, los detalles del modelo y el plano 2D de ${pageData.product.foreachModel}.`,
     fr: `Consultez le code produit, les modèles compatibles, les détails du modèle et le plan 2D de ${pageData.product.foreachModel}.`,
@@ -128,6 +136,18 @@ export async function generateMetadata({
     description: descriptions[locale],
   };
 
+  if (locale === "de") {
+    const url = `/de/resources/selection-support/fitting-replacement/q20/${pageData.product.productCode}/`;
+    return { ...metadata, alternates: { canonical: url }, robots: { index: false }, openGraph: { ...metadata, url, locale: "de_DE" } };
+  }
+  if (locale === "it") {
+    const url = "/it/resources/selection-support/fitting-replacement/q20/" + pageData.product.productCode + "/";
+    return { ...metadata, alternates: { canonical: url }, robots: { index: false }, openGraph: { ...metadata, url, locale: "it_IT" } };
+  }
+  if (locale === "hi") {
+    const url = "/hi/resources/selection-support/fitting-replacement/q20/" + pageData.product.productCode + "/";
+    return { ...metadata, alternates: { canonical: url }, robots: { index: false }, openGraph: { ...metadata, url, locale: "hi_IN" } };
+  }
   return locale === "en" ? metadata : { ...metadata, openGraph: metadata };
 }
 
@@ -155,3 +175,5 @@ export default async function FittingReplacementLocaleDetailPage({
 
   return <FittingReplacementDetail data={pageData} />;
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/resources/selection-support/fitting-replacement/q20/[productCode]/", getPageMetadata);

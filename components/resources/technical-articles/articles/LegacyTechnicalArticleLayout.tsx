@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ArticleBackLink from "../ArticleBackLink";
+import { formatNewsDate } from "@/data/resources/news/news-date";
 import type { ComponentProps, ReactNode } from "react";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 import { NewsArticlePager } from "@/components/resources/news/NewsArticleClient";
@@ -16,7 +17,7 @@ export default function LegacyTechnicalArticleLayout({
   articleId, locale, article, pageData, previousArticle, nextArticle, showPager = true, children, afterContent, relatedProducts,
 }: {
   articleId: string;
-  locale: TechnicalArticleLocale;
+  locale: TechnicalArticleLocale | "de" | "it" | "hi";
   article: { title: string; date: string; summary?: string; summaryParagraphs?: readonly string[]; coverImage?: string; coverAlt?: string };
   pageData: {
     listHref: string;
@@ -31,7 +32,7 @@ export default function LegacyTechnicalArticleLayout({
   relatedProducts?: ReactNode;
 }) {
   const primary = pageData.bottomBanner.actions?.[0];
-  const fallbackContact = { "zh-CN": "联系我们", en: "Contact Us", es: "Contactar", fr: "Nous contacter", ko: "문의하기", ru: "Связаться" }[locale];
+  const fallbackContact = { "zh-CN": "联系我们", en: "Contact Us", es: "Contactar", fr: "Nous contacter", ko: "문의하기", ru: "Связаться", de: "Kontakt aufnehmen", it: "Contattaci", hi: "हमसे संपर्क करें" }[locale];
   return <>
     <div className={`${newsStyles.page} ${editorial.backNav}`}>
       <ArticleBackLink className={newsStyles.backLink} href={pageData.listHref}>{`< ${pageData.backText}`}</ArticleBackLink>
@@ -40,7 +41,7 @@ export default function LegacyTechnicalArticleLayout({
       <article className={editorial.layout} data-has-related-products={relatedProducts ? true : undefined}>
         <header className={editorial.header} data-article-header>
           <h1>{article.title}</h1>
-          <time className={editorial.date} dateTime={article.date}>{article.date}</time>
+          <time className={editorial.date} dateTime={article.date}>{formatNewsDate(article.date, locale)}</time>
           <div className={`${editorial.meta} ${editorial.metaWithoutShare}`} aria-hidden="true"><span className={editorial.rule} /></div>
           <div className={editorial.intro}>
             {article.summaryParagraphs

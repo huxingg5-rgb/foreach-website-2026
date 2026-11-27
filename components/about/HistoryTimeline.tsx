@@ -1,8 +1,8 @@
-import type { HistoryMilestone, SupportedHistoryLocale } from "@/data/historyMilestones";
+import type { HistoryMilestone, HistoryPageLocale } from "@/data/historyMilestones";
 
 type HistoryTimelineProps = {
   items: HistoryMilestone[];
-  locale: SupportedHistoryLocale;
+  locale: HistoryPageLocale;
   ariaLabel: string;
 };
 
@@ -48,7 +48,7 @@ function renderImage(item: HistoryMilestone) {
   );
 }
 
-function renderText(item: HistoryMilestone, locale: SupportedHistoryLocale) {
+function renderText(item: HistoryMilestone, locale: HistoryPageLocale) {
   return (
     <div className="about-history-text">
       <h2 id={"year-" + item.id} className="about-history-year">{item.year}{locale === "zh-CN" ? "年" : ""}</h2>

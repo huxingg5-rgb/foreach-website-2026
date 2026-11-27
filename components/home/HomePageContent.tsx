@@ -31,7 +31,7 @@ import type { LocaleCode } from "@/lib/i18n"; // 寮曞叆瀹樼綉鏀寔鐨�
 ========================================================= */
 
 type HomePageContentProps = {
-  locale: LocaleCode;
+  locale: LocaleCode | "de" | "it" | "hi";
 };
 
 /* =========================================================
@@ -51,19 +51,19 @@ export default function HomePageContent({ locale }: HomePageContentProps) {
   // site-page--compact
   // site-page--standard
   // site-page--expanded
-  const languageTextLayoutClass = getLanguageTextLayoutClass(locale);
+  const languageTextLayoutClass = getLanguageTextLayoutClass(locale === "de" || locale === "it" || locale === "hi" ? "en" : locale);
 
   return (
     <div className={`site-page ${languageTextLayoutClass}`}>
-      <main>
+      <main lang={locale === "de" ? "de-DE" : locale === "it" ? "it-IT" : locale === "hi" ? "hi-IN" : undefined}>
         {/* 绗竴灞忥細Hero 棣栧睆鍖哄煙 */}
         <HomeHeroSection locale={locale} />
 
         {/* 绗簩灞忥細搴旂敤棰嗗煙 脳 鏍稿績閮ㄤ欢 */}
-        {locale === "en" ? (
+        {locale === "en" || locale === "de" || locale === "it" || locale === "hi" ? (
           <>
-            <EnglishHomeProductsSection />
-            <EnglishHomeApplicationsSection />
+            <EnglishHomeProductsSection locale={locale} />
+            <EnglishHomeApplicationsSection locale={locale} />
           </>
         ) : (
           <>

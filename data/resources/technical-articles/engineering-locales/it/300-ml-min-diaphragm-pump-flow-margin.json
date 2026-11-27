@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "title": "Quale margine di portata serve a una pompa miniaturizzata a membrana da 300 mL/min dopo l'installazione? Un esempio Foreach",
+    "seoTitle": "Margine di portata per una pompa miniaturizzata a membrana da 300 mL/min: condizioni limite e accettazione | Foreach Technology",
+    "seoDescription": "Il margine installato di una pompa da 300 mL/min non è una percentuale fissa. Definisci scenari sfavorevoli credibili e includi contropressione, intasamento del filtro, alimentazione, fluido, variabilità dei campioni, incertezza di misura e criteri di accettazione.",
+    "coverImage": "/images/resources/technical-articles/300-ml-min-diaphragm-pump-flow-margin/article-cover.webp",
+    "coverAlt": "Prova della portata a pompa miniaturizzata installata in un video Douyin ufficiale Foreach"
+  },
+  "deck": "Il margine di portata non si ottiene sempre moltiplicando la portata richiesta per 1.2 o 1.3. Si confronta la portata disponibile stimata per difetto con la domanda massima dello strumento nello stesso scenario sfavorevole plausibile. Prima delle prove occorre anche stabilire come trattare l'incertezza di misura e quali criteri di accettazione applicare.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Ogni circuito assorbe margine in modo diverso. Un filtro carico aumenta la perdita di carico, il livello minimo peggiora l'aspirazione e viscosità, alimentazione, tolleranze dei tubi, variabilità dei campioni e fase di vita possono spostare il punto di lavoro. Sottrarre la domanda media dalla portata a vuoto di 300 mL/min non dà un margine valido per l'approvazione della configurazione."
+    },
+    {
+      "type": "notice",
+      "label": "Conclusione tecnica:",
+      "text": "Definire prima la domanda massima, poi stimare per difetto la portata disponibile in ogni scenario sfavorevole plausibile. Il margine è sufficiente solo se, nello stesso scenario, il limite inferiore della portata disponibile soddisfa il limite superiore della domanda e il margine minimo di progetto."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Perché un margine generale del 20% o 30% non è abbastanza rigoroso",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un margine del 20%–30% può servire come riferimento in fase concettuale. Non va assunto come criterio di rilascio per tutti i progetti. Alcuni strumenti sono limitati soprattutto dalla perdita di carico del filtro vicino alla sostituzione, altri da livello minimo, viscosità a bassa temperatura o tensione ai capi della pompa. Il margine richiesto cambia perché cambiano cause della variabilità e conseguenze accettabili."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/300-ml-min-diaphragm-pump-flow-margin/article-figure-it.svg",
+          "alt": "Limite superiore della domanda e limite inferiore della portata disponibile per calcolare il margine prudenziale e verificare due criteri di rilascio",
+          "width": 2560,
+          "height": 2160,
+          "caption": "Confrontare domanda massima e capacità disponibile nelle condizioni di lavoro più sfavorevoli. Le curve illustrano il metodo."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'analisi considera sia l'aumento della domanda sia la riduzione dell'erogazione. La domanda comprende volume massimo, tempo utile minimo e tolleranze ammesse. L'erogazione comprende pressione effettiva, alimentazione, fluido, stato del filtro, variabilità dei campioni e fase di vita."
+        }
+      ]
+    },
+    {
+      "title": "2. Definire il margine con una relazione verificabile",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "M = Qavailable,worst ÷ Qrequired,max − 1",
+          "note": "Ricavare Qavailable,worst da una curva o misura alla pressione specificata e nello scenario più sfavorevole. La portata a vuoto di 300 mL/min non si può usare. Ricavare Qrequired,max da volume massimo, tempo utile minimo e tolleranze della domanda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il valore M vale solo per lo scenario definito. Se cambiano versione del circuito, stato del filtro, fluido, controllo della pompa o condizioni ambientali, ricalcolare o ripetere la prova. Una percentuale per uno strumento non si trasferisce direttamente a un altro."
+        }
+      ]
+    },
+    {
+      "title": "3. Le condizioni più sfavorevoli che si sommano devono formare uno scenario plausibile",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lo scenario più sfavorevole deve descrivere condizioni che possono verificarsi contemporaneamente in una fase di esercizio e di vita e in un ambiente specifici. Motivare la coesistenza di ogni condizione. Valutare i limiti incompatibili in scenari separati."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Trattamento dello scenario",
+            "Esempio",
+            "Metodo di valutazione"
+          ],
+          "rows": [
+            [
+              "Combinabili",
+              "La specifica ammette avvio a bassa temperatura, tensione minima ai capi della pompa, livello minimo e filtro vicino alla sostituzione",
+              "Provare questo scenario documentato di avvio a bassa temperatura a fine vita"
+            ],
+            [
+              "Da valutare separatamente",
+              "Alta viscosità a bassa temperatura e temperatura massima del fluido sono limiti ambientali incompatibili",
+              "Creare scenari separati di bassa e alta temperatura"
+            ],
+            [
+              "Servono altre evidenze",
+              "Degrado della pompa, campione con prestazioni minime e tolleranza estrema del diametro vengono moltiplicati come peggiori valori puntuali",
+              "Verificare correlazione statistica, copertura dei campioni e origine di ogni tolleranza prima di fissare un limite prudenziale"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Scheda dello scenario:",
+          "text": "Per ogni scenario registrare almeno nome, fase di vita, versione del circuito, fluido e temperatura, alimentazione, livello, stato del filtro e del campione e programma di controllo. Così la prova è ripetibile e gli estremi incompatibili non vengono combinati in uno stato impossibile."
+        }
+      ]
+    },
+    {
+      "title": "4. Quali fattori riducono il margine di portata?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Fattore",
+            "Che cosa verificare",
+            "Perché riduce il margine"
+          ],
+          "rows": [
+            [
+              "Domanda massima dello strumento",
+              "Volume massimo, tempo utile minimo, fase di picco e tolleranze del programma",
+              "La domanda media può sottostimare il picco"
+            ],
+            [
+              "Pressione del sistema",
+              "Pressioni di ingresso e uscita e pressione differenziale totale alla portata prevista",
+              "La portata in genere cala all'aumentare della pressione differenziale"
+            ],
+            [
+              "Stato del filtro",
+              "Filtro nuovo, curva di intasamento e perdita di carico vicino alla sostituzione",
+              "Con l'intasamento il punto di lavoro si sposta verso portate inferiori"
+            ],
+            [
+              "Tubi e montaggio",
+              "Diametro interno effettivo, lunghezza, curve, passaggio del raccordo e tolleranze di lotto",
+              "Una strozzatura locale può diventare la resistenza dominante"
+            ],
+            [
+              "Fluido e ambiente",
+              "Viscosità, temperatura, rilascio di gas, particelle e risposta delle valvole",
+              "La curva pubblicata per l'acqua può differire dal fluido effettivo"
+            ],
+            [
+              "Alimentazione e controllo",
+              "Tensione minima ai capi della pompa, limitazione di corrente, campo PWM e caduta di tensione del cablaggio",
+              "Velocità e capacità di avvio possono diminuire"
+            ],
+            [
+              "Campioni e durata",
+              "Variabilità tra pompe, rodaggio, ore di esercizio e andamento delle prestazioni",
+              "Un solo campione iniziale non rappresenta produzione e fasi di vita"
+            ],
+            [
+              "Sistema di misura",
+              "Metodo di misura, tempo di campionamento, taratura, ripetibilità e influenze ambientali",
+              "L'incertezza riduce il margine dimostrabile"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Includere l'incertezza di misura nei criteri di accettazione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La stessa portata reale può dare risultati diversi per accuratezza del misuratore, risoluzione della pesata, conversione per densità, tempo di campionamento, pulsazioni e ripetibilità. Prima di provare, definire bilancio di incertezza, regole di copertura e regola decisionale, senza rimandarne l'interpretazione ai risultati vicini al limite."
+        },
+        {
+          "type": "formula",
+          "expression": "Mconservative = Qavailable,lower ÷ Qrequired,upper − 1",
+          "note": "Ricavare Qavailable,lower dalle prove dello scenario sfavorevole con le regole di incertezza, ripetibilità e copertura dei campioni definite. Qrequired,upper include tolleranze di volume, tempo utile e controllo. Il progetto definisce prima la confidenza statistica o le regole tecniche di copertura per entrambi i limiti."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Voce di accettazione",
+            "Criterio da definire in anticipo"
+          ],
+          "rows": [
+            [
+              "Capacità di erogazione",
+              "Qavailable,lower ≥ Qrequired,upper. Se il progetto specifica anche un margine minimo Mminimum, deve valere Mconservative ≥ Mminimum"
+            ],
+            [
+              "Avviamento e autoadescamento",
+              "Raggiungere il tasso di successo e il tempo massimo di avvio definiti in ogni scenario specificato"
+            ],
+            [
+              "Limite di pressione",
+              "Pressione a regime e transitori ammessi non superano il limite di lavoro di nessun componente del circuito, con fluido e temperatura effettivi"
+            ],
+            [
+              "Condizioni elettriche e aumento di temperatura",
+              "Tensione ai capi della pompa, corrente, protezione dell'azionamento e aumento di temperatura a regime restano nei limiti di progetto"
+            ],
+            [
+              "Ripetibilità e copertura dei campioni",
+              "Numero di campioni, ripetizioni e fasi di vita previsti rispettano tutti lo stesso criterio"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Se si usa una regola decisionale con banda di guardia, dimensionarla secondo la capacità di misura e il rischio di una decisione errata. Nessun valore k o percentuale fissa vale per tutti i sistemi. Rendere la regola tracciabile e ripetibile e fissarla prima delle prove."
+        }
+      ]
+    },
+    {
+      "title": "6. Esempio di calcolo: margine grezzo e margine dimostrabile",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I valori illustrano solo il metodo e non provengono da uno strumento cliente o da un prodotto Foreach. Si ipotizzi domanda massima di 180 mL/min. Una pompa candidata eroga 260 mL/min a tensione nominale e contropressione prevista. In uno scenario sfavorevole plausibile confermato, la portata disponibile minima misurata è di 230 mL/min."
+        },
+        {
+          "type": "formula",
+          "expression": "Mraw = 230 ÷ 180 − 1 ≈ 27.8%",
+          "note": "Usando direttamente la portata a vuoto di 300 mL/min si otterrebbe un margine apparente del 66.7%, senza considerare pressione di sistema o condizioni più sfavorevoli."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si ipotizzi ora che la regola di incertezza stabilita dia un limite inferiore della portata disponibile di 225 mL/min. Includendo le tolleranze di volume e tempo, il limite superiore della domanda è di 185 mL/min. Il margine prudenziale è dunque circa 21.6%. Confrontare 21.6% con Mminimum predefinito, senza scegliere il valore più favorevole tra 27.8% e 66.7%."
+        },
+        {
+          "type": "formula",
+          "expression": "Mconservative = 225 ÷ 185 − 1 ≈ 21.6%",
+          "note": "I valori di 225 mL/min e 185 mL/min sono limiti illustrativi. Usare nel progetto reale capacità di misura, tolleranze del compito, piano di campionamento e regola decisionale propri."
+        }
+      ]
+    },
+    {
+      "title": "7. Per una pompa Foreach da 300 mL/min, partire dalla contropressione prevista",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dati Foreach DPL30 riportano 300 mL/min a vuoto, 100 kPa di pressione nominale e 6 mH₂O di altezza di autoadescamento. Il margine installato non si calcola come «300 meno portata richiesta». Partire dalla curva ufficiale alla contropressione prevista, quindi convalidare pressioni di ingresso e uscita e portata nel circuito finale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Dividere la convalida in condizioni di riferimento, variazioni normali e scenari più sfavorevoli. Se lo strumento deve restare vicino a 300 mL/min con contropressione elevata, verificare di nuovo la piattaforma di pressione. Una percentuale di margine non trasforma la portata a vuoto in capacità ad alta contropressione."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Visualizza la",
+              "label": "pompa a membrana per liquidi DPL30",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              "suffix": "."
+            },
+            {
+              "prefix": "Leggi la",
+              "label": "guida alla scelta della pompa a membrana per liquidi DPL30",
+              "href": "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Matrice di prova del margine e registri dei dati",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Dimensione della prova",
+            "Livello di riferimento",
+            "Limite o fase di vita",
+            "Risultato da registrare"
+          ],
+          "rows": [
+            [
+              "Alimentazione",
+              "Tensione nominale ai capi della pompa",
+              "Tensione minima ammessa ai capi della pompa",
+              "Portata, tempo di avvio e corrente"
+            ],
+            [
+              "Filtro",
+              "Componente nuovo",
+              "Perdita di carico equivalente vicino alla sostituzione",
+              "Pressione differenziale del filtro, pressione differenziale della pompa e portata"
+            ],
+            [
+              "Livello del liquido",
+              "Livello tipico o massimo",
+              "Livello minimo ammesso",
+              "Pressione di ingresso, primo avviamento e tempo di stabilizzazione"
+            ],
+            [
+              "Fluido",
+              "Fluido e temperatura di riferimento",
+              "Limiti ammessi di viscosità, temperatura e contenuto di gas",
+              "Portata, bolle, rumore e risposta delle valvole"
+            ],
+            [
+              "Campioni di pompa",
+              "Più campioni iniziali",
+              "Campioni con prestazioni basse o in una fase della vita utile",
+              "Media, dispersione, tendenza e modalità di guasto"
+            ],
+            [
+              "Sistema di misura",
+              "Misura di riferimento dopo la taratura",
+              "Bassa portata, pulsazioni e campionamento prolungato",
+              "Dati grezzi, incertezza ed esito decisionale"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limiti delle evidenze:",
+          "text": "Formule e valori definiscono un metodo e non garantiscono un margine universale. Il rilascio deve citare specifica controllata, versione della curva e del circuito, fluido effettivo, scenario, dati grezzi e criteri di accettazione approvati."
+        }
+      ]
+    },
+    {
+      "title": "Conclusione: dimostrare il margine con scenari, dati e criteri",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un margine ragionevole risponde a tre domande: come si ricava la domanda massima, perché lo scenario più sfavorevole è plausibile e quale capacità resta dimostrabile dopo aver considerato l'incertezza. Registrandole nella matrice di prova e nelle regole di rilascio si vede quali parti riconvalidare se cambiano filtro, tubi, fluido o controllo."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sul margine per una pompa miniaturizzata a membrana da 300 mL/min",
+  "faqItems": [
+    {
+      "question": "Una pompa da 300 mL/min ha automaticamente un margine del 50% per una domanda di 200 mL/min?",
+      "answer": "Il calcolo vale solo se la portata disponibile stimata per difetto è ancora di 300 mL/min alla stessa pressione target, con stesso fluido, alimentazione e scenario sfavorevole e con un limite superiore della domanda di 200 mL/min. Non usare direttamente la portata a vuoto come portata disponibile."
+    },
+    {
+      "question": "Si può adottare direttamente un margine del 20%–30% come standard aziendale?",
+      "answer": "Può essere un riferimento di progetto da verificare, ma non il solo criterio di rilascio. Uno standard aziendale dovrebbe definire combinazione degli scenari, versione del circuito, copertura di campioni e fasi di vita, incertezza di misura, limite superiore della domanda e criteri di accettazione espliciti."
+    },
+    {
+      "question": "Perché controllare il filtro vicino alla sostituzione?",
+      "answer": "La perdita di carico del filtro in genere aumenta con l'intasamento, spostando il punto di lavoro verso portate minori. Provare un filtro nella fase di vita effettiva o riprodurre il limite con una perdita equivalente documentata. Un filtro nuovo da solo non rappresenta l'uso prolungato."
+    },
+    {
+      "question": "Come dimostrare che più condizioni sfavorevoli possono verificarsi insieme?",
+      "answer": "Collocarle nello stesso stato dello strumento, con uguale fase di vita, ambiente, livello, filtro, alimentazione e controllo. Verificare che la specifica consenta la combinazione. Separare gli scenari incompatibili ed evitare di moltiplicare estremi senza evidenze di associazione."
+    },
+    {
+      "question": "Una portata misurata esattamente uguale al minimo richiesto è accettabile?",
+      "answer": "L'uguaglianza delle letture da sola di solito non basta. La regola decisionale predefinita deve includere incertezza, ripetibilità, variabilità dei campioni e tolleranze della domanda. Se il limite inferiore della portata disponibile è sotto quello superiore della domanda, il margine non è dimostrato."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi calcolare il margine installato per una pompa a membrana da 300 mL/min?",
+    "description": "Indica volume massimo, tempo utile di pompaggio, pressione differenziale del circuito, fluido e temperatura, tensione minima, livello, fase di vita del filtro, piano campioni e capacità di misura. Si potranno definire scenari ripetibili e criteri di rilascio.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Visualizza le pompe a membrana"
+  }
+}

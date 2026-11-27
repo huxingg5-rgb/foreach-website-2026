@@ -2,6 +2,7 @@ import type { EnglishApplicationKind } from '../application-english';
 
 export const applicationIndexLocales = ['en', 'es', 'fr', 'ko', 'ru'] as const;
 export type ApplicationIndexLocale = typeof applicationIndexLocales[number];
+export type ApplicationIndexPageLocale = ApplicationIndexLocale | 'de' | 'it' | 'hi';
 export type ApplicationIndexCopy = {
   seoTitle: string;
   seoDescription: string;

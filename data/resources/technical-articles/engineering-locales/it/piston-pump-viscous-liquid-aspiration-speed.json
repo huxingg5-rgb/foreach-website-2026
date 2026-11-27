@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "title": "Come impostare velocità di aspirazione e tempo di attesa di una pompa a pistone per reagenti viscosi?",
+    "seoTitle": "Velocità di aspirazione e tempo di attesa delle pompe a pistone per liquidi viscosi",
+    "seoDescription": "Regolare velocità di aspirazione e tempo di attesa della pompa a pistone per reagenti viscosi con una matrice di prove che includa pressione, scostamento dal valore obiettivo, ripetibilità, bolle e durata del ciclo completo.",
+    "coverImage": "/images/resources/technical-articles/pump-diagnostics/02.svg",
+    "coverAlt": "Schema di principio. Viscosità μ, lunghezza L e diametro interno d influiscono sulla perdita di pressione in aspirazione. Dopo l’arresto del pistone, verificare il recupero della pressione prima di commutare la valvola."
+  },
+  "deck": "Una finestra di aspirazione stabile dipende dalla resistenza, dal tempo di riempimento e dalla pressione. Provare separatamente la velocità di aspirazione e il successivo tempo di attesa. Scegliere poi una combinazione più rapida che rispetti i requisiti di scostamento medio, ripetibilità, bolle e durata del ciclo. Verificare sul reagente effettivo le impostazioni provate con acqua e confermare che il liquido abbia raggiunto l’equilibrio dopo l’arresto del pistone.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Una finestra di aspirazione stabile dipende dalla resistenza, dal tempo di riempimento e dalla pressione. Provare separatamente la velocità di aspirazione e il successivo tempo di attesa. Scegliere poi una combinazione più rapida che rispetti i requisiti di scostamento medio, ripetibilità, bolle e durata del ciclo. Verificare sul reagente effettivo le impostazioni provate con acqua e confermare che il liquido abbia raggiunto l’equilibrio dopo l’arresto del pistone."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Correlare viscosità e diametro interno alla perdita di pressione in aspirazione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per un moto laminare completamente sviluppato di un fluido newtoniano in un tubo circolare, la perdita di pressione aumenta con viscosità e lunghezza e varia in modo inversamente proporzionale alla quarta potenza del diametro interno. Un tubo principale più grande può aiutare, ma una valvola, un raccordo, un filtro o un ago possono restare la sezione più restrittiva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questa relazione in regime stazionario descrive un tratto di tubo. I transitori nella camera richiedono una valutazione distinta. Evitare di applicarla direttamente a reagenti pseudoplastici, con particelle in sospensione o dal comportamento fortemente non newtoniano. Registrare temperatura e condizioni reologiche e individuare le restrizioni mediante misure di pressione."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔP = 128 μ L Q / (π d⁴)",
+          "note": "μ: viscosità dinamica. L: lunghezza. Q: portata volumetrica. d: diametro interno. Usare unità SI coerenti. Relazione valida per moto laminare completamente sviluppato di un fluido newtoniano in un tubo rigido circolare. Gli effetti di ingresso, dei componenti locali e dei transitori sono esclusi."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/pump-diagnostics/02.svg",
+          "alt": "Schema di principio. Viscosità μ, lunghezza L e diametro interno d influiscono sulla perdita di pressione in aspirazione. Dopo l’arresto del pistone, verificare il recupero della pressione prima di commutare la valvola.",
+          "caption": "Schema di principio. Viscosità μ, lunghezza L e diametro interno d influiscono sulla perdita di pressione in aspirazione. Dopo l’arresto del pistone, verificare il recupero della pressione prima di commutare la valvola.",
+          "width": 1000,
+          "height": 560
+        }
+      ]
+    },
+    {
+      "title": "Perché il riempimento può proseguire dopo l’arresto del pistone?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’arretramento del pistone crea un volume geometrico che il liquido a monte deve riempire superando una resistenza. In presenza di gas o tubi elastici, riempimento e recupero della pressione possono proseguire dopo l’arresto. Una commutazione immediata della valvola può trasferire una condizione ancora transitoria all’operazione successiva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scegliere il tempo di attesa in base al recupero della pressione e alla ripetibilità della massa erogata. Le indicazioni Tecan suggeriscono velocità e attese adatte ai fluidi viscosi. Le impostazioni della piattaforma e dei suoi puntali non definiscono un tempo di 200 ms o 500 ms valido per tutte le pompe Foreach."
+        }
+      ]
+    },
+    {
+      "title": "Costruire una matrice di prove per velocità e tempo di attesa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Entro i limiti ammessi per la pompa e il driver, incrociare velocità di aspirazione bassa, media e alta con tempi di attesa brevi, medi e lunghi in un esperimento 3×3. Iniziare con impostazioni prudenti. Mantenere costanti volume obiettivo, impostazioni di erogazione, livello del serbatoio, sequenza delle valvole e contropressione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per ogni combinazione, registrare le singole masse, lo scostamento medio, il CV, la pressione minima in ingresso, le osservazioni sulle bolle e la durata del ciclo completo. Definire il numero di ripetizioni secondo l’incertezza del progetto e i criteri di accettazione. I tre livelli sono fattori sperimentali, con impostazioni operative da determinare mediante le prove. Ripetere la prova di riferimento tra le diverse condizioni per individuare eventuali derive termiche."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Fattore",
+            "Variabili da mantenere costanti",
+            "Dati da registrare"
+          ],
+          "rows": [
+            [
+              "Velocità di aspirazione bassa, media o alta",
+              "Erogazione, sequenza delle valvole e volume",
+              "Pressione in ingresso e bolle"
+            ],
+            [
+              "Tempo di attesa breve, medio o lungo",
+              "Velocità selezionata e circuito fluidico",
+              "Singole masse, scostamento dal valore obiettivo e CV"
+            ],
+            [
+              "Ripetizioni intercalate della prova di riferimento",
+              "Lotto di fluido e contropressione",
+              "Temperatura e ordine delle prove"
+            ],
+            [
+              "Qualifica della finestra operativa",
+              "Livello minimo e limiti di temperatura",
+              "Durata del ciclo completo e percentuale di prove conformi"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ottimizzare separatamente erogazione e trasferimento della goccia",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’aspirazione dipende dal riempimento e dal margine rispetto alle pressioni minime. L’erogazione dipende anche da contropressione, schizzi e distacco della goccia. Le due velocità possono essere diverse. Stabilizzare prima l’aspirazione, poi regolare velocità di erogazione, decelerazione finale, tempo di attesa e movimento del puntale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Confrontare la sequenza completa: aspirazione, assestamento, commutazione delle valvole, erogazione, trasferimento della goccia e riempimento. Un movimento più rapido può perdere il vantaggio di produttività se richiede un assestamento più lungo o genera erogazioni non conformi."
+        }
+      ]
+    },
+    {
+      "title": "Stabilire quando riprogettare il circuito fluidico",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se solo un’aspirazione molto lenta rispetta i criteri, misurare le perdite di pressione su tubi, valvole e filtri. Se l’applicazione lo consente, accorciare il tratto d’ingresso o aumentarne il diametro interno minimo. Dopo ogni modifica, rivalutare volume morto, consumo di reagente, lavaggio e spazio di installazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Mantenere ripetibile la temperatura del reagente. Una variazione termica può modificare contemporaneamente viscosità, densità, pressione di vapore e rilascio di gas. Evitare di raccomandare il riscaldamento unicamente per ridurre la viscosità. Qualificare la formulazione finale nelle condizioni reali, evitando sostituti diluiti o preparati in modo diverso."
+        }
+      ]
+    },
+    {
+      "title": "Registrare tutti i parametri della finestra operativa nella classe di liquido",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Registrare intervallo dei volumi, lotto e temperatura del fluido, geometria dei tubi, valvole, puntali, velocità e accelerazioni di aspirazione ed erogazione, tempi di attesa, ritardi delle valvole e risultati di accettazione. Scegliere un ciclo più breve che rispetti tutti i limiti con margine rispetto a temperatura e livello del serbatoio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Usare capacità e numero di passi del modello. Per esempio, EA-500-PMMA e SM-500-PMMA indicano 500 μL su 2000 passi interi, mentre TM-500-PMMA indica 500 μL su 2540 passi interi. La stessa frequenza di impulsi può quindi corrispondere a portate geometriche diverse. Dopo la conversione, verificare l’erogazione con il reagente effettivo."
+        },
+        {
+          "type": "subheading",
+          "title": "Approfondimenti e schede tecniche"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/piston-pump-acceleration-deceleration-curves/",
+              "label": "Accelerazione e decelerazione delle pompe a pistone"
+            },
+            {
+              "href": "/resources/technical-articles/piston-pump-head-material-selection/",
+              "label": "Materiali della testata delle pompe a pistone"
+            },
+            {
+              "href": "/resources/technical-articles/piston-pump-air-bubbles-dispensing-error/",
+              "label": "Errori di erogazione dovuti alle bolle"
+            },
+            {
+              "href": "/products/pumps/piston-pump/",
+              "label": "Categoria delle pompe a pistone di precisione"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Riferimenti tecnici",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "https://www.tecan.com/hubfs/HubDB/Te-DocDB/pdf/Tecan_GoodUsageGuidelines_e.pdf",
+              "label": "Tecan: guida alla gestione dei liquidi. Le impostazioni della piattaforma richiedono una verifica specifica prima di applicarle altrove."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Per un liquido viscoso è sempre preferibile aspirare più lentamente?",
+      "answer": "No. Scegliere una finestra che soddisfi i requisiti di volume, pressione, presenza di gas e durata del ciclo. Rallentare troppo allunga il ciclo e non risolve una perdita di tenuta all’ingresso."
+    },
+    {
+      "question": "Posso usare sempre un tempo di attesa di 500 ms?",
+      "answer": "No. Verificare il recupero della pressione e le singole erogazioni con il liquido, la geometria e il volume di lavoro effettivi."
+    },
+    {
+      "question": "Perché le impostazioni provate con acqua possono non funzionare con un reagente?",
+      "answer": "Viscosità, densità, tensione superficiale, volatilità e gas disciolto possono alterare il riempimento e il trasferimento delle gocce. Una prova con acqua vale per le condizioni della prova con acqua."
+    },
+    {
+      "question": "La corrente del motore può dimostrare che l’aspirazione è completa?",
+      "answer": "La corrente è un segnale ausiliario. Per verificare il volume ricevuto, usare le misure di pressione, le osservazioni del gas e le misure finali di massa."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi esaminare il circuito fluidico effettivo?",
+    "description": "Indica a Foreach il fluido, il volume di lavoro o la portata, le pressioni, la geometria e la sequenza di controllo per valutare configurazione e condizioni di verifica.",
+    "contactLabel": "Parliamo della tua applicazione",
+    "productsLabel": "Scopri le pompe",
+    "productsHref": "/products/pumps/piston-pump/"
+  }
+}

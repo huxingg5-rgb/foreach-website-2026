@@ -1,0 +1,618 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è un raccordo con anello di compressione? Struttura, misure e scelta",
+      "seoTitle": "Che cos’è un raccordo con anello di compressione? Struttura, misure e scelta | FOREACH",
+      "seoDescription": "Scopri i raccordi FOREACH HSF6 e i kit CL-1S/CL-1X: filettature, dimensioni dei tubi, materiali, pinze di montaggio, coppia di installazione e aspetti relativi alla pressione.",
+      "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-fitting-cover-photo.png",
+      "coverAlt": "Raccordo FOREACH con anello di compressione, tubo, anello in acciaio inossidabile e ogiva di tenuta"
+    },
+    "deck": "Un raccordo con anello di compressione combina un dado filettato, un anello di compressione e un’ogiva di tenuta senza richiedere una flangia preformata sul tubo. Prendendo come esempi FOREACH HSF6 e CL-1S, la guida tratta le porte M6×1 e 1/4-28 UNF, i diametri esterni dei tubi da 1.6 a 3.2 mm, i dadi in PPS o PEEK, gli anelli in acciaio inossidabile e le ogive in PEEK. Descrive inoltre prefabbricazione, montaggio e ricollegamento.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Un raccordo con anello di compressione è un collegamento filettato senza flangiatura per la fluidica degli strumenti. È formato da un dado di raccordo, un anello di compressione e un’ogiva di tenuta. Dopo aver tagliato perpendicolarmente il tubo, si premontano l’anello e l’ogiva compatibili sulla sua estremità. Il dado esercita poi un carico su questo insieme contro la porta di alloggiamento per realizzare la tenuta. Le applicazioni includono linee di trasferimento di reagenti, gestione dei campioni e lavaggio che collegano i tubi a pompe, valvole e moduli fluidici negli strumenti analitici e nell’automazione di laboratorio."
+      },
+      {
+        "type": "paragraph",
+        "text": "I raccordi compatti FOREACH HSF6 sono disponibili con filettature M6×1 e 1/4-28 UNF. Le configurazioni qui trattate accettano tubi con diametro esterno di 1.6, 2.0, 2.5, 3.0 e 3.2 mm. I dadi sono disponibili in PPS e PEEK. Il kit CL-1S abbina un anello di compressione in acciaio inossidabile a un’ogiva di tenuta in PEEK. Il modello HSF6 illustrato ha un diametro della testa di 6.0 mm e una lunghezza totale di 20.0 mm. Usa queste quote per valutare la distanza tra le porte e lo spazio assiale. Le combinazioni di filettatura, misura del tubo e materiale sono elencate di seguito."
+      },
+      {
+        "type": "paragraph",
+        "text": "Questi raccordi consentono sia il montaggio sul posto sia l’uso di tubi prefabbricati con lunghezze, raccordi terminali ed etichette identificative specificati. Le estremità complete del tubo possono essere scollegate e ricollegate per la manutenzione secondo le indicazioni. L’articolo si concentra su HSF6/CL-1S e descrive a parte CL-1X-16 per i collegamenti più piccoli 6-40 UNF. Per le altre serie e misure consulta i rispettivi disegni."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/snap-ring-fittings.webp",
+        "alt": "Dadi FOREACH, kit di anelli di compressione e ogive e estremità di tubo assemblate",
+        "width": 453,
+        "height": 313,
+        "caption": "Il dado si collega alla porta. Anello e ogiva formano il kit per l’estremità del tubo. Seleziona separatamente il dado e il kit."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Che cos’è un raccordo con anello di compressione? Dado, anello e ogiva",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "In questo articolo, un raccordo con anello di compressione è un collegamento per tubi microfluidici che impiega un anello di compressione e un’ogiva di tenuta separati. È un tipo di collegamento senza flangiatura. «Senza flangiatura» indica che il tubo non richiede una flangia preformata. I collegamenti di questo tipo possono usare componenti diversi. L’anello di compressione è distinto da un anello elastico di arresto per scanalatura d’albero."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Componente",
+              "Funzione",
+              "Criteri di scelta"
+            ],
+            "rows": [
+              [
+                "Dado filettato del raccordo",
+                "Si avvita nella porta dello strumento e applica un carico assiale al kit sull’estremità del tubo",
+                "Filettatura, passaggio per il tubo, materiale del dado e dimensioni esterne"
+              ],
+              [
+                "Anello di compressione",
+                "Avvolge la parte di accoppiamento dell’ogiva per comprimere e trattenere l’insieme sull’estremità del tubo",
+                "Sceglilo con l’ogiva compatibile e controlla l’orientamento e i requisiti di premontaggio"
+              ],
+              [
+                "Ogiva di tenuta",
+                "Si accoppia con il tubo e la porta per formare l’interfaccia di tenuta anteriore",
+                "Diametro esterno, materiale, faccia terminale e posizione del tubo"
+              ],
+              [
+                "Tubo e porta di alloggiamento",
+                "Formano il passaggio del fluido e le superfici di tenuta accoppiate",
+                "Diametri interno ed esterno del tubo, qualità del taglio, fondo della porta e profondità di montaggio"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Nel kit CL-1S l’anello di compressione è in acciaio inossidabile SUS e l’ogiva di tenuta è in PEEK. Dado, anello e ogiva sono componenti separati. Un dado in PEEK o PPS non implica che tutte le superfici bagnate del collegamento siano dello stesso materiale."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-structure-international.png",
+            "alt": "Posizioni relative del dado di raccordo, dell’anello di compressione in acciaio inossidabile e dell’ogiva di tenuta in PEEK",
+            "width": 1719,
+            "height": 915,
+            "caption": "Tre componenti principali: dado del raccordo, anello di compressione in acciaio inossidabile e ogiva di tenuta. Il tubo li attraversa in sequenza. A indica l’ogiva di tenuta, B l’anello di compressione in acciaio inossidabile e C il dado del raccordo."
+          }
+        ]
+      },
+      {
+        "title": "Come si realizza la tenuta e perché usare tubi prefabbricati?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Quando si avvita in una porta di alloggiamento a fondo piatto, il dado trasmette una forza assiale all’anello e all’ogiva. La compressione nella posizione specificata porta l’estremità assemblata del tubo a contatto con la superficie di tenuta della porta. Sono importanti sia l’accoppiamento tra anello e ogiva sia la posizione dell’estremità del tubo. La filettatura fornisce ritegno e carico. Occorre controllare il corretto contatto dell’interfaccia di tenuta."
+          },
+          {
+            "type": "subheading",
+            "title": "Verifica che l’estremità del tubo sia a filo con la faccia dell’ogiva"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Posizione dell’estremità del tubo",
+              "Possibile effetto",
+              "Verifica di montaggio"
+            ],
+            "rows": [
+              [
+                "A filo con la faccia dell’ogiva",
+                "Garantisce la posizione terminale specificata",
+                "Taglio perpendicolare e pulito. La posizione rimane invariata dopo la pressatura"
+              ],
+              [
+                "Arretrata all’interno dell’ogiva",
+                "Può lasciare uno spazio aggiuntivo nel collegamento",
+                "Controlla la lunghezza di taglio e il movimento del tubo durante il premontaggio"
+              ],
+              [
+                "Sporgente o tagliata in obliquo",
+                "Può toccare prematuramente la porta e compromettere la tenuta",
+                "Ricontrolla la preparazione dell’estremità e la posizione di montaggio"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La foto qui sotto identifica il dado del raccordo, il tubo, l’anello di compressione in acciaio inossidabile e l’ogiva di tenuta e mostra come i componenti si accoppiano."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-components-international.png",
+            "alt": "Foto dell’estremità del tubo con identificazione di ogiva di tenuta, anello di compressione in acciaio inossidabile, tubo e dado del raccordo",
+            "width": 1584,
+            "height": 993,
+            "caption": "A indica l’ogiva di tenuta, B l’anello di compressione in acciaio inossidabile, C il tubo e D il dado del raccordo."
+          },
+          {
+            "type": "subheading",
+            "title": "Prepara l’estremità del tubo prima di collegare lo strumento"
+          },
+          {
+            "type": "paragraph",
+            "text": "Specifica il tubo, la lunghezza, i componenti terminali e le etichette prima della prefabbricazione. Completare prima le estremità facilita il montaggio in lotti e l’identificazione delle linee. Durante il collegamento il dado può ruotare rispetto al tubo e ridurre la torsione prodotta dal serraggio. Non si tratta di un giunto rotante progettato per ruotare continuamente in esercizio."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un’estremità del tubo assemblata e in buono stato può essere mantenuta durante la manutenzione. Controlla però la faccia dell’ogiva, la posizione dell’anello e le condizioni del tubo. Ricollegare un’estremità integra è diverso da rimuovere un anello usato e montarlo su un tubo nuovo."
+          }
+        ]
+      },
+      {
+        "title": "HSF6: filettature, misure dei tubi, materiali e dimensioni",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "HSF6 identifica la serie del dado del raccordo. CL-1S e CL-1X identificano i kit di anello e ogiva. Scegli il dado per la porta, poi il kit per il diametro esterno effettivo del tubo. Queste tre serie non sono modelli di raccordo intercambiabili. La tabella riguarda le configurazioni HSF6 trattate qui e non tutti i prodotti con anello di compressione."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Codice completo del raccordo",
+              "Filettatura",
+              "Diametro esterno compatibile del tubo",
+              "Materiale del dado"
+            ],
+            "rows": [
+              [
+                "HSF6-M6-16-PS-B",
+                "M6×1",
+                "1.6 mm",
+                "PPS"
+              ],
+              [
+                "HSF6-M6-32-PS-B",
+                "M6×1",
+                "2.0, 2.5, 3.0, 3.2 mm",
+                "PPS"
+              ],
+              [
+                "HSF6-U28-16-PK-N",
+                "1/4-28 UNF",
+                "1.6 mm",
+                "PEEK"
+              ],
+              [
+                "HSF6-U28-16-PS-B",
+                "1/4-28 UNF",
+                "1.6 mm",
+                "PPS"
+              ],
+              [
+                "HSF6-U28-32-PK-N",
+                "1/4-28 UNF",
+                "2.0, 2.5, 3.0, 3.2 mm",
+                "PEEK"
+              ],
+              [
+                "HSF6-U28-32-PS-B",
+                "1/4-28 UNF",
+                "2.0, 2.5, 3.0, 3.2 mm",
+                "PPS"
+              ]
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Una misura del dado può richiedere più kit per il tubo"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Diametro esterno effettivo del tubo",
+              "Codice di misura del dado HSF6",
+              "Kit di anello e ogiva",
+              "Materiali del kit"
+            ],
+            "rows": [
+              [
+                "1.6 mm",
+                "Misura 16, M6/U28",
+                "CL-1S-16",
+                "Anello SUS e ogiva PEEK"
+              ],
+              [
+                "2.0 mm",
+                "Misura 32, M6/U28",
+                "CL-1S-20",
+                "Anello SUS e ogiva PEEK"
+              ],
+              [
+                "2.5 mm",
+                "Misura 32, M6/U28",
+                "CL-1S-25",
+                "Anello SUS e ogiva PEEK"
+              ],
+              [
+                "3.0 mm",
+                "Misura 32, M6/U28",
+                "CL-1S-30",
+                "Anello SUS e ogiva PEEK"
+              ],
+              [
+                "3.2 mm",
+                "Misura 32, M6/U28",
+                "CL-1S-32",
+                "Anello SUS e ogiva PEEK"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Per un tubo con diametro esterno di 2.5 mm in una porta a fondo piatto M6, parti dal controllo della combinazione HSF6-M6-32-PS-B con CL-1S-25. Il codice 32 identifica la fascia dimensionale del dado. Il kit deve comunque essere di misura 25 per un tubo da 2.5 mm. Non scegliere CL-1S-32 solo per far coincidere il codice con quello del dado."
+          },
+          {
+            "type": "subheading",
+            "title": "CL-1X-16 è una configurazione separata per porte più piccole"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-tube-ends-photo.png",
+            "alt": "Raccordi neri e di colore naturale con anelli metallici, ogive di tenuta e posizioni delle estremità dei tubi",
+            "width": 2459,
+            "height": 1492,
+            "caption": "Estremità di tubi effettivamente assemblate, con le posizioni relative dell’anello metallico, dell’ogiva di tenuta e del tubo. Conferma compatibilità del modello e quote secondo le specifiche applicabili."
+          },
+          {
+            "type": "paragraph",
+            "text": "CL-1X-16 è adatto a tubi con diametro esterno di 1.6 mm e usa un anello SUS con un’ogiva PEEK. Il raccordo abbinato è HFL6-U40-16 con filettatura 6-40 UNF. Accetta lo stesso diametro esterno del tubo di CL-1S-16, ma porta, geometria del kit e raccordo sono diversi. I due kit non sono direttamente intercambiabili."
+          },
+          {
+            "type": "subheading",
+            "title": "Le dimensioni esterne determinano lo spazio necessario. La profondità di montaggio dipende anche dalla porta"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Quota del modello HSF6 illustrato",
+              "Valore",
+              "Uso in fase di montaggio"
+            ],
+            "rows": [
+              [
+                "Diametro della testa",
+                "6.0 mm",
+                "Controllo della distanza tra raccordi adiacenti e dell’accesso per il serraggio"
+              ],
+              [
+                "Lunghezza totale del dado",
+                "20.0 mm",
+                "Da combinare con la profondità di montaggio per determinare la lunghezza sporgente"
+              ],
+              [
+                "Dimensione assiale del tratto anteriore",
+                "10.5 mm",
+                "Verifica con la profondità della porta e la posizione del kit. Non indica l’impegno effettivo dei filetti o la profondità di montaggio reale"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Queste dimensioni si riferiscono al modello HSF6 illustrato e non a HSF, HFL6 o altre configurazioni. L’assemblaggio deve raggiungere la posizione di tenuta conservando un impegno adeguato della filettatura. Se il dado va in battuta sulla superficie dello strumento prima che l’ogiva sia in sede, aumentare la coppia non corregge l’incompatibilità dimensionale."
+          }
+        ]
+      },
+      {
+        "title": "Scelta tra raccordi con anello di compressione, con ogiva e flangiati",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Confronta prima la preparazione dell’estremità del tubo e gli elementi di tenuta, poi il montaggio in produzione e la manutenzione. Sia i collegamenti con anello di compressione sia quelli con ogiva tradizionale evitano la flangiatura. I primi impiegano un anello separato e un’ogiva di tenuta, i secondi un’ogiva compatibile che trattiene il tubo e contribuisce alla tenuta."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Confronto",
+              "Collegamento con anello di compressione",
+              "Collegamento tradizionale senza flangiatura con ogiva",
+              "Collegamento flangiato"
+            ],
+            "rows": [
+              [
+                "Preparazione dell’estremità",
+                "Taglio perpendicolare, poi montaggio di anello e ogiva",
+                "Taglio perpendicolare, poi montaggio dell’ogiva",
+                "Formatura preliminare di una flangia sul tubo"
+              ],
+              [
+                "Componenti principali",
+                "Dado, anello di compressione e ogiva di tenuta",
+                "Dado e ogiva",
+                "Dado, flangia del tubo e rondella compatibile"
+              ],
+              [
+                "Aspetti del montaggio",
+                "Premontaggio con pinze dedicate. Controllo di orientamento, posizione a filo dell’estremità e pressatura",
+                "Ogiva e orientamento corretti, tubo correttamente in sede",
+                "Qualità della flangia e contatto della superficie di tenuta"
+              ],
+              [
+                "Manutenzione",
+                "Ispeziona l’estremità completa del tubo prima di ricollegarla secondo le istruzioni",
+                "Prepara ogive di ricambio per le tipologie a montaggio singolo trattate nell’articolo correlato",
+                "Ispeziona flangia, rondella e porta prima di ricollegare"
+              ],
+              [
+                "Situazioni da valutare per prime",
+                "Tubi prefabbricati e manutenzione che mantiene l’estremità già assemblata",
+                "Montaggio senza flangiatura con ogiva facilmente sostituibile",
+                "Processo di flangiatura consolidato o assemblaggi flangiati prefabbricati"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Queste sono differenze di montaggio e non classifiche per resistenza alla pressione. Per manutenzioni frequenti, confronta i requisiti di ispezione e sostituzione. Con porte ravvicinate, confronta le dimensioni del dado e l’accesso per gli attrezzi, oltre al nome del collegamento."
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-ferrule-fitting/",
+                "label": "Raccordi con ogiva senza flangiatura: struttura, misure e scelta"
+              },
+              {
+                "href": "/en/resources/technical-articles/flanged-tubing-assemblies-selection-guide/",
+                "label": "Assemblaggi di tubi flangiati: tenuta, compatibilità con le porte e scelta"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Applicazioni e configurazione dell’assemblaggio di tubi",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Quando valuti i collegamenti con anello di compressione, parti dalle attività di montaggio e manutenzione. Questi esempi illustrano criteri di scelta. L’idoneità dipende anche dal fluido, dalla temperatura e dalla pressione."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Applicazione",
+              "Scopo dell’assemblaggio di tubi",
+              "Priorità di configurazione"
+            ],
+            "rows": [
+              [
+                "Trasferimento di reagenti in strumenti analitici",
+                "Preparare collegamenti e lunghezze prima dell’installazione nello strumento",
+                "Porte terminali, materiali bagnati, diametro interno e lunghezza del tubo"
+              ],
+              [
+                "Gestione dei campioni e linee di lavaggio",
+                "Controllare la posizione dell’estremità e semplificare identificazione e manutenzione delle linee",
+                "Giochi alle estremità, condizioni di pulizia, requisiti di trascinamento ed etichette"
+              ],
+              [
+                "Collegamenti tra pompe, valvole e moduli fluidici",
+                "Standardizzare il montaggio e i ricambi",
+                "Distanza tra le porte, direzione dei tubi, pulsazioni di pressione e supporto"
+              ],
+              [
+                "Moduli rimossi per la manutenzione",
+                "Conservare e ricollegare l’estremità completa del tubo",
+                "Frequenza prevista di ricollegamento, ispezione della superficie di tenuta e regole di sostituzione"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Gli assemblaggi FOREACH possono utilizzare tubi in FEP o PTFE con lunghezze ed etichette specificate. Il diametro esterno determina la compatibilità con dado e kit. Diametro interno e lunghezza influiscono sulla resistenza al flusso e sul volume interno. Tubi con lo stesso diametro esterno ma diversi diametri interni possono comportarsi diversamente durante il flusso e dopo la pressatura."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per la selezione, fornisci i disegni di entrambe le porte, i diametri interno ed esterno del tubo, la lunghezza finita e il riferimento di misura, fluido e condizioni di pulizia, temperatura, pressioni continua e di picco e requisiti di manutenzione. Se le porte sono diverse, scegli ciascuna estremità separatamente. Gli O-ring o le boccole di arresto sul tubo limitano la corsa del dado. Non realizzano la tenuta della porta dello strumento."
+          }
+        ]
+      },
+      {
+        "title": "Montaggio, pressione ammessa e serraggio",
+        "blocks": [
+          {
+            "type": "subheading",
+            "title": "Distingui il premontaggio iniziale dal collegamento alla porta"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il montaggio iniziale richiede le pinze compatibili dedicate, che pressano in posizione l’anello di compressione e l’ogiva di tenuta. La sola pressione manuale difficilmente consente di assemblarli correttamente. Serrare il dado o aumentare la coppia sulla porta non sostituisce il premontaggio. Quando ricolleghi dopo la manutenzione, controlla l’estremità già assemblata del tubo prima di inserirla nella porta."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le pinze di montaggio FOREACH sono il modello T-SF-4-SS, codice prodotto 959016. Se assembli il tubo internamente, procurati l’utensile compatibile con il kit e la misura del tubo e verifica la posizione di serraggio e le istruzioni operative."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-pliers-international.png",
+            "alt": "Pinze di montaggio dedicate FOREACH T-SF-4-SS, codice prodotto 959016",
+            "width": 1360,
+            "height": 1156,
+            "caption": "Pinze di montaggio T-SF-4-SS, codice prodotto 959016, per il premontaggio dei kit con anello di compressione."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/compression-ring-assembly-international.png",
+            "alt": "Sequenza di montaggio di dado, anello di compressione e ogiva, con estremità del tubo a filo",
+            "width": 1323,
+            "height": 1189,
+            "caption": "A indica l’anello di compressione in acciaio inossidabile e B l’ogiva di tenuta. Fai scorrere nell’ordine dado, anello e ogiva, verifica l’orientamento e allinea l’estremità del tubo alla faccia dell’ogiva."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Taglia il tubo perpendicolarmente: usa un tagliatubi adatto, rimuovi i residui e verifica l’assenza di schiacciamenti, bave e crepe.",
+              "Controlla l’orientamento: inserisci nell’ordine dado, anello e ogiva seguendo il disegno del kit selezionato.",
+              "Posiziona e premonta: allinea l’estremità del tubo a filo con la faccia dell’ogiva, pressa con le pinze compatibili dedicate e controlla l’assestamento dell’anello e l’eventuale arretramento o sporgenza del tubo.",
+              "Collega la porta: pulisci e ispeziona la superficie di tenuta, mantieni l’assemblaggio in posizione e serra come specificato.",
+              "Verifica il collegamento: fissa il tubo e prova eventuali perdite, infiltrazioni d’aria e spostamenti dell’estremità con le condizioni specificate di fluido, temperatura e pressione."
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Quale pressione può sopportare il raccordo?"
+          },
+          {
+            "type": "paragraph",
+            "text": "La pressione ammessa riguarda la combinazione completa di dado, kit, tubo e porta a temperature e condizioni operative specificate. Qui non viene indicata una pressione nominale comune per HSF6/CL-1S. Procurati il valore della pressione di esercizio ammessa per la combinazione selezionata. Controlla separatamente sovrapressione, vuoto e picchi all’avvio e all’arresto. Un dado in PEEK o un anello metallico da solo non determina la pressione ammessa."
+          },
+          {
+            "type": "subheading",
+            "title": "Quale coppia di montaggio è consigliata?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per i raccordi FOREACH in plastica per tubi rigidi con filettatura M6×1 o 1/4-28 UNF, la coppia di montaggio consigliata è di 0.25–0.30 N·m. Per i raccordi U40 in plastica con anello di compressione e filettatura 6-40 UNF si usano 0.08–0.15 N·m. Abbina l’indicazione alla filettatura e al materiale del dado."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Misura della filettatura",
+              "Raccordo interessato",
+              "Coppia di montaggio consigliata"
+            ],
+            "rows": [
+              [
+                "M6×1",
+                "Raccordo in plastica per tubi rigidi",
+                "0.25–0.30 N·m"
+              ],
+              [
+                "1/4-28 UNF",
+                "Raccordo in plastica per tubi rigidi",
+                "0.25–0.30 N·m"
+              ],
+              [
+                "6-40 UNF",
+                "Raccordo U40 in plastica con anello di compressione",
+                "0.08–0.15 N·m"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Questi valori valgono per il serraggio filettato nella porta. Non indicano la forza di pressatura per il premontaggio del kit. Premonta correttamente anello e ogiva, applica la coppia corrispondente e verifica la tenuta e la posizione dell’estremità del tubo."
+          },
+          {
+            "type": "subheading",
+            "title": "Ricollegamento e diagnosi"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Sintomo",
+              "Primo controllo",
+              "Intervento"
+            ],
+            "rows": [
+              [
+                "Perdita dopo il primo collegamento",
+                "Compatibilità dei componenti, orientamento di pressatura, tubo a filo e fondo della porta",
+                "Arresta e depressurizza il sistema. Correggi posizione o componenti e ripeti la prova"
+              ],
+              [
+                "Perdita dopo il ricollegamento in manutenzione",
+                "Faccia dell’ogiva sporca o danneggiata, spostamento dell’anello o deformazione del tubo",
+                "Determina se occorre pulire, riposizionare o sostituire l’assemblaggio"
+              ],
+              [
+                "Portata ridotta dopo la sostituzione dell’assemblaggio",
+                "Diametro interno e lunghezza del tubo, residui, compressione dell’estremità e curve strette",
+                "Confronta portata e perdita di carico con lo stesso fluido e le stesse condizioni della pompa"
+              ],
+              [
+                "Supera la prova statica, ma si guasta in esercizio",
+                "Picchi all’avvio e all’arresto, variazioni di temperatura, vibrazioni e carichi esterni",
+                "Controlla supporti e spazio di movimento. Convalida nei cicli operativi effettivi"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La possibilità di ricollegare secondo le istruzioni non implica cicli illimitati o assenza di manutenzione. Per scollegamenti frequenti, definisci i cicli di prova, le condizioni operative e la perdita ammessa. Registra la tenuta, la posizione dell’estremità del tubo e la portata dopo ogni ciclo. Gestisci usura delle superfici, crepe o spostamenti dell’anello in base ai requisiti dell’assemblaggio."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "Un raccordo con anello di compressione è anche senza flangiatura?",
+        "answer": "Sì. La configurazione con anello e ogiva descritta qui usa un tubo tagliato perpendicolarmente, senza flangia preformata. Anche i raccordi con ogiva tradizionale possono essere senza flangiatura, ma componenti e montaggio sono diversi. Il nome da solo non dimostra l’intercambiabilità."
+      },
+      {
+        "question": "Se il modello HSF6 ha il codice di misura 32, anche il kit deve essere di misura 32?",
+        "answer": "No. I dadi HSF6 di misura 32 elencati qui coprono diametri esterni del tubo di 2.0, 2.5, 3.0 e 3.2 mm. Il kit CL-1S si sceglie in base al diametro esterno effettivo. Ad esempio, per il tubo da 2.5 mm serve CL-1S-25. La fascia dimensionale del dado e la misura del kit per il tubo si scelgono separatamente."
+      },
+      {
+        "question": "CL-1S-16 e CL-1X-16 sono intercambiabili?",
+        "answer": "No. Entrambi accettano tubi con diametro esterno di 1.6 mm, ma CL-1S corrisponde alle configurazioni HSF6 M6/U28 qui descritte, mentre CL-1X-16 si abbina a HFL6-U40-16 per un collegamento 6-40 UNF. Controlla insieme dado, porta e geometria del kit."
+      },
+      {
+        "question": "Serve un attrezzo di montaggio dedicato?",
+        "answer": "Sì. Il premontaggio iniziale del kit richiede pinze compatibili dedicate: FOREACH T-SF-4-SS, codice prodotto 959016. La sola pressione manuale difficilmente permette di inserire correttamente anello e ogiva. Aumentare la coppia del dado non sostituisce il premontaggio. Verifica la compatibilità dell’utensile con il kit e la misura del tubo. Ispeziona le estremità complete già assemblate prima di ricollegarle."
+      },
+      {
+        "question": "Quale coppia usare per il montaggio?",
+        "answer": "Per i raccordi FOREACH in plastica per tubi rigidi con filettature M6×1 o 1/4-28 UNF si usano 0.25–0.30 N·m. Per i raccordi U40 in plastica con anello di compressione e filettatura 6-40 UNF si usano 0.08–0.15 N·m. Queste indicazioni si applicano al serraggio filettato nella porta e non alla forza di premontaggio del kit."
+      },
+      {
+        "question": "La possibilità di ricollegare significa che un anello usato può essere montato su un tubo nuovo?",
+        "answer": "Non necessariamente. Ispeziona superfici di tenuta, posizione dell’anello e condizioni del tubo prima di ricollegare un’estremità integra. Rimuovere l’anello usato e installarlo su un altro tubo è un’operazione distinta. La possibilità di farlo dipende dai requisiti del kit specifico."
+      },
+      {
+        "question": "Un’estremità del tubo a filo garantisce l’assenza di volume morto?",
+        "answer": "No. Un taglio perpendicolare e una posizione corretta dell’estremità aiutano a controllare i giochi, ma il volume residuo dipende anche dalla geometria della porta, dal diametro interno del tubo e dalle condizioni di montaggio. Valuta linee di campionamento e di lavaggio in base ai requisiti di trascinamento e pulizia."
+      }
+    ],
+    "cta": {
+      "title": "Ti serve aiuto per scegliere raccordi o tubi prefabbricati?",
+      "description": "Fornisci i disegni delle porte, i diametri interno ed esterno del tubo, la lunghezza finita, fluido, temperatura, pressione e requisiti di manutenzione per confermare componenti compatibili, montaggio e validazione dei campioni.",
+      "contactLabel": "Contatta l’assistenza tecnica",
+      "productsLabel": "Vedi i raccordi per tubi rigidi",
+      "productsHref": "/en/products/fittings/hard-tube-fittings/"
+    },
+    "navigationLabels": [
+      "Che cos’è un raccordo con anello di compressione?",
+      "Componenti e tenuta",
+      "Modelli, materiali e dimensioni",
+      "Confronto tra tre collegamenti",
+      "Applicazioni e selezione",
+      "Montaggio, pressione e manutenzione"
+    ]
+  },
+  "navigation": [
+    {
+      "id": "definition",
+      "label": "Che cos’è un raccordo con anello di compressione?"
+    },
+    {
+      "id": "sealing",
+      "label": "Componenti e tenuta"
+    },
+    {
+      "id": "series",
+      "label": "Modelli, materiali e dimensioni"
+    },
+    {
+      "id": "comparison",
+      "label": "Confronto tra tre collegamenti"
+    },
+    {
+      "id": "selection",
+      "label": "Applicazioni e selezione"
+    },
+    {
+      "id": "installation",
+      "label": "Montaggio, pressione e manutenzione"
+    }
+  ]
+}

@@ -14,6 +14,7 @@ import {
   getLocaleFromPathname as getLocaleFromPathnameFromLanguages, // 根据路径判断当前语言
   type LocaleCode, // 官网支持的语言代码类型
 } from "@/data/languages"; // 从统一语言配置文件读取语言信息
+import { draftLanguages, getEnglishDraftSourcePath, languageDraftsEnabled, type DraftLocale } from "@/lib/i18n/draft-languages";
 import { normalizeSiteHref } from "@/lib/seo/site-url";
 
 // 重新导出 LocaleCode
@@ -25,7 +26,7 @@ export type { LocaleCode };
 ================================ */
 
 export type LanguageItem = {
-  code: LocaleCode; // 语言代码
+  code: LocaleCode | DraftLocale; // 语言代码
   label: string; // 语言显示名称
   href: string; // 点击后跳转路径
   flag: string;
@@ -81,14 +82,20 @@ const siteLanguageFlags: Record<LocaleCode, string> = {
   ru: "ru",
 };
 
-export const languageItems: LanguageItem[] = getEnabledLanguages().map(
-  (language) => ({
-    code: language.code, // 语言代码
-    label: language.label, // 语言显示名称
-    href: language.href, // 语言首页路径
+export const languageItems: LanguageItem[] = [
+  ...getEnabledLanguages().map((language) => ({
+    code: language.code,
+    label: language.label,
+    href: language.href,
     flag: siteLanguageFlags[language.code],
-  })
-);
+  })),
+  ...Object.entries(languageDraftsEnabled ? draftLanguages : {}).map(([code, language]) => ({
+    code: code as DraftLocale,
+    label: language.label,
+    href: "/"+code+"/",
+    flag: language.flag,
+  })),
+];
 
 /* ================================
    05. Header 顶部导航 6 国语言文案
@@ -358,7 +365,7 @@ export function getLocaleAnchorPath(locale: LocaleCode, anchor: string) {
 // 根据当前路径判断语言
 // 说明：实际判断逻辑来自 data/languages.ts
 export function getLocaleFromPathname(pathname: string): LocaleCode {
-  return getLocaleFromPathnameFromLanguages(pathname);
+  return getLocaleFromPathnameFromLanguages(getEnglishDraftSourcePath(pathname));
 }
 
 /* ================================

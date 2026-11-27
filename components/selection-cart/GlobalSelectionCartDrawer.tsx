@@ -26,10 +26,15 @@
 import DrawingRequirements from "@/components/products/configurator/DrawingRequirements";
 import { drawingRequirementsLine, drawingRequirementsText, getDrawingTypes } from "@/data/products/detail/drawing-requirements";
 import { defaultInquiryAccessoryName, defaultInquirySubmission, getDefaultInquiryCopy } from "@/data/products/detail/default-inquiry";
+import { germanProductSpecValue } from "@/data/products/detail/product-detail-ui.de";
 import { hardTubeProductCodeText } from "@/data/products/configurator/hard-tube-accessories";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
+import { getGermanNavigationText } from "@/data/navigation.de";
+import { getHindiNavigationText } from "@/data/navigation.hi";
+import { getItalianNavigationText } from "@/data/navigation.it";
+import { isLocalizedGermanDraftPath, isLocalizedHindiDraftPath, isLocalizedItalianDraftPath } from "@/lib/i18n/draft-languages";
 import { createPortal } from "react-dom";
 import {
   useEffect,
@@ -53,7 +58,7 @@ import { trackBeginInquiry } from "@/lib/analytics/track-event";
 
 import styles from "./GlobalSelectionCartDrawer.module.css";
 import { useSelectionCart } from "./SelectionCartProvider";
-import { getSelectionCartCopy } from "./selection-cart.i18n";
+import { getCartDetailHref, getSelectionCartCopy } from "./selection-cart.i18n";
 import { getCartGroups } from "./selection-cart-bundles";
 import type { SelectionCartItem } from "./selection-cart.types";
 import { useCartPdfAttachments } from "./use-cart-pdf-attachments";
@@ -113,27 +118,10 @@ function preloadPrintImage(src: string) {
   });
 }
 
-function getCartDetailHref(
-  href: string | undefined,
-  locale: LocaleCode,
-) {
-  if (
-    !href ||
-    locale === "zh-CN" ||
-    !href.startsWith("/") ||
-    new RegExp(`^/${locale}(?:/|$)`).test(href)
-  ) {
-    return href;
-  }
-
-  const unprefixedHref = href.replace(/^\/(?:en|es|fr|ko|ru)(?=\/|$)/, "");
-  return `/${locale}${unprefixedHref}`;
-}
-
 function getLocalizedCartProductName(
   productName: string,
   sourceType: string,
-  locale: LocaleCode,
+  locale: LocaleCode | "de" | "it" | "hi",
   item?: SelectionCartItem,
 ) {
   if (item?.instrumentConfiguration) return instrumentInquiryProductName(item.instrumentConfiguration.family, locale);
@@ -141,17 +129,29 @@ function getLocalizedCartProductName(
   if (accessoryName) return accessoryName;
   if (sourceType !== "pump-selection" && sourceType !== "tubing-selection") return productName;
 
-  return getLocalizedFilterOptionLabel(productName, locale);
+  if (locale === "hi") return getHindiNavigationText(getLocalizedFilterOptionLabel(productName, "en"));
+  if (locale === "it") return getItalianNavigationText(getLocalizedFilterOptionLabel(productName, "en"));
+  if (locale !== "de") return getLocalizedFilterOptionLabel(productName, locale);
+  const englishName = getLocalizedFilterOptionLabel(productName, "en");
+  const seriesName = germanProductSpecValue("product series", englishName);
+  return germanProductSpecValue("product category", seriesName);
 }
 
-export default function GlobalSelectionCartDrawer() {
+export default function GlobalSelectionCartDrawer({ fittingPathPattern }: { fittingPathPattern?: string } = {}) {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
+  const isGermanPage = isLocalizedGermanDraftPath(pathname, fittingPathPattern);
+  const isItalianPage = isLocalizedItalianDraftPath(pathname);
+  const isHindiPage = isLocalizedHindiDraftPath(pathname);
+  const activeDraft = isGermanPage ? "de" : isItalianPage ? "it" : isHindiPage ? "hi" : undefined;
+  const displayLocale = activeDraft ?? locale;
   // 国际站尚未单独维护的清单术语统一回退英文，禁止回退中文。
   const isEnglish = isInternationalLocale(locale);
-  const t = (text: string) => getInternationalUiText(locale, text);
-  const drawingCopy = getDrawingRequestCopy(locale);
-  const cartCopy = getSelectionCartCopy(locale);
+  const t = (text: string) => isGermanPage ? getGermanNavigationText(text) : isItalianPage ? getItalianNavigationText(text) : isHindiPage ? getHindiNavigationText(text) : getInternationalUiText(locale, text);
+  const drawingCopy = getDrawingRequestCopy(displayLocale);
+  const drawingRequestTitle = isEnglish ? t("Request Drawings") : "申请图纸";
+  const cartCopy = getSelectionCartCopy(displayLocale);
+  const closeListLabel = isGermanPage ? "Produktauswahlliste schließen" : isItalianPage ? "Chiudi l’elenco dei prodotti selezionati" : isHindiPage ? "उत्पाद चयन सूची बंद करें" : isEnglish ? `${t("Close")} ${t("Product Selection List")}` : "关闭选型清单";
 
   const {
     items,
@@ -170,7 +170,9 @@ export default function GlobalSelectionCartDrawer() {
   const orderedItems = useMemo(() => cartGroups.flatMap(group => group.items), [cartGroups]);
   const hasEaConfiguration = orderedItems.some(item => item.eaPumpConfiguration);
   const defaultInquiry = defaultInquirySubmission(orderedItems);
-  const defaultInquiryCopy = getDefaultInquiryCopy(locale);
+  const defaultInquiryCopy = getDefaultInquiryCopy(displayLocale);
+  const isQ20DrawingList = activeDraft && orderedItems.length > 0 &&
+    orderedItems.every(item => item.sourceType === "fitting-replacement");
 
   /* =========================================================
      是否已经在浏览器端挂载
@@ -204,7 +206,7 @@ export default function GlobalSelectionCartDrawer() {
     const item = entries.length === 1 ? entries[0] : undefined;
     return item && !item.flangedConfiguration ? item.productCode : undefined;
   };
-  const configurationPdfs = useCartPdfAttachments(submissionItems, isDrawingRequestModalOpen, locale);
+  const configurationPdfs = useCartPdfAttachments(submissionItems, isDrawingRequestModalOpen, displayLocale);
   const configurationPdfEntries = submissionItems.flatMap(item => item.flangedConfiguration && item.drawingAttachment
     ? [{ record: item.flangedConfiguration, attachment: item.drawingAttachment }] : []);
 
@@ -229,19 +231,19 @@ export default function GlobalSelectionCartDrawer() {
       const localizedProductName = getLocalizedCartProductName(
         item.productName,
         item.sourceType,
-        locale,
+        displayLocale,
         item,
       );
 
       return {
         id: item.id,
         title: item.foreachModel,
-        metaLines: [drawingRequirementsLine(item, locale), ...(
+        metaLines: [drawingRequirementsLine(item, displayLocale), ...(
           item.flangedConfiguration && item.drawingAttachment ? [
-            flangedConfigurationProductName(item.flangedConfiguration, locale),
+            flangedConfigurationProductName(item.flangedConfiguration, displayLocale),
             `${item.flangedConfiguration.name} · R${item.flangedConfiguration.revision}`,
-            `${assemblyText("数量", locale)}: ${item.quantity}`,
-            `${assemblyText("PDF 附件", locale)}: ${item.drawingAttachment.name}`,
+            `${assemblyText("数量", displayLocale)}: ${item.quantity}`,
+            `${assemblyText("PDF 附件", displayLocale)}: ${item.drawingAttachment.name}`,
           ] : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
             ? [
                 `${isEnglish ? t("Product Type") : "产品类型"}: ${localizedProductName}`,
@@ -258,7 +260,7 @@ export default function GlobalSelectionCartDrawer() {
               ])],
       };
     });
-  }, [isEnglish, locale, submissionItems]);
+  }, [displayLocale, isEnglish, locale, submissionItems]);
 
   /* =========================================================
      右下角清单按钮轻动效
@@ -381,7 +383,7 @@ export default function GlobalSelectionCartDrawer() {
       cleanupPrintClass();
     }, 5000);
 
-    await generatePdfList();
+    await generatePdfList(activeDraft);
   }
 
   /* =========================================================
@@ -401,8 +403,12 @@ export default function GlobalSelectionCartDrawer() {
       throw new Error("required_fields_missing");
     }
 
-    if (configurationPdfs.blocked) throw new Error(assemblyText(configurationPdfs.error || "配置图纸尚未准备完成，请稍后重试。", locale));
+    if (configurationPdfs.blocked) throw new Error(assemblyText(configurationPdfs.error || "配置图纸尚未准备完成，请稍后重试。", displayLocale));
 
+    const isGermanQ20DrawingRequest = isGermanPage &&
+      submissionItems.every(item => item.sourceType === "fitting-replacement");
+    const drawingLocale = isGermanQ20DrawingRequest || isItalianPage ? displayLocale : locale;
+    const q20ProductName = "Q20-Schnellkupplung";
     const requestedDrawingLines = submissionItems.map(
       (item, index) => {
         const localizedProductName = getLocalizedCartProductName(
@@ -413,8 +419,8 @@ export default function GlobalSelectionCartDrawer() {
         );
 
         if (item.flangedConfiguration && item.drawingAttachment) return [
-          `${index + 1}. ${flangedConfigurationInquirySummary(item.flangedConfiguration, locale)}`,
-          `${assemblyText("数量", locale)}: ${item.quantity}`, `PDF: ${item.drawingAttachment.name}`, `PDF SHA-256: ${item.drawingAttachment.sha256}`,
+          `${index + 1}. ${flangedConfigurationInquirySummary(item.flangedConfiguration, displayLocale)}`,
+          `${assemblyText("数量", displayLocale)}: ${item.quantity}`, `PDF: ${item.drawingAttachment.name}`, `PDF SHA-256: ${item.drawingAttachment.sha256}`,
         ].join("\n");
 
         if ((item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")) {
@@ -432,15 +438,15 @@ export default function GlobalSelectionCartDrawer() {
 
         return [
           `${index + 1}. ${item.foreachModel}`,
-          `Product: ${localizedProductName}`,
-          `Product Code: ${item.productCode}`,
-          `Compatible Models: ${
+          `${isGermanQ20DrawingRequest ? "Produkttyp" : "Product"}: ${isGermanQ20DrawingRequest ? q20ProductName : localizedProductName}`,
+          `${isGermanQ20DrawingRequest ? t("Product Code") : "Product Code"}: ${item.productCode}`,
+          `${isGermanQ20DrawingRequest ? t("Compatible Models") : "Compatible Models"}: ${
             item.competitorModels.join(" / ") || "-"
           }`,
-          `Quantity: ${item.quantity}`,
+          `${isGermanQ20DrawingRequest ? t("Quantity") : "Quantity"}: ${item.quantity}`,
         ].join("\n");
       },
-    ).map((line, index) => `${line}\n${drawingRequirementsLine(submissionItems[index], locale)}`);
+    ).map((line, index) => `${line}\n${drawingRequirementsLine(submissionItems[index], drawingLocale)}`);
 
     const productTypeText = Array.from(
       new Set(
@@ -460,12 +466,12 @@ export default function GlobalSelectionCartDrawer() {
       .join(" / ");
 
     const requirementText = [
-      `Country / Region: ${formValue.country.trim() || "-"}`,
+      `${isGermanQ20DrawingRequest ? "Land / Region" : "Country / Region"}: ${formValue.country.trim() || "-"}`,
       "",
-      defaultInquiryRequest?.itemsHeading || (isEaQuoteRequest ? "Quotation Items:" : "Requested Drawing Items:"),
+      defaultInquiryRequest?.itemsHeading || (isEaQuoteRequest ? "Quotation Items:" : isGermanQ20DrawingRequest ? "Angefragte Zeichnungen:" : "Requested Drawing Items:"),
       requestedDrawingLines.join("\n\n"),
       formValue.message.trim()
-        ? `\nNotes:\n${formValue.message.trim()}`
+        ? `\n${isGermanQ20DrawingRequest ? "Zusätzliche Angaben" : "Notes"}:\n${formValue.message.trim()}`
         : "",
     ]
       .filter(Boolean)
@@ -483,11 +489,11 @@ export default function GlobalSelectionCartDrawer() {
       email: formValue.email.trim(),
       phone: formValue.phone.trim(),
       requestType: defaultInquiryRequest?.requestType || (isEaQuoteRequest ? "Product Inquiry" : "Drawing Request"),
-      productType: productTypeText.slice(0, 200) || "Selected Products",
+      productType: isGermanQ20DrawingRequest ? q20ProductName : productTypeText.slice(0, 200) || "Selected Products",
       targetModel: targetModelText.slice(0, 200),
       projectStage: defaultInquiryRequest?.projectStage || (isEaQuoteRequest ? "Configuration Quotation Review" : "Drawing Request Review"),
       message: requirementText,
-      locale,
+      locale: displayLocale,
     };
     Object.entries(fields).forEach(([key, value]) => {
       submission.append(key, value);
@@ -584,29 +590,32 @@ export default function GlobalSelectionCartDrawer() {
                     <tr key={item.id}>
                       <td>{group.accessories.length ? `${groupIndex + 1}.${partIndex + 1}` : groupIndex + 1}</td>
                       <td>
-                        {(item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
-                          ? cartCopy.sourceLabels.products
+                        {isGermanPage && item.flangedConfiguration ? assemblyText("管组件搭配选型", displayLocale)
+                          : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
+                            ? cartCopy.sourceLabels.products
                           : cartCopy.sourceLabels.fittingReplacement}
                       </td>
                       <td>
-                        {(item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
-                          ? getLocalizedCartProductName(
+                        {isGermanPage && item.flangedConfiguration ? flangedConfigurationProductName(item.flangedConfiguration, displayLocale)
+                          : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
+                            ? getLocalizedCartProductName(
                               item.productName,
                               item.sourceType,
-                              locale,
+                              displayLocale,
                               item,
                             )
                           : item.productCode}
                       </td>
                       <td>
-                        {item.instrumentConfiguration ? <span style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>{instrumentInquirySummary(item.instrumentConfiguration, locale)}</span> : item.eaPumpConfiguration ? <span style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>{eaPumpInquirySummary(item.eaPumpConfiguration, locale)}</span> : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
+                        {isGermanPage && item.flangedConfiguration ? assemblyText("待确认", displayLocale)
+                          : item.instrumentConfiguration ? <span style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>{instrumentInquirySummary(item.instrumentConfiguration, locale)}</span> : item.eaPumpConfiguration ? <span style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>{eaPumpInquirySummary(item.eaPumpConfiguration, locale)}</span> : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
                           ? item.bundleId ? `${isEnglish ? t("Product Code") : "商品编码"}: ${hardTubeProductCodeText(item, isEnglish ? "To be confirmed" : "待确认")}` : cartCopy.configuredProduct
                           : item.competitorModels.join(" / ") || "-"}
                       </td>
                       <td>{item.foreachModel}</td>
                       <td>{item.quantity}</td>
                       <td>
-                        {drawingRequirementsText(getDrawingTypes(item), locale)}
+                        {drawingRequirementsText(getDrawingTypes(item), displayLocale)}
                       </td>
                     </tr>
                   );
@@ -630,6 +639,7 @@ export default function GlobalSelectionCartDrawer() {
           右下角浮动按钮
       ===================================================== */}
       <div
+        lang={isGermanPage ? "de-DE" : isItalianPage ? "it-IT" : undefined}
         data-touch-feedback="neutral"
         data-selection-cart-actions
         className={`${styles.floatingActions} ${
@@ -664,11 +674,12 @@ export default function GlobalSelectionCartDrawer() {
             className={styles.mask}
             data-touch-feedback="neutral"
             type="button"
-            aria-label={isEnglish ? `${t("Close")} ${t("Product Selection List")}` : "关闭选型清单"}
+            aria-label={closeListLabel}
             onClick={closeCart}
           />
 
           <aside
+            lang={isGermanPage ? "de-DE" : isItalianPage ? "it-IT" : undefined}
             className={styles.drawer}
             aria-label={isEnglish ? t("Product Selection List") : "选型清单"}
           >
@@ -682,7 +693,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onPointerDown={handleCloseCartButtonPointerDown}
                 onClick={handleCloseCartButtonClick}
-                aria-label={isEnglish ? `${t("Close")} ${t("Product Selection List")}` : "关闭选型清单"}
+                aria-label={closeListLabel}
               >
                 <svg
                   viewBox="0 0 20 20"
@@ -729,7 +740,7 @@ export default function GlobalSelectionCartDrawer() {
                       const localizedProductName = getLocalizedCartProductName(
                         item.productName,
                         item.sourceType,
-                        locale,
+                        displayLocale,
                         item,
                       );
 
@@ -761,7 +772,7 @@ export default function GlobalSelectionCartDrawer() {
                           <div className={styles.itemHead}>
                             <div>
                               <span>
-                                {item.flangedConfiguration ? assemblyText("管组件搭配选型", locale) : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
+                                {item.flangedConfiguration ? assemblyText("管组件搭配选型", displayLocale) : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection")
                                   ? cartCopy.sourceLabels.products
                                   : cartCopy.sourceLabels.fittingReplacement}
                               </span>
@@ -769,7 +780,7 @@ export default function GlobalSelectionCartDrawer() {
                               {item.detailHref && (item.sourceType !== "pump-selection" && item.sourceType !== "tubing-selection") ? (
                                 <Link
                                   className={styles.itemTitleLink}
-                                  href={getCartDetailHref(item.detailHref, locale) ?? "#"}
+                                  href={getCartDetailHref(item.detailHref, displayLocale, fittingPathPattern) ?? "#"}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   title={cartCopy.openDetailsTitle}
@@ -784,13 +795,13 @@ export default function GlobalSelectionCartDrawer() {
                           </div>
 
                           {item.sourceType !== "tubing-selection" || item.flangedConfiguration ? <div className={styles.itemDrawings}>
-                            <DrawingRequirements locale={locale} value={getDrawingTypes(item)}
+                            <DrawingRequirements locale={displayLocale} value={getDrawingTypes(item)}
                               onChange={value => setDrawingTypes(item.id, value)} />
                           </div> : null}
 
                           {item.flangedConfiguration ? <>
-                            <details className={styles.configurationDetails}><summary>{assemblyText("查看配置参数", locale)}</summary><pre>{flangedConfigurationInquirySummary(item.flangedConfiguration, locale)}</pre></details>
-                            {item.drawingAttachment ? <ConfigurationPdfAttachments locale={locale} entries={[{ record: item.flangedConfiguration, attachment: item.drawingAttachment }]} international={isEnglish} /> : <p role="alert">{assemblyText("配置 PDF 附件缺失，请返回配置重新加入清单。", locale)}</p>}
+                            <details className={styles.configurationDetails}><summary>{assemblyText("查看配置参数", displayLocale)}</summary><pre>{flangedConfigurationInquirySummary(item.flangedConfiguration, displayLocale)}</pre></details>
+                            {item.drawingAttachment ? <ConfigurationPdfAttachments locale={displayLocale} entries={[{ record: item.flangedConfiguration, attachment: item.drawingAttachment }]} international={isEnglish} /> : <p role="alert">{assemblyText("配置 PDF 附件缺失，请返回配置重新加入清单。", displayLocale)}</p>}
                           </> : (item.sourceType === "pump-selection" || item.sourceType === "tubing-selection") ? (
                             <div className={styles.infoRow}>
                               <span>{isEnglish ? t("Product Type") : "产品类型"}</span>
@@ -826,7 +837,7 @@ export default function GlobalSelectionCartDrawer() {
                               <h3>{accessory.foreachModel}</h3>
                               <div className={styles.infoRow}>
                                 <span>{isEnglish ? t("Product Type") : "产品类型"}</span>
-                                <strong>{getLocalizedCartProductName(accessory.productName, accessory.sourceType, locale, accessory)}</strong>
+                                <strong>{getLocalizedCartProductName(accessory.productName, accessory.sourceType, displayLocale, accessory)}</strong>
                               </div>
                             </div>
                           ))}
@@ -858,7 +869,7 @@ export default function GlobalSelectionCartDrawer() {
 
               <div className={styles.note}>
                 <strong>{cartCopy.noteTitle}</strong>
-                <p>{defaultInquiry ? defaultInquiryCopy.listNote : hasEaConfiguration ? pistonText("清单保存在当前浏览器。所选配置、数量与补充需求将在询价时一并提交；图纸按勾选需求处理，已有配置 PDF 将自动附加。", locale) : items.some(item => item.flangedConfiguration) ? assemblyText("清单保存在当前浏览器。配置 PDF 将自动附加并随需求提交；其他产品的图纸需求按所选项目处理。", locale)
+                <p>{defaultInquiry ? defaultInquiryCopy.listNote : hasEaConfiguration ? pistonText("清单保存在当前浏览器。所选配置、数量与补充需求将在询价时一并提交；图纸按勾选需求处理，已有配置 PDF 将自动附加。", locale) : items.some(item => item.flangedConfiguration) ? assemblyText("清单保存在当前浏览器。配置 PDF 将自动附加并随需求提交；其他产品的图纸需求按所选项目处理。", displayLocale)
                   : cartCopy.noteDescription}</p>
               </div>
             </div>
@@ -869,7 +880,7 @@ export default function GlobalSelectionCartDrawer() {
                 type="button"
                 onClick={handleOpenDrawingRequestModal}
               >
-                {defaultInquiry ? defaultInquiryCopy.action : cartCopy.requestQuote}
+                {defaultInquiry ? defaultInquiryCopy.action : isQ20DrawingList ? drawingRequestTitle : cartCopy.requestQuote}
               </button>
 
               <button
@@ -883,7 +894,7 @@ export default function GlobalSelectionCartDrawer() {
               <button
                 className={styles.secondaryButton}
                 type="button"
-                onClick={copyCartText}
+                onClick={() => copyCartText(activeDraft)}
               >
                 {isEnglish ? t("Copy List") : "复制分享"}
               </button>
@@ -891,7 +902,7 @@ export default function GlobalSelectionCartDrawer() {
               <button
                 className={styles.secondaryButton}
                 type="button"
-                onClick={clearCart}
+                onClick={() => clearCart(activeDraft)}
               >
                 {isEnglish ? t("Clear") : "清空"}
               </button>
@@ -904,9 +915,9 @@ export default function GlobalSelectionCartDrawer() {
           通用公司信息弹窗｜当前用于申请图纸
       ===================================================== */}
       <CompanyInfoRequestModal
-        locale={locale}
+        locale={displayLocale}
         isOpen={isDrawingRequestModalOpen}
-        title={defaultInquiryRequest ? defaultInquiryCopy.title : isEaQuoteRequest ? pistonText("柱塞泵配置询价", locale) : isEnglish ? t("Request Drawings") : "申请图纸"}
+        title={defaultInquiryRequest ? defaultInquiryCopy.title : isEaQuoteRequest ? pistonText("柱塞泵配置询价", locale) : drawingRequestTitle}
         description={defaultInquiryRequest ? defaultInquiryCopy.description : isEaQuoteRequest ? pistonText("请核对配置与数量，并填写联系信息。我们将结合您的使用条件确认供货方案与报价。", locale) : drawingCopy.description}
         copyOverrides={defaultInquiryRequest ? {
           summary: defaultInquiryCopy.summary, emailPlaceholder: defaultInquiryCopy.emailPlaceholder,
@@ -919,9 +930,9 @@ export default function GlobalSelectionCartDrawer() {
         } : undefined}
         submissionBlocked={configurationPdfs.blocked}
         renderAttachments={(disabled) => (
-          <>{configurationPdfEntries.length || configurationPdfs.error ? <ConfigurationPdfAttachments locale={locale} entries={configurationPdfEntries} pending={configurationPdfs.pending} error={configurationPdfs.error} onRetry={configurationPdfs.retry} disabled={disabled} international={isEnglish} packageFile={configurationPdfs.files?.[0]} /> : null}<InquiryAttachmentField
-            key={locale}
-            locale={locale}
+          <>{configurationPdfEntries.length || configurationPdfs.error ? <ConfigurationPdfAttachments locale={displayLocale} entries={configurationPdfEntries} pending={configurationPdfs.pending} error={configurationPdfs.error} onRetry={configurationPdfs.retry} disabled={disabled} international={isEnglish} packageFile={configurationPdfs.files?.[0]} /> : null}<InquiryAttachmentField
+            key={displayLocale}
+            locale={displayLocale}
             files={drawingRequestFiles}
             disabled={disabled}
             onChange={setDrawingRequestFiles}

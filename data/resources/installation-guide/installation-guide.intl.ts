@@ -211,7 +211,7 @@ const installationGuideEnglishData: Omit<InstallationGuidePageData, "locale"> = 
   ],
 };
 
-type ForeignInstallationLocale = Exclude<InstallationGuideLocale, "zh-CN" | "en">;
+type ForeignInstallationLocale = Exclude<InstallationGuideLocale, "zh-CN" | "en" | "de" | "it" | "hi">;
 
 type InstallationGuideTranslation = Pick<
   InstallationGuidePageData["guides"][number],
@@ -540,7 +540,7 @@ const installationGuideTranslations: Record<
 };
 
 function getInstallationGuideIntlBaseData(
-  locale: InstallationGuideLocale,
+  locale: Exclude<InstallationGuideLocale, "de" | "it" | "hi">,
 ): InstallationGuidePageData {
   const prefix = `/${locale}`;
 
@@ -589,7 +589,7 @@ function getInstallationGuideIntlBaseData(
  * 只替换页面中的教程卡片数据。
  */
 export function getInstallationGuideIntlData(
-  locale: InstallationGuideLocale,
+  locale: Exclude<InstallationGuideLocale, "de" | "it" | "hi">,
 ): InstallationGuidePageData {
   const baseData =
     getInstallationGuideIntlBaseData(locale);

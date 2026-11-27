@@ -109,6 +109,10 @@ export function normalizeDiaphragmPumpLocale(locale: unknown) {
   return normalizeLocale(locale);
 }
 
+export function getDiaphragmPresentationLocale(locale: string) {
+  return locale === "de" || locale === "it" || locale === "hi" ? locale : normalizeDiaphragmPumpLocale(locale);
+}
+
 export function getDiaphragmPumpLocalePrefix(locale: unknown) {
   const normalizedLocale = normalizeLocale(locale);
 

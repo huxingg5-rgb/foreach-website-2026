@@ -7,12 +7,19 @@ export type FittingIntroductionLocale = Exclude<SelectionLocale, "zh">;
 export type LocalizedFittingIntroduction = {
   title: string;
   paragraphs: string[];
+  groups?: { slug?: string; title: string; description: string }[];
 };
 
 export const fittingIntroductionLocales: Record<
   FittingIntroductionLocale,
   Partial<Record<string, LocalizedFittingIntroduction>>
 > = copy;
+
+const germanFittingGroups: Readonly<Record<string, Pick<LocalizedFittingIntroduction, "groups">>> = copy.de;
+
+export function getGermanFittingIntroductionGroups(productTypeId: string) {
+  return germanFittingGroups[productTypeId]?.groups;
+}
 
 export function getLocalizedFittingIntroduction(
   locale: SelectionLocale,

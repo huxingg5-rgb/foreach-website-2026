@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 /* =========================================================
    page.tsx
    FOREACH Website｜Resources｜Foreign Language Resource Center Entry
@@ -30,7 +31,13 @@ import { notFound } from "next/navigation";
 
 import DatasheetsClient from "@/components/resources/DatasheetsClient";
 
-import type { DatasheetLocale } from "@/data/resources/datasheets.types";
+
+import { germanDatasheetAccessibilityLabels } from "@/data/resources/datasheets.de";
+import { hindiDatasheetAccessibilityLabels } from "@/data/resources/datasheets.hi";
+import { italianDatasheetAccessibilityLabels } from "@/data/resources/datasheets.it";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { buildDraftPageMetadata } from "@/lib/seo/international-page-metadata";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
 import { getDatasheetsPageData } from "@/services/resources/getDatasheetsPageData";
 
 import "@/app/resources/datasheets/datasheets.css";
@@ -44,7 +51,7 @@ import "@/app/resources/datasheets/datasheets.css";
    3. 外语资源中心路径是 /[locale]/resources
 ========================================================= */
 
-const SUPPORTED_RESOURCE_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
+const SUPPORTED_RESOURCE_LOCALES = ["en", "es", "fr", "ko", "ru", "de", "it", "hi"] as const;
 
 type SupportedResourceLocale = (typeof SUPPORTED_RESOURCE_LOCALES)[number];
 
@@ -58,7 +65,7 @@ type SupportedResourceLocale = (typeof SUPPORTED_RESOURCE_LOCALES)[number];
 ========================================================= */
 
 export function generateStaticParams() {
-  return SUPPORTED_RESOURCE_LOCALES.map((locale) => ({
+  return SUPPORTED_RESOURCE_LOCALES.filter(locale => (locale !== "de" && locale !== "it" && locale !== "hi") || languageDraftsEnabled).map((locale) => ({
     locale,
   }));
 }
@@ -83,6 +90,7 @@ type LocalizedResourcesPageProps = {
 function isSupportedResourceLocale(
   locale: string,
 ): locale is SupportedResourceLocale {
+  if (locale === "de" || locale === "it" || locale === "hi") return languageDraftsEnabled;
   return SUPPORTED_RESOURCE_LOCALES.includes(
     locale as SupportedResourceLocale,
   );
@@ -123,6 +131,9 @@ const resourcesMetadata = {
 } as const;
 
 const resourcesAccessibilityLabels = {
+  de: germanDatasheetAccessibilityLabels,
+  it: italianDatasheetAccessibilityLabels,
+  hi: hindiDatasheetAccessibilityLabels,
   es: {
     breadcrumb: "Ruta de navegación",
     categoryFilter: "Filtro de categoría de producto",
@@ -152,7 +163,7 @@ const resourcesAccessibilityLabels = {
    当前所有外语资源中心首页先统一使用英文 SEO。
 ========================================================= */
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: LocalizedResourcesPageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -167,6 +178,27 @@ export async function generateMetadata({
       description:
         "Access Foreach product datasheets, selection support, installation guides, material compatibility information, FAQs, and company news.",
     };
+  }
+
+  if (locale === "de") {
+    const title = "Ressourcen | FOREACH";
+    const description = "FOREACH Produktdatenblätter, Auswahlhilfen, Installationsanleitungen, Angaben zur Werkstoffverträglichkeit, Fachartikel, häufige Fragen und Unternehmensnachrichten.";
+    const canonical = getCanonicalUrl("/de/resources/");
+    return buildDraftPageMetadata({ locale, canonical, title, description });
+  }
+
+  if (locale === "it") {
+    const title = "Risorse | FOREACH";
+    const description = "Consulta schede tecniche, strumenti di selezione, guide di installazione, compatibilità dei materiali, articoli tecnici, domande frequenti e notizie FOREACH.";
+    const canonical = getCanonicalUrl("/it/resources/");
+    return { title, description, alternates: { canonical }, robots: { index: false }, openGraph: { title, description, url: canonical, locale: "it_IT" } };
+  }
+
+  if (locale === "hi") {
+    const title = "संसाधन | FOREACH";
+    const description = "FOREACH की उत्पाद डेटाशीट, चयन सहायता, स्थापना गाइड, सामग्री संगतता की जानकारी, अक्सर पूछे जाने वाले सवाल और कंपनी की खबरें देखें।";
+    const canonical = getCanonicalUrl("/hi/resources/");
+    return { title, description, alternates: { canonical }, robots: { index: false }, openGraph: { title, description, url: canonical, locale: "hi_IN" } };
   }
 
   const localizedMetadata = resourcesMetadata[locale];
@@ -191,7 +223,7 @@ export default async function LocalizedResourcesPage({
     notFound();
   }
 
-  const pageData = await getDatasheetsPageData(locale as DatasheetLocale);
+  const pageData = await getDatasheetsPageData(locale);
 
   return (
     <DatasheetsClient
@@ -204,3 +236,5 @@ export default async function LocalizedResourcesPage({
     />
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/resources/", getPageMetadata);

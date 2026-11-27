@@ -15,9 +15,12 @@ export type TutorialPlayerSource =
   | { type: "empty"; src: "" };
 
 const modalText: Record<
-  InstallationGuideLocale,
+  InstallationGuideLocale | "it" | "hi",
   { close: string; unavailable: string; watchOnYouTube: string }
 > = {
+  hi: { close: "वीडियो बंद करें", unavailable: "यह ट्यूटोरियल वीडियो अभी अपलोड नहीं हुआ है। बाद में फिर देखें या तकनीकी सहायता से संपर्क करें।", watchOnYouTube: "YouTube पर देखें" },
+  it: { close: "Chiudi video", unavailable: "Il video non è al momento disponibile.", watchOnYouTube: "Guarda su YouTube" },
+  de: { close: "Video schließen", unavailable: "Das Video ist derzeit nicht verfügbar.", watchOnYouTube: "Auf YouTube ansehen" },
   "zh-CN": {
     close: "关闭视频",
     watchOnYouTube: "在 YouTube 观看",
@@ -155,7 +158,7 @@ export function getGuidePlayerSource(
 
 type TutorialVideoPlayerModalProps = {
   guide: InstallationGuideCard;
-  locale: InstallationGuideLocale;
+  locale: InstallationGuideLocale | "it" | "hi";
   playRequestId: number;
   onClose: () => void;
 };

@@ -1,0 +1,357 @@
+{
+  "metadata": {
+    "title": "Come calcolare il bilancio delle pressioni di un circuito ad alta contropressione? Esempio di scelta di una pompa a membrana miniaturizzata Foreach da 600 kPa",
+    "seoTitle": "Bilancio delle pressioni ad alta contropressione: scelta della pompa da 600 kPa | Foreach Technology",
+    "seoDescription": "Per scegliere la pompa di un circuito ad alta contropressione, includi tubi di aspirazione e mandata, valvole, filtro, ago, camera terminale e carico idrostatico nel bilancio stazionario. Valuta a parte protezione dai transitori e margine di pressione.",
+    "coverImage": "/images/resources/technical-articles/high-backpressure-fluid-path-pressure-budget/article-cover.webp",
+    "coverAlt": "Riprese delle prove di una pompa a membrana miniaturizzata in un circuito ad alta contropressione dal canale Douyin ufficiale di Foreach"
+  },
+  "deck": "Per un circuito ad alta contropressione, indicare al fornitore un requisito più completo di «6 bar». Suddividere le perdite di carico stazionarie alla portata obiettivo. Distinguere condizioni stazionarie normali e peggiori, margine di pressione e limiti di protezione dai transitori. Confrontare quindi questi dati con la curva controllata della pompa candidata.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un circuito ad alta contropressione comprende in genere serbatoio, tubo di aspirazione, pompa, valvole, raccordi, filtro, ago o ugello e camera terminale. Ogni componente può contribuire al differenziale necessario. Per completare l’erogazione, la pompa deve superare le perdite stazionarie alla portata obiettivo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nel bilancio, tenere distinti condizioni normali, condizioni peggiori, margine di progetto e picchi dovuti a commutazioni o ostruzioni. Le condizioni normali e peggiori definiscono i punti di lavoro. Il margine indica la tolleranza del progetto alle variazioni. I transitori definiscono i limiti di rilevamento, arresto, scarico della pressione e protezione dei componenti."
+    },
+    {
+      "type": "notice",
+      "label": "Conclusione tecnica:",
+      "text": "Registrare separatamente regime stazionario normale, regime stazionario peggiore, margine di pressione e protezione dai transitori. Un picco transitorio si tratta nel progetto delle protezioni. Escluderlo dal bilancio stazionario delle perdite di carico e dal punto di lavoro continuo."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Calcolare il bilancio delle pressioni partendo dall’intero circuito",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "ΔPsteady(Qtarget) = Poutlet,steady(Qtarget) − Pinlet,steady(Qtarget)",
+          "note": "Uniformare prima pressioni relative, pressioni assolute e convenzione dei segni. Calcolare quindi le pressioni in ingresso e in uscita alla stessa portata obiettivo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un bilancio per componente può includere perdite stazionarie in aspirazione e nel tubo di mandata, perdite localizzate in valvole e raccordi, perdite di carico in filtro e ago o ugello, pressione della camera terminale e differenza di pressione idrostatica. Riunire nello stesso bilancio stazionario solo dati riferiti allo stesso stato e alla stessa portata obiettivo, con una convenzione dei segni coerente."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/high-backpressure-fluid-path-pressure-budget/article-figure-it.svg",
+          "alt": "Schema a corsie parallele per il bilancio delle pressioni stazionarie e i limiti di protezione dai transitori in un circuito ad alta contropressione",
+          "width": 2560,
+          "height": 2360,
+          "caption": "Figura 7. Bilancio delle pressioni ad alta contropressione. Distinguere le perdite stazionarie e confrontarne il totale con la curva della pompa. Considerare a parte i picchi transitori per progettare le protezioni."
+        }
+      ]
+    },
+    {
+      "title": "2. Raccogliere almeno dodici categorie di dati per un’applicazione ad alta contropressione",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Voce",
+            "Dati da fornire",
+            "Origine dei dati"
+          ],
+          "rows": [
+            [
+              "Fluido",
+              "Nome, concentrazione, temperatura, viscosità e presenza di particelle o bolle",
+              "Formulazione e condizioni di processo"
+            ],
+            [
+              "Portata obiettivo",
+              "Minima, nominale, massima e tolleranza ammessa",
+              "Tempo di ciclo dell’apparecchiatura"
+            ],
+            [
+              "Condizioni del serbatoio",
+              "Intervallo del livello, pressione del recipiente ed eventuale avvio iniziale a secco",
+              "Disposizione dell’apparecchiatura"
+            ],
+            [
+              "Tubo di aspirazione",
+              "Diametro interno, lunghezza, materiale, gomiti e raccordi",
+              "Disegno o gruppo fisico"
+            ],
+            [
+              "Tubo di mandata",
+              "Diametro interno, lunghezza, materiale, gomiti e raccordi",
+              "Disegno o gruppo fisico"
+            ],
+            [
+              "Valvole",
+              "Codice completo del modello, diametro di passaggio, Cv o curva di perdita di carico",
+              "Dati del fornitore"
+            ],
+            [
+              "Filtro",
+              "Codice completo del modello, perdita di carico dell’elemento nuovo e perdita a fine vita",
+              "Dati del fornitore o misura"
+            ],
+            [
+              "Ago o ugello",
+              "Codice completo del modello, diametro interno, lunghezza e dati di portata e perdita di carico",
+              "Dati del fornitore o misura"
+            ],
+            [
+              "Camera terminale",
+              "Pressione atmosferica, o intervallo di pressione negativa o positiva",
+              "Definizione del sistema"
+            ],
+            [
+              "Ciclo di lavoro",
+              "Funzionamento continuo o intermittente, frequenza di avvii e arresti e durata di ogni ciclo",
+              "Ciclo del programma"
+            ],
+            [
+              "Transitori e condizioni anomale",
+              "Commutazione delle valvole, ostruzioni, picchi di avvio e arresto, durata e interventi di protezione",
+              "Prove dinamiche"
+            ],
+            [
+              "Alimentazione e controllo",
+              "Intervallo di tensione, PWM, limitazione di corrente e retroazione",
+              "Progettazione elettrica"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Definire separatamente quattro condizioni",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "1. Punto di lavoro stazionario normale"
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPnormal steady(Qtarget) = Poutlet,normal steady(Qtarget) − Pinlet,normal steady(Qtarget)",
+          "note": "Usare livello tipico del liquido, filtro nuovo, tensione nominale e fluido alla temperatura normale per confermare il punto di lavoro abituale e l’intervallo di regolazione."
+        },
+        {
+          "type": "subheading",
+          "title": "2. Punto di lavoro stazionario peggiore"
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPworst steady(Qtarget) = Poutlet,worst steady(Qtarget) − Pinlet,worst steady(Qtarget)",
+          "note": "Usare livello minimo del liquido, filtro a fine vita, limite di viscosità o temperatura del fluido e pressione terminale massima sostenibile per confermare il fabbisogno massimo del circuito."
+        },
+        {
+          "type": "subheading",
+          "title": "3. Margine di pressione"
+        },
+        {
+          "type": "formula",
+          "expression": "Mpressure(Qtarget) = ΔPcandidate pump allowable boundary(Qtarget) − ΔPworst steady(Qtarget)",
+          "note": "Il limite operativo della pompa candidata deve provenire da una curva o una specifica controllata con gli stessi fluido, temperatura, condizioni in ingresso, alimentazione minima ammessa e ciclo di lavoro. Definire a parte il margine accettabile per il progetto."
+        },
+        {
+          "type": "subheading",
+          "title": "4. Protezione dai transitori e dalle condizioni anomale"
+        },
+        {
+          "type": "paragraph",
+          "text": "Per i picchi dovuti a commutazioni delle valvole, avvii e arresti, ostruzione a valle, azionamento errato delle valvole o schiacciamento dei tubi, registrare pressione di picco, durata, posizione e causa. Verificare separatamente campo del sensore, soglia di arresto, percorso di scarico della pressione e limite transitorio ammesso da ogni componente. Questi dati servono a progettare le protezioni, mentre il punto di lavoro continuo si determina con il bilancio stazionario."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Condizione",
+            "Dati da includere",
+            "Scopo"
+          ],
+          "rows": [
+            [
+              "Regime stazionario normale",
+              "Livello tipico del liquido, filtro nuovo, tensione nominale e fluido alla temperatura normale",
+              "Confermare punto di lavoro normale e intervallo di regolazione"
+            ],
+            [
+              "Regime stazionario peggiore",
+              "Livello minimo del liquido, filtro a fine vita, limiti di fluido e di pressione terminale. Verificare a parte le prestazioni della pompa all’alimentazione minima ammessa",
+              "Confermare portata obiettivo, margine e funzionalità a lungo termine"
+            ],
+            [
+              "Margine di pressione",
+              "Limite operativo ammesso della pompa candidata meno fabbisogno stazionario nella condizione peggiore",
+              "Assorbire variazioni di produzione, misura, invecchiamento e condizioni di esercizio"
+            ],
+            [
+              "Protezione dai transitori o dalle condizioni anomale",
+              "Commutazione delle valvole, ostruzioni, commutazioni errate, tubi schiacciati e picchi di avvio e arresto",
+              "Definire i limiti di rilevamento, arresto, scarico della pressione e protezione dei componenti"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Esempio di bilancio: sommare le perdite stazionarie e valutare a parte transitori e margine",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’esempio illustra il metodo e non si riferisce a un’apparecchiatura reale di un cliente. Si assume una portata obiettivo di 220 mL/min. Nelle condizioni stazionarie sostenibili peggiori, misure o dati dei fornitori indicano una perdita in aspirazione di 10 kPa, una perdita nel tratto rettilineo di mandata di 18 kPa, una perdita nella valvola di 12 kPa, una perdita nel filtro a fine vita di 35 kPa, una perdita nell’ago di 95 kPa e una pressione nella camera terminale di 20 kPa."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPworst steady(220 mL/min) ≈ 10 + 18 + 12 + 35 + 95 + 20 = 190 kPa",
+          "note": "Si possono sommare le sei voci perché riguardano la stessa portata obiettivo e la stessa condizione stazionaria peggiore."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il risultato di 190 kPa rende di norma inadatta a una valutazione diretta una pompa standard della classe 100 kPa. Anche una pompa da 600 kPa va verificata. Leggere la curva controllata della pompa candidata a 220 mL/min, calcolare il margine di pressione e verificare fluido, temperatura, condizioni in ingresso, connessioni, alimentazione e ciclo di lavoro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se la commutazione di una valvola genera un picco di breve durata, registrarlo come evento transitorio e progettare la protezione in base a entità, durata e posizione. Tenere separato il picco dal punto di lavoro stazionario a 190 kPa. Considerare anche il margine a parte rispetto alle perdite nell’equazione stazionaria."
+        }
+      ]
+    },
+    {
+      "title": "5. Quando includere Foreach DPL30H tra le pompe candidate",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dati pubblicati per la pompa a membrana ad alta pressione per liquidi Foreach DPL30H includono portata a vuoto di 300 mL/min, pressione nominale di 600 kPa, altezza di autoadescamento di 3 mH₂O e connessione a compressione per tubo rigido da 6 × 4 mm. È una candidata per applicazioni ad alta contropressione. La scelta dipende dalla portata disponibile alla contropressione obiettivo e dal rispetto dei limiti di fluido, temperatura e ciclo di lavoro previsti dalla specifica controllata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se le restrizioni principali sono ago e filtro, rilevarne le perdite di carico con fluido, temperatura e stato di usura effettivi. Se il problema principale è la depressione in ingresso o il riempimento insufficiente della camera, verificare il lato di aspirazione a parte. Una pressione in uscita più alta può lasciare il problema irrisolto."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per la scelta della pompa, consultare la ",
+              "label": "guida alla scelta della pompa a membrana ad alta pressione per liquidi DPL30H",
+              "href": "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Dopo il bilancio, verificare la pressione di esercizio ammessa più bassa dell’intero circuito",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Con una pompa nominale da 600 kPa, verificare separatamente se ogni tubo rigido da 6 × 4 mm, raccordo, valvola, filtro, sensore di pressione e camera è idoneo a lavorare a 600 kPa. Il componente con il limite di pressione di esercizio più basso determina il limite dell’intero circuito."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Confermare materiale del tubo, tolleranza del diametro esterno, qualità del taglio, profondità di innesto e requisiti di serraggio dei raccordi a compressione.",
+            "Verificare distintamente pressione di esercizio ammessa e pressione di prova per valvole, filtri, sensori e camere, con le relative condizioni.",
+            "Selezionare campo del sensore, arresto per sovrapressione e percorso di scarico in base alle condizioni stazionarie normali e peggiori e ai limiti di protezione dai transitori.",
+            "Completare le prove di mantenimento della pressione, tenuta, avvio e arresto, commutazione delle valvole, protezione in caso di ostruzione e durata."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Modello di condizioni operative da allegare a una richiesta",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Campo",
+            "Voce di esempio da sostituire con i dati effettivi del progetto"
+          ],
+          "rows": [
+            [
+              "Fluido e temperatura",
+              "Acqua purificata, 20–30°C"
+            ],
+            [
+              "Portata obiettivo",
+              "Nominale 220 mL/min, minima 200 mL/min"
+            ],
+            [
+              "Condizioni in ingresso",
+              "Il livello del serbatoio è 0.4 m sotto la pompa. Il tubo contiene aria al primo avvio"
+            ],
+            [
+              "Circuito di mandata",
+              "Diametro interno 2.0 mm, lunghezza 1.2 m, con due valvole, un filtro e un ago terminale"
+            ],
+            [
+              "Dati di pressione stazionaria",
+              "Registrare a parte condizioni stazionarie normali e peggiori, incluse quelle del filtro a fine vita"
+            ],
+            [
+              "Transitori e protezione",
+              "Registrare a parte picco di commutazione, durata, soglia di arresto e percorso di scarico della pressione"
+            ],
+            [
+              "Ciclo di lavoro",
+              "45 s per ciclo, 1,200 cicli al giorno, con intervallo di temperatura ambiente"
+            ],
+            [
+              "Controllo",
+              "24 V, regolazione di velocità PWM e segnale di ritorno FG richiesto"
+            ],
+            [
+              "Obiettivi di validazione",
+              "Portata, pressione stazionaria, picchi transitori, avvio, aumento di temperatura, tenuta e andamento nel tempo"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Risorse Foreach e limiti di validità",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Foreach: guida alla scelta della pompa a membrana ad alta pressione per liquidi DPL30H",
+              "href": "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide"
+            }
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limiti di validità:",
+          "text": "Le risorse pubbliche Foreach chiariscono la terminologia. Per il progetto definitivo, ricavare i dati da specifica controllata, valutazione con il fluido reale, prove dinamiche di pressione e validazione del sistema completo."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sul bilancio delle pressioni nei circuiti ad alta contropressione",
+  "faqItems": [
+    {
+      "question": "Serve un bilancio preciso per ogni raccordo?",
+      "answer": "Per la valutazione preliminare, identificare prima le restrizioni prevalenti. Prima di approvare il progetto, esaminare ogni riduzione significativa e ogni componente critico. In un circuito miniaturizzato anche un singolo raccordo con piccolo diametro di passaggio può generare una perdita di carico importante."
+    },
+    {
+      "question": "Che fare se mancano i dati sul filtro a fine vita?",
+      "answer": "Chiedere prima al fornitore la curva di portata e perdita di carico del modello esatto. Definire poi un limite tramite una prova di carico del filtro o una restrizione equivalente. Con i soli dati del filtro nuovo non si può rappresentare l’intera vita utile."
+    },
+    {
+      "question": "Si può sommare un picco transitorio alla pressione stazionaria?",
+      "answer": "Registrare a parte il picco transitorio, con entità, durata, posizione e causa. Usarlo per valutare campo del sensore, arresto, scarico della pressione e limiti transitori dei componenti. La pressione di esercizio continua e il punto di lavoro stazionario richiedono una valutazione separata."
+    },
+    {
+      "question": "Se il bilancio è inferiore a 600 kPa, funzionerà qualsiasi pompa da 600 kPa?",
+      "answer": "Verificare anche portata alla pressione obiettivo, margine di pressione, fluido, temperatura, condizioni in ingresso, ciclo di lavoro, controllo, connessioni e pressione di esercizio ammessa più bassa dell’intero circuito."
+    },
+    {
+      "question": "In quale fase del progetto è più utile il bilancio delle pressioni?",
+      "answer": "Stimarlo durante la progettazione concettuale. In prototipazione, misurare con sensori le condizioni stazionarie normali, quelle peggiori e i picchi transitori separatamente. Prima di congelare il progetto, definire e controllare i limiti di esercizio, margine e protezione."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi verificare il bilancio delle pressioni di un circuito ad alta contropressione?",
+    "description": "Indica fluido, portata obiettivo, condizioni in ingresso, circuito completo, pressioni stazionarie normali e peggiori, transitori, ciclo di lavoro e requisiti di controllo. Un tecnico potrà confrontare la curva della pompa candidata con i limiti dell’intero circuito.",
+    "contactLabel": "Invia le condizioni di esercizio",
+    "productsLabel": "Vedi le pompe a membrana ad alta pressione",
+    "productsHref": "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide"
+  }
+}

@@ -1,4 +1,38 @@
-import type { LocaleCode } from "@/lib/i18n";
+import { replacePathLocale, type LocaleCode } from "@/lib/i18n";
+import hindiHero from "./home-hero.hi.json";
+import { getHindiDraftLink, getItalianDraftLink } from "@/lib/i18n/draft-languages";
+
+export type HomeHeroLocale = LocaleCode | "de" | "it" | "hi";
+
+export const homeHeroMainHi = {
+  heroTitleLine1: "फ्लुइडिक घटक",
+  heroTitleLine2: "OEM उपकरणों के लिए",
+  heroSubtitle: "उपकरणों और औद्योगिक सिस्टम में सटीक तरल प्रबंधन के लिए FOREACH के पंप, वाल्व, प्रोब, सेंसर, ट्यूब और फिटिंग देखें।",
+  productButton: "उत्पाद देखें",
+  contactButton: "तकनीकी सहायता लें",
+};
+
+export const homeHeroMainIt = {
+  heroTitleLine1: "Componenti fluidici",
+  heroTitleLine2: "per strumenti OEM",
+  heroSubtitle: "Pompe, valvole, sonde, sensori, tubi e raccordi per la gestione precisa dei fluidi negli strumenti e nelle apparecchiature industriali.",
+  productButton: "Scopri i prodotti",
+  contactButton: "Contatta l’assistenza",
+};
+
+export const homeHeroMainDe = {
+  heroTitleLine1: "Fluidikkomponenten",
+  heroTitleLine2: "für OEM-Geräte",
+  heroSubtitle: "Pumpen, Ventile, Sonden, Sensoren, Schläuche und Fittings für präzise Flüssigkeitshandhabung in Instrumenten und Industrieanlagen.",
+  productButton: "Produkte ansehen",
+  contactButton: "Technischen Support kontaktieren",
+};
+
+export function getHomeHeroHref(path: string, locale: HomeHeroLocale) {
+  if (locale === "hi") return getHindiDraftLink("/en" + path).href;
+  if (locale === "it") return getItalianDraftLink("/en" + path).href;
+  return locale === "de" ? "/de" + path : replacePathLocale(path, locale);
+}
 
 type HomeHeroText = {
   slideNames: readonly [string, string, string];
@@ -13,7 +47,8 @@ type HomeHeroText = {
   };
 };
 
-export const homeHeroText: Record<LocaleCode, HomeHeroText> = {
+export const homeHeroText: Record<HomeHeroLocale, HomeHeroText> = {
+  hi: { ...hindiHero, slideNames: [hindiHero.slideNames[0], hindiHero.slideNames[1], hindiHero.slideNames[2]] },
   "zh-CN": {
     slideNames: ["微流体产品总览", "管组件实时配置", "流阻计算器"],
     flow: {
@@ -46,6 +81,40 @@ export const homeHeroText: Record<LocaleCode, HomeHeroText> = {
       washer: "Washer", ring: "O-ring", tag: "Tube label",
       material: "Material: ", fitting: "Fitting:", endA: "End A · HFL6", text: "Text:",
       labelText: "Tube label text", placeholder: "Enter text",
+    },
+  },
+  it: {
+    slideNames: ["Panoramica dei componenti fluidici", "Configuratore di assemblaggi di tubi", "Calcolo delle perdite di carico"],
+    flow: {
+      titleLine1: "Calcolo delle perdite", titleLine2: "di carico",
+      description: "Calcola la perdita di carico o la portata per tubi, valvole e raccordi.",
+      button: "Calcola ora",
+    },
+    tubing: {
+      titleLine1: "Configura i tubi online", titleLine2: "Disegni e anteprime",
+      descriptionLine1: "Scegli tubo, raccordi e lunghezza. Aggiungi O-ring, rondelle ed etichette secondo necessità.",
+      descriptionLine2: "Esamina l’anteprima e genera disegni 2D quotati con i dettagli dei componenti per la verifica del progetto.",
+      button: "Inizia la configurazione", drawingLabel: "Configuratore di disegni per assemblaggi di tubi",
+      washer: "Rondella", ring: "O-ring", tag: "Etichetta tubo",
+      material: "Materiale: ", fitting: "Raccordo:", endA: "Estremità A · HFL6", text: "Testo:",
+      labelText: "Testo dell’etichetta del tubo", placeholder: "Inserisci il testo",
+    },
+  },
+  de: {
+    slideNames: ["Fluidikkomponenten im Überblick", "Konfigurator für Schlauchkonfektionen", "Rechner für Druckverlust und Durchfluss"],
+    flow: {
+      titleLine1: "Druckverlust", titleLine2: "und Durchfluss berechnen",
+      description: "Berechnen Sie Druckverlust oder Volumenstrom für Schläuche, Ventile und Fluidik-Fittings.",
+      button: "Jetzt berechnen",
+    },
+    tubing: {
+      titleLine1: "Schlauchleitungen konfigurieren", titleLine2: "Mit Vorschau und Zeichnung",
+      descriptionLine1: "Wählen Sie Schlauch, Fittings und Länge. Ergänzen Sie bei Bedarf O-Ringe, Scheiben und Schlauchetiketten.",
+      descriptionLine2: "Prüfen Sie Ihre Konfiguration in der Vorschau und erstellen Sie zur Konstruktionsprüfung eine 2D-Zeichnung mit Maß- und Bauteilangaben.",
+      button: "Konfigurieren", drawingLabel: "Zeichnungskonfigurator für Schlauchkonfektionen",
+      washer: "Scheibe", ring: "O-Ring", tag: "Schlauchetikett",
+      material: "Material: ", fitting: "Fitting:", endA: "Ende A · HFL6", text: "Text:",
+      labelText: "Text für das Schlauchetikett", placeholder: "Text eingeben",
     },
   },
   es: {

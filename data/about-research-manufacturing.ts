@@ -1,69 +1,10 @@
-/* =========================================================
-   about-research-manufacturing.ts
-   恒永达官网｜关于我们 / 研发与制造能力页面数据
-
-   文件路径：
-   data/about-research-manufacturing.ts
-
-   说明：
-   1. 这个文件只放“数据”
-   2. 包括：图片路径、多语言文案、SEO 信息、卡片数据、流程数据
-   3. 页面组件 ResearchManufacturingPageContent.tsx 只负责渲染和交互
-   4. app/about/research-manufacturing/page.tsx 只负责中文页面入口和 SEO
-   5. app/[locale]/about/research-manufacturing/page.tsx 只负责多语言页面入口和 SEO
 
 
-banner.webp                         1920 × 620
+import germanCopy from "./about-de/research-manufacturing.json";
+import italianCopy from "./about-it/research-manufacturing.json";
+import hindiCopy from "./about-hi/research-manufacturing.json";
+import { translateGermanAbout as translateAboutCopy } from "./about-de/translate-german-about";
 
-intro/rd-manufacturing-intro.webp   1200 × 760
-
-ability/research-center.webp        1200 × 760
-ability/machining-center.webp       1200 × 760
-ability/extrusion-center.webp       1200 × 760
-
-process/project-process-bg.webp     1920 × 760
-
-applications/ivd-diagnostics.webp         1000 × 720
-applications/life-science.webp            1000 × 720
-applications/analytical-instrument.webp   1000 × 720
-applications/synthetic-biology.webp       1000 × 720
-applications/lab-automation.webp          1000 × 720
-
-why/why-choose-bg.webp              1920 × 720
-cta/contact-bg.webp                 1920 × 520
-
-public/
-└─ images/
-   └─ about/
-      └─ research-manufacturing/
-         ├─ banner.webp
-         ├─ intro/
-         │  └─ rd-manufacturing-intro.webp
-         ├─ ability/
-         │  ├─ research-center.webp
-         │  ├─ machining-center.webp
-         │  └─ extrusion-center.webp
-         ├─ process/
-         │  └─ project-process-bg.webp
-         ├─ applications/
-         │  ├─ ivd-diagnostics.webp
-         │  ├─ life-science.webp
-         │  ├─ analytical-instrument.webp
-         │  ├─ synthetic-biology.webp
-         │  └─ lab-automation.webp
-         ├─ why/
-         │  └─ why-choose-bg.webp
-         └─ cta/
-            └─ contact-bg.webp
-
-========================================================= */
-
-/* =========================================================
-   1. 官网支持的语言类型
-   说明：
-   zh-CN：中文默认语言，不走 /zh 路径
-   en / es / fr / ko / ru：走 /en、/es、/fr、/ko、/ru 路径
-========================================================= */
 export const RESEARCH_MANUFACTURING_LOCALES = [
   "zh-CN",
   "en",
@@ -73,8 +14,8 @@ export const RESEARCH_MANUFACTURING_LOCALES = [
   "ru",
 ] as const;
 
-export type ResearchManufacturingLocale =
-  (typeof RESEARCH_MANUFACTURING_LOCALES)[number];
+type ResearchManufacturingSourceLocale = (typeof RESEARCH_MANUFACTURING_LOCALES)[number];
+export type ResearchManufacturingLocale = ResearchManufacturingSourceLocale | "de" | "it" | "hi";
 
 /* =========================================================
    2. 非中文语言列表
@@ -225,7 +166,7 @@ export type ResearchManufacturingSeo = {
    这里用于 page.tsx / generateMetadata
 ========================================================= */
 export const researchManufacturingSeoMap: Record<
-  ResearchManufacturingLocale,
+  ResearchManufacturingSourceLocale,
   ResearchManufacturingSeo
 > = {
   "zh-CN": {
@@ -275,7 +216,7 @@ export const researchManufacturingSeoMap: Record<
    所有正文、标题、卡片、流程、按钮文字都放这里
 ========================================================= */
 export const researchManufacturingTextMap: Record<
-  ResearchManufacturingLocale,
+  ResearchManufacturingSourceLocale,
   ResearchManufacturingPageText
 > = {
   "zh-CN": {
@@ -1348,17 +1289,17 @@ export function isResearchManufacturingRouteLocale(
 ========================================================= */
 export function normalizeResearchManufacturingLocale(
   locale?: string
-): ResearchManufacturingLocale {
+): ResearchManufacturingSourceLocale {
   if (!locale || locale === "zh" || locale === "zh-CN") {
     return "zh-CN";
   }
 
   if (
     RESEARCH_MANUFACTURING_LOCALES.includes(
-      locale as ResearchManufacturingLocale
+      locale as ResearchManufacturingSourceLocale
     )
   ) {
-    return locale as ResearchManufacturingLocale;
+    return locale as ResearchManufacturingSourceLocale;
   }
 
   return "en";
@@ -1370,6 +1311,7 @@ export function normalizeResearchManufacturingLocale(
 export function getResearchManufacturingText(
   locale?: string
 ): ResearchManufacturingPageText {
+  if (locale === "de" || locale === "it" || locale === "hi") return translateAboutCopy(researchManufacturingTextMap.en, locale === "de" ? germanCopy : locale === "hi" ? hindiCopy : italianCopy);
   const safeLocale = normalizeResearchManufacturingLocale(locale);
   return researchManufacturingTextMap[safeLocale];
 }
@@ -1380,6 +1322,7 @@ export function getResearchManufacturingText(
 export function getResearchManufacturingSeo(
   locale?: string
 ): ResearchManufacturingSeo {
+  if (locale === "de" || locale === "it" || locale === "hi") return translateAboutCopy(researchManufacturingSeoMap.en, locale === "de" ? germanCopy : locale === "hi" ? hindiCopy : italianCopy);
   const safeLocale = normalizeResearchManufacturingLocale(locale);
   return researchManufacturingSeoMap[safeLocale];
 }   

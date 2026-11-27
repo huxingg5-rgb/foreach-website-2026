@@ -617,7 +617,7 @@ export function getDiaphragmPumpCategoryIntro(
   return diaphragmPumpCategoryIntroMap[category][activeLocale] || null;
 }
 
-export function getValvelessPumpCategoryIntro(seriesValue: string | undefined, locale: SelectionLocale): ProductTypeIntroContent | null {
+export function getValvelessPumpCategoryIntro(seriesValue: string | undefined, locale: SelectionLocale | "it" | "hi"): ProductTypeIntroContent | null {
   const localized = locale === "zh" ? valvelessPumpIntroZh : getValvelessLocaleCopy(locale);
   if (!localized) return null;
   const copy = seriesValue === "RPL 无阀泵" ? localized.single : seriesValue === "DRPL 双头无阀泵" ? localized.dual : localized.category;

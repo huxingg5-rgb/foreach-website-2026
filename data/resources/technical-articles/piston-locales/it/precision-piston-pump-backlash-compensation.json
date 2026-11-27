@@ -1,0 +1,189 @@
+{
+  "slug": "precision-piston-pump-backlash-compensation",
+  "title": "Guida alla compensazione del gioco nelle pompe a pistone di precisione",
+  "summary": "Scopri il gioco all’inversione, i metodi di misura e i tempi della compensazione. Distingui il moto perso meccanico dal volume effettivamente aspirato o erogato.",
+  "seoTitle": "Compensazione del gioco nelle pompe a pistone di precisione | FOREACH",
+  "seoDescription": "Misura il gioco all’inversione, converti il moto perso in passi interi o impulsi di compensazione e valida le sequenze di erogazione singola o frazionata.",
+  "date": "2026-09-06",
+  "coverImage": "/images/resources/technical-articles/piston-pump/precision-piston-pump-backlash-compensation-cover.webp",
+  "coverAlt": "Azionamento e circuito fluidico di una pompa a pistone di precisione FOREACH",
+  "intro": [
+    {
+      "type": "paragraph",
+      "text": "I giochi tra vite di avanzamento, chiocciola e trasmissione possono assorbire una parte del moto dopo l’inversione del motore, prima che il pistone si muova nella nuova direzione. L’effetto conta soprattutto nelle erogazioni a corsa breve e nel primo movimento dopo il passaggio tra aspirazione ed erogazione."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Che cos’è il gioco all’inversione?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Il gioco varia con costruzione, montaggio e usura. Il precarico meccanico può ridurlo. La compensazione software corregge il moto perso misurato all’inversione. Bolle, anomalie delle valvole e perdite richiedono interventi separati."
+        }
+      ]
+    },
+    {
+      "title": "Come misurare il gioco",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "I metodi gravimetrico e fotometrico misurano il liquido erogato e includono gli effetti del circuito e dello strumento. La misura dello spostamento isola più direttamente l’errore meccanico di inversione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per misurare altezza o spostamento, usa una risoluzione adeguata e controlla montaggio, forza di contatto, velocità e direzione di lettura. Porta il meccanismo al riferimento ed entra nella corsa utile. Recupera il gioco iniziale in una direzione, registra la posizione di partenza, comanda movimenti uguali di andata e ritorno, quindi registra la differenza."
+        },
+        {
+          "type": "notice",
+          "label": "Esempio di procedura: ",
+          "text": "Ripeti 20 volte: aspira per l’80% della corsa, eroga 100 passi interi per recuperare il gioco iniziale, registra la posizione di partenza, eroga per il 50% della corsa, aspira per il 50% della corsa e registra la posizione finale. Verifica che il movimento preliminare e le quote di corsa scelte rispettino i finecorsa e coprano effettivamente il gioco della pompa."
+        },
+        {
+          "type": "formula",
+          "expression": "Backlash magnitude = |x₂ − x₁|",
+          "note": "Conserva media, massimo, dispersione, direzione e condizioni complete di prova."
+        }
+      ]
+    },
+    {
+      "title": "Come usare il riferimento dei 20 passi interi",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "I valori seguenti illustrano la compensazione a titolo di esempio. Per i dati di fabbrica e le specifiche applicabili, consulta il modello effettivo."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Capacità della pompa (μL)",
+            "Percentuale della corsa",
+            "Compensazione di riferimento (passi interi)"
+          ],
+          "rows": [
+            [
+              "100",
+              "1%",
+              "20"
+            ],
+            [
+              "250",
+              "1%",
+              "20"
+            ],
+            [
+              "500",
+              "1%",
+              "20"
+            ],
+            [
+              "1,000",
+              "1%",
+              "20"
+            ],
+            [
+              "2,500",
+              "1%",
+              "20"
+            ],
+            [
+              "5,000",
+              "1%",
+              "20"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Convertire il moto perso misurato in un comando",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Per una corsa persa misurata b in mm, un avanzamento diretto p in mm/giro e N passi interi per giro, la compensazione stimata in passi interi è b × N ÷ p. Con fattore di micropasso m, gli impulsi in ingresso sono b × N × m ÷ p, arrotondati e calibrati nelle unità di posizione del controllore."
+        },
+        {
+          "type": "formula",
+          "expression": "full steps ≈ b × N ÷ p; pulses ≈ b × N × m ÷ p",
+          "note": "Venti passi interi equivalgono a 320 impulsi in ingresso con 16 micropassi soltanto se il controllore conta gli impulsi dei micropassi."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per la conversione delle unità, consulta ",
+              "label": "Calcolo e scelta del motore passo-passo per una pompa a pistone di precisione",
+              "href": "/resources/technical-articles/stepper-motor-calculation-selection/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Una sola aspirazione X e una sola erogazione X",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Una sequenza esegue innanzitutto l’aspirazione dei passi di compensazione dopo la ricerca del riferimento, poi aspira il volume obiettivo X con la sonda nel reagente. A destinazione comanda la corsa di erogazione obiettivo più la corsa di compensazione, separando il recupero del gioco dall’erogazione effettiva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conferma posizione della sonda, separazioni d’aria, valvole e corsa disponibile. Le prove sul circuito mostrano se il movimento preliminare causa aspirazione involontaria di liquido o aria oppure un errore di dosaggio."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per ottenere un moto regolare dopo la compensazione, consulta ",
+              "label": "Curve di accelerazione e decelerazione delle pompe a pistone",
+              "href": "/resources/technical-articles/piston-pump-acceleration-deceleration-curves/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Una sola aspirazione e più erogazioni: X = Y + Z",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Una sequenza di erogazione frazionata può compensare il gioco prima dell’aspirazione, aspirare X più un volume di compensazione, recuperare il gioco all’inversione e poi erogare Y e Z. L’aspirazione aggiuntiva e il residuo richiedono di verificare quanto di X lascia effettivamente il sistema."
+        },
+        {
+          "type": "paragraph",
+          "text": "Misura la prima aliquota, quelle intermedie, l’ultima aliquota e il residuo. La compensazione corrisponde a un’inversione effettiva. In una serie di erogazioni nella stessa direzione, di norma basta compensare all’inversione. Coordina la sequenza con valvole, separazioni d’aria, fluido e contropressione."
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Conclusioni",
+    "parts": [
+      {
+        "type": "paragraph",
+        "text": "Misura il gioco sul meccanismo reale e convertilo usando trasmissione e unità del controllore effettive. Calibra poi la sequenza completa di aspirazione ed erogazione ai volumi obiettivo. I 20 passi interi sono un valore di esempio."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Vuoi validare la compensazione del gioco della pompa a pistone?",
+    "description": "Per valutare la configurazione, indica trasmissione, unità del controllore, corsa di lavoro, sequenza delle valvole, fluido, volume obiettivo e metodo di misura.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Visualizza le pompe a pistone"
+  },
+  "subject": {
+    "about": [
+      "compensazione del gioco nella pompa a pistone",
+      "moto perso all’inversione"
+    ],
+    "mentions": [
+      "vite di avanzamento",
+      "passo intero",
+      "micropasso",
+      "erogazione frazionata",
+      "calibrazione per la manipolazione dei liquidi"
+    ]
+  }
+}

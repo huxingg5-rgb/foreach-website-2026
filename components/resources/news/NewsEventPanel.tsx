@@ -11,8 +11,7 @@
 
 import ContactInquiryLink from "@/components/contact/ContactInquiryLink";
 import type { NewsEventPanelConfig } from "@/data/resources/news/news-event-panels";
-import type { NewsLocale } from "@/data/resources/news/news.types";
-import type { LocaleCode } from "@/lib/i18n";
+import type { NewsResourceLocale } from "@/data/resources/news/news.types";
 
 import styles from "./NewsEventPanel.module.css";
 
@@ -22,7 +21,7 @@ export default function NewsEventPanel({
   variant,
 }: {
   config: NewsEventPanelConfig;
-  locale: NewsLocale;
+  locale: NewsResourceLocale;
   variant: "full" | "cta";
 }) {
   const copy = config.copy[locale] ?? config.copy.en;
@@ -48,7 +47,7 @@ export default function NewsEventPanel({
           <ContactInquiryLink
             className={styles.button}
             href={contactHref}
-            inquiryLocale={locale as LocaleCode}
+            inquiryLocale={locale === "de" ? "en" : locale}
           >
             {copy.cta}
           </ContactInquiryLink>

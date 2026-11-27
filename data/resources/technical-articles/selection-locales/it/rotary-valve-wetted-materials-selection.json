@@ -1,0 +1,348 @@
+{
+  "kind": "selection",
+  "family": "valve",
+  "footerProducts": [
+    {
+      "id": "mrv3-ceramic-rotary-valve",
+      "title": "MRV3 Valvola rotativa multicanale in ceramica",
+      "href": "/en/products/valves/rotary-valves",
+      "imageSrc": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+      "imageAlt": "MRV3 Valvola rotativa multicanale in ceramica"
+    }
+  ],
+  "sidebarProducts": [
+    {
+      "id": "mrv3-ceramic-rotary-valve",
+      "title": "MRV3 Valvola rotativa multicanale in ceramica",
+      "href": "/en/products/valves/rotary-valves",
+      "imageSrc": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+      "imageAlt": "MRV3 Valvola rotativa multicanale in ceramica"
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Scelta dei materiali a contatto delle valvole rotative: testa, rotore e tenute",
+      "seoTitle": "Testa e materiali a contatto delle valvole rotative: PEEK o PCTFE? | FOREACH",
+      "seoDescription": "Controlla testa, statore, rotore ed elenco completo dei materiali a contatto. Confronta PEEK, PCTFE e coppie di tenuta secondo reagenti, lavaggio, temperatura e tempo di contatto, quindi convalida tenuta, residui e stabilità.",
+      "coverImage": "/images/resources/technical-articles/rotary-valves/foreach-rotary-valve-wetted-materials-cover.webp",
+      "coverAlt": "Serie FOREACH MRV3 di valvole rotative multicanale in ceramica"
+    },
+    "deck": "Identifica tutti i componenti a contatto con il liquido prima di confrontare PEEK, PCTFE e altri candidati. Valuta insieme compatibilità chimica, tenuta dinamica e risultati analitici.",
+    "leadBlocks": [
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/rotary-valves/foreach-rotary-valve-wetted-materials-cover.webp",
+        "width": 1178,
+        "height": 1156,
+        "alt": "Serie FOREACH MRV3 di valvole rotative multicanale in ceramica",
+        "caption": ""
+      },
+      {
+        "type": "paragraph",
+        "text": "Per scegliere i materiali a contatto di una valvola rotativa, partire dall'elenco completo. Verificare reagenti, campioni e liquidi di lavaggio e conservazione con ogni componente. Convalidare concentrazione, temperatura, durata di contatto e condizioni di commutazione. La sola resistenza alla corrosione della testa non dimostra l'idoneità della valvola completa."
+      },
+      {
+        "type": "paragraph",
+        "text": "Una valvola rotativa cambia i collegamenti del liquido, quindi si distinguono materiale della testa e materiali a contatto. Testa, statore, rotore e altri elementi di tenuta esposti hanno funzioni diverse e possono usare materiali differenti. Valutare ogni componente e poi la combinazione completa."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Elencare i componenti a contatto prima di valutare la testa",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il liquido entra nel passaggio della testa attraverso un raccordo, attraversa le porte dello statore e la scanalatura del rotore e raggiunge un altro collegamento. Seguire il percorso per identificare l'esposizione effettiva. Colore del corpo, nome del prodotto o dicitura valvola in ceramica non sostituiscono l'elenco dei materiali a contatto."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Punto da controllare",
+              "Dati necessari",
+              "Perché influisce sulla scelta"
+            ],
+            "rows": [
+              [
+                "Testa e passaggi interni",
+                "Materiale, grado, cariche e modifiche",
+                "Il contatto diretto richiede compatibilità chimica e stabilità strutturale"
+              ],
+              [
+                "Statore, rotore e superfici di tenuta",
+                "Combinazione specifica di materiali e struttura",
+                "Si muovono l'uno rispetto all'altro a contatto con il liquido, conservando la tenuta"
+              ],
+              [
+                "Altre tenute o elementi di collegamento",
+                "Contatto con il fluido, materiale e posizione nell'assieme",
+                "Anche un piccolo componente non verificato può limitare l'idoneità"
+              ],
+              [
+                "Raccordi, tubi e componenti a valle",
+                "Elenco dei materiali a contatto di tutto il percorso condiviso",
+                "L'idoneità della valvola non dimostra quella del circuito completo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "I dati MRV3 distinguono la testa in PEEK o PCTFE dallo statore in zirconia e dal rotore in zaffiro. Lo schema d'ordine codifica separatamente materiale della testa e combinazione del rotore. Una testa PEEK non implica un rotore PEEK. La coppia di tenuta in ceramica non identifica il materiale della testa."
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/downloads/resources/datasheets/en/Valves/ps-120c-2507-00003-001-en-mrv3-multi-channel-rotary-valve.pdf",
+                "label": "Scheda tecnica MRV3, pagina 10: codici distinti per materiale della testa e coppia di tenuta"
+              }
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Distinguere materiale, grado e formulazione"
+          },
+          {
+            "type": "paragraph",
+            "text": "Oltre al nome di base, come PEEK o PTFE, l'elenco deve indicare il grado e specificare se il materiale è caricato, rinforzato o modificato. Resine non caricate e compositi possono differire per prestazioni meccaniche, tenuta e compatibilità chimica. Lo stesso nome generico non dimostra l'intercambiabilità."
+          },
+          {
+            "type": "paragraph",
+            "text": "Testa e coppia di tenuta svolgono funzioni diverse e possono usare combinazioni differenti. Per confrontare configurazioni o sostituire parti, verificare separatamente testa, statore, rotore e altri componenti esposti. La compatibilità del materiale della testa non si estende automaticamente a tutta la valvola."
+          }
+        ]
+      },
+      {
+        "title": "Come confrontare PEEK e PCTFE?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "PEEK significa polietereterchetone. PCTFE significa policlorotrifluoroetilene. Sono famiglie diverse con proprietà distinte. Per la scelta considerare grado specifico e progettazione della testa. Le proprietà generali aiutano la preselezione. Pressione, temperatura e durata della valvola finita richiedono verifiche proprie."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Materiale candidato",
+              "Proprietà per la preselezione",
+              "Verifiche specifiche ancora necessarie"
+            ],
+            "rows": [
+              [
+                "Testa in PEEK",
+                "Prestazioni meccaniche e ampia compatibilità chimica ne fanno un candidato per componenti fluidici di precisione",
+                "Solvente, acido o base specifico, concentrazione, temperatura, grado e carico meccanico"
+              ],
+              [
+                "Testa in PCTFE",
+                "Fluoropolimero con resistenza chimica, stabilità dimensionale e bassa permeabilità",
+                "Compatibilità con il liquido e comportamento del pezzo lavorato a pressione, temperatura e contatto prolungato"
+              ],
+              [
+                "Coppia di tenuta ceramica/zaffiro",
+                "Assicura contatto in rotazione e tenuta. Valutare separatamente dalla testa",
+                "Tipo di ceramica, accoppiamento, fluidi ed effetti delle particelle sul funzionamento della tenuta"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Un risultato di compatibilità con un solvente a temperatura ambiente non dimostra l'idoneità a una miscela di lavaggio più calda. La resistenza termica del materiale non sostituisce i limiti della valvola montata e del driver. Se entrambi i candidati superano la verifica sui fluidi, confrontare compatibilità meccanica, risultati analitici dopo la pulizia, configurazioni disponibili e costi di manutenzione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Descrizioni generiche come solvente organico o reagente acido o basico non dimostrano la compatibilità. Alcuni solventi o acidi forti possono causare rigonfiamento, adsorbimento o variazioni delle proprietà dei polimeri, secondo formulazione ed esposizione. Specificare composizione, concentrazione, temperatura e durata di contatto. I dati di materia prima o tubo non definiscono direttamente i valori nominali della testa finita."
+          }
+        ]
+      },
+      {
+        "title": "Valutare insieme liquidi di lavoro, lavaggio e condizioni di arresto",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Nel corso della vita utile la valvola entra in contatto con altri liquidi oltre al reagente. Lavaggio quotidiano, disinfezione periodica e conservazione durante l'arresto possono essere esposizioni significative. Scegliere solo per il reagente, senza verificare detergente o temperatura, può alterare la tenuta, danneggiare le superfici o cambiare il segnale di fondo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Condizione iniziale",
+              "Che cosa registrare",
+              "Perché conta"
+            ],
+            "rows": [
+              [
+                "Composizione dei fluidi",
+                "Formulazione completa o ingredienti principali, rapporto di miscelazione e impurità",
+                "Liquidi con pH uguale possono avere diversa composizione del solvente e diverso potere ossidante"
+              ],
+              [
+                "Concentrazione e temperatura",
+                "Campo normale, esposizione massima e condizioni di lavaggio",
+                "I risultati a temperatura ambiente e bassa concentrazione non si possono estrapolare direttamente"
+              ],
+              [
+                "Modalità di esposizione",
+                "Immersione continua, erogazione intermittente, permanenza durante l'arresto e cicli bagnato/asciutto",
+                "Esposizione breve e permanenza prolungata possono avere effetti diversi"
+              ],
+              [
+                "Particelle e cristallizzazione",
+                "Dimensioni, concentrazione, depositi e precipitazione dopo l'asciugatura",
+                "La compatibilità chimica non dimostra che passaggi o superfici di tenuta tollerino le particelle"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Valutare se i tamponi salini asciugano e cristallizzano durante l'arresto, se i campioni aderiscono ai percorsi condivisi o se due reagenti precipitano a contatto. Includere questi fattori nelle procedure di ricambio e arresto. Il risciacquo intermedio deve essere compatibile con entrambi i liquidi adiacenti e con tutti i componenti a contatto, oltre a rimuovere il colore visibile."
+          }
+        ]
+      },
+      {
+        "title": "Che cosa convalidare oltre alla resistenza alla corrosione?",
+        "blocks": [
+          {
+            "type": "subheading",
+            "title": "Tenuta e movimento in condizioni reali di rotazione"
+          },
+          {
+            "type": "paragraph",
+            "text": "L'immersione statica può mostrare scolorimento, rigonfiamento o variazioni superficiali. Per la rotazione sotto pressione serve una prova distinta. Il movimento relativo e il contatto di tenuta richiedono di monitorare resistenza all'azionamento, perdite interne ed esterne e stato dopo commutazioni ripetute. Prima dei cicli definire condizioni di prova adatte al modello."
+          },
+          {
+            "type": "subheading",
+            "title": "Residui e sostanze cedute: effetti sui risultati analitici"
+          },
+          {
+            "type": "paragraph",
+            "text": "Un aspetto invariato non dimostra che la composizione del liquido sia intatta. Per analisi a bassa concentrazione o reagenti sensibili al fondo, valutare adsorbimento, segnale di fondo del liquido dopo contatto, recupero dell'analita e residui dopo lavaggio. Definire le misure secondo il metodo analitico. La resistenza alla corrosione non equivale ad assenza di adsorbimento o sostanze cedute."
+          },
+          {
+            "type": "subheading",
+            "title": "Controlli sul circuito completo: la causa è davvero la testa?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Se il primo risultato resta alterato dopo aver cambiato materiale della testa, ispezionare rotore, statore, raccordi, tubi e camera pompa. Tubi comuni lunghi, ricambio incompleto e bolle possono produrre sintomi simili. Distinguere problemi dei materiali e del circuito prima di sostituire di nuovo la testa."
+          }
+        ]
+      },
+      {
+        "title": "Dalla selezione dei materiali alla convalida del sistema",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Creare una matrice materiali e fluidi. Ottenere l'elenco completo dei materiali a contatto per la configurazione d'ordine e abbinare ciascun liquido di lavoro, lavaggio e conservazione a ogni componente.",
+              "Controllare i dati di compatibilità per lo stesso grado e le stesse condizioni. Registrare fonte, concentrazione, temperatura e durata. Le combinazioni prive di dati richiedono convalida.",
+              "Eseguire prima le prove di esposizione appropriate. Controllare le variazioni di massa, dimensioni, aspetto e segnale di fondo secondo necessità, per escludere i candidati chiaramente inadatti.",
+              "Convalidare tenuta dinamica e commutazione dopo il montaggio. Con tubi e liquidi effettivi, entro le condizioni ammissibili, controllare perdite, movimento, flusso e riavvio dopo l'arresto.",
+              "Eseguire l'intero processo analitico o di erogazione. Usare bianchi, il primo campione dopo la commutazione e i risultati successivi per valutare residui e ripetibilità rispetto ai criteri dello strumento."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Conservare grado dei materiali, accoppiamento dei componenti, modello esatto, condizioni e criteri di accettazione. Rivalutare dopo modifiche alla formulazione di lavaggio, alla temperatura, al grado o a parti critiche. Il superamento della prova riguarda le condizioni verificate."
+          }
+        ]
+      },
+      {
+        "title": "Come confermare le opzioni di materiali MRV3?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Lo schema d'ordine MRV3 usa PK per la testa in PEEK e PE per quella in PCTFE, con codici separati per la coppia di tenuta. Indicare il codice completo oltre all'abbreviazione, ad esempio MRV3-D10. Le opzioni di serie non rendono intercambiabili o a magazzino tutte le combinazioni di canale, passaggio, materiali e driver."
+          },
+          {
+            "type": "paragraph",
+            "text": "Fornire a FOREACH l'elenco dei fluidi e le condizioni effettive per valutare materiali della testa e delle parti a contatto. Se mancano evidenze sull'esposizione prolungata o sui cicli, includerle nella convalida del prototipo. Per la compatibilità servono dati oltre al nome della serie."
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/products/valves/rotary-valves/",
+                "label": "Visualizza la serie MRV3 e le singole configurazioni"
+              },
+              {
+                "href": "/en/resources/technical-articles/rotary-valve-selection-guide/",
+                "label": "Torna alla guida di scelta: valuta i materiali nelle condizioni di esercizio complete"
+              },
+              {
+                "href": "/en/resources/technical-articles/how-does-a-rotary-selector-valve-work/",
+                "label": "Che cos'è una valvola rotativa? Testa, rotore e statore"
+              },
+              {
+                "href": "/downloads/resources/datasheets/en/Valves/ps-120c-2507-00003-001-en-mrv3-multi-channel-rotary-valve.pdf",
+                "label": "Verifica i codici d'ordine completi nella scheda tecnica MRV3, pagina 10 (in inglese)"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sui materiali delle valvole rotative",
+    "faqItems": [
+      {
+        "question": "Il PEEK o il PCTFE è sempre migliore?",
+        "answer": "Il confronto dipende dall'applicazione. Valutare composizione, concentrazione, temperatura, durata di esposizione e grado specifici, quindi convalidare tenuta, residui di lavaggio e risultati analitici. Confermare che il modello richiesto offra la combinazione."
+      },
+      {
+        "question": "Una valvola rotativa in ceramica può entrare in contatto con qualsiasi acido o base?",
+        "answer": "I tipi di ceramica e le coppie di tenuta differiscono. Altre parti a contatto possono essere polimeriche. Controllare l'intera combinazione nelle condizioni specifiche dei fluidi."
+      },
+      {
+        "question": "Una testa resistente alla corrosione risolve la contaminazione incrociata?",
+        "answer": "Residui nel percorso condiviso, adsorbimento, trafilamento tra porte e lavaggio insufficiente possono causare contaminazione. Prima di modificare materiali o processo, individuare la causa con il primo risultato dopo la commutazione, i bianchi e i controlli del percorso."
+      }
+    ],
+    "cta": {
+      "title": "Conferma la configurazione della valvola rotativa per il tuo circuito",
+      "description": "Fornisci schema fluidico, reagenti e soluzioni di lavaggio, pressione, temperatura, ciclo di commutazione e requisiti dei raccordi per valutare canali e materiali a contatto.",
+      "contactLabel": "Invia i requisiti di selezione",
+      "productsLabel": "Visualizza le valvole rotative MRV3",
+      "productsHref": "/en/products/valves/rotary-valves/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "materials-parts",
+      "label": "Elenco completo dei materiali a contatto"
+    },
+    {
+      "id": "materials-comparison",
+      "label": "PEEK e PCTFE"
+    },
+    {
+      "id": "materials-media",
+      "label": "Fluidi e condizioni di lavaggio"
+    },
+    {
+      "id": "materials-performance",
+      "label": "Tenuta e prestazioni analitiche"
+    },
+    {
+      "id": "materials-checks",
+      "label": "Fasi di convalida dei materiali"
+    },
+    {
+      "id": "materials-models",
+      "label": "Opzioni di materiali MRV3"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Materiali a contatto delle valvole rotative",
+      "Scelta del materiale della testa",
+      "Compatibilità chimica"
+    ],
+    "mentions": [
+      "PEEK",
+      "PCTFE",
+      "Ceramica di zirconia",
+      "Zaffiro",
+      "MRV3"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "{material}-Leitung auswählen",
+  "empty": "Wählen Sie Innen- und Außendurchmesser und Lieferspezifikation aus. Speichern Sie anschließend die Konfiguration für Ihre Anfrage.",
+  "pvcEmpty": "Wählen Sie Härte, Innen- und Außendurchmesser sowie die Lieferspezifikation aus und speichern Sie die Konfiguration für Ihre Anfrage.",
+  "saved": "{count} Konfigurationen gespeichert. Zeigen Sie auf einen Eintrag für die Vorschau. Klicken Sie darauf, um ihn offen zu halten. Klicken Sie außerhalb, um ihn zu schließen.",
+  "group": "Gespeicherte Konfigurationen",
+  "configuration": "Konfiguration {number}",
+  "add": "Konfiguration hinzufügen",
+  "edit": "Konfiguration bearbeiten",
+  "save": "Konfiguration speichern",
+  "createTitle": "Neue Konfiguration {number}",
+  "editTitle": "Konfiguration {number} bearbeiten",
+  "code": "Artikelnummer",
+  "addToList": "Zur Liste hinzufügen",
+  "viewList": "Liste ansehen",
+  "remove": "Konfiguration löschen",
+  "confirmRemove": "Konfiguration {number} löschen? Einträge auf der Anfrageliste bleiben erhalten.",
+  "confirm": "Löschen bestätigen",
+  "cancel": "Abbrechen"
+}

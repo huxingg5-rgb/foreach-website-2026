@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "title": "Il motore di una micropompa a membrana per liquidi da 300 mL/min gira ma il liquido non scorre. Da dove iniziare?",
+    "seoTitle": "Il motore della micropompa a membrana gira ma il liquido non scorre | Foreach Technology",
+    "seoDescription": "Diagnosticare l’assenza di portata con il motore in funzione in una micropompa a membrana per liquidi da 300 mL/min. Verificare perdite all’ingresso, ostruzioni, valvole di non ritorno, contropressione e corrente di azionamento.",
+    "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-motor-power-check.webp",
+    "coverAlt": "Micropompa a membrana per liquidi Foreach DPL30 usata per la diagnosi del circuito fluidico"
+  },
+  "deck": "La rotazione del motore conferma che l’azionamento è attivo. Per verificare il riempimento della camera, l’azione direzionale delle valvole di non ritorno e il carico di mandata, misurare pressione in ingresso, pressione in uscita, portata e corrente del motore. Queste misure consentono una diagnosi più rapida del solo ascolto.",
+  "leadBlocks": [
+    {
+      "type": "formula",
+      "expression": "Q_net ≈ fV_sη_fillη_valve − Q_leak",
+      "note": "Il modello diagnostico distingue frequenza dei cicli, volume utile per corsa, efficienza di riempimento della camera, efficienza delle valvole e perdite. L’equazione è generale e non specifica della DPL30."
+    },
+    {
+      "type": "notice",
+      "label": "Sicurezza durante l’intervento",
+      "text": "Scollegare l’alimentazione elettrica e scaricare la pressione prima di aprire le tubazioni o la testata della pompa. Svuotare e decontaminare il sistema secondo il rischio chimico o biologico effettivo."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Verificare che il motore in rotazione produca un pompaggio effettivo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una pompa a membrana per liquidi richiede una corsa utile della membrana, il riempimento della camera, l’azione direzionale delle valvole di ingresso e di uscita e una capacità di pressione sufficiente a superare il differenziale del sistema. Un guasto in uno di questi punti può lasciare il motore udibile con l’uscita ancora asciutta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tradurre il sintomo in due misure: verificare se si crea depressione all’ingresso e se la pressione in uscita diventa anomala. In genere questi riscontri circoscrivono il guasto più rapidamente di uno smontaggio immediato."
+        }
+      ]
+    },
+    {
+      "title": "2. Depressione scarsa o assente all’ingresso: verificare perdite, valvole e corsa utile",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se la pressione in ingresso diminuisce appena e il liquido non entra, verificare infiltrazioni d’aria, porte invertite, valvole che non tengono, contaminazione nella testata e movimenti della membrana o della trasmissione che non producono uno spostamento utile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Raccordi dei tubi privi di tenuta, particelle nella testata, valvole chiuse nel sistema, filtri ostruiti e parti della testata incompatibili con il fluido sono cause comuni di mancato adescamento o di prestazioni ridotte. Isolare una variabile fisica per volta."
+        },
+        {
+          "type": "notice",
+          "label": "Prova rapida",
+          "text": "Usare un tubo di ingresso corto, trasparente e a tenuta. Confermare il senso di flusso e il livello della sorgente e ripetere la prova. Ispezionare la testata solo se la pompa continua a non generare depressione."
+        }
+      ]
+    },
+    {
+      "title": "3. Forte depressione all’ingresso senza arrivo di liquido: controllare il percorso tra sorgente e pompa",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "P_in,abs = P_tank,abs − ρgh − ΔP_tube − ΣΔP_components",
+          "note": "La pressione in ingresso dipende dalla pressione nel serbatoio, dall’altezza di aspirazione e dalle perdite in tubazioni e componenti. Se il recipiente di alimentazione è chiuso e non può entrare aria di compensazione, P_tank,abs diminuisce durante il prelievo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una forte depressione suggerisce che la pompa stia aspirando e che il percorso di alimentazione sia limitato. Controllare filtro d’ingresso, tubi schiacciati o piegati, apertura delle valvole, sfiato del flacone, livello del liquido e altezza di aspirazione."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Sfiatare il recipiente di alimentazione se il processo lo consente.",
+            "Accorciare e allargare il tratto d’ingresso e ridurre il dislivello non necessario.",
+            "Escludere temporaneamente i filtri e le valvole non essenziali, quindi reinserirli uno alla volta.",
+            "Dopo ogni modifica, registrare la pressione in ingresso e il tempo fino al primo arrivo del liquido."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Il liquido entra ma non esce: controllare contropressione e restrizioni in mandata",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "ΔP_pump = P_out − P_in",
+          "note": "La pompa deve superare il differenziale di pressione complessivo tra ingresso e uscita. Per valutarlo servono entrambe le pressioni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un’uscita ostruita, un filtro intasato, una valvola chiusa, un ago sottile, un ugello o un ricevitore pressurizzato possono aumentare la pressione di mandata. Valvole, ugelli, tubi e raccordi modificano anche la contropressione e il punto di lavoro effettivo della pompa."
+        },
+        {
+          "type": "notice",
+          "label": "Limite del valore nominale",
+          "text": "I 300 mL/min della DPL30 corrispondono alla portata senza carico. Per un circuito ad alta resistenza, verificare la portata obiettivo e il differenziale di pressione totale nelle condizioni di contropressione effettive."
+        }
+      ]
+    },
+    {
+      "title": "5. Usare le pressioni in ingresso e in uscita per circoscrivere il guasto",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Sintomo",
+            "Pressione in ingresso",
+            "Pressione in uscita",
+            "Controlli prioritari"
+          ],
+          "rows": [
+            [
+              "Il motore gira, ma la pompa non si adesca",
+              "Depressione quasi assente",
+              "Bassa",
+              "Infiltrazione d’aria, porte invertite, tenuta delle valvole, corsa della membrana"
+            ],
+            [
+              "La depressione aumenta, ma il liquido non arriva",
+              "Chiaramente più bassa",
+              "Bassa",
+              "Ostruzione all’ingresso, altezza di aspirazione eccessiva, sorgente senza sfiato"
+            ],
+            [
+              "Il liquido entra, ma la portata in uscita è bassa",
+              "Vicina al valore di riferimento",
+              "Alta",
+              "Valvola in uscita, filtro, ago, ugello o contropressione"
+            ],
+            [
+              "Portata e bolle fluttuano",
+              "Oscillante",
+              "Può oscillare di conseguenza",
+              "Infiltrazione d’aria, rilascio di gas disciolto, vaporizzazione o cavitazione"
+            ],
+            [
+              "L’adescamento a umido riesce, quello a secco fallisce",
+              "Insufficiente all’avvio a secco",
+              "Torna ai valori attesi in condizioni umide",
+              "Tenuta all’aria interna o esterna e chiusura delle valvole"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Affiancare la corrente del motore alle altre misure",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "Record: P_in(t) + P_out(t) + Q(t) + I(t)",
+          "note": "Questi segnali, considerati insieme, aiutano a distinguere resistenza del circuito fluidico, mancato pompaggio e variazioni del carico dell’azionamento."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il funzionamento senza carico, con carico normale di liquido, con contropressione elevata o con una limitazione meccanica produce spesso curve di corrente diverse. La corrente dipende anche da alimentazione, versione del motore e strategia di controllo. Usarla per confronti a parità di condizioni insieme alle altre misure."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Confermare la presenza di liquido alla sorgente, il senso delle porte, la tensione di alimentazione prescritta e l’apertura dell’uscita.",
+            "Preparare una prova di riferimento con acqua e tubo corto e registrare tutti e quattro i segnali.",
+            "Reinserire uno alla volta i componenti in ingresso per localizzare il guasto in aspirazione.",
+            "Reinserire uno alla volta i componenti in uscita per localizzare la causa della contropressione.",
+            "Aprire la testata della pompa solo dopo avere isolato il circuito fluidico esterno."
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti | Il motore della micropompa a membrana gira ma il liquido non scorre",
+  "faqItems": [
+    {
+      "question": "Un rumore normale del motore dimostra che la pompa funziona correttamente?",
+      "answer": "No. Occorre verificare la corsa utile della membrana, il riempimento della camera, la tenuta delle valvole e il differenziale di pressione ammesso."
+    },
+    {
+      "question": "Perché una forte depressione all’ingresso può indicare che la causa principale è a monte della pompa?",
+      "answer": "Una forte depressione indica che la pompa genera aspirazione. Aumenta quindi la priorità di controllare sorgente priva di sfiato, ingresso ostruito, aspirazione troppo alta o tubo schiacciato."
+    },
+    {
+      "question": "Conviene aumentare la tensione per forzare il passaggio del liquido?",
+      "answer": "No. Confermare che l’alimentazione rispetti le specifiche e individuare prima la restrizione o l’origine della contropressione. Aumentare la tensione può sovraccaricare il motore, la trasmissione o la testata."
+    },
+    {
+      "question": "Perché con l’uscita limitata non si raggiungono più 300 mL/min?",
+      "answer": "Perché 300 mL/min è la portata senza carico. La resistenza aggiuntiva in uscita sposta il punto di lavoro lungo la curva della pompa e riduce la portata effettiva."
+    },
+    {
+      "question": "Quali sono le misure minime utili?",
+      "answer": "Usare un’alimentazione affidabile e misurare la corrente, la pressione assoluta o la depressione in ingresso, la pressione in uscita e la portata, per esempio raccogliendo il liquido per un tempo definito."
+    }
+  ],
+  "cta": {
+    "title": "Il motore della DPL30 gira ma nel circuito il liquido continua a non scorrere?",
+    "description": "Per circoscrivere il guasto tra ingresso, pompa e uscita, indicare pressioni in ingresso e uscita, tubi installati, altezza della sorgente, carico di mandata, fluido, tensione e corrente di alimentazione e differenze tra adescamento a secco e a umido.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Vedi la micropompa a membrana per liquidi DPL30",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump"
+  }
+}

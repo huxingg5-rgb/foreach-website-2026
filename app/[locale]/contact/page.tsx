@@ -1,4 +1,5 @@
-import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
+import { buildDraftPageMetadata, buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜外语版联系我们页面入口
@@ -31,6 +32,10 @@ import { notFound } from "next/navigation";
 
 import ContactPageContent from "@/components/contact/ContactPageContent";
 import CompanyPageStructuredData from "@/components/common/CompanyPageStructuredData";
+import { contactDeData } from "@/data/contact-cooperation/contact.de";
+import { contactItData } from "@/data/contact-cooperation/contact.it";
+import { contactHiData } from "@/data/contact-cooperation/contact.hi";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
 import {
   CONTACT_INTL_LOCALES,
   getContactIntlData,
@@ -61,9 +66,10 @@ type ContactIntlPageProps = {
 ========================================================= */
 
 export function generateStaticParams() {
-  return CONTACT_INTL_LOCALES.map((locale) => ({
-    locale,
-  }));
+  return [
+    ...CONTACT_INTL_LOCALES.map((locale) => ({ locale })),
+    ...(languageDraftsEnabled ? [{ locale: "de" }, { locale: "it" }, { locale: "hi" }] : []),
+  ];
 }
 
 /* =========================================================
@@ -74,10 +80,27 @@ export function generateStaticParams() {
    2. 如果 locale 不支持，则不生成有效 SEO
 ========================================================= */
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: ContactIntlPageProps): Promise<Metadata> {
   const { locale } = await params;
+  if (languageDraftsEnabled && locale === "de") {
+    return {
+      ...buildDraftPageMetadata({ locale, canonical: "/de/contact/", ...contactDeData.seo }),
+      robots: { index: false, follow: true },
+    };
+  }
+
+  if (languageDraftsEnabled && (locale === "it" || locale === "hi")) {
+    const copy = locale === "it" ? contactItData : contactHiData;
+    const meta = buildInternationalPageMetadata({ locale, path: "/contact/", ...copy.seo });
+    return {
+      ...meta,
+      alternates: { canonical: "/" + locale + "/contact/" },
+      robots: { index: false, follow: true },
+      openGraph: { ...meta.openGraph, locale: locale === "it" ? "it_IT" : "hi_IN" },
+    };
+  }
 
   if (!isContactIntlLocale(locale)) {
     return {};
@@ -104,12 +127,14 @@ export default async function ContactIntlPage({
   params,
 }: ContactIntlPageProps) {
   const { locale } = await params;
-
-  if (!isContactIntlLocale(locale)) {
+  const isGerman = locale === "de";
+  const isItalian = locale === "it";
+  const isHindi = locale === "hi";
+  if (!(languageDraftsEnabled && (isGerman || isItalian || isHindi)) && !isContactIntlLocale(locale)) {
     notFound();
   }
 
-  const data = getContactIntlData(locale);
+  const data = isGerman ? contactDeData : isItalian ? contactItData : isHindi ? contactHiData : getContactIntlData(locale);
 
   return (
     <>
@@ -124,3 +149,5 @@ export default async function ContactIntlPage({
     </>
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/contact/", getPageMetadata);

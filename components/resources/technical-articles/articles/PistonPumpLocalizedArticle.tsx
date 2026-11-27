@@ -1,3 +1,4 @@
+import { getLocalizedTechnicalFormula } from "@/data/resources/technical-articles/localized-formula-text";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,8 +8,13 @@ import type {
   PistonPumpArticlePart,
 } from "@/data/resources/technical-articles/piston-pump-articles.types";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+import { getHindiDraftLink, getItalianDraftLink, hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
+import { getGermanArticleDestination } from "@/lib/i18n/german-article-link";
+import { getLocalizedInternalHref } from "@/lib/seo/site-url";
 import newsStyles from "./TechnicalArticleBody.module.css";
 import styles from "./TechnicalArticleBody.module.css";
+
+type PistonArticleLocale = TechnicalArticleLocale | "de" | "it" | "hi";
 
 function getLocalizedHref(href: string, locale: TechnicalArticleLocale) {
   if (!href.startsWith("/") || locale === "zh-CN") return href;
@@ -20,23 +26,32 @@ function ArticleLinks({
   locale,
 }: {
   items: readonly PistonPumpArticleLink[];
-  locale: TechnicalArticleLocale;
+  locale: PistonArticleLocale;
 }) {
   return (
     <div className={styles.linkList}>
-      {items.map((item) => (
-        <p key={`${item.href}-${item.label}`}>
-          {item.prefix}
-          {item.href.startsWith("/") ? (
-            <Link href={getLocalizedHref(item.href, locale)}>{item.label}</Link>
-          ) : (
-            <a href={item.href} rel="noreferrer" target="_blank">
-              {item.label}
-            </a>
-          )}
-          {item.suffix}
-        </p>
-      ))}
+      {items.map((item) => {
+        const englishHref = getLocalizedInternalHref(item.href, "en");
+        const draftLink = locale === "it" ? getItalianDraftLink(englishHref) : locale === "hi" ? getHindiDraftLink(englishHref) : undefined;
+        const destination = locale === "de"
+          ? getGermanArticleDestination(englishHref)
+          : { href: draftLink?.href ?? getLocalizedHref(item.href, locale === "it" || locale === "hi" ? "en" : locale), destinationLanguage: draftLink?.hrefLang };
+        return (
+          <p key={`${item.href}-${item.label}`}>
+            {item.prefix}
+            {item.href.startsWith("/") ? (
+              <Link href={destination.href} hrefLang={destination.destinationLanguage}>
+                {item.label}{destination.destinationLanguage === "en" && locale === "hi" ? hindiEnglishFallbackSuffix : destination.destinationLanguage === "en" && locale === "it" ? italianEnglishFallbackSuffix : destination.destinationLanguage === "en" && !item.label.endsWith("(Englisch)") ? " (Englisch)" : null}
+              </Link>
+            ) : (
+              <a href={item.href} rel="noreferrer" target="_blank">
+                {item.label}
+              </a>
+            )}
+            {item.suffix}
+          </p>
+        );
+      })}
     </div>
   );
 }
@@ -46,7 +61,7 @@ function ArticlePart({
   locale,
 }: {
   part: PistonPumpArticlePart;
-  locale: TechnicalArticleLocale;
+  locale: PistonArticleLocale;
 }) {
   if (part.type === "paragraph") return <p>{part.text}</p>;
 
@@ -62,7 +77,7 @@ function ArticlePart({
   if (part.type === "formula") {
     return (
       <div className={newsStyles.technicalNotice}>
-        <code className={styles.formula}>{part.expression}</code>
+        <code className={styles.formula}>{getLocalizedTechnicalFormula(part.expression, locale)}</code>
         <span className={styles.formulaNote}>{part.note}</span>
       </div>
     );
@@ -146,7 +161,8 @@ function ArticlePart({
               className={styles.photo}
               height={item.height}
               sizes="(max-width: 760px) 100vw, 900px"
-              src={item.src}
+              src={locale === "de" && item.src === "/images/resources/technical-articles/modbus-protocol-fluid-control/modbus-request-response.en.svg"
+                ? "/images/resources/technical-articles/modbus-protocol-fluid-control/modbus-request-response.de.svg" : item.src}
               width={item.width}
             />
             <figcaption>{item.caption}</figcaption>
@@ -164,7 +180,7 @@ function ArticleParts({
   locale,
 }: {
   parts: readonly PistonPumpArticlePart[];
-  locale: TechnicalArticleLocale;
+  locale: PistonArticleLocale;
 }) {
   return parts.map((part, index) => (
     <ArticlePart
@@ -180,10 +196,10 @@ export default function PistonPumpLocalizedArticle({
   locale,
 }: {
   copy: PistonPumpArticleCopy;
-  locale: TechnicalArticleLocale;
+  locale: PistonArticleLocale;
 }) {
   return (
-    <div className={newsStyles.technicalArticleBody} lang={locale}>
+    <div className={newsStyles.technicalArticleBody} lang={locale === "hi" ? "hi-IN" : locale}>
       <section className={newsStyles.contentBlock}>
         <ArticleParts locale={locale} parts={copy.intro} />
       </section>
@@ -199,7 +215,7 @@ export default function PistonPumpLocalizedArticle({
 
       {copy.faq?.length ? (
         <section className={newsStyles.contentBlock}>
-          <h2>{copy.faqTitle ?? "FAQ"}</h2>
+          <h2>{copy.faqTitle ?? (locale === "hi" ? "अक्सर पूछे जाने वाले सवाल" : locale === "de" ? "Häufig gestellte Fragen" : locale === "it" ? "Domande frequenti" : "FAQ")}</h2>
           <div className={styles.faqList}>
             {copy.faq.map((item, index) => (
               <details className={styles.faqItem} key={item.question} open={index === 0}>
@@ -220,7 +236,7 @@ export default function PistonPumpLocalizedArticle({
 
       {copy.references?.length ? (
         <section className={newsStyles.contentBlock}>
-          <h2>{copy.referencesTitle ?? "References"}</h2>
+          <h2>{copy.referencesTitle ?? (locale === "hi" ? "संदर्भ" : locale === "de" ? "Quellen" : locale === "it" ? "Riferimenti" : "References")}</h2>
           <ArticleLinks items={copy.references} locale={locale} />
         </section>
       ) : null}

@@ -15,6 +15,9 @@
 
 import { newsZhData } from "@/data/resources/news/news.zh";
 import { newsIntlData } from "@/data/resources/news/news.intl";
+import { localizeNewsToGerman } from "@/data/resources/news/news.de";
+import { localizeNewsToHindi } from "@/data/resources/news/news.hi";
+import { localizeNewsToItalian } from "@/data/resources/news/news.it";
 import { localizeNews } from "@/data/resources/news/news.translations";
 import { getQualityAndRecognitionArticles } from "@/data/resources/news/news.quality-updates";
 import { getAdlm2026OnsiteArticle } from "@/data/resources/news/adlm-2026-onsite";
@@ -23,6 +26,7 @@ import type {
   NewsArticle,
   NewsLocale,
   NewsPageData,
+  NewsResourceLocale,
 } from "@/data/resources/news/news.types";
 
 /* 判断是否为中文 */
@@ -130,8 +134,18 @@ function mergeQualityAndRecognitionArticles(
 /* NEWS_QUALITY_MERGE_HELPER_END */
 
 export function getNewsPageData(
-  locale: NewsLocale
+  locale: NewsResourceLocale
 ): NewsPageData {
+  if (locale === "de") {
+    return localizeNewsToGerman(getNewsPageData("en"));
+  }
+
+  if (locale === "hi") return localizeNewsToHindi(getNewsPageData("en"));
+
+  if (locale === "it") {
+    return localizeNewsToItalian(getNewsPageData("en"));
+  }
+
   if (isChineseLocale(locale)) {
     return mergeQualityAndRecognitionArticles(
       newsZhData,

@@ -1,6 +1,8 @@
 import type { SelectionLocale } from "./product-selection.types";
 
-const mrv3SeriesImageAlt: Record<SelectionLocale, string> = {
+const mrv3SeriesImageAlt: Record<SelectionLocale | "de" | "it", string> = {
+  it: "Valvole selettrici rotative multivia in ceramica FOREACH MRV3 con due configurazioni della testata, motori e controllori",
+  de: "FOREACH MRV3-Keramik-Drehwahlventile mit zwei Ventilkopfvarianten, Motoren und Steuergeräten",
   zh: "FOREACH MRV3 陶瓷多通道旋转阀，两种阀头配置及配套电机和控制器",
   en: "FOREACH MRV3 ceramic multi-channel rotary selector valves, showing two valve-head configurations with motors and controllers",
   es: "Válvulas selectoras rotativas cerámicas multicanal FOREACH MRV3, con dos configuraciones de cabezal, motores y controladores",
@@ -9,7 +11,7 @@ const mrv3SeriesImageAlt: Record<SelectionLocale, string> = {
   ru: "Керамические многоканальные роторные клапаны-селекторы FOREACH MRV3: два исполнения клапанной головки с двигателями и контроллерами",
 };
 
-export function getMrv3SeriesImage(locale: SelectionLocale) {
+export function getMrv3SeriesImage(locale: SelectionLocale | "de" | "it") {
   return {
     src: "/images/products/valves/rotary-valves/foreach-rotary-valve-valve-assemblies.webp",
     alt: mrv3SeriesImageAlt[locale],

@@ -5,7 +5,7 @@ import type { TechnicalArticleLocale } from "@/data/resources/technical-articles
 import { rplArticleUi } from "@/data/resources/technical-articles/rpl-selection-locales/ui";
 import styles from "./RplSelectionArticle.module.css";
 
-export function ArticleShare({ title, locale }: { title: string; locale: TechnicalArticleLocale }) {
+export function ArticleShare({ title, locale }: { title: string; locale: TechnicalArticleLocale | "de" | "it" | "hi" }) {
   const ui = rplArticleUi[locale];
   const [feedback, setFeedback] = useState("");
   async function share(platform: "facebook" | "linkedin" | "x" | "copy") {
@@ -44,7 +44,7 @@ export function ArticleShare({ title, locale }: { title: string; locale: Technic
 }
 
 // Progressive enhancement only: article text, navigation and FAQ work without JavaScript.
-export function ArticleEnhancements({ articleId, locale }: { articleId: string; locale: TechnicalArticleLocale }) {
+export function ArticleEnhancements({ articleId, locale }: { articleId: string; locale: TechnicalArticleLocale | "de" | "it" | "hi" }) {
   useEffect(() => {
     const root = document.getElementById(`${articleId}-article`);
     if (!root) return;

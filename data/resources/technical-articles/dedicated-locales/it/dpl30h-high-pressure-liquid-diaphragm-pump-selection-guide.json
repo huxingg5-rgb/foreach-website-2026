@@ -1,0 +1,465 @@
+{
+  "metadata": {
+    "title": "Come scegliere una pompa a membrana ad alta pressione: guida DPL30H da 300 mL/min e 600 kPa",
+    "seoTitle": "Guida alla scelta della pompa a membrana ad alta pressione DPL30H | FOREACH Technology",
+    "seoDescription": "Scegli la FOREACH DPL30H in base alla portata alla contropressione obiettivo, alla pressione nominale di 600 kPa, ai tubi rigidi da 6×4 mm, al motore, ai materiali bagnati, al codice modello e al metodo di selezione.",
+    "coverAlt": "Pompe a membrana FOREACH DPL30H ad alta pressione per liquidi, con motori a spazzole e brushless e raccordi per tubi rigidi da 6×4 mm"
+  },
+  "section1": {
+    "title": "1. Perché i circuiti con contropressione elevata richiedono una pompa diversa",
+    "paragraphs": [
+      "Filtri, tubi rigidi stretti, valvole, camere di miscelazione e linee lunghe generano perdite di carico. All’aumentare della contropressione diminuisce la portata erogata dalla pompa. La sola portata a scarico libero non è quindi un criterio di scelta valido. DPL30H è progettata per circuiti per liquidi che richiedono un margine di pressione maggiore: portata a scarico libero di 300 mL/min e pressione nominale di 600 kPa.",
+      "DPL30H è autoadescante e consente la separazione tra liquido e gas in apparecchiature con contropressione elevata. Il fluido di riferimento è acqua purificata. Qualsiasi altro liquido va valutato alle condizioni effettive di concentrazione, temperatura, durata dell’esposizione, pressione e vita utile.",
+      "Questa pompa ha un campo d’impiego distinto da una pompa a membrana standard di maggiori dimensioni. Pressione ammessa, collegamento per tubi rigidi, materiali bagnati e controllo del motore vanno considerati insieme per definire i limiti del sistema."
+    ]
+  },
+  "section2": {
+    "title": "2. Conferma prima sei dati dell’applicazione",
+    "intro": "Definisci il circuito fluidico prima di interpretare il codice del modello.",
+    "headers": [
+      "Dato",
+      "Che cosa definire",
+      "Perché è importante"
+    ],
+    "rows": [
+      [
+        "Portata obiettivo",
+        "Portata continua richiesta alla contropressione obiettivo",
+        "Il valore di 300 mL/min a scarico libero non indica la portata al punto di lavoro"
+      ],
+      [
+        "Contropressione del sistema",
+        "Perdita di carico totale dovuta a filtri, valvole, tubi, camere e dislivello",
+        "Definisce la pressione che la pompa deve vincere"
+      ],
+      [
+        "Fluido",
+        "Identità, concentrazione, temperatura e liquidi di pulizia",
+        "Serve a individuare EP/PS o FF/PS come opzioni iniziali"
+      ],
+      [
+        "Linea fluidica",
+        "Tubo rigido da 6×4 mm (diametro esterno × interno) e tutti i raccordi",
+        "L’affidabilità dipende dall’intera linea"
+      ],
+      [
+        "Comando",
+        "Solo avvio e arresto oppure regolazione della velocità, senso di rotazione e retroazione tachimetrica",
+        "Determina la scelta del motore a spazzole o brushless a cinque fili"
+      ],
+      [
+        "Vita utile",
+        "Ore di esercizio giornaliere, servizio continuo o intermittente e intervallo di manutenzione",
+        "Orienta la scelta del motore e la validazione"
+      ]
+    ]
+  },
+  "section3": {
+    "title": "3. I valori di 300 mL/min e 600 kPa descrivono condizioni diverse",
+    "paragraphs": [
+      "300 mL/min è la portata a scarico libero di DPL30H. 600 kPa è la pressione nominale. I due valori descrivono estremi diversi delle prestazioni della pompa e non vanno combinati in una dichiarazione di 300 mL/min a 600 kPa.",
+      "La portata erogata diminuisce man mano che la pressione positiva all’uscita aumenta. Parti dalla contropressione obiettivo, leggi la portata disponibile sulla curva ufficiale e prevedi un margine per le variazioni del sistema, l’intasamento del filtro e le tolleranze tra le unità."
+    ],
+    "noticeStrong": "Per scegliere una pompa a membrana ad alta pressione, chiediti quanta portata rimane alla contropressione obiettivo. Il solo valore di portata a scarico libero non basta.",
+    "noticeText": "300 mL/min è la portata a scarico libero. 600 kPa è la pressione nominale. I due valori non rappresentano lo stesso punto di lavoro."
+  },
+  "section4": {
+    "title": "4. Specifiche DPL30H e limiti di applicazione",
+    "intro": "Usa questi valori per la selezione iniziale. Conferma poi il modello esatto in funzione del fluido, della linea e dei comandi.",
+    "headers": [
+      "Parametro",
+      "DPL30H",
+      "Nota di selezione"
+    ],
+    "rows": [
+      [
+        "Portata a scarico libero",
+        "300 mL/min",
+        "Valore non garantito a 600 kPa"
+      ],
+      [
+        "Pressione nominale",
+        "600 kPa",
+        "Usa la curva portata-pressione per il punto di lavoro"
+      ],
+      [
+        "Altezza di autoadescamento",
+        "3 mH₂O",
+        "L’altezza effettiva dipende da fluido, tubi e tenuta"
+      ],
+      [
+        "Potenza",
+        "≤7 W",
+        "Dimensiona l’alimentazione per avvio e funzionamento"
+      ],
+      [
+        "Fluido di riferimento",
+        "Acqua purificata",
+        "Valuta gli altri liquidi nelle condizioni effettive"
+      ],
+      [
+        "Temperatura del fluido",
+        "da +5°C a +40°C",
+        "Non applicare il limite di +80°C di DPL30"
+      ],
+      [
+        "Collegamento",
+        "Porta filettata per il collegamento a tubi rigidi da 6 × 4 mm",
+        "Controlla il componente con la pressione nominale più bassa nella linea"
+      ],
+      [
+        "Rumorosità",
+        "≤80 dB",
+        "La struttura dell’apparecchiatura influenza il rumore complessivo"
+      ],
+      [
+        "Testa della pompa",
+        "Solfuro di polifenilene (PPS)",
+        "I materiali della membrana e delle valvole cambiano con il modello"
+      ],
+      [
+        "Membrana",
+        "EPDM o PTFE, secondo il modello",
+        "Nessun materiale è adatto a tutti i fluidi"
+      ],
+      [
+        "Valvola",
+        "EPDM o FFKM, secondo il modello",
+        "Convalida in base a fluido e temperatura"
+      ]
+    ]
+  },
+  "section5": {
+    "title": "5. DPL30 e DPL30H: stessa portata a scarico libero, impieghi diversi",
+    "paragraphs": [
+      "Entrambe le pompe hanno una portata nominale a scarico libero di 300 mL/min, ma differiscono per limiti di pressione, autoadescamento, tubi e temperatura. DPL30H è una piattaforma specifica per contropressione elevata e tubi rigidi, con un campo d’impiego distinto da quello di DPL30."
+    ],
+    "headers": [
+      "Voce",
+      "DPL30",
+      "DPL30H"
+    ],
+    "rows": [
+      [
+        "Portata a scarico libero",
+        "300 mL/min",
+        "300 mL/min"
+      ],
+      [
+        "Pressione nominale",
+        "100 kPa",
+        "600 kPa"
+      ],
+      [
+        "Altezza di autoadescamento",
+        "6 mH₂O",
+        "3 mH₂O"
+      ],
+      [
+        "Tubo",
+        "Tubo flessibile con diametro interno di 3.2 mm",
+        "Porta filettata per il collegamento a tubi rigidi da 6 × 4 mm"
+      ],
+      [
+        "Temperatura massima del fluido",
+        "+80°C",
+        "+40°C"
+      ],
+      [
+        "Criterio principale di scelta",
+        "Pressione più bassa, altezza di aspirazione e limite di temperatura più elevato",
+        "Contropressione elevata, tubi rigidi e pressione nominale del sistema"
+      ]
+    ],
+    "dpl30Prefix": "Per un servizio a circa 100 kPa, tubi flessibili con diametro interno di 3.2 mm e un limite più alto di temperatura del fluido, consulta la",
+    "dpl30Label": "guida alla scelta della pompa a membrana per liquidi DPL30",
+    "dpl30Suffix": "."
+  },
+  "section6": {
+    "title": "6. Come leggere la curva portata-pressione di DPL30H",
+    "paragraphs": [
+      "La curva ufficiale mostra una portata prossima a 300 mL/min con una pressione all’uscita vicina a zero. La portata diminuisce man mano che la pressione positiva aumenta. La pompa continua a erogare nella regione di contropressione elevata, con una portata inferiore al valore a scarico libero.",
+      "Usa la curva per individuare un’area di lavoro candidata. Convalida poi nell’apparecchiatura, includendo la perdita di carico del filtro a fine vita, i transitori di commutazione delle valvole, le tolleranze dei tubi e il margine di portata richiesto."
+    ],
+    "figureAlt": "Curva ufficiale portata-pressione della pompa a membrana per liquidi ad alta pressione DPL30H. La portata diminuisce al crescere della pressione positiva",
+    "figureCaption": "Curva portata-pressione DPL30H: 300 mL/min è il valore a scarico libero. La portata in esercizio diminuisce con la contropressione.",
+    "notice": "Non estrapolare valori esatti per punti non contrassegnati e non descrivere la pompa come «300 mL/min a 600 kPa»."
+  },
+  "section7": {
+    "title": "7. Collegamento con tubo rigido da 6×4 mm: vale il limite del componente con pressione nominale minima",
+    "paragraphs": [
+      "Porta filettata per il collegamento a tubi rigidi da 6 × 4 mm. Conferma materiale e tolleranza del diametro esterno del tubo, taglio perpendicolare e profondità di inserimento. Esegui poi prove di mantenimento della pressione e di tenuta.",
+      "La linea con contropressione elevata può contenere anche raccordi, valvole, filtri, sensori e camere. La pressione nominale della pompa non sostituisce la qualifica in pressione di questi componenti."
+    ],
+    "noticeStrong": "Il valore nominale di 600 kPa di DPL30H non implica che ogni tubo da 6×4 mm, raccordo, valvola, filtro o camera sia qualificato per 600 kPa.",
+    "noticeText": "La pressione ammessa del sistema dipende dal componente con la pressione nominale più bassa nell’intero circuito fluidico."
+  },
+  "section8": {
+    "title": "8. Versioni a spazzole e brushless: dimensioni, durata e comando",
+    "paragraphs": [
+      "La versione a spazzole si comanda semplicemente commutando l’alimentazione a 12/24 V. La versione brushless a cinque fili aggiunge comando del senso di rotazione, regolazione della velocità e retroazione tachimetrica. Gli ingombri sono diversi. Verifica ciascun disegno meccanico nella disposizione dell’apparecchiatura.",
+      "La vita utile è specificata alla tensione nominale in funzionamento continuo. Contropressione, cicli, temperatura ambiente, fluido e dissipazione del calore possono cambiare la durata in esercizio."
+    ],
+    "brushedFigureAlt": "Sagoma e quote di montaggio della pompa a membrana per liquidi ad alta pressione DPL30H a spazzole",
+    "brushedFigureCaption": "Dimensioni della versione DPL30H a spazzole. Per progettare l’apparecchiatura usa il disegno controllato.",
+    "brushlessFigureAlt": "Quote e schema dei fili della pompa a membrana per liquidi ad alta pressione DPL30H brushless a cinque fili",
+    "brushlessFigureCaption": "Dimensioni della versione DPL30H brushless e definizione dei cinque fili.",
+    "motorHeaders": [
+      "Voce",
+      "A spazzole",
+      "Brushless"
+    ],
+    "motorRows": [
+      [
+        "Tensione nominale",
+        "12 V o 24 V",
+        "12 V o 24 V"
+      ],
+      [
+        "Massa approssimativa",
+        "135 g",
+        "155 g"
+      ],
+      [
+        "Vita utile di riferimento",
+        "3000 h",
+        "10000 h"
+      ],
+      [
+        "Condizione di durata",
+        "Funzionamento continuo alla tensione nominale",
+        "Funzionamento continuo alla tensione nominale"
+      ],
+      [
+        "Comando",
+        "Alimentazione inserita o disinserita",
+        "Senso di rotazione, velocità tramite PWM o 0–5 V, retroazione FG"
+      ]
+    ],
+    "wiringTitle": "Interfaccia brushless a cinque fili",
+    "wiringIntro": "Il controllore deve rispettare gli intervalli di tensione, gli stati a ingresso flottante e i requisiti di decodifica del segnale FG.",
+    "wiringHeaders": [
+      "Segnale",
+      "Colore",
+      "Funzione"
+    ],
+    "wiringRows": [
+      [
+        "VCC",
+        "Rosso",
+        "Positivo dell’alimentazione"
+      ],
+      [
+        "GND",
+        "Nero",
+        "Massa"
+      ],
+      [
+        "DIR",
+        "Giallo",
+        "Livello alto o ingresso aperto: rotazione oraria (CW). Livello basso: rotazione antioraria (CCW)"
+      ],
+      [
+        "FG",
+        "Verde",
+        "Segnale di velocità"
+      ],
+      [
+        "PWM",
+        "Blu",
+        "Comando della velocità"
+      ]
+    ],
+    "wiringNotes": [
+      "Una tensione di 0–0.25 V sull’ingresso PWM arresta la pompa.",
+      "L’ingresso PWM flottante o una tensione di 4.5–5 V comandano la velocità massima.",
+      "La velocità si regola tramite PWM o tensione analogica da 0–5 V. La velocità è proporzionale al ciclo di lavoro del PWM.",
+      "FG emette tre impulsi a onda quadra per giro del rotore."
+    ]
+  },
+  "section9": {
+    "title": "9. Scelta dei materiali bagnati EP/PS o FF/PS",
+    "intro": "Il suffisso identifica una combinazione di materiali bagnati. La compatibilità va verificata per ogni sostanza chimica.",
+    "headers": [
+      "Codice",
+      "Membrana",
+      "Valvola",
+      "Testa",
+      "Criterio di selezione iniziale"
+    ],
+    "rows": [
+      [
+        "EP/PS",
+        "EPDM",
+        "EPDM",
+        "PPS",
+        "Parti dall’impiego con acqua purificata, poi verifica la compatibilità effettiva"
+      ],
+      [
+        "FF/PS",
+        "PTFE",
+        "FFKM",
+        "PPS",
+        "Opzione per una diversa combinazione di membrana ed elastomero. La validazione resta necessaria"
+      ]
+    ],
+    "noticeStrong": "Il codice del materiale non sostituisce le prove di compatibilità.",
+    "noticeText": "Valuta identità chimica, concentrazione, temperatura, pressione, durata dell’esposizione e vita utile obiettivo. Prova i campioni quando necessario."
+  },
+  "section10": {
+    "title": "10. Codice del modello e sequenza completa di selezione",
+    "intro": "Il codice di DPL30H riunisce tensione, motore, collegamento, orientamento delle porte, materiali e personalizzazione.",
+    "modelCode": "DPL30H - 24 - D - S - C - EP/PS - X",
+    "modelCodeDescription": "La spiegazione vale solo per DPL30H. Non è ricavata da DPL60 o da un’altra serie.",
+    "headers": [
+      "Campo",
+      "Valori",
+      "Significato"
+    ],
+    "rows": [
+      [
+        "Tensione",
+        "24 / 12",
+        "24 V o 12 V"
+      ],
+      [
+        "Motore",
+        "D / B / C",
+        "D a spazzole, B brushless, C senza nucleo"
+      ],
+      [
+        "Collegamento",
+        "S",
+        "Collegamento definito nella specifica"
+      ],
+      [
+        "Orientamento delle porte",
+        "C / 3 / 6 / 9",
+        "C verso l’alto di serie, 3 verso destra, 6 verso il basso, 9 verso sinistra"
+      ],
+      [
+        "Materiali",
+        "EP/PS / FF/PS",
+        "EPDM+EPDM+PPS oppure PTFE+FFKM+PPS"
+      ],
+      [
+        "Personalizzazione",
+        "X",
+        "Requisito personalizzato"
+      ]
+    ],
+    "standardModelsTitle": "Modelli standard DPL30H",
+    "standardModelsIntro": "Otto codici articolo standard coprono motori a spazzole e brushless, tensioni 12/24 V e due combinazioni di materiali.",
+    "standardModelHeaders": [
+      "Codice articolo",
+      "Modello",
+      "Motore",
+      "Tensione",
+      "Materiali"
+    ],
+    "standardModelRows": [
+      [
+        "459007",
+        "DPL30H-24DS-EP/PS",
+        "A spazzole",
+        "24 V",
+        "EP/PS"
+      ],
+      [
+        "459008",
+        "DPL30H-24BS-EP/PS",
+        "Brushless",
+        "24 V",
+        "EP/PS"
+      ],
+      [
+        "459019",
+        "DPL30H-12DS-EP/PS",
+        "A spazzole",
+        "12 V",
+        "EP/PS"
+      ],
+      [
+        "459020",
+        "DPL30H-12BS-EP/PS",
+        "Brushless",
+        "12 V",
+        "EP/PS"
+      ],
+      [
+        "459034",
+        "DPL30H-24DS-FF/PS",
+        "A spazzole",
+        "24 V",
+        "FF/PS"
+      ],
+      [
+        "459035",
+        "DPL30H-24BS-FF/PS",
+        "Brushless",
+        "24 V",
+        "FF/PS"
+      ],
+      [
+        "459036",
+        "DPL30H-12DS-FF/PS",
+        "A spazzole",
+        "12 V",
+        "FF/PS"
+      ],
+      [
+        "459037",
+        "DPL30H-12BS-FF/PS",
+        "Brushless",
+        "12 V",
+        "FF/PS"
+      ]
+    ],
+    "notice": "Anche per un codice standard vanno verificati punto di lavoro, materiali, tubi e comandi.",
+    "stepsTitle": "Sequenza di selezione consigliata",
+    "steps": [
+      [
+        "Definisci il punto di lavoro",
+        "Specifica la portata richiesta alla contropressione obiettivo. La sola portata a scarico libero non basta."
+      ],
+      [
+        "Calcola la perdita di carico totale",
+        "Includi filtri a fine vita, valvole, tubi rigidi, camere e dislivello."
+      ],
+      [
+        "Controlla ogni pressione nominale",
+        "Imposta il limite del sistema in base al componente con la pressione nominale più bassa ed esegui una prova di mantenimento della pressione."
+      ],
+      [
+        "Scegli i materiali",
+        "Valuta EP/PS o FF/PS come opzioni iniziali e convalida con il fluido effettivo."
+      ],
+      [
+        "Scegli motore e tensione",
+        "Considera commutazione, velocità, senso di rotazione, FG, vita utile e alimentazione."
+      ],
+      [
+        "Convalida un prototipo",
+        "Registra portata, pressione, aumento di temperatura, rumore, perdite e andamento della durata."
+      ]
+    ]
+  },
+  "conclusion": {
+    "title": "Conclusione: scegli DPL30H in base alla portata alla contropressione obiettivo",
+    "paragraphs": [
+      "DPL30H non va presentata come se erogasse 300 mL/min a 600 kPa. Offre un margine di pressione verificabile per circuiti per liquidi ad alta contropressione, un collegamento per tubi rigidi da 6×4 mm e opzioni definite di motore e materiali.",
+      "Se la priorità è una portata a scarico libero più elevata, da 400–600 mL/min, e non la classe di pressione da 600 kPa, confronta DPL60. Se DPL30H è la piattaforma adatta, convalidala in base alla curva, al componente con la pressione nominale minima e al fluido effettivo."
+    ]
+  },
+  "internalLinks": {
+    "dpl60Prefix": "Se la priorità è una portata più alta nella classe 400–600 mL/min, consulta la",
+    "dpl60Label": "guida alla scelta della pompa a membrana per liquidi DPL60",
+    "dpl60Suffix": ".",
+    "productPrefix": "Visita la",
+    "productLabel": "pagina della serie DPL30H di pompe a membrana per liquidi ad alta pressione",
+    "productSuffix": " per i dettagli delle versioni a spazzole e brushless.",
+    "categoryPrefix": "Consulta la",
+    "categoryLabel": "categoria delle pompe a membrana",
+    "categorySuffix": " per confrontare altri intervalli di portata e pressione."
+  }
+}

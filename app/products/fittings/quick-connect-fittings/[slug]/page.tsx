@@ -1,4 +1,5 @@
 import type { ComponentProps } from "react";
+import type { GermanProductDetailContent } from "@/data/products/detail/product-detail-content.de";
 
 import type {
   Metadata,
@@ -32,6 +33,8 @@ type DetailRecord = {
 };
 
 type PageProps = {
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: ComponentProps<typeof QuickConnectDetailPage>["localizedDetail"];
   renderLocale?: TechnicalArticleLocale;
   params: Promise<{
     slug: string;
@@ -123,6 +126,8 @@ export async function generateMetadata({
 export default async function QuickConnectFittingDetailPage({
   params,
   renderLocale = "zh-CN",
+  germanDetail,
+  localizedDetail,
 }: PageProps) {
   const {
     slug,
@@ -142,6 +147,8 @@ export default async function QuickConnectFittingDetailPage({
   return (
     <QuickConnectDetailPage
       locale={renderLocale}
+      germanDetail={germanDetail}
+      localizedDetail={localizedDetail}
       data={detail as unknown as ComponentProps<typeof QuickConnectDetailPage>["data"]}
     />
   );

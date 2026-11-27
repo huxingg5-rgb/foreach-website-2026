@@ -9,6 +9,7 @@
 ========================================================= */
 
 export type NewsLocale = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
+export type NewsResourceLocale = NewsLocale | "de" | "it" | "hi";
 
 export type NewsCategory = "exhibition" | "company" | "notice";
 
@@ -48,7 +49,7 @@ export interface NewsBottomBannerAction {
 }
 
 export interface NewsPageData {
-  locale: NewsLocale;
+  locale: NewsResourceLocale;
 
   hero: {
     title: string;

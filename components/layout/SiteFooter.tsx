@@ -18,14 +18,19 @@ import {
 import { getInkjetNav } from "@/data/applications/inkjet-guide-navigation";
 import inkjetRoutes from "@/data/applications/industrial-inkjet-routes.json";
 import { getLocalizedSiteHref } from "@/lib/seo/site-url";
+import { getGermanNavigationText } from "@/data/navigation.de";
+import { getItalianNavigationText } from "@/data/navigation.it";
+import { getHindiNavigationText } from "@/data/navigation.hi";
+import { getHindiDraftLink, hindiEnglishFallbackSuffix, isLocalizedHindiDraftPath, germanEnglishFallbackSuffix, getDraftHrefForEnglish, getDraftLinkLocaleFromPath, getGermanDraftLink, getItalianDraftLink, isLocalizedGermanDraftPath, isLocalizedItalianDraftPath, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
 import styles from "./SiteFooterSocial.module.css";
 
 type SiteFooterProps = {
   locale?: LocaleCode;
+  fittingPathPattern?: string;
 };
 
 const footerLegalCopy: Record<
-  LocaleCode,
+  LocaleCode | "de" | "it" | "hi",
   {
     socialMedia: string;
     visitSocial: (platform: string) => string;
@@ -44,6 +49,24 @@ const footerLegalCopy: Record<
     visitSocial: (platform) => `Visit Foreach on ${platform}`,
     privacyPolicy: "Privacy Policy",
     cookieSettings: "Cookie settings",
+  },
+  de: {
+    socialMedia: "FOREACH in sozialen Medien",
+    visitSocial: (platform) => "FOREACH auf " + platform,
+    privacyPolicy: "Datenschutzerklärung",
+    cookieSettings: "Cookie-Einstellungen",
+  },
+  hi: {
+    socialMedia: "सोशल मीडिया पर FOREACH",
+    visitSocial: (platform) => platform + " पर FOREACH देखें",
+    privacyPolicy: "गोपनीयता नीति",
+    cookieSettings: "कुकी सेटिंग",
+  },
+  it: {
+    socialMedia: "FOREACH sui social media",
+    visitSocial: (platform) => "Visita FOREACH su " + platform,
+    privacyPolicy: "Informativa sulla privacy",
+    cookieSettings: "Impostazioni dei cookie",
   },
   es: {
     socialMedia: "Redes sociales de Foreach",
@@ -71,26 +94,46 @@ const footerLegalCopy: Record<
   },
 };
 
-export default function SiteFooter({ locale }: SiteFooterProps) {
+export default function SiteFooter({ locale, fittingPathPattern }: SiteFooterProps) {
   const pathname = usePathname();
   const activeLocale = locale ?? getLocaleFromPathname(pathname);
+  const draftLocale = getDraftLinkLocaleFromPath(pathname);
+  const isGermanPage = isLocalizedGermanDraftPath(pathname, fittingPathPattern);
+  const isItalianPage = isLocalizedItalianDraftPath(pathname);
+  const isHindiPage = isLocalizedHindiDraftPath(pathname);
+  const footerLanguage = isGermanPage ? "de" : isItalianPage ? "it" : isHindiPage ? "hi" : undefined;
+  const translateFooterText = isGermanPage
+    ? getGermanNavigationText
+    : isItalianPage ? getItalianNavigationText : isHindiPage ? getHindiNavigationText : (text: string) => text;
+  const fallbackSuffix = isHindiPage ? hindiEnglishFallbackSuffix : isItalianPage ? italianEnglishFallbackSuffix : germanEnglishFallbackSuffix;
   const showEnglishSocialLinks = isInternationalLocale(activeLocale);
+
+  function getFooterText(value: Parameters<typeof getSiteFooterText>[0], locale: LocaleCode) {
+    const text = getSiteFooterText(value, locale);
+    return translateFooterText(text);
+  }
+
+  function getNavigationHref(value: Parameters<typeof getSiteFooterHref>[0]) {
+    const href = getSiteFooterHref(value, activeLocale);
+    return isHindiPage ? getHindiDraftLink(href).href : isItalianPage ? getItalianDraftLink(href).href : getDraftHrefForEnglish(href, draftLocale);
+  }
   const [openColumn, setOpenColumn] = useState("");
 
   const mapHref = getSiteFooterHref(siteFooterData.mapHref, activeLocale);
   const emailHref = getSiteFooterHref(siteFooterData.emailHref, activeLocale);
   const phoneHref = getSiteFooterHref(siteFooterData.phoneHref, activeLocale);
-  const icpText = getSiteFooterText(siteFooterData.icp, activeLocale);
+  const icpText = getFooterText(siteFooterData.icp, activeLocale);
   const icpHref = getSiteFooterHref(siteFooterData.icpHref, activeLocale);
   const labelSeparator = activeLocale === "zh-CN" ? "：" : ": ";
-  const legalCopy = footerLegalCopy[activeLocale];
-  const privacyPolicyHref = getSiteFooterHref(
-    "/privacy-policy",
-    activeLocale,
-  );
+  const legalCopy = footerLegalCopy[footerLanguage ?? activeLocale];
+  const privacyPolicyLink = isHindiPage ? getHindiDraftLink(getSiteFooterHref("/privacy-policy", "en"))
+    : isItalianPage
+    ? getItalianDraftLink(getSiteFooterHref("/privacy-policy", "en"))
+    : { href: getNavigationHref("/privacy-policy") };
 
   return (
     <footer
+      lang={isGermanPage ? "de-DE" : isItalianPage ? "it-IT" : isHindiPage ? "hi-IN" : undefined}
       className={
         activeLocale === "zh-CN"
           ? `site-footer ${styles.chineseFooter}`
@@ -102,7 +145,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
           <div className="site-footer__nav-wrap">
             {siteFooterData.columns.map((column) => {
               const isOpen = openColumn === column.key;
-              const columnTitle = getSiteFooterText(column.title, activeLocale);
+              const columnTitle = getFooterText(column.title, activeLocale);
 
               return (
                 <nav
@@ -121,28 +164,50 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
 
                   <ul className="site-footer__list">
                     {isInternationalLocale(activeLocale) && column.key === "applications" ? (
-                      <li><Link href={`/${activeLocale}/applications/`} prefetch={false}>{getSiteFooterText({ global: "All applications" }, activeLocale)}</Link></li>
+                      <li><Link href={getNavigationHref("/applications/")} prefetch={false}>{getFooterText({ global: "All applications" }, activeLocale)}</Link></li>
                     ) : null}
-                    {column.links.map((link) => (
-                      <li key={link.key}>
-                        <Link
-                          href={getSiteFooterHref(link.href, activeLocale)}
-                          prefetch={false}
-                        >
-                          {getSiteFooterText(link.label, activeLocale)}
-                        </Link>
-                      </li>
-                    ))}
-                    {activeLocale !== "zh-CN" && column.key === "applications" && (
-                      <li>
-                        <Link href={getLocalizedSiteHref(inkjetRoutes.hub, activeLocale)} prefetch={false}>
-                          {getInkjetNav(activeLocale).labels.hub}
-                        </Link>
-                      </li>
-                    )}
-                    {isTubingAssemblyLocale(activeLocale) && column.key === "products" ? (
-                      <li><Link href={`${getTubingAssemblyLocalePrefix(activeLocale)}/products/tubing-assemblies/`} prefetch={false}>{tubingAssemblyNavigation[activeLocale].title}</Link></li>
-                    ) : null}
+                    {column.links.map((link) => {
+                      const linkProps = isHindiPage ? getHindiDraftLink(getSiteFooterHref(link.href, "en"))
+                        : isItalianPage ? getItalianDraftLink(getSiteFooterHref(link.href, "en")) : isGermanPage
+                        ? getGermanDraftLink(getSiteFooterHref(link.href, "en"), fittingPathPattern)
+                        : { href: getNavigationHref(link.href) };
+                      return (
+                        <li key={link.key}>
+                          <Link {...linkProps} prefetch={false}>
+                            {getFooterText(link.label, activeLocale)}
+                            {linkProps.hrefLang === "en" ? fallbackSuffix : null}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                    {activeLocale !== "zh-CN" && column.key === "applications" && (() => {
+                      const linkProps = isHindiPage ? getHindiDraftLink(inkjetRoutes.hub)
+                        : isItalianPage ? getItalianDraftLink(inkjetRoutes.hub) : isGermanPage
+                        ? getGermanDraftLink(inkjetRoutes.hub)
+                        : { href: getLocalizedSiteHref(inkjetRoutes.hub, activeLocale) };
+                      const label = getInkjetNav(activeLocale).labels.hub;
+                      return (
+                        <li>
+                          <Link {...linkProps} prefetch={false}>
+                            {translateFooterText(label)}
+                            {linkProps.hrefLang === "en" ? fallbackSuffix : null}
+                          </Link>
+                        </li>
+                      );
+                    })()}
+                    {isTubingAssemblyLocale(activeLocale) && column.key === "products" && (() => {
+                      const href = `${getTubingAssemblyLocalePrefix(activeLocale)}/products/tubing-assemblies/`;
+                      const linkProps = isHindiPage ? getHindiDraftLink(href) : isItalianPage ? getItalianDraftLink(href) : isGermanPage ? getGermanDraftLink(href, fittingPathPattern) : { href };
+                      const label = tubingAssemblyNavigation[activeLocale].title;
+                      return (
+                        <li>
+                          <Link {...linkProps} prefetch={false}>
+                            {translateFooterText(label)}
+                            {linkProps.hrefLang === "en" ? fallbackSuffix : null}
+                          </Link>
+                        </li>
+                      );
+                    })()}
                   </ul>
                 </nav>
               );
@@ -152,36 +217,36 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
           <div className="site-footer__right">
             <div className="site-footer__contact">
               <p className="site-footer__company">
-                {getSiteFooterText(siteFooterData.companyName, activeLocale)}
+                {getFooterText(siteFooterData.companyName, activeLocale)}
               </p>
 
               <p className="site-footer__contact-text">
-                {getSiteFooterText(siteFooterData.addressLabel, activeLocale)}
+                {getFooterText(siteFooterData.addressLabel, activeLocale)}
                 {labelSeparator}
-                {getSiteFooterText(siteFooterData.address, activeLocale)}
+                {getFooterText(siteFooterData.address, activeLocale)}
                 <a
                   className="site-footer__map-link"
                   href={mapHref}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {getSiteFooterText(siteFooterData.mapLabel, activeLocale)}
+                  {getFooterText(siteFooterData.mapLabel, activeLocale)}
                 </a>
               </p>
 
               <p className="site-footer__contact-text">
-                {getSiteFooterText(siteFooterData.emailLabel, activeLocale)}
+                {getFooterText(siteFooterData.emailLabel, activeLocale)}
                 {labelSeparator}
                 <a className="site-footer__contact-link" href={emailHref}>
-                  {getSiteFooterText(siteFooterData.email, activeLocale)}
+                  {getFooterText(siteFooterData.email, activeLocale)}
                 </a>
               </p>
 
               <p className="site-footer__contact-text">
-                {getSiteFooterText(siteFooterData.phoneLabel, activeLocale)}
+                {getFooterText(siteFooterData.phoneLabel, activeLocale)}
                 {labelSeparator}
                 <a className="site-footer__contact-link" href={phoneHref}>
-                  {getSiteFooterText(siteFooterData.phone, activeLocale)}
+                  {getFooterText(siteFooterData.phone, activeLocale)}
                 </a>
               </p>
             </div>
@@ -219,7 +284,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               <div className="site-footer__qrcode-area">
                 <div className="site-footer__qr-row">
                   {siteFooterData.qrCodes.map((item) => {
-                    const label = getSiteFooterText(item.label, activeLocale);
+                    const label = getFooterText(item.label, activeLocale);
                     const imageSrc = item.image ? getSiteFooterHref(item.image, activeLocale) : "";
   
                     return (
@@ -239,7 +304,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                             <>
                               {label}
                               <br />
-                              {getSiteFooterText(siteFooterData.qrCodePlaceholder, activeLocale)}
+                              {getFooterText(siteFooterData.qrCodePlaceholder, activeLocale)}
                             </>
                           )}
                         </div>
@@ -271,12 +336,15 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
               </p>
             ) : null}
 
-            <p>{getSiteFooterText(siteFooterData.copyright, activeLocale)}</p>
+            <p>{getFooterText(siteFooterData.copyright, activeLocale).replace(
+              "All rights reserved.",
+              isGermanPage ? "Alle Rechte vorbehalten." : isItalianPage ? "Tutti i diritti riservati." : isHindiPage ? "सभी अधिकार सुरक्षित हैं।" : "All rights reserved.",
+            )}</p>
 
             <p className="site-footer__legal-links">
               <Link
                 className="site-footer__legal-link"
-                href={privacyPolicyHref}
+                {...privacyPolicyLink}
                 prefetch={false}
               >
                 {legalCopy.privacyPolicy}
@@ -303,7 +371,7 @@ export default function SiteFooter({ locale }: SiteFooterProps) {
                     className="site-footer__legal-link"
                     href="/images/applications/industrial-inkjet-printing/menu/photo-credits.txt"
                   >
-                    {getInkjetNav(activeLocale).photoCredits}
+                    {translateFooterText(getInkjetNav(activeLocale).photoCredits)}
                   </a>
                 </>
               )}

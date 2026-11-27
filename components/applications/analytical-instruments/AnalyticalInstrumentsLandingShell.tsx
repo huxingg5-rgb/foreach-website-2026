@@ -6,12 +6,20 @@ import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import contentStyles from "../ApplicationContentPage.module.css";
 import type { EnglishApplicationPageData } from "@/data/applications/application-english";
 import { getEnglishAnalyticalInstrumentLinks } from "@/data/applications/analytical-instruments/navigation";
+import { translateGermanApplication, type GermanApplicationCopy } from "@/services/applications/german-review";
+import { translateItalianApplication, type ItalianApplicationCopy } from "@/services/applications/italian-review";
+import { getHindiApplicationTranslation, translateHindiApplication, type HindiApplicationCopy } from "@/services/applications/hindi-application";
 import AnalyticalMobileInstrumentNavigation from "./AnalyticalMobileInstrumentNavigation";
 
 type AnalyticalInstrumentsLandingShellProps = {
   data: EnglishApplicationPageData;
   children: ReactNode;
+  lang?: string;
   showInstrumentNavigation?: boolean;
+  breadcrumbAriaLabel?: string;
+  germanCopy?: GermanApplicationCopy;
+  italianCopy?: ItalianApplicationCopy;
+  hindiCopy?: HindiApplicationCopy;
 };
 
 /**
@@ -23,20 +31,31 @@ type AnalyticalInstrumentsLandingShellProps = {
 export default function AnalyticalInstrumentsLandingShell({
   data,
   children,
+  lang,
   showInstrumentNavigation = true,
+  breadcrumbAriaLabel = "Breadcrumb navigation",
+  germanCopy,
+  italianCopy,
+  hindiCopy,
 }: AnalyticalInstrumentsLandingShellProps) {
-  const analyticalInstrumentLinks = getEnglishAnalyticalInstrumentLinks();
+  const englishInstrumentLinks = getEnglishAnalyticalInstrumentLinks();
+  const analyticalInstrumentLinks = germanCopy ? translateGermanApplication(englishInstrumentLinks, germanCopy)
+    : italianCopy ? translateItalianApplication(englishInstrumentLinks, italianCopy)
+      : hindiCopy ? translateHindiApplication(englishInstrumentLinks, text => getHindiApplicationTranslation(hindiCopy, text, "analytical-instrument links"))
+        : englishInstrumentLinks;
 
   return (
-    <div className={`ivd-page analytical-instruments-page ${contentStyles.page}`} data-application-content-page>
+    <div className={`ivd-page analytical-instruments-page ${contentStyles.page}`} data-application-content-page lang={lang}>
       <SiteBreadcrumb
-        ariaLabel="Breadcrumb navigation"
+        ariaLabel={breadcrumbAriaLabel}
         items={data.breadcrumb}
         variant="bar"
       />
 
       {showInstrumentNavigation && analyticalInstrumentLinks.length > 0 ? (
-        <AnalyticalMobileInstrumentNavigation items={analyticalInstrumentLinks} />
+        <AnalyticalMobileInstrumentNavigation items={analyticalInstrumentLinks}
+          heading={germanCopy ? "Analysengeräte" : italianCopy ? "Strumenti analitici" : hindiCopy ? "विश्लेषणात्मक उपकरण" : undefined}
+          ariaLabel={germanCopy ? "Kategorien von Analysengeräten" : italianCopy ? "Categorie degli strumenti analitici" : hindiCopy ? "विश्लेषणात्मक उपकरणों की श्रेणियाँ" : undefined} />
       ) : null}
 
       {children}

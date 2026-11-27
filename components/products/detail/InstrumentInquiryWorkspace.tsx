@@ -12,14 +12,14 @@ import { instrumentInquiryText as text } from "@/data/products/configurator/inst
 import { isSyringePumpInquiryFamily } from "@/data/products/configurator/syringe-pump-inquiry";
 import { getSelectionWorkspaceCopy } from "@/data/products/detail/selection-workspace-copy";
 import { getCadRequestCopy } from "@/data/products/detail/cad-request";
-import { getProductDetailResourceCopy, type ProductDetailResourceLocale } from "@/data/products/detail/product-detail-resources";
+import { getProductDetailResourceCopy, type ProductDetailResourceCopyLocale } from "@/data/products/detail/product-detail-resources";
 import { normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import DetailSelectionWorkspace from "./DetailSelectionWorkspace";
 import { ProductDetailActions, ProductDetailActionButton } from "./ProductDetailActions";
 
 const Configurator = dynamic(() => import("../configurator/InstrumentInquiryConfigurator"), { ssr: false });
 const CadRequest = dynamic(() => import("./CadRequestModal"), { ssr: false });
-type Props = { slug: string; family: InstrumentInquiryFamily; locale: ProductDetailResourceLocale; detailHref: string; imagePath: string; resourceDownloads?: ReactNode; onConfigurationSelect?: (configuration: InstrumentInquiryConfiguration) => void };
+type Props = { slug: string; family: InstrumentInquiryFamily; locale: ProductDetailResourceCopyLocale; detailHref: string; imagePath: string; resourceDownloads?: ReactNode; onConfigurationSelect?: (configuration: InstrumentInquiryConfiguration) => void };
 
 /** Reuse the EA configuration presentation, with instrument-specific selection rules. */
 export default function InstrumentInquiryWorkspace({ slug, family, locale, detailHref, imagePath, resourceDownloads, onConfigurationSelect }: Props) {

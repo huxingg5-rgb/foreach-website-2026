@@ -1,4 +1,5 @@
-import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
+import { buildDraftPageMetadata, buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    FOREACH Website｜Resources｜Foreign Language Resource Center Entry
@@ -29,7 +30,11 @@ import DatasheetsClient from "@/components/resources/DatasheetsClient"; // 引�
 
 import { getDatasheetsPageData } from "@/services/resources/getDatasheetsPageData"; // 从 service 层获取页面数据
 
-import type { DatasheetLocale } from "@/data/resources/datasheets.types"; // 引入规格书语言类型
+import { germanDatasheetAccessibilityLabels } from "@/data/resources/datasheets.de";
+import { hindiDatasheetAccessibilityLabels } from "@/data/resources/datasheets.hi";
+import { italianDatasheetAccessibilityLabels } from "@/data/resources/datasheets.it";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
 
 import "@/app/resources/datasheets/datasheets.css"; // 当前临时复用规格书页面样式
 
@@ -43,9 +48,15 @@ const SUPPORTED_FOREIGN_RESOURCE_LOCALES = [
   "fr",
   "ko",
   "ru",
+  "de",
+  "it",
+  "hi",
 ] as const;
 
 const datasheetAccessibilityLabels = {
+  de: germanDatasheetAccessibilityLabels,
+  it: italianDatasheetAccessibilityLabels,
+  hi: hindiDatasheetAccessibilityLabels,
   es: {
     breadcrumb: "Ruta de navegación",
     categoryFilter: "Filtro de categoría de producto",
@@ -80,7 +91,7 @@ type SupportedForeignResourceLocale =
 ========================================================= */
 
 export function generateStaticParams() {
-  return SUPPORTED_FOREIGN_RESOURCE_LOCALES.map((locale) => ({
+  return SUPPORTED_FOREIGN_RESOURCE_LOCALES.filter(locale => (locale !== "de" && locale !== "it" && locale !== "hi") || languageDraftsEnabled).map((locale) => ({
     locale,
   }));
 }
@@ -105,6 +116,7 @@ type LocalizedResourcesPageProps = {
 function isSupportedForeignResourceLocale(
   locale: string,
 ): locale is SupportedForeignResourceLocale {
+  if (locale === "de" || locale === "it" || locale === "hi") return languageDraftsEnabled;
   return SUPPORTED_FOREIGN_RESOURCE_LOCALES.includes(
     locale as SupportedForeignResourceLocale,
   );
@@ -119,7 +131,7 @@ function isSupportedForeignResourceLocale(
    2. title 单独改成 Resources，避免和 Datasheets 页面完全重复
 ========================================================= */
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: LocalizedResourcesPageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -128,7 +140,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const pageData = await getDatasheetsPageData(locale as DatasheetLocale);
+  const pageData = await getDatasheetsPageData(locale);
 
   const metadata = {
     title:
@@ -138,6 +150,18 @@ export async function generateMetadata({
     description: pageData.pageText.seo.description,
   };
 
+  if (locale === "de") {
+    const canonical = getCanonicalUrl("/de/resources/datasheets/");
+    return buildDraftPageMetadata({ locale, canonical, ...metadata });
+  }
+  if (locale === "it") {
+    const canonical = getCanonicalUrl("/it/resources/datasheets/");
+    return { ...metadata, alternates: { canonical }, robots: { index: false }, openGraph: { ...metadata, url: canonical, locale: "it_IT" } };
+  }
+  if (locale === "hi") {
+    const canonical = getCanonicalUrl("/hi/resources/datasheets/");
+    return { ...metadata, alternates: { canonical }, robots: { index: false }, openGraph: { ...metadata, url: canonical, locale: "hi_IN" } };
+  }
   return buildInternationalPageMetadata({ locale, path: "/resources/datasheets/", ...metadata });
 }
 
@@ -160,7 +184,7 @@ export default async function LocalizedResourcesPage({
     notFound();
   }
 
-  const pageData = await getDatasheetsPageData(locale as DatasheetLocale);
+  const pageData = await getDatasheetsPageData(locale);
 
   return (
     <DatasheetsClient
@@ -173,3 +197,5 @@ export default async function LocalizedResourcesPage({
     />
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/resources/datasheets/", getPageMetadata);

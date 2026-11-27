@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "title": "Pompe miniaturizzate a membrana e peristaltiche: vantaggi, limiti e scelta per la fluidica strumentale",
+    "seoTitle": "Pompe a membrana e peristaltiche: vantaggi, limiti e scelta | FOREACH",
+    "seoDescription": "Confronta le pompe miniaturizzate a membrana e peristaltiche per strumenti. Differenze, vantaggi, limiti, precisione di dosaggio, pulsazioni e manutenzione nei circuiti di lavaggio, dei reagenti e degli scarichi.",
+    "coverAlt": "Pompa a membrana miniaturizzata brushless FOREACH DPL30H-BS ad alta pressione per liquidi",
+    "coverImage": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushless-diaphragm-liquid-supply-pump.webp"
+  },
+  "deck": "Confronta le pompe miniaturizzate a membrana per liquidi e le pompe peristaltiche per analizzatori e apparecchiature di laboratorio. Esamina principi di funzionamento, vantaggi e limiti, precisione di dosaggio e costi di manutenzione. Applica poi i criteri di scelta all’alimentazione del liquido di lavaggio, al trasferimento dei reagenti e all’aspirazione degli scarichi.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Valutare una pompa miniaturizzata a membrana per liquidi se il circuito è fisso, lavabile e riutilizzabile. Valutare una pompa peristaltica quando occorre sostituire le parti a contatto con il liquido a ogni cambio di lotto o trasferire il liquido in entrambe le direzioni. Per entrambi i tipi verificare liquido, portata, pressione e manutenzione effettivi. Precisione, pulsazioni e costi di esercizio dipendono dalla configurazione."
+    },
+    {
+      "type": "notice",
+      "label": "Campo di applicazione",
+      "text": "Il confronto riguarda le pompe miniaturizzate a membrana per liquidi con azionamento elettrico e le pompe peristaltiche a rulli nei circuiti fluidici degli strumenti. Le grandi pompe pneumatiche a doppia membrana e le pompe peristaltiche industriali per tubi di grande sezione hanno campi di funzionamento diversi. Verificare esplicitamente se una pompa a membrana per gas è idonea a pompare liquidi."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Pompe miniaturizzate a membrana e peristaltiche: differenze principali e tabella comparativa",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Criterio",
+            "Pompa miniaturizzata a membrana per liquidi",
+            "Pompa peristaltica"
+          ],
+          "rows": [
+            [
+              "Vantaggi principali",
+              "Camera riutilizzabile, meno consumabili legati alla compressione del tubo della pompa e integrazione agevole in un circuito fisso.",
+              "Il liquido rimane nel tubo, facilitandone la sostituzione e l’isolamento del fluido. I modelli reversibili trasferiscono il liquido in entrambe le direzioni."
+            ],
+            [
+              "Limiti principali",
+              "Camera e valvole richiedono pulizia. Particelle o cristalli possono compromettere le valvole di ritegno. L’erogazione è pulsante.",
+              "Il tubo è soggetto a fatica e va sostituito. Montaggio e usura possono alterare portata ed erogazione."
+            ],
+            [
+              "Cambio di liquido",
+              "Gestire i residui nella camera, sulla membrana, nelle valvole e nei tubi esterni.",
+              "La sostituzione dei gruppi a contatto con il liquido può agevolare il cambio, purché si intervenga anche sui componenti condivisi."
+            ],
+            [
+              "Aspetti di manutenzione",
+              "Membrana, valvole, guarnizioni e pulizia interna.",
+              "Durata del tubo, montaggio, perdite e calibrazione dopo la sostituzione del tubo."
+            ],
+            [
+              "Criteri tipici di scelta",
+              "Circuiti riutilizzabili e lavabili per alimentazione, reintegro e ricircolo.",
+              "Circuiti dedicati al singolo lotto, gruppi monouso e trasferimento bidirezionale."
+            ],
+            [
+              "Precisione e pulsazioni",
+              "Valutare il modello, il controllo e il risultato misurato al punto di utilizzo.",
+              "Servono prove anche in questo caso, incluse le variazioni durante l’intervallo di servizio del tubo."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I vantaggi dipendono dal circuito fluidico. Verificare materiali a contatto con il liquido, portata alla pressione di esercizio, ciclo di lavoro e accessibilità per la manutenzione. Per valutare la precisione e il costo lungo la vita utile servono dati della configurazione effettiva."
+        }
+      ]
+    },
+    {
+      "title": "Come funzionano le pompe a membrana e peristaltiche?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una pompa a membrana varia il volume della camera muovendo una membrana flessibile. Le valvole in ingresso e in uscita dirigono aspirazione e mandata. Il liquido entra in contatto con camera, membrana e componenti delle valvole. Le verifiche di compatibilità e pulizia devono coprire tutte le parti a contatto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una pompa peristaltica fa scorrere rulli lungo un tubo flessibile. La compressione sposta il liquido. Dietro a ogni rullo il tubo riprende forma e si riempie. In esercizio normale il liquido resta nel tubo ed è isolato dai rulli. Il tubo funge da barriera per il liquido ed è sottoposto a deformazioni ripetute. Materiale, dimensioni, recupero elastico e stato del tubo influiscono sulle prestazioni."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-rd/it/diaphragm-pump-working-principle-clean.webp",
+          "width": 1100,
+          "height": 535,
+          "alt": "Animazione del movimento della membrana e dell’apertura alternata delle valvole di ritegno in ingresso e in uscita",
+          "caption": "In aspirazione il volume della camera aumenta, la valvola di ingresso si apre e quella di mandata si chiude. Durante la mandata la sequenza si inverte."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/images/resources/technical-articles/diaphragm-pump-rd/it/diaphragm-pump-working-principle-clean.webp",
+              "label": "Apri l’animazione"
+            }
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-vs-peristaltic/peristaltic-pump-three-stage-no-text.webp",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Tre posizioni del rotore mostrano i rulli che comprimono il tubo pieno di liquido e la direzione di trasferimento",
+          "caption": "I rulli creano occlusioni mobili che spostano il liquido nel tubo. Il recupero della sezione del tubo dietro ai rulli consente l’ingresso di altro liquido."
+        }
+      ]
+    },
+    {
+      "title": "Vantaggi e limiti delle pompe a membrana e peristaltiche: precisione, pulsazioni e manutenzione",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "In che modo le parti bagnate incidono sulla pulizia e sul cambio del liquido?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Per cambiare liquido con una pompa a membrana, pulire le parti interne a contatto con il liquido: la sostituzione dei tubi esterni lascia residui nella camera e nelle valvole. Una camera riutilizzabile può essere adatta a un circuito fisso con lo stesso liquido di lavaggio, previa validazione della pulizia. Verificare la compatibilità dei materiali di testa, membrana e valvole con il liquido di processo e i detergenti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nella pompa peristaltica, sostituire il tubo elimina i residui in quel tratto e può far parte della procedura di cambio lotto. Pulire o sostituire anche serbatoi, raccordi e componenti a valle condivisi. Sterilità e contaminazione da trascinamento dipendono dal circuito completo e dal processo. Usare un tubo adatto alla pompa, resistente ad agenti chimici, temperatura, pressione e compressioni ripetute."
+        },
+        {
+          "type": "subheading",
+          "title": "Di quale manutenzione ha bisogno ciascun tipo di pompa?"
+        },
+        {
+          "type": "paragraph",
+          "text": "La pompa a membrana non comprime un tubo con rulli, ma membrana, valvole e tenute sono soggette a usura. Depositi, fibre o cristalli possono impedire la chiusura delle valvole, provocando riflusso, adescamento più lento o resa inferiore. Verificare pulizia, tenuta e prestazioni erogate. Accertare se la testa selezionata ammette interventi in loco."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il tubo di una pompa peristaltica si flette ripetutamente mentre trasporta il liquido. La fatica può alterarne il recupero elastico e la portata. Un’eventuale rottura può causare perdite. Ispezionare e sostituire il tubo in base all’esercizio reale, verificarne il corretto montaggio e ricalibrare se necessario. La sostituzione è agevole, con costi ricorrenti di tubo, manodopera e fermo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Prevedere l’accesso per la manutenzione di entrambe le configurazioni. Confrontare acquisto, consumabili, pulizia, manodopera, calibrazione e fermi secondo lo stesso programma di esercizio. Per stimare il costo lungo la vita utile, considerare tutte queste voci oltre al costo di acquisto e al tipo di pompa."
+        },
+        {
+          "type": "subheading",
+          "title": "Che cosa cambia se serve aspirazione di ritorno o trasferimento bidirezionale?"
+        },
+        {
+          "type": "paragraph",
+          "text": "In una pompa a membrana convenzionale per liquidi, le valvole di ritegno determinano la direzione del flusso. Invertire il motore in genere lascia invariata la direzione del liquido. Può servire una configurazione apposita o la commutazione del circuito. Una pompa peristaltica reversibile può invertire il flusso cambiando il senso di rotazione, quindi è una candidata per l’aspirazione di ritorno o il trasferimento bidirezionale. Verificare che testa, tubo, azionamento e controllo lo consentano, quindi controllare liquido residuo e gocciolamento dopo l’aspirazione di ritorno."
+        },
+        {
+          "type": "subheading",
+          "title": "Quale pompa offre più precisione o meno pulsazioni?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Il risultato dipende dalla configurazione. Le corse della membrana e il movimento delle valvole creano un’erogazione periodica, così come la compressione dei rulli e il recupero del tubo. Una portata media stabile può nascondere picchi e intervalli a portata ridotta. Per reintegrare un serbatoio può contare soprattutto il volume totale, mentre una cella a flusso può richiedere stabilità istantanea. Misurare nel punto di utilizzo prima di scegliere smorzamento, configurazione della testa o compensazione del controllo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per il dosaggio, confrontare le alternative con pari dose obiettivo, liquido, livello all’ingresso, pressione in uscita e ciclo. Registrare l’errore medio di dosaggio e la dispersione delle dosi ripetute, includendo il riavvio dopo un arresto. Per una pompa peristaltica confrontare un tubo nuovo con uno prossimo alla sostituzione prevista. Registrare le condizioni di prova insieme ai risultati. Per stabilire la precisione di dosaggio nell’impianto occorrono misure nelle condizioni di installazione. I dati a portata libera sono insufficienti."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+              "label": "Misurare e ridurre le pulsazioni di portata di una pompa a membrana"
+            },
+            {
+              "href": "/resources/technical-articles/metering-pump-accuracy-repeatability-reagent-dispensing/",
+              "label": "Accuratezza e ripetibilità nell’erogazione di reagenti"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Come scegliere una pompa a membrana o peristaltica per uno strumento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per un circuito fisso e lavabile che usa sempre lo stesso liquido, valutare prima una pompa a membrana. Per la sostituzione delle parti bagnate tra lotti o il trasferimento nei due sensi invertendo il motore, valutare prima una pompa peristaltica. Scegliere quindi la configurazione in base a portata, contropressione, materiali e manutenzione."
+        },
+        {
+          "type": "subheading",
+          "title": "Quando è opportuno valutare prima una pompa a membrana?"
+        },
+        {
+          "type": "paragraph",
+          "text": "L’alimentazione fissa del liquido di lavaggio, il reintegro del serbatoio e il ricircolo negli strumenti analitici sono buoni punti di partenza. Questi compiti coinvolgono spesso un liquido di composizione stabile e richiedono un volume entro un certo tempo o una portata sotto il carico del circuito. Una camera riutilizzabile riduce il lavoro di sostituzione del tubo della pompa, a condizione che materiali bagnati, pulizia e manutenzione di membrana, valvole e guarnizioni siano adeguati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con tubi stretti, filtri o ugelli di lavaggio, valutare la portata alla contropressione richiesta. Pressione massima e portata a vuoto appartengono a punti di lavoro diversi. Se cambiare regolarmente i tubi all’interno dello strumento è difficile, confrontare gli intervalli di manutenzione e prevedere comunque l’accesso per gli interventi."
+        },
+        {
+          "type": "subheading",
+          "title": "Quando è opportuno valutare prima una pompa peristaltica?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Considerare la soluzione peristaltica se il cambio di lotto di reagente, campione o terreno di coltura richiede la sostituzione delle parti bagnate. Il tubo rimovibile separa il liquido dal meccanismo della pompa ed è adatto a circuiti monouso. Includere flaconi, raccordi, valvole e aghi di dosaggio condivisi nella procedura di cambio: rimuovere il tubo dalla testa lascia eventuali residui altrove. Nei processi sterili validare il gruppo completo e la procedura di manipolazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per aspirare il liquido residuo dopo il dosaggio o trasferirlo nei due sensi tra due contenitori, una pompa peristaltica reversibile può ridurre il numero di componenti per la commutazione. Confermare compatibilità, pressione ammessa e intervallo di servizio del tubo. Prevedere accesso e tempo per sostituzione e ricalibrazione."
+        },
+        {
+          "type": "subheading",
+          "title": "Scelta della pompa per liquidi di lavaggio, reagenti e scarichi"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Compito",
+            "Prima opzione da valutare",
+            "Condizioni da verificare"
+          ],
+          "rows": [
+            [
+              "Alimentazione fissa del liquido di lavaggio o reintegro del serbatoio",
+              "Pompa miniaturizzata a membrana per liquidi",
+              "Liquido di composizione stabile e circuito lavabile e riutilizzabile. Verificare il tempo di completamento dalla portata sotto carico."
+            ],
+            [
+              "Ricircolo fisso con sostituzioni del tubo meno frequenti",
+              "Pompa miniaturizzata a membrana per liquidi",
+              "Esercizio continuo o intermittente e intervalli di manutenzione per membrana, valvole e guarnizioni."
+            ],
+            [
+              "Trasferimento di reagente, campione o terreno di coltura con cambi di lotto",
+              "Pompa peristaltica",
+              "Definire tutte le parti da sostituire. Verificare compatibilità e durata del tubo, e residui nei raccordi condivisi."
+            ],
+            [
+              "Aspirazione di ritorno o trasferimento bidirezionale in un’unica linea",
+              "Pompa peristaltica reversibile",
+              "Azionamento e testa compatibili. Verificare volume aspirato in ritorno, liquido residuo e gocciolamento."
+            ],
+            [
+              "Scarico di composizione nota in un circuito di drenaggio fisso",
+              "Si può valutare prima una pompa a membrana compatibile",
+              "Particelle, cristalli, ostruzione delle valvole e funzionamento ammesso con gas e liquido. Confrontare pompe peristaltiche se l’isolamento richiede un tubo sostituibile."
+            ],
+            [
+              "Piccole dosi in cicli brevi o alimentazione a basse pulsazioni di un rivelatore",
+              "Decidere in base a prove nel punto di utilizzo",
+              "Errore di dosaggio, ripetibilità o andamento della portata. Se necessario valutare smorzamento, controllo o una pompa dosatrice di precisione."
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Quando il tipo di pompa da solo non basta per decidere?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Variabilità degli scarichi, particelle, fibre, cristalli o presenza intermittente di aria richiedono verifiche del liquido e dei passaggi in entrambe le configurazioni. La testa peristaltica è priva di valvole di ritegno. Verificare comunque che le particelle passino senza danneggiare il tubo. Distinguere il pompaggio diretto dello scarico dall’applicazione del vuoto a un recipiente di raccolta. Proteggere una pompa per gas dalla penetrazione di liquido se è esterna al recipiente e non è idonea a pompare liquidi. L’autoadescamento, da solo, non certifica che la pompa possa funzionare a secco a tempo indefinito."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per un dosaggio preciso, misurare la dose erogata in uscita. Ritardo all’avvio, aria intrappolata, pressione in uscita, elasticità dei tubi e residui nell’ago possono influenzarla. Provare l’intero ciclo. Se nessuna alternativa rispetta la tolleranza, confrontare pompe a pistone di precisione o meccanismi di dosaggio a siringa."
+        }
+      ]
+    },
+    {
+      "title": "Che cosa verificare dopo aver scelto una pompa?",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Definire il compito, tra trasferimento, reintegro, scarico, ricircolo e dosaggio, e il risultato richiesto in uscita.",
+            "Specificare liquido di processo e agenti di pulizia, inclusi concentrazione, temperatura, viscosità, particelle e bolle.",
+            "Definire portata di esercizio o dose, condizioni in ingresso, pressione in uscita, ciclo di avvio e arresto e ore di funzionamento giornaliere.",
+            "Tracciare il percorso completo a contatto con il liquido e individuare i componenti da pulire o sostituire.",
+            "Confrontare curve del modello, materiali, controlli, spazio di installazione e accesso per la manutenzione.",
+            "Provare il circuito installato nelle condizioni previste e nelle varie fasi della vita utile. Registrare portata o dose, perdite, comportamento all’avvio e risultati di accettazione del processo."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Le schede delle FOREACH DPL30 e DPL60 sono un punto di partenza per valutare i singoli modelli a membrana. Usare le specifiche aggiornate e la curva portata-pressione della configurazione scelta. Verificare a parte compatibilità con i reagenti, precisione di dosaggio e possibilità di sostituire direttamente una pompa peristaltica."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "Scopri le pompe a membrana FOREACH per liquidi"
+            },
+            {
+              "href": "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/",
+              "label": "DPL30: guida alla scelta per il trasferimento di liquidi"
+            },
+            {
+              "href": "/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/",
+              "label": "DPL60: guida alla scelta per il trasferimento di liquidi"
+            },
+            {
+              "href": "/resources/technical-articles/self-priming-miniature-liquid-diaphragm-pump-selection/",
+              "label": "Verificare altezza di aspirazione, tempo di adescamento e condizioni di riavvio"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Si possono scambiare una pompa a membrana e una peristaltica entrambe da 300 mL/min?",
+      "answer": "Il solo valore di portata è insufficiente. Verificare liquido, velocità o tensione, condizioni in ingresso e pressione in uscita alla base di ciascun valore. Tubi stretti, filtri e aghi di dosaggio possono dare portate diverse nell’impianto. La sostituzione cambia anche materiali bagnati, pulizia, controllo e manutenzione. Confrontare portata, dose, comportamento all’avvio e all’arresto e ciclo di lavoro nel circuito originale. Se l’intero percorso bagnato è sostituito tra i lotti, l’uso di una camera a membrana riutilizzabile richiede una nuova valutazione della pulizia."
+    },
+    {
+      "question": "Ogni quanto va sostituito il tubo di una pompa peristaltica?",
+      "answer": "L’intervallo dipende dall’applicazione. Programmare la sostituzione prima che compaiano perdite. Materiale, dimensioni, compressione dei rulli, velocità, temperatura, liquido e pressioni in ingresso e in uscita incidono sulla durata. Partire dalle indicazioni del fornitore e stabilire un intervallo preventivo in base a ore effettive di funzionamento, andamento della portata e stato del tubo. Indagare appiattimento persistente, scarso recupero elastico, crepe, rigonfiamento o variazioni significative dell’erogazione. Una pompa a membrana non richiede un tubo soggetto a compressione, ma necessita di manutenzione di membrana, valvole e tenute."
+    },
+    {
+      "question": "Perché la dose varia dopo aver montato un tubo nuovo della stessa misura?",
+      "answer": "Alle stesse dimensioni nominali, il volume spostato a ogni rotazione può variare. Contano tolleranze di diametro interno e parete, posizione di montaggio, tensione e deformazione iniziale. Seguire le istruzioni di montaggio e rodaggio della testa, poi calibrare con il liquido e il circuito reali. Raccogliere più dosi e misurarne il volume, oppure pesarle e convertire la massa con la densità del liquido. Verificare errore medio di dosaggio e ripetibilità. Ripetere la verifica dopo cambi di liquido, tubi o contropressione, prima di riutilizzare il fattore di calibrazione."
+    },
+    {
+      "question": "La pompa gira ma non aspira liquido o ne eroga meno. Che cosa controllare prima?",
+      "answer": "Controllare alimentazione del liquido, immersione del tubo in ingresso e orientamento degli attacchi. Cercare poi infiltrazioni d’aria, pieghe del tubo, filtri bloccati e contropressione in uscita. Se il circuito esterno è integro, per una pompa peristaltica verificare tipo di tubo, montaggio, occlusione e recupero elastico. Per una pompa a membrana, verificare contaminazione delle valvole, depositi, membrana e guarnizioni. Confrontare i risultati a parità di liquido, livello e controllo. Isolare e depressurizzare il circuito prima degli interventi sulla testa ammessi dalle istruzioni del modello. L’aumento di velocità da solo non identifica la causa."
+    },
+    {
+      "question": "Cambiare tipo di pompa elimina il gocciolamento o il riflusso dopo l’arresto?",
+      "answer": "Distinguere prima l’effetto sifone dovuto ai dislivelli, lo scarico di pressione a valle e la caduta di liquido residuo dall’uscita. Le valvole di ritegno di una pompa a membrana guidano il ciclo di pompaggio. Verificare separatamente che assicurino la chiusura richiesta dal sistema. In una pompa peristaltica, usura e montaggio errato possono compromettere l’occlusione del tubo, e può restare liquido a valle della testa. Valutare una chiusura, misure antisifone o un’aspirazione di ritorno convalidata in funzione della causa reale. Verificare il sistema da fermo. Il solo cambio della pompa non garantisce l’assenza di gocciolamento."
+    },
+    {
+      "question": "Per cambiare reagente basta sostituire il tubo nella testa peristaltica?",
+      "answer": "Solo se quel tratto comprende tutto il percorso bagnato da sostituire. Tubi di ingresso, attacchi dei flaconi, valvole, raccordi e aghi riutilizzati possono trattenere il reagente precedente. Tracciare il percorso dal recipiente all’uscita, prevedere sostituzione o pulizia per ogni componente e verificare che il primo liquido erogato dopo il cambio rispetti i limiti di residuo. Per una pompa a membrana includere camera, membrana e valvole di ritegno. Un tubo monouso facilita il cambio. Sterilità e assenza di contaminazione da trascinamento richiedono una validazione sull’intero circuito."
+    }
+  ],
+  "cta": {
+    "title": "Stai valutando una pompa a membrana per il tuo circuito?",
+    "description": "Indica liquido, portata di esercizio o dose obiettivo, condizioni in ingresso e in uscita, ciclo di lavoro e requisiti di pulizia per valutare le configurazioni candidate e le prove sul sistema installato.",
+    "contactLabel": "Parla con noi della tua applicazione",
+    "productsLabel": "Scopri le pompe a membrana",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

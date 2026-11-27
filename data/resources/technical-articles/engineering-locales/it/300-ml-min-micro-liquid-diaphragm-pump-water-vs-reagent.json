@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "title": "Perché una micropompa a membrana per liquidi da 300 mL/min perde portata e capacità di autoadescamento quando si passa dall’acqua a un reagente?",
+    "seoTitle": "Micropompa a membrana per liquidi: prestazioni con acqua e reagente | Foreach Technology",
+    "seoDescription": "Scopri perché una micropompa a membrana per liquidi da 300 mL/min può perdere portata o capacità di autoadescamento con un reagente, in funzione di viscosità, tensione di vapore, degasaggio e compatibilità dei materiali.",
+    "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-water-versus-reagent-flow-test.webp",
+    "coverAlt": "Micropompa a membrana per liquidi FOREACH DPL30 per la convalida con un reagente di processo"
+  },
+  "deck": "Il superamento di una prova con acqua documenta le prestazioni solo alla temperatura, con i tubi, il livello del liquido, l’alimentazione e la durata della prova utilizzati. Un reagente di processo può cambiare viscosità, densità, tensione di vapore, tensione superficiale, bagnabilità, rilascio di gas e condizioni dei materiali. Il punto di lavoro della stessa pompa può quindi spostarsi.",
+  "leadBlocks": [
+    {
+      "type": "formula",
+      "expression": "Fluid change: μ, ρ, P_vapour, γ, θ, dissolved gas",
+      "note": "Queste variabili influiscono su perdita di carico, prevalenza statica, margine alla vaporizzazione, bagnabilità e comportamento delle bolle. Il contatto prolungato con i materiali introduce anche un effetto che varia nel tempo."
+    },
+    {
+      "type": "notice",
+      "label": "Limiti delle prove DPL30:",
+      "text": "Il fluido di prova usato nella specifica DPL30 è acqua purificata. Per gli altri liquidi, valuta la concentrazione, la temperatura, il tempo di contatto e le condizioni operative effettive. Un esito positivo con acqua non documenta la compatibilità con tutti i reagenti."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Per la valutazione iniziale considera viscosità e circuito oltre alla portata senza carico",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "ΔP = 128μLQ / (πD⁴)",
+          "note": "La relazione di Hagen–Poiseuille assume un tubo circolare e rigido e un flusso laminare, newtoniano e completamente sviluppato. Consente di stimare l’andamento e l’ordine di grandezza. Per un circuito installato completo serve una valutazione specifica."
+        },
+        {
+          "type": "paragraph",
+          "text": "In queste condizioni, la perdita di carico è proporzionale alla viscosità e inversamente proporzionale alla quarta potenza del diametro. Anche un aumento contenuto della viscosità o una piccola riduzione del diametro interno effettivo può quindi richiedere una parte significativa della pressione differenziale disponibile della pompa."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Condizione esemplificativa",
+            "1.0 mPa·s",
+            "3.0 mPa·s",
+            "Interpretazione"
+          ],
+          "rows": [
+            [
+              "300 mL/min in 1 m di tubo ideale con diametro interno di 3.2 mm",
+              "Circa 1.94 kPa",
+              "Circa 5.83 kPa",
+              "La perdita di carico del tubo diritto ideale aumenta di circa 3.89 kPa. Raccordi, valvole, filtri e curve reali danno perdite aggiuntive."
+            ]
+          ]
+        },
+        {
+          "type": "formula",
+          "expression": "Re = ρvD / μ",
+          "note": "Nell’esempio con acqua, Re è vicino a 2000, in prossimità del limite convenzionale tra regime laminare e transizione. Usa il calcolo a scopo illustrativo e verifica il reagente e il circuito completo."
+        }
+      ]
+    },
+    {
+      "title": "2. Una maggiore tensione di vapore riduce il margine disponibile in aspirazione",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "P_in,abs > P_vapour + P_margin",
+          "note": "Quando la pressione locale all’ingresso si avvicina alla tensione di vapore a saturazione, aumentano le probabilità di formazione di vapore, bolle e cavitazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Secondo i dati NIST per l’equazione di Antoine, intorno a 20 °C la tensione di vapore a saturazione è circa 2.34 kPa per l’acqua e 5.85 kPa per l’etanolo. L’etanolo puro serve qui come confronto. A parità di viscosità, il comportamento in aspirazione può cambiare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Temperature maggiori aumentano ulteriormente la tensione di vapore. Tubi di aspirazione lunghi e stretti, altezza di aspirazione elevata, un filtro carico o un’alta viscosità possono contemporaneamente ridurre la pressione locale all’ingresso."
+        }
+      ]
+    },
+    {
+      "title": "3. Come individuare l’origine delle bolle in un tubo trasparente",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Origine delle bolle",
+            "Causa tipica",
+            "Come distinguerla"
+          ],
+          "rows": [
+            [
+              "Ingresso di aria dall’esterno",
+              "Perdita da un raccordo, un tubo flessibile o la tenuta del tappo del flacone sul lato in depressione",
+              "Isolamento per tratti, verifica della tenuta in pressione e prova di riferimento con un tubo corto"
+            ],
+            [
+              "Rilascio di gas disciolto",
+              "Pressione più bassa all’ingresso, reagente non degasato o presenza di tensioattivi",
+              "Confronta con un fluido degasato e osserva dove compare la prima bolla"
+            ],
+            [
+              "Vaporizzazione locale o cavitazione",
+              "Tensione di vapore elevata, temperatura e perdite in aspirazione",
+              "Riduci temperatura, altezza di aspirazione e restrizione all’ingresso. Confronta la rumorosità e il recupero della portata."
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Dati da rilevare:",
+          "text": "Prima di attribuire il problema a una membrana rotta, registra la pressione assoluta all’ingresso, la temperatura del fluido, la posizione della prima bolla, le fluttuazioni di portata e il risultato del confronto con un fluido degasato."
+        }
+      ]
+    },
+    {
+      "title": "4. Distingui gli effetti immediati delle proprietà del fluido dagli effetti a lungo termine sui materiali",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una variazione immediata al cambio del fluido suggerisce di verificare prima viscosità, tensione di vapore, bagnabilità, rilascio di gas e resistenza del circuito. Un calo graduale nell’arco di giorni o settimane richiede anche verifiche di assorbimento, estrazione, rigonfiamento, variazioni di durezza, depositi e cristallizzazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le norme ISO 1817 e ASTM D471 confrontano massa, volume, durezza e proprietà meccaniche della gomma prima e dopo l’esposizione al liquido. Entrambi i metodi di prova controllata indicano che dai dati di immersione non si ricava direttamente la durata dinamica di un componente finito."
+        },
+        {
+          "type": "notice",
+          "label": "Tutti i materiali a contatto con il fluido:",
+          "text": "La verifica deve comprendere la membrana in PTFE, le valvole in FFKM, la testa in PPS, i tubi, i raccordi e le guarnizioni esterne nella combinazione effettiva."
+        }
+      ]
+    },
+    {
+      "title": "5. Passa dalla prova con acqua a una convalida comparabile con il fluido di processo",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "R_Q = Q_reagent / Q_water ; R_H = H_reagent / H_water",
+          "note": "RQ e RH confrontano la portata e la capacità di aspirazione con il reagente rispetto al riferimento con acqua. Le prove di durata possono seguire RQ(t) e RH(t)."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Mantieni invariati pompa, tensione, altezza d’ingresso, lunghezza e diametro interno dei tubi.",
+            "Registra temperatura, viscosità, densità e limiti di composizione noti per acqua e reagente.",
+            "Misura pressione all’ingresso, pressione all’uscita, portata, tempo di primo adescamento e presenza di bolle.",
+            "Confronta i dati subito dopo il cambio di fluido per isolare gli effetti sul punto di lavoro.",
+            "Per la durata prevista, esegui prove cicliche e di contatto a pompa ferma, poi controlla le prestazioni residue.",
+            "Conferma nel sistema installato le condizioni più sfavorevoli di concentrazione, temperatura, livello del liquido, carico del filtro e tolleranze del tubo."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Determina il punto di lavoro con il reagente",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Considerate temperatura, viscosità, tensione di vapore e compatibilità dei materiali del reagente, oltre alla resistenza del circuito reale, quali prestazioni in termini di portata, autoadescamento e durata può offrire questa micropompa a membrana per liquidi della classe 300 mL/min?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Una matrice di convalida raccoglie portata senza carico, curve della pompa, proprietà del fluido, materiali e criteri di approvazione. Una sola prova con acqua copre le condizioni in cui è stata eseguita."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sul passaggio dall’acqua a un reagente in una micropompa a membrana per liquidi",
+  "faqItems": [
+    {
+      "question": "Perché la portata può cambiare molto quando la viscosità del reagente è solo leggermente superiore a quella dell’acqua?",
+      "answer": "Possono cambiare contemporaneamente diametro del tubo, perdite localizzate in raccordi e filtri, tensione di vapore, rilascio di gas, bagnabilità e condizioni dei materiali. Misura le pressioni di ingresso e uscita per valutare lo spostamento del punto di lavoro."
+    },
+    {
+      "question": "Basta stringere i raccordi per eliminare le bolle?",
+      "answer": "Le bolle possono derivare anche da gas disciolto o da vapore. Confronta pressione assoluta all’ingresso, temperatura, posizione delle bolle e risultati della prova con un fluido degasato."
+    },
+    {
+      "question": "Una prova riuscita con acqua dimostra la compatibilità dei materiali?",
+      "answer": "Per il reagente previsto occorrono ancora una valutazione preliminare dei materiali, prove di immersione, prove cicliche dinamiche e di contatto a pompa ferma e verifiche della tenuta delle prestazioni della pompa completa."
+    },
+    {
+      "question": "L’equazione di Hagen–Poiseuille può prevedere direttamente la portata del sistema installato?",
+      "answer": "L’equazione presuppone una geometria e un regime di flusso specifici. Tubi flessibili, curve, raccordi, valvole, filtri, effetti di ingresso e comportamento non newtoniano richiedono una convalida su misure dell’intero sistema."
+    },
+    {
+      "question": "Come si confrontano reagenti diversi?",
+      "answer": "Usa la stessa pompa, alimentazione, tubi e livello del liquido. Confronta portata, autoadescamento, pressione minima all’ingresso, tempo di primo adescamento, bolle e mantenimento delle prestazioni nel tempo. Registra temperatura e lotto del fluido."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi passare dalla prova DPL30 con acqua alla convalida con un reagente di processo?",
+    "description": "Per definire la matrice di convalida con il fluido effettivo, indica limiti di composizione, concentrazione, temperatura, viscosità, volatilità, portata obiettivo, altezza di aspirazione, tubi, filtri e requisiti di funzionamento continuo e di contatto a pompa ferma.",
+    "contactLabel": "Parla con un tecnico",
+    "productsLabel": "Vedi la micropompa a membrana per liquidi DPL30",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump"
+  }
+}

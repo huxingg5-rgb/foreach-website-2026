@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 import HardTubeFittingRelatedArticles from "@/components/products/detail/HardTubeFittingRelatedArticles";
 import FittingLocalizedSelectionContent from "@/components/products/detail/FittingLocalizedSelectionContent";
 import type {
@@ -11,6 +12,12 @@ import {
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import { getHardTubeSeo } from "@/data/products/detail/hard-tube-seo";
+import { getGermanProductDetailContent, getGermanProductDetailMetadata } from "@/data/products/detail/product-detail-content.de";
+import { germanHardTubeFittingSlugs } from "@/data/products/detail/hard-tube-fitting-detail.de";
+import { isLocalizedHindiDraftPath, isLocalizedItalianDraftPath, languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { getHindiHardTubeFittingContent, hindiHardTubeFittingSlugs } from "@/data/products/detail/product-detail.hi";
+import { getItalianHardTubeFittingContent, italianHardTubeFittingSlugs } from "@/data/products/detail/product-detail.it";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
 
 import {
   connectPublishedFittingProduct,
@@ -284,8 +291,16 @@ function toClientData(
   };
 }
 
+function hasHindiDetail(slug: string) {
+  return isLocalizedHindiDraftPath("/hi/products/fittings/hard-tube-fittings/" + slug + "/");
+}
+
+function hasItalianDetail(slug: string) {
+  return isLocalizedItalianDraftPath("/it/products/fittings/hard-tube-fittings/" + slug + "/");
+}
+
 export function generateStaticParams() {
-  return SUPPORTED_LOCALES.flatMap(
+  const existing = SUPPORTED_LOCALES.flatMap(
     (locale) =>
       hardTubeDetails.map(
         (detail) => ({
@@ -298,15 +313,35 @@ export function generateStaticParams() {
         })
       )
   );
+  return languageDraftsEnabled
+    ? [...existing, ...germanHardTubeFittingSlugs.map(seriesSlug => ({ locale: "de", seriesSlug })),
+        ...italianHardTubeFittingSlugs.filter(hasItalianDetail).map(seriesSlug => ({ locale: "it", seriesSlug })),
+        ...hindiHardTubeFittingSlugs.filter(hasHindiDetail).map(seriesSlug => ({ locale: "hi", seriesSlug }))]
+    : existing;
 }
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const {
     locale,
     seriesSlug,
   } = await params;
+  const detail = findDetail(seriesSlug);
+  const italianDetail = locale === "it" && detail && hasItalianDetail(seriesSlug) ? getItalianHardTubeFittingContent(detail) : undefined;
+  const hindiDetail = locale === "hi" && detail && hasHindiDetail(seriesSlug) ? getHindiHardTubeFittingContent(detail) : undefined;
+  const draftDetail = italianDetail ?? hindiDetail;
+  if (draftDetail && detail) {
+    const title = detail.model + " – " + draftDetail.title + " | FOREACH";
+    const { description, imageAlt } = draftDetail;
+    const url = getCanonicalUrl("/" + locale + "/products/fittings/hard-tube-fittings/" + seriesSlug + "/");
+    const social = buildProductSocialMetadata({ data: { ...detail, imageAltEn: imageAlt }, title, description, canonicalUrl: url });
+    return { ...social, title: { absolute: title }, description, alternates: { canonical: url }, robots: { index: false, follow: true }, openGraph: { ...social.openGraph, locale: hindiDetail ? "hi_IN" : "it_IT" } };
+  }
+  if (locale === "de" && detail && languageDraftsEnabled) {
+    const metadata = getGermanProductDetailMetadata(`/products/fittings/hard-tube-fittings/${seriesSlug}/`, detail.model);
+    if (metadata) return metadata;
+  }
 
   if (
     !isSupportedLocale(
@@ -315,11 +350,6 @@ export async function generateMetadata({
   ) {
     return {};
   }
-
-  const detail =
-    findDetail(
-      seriesSlug
-    );
 
   if (!detail) {
     return {};
@@ -354,9 +384,17 @@ export default async function LocalizedHardTubeDetailPage({
   params,
 }: PageProps) {
   const {
-    locale,
+    locale: requestedLocale,
     seriesSlug,
   } = await params;
+  const germanDetail = requestedLocale === "de" && languageDraftsEnabled
+    ? getGermanProductDetailContent(`/en/products/fittings/hard-tube-fittings/${seriesSlug}/`) : undefined;
+  const detail = findDetail(seriesSlug);
+  if (!detail) notFound();
+  const italianDetail = requestedLocale === "it" && hasItalianDetail(seriesSlug) ? getItalianHardTubeFittingContent(detail) : undefined;
+  const hindiDetail = requestedLocale === "hi" && hasHindiDetail(seriesSlug) ? getHindiHardTubeFittingContent(detail) : undefined;
+  const contentLocale = italianDetail ? "it" : hindiDetail ? "hi" : undefined;
+  const locale = germanDetail || contentLocale ? "en" : requestedLocale;
 
   if (
     !isSupportedLocale(
@@ -366,20 +404,13 @@ export default async function LocalizedHardTubeDetailPage({
     notFound();
   }
 
-  const detail =
-    findDetail(
-      seriesSlug
-    );
-
-  if (!detail) {
-    notFound();
-  }
-
   return (
     <ProductDetailClient
+      germanDetail={germanDetail}
+      localizedDetail={italianDetail ? { locale: "it", copy: italianDetail } : hindiDetail ? { locale: "hi", copy: hindiDetail } : undefined}
       customerCategoryMode="hard-tube-zh"
-      customerCategoryContent={{selection:<FittingLocalizedSelectionContent data={{...detail,productTypeId:"hard-tube-fittings"}} locale={locale}/>}}
-      afterContent={<HardTubeFittingRelatedArticles model={detail.model} locale={locale} />}
+      customerCategoryContent={{selection:<FittingLocalizedSelectionContent data={{...detail,productTypeId:"hard-tube-fittings"}} locale={locale} germanDraft={!!germanDetail} contentLocale={contentLocale}/>}}
+      afterContent={<HardTubeFittingRelatedArticles model={detail.model} locale={locale} germanDraft={!!germanDetail} contentLocale={contentLocale} />}
       data={
         toClientData(
           detail
@@ -388,3 +419,5 @@ export default async function LocalizedHardTubeDetailPage({
     />
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/products/fittings/hard-tube-fittings/[seriesSlug]/", getPageMetadata);

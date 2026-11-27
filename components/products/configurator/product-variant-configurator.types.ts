@@ -94,6 +94,7 @@ export type ProductConfiguratorConfig = {
   showProductNameInSelection?: boolean;
   // Hide the SKU row when only a configuration model, not an assigned SKU, is known.
   showProductCode?: boolean;
+  showMatchedModel?: boolean;
   // Default preserves the existing add/remove toggle used by tubing selectors.
   allowListRemoval?: boolean;
 
@@ -136,6 +137,7 @@ export type ProductVariantConfiguratorProps = {
   open: boolean;
   config: ProductConfiguratorConfig;
   locale?: ProductConfiguratorLocale;
+  uiLocale?: string;
   value?: ProductConfiguratorVariant | null;
   onClose: () => void;
   drawingRequirements?: boolean;

@@ -1,0 +1,46 @@
+{
+  "title": "Modellauswahl",
+  "description": "Wählen Sie eine Ausführung für dieses Ventil aus, um den vollständigen Modellcode und die Artikelnummer zu sehen.",
+  "barbedDescription": "Wählen Sie Spannung, Membranwerkstoff, Grundplattenwerkstoff und Energiesparoption aus, um den vollständigen Modellcode des Ventils mit Schlauchtüllen zu bestimmen.",
+  "viewConfiguration": "Ausführung ansehen",
+  "empty": "Ausführung auswählen",
+  "hint": "Die Auswahl zeigt die Ausführungen dieses Ventils. Fügen Sie unterschiedliche Ausführungen einzeln hinzu.",
+  "noticeTitle": "Auswahlliste",
+  "notice": "Sie können mehrere unterschiedliche Ausführungen auswählen und zur Liste hinzufügen. Jede Ausführung muss nur einmal hinzugefügt werden.",
+  "labels": [
+    "Nennspannung",
+    "Membranwerkstoff",
+    "Grundplattenwerkstoff",
+    "Energiesparschaltung",
+    "Anschlussart",
+    "Anzahl der Wege",
+    "Ventilfunktion",
+    "Durchgangsdurchmesser",
+    "Gewindeanschluss",
+    "Ventilsitzwerkstoff"
+  ],
+  "values": [
+    "Standard (ohne Energiesparschaltung)",
+    "Mit Energiesparschaltung (Y)",
+    "3 Wege",
+    "2 Wege, stromlos offen",
+    "2 Wege, stromlos geschlossen",
+    "P · Blockmontage",
+    "B16 · Schlauchtüllen",
+    "Keine",
+    "1/4-28 UNF (U28)"
+  ],
+  "ui": [
+    "Modellauswahl schließen",
+    "Aktuelle Auswahl",
+    "Vollständiger Modellcode",
+    "Artikelnummer",
+    "Ausführung",
+    "Passendes Modell",
+    "Modellcode kopieren",
+    "Kopiert",
+    "Zur Liste hinzufügen",
+    "Zur Liste hinzugefügt",
+    "Bestätigen und zurück"
+  ]
+}

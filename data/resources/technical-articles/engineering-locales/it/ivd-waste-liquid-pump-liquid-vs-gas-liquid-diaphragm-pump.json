@@ -1,0 +1,388 @@
+{
+  "metadata": {
+    "title": "Come scegliere una pompa per lo scarico liquido IVD: pompa a membrana per liquidi o per gas e liquidi?",
+    "seoTitle": "Pompe per scarico liquido IVD: liquidi o gas e liquidi | Foreach Technology",
+    "seoDescription": "Scegli la pompa per lo scarico IVD in base a ingresso d’aria, vuoto, volume del sistema, tempo di evacuazione, resistenza della linea, stato del fluido e compatibilità dei materiali.",
+    "coverImage": "/images/resources/technical-articles/ivd-waste-liquid-pump-selection/ivd-waste-aspiration-pump-selection-cover.webp",
+    "coverAlt": "Circuito di aspirazione dello scarico IVD dal pozzetto di lavaggio della sonda al recipiente di raccolta a tenuta, attraverso una pompa a membrana per gas e liquidi"
+  },
+  "deck": "Per scegliere una pompa di scarico IVD, il solo valore in mL/min non basta. Se la linea rimane piena di liquido e lo scarico è trasferito in continuo, valutare una pompa a membrana per liquidi. Se l’ago di aspirazione aspira aria e in ingresso si alternano liquido e gas, valutare una pompa a membrana per gas e liquidi considerando vuoto, volume del sistema e tempo di evacuazione.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un percorso tipico è pozzetto di lavaggio → ago di aspirazione → tubo di scarico → pompa di scarico. In un ciclo di pulizia all’ingresso può verificarsi la sequenza liquido → aria → liquido → aria. Il primo criterio di scelta è spesso verificare se entra aria nella pompa, poi stabilire la portata richiesta in mL/min."
+    },
+    {
+      "type": "notice",
+      "label": "Risposta in 30 secondi:",
+      "text": "Per lo scarico liquido continuo e stabile con aria trascurabile, scegliere una pompa a membrana per liquidi in base a portata di esercizio, pressione e materiali. In caso di aspirazione a secco, evacuazione di tubi, generazione del vuoto o alternanza tra gas e liquido, scegliere una pompa a membrana per gas e liquidi in base a stato del fluido, vuoto obiettivo, volume del sistema, tempo di evacuazione e resistenza. Le portate nominali dei due tipi misurano prestazioni diverse."
+    },
+    {
+      "type": "links",
+      "items": [
+        {
+          "href": "/applications/ivd/",
+          "label": "applicazioni diagnostiche IVD e relative funzioni fluidiche",
+          "prefix": "Collocare innanzitutto la pompa nel quadro delle ",
+          "suffix": "."
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Che cosa indicano pompa per scarico liquido, pompa di aspirazione dello scarico e pompa per aspirazione a vuoto?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pompa per scarico liquido, pompa di scarico, pompa di aspirazione dello scarico, pompa per aspirazione a vuoto e pompa di drenaggio sono in genere nomi funzionali. Per scegliere il meccanismo occorre definire il compito sul liquido, l’ingresso d’aria, il vuoto o l’evacuazione necessari, il volume del sistema, il tempo di evacuazione ammesso e la compatibilità di tutte le parti bagnate."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Termine",
+            "Significato tipico",
+            "Che cosa resta da verificare"
+          ],
+          "rows": [
+            [
+              "Pompa per scarico liquido o pompa di drenaggio",
+              "Trasferimento o drenaggio dello scarico",
+              "Se all’ingresso è sempre presente solo liquido"
+            ],
+            [
+              "Pompa di aspirazione dello scarico",
+              "Rimuove lo scarico da pozzetto, sonda o tubo",
+              "Se il circuito usa una pompa per liquidi o una pompa per vuoto"
+            ],
+            [
+              "Pompa per aspirazione a vuoto",
+              "Usa la depressione per aspirare o evacuare",
+              "La velocità di aspirazione nell’impianto al vuoto raggiungibile"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Perché alimentazione del liquido di pulizia e aspirazione dello scarico richiedono criteri diversi?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un circuito di pulizia segue spesso il percorso flacone di pulizia → pompa per liquidi → valvola → sonda di lavaggio. Contano portata di esercizio, pressione, adescamento e materiali. Il lato scarico rimuove fluido da un pozzetto di lavaggio o da una posizione di reazione attraverso ago e tubo di aspirazione. Contano quindi ingresso d’aria, vuoto, tempo di evacuazione, volume del sistema e resistenza."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
+              "label": "guida alle pompe IVD per pulizia, lavaggio e risciacquo",
+              "prefix": "Per terminologia, portata e pressione sul lato di alimentazione, consultare la ",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Quando una pompa a membrana standard per liquidi può gestire lo scarico IVD?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valutare una pompa a membrana per liquidi se il tubo rimane prevalentemente pieno, lo scarico si trasferisce da A a B in modo continuo o stabile, entra poca aria e la pompa può entrare in contatto con il fluido. Dimensionare in base a portata di esercizio, contropressione di mandata, adescamento, riadescamento e materiali bagnati. Il vuoto massimo riguarda una funzione diversa."
+        },
+        {
+          "type": "paragraph",
+          "text": "DPL30 è una pompa a membrana per liquidi della classe 300 mL/min e DPL60 della classe 600 mL/min. Entrambe appartengono alla classe di pressione nominale 100 kPa. Sono opzioni per trasferimenti continui con portata richiesta inferiore o superiore. Verificare la portata nell’impianto con lo scarico e il circuito effettivi."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "Pompa a membrana miniaturizzata per liquidi"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
+              "label": "Pompa a membrana per liquidi DPL30, classe 300 mL/min"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
+              "label": "Pompa a membrana per liquidi DPL60, classe 600 mL/min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Quando valutare prima una pompa a membrana per gas e liquidi?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valutare una pompa a membrana per gas e liquidi se l’ago di aspirazione aspira aria mentre il livello cala, se la pompa continua a funzionare dopo aver rimosso il liquido, se occorre evacuare la linea o se in ingresso si alternano ripetutamente liquido, bolle, tappi di liquido e aria. Il vantaggio è gestire i cambi di fase e creare il vuoto. Per la portata del liquido occorrono dati separati."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/gas-liquid-diaphragm-pumps/",
+              "label": "Pompa a membrana miniaturizzata per gas e liquidi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Perché la pompa di aspirazione dello scarico richiede sia vuoto sia portata?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Aghi di aspirazione, dislivello del liquido, tubi stretti, valvole, raccordi, filtri e perdite riducono il differenziale di pressione disponibile. La pompa deve superare queste resistenze entro il tempo richiesto, avviare l’aspirazione e continuare a rimuovere gas durante l’aspirazione a secco. Il vuoto massimo indica il limite raggiungibile. Il tempo di evacuazione va determinato a parte."
+        },
+        {
+          "type": "formula",
+          "expression": "Required Pump Capability = Target Vacuum + Line Resistance + Height Difference + Aspiration Requirement",
+          "note": "La relazione orienta la scelta. Impostare riferimenti coerenti di pressione e tempo, poi verificare il sistema completo."
+        }
+      ]
+    },
+    {
+      "title": "6. Perché il volume del sistema cambia il tempo di evacuazione?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Due pompe che raggiungono entrambe valori inferiori a -90 kPa possono impiegare tempi diversi per evacuare lo stesso sistema. Un volume di gas effettivo maggiore contiene più gas da rimuovere. Tubi stretti, valvole, resistenza dei filtri, perdite e un vuoto obiettivo più spinto allungano il processo."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Registrare il volume effettivo di camere, recipienti di raccolta, tubi, valvole e filtri.",
+            "Indicare diametro interno e lunghezza dei tubi, aperture delle valvole, perdita di carico dei filtri, tasso di perdita e dislivello.",
+            "Specificare il vuoto obiettivo e il tempo di evacuazione ammesso dal ciclo dello strumento.",
+            "Misurare la curva pressione-tempo, il liquido residuo e il riadescamento nel ramo reale più gravoso e con il fluido effettivo."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "7. Perché 600 mL/min di DPL60 e 6 L/min di DPGL800 non sono direttamente confrontabili?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Criterio",
+            "DPL60",
+            "DPGL800"
+          ],
+          "rows": [
+            [
+              "Tipo di pompa",
+              "Pompa a membrana per liquidi",
+              "Pompa a membrana per gas o per gas e liquidi"
+            ],
+            [
+              "Portata pubblicata",
+              "Portata di liquido, classe 600 mL/min",
+              "Portata di gas a vuoto per singola testa, 6 L/min"
+            ],
+            [
+              "Funzione principale",
+              "Trasferimento di liquido, lavaggio, ricircolo o drenaggio continuo",
+              "Aspirazione dello scarico, generazione del vuoto, evacuazione della linea e gestione di fasi miste"
+            ],
+            [
+              "Verifiche principali",
+              "Portata di esercizio, pressione, materiali e adescamento",
+              "Vuoto obiettivo, volume del sistema, tempo di evacuazione, resistenza e stato del fluido"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "In sintesi:",
+          "text": "I 6 L/min della DPGL800 riguardano il gas a vuoto. Per lo scarico liquido occorrono dati distinti. Da questi valori non si può concludere che la portata della DPGL800 sia dieci volte quella della DPL60."
+        }
+      ]
+    },
+    {
+      "title": "8. Come interpretare le specifiche DPGL800?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "DPGL800 è una pompa a membrana brushless da 24 V per gas o per gas e liquidi. La portata di gas a vuoto per singola testa è 6 L/min, la pressione positiva massima è circa +30 kPa e il vuoto massimo è inferiore a -90 kPa. L’idoneità per lo scarico IVD dipende ancora dal volume del sistema, dal vuoto obiettivo, dal tempo di evacuazione ammesso, dalla resistenza della linea, dallo stato del fluido e dalla compatibilità dei materiali."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump/",
+              "label": "Pagina della pompa a membrana per gas e liquidi DPGL800"
+            },
+            {
+              "href": "/resources/technical-articles/dpgl800-gas-liquid-diaphragm-pump-selection-guide/",
+              "label": "Specifiche e guida alla scelta della pompa DPGL800 per il sistema"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9. Quali parti bagnate verificare per la compatibilità con lo scarico?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lo scarico IVD può contenere campioni, reagenti, detergenti, tamponi, tensioattivi, residui biologici e componenti acidi o alcalini. Per stabilire la compatibilità occorre conoscerne la composizione e verificare i materiali lungo tutto il percorso bagnato: testa della pompa, membrana, valvole, guarnizioni, tubi, raccordi, filtro e recipiente di raccolta."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Registrare ogni componente, concentrazione, pH, temperatura, durata del contatto e ciclo di pulizia.",
+            "Valutare nel tempo schiuma, particelle, cristallizzazione, depositi proteici e disinfettanti.",
+            "Usare il fluido reale più gravoso nelle prove di immersione, cicli, aspirazione a secco, riadescamento, tenuta e durata."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "10. Si può usare una sola pompa per l’alimentazione del liquido di pulizia e l’aspirazione dello scarico?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per un sistema semplice si può valutare una sola classe di pompe, dopo aver verificato separatamente i due compiti. Per l’alimentazione del liquido di pulizia contano portata continua, pressione e pulizia. Per l’aspirazione dello scarico contano vuoto, alternanza fra gas e liquido, evacuazione e rischio di contaminazione. Definire requisiti e matrici di validazione separati."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
+              "label": "Differenze tra il compito della pompa di pulizia e quello della pompa di scarico"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "11. Schema decisionale rapido: liquidi o gas e liquidi?",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Valutare una pompa a membrana per liquidi se la linea rimane piena di liquido e il trasferimento è continuo.",
+            "Valutare una pompa a membrana per gas e liquidi se all’ingresso si verificano aspirazione a secco, tappi di liquido, schiuma o alternanza di fasi.",
+            "Per l’aspirazione indiretta attraverso un recipiente di raccolta, definire volume di gas, perdite, filtrazione e protezione dal troppo pieno prima di scegliere la sorgente di vuoto.",
+            "Per entrambi i tipi di pompa, verificare fluido reale, punto di lavoro, tempo di ciclo, liquido residuo, aumento della temperatura, rumore e vita utile."
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/ivd-waste-aspiration-liquid-pump-vs-vacuum-pump/",
+              "label": "guida al pompaggio diretto del liquido e all’aspirazione indiretta a vuoto in IVD",
+              "prefix": "Per decidere anche se lo scarico deve passare attraverso la pompa, consultare la ",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "12. Sei errori comuni nella scelta",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Errore",
+            "Procedura corretta"
+          ],
+          "rows": [
+            [
+              "Scegliere dalla sola portata del liquido",
+              "Definire prima ingresso d’aria e variazioni dello stato del fluido"
+            ],
+            [
+              "Dividere 6 L/min della DPGL800 per 600 mL/min della DPL60",
+              "Trattare portata di gas a vuoto e classe di portata del liquido come misure distinte"
+            ],
+            [
+              "Verificare solo il vuoto massimo",
+              "Validare insieme volume del sistema, vuoto obiettivo e tempo di evacuazione"
+            ],
+            [
+              "Ignorare l’aspirazione a secco e il riadescamento",
+              "Provare l’intero ciclo liquido → aria → liquido"
+            ],
+            [
+              "Verificare solo i materiali della pompa",
+              "Includere pompa, tubi, valvole, raccordi, filtro e recipiente"
+            ],
+            [
+              "Trattare alimentazione di pulizia e aspirazione dello scarico come un unico compito",
+              "Definire requisiti e criteri di accettazione separati"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Conclusione: l’ingresso d’aria spesso determina il tipo di pompa prima della portata nominale in mL/min",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se la linea di scarico IVD resta sempre piena di liquido, partire da pompe a membrana per liquidi come DPL30 o DPL60. In presenza di aspirazione d’aria, evacuazione dei tubi o generazione del vuoto, valutare una pompa a membrana per gas e liquidi. DPGL800 è una delle pompe brushless Foreach da 24 V disponibili per gas o per gas e liquidi. Validarla con volume effettivo, vuoto obiettivo, tempo di evacuazione, resistenza e scarico del sistema."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulla scelta della pompa di scarico IVD",
+  "faqItems": [
+    {
+      "question": "Che cos’è una pompa per scarico liquido IVD?",
+      "answer": "È il nome funzionale di una pompa che trasferisce, drena o aspira lo scarico in uno strumento IVD. In base al percorso del fluido, può essere una pompa a membrana per liquidi, una pompa a membrana per gas e liquidi o una pompa per gas in un sistema a vuoto."
+    },
+    {
+      "question": "Che differenza c’è tra pompa per scarico liquido e pompa di aspirazione dello scarico?",
+      "answer": "Il primo termine sottolinea il trasferimento del liquido, il secondo la rimozione da un pozzetto, una sonda o un tubo. Le funzioni possono sovrapporsi. Per scegliere occorre capire se lo scarico passa attraverso la pompa e se entra aria."
+    },
+    {
+      "question": "Una pompa a membrana standard per liquidi può gestire lo scarico IVD?",
+      "answer": "Sì, se il compito è prevalentemente di trasferimento continuo di liquido, l’ingresso d’aria è trascurabile, la pompa può riadescarsi e tutti i materiali bagnati sono compatibili con lo scarico effettivo."
+    },
+    {
+      "question": "Quando usare una pompa a membrana per gas e liquidi per aspirare lo scarico IVD?",
+      "answer": "Valutarla se l’ago aspira aria, in ingresso si alternano liquido e gas, occorre evacuare la linea o serve creare il vuoto."
+    },
+    {
+      "question": "Perché entra aria in una linea di scarico IVD?",
+      "answer": "Quando il livello cala, l’ago di aspirazione rimane esposto all’aria. Anche le commutazioni delle valvole e il drenaggio intermittente possono generare bolle, tappi di liquido e fasi di aspirazione a secco."
+    },
+    {
+      "question": "Perché il vuoto è importante per una pompa di aspirazione dello scarico?",
+      "answer": "Il vuoto fornisce il differenziale di pressione necessario per superare dislivello, tubi, valvole, filtri e perdite. Influisce sull’avvio dell’aspirazione e sulla rimozione del liquido residuo. Per stabilire la velocità servono anche dati oltre al vuoto massimo."
+    },
+    {
+      "question": "Perché il volume del sistema incide sul tempo di evacuazione?",
+      "answer": "Un volume di gas effettivo maggiore contiene più gas da rimuovere. Anche restrizioni della linea, perdite, calo di pressione nel filtro e vuoto obiettivo determinano la curva pressione-tempo."
+    },
+    {
+      "question": "I 6 L/min della DPGL800 indicano portata di liquido?",
+      "answer": "Indicano la portata di gas a vuoto per una sola testa. La portata del liquido e la capacità di scarico richiedono valutazioni distinte."
+    },
+    {
+      "question": "Si può usare la stessa pompa per alimentare la pulizia IVD e aspirare lo scarico?",
+      "answer": "Si può valutarla nei sistemi semplici. Considerare per ciascun compito lo stato del fluido, gli obiettivi di pressione, i rischi di contaminazione e i requisiti di validazione."
+    },
+    {
+      "question": "Che cosa verificare prima di scegliere una pompa di scarico IVD?",
+      "answer": "Verificare stato di gas e liquido, vuoto obiettivo, volume del sistema, tempo di evacuazione, resistenza della linea, dislivello, schiuma, particelle, compatibilità dei materiali, riadescamento dopo l’aspirazione a secco, tempi di comando e durata."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi verificare il tipo di pompa e il tempo di evacuazione per lo scarico IVD?",
+    "description": "Indica volume di scarico per ciclo, modalità di ingresso dell’aria, volume del sistema, vuoto obiettivo, tempo ammesso, tubi e valvole, presenza di schiuma o particelle e composizione del fluido per individuare pompe adatte a liquidi o a gas e liquidi.",
+    "contactLabel": "Invia una richiesta per la tua applicazione",
+    "productsLabel": "Vedi le pompe a membrana per gas e liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/gas-liquid-diaphragm-pumps/"
+  }
+}

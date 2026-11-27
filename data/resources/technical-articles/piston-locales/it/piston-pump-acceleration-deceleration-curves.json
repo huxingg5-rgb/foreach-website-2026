@@ -1,0 +1,167 @@
+{
+  "slug": "piston-pump-acceleration-deceleration-curves",
+  "title": "Curve di accelerazione e decelerazione per gli azionamenti delle pompe a pistone",
+  "summary": "Usa la curva coppia-velocità del motore passo-passo per scegliere profili lineari, a S o parabolici e prevenire la perdita di passi durante aspirazione ed erogazione.",
+  "seoTitle": "Curve di accelerazione e decelerazione delle pompe a pistone | FOREACH",
+  "seoDescription": "Profili lineari, a S e parabolici, limiti di coppia e velocità del motore passo-passo, perdita di passi e messa in servizio delle pompe a pistone.",
+  "date": "2026-09-06",
+  "coverImage": "/images/resources/technical-articles/legacy-motion-control/acceleration-curve-2.png",
+  "coverAlt": "Profilo a S di accelerazione e decelerazione per il motore passo-passo di una pompa a pistone",
+  "intro": [
+    {
+      "type": "paragraph",
+      "text": "Un motore passo-passo si avvia entro limiti di velocità che dipendono dal carico. All’avvio, l’azionamento della pompa a pistone deve vincere l’attrito meccanico, il carico idraulico e l’inerzia delle parti in movimento. Deve anche riservare una parte della corsa a una decelerazione controllata. Un profilo di moto varia progressivamente la frequenza degli impulsi, così il motore può raggiungere e lasciare la velocità di esercizio in modo affidabile."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Perché le pompe a pistone richiedono il controllo dell’accelerazione",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Scegli il profilo in base alla curva coppia-velocità del motore con tensione, corrente e impostazione dei micropassi effettive. Per conoscere la coppia disponibile alle alte velocità, consulta la curva di funzionamento oltre al valore della coppia di mantenimento."
+        }
+      ]
+    },
+    {
+      "title": "Distinguere perdita di passi e vibrazioni",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Un’accelerazione eccessiva può richiedere più coppia di quella disponibile a una data velocità e provocare la perdita di passi. Contano anche carico, alimentazione, impostazione della corrente, risonanza e montaggio. Di per sé un’accelerazione bassa non causa perdita di passi, anche se attraversare lentamente una fascia di risonanza può prolungare le vibrazioni."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per frequenza degli impulsi, coppia di carico e rapporto di trasmissione, consulta ",
+              "label": "Calcolo e scelta del motore passo-passo per una pompa a pistone di precisione",
+              "href": "/resources/technical-articles/stepper-motor-calculation-selection/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Profili lineari, a S e parabolici",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Una rampa lineare di velocità usa un’accelerazione costante, con variazioni brusche nelle transizioni. Una curva a S varia l’accelerazione in modo progressivo per ridurre gli urti. Un profilo parabolico è un altro profilo non lineare. I suoi parametri ridistribuiscono l’accelerazione tra diversi intervalli di velocità."
+        },
+        {
+          "type": "paragraph",
+          "text": "I diagrammi illustrano le forme dei profili. Per i parametri di funzionamento di una pompa specifica occorrono dati dedicati."
+        },
+        {
+          "type": "figures",
+          "items": [
+            {
+              "src": "/images/resources/technical-articles/legacy-motion-control/acceleration-curve-1.png",
+              "alt": "Curva lineare di accelerazione e decelerazione dell’azionamento passo-passo di una pompa a pistone",
+              "caption": "Profilo lineare di accelerazione e decelerazione",
+              "width": 1381,
+              "height": 510
+            },
+            {
+              "src": "/images/resources/technical-articles/legacy-motion-control/acceleration-curve-2.png",
+              "alt": "Curva a S di accelerazione e decelerazione dell’azionamento passo-passo di una pompa a pistone",
+              "caption": "Profilo a S di accelerazione e decelerazione",
+              "width": 1373,
+              "height": 494
+            },
+            {
+              "src": "/images/resources/technical-articles/legacy-motion-control/acceleration-curve-3.png",
+              "alt": "Curva parabolica di accelerazione e decelerazione dell’azionamento passo-passo di una pompa a pistone",
+              "caption": "Profilo parabolico di accelerazione e decelerazione",
+              "width": 1378,
+              "height": 499
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Dalla velocità del motore alla velocità del pistone e alla portata teorica",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Per un motore che aziona direttamente una vite di avanzamento, indica l’avanzamento p in mm/giro e la velocità n in giri/s. La velocità del pistone è v = p × n. Con area efficace del pistone A in mm², la portata teorica è Q = A × v in mm³/s, e 1 mm³ = 1 μL. Considera l’eventuale rapporto di trasmissione."
+        },
+        {
+          "type": "formula",
+          "expression": "v = p × n; Q = A × v",
+          "note": "La relazione serve a pianificare il moto. Contropressione, resistenze, bolle, tempi delle valvole e tenute incidono sulla quantità di liquido erogata."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per il moto perso all’inversione, consulta ",
+              "label": "Compensazione del gioco nelle pompe a pistone di precisione",
+              "href": "/resources/technical-articles/precision-piston-pump-backlash-compensation/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sequenza di messa in servizio di un programma per pompa a pistone",
+      "parts": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "label": "Verifica la meccanica",
+              "text": "A bassa velocità, conferma direzione di ricerca del riferimento, limiti e corsa utile."
+            },
+            {
+              "label": "Regola con il carico effettivo",
+              "text": "Aumenta gradualmente le velocità di aspirazione ed erogazione con fluido, tubi e contropressione effettivi. Le due direzioni possono richiedere velocità diverse."
+            },
+            {
+              "label": "Registra il moto e i tempi delle valvole",
+              "text": "Registra frequenze iniziale e finale, tempo di rampa, micropassi, ritardo della valvola e tempo di assestamento. Nelle corse brevi si può terminare il movimento prima di raggiungere la velocità di picco."
+            },
+            {
+              "label": "Valida il risultato fluidico",
+              "text": "Misura dose, ripetibilità, bolle, vibrazioni e temperatura del motore. Oltre alla verifica meccanica, applica i criteri di accettazione del circuito."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "title": "Conclusioni",
+    "parts": [
+      {
+        "type": "paragraph",
+        "text": "Scegli il profilo in base al motore, all’azionamento, al carico, alla corsa e ai tempi fluidici effettivi. Verifica integrità del moto e quantità di liquido erogata nei cicli più brevi e in quelli più impegnativi."
+      }
+    ]
+  },
+  "referencesTitle": "Riferimenti",
+  "references": [],
+  "cta": {
+    "title": "Ti serve assistenza per definire i parametri di moto della pompa a pistone?",
+    "description": "Per una valutazione tecnica, indica serie della pompa, corsa, tempo obiettivo del ciclo, fluido, contropressione, azionamento e tempi delle valvole.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Visualizza le pompe a pistone"
+  },
+  "subject": {
+    "about": [
+      "accelerazione della pompa a pistone",
+      "profilo di moto del motore passo-passo"
+    ],
+    "mentions": [
+      "rampa lineare",
+      "curva a S",
+      "profilo parabolico",
+      "perdita di passi",
+      "curva coppia-velocità"
+    ]
+  }
+}

@@ -1,8 +1,10 @@
 import type { UrlObject } from "url";
 import type { LocaleCode } from "@/lib/i18n";
 
+export type ContactInquiryLocale = LocaleCode | "de" | "it" | "hi";
+
 /** Only bottom-banner links to our inquiry form become modal triggers. */
-export function getContactInquiryLocale(href: string | UrlObject): LocaleCode | null {
+export function getContactInquiryLocale(href: string | UrlObject): ContactInquiryLocale | null {
   const origin = "https://www.foreachtek.com";
   let url: URL;
   try {
@@ -24,6 +26,6 @@ export function getContactInquiryLocale(href: string | UrlObject): LocaleCode | 
   if (!["http:", "https:"].includes(url.protocol) ||
       !["www.foreachtek.com", "foreachtek.com"].includes(url.hostname) ||
       (url.hash && url.hash !== "#form")) return null;
-  const match = /^\/(?:(en|es|fr|ko|ru)\/)?contact\/?$/.exec(url.pathname);
-  return match ? (match[1] as LocaleCode || "zh-CN") : null;
+  const match = /^\/(?:(en|es|fr|ko|ru|de|it|hi)\/)?contact\/?$/.exec(url.pathname);
+  return match ? (match[1] as ContactInquiryLocale || "zh-CN") : null;
 }

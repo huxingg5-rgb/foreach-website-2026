@@ -1,0 +1,457 @@
+{
+  "metadata": {
+    "title": "Come leggere la curva portata-pressione di una pompa a membrana e stimare la portata nell’impianto",
+    "seoTitle": "Curva portata-pressione della pompa a membrana: guida al punto di lavoro | Foreach Technology",
+    "seoDescription": "Scopri come curva della pompa, resistenza del circuito, depressione in ingresso, contropressione in uscita, diametro interno, viscosità e condizioni di prova determinano la portata installata di una pompa a membrana miniaturizzata.",
+    "coverImage": "/images/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/article-cover.webp",
+    "coverAlt": "Pompa a membrana miniaturizzata Foreach sottoposta a prova di portata e pressione al banco"
+  },
+  "deck": "Un dato di catalogo come 300 o 600 mL/min indica una portata di riferimento. Per stimare quella nello strumento, occorre capire a quale punto di lavoro si stabilizzano pompa e circuito con pressione in ingresso, contropressione in uscita, fluido, tubi e tensione di alimentazione effettivi.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Con tubi corti, acqua e poca contropressione, la stessa pompa può avvicinarsi alla portata libera nominale. L’aggiunta di filtro, tubo a passaggio stretto, valvola, ago o reagente viscoso può ridurre sensibilmente la portata. Spesso il calo si spiega con la resistenza del circuito e la curva della pompa, anche quando la pompa funziona correttamente."
+    },
+    {
+      "type": "notice",
+      "label": "Punto principale:",
+      "text": "la portata installata si determina all’intersezione della curva della pompa e della curva del circuito nelle condizioni di prova dichiarate."
+    },
+    {
+      "type": "figure",
+      "src": "/images/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/article-cover.webp",
+      "alt": "Pompa a membrana miniaturizzata Foreach collegata alla strumentazione di laboratorio per misura di portata e pressione",
+      "width": 1304,
+      "height": 837,
+      "caption": "La portata libera è il punto di partenza. Confermare il punto di lavoro con il circuito fluidico effettivo."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Partire dalle condizioni di prova della curva",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La curva portata-pressione raccoglie misure eseguite in condizioni definite. Prima di confrontare due curve, allineare alimentazione, fluido, temperatura, riferimento di pressione, tubi e metodo di misura."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Controllo",
+            "Che cosa definire",
+            "Errore tipico"
+          ],
+          "rows": [
+            [
+              "Alimentazione elettrica",
+              "Tensione nominale, tensione ai morsetti, limite di corrente e metodo PWM",
+              "Confrontare curve misurate a velocità motore diverse"
+            ],
+            [
+              "Fluido di prova",
+              "Fluido, viscosità, temperatura, densità e gas trascinato",
+              "Usare una curva misurata con acqua per stimare il comportamento di un reagente viscoso o che libera gas"
+            ],
+            [
+              "Riferimento di pressione",
+              "Depressione in ingresso o pressione relativa di mandata, riferimento assoluto o relativo e posizione della presa di misura",
+              "Combinare valori di ingresso e uscita privi di riferimento"
+            ],
+            [
+              "Circuito fluidico",
+              "Diametro interno e lunghezza del tubo, raccordi, valvole, filtri e restrizione terminale",
+              "Usare il dato a bassa resistenza del banco come portata nell’impianto"
+            ],
+            [
+              "Misura della portata",
+              "Misura gravimetrica, volumetrica o con misuratore in linea e intervallo di media",
+              "Lasciare che le pulsazioni alterino la lettura istantanea"
+            ]
+          ]
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPpump = Pout - Pin",
+          "note": "Questo incremento di pressione è utile per l’analisi del sistema. Si può leggere direttamente sulla curva del fornitore se le condizioni di prova della curva usano la stessa definizione di ingresso e uscita."
+        }
+      ]
+    },
+    {
+      "title": "2. Perché la portata cala all’aumentare della contropressione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una pompa a membrana genera portata variando il volume della camera e coordinando l’apertura delle due valvole di ritegno. La portata media si può rappresentare con:"
+        },
+        {
+          "type": "formula",
+          "expression": "Q = Vs × f × ηv"
+        },
+        {
+          "type": "paragraph",
+          "text": "All’aumentare della pressione in uscita, la membrana lavora contro una forza di reazione maggiore. Carico e corrente del motore possono crescere, la corsa effettiva può cambiare, l’apertura delle valvole può ritardare e perdite o compressione del gas possono ridurre il rendimento volumetrico."
+        },
+        {
+          "type": "formula",
+          "expression": "F = ΔP × A",
+          "note": "La contropressione modifica le forze, i tempi delle valvole, il volume effettivamente spostato e, in certi casi, la velocità del motore."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/backpressure-flow-mechanisms-it.svg",
+          "alt": "Schema tecnico che spiega il calo della portata di una pompa a membrana miniaturizzata a contropressione più alta",
+          "width": 1200,
+          "height": 600,
+          "caption": "La curva osservata risulta dal comportamento combinato di motore, azionamento, membrana, valvole di ritegno, camera e fluido."
+        }
+      ]
+    },
+    {
+      "title": "3. Costruire la curva del circuito fluidico installato",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Alla curva della pompa si affianca la curva del circuito dello strumento. Per ogni portata obiettivo, il circuito deve superare carico idrostatico, perdite distribuite nei tubi, perdite localizzate e restrizioni terminali."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPsystem = ΔPstatic + ΔPfriction + ΣΔPlocal + ΔPterminal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Termine di pressione",
+            "Fonte tipica",
+            "Dato di progetto"
+          ],
+          "rows": [
+            [
+              "Statico",
+              "Dislivello del liquido o recipiente pressurizzato",
+              "Densità, dislivello e pressione del recipiente"
+            ],
+            [
+              "Attrito nei tubi",
+              "Tubo rettilineo",
+              "Diametro interno, lunghezza, viscosità, velocità e regime di flusso"
+            ],
+            [
+              "Perdita localizzata",
+              "Gomiti, raccordi, valvole e variazioni di sezione",
+              "Diametro minimo di passaggio e geometria interna"
+            ],
+            [
+              "Terminale",
+              "Filtro, ago, ugello o membrana",
+              "Perdita di carico a nuovo e a fine vita"
+            ]
+          ]
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPstatic = ρgΔh"
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPf = λ × (L / D) × (ρv² / 2)"
+        },
+        {
+          "type": "formula",
+          "expression": "Re = ρvD / μ",
+          "note": "Determinare il regime di flusso prima di scegliere il modello per il fattore d’attrito. Il fattore varia con le condizioni della linea fluidica."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPlocal = K × ρv² / 2"
+        },
+        {
+          "type": "paragraph",
+          "text": "Per un flusso laminare stabile in un tubo circolare, la relazione di Hagen–Poiseuille evidenzia la sensibilità al diametro del tubo:"
+        },
+        {
+          "type": "formula",
+          "expression": "ΔP = 128μLQ / (πD⁴)"
+        }
+      ]
+    },
+    {
+      "title": "4. Il punto di lavoro si trova all’intersezione delle curve di pompa e circuito",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A tensione, velocità e fluido costanti, la curva della pompa tende verso portate inferiori all’aumentare del differenziale di pressione. La curva del circuito cresce perché per aumentare la portata serve più pressione attraverso tubi, valvole e restrizioni. La loro intersezione definisce il punto di lavoro nell’impianto."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/pump-system-operating-point-it.svg",
+          "alt": "Curva della pompa e curve del circuito a resistenza bassa, di riferimento e alta, con i punti di lavoro",
+          "width": 1200,
+          "height": 658,
+          "caption": "Un tubo più grande sposta il punto verso portate superiori. Un filtro ostruito o un restringimento lo sposta verso un differenziale di pressione maggiore e una portata minore. Le curve illustrano il principio generale. I dati di prova dipendono dal modello."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Variazione",
+            "Risposta del circuito",
+            "Spostamento del punto di lavoro"
+          ],
+          "rows": [
+            [
+              "Diametro interno maggiore o tubi più corti",
+              "Pressione richiesta più bassa alla stessa portata",
+              "Verso una portata maggiore"
+            ],
+            [
+              "Filtro carico o ago più stretto",
+              "Resistenza maggiore",
+              "Verso portata minore e ΔP maggiore"
+            ],
+            [
+              "Viscosità maggiore",
+              "Perdite distribuite e localizzate maggiori",
+              "Portata minore, con possibile aumento del carico del motore"
+            ],
+            [
+              "Riduzione della velocità tramite PWM",
+              "La curva della pompa cambia",
+              "Nuova intersezione a portata minore"
+            ],
+            [
+              "Infiltrazione d’aria in ingresso",
+              "Flusso bifase e riempimento incompleto",
+              "Portata instabile e previsione dalla curva meno affidabile"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Perché il diametro interno può dominare nei circuiti a bassa portata",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Considerare acqua a 20 °C, un tubo rettilineo da 1 m e una portata di 100 mL/min, senza raccordi, filtri, dislivelli o pressione terminale. Tutti e tre i casi rimangono nel regime laminare."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Diametro interno del tubo",
+            "Velocità media",
+            "Re",
+            "Perdita su 1 m di tubo",
+            "Rispetto a 3.2 mm"
+          ],
+          "rows": [
+            [
+              "1.6 mm",
+              "≈0.829 m/s",
+              "≈1324",
+              "≈10.36 kPa",
+              "≈16×"
+            ],
+            [
+              "2.0 mm",
+              "≈0.531 m/s",
+              "≈1059",
+              "≈4.24 kPa",
+              "≈6.55×"
+            ],
+            [
+              "3.2 mm",
+              "≈0.207 m/s",
+              "≈662",
+              "≈0.65 kPa",
+              "1×"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/tube-diameter-pressure-loss-it.svg",
+          "alt": "Grafico a barre della perdita di carico laminare per tubi con diametro interno di 1.6, 2.0 e 3.2 mm",
+          "width": 1200,
+          "height": 600,
+          "caption": "In queste condizioni, dimezzare il diametro da 3.2 a 1.6 mm aumenta di circa 16 volte la perdita teorica nel tubo rettilineo. Negli strumenti reali si aggiungono valvole, raccordi, filtri, curve, dislivelli e pressione terminale."
+        },
+        {
+          "type": "notice",
+          "text": "Il calcolo illustra la sensibilità al diametro. Le prestazioni di un modello Foreach richiedono dati di prova specifici."
+        }
+      ]
+    },
+    {
+      "title": "6. Otto verifiche per una portata nell’impianto inferiore al previsto",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Controllo",
+            "Sintomo tipico",
+            "Verifica consigliata"
+          ],
+          "rows": [
+            [
+              "Condizioni di prova diverse",
+              "La pompa singola supera la prova, ma nello strumento la portata è bassa",
+              "Allineare fluido, temperatura, tensione e prese di pressione"
+            ],
+            [
+              "Ingresso d’aria o adescamento incompleto",
+              "Bolle, portata irregolare e avvio lento",
+              "Verificare la tenuta per tratti. Adescare e spurgare con la stessa procedura"
+            ],
+            [
+              "Restrizione eccessiva in ingresso",
+              "Collasso del tubo, rumore diverso e aspirazione insufficiente",
+              "Misurare la pressione in ingresso e controllare diametro interno, lunghezza e filtro sul lato aspirazione"
+            ],
+            [
+              "Contropressione eccessiva in uscita",
+              "Corrente maggiore, con variazioni di portata secondo lo stato di filtro o valvola",
+              "Misurare vicino all’uscita e bypassare un componente alla volta"
+            ],
+            [
+              "Variazione di fluido o temperatura",
+              "Risultato diverso rispetto all’acqua o a un’altra temperatura",
+              "Registrare viscosità, formulazione e temperatura del fluido"
+            ],
+            [
+              "Caduta di tensione o limitazione di corrente",
+              "L’impostazione dell’alimentatore sembra corretta, ma la tensione ai morsetti cala",
+              "Registrare tensione e corrente ai morsetti della pompa sotto carico"
+            ],
+            [
+              "Restrizione dovuta al montaggio",
+              "Tubo piegato o raccordo inserito troppo in profondità",
+              "Verificare passaggio minimo e raggio di curvatura lungo tutto il percorso"
+            ],
+            [
+              "Misuratore di portata non adatto",
+              "La lettura in linea differisce dalla massa raccolta",
+              "Confrontare con una misura gravimetrica e calcolare la media su molti cicli"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "Registrare nello stesso momento pressione in ingresso e in uscita, tensione ai morsetti, corrente e volume o massa accumulati. La sola portata in uscita è insufficiente per individuare la causa."
+        }
+      ]
+    },
+    {
+      "title": "7. Confermare il punto di lavoro con un circuito di prova ripetibile",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/installed-flow-test-loop-it.svg",
+          "alt": "Circuito di prova ripetibile della portata installata di una pompa a membrana miniaturizzata per liquidi",
+          "width": 1200,
+          "height": 600,
+          "caption": "Controllare fluido e temperatura. Misurare pressione sui due lati e condizioni elettriche ai morsetti della pompa. Applicare un carico ripetibile e verificare la portata da massa o volume accumulati."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Adescare e spurgare il circuito con la stessa procedura a ogni prova.",
+            "Attendere che pompa, fluido e motore raggiungano il regime stazionario definito.",
+            "Fissare diametro interno e lunghezza dei tubi, raccordi, valvole, stato del filtro, dislivello e metodo di misura.",
+            "Registrare insieme Pin, Pout, tensione ai morsetti della pompa, corrente, temperatura del fluido e tempo di campionamento.",
+            "Ripetere ogni condizione di lavoro almeno tre volte e conservare i dati grezzi."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Procedura pratica di selezione",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Definire la portata richiesta alla pressione di esercizio reale oltre al valore a portata libera.",
+            "Definire gli intervalli di pressione in ingresso e in uscita, includendo avvio e fine vita del filtro.",
+            "Specificare fluido, viscosità, temperatura, contenuto di gas e requisiti di compatibilità dei materiali.",
+            "Stimare la curva del circuito in base a tubi, raccordi, valvole, filtri, dislivello e restrizione terminale.",
+            "Selezionare le pompe la cui curva misurata offre margine al punto previsto.",
+            "Verificare adescamento, portata, corrente, aumento di temperatura, rumore e ripetibilità nello strumento completo."
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Consulta la ",
+              "label": "guida alla scelta della pompa a membrana per liquidi DPL30",
+              "href": "/en/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide",
+              "suffix": " per un esempio nella classe 300 mL/min."
+            },
+            {
+              "prefix": "Consulta la ",
+              "label": "guida alla pompa a membrana per liquidi DPL60",
+              "href": "/en/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide",
+              "suffix": " per un’opzione a portata maggiore."
+            },
+            {
+              "prefix": "Consulta la ",
+              "label": "Serie di pompe a membrana per liquidi DPL30, 300 mL/min",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              "suffix": " se il punto di lavoro richiesto è nell’intervallo di portata inferiore."
+            },
+            {
+              "prefix": "Consulta la ",
+              "label": "Serie di pompe a membrana per liquidi DPL60, 600 mL/min",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              "suffix": " se serve una classe di portata libera superiore."
+            },
+            {
+              "prefix": "Per circuiti a contropressione maggiore, consulta la ",
+              "label": "serie di pompe a membrana ad alta pressione per liquidi DPL30H, 600 kPa",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+              "suffix": " e verifica la portata obiettivo sulla curva controllata."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Conclusione: scegliere in base al punto di lavoro",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La curva portata-pressione è utile quando le condizioni di prova corrispondono a quelle nello strumento. La portata finale dipende da curva della pompa, curva del circuito, fluido e azionamento elettrico. Usare la portata di catalogo come dato di riferimento, calcolare il circuito e verificare il punto di lavoro effettivo con misure sincronizzate di pressione, grandezze elettriche e portata cumulata."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Perché la portata della pompa a membrana nello strumento è più bassa di quella in scheda?",
+      "answer": "La portata in scheda è misurata in condizioni dichiarate. Tubi, filtri, valvole, dislivelli, depressione in ingresso, contropressione in uscita, viscosità, tensione ai morsetti e metodo di misura possono tutti spostare il punto di lavoro."
+    },
+    {
+      "question": "Posso sommare la depressione in ingresso e la pressione in uscita e leggere un punto dalla curva?",
+      "answer": "Si può fare se il fornitore conferma che la curva è stata misurata per la stessa definizione combinata di pressione. Altrimenti verificare il metodo di prova e misurare direttamente le condizioni di ingresso e uscita effettive."
+    },
+    {
+      "question": "Un valore di 300 mL/min significa che si raggiungono 300 mL/min alla pressione nominale?",
+      "answer": "Portata libera, portata massima e pressione nominale possono descrivere punti di lavoro diversi. Usare la curva misurata per trovare la portata alla pressione richiesta."
+    },
+    {
+      "question": "Perché conta tanto una piccola riduzione del diametro interno?",
+      "answer": "Per un flusso laminare stabile in un tubo rotondo, la perdita di carico varia approssimativamente con 1/D⁴. Dimezzare il diametro può quindi aumentare di circa sedici volte la perdita teorica in un tubo rettilineo."
+    },
+    {
+      "question": "Che cosa misurare durante una prova della portata nello strumento?",
+      "answer": "Misurare pressioni in ingresso e in uscita, tensione e corrente ai morsetti, temperatura del fluido, massa o volume accumulati e tempo di campionamento. Mantenere definite anche le condizioni di tubi, valvole, filtri e adescamento."
+    }
+  ],
+  "cta": {
+    "title": "Serve aiuto per individuare il punto di lavoro effettivo?",
+    "description": "Indica portata obiettivo, intervalli di pressione in ingresso e in uscita, fluido e viscosità, diametro interno e lunghezza dei tubi, filtri, valvole, alimentazione e ciclo di lavoro. I tecnici Foreach possono aiutarti a restringere la scelta della pompa e delle condizioni di prova del circuito.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Vedi le pompe a membrana"
+  }
+}

@@ -483,8 +483,18 @@ export const inkCirculationSupplyReturnPumpCopies = {
           {
             type: "links",
             items: [
-              { href: DPL30, label: "DPL30 product page" },
-              { href: DPL60, label: "DPL60 product page" },
+              {
+                href: "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                prefix: "For a transfer line that refills a secondary tank, test the ",
+                label: "DPL30-DB liquid diaphragm pump",
+                suffix: " at the lowest operating level of the main tank. Measure how much ink reaches the secondary tank during one refill cycle.",
+              },
+              {
+                href: "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                prefix: "If a separate return line must carry more ink, compare the ",
+                label: "DPL60-DB",
+                suffix: " on that line at the required flow and backpressure.",
+              },
             ],
           },
         ],

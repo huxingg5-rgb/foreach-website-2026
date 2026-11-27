@@ -1,4 +1,21 @@
 import type { Metadata } from "next";
+import { draftLanguages, type DraftLocale } from "@/lib/i18n/draft-language-identifiers";
+
+export function getDraftOpenGraphLocale(locale: DraftLocale) {
+  return draftLanguages[locale].languageTag.replace("-", "_");
+}
+
+export function buildDraftPageMetadata({
+  locale, canonical, title, description,
+}: { locale: DraftLocale; canonical: string; title: string; description?: string }): Metadata {
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    robots: { index: false },
+    openGraph: { title, description, url: canonical, locale: getDraftOpenGraphLocale(locale) },
+  };
+}
 
 const locales = ["en", "es", "fr", "ko", "ru"];
 export const DEFAULT_SOCIAL_IMAGE = "/images/home/home-hero-final-banner.webp";

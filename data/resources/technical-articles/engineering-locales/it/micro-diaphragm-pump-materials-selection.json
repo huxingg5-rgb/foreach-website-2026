@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "title": "Quali materiali sono disponibili per le pompe a membrana miniaturizzate? Criteri di scelta",
+    "seoTitle": "Materiali delle pompe a membrana miniaturizzate e criteri di scelta | Foreach Technology",
+    "seoDescription": "Confrontare i materiali di testata, membrana e valvole. Prima di scegliere una configurazione, verificare composizione, concentrazione e temperatura del fluido, tempo di esposizione e condizioni di lavaggio.",
+    "coverImage": "/images/resources/technical-articles/life-science-instrument-dpl60-diaphragm-pump-selection-guide/dpl60-product.webp",
+    "coverAlt": "Pompa a membrana miniaturizzata per liquidi Foreach DPL60"
+  },
+  "deck": "Confrontare i materiali di testata, membrana e valvole. Prima di scegliere una configurazione, verificare composizione, concentrazione e temperatura del fluido, tempo di esposizione e condizioni di lavaggio.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Nella scelta di una pompa a membrana miniaturizzata, considerare i materiali a contatto con il fluido oltre a portata, pressione e ingombri di installazione. La compatibilità richiede particolare attenzione con reagenti, liquidi di lavaggio o scarichi liquidi. Foreach offre due combinazioni principali di materiali. La disponibilità dipende dal modello scelto."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Testata della pompa",
+        "Membrana",
+        "Valvola"
+      ],
+      "rows": [
+        [
+          "Solfuro di polifenilene (PPS)",
+          "Gomma etilene-propilene-diene (EPDM)",
+          "Gomma etilene-propilene-diene (EPDM)"
+        ],
+        [
+          "Solfuro di polifenilene (PPS)",
+          "Politetrafluoroetilene (PTFE)",
+          "Perfluoroelastomero (FFKM)"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Entrambe le combinazioni usano una testata in PPS e differiscono per i materiali di membrana e valvole. Valutare insieme tutti e tre i componenti a contatto con il fluido."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Testata della pompa: verificare la camera oltre alla membrana",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La testata forma la camera che contiene e trasferisce il fluido. Anche il suo materiale deve essere compatibile. Queste combinazioni Foreach prevedono testate in PPS. Anche con membrana in PTFE e valvole in FFKM, verificare che il PPS sia idoneo al fluido effettivo."
+        },
+        {
+          "type": "paragraph",
+          "text": "La presenza di una membrana in PTFE non implica che tutti i componenti a contatto con il fluido siano in PTFE. Per valutare l’intera pompa, esaminare l’elenco completo dei materiali a contatto con il fluido."
+        }
+      ]
+    },
+    {
+      "title": "2. Membrana: contatto con il fluido e movimento ripetuto",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La membrana si muove alternativamente, modificando il volume della camera per consentire aspirazione e mandata. Considerare nella scelta del materiale la compatibilità con il fluido e il movimento ripetuto nelle condizioni di esercizio effettive. Foreach offre membrane in EPDM con valvole in EPDM oppure membrane in PTFE con valvole in FFKM."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per l’acqua purificata, membrana e valvole in EPDM possono essere una prima opzione, da verificare rispetto a portata, pressione e requisiti operativi del modello. Per reagenti e liquidi di lavaggio, valutare entrambe le combinazioni rispetto alla composizione effettiva. Indicazioni generiche come liquido acquoso, liquido acido o solvente organico sono insufficienti. Variazioni di concentrazione o temperatura richiedono una nuova valutazione."
+        }
+      ]
+    },
+    {
+      "title": "3. Valvole: valutarle insieme alla membrana",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le valvole contribuiscono a regolare il senso di flusso. Apertura, chiusura e tenuta influiscono sull’aspirazione e sulla mandata. Anche le valvole sono a contatto con il fluido e richiedono una verifica di compatibilità specifica, anche se la membrana è idonea."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nelle due combinazioni illustrate, Foreach usa valvole in EPDM o FFKM. Confermare insieme i materiali di testata, membrana e valvole prima di ritenere idonea la pompa completa."
+        }
+      ]
+    },
+    {
+      "title": "4. Condizioni di esercizio da confermare prima della scelta",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Partire dall’applicazione effettiva e fornire le informazioni seguenti."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Composizione e concentrazione: identificare liquido, solventi, additivi ed eventuali miscele di scarico.",
+            "Temperatura: specificare le temperature di trasferimento e lavaggio e verificare l’intervallo di temperatura del fluido ammesso dal modello.",
+            "Esposizione: distinguere trasferimento intermittente, esercizio continuo e liquido che rimane nella camera durante l’arresto.",
+            "Lavaggio: indicare prodotto di lavaggio, frequenza, temperatura e durata di ogni esposizione.",
+            "Esercizio: specificare portata effettiva, pressione di lavoro, frequenza di avvio e arresto e ore di funzionamento giornaliere."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Il lavaggio è facile da trascurare. Il fluido di lavoro e il liquido di lavaggio possono essere diversi e richiedono entrambi una valutazione di compatibilità. Nella configurazione specifica, verificare anche raccordi, tubi e altre tenute a contatto con il fluido."
+        }
+      ]
+    },
+    {
+      "title": "5. Verificare con il fluido effettivo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’esito positivo di una prova con acqua purificata vale per le condizioni della prova. Dopo una prima selezione, collaudare con il fluido effettivo in condizioni vicine all’installazione e nei limiti del modello. Verificare portata, aspirazione, tenuta e stato dei materiali dopo l’esercizio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per scegliere una pompa Foreach, indicare tipo e concentrazione del fluido, temperatura di esercizio, metodo di lavaggio e requisiti di portata e pressione. Questi dati servono per individuare il modello e la combinazione di materiali."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "",
+  "faqItems": [],
+  "cta": {
+    "title": "Confronta i materiali e le opzioni della pompa con un tecnico",
+    "description": "Per scegliere una pompa Foreach, indicare tipo e concentrazione del fluido, temperatura di esercizio, metodo di lavaggio e requisiti di portata e pressione. Questi dati servono per individuare il modello e la combinazione di materiali.",
+    "contactLabel": "Contatta l’assistenza tecnica",
+    "productsLabel": "Esplora le pompe a membrana miniaturizzate",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
+  }
+}

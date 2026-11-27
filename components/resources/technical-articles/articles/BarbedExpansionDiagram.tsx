@@ -1,6 +1,5 @@
 import styles from "./BarbedExpansionDiagram.module.css";
 import { barbDiagramCopy } from "@/data/resources/technical-articles/fitting-selection-locales/diagrams";
-import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 
 const profileImage = "/images/resources/technical-articles/barbed-fitting-expansion-ratio/barb-profiles-c-f-d-v-x.webp";
 const ink = "#203d72";
@@ -30,7 +29,7 @@ function Dimension({ x1, x2, y, label }: {
   </g>;
 }
 
-export function BarbAssemblyStage({ stage, locale = "zh-CN" }: { stage: 0 | 1 | 2; locale?: TechnicalArticleLocale }) {
+export function BarbAssemblyStage({ stage, locale = "zh-CN" }: { stage: 0 | 1 | 2; locale?: keyof typeof barbDiagramCopy }) {
   const c = barbDiagramCopy[locale];
   const descriptions = [`${c.stages[0]}: ${c.initial}; ${c.crest}`, c.expand, c.conform];
   return <svg viewBox="0 0 330 535" className={styles.svg} role="img"
@@ -72,7 +71,8 @@ export function BarbAssemblyStage({ stage, locale = "zh-CN" }: { stage: 0 | 1 | 
   </svg>;
 }
 
-export function BarbRatioComparison({ profile, locale = "zh-CN" }: { profile: "F" | "D"; locale?: TechnicalArticleLocale }) {
+export function BarbRatioComparison({ profile, locale = "zh-CN" }: { profile: "F" | "D"; locale?: keyof typeof barbDiagramCopy }) {
+  const expansionLabel = barbDiagramCopy[locale].expansion;
   // Uniform scaling preserves the original outline. Normalize the two crest
   // widths to the 4.0 : 4.5 example; other lengths are not product dimensions.
   const isF = profile === "F";
@@ -81,7 +81,7 @@ export function BarbRatioComparison({ profile, locale = "zh-CN" }: { profile: "F
   const crestY = 175 + 128 * scale;
   return <svg viewBox="0 0 340 615" className={styles.svg} role="img"
     aria-labelledby={`barb-ratio-${profile}-title`} xmlns="http://www.w3.org/2000/svg">
-    <title id={`barb-ratio-${profile}-title`}>{`${profile}: d = 3.2 mm; Db = ${isF ? "4.0" : "4.5"} mm; ${barbDiagramCopy[locale].expansion} = ${isF ? "25%" : "≈ 40.6%"}`}</title>
+    <title id={`barb-ratio-${profile}-title`}>{`${profile}: d = 3.2 mm; Db = ${isF ? "4.0" : "4.5"} mm; ${expansionLabel} = ${isF ? "25%" : "≈ 40.6%"}`}</title>
     <g fill={tubeFill} stroke={blue} strokeWidth="2">
       <path d="M108 45 H121 V134 H108 Z M219 45 H232 V134 H219 Z" />
       <path d="M121 45 H219 M121 134 H219" fill="none" strokeDasharray="4 5" />
@@ -96,7 +96,7 @@ export function BarbRatioComparison({ profile, locale = "zh-CN" }: { profile: "F
   </svg>;
 }
 
-export default function BarbedExpansionDiagram({ kind, locale = "zh-CN" }: { kind: "assembly" | "comparison" | "profiles"; locale?: TechnicalArticleLocale }) {
+export default function BarbedExpansionDiagram({ kind, locale = "zh-CN" }: { kind: "assembly" | "comparison" | "profiles"; locale?: keyof typeof barbDiagramCopy }) {
   const c = barbDiagramCopy[locale];
   if (kind === "profiles") {
     const profiles = ["C", "F", "D", "V", "X"] as const;

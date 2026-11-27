@@ -1,0 +1,469 @@
+{
+  "kind": "selection",
+  "family": "tubing",
+  "footerProducts": [
+    {
+      "id": "pvc-tubing",
+      "title": "Tubi in cloruro di polivinile (PVC)",
+      "href": "/en/products/tubing/pvc-tubing/details/",
+      "imageSrc": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+      "imageAlt": "Rotolo di tubo flessibile trasparente in PVC FOREACH con estremità visibile",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tpu-tubing",
+      "title": "Tubi in poliuretano termoplastico (TPU)",
+      "href": "/en/products/tubing/tpu-tubing/details/",
+      "imageSrc": "/images/products/tubing/tpu-tubing/foreach-flexible-tpu-tubing-instrument-routing.webp",
+      "imageAlt": "Tubi flessibili FOREACH in TPU disposti in curve per la posa negli strumenti",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "fep-tubing",
+      "title": "Tubi in etilene propilene fluorurato (FEP)",
+      "href": "/en/products/tubing/fep-tubing/details/",
+      "imageSrc": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+      "imageAlt": "Tubi FOREACH in FEP nelle versioni trasparente e nera",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "ptfe-tubing",
+      "title": "Tubi in politetrafluoroetilene (PTFE)",
+      "href": "/en/products/tubing/ptfe-tubing/details/",
+      "imageSrc": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-natural-coil.webp",
+      "imageAlt": "Rotolo di tubo FOREACH in PTFE naturale con estremità tagliata",
+      "imageAspectRatio": 1
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Che cos'è un tubo in PVC? Durezza, dimensioni e raccordi per le linee degli strumenti",
+      "seoTitle": "Che cos'è un tubo in PVC? Tubi per strumenti, durezza e raccordi | FOREACH",
+      "seoDescription": "Scopri le formulazioni dei tubi flessibili in PVC per strumenti. Distingui tubi di collegamento e tubi per pompe peristaltiche. Scegli durezza, diametri, spessore, compatibilità con il fluido e raccordi portagomma.",
+      "coverImage": "/images/products/tubing/pvc-tubing/pvc-tubing-view-02.webp",
+      "coverAlt": "Curva di tubo trasparente in PVC FOREACH con estremità visibile"
+    },
+    "deck": "I tubi flessibili per strumenti sono in mescola di cloruro di polivinile e si usano quando servono flessibilità nella posa e visibilità del liquido. Scegli insieme durezza, diametri interno ed esterno, spessore, fluido e raccordi. Distingui i tubi di collegamento da quelli specifici per pompe peristaltiche.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "I tubi flessibili in PVC per strumenti sono in mescola di cloruro di polivinile. Si usano comunemente per alimentare il lavaggio, trasferire fluidi acquosi e collegare gli scarichi. La flessibilità agevola la posa nell'apparecchio. Le versioni trasparenti aiutano a osservare riempimento e bolle."
+      },
+      {
+        "type": "paragraph",
+        "text": "Il tubo in PVC si può tagliare alla lunghezza prevista e abbinare a portagomma o altri raccordi idonei per ottenere assemblaggi flessibili di alimentazione, lavaggio o scarico. Durezza, diametro interno e spessore influiscono insieme su curvatura, inserimento e ritegno. Sceglierli in base allo spazio di posa, al fluido e alle dimensioni dei raccordi."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Di che cosa è fatto un tubo flessibile in PVC e perché la formulazione influisce sull'uso?",
+        "tocLabel": "Materiale e formulazione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "PVC significa cloruro di polivinile. Flessibilità e lavorabilità del PVC flessibile derivano dalla formulazione. Il sistema di plastificanti e gli altri additivi influiscono su durezza, comportamento a contatto con il fluido e temperatura di esercizio. Il nome identifica soltanto il polimero di base. Per scegliere il tubo serve il modello specifico."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il tubo trasparente in PVC permette di osservare riempimento, variazioni di colore e alcune bolle e si può posare in spazi ristretti. Verificare trasparenza, curvatura e aspetto nel tempo sul tubo finito. La sensazione al tatto non determina la resistenza alla pressione o agli agenti chimici."
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/tubing/pvc-tubing/pvc-tubing-view-02.webp",
+            "alt": "Curva di tubo trasparente in PVC FOREACH con estremità visibile",
+            "width": 1500,
+            "height": 1500,
+            "caption": "Foto di tubo flessibile trasparente FOREACH in PVC con rotolo ed estremità visibili.",
+            "captionHref": "/en/products/tubing/pvc-tubing/details/"
+          },
+          {
+            "type": "paragraph",
+            "text": "Senza DEHP e senza ftalati sono diciture diverse. La prima riguarda soltanto il DEHP e non esclude tutti gli ftalati. Per plastificanti prescritti o sostanze soggette a restrizioni, verificare la dichiarazione dei materiali e l'ambito delle prove per il modello esatto."
+          }
+        ]
+      },
+      {
+        "title": "Come influiscono le durezze 55A e 65A sulla scelta dei tubi in PVC?",
+        "tocLabel": "Durezza e spessore della parete",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "55A e 65A sono gradi di durezza Shore A. Un valore maggiore indica più resistenza alla penetrazione nelle stesse condizioni di prova. La durezza va distinta da spessore, pressione nominale e durata del tubo nella pompa. Tubi di stessa durezza possono curvarsi e montarsi diversamente se i diametri interni ed esterni differiscono."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "N.",
+              "Voce da verificare",
+              "Effetti sulla selezione"
+            ],
+            "rows": [
+              [
+                "1",
+                "Durezza",
+                "Influisce sulla forza percepita all'inserimento, sulla curvatura e sulla presa. Valutare insieme dimensioni e formulazione"
+              ],
+              [
+                "2",
+                "Spessore della parete",
+                "Influisce su deformazione, strozzatura e compatibilità dei raccordi. Dipende da entrambi i diametri"
+              ],
+              [
+                "3",
+                "Raggio di curvatura nella posa",
+                "Le curve strette riducono la sezione di flusso. Verificare il percorso effettivo nell'apparecchio"
+              ],
+              [
+                "4",
+                "Temperatura",
+                "Influisce sullo stato meccanico. Considerare fluido di processo, liquido di lavaggio e riscaldamento interno"
+              ],
+              [
+                "5",
+                "Modalità di impiego",
+                "Collegamenti statici, movimenti ripetuti e compressione dei rulli richiedono verifiche distinte"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Un tubo più morbido si curva e si innesta più facilmente. Verificare però collasso in depressione, deformazione sotto i fermagli e ritegno dei raccordi. Per i tubi più duri, controllare anche forza di inserimento e strozzatura nelle curve strette. La durezza da sola non determina l'idoneità né la resistenza alla pressione."
+          }
+        ]
+      },
+      {
+        "title": "Come si distingue un tubo di collegamento in PVC da un tubo per pompa peristaltica?",
+        "tocLabel": "Tubi di collegamento e per pompe",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Un tubo di collegamento serve soprattutto a trasferire il fluido, consentire la posa e fare tenuta. Il tubo di una pompa peristaltica deve inoltre comprimersi e recuperare ripetutamente sotto i rulli. Formulazione, diametro interno, spessore, recupero e comportamento a fatica devono essere adatti alla testa della pompa. La stessa base polimerica non rende un comune tubo di collegamento in PVC idoneo alla testa della pompa."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Collegamenti a monte e a valle della pompa: dare priorità a compatibilità con il fluido, diametri interno ed esterno, resistenza in aspirazione, pressione e tenuta dei raccordi.",
+              "Tratto compresso nella testa della pompa: usare un tubo dedicato e compatibile con la testa, verificando spessore, gioco di occlusione, velocità e modalità di impiego.",
+              "Dosaggio o esercizio prolungato: registrare portata iniziale e finale, recupero, usura e durata. Definire gli intervalli di sostituzione dai risultati effettivi."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Se la portata diminuisce con il tempo di funzionamento, distinguere fatica del tubo pompa, collasso del tubo di collegamento, ostruzione del filtro e ingresso d'aria dai raccordi. Aumentare la velocità non sostituisce la diagnosi. La durezza di un tubo ordinario non dimostra l'idoneità alla testa della pompa."
+          }
+        ]
+      },
+      {
+        "title": "Dove si usa il tubo flessibile in PVC negli strumenti?",
+        "tocLabel": "Impieghi e fluidi",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Punto del circuito",
+              "Aspetto da valutare",
+              "Controlli in esercizio"
+            ],
+            "rows": [
+              [
+                "Linea di alimentazione del liquido di lavaggio",
+                "Abbinare la formulazione a detergente, concentrazione e temperatura",
+                "Aspetto, dimensioni, collegamenti e residui dopo la pulizia"
+              ],
+              [
+                "Collegamento per fluidi acquosi",
+                "Scegliere tubi e raccordi per il fluido specifico",
+                "Portata, bolle, deformazione in depressione e visibilità del fluido"
+              ],
+              [
+                "Linea di scarico dello strumento",
+                "Scegliere il materiale secondo tutti i componenti del rifiuto e lo schema di scarico",
+                "Strozzature, depositi, livello del liquido e uscita ostruita"
+              ],
+              [
+                "Collegamenti da smontare",
+                "Abbinare diametro interno e durezza del tubo alla geometria del terminale",
+                "Danni da montaggio, tenuta e resistenza allo sfilamento"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La compatibilità con il fluido conta anche sul lato di scarico. I rifiuti misti restano spesso a contatto con tubi e raccordi per periodi prolungati. Valutare tutti i componenti, le concentrazioni e i metodi di pulizia, oltre al singolo liquido."
+          },
+          {
+            "type": "paragraph",
+            "text": "Valutare individualmente solventi organici, oli e detergenti concentrati. Le formulazioni del PVC non hanno tutte la stessa resistenza chimica. Per dosaggi sensibili a estraibili, adsorbimento o particelle, confrontare i bianchi e il recupero dell'analita prima e dopo il contatto. La compatibilità chimica non dimostra che il segnale di fondo sia accettabile."
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere diametri interno ed esterno e lunghezza dei tubi in PVC?",
+        "tocLabel": "Dimensioni e posa",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il diametro interno influisce sulla portata e sul volume interno. Insieme a quello esterno determina lo spessore. Aumentando il diametro esterno a diametro interno fisso, la parete si ispessisce e cambiano curvatura e inserimento. Specificare diametro interno × diametro esterno, distinguendo le due quote."
+          },
+          {
+            "type": "formula",
+            "expression": "Spessore della parete t = (D − d) / 2; volume interno V = πd²L / 4",
+            "note": "D: diametro esterno; d: diametro interno; L: lunghezza. Per stimare la resistenza al flusso servono anche viscosità e portata. Se un tubo flessibile è sensibilmente deformato o strozzato, usare risultati misurati."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per due tubi con diametro interno di 1.6 mm, il diametro esterno di 3.2 mm dà una parete di 0.8 mm e quello di 4.8 mm una parete di 1.6 mm. A pari lunghezza i volumi geometrici sono uguali, ma cambiano deformazione, spazio di curvatura e montaggio sul raccordo. I tubi non sono quindi direttamente intercambiabili."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Scegliere il diametro interno in funzione di portata di progetto, viscosità e pressione differenziale disponibile, poi calcolare i volumi di riempimento e di ricambio.",
+              "Controllare diametro esterno e spessore in base a pressione, depressione, raggio di curvatura e metodo di collegamento.",
+              "Definire la lunghezza secondo il percorso nell'apparecchio, evitando spigoli, punti di schiacciamento e fonti di calore. Lasciare accesso per la manutenzione.",
+              "Ispezionare in esercizio curve strette, fissaggi e tratti di aspirazione per verificare che la sezione di flusso non si riduca sensibilmente."
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Verifica dimensioni e perdita di carico con il calcolatore della resistenza al flusso",
+                "href": "/en/resources/calculators/fluid-resistance/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Come abbinare i tubi in PVC ai portagomma e ai raccordi a sgancio rapido?",
+        "tocLabel": "Compatibilità con i raccordi",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I portagomma si basano in genere sulla deformazione elastica quando il tubo viene spinto sul profilo. Verificare prima il diametro interno, poi durezza, spessore, profilo del portagomma e lunghezza di innesto. Il diametro interno indicato come compatibile non garantisce la stessa tenuta e lo stesso ritegno con tutti i tubi di quella misura."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Identificare il collegamento: i terminali portagomma si abbinano in genere al diametro interno. Per i raccordi a innesto con presa esterna, controllare diametro esterno, tolleranza ed eventuali rinforzi richiesti.",
+              "Distinguere l'interfaccia di sgancio rapido dal terminale del tubo. L'innesto si collega e scollega tra le due metà. Il suo attacco per tubo può comunque essere un portagomma. Scegliere il tubo per la geometria di quell'attacco.",
+              "Controllare il montaggio: fare un taglio perpendicolare e pulito e inserire completamente secondo le istruzioni. Evitare graffi, dilatazioni eccessive e lubrificanti non qualificati.",
+              "Verificare ritegno e tenuta alla pressione di esercizio, in depressione in aspirazione, con variazioni di temperatura e carico di trazione. Montare una fascetta se prevista dal progetto specifico."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Un portagomma sovradimensionato o un innesto forzato possono danneggiare l'imbocco del tubo e aumentare le sollecitazioni. Un accoppiamento lasco compromette tenuta e forza di sfilamento. Lasciare un tratto diritto e un sostegno vicino al raccordo per evitare che flessione o manutenzione gravino continuamente alla base del collegamento."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Scelta e montaggio dei raccordi portagomma",
+                "href": "/en/resources/technical-articles/what-is-a-barbed-fitting/"
+              },
+              {
+                "label": "Visualizza i raccordi",
+                "href": "/en/products/fittings/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Come controllare temperatura, pulizia e stato in esercizio dei tubi in PVC?",
+        "tocLabel": "Pulizia e manutenzione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Determinare temperatura e pressione di esercizio da formulazione, dimensioni e raccordi specifici. La durezza non definisce un limite termico universale. Una breve prova a temperatura ambiente non qualifica il funzionamento a lungo termine. Registrare temperature di processo e pulizia, fonti di calore interne e picchi di pressione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Pulizia e sterilizzazione devono comprendere tubi, raccordi e tenute. Prima e dopo il trattamento controllare colore, trasparenza, variazioni di durezza, dimensioni, appiccicosità, crepe, tenuta e segnale di fondo. Un riscaldamento arbitrario non ripristina i tubi invecchiati. Sostituire secondo le indicazioni di manutenzione i tratti induriti, appiccicosi, incrinati o deformati."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Alla prima installazione, registrare modello, lotto, lunghezza, raccordi e fluido. Definire condizioni di montaggio e accettazione ripetibili.",
+              "In esercizio, ispezionare curve strette, fermagli, tratti in depressione e attacchi dei raccordi. Monitorare variazioni di portata, bolle e perdite.",
+              "Dopo la pulizia, ricontrollare aspetto, dimensioni e tenuta. Per i circuiti sensibili, ripetere le misure di fondo e residui.",
+              "Definire intervalli di ispezione e sostituzione per le condizioni di esercizio. Al cambio del tubo, verificare formulazione, durezza e dimensioni oltre al colore."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere i tubi FOREACH in PVC per durezza e dimensioni?",
+        "tocLabel": "Specifiche FOREACH",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La selezione di tubi FOREACH in PVC include durezze di 55A o 65A e combinazioni di diametri interno ed esterno. La tabella mostra alcune configurazioni, con durezza, dimensioni e confezione. Consultare la pagina prodotto per tutte le combinazioni."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Modello",
+              "Durezza",
+              "Diametro interno × diametro esterno (mm)",
+              "Confezione"
+            ],
+            "rows": [
+              [
+                "M3602002",
+                "55A",
+                "1.6 × 3.2",
+                "30 m/rotolo"
+              ],
+              [
+                "M3602003",
+                "55A",
+                "1.6 × 4.8",
+                "30 m/rotolo"
+              ],
+              [
+                "E3602001",
+                "65A",
+                "0.8 × 2.4",
+                "30 m/rotolo"
+              ],
+              [
+                "E3602S02",
+                "65A",
+                "1 × 2.7",
+                "30 m/rotolo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Nella distinta base indicare modello completo, codice articolo, durezza e unità di confezione. Per accoppiare il tubo con un portagomma, indicare modello del raccordo o disegno del terminale, fluido, temperatura, pressione o depressione, raggio di curvatura e requisiti di smontaggio, così da verificare insieme tubo e condizioni del collegamento."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Visualizza tutte le specifiche e le opzioni dei tubi in PVC",
+                "href": "/en/products/tubing/pvc-tubing/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Altri materiali per tubi da strumento",
+        "tocLabel": "Materiali correlati per tubi",
+        "blocks": [
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "label": "Tubi in PTFE: materiale, resistenza al flusso e scelta dei raccordi",
+                "href": "/en/resources/technical-articles/what-is-ptfe-tubing/"
+              },
+              {
+                "label": "Tubi in FEP: piccolo diametro, trasparenza e raccordi flangiati",
+                "href": "/en/resources/technical-articles/what-is-fep-tubing/"
+              },
+              {
+                "label": "Tubi in PFA: trasferimento di reagenti e controllo della pulizia",
+                "href": "/en/resources/technical-articles/what-is-pfa-tubing/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulla scelta dei tubi flessibili in PVC",
+    "faqItems": [
+      {
+        "question": "1. Quali parametri, oltre al diametro interno, contano nell'accoppiamento del tubo in PVC con un portagomma?",
+        "answer": "Controllare diametro esterno, spessore, durezza e formulazione del tubo, oltre a diametro esterno, profilo e lunghezza utile di innesto del portagomma. Anche con lo stesso diametro interno, questi parametri modificano deformazione, contatto e ritegno. Scegliere in funzione di fluido, temperatura, pressione o depressione e carichi di posa. Dopo il montaggio, controllare profondità di innesto, condizioni dell'imbocco, tenuta e resistenza allo sfilamento. La sola sensazione all'inserimento non determina l'accettazione."
+      }
+    ],
+    "cta": {
+      "title": "Scegliere tubi in PVC e raccordi compatibili",
+      "description": "Indicare fluido, durezza, diametri interno ed esterno, lunghezza, temperatura e pressione e requisiti dei raccordi. FOREACH può aiutare ad abbinare le configurazioni ai circuiti degli strumenti.",
+      "contactLabel": "Contatta un tecnico",
+      "productsLabel": "Visualizza le specifiche dei tubi in PVC",
+      "productsHref": "/en/products/tubing/pvc-tubing/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "material-formulation",
+      "label": "Materiale e formulazione"
+    },
+    {
+      "id": "hardness-wall",
+      "label": "Durezza e spessore della parete"
+    },
+    {
+      "id": "connection-vs-pump-tube",
+      "label": "Tubi di collegamento e per pompe"
+    },
+    {
+      "id": "instrument-applications",
+      "label": "Impieghi e fluidi"
+    },
+    {
+      "id": "diameter-routing",
+      "label": "Dimensioni e posa"
+    },
+    {
+      "id": "fittings",
+      "label": "Compatibilità con i raccordi"
+    },
+    {
+      "id": "cleaning-maintenance",
+      "label": "Pulizia e manutenzione"
+    },
+    {
+      "id": "foreach-sizes",
+      "label": "Specifiche FOREACH"
+    },
+    {
+      "id": "related-tubing",
+      "label": "Materiali correlati per tubi"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Tubi in PVC",
+      "Scelta del circuito fluidico dello strumento"
+    ],
+    "mentions": [
+      "Durezza dei tubi flessibili in PVC",
+      "Raccordi portagomma",
+      "Tubi per pompe peristaltiche",
+      "Linee di lavaggio"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "pvc-tubing",
+      "title": "Tubi in cloruro di polivinile (PVC)",
+      "href": "/en/products/tubing/pvc-tubing/details/",
+      "imageSrc": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+      "imageAlt": "Rotolo di tubo flessibile trasparente in PVC FOREACH con estremità visibile",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tpu-tubing",
+      "title": "Tubi in poliuretano termoplastico (TPU)",
+      "href": "/en/products/tubing/tpu-tubing/details/",
+      "imageSrc": "/images/products/tubing/tpu-tubing/foreach-flexible-tpu-tubing-instrument-routing.webp",
+      "imageAlt": "Tubi flessibili FOREACH in TPU disposti in curve per la posa negli strumenti",
+      "imageAspectRatio": 1
+    }
+  ]
+}

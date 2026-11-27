@@ -1,3 +1,6 @@
+import { germanCvKvCopy, germanCvKvPythonText } from "@/data/resources/technical-articles/cv-kv-microfluidics.de";
+import hindiCvKv from "@/data/resources/technical-articles/dedicated-locales/hi/cv-kv-correction-for-microfluidics.json";
+import italianCvKv from "@/data/resources/technical-articles/dedicated-locales/it/cv-kv-correction-for-microfluidics.json";
 import styles from "./TechnicalArticleBody.module.css";
 
 type SupportedLocale =
@@ -102,7 +105,7 @@ const BASE_TABLE_ROWS = [
   },
 ];
 
-const PYTHON_CODE = [
+const PYTHON_LINES = [
   "import math",
   "",
   "def churchill_f(Re, eps_d):",
@@ -134,7 +137,30 @@ const PYTHON_CODE = [
   "    if Re <= 0 or Re_c <= 0:",
   "        raise ValueError(\"Require Re > 0 and fitted Re_c > 0\")",
   "    return 1.0 / math.sqrt(1.0 + Re_c / Re)"
-].join("\n");
+];
+
+const PYTHON_CODE = PYTHON_LINES.join("\n");
+const GERMAN_PYTHON_CODE = PYTHON_LINES.map(line => germanCvKvPythonText[line] ?? line).join("\n");
+
+const italianPythonText: Readonly<Partial<Record<string, string>>> = {
+  "    # Darcy friction factor; scalar, single-phase pipe-flow example.": "    # Fattore d’attrito di Darcy. Esempio scalare per flusso monofase in un tubo.",
+  "        raise ValueError(\"Require Re > 0 and eps_d >= 0\")": "        raise ValueError(\"Occorrono Re > 0 ed eps_d >= 0\")",
+  "    # Supply the measured calibration Re; do not infer it from diameter.": "    # Usare il Re misurato in taratura. Non dedurlo dal diametro.",
+  "        raise ValueError(\"Require L/d > 0 and local loss >= 0\")": "        raise ValueError(\"Occorrono L/d > 0 e una perdita locale >= 0\")",
+  "    # Illustrative fit only: determine Re_c from component test data.": "    # Adattamento illustrativo. Stimare Re_c dai dati di prova del componente.",
+  "        raise ValueError(\"Require Re > 0 and fitted Re_c > 0\")": "        raise ValueError(\"Occorrono Re > 0 e Re_c stimato > 0\")",
+};
+const ITALIAN_PYTHON_CODE = PYTHON_LINES.map(line => italianPythonText[line] ?? line).join("\n");
+
+const hindiPythonText: Readonly<Partial<Record<string, string>>> = {
+  "    # Darcy friction factor; scalar, single-phase pipe-flow example.": "    # डार्सी घर्षण गुणांक। पाइप में एकल-चरण प्रवाह का अदिश उदाहरण।",
+  "        raise ValueError(\"Require Re > 0 and eps_d >= 0\")": "        raise ValueError(\"Re > 0 और eps_d >= 0 ज़रूरी हैं\")",
+  "    # Supply the measured calibration Re; do not infer it from diameter.": "    # कैलिब्रेशन में मापा गया Re दें। इसे व्यास से न निकालें।",
+  "        raise ValueError(\"Require L/d > 0 and local loss >= 0\")": "        raise ValueError(\"L/d > 0 और स्थानीय हानि >= 0 ज़रूरी हैं\")",
+  "    # Illustrative fit only: determine Re_c from component test data.": "    # केवल उदाहरण। Re_c घटक के परीक्षण डेटा से तय करें।",
+  "        raise ValueError(\"Require Re > 0 and fitted Re_c > 0\")": "        raise ValueError(\"Re > 0 और फ़िट किया हुआ Re_c > 0 ज़रूरी हैं\")",
+};
+const HINDI_PYTHON_CODE = PYTHON_LINES.map(line => hindiPythonText[line] ?? line).join("\n");
 
 const COPY: Record<SupportedLocale, ArticleCopy> = {
   "zh-CN": {
@@ -1485,8 +1511,7 @@ interface CvKvMicrofluidicsArticleProps {
 export default function CvKvMicrofluidicsArticle({
   locale,
 }: CvKvMicrofluidicsArticleProps) {
-  const copy =
-    COPY[normalizeLocale(locale)];
+  const copy = locale === "de" ? germanCvKvCopy : locale === "it" ? italianCvKv.body : locale === "hi" ? hindiCvKv.body : COPY[normalizeLocale(locale)];
 
   const tableRows =
     BASE_TABLE_ROWS.map(
@@ -1682,7 +1707,7 @@ export default function CvKvMicrofluidicsArticle({
         <p>{copy.code.introduction}</p>
 
         <pre className={styles.technicalCode}>
-          <code>{PYTHON_CODE}</code>
+          <code>{locale === "de" ? GERMAN_PYTHON_CODE : locale === "it" ? ITALIAN_PYTHON_CODE : locale === "hi" ? HINDI_PYTHON_CODE : PYTHON_CODE}</code>
         </pre>
 
         <p>{copy.code.note}</p>

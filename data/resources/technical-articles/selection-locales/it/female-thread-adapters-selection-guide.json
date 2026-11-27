@@ -1,0 +1,509 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cosa sono i raccordi con filettatura femmina? Scelta di raccordi diritti, a T, a Y e passaparete",
+      "seoTitle": "Raccordi con filettatura femmina: porte, passaggi e montaggio a pannello | FOREACH",
+      "seoDescription": "Confronta raccordi diritti, a T, a Y e passaparete. Abbina porte M6×1 o 1/4-28 UNF, tenute e diametri di passaggio e individua le cause di perdita.",
+      "coverImage": "/images/resources/technical-articles/female-thread-adapters-selection-guide/two-way-family.webp",
+      "coverAlt": "Raccordi FOREACH con filettatura femmina U standard e US a corpo quadro"
+    },
+    "deck": "Definisci prima il tipo di collegamento: unire due linee, realizzare una diramazione o attraversare un pannello. Verifica quindi la compatibilità di ogni porta e tenuta prima di scegliere il diametro di passaggio, il materiale e il montaggio.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "lead": "I raccordi con filettatura femmina sono componenti del circuito fluidico con due o tre porte filettate femmina.",
+        "text": "I raccordi con filettatura femmina sono componenti del circuito fluidico con due o tre porte filettate femmina. Raccordi maschi e tenute compatibili consentono di collegare tubi flessibili o rigidi per unire, dividere o far confluire le linee. Le versioni passaparete fissano inoltre il collegamento al pannello dello strumento."
+      },
+      {
+        "type": "paragraph",
+        "text": "La gamma FOREACH comprende raccordi diritti U standard, raccordi US a corpo quadro, raccordi passaparete PMU, raccordi a T UT e raccordi a Y UY. Questa guida riguarda le porte M6×1 e 1/4-28 UNF e i diametri di passaggio da 0.5–2.0 mm. Dimensioni e materiali disponibili variano secondo la serie."
+      },
+      {
+        "type": "paragraph",
+        "text": "In questa gamma i raccordi servono principalmente a unire le linee del fluido. Nei modelli attualmente a catalogo sul sito, tutte le porte fluido di uno stesso modello hanno la stessa filettatura. La gamma offre varianti M6×1 e 1/4-28 UNF. Per collegare filettature diverse occorre definire un modello specifico e verificarne la disponibilità. Un raccordo diritto unisce in genere due porte con la stessa filettatura; un adattatore collega interfacce differenti. Le versioni con diramazione o montaggio a pannello si identificano come raccordi a T, a Y e passaparete."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come collegano tubi flessibili e rigidi i raccordi con filettatura femmina?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Montare prima un raccordo maschio adatto all'estremità del tubo, quindi avvitarlo nel corpo femmina. Per i tubi rigidi di norma serve un dado con ogiva, anello di compressione o tubo flangiato, compatibile con il diametro esterno del tubo e la geometria della porta. Per i tubi flessibili si può usare un raccordo filetto-portagomma compatibile. L'insieme deve trattenere il tubo e garantire la tenuta sulla porta."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/female-thread-adapters-selection-guide/catalog-two-way-section-it.webp",
+            "width": 1500,
+            "height": 959,
+            "alt": "Sezione di un raccordo U standard del catalogo dei raccordi, con ingrandimento del passaggio centrale",
+            "caption": "Figura 1 | Porte femmina e passaggio centrale di un raccordo U standard. La sezione mostra il solo corpo. Per collegare i tubi servono anche raccordi maschi e tenute compatibili. Fonte: catalogo in inglese dei raccordi, pagina 82."
+          },
+          {
+            "type": "paragraph",
+            "text": "Con una porta a fondo piano e un assieme tubo compatibili, il filetto genera la forza assiale di serraggio. La tenuta si forma per contatto tra l'elemento di tenuta, l'estremità del tubo e la sede della porta. La stessa filettatura da sola non garantisce la tenuta se cambiano la geometria della sede, la profondità della porta o la sporgenza del raccordo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il corpo femmina accoglie il raccordo maschio già montato sul tubo. Svitare il raccordo e sfilare il tubo dal portagomma sono operazioni distinte. Arrestare e depressurizzare il circuito prima di ispezionare le tenute e le estremità dei tubi. Usare ricambi compatibili con il montaggio originale: componenti simili all'aspetto possono adottare tenute diverse."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/",
+                "label": "Configurazioni e componenti per raccordare tubi rigidi",
+                "prefix": "Per terminare tubi rigidi, consulta ",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/resources/technical-articles/threaded-hose-barb-fittings-selection-guide/",
+                "label": "Tenuta sui due lati dei raccordi filetto-portagomma",
+                "prefix": "Per terminare tubi flessibili, consulta ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quali differenze ci sono tra i raccordi U, US, PMU, UT e UY?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Scegliere prima il numero di vie e il tipo di montaggio. U e US uniscono due linee. Il PMU aggiunge un fissaggio passaparete. UT e UY hanno tre porte comunicanti per dividere o riunire il flusso. Il corpo quadro US si distingue dalla forma U standard, ma l'aspetto non identifica il diametro di passaggio né la pressione ammissibile."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/female-thread-adapters-selection-guide/two-way-family.webp",
+            "width": 960,
+            "height": 960,
+            "alt": "Famiglie di raccordi U standard e US a corpo quadro nei colori naturale e nero",
+            "caption": "Figura 2 | Fotografie delle famiglie U e US. L'aspetto del corpo non identifica la filettatura, il diametro di passaggio o il grado di resina del singolo articolo."
+          },
+          {
+            "type": "paragraph",
+            "text": "I modelli attualmente a catalogo qui riportati illustrano i cinque tipi. Le specifiche valgono per la serie o il modello indicato."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Configurazione e funzione",
+              "Porte e diametro di passaggio",
+              "Materiali e modelli rappresentativi"
+            ],
+            "rows": [
+              [
+                "Raccordo U standard: unione di due linee",
+                "M6×1 o 1/4-28 UNF. Gli esempi hanno un passaggio di 2.0 mm",
+                "U-M6-20-AC-B: POM; U-U28-20-PP-N: PP"
+              ],
+              [
+                "Raccordo US a corpo quadro: collegamento diritto",
+                "M6×1, passaggio di 0.5, 1.0 o 1.5 mm",
+                "PP o POM, ad esempio US-M6-10-PP-N con passaggio di 1.0 mm"
+              ],
+              [
+                "Raccordo passaparete PMU: fissaggio al pannello dello strumento",
+                "Porte fluido 1/4-28 UNF, passaggio di 2.0 mm",
+                "PP; PMU-M12-U28-20-PP-N"
+              ],
+              [
+                "Raccordo a T UT: linea principale diritta e derivazione laterale",
+                "1/4-28 UNF, passaggio di 1.5 o 2.0 mm",
+                "PP o PPS, ad esempio UT-U28-15-PP-N con passaggio di 1.5 mm"
+              ],
+              [
+                "Raccordo a Y UY: diramazione o confluenza angolata",
+                "1/4-28 UNF, passaggio di 1.0, 1.5 o 2.0 mm",
+                "PP, ad esempio UY-U28-15-PP-N con passaggio di 1.5 mm"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "I codici modello identificano le configurazioni. In UT-U28-15-PS-B, UT indica un raccordo a T, U28 la filettatura 1/4-28 UNF, 15 un passaggio di 1.5 mm, PS il PPS in questo catalogo e B il colore nero. AC indica il POM e N il colore naturale. Il codice materiale PS qui non indica il polistirene."
+          },
+          {
+            "type": "paragraph",
+            "text": "Scegliere congiuntamente i materiali del corpo, delle tenute e dei tubi. A seconda del modello, il corpo è in PP, POM o PPS. L'idoneità dipende da fluido, concentrazione, temperatura, tempo di contatto e detergenti. Controllare il modello completo e la documentazione del materiale. Il colore serve a facilitare l'identificazione. La pressione ammissibile del collegamento completo dipende da corpo, tenute, tubi e temperatura di esercizio."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/fitting-material-selection-guide/",
+                "label": "Scelta dei materiali del corpo e delle tenute dei raccordi",
+                "prefix": "Per la compatibilità con i fluidi, consulta ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come abbinare porte e tenute M6×1 e 1/4-28 UNF?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "M6×1 e 1/4-28 UNF sono filettature differenti e non vanno avvitate tra loro. La M6×1 ha diametro nominale di 6 mm e passo di 1 mm. La 1/4-28 UNF ha diametro nominale di 1/4 di pollice e 28 filetti per pollice. Diametri simili non garantiscono la compatibilità. Forzare un accoppiamento errato può danneggiare i filetti in plastica o inclinare il raccordo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per ogni porta, registrare separatamente la filettatura di collegamento, la struttura di tenuta e le dimensioni del tubo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Elemento",
+              "Che cosa verificare",
+              "Perché è importante"
+            ],
+            "rows": [
+              [
+                "Filettatura della porta",
+                "Designazione completa del filetto, forma maschio o femmina e porta corrispondente. M6×1 e 1/4-28 UNF sono filettature cilindriche",
+                "Le sole sigle M6 o 1/4 possono omettere il passo o lo standard. La forza non corregge un accoppiamento errato"
+              ],
+              [
+                "Posizione della tenuta",
+                "Sede a fondo piano o di altro tipo, profondità della porta, lunghezza del puntale e gruppo di tenuta specificato",
+                "Un filetto serrato non dimostra che l'elemento di tenuta sia correttamente in sede"
+              ],
+              [
+                "Terminale del tubo",
+                "Diametri interno ed esterno del tubo, materiale e gruppo con ogiva, anello di compressione o flangiatura specificato",
+                "Il diametro esterno determina i componenti di ritegno e tenuta. Il diametro interno influisce sull'allineamento del passaggio"
+              ],
+              [
+                "Seconda o terza porta",
+                "Registrare la specifica di ogni porta e dei componenti compatibili",
+                "La verifica di una porta non dimostra la compatibilità di tutte le porte"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le due estremità del raccordo U-M6-20-PP-N sono M6×1. Le due estremità del raccordo U-U28-20-PP-N sono 1/4-28 UNF. In ogni modello U, US, UT, UY o PMU attualmente a catalogo sul sito, tutte le porte fluido usano la stessa filettatura. Tubi e terminali vanno comunque selezionati a parte. Per collegare estremità con filettature diverse, comunicare a FOREACH le specifiche di entrambi i filetti, le dimensioni dei tubi e il fluido per definire modello, disponibilità e componenti compatibili."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le marcature sul corpo aiutano a identificare le porte: M indica M6×1 ed E indica 1/4-28 UNF. Verificare il codice modello completo e la documentazione della porta. Gli assiemi con sede a fondo piano fanno tenuta tramite il contatto corretto tra gli elementi di tenuta e la sede. In caso di perdite dalla tenuta frontale, controllare la posizione del tubo, gli elementi di tenuta e la porta. Usare nastro per filetti o altri sigillanti ausiliari solo se previsti dalle istruzioni di montaggio."
+          }
+        ]
+      },
+      {
+        "title": "Qual è il rapporto tra diametro di passaggio, diametro del tubo e volume residuo?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il diametro di passaggio riguarda il percorso interno del fluido. La dimensione del filetto descrive l'interfaccia meccanica della porta. Sono due parametri distinti. I modelli US-M6, ad esempio, usano tutti porte M6×1, ma hanno passaggi di 0.5, 1.0 e 1.5 mm. Cambiando il passaggio, il filetto di accoppiamento può restare identico mentre varia il raccordo con il diametro interno del tubo."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/female-thread-adapters-selection-guide/catalog-us-bore-it.webp",
+            "width": 1500,
+            "height": 960,
+            "alt": "Vista esterna e sezione del raccordo US a corpo quadro. La quota A indica il diametro del passaggio. Le dimensioni sono in millimetri",
+            "caption": "Figura 3 | A indica il diametro di passaggio interno del raccordo US. Le varianti US-M6 misurano 0.5, 1.0 e 1.5 mm. A è distinta dal diametro del filetto e dal diametro esterno del tubo. Fonte: catalogo in inglese dei raccordi, pagina 82."
+          },
+          {
+            "type": "paragraph",
+            "text": "Partire dal diametro interno del tubo e dalla portata di progetto, quindi verificare se il raccordo rappresenta una strozzatura locale. A parità di condizioni, un passaggio più stretto può aumentare la perdita di carico, mentre una cavità più ampia può aumentare il volume da lavare. Contano anche lunghezza del passaggio, curve, geometria del terminale, viscosità e portata di esercizio. Il solo diametro di passaggio non basta a prevedere la portata o la contaminazione residua."
+          },
+          {
+            "type": "paragraph",
+            "text": "Abbinare il diametro interno del tubo al passaggio del raccordo e posizionare correttamente il tubo aiuta a ridurre discontinuità e zone di ristagno nel collegamento. Sono accorgimenti importanti per ridurre il volume residuo. La contaminazione residua nel circuito dipende anche dal volume interno, dalle zone lavate in misura insufficiente e dalla sequenza di esercizio. Valutarla con una prova effettiva di sostituzione del fluido."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per la commutazione dei reagenti, il trasferimento di campioni e i circuiti di lavaggio, provare il lavaggio dopo il montaggio. Usare lunghezze dei tubi, raccordi e portata di esercizio effettivi. Con un tracciante ammesso o misurando la concentrazione, registrare il volume di lavaggio necessario a ripristinare la condizione richiesta all'uscita. Per valutare il diametro di passaggio, considerare questo dato insieme a perdite, perdita di carico e bolle."
+          }
+        ]
+      },
+      {
+        "title": "Come dividere o far confluire il flusso con raccordi femmina a T e a Y?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "UT e UY hanno tre porte comunicanti. Entrambi possono dividere un flusso in due o far confluire due flussi. Un raccordo a T si adatta a una linea principale diritta con derivazione laterale. Un raccordo a Y offre diramazioni angolate. Controllare la direzione dei tubi, lo spazio di curvatura e la posizione dei fori di fissaggio prima di confrontare diametri di passaggio e condizioni operative."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/female-thread-adapters-selection-guide/catalog-tee-y-channels-it.webp",
+            "width": 1321,
+            "height": 1451,
+            "alt": "Passaggi del raccordo a T UT e del raccordo a Y UY, con ingrandimenti delle intersezioni e quote del foro passante",
+            "caption": "Figura 4 | Sopra, raccordo a T UT. Sotto, raccordo a Y UY. A destra, ingrandimenti delle intersezioni dei passaggi. Entrambi permettono di dividere o riunire i flussi. La direzione e la portata di ogni ramo dipendono dal circuito. Fonte: catalogo in inglese dei raccordi, pagina 83."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un raccordo passivo a tre porte non regola la ripartizione della portata. Anche con tubi dello stesso diametro, le portate possono differire se variano lunghezze, contropressioni a valle, aperture delle valvole o resistenze locali. Per ottenere portate uguali servono regolazione o dosaggio adeguati, da verificare con entrambi i rami attivi e con ogni ramo attivo da solo."
+          },
+          {
+            "type": "paragraph",
+            "text": "La confluenza dei flussi non assicura una miscelazione completa. L'omogeneità dipende anche dal rapporto tra le portate, dalle proprietà dei fluidi e dal passaggio a valle. La forma a T o a Y da sola non la garantisce. Quando un ramo è inattivo, controllare se la pressione di un altro ramo può causare riflusso. Usare valvole adeguate o altri sistemi di isolamento se necessario."
+          },
+          {
+            "type": "paragraph",
+            "text": "I fori di fissaggio di UT e UY consentono di sostenere il punto di diramazione in modo che il peso dei tubi non gravi in modo permanente sulle porte. Lasciare spazio agli utensili per serraggio, rimozione e pulizia. Per confrontare le perdite di carico delle configurazioni a T e a Y, usare portata, geometria dei passaggi e proprietà dei fluidi effettive."
+          }
+        ]
+      },
+      {
+        "title": "Come si monta un raccordo passaparete PMU e a che cosa serve ogni filettatura?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il PMU-M12-U28-20-PP-N separa il fissaggio dal collegamento fluidico. Il filetto esterno M12×1.5 accoglie il dado di fissaggio. Le due porte fluido femmina sono 1/4-28 UNF e il diametro di passaggio è di 2.0 mm. La sigla M12 nel codice non descrive le porte fluido."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/female-thread-adapters-selection-guide/catalog-pmu-panel-mount-it.webp",
+            "width": 1500,
+            "height": 1190,
+            "alt": "Assemblaggio PMU con pannello, dado, corpo con filettatura femmina e terminali dei tubi sui due lati",
+            "caption": "Figura 5 | Montaggio del raccordo passaparete PMU. Il pannello è serrato tra il dado e la battuta del corpo. Il modello richiede un dado compatibile e ammette pannelli fino a 12.5 mm di spessore. Fonte: catalogo in inglese dei raccordi, pagina 83."
+          },
+          {
+            "type": "paragraph",
+            "text": "Questo modello PMU accetta pannelli fino a 12.5 mm di spessore con un dado compatibile. Verificare orientamento, foro e spessore serrato prima di bloccare il pannello tra battuta e dado. Il valore di 12.5 mm indica lo spessore del pannello e va distinto dal diametro del foro e dalla profondità di inserimento di un raccordo fluido."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Prima del montaggio, verificare il modello PMU completo, il dado compatibile e il disegno del pannello. Ispezionare i filetti, la battuta e i bordi del foro. Rimuovere bave e residui.",
+              "Inserire il corpo attraverso il pannello e fissarlo con il dado compatibile. Impedire la rotazione del corpo per evitare di torcere i tubi collegati.",
+              "Montare su ogni lato un terminale compatibile con la porta 1/4-28 UNF e la sede di tenuta. Distinguere il serraggio del pannello da quello necessario alla tenuta del fluido.",
+              "Prevedere spazio su entrambi i lati per terminali, utensili per il dado e curve dei tubi, con sostegni adeguati.",
+              "Verificare tenuta e flusso alla temperatura, alla pressione e alla portata previste. Sul lato aspirazione, aggiungere un controllo dell'ingresso d'aria in depressione."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Scegliere il PMU per il montaggio passaparete con dado. I raccordi U standard uniscono direttamente due tubi. Gli altri raccordi con anello di ritegno seguono i propri limiti per pannello e anello, distinti dal limite PMU di 12.5 mm."
+          }
+        ]
+      },
+      {
+        "title": "Come alimentare due rami di un analizzatore da una sola linea di liquido di lavaggio?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Si consideri un analizzatore che alimenta due moduli con lo stesso liquido di lavaggio mediante tubi con diametro interno di 1.5 mm e una derivazione interna fissa. Partire da un raccordo a T UT o a Y UY, quindi scegliere porte e percorso dei tubi. L'esempio illustra la selezione e richiede una convalida per il singolo impianto."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Definire gli stati operativi: registrare portata e contropressione a valle durante l'uso simultaneo e alternato, anche quando un ramo viene chiuso.",
+              "Scegliere configurazione e passaggio: valutare UT-U28-15-PP-N per una linea principale diritta con derivazione laterale, oppure UY-U28-15-PP-N per derivazioni angolate. Entrambi hanno porte 1/4-28 UNF, passaggio di 1.5 mm e corpo in PP.",
+              "Completare tutti e tre i terminali in base a diametro esterno, materiale del tubo e sedi effettive. Un tubo con diametro interno di 1.5 mm non definisce il suo diametro esterno né permette di individuare ogiva o anello di compressione.",
+              "Verificare la compatibilità dei fluidi di lavaggio e risciacquo con corpo, tenute e tubi. Instradare e sostenere le linee tenendo conto dei fori di montaggio e dello spazio per gli utensili.",
+              "Verificare portata e isolamento: misurare portata di ramo, perdita di carico, perdite, bolle e riflusso in ogni combinazione operativa. Aggiungere un controllo se serve la stessa portata sui rami.",
+              "Registrare il modello del raccordo, tutti e tre i terminali, dimensioni dei tubi, metodo di montaggio e condizioni di accettazione per acquisti e manutenzione."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Se la linea passa anche attraverso il pannello dello strumento, valutare separatamente il PMU-M12-U28-20-PP-N: il suo diametro di passaggio è di 2.0 mm. Le porte U28 in comune con il raccordo a T non rendono uniforme il passaggio di tutto il percorso. Controllare transizioni, volume di ricambio e spazio di montaggio."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/applications/analytical-instruments/",
+                "label": "Applicazioni fluidiche negli strumenti analitici",
+                "prefix": "Per il contesto applicativo, consulta ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come diagnosticare perdite, ingressi d'aria o portata ridotta?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Arrestare l'apparecchio e scaricare la pressione residua prima di cercare il difetto nella porta, nel terminale del tubo o nel corpo. Evitare di serrare ripetutamente un gruppo non verificato. Componenti incompatibili, tubo fuori sede, tenute danneggiate e porte incrinate richiedono rimedi diversi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Seguire i sintomi e, dopo la riparazione, ripetere le prove nelle condizioni operative effettive."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Sintomo",
+              "Primo controllo",
+              "Rimedio e verifica"
+            ],
+            "rows": [
+              [
+                "Tracce di perdita dalla porta",
+                "Compatibilità tra filetto e sede, posizione del tubo, tenute graffiate o mancanti",
+                "Correggere l'accoppiamento o sostituire i componenti danneggiati. Serrare come indicato ed eseguire una prova di tenuta"
+              ],
+              [
+                "Bolle durante l'aspirazione",
+                "Tenuta in depressione dei terminali, alimentazione a monte e altri punti d'ingresso dell'aria",
+                "Isolare i tratti. L'assenza di gocce esterne non dimostra la tenuta in depressione"
+              ],
+              [
+                "Innesto difficoltoso o inclinato",
+                "Incompatibilità M6/U28, passo, residui e danni",
+                "Smettere di forzare il filetto. Verificare i componenti accoppiati e sostituire quelli danneggiati"
+              ],
+              [
+                "Portata ridotta o diversa tra i rami",
+                "Passaggio effettivo, ostruzioni, strozzature nei tubi, resistenza dei rami e stato delle valvole",
+                "Confrontare le perdite di carico nei singoli tratti e gli stati operativi. Il raccordo a T non bilancia la portata"
+              ],
+              [
+                "Residui dopo la pulizia",
+                "Posizione del tubo, discontinuità nell'interfaccia, rami lavati male e tratti ciechi",
+                "Controllare montaggio e percorsi di lavaggio. Misurare l'effettivo ricambio del fluido"
+              ],
+              [
+                "Raccordo passaparete allentato o corpo incrinato",
+                "Tenuta del fissaggio del dado, torsione dei tubi, carichi laterali ed esposizione ai fluidi",
+                "Rimuovere i carichi dei tubi, ispezionare i danni e verificare la tenuta dopo aver fissato il gruppo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Al primo montaggio, verificare la combinazione completa di corpo, terminale e tubo. Durante la manutenzione, controllare anche deformazione delle tenute, usura e danni alle estremità dei tubi. La riutilizzabilità del corpo non implica quella delle tenute o dei componenti premontati. Coppia di serraggio e pressione ammissibile dipendono da materiali, struttura della tenuta e temperatura di esercizio. I valori di un altro raccordo non sono direttamente applicabili."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sui raccordi con filettatura femmina",
+    "faqItems": [
+      {
+        "question": "Questi raccordi possono convertire M6 in 1/4-28 UNF?",
+        "answer": "Nei modelli U, US, UT, UY e PMU attualmente a catalogo sul sito, tutte le porte fluido di uno stesso modello hanno la stessa filettatura. Questi articoli quindi non convertono direttamente M6×1 in 1/4-28 UNF. Il raccordo U-M6-20-PP-N ha due estremità M6×1 e il raccordo U-U28-20-PP-N due estremità 1/4-28 UNF. Per la conversione, comunicare entrambe le filettature, le dimensioni dei tubi e il fluido, affinché FOREACH possa confermare modello specifico e componenti compatibili."
+      },
+      {
+        "question": "Se un raccordo femmina perde, bisogna applicare nastro per filetti o stringerlo di più?",
+        "answer": "Prima arrestare e depressurizzare il circuito. Controllare posizione del tubo, elementi di tenuta e sede della porta. In un gruppo con tenuta frontale a fondo piano, il nastro per filetti non ripara una perdita dalla tenuta frontale. Un ulteriore serraggio può danneggiare il corpo in plastica. Correggere l'accoppiamento o sostituire i componenti danneggiati, quindi serrare ed eseguire la prova di tenuta secondo le istruzioni di montaggio."
+      }
+    ],
+    "cta": {
+      "title": "Definire il collegamento completo per ogni porta",
+      "description": "Per valutare corpo, tenute e condizioni di prova dei campioni, fornire uno schema del circuito, la specifica di ogni filettatura, diametri interno ed esterno e materiale dei tubi, fluido, pressione, temperatura e spazio disponibile.",
+      "contactLabel": "Richiedi assistenza per la scelta dei raccordi femmina",
+      "productsLabel": "Visualizza i raccordi con filettatura femmina",
+      "productsHref": "/en/products/fittings/female-thread-adapters/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "connection",
+      "label": "Tubi flessibili e rigidi"
+    },
+    {
+      "id": "models",
+      "label": "Cinque configurazioni e relativi modelli"
+    },
+    {
+      "id": "ports-and-sealing",
+      "label": "Porte e componenti di tenuta"
+    },
+    {
+      "id": "bore",
+      "label": "Passaggio e volume residuo"
+    },
+    {
+      "id": "tee-and-y",
+      "label": "Diramazione e confluenza con raccordi a T e a Y"
+    },
+    {
+      "id": "panel-mount",
+      "label": "Montaggio a pannello PMU"
+    },
+    {
+      "id": "selection-example",
+      "label": "Esempio di diramazione per un analizzatore"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Diagnosi di perdite e anomalie di portata"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Che cosa sono i raccordi con filettatura femmina? Scelta di raccordi diritti, a T, a Y e passaparete"
+    ],
+    "mentions": [
+      "U",
+      "US",
+      "UT",
+      "UY",
+      "PMU",
+      "M6×1",
+      "1/4-28 UNF",
+      "PP",
+      "POM",
+      "PPS"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "female-thread-tee-family",
+      "title": "UT-U28-15-PP-N · Raccordo a T femmina",
+      "href": "/en/products/fittings/female-thread-adapters/ut-u28-15-pp-n/",
+      "imageSrc": "/images/resources/technical-articles/female-thread-adapters-selection-guide/ut-u28-15-pp-n-sidebar.webp",
+      "imageAlt": "Foto del raccordo FOREACH UT-U28-15-PP-N · raccordo a T femmina",
+      "imageFill": true
+    },
+    {
+      "id": "female-thread-pmu-bulkhead",
+      "title": "Raccordo passaparete PMU con filettatura femmina",
+      "href": "/en/products/fittings/female-thread-adapters/pmu-m12-u28-20-pp-n/",
+      "imageSrc": "/images/resources/technical-articles/female-thread-adapters-selection-guide/pmu-sidebar.webp",
+      "imageAlt": "Foto del raccordo passaparete FOREACH PMU con filettatura femmina",
+      "imageFill": true
+    }
+  ],
+  "footerProducts": [
+    {
+      "id": "809534",
+      "title": "Raccordo US a corpo quadro · passaggio 1.0 mm US-M6-10-PP-N",
+      "href": "/en/products/fittings/female-thread-adapters/us-m6-10-pp-n/",
+      "imageSrc": "/images/products/fittings/female-thread-adapters/products/1mm-bore-pp-square-female-thread-union-m6-us-m6-10-pp-n.webp",
+      "imageAlt": "FOREACH US-M6-10-PP-N con corpo quadro · passaggio 1.0 mm"
+    },
+    {
+      "id": "809195",
+      "title": "Raccordo U standard · passaggio 2.0 mm U-U28-20-PP-N",
+      "href": "/en/products/fittings/female-thread-adapters/u-u28-20-pp-n/",
+      "imageSrc": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-straight-female-thread-union-1-4-28-unf-u-u28-20-pp-n.webp",
+      "imageAlt": "FOREACH U-U28-20-PP-N standard · passaggio 2.0 mm"
+    },
+    {
+      "id": "809697",
+      "title": "Raccordo a T UT · passaggio 1.5 mm UT-U28-15-PP-N",
+      "href": "/en/products/fittings/female-thread-adapters/ut-u28-15-pp-n/",
+      "imageSrc": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-tee-female-thread-adapter-1-4-28-unf-ut-u28-15-pp-n.webp",
+      "imageAlt": "Raccordo FOREACH UT-U28-15-PP-N a T · passaggio 1.5 mm"
+    },
+    {
+      "id": "809491",
+      "title": "Raccordo a Y UY · passaggio 1.5 mm UY-U28-15-PP-N",
+      "href": "/en/products/fittings/female-thread-adapters/uy-u28-15-pp-n/",
+      "imageSrc": "/images/products/fittings/female-thread-adapters/products/1-5mm-bore-pp-y-female-thread-adapter-1-4-28-unf-uy-u28-15-pp-n.webp",
+      "imageAlt": "Raccordo FOREACH UY-U28-15-PP-N a Y · passaggio 1.5 mm"
+    },
+    {
+      "id": "809525",
+      "title": "Raccordo passaparete PMU · passaggio 2.0 mm PMU-M12-U28-20-PP-N",
+      "href": "/en/products/fittings/female-thread-adapters/pmu-m12-u28-20-pp-n/",
+      "imageSrc": "/images/products/fittings/female-thread-adapters/products/2mm-bore-pp-bulkhead-female-thread-union-1-4-28-unf-pmu-m12-u28-20-pp-n.webp",
+      "imageAlt": "Raccordo passaparete FOREACH PMU-M12-U28-20-PP-N · passaggio 2.0 mm"
+    }
+  ]
+}

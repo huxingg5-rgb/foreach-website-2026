@@ -17,6 +17,7 @@ type Props = {
   config: ProductConfiguratorConfig;
   material: string;
   locale: ProductConfiguratorLocale;
+  uiLocale?: ProductConfiguratorLocale | "de" | "it" | "hi";
   collection: TubingConfigurations;
   onChange: (change: (current: TubingConfigurations) => TubingConfigurations) => void;
   open: boolean;
@@ -26,8 +27,8 @@ type Props = {
   onAdd: (variant: ProductConfiguratorVariant) => void;
 };
 
-export default function TubingConfigurationWorkspace({ config: sourceConfig, material, locale, collection, onChange, open, onOpen, onClose, isAdded, onAdd }: Props) {
-  const copy = getTubingConfigurationCopy(locale);
+export default function TubingConfigurationWorkspace({ config: sourceConfig, material, locale, uiLocale = locale, collection, onChange, open, onOpen, onClose, isAdded, onAdd }: Props) {
+  const copy = getTubingConfigurationCopy(uiLocale);
   const selectionHelp = material === "PVC" ? copy.pvcEmpty : copy.empty;
   const text = (template: string, values: Record<string, string | number> = {}) => formatTubingConfigurationCopy(template, values);
   const rootRef = useRef<HTMLElement>(null);
@@ -43,12 +44,12 @@ export default function TubingConfigurationWorkspace({ config: sourceConfig, mat
   const editingIndex = collection.configurations.findIndex(item => item.id === editingId);
   const editing = collection.configurations[editingIndex];
   const config = useMemo(() => {
-    const localized = localizeProductConfiguratorConfig(sourceConfig, locale);
+    const localized = localizeProductConfiguratorConfig(sourceConfig, uiLocale);
     return { ...localized, localizedLocale: locale,
       title: formatTubingConfigurationCopy(editing ? copy.editTitle : copy.createTitle, { number: editing ? editingIndex + 1 : collection.configurations.length + 1 }),
       uiText: { ...localized.uiText, confirmAndReturn: copy.save, selectionHint: selectionHelp },
     };
-  }, [sourceConfig, locale, copy, selectionHelp, editing, editingIndex, collection.configurations.length]);
+  }, [sourceConfig, locale, uiLocale, copy, selectionHelp, editing, editingIndex, collection.configurations.length]);
 
   useEffect(() => {
     if (!expandedId) return;
@@ -62,8 +63,8 @@ export default function TubingConfigurationWorkspace({ config: sourceConfig, mat
   }, [expandedId]);
 
   const rows = variant ? [
-    ...config.dimensions.map(dimension => [dimension.label, localizeProductConfiguratorValue(formatConfiguratorValue(variant.attributes[dimension.key], dimension.unit, dimension.precision), locale)]),
-    ...(config.resultSummaryRows ?? []).map(row => [row.label, localizeProductConfiguratorValue(formatConfiguratorValue(variant.result?.[row.key], row.unit, row.precision), locale)]),
+    ...config.dimensions.map(dimension => [dimension.label, localizeProductConfiguratorValue(formatConfiguratorValue(variant.attributes[dimension.key], dimension.unit, dimension.precision), uiLocale)]),
+    ...(config.resultSummaryRows ?? []).map(row => [row.label, localizeProductConfiguratorValue(formatConfiguratorValue(variant.result?.[row.key], row.unit, row.precision), uiLocale)]),
   ] : [];
 
   function collapse() { setPinnedId(null); setPreviewId(null); setDeleteId(null); }
@@ -80,7 +81,7 @@ export default function TubingConfigurationWorkspace({ config: sourceConfig, mat
     }}>
     <div className={shared.workspaceHeading}><div>
       <h3 className={styles.title}>{text(copy.title, { material })}</h3>
-      <p>{collection.configurations.length ? getSavedConfigurationText(locale, collection.configurations.length) : selectionHelp}</p>
+      <p>{collection.configurations.length ? getSavedConfigurationText(uiLocale, collection.configurations.length) : selectionHelp}</p>
     </div></div>
     <div className={layout.buttons} role="group" aria-label={copy.group}>
       {collection.configurations.map((item, index) => <ConfiguratorButton key={item.id}
@@ -109,7 +110,7 @@ export default function TubingConfigurationWorkspace({ config: sourceConfig, mat
         </div> : null}
       </article> : null}
     </div>
-    <ProductVariantConfigurator locale={locale} config={config} open={open}
+    <ProductVariantConfigurator locale={locale} uiLocale={uiLocale} config={config} open={open}
       value={sourceConfig.variants.find(item => item.id === editing?.variantId) ?? null}
       onClose={onClose}
       onConfirm={selected => {

@@ -1,0 +1,225 @@
+{
+  "seriesTitle": "Miniatur-Membranmagnetventile zum Absperren von Flüssigkeiten und Umschalten von Fließwegen",
+  "seriesDescription": "Die Miniatur-Membranmagnetventile der Reihe FOREACH SV10 steuern Reagenzien- und Spülleitungen in Analysegeräten und automatisierten Liquid-Handling-Systemen. Wählen Sie für die Absperrung ein Ventil mit 2 Wegen in stromlos geschlossener oder offener Ausführung. Mit einem Ventil mit 3 Wegen schalten Sie eine gemeinsame Leitung zwischen zwei Fließwegen um.",
+  "seriesIntegration": "Wählen Sie Blockmontage für die direkte Integration auf einem Fluidikblock, Schlauchtüllen für flexible Schläuche oder Gewindeanschlüsse mit M6 oder 1/4-28 UNF für Fittings. Prüfen Sie Montagefläche, Schlauchführung und Wartungszugang anhand des Gerätelayouts.",
+  "seriesCompare": "Wählen Sie zunächst zwischen Absperrung mit 2 Wegen und Umschaltung mit 3 Wegen. Bei Ventilen mit 2 Wegen legen Sie stromlos geschlossene oder offene Ausführung fest. Stimmen Sie dann Anschlüsse, medienberührte Werkstoffe und Spannung auf das Gerät ab.",
+  "seriesSeo": "FOREACH SV10 Miniatur-Membranmagnetventile für Reagenzien- und Spülleitungen. Vergleichen Sie Ausführungen mit 2 und 3 Wegen sowie Blockmontage, Schlauchtüllen und Gewindeanschlüsse.",
+  "valves": "Ventile",
+  "seriesLabel": "SV10-Magnetventile",
+  "productType": "Miniatur-Membranmagnetventile",
+  "detailIntro": {
+    "nc": "Das stromlos geschlossene SV10 mit 2 Wegen steuert Reagenzien- oder Spülleitungen, die bei abgeschalteter Versorgung geschlossen sein müssen. Es öffnet bei Bestromung und steuert die Zuführung zusammen mit Pumpe und Geräteprogramm. Das Ventil öffnet oder schließt den Fließweg. Eine Pumpe oder ein Druckunterschied bewegt die Flüssigkeit.",
+    "no": "Das stromlos offene SV10 mit 2 Wegen hält eine Reagenzien- oder Spülleitung bei abgeschalteter Versorgung offen. Bei Bestromung schließt das Ventil, sodass das Gerät die Zuführung bei Bedarf unterbrechen kann. Das Ventil öffnet oder schließt den Fließweg. Eine Pumpe oder ein Druckunterschied bewegt die Flüssigkeit.",
+    "three": "Das SV10 mit 3 Wegen schaltet einen gemeinsamen Anschluss zwischen zwei anderen Anschlüssen um. So kann eine gemeinsame Leitung Reagenz oder Spülflüssigkeit führen. Stimmen Sie die Umschaltung auf Pumpe und Geräteprogramm für Zufuhr und Spülung ab. Prüfen Sie die Verbindungen im bestromten und stromlosen Zustand anhand des Fließschemas.",
+    "two": "Das SV10 mit 2 Wegen öffnet oder schließt eine Reagenzien- oder Spülleitung. Wählen Sie die stromlos geschlossene Ausführung, wenn die Leitung ohne Versorgung geschlossen sein muss, und die stromlos offene Ausführung, wenn sie offen bleiben muss. Bei Bestromung wechselt der Zustand. Stimmen Sie das Ventil zur Steuerung der Zufuhr auf Pumpe und Geräteprogramm ab."
+  },
+  "configurationIntroductions": {
+    "3-way-base": [
+      "Das SV10-P-3 ist ein Miniatur-Membranmagnetventil mit 2 Schaltstellungen, 3 Wegen und einer Wippenmembran. Die kompakte Innengeometrie mit geringem Totvolumen reduziert die zurückbleibende Flüssigkeit. Durch Umschalten des gemeinsamen Anschlusses zwischen den beiden anderen Anschlüssen steuert das Ventil den Fließweg für Reagenzienzufuhr und Spülflüssigkeit in automatisierten Probenahmesystemen, medizinischen Analysegeräten und Laborgeräten zur Flüssigkeitshandhabung präzise.",
+      "Durch die Bauweise für Blockmontage mit PEEK-Grundplatte lassen sich mehrere Ventile auf einem gemeinsamen Fluidikblock integrieren. So können Reagenzienzweige und Spülkanäle zusammengeführt werden. Membranen aus EPDM, FKM oder FFKM und passende O-Ringe lassen sich auf Reagenzien und Spülflüssigkeiten abstimmen. Wenn Zufuhr und Spülung dieselbe Leitung nutzen, bestimmen Sie das Rückhaltevolumen des Systems und das erforderliche Spülvolumen anhand der tatsächlichen Innenvolumina von Ventil und Schläuchen."
+    ],
+    "3-way-barbed": [
+      "Das SV10-B16-3 ist ein Mikro-Membranmagnetventil zur Flüssigkeitsumschaltung mit 3 Wegen. Seine kompakte Wippenbauweise und das geringe Totvolumen reduzieren zurückbleibende Flüssigkeit und ermöglichen eine präzise Fließwegsteuerung. Zwei Anschlüsse führen zu getrennten Flüssigkeitsquellen. Der gemeinsame Anschluss dient der gemeinsam genutzten Leitung. In Verbindung mit einer Pumpe stimmt dieses Ventil mit Schlauchanschlüssen die Reagenzienzufuhr und Spülung in medizinischen Analysegeräten und Laborgeräten ab.",
+      "Die Schlauchtüllen sind für flexible Schläuche mit 1.5–2.0 mm Innendurchmesser vorgesehen. Damit lassen sich Pumpen, Vorratsbehälter und Detektionsmodule an unterschiedlichen Positionen im Gerät verbinden. Berücksichtigen Sie bei Flüssigkeitswechseln und Spülung das Rückhaltevolumen der gemeinsamen Leitung. Membranen aus EPDM, FKM oder FFKM und passende O-Ringe stehen zur Verfügung. Prüfen Sie Schlauchmaße, Härte und Verträglichkeit mit den eingesetzten Flüssigkeiten."
+    ],
+    "3-way-threaded": [
+      "Das Miniatur-Membranmagnetventil SV10-M6/U28-3 mit 3 Wegen kombiniert eine Wippenmembran mit Gewindeanschlüssen. Die kompakte Innengeometrie und das geringe Totvolumen reduzieren zurückbleibende Flüssigkeit und unterstützen eine präzise Fließwegumschaltung. Durch abwechselnde Verbindung des gemeinsamen Anschlusses mit den beiden anderen Anschlüssen kann eine Zuleitung Reagenz oder Spülflüssigkeit führen. So lassen sich Dosieren, Spülen und Fließwegsteuerung in Analysegeräten programmieren.",
+      "Über M6 oder 1/4-28 UNF lässt sich die Geräteleitung mit passenden Fittings anschließen. Berücksichtigen Sie bei der Bewertung der Restflüssigkeit nach einem Wechsel die Innenvolumina von Ventil, Fittings und angeschlossenen Leitungen. Membranen aus EPDM, FKM oder FFKM und passende O-Ringe stehen zur Verfügung. Wählen Sie den Werkstoff des Gewindeventilsitzes passend zur Flüssigkeit und prüfen Sie Gewindespezifikation und Dichtungsart."
+    ],
+    "2-way-nc-base": [
+      "Das SV10-P-2NC ist ein Mikro-Membranmagnetventil für Blockmontage mit 2 Schaltstellungen und 2 Wegen. Es ist stromlos geschlossen. Die kompakte Wippenbauweise und das geringe Totvolumen reduzieren Restflüssigkeit und ermöglichen ein präzises Öffnen und Schließen. Das Ventil öffnet bei Bestromung und schließt stromlos. Es eignet sich für Reagenzien-, Probenahme- und Spülzweige, die das Geräteprogramm zeitweise öffnet. Mit einer Pumpe versorgt es ausgewählte Kanäle in automatisierten Analysegeräten und Fluidikmodulen mit mehreren Reagenzien.",
+      "Mit Blockmontage und PEEK-Grundplatte lassen sich mehrere Ventile mit 2 Wegen auf einem Fluidikblock anordnen. Jedes Ventil kann einen eigenen Reagenzienzweig bedienen. Legen Sie die internen Kanäle entsprechend aus und prüfen Sie Befestigungsbohrungen und Dichtungspositionen anhand der Maßzeichnung. Membranen aus EPDM, FKM oder FFKM und passende O-Ringe können je Zweig auf die verwendeten Reagenzien und Spülflüssigkeiten abgestimmt werden."
+    ],
+    "2-way-nc-barbed": [
+      "Das Miniatur-Membranmagnetventil SV10-B16-2NC mit 2 Wegen ist stromlos geschlossen und verbindet eine Wippenmembran mit Schlauchtüllen. Die kompakte Innengeometrie und das geringe Totvolumen reduzieren Restflüssigkeit und unterstützen eine präzise Absperrung. Das Ventil öffnet bei Bestromung und schließt stromlos. Dadurch steuert das Geräteprogramm, wann Reagenzien-, Spül- und Probenahmeleitungen geöffnet werden. Mit 29 g eignet es sich für einzelne Ventilpositionen im Gerät.",
+      "Verwenden Sie flexible Schläuche mit 1.5–2.0 mm Innendurchmesser, 55–65 Shore A Härte und einem Außendurchmesser unter 4.5 mm. Lassen Sie Platz zum Aufstecken, Biegen und Austauschen der Schläuche. Membranen aus EPDM, FKM oder FFKM und passende O-Ringe stehen zur Verfügung. Wählen Sie Schlauch und Ventildichtungen so aus, dass sie mit den Flüssigkeiten im Normalbetrieb und bei der Reinigung verträglich sind."
+    ],
+    "2-way-nc-threaded": [
+      "Das SV10-M6/U28-2NC ist ein Mikro-Membranmagnetventil mit Gewindeanschlüssen zum Öffnen und Schließen eines Flüssigkeitswegs mit 2 Anschlüssen. Die kompakte Wippenbauweise und das geringe Totvolumen reduzieren Restflüssigkeit und ermöglichen eine präzise Steuerung der Verbindung. Es schließt stromlos und öffnet bei Bestromung. Zusammen mit Pumpe und Geräteprogramm steuert es Reagenzienzufuhr, Probenahme und Spülung in Analysegeräten mit Gewindefittings.",
+      "Über M6 oder 1/4-28 UNF lässt sich das Ventil an eine vorhandene Leitungsanordnung anpassen. Wählen Sie Membranen aus EPDM, FKM oder FFKM und passende O-Ringe anhand von Reagenzzusammensetzung, Konzentration und Betriebstemperatur. Prüfen Sie beim Einbau Ventilsitzwerkstoff, Dichtungsgeometrie der Fittings und Schlauchmaße gemeinsam, damit medienberührte Werkstoffe und Dichtungen im gesamten Zweig zusammenpassen."
+    ],
+    "2-way-no-base": [
+      "Das SV10-P-2NO ist ein stromlos offenes Miniatur-Magnetventil mit 2 Wegen und Wippenmembran. Die Grundplatte lässt sich direkt auf dem Fluidikblock des Geräts montieren. Das Ventil öffnet oder sperrt Reagenzienleitungen in In-vitro-Diagnostikgeräten (IVD) oder Spülleitungen in Analysegeräten. Einlass und Auslass bleiben stromlos verbunden. Bei Bestromung sperrt das Ventil die Leitung für die vorgesehenen Schritte. Das geringe Totvolumen reduziert die Restflüssigkeit im Ventil nach einem Medienwechsel oder Spülvorgang.",
+      "Prüfen Sie vor der Montage anhand der Maßzeichnung die Lage der Flüssigkeitsanschlüsse, Befestigungsbohrungen und O-Ring-Dichtungen am Gegenblock. Berücksichtigen Sie das Volumen von Ventilkammer und Kanälen im Fluidikblock bei der Berechnung der Flüssigkeitsmenge für Wechsel oder Spülung. Membranen aus EPDM, FKM oder FFKM stehen zur Verfügung. Wählen Sie Membran und O-Ringe anhand der medienberührten Flüssigkeiten, Arbeitskonzentrationen und Betriebstemperaturen aus."
+    ],
+    "2-way-no-barbed": [
+      "Das SV10-B16-2NO ist ein stromlos offenes Miniatur-Membranmagnetventil mit 2 Wegen und Schlauchtüllen für flexible Schläuche. Für die Einbauanforderungen im Gerät sind OEM-spezifische Anpassungen möglich. Das Ventil mit Wippenmembran kommt häufig in Reagenzienleitungen von In-vitro-Diagnostikgeräten (IVD) zum Einsatz. Es kann auch Spülleitungen in Probenaufbereitungsmodulen für Analysegeräte und in automatisierten Liquid-Handling-Systemen steuern. Das Ventil bleibt stromlos offen und schließt bei Bestromung. Dadurch eignet es sich für Leitungen, die im Normalzustand offen sind und nur für bestimmte Schritte kurzzeitig geschlossen werden. Das geringe Totvolumen reduziert die Restflüssigkeit im Ventil nach einem Medienwechsel oder Spülvorgang.",
+      "Empfohlen werden flexible Schläuche mit 1.5–2.0 mm Innendurchmesser. Führen Sie den Schlauch in einem weiten Bogen vom Anschluss weg und lassen Sie genügend Platz zum Abziehen und Austauschen. Eine kundenspezifische Halterung kann an Ventilausrichtung und Befestigungsbohrungen des Geräts angepasst werden. Membranen aus EPDM, FKM oder FFKM stehen zur Verfügung. Wählen Sie Membran und passende O-Ringe anhand der verwendeten Reagenzien und Spülflüssigkeiten sowie ihrer Arbeitskonzentrationen und Betriebstemperaturen."
+    ],
+    "2-way-no-threaded": [
+      "Das stromlos offene Miniatur-Membranmagnetventil SV10-M6/U28-2NO mit 2 Wegen verbindet eine Wippenmembran mit Gewindeanschlüssen. Die kompakte Innengeometrie und das geringe Totvolumen reduzieren Restflüssigkeit und unterstützen eine präzise Absperrung. Bei Bestromung schließt das Ventil den gewählten Zweig. Wird die Versorgung abgeschaltet, öffnet es wieder. Das eignet sich für Probenahme, Reagenzienzufuhr und Leitungsspülung, wenn die Flüssigkeitszufuhr zeitweise unterbrochen werden muss.",
+      "Wählen Sie M6 oder 1/4-28 UNF passend zu den Fittings des Geräts. Berücksichtigen Sie die Innenvolumina von Ventil, Fittings und Schläuchen bei der Bewertung von Medienwechsel und Spülbedarf. Membranen aus EPDM, FKM oder FFKM und passende O-Ringe stehen zur Verfügung. Prüfen Sie die medienberührten Werkstoffe zusammen mit dem ausgewählten Ventilsitzwerkstoff, damit Anschluss und Dichtung für jede Reagenzienleitung geeignet sind."
+    ]
+  },
+  "detailMaterials": {
+    "base": "Wählen Sie Membranen aus EPDM, FKM oder FFKM und passende O-Ringe nach Prüfung der Verträglichkeit mit Zusammensetzung, Konzentration, Temperatur und Kontaktzeit von Reagenzien und Spülflüssigkeiten.",
+    "barbed": "Diese Ausführung hat eine PEEK-Grundplatte. Für Membran und passende O-Ringe stehen EPDM, FKM oder FFKM zur Auswahl. Prüfen Sie die Werkstoffe anhand von Zusammensetzung, Konzentration, Temperatur und Kontaktzeit der Reagenzien und Spülflüssigkeiten.",
+    "threaded": "Membranen aus EPDM, FKM oder FFKM und passende O-Ringe lassen sich mit den verfügbaren Ventilsitzwerkstoffen kombinieren. Prüfen Sie alle medienberührten Teile mit den tatsächlichen Reagenzien und Spülflüssigkeiten. Lassen Sie eine Ausführung mit Ventilsitz oder Grundplatte aus PFA gesondert bestätigen."
+  },
+  "models": {
+    "base": {
+      "descriptor": "Miniatur-Magnetventil für Blockmontage",
+      "heading": "Miniatur-Magnetventil für die Montage auf einem Fluidikblock",
+      "definition": "Das FOREACH SV10-P ist ein Miniatur-Membranmagnetventil zur direkten Montage auf einem Fluidikblock. Es gehört zur Reihe SV10 und ist als stromlos geschlossenes Ventil mit 2 Wegen, als stromlos offenes Ventil mit 2 Wegen und als Ventil mit 3 Wegen erhältlich. Einsatzbereiche sind Reagenzienzufuhr und Spülflüssigkeitsumschaltung in automatisierten Geräten.",
+      "installation": "Die PEEK-Grundplatte dichtet gegen den Gegenblock ab. Stimmen Sie Anschlussanordnung, Positionierbohrungen und Dichtungen auf die gewählte Ausführung mit 2 oder 3 Wegen ab, bevor Sie die Montagefläche auslegen.",
+      "connection": "Montagefläche für Fluidikblock",
+      "seo": "SV10-P Miniatur-Magnetventil für Blockmontage. Wählen Sie 2 Wege mit NC/NO oder 3 Wege und passende Membranwerkstoffe für Reagenzien- und Spülpfade."
+    },
+    "threaded": {
+      "descriptor": "Miniatur-Magnetventile mit Gewindeanschlüssen",
+      "heading": "Miniatur-Magnetventil mit M6 oder 1/4-28 UNF als Anschlussgewinde",
+      "definition": "FOREACH SV10-M6 und SV10-U28 sind Miniatur-Membranmagnetventile mit Gewindeanschlüssen für Leitungsfittings. Diese Ventile der Reihe SV10 sind als stromlos geschlossene Ausführung mit 2 Wegen, als stromlos offene Ausführung mit 2 Wegen oder als Ausführung mit 3 Wegen erhältlich. Damit lassen sich Reagenzienleitungen öffnen oder Reagenz- und Spülwege umschalten.",
+      "installation": "Wählen Sie M6 oder 1/4-28 UNF entsprechend dem Ventil. Die empfohlene Gewindeeinschraubtiefe beträgt 5 mm, das Anzugsdrehmoment 0.25–0.3 N·m. Verwenden Sie für die Dichtung am Anschlussboden eine geeignete Dichtscheibe.",
+      "connection": "M6 / 1/4-28 UNF",
+      "seo": "SV10-M6 und SV10-U28 Miniatur-Magnetventile mit M6 oder 1/4-28 UNF. Vergleichen Sie Ausführungen mit 2 Wegen (NC/NO) und 3 Wegen für Reagenzien- und Spülanschlüsse."
+    },
+    "barbed": {
+      "descriptor": "Miniatur-Magnetventil mit Schlauchtüllen",
+      "heading": "Miniatur-Magnetventil mit Schlauchtüllen für flexible Schläuche",
+      "definition": "Das FOREACH SV10-B16 ist ein Miniatur-Membranmagnetventil mit Schlauchtüllen für flexible Schläuche. Es gehört zur Reihe SV10 und ist mit 2 Wegen in stromlos geschlossener Ausführung, mit 2 Wegen in stromlos offener Ausführung oder mit 3 Wegen erhältlich. Es dient zum Absperren der Reagenzienzufuhr und zum Umschalten auf Spülflüssigkeit.",
+      "installation": "Verwenden Sie flexible Schläuche mit 1.5–2.0 mm Innendurchmesser, einer Härte von 55–65 Shore A und einem Außendurchmesser unter 4.5 mm. Für die Integration in das Gerät ist eine kundenspezifische Montagehalterung verfügbar.",
+      "connection": "Schlauchtülle, Schlauchinnendurchmesser 1.5–2.0 mm",
+      "seo": "SV10-B16 Miniatur-Magnetventil mit Schlauchtüllen für 1.5–2.0 mm Schlauchinnendurchmesser. Wählen Sie 2 Wege mit NC/NO oder 3 Wege."
+    }
+  },
+  "functionIntro": "Die Wippenmembran öffnet oder schließt beim Magnetventil mit 2 Wegen eine Verbindung. Beim Magnetventil mit 3 Wegen schaltet sie den gemeinsamen Anschluss zwischen den beiden anderen Anschlüssen um. Wählen Sie bei 2 Wegen die stromlos geschlossene oder offene Ausführung anhand des erforderlichen Zustands ohne Versorgung. Eine Pumpe oder ein Druckunterschied bewegt die Flüssigkeit. Das Ventil steuert den Fließweg.",
+  "materialIntro": "Wählen Sie Membranen aus EPDM, FKM oder FFKM und passende O-Ringe für die tatsächlich eingesetzten Reagenzien und Reinigungsflüssigkeiten. Ausführungen für Blockmontage und mit Schlauchtüllen verwenden eine PEEK-Grundplatte. Gewindeausführungen bieten weitere Ventilsitzwerkstoffe. Bestätigen Sie Ausführungen mit Ventilsitz oder Grundplatte aus PFA separat.",
+  "labels": [
+    "Ausführungsfamilie (kein vollständiger Bestellcode)",
+    "Ventilbauart",
+    "Anschlüsse und Funktion",
+    "Anschlussart",
+    "Betriebsdruck",
+    "Durchgangsdurchmesser",
+    "Kammervolumen",
+    "Durchflusskoeffizient Cv",
+    "Werkstoffe für Membran und O-Ring",
+    "Grundplatte",
+    "Ventilsitzwerkstoffe bei Gewindeausführung",
+    "Nennspannung",
+    "Standardleistung",
+    "Energiesparschaltung",
+    "Ansprechzeit in Standardausführung",
+    "Ansprechzeit mit Energiesparschaltung",
+    "Umgebungstemperatur",
+    "Medientemperatur",
+    "Spulenisolierung",
+    "Gewicht",
+    "Prüfbedingungen für die Ansprechzeit"
+  ],
+  "structure": "Ventil mit Wippenmembran",
+  "functions": "2 Wege NC / 2 Wege NO / 3 Wege universell",
+  "baseMaterial": "PEEK, bei Gewindeausführungen je nach Konfiguration PFA",
+  "seatMaterial": "PVDF / PTFE / PMMA / POM / PEEK, je nach Konfiguration PFA",
+  "saving": "Anziehen: 2.5 W, Halten: ≤1 W",
+  "standardResponse": "≤15 ms, ohne Last",
+  "savingResponse": "≤25 ms, ohne Last",
+  "fluidTemperature": "0–50 °C, nicht gefrierend",
+  "testConditions": "25 °C, Nennspannung, maximaler Betriebsdruck mit Luft am gemeinsamen Anschluss. Die Ansprechzeit hängt von Flüssigkeit, Druck, Leitungen und Temperatur ab.",
+  "applications": "Anwendungen",
+  "typicalApplications": "Typische Anwendungen",
+  "applicationsIntro": "Verwenden Sie ein Magnetventil mit 2 Wegen zum Öffnen oder Schließen einer Reagenzienleitung. Ein Magnetventil mit 3 Wegen schaltet eine gemeinsame Leitung zwischen zwei Flüssigkeitsanschlüssen um. Wählen Sie für SV10 die passende Anschlussart für Fluidikblock, Fittings oder flexible Schläuche.",
+  "applicationItems": [
+    {
+      "title": "Magnetventile mit 2 Wegen zum Absperren von Reagenzienleitungen",
+      "paragraphs": [
+        "In einem automatisierten Analysegerät kann ein Ventil mit 2 Wegen die Reagenzienleitung für einen Dosierschritt öffnen und anschließend schließen. Wählen Sie NC, wenn die Verbindung stromlos geschlossen sein muss, oder NO, wenn sie offen bleiben muss.",
+        "Stimmen Sie das Ventil auf Pumpe und Geräteprogramm ab. Das Ventil steuert die Verbindung. Pumpe und Betriebsablauf bestimmen das abgegebene Volumen."
+      ]
+    },
+    {
+      "title": "Magnetventile mit 3 Wegen zum Umschalten zwischen Reagenz und Spülflüssigkeit",
+      "paragraphs": [
+        "Ein Ventil mit 3 Wegen kann eine gemeinsame Leitung abwechselnd mit Reagenz und Spülflüssigkeit verbinden. Schalten Sie nach dem Reagenzienschritt auf den Spülanschluss und spülen Sie die gemeinsam genutzte Leitung mit der Pumpe.",
+        "Legen Sie Spülmenge und Wiederholungen anhand der Flüssigkeiten, Leitungslänge und zulässigen Restmenge fest. Prüfen Sie das Ergebnis im tatsächlichen Spülzyklus."
+      ]
+    },
+    {
+      "title": "Geräteintegration: Blockmontage oder Leitungsanschlüsse",
+      "paragraphs": [
+        "Verwenden Sie die Ausführung für Blockmontage, wenn mehrere Ventile auf einem Fluidikblock zusammengefasst werden. Wählen Sie Gewindeanschlüsse für Leitungsfittings oder Schlauchtüllen für flexible Schläuche.",
+        "Planen Sie Zugang für Montage, Schlauchwechsel und Verdrahtung ein. Die drei Anschlussarten passen zu unterschiedlichen Geräteanordnungen und sind jeweils mit 2 oder 3 Wegen verfügbar."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Wie unterscheiden sich Magnetventile mit 2 und 3 Wegen?",
+      "answer": "Ein Magnetventil mit 2 Wegen öffnet oder schließt eine Verbindung. Ein Magnetventil mit 3 Wegen schaltet einen gemeinsamen Anschluss zwischen zwei anderen Anschlüssen um, etwa für Reagenz und Spülflüssigkeit. Die Reihe SV10 bietet beide Funktionen mit Blockmontage, Gewindeanschlüssen und Schlauchtüllen."
+    },
+    {
+      "question": "Soll ich ein stromlos geschlossenes oder offenes Magnetventil wählen?",
+      "answer": "Wählen Sie das Ventil anhand des erforderlichen Zustands bei abgeschalteter Versorgung. Ein stromlos geschlossenes Magnetventil schließt ohne Versorgung und öffnet bei Bestromung. Ein stromlos offenes Ventil arbeitet umgekehrt. Für die Ventile der Reihe SV10 mit 2 Wegen stehen NC und NO zur Auswahl."
+    },
+    {
+      "question": "Wie wähle ich die Werkstoffe für Membran und Ventilsitz?",
+      "answer": "Geben Sie Zusammensetzung, Konzentration, Temperatur und Kontaktzeit von Reagenzien und Reinigungsflüssigkeiten an. Prüfen Sie alle medienberührten Teile gemeinsam, einschließlich Membran, O-Ringen, Grundplatte und Ventilsitz bei Gewindeausführungen. Prüfen Sie den Werkstoff mit den tatsächlich eingesetzten Flüssigkeiten."
+    },
+    {
+      "question": "Welche Energiesparoptionen sind verfügbar?",
+      "answer": "Die Standardleistung beträgt 2.5 W. Die optionale Energiesparschaltung benötigt 2.5 W beim Anziehen und höchstens 1 W beim Halten. Achten Sie auf die Polarität: Rot ist Plus, Schwarz ist Minus."
+    },
+    {
+      "question": "Wie schnell spricht das Ventil an?",
+      "answer": "Die Ansprechzeit beträgt in der Standardausführung ≤15 ms und mit Energiesparschaltung ≤25 ms. Die Prüfung erfolgt ohne Last bei 25 °C, Nennspannung und maximalem Betriebsdruck mit Luft am gemeinsamen Anschluss. Die tatsächliche Ansprechzeit hängt vom Fließweg und Medium ab. FFKM-Membranen reagieren bei 15 °C oder darunter langsamer."
+    },
+    {
+      "question": "Welche Angaben werden für eine Konfigurationsanfrage benötigt?",
+      "answer": "Senden Sie das Fließschema, benötigte 2 oder 3 Wege, stromlosen Zustand, Anschlussart, Reagenzien und Reinigungsflüssigkeiten, Druck, Temperatur und Versorgungsspannung. Geben Sie Einbauraum und Zykluszeiten an, damit wir Anschluss, Werkstoffe und Energiesparoption abstimmen können."
+    }
+  ],
+  "needsTitle": "Beschreiben Sie Ihre Anwendung",
+  "needsText": "Geben Sie an, welche Flüssigkeit in jedem Schritt fließen soll und welchen Zustand das Ventil ohne Versorgung einnehmen muss. Senden Sie die Anschlusszeichnung und Angaben zu Flüssigkeiten, Druck, Temperatur, Versorgungsspannung und Einbauraum.",
+  "compareTitle": "Magnetventile mit 2 und 3 Wegen vergleichen",
+  "allModels": "Alle SV10-Magnetventile",
+  "ctaTitle": "SV10-Magnetventil konfigurieren",
+  "ctaText": "Stimmen Sie Ventilfunktion, Anschlussart, medienberührte Werkstoffe und Spannung auf Ihr Gerät ab.",
+  "ctaButton": "Anforderungen besprechen",
+  "flowTypes": {
+    "two": {
+      "cardName": "SV10-2",
+      "heading": "Miniatur-Magnetventile mit 2 Wegen",
+      "functionValue": "2 Wege stromlos geschlossen / 2 Wege stromlos offen",
+      "definition": "Die Miniatur-Magnetventile der Reihe FOREACH SV10 mit 2 Wegen verwenden eine Wippenmembran zum Öffnen und Schließen von Reagenzien- und Spülleitungen in automatisierten Geräten. Wählen Sie die stromlos geschlossene oder offene Ausführung anhand des erforderlichen Zustands ohne Versorgung.",
+      "operation": "Ein stromlos geschlossenes Ventil schließt ohne Versorgung und öffnet bei Bestromung. Ein stromlos offenes Ventil arbeitet umgekehrt. Stimmen Sie das Ventil auf Pumpe und Steuerprogramm ab. Das Ventil steuert die Verbindung, während eine Pumpe oder ein Druckunterschied die Flüssigkeit bewegt.",
+      "selection": "Wählen Sie SV10-P für Blockmontage, SV10-M6 oder SV10-U28 für Gewindefittings oder SV10-B16 für flexible Schläuche. Wählen Sie die medienberührten Werkstoffe für Ihre Flüssigkeiten aus.",
+      "seo": "FOREACH SV10 Miniatur-Magnetventile mit 2 Wegen zum Absperren von Reagenzien- und Spülleitungen. Stromlos geschlossen oder offen, mit Blockmontage, Gewindeanschlüssen oder Schlauchtüllen.",
+      "applicationTitle": "Stromloser Zustand: geschlossen oder offen",
+      "applicationText": "Verwenden Sie eine stromlos geschlossene Ausführung, wenn die Leitung ohne Versorgung schließen muss, und eine stromlos offene Ausführung, wenn sie offen bleiben muss. Berücksichtigen Sie den Zustand beim Abschalten und Wiederanlaufen des Geräts.",
+      "faqQuestion": "Wie steuert ein Magnetventil mit 2 Wegen den Durchfluss?"
+    },
+    "three": {
+      "cardName": "SV10-3",
+      "heading": "Miniatur-Magnetventile mit 3 Wegen",
+      "functionValue": "3 Wege, universell",
+      "definition": "Die Miniatur-Magnetventile der Reihe FOREACH SV10 mit 3 Wegen verwenden eine Wippenmembran zum Umschalten eines gemeinsamen Anschlusses zwischen zwei anderen Anschlüssen. In automatisierten Geräten wählen sie Reagenzien- oder Spülanschlüsse aus.",
+      "operation": "Verbinden Sie den gemeinsamen Anschluss mit der gemeinsamen Leitung und die anderen Anschlüsse mit den beiden anwählbaren Fließwegen. Stimmen Sie die Umschaltung auf Pumpe und Geräteprogramm ab. Die drei Anschlüsse dienen zur Auswahl eines Fließwegs. Gleichzeitige Förderung über alle Anschlüsse oder proportionales Mischen sind separate Aufgaben.",
+      "selection": "Wählen Sie SV10-P für Blockmontage, SV10-M6 oder SV10-U28 für Gewindefittings oder SV10-B16 für flexible Schläuche. Bestätigen Sie den gemeinsamen Anschluss und die Verbindungen im bestromten und stromlosen Zustand. Wählen Sie dann die medienberührten Werkstoffe aus.",
+      "seo": "FOREACH SV10 Miniatur-Magnetventile mit 3 Wegen zum Umschalten zwischen Reagenzien und Spülflüssigkeiten. Vergleichen Sie Blockmontage, Gewindeanschlüsse, Schlauchtüllen und medienberührte Werkstoffe.",
+      "applicationTitle": "Anschlüsse planen und gemeinsamen Anschluss ermitteln",
+      "applicationText": "Ermitteln Sie die gemeinsame Leitung und die beiden anzuwählenden Fließwege. Prüfen Sie, welche Anschlüsse bei ein- und ausgeschalteter Versorgung verbunden sind. Stimmen Sie die Ventilumschaltung anschließend auf den Pumpenablauf ab.",
+      "faqQuestion": "Wie schaltet ein Magnetventil mit 3 Wegen zwischen Fließwegen um?"
+    }
+  },
+  "orderingNote": "Die angegebenen Modelle bezeichnen Ausführungsfamilien. Bestätigen Sie bei der Bestellung den Schaltzustand, die Spannung, den Membranwerkstoff und die weiteren medienberührten Werkstoffe sowie die Energiesparoption. M6 und U28 bezeichnen separate Ausführungen mit M6 und 1/4-28 UNF.",
+  "searchTerms": [
+    "Miniatur-Magnetventil",
+    "Mikro-Magnetventil",
+    "Membranmagnetventil",
+    "Magnetventil für Flüssigkeiten",
+    "2-Wege-Magnetventil",
+    "3-Wege-Magnetventil"
+  ],
+  "metaFunction": {
+    "three": "SV10 Membranmagnetventile mit 3 Wegen schalten eine gemeinsame Leitung zwischen Reagenzien- und Spülpfaden um.",
+    "nc": "SV10 Membranmagnetventile mit 2 Wegen steuern Reagenzien- und Spülleitungen.",
+    "no": "Stromlos offene SV10 Membranmagnetventile mit 2 Wegen halten die Leitung ohne Versorgung offen und schließen bei Bestromung.",
+    "two": "SV10 Membranmagnetventile mit 2 Wegen für Flüssigkeiten sind in stromlos geschlossenen und offenen Ausführungen verfügbar."
+  },
+  "metaConnection": {
+    "base": "Montieren Sie die PEEK-Grundplatte direkt auf einem Fluidikblock.",
+    "barbed": "Schließen Sie flexible Schläuche mit 1.5–2.0 mm Innendurchmesser direkt an die Schlauchtüllen an.",
+    "threaded": "Wählen Sie M6 oder 1/4-28 UNF und die passenden medienberührten Werkstoffe."
+  },
+  "seriesMaterials": "Membranen aus EPDM, FKM oder FFKM und passende O-Ringe stehen zur Verfügung. Prüfen Sie alle medienberührten Werkstoffe unter den tatsächlichen Einsatzbedingungen mit Reagenzien und Spülflüssigkeiten. Eine optionale Energiesparschaltung benötigt 2.5 W beim Anziehen und höchstens 1 W beim Halten. Prüfen Sie die Verfügbarkeit für die gewählte Ausführung."
+}

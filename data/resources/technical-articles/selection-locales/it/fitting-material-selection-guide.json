@@ -1,0 +1,575 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Come scegliere i materiali dei raccordi: PP, PA, POM, PVDF e PEEK",
+      "seoTitle": "Scelta dei materiali dei raccordi: PP, PA, POM, PVDF e PEEK | FOREACH",
+      "seoDescription": "Confronta proprietà e temperature di riferimento dei materiali con pressioni e temperature dei raccordi Q20, Q40 e Q60. Scegli corpo, O-ring e tubo e convalida nelle condizioni effettive.",
+      "coverImage": "/images/resources/technical-articles/fitting-material-selection-guide/fitting-materials-and-connection-types-cover.webp",
+      "coverAlt": "Tipi di raccordi e componenti per tubi FOREACH"
+    },
+    "deck": "Confronta cinque materiali e le temperature di riferimento. Esamina poi gli O-ring e i valori di temperatura e pressione del raccordo completo. Queste distinzioni aiutano a scegliere raccordi, tenute e tubi e a pianificare la validazione prima della messa in servizio.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "lead": "Per scegliere il materiale di un raccordo, parti dalle proprietà del materiale.",
+        "text": "Per scegliere il materiale di un raccordo, parti dalle proprietà del materiale. Il PP ha bassa densità e resiste a molte soluzioni acquose. La PA offre resistenza meccanica, tenacità e resistenza all’usura. Il POM combina rigidezza, basso attrito e stabilità dimensionale. Il PVDF offre resistenza chimica. Il PEEK combina prestazioni ad alta temperatura, resistenza meccanica e resistenza chimica. Valuta fluido, temperatura, pressione e carichi meccanici effettivi."
+      },
+      {
+        "type": "paragraph",
+        "text": "Confronta i valori di temperatura e pressione dichiarati. I limiti superiori di riferimento dei materiali sono 110°C per PP, 120°C per PA, 100°C per POM, 150°C per PVDF e 225°C per PEEK. Per un raccordo Q20 con corpo in PP e tenuta EPDM, invece, la temperatura massima di esercizio è 71°C e la pressione di esercizio indicata è 120 psi (circa 0.83 MPa). Di seguito vengono esaminati a parte le proprietà dei materiali e i requisiti del raccordo completo."
+      },
+      {
+        "type": "paragraph",
+        "lead": "Convalida nelle condizioni di esercizio effettive prima della messa in servizio.",
+        "text": "Convalida nelle condizioni di esercizio effettive prima della messa in servizio. Tenuta e durata dipendono da tipo e concentrazione del fluido, temperatura, pressione e relative fluttuazioni, tempo di contatto, pulizia, tenute, tubi e montaggio. Questi valori orientano la selezione iniziale. Prima di montare il raccordo o usarlo in produzione, prova il modello scelto entro i limiti ammessi con il fluido, le tenute e il tubo effettivi."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Quali sono le differenze tra i materiali PP, PA, POM, PVDF e PEEK?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Confronta resistenza chimica, proprietà meccaniche, variazioni dimensionali dovute all’umidità e prestazioni in temperatura. Per resistenza chimica si intende la capacità di conservare le proprietà durante l’esposizione a sostanze chimiche. La tabella delle temperature aiuta nella selezione iniziale del materiale. Tipo e formulazione della resina, fluido, carico e durata incidono sull’idoneità. I limiti in tabella non rappresentano temperature di esercizio continuo del raccordo completo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Materiale",
+              "Intervallo di temperatura di riferimento del materiale",
+              "Proprietà e possibili applicazioni"
+            ],
+            "rows": [
+              [
+                "PP | Polipropilene",
+                "−10–110°C",
+                "Bassa densità e resistenza a molte soluzioni acquose. Candidato per linee di reagenti acquosi e risciacquo dopo conferma della compatibilità"
+              ],
+              [
+                "PA | Poliammide / nylon",
+                "−40–120°C",
+                "Resistenza meccanica, tenacità e resistenza all’usura. Candidata per connessioni sottoposte a carico, tenendo conto delle variazioni dimensionali dopo l’assorbimento di acqua"
+              ],
+              [
+                "POM | Poliossimetilene / resina acetalica",
+                "−40–100°C",
+                "Rigidezza, basso attrito e basso assorbimento d’acqua. Candidato per componenti scorrevoli o sottoposti a collegamenti ripetuti"
+              ],
+              [
+                "PVDF | Polifluoruro di vinilidene",
+                "−40–150°C",
+                "Resistenza chimica e resistenza meccanica. Candidato per linee di reagenti corrosivi e campioni chimici"
+              ],
+              [
+                "PEEK | Polietereterchetone",
+                "−180–225°C",
+                "Prestazioni ad alta temperatura e resistenza meccanica. Candidato per temperature più elevate o requisiti di carico"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Anche i limiti inferiori sono valori di riferimento del materiale. Per verificare la tenuta del raccordo a quella temperatura, prova insieme corpo, tenute e tubo nelle condizioni di servizio a freddo."
+          },
+          {
+            "type": "subheading",
+            "title": "PP: bassa densità e idoneità per molti circuiti acquosi"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il PP resiste a molte soluzioni saline, sostanze alcaline e acidi deboli. I raccordi portagomma o filetto-portagomma in PP sono candidati per reagenti acquosi, risciacquo e collegamenti tra serbatoio e tubo, previa verifica della compatibilità con il fluido effettivo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Concentrati sul tipo di fluido e sui carichi prolungati. Detergenti ossidanti, alcuni solventi organici e alte temperature richiedono una valutazione separata. La trazione sul tubo o la compressione dei filetti possono causare deformazioni che influiscono su accoppiamento e tenuta. Il funzionamento con acqua a temperatura ambiente non dimostra l’idoneità dopo il lavaggio a caldo."
+          },
+          {
+            "type": "subheading",
+            "title": "PA: resistenza meccanica, tenacità e resistenza all’usura"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per le sue proprietà meccaniche, la PA si può valutare in presenza di carichi di montaggio, trazione dei tubi o attrito ripetuto. Prevedi comunque un supporto del tubo adatto a ridurre i carichi esterni sul raccordo."
+          },
+          {
+            "type": "paragraph",
+            "text": "La PA assorbe umidità dall’aria e può assorbire acqua dai fluidi acquosi, con possibili variazioni dimensionali e meccaniche. Ciò può influire sull’accoppiamento dei filetti e sul ritegno del portagomma. PA6, PA66 e PA12 sono poliammidi distinte. La denominazione «nylon» non le rende intercambiabili."
+          },
+          {
+            "type": "paragraph",
+            "text": "Uno stesso tipo di poliammide ha diverse qualità di resina. La qualità identifica una formulazione o un prodotto del fornitore del materiale, distinta dal modello del raccordo. Conferma qualità, rinforzo o modifica e prova le variazioni dimensionali e delle proprietà dopo l’assorbimento di umidità e l’esposizione al fluido effettivo."
+          },
+          {
+            "type": "subheading",
+            "title": "POM: rigidezza, basso attrito e stabilità dimensionale"
+          },
+          {
+            "type": "paragraph",
+            "text": "Rigidezza, resistenza all’usura, basso attrito e basso assorbimento di acqua del POM aiutano a mantenere dimensioni e giochi. Valutalo per raccordi a sgancio rapido o componenti scorrevoli, controllando fluidi bagnanti e carichi effettivi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le proprietà meccaniche non sostituiscono le prove di compatibilità. Valuta con particolare attenzione acidi forti, ossidanti forti e detergenti contenenti cloro. Un movimento regolare a secco non dimostra che l’accoppiamento o la tenuta si mantengano dopo l’immersione o pulizie ripetute."
+          },
+          {
+            "type": "subheading",
+            "title": "PVDF: resistenza chimica e resistenza meccanica"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il PVDF è un fluoropolimero resistente a molti acidi, sali e altre sostanze chimiche. È un candidato per reagenti corrosivi o campioni chimici. Conferma anche la disponibilità della configurazione e della misura richieste."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il PVDF presenta limiti, in particolare con basi forti e certi solventi organici. Valuta concentrazione, temperatura e formulazione della resina. La denominazione «fluoropolimero» non garantisce la compatibilità con ogni fluido corrosivo."
+          },
+          {
+            "type": "subheading",
+            "title": "PEEK: prestazioni ad alta temperatura e resistenza meccanica"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il PEEK combina prestazioni in temperatura, resistenza meccanica e resistenza chimica. Valuta raccordi e componenti di accoppiamento in PEEK per tubi rigidi in strumenti analitici o per punti che richiedono maggiore resistenza alle alte temperature, resistenza meccanica e stabilità dimensionale."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il PEEK ha limiti. Acido solforico concentrato e ossidanti forti richiedono particolare attenzione. Le prestazioni termiche della resina non determinano la temperatura di esercizio o la pressione nominale del raccordo finito. Filettatura, spessore della parete, struttura della porta e tubo devono tutti essere adatti all’impiego."
+          },
+          {
+            "type": "paragraph",
+            "text": "Una pulizia a 121°C supera i limiti di riferimento della tabella per PP a 110°C, PA a 120°C e POM a 100°C. PVDF a 150°C e PEEK a 225°C superano invece 121°C, ma richiedono ancora conferma dei limiti di temperatura del raccordo finito, del liquido di pulizia e della durata. Superare la selezione iniziale del materiale non convalida pulizia o sterilizzazione a 121°C."
+          }
+        ]
+      },
+      {
+        "title": "Perché occorre scegliere il materiale dell’O-ring separatamente dal corpo del raccordo?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Dopo il corpo, esamina il sistema di tenuta. Alcuni raccordi usano O-ring, guarnizioni o altri elementi di tenuta. Un raccordo a sgancio rapido con O-ring chiude il gioco di accoppiamento comprimendo la tenuta. Un portagomma monoblocco fa affidamento principalmente sull’aderenza della parete del tubo alla sua superficie. L’O-ring non è necessario in tutti i raccordi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Corpo e tenuta hanno funzioni diverse e possono usare materiali diversi. Con un corpo in PP e una tenuta in EPDM, gomma etilene-propilene-diene, verificane la compatibilità con lo stesso fluido e le stesse condizioni di pulizia. Rigonfiamento, indurimento o recupero elastico insufficiente dopo la compressione possono causare perdite o rendere difficile il collegamento anche se il corpo appare integro."
+          },
+          {
+            "type": "paragraph",
+            "text": "La temperatura di esercizio dipende dalla combinazione di corpo, tenute e altri componenti. La tabella riporta valori Q20/Q40 per PP+EPDM e POM+NBR, gomma nitrilica. Sono valori del raccordo finito, distinti dagli intervalli di temperatura universali per EPDM o NBR."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Serie e combinazione di materiali",
+              "Temperatura di esercizio",
+              "Differenza rispetto al riferimento del materiale del corpo"
+            ],
+            "rows": [
+              [
+                "Q20 / Q40 | Corpo in PP + tenuta EPDM",
+                "−20–71°C",
+                "Limite superiore del raccordo finito 71°C, distinto dal limite di riferimento del PP di 110°C"
+              ],
+              [
+                "Q20 / Q40 | Corpo in POM + tenuta NBR",
+                "−40–82°C",
+                "Limite superiore del raccordo finito 82°C, distinto dal limite di riferimento del POM di 100°C"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La pulizia a 80°C supera il limite di 71°C per Q20/Q40 in PP+EPDM. POM+NBR ha un limite superiore di 82°C, ma restano da confermare composizione del detergente, variazioni di temperatura e pressione. Il passaggio a tenute in fluoroelastomero FKM richiede una nuova valutazione di temperatura e pressione ammesse per il raccordo completo. Non usare i valori del precedente abbinamento o di una tabella dei materiali elastomerici."
+          },
+          {
+            "type": "paragraph",
+            "text": "Conferma formulazione, dimensioni, durezza e montaggio della tenuta. Nei raccordi con valvola, segui il circuito per individuare le parti interne bagnate. Nei raccordi per tubi rigidi, distingui boccole, ogive e rondelle per materiale e funzione. Un componente è bagnato se tocca il fluido. Per un fermo esterno, la presenza di contatto dipende dalla struttura effettiva."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Struttura del collegamento",
+              "Che cosa controllare oltre al corpo",
+              "Conseguenze per la scelta dei materiali"
+            ],
+            "rows": [
+              [
+                "Raccordo portagomma monoblocco",
+                "Parete interna del tubo, quote e durezza",
+                "Le variazioni del tubo dovute al fluido possono incidere sulla tenuta e sulla resistenza allo sfilamento"
+              ],
+              [
+                "Raccordo filetto-portagomma",
+                "Tubo e qualsiasi guarnizione o materiale di tenuta ausiliario effettivamente usato dal modello",
+                "Controlla la tenuta effettiva sul lato filettato. Non presumere che ogni modello usi un O-ring"
+              ],
+              [
+                "Raccordo a sgancio rapido con O-ring",
+                "O-ring e, nei modelli con valvola, componenti interni bagnati della valvola",
+                "Conferma separatamente corpo, tenuta e parti interne bagnate"
+              ],
+              [
+                "Assemblaggio per tubi rigidi",
+                "Tubo e parti corrispondenti a contatto con il fluido o coinvolte nella tenuta",
+                "Conferma materiale, porta e abbinamento dei componenti. L’aspetto da solo non stabilisce la compatibilità"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Anche PTFE, ETFE e PFA si possono usare per tubi, tenute o altre parti del collegamento, secondo le condizioni di servizio. Il nastro PTFE, ad esempio, è un sigillante ausiliario per alcuni giunti filettati. Il suo uso non indica che il corpo del raccordo sia in PTFE."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/#conditions",
+                "label": "Materiali e condizioni operative dei raccordi a sgancio rapido",
+                "prefix": "Per i raccordi a sgancio rapido con valvola, vedi ",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/",
+                "label": "Struttura e abbinamento dei raccordi per tubi rigidi",
+                "prefix": "Per i tubi rigidi, vedi ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come valutare la compatibilità con reagenti e liquidi di pulizia?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Elenca ogni fluido: liquido di processo, detergente, disinfettante, liquido di risciacquo e miscele residue durante i fermi. «Acido», «base» o «alcol» non sono indicazioni sufficienti. Concentrazione, temperatura e tempo di contatto possono cambiare il risultato con la stessa sostanza."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Registra identità chimica e concentrazione. Per le miscele, indica componenti principali e proporzioni usando la formulazione effettiva o i dati di prodotto.",
+              "Indica separatamente temperature di esercizio e di pulizia, tempi di contatto, frequenza ed eventuali immersioni prolungate durante i fermi.",
+              "Usa le informazioni di compatibilità per la selezione iniziale. Conferma poi resina, componenti effettivi e assemblaggio completo. L’assenza di dati di compatibilità non equivale a un’approvazione.",
+              "Convalida campioni effettivi per miscele, variazioni di temperatura o carichi prolungati, includendo tenute e tubi."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Una linea che trasporta un liquido acquoso a temperatura ambiente e viene pulita periodicamente con un prodotto contenente cloro non si può valutare soltanto per l’acqua. Registra ingredienti attivi, concentrazione, temperatura e tempo di contatto del detergente. Controlla poi corpo, tenuta e tubo. Pulizie ripetute possono modificare queste parti e far perdere un raccordo prima a tenuta."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/material-compatibility/",
+                "label": "Consultazione della compatibilità dei materiali",
+                "prefix": "Usa lo strumento del sito ",
+                "suffix": " per la selezione iniziale, quindi prova resina, concentrazione e condizioni di esercizio effettive."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La compatibilità deve comprendere campioni, reagenti e detergenti. Queste guide applicative aiutano a individuare fluidi, procedure di pulizia e condizioni di manutenzione per analisi e monitoraggio sul campo."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/applications/analytical-instruments/",
+                "label": "Strumenti analitici",
+                "prefix": ""
+              },
+              {
+                "href": "/en/applications/environmental-monitoring/",
+                "label": "Monitoraggio ambientale",
+                "prefix": " · "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quale pressione possono sopportare i raccordi e come si confrontano gli sganci rapidi con quelli dedicati all’alta pressione?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La pressione ammessa dipende da struttura, materiali e componenti di accoppiamento. Per i raccordi Q20/Q40 in PP e POM sono indicati 120 psi (circa 0.83 MPa), per Q60 in PP sono indicati 60 psi (circa 0.41 MPa). Anche lo stesso materiale PP ha valori nominali diversi tra le serie."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Prodotto e combinazione di materiali",
+              "Parametro di pressione",
+              "Ambito di applicazione"
+            ],
+            "rows": [
+              [
+                "Q20 / Q40｜PP＋EPDM",
+                "Pressione di esercizio 120 psi ≈ 0.83 MPa (8.3 bar)",
+                "Intervallo di temperatura da −20 a 71°C. Conferma la pressione ammessa alla temperatura obiettivo"
+              ],
+              [
+                "Q20 / Q40｜POM＋NBR",
+                "Pressione di esercizio 120 psi ≈ 0.83 MPa (8.3 bar)",
+                "Intervallo di temperatura da −40 a 82°C. Conferma la pressione ammessa alla temperatura obiettivo"
+              ],
+              [
+                "Q60｜PP＋EPDM",
+                "Pressione di esercizio 60 psi ≈ 0.41 MPa",
+                "Per i raccordi Q60 elencati. Non applicare i 120 psi di Q20/Q40"
+              ],
+              [
+                "Famiglia dedicata ad alta pressione | Porta conica 10-32 UNF",
+                "Pressione massima della famiglia 34 MPa (340 bar)",
+                "Limite della famiglia dedicata, distinto da quello degli altri raccordi in PEEK o per tubi rigidi"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "I valori in MPa sono conversioni arrotondate da psi. Valuta insieme pressione e temperatura. Non presumere che la pressione massima sia ammessa alla temperatura massima. Conferma la pressione di ciascun modello alla temperatura obiettivo, poi prova con fluido, tenute e tubi effettivi, includendo transitori di avvio e arresto, pulizia e funzionamento prolungato. Per Q60 a freddo, conferma il limite inferiore di temperatura dei modelli esatti accoppiati."
+          },
+          {
+            "type": "paragraph",
+            "text": "Con un requisito di 0.60 MPa, i 60 psi di Q60 (circa 0.41 MPa) non bastano, pur con un foro più grande. I 120 psi di Q20/Q40 (circa 0.83 MPa) superano 0.60 MPa, ma l’idoneità dipende ancora da portata, temperatura, fluido e pressione di picco. Per i raccordi dedicati all’alta pressione, abbina modello, tubo e porta. 34 MPa non è un valore nominale generico del PEEK."
+          },
+          {
+            "type": "subheading",
+            "title": "La coppia di montaggio dipende anche dal materiale del raccordo per alta pressione"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per quella struttura dedicata all’alta pressione le coppie indicate sono 0.45 N·m per PEEK e 2.2 N·m per metallo. Conferma il modello esatto. Non applicare questi valori a portagomma comuni o ad altri raccordi con ogiva. Un serraggio maggiore non può aumentare la pressione nominale."
+          },
+          {
+            "type": "paragraph",
+            "text": "Con carichi prolungati, la deformazione della plastica può aumentare nel tempo per scorrimento viscoso. Temperatura e fluido incidono sul fenomeno. Per le tenute frontali, controlla la compressione residua dopo l’uso. Nei portagomma, controlla rammollimento, allentamento e spostamenti del tubo. Una verifica di montaggio soddisfacente a temperatura ambiente non sostituisce le prove dopo il funzionamento."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Condizione dell’apparecchiatura",
+              "Verifica richiesta"
+            ],
+            "rows": [
+              [
+                "Funzionamento in pressione a temperatura elevata",
+                "Pressione ammessa di raccordo e tubo alla temperatura obiettivo"
+              ],
+              [
+                "Avvii e arresti ciclici o pulizia",
+                "Perdite o allentamento dopo variazioni ripetute di temperatura e pressione e alternanza dei fluidi"
+              ],
+              [
+                "Montaggio filettato",
+                "Coppia, attrezzo e metodo di tenuta per il materiale e la struttura"
+              ],
+              [
+                "Collegamento portagomma-tubo",
+                "Quote e durezza del tubo, dilatazione durante l’inserimento e vincolo"
+              ]
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/threaded-hose-barb-fittings-selection-guide/#installation",
+                "label": "Montaggio dei raccordi filetto-portagomma e applicabilità delle coppie",
+                "prefix": "Per i giunti filettati, vedi ",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/resources/technical-articles/barbed-fitting-expansion-ratio/",
+                "label": "Dilatazione sul portagomma e validazione dell’accoppiamento del tubo",
+                "prefix": "Per i collegamenti dei tubi, consulta ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come confrontare raccordi portagomma in PP e PA della stessa misura?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "FOREACH BA-32F-PP-N e BA-32F-PA-W sono portagomma dritti con profilo F per tubi con diametro interno di 3.2 mm. PP-N indica PP naturale, PA-W indica PA bianca. Usa la stessa specifica del tubo e lo stesso metodo di collegamento per valutare l’idoneità al fluido e al servizio effettivi."
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-straight-barbed-fitting-ba-32f-pp-n.webp",
+            "width": 800,
+            "height": 800,
+            "alt": "FOREACH BA-32F-PP-N, portagomma dritto con profilo F in PP naturale",
+            "caption": "BA-32F-PP-N | PP naturale",
+            "captionHref": "/en/products/fittings/barbed-fittings/ba-32f-pp-n/"
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-straight-barbed-fitting-ba-32f-pa-w.webp",
+            "width": 800,
+            "height": 800,
+            "alt": "FOREACH BA-32F-PA-W, portagomma dritto con profilo F in PA bianca",
+            "caption": "BA-32F-PA-W | PA bianca",
+            "captionHref": "/en/products/fittings/barbed-fittings/ba-32f-pa-w/"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per unire due tubi con diametro interno di 3.2 mm, controlla prima la compatibilità del PP con fluido e detergente. Se valuti la PA per la sua resistenza meccanica, prova le variazioni dimensionali e delle proprietà dovute all’umidità, oltre al montaggio a secco. Per stabilire quale modello sia più adatto occorre definire fluidi e condizioni operative."
+          },
+          {
+            "type": "paragraph",
+            "text": "Usa lo stesso lotto di tubi, metodo di montaggio e condizioni di prova. Ispeziona danni al tubo, perdite, resistenza allo sfilamento e cambiamenti dopo l’uso. Naturale e bianco identificano i modelli. Non sono gradi di qualità. Un cambiamento di materiale richiede nuove prove di accoppiamento e tenuta anche se la forma rimane uguale."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-barbed-fitting/",
+                "label": "Struttura, modelli e requisiti di accoppiamento dei raccordi portagomma",
+                "prefix": "Per scegliere tra raccordi dritti, a gomito o con derivazione, torna a ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come provare i raccordi nelle condizioni effettive prima della messa in servizio?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Prova il modello che intendi acquistare con le tenute, i tubi e i componenti di accoppiamento effettivi. Riproduci fluido, temperatura, pressione e pulizia effettivi. Denominazioni di materiale identiche possono celare formulazioni, quote o montaggi diversi. Prova la combinazione completa di raccordo e tubo."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Preparazione: registra modello completo, revisione del disegno, materiali del corpo e delle tenute, tubo e montaggio. Definisci condizioni di prova e criteri di accettazione per il servizio.",
+              "Esposizione al fluido: usa formulazione, concentrazione, temperatura e durata effettive. Ispeziona aspetto, dimensioni e proprietà. Nei circuiti analitici, valuta secondo i requisiti del progetto eventuali sostanze estraibili o residui che possano interferire con la misura.",
+              "Prove di collegamento: monta il tubo flessibile o rigido effettivo e i componenti corrispondenti secondo le specifiche. Controlla perdite, resistenza allo sfilamento e portata alla temperatura e pressione previste. Aggiungi scollegamenti ripetuti se necessario.",
+              "Dopo il funzionamento: simula avvii, arresti, servizio continuo e pulizia entro i limiti del modello. Ricontrolla tenuta, allentamento e deformazione. Registra lotto, durata e risultati."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Definisci prima durata, cicli e criteri di accettazione. Una breve prova di tenuta non stabilisce la vita utile a lungo termine. Cambiamenti di materiale del corpo, tenute, tubi, montaggio o pulizia richiedono una nuova valutazione e le relative prove prima dell’uso."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sui materiali dei raccordi",
+    "faqItems": [
+      {
+        "question": "Qual è la pressione nominale dei raccordi in PA, PVDF o PEEK standard?",
+        "answer": "Il nome del materiale da solo non consente di stabilirla. I 120 psi di Q20/Q40, i 60 psi di Q60 e i 34 MPa della famiglia dedicata all’alta pressione si applicano ai prodotti o alla famiglia specifici. Conferma la pressione nominale del modello e del tubo e convalida le condizioni effettive prima della messa in servizio."
+      },
+      {
+        "question": "Si può acquistare come PA66 un raccordo specificato solo come PA?",
+        "answer": "No. PA indica la famiglia delle poliammidi e non il tipo specifico PA6, PA66 o un altro. Conferma con il fornitore qualità della resina, rinforzo e modifiche e riportali nei requisiti di acquisto. Assorbimento di umidità e proprietà meccaniche possono variare."
+      },
+      {
+        "question": "Si può semplicemente sostituire un raccordo in plastica con uno in acciaio inossidabile?",
+        "answer": "Verifica di nuovo il collegamento completo: qualità dell’acciaio, superficie, compatibilità con il fluido, filettatura, superfici di tenuta, accoppiamento del tubo e montaggio. Nomi o aspetto simili non dimostrano l’intercambiabilità. Non riutilizzare automaticamente la coppia del raccordo in plastica."
+      }
+    ],
+    "cta": {
+      "title": "Scegli i materiali dei raccordi in base al fluido e al servizio effettivi",
+      "description": "Indica fluido e concentrazione, temperature di esercizio e pulizia, pressione, tempo di contatto, tubo e struttura del collegamento per individuare candidati e prove prima della messa in servizio.",
+      "contactLabel": "Confrontati con noi sulla scelta dei materiali",
+      "productsLabel": "Vedi i raccordi",
+      "productsHref": "/en/products/fittings/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "materials",
+      "label": "Cinque materiali e temperature"
+    },
+    {
+      "id": "wetted-parts",
+      "label": "O-ring e temperatura del raccordo"
+    },
+    {
+      "id": "chemicals",
+      "label": "Fluidi e condizioni di pulizia"
+    },
+    {
+      "id": "operating-conditions",
+      "label": "Pressioni nominali e coppie"
+    },
+    {
+      "id": "pp-pa-example",
+      "label": "Confronto tra raccordi PP e PA della stessa misura"
+    },
+    {
+      "id": "material-testing",
+      "label": "Prove prima della messa in servizio"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Come scegliere i materiali dei raccordi: PP, PA, POM, PVDF e PEEK"
+    ],
+    "mentions": [
+      "PP",
+      "PA",
+      "POM",
+      "PVDF",
+      "PEEK",
+      "BA-32F"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "material-selection-thread-to-barbed-fittings",
+      "title": "Raccordi filetto-portagomma",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/",
+      "imageSrc": "/images/resources/technical-articles/fitting-material-selection-guide/thread-to-barbed-fittings-group.webp",
+      "imageAlt": "Raccordi filetto-portagomma. Foto di prodotti FOREACH in più misure",
+      "imageFill": true
+    },
+    {
+      "id": "material-selection-barbed-fittings",
+      "title": "Raccordi portagomma",
+      "href": "/en/products/fittings/barbed-fittings/",
+      "imageSrc": "/images/resources/technical-articles/fitting-material-selection-guide/barbed-fittings-group.webp",
+      "imageAlt": "Raccordi portagomma. Foto di prodotti FOREACH in più misure",
+      "imageFill": true
+    }
+  ],
+  "footerProducts": [
+    {
+      "id": "809278",
+      "title": "Raccordo portagomma dritto in PP naturale BA-32F-PP-N",
+      "href": "/en/products/fittings/barbed-fittings/ba-32f-pp-n/",
+      "imageSrc": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pp-equal-straight-barbed-fitting-ba-32f-pp-n.webp",
+      "imageAlt": "FOREACH BA-32F-PP-N, raccordo portagomma dritto in PP naturale"
+    },
+    {
+      "id": "809328",
+      "title": "Raccordo portagomma dritto in PA bianca BA-32F-PA-W",
+      "href": "/en/products/fittings/barbed-fittings/ba-32f-pa-w/",
+      "imageSrc": "/images/products/fittings/barbed-fittings/products/3-2mm-tube-id-pa-equal-straight-barbed-fitting-ba-32f-pa-w.webp",
+      "imageAlt": "FOREACH BA-32F-PA-W, raccordo portagomma dritto in PA bianca"
+    },
+    {
+      "id": "809467",
+      "title": "Raccordo filetto-portagomma in PP naturale SA-U28-32D-PP-N",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/sa-u28-32d-pp-n/",
+      "imageSrc": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-32d-pp-n.webp",
+      "imageAlt": "FOREACH SA-U28-32D-PP-N, raccordo filetto-portagomma in PP naturale"
+    },
+    {
+      "id": "809500",
+      "title": "Raccordo filetto-portagomma in PA bianca SA-U28-32D-PA-W",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/sa-u28-32d-pa-w/",
+      "imageSrc": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pa-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-32d-pa-w.webp",
+      "imageAlt": "FOREACH SA-U28-32D-PA-W, raccordo filetto-portagomma in PA bianca"
+    }
+  ]
+}

@@ -7,11 +7,24 @@ import { getControlModuleDetailBySlug } from "@/data/products/control-modules/co
 import { getControlModuleProductDetailData } from "@/services/products/adapters/getControlModuleProductDetailData";
 import { getControlModuleDetailSlugFromSegments, getControlModuleLanguageAlternates } from "@/data/products/selection/control-module-routes";
 import { isHardTubeTargetLocale } from "@/data/products/detail/hard-tube-fitting-detail.intl";
+import { germanProbeDetailBody, hindiProbeDetailBody, italianProbeDetailBody } from "@/data/products/detail/probe-guide.intl";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
 import { buildProductSocialMetadata } from "./product-social-metadata";
 import { getProbeDetailAlternates } from "./probe-detail-alternates";
 
 /** Read the same authored copy as the product body. Keep existing public paths. */
 export function getProbeControlDetailMetadata(locale: string, segments: string[]): Metadata | undefined {
+  if ((locale === "it" || locale === "hi" || (locale === "de" && languageDraftsEnabled)) && segments.length === 2 && segments[0] === "probes") {
+    const source = probes.find(item => item.slug === segments[1]);
+    const copy = source && (locale === "de" ? germanProbeDetailBody[source.slug] : locale === "hi" ? hindiProbeDetailBody[source.slug] : italianProbeDetailBody[source.slug]);
+    if (!source || !copy) return undefined;
+    const canonical = `/${locale}/products/probes/` + source.slug + "/";
+    const title = copy.title + " | FOREACH";
+    const social = buildProductSocialMetadata({data: {...source, imageAlt: copy.cardTitle},
+      title, description: copy.meta, canonicalUrl: canonical});
+    return {...social, title:{absolute:title}, description:copy.meta, alternates:{canonical},
+      robots:{index:false, follow:true}, openGraph:{...social.openGraph, locale: locale === "de" ? "de_DE" : locale === "hi" ? "hi_IN" : "it_IT"}};
+  }
   if (!["en", "es", "fr", "ko", "ru"].includes(locale)) return undefined;
   const canonical = `/${locale}/products/${segments.join("/")}/`;
   const slug = getControlModuleDetailSlugFromSegments(segments);

@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
@@ -28,6 +29,10 @@ import { notFound } from "next/navigation";
 import MaterialCompatibilityClient from "@/components/resources/material-compatibility/MaterialCompatibilityClient";
 import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 import { getMaterialCompatibilityPageData } from "@/services/resources/material-compatibility/getMaterialCompatibilityPageData";
+import { getHindiDraftLink, hindiEnglishFallbackSuffix, languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { germanChemicalNames } from "@/data/resources/material-compatibility/material-compatibility.de";
+import { hindiChemicalNames } from "@/data/resources/material-compatibility/material-compatibility.hi";
+import { italianChemicalNames } from "@/data/resources/material-compatibility/material-compatibility.it";
 
 /*
   引入已有接头替代查询页面中的 ResourceSearchBar 样式。
@@ -46,7 +51,7 @@ import "@/app/resources/material-compatibility/material-compatibility.css";
 const MATERIAL_COMPATIBILITY_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
 type MaterialCompatibilityLocale =
-    (typeof MATERIAL_COMPATIBILITY_LOCALES)[number];
+    (typeof MATERIAL_COMPATIBILITY_LOCALES)[number] | "de" | "it" | "hi";
 
 /* =========================================================
    页面参数类型
@@ -64,7 +69,7 @@ type MaterialCompatibilityIntlPageProps = {
    静态导出路径
 ========================================================= */
 export function generateStaticParams() {
-    return MATERIAL_COMPATIBILITY_LOCALES.map((locale) => ({
+    return [...MATERIAL_COMPATIBILITY_LOCALES, ...(languageDraftsEnabled ? ["de", "it", "hi"] : [])].map((locale) => ({
         locale,
     }));
 }
@@ -99,12 +104,33 @@ const materialCompatibilityMetadata = {
     },
 } as const;
 
-export async function generateMetadata({
+async function getPageMetadata({
     params,
 }: MaterialCompatibilityIntlPageProps): Promise<Metadata> {
     const { locale } = await params;
 
     if (!isSupportedLocale(locale)) return {};
+
+    if (locale === "de") {
+        const title = "Werkstoffbeständigkeit | FOREACH";
+        const description = "Prüfen Sie die Verträglichkeit chemischer Medien mit technischen Kunststoffen, Werkstoffeigenschaften und verfügbare Konformitätsunterlagen.";
+        const url = "/de/resources/material-compatibility/";
+        return { title: { absolute: title }, description, alternates: { canonical: url }, robots: { index: false }, openGraph: { title, description, url, locale: "de_DE" } };
+    }
+
+    if (locale === "it") {
+        const title = "Compatibilità dei materiali | FOREACH";
+        const description = "Consulta la compatibilità fra prodotti chimici e tecnopolimeri, le proprietà dei materiali e la documentazione di conformità disponibile.";
+        const url = "/it/resources/material-compatibility/";
+        return { title: { absolute: title }, description, alternates: { canonical: url }, robots: { index: false }, openGraph: { title, description, url, locale: "it_IT" } };
+    }
+
+    if (locale === "hi") {
+        const title = "सामग्री की संगतता | FOREACH";
+        const description = "रासायनिक माध्यम, इंजीनियरिंग प्लास्टिक, सामग्री गुण और अनुपालन दस्तावेज़ों के लिए FOREACH की सामग्री संगतता जानकारी देखें।";
+        const url = "/hi/resources/material-compatibility/";
+        return { title: { absolute: title }, description, alternates: { canonical: url }, robots: { index: false }, openGraph: { title, description, url, locale: "hi_IN" } };
+    }
 
     if (locale === "en") {
         return buildInternationalPageMetadata({ locale, path: "/resources/material-compatibility/",
@@ -124,8 +150,8 @@ export async function generateMetadata({
 function isSupportedLocale(
     locale: string,
 ): locale is MaterialCompatibilityLocale {
-    return MATERIAL_COMPATIBILITY_LOCALES.includes(
-        locale as MaterialCompatibilityLocale,
+    return locale === "de" || locale === "it" || locale === "hi" ? languageDraftsEnabled : MATERIAL_COMPATIBILITY_LOCALES.includes(
+        locale as (typeof MATERIAL_COMPATIBILITY_LOCALES)[number],
     );
 }
 
@@ -142,6 +168,9 @@ export default async function MaterialCompatibilityIntlPage({
     }
 
     const pageData = await getMaterialCompatibilityPageData(locale);
+    const contact = locale === "hi" ? getHindiDraftLink("/en/contact/") : undefined;
+    const draftLocale = locale === "de" || locale === "it" || locale === "hi" ? locale : undefined;
+    const names = draftLocale === "hi" ? hindiChemicalNames : draftLocale === "it" ? italianChemicalNames : germanChemicalNames;
 
     /*
       外语数据理论上一定有 ui。
@@ -182,15 +211,21 @@ export default async function MaterialCompatibilityIntlPage({
             </section>
 
             {/* 主体内容 */}
-            <MaterialCompatibilityClient data={pageData} />
+            <MaterialCompatibilityClient
+                data={pageData}
+                localeOverride={draftLocale}
+                chemicalNames={draftLocale ? names : undefined}
+            />
 
             {/* 底部支持区域 */}
             <ResourceSupportCta
                 title={supportCta.title}
                 description={supportCta.description}
-                buttonText={supportCta.buttonText}
-                href={`/${locale}/contact`}
+                buttonText={supportCta.buttonText + (contact?.hrefLang === "en" ? hindiEnglishFallbackSuffix : "")}
+                href={contact?.href ?? `/${locale}/contact`}
             />
         </main>
     );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/resources/material-compatibility/", getPageMetadata);

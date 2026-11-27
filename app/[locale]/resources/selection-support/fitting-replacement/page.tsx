@@ -1,4 +1,5 @@
-import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
+import { buildDraftPageMetadata, buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜多语言接头替代查询页面入口
@@ -29,6 +30,7 @@ import FittingReplacementHome from "@/components/resources/fitting-replacement/F
 import { Q20_FITTING_REPLACEMENT_SERIES_CONFIG } from "@/data/resources/fitting-replacement/fitting-replacement-series.config";
 
 import { getFittingReplacementHomeData } from "@/services/resources/getFittingReplacementHomeData";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
 
 import "../../../../resources/selection-support/fitting-replacement/fitting-replacement.css";
 
@@ -42,7 +44,7 @@ import "../../../../resources/selection-support/fitting-replacement/fitting-repl
 ========================================================= */
 const FITTING_REPLACEMENT_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
-type FittingReplacementLocale = (typeof FITTING_REPLACEMENT_LOCALES)[number];
+type FittingReplacementLocale = (typeof FITTING_REPLACEMENT_LOCALES)[number] | "de" | "it" | "hi";
 
 /* 当前页面暂时使用 Q20 系列配置 */
 const SERIES_CONFIG = Q20_FITTING_REPLACEMENT_SERIES_CONFIG;
@@ -60,8 +62,8 @@ interface FittingReplacementLocalePageProps {
    判断是否为支持的外语语言
 ========================================================= */
 function isSupportedLocale(locale: string): locale is FittingReplacementLocale {
-  return FITTING_REPLACEMENT_LOCALES.includes(
-    locale as FittingReplacementLocale
+  return locale === "de" || locale === "it" || locale === "hi" ? languageDraftsEnabled : FITTING_REPLACEMENT_LOCALES.includes(
+    locale as (typeof FITTING_REPLACEMENT_LOCALES)[number]
   );
 }
 
@@ -69,7 +71,7 @@ function isSupportedLocale(locale: string): locale is FittingReplacementLocale {
    静态导出参数
 ========================================================= */
 export function generateStaticParams() {
-  return FITTING_REPLACEMENT_LOCALES.map((locale) => {
+  return [...FITTING_REPLACEMENT_LOCALES, ...(languageDraftsEnabled ? ["de", "it", "hi"] : [])].map((locale) => {
     return {
       locale,
     };
@@ -83,7 +85,7 @@ export function generateStaticParams() {
    1. 当前先根据 locale 返回基础 SEO
    2. 具体页面内容由 service 读取对应语言文案
 ========================================================= */
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: FittingReplacementLocalePageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -100,6 +102,9 @@ export async function generateMetadata({
   );
 
   const sectionLabels = {
+    de: "Auswahlhilfe",
+    it: "Assistenza alla scelta",
+    hi: "चयन में सहायता",
     en: "Selection Support",
     es: "Asistencia para la selección",
     fr: "Aide à la sélection",
@@ -111,7 +116,15 @@ export async function generateMetadata({
     description: pageData.banner.description,
   };
 
-  return buildInternationalPageMetadata({ locale, path: "/resources/selection-support/fitting-replacement/", ...metadata });
+  const path = "/resources/selection-support/fitting-replacement/";
+  if (locale === "de" || locale === "it") {
+    return buildDraftPageMetadata({ locale, canonical: `/${locale}${path}`, ...metadata });
+  }
+  if (locale === "hi") {
+    const url = "/hi" + path;
+    return { ...metadata, alternates: { canonical: url }, robots: { index: false }, openGraph: { ...metadata, url, locale: "hi_IN" } };
+  }
+  return buildInternationalPageMetadata({ locale, path, ...metadata });
 }
 
 /* =========================================================
@@ -133,3 +146,5 @@ export default async function FittingReplacementLocalePage({
 
   return <FittingReplacementHome data={pageData} />;
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/resources/selection-support/fitting-replacement/", getPageMetadata);

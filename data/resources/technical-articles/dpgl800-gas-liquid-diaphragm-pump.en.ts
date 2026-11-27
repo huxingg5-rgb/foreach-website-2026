@@ -1,3 +1,4 @@
+import { applicationDocumentHref } from "@/data/applications/application-routes";
 import type { Dpgl800ArticleCopy } from "./dpgl800-gas-liquid-diaphragm-pump.types";
 
 export const dpgl800ArticleEnCopy = {
@@ -77,6 +78,12 @@ export const dpgl800ArticleEnCopy = {
       "DPGL800 fits gas handling, gas-liquid aspiration, waste extraction, line evacuation and vacuum generation. Its 6 L/min value is a gas rating and must not be used as a continuous metered pure-liquid flow.",
       "For stable pure-liquid transfer, compare pumps using liquid flow at pressure, self-priming, pulsation and material compatibility. For a duty with substantial air or high vacuum, validate DPGL800 in the actual gas-liquid circuit.",
     ],
+    applicationLink: {
+      prefix: "For a drain that intermittently draws gas, use the",
+      label: "condensate drainage validation checks",
+      suffix: " to verify removal, sealing and recovery of the sample-gas path in the installed instrument.",
+      href: applicationDocumentHref("environmental-monitoring", "gas-pretreatment-condensate") + "#acceptance",
+    },
     dpl60Prefix: "For a 600 mL/min-class continuous liquid-transfer option, read the",
     dpl60Label: "DPL60 liquid diaphragm pump selection guide",
     dpl60Suffix: ".",

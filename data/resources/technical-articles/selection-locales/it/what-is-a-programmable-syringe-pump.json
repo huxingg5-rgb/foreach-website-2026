@@ -1,0 +1,308 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è una pompa a siringa programmabile? Funzionamento, percorsi fluidici e automazione",
+      "seoTitle": "Pompa a siringa programmabile: funzionamento, percorsi fluidici e automazione | FOREACH",
+      "seoDescription": "Scopri come dosaggio con siringa, commutazione delle valvole e sequenze programmate lavorano insieme. Gli esempi FOREACH HMD e HLD illustrano integrazione e validazione nello strumento.",
+      "coverImage": "/images/resources/technical-articles/what-is-a-programmable-syringe-pump/foreach-programmable-syringe-pump-photo.webp",
+      "coverAlt": "Fotografia a colori di una pompa a siringa programmabile FOREACH"
+    },
+    "deck": "Una pompa a siringa programmabile usa un motore per controllare spostamento e velocità dello stantuffo. Esegue aspirazione, erogazione, pause e azioni ripetute tramite comandi. Con una valvola di commutazione, collega serbatoi di reagenti, contenitori di reazione e percorsi di lavaggio in un processo automatico. Nello sviluppo dello strumento, definisci insieme volumi, connessioni e tempi.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Una pompa a siringa programmabile usa un motore per controllare spostamento e velocità dello stantuffo. Esegue aspirazione, erogazione, pause e azioni ripetute tramite comandi. Con una valvola di commutazione, collega serbatoi di reagenti, contenitori di reazione e percorsi di lavaggio in un processo automatico. Nello sviluppo dello strumento, definisci insieme volumi, connessioni e tempi."
+      },
+      {
+        "type": "paragraph",
+        "text": "L’articolo riguarda le pompe a siringa OEM per strumenti di analisi e automazione, con dosaggio in tubazioni fisse riempite di liquido. Il modulo lavora con serbatoi, tubi, aghi di erogazione, posizionamento dei contenitori e software di controllo per svolgere il compito dello strumento."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/what-is-a-programmable-syringe-pump/foreach-programmable-syringe-pump-photo.webp",
+        "alt": "Fotografia a colori di una pompa a siringa programmabile FOREACH",
+        "width": 1200,
+        "height": 800,
+        "caption": "Pompa a siringa programmabile FOREACH con siringa, gruppo valvola e scheda di controllo."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Qual è la funzione di siringa, azionamento e valvola?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "L’azionamento converte la rotazione del motore in movimento lineare dello stantuffo. Arretrando, lo stantuffo aumenta il volume della camera e aspira liquido attraverso l’ingresso collegato. Avanzando, riduce il volume ed espelle il liquido dall’uscita. La valvola seleziona origine e destinazione. La siringa dosa il liquido. Occorre coordinarne i tempi."
+          },
+          {
+            "type": "paragraph",
+            "text": "In un circuito idealmente pieno e senza perdite, il volume geometrico spostato è V = A × Δx e la portata nominale è Q = A × v, dove A è l’area della sezione interna della siringa, Δx la corsa e v la velocità dello stantuffo. Bolle, tenute, cedevolezza dei tubi e liquido residuo all’uscita possono cambiare il volume erogato. Per confermare l’arrivo dell’intero volume al contenitore, verifica l’erogazione oltre al completamento della corsa comandata."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un modulo per pipettaggio a spostamento d’aria usa un cuscino d’aria per muovere il liquido in un puntale monouso. Nei circuiti fissi qui descritti, il reagente entra generalmente in contatto con siringa, valvola e tubi. Compatibilità chimica e percorsi di lavaggio rientrano quindi nel progetto."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-programmable-pipetting-pump/",
+                "label": "Esplora le pompe per pipettaggio a spostamento d’aria"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come funziona un ciclo completo di erogazione?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Considera una dose fissa trasferita da un serbatoio di reagente a un recipiente di reazione. Il programma gestisce l’intero ciclo. Adesca il circuito ed elimina l’aria all’avvio, dopo un cambio di serbatoio o quando entra aria. Durante i lotti di routine, pianifica i riempimenti in base al volume residuo e alla strategia di pulizia."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Adescamento: collega la sorgente e fai circolare liquido verso lo scarico lungo il percorso previsto per rimuovere l’aria dalla siringa e dai tubi interessati.",
+              "Aspirazione: collega la sorgente richiesta e aspira il volume previsto con corsa e velocità selezionate. Lascia stabilizzare la pressione quando necessario.",
+              "Commutazione: arresta il movimento di dosaggio, seleziona l’uscita di destinazione e conferma il percorso e la posizione del recipiente.",
+              "Erogazione: eroga il volume scelto alla velocità selezionata. Per dosi ripetute da un’unica aspirazione, monitora il volume utilizzabile rimasto.",
+              "Riempimento: torna alla sorgente quando la capacità residua è insufficiente. Includi l’interruzione nei tempi del lotto.",
+              "Pulizia: al cambio di sorgente o nel punto previsto dal metodo, lavare i tratti condivisi con un liquido compatibile e inviarlo allo scarico."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Di norma, arresta lo stantuffo prima di commutare la valvola e stabilisci il percorso di destinazione prima di riprendere l’aspirazione o l’erogazione. In assenza di retroazione sulla posizione della valvola, predisponi ritardi e gestione dei guasti e verifica il tempo di commutazione. Aziona lo stantuffo soltanto con il percorso pertinente aperto. Dopo l’invio del comando, verifica che l’azione sia conclusa."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-programmable-syringe-pump/fluid-cycle-it.svg",
+            "alt": "Direzione del fluido tra sorgente, valvola di commutazione, siringa e recipiente di destinazione durante aspirazione ed erogazione",
+            "width": 800,
+            "height": 540,
+            "caption": "Aspirazione ed erogazione usano collegamenti distinti. Lo schema illustra la logica di flusso senza rappresentare un rotore specifico o una numerazione delle porte."
+          }
+        ]
+      },
+      {
+        "title": "Quali azioni si possono programmare?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Un programma scompone l’erogazione in azioni ripetibili e conserva impostazioni diverse per liquidi e metodi diversi. Aspirazione ed erogazione possono richiedere velocità differenti. Per l’aspirazione conta la resistenza in ingresso e il riempimento; per l’erogazione occorre bilanciare tempo di ciclo, pressione all’uscita, distacco della goccia e schizzi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Azioni programmabili e relativo scopo tecnico"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Controllo",
+              "Scopo",
+              "Verifica"
+            ],
+            "rows": [
+              [
+                "Posizione e corsa",
+                "Impostare il volume nominale aspirato o erogato",
+                "Dimensioni della siringa, calibrazione e corsa utile"
+              ],
+              [
+                "Velocità e rampe",
+                "Coordinare riempimento, erogazione e tempi",
+                "Resistenze, bolle, liquido residuo e variazioni di pressione"
+              ],
+              [
+                "Ritardi e sequenza delle valvole",
+                "Coordinare la commutazione con il dosaggio",
+                "Stato del percorso, completamento e gestione del timeout"
+              ],
+              [
+                "Ripetizione, riempimento e lavaggio",
+                "Organizzare lotti e cambi di liquido",
+                "Capacità residua, percorsi condivisi e destinazione degli scarti"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A seconda del controllore e del firmware, il modulo può eseguire le sequenze in autonomia oppure un sistema host può programmarle passo per passo. Per l’integrazione servono anche stati occupato e pronto, conferma di completamento, timeout e ripristino dopo un’interruzione di corrente. RS232, RS485 e CAN identificano interfacce di comunicazione. Verifica il set di comandi per ciascun produttore."
+          }
+        ]
+      },
+      {
+        "title": "Valvole a più porte o più canali?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Una valvola a più porte aumenta il numero delle connessioni fluidiche selezionabili. Un’unica siringa può essere collegata in sequenza al reagente A, al liquido di lavaggio e poi allo scarico usando la stessa camera di dosaggio. Il numero di porte va distinto dal numero di canali di erogazione simultanei. Verifica quali coppie di porte si possono collegare."
+          },
+          {
+            "type": "paragraph",
+            "text": "Una pompa a siringa multicanale contiene più canali di dosaggio. Verifica se si muovono insieme o in modo indipendente, se le valvole commutano separatamente e quali capacità di siringa si possono combinare. L’elaborazione sequenziale di più sorgenti e l’erogazione parallela in più contenitori richiedono configurazioni diverse."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dopo un cambio di sorgente, nella siringa, nella cavità della valvola o nel tubo di uscita condivisi può rimanere il liquido precedente. Pulisci i tratti condivisi effettivamente utilizzati. Esegui poi una prova in bianco o una misura del trascinamento adeguata. Verifica la pulizia oltre al numero dei cicli di risciacquo."
+          }
+        ]
+      },
+      {
+        "title": "Come si distinguono le configurazioni HMD e HLD?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "FOREACH HMD usa configurazioni con elettrovalvole, mentre HLD usa valvole rotative. Inizia da connessioni fluidiche, requisiti dei canali di dosaggio e spazio di montaggio. I valori 30 mm e 60 mm indicano la corsa dell’azionamento. Volume e classe di accuratezza vanno verificati separatamente. Seleziona anche siringa, valvola e opzioni di controllo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Opzioni di configurazione delle pompe a siringa FOREACH"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Modello",
+              "Architettura",
+              "Criterio di selezione iniziale"
+            ],
+            "rows": [
+              [
+                "HMD3",
+                "Corsa 30 mm, elettrovalvola, un canale di dosaggio",
+                "Montaggio compatto, percorsi di ingresso e uscita e volume della siringa"
+              ],
+              [
+                "HMD6",
+                "Corsa 60 mm, elettrovalvole, opzioni monocanale e multicanale",
+                "Numero dei canali, relazione tra i movimenti e combinazioni di volume"
+              ],
+              [
+                "HLD3",
+                "Corsa 30 mm, valvola rotativa, un canale di dosaggio",
+                "Spazio e percorsi tra le sorgenti e le uscite richieste"
+              ],
+              [
+                "HLD6",
+                "Corsa 60 mm, valvola rotativa, un canale di dosaggio",
+                "Configurazione della siringa, selezione delle sorgenti e percorsi di lavaggio"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Aggiunta di reagenti ed erogazioni ripetute richiedono di valutare dose, volume del lotto e intervalli di riempimento. Per diluire i campioni, coordina le quantità dosate, l’ordine di aggiunta e la miscelazione. La preparazione con più liquidi richiede una mappa di connessioni della valvola e il lavaggio dei tratti condivisi. Verifica l’idoneità di queste applicazioni con il liquido e il flusso di lavoro effettivi."
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/products/pumps/syringe-pumps/solenoid-valve-syringe-pumps/hmd3/",
+                "label": "Esplora la pompa a siringa HMD3 con elettrovalvola"
+              },
+              {
+                "href": "/en/products/pumps/syringe-pumps/solenoid-valve-syringe-pumps/hmd6/",
+                "label": "Esplora la pompa a siringa HMD6 con elettrovalvola"
+              },
+              {
+                "href": "/en/products/pumps/syringe-pumps/rotary-valve-syringe-pumps/hld3/",
+                "label": "Esplora la pompa a siringa HLD3 con valvola rotativa"
+              },
+              {
+                "href": "/en/products/pumps/syringe-pumps/rotary-valve-syringe-pumps/hld6/",
+                "label": "Esplora la pompa a siringa HLD6 con valvola rotativa"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come verificare le prestazioni nello strumento?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Valuta la pompa con il serbatoio previsto, lunghezza e diametro interno dei tubi, valvola, ago di erogazione e liquido effettivo. Oltre alla prova con acqua e tubi corti, verifica le variazioni di livello, contropressione in uscita e proprietà del reagente dopo l’installazione."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Definisci liquido, temperatura, metodo di misura e numero di ripetizioni. Misura i volumi obiettivo minimo, abituale e massimo. Per la misura gravimetrica servono la densità effettiva del liquido e il controllo dell’evaporazione.",
+              "Confronta la prima dose dopo l’adescamento, le dosi intermedie e la prima dose dopo il riempimento per valutare l’effetto delle transizioni.",
+              "Esegui un lotto completo negli intervalli previsti di livello e contropressione. Registra volume erogato e tempi oltre alla posizione del motore.",
+              "Valida il lavaggio dei tratti condivisi nella sequenza prevista dei cambi di liquido e verifica lo scarico.",
+              "Verifica il ripristino dopo esaurimento della sorgente, timeout o interruzione. Per confermare il rilevamento automatico di queste condizioni, controlla i sensori e la logica associata."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Registra separatamente scostamento del volume, ripetibilità, tempo di ciclo e trascinamento. Per il tempo complessivo considera aspirazione, commutazione, ritardi, erogazione, riempimento e pulizia. Conserva i risultati insieme alle condizioni operative per stabilire quando cambiare liquido, tubi o metodo richiede una nuova validazione."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "Una siringa di maggiori dimensioni copre sia i lotti più grandi sia le dosi minori?",
+        "answer": "A parità di corsa, una siringa più larga sposta più liquido. Una capacità maggiore può ridurre la frequenza di riempimento. Il volume minimo affidabile dipende comunque da meccanica, tenute e circuito installato. Definisci insieme dose minima, dose abituale, volume totale del lotto e tempo di ciclo ammissibile."
+      },
+      {
+        "question": "Una sola siringa può erogare in modo continuo?",
+        "answer": "La corsa utile è finita. Una volta vuota, di norma la siringa deve commutare percorso e riempirsi, interrompendo l’erogazione. Per la fornitura continua, valuta meccanismi di dosaggio alternati o un volume tampone e verifica portata e pressione nelle transizioni. Una siringa più grande può soltanto allungare l’intervallo tra due riempimenti."
+      },
+      {
+        "question": "Si può riusare il programma se la pompa sostitutiva ha la stessa interfaccia?",
+        "answer": "Verifica formato dei comandi, unità, indirizzamento, inizializzazione, definizioni delle posizioni della valvola, riscontri di occupato ed errore, dimensioni meccaniche e raccordi fluidici. Dopo aver stabilito la comunicazione, valida di nuovo il ciclo completo di aspirazione ed erogazione e il ripristino dai guasti."
+      }
+    ],
+    "cta": {
+      "title": "Parliamo dell’integrazione della pompa a siringa",
+      "description": "Indica liquido, volumi, circuito e tempi per valutare la configurazione.",
+      "contactLabel": "Contatta il team tecnico",
+      "productsLabel": "Esplora le pompe a siringa",
+      "productsHref": "/en/products/pumps/syringe-pumps/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "syringe-valve-drive",
+      "label": "Qual è la funzione di siringa, azionamento e valvola?"
+    },
+    {
+      "id": "dispensing-cycle",
+      "label": "Come funziona un ciclo completo di erogazione?"
+    },
+    {
+      "id": "programmable-actions",
+      "label": "Quali azioni si possono programmare?"
+    },
+    {
+      "id": "ports-and-channels",
+      "label": "Valvole a più porte o più canali?"
+    },
+    {
+      "id": "hmd-hld-configurations",
+      "label": "Come si distinguono le configurazioni HMD e HLD?"
+    },
+    {
+      "id": "instrument-verification",
+      "label": "Come verificare le prestazioni nello strumento?"
+    }
+  ],
+  "sources": [
+    "/en/products/pumps/syringe-pumps/solenoid-valve-syringe-pumps/hmd3/",
+    "/en/products/pumps/syringe-pumps/solenoid-valve-syringe-pumps/hmd6/",
+    "/en/products/pumps/syringe-pumps/rotary-valve-syringe-pumps/hld3/",
+    "/en/products/pumps/syringe-pumps/rotary-valve-syringe-pumps/hld6/",
+    "https://partnering.tecan.com/cavro-xlp-6000-pump-for-oem-liquid-handling",
+    "https://partnering.tecan.com/cavro-xmp-6000-pump-for-oem-liquid-handling",
+    "https://www.hamiltoncompany.com/oem-components/syringe-pumps/psd4",
+    "https://www.hamiltoncompany.com/syringes/syringe-accessories/removable-needle-compression-fittings/priming-kit",
+    "https://www.tricontinent.com/en/syringe-pumps-and-rotary-valves/c-series-syringe-pumps/"
+  ]
+}

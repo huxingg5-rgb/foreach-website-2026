@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "title": "La portata parte regolare e poi cala: come verificare lo sfiato del serbatoio con una pompa miniaturizzata a membrana?",
+    "seoTitle": "Calo di portata della pompa a membrana: controllo dello sfiato del serbatoio | Foreach Technology",
+    "seoDescription": "Registra insieme pressione dello spazio di testa, pressione di ingresso della pompa ed erogazione, per distinguere sfiato limitato, variazioni di livello, ostruzioni, infiltrazioni d'aria e contropressione in uscita.",
+    "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl30-brushless-rear-photo.jpg",
+    "coverAlt": "Vista posteriore della pompa miniaturizzata a membrana Foreach DPL30 con corpo e porte fluidiche"
+  },
+  "deck": "Registra insieme pressione dello spazio di testa, pressione di ingresso della pompa ed erogazione, per distinguere sfiato limitato, variazioni di livello, ostruzioni, infiltrazioni d'aria e contropressione in uscita.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Una pompa miniaturizzata a membrana che inizialmente eroga normalmente e poi rallenta può essere integra. Se aspira da un serbatoio, verificare se il gas può sostituire il liquido prelevato come previsto. La portata può diminuire anche per variazione di livello, filtri, tubi o carico in mandata. Il solo sintomo non dimostra uno sfiato ostruito."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Individuare come il contenitore compensa il prelievo di liquido",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Flaconi rigidi, sacche collassabili e serbatoi a pressione controllata funzionano diversamente. Un flacone rigido richiede in genere un sistema progettato di ricambio del gas o controllo della pressione. Una sacca collassabile compensa deformandosi. Per un serbatoio pressurizzato controllare regolatore e alimentazione del gas. Prima di considerare anomala la chiusura ermetica, consultare schema fluidico e istruzioni del contenitore."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per un flacone rigido con sfiato ispezionare il percorso completo del gas: ingresso dall'ambiente, filtro, tubo di collegamento, raccordo del tappo e apertura interna. Un foro visibile non dimostra che lo sfiato abbia portata sufficiente in esercizio. Membrana bagnata, linea strozzata o apertura interna immersa possono cambiare la perdita di carico effettiva."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/pump-application-guides/reservoir-vent-it.svg",
+          "alt": "Il gas entra nel serbatoio dallo sfiato previsto e il liquido raggiunge la pompa da un pescante immerso. Si misurano separatamente pressione dello spazio di testa e pressione di ingresso",
+          "width": 1200,
+          "height": 500,
+          "caption": "Schema concettuale. Le misure separate dello spazio di testa e dell'ingresso permettono di distinguere le restrizioni del percorso del gas dalle perdite sul percorso del liquido. Il disegno non rappresenta un contenitore specifico."
+        }
+      ]
+    },
+    {
+      "title": "2. Perché un flacone rigido sigillato può diventare più difficile da svuotare",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Si consideri un modello esplicativo: flacone rigido completamente sigillato, quantità di gas fissa a temperatura costante, senza considerare per il momento evaporazione, gas disciolto e perdite. Il prelievo di liquido espande lo spazio di testa e ne riduce la pressione assoluta."
+        },
+        {
+          "type": "formula",
+          "expression": "P₂,abs = P₁,abs × Vg₁ / (Vg₁ + ΔVliquid)",
+          "note": "Approssimazione isoterma di gas ideale per una quantità di gas costante. P è la pressione assoluta, Vg₁ il volume iniziale dello spazio di testa e ΔVliquid il volume di liquido prelevato. Usare la pressione assoluta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si ipotizzi uno spazio di testa iniziale di 100 mL a 101.3 kPa assoluti. Dopo un prelievo di 20 mL, il modello dà 101.3 × 100/120 ≈ 84.4 kPa assoluti, pari a circa −16.9 kPa relativi rispetto alla pressione ambiente iniziale. Sono calcoli illustrativi e non misure di una pompa Foreach o di un serbatoio reale."
+        },
+        {
+          "type": "paragraph",
+          "text": "I contenitori reali possono deformarsi o perdere. I liquidi possono evaporare o rilasciare gas disciolto. La temperatura può cambiare. Il solo volume prelevato quindi non determina la pressione effettiva dello spazio di testa. Il modello spiega perché il ricambio limitato di gas può ostacolare progressivamente l'aspirazione. Per la diagnosi servono misure."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "https://www.grc.nasa.gov/www/k-12/BGP/boyle.html",
+              "label": "Riferimento di fisica: NASA sulla legge di Boyle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Distinguere la pressione dello spazio di testa dalle perdite in aspirazione",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "Pinlet,abs ≈ Pheadspace,abs + ρg(zsurface − zinlet) − ΔPsuction",
+          "note": "Relazione stazionaria approssimata in unità di pressione coerenti. ρ è la densità del liquido e z la quota. Pulsazioni rapide, accelerazione e flusso bifase richiedono ulteriori analisi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una diminuzione della pressione nello spazio di testa, un livello del liquido in calo e una resistenza maggiore all'aspirazione possono tutti ridurre la pressione di ingresso della pompa. La misura nello spazio di testa chiarisce il ricambio del gas nel contenitore. Una seconda misura all'ingresso mostra l'effetto combinato della colonna di liquido e del pescante. La sola portata in uscita non distingue in modo affidabile queste cause."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'aspirazione della pompa a membrana varia nel corso del ciclo. Un sensore lento può indicare soltanto una media, che non esclude brevi problemi di aspirazione. Gli strumenti di misura non devono introdurre ingressi d'aria o volumi morti significativi."
+        }
+      ]
+    },
+    {
+      "title": "4. Circoscrivere la causa con osservazioni e confronti controllati",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Causa possibile",
+            "Indicazione da esaminare",
+            "Controllo successivo"
+          ],
+          "rows": [
+            [
+              "Ricambio di gas limitato",
+              "La pressione dello spazio di testa si allontana dal valore previsto mentre cambia l'erogazione",
+              "Controllare la perdita di carico del percorso del gas e confrontare un componente di sfiato approvato e verificato su un banco controllato"
+            ],
+            [
+              "Livello del liquido in calo o dislivello di aspirazione variabile",
+              "La pressione nello spazio di testa è normale, ma le condizioni di ingresso seguono il livello del liquido",
+              "Ripetere a parità di livello e quota d'installazione"
+            ],
+            [
+              "Filtro del pescante ostruito o tubo deformato",
+              "Pressione normale nello spazio di testa e differenza di pressione più alta sul percorso di aspirazione",
+              "Ispezionare filtro, raccordi e curve, modificando un solo fattore alla volta"
+            ],
+            [
+              "Ingresso d'aria in aspirazione",
+              "Bolle o recupero temporaneo dopo l'adescamento",
+              "Controllare l'integrità dei collegamenti anche se non si vedono bolle"
+            ],
+            [
+              "Carico in mandata variabile",
+              "La pressione in uscita sale mentre cala l'erogazione",
+              "Ispezionare valvole, ugelli, tubi a valle e pressione del recipiente di destinazione"
+            ],
+            [
+              "Variazioni elettriche, termiche o del liquido",
+              "Cambiano tensione, corrente, temperatura o condizioni legate alla viscosità",
+              "Mantenere costanti le altre condizioni prima del confronto"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Queste osservazioni orientano la ricerca. Nessuna è univoca. Ad esempio, una pressione di ingresso sempre più negativa può dipendere sia da uno sfiato limitato sia da un filtro del pescante ostruito. Abbinare i punti di misura della pressione a confronti controllati."
+        }
+      ]
+    },
+    {
+      "title": "5. Rendere ripetibile la verifica dello sfiato",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Registrare tipo di contenitore, limiti di pressione e depressione, liquido, temperatura, livello iniziale, volume dello spazio di testa, quota d'installazione e percorso di sfiato previsto.",
+            "Con le stesse condizioni elettriche e di controllo, registrare tempo trascorso, prelievo cumulativo, portata, pressione dello spazio di testa, pressione di ingresso e pressione di mandata. Conservare dati di tensione, corrente e livello.",
+            "Ispezionare i percorsi di gas e liquido prima e durante il sintomo. Cercare filtro bagnato, liquido nel tubo di sfiato, apertura del gas immersa o deformazione dei tubi.",
+            "Se occorre un confronto, usare un banco controllato con acqua o altro sostituto idoneo e sostituire il componente di sfiato soltanto con un metodo previsto dal progetto. Mantenere costanti livello iniziale, temperatura, tubi e tempi.",
+            "Confrontare andamenti delle pressioni e volumi erogati prima e dopo il cambio. Il miglioramento di entrambi, documentato dall'ispezione del componente, rafforza la diagnosi. Un recupero breve della portata da solo non basta."
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "Con reagenti reali, liquidi volatili o sistemi che richiedono sterilità, evitare di allentare semplicemente il tappo o escludere filtrazione e controllo dei vapori. Il confronto deve rispettare il progetto di contenitore e strumento. Un'apertura temporanea non è una soluzione definitiva."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'accettazione deve coprire l'intervallo di livelli previsto, il periodo operativo più lungo e la domanda di prelievo di picco. Pochi secondi con un flacone pieno non bastano. Limiti di pressione e durata della prova devono derivare da vincoli del contenitore, requisiti di ingresso della pompa e ciclo dello strumento."
+        }
+      ]
+    },
+    {
+      "title": "6. Dimensionare il percorso del gas per domanda e perdita di carico ammessa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A pressione e temperatura approssimativamente uguali, la portata volumetrica del gas in ingresso deve in genere sostituire il volume di liquido prelevato. Prima di confrontare valori nominali di portata gas, riportarli a riferimenti compatibili di pressione e temperatura. Il dato di portata di un filtro è significativo solo con la sua differenza di pressione e le condizioni di prova."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dato di selezione",
+            "Dati da reperire"
+          ],
+          "rows": [
+            [
+              "Domanda massima di prelievo",
+              "Portata del liquido simultanea e di picco, con il fabbisogno corrispondente di ricambio del gas"
+            ],
+            [
+              "Scostamento di pressione ammesso nello spazio di testa",
+              "Limiti del contenitore, requisiti di ingresso della pompa e vincoli di processo"
+            ],
+            [
+              "Perdita di carico nel percorso del gas",
+              "Perdite di filtro, tubo e raccordi alla portata gas pertinente"
+            ],
+            [
+              "Bagnatura ed esposizione chimica",
+              "Compatibilità con liquido e vapori, orientamento di montaggio e drenaggio"
+            ],
+            [
+              "Servizio e manutenzione",
+              "Criteri di sostituzione del fornitore e metodo per rilevare perdite di carico anomale"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un'apertura più ampia da sola non definisce la selezione. Per stabilire dimensione dei pori della membrana o soglia di allarme per depressione servono i requisiti dell'applicazione. Valutare insieme filtrazione, controllo della contaminazione, compatibilità chimica e resistenza del percorso del gas."
+        }
+      ]
+    },
+    {
+      "title": "7. Riprendere la selezione della pompa dopo aver verificato l'alimentazione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Riportare serbatoio, percorso di ingresso e carico in mandata alle condizioni previste, quindi valutare se la pompa svolge la funzione. Le classi di portata DPL30 da 300 mL/min e DPL60 da 600 mL/min servono alla preselezione. L'erogazione utile dipende comunque da pressione di esercizio, liquido e condizioni di ingresso."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con ricambio del gas o aspirazione limitati, una pompa più grande può aumentare la domanda istantanea senza ripristinare la portata. Una volta note le condizioni del sistema, usare la curva pertinente e le misure dell'assieme per decidere se cambiare modello, diametro dei tubi o tempi di controllo."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/suction-vs-discharge-resistance-diaphragm-pump/",
+              "label": "Resistenza in aspirazione e in mandata a confronto"
+            },
+            {
+              "href": "/resources/technical-articles/300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss/",
+              "label": "Diagnosi del peggioramento dell'autoadescamento"
+            },
+            {
+              "href": "/resources/technical-articles/300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow/",
+              "label": "Motore in funzione senza erogazione di liquido"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Curve portata-pressione e punto di lavoro effettivo"
+            },
+            {
+              "href": "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/",
+              "label": "Guida alla scelta della pompa a membrana per liquidi DPL30"
+            },
+            {
+              "href": "/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/",
+              "label": "Guida alla scelta della pompa a membrana per liquidi DPL60"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-multiple-wash-nozzles-flow-balance/",
+              "label": "Erogazione disuniforme da più ugelli di lavaggio"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "Pompe miniaturizzate a membrana per liquidi"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Se la portata torna normale aprendo il tappo, la pompa è sicuramente integra?",
+      "answer": "Mostra che la modifica delle condizioni del contenitore ha influito sull'erogazione. Da sola non esclude problemi della pompa o ingressi di aria. Confermare la causa con un confronto autorizzato dello sfiato e misure di pressione sincronizzate."
+    },
+    {
+      "question": "Perché anche un flacone con sfiato può andare in depressione?",
+      "answer": "Il gas richiede una differenza di pressione per passare attraverso filtro, tubi e raccordi. Un percorso piccolo, ostruito, bagnato o immerso può non ricambiare il gas alla velocità richiesta dal prelievo."
+    },
+    {
+      "question": "Ogni contenitore chiuso deve avere un foro di sfiato?",
+      "answer": "Sacche collassabili, serbatoi pressurizzati e contenitori ad atmosfera controllata usano sistemi propri di compensazione del volume o controllo della pressione. Verificare il progetto previsto prima di modificare il contenitore."
+    },
+    {
+      "question": "A quale depressione deve scattare l'allarme?",
+      "answer": "Impostarla da limiti del contenitore, condizioni di ingresso della pompa e requisiti dello strumento. Il valore di −16.9 kPa dell'articolo è un calcolo ipotetico e non definisce la soglia di allarme o la pressione ammessa del prodotto."
+    },
+    {
+      "question": "Una pompa più grande evita il calo graduale della portata?",
+      "answer": "Prima risolvere le limitazioni al ricambio di gas o all'alimentazione in ingresso. Poi verificare pompa, erogazione e ciclo richiesti nelle condizioni di lavoro effettive."
+    }
+  ],
+  "cta": {
+    "title": "Definisci una specifica verificabile per la pompa in base alle condizioni di esercizio",
+    "description": "Indica liquido, volume o portata richiesti, tempi, circuito fluidico e vincoli di installazione per valutare configurazione della pompa e metodo di verifica.",
+    "contactLabel": "Contatta l'assistenza tecnica",
+    "productsLabel": "Esplora i prodotti correlati",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

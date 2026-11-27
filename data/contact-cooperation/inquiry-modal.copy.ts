@@ -8,7 +8,28 @@ type InquiryModalCopy = {
   messagePlaceholder: string;
 };
 
-export const inquiryModalCopy: Record<LocaleCode, InquiryModalCopy> = {
+export const inquiryModalCopy: Record<LocaleCode | "de" | "it" | "hi", InquiryModalCopy> = {
+  de: {
+    title: "Kontakt aufnehmen",
+    description: "Hinterlassen Sie Ihre Kontaktdaten und beschreiben Sie Ihr Anliegen. Unser Team meldet sich bei Ihnen.",
+    closeLabel: "Kontaktformular schließen",
+    messageLabel: "Beschreibung des Problems",
+    messagePlaceholder: "Geben Sie Produktmodell, Medium, Betriebsbedingungen und beobachtete Symptome an. Sie können Fotos oder Unterlagen anhängen.",
+  },
+  hi: {
+    title: "संपर्क करें",
+    description: "अपनी संपर्क जानकारी और ज़रूरत बताएँ। हमारी टीम आपसे संपर्क करेगी।",
+    closeLabel: "संपर्क फ़ॉर्म बंद करें",
+    messageLabel: "समस्या का विवरण",
+    messagePlaceholder: "उत्पाद का मॉडल, तरल, संचालन की स्थितियाँ और समस्या के लक्षण बताएँ। तस्वीरें या संबंधित दस्तावेज़ भी जोड़ सकते हैं।",
+  },
+  it: {
+    title: "Contattaci",
+    description: "Lascia i tuoi recapiti e descrivi la tua richiesta. Il nostro team ti ricontatterà.",
+    closeLabel: "Chiudi il modulo di contatto",
+    messageLabel: "Descrizione del problema",
+    messagePlaceholder: "Indica modello, fluido, condizioni operative e problema riscontrato. Puoi allegare foto o documenti pertinenti.",
+  },
   "zh-CN": {
     title: "联系我们",
     description: "请留下联系方式并说明您的需求，我们会安排相关人员与您沟通。",

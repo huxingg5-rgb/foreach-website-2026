@@ -241,6 +241,7 @@ export type ContactFormData = {
    requestTypes: string[]; // 需求类型下拉选项
    productGroups: ContactProductGroup[]; // 目标产品 / 部件类型分组下拉选项
    projectStages: string[]; // 当前阶段下拉选项
+   submissionValues?: Record<"requestType" | "productType" | "projectStage", Readonly<Record<string, string>>>;
 };
 
 /* =========================================================

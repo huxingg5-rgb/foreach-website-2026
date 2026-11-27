@@ -8,12 +8,12 @@ import ConfiguratorDialogFrame from "@/components/products/configurator/Configur
 import formStyles from "@/components/products/configurator/FlangedTubingConfigurator.module.css";
 import { cadRequestMessage, getCadRequestCopy, type CadDrawingType, type CadRequestConfiguration } from "@/data/products/detail/cad-request";
 import { getSelectionWorkspaceCopy } from "@/data/products/detail/selection-workspace-copy";
-import type { ProductDetailResourceLocale } from "@/data/products/detail/product-detail-resources";
+import type { ProductDetailResourceCopyLocale } from "@/data/products/detail/product-detail-resources";
 import { getProductDetailResourceCopy } from "@/data/products/detail/product-detail-resources";
 import styles from "./PistonCadRequestModal.module.css";
 
 type Props = {
-  locale: ProductDetailResourceLocale;
+  locale: ProductDetailResourceCopyLocale;
   productName: string; productSeries: string; productModel: string; productType?: string;
   configurations?: CadRequestConfiguration[]; initialConfigurationId?: string | null;
   referenceConfiguration?: CadRequestConfiguration;
@@ -35,7 +35,7 @@ async function postInquiry(url: string, payload: Record<string, unknown>) {
   return result;
 }
 
-function errorMessage(error: unknown, locale: ProductDetailResourceLocale) {
+function errorMessage(error: unknown, locale: ProductDetailResourceCopyLocale) {
   const copy = getProductDetailResourceCopy(locale);
   const code = error instanceof Error ? error.message : "request_failed";
   const messages: Record<string, string> = {
@@ -60,6 +60,7 @@ export default function CadRequestModal({ locale, productName, productSeries, pr
   configurations: savedConfigurations = [], initialConfigurationId, referenceConfiguration, onDrawingTypesChange, onClose }: Props) {
   const copy = getProductDetailResourceCopy(locale), cadCopy = getCadRequestCopy(locale);
   const workspaceCopy = getSelectionWorkspaceCopy(locale);
+  const requestLocale = locale === "de" ? "en" : locale;
   const drawingOptions: { value: CadDrawingType; label: string }[] = [
     { value: "2d", label: cadCopy.twoD }, { value: "3d", label: cadCopy.threeD },
   ];
@@ -162,7 +163,7 @@ export default function CadRequestModal({ locale, productName, productSeries, pr
     busyRef.current = true;
     setPhase("sending"); setError("");
     try {
-      await postInquiry("/api/inquiry/send-code", { email: normalizedEmail, locale });
+      await postInquiry("/api/inquiry/send-code", { email: normalizedEmail, locale: requestLocale });
       setVerifiedEmail(""); setCode(""); setSentTo(normalizedEmail); setCountdown(60);
     } catch (failure) {
       if (failure instanceof Error && failure.message === "send_too_frequently") setCountdown(60);
@@ -193,7 +194,7 @@ export default function CadRequestModal({ locale, productName, productSeries, pr
       }
       setPhase("submitting");
       const result = await postInquiry("/api/inquiry/submit", {
-        company: company.trim(), email: normalizedEmail, requestType: "CAD", locale,
+        company: company.trim(), email: normalizedEmail, requestType: "CAD", locale: requestLocale,
         productType: configuration.productType || productType || productName,
         productName, productSeries: configuration.productSeries || productSeries,
         productModel: model, targetModel: model, message: requestMessage,

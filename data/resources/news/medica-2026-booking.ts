@@ -13,7 +13,7 @@ import {
   type BookingProduct,
 } from "@/lib/cloudflare/booking";
 
-export type MedicaBookingLocale = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
+export type MedicaBookingLocale = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru" | "de" | "it";
 
 export const MEDICA_BOOKING_FORM_ID = "medica_2026_booking_form";
 export const MEDICA_BOOKING_ANCHOR_ID = "medica-booking";
@@ -60,6 +60,47 @@ export type MedicaBookingCopy = {
 };
 
 export const MEDICA_BOOKING_COPY: Record<MedicaBookingLocale, MedicaBookingCopy> = {
+  de: {
+    title: "Termin vereinbaren",
+    subtitle: "MEDICA 2026 · Stand 1H39-1 · 16.–19. Nov.",
+    name: "Name",
+    namePlaceholder: "Ihr Name",
+    contact: "Telefon / WhatsApp (optional)",
+    contactPlaceholder: "Telefon, WhatsApp oder WeChat",
+    email: "E-Mail",
+    emailPlaceholder: "name@unternehmen.de",
+    products: "Gewünschte Produkte",
+    productsPlaceholder: "Produktgruppe auswählen",
+    message: "Nachricht (optional)",
+    messagePlaceholder: "z. B. gewünschte Modelle, Musterbedarf oder Wunschtermin",
+    attach: "Dateien anhängen",
+    attachTip: "Zeichnungen, PDFs, Bilder usw. Bis zu 5 Dateien mit insgesamt 20 MB.",
+    removeFile: "Datei entfernen",
+    productLabels: {
+      pumps: "Pumpen",
+      valves: "Ventile",
+      probes: "Sonden und Kanülen",
+      fittings: "Fluidik-Fittings",
+      tubing: "Schläuche und Kapillaren",
+      "smart-control": "Sensor- und Detektionsmodule",
+      other: "Sonstiges / noch offen",
+    },
+    submit: "Senden",
+    submitting: "Wird gesendet…",
+    privacyPrefix: "Mit dem Absenden stimmen Sie unserer",
+    privacyLink: "Datenschutzerklärung zu",
+    privacyHref: "/de/privacy-policy/",
+    messages: {
+      nameRequired: "Geben Sie bitte Ihren Namen ein.",
+      emailInvalid: "Geben Sie bitte eine gültige E-Mail-Adresse ein.",
+      productsRequired: "Wählen Sie bitte eine Produktgruppe aus.",
+      tooFrequent: "Zu viele Anfragen. Warten Sie bitte einen Moment.",
+      closed: "Die Terminbuchung ist geschlossen. Wenden Sie sich bitte über die Kontaktseite an uns.",
+      submitSuccess: "Vielen Dank. Wir melden uns in Kürze per E-Mail, um Ihren Termin zu bestätigen.",
+      submitFailed: "Beim Senden ist ein Fehler aufgetreten. Versuchen Sie es später erneut.",
+      attachmentInvalid: "Maximal 5 Dateien mit insgesamt 20 MB. Erlaubt sind PDF-, Office-, Bild-, ZIP-/RAR- sowie DXF-/DWG-Dateien.",
+    },
+  },
   "zh-CN": {
     title: "预约现场洽谈",
     subtitle: "MEDICA 2026 · 展位 1H39-1 · 11\u00a0月\u00a016\u00a0–\u2060\u00a019\u00a0日", // 日期用不换行空格，窄屏不拆行
@@ -99,6 +140,30 @@ export const MEDICA_BOOKING_COPY: Record<MedicaBookingLocale, MedicaBookingCopy>
       submitSuccess: "预约已收到，我们会尽快通过邮件与您确认洽谈时间。",
       submitFailed: "发送失败，请稍后重试，或直接致电 0755-8655 3831。",
       attachmentInvalid: "附件不符合要求：最多 5 个，合计不超过 20 MB，支持 PDF、Office、图片、压缩包、DXF/DWG。",
+    },
+  },
+  it: {
+    title: "Prenota un incontro",
+    subtitle: "MEDICA 2026 · Stand 1H39-1 · 16–19 nov.",
+    name: "Nome", namePlaceholder: "Il tuo nome",
+    contact: "Telefono / WhatsApp (facoltativo)", contactPlaceholder: "Telefono, WhatsApp o WeChat",
+    email: "E-mail", emailPlaceholder: "nome@azienda.it",
+    products: "Prodotti di interesse", productsPlaceholder: "Seleziona una categoria di prodotti",
+    message: "Messaggio (facoltativo)", messagePlaceholder: "Ad esempio: modelli richiesti, campioni o orario preferito",
+    attach: "Allega file", attachTip: "Disegni, PDF, immagini e altri documenti. Fino a 5 file per un totale di 20 MB.",
+    removeFile: "Rimuovi il file",
+    productLabels: { pumps: "Pompe", valves: "Valvole", probes: "Sonde e aghi", fittings: "Raccordi fluidici", tubing: "Tubi", "smart-control": "Moduli di controllo intelligente", other: "Altro / da definire" },
+    submit: "Invia", submitting: "Invio in corso…",
+    privacyPrefix: "Con l’invio accetti la nostra", privacyLink: "informativa sulla privacy", privacyHref: "/it/privacy-policy/",
+    messages: {
+      nameRequired: "Inserisci il tuo nome.",
+      emailInvalid: "Inserisci un indirizzo e-mail valido.",
+      productsRequired: "Seleziona almeno una categoria di prodotti.",
+      tooFrequent: "Troppe richieste. Attendi un momento e riprova.",
+      closed: "Le prenotazioni sono chiuse. Puoi scriverci dalla pagina dei contatti.",
+      submitSuccess: "Grazie. Ti contatteremo via e-mail per confermare l’incontro.",
+      submitFailed: "Invio non riuscito. Riprova più tardi.",
+      attachmentInvalid: "Massimo 5 file per un totale di 20 MB. Sono ammessi PDF, file Office, immagini, ZIP/RAR e DXF/DWG.",
     },
   },
   en: {

@@ -13,6 +13,8 @@ export const barbedFittingExpansionRatioSlug = "barbed-fitting-expansion-ratio";
 export const fittingMaterialSelectionSlug = "fitting-material-selection-guide";
 export const femaleThreadAdaptersSlug = "female-thread-adapters-selection-guide";
 export const bulkheadBarbedFittingSlug = "what-is-a-bulkhead-barbed-fitting";
+export const samplingProbeSelectionSlug = "sampling-probe-selection-guide";
+export const samplingProbeSectionIds = ["selection-inputs", "inner-diameter", "outer-diameter", "effective-length", "tip-geometry", "side-holes"] as const;
 
 // Locale-limited articles share this small registry with the header so the
 // language switcher never needs to ship article bodies to the browser.

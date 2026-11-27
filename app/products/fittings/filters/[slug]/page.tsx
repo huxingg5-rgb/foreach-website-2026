@@ -1,5 +1,7 @@
 import FittingLocalizedSelectionContent from "@/components/products/detail/FittingLocalizedSelectionContent";
+import type { GermanProductDetailContent } from "@/data/products/detail/product-detail-content.de";
 import type {
+  ComponentProps,
   ComponentType,
   ReactNode,
 } from "react";
@@ -15,6 +17,7 @@ import {
 import ProductDetailClient from "@/components/products/detail/ProductDetailClient";
 import QuickConnectDetailContent from "@/components/products/detail/QuickConnectDetailContent";
 import { withRemainingFittingChineseData } from "@/data/products/detail/remaining-fitting-detail.zh";
+import { getFittingModelTopic } from "@/data/products/detail/fitting-product-copy.intl";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
@@ -38,6 +41,8 @@ type DetailRecord = {
 };
 
 type PageProps = {
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: ComponentProps<typeof ProductDetailClient>["localizedDetail"];
   renderLocale?: TechnicalArticleLocale;
   params: Promise<{
     slug: string;
@@ -54,6 +59,8 @@ const details =
 const ProductDetailView =
   ProductDetailClient as unknown as ComponentType<{
     data: any;
+    germanDetail?: GermanProductDetailContent;
+    localizedDetail?: ComponentProps<typeof ProductDetailClient>["localizedDetail"];
     customerCategoryMode?: "fitting-zh";
     customerCategoryContent?: Partial<Record<"selection" | "delivery", ReactNode>>;
   }>;
@@ -112,18 +119,17 @@ export async function generateMetadata({
     return {};
   }
 
+  const topic = getFittingModelTopic(detail, "zh");
+  const topicTitle = topic ? `${detail.model} ${topic.title} | 恒永达` : undefined;
+  const description = topic?.description ?? (detail.seo?.description || detail.description);
   return {
-    title:
-      detail.seo?.title ||
+    title: topicTitle || detail.seo?.title ||
       `${detail.model} ${detail.name || detail.title || "过滤器"} | Foreach Technology`,
-
-    description:
-      detail.seo?.description ||
-      detail.description,
+    description,
     ...buildProductSocialMetadata({
       data: detail,
-      title: detail.seo?.title || detail.model || detail.title || "Foreach Technology",
-      description: detail.seo?.description || detail.description,
+      title: topicTitle || detail.seo?.title || detail.model || detail.title || "Foreach Technology",
+      description,
       canonicalUrl: `/products/fittings/filters/${slug}/`,
     }),
   };
@@ -132,6 +138,8 @@ export async function generateMetadata({
 export default async function FilterDetailPage({
   params,
   renderLocale = "zh-CN",
+  germanDetail,
+  localizedDetail,
 }: PageProps) {
   const {
     slug,
@@ -148,11 +156,13 @@ export default async function FilterDetailPage({
 
   return (
     <ProductDetailView
+      germanDetail={germanDetail}
+      localizedDetail={localizedDetail}
       data={renderLocale === "zh-CN" ? withRemainingFittingChineseData({ ...detail, productTypeId: "filters" }) : detail}
       customerCategoryMode="fitting-zh"
       customerCategoryContent={renderLocale === "zh-CN" ? {
         selection: <QuickConnectDetailContent data={{ ...detail, productTypeId: "filters" }} section="selection" variant="standalone-fitting" />,
-      } : { selection: <FittingLocalizedSelectionContent data={{ ...detail, productTypeId: "filters" }} locale={renderLocale} /> }}
+      } : { selection: <FittingLocalizedSelectionContent data={{ ...detail, productTypeId: "filters" }} locale={renderLocale} germanDraft={!!germanDetail} contentLocale={localizedDetail?.locale} /> }}
     />
   );
 }

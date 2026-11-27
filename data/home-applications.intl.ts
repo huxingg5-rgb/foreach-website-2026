@@ -1,7 +1,10 @@
 import type { LocaleCode } from "@/lib/i18n";
 import { homeApplicationFlowData } from "./home-application-flow";
+import hindi from "./home-applications.hi.json";
 
-export type HomeApplicationsLocale = Exclude<LocaleCode, "zh-CN">;
+import { getGermanDraftLink, getItalianDraftLink, getHindiDraftLink } from "@/lib/i18n/draft-languages";
+
+export type HomeApplicationsLocale = Exclude<LocaleCode, "zh-CN"> | "de" | "it" | "hi";
 
 const applicationSlugs = [
   "ivd", "life-science", "lab-automation", "analytical-instruments",
@@ -21,6 +24,7 @@ type HomeApplicationsCopy = {
 };
 
 const localizedCopy: Record<HomeApplicationsLocale, HomeApplicationsCopy> = {
+  hi: hindi.copy,
   en: {
     title: "Product Applications",
     subtitle: "Fluid Handling · Instrumentation · Automation",
@@ -36,6 +40,40 @@ const localizedCopy: Record<HomeApplicationsLocale, HomeApplicationsCopy> = {
       "analytical-instruments": { name: "Analytical Instruments", description: "Sample preparation · Fluid routing · Monitoring" },
       "environmental-monitoring": { name: "Environmental Monitoring", description: "Sample collection · Reagent dosing · Fluid monitoring" },
       "synthetic-biology": { name: "Synthetic Biology", description: "Culture media delivery · Multi-channel dispensing · Flow control" },
+    },
+  },
+  it: {
+    title: "Applicazioni",
+    subtitle: "Gestione dei fluidi · Strumentazione · Automazione",
+    imageAlt: "Tecnico FOREACH al lavoro su un’apparecchiatura fluidica",
+    industryTitle: "Applicazioni per settore",
+    introduction: "I nostri componenti fluidici sono utilizzati in strumenti e processi di diversi settori. Scopri le applicazioni e i componenti adatti al tuo sistema.",
+    allApplications: "Tutte le applicazioni",
+    tasksAriaLabel: "Funzioni per la gestione dei fluidi",
+    applications: {
+      ivd: { name: "Diagnostica in vitro (IVD)", description: "Dosaggio di reagenti · Lavaggio · Gestione dei reflui" },
+      "life-science": { name: "Scienze della vita", description: "Preparazione dei campioni · Gestione dei reagenti · Trasferimento di liquidi" },
+      "lab-automation": { name: "Automazione di laboratorio", description: "Gestione dei liquidi · Dosaggio · Integrazione del sistema" },
+      "analytical-instruments": { name: "Strumenti di analisi", description: "Preparazione dei campioni · Instradamento dei fluidi · Monitoraggio" },
+      "environmental-monitoring": { name: "Monitoraggio ambientale", description: "Prelievo di campioni · Dosaggio di reagenti · Monitoraggio dei fluidi" },
+      "synthetic-biology": { name: "Biologia sintetica", description: "Alimentazione con terreni di coltura · Dosaggio multicanale · Regolazione della portata" },
+    },
+  },
+  de: {
+    title: "Anwendungen",
+    subtitle: "Flüssigkeitshandhabung · Geräte · Automation",
+    imageAlt: "FOREACH-Techniker bei der Arbeit an einem Fluidikgerät",
+    industryTitle: "Anwendungen nach Branche",
+    introduction: "Unsere Fluidikkomponenten kommen in Geräten und Arbeitsabläufen verschiedener Branchen zum Einsatz. Finden Sie Anwendungen und passende Komponenten für Ihr System.",
+    allApplications: "Alle Anwendungen",
+    tasksAriaLabel: "Aufgaben der Flüssigkeitshandhabung",
+    applications: {
+      ivd: { name: "In-vitro-Diagnostik (IVD)", description: "Reagenzien dosieren · Spülen · Flüssigabfall abführen" },
+      "life-science": { name: "Lebenswissenschaften", description: "Proben vorbereiten · Reagenzien handhaben · Flüssigkeiten fördern" },
+      "lab-automation": { name: "Laborautomation", description: "Flüssigkeiten handhaben · Dosieren · Systeme integrieren" },
+      "analytical-instruments": { name: "Analysengeräte", description: "Proben vorbereiten · Flüssigkeiten leiten · Überwachen" },
+      "environmental-monitoring": { name: "Umweltüberwachung", description: "Proben entnehmen · Reagenzien dosieren · Fluidik überwachen" },
+      "synthetic-biology": { name: "Synthetische Biologie", description: "Kulturmedien fördern · Mehrkanaldosierung · Durchfluss regeln" },
     },
   },
   es: {
@@ -108,6 +146,20 @@ const localizedCopy: Record<HomeApplicationsLocale, HomeApplicationsCopy> = {
   },
 };
 
+const germanTaskCopy: Record<string, { title: string; description: string }> = {
+  "sample-processing": { title: "Probenverarbeitung", description: "Proben ansaugen, übertragen, mischen und vorbehandeln sowie Flüssigkeiten vor der Detektion steuern." },
+  "reagent-dispensing": { title: "Reagenziendosierung", description: "Kleinste Volumina dosieren, über mehrere Kanäle abgeben und Flüssigkeiten kontinuierlich und gleichmäßig zuführen." },
+  "fluid-path-switching": { title: "Flüssigkeitswege umschalten", description: "Präzise zwischen Reagenzien, Proben und Detektionskanälen umschalten." },
+  "status-monitoring": { title: "Zustände überwachen", description: "Druck, Luftblasen, Leitfähigkeit und andere wichtige Zustände im Flüssigkeitskreislauf überwachen." },
+};
+
+const italianTaskCopy: typeof germanTaskCopy = {
+  "sample-processing": { title: "Preparazione dei campioni", description: "Aspirazione, trasferimento, miscelazione e pretrattamento dei campioni, con controllo dei fluidi prima della rilevazione." },
+  "reagent-dispensing": { title: "Dosaggio dei reagenti", description: "Dosaggio di microvolumi, erogazione multicanale, alimentazione continua e distribuzione uniforme." },
+  "fluid-path-switching": { title: "Commutazione del circuito", description: "Commutazione precisa tra reagenti, campioni e canali di rilevazione." },
+  "status-monitoring": { title: "Monitoraggio del circuito", description: "Monitoraggio della pressione, delle bolle, della conducibilità e di altri parametri del circuito fluidico." },
+};
+
 export function getHomeApplicationsSectionData(locale: HomeApplicationsLocale) {
   const { applications, ...copy } = localizedCopy[locale];
   return {
@@ -116,14 +168,17 @@ export function getHomeApplicationsSectionData(locale: HomeApplicationsLocale) {
     applications: applicationSlugs.map(slug => ({
       slug,
       ...applications[slug],
-      href: `/${locale}/applications/${slug}/`,
+      ...(locale === "de"
+        ? getGermanDraftLink(`/en/applications/${slug}/`)
+        : locale === "it" ? getItalianDraftLink(`/en/applications/${slug}/`)
+        : locale === "hi" ? getHindiDraftLink("/en/applications/" + slug + "/")
+        : { href: `/${locale}/applications/${slug}/`, hrefLang: undefined, title: undefined }),
     })),
-    allApplicationsHref: `/${locale}/applications/`,
+    allApplicationsHref: locale === "hi" ? getHindiDraftLink("/en/applications/").href : locale === "it" ? getItalianDraftLink("/en/applications/").href : `/${locale}/applications/`,
     // These four tasks already have localized copy; leave the Chinese source intact.
     tasks: homeApplicationFlowData.processCards.map(task => ({
       key: task.key,
-      title: task.title[locale],
-      description: task.description[locale],
+      ...(locale === "de" ? germanTaskCopy[task.key] : locale === "it" ? italianTaskCopy[task.key] : locale === "hi" ? hindi.tasks[task.key as keyof typeof hindi.tasks] : { title: task.title[locale], description: task.description[locale] }),
     })),
   };
 }

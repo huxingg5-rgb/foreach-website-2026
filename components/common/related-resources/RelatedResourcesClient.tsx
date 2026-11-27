@@ -13,7 +13,7 @@ import TutorialVideoPlayerModal, {
 } from "@/components/resources/installation-guide/TutorialVideoPlayerModal";
 import TechnicalArticleCard from "@/components/resources/technical-articles/TechnicalArticleCard";
 import type { InstallationGuideCard } from "@/data/resources/installation-guide/installation-guide.types";
-import { getRelatedResourcesText } from "@/data/resources/related-resources/related-resources.intl";
+import { germanRelatedArticleText, getRelatedResourcesText } from "@/data/resources/related-resources/related-resources.intl";
 import { trackResourceView } from "@/lib/analytics/track-event";
 import type { RelatedResourcesData } from "./related-resources.types";
 import styles from "./RelatedResources.module.css";
@@ -170,19 +170,25 @@ function ResourceTrack({
 
 export default function RelatedResourcesClient({
   locale, videos: allRelatedVideos, products: featuredProducts,
-  articles: allRelatedArticles, primaryRelationKey, uiLocale,
+  articles: allRelatedArticles, primaryRelationKey, uiLocale, videoLocale, videoLibraryHref,
 }: RelatedResourcesData) {
   const [selectedVideo, setSelectedVideo] = useState<InstallationGuideCard | null>(null);
   const [playRequestId, setPlayRequestId] = useState(0);
   const ui = getRelatedResourcesText(uiLocale ?? locale);
   const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
+  const videoPrefix = videoLocale ? `/${videoLocale}` : localePrefix;
   const showVideos = allRelatedVideos.length > 0;
   const showProducts = featuredProducts.length > 0;
   const showArticles = allRelatedArticles.length > 0;
+  const articleHeading = uiLocale !== "it" && uiLocale !== "hi" && allRelatedArticles.some(article => article.destinationLanguage)
+    ? germanRelatedArticleText.heading : ui.relatedArticles;
+  const translatedCards = uiLocale === "it" || uiLocale === "hi";
+  const fallbackLabel = uiLocale === "hi" ? " (अंग्रेज़ी में)" : uiLocale === "it" ? " (in inglese)" : " (Englisch)";
+  const hindiVideoFallback = uiLocale === "hi" && videoLibraryHref?.startsWith("/en/");
   const resourceGroupLabel = [
     showVideos ? ui.relatedVideos : null,
     showProducts ? ui.relatedProducts : null,
-    showArticles ? ui.relatedArticles : null,
+    showArticles ? articleHeading : null,
   ].filter((label): label is string => Boolean(label)).join(", ");
 
   function handleVideoSelect(guide: InstallationGuideCard) {
@@ -218,11 +224,12 @@ export default function RelatedResourcesClient({
             {allRelatedVideos.length > 3 && primaryRelationKey ? (
               <Link
                 className={styles.viewAll}
-                href={`${localePrefix}/resources/installation-guide?relationKey=${encodeURIComponent(
+                hrefLang={hindiVideoFallback ? "en" : undefined}
+                href={`${videoLibraryHref ?? `${videoPrefix}/resources/installation-guide`}?relationKey=${encodeURIComponent(
                   primaryRelationKey,
                 )}`}
               >
-                {ui.viewAll}
+                {ui.viewAll}{hindiVideoFallback ? fallbackLabel : null}
               </Link>
             ) : null}
           </div>
@@ -239,6 +246,7 @@ export default function RelatedResourcesClient({
                 key={guide.id}
                 className={styles.trackItem}
                 data-related-track-item
+                lang={translatedCards ? uiLocale : videoLocale ? (guide.detailHref?.startsWith("/en/") ? "en" : videoLocale) : uiLocale === "de" ? locale : undefined}
               >
                 <TutorialVideoCard
                   guide={guide}
@@ -246,6 +254,8 @@ export default function RelatedResourcesClient({
                   onSelect={handleVideoSelect}
                   variant="related"
                   playInline={isFittingOverviewVideo(guide.id)}
+                  detailHrefLang={videoLocale ? (guide.detailHref?.startsWith("/en/") ? "en" : videoLocale) : undefined}
+                  fallbackLabel={translatedCards ? { text: fallbackLabel, lang: uiLocale } : undefined}
                 />
               </div>
             ))}
@@ -278,6 +288,7 @@ export default function RelatedResourcesClient({
                   <Link
                     className={styles.relatedProductCard}
                     href={product.href}
+                    hrefLang={product.destinationLanguage}
                     data-analytics-section="related_products"
                     data-analytics-product-id={product.id}
                     data-analytics-product-name={title}
@@ -296,7 +307,7 @@ export default function RelatedResourcesClient({
                     </div>
 
                     <div className={styles.relatedProductBody}>
-                      <h3 title={title}>{title}</h3>
+                      <h3 title={title}>{title}{product.destinationLanguage === "en" ? fallbackLabel : null}</h3>
                     </div>
                   </Link>
                 </div>
@@ -309,13 +320,13 @@ export default function RelatedResourcesClient({
       {showArticles ? (
         <section className={styles.section}>
           <div className={styles.headingRow}>
-            <h2>{ui.relatedArticles}</h2>
+            <h2>{articleHeading}</h2>
           </div>
 
           <ResourceTrack
             previousLabel={ui.previous}
             nextLabel={ui.next}
-            ariaLabel={ui.relatedArticles}
+            ariaLabel={articleHeading}
             itemCount={allRelatedArticles.length}
             trackClassName={styles.articleTrack}
           >
@@ -327,9 +338,12 @@ export default function RelatedResourcesClient({
               >
                 <TechnicalArticleCard
                   article={article}
-                  href={`${localePrefix}/resources/technical-articles/${article.slug}`}
+                  href={article.href ?? `${localePrefix}/resources/technical-articles/${article.slug}`}
                   locale={locale}
-                  detailText={ui.viewDetails}
+                  detailText={article.destinationLanguage === "de" ? germanRelatedArticleText.action : ui.viewDetails + (translatedCards && article.destinationLanguage === "en" ? fallbackLabel : "")}
+                  detailLang={uiLocale === "de" || translatedCards ? uiLocale : undefined}
+                  contentLanguage={article.contentLanguage}
+                  destinationLanguage={article.destinationLanguage}
                   showSummary
                   showDate
                   showTags={false}
@@ -344,7 +358,7 @@ export default function RelatedResourcesClient({
       {selectedVideo ? (
         <TutorialVideoPlayerModal
           guide={selectedVideo}
-          locale={locale}
+          locale={videoLocale ?? locale}
           playRequestId={playRequestId}
           onClose={() => setSelectedVideo(null)}
         />

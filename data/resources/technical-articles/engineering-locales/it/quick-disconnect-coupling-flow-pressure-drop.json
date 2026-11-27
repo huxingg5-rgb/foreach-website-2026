@@ -1,0 +1,680 @@
+{
+  "metadata": {
+    "title": "Portata dei raccordi a innesto rapido: curve di perdita di carico e calcolo con Kv e Cv",
+    "seoTitle": "Portata e perdita di carico dei raccordi a innesto rapido: guida Kv/Cv | FOREACH",
+    "seoDescription": "Selezionare gli innesti rapidi Q20, Q40 e Q60 con le curve di portata e perdita di carico e le stime Kv/Cv. La guida tratta valvole di intercettazione, linee di aspirazione e rami di alimentazione condivisi.",
+    "coverImage": "/images/resources/technical-articles/instrument-fluidics/quick-disconnect-coupling-flow-pressure-drop-cover.webp",
+    "coverAlt": "Raccordi a innesto rapido Q60 grigi, accoppiati e separati, su fondo bianco"
+  },
+  "deck": "La capacità di flusso di un raccordo a innesto rapido dipende dalla perdita di carico ammissibile, dalle dimensioni del tubo, dalla configurazione della valvola e dalle proprietà del fluido. Si inizia calcolando il flusso necessario, per poi utilizzare una curva flusso-perdita di carico o una stima dei valori Kv/Cv per verificare se la perdita di carico rientri nell’intervallo disponibile nel sistema. Questo manuale, utilizzando gli accoppiamenti FOREACH Q20, Q40 e Q60, spiega come leggere le curve, effettuare i calcoli necessari e selezionare correttamente questi componenti per le linee di aspirazione delle pompe e per le varie ramificazioni di alimentazione.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "La capacità di flusso di un raccordo a innesto rapido dipende dalla perdita di carico ammissibile, dalle dimensioni del tubo, dalla configurazione della valvola e dalle proprietà del fluido. Si inizia calcolando il flusso necessario, per poi utilizzare una curva flusso-perdita di carico o una stima dei valori Kv/Cv per verificare se la perdita di carico rientri nell’intervallo disponibile nel sistema. Questo manuale, utilizzando gli accoppiamenti FOREACH Q20, Q40 e Q60, spiega come leggere le curve, effettuare i calcoli necessari e selezionare correttamente questi componenti per le linee di aspirazione delle pompe e per le varie ramificazioni di alimentazione."
+    },
+    {
+      "type": "paragraph",
+      "text": "Per liquidi poco viscosi simili all’acqua, in regime turbolento stimare la perdita di carico con ΔP ≈ SG × (Q ÷ Kv)² oppure, a perdita assegnata, la portata con Q ≈ Kv × √(ΔP ÷ SG). Q è in m³/h, ΔP in bar e SG è la densità relativa. Le sezioni seguenti riportano letture approssimative delle curve, stime Kv/Cv ed esempi con indicazioni su valvole, viscosità e posizione di montaggio."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Cosa determina il flusso attraverso un raccordo a innesto rapido?",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/instrument-fluidics/quick-disconnect-couplings-photo.webp",
+          "alt": "Tre diversi tipi di raccordi a innesto rapido, con corpi di forma diversa e terminazioni dritte, angolate o filettate.",
+          "caption": "Raccordi a innesto rapido con diversi stili di corpo e tipi di connessioni terminali.",
+          "width": 2000,
+          "height": 2000
+        },
+        {
+          "type": "paragraph",
+          "text": "La pompa o la sorgente di pressione genera il flusso; l’accoppiamento introduce una perdita di carico. Con l’aumentare del flusso, aumenta anche la perdita di carico attraverso l’accoppiamento. In condizioni di flusso turbolento, la perdita di carico varia approssimativamente in proporzione al quadrato del flusso. Secondo la curva relativa all’accoppiamento Q40 da 3/8″, la perdita di carico è di circa 0.23 bar a 10 L/min e di 0.95 bar a 20 L/min: un aumento del flusso di due volte comporta quasi un aumento della perdita di carico di quattro volte."
+        },
+        {
+          "type": "paragraph",
+          "text": "A una data portata, i fattori principali che influenzano la perdita di carico sono:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dimensioni dei tubi: all’interno di una stessa serie, il passaggio da una connessione da 1/8″ a una da 1/4″ può ridurre la perdita di carico di oltre un ordine di grandezza.",
+            "Configurazione delle valvole: un passaggio diretto senza valvole rappresenta la minore resistenza al flusso; le valvole di chiusura e le molle occupano parte del percorso del fluido.",
+            "Forma degli attacchi: i portagomma diritti, gli attacchi a gomito e quelli filettati hanno canali interni diversi.",
+            "Proprietà del fluido: a parità di portata, una maggiore densità relativa o viscosità può aumentare la perdita di carico."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Il diametro interno del tubo indica l’intera sezione interna del tubo di collegamento, non il diametro minimo all’interno del connettore. Per maggiori informazioni sui dimensionamenti, consultare la sezione “Che cos’è un raccordo a innesto rapido?”"
+        }
+      ]
+    },
+    {
+      "title": "Come si legge una curva che rappresenta la relazione tra portata e perdita di carico in un raccordo a innesto rapido?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’asse orizzontale indica la portata in L/min per i liquidi e in Nm³/min per i gas. L’asse verticale indica la perdita di carico attraverso il raccordo in bar. Ogni curva rappresenta una misura dell’attacco del tubo e si può leggere nei due sensi:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Per calcolare la perdita di carico a partire dalla portata, si procede come segue: si individua la curva corrispondente alla portata desiderata, si sposta verso l’alto lungo l’asse verticale fino al valore della perdita di carico.",
+            "Determinazione del flusso a partire dalla perdita di carico consentita: spostarsi a destra dal valore della perdita di carico fino alla curva, quindi verso il basso fino all’asse del flusso."
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Caratteristica grafica.",
+            "Ciò che rappresenta.",
+            "Ciò che non rappresenta."
+          ],
+          "rows": [
+            [
+              "Perdita di carico sull’asse verticale.",
+              "Perdita di carico attraverso il collegamento.",
+              "Pressione di scarico della pompa o valore di pressione di esercizio del collegamento."
+            ],
+            [
+              "Il valore più alto indicato sull’asse del flusso.",
+              "Intervallo di misurazione rappresentato graficamente.",
+              "Capacità di flusso nominale"
+            ],
+            [
+              "Curva di flusso del gas",
+              "Flusso volumetrico di gas alle condizioni standard",
+              "Base per la conversione del flusso di gas in flusso di liquido"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Conversioni di unità utili: 0.69 bar corrisponde approssimativamente a 10 psi; 1.9 L/min corrisponde approssimativamente a 0.5 US gpm; 4.83 bar corrisponde approssimativamente a 70 psi."
+        }
+      ]
+    },
+    {
+      "title": "Tabelle di riferimento per il rapporto tra flusso e perdita di carico Q20, Q40 e Q60",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Queste tabelle contengono valori approssimativi tratti dalle curve di flusso del liquido, utilizzabili per la selezione iniziale e il confronto delle dimensioni dei tubi all’interno di una stessa serie. I coefficienti Kv e Cv sono stime derivate dalle curve, utilizzabili per calcoli preliminari entro i loro intervalli di applicazione. I valori misurati e i calcoli dei coefficienti non devono necessariamente coincidere in ogni punto; i test di accettazione devono essere effettuati utilizzando l’intero sistema collegato."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/instrument-fluidics/q20-series-white.webp",
+          "alt": "Connettore di raccordo rapido Q20, nelle condizioni di collegamento e scollegamento",
+          "caption": "Serie Q20",
+          "width": 1500,
+          "height": 1500
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/instrument-fluidics/q40-series-white.webp",
+          "alt": "Accoppiamento di connessione rapida Q40 nei stati connesso e disconnesso",
+          "caption": "Serie Q40",
+          "width": 1500,
+          "height": 1500
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/instrument-fluidics/q60-series-white.webp",
+          "alt": "Accoppiamento di connessione rapida Q60 nei stati connesso e disconnesso",
+          "caption": "Serie Q60",
+          "width": 1500,
+          "height": 1500
+        },
+        {
+          "type": "subheading",
+          "title": "Serie Q20: diametro interno del tubo da 1.6 a 6.4 mm"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/instrument-fluidics/localized/q20-flow-pressure-drop.it.svg",
+          "alt": "Curve di portata e perdita di carico per gas e liquidi nel modello Q20",
+          "caption": "Figura 1 | Curve di portata e perdita di carico per il modello Q20. Parte superiore: portata di gas in Nm³/min; parte inferiore: portata di liquidi in L/min. Entrambi gli assi verticali indicano la perdita di carico in bar.",
+          "width": 1000,
+          "height": 1260
+        },
+        {
+          "type": "paragraph",
+          "text": "Portata di liquidi e perdita di carico nel modello Q20 (in bar)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Portata (in L/min)",
+            "1/16″ (1.6 mm)",
+            "1/8″ (3.2 mm)",
+            "1/4″ (6.4 mm)"
+          ],
+          "rows": [
+            [
+              "0.2",
+              "≈1.9",
+              "<0.1",
+              "<0.05"
+            ],
+            [
+              "0.5",
+              "≈4.3",
+              "<0.1",
+              "<0.05"
+            ],
+            [
+              "1",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈0.2",
+              "<0.05"
+            ],
+            [
+              "2",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈1.0",
+              "≈0.07"
+            ],
+            [
+              "4",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈4.0",
+              "≈0.3"
+            ],
+            [
+              "8",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈1.3"
+            ],
+            [
+              "12",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈2.8"
+            ],
+            [
+              "Flusso a una perdita di carico di 1 bar (L/min)",
+              "≈0.1",
+              "≈2.0",
+              "≈7.1"
+            ],
+            [
+              "Valori stimati di Kv/Cv",
+              "La curva è troppo ripida per permettere una stima accurata",
+              "0.12 / 0.14",
+              "0.43 / 0.49"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "“Al di fuori dell’intervallo di misurazione indicato sulla grafica” significa che la perdita di carico a quel flusso supera il limite di 4.83 bar indicato sulla tabella."
+        },
+        {
+          "type": "paragraph",
+          "text": "La connessione Q20 da 1/16″ è adatta a flussi molto bassi: la perdita di carico raggiunge circa 1 bar a 0.1 L/min e supera i 4 bar a 0.5 L/min. Per circuiti di alimentazione o lavaggio che richiedono flussi superiori a 1 L/min, valutare prima l’uso della connessione da 1/8″ o 1/4″."
+        },
+        {
+          "type": "subheading",
+          "title": "Serie Q40: diametro interno del tubo da 6.4–9.5 mm"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/instrument-fluidics/localized/q40-flow-pressure-drop.it.svg",
+          "alt": "Curve di flusso e perdita di carico per gas e liquidi nella serie Q40",
+          "caption": "Figura 2 | Curve di flusso e perdita di carico nella serie Q40. Parte superiore: flusso di gas in Nm³/min; parte inferiore: flusso di liquido in L/min. Entrambi gli assi verticali indicano la perdita di carico in bar.",
+          "width": 1000,
+          "height": 1428
+        },
+        {
+          "type": "paragraph",
+          "text": "Flusso di liquido e perdita di carico nella serie Q40 (espressa in bar)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Portata (in L/min)",
+            "1/4″ (6.4 mm)",
+            "Diametro del tubo: 3/8″ (9.5 mm)"
+          ],
+          "rows": [
+            [
+              "2",
+              "≈0.3",
+              "<0.05"
+            ],
+            [
+              "4",
+              "≈0.7",
+              "<0.05"
+            ],
+            [
+              "8",
+              "≈1.9",
+              "≈0.14"
+            ],
+            [
+              "12",
+              "≈4.3",
+              "≈0.33"
+            ],
+            [
+              "20",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈1.0"
+            ],
+            [
+              "30",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈2.2"
+            ],
+            [
+              "40",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈3.9"
+            ],
+            [
+              "Flusso a una perdita di carico di 1 bar (L/min)",
+              "≈5.4",
+              "≈20"
+            ],
+            [
+              "Valori stimati di Kv/Cv",
+              "0.35 / 0.40",
+              "1.22 / 1.41"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Serie Q60: diametro interno del tubo da 9.5–19.0 mm"
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/instrument-fluidics/localized/q60-flow-pressure-drop.it.svg",
+          "alt": "Curve di flusso e perdita di carico per gas e liquidi nella serie Q60",
+          "caption": "Figura 3 | Curve di flusso e perdita di carico nella serie Q60. Parte superiore: flusso di gas in Nm³/min; parte inferiore: flusso di liquido in L/min. Entrambi gli assi verticali indicano la perdita di carico in bar.",
+          "width": 1000,
+          "height": 1355
+        },
+        {
+          "type": "paragraph",
+          "text": "Flusso di liquido e perdita di carico nella serie Q60 (espressa in bar)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Portata (in L/min)",
+            "Diametro del tubo: 3/8″ (9.5 mm)",
+            "1/2″ (12.7 mm)"
+          ],
+          "rows": [
+            [
+              "5",
+              "≈0.3",
+              "<0.05"
+            ],
+            [
+              "10",
+              "≈0.65",
+              "<0.05"
+            ],
+            [
+              "20",
+              "≈2.0",
+              "≈0.10"
+            ],
+            [
+              "30",
+              "≈4.4 *",
+              "≈0.27"
+            ],
+            [
+              "50",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈0.8"
+            ],
+            [
+              "80",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈2.0"
+            ],
+            [
+              "100",
+              "Al di fuori dell’intervallo di misurazione indicato sulla grafica",
+              "≈3.2"
+            ],
+            [
+              "Flusso a una perdita di carico di 1 bar (L/min)",
+              "≈13",
+              "≈56"
+            ],
+            [
+              "Valori stimati di Kv/Cv",
+              "0.85 / 0.98",
+              "3.4 / 3.9"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "* Questo calo di pressione supera la valutazione di pressione operativa del Q60-PP, che è di 4.2 bar. Questo punto serve soltanto a illustrare la tendenza della curva."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le curve Q60 riguardano connessioni in tubo da 3/8″ e 1/2″; non si devono estrapolare per dimensioni superiori a 3/4″ (19.0 mm) semplicemente modificando il diametro del tubo. Il Q60-PP ha una valutazione di pressione operativa di 4.2 bar. Quando la pressione sul lato a valle è pari alla pressione atmosferica o a una pressione positiva, i valori della curva al di sopra di tale calo di pressione non rappresentano condizioni operative valide. Per maggiori informazioni, consultare l’articolo sulle valutazioni di pressione nella sezione “Letture Consigliate”."
+        }
+      ]
+    },
+    {
+      "title": "Calcolo del flusso e del calo di pressione utilizzando i coefficienti Kv o Cv",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Utilizzare i coefficienti di flusso esclusivamente nell’intervallo rappresentato sulla grafica e nelle condizioni di flusso applicabili. Il Kv indica il flusso d’acqua in m³/h per un calo di pressione di 1 bar; il Cv indica il flusso d’acqua in galloni al minuto statunitensi per un calo di pressione di 1 psi. La conversione tra Kv e Cv è approssimativamente Cv ≈ 1.156 × Kv. Non si devono effettuare estrapolazioni al di fuori dell’intervallo indicato sulla grafica."
+        },
+        {
+          "type": "formula",
+          "expression": "Pressure drop from flow: ΔP = SG × (Q ÷ Kv)²"
+        },
+        {
+          "type": "formula",
+          "expression": "Flow from allowable pressure drop: Q = Kv × √(ΔP ÷ SG)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Q è in m³/h (1 m³/h ≈ 16.7 L/min), ΔP in bar e SG indica la densità relativa. Per l’acqua SG = 1."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esempio 1 — A un circuito di lavaggio servono 12 L/min attraverso un innesto Q40 da 3/8″ (Kv ≈ 1.22), con densità relativa del liquido pari a 1.0. Convertire 12 L/min in 0.72 m³/h: ΔP = 1.0 × (0.72 ÷ 1.22)² ≈ 0.35 bar, valore vicino ai 0.33 bar letti nella tabella."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esempio 2 — Un ramo ammette solo 0.5 bar attraverso un raccordo Q20 da 1/4″ (Kv ≈ 0.43). Q = 0.43 × √0.5 ≈ 0.30 m³/h, pari a circa 5 L/min."
+        },
+        {
+          "type": "paragraph",
+          "text": "Esempio 3 – Due coppie di connettori identici collegati in serie producono una perdita di carico doppia rispetto a una singola coppia con lo stesso flusso. Il valore complessivo del coefficiente Kv è quindi uguale al valore di Kv di una singola coppia diviso per √2. Per componenti diversi collegati in serie, si applica la formula: 1/Kv_total² = 1/Kv₁² + 1/Kv₂² + … ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per includere i connettori nella calcolo della perdita di carico di un sistema, inserite i valori di Cv nella relativa riga del calcolatore di resistenza fluida FOREACH. La guida del calcolatore, disponibile in “Letture aggiuntive”, spiega dettagliatamente il procedimento."
+        },
+        {
+          "type": "paragraph",
+          "text": "Queste equazioni sono valide per liquidi la cui viscosità è simile a quella dell’acqua, in condizioni di flusso turbolento. A flussi molto bassi o a viscosità elevate, il flusso può avvicinarsi al regime laminare, in cui la perdita di carico è più proporzionale al flusso stesso; in questo caso, l’uso della legge del quadrato per la stima della perdita di carico diventa meno accurato. È quindi consigliabile effettuare test con il fluido reale. I valori Kv/Cv indicati qui sono stime derivate da curve, utilizzabili per dimensionamenti preliminari."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/en/resources/calculators/fluid-resistance/",
+              "label": "Aprire il calcolatore di resistenza fluida."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "In che modo le valvole di chiusura influenzano la perdita di carico nei raccordi di tipo quick disconnect?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un connettore dotato di valvola chiude automaticamente la sua apertura quando viene scollegato; inoltre, sia la valvola che la molla presenti nel connettore aumentano la resistenza al flusso anche quando è collegato, causando una perdita di carico maggiore rispetto a un design lineare senza valvole. Quando entrambe le metà del connettore sono dotate di valvole, due elementi valvolari rimangono nella traiettoria del flusso, generando quindi la maggiore resistenza possibile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando lo spazio disponibile per il flusso è limitato:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Utilizzare un componente dotato di valvola soltanto sul lato che deve essere chiuso dopo la disconnessione; utilizzare un componente senza valvola sull’altro lato, se la applicazione lo permette.",
+            "Se entrambi i lati richiedono la chiusura, considerare l’uso di un tubo più grosso, piuttosto che installare valvole aggiuntive.",
+            "Un innesto incompleto può lasciare le valvole parzialmente chiuse e ridurre molto la portata. Verificare il completo aggancio delle due metà prima di esaminare altre cause."
+          ],
+          "ordered": true
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per il rischio di ritenzione di liquido o di fuoriuscita dopo la disconnessione, consultare le informazioni pertinenti.",
+              "label": "Che cos’è un raccordo a innesto rapido?",
+              "href": "/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "In che modo i codici dei modelli corrispondono alle etichette delle curve di misurazione?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nei modelli con portagomma, le due cifre dopo la serie indicano il diametro interno del tubo abbinato. Per la corrispondenza con le curve usare la tabella seguente."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Codice di dimensione.",
+            "Diametro interno del tubo",
+            "Legenda della curva",
+            "Serie"
+          ],
+          "rows": [
+            [
+              "01",
+              "1.6 mm",
+              "1/16″",
+              "Q20"
+            ],
+            [
+              "02",
+              "3.2 mm",
+              "1/8″",
+              "Q20"
+            ],
+            [
+              "03",
+              "4.8 mm",
+              "3/16″ (non coperto da queste curve)",
+              "Q20"
+            ],
+            [
+              "04",
+              "6.4 mm",
+              "1/4″",
+              "Q20, Q40"
+            ],
+            [
+              "06",
+              "9.5 mm",
+              "3/8″",
+              "Q40, Q60"
+            ],
+            [
+              "08",
+              "12.7 mm",
+              "1/2″",
+              "Q60"
+            ],
+            [
+              "12",
+              "19.0 mm",
+              "3/4″ (non indicato da queste curve)",
+              "Q60"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Per il modello Q2004-PNV-SPPE: “Q20” indica la serie; “04” indica un tubo di 6.4 mm (1/4″); “P” indica la parte maschile del connettore; “N” indica che il dispositivo non è montato su pannello; “V” indica la presenza di una valvola; “S”, “PP” ed “E” indicano rispettivamente una terminazione dritta, un involucro in PP e un sigillo in EPDM. Le terminazioni filettate utilizzano un diverso codice di identificazione; ad esempio, “Q4005” indica una connessione filettata. Si consiglia di consultare il manuale completo del modello."
+        }
+      ]
+    },
+    {
+      "title": "Perché la linea di aspirazione di una pompa richiede una perdita di carico inferiore nel collegamento?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Per un serbatoio sfiatato, un’atmosfera (circa 1 bar), più l’eventuale battente positivo, è il limite teorico per il differenziale, non il margine utilizzabile in progetto. La pressione richiesta in ingresso dalla pompa e le perdite in tubi e filtri riducono il margine, spesso a pochi decimi di bar per il raccordo. Una perdita eccessiva in aspirazione riduce la portata erogata e favorisce il rilascio di gas disciolti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scegliere i collegamenti sul lato di aspirazione in modo da ridurre al minimo la perdita di carico. A un flusso di 2 L/min, il connettore Q20 da 1/8″ comporta una perdita di carico di circa 1.0 bar, avvicinandosi così al limite teorico di un’atmosfera; il connettore da 1/4″, invece, comporta una perdita di circa 0.07 bar."
+        },
+        {
+          "type": "paragraph",
+          "text": "È necessario verificare anche l’efficacia della sigillazione in condizioni di vuoto. L’aria introdotta durante la riconnesione e il tempo necessario per purgarla possono influenzare la quantità di liquido erogata inizialmente. Progettare i circuiti di lavaggio in modo da garantire un flusso sufficiente durante la fase di lavaggio, tenendo conto del flusso istantaneo e non del consumo medio al minuto."
+        }
+      ]
+    },
+    {
+      "title": "Come deve essere dimensionato un connettore di ingresso condiviso per più rami?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un connettore situato all’ingresso comune deve essere in grado di gestire la somma dei flussi provenienti da tutti i rami che vengono attivati contemporaneamente:"
+        },
+        {
+          "type": "formula",
+          "expression": "Q_inlet = Q_branch1 + Q_branch2 + … (simultaneously active branches only)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ad esempio, tre rami di lavaggio che richiedono ciascuno un flusso di 0.5 L/min comportano un totale di 1.5 L/min all’ingresso comune quando tutti vengono attivati insieme. Utilizzando i valori di Kv, un connettore Q20 da 1/8″ comporta una perdita di carico di circa 0.56 bar; un connettore da 1/4″, invece, circa 0.04 bar. Su una linea di aspirazione, si consiglia di valutare prima l’opzione del connettore da 1/4″ e di verificare il margine di pressione all’ingresso con l’intera configurazione installata."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per un funzionamento sequenziale, utilizzare la massima richiesta per singolo passaggio. Un flusso totale in ingresso adeguato non garantisce necessariamente flussi uguali nei vari rami: la lunghezza dei tubi, le valvole e le aperture delle siringhe creano resistenze diverse. Misurare il flusso in uscita da ciascun ramo."
+        }
+      ]
+    },
+    {
+      "title": "Le curve di flusso dei gas possono essere utilizzate anche per i liquidi? In che modo la viscosità influisce?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le curve dei gas riportano una portata volumetrica in condizioni normalizzate. Il gas è comprimibile e la portata reale dipende anche dalla pressione in ingresso. Gas e liquidi seguono relazioni diverse. La sola conversione delle unità non rende intercambiabili le curve."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il densità relativa è già incluso nelle equazioni sopra riportate. La viscosità richiede un’analisi separata: formulazioni a base di glicerolo, proteine o sali concentrati possono essere più vischiose dell’acqua, e una temperatura più bassa può aumentare ulteriormente la viscosità. Di conseguenza, le perdite di carico possono superare i valori indicati nelle tabelle di riferimento. Testare l’intera connessione utilizzando il liquido specifico alle sue condizioni operative."
+        }
+      ]
+    },
+    {
+      "title": "Come verificare il flusso e la perdita di carico dopo l’installazione di un raccordo a innesto rapido?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Controllare.",
+            "Registrare i dati.",
+            "Scopo della verifica."
+          ],
+          "rows": [
+            [
+              "Configurazione completa del sistema.",
+              "Modelli completi di entrambe le metà dell’apparecchio, configurazione delle valvole, diametro e lunghezza dei tubi.",
+              "Confronto di componenti assemblati in modo identico."
+            ],
+            [
+              "Differenza di pressione tra i componenti collegati.",
+              "Pressioni a monte e a valle al portata obiettivo; registrare il flusso in uscita prima e dopo l’installazione come verifica funzionale separata.",
+              "Verificare la disponibilità di margine di pressione."
+            ],
+            [
+              "Funzionamento di un singolo ramo dell’apparecchio.",
+              "Flusso in uscita, tempo di avvio e ripetibilità dei risultati tra i cicli di funzionamento.",
+              "Confermare che le prestazioni dell’apparecchio soddisfino le esigenze del processo."
+            ],
+            [
+              "Funzionamento simultaneo di più rami dell’apparecchio.",
+              "Flusso totale, distribuzione dei flussi nei rami e perdita di carico all’ingresso condiviso",
+              "Verifica della distribuzione del flusso"
+            ],
+            [
+              "Tubo di aspirazione",
+              "Pressione all’ingresso, presenza di bolle d’aria e portata a basso livello del serbatoio",
+              "Valutazione dell’ingresso di aria in condizioni di vuoto e della disponibilità di margine di flusso"
+            ],
+            [
+              "Dopo l’entrata in funzione del filtro",
+              "Variazione del flusso in uscita",
+              "Valutazione del margine di flusso a lungo termine"
+            ],
+            [
+              "Riavvio dopo la disconnessione",
+              "Sigillatura dell’interfaccia di connessione, tempo di recupero dell’aria introdotta e del gas di purga",
+              "Valutare l’impatto delle operazioni di manutenzione sui cicli successivi"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ulteriori informazioni sulla selezione dei componenti di connessione rapida",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/#conditions",
+              "label": "Innesti rapidi: pressione di esercizio, temperatura e portata"
+            },
+            {
+              "href": "/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
+              "label": "Che cos’è una connessione rapida? Tipi, valvole e criteri di selezione"
+            },
+            {
+              "href": "/en/resources/technical-articles/fitting-material-selection-guide/",
+              "label": "Scegliere i materiali per le innesti rapidi: PP, PA, POM, PVDF e PEEK"
+            },
+            {
+              "href": "/en/resources/technical-articles/fluid-resistance-calculator-liquid-path-design-guide/",
+              "label": "Utilizzare un calcolatore di resistenza idrodinamica per l’analisi della perdita di carico e del flusso"
+            }
+          ],
+          "ordered": true
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Flusso e perdita di carico nelle innesti rapidi: domande frequenti",
+  "faqItems": [
+    {
+      "question": "Come calcolare il flusso attraverso una connessione rapida?",
+      "answer": "Impostare la perdita di carico consentita, quindi calcolare Q = Kv × √(ΔP ÷ SG), dove Q è espresso in m³/h e ΔP in bar. In alternativa, individuare la curva appropriata in base alla perdita di carico desiderata e leggere il valore del flusso corrispondente. Applicare le ipotesi relative al flusso di liquidi descritte in precedenza."
+    },
+    {
+      "question": "Qual è la perdita di carico accettabile in un raccordo a innesto rapido?",
+      "answer": "Non esiste un valore universale che determini il successo o il fallimento di un sistema. La perdita di carico deve essere calcolata in base alla capacità della pompa di erogare flusso al valore target. Su una linea di aspirazione, lo spazio disponibile per la pressione di ingresso è particolarmente limitato: un’atmosfera più la pressione statica rappresenta soltanto un limite teorico per un serbatoio con scarico. È importante mantenere basse le perdite di collegamento."
+    },
+    {
+      "question": "Un collegamento di tubazione più grande garantisce sempre un flusso maggiore?",
+      "answer": "A parità di serie e configurazione delle valvole, un attacco più grande riduce la perdita di carico dell’innesto. A 2 L/min, Q20 da 1/8″ perde circa 1.0 bar, contro 0.07 bar per l’attacco da 1/4″. Tubi, valvole e orifizi in altri punti possono comunque limitare la portata: valutare il vantaggio sul circuito completo."
+    },
+    {
+      "question": "Come scegliere un raccordo a innesto rapido per applicazioni ad alto flusso?",
+      "answer": "Definire il portata obiettivo, la perdita di carico consentita e la pressione massima del sistema. Scegliere le parti del connettore, il diametro della tubazione e le valvole appropriate, quindi leggere il valore della perdita di carico dalla curva relativa al liquido. Verificare anche la pressione e la temperatura di funzionamento. Nel caso di un ingresso condiviso, sommare le richieste di flusso di tutti i rami e controllare la perdita di carico nel collegamento nonché il flusso di uscita dopo l’installazione."
+    },
+    {
+      "question": "È possibile utilizzare la curva di flusso del gas per selezionare un accoppiamento adatto al liquido di lavaggio?",
+      "answer": "No. È necessario utilizzare la curva di flusso del liquido o una stima del valore Kv, seguita da prove di funzionamento; i flussi di gas e liquido sono regolati da relazioni diverse."
+    }
+  ],
+  "cta": {
+    "title": "Scegliete la configurazione dell’accoppiamento più adatta al vostro circuito fluido.",
+    "description": "Condividete i valori relativi al flusso desiderato, al tipo di fluido, alla temperatura, alla posizione di installazione (aspirazione o scarico) e alla perdita di carico ammissibile. Gli ingegneri di FOREACH possono aiutarvi nell’analisi delle parti interconnesse di tipo Q20, Q40 e Q60, nonché delle connessioni in tubo e delle configurazioni dei valvole.",
+    "contactLabel": "Discutete insieme la scelta dell’accoppiamento più adatto.",
+    "productsLabel": "Esplora i modelli di raccordi a innesto rapido",
+    "productsHref": "/en/products/fittings/quick-connect-fittings/"
+  }
+}

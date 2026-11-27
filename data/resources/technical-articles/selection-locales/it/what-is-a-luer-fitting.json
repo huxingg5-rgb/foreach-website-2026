@@ -1,0 +1,550 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è un raccordo Luer? Interfacce maschio e femmina, bloccaggio e scelta",
+      "seoTitle": "Che cos’è un raccordo Luer? Interfacce, bloccaggio e scelta | FOREACH",
+      "seoDescription": "Scopri la tenuta conica Luer, i collegamenti slip e lock, le ghiere fisse e girevoli, le dimensioni dei tubi e il montaggio a pannello con i raccordi FOREACH LPS, LPR, LP, LS e PMLS.",
+      "coverImage": "/images/resources/technical-articles/what-is-a-luer-fitting/pp-panel-mount-luer-photo.png",
+      "coverAlt": "Raccordi Luer FOREACH colorati con una ghiera di bloccaggio blu montata"
+    },
+    "deck": "I raccordi Luer collegano i circuiti fluidici attraverso coni maschio e femmina accoppiati. Le versioni con bloccaggio aggiungono una ghiera che mantiene il collegamento. La guida spiega tenuta e montaggio, mette a confronto ghiere fisse e girevoli, raccordi maschio monoblocco e femmina passaparete e tratta i tubi con diametro interno di 1.6, 2.4 e 3.2 mm.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Un raccordo Luer è un connettore fluidico che si innesta mediante due superfici coniche accoppiate, una maschio e una femmina. È comunemente utilizzato per adattatori per tubi, attacchi per siringhe e circuiti fluidici scollegabili nei laboratori e negli strumenti analitici. Il cono esterno maschio entra nel cono interno femmina e realizza la tenuta. Le versioni con bloccaggio impiegano anche un sistema esterno che mantiene il collegamento durante il montaggio e il funzionamento."
+      },
+      {
+        "type": "paragraph",
+        "text": "I raccordi Luer FOREACH comprendono modelli maschio LPS con ghiera fissa, maschio LPR con ghiera girevole, maschio monoblocco LP, femmina LS e femmina passaparete PMLS. Le versioni portagomma trattate qui sono compatibili con tubi con diametro interno di 1.6, 2.4 e 3.2 mm. A seconda della serie, i corpi sono disponibili in PP, PA e, in alcune configurazioni, PVDF, con accessori quali ghiere di bloccaggio, anelli identificativi e dadi di montaggio."
+      },
+      {
+        "type": "paragraph",
+        "text": "Verifica innanzitutto se l’apparecchiatura richiede un attacco maschio o femmina. Controlla poi se il tubo può ruotare durante il collegamento e come l’altra estremità va collegata al tubo o fissata in sede. Tenere distinte queste tre domande aiuta a scegliere un assemblaggio completo, installabile e manutenibile a partire da un raccordo meccanicamente compatibile."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come si accoppiano i raccordi Luer maschio e femmina e dove avviene la tenuta?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il sesso del raccordo è determinato dal cono centrale: l’estremità conica sporgente è il maschio, mentre la sede conica interna che la riceve è la femmina. Un raccordo maschio resta tale anche se è circondato da una ghiera filettata internamente. Analogamente, i risalti esterni di bloccaggio non rendono maschio un raccordo femmina. Osservare soltanto la filettatura più esterna può portare a invertire l’identificazione."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-luer-fitting/non-panel-luer-assembly.gif",
+            "alt": "Animazione di un collegamento Luer maschio-femmina in linea con montaggio della ghiera gialla",
+            "width": 900,
+            "height": 600,
+            "caption": "Montaggio Luer in linea: dopo l’accoppiamento delle interfacce maschio e femmina, la ghiera esterna mantiene il collegamento."
+          },
+          {
+            "type": "paragraph",
+            "text": "La conicità Luer del 6%, comunemente adottata, esprime una variazione di diametro rispetto alla lunghezza assiale: (diametro maggiore − diametro minore) ÷ lunghezza assiale del tratto conico = 0.06. Non corrisponde a un angolo di conicità di 6°. Le superfici dei coni maschio e femmina, premute l’una contro l’altra quando si innestano assialmente, formano la tenuta attorno al passaggio del fluido."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un raccordo Luer lock aggiunge un ritegno meccanico all’esterno del cono. I risalti o gli elementi di bloccaggio equivalenti dell’estremità femmina impegnano la filettatura interna della ghiera maschio per mantenere i coni accoppiati in posizione. Verifica il cono centrale per la tenuta e il blocco esterno per il ritegno. Residui o graffi sul cono possono provocare perdite anche con la ghiera serrata. Aumentare il serraggio non ripristina la superficie di tenuta."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-luer-fitting/luer-mated-locking-cutaway.webp",
+            "alt": "Vista in sezione parziale del collegamento Luer accoppiato, con la ghiera gialla impegnata sugli elementi di bloccaggio della femmina",
+            "width": 1080,
+            "height": 720,
+            "caption": "Bloccaggio esterno di un raccordo Luer accoppiato. La sezione della ghiera gialla mostra come il collegamento rimane in sede. La tenuta è garantita dalle superfici coniche centrali accoppiate."
+          }
+        ]
+      },
+      {
+        "title": "Quali differenze ci sono tra Luer slip, Luer lock e ghiere girevoli?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Luer slip e Luer lock indicano il modo in cui viene mantenuto il collegamento. Nel sistema slip i coni corrispondenti vengono premuti l’uno contro l’altro e trattenuti dall’attrito di contatto. Il sistema lock aggiunge un meccanismo di bloccaggio attorno al cono. Le ghiere fisse e girevoli sono due varianti del sistema Luer lock e incidono principalmente sul movimento di montaggio e sulla torsione del tubo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Tipo di collegamento",
+              "Modalità di accoppiamento",
+              "Aspetti da valutare nella scelta"
+            ],
+            "rows": [
+              [
+                "Luer slip",
+                "I coni maschio e femmina vengono premuti l’uno contro l’altro senza un’ulteriore filettatura di bloccaggio",
+                "Compatibilità con la procedura di manipolazione e controllo delle trazioni assiali e delle sollecitazioni laterali"
+              ],
+              [
+                "Luer lock con ghiera fissa",
+                "La ghiera ruota insieme al raccordo maschio oppure si ruota l’estremità opposta per innestare il blocco",
+                "Possibilità di ruotare una delle estremità in fase di montaggio ed eventuale torsione del tubo collegato"
+              ],
+              [
+                "Luer lock con ghiera girevole",
+                "Si ruota la ghiera esterna mantenendo l’orientamento del corpo maschio e del tubo",
+                "Tubi già posati, estremità di accoppiamento fissa o situazioni in cui il tubo deve rimanere fermo"
+              ]
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "La differenza si vede nel movimento di bloccaggio"
+          },
+          {
+            "type": "paragraph",
+            "text": "Quando, ad esempio, si collega un Luer maschio già provvisto di tubo a un attacco femmina fisso, una ghiera fissa ruota insieme al raccordo maschio e può far ruotare anche il tubo. Ciò complica la posa se il tubo è corto, fissato a entrambe le estremità o vicino ad altre linee. Una ghiera girevole può innestarsi mantenendo orientato il corpo maschio e facilita il montaggio in queste situazioni."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-luer-fitting/fixed-locking-collar-end-view-it.svg",
+            "alt": "Vista frontale di un Luer maschio con ghiera fissa, con elementi di posizionamento che impediscono la rotazione relativa tra inserto e ghiera",
+            "width": 1080,
+            "height": 720,
+            "caption": "Ghiera fissa: la ghiera e l’inserto non possono ruotare l’una rispetto all’altro. Lascia spazio al raccordo e al tubo collegato per ruotare durante il bloccaggio.",
+            "link": {
+              "href": "/en/products/fittings/luer-fittings/lps-32-pp-n/",
+              "label": "Vedi LPS-32-PP-N"
+            }
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-luer-fitting/rotating-locking-collar-end-view-it.svg",
+            "alt": "Vista frontale di un Luer maschio con ghiera girevole, con una freccia circolare gialla che indica la rotazione relativa tra ghiera e inserto",
+            "width": 1080,
+            "height": 720,
+            "caption": "Ghiera girevole: la ghiera può ruotare rispetto all’inserto. Mantieni l’orientamento dell’inserto e del tubo mentre ruoti la ghiera esterna per completare il collegamento.",
+            "link": {
+              "href": "/en/products/fittings/luer-fittings/lpr-32-pp-n/",
+              "label": "Vedi LPR-32-PP-N"
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Qui «girevole» descrive la funzione della ghiera durante il montaggio. Il raccordo non è un giunto rotante adatto a ruotare in continuo durante il trasferimento del fluido. Dopo il collegamento lascia al tubo spazio per la curvatura ed evita carichi sostenuti di trazione o laterali concentrati sull’accoppiamento conico."
+          },
+          {
+            "type": "subheading",
+            "title": "Anche un raccordo Luer maschio monoblocco può avere un blocco"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per la serie LP, «monoblocco» indica come sono realizzati il corpo e il meccanismo di bloccaggio. La serie LP include una filettatura di bloccaggio Luer e non va classificata come collegamento slip senza filettatura. Analogamente, LSL e LRL sono inserti maschio Luer che richiedono ghiere compatibili. Un inserto senza la relativa ghiera non va considerato un raccordo Luer slip completo."
+          }
+        ]
+      },
+      {
+        "title": "Quali tipi e misure di raccordi Luer FOREACH sono disponibili?",
+        "blocks": [
+          {
+            "type": "subheading",
+            "title": "Scegli innanzitutto la serie in base alla funzione del collegamento"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Serie",
+              "Configurazione e funzione del collegamento",
+              "Materiali disponibili per il corpo"
+            ],
+            "rows": [
+              [
+                "LPS",
+                "Luer maschio con ghiera fissa per il collegamento tra tubo e attacco Luer maschio",
+                "PP"
+              ],
+              [
+                "LPR",
+                "Luer maschio con ghiera girevole, utile per mantenere l’orientamento del tubo",
+                "PP, PA"
+              ],
+              [
+                "LP",
+                "Luer maschio monoblocco con meccanismo di bloccaggio",
+                "PP, PA"
+              ],
+              [
+                "LS",
+                "Luer femmina per il collegamento tra tubo e attacco Luer femmina",
+                "PP, PA"
+              ],
+              [
+                "PMLS",
+                "Luer femmina passaparete per fissare a un pannello un collegamento scollegabile",
+                "PP, PA e alcune configurazioni in PVDF"
+              ],
+              [
+                "LSL / LRL",
+                "Inserti maschio Luer per ghiera fissa o girevole, da abbinare alle ghiere di bloccaggio compatibili",
+                "LSL: PP, PA. Per LRL sono disponibili anche configurazioni in PVDF"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "I materiali sono indicati per serie. Non tutte le combinazioni di misura, colore e configurazione sono disponibili in ciascun materiale. Nei modelli da assemblare, distingui l’inserto che forma il passaggio del fluido dalla ghiera che realizza il bloccaggio esterno. Le ghiere LPT, gli anelli identificativi LCR e i dadi di montaggio LNS hanno inoltre funzioni diverse. Usa i codici articolo completi durante la selezione."
+          },
+          {
+            "type": "subheading",
+            "title": "1.6, 2.4 e 3.2 mm indicano il diametro interno del tubo"
+          },
+          {
+            "type": "paragraph",
+            "text": "Il portagomma si inserisce nel tubo, quindi la sua misura si sceglie in base al diametro interno del tubo. Nel modello LPR-32-PP-N, ad esempio, 32 indica un diametro interno del tubo di 3.2 mm, PP indica il materiale e N indica il colore naturale. Il sesso dell’attacco Luer e il tipo di blocco vanno confermati separatamente. La dicitura «Luer da 3.2 mm» non identifica completamente l’interfaccia."
+          },
+          {
+            "type": "paragraph",
+            "text": "La scelta differisce da quella dei raccordi con ogiva o anello di compressione per tubi rigidi. In questi raccordi gli elementi di tenuta e presa agiscono sulla superficie esterna del tubo e si scelgono principalmente in base al diametro esterno. Lo stesso valore «1.6 mm» può quindi riferirsi a dimensioni diverse del tubo nei modelli Luer portagomma e nei raccordi per tubi rigidi. Dopo aver scelto il diametro interno, controlla anche lo spessore della parete, la durezza e il materiale per assicurare il corretto inserimento e ritegno sul portagomma."
+          },
+          {
+            "type": "subheading",
+            "title": "Confronta la lunghezza totale del corpo se lo spazio assiale è limitato"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Diametro interno compatibile del tubo",
+              "Lunghezza totale LPS",
+              "Lunghezza totale LPR",
+              "Lunghezza totale LP"
+            ],
+            "rows": [
+              [
+                "1.6 mm",
+                "20.0 mm",
+                "20.0 mm",
+                "14.85 mm"
+              ],
+              [
+                "2.4 mm",
+                "22.3 mm",
+                "22.3 mm",
+                "17.15 mm"
+              ],
+              [
+                "3.2 mm",
+                "25.0 mm",
+                "25.0 mm",
+                "19.85 mm"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "A parità di diametro interno del tubo di 3.2 mm, il modello LP illustrato è più corto di 5.15 mm rispetto ai modelli LPS e LPR. Può dunque essere valutato per configurazioni compatte. LPS e LPR hanno la stessa lunghezza totale. Il criterio principale per scegliere tra i due è la possibilità di ruotare la ghiera rispetto all’inserto. La lunghezza ridotta del singolo pezzo va valutata insieme allo spazio per afferrare la ghiera, alla torsione del tubo e al raggio di curvatura all’uscita."
+          },
+          {
+            "type": "paragraph",
+            "text": "Questi valori indicano le lunghezze totali dei singoli pezzi nei disegni. L’ingombro della coppia accoppiata dipende anche dalla controparte e dalla posizione di innesto. La differenza tra le lunghezze dei singoli pezzi non equivale necessariamente allo spazio risparmiato dal collegamento completo. Per la disposizione dell’apparecchiatura usa le dimensioni dei pezzi selezionati una volta accoppiati."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Per un confronto tra i collegamenti per tubi rigidi, vedi: ",
+                "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/",
+                "label": "Guida alla scelta dei raccordi per tubi rigidi"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come formare un circuito fluidico completo con adattatori per tubi e passaparete?",
+        "blocks": [
+          {
+            "type": "subheading",
+            "title": "Verifica entrambe le estremità dell’adattatore per tubo"
+          },
+          {
+            "type": "paragraph",
+            "text": "Un adattatore Luer-portagomma realizza due collegamenti: l’estremità Luer si collega all’apparecchiatura o a un altro raccordo, mentre il portagomma si collega al tubo flessibile. Se l’apparecchiatura è già dotata di un attacco Luer femmina, scegli il corrispondente Luer maschio sul lato del tubo e poi la misura del portagomma in base al diametro interno del tubo. Per unire due linee, una coppia Luer maschio-femmina può formare il raccordo scollegabile, scegliendo separatamente il tubo su ciascun lato."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il sesso del raccordo Luer non determina la direzione del flusso. I normali raccordi con foro passante non funzionano da valvola di non ritorno né interrompono automaticamente il flusso quando vengono scollegati. Se occorre limitare il flusso inverso o arrestare il fluido allo scollegamento, usa una valvola o un raccordo dedicato a questa funzione."
+          },
+          {
+            "type": "subheading",
+            "title": "Un Luer femmina passaparete fissa il punto di connessione al pannello"
+          },
+          {
+            "type": "paragraph",
+            "text": "Per accedere al tubo dall’esterno, un Luer femmina passaparete fissa l’interfaccia femmina a un involucro o a un pannello. Il portagomma interno si collega al tubo e l’interfaccia femmina esterna si accoppia a un Luer maschio. Ad esempio, il modello PMLS-U28-32D-PP-N è adatto a tubi con diametro interno di 3.2 mm sul lato portagomma. La filettatura centrale 1/4-28 UNF serve per il montaggio a pannello con il dado corrispondente."
+          },
+          {
+            "type": "paragraph",
+            "text": "La filettatura U28 assicura il fissaggio meccanico, mentre il liquido scorre nel foro interno del raccordo. Questa filettatura non va trattata come la filettatura di una porta fluidica 1/4-28 a fondo piatto su un collettore. Nella scelta del passaparete considera il foro e lo spessore del pannello, la lunghezza utile di impegno del dado e lo spazio per il tubo sul retro. Per un collegamento a una porta fluidica filettata internamente, scegli invece un adattatore con il sistema di tenuta adatto."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-luer-fitting/bulkhead-luer-panel-installation.webp",
+            "alt": "Luer femmina passaparete inserito in un pannello trasparente, con un dado di fissaggio sul lato opposto",
+            "width": 1080,
+            "height": 720,
+            "caption": "Installazione del Luer femmina passaparete: il corpo attraversa il pannello ed è fissato con un dado compatibile. Un lato si collega al tubo attraverso un portagomma. L’altro offre l’attacco Luer femmina esterno. Il montaggio a pannello e il bloccaggio Luer sono operazioni distinte in punti diversi."
+          },
+          {
+            "type": "subheading",
+            "title": "Esempio di selezione: linea esterna difficile da ruotare"
+          },
+          {
+            "type": "paragraph",
+            "text": "Supponiamo che l’apparecchiatura utilizzi tubi con diametro interno di 3.2 mm all’interno e all’esterno, che la linea esterna sia già posata e che per la manutenzione occorra poterla scollegare in corrispondenza del pannello. Una possibile configurazione abbina il Luer femmina passaparete PMLS-U28-32D-PP-N al Luer maschio LPR-32-PP-N con ghiera girevole. L’estremità femmina fornisce un punto di connessione fisso. Ruotando la ghiera esterna del maschio si innesta il blocco e si riduce la necessità di ruotare tutta la linea."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-luer-fitting/luer-collar-tubing-rotation-comparison-it.svg",
+            "alt": "Confronto di montaggio su un attacco femmina fisso: in alto la ghiera girevole mantiene l’orientamento del tubo, in basso la ghiera fissa fa ruotare il tubo insieme al raccordo",
+            "width": 1080,
+            "height": 720,
+            "caption": "Movimento di bloccaggio su un attacco femmina fisso: la croce rossa nella figura superiore indica che il tubo non ruota con la ghiera. Non segnala un errore di montaggio. Le frecce circolari gialle nella figura inferiore indicano che la ghiera fissa ruota insieme al raccordo maschio e può far ruotare il tubo. Valuta prima una ghiera girevole se il tubo è difficile da ruotare."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Definisci l’estremità a pannello: verifica il foro di montaggio PMLS, lo spessore del pannello, il dado compatibile e lo spazio per il tubo sul retro.",
+              "Definisci l’estremità esterna: verifica l’accoppiamento dei coni, l’innesto del blocco e l’accessibilità tra LPR e l’estremità femmina. Entrambi i portagomma devono essere compatibili con tubi di diametro interno di 3.2 mm.",
+              "Scegli i materiali: valuta la compatibilità dei raccordi in PP e del tubo scelto con il fluido, la concentrazione, la temperatura e il metodo di pulizia effettivi.",
+              "Valida i campioni: controlla tenuta, infiltrazioni d’aria, flusso e condizioni del collegamento dopo il ricollegamento con la pressione, i cicli di avvio e arresto e la posa dei tubi effettivi."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "L’esempio illustra una combinazione candidata e i criteri di selezione. Non attesta una convalida completata in uno strumento specifico. Se l’apparecchiatura dispone già di un attacco Luer femmina, non serve un ulteriore raccordo passaparete. Se un’estremità può ruotare liberamente, confronta anche i modelli con ghiera fissa e i raccordi maschio monoblocco."
+          },
+          {
+            "type": "paragraph",
+            "text": "Colori e anelli identificativi LCR aiutano a distinguere più linee fluidiche. Vanno comunque utilizzati con le etichette dei tubi e tenendo conto della posizione degli attacchi. Il colore non cambia la compatibilità dei coni e da solo non impedisce collegamenti errati."
+          }
+        ]
+      },
+      {
+        "title": "Come si installano e si scollegano i raccordi Luer?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Tratta il collegamento al tubo, il collegamento Luer e il montaggio a pannello come operazioni distinte. Collega il tubo e lascia lo spazio necessario per manovrare prima di accoppiare le estremità maschio e femmina. Se l’attacco Luer maschio è fornito in più pezzi, assembla prima l’inserto e la ghiera compatibile secondo le relative istruzioni."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Ispeziona i componenti e le estremità dei tubi. Conferma modelli, sesso degli attacchi e compatibilità delle ghiere. Controlla l’assenza di residui, graffi e crepe sui coni. Le estremità tagliate dei tubi devono essere perpendicolari, prive di residui e non schiacciate.",
+              "Collega il portagomma. Usa un tubo del diametro interno e del materiale corretti, inseriscilo secondo le istruzioni del modello e lascia spazio per la curvatura. Non dilatare eccessivamente il tubo per compensare una misura errata del portagomma.",
+              "Allinea i coni Luer. Mantieni gli assi del maschio e della femmina allineati per il normale innesto. Non usare la ghiera per forzare l’accoppiamento di estremità visibilmente disallineate.",
+              "Innestare il blocco. Con una ghiera fissa, lascia ruotare il raccordo o la controparte. Con una ghiera girevole, mantieni l’orientamento dell’inserto e del tubo mentre ruoti la ghiera. Se si inceppa o non si innesta normalmente, disinnesta e ispeziona.",
+              "Verifica l’assenza di perdite in base ai requisiti del circuito. Esegui i controlli statici previsti, quindi verifica alle pressioni, temperature e condizioni di avvio e arresto effettive. Controlla anche eventuali infiltrazioni d’aria sul lato di aspirazione.",
+              "Arresta e depressurizza il sistema prima della manutenzione. Dopo lo scollegamento, ispeziona i coni, la ghiera e le estremità dei tubi, rimuovi le contaminazioni e sostituisci i pezzi danneggiati. Verifica quindi nuovamente il collegamento nelle condizioni operative originali."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La ghiera Luer e il dado passaparete applicano carichi in punti diversi, quindi occorre definire separatamente le modalità di montaggio e i requisiti di serraggio. Le istruzioni di produzione devono specificare insieme procedure, attrezzi e criteri della prova di tenuta. Non applicare alle ghiere Luer le coppie consigliate per i raccordi con anello di compressione o con ogiva. Non usare nastro sigillante per filetti per riparare un cono Luer danneggiato."
+          }
+        ]
+      },
+      {
+        "title": "Dove controllare se persistono perdite o infiltrazioni d’aria dopo il bloccaggio?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Localizza innanzitutto il problema: giunto Luer, interfaccia tra portagomma e tubo oppure corpo del componente. Ogni punto richiede un intervento diverso. Se il problema è nel giunto Luer, controlla il cono e l’innesto del blocco. Continuare a serrare la ghiera non ripara un tubo danneggiato in corrispondenza del portagomma."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Sintomo osservato",
+              "Primo controllo",
+              "Intervento correttivo"
+            ],
+            "rows": [
+              [
+                "Tracce di liquido sul giunto Luer",
+                "Residui, graffi, disallineamento e corretto innesto del blocco",
+                "Arresta e depressurizza il sistema, pulisci e ispeziona, sostituisci le parti danneggiate, riallinea e ripeti la prova"
+              ],
+              [
+                "Perdita alla base del portagomma o slittamento del tubo",
+                "Diametro interno, spessore della parete, materiale, posizione di inserimento e trazione continua sul tubo",
+                "Ricontrolla la compatibilità del tubo e il suo supporto lungo la posa. Un ulteriore serraggio della ghiera non risolve il problema"
+              ],
+              [
+                "Bolle durante l’aspirazione senza gocce visibili all’esterno",
+                "Ingresso d’aria nei collegamenti. Controlla anche il livello del liquido, il tubo di aspirazione e il rilascio di gas dal fluido",
+                "Controlla i singoli tratti nelle stesse condizioni di aspirazione. La sola presenza di bolle non dimostra un guasto del raccordo"
+              ],
+              [
+                "Situazione normale a riposo, anomala durante avvio, arresto o movimento del tubo",
+                "Picchi di pressione, trazione laterale, torsione del tubo e allentamento dei collegamenti",
+                "Migliora il supporto e lo spazio di movimento, quindi esegui la verifica nel ciclo operativo effettivo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Se la portata diminuisce dopo la sostituzione di un raccordo, confronta anche il diametro del passaggio interno, il diametro interno e la lunghezza del tubo, le pieghe localizzate e i residui delle estremità tagliate. A parità di misura di attacco al tubo, il passaggio interno può variare da un raccordo all’altro. L’aspetto o il tipo maschio o femmina, da soli, non permettono di determinare la resistenza al flusso."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "Un raccordo Luer lock sopporta sempre una pressione maggiore di un Luer slip?",
+        "answer": "Il blocco aggiunge un ritegno meccanico, ma la pressione di esercizio ammessa dipende comunque dalla coppia maschio-femmina, dal tubo, dai materiali, dalla temperatura e dalle condizioni di montaggio. La sola ghiera non determina la pressione nominale e i valori di pressione di un altro produttore non si applicano a questo assemblaggio. Esegui la verifica in base alle specifiche del collegamento completo e alle condizioni operative."
+      },
+      {
+        "question": "I raccordi Luer di produttori diversi sono direttamente intercambiabili?",
+        "answer": "La corrispondenza tra maschio e femmina è solo la prima condizione. Controlla le dimensioni dell’interfaccia, il sistema di bloccaggio e le specifiche applicabili, quindi convalida la tenuta e il ritegno della combinazione effettiva. La denominazione «raccordo Luer» non rende ogni configurazione intercambiabile in tutte le condizioni di lavoro."
+      },
+      {
+        "question": "Un raccordo Luer interrompe automaticamente il flusso quando lo si scollega?",
+        "answer": "I normali raccordi Luer con foro passante trattati qui non offrono di per sé una chiusura automatica. La chiusura automatica richiede un apposito meccanismo a valvola. Per un circuito che deve interrompere il flusso allo scollegamento, scegli un raccordo o una valvola di controllo con quella funzione specifica."
+      },
+      {
+        "question": "Un raccordo Luer per strumenti può essere utilizzato direttamente come dispositivo medico finito?",
+        "answer": "Luer indica il tipo di interfaccia. Il solo aspetto non dimostra l’idoneità all’uso medico, la sterilità o le condizioni di sterilizzazione del prodotto finito. Per l’impiego medico, verifica la documentazione applicabile e i requisiti di validazione per il prodotto specifico e l’assemblaggio finale."
+      }
+    ],
+    "cta": {
+      "title": "Devi abbinare un raccordo Luer al tuo circuito fluidico?",
+      "description": "Fornisci foto o disegni della controparte, diametri interno ed esterno e materiale del tubo, fluido, temperatura, pressione e spazio di installazione per confermare il sesso dell’interfaccia, il tipo di ghiera e il collegamento al tubo.",
+      "contactLabel": "Contatta l’assistenza tecnica",
+      "productsLabel": "Vedi i raccordi Luer",
+      "productsHref": "/en/products/fittings/luer-fittings/"
+    },
+    "navigation": [
+      {
+        "id": "sealing",
+        "label": "Interfacce e tenuta"
+      },
+      {
+        "id": "locking",
+        "label": "Collegamento e bloccaggio",
+        "children": [
+          {
+            "id": "fixed-vs-rotating",
+            "label": "Ghiere fisse e girevoli"
+          },
+          {
+            "id": "integral-lock",
+            "label": "Corpi monoblocco e inserti"
+          }
+        ]
+      },
+      {
+        "id": "series",
+        "label": "Serie, tubi e dimensioni",
+        "children": [
+          {
+            "id": "series-choice",
+            "label": "Serie e materiali"
+          },
+          {
+            "id": "tubing-id",
+            "label": "Diametro interno del tubo"
+          },
+          {
+            "id": "overall-length",
+            "label": "Lunghezza totale del corpo"
+          }
+        ]
+      },
+      {
+        "id": "connection",
+        "label": "Tubi e montaggio a pannello",
+        "children": [
+          {
+            "id": "hose-connection",
+            "label": "Adattatori per tubi"
+          },
+          {
+            "id": "panel-mount",
+            "label": "Montaggio a pannello"
+          },
+          {
+            "id": "selection-example",
+            "label": "Esempio di selezione completa"
+          }
+        ]
+      },
+      {
+        "id": "installation",
+        "label": "Installazione e scollegamento"
+      },
+      {
+        "id": "troubleshooting",
+        "label": "Perdite e infiltrazioni d’aria"
+      }
+    ],
+    "relatedProductLabel": "Raccordo Luer"
+  },
+  "navigation": [
+    {
+      "id": "sealing",
+      "label": "Interfacce e tenuta"
+    },
+    {
+      "id": "locking",
+      "label": "Collegamento e bloccaggio",
+      "children": [
+        {
+          "id": "fixed-vs-rotating",
+          "label": "Ghiere fisse e girevoli"
+        },
+        {
+          "id": "integral-lock",
+          "label": "Corpi monoblocco e inserti"
+        }
+      ]
+    },
+    {
+      "id": "series",
+      "label": "Serie, tubi e dimensioni",
+      "children": [
+        {
+          "id": "series-choice",
+          "label": "Serie e materiali"
+        },
+        {
+          "id": "tubing-id",
+          "label": "Diametro interno del tubo"
+        },
+        {
+          "id": "overall-length",
+          "label": "Lunghezza totale del corpo"
+        }
+      ]
+    },
+    {
+      "id": "connection",
+      "label": "Tubi e montaggio a pannello",
+      "children": [
+        {
+          "id": "hose-connection",
+          "label": "Adattatori per tubi"
+        },
+        {
+          "id": "panel-mount",
+          "label": "Montaggio a pannello"
+        },
+        {
+          "id": "selection-example",
+          "label": "Esempio di selezione completa"
+        }
+      ]
+    },
+    {
+      "id": "installation",
+      "label": "Installazione e scollegamento"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Perdite e infiltrazioni d’aria"
+    }
+  ]
+}

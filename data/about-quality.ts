@@ -10,6 +10,10 @@
 ================================ */
 
 import { getIsoCertificateImage } from "@/data/iso-certificate-images";
+import germanCopy from "./about-de/quality.json";
+import italianCopy from "./about-it/quality.json";
+import hindiCopy from "./about-hi/quality.json";
+import { translateGermanAbout as translateAboutCopy } from "./about-de/translate-german-about";
 
 /* ================================
    1. 页面支持语言
@@ -24,7 +28,8 @@ export const aboutQualityLocales = [
   "ru",
 ] as const;
 
-export type AboutQualityLocale = (typeof aboutQualityLocales)[number];
+type AboutQualitySourceLocale = (typeof aboutQualityLocales)[number];
+export type AboutQualityLocale = AboutQualitySourceLocale | "de" | "it" | "hi";
 
 /* ================================
    2. 数据类型定义
@@ -114,7 +119,7 @@ export const aboutQualityImages = {
    4. 多语言页面链接
 ================================ */
 
-export const aboutQualityLinks: Record<AboutQualityLocale, string> = {
+export const aboutQualityLinks: Record<AboutQualitySourceLocale, string> = {
   "zh-CN": "/about/quality",
   en: "/en/about/quality",
   es: "/es/about/quality",
@@ -129,8 +134,8 @@ export const aboutQualityLinks: Record<AboutQualityLocale, string> = {
 
 export function isAboutQualityLocale(
   locale: string
-): locale is AboutQualityLocale {
-  return aboutQualityLocales.includes(locale as AboutQualityLocale);
+): locale is AboutQualitySourceLocale {
+  return aboutQualityLocales.includes(locale as AboutQualitySourceLocale);
 }
 
 /* ================================
@@ -143,7 +148,7 @@ export function isAboutQualityLocale(
 ================================ */
 
 export const aboutQualityContent: Record<
-  AboutQualityLocale,
+  AboutQualitySourceLocale,
   AboutQualityPageData
 > = {
   /* ================================
@@ -277,10 +282,6 @@ export const aboutQualityContent: Record<
       },
     ],
   },
-
-  /* ================================
-     英文 en
-  ================================ */
   en: {
     metadataTitle: "Quality System and Compliance | Foreach Technology",
     metadataDescription:
@@ -1002,6 +1003,7 @@ export const aboutQualityContent: Record<
 ================================ */
 
 export function getAboutQualityContent(locale: string): AboutQualityPageData {
+  if (locale === "de" || locale === "it" || locale === "hi") return translateAboutCopy(aboutQualityContent.en, locale === "de" ? germanCopy : locale === "hi" ? hindiCopy : italianCopy);
   if (isAboutQualityLocale(locale)) {
     return aboutQualityContent[locale];
   }

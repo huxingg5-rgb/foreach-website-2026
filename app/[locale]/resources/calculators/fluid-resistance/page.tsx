@@ -1,4 +1,5 @@
-import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
+import { buildDraftPageMetadata, buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -7,22 +8,23 @@ import ResourceSupportCta from "@/components/resources/ResourceSupportCta";
 import FluidResistanceCalculator from "@/components/resources/fluid-resistance/FluidResistanceCalculator";
 import calculatorStyles from "@/components/resources/fluid-resistance/FluidResistanceCalculator.module.css";
 import { fluidResistancePageCopy } from "@/data/resources/fluid-resistance/fluid-resistance.intl";
+import { getHindiDraftLink, hindiEnglishFallbackSuffix, languageDraftsEnabled } from "@/lib/i18n/draft-languages";
 
 import "@/app/resources/technical-articles/technical-articles.css";
 
 const SUPPORTED_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
-type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
+type SupportedLocale = (typeof SUPPORTED_LOCALES)[number] | "de" | "it" | "hi";
 
 type FluidResistanceIntlPageProps = {
   params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
-  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
+  return [...SUPPORTED_LOCALES, ...(languageDraftsEnabled ? ["de", "it", "hi"] : [])].map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: FluidResistanceIntlPageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -34,11 +36,19 @@ export async function generateMetadata({
     description: copy.seoDescription,
   };
 
-  return buildInternationalPageMetadata({ locale, path: "/resources/calculators/fluid-resistance/", ...metadata });
+  const path = "/resources/calculators/fluid-resistance/";
+  if (locale === "de" || locale === "it") {
+    return buildDraftPageMetadata({ locale, canonical: `/${locale}${path}`, ...metadata });
+  }
+  if (locale === "hi") {
+    const canonical = "/hi" + path;
+    return { ...metadata, alternates: { canonical }, robots: { index: false }, openGraph: { ...metadata, url: canonical, locale: "hi_IN" } };
+  }
+  return buildInternationalPageMetadata({ locale, path, ...metadata });
 }
 
 function isSupportedLocale(locale: string): locale is SupportedLocale {
-  return SUPPORTED_LOCALES.includes(locale as SupportedLocale);
+  return locale === "de" || locale === "it" || locale === "hi" ? languageDraftsEnabled : SUPPORTED_LOCALES.includes(locale as (typeof SUPPORTED_LOCALES)[number]);
 }
 
 export default async function FluidResistanceIntlPage({
@@ -50,6 +60,7 @@ export default async function FluidResistanceIntlPage({
     notFound();
   }
 
+  const contact = locale === "hi" ? getHindiDraftLink("/en/contact/") : undefined;
   const prefix = `/${locale}`;
   const copy = fluidResistancePageCopy[locale];
 
@@ -84,9 +95,11 @@ export default async function FluidResistanceIntlPage({
       <ResourceSupportCta
         title={copy.supportTitle}
         description={copy.supportDescription}
-        buttonText={copy.supportButton}
-        href={`${prefix}/contact/`}
+        buttonText={copy.supportButton + (contact?.hrefLang === "en" ? hindiEnglishFallbackSuffix : "")}
+        href={contact?.href ?? `${prefix}/contact/`}
       />
     </main>
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/resources/calculators/fluid-resistance/", getPageMetadata);

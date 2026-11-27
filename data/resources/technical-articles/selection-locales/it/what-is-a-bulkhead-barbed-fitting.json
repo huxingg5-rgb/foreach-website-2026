@@ -1,0 +1,588 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è un raccordo portagomma passaparete? Montaggio a pannello, tubi e scelta del modello",
+      "seoTitle": "Raccordi portagomma passaparete: modelli PMB, pannelli e tubi | FOREACH",
+      "seoDescription": "Scegli i raccordi portagomma passaparete FOREACH PMB per tubi con diametro interno di 1.6, 2.4 o 3.2 mm. Confronta PP e PA, pannelli ≤3.5 mm, dadi PMBSN, rapporti tra diametri e controlli di tenuta.",
+      "coverImage": "/images/products/fittings/bulkhead-barbed-fittings/photos/pmb-bulkhead-barbed-fittings-assembled-family-group.webp",
+      "coverAlt": "Famiglia di raccordi portagomma passaparete FOREACH: tre raccordi con due estremità portagomma e dadi esagonali montati"
+    },
+    "deck": "Scegli un raccordo portagomma passaparete PMB e un dado PMBSN in base al diametro interno del tubo, al materiale PP o PA e alle condizioni del pannello. Usa quote, rapporti tra diametri e sintomi di guasto per completare la selezione.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "lead": "Un raccordo portagomma passaparete collega i tubi ai due lati di un pannello e fissa il collegamento al pannello.",
+        "text": "Un raccordo portagomma passaparete collega i tubi ai due lati di un pannello e fissa il collegamento al pannello. Le estremità portagomma si inseriscono nei tubi e la sezione centrale di montaggio attraversa il pannello. Una spalla e un dado lo serrano in posizione."
+      },
+      {
+        "type": "paragraph",
+        "text": "La guida tratta i raccordi FOREACH PMB U28 e i dadi esagonali PMBSN U28 per collegamenti fissi di tubi scollegati di rado, in strumenti analitici, IVD e automazione di laboratorio. Controlla nell’ordine misure del tubo, materiali e spazio di montaggio. Per moduli esterni sostituiti spesso, confronta un raccordo a sgancio rapido passaparete."
+      },
+      {
+        "type": "notice",
+        "label": "PMB U28 in breve",
+        "text": "Diametro interno del tubo: 1.6 / 2.4 / 3.2 mm. Corpo: PP naturale / PA bianca. Filettatura di montaggio: 1/4-28 UNF. Spessore del pannello: ≤3.5 mm. Dado compatibile: PMBSN U28."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come collega i tubi attraverso il pannello un portagomma passaparete?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il corpo PMB ha un passaggio continuo. Quando il tubo è spinto in direzione assiale, la parete si dilata sul risalto e aderisce alla superficie per garantire tenuta e ritegno. La spalla centrale e il dado serrano il pannello. Tenuta del tubo, fissaggio al pannello e passaggio interno svolgono funzioni diverse. Verifica ogni problema nel punto in cui si manifesta."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-bulkhead-barbed-fitting/panel-assembly-engineering-it.svg",
+            "width": 720,
+            "height": 620,
+            "alt": "Sezione dell’assemblaggio PMB U28 con tratteggi per corpo, dado, pannello e tubo, asse continuo e spessore pannello t ≤3.5 mm",
+            "caption": "Figura 1 | Sezione parziale dell’assemblaggio PMB U28, non in scala. Dado e spalla serrano il pannello. I tubi sono a contatto con i portagomma. Non è illustrata una tenuta aggiuntiva sulla faccia del pannello."
+          },
+          {
+            "type": "paragraph",
+            "text": "La filettatura 1/4-28 UNF serve al montaggio con il dado PMBSN. Non realizza la tenuta di una porta fluidica. Per un collegamento a un collettore, scegli un raccordo compatibile con la struttura di tenuta di quella porta."
+          }
+        ]
+      },
+      {
+        "title": "Quando scegliere un portagomma passaparete, un portagomma in linea, uno sgancio rapido o un Luer?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Scegli la struttura in base alla posizione di montaggio, alla frequenza di scollegamento e all’interfaccia esterna. Verifica poi le specifiche."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Collegamento",
+              "Funzione adatta",
+              "Aspetti di scelta"
+            ],
+            "rows": [
+              [
+                "Portagomma dritto in linea",
+                "Unire due tubi flessibili senza fissare il giunto a un pannello",
+                "Diametro interno del tubo alle due estremità, materiale e supporto"
+              ],
+              [
+                "Portagomma passaparete PMB",
+                "Collegamento fisso a pannello con rimozione sporadica dei tubi",
+                "Spessore del pannello, apertura, dado PMBSN e spazio per gli attrezzi"
+              ],
+              [
+                "Raccordo a sgancio rapido passaparete",
+                "Moduli esterni sostituiti spesso, con separazione al giunto di accoppiamento",
+                "Abbinamento maschio-femmina, spazio di manovra e intercettazione dopo lo scollegamento"
+              ],
+              [
+                "Luer passaparete",
+                "Un componente Luer esterno richiede un punto di collegamento fisso",
+                "Coni accoppiati, metodo di bloccaggio e interfaccia del componente esterno"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Un PMB si scollega all’estremità del tubo. Le rimozioni ripetute possono deformare il tubo. Controlla dilatazioni, crepe e accoppiamento. Se serve un’intercettazione automatica alla separazione, scegli uno sgancio rapido con la configurazione di valvola adatta."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
+                "label": "Abbinamento degli sganci rapidi e configurazioni delle valvole",
+                "prefix": "Per scollegamenti frequenti, leggi ",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/resources/technical-articles/what-is-a-luer-fitting/",
+                "label": "Tenuta conica e montaggio a pannello dei raccordi Luer",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quali misure di tubi, materiali e dadi sono disponibili per PMB?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Tutti e sei i raccordi PMB U28 usano una filettatura di montaggio 1/4-28 UNF. Scegli in base al diametro interno del tubo e al materiale del corpo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Diametro interno del tubo",
+              "Modello in PP naturale",
+              "Modello in PA bianca"
+            ],
+            "rows": [
+              [
+                "1.6 mm",
+                "PMB-U28-16D-PP-N",
+                "PMB-U28-16D-PA-W"
+              ],
+              [
+                "2.4 mm",
+                "PMB-U28-24D-PP-N",
+                "PMB-U28-24D-PA-W"
+              ],
+              [
+                "3.2 mm",
+                "PMB-U28-32D-PP-N",
+                "PMB-U28-32D-PA-W"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Nel modello PMB-U28-24D-PP-N, PMB identifica la serie portagomma passaparete, U28 significa 1/4-28 UNF, 24 indica un diametro interno del tubo di 2.4 mm e PP-N significa PP naturale. PA-W indica PA bianca. Usa il codice completo per l’ordine e l’abbinamento dei componenti."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il montaggio richiede un dado esagonale PMBSN U28 compatibile. PMBSN-U28-PP-N è in PP naturale e PMBSN-U28-PA-W in PA bianca. Il dado ha una misura tra facce di 11.0 mm e uno spessore di 4.5 mm. Indica i modelli completi del corpo e del dado e le quantità nella specifica di acquisto."
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/fittings/bulkhead-barbed-fittings/photos/pp-natural-bulkhead-barbed-fitting-with-separate-nut.webp",
+            "width": 1500,
+            "height": 1500,
+            "alt": "Corpo PMB in PP naturale e dado esagonale separato, come riferimento di assemblaggio della famiglia",
+            "caption": "Figura 2 | Il corpo del raccordo collega i tubi. Il dado stringe il pannello. La foto è un riferimento per la famiglia. Misura del tubo e quote seguono il modello completo e il disegno."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/products/fittings/bulkhead-barbed-fittings/",
+                "label": "Vedi i modelli portagomma passaparete PMB",
+                "prefix": "Filtra per misura del tubo e materiale: ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Qual è la differenza tra diametro interno del tubo, diametro esterno del portagomma e foro interno?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Le tre quote descrivono il tubo, il portagomma e il passaggio interno del fluido. Per PMB-U28-24D-PP-N:"
+          },
+          {
+            "type": "list",
+            "items": [
+              "Diametro interno del tubo compatibile: 2.4 mm. È l’apertura del tubo prima del montaggio. Usala per selezionare la misura del tubo.",
+              "Diametro esterno massimo del portagomma: 3.5 mm. È la parte più larga del portagomma. Il tubo si dilata passando su questo punto durante l’inserimento.",
+              "Diametro del foro del raccordo: 1.7 mm. È il passaggio interno del fluido, usato per valutare la resistenza locale. È diverso dal diametro interno del tubo compatibile."
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-bulkhead-barbed-fitting/tube-barb-bore-engineering-it.svg",
+            "width": 900,
+            "height": 700,
+            "alt": "Schema delle quote PMB-U28-24D-PP-N: diametro interno del tubo 2.4 mm, diametro esterno massimo del portagomma 3.5 mm e foro del raccordo 1.7 mm, con indicazione dei punti di misura",
+            "caption": "Figura 3 | A sinistra, sezione trasversale del tubo non montato. A destra, sezione longitudinale parziale del portagomma e del passaggio interno. Le quote sono indicate direttamente. Schema non in scala. Per le quote di produzione consulta i disegni dei componenti."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Modello base",
+              "Diametro interno del tubo compatibile (mm)",
+              "Diametro esterno massimo del portagomma (mm)",
+              "Diametro del foro del raccordo (mm)",
+              "Lunghezza totale del raccordo (mm)",
+              "Lunghezza del tratto filettato (mm)"
+            ],
+            "rows": [
+              [
+                "PMB-U28-16D",
+                "1.6",
+                "2.4",
+                "1.2",
+                "21.0",
+                "6.9"
+              ],
+              [
+                "PMB-U28-24D",
+                "2.4",
+                "3.5",
+                "1.7",
+                "25.0",
+                "8.0"
+              ],
+              [
+                "PMB-U28-32D",
+                "3.2",
+                "4.5",
+                "2.4",
+                "31.0",
+                "8.0"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La lunghezza totale del raccordo è la distanza tra le due facce terminali. Usala per pianificare lo spazio dei tubi sui due lati. La lunghezza del tratto filettato è la lunghezza assiale del filetto esterno, utile per controllare l’ingombro di montaggio di pannello e dado. L’esagono del corpo misura 7.8 mm tra le facce su tutte e tre le misure."
+          },
+          {
+            "type": "paragraph",
+            "text": "Disegni quotati completi (PP naturale):"
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/assets/products/fittings/bulkhead-barbed-fittings/2d-drawings/pmb-u28-16d-pp-n.pdf",
+                "label": "Per un tubo con diametro interno di 1.6 mm | Disegno PDF PMB-U28-16D-PP-N"
+              },
+              {
+                "href": "/assets/products/fittings/bulkhead-barbed-fittings/2d-drawings/pmb-u28-24d-pp-n.pdf",
+                "label": "Per un tubo con diametro interno di 2.4 mm | Disegno PDF PMB-U28-24D-PP-N"
+              },
+              {
+                "href": "/assets/products/fittings/bulkhead-barbed-fittings/2d-drawings/pmb-u28-32d-pp-n.pdf",
+                "label": "Per un tubo con diametro interno di 3.2 mm | Disegno PDF PMB-U28-32D-PP-N"
+              }
+            ]
+          },
+          {
+            "type": "formula",
+            "expression": "Rapporto tra diametri = diametro esterno massimo del portagomma ÷ diametro interno del tubo",
+            "note": "Per la misura adatta a un tubo con diametro interno di 2.4 mm: 3.5 ÷ 2.4 ≈ 1.46. Il diametro massimo del portagomma è circa 1.46 volte quello interno del tubo prima del montaggio. Il rapporto descrive la geometria dell’accoppiamento. Per pressione e resistenza allo sfilamento occorrono verifiche a parte."
+          },
+          {
+            "type": "paragraph",
+            "text": "Materiale del tubo, spessore della parete, durezza e tolleranze influiscono sulla forza di inserimento e sul contatto. Controlla inserimento, tenuta e ritegno sotto trazione con il tubo effettivo. Usa il diametro del foro del raccordo per valutare la resistenza al flusso locale e conferma l’erogazione del liquido alla portata obiettivo."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/barbed-fitting-expansion-ratio/",
+                "label": "Rapporto di dilatazione sul portagomma e accoppiamento del tubo",
+                "prefix": "Per l’accoppiamento dimensionale, leggi ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come specificare foro, spessore del pannello e dado di montaggio?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "PMB U28 supporta uno spessore del pannello di ≤3.5 mm. Il pannello si trova tra spalla e dado. Prevedi spazio per l’impegno del dado e l’accesso degli attrezzi. La lunghezza del tratto filettato è distinta dallo spessore ammesso del pannello."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Voce di montaggio",
+              "Requisito",
+              "Azione pratica"
+            ],
+            "rows": [
+              [
+                "Spessore del pannello",
+                "≤3.5 mm",
+                "Includi nello spessore serrato il pannello e ogni strato aggiunto. Mantieni un impegno adeguato del dado"
+              ],
+              [
+                "Apertura",
+                "Intervallo di riferimento per il montaggio 6.5–7.5 mm. Tolleranza indicata ±0.1 mm",
+                "Prima della lavorazione, procurati il disegno del pannello specifico del modello che definisce misura nominale del foro, forma e accoppiamento antirotazione"
+              ],
+              [
+                "Bordo del foro e superfici di contatto",
+                "Puliti e integri, senza bave o graffi",
+                "Rimuovi le bave che potrebbero danneggiare tubo o raccordo. Controlla planarità e supporto del pannello"
+              ],
+              [
+                "Serraggio del dado",
+                "Serra a mano, poi aggiungi da 1/8 a 1/2 giro con una chiave",
+                "Usa una chiave da 11 mm per l’esagono con distanza tra facce di 11.0 mm. Controlla l’angolo di rotazione e trattieni il corpo per impedirne la rotazione"
+              ],
+              [
+                "Verifica del montaggio",
+                "Prova il collegamento nelle condizioni operative effettive",
+                "Controlla separatamente tenuta dei tubi, fissaggio al pannello e portata erogata"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Usare l'intervallo di diametri del foro per il dimensionamento preliminare. Lavorare il pannello in base a un disegno che definisca il diametro, la tolleranza e il profilo antirotazione. Inviare il modello del raccordo e il disegno del pannello per una verifica."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Controllare corpo, dado, tubi e disegno del pannello. Pulire portagomma, filetti ed estremità dei tubi e verificare che tutti i componenti siano integri.",
+              "Inserire il raccordo nel pannello fino alla battuta, montare il dado sul lato opposto e serrarlo secondo le indicazioni. Verificare che il filetto imbocchi correttamente, che non si impunti e che non restino giochi.",
+              "Spingere il tubo in direzione assiale fino a coprire l'intera lunghezza di innesto del portagomma. Sostenere le linee e lasciare spazio per le curve e l'accesso degli utensili.",
+              "Eseguire una prova di tenuta con il fluido, la temperatura e la pressione effettivi. Verificare il ritegno e la portata. Sul lato di aspirazione, verificare anche l'ingresso d'aria in depressione."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Prima della manutenzione, arrestare l'apparecchio, isolare la linea e scaricare la pressione residua. Esaminare le estremità dei tubi rimossi per individuare dilatazioni permanenti, tagli o indurimenti. Riparare o sostituire le estremità danneggiate prima del rimontaggio."
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere tra portagomma passaparete in PP e in PA in base al fluido e alle condizioni di esercizio?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Verificare prima il fluido di processo e le condizioni di pulizia, quindi il carico meccanico e la stabilità dimensionale. La tabella riporta caratteristiche indicative dei materiali per una prima selezione. Verificare la compatibilità per il grado di resina, la concentrazione, la temperatura e il tempo di contatto effettivi."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Materiale",
+              "Caratteristiche e possibili impieghi",
+              "Verifiche principali"
+            ],
+            "rows": [
+              [
+                "PP | Polipropilene",
+                "Basso assorbimento d'acqua. In genere resiste a molte soluzioni saline, agli alcali e agli acidi deboli. Può essere adatto a linee per reagenti acquosi e risciacquo",
+                "Compatibilità con detergenti ossidanti, alcuni solventi organici e temperature elevate. Deformazione e tenuta sotto carico prolungato"
+              ],
+              [
+                "PA | Poliammide / nylon",
+                "Buona resistenza meccanica, tenacità e resistenza all'usura. Può essere adatto in presenza di carichi meccanici rilevanti",
+                "Variazioni dimensionali e meccaniche dopo l'assorbimento d'acqua. Tipo e grado di PA effettivi e compatibilità con i fluidi di processo e di pulizia"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Nella serie, il PP naturale e la PA bianca identificano le diverse configurazioni. PA6, PA66 e PA12 differiscono per assorbimento d'acqua e comportamento meccanico. Identificare quindi il tipo e il grado effettivi della PA. Selezionare i dadi PMBSN tenendo conto del carico di serraggio e dell'esposizione esterna ai detergenti. Valutare i tubi in base alla specifica del loro materiale."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/fitting-material-selection-guide/",
+                "label": "Scelta del PP, della PA e di altri materiali per raccordi",
+                "prefix": "Per un confronto più ampio tra i materiali, consultare ",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/resources/material-compatibility/",
+                "label": "Consultazione della compatibilità dei materiali",
+                "prefix": "Per i materiali presenti nella tabella, come il PP, consultare ",
+                "suffix": ". La matrice attuale non comprende la PA."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere un PMB per collegare i tubi al pannello di un analizzatore?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Si considerino tubi con diametro interno di 2.4 mm sui due lati di un pannello da 2 mm, con collegamento fisso e disconnessioni poco frequenti. Se i fluidi di processo e di pulizia sono compatibili con il PP e i tubi scelti, una possibile combinazione è PMB-U28-24D-PP-N con PMBSN-U28-PP-N."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Tubi: definire diametro esterno, materiale, durezza e tolleranza ai due estremi, quindi eseguire le verifiche di accoppiamento indicate nella sezione sulle dimensioni.",
+              "Montaggio: il pannello da 2 mm rientra nel limite di ≤3.5 mm. Verificare anche il disegno del foro, la presa del dado e lo spazio di accesso per gli utensili sul retro.",
+              "Ingombri: la lunghezza totale del raccordo è di 25 mm. Prevedere lo spazio di inserimento dei tubi e di curvatura su entrambi i lati.",
+              "Portata: il passaggio interno è di 1.7 mm. Controllare la perdita di carico localizzata e la portata utile al valore di progetto.",
+              "Accettazione: registrare modelli, lotto dei tubi, revisione del disegno, metodo di serraggio e condizioni delle prove di tenuta per rendere ripetibile il montaggio."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "L'esempio definisce una configurazione candidata da verificare sull'analizzatore specifico. Ripetere le verifiche interessate se cambiano i tubi, i detergenti o le procedure di manutenzione."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/applications/analytical-instruments/",
+                "label": "Applicazioni fluidiche negli strumenti analitici",
+                "prefix": "Per l'alimentazione, il lavaggio e lo scarico, consultare ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come diagnosticare allentamenti, perdite o sfilamento dei tubi?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Arrestare l'apparecchio e scaricare la pressione residua, quindi individuare se il problema riguarda il fissaggio al pannello, il collegamento del tubo o un componente a monte. Un fissaggio allentato e una perdita dal tubo coinvolgono carichi e punti di tenuta diversi. Effettuare i controlli in base al sintomo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Sintomo",
+              "Primo controllo",
+              "Dopo la correzione"
+            ],
+            "rows": [
+              [
+                "Il corpo oscilla o ruota",
+                "Spessore del pannello, forma del foro, posizione dell'elemento antirotazione, presa del dado e serraggio",
+                "Correggere l'accoppiamento sul pannello, ispezionare eventuali danni al corpo e al filetto e verificare il ritegno"
+              ],
+              [
+                "Tracce di perdita tra tubo e portagomma",
+                "Dimensioni e tolleranza del tubo, inserimento, danni alle estremità e variazioni del materiale",
+                "Riparare le estremità danneggiate e ripetere la prova con il fluido e le condizioni operative effettivi"
+              ],
+              [
+                "Il tubo scivola o si sfila",
+                "Rammollimento, trazione prolungata, carichi laterali e ritegno insufficiente",
+                "Migliorare il sostegno, convalidare l'accoppiamento tubo–raccordo e valutare un ritegno supplementare se necessario"
+              ],
+              [
+                "Più bolle durante l'aspirazione",
+                "Tenuta in depressione alle estremità dei tubi, alimentazione a monte e altri ingressi d'aria",
+                "Isolare i tratti e ripetere la prova con la depressione e la portata effettive"
+              ],
+              [
+                "Portata inferiore dopo il montaggio",
+                "Restrizione del passaggio, contaminazione, curve strette e resistenza localizzata",
+                "Confrontare portata e perdita di carico prima e dopo il montaggio per localizzare la restrizione"
+              ],
+              [
+                "Liquido vicino al pannello",
+                "Esaminare le estremità dei tubi, i componenti a monte e il percorso delle gocce fino al primo punto bagnato",
+                "Riparare la perdita effettiva, quindi ricontrollare il fissaggio e i collegamenti vicini"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sui raccordi portagomma passaparete",
+    "faqItems": [
+      {
+        "question": "Stringere il dado del pannello ferma una perdita all'estremità del tubo?",
+        "answer": "Il dado PMBSN blocca il raccordo al pannello. La tenuta del tubo dipende dal contatto con il portagomma. Arrestare e depressurizzare l'apparecchio. Controllare quindi dimensioni del tubo, inserimento, danni all'estremità e variazioni del materiale. Ripetere la prova dopo la riparazione. Aumentare la coppia del dado sul pannello non corregge un accoppiamento inadeguato tra tubo e portagomma."
+      },
+      {
+        "question": "Questo raccordo portagomma passaparete può garantire direttamente la tenuta sulla parete di un serbatoio?",
+        "answer": "Il PMB descritto fissa il raccordo al pannello e unisce tubi flessibili. Per attraversare la parete di un serbatoio serve anche una tenuta dedicata e convalidata tra il raccordo e la parete. Selezionare l'insieme di tenuta in base alla struttura del serbatoio, al fluido e alla pressione."
+      }
+    ],
+    "cta": {
+      "title": "Definire il collegamento completo dei tubi attraverso il pannello",
+      "description": "Fornire diametro interno ed esterno e materiale dei tubi su entrambi i lati, spessore e foro del pannello, fluidi di processo e di pulizia, pressione, temperatura e requisiti di manutenzione per valutare il corpo PMB, il dado PMBSN e le verifiche dell'assemblaggio.",
+      "contactLabel": "Richiedi assistenza per la scelta dei raccordi passaparete",
+      "productsLabel": "Visualizza i raccordi portagomma passaparete",
+      "productsHref": "/en/products/fittings/bulkhead-barbed-fittings/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "connection",
+      "label": "Struttura e collegamento"
+    },
+    {
+      "id": "comparison",
+      "label": "Scelta dell'interfaccia sul pannello"
+    },
+    {
+      "id": "models",
+      "label": "Misure dei tubi, materiali e dadi"
+    },
+    {
+      "id": "dimensions",
+      "label": "Diametro interno del tubo, diametro esterno del portagomma e passaggio"
+    },
+    {
+      "id": "panel-mount",
+      "label": "Foro, pannello e montaggio"
+    },
+    {
+      "id": "conditions",
+      "label": "Materiali e condizioni operative"
+    },
+    {
+      "id": "selection-example",
+      "label": "Esempio di selezione per un analizzatore"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Controllo di allentamenti e perdite"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Che cos’è un raccordo portagomma passaparete? Montaggio a pannello, tubi e scelta del modello"
+    ],
+    "mentions": [
+      "PMB",
+      "PMBSN",
+      "1/4-28 UNF",
+      "PP",
+      "PA"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "pmb-24d-pp",
+      "title": "Raccordo portagomma passaparete in PP da 2.4 mm",
+      "href": "/en/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pp-n/",
+      "imageSrc": "/images/products/fittings/bulkhead-barbed-fittings/photos/pp-natural-bulkhead-barbed-fitting-long-body-side.webp",
+      "imageAlt": "Foto di riferimento della serie FOREACH: raccordo portagomma passaparete in PP da 2.4 mm",
+      "imageFill": true
+    },
+    {
+      "id": "pmb-24d-pa",
+      "title": "Raccordo portagomma passaparete in PA da 2.4 mm",
+      "href": "/en/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pa-w/",
+      "imageSrc": "/images/products/fittings/bulkhead-barbed-fittings/photos/pa-white-bulkhead-barbed-fitting-small-body-side.webp",
+      "imageAlt": "Foto di riferimento della serie FOREACH: raccordo portagomma passaparete in PA da 2.4 mm",
+      "imageFill": true
+    }
+  ],
+  "footerProducts": [
+    {
+      "id": "809304",
+      "title": "Raccordo portagomma passaparete in PP da 1.6 mm PMB-U28-16D-PP-N",
+      "href": "/en/products/fittings/bulkhead-barbed-fittings/pmb-u28-16d-pp-n/",
+      "imageSrc": "/images/products/fittings/bulkhead-barbed-fittings/products/1-6mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-16d-pp-n.webp",
+      "imageAlt": "Raccordo portagomma passaparete FOREACH PMB-U28-16D-PP-N in PP da 1.6 mm"
+    },
+    {
+      "id": "809462",
+      "title": "Raccordo portagomma passaparete in PP da 2.4 mm PMB-U28-24D-PP-N",
+      "href": "/en/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pp-n/",
+      "imageSrc": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pp-n.webp",
+      "imageAlt": "Raccordo portagomma passaparete FOREACH PMB-U28-24D-PP-N in PP da 2.4 mm"
+    },
+    {
+      "id": "809496",
+      "title": "Raccordo portagomma passaparete in PA da 2.4 mm PMB-U28-24D-PA-W",
+      "href": "/en/products/fittings/bulkhead-barbed-fittings/pmb-u28-24d-pa-w/",
+      "imageSrc": "/images/products/fittings/bulkhead-barbed-fittings/products/2-4mm-tube-id-pa-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-24d-pa-w.webp",
+      "imageAlt": "Raccordo portagomma passaparete FOREACH PMB-U28-24D-PA-W in PA da 2.4 mm"
+    },
+    {
+      "id": "809463",
+      "title": "Raccordo portagomma passaparete in PP da 3.2 mm PMB-U28-32D-PP-N",
+      "href": "/en/products/fittings/bulkhead-barbed-fittings/pmb-u28-32d-pp-n/",
+      "imageSrc": "/images/products/fittings/bulkhead-barbed-fittings/products/3-2mm-tube-id-pp-bulkhead-barbed-fitting-1-4-28-unf-pmb-u28-32d-pp-n.webp",
+      "imageAlt": "Raccordo portagomma passaparete FOREACH PMB-U28-32D-PP-N in PP da 3.2 mm"
+    }
+  ]
+}

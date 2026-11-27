@@ -1,23 +1,37 @@
 "use client";
+import NextLink from "next/link";
 import { normalizeSiteHref } from "@/lib/seo/site-url";
 import { getProductCardThumbnail } from "@/data/products/selection/product-card-thumbnail";
 import { getBarbedFittingCardImageScale } from "@/data/products/selection/barbed-fitting-card-image-scale";
 import { getValvelessPumpImageAlt } from "@/data/products/detail/valveless-pump-image-copy";
 import { getFittingMainImageAlt, getDescriptiveFittingImageUrl } from "@/data/products/detail/fitting-image-description";
+import { hindiPipettingDetailText, hindiSyringeDetailText } from "@/data/products/detail/instrument-pumps.hi";
 import { getControlModuleCardCopy } from "@/data/products/selection/control-module-card-copy";
 import { probeControlDetailCopyEn } from "@/data/products/selection/probe-control-selection.en";
 import { getTubingMaterialCopy } from "@/data/products/tubing/content";
 import { getTubingMaterialHeading } from "@/data/products/tubing/headings";
 import { getSyringeModelRedirect } from "@/data/products/selection/syringe-pump-routes";
 import { getPistonPumpMarketingCopy } from "@/data/products/piston-pump-marketing-copy";
+import { italianPistonCardText } from "@/data/products/detail/piston-pump-ui.intl";
 
+import italianSyringeCopy from "@/data/products/detail/syringe-pump-content.it.json";
 import { syringePumpCardsLocales } from "@/data/products/selection/syringe-pump-cards.locales";
 import { instrumentCardsZh } from "@/data/products/selection/instrument-fluidics-copy.zh";
 import { getPipettingCardCopy } from "@/data/products/selection/pipetting-pump-cards.locales";
 import { getSmtp2VariantCopy } from "@/data/products/detail/smtp2-variant-content";
 import { getValveCardCopy } from "@/data/products/selection/valve-card-copy";
+import { getMrv3Content } from "@/data/products/detail/mrv3-content";
 import { formatProductHeading } from "@/lib/format-product-heading";
+import Link from "@/components/i18n/DraftLink";
 import { usePathname } from "next/navigation";
+import { hindiProductSelectionLabel } from "@/data/products/selection/product-selection.hi";
+import { italianProductSelectionLabel } from "@/data/products/selection/product-selection.it";
+import { getHindiDraftLink, hindiEnglishFallbackSuffix, getItalianDraftLink, getGermanDraftLink, isLocalizedGermanDraftPath } from "@/lib/i18n/draft-languages";
+import germanPipettingCopy from "@/data/products/detail/pipetting-pump-content.de.json";
+import { germanDiaphragmText } from "@/data/products/detail/diaphragm-pump-content.de";
+import { getGermanProductCardText } from "@/data/products/selection/card-copy/product-card-copy.de";
+import { useContentPathname } from "@/lib/i18n/use-content-pathname";
+import { getGermanCardSpec, getGermanFittingCardSubtitle } from "./product-selection-ui.de";
 
 import type { ProductSelectionProductItem } from "./product-selection-ui.types";
 import type { SelectionLocale } from "@/data/products/selection/product-selection.types";
@@ -32,6 +46,8 @@ type ProductSelectionCardProps = {
   title: string;
   subtitle: string;
   detailHref: string;
+  germanFittingPathPattern?: string;
+  contentLocale?: "it" | "hi";
   isAdded: boolean;
   detailButtonText: string;
   addToListText: string;
@@ -185,16 +201,17 @@ function localizeCardDetailHref(
   locale: SelectionLocale,
   product: ProductSelectionProductItem,
 ): string {
+  const detailLocale = product.detailLocale ?? locale;
   if (
-    locale === "zh" ||
+    detailLocale === "zh" ||
     !href.startsWith("/") ||
     /^\/(?:en|es|fr|ko|ru)(?:\/|$)/.test(href)
   ) {
     return href;
   }
 
-  if (["es", "fr", "ko", "ru"].includes(locale)) {
-    return `/${locale}${href}`;
+  if (["es", "fr", "ko", "ru"].includes(detailLocale)) {
+    return `/${detailLocale}${href}`;
   }
 
   return `/en${href}`;
@@ -229,6 +246,8 @@ export default function ProductSelectionCard({
   title,
   subtitle,
   detailHref,
+  germanFittingPathPattern,
+  contentLocale,
   isAdded,
   detailButtonText,
   addToListText,
@@ -239,42 +258,72 @@ export default function ProductSelectionCard({
   showListAction = true,
   onToggleList,
 }: ProductSelectionCardProps) {
-  const pathname = usePathname();
+  const pathname = useContentPathname();
+  const publicPathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
-  const cardText = CARD_TEXT[locale];
+  const isGermanDraft = locale === "en" && isLocalizedGermanDraftPath(publicPathname);
+  const cardText = isGermanDraft ? { imagePlaceholder: "Kein Bild", specsAriaSuffix: "Technische Daten" } : contentLocale === "it" ? { imagePlaceholder: "Immagine non disponibile", specsAriaSuffix: "Dati tecnici" } : contentLocale === "hi" ? { imagePlaceholder: "चित्र उपलब्ध नहीं है", specsAriaSuffix: "तकनीकी विनिर्देश" } : CARD_TEXT[locale];
   const controlCard = product.categoryId === "control"
-    ? getControlModuleCardCopy(locale, String(product.detailSlug || product.slug || "")) : undefined;
-  const valveCard = getValveCardCopy(product, locale);
+    ? getControlModuleCardCopy(contentLocale ?? locale, String(product.detailSlug || product.slug || "")) : undefined;
+  const valveCard = contentLocale === "it" && product.seriesId === "MRV3" ? undefined : getValveCardCopy(product, isGermanDraft ? "de" : contentLocale === "it" ? "it" : locale);
   const slug = String(product.detailSlug || product.slug || "");
   const authoredCard = getPipettingCardCopy(locale, slug) || (locale === "zh" ? instrumentCardsZh : syringePumpCardsLocales[locale])?.[slug];
-  const safeTitle = formatProductHeading(getProductSelectionCardName(product, locale, title));
-  const tubingHeading = product.categoryId === "tubing" ? getTubingMaterialHeading(slug, locale) : undefined;
   const isDiaphragmPumpCard =
     product.productTypeId === "diaphragm-pump" ||
     product.productTypeSlug === "diaphragm-pumps";
+  const localizeCardCopy = (text: string) => {
+    if (contentLocale === "hi") {
+      const translated = product.productTypeId === "syringe-pump" ? hindiSyringeDetailText(text)
+        : product.productTypeId === "pipette-pump" ? hindiPipettingDetailText(text) : text;
+      return hindiProductSelectionLabel(translated);
+    }
+    if (contentLocale === "it") {
+      const italian = product.productTypeId === "syringe-pump" ? (italianSyringeCopy as Readonly<Record<string, string>>)[text] ?? text : text;
+      return italianProductSelectionLabel(italian);
+    }
+    if (!isGermanDraft) return text;
+    const pipettingCopy: Readonly<Record<string, string>> = germanPipettingCopy;
+    const localized = isDiaphragmPumpCard ? germanDiaphragmText(text) : product.productTypeId === "pipette-pump" ? pipettingCopy[text] ?? text : text;
+    return getGermanProductCardText(localized);
+  };
+  const localizedTubingCopy = product.categoryId === "tubing" && (isGermanDraft || contentLocale === "it" || contentLocale === "hi")
+    ? getTubingMaterialCopy(slug, isGermanDraft ? "de" : contentLocale ?? "en") : undefined;
+  const safeTitle = formatProductHeading(localizedTubingCopy?.cardTitle ?? localizeCardCopy(getProductSelectionCardName(product, locale, title)));
+  const tubingHeading = product.categoryId === "tubing" ? getTubingMaterialHeading(slug, locale) : undefined;
+  const localizedTubingHeading = tubingHeading && (contentLocale === "it" || contentLocale === "hi") ? localizedTubingCopy?.cardHeading : undefined;
   const safeSubtitle = isDiaphragmPumpCard
     ? toDisplayText(subtitle)
         .split(/\s*\n+\s*/)
         .filter(Boolean)
         .join(" · ")
-    : toDisplayText(subtitle);
+    : isGermanDraft && product.categoryId === "fittings"
+      ? getGermanFittingCardSubtitle(toDisplayText(subtitle))
+      : contentLocale === "hi" ? hindiProductSelectionLabel(toDisplayText(subtitle)) : toDisplayText(subtitle);
   const localizedDetailHref = localizeCardDetailHref(
     normalizeCardDetailHref(product, detailHref),
     locale,
     product,
   );
-  const safeDetailHref = locale === "zh" ? localizedDetailHref : normalizeSiteHref(localizedDetailHref);
+  const localizedDetailLink = isGermanDraft ? getGermanDraftLink(localizedDetailHref, germanFittingPathPattern) : contentLocale === "it" ? getItalianDraftLink(localizedDetailHref) : contentLocale === "hi" ? getHindiDraftLink(localizedDetailHref) : undefined;
+  const DetailLink = product.openDetailInSameTab ? (isGermanDraft || contentLocale ? NextLink : Link) : "a";
+  const safeDetailHref = locale === "zh" ? localizedDetailHref : normalizeSiteHref(localizedDetailLink?.href ?? localizedDetailHref);
   const cardSpecs = getProductCardSpecs(product, locale)
     .map((spec) => toDisplayText(spec))
-    .filter(Boolean);
-  const plungerCardHeading = getProductCardHeading(product, locale);
+    .filter(Boolean)
+    .map((spec) => isGermanDraft ? localizeCardCopy(getGermanCardSpec(spec)) : localizeCardCopy(spec));
+  const pistonHeading = getProductCardHeading(product, locale);
+  const plungerCardHeading = contentLocale === "it" ? italianPistonCardText(pistonHeading) : contentLocale === "hi" ? hindiProductSelectionLabel(pistonHeading) : pistonHeading;
   const isMrv3Configuration = product.seriesId === "MRV3" && /^mrv3-d(?:10|16|24)$/.test(product.productId);
   const isSolenoidConfiguration = product.seriesId === "6010" && /^(?:2|3)-way$/.test(product.productId);
-  const pistonImageAlt = product.productTypeId === "plunger-pump" ? getPistonPumpMarketingCopy(product.detailSlug || product.productId, locale)?.imageAlt : undefined;
-  const imageAlt = getSmtp2VariantCopy(product.detailSlug || "", locale)?.imageAlt || pistonImageAlt || getValvelessPumpImageAlt(product.imageCard || "", locale) || getFittingMainImageAlt(product, locale) || ((isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
+  const pistonAlt = product.productTypeId === "plunger-pump" ? getPistonPumpMarketingCopy(product.detailSlug || product.productId, locale)?.imageAlt : undefined;
+  const pistonImageAlt = contentLocale === "it" && pistonAlt ? italianPistonCardText(pistonAlt) : pistonAlt;
+  const localizedMrv3Alt = isMrv3Configuration && (isGermanDraft || contentLocale === "hi")
+    ? getMrv3Content(product.productId, isGermanDraft ? "de" : "hi")?.imageAlt : undefined;
+  const imageAlt = localizedTubingCopy?.imageAlt || localizedMrv3Alt || getSmtp2VariantCopy(product.detailSlug || "", locale)?.imageAlt || pistonImageAlt || getValvelessPumpImageAlt(product.imageCard || "", contentLocale ?? locale) || getFittingMainImageAlt(product, isGermanDraft ? "de" : locale) || ((isMrv3Configuration || isSolenoidConfiguration) && typeof product.imageAlt === "string" && product.imageAlt.trim()
     ? product.imageAlt
     : controlCard ? `FOREACH ${controlCard.model} ${controlCard.name}` : valveCard ? `FOREACH ${valveCard.model} ${valveCard.name}` : safeTitle);
-  const descriptionHeading = controlCard?.heading || valveCard?.heading || ((isMrv3Configuration || product.seriesId === "6010") ? safeSubtitle : authoredCard?.heading || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
+  const valveHeading = contentLocale === "hi" && valveCard ? formatProductHeading(localizeCardCopy(valveCard.heading)) : valveCard?.heading;
+  const descriptionHeading = controlCard?.heading || valveHeading || ((isMrv3Configuration || product.seriesId === "6010") ? safeSubtitle : (authoredCard?.heading ? localizeCardCopy(authoredCard.heading) : undefined) || ((isDiaphragmPumpCard || product.productTypeId === "valveless-pump")
     ? safeSubtitle
     : plungerCardHeading));
   const usesDescriptionHeading = Boolean(descriptionHeading);
@@ -290,13 +339,13 @@ export default function ProductSelectionCard({
     <article
       className={`product-card${tubingHeading ? " tubing-material-card" : ""}${product.seriesId === "6010" ? " solenoid-configuration-card" : ""}${usesSquareImage ? " square-image-card" : ""}`}
       data-product-type-id={product.productTypeId || undefined}
-      title={valveCard ? `${safeTitle} ${valveCard.name}` : safeTitle}
+      title={valveCard ? contentLocale === "hi" ? localizeCardCopy(`${safeTitle} ${valveCard.name}`) : `${safeTitle} ${valveCard.name}` : safeTitle}
     >
       <span className="selected-bar" />
 
-      <div className="product-image" aria-label={imageAlt}>
+      <div className="product-image" aria-label={localizeCardCopy(imageAlt)}>
         {product.imageCard ? (
-          <img src={thumbnail?.src ?? cardImage} alt={imageAlt} loading="lazy"
+          <img src={thumbnail?.src ?? cardImage} alt={localizeCardCopy(imageAlt)} loading="lazy"
             width={thumbnail?.width} height={thumbnail?.height}
             style={cardImageScale ? { scale: cardImageScale } : undefined} />
         ) : (
@@ -306,7 +355,7 @@ export default function ProductSelectionCard({
 
       <div className="product-body">
         {tubingHeading ? (
-          <p className="product-title">{tubingHeading.label}</p>
+          <p className="product-title">{contentLocale === "it" || contentLocale === "hi" ? localizedTubingCopy?.cardLabel ?? tubingHeading.label : tubingHeading.label}</p>
         ) : usesDescriptionHeading ? (
           <p className="product-title">{safeTitle}</p>
         ) : (
@@ -315,11 +364,11 @@ export default function ProductSelectionCard({
 
         {tubingHeading ? (
           <h3 className="product-card-summary product-card-description-heading">
-            {formatProductHeading(tubingHeading.description)}
+            {formatProductHeading(localizedTubingHeading ?? localizeCardCopy(tubingHeading.description))}
           </h3>
         ) : usesDescriptionHeading ? (
           <DescriptionHeading className="product-card-summary product-card-description-heading">
-            {formatProductHeading(descriptionHeading || "")}
+            {formatProductHeading(localizeCardCopy(descriptionHeading || ""))}
           </DescriptionHeading>
         ) : cardSpecs.length > 0 ? (
           <ul className="product-card-specs" aria-label={`${safeTitle} ${cardText.specsAriaSuffix}`}>
@@ -328,15 +377,16 @@ export default function ProductSelectionCard({
             ))}
           </ul>
         ) : safeSubtitle ? (
-          <p className="product-card-summary">{formatProductHeading(safeSubtitle)}</p>
+          <p className="product-card-summary">{formatProductHeading(localizeCardCopy(safeSubtitle))}</p>
         ) : null}
 
         <div className="product-actions">
-          <a
+          <DetailLink
             className="product-link"
             href={safeDetailHref}
-            target="_blank"
-            rel="noopener noreferrer"
+            hrefLang={localizedDetailLink?.hrefLang ?? (product.detailLocale === "zh" ? "zh-CN" : product.detailLocale)}
+            title={localizedDetailLink?.title}
+            {...(product.openDetailInSameTab ? { prefetch: false } : { target: "_blank", rel: "noopener noreferrer" })}
             onClick={() => {
               trackProductSelect({
                 productId: product.productId,
@@ -351,8 +401,8 @@ export default function ProductSelectionCard({
               });
             }}
           >
-            {detailButtonText}
-          </a>
+            {localizedDetailLink?.hrefLang === "en" ? (contentLocale === "it" ? "Dettagli (in inglese)" : contentLocale === "hi" ? detailButtonText + hindiEnglishFallbackSuffix : "Details (Englisch)") : detailButtonText}
+          </DetailLink>
 
           {showListAction ? (
             <button

@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "title": "Come scegliere tra una pompa miniaturizzata a membrana da 300 mL/min o 600 mL/min? Calcolare la portata richiesta e verificare il punto di lavoro",
+    "seoTitle": "Pompe miniaturizzate a membrana da 300 e 600 mL/min: portata richiesta e punto di lavoro | Foreach Technology",
+    "seoDescription": "Per confrontare pompe miniaturizzate a membrana da 300 mL/min e 600 mL/min, la portata a vuoto non basta. La guida usa volume per ciclo, tempo utile di pompaggio, pressione differenziale, curve e convalida del prototipo.",
+    "coverImage": "/images/resources/technical-articles/300-vs-600-ml-min-diaphragm-pump-selection/article-cover.webp",
+    "coverAlt": "Pompa miniaturizzata a membrana e prova di portata in un video Douyin ufficiale Foreach"
+  },
+  "deck": "I valori di 300 mL/min e 600 mL/min indicano classi di portata. L'erogazione dopo l'installazione dipende dal circuito. Convertire la funzione fluidica in portata media minima, determinare la pressione differenziale richiesta dal circuito effettivo, quindi confermare il punto di lavoro dalla curva e con prove sul prototipo.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Per lavaggio, ricambio di liquido, adescamento, circolazione e scarico, allo strumento serve trasferire il volume richiesto nel tempo specificato e nelle condizioni reali del circuito. Le classi da 300 mL/min e 600 mL/min si possono confrontare quando portata e pressione si riferiscono allo stesso punto di lavoro."
+    },
+    {
+      "type": "notice",
+      "label": "Conclusione tecnica:",
+      "text": "Calcolare prima la portata richiesta. Poi calcolare o misurare la pressione differenziale del sistema alla portata prevista. Consultare la curva ufficiale portata-pressione e convalidare il risultato sul circuito completo del prototipo. Tenere separate portata a vuoto e pressione nominale."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Ricondurre i valori 300 e 600 alle condizioni di prova",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La specifica di una pompa da 300 mL/min o 600 mL/min indica in genere la portata a vuoto o la portata massima a fluido, alimentazione e bassa pressione differenziale definiti. Dopo l'installazione, tubi di aspirazione e mandata, valvole, raccordi, filtri, celle di flusso, aghi, livelli del liquido e viscosità modificano la pressione differenziale della pompa e spostano la portata effettiva su un altro punto della curva."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/300-vs-600-ml-min-diaphragm-pump-selection/article-figure-it.svg",
+          "alt": "Procedura di scelta della pompa miniaturizzata a membrana dalla portata richiesta e dalla resistenza del circuito al punto di lavoro",
+          "width": 2560,
+          "height": 1920,
+          "caption": "Procedura di selezione per pompe miniaturizzate a membrana da 300 mL/min e 600 mL/min. Curve e valori illustrano il metodo e non sono misure di un modello specifico."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Grandezza da confrontare",
+            "Significato",
+            "Interpretazione errata"
+          ],
+          "rows": [
+            [
+              "Portata a vuoto",
+              "Estremo della curva o classe di portata in condizioni definite di carico ridotto",
+              "Lo strumento può erogare continuamente questa portata a qualsiasi contropressione"
+            ],
+            [
+              "Pressione nominale",
+              "Pressione ammissibile in condizioni definite",
+              "La pompa mantiene a questa pressione la portata a vuoto"
+            ],
+            [
+              "Punto di lavoro effettivo",
+              "Intersezione tra curva della pompa e curva attuale del sistema",
+              "Si ricava dal solo modello della pompa o dalla sola pressione statica in uscita"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Calcolare la portata minima da volume da trasferire e tempo utile di pompaggio",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "Qrequired = Vtask ÷ teffective",
+          "note": "Vtask è il volume trasferito, usato nel lavaggio o scaricato in una funzione. teffective è il tempo effettivamente disponibile per il pompaggio nel programma. Con V in mL e t in min si ottengono mL/min. Con t in s si ottengono mL/s e si moltiplica per 60 per passare a mL/min."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il tempo ciclo dello strumento spesso differisce dal tempo utile di pompaggio. Commutazione delle valvole, rilevamento del livello, immersione, sfiato e ritardi di controllo consumano tempo. Sottrarre queste fasi senza pompaggio dalla durata del ciclo. Se il programma prevede un breve risciacquo rapido, definire separatamente portata media richiesta e picco."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Funzione esemplificativa (senza riferimento a un cliente)",
+            "Volume per funzione",
+            "Tempo utile di pompaggio",
+            "Portata media minima",
+            "Verifica successiva principale"
+          ],
+          "rows": [
+            [
+              "Adescamento di un piccolo volume",
+              "120 mL",
+              "45 s",
+              "160 mL/min",
+              "Avviamento, autoadescamento e sfiato"
+            ],
+            [
+              "Lavaggio rapido",
+              "400 mL",
+              "60 s",
+              "400 mL/min",
+              "Perdita di carico dei tubi ad alta portata"
+            ],
+            [
+              "Ciclo di scarico",
+              "250 mL",
+              "50 s",
+              "300 mL/min",
+              "Variazioni di livello e contropressione terminale"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Controllo delle unità:",
+          "text": "Ad esempio, 120 mL ÷ 45 s = 2.667 mL/s. Convertendo in minuti si ottengono 160 mL/min. Unità di tempo incoerenti possono introdurre un errore di un fattore 60 nel calcolo."
+        }
+      ]
+    },
+    {
+      "title": "3. Costruire il bilancio di pressione del circuito nel verso del flusso",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Definire il verso dalla sorgente al terminale. Usare sempre pressione relativa oppure assoluta. La pressione differenziale richiesta alla pompa alla portata Q si può scomporre come segue. Perdite distribuite e localizzate sono positive nel verso del flusso."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPrequired(Q) = ΔPdistributed(Q) + ΣΔPlocal(Q) + [Pterminal − Psource] + ρg[zterminal − zsource]",
+          "note": "zterminal − zsource è un dislivello con segno: positivo quando il terminale è più alto della sorgente e la pompa deve vincere il carico idrostatico, negativo quando il terminale è più basso e la gravità aiuta il flusso. Anche Pterminal − Psource si calcola con il suo segno e con lo stesso riferimento di pressione."
+        },
+        {
+          "type": "paragraph",
+          "text": "La relazione aiuta a includere tutte le voci. Per componenti critici come filtri, valvole, aghi e celle di flusso, usare quando possibile la curva di perdita di carico del produttore alla portata prevista o dati misurati. Verificare a parte pressione assoluta in aspirazione, alimentazione del liquido e rischio di cavitazione."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Origine della resistenza",
+            "Perché varia",
+            "Effetto sulla selezione"
+          ],
+          "rows": [
+            [
+              "Tubi",
+              "Differenze di diametro interno, lunghezza, curve e deformazione dei tubi morbidi",
+              "La stessa pompa eroga portate diverse con percorsi diversi"
+            ],
+            [
+              "Valvole e raccordi",
+              "Differenze di passaggio, Cv/Kv e restringimenti locali",
+              "Possono diventare il collo di bottiglia dell'intero circuito"
+            ],
+            [
+              "Filtro",
+              "Perdita di carico diversa da nuovo e dopo il caricamento",
+              "Considerare la condizione prossima alla sostituzione"
+            ],
+            [
+              "Livello del liquido e pressione del recipiente",
+              "Variazioni di livello alla sorgente, quota terminale o pressione del recipiente",
+              "Cambiano il contributo idrostatico e le condizioni di ingresso"
+            ],
+            [
+              "Struttura terminale",
+              "Resistenza di ago, ugello, camera in pressione o cella di flusso",
+              "Può trasformare un problema di portata in uno di contropressione elevata"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. I dati Foreach distinguono portata, pressione e altezza di autoadescamento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I dati Foreach per DPL30 e DPL60 illustrano parametri distinti. Le classi di portata a vuoto differiscono. La pressione nominale pubblicata è per entrambe di 100 kPa. Le altezze di autoadescamento sono rispettivamente 6 mH₂O e 3 mH₂O. Verificare portata, autoadescamento e pressione separatamente."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Parametro di confronto",
+            "Dato rappresentativo DPL30",
+            "Dato rappresentativo DPL60",
+            "Implicazione per la selezione"
+          ],
+          "rows": [
+            [
+              "Portata a vuoto pubblicata",
+              "300 mL/min",
+              "600 mL/min",
+              "Estremo a bassa pressione differenziale. La portata dopo l'installazione va verificata"
+            ],
+            [
+              "Pressione nominale pubblicata",
+              "100 kPa",
+              "100 kPa",
+              "Leggere la portata disponibile alla pressione prevista"
+            ],
+            [
+              "Altezza di autoadescamento pubblicata",
+              "6 mH₂O",
+              "3 mH₂O",
+              "Una portata maggiore non implica più altezza di autoadescamento"
+            ],
+            [
+              "Attacco comune",
+              "Tubo flessibile con diametro interno di 3.2 mm",
+              "Tubo flessibile con diametro interno di 3.2 mm",
+              "Lo stesso attacco non implica la stessa resistenza di sistema"
+            ],
+            [
+              "Impiego da valutare in priorità",
+              "Portata di lavoro più bassa o maggiore importanza dell'altezza di aspirazione",
+              "Trasferimento di volumi più grandi, ricambio rapido o lavaggio",
+              "Il criterio finale resta il punto di lavoro effettivo"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Se il limite principale è un ago sottile, un tubo stretto, un filtro o una camera in pressione, controllare prima la pressione differenziale totale alla portata prevista. Se una pompa convenzionale ha capacità insufficiente in quella zona, valutare una versione ad alta pressione come DPL30H prima di passare da 300 mL/min a 600 mL/min."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Visualizza la",
+              "label": "pompa a membrana per liquidi DPL30",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump",
+              "suffix": "."
+            },
+            {
+              "prefix": "Visualizza la",
+              "label": "pompa a membrana per liquidi DPL60",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump",
+              "suffix": "."
+            },
+            {
+              "prefix": "Scopri",
+              "label": "come leggere la curva portata-pressione di una pompa miniaturizzata a membrana",
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide",
+              "suffix": "."
+            },
+            {
+              "prefix": "Per i circuiti di alimentazione e ritorno delle stampanti a getto d'inchiostro, consulta la",
+              "label": "guida alle pompe di circolazione e ritorno inchiostro da 300 e 600 mL/min",
+              "href": "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Confrontare le pompe candidate allo stesso punto di lavoro",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Documentare volume per funzione, tempo utile di pompaggio, cicli giornalieri ed eventuale fase di picco.",
+            "Disegnare tutto il circuito dalla sorgente al terminale. Registrare diametro e lunghezza dei tubi, valvole, raccordi, filtri, aghi, camere, pressione del recipiente e dislivello con segno.",
+            "Calcolare o misurare perdite in ingresso e uscita e pressione differenziale della pompa alla portata prevista.",
+            "Allineare fluido, temperatura, alimentazione, velocità e definizione di pressione sulle curve delle pompe candidate. Leggere la portata disponibile vicino alla pressione differenziale prevista.",
+            "Considerare livello minimo, intasamento del filtro, tensione minima ammessa, limiti del fluido e variabilità dei campioni. Verificare che la funzione sia svolta anche nel caso più sfavorevole.",
+            "Controllare quindi autoadescamento, materiali, durata, rumore, aumento di temperatura, campo di regolazione e ingombro. Convalidare il progetto sul prototipo completo."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Convalidare il prototipo alle condizioni di riferimento e più sfavorevoli",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Variabile",
+            "Condizione di riferimento",
+            "Condizione più sfavorevole",
+            "Dati da registrare"
+          ],
+          "rows": [
+            [
+              "Livello del liquido nel serbatoio",
+              "Livello massimo o tipico",
+              "Livello minimo ammissibile",
+              "Pressione di ingresso, tempo di avvio e portata"
+            ],
+            [
+              "Filtro",
+              "Componente nuovo",
+              "Perdita di carico equivalente prossima alla sostituzione",
+              "Pressione differenziale del filtro e portata della pompa"
+            ],
+            [
+              "Alimentazione",
+              "Tensione nominale",
+              "Tensione minima ammissibile alla pompa",
+              "Tensione, corrente, velocità e avviamento"
+            ],
+            [
+              "Fluido",
+              "Temperatura e viscosità di riferimento",
+              "Limite ammissibile",
+              "Portata, bolle e risposta delle valvole"
+            ],
+            [
+              "Campioni di pompa",
+              "Più campioni iniziali",
+              "Campioni con prestazioni basse o in una fase della vita utile",
+              "Media, dispersione, tendenza e perdite"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limiti delle evidenze:",
+          "text": "I parametri illustrano un metodo di selezione con dati pubblicati. Formule ed esempi servono alla preselezione tecnica. I risultati finali si basano su specifiche controllate, curve ufficiali, fluido effettivo e prove sul prototipo completo."
+        }
+      ]
+    },
+    {
+      "title": "Conclusione: scegliere il punto di lavoro richiesto dalla funzione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una pompa della classe da 300 mL/min può essere più adatta quando la portata richiesta è contenuta e conta di più l'altezza di aspirazione. Una classe da 600 mL/min può convenire per ricambio rapido e volumi maggiori. Ogni scelta deve indicare anche pressione, livello, fluido, alimentazione e versione del circuito. Riunire in una tabella di convalida portata richiesta, pressione differenziale e curva della pompa evita sottodimensionamento e sovradimensionamento inutile."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulla scelta di una pompa miniaturizzata a membrana da 300 mL/min o 600 mL/min",
+  "faqItems": [
+    {
+      "question": "Se lo strumento richiede 300 mL/min, conviene scegliere subito una pompa da 600 mL/min per avere margine?",
+      "answer": "Definire prima pressione differenziale, livello, fluido e tempo utile associati alla richiesta di 300 mL/min. Leggere poi la curva della pompa candidata. Una pompa sovradimensionata può ridurre la risoluzione a bassa velocità e aumentare rumore, pulsazioni, consumo e ingombro."
+    },
+    {
+      "question": "Una pompa da 600 mL/min regolata a 300 mL/min equivale a una da 300 mL/min?",
+      "answer": "Le due classi possono differire per camera, risposta valvole, autoadescamento, pulsazioni, motore e stabilità a bassa velocità. La regolazione della velocità cambia la curva. Provare la velocità di progetto alla contropressione effettiva."
+    },
+    {
+      "question": "Perché DPL30 e DPL60 non sono intercambiabili anche se entrambe hanno pressione nominale di 100 kPa?",
+      "answer": "La pressione nominale è un solo parametro. Portata a vuoto, altezza di autoadescamento, potenza, struttura, curva e campo di controllo determinano campi di esercizio diversi nello strumento."
+    },
+    {
+      "question": "Quando conviene passare da una pompa convenzionale a una pompa a membrana ad alta pressione?",
+      "answer": "Quando la pressione differenziale totale alla portata prevista si avvicina o supera la curva utilizzabile della pompa convenzionale e la resistenza principale viene da ago sottile, tubo stretto, filtro, camera in pressione o terminale molto resistivo, valutare una piattaforma ad alta pressione e verificare contemporaneamente la pressione di esercizio ammissibile dell'intero circuito."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi confrontare pompe a membrana da 300 mL/min e 600 mL/min?",
+    "description": "Indica volume per funzione, tempo utile di pompaggio, fluido, diametro e lunghezza dei tubi, livello del liquido, pressione di ingresso, contropressione in uscita, valvole, filtri e alimentazione. Si potranno valutare le pompe al punto di lavoro effettivo.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Visualizza le pompe a membrana"
+  }
+}

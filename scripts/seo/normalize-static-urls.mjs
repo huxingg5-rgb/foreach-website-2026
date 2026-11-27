@@ -18,7 +18,7 @@ const OUTPUT_ROOT = outputArgument
   : path.join(process.cwd(), "out");
 const SITE_ORIGIN = "https://www.foreachtek.com";
 const SITE_HOSTNAME = new URL(SITE_ORIGIN).hostname;
-const INTERNATIONAL_LOCALES = new Set(["en", "es", "fr", "ko", "ru"]);
+const INTERNATIONAL_LOCALES = new Set(["en", "es", "fr", "ko", "ru", "de", "it", "hi"]);
 const HREFLANG_BY_LOCALE = new Map([
   ["zh-CN", "zh-CN"],
   ["en", "en"],
@@ -26,6 +26,9 @@ const HREFLANG_BY_LOCALE = new Map([
   ["fr", "fr"],
   ["ko", "ko"],
   ["ru", "ru"],
+  ["de", "de"],
+  ["it", "it"],
+  ["hi", "hi"],
 ]);
 const STRUCTURED_URL_KEYS = new Set([
   "@id",
@@ -311,9 +314,10 @@ function injectSeoLinks(html, canonicalUrl, alternates) {
 // Set the document language before JavaScript runs, including noindex review pages.
 function normalizeContentLanguage(html, route) {
   const { locale } = routeLocaleAndBase(route);
+  const lang = { de: "de-DE", it: "it-IT", hi: "hi-IN" }[locale] ?? locale;
   return html.replace(/<html\b[^>]*>/i, (tag) => {
     const withoutLang = tag.replace(/\s+lang\s*=\s*(?:"[^"]*"|'[^']*')/i, "");
-    return withoutLang.replace(/>$/, ` lang="${locale}">`);
+    return withoutLang.replace(/>$/, ` lang="${lang}">`);
   });
 }
 

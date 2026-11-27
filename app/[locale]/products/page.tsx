@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜多语言产品中心选型页入口
@@ -26,6 +27,9 @@ import { notFound } from "next/navigation";
 
 import ProductPageSkeleton from "@/components/common/ProductPageSkeleton";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
+import { germanFittingDraftPathPattern } from "@/data/products/detail/german-fitting-draft-routes";
+import { isLocalizedHindiDraftPath, isLocalizedItalianDraftPath, languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
 
 type ProductSelectionLocale = "en" | "es" | "fr" | "ko" | "ru";
 import "@/app/products/products.css";
@@ -69,15 +73,42 @@ type ProductsLocalePageProps = {
 };
 
 export function generateStaticParams() {
-  return PRODUCT_LOCALES.map((locale) => ({
+  return [...PRODUCT_LOCALES, ...(languageDraftsEnabled ? ["de"] : []), ...(isLocalizedItalianDraftPath("/it/products/") ? ["it"] : []), ...(isLocalizedHindiDraftPath("/hi/products/") ? ["hi"] : [])].map((locale) => ({
     locale,
   }));
 }
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: ProductsLocalePageProps): Promise<Metadata> {
   const { locale } = await params;
+
+  if (locale === "hi" && isLocalizedHindiDraftPath("/hi/products/")) {
+    const title = "फ्लुइडिक घटक: पंप, वाल्व और सेंसर | FOREACH";
+    const description = "OEM उपकरणों में द्रव की सटीक हैंडलिंग के लिए FOREACH पंप, वाल्व, प्रोब, फिटिंग, ट्यूब, सेंसर और नियंत्रण मॉड्यूल की तुलना करें।";
+    const url = getCanonicalUrl("/hi/products/");
+    return { title: { absolute: title }, description, alternates: { canonical: url }, robots: { index: false, follow: true }, openGraph: { title, description, url, type: "website", locale: "hi_IN" } };
+  }
+
+  if (locale === "it" && isLocalizedItalianDraftPath("/it/products/")) {
+    const title = "Componenti per circuiti fluidici: pompe, valvole e sensori | FOREACH";
+    const description = "Confrontate i componenti FOREACH per strumentazione OEM: pompe, valvole, sonde, raccordi, tubi, sensori e moduli di comando per la gestione di precisione dei fluidi.";
+    const url = getCanonicalUrl("/it/products/");
+    return { title: { absolute: title }, description, alternates: { canonical: url }, robots: { index: false, follow: true }, openGraph: { title, description, url, type: "website", locale: "it_IT" } };
+  }
+
+  if (languageDraftsEnabled && locale === "de") {
+    const title = "Fluidikkomponenten: Pumpen, Ventile und Sensoren | FOREACH";
+    const description = "Vergleichen Sie FOREACH Fluidikkomponenten für OEM-Geräte: Pumpen, Ventile, Sonden, Fittings, Leitungen, Sensoren und Steuermodule für die präzise Flüssigkeitshandhabung.";
+    const url = getCanonicalUrl("/de/products/");
+    return {
+      title: { absolute: title },
+      description,
+      alternates: { canonical: url },
+      robots: { index: false, follow: true },
+      openGraph: { title, description, url, type: "website", locale: "de_DE" },
+    };
+  }
 
   if (!PRODUCT_LOCALES.includes(locale as ProductLocale)) {
     return {};
@@ -89,23 +120,24 @@ export async function generateMetadata({
 export default async function ProductsLocalePage({
   params,
 }: ProductsLocalePageProps) {
-  const { locale } = await params;
+  const { locale: requestedLocale } = await params;
+  const nativeItalian = requestedLocale === "it" && isLocalizedItalianDraftPath("/it/products/");
+  const nativeHindi = requestedLocale === "hi" && isLocalizedHindiDraftPath("/hi/products/");
+  const locale = nativeItalian || nativeHindi || (languageDraftsEnabled && requestedLocale === "de") ? "en" : requestedLocale;
 
   if (!PRODUCT_LOCALES.includes(locale as ProductLocale)) {
     notFound();
   }
-const productSelectionLocale =
-    locale === "en" ||
-    locale === "es" ||
-    locale === "fr" ||
-    locale === "ko" ||
-    locale === "ru"
-      ? (locale as ProductSelectionLocale)
-      : "en";
 
   return (
     <Suspense fallback={<ProductPageSkeleton variant="selection" />}>
-      <ProductSelectionClient locale={productSelectionLocale} />
+      <ProductSelectionClient
+        locale={locale as ProductSelectionLocale}
+        germanFittingPathPattern={requestedLocale === "de" ? germanFittingDraftPathPattern : undefined}
+        contentLocale={nativeItalian ? "it" : nativeHindi ? "hi" : undefined}
+      />
     </Suspense>
   );
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/products/", getPageMetadata);

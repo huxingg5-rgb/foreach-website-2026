@@ -7,10 +7,15 @@ import {
 } from "@/data/products/detail/diaphragm-pump-routes";
 import { getDiaphragmPumpSeriesCopy } from "@/data/products/detail/diaphragm-pump-series-copy";
 
+import { getGermanDraftLink, getHindiDraftLink, getItalianDraftLink, germanEnglishFallbackSuffix, hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
+import { hindiDiaphragmText } from "@/data/products/detail/diaphragm-pump-content.hi";
+import { italianDiaphragmText } from "@/data/products/detail/diaphragm-pump-content.it";
+import { germanDiaphragmText } from "@/data/products/detail/diaphragm-pump-content.de";
+
 import styles from "./DiaphragmPumpSeriesOptions.module.css";
 
 type DiaphragmPumpSeriesOptionsProps = {
-  locale: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
+  locale: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru" | "de" | "it" | "hi";
   seriesSlug: string;
 };
 
@@ -27,7 +32,8 @@ export default function DiaphragmPumpSeriesOptions({
   locale,
   seriesSlug,
 }: DiaphragmPumpSeriesOptionsProps) {
-  const normalizedLocale = normalizeDiaphragmPumpLocale(locale);
+  const normalizedLocale = locale === "de" || locale === "hi" ? "en" : normalizeDiaphragmPumpLocale(locale);
+  const text = (value: string) => locale === "hi" ? hindiDiaphragmText(value) : locale === "it" ? italianDiaphragmText(value) : locale === "de" ? germanDiaphragmText(value) : value;
   const copy = getDiaphragmPumpSeriesCopy(seriesSlug, normalizedLocale);
 
   if (!copy) return null;
@@ -47,26 +53,32 @@ export default function DiaphragmPumpSeriesOptions({
       data-diaphragm-series-configurations={copy.seriesSlug}
     >
       <div className={styles.header}>
-        <h2 id={headingId}>{copy.optionsTitle}</h2>
-        <p>{copy.optionsIntro}</p>
+        <h2 id={headingId}>{text(copy.optionsTitle)}</h2>
+        <p>{text(copy.optionsIntro)}</p>
       </div>
 
       <div className={styles.grid}>
-        {configurations.map((reference) => (
-          <article className={styles.card} key={reference.slug}>
+        {configurations.map((reference) => {
+          const href = getDiaphragmPumpPath(normalizedLocale, reference.slug);
+          const link = locale === "hi" ? getHindiDraftLink(href) : locale === "it" ? getItalianDraftLink(href) : locale === "de" ? getGermanDraftLink(href) : undefined;
+          return <article className={styles.card} key={reference.slug}>
             <div>
               <h3>{reference.model}</h3>
-              <p>{reference.localized[normalizedLocale].cardSubtitle}</p>
+              <p>{text(reference.localized[normalizedLocale].cardSubtitle)}</p>
             </div>
             <Link
               className={styles.link}
-              href={getDiaphragmPumpPath(normalizedLocale, reference.slug)}
+              href={link?.href ?? href}
+              hrefLang={link?.hrefLang}
+              title={link?.title}
             >
-              {VIEW_CONFIGURATION_COPY[normalizedLocale](reference.model)}
+              {locale === "hi" ? reference.model + " का कॉन्फ़िगरेशन देखें" + (link?.hrefLang === "en" ? hindiEnglishFallbackSuffix : "")
+                : locale === "it" ? "Dettagli di " + reference.model + (link?.hrefLang === "en" ? italianEnglishFallbackSuffix : "")
+                : locale === "de" ? "Details zu " + reference.model + (link?.hrefLang === "en" ? germanEnglishFallbackSuffix : "") : VIEW_CONFIGURATION_COPY[normalizedLocale](reference.model)}
               <span aria-hidden="true">→</span>
             </Link>
-          </article>
-        ))}
+          </article>;
+        })}
       </div>
     </section>
   );

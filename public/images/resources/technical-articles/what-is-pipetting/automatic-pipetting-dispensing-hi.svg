@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="166" viewBox="0 0 680 166" role="img" xml:lang="hi-IN">
+  <title>डिस्पेंसिंग का मार्ग। मोटर सिरिंज का प्लंजर आगे करती है और अभिकर्मक स्विचिंग वाल्व व स्थिर सुई से प्रतिक्रिया कप में जाता है।</title>
+  <desc>डिस्पेंसिंग: सिरिंज → स्विचिंग वाल्व → सुई → प्रतिक्रिया कप। बोतल वाली शाखा बंद है और लक्ष्य आयतन 100 µL है।</desc>
+  <rect width="100%" height="100%" fill="#fff" />
+  <g font-family="Nirmala UI, Mangal, Noto Sans Devanagari, sans-serif">
+    <rect x="14" y="22" width="140.5" height="120" rx="4" fill="#fff" stroke="#333" stroke-width="1.5" />
+    <text x="84.25" y="66" font-size="20" font-weight="600" fill="#171717" text-anchor="middle">
+      <tspan x="84.25" dy="0">सिरिंज</tspan>
+    </text>
+    <text x="84.25" y="108" font-size="16" font-weight="400" fill="#575757" text-anchor="middle">
+      <tspan x="84.25" dy="0">प्लंजर आगे जाता है</tspan>
+      <tspan x="84.25" dy="21.12" />
+    </text>
+    <path d="M 159.5 82 h 17" stroke="#333" stroke-width="1.5" />
+    <path d="M 172.5 77 l 8 5 -8 5" fill="#333" />
+    <rect x="184.5" y="22" width="140.5" height="120" rx="4" fill="#fff" stroke="#333" stroke-width="1.5" />
+    <text x="254.75" y="66" font-size="20" font-weight="600" fill="#171717" text-anchor="middle">
+      <tspan x="254.75" dy="0">स्विचिंग वाल्व</tspan>
+      <tspan x="254.75" dy="26.400000000000002" />
+    </text>
+    <text x="254.75" y="108" font-size="16" font-weight="400" fill="#575757" text-anchor="middle">
+      <tspan x="254.75" dy="0">आउटलेट जुड़ा है</tspan>
+      <tspan x="254.75" dy="21.12" />
+    </text>
+    <path d="M 330 82 h 17" stroke="#333" stroke-width="1.5" />
+    <path d="M 343 77 l 8 5 -8 5" fill="#333" />
+    <rect x="355" y="22" width="140.5" height="120" rx="4" fill="#fff" stroke="#333" stroke-width="1.5" />
+    <text x="425.25" y="66" font-size="20" font-weight="600" fill="#171717" text-anchor="middle">
+      <tspan x="425.25" dy="0">डिस्पेंसिंग सुई</tspan>
+      <tspan x="425.25" dy="26.400000000000002" />
+    </text>
+    <text x="425.25" y="108" font-size="16" font-weight="400" fill="#575757" text-anchor="middle">
+      <tspan x="425.25" dy="0">स्थिति स्थिर है</tspan>
+      <tspan x="425.25" dy="21.12" />
+    </text>
+    <path d="M 500.5 82 h 17" stroke="#333" stroke-width="1.5" />
+    <path d="M 513.5 77 l 8 5 -8 5" fill="#333" />
+    <rect x="525.5" y="22" width="140.5" height="120" rx="4" fill="#fff" stroke="#333" stroke-width="1.5" />
+    <text x="595.75" y="66" font-size="20" font-weight="600" fill="#171717" text-anchor="middle">
+      <tspan x="595.75" dy="0">प्रतिक्रिया कप</tspan>
+    </text>
+    <text x="595.75" y="108" font-size="16" font-weight="400" fill="#575757" text-anchor="middle">
+      <tspan x="595.75" dy="0">अभिकर्मक लेता है</tspan>
+      <tspan x="595.75" dy="21.12" />
+    </text>
+  </g>
+</svg>

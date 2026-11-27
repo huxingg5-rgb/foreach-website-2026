@@ -84,7 +84,9 @@
       "title": "FOREACH Diaphragm Pumps for Ink Supply and Return",
       "tocLabel": "Pump options",
       "paragraphs": [
-        "FOREACH miniature liquid diaphragm pumps can be evaluated as candidates according to the flow and pressure requirements of the ink circuit. DPL30 and DPL60 address different flow requirements in supply or return branches; DPL30H is a candidate for evaluating an upstream transfer section with higher pressure requirements."
+        { "prefix": "For a refill branch, compare the required flow at the measured pressure difference with the curve for the ", "key": "dpl30", "label": "DPL30-DB liquid diaphragm pump", "suffix": ". Test with the intended ink at the lowest operating tank level." },
+        { "prefix": "If that curve leaves too little refill margin while the printer is running, compare the ", "key": "dpl60", "label": "DPL60-DB liquid diaphragm pump", "suffix": " at the same pressure difference. Measure the time it takes to restore the secondary tank level." },
+        { "prefix": "When a long upstream transfer line or a filter accounts for most of the pressure loss, evaluate the ", "key": "dpl30h", "label": "DPL30H-DS high-pressure liquid diaphragm pump", "suffix": " against that load. Check the printhead pressure separately at the point specified by its manufacturer." }
       ],
       "productTable": {
         "headers": ["Candidate model", "Free flow", "Rated pressure", "Circuit role to evaluate"],
@@ -99,12 +101,7 @@
         "Free flow and rated pressure describe different specification conditions. They do not mean that free flow is guaranteed at rated pressure. Check the complete parameters, connections and wetted-material combination for the specific model.",
         "The formal specifications for all three series list purified water as the working medium; other liquids require actual customer evaluation. When considering wetted-material configurations involving PPS, EPDM, PTFE or FFKM, validate them against the ink composition, concentration, temperature, contact duration and cleaning fluid. Material names alone cannot establish long-term ink compatibility."
       ],
-      "note": "Negative-pressure ranges, adjustment increments and filter-replacement intervals vary with the printhead, ink and equipment architecture. Follow the applicable manuals and ink manufacturer's requirements for actual settings.",
-      "links": [
-        {"key": "dpl30", "label": "Review DPL30-DB parameters and configuration"},
-        {"key": "dpl60", "label": "Review DPL60-DB parameters and configuration"},
-        {"key": "dpl30h", "label": "Review DPL30H-DS parameters and configuration"}
-      ]
+      "note": "Negative-pressure ranges, adjustment increments and filter-replacement intervals vary with the printhead, ink and equipment architecture. Follow the applicable manuals and ink manufacturer's requirements for actual settings."
     }
   ],
   "cta": {

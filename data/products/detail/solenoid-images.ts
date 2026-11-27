@@ -2,7 +2,9 @@ import {getSolenoidCardCopy} from "./solenoid-card-copy";
 import {getSolenoidConfiguration, solenoidConfigurationName} from "./solenoid-configurations";
 import type { SelectionLocale } from "../selection/product-selection.types";
 
-const seriesIntroAltByLocale: Record<SelectionLocale, string> = {
+const seriesIntroAltByLocale: Record<SelectionLocale | "de" | "it", string> = {
+  it: "Elettrovalvole miniaturizzate a membrana FOREACH SV10 con attacchi per collettore, portagomma e filettati",
+  de: "FOREACH SV10 Miniatur-Membranmagnetventile für Blockmontage sowie mit Schlauchtüllen und Gewindeanschlüssen",
   zh: "FOREACH SV10 微型隔膜电磁阀，展示基板式、倒刺式和螺纹式接口",
   en: "FOREACH SV10 miniature diaphragm solenoid valves with manifold-mount, barbed and threaded connections",
   es: "Electroválvulas de diafragma miniatura FOREACH SV10 con conexiones de base, de espiga y roscadas",
@@ -11,7 +13,7 @@ const seriesIntroAltByLocale: Record<SelectionLocale, string> = {
   ru: "Миниатюрные мембранные электромагнитные клапаны FOREACH SV10 с монтажом на основание, штуцерными и резьбовыми подключениями",
 };
 
-export function getSolenoidSeriesIntroImage(locale: SelectionLocale) {
+export function getSolenoidSeriesIntroImage(locale: SelectionLocale | "de" | "it") {
   return {
     src: "/images/products/valves/solenoid-valves/foreach-sv10-connection-options-intro.webp",
     alt: seriesIntroAltByLocale[locale],

@@ -1,0 +1,276 @@
+{
+  "name": "Modulo di degasaggio a membrana",
+  "navName": "Moduli di degasaggio a membrana",
+  "navDescription": "Degasaggio in linea sotto vuoto per circuiti di liquido",
+  "title": "Modulo di degasaggio a membrana EF-AG3-B",
+  "seoTitle": "EF-AG3-B | Modulo di degasaggio a membrana per inchiostri inkjet | FOREACH",
+  "description": "Modulo di degasaggio EF-AG3-B con membrana a fibre cave per il degasaggio in linea sotto vuoto nei circuiti di alimentazione dell’inchiostro inkjet. Due attacchi per il liquido e uno per il vuoto, tutti con filettatura femmina NPT 1/8.",
+  "introduction": "EF-AG3-B è un modulo con membrana a fibre cave per il degasaggio in linea sotto vuoto. Rimuove in continuo i gas disciolti durante l’alimentazione del liquido e riduce le bolle dovute alla fuoriuscita del gas dalla soluzione. Un’applicazione tipica è l’alimentazione dell’inchiostro nei sistemi inkjet industriali. Per il degasaggio dell’acqua e i circuiti degli analizzatori biochimici, verificate la compatibilità con il liquido e le condizioni di esercizio. Il modulo adotta la perfusione esterna, con due attacchi per il liquido e uno per il vuoto, tutti con filettatura femmina NPT 1/8. Si monta in serie sulla linea di alimentazione, con un collegamento separato al vuoto.",
+  "cardAlt": "Modulo di degasaggio a membrana EF-AG3-B e relativi attacchi filettati",
+  "galleryAlts": [
+    "Vista frontale del modulo di degasaggio a membrana EF-AG3-B con corpo cilindrico e attacco laterale del liquido",
+    "Modulo di degasaggio a membrana EF-AG3-B in posizione verticale",
+    "Vista obliqua del modulo di degasaggio a membrana EF-AG3-B dal lato opposto",
+    "Attacchi filettati di estremità e laterale del modulo di degasaggio a membrana EF-AG3-B"
+  ],
+  "breadcrumbs": [
+    "Home",
+    "Prodotti",
+    "Raccordi"
+  ],
+  "modelLabel": "Modello",
+  "typeLabel": "Tipo di prodotto",
+  "searchKeywords": "modulo degasaggio membrana degasatore a membrana fibre cave degasaggio in linea sotto vuoto inchiostro inkjet EF-AG3-B",
+  "specificationGroups": [
+    {
+      "title": "Struttura e attacchi",
+      "rows": [
+        [
+          "Dimensioni",
+          "159 mm × Ø42 mm"
+        ],
+        [
+          "Peso",
+          "Circa 100 g"
+        ],
+        [
+          "Superficie della membrana",
+          "Circa 0.2 m²"
+        ],
+        [
+          "Volume di riempimento iniziale",
+          "Circa 40 mL (valore di riferimento della serie EF-AG3)"
+        ],
+        [
+          "Membrana a fibre cave",
+          "Poli(4-metil-1-pentene) (PMP)"
+        ],
+        [
+          "Corpo e tappi di estremità",
+          "Polipropilene (PP), acciaio inossidabile (SUS)"
+        ],
+        [
+          "Resina di incapsulamento",
+          "Resina epossidica"
+        ],
+        [
+          "Attacchi",
+          "Due attacchi per il liquido e uno per il vuoto, tutti NPT 1/8"
+        ]
+      ]
+    },
+    {
+      "title": "Condizioni di esercizio",
+      "rows": [
+        [
+          "Temperatura di esercizio del liquido e dell’ambiente",
+          "5–45 °C"
+        ],
+        [
+          "Pressione massima sul lato liquido, relativa",
+          "200 kPa"
+        ],
+        [
+          "Pressione assoluta sul lato vuoto per liquidi acquosi",
+          "Dalla pressione di vapore saturo del liquido alla temperatura di esercizio fino a 100 kPa"
+        ],
+        [
+          "Pressione assoluta sul lato vuoto per liquidi non acquosi",
+          "1–100 kPa"
+        ]
+      ]
+    },
+    {
+      "title": "Risultati delle prove con acqua",
+      "rows": [
+        [
+          "Prova con acqua, ossigeno disciolto dopo il trattamento",
+          "< 1.9 mg/L"
+        ],
+        [
+          "Prova con acqua, perdita di carico del modulo",
+          "< 0.1 kPa"
+        ]
+      ]
+    }
+  ],
+  "selection": {
+    "ariaLabel": "Scelta e uso del modulo di degasaggio a membrana",
+    "phaseTitles": [
+      "Scelta e configurazione",
+      "Attacchi e montaggio"
+    ],
+    "intro": "EF-AG3-B adotta la perfusione esterna. Il liquido scorre all’esterno delle fibre cave e i gas disciolti attraversano la membrana e vengono aspirati sul lato vuoto. Stabilite portata di esercizio, obiettivo di degasaggio e perdita di carico ammissibile. Verificate quindi temperatura del liquido, compatibilità con il fluido e condizioni di vuoto disponibili.",
+    "columns": [
+      "Criterio di scelta",
+      "Configurazione e verifiche"
+    ],
+    "inputs": {
+      "title": "Portata di esercizio e obiettivo di degasaggio",
+      "intro": "Definite i seguenti dati per il funzionamento effettivo dello strumento. Verificate poi il punto di lavoro previsto sulle curve di riferimento.",
+      "rows": [
+        [
+          "Portata di esercizio",
+          "Registrate le portate abituale e massima dello strumento",
+          "Controllate sia l’alimentazione continua sia le fasi di avvio e arresto."
+        ],
+        [
+          "Obiettivo di degasaggio",
+          "Valutate le prestazioni in base alle concentrazioni di ossigeno disciolto prima e dopo il trattamento",
+          "Verificate con l’erogazione della testina di stampa o con il funzionamento dello strumento."
+        ],
+        [
+          "Perdita di carico ammissibile",
+          "Verificate la perdita di carico del modulo sul lato liquido alla portata prevista",
+          "Includete le perdite di filtri, tubi e raccordi."
+        ],
+        [
+          "Temperatura del liquido e condizioni di vuoto",
+          "Scegliete la curva di riferimento per la temperatura effettiva e la pressione assoluta sul lato vuoto",
+          "Confrontate le condizioni di vuoto con la pressione di vapore saturo del liquido."
+        ]
+      ]
+    },
+    "materials": {
+      "title": "Materiali a contatto con il liquido e compatibilità",
+      "intro": "Verificate sia il liquido di processo sia quello di lavaggio. Registrate composizione, concentrazione, temperatura e tempo di contatto.",
+      "paragraph": "Le fibre cave sono in PMP, mentre corpo e tappi di estremità sono in PP e acciaio inossidabile. L’incapsulamento è in resina epossidica. Verificate la compatibilità con l’intera combinazione di materiali a contatto con il liquido."
+    },
+    "curves": {
+      "title": "Portata, prestazioni di degasaggio e perdita di carico sul lato liquido",
+      "intro": "Alla portata prevista, leggete la rimozione di ossigeno disciolto alle condizioni di vuoto pertinenti e la relativa perdita di carico sul lato liquido. Nelle prove con acqua della serie, all’aumentare della portata diminuisce la rimozione di ossigeno e cresce la perdita di carico. A pari temperatura e portata, le curve a pressione assoluta più bassa sul lato vuoto indicano valori di rimozione di riferimento più alti.",
+      "note": "Le curve sono ricostruzioni approssimate dei grafici di riferimento delle prove con acqua per la serie. Verificate le prestazioni sullo strumento con il liquido previsto, alla temperatura effettiva e al punto di lavoro richiesto.",
+      "alts": [
+        "Curve di riferimento della portata e della rimozione di ossigeno disciolto con acqua a 25 °C e 2.7, 6.7 o 13.3 kPa assoluti, e con acqua a 45 °C e 6.7 kPa assoluti",
+        "Curva di riferimento della serie che mostra l’aumento della perdita di carico sul lato liquido all’aumentare della portata nelle prove con acqua a 25 °C"
+      ],
+      "captions": [
+        "Portata e rimozione di ossigeno disciolto. Scegliete la curva in base alla temperatura del liquido e alla pressione assoluta sul lato vuoto. Leggete la rimozione alla portata prevista.",
+        "Portata e perdita di carico sul lato liquido. Leggete la perdita alla stessa portata e confrontatela con il margine di pressione disponibile nello strumento."
+      ],
+      "exampleTitle": "Esempio di lettura",
+      "example": "Con acqua a 25 °C e portata di 1 000 mL/min, la curva a 6.7 kPa di pressione assoluta sul lato vuoto indica una rimozione di ossigeno disciolto di circa il 58%. Alla stessa portata, la perdita di carico sul lato liquido nelle prove con acqua è di circa 2.3 kPa. Entrambi i valori sono letture approssimate dei grafici di riferimento della serie.",
+      "flowAxis": "Portata del liquido (mL/min)",
+      "oxygenAxis": "Ossigeno disciolto rimosso (%)",
+      "pressureAxis": "Perdita di carico lato liquido (kPa)",
+      "water": "acqua",
+      "absolute": "ass.",
+      "pressureLegend": "Acqua a 25 °C · perdita di carico lato liquido"
+    },
+    "ports": {
+      "title": "Identificazione degli attacchi e spazio di montaggio",
+      "intro": "I due attacchi per il liquido e quello per il vuoto sono NPT 1/8. L’attacco laterale e uno di estremità sono per il liquido. L’altro attacco di estremità è per il vuoto. Controllate le marcature prima di collegare i tubi. Lasciate spazio in base alla lunghezza totale di 159 mm, al diametro di estremità Ø42 mm e alla posizione dell’attacco laterale."
+    },
+    "connections": {
+      "title": "Linee di alimentazione dell’inchiostro e del vuoto",
+      "intro": "Stabilite la posizione del modulo nel circuito di alimentazione dell’inchiostro. È consigliato un filtro nella linea del liquido, nella posizione prevista dal progetto dello strumento.",
+      "rows": [
+        [
+          "Esempio di circuito dell’inchiostro",
+          "Serbatoio di inchiostro → pompa di alimentazione → modulo di degasaggio a membrana → camera di accumulo → testina di stampa",
+          "Nell’esempio il liquido entra dall’attacco laterale inferiore ed esce da quello di estremità superiore. In alcuni strumenti il modulo può trovarsi tra la camera di accumulo e la testina. Seguite il circuito effettivo."
+        ],
+        [
+          "Linea del vuoto",
+          "Attacco del vuoto → separatore di liquido → pompa per vuoto",
+          "Installate un vacuometro per leggere la pressione assoluta. Il separatore raccoglie la condensa o il liquido fuoriuscito, facilita l’individuazione delle perdite e protegge la pompa. Per inchiostri a base acquosa si consiglia di orientare verso il basso l’attacco del vuoto."
+        ]
+      ]
+    },
+    "commissioning": {
+      "title": "Riempimento iniziale e verifica del punto di lavoro",
+      "intro": "Controllate orientamento e collegamenti, riempite il modulo e spurgate l’aria. Verificate quindi degasaggio e perdita di carico alla portata prevista.",
+      "steps": [
+        [
+          "Controllate i collegamenti",
+          "Identificate ingresso e uscita del liquido e attacco del vuoto dalle marcature. Verificate il collegamento del separatore di liquido e del vacuometro."
+        ],
+        [
+          "Riempite lentamente dall’attacco inferiore del liquido",
+          "Introducete il liquido gradualmente per espellere l’aria. L’applicazione del vuoto può agevolare lo spurgo. Il volume iniziale è circa 40 mL, valore di riferimento della serie."
+        ],
+        [
+          "Impostate il vuoto per la temperatura effettiva del liquido",
+          "Durante il funzionamento, la pressione assoluta sul lato vuoto deve rimanere almeno pari alla pressione di vapore saturo del liquido alla temperatura di esercizio. In questo modo si evita un’evaporazione eccessiva che può influire sulla composizione del liquido o sulla pompa per vuoto."
+        ],
+        [
+          "Verificate alla portata prevista",
+          "Registrate fluido, temperatura del liquido, portata e pressione assoluta sul lato vuoto. Misurate l’ossigeno disciolto prima e dopo il trattamento con un misuratore di ossigeno disciolto. Rilevate la perdita di carico sul lato liquido con un manometro differenziale. Verificate l’obiettivo di degasaggio e il margine di pressione disponibile nel circuito."
+        ]
+      ]
+    },
+    "storage": {
+      "title": "Controlli periodici e conservazione",
+      "intro": "Dopo cambiamenti delle condizioni di esercizio, registrate nuovamente portata, temperatura del liquido, pressione assoluta sul lato vuoto e perdita di carico sul lato liquido. Controllate la presenza di condensa o segni di perdite nel separatore.",
+      "paragraph": "Conservate al chiuso in un luogo asciutto, a temperatura inferiore a 45 °C e al riparo dalla luce solare diretta. Dopo l’uso, evitate il congelamento dell’acqua residua nel modulo."
+    }
+  },
+  "delivery": {
+    "introduction": "La consegna del modulo di degasaggio a membrana EF-AG3-B segue l’ordine confermato.",
+    "groups": [
+      {
+        "title": "Imballaggio interno",
+        "paragraphs": [
+          "Il pluriball protegge il modulo dagli urti e riduce il contatto diretto con il cartone durante la movimentazione.",
+          "Se all’apertura il modulo risulta danneggiato, conservate l’imballaggio interno ed esterno e inviate fotografie."
+        ],
+        "photos": [
+          {
+            "alt": "Busta in pluriball con marchio FOREACH per il modulo di degasaggio a membrana",
+            "caption": "Protezione del modulo con pluriball"
+          },
+          {
+            "alt": "Operatore che estrae dalla scatola il modulo di degasaggio protetto da pluriball",
+            "caption": "Estrazione del modulo di degasaggio"
+          }
+        ]
+      },
+      {
+        "title": "Imballaggio esterno",
+        "paragraphs": [
+          "Scatola di cartone e materiale di riempimento proteggono il modulo.",
+          "Al ricevimento, confrontate l’etichetta esterna di identificazione del materiale con l’ordine.",
+          "I documenti di accompagnamento sono forniti come concordato nell’ordine."
+        ],
+        "photos": [
+          {
+            "alt": "Scatola aperta del modulo di degasaggio con pluriball e materiale di riempimento",
+            "caption": "Apertura dell’imballaggio del modulo"
+          },
+          {
+            "alt": "Etichetta FOREACH di identificazione del materiale sulla scatola del modulo",
+            "caption": "Etichetta esterna di identificazione"
+          }
+        ]
+      },
+      {
+        "title": "Spedizione con corriere",
+        "paragraphs": [
+          "Per gli ordini nazionali in Cina è inclusa di norma la spedizione con SF Express.",
+          "Prima della spedizione si confermano dati del destinatario, modalità di consegna ed eventuali requisiti di trasporto.",
+          "Dopo la spedizione vengono forniti i dati di tracciamento. In caso di problemi, contattate FOREACH con i numeri d’ordine e di tracciamento."
+        ],
+        "photos": [
+          {
+            "alt": "Operatore FOREACH che movimenta una scatola di pompe per aria alla postazione di imballaggio",
+            "caption": "Esempio di imballaggio di una pompa per aria"
+          },
+          {
+            "alt": "Operatore FOREACH che prepara le scatole delle pompe a pistone per la spedizione",
+            "caption": "Esempio di spedizione di pompe a pistone"
+          }
+        ]
+      }
+    ],
+    "warranty": "Le condizioni si concordano per iscritto in base ai risultati delle prove di compatibilità con il liquido.",
+    "support": "Per l’assistenza post-vendita, contattateci per telefono, e-mail o tramite il modulo qui sotto. Indicate il modello, il numero d’ordine o il lotto, il fluido e i sintomi osservati. Concordate le modalità di reso con l’assistenza prima di rispedire il modulo.",
+    "replyTime": "Orario di assistenza nei giorni lavorativi dalle 08:30 alle 18:00 (ora di Pechino). Per i messaggi inviati online, rispondiamo e diamo seguito entro 24 ore lavorative.",
+    "labels": {
+      "title": "Consegna e assistenza post-vendita",
+      "warrantyTitle": "Garanzia e assistenza",
+      "warrantyLabel": "Condizioni di garanzia:",
+      "email": "E-mail:",
+      "phone": "Telefono:"
+    }
+  }
+}

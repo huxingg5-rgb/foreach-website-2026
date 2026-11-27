@@ -1,0 +1,386 @@
+{
+  "kind": "selection",
+  "family": "valve",
+  "footerProducts": [
+    {
+      "id": "hp-3-position-7-port-high-pressure-valve",
+      "title": "Valvola rotativa ad alta pressione HP a 2 posizioni e 6 porte con sfiato",
+      "href": "/en/products/valves/high-pressure-valves/hp/",
+      "imageSrc": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+      "imageAlt": "Valvola rotativa ad alta pressione HP a 2 posizioni e 6 porte con sfiato"
+    }
+  ],
+  "sidebarProducts": [
+    {
+      "id": "hp-3-position-7-port-high-pressure-valve",
+      "title": "Valvola rotativa ad alta pressione HP a 2 posizioni e 6 porte con sfiato",
+      "href": "/en/products/valves/high-pressure-valves/hp/",
+      "imageSrc": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+      "imageAlt": "Valvola rotativa ad alta pressione HP a 2 posizioni e 6 porte con sfiato"
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Come funziona una valvola di iniezione HPLC a 6 porte? Carico, iniezione e sfiato",
+      "seoTitle": "Funzionamento della valvola di iniezione HPLC a 6 porte: carico, iniezione e sfiato | FOREACH",
+      "seoDescription": "Un esempio con loop esterno spiega i percorsi HPLC di carico e iniezione, il coordinamento di pompa e caricamento e collegamenti, limiti di pressione e volume per la valvola rotativa ad alta pressione HP a 2 posizioni e 6 porte con sfiato.",
+      "coverImage": "/images/products/valves/high-pressure-valves/foreach-high-pressure-valve-main.webp",
+      "coverAlt": "Valvola rotativa ad alta pressione FOREACH HP a 2 posizioni e 6 porte con sfiato"
+    },
+    "deck": "Segui il caricamento del campione in un loop esterno e il trasferimento alla colonna con la fase mobile. Distingui posizioni principali e percorso di sfiato della valvola HP dai fattori che determinano il volume iniettato.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Una valvola di iniezione HPLC a 6 porte commuta le coppie di passaggi interni per spostare il loop di campionamento tra il percorso di carico e quello analitico ad alta pressione. Durante il carico, il sistema di caricamento riempie il loop. In iniezione, la fase mobile fornita dalla pompa HPLC attraversa il loop e trascina il campione nella colonna."
+      },
+      {
+        "type": "paragraph",
+        "text": "La valvola ad alta pressione commuta i percorsi. Per una sequenza di iniezione completa servono anche pompa, loop di campionamento, sistema di caricamento e programma di controllo. L'esempio usa la valvola rotativa ad alta pressione FOREACH HP a 2 posizioni e 6 porte con sfiato."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come collegano le sei porte principali pompa, loop di campionamento e colonna?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Per capire il principio, considerare un esempio con loop di campionamento esterno. Il loop è un tubo di volume noto collegato alla valvola alle due estremità. Il sistema di caricamento fornisce il campione e la pompa HPLC la fase mobile. L'assegnazione delle porte è illustrativa. Verificare il percorso effettivo dei tubi sul progetto dell'apparecchio."
+          },
+          {
+            "type": "paragraph",
+            "text": "Collegamenti esterni e funzioni nell'esempio"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Porta HP",
+              "Componente collegato nell'esempio",
+              "Funzione"
+            ],
+            "rows": [
+              [
+                "1",
+                "Uscita della pompa HPLC",
+                "Fornisce la fase mobile"
+              ],
+              [
+                "6",
+                "Ingresso della colonna",
+                "Riceve fase mobile e campione iniettato"
+              ],
+              [
+                "2 e 5",
+                "Due estremità del loop di campionamento esterno",
+                "Trattiene il campione prima dell'iniezione"
+              ],
+              [
+                "3",
+                "Sistema di caricamento del campione",
+                "Fornisce il campione alla valvola"
+              ],
+              [
+                "4",
+                "Percorso di scarico",
+                "Raccoglie il liquido sostituito durante il carico"
+              ],
+              [
+                "7",
+                "Percorso di sfiato separato",
+                "Usato nello stato di sfiato (Vent)"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "L'aspetto determinante è quali coppie di porte si collegano in ogni posizione. Un selettore rotativo collega la porta comune a una tra più sorgenti. Una valvola di iniezione modifica più collegamenti in una commutazione per inserire o rimuovere il loop dal percorso analitico."
+          }
+        ]
+      },
+      {
+        "title": "Carico (Load): riempire il loop mentre la fase mobile lo bypassa",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Nella posizione HP di carico (Load), i collegamenti sono 1—6, 2—3 e 4—5. Con la posa descritta, la pompa HPLC fornisce la fase mobile direttamente alla colonna tramite 1—6. Il loop resta fuori dal percorso analitico."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "In carico, la pompa HPLC alimenta la colonna con fase mobile attraverso il percorso HP 1—6",
+            "caption": "Percorso analitico durante il carico: pompa → 1—6 → colonna.",
+            "flowNodes": [
+              {
+                "label": "Pompa HPLC",
+                "detail": "La fase mobile entra dalla porta 1"
+              },
+              {
+                "label": "Posizione di carico",
+                "detail": "Collegamento 1—6"
+              },
+              {
+                "label": "Colonna",
+                "detail": "Alimentata tramite la porta 6"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il campione si carica in un percorso separato. Dal sistema di caricamento il campione entra nella porta 3, passa per la porta 2 al loop e poi esce da 5 e 4 verso lo scarico. In questa posizione di carico il loop si riempie e il collegamento pompa-colonna resta attivo."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "In carico, il campione entra dalle porte 3 e 2 per riempire il loop esterno, poi esce dalle porte 5 e 4 verso lo scarico",
+            "caption": "Percorso di carico: 3 → 2 → loop di campionamento → 5 → 4. Il campione è ancora separato dal percorso di alimentazione della colonna.",
+            "flowNodes": [
+              {
+                "label": "Sistema di caricamento del campione",
+                "detail": "Il campione entra dalla porta 3"
+              },
+              {
+                "label": "Percorso 3—2",
+                "detail": "Il campione entra nel loop"
+              },
+              {
+                "label": "Loop di campionamento",
+                "detail": "L'altra estremità è collegata alla porta 5"
+              },
+              {
+                "label": "Percorso 5—4",
+                "detail": "Defluisce verso lo scarico"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Prima del carico iniziale espellere l'aria e predisporre il ricambio del campione precedente e del liquido di lavaggio. Nel carico a loop pieno, trasferire un volume nominale del loop non dimostra che questo sia interamente riempito con il campione d'interesse. Verificare il riempimento mediante convalida del metodo."
+          }
+        ]
+      },
+      {
+        "title": "Iniezione (Inject): la fase mobile attraversa il loop e porta il campione alla colonna",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Nella posizione HP di iniezione (Inject), i collegamenti diventano 1—2, 3—4 e 5—6. La fase mobile della pompa HPLC entra nel loop attraverso 1 e 2 e raggiunge la colonna attraverso 5—6. Il campione trattenuto nel loop entra nel percorso analitico con la fase mobile."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "In iniezione, la fase mobile entra nel loop attraverso 1—2 e porta il campione alla colonna attraverso 5—6",
+            "caption": "Percorso d'iniezione: pompa → 1 → 2 → loop di campionamento → 5 → 6 → colonna.",
+            "flowNodes": [
+              {
+                "label": "Pompa HPLC",
+                "detail": "La fase mobile entra dalla porta 1"
+              },
+              {
+                "label": "Percorso 1—2",
+                "detail": "Collega il loop di campionamento"
+              },
+              {
+                "label": "Loop di campionamento",
+                "detail": "La fase mobile trascina il campione"
+              },
+              {
+                "label": "Percorso 5—6",
+                "detail": "Entra nella colonna"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "In questa fase, il collegamento 3—4 porta allo scarico il ramo di caricamento del campione. Il programma deve coordinare caricamento, posizione valvola e acquisizione dei dati e verificare completamento della commutazione e tempo di trasferimento. Il solo comando di commutazione non dimostra che tutto il campione sia entrato nella colonna."
+          },
+          {
+            "type": "paragraph",
+            "text": "La durata della posizione di iniezione dipende da loop, tubi di collegamento, portata della fase mobile e metodo analitico. Un ritorno troppo precoce può compromettere il trasferimento. Anche il tempo tra azionamento della valvola e inizio dell'acquisizione deve essere verificabile e costante da un ciclo all'altro."
+          }
+        ]
+      },
+      {
+        "title": "Che cosa collega lo sfiato in una valvola a 2 posizioni e 6 porte con sfiato?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Carico (Load) e iniezione (Inject) sono i due percorsi operativi principali della valvola HP. Esiste anche uno stato di sfiato (Vent) con collegamento 3—7. Specificare la configurazione principale a due posizioni e sei porte e la funzione aggiuntiva di sfiato. La settima porta di sfiato dipende dal modello."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "Lo stato Vent della valvola HP stabilisce il collegamento 3—7 per lo sfiato del ramo esterno collegato alla porta 3",
+            "caption": "Lo stato Vent definisce il collegamento 3—7. L'uscita effettiva di gas e liquido dipende anche da collegamenti esterni e differenza di pressione.",
+            "flowNodes": [
+              {
+                "label": "Ramo della porta 3",
+                "detail": "Ramo di carico nell'esempio"
+              },
+              {
+                "label": "Stato di sfiato",
+                "detail": "Collegamento 3—7"
+              },
+              {
+                "label": "Percorso della porta 7",
+                "detail": "Percorso esterno di sfiato o raccolta"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Lo sfiato non implica la depressurizzazione di tutto il sistema ad alta pressione né il mantenimento del percorso pompa-colonna. Coordinare pompa, sistema di caricamento e scarico della pressione secondo tutti i collegamenti in questo stato. Verificare pressione e destinazione del fluido prima di operare. Non sfiatare allentando un raccordo sotto pressione."
+          }
+        ]
+      },
+      {
+        "title": "Che cosa limitano volume del loop, volume interno della valvola e pressione?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Occorre distinguere alcune grandezze che si possono confondere."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Parametro",
+              "Significato",
+              "Che cosa non si può dedurre direttamente"
+            ],
+            "rows": [
+              [
+                "Volume del loop di campionamento",
+                "Definisce il volume nominale del campione nell'iniezione a loop pieno",
+                "Un loop nominale da 20 μL non garantisce un volume iniettato identico in ogni condizione di carico"
+              ],
+              [
+                "Volume interno HP: 0.8 μL",
+                "Specifica del volume dei passaggi interni della valvola",
+                "È distinto dal volume iniettato. Esclude loop esterno e tubazioni complete"
+              ],
+              [
+                "Diametro di passaggio HP: 0.4 mm",
+                "Dimensioni dei passaggi interni del fluido",
+                "Da solo non determina portata di sistema, forma dei picchi o risultati analitici"
+              ],
+              [
+                "Pressione massima di esercizio HP: 25 MPa",
+                "Limite di pressione ammesso per la valvola",
+                "Non copre tutte le condizioni ad alta pressione o UHPLC. È distinto dalla taratura di una valvola di sicurezza"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "L'iniezione a loop pieno richiede un riempimento completo e stabile. L'iniezione a loop parziale dipende maggiormente dal dosaggio del sistema di caricamento, dalla disposizione dei tratti d'aria e dalla distribuzione del campione nei tubi. La valvola da sola non rileva automaticamente un loop pieno né garantisce la precisione d'iniezione del metodo."
+          },
+          {
+            "type": "paragraph",
+            "text": "La valvola HP usa porte 10-32 UNF. Per scegliere raccordi e tubi, controllare insieme filettatura, geometria di tenuta, diametro, pressione nominale e materiali a contatto. Definire i limiti d'esercizio del percorso completo secondo il componente con pressione nominale più bassa e le fluttuazioni effettive."
+          }
+        ]
+      },
+      {
+        "title": "Come convalidare insieme carico, iniezione e pulizia?",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Entro le pressioni ammesse, verificare porte e posizioni della valvola. Confermare i percorsi di carico (Load), iniezione (Inject) e sfiato (Vent) prima di impostare la sequenza automatica.",
+              "Ripetere le iniezioni di un campione standard stabile. Confrontare ripetibilità dell'area dei picchi e differenze tra prima iniezione e successive. Valutare insieme volume di carico, bolle, tempi della valvola e stabilità del rivelatore.",
+              "Eseguire un bianco dopo un campione ad alta concentrazione per controllare la contaminazione residua. Ottimizzare separatamente la pulizia di sistema di caricamento, valvola, loop e tubi di collegamento.",
+              "Osservare cambiamenti di pressione in commutazione e perdite esterne. Eseguire cicli completi alla portata di progetto con fluido e contropressione effettivi, quindi confermare il tempo di permanenza ammissibile in posizione di iniezione."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Queste fasi convalidano l'apparecchio e il metodo analitico. Una commutazione riuscita o il superamento di un controllo del singolo componente non dimostrano da soli una ripetibilità d'iniezione accettabile nel sistema."
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/products/valves/high-pressure-valves/hp/",
+                "label": "Valvola rotativa ad alta pressione HP a 2 posizioni e 6 porte con sfiato"
+              },
+              {
+                "href": "/en/resources/technical-articles/how-does-a-rotary-selector-valve-work/",
+                "label": "Selettore rotativo multiporta: selezione tra più sorgenti di fluido"
+              },
+              {
+                "href": "/en/products/valves/",
+                "label": "Confronta le funzioni e le configurazioni di controllo fluidico nella gamma di valvole FOREACH"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "Le valvole di iniezione e di selezione a sei porte si usano allo stesso modo?",
+        "answer": "In genere una valvola di iniezione riconfigura le coppie di percorsi per commutare il loop tra carico e analisi. Un selettore collega di norma una porta comune a una delle porte disponibili. Scegliere dallo schema dei collegamenti di ogni posizione, oltre che dal numero di porte."
+      },
+      {
+        "question": "Una porta di sfiato depressurizza tutto il sistema HPLC?",
+        "answer": "Lo stato Vent della valvola HP stabilisce in modo specifico 3—7. Quali sezioni possono scaricare la pressione dipende dagli altri passaggi e dai collegamenti esterni. Lo sfiato non regola automaticamente la pressione e non svolge il ruolo di una valvola di sicurezza."
+      },
+      {
+        "question": "Il programma può restare uguale se si monta un loop più grande?",
+        "answer": "Ricontrollare volume di carico, ricambio, lavaggio, durata della posizione di iniezione e idoneità del metodo. Con un loop diverso la sequenza precedente potrebbe non riempire il loop o trasferire il campione a sufficienza. Riconvalidare volume iniettato e ripetibilità."
+      }
+    ],
+    "cta": {
+      "title": "Conferma la configurazione della valvola per il tuo circuito",
+      "description": "Indica fluidi, campo di pressione, collegamenti e sequenza operativa per individuare una configurazione adatta.",
+      "contactLabel": "Contatta FOREACH",
+      "productsLabel": "Visualizza le serie di valvole",
+      "productsHref": "/en/products/valves/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "hplc-connections",
+      "label": "Porte e loop di campionamento esterno"
+    },
+    {
+      "id": "hplc-load",
+      "label": "Sequenza di carico"
+    },
+    {
+      "id": "hplc-inject",
+      "label": "Sequenza di iniezione"
+    },
+    {
+      "id": "hplc-vent",
+      "label": "Percorso di sfiato"
+    },
+    {
+      "id": "hplc-conditions",
+      "label": "Limiti di volume e pressione"
+    },
+    {
+      "id": "hplc-checks",
+      "label": "Convalida e prodotti correlati"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Valvola di iniezione HPLC a 6 porte",
+      "Percorsi fluidici di carico e iniezione",
+      "Loop di campionamento"
+    ],
+    "mentions": [
+      "Valvola rotativa ad alta pressione HP a 2 posizioni e 6 porte con sfiato"
+    ]
+  }
+}

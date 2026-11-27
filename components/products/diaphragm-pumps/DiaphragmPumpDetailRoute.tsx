@@ -8,6 +8,7 @@ import { getDiaphragmPumpGuide } from "@/data/products/detail/diaphragm-pump-gui
 import { diaphragmText } from "@/data/products/detail/diaphragm-pump-ui.intl";
 import { PRODUCT_CENTER_BREADCRUMB_LABELS } from "@/lib/seo/product-breadcrumb-label";
 import {
+  applyDiaphragmPumpDetailCopy,
   getDiaphragmPumpCopy,
   getDiaphragmPumpGallery,
   getDiaphragmPumpSeriesSeoDescription,
@@ -26,6 +27,11 @@ import {
   getDiaphragmPumpPath,
   normalizeDiaphragmPumpLocale,
 } from "@/data/products/detail/diaphragm-pump-routes";
+import { getCanonicalUrl } from "@/lib/seo/site-url";
+import { getHindiDiaphragmDetailContent, hindiDiaphragmText } from "@/data/products/detail/diaphragm-pump-content.hi";
+import { italianDiaphragmText, getItalianDiaphragmDetailContent, translateItalianDiaphragmCopy } from "@/data/products/detail/diaphragm-pump-content.it";
+import { germanDiaphragmText, getGermanDiaphragmDetailContent, localizeGermanDiaphragmData } from "@/data/products/detail/diaphragm-pump-content.de";
+import type { GermanProductDetailContent } from "@/data/products/detail/product-detail-content.de";
 import { getDiaphragmPumpNeutralSeriesSlug } from "@/data/products/detail/diaphragm-pump-series-copy";
 
 import detailsJson from "@/data/products/generated/pumps/diaphragm-pumps/detail/index.json";
@@ -37,6 +43,9 @@ type PageParams = {
 export type DiaphragmPumpDetailRouteProps = {
   params: Promise<PageParams>;
   locale?: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
+  germanDraft?: boolean;
+  italianDraft?: boolean;
+  hindiDraft?: boolean;
 };
 
 type DiaphragmMedia = {
@@ -117,6 +126,8 @@ const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: any;
   afterContent?: ReactNode;
   customerCategoryMode?: "diaphragm-pump";
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: { locale: "it" | "hi"; copy: GermanProductDetailContent };
   customerCategoryContent?: Partial<Record<"product" | "selection" | "delivery", ReactNode>>;
 }>;
 
@@ -1140,6 +1151,9 @@ export function getDiaphragmPumpStaticParams() {
 export async function getDiaphragmPumpMetadata({
   params,
   locale = "zh-CN",
+  germanDraft = false,
+  italianDraft = false,
+  hindiDraft = false,
 }: DiaphragmPumpDetailRouteProps) {
   const resolvedParams = await params;
   const data = getPreferredProductDetailData(resolvedParams.slug, locale);
@@ -1188,6 +1202,11 @@ export async function getDiaphragmPumpMetadata({
     : `${title} | Foreach Technology`;
   const canonicalPath = getDiaphragmPumpPath(targetLocale, slug);
   const languageAlternates = getDiaphragmPumpLanguageAlternates(slug);
+  const draftLocale = hindiDraft ? "hi" : italianDraft ? "it" : germanDraft ? "de" : undefined;
+  const localizedCanonical = draftLocale ? getCanonicalUrl(canonicalPath.replace(/^\/en\//, "/" + draftLocale + "/")) : canonicalPath;
+  const text = hindiDraft ? hindiDiaphragmText : italianDraft ? italianDiaphragmText : germanDraft ? germanDiaphragmText : (value: string) => value;
+  const localizedTitle = text(metadataTitle);
+  const localizedDescription = text(description);
   const socialImage = data.mainImage
     ? new URL(data.mainImage, "https://www.foreachtek.com").toString()
     : undefined;
@@ -1200,31 +1219,31 @@ export async function getDiaphragmPumpMetadata({
     );
 
   return {
-    title: metadataTitle,
-    description,
+    title: draftLocale ? { absolute: localizedTitle } : localizedTitle,
+    description: localizedDescription,
     alternates: {
-      canonical: canonicalPath,
-      languages: languageAlternates,
+      canonical: localizedCanonical,
+      ...(!draftLocale ? { languages: languageAlternates } : {}),
     },
     robots: {
-      index: true,
+      index: !draftLocale,
       follow: true,
     },
     openGraph: {
       type: "website",
-      locale: targetLocale === "zh" ? "zh_CN" : targetLocale,
-      url: canonicalPath,
+      locale: hindiDraft ? "hi_IN" : italianDraft ? "it_IT" : germanDraft ? "de_DE" : targetLocale === "zh" ? "zh_CN" : targetLocale,
+      url: localizedCanonical,
       siteName: "Foreach Technology",
-      title: metadataTitle,
-      description,
+      title: localizedTitle,
+      description: localizedDescription,
       ...(socialImage
-        ? { images: [{ url: socialImage, alt: socialImageAlt }] }
+        ? { images: [{ url: socialImage, alt: text(socialImageAlt) }] }
         : {}),
     },
     twitter: {
       card: "summary_large_image",
-      title: metadataTitle,
-      description,
+      title: localizedTitle,
+      description: localizedDescription,
       ...(socialImage ? { images: [socialImage] } : {}),
     },
   };
@@ -1291,6 +1310,9 @@ function createReferenceDetail(slug: string): DiaphragmDetail | null {
 export default async function DiaphragmPumpDetailPage({
   params,
   locale = "zh-CN",
+  germanDraft = false,
+  italianDraft = false,
+  hindiDraft = false,
 }: DiaphragmPumpDetailRouteProps) {
   const resolvedParams = await params;
   const data = getPreferredProductDetailData(resolvedParams.slug, locale);
@@ -1300,22 +1322,28 @@ export default async function DiaphragmPumpDetailPage({
   }
 
   const guide = getDiaphragmPumpGuide(resolvedParams.slug);
+  const presentationLocale = hindiDraft ? "hi" : italianDraft ? "it" : germanDraft ? "de" : locale;
+  const hindiDetail = hindiDraft ? getHindiDiaphragmDetailContent(applyDiaphragmPumpDetailCopy(data, "en")) : undefined;
+  const italianDetail = italianDraft ? getItalianDiaphragmDetailContent(applyDiaphragmPumpDetailCopy(data, "en")) : undefined;
+  const germanDetail = germanDraft ? getGermanDiaphragmDetailContent(localizeGermanDiaphragmData(applyDiaphragmPumpDetailCopy(data, "en"))) : undefined;
 
   return (
     <ProductDetailView
       data={data}
+      germanDetail={germanDetail}
+      localizedDetail={hindiDetail ? { locale: "hi", copy: hindiDetail } : italianDetail ? { locale: "it", copy: italianDetail } : undefined}
       customerCategoryMode={guide ? "diaphragm-pump" : undefined}
       customerCategoryContent={guide ? {
         selection: <>
-          <DiaphragmPumpSelectionContent guide={guide} locale={locale} applications={data.applicationDetails} />
-          <DiaphragmPumpSeriesOptions locale={locale} seriesSlug={data.slug} />
+          <DiaphragmPumpSelectionContent guide={guide} locale={presentationLocale} applications={italianDraft ? translateItalianDiaphragmCopy(data.applicationDetails) : data.applicationDetails} />
+          <DiaphragmPumpSeriesOptions locale={presentationLocale} seriesSlug={data.slug} />
         </>,
-        delivery: <DiaphragmPumpDeliveryContent guide={guide} locale={locale} />,
+        delivery: <DiaphragmPumpDeliveryContent guide={guide} locale={presentationLocale} />,
       } : undefined}
       afterContent={
         <>
           {!guide ? <DiaphragmPumpSeriesOptions
-            locale={locale}
+            locale={presentationLocale}
             seriesSlug={data.slug}
           /> : null}
           <RelatedResources
@@ -1325,6 +1353,7 @@ export default async function DiaphragmPumpDetailPage({
             sourceSlug={data.slug}
             relationKeys={data.relationKeys}
             locale={locale}
+            uiLocale={hindiDraft ? "hi" : italianDraft ? "it" : germanDraft ? "de" : undefined}
           />
         </>
       }

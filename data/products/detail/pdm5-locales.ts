@@ -1,4 +1,4 @@
-type Pdm5Locale = "es" | "fr" | "ko" | "ru";
+type Pdm5Locale = "hi" | "it" | "de" | "es" | "fr" | "ko" | "ru";
 type Pdm5Copy = {
   name: string;
   description: string;
@@ -19,6 +19,73 @@ const sourceLabels = [
 ] as const;
 
 const pdm5Copy: Record<Pdm5Locale, Pdm5Copy> = {
+  hi: {
+    name: "PDM5 दाब सेंसर",
+    description: "द्रव पथ के निरपेक्ष दाब की निगरानी के लिए FOREACH PDM5 सेंसर। 1200 kPa तक के चार विकल्प, I2C संचार, PEEK का द्रव पथ और 1/4-28 UNF पोर्ट।",
+    intro: [
+      "FOREACH PDM5 दाब संवेदन मॉड्यूल उपकरणों और स्वचालित मशीनों के द्रव पथ में निरपेक्ष दाब मापता है। डिजिटल I2C सिग्नल से पंप के आउटलेट के बाद दाब की निगरानी की जा सकती है। उपकरण का कंट्रोलर इस सिग्नल से रुकावट का आकलन और असामान्य स्थिति का पता लगा सकता है।",
+      "निरपेक्ष दाब की चार मानक रेंज 10–200, 10–400, 10–700 और 10–1200 kPa हैं। अंदरूनी आयतन ≤55 μL है और मानक विनिर्देश के अनुसार प्रभावी सैंपलिंग दर 100 Hz है। आपूर्ति किए गए फ़र्मवेयर की सेटिंग की पुष्टि करें। दाब के उतार-चढ़ाव, अपेक्षित प्रतिक्रिया और द्रव पथ के आयतन के अनुसार सेंसर की जगह और सैंपलिंग चुनें।",
+      "जाँचें कि PEEK का द्रव पथ और 1/4-28 UNF-2B आंतरिक थ्रेड वाले पोर्ट फिटिंग और सील से मेल खाते हैं। द्रव के संपर्क वाले हिस्सों की अनुकूलता, तापमान, बिजली की आपूर्ति और संचार की पुष्टि करें। पूरे द्रव पथ पर दाब सिग्नल की व्याख्या और अलार्म लॉजिक का सत्यापन करें।",
+    ],
+    labels: ["उत्पाद प्रकार", "निरपेक्ष दाब की रेंज", "आउटपुट सिग्नल", "संचार इंटरफ़ेस", "डिफ़ॉल्ट I2C पता", "अनुशंसित वोल्टेज", "ऑपरेटिंग वोल्टेज", "ऑपरेटिंग करंट", "दाब रिज़ॉल्यूशन", "निरपेक्ष सटीकता / TEB", "कुल निरपेक्ष त्रुटि", "सैंपलिंग सेटिंग", "प्रभावी सैंपलिंग दर", "द्रव पथ की सामग्री", "थ्रेड वाला पोर्ट", "अंदरूनी आयतन", "फिटिंग कसने का अनुशंसित टॉर्क", "बाहरी आयाम", "वज़न", "ऑपरेटिंग तापमान", "सेवा अवधि"],
+    values: { "压力检测模块": "दाब संवेदन मॉड्यूल", Digital: "डिजिटल", "30 mA Peak": "30 mA पीक", "Better than 1%FS": "1% FS से बेहतर", ">1.5 million pressure cycles": ">1.5 मिलियन दाब चक्र" },
+    applications: ["द्रव पथ के दाब की निगरानी", "रुकावट की चेतावनी", "पंप के आउटलेट के बाद दाब फ़ीडबैक", "उपकरण के द्रव पथ की सुरक्षा"],
+    faqs: [
+      { question: "PDM5 दाब सेंसर किस काम आता है?", answer: "यह उपकरण के द्रव पथ के दाब की निगरानी, रुकावट की चेतावनी, पंप के आउटलेट के बाद दाब फ़ीडबैक और द्रव पथ की सुरक्षा में मदद करता है।" },
+      { question: "PDM5 की दाब रेंज क्या है?", answer: "निरपेक्ष दाब की मानक रेंज 10–200, 10–400, 10–700 और 10–1200 kPa हैं। मॉडल के अनुसार रेंज और कुल निरपेक्ष त्रुटि बदलती है।" },
+      { question: "PDM5 किस संचार इंटरफ़ेस का उपयोग करता है?", answer: "PDM5 में I2C है। डिफ़ॉल्ट 7-बिट I2C पता 0x6D है।" },
+      { question: "PDM5 में द्रव के लिए कौन-सा पोर्ट है?", answer: "पोर्ट में 1/4-28 UNF-2B आंतरिक थ्रेड है। साथ में अनुकूल द्रव फिटिंग और ट्यूब लगाएँ।" },
+      { question: "क्या PDM5 कम डेड वॉल्यूम वाले द्रव पथ के लिए उपयुक्त है?", answer: "डेटाशीट में अंदरूनी आयतन ≤55 µL है। पूरे द्रव पथ का कुल आयतन और कैरीओवर जाँचें।" },
+    ],
+  },
+  it: {
+    name: "Sensore di pressione PDM5",
+    description: "Sensore FOREACH PDM5 per la pressione assoluta nel circuito fluidico, con quattro campi fino a 1200 kPa, comunicazione I2C, percorso in PEEK e attacchi 1/4-28 UNF.",
+    intro: [
+      "Il sensore FOREACH PDM5 misura la pressione assoluta nei circuiti fluidici di strumenti e apparecchiature automatizzate. Il segnale digitale I2C consente di monitorare la pressione a valle della pompa e aiuta il controllore a valutare ostruzioni e condizioni anomale.",
+      "I quattro campi assoluti sono 10–200, 10–400, 10–700 e 10–1200 kPa. Il volume interno è ≤55 μL e la frequenza effettiva di campionamento è 100 Hz secondo la specifica standard. Confermate le impostazioni per il firmware fornito. Scegliete posizione e campionamento in base a variazioni di pressione, risposta richiesta e volume del circuito.",
+      "Verificate che percorso fluidico in PEEK e attacchi con filettatura femmina 1/4-28 UNF-2B siano compatibili con raccordi e tenute. Controllate compatibilità del fluido con i materiali bagnati, temperatura, alimentazione e comunicazione. Convalidate poi interpretazione della pressione e logica di allarme sul circuito completo.",
+    ],
+    labels: ["Tipo di prodotto", "Campi di pressione assoluta", "Segnale di uscita", "Interfaccia di comunicazione", "Indirizzo I2C predefinito", "Tensione consigliata", "Tensione di esercizio", "Corrente di esercizio", "Risoluzione di pressione", "Accuratezza assoluta / TEB", "Errore assoluto totale", "Impostazioni di campionamento", "Frequenza effettiva di campionamento", "Materiale del percorso fluidico", "Attacco filettato", "Volume interno", "Coppia consigliata per il raccordo", "Dimensioni d’ingombro", "Peso", "Temperatura di esercizio", "Durata"],
+    values: {
+      "压力检测模块": "Modulo di rilevamento della pressione",
+      "Digital": "Digitale",
+      "30 mA Peak": "30 mA di picco",
+      "Better than 1%FS": "Migliore di 1% FS",
+      ">1.5 million pressure cycles": ">1.5 milioni di cicli di pressione",
+    },
+    applications: ["Monitoraggio della pressione del circuito fluidico", "Segnalazione di ostruzioni", "Retroazione di pressione a valle della pompa", "Protezione del circuito fluidico dello strumento"],
+    faqs: [
+      { question: "A cosa serve il sensore di pressione PDM5?", answer: "Monitora la pressione, consente di segnalare ostruzioni, fornisce una misura a valle della pompa e aiuta a proteggere i circuiti fluidici degli strumenti." },
+      { question: "Quali campi di pressione offre PDM5?", answer: "I campi di pressione assoluta standard sono 10–200, 10–400, 10–700 e 10–1200 kPa. Il modello determina il campo e il relativo errore assoluto totale." },
+      { question: "Quale interfaccia di comunicazione usa PDM5?", answer: "PDM5 usa I2C. L’indirizzo predefinito a 7 bit è 0x6D." },
+      { question: "Che tipo di attacco fluidico ha PDM5?", answer: "Gli attacchi hanno filettatura femmina 1/4-28 UNF-2B e si usano con raccordi e tubi fluidici compatibili." },
+      { question: "PDM5 è adatto a un circuito con basso volume morto?", answer: "La scheda tecnica indica un volume interno ≤55 µL. Verificate il volume totale e il trascinamento nell’intero circuito." },
+    ],
+  },
+  de: {
+    name: "PDM5-Drucksensor",
+    description: "FOREACH PDM5-Drucksensor zur Absolutdruckmessung in Flüssigkeitswegen. Vier Messbereiche bis 1200 kPa, I2C, PEEK-Flüssigkeitskanal und 1/4-28 UNF-Anschlüsse.",
+    intro: [
+      "Das Drucksensormodul FOREACH PDM5 misst den Absolutdruck in den Flüssigkeitswegen von Instrumenten und automatisierten Geräten. Das digitale I2C-Signal dient der Druckrückmeldung hinter der Pumpe. Die Gerätesteuerung kann damit Verstopfungen beurteilen und ungewöhnliche Betriebszustände erkennen.",
+      "Die vier Standardmessbereiche für Absolutdruck sind 10–200, 10–400, 10–700 und 10–1200 kPa. Das Innenvolumen beträgt ≤55 μL. Laut Datenblatt beträgt die effektive Abtastrate 100 Hz. Prüfen Sie die Einstellungen für die gelieferte Firmware. Wählen Sie Einbauort und Abtastrate anhand der Druckschwankungen, der erforderlichen Reaktionszeit und des Volumens des Flüssigkeitswegs.",
+      "Der Flüssigkeitskanal aus PEEK und die Anschlüsse mit 1/4-28 UNF-2B-Innengewinde müssen zu den Fittings und Dichtungen passen. Prüfen Sie Medienverträglichkeit, Temperatur, Spannungsversorgung und Kommunikation. Validieren Sie anschließend die Auswertung der Druckwerte und die Alarmlogik im vollständigen Flüssigkeitsweg.",
+    ],
+    labels: ["Produkttyp", "Absolutdruck-Messbereiche", "Ausgangssignal", "Kommunikationsschnittstelle", "I2C-Standardadresse", "Empfohlene Spannung", "Betriebsspannung", "Betriebsstrom", "Druckauflösung", "Absolute Genauigkeit / TEB", "Absoluter Gesamtfehler", "Abtasteinstellungen", "Effektive Abtastrate", "Werkstoff des Flüssigkeitskanals", "Gewindeanschluss", "Innenvolumen", "Empfohlenes Anziehdrehmoment für Fittings", "Abmessungen", "Gewicht", "Betriebstemperatur", "Lebensdauer"],
+    values: {
+      "压力检测模块": "Drucksensormodul", Digital: "Digital", "30 mA Peak": "30 mA Spitzenstrom",
+      "Better than 1%FS": "Besser als 1 % FS",
+      ">1.5 million pressure cycles": ">1.5 Millionen Druckzyklen",
+    },
+    applications: ["Drucküberwachung in Flüssigkeitswegen von Instrumenten", "Früherkennung von Verstopfungen", "Druckrückmeldung hinter der Pumpe", "Systemschutz"],
+    faqs: [
+      { question: "Wofür eignet sich der PDM5-Drucksensor?", answer: "PDM5 eignet sich zur Drucküberwachung, Früherkennung von Verstopfungen, Druckrückmeldung hinter der Pumpe und zum Systemschutz in Flüssigkeitswegen von Instrumenten." },
+      { question: "Welche Druckmessbereiche bietet der PDM5?", answer: "Die Standardmessbereiche für Absolutdruck sind 10–200, 10–400, 10–700 und 10–1200 kPa. Der absolute Gesamtfehler hängt vom Messbereich des Modells ab." },
+      { question: "Welche Kommunikationsschnittstelle nutzt PDM5?", answer: "PDM5 verwendet I2C. Die 7-Bit-Standardadresse ist 0x6D." },
+      { question: "Welchen Flüssigkeitsanschluss hat PDM5?", answer: "Der Flüssigkeitsanschluss hat ein 1/4-28 UNF-2B-Innengewinde und lässt sich mit passenden Fluidik-Fittings und Leitungen verbinden." },
+      { question: "Eignet sich PDM5 für einen Flüssigkeitsweg mit geringem Totvolumen?", answer: "Ja. Das Datenblatt gibt ein Innenvolumen von ≤55 µL an." },
+    ],
+  },
   es: {
     name: "Sensor de presión PDM5",
     description: "Sensor de presión PDM5 de 10–1200 kPa con comunicación I2C, canal de PEEK y volumen interno ≤55 µL para supervisar la presión en circuitos de instrumentos.",
@@ -101,6 +168,45 @@ export function getPdm5LocaleCopy(locale: string) {
   return Object.hasOwn(pdm5Copy, locale) ? pdm5Copy[locale as Pdm5Locale] : undefined;
 }
 
+// PS-110B-2607-00001_A00_en, Table 3. The legacy site table uses earlier values.
+const pdm5DatasheetSpecValues: Readonly<Record<string, string>> = {
+  "压力分辨率": "5 Pa",
+  "最高采样率": "100 Hz",
+  "推荐接头扭矩": "0.32–0.4 N·m",
+  "重量": "≤35 g",
+  "工作温度": "0–70 °C",
+};
+
+const italianPdm5SpecValues: Readonly<Record<string, string>> = {
+  ...pdm5DatasheetSpecValues,
+  "压力范围": "10–200, 10–400, 10–700 e 10–1200 kPa",
+  "绝对总误差": "<2 / <4 / <7 / <10 kPa (nei campi corrispondenti)",
+  "默认采样率": "Da confermare per firmware e impostazioni forniti",
+  "螺纹接口": "Filettatura femmina 1/4-28 UNF-2B, profondità 7.5 mm",
+};
+
+const hindiPdm5SpecValues: Readonly<Record<string, string>> = {
+  ...pdm5DatasheetSpecValues,
+  "压力范围": "10–200, 10–400, 10–700 और 10–1200 kPa",
+  "绝对总误差": "संबंधित रेंज में <2 / <4 / <7 / <10 kPa",
+  "默认采样率": "आपूर्ति किए गए फ़र्मवेयर और सेटिंग के अनुसार पुष्टि करें",
+  "螺纹接口": "1/4-28 UNF-2B आंतरिक थ्रेड, 7.5 mm गहराई",
+};
+
+const germanPdm5SpecValues: Readonly<Record<string, string>> = {
+  ...pdm5DatasheetSpecValues,
+  "压力范围": "10–200, 10–400, 10–700 und 10–1200 kPa",
+  "绝对总误差": "<2 / <4 / <7 / <10 kPa (je nach Messbereich)",
+  "默认采样率": "Gelieferte Firmware und Einstellungen prüfen",
+  "螺纹接口": "1/4-28 UNF-2B-Innengewinde, 7.5 mm tief",
+};
+
+const pdm5SpecValuesByLocale: Record<string, Readonly<Record<string, string>>> = {
+  de: germanPdm5SpecValues,
+  hi: hindiPdm5SpecValues,
+  it: italianPdm5SpecValues,
+};
+
 const chineseValues: Record<string, string> = {
   Digital: "数字信号", "30 mA Peak": "30 mA 峰值", "Better than 5 Pa": "优于 5 Pa",
   "Better than 1%FS": "优于 1%FS", "Better than 7 kPa": "优于 7 kPa",
@@ -114,12 +220,14 @@ export function applyPdm5LocaleCopy<T extends Record<string, unknown>>(source: T
   const labels = copy ? Object.fromEntries(sourceLabels.map((key, index) => [key, copy.labels[index]])) : {};
   const values = copy?.values ?? chineseValues;
   const specs = (source.specs as { label: string; value: string }[]).map((item) => ({
-    ...item, label: labels[item.label] ?? item.label, value: values[item.value] ?? item.value,
+    ...item, label: labels[item.label] ?? item.label,
+    value: pdm5SpecValuesByLocale[locale]?.[item.label] ?? values[item.value] ?? item.value,
   }));
   if (!copy) return { ...localized, specs, specifications: specs };
   return {
     ...localized, specs, specifications: specs,
     title: copy.name, name: copy.name,
+    ...(locale === "de" || locale === "it" || locale === "hi" ? { model: "PDM5", foreachModel: "PDM5", modelDisplay: "PDM5", displayModel: "PDM5" } : {}),
     description: copy.intro.join("\n\n"),
     pdm5IntroductionParagraphs: copy.intro,
     advantages: specs.filter((_, index) => [1, 3, 8, 11, 12, 13, 14, 15].includes(index)).map((item) => `${item.label}: ${item.value}`),

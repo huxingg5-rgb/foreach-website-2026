@@ -55,6 +55,7 @@ export default function ProductVariantConfigurator({
   open,
   config: sourceConfig,
   locale = "zh",
+  uiLocale = locale,
   value,
   onClose,
   onConfirm,
@@ -255,7 +256,7 @@ export default function ProductVariantConfigurator({
                 dimension.unit,
                 dimension.precision
               ),
-              locale
+              uiLocale === "de" || uiLocale === "it" || uiLocale === "hi" ? uiLocale : locale
             )
         ),
       ]
@@ -275,7 +276,7 @@ export default function ProductVariantConfigurator({
       return;
     }
 
-    const text = drawingRequirements ? `${matchingVariant.model}\n${drawingRequirementsLine({ drawingTypes: drawings }, locale)}` : matchingVariant.model;
+    const text = drawingRequirements ? `${matchingVariant.model}\n${drawingRequirementsLine({ drawingTypes: drawings }, uiLocale)}` : matchingVariant.model;
     try {
       await navigator.clipboard.writeText(text);
     }
@@ -353,7 +354,7 @@ export default function ProductVariantConfigurator({
             <div
               className={styles.summaryTable}
             >
-              {!config.compactSummary ? <div
+              {!config.compactSummary && config.showMatchedModel !== false ? <div
                 className={styles.summaryRow}
               >
                 <span>{uiText.finalModel}</span>
@@ -415,7 +416,7 @@ export default function ProductVariantConfigurator({
                           dimension.unit,
                           dimension.precision
                         ),
-                        locale
+                        uiLocale === "de" || uiLocale === "it" || uiLocale === "hi" ? uiLocale : locale
                       )}
                     </b>
                   </div>
@@ -455,7 +456,7 @@ export default function ProductVariantConfigurator({
                           row.unit,
                           row.precision
                         ),
-                        locale
+                        uiLocale === "de" || uiLocale === "it" || uiLocale === "hi" ? uiLocale : locale
                       )}
                     </b>
                   </div>
@@ -626,7 +627,7 @@ export default function ProductVariantConfigurator({
                                         dimension.unit,
                                         dimension.precision
                                       ),
-                                      locale
+                                      uiLocale === "de" || uiLocale === "it" || uiLocale === "hi" ? uiLocale : locale
                                     )}
                                   </span>
                                 </button>
@@ -724,8 +725,8 @@ export default function ProductVariantConfigurator({
               ) : null}
               {/* TPU_SIMPLIFIED_DUPLICATE_SELECTION_END */}
 
-              {drawingRequirements ? <DrawingRequirements locale={locale} value={drawings} onChange={value => { setDrawings(value); setCopyFeedback(false); }} /> : null}
-              <div
+              {drawingRequirements ? <DrawingRequirements locale={uiLocale} value={drawings} onChange={value => { setDrawings(value); setCopyFeedback(false); }} /> : null}
+              {config.showMatchedModel !== false ? <div
                 className={styles.modelResult}
               >
                 <span>{uiText.matchedModel}</span>
@@ -745,7 +746,7 @@ export default function ProductVariantConfigurator({
                     ? uiText.copied
                     : uiText.copyModel}
                 </button>
-              </div>
+              </div> : null}
             </div>
           </section>
         </div>

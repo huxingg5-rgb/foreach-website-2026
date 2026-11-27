@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
 /* =========================================================
    page.tsx
@@ -13,19 +14,19 @@ import { buildInternationalPageMetadata } from "@/lib/seo/international-page-met
    说明：
    1. 这个文件负责生成多语言访问路径
    2. 页面主体复用中文页面里的 AboutForeachClient 组件
-   3. AboutForeachClient.tsx 内部已经能根据 URL 第一段识别语言
-   4. 所以这里不需要再传 locale 参数
+   3. 页面把当前路由语言传给 AboutForeachClient
 ========================================================= */
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import AboutForeachClient from "@/app/about/foreach/AboutForeachClient";
 import CompanyPageStructuredData from "@/components/common/CompanyPageStructuredData";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
 
 /* 官网当前支持的非中文语言 */
 const ABOUT_FOREACH_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
-type AboutForeachLocale = (typeof ABOUT_FOREACH_LOCALES)[number];
+type AboutForeachLocale = (typeof ABOUT_FOREACH_LOCALES)[number] | "de" | "it" | "hi";
 
 type LocaleAboutForeachPageProps = {
   params: Promise<{
@@ -45,6 +46,19 @@ const metadataMap: Record<
     title: "About Foreach｜Foreach Technology",
     description:
       "Foreach focuses on microfluidic core components and fluidic system solutions for IVD, life sciences, high-end analytical instruments, synthetic biology, and laboratory automation.",
+  },
+  hi: {
+    title: "FOREACH के बारे में | FOREACH",
+    description: "IVD, जीवन विज्ञान, उच्च-स्तरीय विश्लेषण उपकरण, सिंथेटिक बायोलॉजी और प्रयोगशाला ऑटोमेशन के लिए मुख्य माइक्रोफ्लुइडिक घटक और फ्लुइडिक सिस्टम समाधान।",
+  },
+  it: {
+    title: "Chi è Foreach | FOREACH",
+    description: "Foreach sviluppa componenti per la microfluidica e soluzioni per la diagnostica in vitro, le scienze della vita, la strumentazione analitica, la biologia sintetica e l’automazione di laboratorio.",
+  },
+  de: {
+    title: "Unternehmensprofil | FOREACH",
+    description:
+      "FOREACH entwickelt mikrofluidische Kernkomponenten und Lösungen für Flüssigkeitskreisläufe in der In-vitro-Diagnostik, den Biowissenschaften, der Geräteanalytik, der synthetischen Biologie und der Laborautomation.",
   },
   es: {
     title: "Sobre Foreach｜Foreach Technology",
@@ -70,22 +84,30 @@ const metadataMap: Record<
 
 /* 生成静态多语言路径 */
 export function generateStaticParams() {
-  return ABOUT_FOREACH_LOCALES.map((locale) => ({
-    locale,
-  }));
+  const locales: readonly AboutForeachLocale[] = languageDraftsEnabled
+    ? [...ABOUT_FOREACH_LOCALES, "de", "it", "hi"]
+    : ABOUT_FOREACH_LOCALES;
+  return locales.map((locale) => ({ locale }));
 }
 
 /* 生成当前语言页面的 SEO 信息 */
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: LocaleAboutForeachPageProps): Promise<Metadata> {
   const { locale } = await params;
-
   if (!isAboutForeachLocale(locale)) {
     return {};
   }
 
-  return buildInternationalPageMetadata({ locale, path: "/about/foreach/", ...metadataMap[locale] });
+  const metadata = buildInternationalPageMetadata({ locale, path: "/about/foreach/", ...metadataMap[locale] });
+  if (locale !== "de" && locale !== "it" && locale !== "hi") return metadata;
+
+  return {
+    ...metadata,
+    alternates: { canonical: `/${locale}/about/foreach/` },
+    openGraph: { ...metadata.openGraph, locale: locale === "de" ? "de_DE" : locale === "hi" ? "hi_IN" : "it_IT" },
+    robots: { index: false, follow: true },
+  };
 }
 
 /* 多语言关于恒永达页面 */
@@ -93,7 +115,6 @@ export default async function LocaleAboutForeachPage({
   params,
 }: LocaleAboutForeachPageProps) {
   const { locale } = await params;
-
   if (!isAboutForeachLocale(locale)) {
     notFound();
   }
@@ -114,5 +135,9 @@ export default async function LocaleAboutForeachPage({
 
 /* 判断当前 URL 语言是否允许访问 */
 function isAboutForeachLocale(locale: string): locale is AboutForeachLocale {
-  return ABOUT_FOREACH_LOCALES.includes(locale as AboutForeachLocale);
+  return locale === "de" || locale === "it" || locale === "hi"
+    ? languageDraftsEnabled
+    : ABOUT_FOREACH_LOCALES.some((supported) => supported === locale);
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/about/foreach/", getPageMetadata);

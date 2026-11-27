@@ -1,5 +1,6 @@
 import FittingLocalizedSelectionContent from "@/components/products/detail/FittingLocalizedSelectionContent";
 import type {
+  ComponentProps,
   ComponentType,
   ReactNode,
 } from "react";
@@ -16,6 +17,7 @@ import ProductDetailClient from "@/components/products/detail/ProductDetailClien
 import QuickConnectDetailContent from "@/components/products/detail/QuickConnectDetailContent";
 import FittingRelatedResources from "@/components/products/detail/FittingRelatedResources";
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
+import type { GermanProductDetailContent } from "@/data/products/detail/product-detail-content.de";
 import { buildProductSocialMetadata } from "@/lib/seo/product-social-metadata";
 import {
   connectPublishedFittingProduct,
@@ -38,6 +40,8 @@ type DetailRecord = {
 };
 
 type PageProps = {
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: ComponentProps<typeof ProductDetailClient>["localizedDetail"];
   renderLocale?: TechnicalArticleLocale;
   params: Promise<{
     slug: string;
@@ -54,6 +58,8 @@ const details =
 const ProductDetailView = ProductDetailClient as unknown as ComponentType<{
   data: Record<string, unknown>;
   afterContent?: ReactNode;
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: ComponentProps<typeof ProductDetailClient>["localizedDetail"];
   customerCategoryMode?: "fitting-zh";
   customerCategoryContent?: Partial<Record<"selection" | "delivery", ReactNode>>;
 }>;
@@ -126,6 +132,8 @@ export async function generateMetadata({
 export default async function BarbedFittingDetailPage({
   params,
   renderLocale = "zh-CN",
+  germanDetail,
+  localizedDetail,
 }: PageProps) {
   const {
     slug,
@@ -140,13 +148,15 @@ export default async function BarbedFittingDetailPage({
 
   return (
     <ProductDetailView
+      germanDetail={germanDetail}
+      localizedDetail={localizedDetail}
       customerCategoryMode="fitting-zh"
       customerCategoryContent={renderLocale === "zh-CN" ? {
         selection: <QuickConnectDetailContent data={{ ...detail, productTypeId: "barbed-fittings" }} section="selection" variant="standalone-fitting" />,
         delivery: <QuickConnectDetailContent data={{ ...detail, productTypeId: "barbed-fittings" }} section="delivery" variant="standalone-fitting" />,
-      } : { selection: <FittingLocalizedSelectionContent data={{ ...detail, productTypeId: "barbed-fittings" }} locale={renderLocale} /> }}
+      } : { selection: <FittingLocalizedSelectionContent data={{ ...detail, productTypeId: "barbed-fittings" }} locale={renderLocale} germanDraft={!!germanDetail} contentLocale={localizedDetail?.locale} /> }}
       data={detail}
-      afterContent={<FittingRelatedResources productTypeId="barbed-fittings" model={detail.model} locale={renderLocale} />}
+      afterContent={<FittingRelatedResources productTypeId="barbed-fittings" model={detail.model} locale={renderLocale} germanDraft={!!germanDetail} contentLocale={localizedDetail?.locale} />}
     />
   );
 }

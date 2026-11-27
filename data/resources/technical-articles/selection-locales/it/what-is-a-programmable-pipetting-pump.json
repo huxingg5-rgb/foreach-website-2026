@@ -1,0 +1,256 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è una pompa automatica programmabile per pipettaggio a spostamento d’aria?",
+      "seoTitle": "Pompa automatica programmabile per pipettaggio a spostamento d’aria | FOREACH",
+      "seoDescription": "Come funziona la pompa automatica a spostamento d’aria SMTP2. Aspirazione, erogazione, rilevamento del livello, integrazione OEM e limiti di prestazione.",
+      "coverImage": "/images/resources/technical-articles/what-is-a-programmable-pipetting-pump/foreach-pipetting-module-cover.png",
+      "coverAlt": "Immagine a colori di una pompa FOREACH automatica programmabile per pipettaggio a spostamento d’aria, con involucro, azionamento e puntale smontato"
+    },
+    "deck": "Una pompa automatica programmabile per pipettaggio a spostamento d’aria è un componente per la manipolazione dei liquidi. Comandi di controllo definiscono aspirazione, erogazione, velocità e sequenza. L’articolo tratta i moduli a spostamento d’aria con puntali monouso negli strumenti OEM e usa FOREACH SMTP2 per illustrare funzionamento, monitoraggio e limiti di selezione.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Una pompa automatica programmabile per pipettaggio a spostamento d’aria è un componente per la manipolazione dei liquidi. Comandi di controllo definiscono aspirazione, erogazione, velocità e sequenza. L’articolo tratta i moduli a spostamento d’aria con puntali monouso negli strumenti OEM e usa FOREACH SMTP2 per illustrare funzionamento, monitoraggio e limiti di selezione."
+      },
+      {
+        "type": "paragraph",
+        "text": "Il modulo gestisce aspirazione, erogazione e segnali di stato pertinenti. Lo strumento deve anche gestire movimento, contenitori da laboratorio, puntali e programma di controllo. Alcuni moduli includono un asse di movimento. Una stazione di pipettaggio automatica completa richiede anche le altre funzioni dello strumento."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/what-is-a-programmable-pipetting-pump/foreach-pipetting-module-cover.png",
+        "alt": "Immagine a colori di una pompa FOREACH automatica programmabile per pipettaggio a spostamento d’aria, con involucro, azionamento e puntale smontato",
+        "width": 1200,
+        "height": 800,
+        "caption": "Figura 1. Pompa FOREACH automatica programmabile per pipettaggio a spostamento d’aria e puntale. Aspetto esterno e interfaccia dipendono dalla configurazione scelta."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come funziona il pipettaggio a spostamento d’aria?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Un motore muove un pistone in una camera sigillata. Un cuscino d’aria separa il pistone dal liquido nel puntale. Durante l’aspirazione, l’arretramento del pistone aumenta il volume della camera d’aria e riduce la pressione. La pressione esterna spinge il liquido nel puntale. Durante l’erogazione, il pistone avanza e comprime il cuscino d’aria per espellere il liquido."
+          },
+          {
+            "type": "paragraph",
+            "text": "Nell’uso normale, il campione rimane principalmente nel puntale monouso. Sostituire correttamente il puntale aiuta a ridurre trascinamento e contaminazione incrociata. Occorre anche controllare sovra-aspirazione, aerosol e manipolazione. Comprimibilità dell’aria, viscosità, volatilità e temperatura del liquido, tenuta e geometria del puntale incidono sul volume erogato."
+          }
+        ]
+      },
+      {
+        "title": "Quali parametri si possono programmare?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Oltre al volume obiettivo si possono impostare velocità di aspirazione ed erogazione, tempi di assestamento e sequenze operative. Il software dello strumento coordina queste azioni con posizionamento, gestione dei puntali e gestione delle anomalie. Verifica impostazioni e intervalli disponibili nel protocollo di controllo del modulo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un trasferimento da 100 μL può richiedere impostazioni diverse per una soluzione acquosa, un reagente viscoso o un liquido volatile. Il software di automazione raggruppa spesso i parametri di liquido, puntale e modalità di erogazione in una classe di liquido (Liquid Class). Si tratta di un concetto di sviluppo del metodo. Verifica le funzioni effettive del modulo SMTP2 per librerie di liquidi o compensazione automatica. Per liquidi difficili, valuta anche consumabili dedicati o tecniche a spostamento positivo quando la regolazione dei parametri è insufficiente."
+          },
+          {
+            "type": "paragraph",
+            "text": "Parametri programmabili e verifiche"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Controllo",
+              "Scopo",
+              "Cosa verificare"
+            ],
+            "rows": [
+              [
+                "Posizione e corsa del pistone",
+                "Impostare il volume nominale di aspirazione o erogazione",
+                "Calibrazione e corsa utile"
+              ],
+              [
+                "Velocità di aspirazione ed erogazione",
+                "Adattare comportamento del liquido, geometria del puntale e tempi di ciclo",
+                "Aspirazione incompleta, gocce residue o schizzi"
+              ],
+              [
+                "Tempo di assestamento e sequenza",
+                "Consentire l’equilibrio della pressione, l’erogazione e il coordinamento del movimento",
+                "Tempi dello strumento e volume erogato"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "A cosa servono il rilevamento del livello del liquido e il monitoraggio della pressione?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il rilevamento del livello basato sulla pressione (pLLD) rileva una variazione di pressione nel percorso dell’aria quando il puntale tocca il liquido. Di norma si coordina con un’aspirazione lenta di aria e l’avvicinamento lungo l’asse Z. Il rilevamento capacitivo (cLLD) individua una variazione di capacità quando un puntale conduttivo o una sonda tocca il liquido. Considera forma del puntale, riferimento elettrico e proprietà del liquido."
+          },
+          {
+            "type": "paragraph",
+            "text": "SMTP2 supporta il rilevamento del livello pLLD, cLLD e ibrido hLLD. Scegli il metodo in base al puntale, alle proprietà del liquido e alle condizioni elettriche dello strumento. Conferma come si combinano e si attivano i segnali di rilevamento, quindi verifica la stabilità in condizioni operative effettive."
+          },
+          {
+            "type": "paragraph",
+            "text": "I dati di pressione e di stato del puntale possono aiutare a rilevare ostruzioni, liquido insufficiente o problemi di caricamento. Gli eventi rilevabili dipendono da algoritmi, soglie e condizioni operative. Lo strumento definisce allarmi, arresto e ripristino. Dopo un errore, verifica lo stato prima di ripetere l’aspirazione. Misura il volume erogato per verificarne la conformità anche quando il ciclo termina senza allarmi."
+          }
+        ]
+      },
+      {
+        "title": "Quali operazioni automatizzate può supportare?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Tra le operazioni possibili rientrano trasferimento dei campioni dalle provette di raccolta ai contenitori di reazione, aggiunta di reagenti, preparazione di aliquote e manipolazione di liquidi in micropiastre. Le apparecchiature includono analizzatori IVD, strumenti di diagnostica molecolare, sistemi di preparazione dei campioni e automazione di laboratorio. L’idoneità va validata per lo strumento e il saggio specifici."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il trasferimento dei campioni e la preparazione ripetuta di aliquote possono richiedere puntali, impostazioni operative e controlli di contaminazione diversi nello stesso progetto. Specifica contenitori di origine e destinazione, volumi minimi e abituali, frequenza di cambio del puntale e durata del ciclo oltre alla capacità."
+          }
+        ]
+      },
+      {
+        "title": "Come verificare le prestazioni effettive di pipettaggio?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Per un trasferimento obiettivo di 100 μL, i passaggi seguenti illustrano un metodo di verifica. Stabilisci criteri di accettazione per l’applicazione. Definisci il liquido effettivo, il codice del puntale, i contenitori e le condizioni ambientali, poi ripeti le misurazioni usando un unico insieme di parametri operativi."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Controlla il caricamento e la tenuta del puntale e la posizione del rilevamento del livello. Cerca aspirazione di aria o bolle.",
+              "Controlla gocciolamento nel trasferimento, liquido all’esterno del puntale e residui o schizzi durante l’erogazione.",
+              "Scegli un metodo di misura adatto al volume obiettivo. Per la misura gravimetrica, considera densità del liquido, evaporazione e condizioni ambientali prima di calcolare volume e scostamento.",
+              "Verifica volumi di lavoro minimo, abituale e massimo. Per le aliquote, controlla separatamente porzioni iniziale, intermedia e finale. Ripeti la validazione se cambi liquido o puntale."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La capacità nominale indica il volume nominale del modulo. La risoluzione dell’azionamento descrive l’incremento di comando. Accuratezza e ripetibilità riguardano il volume erogato. Valuta separatamente erogazione singola e aliquote multiple e registra metodo di misura e numero di ripetizioni."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-programmable-pipetting-pump/tip-interface-reference-it.svg",
+            "alt": "Riferimento del produttore per l’interfaccia del puntale, con LTE045 (45 mm), diametro di accoppiamento 5.43 mm, lunghezza del puntale e lunghezza complessiva",
+            "width": 2032,
+            "height": 774,
+            "caption": "Figura 2. Riferimento per l’interfaccia del puntale adattato dal disegno del produttore. LTE045 (45 mm) e diametro di accoppiamento 5.43 mm valgono per l’interfaccia illustrata. Verifica lunghezza del puntale, lunghezza complessiva e compatibilità per consumabile e configurazione scelti."
+          }
+        ]
+      },
+      {
+        "title": "Capacità e limiti di selezione di SMTP2",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "FOREACH SMTP2 è una pompa automatica programmabile per pipettaggio a spostamento d’aria, con capacità nominale di 1000 μL, azionamento e controllo integrati. Con puntali monouso e il movimento dello strumento, supporta aspirazione, trasferimento, erogazione ed espulsione del puntale."
+          },
+          {
+            "type": "paragraph",
+            "text": "Parametri e condizioni di integrazione di SMTP2"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Voce",
+              "Parametri e funzioni",
+              "Limiti di integrazione"
+            ],
+            "rows": [
+              [
+                "Capacità nominale",
+                "1000 μL",
+                "L’intervallo di lavoro dipende da puntale, liquido e requisiti prestazionali"
+              ],
+              [
+                "Rilevamento del livello del liquido",
+                "pLLD / cLLD / hLLD",
+                "Verificare consumabili, condizioni elettriche e logica di attivazione"
+              ],
+              [
+                "Processo e gestione dei puntali",
+                "Monitoraggio della pressione, rilevamento di ostruzione e presenza del puntale, espulsione automatica",
+                "Il software dello strumento gestisce il ripristino e il coordinamento del movimento"
+              ],
+              [
+                "Comunicazione",
+                "RS232 / RS485 / CAN",
+                "Confermare cablaggio e protocollo della configurazione scelta"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La prestazione di pipettaggio dipende dal puntale, dal volume obiettivo, dalle proprietà del liquido e dalla modalità di erogazione singola o multipla. Per valutare scostamento e ripetibilità, mantieni costanti liquido di prova, puntale, metodo di misura e ambiente. La capacità nominale di 1000 μL e la risoluzione elevata in micropassi sono dati distinti dai volumi effettivamente utilizzabili e dal volume minimo di trasferimento affidabile, che vanno verificati sul liquido."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/what-is-a-programmable-pipetting-pump/smtp2-product-outline.png",
+            "alt": "Disegno esterno di SMTP2 con scheda elettronica, azionamento e configurazioni con puntale smontato e montato",
+            "width": 1254,
+            "height": 1254,
+            "caption": "Figura 3. Vista esterna di riferimento di SMTP2. Puntale smontato a sinistra e montato a destra. Il disegno è ricavato da un’immagine del prodotto e mostra la superficie esterna."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "Si possono riutilizzare le impostazioni con un puntale diverso della stessa capacità?",
+        "answer": "Per confermare la compatibilità, controlla codice esatto, caricamento, espulsione, tenuta e geometria, oltre alla capacità. Verifica poi aspirazione ed erogazione con il liquido e il volume obiettivo."
+      },
+      {
+        "question": "Una singola aspirazione può alimentare più aliquote?",
+        "answer": "Sì. SMTP2 può erogare più porzioni definite dopo un’aspirazione. Per distribuirle in contenitori diversi occorre coordinare il posizionamento dello strumento. Il volume aspirato totale deve coprire tutte le porzioni e il margine di processo entro la capacità utilizzabile di pompa e puntale. Prima dell’uso, verifica il volume effettivo delle porzioni iniziale, intermedia e finale."
+      }
+    ],
+    "cta": {
+      "title": "Definisci i requisiti di pipettaggio e integrazione",
+      "description": "Indica proprietà del liquido, volumi minimo, abituale e massimo, codice del puntale, dimensioni dei contenitori, modalità di erogazione, durata del ciclo e requisiti di rilevamento per valutare configurazione SMTP2 e verifica del prototipo.",
+      "contactLabel": "Contatta un tecnico",
+      "productsLabel": "Visualizza SMTP2",
+      "productsHref": "/en/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "air-displacement",
+      "label": "Come funziona il pipettaggio a spostamento d’aria?"
+    },
+    {
+      "id": "programmable-control",
+      "label": "Quali parametri si possono programmare?"
+    },
+    {
+      "id": "process-detection",
+      "label": "A cosa servono il rilevamento del livello del liquido e il monitoraggio della pressione?"
+    },
+    {
+      "id": "automation-tasks",
+      "label": "Quali operazioni automatizzate può supportare?"
+    },
+    {
+      "id": "performance-checks",
+      "label": "Come verificare le prestazioni effettive di pipettaggio?"
+    },
+    {
+      "id": "smtp2-capabilities",
+      "label": "Capacità e limiti di selezione di SMTP2"
+    }
+  ],
+  "sources": [
+    "/en/products/pumps/pipetting-pumps/smtp2-programmable-pipetting-module/",
+    "/en/products/pumps/pipetting-pumps/",
+    "/downloads/resources/datasheets/en/Pumps/ps-130a-2507-00001-001-en-smtp2-smtp4-pipetting-pump.pdf",
+    "https://partnering.tecan.com/cavro-air-displacement-pipettor-for-oem-liquid-handling",
+    "https://www.hamiltoncompany.com/knowledge-base/faq/how-do-i-improve-my-prep-pipetting-results",
+    "https://www.eppendorf.com/de-en/lab-academy/pipetting-knowledge-hub/choose-your-solution/"
+  ]
+}

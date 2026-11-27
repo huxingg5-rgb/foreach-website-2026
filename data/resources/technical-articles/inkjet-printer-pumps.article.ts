@@ -15,6 +15,8 @@ import type {
 
 export const inkjetPrinterPumpsSlug = "inkjet-printer-pumps-micro-diaphragm-pumps" as const;
 
+type ArticleLink = { key: string; label: string; prefix?: string; suffix?: string };
+
 type ArticleText = {
   title: string;
   seoTitle: string;
@@ -25,13 +27,13 @@ type ArticleText = {
   sections: {
     title: string;
     tocLabel: string;
-    paragraphs: string[];
+    paragraphs: (string | ArticleLink)[];
     table?: { headers: string[]; rows: string[][] };
     figure?: { caption: string };
     productTable?: { headers: string[]; purposes: string[]; modelKeys?: string[] };
     afterParagraphs?: string[];
     note?: string;
-    links?: { key: string; label: string }[];
+    links?: ArticleLink[];
   }[];
   cta: { title: string; description: string; contactLabel: string; productsLabel: string };
 };
@@ -72,6 +74,12 @@ const links: Record<string, string> = {
   troubleshooting: "/resources/technical-articles/ink-starvation-inkjet-troubleshooting/",
 };
 
+function resolveLink({ key, ...text }: ArticleLink) {
+  const href = links[key];
+  if (!href) throw new Error(`Unknown inkjet-pump article link: ${key}`);
+  return { href, ...text };
+}
+
 function buildCopy(text: ArticleText, locale: TechnicalArticleLocale): DiaphragmPumpEngineeringArticleCopy {
   const image = `/images/resources/pump-application-guides/inkjet-printer-pumps/inkjet-fluid-path-${locale}.webp`;
   return {
@@ -85,7 +93,11 @@ function buildCopy(text: ArticleText, locale: TechnicalArticleLocale): Diaphragm
     deck: text.deck,
     leadBlocks: [{ type: "notice", text: text.scope }],
     sections: text.sections.map(section => {
-      const blocks: EngineeringArticleBlock[] = section.paragraphs.map(paragraph => ({ type: "paragraph", text: paragraph }));
+      const blocks: EngineeringArticleBlock[] = section.paragraphs.map(paragraph =>
+        typeof paragraph === "string"
+          ? { type: "paragraph", text: paragraph }
+          : { type: "links", items: [resolveLink(paragraph)] }
+      );
       if (section.table) blocks.push({ type: "table", ...section.table });
       if (section.figure) blocks.push({
         type: "figure", src: image, alt: text.coverAlt,
@@ -109,11 +121,7 @@ function buildCopy(text: ArticleText, locale: TechnicalArticleLocale): Diaphragm
         blocks.push({ type: "paragraph", text: paragraph });
       }
       if (section.note) blocks.push({ type: "notice", text: section.note });
-      if (section.links) blocks.push({ type: "links", items: section.links.map(link => {
-        const href = links[link.key];
-        if (!href) throw new Error(`Unknown inkjet-pump article link: ${link.key}`);
-        return { href, label: link.label };
-      }) });
+      if (section.links) blocks.push({ type: "links", items: section.links.map(resolveLink) });
       return { title: section.title, tocLabel: section.tocLabel, blocks };
     }),
     // Each question is answered in the body; no repetitive FAQ or empty schema.

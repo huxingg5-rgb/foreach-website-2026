@@ -1,0 +1,403 @@
+{
+  "metadata": {
+    "title": "Alimentazione insufficiente dell’inchiostro nelle stampanti a getto d’inchiostro: cause e diagnosi",
+    "seoTitle": "Alimentazione insufficiente dell’inchiostro: diagnosi | FOREACH",
+    "seoDescription": "Individua i problemi di alimentazione durante le stampe prolungate. Usa i test degli ugelli, il livello del serbatoio, la perdita di carico del filtro, le bolle e la portata misurata della pompa.",
+    "coverImage": "/images/resources/technical-articles/ink-starvation-troubleshooting/ink-starvation-diagnostics.webp",
+    "coverAlt": "Schema diagnostico del circuito d’inchiostro con serbatoio, pompa, filtro e testina per individuare livello basso, bolle e righe mancanti"
+  },
+  "deck": "L’alimentazione è insufficiente quando alla testina arriva meno inchiostro di quanto ne consumi. Se un colore sbiadisce durante una stampa prolungata ad alta copertura e torna dopo una pausa, conserva il test degli ugelli e osserva il livello nel serbatoio mentre compare il difetto. Segui poi la linea di alimentazione per individuare restrizioni o infiltrazioni d’aria e misura la portata al carico di stampa che ha causato le righe mancanti.",
+  "leadBlocks": [
+    {
+      "type": "notice",
+      "text": "La guida riguarda sistemi a getto d’inchiostro industriali piezoelettrici drop-on-demand. Individuare serbatoi, regolatori di pressione e l’eventuale linea di ritorno sullo schema della macchina. Seguire la procedura di adescamento e i limiti di pressione del produttore della testina. Le stampanti a getto continuo hanno un circuito d’inchiostro e procedure di assistenza differenti."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Le righe mancanti nel test degli ugelli indicano una carenza di inchiostro?",
+      "tocLabel": "Riconoscere il difetto",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Confrontare il test degli ugelli prima della stampa con quello eseguito appena il colore sbiadisce. Se gli ugelli inattivi aumentano con la copertura di stampa e riprendono a funzionare dopo una pausa, è probabile che manchi inchiostro. Se sono sempre gli stessi ugelli a mancare, sia all’avvio a freddo sia dopo una pausa, controllare la piastra degli ugelli e la diagnostica di pilotaggio della testina prima di aprire la linea."
+        },
+        {
+          "type": "paragraph",
+          "text": "Annotare se il difetto riguarda un colore, una sola testina o tutte le testine collegate allo stesso collettore. Questo indica se iniziare dal ramo della testina o dall’alimentazione comune."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Osservazione",
+            "Prima verifica",
+            "Dati da conservare"
+          ],
+          "rows": [
+            [
+              "Il colore sbiadisce durante la stampa continua e torna per poco dopo una pausa",
+              "Reintegro, perdita di carico nel filtro, livello e sfiato del serbatoio",
+              "Carico di stampa, tempo di comparsa del guasto e sequenza di ripristino"
+            ],
+            [
+              "Mancano gli stessi ugelli in ogni test",
+              "Motivo di prova, storico della manutenzione e stato del pilotaggio della testina",
+              "Motivi di prova prima e dopo l’intervento, nelle stesse condizioni"
+            ],
+            [
+              "Il difetto compare subito dopo il cambio di inchiostro, filtro o tubi",
+              "Tenute, direzione del flusso e procedura di adescamento",
+              "Componenti cambiati e primo punto in cui compaiono le bolle"
+            ],
+            [
+              "Più testine sullo stesso ramo di alimentazione si guastano insieme",
+              "Serbatoio comune, filtrazione, alimentazione e controllo condivisi",
+              "Schema del ramo, misure di pressione e sequenza del guasto"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "In che ordine controllare l’alimentazione dell’inchiostro?",
+      "tocLabel": "Seguire il percorso di alimentazione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Partire dal serbatoio che alimenta il colore interessato. Se la macchina ha un serbatoio secondario, osservare se il suo livello cala durante la stampa in cui compare il difetto e risale durante la pausa. In tal caso, iniziare dal ramo di reintegro. Se il livello resta nella fascia normale, seguire il tubo da quel serbatoio alle testine interessate."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/ink-circulation-supply-return-pump-diaphragm-pump/",
+              "prefix": "Individuare le ",
+              "label": "linee di alimentazione, ritorno e ricircolo",
+              "suffix": " sullo schema della macchina. Identificare nell’ordine effettivo sfiato del serbatoio, pompa, filtri, valvole ed eventuale smorzatore o regolatore. Registrare posizioni delle valvole e impostazioni dei controlli prima di isolare o aprire una linea secondo la procedura di assistenza."
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Verificare livello dell’inchiostro, immersione della presa e sfiato del serbatoio, comprese le variazioni al livello minimo d’esercizio.",
+            "Controllare posizioni delle valvole, direzione del flusso, pieghe, schiacciamenti dei tubi e filtri o tenute appena sostituiti.",
+            "Osservare i tratti di tubo accessibili e autorizzati, annotare dove compaiono le prime bolle e completare la procedura di adescamento prevista.",
+            "Al carico di stampa che causa il difetto, registrare le misure disponibili all’ingresso e all’uscita della pompa e sul lato testina.",
+            "Dopo aver ripristinato l’alimentazione, controllare il motivo di prova degli ugelli e regolare il controllo entro i limiti dell’apparecchiatura."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Come possono filtri e tubi limitare l’alimentazione durante le stampe più lunghe?",
+      "tocLabel": "Controllare filtri e resistenze",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un filtro parzialmente carico può lasciar passare inchiostro a sufficienza per un test degli ugelli, ma limitarne l’alimentazione durante la stampa di un’area piena. Misurare alle prese autorizzate sui due lati del filtro e sottrarre la pressione a valle da quella a monte. Confrontare la perdita con il riferimento a filtro pulito, alla stessa portata misurata e temperatura dell’inchiostro. Se la portata cala, anche un filtro carico può mostrare una perdita di carico modesta."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/applications/industrial-inkjet-printing/guide-inkjet-printer/filtration-and-flow-control/ink-filtration-and-check-valves/",
+              "prefix": "Consultare la ",
+              "label": "guida alla filtrazione e alle valvole di ritegno per getto d’inchiostro industriale",
+              "suffix": " per distinguere il prefiltro a monte dal filtro finale prescritto per la testina. Se le prese di pressione racchiudono anche il tubo, la valvola o il raccordo, includerli nell’analisi."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/fittings/filters/f-pe-60-32-pp-n/",
+              "prefix": "Per una linea di reintegro con tubo di diametro interno 3.2 mm, il ",
+              "label": "filtro in linea F-PE-60-32-PP-N",
+              "suffix": " è un candidato per la filtrazione grossolana. L’intervallo specificato di 40–60 µm riguarda l’elemento filtrante. Verificare la compatibilità con inchiostro e liquido di pulizia e misurare la perdita alla portata di reintegro. Mantenere la filtrazione finale prescritta dal produttore della testina."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Posizione",
+            "Confronto",
+            "Verifica successiva"
+          ],
+          "rows": [
+            [
+              "Filtro",
+              "Perdita di carico rispetto ai dati storici nelle stesse condizioni",
+              "Dopo la sostituzione autorizzata, ricontrollare portata e stampa"
+            ],
+            [
+              "Presa di aspirazione e serbatoio",
+              "Sfiato, altezza di aspirazione, immersione e possibili schiacciamenti del tubo",
+              "Ripristinare l’alimentazione in ingresso prima di valutare l’erogazione della pompa"
+            ],
+            [
+              "Tubo di mandata e valvole",
+              "Diametro interno, lunghezza, posizioni delle valvole e componenti aggiunti",
+              "Verificare il margine di perdita di carico alla portata richiesta"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "Mantenere in produzione la filtrazione prescritta. Per provare separatamente un componente, usare un circuito di prova approvato che protegga la testina dall’inchiostro non filtrato."
+        }
+      ]
+    },
+    {
+      "title": "Come individuare l’origine delle bolle ricorrenti nei tubi d’inchiostro?",
+      "tocLabel": "Individuare l’ingresso d’aria",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dopo aver sostituito il serbatoio, adescare la linea secondo procedura e annotare dove ricompaiono per prime le bolle. Se un tratto trasparente a monte di un raccordo resta pieno, mentre le bolle compaiono appena a valle, ispezionare quel raccordo e la tenuta. Un raccordo in aspirazione può far entrare aria e restare asciutto all’esterno. Verificare una connessione alla volta."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/control/air-bubble-detectors/abd/",
+              "prefix": "Durante una prova approvata con liquido limpido e tubo trasparente, il ",
+              "label": "rilevatore ottico di bolle d’aria ABD",
+              "suffix": " può aiutare a registrare il primo passaggio d’aria nel punto di prova. Selezionare la scanalatura in base al diametro esterno del tubo e verificare l’allarme con bolle della dimensione prevista. Le condizioni ottiche pubblicate richiedono mezzi trasparenti. Con inchiostro bianco opaco o scuro, usare la prova di tenuta della macchina e un metodo di misura compatibile e validato per quell’inchiostro."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Bolle visibili e gas disciolti richiedono verifiche diverse. L’adescamento sostituisce con inchiostro le sacche d’aria. Se è presente un degasatore, seguire separatamente le verifiche del lato vuoto e della membrana."
+        },
+        {
+          "type": "figure",
+          "src": "/images/products/control/foreach-abd-air-bubble-detectors-open-cover-front-view.webp",
+          "alt": "Tre rilevatori ottici ABD FOREACH con coperchi aperti che mostrano le diverse scanalature per il tubo",
+          "width": 1500,
+          "height": 1500,
+          "caption": "Il tubo trasparente di prova si inserisce nella scanalatura del rilevatore. Selezionare la scanalatura in base al diametro esterno del tubo prima di verificare la risposta ottica con il liquido di prova trasparente autorizzato."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Controllare se la presa emerge dal liquido e se il riempimento o l’agitazione portano aria alla presa.",
+            "Dopo la manutenzione, verificare nuovamente tenute dei filtri, chiusura degli sfiati e adescamento completo.",
+            "Isolare un raccordo sospetto alla volta, mantenendo invariate le altre condizioni.",
+            "Dopo aver eliminato la causa, adescare nuovamente e confrontare portata, pressione e risultati di stampa."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Che cosa misurare se la pompa dell’inchiostro funziona ma la portata rimane bassa?",
+      "tocLabel": "Misurare il punto di lavoro",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Misurare la portata nel ramo interessato e registrare contemporaneamente le pressioni in ingresso e in uscita della pompa. In un sistema a ricircolo, distinguere l’inchiostro che torna al serbatoio da quello consumato dalla stampa. La portata totale dell’anello può nascondere una carenza alla singola testina."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/300-ml-min-micro-liquid-diaphragm-pump-motor-runs-no-flow/",
+              "prefix": "Se il motore gira e la portata scende a zero, seguire le ",
+              "label": "verifiche per una pompa a membrana per liquidi senza portata",
+              "suffix": " per controllare adescamento, alimentazione in ingresso e funzionamento delle valvole. Usare un misuratore compatibile con l’inchiostro o il circuito di prova della macchina, a una contropressione rappresentativa. Scaricare la mandata in un recipiente elimina dalla misura il carico del filtro e della testina."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dati da registrare",
+            "Condizioni da includere",
+            "Scopo diagnostico"
+          ],
+          "rows": [
+            [
+              "Portata ed erogazione cumulata",
+              "Punto di misura, intervallo temporale, temperatura dell’inchiostro e carico di stampa",
+              "Verificare se il reintegro soddisfa la domanda durante tutta la stampa"
+            ],
+            [
+              "Pressioni in ingresso, in uscita e al filtro",
+              "Riferimento, unità e posizioni di misura",
+              "Distinguere un’aspirazione insufficiente da una resistenza superiore a valle"
+            ],
+            [
+              "Alimentazione e controllo del motore",
+              "Misure sotto carico e interfaccia esatta del motore",
+              "Variazioni di alimentazione, comando di velocità o stato del controllo"
+            ],
+            [
+              "Bolle e andamento della pressione",
+              "Andamento originale prima e durante il guasto",
+              "Variazioni reali di portata, pulsazioni e filtraggio del display"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Come verificare insieme pressioni di alimentazione, ritorno e menisco degli ugelli?",
+      "tocLabel": "Verificare pressione e controllo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In una testina a ricircolo, il differenziale fra ingresso e ritorno fa circolare l’inchiostro nella testina. Il menisco all’ugello risponde alla pressione relativa all’ambiente alla quota dell’ugello. Registrare posizioni delle prese, riferimento e limiti prescritti dal produttore della testina. La misura in uscita dalla pompa include la pressione necessaria a superare le perdite più a valle."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/control/pdm5-pressure-sensor/",
+              "prefix": "Per rilevare l’andamento della pressione a monte, valutare il ",
+              "label": "sensore di pressione assoluta PDM5",
+              "suffix": " se materiali bagnati, campo, accuratezza e campionamento sono adatti alla prova. Per confrontare una misura assoluta con un limite di pressione relativa, sottrarre la pressione ambiente misurata nello stesso momento e considerare l’eventuale differenza di quota. Usare uno strumento con accuratezza sufficiente per l’intervallo ristretto del menisco."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+              "prefix": "Se la pressione oscilla mentre la portata media resta stabile, registrare l’andamento durante la comparsa del difetto e confrontarlo con la ",
+              "label": "procedura di misura delle pulsazioni della pompa a membrana",
+              "suffix": ". Conservare insieme ai dati la frequenza di campionamento originale e le eventuali impostazioni di media del display."
+            }
+          ]
+        },
+        {
+          "type": "notice",
+          "text": "Regolare la pressione nei limiti prescritti dal produttore della macchina e della testina, dopo aver verificato alimentazione dell’inchiostro e infiltrazioni d’aria ricorrenti."
+        }
+      ]
+    },
+    {
+      "title": "Come valutare DPL30 e DPL60 prima di sostituire una pompa per inchiostro?",
+      "tocLabel": "Valutare le alternative di sostituzione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Valutare una pompa diversa soltanto se, con ingresso integro, filtro efficiente e adescamento completo, la portata misurata resta inferiore al requisito. Definire l’obiettivo al differenziale di pressione e alla tensione di azionamento effettivi. Registrare di quanto cala il livello dell’inchiostro durante la stampa e il tempo entro cui il ramo di reintegro deve ripristinarlo."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+              "prefix": "La ",
+              "label": "pompa a membrana per liquidi DPL30-DB",
+              "suffix": " ha una portata libera specificata di 300 mL/min con acqua purificata. Usare la curva portata–pressione per una valutazione preliminare al carico misurato."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+              "prefix": "La ",
+              "label": "Pompa a membrana per liquidi DPL60-DB",
+              "suffix": " ha una portata libera specificata di 600 mL/min con lo stesso liquido di riferimento. Entrambi i modelli riportano 100 kPa come valore separato di pressione nominale. Le schede tecniche non indicano che le portate libere siano misurate a 100 kPa."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection/",
+              "prefix": "Consultare la ",
+              "label": "guida alla scelta della pompa per inchiostro da 300 o 600 mL/min",
+              "suffix": " per confrontare le due alternative. Verificare i materiali a contatto con inchiostro e liquido di pulizia e misurare la portata erogata con filtro, tubi, temperatura di esercizio e ciclo di riavvio effettivi."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Serie candidata",
+            "Portata libera specificata",
+            "Verifiche nel circuito installato"
+          ],
+          "rows": [
+            [
+              "DPL30-DB",
+              "300 mL/min, acqua purificata",
+              "Portata di esercizio con inchiostro, differenziale di pressione e condizioni di controllo previsti"
+            ],
+            [
+              "DPL60-DB",
+              "600 mL/min, acqua purificata",
+              "Margine di portata, differenziale di pressione fra alimentazione e ritorno e oscillazioni al carico reale"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Come verificare una riparazione e documentare la carenza d’inchiostro per il fornitore?",
+      "tocLabel": "Ripetere la prova e documentare",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Ripetere il lavoro che ha causato il guasto con lo stesso supporto, modalità di stampa, temperatura dell’inchiostro e livello iniziale del serbatoio. Proseguire oltre il tempo di comparsa del difetto rilevato in origine. Confrontare i test degli ugelli prima e dopo la stampa con livello del serbatoio, portata e andamento della pressione. La riparazione deve ripristinare un’alimentazione continua entro i limiti della macchina ed eliminare il difetto di partenza."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/white-ink-circulation-pump-selection-sedimentation/",
+              "prefix": "Se dopo una pausa l’inchiostro bianco perde densità con portata e pressione ancora nei limiti rilevati, consultare la ",
+              "label": "procedura di ricircolo e riavvio per l’inchiostro bianco",
+              "suffix": " per verificare la sedimentazione del pigmento. Se il difetto ritorna, inviare al fornitore della pompa o della macchina i dati riportati di seguito."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Categoria",
+            "Informazioni utili"
+          ],
+          "rows": [
+            [
+              "Liquido e apparecchiatura",
+              "Tipo e composizione dell’inchiostro, viscosità, temperatura, modello della testina e della macchina"
+            ],
+            [
+              "Circuito e pompa",
+              "Schema, configurazione completa della pompa, diametro interno e lunghezza dei tubi, filtro e quota del serbatoio"
+            ],
+            [
+              "Guasto e misure",
+              "Carico, tempo di comparsa, punti di misura di portata e pressione, alimentazione e controlli, origine delle bolle"
+            ],
+            [
+              "Intervento e verifica",
+              "Una sola variabile modificata per prova, test degli ugelli prima e dopo, risultati della stampa continua"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "",
+  "faqItems": [],
+  "cta": {
+    "title": "Valuta una pompa per inchiostro nelle condizioni effettive del guasto",
+    "description": "Condividi dati sull’inchiostro e sulla temperatura, portata di esercizio obiettivo, pressione di alimentazione e ritorno, dettagli di filtro e tubi e dati del guasto prima e dopo l’intervento, per individuare pompe candidate e prove sul prototipo.",
+    "contactLabel": "Invia le condizioni di alimentazione dell’inchiostro",
+    "productsLabel": "Scopri le pompe miniaturizzate a membrana per liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

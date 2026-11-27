@@ -6,7 +6,34 @@ type MetricaPrivacyCopy = {
   paragraphs: string[];
 };
 
-export const yandexMetricaPrivacyCopy: Record<LocaleCode, MetricaPrivacyCopy> = {
+export const yandexMetricaPrivacyCopy: Record<LocaleCode | "de" | "it" | "hi", MetricaPrivacyCopy> = {
+  hi: {
+    providers: "Google Analytics और Yandex Metrica",
+    lastUpdated: "आखिरी अपडेट 20 अक्टूबर 2026",
+    paragraphs: [
+      "एनालिटिक्स कुकी के लिए आपकी सहमति मिलने पर हम पेज विज़िट, ट्रैफ़िक स्रोत, वेबसाइट भाषा, सफल पूछताछ, संपर्क लिंक के क्लिक, संसाधन डाउनलोड और पूछताछ सूची की कार्रवाइयाँ मापने के लिए Yandex Metrica भी इस्तेमाल करते हैं। Metrica _ym से शुरू होने वाली कुकी और लोकल स्टोरेज में पहचानकर्ता इस्तेमाल कर सकता है।",
+      "हमारी Metrica इंटीग्रेशन में Session Replay, क्लिक मैप या फ़ॉर्म की सामग्री की रिकॉर्डिंग चालू नहीं है। कस्टम इवेंट में नाम, ईमेल पते, फ़ोन नंबर, पूछताछ का टेक्स्ट या संलग्न फ़ाइलें शामिल नहीं हैं। पेज के URL में कैंपेन का स्रोत पहचानने के लिए केवल ज़रूरी पैरामीटर रहते हैं। फ़ुटर की कुकी सेटिंग में सहमति वापस लेने से आगे की Metrica माप बंद हो जाती है और वेबसाइट की पहुँच वाले संबंधित पहचानकर्ता हट जाते हैं।",
+      "Yandex यह एनालिटिक्स डेटा अपनी सेवा शर्तों और गोपनीयता नीति के तहत प्रोसेस करता है। डेटा कितने समय तक रखा जाता है, यह सेवा के नियम और खाते की सेटिंग तय करते हैं। Yandex Metrica शुरू होने पर केवल Google Analytics के लिए पहले दी गई सहमति फिर से देनी होगी।",
+    ],
+  },
+  it: {
+    providers: "Google Analytics e Yandex Metrica",
+    lastUpdated: "Ultimo aggiornamento: 20 ottobre 2026",
+    paragraphs: [
+      "Dopo il consenso ai cookie di analisi, utilizziamo anche Yandex Metrica per rilevare visite, fonti del traffico, lingua del sito, invii di richieste riusciti, clic sui contatti, download di risorse e azioni nella lista delle richieste. Metrica può utilizzare cookie con prefisso _ym e identificatori nell’archiviazione locale.",
+      "La nostra integrazione con Metrica non attiva la riproduzione delle sessioni, le mappe dei clic o la registrazione dei contenuti dei moduli. Gli eventi personalizzati non includono nomi, indirizzi e-mail, numeri di telefono, testi delle richieste o allegati. Gli URL delle pagine conservano solo i parametri necessari per l’attribuzione delle campagne. Puoi revocare il consenso in «Impostazioni dei cookie» nel piè di pagina per interrompere le misurazioni successive e cancellare i relativi identificatori accessibili dal sito.",
+      "Yandex tratta questi dati di analisi secondo i propri termini e la propria informativa sulla privacy. La conservazione dipende dalle regole del servizio e dalle impostazioni dell’account. Quando viene introdotto Yandex Metrica, occorre rinnovare il consenso se era stato dato solo per Google Analytics.",
+    ],
+  },
+  de: {
+    providers: "Google Analytics und Yandex Metrica",
+    lastUpdated: "Zuletzt aktualisiert am 20. Oktober 2026",
+    paragraphs: [
+      "Nach Ihrer Einwilligung in Analyse-Cookies verwenden wir außerdem Yandex Metrica, um Seitenaufrufe, Zugriffsquellen, die Sprache der Website, erfolgreich gesendete Anfragen, Klicks auf Kontaktmöglichkeiten, Downloads und Aktionen in der Merkliste zu erfassen. Metrica kann Cookies mit dem Präfix _ym und Kennungen im lokalen Speicher verwenden.",
+      "Unsere Metrica-Integration aktiviert weder Sitzungsaufzeichnungen noch Klickkarten oder Aufzeichnungen von Formularinhalten. Benutzerdefinierte Ereignisse enthalten keine Namen, E-Mail-Adressen, Telefonnummern, Anfrageinhalte oder Anhänge. Seiten-URLs enthalten nur die für die Kampagnenzuordnung erforderlichen Parameter. In den Cookie-Einstellungen der Fußzeile können Sie Ihre Einwilligung widerrufen. Dadurch endet die weitere Messung, und zugehörige Kennungen, auf die diese Website zugreifen kann, werden gelöscht.",
+      "Yandex verarbeitet diese Analysedaten gemäß seinen Nutzungsbedingungen und seiner Datenschutzerklärung. Die Speicherdauer richtet sich nach den jeweiligen Dienstregeln und Kontoeinstellungen. Eine zuvor nur für Google Analytics erteilte Einwilligung muss bei Einführung von Yandex Metrica erneut erteilt werden.",
+    ],
+  },
   "zh-CN": {
     providers: "Google Analytics 和 Yandex Metrica",
     lastUpdated: "最后更新：2026年10月20日",

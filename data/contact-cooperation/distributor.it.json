@@ -1,0 +1,271 @@
+{
+  "hero": {
+    "titlePrefix": "Diventa distributore di",
+    "titleBrand": "Foreach Technology",
+    "titleSuffix": "",
+    "titleSecondLine": "",
+    "desc": "Costruisci una collaborazione duratura con Foreach e amplia le opportunità sul mercato locale per componenti microfluidici e soluzioni fluidiche. Serviamo la diagnostica in vitro (IVD), le scienze della vita, la strumentazione analitica, la biologia sintetica e l’automazione di laboratorio."
+  },
+  "advantagesHead": {
+    "title": "Supporta i clienti locali con una gamma completa di prodotti per la microfluidica.",
+    "desc": "Foreach affianca i partner con un’ampia gamma di prodotti, documentazione tecnica, assistenza nella scelta, coordinamento dei campioni e confronto durante il progetto."
+  },
+  "advantages": [
+    {
+      "index": "01",
+      "title": "Gamma completa di prodotti",
+      "desc": "La gamma comprende pompe, valvole, moduli di controllo, raccordi, tubi, sonde e altri componenti essenziali per i circuiti fluidici."
+    },
+    {
+      "index": "02",
+      "title": "Documentazione e certificazioni",
+      "desc": "Cataloghi, specifiche, disegni, certificati di qualità e documenti aziendali aiutano a presentare i prodotti ai clienti e a valutare il fornitore."
+    },
+    {
+      "index": "03",
+      "title": "Scelta dei prodotti e campioni",
+      "desc": "Aiutiamo a scegliere i prodotti e a validare i campioni in base a fluido, portata, pressione, connessioni, durata e spazio di installazione."
+    },
+    {
+      "index": "04",
+      "title": "Supporto all’avvio dei progetti",
+      "desc": "Affianchiamo i partner nella valutazione di soluzioni sostitutive, nella validazione dei campioni e nel confronto tecnico durante lo sviluppo del progetto."
+    }
+  ],
+  "productsHead": {
+    "title": "Principali categorie di prodotto per i distributori",
+    "desc": "Foreach offre pompe, valvole, moduli di controllo, raccordi, tubi e sonde per la diagnostica in vitro, le scienze della vita, la strumentazione analitica, la biologia sintetica e l’automazione di laboratorio."
+  },
+  "products": [
+    {
+      "title": "Pompe",
+      "desc": "Per dosaggio di precisione, trasferimento continuo, erogazione di reagenti, gestione dei campioni e applicazioni fluidiche ad alta pressione.",
+      "tags": [
+        "Pompa a pistone",
+        "Pompa dosatrice a pistone senza valvole",
+        "Pompa a membrana",
+        "Pompa per pipettaggio",
+        "Pompa a siringa",
+        "Pompa ad alta pressione"
+      ],
+      "image": "/images/contact-cooperation/distributor-products/01-pump-series.webp"
+    },
+    {
+      "title": "Valvole",
+      "desc": "Per aprire o interrompere il flusso, commutare percorsi, distribuire su più canali e gestire fluidi ad alta pressione.",
+      "tags": [
+        "Elettrovalvola",
+        "Valvola selettrice rotativa",
+        "Valvola ad alta pressione"
+      ],
+      "image": "/images/contact-cooperation/distributor-products/02-valve-series.webp"
+    },
+    {
+      "title": "Sensori e moduli di controllo",
+      "desc": "Per monitorare il circuito, acquisire il feedback di pressione, rilevare bolle e acquisire segnali per il controllo del sistema.",
+      "tags": [
+        "Sensore di pressione",
+        "Rilevatore di bolle"
+      ],
+      "image": "/images/contact-cooperation/distributor-products/03-control-module.webp"
+    },
+    {
+      "title": "Raccordi e accessori per circuiti fluidici",
+      "desc": "Per collegare tubi, attacchi e moduli con tenuta adeguata e consentire un montaggio rapido.",
+      "tags": [
+        "Raccordo per tubi rigidi e capillari",
+        "Raccordo portagomma",
+        "Raccordo rapido",
+        "Raccordo Luer",
+        "Adattatore filettato"
+      ],
+      "image": "/images/contact-cooperation/distributor-products/04-fitting-series.webp"
+    },
+    {
+      "title": "Tubi e capillari",
+      "desc": "Sono disponibili diversi materiali per tubi, assemblaggi su misura e kit completi di tubi realizzati in base a disegni, connessioni, lunghezze e disposizione del circuito.",
+      "tags": [
+        "PVC",
+        "FEP",
+        "TPU",
+        "PTFE",
+        "PFA",
+        "Assemblaggio di tubi su misura",
+        "Kit di tubi per circuiti fluidici"
+      ],
+      "image": "/images/contact-cooperation/distributor-products/05-tubing-series.webp"
+    },
+    {
+      "title": "Sonde e palette",
+      "desc": "Per campionamento automatico, perforazione, lavaggio, agitazione e trasferimento di liquidi nei sistemi fluidici automatizzati.",
+      "tags": [
+        "Sonda di campionamento",
+        "Sonda di perforazione",
+        "Paletta di agitazione",
+        "Sonda di lavaggio"
+      ],
+      "image": "/images/contact-cooperation/distributor-products/06-needle-series.webp"
+    }
+  ],
+  "partnersHead": {
+    "title": "Cerchiamo partner con una rete di clienti locali e competenze di comunicazione tecnica.",
+    "desc": "Se la tua azienda dispone di canali di vendita, capacità di seguire progetti, esperienza commerciale tecnica o assistenza locale, Foreach è interessata a una collaborazione stabile e duratura."
+  },
+  "partners": [
+    {
+      "index": "01",
+      "title": "Distributori di strumentazione",
+      "desc": "Servono clienti della diagnostica in vitro, della strumentazione per le scienze della vita, dell’automazione di laboratorio o delle apparecchiature di analisi avanzate."
+    },
+    {
+      "index": "02",
+      "title": "Distributori di prodotti per il controllo dei fluidi",
+      "desc": "Dispongono di canali di vendita per pompe, valvole, tubi, raccordi, sensori e altri prodotti per il controllo dei fluidi."
+    },
+    {
+      "index": "03",
+      "title": "Integratori di sistemi di automazione",
+      "desc": "Forniscono circuiti fluidici, gestione dei campioni, dosaggio dei reagenti e soluzioni modulari ai clienti finali."
+    },
+    {
+      "index": "04",
+      "title": "Partner di assistenza tecnica locale",
+      "desc": "Seguono i progetti e i clienti sul territorio, con assistenza all’installazione e supporto post-vendita."
+    }
+  ],
+  "processHead": {
+    "title": "Dal primo contatto alla collaborazione sul progetto",
+    "desc": "Vogliamo offrire un percorso di collaborazione chiaro, tracciabile e pratico. Dopo la richiesta, Foreach definirà modalità di collaborazione e supporto in base al mercato, al tipo di cliente, ai prodotti e alle esigenze del progetto."
+  },
+  "process": [
+    {
+      "index": "01",
+      "title": "Invia una richiesta di collaborazione",
+      "desc": "Descrivi l’azienda, il mercato di riferimento, i prodotti di interesse e le esigenze di collaborazione."
+    },
+    {
+      "index": "02",
+      "title": "Valutazione della collaborazione",
+      "desc": "Valutiamo la compatibilità in base al mercato regionale, alla rete di clienti, alle linee di prodotto già esistenti e ai servizi disponibili."
+    },
+    {
+      "index": "03",
+      "title": "Confronto sui prodotti e sugli aspetti tecnici",
+      "desc": "Condividiamo documentazione, indicazioni per la scelta, informazioni sulle certificazioni e risposte tecniche."
+    },
+    {
+      "index": "04",
+      "title": "Campioni e assistenza al progetto",
+      "desc": "Seguiamo la validazione dei campioni, i risultati e l’avvio del progetto in base alle applicazioni e alle prove richieste dal cliente."
+    }
+  ],
+  "guide": {
+    "title": "Guida alla compilazione",
+    "desc": "Fornisci i dati qui sotto per consentirci di valutare rapidamente la collaborazione, i prodotti e il supporto adatti.",
+    "items": [
+      {
+        "index": "01",
+        "title": "Mercato di riferimento",
+        "desc": "Paese o regione, settori locali, tipo di cliente e principali applicazioni."
+      },
+      {
+        "index": "02",
+        "title": "Profilo dell’azienda",
+        "desc": "Linee di prodotto esistenti, canali di vendita, esperienza commerciale tecnica e risorse di assistenza locale."
+      },
+      {
+        "index": "03",
+        "title": "Prodotti di interesse",
+        "desc": "Pompe, valvole, sensori e moduli di controllo, raccordi, tubi, sonde o soluzioni per sistemi fluidici."
+      },
+      {
+        "index": "04",
+        "title": "Esigenze di collaborazione",
+        "desc": "Documentazione di prodotto, campioni, confronto tecnico, supporto al progetto o assistenza nello sviluppo del mercato."
+      }
+    ]
+  },
+  "form": {
+    "title": "Modulo di richiesta di collaborazione",
+    "companyName": "Nome dell’azienda",
+    "companyNamePlaceholder": "Inserisci il nome dell’azienda",
+    "country": "Paese / regione",
+    "countryPlaceholder": "Es. Stati Uniti",
+    "contactName": "Referente",
+    "contactNamePlaceholder": "Inserisci il nome del referente",
+    "phone": "Telefono / WhatsApp",
+    "phonePlaceholder": "Facoltativo, per comunicazioni più rapide",
+    "emailVerification": "Verifica dell’indirizzo e-mail",
+    "emailPlaceholder": "Inserisci l’indirizzo e-mail aziendale",
+    "sendCode": "Invia codice",
+    "codePlaceholder": "Codice",
+    "verify": "Verifica",
+    "verified": "Verificato",
+    "emailTipDefault": "Verifica l’indirizzo e-mail prima dell’invio.",
+    "emailTipVerified": "Indirizzo e-mail verificato.",
+    "website": "Sito web aziendale",
+    "websitePlaceholder": "https://",
+    "industry": "Settore principale",
+    "industryPlaceholder": "Seleziona il settore",
+    "productInterest": "Prodotti Foreach di interesse",
+    "productInterestPlaceholder": "Es. pompa a pistone, elettrovalvola, raccordo rapido o assemblaggio di tubi su misura",
+    "requirement": "Contesto della collaborazione / esigenze del progetto",
+    "requirementPlaceholder": "Descrivi brevemente il mercato locale, il settore dei clienti, i progetti in corso, le esigenze attuali o il supporto atteso da Foreach.",
+    "uploadTip": "Puoi caricare profili aziendali, elenchi prodotti, distinte base, immagini e documenti di progetto. Ogni file può avere una dimensione massima di 20 MB.",
+    "uploadButton": "Carica file",
+    "submitButton": "Invia una richiesta di collaborazione",
+    "options": [
+      {
+        "label": "Diagnostica in vitro (IVD)",
+        "value": "ivd"
+      },
+      {
+        "label": "Scienze della vita",
+        "value": "life-science"
+      },
+      {
+        "label": "Strumenti di analisi",
+        "value": "analytical-instrument"
+      },
+      {
+        "label": "Biologia sintetica",
+        "value": "synthetic-biology"
+      },
+      {
+        "label": "Automazione di laboratorio",
+        "value": "lab-automation"
+      },
+      {
+        "label": "Altro",
+        "value": "other"
+      }
+    ]
+  },
+  "toast": {
+    "invalidEmail": "Inserisci un indirizzo e-mail valido.",
+    "codeSent": "Codice di verifica inviato. Controlla la tua casella e-mail.",
+    "sendTooFrequently": "È stato inviato da poco un codice di verifica. Attendi prima di riprovare.",
+    "codeSendFailed": "Non è stato possibile inviare l’e-mail di verifica. Riprova più tardi.",
+    "codeExpired": "Il codice di verifica è scaduto. Richiedine uno nuovo.",
+    "codeVerifyFailed": "Non è stato possibile controllare il codice di verifica. Riprova più tardi.",
+    "verificationExpired": "La verifica dell’indirizzo e-mail è scaduta. Richiedi un nuovo codice.",
+    "submitFailed": "Non è stato possibile inviare la richiesta di collaborazione. Riprova più tardi o contattaci via e-mail.",
+    "pdfPreviewBlocked": "Il browser ha bloccato la finestra di anteprima del PDF.",
+    "sending": "Invio in corso…",
+    "verifying": "Verifica in corso…",
+    "submitting": "Invio della richiesta…",
+    "secondsSuffix": "s",
+    "submittedTitle": "Richiesta inviata",
+    "dismissSuccess": "Ho capito",
+    "wrongCode": "Codice di verifica errato.",
+    "emailVerified": "Indirizzo e-mail verificato.",
+    "fileTooLarge": "Questo file supera il limite di 20 MB.",
+    "needVerifyEmail": "Verifica l’indirizzo e-mail prima dell’invio.",
+    "submitted": "Abbiamo ricevuto la tua richiesta di collaborazione. Il team Foreach valuterà i tuoi dati e ti ricontatterà in base al mercato, ai prodotti di interesse e alle esigenze di collaborazione."
+  },
+  "bottomCta": {
+    "title": "Cerchi un partner duraturo per la microfluidica?",
+    "desc": "Collabora con Foreach per offrire a più clienti della tua zona una gamma di prodotti, documentazione tecnica, assistenza nella scelta e supporto all’avvio dei progetti.",
+    "button": "Invia la richiesta"
+  }
+}

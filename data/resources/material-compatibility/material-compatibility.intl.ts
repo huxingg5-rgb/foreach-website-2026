@@ -13,6 +13,9 @@
 ========================================================= */
 
 import { materialCompatibilityZhData } from "./material-compatibility.zh";
+import { germanChemicalNames, germanMaterialFeatures } from "./material-compatibility.de";
+import { hindiChemicalNames, hindiMaterialCompatibilityCopy, hindiMaterialFeatures } from "./material-compatibility.hi";
+import { italianChemicalNames, italianMaterialCompatibilityCopy, italianMaterialFeatures } from "./material-compatibility.it";
 
 import type {
   CompatibilityRow,
@@ -29,7 +32,7 @@ import type {
    说明：
    当前官网外语路径支持 en / es / fr / ko / ru
 ========================================================= */
-type MaterialCompatibilityIntlLocale = "en" | "es" | "fr" | "ko" | "ru";
+type MaterialCompatibilityIntlLocale = "en" | "es" | "fr" | "ko" | "ru" | "de" | "it" | "hi";
 
 /* =========================================================
    外语页面基础文案结构
@@ -150,7 +153,7 @@ const chemicalNameEnMap: Record<string, string> = {
    3. 空白格保持空白
 ========================================================= */
 const localizedChemicalNameMap: Record<
-  Exclude<MaterialCompatibilityIntlLocale, "en">,
+  Exclude<MaterialCompatibilityIntlLocale, "en" | "de" | "it" | "hi">,
   Record<string, string>
 > = {
   es: {
@@ -506,6 +509,13 @@ const localizedChemicalNameMap: Record<
 function createLocalizedCompatibilityRows(
   locale: MaterialCompatibilityIntlLocale,
 ): CompatibilityRow[] {
+  if (locale === "de" || locale === "it" || locale === "hi") {
+    const names = locale === "de" ? germanChemicalNames : locale === "it" ? italianChemicalNames : hindiChemicalNames;
+    return materialCompatibilityZhData.compatibilityRows.map(row => {
+      const englishName = chemicalNameEnMap[row.name] ?? row.name;
+      return { ...row, name: names[englishName] ?? englishName, searchAliases: [englishName] };
+    });
+  }
   const localizedNames =
     locale === "en" ? chemicalNameEnMap : localizedChemicalNameMap[locale];
 
@@ -596,6 +606,9 @@ const localizedMaterialFeatureCopy: Record<
   Exclude<MaterialCompatibilityIntlLocale, "en">,
   Record<string, Pick<MaterialCompatibilityPageData["materialFeatureRows"][number], "name" | "feature" | "application">>
 > = {
+  de: germanMaterialFeatures,
+  it: italianMaterialFeatures,
+  hi: hindiMaterialFeatures,
   es: {
     PP: { name: "Polipropileno", feature: "Ligero, resistente a la fatiga y con buena resistencia a ácidos, álcalis y disolventes orgánicos comunes.", application: "Circuitos de fluidos generales, conexiones de reactivos y consumibles desechables" },
     PVDF: { name: "Fluoruro de polivinilideno", feature: "Equilibrio entre resistencia química y rendimiento mecánico, con buena resistencia a los rayos UV y a la radiación.", application: "Tubos para reactivos, conectores fluídicos y componentes de circuitos de fluidos" },
@@ -646,6 +659,7 @@ function createLocalizedMaterialFeatureRows(
   const localizedCopy = localizedMaterialFeatureCopy[locale];
   return englishMaterialFeatureRows.map((row) => ({
     ...row,
+    temperature: locale === "de" ? row.temperature.replace(" to ", " bis ") : locale === "it" ? row.temperature.replace(" to ", " a ") : locale === "hi" ? row.temperature.replace(" to ", " से ") : row.temperature,
     ...localizedCopy[row.code],
   }));
 }
@@ -680,6 +694,65 @@ const englishSearchCopy: MaterialCompatibilityPageData["searchCopy"] = {
 ========================================================= */
 const intlCopyMap: Record<MaterialCompatibilityIntlLocale, MaterialCompatibilityIntlCopy> =
   {
+    it: italianMaterialCompatibilityCopy,
+    hi: hindiMaterialCompatibilityCopy,
+    de: {
+      banner: {
+        eyebrow: "",
+        title: "Werkstoffbeständigkeit und sichere Auswahl",
+        highlight: "",
+        description: "Referenzdaten zu gängigen chemischen Medien, den Eigenschaften technischer Kunststoffe und Konformitätsunterlagen für mikrofluidische Leitungen, Fittings, Ventile und Fluidsysteme.",
+      },
+      tabs: [
+        { key: "compatibility", label: "Werkstoffbeständigkeit" },
+        { key: "features", label: "Werkstoffeigenschaften" },
+        { key: "certification", label: "Nachweise" },
+      ],
+      searchCopy: {
+        compatibility: { placeholder: "Nach chemischem Medium suchen", quickKeywords: ["Ethanol", "Methanol", "Schwefelsäure", "Benzin"] },
+        features: { ...englishSearchCopy.features, placeholder: "Nach Werkstoff suchen" },
+        certification: { ...englishSearchCopy.certification, placeholder: "Nach Werkstoff oder Nachweis suchen" },
+      },
+      certificationColumns: ["Werkstoff", "ISO 10993", "USP CLASS VI", "FDA", "UL", "NSF/ANSI 61", "M/SDS", "RoHS", "REACH"],
+      ui: {
+        breadcrumbAriaLabel: "Brotkrumennavigation", breadcrumbHome: "Startseite",
+        breadcrumbResources: "Ressourcen", breadcrumbCurrent: "Werkstoffbeständigkeit",
+        searchButtonText: "Suchen", recentLabel: "Häufige Suchbegriffe", noteLabel: "Hinweis: ",
+        tableCopy: {
+          compatibility: {
+            title: "Tabelle zur Werkstoffbeständigkeit",
+            description: "Referenzdaten zur Verträglichkeit gängiger chemischer Medien und technischer Kunststoffe.",
+            note: "+ Beständig, (+) bedingt beständig, − nicht empfohlen. Die Bewertung hängt von Konzentration, Temperatur und Kontaktzeit ab.",
+          },
+          features: {
+            title: "Werkstoffeigenschaften",
+            description: "Wichtige Eigenschaften, Temperaturbereiche und typische Anwendungen gängiger technischer Kunststoffe.",
+            note: "Die Angaben dienen der allgemeinen Orientierung. Prüfen Sie ihre Anwendbarkeit anhand von Produktaufbau, Medium und Betriebsbedingungen.",
+          },
+          certification: {
+            title: "Werkstoffnachweise und Konformitätsunterlagen",
+            description: "Verfügbare Konformitätsunterlagen für gängige technische Kunststoffe.",
+            note: "Welche Nachweise gelten, hängt von Produktmodell, Werkstoffcharge und den Anforderungen der Anwendung ab.",
+          },
+        },
+        compatibilityTable: {
+          chemicalMedium: "Chemisches Medium",
+          emptyText: "Keine passenden Daten gefunden. Verwenden Sie einen anderen Suchbegriff oder kontaktieren Sie den technischen Support.",
+        },
+        featureTable: {
+          columns: { material: "Werkstoff", name: "Werkstoffbezeichnung", feature: "Wichtige Eigenschaften", temperature: "Temperaturbereich", application: "Typische Anwendungen" },
+          emptyText: "Kein passender Werkstoff gefunden. Verwenden Sie einen anderen Suchbegriff.",
+        },
+        certificationTable: {
+          emptyText: "Keine passenden Nachweise gefunden. Verwenden Sie einen anderen Suchbegriff oder kontaktieren Sie den Vertrieb.",
+        },
+        supportCta: {
+          kicker: "AUSWAHLHILFE", title: "Benötigen Sie Hilfe bei der Prüfung der Werkstoffbeständigkeit?",
+          description: "Nennen Sie Medium, Konzentration, Temperatur, Druck und Kontaktzeit. Das technische Team von FOREACH unterstützt Sie bei der Prüfung der Werkstoffauswahl für Ihre Anwendung.",
+          buttonText: "Technischen Support kontaktieren",
+        },
+      },
+    },
     en: {
       banner: {
         eyebrow: "",
@@ -1156,7 +1229,7 @@ const intlCopyMap: Record<MaterialCompatibilityIntlLocale, MaterialCompatibility
 function getSupportedIntlLocale(
   locale: string,
 ): MaterialCompatibilityIntlLocale {
-  if (locale === "es" || locale === "fr" || locale === "ko" || locale === "ru") {
+  if (locale === "de" || locale === "it" || locale === "hi" || locale === "es" || locale === "fr" || locale === "ko" || locale === "ru") {
     return locale;
   }
 

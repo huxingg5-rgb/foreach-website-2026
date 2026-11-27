@@ -1,0 +1,495 @@
+{
+  "metadata": {
+    "title": "A cosa serve il calcolo della resistenza al flusso? Utilizzo del calcolatore Foreach nella progettazione e selezione dei circuiti idraulici",
+    "seoTitle": "Calcolatore di resistenza al flusso: perdita di carico e progettazione | Foreach Technology",
+    "seoDescription": "Confronta il diametro dei tubi e il Cv delle valvole per stimare la perdita di carico, calcolare la portata, individuare la resistenza dominante e valutare le alternative con il calcolatore FOREACH, le curve della pompa e le misure.",
+    "coverImage": "/images/resources/technical-articles/fluid-resistance-guide/comparison.it.svg",
+    "coverAlt": "Esempio di calcolo della resistenza al flusso con il Foreach: confronto della perdita di carico prima e dopo l’adeguamento del diametro del tubo e del valore Cv della valvola"
+  },
+  "deck": "La portata a scarico libero della pompa soddisfa i requisiti, ma dopo il montaggio di tubi, valvole e raccordi al terminale arriva troppo poco liquido. Calcolare le perdite di carico consente di rispondere a domande precise: quale differenziale di pressione serve alla portata obiettivo, dove si concentra la perdita e cosa cambia variando diametro, lunghezza, Cv o viscosità? L’articolo riproduce un caso calcolabile con lo strumento FOREACH per mostrare come usare i risultati nella progettazione, nella selezione, nella diagnosi dei problemi e nella verifica dei prototipi.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Negli strumenti analitici, nell’attrezzatura IVD e nelle linee di fluidodinamica per l’automazione di laboratorio, l’energia fornita dalle pompe è necessaria per superare la frizione delle pareti dei tubi, la resistenza locale nei valvole e negli accessori, nonché altre condizioni di pressione presenti nel sistema reale. Quando il flusso è insufficiente, sostituire direttamente la pompa con un modello a flusso maggiore può aumentare il consumo energetico e richiedere ulteriori lavori di configurazione, senza però risolvere i problemi causati dalle sezioni dei tubi più sottili o da elementi di regolazione del flusso."
+    },
+    {
+      "type": "paragraph",
+      "text": "Il calcolatore FOREACH accetta righe ID, definite dal diametro interno e dalla lunghezza del tubo, e righe Cv, definite dal coefficiente di portata del componente. Calcola la perdita di carico a portata nota o la portata a perdita di carico nota, riepiloga le perdite, genera curve pressione-portata (P–Q) del circuito ed esporta i dati in Excel. È adatto a stimare in via preliminare le pressioni di un circuito e a ricalcolarle dopo le prove con parametri noti."
+    },
+    {
+      "type": "paragraph",
+      "text": "Prima di utilizzarlo, è necessario determinare con precisione i percorsi del fluido e le condizioni da analizzare. Si preferisce, ad esempio, considerare situazioni di stato stazionario, fluidi liquidi monofase e percorsi in serie. I risultati dei calcoli rappresentano stime teoriche e non possono sostituire le verifiche effettive sulle prestazioni delle pompe, dei valvole e degli strumenti completi in condizioni reali."
+    },
+    {
+      "type": "links",
+      "items": [
+        {
+          "href": "/resources/calculators/fluid-resistance/",
+          "label": "Aprire il calcolatore di resistenza al flusso “Foreach” e eseguire i calcoli basati sul caso descritto in questo articolo."
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Che cosa descrive il calcolo della resistenza al flusso?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il flusso rappresenta il volume di fluido che attraversa un determinato percorso in un’unità di tempo, mentre la perdita di carico indica la differenza di pressione che si verifica prima e dopo che il fluido passa attraverso una sezione di tubazione o un componente. In condizioni specifiche di mezzo e struttura del percorso di flusso, per mantenere una determinata portata è necessaria una corrispondente differenza di pressione. Il calcolo della resistenza al flusso quantifica questa relazione al fine di determinare i requisiti di pressione necessari per la progettazione dei circuiti fluidi."
+        },
+        {
+          "type": "subheading",
+          "title": "Distinguere tra attrito dei tubi e perdite locali."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le perdite dovute all’attrito derivano principalmente dal movimento del fluido lungo le pareti dei tubi; tali perdite sono legate al diametro interno, alla lunghezza, alla velocità di flusso e alle proprietà fisiche del fluido stesso. Le perdite locali, invece, sono associate a elementi come imbocchi, curve, riduzioni di diametro, valvole e altre strutture presenti nel percorso del fluido. Le stesse dimensioni esterne dei componenti non garantiscono necessariamente che i canali interni di flusso o le resistenze siano uguali; allo stesso modo, l’utilizzo di tubi con lo stesso diametro esterno non implica necessariamente che i loro diametri interni effettivi siano identici."
+        },
+        {
+          "type": "formula",
+          "expression": "Δp_path = ΣΔp_friction + ΣΔp_local",
+          "note": "Questa formula riassume le perdite di resistenza che si verificano lungo lo stesso percorso definito. Tuttavia, le perdite presenti in diverse diramazioni parallele non possono essere semplicemente sommate per ottenere la differenza di pressione richiesta tra i due nodi comuni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nei circuiti fluidi a piccolo diametro, anche un piccolo cambiamento nel diametro può influenzare notevolmente la perdita di carico. L’aumento della lunghezza del tubo aumenta generalmente le perdite di attrito; l’aumento del flusso volumetrico aumenta la velocità del fluido. La relazione tra pressione e flusso dipende anche dal regime di flusso, quindi l’approssimazione basata sulla legge del quadrato non è valida in tutte le condizioni."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/fluid-resistance-guide/path.it.svg",
+          "alt": "Schema di calcolo del circuito: pompa, tubi, componenti Cv e terminali, con le pressioni ai confini da verificare separatamente",
+          "width": 1400,
+          "height": 620,
+          "caption": "Prima identificare il percorso da analizzare, quindi inserire i dettagli delle tubazioni e dei componenti uno per uno. Il calcolatore riassume le perdite associate a ciascun elemento; inoltre, la pressione della sorgente, la differenza di livello e la pressione di uscita vengono considerate nel calcolo complessivo del sistema."
+        }
+      ]
+    },
+    {
+      "title": "2. Quali problemi ingegneristici sono adatti per essere analizzati prima attraverso il calcolo delle perdite di flusso?",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Domanda ingegneristica.",
+            "Risultato del calcolo.",
+            "Decisione da prendere"
+          ],
+          "rows": [
+            [
+              "Quanta pressione è necessaria per ottenere il flusso desiderato?",
+              "Perdite di carico totali e per singoli componenti a un dato flusso.",
+              "Definire il bilancio di pressione del circuito e valutare le condizioni di funzionamento delle pompe candidate"
+            ],
+            [
+              "Quale portata è ottenibile con il differenziale di pressione disponibile?",
+              "Calcolare il flusso stimato in base al modello di perdite inserito.",
+              "Verificare se la tubazione esistente è in grado di soddisfare i requisiti di tempo di ciclo."
+            ],
+            [
+              "Da dove deriva la principale resistenza nel flusso?",
+              "Calcolare la perdita di carico, le perdite dovute all’attrito e alle caratteristiche locali della tubazione, nonché il contributo di ciascun fattore.",
+              "Individuare quali segmenti di tubazione o componenti debbano essere prioritari per le modifiche necessarie."
+            ],
+            [
+              "È più efficace aumentare il diametro della tubazione o sostituire la valvola?",
+              "Confrontare i risultati ottenuti con diverse soluzioni basate sugli input forniti.",
+              "Confrontare i benefici delle modifiche ed evitare sostituzioni prive di riscontro"
+            ],
+            [
+              "Cosa succede quando aumenta la viscosità del fluido?",
+              "Perdita di carico e regime di flusso a diverse densità e viscosità.",
+              "Identificare le differenze tra i test effettuati con acqua pura e quelli condotti con fluidi reali."
+            ],
+            [
+              "Come cambia la pressione richiesta all’aumentare della velocità di lavorazione?",
+              "Curva PQ del percorso del fluido, punti di calcolo e risultati delle analisi di adattamento.",
+              "Verificare i cambiamenti nella resistenza del sistema a diverse portate di flusso per determinare l’intervallo di test successivo."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Nella fase iniziale della progettazione, è utile confrontare le varie combinazioni di tubazioni e componenti; nella fase di prototipazione, aiuta a comprendere la differenza tra la portata misurata e quella prevista; durante le revisioni, permette di valutare l’impatto dei cambiamenti nella lunghezza dei tubi, nel diametro interno, nel tipo di valvole o nel tipo di fluido utilizzato. Lo scopo è fornire una base per le decisioni, e la soluzione finale deve inoltre rispettare requisiti legati all’installazione, alla compatibilità dei materiali, ai costi e alle condizioni di manutenzione."
+        }
+      ]
+    },
+    {
+      "title": "3. Preparare una tabella chiara contenente i parametri del percorso del fluido prima di effettuare i calcoli.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dividere le sezioni di tubo le cui caratteristiche cambiano lungo la direzione del flusso, e registrare il diametro interno effettivo, la lunghezza e le informazioni relative ai componenti. Due sezioni di tubo con diametri interni diversi non devono essere sostituite soltanto con la lunghezza totale e il diametro medio; i canali sottili presenti lungo il percorso possono rappresentare una parte significativa della resistenza al flusso. Quando si misura il diametro interno, è necessario prestare attenzione alle tolleranze, alla deformazione del tubo sotto pressione e alla riduzione del diametro dovuta alle operazioni di assemblaggio."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Input",
+            "Fonte dei dati",
+            "Errori da evitare"
+          ],
+          "rows": [
+            [
+              "Densità, viscosità e temperatura del fluido",
+              "Dati relativi al fluido reale, proprietà fisiche misurate o valori di riferimento adatti alle condizioni di funzionamento",
+              "Un fluido preimpostato con un nome simile non descrive necessariamente la formulazione effettiva"
+            ],
+            [
+              "Diametro interno del tubo e lunghezza del tubo",
+              "Disegni, specifiche e dimensioni effettive dei tubi",
+              "Usare il diametro interno. Lo strumento richiede la lunghezza del tubo in mm."
+            ],
+            [
+              "Coefficiente di portata Cv del componente.",
+              "Informazioni sul prodotto relative al modello, alla posizione della valvola e alle condizioni di test.",
+              "La dimensione dell’porta di connessione, il valore Kv o la portata massima non possono essere considerati direttamente come valore del coefficiente di portata Cv."
+            ],
+            [
+              "Coefficiente di perdita locale ξ.",
+              "Dati coerenti con la struttura reale dello strumento e i regimi di flusso applicabili.",
+              "Se lo stesso componente è descritto utilizzando il valore Cv, lo stesso valore di perdita di carico non deve essere ripetutamente indicato."
+            ],
+            [
+              "Portata obiettivo o differenza di pressione disponibile.",
+              "Requisiti operativi dell’apparecchiatura o limiti di pressione definiti.",
+              "La pressione massima della pompa non è interamente disponibile per vincere le perdite nei tubi"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo strumento consente l’utilizzo della viscosità dinamica o cinematica; l’unità di misura deve essere confermata prima dell’inserimento dei valori: 1 mPa·s = 0.001 Pa·s, 1 cSt = 10⁻⁶ m²/s. Le due viscosità soddisfano la relazione μ = ρν, dove μ rappresenta la viscosità dinamica, ρ la densità e ν la viscosità cinematica. Copiare direttamente i valori dalla tabella dei dati nelle caselle di input di unità diverse può causare errori di ordine di grandezza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nello strumento attuale, le proprietà dell’acqua vengono calcolate in base alla temperatura inserita. Non tutti gli altri fluidi preimpostati dispongono di un modello di proprietà dipendente dalla temperatura. Per un reagente la cui temperatura, concentrazione o formulazione sono specificate, è necessario ottenere i valori corrispondenti di densità e viscosità e utilizzarli tramite impostazioni personalizzate. Il nome di una preimpostazione non garantisce necessariamente l’accuratezza delle proprietà effettive del fluido."
+        }
+      ]
+    },
+    {
+      "title": "4. A quali domande rispondono i due modi di calcolo?",
+      "blocks": [
+        {
+          "type": "subheading",
+          "title": "Se si conosce la portata, è necessario prima calcolare la resistenza che il percorso del fluido deve superare."
+        },
+        {
+          "type": "paragraph",
+          "text": "Convertire il volume di lavaggio, il tempo di erogazione o l’obiettivo di ciclo in una portata di lavoro. Ad esempio, erogare 30 mL in 30 s effettivi richiede una portata media di 60 mL/min. Calcolare la perdita tratto per tratto a questa portata per determinare la perdita di carico dell’insieme di tubi e componenti."
+        },
+        {
+          "type": "paragraph",
+          "text": "In regime stazionario, in un circuito in serie senza diramazioni né perdite di fluido, la portata è uguale in ogni tratto. La modalità a portata nota calcola usando il valore impostato su ciascuna riga. Verificare ogni riga anche dopo aver modificato il campo in alto. Per stabilire se la somma delle perdite di percorsi diversi ha significato fisico occorre conoscerne il collegamento effettivo."
+        },
+        {
+          "type": "subheading",
+          "title": "Perdita di carico nota: stimare il flusso corrispondente a una data differenza di pressione di resistenza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conoscendo il differenziale disponibile per il percorso, il calcolo inverso cerca la portata alla quale la perdita calcolata coincide con quel differenziale. Usa una portata comune a tutte le righe ed è adatto a percorsi in serie ben definiti. La ripartizione in rami paralleli richiede un calcolo specifico."
+        },
+        {
+          "type": "formula",
+          "expression": "Δp_available,loss = Δp_drive − Δp_boundary − ρgΔz",
+          "note": "In un sistema semplificato, in stato stazionario e incompressibile, la differenza di pressione di alimentazione deve tenere conto anche delle differenze di pressione alle estremità del percorso e delle variazioni di altitudine. Se le differenze di portanza dovute alla velocità sono significative, queste devono essere incluse separatamente nei calcoli. L’input per il calcolo inverso deve essere rappresentato dalla differenza di pressione effettivamente disponibile per le perdite specificate, e non dalla pressione massima della pompa prima di considerare questi altri fattori."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per una pompa a membrana, la capacità di erogazione dipende dalla portata e dalle condizioni in ingresso e in uscita. Il calcolo inverso verifica soltanto la compatibilità tra il differenziale immesso e il modello di resistenza. Per stabilire se la pompa reale può lavorare a quel punto, controllare la curva della pompa e le condizioni di aspirazione. Se necessario, effettuare misure."
+        }
+      ]
+    },
+    {
+      "title": "5. Esempio di calcolo: conviene modificare prima il diametro del tubo o la valvola?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’esempio usa il motore di calcolo FOREACH: acqua a 20 °C, portata obiettivo di 60 mL/min e un tubo rettilineo da 1 m in serie con un componente definito da Cv. Il coefficiente di perdita locale aggiuntiva del tubo è zero. Il componente Cv è rappresentato come un orifizio a spigolo vivo in lamiera sottile. La tabella esclude pressioni a monte e a valle, dislivello e componenti non elencati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Creare due righe nello strumento. Prima riga di tipo ID: portata 60 mL/min, diametro interno 1 mm, lunghezza del tubo 1000 mm, ξ = 0. Seconda riga di tipo Cv: portata 60 mL/min, Cv = 0.02. Calcolare prima il caso base, poi variare soltanto il diametro interno del tubo oppure il valore Cv, mantenendo fisse le altre condizioni."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Caso",
+            "Perdita di carico in tubo dritto",
+            "Perdita di carico per la componente Cv",
+            "Perdita di carico totale"
+          ],
+          "rows": [
+            [
+              "A: Diametro interno 1 mm, Cv = 0.02",
+              "40.80 kPa",
+              "4.41 kPa",
+              "45.21 kPa"
+            ],
+            [
+              "B: Diametro interno 2 mm, Cv = 0.02",
+              "2.55 kPa",
+              "4.41 kPa",
+              "6.96 kPa"
+            ],
+            [
+              "C: Diametro interno 1 mm, Cv = 0.04",
+              "40.80 kPa",
+              "1.11 kPa",
+              "41.92 kPa"
+            ]
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/fluid-resistance-guide/comparison.it.svg",
+          "alt": "Confronto tra le perdite di carico causate dal tubo e dal componente Cv nei scenari A, B e C; nel progetto originale, la maggior parte delle perdite è dovuta alla frizione del tubo stesso.",
+          "width": 1400,
+          "height": 740,
+          "caption": "Risultati di calcoli teorici, non misurazioni effettive del prodotto. Circa il 90% delle perdite nel progetto originale deriva dal tubo dritto; aumentando il diametro del tubo, la principale resistenza si sposta sul componente Cv. La arrotondamento numerico può causare piccole differenze tra i valori individuali e il valore totale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nel progetto originale, le perdite causate dal tubo dritto rappresentavano circa il 90% del totale. Anche se aumentare il valore Cv della valvola riduce la perdita di carico, il tubo dritto continua a consumare circa 40.80 kPa di energia; aumentando il diametro del tubo, la perdita di carico totale scende a circa 6.96 kPa. I risultati evidenziano l’importanza di concentrare gli sforzi di ricerca sulla dimensionamento dei tubi, piuttosto che limitarsi a valutare quale componente influisce sul flusso in base al suo nome o alla sua forma."
+        },
+        {
+          "type": "subheading",
+          "title": "Perché l’effetto dei cambiamenti nel diametro del tubo è così evidente?"
+        },
+        {
+          "type": "formula",
+          "expression": "Δp = 128μLQ / (πd⁴)",
+          "note": "Questa relazione vale per flussi laminari completamente sviluppati, fluidi newtoniani e tubi dritti rigidi e circolari, utilizzando unità di misura del SI. I numeri di Reynolds calcolati per i due diametri dei tubi in questo esempio sono approssimativamente 1269 e 635; la relazione relativa ai flussi laminari può essere utilizzata per comprendere le perdite di attrito."
+        },
+        {
+          "type": "paragraph",
+          "text": "A parità di portata, viscosità e lunghezza, quando il diametro interno aumenta da 1 mm a 2 mm, la perdita di carico nel tubo dritto a flusso laminare scende a circa 1/16 del valore iniziale. Allo stesso tempo, il volume geometrico del tubo aumenta da circa 0.785 mL a 3.142 mL, ovvero di 4 volte. I vantaggi derivanti dalla riduzione della perdita di carico devono essere valutati in relazione al processo di avviamento del sistema, al volume di fluido trasportato e al controllo delle perdite, e non soltanto in termini di resistenza minima."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questo esempio non significa che tutti i tubi per liquidi debbano essere ingranditi immediatamente. Nel caso B, le perdite causate dai valvole sono già superiori a quelle dei tubi dritti; quindi, continuare ad aumentare il diametro dei tubi potrebbe ridurre ulteriormente i benefici ottenibili. Dopo ogni modifica, è necessario riesaminare la distribuzione delle perdite e utilizzare i nuovi valori limite come base per ulteriori valutazioni."
+        }
+      ]
+    },
+    {
+      "title": "6. Quali dati dovrebbero essere esaminati per primi nella tabella dei risultati?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Iniziate con la perdita di carico totale, poi analizzate ciascuna riga e la sua contribuzione percentuale. Infine, utilizzate la velocità e il numero di Reynolds per verificare le condizioni operative e le ipotesi del modello. I campi dei risultati dettagliati spiegano i calcoli effettuati; tuttavia, non tutti questi valori rappresentano obiettivi di prestazione indipendenti."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Risultato",
+            "Significato tecnico",
+            "Modo d’uso"
+          ],
+          "rows": [
+            [
+              "Differenza di pressione totale ΔPt",
+              "Somma delle perdite di resistenza inserite",
+              "Calcolare il bilancio energetico completo e confrontarlo con le condizioni operative disponibili"
+            ],
+            [
+              "Perdite di attrito ΔPy e perdite locali ΔPj",
+              "Le perdite derivano dall’attrito del tubo o da componenti specifici?",
+              "Decidere se dare priorità all’ispezione del diametro/lunghezza del tubo o dei componenti, nonché delle strutture di riduzione delle perdite."
+            ],
+            [
+              "Velocità di flusso e numero di Reynolds Re",
+              "Stato di flusso in base alle proprietà fisiche date e alla sezione trasversale effettiva",
+              "Verificare i regimi di flusso e le ipotesi del modello per individuare zone di transizione o condizioni insolite"
+            ],
+            [
+              "La principale fonte di perdite e la sua percentuale",
+              "Una riga che evidenzia le perdite più concentrate nelle attuali condizioni di input",
+              "Viene utilizzata per stabilire le priorità nelle interventi di miglioramento, ma non rappresenta una conclusione fissa per tutte le condizioni operative"
+            ],
+            [
+              "Cv complessivo o equivalente",
+              "Utilizzare il coefficiente di portata per esprimere la resistenza in condizioni specifiche",
+              "Parametro di confronto. Può variare con portata, fluido e ipotesi di correzione."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Identificare la resistenza dominante derivante dalla perdita di carico a partire dal flusso effettivamente impostato. Nei casi in cui vengono utilizzati flussi diversi, il valore più basso del coefficiente di portata equivalente non necessariamente comporta la maggiore perdita di carico. Anche quando un componente domina in determinate condizioni, possono emergere vincoli diversi in seguito a modifiche nel tubaggio o nel flusso operativo."
+        }
+      ]
+    },
+    {
+      "title": "7. In che modo la curva PQ aiuta a comprendere i margini di progettazione.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La curva PQ presente nello strumento viene generata in base ai risultati dei calcoli relativi al percorso del fluido, considerando una serie di valori di portata; l’asse verticale rappresenta la perdita di resistenza. Questa curva mostra quanto calo di pressione sia necessario affrontare modificando il flusso, e non riguarda necessariamente la curva di prestazioni di una specifica pompa."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/fluid-resistance-guide/curve.it.svg",
+          "alt": "Secondo le curve di resistenza del percorso del fluido generate dal software, individuare il punto di calcolo corrispondente a una portata di 60 mL/min.",
+          "width": 1400,
+          "height": 800,
+          "caption": "Per lo stesso fluido e lo stesso valore del coefficiente di portata equivalente, i due diversi diametri dei tubi producono curve di resistenza del sistema diverse. Si tratta di calcoli teorici; i punti evidenziati corrispondono a una portata di 60 mL/min. Non sono incluse curve di pompe né informazioni riguardanti i limiti di pressione statica."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per verificare se una pompa è compatibile con un sistema, è necessario confrontare le sue prestazioni nello stesso mezzo e nelle stesse condizioni operative con i requisiti del sistema, inclusi i valori di pressione e le differenze di livello del liquido. La compatibilità deve essere garantita in termini di condizioni di aspirazione, intervallo operativo e stabilità del sistema. Lo strumento attualmente disponibile non importa automaticamente le curve di pompe, non calcola gli intersezioni tra pompa e sistema, né consiglia modelli specifici."
+        },
+        {
+          "type": "paragraph",
+          "text": "In modalità a portata per riga, la curva viene generata moltiplicando tutte le portate per lo stesso fattore. I rapporti immessi restano costanti. La distribuzione di portata nella rete parallela non viene ricalcolata. Quando i valori di riga sono diversi, indicare la portata di riferimento sull’asse orizzontale e il rapporto di ciascuna riga con tale riferimento."
+        },
+        {
+          "type": "paragraph",
+          "text": "L’equazione di regressione descrive l’andamento nell’intervallo calcolato. Evitare estrapolazioni lontane da questo intervallo. R², residui e altri indici indicano quanto bene la curva approssima i punti calcolati. Un residuo ridotto non conferma che proprietà fisiche, parametri dei componenti o modello rappresentino il dispositivo reale."
+        }
+      ]
+    },
+    {
+      "title": "8. Fori di piccolo diametro, bassi numeri di Reynolds e valori di Cv.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Quando il percorso del fluido entra in una sezione a diametro ridotto o in una fascia di portata inferiore, gli effetti viscosi possono modificare significativamente le caratteristiche di resistenza. Il numero di Reynolds, Re = ρud/μ, è legato alla densità, alla velocità media, al diametro interno e alla viscosità dinamica del fluido; esso aiuta a identificare i regimi di flusso, ma non è possibile determinare con precisione le perdite di carico in tutti i componenti complessi basandosi su un solo valore di Re."
+        },
+        {
+          "type": "paragraph",
+          "text": "I calcoli relativi ai tubi utilizzano la formula di Darcy–Weisbach, con un valore stimato del fattore di attrito di Churchill. Poiché l’interfaccia non prevede l’inserimento dei dati relativi alla rugosità delle pareti, il modello attuale assume che le pareti siano lisce. Le correzioni relative agli orifizi e ai valori di Cv sono valutazioni approssimative; esse non sostituiscono le curve di perdita di carico misurate per ogni geometria di valvola, né le procedure di correzione previste dalle normative applicabili."
+        },
+        {
+          "type": "paragraph",
+          "text": "Scegliere i valori di Cv in base al modello effettivo, alla posizione della valvola, alle condizioni del fluido e di calibrazione. Un diametro di orifizio equivalente ottenuto a partire dal valore di Cv rappresenta una caratteristica del modello, non una misura effettiva del vero diametro minimo del prodotto. Tale valore non può fornire informazioni dirette sulla capacità di attraversamento delle particelle, sul rischio di intasamento o sulle dimensioni di produzione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anche le ipotesi riguardanti le proprietà del fluido presentano limitazioni. Il sangue intero e alcune soluzioni polimeriche possono comportarsi come fluidi non newtoniani; quindi, utilizzare una viscosità fissa rappresenta soltanto un’approssimazione, valida entro determinate condizioni. La configurazione preimpostata per l’aria non rappresenta un modello completo per i flussi comprimibili. In presenza di grandi differenze di pressione, cambiamenti significativi di densità, flussi strettati o condizioni miste di gas/liquido, sono necessari modelli o metodi di misurazione più appropriati."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/cv-kv-correction-for-microfluidics/",
+              "label": "Letture consigliate: Calcolo e correzione dei valori di Cv/Kv nel campo della microfluidica e della regolazione di precisione."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9. Dal calcolo alla misurazione effettiva: come individuare le cause delle discrepanze.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Definire prima i limiti di confronto. Misurare la pressione nei due stessi punti utilizzati nel calcolo. Se lo spazio tra i rilevatori include filtri non modellati, raccordi a innesto rapido o tubazioni, un valore di perdita più elevato misurato non costituisce di per sé un errore nel calcolo. Tenere conto delle differenze di pressione idrostatica quando i punti di misurazione si trovano a diverse altezze."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Stabilire un punto di riferimento: effettuare test con fluidi noti, a temperatura controllata, utilizzando tubazioni corte e componenti con parametri confermati, e registrare valori stabili di flusso e differenza di pressione.",
+            "Verificare unità di misura e geometrie: controllare i valori inseriti per ID, lunghezza, unità di misura del flusso, coefficienti Cv/Kv, densità e viscosità, per assicurarsi che la resistenza non venga calcolata due volte.",
+            "Collegare gradualmente i componenti al percorso reale del fluido: ogni volta che viene aggiunto un tratto di tubo o un componente, verificare l’aumento della perdita di carico e individuare il punto in cui inizia a manifestarsi la deviazione.",
+            "Verificare le condizioni di confine: controllare i livelli bassi di fluido, il carico sui filtri, i cambiamenti di temperatura, le diverse posizioni delle valvole e i flussi operativi.",
+            "Conservare i dati originali: registrare i dispositivi di test, i punti di misura, gli strumenti utilizzati, il tipo di fluido, le versioni dei parametri e eventuali eccezioni, non solo il valore medio finale."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La portata e la pressione istantanee di una pompa a membrana possono pulsare. Per confrontarle con i valori stazionari del calcolatore, definire l’intervallo di media per pressione e portata e registrare i picchi rilevanti. Anche con valori medi simili occorre verificare i transitori di pressione, le oscillazioni agli ugelli e l’efficacia del lavaggio secondo i criteri di accettazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se la portata è nulla, intermittente o diminuisce con il tempo, controllare ingresso d’aria, sfiato del tappo, bolle, stato delle valvole, ostruzioni e alimentazione. Il calcolo delle perdite aiuta a valutare le ipotesi sulla resistenza. Per rilevare questi guasti e confermare compatibilità, autoadescamento e durata servono verifiche dedicate."
+        }
+      ]
+    },
+    {
+      "title": "10. Eseguire l’esportazione dei risultati dei calcoli al fine di poter effettuare confronti tra i diversi progetti.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Una volta completati i calcoli, i risultati possono essere esportati in Excel; il file contenente tali dati include i risultati dei calcoli, i riepiloghi statistici e i dati relativi alla curva PQ. Questo formato è utile per conservare le diverse versioni dei progetti, confrontare i cambiamenti apportati ai componenti e comunicare con i fornitori, ma deve essere utilizzato in combinazione con le condizioni di ingresso, i diagrammi dei circuiti fluidi e i dati di test."
+        },
+        {
+          "type": "paragraph",
+          "text": "Si consiglia di indicare nomi chiari per le sezioni dei tubi e i componenti, ad esempio “bottiglia del fluido di pulizia all’ingresso della pompa” o “sezione di tubo da 1 mm dopo il gruppo di valvole”, e di specificare nella nota la fonte dei dati o lo stato particolare di tali componenti. È inoltre necessario registrare separatamente la composizione del fluido utilizzato, la temperatura, la fonte delle proprietà fisiche, il modello matematico utilizzato per i calcoli, le ipotesi geometriche, la versione del software e la data di esecuzione dei calcoli; il file esportato non contiene automaticamente tutti i dettagli necessari per il progetto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Quando si confrontano scenari A/B, è importante mantenere costanti il fluido utilizzato, la portata target e gli altri parametri non modificati, e specificare chiaramente quali siano i cambiamenti apportati in ciascun caso. Se più parametri vengono modificati contemporaneamente, è necessario spiegarli uno per uno per evitare di confondere i benefici derivanti dalla riduzione della viscosità, dall’aumento del diametro dei tubi o dal cambiamento del valore del coefficiente di portata delle valvole."
+        }
+      ]
+    },
+    {
+      "title": "11. Utilizzare i risultati ottenuti per discutere la selezione della pompa, delle valvole e dei tubi Foreach.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nella scelta di una pompa miniaturizzata Foreach o delle relative valvole, accessori e tubazioni, è necessario fornire il portata obiettivo, le perdite di carico individuali, le condizioni di aspirazione e la pressione di uscita. Questi dati consentono una discussione più approfondita rispetto all’utilizzo esclusivo di valori relativi al flusso libero. I calcoli aiutano a definire le condizioni sotto cui le configurazioni candidate devono essere verificate e indicano se sia necessario ottimizzare prima i tubi."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se la principale perdita di carico deriva da sezioni di tubo sottili, è possibile confrontare innanzitutto il diametro interno e la lunghezza dei tubi; se la perdita proviene da componenti specifici, è necessario conoscere il valore del coefficiente di portata (Cv), la curva di perdita di carico e la compatibilità del materiale del componente con il fluido. Se la struttura non può essere modificata e è effettivamente necessario aumentare la pressione, è opportuno valutare la pompa candidata in base alla sua curva di funzionamento, alla capacità di sopportare le pressioni interne e al design complessivo della macchina. Tuttavia, il calcolatore stesso non garantisce che un modello specifico soddisfi i requisiti dell’apparecchiatura."
+        },
+        {
+          "type": "paragraph",
+          "text": "Al momento della presentazione della richiesta, si consiglia di allegare un diagramma del percorso del fluido, i parametri di input, i risultati dei calcoli, nonché i valori misurati del flusso e della pressione. Foreach può effettuare la selezione del modello e supportare le comunicazioni tecniche in base ai parametri dei componenti coinvolti, e può inoltre chiarire quali dati siano necessari per completare la verifica del prototipo."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/calculators/fluid-resistance/",
+              "label": "Calcolatore della resistenza al flusso"
+            },
+            {
+              "href": "/resources/technical-articles/foreach-miniature-diaphragm-pump-oem-integration/",
+              "label": "Letture consigliate: Integrazione delle pompe a membrana Foreach con i sistemi OEM, punti operativi e validazione degli strumenti"
+            },
+            {
+              "href": "/products/",
+              "label": "Visualizzazione delle pompe Foreach, delle valvole e dei componenti per le linee idrauliche"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sul calcolatore della resistenza al flusso",
+  "faqItems": [
+    {
+      "question": "Il calcolatore della resistenza al flusso può indicarmi direttamente quale pompa acquistare?",
+      "answer": "Il calcolatore descrive la resistenza del circuito inserito. Per scegliere e verificare una configurazione candidata occorrono anche curva della pompa, condizioni di aspirazione, pressione al terminale, dislivello, fluido e requisiti di tempo di ciclo."
+    },
+    {
+      "question": "Il flusso calcolato a partire dalla differenza di pressione conosciuta corrisponde effettivamente al flusso reale?",
+      "answer": "Si tratta di un valore stimato, calcolato sulla base delle proprietà fisiche del fluido, dei modelli delle tubazioni e dei componenti utilizzati. Tuttavia, il funzionamento effettivo della pompa può essere influenzato da fattori come la presenza di perdite non previste, bolle, ostruzioni o pulsazioni, il che potrebbe alterare i risultati del calcolo."
+    },
+    {
+      "question": "È possibile aggiungere più rami paralleli direttamente dopo aver inserito tutti i dati di ingresso?",
+      "answer": "La somma delle perdite nei diversi rami paralleli non può essere considerata come la differenza di pressione del sistema tra i nodi comuni. Lo strumento attuale non risolve automaticamente la distribuzione del flusso nella rete di tubazioni parallele; è necessario definire chiaramente il percorso, la portata e i valori di pressione ai bordi, per poi analizzare la situazione secondo il metodo appropriato."
+    },
+    {
+      "question": "Perché aumentare il diametro del tubo a volte è più efficace che aumentare il valore di Cv della valvola?",
+      "answer": "Dipende dalla distribuzione delle perdite originarie nel sistema. Se la principale perdita di carico deriva da una sezione di tubo lunga e sottile, aumentare il valore di Cv della valvola ridurrà soltanto una piccola parte delle perdite. Nel caso descritto in questo articolo, il tubo dritto rappresenta circa il 90% della perdita totale; quindi modificare il diametro del tubo è più efficace, ma è necessario valutare anche l’impatto che tale modifica avrà sul volume del percorso del fluido."
+    },
+    {
+      "question": "Se l’adattamento della curva di calcolo allo strumento è molto buono, significa forse che i calcoli sono molto precisi?",
+      "answer": "L’indice indica solo quanto la curva approssima i punti calcolati. Per stabilire se proprietà fisiche, geometria e dati dei componenti rappresentano il dispositivo reale, verificare pressione e portata con prove appropriate."
+    },
+    {
+      "question": "Una volta inserito un determinato fluido, è possibile valutare la compatibilità materiale della pompa con tale fluido?",
+      "answer": "Il calcolo usa proprietà fisiche per stimare le perdite di carico. La compatibilità chimica di testate, membrane, valvole, guarnizioni e tubi e la loro idoneità al processo vanno verificate separatamente."
+    }
+  ],
+  "cta": {
+    "title": "Discutete le opzioni dei componenti in base ai parametri del percorso del fluido e ai risultati dei calcoli.",
+    "description": "Fornite il tipo di fluido, la temperatura, la portata desiderata, le dimensioni dei tubi, i parametri dei componenti, le pressioni in ingresso ed uscita, nonché i risultati calcolati o misurati, in modo che FOREACH possa aiutarvi a individuare i punti chiave per la selezione e la verifica dei componenti.",
+    "contactLabel": "Inviate i requisiti specifici per il percorso del fluido.",
+    "productsLabel": "Utilizzate il calcolatore della resistenza al flusso.",
+    "productsHref": "/resources/calculators/fluid-resistance/"
+  }
+}

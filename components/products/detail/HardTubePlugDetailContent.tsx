@@ -1,29 +1,33 @@
 import Link from "next/link";
 import { getHardTubePlugPresentation } from "@/data/products/detail/hard-tube-plugs";
+import { germanHardTubePlugText, getGermanHardTubeFittingContent } from "@/data/products/detail/hard-tube-fitting-detail.de";
 import { getFittingDrawingHref } from "@/data/products/detail/fitting-drawing-assets";
 import styles from "./QuickConnectDetailContent.module.css";
 
 type Identity = { model?: string; foreachModel?: string; slug?: string; productCode?: string };
 
 /** Plug-specific content in the established fitting layout, with one six-locale source. */
-export default function HardTubePlugDetailContent({ data, locale = "zh", section = "selection" }: {
-  data: Identity; locale?: string; section?: "product" | "selection";
+export default function HardTubePlugDetailContent({ data, locale = "zh", section = "selection", germanDraft = false }: {
+  data: Identity; locale?: string; section?: "product" | "selection"; germanDraft?: boolean;
 }) {
   const p = getHardTubePlugPresentation(data, locale);
-  const c = p.copy;
-  const prefix = p.locale === "zh" ? "" : `/${p.locale}`;
+  const german = germanDraft ? getGermanHardTubeFittingContent(p.model.toLowerCase()) : undefined;
+  const c = german ? germanHardTubePlugText : p.copy;
+  const name = german?.title ?? p.name;
+  const color = c.colors[p.colorCode === "B" ? 1 : 0];
+  const prefix = german ? "/de" : p.locale === "zh" ? "" : `/${p.locale}`;
   const drawing = getFittingDrawingHref("hard-tube-fittings", p.model.toLowerCase());
-  return <section className={styles.detail} data-section={section} data-hard-tube-plug={p.model} lang={p.locale === "zh" ? "zh-CN" : p.locale}>
+  return <section className={styles.detail} data-section={section} data-hard-tube-plug={p.model} lang={german ? "de" : p.locale === "zh" ? "zh-CN" : p.locale}>
     <div className="fx-sec">
-      <h2>{p.name}</h2>
-      <p>{p.description}</p>
+      <h2>{name}</h2>
+      <p>{german?.description ?? p.description}</p>
     </div>
     <div className="fx-sec" id="plug-model-code">
       <h2>{c.coding}</h2>
       <p><strong>{p.model}</strong></p>
       <div className="fx-tw"><table><colgroup><col style={{width:"30%"}}/><col/></colgroup>
         <thead><tr><th scope="col">{c.fields[0]}</th><th scope="col">{c.meaning}</th></tr></thead>
-        <tbody>{[[p.family,p.name],[p.threadCode,`${c.fields[3]}: ${p.thread}`],[p.materialCode,`${c.fields[4]}: ${p.material}`],[p.colorCode,`${c.fields[5]}: ${p.color}`]].map(([code,value])=><tr key={code}><th scope="row">{code}</th><td>{value}</td></tr>)}</tbody>
+        <tbody>{[[p.family,name],[p.threadCode,`${c.fields[3]}: ${p.thread}`],[p.materialCode,`${c.fields[4]}: ${p.material}`],[p.colorCode,`${c.fields[5]}: ${color}`]].map(([code,value])=><tr key={code}><th scope="row">{code}</th><td>{value}</td></tr>)}</tbody>
       </table></div>
     </div>
     <div className="fx-sec" id="plug-selection">

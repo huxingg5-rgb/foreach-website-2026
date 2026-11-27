@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜关于我们 / 研发与制造能力 多语言页面入口
@@ -21,6 +22,8 @@
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { draftAboutMetadata } from "@/lib/seo/german-about-metadata";
 
 import ResearchManufacturingPageContent from "@/components/about/ResearchManufacturingPageContent";
 import {
@@ -29,11 +32,6 @@ import {
   RESEARCH_MANUFACTURING_ROUTE_LOCALES,
 } from "@/data/about-research-manufacturing";
 
-/* =========================================================
-   页面参数类型
-   说明：
-   你的项目之前已经按 Next.js 新版本写法使用 Promise params
-========================================================= */
 type PageProps = {
   params: Promise<{
     locale: string;
@@ -44,18 +42,23 @@ type PageProps = {
    生成静态多语言路径
 ========================================================= */
 export function generateStaticParams() {
-  return RESEARCH_MANUFACTURING_ROUTE_LOCALES.map((locale) => ({
-    locale,
-  }));
+  return [
+    ...RESEARCH_MANUFACTURING_ROUTE_LOCALES.map((locale) => ({ locale })),
+    ...(languageDraftsEnabled ? [{ locale: "de" }, { locale: "it" }, { locale: "hi" }] : []),
+  ];
 }
 
 /* =========================================================
    多语言页面 SEO 信息
 ========================================================= */
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = await params;
+  if (languageDraftsEnabled && (locale === "de" || locale === "it" || locale === "hi")) {
+    const seo = getResearchManufacturingSeo(locale);
+    return draftAboutMetadata(locale, "/about/research-manufacturing/", seo.title, seo.description);
+  }
 
   if (!isResearchManufacturingRouteLocale(locale)) {
     notFound();
@@ -79,10 +82,13 @@ export default async function LocaleResearchManufacturingPage({
   params,
 }: PageProps) {
   const { locale } = await params;
+  if (languageDraftsEnabled && (locale === "de" || locale === "it" || locale === "hi")) return <ResearchManufacturingPageContent locale={locale} />;
 
   if (!isResearchManufacturingRouteLocale(locale)) {
     notFound();
   }
 
   return <ResearchManufacturingPageContent locale={locale} />;
-} 
+}
+
+export const generateMetadata = withPublishedTranslationMetadata("/about/research-manufacturing/", getPageMetadata);

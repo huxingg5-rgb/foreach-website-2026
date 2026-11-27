@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "title": "Guida tecnica alla correzione di Cv e Kv per microfluidica e strozzatori di precisione",
+    "summary": "Le formule convenzionali per Cv e Kv presuppongono un regime turbolento. Con diametri molto piccoli e bassi numeri di Reynolds, questa ipotesi può sottostimare la perdita di carico. La guida descrive come correggere il calcolo nella progettazione di circuiti fluidici e strumenti.",
+    "seoTitle": "Correzione di Cv e Kv in microfluidica a basso numero di Reynolds",
+    "seoDescription": "Come applicare la correzione di Reynolds, il fattore d’attrito di Churchill e le correzioni per orifizi quando le formule convenzionali per Cv e Kv sottostimano la perdita di carico."
+  },
+  "body": {
+    "intro": {
+      "title": "Perché il calcolo convenzionale di Cv e Kv può sottostimare le perdite in microfluidica",
+      "paragraphs": [
+        "Cv e Kv vengono ampiamente utilizzati per confrontare la capacità di flusso di valvole, restrizioni e altri componenti fluidici.",
+        "Gli strumenti microfluidici utilizzano solitamente canali con diametri compresi tra 0.1 e 0.5 mm; il loro regime operativo può essere laminare o transizionale, piuttosto che completamente turbolento.",
+        "In queste condizioni, considerare costanti i coefficienti pubblicati può portare a sottovalutazioni della perdita di carico e quindi a dimensionamenti errati di componenti o pompe."
+      ],
+      "notice": "L’equazione in sé non è errata; il rischio sorge quando viene applicata al di fuori del regime di flusso per cui è stata calcolata."
+    },
+    "assumptions": {
+      "title": "Le ipotesi ingegneristiche alla base dei metodi convenzionali di calcolo di Cv/Kv.",
+      "paragraphs": [
+        "I metodi tradizionali di selezione basati su tabelle rappresentano versioni semplificate dell’equazione del coefficiente di portata dei liquidi.",
+        "L’ipotesi principale è che la perdita di carico sia proporzionale al quadrato della portata. I limiti dichiarati di viscosità e pressione critica definiscono il campo pratico in cui vale questa ipotesi."
+      ],
+      "cards": [
+        {
+          "label": "Relazione tabulata",
+          "value": "Kv = Q ÷ (Fgm × Fsg)",
+          "description": "La portata è divisa per i fattori legati al differenziale di pressione e alla densità relativa."
+        },
+        {
+          "label": "Fattore di pressione",
+          "value": "Fgm = √Δp",
+          "description": "Il fattore è proporzionale alla radice quadrata del differenziale di pressione."
+        },
+        {
+          "label": "Densità relativa",
+          "value": "Fsg = 1 ÷ √SG",
+          "description": "SG indica la densità del fluido relativa a quella dell’acqua."
+        },
+        {
+          "label": "Equazione equivalente",
+          "value": "Kv = Q × √(SG ÷ Δp)",
+          "description": "Utilizzare Q in m³/h, Δp in bar e SG come densità relativa all’acqua; non sostituire direttamente con mL/min o kPa."
+        }
+      ]
+    },
+    "correction": {
+      "title": "Correzione di Reynolds al punto di funzionamento",
+      "paragraphs": [
+        "Il fattore di correzione Reynolds Fᵣ descrive la riduzione della capacità di flusso effettiva quando il punto di funzionamento si allontana dalle condizioni di calibrazione.",
+        "Questo approccio collega un coefficiente pubblicato con la resistenza effettiva del passaggio reale."
+      ],
+      "cards": [
+        {
+          "label": "Coefficiente effettivo",
+          "value": "Cv(Re) = Cv₀ × Fᵣ(Re)",
+          "description": "Convertire il coefficiente pubblicato alle condizioni operative effettive."
+        },
+        {
+          "label": "Differenza di pressione corretta",
+          "value": "ΔPactual = ΔPcalc ÷ Fᵣ²",
+          "description": "Una riduzione moderata di Fᵣ può causare un aumento di pressione molto maggiore."
+        },
+        {
+          "label": "Base della resistenza",
+          "value": "Fᵣ(Re) = √[K₀ ÷ K(Re)]",
+          "description": "Confronta la resistenza totale in condizioni di calibrazione e di funzionamento."
+        }
+      ]
+    },
+    "channel": {
+      "title": "Microcanali lunghi e capillari: l’approccio di Churchill",
+      "paragraphs": [
+        "Nei passaggi con rapporto L/d elevato, l’attrito distribuito lungo la parete è di solito la resistenza dominante.",
+        "La correlazione di Churchill fornisce un’espressione unica per tutti i regimi di flusso (laminare, transizionale, turbolento). I microcanali lisci dovrebbero utilizzare un numero di Reynolds di calibrazione realizzabile in pratica.",
+        "I valori riportati nella tabella rappresentano esempi di calcolo selezionati, non limiti fisici determinati esclusivamente dal diametro. I valori di f₀ vengono ricalculati utilizzando la correlazione di Churchill-Darcy per un tubo circolare liscio e con rugosità relativa zero. È necessario confermare il punto di calibrazione effettivo mediante misurazioni."
+      ],
+      "card": {
+        "label": "Correzione per canali lunghi",
+        "value": "Fᵣ = √[(f₀·L/d + ζlocal) ÷ (f(Re)·L/d + ζlocal)]",
+        "description": "f₀ rappresenta il fattore di attrito di calibrazione, mentre f(Re) indica il valore operativo."
+      },
+      "tableHeaders": [
+        "Diametro",
+        "Esempio di ricalcolo (verificare)",
+        "Valore di riferimento per f₀",
+        "Interpretazione ingegneristica"
+      ],
+      "assessments": [
+        {
+          "assessment": "Esempio di regime laminare; non vi è garanzia di conservatività nei risultati."
+        },
+        {
+          "assessment": "Condizioni rappresentative per la calibrazione dei microcanali."
+        },
+        {
+          "assessment": "Regime di transizione, oltre il campo laminare."
+        },
+        {
+          "assessment": "Esempio di flusso turbolento; verificare il livello di rugosità."
+        },
+        {
+          "assessment": "Esempio a alto numero di Reynolds; il flusso non è necessariamente completamente turbolento."
+        }
+      ],
+      "notice": "Applicare il fattore di attrito tipico dei tubi a alto numero di Reynolds a un canale liscio di 0.1 mm può portare a una sottostima significativa della sua reale resistenza."
+    },
+    "orifice": {
+      "title": "Orifizi sottili e restrizioni corte: correzione delle perdite locali",
+      "paragraphs": [
+        "Negli orifizi sottili e nelle restrizioni corte prevalgono spesso le perdite locali sull’attrito distribuito di parete.",
+        "La forma dell’ingresso, il raggio degli angoli, le rifiniture e la lunghezza del canale possono modificare il numero di Reynolds caratteristico."
+      ],
+      "cards": [
+        {
+          "label": "Correzione empirica per orifizi",
+          "value": "Fᵣ(Re) = 1 ÷ √(1 + Rec ÷ Re)",
+          "description": "Si tratta di un modello di adattamento semplificato. Determinare il valore di Rec sperimentalmente in base alla geometria reale e al fluido utilizzato; non è specificato alcun valore universale per Rec (ad esempio, 30)."
+        },
+        {
+          "label": "Dipendenza dalla geometria: i bordi smussati e le superfici arrotondate modificano il valore di Rec.",
+          "value": "Smussi e ingressi raccordati modificano Rec",
+          "description": "Raggi di raccordo e smussi modificano la caratteristica di efflusso. La sola forma dell’ingresso non giustifica l’adozione di Rec = 200–400."
+        }
+      ]
+    },
+    "rules": {
+      "title": "Cinque controlli tecnici prima di utilizzare i valori di Cv/Kv pubblicati.",
+      "items": [
+        {
+          "title": "Non applicare automaticamente la legge del quadrato a valori bassi di Reynolds.",
+          "description": "La resistenza al flusso laminare e transizionale varia in funzione del numero di Reynolds."
+        },
+        {
+          "title": "Non utilizzare i valori relativi a tubi di grandi dimensioni per descrivere microcanali lisci.",
+          "description": "Le condizioni di calibrazione raggiungibili sono fondamentalmente diverse."
+        },
+        {
+          "title": "Utilizzare un algoritmo di risoluzione robusto nel regime di transizione.",
+          "description": "L’intervallo compreso tra circa 2000 e 4000 può comportare un andamento non monotono."
+        },
+        {
+          "title": "Adattare i coefficienti di perdita locali alla geometria reale del sistema.",
+          "description": "Una connessione retta a diametro uguale non costituisce un’entrata del serbatoio."
+        },
+        {
+          "title": "Escludere le perdite presenti nei tubi esterni dal calcolo del valore intrinseco di Cv/Kv.",
+          "description": "I tubi e gli accessori utilizzati per i test devono essere separati dalla resistenza dei componenti stessi."
+        }
+      ]
+    },
+    "code": {
+      "title": "Implementazione in Python per valutazioni ingegneristiche.",
+      "introduction": "L’esempio calcola il fattore d’attrito di Darcy e confronta le resistenze nei canali lunghi usando un numero di Reynolds di taratura esplicito. Il modello per orifizi richiede una stima separata di Rec.",
+      "note": "L’esempio si applica a fluidi newtoniani incomprimibili monofase nelle condizioni geometriche indicate. Fᵣ è riferito a uno specifico punto di taratura. Rugosità e perdite locali devono riferirsi allo stesso componente e alla stessa configurazione di prova."
+    },
+    "conclusion": {
+      "title": "Conseguenze pratiche:",
+      "paragraphs": [
+        "I valori pubblicati di Cv/Kv rimangono utili, ma devono essere considerati parametri calibrati e non costanti universali.",
+        "Il procedimento operativo consigliato consiste nel identificare il regime di flusso, tenere conto delle caratteristiche geometriche reali e verificare i risultati ottenuti confrontandoli con i dati di test.",
+        "Questo approccio riduce il rischio di dimensionare male le pompe e rende più prevedibile la risposta delle valvole e del circuito."
+      ]
+    }
+  }
+}

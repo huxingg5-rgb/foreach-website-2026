@@ -1,0 +1,234 @@
+{
+  "kind": "selection",
+  "family": "instrument",
+  "copy": {
+    "metadata": {
+      "title": "Come configurare gruppi tubo per strumenti e generare disegni 2D",
+      "seoTitle": "Configuratore di gruppi tubo per strumenti e disegni 2D | FOREACH",
+      "seoDescription": "Configurate online materiale, diametri interno ed esterno, lunghezza e raccordi A/B. Visualizzate il gruppo tubo FOREACH e scaricate il disegno di selezione 2D per la verifica o la prototipazione.",
+      "coverImage": "/images/resources/technical-articles/tubing-assembly-configurator-guide/flanged-tubing-assembly-cover.webp",
+      "coverAlt": "Primo piano dell’estremità di un gruppo tubo flangiato con raccordo filettato bianco e rondella metallica"
+    },
+    "deck": "Configurate online tubo, lunghezza finita e raccordi terminali, poi generate un disegno quotato 2D con distinta base. L’esempio in FEP usa una filettatura diversa a ciascuna estremità.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Per definire una linea di reagenti in uno strumento analitico servono materiale del tubo, diametri interno ed esterno, lunghezza finita e due collegamenti compatibili. Una valvola e un modulo fluidico possono avere filettature o superfici di tenuta diverse. Il configuratore di gruppi tubo FOREACH consente di impostare le estremità A e B separatamente, visualizzare l’anteprima dell’insieme e generare un disegno di selezione 2D con quote, modelli dei raccordi e distinta base. Progettazione, montaggio e acquisti possono esaminare la stessa revisione del PDF."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Quali parametri richiede il configuratore di gruppi tubo?",
+        "tocLabel": "Parametri di configurazione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Modificate l’esempio in FEP qui sopra oppure inserite i vostri parametri partendo dallo schema fluidico e dai disegni di entrambi gli attacchi."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Visualizza le configurazioni salvate nella scheda del gruppo tubo",
+                "href": "/en/products/tubing-assemblies/flanged-tubing/details/"
+              }
+            ]
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Scegliete materiale e misura del tubo. Il configuratore elenca le misure disponibili per il materiale scelto come diametro esterno × diametro interno. Abbinate il diametro esterno (OD) a raccordi e accessori. Scegliete il diametro interno (ID) in base alla resistenza al flusso e al volume interno richiesti.",
+              "Inserite la lunghezza finita L e la relativa tolleranza. Determinate la lunghezza in base alla posa prevista. Durante la verifica del disegno, concordate i due riferimenti di misura. Se il tubo segue una curva, documentate il percorso di misura e il margine necessario al montaggio.",
+              "Configurate separatamente le estremità A e B. Identificate il componente di accoppiamento a ciascuna estremità e scegliete tipo di collegamento, serie del raccordo, filettatura e materiale. Per un gruppo con due raccordi terminali, impostate entrambe le estremità indipendentemente. Per un gruppo con un solo raccordo, configurate A e indicate eventuali requisiti per l’estremità libera B.",
+              "Specificate accessori ed etichette. Verificate le rondelle di supporto o gli altri componenti richiesti per ciascun collegamento. Identificate con etichette le linee simili per consentire agli addetti al montaggio di riconoscerle sullo schema. Se esiste un codice componente del cliente, inseritelo nei dati del disegno."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come configurare un gruppo tubo con attacchi diversi alle due estremità?",
+        "tocLabel": "Configurazione delle estremità A/B",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Partite dai disegni degli attacchi e verificate per ciascuno filettatura, superficie di tenuta e spazio di montaggio. Il configuratore propone collegamenti flangiati, a ogiva e con anello di compressione, con componenti compatibili con il diametro esterno del tubo e la configurazione di ciascuna estremità. Nel collegamento flangiato, il raccordo filettato esercita la forza di serraggio e la flangia del tubo appoggia sul fondo piatto dell’attacco. Una volta innestato il raccordo, verificate che flangia e rondella siano sollecitate nella posizione prevista."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Leggi la guida alla scelta dei gruppi tubo flangiati",
+                "href": "/en/resources/technical-articles/flanged-tubing-assemblies-selection-guide/"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Considerate una linea che collega un attacco a fondo piatto 1/4-28 UNF all’estremità A a un attacco a fondo piatto M6×1 all’estremità B. La configurazione in FEP con due raccordi qui sotto mostra quali codici raccordo corrispondono ai requisiti dei due attacchi."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Parametro",
+              "Impostazione di esempio"
+            ],
+            "rows": [
+              [
+                "Materiale e misura del tubo",
+                "FEP trasparente, Ø esterno 1.6 mm, Ø interno 0.3 mm"
+              ],
+              [
+                "Lunghezza finita",
+                "L = 250 mm, tolleranza ±5 mm"
+              ],
+              [
+                "Estremità A",
+                "Flangiata, 1/4-28 UNF, raccordo HFL-U28-16-PV-N con rondella di supporto in SUS"
+              ],
+              [
+                "Estremità B",
+                "Flangiata, M6×1, raccordo HFL-M6-16-PV-N con rondella di supporto in SUS"
+              ]
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/tubing-assembly-configurator-guide/it/fep-dual-end-configuration.webp",
+            "alt": "Configuratore FOREACH con tubo in FEP, 1/4-28 UNF all’estremità A, M6×1 all’estremità B e lunghezza finita 250 ±5 mm",
+            "caption": "Esempio in FEP nel configuratore FOREACH. L’anteprima e i campi identificano i due raccordi terminali e le dimensioni del tubo. Apri l’immagine a grandezza intera",
+            "captionHref": "/images/resources/technical-articles/tubing-assembly-configurator-guide/it/fep-dual-end-configuration.webp",
+            "width": 798,
+            "height": 1066
+          },
+          {
+            "type": "paragraph",
+            "text": "Confrontate l’anteprima e la distinta base con lo schema fluidico. Lunghezza e tolleranza sono indicative in questo esempio. Per il vostro strumento, definitele in base a fluidi, portata, posa e requisiti di montaggio effettivi."
+          }
+        ]
+      },
+      {
+        "title": "Come leggere il disegno 2D generato per il gruppo tubo?",
+        "tocLabel": "Generazione e verifica del disegno",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Selezionate «Generare disegno 2D», poi «Scarica PDF». I contorni dei raccordi riprendono i disegni originali dei componenti. Il foglio aggiorna misura del tubo, lunghezza finita e distinta base in base alla configurazione. Nell’esempio riporta 250 ±5 mm ed entrambi i codici raccordo da confrontare con i disegni degli attacchi."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/tubing-assembly-configurator-guide/it/fep-dual-end-generated-drawing.webp",
+            "alt": "Disegno di selezione 2D generato per il gruppo tubo in FEP con lunghezza 250 ±5 mm, misura del tubo, filettature terminali e distinta base",
+            "caption": "Il disegno di selezione 2D generato riporta quote, raccordi terminali, rondelle di supporto, distinta base e revisione R1. Apri l’immagine a grandezza intera",
+            "captionHref": "/images/resources/technical-articles/tubing-assembly-configurator-guide/it/fep-dual-end-generated-drawing.webp",
+            "width": 850,
+            "height": 643
+          },
+          {
+            "type": "list",
+            "items": [
+              "Progettazione verifica collegamenti e dimensioni. Controllate filettatura e tipo di tenuta a entrambe le estremità, confermate i riferimenti di lunghezza e verificate nello strumento posa, spazio per le curve e accesso degli attrezzi.",
+              "Montaggio verifica orientamento e componenti. Identificate la destinazione di ciascuna estremità, controllate le rondelle e gli altri componenti e verificate che testo e posizione dell’etichetta aiutino a identificare la linea.",
+              "Acquisti verifica revisione e componenti. Abbinate nome e revisione della configurazione al codice componente del cliente. Indicate la quantità prevista e allegate i disegni degli attacchi alla richiesta di preventivo o prototipo."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La generazione del disegno salva la configurazione nel browser corrente. Potete riaprirla o salvarne una versione distinta. Condividete il PDF della revisione da verificare. Se cambiano raccordi o lunghezza, aggiornate la configurazione e generate un nuovo PDF."
+          }
+        ]
+      },
+      {
+        "title": "Cosa confermare prima di realizzare il prototipo di un gruppo tubo su misura?",
+        "tocLabel": "Prima della prototipazione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Usate il disegno di selezione per la verifica di progetto o la richiesta di preventivo. Prima di realizzare un prototipo, fornite disegni degli attacchi, riferimenti di misura della lunghezza, fluidi di processo e lavaggio, temperatura e pressione o vuoto di esercizio, quantità di campioni e criteri di accettazione. Allegate il disegno di montaggio se lo spazio è limitato. FOREACH può verificare con voi la configurazione e il disegno definitivo. Verificate tenuta, portata e ingombri nello strumento nelle condizioni di esercizio previste."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "",
+    "faqItems": [],
+    "cta": {
+      "title": "Configura un gruppo tubo per strumenti e genera un disegno",
+      "description": "Inserite dimensioni del tubo, lunghezza e collegamenti terminali per generare un primo disegno di selezione.",
+      "contactLabel": "Contatta un tecnico",
+      "productsLabel": "Avvia la configurazione",
+      "productsHref": "#online-configurator"
+    }
+  },
+  "navigation": [
+    {
+      "id": "configuration-parameters",
+      "label": "Quali parametri richiede il configuratore di gruppi tubo?"
+    },
+    {
+      "id": "end-connections",
+      "label": "Come configurare un gruppo tubo con attacchi diversi alle due estremità?"
+    },
+    {
+      "id": "generate-drawing",
+      "label": "Come leggere il disegno 2D generato per il gruppo tubo?"
+    },
+    {
+      "id": "sample-review",
+      "label": "Cosa confermare prima di realizzare il prototipo di un gruppo tubo su misura?"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Come configurare gruppi tubo per strumenti e generare disegni 2D"
+    ],
+    "mentions": [
+      "FEP",
+      "Gruppo tubo",
+      "Disegno di selezione"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "tubing-assembly-retaining-ring-black-ptfe",
+      "title": "Gruppo tubo in PTFE nero con anello di compressione",
+      "href": "/en/products/tubing-assemblies/retaining-ring-kits/details/black-ptfe/",
+      "imageSrc": "/images/products/tubing-assemblies/retaining-ring-kits/black-ptfe/foreach-black-ptfe-retaining-ring-tubing-assembly.webp",
+      "imageAlt": "Gruppo tubo in PTFE nero con anello di compressione, tubo nero, raccordo filettato beige, anello di compressione metallico e ogiva di tenuta",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tubing-assembly-ptfe-flanged",
+      "title": "Gruppo tubo flangiato in PTFE",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/ptfe/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-ptfe-flanged-square.webp",
+      "imageAlt": "Riferimento per il collegamento flangiato. Tubo e accessori dipendono dalla configurazione scelta.",
+      "imageAspectRatio": 1
+    }
+  ],
+  "footerProducts": [
+    {
+      "id": "tubing-assembly-fep-flanged",
+      "title": "Gruppo tubo flangiato in FEP",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/fep/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-fep-flanged-square.webp",
+      "imageAlt": "Gruppo tubo flangiato in FEP in vista esplosa con estremità flangiata trasparente, raccordo filettato nero e rondella abbinata",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tubing-assembly-ptfe-flanged",
+      "title": "Gruppo tubo flangiato in PTFE",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/ptfe/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-ptfe-flanged-square.webp",
+      "imageAlt": "Riferimento per il collegamento flangiato. Tubo e accessori dipendono dalla configurazione scelta.",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tubing-assembly-pfa-flanged",
+      "title": "Gruppo tubo flangiato in PFA",
+      "href": "/en/products/tubing-assemblies/flanged-tubing/details/pfa/",
+      "imageSrc": "/images/products/tubing-assemblies/related/tubing-assembly-pfa-flanged-square.webp",
+      "imageAlt": "Gruppo tubo flangiato in PFA con estremità flangiata trasparente, raccordo filettato traslucido e rondella di supporto metallica",
+      "imageAspectRatio": 1
+    }
+  ]
+}

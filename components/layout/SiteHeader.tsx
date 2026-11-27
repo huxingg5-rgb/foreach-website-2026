@@ -33,7 +33,11 @@ import {
   languageItems, // 语言切换菜单
   type LocaleCode, // 当前官网支持的语言类型
 } from "@/lib/i18n"; // 从 i18n 文件读取语言工具和语言文案
+import { germanHeaderText, getGermanNavigationText } from "@/data/navigation.de";
+import { italianHeaderText, getItalianNavigationText } from "@/data/navigation.it";
+import { hindiHeaderText, getHindiNavigationText } from "@/data/navigation.hi";
 import { getInternationalUiText } from "@/lib/international-ui";
+import { getHindiDraftLink, hindiEnglishFallbackSuffix, isLocalizedHindiDraftPath, germanEnglishFallbackSuffix, getDraftHrefForEnglish, getDraftLinkLocaleFromPath, getEnglishDraftSourcePath, getGermanDraftLink, getItalianDraftLink, isDraftLocale, isLocalizedGermanDraftPath, isLocalizedItalianDraftPath, italianEnglishFallbackSuffix, type DraftLocale } from "@/lib/i18n/draft-languages";
 import { getLanguageHref, stripLocalePrefixFromPath } from "@/lib/i18n/language-switch";
 import { trackLanguageChange } from "@/lib/analytics/track-event";
 import SiteAnnouncementBar from "./SiteAnnouncementBar"; // 全站顶部公告条（展会等），删除时连同下方一行一起删
@@ -106,11 +110,19 @@ function subscribeToLocationSuffix(onChange: () => void) {
 const getLocationSuffix = () => window.location.search + window.location.hash;
 const getServerLocationSuffix = () => "";
 
-export default function SiteHeader() {
+export default function SiteHeader({ fittingPathPattern }: { fittingPathPattern?: string } = {}) {
   const locationSuffix = useSyncExternalStore(subscribeToLocationSuffix, getLocationSuffix, getServerLocationSuffix);
   const pathname = usePathname(); // 获取当前页面路径，例如 /、/about/culture、/en/resources/datasheets 等
+  const draftLocale = getDraftLinkLocaleFromPath(pathname);
+  const isGermanPage = isLocalizedGermanDraftPath(pathname, fittingPathPattern);
+  const isItalianPage = isLocalizedItalianDraftPath(pathname);
+  const isHindiPage = isLocalizedHindiDraftPath(pathname);
+  const hasLocalizedPreviewLinks = isItalianPage || isHindiPage;
+  const localizedHeaderLang = isGermanPage ? "de-DE" : isItalianPage ? "it-IT" : isHindiPage ? "hi-IN" : undefined;
+  const englishFallbackSuffix = isHindiPage ? hindiEnglishFallbackSuffix
+    : isItalianPage ? italianEnglishFallbackSuffix : germanEnglishFallbackSuffix;
   const router = useRouter();
-  const normalizedPathname = pathname.replace(/\/+$/, "");
+  const normalizedPathname = getEnglishDraftSourcePath(pathname).replace(/\/+$/, "");
   const isLocalizedApplicationDomainPage =
     /^\/(?:en|es|fr|ko|ru)\/applications\/(?:ivd|life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology|industrial-inkjet-printing)(?:\/|$)/.test(normalizedPathname);
 
@@ -125,6 +137,11 @@ export default function SiteHeader() {
   const currentLocale = useMemo<LocaleCode>(() => {
     return getLocaleFromPathname(pathname);
   }, [pathname]);
+  const menuLocale = (draftLocale === "de" && !isGermanPage) || (draftLocale === "it" && !isItalianPage) || (draftLocale === "hi" && !isHindiPage) ? currentLocale : draftLocale ?? currentLocale;
+  const searchIndexLocale = isGermanPage ? "de" : currentLocale;
+  useEffect(() => {
+    document.documentElement.lang = localizedHeaderLang ?? currentLocale;
+  }, [currentLocale, localizedHeaderLang]);
 
   /* ================================
      Header 当前语言 class
@@ -138,11 +155,25 @@ export default function SiteHeader() {
       ? "site-header-locale-zh"
       : `site-header-locale-${currentLocale}`;
 
-  const headerText = headerI18n[currentLocale]; // 获取当前语言下的 Header 文案
-  const mobileSiteSearchLabel =
-    currentLocale === "zh-CN"
+  const headerText = isGermanPage ? germanHeaderText : isItalianPage ? italianHeaderText : isHindiPage ? hindiHeaderText : headerI18n[currentLocale];
+  const mobileSiteSearchLabel = (currentLocale === "zh-CN"
       ? "全站搜索"
-      : getInternationalUiText(currentLocale, "Site Search");
+      : isGermanPage ? getGermanNavigationText("Site Search") : isItalianPage ? getItalianNavigationText("Site Search") : isHindiPage ? getHindiNavigationText("Site Search") : getInternationalUiText(currentLocale, "Site Search"));
+
+  function getNavigationText(text: Parameters<typeof getLocalizedText>[0], locale: LocaleCode) {
+    const value = getLocalizedText(text, locale);
+    return isGermanPage ? getGermanNavigationText(value) : isItalianPage ? getItalianNavigationText(value) : isHindiPage ? getHindiNavigationText(value) : value;
+  }
+
+  function getPreviewAwareHref(href: Parameters<typeof getLocalizedHref>[0]) {
+    const localizedHref = getLocalizedHref(href, currentLocale);
+    return isHindiPage ? getHindiDraftLink(localizedHref).href : isItalianPage ? getItalianDraftLink(localizedHref).href : getDraftHrefForEnglish(localizedHref, draftLocale);
+  }
+
+  function getLocalizedPreviewLink(href: Parameters<typeof getLocalizedHref>[0]) {
+    const englishHref = getLocalizedHref(href, "en");
+    return isHindiPage ? getHindiDraftLink(englishHref) : isItalianPage ? getItalianDraftLink(englishHref) : getGermanDraftLink(englishHref, fittingPathPattern);
+  }
 
   /* ================================
      当前路径去掉语言前缀
@@ -866,7 +897,7 @@ const isFittingReplacementDetailPage =
     ) {
       event.preventDefault();
 
-      preloadGlobalSearchResources(currentLocale);
+      preloadGlobalSearchResources(searchIndexLocale);
 
       setOpenPanel("none");
       setOpenMobileSectionKey(null);
@@ -945,17 +976,24 @@ const isFittingReplacementDetailPage =
      */
     function handleLanguageItemClick(
       event: MouseEvent<HTMLAnchorElement>,
-      localeCode: LocaleCode,
+      localeCode: LocaleCode | DraftLocale,
     ) {
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
 
-      if (localeCode !== currentLocale) {
+      if (localeCode !== menuLocale) {
         trackLanguageChange({
-          fromLocale: currentLocale,
+          fromLocale: menuLocale,
           toLocale: localeCode,
           sourceSection: "site_header",
         });
+      }
+
+      const nextUrl = getLanguageHref(window.location.pathname, localeCode, getLocationSuffix(), fittingPathPattern);
+      closeAllPanels();
+      if (isDraftLocale(localeCode)) {
+        window.location.assign(nextUrl);
+        return;
       }
 
       // 保存语言偏好到浏览器本地
@@ -977,17 +1015,13 @@ const isFittingReplacementDetailPage =
       // 同步修改 html lang，避免部分浏览器辅助能力读取旧语言
       document.documentElement.setAttribute("lang", localeCode);
 
-      // 关闭顶部所有展开面板
-      closeAllPanels();
-
-      const nextUrl = getLanguageHref(window.location.pathname, localeCode, getLocationSuffix());
-
       // 使用 assign 跳转，让浏览器真正进入新语言路径
       window.location.assign(nextUrl);
     }
 
     return (
       <header
+        lang={localizedHeaderLang}
         ref={headerRef}
         className={`site-header ${headerLocaleClass} ${shouldUseSolidHeader ? "site-header-scrolled" : ""
           } ${isFittingReplacementDetailPage || isNewsArticlePage || isProductCenterPage || isLocalizedApplicationDomainPage
@@ -1005,7 +1039,7 @@ const isFittingReplacementDetailPage =
           {/* Logo 区域 */}
           <Link
             className="site-logo"
-            href={getLocaleHomePath(currentLocale)}
+            href={isHindiPage ? getHindiDraftLink(getLocaleHomePath(currentLocale)).href : isItalianPage ? getItalianDraftLink(getLocaleHomePath(currentLocale)).href : getDraftHrefForEnglish(getLocaleHomePath(currentLocale), draftLocale)}
             aria-label={headerText.logoAriaLabel}
             onClick={closeAllPanels}
           >
@@ -1030,10 +1064,10 @@ const isFittingReplacementDetailPage =
             {/* PC 端主导航 */}
             <nav className="site-nav" aria-label={headerText.navAriaLabel}>
               {navigationItems.map((item) => {
-                const navLabel = getLocalizedText(item.label, currentLocale);
+                const navLabel = getNavigationText(item.label, currentLocale);
 
                 const navHref = item.href
-                  ? getLocalizedHref(item.href, currentLocale)
+                  ? getPreviewAwareHref(item.href)
                   : null;
 
                 // 判断是否是产品中心 / 关于我们这种复杂 Mega 下拉
@@ -1165,7 +1199,7 @@ const isFittingReplacementDetailPage =
                           return (
                             <Link
                               key={child.key}
-                              href={getLocalizedHref(child.href, currentLocale)}
+                              {...(hasLocalizedPreviewLinks ? getLocalizedPreviewLink(child.href) : { href: getPreviewAwareHref(child.href) })}
                               className="site-nav-simple-dropdown-link"
                               onClick={closeAllPanels}
                             >
@@ -1181,7 +1215,7 @@ const isFittingReplacementDetailPage =
                                     : undefined
                                 }
                               >
-                                {getLocalizedText(child.label, currentLocale)}
+                                {getNavigationText(child.label, currentLocale)}
                               </span>
                             </Link>
                           );
@@ -1230,13 +1264,13 @@ const isFittingReplacementDetailPage =
               aria-label={headerText.searchButtonAriaLabel}
               aria-expanded={isSearchOpen}
               onMouseEnter={() => {
-                preloadGlobalSearchResources(currentLocale);
+                preloadGlobalSearchResources(searchIndexLocale);
               }}
               onFocus={() => {
-                preloadGlobalSearchResources(currentLocale);
+                preloadGlobalSearchResources(searchIndexLocale);
               }}
               onTouchStart={() => {
-                preloadGlobalSearchResources(currentLocale);
+                preloadGlobalSearchResources(searchIndexLocale);
               }}
               onClick={handleSearchButtonClick}
             >
@@ -1276,10 +1310,10 @@ const isFittingReplacementDetailPage =
                 {languageItems.map((language) => (
                   <a
                     key={language.code}
-                    href={getLanguageHref(pathname || "/", language.code, locationSuffix)}
+                    href={getLanguageHref(pathname || "/", language.code, locationSuffix, fittingPathPattern)}
                     lang={language.code}
-                    aria-current={language.code === currentLocale ? "true" : undefined}
-                    className={`site-nav-simple-dropdown-link language-details-item ${language.code === currentLocale
+                    aria-current={language.code === menuLocale ? "true" : undefined}
+                    className={`site-nav-simple-dropdown-link language-details-item ${language.code === menuLocale
                       ? "language-details-item-active"
                       : ""
                       }`}
@@ -1357,10 +1391,10 @@ const isFittingReplacementDetailPage =
                 aria-label={headerText.mobileNavAriaLabel}
               >
                 {navigationItems.map((item) => {
-                  const navLabel = getLocalizedText(item.label, currentLocale);
+                  const navLabel = getNavigationText(item.label, currentLocale);
 
                   const navHref = item.href
-                    ? getLocalizedHref(item.href, currentLocale)
+                    ? getPreviewAwareHref(item.href)
                     : null;
 
                   const mobileChildren = (item.mobileChildren || [])
@@ -1416,11 +1450,14 @@ const isFittingReplacementDetailPage =
                               currentLocale === "ru" &&
                               child.key ===
                                 "mobile-resource-fluid-resistance-calculator";
+                            const childLink = hasLocalizedPreviewLinks || (isGermanPage && (item.key === "applications" || item.key === "about"))
+                              ? getLocalizedPreviewLink(child.href)
+                              : { href: getPreviewAwareHref(child.href) };
 
                             return (
                               <Link
                                 key={child.key}
-                                href={getLocalizedHref(child.href, currentLocale)}
+                                {...childLink}
                                 className="mobile-nav-submenu-link"
                                 onClick={closeAllPanels}
                               >
@@ -1436,7 +1473,8 @@ const isFittingReplacementDetailPage =
                                       : undefined
                                   }
                                 >
-                                  {getLocalizedText(child.label, currentLocale)}
+                                  {getNavigationText(child.label, currentLocale)}
+                                  {childLink.hrefLang === "en" && (hasLocalizedPreviewLinks || item.key === "about") ? englishFallbackSuffix : null}
                                 </span>
                               </Link>
                             );
@@ -1469,13 +1507,13 @@ const isFittingReplacementDetailPage =
                   aria-label={headerText.searchAriaLabel}
                   aria-expanded={isSearchOpen}
                   onMouseEnter={() => {
-                    preloadGlobalSearchResources(currentLocale);
+                    preloadGlobalSearchResources(searchIndexLocale);
                   }}
                   onFocus={() => {
-                    preloadGlobalSearchResources(currentLocale);
+                    preloadGlobalSearchResources(searchIndexLocale);
                   }}
                   onTouchStart={() => {
-                    preloadGlobalSearchResources(currentLocale);
+                    preloadGlobalSearchResources(searchIndexLocale);
                   }}
                   onClick={handleMobileSearchButtonClick}
                 >
@@ -1538,11 +1576,17 @@ const isFittingReplacementDetailPage =
                     4. 如果某个分类没有对应 card，则只保留 hover 切换，不强行跳转。
                   */
                   const categoryHref = categoryPrimaryCard?.href;
+                  const categoryLink = categoryHref
+                    ? hasLocalizedPreviewLinks || (isGermanPage && (activeMegaItem.key === "applications" || activeMegaItem.key === "about"))
+                      ? getLocalizedPreviewLink(categoryHref)
+                      : { href: getPreviewAwareHref(categoryHref) }
+                    : undefined;
 
                   const categoryContent = (
                     <>
                       <strong>
-                        {getLocalizedText(category.title, currentLocale)}
+                        {getNavigationText(category.title, currentLocale)}
+                        {categoryLink?.hrefLang === "en" && (hasLocalizedPreviewLinks || activeMegaItem.key === "about") ? englishFallbackSuffix : null}
                       </strong>
 
                       <span
@@ -1556,11 +1600,11 @@ const isFittingReplacementDetailPage =
                    * 有 href 的栏目渲染成 Link
                    * 例如：恒永达文化 → /about/culture
                    */
-                  if (categoryHref) {
+                  if (categoryLink) {
                     return (
                       <Link
                         key={category.key}
-                        href={getLocalizedHref(categoryHref, currentLocale)}
+                        {...categoryLink}
                         className={`site-nav-mega-category ${currentMegaCategoryKey === category.key
                           ? "site-nav-mega-category-active"
                           : ""
@@ -1599,7 +1643,7 @@ const isFittingReplacementDetailPage =
                 {/* 右侧顶部说明区 */}
                 <div className="site-nav-mega-heading" style={{ display: "none" }}>
                   <p>
-                    {getLocalizedText(
+                    {getNavigationText(
                       activeMegaItem.key === "about" &&
                         activeMegaCards[0]?.description
                         ? activeMegaCards[0].description
@@ -1632,14 +1676,14 @@ const isFittingReplacementDetailPage =
 
                               const productMeta = {
                                 title: cardImage.title
-                                  ? getLocalizedText(
+                                  ? getNavigationText(
                                     cardImage.title,
                                     currentLocale,
                                   )
                                   : fallbackProductMeta.title,
 
                                 description: cardImage.description
-                                  ? getLocalizedText(
+                                  ? getNavigationText(
                                     cardImage.description,
                                     currentLocale,
                                   )
@@ -1648,20 +1692,24 @@ const isFittingReplacementDetailPage =
 
                                                             /* FITTING_MEGA_IMAGE_LINK_START */
 
+                              const imageHref = cardImage.href ?? card.href;
+                              const imageLink = hasLocalizedPreviewLinks || (isGermanPage && (
+                                activeMegaItem.key === "products" || activeMegaItem.key === "applications"
+                              ))
+                                ? getLocalizedPreviewLink(imageHref)
+                                : { href: getLocalizedHref(imageHref, currentLocale) };
                               const cardImageContent = (
                                 <Link
                                   key={cardImage.src}
-                                  href={getLocalizedHref(
-                                    cardImage.href ?? card.href,
-                                    currentLocale,
-                                  )}                        onClick={closeAllPanels}
+                                  {...imageLink}
+                                  onClick={closeAllPanels}
                                   className="site-nav-product-clean-link"
                                 >
                                   <div className="site-nav-product-image-box">
                                     <Image
                                       className="site-nav-product-image"
                                       src={cardImage.src}
-                                      alt={getLocalizedText(
+                                      alt={getNavigationText(
                                         cardImage.alt,
                                         currentLocale,
                                       )}
@@ -1681,14 +1729,6 @@ const isFittingReplacementDetailPage =
                                 </Link>
                               );
 
-                              const cardImageHref =
-                                cardImage.href
-                                  ? getLocalizedHref(
-                                      cardImage.href,
-                                      currentLocale
-                                    )
-                                  : "";
-
                               return cardImageContent;
 
                               /* FITTING_MEGA_IMAGE_LINK_END */
@@ -1699,7 +1739,7 @@ const isFittingReplacementDetailPage =
                             <Image
                               className="site-nav-mega-single-image"
                               src={mainImage.src}
-                              alt={getLocalizedText(
+                              alt={getNavigationText(
                                 mainImage.alt,
                                 currentLocale,
                               )}
@@ -1709,7 +1749,7 @@ const isFittingReplacementDetailPage =
                           </div>
                         ) : (
                           <Link
-                            href={getLocalizedHref(card.href, currentLocale)}                        onClick={closeAllPanels}
+                            href={getPreviewAwareHref(card.href)}                        onClick={closeAllPanels}
                             className="site-nav-mega-icon-link"
                           >
                             <span
@@ -1742,6 +1782,11 @@ const isFittingReplacementDetailPage =
                 isOpen={isSearchOpen}
                 query={searchQuery}
                 locale={currentLocale}
+                draftLocale={draftLocale}
+                germanUi={isGermanPage}
+                italianUi={isItalianPage}
+                hindiUi={isHindiPage}
+                fittingPathPattern={fittingPathPattern}
                 onQueryChange={setSearchQuery}
                 onClose={() => {
                   setIsSearchOpen(false);

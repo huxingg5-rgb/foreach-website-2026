@@ -1,0 +1,157 @@
+{
+  "description": "FOREACH HP-26SSU3204 è una valvola rotativa ad alta pressione a 2 posizioni e 6 vie, con una posizione di sfiato separata e pressione massima di esercizio di 25 MPa. Commuta i percorsi di caricamento, iniezione e sfiato nei campionatori automatici HPLC. Con un loop di campionamento esterno, prepara il campione in posizione di caricamento, collega il loop alla fase mobile in posizione di iniezione e apre un percorso dedicato nella posizione di sfiato.\n\nLa valvola ha attacchi 10-32 UNF, passaggio di 0.4 mm e volume interno di 0.8 μL. Lo statore è in SUS316L e il rotore è in polimero. Per l'integrazione nello strumento analitico, verificare schema fluidico, pressione massima del sistema, compatibilità con campione e fase mobile e sequenza di commutazione e sfiato.",
+  "commonApplications": [
+    "Campionamento automatico HPLC",
+    "Commutazione del loop di campionamento",
+    "Sfiato del circuito fluidico"
+  ],
+  "applicationDetails": {
+    "tabLabel": "Applicazioni",
+    "title": "Applicazioni tipiche",
+    "intro": [
+      "In cromatografia, la valvola commuta i percorsi fluidici. Il meccanismo di caricamento introduce il campione e la pompa della fase mobile fornisce la portata ad alta pressione. Le denominazioni valvola di iniezione, valvola di commutazione del loop e valvola del campionatore descrivono il suo ruolo nel circuito effettivo."
+    ],
+    "items": [
+      {
+        "title": "Commutazione tra caricamento e iniezione nel campionamento automatico HPLC",
+        "paragraphs": [
+          "In posizione di caricamento il campione entra nel loop. In posizione di iniezione, il loop si collega alla fase mobile e il campione entra nel circuito cromatografico. Il componente si chiama spesso valvola di iniezione o del campionatore automatico.",
+          "HP-26SSU3204 lavora con un loop di campionamento esterno in un circuito di iniezione a due posizioni e sei vie. Nell'iniezione a loop pieno, il loop determina principalmente il volume iniettato. Nell'iniezione a loop parziale conta anche il dosaggio del meccanismo di caricamento. Definire insieme volume obiettivo, campione disponibile e metodo di riempimento del loop."
+        ]
+      },
+      {
+        "title": "Collegamento e isolamento di un loop esterno negli strumenti analitici",
+        "paragraphs": [
+          "La commutazione del loop permette di caricare un volume fisso prima di collegarlo al circuito principale. Volumi aggiuntivi e connessioni non adatte possono influenzare la dispersione della banda di campione a valle.",
+          "Valutare il volume extracolonna usando lunghezza e diametro interno effettivi dei tubi e geometria dei raccordi. Il progetto della valvola stabilisce le connessioni a sei vie. Per comandare sei circuiti indipendenti o selezionare più reagenti, serve un dispositivo dedicato."
+        ]
+      },
+      {
+        "title": "Sfiato e ripristino del percorso durante il ciclo di iniezione",
+        "paragraphs": [
+          "Le bolle d'aria possono influire sul riempimento del loop e sulle variazioni di pressione. Prima delle fasi successive di caricamento e iniezione, lo strumento può aprire lo sfiato nella posizione prevista della valvola. Lo sfiato è un'operazione di manutenzione del circuito, distinta dalla regolazione del volume iniettato.",
+          "HP ha una posizione di sfiato separata. Collegare lo sfiato secondo schema fluidico e condizioni di esercizio e coordinare pressione e comandi di commutazione. Verificare le condizioni di pressione prima di aprirlo. Il degasaggio automatico richiede un dispositivo dedicato."
+        ]
+      }
+    ],
+    "selectionNote": {
+      "title": "Informazioni per scegliere in base all'applicazione",
+      "paragraphs": [
+        "Indicare pressioni massime di esercizio e commutazione, volume di iniezione obiettivo, loop e metodo di riempimento, campione e fase mobile, raccordi dei tubi e sequenza di sfiato. Confermare numerazione degli attacchi e requisiti di comando di HP-26SSU3204."
+      ]
+    }
+  },
+  "faqs": [
+    {
+      "question": "Che cosa significano due posizioni, sei vie e sfiato?",
+      "answer": "Due posizioni e sei vie descrivono i collegamenti principali di caricamento e iniezione. Il modello ha inoltre una posizione di sfiato. Le specifiche indicano 1–2, 3–4 e 5–6 in iniezione, 1–6, 2–3 e 4–5 in caricamento e 3–7 per lo sfiato. Verificare numerazione degli attacchi, posizione e temporizzazione sullo schema del modello."
+    },
+    {
+      "question": "Il volume interno di 0.8 μL è il volume di iniezione? Come si sceglie il loop?",
+      "answer": "0.8 μL è il volume interno della valvola. Nell'iniezione a loop pieno serve abbastanza campione per spostare il liquido nel loop. Il loop determina principalmente il volume che entra nel percorso di analisi. Nell'iniezione a loop parziale il meccanismo di caricamento dosa il campione in un loop opportunamente dimensionato. Scegliere secondo campione disponibile, ripetibilità e metodo. Un eccesso di campione caricato può restare fuori dall'iniezione."
+    },
+    {
+      "question": "Una pressione nominale di 25 MPa è adatta a ogni sistema HPLC o UHPLC?",
+      "answer": "Verificare le condizioni del sistema oltre alla sua denominazione. 25 MPa è la pressione massima di esercizio del modello. Confrontare pressioni stazionarie e transitorie di commutazione con le pressioni ammesse per tubi, loop e raccordi. Il componente con il valore più basso limita il circuito completo."
+    },
+    {
+      "question": "Qualsiasi raccordo 10-32 UNF può essere collegato direttamente?",
+      "answer": "Oltre alla filettatura, controllare diametro esterno del tubo, geometria dell'estremità del raccordo, profondità di inserimento e guarnizioni. Con filettature uguali, verificare comunque compatibilità della geometria e tenuta ad alta pressione."
+    },
+    {
+      "question": "Che cosa verificare per prima cosa se le iniezioni ripetute variano?",
+      "answer": "Controllare riempimento del loop, bolle nel campione o nella fase mobile, posizione della valvola, permanenza in iniezione, perdite dei raccordi e usura della tenuta del rotore. Misurare la ripetibilità sull'intero circuito di iniezione, oltre al tempo di commutazione della valvola."
+    },
+    {
+      "question": "Come valutare materiali a contatto con il fluido e durata?",
+      "answer": "Questo modello usa uno statore in SUS316L e un rotore in polimero. Verificare compatibilità con solventi, concentrazione, temperatura e condizioni di pulizia. Il dato di 150 000 cicli si riferisce a prove con acqua pura. Verificare la durata con il fluido effettivo."
+    }
+  ],
+  "specs": [
+    {
+      "label": "Modello",
+      "value": "HP-26SSU3204"
+    },
+    {
+      "label": "Tensione nominale",
+      "value": "24 V"
+    },
+    {
+      "label": "Corrente nominale",
+      "value": "2 A"
+    },
+    {
+      "label": "Potenza nominale",
+      "value": "48 W"
+    },
+    {
+      "label": "Rapporto di riduzione del motore",
+      "value": "5:1"
+    },
+    {
+      "label": "Configurazione della valvola",
+      "value": "2 posizioni, 6 vie, con posizione di sfiato separata"
+    },
+    {
+      "label": "Dimensioni complessive",
+      "value": "L × P × H, 42 × 42 × 123.5 mm"
+    },
+    {
+      "label": "Dimensioni e filettatura di montaggio",
+      "value": "Quote di centraggio 19 × 20 mm, filettatura × profondità M3 × 10 mm"
+    },
+    {
+      "label": "Filettatura degli attacchi",
+      "value": "10-32 UNF"
+    },
+    {
+      "label": "Pressione massima di esercizio",
+      "value": "25 MPa"
+    },
+    {
+      "label": "Diametro di passaggio",
+      "value": "0.4 mm"
+    },
+    {
+      "label": "Tempo di commutazione tra vie adiacenti",
+      "value": "100 ms"
+    },
+    {
+      "label": "Durata",
+      "value": "150 000 cicli (acqua pura)"
+    },
+    {
+      "label": "Rumore in esercizio",
+      "value": "<60 dB"
+    },
+    {
+      "label": "Volume interno",
+      "value": "0.8 μL"
+    },
+    {
+      "label": "Materiale a contatto, statore",
+      "value": "SUS316L"
+    },
+    {
+      "label": "Materiale a contatto, rotore",
+      "value": "Polimero"
+    },
+    {
+      "label": "Temperatura ambiente",
+      "value": "0–40 °C (senza condensa)"
+    },
+    {
+      "label": "Umidità ambiente",
+      "value": "Umidità relativa 0–93% ±3 a 40 °C (senza condensa)"
+    },
+    {
+      "label": "Temperatura di stoccaggio e trasporto",
+      "value": "−40–55 °C (senza congelamento o condensa)"
+    }
+  ],
+  "bottomCta": {
+    "title": "Vuoi confermare la configurazione della valvola HP?",
+    "description": "Indica pressioni massime di esercizio e commutazione, volume di iniezione obiettivo, loop e metodo di riempimento, campione e fase mobile, raccordi dei tubi e sequenza di sfiato. Conferma numerazione degli attacchi e requisiti di comando di HP-26SSU3204.",
+    "buttonText": "Parla con un tecnico"
+  }
+}

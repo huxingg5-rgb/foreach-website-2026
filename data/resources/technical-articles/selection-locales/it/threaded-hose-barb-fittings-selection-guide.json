@@ -1,0 +1,592 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Scelta dei raccordi filetto-portagomma: filettature, tenute e misure dei tubi",
+      "seoTitle": "Raccordi filetto-portagomma: scelta di filettatura, tenuta e tubo | FOREACH",
+      "seoDescription": "Abbina i modelli FOREACH SA, SAL, SB, SBS, SBR e SC a filettature UNF, metriche, G1/8 e NPT. Confronta tenuta sul filetto e tenuta frontale sul fondo, misure dei tubi e montaggio.",
+      "coverImage": "/images/resources/technical-articles/threaded-hose-barb-fittings-selection-guide/thread-to-barbed-fittings-cover.webp",
+      "coverAlt": "Foto di raccordi FOREACH filetto-portagomma in diverse misure"
+    },
+    "deck": "SA/SAL realizzano la tenuta sulla filettatura con un materiale di tenuta ausiliario. SB/SBS/SBR fanno tenuta per contatto sulla faccia di fondo. Abbina filettature UNF, NPT, metriche o G1/8 e diametro interno del tubo. Anche con una filettatura identica 1/4-28 UNF, la struttura di tenuta può cambiare.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "lead": "Un raccordo filetto-portagomma collega una porta filettata a un tubo flessibile.",
+        "text": "Un raccordo filetto-portagomma collega una porta filettata a un tubo flessibile. Un’estremità si avvita su una pompa, una valvola, un collettore o un raccordo corrispondente. L’altra si inserisce nel tubo, che aderisce al portagomma per garantire tenuta e ritegno. Si parla anche di raccordo portagomma filettato o adattatore filetto-portagomma."
+      },
+      {
+        "type": "paragraph",
+        "text": "Specifica insieme filettatura, struttura di tenuta della porta e diametro interno del tubo. «Da 1/4 a 3.2» è incompleto. 1/4 può riferirsi a norme di filettatura diverse e 3.2 può indicare il diametro interno o esterno del tubo o il foro del raccordo."
+      },
+      {
+        "type": "paragraph",
+        "text": "I raccordi FOREACH dritti SA e a gomito SAL fanno tenuta sulla filettatura con nastro PTFE o sigillante compatibile. I raccordi dritti SB, dritti corti SBS e dritti orientabili SBR fanno tenuta per contatto sulla faccia di fondo, senza nastro o sigillante. SC ha filettature femmina M6×1 o 1/4-28 UNF per ricevere, in genere, un raccordo compatibile per tubo rigido. La disponibilità di PP, PA, POM e PVDF dipende dal codice modello completo."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Come realizzano la tenuta sul lato porta e sul lato tubo i raccordi filetto-portagomma?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "SA/SAL usano un materiale ausiliario nei filetti accoppiati per chiudere i percorsi di perdita. SB/SBS/SBR sfruttano la forza assiale della filettatura per premere la faccia inferiore della spalla contro il fondo della porta. La filettatura serve principalmente a trattenere il raccordo. Mantieni pulita e protetta la superficie di tenuta effettiva sul fondo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sul lato tubo, la parete si dilata sul portagomma e vi aderisce per garantire tenuta e ritegno. Sul lato apparecchiatura controlla filettatura e struttura di tenuta. Sul lato tubo verifica diametro interno, materiale, profondità di inserimento e ritegno. Il solo serraggio non basta a controllare entrambi i lati."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 1200,
+            "height": 300,
+            "alt": "Due punti di tenuta tra una porta filettata dell’apparecchiatura e un tubo flessibile",
+            "caption": "Controlla separatamente porta filettata, passaggio interno e collegamento portagomma. Serrare un’estremità non corregge un difetto all’altra.",
+            "flowNodes": [
+              {
+                "label": "Porta dell’apparecchiatura",
+                "detail": "Norma della filettatura, profondità della porta e superficie di tenuta"
+              },
+              {
+                "label": "Adattatore",
+                "detail": "Struttura di tenuta sul lato filettato e passaggio interno"
+              },
+              {
+                "label": "Tubo flessibile",
+                "detail": "Diametro interno, spessore della parete, materiale e accoppiamento con il portagomma"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Serrare la filettatura dell’apparecchiatura in genere non risolve una perdita alla base del portagomma. Aggiungere una fascetta non ripara una superficie di tenuta graffiata. Individua prima il punto della perdita, poi verifica quote, superfici e montaggio pertinenti."
+          }
+        ]
+      },
+      {
+        "title": "Che relazione c’è tra filettature UNF, NPT, metriche e G e metodo di tenuta?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Distingui prima filettature cilindriche e coniche, poi individua la struttura di tenuta del prodotto. 10-32 UNF, 1/4-28 UNF, M5×0.8, M6×1 e G1/8 sono cilindriche, con diametro nominale costante lungo l’asse. 1/8-27 NPT e 1/4-18 NPT sono coniche. La forma della filettatura descrive l’accoppiamento. La struttura della serie SA o SB indica dove avviene la tenuta."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Designazione completa della filettatura / codice modello",
+              "Forma della filettatura",
+              "Serie e filettatura maschio o femmina",
+              "Tenuta lato apparecchiatura"
+            ],
+            "rows": [
+              [
+                "10-32 UNF／U32",
+                "Filettatura cilindrica unificata a passo fine, 32 filetti per pollice",
+                "SA-U32, SAL-U32: maschio",
+                "SA/SAL: filetti accoppiati con nastro PTFE o sigillante per filettature"
+              ],
+              [
+                "1/4-28 UNF／U28",
+                "Filettatura cilindrica unificata a passo fine, 28 filetti per pollice",
+                "SA, SAL, SB, SBR: maschio. SC: femmina",
+                "SA/SAL: tenuta sul filetto. SB/SBR: tenuta frontale sul fondo. SC: dipende da raccordo per tubo rigido ed elementi di tenuta abbinati"
+              ],
+              [
+                "1/8-27 NPT／1/8NPT",
+                "Filettatura conica National Pipe Taper, 27 filetti per pollice",
+                "SA-1/8NPT, SAL-1/8NPT: maschio",
+                "Tenuta sul filetto con materiale ausiliario. Non applicare la coppia per filettature in plastica diverse da NPT"
+              ],
+              [
+                "1/4-18 NPT／1/4NPT",
+                "Filettatura conica National Pipe Taper, 18 filetti per pollice",
+                "SA-1/4NPT: maschio",
+                "Tenuta sul filetto con materiale ausiliario. Segui i requisiti di montaggio NPT"
+              ],
+              [
+                "M5×0.8／M5",
+                "Filettatura metrica cilindrica. Diametro nominale 5 mm e passo 0.8 mm",
+                "SB-M5: maschio",
+                "Contatto della faccia inferiore della spalla, senza nastro o sigillante"
+              ],
+              [
+                "M6×1／M6",
+                "Filettatura metrica cilindrica. Diametro nominale 6 mm e passo 1 mm",
+                "SB-M6, SBS-M6: maschio. SC-M6: femmina",
+                "SB/SBS: tenuta frontale sul fondo. SC: dipende da raccordo per tubo rigido ed elementi di tenuta abbinati"
+              ],
+              [
+                "G1/8／G1/8",
+                "Filettatura cilindrica British Standard Pipe Parallel",
+                "SA-G1/8: maschio",
+                "Elencato come modello SA con tenuta sul filetto. Segui i requisiti per il materiale di tenuta ausiliario"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "U32 significa 10-32 UNF e U28 significa 1/4-28 UNF. «10» è una designazione di misura della vite. Non indica 10 mm. Nelle filettature UNF e NPT, il numero dopo il trattino specifica i filetti per pollice. Nelle filettature M5×0.8 e M6×1, il numero dopo × indica il passo in millimetri. 1/4-28 UNF non è intercambiabile con 1/4-18 NPT, né G1/8 con 1/8-27 NPT."
+          },
+          {
+            "type": "paragraph",
+            "text": "SA-X32 è una variante distinta con filettatura inclinata, diversa dalla 10-32 UNF di SA-U32. Non presumere che sia NPT. Fornisci modello completo e disegno della porta, poiché «filettatura 32» è insufficiente. La tabella descrive i modelli indicati. Le disponibilità di filettature, materiali e misure dei tubi variano in base alla serie."
+          },
+          {
+            "type": "subheading",
+            "title": "Qual è la differenza tra tenuta SA sul filetto e tenuta SB sulla faccia di fondo?"
+          },
+          {
+            "type": "paragraph",
+            "text": "SA/SAL fanno tenuta nell’accoppiamento dei filetti grazie a nastro PTFE o sigillante compatibile con il fluido. Avvolgi il nastro nel senso della filettatura e controlla la quantità per evitare che residui o sigillante in eccesso entrino nel passaggio. La tenuta sul filetto non implica che tutti i modelli siano conici. SA-U28 è UNF cilindrico, SA-1/8NPT è NPT conico."
+          },
+          {
+            "type": "paragraph",
+            "text": "SB/SBS/SBR fanno tenuta sulla faccia inferiore della spalla. Il serraggio la preme assialmente contro la faccia della porta corrispondente. Le superfici devono essere pulite e a contatto corretto. Non usare nastro o sigillante e non provare a compensare con il nastro una porta troppo profonda, graffi o una faccia di fondo incompatibile."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Confronto a parità di filettatura",
+              "SA-U28-32D-PP-N",
+              "SB-U28-32-PP-N"
+            ],
+            "rows": [
+              [
+                "Specifiche comuni",
+                "Maschio 1/4-28 UNF, tubo con diametro interno di 3.2 mm, PP",
+                "Maschio 1/4-28 UNF, tubo con diametro interno di 3.2 mm, PP"
+              ],
+              [
+                "Punto effettivo di tenuta",
+                "Accoppiamento dei filetti",
+                "Faccia inferiore della spalla contro la superficie corrispondente della porta"
+              ],
+              [
+                "Materiale di tenuta ausiliario",
+                "Nastro PTFE o sigillante per filettature compatibile",
+                "Senza nastro o sigillante"
+              ],
+              [
+                "Requisiti della porta da abbinare",
+                "Filettatura compatibile e montaggio della tenuta sul filetto specifico per il modello",
+                "Filettatura compatibile, contatto frontale sul fondo e compressione alla profondità corretta"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Specifica «maschio 1/4-28 UNF + tenuta sul filetto» oppure «+ tenuta frontale sul fondo», poi diametro interno e materiale del tubo. Le sedi femmina SC-U28 e SC-M6 collegano in genere un raccordo per tubo rigido a un tubo flessibile. Determina la tenuta dal raccordo e dagli elementi di tenuta abbinati. Non applicare automaticamente il metodo con nastro di SA."
+          }
+        ]
+      },
+      {
+        "title": "Qual è la differenza tra diametro interno del tubo, diametro esterno del portagomma e foro del raccordo?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La misura dell’estremità per il tubo si riferisce innanzitutto al diametro interno del tubo. Diametro esterno, spessore della parete, materiale, durezza e tolleranze determinano montaggio, ritegno e serraggio con fascetta. Il diametro esterno massimo del risalto è normalmente più grande del diametro interno del tubo specificato. Misurare il risalto con un calibro non indica la misura del tubo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Quota SA-U28-32D",
+              "Valore di catalogo",
+              "Funzione"
+            ],
+            "rows": [
+              [
+                "Diametro interno del tubo compatibile",
+                "3.2 mm",
+                "Selezionare la misura sul lato tubo"
+              ],
+              [
+                "Foro A",
+                "2.4 mm",
+                "Controllare il passaggio. Il solo foro non determina la portata operativa"
+              ],
+              [
+                "Diametro esterno massimo B del portagomma",
+                "4.5 mm",
+                "Valutare l’inserimento con materiale, spessore della parete e tolleranze del tubo"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Queste tre quote appartengono a un unico raccordo ma servono a scopi diversi. Specifica «SA-U28-32D-PP-N, 1/4-28 UNF, per tubo con diametro interno di 3.2 mm», con diametro esterno e materiale del tubo e disegno della porta. Il foro è più piccolo del diametro interno del tubo. Includi questa restrizione locale nella valutazione dell’intero circuito."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il diametro interno uguale non garantisce lo stesso comportamento di montaggio. Durezza, spessore della parete e cedevolezza cambiano la risposta alla superficie d’invito e al profilo portagomma. Temperatura, compressione prolungata e rimozioni ripetute incidono sul ritegno. Scegli le fascette in base al diametro esterno del tubo montato e alla posizione disponibile. Una fascetta serrata troppo non corregge una misura errata."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/what-is-a-barbed-fitting/",
+                "label": "Profili portagomma, accoppiamento del tubo e serraggio con fascetta",
+                "prefix": "Per i codici C/F/D/V/X e l’accoppiamento del tubo, vedi "
+              }
+            ]
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/barbed-fitting-expansion-ratio/",
+                "label": "Calcolo della dilatazione sul portagomma e analisi delle tolleranze",
+                "prefix": "Per confrontare il diametro del risalto con il diametro interno del tubo, vedi ",
+                "suffix": "; "
+              },
+              {
+                "href": "/en/resources/technical-articles/fitting-material-selection-guide/",
+                "label": "Scelta dei materiali dei raccordi",
+                "prefix": "Per PP, PA e condizioni di pulizia, vedi ",
+                "suffix": "."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Quali sono le differenze tra raccordi filetto-portagomma SA, SAL, SB, SBS, SBR e SC?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Scegli prima il collegamento e la struttura di tenuta, poi il modello completo. Questi esempi evitano di combinare tutte le opzioni della famiglia in una configurazione inesistente."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Configurazione e modello di esempio",
+              "Interfaccia e materiale",
+              "Funzione del collegamento"
+            ],
+            "rows": [
+              [
+                "SA-U28-32D-PP-N",
+                "Maschio cilindrico 1/4-28 UNF, tubo con diametro interno di 3.2 mm, PP",
+                "Raccordo dritto con tenuta sul filetto tramite nastro PTFE o sigillante compatibile"
+              ],
+              [
+                "SAL-U32-32D-PP-N",
+                "Maschio cilindrico 10-32 UNF, tubo con diametro interno di 3.2 mm, PP",
+                "Gomito con tenuta sul filetto. Cambia la direzione del tubo con lo stesso principio di tenuta di SA"
+              ],
+              [
+                "SB-M5-32D-PP-N",
+                "M5×0.8, tubo con diametro interno di 3.2 mm, PP",
+                "Raccordo dritto con tenuta frontale sul fondo. Abbina fondo e profondità della porta"
+              ],
+              [
+                "SBS-M6-32D-PP-N",
+                "M6×1, tubo con diametro interno di 3.2 mm, PP",
+                "Raccordo dritto corto con tenuta frontale sul fondo. S indica la versione corta. Fondo e profondità della porta devono comunque combaciare"
+              ],
+              [
+                "SBR-U28-32-PP-N",
+                "1/4-28 UNF, tubo con diametro interno di 3.2 mm, PP",
+                "Raccordo dritto orientabile con tenuta frontale sul fondo. R indica che è orientabile. Il tipo di tenuta nella porta resta lo stesso"
+              ],
+              [
+                "SC-U28-32D-PP-N",
+                "Femmina 1/4-28 UNF, tubo con diametro interno di 3.2 mm, PP",
+                "Sede femmina, di norma per un raccordo per tubo rigido. Abbina l’estremità del tubo e gli elementi di tenuta"
+              ]
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-32d-pp-n.webp",
+            "width": 800,
+            "height": 800,
+            "alt": "Raccordo dritto filetto-portagomma SA-U28-32D-PP-N con tenuta sul filetto",
+            "caption": "SA-U28-32D-PP-N: filettatura cilindrica maschio 1/4-28 UNF con materiale ausiliario nei filetti accoppiati. L’altra estremità accetta un tubo con diametro interno di 3.2 mm.",
+            "link": {
+              "href": "/en/products/fittings/thread-to-barbed-fittings/sa-u28-32d-pp-n/",
+              "label": "Vedi il modello SA"
+            }
+          },
+          {
+            "type": "figure",
+            "src": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-32d-pp-n.webp",
+            "width": 800,
+            "height": 800,
+            "alt": "Raccordo dritto filetto-portagomma SB-M5-32D-PP-N con tenuta frontale sul fondo",
+            "caption": "SB-M5-32D-PP-N: la filettatura cilindrica maschio M5×0.8 fornisce la compressione. La spalla inferiore fa tenuta contro la faccia della porta senza nastro o sigillante.",
+            "link": {
+              "href": "/en/products/fittings/thread-to-barbed-fittings/sb-m5-32d-pp-n/",
+              "label": "Vedi il modello SB"
+            }
+          },
+          {
+            "type": "paragraph",
+            "text": "Un gomito deve essere orientato correttamente dopo il montaggio. Svitare di mezzo giro un giunto già sigillato può compromettere la tenuta. La funzione orientabile di SBR non dimostra l’idoneità come giunto rotante ad alta velocità in continuo. La rotazione continua richiede valori specificati di velocità, durata, pressione e tenuta."
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere un raccordo filetto-portagomma M6 per tubi con diametro interno di 3.2 mm?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Supponiamo che un circuito di lavaggio abbia una porta femmina M6×1 a fondo piatto, un tubo con diametro interno di 3.2 mm e spazio per un’uscita dritta. SBS-M6-32D-PP-N è un candidato. Il corpo in PP e la tenuta frontale sul fondo soddisfano i requisiti iniziali di filettatura e tubo."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Sezione della porta: verifica M6×1, lunghezza utile della filettatura, profondità e zona di tenuta affinché le facce combacino. La sola possibilità di avvitare il raccordo non basta.",
+              "Tubo: registra diametro esterno, materiale, durezza e tolleranze per il tubo con diametro interno di 3.2 mm. Il catalogo indica un risalto di 4.5 mm e un foro di 2.4 mm, rispettivamente per valutare montaggio e passaggio.",
+              "Fluido: valuta liquido di lavaggio e successivi detergenti a contatto con PP e tubo, alle concentrazioni, temperature e durate effettive.",
+              "Spazio: prevedi accesso agli attrezzi e raggio di curvatura del tubo. Evita carichi laterali o contatto con parti adiacenti.",
+              "Montaggio: mantieni pulite la faccia inferiore di SBS e la faccia corrispondente della porta. Non usare nastro o sigillante. Definisci i requisiti di serraggio per modello e materiale della porta, poi inserisci e sostieni il tubo.",
+              "Prestazioni: prova la tenuta alle pressioni, temperature e condizioni di avvio e arresto specificate. Verifica la portata obiettivo. Per il servizio di aspirazione aggiungi le prove di tenuta in vuoto."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Se la porta è in realtà 1/4-28 UNF, scegli nuovamente filettatura e tenuta. Se «tubo da 3.2 mm» indica il diametro esterno, determina di nuovo quello interno. È un esempio di scelta e non una validazione in uno strumento specifico."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/products/fittings/thread-to-barbed-fittings/sbs-m6-32d-pp-n/",
+                "label": "Specifiche SBS-M6-32D-PP-N e richiesta del disegno"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Usa il processo di scelta M6 qui sopra per definire i raccordi delle linee di reagenti e lavaggio. Queste guide descrivono le relative funzioni del circuito."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/applications/ivd/",
+                "label": "Diagnostica in vitro (IVD)",
+                "prefix": ""
+              },
+              {
+                "href": "/en/applications/analytical-instruments/",
+                "label": "Strumenti analitici",
+                "prefix": " · "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come montare i raccordi filetto-portagomma e quali materiali e attrezzi servono?",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Controlla e pulisci: verifica modello completo, filettature della porta e superfici di tenuta. Rimuovi i residui e controlla che il portagomma non presenti bave, graffi o crepe.",
+              "Realizza la tenuta secondo la serie: applica nastro PTFE nel senso della filettatura o sigillante compatibile per SA/SAL, controllando quantità e posizione. Pulisci le facce di tenuta sul fondo di SB/SBS/SBR e non usare nastro o sigillante.",
+              "Allinea prima di serrare: conferma che l’accoppiamento proceda senza impedimenti, poi segui i requisiti di modello e materiale della porta. Arresta il montaggio e ispeziona in caso di resistenza anomala. Non forzare i filetti disallineati.",
+              "Usa gli attrezzi adatti sulle superfici previste. Dove serve il controllo della coppia, scegli una chiave dinamometrica nell’intervallo appropriato. Non afferrare portagomma o tubo con le pinze.",
+              "Prepara il tubo: taglia perpendicolarmente, rimuovi i residui e spingi in direzione assiale fino alla posizione specificata. Evita movimenti ripetuti di oscillazione che dilatano l’estremità.",
+              "Sostieni e riprova: sostieni il tubo, monta fascette adatte se necessario, poi controlla perdite, infiltrazioni d’aria, ritegno e portata in tutte le condizioni operative."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le note di montaggio di questa serie indicano per i raccordi filettati in PP, PA e POM una coppia di 0.25–0.30 N·m (±0.05 N·m), esclusi gli NPT. Non estenderla a PVDF, raccordi metallici o altre strutture. Controlla anche materiale della porta e requisiti del modello. Per NPT segui la relativa procedura. Registra intervallo dell’attrezzo, impostazione, materiale di tenuta e condizioni della prova di tenuta per la produzione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Arresta e depressurizza il sistema prima della rimozione. Le estremità riutilizzate dei tubi possono essere allargate, segnate o screpolate. Ispezionale e sostituiscile o ripreparale secondo la manutenzione prevista. Non mascherare un accoppiamento troppo stretto con grassi, solventi o riscaldamento non approvati."
+          }
+        ]
+      },
+      {
+        "title": "Come diagnosticare perdite, infiltrazioni d’aria o una portata ridotta?",
+        "blocks": [
+          {
+            "type": "table",
+            "headers": [
+              "Sintomo",
+              "Che cosa controllare",
+              "Verifica dopo la correzione"
+            ],
+            "rows": [
+              [
+                "Perdita vicino alla filettatura",
+                "Norma della filettatura, metodo di tenuta, materiale ausiliario e danni da montaggio disallineato",
+                "Rimonta correttamente e ripeti la prova. Evita di continuare a serrare"
+              ],
+              [
+                "Il raccordo a tenuta frontale sul fondo perde ancora",
+                "Profondità della porta, forma della faccia, graffi, residui e contatto effettivo delle superfici",
+                "Confronta entrambi i disegni. Pulisci o sostituisci le parti danneggiate ed esegui una prova di tenuta"
+              ],
+              [
+                "Perdita nel collegamento tra portagomma e tubo",
+                "Diametro interno errato, estremità danneggiata, profondità di inserimento o danni al portagomma",
+                "Sostituisci il tubo o il raccordo non idoneo. Controlla tenuta e ritegno"
+              ],
+              [
+                "Bolle in aspirazione senza liquido visibile all’esterno",
+                "Infiltrazioni d’aria in vuoto, alimentazione a monte e altri punti di perdita",
+                "Controlla la tenuta in vuoto tratto per tratto. La sola prova a pressione positiva non basta"
+              ],
+              [
+                "Il tubo si allenta dopo il funzionamento",
+                "Rammollimento o rilassamento dovuto al calore, picchi di pressione e trazione sul tubo",
+                "Ricontrolla materiale, accoppiamento sul portagomma, supporto e fascette"
+              ],
+              [
+                "La portata cala dopo aver sostituito il raccordo",
+                "Passaggio minimo, sigillante sporgente, residui o curve strette",
+                "Dopo la pulizia confronta portata e pressione differenziale nelle condizioni iniziali di servizio"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Registra modello completo, specifica del tubo, revisione del disegno della porta, fluido, pressione, temperatura, durata della prova e metodo di montaggio. Definisci numero di cicli, carichi e criteri di accettazione prima delle prove di scollegamento o ritegno. La validazione dei campioni diventa così un requisito ripetibile di acquisto e controllo."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sui raccordi filetto-portagomma",
+    "faqItems": [
+      {
+        "question": "3.2 mm indica il diametro interno o esterno del tubo?",
+        "answer": "Nelle tabelle dei modelli indica il diametro interno del tubo compatibile. Risalto e foro sono quote separate. SA-U28-32D, ad esempio, accetta un tubo con diametro interno di 3.2 mm, con risalto di 4.5 mm e foro di 2.4 mm."
+      },
+      {
+        "question": "1/4-28 UNF e 1/4 NPT sono intercambiabili?",
+        "answer": "No. 1/4-28 UNF è cilindrica, con 28 filetti per pollice. SA-1/4NPT usa 1/4-18 NPT, conica, con 18 filetti per pollice. Quote, passo e forma sono diversi. Usare lo stesso materiale di tenuta non le rende intercambiabili."
+      },
+      {
+        "question": "Tutti i raccordi filetto-portagomma richiedono nastro PTFE?",
+        "answer": "No. FOREACH SA/SAL usano nastro PTFE o sigillante compatibile. SB/SBS/SBR fanno tenuta per contatto frontale sul fondo senza nastro o sigillante. Le sedi femmina SC seguono i requisiti del raccordo per tubo rigido e degli elementi di tenuta abbinati."
+      },
+      {
+        "question": "Qual è la differenza principale tra SA e SB?",
+        "answer": "SA fa tenuta nei filetti accoppiati con materiale ausiliario. SB fa tenuta sulla faccia inferiore della spalla, con la filettatura che fornisce compressione. SA-U28-32D-PP-N e SB-U28-32-PP-N hanno entrambi filettatura maschio 1/4-28 UNF per tubo con diametro interno di 3.2 mm, ma richiedono porte e montaggio diversi."
+      },
+      {
+        "question": "I raccordi orientabili SBR si possono usare in rotazione continua?",
+        "answer": "La denominazione da sola non è sufficiente. La rotazione continua richiede valori definiti di velocità, pressione, temperatura, durata e tenuta. L’articolo descrive la struttura orientabile di SBR senza qualificarla come giunto rotante in servizio continuo."
+      },
+      {
+        "question": "L’assenza di perdite sull’estremità filettata significa che tutto il collegamento è a tenuta?",
+        "answer": "Verifica anche accoppiamento tra portagomma e tubo, portata e condizioni effettive di servizio. Sulle linee di aspirazione controlla le infiltrazioni d’aria in vuoto e riproduci le condizioni pertinenti di avvio e arresto, riscaldamento e carichi esterni. Entrambi i punti di tenuta e il ritegno del tubo richiedono validazioni separate."
+      }
+    ],
+    "cta": {
+      "title": "Scegli l’adattatore dal disegno della porta e dalla specifica del tubo",
+      "description": "Indica norma della filettatura, sezione della porta, diametri interno ed esterno e materiale del tubo, oltre a fluido, pressione e temperatura. Questi dati permettono di definire struttura, metodo di tenuta e condizioni di montaggio.",
+      "contactLabel": "Confrontati con noi sulla scelta dell’adattatore",
+      "productsLabel": "Vedi i modelli filetto-portagomma",
+      "productsHref": "/en/products/fittings/thread-to-barbed-fittings/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "two-seals",
+      "label": "Tenute lato porta e tubo"
+    },
+    {
+      "id": "threads",
+      "label": "Filettature e metodi di tenuta",
+      "children": [
+        {
+          "id": "sa-vs-sb",
+          "label": "Tenuta SA sul filetto e SB sul fondo"
+        }
+      ]
+    },
+    {
+      "id": "tubing-size",
+      "label": "Diametro interno del tubo, esterno del portagomma e foro"
+    },
+    {
+      "id": "models",
+      "label": "Modelli e strutture da SA a SC"
+    },
+    {
+      "id": "selection-example",
+      "label": "Esempio M6 con tubo da 3.2 mm"
+    },
+    {
+      "id": "installation",
+      "label": "Montaggio, sigillanti e attrezzi"
+    },
+    {
+      "id": "troubleshooting",
+      "label": "Diagnosi di perdite, infiltrazioni d’aria e cali di portata"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Scelta dei raccordi filetto-portagomma: filettature, tenute e misure dei tubi"
+    ],
+    "mentions": [
+      "SA",
+      "SAL",
+      "SB",
+      "SBS",
+      "SBR",
+      "SC",
+      "UNF",
+      "NPT",
+      "M6×1"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "threaded-hose-barb-rotary-fitting",
+      "title": "Raccordo filetto-portagomma orientabile",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/",
+      "imageSrc": "/images/resources/technical-articles/threaded-hose-barb-fittings-selection-guide/rotary-thread-to-barbed-fitting-square.webp",
+      "imageAlt": "Raccordo filetto-portagomma orientabile. Foto di prodotto FOREACH",
+      "imageFill": true
+    },
+    {
+      "id": "threaded-hose-barb-fitting",
+      "title": "Raccordo filetto-portagomma",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/",
+      "imageSrc": "/images/resources/technical-articles/threaded-hose-barb-fittings-selection-guide/thread-to-barbed-fitting-square.webp",
+      "imageAlt": "Raccordo filetto-portagomma. Foto di prodotto FOREACH",
+      "imageFill": true
+    }
+  ],
+  "footerProducts": [
+    {
+      "id": "809467",
+      "title": "Raccordo dritto SA con tenuta sul filetto SA-U28-32D-PP-N",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/sa-u28-32d-pp-n/",
+      "imageSrc": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-straight-male-thread-to-barb-fitting-1-4-28-unf-sa-u28-32d-pp-n.webp",
+      "imageAlt": "FOREACH SA-U28-32D-PP-N, raccordo dritto SA con tenuta sul filetto"
+    },
+    {
+      "id": "809480",
+      "title": "Raccordo dritto SB con tenuta sul fondo SB-M5-32D-PP-N",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/sb-m5-32d-pp-n/",
+      "imageSrc": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m5-x-0-8-sb-m5-32d-pp-n.webp",
+      "imageAlt": "FOREACH SB-M5-32D-PP-N, raccordo dritto SB con tenuta sul fondo"
+    },
+    {
+      "id": "809303",
+      "title": "Raccordo SBS M6 con tenuta sul fondo SBS-M6-32D-PP-N",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/sbs-m6-32d-pp-n/",
+      "imageSrc": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-flat-bottom-seal-male-thread-to-barb-fitting-m6-x-1-sbs-m6-32d-pp-n.webp",
+      "imageAlt": "FOREACH SBS-M6-32D-PP-N, raccordo SBS M6 con tenuta sul fondo"
+    },
+    {
+      "id": "809530",
+      "title": "Raccordo filetto-portagomma orientabile SBR SBR-U28-32-PP-N",
+      "href": "/en/products/fittings/thread-to-barbed-fittings/sbr-u28-32-pp-n/",
+      "imageSrc": "/images/products/fittings/thread-to-barbed-fittings/products/3-2mm-tube-id-pp-swivel-male-thread-to-barb-fitting-1-4-28-unf-sbr-u28-32-pp-n.webp",
+      "imageAlt": "FOREACH SBR-U28-32-PP-N, raccordo filetto-portagomma orientabile SBR"
+    }
+  ]
+}

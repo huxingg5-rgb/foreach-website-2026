@@ -14,14 +14,26 @@ import ProductEmptyState from "@/components/products/selection/ProductEmptyState
 import type { ProductSelectionCategoryItem, ProductSelectionFilterGroup, ProductSelectionProductItem } from "@/components/products/selection/product-selection-ui.types";
 import { tubingAssemblyTypes, type TubingAssemblyType } from "@/data/products/tubing-assemblies.en";
 import type { TubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
+import { getGermanDraftLink, getHindiDraftLink } from "@/lib/i18n/draft-languages";
 import { getTubingAssemblyLocalePrefix } from "@/data/products/tubing-assemblies/locales";
 
-export default function TubingAssembliesSelection({ initialType = "", content, afterContent }: { initialType?: TubingAssemblyType["id"] | ""; content: TubingAssemblySelectionContent; afterContent?: ReactNode }) {
+export default function TubingAssembliesSelection({ initialType = "", content, afterContent, germanDraft = false }: { initialType?: TubingAssemblyType["id"] | ""; content: TubingAssemblySelectionContent; afterContent?: ReactNode; germanDraft?: boolean }) {
   const { locale, ui, cards: products, typeNames, overview, intros, introImages } = content;
-  const prefix = getTubingAssemblyLocalePrefix(locale);
+  const prefix = germanDraft ? "/de" : getTubingAssemblyLocalePrefix(locale);
   const getPath = (id?: string) => `${prefix}/products/tubing-assemblies/${id ? `${id}/` : ""}`;
   const category: ProductSelectionCategoryItem = { id: "tubing-assemblies", label: ui.category, description: overview.paragraphs[0], sortOrder: 100 };
-  const categories: ProductSelectionCategoryItem[] = [...(["pumps", "valves", "probes", "fittings", "tubing", "control"] as const).map((id, sortOrder) => ({ id, label: ui[id], sortOrder, description: "", href: id === "control" && locale !== "en" ? `${prefix}/products/?category=control` : `${prefix}/products/${id}/` })), category];
+  const categories: ProductSelectionCategoryItem[] = [
+    ...(["pumps", "valves", "probes", "fittings", "tubing", "control"] as const).map((id, sortOrder) => ({
+      id,
+      label: ui[id],
+      sortOrder,
+      description: "",
+      href: locale === "hi" ? getHindiDraftLink("/en/products/" + id + "/").href : id === "control" && locale !== "en"
+          ? `${prefix}/products/?category=control`
+          : `${prefix}/products/${id}/`,
+    })),
+    category,
+  ];
   const filterGroup: ProductSelectionFilterGroup = { key: "productType", title: ui.productType, inputType: "single", layout: "two", options: tubingAssemblyTypes.map(item => ({ value: item.id, label: typeNames[item.id] })) };
   const router = useRouter();
   const [searchInput, setSearchInput] = useState("");
@@ -60,11 +72,11 @@ export default function TubingAssembliesSelection({ initialType = "", content, a
       sourceType: "pump-selection", sourceLabel: ui.product, productName: ui.category,
       productCode: product.productId, foreachModel: String(product.cardTitle),
       competitorModels: [], quantity: 1, needDrawing: false,
-      imagePath: product.imageCard, detailHref: product.detailHref,
+      imagePath: product.imageCard, detailHref: locale === "hi" && product.detailHref ? getHindiDraftLink(product.detailHref).href : germanDraft && product.detailHref ? getGermanDraftLink(product.detailHref).href : product.detailHref,
     });
   }
 
-  return <div className="products-selection-page">
+  return <div className="products-selection-page" lang={germanDraft ? "de-DE" : locale === "hi" ? "hi-IN" : locale === "it" ? "it-IT" : undefined}>
     <SitePageShell breadcrumbItems={[
       { label: ui.home, href: `${prefix}/` }, { label: ui.products, href: `${prefix}/products/` },
       { label: ui.category, ...(activeType ? { href: getPath() } : {}) },
@@ -123,7 +135,7 @@ export default function TubingAssembliesSelection({ initialType = "", content, a
                   selectedTags={activeType ? [{ key: "productType", value: activeType, label: typeNames[activeType] }] : []}
                   onResetFilters={resetFilters}
                 />
-                {matchedProducts.length ? <TubingAssemblyCardGrid products={matchedProducts} locale={locale} copy={ui}
+                {matchedProducts.length ? <TubingAssemblyCardGrid products={matchedProducts} locale={locale} copy={ui} germanDraft={germanDraft}
                   selectedList={selectedList}
                   onToggleList={toggleProduct}
                 /> : <ProductEmptyState title={ui.emptyTitle} description={ui.emptyDescription} />}

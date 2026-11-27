@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 import { notFound } from 'next/navigation';
 import InternationalApplicationPage from '@/components/applications/InternationalApplicationPage';
 import { isApplicationTranslationLocale, localizedApplicationStaticParams, localizedApplicationAlternates } from '@/data/applications/international-locales/routes';
@@ -8,6 +9,13 @@ import { getLocalizedApplicationDocument, getLocalizedApplicationMetadata } from
 ========================================================= */
 
 import type { Metadata } from "next";
+import { isLocalizedHindiDraftPath, isLocalizedItalianDraftPath, languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import hindiCopy from "@/data/applications/hindi-hub-locales/analytical-instruments.json";
+import { getHindiApplicationResources, getHindiApplicationSchema, getHindiApplicationTranslation, hindiApplicationLabels, hindiApplicationMetadata, localizeHindiApplication, translateHindiApplication } from "@/services/applications/hindi-application";
+import italianCopy from "@/data/applications/italian-hub-locales/analytical-instruments.json";
+import { getItalianApplicationSchema, getItalianReviewResources, italianApplicationLabels, italianApplicationMetadata, translateItalianApplication } from "@/services/applications/italian-review";
+import germanCopy from "@/data/applications/german-hub-locales/analytical-instruments.json";
+import { germanApplicationLabels, germanApplicationMetadata, getGermanApplicationSchema, getGermanReviewResources, translateGermanApplication } from "@/services/applications/german-review";
 
 import AnalyticalInstrumentsQueryView from "@/components/applications/analytical-instruments/AnalyticalInstrumentsQueryView";
 import AnalyticalApplicationDocument from "@/components/applications/analytical-documents/AnalyticalApplicationDocument";
@@ -20,6 +28,10 @@ import { getAnalyticalInstrumentsApplicationPageData } from "@/services/applicat
 import "@/app/applications/analytical-instruments/analytical-instruments-application.css";
 import "@/app/applications/ivd/ivd-application.css";
 
+const italianPath = "/it/applications/analytical-instruments/";
+const hasItalian = () => isLocalizedItalianDraftPath(italianPath);
+const hindiPath = "/hi/applications/analytical-instruments/";
+const hasHindi = () => isLocalizedHindiDraftPath(hindiPath);
 const ENABLED_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
 type AnalyticalInstrumentsApplicationLocalePageProps = {
@@ -29,15 +41,26 @@ type AnalyticalInstrumentsApplicationLocalePageProps = {
 };
 
 export function generateStaticParams() {
-  return ENABLED_LOCALES.map((locale) => ({ locale }));
+  return [...ENABLED_LOCALES, ...(languageDraftsEnabled ? ["de"] : []), ...(hasItalian() ? ["it"] : []), ...(hasHindi() ? ["hi"] : [])].map(locale => ({ locale }));
 }
 
 
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: AnalyticalInstrumentsApplicationLocalePageProps): Promise<Metadata> {
   const { locale } = await params;
 
+  if (languageDraftsEnabled && locale === "de") {
+    return germanApplicationMetadata(createAnalyticalDocumentMetadata(analyticalDocuments[0]), "analytical-instruments", germanCopy);
+  }
+
+  if (locale === "it" && hasItalian()) {
+    return italianApplicationMetadata(createAnalyticalDocumentMetadata(analyticalDocuments[0]), italianCopy, "/en/applications/analytical-instruments/");
+  }
+
+  if (locale === "hi" && hasHindi()) {
+    return hindiApplicationMetadata(createAnalyticalDocumentMetadata(analyticalDocuments[0]), hindiCopy, "/en/applications/analytical-instruments/");
+  }
   if (locale === "en") {
     return createAnalyticalDocumentMetadata(analyticalDocuments[0]);
   }
@@ -50,19 +73,44 @@ export default async function AnalyticalInstrumentsApplicationLocalePage({
   params,
 }: AnalyticalInstrumentsApplicationLocalePageProps) {
   const { locale } = await params;
-  const data = getAnalyticalInstrumentsApplicationPageData(locale);
+  const german = languageDraftsEnabled && locale === "de";
+  const italian = locale === "it" && hasItalian();
 
-  if (locale === "en") {
-    const document = await getEnglishAnalyticalDocument("");
-    if (!document) throw new Error("Missing English analytical application overview");
-    const landingData = createEnglishApplicationData("analytical-instruments", data);
+  const hindi = locale === "hi" && hasHindi();
+  if (locale === "en" || german || italian || hindi) {
+    const source = await getEnglishAnalyticalDocument("");
+    if (!source) throw new Error("Missing English analytical application overview");
+    const data = createEnglishApplicationData("analytical-instruments", getAnalyticalInstrumentsApplicationPageData("en"));
+    const translateHindi = (text: string) => getHindiApplicationTranslation(hindiCopy, text, "analytical-instruments");
+    const document = german ? translateGermanApplication(source, germanCopy) : italian ? translateItalianApplication(source, italianCopy) : hindi ? localizeHindiApplication(source, translateHindi) : source;
+    const landingData = german ? {
+      ...data,
+      breadcrumb: translateGermanApplication(data.breadcrumb, germanCopy),
+      cta: translateGermanApplication(data.cta, germanCopy),
+    } : italian ? {
+      ...data,
+      breadcrumb: translateItalianApplication(data.breadcrumb, italianCopy),
+      cta: translateItalianApplication(data.cta, italianCopy),
+    } : hindi ? {
+      ...data,
+      breadcrumb: translateHindiApplication(data.breadcrumb, translateHindi),
+      cta: translateHindiApplication(data.cta, translateHindi),
+    } : data;
+    const schema = german
+      ? getGermanApplicationSchema(document, "/de/applications/analytical-instruments/", landingData.breadcrumb)
+      : italian ? getItalianApplicationSchema(document, italianPath, landingData.breadcrumb) : hindi ? getHindiApplicationSchema(document, hindiPath, landingData.breadcrumb) : createAnalyticalDocumentSchema(document);
     return (
       <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(createAnalyticalDocumentSchema(document)).replace(/</g, "\\u003c") }} />
-        <AnalyticalInstrumentsQueryView data={landingData}>
-        <AnalyticalInstrumentsLandingShell data={landingData} showInstrumentNavigation={false}>
-          <AnalyticalApplicationDocument document={document} embedded />
-        </AnalyticalInstrumentsLandingShell>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
+        <AnalyticalInstrumentsQueryView data={landingData} italian={italian} hindi={hindi}>
+          <AnalyticalInstrumentsLandingShell data={landingData} showInstrumentNavigation={false} lang={hindi ? "hi-IN" : undefined}
+            breadcrumbAriaLabel={german ? "Navigation im Anwendungsbereich" : italian ? "Navigazione tra le applicazioni" : hindi ? "अनुप्रयोगों का नेविगेशन" : undefined}>
+            <AnalyticalApplicationDocument document={document} embedded locale={german ? "de" : italian ? "it" : hindi ? "hi-IN" : undefined}
+              labels={german ? germanApplicationLabels : italian ? italianApplicationLabels : hindi ? hindiApplicationLabels : undefined}
+              italianCopy={italian ? italianCopy : undefined}
+              hindiCopy={hindi ? hindiCopy : undefined}
+              localizeRelatedResources={german ? resources => getGermanReviewResources(resources, germanCopy) : italian ? resources => getItalianReviewResources(resources, italianCopy) : hindi ? resources => getHindiApplicationResources(resources, translateHindi) : undefined} />
+          </AnalyticalInstrumentsLandingShell>
         </AnalyticalInstrumentsQueryView>
       </>
     );
@@ -71,3 +119,5 @@ export default async function AnalyticalInstrumentsApplicationLocalePage({
   if (!isApplicationTranslationLocale(locale)) notFound();
   return <InternationalApplicationPage locale={locale} kind="analytical-instruments" document={await getLocalizedApplicationDocument(locale, 'analytical-instruments')} />;
 }
+
+export const generateMetadata = withPublishedTranslationMetadata("/applications/analytical-instruments/", getPageMetadata);

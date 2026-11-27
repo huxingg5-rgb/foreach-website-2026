@@ -1,0 +1,88 @@
+{
+  "article": {
+    "introductionTitle": "FOREACH ad Anaheim",
+    "introductionParagraphs": [
+      "FOREACH aveva annunciato la partecipazione ad ADLM 2026, in programma ad Anaheim, in California, dal 26 al 30 luglio 2026.",
+      "Allo stand 4105 il team prevedeva di incontrare produttori di strumenti, ingegneri e partner del settore per discutere del controllo dei fluidi, della selezione dei componenti e dell’integrazione dei sistemi fluidici."
+    ],
+    "eventInformationTitle": "Informazioni sulla fiera",
+    "eventInformation": [
+      {
+        "label": "Fiera",
+        "value": "ADLM 2026"
+      },
+      {
+        "label": "Date",
+        "value": "26–30 luglio 2026"
+      },
+      {
+        "label": "Luogo",
+        "value": "Anaheim, California, USA"
+      },
+      {
+        "label": "Stand",
+        "value": "4105"
+      }
+    ],
+    "presentationTitle": "Prodotti e soluzioni in programma",
+    "presentationParagraphs": [
+      "I prodotti presentati coprono funzioni fluidiche essenziali, come il dosaggio accurato dei liquidi, il trasferimento dei fluidi, la commutazione dei circuiti fluidici, il monitoraggio della pressione, il rilevamento delle bolle e la connessione affidabile delle linee."
+    ],
+    "presentationLabel": "Soluzione in evidenza",
+    "presentationItems": [
+      {
+        "title": "Pompe di precisione",
+        "description": "Per il dosaggio accurato, il trasferimento, l’erogazione e la manipolazione automatica dei liquidi."
+      },
+      {
+        "title": "Valvole in miniatura",
+        "description": "Per la commutazione dei circuiti, l’intercettazione e la gestione di percorsi fluidici complessi."
+      },
+      {
+        "title": "Raccordi fluidici e tubi",
+        "description": "Opzioni per diverse misure dei tubi, filettature, materiali e fluidi."
+      },
+      {
+        "title": "Rilevamento della pressione e delle bolle",
+        "description": "Per monitorare le condizioni del circuito fluidico e lo stato di funzionamento dello strumento."
+      },
+      {
+        "title": "Soluzioni fluidiche personalizzate",
+        "description": "Assistenza in base all’applicazione, dalla selezione dei componenti all’integrazione dei sistemi."
+      },
+      {
+        "title": "Compatibilità e valutazione delle alternative",
+        "description": "Assistenza per la compatibilità dei materiali e la sostituzione dei componenti esistenti."
+      }
+    ],
+    "applicationTitle": "Assistenza ingegneristica per le applicazioni strumentali",
+    "applicationParagraphs": [
+      "FOREACH supporta le applicazioni nella diagnostica in vitro, nelle scienze della vita, nella strumentazione analitica e nell’automazione di laboratorio.",
+      "Oltre a fornire singoli componenti, il team di ingegneria assiste i clienti nella verifica della compatibilità dei materiali, nella selezione dei prodotti, nella valutazione di componenti alternativi e nell’integrazione dei sistemi fluidici."
+    ],
+    "experienceTitle": "Esperienza nel controllo di precisione dei fluidi",
+    "experienceParagraphs": [
+      "FOREACH continua a sviluppare e industrializzare tecnologie di controllo di precisione dei fluidi per pompe, valvole, sonde, raccordi, tubi, sensori e soluzioni fluidiche integrate.",
+      "L’obiettivo è aiutare chi sviluppa strumenti a migliorare la precisione del controllo dei fluidi, semplificare l’integrazione e soddisfare i requisiti di sistemi compatti e sempre più complessi."
+    ],
+    "recognitionTitle": "Investimenti continui nelle competenze ingegneristiche",
+    "recognitionParagraph": "FOREACH ha ottenuto in Cina riconoscimenti per l’innovazione specialistica e la crescita, a testimonianza degli investimenti continui nello sviluppo dei prodotti, nell’ingegneria e nella produzione.",
+    "recognitionLabel": "Riconoscimento",
+    "recognitionItems": [
+      {
+        "title": "Impresa specializzata e innovativa riconosciuta a livello nazionale",
+        "description": "Riconoscimento per specializzazione, impegno ingegneristico e innovazione di prodotto."
+      },
+      {
+        "title": "Shenzhen Gazelle Enterprise",
+        "description": "Riconoscimento per capacità di innovazione e crescita aziendale sostenuta."
+      }
+    ]
+  },
+  "support": {
+    "title": "Contatta il team FOREACH",
+    "description": "Se cerchi un nuovo componente fluidico, un’alternativa a un prodotto esistente o assistenza per la compatibilità dei materiali e l’integrazione dei sistemi, contatta il nostro team per discutere della tua applicazione.",
+    "buttonLabel": "Contattaci",
+    "href": "/it/contact"
+  }
+}

@@ -5,34 +5,54 @@ import mixing from "./probe-guide.mixing.intl.json";
 import ui from "./probe-detail-ui.intl.json";
 import overview from "./probe-overview.intl.json";
 import faq from "./probe-faq.intl.json";
+import de from "./probe-guide.de.json";
+import germanProbeBody from "./probe-detail-body.de.json";
+import italianCopy from "./probe-guide.it.json";
+import italianProbeBody from "./probe-detail-body.it.json";
+import hindiCopy from "./probe-guide.hi.json";
+import hindiProbeBody from "./probe-detail-body.hi.json";
+import { getGermanDraftLink, getHindiDraftLink, getItalianDraftLink } from "@/lib/i18n/draft-languages";
 import probeDetails from "../generated/probes/detail/index.json";
 import { getProbeGuide, type ProbeGuide } from "./probe-guide.zh";
 import type { ProductDetailPageData } from "./product-detail.types";
 
-export type ProbeLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru";
+export type ProbeLocale = "zh" | "de" | "it" | "hi" | "en" | "es" | "fr" | "ko" | "ru";
 const foreignLocales = ["en", "es", "fr", "ko", "ru"] as const;
+const germanCopy: Record<string, string> = de;
+export const germanProbeDetailBody: Readonly<Partial<Record<string, {cardTitle:string; title:string; meta:string; paragraphs:string[]}>>> = germanProbeBody;
+export const italianProbeDetailBody: typeof germanProbeDetailBody = italianProbeBody;
+export const italianProbeDetailSlugs = Object.keys(italianProbeBody);
+const italianProbeCopy: Readonly<Record<string, string>> = italianCopy;
+export const hindiProbeDetailBody: typeof germanProbeDetailBody = hindiProbeBody;
+export const hindiProbeDetailSlugs = Object.keys(hindiProbeBody);
+const hindiProbeCopy: Readonly<Record<string, string>> = hindiCopy;
 const catalog: Record<string, string[]> = { ...sampling, ...piercing, ...wash, ...mixing, ...ui, ...overview, ...faq };
 
 export function probeLocale(value: string): ProbeLocale {
-  return foreignLocales.find(locale => locale === value) || "zh";
+  return value === "de" || value === "it" || value === "hi" ? value : foreignLocales.find(locale => locale === value) || "zh";
 }
 
 export function probeLang(value: string) {
   const locale = probeLocale(value);
-  return locale === "zh" ? "zh-CN" : locale;
+  return locale === "zh" ? "zh-CN" : locale === "hi" ? "hi-IN" : locale;
 }
 
 /** Authored copy only. Customer inputs, model identifiers and files are never translated. */
 export function probeText(source: string, localeValue: string, values: Record<string, string> = {}): string {
   const locale = probeLocale(localeValue);
-  const text = locale === "zh" ? source : catalog[source]?.[foreignLocales.indexOf(locale)] ?? source;
+  const text = locale === "de" ? germanCopy[source] ?? catalog[source]?.[0] ?? source
+    : locale === "it" ? italianProbeCopy[catalog[source]?.[0] ?? source] ?? catalog[source]?.[0] ?? source
+    : locale === "hi" ? hindiProbeCopy[catalog[source]?.[0] ?? source] ?? catalog[source]?.[0] ?? source
+    : locale === "zh" ? source : catalog[source]?.[foreignLocales.indexOf(locale)] ?? source;
   return text.replace(/\{(\w+)\}/g, (match, key: string) => values[key] ?? match);
 }
 
 export function probeHref(href: string, localeValue: string): string {
   const locale = probeLocale(localeValue);
-  return locale !== "zh" && /^\/(?:products|resources|contact)(?:\/|$|[?#])/.test(href)
-    ? `/${locale}${href}` : href;
+  if (locale === "zh" || !/^\/(?:products|resources|contact)(?:\/|$|[?#])/.test(href)) return href;
+  if (locale === "hi") return getHindiDraftLink(`/en${href}`).href;
+  if (locale === "it") return getItalianDraftLink(`/en${href}`).href;
+  return locale === "de" ? getGermanDraftLink(`/en${href}`).href : `/${locale}${href}`;
 }
 
 /** Keep question IDs, source attribution and ordering shared with the Chinese guide. */
@@ -72,8 +92,11 @@ export function applyProbeDetailCopy<T extends ProductDetailPageData>(data: T, l
   const description = t(source.bottomCtaDescription);
   const button = t(source.bottomCtaButtonText);
   const href = probeHref("/contact/", locale);
+  const body = locale === "de" ? germanProbeDetailBody[data.slug] : locale === "it" ? italianProbeDetailBody[data.slug] : locale === "hi" ? hindiProbeDetailBody[data.slug] : undefined;
   return {
-    ...data, specs, specifications: specs,
+    ...data, ...(body ? {title: body.title, name: body.cardTitle,
+      description: body.meta, model: body.cardTitle} : {}),
+    specs, specifications: specs,
     faqs, faq: faqs, faqItems: faqs, detailFaqs: faqs,
     commonApplications: source.commonApplications.map(t),
     imageAlt: guide.name, imageAltEn: guide.name, mainImageAlt: guide.name,

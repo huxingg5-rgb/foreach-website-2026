@@ -1,4 +1,5 @@
 import type { LocaleCode } from "@/lib/i18n";
+import { getHindiDraftLink, getItalianDraftLink, isLocalizedGermanDraftPath } from "@/lib/i18n/draft-languages";
 
 export interface SelectionCartCopy {
   requestQuote: string;
@@ -30,7 +31,7 @@ export interface SelectionCartCopy {
   };
 }
 
-const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
+const SELECTION_CART_COPY: Record<LocaleCode | "de" | "it" | "hi", SelectionCartCopy> = {
   "zh-CN": {
     requestQuote: "询价申请",
     headerDescription:
@@ -93,6 +94,94 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
     sourceLabels: {
       products: "Products",
       fittingReplacement: "Fitting Replacement Search",
+    },
+  },
+  de: {
+    requestQuote: "Angebot anfragen",
+    headerDescription: "Prüfen Sie Modelle, Stückzahlen und benötigte Zeichnungen, bevor Sie die Anfrage senden oder eine PDF-Liste erstellen.",
+    productsCount: "Produkte",
+    drawingRequests: "Zeichnungsanfragen",
+    itemUnit: "Einträge",
+    emptyHint: "Wählen Sie ein Modell aus und fügen Sie es der Liste hinzu.",
+    openDetailsTitle: "Produktdetails in einem neuen Fenster öffnen",
+    noteTitle: "Hinweise zur Auswahlliste",
+    noteDescription:
+      "1. Die Liste wird in diesem Browser gespeichert. Wenn Sie Browserdaten löschen oder einen anderen Browser verwenden, kann die Liste verloren gehen.\n2. Sie können für jede Konfiguration eine bemaßte 2D-Zeichnung, ein 3D-CAD-Modell, beides oder keines davon anfordern. Die Anfrage enthält Modelle, Stückzahlen und die gewünschten Unterlagen.",
+    printTitle: "FOREACH Produktauswahlliste",
+    printDescription:
+      "Die Liste enthält die ausgewählten Modelle zur Modellbestätigung, Angebotsabstimmung und technischen Prüfung.",
+    generated: "Erstellt",
+    number: "Nr.",
+    source: "Quelle",
+    product: "Produkt",
+    relatedInformation: "Weitere Informationen",
+    model: "Modell",
+    drawing: "Benötigte Zeichnungen",
+    configuredProduct: "Konfiguriertes Produkt",
+    required: "Benötigt",
+    notRequired: "Nicht benötigt",
+    pdfHeaderAlt: "FOREACH PDF-Kopfzeile",
+    pdfFooterAlt: "FOREACH PDF-Fußzeile",
+    sourceLabels: {
+      products: "Produkte",
+      fittingReplacement: "Vergleich von Fluidik-Fittings",
+    },
+  },
+  hi: {
+    requestQuote: "मूल्य प्रस्ताव माँगें",
+    headerDescription: "अनुरोध भेजने या PDF सूची बनाने से पहले मॉडल, मात्रा और ज़रूरी ड्रॉइंग जाँचें।",
+    productsCount: "उत्पाद",
+    drawingRequests: "ड्रॉइंग के अनुरोध",
+    itemUnit: "आइटम",
+    emptyHint: "मॉडल चुनें और सूची में जोड़ें।",
+    openDetailsTitle: "नई विंडो में उत्पाद का विवरण खोलें",
+    noteTitle: "सूची के बारे में",
+    noteDescription:
+      "1. सूची इसी ब्राउज़र में सहेजी जाती है। ब्राउज़र का डेटा हटाने या दूसरा ब्राउज़र इस्तेमाल करने पर सूची खो सकती है।\n2. हर कॉन्फ़िगरेशन के लिए आयाम वाली 2D ड्रॉइंग, 3D CAD मॉडल, दोनों या कोई भी नहीं चुनें। अनुरोध में मॉडल, मात्रा और ड्रॉइंग की ज़रूरतें शामिल होंगी।",
+    printTitle: "FOREACH उत्पाद चयन सूची",
+    printDescription: "मॉडल की पुष्टि, मूल्य प्रस्ताव पर चर्चा और तकनीकी समीक्षा के लिए चुने गए मॉडल यहाँ दिए गए हैं।",
+    generated: "बनाने का समय",
+    number: "क्रमांक",
+    source: "स्रोत",
+    product: "उत्पाद",
+    relatedInformation: "संबंधित जानकारी",
+    model: "मॉडल",
+    drawing: "ज़रूरी ड्रॉइंग",
+    configuredProduct: "कॉन्फ़िगर किया गया उत्पाद",
+    required: "ज़रूरी",
+    notRequired: "ज़रूरी नहीं",
+    pdfHeaderAlt: "FOREACH PDF का हेडर",
+    pdfFooterAlt: "FOREACH PDF का फ़ुटर",
+    sourceLabels: { products: "उत्पाद", fittingReplacement: "फिटिंग के विकल्प खोजें" },
+  },
+  it: {
+    requestQuote: "Richiedi un preventivo",
+    headerDescription: "Controlla modelli, quantità e disegni richiesti prima di inviare la richiesta o generare un elenco PDF.",
+    productsCount: "Prodotti",
+    drawingRequests: "Disegni richiesti",
+    itemUnit: "voci",
+    emptyHint: "Seleziona un modello e aggiungilo all’elenco.",
+    openDetailsTitle: "Apri il dettaglio del prodotto in una nuova finestra",
+    noteTitle: "Note sull’elenco",
+    noteDescription:
+      "1. L’elenco è salvato in questo browser. Se cancelli i dati o usi un altro browser, potresti perderlo.\n2. Per ogni configurazione puoi scegliere il disegno quotato 2D, il modello CAD 3D, entrambi o nessuno. La richiesta includerà modelli, quantità e disegni selezionati.",
+    printTitle: "Elenco dei prodotti selezionati FOREACH",
+    printDescription: "L’elenco riporta i modelli selezionati per confermare i codici, discutere il preventivo ed eseguire la verifica tecnica.",
+    generated: "Data di generazione",
+    number: "N.",
+    source: "Origine",
+    product: "Prodotto",
+    relatedInformation: "Informazioni correlate",
+    model: "Modello",
+    drawing: "Disegni richiesti",
+    configuredProduct: "Prodotto configurato",
+    required: "Richiesto",
+    notRequired: "Non richiesto",
+    pdfHeaderAlt: "Intestazione PDF FOREACH",
+    pdfFooterAlt: "Piè di pagina PDF FOREACH",
+    sourceLabels: {
+      products: "Prodotti",
+      fittingReplacement: "Ricerca di raccordi compatibili",
     },
   },
   es: {
@@ -225,6 +314,29 @@ const SELECTION_CART_COPY: Record<LocaleCode, SelectionCartCopy> = {
   },
 };
 
-export function getSelectionCartCopy(locale: LocaleCode) {
+export function getSelectionCartCopy(locale: LocaleCode | "de" | "it" | "hi") {
   return SELECTION_CART_COPY[locale];
+}
+
+export function getCartDetailHref(
+  href: string | undefined,
+  locale: LocaleCode | "de" | "it" | "hi",
+  fittingPathPattern?: string,
+) {
+  if (!href || !href.startsWith("/") || href.startsWith("//")) return href;
+
+  const draftHref = href.replace(/^\/(?:en|es|fr|ko|ru)\/(de|it|hi)(?=\/|[?#]|$)/, "/$1");
+  const savedDraftHref = /^\/(?:de|it|hi)(?=\/|[?#]|$)/.test(draftHref);
+  if (locale === "zh-CN") return savedDraftHref ? draftHref.slice(3) || "/" : href;
+  if (locale !== "de" && locale !== "it" && locale !== "hi" && !savedDraftHref && new RegExp(`^/${locale}(?:/|$)`).test(href)) return href;
+
+  const unprefixedHref = draftHref.replace(/^\/(?:en|es|fr|ko|ru|de|it|hi)(?=\/|[?#]|$)/, "");
+  if (locale === "hi") return getHindiDraftLink("/en" + unprefixedHref).href;
+  if (locale === "it") return getItalianDraftLink("/en" + unprefixedHref).href;
+  if (locale === "de") {
+    const localized = `/de${unprefixedHref}`;
+    if (isLocalizedGermanDraftPath(localized.split(/[?#]/, 1)[0], fittingPathPattern)) return localized;
+    return `/en${unprefixedHref}`;
+  }
+  return `/${locale}${unprefixedHref}`;
 }

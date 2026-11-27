@@ -19,6 +19,7 @@ export type ProductDetailCategory =
   | "valves"
   | "needles"
   | "controllers"
+  | "fittings"
   | "tubing-assemblies";
 
 export type ProductDetailFaqItem = {

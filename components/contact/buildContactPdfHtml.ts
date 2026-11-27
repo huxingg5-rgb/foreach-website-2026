@@ -196,13 +196,13 @@ function splitMessageToPages(message: string, fallback: string) {
    页眉 HTML
 ========================================================= */
 
-function buildHeaderHtml() {
+function buildHeaderHtml(alt: string) {
   return `
     <header class="pdf-header">
       <img
         class="pdf-header-graphic"
         src="${PDF_HEADER_GRAPHIC_SRC}"
-        alt="Foreach request form header"
+        alt="${escapeHtml(alt)}"
       />
     </header>
   `;
@@ -212,13 +212,13 @@ function buildHeaderHtml() {
    页脚 HTML
 ========================================================= */
 
-function buildFooterHtml(pageNumber: number, totalPages: number) {
+function buildFooterHtml(pageNumber: number, totalPages: number, alt: string) {
   return `
     <footer class="pdf-footer">
       <img
         class="pdf-footer-graphic"
         src="${PDF_FOOTER_GRAPHIC_SRC}"
-        alt="Foreach request form footer"
+        alt="${escapeHtml(alt)}"
       />
 
       <div class="pdf-page-number">${pageNumber} / ${totalPages}</div>
@@ -279,6 +279,15 @@ export function buildContactPdfHtml({
   const notSelectedText = pdfTexts.notSelected;
 
   const isChinesePdf = isChineseLanguage(htmlLang);
+  const isGermanPdf = /^de(?:[-_]|$)/i.test(htmlLang);
+  const headerAlt = isGermanPdf ? "Kopfzeile des Foreach-Anfrageformulars" : "Foreach request form header";
+  const footerAlt = isGermanPdf ? "Fußzeile des Foreach-Anfrageformulars" : "Foreach request form footer";
+
+  function continuationTitle(title: string, page: number) {
+    if (isChinesePdf) return `${title}（续 ${page}）`;
+    if (isGermanPdf) return `${title} (Fortsetzung ${page})`;
+    return `${title} Continued ${page}`;
+  }
 
   const phoneLabel = isChinesePdf
     ? "电话"
@@ -306,13 +315,11 @@ export function buildContactPdfHtml({
     .map((messageChunk, index) => {
       currentPage += 1;
 
-      const pageTitle = isChinesePdf
-        ? `${pdfTexts.requirementDescription}（续 ${index + 1}）`
-        : `${pdfTexts.requirementDescription} Continued ${index + 1}`;
+      const pageTitle = continuationTitle(pdfTexts.requirementDescription, index + 1);
 
       return `
         <article class="pdf-page">
-          ${buildHeaderHtml()}
+          ${buildHeaderHtml(headerAlt)}
 
           <main class="pdf-main continuation-main">
             <section class="pdf-section">
@@ -323,7 +330,7 @@ export function buildContactPdfHtml({
             </section>
           </main>
 
-          ${buildFooterHtml(currentPage, totalPages)}
+          ${buildFooterHtml(currentPage, totalPages, footerAlt)}
         </article>
       `;
     })
@@ -336,15 +343,13 @@ export function buildContactPdfHtml({
       const pageTitle =
         index === 0
           ? pdfTexts.attachmentList
-          : isChinesePdf
-            ? `${pdfTexts.attachmentList}（续 ${index}）`
-            : `${pdfTexts.attachmentList} Continued ${index}`;
+          : continuationTitle(pdfTexts.attachmentList, index);
 
       const startIndex = index * 14;
 
       return `
         <article class="pdf-page attachment-page">
-          ${buildHeaderHtml()}
+          ${buildHeaderHtml(headerAlt)}
 
           <main class="pdf-main attachment-main">
             <section class="pdf-section">
@@ -367,7 +372,7 @@ export function buildContactPdfHtml({
             </section>
           </main>
 
-          ${buildFooterHtml(currentPage, totalPages)}
+          ${buildFooterHtml(currentPage, totalPages, footerAlt)}
         </article>
       `;
     })
@@ -720,7 +725,7 @@ export function buildContactPdfHtml({
 
 <body>
   <article class="pdf-page">
-    ${buildHeaderHtml()}
+    ${buildHeaderHtml(headerAlt)}
 
     <main class="pdf-main">
       <section class="pdf-title-row">
@@ -821,7 +826,7 @@ export function buildContactPdfHtml({
       }
     </main>
 
-    ${buildFooterHtml(1, totalPages)}
+    ${buildFooterHtml(1, totalPages, footerAlt)}
   </article>
 
   ${continuationPagesHtml}

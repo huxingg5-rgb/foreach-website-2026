@@ -1,0 +1,1576 @@
+{
+  "videos": {
+    "sv10-solenoid-valve-overview": {
+      "title": "Elettrovalvole in miniatura SV10: panoramica",
+      "seoTitle": "Video sulle elettrovalvole in miniatura SV10 | FOREACH",
+      "description": "Video di 45 secondi sulle elettrovalvole a membrana basculante SV10 di FOREACH per il controllo di aria e liquidi, nelle configurazioni a 2 e 3 porte.",
+      "highlightsIntroduction": "Il video illustra le connessioni della valvola, i materiali, i parametri prestazionali e il collettore integrato. Ogni riferimento temporale apre il punto corrispondente su YouTube.",
+      "highlights": [
+        {
+          "title": "Tipi di connessione e configurazioni della valvola",
+          "description": "La sequenza iniziale presenta formati di connessione diversi e configurazioni a due e tre vie. Confronta le immagini dei corpi valvola e delle porte, poi consulta le pagine dei prodotti per individuare la configurazione adatta."
+        },
+        {
+          "title": "Coefficiente di portata",
+          "description": "La voce narrante indica un coefficiente di portata Cv di 0.03. Per la specifica dettagliata e le condizioni operative, consulta la documentazione del prodotto scelto."
+        },
+        {
+          "title": "Materiali della membrana",
+          "description": "Sono disponibili membrane in EPDM, FKM e FFKM. La compatibilità dipende dal fluido effettivo e dalle condizioni operative. Prima di specificare un materiale, verifica l’intera configurazione delle parti a contatto con il fluido."
+        },
+        {
+          "title": "Intervallo di pressione riportato nel video",
+          "description": "Il video indica un intervallo di pressione da −75 kPa a 0.25 MPa. Consulta la documentazione della valvola scelta per confermare i limiti operativi della tua configurazione."
+        },
+        {
+          "title": "Circuito opzionale per il risparmio energetico",
+          "description": "Il video presenta un circuito opzionale di risparmio energetico per il funzionamento continuo. La voce narrante descrive il controllo dell’aumento di temperatura. Disponibilità e caratteristiche elettriche sono riportate nella documentazione del prodotto."
+        },
+        {
+          "title": "Collettore di valvole integrato",
+          "description": "La sequenza finale presenta un collettore di valvole integrato e le opzioni di personalizzazione. Per valutare una configurazione, indicaci le connessioni fluidiche richieste e la disposizione di montaggio."
+        }
+      ],
+      "productIntroduction": "Consulta le pagine dei prodotti per specifiche, dimensioni e requisiti di connessione. Inizia dalle configurazioni a due o tre vie oppure esplora l’intera serie SV10. Per discutere di una configurazione con il nostro team, indica fluido, pressione, temperatura e tensione di alimentazione.",
+      "durationLabel": "45 secondi",
+      "breadcrumbLabel": "Elettrovalvole SV10",
+      "watchHeading": "Guarda il video sulla serie SV10",
+      "caption": "Panoramica della serie SV10",
+      "productHeading": "Esplora le elettrovalvole SV10",
+      "support": {
+        "title": "Cerchi una valvola per il tuo sistema fluidico?",
+        "description": "Indica al nostro team il fluido, la funzione di commutazione e i requisiti di connessione."
+      }
+    },
+    "youtube-piston-pump-liquid-dispensing": {
+      "title": "Pompe a pistone di precisione per il dosaggio dei liquidi",
+      "seoTitle": "Pompe a pistone di precisione per il dosaggio dei liquidi | FOREACH",
+      "description": "Pompe a pistone di precisione EA FOREACH: capacità da 50 μL a 20 mL, testate in PMMA/PCTG/PEEK, gruppi pompa-valvola integrati e personalizzazione OEM per la manipolazione dei liquidi negli strumenti.",
+      "durationLabel": "42 secondi",
+      "media": {
+        "title": "Panoramica della pompa a pistone EA",
+        "description": "Breve introduzione alle pompe a pistone EA FOREACH, con primi piani e una panoramica delle applicazioni di manipolazione dei liquidi. Voce narrante in inglese."
+      },
+      "sections": [
+        {
+          "title": "La capacità della pompa a pistone determina il volume minimo di dosaggio?",
+          "paragraphs": [
+            "La capacità a corsa completa e il volume teorico per passo del motore descrivono rispettivamente la cilindrata e la risoluzione del comando. Il volume erogato può variare a causa del gioco meccanico, dei tempi di attuazione della valvola, del gas intrappolato, della dilatazione dei tubi e del distacco della goccia. Questi effetti pesano di più quando occupano una quota maggiore di una corsa breve.",
+            "Scegli una capacità sufficiente per la sequenza di trasferimento, con una dose minima che sia concretamente verificabile. Leggi il volume e le condizioni di prova insieme ai dati di accuratezza o ripetibilità. Per le corse parziali occorrono verifiche specifiche, anche se sono disponibili dati a corsa completa. Per stabilire la dose minima valida, verifica l’erogazione effettiva al di là del passo minimo di comando."
+          ],
+          "links": [
+            {
+              "title": "Accuratezza, ripetibilità e risoluzione delle pompe a pistone"
+            }
+          ]
+        },
+        {
+          "title": "Perché adescamento e tempi della valvola cambiano l’erogazione della pompa a pistone?",
+          "paragraphs": [
+            "Una bolla si comprime quando la pressione sale. Inizialmente, una parte dello spostamento del pistone può comprimere il gas prima di muovere il liquido verso l’uscita. Anche i tubi flessibili possono accumulare e rilasciare volume al variare della pressione. Un comando motore ripetibile può quindi produrre un’erogazione ritardata o irregolare.",
+            "Adesca l’intero circuito secondo la procedura prevista per il gruppo selezionato. Controlla la tenuta dell’ingresso, il livello del serbatoio, la commutazione delle valvole e il tempo concesso alla pressione per stabilizzarsi. Valuta separatamente l’avvio e il funzionamento a regime, soprattutto dopo un cambio di serbatoio, un ciclo di pulizia o una sosta prolungata."
+          ],
+          "links": [
+            {
+              "title": "Individuare le bolle d’aria e gli errori di dosaggio delle pompe a pistone"
+            }
+          ]
+        },
+        {
+          "title": "Come validare una pompa a pistone nello strumento?",
+          "paragraphs": [
+            "Prova i volumi di lavoro minimo, normale e massimo con il reagente previsto o con un fluido rappresentativo adeguatamente motivato. Usa le valvole, i tubi, i raccordi e il puntale di erogazione previsti in produzione. Registra temperatura del fluido, condizioni in ingresso, contropressione, impostazioni del movimento e tempi del ciclo. Valuta separatamente il volume medio erogato e la sua dispersione su più dosi.",
+            "Verifica di nuovo compatibilità dei materiali e prestazioni dopo cicli rappresentativi di pulizia e di funzionamento. Le configurazioni EA collegate qui sotto permettono di confrontare capacità e materiali della testata. Usa le specifiche aggiornate del modello scelto e conferma il risultato a pompa installata prima di applicare allo strumento i dati generali della panoramica."
+          ],
+          "links": [
+            {
+              "title": "Scegliere il materiale della testata in base al liquido effettivo"
+            }
+          ]
+        }
+      ],
+      "breadcrumbLabel": "Dosaggio dei liquidi con pompe a pistone",
+      "watchHeading": "Guarda la panoramica delle pompe a pistone EA",
+      "caption": "Pompe a pistone EA e applicazioni di manipolazione dei liquidi · Voce narrante in inglese",
+      "highlightsHeading": "Quali requisiti specificare per una pompa a pistone per il dosaggio dei liquidi?",
+      "highlightsIntroduction": "Parti dalla panoramica del prodotto e definisci il compito di dosaggio. Le indicazioni seguenti spiegano come confrontare le specifiche di una pompa con i requisiti del circuito installato.",
+      "highlights": [
+        {
+          "title": "Dose di lavoro e durata del ciclo",
+          "description": "Registra dose minima, normale e massima, tempi di aspirazione ed erogazione ed eventuale intervallo di riempimento. Una capacità sufficiente per il trasferimento massimo va verificata anche alla dose critica minima."
+        },
+        {
+          "title": "Accuratezza e ripetibilità",
+          "description": "L’accuratezza indica la vicinanza al valore obiettivo e la ripetibilità indica la dispersione dei risultati ottenuti ripetendo la prova. Definisci criteri di accettazione distinti e confronta risultati ottenuti allo stesso volume e nelle stesse condizioni operative."
+        },
+        {
+          "title": "Intero percorso a contatto con il fluido",
+          "description": "Verifica testata, pistone, tenute, valvole, tubi e uscita rispetto al reagente e al metodo di pulizia. Conferma la compatibilità dell’intero gruppo anche quando il materiale della testata risulta compatibile."
+        }
+      ],
+      "productHeading": "Confronta capacità delle pompe a pistone EA e materiali delle testate",
+      "productIntroduction": "Parti dalle configurazioni EA rappresentative riportate qui sotto. Nelle pagine dei prodotti confronta capacità, materiale della testata, connessioni e requisiti di controllo. Modelli della stessa capacità possono rispondere a requisiti diversi per i materiali. Prima di sostituirli nello stesso circuito del reagente, verifica la compatibilità.",
+      "support": {
+        "title": "Stai scegliendo una pompa a pistone per un’applicazione di dosaggio?",
+        "description": "Indica intervallo di dosaggio, reagente, durata del ciclo, contropressione, requisiti dei materiali a contatto con il fluido e limiti di accuratezza e ripetibilità."
+      },
+      "leadParagraphs": [
+        "Nelle pompe a pistone di precisione EA FOREACH, un motore passo-passo aziona il pistone con un movimento alternato. La corsa del pistone regola aspirazione ed erogazione dosata. Le capacità nominali vanno da 50 μL a 20 mL per l’aggiunta di reagenti, la diluizione di campioni e altre operazioni di manipolazione dei liquidi in analizzatori di chimica clinica, analizzatori per immunodosaggi e sistemi di automazione di laboratorio. La durata stimata è di 5 milioni di cicli con acqua pura a temperatura ambiente e contropressione di 50 kPa.",
+        "Le opzioni comprendono testate in PMMA, PCTG e PEEK e pistoni in ceramica, PEEK o zaffiro. Sono disponibili gruppi pompa-valvola integrati e personalizzazione OEM. Testate, pistoni, connessioni fluidiche, motori, gruppi valvola e controllori si possono configurare in funzione del reagente, della sequenza di dosaggio e dello spazio disponibile per l’installazione nel modulo di manipolazione dei liquidi dello strumento."
+      ]
+    },
+    "youtube-flexible-tubing-laboratory-fluid-lines": {
+      "title": "Tubi flessibili per circuiti fluidici di laboratorio",
+      "seoTitle": "Tubi flessibili per circuiti fluidici di laboratorio | FOREACH",
+      "description": "Tubi flessibili in PVC FOREACH per circuiti fluidici degli strumenti: diametro interno 0.8–19.1 mm, diametro esterno 2.4–25.4 mm, durezza Shore A 55/65 e configurazioni OEM.",
+      "durationLabel": "42 secondi",
+      "media": {
+        "title": "Panoramica dei tubi flessibili",
+        "description": "Primi piani dei tubi trasparenti FOREACH, delle estremità e della flessione manuale, con un’introduzione alle applicazioni per il laboratorio e gli strumenti di analisi. Voce narrante in inglese."
+      },
+      "sections": [
+        {
+          "title": "Come scegliere il materiale dei tubi da laboratorio?",
+          "paragraphs": [
+            "Parti dal fluido effettivo e dal processo di pulizia e confronta formulazioni adatte. FOREACH offre tubi in PVC e TPU e opzioni in FEP, PTFE, PEEK e PFA. Questi materiali hanno proprietà meccaniche e chimiche diverse. Verifica tali proprietà anche quando il diametro nominale è identico.",
+            "Richiedi i dati tecnici e la documentazione di conformità necessaria per la formulazione e il componente fornito. Per verificare le sostanze estraibili, la compatibilità chimica, l’idoneità alla sterilizzazione e la pressione nominale nell’applicazione, servono dati specifici oltre all’osservazione di trasparenza, finitura superficiale e flessione manuale."
+          ]
+        },
+        {
+          "title": "Come influiscono i diametri interno ed esterno sulla connessione?",
+          "paragraphs": [
+            "Per un portagomma, parti dal diametro interno del tubo e dal profilo del portagomma previsto. Spessore della parete, durezza ed elasticità influiscono sulla dilatazione del tubo sopra il portagomma, sulla presa e sulla resistenza allo sfilamento. Un tubo troppo grande può rimanere lasco. Un accoppiamento troppo stretto può richiedere una forza eccessiva o danneggiare il gruppo.",
+            "Per i raccordi definiti in base al diametro esterno del tubo, segui la geometria di tenuta e le istruzioni di montaggio della connessione. Registra misure e tolleranze effettive. Verifica ritenzione e perdite con il tubo e il raccordo scelti in condizioni rappresentative, anche quando le misure nominali corrispondono."
+          ],
+          "links": [
+            {
+              "title": "Verificare il rapporto di espansione sul portagomma e l’accoppiamento del tubo"
+            }
+          ]
+        },
+        {
+          "title": "Quali controlli fare dopo aver posato i tubi flessibili?",
+          "paragraphs": [
+            "Controlla che lungo il tracciato installato non ci siano strozzature, curve strette, sfregamenti o carichi sui raccordi privi di sostegno. Verifica eventuali deformazioni del tubo dovute a movimento, temperatura o aspirazione. Un collegamento che tiene in una prova statica al banco può comportarsi diversamente quando il serbatoio si muove o lo strumento esegue i suoi cicli.",
+            "Prova l’intero circuito alla portata e alle condizioni in ingresso e in uscita richieste. Controlla perdite, ingresso d’aria, movimento dei tubi e variazioni dopo la pulizia o l’uso ripetuto. Lega i criteri di accettazione alla funzione nello strumento. Linee di alimentazione, scarico e dosaggio di precisione possono imporre requisiti diversi anche per lo stesso diametro nominale."
+          ]
+        }
+      ],
+      "breadcrumbLabel": "Tubi flessibili da laboratorio",
+      "watchHeading": "Guarda la panoramica dei tubi flessibili",
+      "caption": "Tubi trasparenti, estremità e dimostrazione della flessibilità · Voce narrante in inglese",
+      "highlightsHeading": "Quali dati dei tubi controllare prima di ordinare?",
+      "highlightsIntroduction": "Il video mostra l’aspetto e la flessibilità dei tubi. Per la selezione servono anche dati sulla formulazione del materiale, sulle dimensioni, sulla pressione e sul collegamento completo.",
+      "highlights": [
+        {
+          "title": "Materiale ed esposizione",
+          "description": "Identifica liquido, concentrazione, temperatura, durata del contatto e agenti di pulizia. Confronta il materiale e la formulazione scelti con queste condizioni. Una dichiarazione generale di resistenza chimica va verificata per il tubo specifico."
+        },
+        {
+          "title": "Diametro interno ed esterno",
+          "description": "Il diametro interno influisce sul passaggio del fluido e sull’accoppiamento con il portagomma. Il diametro esterno incide sull’ingombro e sui raccordi che trattengono o sigillano il tubo dall’esterno. Registra entrambe le misure e le rispettive tolleranze."
+        },
+        {
+          "title": "Posa e connessione",
+          "description": "Controlla il raggio di curvatura, la ritenzione del tubo e il sostegno vicino al raccordo. Una curva stretta o una trazione ripetuta possono modificare il percorso del fluido o caricare il collegamento anche quando il tubo sembra adatto al primo montaggio."
+        }
+      ],
+      "productHeading": "Confronta materiali e misure disponibili",
+      "productIntroduction": "Valuta PVC e TPU per le linee flessibili. Consulta le pagine degli altri materiali se l’applicazione richiede proprietà chimiche o meccaniche diverse. La gamma più ampia serve per il confronto. Il video illustra una selezione dei materiali.",
+      "support": {
+        "title": "Stai scegliendo un tubo per il circuito fluidico di uno strumento?",
+        "description": "Indica liquido e agenti di pulizia, diametri interno ed esterno del tubo, lunghezza, pressione o vuoto, temperatura e raccordo da collegare."
+      },
+      "leadParagraphs": [
+        "I tubi FOREACH in PVC, polivinilcloruro, sono progettati per il trasferimento di gas e liquidi, il lavaggio e lo scarico, e le connessioni fluidiche interne di strumenti analitici, sistemi di automazione di laboratorio e apparecchiature per la diagnostica in vitro (IVD). La struttura flessibile facilita la posa. La trasparenza rende visibili liquidi e bolle. Le combinazioni disponibili vanno da 0.8 a 19.1 mm di diametro interno e da 2.4 a 25.4 mm di diametro esterno, con durezze Shore A 55 e 65. Scegli il modello in funzione di spazio di installazione, spessore della parete e requisiti di connessione.",
+        "Sono disponibili configurazioni di tubi OEM. Dimensioni, durezza e connessioni si possono abbinare al fluido, al layout dello strumento e alle specifiche dei raccordi. I modelli attuali includono rotoli da 15, 30 e 50 metri. Per singoli progetti è possibile valutare dimensioni, durezza e lunghezze dei rotoli su misura, in base alle esigenze di montaggio e produzione in volume."
+      ]
+    },
+    "youtube-quick-connect-sealing-compatibility": {
+      "title": "Raccordi rapidi: tenuta e compatibilità di accoppiamento",
+      "seoTitle": "Raccordi rapidi: tenuta e compatibilità | FOREACH",
+      "description": "Raccordi rapidi FOREACH Q20, Q40 e Q60 per tubi con diametro interno da 1.6 a 19.0 mm, con opzioni di corpo e tenute, configurazioni di intercettazione e soluzioni di connessione OEM.",
+      "durationLabel": "42 secondi",
+      "media": {
+        "title": "Dimostrazione di connessione dei raccordi rapidi",
+        "description": "Breve panoramica dei raccordi rapidi FOREACH, con misure e dimostrazione manuale di collegamento e scollegamento delle due metà. Voce narrante in inglese."
+      },
+      "sections": [
+        {
+          "title": "Perché un raccordo rapido può perdere dopo lo scatto?",
+          "paragraphs": [
+            "Il fermo trattiene le due metà e la tenuta deve aderire alla superficie di accoppiamento corretta. Residui, danni alla tenuta, materiale inadatto o innesto incompleto possono causare perdite anche quando la connessione appare montata. I carichi dei tubi possono inoltre disturbare il raccordo o il collegamento al tubo.",
+            "Segui le istruzioni di montaggio del connettore scelto, controlla le superfici di tenuta e posa il tubo evitando curve forzate o trazione continua. Verifica le perdite alla pressione e alla temperatura effettive di servizio, con variazioni di pressione e cicli di connessione rappresentativi. Per qualificare tenuta e durata servono prove dedicate oltre alla breve dimostrazione del video."
+          ]
+        },
+        {
+          "title": "I raccordi rapidi dall’aspetto simile sono intercambiabili?",
+          "paragraphs": [
+            "Per stabilire la compatibilità, confronta dimensioni delle interfacce, innesto del fermo, posizione della tenuta e apertura della valvola di entrambe le metà. Una coppia che si collega fisicamente può limitare la portata, innestarsi in modo incompleto o posizionare male la tenuta. Per una sostituzione tra marchi diversi, chiedi conferma della combinazione esatta e validala nel circuito previsto.",
+            "Valuta separatamente compatibilità di accoppiamento, misura del tubo, misura della filettatura e diametro nominale del passaggio. La guida alle misure spiega queste grandezze. La specifica del connettore identifica le metà accoppiabili e la terminazione ammessa. Controlla entrambe prima di scegliere ricambi."
+          ],
+          "links": [
+            {
+              "title": "Distinguere diametro del passaggio, misura del tubo e filettatura"
+            }
+          ]
+        },
+        {
+          "title": "In quali condizioni provare una coppia di raccordi rapidi?",
+          "paragraphs": [
+            "Specifica liquido, portata richiesta, pressione o vuoto di esercizio, temperatura e processo di pulizia. Controlla la pressione nominale della configurazione selezionata e verifica se è ammesso collegarla o scollegarla sotto pressione. La pressione di esercizio e le condizioni ammesse per azionare lo sgancio vanno verificate separatamente.",
+            "Dopo cicli rappresentativi misura perdite, fluido trattenuto o fuoriuscite quando pertinenti, limitazione della portata e ritenzione. Includi i tubi effettivi e l’eventuale montaggio su pannello. Un raccordo con valvola può aiutare a isolare un serbatoio. Valida comunque l’intero gruppo rispetto al comportamento di intercettazione richiesto e alla caduta di pressione ammissibile."
+          ],
+          "links": [
+            {
+              "title": "Verificare pressione nominale e collegamento sotto pressione dei raccordi rapidi"
+            }
+          ]
+        }
+      ],
+      "breadcrumbLabel": "Tenuta e compatibilità dei raccordi rapidi",
+      "watchHeading": "Guarda come si collegano e si scollegano i raccordi rapidi",
+      "caption": "Coppie di raccordi rapidi e collegamento manuale · Voce narrante in inglese",
+      "highlightsHeading": "Quali caratteristiche rendono una coppia di raccordi rapidi adatta a una linea fluidica?",
+      "highlightsIntroduction": "Il video dimostra come maneggiare le due metà. I controlli seguenti aiutano a valutare il collegamento completo per un serbatoio, un modulo sostituibile o un circuito strumentale da sottoporre a manutenzione.",
+      "highlights": [
+        {
+          "title": "Interfaccia di accoppiamento e ritenzione",
+          "description": "Conferma l’abbinamento maschio-femmina previsto, la geometria del fermo e la posizione della tenuta. Anche se le misure dei tubi corrispondono, controlla compatibilità, innesto e ritenzione secondo le istruzioni della coppia selezionata."
+        },
+        {
+          "title": "Materiali del corpo e della tenuta",
+          "description": "Verifica separatamente il corpo del raccordo e l’elastomero rispetto al liquido, al detergente e alla temperatura. Entrambi i materiali devono risultare adatti alle condizioni operative."
+        },
+        {
+          "title": "Intercettazione e scollegamento",
+          "description": "Stabilisci quale lato deve trattenere il liquido quando è scollegato e se serve una valvola di intercettazione in una delle metà. Conferma la procedura ammessa e verifica le fuoriuscite effettive durante lo sgancio, anche se il raccordo ha una valvola."
+        }
+      ],
+      "productHeading": "Confronta le configurazioni dei raccordi rapidi",
+      "productIntroduction": "I prodotti qui sotto consentono di confrontare connessioni, montaggio e opzioni di valvola nelle serie Q20, Q40 e Q60. Ogni scheda mostra una configurazione distinta. Prima di ordinare una coppia completa, individua la metà di accoppiamento indicata nella documentazione di ogni componente.",
+      "support": {
+        "title": "Stai scegliendo una coppia di raccordi rapidi o un ricambio?",
+        "description": "Indica i codici o i disegni di entrambe le parti, le dimensioni dei tubi, il fluido, la pressione, la temperatura e i requisiti di intercettazione e manutenzione."
+      },
+      "leadParagraphs": [
+        "I raccordi rapidi FOREACH utilizzano metà maschio e femmina che si innestano e si sganciano rapidamente per il trasferimento dei reagenti, le connessioni ai serbatoi e la manutenzione delle linee fluidiche negli strumenti analitici, nell’automazione di laboratorio e nei circuiti delle apparecchiature. Sono disponibili tre serie: Q20 con passaggio nominale da 1/8 di pollice e diametri interni del tubo da 1.6 a 6.4 mm, Q40 con passaggio nominale da 1/4 di pollice e diametri interni da 6.4 a 9.5 mm, Q60 con passaggio nominale da 3/8 di pollice e diametri interni da 9.5 a 19.0 mm. Ogni serie offre misure discrete nel proprio intervallo.",
+        "Q20 e Q40 offrono corpi in POM con tenute NBR oppure corpi in PP con tenute EPDM. Q60 usa corpi in PP con tenute EPDM. Sono disponibili connessioni diritte, a gomito, passaparete e filettate. Abbinando le metà maschio e femmina appropriate si ottengono connessioni senza valvola, con intercettazione singola o con intercettazione doppia. Sono disponibili forniture OEM e soluzioni di connessione su misura in base a fluido, dimensioni dei tubi, spazio di montaggio e comportamento di intercettazione richiesto durante lo scollegamento."
+      ]
+    },
+    "youtube-quick-connect-coupling-types": {
+      "title": "Misure dei raccordi rapidi: diametro del passaggio e dimensioni del tubo",
+      "seoTitle": "Misure dei raccordi rapidi: diametro del passaggio e del tubo | FOREACH",
+      "description": "Scopri le misure dei raccordi rapidi: passaggio interno, diametri interno ed esterno del tubo e filettatura. Controlla portata, caduta di pressione e compatibilità di accoppiamento.",
+      "durationLabel": "58 secondi",
+      "lead": "La misura di un raccordo rapido può riferirsi al passaggio interno, alla connessione del tubo o alla filettatura. Leggi ciascuna grandezza separatamente. Prima di scegliere il raccordo, individua la grandezza indicata, conferma la connessione di accoppiamento e verifica portata richiesta e caduta di pressione ammissibile.",
+      "media": {
+        "title": "Diametri di passaggio nei raccordi rapidi",
+        "description": "Breve panoramica dei raccordi rapidi con passaggio nominale da 1/8, 1/4 e 3/8 di pollice, seguita da una presentazione delle opzioni e dei progetti su misura. Voce narrante in inglese."
+      },
+      "sections": [
+        {
+          "title": "Il diametro del passaggio corrisponde alla misura del tubo?",
+          "paragraphs": [
+            "Un passaggio nominale da 1/4 di pollice va letto separatamente dal diametro interno o esterno del tubo e dalla filettatura. Una famiglia di raccordi può offrire più terminazioni per tubi o filettate con lo stesso passaggio nominale. Leggi i campi del passaggio e della connessione separatamente.",
+            "Per una connessione a tubo, registra diametri interno ed esterno, materiale e terminazione richiesta. Abbina il portagomma al diametro interno specificato, poi verifica spessore della parete, flessibilità e profondità di innesto. Per una porta filettata, registra standard e misura oltre al solo valore frazionario."
+          ]
+        },
+        {
+          "title": "Come incide il diametro del passaggio sulla scelta del raccordo?",
+          "paragraphs": [
+            "A una data portata, la perdita di pressione dipende dai passaggi interni, dalla struttura della valvola, dall’abbinamento delle due metà e dalle proprietà del fluido. Una connessione del tubo più grande può lasciare invariata una restrizione interna al raccordo. Per determinare la portata del collegamento completo servono dati oltre alla misura nominale del passaggio.",
+            "Parti dalla portata richiesta e dalla caduta di pressione che il circuito può ammettere sul collegamento. Consulta la curva portata-caduta di pressione o un calcolo appropriato basato sul coefficiente di portata per la configurazione e il fluido scelti. Controlla valvole ed entrambe le metà, quindi verifica le prestazioni nel circuito installato."
+          ],
+          "links": [
+            {
+              "title": "Guida alla portata e alla caduta di pressione dei raccordi rapidi"
+            }
+          ]
+        },
+        {
+          "title": "I raccordi rapidi della stessa misura si accoppiano?",
+          "paragraphs": [
+            "Verifica che interfaccia maschio-femmina, fermo, posizione della tenuta e configurazione della valvola siano compatibili. La stessa misura del tubo o del passaggio nominale può essere comune a due metà di famiglie di accoppiamento diverse.",
+            "Conferma la coppia prevista nelle specifiche del produttore. Per ricambi o abbinamenti tra marchi diversi, confronta le dimensioni delle interfacce e verifica ritenzione, tenuta e apertura completa delle valvole se presenti. Scegli materiali e limiti di pressione e temperatura in base al servizio, poi valida tenuta e portata con il raccordo effettivamente assemblato."
+          ],
+          "links": [
+            {
+              "title": "Interfacce, valvole e compatibilità dei raccordi rapidi"
+            }
+          ]
+        }
+      ],
+      "breadcrumbLabel": "Misure dei raccordi rapidi",
+      "watchHeading": "Guarda la panoramica dei diametri di passaggio nei raccordi rapidi",
+      "caption": "Raccordi rapidi con passaggi da 1/8, 1/4 e 3/8 di pollice · Voce narrante in inglese",
+      "highlightsHeading": "Che cosa indica la misura di un raccordo rapido?",
+      "highlightsIntroduction": "Per i raccordi separabili maschio-femmina del video, registra separatamente tre grandezze. Per interpretare una frazione come 1/4 di pollice, verifica a quale parte della connessione si riferisce.",
+      "highlights": [
+        {
+          "title": "Diametro di passaggio",
+          "description": "Indicazione nominale del passaggio interno del fluido, espressa come dimensione. Per la portata servono dati distinti. Consulta il disegno del prodotto quando conta il diametro minimo effettivo."
+        },
+        {
+          "title": "Misura della connessione del tubo",
+          "description": "Misura del tubo specificata per la terminazione. Il portagomma si sceglie in base al diametro interno del tubo, mentre altre connessioni possono specificare il diametro esterno. Segui la convenzione adottata per la terminazione."
+        },
+        {
+          "title": "Specifica della filettatura",
+          "description": "Lo standard e il tipo di tenuta devono accompagnare la misura nominale della filettatura. Una filettatura da 1/4 di pollice va distinta dal diametro di passaggio e dalla misura del tubo compatibile."
+        }
+      ],
+      "productHeading": "Trova i raccordi rapidi adatti alla connessione del tuo tubo",
+      "productIntroduction": "Confronta le terminazioni per tubi e filettate, le opzioni di valvola e le modalità di montaggio. Usa disegni e specifiche per confermare l’interfaccia da accoppiare, la misura della connessione e le condizioni di servizio.",
+      "support": {
+        "title": "Ti serve aiuto per scegliere un raccordo rapido?",
+        "description": "Indica diametri interno ed esterno del tubo, tipo di terminazione, fluido, portata richiesta, pressione e temperatura di esercizio e la connessione da accoppiare."
+      }
+    },
+    "youtube-f-ss-water-circulation-filter": {
+      "title": "Filtro per circuiti di ricircolo dell’acqua",
+      "seoTitle": "Filtro per circuiti di ricircolo dell’acqua | FOREACH",
+      "description": "Guarda la panoramica del filtro F-SS di FOREACH. Valuta le esigenze di filtrazione, le condizioni di portata e le connessioni dei tubi per il circuito di ricircolo dell’acqua.",
+      "durationLabel": "34 secondi",
+      "breadcrumbLabel": "Filtri per il ricircolo dell’acqua",
+      "watchHeading": "Guarda la panoramica del filtro F-SS",
+      "caption": "Filtro F-SS per il ricircolo dell’acqua",
+      "highlightsHeading": "Cosa verificare nella scelta di un filtro per un circuito dell’acqua?",
+      "highlightsIntroduction": "La panoramica presenta F-SS per i sistemi di ricircolo dell’acqua. Scegli il filtro in base al compito del circuito, poi verifica il livello di filtrazione richiesto, le condizioni di portata e la compatibilità delle connessioni nella configurazione prevista.",
+      "highlights": [
+        {
+          "title": "Requisiti di filtrazione",
+          "description": "Definisci quali particelle deve trattenere il circuito e controlla il materiale filtrante e il grado di filtrazione della configurazione scelta."
+        },
+        {
+          "title": "Condizioni di portata",
+          "description": "Verifica la portata di ricircolo richiesta e la caduta di pressione ammissibile sul filtro. Controlla le prestazioni nel circuito completo, comprese pompa e tubazioni."
+        },
+        {
+          "title": "Compatibilità delle connessioni",
+          "description": "Abbina le connessioni del filtro ai tubi e verifica la compatibilità dei materiali con il trattamento dell’acqua e le condizioni di pulizia."
+        }
+      ],
+      "productHeading": "Valuta un filtro per il tuo sistema di ricircolo dell’acqua",
+      "productIntroduction": "Indica al nostro team il grado di filtrazione richiesto, le condizioni di portata e le dimensioni dei tubi per valutare la configurazione F-SS. La categoria filtri raccoglie altri prodotti disponibili per il confronto. Per valutare una sostituzione, verifica le caratteristiche della singola configurazione.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-thread-to-barb-fittings": {
+      "title": "Raccordi filettati portagomma per tubi flessibili",
+      "seoTitle": "Raccordi filettati portagomma per tubi flessibili | FOREACH",
+      "description": "Guarda come i raccordi filettati portagomma collegano i tubi flessibili alle porte filettate. Abbina la filettatura, il diametro interno del tubo e i materiali a contatto con il fluido.",
+      "durationLabel": "45 secondi",
+      "breadcrumbLabel": "Raccordi filettati portagomma",
+      "watchHeading": "Guarda la panoramica dei raccordi filettati portagomma",
+      "caption": "Raccordi filettati portagomma per tubi flessibili e porte filettate",
+      "highlightsHeading": "Come scegliere un raccordo filettato portagomma per un collegamento fluidico?",
+      "highlightsIntroduction": "I raccordi filettati portagomma collegano tubi flessibili alle porte filettate di pompe, valvole e altri componenti del circuito. La panoramica ufficiale indica come punti di partenza la specifica della filettatura, il diametro interno del tubo e la compatibilità dei materiali.",
+      "highlights": [
+        {
+          "title": "Porta filettata",
+          "description": "Abbina la specifica della filettatura e il tipo di tenuta alla porta corrispondente. La compatibilità va confermata dalle specifiche, anche quando le filettature appaiono simili."
+        },
+        {
+          "title": "Tubi flessibili",
+          "description": "Abbina il diametro interno del tubo alla connessione portagomma specificata. Valuta il materiale del tubo e le condizioni operative dell’intero collegamento."
+        },
+        {
+          "title": "Fluido e condizioni operative",
+          "description": "Controlla la compatibilità di tutti i materiali a contatto con il fluido e con il processo di pulizia, quindi verifica il collegamento assemblato alla pressione e alla temperatura previste."
+        }
+      ],
+      "productHeading": "Confronta i raccordi per tubi flessibili e porte filettate",
+      "productIntroduction": "Usa i disegni e le specifiche aggiornate per confrontare le connessioni filettate e portagomma. I prodotti riportati sotto illustrano configurazioni disponibili. Per identificare le singole parti usa la relativa documentazione.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-rigid-tubing-fittings": {
+      "title": "Raccordi per tubi rigidi nei sistemi fluidici",
+      "seoTitle": "Raccordi per tubi rigidi nei sistemi fluidici | FOREACH",
+      "description": "Guarda la panoramica dei raccordi per tubi rigidi. Per collegare pompe, valvole e linee fluidiche, abbina diametro esterno del tubo, specifica della porta e tipo di tenuta.",
+      "durationLabel": "45 secondi",
+      "breadcrumbLabel": "Raccordi per tubi rigidi",
+      "watchHeading": "Guarda la panoramica dei raccordi per tubi rigidi",
+      "caption": "Raccordi per tubi rigidi nei collegamenti fluidici",
+      "highlightsHeading": "Come scegliere un raccordo per tubi rigidi?",
+      "highlightsIntroduction": "I raccordi per tubi rigidi collegano i tubi a pompe, valvole e altri componenti del circuito fluidico. Come indicato nella panoramica ufficiale, la connessione deve corrispondere al diametro esterno del tubo, alla specifica della porta e ai requisiti applicativi.",
+      "highlights": [
+        {
+          "title": "Diametro esterno del tubo",
+          "description": "Parti dal diametro esterno effettivo del tubo e dalla sua tolleranza dimensionale. Verifica che il raccordo sia adatto alla misura e al materiale del tubo."
+        },
+        {
+          "title": "Porta e tipo di tenuta",
+          "description": "Abbina la filettatura, la geometria della porta e gli elementi di tenuta necessari. Le connessioni flangiate e senza flangia hanno modalità di montaggio diverse. Segui le istruzioni del prodotto selezionato."
+        },
+        {
+          "title": "Requisiti dell’applicazione",
+          "description": "Verifica compatibilità con il fluido, pressione, temperatura e spazio disponibile per il montaggio. Controlla il collegamento completo nel circuito previsto."
+        }
+      ],
+      "productHeading": "Confronta le connessioni per tubi rigidi",
+      "productIntroduction": "Esamina i raccordi flangiati e senza flangia disponibili, insieme alla porta di accoppiamento e agli elementi di tenuta necessari. Per il montaggio esatto consulta il disegno del prodotto.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-syringe-installation": {
+      "title": "Pompa a siringa: guida al montaggio della siringa",
+      "seoTitle": "Video di montaggio sulla pompa a siringa HLD6 | FOREACH",
+      "description": "La dimostrazione FOREACH per HLD6 illustra il posizionamento dell’azionamento, l’orientamento del fermo e il fissaggio della siringa.",
+      "durationLabel": "1 minuto e 33 secondi",
+      "breadcrumbLabel": "Montaggio della siringa",
+      "watchHeading": "Guarda il video sul montaggio della siringa",
+      "caption": "Dimostrazione del montaggio della siringa su HLD6",
+      "highlightsIntroduction": "I passaggi selezionati illustrano il montaggio sulla HLD6 mostrata nel video. Apri un riferimento temporale per vedere l’operazione corrispondente su YouTube. Prima di riprendere le impostazioni mostrate, verifica le istruzioni per la tua configurazione di pompa e siringa.",
+      "highlights": [
+        {
+          "title": "Controllo della posizione dell’azionamento",
+          "description": "Prima di montare la siringa, la dimostrazione verifica la posizione dell’asse del perno di azionamento. Questo controllo assicura lo spazio necessario per la sequenza di montaggio mostrata."
+        },
+        {
+          "title": "Orientamento del fermo",
+          "description": "Il fermo scorre sulla siringa con la vite rivolta verso l’esterno. Il primo piano mostra l’orientamento del fermo rispetto al corpo della siringa."
+        },
+        {
+          "title": "Fissaggio della connessione superiore",
+          "description": "Il video mostra come bloccare e stringere a mano il fermo superiore, con la siringa posizionata sulla pompa."
+        },
+        {
+          "title": "Completamento del fissaggio",
+          "description": "Per il secondo serraggio si usa un cacciavite dinamometrico. Il valore mostrato si riferisce al montaggio dimostrato. Per la tua configurazione, usa la specifica di montaggio confermata."
+        }
+      ],
+      "productHeading": "Esplora le pompe a siringa HLD6",
+      "productIntroduction": "Il video identifica la serie HLD6. Visita la pagina del prodotto per capacità delle siringhe, configurazioni di valvole, dimensioni e informazioni sull’integrazione, oppure confronta la gamma di pompe a siringa.",
+      "support": {
+        "title": "Ti serve assistenza per montare la siringa?",
+        "description": "Indica al nostro team tecnico il modello della pompa, la capacità della siringa e il problema di montaggio."
+      }
+    },
+    "youtube-q60-quick-fitting": {
+      "title": "Raccordi a sgancio rapido: con valvola, senza valvola e da pannello",
+      "seoTitle": "Raccordi a sgancio rapido: opzioni di valvola e montaggio | FOREACH",
+      "description": "Scegli i raccordi a sgancio rapido in base alla necessità di intercettazione, al montaggio su pannello e alle dimensioni del tubo. Guarda come le due metà e le opzioni di valvola influiscono sul collegamento.",
+      "durationLabel": "1 minuto e 8 secondi",
+      "breadcrumbLabel": "Opzioni dei raccordi a sgancio rapido",
+      "watchHeading": "Guarda la guida alle configurazioni dei raccordi a sgancio rapido",
+      "caption": "Panoramica dei raccordi rapidi Q60",
+      "highlightsHeading": "Come cambiano i raccordi a sgancio rapido con le opzioni di valvola, montaggio e tubo?",
+      "highlightsIntroduction": "Scegli la coppia in base al lato che deve trattenere il fluido durante lo scollegamento, alla posizione di montaggio e al tubo adatto a ciascuna estremità. La panoramica Q60 illustra queste opzioni. Verifica eventuali perdite della coppia completa durante lo scollegamento nelle condizioni di pressione e con il fluido previsti, anche in presenza di una valvola di intercettazione.",
+      "highlights": [
+        {
+          "title": "Metà maschio e femmina",
+          "description": "La panoramica introduce le versioni maschio e femmina e mostra come le due metà di accoppiamento formano una connessione rapida."
+        },
+        {
+          "title": "Montaggio su pannello o in linea",
+          "description": "Le versioni con o senza montaggio su pannello rispondono a diverse esigenze di installazione. Verifica lo spessore del pannello e le dimensioni del foro sul disegno del raccordo scelto."
+        },
+        {
+          "title": "Versioni con o senza valvola",
+          "description": "Il video presenta metà dotate o prive di valvola e descrive l’intercettazione del fluido allo scollegamento nelle versioni con valvola."
+        },
+        {
+          "title": "Combinazioni delle due metà",
+          "description": "La panoramica mostra che le due metà della coppia possono avere configurazioni di valvola diverse. Seleziona la coppia in base al lato che deve trattenere il fluido quando viene scollegata."
+        },
+        {
+          "title": "Opzioni di connessione del tubo",
+          "description": "La parte finale presenta connessioni per tubi di dimensioni diverse. Abbina ogni estremità alla misura del tubo e verifica la coppia completa sulle pagine dei prodotti."
+        }
+      ],
+      "productHeading": "Confronta le metà dei raccordi a sgancio rapido in base all’intercettazione richiesta",
+      "productIntroduction": "Usa la pagina di selezione dei raccordi rapidi per confrontare le metà e le opzioni di connessione. Controlla il tipo di intercettazione richiesto, le misure del tubo, il materiale e il disegno di montaggio della coppia selezionata.",
+      "support": {
+        "title": "Cerchi una coppia di raccordi rapidi?",
+        "description": "Indica le misure dei tubi, la modalità di montaggio, il fluido e i requisiti di intercettazione per individuare la configurazione adatta."
+      }
+    },
+    "youtube-female-thread-conversion": {
+      "title": "Adattatori con filettatura femmina per connessioni fluidiche M6 e 1/4-28",
+      "seoTitle": "Adattatori con filettatura femmina: connessioni M6 e 1/4-28 | FOREACH",
+      "description": "Confronta gli adattatori con filettatura femmina per collegamenti fluidici compatti. Prima del montaggio verifica le interfacce M6 e 1/4-28, la geometria di tenuta, i materiali e la disposizione delle porte.",
+      "durationLabel": "46 secondi",
+      "breadcrumbLabel": "Adattatori con filettatura femmina",
+      "watchHeading": "Guarda la panoramica degli adattatori con filettatura femmina",
+      "caption": "Panoramica degli adattatori con filettatura femmina",
+      "highlightsHeading": "Come scegliere gli adattatori con filettatura femmina per un collegamento fluidico",
+      "highlightsIntroduction": "Abbina entrambe le porte per specifica della filettatura e geometria di tenuta, poi scegli forma e materiale del corpo. M6 e 1/4-28 seguono standard diversi e possono sembrare simili. Il video presenta le opzioni di interfaccia e di materiale. Per confermare una conversione tra i due standard consulta il disegno dello specifico adattatore.",
+      "highlights": [
+        {
+          "title": "Raccordi in tecnopolimero",
+          "description": "L’inizio presenta materiali plastici per collegamenti di liquidi e gas. Verifica la scelta del materiale in base al fluido effettivo, alla temperatura e alla documentazione del componente selezionato."
+        },
+        {
+          "title": "Interfacce filettate",
+          "description": "La panoramica cita le interfacce M6 e 1/4-28 UNF. Verifica la filettatura, il tipo di tenuta e il raccordo di accoppiamento a entrambe le estremità dell’adattatore scelto."
+        },
+        {
+          "title": "Connessioni compatte e smontaggio",
+          "description": "La parte finale evidenzia la compattezza del raccordo e la praticità dello smontaggio per l’integrazione nel circuito fluidico."
+        }
+      ],
+      "productHeading": "Confronta raccordi diritti, a T e altre geometrie con filettatura femmina",
+      "productIntroduction": "Confronta le geometrie dei raccordi e le combinazioni di filettature disponibili nella categoria. Usa i disegni dei singoli componenti per verificare la disposizione delle porte e lo spazio di montaggio.",
+      "support": {
+        "title": "Devi accoppiare due connessioni fluidiche?",
+        "description": "Indica al nostro team tecnico entrambe le specifiche di filettatura, i raccordi da collegare, il fluido e lo spazio di montaggio disponibile."
+      }
+    },
+    "youtube-bubble-detection-module": {
+      "title": "Rilevamento delle bolle d’aria nei tubi trasparenti",
+      "seoTitle": "Rilevamento delle bolle d’aria nei tubi trasparenti | FOREACH",
+      "description": "Guarda come un modulo rileva le bolle d’aria in un tubo trasparente. Valuta compatibilità del tubo, risposta del rilevamento e impostazioni di uscita nei circuiti fluidici degli strumenti.",
+      "durationLabel": "54 secondi",
+      "breadcrumbLabel": "Rilevamento delle bolle d’aria",
+      "watchHeading": "Guarda la panoramica del modulo di rilevamento delle bolle d’aria",
+      "caption": "Panoramica del modulo ABD di rilevamento delle bolle d’aria",
+      "highlightsHeading": "Quali fattori influiscono sul rilevamento delle bolle d’aria nella linea di uno strumento?",
+      "highlightsIntroduction": "Il rilevamento va adattato al tubo e al liquido che attraversa il punto di misura. La panoramica del modulo ABD presenta l’interfaccia per il tubo e il software di configurazione. Prima di usare il segnale per un allarme del circuito valuta le condizioni reali delle bolle e la risposta del controllore.",
+      "highlights": [
+        {
+          "title": "Compatibilità del tubo",
+          "description": "Il testo a schermo indica l’impiego con tubi trasparenti e semitrasparenti. Verifica materiale, diametro esterno del tubo e liquido per la configurazione ABD scelta."
+        },
+        {
+          "title": "Risposta del rilevamento",
+          "description": "Il video illustra le prestazioni di risposta. Per stabilire le dimensioni minime della bolla rilevabile e il tempo di reazione dell’intero strumento, verifica il tubo, il liquido, la portata e il controllore effettivi."
+        },
+        {
+          "title": "Parametri software e stato dell’uscita",
+          "description": "La schermata mostra parametri, informazioni sul segnale e impostazioni dello stato dell’uscita, illustrando come configurare il modulo per l’integrazione."
+        }
+      ],
+      "productHeading": "Valuta il rilevamento delle bolle d’aria e il monitoraggio complementare della pressione",
+      "productIntroduction": "Consulta la pagina del modulo ABD per la compatibilità dei tubi, le interfacce di rilevamento e il montaggio. Il sensore PDM5 associato misura la pressione e svolge una funzione di monitoraggio distinta dal rilevamento delle bolle d’aria. Per valutare l’applicazione, descrivi il liquido, il tubo e le condizioni previste delle bolle.",
+      "support": {
+        "title": "Stai integrando il rilevamento delle bolle in uno strumento?",
+        "description": "Indica al nostro team il materiale e le misure del tubo, il liquido, le condizioni di portata e i requisiti dell’interfaccia di controllo."
+      }
+    },
+    "youtube-dpl30-vs-dpl30h": {
+      "title": "Come scegliere una pompa a membrana per liquidi con maggiore contropressione",
+      "seoTitle": "Selezione delle pompe a membrana per liquidi con maggiore contropressione | FOREACH",
+      "description": "Confronta pompe a membrana per liquidi con la stessa portata nominale e capacità di pressione diverse. Scopri come contropressione e connessioni dei tubi incidono sulla scelta.",
+      "durationLabel": "22 secondi",
+      "breadcrumbLabel": "Selezione della pompa in base alla contropressione",
+      "watchHeading": "Guarda il confronto tra pompe per liquidi a pressione standard e alta",
+      "caption": "Confronto tra pompe a membrana per liquidi DPL30 e DPL30H",
+      "highlightsHeading": "Perché pompe con la stessa portata a scarico libero possono avere prestazioni diverse?",
+      "highlightsIntroduction": "La pompa deve garantire la portata richiesta con la resistenza del circuito installato. Il confronto presenta DPL30 e DPL30H, entrambe indicate a 300 mL/min a scarico libero, con capacità di pressione e connessioni differenti.",
+      "highlights": [
+        {
+          "title": "Confronto del punto di lavoro",
+          "description": "La panoramica indica 100 kPa per DPL30 e 600 kPa per DPL30H. Questi dati di pressione sono distinti dalla portata di 300 mL/min a scarico libero. Verifica la portata effettiva di ciascuna pompa alla pressione richiesta sulla relativa curva."
+        },
+        {
+          "title": "Compatibilità delle connessioni dei tubi",
+          "description": "DPL30 usa connessioni portagomma, DPL30H connessioni filettate. Prima di sostituire una pompa con l’altra, verifica raccordo di accoppiamento, tubo, tenuta e spazio di montaggio."
+        },
+        {
+          "title": "Valutazione dell’intero circuito",
+          "description": "Filtri, valvole, tubi stretti e camera di ricezione contribuiscono alla contropressione. Confronta la curva portata-pressione alla condizione di lavoro richiesta e prova la pompa con il fluido e la temperatura previsti."
+        }
+      ],
+      "productHeading": "Confronta le configurazioni per liquidi a pressione standard e alta",
+      "productIntroduction": "La prima coppia confronta le versioni con motore a spazzole. Più sotto trovi anche le alternative brushless. Valuta motore e interfaccia elettrica separatamente dalla capacità di pressione. Per la configurazione esatta consulta specifiche e disegni delle singole versioni.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-dpgl800-vacuum-test": {
+      "title": "Prova di vuoto di una pompa a membrana in miniatura per aspirare gli scarti",
+      "seoTitle": "Prova di vuoto di una pompa a membrana in miniatura | FOREACH",
+      "description": "Guarda la prova di vuoto di una pompa a membrana in miniatura per gas e liquidi e scopri quali condizioni di pressione, tubi e collegamento delle testate contano nell’aspirazione degli scarti.",
+      "durationLabel": "21 secondi",
+      "breadcrumbLabel": "Prova di vuoto per l’aspirazione degli scarti",
+      "watchHeading": "Guarda la prova di vuoto della pompa a membrana per gas e liquidi",
+      "caption": "Dimostrazione di vuoto con la pompa DPGL800 a doppia testata",
+      "highlightsHeading": "Come interpretare la prova di vuoto di una pompa in miniatura",
+      "highlightsIntroduction": "Il vuoto limite indica la condizione di bassa pressione a cui può avvicinarsi la pompa nell’allestimento di prova. Per conoscere il tempo di svuotamento occorre misurare il circuito di scarico completo. Questo video mostra una prova di vuoto con la pompa DPGL800 per gas e liquidi.",
+      "highlights": [
+        {
+          "title": "Identificazione del collegamento delle testate",
+          "description": "La fonte descrive una pompa a doppia testata con quattro porte e configurazioni a testata singola, in parallelo e in serie. Registra la configurazione usata prima di confrontare le prestazioni di aspirazione. Una modifica delle connessioni cambia il sistema valutato."
+        },
+        {
+          "title": "Distinzione tra portata del gas e rimozione del liquido",
+          "description": "I 6 L/min indicati sono la portata del gas senza carico con una singola testata. Portata di liquido e portata al vuoto limite sono grandezze distinte. Misura le prestazioni di rimozione degli scarti con il liquido e le tubazioni effettivi."
+        },
+        {
+          "title": "Misura del vuoto nel punto utile",
+          "description": "Perdite, restrizioni, recipienti di raccolta e lunghezza delle linee possono cambiare la pressione al punto di aspirazione. Nell’allestimento reale misura pressione e tempo di svuotamento, comprese le transizioni previste tra aria e liquido."
+        }
+      ],
+      "productHeading": "Esamina la pompa per gas e liquidi della prova di vuoto",
+      "productIntroduction": "Consulta la pagina DPGL800 per configurazione delle testate, materiali a contatto con il fluido, opzioni elettriche e limiti di pressione. Il modello mostrato è quello adatto a valutare l’aspirazione di gas e liquidi. Per una sostituzione verifica che la pompa supporti entrambe le fasi.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-dpl-series-introduction": {
+      "title": "Pompe a membrana in miniatura per trasferire liquidi negli strumenti",
+      "seoTitle": "Panoramica delle pompe a membrana in miniatura per liquidi | FOREACH",
+      "description": "Esplora le pompe a membrana in miniatura per trasferire liquidi negli strumenti. Confronta requisiti di portata, capacità di pressione, motori e connessioni dei tubi.",
+      "durationLabel": "37 secondi",
+      "breadcrumbLabel": "Panoramica delle pompe a membrana per liquidi",
+      "watchHeading": "Guarda la panoramica delle pompe a membrana in miniatura per liquidi",
+      "caption": "Presentazione della serie DPL di pompe a membrana per liquidi",
+      "highlightsHeading": "Quali specifiche contano per una pompa per liquidi in uno strumento?",
+      "highlightsIntroduction": "Parti dal compito di trasferimento, per esempio alimentazione di reagenti, lavaggio o ricircolo. La presentazione della serie DPL illustra i prodotti. Le pagine aggiornate dei singoli modelli forniscono i dati specifici per la scelta.",
+      "highlights": [
+        {
+          "title": "Portata richiesta alla pressione di lavoro",
+          "description": "Scegli in funzione della portata alla pressione di esercizio del circuito. Tubi stretti, filtri e valvole a valle possono ridurre la portata rispetto a una prova con uscita aperta."
+        },
+        {
+          "title": "Requisiti di motore e controllo",
+          "description": "Le configurazioni a spazzole e brushless richiedono modalità di azionamento e controllo diverse. Verifica tensione, ciclo di lavoro, cablaggio ed eventuali requisiti di regolazione della velocità o retroazione per il motore scelto."
+        },
+        {
+          "title": "Compatibilità con il liquido e montaggio",
+          "description": "Verifica tutti i materiali a contatto con il fluido in relazione al reagente e alla sequenza di pulizia. Prima di provare la pompa nello strumento, controlla le connessioni di ingresso e uscita, lo spazio di montaggio e le condizioni di alimentazione in ingresso."
+        }
+      ],
+      "productHeading": "Confronta le pompe a membrana per liquidi in base a portata e pressione",
+      "productIntroduction": "DPL30 e DPL60 coprono requisiti diversi di portata nominale. DPL30H offre un’opzione a pressione più alta. Le pagine dei modelli distinguono varianti di motore e connessioni per confrontare le condizioni rilevanti per il tuo circuito.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-lld-liquid-level-detection": {
+      "title": "Rilevamento del livello del liquido per il pipettaggio automatico",
+      "seoTitle": "Rilevamento del livello del liquido per il pipettaggio automatico | FOREACH",
+      "description": "Scopri come il rilevamento del livello contribuisce al pipettaggio automatico. Valuta geometria della sonda, condizioni del liquido e risposta del controllo prima dell’aspirazione.",
+      "durationLabel": "56 secondi",
+      "breadcrumbLabel": "Rilevamento del livello del liquido",
+      "watchHeading": "Guarda la panoramica del modulo di rilevamento del livello",
+      "caption": "Rilevamento del livello del liquido LLD nel pipettaggio automatico",
+      "highlightsHeading": "Che cosa deve confermare il rilevamento del livello prima del pipettaggio?",
+      "highlightsIntroduction": "Una sequenza di pipettaggio automatico deve individuare la superficie del liquido prima di aspirare. La panoramica LLD introduce il rilevamento del livello. Valuta insieme rilevatore, movimento della sonda e comando di aspirazione nello strumento previsto.",
+      "highlights": [
+        {
+          "title": "Superficie del liquido e posizione della sonda",
+          "description": "Il controllore ha bisogno di un segnale utilizzabile alla posizione prevista della sonda. Verifica la velocità di avvicinamento, la profondità di immersione e la risposta a contenitori vuoti. Il rilevamento della superficie e la misura del volume hanno funzioni distinte."
+        },
+        {
+          "title": "Abbinamento di sonda, liquido e contenitore",
+          "description": "Geometria della sonda, proprietà del liquido e contenitore influiscono sull’integrazione. Per misurare l’affidabilità della rilevazione usa campioni e reagenti effettivi, includendo schiuma o residui se pertinenti."
+        },
+        {
+          "title": "Aspirazione e gestione delle anomalie",
+          "description": "Verifica come lo strumento arresta o modifica il movimento della sonda dopo il rilevamento e come gestisce un segnale mancante o inatteso. Per stabilire l’accuratezza di dosaggio e le prestazioni complessive servono verifiche dello strumento."
+        }
+      ],
+      "productHeading": "Valuta sonde e componenti di pipettaggio per l’integrazione",
+      "productIntroduction": "I link riportano componenti complementari per la manipolazione dei liquidi con funzioni diverse dal modulo LLD. Valuta separatamente la geometria personalizzata della sonda di campionamento e la pompa di pipettaggio SMTP2. Per l’interfaccia LLD e i requisiti di compatibilità, contatta il team tecnico.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-about-foreach": {
+      "title": "Componenti per il controllo dei fluidi negli strumenti da laboratorio",
+      "seoTitle": "Componenti per il controllo dei fluidi negli strumenti da laboratorio | FOREACH",
+      "description": "Guarda la presentazione di FOREACH e scopri i componenti per il controllo dei fluidi negli strumenti da laboratorio, dal trasferimento di liquidi al pipettaggio automatico.",
+      "durationLabel": "2 minuti e 2 secondi",
+      "breadcrumbLabel": "Presentazione di FOREACH",
+      "watchHeading": "Guarda la presentazione di FOREACH e dei componenti fluidici",
+      "caption": "Panoramica di FOREACH e dei componenti per il controllo dei fluidi",
+      "highlightsHeading": "Come definire i requisiti di controllo dei fluidi per uno strumento da laboratorio",
+      "highlightsIntroduction": "Per scegliere un fornitore di componenti, parti dal compito del circuito e dalle informazioni necessarie per validare i componenti nello strumento. La presentazione introduce FOREACH. Le indicazioni seguenti aiutano a preparare un confronto tecnico specifico.",
+      "highlights": [
+        {
+          "title": "Distinguere trasferimento, dosaggio e monitoraggio",
+          "description": "Una pompa di trasferimento, un sistema di pipettaggio e un sensore di monitoraggio del fluido svolgono compiti diversi. Definisci la posizione di ciascun componente nel circuito prima di confrontare i prodotti o selezionare i candidati."
+        },
+        {
+          "title": "Preparare le condizioni operative",
+          "description": "Indica liquido, portata e pressione di lavoro, volume o ripetibilità richiesti, tempi del ciclo e metodo di pulizia. Queste informazioni permettono di valutare una configurazione con maggiore precisione rispetto al solo nome della famiglia di prodotti."
+        },
+        {
+          "title": "Pianificare le verifiche del componente e dello strumento",
+          "description": "Valuta il componente usando specifiche, disegni e informazioni sulle interfacce del prodotto scelto. Verifica poi il circuito assemblato nelle effettive condizioni operative. La qualifica dello strumento richiede prove specifiche."
+        }
+      ],
+      "productHeading": "Esplora esempi di componenti per trasferimento di liquidi e pipettaggio",
+      "productIntroduction": "Questi due esempi illustrano compiti distinti: trasferimento continuo di liquidi e pipettaggio controllato. Esplora la gamma completa se servono altre pompe, valvole, connessioni o sensori.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-dpl60-brushed-pressure-test": {
+      "title": "Prova di pressione della pompa a membrana per liquidi con motore a spazzole: classe 600 mL/min",
+      "seoTitle": "Prova di pressione della pompa a membrana per liquidi con motore a spazzole | FOREACH",
+      "description": "Guarda la prova di pressione della pompa a membrana per liquidi con motore a spazzole. Valuta separatamente la portata a scarico libero di 600 mL/min e la capacità di pressione.",
+      "durationLabel": "17 secondi",
+      "breadcrumbLabel": "Prova di pressione della DPL60 con motore a spazzole",
+      "watchHeading": "Guarda la prova di pressione della pompa per liquidi con motore a spazzole",
+      "caption": "Dimostrazione della pressione per la pompa a membrana DPL60 con motore a spazzole",
+      "highlightsHeading": "Che cosa dimostra la prova di pressione della pompa con motore a spazzole?",
+      "highlightsIntroduction": "Capacità di pressione e portata utile sono criteri di selezione distinti. Il video presenta la DPL60 con motore a spazzole, indicata con portata di 600 mL/min e specifica di pressione massima di 100 kPa. Per verificare l’erogazione continua a entrambi i valori servono prove dedicate oltre a questa breve dimostrazione.",
+      "highlights": [
+        {
+          "title": "Identificare la pressione misurata",
+          "description": "Registra se la pressione è misurata all’uscita della pompa o altrove nel circuito e se il liquido è ancora in movimento. Per definire il punto di lavoro utile occorrono dati sia di pressione sia di portata."
+        },
+        {
+          "title": "Verificare la configurazione del motore a spazzole",
+          "description": "Confronta tensione e tipo di motore con il prodotto selezionato. Ripeti la verifica se cambi motore o impostazione dell’alimentazione."
+        },
+        {
+          "title": "Verificare le condizioni di funzionamento richieste",
+          "description": "Per cicli ripetuti di lavaggio o trasferimento, valuta portata, corrente e temperatura sul ciclo di lavoro previsto. Per i limiti operativi, consulta le specifiche aggiornate e distinguili dai risultati di fine prova."
+        }
+      ],
+      "productHeading": "Esamina la pompa a spazzole e confronta l’alternativa brushless",
+      "productIntroduction": "DPL60-DB è la configurazione a spazzole pertinente. DPL60-BB è inclusa per confrontare le opzioni del motore e richiede una propria verifica di pressione. Prima di scegliere, conferma la configurazione elettrica e i materiali a contatto con il fluido.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-dpl60-brushed-flow-rate-test": {
+      "title": "Prova di portata della pompa a membrana per liquidi da 600 mL/min con motore a spazzole",
+      "seoTitle": "Prova di portata della pompa per liquidi da 600 mL/min con motore a spazzole | FOREACH",
+      "description": "Guarda la prova di portata di una pompa a membrana per liquidi di classe 600 mL/min con motore a spazzole. Valuta l’effetto di ingresso, tubi e contropressione sulla portata erogata.",
+      "durationLabel": "15 secondi",
+      "breadcrumbLabel": "Prova di portata DPL60 con motore a spazzole",
+      "watchHeading": "Guarda la dimostrazione di portata della pompa per liquidi con motore a spazzole",
+      "caption": "Dimostrazione della portata di liquido con la DPL60 a spazzole",
+      "highlightsHeading": "Come confrontare una prova di portata con il tuo circuito",
+      "highlightsIntroduction": "Una portata misurata va letta con le relative condizioni operative. Il video mostra una breve dimostrazione con la DPL60 a spazzole. Leggi il valore di catalogo di 600 mL/min insieme alle condizioni di prova del prodotto.",
+      "highlights": [
+        {
+          "title": "Registrare quantità misurata e tempo trascorso",
+          "description": "Se raccogli il liquido, calcola la portata dividendo il volume raccolto per il tempo di raccolta. Indica l’intervallo e ripeti la misura. Per verificare la ripetibilità del dosaggio occorrono prove ripetute."
+        },
+        {
+          "title": "Includere altezza di aspirazione e tubi",
+          "description": "La fonte cita un tubo flessibile da 3.2 mm di diametro interno per la specifica dell’altezza di aspirazione. Misura del tubo, lunghezza, livello del serbatoio e restrizioni all’ingresso influiscono sul confronto tra prova al banco e circuito installato."
+        },
+        {
+          "title": "Misurare con i componenti di mandata collegati",
+          "description": "Filtro, valvola o uscita rialzata possono creare contropressione rispetto a uno scarico libero. Verifica la portata richiesta con questi componenti montati."
+        }
+      ],
+      "productHeading": "Confronta le pompe per liquidi con motore a spazzole alla portata di lavoro richiesta",
+      "productIntroduction": "Parti dalla DPL60-DB per la famiglia mostrata. Se serve una portata inferiore, confronta la DPL30-DB con portata nominale minore. Controlla le curve alla pressione di esercizio effettiva.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-dpl60-brushless-flow-rate-test": {
+      "title": "Prova di portata della pompa a membrana per liquidi brushless da 600 mL/min",
+      "seoTitle": "Prova di portata della pompa per liquidi brushless da 600 mL/min | FOREACH",
+      "description": "Guarda la prova di portata della pompa a membrana per liquidi brushless di classe 600 mL/min. Verifica comando motore, contropressione e ciclo di lavoro.",
+      "durationLabel": "16 secondi",
+      "breadcrumbLabel": "Prova di portata DPL60 brushless",
+      "watchHeading": "Guarda la dimostrazione di portata della pompa per liquidi brushless",
+      "caption": "Dimostrazione della portata di liquido con la DPL60 brushless",
+      "highlightsHeading": "Quali condizioni registrare nella misura di portata di una pompa brushless?",
+      "highlightsIntroduction": "La dimostrazione della DPL60 brushless riguarda una prova breve di erogazione. Per lo strumento, confronta la classe nominale di 600 mL/min con la portata disponibile alla pressione e con il comando motore effettivi.",
+      "highlights": [
+        {
+          "title": "Documentare l’impostazione dell’azionamento",
+          "description": "Registra tensione di alimentazione e qualsiasi comando di velocità. Le interfacce dei motori brushless possono variare. Verifica se la pompa scelta ha soltanto i fili di alimentazione o anche conduttori di comando."
+        },
+        {
+          "title": "Verificare l’erogazione sotto carico",
+          "description": "La portata erogata cambia in funzione delle condizioni di ingresso e uscita. Considera tubi, valvole e filtri previsti per verificare se la pompa mantiene la portata di trasferimento richiesta."
+        },
+        {
+          "title": "Distinguere la prova di portata dalla verifica della durata",
+          "description": "Per stabilire la durata su migliaia di ore occorrono dati oltre a un filmato di pochi secondi. Valuta la vita utile con le condizioni di prova e verifica ciclo di accensione e arresto, temperatura ed esposizione reale al fluido."
+        }
+      ],
+      "productHeading": "Confronta le pompe per liquidi brushless alla portata di lavoro",
+      "productIntroduction": "DPL60-BB è la configurazione di classe 600 mL/min pertinente. Confronta DPL30-BB se basta una portata nominale più bassa e conferma cablaggio e opzioni di comando per la parte selezionata.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-dpl30-brushed-pressure-test": {
+      "title": "Prova di pressione della micropompa a membrana per liquidi con motore a spazzole",
+      "seoTitle": "Prova di pressione della micropompa per liquidi con motore a spazzole | FOREACH",
+      "description": "Guarda la prova di pressione di una micropompa a membrana per liquidi con motore a spazzole. Valuta pressione di lavoro, portata e connessione per il circuito.",
+      "durationLabel": "16 secondi",
+      "breadcrumbLabel": "Prova di pressione DPL30 con motore a spazzole",
+      "watchHeading": "Guarda la dimostrazione della pressione della micropompa per liquidi a spazzole",
+      "caption": "Prova di pressione della pompa a membrana per liquidi DPL30 con motore a spazzole",
+      "highlightsHeading": "Come valutare la capacità di pressione di una pompa compatta per liquidi",
+      "highlightsIntroduction": "La fonte sulla DPL30 con motore a spazzole riporta 300 mL/min di portata e 100 kPa di pressione massima. Sono dati distinti. La dimostrazione è un punto di partenza per valutare la pompa. Le prestazioni vanno confermate nel circuito installato.",
+      "highlights": [
+        {
+          "title": "Collegare la pressione al compito del circuito",
+          "description": "Individua se la pressione dipende dalla resistenza dei tubi, da un filtro, da una valvola o da un recipiente in pressione. La pompa deve fornire la portata richiesta contro il carico complessivo."
+        },
+        {
+          "title": "Controllare il montaggio del portagomma",
+          "description": "Il raccordo per il liquido fa parte del sistema che deve contenere la pressione. Abbina il tubo al portagomma previsto e verifica ritenzione, compatibilità dei materiali e qualità del montaggio prima di attivare il circuito."
+        },
+        {
+          "title": "Verificare i limiti sul ciclo di lavoro effettivo",
+          "description": "Per stabilire tenuta nel tempo, stabilità termica e durata servono prove ulteriori rispetto a un breve video di pressione. Per valutare il funzionamento continuo o ripetuto, usa i limiti ufficiali del prodotto e una prova sul ciclo di lavoro."
+        }
+      ],
+      "productHeading": "Confronta le pompe per liquidi a spazzole a pressione standard e superiore",
+      "productIntroduction": "DPL30-DB appartiene alla famiglia a pressione standard mostrata. DPL30H-DS è un’opzione a pressione superiore con connessioni diverse. Verifica separatamente compatibilità e prestazioni.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-dpl30-brushless-pressure-test": {
+      "title": "Prova di pressione della micropompa a membrana per liquidi brushless",
+      "seoTitle": "Prova di pressione della micropompa per liquidi brushless | FOREACH",
+      "description": "Guarda la prova di pressione di una micropompa a membrana per liquidi brushless. Distingui portata nominale, capacità di pressione e prestazioni dopo l’installazione.",
+      "durationLabel": "16 secondi",
+      "breadcrumbLabel": "Prova di pressione DPL30 brushless",
+      "watchHeading": "Guarda la dimostrazione di pressione della micropompa per liquidi brushless",
+      "caption": "Prova di pressione della pompa a membrana per liquidi DPL30 brushless",
+      "highlightsHeading": "Che cosa verificare prima di usare una pompa brushless sotto pressione?",
+      "highlightsIntroduction": "Il video presenta la DPL30 brushless in una prova di pressione. La portata nominale di 300 mL/min e la pressione massima di 100 kPa si riferiscono a condizioni diverse. Per scegliere il punto di lavoro servono la curva portata-pressione e la configurazione del motore prevista.",
+      "highlights": [
+        {
+          "title": "Mantenere coerente la configurazione elettrica",
+          "description": "Registra tensione di alimentazione, modalità di comando e durata della prova. Quando cambi variante brushless o comando di velocità, verifica nuovamente le prestazioni."
+        },
+        {
+          "title": "Osservare anche l’erogazione di liquido",
+          "description": "Un circuito può andare in pressione anche con portata ridotta. Conferma la portata richiesta dall’applicazione a valle, soprattutto quando una valvola, un tubo stretto o un filtro introducono resistenza."
+        },
+        {
+          "title": "Valutare l’intero circuito sotto pressione",
+          "description": "Tubi, raccordi, tenute e componenti a valle devono essere adatti alla pressione di lavoro e al liquido. Controlla avviamento e arresto oltre alla pressione a regime."
+        }
+      ],
+      "productHeading": "Confronta le pompe brushless per liquidi alla pressione richiesta",
+      "productIntroduction": "Valuta DPL30-BB per la famiglia mostrata e DPL30H-BS come alternativa a pressione superiore. Il modello ad alta pressione ha connessioni diverse e richiede una verifica specifica.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-dpl30-brushless-flow-rate-test": {
+      "title": "Prova di portata della pompa a membrana per liquidi brushless da 300 mL/min",
+      "seoTitle": "Prova di portata della pompa per liquidi brushless da 300 mL/min | FOREACH",
+      "description": "Guarda la prova di portata di una pompa a membrana per liquidi brushless di classe 300 mL/min. Verifica condizioni di ingresso, uscita e comando per un confronto significativo.",
+      "durationLabel": "18 secondi",
+      "breadcrumbLabel": "Prova di portata DPL30 brushless",
+      "watchHeading": "Guarda la dimostrazione di portata della pompa brushless di classe 300 mL/min",
+      "caption": "Dimostrazione della portata di liquido con la DPL30 brushless",
+      "highlightsHeading": "Come valutare il trasferimento di liquidi a bassa portata con una pompa brushless",
+      "highlightsIntroduction": "Per trasferire reagenti o alimentare piccoli circuiti negli strumenti conta la portata attraverso il circuito installato. Il filmato della DPL30 brushless mostra l’erogazione di liquido. Per definire il volume esatto dosato per comando servono misure dedicate.",
+      "highlights": [
+        {
+          "title": "Misurare la portata alle condizioni dichiarate",
+          "description": "Registra fluido, temperatura, impostazione dell’alimentazione e intervallo di raccolta. Se misuri volume e tempo, usa lo stesso metodo di raccolta per confrontare configurazioni diverse."
+        },
+        {
+          "title": "Verificare separatamente l’adescamento",
+          "description": "La fonte indica un’altezza di aspirazione con tubo da 3.2 mm di diametro interno. Il raggiungimento del liquido e il mantenimento della portata dopo l’adescamento vanno verificati separatamente. Considera altezza del serbatoio e tenuta in ingresso in entrambe le prove."
+        },
+        {
+          "title": "Provare il carico reale in mandata",
+          "description": "Misura con il tubo di erogazione, il filtro e la valvola previsti. Verifica nuovamente la portata in presenza di resistenza o con una camera in pressione, anche se la prova a uscita libera è riuscita."
+        }
+      ],
+      "productHeading": "Confronta le pompe brushless per il trasferimento a bassa portata",
+      "productIntroduction": "Parti da DPL30-BB e confronta DPL60-BB se il circuito richiede una portata nominale superiore. Prima di provare la configurazione scelta, verifica il punto di lavoro e le opzioni di comando nelle pagine dei prodotti.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-dpl30-brushed-flow-rate-test": {
+      "title": "Prova di portata della pompa a membrana per liquidi da 300 mL/min con motore a spazzole",
+      "seoTitle": "Prova di portata della pompa per liquidi da 300 mL/min con motore a spazzole | FOREACH",
+      "description": "Guarda la prova di portata di una pompa a membrana per liquidi di classe 300 mL/min con motore a spazzole e le condizioni da considerare per valutare una pompa compatta di trasferimento.",
+      "durationLabel": "18 secondi",
+      "breadcrumbLabel": "Prova di portata DPL30 con motore a spazzole",
+      "watchHeading": "Guarda la dimostrazione di portata della pompa a spazzole di classe 300 mL/min",
+      "caption": "Dimostrazione della portata di liquido con la DPL30 a spazzole",
+      "highlightsHeading": "Che cosa registrare nella prova di portata di una pompa a spazzole",
+      "highlightsIntroduction": "Una pompa compatta per liquidi a spazzole si può valutare misurando la portata erogata in un circuito definito. Il filmato DPL30 presenta una breve dimostrazione della classe 300 mL/min. Per la selezione usa specifiche aggiornate e condizioni operative effettive.",
+      "highlights": [
+        {
+          "title": "Tensione e intervallo di funzionamento",
+          "description": "Registra tensione alla pompa e durata di funzionamento prima e durante la misura. Riporta separatamente le fasi di avviamento, adescamento ed erogazione a regime, oppure documenta il criterio usato per calcolare una media."
+        },
+        {
+          "title": "Volume, tempo e misure ripetute",
+          "description": "Misura il liquido raccolto e il tempo trascorso, poi ripeti la prova alle stesse condizioni. Riporta separatamente la portata media di trasferimento e la ripetibilità delle singole erogazioni."
+        },
+        {
+          "title": "Ciclo di lavoro e manutenzione",
+          "description": "Il filmato riguarda la portata. Per valutare la durata del motore e confrontare versioni a spazzole e brushless, considera avviamenti, arresti e tempi di funzionamento effettivi."
+        }
+      ],
+      "productHeading": "Confronta pompe a spazzole e brushless della stessa classe di portata",
+      "productIntroduction": "DPL30-DB è la configurazione a spazzole. DPL30-BB è l’alternativa di motore per confrontare integrazione elettrica e manutenzione. Verifica a quale modello si riferisce ciascuna prova.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-five-wire-brushless-control-wires": {
+      "title": "Cablaggio delle pompe a membrana brushless a 5 fili: PWM e retroazione di velocità",
+      "seoTitle": "Cablaggio delle pompe brushless a 5 fili: PWM e FG | FOREACH",
+      "description": "Scopri le funzioni di comando nel video sulla pompa a membrana brushless a cinque fili, tra cui regolazione PWM della velocità, retroazione FG e comando del senso di rotazione.",
+      "durationLabel": "26 secondi",
+      "breadcrumbLabel": "Cablaggio delle pompe brushless a 5 fili",
+      "watchHeading": "Guarda la panoramica del comando della pompa brushless a cinque fili",
+      "caption": "Funzioni di comando della DPL60 brushless a cinque fili",
+      "highlightsHeading": "A che cosa servono i fili di comando in una pompa brushless?",
+      "highlightsIntroduction": "La fonte presenta comando PWM, retroazione della velocità FG e comando del senso di rotazione in una configurazione brushless a cinque fili. Prima del collegamento, consulta lo schema effettivo per confermare colori, piedinatura e livelli di tensione.",
+      "highlights": [
+        {
+          "title": "Comando PWM",
+          "description": "Il PWM fornisce un comando di velocità sulle configurazioni che lo supportano. Per frequenza, livelli logici e intervallo ammesso del duty cycle, consulta la documentazione del motore selezionato. Per misurare la portata del liquido serve una misura specifica."
+        },
+        {
+          "title": "Retroazione FG",
+          "description": "Il segnale FG fornisce informazioni sulla rotazione del motore. Il controllore deve interpretare il numero di impulsi per giro documentato. Il motore può continuare a girare anche quando il liquido smette di fluire. Usa una verifica separata per confermare la portata."
+        },
+        {
+          "title": "Comando del senso di rotazione",
+          "description": "Nelle pompe a membrana, le valvole di non ritorno in ingresso e uscita determinano la direzione del fluido. Prima di utilizzare questo ingresso, conferma il senso di rotazione ammesso e il comportamento operativo della pompa."
+        }
+      ],
+      "productHeading": "Valuta le opzioni di controllo brushless prima del cablaggio",
+      "productIntroduction": "La pagina DPL60-BB è il punto di partenza per la famiglia brushless. Quando richiedi la variante del motore e il suo schema elettrico, specifica il requisito di comando a cinque fili. Verifica lo schema per la variante scelta.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-two-wire-brushless-diaphragm-pump": {
+      "title": "Pompe a membrana brushless a 2 fili: alimentazione e criteri di scelta",
+      "seoTitle": "Collegamenti delle pompe a membrana brushless a 2 fili | FOREACH",
+      "description": "Scopri l’interfaccia di una pompa a membrana brushless a due fili. Confronta il semplice collegamento di alimentazione con i requisiti di comando e retroazione dello strumento.",
+      "durationLabel": "17 secondi",
+      "breadcrumbLabel": "Collegamenti delle pompe brushless a 2 fili",
+      "watchHeading": "Guarda la panoramica della pompa brushless a due fili",
+      "caption": "Presentazione della pompa DPL60 brushless a due fili",
+      "highlightsHeading": "Quando è adatta un’interfaccia brushless a due fili?",
+      "highlightsIntroduction": "La configurazione brushless a due fili semplifica l’alimentazione quando non servono conduttori separati di comando e retroazione. La fonte mostra questo approccio con una DPL60. Sceglilo in funzione del comportamento richiesto dallo strumento.",
+      "highlights": [
+        {
+          "title": "Polarità e tensione di alimentazione",
+          "description": "Nel cablaggio mostrato, rosso indica il positivo e nero il negativo. Prima di alimentare il motore fornito, verifica etichetta e specifiche di cablaggio. I colori dei conduttori possono variare tra pompe o gruppi cavo."
+        },
+        {
+          "title": "Comando di accensione e arresto e retroazione di velocità",
+          "description": "I due fili di alimentazione sono destinati all’alimentazione. Se serve un comando di velocità o un segnale FG di rotazione, valuta una configurazione di motore con comando dedicato e verifica i requisiti dell’interfaccia."
+        },
+        {
+          "title": "Confermare le modalità ammesse di controllo dell’alimentazione",
+          "description": "Verifica con il fornitore se l’azionamento a due fili selezionato supporta la riduzione della tensione o il PWM sulla linea di alimentazione. Chiedi anche il comportamento all’avviamento e i requisiti di protezione."
+        }
+      ],
+      "productHeading": "Scegli una pompa brushless con l’interfaccia elettrica richiesta",
+      "productIntroduction": "Valuta la famiglia DPL60-BB e specifica se l’applicazione richiede il funzionamento a due fili. Conferma la configurazione di motore offerta separatamente dai requisiti di portata e pressione del fluido.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-diaphragm-pump-hose-barb-protection": {
+      "title": "Come proteggere il portagomma di una pompa a membrana dalla rottura",
+      "seoTitle": "Come evitare la rottura del portagomma della pompa | FOREACH",
+      "description": "Guarda come montare il tubo senza piegare il portagomma di una pompa a membrana in miniatura. Verifica compatibilità, direzione di inserimento e sostegno del tubo.",
+      "durationLabel": "16 secondi",
+      "breadcrumbLabel": "Protezione del portagomma della pompa",
+      "watchHeading": "Guarda la dimostrazione di manipolazione del portagomma",
+      "caption": "Montaggio del tubo e protezione del portagomma",
+      "highlightsHeading": "Perché un portagomma della pompa può rompersi durante il montaggio del tubo?",
+      "highlightsIntroduction": "Una forza laterale fa agire il tubo come una leva sulla porta della pompa. Il video raccomanda di inserire il tubo in asse ed evitare di forzarlo in curva vicino al portagomma. Applica questa precauzione insieme alle specifiche di montaggio della pompa scelta.",
+      "highlights": [
+        {
+          "title": "Verificare la corrispondenza del tubo prima dell’inserimento",
+          "description": "Controlla diametro interno, parete e materiale specificati. Un tubo troppo stretto può richiedere una forza eccessiva. Un tubo troppo largo può perdere o sfilarsi nelle condizioni operative."
+        },
+        {
+          "title": "Allineare il tubo con la porta",
+          "description": "Sostieni la pompa e inserisci il tubo lungo l’asse del portagomma. Evita di fare leva piegando il tubo o usando il peso della pompa. Per stabilire la forza di montaggio ammessa, consulta la specifica applicabile al componente."
+        },
+        {
+          "title": "Ridurre le sollecitazioni dopo il montaggio",
+          "description": "Posa e sostieni il tubo per evitare che curve strette, serbatoi mobili o trazioni esterne carichino la porta. Ispeziona il collegamento e controlla la tenuta alla pressione e alla temperatura previste."
+        }
+      ],
+      "productHeading": "Controlla le connessioni portagomma delle pompe a membrana per liquidi",
+      "productIntroduction": "Queste configurazioni DPL30 e DPL60 utilizzano portagomma. Per le porte filettate della DPL30H occorre una procedura di montaggio dedicata.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-diaphragm-pump-placement-stability": {
+      "title": "Perché una pompa a membrana in miniatura oscilla su una superficie piana?",
+      "seoTitle": "Perché una pompa a membrana oscilla su una superficie piana | FOREACH",
+      "description": "Scopri come il carter del motore può impedire l’appoggio in piano di una pompa a membrana in miniatura. Verifica superfici di montaggio e punti di fissaggio previsti.",
+      "durationLabel": "26 secondi",
+      "breadcrumbLabel": "Posizionamento e montaggio della pompa",
+      "watchHeading": "Guarda la spiegazione del montaggio della pompa a membrana",
+      "caption": "Sporgenza del carter motore e montaggio previsto della pompa",
+      "highlightsHeading": "Quali superfici della pompa sono previste per il montaggio?",
+      "highlightsIntroduction": "Se appoggiata sul banco, una pompa può oscillare quando poggia su una sporgenza del carter anziché su una superficie di fissaggio. Il video spiega una sporgenza legata al cuscinetto del motore e mostra la configurazione di montaggio prevista.",
+      "highlights": [
+        {
+          "title": "Distinguere la forma del carter dal riferimento di montaggio",
+          "description": "La superficie esterna del motore può presentare sporgenze. Per verificare l’orientamento e i punti di fissaggio previsti, consulta il disegno del prodotto."
+        },
+        {
+          "title": "Lasciare intatta la sporgenza",
+          "description": "Usa i punti di montaggio specificati e mantieni intatta la sporgenza per preservare motore e cuscinetto. Evita di rettificare o appiattire il carter per livellare la pompa."
+        },
+        {
+          "title": "Distinguere l’oscillazione sul banco dalle vibrazioni in servizio",
+          "description": "L’oscillazione di una pompa libera sul banco e le vibrazioni di una pompa fissata durante il funzionamento sono fenomeni diversi. In caso di problemi a pompa installata, controlla fissaggi, rigidità del supporto, carico dei tubi e velocità di funzionamento."
+        }
+      ],
+      "productHeading": "Consulta i disegni di montaggio delle pompe per liquidi",
+      "productIntroduction": "Usa il disegno della configurazione di motore DPL30 o DPL60 scelta per individuare i punti di montaggio. Prima di progettare la staffa o il supporto, verifica orientamento e spazi liberi.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-diaphragm-installation": {
+      "title": "Come installare una pompa a membrana in miniatura per liquidi",
+      "seoTitle": "Guida di installazione della pompa a membrana in miniatura per liquidi | FOREACH",
+      "description": "Guarda come installare una pompa a membrana in miniatura per liquidi. Verifica montaggio, connessioni dei tubi, controlli elettrici e precauzioni all’avviamento.",
+      "durationLabel": "22 secondi",
+      "breadcrumbLabel": "Installazione della pompa a membrana",
+      "watchHeading": "Guarda la dimostrazione di installazione della pompa a membrana in miniatura",
+      "caption": "Metodi e precauzioni per installare la pompa a membrana",
+      "highlightsHeading": "Che cosa controllare prima di avviare una pompa a membrana per liquidi?",
+      "highlightsIntroduction": "Monta la pompa sui punti di fissaggio specificati, collega correttamente ingresso e uscita e verifica la configurazione elettrica prima dell’avvio. Il breve video illustra modalità di montaggio. Per dimensioni e requisiti di fissaggio usa il disegno del modello scelto.",
+      "highlights": [
+        {
+          "title": "Montaggio e spazi liberi",
+          "description": "Individua le superfici di fissaggio ammesse e lascia spazio a tubi, passaggio dei cavi e manutenzione. Usa la lunghezza delle viti specificata e mantieni libero il carter del motore se ha una superficie irregolare."
+        },
+        {
+          "title": "Connessioni in ingresso e in uscita",
+          "description": "Segui le indicazioni di flusso e abbina il tubo alla porta prevista. Sostieni i tubi per evitare sollecitazioni di flessione, mantieni la tenuta in ingresso ed evita restrizioni strette vicino alla pompa."
+        },
+        {
+          "title": "Avviamento controllato",
+          "description": "Verifica tensione e polarità, alimenta il circuito con il liquido previsto e osserva adescamento, portata e perdite. Prima di avviare la sequenza normale dello strumento, confronta il funzionamento con pressione e ciclo di lavoro specificati."
+        }
+      ],
+      "productHeading": "Verifica la configurazione e il disegno di installazione",
+      "productIntroduction": "Le varianti DPL30 a spazzole e brushless offrono i dati pertinenti alla guida. Prima di usare il metodo del video, conferma motore, montaggio e connessioni della pompa fornita.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-800-series-gas-liquid": {
+      "title": "Pompe a membrana per gas e liquidi per aspirare gli scarti e generare il vuoto",
+      "seoTitle": "Pompe a membrana per gas e liquidi per l’aspirazione degli scarti | FOREACH",
+      "description": "Esplora una pompa a membrana in miniatura per gas e liquidi destinata all’aspirazione. Distingui portata del gas senza carico, vuoto e prestazioni con liquido.",
+      "durationLabel": "15 secondi",
+      "breadcrumbLabel": "Panoramica delle pompe per gas e liquidi",
+      "watchHeading": "Guarda la panoramica della pompa a membrana per gas e liquidi",
+      "caption": "Presentazione della pompa a membrana DPGL800 per gas e liquidi",
+      "highlightsHeading": "Quando serve una pompa a membrana per gas e liquidi?",
+      "highlightsIntroduction": "Nell’aspirazione degli scarti, il liquido può alternarsi all’aria. Per questo occorre una pompa idonea alla gestione delle due fasi. La panoramica presenta la configurazione brushless a doppia testata DPGL800 per questo compito.",
+      "highlights": [
+        {
+          "title": "Verificare il fluido lungo tutto il ciclo",
+          "description": "Stabilisci se la pompa incontra liquido, aria o porzioni alternate di entrambi. Per verificare i materiali a contatto con il fluido, considera composizione prevista degli scarti e liquidi di pulizia."
+        },
+        {
+          "title": "Leggere la portata per il fluido indicato",
+          "description": "Il valore di 6 L/min è la portata del gas senza carico con una singola testata. Verifica separatamente la portata con il liquido e le prestazioni avvicinandosi al vuoto limite, perché si riferiscono a condizioni di lavoro diverse."
+        },
+        {
+          "title": "Valutare il collegamento delle testate e dei tubi",
+          "description": "La doppia testata consente configurazioni diverse secondo la documentazione del prodotto. Conferma il collegamento scelto e misura tempo di aspirazione, pressione di linea e comportamento con gas e liquidi nel circuito completo."
+        }
+      ],
+      "productHeading": "Esamina una pompa progettata per gas e liquidi",
+      "productIntroduction": "Consulta la pagina DPGL800 per connessioni, materiali e limiti operativi. Per un ricambio, verifica l’idoneità alla gestione delle due fasi oltre alla portata nominale.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-brushed-vs-brushless-lifespan": {
+      "title": "Motori a spazzole e brushless per pompe: usura, pulizia ed EMI",
+      "seoTitle": "Motori a spazzole e brushless per pompe: usura ed EMI | FOREACH",
+      "description": "Confronta i motori delle pompe a membrana anche per usura delle spazzole, pulizia e interferenze elettromagnetiche.",
+      "durationLabel": "17 secondi",
+      "breadcrumbLabel": "Usura del motore della pompa ed EMI",
+      "watchHeading": "Guarda il confronto tra motori per pompe a spazzole e brushless",
+      "caption": "Usura del motore, pulizia e integrazione elettrica",
+      "highlightsHeading": "Quali fattori contano oltre alla durata nella scelta del motore?",
+      "highlightsIntroduction": "La durata del motore è uno dei criteri per scegliere una pompa a membrana. Il confronto riguarda anche l’usura delle spazzole, la pulizia e le interferenze elettromagnetiche. Valuta questi fattori nello strumento effettivo.",
+      "highlights": [
+        {
+          "title": "Usura delle spazzole e particelle",
+          "description": "Un motore a spazzole usa contatti meccanici e può produrre residui di usura. Valuta se posizione e involucro del motore possono incidere sui componenti sensibili nelle vicinanze. Verifica separatamente l’eventuale contaminazione del circuito del liquido sigillato."
+        },
+        {
+          "title": "Commutazione elettronica ed EMI",
+          "description": "Un motore brushless usa la commutazione elettronica. Il rumore elettrico dipende da azionamento, cablaggio, messa a terra e installazione. Per confrontare le emissioni occorrono misure sullo strumento completo."
+        },
+        {
+          "title": "Durata sul ciclo di lavoro previsto",
+          "description": "Confronta i dati di durata insieme alle condizioni operative. Avviamenti, arresti, temperatura, carico e usura sul lato liquido contano anche con un motore privo di spazzole di carbone."
+        }
+      ],
+      "productHeading": "Confronta pompe per liquidi a spazzole e brushless",
+      "productIntroduction": "La coppia DPL30 permette di valutare le opzioni di motore nella stessa classe di portata nominale. Verifica la configurazione elettrica e pianifica controlli di rumore e durata sullo strumento con il gruppo scelto.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-60-series-pressure": {
+      "title": "Pressione massima e pressione di lavoro nelle pompe a membrana",
+      "seoTitle": "Pressione massima e pressione di lavoro nelle pompe a membrana | FOREACH",
+      "description": "Usa la dimostrazione di pressione di una pompa a membrana per distinguere la misura di prova, il limite dichiarato e il punto di lavoro portata-pressione utile.",
+      "durationLabel": "21 secondi",
+      "breadcrumbLabel": "Pressione massima e pressione di lavoro",
+      "watchHeading": "Guarda la dimostrazione della pressione massima di una pompa a membrana per liquidi",
+      "caption": "Dimostrazione di pressione della serie DPL60",
+      "highlightsHeading": "Si può usare una misura di prova come valore di pressione per l’esercizio continuo?",
+      "highlightsIntroduction": "Una pressione raggiunta in un breve test va distinta dalla pressione di lavoro continua ammessa. Prima di scegliere il punto di lavoro, leggi il video DPL60 insieme alle specifiche aggiornate e alla curva portata-pressione.",
+      "highlights": [
+        {
+          "title": "Leggere il manometro insieme alle condizioni di prova",
+          "description": "Per interpretare la pressione rilevata servono posizione del manometro, restrizione in uscita, condizioni di alimentazione e tempo trascorso. Per il progetto usa un valore nominale definito nelle relative condizioni, oltre al picco visibile nel test."
+        },
+        {
+          "title": "Verificare quanto liquido fluisce alla pressione misurata",
+          "description": "La pressione massima descrive una condizione specifica. Per l’erogazione, scegli il punto che garantisce la portata richiesta con la resistenza reale a valle, entro i limiti dichiarati."
+        },
+        {
+          "title": "Controllare tutti i componenti esposti alla pressione",
+          "description": "Pompa, tubi, raccordi, valvole e destinazione del liquido hanno limiti propri. Valuta i transitori e il funzionamento prolungato oltre alla pressione di un breve filmato."
+        }
+      ],
+      "productHeading": "Usa le specifiche aggiornate per scegliere la pressione di lavoro",
+      "productIntroduction": "Confronta le varianti di motore DPL60 e le condizioni documentate. La specifica, la curva e una prova sul sistema permettono di scegliere un punto di lavoro adatto. I limiti dichiarati restano il riferimento per la pressione nominale.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-motor-selection": {
+      "title": "Come scegliere un motore a spazzole o brushless per una pompa a membrana",
+      "seoTitle": "Scelta di un motore per pompa a spazzole o brushless | FOREACH",
+      "description": "Scegli il motore di una pompa a membrana in base a ore di funzionamento, cicli di avviamento e arresto, requisiti di comando e integrazione elettrica. Confronta quindi le configurazioni corrispondenti.",
+      "durationLabel": "19 secondi",
+      "breadcrumbLabel": "Scelta del motore della pompa a membrana",
+      "watchHeading": "Guarda l’introduzione alla scelta del motore della pompa a membrana",
+      "caption": "Scelta del motore a spazzole o brushless per le pompe a membrana",
+      "highlightsHeading": "Quali requisiti operativi guidano la scelta del motore?",
+      "highlightsIntroduction": "Parti dalle prestazioni fluidiche richieste e scegli il motore in base al ciclo di lavoro e ai comandi. Il breve video introduce il confronto. Per decidere, considera anche i requisiti elettrici e di manutenzione dello strumento.",
+      "highlights": [
+        {
+          "title": "Ore di funzionamento e avviamenti",
+          "description": "Registra per quante ore al giorno gira la pompa e quanto spesso si avvia. Confronta durata e manutenzione con carichi e cicli di lavoro comparabili. Verifica le condizioni di prova di ogni valore di durata."
+        },
+        {
+          "title": "Comando e retroazione",
+          "description": "Stabilisci se bastano accensione e arresto oppure se servono comandi di velocità e retroazione della rotazione. Le varianti brushless possono usare interfacce diverse. Controlla cablaggio e requisiti dei segnali effettivi."
+        },
+        {
+          "title": "Costi di integrazione e verifica",
+          "description": "Includi alimentatore, azionamento, percorso dei cavi e mitigazione del rumore nel confronto. Dopo la scelta del motore, valida l’intero circuito per portata, pressione e compatibilità dei materiali."
+        }
+      ],
+      "productHeading": "Confronta le opzioni di motore nella classe di portata richiesta",
+      "productIntroduction": "Confronta varianti a spazzole e brushless di DPL30 o DPL60 dopo aver definito il punto di lavoro del circuito. Richiedi le specifiche elettriche della variante scelta e provala con la sequenza di avvio e arresto prevista.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-30h-series-pressure": {
+      "title": "Prova di una pompa a membrana in miniatura per liquidi ad alta pressione",
+      "seoTitle": "Prova di una pompa a membrana in miniatura per liquidi ad alta pressione | FOREACH",
+      "description": "Guarda la dimostrazione di una pompa a membrana in miniatura per liquidi ad alta pressione. Valuta limiti di pressione, connessioni filettate e portata sotto contropressione.",
+      "durationLabel": "23 secondi",
+      "breadcrumbLabel": "Prova ad alta pressione DPL30H",
+      "watchHeading": "Guarda la dimostrazione della pompa a membrana per liquidi ad alta pressione",
+      "caption": "Dimostrazione di pressione della serie DPL30H",
+      "highlightsHeading": "Che cosa verificare quando si sceglie una micropompa ad alta pressione?",
+      "highlightsIntroduction": "La capacità di pressione superiore è utile se la pompa continua a fornire la portata richiesta nel circuito effettivo. La dimostrazione DPL30H accompagna le specifiche aggiornate di 300 mL/min a scarico libero e 600 kPa di pressione massima, riferite a condizioni operative distinte.",
+      "highlights": [
+        {
+          "title": "Portata alla contropressione richiesta",
+          "description": "Individua la portata necessaria sulla curva del prodotto. Verifica la portata alla pressione effettiva separatamente dal valore di 300 mL/min a scarico libero. Per il funzionamento continuo servono prove dedicate."
+        },
+        {
+          "title": "Connessione filettata e tenuta",
+          "description": "DPL30H usa connessioni diverse dai modelli DPL30 con portagomma. Verifica raccordo di accoppiamento, tenuta e istruzioni di montaggio. Controlla l’idoneità dell’intero collegamento alla pressione."
+        },
+        {
+          "title": "Ciclo di lavoro e risposta del sistema",
+          "description": "Registra la pressione durante avviamento, funzionamento normale e commutazione delle valvole. Valuta corrente, temperatura, perdite e portata sul ciclo di lavoro previsto, usando i limiti delle specifiche ufficiali."
+        }
+      ],
+      "productHeading": "Confronta le configurazioni di motore delle pompe per liquidi ad alta pressione",
+      "productIntroduction": "DPL30H-DS e DPL30H-BS sono le opzioni con motore a spazzole e brushless della famiglia. Consulta configurazione elettrica e disegno delle connessioni di ogni modello, poi verifica la prestazione a pressione e portata richieste.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    },
+    "youtube-diaphragm-selection": {
+      "title": "Come scegliere una pompa a membrana in miniatura per il tuo circuito",
+      "seoTitle": "Come scegliere una pompa a membrana in miniatura | FOREACH",
+      "description": "Scegli una pompa a membrana in miniatura in base a fluido, portata di lavoro, pressione, materiali e comando. Confronta le configurazioni per liquidi e per gas e liquidi.",
+      "durationLabel": "18 secondi",
+      "breadcrumbLabel": "Scelta della pompa a membrana in miniatura",
+      "watchHeading": "Guarda l’introduzione alla scelta delle pompe a membrana in miniatura",
+      "caption": "Introduzione alla scelta delle pompe a membrana",
+      "highlightsHeading": "Da quali requisiti partire nella scelta della pompa a membrana?",
+      "highlightsIntroduction": "Definisci il fluido e il punto di lavoro richiesto prima di scegliere il modello. Il breve video introduce la selezione. I controlli seguenti aiutano a confrontare le configurazioni disponibili.",
+      "highlights": [
+        {
+          "title": "Liquido continuo o alternanza di gas e liquido",
+          "description": "Stabilisci se la pompa trasferisce un’alimentazione continua di liquido o incontra alternanze di aria e liquido in aspirazione. Scegli una pompa adatta al fluido e confronta portate ottenute con fluidi di prova comparabili."
+        },
+        {
+          "title": "Portata alla pressione richiesta e condizioni di ingresso",
+          "description": "Specifica la portata richiesta insieme a contropressione in uscita, altezza di aspirazione e restrizioni nelle tubazioni. Portata a scarico libero, pressione massima e vuoto limite sono dati riferiti a condizioni distinte."
+        },
+        {
+          "title": "Materiali, connessioni e comando",
+          "description": "Verifica tutti i materiali a contatto con il fluido rispetto al liquido e al metodo di pulizia. Prima di scegliere una configurazione per il prototipo, controlla connessioni dei tubi, spazio di montaggio, tensione, ciclo di lavoro e segnali di comando richiesti."
+        }
+      ],
+      "productHeading": "Confronta le pompe in base al compito del circuito",
+      "productIntroduction": "Valuta DPL30 e DPL60 per portate di liquido diverse, DPL30H per un’eventuale contropressione superiore e DPGL800 per aspirazione di gas e liquidi. Ogni compito richiede specifiche e verifiche proprie.",
+      "support": {
+        "title": "Parliamo dei requisiti del tuo sistema fluidico",
+        "description": "Indica fluido, portata e pressione richieste, ciclo di funzionamento, connessioni e interfaccia di controllo per valutare una configurazione adatta."
+      }
+    }
+  },
+  "hub": {
+    "hero": {
+      "kicker": "GUIDE DI INSTALLAZIONE",
+      "title": "Guide di installazione e utilizzo dei prodotti",
+      "description": "Istruzioni di montaggio e configurazione, procedure di calibrazione e indicazioni per risolvere i problemi dei prodotti microfluidici FOREACH."
+    },
+    "search": {
+      "placeholder": "Inserisci il nome o il modello del prodotto",
+      "buttonText": "Cerca",
+      "recentLabel": "Ricerche recenti",
+      "recentKeywords": [
+        "Pompe a pistone",
+        "Q20",
+        "Elettrovalvola",
+        "Valvola ad alta pressione",
+        "Sensore di pressione"
+      ]
+    },
+    "sidebar": {
+      "title": "Serie di prodotti",
+      "tree": [
+        {
+          "name": "Tutte le guide"
+        },
+        {
+          "name": "Raccordi e connessioni per tubi"
+        },
+        {
+          "name": "Pompe",
+          "children": [
+            {
+              "name": "Pompe a pistone"
+            },
+            {
+              "name": "Pompe a membrana"
+            },
+            {
+              "name": "Pompa dosatrice senza valvole"
+            },
+            {
+              "name": "Pompe a siringa"
+            },
+            {
+              "name": "Pompe ad alta pressione"
+            }
+          ]
+        },
+        {
+          "name": "Valvole",
+          "children": [
+            {
+              "name": "Valvole rotative"
+            },
+            {
+              "name": "Elettrovalvole"
+            },
+            {
+              "name": "Valvole ad alta pressione"
+            },
+            {
+              "name": "Valvole a pinza"
+            }
+          ]
+        },
+        {
+          "name": "Sensori"
+        },
+        {
+          "name": "Controllo qualità"
+        },
+        {
+          "name": "Sonde e aghi"
+        },
+        {
+          "name": "Chi è FOREACH"
+        }
+      ]
+    },
+    "support": {
+      "title": "Ti serve una guida specifica?",
+      "description": "Inviaci il modello del prodotto, i dettagli dell’applicazione o i disegni. Il team tecnico di FOREACH può assisterti con l’installazione, l’impostazione dei parametri o la calibrazione.",
+      "buttonText": "Contatta l’assistenza tecnica"
+    }
+  },
+  "ui": {
+    "home": "Home",
+    "guides": "Guide di installazione",
+    "back": "Indietro",
+    "contact": "Contatta l’assistenza tecnica",
+    "watch": "Guarda su YouTube",
+    "highlights": "Punti salienti del video"
+  },
+  "tags": {
+    "Solenoid valves": "Elettrovalvole",
+    "Product overview": "Panoramica del prodotto",
+    "Piston pump dispensing": "Dosaggio con pompa a pistone",
+    "Laboratory tubing": "Tubi da laboratorio",
+    "Quick-connect sealing": "Tenuta dei raccordi rapidi",
+    "Quick-connect fitting sizes": "Dimensioni dei raccordi rapidi",
+    "Water filtration": "Filtrazione dell’acqua",
+    "Thread-to-barb fittings": "Raccordi filettati portagomma",
+    "Rigid tubing fittings": "Raccordi per tubi rigidi",
+    "Syringe installation": "Montaggio della siringa",
+    "Quick fittings": "Raccordi rapidi",
+    "Thread adapters": "Adattatori filettati",
+    "Bubble detection": "Rilevamento di bolle",
+    "Pump selection": "Selezione della pompa",
+    "Vacuum test": "Prova di vuoto",
+    "Liquid level detection": "Rilevamento del livello del liquido",
+    "Company overview": "Profilo aziendale",
+    "DPL60": "DPL60",
+    "Brushed Motor": "Motore a spazzole",
+    "Pressure Test": "Prova di pressione",
+    "Flow Rate Test": "Prova di portata",
+    "Brushless Motor": "Motore brushless",
+    "DPL30": "DPL30",
+    "Flow Performance": "Prestazioni di portata",
+    "5-Wire Motor": "Motore a 5 fili",
+    "Control Wires": "Fili di comando",
+    "2-Wire Motor": "Motore a 2 fili",
+    "Hose Barb": "Portagomma",
+    "Installation": "Installazione",
+    "Diaphragm Pump": "Pompa a membrana",
+    "Mounting": "Montaggio",
+    "Stability": "Stabilità",
+    "Precautions": "Precauzioni",
+    "800 Series": "Serie 800",
+    "Gas-Liquid Pump": "Pompa per gas e liquidi",
+    "Service Life": "Durata di servizio",
+    "60 Series": "Serie 60",
+    "Motor Selection": "Selezione del motore",
+    "30H Series": "Serie 30H",
+    "Pressure Resistance": "Resistenza alla pressione",
+    "Pump Selection": "Selezione della pompa",
+    "Application": "Applicazione"
+  },
+  "productTitles": {
+    "2-Way Miniature Solenoid Valves": "Elettrovalvole in miniatura a 2 vie",
+    "3-Way Miniature Solenoid Valves": "Elettrovalvole in miniatura a 3 vie",
+    "View the SV10 series →": "Visualizza la serie SV10 →",
+    "Explore piston pump configurations": "Esplora le configurazioni delle pompe a pistone",
+    "Browse instrument tubing by material": "Esplora i tubi per strumenti per materiale",
+    "Browse quick-connect fittings and mating options": "Esplora i raccordi rapidi e le opzioni di accoppiamento",
+    "View all quick-connect fittings": "Visualizza tutti i raccordi rapidi",
+    "View available filter products": "Visualizza i filtri disponibili",
+    "View thread-to-barbed fittings": "Visualizza i raccordi filettati portagomma",
+    "View rigid tubing fittings": "Visualizza i raccordi per tubi rigidi",
+    "HLD6 Rotary Valve Syringe Pump": "Pompa a siringa HLD6 con valvola rotativa",
+    "View syringe pumps →": "Visualizza le pompe a siringa →",
+    "Quick-Connect Fittings": "Raccordi rapidi",
+    "View all quick-connect fittings →": "Visualizza tutti i raccordi rapidi →",
+    "Female Thread Adapters and Connectors": "Adattatori e raccordi con filettatura femmina",
+    "ABD Air Bubble Detection Module": "Modulo ABD per il rilevamento delle bolle d’aria",
+    "DPL30-DB": "DPL30-DB",
+    "DPL30H-DS": "DPL30H-DS",
+    "DPL30-BB": "DPL30-BB",
+    "DPL30H-BS": "DPL30H-BS",
+    "Compare miniature liquid diaphragm pumps": "Confronta le pompe a membrana in miniatura per liquidi",
+    "DPGL800-BS": "DPGL800-BS",
+    "Explore pumps for gas-liquid handling and waste aspiration": "Esplora le pompe per gas e liquidi e per l’aspirazione degli scarti",
+    "DPL60-DB": "DPL60-DB",
+    "DPL60-BB": "DPL60-BB",
+    "Sampling Probes for Liquid Handling": "Sonde di campionamento per la manipolazione di liquidi",
+    "SMTP2 Programmable Pipetting Modules": "Moduli di pipettaggio programmabili SMTP2",
+    "Explore the complete fluid-control product range": "Esplora l’intera gamma di prodotti per il controllo dei fluidi",
+    "Read about FOREACH": "Scopri FOREACH",
+    "Compare a two-wire brushless pump interface": "Confronta l’interfaccia di una pompa brushless a 2 fili",
+    "Review five-wire PWM and feedback functions": "Consulta le funzioni PWM e di retroazione per il cablaggio a 5 fili",
+    "Review diaphragm pump installation precautions": "Consulta le precauzioni di montaggio delle pompe a membrana",
+    "Prevent hose-barb damage during tubing installation": "Proteggi il portagomma durante il montaggio del tubo",
+    "Watch the gas-liquid pump vacuum test": "Guarda la prova di vuoto della pompa per gas e liquidi",
+    "Choose a pump motor for your duty cycle and controls": "Scegli il motore della pompa in base al ciclo di lavoro e al comando",
+    "Review brush wear, cleanliness and EMI considerations": "Valuta usura delle spazzole, pulizia e interferenze elettromagnetiche (EMI)",
+    "Compare standard- and high-pressure liquid pump selection": "Confronta la scelta di pompe per liquidi a pressione standard e alta",
+    "FOREACH 3-way manifold-mount miniature diaphragm solenoid valve": "Elettrovalvola a membrana in miniatura FOREACH a 3 vie, da collettore",
+    "FOREACH 3-way barbed miniature diaphragm solenoid valve": "Elettrovalvola a membrana in miniatura FOREACH a 3 vie, portagomma",
+    "FOREACH 3-way threaded miniature diaphragm solenoid valve": "Elettrovalvola a membrana in miniatura FOREACH a 3 vie, filettata",
+    "FOREACH 2-way manifold-mount miniature diaphragm solenoid valve": "Elettrovalvola a membrana in miniatura FOREACH a 2 vie, da collettore",
+    "FOREACH 2-way barbed miniature diaphragm solenoid valve": "Elettrovalvola a membrana in miniatura FOREACH a 2 vie, portagomma",
+    "FOREACH 2-way threaded miniature diaphragm solenoid valve": "Elettrovalvola a membrana in miniatura FOREACH a 2 vie, filettata",
+    "FOREACH 2-way normally open manifold-mount miniature diaphragm solenoid valve": "Elettrovalvola a membrana in miniatura FOREACH a 2 vie normalmente aperta, da collettore",
+    "FOREACH 2-way normally open barbed miniature diaphragm solenoid valve": "Elettrovalvola a membrana in miniatura FOREACH a 2 vie normalmente aperta, portagomma",
+    "FOREACH 2-way normally open threaded miniature diaphragm solenoid valve": "Elettrovalvola a membrana in miniatura FOREACH a 2 vie normalmente aperta, filettata",
+    "EA-500-PMMA": "EA-500-PMMA",
+    "EA-500-PEEK": "EA-500-PEEK",
+    "EA-100-PMMA": "EA-100-PMMA",
+    "EA-250-PMMA": "EA-250-PMMA",
+    "Polyvinyl Chloride (PVC) Tubing": "Tubi in polivinilcloruro (PVC)",
+    "Thermoplastic Polyurethane (TPU) Tubing": "Tubi in poliuretano termoplastico (TPU)",
+    "Fluorinated Ethylene Propylene (FEP) Tubing": "Tubi in etilene propilene fluorurato (FEP)",
+    "Polytetrafluoroethylene (PTFE) Tubing": "Tubi in politetrafluoroetilene (PTFE)",
+    "Polyether Ether Ketone (PEEK) Tubing": "Tubi in polietere etere chetone (PEEK)",
+    "Q2002-SNX-SPPE": "Q2002-SNX-SPPE",
+    "Q6006-SNX-SPPE": "Q6006-SNX-SPPE",
+    "Q4004-SNX-SPPE": "Q4004-SNX-SPPE",
+    "Q6006-PNV-LPPE": "Q6006-PNV-LPPE",
+    "SA-U28-32D-PP-N": "SA-U28-32D-PP-N",
+    "SB-M5-32D-PP-N": "SB-M5-32D-PP-N",
+    "SBS-M6-32D-PP-N": "SBS-M6-32D-PP-N",
+    "SBR-U28-32-PP-N": "SBR-U28-32-PP-N",
+    "Flanged Tubing Assemblies": "Assemblaggi di tubi flangiati",
+    "Ferrule Tubing Assemblies": "Assemblaggi di tubi con ogiva",
+    "HLD3 Rotary Valve Syringe Pump": "Pompa a siringa HLD3 con valvola rotativa",
+    "HMD6 Solenoid Valve Syringe Pump": "Pompa a siringa HMD6 con elettrovalvola",
+    "HMD3 Solenoid Valve Syringe Pump": "Pompa a siringa HMD3 con elettrovalvola",
+    "Q6006-SMX-LPPE": "Q6006-SMX-LPPE",
+    "Q6006-PNX-LPPE": "Q6006-PNX-LPPE",
+    "Q6006-SMV-SPPE": "Q6006-SMV-SPPE",
+    "Q6008-SNX-SPPE": "Q6008-SNX-SPPE",
+    "Q6008-PNV-SPPE": "Q6008-PNV-SPPE",
+    "Q6012-SNV-SPPE": "Q6012-SNV-SPPE",
+    "Q6012-PNV-SPPE": "Q6012-PNV-SPPE",
+    "Q6038N-PNV-SPPE": "Q6038N-PNV-SPPE",
+    "U-U28-20-PP-N · PP": "U-U28-20-PP-N · PP",
+    "U-M6-20-AC-B · AC": "U-M6-20-AC-B · AC",
+    "UT-U28-20-PS-B · PPS": "UT-U28-20-PS-B · PPS",
+    "UT-U28-20-PP-N · PP": "UT-U28-20-PP-N · PP",
+    "U-M6-20-PP-N · PP": "U-M6-20-PP-N · PP",
+    "US-M6-10-AC-B · AC": "US-M6-10-AC-B · AC",
+    "US-M6-10-PP-N · PP": "US-M6-10-PP-N · PP",
+    "UY-U28-20-PP-N · PP": "UY-U28-20-PP-N · PP",
+    "UT-U28-15-PS-B · PPS": "UT-U28-15-PS-B · PPS",
+    "PMU-M12-U28-20-PP-N · PP": "PMU-M12-U28-20-PP-N · PP",
+    "ABD Air Bubble Detector": "Rilevatore di bolle d’aria ABD",
+    "PDM5 Pressure Sensor": "Sensore di pressione PDM5"
+  },
+  "articleFallbackSummaries": {
+    "what-is-a-diaphragm-pump": "Una pompa a membrana è una pompa volumetrica che trasferisce liquidi o gas grazie al movimento alternativo di una membrana flessibile e a valvole di non ritorno in aspirazione e in mandata. La guida illustra funzionamento, tipologie, vantaggi, limiti, applicazioni e criteri di scelta."
+  },
+  "articleTitles": {
+    "What Is a Solenoid Valve? Operating Principles and 2-Way/3-Way Fluid Control": "Che cos’è un’elettrovalvola? Principio di funzionamento e controllo dei fluidi a 2 e 3 vie",
+    "Why Do Air Bubbles Delay or Bias Piston Pump Dispensing?": "Perché le bolle d’aria ritardano o alterano il dosaggio con una pompa a pistone?",
+    "How Should Piston Pump Aspiration Speed and Dwell Be Set for Viscous Reagents?": "Come impostare velocità di aspirazione e tempo di sosta della pompa a pistone per reagenti viscosi?",
+    "How Can You Isolate Piston Pump Dispensing Drift Over Time?": "Come individuare la causa della deriva di dosaggio di una pompa a pistone?",
+    "Choosing a 100, 250 or 500 μL Piston Pump for Clinical Chemistry Dosing": "Scelta di una pompa a pistone da 100, 250 o 500 μL per il dosaggio in chimica clinica",
+    "How to Select a Piston Pump Head Material": "Come scegliere il materiale della testata di una pompa a pistone",
+    "Piston Pump Accuracy, Repeatability and Resolution Explained": "Accuratezza, ripetibilità e risoluzione delle pompe a pistone",
+    "What Is a Precision Piston Pump? Working Principle, Benefits and Applications": "Che cos’è una pompa a pistone di precisione? Funzionamento, vantaggi e applicazioni",
+    "Acceleration and Deceleration Curves for Piston-Pump Drives": "Curve di accelerazione e decelerazione per azionamenti di pompe a pistone",
+    "Precision Piston Pump Backlash Compensation Guide": "Come compensare il gioco meccanico in una pompa a pistone di precisione",
+    "Precision Piston Pump Stepper Motor Calculation and Selection": "Calcolo e scelta del motore passo-passo per una pompa a pistone di precisione",
+    "Is Clear PVC Tubing Compatible with Cleaning Fluids? Clouding and IVD Validation": "I tubi trasparenti in PVC sono compatibili con i liquidi di pulizia? Opacizzazione e verifica per IVD",
+    "Why Does Tubing Pull Off Barbed Fittings? PVC Pressure and Pull-Off Tests": "Perché un tubo si sfila da un raccordo portagomma? Prove di pressione e sfilamento su PVC",
+    "Medical PVC Tubing: How to Evaluate Tolerances, Cleanroom Production and Certifications": "Tubi medicali in PVC: come valutare tolleranze, produzione in camera bianca e certificazioni",
+    "What Is PVC Tubing? Hardness, Dimensions and Fittings for Instrument Lines": "Che cosa sono i tubi in PVC? Durezza, dimensioni e raccordi per le linee degli strumenti",
+    "How to Calculate Barb Expansion Ratio: Tubing Dimensions, Profiles and Fit": "Come calcolare il rapporto di espansione sul portagomma: misure dei tubi, profili e accoppiamento",
+    "Quick Disconnect Flow Rate: Pressure Drop Curves and Kv/Cv Calculations": "Portata dei raccordi a sgancio rapido: curve di caduta di pressione e calcoli Kv/Cv",
+    "What Is a Quick Disconnect Fitting? Male/Female Connections, Valves and Selection": "Che cos’è un raccordo a sgancio rapido? Connessioni maschio-femmina, valvole e scelta",
+    "How to Choose Fitting Materials: PP, PA, POM, PVDF and PEEK": "Come scegliere i materiali per i raccordi: PP, PA, POM, PVDF e PEEK",
+    "Thread-to-Barb Fitting Selection: Threads, Seals and Tubing Sizes": "Scelta dei raccordi filettati portagomma: filettature, tenute e misure dei tubi",
+    "What Is PTFE Tubing? Properties, Limitations and Selection for Instrument Fluidics": "Che cosa sono i tubi in PTFE? Proprietà, limiti e scelta per la fluidica strumentale",
+    "What Is FEP Tubing? Properties, Dimensions and Connections for Transparent Fluoropolymer Tubing": "Che cosa sono i tubi in FEP? Proprietà, misure e connessioni per tubi trasparenti in fluoropolimero",
+    "What Is PFA Tubing? Material Properties, Cleanliness and Instrument Fluidics": "Che cosa sono i tubi in PFA? Proprietà del materiale, pulizia e fluidica strumentale",
+    "What Is a Flangeless Ferrule Fitting? Design, Sizes and Selection": "Che cos’è un raccordo senza flangia con ogiva? Struttura, misure e scelta",
+    "What Is a Compression-Ring Fitting? Design, Sizes and Selection": "Che cos’è un raccordo con anello di compressione? Struttura, misure e scelta",
+    "How to Select Flanged Tubing Assemblies: Sealing, Port Matching and Installed Validation": "Come scegliere gli assemblaggi di tubi flangiati: tenuta, accoppiamento delle porte e validazione a bordo",
+    "Microfluidic Hard-Tube Fitting Selection Guide: Flanged, Ferrule and Snap-Ring Connections": "Guida ai raccordi per tubi rigidi in microfluidica: connessioni flangiate, a ogiva e ad anello elastico",
+    "What Is a Programmable Syringe Pump? Operation, Fluid Routing and Automation": "Che cos’è una pompa a siringa programmabile? Funzionamento, percorsi fluidici e automazione",
+    "What Is Pipetting? Manual and Automated Workflows Compared": "Che cos’è il pipettaggio? Confronto tra flussi di lavoro manuali e automatizzati",
+    "What Are Female Thread Unions? Selecting Straight, Tee, Y and Bulkhead Connections": "Che cosa sono i raccordi con filettatura femmina? Scelta di configurazioni diritte, a T, a Y e passaparete",
+    "What Is a Diaphragm Pump? Working Principle, Types, Pros and Cons, and Selection": "Che cos’è una pompa a membrana? Funzionamento, tipi, vantaggi, limiti e scelta",
+    "Does a Miniature Diaphragm Pump Need a Pulsation Damper? Validate It with an A/B Test": "Serve uno smorzatore di pulsazioni per una pompa a membrana in miniatura? Verifica con una prova A/B",
+    "Inkjet Printer Pumps: Micro Diaphragm Pumps for Stable Ink Supply": "Pompe per stampanti a getto d’inchiostro: micropompe a membrana per un’alimentazione stabile",
+    "Diaphragm Pump Bubbles and Noise: Cavitation, Air Ingress or Outgassing?": "Bolle e rumore nelle pompe a membrana: cavitazione, ingresso d’aria o degassamento?",
+    "Ink Starvation in Inkjet Printers: Causes and Troubleshooting": "Carenza di inchiostro nelle stampanti a getto d’inchiostro: cause e diagnosi",
+    "Why Does a Diaphragm Pump Flow Totalizer Disagree with Collected Mass?": "Perché il totalizzatore di portata di una pompa a membrana differisce dalla massa raccolta?",
+    "Miniature Diaphragm vs. Peristaltic Pumps: Pros, Cons and Selection for Instrument Fluidics": "Pompe a membrana in miniatura e pompe peristaltiche: vantaggi, limiti e scelta per la fluidica strumentale",
+    "Foreach miniature diaphragm pumps for OEM integration: operating points, instrument validation and production introduction": "Pompe a membrana in miniatura FOREACH per l’integrazione OEM: punti di lavoro, validazione nello strumento e avvio della produzione",
+    "Selecting a Self-Priming Miniature Liquid Diaphragm Pump: Lift, Priming Time and Dry or Wet Starts": "Scelta di una pompa a membrana in miniatura autoadescante per liquidi: altezza, tempi e avvio a secco o ad umido",
+    "Reducing Flow Pulsation in Miniature Diaphragm Pumps: Measurement and Practical Measures": "Ridurre le pulsazioni di portata nelle pompe a membrana in miniatura: misurazione e interventi",
+    "Why do multiple wash nozzles deliver different flows from one miniature diaphragm pump?": "Perché più ugelli di lavaggio erogano portate diverse dalla stessa pompa a membrana in miniatura?",
+    "Miniature Diaphragm Pump Noise: Causes, Vibration Isolation and Noise Reduction": "Rumore delle pompe a membrana in miniatura: cause, isolamento dalle vibrazioni e riduzione",
+    "Flow starts normally, then falls: how do you check reservoir venting for a miniature diaphragm pump?": "La portata parte regolarmente e poi cala: come verificare lo sfiato del serbatoio di una pompa a membrana in miniatura?",
+    "Miniature Diaphragm Pump Backflow After Stopping: Check Valves and Anti-Siphon Design": "Riflusso dopo l’arresto della pompa a membrana in miniatura: valvole di non ritorno e progettazione antisifone",
+    "Which Materials Are Available for Miniature Diaphragm Pumps? Selection Considerations": "Quali materiali sono disponibili per le pompe a membrana in miniatura? Criteri di scelta",
+    "What Is the Difference Between an Ink Circulation Pump, Ink Supply Pump and Ink Return Pump?": "Che differenza c’è tra pompa di ricircolo, pompa di alimentazione e pompa di ritorno dell’inchiostro?",
+    "300 or 600 mL/min? How to Select an Ink Circulation or Ink Return Pump": "300 o 600 mL/min? Come scegliere una pompa di ricircolo o di ritorno dell’inchiostro",
+    "Why Is White Ink Recirculation More Difficult, and How Should a White Ink Circulation Pump Be Selected?": "Perché il ricircolo dell’inchiostro bianco è più difficile e come scegliere la pompa?",
+    "How to Select an IVD Waste Liquid Pump: Liquid or Gas-Liquid Diaphragm Pump?": "Come scegliere una pompa per i liquidi di scarto IVD: pompa a membrana per liquidi o per gas e liquidi?",
+    "What Are Cleaning, Wash and Rinse Pumps in IVD Systems, and Why Are Miniature Diaphragm Pumps Used?": "Che cosa sono le pompe di pulizia, lavaggio e risciacquo nei sistemi IVD e perché usare pompe a membrana in miniatura?",
+    "Why Does a 300 mL/min Micro Liquid Diaphragm Pump Lose Self-Priming Performance Over Time?": "Perché una micropompa a membrana per liquidi da 300 mL/min perde capacità di autoadescamento nel tempo?",
+    "A 300 mL/min Micro Liquid Diaphragm Pump Motor Runs but No Liquid Flows—What Should You Check First?": "Il motore di una micropompa a membrana per liquidi da 300 mL/min gira senza erogare liquido. Quali controlli fare per primi?",
+    "Why Does a 300 mL/min Micro Liquid Diaphragm Pump Lose Flow and Self-Priming When Water Is Replaced by a Reagent?": "Perché una micropompa a membrana per liquidi da 300 mL/min perde portata e capacità di autoadescamento passando dall’acqua a un reagente?",
+    "How Should You Select EPDM, PTFE and FFKM for a Micro Diaphragm Pump?": "Come scegliere EPDM, PTFE e FFKM per una micropompa a membrana?",
+    "How Do You Choose Between a 300 mL/min and 600 mL/min Miniature Diaphragm Pump? Calculate Task Flow First, Then Check the Actual Operating Point": "Come scegliere tra una pompa a membrana in miniatura da 300 mL/min e una da 600 mL/min? Calcolo della portata richiesta e verifica del punto di lavoro",
+    "How Much Installed Flow Margin Should a 300 mL/min Miniature Diaphragm Pump Have? A Foreach Example": "Quale margine di portata serve per una pompa a membrana in miniatura da 300 mL/min installata? Un esempio FOREACH",
+    "Why Does Actual Flow Change So Much When the Tubing Size Changes on the Same Miniature Diaphragm Pump?": "Perché la portata effettiva varia tanto al cambiare della misura del tubo sulla stessa pompa a membrana in miniatura?",
+    "Which Has a Greater Effect on a Miniature Diaphragm Pump: Suction-Line or Discharge-Line Resistance?": "Quale resistenza incide maggiormente su una pompa a membrana in miniatura, quella in aspirazione o in mandata?",
+    "What Is the Difference Between Rated Working Pressure, Maximum Output Pressure, Proof Pressure, and Burst Pressure for a Miniature Diaphragm Pump?": "Come distinguere pressione nominale di esercizio, pressione massima in uscita, pressione di prova e pressione di scoppio in una pompa a membrana in miniatura?",
+    "Is 100 kPa Enough? How to Determine Whether a Fluid Path Needs a 600 kPa High-Pressure Miniature Diaphragm Pump": "Bastano 100 kPa? Come stabilire se il circuito richiede una pompa a membrana in miniatura da 600 kPa",
+    "How Do You Build a Pressure Budget for a High-Backpressure Fluid Path? A Foreach 600 kPa Miniature Diaphragm Pump Selection Example": "Come calcolare il bilancio di pressione per un circuito ad alta contropressione? Un esempio FOREACH da 600 kPa",
+    "Why Do Brushed Diaphragm Pumps Last Around 3,000 Hours and Brushless Pumps Around 10,000 Hours?": "Perché le pompe a membrana con motore a spazzole durano circa 3.000 ore e quelle brushless circa 10.000?",
+    "How to Select a High-Pressure Diaphragm Pump: DPL30H 300 mL/min and 600 kPa Guide": "Come scegliere una pompa a membrana ad alta pressione: guida DPL30H da 300 mL/min e 600 kPa",
+    "How to Read a Diaphragm Pump Flow-Pressure Curve—and Predict Installed Flow": "Come leggere la curva portata-pressione di una pompa a membrana e stimare la portata installata",
+    "How Long Can a Miniature Diaphragm Pump Run Continuously? A Duty-Cycle and Life Guide": "Per quanto tempo può funzionare in continuo una pompa a membrana in miniatura? Ciclo di lavoro e durata",
+    "2-Wire vs 5-Wire Brushless Diaphragm Pumps: What Is the Difference and Which Should You Choose?": "Pompe a membrana brushless a 2 o 5 fili: differenze e criteri di scelta",
+    "How to Select a 300 mL/min Liquid Diaphragm Pump: DPL30 Working Principle and Model Guide": "Come scegliere una pompa a membrana per liquidi da 300 mL/min: funzionamento e modelli DPL30",
+    "IVD Waste Aspiration: Liquid Pump or Vacuum Pump? Direct vs Indirect Aspiration": "Aspirazione di scarti IVD: pompa per liquidi o pompa per vuoto? Aspirazione diretta e indiretta",
+    "What to Do When a Laboratory Waste Aspiration Pump Loses Suction: Troubleshooting Leaks, Filter Blockage, and Liquid Carryover": "Perdita di aspirazione in una pompa per scarti da laboratorio: diagnosi di perdite, filtri ostruiti e trascinamento di liquido",
+    "How to Select a Gas-Liquid Diaphragm Pump: DPGL800 Flow, Vacuum and Build-Up Time": "Come scegliere una pompa a membrana per gas e liquidi: portata, vuoto e tempo di generazione del vuoto della DPGL800",
+    "How to Select a Miniature Diaphragm Pump for Life-Science Instruments: DPL60 Washing, Drainage and Waste-Fluid Guide": "Come scegliere una pompa a membrana in miniatura per strumenti delle scienze della vita: lavaggio, drenaggio e scarti con DPL60",
+    "How to Select a 600 mL/min Liquid Diaphragm Pump: DPL60 Flow, Pressure and Model Guide": "Come scegliere una pompa a membrana per liquidi da 600 mL/min: portata, pressione e modelli DPL60",
+    "What is a programmable automatic air-displacement pipetting pump?": "Che cos’è una pompa per pipettaggio automatico programmabile a spostamento d’aria?"
+  }
+}

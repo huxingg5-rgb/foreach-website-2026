@@ -1,0 +1,537 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Che cos’è un raccordo con ogiva senza flangiatura? Struttura, misure e scelta",
+      "seoTitle": "Che cos’è un raccordo con ogiva senza flangiatura? Struttura, misure e scelta | FOREACH",
+      "seoDescription": "Scopri come i raccordi con ogiva senza flangiatura realizzano la tenuta sui tubi rigidi per microfluidica. Confronta dimensioni, materiali, compatibilità con le porte e montaggio delle serie FOREACH HN, HN6, HNF e HNF6.",
+      "coverImage": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings-photo.png",
+      "coverAlt": "Dadi per raccordi FOREACH neri, blu e di colore naturale con ogive separate"
+    },
+    "deck": "I raccordi senza flangiatura usano un dado filettato per comprimere un’ogiva attorno a un tubo rigido senza dover formare prima una flangia. Le serie FOREACH HN, HN6, HNF e HNF6 coprono diametri esterni del tubo di 1.6, 2.0, 2.5, 3.0 e 3.2 mm, filettature M6×1 e 1/4-28 UNF e diversi materiali del dado per il trasferimento di reagenti, la gestione dei campioni e le linee di lavaggio nella strumentazione analitica e nell’automazione di laboratorio.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Un raccordo con ogiva senza flangiatura è un collegamento filettato per tubi rigidi in microfluidica. Le espressioni «raccordo senza flangiatura» e «raccordo con ogiva» evidenziano due aspetti: il tubo non richiede una flangia preformata e un’ogiva separata provvede al ritegno e alla tenuta. Serrando il dado, l’ogiva viene compressa attorno al tubo e contro la porta di alloggiamento. Questi raccordi consentono di collegare tubi a pompe, valvole e moduli fluidici in linee di trasferimento di reagenti, gestione dei campioni e lavaggio."
+      },
+      {
+        "type": "paragraph",
+        "text": "FOREACH offre quattro serie, HN, HN6, HNF e HNF6, con teste zigrinate standard e compatte. Coprono diametri esterni del tubo di 1.6, 2.0, 2.5, 3.0 e 3.2 mm e porte a fondo piatto con filettatura M6×1 o 1/4-28 UNF. Ad esempio, il modello HN6 illustrato ha un diametro della testa di 6.4 mm e una lunghezza totale di 15.5 mm. Per le altre serie consulta il singolo disegno quotato."
+      },
+      {
+        "type": "paragraph",
+        "text": "I dadi HN e HN6 sono disponibili in PEEK, PVDF, POM e PPS. Nelle configurazioni trattate, HNF usa PVDF e HNF6 usa PPS. Le ogive separate sono disponibili in PP e in ETFE. Scegli insieme dado e ogiva in base al diametro esterno del tubo, al fluido e allo spazio di installazione. Conferma materiali e dimensioni esatti con il codice articolo."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-fittings-photo.png",
+        "alt": "Dadi per raccordi FOREACH neri, blu e di colore naturale con ogive separate",
+        "width": 1846,
+        "height": 1245,
+        "caption": "Dadi per raccordi e ogive. Abbina l’ogiva al raccordo specifico. La somiglianza di aspetto non dimostra la compatibilità."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Che cos’è un raccordo con ogiva senza flangiatura?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Questo articolo tratta i raccordi filettati per microfluidica con ogiva separata. Il tubo attraversa il dado e l’ogiva e raggiunge la porta dello strumento. Il serraggio del dado applica una forza di compressione assiale. L’ogiva è il componente che fa tenuta e trattiene il tubo. È distinta da una fascetta o da un raccordo sanitario a morsetto."
+          },
+          {
+            "type": "paragraph",
+            "text": "A differenza di un collegamento flangiato, questa configurazione usa un’estremità del tubo tagliata perpendicolarmente ed elimina la fase di formatura della flangia. Rimangono necessari il diametro esterno del tubo adatto, un taglio pulito, l’ogiva corretta e una porta di alloggiamento compatibile."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Componente",
+              "Funzione",
+              "Che cosa controllare"
+            ],
+            "rows": [
+              [
+                "Dado filettato",
+                "Si avvita nella porta dello strumento e trasmette la forza all’ogiva",
+                "Serie, filettatura, foro, materiale e spazio di installazione"
+              ],
+              [
+                "Ogiva",
+                "Trattiene il tubo e contribuisce alla tenuta sotto compressione",
+                "Codice articolo, diametro esterno del tubo, materiale, orientamento e requisiti di montaggio"
+              ],
+              [
+                "Tubo",
+                "Trasporta il fluido e tocca l’ogiva con la parete esterna",
+                "Diametri interno ed esterno, tolleranza del diametro esterno, materiale, spessore della parete e qualità del taglio"
+              ],
+              [
+                "Porta di alloggiamento",
+                "Fornisce l’interfaccia filettata e la sede di tenuta",
+                "Filettatura, geometria del fondo, profondità e condizioni della superficie di tenuta"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le configurazioni HN, HN6, HNF e HNF6 trattate qui usano porte a fondo piatto M6×1 o 1/4-28 UNF. Per altre geometrie o filettature e per raccordi dedicati all’alta pressione servono i rispettivi disegni e istruzioni di montaggio."
+          }
+        ]
+      },
+      {
+        "title": "Come si realizza la tenuta?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Fai scorrere il dado e l’ogiva corretti sul tubo tagliato perpendicolarmente, rispettando l’orientamento specificato. Inserisci l’insieme nella porta compatibile mantenendo l’estremità del tubo nella posizione prevista. Avanzando, il dado esercita una forza assiale sull’ogiva, che trattiene il tubo e realizza la tenuta contro la porta. La tenuta dipende dal corretto appoggio dei componenti e non dal solo attrito della filettatura."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-structure-en.webp",
+            "alt": "Raccordo compatto HN6, ogiva e tubo con disegno quotato in sezione",
+            "width": 1759,
+            "height": 894,
+            "caption": "Esempio di collegamento HN6. Il diametro della testa di 6.4 mm e la lunghezza totale di 15.5 mm si riferiscono al modello HN6 illustrato. Rispetta la posizione specificata del tubo e l’orientamento dell’ogiva."
+          },
+          {
+            "type": "paragraph",
+            "text": "Se l’estremità del tubo si sposta, l’ogiva è invertita o il diametro esterno del tubo è errato, la resistenza al serraggio può crescere prima che le superfici di tenuta vadano in battuta. Aumentare la forza non corregge l’incompatibilità e può deformare l’ogiva o il tubo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Controlla l’impegno dei filetti separatamente dal corretto appoggio di ogiva, tubo e porta. M6×1 e 1/4-28 UNF sono filettature diverse. La possibilità di avvitare per qualche giro non dimostra la compatibilità. Non usare nastro o sigillante per filetti per compensare una geometria di tenuta incompatibile."
+          }
+        ]
+      },
+      {
+        "title": "HN, HN6, HNF e HNF6: lunghezza del tratto filettato e spazio di installazione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Queste serie FOREACH si distinguono per stile della testa, materiale, lunghezza del tratto filettato, lunghezza totale e configurazione dell’ogiva. Anche se la filettatura e il diametro esterno del tubo coincidono, confronta le quote necessarie per il collegamento completo."
+          },
+          {
+            "type": "subheading",
+            "title": "Una differenza di 2.4 mm nel tratto filettato: quali quote devono combaciare?"
+          },
+          {
+            "type": "paragraph",
+            "text": "La lunghezza del tratto filettato è di 8.1 mm per HN e HN6 e di 10.5 mm per HNF e HNF6, con una differenza di 2.4 mm. È la distanza assiale tra la testa o la spalla e la faccia anteriore del dado. Controllala insieme alla profondità della porta, alla posizione della filettatura interna e alla posizione in cui l’ogiva viene compressa."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Serie",
+              "Tipo di testa",
+              "Lunghezza del tratto filettato",
+              "Lunghezza totale"
+            ],
+            "rows": [
+              [
+                "HN",
+                "Zigrinata standard",
+                "8.1 mm",
+                "18.1 mm"
+              ],
+              [
+                "HN6",
+                "Compatta",
+                "8.1 mm",
+                "15.5 mm"
+              ],
+              [
+                "HNF",
+                "Zigrinata standard",
+                "10.5 mm",
+                "16.5 mm"
+              ],
+              [
+                "HNF6",
+                "Compatta",
+                "10.5 mm",
+                "20.0 mm"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La differenza non implica che HNF o HNF6 entri necessariamente 2.4 mm più a fondo nella stessa porta. La profondità di installazione dipende anche dalle posizioni di appoggio della porta e dell’ogiva. L’impegno effettivo della filettatura è la lunghezza lungo la quale i filetti interno ed esterno sono realmente accoppiati dopo il montaggio. Conferma a parte la posizione dell’estremità del tubo."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il dado deve comprimere un’ogiva correttamente assestata mantenendo l’impegno dei filetti richiesto dal progetto. Se una spalla tocca la superficie dell’apparecchiatura prima che l’ogiva sia compressa, il dado può sembrare completamente serrato anche se il giunto perde ancora. Controlla l’accoppiamento dimensionale. Una coppia maggiore non corregge un disallineamento assiale."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le viste in sezione ed esplose mostrano le posizioni relative di dado, ogiva, tubo e porta. Illustrano la disposizione del collegamento. Per le dimensioni o la profondità di montaggio di ciascun modello in tabella usa il disegno corrispondente."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-port-section.png",
+            "alt": "Sezione di un raccordo con ogiva che mostra dado, tubo, ogiva e porta di alloggiamento",
+            "width": 513,
+            "height": 1332,
+            "caption": "Vista in sezione: il tubo attraversa il dado e l’ogiva, che si appoggia nella porta di alloggiamento."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-connection-exploded.png",
+            "alt": "Vista esplosa del raccordo con ogiva: A tubo, B dado, C ogiva, D porta di alloggiamento",
+            "width": 1190,
+            "height": 1269,
+            "caption": "Vista esplosa: A tubo, B dado del raccordo, C ogiva, D porta di alloggiamento."
+          },
+          {
+            "type": "subheading",
+            "title": "Confronta separatamente il tipo di testa e la lunghezza totale"
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrules-and-fittings-photo.png",
+            "alt": "Ogive separate e dadi per raccordi FOREACH con diversi tipi di testa",
+            "width": 2425,
+            "height": 1092,
+            "caption": "Ogive separate a sinistra. Dadi e ogive a destra. Dimensioni e compatibilità dipendono dai singoli codici articolo."
+          },
+          {
+            "type": "paragraph",
+            "text": "La lunghezza totale aiuta a valutare lo spazio assiale, ma la sporgenza dopo il montaggio dipende anche dalla profondità d’inserimento. HN6 è lungo 15.5 mm rispetto ai 18.1 mm di HN. HNF6 ha una testa compatta ma misura 20.0 mm, rispetto ai 16.5 mm di HNF. Se le porte sono ravvicinate, confronta il diametro della testa. Se lo spazio assiale è limitato, confronta lunghezza totale, sporgenza dopo il montaggio, accesso per il serraggio e percorso del tubo."
+          },
+          {
+            "type": "subheading",
+            "title": "Controlla poi le gamme di misure del tubo, i materiali e le ogive"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Serie",
+              "Tipo di testa e materiali del dado",
+              "Scelta della misura del tubo"
+            ],
+            "rows": [
+              [
+                "HN",
+                "Zigrinata standard, in PEEK, PVDF, POM o PPS",
+                "Fasce dimensionali del dado da 1.6 mm e 2.0–3.2 mm. Scegli l’ogiva per il diametro esterno effettivo del tubo"
+              ],
+              [
+                "HN6",
+                "Compatta, in PEEK, PVDF, POM o PPS",
+                "Come per HN, distingui la fascia dimensionale del dado dalla misura esatta dell’ogiva per il diametro esterno"
+              ],
+              [
+                "HNF",
+                "Zigrinata standard. Modelli rappresentativi disponibili in PVDF",
+                "Scegli in base al singolo diametro esterno del tubo: 1.6, 2.0, 2.5, 3.0 o 3.2 mm"
+              ],
+              [
+                "HNF6",
+                "Compatta. Modelli rappresentativi disponibili in PPS",
+                "Scegli in base al singolo diametro esterno del tubo: 1.6, 2.0, 2.5, 3.0 o 3.2 mm"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Ad esempio, la fascia dimensionale «32» dei dadi HN e HN6 copre diametri esterni del tubo di 2.0, 2.5, 3.0 e 3.2 mm. Questo non significa che una sola ogiva vada bene per tutte e quattro le misure. Un tubo da 2.5 mm richiede comunque un’ogiva per il diametro esterno di 2.5 mm. HNF e HNF6 hanno configurazioni dedicate ai singoli diametri esterni e seguono una regola diversa da quella di raggruppamento HN."
+          },
+          {
+            "type": "subheading",
+            "title": "Conferma il codice articolo completo dell’ogiva"
+          },
+          {
+            "type": "paragraph",
+            "text": "HN e HN6 usano le ogive CL-0X nei codici di diametro esterno 16, 20, 25, 30 e 32. CL-0 e CL-0X hanno geometrie diverse. Lo stesso codice di misura «25» non le rende intercambiabili. Per HNF e HNF6, prima di ordinare o montare il raccordo verifica l’ogiva in base al codice articolo completo del dado e all’elenco dei componenti approvati."
+          },
+          {
+            "type": "paragraph",
+            "text": "Scegli separatamente i materiali del dado e dell’ogiva. Le ogive in PP o ETFE vanno confermate con il codice articolo completo. Un dado in PEEK o PVDF non implica che tutte le superfici bagnate del collegamento siano dello stesso materiale. Il colore non sostituisce l’identificazione del materiale."
+          }
+        ]
+      },
+      {
+        "title": "Qual è la differenza tra un collegamento con ogiva e uno flangiato?",
+        "blocks": [
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/tube-end-connections-photo.png",
+            "alt": "Tre montaggi FOREACH per il collegamento di estremità di tubi",
+            "width": 2172,
+            "height": 1158,
+            "caption": "Esempi di collegamento delle estremità dei tubi, con differenze sul lato anteriore del raccordo e nei componenti di accoppiamento."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le differenze principali riguardano la preparazione dell’estremità del tubo e i componenti di tenuta. Un collegamento flangiato usa una flangia preformata verso l’esterno, compressa dal dado e dalla rondella compatibile. Un collegamento con ogiva usa un tubo tagliato perpendicolarmente e un’ogiva separata per il ritegno e la tenuta. Scegli in base alle esigenze del processo di montaggio e della manutenzione, considerando anche il numero di passaggi."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Confronto",
+              "Collegamento con ogiva",
+              "Collegamento flangiato"
+            ],
+            "rows": [
+              [
+                "Preparazione del tubo",
+                "Estremità pulita tagliata perpendicolarmente, senza flangia preformata",
+                "Forma la flangia all’estremità del tubo secondo il materiale e la misura specificati"
+              ],
+              [
+                "Interfacce di tenuta",
+                "Tubo, ogiva e porta di alloggiamento",
+                "Flangia all’estremità del tubo, rondella compatibile e porta a fondo piatto"
+              ],
+              [
+                "Verifiche di montaggio",
+                "Serie e misura dell’ogiva, orientamento e posizione dell’estremità del tubo",
+                "Qualità della flangia, configurazione della rondella e contatto della superficie di tenuta"
+              ],
+              [
+                "Manutenzione",
+                "Sostituisci le ogive trattate qui secondo il requisito di montaggio singolo",
+                "Ispeziona flangia, rondella e porta secondo i requisiti dell’assemblaggio"
+              ],
+              [
+                "Intercambiabilità",
+                "Controlla l’intero assemblaggio, compresi filettatura e misura del tubo",
+                "Controlla anche la porta e tutti i componenti di accoppiamento"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Un raccordo flangiato può essere adatto a un processo consolidato di formatura della flangia o a tubi preassemblati. Un raccordo con ogiva può essere adatto a flussi di lavoro che evitano la flangiatura e consentono la sostituzione dell’ogiva in manutenzione. Pressione ammessa, tenuta a lungo termine e limiti di ricollegamento devono risultare dalle specifiche e dalla validazione dell’assemblaggio specifico."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Per approfondire: ",
+                "href": "/en/resources/technical-articles/flanged-tubing-assemblies-selection-guide/",
+                "label": "Assemblaggi di tubi flangiati: struttura e scelta"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Anche i raccordi con anello di compressione possono evitare la flangiatura del tubo, ma le loro boccole, le rondelle e il metodo di montaggio differiscono da quelli del raccordo con ogiva descritto qui. «Senza flangiatura» non identifica un sistema di tenuta universale. Consulta la guida ai raccordi per tubi rigidi per confrontare le tre configurazioni."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/hard-tube-fittings-selection-guide/",
+                "label": "Raccordi per tubi rigidi: collegamenti flangiati, con ogiva e con anello di compressione",
+                "prefix": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Come scegliere un raccordo adatto",
+        "blocks": [
+          {
+            "type": "subheading",
+            "title": "Parti dalla porta, poi scegli la misura del tubo e i componenti"
+          },
+          {
+            "type": "paragraph",
+            "text": "Procurati la specifica completa della filettatura della porta e il disegno in sezione per identificare la geometria di tenuta. Scegli dado e ogiva in base al diametro esterno effettivo del tubo. Il diametro interno e la lunghezza del tubo determinano il volume interno, la resistenza al flusso e i requisiti di portata. Il foro passante del dado serve a far passare il tubo e non coincide necessariamente con il diametro interno del passaggio del fluido."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per un tubo con diametro esterno di 2.5 mm e un raccordo HN6, scegli la fascia dimensionale del dado appropriata e un’ogiva CL-0X-25. Verifica poi filettatura, materiale del dado, materiale dell’ogiva e tolleranze del tubo. In questo modo si individua un assemblaggio candidato. La pressione ammessa, la compatibilità chimica e la tenuta dopo il montaggio restano da confermare."
+          },
+          {
+            "type": "subheading",
+            "title": "Abbina i materiali al fluido e alle condizioni di esercizio effettive"
+          },
+          {
+            "type": "paragraph",
+            "text": "Specifica composizione del fluido, concentrazione, temperatura di esercizio, tempo di esposizione e procedura di pulizia. Controlla il tubo, l’ogiva e tutti i componenti bagnati. Verifica anche che la parete del tubo mantenga il foro e la presa sotto la compressione di montaggio. La sola resistenza chimica non convalida tutti gli spessori della parete, le tolleranze del diametro esterno o le combinazioni con l’ogiva."
+          },
+          {
+            "type": "subheading",
+            "title": "Verifica l’accesso per il montaggio e la manutenzione"
+          },
+          {
+            "type": "paragraph",
+            "text": "Se le porte sono ravvicinate, controlla il diametro della testa e le interferenze. Vicino agli involucri, verifica lo spazio assiale, la direzione d’uscita del tubo e l’accesso agli attrezzi. Prevedi spazio di curvatura e gioco per il movimento, così da evitare trazione continua, torsione o curve strette sul raccordo. Prevedi ogive nuove e procedure di sostituzione nel piano di manutenzione."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Informazioni da fornire",
+              "Che cosa permettono di stabilire"
+            ],
+            "rows": [
+              [
+                "Filettatura e disegno in sezione della porta",
+                "Corretti impegno dei filetti e posizione di tenuta"
+              ],
+              [
+                "Materiale, diametro interno, diametro esterno e tolleranza del diametro esterno del tubo",
+                "Accoppiamento dimensionale e compatibilità del ritegno"
+              ],
+              [
+                "Fluido, concentrazione, temperatura e condizioni di pulizia",
+                "Compatibilità dei materiali bagnati e condizioni di esercizio"
+              ],
+              [
+                "Pressioni continua e di picco, vuoto e cicli di avvio e arresto",
+                "Carichi effettivi e condizioni di validazione"
+              ],
+              [
+                "Distanza tra le porte, spazio assiale e direzione dei tubi",
+                "Spazio per montaggio, serraggio, posa e rimozione"
+              ],
+              [
+                "Frequenza di manutenzione e metodo di sostituzione",
+                "Ricambi e idoneità del tipo di collegamento"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Indicazioni per montaggio e manutenzione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Usa un tagliatubi adatto al materiale per ottenere un’estremità perpendicolare. Rimuovi i residui e controlla che non vi siano schiacciamenti, graffi o deformazioni. Conferma codice articolo e orientamento dell’ogiva e posizione dell’estremità del tubo, poi mantieni l’insieme in battuta durante il serraggio prescritto. Usa il metodo e la coppia confermati per la configurazione. Non esiste una coppia universale per tutti i raccordi in plastica."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/hard-tube-fittings-selection-guide/ferrule-assembly-en.webp",
+            "alt": "Orientamento tipico del dado del raccordo e dell’ogiva separata",
+            "width": 1736,
+            "height": 906,
+            "caption": "Orientamento tipico di montaggio. Segui le istruzioni della serie selezionata per la direzione dell’ogiva, la posizione dell’estremità del tubo e il serraggio."
+          },
+          {
+            "type": "subheading",
+            "title": "Individua la causa prima di modificare il montaggio"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Sintomo",
+              "Primo controllo",
+              "Intervento e verifica"
+            ],
+            "rows": [
+              [
+                "Perdita dopo il serraggio",
+                "Compatibilità della porta, misura e orientamento dell’ogiva, posizione del tubo",
+                "Arresta e depressurizza il sistema, ispeziona, sostituisci i componenti danneggiati e ripeti la prova"
+              ],
+              [
+                "Portata ridotta dopo la sostituzione del raccordo",
+                "Residui di taglio, compressione del tubo, diametro interno diverso o curve strette",
+                "Confronta portata e perdita di carico con lo stesso fluido, la stessa lunghezza del tubo e le stesse condizioni della pompa"
+              ],
+              [
+                "Supera la prova statica, ma perde in esercizio",
+                "Picchi di pressione all’avvio e all’arresto, variazione di temperatura o carichi esercitati dal tubo",
+                "Controlla supporti e gioco del tubo, convalida in esercizio effettivo"
+              ],
+              [
+                "Perdita dopo il rimontaggio",
+                "Deformazione dell’ogiva usata, danno alla parete del tubo o contaminazione della porta",
+                "Prepara una nuova ogiva per un singolo montaggio, ispeziona il tubo e rimonta"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Questi sintomi orientano la diagnosi e non provano una causa. Ad esempio, una portata ridotta può dipendere da un diverso diametro interno del tubo, residui di taglio o curve, oltre che dal tipo di raccordo. Confronta in condizioni controllate per capire se modifiche di montaggio o misura risolvono il problema."
+          },
+          {
+            "type": "subheading",
+            "title": "Valuta separatamente la sostituzione dell’ogiva e il riuso del dado"
+          },
+          {
+            "type": "paragraph",
+            "text": "Le ogive trattate qui sono specificate per un singolo montaggio. Il rimontaggio può provocare deformazioni irreversibili. Prepara ogive nuove compatibili per la manutenzione. Ispeziona l’estremità del tubo trattenuta e ripreparala se necessario. Per valutare a parte il riutilizzo del dado, controllane filettatura e superfici soggette a carico. Sostituire l’elemento di tenuta non implica automaticamente sostituire tutto il raccordo."
+          },
+          {
+            "type": "subheading",
+            "title": "Convalida il collegamento completo nel circuito fluidico"
+          },
+          {
+            "type": "paragraph",
+            "text": "Verifica perdite, movimento del tubo e portata in condizioni definite di fluido, temperatura e pressione. Sulle linee di aspirazione controlla anche le infiltrazioni d’aria. Includi poi cicli effettivi di avvio e arresto, pulsazioni, cambi di temperatura e movimento, registrando durata della prova, cicli e perdita ammessa. Il superamento di una prova statica di mantenimento della pressione vale solo per quelle condizioni e non per l’intero funzionamento dello strumento."
+          },
+          {
+            "type": "paragraph",
+            "text": "La pressione ammessa dipende dalla combinazione completa di dado, ogiva, tubo e porta. Non applicare alle serie HN, HN6, HNF o HNF6 la pressione nominale di un raccordo dedicato all’alta pressione. Un materiale del dado più resistente non aumenta da solo la pressione ammessa per tutto il circuito."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "I raccordi senza flangiatura si montano sempre senza attrezzi?",
+        "answer": "No. Il serraggio a mano, la chiave dedicata e gli attrezzi a coppia controllata dipendono dalla configurazione. «Senza flangiatura» significa che non occorre preformare una flangia all’estremità del tubo. Non garantisce che ogni modello si possa montare basandosi solo sulla sensibilità manuale."
+      },
+      {
+        "question": "CL-0 e CL-0X sono intercambiabili con lo stesso diametro esterno del tubo?",
+        "answer": "Il solo diametro esterno non basta. Le geometrie sono diverse e devono essere compatibili con il dado e la porta. Conferma i codici articolo completi e la combinazione di componenti approvata. Il serraggio di prova o la forza aggiuntiva non dimostrano la compatibilità."
+      },
+      {
+        "question": "I raccordi compatti sopportano più pressione di quelli con testa zigrinata standard?",
+        "answer": "Il tipo di testa non stabilisce la pressione ammessa. La testa compatta riguarda lo spazio di montaggio. La pressione ammessa dipende anche da ogiva, tubo, porta, temperatura e condizioni di montaggio. Controlla e convalida la combinazione specifica."
+      },
+      {
+        "question": "Il diametro interno conta se entrambi i tubi hanno diametro esterno di 1.6 mm?",
+        "answer": "Sì. Il diametro esterno serve ad abbinare dado e ogiva. Il diametro interno influisce sulla resistenza al flusso, sul volume interno e sullo spessore della parete. Conferma il comportamento della parete sotto compressione, oltre ai requisiti effettivi di portata, pressione e fluido."
+      }
+    ],
+    "cta": {
+      "title": "Devi abbinare un raccordo ai tubi dello strumento?",
+      "description": "Fornisci il disegno della porta, il materiale e le misure del tubo, fluido, temperatura, pressione e requisiti di manutenzione per confermare serie, ogiva e piano di validazione del campione.",
+      "contactLabel": "Contatta l’assistenza tecnica",
+      "productsLabel": "Vedi i raccordi senza flangiatura",
+      "productsHref": "/en/products/fittings/hard-tube-fittings/?structure=ferrule"
+    },
+    "navigationLabels": [
+      "Definizione",
+      "Principio di tenuta",
+      "Dimensioni e compatibilità con la porta",
+      "Flangia e ogiva a confronto",
+      "Scelta",
+      "Montaggio e manutenzione"
+    ],
+    "relatedProductLabel": "Raccordo con ogiva senza flangiatura"
+  },
+  "navigation": [
+    {
+      "id": "definition",
+      "label": "Definizione"
+    },
+    {
+      "id": "sealing",
+      "label": "Principio di tenuta"
+    },
+    {
+      "id": "series",
+      "label": "Dimensioni e compatibilità con la porta"
+    },
+    {
+      "id": "comparison",
+      "label": "Flangia e ogiva a confronto"
+    },
+    {
+      "id": "selection",
+      "label": "Scelta"
+    },
+    {
+      "id": "installation",
+      "label": "Montaggio e manutenzione"
+    }
+  ]
+}

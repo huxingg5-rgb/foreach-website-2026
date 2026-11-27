@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "title": "Perché una micropompa a membrana per liquidi da 300 mL/min perde capacità di autoadescamento nel tempo?",
+    "seoTitle": "Perdita di autoadescamento nelle micropompe a membrana da 300 mL/min | Foreach Technology",
+    "seoDescription": "Scopri perché una micropompa a membrana per liquidi da 300 mL/min può perdere capacità di autoadescamento, tra perdite dalle valvole di non ritorno, infiltrazioni d’aria all’ingresso, perdite in aspirazione, tensione di vapore e alterazioni dei materiali.",
+    "coverImage": "/images/resources/technical-articles/dpl30-troubleshooting/300-ml-min-liquid-diaphragm-pump-self-priming-test.webp",
+    "coverAlt": "Micropompa a membrana per liquidi FOREACH DPL30 da 300 mL/min"
+  },
+  "deck": "Quando l’autoadescamento peggiora, la pompa e il circuito di aspirazione non riescono più a raggiungere e mantenere la stessa bassa pressione assoluta all’ingresso. Perdite dalle valvole di non ritorno, infiltrazioni d’aria all’ingresso, maggiori perdite in aspirazione, tensione di vapore e alterazioni dei materiali possono dare lo stesso sintomo. La rotazione del motore da sola non identifica la causa.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "L’altezza di autoadescamento varia con le condizioni. Per una micropompa a membrana per liquidi, dipende dalla pressione assoluta minima che la pompa può raggiungere all’ingresso, dalla pressione sulla superficie del liquido, dall’altezza di aspirazione, dalle perdite nella linea di aspirazione, dalla temperatura del fluido e dalla sua tensione di vapore."
+    },
+    {
+      "type": "notice",
+      "label": "Ambito di applicazione:",
+      "text": "L’articolo riguarda il trasferimento di liquidi. Il valore DPL30 di 300 mL/min è la portata senza carico. L’altezza di autoadescamento di 6 mH₂O indica la prestazione della pompa in condizioni di prova specificate. Entrambi i valori vanno verificati nel circuito installato con il liquido previsto."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Esprimi l’altezza di autoadescamento attraverso un bilancio di pressione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durante la corsa di aspirazione, il movimento della membrana ingrandisce la camera e riduce la pressione assoluta all’ingresso. Il liquido entra solo se la pressione sopra il liquido di alimentazione può vincere la prevalenza idrostatica e tutte le perdite sul lato di aspirazione."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔP_h = ρgh",
+          "note": "Per acqua intorno a 20 °C, una colonna di liquido di 6 m corrisponde a una differenza di pressione statica di circa 58.7 kPa. Tubi, raccordi, valvole, filtri e restringimenti locali aggiungono altre perdite."
+        },
+        {
+          "type": "formula",
+          "expression": "H_available ≈ (P_surface,abs − P_in,min,abs − ΔP_suction loss) / (ρg)",
+          "note": "Il modello serve a capire il margine disponibile in aspirazione e non costituisce un’equazione di accettazione per DPL30. Una perdita di 10 kPa nella capacità utile di generare vuoto equivale a circa 1.02 m di colonna d’acqua."
+        },
+        {
+          "type": "notice",
+          "label": "Indicazione per la diagnosi:",
+          "text": "Un aumento della pressione minima all’ingresso o delle perdite in aspirazione può ridurre l’altezza di autoadescamento, allungare il tempo di primo adescamento oppure impedire il riavvio a secco."
+        }
+      ]
+    },
+    {
+      "title": "2. Una valvola di non ritorno può muoversi anche se non tiene",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le valvole di ingresso e uscita devono aprirsi, chiudersi e mantenere la differenza di pressione a ogni ciclo. Particelle, residui cristallizzati, liquido essiccato, usura o lievi deformazioni possono lasciarle apparentemente intatte e consentire un riflusso dopo la chiusura."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il riflusso dissipa parte della differenza di pressione generata dalla membrana. Tenuta delle valvole, volume residuo e presenza di vapore o gas influiscono sulla portata effettiva e sull’autoadescamento. Questo descrive il meccanismo e non rappresenta un dato prestazionale di DPL30."
+        },
+        {
+          "type": "notice",
+          "label": "Misure da eseguire:",
+          "text": "Verifica quanto rapidamente scende la pressione all’ingresso, quanto rapidamente risale dopo l’arresto e se la pulizia ripristina altezza di aspirazione e portata. Da sola, l’ispezione visiva non è sufficiente."
+        }
+      ]
+    },
+    {
+      "title": "3. L’aria può entrare in aspirazione anche senza fuoriuscite di liquido",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Durante l’adescamento, la pressione all’ingresso è in genere inferiore a quella atmosferica. Un tubo invecchiato, una fascetta allentata, una superficie di tenuta graffiata o una tenuta difettosa nel tappo del flacone possono far entrare aria senza perdite di liquido verso l’esterno, riducendo altezza di aspirazione, pressione o portata."
+        },
+        {
+          "type": "formula",
+          "expression": "Q_pump = Q_liquid + Q_air leak",
+          "note": "Per una prima diagnosi si può stimare che l’aria occupi parte del volume di aspirazione disponibile per il liquido. Confronta i volumi alla stessa pressione di riferimento. La comprimibilità del gas rende questa relazione insufficiente per descrivere tutto il flusso bifase."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per questo il sistema può funzionare dopo l’adescamento manuale con liquido e mostrare difficoltà una volta svuotato del tutto. L’adescamento a secco parte da un circuito pieno d’aria ed è più sensibile alla tenuta delle valvole e all’ermeticità dell’ingresso."
+        }
+      ]
+    },
+    {
+      "title": "4. Contano anche temperatura, tensione di vapore e perdite in aspirazione",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "P_in,abs > P_vapour + P_margin",
+          "note": "La pressione locale all’ingresso deve superare la tensione di vapore con un margine adeguato. In caso contrario possono verificarsi rilascio di gas, formazione di vapore e cavitazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tubi di aspirazione lunghi o stretti, curve, valvole e filtri aumentano le perdite all’ingresso. Una temperatura più alta aumenta la tensione di vapore. Una viscosità maggiore aumenta la perdita di carico nella linea di aspirazione. La stessa micropompa a membrana per liquidi può quindi comportarsi in modo diverso con acqua a 20 °C, una soluzione di lavaggio calda, un reagente contenente alcol o una formulazione con tensioattivi."
+        },
+        {
+          "type": "notice",
+          "label": "Verifica l’origine delle bolle:",
+          "text": "Le bolle possono provenire da infiltrazioni esterne, rilascio di gas disciolto o vaporizzazione locale. Registra la pressione assoluta all’ingresso, la temperatura del fluido, il punto in cui compare la prima bolla e l’effetto del confronto con un fluido degasato."
+        }
+      ]
+    },
+    {
+      "title": "5. Piccole alterazioni dei materiali possono manifestarsi prima nella tenuta della valvola",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La norma ISO 1817 descrive gli effetti dei liquidi sulla gomma attraverso assorbimento, estrazione dei componenti solubili e reazione chimica. Anche senza crepe visibili, cambiamenti di volume, massa, durezza o recupero elastico possono alterare il contatto tra la valvola e la sede."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔV, Δm, ΔH + dynamic sealing performance",
+          "note": "I dati di immersione servono a confrontare le alterazioni dei materiali. Valvole e membrane richiedono però una convalida dinamica sulla pompa completa, con fluido, temperatura, pressione differenziale e numero di cicli effettivi."
+        },
+        {
+          "type": "paragraph",
+          "text": "La documentazione DPL30 indica due combinazioni a contatto con il fluido. La prima usa membrana in EPDM, valvole in EPDM e testa in PPS. La seconda usa membrana in PTFE, valvole in FFKM e testa in PPS. Le sigle dei materiali servono a una valutazione preliminare. Per stabilire la compatibilità occorre verificare il singolo reagente."
+        }
+      ]
+    },
+    {
+      "title": "6. Usa un circuito di riferimento per separare i problemi della pompa da quelli dello strumento",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mantieni la stessa pompa e la stessa alimentazione e usa il liquido previsto per la prova. Sostituisci la linea d’ingresso con un tubo corto, di grande diametro interno e a tenuta. Metti la sorgente di liquido vicino all’ingresso della pompa. Esegui questa prova prima di aprire la pompa o sostituire il motore."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Risultato della prova di riferimento",
+            "Dati sulla pressione all’ingresso",
+            "Controlli prioritari"
+          ],
+          "rows": [
+            [
+              "L’autoadescamento ritorna ai livelli iniziali",
+              "Il vuoto si crea alla velocità iniziale",
+              "Tubo di aspirazione dello strumento, sfiato del flacone, filtro, valvole, raccordi e altezza di installazione"
+            ],
+            [
+              "Prestazioni ancora inferiori a quelle iniziali",
+              "La pressione minima è più alta o scende più lentamente",
+              "Contaminazione della testa, tenuta delle valvole, corsa della membrana e alterazioni dei materiali"
+            ],
+            [
+              "La pressione aumenta rapidamente dopo l’arresto",
+              "Scarso mantenimento della pressione",
+              "Infiltrazioni d’aria dall’esterno o riflusso interno. Isola le sezioni per distinguerli."
+            ],
+            [
+              "La prova con acqua riesce, quella con il fluido di processo no",
+              "Bolle o pressione instabile",
+              "Tensione di vapore, viscosità, rilascio di gas e compatibilità dei materiali"
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tempo di primo adescamento e massima altezza di aspirazione stabile",
+            "Pressione assoluta minima all’ingresso e tempo necessario per raggiungerla",
+            "Portata effettiva, tensione di alimentazione, corrente e temperatura del fluido",
+            "Andamento della risalita della pressione dopo l’arresto",
+            "Misure nelle stesse condizioni a 0 h, a metà e a fine vita utile"
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulla perdita di autoadescamento in una micropompa a membrana per liquidi da 300 mL/min",
+  "faqItems": [
+    {
+      "question": "Un autoadescamento ridotto indica sempre un motore invecchiato?",
+      "answer": "No. Infiltrazioni all’ingresso, valvole contaminate o non a tenuta, resistenza in aspirazione maggiore, temperatura e tensione di vapore del fluido o alterazioni dei materiali possono manifestarsi prima di un problema al motore. Confronta innanzitutto la curva della pressione all’ingresso e il risultato con il circuito di riferimento."
+    },
+    {
+      "question": "Perché la pompa funziona quando è già adescata con liquido ma fatica a partire a secco?",
+      "answer": "All’avvio a secco la pompa deve creare una bassa pressione in un circuito pieno d’aria. La tenuta delle valvole e l’ermeticità dell’ingresso diventano particolarmente importanti. L’adescamento con liquido riduce tale esigenza e può mascherare temporaneamente una piccola perdita."
+    },
+    {
+      "question": "Posso escludere una perdita all’ingresso se non fuoriesce liquido?",
+      "answer": "No. Un collegamento a pressione inferiore a quella atmosferica può aspirare aria senza perdere liquido all’esterno. Isola le sezioni, verifica il mantenimento della pressione o ripeti la prova con un tubo corto."
+    },
+    {
+      "question": "Il valore di 6 mH₂O significa che la DPL30 installata solleverà sempre il liquido di 6 m?",
+      "answer": "No. Il valore vale nelle condizioni di prova definite. Tubi, raccordi, valvole e filtri installati, proprietà del fluido, alimentazione e variazioni tra esemplari riducono il margine di aspirazione."
+    },
+    {
+      "question": "Che cosa indica un rapido aumento della pressione dopo l’arresto?",
+      "answer": "Indica che la pressione si mantiene poco, a causa di infiltrazioni esterne all’ingresso o di riflusso interno. Isola la pompa dal circuito di aspirazione esterno per individuare la causa."
+    }
+  ],
+  "cta": {
+    "title": "La DPL30 ha perso capacità di autoadescamento?",
+    "description": "Indica i tempi di primo adescamento iniziali e attuali, le curve di pressione all’ingresso, l’altezza di aspirazione, le dimensioni dei tubi, il fluido di processo, la temperatura, l’alimentazione e le ore di funzionamento. Questi dati aiutano a distinguere problemi alla testa, ai materiali e al circuito installato.",
+    "contactLabel": "Parla con un tecnico",
+    "productsLabel": "Vedi la micropompa a membrana per liquidi DPL30",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump"
+  }
+}

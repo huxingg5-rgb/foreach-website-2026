@@ -1,3 +1,4 @@
+import { withPublishedTranslationMetadata } from "@/lib/seo/published-translation-metadata";
 /* =========================================================
    page.tsx
    恒永达官网｜关于我们 / 企业文化多语言页面入口
@@ -17,16 +18,15 @@
 
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { languageDraftsEnabled } from "@/lib/i18n/draft-languages";
+import { buildInternationalPageMetadata } from "@/lib/seo/international-page-metadata";
+import { draftAboutMetadata } from "@/lib/seo/german-about-metadata";
 import CulturePageContent from "@/components/about/CulturePageContent";
 import {
   aboutCultureLinks,
   isAboutCultureLocale,
   type AboutCultureLocale,
 } from "@/data/about-culture";
-
-/* ================================
-   企业文化页非中文语言
-================================ */
 const ABOUT_CULTURE_LOCALES = ["en", "es", "fr", "ko", "ru"] as const;
 
 type LocaleAboutCulturePageProps = {
@@ -79,18 +79,40 @@ const metadataMap: Record<
    生成静态多语言路径
 ================================ */
 export function generateStaticParams() {
-  return ABOUT_CULTURE_LOCALES.map((locale) => ({
-    locale,
-  }));
+  return [
+    ...ABOUT_CULTURE_LOCALES.map((locale) => ({ locale })),
+    ...(languageDraftsEnabled ? [{ locale: "de" }, { locale: "it" }, { locale: "hi" }] : []),
+  ];
 }
 
 /* ================================
    生成当前语言页面 SEO 信息
 ================================ */
-export async function generateMetadata({
+async function getPageMetadata({
   params,
 }: LocaleAboutCulturePageProps): Promise<Metadata> {
   const { locale } = await params;
+  if (languageDraftsEnabled && locale === "de") return draftAboutMetadata(
+    locale,
+    "/about/culture/",
+    "Unternehmenskultur | FOREACH",
+    "Erfahren Sie mehr über die Unternehmenskultur, Werte, Zusammenarbeit und das soziale Engagement von FOREACH sowie über den langfristigen Einsatz für die Mikrofluidik.",
+  );
+
+  if (languageDraftsEnabled && locale === "hi") {
+    const metadata = buildInternationalPageMetadata({
+      locale, path: "/about/culture/", title: "FOREACH की संस्कृति | FOREACH",
+      description: "FOREACH के मूल्य, टीमवर्क, इंजीनियरिंग अभ्यास और सामाजिक ज़िम्मेदारी के बारे में जानें।",
+    });
+    return { ...metadata, alternates: { canonical: "/hi/about/culture/" },
+      openGraph: { ...metadata.openGraph, locale: "hi_IN" }, robots: { index: false, follow: true } };
+  }
+  if (languageDraftsEnabled && locale === "it") return draftAboutMetadata(
+    locale,
+    "/about/culture/",
+    "Cultura aziendale | FOREACH",
+    "Scopri la cultura aziendale di FOREACH, i suoi valori, il lavoro di squadra, la responsabilità sociale e l’impegno a lungo termine nella tecnologia microfluidica.",
+  );
 
   if (!isAboutCultureLocale(locale) || locale === "zh-CN") {
     return {};
@@ -113,10 +135,13 @@ export default async function LocaleAboutCulturePage({
   params,
 }: LocaleAboutCulturePageProps) {
   const { locale } = await params;
+  if (languageDraftsEnabled && (locale === "de" || locale === "it" || locale === "hi")) return <CulturePageContent locale={locale} />;
 
   if (!isAboutCultureLocale(locale) || locale === "zh-CN") {
     notFound();
   }
 
   return <CulturePageContent locale={locale as AboutCultureLocale} />;
-} 
+}
+
+export const generateMetadata = withPublishedTranslationMetadata("/about/culture/", getPageMetadata);

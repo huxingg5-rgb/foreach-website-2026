@@ -1,0 +1,439 @@
+{
+  "kind": "selection",
+  "family": "tubing",
+  "footerProducts": [
+    {
+      "id": "pvc-tubing",
+      "title": "Tubi in cloruro di polivinile (PVC)",
+      "href": "/en/products/tubing/pvc-tubing/details/",
+      "imageSrc": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+      "imageAlt": "Rotolo di tubo flessibile trasparente in PVC FOREACH con estremità visibile",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    },
+    {
+      "id": "fep-tubing",
+      "title": "Tubi in etilene propilene fluorurato (FEP)",
+      "href": "/en/products/tubing/fep-tubing/details/",
+      "imageSrc": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+      "imageAlt": "Tubi FOREACH in FEP nelle versioni trasparente e nera",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Il tubo trasparente in PVC è compatibile con i liquidi di lavaggio? Opacizzazione e convalida IVD",
+      "seoTitle": "Compatibilità chimica dei tubi in PVC: detergenti e opacizzazione | FOREACH",
+      "seoDescription": "Valuta la compatibilità chimica dei tubi in PVC con prove di contatto per 288 ore, immersione per 408 ore e misure del fondo in chemiluminescenza. Verifica aspetto, dimensioni, massa, durezza e limiti del dispositivo.",
+      "coverImage": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+      "coverAlt": "Tubo flessibile trasparente in PVC FOREACH, con vista della parete e del tubo in rotolo"
+    },
+    "deck": "La compatibilità va valutata in due direzioni: il detergente può modificare il tubo e il contatto con il tubo può influire sul dosaggio analitico? Le prove di esposizione ai liquidi di lavaggio e le misure del segnale di fondo collegano la selezione dei materiali alla convalida del dispositivo IVD.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "L'idoneità del tubo in PVC trasparente, detto anche tubo vinilico trasparente, al trasporto di un liquido di lavaggio IVD dipende da mescola, formulazione del detergente, concentrazione d'uso, temperatura e tempo di contatto. Lo sbiancamento o l'opacizzazione dopo l'immersione da soli non determinano l'esito. Confrontare l'aspetto prima e dopo il risciacquo e l'asciugatura. Controllare poi dimensioni, massa, durezza, segnale di fondo del liquido, tenuta del montaggio e portata."
+      },
+      {
+        "type": "paragraph",
+        "text": "Negli analizzatori di chimica clinica e a chemiluminescenza, il tubo di lavaggio è a contatto con i liquidi e fa parte del processo analitico. Il tubo in PVC FOREACH E3602007 illustra metodi di prova e osservazioni per detergenti, concentrazioni e modalità di esposizione definiti, così da aiutare i progettisti a pianificare la propria convalida."
+      }
+    ],
+    "sections": [
+      {
+        "title": "I tubi in PVC resistono ai liquidi di lavaggio? Che cosa controllare nelle prove di compatibilità chimica",
+        "tocLabel": "Compatibilità chimica del PVC",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Un detergente può modificare dimensioni, durezza o superficie del tubo, influendo sull'innesto sul portagomma e sulla posa. Nel liquido a contatto possono comparire particelle, variazioni di colore o cambiamenti del segnale di fondo del dosaggio. Sono grandezze distinte. Le fotografie dopo immersione ne documentano solo una parte."
+          },
+          {
+            "type": "paragraph",
+            "text": "Che cosa valutare nelle prove di compatibilità con il liquido di lavaggio"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Domanda",
+              "Controlli",
+              "Rilevanza per il circuito"
+            ],
+            "rows": [
+              [
+                "Il detergente modifica il tubo?",
+                "Diametro interno ed esterno, massa, durezza e aspetto",
+                "Controllare geometria e innesto sul raccordo"
+              ],
+              [
+                "Il liquido cambia dopo il contatto?",
+                "Particelle visibili, colore e indicatori specifici dell'applicazione",
+                "Verificare eventuali interferenze introdotte dal contatto con il materiale"
+              ],
+              [
+                "Il contatto influisce sul dosaggio analitico?",
+                "Bianco del detergente non esposto, campioni dopo contatto e segnale di fondo analitico",
+                "Distinguere la variabilità del detergente dagli effetti del contatto con il tubo"
+              ],
+              [
+                "L'assemblaggio installato resta idoneo?",
+                "Tenuta, forza di sfilamento, portata, pressione e cicli di lavaggio effettivi",
+                "Valutare insieme tubi, raccordi, pompa e posa"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Una tabella di compatibilità chimica serve alla preselezione. Per le prove sui campioni usare formulazione e condizioni effettive. La documentazione sulla biocompatibilità della materia prima non sostituisce le prove di esposizione al detergente e non dimostra che il tubo finito sia privo di effetti su un determinato reagente o segnale."
+          }
+        ]
+      },
+      {
+        "title": "Come provare un tubo in PVC con liquidi di lavaggio? Concentrazione, temperatura e tempo di contatto",
+        "tocLabel": "Procedura di immersione nel liquido di lavaggio",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Sono stati usati due metodi di esposizione: immersione completa delle superfici interna ed esterna e riempimento del lume. E3602007 è stato confrontato con tubi TYGON ND-100-65. Il liquido di lavaggio 1 e il liquido di lavaggio 2 sono stati preparati con acqua purificata secondo le indicazioni. Per ciascun materiale, ogni combinazione detergente e metodo di esposizione ha utilizzato 3 campioni conservati al chiuso in un ambiente fresco, asciutto e ventilato."
+          },
+          {
+            "type": "paragraph",
+            "text": "Condizioni della prova di contatto con liquido di lavaggio per 288 ore"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Condizione",
+              "Configurazione della prova"
+            ],
+            "rows": [
+              [
+                "Immersione completa",
+                "Spezzoni di tubo interamente immersi nel detergente preparato"
+              ],
+              [
+                "Riempimento del lume",
+                "Detergente introdotto nel tubo per osservare l'esposizione della superficie interna"
+              ],
+              [
+                "Sostituzione del liquido",
+                "Sostituito ogni giorno. I gruppi di prova e di riferimento usavano la stessa partita preparata"
+              ],
+              [
+                "Intervalli di misura",
+                "Dopo ogni intervallo di contatto di 72 ore, i campioni sono stati estratti, risciacquati e lasciati asciugare all'aria per 24 ore come previsto prima della misura. I risultati sono stati registrati fino a 288 ore"
+              ],
+              [
+                "Misure",
+                "Aspetto, variazioni del liquido, diametri interno ed esterno, massa e durezza Shore A"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La sostituzione giornaliera del liquido e l'estrazione per la misura dopo ogni intervallo di contatto di 72 ore sono operazioni distinte. La sostituzione rinnova il liquido a contatto. Il risciacquo e 24 ore di asciugatura all'aria definiscono lo stato del campione per la pesata e le misure dimensionali. Confrontando un tubo bagnato con una base asciutta si include il peso del liquido aderente. Registrare quindi la preparazione del campione."
+          },
+          {
+            "type": "paragraph",
+            "text": "In questa prova, insieme ai controlli dell'aspetto e del liquido, i limiti di accettazione erano variazioni dei diametri interno ed esterno entro ±0.15 mm, massa entro ±10% dal valore iniziale e durezza entro 65±5A. Per un nuovo dispositivo occorre fissare limiti secondo le sue tolleranze dimensionali, l'interfaccia del raccordo e i requisiti analitici. Questi valori non costituiscono standard IVD generali."
+          }
+        ]
+      },
+      {
+        "title": "Il tubo trasparente in PVC si può ancora usare dopo lo sbiancamento? Controlli di aspetto, massa e durezza",
+        "tocLabel": "Valutazione dello sbiancamento dopo immersione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Distinguere lo sbiancamento durante il contatto dalle variazioni che persistono dopo il risciacquo e l'asciugatura. Questi campioni hanno recuperato il colore originale senza deformazioni o crepe osservate. L'idoneità per un dispositivo dipende ancora da trasparenza allo stato bagnato, dimensioni, durezza, collegamenti e requisiti analitici. Il solo ritorno alla trasparenza non identifica il meccanismo né l'esito complessivo della convalida."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le variazioni di massa di E3602007 riportate sotto sono state misurate a 288 ore, dopo risciacquo e asciugatura. Ogni intervallo comprende 3 campioni. Il segno indica la direzione della variazione rispetto alla massa iniziale."
+          },
+          {
+            "type": "paragraph",
+            "text": "Variazione di massa di E3602007 a 288 ore"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Liquido di lavaggio",
+              "Metodo di esposizione",
+              "Intervallo di variazione di massa di E3602007"
+            ],
+            "rows": [
+              [
+                "Liquido di lavaggio 1",
+                "Immersione completa",
+                "+0.02%～+0.05%"
+              ],
+              [
+                "Liquido di lavaggio 1",
+                "Riempimento del lume",
+                "−0.04%～+0.01%"
+              ],
+              [
+                "Liquido di lavaggio 2",
+                "Immersione completa",
+                "0.00%～+0.07%"
+              ],
+              [
+                "Liquido di lavaggio 2",
+                "Riempimento del lume",
+                "−0.02%～+0.03%"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La durezza misurata per E3602007 era di 70A sia all'inizio sia dopo 288 ore di immersione completa nei due detergenti. Distinguere la durezza nominale dalla singola lettura: 70A è il limite superiore della fascia di accettazione 65±5A e in questa prova non è cambiato."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/pvc-tubing-cleaning-fluid-compatibility/pvc-tubing-before-cleaner-contact.webp",
+            "alt": "Estremità, pareti e aspetto superficiale dei tubi in PVC prima dell'esposizione al liquido di lavaggio",
+            "width": 828,
+            "height": 171,
+            "caption": "L'aspetto iniziale dei tubi è il riferimento per confrontare estremità, pareti e superfici."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sia i tubi in prova sia quelli di riferimento hanno mostrato sbiancamento superficiale dopo l'immersione e prima del risciacquo. Dopo risciacquo con acqua e asciugatura all'aria, è tornato il colore originale e non si sono osservate deformazioni o crepe. Il recupero del colore dopo l'asciugatura può coesistere con una perdita di trasparenza durante il contatto. Se occorre vedere le bolle attraverso la parete, valutare la trasparenza quando il tubo contiene il liquido effettivo."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/pvc-tubing-cleaning-fluid-compatibility/pvc-tubing-after-288h-cleaner-contact.webp",
+            "alt": "Estremità, pareti e aspetto superficiale dei tubi in PVC dopo 288 ore di contatto con il liquido di lavaggio",
+            "width": 852,
+            "height": 174,
+            "caption": "Aspetto dei tubi dopo la prova di 288 ore. Confrontare i campioni nelle stesse condizioni di risciacquo, asciugatura e osservazione."
+          },
+          {
+            "type": "paragraph",
+            "text": "La pesata misura la variazione netta di massa. Una variazione ridotta da sola non dimostra l'assenza di sostanze estraibili o di migrazione del materiale. Per chiarire questi aspetti servono metodi analitici appropriati, un limite di rilevazione adeguato e criteri di valutazione."
+          }
+        ]
+      },
+      {
+        "title": "Il PVC sopporta il detergente concentrato? Confronto dopo 408 ore di immersione con detergente diluito",
+        "tocLabel": "Detergente concentrato e diluito",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Una prova separata ha usato un detergente per chimica clinica fornito dal cliente, sia tal quale sia diluito a 1:19, con tubi E3602007 e di riferimento a temperatura e umidità ambiente. C'erano 4 gruppi. Il metodo prevedeva estrazione, risciacquo, asciugatura, ispezione visiva e pesata ogni 3 giorni, quindi sostituzione con detergente fresco e prosecuzione dell'immersione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il primo intervallo di contatto era di 48 ore, i successivi di 72 ore, per un totale di 408 ore di contatto con il liquido. Le estrazioni dei campioni interrompevano il contatto. Usare il tempo di contatto cumulativo per descrivere la prova."
+          },
+          {
+            "type": "paragraph",
+            "text": "Misure finali di E3602007 dopo 408 ore cumulative di immersione"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Campione e liquido",
+              "Massa iniziale",
+              "Massa a 408 ore",
+              "Variazione di massa"
+            ],
+            "rows": [
+              [
+                "E3602007 / detergente tal quale",
+                "589.36 mg",
+                "590.01 mg",
+                "+0.11%"
+              ],
+              [
+                "E3602007 / diluizione 1:19",
+                "567.60 mg",
+                "568.30 mg",
+                "+0.12%"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le misure finali mostrano piccole variazioni della massa netta per i campioni, le modalità di esposizione e il metodo di pesata specifici. Numero di campioni e condizioni erano limitati. Il risultato non si può estendere a tutte le mescole in PVC, a tutte le concentrazioni di detergente o all'esercizio dinamico prolungato."
+          }
+        ]
+      },
+      {
+        "title": "Il tubo in PVC può influire sul segnale di fondo della chemiluminescenza? Prova con il bianco del detergente",
+        "tocLabel": "Tubi e segnale di fondo analitico",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "La prova di esposizione valuta le variazioni osservabili del tubo. La misura del fondo esamina anche il liquido a contatto. Per ognuno dei due detergenti si sono misurati un liquido di riferimento non esposto, un liquido a contatto con tubi FOREACH e un liquido a contatto con tubi di riferimento. Si sono misurati ogni giorno circa 300 μL sulla stessa piattaforma di analisi a chemiluminescenza."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il piano prevedeva 14 giorni. Il detergente fornito con l'analizzatore ha prodotto 11 giorni di dati validi, quello del cliente 14 giorni. La tabella riporta il valore minimo e massimo valido per ogni gruppo, per descrivere la variazione del fondo su quella piattaforma."
+          },
+          {
+            "type": "paragraph",
+            "text": "Intervalli dei valori di fondo della luminescenza tra le misure valide"
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Detergente e registrazioni valide",
+              "Liquido di riferimento non esposto",
+              "Gruppo a contatto con tubi FOREACH",
+              "Gruppo a contatto con tubi di riferimento"
+            ],
+            "rows": [
+              [
+                "Detergente fornito con l'analizzatore / 11 giorni",
+                "183～225",
+                "161～243",
+                "155～221"
+              ],
+              [
+                "Detergente del cliente / 14 giorni",
+                "94～162",
+                "101～165",
+                "90～162"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Anche il liquido di riferimento varia, quindi una differenza in un singolo giorno non si può attribuire automaticamente al tubo. In queste condizioni, nei gruppi a contatto con i tubi non è stata osservata una tendenza sistematica del fondo. Gli intervalli descrivono le misure e non dimostrano l'assenza di interferenze per ogni dosaggio. Restano necessarie prove sui campioni, valutazione della contaminazione residua e convalida del lavaggio sul dispositivo."
+          }
+        ]
+      },
+      {
+        "title": "Come convalidare una linea di lavaggio IVD? Dalla compatibilità del tubo al dispositivo assemblato",
+        "tocLabel": "Convalida della linea di lavaggio IVD",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Passare dal contatto con il fluido al gruppo di collegamento, quindi al processo analitico. Provare i tubi candidati con il detergente effettivo, abbinare i tubi esposti ai raccordi previsti e verificare nel dispositivo lavaggio, scarico, periodi di inattività e funzionamento ripetuto. In questo modo si collegano le osservazioni sul materiale alle effettive modalità di guasto."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Definire il detergente: nome o scheda di dati di sicurezza, concentrazione d'uso, acqua di preparazione, temperatura massima, durata massima del contatto in inattività e procedura di sostituzione. Distinguere concentrato e soluzione d'uso.",
+              "Definire il tubo: codice articolo completo, diametro interno × diametro esterno, durezza, lunghezza e lotto. Conservare campioni non esposti come controlli.",
+              "Verificare i collegamenti: usare il raccordo portagomma e la profondità di innesto effettivi per ripetere le prove di tenuta, forza di sfilamento, portata e pressione, tenendo conto del percorso nel dispositivo e dei carichi di trazione.",
+              "Verificare il processo analitico: conservare un bianco di detergente non esposto, definire il segnale di fondo e le altre grandezze pertinenti e documentare i metodi per verificare ripetibilità e accettazione."
+            ],
+            "ordered": true
+          },
+          {
+            "type": "paragraph",
+            "text": "FOREACH può esaminare i requisiti di tubi e collegamenti in PVC per un progetto. I valori per E3602007 qui riportati provengono da campioni specifici. Il FEP e altri materiali richiedono valutazioni proprie di dimensioni, terminali ed esposizione al detergente effettivo. I risultati per il PVC non si trasferiscono automaticamente."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Prove di pressione per tubi in PVC, pressione di scoppio e forza di sfilamento dal raccordo",
+                "href": "/en/resources/technical-articles/pvc-tubing-pressure-rating-pull-off-force/"
+              },
+              {
+                "label": "Tubi in PVC per uso medicale: controllo dimensionale, produzione e tracciabilità",
+                "href": "/en/resources/technical-articles/medical-pvc-tubing/"
+              },
+              {
+                "label": "Proprietà dei tubi in FEP e collegamento agli strumenti",
+                "href": "/en/resources/technical-articles/what-is-fep-tubing/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Quando ripetere la convalida di compatibilità dopo un cambio di detergente o di tubo in PVC?",
+        "tocLabel": "Cambi di detergente e tubi",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Una modifica di marchio, formulazione, concentrazione, acqua di preparazione, temperatura massima, durata massima del contatto in inattività o frequenza di sostituzione può cambiare l'esito dell'esposizione. Anche con E3602007, verificare se le nuove condizioni rientrano in quelle già convalidate prima di scegliere altre prove. I risultati per i liquidi di lavaggio 1 e 2 valgono solo per i rispettivi liquidi verificati."
+          },
+          {
+            "type": "paragraph",
+            "text": "Dopo una modifica di mescola, dimensioni dei tubi, raccordi o processo di lavaggio, rivalutare il contatto con il materiale, la tenuta e le prestazioni analitiche in funzione della modifica. Conservare campioni precedenti e successivi e il bianco del detergente. Usare gli stessi metodi di preparazione e accettazione per confrontare la rilevanza per il dispositivo."
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [],
+    "cta": {
+      "title": "Verificare tubi e collegamenti con il liquido di lavaggio effettivo",
+      "description": "Indicare detergente e concentrazione, temperatura, ciclo di contatto, dimensioni dei tubi, raccordi e risultati analitici da misurare per definire materiali candidati e perimetro delle prove sui campioni.",
+      "contactLabel": "Invia le condizioni e i requisiti dei campioni",
+      "productsLabel": "Visualizza le specifiche dei tubi in PVC",
+      "productsHref": "/en/products/tubing/pvc-tubing/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "compatibility-directions",
+      "label": "Compatibilità chimica del PVC"
+    },
+    {
+      "id": "contact-test-method",
+      "label": "Procedura di immersione nel liquido di lavaggio"
+    },
+    {
+      "id": "mass-hardness-appearance",
+      "label": "Valutazione dello sbiancamento dopo immersione"
+    },
+    {
+      "id": "extended-immersion",
+      "label": "Detergente concentrato e diluito"
+    },
+    {
+      "id": "luminescence-background",
+      "label": "Tubi e segnale di fondo analitico"
+    },
+    {
+      "id": "assembly-validation",
+      "label": "Convalida della linea di lavaggio IVD"
+    },
+    {
+      "id": "evidence-scope",
+      "label": "Cambi di detergente e tubi"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Tubi in PVC",
+      "Scelta del circuito fluidico dello strumento"
+    ],
+    "mentions": [
+      "tubo trasparente in PVC",
+      "tubo vinilico trasparente",
+      "compatibilità chimica dei tubi in PVC",
+      "liquidi di lavaggio",
+      "linee di lavaggio IVD"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "pvc-tubing",
+      "title": "Tubi in cloruro di polivinile (PVC)",
+      "href": "/en/products/tubing/pvc-tubing/details/",
+      "imageSrc": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+      "imageAlt": "Rotolo di tubo flessibile trasparente in PVC FOREACH con estremità visibile",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    },
+    {
+      "id": "fep-tubing",
+      "title": "Tubi in etilene propilene fluorurato (FEP)",
+      "href": "/en/products/tubing/fep-tubing/details/",
+      "imageSrc": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+      "imageAlt": "Tubi FOREACH in FEP nelle versioni trasparente e nera",
+      "imageAspectRatio": 1,
+      "imageFill": true
+    }
+  ]
+}

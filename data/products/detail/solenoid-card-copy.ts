@@ -1,8 +1,16 @@
 import type {SelectionLocale} from "../selection/product-selection.types";
+import de from "./solenoid-locales/cards.de.json";
+import it from "./solenoid-locales/cards.it.json";
+import hi from "./solenoid-locales/cards.hi.json";
+
+type SolenoidCardLocale = SelectionLocale | "de" | "it" | "hi";
 import {getSolenoidConfiguration, solenoidConfigurations} from "./solenoid-configurations";
 
 // Order: three-way connections, then normally closed, then normally open.
 const copy = {
+  de: de.copy,
+  it: it.copy,
+  hi: hi.copy,
   "zh": {
     "names": [
       "三通基板式微型隔膜电磁阀",
@@ -249,7 +257,10 @@ const chineseConfigurationHeadings: Record<string, string> = {
 
 // Use natural industry terminology in each market; model identities and claims
 // match the approved Chinese copy. Micro and miniature are distributed by model.
-const localizedConfigurationHeadings: Record<Exclude<SelectionLocale, "zh">, Record<string, string>> = {
+const localizedConfigurationHeadings: Record<Exclude<SolenoidCardLocale, "zh">, Record<string, string>> = {
+  de: de.headings,
+  it: it.headings,
+  hi: hi.headings,
   en: {
     "3-way-base": "Miniature 3-Way Diaphragm Solenoid Valve SV10-P-3, Base Mounted for Manifold Integration, ≤15 ms Response",
     "3-way-barbed": "3-Way Micro Diaphragm Solenoid Valve SV10-B16-3 with Barbed Ports for Medical and Laboratory Instruments",
@@ -307,17 +318,21 @@ const localizedConfigurationHeadings: Record<Exclude<SelectionLocale, "zh">, Rec
   },
 };
 
-export function getSolenoidStateCopy(locale: SelectionLocale, state: "nc" | "no") {
+export function getSolenoidStateCopy(locale: SolenoidCardLocale, state: "nc" | "no") {
   return copy[locale][state];
 }
-export function getSolenoidCardCopy(slug: string, locale: SelectionLocale) {
+export function getSolenoidCardCopy(slug: string, locale: SolenoidCardLocale) {
   const index = solenoidConfigurations.findIndex(c => c.slug === slug);
   const configuration = getSolenoidConfiguration(slug);
   if (!configuration) return undefined;
   const text = copy[locale];
   const connectionIndex = ["base", "barbed", "threaded"].indexOf(configuration.connection);
   const name = index < 0 ? text.legacyNames[connectionIndex] : text.names[index];
-  const description = text.descriptions[index < 0 ? 3 + connectionIndex : index];
+  const description = locale === "it" && index < 0
+    ? ["per montaggio diretto su collettore con base in PEEK, in versione normalmente chiusa o aperta.",
+      "per collegamento diretto a tubi flessibili, in versione normalmente chiusa o aperta.",
+      "con attacchi M6 o 1/4-28 UNF, in versione normalmente chiusa o aperta."][connectionIndex]
+    : text.descriptions[index < 0 ? 3 + connectionIndex : index];
   const heading = (locale === "zh" ? chineseConfigurationHeadings[slug] : localizedConfigurationHeadings[locale][slug])
     ?? name + text.separator + description;
   return {model: configuration.model, name, description, heading};

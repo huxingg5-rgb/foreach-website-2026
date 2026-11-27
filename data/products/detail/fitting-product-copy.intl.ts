@@ -47,6 +47,38 @@ export function isFittingProductCopyData(data: DetailRecord): boolean {
   return data.category === "fittings" || data.categoryId === "fittings";
 }
 
+export function getFittingModelTopic(data: DetailRecord, locale: string) {
+  if ((locale !== "zh" && locale !== "en") || !isFittingProductCopyData(data)) return undefined;
+  const model = String(data.foreachModel || data.model || "");
+  const en = locale === "en";
+
+  if (model === "F-PE-60-32-PP-N" || model === "F-PE-100-32-PP-N") {
+    const grade = model === "F-PE-60-32-PP-N" ? "40–60 μm" : "80–100 μm";
+    return {
+      title: en ? "Inline Liquid Filter for Instrument Fluidics" : "仪器液路管路过滤器",
+      description: en
+        ? `${model} captures particles using ${grade} HDPE filter media in a PP housing. Both barbs fit 3.2 mm ID tubing. Check pressure drop at the required flow rate.`
+        : `${model} 采用 ${grade} HDPE 滤材和 PP 壳体，用于拦截仪器液路中的颗粒。两端适配 3.2 mm 内径软管，选型时核对目标流量下的压降。`,
+    };
+  }
+  if (model === "CV-BE-32-PP-N") {
+    return {
+      title: en ? "Barbed Diaphragm Check Valve" : "软管倒刺膜片式单向阀",
+      description: en
+        ? `${model} limits reverse flow with an EPDM diaphragm in a PP housing. Both barbs fit 3.2 mm ID tubing. Follow the flow arrow and verify forward opening and reverse sealing in the installed line.`
+        : `${model} 采用 PP 壳体和 EPDM 膜片，限制液体反向流动。两端适配 3.2 mm 内径软管。按箭头方向安装，并核对实际液路的正向开启与反向密封。`,
+    };
+  }
+  if (model === "PMU-M12-U28-20-PP-N") {
+    return {
+      title: en ? "Female-Threaded Bulkhead Union" : "穿板二通内螺纹接头",
+      description: en
+        ? `${model} connects two threaded fluid lines through an instrument panel. It uses M12×1.5 mounting threads, two 1/4-28 UNF female fluid ports and a 2.0 mm bore.`
+        : `${model} 用于固定穿过仪器面板的螺纹液路。采用 M12×1.5 安装螺纹，两端液路接口均为 1/4-28 UNF 内螺纹，内部通径为 2.0 mm。`,
+    };
+  }
+}
+
 /** sourceData is always the Chinese catalog record; localizedData supplies the
  * existing specification, breadcrumb and resource adapters. Never translate IDs. */
 export function applyFittingProductCopy<T extends DetailRecord>(sourceData: T, localizedData: T, localeValue: string): T {

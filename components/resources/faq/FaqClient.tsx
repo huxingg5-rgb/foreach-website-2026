@@ -157,7 +157,7 @@ export default function FaqClient({ items, categories: faqCategories, locale, ui
                       <div className={styles.answer} id={`${item.id}-answer`} role="region" aria-labelledby={`${item.id}-trigger`} hidden={!isOpen}>
                         {item.answer.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
                         <div className={styles.answerFooter}>
-                          <div className={styles.links}>{item.links.map((link) => <Link prefetch={false} key={link.href} href={link.href}>{link.label}</Link>)}</div>
+                          <div className={styles.links}>{item.links.map((link) => <Link prefetch={false} key={link.href} href={link.href} hrefLang={link.hrefLang}>{link.label}</Link>)}</div>
                         </div>
                       </div>
                     </article>

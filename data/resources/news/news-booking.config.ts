@@ -12,7 +12,7 @@
 ========================================================= */
 
 export const NEWS_BOOKING_CONFIG = {
-  enabled: true,
+  enabled: false,
   articleSlugs: ["medica-2026"],
 };
 

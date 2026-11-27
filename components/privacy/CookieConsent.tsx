@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { getDraftHrefForEnglish, getDraftLinkLocaleFromPath, getHindiDraftLink, getItalianDraftLink, isLocalizedGermanDraftPath, isLocalizedHindiDraftPath, isLocalizedItalianDraftPath } from "@/lib/i18n/draft-languages";
 import {
   useEffect,
   useMemo,
@@ -43,7 +44,7 @@ type ConsentCopy = {
   close: string;
 };
 
-const copyByLocale: Record<LocaleCode, ConsentCopy> = {
+const copyByLocale: Record<LocaleCode | "de" | "it" | "hi", ConsentCopy> = {
   "zh-CN": {
     bannerTitle: "我们重视您的隐私",
     bannerDescription:
@@ -85,6 +86,63 @@ const copyByLocale: Record<LocaleCode, ConsentCopy> = {
       "Help us understand page visits and feature usage through Google Analytics so we can improve the website.",
     saveChoices: "Save choices",
     close: "Close",
+  },
+  de: {
+    bannerTitle: "Ihre Privatsphäre ist uns wichtig",
+    bannerDescription:
+      "Wir verwenden notwendige Technologien, damit die Website funktioniert. Mit Ihrer Einwilligung nutzen wir Google Analytics, um die Nutzung der Website zu verstehen.",
+    privacyPolicy: "Datenschutzerklärung",
+    rejectOptional: "Optionale Cookies ablehnen",
+    customize: "Einstellungen anpassen",
+    acceptAll: "Alle akzeptieren",
+    settingsTitle: "Cookie-Einstellungen",
+    settingsDescription:
+      "Sie entscheiden, ob Sie Analyse-Cookies zulassen. Notwendige Cookies unterstützen die Grundfunktionen der Website und speichern Ihre Datenschutzeinstellungen.",
+    necessaryTitle: "Notwendige Cookies",
+    necessaryDescription:
+      "Sie ermöglichen die Grundfunktionen der Website und speichern Ihre Cookie-Einstellungen.",
+    alwaysActive: "Immer aktiv",
+    analyticsTitle: "Analyse-Cookies",
+    analyticsDescription:
+      "Mit Google Analytics erfassen wir Seitenbesuche und die Nutzung von Funktionen, um die Website zu verbessern.",
+    saveChoices: "Auswahl speichern",
+    close: "Schließen",
+  },
+  hi: {
+    bannerTitle: "आपकी गोपनीयता हमारे लिए अहम है",
+    bannerDescription: "हम वेबसाइट चलाने के लिए आवश्यक तकनीकों का इस्तेमाल करते हैं। आपकी सहमति से हम Google Analytics का उपयोग करते हैं, ताकि समझ सकें कि साइट कैसे इस्तेमाल होती है।",
+    privacyPolicy: "गोपनीयता नीति",
+    rejectOptional: "वैकल्पिक कुकी अस्वीकार करें",
+    customize: "सेटिंग बदलें",
+    acceptAll: "सभी की अनुमति दें",
+    settingsTitle: "कुकी सेटिंग",
+    settingsDescription: "आप एनालिटिक्स कुकी की अनुमति चुन सकते हैं। आवश्यक कुकी वेबसाइट के बुनियादी काम और गोपनीयता की पसंद सहेजने के लिए हैं।",
+    necessaryTitle: "आवश्यक कुकी",
+    necessaryDescription: "वेबसाइट के बुनियादी काम और आपकी कुकी पसंद याद रखने के लिए इस्तेमाल होती हैं।",
+    alwaysActive: "हमेशा चालू",
+    analyticsTitle: "एनालिटिक्स कुकी",
+    analyticsDescription: "Google Analytics से हमें पता चलता है कि कौन-से पेज देखे जाते हैं और कौन-सी सुविधाएँ इस्तेमाल होती हैं। इससे हम वेबसाइट सुधारते हैं।",
+    saveChoices: "पसंद सहेजें",
+    close: "बंद करें",
+  },
+  it: {
+    bannerTitle: "La tua privacy è importante",
+    bannerDescription:
+      "Utilizziamo tecnologie necessarie al funzionamento del sito. Con il tuo consenso, utilizziamo Google Analytics per capire come viene usato il sito.",
+    privacyPolicy: "Informativa sulla privacy",
+    rejectOptional: "Rifiuta i cookie facoltativi",
+    customize: "Personalizza",
+    acceptAll: "Accetta tutti",
+    settingsTitle: "Impostazioni dei cookie",
+    settingsDescription:
+      "Puoi scegliere se consentire i cookie di analisi. I cookie necessari memorizzano le tue preferenze e garantiscono le funzioni di base del sito. Sono sempre attivi.",
+    necessaryTitle: "Cookie necessari",
+    necessaryDescription: "Servono alle funzioni di base del sito e memorizzano le tue preferenze sulla privacy.",
+    alwaysActive: "Sempre attivi",
+    analyticsTitle: "Cookie di analisi",
+    analyticsDescription: "Ci aiutano a capire, tramite Google Analytics, come viene visitato il sito e quali funzioni vengono utilizzate.",
+    saveChoices: "Salva le preferenze",
+    close: "Chiudi",
   },
   es: {
     bannerTitle: "Valoramos su privacidad",
@@ -180,17 +238,24 @@ function getPrivacyPolicyHref(locale: LocaleCode) {
   return `/${locale}/privacy-policy`;
 }
 
-export default function CookieConsent() {
+export default function CookieConsent({ fittingPathPattern }: { fittingPathPattern?: string } = {}) {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
-  const baseCopy = copyByLocale[locale];
+  const draftLocale = getDraftLinkLocaleFromPath(pathname);
+  const isGermanPage = isLocalizedGermanDraftPath(pathname, fittingPathPattern);
+  const isItalianPage = isLocalizedItalianDraftPath(pathname);
+  const isHindiPage = isLocalizedHindiDraftPath(pathname);
+  const baseCopy = copyByLocale[isGermanPage ? "de" : isItalianPage ? "it" : isHindiPage ? "hi" : locale];
+  const analyticsProviders = isGermanPage
+    ? "Google Analytics und Yandex Metrica"
+    : isItalianPage ? "Google Analytics e Yandex Metrica" : yandexMetricaPrivacyCopy[isHindiPage ? "hi" : locale].providers;
   const copy = YANDEX_METRICA_ID ? {
     ...baseCopy,
     bannerDescription: baseCopy.bannerDescription.replace(
-      "Google Analytics", yandexMetricaPrivacyCopy[locale].providers,
+      "Google Analytics", analyticsProviders,
     ),
     analyticsDescription: baseCopy.analyticsDescription.replace(
-      "Google Analytics", yandexMetricaPrivacyCopy[locale].providers,
+      "Google Analytics", analyticsProviders,
     ),
   } : baseCopy;
 
@@ -203,8 +268,11 @@ export default function CookieConsent() {
     useState(false);
 
   const privacyPolicyHref = useMemo(
-    () => getPrivacyPolicyHref(locale),
-    [locale],
+    () => {
+      const href = getPrivacyPolicyHref(locale);
+      return isHindiPage ? getHindiDraftLink(href).href : isItalianPage ? getItalianDraftLink(href).href : getDraftHrefForEnglish(href, draftLocale);
+    },
+    [locale, draftLocale, isItalianPage, isHindiPage],
   );
 
   useEffect(() => {

@@ -1,3 +1,4 @@
+import { getLocalizedTechnicalFormula } from "@/data/resources/technical-articles/localized-formula-text";
 import Image from "next/image";
 import Link from "next/link";
 import ArticleBackLink from "../ArticleBackLink";
@@ -15,8 +16,23 @@ import newsArticleStyles from "@/components/resources/news/NewsArticleClient.mod
 import styles from "./RplSelectionArticle.module.css";
 import QuickDisconnectDiagram from "./QuickDisconnectDiagram";
 import BarbedExpansionDiagram from "./BarbedExpansionDiagram";
+import SamplingProbeDiagram from "./SamplingProbeDiagram";
+
+const germanFigureSources: Readonly<Partial<Record<string, string>>> = {
+  "/images/resources/technical-articles/what-is-a-programmable-pipetting-pump/tip-interface-reference-en.png":
+    "/images/resources/technical-articles/what-is-a-programmable-pipetting-pump/tip-interface-reference-de.svg",
+  "/images/resources/technical-articles/what-is-a-programmable-syringe-pump/fluid-cycle-en.svg":
+    "/images/resources/technical-articles/what-is-a-programmable-syringe-pump/fluid-cycle-de.svg",
+  "/images/resources/technical-articles/rotary-valves/rotary-selector-10-channels.en.svg":
+    "/images/resources/technical-articles/rotary-valves/rotary-selector-10-channels.de.svg",
+  "/images/resources/technical-articles/rotary-valves/rotary-selector-16-channels.en.svg":
+    "/images/resources/technical-articles/rotary-valves/rotary-selector-16-channels.de.svg",
+  "/images/resources/technical-articles/rotary-valves/rotary-selector-24-channels.en.svg":
+    "/images/resources/technical-articles/rotary-valves/rotary-selector-24-channels.de.svg",
+};
 
 const sectionIds = ["parameters", "models", "task", "validation", "faq"] as const;
+type RplArticleLocale = TechnicalArticleLocale | "de" | "it" | "hi";
 
 export type RplArticleSectionNavigationItem = {
   id: string;
@@ -30,17 +46,20 @@ type RplArticleFaq = {
   items: readonly EngineeringArticleFaqItem[];
 };
 
-function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: ReadonlyMap<string, string>, headingId?: string, locale: TechnicalArticleLocale = "zh-CN"): ReactNode {
+function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: ReadonlyMap<string, string>, headingId?: string, locale: RplArticleLocale = "zh-CN"): ReactNode {
+  const diagramLocale = locale === "it" ? "en" : locale;
   switch (block.type) {
     case "paragraph": return <p key={key}>{block.lead && block.text.startsWith(block.lead)
       ? <><strong>{block.lead}</strong>{block.text.slice(block.lead.length)}</>
       : block.text}</p>;
     case "subheading": return <h3 className={styles.topicHeading} id={headingId} key={key}><span className={styles.topicMarker} aria-hidden="true" /><span>{block.title}</span></h3>;
-    case "formula": return <div className={styles.formula} key={key}><p>{block.expression}</p>{block.note && <p className={styles.note}>{block.note}</p>}</div>;
+    case "formula": return <div className={styles.formula} key={key}><p>{getLocalizedTechnicalFormula(block.expression, locale)}</p>{block.note && <p className={styles.note}>{block.note}</p>}</div>;
     case "notice": return <aside className={styles.notice} key={key}>{block.label && <p>{block.label}</p>}<p>{block.text}</p></aside>;
     case "figure": return (
       <figure key={key} data-article-figure aria-label={block.flowNodes ? block.alt : undefined} data-square={block.width === block.height ? "true" : undefined}>
-        {block.barbExpansionDiagram ? <BarbedExpansionDiagram kind={block.barbExpansionDiagram} locale={locale} /> : block.quickDisconnectDiagram ? <QuickDisconnectDiagram kind={block.quickDisconnectDiagram} locale={locale} /> : block.flowNodes ? <ol className={styles.flowDiagram} data-nodes={block.flowNodes.length} aria-label={block.alt}>
+        {block.samplingProbeDiagram && diagramLocale !== "zh-CN"
+          ? <SamplingProbeDiagram kind={block.samplingProbeDiagram} locale={diagramLocale} src={block.src} alt={block.alt} width={block.width} height={block.height} />
+          : block.barbExpansionDiagram ? <BarbedExpansionDiagram kind={block.barbExpansionDiagram} locale={locale} /> : block.quickDisconnectDiagram ? <QuickDisconnectDiagram kind={block.quickDisconnectDiagram} locale={locale} /> : block.flowNodes ? <ol className={styles.flowDiagram} data-nodes={block.flowNodes.length} aria-label={block.alt}>
           {block.flowNodes.map((node, index) => <li key={node.label}>
             {index > 0 && <span className={styles.flowArrow} aria-hidden="true">→</span>}
             <strong>{node.label}</strong><span>{node.detail}</span>
@@ -56,14 +75,14 @@ function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: 
           <Image src={block.src} alt={block.alt} width={block.width} height={block.height} sizes="(max-width: 820px) 100vw, 790px" />
           <span className={styles.chartTitle} data-chart-title aria-hidden="true">{block.imageTitle}</span>
         </div> : <Image
-          src={block.src}
+          src={locale === "de" ? germanFigureSources[block.src] ?? block.src : block.src}
           alt={block.alt}
           width={block.width}
           height={block.height}
           sizes={block.width === block.height ? "(max-width: 700px) 100vw, 620px" : "(max-width: 820px) 100vw, 790px"}
         />}
-        <figcaption>{block.captionHref ? <a href={block.captionHref}>{block.caption}</a> : block.caption}</figcaption>
-        {block.link && <Link className={styles.figureLink} href={block.link.href}>{block.link.label}<span aria-hidden="true"> →</span></Link>}
+        <figcaption>{block.captionHref ? <a href={block.captionHref} hrefLang={block.captionHrefLang}>{block.caption}</a> : block.caption}</figcaption>
+        {block.link && <Link className={styles.figureLink} href={block.link.href} hrefLang={block.link.hrefLang}>{block.link.label}<span aria-hidden="true"> →</span></Link>}
       </figure>
     );
     case "table": return renderTable(block, key, undefined, headerLinks);
@@ -73,9 +92,9 @@ function renderBlock(block: EngineeringArticleBlock, key: number, headerLinks?: 
     }
     case "links": {
       if (block.ordered) {
-        return <ol className={`${styles.numberedList} ${styles.resourceList}`} key={key}>{block.items.map((item, index) => <li key={index}>{item.prefix}<a href={item.href}>{item.label}</a>{item.suffix}</li>)}</ol>;
+        return <ol className={`${styles.numberedList} ${styles.resourceList}`} key={key}>{block.items.map((item, index) => <li key={index}>{item.prefix}<a href={item.href} hrefLang={item.hrefLang}>{item.label}</a>{item.suffix}</li>)}</ol>;
       }
-      return <p key={key}>{block.items.map((item, index) => <Fragment key={index}>{item.prefix}<a href={item.href}>{item.label}</a>{item.suffix}</Fragment>)}</p>;
+      return <p key={key}>{block.items.map((item, index) => <Fragment key={index}>{item.prefix}<a href={item.href} hrefLang={item.hrefLang}>{item.label}</a>{item.suffix}</Fragment>)}</p>;
     }
   }
 }
@@ -94,7 +113,7 @@ function renderTable(block: Extract<EngineeringArticleBlock, { type: "table" }>,
   );
 }
 
-export function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: ReadonlyMap<string, string>, subheadingIds?: readonly string[], locale: TechnicalArticleLocale = "zh-CN") {
+export function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerLinks?: ReadonlyMap<string, string>, subheadingIds?: readonly string[], locale: RplArticleLocale = "zh-CN") {
   const nodes: ReactNode[] = [];
   let subheadingIndex = 0;
   for (let index = 0; index < blocks.length; index++) {
@@ -120,7 +139,7 @@ export function renderBlocks(blocks: readonly EngineeringArticleBlock[], headerL
   return nodes;
 }
 
-function renderSection(blocks: readonly EngineeringArticleBlock[], id: string, modelLinks: ReadonlyMap<string, string>, subheadingIds?: readonly string[], locale: TechnicalArticleLocale = "zh-CN") {
+function renderSection(blocks: readonly EngineeringArticleBlock[], id: string, modelLinks: ReadonlyMap<string, string>, subheadingIds?: readonly string[], locale: RplArticleLocale = "zh-CN") {
   if (id === "faq") {
     return <div className={styles.faq}>{blocks.map((block, index) => {
       const answer = blocks[index + 1];
@@ -166,7 +185,7 @@ export default function RplSelectionArticle({
 }: {
   copy: DiaphragmPumpEngineeringArticleCopy;
   date: string;
-  locale: TechnicalArticleLocale;
+  locale: RplArticleLocale;
   listHref: string;
   backText: string;
   articleId?: string;
@@ -181,7 +200,7 @@ export default function RplSelectionArticle({
   afterBody?: ReactNode;
 }) {
   const ui = rplArticleUi[locale];
-  const defaultModelLinks = new Map(getRplSelectionProducts(locale).map(product => [product.name, product.href]));
+  const defaultModelLinks = new Map(getRplSelectionProducts(locale === "de" || locale === "it" || locale === "hi" ? "en" : locale).map(product => [product.name, product.href]));
   const modelLinks = suppliedModelLinks ?? defaultModelLinks;
   const defaultSectionNavigation = sectionIds.map((id, index) => ({ id, label: ui.sections[index] }));
   const sectionNavigation: RplArticleSectionNavigationItem[] = copy.sections.map((section, index) => {

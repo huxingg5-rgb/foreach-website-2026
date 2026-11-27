@@ -1,0 +1,42 @@
+{
+  "sampling-probes": {
+    "cardTitle": "Sonde di campionamento",
+    "title": "Sonde di campionamento su disegno per campioni e reagenti",
+    "meta": "Sonde di campionamento FOREACH su disegno per analizzatori automatici, con punte, aperture laterali, fissaggi e superfici adatti alla manipolazione di campioni e reagenti.",
+    "paragraphs": [
+      "Le sonde di campionamento FOREACH su disegno consentono di aspirare, erogare e trasferire quantità misurate di campioni e reagenti negli analizzatori automatici. Oltre alle dimensioni del tubo, il progetto considera disposizione dello strumento, geometria del contenitore, volume del liquido e sequenza dei movimenti.",
+      "Indicate diametro interno ed esterno, lunghezza totale e utile, punte aguzze, piatte o a V, aperture laterali, piegature ed estremità di fissaggio. La compatibilità con il rilevamento capacitivo del livello si valuta in base a struttura della sonda, collegamento del cavo e sistema di rilevamento dello strumento.",
+      "Lucidatura interna, rivestimenti esterni e trattamenti superficiali si valutano rispetto al liquido e alla procedura di lavaggio. Fornite disegni o campioni, velocità di aspirazione ed erogazione, volumi richiesti e limiti dei residui per definire geometria, lavorazioni e criteri di accettazione. Verificate il trascinamento nella sequenza di lavoro effettiva."
+    ]
+  },
+  "piercing-probes": {
+    "cardTitle": "Sonde perforanti",
+    "title": "Sonde perforanti su disegno per consumabili sigillati",
+    "meta": "Sonde perforanti FOREACH su disegno per pellicole, tappi e consumabili sigillati. Componenti adattati a punta, accesso al liquido, sfiato e fissaggio dello strumento.",
+    "paragraphs": [
+      "Le sonde perforanti FOREACH su disegno raggiungono il liquido attraversando pellicole e tappi di serbatoi per reagenti, contenitori per campioni e consumabili sigillati. La sonda si progetta in base al consumabile, alla profondità di perforazione e alla traiettoria nello strumento automatico.",
+      "Le opzioni comprendono angolo della punta, orientamento del tagliente, aperture laterali, fori o scanalature di sfiato, piegature ed estremità di fissaggio. Valutate insieme i percorsi di gas e liquido, lo spessore del consumabile, la forza di penetrazione, la resistenza della sonda e la posizione di aspirazione.",
+      "Fornite disegni o campioni del consumabile, dati sul liquido, tempi di ciclo e spazio di montaggio. Materiali della sonda, saldature e trattamenti superficiali si confermano per progetto. Verificate stabilità di perforazione, accesso al liquido e sfiato con il consumabile e il movimento effettivi."
+    ]
+  },
+  "wash-probes": {
+    "cardTitle": "Sonde di lavaggio",
+    "title": "Sonde di lavaggio su disegno per analizzatori automatici",
+    "meta": "Sonde di lavaggio FOREACH su disegno per stazioni degli analizzatori, con testine e aperture configurate per lavaggio, aspirazione degli scarti e rimozione del liquido residuo.",
+    "paragraphs": [
+      "Le sonde di lavaggio FOREACH su disegno si integrano nelle stazioni degli analizzatori automatici per il lavaggio esterno, il risciacquo interno, l’aspirazione degli scarti e la rimozione del liquido residuo. La configurazione segue i percorsi del liquido di lavaggio e degli scarti.",
+      "Le configurazioni a una, due o più testine, con aperture laterali o piegate, si adattano allo spazio disponibile e alla sequenza di pulizia. Posizione, dimensione e direzione dei fori si coordinano con area da lavare, uscita degli scarti e direzione di aspirazione.",
+      "Fornite disegni della stazione, composizione del liquido di lavaggio e di scarto, portata, tempi di ciclo e durata utile richiesta per valutare saldature, lucidatura, rivestimenti e trattamenti superficiali. Verificate area di lavaggio raggiunta, liquido residuo e trascinamento durante il ciclo di pulizia completo."
+    ]
+  },
+  "stirring-paddles": {
+    "cardTitle": "Palette di agitazione",
+    "title": "Palette di agitazione su disegno per recipienti di reazione",
+    "meta": "Palette di agitazione FOREACH su disegno per analizzatori automatici. Geometria, fissaggio e trattamento superficiale adatti a liquido, recipiente e funzione di miscelazione.",
+    "paragraphs": [
+      "Le palette di agitazione FOREACH su disegno miscelano campioni, reagenti, diluenti e liquidi di reazione negli analizzatori automatici. La geometria della paletta, come componente dello strumento, è progettata per il recipiente di reazione, il volume di liquido previsto e l’azionamento.",
+      "Sono disponibili palette piatte, elicoidali e piegate a 90°. Definite dimensioni, posizione di lavoro, concentricità ed estremità di fissaggio in base a fondo del recipiente, livello del liquido, intervallo di velocità e spazio disponibile per il movimento.",
+      "Materiali, saldature e rivestimenti si valutano per compatibilità con il liquido, pulizia e resistenza. Fornite disegni del recipiente, tempo di miscelazione e requisiti per bolle o schizzi. Valutate prestazioni e residui dopo la pulizia utilizzando il liquido e il recipiente effettivi."
+    ]
+  }
+}

@@ -188,12 +188,16 @@ export const remainingPumpArticlesKo = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "DPL30 제품 페이지"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "보조 탱크 보충용으로 ",
+                "label": "DPL30-DB 액체 다이어프램 펌프",
+                "suffix": "를 검토할 때는 주 탱크를 최저 운전 수위로 맞춘 뒤 한 번의 보충 주기 동안 보조 탱크에 도달하는 잉크량을 측정합니다."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "DPL60 제품 페이지"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "별도 회수 라인에서 더 많은 잉크를 이송해야 한다면 해당 라인의 목표 유량과 배압에서 ",
+                "label": "DPL60-DB",
+                "suffix": "를 비교 평가합니다."
               }
             ]
           }
@@ -494,12 +498,16 @@ export const remainingPumpArticlesKo = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "300 mL/min급 DPL30 제품 페이지"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "목표 유량이 300 mL/min 미만이면 회로에서 측정한 압력 손실을 기준으로 ",
+                "label": "DPL30-DB",
+                "suffix": "의 성능 곡선을 확인합니다."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "600 mL/min급 DPL60 제품 페이지"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "목표가 300 mL/min에 가깝고 유량 여유가 작다면 교체 기준에 가까운 필터를 장착한 상태에서 ",
+                "label": "DPL60-DB",
+                "suffix": "로 다시 측정합니다."
               },
               {
                 "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
@@ -768,12 +776,16 @@ export const remainingPumpArticlesKo = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "DPL30 제품 페이지"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "저유량 백색 잉크 순환 회로에 ",
+                "label": "DPL30-DB",
+                "suffix": "를 검토한다면 예정된 정지 시간 후 재가동하여 유량을 측정하고 밸브에 침전물이 쌓였는지 확인합니다."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "DPL60 제품 페이지"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "더 높은 유량이 필요하면 같은 잉크와 필터로 ",
+                "label": "DPL60-DB",
+                "suffix": "를 시험합니다. 재가동 후 유량이 회복되는지와 프린트헤드 압력을 확인합니다."
               },
               {
                 "href": "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection/",

@@ -188,12 +188,16 @@ export const remainingPumpArticlesFr = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "Page produit DPL30"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "Pour le remplissage du réservoir secondaire, essayez la ",
+                "label": "pompe à membrane DPL30-DB",
+                "suffix": " au niveau minimal de service du réservoir principal. Mesurez le volume d’encre qui atteint le réservoir secondaire pendant un cycle."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "Page produit DPL60"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "Si une conduite de retour indépendante doit véhiculer davantage d’encre, évaluez la ",
+                "label": "DPL60-DB",
+                "suffix": " sur cette conduite au débit et à la contre-pression requis."
               }
             ]
           }
@@ -494,12 +498,16 @@ export const remainingPumpArticlesFr = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "Page DPL30, classe 300 mL/min"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "Pour un débit de service inférieur à 300 mL/min, consultez la courbe de la ",
+                "label": "DPL30-DB",
+                "suffix": " à la perte de charge mesurée dans le circuit."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "Page DPL60, classe 600 mL/min"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "Si la cible est proche de 300 mL/min et que la petite pompe offre peu de marge, répétez la mesure avec la ",
+                "label": "DPL60-DB",
+                "suffix": " et un filtre proche de son seuil de remplacement."
               },
               {
                 "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
@@ -768,12 +776,16 @@ export const remainingPumpArticlesFr = {
             "type": "links",
             "items": [
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-liquid-diaphragm-pump/",
-                "label": "Page produit DPL30"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                "prefix": "Pour évaluer la ",
+                "label": "DPL30-DB",
+                "suffix": " dans une boucle d’encre blanche à faible débit, mesurez le débit et examinez les clapets après la durée d’arrêt prévue pour repérer les dépôts."
               },
               {
-                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-liquid-diaphragm-pump/",
-                "label": "Page produit DPL60"
+                "href": "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                "prefix": "Si la boucle exige un débit supérieur, essayez la ",
+                "label": "DPL60-DB",
+                "suffix": " avec la même encre et le même filtre. Vérifiez la reprise du débit au redémarrage et la pression à la tête d’impression."
               },
               {
                 "href": "/resources/technical-articles/300-vs-600-ml-min-ink-circulation-return-pump-selection/",

@@ -4,22 +4,26 @@ import { fittingLocale, fittingText } from "@/data/products/detail/fitting-ui.in
 /** Localize only presentation nodes, before React renders them. Never visit
  * config/data/value/event props: their original keys continue to select SKUs.
  * Child components receive locale explicitly and localize their own output. */
-export function fittingView(node: ReactNode, locale: string): ReactNode {
-  if (fittingLocale(locale) === "zh") return node;
-  if (typeof node === "string") return fittingText(node,locale);
+export function fittingView(node: ReactNode, locale: string, translateUi?: (text: string) => string): ReactNode {
+  if (fittingLocale(locale) === "zh" && !translateUi) return node;
+  if (typeof node === "string") {
+    const source = fittingText(node, locale);
+    return translateUi ? translateUi(source) : source;
+  }
   if (Array.isArray(node)) {
     const combined: ReactNode[] = [];
     for (const child of node) {
       if ((typeof child === "string" || typeof child === "number") && typeof combined.at(-1) === "string") combined[combined.length-1] += String(child);
       else combined.push(typeof child === "number" ? String(child) : child);
     }
-    return Children.toArray(combined).map(child => fittingView(child,locale));
+    return Children.toArray(combined).map(child => fittingView(child, locale, translateUi));
   }
   if (!isValidElement(node)) return node;
   const element = node as ReactElement<Record<string,unknown>>;
   const props: Record<string,unknown> = {};
+  const localizeUi = element.type === "td" ? undefined : translateUi;
   for (const key of ["children","actions","notice","title","description","closeLabel","alt","caption","placeholder","aria-label","documentTitle"]) {
-    if (element.props[key] !== undefined) props[key] = fittingView(element.props[key] as ReactNode,locale);
+    if (element.props[key] !== undefined) props[key] = fittingView(element.props[key] as ReactNode, locale, localizeUi);
   }
   return cloneElement(element,props);
 }

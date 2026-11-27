@@ -1,0 +1,46 @@
+{
+  "title": "Scelta del modello",
+  "description": "Seleziona la configurazione della valvola per visualizzare il modello completo e il codice prodotto.",
+  "barbedDescription": "Seleziona tensione, materiale della membrana, materiale della piastra base e opzione a risparmio energetico per comporre il modello completo con attacchi portagomma.",
+  "viewConfiguration": "Vedi configurazione",
+  "empty": "Seleziona una configurazione",
+  "hint": "Qui trovi le configurazioni di questa valvola. Aggiungi le diverse configurazioni separatamente.",
+  "noticeTitle": "Lista di selezione",
+  "notice": "Puoi aggiungere più configurazioni alla lista, scegliendone una diversa ogni volta.",
+  "labels": [
+    "Tensione nominale",
+    "Materiale della membrana",
+    "Materiale della piastra base",
+    "Circuito a risparmio energetico",
+    "Tipo di attacco",
+    "Numero di vie",
+    "Funzione della valvola",
+    "Diametro dell'orifizio",
+    "Attacco filettato",
+    "Materiale della sede"
+  ],
+  "values": [
+    "Standard (senza circuito a risparmio energetico)",
+    "Con circuito a risparmio energetico (Y)",
+    "3 vie",
+    "2 vie normalmente aperta",
+    "2 vie normalmente chiusa",
+    "P · Montaggio su base",
+    "B16 · Attacchi portagomma",
+    "Nessuno",
+    "1/4-28 UNF (U28)"
+  ],
+  "ui": [
+    "Chiudi la scelta del modello",
+    "Selezione attuale",
+    "Modello completo",
+    "Codice prodotto",
+    "Configurazione",
+    "Modello corrispondente",
+    "Copia modello",
+    "Copiato",
+    "Aggiungi alla lista",
+    "Aggiunto alla lista",
+    "Conferma e torna indietro"
+  ]
+}

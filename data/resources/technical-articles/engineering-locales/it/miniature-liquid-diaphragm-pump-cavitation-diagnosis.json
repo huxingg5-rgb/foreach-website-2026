@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "title": "Bolle e rumore nelle pompe a membrana: cavitazione, ingresso d’aria o rilascio di gas disciolto?",
+    "seoTitle": "Diagnosi della cavitazione nelle pompe a membrana miniaturizzate",
+    "seoDescription": "Distinguere cavitazione, ingresso d’aria e rilascio di gas disciolto nelle pompe a membrana mediante pressione assoluta in ingresso, pressione di vapore del fluido e confronti controllati.",
+    "coverImage": "/images/resources/technical-articles/pump-diagnostics/05.svg",
+    "coverAlt": "Tre possibili origini delle bolle: aria esterna, gas disciolto o formazione locale di vapore. Usare la pressione assoluta per verificare le ipotesi. ① Ingresso d’aria. ② Rilascio di gas disciolto. ③ Formazione locale di vapore."
+  },
+  "deck": "Bolle, rumore e riduzione della portata, presi singolarmente, non dimostrano la cavitazione. Distinguere ingresso d’aria, rilascio di gas disciolto e formazione locale di vapore sincronizzando pressione assoluta in ingresso, temperatura del fluido, posizione delle bolle e portata. Una pressione media in ingresso normale può coesistere con un breve calo di pressione all’interno della pompa. Raccogliere riscontri tramite confronti controllati.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Bolle, rumore e riduzione della portata, presi singolarmente, non dimostrano la cavitazione. Distinguere ingresso d’aria, rilascio di gas disciolto e formazione locale di vapore sincronizzando pressione assoluta in ingresso, temperatura del fluido, posizione delle bolle e portata. Una pressione media in ingresso normale può coesistere con un breve calo di pressione all’interno della pompa. Raccogliere riscontri tramite confronti controllati."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Usare la pressione assoluta per il confronto con la pressione di vapore",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La cavitazione comporta formazione di vapore in zone a bassa pressione e successivo collasso delle bolle quando la pressione risale. L’ingresso di aria esterna e il rilascio di gas disciolto hanno origini diverse, richiedono interventi diversi e possono coesistere con la formazione di vapore."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sommare la pressione atmosferica locale alla pressione relativa prima di confrontare il risultato con la pressione di vapore del fluido alla temperatura effettiva. Tra il sensore in ingresso e la camera si verificano comunque perdite e transitori. Anche con pressione media in ingresso superiore alla pressione di vapore, occorre verificare se si producono condizioni di cavitazione."
+        },
+        {
+          "type": "formula",
+          "expression": "Pabs = Pgauge + Patm; Plocal,min,abs > Pvapor(T) + margin",
+          "note": "La seconda relazione rappresenta un obiettivo di progetto. La misura in ingresso, da sola, non basta per una valutazione di sicurezza. Usare la pressione di vapore alle condizioni effettive di fluido e temperatura. Verificare il margine richiesto per il sistema effettivo."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/pump-diagnostics/05.svg",
+          "alt": "Tre possibili origini delle bolle: aria esterna, gas disciolto o formazione locale di vapore. Usare la pressione assoluta per verificare le ipotesi. ① Ingresso d’aria. ② Rilascio di gas disciolto. ③ Formazione locale di vapore.",
+          "caption": "Tre possibili origini delle bolle: aria esterna, gas disciolto o formazione locale di vapore. Usare la pressione assoluta per verificare le ipotesi. ① Ingresso d’aria. ② Rilascio di gas disciolto. ③ Formazione locale di vapore.",
+          "width": 1000,
+          "height": 560
+        }
+      ]
+    },
+    {
+      "title": "Quali riscontri distinguono i tre meccanismi?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Registrare dove compaiono le prime bolle, la pressione durante l’aspirazione e la temperatura del fluido. Un raccordo può aspirare aria in depressione senza perdere liquido all’esterno. Un miglioramento dopo la degassificazione suggerisce il coinvolgimento del gas disciolto. Per escludere la formazione di vapore servono altri riscontri."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le bolle di vapore possono formarsi e collassare nella pompa prima di risultare visibili a valle. Rumore, aumento limitato della portata al variare della velocità e oscillazioni di pressione sono indizi. Interpretarli insieme alla risposta al miglioramento delle condizioni in ingresso."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Meccanismo",
+            "Origine del gas",
+            "Confronto prioritario"
+          ],
+          "rows": [
+            [
+              "Ingresso d’aria",
+              "Aria esterna",
+              "Tenuta in aspirazione e sostituzioni per singolo tratto"
+            ],
+            [
+              "Rilascio di gas disciolto",
+              "Gas disciolto",
+              "Degassificazione con lo stesso fluido alla stessa temperatura"
+            ],
+            [
+              "Formazione di vapore e cavitazione",
+              "Vapore del liquido",
+              "Perdite di carico in ingresso, pressione assoluta e temperatura"
+            ],
+            [
+              "Meccanismi concomitanti",
+              "Origini combinate",
+              "Modifiche una alla volta e ripetizioni nelle condizioni di riferimento"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Controllare le restrizioni in ingresso e le condizioni del serbatoio",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Controllare altezza di aspirazione, livello minimo, sfiato del serbatoio, intasamento del filtro, schiacciamento del tubo e diametro interno minimo dei raccordi. Un tubo principale più largo può lasciare invariata una restrizione nella valvola o nel filtro. Eseguire misure di pressione per tratto o prove di sostituzione consentite."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una temperatura più alta può ridurre la viscosità, aumentare la pressione di vapore e favorire il rilascio di gas disciolto. Una minore resistenza al flusso può quindi coesistere con un margine di sicurezza ridotto. Per formulazioni calde o volatili, usare le proprietà corrispondenti alla composizione e alla temperatura effettive."
+        }
+      ]
+    },
+    {
+      "title": "Eseguire tre confronti controllati",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Primo confronto: mantenere lo stesso liquido e accorciare il tratto d’ingresso o sostituire un componente identificato come restrittivo. Secondo confronto: controllare le tenute e aumentare il battente statico del serbatoio entro i limiti ammessi. Terzo confronto: confrontare lo stesso fluido prima e dopo la degassificazione alla stessa temperatura. Ripristinare le condizioni di riferimento e registrare pressione minima in ingresso, portata, rumore e bolle."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una prova separata a velocità inferiore è utile solo se la configurazione specifica supporta la regolazione della velocità. Evitare comandi PWM incompatibili sulle versioni a due fili o sulle versioni per cui la compatibilità non è stata verificata. Una risposta favorevole alla minore richiesta in aspirazione è compatibile con più meccanismi. La conferma della cavitazione richiede altri riscontri."
+        }
+      ]
+    },
+    {
+      "title": "Documentare i limiti del sensore e delle conclusioni",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sincronizzare pressione assoluta in ingresso, pressione in uscita, portata e temperatura. Registrare risposta del sensore, frequenza di campionamento, cavità di montaggio e distanza dalla pompa. Uno strumento lento può mascherare i minimi di pressione. Il montaggio può introdurre sacche di gas o aumentare la resistenza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Definire il margine di pressione con le informazioni del costruttore, la valutazione dinamica locale e le prove. La soglia in kPa va stabilita per il sistema effettivo. Per gli eventuali requisiti NPSH servono dati verificati. Se la zona critica non è misurabile, riportare solo le ipotesi supportate o la riduzione del rischio osservata."
+        }
+      ]
+    },
+    {
+      "title": "L’altezza di autoadescamento va valutata separatamente dal rischio di cavitazione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’altezza di autoadescamento ufficiale è di 6 mH₂O per DPL30 e 3 mH₂O per DPL60. Questi dati ottenuti con acqua non garantiscono condizioni sicure per ogni reagente a un’altezza di installazione di 6 m o 3 m. Analogamente, la pressione nominale in uscita di 600 kPa di DPL30H non determina il margine rispetto alla pressione di vapore in ingresso."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ripetere la qualifica alla temperatura massima del fluido, al livello minimo del serbatoio, con un grado di intasamento del filtro rappresentativo del fine vita, alla portata massima richiesta e nelle condizioni di avvio, arresto e riavvio. Conservare i dati di erogazione media e i segnali dinamici, rispettando i limiti dei materiali e dei fluidi. Se il problema riguarda un reagente, verificarne la risoluzione con il reagente effettivo."
+        },
+        {
+          "type": "subheading",
+          "title": "Approfondimenti e schede tecniche"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/suction-vs-discharge-resistance-diaphragm-pump/",
+              "label": "Resistenza in aspirazione e in mandata"
+            },
+            {
+              "href": "/resources/technical-articles/300-ml-min-micro-liquid-diaphragm-pump-self-priming-loss/",
+              "label": "Diagnosi della perdita di autoadescamento della DPL30"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-pulsation-damper-validation/",
+              "label": "Verifica dello smorzatore di pulsazioni"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Curve portata-pressione delle pompe a membrana"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Riferimenti tecnici",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "https://knf.com/en/au/stories-events/news-stories/article/pump-cavitation-detection-and-prevention",
+              "label": "KNF: rilevamento e prevenzione della cavitazione"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+              "label": "Scheda tecnica ufficiale Foreach in cinese — DPL30 A04"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+              "label": "Scheda tecnica ufficiale Foreach in cinese — DPL60 A02"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
+              "label": "Scheda tecnica ufficiale Foreach in cinese — DPL30H A00"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Bolle o rumore dimostrano la cavitazione?",
+      "answer": "No. Ingresso d’aria, rilascio di gas disciolto, gas residuo e altri guasti possono dare sintomi simili. Combinare le misure di pressione con confronti controllati."
+    },
+    {
+      "question": "Si possono confrontare direttamente −50 kPa di pressione relativa con la pressione di vapore?",
+      "answer": "No. Convertire in pressione assoluta usando la pressione atmosferica locale e tenere conto di fluido effettivo, temperatura, posizione del sensore e perdite transitorie."
+    },
+    {
+      "question": "Una pompa più silenziosa a velocità inferiore conferma la cavitazione?",
+      "answer": "Indica soltanto effetti all’ingresso o nel sistema che dipendono dalla velocità. Anche ingresso d’aria, rilascio di gas disciolto, risonanza e limiti di alimentazione possono variare con la velocità."
+    },
+    {
+      "question": "I 6 m di autoadescamento nominale della DPL30 escludono la cavitazione a 6 m?",
+      "answer": "No. Le condizioni di prova dell’adescamento differiscono da quelle di esercizio continuo. Fluido, temperatura, perdite nei tubi, livello e pulsazioni modificano il rischio."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi esaminare il circuito fluidico effettivo?",
+    "description": "Indica a Foreach il fluido, il volume di lavoro o la portata, le pressioni, la geometria e la sequenza di controllo per valutare configurazione e condizioni di verifica.",
+    "contactLabel": "Parliamo della tua applicazione",
+    "productsLabel": "Scopri le pompe",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
+  }
+}

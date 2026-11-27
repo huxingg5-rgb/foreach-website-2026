@@ -400,8 +400,18 @@ export const whiteInkCirculationPumpCopies = {
           {
             type: "links",
             items: [
-              { href: DPL30, label: "DPL30 product page" },
-              { href: DPL60, label: "DPL60 product page" },
+              {
+                href: "/products/pumps/miniature-diaphragm-pumps/dpl30-db/",
+                prefix: "When screening the ",
+                label: "DPL30-DB",
+                suffix: " for a low-flow white ink loop, measure flow and inspect the valves for deposits after the intended idle period.",
+              },
+              {
+                href: "/products/pumps/miniature-diaphragm-pumps/dpl60-db/",
+                prefix: "If the loop needs more flow, test the ",
+                label: "DPL60-DB",
+                suffix: " with the same ink and filter. Check recovery after restart and the pressure at the printhead.",
+              },
               { href: FLOW_SELECTION_ARTICLE, label: "300 vs 600 mL/min ink pump flow selection" },
               { href: LIQUID_CATEGORY, label: "miniature liquid diaphragm pump category" },
             ],

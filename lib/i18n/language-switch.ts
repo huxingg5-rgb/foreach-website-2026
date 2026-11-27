@@ -3,6 +3,8 @@ import { localizeValvelessPumpCategoryPath } from "@/data/products/selection/val
 import { getTubingLanguagePath } from "@/data/products/selection/tubing-selection-routes";
 import { getTechnicalArticleLanguagePath } from "@/data/resources/technical-articles/technical-article-availability";
 import type { LocaleCode } from "@/lib/i18n";
+import { getDraftHrefForEnglish, getDraftLocaleFromPath, getEnglishDraftSourcePath, isDraftLocale, isLocalizedGermanDraftPath, type DraftLocale } from "@/lib/i18n/draft-languages";
+import inkjetRoutes from "@/data/applications/industrial-inkjet-routes.json";
 
 const LOCALE_PATH_PREFIXES = ["en", "es", "fr", "ko", "ru"] as const;
 
@@ -51,7 +53,7 @@ export function stripLocalePrefixFromPath(pathname: string) {
 
   const firstPart = pathParts[0];
 
-  if (firstPart && isLocalePathPrefix(firstPart)) {
+  if (firstPart && (isLocalePathPrefix(firstPart) || getDraftLocaleFromPath(pathOnly))) {
     const restPath = pathParts.slice(1).join("/");
 
     return restPath ? `/${restPath}` : "/";
@@ -138,10 +140,41 @@ function buildLocalizedPathname(pathname: string, localeCode: LocaleCode) {
     : `${localePrefix}${pathWithoutLocale}`;
 }
 
+function getGermanLanguageHref(englishHref: string, fittingPathPattern?: string) {
+  const germanHref = getDraftHrefForEnglish(englishHref, "de");
+  const germanPath = normalizePathname(germanHref).replace(/\/+$/, "");
+  if (isLocalizedGermanDraftPath(germanPath, fittingPathPattern)) return germanHref;
+
+  // Filters and anchors on an untranslated detail do not carry over to its overview.
+  let parentPath = germanPath.slice(0, germanPath.lastIndexOf("/"));
+  while (parentPath.startsWith("/de/")) {
+    if (isLocalizedGermanDraftPath(parentPath, fittingPathPattern)) return `${parentPath}/`;
+    parentPath = parentPath.slice(0, parentPath.lastIndexOf("/"));
+  }
+
+  return /^\/de\/about(?:\/|$)/.test(germanPath) ? "/de/about/foreach/" : "/de/";
+}
+
 /** One destination for normal clicks, modified clicks and native link actions. */
-export function getLanguageHref(pathname: string, locale: LocaleCode, suffix = "") {
-  if (locale === "zh-CN" && /^\/(en|es|fr|ko|ru)\/applications\/industrial-inkjet-printing(?:\/|[?#]|$)/.test(pathname)) {
-    return "/#applications";
+export function getLanguageHref(
+  pathname: string,
+  locale: LocaleCode | DraftLocale,
+  suffix = "",
+  fittingPathPattern?: string,
+): string {
+  pathname = getEnglishDraftSourcePath(pathname);
+  if (isDraftLocale(locale)) {
+    const englishHref = getLanguageHref(pathname, "en", suffix);
+    return locale === "de"
+      ? getGermanLanguageHref(englishHref, fittingPathPattern)
+      : getDraftHrefForEnglish(englishHref, locale);
+  }
+
+  if (locale === "zh-CN") {
+    const sourceRoute = stripLocalePrefixFromPath(pathname).replace(/\/?$/, "/");
+    const inkjetHub = stripLocalePrefixFromPath(inkjetRoutes.hub) + "/";
+    const translatedFilter = stripLocalePrefixFromPath(inkjetRoutes.inkFiltration) + "/";
+    if (sourceRoute.startsWith(inkjetHub) && sourceRoute !== translatedFilter) return "/applications/ivd/";
   }
   const domain = pathname.match(/^\/(?:en|es|fr|ko|ru)\/applications\/(life-science|lab-automation|analytical-instruments|environmental-monitoring|synthetic-biology)\/[^/]+/)?.[1];
   const useDomainHub = Boolean(domain && locale === "zh-CN");

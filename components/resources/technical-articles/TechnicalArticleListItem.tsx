@@ -16,6 +16,8 @@ type TechnicalArticleListItemProps = {
   categoryLabel: string;
   tags: string[];
   href: string;
+  sourceLanguage?: "en";
+  englishSourceLabel?: string;
 };
 
 export default function TechnicalArticleListItem({
@@ -23,6 +25,8 @@ export default function TechnicalArticleListItem({
   categoryLabel,
   tags,
   href,
+  sourceLanguage,
+  englishSourceLabel = "Artikel auf Englisch",
 }: TechnicalArticleListItemProps) {
   const [failedImage, setFailedImage] = useState<string | null>(null);
   const coverImage = article.coverImage?.trim();
@@ -35,6 +39,7 @@ export default function TechnicalArticleListItem({
     <Link
       className={`${styles.row}${showImage ? "" : ` ${styles.withoutImage}`}`}
       href={href}
+      hrefLang={sourceLanguage}
       onNavigate={() => rememberArticleSource(href)}
     >
       {showImage && coverImage ? (
@@ -53,6 +58,7 @@ export default function TechnicalArticleListItem({
         <div className={styles.meta}>
           <span>{categoryLabel}</span>
           {article.date ? <time dateTime={article.date}>{article.date}</time> : null}
+          {sourceLanguage === "en" ? <span>{englishSourceLabel}</span> : null}
         </div>
         <h2 className={styles.title}>{article.title}</h2>
         {article.summary ? <p className={styles.summary}>{article.summary}</p> : null}

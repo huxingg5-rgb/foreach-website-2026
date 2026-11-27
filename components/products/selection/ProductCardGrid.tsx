@@ -6,6 +6,8 @@ import type { ProductSelectionProductItem } from "./product-selection-ui.types";
 type ProductCardGridProps = {
   products: ProductSelectionProductItem[];
   selectedList: ReadonlySet<string>;
+  germanFittingPathPattern?: string;
+  contentLocale?: "it" | "hi";
   detailButtonText: string;
   addToListText: string;
   addedToListText: string;
@@ -21,6 +23,8 @@ type ProductCardGridProps = {
 export default function ProductCardGrid({
   products,
   selectedList,
+  germanFittingPathPattern,
+  contentLocale,
   detailButtonText,
   addToListText,
   addedToListText,
@@ -44,6 +48,8 @@ export default function ProductCardGrid({
             title={title}
             subtitle={subtitle}
             detailHref={getDetailHref(product)}
+            germanFittingPathPattern={germanFittingPathPattern}
+            contentLocale={contentLocale}
             isAdded={selectedList.has(product.productId)}
             detailButtonText={detailButtonText}
             addToListText={addToListText}
@@ -52,6 +58,7 @@ export default function ProductCardGrid({
             analyticsListName={analyticsListName}
             analyticsIndex={analyticsStartIndex + index}
             key={product.productId}
+            showListAction={product.showListAction}
             onToggleList={onToggleList}
           />
         );

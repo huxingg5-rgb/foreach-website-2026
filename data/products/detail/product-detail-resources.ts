@@ -15,6 +15,8 @@ export const PRODUCT_DETAIL_RESOURCE_LOCALES = [
 export type ProductDetailResourceLocale =
   (typeof PRODUCT_DETAIL_RESOURCE_LOCALES)[number];
 
+export type ProductDetailResourceCopyLocale = ProductDetailResourceLocale | "de" | "it" | "hi";
+
 export type ProductDatasheet = {
   id: string;
   file: string;
@@ -179,7 +181,7 @@ type ProductDetailResourceCopy = {
 };
 
 const RESOURCE_COPY: Record<
-  ProductDetailResourceLocale,
+  ProductDetailResourceCopyLocale,
   ProductDetailResourceCopy
 > = {
   zh: {
@@ -250,6 +252,95 @@ const RESOURCE_COPY: Record<
     serviceUnavailable:
       "Email verification is temporarily unavailable. Please try again later.",
     requestFailed: "The request could not be completed. Please try again later.",
+  },
+  hi: {
+    datasheetTab: "स्पेसिफ़िकेशन शीट", unavailableTitle: "स्पेसिफ़िकेशन शीट अभी उपलब्ध नहीं है",
+    unavailableDescription: "इस उत्पाद की स्पेसिफ़िकेशन शीट अभी प्रकाशित नहीं हुई है।",
+    viewDatasheet: title => `${title} की स्पेसिफ़िकेशन शीट देखें (अंग्रेज़ी में)`,
+    downloadDatasheet: title => `${title} की PDF डाउनलोड करें (अंग्रेज़ी में)`,
+    previewLoading: "स्पेसिफ़िकेशन शीट लोड हो रही है…",
+    previousPage: "पिछला पृष्ठ", nextPage: "अगला पृष्ठ", previousPageShort: "पिछला", nextPageShort: "अगला",
+    previewButton: "स्पेसिफ़िकेशन शीट देखें (अंग्रेज़ी में)", previewDescription: title => `${title} ऑनलाइन देखें।`,
+    requestCad: "CAD फ़ाइल माँगें", cadTitle: "CAD फ़ाइल का अनुरोध",
+    cadDescription: "कंपनी का विवरण दें और कार्य ईमेल सत्यापित करें। हमारी तकनीकी टीम इस उत्पाद के उपलब्ध CAD फ़ॉर्मैट जाँचेगी।",
+    company: "कंपनी", companyPlaceholder: "कंपनी का नाम", businessEmail: "कार्य ईमेल", businessEmailPlaceholder: "कार्य ईमेल पता डालें",
+    verificationCode: "सत्यापन कोड", verificationCodePlaceholder: "छह अंकों का कोड डालें",
+    sendCode: "कोड भेजें", resendCode: "फिर से भेजें", sendingCode: "कोड भेजा जा रहा है…",
+    verifyEmail: "ईमेल सत्यापित करें", verifyingEmail: "ईमेल की जाँच हो रही है…", emailVerified: "ईमेल सत्यापित है।", codeSent: "कोड भेज दिया गया है। अपना इनबॉक्स देखें।",
+    message: "संदेश (वैकल्पिक)", messagePlaceholder: "चाहे गए CAD फ़ॉर्मैट या अतिरिक्त ज़रूरतें बताएँ।",
+    submitCad: "CAD अनुरोध भेजें", submittingCad: "अनुरोध भेजा जा रहा है…", close: "विंडो बंद करें",
+    successTitle: "CAD अनुरोध भेज दिया गया",
+    successDescription: "हमें आपका अनुरोध मिल गया है और पुष्टि का ईमेल भेज दिया है। हमारी तकनीकी टीम इस उत्पाद की उपलब्ध फ़ाइलें जाँचेगी।",
+    closeSuccess: "बंद करें", invalidEmail: "मान्य कार्य ईमेल पता डालें।", companyRequired: "कंपनी का नाम डालें।",
+    requestCodeFirst: "पहले सत्यापन कोड माँगें।", enterCode: "पूरा छह अंकों का सत्यापन कोड डालें।",
+    codeIncorrect: "सत्यापन कोड सही नहीं है।", codeExpired: "सत्यापन कोड की समय सीमा खत्म हो गई है। नया कोड माँगें।",
+    sendTooFrequently: "अभी एक कोड भेजा गया है। दोबारा कोशिश करने से पहले 60 सेकंड रुकें।",
+    verificationExpired: "ईमेल सत्यापन की समय सीमा खत्म हो गई है। पता फिर से सत्यापित करें।",
+    serviceUnavailable: "ईमेल सत्यापन अभी उपलब्ध नहीं है। बाद में कोशिश करें।",
+    requestFailed: "अनुरोध पूरा नहीं हो सका। बाद में फिर कोशिश करें।",
+  },
+  it: {
+    datasheetTab: "Scheda tecnica",
+    unavailableTitle: "Scheda tecnica non ancora disponibile",
+    unavailableDescription: "La scheda tecnica di questo prodotto non è ancora disponibile.",
+    viewDatasheet: title => "Anteprima della scheda tecnica " + title,
+    downloadDatasheet: title => "Scarica " + title + " in PDF",
+    previewLoading: "Caricamento della scheda tecnica…",
+    previousPage: "Pagina precedente", nextPage: "Pagina successiva", previousPageShort: "Indietro", nextPageShort: "Avanti",
+    previewButton: "Vedi scheda tecnica", previewDescription: title => "Visualizza online " + title + ".",
+    requestCad: "Richiedi file CAD", cadTitle: "Richiedi file CAD",
+    cadDescription: "Inserite i dati aziendali e verificate l'indirizzo e-mail aziendale. Il nostro team tecnico verificherà i formati CAD disponibili per questo prodotto.",
+    company: "Azienda", companyPlaceholder: "Ragione sociale",
+    businessEmail: "E-mail aziendale", businessEmailPlaceholder: "Indirizzo e-mail aziendale",
+    verificationCode: "Codice di verifica", verificationCodePlaceholder: "Inserisci il codice a sei cifre",
+    sendCode: "Invia codice", resendCode: "Invia di nuovo", sendingCode: "Invio in corso…",
+    verifyEmail: "Verifica e-mail", verifyingEmail: "Verifica in corso…", emailVerified: "E-mail verificata.", codeSent: "Codice inviato. Controlla la posta.",
+    message: "Messaggio (facoltativo)", messagePlaceholder: "Indicate il formato CAD preferito o eventuali requisiti aggiuntivi.",
+    submitCad: "Invia richiesta CAD", submittingCad: "Invio della richiesta…", close: "Chiudi finestra",
+    successTitle: "Richiesta CAD inviata",
+    successDescription: "Abbiamo ricevuto la richiesta e inviato un'e-mail di conferma. Il nostro team tecnico verificherà i file disponibili per questo prodotto.",
+    closeSuccess: "Chiudi", invalidEmail: "Inserisci un indirizzo e-mail aziendale valido.", companyRequired: "Inserisci la ragione sociale.",
+    requestCodeFirst: "Richiedi prima un codice di verifica.", enterCode: "Inserisci il codice di verifica completo a sei cifre.",
+    codeIncorrect: "Il codice di verifica non è corretto.", codeExpired: "Il codice di verifica è scaduto. Richiedine uno nuovo.",
+    sendTooFrequently: "Un codice è stato inviato di recente. Attendi 60 secondi prima di riprovare.",
+    verificationExpired: "La verifica dell'e-mail è scaduta. Verifica di nuovo l'indirizzo.",
+    serviceUnavailable: "La verifica dell'e-mail non è disponibile al momento. Riprova più tardi.",
+    requestFailed: "Impossibile completare la richiesta. Riprova più tardi.",
+  },
+  de: {
+    datasheetTab: "Datenblatt",
+    unavailableTitle: "Datenblatt noch nicht verfügbar",
+    unavailableDescription: "Für dieses Produkt wurde noch kein Datenblatt veröffentlicht.",
+    viewDatasheet: title => `Datenblatt zu ${title} ansehen (Englisch)`,
+    downloadDatasheet: title => `Datenblatt zu ${title} als PDF herunterladen (Englisch)`,
+    previewLoading: "Datenblatt wird geladen …",
+    previousPage: "Vorherige Seite", nextPage: "Nächste Seite",
+    previousPageShort: "Zurück", nextPageShort: "Weiter",
+    previewButton: "Datenblatt ansehen (Englisch)",
+    previewDescription: title => `Datenblatt zu ${title} online ansehen (Englisch).`,
+    requestCad: "CAD-Dateien anfragen", cadTitle: "CAD-Dateien anfragen",
+    cadDescription: "Geben Sie Ihre Firmendaten ein und bestätigen Sie Ihre geschäftliche E-Mail-Adresse. Unser Technikteam prüft, welche CAD-Formate für dieses Produkt verfügbar sind.",
+    company: "Unternehmen", companyPlaceholder: "Firmenname",
+    businessEmail: "Geschäftliche E-Mail-Adresse", businessEmailPlaceholder: "Geschäftliche E-Mail-Adresse eingeben",
+    verificationCode: "Bestätigungscode", verificationCodePlaceholder: "Sechsstelligen Code eingeben",
+    sendCode: "Code senden", resendCode: "Code erneut senden", sendingCode: "Code wird gesendet …",
+    verifyEmail: "E-Mail-Adresse bestätigen", verifyingEmail: "E-Mail-Adresse wird bestätigt …",
+    emailVerified: "E-Mail-Adresse bestätigt.", codeSent: "Der Code wurde gesendet. Prüfen Sie Ihren Posteingang.",
+    message: "Nachricht (freiwillig)", messagePlaceholder: "Geben Sie das gewünschte CAD-Format oder weitere Anforderungen an.",
+    submitCad: "CAD-Anfrage senden", submittingCad: "Anfrage wird gesendet …",
+    close: "Dialog schließen", successTitle: "CAD-Anfrage gesendet",
+    successDescription: "Wir haben Ihre CAD-Anfrage erhalten und Ihnen eine Bestätigung gesendet. Unser Technikteam prüft, welche Dateien für dieses Produkt verfügbar sind.",
+    closeSuccess: "Schließen",
+    invalidEmail: "Geben Sie eine gültige geschäftliche E-Mail-Adresse ein.",
+    companyRequired: "Geben Sie Ihren Firmennamen ein.",
+    requestCodeFirst: "Fordern Sie zuerst einen Bestätigungscode an.",
+    enterCode: "Geben Sie den vollständigen sechsstelligen Code ein.",
+    codeIncorrect: "Der Bestätigungscode ist falsch.",
+    codeExpired: "Der Bestätigungscode ist abgelaufen. Fordern Sie einen neuen Code an.",
+    sendTooFrequently: "Sie haben gerade einen Code angefordert. Warten Sie 60 Sekunden, bevor Sie es erneut versuchen.",
+    verificationExpired: "Die E-Mail-Bestätigung ist abgelaufen. Bestätigen Sie Ihre E-Mail-Adresse erneut.",
+    serviceUnavailable: "Die E-Mail-Bestätigung ist vorübergehend nicht verfügbar. Versuchen Sie es später erneut.",
+    requestFailed: "Die Anfrage konnte nicht gesendet werden. Versuchen Sie es später erneut.",
   },
   es: {
     datasheetTab: "Ficha técnica",
@@ -460,7 +551,7 @@ const RESOURCE_COPY: Record<
 };
 
 export function getProductDetailResourceCopy(
-  locale: ProductDetailResourceLocale,
+  locale: ProductDetailResourceCopyLocale,
 ): ProductDetailResourceCopy {
   return RESOURCE_COPY[locale];
 }

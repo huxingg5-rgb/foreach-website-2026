@@ -1,5 +1,7 @@
 "use client";
 
+import { getInquiryTransportLocale } from "@/data/contact-cooperation/inquiry-transport";
+
 /* =========================================================
    components/contact/DistributorPageContent.tsx
    经销商合作页面主体组件
@@ -60,11 +62,11 @@ import {
 type DistributorPageContentProps = {
   content: DistributorPageData;
   contactPageData: ContactPageData;
-  locale: DistributorLocale;
+  locale: DistributorLocale | "de" | "it" | "hi";
 };
 
 const distributorBreadcrumbCopy: Record<
-  DistributorLocale,
+  DistributorLocale | "de" | "it" | "hi",
   { home: string; contact: string; distributor: string; ariaLabel: string }
 > = {
   en: {
@@ -72,6 +74,21 @@ const distributorBreadcrumbCopy: Record<
     contact: "Contact & Partnership",
     distributor: "Become a Distributor",
     ariaLabel: "Breadcrumb",
+  },
+  de: {
+    home: "Startseite",
+    contact: "Kontakt und Partnerschaft",
+    distributor: "Vertriebspartner werden",
+    ariaLabel: "Brotkrümelnavigation",
+  },
+  hi: {
+    home: "होम", contact: "संपर्क और साझेदारी", distributor: "वितरक बनें", ariaLabel: "पेज का रास्ता",
+  },
+  it: {
+    home: "Home",
+    contact: "Contatti e collaborazioni",
+    distributor: "Diventa distributore",
+    ariaLabel: "Percorso di navigazione",
   },
   es: {
     home: "Inicio",
@@ -384,7 +401,7 @@ export default function DistributorPageContent({
           "Content-Type": "application/json",
         },
         credentials: "same-origin",
-        body: JSON.stringify({ email, locale }),
+        body: JSON.stringify({ email, locale: getInquiryTransportLocale(locale) }),
       });
 
       const result = (await response.json().catch(() => ({}))) as {
@@ -717,7 +734,7 @@ export default function DistributorPageContent({
             requirementText,
 
           locale:
-            currentLang,
+            getInquiryTransportLocale(currentLang),
 
           attachments:
             selectedFiles.map((file) => ({

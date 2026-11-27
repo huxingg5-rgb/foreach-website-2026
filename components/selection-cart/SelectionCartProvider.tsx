@@ -1,4 +1,5 @@
 "use client";
+import { degassingModuleZh } from "@/data/products/detail/degassing-module.zh";
 import { drawingRequirementsLine, getDrawingTypes, normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import { changeCartGroupDrawingTypes } from "./selection-cart-bundles";
 import { normalizeFlangedChoice, validateFlangedChoice } from "@/data/products/configurator/flanged-tubing";
@@ -28,10 +29,12 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { usePathname } from "next/navigation";
+import { useContentPathname } from "@/lib/i18n/use-content-pathname";
 
 import { getLocalizedFilterOptionLabel } from "@/components/products/selection/filter-option-i18n";
 import { getLocaleFromPathname } from "@/lib/i18n";
+import { getHindiNavigationText } from "@/data/navigation.hi";
+import { getItalianNavigationText } from "@/data/navigation.it";
 import { isHardTubeAccessoryCartItem, hardTubeProductCodeText } from "@/data/products/configurator/hard-tube-accessories";
 import {
   trackAddToInquiryList,
@@ -59,9 +62,29 @@ const GLOBAL_CART_STORAGE_KEY = "foreach_global_selection_cart_v1";
 const LEGACY_FITTING_CART_STORAGE_KEY = "foreach_fitting_replacement_cart_v1";
 
 const TARGET_CART_TEXT: Record<
-  "es" | "fr" | "ko" | "ru",
+  "de" | "it" | "es" | "fr" | "ko" | "ru",
   Record<string, string>
 > = {
+  de: {
+    "No products selected": "Sie haben noch keine Produkte ausgewählt.",
+    Products: "Produkte", "Fitting Replacement Search": "Vergleich von Fluidik-Fittings",
+    Source: "Quelle", "Product Type": "Produkttyp", "Product Model": "Modell",
+    "To be confirmed": "Noch zu bestätigen", Quantity: "Menge", Product: "Produkt",
+    "Product Code": "Artikelnummer", "Foreach Model": "FOREACH-Modell", "Compatible Models": "Kompatible Modelle",
+    "Clear the current product selection list?": "Möchten Sie die aktuelle Produktauswahlliste leeren?",
+    "Selection list copied": "Auswahlliste kopiert.",
+    "The selection list is empty. Add a product first.": "Die Auswahlliste ist leer. Fügen Sie zuerst ein Produkt hinzu.",
+  },
+  it: {
+    "No products selected": "Nessun prodotto selezionato",
+    Products: "Prodotti", "Fitting Replacement Search": "Ricerca di raccordi compatibili",
+    Source: "Origine", "Product Type": "Tipo di prodotto", "Product Model": "Modello",
+    "To be confirmed": "Da confermare", Quantity: "Quantità", Product: "Prodotto",
+    "Product Code": "Codice prodotto", "Foreach Model": "Modello FOREACH", "Compatible Models": "Modelli compatibili",
+    "Clear the current product selection list?": "Vuoi svuotare l’elenco dei prodotti selezionati?",
+    "Selection list copied": "Elenco copiato.",
+    "The selection list is empty. Add a product first.": "L’elenco è vuoto. Aggiungi un prodotto.",
+  },
   es: {
     "No products selected": "No hay productos seleccionados",
     Products: "Productos",
@@ -141,10 +164,26 @@ const TARGET_CART_TEXT: Record<
 };
 
 function getCartText(locale: string, english: string, chinese: string) {
+  if (locale === "hi") {
+    const actionCopy: Readonly<Record<string, string>> = {
+      "Selection list copied": "चयन सूची कॉपी हो गई।",
+      "Source": "स्रोत",
+      "Fitting Replacement Search": "फिटिंग के विकल्प खोजें",
+      "To be confirmed": "पुष्टि बाकी",
+      "Foreach Model": "FOREACH मॉडल",
+      "Clear the current product selection list?": "मौजूदा उत्पाद चयन सूची खाली करें?",
+      "The selection list is empty. Add a product first.": "चयन सूची खाली है। पहले कोई उत्पाद जोड़ें।",
+      "2D Drawing": "2D ड्रॉइंग",
+      "3D Model": "3D मॉडल",
+      "Required": "ज़रूरी",
+      "Not Required": "ज़रूरी नहीं",
+    };
+    return actionCopy[english] ?? getHindiNavigationText(english);
+  }
   if (locale === "en") return english;
   if (locale === "zh-CN") return chinese;
 
-  return TARGET_CART_TEXT[locale as "es" | "fr" | "ko" | "ru"]?.[english] || english;
+  return TARGET_CART_TEXT[locale as keyof typeof TARGET_CART_TEXT]?.[english] || english;
 }
 
 interface SelectionCartContextValue {
@@ -157,7 +196,7 @@ interface SelectionCartContextValue {
   addItem: (item: SelectionCartItemInput) => void;
   addBundle: (primary: SelectionCartItemInput, accessories: SelectionCartItemInput[]) => void;
   removeItem: (id: string) => void;
-  clearCart: () => void;
+  clearCart: (localeOverride?: "de" | "it" | "hi") => void;
 
   changeQuantity: (id: string, quantity: number) => void;
   toggleDrawingNeed: (id: string, needDrawing: boolean) => void;
@@ -171,8 +210,8 @@ interface SelectionCartContextValue {
     productCode: string
   ) => SelectionCartItem | undefined;
 
-  copyCartText: () => Promise<void>;
-  generatePdfList: () => void;
+  copyCartText: (localeOverride?: "de" | "it" | "hi") => Promise<void>;
+  generatePdfList: (localeOverride?: "de" | "it" | "hi") => void;
 
   printTime: string;
 }
@@ -202,8 +241,14 @@ function isPublishedCartItem(item: {
     String(item.detailHref ?? "").includes("/products/fittings/") ||
     String(item.detailHref ?? "").includes("/fitting-replacement/");
 
+  const isDegassingModule = item.sourceType === "pump-selection"
+    && item.productCode === degassingModuleZh.slug
+    && item.foreachModel === degassingModuleZh.model
+    && item.detailHref?.replace(/^\/(?:en|es|fr|ko|ru)(?=\/)/, "").replace(/\/?$/, "/") === degassingModuleZh.href;
+
   return (
     !isFittingItem ||
+    isDegassingModule ||
     isPublishedFittingProductCode(item.productCode) ||
     isHardTubeAccessoryCartItem(item)
   );
@@ -276,7 +321,7 @@ function buildCartText(
     const number = group.accessories.length ? `${groupIndex + 1}.${partIndex + 1}` : `${groupIndex + 1}`;
     const isProductSelection = item.sourceType === "pump-selection" || item.sourceType === "tubing-selection";
     const localizedProductName = item.instrumentConfiguration ? instrumentInquiryProductName(item.instrumentConfiguration.family, locale) : isProductSelection
-      ? getLocalizedFilterOptionLabel(item.productName, locale)
+      ? locale === "hi" ? getHindiNavigationText(getLocalizedFilterOptionLabel(item.productName, "en")) : locale === "it" ? getItalianNavigationText(getLocalizedFilterOptionLabel(item.productName, "en")) : getLocalizedFilterOptionLabel(item.productName, locale)
       : item.productName;
     const sourceLabel = getCartText(
       locale,
@@ -301,7 +346,7 @@ function buildCartText(
     return [
       `#${number}`,
       `${getCartText(locale, "Source", "来源")}: ${sourceLabel}`,
-      `${getCartText(locale, "Product", "产品")}: ${item.productName}`,
+      `${getCartText(locale, "Product", "产品")}: ${locale === "de" && item.sourceType === "fitting-replacement" ? "FOREACH-Fitting" : locale === "it" && item.sourceType === "fitting-replacement" ? "Raccordo FOREACH" : locale === "hi" && item.sourceType === "fitting-replacement" ? "FOREACH फिटिंग" : item.productName}`,
       `${getCartText(locale, "Product Code", "商品编码")}: ${item.productCode}`,
       `${getCartText(locale, "Foreach Model", "恒永达型号")}: ${item.foreachModel}`,
       `${getCartText(locale, "Compatible Models", "兼容编码")}: ${item.competitorModels.join(" / ") || "-"}`,
@@ -317,7 +362,7 @@ export function SelectionCartProvider({
 }: {
   children: ReactNode;
 }) {
-  const pathname = usePathname();
+  const pathname = useContentPathname();
   const locale = getLocaleFromPathname(pathname);
 
   const [items, setItems] = useState<SelectionCartItem[]>([]);
@@ -533,10 +578,10 @@ export function SelectionCartProvider({
     }));
   }
 
-  function clearCart() {
+  function clearCart(localeOverride?: "de" | "it" | "hi") {
     const confirmed = window.confirm(
       getCartText(
-        locale,
+        localeOverride ?? locale,
         "Clear the current product selection list?",
         "确认清空当前选型清单？",
       ),
@@ -601,24 +646,26 @@ export function SelectionCartProvider({
     return items.find((item) => item.id === id);
   }
 
-  async function copyCartText() {
-    const text = buildCartText(items, locale);
+  async function copyCartText(localeOverride?: "de" | "it" | "hi") {
+    const displayLocale = localeOverride ?? locale;
+    const text = buildCartText(items, displayLocale);
 
     try {
       await window.navigator.clipboard.writeText(text);
       window.alert(
-        getCartText(locale, "Selection list copied", "清单已复制"),
+        getCartText(displayLocale, "Selection list copied", "清单已复制"),
       );
     } catch {
       window.alert(text);
     }
   }
 
-  function generatePdfList() {
+  function generatePdfList(localeOverride?: "de" | "it" | "hi") {
+    const displayLocale = localeOverride ?? locale;
     if (items.length === 0) {
       window.alert(
         getCartText(
-          locale,
+          displayLocale,
           "The selection list is empty. Add a product first.",
           "当前清单为空，请先加入产品。",
         ),
@@ -628,13 +675,13 @@ export function SelectionCartProvider({
 
     setPrintTime(
       new Date().toLocaleString(
-        locale === "zh-CN"
+        displayLocale === "zh-CN"
           ? "zh-CN"
-          : locale === "en"
+          : displayLocale === "en"
             ? "en-US"
-            : locale === "ko"
+            : displayLocale === "ko"
               ? "ko-KR"
-              : locale,
+              : displayLocale,
       ),
     );
 

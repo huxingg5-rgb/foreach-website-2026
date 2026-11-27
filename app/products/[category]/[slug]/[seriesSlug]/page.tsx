@@ -6,6 +6,7 @@ import RelatedResources from "@/components/common/related-resources/RelatedResou
 import type { TechnicalArticleLocale } from "@/data/resources/technical-articles/technical-articles.types";
 import type { ReactNode } from "react";
 ﻿import type {
+  ComponentProps,
   ComponentType,
 } from "react";
 
@@ -43,11 +44,16 @@ import threadToBarbedDetailsJson from "@/data/products/generated/fittings/thread
 import luerDetailsJson from "@/data/products/generated/fittings/luer-fittings/detail/index.json";
 
 import femaleThreadDetailsJson from "@/data/products/generated/fittings/female-thread-adapters/detail/index.json";
+import { getFittingModelTopic } from "@/data/products/detail/fitting-product-copy.intl";
 
 import "../../../products.css";
+import type { GermanProductDetailContent } from "@/data/products/detail/product-detail-content.de";
 
 type ProductsSeriesRoutePageProps = {
   renderLocale?: TechnicalArticleLocale;
+  germanDetail?: GermanProductDetailContent;
+  localizedDetail?: ComponentProps<typeof ProductDetailClient>["localizedDetail"];
+  fittingModelLinks?: ReactNode;
   params: Promise<{
     category: string;
     slug: string;
@@ -148,6 +154,8 @@ const ProductDetailView =
     afterContent?: ReactNode;
     customerCategoryMode?: "fitting-zh" | "luer-zh" | "hard-tube-zh";
     customerCategoryContent?: Partial<Record<"selection" | "delivery", ReactNode>>;
+    germanDetail?: GermanProductDetailContent;
+    localizedDetail?: ComponentProps<typeof ProductDetailClient>["localizedDetail"];
   }>;
 
 export const dynamicParams =
@@ -569,14 +577,16 @@ export async function generateMetadata({
       toFittingClientData(
         fittingDetail
       );
+    const topic = getFittingModelTopic(pageData, "zh");
     const title =
-      detail.seo?.title ||
+      (topic ? `${detail.model} ${topic.title} | 恒永达` : detail.seo?.title) ||
       `${detail.model} ${
         detail.name ||
         detail.title ||
         fallbackName
       } | Foreach Technology`;
     const description =
+      topic?.description ||
       detail.seo?.description ||
       detail.description ||
       "";
@@ -650,6 +660,9 @@ export async function generateMetadata({
 export default async function ProductsSeriesRoutePage({
   params,
   renderLocale = "zh-CN",
+  fittingModelLinks,
+  germanDetail,
+  localizedDetail,
 }: ProductsSeriesRoutePageProps) {
   const {
     category,
@@ -666,31 +679,39 @@ export default async function ProductsSeriesRoutePage({
 
   if (fittingDetail) {
     return (
-      <ProductDetailView
+        <ProductDetailView
+        germanDetail={germanDetail}
+        localizedDetail={localizedDetail}
         customerCategoryMode={fittingDetail.productTypeId === "hard-tube-fittings" ? "hard-tube-zh" : fittingDetail.productTypeId === "luer-fittings" ? "luer-zh" : ["thread-to-barbed-fittings", "female-thread-adapters"].includes(fittingDetail.productTypeId) ? "fitting-zh" : undefined}
         customerCategoryContent={renderLocale === "zh-CN" && fittingDetail.productTypeId === "hard-tube-fittings" ? {
           selection: <HardTubeDetailContent data={fittingDetail.detail} section="selection" />,
         } : renderLocale === "zh-CN" && fittingDetail.productTypeId === "luer-fittings" ? {
-          selection: <QuickConnectDetailContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} section="selection" variant="luer-fitting" />,
+          selection: <>
+            <QuickConnectDetailContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} section="selection" variant="luer-fitting" />
+            {fittingModelLinks}
+          </>,
           delivery: <QuickConnectDetailContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} section="delivery" variant="luer-fitting" />,
         } : renderLocale === "zh-CN" && ["thread-to-barbed-fittings", "female-thread-adapters"].includes(fittingDetail.productTypeId) ? {
           selection: <QuickConnectDetailContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} section="selection" variant="standalone-fitting" />,
           delivery: <QuickConnectDetailContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} section="delivery" variant="standalone-fitting" />,
-        } : { selection: <FittingLocalizedSelectionContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} locale={renderLocale} /> }}
+        } : { selection: <FittingLocalizedSelectionContent data={{ ...fittingDetail.detail, productTypeId: fittingDetail.productTypeId }} locale={renderLocale} germanDraft={!!germanDetail} contentLocale={localizedDetail?.locale} /> }}
         afterContent={fittingDetail.productTypeId === "hard-tube-fittings" ? (
           <HardTubeFittingRelatedArticles model={String(fittingDetail.detail.model || "")} locale={renderLocale} />
-        ) : fittingDetail.productTypeId === "luer-fittings" ? (
+        ) : fittingDetail.productTypeId === "luer-fittings" && localizedDetail?.locale !== "hi" ? (
           <RelatedResources
             sourceType="product"
             sourceSlug={String(fittingDetail.detail.model || "").toLowerCase()}
             relationKeys={["category:luer-fittings"]}
             locale={renderLocale}
+            uiLocale={germanDetail ? "de" : localizedDetail?.locale}
           />
         ) : (
           <FittingRelatedResources
             productTypeId={fittingDetail.productTypeId}
             model={String(fittingDetail.detail.model || "")}
             locale={renderLocale}
+            germanDraft={!!germanDetail}
+            contentLocale={localizedDetail?.locale}
           />
         )}
         data={renderLocale === "zh-CN"

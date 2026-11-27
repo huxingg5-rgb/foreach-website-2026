@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getHindiDraftLink, getItalianDraftLink, hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
 
 import {
   brushlessWiringArticleImages,
@@ -16,9 +17,9 @@ import type { TechnicalArticleLocale } from "@/data/resources/technical-articles
 import newsStyles from "./TechnicalArticleBody.module.css";
 import styles from "./TechnicalArticleBody.module.css";
 
-type BrushlessDiaphragmPumpWiringArticleProps = {
-  locale?: TechnicalArticleLocale;
-};
+type BrushlessDiaphragmPumpWiringArticleProps =
+  | { locale?: TechnicalArticleLocale; copy?: never }
+  | { locale: "de" | "it" | "hi"; copy: BrushlessWiringArticleCopy };
 
 function TwoColumnTable({
   headers,
@@ -244,10 +245,9 @@ function ExpandedFaq({ copy }: { copy: BrushlessWiringArticleCopy }) {
   );
 }
 
-export default function BrushlessDiaphragmPumpWiringArticle({
-  locale = "zh-CN",
-}: BrushlessDiaphragmPumpWiringArticleProps) {
-  const copy = getBrushlessWiringArticleCopy(locale);
+export default function BrushlessDiaphragmPumpWiringArticle(props: BrushlessDiaphragmPumpWiringArticleProps) {
+  const locale = props.locale ?? "zh-CN";
+  const copy = props.copy ?? getBrushlessWiringArticleCopy(props.locale ?? "zh-CN");
   const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
 
   return (
@@ -354,17 +354,24 @@ export default function BrushlessDiaphragmPumpWiringArticle({
         <h2>{copy.products.title}</h2>
         <p>{copy.products.intro}</p>
         <div className={styles.productGrid}>
-          {copy.products.cards.map((card) => (
-            <Link
-              className={styles.productCard}
-              href={`${localePrefix}/products/pumps/miniature-diaphragm-pumps/${card.slug}`}
-              key={card.model}
-            >
-              <span>{card.label}</span>
-              <strong>{card.model}</strong>
-              <small>{card.note}</small>
-            </Link>
-          ))}
+          {copy.products.cards.map((card) => {
+            const productPath = `/products/pumps/miniature-diaphragm-pumps/${card.slug}`;
+            const destination = locale === "it" ? getItalianDraftLink(`/en${productPath}`)
+              : locale === "hi" ? getHindiDraftLink(`/en${productPath}`) : undefined;
+            const fallbackSuffix = locale === "hi" ? hindiEnglishFallbackSuffix : italianEnglishFallbackSuffix;
+            return (
+              <Link
+                className={styles.productCard}
+                href={destination?.href ?? `${localePrefix}${productPath}`}
+                hrefLang={destination?.hrefLang}
+                key={card.model}
+              >
+                <span>{card.label}{destination?.hrefLang === "en" ? fallbackSuffix : ""}</span>
+                <strong>{card.model}</strong>
+                <small>{card.note}</small>
+              </Link>
+            );
+          })}
         </div>
         {copy.products.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>

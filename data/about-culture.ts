@@ -13,6 +13,11 @@
    1. 页面支持语言
 ================================ */
 
+import germanCopy from "./about-de/culture.json";
+import italianCopy from "./about-it/culture.json";
+import hindiCopy from "./about-hi/culture.json";
+import { translateGermanAbout as translateAboutCopy } from "./about-de/translate-german-about";
+
 export const aboutCultureLocales = [
   "zh-CN",
   "en",
@@ -22,9 +27,10 @@ export const aboutCultureLocales = [
   "ru",
 ] as const;
 
-export type AboutCultureLocale = (typeof aboutCultureLocales)[number];
+type AboutCultureSourceLocale = (typeof aboutCultureLocales)[number];
+export type AboutCultureLocale = AboutCultureSourceLocale | "de" | "it" | "hi";
 
-export type LocalizedCultureText = Record<AboutCultureLocale, string>;
+export type LocalizedCultureText = Record<AboutCultureSourceLocale, string>;
 
 /* ================================
    2. 页面数据类型
@@ -74,7 +80,7 @@ export type AboutCulturePageText = {
    3. 多语言页面链接
 ================================ */
 
-export const aboutCultureLinks: Record<AboutCultureLocale, string> = {
+export const aboutCultureLinks: Record<AboutCultureSourceLocale, string> = {
   "zh-CN": "/about/culture",
   en: "/en/about/culture",
   es: "/es/about/culture",
@@ -89,8 +95,8 @@ export const aboutCultureLinks: Record<AboutCultureLocale, string> = {
 
 export function isAboutCultureLocale(
   locale: string
-): locale is AboutCultureLocale {
-  return aboutCultureLocales.includes(locale as AboutCultureLocale);
+): locale is AboutCultureSourceLocale {
+  return aboutCultureLocales.includes(locale as AboutCultureSourceLocale);
 }
 
 /* ================================
@@ -101,6 +107,7 @@ export function getCultureText(
   text: LocalizedCultureText,
   locale: AboutCultureLocale
 ) {
+  if (locale === "de" || locale === "it" || locale === "hi") return translateAboutCopy(text.en, locale === "de" ? germanCopy : locale === "hi" ? hindiCopy : italianCopy);
   return text[locale] || text["zh-CN"];
 }
 

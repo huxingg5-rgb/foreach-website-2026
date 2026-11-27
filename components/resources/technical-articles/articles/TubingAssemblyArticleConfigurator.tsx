@@ -47,7 +47,7 @@ function loadDraft(): Draft {
   return { choice: exampleChoice, name: null };
 }
 
-export default function TubingAssemblyArticleConfigurator({ locale }: { locale: TechnicalArticleLocale }) {
+export default function TubingAssemblyArticleConfigurator({ locale }: { locale: TechnicalArticleLocale | "de" | "it" | "hi" }) {
   const savedRecord = useRef<FlangedConfiguration | null>(null);
   const draft = useRef<Draft>({ choice: exampleChoice, name: null });
   const [initialChoice, setInitialChoice] = useState<FlangedTubingChoice | null>(null);

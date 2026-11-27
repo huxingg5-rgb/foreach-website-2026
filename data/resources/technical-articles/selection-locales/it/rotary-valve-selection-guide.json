@@ -1,0 +1,385 @@
+{
+  "kind": "selection",
+  "family": "valve",
+  "footerProducts": [
+    {
+      "id": "mrv3-ceramic-rotary-valve",
+      "title": "MRV3 Valvola rotativa multicanale in ceramica",
+      "href": "/en/products/valves/rotary-valves",
+      "imageSrc": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+      "imageAlt": "MRV3 Valvola rotativa multicanale in ceramica"
+    }
+  ],
+  "sidebarProducts": [
+    {
+      "id": "mrv3-ceramic-rotary-valve",
+      "title": "MRV3 Valvola rotativa multicanale in ceramica",
+      "href": "/en/products/valves/rotary-valves",
+      "imageSrc": "/images/products/valves/rotary-valves/foreach-rotary-valve-main.webp",
+      "imageAlt": "MRV3 Valvola rotativa multicanale in ceramica"
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Guida alla scelta delle valvole rotative: dal circuito fluidico alla convalida del sistema",
+      "seoTitle": "Scelta delle valvole rotative: canali, passaggio, pressione e controllo | FOREACH",
+      "seoDescription": "Scegli una valvola rotativa in base a funzione, collegamenti, fluidi e pressione, passaggio e volume interno, raccordi, controllo e convalida del sistema. Confronta le versioni MRV3 a 10, 16 e 24 canali per commutazione dei reagenti e lavaggio.",
+      "coverImage": "/images/products/valves/rotary-valves/foreach-mrv3-ceramic-multi-channel-rotary-selector-valves-series.webp",
+      "coverAlt": "Serie FOREACH MRV3 di valvole rotative multicanale in ceramica"
+    },
+    "deck": "Definisci i collegamenti richiesti in ogni fase prima di confrontare le specifiche. Verifica l'idoneità allo strumento con i liquidi, i tubi e la sequenza di commutazione effettivi.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Per scegliere una valvola rotativa partire dalla funzione fluidica e dai collegamenti in ogni posizione. Controllare fluidi, pressione, passaggio, raccordi e controllo, quindi convalidare il ricambio del liquido e il funzionamento nel sistema completo. Lo stesso numero di porte non implica la stessa funzione. Il movimento regolare della valvola non garantisce la qualità del liquido in uscita né dei risultati analitici."
+      },
+      {
+        "type": "paragraph",
+        "text": "Una valvola inadeguata nella commutazione automatizzata di reagenti, campioni o liquidi di lavaggio può causare collegamenti insufficienti, aspirazione più lenta, cicli di ricambio più lunghi o primi risultati instabili dopo il lavaggio. La sequenza di sviluppo qui proposta traduce questi problemi in criteri di selezione verificabili."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Fase 1: definire la funzione attraverso gli stati del circuito",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Stabilire da dove viene il liquido, dove va e quali fasi devono avvenire in parallelo. Più flaconi che alimentano in sequenza un percorso comune richiedono in genere una selezione. Se una sorgente alimenta destinazioni successive, verificare la direzione di distribuzione. Per commutare circuiti completi serve uno schema multiporta adatto."
+          },
+          {
+            "type": "paragraph",
+            "text": "Registrare il processo in una tabella degli stati. In questo esempio di erogazione condivisa, la destinazione di scarico dipende dalla posizione dell'ago o da un meccanismo separato. Verificare quali percorsi controlla il selettore di sorgente."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Fase del processo",
+              "Collegamento richiesto della sorgente",
+              "Destinazione del liquido",
+              "Condizione del programma"
+            ],
+            "rows": [
+              [
+                "Erogare A",
+                "A collegato a COM",
+                "Recipiente di destinazione",
+                "Dosare dopo aver confermato la selezione"
+              ],
+              [
+                "Lavare il percorso condiviso",
+                "Soluzione di lavaggio collegata a COM",
+                "Posizione di scarico",
+                "Confermare la destinazione prima di avviare la pompa"
+              ],
+              [
+                "Sostituire con B",
+                "B collegato a COM",
+                "Posizione di scarico",
+                "Rimuovere la soluzione di lavaggio dal percorso condiviso"
+              ],
+              [
+                "Erogare B",
+                "Mantenere il percorso per B",
+                "Recipiente di destinazione",
+                "Dosare al raggiungimento dei criteri di ricambio"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Contare insieme reagenti, soluzione di lavaggio, liquido di taratura e collegamenti di riserva. Confermare se COM è incluso nel numero nominale. L'erogazione simultanea indipendente richiede canali di sistema o gruppi valvola aggiuntivi. Più posizioni di selezione sulla stessa valvola da sole non bastano."
+          },
+          {
+            "type": "paragraph",
+            "text": "Ad esempio, 8 liquidi di lavoro, 1 soluzione di lavaggio e 1 liquido di taratura richiedono 10 porte di selezione. Aggiungendo 2 sorgenti indipendenti ne servono più di 10. Si può considerare una versione a 16 o 24 canali. Verificare anche passaggio, raccordi, ingombro e tempo di ricambio effettivo. L'esempio riguarda il conteggio dei collegamenti e richiede convalida sullo strumento."
+          },
+          {
+            "type": "paragraph",
+            "text": "Una valvola che chiude i flussi non selezionati può non essere adatta quando questi devono continuare a fluire. Che si chiudano, confluiscano in un'altra uscita comune o scorrano separatamente è un criterio indipendente dal numero di posizioni. Includere questi stati nello schema."
+          }
+        ]
+      },
+      {
+        "title": "Fase 2: definire fluidi e limiti di pressione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Elencare liquidi di lavoro, lavaggio, disinfezione e conservazione con composizione, concentrazione, temperatura e durata di contatto. Una dichiarazione generica di resistenza ad acidi e basi non dimostra la compatibilità con un reagente. Con campioni che contengono particelle, cristallizzano o aderiscono, valutare anche ostruzione, usura e residui."
+          },
+          {
+            "type": "paragraph",
+            "text": "Valutare la pressione nella posizione effettiva della valvola. A monte della pompa considerare pressione di aspirazione e ingresso d'aria. A valle, resistenza e contropressione. Commutazione e ostruzioni possono produrre pressioni diverse da quelle dell'erogazione stazionaria. Un valore nominale in pressione positiva non dimostra tenuta in depressione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Prima di decidere se arrestare la pompa, scaricare la pressione o usare un'altra sequenza, confermare pressione di esercizio ammissibile e condizioni di commutazione. Una prova in pressione non definisce i limiti per l'esercizio continuo. Raccordi simili non qualificano un selettore di reagenti per l'iniezione ad alta pressione. Consultare il fornitore se mancano le condizioni di commutazione dinamica."
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/resources/technical-articles/rotary-valve-wetted-materials-selection/",
+                "label": "Verifica dei materiali a contatto: reagenti, liquidi di lavaggio e combinazioni di materiali"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fase 3: confrontare passaggio, volume interno e tempo di ricambio",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il diametro di passaggio influisce sulla resistenza al flusso. Il volume interno descrive il liquido contenuto in un percorso specifico. I passaggi piccoli possono trattenere meno liquido ma aumentare la resistenza. Scegliendo solo in base al volume minimo si può ridurre l'aspirazione alla portata prevista o allungare il ricambio."
+          },
+          {
+            "type": "paragraph",
+            "text": "La tabella usa i dati di configurazione MRV3. Il volume interno comprende il passaggio COM e la scanalatura del rotore. È distinto da volume erogato e volume residuo di tutto il sistema."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Configurazione",
+              "Canali di selezione",
+              "Diametro di passaggio",
+              "Volume interno della valvola",
+              "Attacco filettato"
+            ],
+            "rows": [
+              [
+                "MRV3-D10",
+                "10",
+                "1.2 mm",
+                "15.8 μL",
+                "1/4-28 UNF"
+              ],
+              [
+                "MRV3-D16",
+                "16",
+                "1.0 mm",
+                "10 μL",
+                "1/4-28 UNF"
+              ],
+              [
+                "MRV3-D24",
+                "24",
+                "0.5 mm",
+                "2.9 μL",
+                "6-40 UNF"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Passando da 10 a 16 canali aumentano i collegamenti e cambiano diametro di passaggio e volume interno. La configurazione a 24 canali usa un'altra filettatura. Per sostituire una valvola con un modello a più canali, ricontrollare raccordi, tubi e prestazioni effettive di erogazione."
+          },
+          {
+            "type": "formula",
+            "expression": "Volume teorico del tubo diritto V = π × diametro interno² × lunghezza ÷ 4",
+            "note": "Un tubo circolare con diametro interno di 0.8 mm e lunghezza di 300 mm ha un volume teorico di circa 151 μL. 1 mm³ = 1 μL. L'esempio geometrico esclude valvola, camera pompa, raccordi e ago."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un tubo comune lungo può contenere più liquido della valvola. Considerare tutto il percorso condiviso prima di determinare il volume di lavaggio con prove sui liquidi effettivi. Dividere il volume teorico per la portata dà un punto di partenza ideale. Il tempo necessario a limitare miscelazione, adsorbimento o contaminazione residua va misurato."
+          }
+        ]
+      },
+      {
+        "title": "Fase 4: controllare raccordi, installazione e sequenza di controllo",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Controllare filettature, tenute piane o coniche, raccordi corrispondenti, diametro del tubo e profondità di innesto. L'avvitamento del filetto non dimostra compatibilità della tenuta. Prevedere spazio per curve, manutenzione e sostituzione della testa, evitando carichi prolungati dei tubi sulle porte."
+          },
+          {
+            "type": "paragraph",
+            "text": "Confermare alimentazione, protocollo di comunicazione, driver incluso, metodo di azzeramento e numerazione dei canali. La documentazione MRV3 indica interfacce RS232/RS485. Comandi, stati restituiti e gestione dei guasti devono corrispondere al protocollo del driver scelto. Il solo nome dell'interfaccia non garantisce la compatibilità diretta."
+          },
+          {
+            "type": "figure",
+            "src": "",
+            "width": 960,
+            "height": 150,
+            "alt": "Coordinare pompa e valvola: predisporre la commutazione, confermare la posizione e completare il ricambio",
+            "caption": "L'arrivo della valvola in posizione e l'arrivo del liquido selezionato all'uscita sono eventi distinti.",
+            "flowNodes": [
+              {
+                "label": "Predisponi le condizioni",
+                "detail": "Gestisci pompa e pressione come indicato"
+              },
+              {
+                "label": "Seleziona il percorso",
+                "detail": "Comanda il canale di destinazione"
+              },
+              {
+                "label": "Conferma la posizione",
+                "detail": "Controlla azzeramento e stato di arrivo"
+              },
+              {
+                "label": "Sostituisci e dosa",
+                "detail": "Verifica l'erogazione prima dell'uso ordinario"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il tempo di ciclo comprende movimento valvola, conferma dello stato, lavaggio, ricambio e dosaggio. Il tempo tra porte adiacenti non descrive ogni coppia di canali né l'intero ricambio. Dopo la perdita di alimentazione o comunicazione, ristabilire uno stato di collegamento affidabile per evitare di pompare nel canale errato."
+          }
+        ]
+      },
+      {
+        "title": "Fase 5: convalidare l'idoneità con un prototipo",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Eseguire l'intero processo con reagenti, soluzioni di lavaggio e tubi previsti nell'intervallo atteso di temperature, livelli, pressioni e cicli. Una prova di erogazione con sola acqua rileva problemi di collegamento di base. Per convalidare lavaggio dei campioni, compatibilità e funzionamento prolungato servono prove dedicate."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Voce da convalidare",
+              "Osservazioni o misure proposte",
+              "Domanda da chiarire"
+            ],
+            "rows": [
+              [
+                "Collegamenti e posizionamento",
+                "Destinazione effettiva del liquido per ogni canale, dopo azzeramento e riavvio",
+                "La numerazione del software identifica sempre il collegamento corretto?"
+              ],
+              [
+                "Tenuta ed erogazione",
+                "Perdite esterne, trafilamenti tra porte, bolle in ingresso, portata e pressione previste",
+                "L'erogazione richiesta si mantiene nelle condizioni installate?"
+              ],
+              [
+                "Ricambio e residui",
+                "Primo risultato dopo la commutazione, risultati successivi e bianchi",
+                "Lavaggio e ricambio rispettano il limite di residui?"
+              ],
+              [
+                "Stabilità operativa",
+                "Cicli di commutazione effettivi e riavvio dopo arresto",
+                "Si osservano usura, cristallizzazione, blocchi o deriva dei risultati?"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Le soglie di accettazione per residui, errore di volume e tempo di ciclo devono seguire la funzione dello strumento e il metodo analitico. Non basta un numero universale di cicli superati. Registrare modello esatto, materiali a contatto, lotto del liquido, tubi e condizioni d'esercizio per rivalutare la convalida in caso di modifiche."
+          }
+        ]
+      },
+      {
+        "title": "Quali informazioni includere in una richiesta di selezione?",
+        "blocks": [
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Schema fluidico e tabella degli stati: sorgenti, destinazioni, collegamenti di ogni fase e funzionamenti simultanei richiesti.",
+              "Elenco dei fluidi: composizione, concentrazione, temperatura, tempo di contatto e particelle per reagenti, campioni, liquidi di pulizia e conservazione.",
+              "Condizioni di erogazione: portata, volume dosato, aspirazione, contropressione, diametro e lunghezza del tubo e residui ammessi.",
+              "Requisiti d'integrazione: canali di riserva, raccordi, ingombro, alimentazione e comunicazione, frequenza di commutazione, durata d'esercizio e stati di guasto."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "FOREACH può usare queste condizioni per valutare configurazioni MRV3 candidate. I link confrontano canali, passaggi e raccordi disponibili. Confermare materiali della testa, driver e combinazioni fuori standard per l'ordine effettivo. Convalidare le prestazioni sul sistema installato."
+          },
+          {
+            "type": "links",
+            "ordered": true,
+            "items": [
+              {
+                "href": "/en/products/valves/rotary-valves/mrv3-d10/",
+                "label": "MRV3-D10: configurazione a 10 canali"
+              },
+              {
+                "href": "/en/products/valves/rotary-valves/mrv3-d16/",
+                "label": "MRV3-D16: configurazione a 16 canali"
+              },
+              {
+                "href": "/en/products/valves/rotary-valves/mrv3-d24/",
+                "label": "MRV3-D24: configurazione a 24 canali"
+              },
+              {
+                "href": "/en/resources/technical-articles/how-does-a-rotary-selector-valve-work/",
+                "label": "Che cos'è una valvola rotativa? Struttura e collegamenti"
+              },
+              {
+                "href": "/en/resources/technical-articles/rotary-valve-wetted-materials-selection/",
+                "label": "Come scegliere i materiali a contatto delle valvole rotative?"
+              },
+              {
+                "href": "/downloads/resources/datasheets/en/Valves/ps-120c-2507-00003-001-en-mrv3-multi-channel-rotary-valve.pdf",
+                "label": "Scheda tecnica MRV3: specifiche e informazioni d'ordine (in inglese, pagine 9–10)"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sulla scelta delle valvole rotative",
+    "faqItems": [
+      {
+        "question": "Più canali sono sempre un vantaggio?",
+        "answer": "Soddisfare prima le esigenze effettive di collegamento e le riserve necessarie, quindi confrontare passaggio, raccordi, ingombro e controllo. Aumentare i canali può cambiare passaggi interni e collegamenti. Non aumenta automaticamente la produttività né consente dosaggi simultanei indipendenti."
+      },
+      {
+        "question": "Un volume interno minore riduce sempre la contaminazione residua?",
+        "answer": "Un volume interno minore indica meno liquido in un percorso interno specifico. La contaminazione residua del sistema dipende anche da tubi condivisi, adsorbimento, liquido di lavaggio, ricambio e metodo analitico. Misurarla con i liquidi effettivi."
+      },
+      {
+        "question": "Per sostituire una valvola basta controllare il numero di porte?",
+        "answer": "Confrontare schemi dei collegamenti, passaggio, pressione e condizioni di commutazione, materiali a contatto, tenute, installazione, alimentazione e protocollo di controllo. Convalidare numerazione e ricambio completo. Lo stesso numero di porte non garantisce l'intercambiabilità diretta."
+      }
+    ],
+    "cta": {
+      "title": "Conferma la configurazione della valvola rotativa per il tuo circuito",
+      "description": "Fornisci schema fluidico, reagenti e soluzioni di lavaggio, pressione, temperatura, ciclo di commutazione e requisiti dei raccordi per valutare canali e materiali a contatto.",
+      "contactLabel": "Invia i requisiti di selezione",
+      "productsLabel": "Visualizza le valvole rotative MRV3",
+      "productsHref": "/en/products/valves/rotary-valves/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "selection-paths",
+      "label": "Funzione fluidica"
+    },
+    {
+      "id": "selection-conditions",
+      "label": "Fluidi e pressione"
+    },
+    {
+      "id": "selection-volume",
+      "label": "Passaggio e volume interno"
+    },
+    {
+      "id": "selection-controls",
+      "label": "Raccordi e controllo"
+    },
+    {
+      "id": "selection-checks",
+      "label": "Convalida del prototipo"
+    },
+    {
+      "id": "selection-inputs",
+      "label": "Dati di selezione e opzioni"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Scelta delle valvole rotative",
+      "Collegamenti del circuito fluidico",
+      "Convalida del ricambio del liquido nel sistema"
+    ],
+    "mentions": [
+      "MRV3-D10",
+      "MRV3-D16",
+      "MRV3-D24"
+    ]
+  }
+}

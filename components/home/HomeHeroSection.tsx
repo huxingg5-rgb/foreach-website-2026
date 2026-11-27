@@ -1,6 +1,6 @@
-import type { LocaleCode } from "@/lib/i18n";
+import type { HomeHeroLocale } from "@/data/home-hero.intl";
 import HomeHeroCarousel from "./HomeHeroCarousel";
 
-export default function HomeHeroSection({ locale }: { locale: LocaleCode }) {
+export default function HomeHeroSection({ locale }: { locale: HomeHeroLocale }) {
   return <HomeHeroCarousel key={locale} locale={locale} />;
 }

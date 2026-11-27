@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "title": "Pompe a membrana brushless a 2 o 5 fili: differenze e criteri di scelta",
+    "seoTitle": "Pompe a membrana brushless a 2 o 5 fili a confronto | FOREACH Technology",
+    "seoDescription": "Scopri le differenze tra le configurazioni delle pompe a membrana brushless a 2 e 5 fili, i segnali VCC, GND, PWM, DIR e FG, quando scegliere ciascuna opzione e quali aspetti verificare per le serie FOREACH DPL30, DPL60, DPL30H e DPGL800.",
+    "coverAlt": "Motore brushless FOREACH DPL60 a 2 fili"
+  },
+  "kicker": "Pompa a membrana brushless · 2 o 5 fili",
+  "deck": "Quando si sceglie una pompa a membrana miniaturizzata, uno stesso tipo di motore brushless in corrente continua può essere disponibile con 2 o 5 fili. La differenza principale riguarda le funzioni di comando e le informazioni sullo stato del motore richieste dall’apparecchiatura. Il principio di erogazione della pompa resta lo stesso.",
+  "conclusion": {
+    "title": "1. La risposta in breve",
+    "label": "In breve:",
+    "text": "Un motore brushless a 2 fili è destinato principalmente all’alimentazione e al comando di avvio e arresto. Il cablaggio semplice si adatta al funzionamento a velocità fissa. Oltre all’alimentazione, un motore brushless a 5 fili può aggiungere regolazione PWM della velocità, comando del senso di rotazione e retroazione di velocità, per le apparecchiature in cui la centralina deve intervenire nel controllo della pompa. Scegli 2 fili se basta un funzionamento stabile a velocità fissa. Valuta 5 fili se occorrono regolazione, retroazione o comandi più articolati."
+  },
+  "twoWire": {
+    "title": "2. Che cos’è un motore brushless a 2 fili?",
+    "intro": "Una configurazione a 2 fili prevede normalmente solo i collegamenti di alimentazione di base:",
+    "headers": [
+      "Collegamento",
+      "Funzione principale"
+    ],
+    "rows": [
+      [
+        "VCC",
+        "Positivo dell’alimentazione"
+      ],
+      [
+        "GND",
+        "Negativo dell’alimentazione / massa"
+      ]
+    ],
+    "paragraphs": [
+      "Il pilotaggio di base è integrato nel motore. Il motore gira quando riceve alimentazione e si arresta quando viene disalimentato.",
+      "I vantaggi principali della configurazione a 2 fili sono quindi cablaggio e comando semplici e facilità di integrazione nel sistema."
+    ],
+    "figureAlt": "Motore brushless FOREACH DPL60 a 2 fili",
+    "figureCaption": "Figura 1 | Motore brushless DPL60 a 2 fili. La configurazione a 2 fili mantiene i collegamenti di alimentazione di base.",
+    "selectionTitle": "Quando scegliere 2 fili?",
+    "selectionIntro": "La configurazione a 2 fili è generalmente la prima opzione da valutare se l’apparecchiatura soddisfa le condizioni seguenti:",
+    "selectionItems": [
+      "La pompa funziona a velocità fissa per lunghi periodi.",
+      "Serve solo il comando di avvio e arresto.",
+      "Non occorre leggere la velocità del motore.",
+      "Non serve la regolazione esterna della velocità via PWM.",
+      "Le interfacce disponibili sulla centralina sono limitate.",
+      "Si vuole ridurre al minimo la complessità del cablaggio e della logica di controllo."
+    ],
+    "closing": "In molte applicazioni di trasferimento, scarico e lavaggio con un intervallo di portata fisso, il funzionamento a 2 fili può soddisfare i requisiti di base se lo strumento non richiede una regolazione dinamica della velocità."
+  },
+  "fiveWire": {
+    "title": "3. Che cos’è un motore brushless a 5 fili?",
+    "intro": "Oltre al positivo di alimentazione e alla massa, una configurazione a 5 fili aggiunge collegamenti di comando e retroazione.",
+    "exampleIntro": "Di seguito un esempio di configurazione comune:",
+    "headers": [
+      "Collegamento",
+      "Funzione principale"
+    ],
+    "rows": [
+      [
+        "VCC",
+        "Positivo dell’alimentazione"
+      ],
+      [
+        "GND",
+        "Massa"
+      ],
+      [
+        "PWM",
+        "Segnale di regolazione della velocità, opzionale"
+      ],
+      [
+        "DIR",
+        "Segnale di comando del senso di rotazione, opzionale"
+      ],
+      [
+        "FG",
+        "Segnale di retroazione della velocità, opzionale"
+      ]
+    ],
+    "paragraphs": [
+      "Rispetto al funzionamento a 2 fili, il vantaggio principale dei 5 fili è che la centralina può controllare più funzioni del motore e ricevere un segnale di velocità.",
+      "Ad esempio, un segnale PWM permette di regolare la velocità del motore, mentre il segnale FG aiuta a stabilire se il motore funziona normalmente. L’ordine esatto dei fili e la logica di controllo possono variare con il modello. Attieniti alla specifica elettrica del prodotto selezionato."
+    ],
+    "figureAlt": "Motore brushless FOREACH DPL60 a 5 fili",
+    "figureCaption": "Figura 2 | Motore brushless DPL60 a 5 fili. Oltre all’alimentazione, si possono aggiungere collegamenti di comando e retroazione.",
+    "selectionTitle": "Quando scegliere 5 fili?",
+    "selectionIntro": "La configurazione a 5 fili è più adatta quando l’apparecchiatura presenta i seguenti requisiti:",
+    "selectionItems": [
+      "La velocità della pompa deve essere regolata tramite PWM.",
+      "Le diverse fasi operative richiedono velocità diverse.",
+      "Occorre leggere la velocità del motore.",
+      "Il sistema deve stabilire se la pompa funziona normalmente.",
+      "La pompa deve interagire con la centralina.",
+      "L’automazione richiede più funzioni di comando e monitoraggio."
+    ],
+    "closing": "Negli strumenti IVD, nelle apparecchiature analitiche e nei sistemi di automazione di laboratorio, ad esempio, il funzionamento a 5 fili è spesso più adatto se il circuito varia la velocità della pompa tra le fasi del processo o se la centralina deve ricevere la retroazione del motore."
+  },
+  "diagramSectionTitle": "4. Logica di cablaggio delle configurazioni a 2 e 5 fili",
+  "diagram": {
+    "ariaLabel": "Schema della logica di controllo dei motori brushless a 2 e 5 fili",
+    "twoWireTitle": "2 fili",
+    "twoWireSubtitle": "Velocità fissa · Avvio e arresto",
+    "fiveWireTitle": "5 fili",
+    "fiveWireSubtitle": "Alimentazione, comando e retroazione",
+    "motor": "Motore brushless",
+    "integratedDriver": "Driver integrato",
+    "controlInterface": "Interfaccia di controllo",
+    "redPower": "Rosso · Positivo",
+    "blackGround": "Nero · Massa",
+    "optional": "Opzionale",
+    "typicalUse": "Uso tipico",
+    "twoWireUses": [
+      "Funzionamento a velocità fissa",
+      "Avvio e arresto con l’alimentazione",
+      "Senza comando di velocità o retroazione esterni"
+    ],
+    "fiveWireUses": [
+      "Regolazione PWM",
+      "Senso di rotazione DIR",
+      "Retroazione FG",
+      "Integrazione con la centralina"
+    ],
+    "footer": "2 o 5 fili indicano il cablaggio e il comando. Con o senza spazzole indica il tipo di motore.",
+    "caption": "Figura 3 | Logica di controllo dei motori brushless a 2 e 5 fili. Colore e funzione dei fili seguono la specifica: VCC rosso, GND nero, PWM blu, DIR giallo e FG verde. PWM, DIR e FG sono funzioni opzionali di controllo o retroazione. Ordine esatto dei pin, parametri elettrici, logica degli ingressi e delle uscite e configurazione finale dipendono dalla specifica ufficiale e dalla conferma di progetto del modello scelto."
+  },
+  "comparison": {
+    "title": "5. Differenze principali tra motori brushless a 2 e 5 fili",
+    "headers": [
+      "Confronto",
+      "Brushless a 2 fili",
+      "Brushless a 5 fili"
+    ],
+    "rows": [
+      [
+        "Alimentazione di base",
+        "Supportata",
+        "Supportata"
+      ],
+      [
+        "Comando di avvio e arresto",
+        "Supportata",
+        "Supportata"
+      ],
+      [
+        "Regolazione PWM",
+        "In genere non richiede un comando esterno",
+        "Può essere supportato"
+      ],
+      [
+        "Retroazione della velocità",
+        "In genere non disponibile",
+        "Può supportare la retroazione FG"
+      ],
+      [
+        "Comando del senso di rotazione",
+        "In genere senza comando esterno",
+        "Può essere supportato"
+      ],
+      [
+        "Complessità del cablaggio",
+        "Bassa",
+        "Maggiore"
+      ],
+      [
+        "Requisiti delle interfacce della centralina",
+        "Bassa",
+        "Maggiore"
+      ],
+      [
+        "Impiego adatto",
+        "Funzionamento a velocità fissa",
+        "Regolazione della velocità, retroazione e automazione"
+      ]
+    ],
+    "conclusion": "Le configurazioni a 2 e 5 fili rispondono quindi a esigenze di controllo diverse. Il numero di fili non definisce la qualità delle prestazioni."
+  },
+  "selection": {
+    "title": "6. Quando usare 2 o 5 fili?",
+    "intro": "La scelta dipende direttamente dai requisiti di controllo dell’apparecchiatura.",
+    "twoWireTitle": "Scegli 2 fili",
+    "twoWireIntro": "Se la sequenza richiesta è la seguente:",
+    "twoWireLogicTitle": "Logica di comando tipica a 2 fili",
+    "twoWireLogic": "Alimentazione → completamento del trasferimento o dello scarico del liquido → arresto",
+    "twoWireClosing": "e la velocità della pompa rimane costante durante il funzionamento senza che sia necessario leggere lo stato del motore, in genere è preferibile una configurazione brushless a 2 fili.",
+    "fiveWireTitle": "Scegli 5 fili",
+    "fiveWireIntro": "Se la sequenza richiesta è la seguente:",
+    "fiveWireLogicTitle": "Logica di comando tipica a 5 fili",
+    "fiveWireLogic": "La centralina varia la velocità della pompa per fase di processo → riceve la retroazione di funzionamento → controlla la pompa con maggiore precisione",
+    "fiveWireClosing": "una configurazione brushless a 5 fili è più adatta.",
+    "decision": "Per scegliere tra 2 e 5 fili, verifica prima se la centralina dell’apparecchiatura deve partecipare alla regolazione della velocità della pompa e al monitoraggio del suo stato.",
+    "fixedSpeedCaution": "Se l’apparecchiatura richiede solo il funzionamento a velocità fissa, la scelta di 5 fili non migliora automaticamente le prestazioni e aggiunge complessità al cablaggio, all’interfaccia e al software di controllo.",
+    "futureControl": "Se invece in futuro serviranno regolazione della velocità, monitoraggio o maggiore precisione nel controllo del circuito fluidico, scegliere 5 fili fin dalla progettazione lascia maggiore flessibilità.",
+    "confusionTitle": "Due concetti da distinguere",
+    "confusionText": "Motori con o senza spazzole sono tipi di motore. Le configurazioni a 2 e 5 fili indicano invece il cablaggio e la modalità di comando. Un motore a 2 fili non è necessariamente a spazzole. Il numero di fili non rende il motore brushless."
+  },
+  "products": {
+    "title": "Quali pompe a membrana miniaturizzate FOREACH possono usare configurazioni a 2 o 5 fili?",
+    "intro": "Diverse serie di pompe a membrana miniaturizzate FOREACH possono essere configurate con il cablaggio adatto in base al modello e ai requisiti di controllo del progetto. Tra queste:",
+    "cards": [
+      {
+        "label": "Pompa a membrana miniaturizzata per liquidi",
+        "model": "DPL30",
+        "note": "Da confermare in base al modello e ai requisiti di progetto",
+        "slug": "dpl30-liquid-diaphragm-pump"
+      },
+      {
+        "label": "Pompa a membrana miniaturizzata per liquidi",
+        "model": "DPL60",
+        "note": "Da confermare in base al modello e ai requisiti di progetto",
+        "slug": "dpl60-liquid-diaphragm-pump"
+      },
+      {
+        "label": "Pompa a membrana miniaturizzata ad alta pressione",
+        "model": "DPL30H",
+        "note": "Da confermare in base al modello e ai requisiti di progetto",
+        "slug": "dpl30h-liquid-diaphragm-pump"
+      },
+      {
+        "label": "Pompa per miscele di gas e liquido",
+        "model": "DPGL800",
+        "note": "Da confermare in base al modello e ai requisiti di progetto",
+        "slug": "dpgl800-gas-liquid-diaphragm-pump"
+      }
+    ],
+    "paragraphs": [
+      "Quando scegli un modello di queste serie, verifica i requisiti di cablaggio e controllo dell’apparecchiatura insieme a portata, pressione, autoadescamento, tensione, tipo di motore e materiali bagnati.",
+      "Se basta il comando di avvio e arresto, valuta prima una configurazione a 2 fili. Se servono regolazione della velocità, retroazione o automazione più complessa, conferma una configurazione a 5 fili.",
+      "Configurazione finale, ordine esatto dei fili, interfaccia elettrica e modalità di comando dipendono dalla specifica ufficiale del modello scelto e dalla documentazione di conferma del progetto."
+    ]
+  },
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "1. Qual è la differenza principale tra una pompa a membrana brushless a 2 e una a 5 fili?",
+      "answer": "La differenza principale è nelle funzioni di controllo disponibili. Una configurazione a 2 fili fornisce soprattutto alimentazione e funzionamento di base. Oltre all’alimentazione, una configurazione a 5 fili può offrire regolazione della velocità via PWM, comando del senso di rotazione e retroazione della velocità FG."
+    },
+    {
+      "question": "2. Un motore brushless a 2 fili è in realtà un motore a spazzole?",
+      "answer": "No. La presenza o meno delle spazzole descrive il tipo di motore, mentre 2 o 5 fili indicano il cablaggio e la modalità di comando. Un motore brushless può usare configurazioni di cablaggio diverse in base al controllo previsto."
+    },
+    {
+      "question": "3. Una pompa a membrana brushless a 5 fili è sempre migliore di una a 2 fili?",
+      "answer": "No. Se l’apparecchiatura richiede solo il funzionamento a velocità fissa, in genere 2 fili semplificano il cablaggio e l’integrazione. I vantaggi di 5 fili diventano rilevanti quando servono regolazione di velocità, retroazione o integrazione con la centralina."
+    },
+    {
+      "question": "4. Quando serve la regolazione della velocità tramite PWM?",
+      "answer": "La regolazione PWM si può valutare quando fasi di lavoro diverse richiedono velocità differenti della pompa, ad esempio aspirazione rapida, scarico a bassa velocità o passaggio da una frequenza di ciclo all’altra nel circuito."
+    },
+    {
+      "question": "5. A che cosa serve la retroazione FG?",
+      "answer": "Il segnale FG fornisce in genere un riscontro sul funzionamento o sulla velocità del motore. La centralina può usarlo per stabilire se il motore è in funzione o combinarlo con il software di controllo per monitorarne lo stato."
+    },
+    {
+      "question": "6. DPL30, DPL60, DPL30H e DPGL800 possono usare configurazioni a 2 e 5 fili?",
+      "answer": "Si può scegliere il cablaggio corrispondente in funzione del modello specifico e dei requisiti di controllo. Per i progetti DPL30, DPL60, DPL30H e DPGL800, l’esigenza di 2 o 5 fili si può confermare durante la selezione. La configurazione finale e i collegamenti esatti dipendono dalla specifica applicabile del prodotto e dalla conferma di progetto."
+    }
+  ],
+  "cta": {
+    "title": "Devi confermare se servono 2 o 5 fili?",
+    "description": "Per un progetto DPL30, DPL60, DPL30H o DPGL800, indica tensione di alimentazione, portata obiettivo, pressione di esercizio e l’eventuale necessità di regolazione PWM, comando DIR o retroazione FG per confermare la configurazione adatta.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Vedi il catalogo prodotti"
+  },
+  "sourceNote": "Nota: gli schemi a 2 e 5 fili spiegano i rapporti funzionali. Per il cablaggio definitivo attieniti alla specifica ufficiale o al documento di conferma del progetto del modello selezionato. Colori, ordine dei fili, parametri degli ingressi e delle uscite e logica di controllo possono variare da un modello all’altro."
+}

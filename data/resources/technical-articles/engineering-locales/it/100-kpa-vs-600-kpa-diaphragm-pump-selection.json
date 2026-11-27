@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "title": "100 kPa bastano? Come capire se il circuito richiede una pompa a membrana miniaturizzata ad alta pressione da 600 kPa",
+    "seoTitle": "Pompe a membrana da 100 e 600 kPa: scelta in base al bilancio delle pressioni | Foreach Technology",
+    "seoDescription": "Per capire se 100 kPa bastano, considerare la portata obiettivo, le tubazioni, le valvole, il filtro, l’ago, la pressione nel punto di utilizzo e la curva della pompa. Questi dati permettono di stabilire se serve una pompa a membrana miniaturizzata ad alta pressione da 600 kPa.",
+    "coverImage": "/images/resources/technical-articles/100-kpa-vs-600-kpa-diaphragm-pump-selection/article-cover.webp",
+    "coverAlt": "Riprese di prove di pressione di una pompa a membrana miniaturizzata e del circuito fluidico dal canale Douyin ufficiale di Foreach"
+  },
+  "deck": "100 kPa e 600 kPa identificano due classi di pressione, ciascuna adatta a condizioni diverse. Compilare prima il bilancio delle pressioni dell’intero circuito alla portata obiettivo e consultare poi la curva della pompa candidata. Una pressione nominale più alta è utile solo quando l’applicazione presenta effettivamente una contropressione elevata.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Il tipo di applicazione, per esempio risciacquo, campionamento o erogazione tramite ago, non basta a determinare la classe di pressione della pompa. La stessa applicazione può richiedere condizioni di esercizio molto diverse a seconda di portata, diametro interno dei tubi, stato del filtro, dimensioni dell’ago o pressione della camera nel punto di utilizzo."
+    },
+    {
+      "type": "paragraph",
+      "text": "Per la selezione, partire dalla portata obiettivo Qtarget e dal differenziale di pressione più gravoso che può essere mantenuto in regime stazionario tra ingresso e uscita a quella portata. Valutare separatamente i transitori di avvio e commutazione delle valvole per definire i limiti di protezione, senza inglobarli in un valore generico di contropressione del sistema."
+    },
+    {
+      "type": "notice",
+      "label": "Conclusione tecnica:",
+      "text": "Prima calcolare o misurare la pressione richiesta dal circuito alla portata obiettivo, quindi leggere la portata corrispondente sulla curva della pompa. La pressione nominale indica un limite. Per conoscere la portata a tale pressione serve la curva della pompa."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Definire la portata obiettivo prima di scegliere la classe di pressione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La perdita di carico del circuito cambia con la portata. Lo stesso tubo richiede pressioni diverse a 100 mL/min e 300 mL/min, e nello stesso ago la perdita di carico cambia al variare della viscosità. Dire che l’apparecchiatura richiede «circa 100 kPa» fornisce quindi un criterio di selezione incompleto se manca la portata corrispondente."
+        },
+        {
+          "type": "formula",
+          "expression": "ΔPrequired(Qtarget) = Poutlet(Qtarget) − Pinlet(Qtarget)",
+          "note": "Il bilancio delle pressioni deve riferirsi alla portata obiettivo. Registrare separatamente la pressione nella condizione stazionaria peggiore e i limiti transitori, per esempio all’avvio, durante la commutazione delle valvole o in caso di ostruzione."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/100-kpa-vs-600-kpa-diaphragm-pump-selection/article-figure-it.svg",
+          "alt": "Procedura di scelta della classe di pressione: definire la portata obiettivo, elencare le perdite del circuito e leggere la curva della pompa",
+          "width": 2560,
+          "height": 2160,
+          "caption": "Figura 6. Per stabilire se 100 kPa bastano, partire dalla pressione totale richiesta alla portata obiettivo."
+        }
+      ]
+    },
+    {
+      "title": "2. Elencare tutti i fattori che concorrono alla pressione richiesta",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Voce del bilancio",
+            "Fonti tipiche",
+            "Motivo per includerla"
+          ],
+          "rows": [
+            [
+              "Perdita in aspirazione",
+              "Tubo di aspirazione, valvola di ingresso, filtro e basso livello del liquido",
+              "Influisce sulla pressione assoluta in ingresso e sul riempimento della camera della pompa"
+            ],
+            [
+              "Perdita distribuita nei tubi di mandata",
+              "Tubi stretti, tubi lunghi e viscosità più elevata",
+              "Aumenta al crescere della portata obiettivo"
+            ],
+            [
+              "Perdita localizzata",
+              "Raccordi, gomiti, valvole e celle a flusso",
+              "Un passaggio interno può essere il punto più stretto"
+            ],
+            [
+              "Perdita di carico nel filtro",
+              "Dall’elemento nuovo a quello a fine vita",
+              "Può aumentare notevolmente durante il funzionamento prolungato"
+            ],
+            [
+              "Resistenza nel punto di utilizzo",
+              "Ago, ugello e camera in pressione positiva",
+              "Diventa spesso la causa principale della contropressione elevata"
+            ],
+            [
+              "Pressione statica e transitori",
+              "Dislivello, commutazione delle valvole, ostruzione, avvio e arresto",
+              "Inserire la pressione statica nel bilancio in regime stazionario e valutare i transitori per definire i limiti di protezione"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Quali circuiti richiedono di norma una pressione inferiore?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tubi corti, diametro interno maggiore, poche valvole, uscita aperta, liquido a bassa viscosità, assenza di un filtro ad alta resistenza o di un ago sottile e assenza di una depressione significativa in aspirazione dovuta al livello del serbatoio indicano in genere un fabbisogno di pressione più basso. Servono comunque calcoli e prove."
+        },
+        {
+          "type": "paragraph",
+          "text": "La pressione nominale pubblicata delle pompe a membrana standard per liquidi Foreach DPL30 e DPL60 è 100 kPa per entrambe. Le rispettive classi di portata a vuoto sono 300 mL/min e 600 mL/min. L’idoneità dipende dalla posizione del punto di lavoro sulla curva controllata e dal rispetto delle condizioni ammesse. Il settore di applicazione da solo è insufficiente."
+        }
+      ]
+    },
+    {
+      "title": "4. Quali configurazioni portano più spesso a una contropressione elevata?",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Aghi sottili, capillari, microugelli o celle a flusso strette.",
+            "Tratti lunghi di tubo rigido con diametro interno piccolo o più riduzioni brusche di sezione.",
+            "Filtri di alta precisione, soprattutto quando la perdita di carico cresce in prossimità della fine vita.",
+            "Mandata di liquido verso una camera già in pressione positiva.",
+            "Risciacquo rapido o getti ad alta velocità da completare in poco tempo.",
+            "Più valvole, raccordi e sensori in serie, con perdite localizzate che si sommano."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Per la pompa a membrana ad alta pressione per liquidi Foreach DPL30H, la portata a vuoto pubblicata è 300 mL/min e la pressione nominale è 600 kPa. I valori di 300 mL/min e 600 kPa si riferiscono a punti di lavoro diversi. Per conoscere la portata disponibile a contropressione elevata, consultare una revisione valida della curva portata-pressione."
+        }
+      ]
+    },
+    {
+      "title": "5. Tre condizioni illustrative: perché la stima della pressione totale non basta",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Condizione illustrativa, senza riferimento a un caso cliente",
+            "Portata obiettivo",
+            "Pressione richiesta nella condizione stazionaria peggiore",
+            "Valutazione preliminare"
+          ],
+          "rows": [
+            [
+              "Tubi corti, uscita aperta e poche valvole",
+              "180 mL/min",
+              "Circa 40 kPa",
+              "Una pompa di classe di pressione inferiore può avere margine. Verificarlo sulla curva"
+            ],
+            [
+              "Ago sottile, filtro e camera in pressione positiva",
+              "250 mL/min",
+              "Circa 95 kPa",
+              "Vicino al limite di 100 kPa. Verificare altri dati oltre alla pressione nominale"
+            ],
+            [
+              "Ago sottile, tubi lunghi e punto di utilizzo ad alta pressione",
+              "220 mL/min",
+              "Circa 180 kPa",
+              "In genere una pompa standard da 100 kPa non va inserita direttamente tra le opzioni da valutare"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Il valore di 95 kPa nell’esempio non garantisce che una pompa da 100 kPa funzioni. Se 100 kPa è la pressione nominale della pompa candidata, il punto di lavoro è già vicino al limite. Verificare anche portata in quel punto, carico del filtro, temperatura del liquido, variazione tra i campioni e margine di progetto. Esaminare a parte i picchi all’avvio o durante la commutazione delle valvole per definire le protezioni."
+        }
+      ]
+    },
+    {
+      "title": "6. Quando scegliere una pompa ad alta pressione invece di una a pressione inferiore",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se il circuito non richiede una contropressione elevata, passare direttamente a una pompa da 600 kPa può introdurre vincoli su connessioni, materiali e temperature, alimentazione, controllo, spazio di installazione e costo. I dati pubblicati da Foreach indicano, per esempio, per DPL30 un’altezza di autoadescamento di 6 mH₂O e una temperatura massima del liquido di +80°C. Per DPL30H riportano un’altezza di autoadescamento di 3 mH₂O, una temperatura massima del liquido di +40°C e una connessione a compressione per tubo rigido da 6 × 4 mm."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una pompa ad alta pressione impone limiti di sistema diversi, adatti ai circuiti ad alta resistenza. È una scelta efficace quando è compatibile con il punto di lavoro obiettivo, il liquido, le condizioni di ingresso e il ciclo di lavoro."
+        }
+      ]
+    },
+    {
+      "title": "7. Quattro condizioni per l’approvazione finale",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "La pressione richiesta alla portata obiettivo è stata calcolata o misurata in regime stazionario nelle condizioni normali e in quelle peggiori.",
+            "La curva controllata della pompa mostra che la portata obiettivo viene raggiunta anche nella condizione stazionaria peggiore, con i margini di pressione e portata previsti dal progetto.",
+            "La pressione di esercizio ammessa è stata verificata per tubi, raccordi, valvole, filtri, sensori e camere. La valutazione distingue la pressione di esercizio ammessa dalla pressione di prova o di collaudo.",
+            "L’apparecchiatura completa ha superato le prove di avvio, regime stazionario, commutazione delle valvole, protezione contro l’ostruzione, tenuta e funzionamento prolungato."
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limite del sistema:",
+          "text": "Il valore più basso di pressione di esercizio ammessa tra tutti i componenti soggetti a pressione determina la pressione ammessa per l’intero circuito. Per tubi, raccordi, valvole, elementi filtranti, sensori e camere verificare i rispettivi limiti di pressione. La pressione nominale della pompa attesta il limite della sola pompa."
+        }
+      ]
+    },
+    {
+      "title": "Risorse Foreach e limiti di validità",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Per valutare un prodotto della classe 600 kPa, consultare la ",
+              "label": "serie DPL30H di pompe a membrana ad alta pressione per liquidi",
+              "href": "/products/pumps/miniature-diaphragm-pumps/dpl30h-liquid-diaphragm-pump",
+              "suffix": " e verificare che fornisca la portata richiesta alla pressione di lavoro calcolata."
+            },
+            {
+              "label": "Foreach: guida alla scelta della pompa a membrana ad alta pressione per liquidi DPL30H",
+              "href": "/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide"
+            },
+            {
+              "label": "Foreach: guida alla scelta della pompa a membrana per liquidi DPL30",
+              "href": "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide"
+            },
+            {
+              "label": "Foreach: guida alla scelta della pompa a membrana per liquidi DPL60",
+              "href": "/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide"
+            }
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Limiti di validità:",
+          "text": "Le risorse, le formule e gli esempi Foreach servono per una valutazione tecnica preliminare. Per la scelta definitiva occorrono specifica controllata, curve complete, prove con il liquido effettivo e validazione del prototipo di sistema completo."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulla scelta tra pompe a membrana miniaturizzate da 100 kPa e da 600 kPa",
+  "faqItems": [
+    {
+      "question": "Se la contropressione stimata nel sistema è 80 kPa, basta una pompa da 100 kPa?",
+      "answer": "Occorrono altri dati oltre ai due valori di pressione. Confermare la portata obiettivo corrispondente a 80 kPa e verificare se si tratta della condizione stazionaria peggiore. Leggere quindi sulla curva controllata della pompa la portata e il margine in quel punto."
+    },
+    {
+      "question": "Una pompa da 600 kPa risolve qualsiasi problema di portata insufficiente?",
+      "answer": "Con infiltrazioni d’aria in aspirazione, guasti alle valvole, alimentazione elettrica insufficiente, viscosità del liquido o riempimento insufficiente all’ingresso, una pompa a pressione più alta può lasciare irrisolto il problema e introdurre nuovi vincoli nel sistema."
+    },
+    {
+      "question": "Un ago sottile richiede sempre 600 kPa?",
+      "answer": "La pressione richiesta dipende dal diametro interno e dalla lunghezza effettiva dell’ago, dalla portata obiettivo, dalla viscosità del liquido e dalla pressione nel punto di utilizzo. Usare i dati di perdita di carico del fornitore, calcoli o misure."
+    },
+    {
+      "question": "Perché a 100 kPa una pompa da 100 kPa non mantiene la portata a vuoto?",
+      "answer": "La portata a vuoto e la pressione nominale descrivono in genere condizioni prestazionali diverse. Di norma la portata diminuisce al crescere del differenziale di pressione della pompa. Leggere quindi sulla curva la portata corrispondente alla pressione obiettivo."
+    },
+    {
+      "question": "Perché occorre verificare la pressione di esercizio ammessa più bassa nel circuito completo?",
+      "answer": "Il componente con la pressione di esercizio ammessa più bassa definisce il limite dell’intero sistema. La pressione di prova o di collaudo ha una funzione diversa. Usare la pressione di esercizio ammessa per valutare tubi, raccordi, valvole, elementi filtranti e camere."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi capire se il tuo circuito richiede una pompa da 100 kPa o da 600 kPa?",
+    "description": "Indica liquido, portata obiettivo, condizioni di ingresso, tubi, valvole, filtro, ago, pressione nel punto di utilizzo e ciclo di lavoro. Un tecnico potrà aiutarti a verificare il bilancio delle pressioni e la curva della pompa candidata.",
+    "contactLabel": "Invia le condizioni di esercizio",
+    "productsLabel": "Vedi le pompe a membrana"
+  }
+}

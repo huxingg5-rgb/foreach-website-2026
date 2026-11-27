@@ -88,6 +88,7 @@ export interface MaterialCompatibilitySearchCopy {
 ========================================================= */
 export interface CompatibilityRow {
   name: string;
+  searchAliases?: string[];
   values: Record<MaterialKey, string>;
 }
 
@@ -197,4 +198,4 @@ export interface MaterialCompatibilityPageData {
   certificationColumns: string[];
   certificationRows: CertificationRow[];
   ui?: MaterialCompatibilityUiCopy;
-} 
+}

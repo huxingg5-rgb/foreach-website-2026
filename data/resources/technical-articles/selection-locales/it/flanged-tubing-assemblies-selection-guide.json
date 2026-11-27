@@ -1,0 +1,609 @@
+{
+  "kind": "selection",
+  "copy": {
+    "metadata": {
+      "title": "Come scegliere gli assemblaggi di tubi flangiati: tenuta, compatibilità con le porte e validazione a montaggio avvenuto",
+      "seoTitle": "Assemblaggi di tubi flangiati: scelta e compatibilità con le porte | FOREACH",
+      "seoDescription": "Confronta i raccordi a fondo piatto HF, HF6, HFL e HFL6: materiali, misure dei tubi, quote e gioco della punta. Verifica le porte M6×1 e 1/4-28 UNF e definisci la validazione dell’assemblaggio.",
+      "coverImage": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-photo.png",
+      "coverAlt": "Assemblaggi FOREACH di tubi flangiati con raccordi diversi ed estremità del tubo formate"
+    },
+    "deck": "Scegli insieme materiale, diametro interno ed esterno del tubo, raccordi su entrambe le estremità, rondelle di appoggio, geometria delle porte e quote di montaggio. Verifica che la flangia sia compressa correttamente contro la porta a fondo piatto. Specifica poi fermi, etichette e prove da eseguire sull’assemblaggio montato.",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "Negli strumenti analitici e nei circuiti fluidici automatizzati, gli assemblaggi di tubi che collegano pompe, valvole e moduli fluidici devono soddisfare requisiti di tenuta, posa e sostituzione oltre a trasportare il fluido. Realizzare il collegamento è solo una parte del lavoro. Flangia del tubo, rondella di appoggio e porta di alloggiamento determinano se la compressione agisce sulla superficie di tenuta prevista."
+      },
+      {
+        "type": "paragraph",
+        "text": "Per interfacce flangiate esistenti, verifica prima i disegni dell’assemblaggio originale e delle porte. Per un nuovo circuito fluidico OEM, definisci la configurazione in funzione della posa, della distanza tra le porte e della manutenzione. Le sezioni seguenti descrivono struttura dell’assemblaggio, materiali e quote, scelta dei raccordi e verifiche di montaggio."
+      },
+      {
+        "type": "figure",
+        "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-photo.png",
+        "alt": "Assemblaggi di tubi flangiati FOREACH e collegamenti terminali",
+        "width": 2760,
+        "height": 1217,
+        "caption": "Assemblaggi di tubi flangiati. Scegli raccordi, tubi e configurazioni terminali in funzione del circuito fluidico effettivo e delle interfacce dell’apparecchiatura."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Da che cosa è formato un assemblaggio di tubi flangiati e come realizza la tenuta?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "L’estremità preformata del tubo ha una flangia rivolta verso l’esterno. Durante il montaggio, il raccordo filettato applica una forza assiale tramite una rondella di appoggio compatibile, sostenendo e comprimendo la flangia contro la superficie di tenuta di una porta a fondo piatto compatibile. Controlla separatamente l’impegno dei filetti e la tenuta frontale. Un raccordo che si avvita nella porta non assicura necessariamente che la flangia appoggi sul fondo."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/flanged-sealing-structure-it.svg",
+            "alt": "Posizione del raccordo standard per porta a fondo piatto, della rondella di appoggio e della flangia del tubo",
+            "width": 2064,
+            "height": 996,
+            "caption": "Montaggio del raccordo standard HF per porta a fondo piatto. La rondella si trova tra la punta del raccordo e la flangia del tubo. La lunghezza totale di 20.5 mm, il diametro della testa di 8.2 mm e il gioco della punta di 2 mm illustrati valgono per HF. Vedi sotto il confronto tra le quattro serie."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per gli assemblaggi di tubi flangiati sono disponibili i raccordi a fondo piatto HF, HF6, HFL e HFL6. HF e HFL hanno teste standard. HF6 e HFL6 sono compatti. Tutti impiegano rondelle compatibili per comprimere la flangia del tubo, ma si distinguono per dimensioni della testa, lunghezza totale, fori e geometria della punta. Scegli una serie e un modello precisi. Un unico insieme di quote non rappresenta tutti i raccordi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Un’unità completa premontata può includere anche fermi ed etichette dei tubi. Identifica la funzione di ogni parte prima di stabilire quali opzioni inserire nel disegno di fornitura."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Componente",
+              "Funzione principale",
+              "Che cosa confermare"
+            ],
+            "rows": [
+              [
+                "Tubo e flangia formata",
+                "Trasporta il fluido. L’estremità formata del tubo realizza la tenuta frontale",
+                "Materiale, diametri interno ed esterno, lunghezza, flangiatura a una o entrambe le estremità e quote dopo la formatura"
+              ],
+              [
+                "Raccordo filettato",
+                "Si avvita nella porta e applica la compressione assiale",
+                "Serie, materiale, filettatura, foro passante e spazio di montaggio"
+              ],
+              [
+                "Rondella di appoggio",
+                "Sostiene la flangia e trasmette il carico di compressione",
+                "Materiale, diametri interno ed esterno, spessore e compatibilità con il raccordo"
+              ],
+              [
+                "O-ring o boccola di arresto",
+                "Limita il movimento del raccordo lungo il tubo",
+                "Necessità, posizione e corsa ammessa"
+              ],
+              [
+                "Etichetta del tubo",
+                "Identifica il circuito fluidico, la porta o la posizione di montaggio",
+                "Contenuto, orientamento, posizione e corrispondenza tra le estremità"
+              ]
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/assembly-components-it.svg",
+            "alt": "Assemblaggio a due estremità con raccordi, rondelle, fermi, tubo ed etichette opzionali",
+            "width": 3012,
+            "height": 1280,
+            "caption": "Esempio di configurazione a due estremità. Controlla separatamente misure dei tubi e opzioni dei componenti per ogni interfaccia. Le opzioni hanno limiti di combinabilità."
+          },
+          {
+            "type": "paragraph",
+            "text": "L’O-ring o la boccola di arresto dietro il raccordo ne limita lo scorrimento. Non realizza la tenuta della porta di alloggiamento. Se le interfacce terminali sono diverse, conferma separatamente i raccordi e le rondelle, senza presumere che la configurazione sia identica sulle due estremità."
+          }
+        ]
+      },
+      {
+        "title": "Come specificare materiale del tubo, materiale del raccordo e misura del tubo?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Parti dal tipo di fluido, dalla concentrazione, dalla temperatura di esercizio, dal tempo di contatto e dalla procedura di pulizia. Gli assemblaggi flangiati FOREACH offrono tubi in FEP e PTFE. I corpi dei raccordi e le rondelle hanno proprie gamme di materiali e misure. Il materiale del corpo non identifica tutti i materiali bagnati nell’assemblaggio. Determina le superfici effettivamente a contatto con il fluido esaminando la struttura."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Parte",
+              "Configurazioni elencate",
+              "Limiti da considerare"
+            ],
+            "rows": [
+              [
+                "Tubo",
+                "FEP, PTFE",
+                "Conferma separatamente la compatibilità chimica e l’idoneità al processo di flangiatura"
+              ],
+              [
+                "Corpo del raccordo HF / HF6",
+                "PEEK, PVDF, PPS",
+                "Controlla per il modello specifico la combinazione tra materiale, filettatura e diametro esterno del tubo"
+              ],
+              [
+                "Corpo del raccordo HFL",
+                "PVDF",
+                "Scegli la configurazione specifica di filettatura, diametro esterno del tubo e colore"
+              ],
+              [
+                "Corpo del raccordo HFL6",
+                "Le versioni M6×1 e 1/4-28 UNF elencate sono in PPS. La versione piccola 6-40 UNF elencata è in PEEK",
+                "Non applicare le specifiche del materiale a filettature e misure diverse"
+              ],
+              [
+                "Rondella di appoggio compatibile",
+                "Acciaio inossidabile SUS, PEEK o PTFE a seconda della misura",
+                "Controlla diametro interno, diametro esterno e spessore. I materiali disponibili variano con la misura"
+              ]
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/fitting-materials.png",
+            "alt": "Esempi di corpi di raccordi a fondo piatto in PEEK, PVDF e PPS",
+            "width": 1856,
+            "height": 837,
+            "caption": "Esempi di materiali del corpo. Il colore descrive l’aspetto. Conferma il materiale dal modello e dalla documentazione di fornitura. Un materiale può essere disponibile in colori diversi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Specifica separatamente il diametro interno del tubo, il diametro esterno del tubo e il foro passante del raccordo. Diametro interno e lunghezza influiscono sulla resistenza al flusso e sul volume interno. Il diametro esterno determina la compatibilità con raccordo, rondella e attrezzo di formatura. Il foro del raccordo deve lasciare il gioco adatto al diametro esterno del tubo scelto. Chiamare tutte e tre le quote «diametro del tubo» crea ambiguità."
+          },
+          {
+            "type": "paragraph",
+            "text": "La documentazione attuale degli assemblaggi elenca diametri esterni del tubo di 1.6, 2.0, 2.5, 3.0 e 3.2 mm. Specifica diametro interno ed esterno come coppia. Ad esempio, 0.8 × 1.6 mm nello schema della configurazione significa diametro interno × diametro esterno. Non indica due diametri esterni compatibili. Abbina la coppia al materiale scelto e ai requisiti di formatura."
+          },
+          {
+            "type": "paragraph",
+            "text": "La sola resistenza chimica non rende ogni spessore della parete adatto allo stesso processo di flangiatura. Conferma attrezzi, materiale e intervallo dei diametri interno ed esterno prima della formatura. Verifica poi l’integrità dell’estremità e il passaggio del fluido. Definisci nel disegno il riferimento della lunghezza, ad esempio la distanza tra superfici di tenuta, per distinguere la lunghezza di taglio da quella dell’assemblaggio finito."
+          }
+        ]
+      },
+      {
+        "title": "Come si confrontano i raccordi a fondo piatto HF, HF6, HFL e HFL6?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Tutte e quattro le serie offrono configurazioni M6×1 e 1/4-28 UNF. Controlla prima filettatura, diametro esterno del tubo e materiale. Confronta poi diametro della testa, lunghezza assiale e geometria della punta. Le quote sottostanti, in mm, seguono i disegni delle serie collegati sul sito. Escludono flangia del tubo e rondella e non indicano la sporgenza dopo il montaggio."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hf-dimensions-it.svg",
+            "alt": "Disegno in sezione HF per tubi con diametro esterno di 1.6–2.0 mm: testa di diametro 8.2 mm e lunghezza totale di 20.5 mm",
+            "width": 858,
+            "height": 1152,
+            "caption": "Raccordo standard HF per porta a fondo piatto. A sinistra viste in PEEK naturale e PPS nero. A destra sezione per tubi con diametro esterno di 1.6–2.0 mm. Quote in mm.",
+            "productViews": [
+              {
+                "src": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-pk-n-main.jpg",
+                "alt": "Raccordo standard HF per porta a fondo piatto in PEEK naturale"
+              },
+              {
+                "src": "/images/products/fittings/hard-tube-fittings/standard-flat-bottom-fitting/hf-m6-20-ps-b-main.jpg",
+                "alt": "Raccordo standard HF per porta a fondo piatto in PPS nero"
+              }
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hf6-dimensions-it.svg",
+            "alt": "Disegno in sezione HF6 per tubi con diametro esterno di 1.6–2.0 mm: testa di diametro 6.4 mm e lunghezza totale di 17.6 mm",
+            "width": 928,
+            "height": 1152,
+            "caption": "Raccordo compatto HF6 per porta a fondo piatto. A sinistra viste in PEEK naturale e PPS nero. A destra sezione per tubi con diametro esterno di 1.6–2.0 mm. Quote in mm.",
+            "productViews": [
+              {
+                "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-pk-n-main.jpg",
+                "alt": "Raccordo compatto HF6 per porta a fondo piatto in PEEK naturale"
+              },
+              {
+                "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hf6-m6-20-ps-b-main.jpg",
+                "alt": "Raccordo compatto HF6 per porta a fondo piatto in PPS nero"
+              }
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hfl-appearance-dimensions.png",
+            "alt": "Raccordo HFL nero e naturale, con sezione: diametro della testa di 10 mm e lunghezza totale di 16.5 mm",
+            "width": 2374,
+            "height": 1429,
+            "caption": "Raccordo standard HFL per porta a fondo piatto, viste in nero e in naturale con disegno in sezione. Diametro della testa 10 mm, lunghezza totale 16.5 mm. Il diametro della punta illustrato di 4.7 mm vale per M6. Quote in mm."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/hfl6-m6-dimensions.png",
+            "alt": "Sezione del raccordo compatto HFL6-M6-16: diametro della testa di 6 mm e lunghezza totale di 20 mm",
+            "width": 566,
+            "height": 1041,
+            "caption": "Raccordo compatto HFL6 per porta a fondo piatto. Vista in PPS nero e disegno per M6 con diametro esterno del tubo di 1.6 mm. Diametro della testa 6 mm, lunghezza totale 20 mm. Quote in mm.",
+            "productViews": [
+              {
+                "src": "/images/products/fittings/hard-tube-fittings/compact-flat-bottom-fitting/hfl6-m6-16-ps-b-main.jpg",
+                "alt": "Raccordo compatto HFL6-M6-16 per porta a fondo piatto in PPS nero",
+                "reverse": true
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Serie",
+              "Diametro esterno della testa / lunghezza totale",
+              "Diametro esterno del tubo",
+              "Materiale del corpo"
+            ],
+            "rows": [
+              [
+                "HF standard per fondo piatto",
+                "8.2 / 20.5",
+                "1.6–2.0, 2.5, 3.0–3.2. Tre fasce dimensionali",
+                "PEEK, PVDF, PPS"
+              ],
+              [
+                "HF6 compatto per fondo piatto",
+                "6.4 / 17.6",
+                "1.6–2.0, 2.5, 3.0–3.2. Tre fasce dimensionali",
+                "PEEK, PVDF, PPS"
+              ],
+              [
+                "HFL standard per fondo piatto",
+                "10 / 16.5",
+                "1.6, 2.0, 2.5, 3.0, 3.2. Scegli ciascun diametro esterno separatamente",
+                "PVDF"
+              ],
+              [
+                "HFL6 compatto per fondo piatto",
+                "6 / 20",
+                "1.6, 2.0, 2.5, 3.0, 3.2. Scegli ciascun diametro esterno separatamente",
+                "PPS. La riga riguarda le versioni M6 e U28"
+              ]
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "HF: testa standard e tre fasce di diametro esterno del tubo"
+          },
+          {
+            "type": "paragraph",
+            "text": "HF ha una testa di diametro 8.2 mm, una lunghezza totale di 20.5 mm e una punta non filettata di 2 mm. Le tre fasce di diametro esterno del tubo, 1.6–2.0, 2.5 e 3.0–3.2 mm, hanno fori a disegno rispettivamente di 2.2, 2.7 e 3.4 mm. Scegli PEEK, PVDF o PPS in base al modello. Controlla lo spazio per ruotare la testa e far uscire il tubo dietro di essa."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Disegno: ",
+                "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf-standard-flat-bottom.pdf",
+                "label": "Quote del raccordo HF per fondo piatto (M6 / 1/4-28 UNF)"
+              }
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "HF6: variante compatta più stretta e più corta di HF"
+          },
+          {
+            "type": "paragraph",
+            "text": "HF6 ha una testa di diametro 6.4 mm e una lunghezza totale di 17.6 mm, rispettivamente 1.8 mm e 2.9 mm in meno rispetto a HF. Le fasce di misura del tubo, i materiali del corpo e il gioco della punta di 2 mm coincidono con quelli delle configurazioni HF corrispondenti. Valuta HF6 per porte ravvicinate o spazio assiale limitato, poi controlla la distanza effettiva e l’accesso per serraggio e rimozione. Le dimensioni compatte non implicano una pressione nominale maggiore."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Disegno: ",
+                "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hf6-compact-flat-bottom.pdf",
+                "label": "Quote del raccordo HF6 per fondo piatto (M6 / 1/4-28 UNF)"
+              }
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "HFL: corpo più corto con testa più larga"
+          },
+          {
+            "type": "paragraph",
+            "text": "HFL ha una testa di diametro 10 mm, una lunghezza totale di 16.5 mm e un gioco della punta di 1 mm. È più corto in direzione assiale di HF ma ha una testa più larga. Verifica separatamente lo spazio assiale e quello radiale vicino a involucri o porte ravvicinate. I disegni del sito elencano versioni in PVDF naturale e nero per ciascun diametro esterno del tubo di 1.6, 2.0, 2.5, 3.0 e 3.2 mm. Non applicare le tre fasce dimensionali di HF."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Disegni: ",
+                "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-m6.pdf",
+                "label": "Quote HFL-M6"
+              },
+              {
+                "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl-u28.pdf",
+                "label": "Quote HFL-U28"
+              }
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "HFL6: corpo sottile, con verifica dello spazio radiale e assiale"
+          },
+          {
+            "type": "paragraph",
+            "text": "I disegni HFL6 M6 e U28 specificano un diametro della testa di 6 mm, una lunghezza totale di 20 mm e un corpo in PPS. È più stretto degli altri tre, ma più lungo di HF6 e HFL. «Compatto» non significa più piccolo in ogni direzione. Questi disegni non indicano una punta non filettata di 2 mm come per HF/HF6. Controlla la compatibilità della porta in base alla geometria specifica di HFL6."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per i diametri esterni del tubo di 1.6, 2.0, 2.5, 3.0 e 3.2 mm di HFL6, i fori nominali a disegno sono rispettivamente di 1.8, 2.2, 2.7, 3.2 e 3.4 mm. Il modello più piccolo HFL6-U40-16-PK-N usa filettatura 6-40 UNF e corpo in PEEK per un tubo di diametro esterno 1.6 mm. Conferma separatamente le quote di montaggio. Le dimensioni M6/U28 in tabella non si applicano a questo modello."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Disegni: ",
+                "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-m6.pdf",
+                "label": "Quote HFL6-M6"
+              },
+              {
+                "href": "/assets/products/fittings/hard-tube-fittings/2d-drawings/hfl6-u28.pdf",
+                "label": "Quote HFL6-U28"
+              }
+            ]
+          },
+          {
+            "type": "subheading",
+            "title": "Traduci la scelta del raccordo in una specifica dell’assemblaggio"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Prima di scegliere la serie verifica la specifica completa della filettatura della porta e la geometria di tenuta a fondo piatto. I modelli M6 e U28 non sono intercambiabili.",
+              "Scegli in base al diametro esterno effettivo del tubo e controlla quota e tolleranza del foro. Il foro del raccordo lascia passare il tubo. È distinto dal diametro interno del tubo e dal diametro del passaggio del fluido nell’assemblaggio.",
+              "Controlla le interferenze tra raccordi adiacenti con il diametro esterno della testa. Per lo spazio assiale considera lunghezza totale, profondità di montaggio e direzione d’uscita del tubo, lasciando spazio per operare.",
+              "Abbina materiale, diametri interno ed esterno e spessore della rondella a raccordo, tubo e porta. Verifica dove la flangia viene sostenuta e compressa."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "I filtri del sito per i raccordi con ogiva standard e compatti riguardano altre strutture di collegamento. Le quattro serie a fondo piatto qui trattate sono HF, HF6, HFL e HFL6. Le quattro categorie dei filtri non rappresentano quattro opzioni di assemblaggio flangiato. Quando sostituisci un assemblaggio, controlla insieme il prefisso della serie, la revisione del disegno e la geometria della porta."
+          }
+        ]
+      },
+      {
+        "title": "Perché un assemblaggio può perdere anche se il raccordo si avvita nella porta?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Controlla prima la specifica completa della filettatura. M6×1 e 1/4-28 UNF sono diverse. Un aspetto simile o qualche giro di presa non dimostrano la compatibilità. Controlla poi forma, profondità e condizioni del fondo della porta per confermare che offra il contatto di tenuta previsto."
+          },
+          {
+            "type": "paragraph",
+            "text": "Per i collegamenti flangiati a fondo piatto illustrati, la porta deve avere una superficie di tenuta conforme al disegno. Un fondo conico incompatibile può impedire l’appoggio e causare perdite o ristagni locali. Geometria della punta del raccordo, spessore della rondella e quote della flangia determinano insieme la posizione di montaggio. Controlla che non ci siano interferenze prima che si raggiunga la compressione efficace."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/fitting-front-clearance-it.svg",
+            "alt": "Gioco di 2 mm della punta non filettata del raccordo illustrato",
+            "width": 1348,
+            "height": 466,
+            "caption": "Il gioco della punta di HF/HF6 è di 2 mm e quello di HFL di 1 mm. I disegni HFL6 M6/U28 non indicano la stessa caratteristica. Queste quote del raccordo non vanno usate come quote di lavorazione della filettatura interna della porta."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Punto da controllare",
+              "Quota illustrata o requisito di accoppiamento",
+              "Interpretazione per il montaggio"
+            ],
+            "rows": [
+              [
+                "Punta del raccordo",
+                "HF/HF6: 2 mm. HFL: 1 mm. Nei disegni HFL6 M6/U28 non è indicata una caratteristica equivalente",
+                "Controlla ogni serie per conto proprio. Il valore di 2 mm non vale per tutte"
+              ],
+              [
+                "Diametro della punta",
+                "HF/HF6/HFL: 4.7 mm nei disegni M6 e 5.1 mm nei disegni U28",
+                "È una quota della geometria della punta, distinta dal diametro nominale della filettatura e dal diametro esterno del tubo. Non vale per HFL6"
+              ],
+              [
+                "Interno della porta di alloggiamento",
+                "Le istruzioni di lavorazione della porta per questo tipo di assemblaggio specificano un’altezza dello scarico della filettatura interna ≤1 mm",
+                "Specifica e controlla questa quota separatamente dalle dimensioni della punta del raccordo"
+              ],
+              [
+                "Fondo della porta",
+                "Superficie di tenuta piatta, non conica, conforme al disegno di accoppiamento",
+                "Controlla geometria, contaminazione, graffi ed effettivo contatto di tenuta"
+              ],
+              [
+                "Rondella e flangia",
+                "Abbina le quote al raccordo, al tubo e alla porta",
+                "Conferma sequenza di montaggio, integrità delle parti e posizione della compressione"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Questi requisiti di gioco appartengono al progetto dell’assemblaggio e della porta corrispondenti. Non sono uno standard di lavorazione universale per tutti i raccordi flangiati. Per un collegamento a un corpo valvola o modulo fluidico esistente, fornisci il disegno in sezione della porta, oltre alla designazione della filettatura."
+          }
+        ]
+      },
+      {
+        "title": "Come distinguere i difetti dei componenti dai problemi di montaggio?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Controlla interfacce e componenti prima di regolare l’assemblaggio. Aumentare ripetutamente il serraggio può deformare in modo permanente una flangia in plastica e nascondere un’incompatibilità con la porta. Segui il metodo di montaggio e i requisiti di coppia per raccordo, tubo e assemblaggio specifici. Evita di usare un unico valore per tutti i modelli."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/flanged-tubing-assemblies-selection-guide/flanged-end-detail.png",
+            "alt": "Primo piano di due estremità dell’assemblaggio con punte dei raccordi, rondelle e flange",
+            "width": 1745,
+            "height": 897,
+            "caption": "Controlla come si accoppiano flangia, rondella e punta del raccordo. La foto illustra la struttura. La tenuta va comunque verificata nelle condizioni specificate."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Controlla modello del raccordo, diametro esterno del tubo, specifica della rondella e disegno della porta per escludere lo scambio di componenti.",
+              "Ispeziona la flangia per verificare inclinazione, crepe o deformazioni. Controlla se formatura o compressione hanno influito sul passaggio del fluido.",
+              "Controlla se le rondelle sono mancanti, errate o danneggiate e se la superficie di tenuta della porta presenta graffi o corpi estranei.",
+              "Monta secondo il metodo specificato. Verifica se il tubo si torce mentre ruoti il raccordo.",
+              "Ripristina la posa effettiva. Elimina la trazione dovuta a una lunghezza insufficiente, le curve strette e i carichi laterali. Ripeti poi la prova nelle condizioni dell’apparecchiatura."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Se l’assemblaggio supera la prova al banco ma perde dopo il montaggio, dai priorità a posa e carichi esterni. Se il problema è concentrato in una porta, controlla prima la combinazione dei componenti e la superficie di tenuta di quell’estremità. Questo aiuta a distinguere incompatibilità dell’interfaccia, condizioni dei componenti ed effetti della posa."
+          }
+        ]
+      },
+      {
+        "title": "Quali prove eseguire sui campioni una volta montati?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Una prova statica di tenuta copre solo il montaggio e le condizioni della prova. Per l’uso nello strumento, convalida lunghezza effettiva, posa e ciclo di funzionamento dei tubi. Includi i criteri di accettazione nei requisiti di fornitura."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Voce da convalidare",
+              "Che cosa controllare"
+            ],
+            "rows": [
+              [
+                "Dimensioni e montaggio",
+                "Riferimento della lunghezza, componenti alle due estremità, distanza tra le porte, accesso agli attrezzi e curvature a montaggio avvenuto"
+              ],
+              [
+                "Tenuta durante il funzionamento",
+                "Tenuta nelle condizioni effettive di pressione positiva o negativa, temperatura e variazioni di pressione"
+              ],
+              [
+                "Fluidi e pulizia",
+                "Cambiamenti del tubo, delle flange e della tenuta dopo l’esposizione a reagenti e liquidi di pulizia effettivi"
+              ],
+              [
+                "Manutenzione e ricollegamento",
+                "Smonta e ricollega con i metodi e il numero di cicli definiti per l’apparecchiatura. Ispeziona poi flange, rondelle e tenuta"
+              ],
+              [
+                "Uniformità del lotto",
+                "Controlla materiali, quote, aspetto, identificazione e registrazioni delle prove rispetto al disegno concordato"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Definisci pressione e durata della prova, perdita ammessa e cicli di ricollegamento in base ai requisiti dell’apparecchiatura e all’assemblaggio confermato. Un valore nominale del raccordo o del tubo non garantisce automaticamente pressione, durata o riutilizzo dell’assemblaggio completo."
+          }
+        ]
+      },
+      {
+        "title": "Quali informazioni servono per un assemblaggio di tubi flangiati su misura?",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Quando invii i requisiti a FOREACH, indica le due estremità come A e B ed elenca raccordo, filettatura, rondella e requisiti della porta per ciascuna. Il progetto può specificare la flangiatura a una o entrambe le estremità, la lunghezza del tubo, i fermi e le etichette. Le combinazioni fornibili seguono i disegni approvati e la documentazione di prodotto."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Fluido: tipo di reagente e liquido di pulizia, concentrazioni, temperature, tempi di contatto e modalità di funzionamento.",
+              "Tubo: FEP o PTFE, diametro interno × diametro esterno, colore, lunghezza finita e riferimento di misura.",
+              "Estremità A/B: serie del raccordo, materiale, specifica completa della filettatura, requisiti della rondella e disegni delle porte di alloggiamento.",
+              "Installazione: posa, distanza tra le porte, spazio per la curvatura e metodo di manutenzione e rimozione.",
+              "Identificazione: fermi se necessari, contenuto delle etichette, orientamento della stampa e posizione di montaggio.",
+              "Accettazione: tolleranze dimensionali, aspetto, pulizia, tenuta in esercizio e controlli di manutenzione e ricollegamento."
+            ],
+            "ordered": true
+          },
+          {
+            "type": "paragraph",
+            "text": "Per una sostituzione, includi fotografie dell’assemblaggio originale e descrivi il problema, ad esempio lunghezza insufficiente, montaggio difficile, perdita dopo la manutenzione o variazioni tra lotti. Collegare il problema alla struttura e alle condizioni operative aiuta a decidere se modificare tubo, raccordi, rondelle o requisiti produttivi e di montaggio."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "prefix": "Approfondisci: ",
+                "href": "/en/products/fittings/hard-tube-fittings/",
+                "label": "Modelli e specifiche dei raccordi per tubi rigidi"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti",
+    "faqItems": [
+      {
+        "question": "Posso fermare una perdita serrando di più il raccordo?",
+        "answer": "Controlla prima compatibilità della porta, danni alla flangia, scelta della rondella e trazione o torsione del tubo. Una forza maggiore può deformare una flangia in plastica o danneggiare i filetti. Segui metodo di montaggio e coppia specifici del modello. Non esiste un valore unico per tutti i raccordi a fondo piatto. Non presumere che adesivo per filetti o nastro PTFE siano adatti a risolvere la perdita."
+      },
+      {
+        "question": "Perché l’assemblaggio perde nello strumento dopo aver superato la prova statica?",
+        "answer": "Una prova statica non copre tutte le condizioni a montaggio avvenuto. La posa può introdurre trazione, torsione o carichi laterali dovuti al movimento. Variazioni di temperatura e pressione possono a loro volta influire sulla tenuta. Registra dove e quando compare la perdita. Ispeziona lunghezza, supporti e spazio di movimento e ripeti poi la prova con pressione positiva o negativa, temperatura e ciclo di lavoro effettivi."
+      },
+      {
+        "question": "Una flangia deformata può essere riutilizzata o riformata sul posto?",
+        "answer": "Non compensare crepe, inclinazione o deformazione permanente serrando di più. Per sostituire o riformare, segui materiale, attrezzo, processo, lunghezza finita e criteri di accettazione confermati. Dopo la rilavorazione controlla nuovamente il passaggio del fluido e la tenuta. Non esiste un numero di riutilizzi valido per tutte le configurazioni."
+      },
+      {
+        "question": "Come verificare la compatibilità dopo aver cambiato reagente o liquido di pulizia?",
+        "answer": "Identifica i materiali effettivamente bagnati del tubo, della flangia e degli altri componenti. Controlla tipo, composizione, concentrazione, temperatura e tempo di contatto del nuovo fluido, oltre alla procedura di pulizia. Materiale del corpo e colore non identificano tutti i materiali bagnati. Una generica indicazione di resistenza ad acidi o basi non basta. Valuta la specifica combinazione di materiale e fluido e, se necessario, convalida campioni nelle condizioni previste."
+      },
+      {
+        "question": "Perché una curva stretta può incidere sia sulla portata sia sulla tenuta?",
+        "answer": "La piegatura o lo schiacciamento possono restringere il passaggio. Una lunghezza insufficiente, la torsione e i carichi laterali possono modificare la forza sulla faccia della flangia. Controlla separatamente riduzione del passaggio e carichi sul collegamento. Conferma spazio di curvatura, supporti e margine di movimento per materiale e misure effettivi del tubo, evitando di applicare lo stesso multiplo di raggio a ogni tubo."
+      },
+      {
+        "question": "Le quattro serie possono condividere i limiti di pressione, temperatura e coppia di serraggio?",
+        "answer": "La stessa filettatura o una forma simile non implicano limiti comuni. Materiale del corpo, tubo e spessore della parete, rondella, processo di formatura, porta e condizioni operative influiscono tutti sull’assemblaggio completo. La tabella delle dimensioni serve a controllare la geometria di montaggio. Conferma pressione, temperatura, coppia e cicli di manutenzione ammessi per la combinazione specifica e le condizioni di validazione."
+      }
+    ],
+    "cta": {
+      "title": "Devi abbinare un assemblaggio di tubi flangiati alla tua apparecchiatura?",
+      "description": "Indica materiale del tubo, diametro interno × diametro esterno, lunghezza finita, entrambi i raccordi e disegni delle porte, oltre a fluido, temperatura, pressione, fermi ed etichette richiesti. Questi dati permettono di definire configurazioni candidate e validazione.",
+      "contactLabel": "Contattaci",
+      "productsLabel": "Vedi i raccordi per tubi rigidi",
+      "productsHref": "/en/products/fittings/hard-tube-fittings/"
+    }
+  },
+  "sourceModule": "flanged-tubing-assemblies-selection.article.ts",
+  "navigation": [
+    {
+      "id": "sealing",
+      "label": "Struttura e tenuta"
+    },
+    {
+      "id": "materials",
+      "label": "Materiali e misure"
+    },
+    {
+      "id": "selection",
+      "label": "Quattro serie di raccordi"
+    },
+    {
+      "id": "ports",
+      "label": "Porte e giochi"
+    },
+    {
+      "id": "leak-check",
+      "label": "Montaggio e perdite"
+    },
+    {
+      "id": "verification",
+      "label": "Validazione a montaggio avvenuto"
+    },
+    {
+      "id": "inquiry",
+      "label": "Requisiti su misura"
+    }
+  ],
+  "footerIntro": "Esplora gli assemblaggi di tubi flangiati in base al materiale del tubo. Ogni scheda mostra la configurazione corrispondente. Conferma misure, lunghezza, raccordi terminali, rondelle e porte di accoppiamento in base al circuito fluidico e ai disegni."
+}

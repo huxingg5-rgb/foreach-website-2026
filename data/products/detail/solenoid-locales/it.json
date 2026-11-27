@@ -1,0 +1,225 @@
+{
+  "seriesTitle": "Elettrovalvole miniaturizzate a membrana per aprire, chiudere e commutare circuiti per liquidi",
+  "seriesDescription": "Le elettrovalvole miniaturizzate a membrana FOREACH SV10 comandano le linee dei reagenti e del lavaggio in strumenti analitici e apparecchiature automatiche di manipolazione dei liquidi. Per aprire e chiudere scegliere una versione a 2 vie normalmente chiusa o aperta. Per commutare una linea comune tra due circuiti, scegliere la versione a 3 vie.",
+  "seriesIntegration": "Scegliere il montaggio diretto su collettore per l'integrazione in un blocco fluidico, gli attacchi portagomma per tubi flessibili o gli attacchi filettati M6 o 1/4-28 UNF per i raccordi. Verificare superficie di montaggio, disposizione dei tubi e accesso per la manutenzione sullo strumento.",
+  "seriesCompare": "Scegliere prima tra comando di apertura e chiusura a 2 vie e commutazione a 3 vie. Per 2 vie, scegliere la posizione normalmente chiusa o normalmente aperta. Abbinare poi attacchi, materiali a contatto e tensione all'apparecchiatura.",
+  "seriesSeo": "Elettrovalvole miniaturizzate a membrana FOREACH SV10 per reagenti e lavaggio. Confronta configurazioni a 2 o 3 vie e attacchi per collettore, portagomma o filettati.",
+  "valves": "Valvole",
+  "seriesLabel": "Elettrovalvole SV10",
+  "productType": "Elettrovalvole miniaturizzate a membrana",
+  "detailIntro": {
+    "nc": "La SV10 a 2 vie normalmente chiusa comanda le linee di reagente o di lavaggio che devono chiudersi quando manca l'alimentazione. Si apre quando è alimentata e lavora con pompa e sequenza dello strumento per controllare l'erogazione. La valvola apre o chiude il percorso. Il liquido è movimentato dalla pompa o da una differenza di pressione.",
+    "no": "La SV10 a 2 vie normalmente aperta mantiene aperta la linea di reagente o di lavaggio quando manca l'alimentazione e la chiude quando è alimentata. Lo strumento può così interrompere l'erogazione quando necessario. La valvola apre o chiude il percorso. Il liquido è movimentato dalla pompa o da una differenza di pressione.",
+    "three": "La SV10 a 3 vie commuta un attacco comune tra due attacchi, così la linea condivisa può collegarsi al reagente o al liquido di lavaggio. Coordinare la commutazione con la pompa e la sequenza di erogazione e lavaggio. Verificare i collegamenti con bobina alimentata e disalimentata sul circuito effettivo.",
+    "two": "La SV10 a 2 vie apre o chiude una linea per reagente o lavaggio. Scegliere la versione normalmente chiusa se la linea deve chiudersi senza alimentazione, o quella normalmente aperta se deve rimanere aperta. L'alimentazione inverte lo stato. Coordinare valvola, pompa e sequenza dello strumento."
+  },
+  "configurationIntroductions": {
+    "3-way-base": [
+      "La SV10-P-3 è un'elettrovalvola miniaturizzata a 2 posizioni e 3 vie con membrana a bilanciere. La struttura interna compatta e il volume morto ridotto limitano il liquido residuo. Commutando l'attacco comune tra gli altri due attacchi, controlla con precisione il percorso per alimentare reagenti e commutare il lavaggio in campionatori automatici, analizzatori medicali e sistemi di laboratorio.",
+      "Il montaggio diretto e la piastra base in PEEK consentono di integrare più valvole sullo stesso collettore fluidico, riunendo rami dei reagenti e canali di lavaggio. Scegliere membrane e O-ring compatibili in EPDM, FKM o FFKM in base ai fluidi. Se alimentazione e lavaggio condividono una linea, usare i volumi interni effettivi di valvola e tubi per stimare il liquido trattenuto e il volume di lavaggio richiesto."
+    ],
+    "3-way-barbed": [
+      "La SV10-B16-3 è un'elettrovalvola miniaturizzata a membrana per la commutazione dei liquidi a 3 vie. Il bilanciere compatto e il volume morto ridotto limitano il residuo e consentono un controllo preciso del percorso. Due attacchi collegano sorgenti di liquido distinte e quello comune serve una linea condivisa. Con una pompa la valvola con attacchi per tubo coordina erogazione di reagenti e risciacquo in analizzatori medicali e strumenti da laboratorio.",
+      "Per gli attacchi portagomma si raccomandano tubi flessibili con diametro interno di 1.5–2.0 mm. Facilitano il collegamento di pompe, serbatoi e moduli di rilevamento in punti diversi dello strumento. Considerare il volume trattenuto nella linea comune quando si pianificano cambi di fluido e lavaggi. Sono disponibili membrane e O-ring abbinati in EPDM, FKM o FFKM. Verificare dimensioni, durezza e compatibilità dei tubi con i fluidi."
+    ],
+    "3-way-threaded": [
+      "La SV10-M6/U28-3 è un'elettrovalvola miniaturizzata a 3 vie con membrana a bilanciere e attacchi filettati. La struttura compatta e il volume morto ridotto limitano il liquido residuo e consentono di commutare con precisione il circuito. Collegando l'attacco comune a turno agli altri due, una linea di alimentazione può trasportare reagente o fluido di lavaggio per dispensazione programmata, risciacquo e instradamento negli strumenti analitici.",
+      "Gli attacchi M6 o 1/4-28 UNF si collegano ai tubi dello strumento con i relativi raccordi. Per valutare il residuo dopo un cambio di fluido, sommare i volumi interni di valvola, raccordi e tubi collegati. Sono disponibili membrane e O-ring abbinati in EPDM, FKM o FFKM. Scegliere il materiale della sede filettata in base al fluido e verificare filettatura e tenuta del raccordo."
+    ],
+    "2-way-nc-base": [
+      "La SV10-P-2NC è un'elettrovalvola miniaturizzata a membrana, normalmente chiusa, a 2 posizioni e 2 vie, con montaggio su base. Il bilanciere compatto e il volume morto ridotto limitano il residuo e permettono il comando preciso di apertura e chiusura. Chiusa a riposo e aperta quando alimentata, è adatta ai rami di reagente, campionamento e lavaggio aperti a intervalli dal programma dello strumento. Con una pompa alimenta i canali selezionati negli analizzatori automatici e nei moduli multireagente.",
+      "Il montaggio diretto e la piastra base in PEEK consentono di disporre più valvole a 2 vie su un collettore fluidico. Ogni valvola può servire un ramo di reagente. Predisporre i canali interni e verificare fori di montaggio e sedi delle tenute con il disegno dimensionale. Scegliere separatamente membrane e O-ring abbinati in EPDM, FKM o FFKM in base a reagenti e lavaggi di ciascun ramo."
+    ],
+    "2-way-nc-barbed": [
+      "La SV10-B16-2NC è un'elettrovalvola miniaturizzata a 2 vie normalmente chiusa, con membrana a bilanciere e attacchi portagomma. Il bilanciere compatto e il volume morto ridotto limitano il liquido residuo e consentono un comando preciso. Si apre quando è alimentata e si chiude quando è disalimentata. Il programma dello strumento controlla così le linee di reagente, lavaggio e campionamento. Pesa 29 g ed è adatta a posizioni di montaggio separate nell'apparecchiatura.",
+      "Usare tubi flessibili con diametro interno di 1.5–2.0 mm, durezza di 55–65 Shore A e diametro esterno inferiore a 4.5 mm. Lasciare spazio per inserire, curvare e sostituire i tubi. Sono disponibili membrane e O-ring abbinati in EPDM, FKM o FFKM. Verificare la compatibilità di tubi e tenute con i liquidi di esercizio e lavaggio."
+    ],
+    "2-way-nc-threaded": [
+      "La SV10-M6/U28-2NC è un'elettrovalvola miniaturizzata a membrana con attacchi filettati per aprire o chiudere un circuito a 2 vie. Il bilanciere compatto e il volume morto ridotto limitano il liquido residuo e consentono un comando preciso. Si chiude quando è disalimentata e si apre quando è alimentata. Lavora con pompa e programma dello strumento per alimentare reagenti, campionare e sciacquare negli analizzatori con raccordi filettati.",
+      "Gli attacchi M6 o 1/4-28 UNF permettono di adattare la valvola a un impianto di tubi esistente. Scegliere membrane e O-ring abbinati in EPDM, FKM o FFKM secondo composizione e concentrazione dei reagenti e temperatura di esercizio. Verificare insieme materiale della sede, geometria di tenuta dei raccordi e dimensioni dei tubi, per assicurare compatibilità e tenuta dell'intero ramo."
+    ],
+    "2-way-no-base": [
+      "La SV10-P-2NO è un'elettrovalvola miniaturizzata normalmente aperta a 2 vie con membrana a bilanciere. La piastra base si monta direttamente sul collettore fluidico dello strumento per comandare linee di reagenti negli analizzatori per diagnostica in vitro (IVD) o linee di lavaggio negli strumenti analitici. A valvola disalimentata, ingresso e uscita restano collegati. Alimentandola, si chiude la linea nelle fasi previste. Il volume morto ridotto limita il residuo dopo un cambio di fluido o un lavaggio.",
+      "Prima del montaggio, verificare sul disegno dimensionale le posizioni degli attacchi, dei fori di fissaggio e degli O-ring sul collettore di accoppiamento. Per stimare la quantità necessaria al cambio o al lavaggio, considerare insieme volume della camera della valvola e dei condotti del collettore. Le membrane sono disponibili in EPDM, FKM o FFKM. Scegliere membrane e O-ring in base a fluidi, concentrazioni di lavoro e temperature."
+    ],
+    "2-way-no-barbed": [
+      "La SV10-B16-2NO è un'elettrovalvola miniaturizzata a membrana, normalmente aperta, a 2 vie, con attacchi portagomma per tubi flessibili. Si può personalizzare per il montaggio OEM. La membrana a bilanciere è usata di frequente nelle linee di alimentazione dei reagenti negli analizzatori per diagnostica in vitro (IVD), ma la valvola comanda anche circuiti di risciacquo per preparazione campioni e lavaggio nelle postazioni automatiche. La valvola resta aperta a riposo e si chiude quando è alimentata. È indicata per linee normalmente aperte da interrompere solo durante fasi specifiche. Il volume morto ridotto limita il liquido residuo dopo un cambio o un lavaggio.",
+      "Si raccomandano tubi flessibili con diametro interno di 1.5–2.0 mm. All'uscita dell'attacco prevedere una curva ampia e spazio per sfilare e sostituire il tubo. Dimensionare l'eventuale staffa personalizzata secondo orientamento della valvola e fori di montaggio dello strumento. Le membrane sono disponibili in EPDM, FKM o FFKM. Scegliere membrane e O-ring secondo tipo, concentrazione di lavoro e temperatura di reagenti e liquidi di pulizia."
+    ],
+    "2-way-no-threaded": [
+      "La SV10-M6/U28-2NO è un'elettrovalvola miniaturizzata a membrana, normalmente aperta, a 2 vie, con bilanciere e attacchi filettati. La struttura interna compatta e il volume morto ridotto limitano il residuo e permettono di comandare apertura e chiusura con precisione. Alimentandola si chiude il ramo selezionato, che si riapre quando l'alimentazione viene tolta. È adatta a campionamento, erogazione reagenti e lavaggi con interruzioni temporanee.",
+      "Scegliere attacchi M6 o 1/4-28 UNF compatibili con i raccordi dello strumento. Per valutare cambi di fluido e lavaggio, includere i volumi di valvola, raccordi e tubi. Sono disponibili membrane e O-ring abbinati in EPDM, FKM o FFKM. Verificare materiali a contatto e materiale della sede secondo i requisiti di collegamento e tenuta di ogni linea."
+    ]
+  },
+  "detailMaterials": {
+    "base": "Scegliere membrane e O-ring abbinati in EPDM, FKM o FFKM dopo aver verificato compatibilità con composizione, concentrazione, temperatura e tempo di contatto di reagente e liquido di lavaggio.",
+    "barbed": "Questa configurazione ha piastra base in PEEK e membrane e O-ring abbinabili in EPDM, FKM o FFKM. Verificare la compatibilità dei materiali con composizione, concentrazione, temperatura e tempo di contatto di reagenti e lavaggio.",
+    "threaded": "Membrane e O-ring abbinati in EPDM, FKM o FFKM si combinano con le sedi disponibili. Verificare tutte le parti a contatto con reagenti e lavaggi effettivi. La sede o la piastra base in PFA richiede conferma separata."
+  },
+  "models": {
+    "base": {
+      "descriptor": "Elettrovalvola miniaturizzata per montaggio su collettore",
+      "heading": "Elettrovalvola miniaturizzata per il montaggio diretto su collettore",
+      "definition": "FOREACH SV10-P è un'elettrovalvola miniaturizzata a membrana per montaggio diretto su collettore fluidico. Appartiene alla serie SV10 e offre versioni a 2 vie normalmente chiusa, 2 vie normalmente aperta e 3 vie per l'alimentazione dei reagenti e la commutazione del lavaggio nelle apparecchiature automatiche.",
+      "installation": "La piastra base in PEEK fa tenuta sul collettore. Prima di progettare la superficie di montaggio, abbinare schema degli attacchi, fori di posizionamento e tenute alla versione a 2 o 3 vie scelta.",
+      "connection": "Superficie di montaggio su collettore",
+      "seo": "Elettrovalvola miniaturizzata SV10-P per montaggio su collettore. Scegli tra 2 vie NC/NO o 3 vie e materiali della membrana per circuiti di reagente e lavaggio."
+    },
+    "threaded": {
+      "descriptor": "Elettrovalvole miniaturizzate con attacchi filettati",
+      "heading": "Elettrovalvola miniaturizzata con attacchi M6 o 1/4-28 UNF",
+      "definition": "FOREACH SV10-M6 e SV10-U28 sono elettrovalvole miniaturizzate a membrana con attacchi filettati per raccordi per tubo. La serie SV10 offre versioni a 2 vie normalmente chiusa, 2 vie normalmente aperta e 3 vie per aprire linee di reagenti o commutare tra reagente e liquido di lavaggio.",
+      "installation": "Scegliere raccordi M6 o 1/4-28 UNF compatibili. La lunghezza filettata di presa raccomandata è di 5 mm e la coppia di serraggio di 0.25–0.3 N·m. Usare una guarnizione adatta alla tenuta sul fondo.",
+      "connection": "M6 / 1/4-28 UNF",
+      "seo": "Elettrovalvole miniaturizzate SV10-M6 e SV10-U28 con attacchi M6 o 1/4-28 UNF. Confronta 2 vie NC/NO e 3 vie per i circuiti di reagente e lavaggio."
+    },
+    "barbed": {
+      "descriptor": "Elettrovalvola miniaturizzata con attacchi portagomma",
+      "heading": "Elettrovalvola miniaturizzata con attacchi portagomma per tubi flessibili",
+      "definition": "FOREACH SV10-B16 è un'elettrovalvola miniaturizzata a membrana con attacchi portagomma per tubi flessibili. Appartiene alla serie SV10 e offre versioni a 2 vie normalmente chiusa, 2 vie normalmente aperta e 3 vie per il comando delle linee di reagente e la commutazione del lavaggio.",
+      "installation": "Usare tubi flessibili con diametro interno di 1.5–2.0 mm, durezza di 55–65 Shore A e diametro esterno inferiore a 4.5 mm. È disponibile una staffa personalizzata per integrare la valvola nell'apparecchiatura.",
+      "connection": "Portagomma, diametro interno del tubo 1.5–2.0 mm",
+      "seo": "Elettrovalvola miniaturizzata SV10-B16 con attacchi portagomma per tubi con diametro interno 1.5–2.0 mm. Scegli tra 2 vie NC/NO o 3 vie."
+    }
+  },
+  "functionIntro": "La membrana a bilanciere apre o chiude un collegamento nella valvola a 2 vie. Nella valvola a 3 vie commuta l'attacco comune tra gli altri due attacchi. Per 2 vie, scegliere la versione normalmente chiusa o normalmente aperta secondo lo stato richiesto senza alimentazione. Una pompa o una differenza di pressione movimenta il liquido, mentre la valvola ne controlla il percorso.",
+  "materialIntro": "Scegliere membrane e O-ring abbinati in EPDM, FKM o FFKM in base a reagente e fluido di lavaggio. Le versioni per collettore e portagomma usano la piastra base in PEEK. Le versioni filettate offrono altre opzioni di sede. Le configurazioni con sede o piastra base in PFA richiedono verifica separata.",
+  "labels": [
+    "Famiglia di configurazione (la sigla completa va confermata)",
+    "Struttura della valvola",
+    "Attacchi e funzione",
+    "Collegamento",
+    "Pressione di esercizio",
+    "Diametro dell'orifizio",
+    "Volume della camera",
+    "Coefficiente di portata Cv",
+    "Opzioni per membrana e O-ring",
+    "Piastra base",
+    "Materiali della sede filettata",
+    "Tensione nominale",
+    "Potenza standard",
+    "Circuito a risparmio energetico",
+    "Tempo di risposta standard",
+    "Tempo di risposta a risparmio energetico",
+    "Temperatura ambiente",
+    "Temperatura del fluido",
+    "Isolamento della bobina",
+    "Peso",
+    "Condizioni di prova del tempo di risposta"
+  ],
+  "structure": "Valvola a membrana con bilanciere",
+  "functions": "2 vie NC / 2 vie NO / 3 vie universale",
+  "baseMaterial": "PEEK, PFA per versioni filettate secondo configurazione",
+  "seatMaterial": "PVDF / PTFE / PMMA / POM / PEEK, PFA secondo configurazione",
+  "saving": "Avvio 2.5 W, mantenimento ≤1 W",
+  "standardResponse": "≤15 ms, senza carico",
+  "savingResponse": "≤25 ms, senza carico",
+  "fluidTemperature": "0–50 °C, senza congelamento",
+  "testConditions": "Prova a 25 °C, a tensione nominale, con aria alla massima pressione di esercizio e attacco comune in pressione. La risposta varia con fluido, pressione, tubi e temperatura.",
+  "applications": "Applicazioni",
+  "typicalApplications": "Applicazioni tipiche",
+  "applicationsIntro": "Usare un'elettrovalvola a 2 vie per aprire o chiudere la linea del reagente oppure una a 3 vie per commutare una linea comune tra due circuiti. Scegliere l'attacco SV10 in base a collettore, raccordi per tubo o tubi flessibili.",
+  "applicationItems": [
+    {
+      "title": "Elettrovalvole a 2 vie per aprire e chiudere le linee dei reagenti",
+      "paragraphs": [
+        "In un analizzatore automatico, la valvola a 2 vie può aprire la linea del reagente per dispensare e poi richiuderla. Scegliere NC se la linea deve rimanere chiusa senza alimentazione, o NO se deve rimanere aperta.",
+        "Coordinare la valvola con la pompa e il programma dello strumento. La valvola comanda il collegamento, mentre pompa e sequenza operativa determinano il volume erogato."
+      ]
+    },
+    {
+      "title": "Elettrovalvole a 3 vie per commutare reagente e lavaggio",
+      "paragraphs": [
+        "La valvola a 3 vie collega a turno una linea comune al reagente o al liquido di pulizia. Dopo il reagente, commutare sul lavaggio e sciacquare i tubi condivisi con la pompa.",
+        "Stabilire volume e numero di lavaggi secondo fluidi, lunghezza dei tubi e residuo ammesso. Verificare il risultato con il ciclo di pulizia effettivo."
+      ]
+    },
+    {
+      "title": "Integrazione con collettore o tubi",
+      "paragraphs": [
+        "Usare la versione per montaggio su base per riunire più valvole su un collettore fluidico. Scegliere gli attacchi filettati per i raccordi o quelli portagomma per tubi flessibili.",
+        "Prevedere l'accesso per installazione, sostituzione dei tubi e cablaggio. I tre tipi di attacchi si adattano a disposizioni diverse e conservano le opzioni a 2 o 3 vie."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Che differenza c'è tra un'elettrovalvola a 2 vie e una a 3 vie?",
+      "answer": "L'elettrovalvola a 2 vie apre o chiude un collegamento. Quella a 3 vie commuta un attacco comune tra altri due, per esempio tra reagente e lavaggio. La serie SV10 offre entrambe le funzioni con montaggio su collettore, attacchi filettati o portagomma."
+    },
+    {
+      "question": "Meglio un'elettrovalvola normalmente chiusa o normalmente aperta?",
+      "answer": "Scegliere in base allo stato richiesto quando manca l'alimentazione. Una valvola normalmente chiusa chiude il collegamento a riposo e lo apre quando è alimentata. Una normalmente aperta funziona al contrario. La serie SV10 offre NC e NO nelle versioni a 2 vie."
+    },
+    {
+      "question": "Come scegliere i materiali della membrana e della sede?",
+      "answer": "Indicare composizione, concentrazione, temperatura e tempo di contatto di reagente e liquido di lavaggio. Verificare insieme tutte le parti a contatto, cioè membrana, O-ring, piastra base e sede nelle versioni filettate. La compatibilità va verificata con i fluidi effettivi."
+    },
+    {
+      "question": "Quali opzioni di risparmio energetico sono disponibili?",
+      "answer": "La potenza standard è di 2.5 W. Il circuito opzionale a risparmio energetico assorbe 2.5 W all'avvio e non più di 1 W in mantenimento. Rispettare la polarità con rosso al positivo e nero al negativo."
+    },
+    {
+      "question": "Quanto rapidamente risponde la valvola?",
+      "answer": "Il tempo di risposta è ≤15 ms in versione standard e ≤25 ms con circuito a risparmio energetico, in prove senza carico a 25 °C, tensione nominale e aria alla massima pressione di esercizio sull'attacco comune. Il tempo effettivo varia con circuito e fluido. Le membrane in FFKM rispondono più lentamente a 15 °C o meno."
+    },
+    {
+      "question": "Quali informazioni servono per richiedere una configurazione?",
+      "answer": "Inviare schema del circuito, requisito a 2 o 3 vie, stato a riposo, tipo di attacco, reagenti e liquidi di lavaggio, pressione, temperatura e tensione di alimentazione. Includere ingombro e tempi di ciclo per abbinare attacchi, materiali e opzione a risparmio energetico."
+    }
+  ],
+  "needsTitle": "Descrivi la tua applicazione",
+  "needsText": "Indica il liquido che deve passare in ogni fase e lo stato richiesto senza alimentazione. Includi disegno dei collegamenti, fluidi, pressione, temperatura, tensione di alimentazione e spazio di montaggio.",
+  "compareTitle": "Confronta le elettrovalvole a 2 e 3 vie",
+  "allModels": "Tutte le elettrovalvole SV10",
+  "ctaTitle": "Configura la tua elettrovalvola SV10",
+  "ctaText": "Abbina funzione, attacchi, materiali a contatto e tensione all'apparecchiatura.",
+  "ctaButton": "Parla con noi dei tuoi requisiti",
+  "flowTypes": {
+    "two": {
+      "cardName": "SV10-2",
+      "heading": "Elettrovalvole miniaturizzate a 2 vie",
+      "functionValue": "2 vie normalmente chiusa / 2 vie normalmente aperta",
+      "definition": "Le elettrovalvole miniaturizzate FOREACH SV10 a 2 vie usano una membrana a bilanciere per aprire o chiudere linee per reagenti e lavaggio nelle apparecchiature automatiche. Scegliere la posizione normalmente chiusa o aperta secondo lo stato richiesto a riposo.",
+      "operation": "Una valvola normalmente chiusa chiude il collegamento senza alimentazione e lo apre quando è alimentata. Una valvola normalmente aperta funziona al contrario. Coordinare valvola, pompa e programma di comando. La valvola controlla il collegamento, mentre la pompa o una differenza di pressione movimenta il liquido.",
+      "selection": "Scegliere SV10-P per montaggio su collettore, SV10-M6 o SV10-U28 per raccordi filettati oppure SV10-B16 per tubi flessibili. Scegliere i materiali a contatto adatti ai fluidi.",
+      "seo": "Elettrovalvole miniaturizzate FOREACH SV10 a 2 vie per aprire e chiudere linee di reagente e lavaggio. Versioni normalmente chiuse o aperte, per collettore, filettate o portagomma.",
+      "applicationTitle": "Stato senza alimentazione normalmente chiuso o aperto",
+      "applicationText": "Usare la versione normalmente chiusa se la linea deve chiudersi a riposo, o quella normalmente aperta se deve restare aperta. Considerare questo stato nella sequenza di arresto e riavvio dello strumento.",
+      "faqQuestion": "Come controlla la portata un'elettrovalvola a 2 vie?"
+    },
+    "three": {
+      "cardName": "SV10-3",
+      "heading": "Elettrovalvole miniaturizzate a 3 vie",
+      "functionValue": "3 vie universale",
+      "definition": "Le elettrovalvole miniaturizzate FOREACH SV10 a 3 vie usano una membrana a bilanciere per commutare un attacco comune tra altri due. Selezionano reagenti o lavaggio nelle apparecchiature automatiche.",
+      "operation": "Collegare l'attacco comune alla linea condivisa e gli altri attacchi ai due percorsi selezionabili. Coordinare la commutazione con pompa e programma dello strumento. I tre attacchi servono alla selezione di percorsi. Flussi simultanei e miscelazione proporzionale richiedono un altro sistema.",
+      "selection": "Scegliere SV10-P per montaggio su collettore, SV10-M6 o SV10-U28 per raccordi filettati oppure SV10-B16 per tubi flessibili. Identificare l'attacco comune e confermare i collegamenti con e senza alimentazione. Scegliere poi i materiali a contatto.",
+      "seo": "Elettrovalvole miniaturizzate FOREACH SV10 a 3 vie per commutare reagente e lavaggio. Confronta attacchi per collettore, filettati o portagomma e materiali a contatto.",
+      "applicationTitle": "Identificazione dell'attacco comune nello schema dei collegamenti",
+      "applicationText": "Identificare linea condivisa e due percorsi selezionabili. Verificare quali attacchi sono collegati con valvola alimentata e disalimentata, poi coordinare la commutazione con la sequenza della pompa.",
+      "faqQuestion": "Come commuta i percorsi un'elettrovalvola a 3 vie?"
+    }
+  },
+  "orderingNote": "I modelli mostrati identificano famiglie di configurazione. Per completare il codice d'ordine, confermare stato a riposo, tensione, materiali della membrana e delle altre parti a contatto e opzione a risparmio energetico. M6 e U28 identificano versioni filettate distinte, rispettivamente M6 e 1/4-28 UNF.",
+  "searchTerms": [
+    "elettrovalvola miniaturizzata",
+    "microelettrovalvola",
+    "elettrovalvola a membrana",
+    "elettrovalvola per liquidi",
+    "elettrovalvola a 2 vie",
+    "elettrovalvola a 3 vie"
+  ],
+  "metaFunction": {
+    "three": "Le elettrovalvole SV10 a membrana a 3 vie commutano la linea condivisa tra reagente e liquido di lavaggio.",
+    "nc": "Le elettrovalvole SV10 a membrana a 2 vie comandano linee di reagente e lavaggio.",
+    "no": "Le elettrovalvole SV10 a membrana a 2 vie normalmente aperte mantengono la linea aperta a riposo e la chiudono quando alimentate.",
+    "two": "Le elettrovalvole SV10 a membrana a 2 vie sono disponibili normalmente chiuse o aperte per il comando di liquidi."
+  },
+  "metaConnection": {
+    "base": "Monta la piastra base in PEEK direttamente sul collettore.",
+    "barbed": "Collega direttamente i tubi flessibili con diametro interno di 1.5–2.0 mm agli attacchi portagomma.",
+    "threaded": "Scegli attacchi filettati M6 o 1/4-28 UNF e i materiali a contatto con il fluido."
+  },
+  "seriesMaterials": "Sono disponibili membrane e O-ring abbinati in EPDM, FKM o FFKM. Verificare tutti i materiali a contatto con reagenti e liquidi di lavaggio nelle condizioni effettive. Il circuito opzionale a risparmio energetico assorbe 2.5 W all'avvio e non più di 1 W in mantenimento. Confermare la disponibilità per la configurazione scelta."
+}

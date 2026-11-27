@@ -1,7 +1,10 @@
 import type {
   NewsArticle,
-  NewsLocale,
+  NewsResourceLocale,
 } from "./news.types";
+
+import hindiCopy from "./adlm-2026-onsite.hi.json";
+import italianCopy from "./adlm-2026-onsite.it.json";
 
 type EventInformationItem = {
   label: string;
@@ -42,9 +45,64 @@ export type Adlm2026OnsiteCopy = {
 };
 
 const ADLM_2026_ONSITE_COPY: Record<
-  NewsLocale,
+  NewsResourceLocale,
   Adlm2026OnsiteCopy
 > = {
+  it: italianCopy,
+  hi: hindiCopy,
+  de: {
+    title: "Live von der ADLM 2026 | FOREACH am Stand 4105",
+    summary: "Die ADLM 2026 in Anaheim, Kalifornien, hat begonnen. Das FOREACH-Team empfängt am Stand 4105 Fachleute aus klinischer Diagnostik, Life Sciences, Analysengerätebau und Laborautomation.",
+    seoTitle: "Live von der ADLM 2026 | FOREACH am Stand 4105",
+    seoDescription: "Besprechen Sie mit FOREACH am Stand 4105 in Anaheim Präzisionsfluidik, Produktauswahl, kompatible Alternativen und OEM-Lösungen.",
+    coverAlt: "ADLM 2026 im Anaheim Convention Center in Kalifornien",
+    openingTitle: "Die ADLM 2026 hat begonnen",
+    openingParagraphs: [
+      "Gerätehersteller, Ingenieure und Partner aus klinischer Diagnostik, Labormedizin, Life Sciences, Analysengerätebau und Laborautomation kommen in Anaheim zusammen, um sich über neue Diagnoseverfahren, Geräteentwicklung und Laborlösungen auszutauschen.",
+      "Nach Anmeldung, Standaufbau und Produktvorbereitung empfängt FOREACH Besucher am Stand 4105. Im Mittelpunkt der Gespräche stehen präzises Liquid Handling, Umschalten von Flüssigkeitswegen, Fluidikanschlüsse, Kreislaufüberwachung und Systemintegration.",
+    ],
+    firstImageAlt: "Anaheim Convention Center mit dem Eingang zur ADLM 2026",
+    firstImageCaption: "ADLM 2026 in Anaheim",
+    teamTitle: "Das FOREACH-Team ist am Stand 4105 für Sie da",
+    teamParagraphs: [
+      "FOREACH zeigt Pumpen, Ventile, Fittings, Schläuche, Kanülenbaugruppen sowie Drucksensoren und Module zur Blasenerkennung.",
+      "Das Team berät anhand des tatsächlichen Gerätebedarfs, von der Aspiration und Dosierung im Mikroliterbereich über komplexe Umschaltungen und Verbindungen unterschiedlicher Werkstoffe und Schnittstellen bis zu kompatiblen Alternativen für vorhandene Komponenten.",
+    ],
+    eventTitle: "Informationen zur Messe",
+    eventInformation: [
+      { label: "Veranstaltung", value: "ADLM 2026" },
+      { label: "Datum", value: "26.–30. Juli 2026" },
+      { label: "Ort", value: "Anaheim, Kalifornien, USA" },
+      { label: "Stand", value: "4105" },
+    ],
+    discussionTitle: "Besprechen Sie Ihre Anwendung mit uns",
+    discussionParagraphs: [
+      "Diagnostikgeräte unterscheiden sich im Fluidikkreislauf, in den eingesetzten Medien, in ihren Leistungszielen und im verfügbaren Bauraum. Das Team bespricht gerne konkrete Projekte.",
+    ],
+    discussionLead: "Am Stand können Sie unter anderem diese Themen besprechen:",
+    discussionItems: [
+      "Präzises Liquid Handling und Dosierung im Mikroliterbereich",
+      "Auswahl von Pumpen, Ventilen, Fittings, Schläuchen und Kanülenbaugruppen",
+      "Werkstoffverträglichkeit für unterschiedliche Medien",
+      "Kompatible Alternativen für vorhandene Fluidikkomponenten",
+      "Kundenspezifische Schnittstellen, Flüssigkeitswege und Befestigungsstrukturen",
+      "OEM-Fluidikbaugruppen und Systemintegration",
+    ],
+    meetingTitle: "Wir freuen uns auf Sie am Stand 4105",
+    meetingParagraphs: [
+      "Wenn Sie ein neues Diagnostikgerät entwickeln oder passendere Komponenten für präzise und stabile Fluidikfunktionen benötigen, besuchen Sie FOREACH am Stand 4105.",
+      "Wir sprechen mit Ihnen über Produktauswahl, Optimierung Ihrer Flüssigkeitswege, kompatible Alternativen und kundenspezifische Entwicklung.",
+    ],
+    secondImageAlt: "Das FOREACH-Team am Stand 4105 auf der ADLM 2026",
+    secondImageCaption: "Das FOREACH-Team am Stand 4105 auf der ADLM 2026",
+    support: {
+      kicker: "FOREACH AUF DER ADLM 2026",
+      title: "Besuchen Sie uns am Stand 4105",
+      description: "Ob neue Fluidikkomponenten, Alternativen oder Unterstützung bei Werkstoffverträglichkeit, Produktauswahl und Systemintegration: Das FOREACH-Team bespricht Ihre Anwendung mit Ihnen.",
+      buttonLabel: "Kontakt aufnehmen",
+      href: "/de/contact/",
+    },
+  },
   "zh-CN": {
     title:
       "ADLM 2026现场直击｜恒永达亮相4105号展位",
@@ -512,9 +570,12 @@ const ADLM_2026_ONSITE_COPY: Record<
   },
 };
 
-function normalizeLocale(locale: string): NewsLocale {
+function normalizeLocale(locale: string): NewsResourceLocale {
   if (
     locale === "en" ||
+    locale === "de" ||
+    locale === "it" ||
+    locale === "hi" ||
     locale === "es" ||
     locale === "fr" ||
     locale === "ko" ||
@@ -533,7 +594,7 @@ export function getAdlm2026OnsiteCopy(
 }
 
 export function getAdlm2026OnsiteArticle(
-  locale: NewsLocale
+  locale: NewsResourceLocale
 ): NewsArticle {
   const copy = getAdlm2026OnsiteCopy(locale);
 
@@ -579,4 +640,3 @@ export function getAdlm2026OnsiteArticle(
     seoDescription: copy.seoDescription,
   };
 }
-

@@ -11,7 +11,37 @@ type RplArticleUi = {
   copyFailed: string;
 };
 
-export const rplArticleUi: Record<TechnicalArticleLocale, RplArticleUi> = {
+export const rplArticleUi: Record<TechnicalArticleLocale | "de" | "it" | "hi", RplArticleUi> = {
+  hi: {
+    contents: "इस पेज पर",
+    sections: ["चयन के पैरामीटर", "तीन RPL मॉडलों की तुलना", "उपयोग की ज़रूरतें", "वास्तविक डिलीवरी की जाँच", "अक्सर पूछे जाने वाले सवाल"],
+    productAlt: "एक हेड वाला वाल्व-रहित मीटरिंग पंप",
+    share: "यह लेख साझा करें",
+    shareLabels: { facebook: "Facebook पर साझा करें", linkedin: "LinkedIn पर साझा करें", x: "X पर साझा करें", copy: "लेख का लिंक कॉपी करें" },
+    previewNotice: "यह स्थानीय प्रीव्यू है। सार्वजनिक लिंक प्रकाशन के बाद उपलब्ध होगा।",
+    copied: "लेख का लिंक कॉपी हो गया।",
+    copyFailed: "लिंक अपने आप कॉपी नहीं हुआ। इसे ब्राउज़र के पता बार से कॉपी करें।",
+  },
+  it: {
+    contents: "In questa pagina",
+    sections: ["Parametri di selezione", "Confronto tra tre modelli RPL", "Requisiti applicativi", "Verifica dell’erogazione effettiva", "Domande frequenti"],
+    productAlt: "Pompa dosatrice senza valvole a testata singola",
+    share: "Condividi questo articolo",
+    shareLabels: { facebook: "Condividi su Facebook", linkedin: "Condividi su LinkedIn", x: "Condividi su X", copy: "Copia il link all’articolo" },
+    previewNotice: "L’articolo è in anteprima locale. Il link pubblico sarà disponibile dopo la pubblicazione.",
+    copied: "Link all’articolo copiato.",
+    copyFailed: "Copia non riuscita. Puoi copiare il link dalla barra degli indirizzi.",
+  },
+  de: {
+    contents: "Auf dieser Seite",
+    sections: ["Auswahlparameter", "Drei RPL-Modelle vergleichen", "Anwendungsanforderungen", "Tatsächliche Dosierung prüfen", "Häufig gestellte Fragen"],
+    productAlt: "Ventillose Dosierpumpe mit einem Pumpenkopf",
+    share: "Diesen Beitrag teilen",
+    shareLabels: { facebook: "Auf Facebook teilen", linkedin: "Auf LinkedIn teilen", x: "Auf X teilen", copy: "Link zum Beitrag kopieren" },
+    previewNotice: "Dieser Beitrag ist in der lokalen Vorschau verfügbar. Ein öffentlicher Link zum Teilen ist noch nicht verfügbar.",
+    copied: "Der Link zum Beitrag wurde kopiert.",
+    copyFailed: "Der Link konnte nicht kopiert werden. Kopieren Sie ihn bitte aus der Adresszeile.",
+  },
   "zh-CN": {
     contents: "本文目录",
     sections: ["选型要看哪些参数", "三个 RPL 型号对比", "不同应用怎么选", "怎样验证实际加液", "常见选型问题"],

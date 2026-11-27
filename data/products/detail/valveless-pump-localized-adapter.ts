@@ -10,6 +10,7 @@ export function applyValvelessPumpLocalizedCopy<T extends { slug?: string; produ
   const copy = getValvelessLocaleCopy(locale);
   if (!content || !copy) return data;
   const title = content.title;
+  const linkLocale = locale === "de" ? "en" : locale;
   return {
     ...data, __locale: locale, valvelessDetailContent: true,
     model: title, name: title, title,
@@ -22,10 +23,10 @@ export function applyValvelessPumpLocalizedCopy<T extends { slug?: string; produ
     productTypeName: copy.categoryName,
     breadcrumbLabel: content.model,
     breadcrumbParentLabel: copy.categoryName,
-    breadcrumbParentHref: getValvelessPumpPath(locale),
-    detailHref: getValvelessPumpPath(locale, data.slug),
-    href: getValvelessPumpPath(locale, data.slug),
-    selectionHref: getValvelessPumpPath(locale),
+    breadcrumbParentHref: getValvelessPumpPath(linkLocale),
+    detailHref: getValvelessPumpPath(linkLocale, data.slug),
+    href: getValvelessPumpPath(linkLocale, data.slug),
+    selectionHref: getValvelessPumpPath(linkLocale),
     imageAlt: content.imageAlt, mainImageAlt: content.imageAlt, imageAltEn: content.imageAlt,
     additionalImageAlts: content.additionalImageAlts,
     valvelessPresentation: content.presentation,

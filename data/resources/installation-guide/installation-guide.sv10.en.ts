@@ -1,3 +1,4 @@
+import { getItalianDraftLink } from "@/lib/i18n/draft-languages";
 import type { InstallationGuideCard } from "./installation-guide.types";
 import type { RelatedResourcesLocale } from "../related-resources/related-resources.intl";
 
@@ -86,8 +87,10 @@ export const sv10EnglishGuide: InstallationGuideCard = {
   steps: [],
 };
 
-const sv10RelatedVideoCopy: Record<RelatedResourcesLocale, { title: string; description: string }> = {
+const sv10RelatedVideoCopy: Record<RelatedResourcesLocale | "de" | "it", { title: string; description: string }> = {
   "zh-CN": { title: "SV10 微型电磁阀产品介绍", description: "45 秒英文视频，介绍二通与三通配置、接口形式、膜片材料及节能选项。" },
+  it: { title: "Elettrovalvole in miniatura SV10: panoramica", description: "Video in inglese di 45 secondi sulle configurazioni a due e tre vie, gli attacchi, i materiali della membrana e le opzioni a risparmio energetico." },
+  de: { title: "Miniatur-Magnetventile der Reihe SV10", description: "45-sekündiges Video auf Englisch zu Ausführungen mit zwei und drei Wegen, Anschlussarten, Membranwerkstoffen und Energiesparoptionen." },
   en: { title: sv10Video.title, description: "45-second English overview of two-way and three-way configurations, connection styles, diaphragm materials and power-saving options." },
   es: { title: "Presentación de las electroválvulas miniatura SV10", description: "Vídeo en inglés de 45 segundos sobre configuraciones de 2 y 3 vías, conexiones, materiales del diafragma y opciones de ahorro energético." },
   fr: { title: "Présentation des électrovannes miniatures SV10", description: "Vidéo en anglais de 45 secondes sur les configurations à 2 et 3 voies, les raccordements, les membranes et les options d’économie d’énergie." },
@@ -95,6 +98,8 @@ const sv10RelatedVideoCopy: Record<RelatedResourcesLocale, { title: string; desc
   ru: { title: "Обзор миниатюрных электромагнитных клапанов SV10", description: "45-секундное видео на английском: двухходовые и трёхходовые исполнения, подключения, материалы мембраны и энергосберегающие опции." },
 };
 
-export function getSv10RelatedVideo(locale: RelatedResourcesLocale): InstallationGuideCard {
-  return { ...sv10EnglishGuide, ...sv10RelatedVideoCopy[locale], tags: ["SV10"] };
+export function getSv10RelatedVideo(locale: RelatedResourcesLocale | "de" | "it"): InstallationGuideCard {
+  return { ...sv10EnglishGuide, ...sv10RelatedVideoCopy[locale], tags: ["SV10"],
+    ...(locale === "it" ? { detailHref: getItalianDraftLink(sv10Video.detailHref).href }
+      : locale === "de" ? {detailHref: sv10Video.detailHref.replace(/^\/en\//, "/de/")} : {}) };
 }

@@ -1,0 +1,312 @@
+{
+  "metadata": {
+    "title": "Ridurre le pulsazioni di portata nelle pompe miniaturizzate a membrana: misure e interventi",
+    "seoTitle": "Pulsazioni di portata nelle pompe miniaturizzate a membrana: riduzione | Foreach Technology",
+    "seoDescription": "Per diagnosticare le pulsazioni, distingui oscillazioni reali ed errori di misura. Confronta smorzamento, tubi e controllo della velocità a parità di condizioni e con misure nel punto di utilizzo.",
+    "coverImage": "/images/resources/technical-articles/diaphragm-pump-rd/covers/dpl60-brushless-horizontal-photo.jpg",
+    "coverAlt": "Vista orizzontale di una pompa miniaturizzata a membrana Foreach DPL60 con testa e motore"
+  },
+  "deck": "Per diagnosticare le pulsazioni, distingui oscillazioni reali ed errori di misura. Confronta smorzamento, tubi e controllo della velocità a parità di condizioni e con misure nel punto di utilizzo.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Se una pompa miniaturizzata a membrana produce pulsazioni di portata eccessive, rilevare prima la forma d'onda effettiva e il volume erogato al carico. Verificare aspirazione, alimentazione elettrica e misura prima di confrontare smorzamento, tubi o velocità. Una lettura che oscilla sul misuratore non dimostra un guasto né quantifica l'ampiezza reale."
+    },
+    {
+      "type": "paragraph",
+      "text": "Erogazione periodica, calo del volume accumulato ed errori di campionamento richiedono risposte diverse. Valutare la prima rispetto all'applicazione, indagare punto di lavoro o guasto per il secondo e correggere la catena di misura per il terzo. Un filtro intenso sul display può soltanto far apparire stabile il numero."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Portata media e istantanea rispondono a esigenze diverse",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lo spostamento alternativo e il movimento delle valvole producono una portata in mandata variabile nel tempo. Tubi, filtri e carico a valle collegano queste variazioni alla pressione. Più membrane sfasate o uno smorzatore compatibile sono possibili soluzioni. Misurarne l'effetto al carico effettivo prima di specificare le pulsazioni."
+        },
+        {
+          "type": "paragraph",
+          "text": "La portata media descrive l'erogazione in un intervallo. Quella istantanea descrive come il volume raggiunge il carico. Due forme d'onda possono avere la stessa media e picchi, pause e brevi riflussi differenti. Il riempimento di un serbatoio può dipendere soprattutto dal volume totale. Celle di flusso, dosaggi brevi e carichi sensibili alla pressione possono dipendere anche dalla forma d'onda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Specificare punto di misura e intervallo. Una misura vicino alla mandata e una dopo uno smorzatore a valle non sono condizioni equivalenti."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/diaphragm-pump-rd/it/02.svg",
+          "alt": "Stessa media e portata istantanea diversa",
+          "width": 1000,
+          "height": 650,
+          "caption": "Schema di principio. Curve sintetiche con stessa media e ampiezze diverse. La portata è normalizzata e le curve non sono misure Foreach."
+        }
+      ]
+    },
+    {
+      "title": "Verificare il volume erogato prima di interpretare la forma d'onda",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nelle stesse condizioni idrauliche, pesare il liquido netto raccolto in un intervallo definito e convertire la massa in volume usando la densità alla temperatura effettiva. La variazione di massa nel tempo è anche il principio del riferimento NIST per la portata di liquidi. L'accuratezza del suo apparato non si trasferisce alla prova al banco qui proposta. [N1]"
+        },
+        {
+          "type": "paragraph",
+          "text": "Con massa in g, densità in g/mL e tempo in s, la portata media in mL/min è 60 × massa netta ÷ densità ÷ tempo di raccolta. Per liquidi diversi dall'acqua non assumere densità pari a 1. Tenere conto di evaporazione, schizzi e liquido trattenuto sulle superfici di raccolta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Usare gli stessi limiti temporali di misura. Confrontare tutto l'avviamento del misuratore con la raccolta del solo regime stabile porta a conclusioni errate. Rimuovere ugello o componente di contropressione per raccogliere il liquido cambia il punto di lavoro. Per portata stabile, attendere che pressione e volume accumulato si stabilizzino e usare intervalli identici. Per cicli di avvio e arresto, includere ciclo completo, variazioni del volume accumulato nei tubi e scarico dopo l'arresto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ripetere intervalli di uguale durata e conservare massa raccolta, totale misurato e pressione. Una corrispondenza stabile sostiene la coerenza dell'erogazione, anche se il segnale può mostrare vere pulsazioni. Se la pesata è stabile ma la media dello strumento cambia, controllare campo, taratura, campionamento e bolle. Se cambiano entrambe, indagare variazioni effettive di erogazione."
+        }
+      ]
+    },
+    {
+      "title": "Frequenza di aggiornamento del display e banda di misura sono distinte",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La catena comprende risposta del sensore, campionamento e media interni, letture via comunicazione, filtri software e aggiornamento dello schermo. Possono avere tempi diversi. Leggere ripetutamente lo stesso dato non crea nuovi campioni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un campionamento insufficiente del flusso pulsante può produrre aliasing. Se il display si aggiorna lentamente, acquisire prima un numero adeguato di campioni nella banda effettiva e poi calcolare la media nell'intervallo richiesto. Trigger, durata della misura e medie interne influiscono sull'acquisizione. La sola velocità di lettura non determina la banda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Confermare risposta dinamica, fluido di taratura e campo utile prima di scegliere frequenza di campionamento e filtro anti-aliasing. Superare due volte la frequenza massima d'interesse è solo un requisito di base. Per misurare con precisione picchi stretti servono banda e risoluzione temporale adeguate. Concordare le impostazioni con il fornitore del misuratore."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una media nel campo ammesso non esclude la saturazione dei picchi. Se sono possibili riflussi brevi, confermare la misura bidirezionale e l'integrazione con il segno corretto."
+        }
+      ]
+    },
+    {
+      "title": "Interpretare la forma d'onda insieme agli altri segnali",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Registrare portata, pressioni di ingresso e uscita, retroazione del motore o tensione alla pompa sulla stessa base temporale. Un tubo trasparente aiuta a localizzare le bolle. Il loro aspetto da solo non distingue ingresso d'aria, rilascio di gas disciolto e formazione locale di vapore. Controllare insieme taratura per il fluido, risposta del sensore alle alte frequenze, bolle e disturbi meccanici per distinguere gli errori di misura dalle variazioni reali."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Osservazione",
+            "Primo controllo",
+            "Possibile causa da approfondire"
+          ],
+          "rows": [
+            [
+              "Periodo costante e totale stabile",
+              "Confrontare velocità e pressione in sincronia",
+              "Ciclo della pompa e dinamica del circuito"
+            ],
+            [
+              "Interruzioni intermittenti con bolle",
+              "Prima comparsa delle bolle e pressione di ingresso",
+              "Ingressi d'aria, alimentazione insufficiente o rilascio di gas"
+            ],
+            [
+              "Media più bassa dopo l'aggiunta di un filtro",
+              "Perdita di carico del componente e punto di lavoro",
+              "Più resistenza o stato del filtro"
+            ],
+            [
+              "La media cambia con le impostazioni di acquisizione",
+              "Campionamento effettivo, campo e volume accumulato",
+              "Aliasing, saturazione o elaborazione"
+            ],
+            [
+              "La portata cambia con velocità o tensione",
+              "Alimentazione e comando",
+              "Instabilità elettrica o di controllo"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Questi sono indizi diagnostici, senza una corrispondenza univoca con i guasti. Un picco di pressione non si converte direttamente in portata istantanea. La relazione dipende da resistenza dinamica e punto di misura."
+        }
+      ]
+    },
+    {
+      "title": "Lo smorzamento modifica anche la risposta del circuito",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se erogazione e misura sono corrette ma il carico non tollera la forma d'onda, valutare uno smorzatore compatibile, la cedevolezza dei tubi, l'intervallo di velocità ammesso o la configurazione della pompa. Gli smorzatori accumulano e rilasciano liquido in fasi diverse della pressione. Scegliere secondo pressione di esercizio, fluido, attacchi e spazio disponibile."
+        },
+        {
+          "type": "paragraph",
+          "text": "Una cedevolezza maggiore può allungare la salita della pressione e rilasciare liquido dopo l'arresto. Tubi morbidi più lunghi cambiano anche resistenza e volume di adescamento. Ricontrollare avviamento, portata media a regime e volume dopo arresto oltre alla regolarità della forma d'onda."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ogni variazione di velocità richiede una nuova verifica del punto di lavoro. A bassa velocità, risposta delle valvole e volume effettivo per ciclo possono non restare proporzionali. Nel controllo in anello chiuso, verificare campionamento, filtri e dinamica dell'attuatore, perché il controllore non insegua ogni impulso e faccia oscillare il comando del motore. Usare solo le interfacce supportate dalla configurazione."
+        }
+      ]
+    },
+    {
+      "title": "Confrontare gli interventi di riduzione al carico",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Intervento",
+            "Scopo",
+            "Che cosa ricontrollare"
+          ],
+          "rows": [
+            [
+              "Riparare ingressi d'aria, alimentazione insufficiente o variazioni di tensione",
+              "Rimuovere oscillazioni anomale sovrapposte al ciclo della pompa",
+              "Livello minimo, bolle, tensione ai capi della pompa ed erogazione totale"
+            ],
+            [
+              "Aggiungere uno smorzatore compatibile",
+              "Ridurre variazioni effettive di pressione o portata al carico",
+              "Pressione nominale, fluido, pulizia, avviamento e volume dopo l'arresto"
+            ],
+            [
+              "Variare cedevolezza o posizione dei tubi",
+              "Modificare la risposta dinamica del circuito",
+              "Perdita di carico, volume di riempimento e forma d'onda al punto di utilizzo"
+            ],
+            [
+              "Regolare la velocità entro il campo ammesso",
+              "Cambiare frequenza di pompaggio e punto di lavoro",
+              "Risposta delle valvole, portata richiesta, campionamento e stabilità dell'anello"
+            ],
+            [
+              "Confrontare strutture o configurazioni di pompaggio",
+              "Modificare la pulsazione all'origine",
+              "Misure a parità di funzione, oltre al tipo di motore"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Definire la pulsazione ridotta per un fluido, una portata, una contropressione, un punto di misura e una banda specifici. Registrare variazione ammessa e metodo di calcolo. Un display fortemente filtrato non specifica le prestazioni idrauliche."
+        }
+      ]
+    },
+    {
+      "title": "Valutare la serie Foreach DPL a parità di condizioni",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le specifiche DPL30, DPL60 e DPL30H riportano portata a vuoto e curve portata-pressione per scegliere un primo punto di lavoro. Non mostrano pulsazioni istantanee né specificano ampiezza picco-picco, spettro o attenuazione in ogni condizione. [F1–F3]"
+        },
+        {
+          "type": "paragraph",
+          "text": "I 600 mL/min della DPL60 non dimostrano pulsazioni maggiori della DPL30. Una versione senza spazzole non è automaticamente a bassa pulsazione. Confrontare materiali, velocità, aspirazione e circuito a valle nelle stesse condizioni."
+        },
+        {
+          "type": "paragraph",
+          "text": "Conservare portata media e durata, picchi e minimi istantanei, forma d'onda della pressione, banda effettiva, punto di misura al carico, temperatura, bolle e codice modello completo. I limiti di accettazione derivano dai requisiti di portata, pressione e volume dello strumento, senza applicare una percentuale generica."
+        }
+      ]
+    },
+    {
+      "title": "Specifiche e riferimenti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I parametri del prodotto provengono dalle specifiche Foreach qui sotto. Verificare spiegazioni tecniche e prove proposte per modello e condizioni operative effettivi."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+              "label": "[F1] Specifica Foreach DPL30 in cinese (A04)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+              "label": "[F2] Specifica Foreach DPL60 in cinese (A02)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
+              "label": "[F3] Specifica Foreach DPL30H in cinese (A00)",
+              "suffix": "pagg. 5–6: prestazioni e configurazione; pagg. 3–4: montaggio"
+            },
+            {
+              "href": "https://www.nist.gov/laboratories/tools-instruments/gravimetric-standard-liquid-micro-flow",
+              "label": "[N1] NIST: riferimento gravimetrico per microportate di liquido"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Guide correlate per selezione e convalida",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/self-priming-miniature-liquid-diaphragm-pump-selection/",
+              "label": "Autoadescamento e tempi di avviamento"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-noise-vibration-reduction/",
+              "label": "Riduzione di rumore e vibrazioni"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-backflow-check-valve/",
+              "label": "Riflusso a pompa ferma e prevenzione del sifonamento"
+            },
+            {
+              "href": "/resources/technical-articles/micro-diaphragm-pump-materials-selection/",
+              "label": "Compatibilità dei materiali a contatto"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Curve portata-pressione e punti di lavoro"
+            },
+            {
+              "href": "/resources/technical-articles/brushless-diaphragm-pump-2-wire-vs-5-wire/",
+              "label": "Controllo delle pompe senza spazzole a due e cinque fili"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "Scelta delle pompe miniaturizzate a membrana per liquidi"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/",
+              "label": "Gamma di pompe miniaturizzate a membrana"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Una pesata stabile dimostra che le pulsazioni non influiscono sullo strumento?",
+      "answer": "La pesata convalida il volume accumulato. Cicli brevi e componenti sensibili alla pressione possono comunque risentire delle variazioni istantanee."
+    },
+    {
+      "question": "Un filtro più forte sul misuratore di portata risolve il problema?",
+      "answer": "Il filtro cambia la visualizzazione e il ritardo di controllo. Non elimina direttamente le oscillazioni reali. Confrontare dati grezzi e totali."
+    },
+    {
+      "question": "Conviene aggiungere subito uno smorzatore?",
+      "answer": "Escludere prima ingressi d'aria ed errori di campo o campionamento. Con lo smorzatore verificare pulizia, riempimento, risposta e scarico dopo arresto."
+    }
+  ],
+  "cta": {
+    "title": "Valuta la scelta della pompa a membrana per liquidi",
+    "description": "Indica fluido effettivo, portata richiesta, pressioni di ingresso e mandata, tubi e condizioni di avviamento e arresto per definire modello, materiali e verifiche.",
+    "contactLabel": "Contatta l'assistenza tecnica",
+    "productsLabel": "Visualizza le pompe miniaturizzate a membrana per liquidi",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

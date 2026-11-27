@@ -1,8 +1,12 @@
 import styles from "../NewsArticleClient.module.css";
 
+import hindiCopy from "@/data/resources/news/adlm-2026-departure.hi.json";
+import italianCopy from "@/data/resources/news/adlm-2026-departure.it.json";
+
 type SupportedLocale =
   | "zh-CN"
   | "en"
+  | "de"
   | "es"
   | "fr"
   | "ko"
@@ -50,6 +54,50 @@ export type AdlmSupportCopy = {
 };
 
 const ARTICLE_COPY: Record<SupportedLocale, ArticleCopy> = {
+  de: {
+    introductionTitle: "Treffen Sie FOREACH in Anaheim",
+    introductionParagraphs: [
+      "FOREACH nimmt an der ADLM 2026 teil, die vom 26. bis 30. Juli 2026 in Anaheim, Kalifornien, stattfindet.",
+      "Am Stand 4105 bespricht unser Team mit Geräteherstellern, Ingenieuren und Branchenpartnern Aufgaben der Fluidikregelung, Komponentenauswahl und Systemintegration.",
+    ],
+    eventInformationTitle: "Informationen zur Messe",
+    eventInformation: [
+      { label: "Veranstaltung", value: "ADLM 2026" },
+      { label: "Datum", value: "26.–30. Juli 2026" },
+      { label: "Ort", value: "Anaheim, Kalifornien, USA" },
+      { label: "Stand", value: "4105" },
+    ],
+    presentationTitle: "Was wir zeigen",
+    presentationParagraphs: [
+      "Unser Messeangebot deckt wichtige Fluidikfunktionen ab: präzise Dosierung, Flüssigkeitstransfer, Umschalten von Flüssigkeitswegen, Drucküberwachung, Blasenerkennung und zuverlässige Anschlüsse.",
+    ],
+    presentationLabel: "Vorgestellte Lösung",
+    presentationItems: [
+      { title: "Präzisionspumpen", description: "Für genaue Dosierung, Flüssigkeitstransfer und automatisiertes Liquid Handling." },
+      { title: "Miniaturventile", description: "Zum Umschalten, Absperren und Führen von Flüssigkeiten in komplexen Kreisläufen." },
+      { title: "Fluidik-Fittings und Schläuche", description: "Für unterschiedliche Leitungsgrößen, Gewinde, Werkstoffe und Medien." },
+      { title: "Druckmessung und Blasenerkennung", description: "Zur Überwachung des Fluidikkreislaufs und des Gerätezustands." },
+      { title: "Kundenspezifische Fluidiklösungen", description: "Anwendungsbezogene Unterstützung von der Komponentenauswahl bis zur Systemintegration." },
+      { title: "Kompatibilität und Alternativen", description: "Unterstützung bei der Beurteilung der Werkstoffverträglichkeit und beim Ersatz vorhandener Komponenten." },
+    ],
+    applicationTitle: "Technische Unterstützung für Geräteanwendungen",
+    applicationParagraphs: [
+      "FOREACH unterstützt Anwendungen in In-vitro-Diagnostik, Life Sciences, Analysengerätebau und Laborautomation.",
+      "Neben der Komponentenlieferung unterstützt unser Technikteam die Prüfung der Werkstoffverträglichkeit, Produktauswahl, Bewertung von Alternativen und Fluidikintegration.",
+    ],
+    experienceTitle: "Erfahrung in präziser Fluidikregelung",
+    experienceParagraphs: [
+      "FOREACH entwickelt und industrialisiert Präzisionsfluidik für Pumpen, Ventile, Sonden, Fittings, Schläuche, Sensoren und integrierte Systeme.",
+      "Wir unterstützen Geräteentwickler dabei, die Genauigkeit der Fluidik zu erhöhen, die Integration zu erleichtern und die Anforderungen kompakter, zunehmend komplexer Systeme zu erfüllen.",
+    ],
+    recognitionTitle: "Fortlaufende Investitionen in technische Kompetenz",
+    recognitionParagraph: "Auszeichnungen für spezialisierte Innovation und dynamisches Wachstum in China würdigen die Investitionen von FOREACH in Produktentwicklung, technische Kompetenz und Fertigung.",
+    recognitionLabel: "Auszeichnung",
+    recognitionItems: [
+      { title: "National anerkanntes spezialisiertes und innovatives Unternehmen", description: "Anerkennung für Spezialisierung, technische Ausrichtung und Produktinnovation." },
+      { title: "„Gazelle Enterprise“ in Shenzhen", description: "Anerkennung für Innovationsfähigkeit und nachhaltiges Unternehmenswachstum." },
+    ],
+  },
   "zh-CN": {
     introductionTitle: "恒永达将参加 ADLM 2026",
     introductionParagraphs: [
@@ -655,6 +703,12 @@ const SUPPORT_COPY: Record<
   SupportedLocale,
   AdlmSupportCopy
 > = {
+  de: {
+    title: "Besuchen Sie FOREACH am Stand 4105",
+    description: "Ob Sie neue Fluidikkomponenten, Alternativen für bestehende Bauteile oder Unterstützung bei der Werkstoffverträglichkeit und Systemintegration suchen: Besprechen Sie Ihre Anwendung mit uns am Stand 4105.",
+    buttonLabel: "Kontakt aufnehmen",
+    href: "/de/contact/",
+  },
   "zh-CN": {
     title: "诚邀莅临 4105 展位",
     description:
@@ -707,6 +761,7 @@ const SUPPORT_COPY: Record<
 function normalizeLocale(locale: string): SupportedLocale {
   if (
     locale === "en" ||
+    locale === "de" ||
     locale === "es" ||
     locale === "fr" ||
     locale === "ko" ||
@@ -721,7 +776,7 @@ function normalizeLocale(locale: string): SupportedLocale {
 export function getAdlm2026DepartureSupportCopy(
   locale: string
 ): AdlmSupportCopy {
-  return SUPPORT_COPY[normalizeLocale(locale)];
+  return locale === "hi" ? hindiCopy.support : locale === "it" ? italianCopy.support : SUPPORT_COPY[normalizeLocale(locale)];
 }
 
 type Adlm2026DepartureArticleProps = {
@@ -731,7 +786,7 @@ type Adlm2026DepartureArticleProps = {
 export default function Adlm2026DepartureArticle({
   locale,
 }: Adlm2026DepartureArticleProps) {
-  const copy = ARTICLE_COPY[normalizeLocale(locale)];
+  const copy = locale === "hi" ? hindiCopy.article : locale === "it" ? italianCopy.article : ARTICLE_COPY[normalizeLocale(locale)];
 
   return (
     <>

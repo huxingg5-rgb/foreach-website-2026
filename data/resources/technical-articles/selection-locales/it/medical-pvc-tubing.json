@@ -1,0 +1,613 @@
+{
+  "kind": "selection",
+  "family": "tubing",
+  "footerProducts": [
+    {
+      "id": "pvc-tubing",
+      "title": "Tubi in cloruro di polivinile (PVC)",
+      "href": "/en/products/tubing/pvc-tubing/details/",
+      "imageSrc": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+      "imageAlt": "Rotolo di tubo flessibile trasparente in PVC FOREACH con estremità visibile",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tpu-tubing",
+      "title": "Tubi in poliuretano termoplastico (TPU)",
+      "href": "/en/products/tubing/tpu-tubing/details/",
+      "imageSrc": "/images/products/tubing/tpu-tubing/foreach-flexible-tpu-tubing-instrument-routing.webp",
+      "imageAlt": "Tubi flessibili FOREACH in TPU disposti in curve per la posa negli strumenti",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "fep-tubing",
+      "title": "Tubi in etilene propilene fluorurato (FEP)",
+      "href": "/en/products/tubing/fep-tubing/details/",
+      "imageSrc": "/images/products/tubing/fep-tubing/foreach-fep-tubing-clear-black-options.webp",
+      "imageAlt": "Tubi FOREACH in FEP nelle versioni trasparente e nera",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "ptfe-tubing",
+      "title": "Tubi in politetrafluoroetilene (PTFE)",
+      "href": "/en/products/tubing/ptfe-tubing/details/",
+      "imageSrc": "/images/products/tubing/ptfe-tubing/foreach-ptfe-tubing-natural-coil.webp",
+      "imageAlt": "Rotolo di tubo FOREACH in PTFE naturale con estremità tagliata",
+      "imageAspectRatio": 1
+    }
+  ],
+  "copy": {
+    "metadata": {
+      "title": "Tubi in PVC per uso medicale: come valutare tolleranze, produzione in camera bianca e certificazioni",
+      "seoTitle": "Tubi in PVC per uso medicale: tolleranze, camera bianca ISO 8 e certificazioni | FOREACH",
+      "seoDescription": "Che cosa distingue il PVC per uso medicale dai tubi vinilici da ferramenta: proprietà, tolleranze dei diametri e misure in linea, estrusione in camera bianca ISO 8, documentazione ISO 13485 e RoHS.",
+      "coverImage": "/images/resources/technical-articles/medical-pvc-tubing/foreach-cleanroom-tubing-extrusion-line.webp",
+      "coverAlt": "Operatore in tuta da camera bianca con cappuccio mentre regola il pannello di controllo di un estrusore di tubi nella camera bianca ISO 8 di FOREACH"
+    },
+    "deck": "I tubi in PVC per uso medicale e quelli vinilici generici partono dallo stesso polimero. A distinguerli sono mescola e plastificante, costanza dimensionale, ambiente produttivo e documentazione del lotto. La guida illustra quattro verifiche su materiale, precisione dimensionale, produzione in camera bianca e certificazioni, e spiega come FOREACH estrude e controlla i tubi in PVC in camera bianca ISO 8 (Classe 100,000).",
+    "leadBlocks": [
+      {
+        "type": "paragraph",
+        "text": "I tubi in PVC per uso medicale sono tubi flessibili in cloruro di polivinile per dispositivi medici, sistemi IVD e strumenti analitici. Si usano in genere per linee di lavaggio, reagenti, campioni e scarico, oltre che per gas a bassa pressione. Appartengono alla stessa famiglia chimica dei tubi vinilici trasparenti in vendita in ferramenta e nei negozi di acquari. Le differenze riguardano il controllo della mescola, delle dimensioni, dell'ambiente produttivo e della documentazione."
+      },
+      {
+        "type": "paragraph",
+        "text": "Nella specifica, verificare in ordine quattro aspetti: idoneità del materiale a fluido e temperatura, tolleranze dei diametri interno ed esterno per tenuta dei raccordi e uniformità della portata, controllo di particelle e residui nel lume durante la produzione, e disponibilità per ogni lotto di un sistema qualità certificato, rapporti di conformità e registri di tracciabilità. In fondo alla guida c'è una lista di controllo da allegare alla richiesta di offerta."
+      }
+    ],
+    "sections": [
+      {
+        "title": "Tubi in PVC per uso medicale e tubi vinilici generici a confronto",
+        "tocLabel": "Uso medicale e generico",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Entrambi sono in PVC plastificato. Sono determinanti la formulazione definita, il processo controllato e la possibilità di risalire all'origine dei problemi. La tabella riassume le differenze più comuni."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Verifica",
+              "Tubi vinilici per uso generico",
+              "Tubi per dispositivi medici e strumenti"
+            ],
+            "rows": [
+              [
+                "Materia prima",
+                "Può contenere rimacinato o PVC riciclato. La composizione tra lotti è difficile da tracciare",
+                "Mescola vergine con formulazione definita e registri dei lotti di resina"
+              ],
+              [
+                "Plastificante",
+                "Spesso DEHP o altri ortoftalati, raramente dichiarati",
+                "Sistema di plastificanti dichiarato. Sono disponibili rapporti di prova sulle sostanze soggette a restrizioni"
+              ],
+              [
+                "Controllo dimensionale",
+                "Controlli a campione. Le schede spesso riportano soltanto le misure nominali",
+                "Diametro esterno misurato in linea durante l'estrusione. Diametro interno e parete verificati per lotto in base alle tolleranze dichiarate"
+              ],
+              [
+                "Ambiente produttivo",
+                "Reparto produttivo standard",
+                "Estrusione in camera bianca per limitare particelle, fibre e olio nel tubo"
+              ],
+              [
+                "Documentazione",
+                "In genere senza registrazioni di lotto",
+                "Produzione con sistema di gestione della qualità certificato e registri tracciabili di materiali, processo e controlli"
+              ],
+              [
+                "Impieghi tipici",
+                "Giardinaggio, scarichi, acquari, trasferimento generico di acqua",
+                "Linee di fluidi e gas per dispositivi medici, IVD, strumenti analitici e automazione di laboratorio"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La dicitura «grado medicale» implica di solito anche dati di biocompatibilità della mescola, ad esempio prove USP Class VI o ISO 10993. I dati riguardano una formulazione specifica. Se il tubo entra in contatto con pazienti o soluzioni farmaceutiche o è destinato a un dispositivo regolamentato, richiedere i dati per il grado esatto e completare la valutazione sul dispositivo."
+          }
+        ]
+      },
+      {
+        "title": "Proprietà dei tubi in PVC",
+        "tocLabel": "Proprietà del materiale",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Il tubo in PVC è trasparente, flessibile, poco permeabile ai gas ed economico. Permette di vedere liquido e bolle ed è adatto a molti fluidi acquosi a temperatura ambiente e bassa pressione. Ha un intervallo termico moderato, una bassa resistenza alla maggior parte dei solventi organici e plastificanti che possono migrare o essere estratti."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Proprietà",
+              "Tubi FOREACH in PVC (valori tipici)",
+              "Implicazioni per il progetto"
+            ],
+            "rows": [
+              [
+                "Durezza (Shore A)",
+                "55A / 65A",
+                "Il 55A è più morbido e più facile da inserire sul portagomma. Il 65A mantiene la forma e resiste meglio al collasso in depressione"
+              ],
+              [
+                "Diametro interno / esterno",
+                "0.8–19.1 mm / 2.4–25.4 mm",
+                "Lo stesso diametro interno può avere più spessori. Specificare diametro interno × diametro esterno"
+              ],
+              [
+                "Temperatura di esercizio",
+                "da -42 a 75 °C",
+                "Valore tipico da verificare con fluido, pressione e raccordi effettivi"
+              ],
+              [
+                "Temperatura di fragilità",
+                "-46 °C",
+                "Prevedere un margine negli ambienti freddi"
+              ],
+              [
+                "Resistenza a trazione",
+                "14.3 MPa",
+                "Adatto a linee a bassa pressione"
+              ],
+              [
+                "Densità / assorbimento d'acqua",
+                "1.18 g/cm³ / 0.12%",
+                "—"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Il PVC diventa flessibile con un plastificante. Le mescole tradizionali usano ortoftalati come il DEHP. La direttiva delegata (UE) 2015/863 della Commissione, spesso chiamata RoHS 3, ha aggiunto DEHP, BBP, DBP e DIBP all'elenco delle sostanze soggette a restrizioni RoHS, con limite dello 0.1% in peso nei materiali omogenei. Per i dispositivi medici, compresi gli IVD, e gli strumenti di monitoraggio e controllo, la restrizione si applica dal 22 luglio 2021. Per gli strumenti destinati all'UE, il rapporto RoHS del tubo dovrebbe coprire tutte e quattro le sostanze."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il PVC plastificato può anche trattenere componenti del fluido. Farmaci lipofili come nitroglicerina e diazepam possono essere assorbiti dal PVC, mentre proteine come l'insulina si adsorbono sulle pareti. Per reagenti, campioni o standard sensibili alla concentrazione, confrontare la concentrazione prima e dopo il passaggio con il fluido effettivo. Per solventi organici, passare a tubi in fluoropolimero come PTFE o FEP."
+          },
+          {
+            "type": "notice",
+            "label": "Documentazione FOREACH",
+            "text": "Per i tubi FOREACH in PVC sono disponibili rapporti di prova RoHS per codice articolo. Se servono risultati distinti per DEHP, BBP, DBP e DIBP, indicarlo nella richiesta."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Tubi in PVC: durezza, posa e raccordi per tubi flessibili",
+                "href": "/en/resources/technical-articles/what-is-pvc-tubing/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Precisione dimensionale: perché contano le tolleranze dei diametri interno ed esterno",
+        "tocLabel": "Precisione dimensionale",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Per i tubi flessibili, la precisione richiede costanza di diametri interno ed esterno, spessore della parete, concentricità e ovalità, oltre alla lunghezza di taglio per i tubi a misura. Due rotoli con la stessa misura nominale possono comportarsi diversamente nello stesso strumento se cambiano le dimensioni effettive."
+          },
+          {
+            "type": "list",
+            "items": [
+              "Tenuta e ritegno: il portagomma fa tenuta con la dilatazione elastica del lume e della parete. I raccordi a innesto che fanno presa all'esterno richiedono un diametro esterno entro tolleranza. Un tubo troppo grande può perdere o sfilarsi. Un tubo troppo piccolo è difficile da montare e può danneggiarsi all'estremità.",
+              "Uniformità di portata: in regime laminare, la resistenza è inversamente proporzionale alla quarta potenza del diametro interno. Una piccola deviazione del diametro interno produce una variazione di resistenza molto più ampia. Portata, tempo di adescamento e prestazioni di lavaggio possono quindi variare tra unità.",
+              "Uniformità della parete: tubi con parete irregolare o ovalità possono collassare localmente in depressione e strozzarsi più facilmente in curva."
+            ],
+            "ordered": true
+          },
+          {
+            "type": "formula",
+            "expression": "R = 128μL / (πd⁴); uno scostamento del diametro interno di ±5% varia la resistenza di circa −18% a +23%",
+            "note": "R = resistenza idraulica, μ = viscosità dinamica, L = lunghezza, d = diametro interno (flusso laminare, tubo rigido circolare). Per un tubo con diametro interno di 0.8 mm, ±0.05 mm cambia la resistenza di circa −22% a +29%. Quanto più piccolo è il passaggio, tanto più conta una determinata tolleranza assoluta."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/medical-pvc-tubing/foreach-inline-diameter-gauge-clear-tubing.webp",
+            "width": 1600,
+            "height": 900,
+            "alt": "Misuratore di diametro in linea senza contatto su una linea di estrusione con tubo trasparente nella finestra di misura sui rulli di guida",
+            "caption": "Misuratore di diametro in linea su un estrusore FOREACH. Il tubo passa continuamente nella finestra di misura e il suo diametro esterno viene misurato durante la produzione."
+          },
+          {
+            "type": "paragraph",
+            "text": "Le linee di estrusione FOREACH usano un misuratore di diametro in linea senza contatto della serie InteliSENS DGk di Proton Products. Misura il diametro esterno su più assi contemporaneamente con ottica LED/CCD a stato solido, calcola diametro medio e ovalità e può generare un allarme se il diametro esce dalla tolleranza. La misura in linea copre tutta la lunghezza di ciascun rotolo, mentre il controllo a campione richiede di fermare la linea."
+          },
+          {
+            "type": "paragraph",
+            "text": "Il misuratore esterno non rileva il lume. Diametro interno e spessore si misurano fuori linea su sezioni tagliate. Il laboratorio qualità FOREACH usa uno strumento di misura per immagini e sistemi di visione per controllare dimensioni e particolari. Per ogni misura sono definite tolleranze dei diametri e un piano di campionamento, disponibili con la specifica."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Verifica diametro interno e perdita di carico con il calcolatore della resistenza al flusso",
+                "href": "/en/resources/calculators/fluid-resistance/"
+              },
+              {
+                "label": "Come si calcola il rapporto di dilatazione sul portagomma",
+                "href": "/en/resources/technical-articles/barbed-fitting-expansion-ratio/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Produzione in camera bianca: che cosa indica ISO 8 (Classe 100,000)",
+        "tocLabel": "Produzione in camera bianca",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Molte schede dei fornitori riportano ancora «Classe 100,000». La designazione deriva dallo standard federale statunitense FED-STD-209E, annullato nel 2001. La norma attuale è ISO 14644-1 e la classe equivalente è ISO 8: non oltre 3,520,000 particelle ≥0.5 µm per metro cubo di aria. La normale aria esterna urbana contiene circa 35 milioni di particelle ed è paragonabile alla classe ISO 9."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Classe ISO 14644-1",
+              "Precedente classe FED-STD-209E",
+              "Numero massimo di particelle ≥0.5 µm per m³"
+            ],
+            "rows": [
+              [
+                "ISO 5",
+                "Classe 100",
+                "3,520"
+              ],
+              [
+                "ISO 6",
+                "Classe 1,000",
+                "35,200"
+              ],
+              [
+                "ISO 7",
+                "Classe 10,000",
+                "352,000"
+              ],
+              [
+                "ISO 8",
+                "Classe 100,000",
+                "3,520,000"
+              ],
+              [
+                "ISO 9",
+                "— (approssimativamente aria di un ambiente ordinario)",
+                "35,200,000"
+              ]
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/medical-pvc-tubing/foreach-cleanroom-tubing-extrusion-line.webp",
+            "width": 1600,
+            "height": 900,
+            "alt": "Operatore in tuta da camera bianca con cappuccio mentre regola il pannello di controllo di un estrusore di tubi nella camera bianca ISO 8 di FOREACH",
+            "caption": "Zona di estrusione FOREACH in camera bianca. Un operatore in tuta con cappuccio e mascherina imposta i parametri di processo dal pannello dell'estrusore."
+          },
+          {
+            "type": "paragraph",
+            "text": "FOREACH gestisce le linee di estrusione di tubi in una camera bianca ISO 8 (Classe 100,000). Aria filtrata con HEPA, cascata di pressione, vestizione e trasferimento controllato dei materiali tengono particelle, fibre, capelli e olio lontani dal fuso, dalla parete e dalle estremità aperte del tubo. Nei tubi trasparenti la contaminazione può comparire come punti neri o residui nel lume e in seguito come fondo particellare nel dosaggio."
+          },
+          {
+            "type": "paragraph",
+            "text": "La camera bianca controlla la contaminazione particellare e microbica durante la produzione. La sterilità richiede un passaggio di sterilizzazione convalidato. La biocompatibilità dipende dai dati di prova della mescola e del tubo finito."
+          },
+          {
+            "type": "paragraph",
+            "text": "Come riferimento, il limite di particelle a riposo della classe ISO 8 corrisponde a quello del Grado D dell'Allegato 1 delle GMP UE. Gli impianti farmaceutici usano quel grado per le fasi meno critiche, ad esempio la movimentazione di componenti dopo il lavaggio. Una camera bianca ISO 8 per l'estrusione controlla la pulizia del prodotto. La lavorazione asettica richiede condizioni distinte."
+          }
+        ]
+      },
+      {
+        "title": "Come FOREACH estrude i tubi in PVC",
+        "tocLabel": "Processo di estrusione",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I tubi in PVC si producono fondendo i granuli della mescola in un estrusore. La filiera forma il fuso come tubo, che viene poi raffreddato, calibrato, misurato e avvolto. Nelle linee FOREACH, tutte le fasi seguenti avvengono in camera bianca:"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Movimentazione del materiale: i granuli vengono asciugati secondo i requisiti del materiale e trasferiti con un alimentatore a vuoto chiuso alla tramoggia dell'estrusore, evitando la polvere da sacchi aperti.",
+              "Estrusione: la vite fonde e omogeneizza la mescola e la filiera forma il tubo. Temperature e velocità della vite sono impostate sul pannello di controllo. I dati principali di processo sono registrati nel MES.",
+              "Raffreddamento e calibratura: il tubo entra in una vasca di calibratura raffreddata ad acqua, dove si definiscono i diametri interno ed esterno finali.",
+              "Misura in linea: il tubo finito passa continuamente nel misuratore, che rileva diametro esterno e ovalità in tempo reale e segnala il superamento dei limiti impostati.",
+              "Traino, avvolgimento e ispezione: il tubo viene avvolto o tagliato a misura, controllato fuori linea per diametro interno, spessore e aspetto, quindi confezionato."
+            ]
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/medical-pvc-tubing/foreach-cleanroom-resin-drying-conveying.webp",
+            "width": 1600,
+            "height": 900,
+            "alt": "Essiccatori del materiale e alimentatori a vuoto delle tramogge in camera bianca",
+            "caption": "Essiccatori e alimentatori a vuoto in camera bianca inviano i granuli all'estrusore attraverso linee chiuse."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/medical-pvc-tubing/foreach-tubing-extrusion-die-sizing.webp",
+            "width": 1600,
+            "height": 900,
+            "alt": "Dettaglio della filiera e dell'ingresso alla calibratura, con il tubo trasparente che esce dalla filiera ed entra nel bagno d'acqua",
+            "caption": "Filiera e ingresso alla calibratura. Il tubo esce dalla filiera ed entra direttamente nel bagno di raffreddamento."
+          },
+          {
+            "type": "figure",
+            "src": "/images/resources/technical-articles/medical-pvc-tubing/foreach-cleanroom-extrusion-cooling-tank.webp",
+            "width": 1600,
+            "height": 900,
+            "alt": "Vasca di raffreddamento e calibratura dei tubi in camera bianca, con diffusori d'aria e illuminazione al soffitto",
+            "caption": "Vasca di raffreddamento e calibratura in camera bianca. Qui il tubo si raffredda prima della misura e del traino."
+          }
+        ]
+      },
+      {
+        "title": "Certificazioni e documentazione: sistema qualità, rapporti di conformità e tracciabilità del lotto",
+        "tocLabel": "Certificazioni",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Se un fornitore dichiara il tubo «certificato», chiedere che cosa è stato certificato. Un certificato del sistema di gestione della qualità attesta il controllo dei processi aziendali. Un rapporto di conformità documenta il rispetto dei limiti per le sostanze soggette a restrizioni. I registri di lotto permettono di risalire alla causa di un problema. I documenti hanno funzioni distinte."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Tipo di evidenza",
+              "Che cosa dimostra",
+              "Disponibile da FOREACH"
+            ],
+            "rows": [
+              [
+                "Sistema di gestione della qualità",
+                "Progettazione, acquisti, produzione, ispezione e consegna sono controllati",
+                "Certificazioni ISO 9001 e ISO 13485"
+              ],
+              [
+                "Conformità dei materiali",
+                "Le sostanze soggette a restrizioni sono sotto i limiti regolamentari",
+                "RoHS e altri rapporti di conformità per codice articolo"
+              ],
+              [
+                "Dati di biocompatibilità",
+                "La mescola o il tubo finito ha superato prove USP Class VI, ISO 10993 o simili",
+                "Disponibilità da confermare per il progetto su richiesta"
+              ],
+              [
+                "Tracciabilità del lotto",
+                "Si possono recuperare lotto di resina, parametri di processo e risultati di controllo",
+                "Dati principali di materiali, processo e controlli registrati in PDM, ERP e MES"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "La norma ISO 13485 riguarda il sistema di gestione della qualità per i dispositivi medici. La certificazione riguarda il sistema del fornitore, compresi progettazione, acquisti, produzione e modifiche. Il singolo tubo richiede una valutazione propria. La certificazione del sistema non attribuisce lo status di dispositivo medico né sostituisce le prove di biocompatibilità."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Sistema qualità FOREACH",
+                "href": "/en/about/quality/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "7 domande da fare a un fornitore di tubi in PVC per uso medicale",
+        "tocLabel": "Lista di controllo per il fornitore",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Inviare queste domande insieme alla richiesta di offerta. Risposte più specifiche possono abbreviare la qualifica."
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "La mescola usa materiale vergine? Ci avviserete prima di cambiare la formulazione o il fornitore della resina?",
+              "Quale plastificante usate? Potete fornire rapporti di prova sulle sostanze soggette a restrizioni? Il rapporto RoHS comprende DEHP, BBP, DBP e DIBP?",
+              "Quali sono le tolleranze di diametro interno, diametro esterno e spessore? Il diametro esterno è misurato in linea? Come si campionano diametro interno e spessore?",
+              "Dove estrudete, tagliate e confezionate i tubi? Qual è la classe della camera bianca e come viene monitorata?",
+              "Quali certificazioni del sistema qualità avete? Sono disponibili dati USP Class VI o ISO 10993 per la mescola o il tubo finito?",
+              "È possibile risalire da ogni spedizione al lotto di resina, alla data di produzione e ai registri di controllo?",
+              "Potete fornire campioni da provare con i nostri fluidi, temperature e raccordi effettivi?"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Potete rivolgere queste domande direttamente a FOREACH. I tecnici confermeranno la documentazione disponibile per ciascun codice articolo."
+          }
+        ]
+      },
+      {
+        "title": "Dimensioni e opzioni su misura per i tubi FOREACH in PVC",
+        "tocLabel": "Dimensioni FOREACH",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "I tubi FOREACH in PVC sono disponibili in durezza 55A e 65A. Si possono acquistare in rotoli, tagliati a misura secondo disegno o assemblati con raccordi. La tabella riepiloga le misure disponibili a catalogo."
+          },
+          {
+            "type": "table",
+            "headers": [
+              "Durezza",
+              "Misure",
+              "Intervallo del diametro interno (mm)",
+              "Intervallo del diametro esterno (mm)"
+            ],
+            "rows": [
+              [
+                "55A",
+                "12",
+                "1.6–11.1",
+                "3.2–15.9"
+              ],
+              [
+                "65A",
+                "21",
+                "0.8–19.1",
+                "2.4–25.4"
+              ]
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Nell'ordine o nella distinta base mantenere codice articolo completo, durezza, diametro interno × diametro esterno e unità di confezione. Per taglio a misura, assemblaggi o dimensioni fuori standard inviare anche fluido, temperatura, pressione o depressione, percorso e disegni dei raccordi. Si potranno così confermare fattibilità, quantità minima e tempi di consegna."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Visualizza tutte le specifiche dei tubi in PVC",
+                "href": "/en/products/tubing/pvc-tubing/"
+              },
+              {
+                "label": "Raccordi a sgancio rapido",
+                "href": "/en/products/fittings/quick-connect-fittings/"
+              },
+              {
+                "label": "Raccordi portagomma",
+                "href": "/en/products/fittings/barbed-fittings/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      },
+      {
+        "title": "Altri materiali per tubi da strumento",
+        "tocLabel": "Tubi correlati",
+        "blocks": [
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Tubi in PVC: durezza, posa e raccordi per tubi flessibili",
+                "href": "/en/resources/technical-articles/what-is-pvc-tubing/"
+              },
+              {
+                "label": "Tubi in PTFE: materiale, resistenza al flusso e scelta dei raccordi",
+                "href": "/en/resources/technical-articles/what-is-ptfe-tubing/"
+              },
+              {
+                "label": "Tubi in FEP: piccolo diametro, trasparenza e raccordi flangiati",
+                "href": "/en/resources/technical-articles/what-is-fep-tubing/"
+              },
+              {
+                "label": "Tubi in PFA: trasferimento di reagenti e controllo della pulizia",
+                "href": "/en/resources/technical-articles/what-is-pfa-tubing/"
+              }
+            ],
+            "ordered": true
+          }
+        ]
+      }
+    ],
+    "faqTitle": "Domande frequenti sui tubi in PVC per uso medicale",
+    "faqItems": [
+      {
+        "question": "1. Perché i tubi in PVC per uso medicale costano più dei tubi vinilici da ferramenta?",
+        "answer": "La differenza deriva dall'intero sistema produttivo e di qualità. Contano la mescola vergine e il sistema di plastificanti dichiarato, il costo della camera bianca, misure in linea, controlli fuori linea e scarti rilevati, oltre a registri di lotto e rapporti di conformità per ogni spedizione. Cambiare il solo plastificante incide in genere relativamente poco. I tubi generici vanno bene per giardino o scarico. Nei circuiti degli strumenti, rilavorazioni e fermi dovuti a scostamenti dimensionali o residui costano in genere molto più della differenza di prezzo."
+      },
+      {
+        "question": "2. I tubi prodotti in camera bianca ISO 8 sono sterili?",
+        "answer": "La camera bianca controlla la contaminazione particellare e microbica in produzione. I tubi vengono spediti senza sterilizzazione. Se serve una linea sterile, il fabbricante del dispositivo o dell'assieme esegue e convalida la sterilizzazione con un metodo adatto alla mescola specifica di PVC."
+      },
+      {
+        "question": "3. I tubi in PVC assorbono farmaci o reagenti?",
+        "answer": "Alcune sostanze sì. I farmaci lipofili come nitroglicerina e diazepam sono assorbiti dal PVC plastificato. Proteine come l'insulina si adsorbono sulla parete interna di tubi di molti materiali. Per reagenti, campioni o standard sensibili alla concentrazione, confrontare le concentrazioni a monte e a valle con il fluido effettivo. Se necessario, ridurre la lunghezza a contatto o passare a PTFE o FEP."
+      },
+      {
+        "question": "4. Che cosa comporta la RoHS per i tubi in PVC negli strumenti venduti nell'UE?",
+        "answer": "La direttiva (UE) 2015/863 (RoHS 3) limita ciascuno tra DEHP, BBP, DBP e DIBP allo 0.1% in peso nei materiali omogenei. La restrizione si applica dal 22 luglio 2021 ai dispositivi medici, compresi gli IVD, e agli strumenti di monitoraggio e controllo. Verificare che il rapporto RoHS del tubo copra tutti e quattro gli ftalati e indicare eventuali requisiti REACH o altri requisiti nella richiesta."
+      },
+      {
+        "question": "5. FOREACH può tagliare tubi in PVC a misura o fornire assemblaggi?",
+        "answer": "Sì. Il tubo è disponibile in rotoli, tagliato a misura secondo disegno o assemblato con portagomma o raccordi a sgancio rapido. Inviare lunghezza, diametri interno ed esterno, durezza, terminali e condizioni di esercizio. I tecnici confermeranno fattibilità, quantità minima e tempi di consegna."
+      }
+    ],
+    "cta": {
+      "title": "Richiedi campioni e documentazione dei tubi in PVC",
+      "description": "Indica applicazione, fluido, diametri interno ed esterno, durezza, lunghezza e documenti richiesti, ad esempio rapporti RoHS o registri di lotto. I tecnici FOREACH ti aiuteranno a confermare la specifica e predisporre i campioni da provare.",
+      "contactLabel": "Contatta un tecnico",
+      "productsLabel": "Visualizza le specifiche dei tubi in PVC",
+      "productsHref": "/en/products/tubing/pvc-tubing/"
+    }
+  },
+  "navigation": [
+    {
+      "id": "medical-vs-general",
+      "label": "Uso medicale e generico"
+    },
+    {
+      "id": "material-properties",
+      "label": "Proprietà del materiale"
+    },
+    {
+      "id": "dimensional-precision",
+      "label": "Precisione dimensionale"
+    },
+    {
+      "id": "cleanroom-production",
+      "label": "Produzione in camera bianca"
+    },
+    {
+      "id": "extrusion-process",
+      "label": "Processo di estrusione"
+    },
+    {
+      "id": "certifications-traceability",
+      "label": "Certificazioni"
+    },
+    {
+      "id": "supplier-checklist",
+      "label": "Lista di controllo per il fornitore"
+    },
+    {
+      "id": "foreach-sizes",
+      "label": "Dimensioni FOREACH"
+    },
+    {
+      "id": "related-tubing",
+      "label": "Tubi correlati"
+    }
+  ],
+  "subject": {
+    "about": [
+      "Tubi in PVC",
+      "Scelta del circuito fluidico dello strumento"
+    ],
+    "mentions": [
+      "tubi in PVC per uso medicale",
+      "tolleranze dimensionali",
+      "camera bianca ISO 8",
+      "ISO 13485"
+    ]
+  },
+  "sidebarProducts": [
+    {
+      "id": "pvc-tubing",
+      "title": "Tubi in cloruro di polivinile (PVC)",
+      "href": "/en/products/tubing/pvc-tubing/details/",
+      "imageSrc": "/images/products/tubing/pvc-tubing/foreach-clear-flexible-pvc-tubing.webp",
+      "imageAlt": "Rotolo di tubo flessibile trasparente in PVC FOREACH con estremità visibile",
+      "imageAspectRatio": 1
+    },
+    {
+      "id": "tpu-tubing",
+      "title": "Tubi in poliuretano termoplastico (TPU)",
+      "href": "/en/products/tubing/tpu-tubing/details/",
+      "imageSrc": "/images/products/tubing/tpu-tubing/foreach-flexible-tpu-tubing-instrument-routing.webp",
+      "imageAlt": "Tubi flessibili FOREACH in TPU disposti in curve per la posa negli strumenti",
+      "imageAspectRatio": 1
+    }
+  ]
+}

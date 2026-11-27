@@ -2,7 +2,9 @@
 // 这个文件的作用：把 HomeNewsSection.tsx 里的右侧新闻列表卡片拆出来，方便后续维护和复用
 // 后端预留说明：这个组件不写死新闻内容，而是通过 props 接收 item 和 detailText，后期后台接口返回新闻列表后可以直接传进来
 
-import Link from "next/link"; // 引入 Next.js 的 Link 组件，用于新闻详情页跳转
+import DraftLink from "@/components/i18n/DraftLink";
+import NativeLink from "next/link";
+import { hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages"; // 引入 Next.js 的 Link 组件，用于新闻详情页跳转
 
 type HomeNewsListItemData = { // 定义单条新闻列表数据类型
   id: string; // 新闻稳定 ID，用于 React 列表 key 或后端数据标识
@@ -15,13 +17,19 @@ type HomeNewsListItemData = { // 定义单条新闻列表数据类型
 
 type HomeNewsListItemProps = { // 定义 HomeNewsListItem 组件接收的参数类型
   item: HomeNewsListItemData; // 当前这一条新闻数据
+  italian?: boolean;
+  hindi?: boolean;
   detailText: string; // “查看详情”按钮文字，支持多语言从父组件传入
 }; // HomeNewsListItemProps 类型定义结束
 
 export default function HomeNewsListItem({ // 定义并导出首页新闻右侧单条新闻卡片组件
   item, // 接收当前新闻数据
-  detailText, // 接收“查看详情”按钮文字
+  detailText,
+  italian = false,
+  hindi = false, // 接收“查看详情”按钮文字
 }: HomeNewsListItemProps) { // 组件参数定义结束
+  const Link = italian || hindi ? NativeLink : DraftLink;
+  const englishFallback = (italian || hindi) && item.href.startsWith("/en/");
   return ( // 返回单条新闻卡片结构
     <article className="home-news-list-item"> {/* 单条新闻卡片最外层 */}
       <img // 新闻缩略图容器开始
@@ -47,8 +55,8 @@ export default function HomeNewsListItem({ // 定义并导出首页新闻右侧�
         <div className="home-news-list-bottom"> {/* 新闻底部区域：日期 + 查看详情 */}
           <span className="home-news-list-date">{item.date}</span> {/* 新闻发布日期 */}
 
-          <Link className="home-news-list-more" href={item.href} prefetch={false}> {/* 查看详情链接 */}
-            {detailText} {/* 查看详情多语言文字 */}
+          <Link className="home-news-list-more" href={item.href} hrefLang={englishFallback ? "en" : undefined} prefetch={false}> {/* 查看详情链接 */}
+            {detailText}{englishFallback ? (hindi ? hindiEnglishFallbackSuffix : italianEnglishFallbackSuffix) : null} {/* 查看详情多语言文字 */}
           </Link> {/* 查看详情链接结束 */}
         </div> {/* 新闻底部区域结束 */}
       </div> {/* 新闻文字内容区域结束 */}

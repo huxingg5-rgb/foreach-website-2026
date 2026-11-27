@@ -1,6 +1,8 @@
+export type VideoGuideLink = { title: string; href: string; hrefLang?: "de" | "it" | "hi" | "en" };
+
 export type VideoGuideDetail = {
   id: string;
-  locale: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
+  locale: "zh-CN" | "en" | "es" | "fr" | "ko" | "ru" | "de" | "it" | "hi";
   title: string;
   seoTitle: string;
   description: string;
@@ -25,14 +27,14 @@ export type VideoGuideDetail = {
     id: string;
     title: string;
     paragraphs: readonly string[];
-    links?: readonly { title: string; href: string }[];
+    links?: readonly VideoGuideLink[];
   }[];
   keywords?: readonly string[];
   productKeys?: readonly string[];
   productHeading: string;
   productIntroduction: string;
-  products: readonly { title: string; href: string }[];
-  seriesLink?: { title: string; href: string };
+  products: readonly VideoGuideLink[];
+  seriesLink?: VideoGuideLink;
   relationKeys: string[];
   featuredProductIds?: string[];
   support: { title: string; description: string };

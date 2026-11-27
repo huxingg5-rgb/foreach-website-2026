@@ -38,6 +38,10 @@ import {
 } from "@/data/resources/fitting-replacement/fitting-replacement-series.config";
 
 import type { FittingReplacementDetailPageData } from "@/services/resources/getFittingReplacementDetailData";
+import { hindiReplacementFieldText } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.hi";
+import { italianReplacementFieldText } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.it";
+import { germanReplacementFieldText } from "@/data/resources/fitting-replacement/fittings/quick-connect/q20/q20.de";
+import { getQuickConnectDrawingHref } from "@/data/products/detail/quick-connect-drawing-assets";
 
 import {
   getParsedFittingField,
@@ -51,7 +55,7 @@ import FittingReplacementFaq from "./FittingReplacementFaq";
 const SERIES_CONFIG = Q20_FITTING_REPLACEMENT_SERIES_CONFIG;
 
 /* 支持语言 */
-type FittingReplacementLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru";
+type FittingReplacementLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru" | "de" | "it" | "hi";
 
 interface FittingReplacementDetailProps {
   data: FittingReplacementDetailPageData;
@@ -70,6 +74,9 @@ function getLocaleFromBreadcrumbs(
 ): FittingReplacementLocale {
   const localeHref = breadcrumbs.find((item) => {
     return (
+      item.href?.startsWith("/de") ||
+      item.href?.startsWith("/it") ||
+      item.href?.startsWith("/hi") ||
       item.href?.startsWith("/en") ||
       item.href?.startsWith("/es") ||
       item.href?.startsWith("/fr") ||
@@ -78,6 +85,9 @@ function getLocaleFromBreadcrumbs(
     );
   })?.href;
 
+  if (localeHref?.startsWith("/de")) return "de";
+  if (localeHref?.startsWith("/hi")) return "hi";
+  if (localeHref?.startsWith("/it")) return "it";
   if (localeHref?.startsWith("/en")) return "en";
   if (localeHref?.startsWith("/es")) return "es";
   if (localeHref?.startsWith("/fr")) return "fr";
@@ -100,11 +110,18 @@ function getLocalizedText(
   locale: FittingReplacementLocale
 ) {
   if (!text) return "-";
+  if (locale === "de") return germanReplacementFieldText[text.en ?? ""] ?? text.en ?? text.zh ?? "-";
+
+  if (locale === "hi") return hindiReplacementFieldText[text.en ?? ""] ?? text.en ?? "-";
+  if (locale === "it") return italianReplacementFieldText[text.en ?? ""] ?? text.en ?? "-";
 
   return text[locale] || text.en || text.zh || "-";
 }
 
 const fittingDetailBreadcrumbLabels: Partial<Record<FittingReplacementLocale, string>> = {
+  de: "Brotkrumennavigation",
+  it: "Percorso di navigazione",
+  hi: "पेज का नेविगेशन पथ",
   es: "Ruta de navegación",
   fr: "Fil d’Ariane",
   ko: "이동 경로",
@@ -117,6 +134,9 @@ const fittingDetailFieldLabels: Partial<
     Partial<Record<FittingModelRule["fieldKey"], string>>
   >
 > = {
+  de: { valved: "Ventilausführung" },
+  hi: { valved: "वाल्व कॉन्फ़िगरेशन" },
+  it: { valved: "Configurazione della valvola" },
   es: {
     valved: "Configuración de válvula",
   },
@@ -149,7 +169,8 @@ export default function FittingReplacementDetail({
   }, [breadcrumbs]);
 
   /* 当前型号对应的 2D PDF 图纸路径 */
-  const drawingPdfHref = getFittingReplacementDrawingPdfHref(
+  const germanDrawingPdfHref = locale === "de" ? getQuickConnectDrawingHref(product.foreachModel) : null;
+  const drawingPdfHref = germanDrawingPdfHref ?? getFittingReplacementDrawingPdfHref(
     product.foreachModel,
     SERIES_CONFIG.seriesKey
   );
@@ -369,6 +390,10 @@ export default function FittingReplacementDetail({
             drawingPdfPreviewHref={drawingPdfPreviewHref}
             productModel={product.foreachModel}
             text={detailText.drawingPreview}
+            previousPageLabel={locale === "de" ? "Vorherige Seite" : locale === "it" ? "Pagina precedente" : locale === "hi" ? "पिछला पेज" : undefined}
+            nextPageLabel={locale === "de" ? "Nächste Seite" : locale === "it" ? "Pagina successiva" : locale === "hi" ? "अगला पेज" : undefined}
+            previousPageVisibleLabel={locale === "de" ? "Zurück" : locale === "it" ? "Indietro" : locale === "hi" ? "पिछला" : undefined}
+            nextPageVisibleLabel={locale === "de" ? "Weiter" : locale === "it" ? "Avanti" : locale === "hi" ? "अगला" : undefined}
           />
 
           <FittingReplacementFaq text={detailText.faq} />

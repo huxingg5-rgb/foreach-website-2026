@@ -4,7 +4,7 @@ import PdfDrawingPreview from "@/components/common/PdfDrawingPreview";
 import {
   getProductDetailResourceCopy,
   type ProductDatasheet,
-  type ProductDetailResourceLocale,
+  type ProductDetailResourceCopyLocale,
 } from "@/data/products/detail/product-detail-resources";
 
 import styles from "./ProductDatasheetPanel.module.css";
@@ -12,7 +12,7 @@ import styles from "./ProductDatasheetPanel.module.css";
 type ProductDatasheetPanelProps = {
   datasheet: ProductDatasheet | null;
   fallbackTitle: string;
-  locale: ProductDetailResourceLocale;
+  locale: ProductDetailResourceCopyLocale;
 };
 
 export default function ProductDatasheetPanel({

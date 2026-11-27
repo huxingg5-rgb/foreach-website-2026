@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "title": "Serve uno smorzatore di pulsazioni per una pompa a membrana miniaturizzata? Come verificarlo con una prova A/B",
+    "seoTitle": "Smorzatore di pulsazioni per pompe a membrana: verifica A/B",
+    "seoDescription": "Verificare uno smorzatore di pulsazioni per una pompa a membrana con prove A/B a parità di condizioni. Confrontare pulsazioni presso il carico, erogazione media, avvio, liquido erogato dopo l’arresto e requisiti di lavaggio.",
+    "coverImage": "/images/resources/technical-articles/pump-diagnostics/04.svg",
+    "coverAlt": "Forme d’onda simulate. A parità di portata media, i picchi e i minimi possono differire prima e dopo lo smorzamento. Una curva più uniforme va valutata insieme alle prove di avvio e di erogazione residua dopo l’arresto."
+  },
+  "deck": "L’utilità di uno smorzatore dipende dalle prestazioni presso il carico e dai compromessi relativi ad avvio, erogazione dopo l’arresto, lavaggio e volume morto. Definire le pulsazioni ammissibili presso il carico e confrontare, a parità di compito, il funzionamento a regime e l’erogazione in avvio e in arresto con e senza smorzamento. Per accettare la configurazione occorre più di una traccia uniforme.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "L’utilità di uno smorzatore dipende dalle prestazioni presso il carico e dai compromessi relativi ad avvio, erogazione dopo l’arresto, lavaggio e volume morto. Definire le pulsazioni ammissibili presso il carico e confrontare, a parità di compito, il funzionamento a regime e l’erogazione in avvio e in arresto con e senza smorzamento. Per accettare la configurazione occorre più di una traccia uniforme."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Definire il limite di pulsazione per il funzionamento del carico",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il moto alternativo genera una portata periodica. Resistenza, inerzia e cedevolezza dei tubi influenzano la pressione presso il carico. La guida generale alle pulsazioni ne illustra le cause. Questo articolo spiega come qualificare uno smorzatore aggiunto e valutare se conviene mantenerlo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Specificare il punto di misura, la larghezza di banda del sensore, la pulsazione picco-picco ammissibile o un’altra metrica definita e il requisito funzionale finale: segnale della cella di flusso, uniformità di spruzzatura o interventi intempestivi delle protezioni. Se occorre solo trasferire in modo affidabile una quantità di liquido e il sistema soddisfa già il requisito, il beneficio dell’accessorio può essere minimo."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/pump-diagnostics/04.svg",
+          "alt": "Forme d’onda simulate. A parità di portata media, i picchi e i minimi possono differire prima e dopo lo smorzamento. Una curva più uniforme va valutata insieme alle prove di avvio e di erogazione residua dopo l’arresto.",
+          "caption": "Forme d’onda simulate. A parità di portata media, i picchi e i minimi possono differire prima e dopo lo smorzamento. Una curva più uniforme va valutata insieme alle prove di avvio e di erogazione residua dopo l’arresto.",
+          "width": 1000,
+          "height": 560
+        }
+      ]
+    },
+    {
+      "title": "Il liquido accumulato incide su avvio e arresto",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’elemento di smorzamento accumula una parte del liquido quando la pressione è più alta e la cede quando diminuisce. La cedevolezza effettiva esprime la variazione di volume per variazione di pressione, ma dipende da pressione e costruzione. Una portata nominale di 300 o 600 mL/min non determina un volume universale della camera."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un maggiore accumulo può allungare il tempo di salita della pressione e causare erogazione dopo l’arresto. Valutare compatibilità, lavabilità, gas intrappolato, pressione nominale e orientamento. Lasciare intenzionalmente bolle nel fluido di processo non equivale a usare un elemento di smorzamento separato e qualificato."
+        },
+        {
+          "type": "formula",
+          "expression": "Ppp = Pmax − Pmin; Ceff ≈ ΔV / ΔP",
+          "note": "Confrontare Ppp nello stesso punto e con la stessa larghezza di banda. Ceff rappresenta la cedevolezza effettiva nell’intervallo di pressione scelto. Dimensionamento e attenuazione vanno verificati per la configurazione effettiva."
+        }
+      ]
+    },
+    {
+      "title": "Confrontare lo stesso compito e documentare le variazioni del punto di lavoro",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A è il circuito originale. B aggiunge lo smorzatore. Mantenere costanti pompa, temperatura del fluido, livello del serbatoio, geometria principale, carico terminale e punti di misura. Registrare modello completo, comando di azionamento e versione del controllo. Installare e regolare lo smorzatore secondo le indicazioni del suo costruttore."
+        },
+        {
+          "type": "paragraph",
+          "text": "Confrontare prima gli stessi comandi di azionamento per rilevare le variazioni della portata media e della pressione. Se la versione specifica della pompa consente il controllo della velocità, aggiungere un confronto a parità di portata media e documentare la diversa impostazione dell’azionamento. Per valutare lo smorzamento a parità di punto di lavoro, la traccia più uniforme a portata inferiore va considerata a parte."
+        }
+      ]
+    },
+    {
+      "title": "Misurare separatamente la portata a regime e i cicli brevi",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A regime, registrare i picchi e i minimi di pressione presso il carico, la portata media e il segnale di processo con la stessa larghezza di banda. La pulsazione relativa di pressione è significativa con una media sufficientemente lontana da zero e un riferimento di pressione costante. Con media prossima a zero, riportare il valore assoluto picco-picco."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eseguire la sequenza effettiva di avvio e arresto. Misurare il tempo per raggiungere la pressione funzionale, il volume erogato, il liquido erogato dopo l’arresto e lo stato iniziale del ciclo successivo. Allineare le finestre del totalizzatore e della raccolta. Il liquido trattenuto dallo smorzatore va distinto da un’eventuale perdita."
+        }
+      ]
+    },
+    {
+      "title": "Decidere se mantenere lo smorzatore in base al risultato complessivo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Mantenere B solo se le pulsazioni e il funzionamento presso il carico migliorano e anche volume richiesto, avvio, erogazione residua dopo l’arresto e lavaggio soddisfano i criteri. Se a regime le prestazioni migliorano ma l’erogazione nei cicli brevi o il gocciolamento dopo l’arresto non rientrano nei limiti, rivedere geometria, installazione o controllo e ripetere la prova."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se A soddisfa già i requisiti funzionali e B stabilizza solo il valore visualizzato, aumentando il liquido trattenuto e la manutenzione, può convenire mantenere A. Se entrambe le configurazioni sono insufficienti, rivalutare l’alimentazione in ingresso, la resistenza o l’architettura della pompa."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Criterio di accettazione",
+            "Misura in A e B",
+            "Condizione per mantenere B"
+          ],
+          "rows": [
+            [
+              "Funzionamento a regime",
+              "Pressione presso il carico e segnale di processo",
+              "Rispetta i limiti funzionali definiti"
+            ],
+            [
+              "Compito di trasferimento",
+              "Portata e volume erogato nella stessa finestra temporale",
+              "Requisito soddisfatto e differenze spiegate"
+            ],
+            [
+              "Avvio e arresto",
+              "Tempo di salita della pressione, erogazione residua e stato del ciclo successivo",
+              "Entro i limiti del progetto"
+            ],
+            [
+              "Manutenzione e compatibilità",
+              "Liquido trattenuto, lavaggio, gas e materiali",
+              "Aggravio accettabile"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Che cosa indicano le specifiche DPL30 e DPL60",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le schede tecniche ufficiali indicano per DPL30 una portata senza carico di 300 mL/min, una pressione nominale di 100 kPa e un’altezza di autoadescamento di 6 mH₂O. Per DPL60 riportano rispettivamente 600 mL/min, 100 kPa e 3 mH₂O. Sono dati prestazionali distinti. Non garantiscono un punto di lavoro in cui tali valori valgano insieme e non esprimono una percentuale di pulsazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Usare il controllo della velocità solo per una versione specifica a cinque fili o un’altra configurazione la cui interfaccia lo supporti espressamente. Verificare il supporto del controllo PWM per il modello brushless in uso. Conservare insieme ai risultati A/B modello, azionamento, punto di misura, temperatura del fluido, stato del filtro e condizioni di carico."
+        },
+        {
+          "type": "subheading",
+          "title": "Approfondimenti e schede tecniche"
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+              "label": "Guida generale alle pulsazioni di portata e alla loro riduzione"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-meter-totalizer-error/",
+              "label": "Confronto tra totalizzatore di portata e riferimento gravimetrico"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Curve portata-pressione delle pompe a membrana"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/",
+              "label": "Categoria delle pompe a membrana miniaturizzate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Riferimenti tecnici",
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "https://knf.com/en/in/stories-events/news-stories/article/flow-pressure-waves-fluid-systems",
+              "label": "KNF: onde di portata e di pressione nei circuiti fluidici"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+              "label": "Scheda tecnica ufficiale Foreach in cinese — DPL30 A04"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+              "label": "Scheda tecnica ufficiale Foreach in cinese — DPL60 A02"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Tutte le pompe a membrana miniaturizzate richiedono uno smorzatore?",
+      "answer": "No. Determinare se le pulsazioni effettive influiscono sul carico e valutare il beneficio rispetto a volume morto, lavaggio, avvio ed erogazione residua dopo l’arresto."
+    },
+    {
+      "question": "Uno smorzatore più grande è sempre preferibile?",
+      "answer": "No. Contano volume, risposta alla pressione, frequenza e fluido. Un maggiore accumulo può aumentare il ritardo e il liquido erogato dopo l’arresto."
+    },
+    {
+      "question": "Il filtraggio software può sostituire lo smorzamento idraulico?",
+      "answer": "Il filtraggio modifica il segnale o il valore visualizzato. Le variazioni fisiche di pressione continuano ad agire su valvole, ugelli e celle di flusso."
+    },
+    {
+      "question": "Come confrontare una portata più bassa dopo lo smorzamento?",
+      "answer": "Riportare prima il risultato a parità di comando di azionamento. Se il controllo della velocità è supportato, confrontare anche a parità di portata media, documentando il nuovo comando e il punto di lavoro."
+    }
+  ],
+  "cta": {
+    "title": "Vuoi esaminare il circuito fluidico effettivo?",
+    "description": "Indica a Foreach il fluido, il volume di lavoro o la portata, le pressioni, la geometria e la sequenza di controllo per valutare configurazione e condizioni di verifica.",
+    "contactLabel": "Parliamo della tua applicazione",
+    "productsLabel": "Scopri le pompe",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
+  }
+}

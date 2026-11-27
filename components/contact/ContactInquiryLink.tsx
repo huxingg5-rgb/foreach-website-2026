@@ -3,12 +3,12 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useState, type ComponentPropsWithoutRef } from "react";
-import type { LocaleCode } from "@/lib/i18n";
+import type { ContactInquiryLocale } from "@/lib/contact-inquiry-target";
 import { getAnalyticsSourceSection, trackBeginInquiry } from "@/lib/analytics/track-event";
 
 const GeneralContactInquiryModal = dynamic(() => import("./GeneralContactInquiryModal"), { ssr: false });
 
-type Props = ComponentPropsWithoutRef<typeof Link> & { inquiryLocale: LocaleCode; analyticsSourceSection?: string };
+type Props = ComponentPropsWithoutRef<typeof Link> & { inquiryLocale: ContactInquiryLocale; analyticsSourceSection?: string };
 
 export default function ContactInquiryLink({ inquiryLocale, analyticsSourceSection, onClick, ...props }: Props) {
   const [session, setSession] = useState<{ open: boolean; hasDraft: boolean; sourceSection: string } | null>(null);

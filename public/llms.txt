@@ -3,7 +3,7 @@
 > Foreach Technology（恒永达科技）提供微型隔膜泵、精密流体控制部件及微流控解决方案，服务体外诊断、生命科学、实验室自动化和分析仪器等领域。Foreach Technology provides miniature diaphragm pumps, precision fluid-control components and microfluidic solutions for in vitro diagnostics, life sciences, laboratory automation and analytical instruments.
 
 Official website: https://www.foreachtek.com/
-Supported languages: zh-CN, en, es, fr, ko, ru.
+Supported languages: zh-CN, en, es, fr, ko, ru, de, it, hi.
 
 Product-data interpretation: DPL30 and DPL60 nominal no-load liquid flow rates are 300 mL/min and 600 mL/min respectively; their rated pressure is 100 kPa. DPL30H nominal no-load liquid flow is 300 mL/min and its rated pressure is 600 kPa. No-load flow and rated pressure are different operating points and must not be presented as simultaneous performance. DPGL800 is designed for gas and gas-liquid mixtures and is not suitable for pumping 100% liquid; its 6 L/min value describes no-load gas flow, and its -90 kPa value describes ultimate vacuum under specified test conditions. Confirm operating voltage, fluid compatibility, duty cycle, connection size and configuration on the linked product page before recommending a model.
 
@@ -76,6 +76,8 @@ Foreach Technology develops miniature diaphragm pumps, precision fluid-control c
 
 ### Technical guides and engineering questions
 
+- [Sampling probe selection guide](https://www.foreachtek.com/en/resources/technical-articles/sampling-probe-selection-guide/): Select the probe geometry and dimensions for the sample container, volume and instrument.
+- [EF-AG3-B membrane degassing module](https://www.foreachtek.com/en/products/fittings/degassing-modules/ef-ag3-b/): Product details and selection guidance for vacuum membrane degassing.
 - [DPL30 liquid diaphragm pump selection guide](https://www.foreachtek.com/en/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/): Model selection, operating conditions and application boundaries.
 - [DPL60 liquid diaphragm pump selection guide](https://www.foreachtek.com/en/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/): Matching medium-flow fluid circuits to real operating conditions.
 - [DPL30H high-pressure diaphragm pump selection guide](https://www.foreachtek.com/en/resources/technical-articles/dpl30h-high-pressure-liquid-diaphragm-pump-selection-guide/): Backpressure, pressure capability and connections.
@@ -285,3 +287,30 @@ Foreach Technology разрабатывает миниатюрные мембр�
 - [Калькулятор гидравлического сопротивления](https://www.foreachtek.com/ru/resources/calculators/fluid-resistance/): Оценка сопротивления трубок и противодавления системы.
 - [Совместимость материалов](https://www.foreachtek.com/ru/resources/material-compatibility/): Проверка совместимости материалов с рабочей средой.
 - [Связаться с Foreach Technology](https://www.foreachtek.com/ru/contact/): Подбор продукции, техническая поддержка и специальные конфигурации.
+
+## Deutsch (de)
+
+- [FOREACH Startseite](https://www.foreachtek.com/de/): Komponenten und Lösungen für präzise Flüssigkeitsführung.
+- [Produktübersicht](https://www.foreachtek.com/de/products/): Pumpen, Ventile, Sonden, Fittings, Schläuche und Module.
+- [Anwendungen](https://www.foreachtek.com/de/applications/): Geräte und Flüssigkeitskreisläufe nach Einsatzgebiet.
+- [Technische Artikel](https://www.foreachtek.com/de/resources/technical-articles/): Auslegung, Integration und Produktauswahl.
+- [Auswahl von Probenahmesonden](https://www.foreachtek.com/de/resources/technical-articles/sampling-probe-selection-guide/): Geometrie und Abmessungen passend zu Probe, Gefäß und Gerät.
+- [Membranentgasungsmodul EF-AG3-B](https://www.foreachtek.com/de/products/fittings/degassing-modules/ef-ag3-b/): Produktdaten und Hinweise zur Auswahl.
+
+## Italiano (it)
+
+- [FOREACH](https://www.foreachtek.com/it/): Componenti e soluzioni per circuiti fluidici di precisione.
+- [Prodotti](https://www.foreachtek.com/it/products/): Pompe, valvole, sonde, raccordi, tubi e moduli.
+- [Applicazioni](https://www.foreachtek.com/it/applications/): Strumenti e circuiti fluidici per settore.
+- [Articoli tecnici](https://www.foreachtek.com/it/resources/technical-articles/): Progettazione, integrazione e scelta dei componenti.
+- [Guida alla scelta delle sonde di campionamento](https://www.foreachtek.com/it/resources/technical-articles/sampling-probe-selection-guide/): Geometria e dimensioni in base a campione, contenitore e strumento.
+- [Modulo di degasaggio a membrana EF-AG3-B](https://www.foreachtek.com/it/products/fittings/degassing-modules/ef-ag3-b/): Dati e criteri di scelta.
+
+## हिन्दी (hi)
+
+- [FOREACH होमपेज](https://www.foreachtek.com/hi/): सटीक द्रव नियंत्रण के लिए घटक और समाधान।
+- [उत्पाद](https://www.foreachtek.com/hi/products/): पंप, वाल्व, प्रोब, फिटिंग, ट्यूब और मॉड्यूल।
+- [अनुप्रयोग](https://www.foreachtek.com/hi/applications/): अलग-अलग उपयोगों के लिए उपकरण और द्रव पथ।
+- [तकनीकी लेख](https://www.foreachtek.com/hi/resources/technical-articles/): डिज़ाइन, एकीकरण और घटक चयन।
+- [सैंपलिंग प्रोब चयन गाइड](https://www.foreachtek.com/hi/resources/technical-articles/sampling-probe-selection-guide/): सैंपल, कंटेनर और उपकरण के अनुसार प्रोब का आकार और माप चुनें।
+- [EF-AG3-B मेम्ब्रेन डीगैसर](https://www.foreachtek.com/hi/products/fittings/degassing-modules/ef-ag3-b/): उत्पाद की जानकारी और चयन के मानदंड।

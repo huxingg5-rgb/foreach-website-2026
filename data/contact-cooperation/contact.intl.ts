@@ -55,7 +55,7 @@ export function isContactIntlLocale(
    页面结构、图片、地图坐标等仍然沿用 contact.zh.ts。
 ========================================================= */
 
-type ContactIntlText = {
+export type ContactIntlText = {
   seoTitle: string;
   seoDescription: string;
 
@@ -1565,7 +1565,7 @@ const contactIntlText: Record<ContactIntlLocaleCode, ContactIntlText> = {
    西语页面: /es/contact#contact-form
 ========================================================= */
 
-function buildIntlContactHref(locale: ContactIntlLocaleCode, href: string) {
+function buildIntlContactHref(locale: ContactIntlLocaleCode | "de" | "it" | "hi", href: string) {
   const hashIndex = href.indexOf("#");
   const hash = hashIndex >= 0 ? href.slice(hashIndex) : "";
 
@@ -1631,8 +1631,13 @@ function buildContactRows(
 export function getContactIntlData(
   locale: ContactIntlLocaleCode,
 ): ContactPageData {
-  const text = contactIntlText[locale];
+  return buildContactIntlData(locale, contactIntlText[locale]);
+}
 
+export function buildContactIntlData(
+  locale: ContactIntlLocaleCode | "de" | "it" | "hi",
+  text: ContactIntlText,
+): ContactPageData {
   return {
     ...contactZhData,
 

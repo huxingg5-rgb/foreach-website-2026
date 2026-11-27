@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="2040" viewBox="0 0 2560 2040" role="img" aria-labelledby="title description" xml:lang="hi-IN">
+  <title id="title">लघु डायाफ्राम पंपों में दबाव के पाँच शब्द</title>
+  <desc id="description">आरेख में वास्तविक कार्यकारी दबाव, रेटेड कार्यकारी दबाव, अधिकतम आउटपुट दबाव, प्रूफ़ दबाव, फटने का दबाव और उनकी परीक्षण परिस्थितियाँ बताई गई हैं।</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #17335e; }
+      .title { font-size: 70px; font-weight: 700; }
+      .subtitle { font-size: 40px; fill: #58677c; }
+      .card { fill: #fff; stroke: #d6dee8; stroke-width: 4; }
+      .card-title { font-size: 48px; font-weight: 700; }
+      .card-text { font-size: 37px; fill: #58677c; }
+      .tag { font-size: 36px; font-weight: 700; text-anchor: middle; }
+      .note-title { font-size: 50px; font-weight: 700; }
+      .note-text { font-size: 42px; font-weight: 700; fill: #58677c; }
+      .footer { font-size: 30px; fill: #637389; text-anchor: end; }
+    </style>
+  </defs>
+  <rect width="2560" height="2040" fill="#fff"/>
+  <rect x="116" y="104" width="16" height="108" rx="8" fill="#00d9a7"/>
+  <text class="title" x="176" y="184">दबाव के पाँच शब्द और उनका अर्थ</text>
+  <text class="subtitle" x="176" y="264">किसी मान को लगातार संचालन की सीमा मानने से पहले उसकी परिभाषा जाँचें।</text>
+
+  <g transform="translate(100 350)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#00d9a7"/>
+    <text class="card-title" x="56" y="96">वास्तविक कार्यकारी दबाव</text>
+    <text class="card-text" x="56" y="184">पंप चलते समय इनलेट और</text>
+    <text class="card-text" x="56" y="240">आउटलेट के बीच अंतर दबाव</text>
+    <rect x="54" y="374" width="308" height="100" rx="50" fill="#e7fdf7"/>
+    <text class="tag" x="208" y="440">संचालन का डेटा</text>
+  </g>
+  <g transform="translate(910 350)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#17335e"/>
+    <text class="card-title" x="56" y="96">रेटेड कार्यकारी दबाव</text>
+    <text class="card-text" x="56" y="184">तय परिस्थितियों में नियंत्रित</text>
+    <text class="card-text" x="56" y="240">विनिर्देश में अनुमत या</text>
+    <text class="card-text" x="56" y="296">निर्दिष्ट दबाव</text>
+    <rect x="54" y="374" width="308" height="100" rx="50" fill="#eaf0f8"/>
+    <text class="tag" x="208" y="440">संचालन सीमा</text>
+  </g>
+  <g transform="translate(1720 350)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#7189a9"/>
+    <text class="card-title" x="56" y="96">अधिकतम आउटपुट दबाव</text>
+    <text class="card-text" x="56" y="184">वह सीमा जिस तक पंप पहुँच</text>
+    <text class="card-text" x="56" y="240">सकता है या जिसकी गारंटी है।</text>
+    <text class="card-text" x="56" y="296">मुक्त प्रवाह एक अलग मान है।</text>
+    <rect x="54" y="374" width="322" height="100" rx="50" fill="#eaf0f8"/>
+    <text class="tag" x="215" y="440">दबाव सीमा बिंदु</text>
+  </g>
+
+  <g transform="translate(490 940)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#7189a9"/>
+    <text class="card-title" x="56" y="96">प्रूफ़ या परीक्षण दबाव</text>
+    <text class="card-text" x="56" y="184">निर्दिष्ट द्रव, परीक्षण अवधि</text>
+    <text class="card-text" x="56" y="240">और स्वीकृति मापदंड पर</text>
+    <text class="card-text" x="56" y="296">संरचना या सीलिंग का सत्यापन</text>
+    <rect x="54" y="374" width="310" height="100" rx="50" fill="#eaf0f8"/>
+    <text class="tag" x="209" y="440">परीक्षण की शर्त</text>
+  </g>
+  <g transform="translate(1330 940)">
+    <rect class="card" width="740" height="500" rx="22"/>
+    <rect width="16" height="500" rx="8" fill="#17335e"/>
+    <text class="card-title" x="56" y="96">फटने का दबाव</text>
+    <text class="card-text" x="56" y="184">स्थायी क्षति या कार्यात्मक</text>
+    <text class="card-text" x="56" y="240">विफलता की सीमा। यह अनुमत</text>
+    <text class="card-text" x="56" y="296">संचालन बिंदु नहीं है।</text>
+    <rect x="54" y="374" width="328" height="100" rx="50" fill="#eaf0f8"/>
+    <text class="tag" x="218" y="440">विफलता की सीमा</text>
+  </g>
+
+  <rect x="200" y="1540" width="2160" height="300" rx="22" fill="#e7fdf7" stroke="#00d9a7" stroke-width="4"/>
+  <rect x="200" y="1540" width="16" height="300" rx="8" fill="#00d9a7"/>
+  <text class="note-title" x="280" y="1630">दबाव का मान इस्तेमाल करने से पहले</text>
+  <text class="note-text" x="280" y="1720">शब्द की परिभाषा, परीक्षण द्रव, इनलेट की दशा और उस दबाव पर प्रवाह जाँचें।</text>
+  <text class="note-text" x="280" y="1782">परीक्षण अवधि, परिचालन चक्र और स्वीकृति मापदंड की पुष्टि करें।</text>
+  <text class="footer" x="2440" y="1970">औपचारिक सीमाएँ मॉडल के नियंत्रित विनिर्देश में हैं।</text>
+</svg>

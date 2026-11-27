@@ -1,0 +1,376 @@
+{
+  "metadata": {
+    "title": "La pompa di aspirazione degli scarichi di laboratorio perde aspirazione? Diagnosi di perdite, filtri ostruiti e trascinamento di liquido",
+    "seoTitle": "Pompa di aspirazione degli scarichi di laboratorio: perdite, filtri e trascinamento di liquido",
+    "seoDescription": "Se l’aspirazione cala, il liquido non viene aspirato o il vuoto si forma più lentamente, controlla perdite di tappi e tubi, filtri idrofobici ostruiti, intervento del troppo pieno, puntali intasati e trascinamento di liquido. Verifica poi vuoto, portata di gas e sistema completo.",
+    "coverImage": "/images/resources/technical-articles/lab-liquid-waste-aspiration-troubleshooting/waste-aspiration-protection-path-it.svg",
+    "coverAlt": "Schema di un sistema di aspirazione a vuoto con pompa per scarichi di laboratorio, recipiente di raccolta, protezione dal troppo pieno e filtro idrofobico"
+  },
+  "deck": "La pompa di aspirazione degli scarichi di laboratorio si trova normalmente a valle del recipiente di raccolta, della protezione dal troppo pieno e del filtro idrofobico. Crea il vuoto rimuovendo il gas dal recipiente. Se l’aspirazione cala, distinguere prima un problema della pompa da perdite, filtro ostruito, intervento del troppo pieno, puntale intasato o trascinamento di liquido.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Le pompe di aspirazione degli scarichi di laboratorio sono chiamate anche pompe per aspirazione a vuoto o pompe per vuoto per l’aspirazione degli scarichi. Si usano spesso per raccogliere terreni di coltura, surnatanti e liquidi di lavaggio in colture cellulari, lavaggio di micropiastre e stazioni automatizzate. La pompa fornisce il vuoto all’intero percorso di aspirazione."
+    },
+    {
+      "type": "notice",
+      "label": "In sintesi:",
+      "text": "La pompa rimuove il gas e crea il vuoto. Recipiente, protezione dal troppo pieno e filtro trattengono liquido di scarico e schiuma a monte della pompa. Se la prestazione di riferimento della pompa è normale e il sistema rallenta dopo il ricollegamento, esaminare prima il circuito circostante e solo dopo valutare una pompa con vuoto massimo più spinto."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Che funzione ha la pompa di aspirazione degli scarichi nel sistema di laboratorio?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un percorso tipico è puntale di aspirazione → tubo di aspirazione → recipiente di raccolta → protezione dal troppo pieno → filtro idrofobico → pompa. Liquido, aria e schiuma entrano dal puntale. In condizioni normali lo scarico liquido rimane nel recipiente e la pompa rimuove il gas sopra il liquido. Si crea così un differenziale di pressione tra puntale e recipiente."
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/lab-liquid-waste-aspiration-troubleshooting/waste-aspiration-protection-path-it.svg",
+          "alt": "Schema della pompa di aspirazione degli scarichi di laboratorio a valle di recipiente di raccolta, protezione dal troppo pieno e filtro idrofobico",
+          "width": 1600,
+          "height": 900,
+          "caption": "Figura 1 | La pompa è la sorgente di vuoto. Recipiente di raccolta, protezione dal troppo pieno e filtro sono le protezioni a monte. Il passaggio di liquido o schiuma nella pompa è una condizione anomala."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Fase",
+            "Fluido in ingresso al puntale",
+            "Carico sulla pompa",
+            "Dati da registrare"
+          ],
+          "rows": [
+            [
+              "Il puntale tocca il liquido",
+              "Prevalenza di liquido",
+              "Il gas viene rimosso continuamente dallo spazio sopra il liquido nel recipiente",
+              "Tempo di aspirazione, altezza della colonna di liquido, volume residuo"
+            ],
+            [
+              "Il livello del liquido scende",
+              "Alternanza di liquido e aria",
+              "Aumentano le infiltrazioni e il carico di gas",
+              "Andamento della pressione, altezza della schiuma, rumore"
+            ],
+            [
+              "Il liquido si esaurisce",
+              "Prevalenza di aria",
+              "Il punto di lavoro si sposta verso pompaggio del gas e mantenimento del vuoto",
+              "Pressione stazionaria, durata dell’aspirazione a secco, aumento della temperatura"
+            ],
+            [
+              "Riempimento eccessivo anomalo",
+              "Liquido o schiuma oltrepassano le protezioni",
+              "Il liquido può raggiungere l’ingresso della pompa",
+              "Livello del liquido, tempo di risposta dell’interblocco, stato del filtro"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Terminologia:",
+          "text": "In questa guida «trascinamento di liquido» indica il passaggio dello scarico o della schiuma oltre il recipiente di raccolta, la protezione dal troppo pieno o il filtro. Può arrivare al tubo a monte della pompa o alla camera della pompa. È una condizione anomala. Anche con una pompa che gestisce gas e liquidi servono protezioni dedicate."
+        }
+      ]
+    },
+    {
+      "title": "2. Quali dati servono oltre al vuoto massimo per valutare l’aspirazione?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il vuoto massimo indica il limite al quale la pompa può avvicinarsi. La portata libera di gas indica la portata a basso differenziale di pressione. Sono punti di lavoro distinti. Con tubi, filtri, tappi e raccordi installati, la velocità di aspirazione dipende dalla curva della pompa e dalla resistenza del sistema."
+        },
+        {
+          "type": "formula",
+          "expression": "S_eq ≈ (V_g / t_build) × ln(p₀ / p₁)",
+          "note": "V_g è il volume effettivo del gas durante la prova e t_build è il tempo necessario perché la pressione assoluta scenda da p₀ a p₁. Il risultato serve a confrontare prestazioni equivalenti di generazione del vuoto nello stesso sistema. La portata di targa della pompa è un parametro distinto. Umidità, perdite, rilascio di gas dai materiali e variazioni di temperatura influenzano il risultato."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Comportamento osservato",
+            "Più coerente con un problema del sistema esterno",
+            "Più coerente con un problema della pompa o dell’azionamento"
+          ],
+          "rows": [
+            [
+              "Prestazione di riferimento normale con linea pulita e corta, ma sistema completo lento",
+              "Filtro, perdite, tubi, puntale o protezione dal troppo pieno",
+              "Meno probabile"
+            ],
+            [
+              "Prestazione di riferimento lato pompa e prestazione del sistema in calo graduale",
+              "Controllare anche alimentazione e condizioni ambientali",
+              "Ispezionare valvole, membrana, azionamento e usura"
+            ],
+            [
+              "Il sistema crea il vuoto, ma l’aspirazione del liquido è ancora lenta",
+              "Puntale ostruito, tubo stretto, altezza di aspirazione o viscosità",
+              "Servono altri riscontri per diagnosticare un guasto alla pompa"
+            ],
+            [
+              "La pressione sale rapidamente dopo l’arresto della pompa",
+              "Perdita da tappo, raccordo, tubo o dispositivo di ritegno",
+              "Isolare il sistema per tratti prima di formulare una diagnosi"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Per la selezione tecnica considerare portata di gas disponibile al vuoto obiettivo, tempo di evacuazione per un volume definito, aumento della temperatura in continuo, condizioni di alimentazione e resistenza totale. La sola indicazione «serve un’elevata aspirazione» non definisce il punto di lavoro nella macchina."
+        }
+      ]
+    },
+    {
+      "title": "3. Perdite, ostruzioni del filtro e trascinamento lasciano segnali diversi",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Guasto",
+            "Comportamento tipico",
+            "Metodo di verifica sicuro",
+            "Intervento principale"
+          ],
+          "rows": [
+            [
+              "Perdita al tappo del recipiente o al raccordo",
+              "Il vuoto obiettivo non viene raggiunto e si continua a sentire l’ingresso di aria",
+              "Isolare i tratti e confrontare le curve pressione-tempo",
+              "Guarnizioni, filetti, tubi e sollecitazioni di montaggio"
+            ],
+            [
+              "Filtro idrofobico bagnato o ostruito",
+              "L’aspirazione cala gradualmente e la perdita di carico nel filtro aumenta",
+              "Sostituire con un filtro qualificato secondo la procedura di manutenzione, poi ripetere la prova",
+              "Continuare a individuare l’origine di schiuma, gocce o contaminazione"
+            ],
+            [
+              "Tubo o puntale di aspirazione ostruito",
+              "Un ramo è lento, mentre la pompa riesce ancora a creare il vuoto",
+              "Ripristinare la geometria del tubo, pulire il puntale e ripetere la prova",
+              "Pieghe, schiacciamenti, cristallizzazione e residui proteici"
+            ],
+            [
+              "Protezione dal troppo pieno intervenuta",
+              "L’aspirazione si interrompe di colpo o la portata cala bruscamente a recipiente quasi pieno",
+              "Controllare livello del liquido e stato del ripristino secondo la procedura operativa",
+              "Mantenere attiva la protezione durante l’aspirazione"
+            ],
+            [
+              "Si è verificato trascinamento di liquido",
+              "Filtro bagnato, rumore della pompa diverso o scarico dell’aria anomalo",
+              "Arrestare, isolare e valutare secondo la procedura di controllo della contaminazione",
+              "Per riprendere l’uso, eseguire le verifiche previste dopo l’asciugatura"
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Confermare le perdite con una prova di risalita della pressione"
+        },
+        {
+          "type": "paragraph",
+          "text": "Con il sistema pulito, asciutto e a temperatura abbastanza stabile, seguire la procedura di manutenzione approvata. Evacuare fino alla pressione assoluta prescritta, isolare la pompa e registrare la risalita in un volume di gas noto. Ripetere la prova e conservare il riferimento del sistema nuovo per individuare un calo graduale della tenuta con maggiore affidabilità del solo rumore."
+        },
+        {
+          "type": "formula",
+          "expression": "q_L = V_gas × (Δp / Δt)",
+          "note": "q_L è il carico di gas equivalente ricavato dalla risalita di pressione. V_gas è il volume effettivo del gas e Δp è la variazione della pressione assoluta. Evaporazione da un recipiente bagnato, dissolvimento della schiuma e rilascio di gas dai materiali possono aumentare il risultato. Usarlo prima per confronti nelle stesse condizioni e definire poi criteri di accettazione per il sistema."
+        },
+        {
+          "type": "notice",
+          "label": "Limiti della diagnosi:",
+          "text": "Quando è presente liquido di scarico, mantenere recipiente di raccolta, filtro e protezione dal troppo pieno durante le prove. Per confrontare il dato di riferimento lato pompa usare condizioni di prova controllate e pulite, conformi alla procedura di manutenzione dello strumento."
+        }
+      ]
+    },
+    {
+      "title": "4. La compatibilità dei materiali deve coprire scarichi, vapori e gocce anomale",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In regime normale una pompa di aspirazione entra in contatto soprattutto con gas. Può comunque incontrare vapori dello scarico, aerosol e gocce dovute al trascinamento. Estendere la valutazione dei materiali da recipiente di raccolta e tubi a ingresso, materiali bagnati della camera, membrana, valvole e percorso dello scarico dell’aria."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dati da specificare sul fluido",
+            "Perché contano",
+            "Verifica necessaria"
+          ],
+          "rows": [
+            [
+              "Composizione, concentrazione, temperatura e pH",
+              "Determinano rigonfiamento, corrosione e carico di vapore",
+              "Caratterizzare lo scarico oltre alla sola dicitura «scarichi di laboratorio»"
+            ],
+            [
+              "Schiuma, proteine, particelle e cristallizzazione",
+              "Possono ostruire puntali, valvole e filtri",
+              "Includere prove oltre all’acqua pulita"
+            ],
+            [
+              "Disinfettanti e procedura di pulizia",
+              "Tempo di contatto e sequenza di miscelazione possono cambiare il rischio",
+              "Verificare le condizioni di esposizione oltre ai nomi dei materiali"
+            ],
+            [
+              "Rischi biologici e volatilità",
+              "Determinano filtrazione, scarico dell’aria e protezioni per la manutenzione",
+              "Valutare biosicurezza e tenuta ai gas separatamente"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Scarichi infettivi, corrosivi, infiammabili, volatili o contenenti solventi organici richiedono una valutazione specifica in base ai requisiti di ambiente, salute e sicurezza del laboratorio, alla procedura per lo smaltimento e al fluido effettivo. La capacità di pompare gas o trattare miscele gas-liquido è distinta da biosicurezza, protezione contro le esplosioni e compatibilità chimica."
+        }
+      ]
+    },
+    {
+      "title": "5. Verificare il sistema completo in condizioni normali, sotto carico e anomale",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Condizione di prova",
+            "Variabili controllate",
+            "Dati minimi da registrare",
+            "Scopo"
+          ],
+          "rows": [
+            [
+              "Riferimento della pompa di aspirazione pulita",
+              "Volume di gas, tubi, alimentazione e temperatura definiti",
+              "Tempo di evacuazione, pressione, corrente, aumento della temperatura, rumore",
+              "Stabilire un riferimento per la pompa"
+            ],
+            [
+              "Ciclo di scarico effettivo",
+              "Liquido e schiuma reali, tempo di aspirazione a secco e ciclo di esercizio",
+              "Tempo di aspirazione, volume residuo, altezza della schiuma",
+              "Verificare il completamento del compito"
+            ],
+            [
+              "Carico del filtro",
+              "Condizione simulata di bagnatura o contaminazione definita",
+              "Perdita di carico del filtro, tempo di evacuazione, allarme",
+              "Confermare soglia di manutenzione e possibilità di rilevamento"
+            ],
+            [
+              "Piccola perdita controllata",
+              "Introdurre una perdita ripetibile in un punto sicuro prestabilito",
+              "Risalita della pressione, tempo di allarme, variazione dell’aspirazione",
+              "Distinguere la normale aspirazione d’aria da un’anomalia di tenuta"
+            ],
+            [
+              "Livello del liquido elevato e schiuma",
+              "Aumentare gradualmente livello del liquido e schiuma",
+              "Tempo di risposta dell’interblocco ed eventuale passaggio di liquido a valle",
+              "Verificare il limite della protezione dal liquido"
+            ],
+            [
+              "Arresto e riavvio",
+              "Installazione definitiva, condizioni dopo manutenzione e intervallo di arresto più lungo",
+              "Evacuazione iniziale, tempo di ripristino, numero di eventi anomali",
+              "Verificare il ripristino dopo uso prolungato"
+            ]
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Criterio di accettazione:",
+          "text": "Definire limiti specifici del progetto per vuoto, tasso di perdita e perdita di carico del filtro. L’analisi dei rischi identifica prima gli esiti inaccettabili. Da questi stabilire tempi di aspirazione, volume residuo, rilevamento di liquido a valle, tempo di allarme e intervallo di manutenzione."
+        }
+      ]
+    },
+    {
+      "title": "6. Sei passaggi quando la pompa di aspirazione degli scarichi perde efficacia",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Arrestare il sistema e stabilire se c’è stato un riempimento eccessivo, un passaggio di schiuma o trascinamento di liquido. Con scarichi pericolosi, isolare prima il sistema secondo la procedura operativa.",
+            "Controllare il livello nel recipiente di raccolta e verificare se è intervenuta la protezione dal troppo pieno. Mantenere attiva la protezione.",
+            "Controllare se il filtro idrofobico è bagnato, contaminato, ostruito o installato in senso errato.",
+            "Controllare tubi, puntali e rami a monte per individuare pieghe, schiacciamenti, scollegamenti o ostruzioni da residui.",
+            "Verificare eventuali perdite di tappo, guarnizioni e raccordi. Confrontare poi ogni tratto con il riferimento pressione-tempo.",
+            "Dopo aver escluso i guasti esterni, usare il riferimento pulito per controllare pompa, alimentazione, azionamento e logica di controllo."
+          ]
+        },
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/lab-liquid-waste-aspiration-troubleshooting/waste-aspiration-troubleshooting-sequence-it.svg",
+          "alt": "Sequenza di diagnosi per una pompa di aspirazione degli scarichi di laboratorio, da riempimento eccessivo, filtro, tubi, tenute e puntale fino alla pompa",
+          "width": 1600,
+          "height": 900,
+          "caption": "Figura 2 | Controllare il circuito circostante prima di esaminare la pompa. Prima dello smontaggio, arrestare il sistema, eliminare il vuoto e seguire la procedura di laboratorio per il rischio dello scarico in questione."
+        }
+      ]
+    },
+    {
+      "title": "7. Conclusioni tecniche, riferimenti e campo d’uso",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La pompa di aspirazione fornisce il vuoto e il recipiente raccoglie lo scarico. Quando l’aspirazione cala, confrontare la curva di riferimento pulita lato pompa con la curva del sistema completo spesso localizza la causa più rapidamente del solo aumento del vuoto massimo. Raccolta, protezione dal troppo pieno, filtrazione, rilevamento delle perdite e allarmi determinano se un’anomalia viene intercettata a monte della pompa."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Applicazione correlata: ",
+              "label": "Automazione di laboratorio",
+              "href": "/en/applications/lab-automation/",
+              "suffix": "."
+            }
+          ]
+        },
+        {
+          "type": "notice",
+          "label": "Campo d’uso:",
+          "text": "La guida supporta selezione e diagnosi generali dei sistemi di aspirazione degli scarichi di laboratorio. Classificazione dei pericoli, compatibilità dei materiali, biosicurezza, protezione contro le esplosioni e idoneità medicale richiedono valutazioni dedicate. Validare fluido reale, installazione, rischi e vita utile per il progetto."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti sulle pompe di aspirazione degli scarichi di laboratorio",
+  "faqItems": [
+    {
+      "question": "Da dove iniziare se la pompa di aspirazione degli scarichi perde efficacia?",
+      "answer": "Arrestare il sistema e stabilire prima se si è verificato riempimento eccessivo, passaggio di schiuma o trascinamento di liquido. Verificare poi protezione dal troppo pieno, filtro idrofobico, tubi, puntali ed eventuali perdite da tappo e raccordi. Escludere le cause esterne prima di confrontare la pompa con il suo riferimento pulito."
+    },
+    {
+      "question": "Perché lo scarico liquido viene aspirato lentamente anche se la pompa crea il vuoto?",
+      "answer": "La formazione di vuoto indica soltanto che il circuito del gas ha raggiunto una certa pressione. Puntale ostruito, tubi stretti o deformati, altezza della colonna di liquido, viscosità dello scarico e resistenza del filtro possono ancora limitare la velocità effettiva di aspirazione."
+    },
+    {
+      "question": "Un filtro idrofobico bagnato o ostruito può ridurre l’aspirazione?",
+      "answer": "Sì. Un filtro bagnato, sporco o installato male aumenta la resistenza del lato gas e di solito allunga il tempo di evacuazione e rallenta progressivamente l’aspirazione. Dopo la sostituzione, continuare a individuare l’origine di schiuma o gocce."
+    },
+    {
+      "question": "Come verificare se il tappo, un raccordo o il tubo perde?",
+      "answer": "In condizioni controllate, con sistema pulito, asciutto e a temperatura stabile, isolare i tratti e confrontare le curve di risalita della pressione con un volume di gas noto. Evaporazione dell’umidità e rilascio di gas dai materiali incidono sul risultato. Confrontare con un riferimento nelle stesse condizioni."
+    },
+    {
+      "question": "La pompa può continuare a funzionare dopo l’ingresso di liquido di scarico?",
+      "answer": "La sola asciugatura all’aria è insufficiente. Arrestare e isolare il sistema. In base al rischio del fluido, alla procedura di controllo della contaminazione e ai requisiti di manutenzione del produttore, ispezionare filtro, tubi e camera della pompa e valutare materiali, prestazioni e sicurezza dello scarico."
+    },
+    {
+      "question": "Per scegliere una pompa di aspirazione degli scarichi basta il vuoto massimo?",
+      "answer": "Valutare anche portata effettiva di gas al vuoto obiettivo, volume di gas nel recipiente, tempo di evacuazione, perdite, resistenza del filtro, aumento di temperatura in continuo, ciclo di lavoro effettivo e protezioni per le anomalie."
+    }
+  ],
+  "cta": {
+    "title": "Stai scegliendo una pompa per scarichi di laboratorio o cercando un guasto?",
+    "description": "Indica tipo di scarico, tempo di aspirazione obiettivo, volume del recipiente, vuoto obiettivo, diametro e lunghezza dei tubi, filtro, metodo di protezione dal troppo pieno e condizioni anomale. Questi dati servono a verificare punto di lavoro, limiti dei materiali e piano di validazione del sistema.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Vedi le pompe a membrana per gas e liquidi",
+    "productsHref": "/en/products/pumps/miniature-diaphragm-pumps/dpgl800-gas-liquid-diaphragm-pump"
+  }
+}

@@ -12532,14 +12532,14 @@ html[lang="ru"] .home-hero-btn:hover {
   color: rgba(255, 255, 255, 0.94);
 }
 
-.quality-policy-text p {
+.quality-policy-text h1 {
   font-size: clamp(34px, 3.2vw, 58px);
   line-height: 1.18;
   font-weight: 650;
   letter-spacing: -0.05em;
 }
 
-.quality-policy-text p + p {
+.quality-policy-text h1 + p {
   margin-top: 18px;
   color: rgba(255, 255, 255, 0.78);
   font-size: clamp(20px, 1.55vw, 28px);
@@ -13318,13 +13318,13 @@ html[lang="ru"] .home-hero-btn:hover {
     width: min(100% - 40px, 1600px);
   }
 
-  .quality-policy-text p {
+  .quality-policy-text h1 {
     font-size: 34px;
     line-height: 1.25;
     letter-spacing: -0.04em;
   }
 
-  .quality-policy-text p + p {
+  .quality-policy-text h1 + p {
     margin-top: 16px;
     font-size: 20px;
     line-height: 1.6;

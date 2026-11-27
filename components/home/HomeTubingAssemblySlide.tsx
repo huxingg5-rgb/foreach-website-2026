@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState, type CSSProperties } from "react";
-import { replacePathLocale, type LocaleCode } from "@/lib/i18n";
-import { homeHeroText } from "@/data/home-hero.intl";
+import { getHomeHeroHref, homeHeroText, type HomeHeroLocale } from "@/data/home-hero.intl";
 import HomeHeroCopy, { type HomeHeroCopyText } from "./HomeHeroCopy";
 import styles from "./HomeTubingAssemblySlide.module.css";
 
@@ -22,7 +21,7 @@ function position(x: number, y: number, width?: number): CSSProperties {
 }
 
 export default function HomeTubingAssemblySlide({ locale, heroCopy, mainCopy, active, reduceMotion, onInteraction }: {
-  locale: LocaleCode;
+  locale: HomeHeroLocale;
   heroCopy: HomeHeroCopyText;
   mainCopy: HomeHeroCopyText;
   active: boolean;
@@ -67,7 +66,9 @@ export default function HomeTubingAssemblySlide({ locale, heroCopy, mainCopy, ac
       analyticsSection="home_hero_tubing_assembly"
       primaryAction="tubing_assembly_cta"
       primaryClassName={styles.cta}
-      primaryHref={replacePathLocale("/products/tubing-assemblies/flanged-tubing/details/", locale)}
+      italian={locale === "it"}
+      hindi={locale === "hi"}
+      primaryHref={getHomeHeroHref("/products/tubing-assemblies/flanged-tubing/details/", locale)}
       primaryLabel={copy.button}
     />
     <div className={styles.visual}>

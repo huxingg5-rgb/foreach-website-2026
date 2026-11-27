@@ -11,6 +11,9 @@ type TechnicalArticleCardProps = {
   href: string;
   locale: string;
   detailText?: string;
+  detailLang?: string;
+  contentLanguage?: string;
+  destinationLanguage?: string;
   tagsText?: string;
   showSummary?: boolean;
   showDate?: boolean;
@@ -31,6 +34,9 @@ export default function TechnicalArticleCard({
   href,
   locale,
   detailText,
+  detailLang,
+  contentLanguage,
+  destinationLanguage,
   tagsText,
   showSummary = false,
   showDate = false,
@@ -46,6 +52,8 @@ export default function TechnicalArticleCard({
       <Link
         className="technicalArticleCard technicalArticleCard--related"
         href={href}
+        lang={contentLanguage ?? (detailLang ? locale : undefined)}
+        hrefLang={destinationLanguage ?? (detailLang ? locale : undefined)}
       >
         <h3 className="technicalArticleCard__title">{article.title}</h3>
 
@@ -62,7 +70,7 @@ export default function TechnicalArticleCard({
             <span />
           )}
 
-          <span className="technicalArticleCard__relatedAction">
+          <span className="technicalArticleCard__relatedAction" lang={detailLang}>
             {detailText ?? "View details"}
           </span>
         </div>

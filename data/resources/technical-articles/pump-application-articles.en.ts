@@ -1,3 +1,4 @@
+import { applicationDocumentHref } from "@/data/applications/application-routes";
 import type { PumpApplicationArticleCopy, PumpApplicationArticleSlug } from "./pump-application-articles.types";
 
 export const pumpApplicationArticlesEn = {
@@ -534,6 +535,17 @@ export const pumpApplicationArticlesEn = {
           {
             "type": "paragraph",
             "text": "If total delivery passes but one branch fails, investigate distribution and timing. If every branch is low, use pressure measurements to distinguish insufficient supply from common-path losses, inlet limitations or electrical supply issues. When swapping a suspect nozzle or tube, change one factor at a time and observe whether the deviation follows that component."
+          },
+          {
+            "type": "links",
+            "items": [
+              {
+                "href": applicationDocumentHref("lab-automation", "microplate-plate-wash") + "#acceptance",
+                "prefix": "For a plate washer, use the ",
+                "label": "microplate washing and aspiration checks",
+                "suffix": " to relate branch measurements to well-to-well delivery, residual liquid and the complete wash cycle."
+              }
+            ]
           }
         ]
       },

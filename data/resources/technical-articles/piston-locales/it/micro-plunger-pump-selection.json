@@ -1,0 +1,333 @@
+{
+  "slug": "micro-plunger-pump-selection",
+  "title": "Che cos’è una pompa a pistone di precisione? Funzionamento, vantaggi e applicazioni",
+  "summary": "Scopri come funzionano le pompe a pistone di precisione, dove si usano e come scegliere capacità, prestazioni, materiali, valvole e comandi per un sistema fluidico OEM.",
+  "seoTitle": "Pompe a pistone di precisione: funzionamento e scelta | FOREACH",
+  "seoDescription": "Introduzione a funzionamento, vantaggi, applicazioni e scelta delle pompe a pistone di precisione, con le serie FOREACH EA, SM e TM.",
+  "date": "2026-06-19",
+  "coverImage": "/images/resources/technical-articles/piston-pump/micro-plunger-pump-selection-cover.webp",
+  "coverAlt": "Serie di pompe a pistone di precisione FOREACH EA, SM e TM",
+  "intro": [
+    {
+      "type": "paragraph",
+      "text": "Una pompa a pistone di precisione è una pompa volumetrica che aspira, dosa ed eroga liquido tramite il moto alternativo controllato del pistone. Motore e trasmissione trasformano la rotazione in spostamento lineare e permettono di programmare aspirazione ed erogazione."
+    },
+    {
+      "type": "paragraph",
+      "text": "Una pompa a pistone di precisione si sceglie in base al volume della singola dose, all’accuratezza, alla ripetibilità e alla durata nel funzionamento automatico. Le pompe di trasferimento servono soprattutto a spostare liquido tra due punti. Le pompe a pistone di precisione sono ampiamente integrate in strumenti per diagnostica in vitro (IVD), scienze della vita, automazione di laboratorio e analisi."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Come funziona una pompa a pistone di precisione?",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Un gruppo tipico comprende motore, trasmissione, pistone, camera di pompaggio e porte fluidiche. La trasmissione converte la rotazione del motore nella corsa del pistone."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "label": "Aspirazione",
+              "text": "Il pistone arretra, aumenta il volume della camera e richiama liquido nel circuito."
+            },
+            {
+              "label": "Erogazione",
+              "text": "Il pistone avanza, riduce il volume della camera e spinge il liquido verso l’uscita."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Elettrovalvole, valvole di non ritorno o valvole rotative dirigono il flusso. La logica di controllo coordina il moto del pistone e la commutazione delle valvole. I passi comandati al motore definiscono la corsa e quindi il volume teorico spostato."
+        },
+        {
+          "type": "notice",
+          "label": "Limite di calcolo: ",
+          "text": "Il volume effettivamente erogato va misurato a destinazione. Gioco, risposta delle valvole, bolle, cedevolezza dei tubi, viscosità, pressione e geometria dell’uscita possono alterare il risultato rispetto al volume teorico spostato."
+        }
+      ]
+    },
+    {
+      "title": "Terminologia: pompe a pistone e pompe a stantuffo",
+      "parts": [
+        {
+          "type": "paragraph",
+          "text": "Nella manipolazione di precisione dei liquidi, «pompa a pistone» e «pompa a stantuffo» designano spesso prodotti OEM simili. Si usano anche denominazioni come micropompa a pistone, pompa a stantuffo di precisione, pompa a volume variabile e pompa dosatrice di precisione."
+        },
+        {
+          "type": "paragraph",
+          "text": "L’articolo riguarda pompe OEM compatte per aspirazione, dosaggio ed erogazione di precisione. Le macchine idrauliche a pistoni assiali, le pompe industriali per lavaggio ad alta pressione e le pompe primarie ad alta pressione per cromatografia liquida costituiscono altri ambiti di applicazione."
+        }
+      ]
+    },
+    {
+      "title": "Vantaggi principali delle pompe a pistone di precisione",
+      "parts": [
+        {
+          "type": "bullets",
+          "items": [
+            "Dosaggio volumetrico per aggiunta di reagenti, trasferimento di campioni, erogazione e diluizione",
+            "Sequenze automatiche ripetibili di aspirazione ed erogazione",
+            "Capacità disponibili nell’ordine dei microlitri e dei millilitri",
+            "Integrazione con valvole, tubi, raccordi, sensori e controllori",
+            "Valutazione per progetto di testate, pistoni, tenute e altri materiali a contatto con il fluido"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La configurazione va scelta in base al liquido. Le prestazioni finali si verificano sul sistema fluidico completo nelle condizioni reali."
+        }
+      ]
+    },
+    {
+      "title": "Fattori che influiscono sulle prestazioni di erogazione",
+      "parts": [
+        {
+          "type": "table",
+          "headers": [
+            "Concetto",
+            "Significato",
+            "Criterio di scelta"
+          ],
+          "rows": [
+            [
+              "Risoluzione",
+              "Spostamento teorico o volume per incremento di comando",
+              "Verificare l’erogazione effettiva anche quando aumenta il numero di passi"
+            ],
+            [
+              "Accuratezza",
+              "Vicinanza del volume erogato al valore obiettivo",
+              "Misurare al volume di lavoro effettivo con il circuito completo"
+            ],
+            [
+              "Ripetibilità",
+              "Coerenza dei risultati ottenuti ripetendo la prova",
+              "Valutare a parte l’accuratezza e verificare la ripetibilità nelle corse brevi di interesse"
+            ]
+          ]
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Percentuale della corsa e gioco all’inversione",
+            "Risposta delle valvole, sequenza di commutazione e resistenza del circuito",
+            "Bolle, gas disciolto, lunghezza, diametro e cedevolezza dei tubi",
+            "Viscosità, temperatura, velocità del motore, accelerazione e frequenza dei cicli"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Applicazioni tipiche",
+      "parts": [
+        {
+          "type": "subsections",
+          "items": [
+            {
+              "title": "Diagnostica in vitro e analizzatori clinici",
+              "paragraphs": [
+                "Aspirazione di campioni, aggiunta di reagenti, erogazione, diluizione, gestione dei calibratori e aggiunta di soluzioni di innesco, in coordinamento con valvole, sonde, tubi e sequenze di lavaggio."
+              ]
+            },
+            {
+              "title": "Strumenti per le scienze della vita",
+              "paragraphs": [
+                "Trasferimento di campioni e reagenti, preparazione delle reazioni, aggiunta di tamponi e altre operazioni automatiche. Capacità, materiali e pulizia dipendono dal processo."
+              ]
+            },
+            {
+              "title": "Automazione di laboratorio",
+              "paragraphs": [
+                "Attuatore programmabile per il trasferimento di volumi definiti, integrato con movimento, valvole, sensori e controlli."
+              ]
+            },
+            {
+              "title": "Strumenti analitici e ambientali",
+              "paragraphs": [
+                "Aggiunta di standard, dosaggio di reagenti, calibrazione, titolazione, campionamento e trasferimento dosato. Il trasferimento continuo ad alta portata, il lavaggio rapido, l’aspirazione degli scarti e la cromatografia ad alta pressione richiedono di norma un’altra tipologia di pompa."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Serie di pompe a pistone FOREACH EA, SM e TM",
+      "parts": [
+        {
+          "type": "table",
+          "headers": [
+            "Serie",
+            "Gamma attualmente confermata",
+            "Impiego",
+            "Criteri e limiti di scelta"
+          ],
+          "rows": [
+            [
+              "Pompa a pistone di precisione EA",
+              "50 μL–20 mL",
+              "Dosaggio ed erogazione nell’ordine dei microlitri e dei millilitri",
+              "Accuratezza e ripetibilità a corsa completa ≤0.5% alle condizioni specificate. Porte 1/4-28 UNF o M6, materiali e comandi in base alla configurazione"
+            ],
+            [
+              "Pompa a pistone in miniatura SM",
+              "Configurazioni mostrate: 50, 100, 250, 500 μL e 1 mL",
+              "Dosaggio nell’ordine dei microlitri in apparecchiature compatte",
+              "2,000 passi a corsa completa nelle configurazioni base. Ripetibilità a corsa completa ≤0.5% alle condizioni specificate. Confermare l’accuratezza al volume di lavoro"
+            ],
+            [
+              "Pompa a pistone ultracompatta TM",
+              "Configurazioni mostrate: 50, 100, 250 e 500 μL",
+              "Moduli analitici OEM con spazio limitato",
+              "Configurazioni mostrate con 6-40 UNF e 2,540 passi. Validare accuratezza, ripetibilità, pressione e durata per la configurazione"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "La durata prevista di cinque milioni di cicli per EA e SM corrisponde a condizioni specificate, tra cui acqua pura, temperatura ambiente e contropressione di 50 kPa. La durata effettiva dipende da fluido, pressione, velocità, corsa, temperatura, pulizia e frequenza dei cicli."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "prefix": "Consulta ",
+              "label": "le capacità e le configurazioni delle pompe a pistone FOREACH",
+              "href": "/products/pumps/piston-pump/",
+              "suffix": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Come fare una prima selezione",
+      "parts": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "label": "Definire i volumi di lavoro",
+              "text": "Elenca le dosi singole minima, normale e massima e individua quella con il requisito di accuratezza più critico."
+            },
+            {
+              "label": "Distinguere le metriche di prestazione",
+              "text": "Indica l’errore ammesso e specifica se il requisito riguarda accuratezza, ripetibilità, CV o un’altra metrica."
+            },
+            {
+              "label": "Indicare il fluido effettivo",
+              "text": "Indica composizione, concentrazione, viscosità, temperatura, particelle, rischio di cristallizzazione, liquido di pulizia e modalità di conservazione."
+            },
+            {
+              "label": "Valutare pressione e velocità",
+              "text": "Considera resistenza di tubi, filtri, valvole e ugelli, viscosità e velocità di aspirazione."
+            },
+            {
+              "label": "Confermare porte e montaggio",
+              "text": "Verifica tipo di valvola, tubi, filettature, orientamento, spazio di manutenzione, adescamento e sfiato."
+            },
+            {
+              "label": "Definire i requisiti di controllo",
+              "text": "Includi ricerca del riferimento, accelerazione, velocità, inversione, tempi delle valvole, retroazione, allarmi e ripristino dopo un’interruzione di alimentazione."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Compiti e requisiti delle diverse pompe per liquidi",
+      "parts": [
+        {
+          "type": "table",
+          "headers": [
+            "Tipo di pompa",
+            "Compito tipico",
+            "Aspetti principali da valutare"
+          ],
+          "rows": [
+            [
+              "Pompa a pistone di precisione",
+              "Aspirazione programmata e dosaggio volumetrico",
+              "Corsa finita, riempimento, valvole, bolle, gioco e materiali a contatto con il fluido"
+            ],
+            [
+              "Pompa a siringa",
+              "Aspirazione, erogazione e commutazione del circuito con siringhe e valvole",
+              "Capacità della siringa, manutenzione, ingombro e volume minimo di lavoro"
+            ],
+            [
+              "Pompa a membrana",
+              "Trasferimento, lavaggio, ricircolo, adescamento e gestione degli scarti",
+              "Portata in funzione della resistenza del circuito. Compiti di trasferimento distinti dal dosaggio a volume fisso con pistone"
+            ],
+            [
+              "Pompa peristaltica",
+              "Trasferimento con liquido a contatto esclusivamente con tubi sostituibili",
+              "Fatica dei tubi, deriva della calibrazione, pulsazioni e compatibilità dei tubi"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Ogni compito ha requisiti specifici. Uno strumento può usare una pompa a pistone per il dosaggio di precisione e una pompa a membrana o di altro tipo per lavaggio, ricircolo e scarico."
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faq": [
+    {
+      "question": "Risoluzione e accuratezza di erogazione coincidono?",
+      "answer": "La risoluzione è l’incremento teorico di comando. L’erogazione effettiva dipende anche da meccanica, valvole, bolle, pressione, tubi e controllo."
+    },
+    {
+      "question": "Conviene scegliere la capacità più grande che copre il requisito?",
+      "answer": "Valuta quanta corsa usa il volume minimo critico, oltre al volume massimo e alla durata del ciclo."
+    },
+    {
+      "question": "Perché le bolle influiscono sul dosaggio con una pompa a pistone?",
+      "answer": "Il gas è comprimibile. Assorbe parte dello spostamento e la rilascia in seguito, causando erogazione insufficiente, ritardo o interazioni tra cicli."
+    },
+    {
+      "question": "Una pompa a pistone può gestire ogni reagente?",
+      "answer": "Valuta i materiali a contatto con il fluido in base a liquido effettivo, concentrazione, temperatura, pressione, pulizia e durata di contatto."
+    }
+  ],
+  "conclusion": {
+    "title": "Conclusioni: partire dal volume di lavoro e dall’intero circuito fluidico",
+    "parts": [
+      {
+        "type": "paragraph",
+        "text": "Per scegliere una pompa a pistone di precisione, definisci volumi di lavoro, obiettivi di accuratezza e ripetibilità. Valuta quindi fluido, pressione, valvole, tubi, spazio, comandi e tempi di ciclo con un unico piano di validazione che comprenda capacità nominale e passi del motore."
+      },
+      {
+        "type": "paragraph",
+        "text": "Le serie FOREACH EA, SM e TM coprono rispettivamente un’ampia gamma di capacità, applicazioni compatte e applicazioni ultracompatte. Conferma serie, capacità, materiali, porte e comandi con documentazione tecnica aggiornata e condizioni operative reali."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Devi confermare capacità, materiali e controllo della pompa a pistone?",
+    "description": "Indica volume di dose, obiettivi di accuratezza e ripetibilità, fluido, contropressione, tubi, durata del ciclo e spazio di montaggio per valutare una configurazione EA, SM o TM.",
+    "contactLabel": "Contatta un tecnico",
+    "productsLabel": "Visualizza le pompe a pistone"
+  },
+  "subject": {
+    "about": [
+      "pompa a pistone di precisione",
+      "pompa a pistone EA",
+      "pompa a pistone SM",
+      "pompa a pistone TM"
+    ],
+    "mentions": [
+      "principio di funzionamento della pompa a pistone",
+      "erogazione volumetrica",
+      "IVD",
+      "automazione di laboratorio",
+      "manipolazione dei liquidi"
+    ]
+  }
+}

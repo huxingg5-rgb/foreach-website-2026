@@ -1,0 +1,903 @@
+{
+  "metadata": {
+    "title": "Pompe a membrana miniaturizzate Foreach per l’integrazione OEM: punti di lavoro, verifica nello strumento e avvio della produzione",
+    "seoTitle": "Integrazione OEM delle pompe a membrana Foreach | Scelta e verifica",
+    "seoDescription": "Guida tecnica all’integrazione OEM di Foreach DPL30, DPL60, DPL30H e DPGL800. Bilanci di portata e pressione, adescamento, materiali a contatto con il fluido, controllo, installazione, prove sul prototipo e avvio della produzione.",
+    "coverImage": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
+    "coverAlt": "Foto di una pompa a membrana miniaturizzata per liquidi Foreach DPL60 con attacchi portagomma e motore"
+  },
+  "deck": "Il funzionamento stabile di una pompa a membrana miniaturizzata in uno strumento OEM dipende dalla compatibilità tra funzioni del circuito fluidico, condizioni in ingresso e uscita, materiali, metodi di controllo e struttura complessiva dello strumento. La guida usa Foreach DPL30, DPL60, DPL30H e DPGL800 come esempi per individuare soluzioni candidate, verificare i prototipi in modo riproducibile e tradurre i risultati in requisiti tecnici di fornitura per la produzione. Il punto di partenza è il bilancio di portata e pressione, insieme alle fasi del fluido, ai materiali a contatto e alle interfacce elettriche.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Un analizzatore può dover reintegrare il liquido di lavaggio, lavare la camera di reazione, scaricare i liquidi esausti e adescare le linee contemporaneamente. Tutte sono operazioni di trasferimento, ma richiedono prestazioni diverse. Nel lavaggio contano la portata all’utenza e la copertura. Per l’aspirazione conta la capacità di riprendere il flusso in presenza di gas. Nelle linee sottili conta il punto di lavoro con contropressione. Per la circolazione prolungata contano anche l’aumento della temperatura e la durata. La scelta della portata è il primo passo dell’integrazione OEM."
+    },
+    {
+      "type": "paragraph",
+      "text": "Per integrazione OEM si intende la scelta, l’adattamento e la verifica della pompa a membrana miniaturizzata Foreach come componente interno dello strumento. Confermare separatamente modelli standard, configurazioni opzionali e personalizzazioni di progetto. La documentazione tecnica deve indicare modelli completi, limiti del circuito fluidico, interfacce elettriche e meccaniche, metodi di accettazione e requisiti per le modifiche. Sviluppo, acquisti, produzione e assistenza devono usare la stessa documentazione."
+    },
+    {
+      "type": "paragraph",
+      "text": "I dati di prodotto riportati provengono dalle schede tecniche Foreach in cinese elencate alla fine. Gli esempi di calcolo illustrano il metodo di progetto e non sono misure su un modello specifico. Verificare reagenti effettivi, miscele, installazioni particolari e tempi di ciclo nella configurazione corrispondente e sul circuito completo dello strumento."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Trasformare le operazioni dello strumento in requisiti verificabili per la pompa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Se nella richiesta compaiono solo «24 V, 300 mL/min, autoadescante», il fornitore non può stabilire in quali condizioni serva quella portata. Descrivere prima origine e destinazione del liquido, componenti a monte e a valle della pompa, variazioni di livello e pressione. Definire poi i criteri di completamento dell’operazione."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operazioni dello strumento",
+            "Condizioni da quantificare",
+            "Osservazioni consigliate"
+          ],
+          "rows": [
+            [
+              "Mandata del liquido di lavaggio e risciacquo delle camere",
+              "Volume di ogni operazione, tempo effettivo di erogazione, rami simultanei e resistenza di ugelli o gruppi valvole",
+              "Volume effettivamente ricevuto all’utenza, distribuzione tra i rami, copertura del lavaggio e residui"
+            ],
+            [
+              "Mandata ausiliaria di reagente o tampone",
+              "Composizione, concentrazione e temperatura del fluido, portata obiettivo, bolle e pulsazioni ammesse",
+              "Stabilità di erogazione, variazioni del fluido e bolle che raggiungono il circuito a valle"
+            ],
+            [
+              "Circolazione",
+              "Portata di circolazione, resistenza del circuito, tempo di esercizio e volume del serbatoio",
+              "Aumento della temperatura, variazioni di livello, deriva della portata e stabilità del fluido"
+            ],
+            [
+              "Aspirazione di liquidi esausti e svuotamento delle linee",
+              "Sequenza di ingresso di liquido e aria, volume residuo, altezza di aspirazione e pressione a valle",
+              "Tempo di completamento, liquido residuo, ripristino dopo l’ingresso di gas e riflusso dopo l’arresto"
+            ],
+            [
+              "Mandata di liquido con contropressione elevata",
+              "Carico del filtro, pressione terminale e pressione transitoria massima",
+              "Portata, aumento della temperatura e resistenza alla pressione dell’intera linea con la contropressione prevista"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Distinguere trasferimento e dosaggio. Se il processo richiede un’accuratezza definita per il volume di ogni erogazione, il solo tempo di funzionamento della pompa a membrana non garantisce un dosaggio affidabile. I transitori di avvio e arresto, l’elasticità dei tubi, la tenuta delle valvole, la contropressione e le bolle cambiano il volume effettivamente erogato. Valutare l’utilità di taratura, feedback di portata o altri componenti di dosaggio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Includere nei requisiti condizioni normali e limite: flacone pieno e livello basso, tubo inizialmente asciutto e già bagnato, filtro nuovo e vicino alla sostituzione, apertura di uno o più rami simultanei, avvio a freddo e a caldo. Si ottiene così un intervallo operativo verificabile anziché un singolo punto."
+        }
+      ]
+    },
+    {
+      "title": "2. Valutare quattro serie Foreach di pompe a membrana per la selezione OEM",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le schede di DPL30, DPL60 e DPL30H indicano l’acqua purificata come fluido di lavoro e richiedono che il cliente valuti gli altri liquidi. Per DPGL800 indicano gas e miscele gas-liquido. Nella scelta del modello, chiarire prima in quale fase si trova il fluido e poi confrontare le condizioni di portata e pressione corrispondenti."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Serie",
+            "Parametri principali delle schede tecniche",
+            "Indicazioni e limiti per la valutazione OEM"
+          ],
+          "rows": [
+            [
+              "pompa a membrana per liquidi DPL30",
+              "Portata senza carico 300 mL/min, pressione nominale 100 kPa, altezza di autoadescamento 6 mH₂O",
+              "Mandata di liquido, lavaggio e trasferimento in linee di piccole dimensioni. Verificare la portata obiettivo con le condizioni di aspirazione e contropressione effettive."
+            ],
+            [
+              "pompa a membrana per liquidi DPL60",
+              "Portata senza carico 600 mL/min, pressione nominale 100 kPa, altezza di autoadescamento 3 mH₂O",
+              "Lavaggio, circolazione e scarico con maggiore richiesta di liquido. Una portata senza carico più alta non garantisce che ogni circuito completi il compito in metà tempo."
+            ],
+            [
+              "Pompa a membrana per liquidi ad alta pressione DPL30H",
+              "Portata senza carico 300 mL/min, pressione nominale 600 kPa, altezza di autoadescamento 3 mH₂O",
+              "Mandata di liquido, filtrazione e risciacquo con maggiore contropressione. I valori di 300 mL/min e 600 kPa si riferiscono a condizioni diverse."
+            ],
+            [
+              "Pompa a membrana per gas e miscele gas-liquido DPGL800",
+              "Portata di gas senza carico per una singola testata 6 L/min, pressione positiva massima 30 kPa, pressione negativa massima < −90 kPa",
+              "Aspirazione di gas e miscele gas-liquido, generazione del vuoto ed evacuazione. I 6 L/min non sono una portata nominale di liquido e non si può assegnare direttamente una capacità di 12 L/min alla versione a doppia testata."
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Per DPL30, DPL60 e DPL30H le schede riportano 12 V / 24 V e versioni con spazzole o brushless. La tabella di selezione standard di questa revisione della scheda DPGL800 elenca una configurazione brushless da 24 V. I caratteri nella spiegazione del codice d’ordine descrivono opzioni di configurazione. La disponibilità standard di ciascuna combinazione va verificata."
+        },
+        {
+          "type": "figure",
+          "src": "/images/products/pumps/diaphragm-pumps/dpl60/images/foreach-dpl60-600ml-min-brushless-pwm-miniature-liquid-diaphragm-pump-front-side.webp",
+          "alt": "Foto della pompa a membrana miniaturizzata per liquidi Foreach DPL60 brushless con attacchi portagomma sui due lati della testata",
+          "width": 1500,
+          "height": 1499,
+          "caption": "Foto della DPL60. Le posizioni relative di portagomma, motore e testata aiutano a valutare l’instradamento dei tubi e lo spazio d’installazione. Confermare assegnazione dei pin, dimensioni di montaggio e materiali nella documentazione del modello selezionato."
+        },
+        {
+          "type": "notice",
+          "label": "Confronto dei parametri",
+          "text": "Portata senza carico, pressione nominale, altezza di autoadescamento e vuoto massimo sono definiti in condizioni diverse. Per stabilire il punto di lavoro serve una verifica congiunta. Pressione di stallo, pressione di scoppio e idoneità all’esercizio continuo contro una valvola chiusa richiedono riscontri distinti dalla pressione nominale."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/",
+              "label": "Consulta le serie di pompe a membrana miniaturizzate Foreach e le configurazioni di base"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "3. Ricavare la portata obiettivo dal volume di lavaggio e dalla durata del ciclo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Calcolare prima la portata media necessaria, poi verificare che la pompa la raggiunga nel circuito effettivo. Se un lavaggio richiede 30 mL e rimangono 15 s di erogazione effettiva, la portata media necessaria è di 120 mL/min. Sottrarre separatamente dalla finestra operativa complessiva il tempo di commutazione delle valvole, il ritardo di avvio, l’adescamento e il tempo necessario perché il liquido raggiunga l’utenza."
+        },
+        {
+          "type": "formula",
+          "expression": "Q_req = 60 × V / t_eff",
+          "note": "Q_req è in mL/min, V è il volume da erogare all’utenza (mL) e t_eff è il tempo effettivo di erogazione (s). Esempio: 60 × 30 / 15 = 120 mL/min."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se quattro rami si aprono contemporaneamente, sommare le portate dei rami attivi nello stesso momento. Se vengono lavati uno alla volta, calcolare la richiesta fase per fase. La somma delle portate nominali di tutti i rami nasconde le effettive sovrapposizioni e può far funzionare la pompa a portata inutilmente elevata per molto tempo. Al contrario, verificare solo la portata totale può non rilevare un’erogazione insufficiente nei rami a maggiore resistenza."
+        },
+        {
+          "type": "subheading",
+          "title": "Il margine di portata deve coprire fonti di variazione identificabili"
+        },
+        {
+          "type": "paragraph",
+          "text": "Considerare nel margine differenze tra lotti, variazioni di viscosità, carico del filtro, abbassamento del livello, fluttuazioni dell’alimentazione e deriva delle prestazioni dopo l’uso. Individuare l’effetto di questi fattori sulla curva della pompa o sulla resistenza del sistema prima di decidere il margine. Verificare le condizioni limite di ogni strumento prima di applicare una percentuale."
+        },
+        {
+          "type": "formula",
+          "expression": "M_Q = (Q_available,worst − Q_req) / Q_req × 100%",
+          "note": "Q_available,worst è la portata disponibile nella condizione più sfavorevole definita. Ricavarla dalla curva o da una prova corrispondente. Se nell’esempio la misura è 150 mL/min e la richiesta è 120 mL/min, il margine è del 25%. I 150 mL/min sono un valore ipotetico e non una prestazione garantita per un modello Foreach."
+        },
+        {
+          "type": "paragraph",
+          "text": "Indicare anche la portata massima ammessa. In alcuni ugelli, camere di reazione o sensori di livello, una portata eccessiva può provocare schizzi, schiuma o attivazioni errate. Valutare insieme il requisito minimo e il controllo del massimo, ricorrendo se necessario a un controllo adatto della velocità, delle valvole o del feedback."
+        }
+      ]
+    },
+    {
+      "title": "4. Calcolare il bilancio di pressione e verificare separatamente aspirazione e mandata",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Il liquido perde pressione attraversando tubi, raccordi, valvole e filtri. Serve inoltre pressione per superare i dislivelli. Per una data portata, calcolare prima il differenziale richiesto dal sistema e poi confrontarlo con le prestazioni della pompa per lo stesso fluido, alimentazione e velocità."
+        },
+        {
+          "type": "formula",
+          "expression": "Δp_pump = (p_dest − p_source) + ρg(z_dest − z_source) + ΣΔp_loss",
+          "note": "L’equazione vale per bilanci di pressione con liquidi incomprimibili a regime. Le differenze di carico cinetico agli estremi sono trascurate o contabilizzate a parte. Le pressioni usano lo stesso riferimento e sono in Pa. ρ è in kg/m³, g in m/s² e z in m. Calcolare o misurare le perdite di pressione alla portata obiettivo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Registrare, oltre al differenziale totale, le pressioni separate in ingresso e uscita. Con depressione in ingresso e contropressione in uscita, sono influenzati contemporaneamente il riempimento e lo svuotamento della camera. Se la scheda misura separatamente depressione in aspirazione e pressione positiva in mandata, occorre provare la combinazione dei due carichi per conoscere la portata effettiva."
+        },
+        {
+          "type": "subheading",
+          "title": "Esempio di bilancio di pressione per una linea di lavaggio da 120 mL/min"
+        },
+        {
+          "type": "paragraph",
+          "text": "Si assume un fluido con proprietà simili all’acqua. La superficie del liquido di alimentazione è in comunicazione con l’atmosfera, la pompa si trova 0,5 m sopra tale livello e l’utenza 0,5 m sopra la pompa. I valori seguenti per tubazioni, filtro e pressione all’utenza sono ipotesi di progetto alla portata obiettivo, usate solo per mostrare il calcolo."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Voce del bilancio di pressione",
+            "Valori di esempio",
+            "Implicazioni progettuali"
+          ],
+          "rows": [
+            [
+              "Dislivello dalla superficie del liquido sorgente all’ingresso della pompa",
+              "Circa 4,9 kPa",
+              "Riduce la pressione relativa in ingresso. Ripetere la verifica a livello basso."
+            ],
+            [
+              "Perdita di pressione nella linea di aspirazione e nei raccordi",
+              "3 kPa",
+              "Insieme al dislivello, determina la pressione in ingresso alla pompa"
+            ],
+            [
+              "Dislivello dall’uscita della pompa all’utenza",
+              "Circa 4,9 kPa",
+              "Aumenta la pressione necessaria in uscita"
+            ],
+            [
+              "Perdita di pressione nella linea di mandata e nel collettore valvole",
+              "8 kPa",
+              "Contabilizzare il percorso effettivamente aperto"
+            ],
+            [
+              "Perdita di carico nel filtro",
+              "6 kPa a filtro pulito, 20 kPa alla soglia di sostituzione",
+              "Considerare il carico del filtro fino alla condizione di sostituzione definita"
+            ],
+            [
+              "Pressione relativa del recipiente terminale",
+              "15 kPa",
+              "Contabilizzare come condizione al contorno di pressione alla destinazione"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Alla soglia di sostituzione del filtro, la pressione relativa in ingresso è circa −7,9 kPa, quella richiesta in uscita circa 47,9 kPa e il differenziale sulla pompa circa 55,8 kPa. Con filtro pulito il differenziale totale è circa 41,8 kPa. La pompa candidata deve raggiungere la portata obiettivo con depressione in ingresso e contropressione in uscita contemporanee. Per verificare l’idoneità alla funzione occorre più del confronto tra i 100 kPa nominali e i 55,8 kPa richiesti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Misurare per la pompa candidata la relazione tra Q, pressione in ingresso e pressione in uscita con filtro pulito e caricato. Se la portata è insufficiente, localizzare prima la perdita principale. Aumentare il diametro di un tubo sottile, accorciare la linea di aspirazione, migliorare lo sfiato del flacone o scegliere una valvola o un filtro più adatti possono intervenire più direttamente sulla causa rispetto all’aumento della pressione nominale della pompa."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/calculators/fluid-resistance/",
+              "label": "Usa il calcolatore delle perdite di carico per stimare la caduta di pressione in tubi e componenti"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Approfondimento: curva portata-pressione e punto di lavoro della pompa a membrana"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Autoadescamento e tubazioni: progettare separatamente l’ingresso della pompa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nell’autoadescamento la pompa deve prima evacuare l’aria dalla linea di aspirazione e dalla camera, poi stabilire una colonna continua di liquido. Altezza di autoadescamento, tempo alla prima erogazione e tempo per ottenere una mandata stabile sono quindi grandezze diverse. L’altezza di autoadescamento a catalogo va verificata con la lunghezza effettiva della linea di aspirazione e con prove di avvio a temperature elevate o dopo ingressi ripetuti d’aria."
+        },
+        {
+          "type": "subheading",
+          "title": "Perché un diametro interno ridotto aumenta sensibilmente le perdite di aspirazione?"
+        },
+        {
+          "type": "formula",
+          "expression": "Δp = 128 μ L Q / (π d⁴)",
+          "note": "La relazione di Hagen–Poiseuille vale per moto laminare completamente sviluppato, fluidi newtoniani e tubi rettilinei rigidi di sezione circolare. Q è in m³/s, μ in Pa·s e L e d in m. Valutare separatamente curve, valvole, effetti d’ingresso, deformazione dei tubi flessibili e flusso bifase gas-liquido."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per un fluido simile all’acqua con μ = 1,0 mPa·s e ρ = 1000 kg/m³, a 120 mL/min in un tubo rettilineo lungo 1 m e con diametro interno 2,0 mm la perdita di pressione calcolata è circa 5,09 kPa e il numero di Reynolds circa 1270. Nelle stesse condizioni, con diametro interno 3,2 mm la perdita calcolata è circa 0,78 kPa e il numero di Reynolds circa 800. Entrambi i calcoli usano l’approssimazione laminare e le perdite di pressione differiscono di un fattore di circa 6,55."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il fatto che il tubo flessibile si possa collegare al raccordo non basta a stabilire la resistenza dell’intera linea. Un diametro maggiore aumenta anche il volume della linea e quello da sostituire al cambio di fluido. Confrontare tempi di preriempimento, consumo di reagente e residui. Un filtro troppo fine in aspirazione riduce ulteriormente la pressione in ingresso man mano che si carica. Selezionarlo in base al rischio effettivo di particelle e alla perdita di pressione ammessa."
+        },
+        {
+          "type": "subheading",
+          "title": "Distinguere ingresso d’aria, rilascio di gas disciolto e vaporizzazione"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un raccordo in aspirazione privo di tenuta lascia entrare aria. Uno sfiato insufficiente nel tappo provoca una depressione progressiva nel recipiente di alimentazione e il gas disciolto può liberarsi al calo di pressione. La pressione assoluta locale può scendere fino ad avvicinarsi alla pressione di vapore del fluido. Temperatura del liquido, volatilità e altitudine influiscono sulle condizioni di aspirazione disponibili. La sola pressione relativa in ingresso o la semplice rotazione della pompa non bastano per la valutazione."
+        },
+        {
+          "type": "paragraph",
+          "text": "Entro le condizioni ammesse, accorciare il tubo di aspirazione, alzare il livello del liquido di alimentazione o provare raccordi di cui sia stata verificata la tenuta all’aria. Osservare le variazioni di portata e bolle. Un tubo che non mostra perdite di liquido può comunque aspirare aria in depressione. Dopo l’autoadescamento, continuare a registrare il tempo necessario per stabilizzare la portata in uscita."
+        },
+        {
+          "type": "figure",
+          "src": "/images/products/pumps/diaphragm-pumps/dpl30/images/dpl30-brushless-2-wire-real-product-photo.webp",
+          "alt": "Foto della pompa a membrana per liquidi Foreach DPL30 brushless a due fili con portagomma, testata e cavi di alimentazione",
+          "width": 1200,
+          "height": 1200,
+          "caption": "Versione DPL30 brushless a due fili. L’installazione deve considerare diametro interno del tubo, innesto e ritenzione, raggio di curvatura e sollecitazioni sul cablaggio. Usare il disegno dimensionale e lo schema elettrico per confermare i dati visibili in foto."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/self-priming-miniature-liquid-diaphragm-pump-selection/",
+              "label": "Approfondimento: scelta e verifica dell’autoadescamento di una pompa a membrana miniaturizzata per liquidi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Mandata con contropressione elevata: verificare insieme la pompa e le protezioni del sistema",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Filtrazione, gruppi valvole multistadio, linee lunghe e sottili e alcune operazioni di spruzzatura possono richiedere pressioni di mandata più alte. La scheda DPL30H indica portata senza carico di 300 mL/min e pressione nominale di 600 kPa. È quindi una candidata per linee con contropressione elevata. Poiché la portata varia con la pressione, i due dati non vanno espressi come «300 mL/min a 600 kPa»."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per valutare una configurazione ad alta pressione, chiarire prima pressione e portata effettivamente richieste all’utenza. Verificare poi le pressioni ammesse da raccordi, valvole, filtri, sensori e tubazioni alle temperature effettive. La pressione nominale della pompa vale per la pompa. Il componente meno resistente può determinare il limite di esercizio dell’intero impianto."
+        },
+        {
+          "type": "figure",
+          "src": "/images/products/pumps/diaphragm-pumps/dpl30h/images/foreach-dpl30h-300ml-min-brushless-diaphragm-analyzer-wash-pump.webp",
+          "alt": "Foto della pompa a membrana per liquidi ad alta pressione Foreach DPL30H brushless con raccordi a compressione e fori di montaggio",
+          "width": 1500,
+          "height": 1500,
+          "caption": "Foto della DPL30H. Valutare le posizioni dei raccordi a compressione e dei fori di fissaggio insieme al percorso dei tubi rigidi e al progetto della staffa. Questa revisione della scheda specifica tubi rigidi con diametro esterno 6 mm e interno 4 mm. Le connessioni per tubi flessibili di DPL30/DPL60 richiedono una verifica distinta."
+        },
+        {
+          "type": "paragraph",
+          "text": "Includere la sequenza di controllo nel progetto di pressione. Chiudere la valvola a valle prima di arrestare la pompa può causare un breve aumento di pressione. Dopo un’interruzione di corrente, tubi in pressione, camere di compensazione e liquidi possono ancora immagazzinare energia. Definire rilevamento di pressione, logica di arresto, scarico della pressione o bypass in base al rischio. Verificare la frequenza di campionamento del sensore e i ritardi di intervento. Provare chiusura delle valvole e guasti su un apparato protetto, in condizioni controllate e concordate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questa revisione indica una temperatura del fluido di +5 ~ +40 ℃ per DPL30H e +5 ~ +80 ℃ per DPL30/DPL60. Usare l’intervallo della serie specifica. Anche quando la temperatura del liquido è ammessa dalla pompa, verificare le condizioni ambientali di raccordi, tubi, valvole e strumento completo."
+        }
+      ]
+    },
+    {
+      "title": "7. Aspirazione di miscele gas-liquido: stabilire se il liquido entra nella camera della pompa",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nei sistemi di scarico sono comuni due configurazioni. Nella prima il liquido o la miscela gas-liquido attraversa direttamente la pompa. Nella seconda il liquido esausto è raccolto in un recipiente chiuso e la pompa aspira il gas sovrastante per creare depressione. Le due configurazioni richiedono dati di selezione e verifiche differenti anche se entrambe vengono chiamate «pompa di scarico»."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Configurazione del sistema",
+            "Dati principali di progetto",
+            "Condizioni anomale da considerare"
+          ],
+          "rows": [
+            [
+              "Aspirazione diretta di una miscela gas-liquido",
+              "Proprietà del liquido, rapporto gas-liquido e relative variazioni, altezza di aspirazione, contropressione in uscita",
+              "Ritorno del liquido dopo lunghi tratti di gas, schiuma, tappi di liquido e residui durante arresto e riavvio"
+            ],
+            [
+              "Generazione del vuoto attraverso un recipiente di scarico",
+              "Volume della fase gassosa, pressione assoluta obiettivo, infiltrazioni d’aria e curva di aspirazione",
+              "Riempimento eccessivo, schiuma oltre il separatore e filtro di protezione bagnato o ostruito"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Questa revisione della scheda DPGL800 riporta la curva di portata gassosa a singola testata e la curva di formazione della pressione per un volume di 5 L, da usare alle condizioni corrispondenti. Il tempo effettivo di messa in depressione dipende comunque dal volume utile della fase gassosa, dal collegamento, dalla resistenza della linea, dalle perdite e dalla pressione di esercizio. Il rapporto tra volume di liquido esausto e 6 L/min non stima il tempo di scarico."
+        },
+        {
+          "type": "formula",
+          "expression": "t ≈ (V_g / S_eff) × ln(p₀ / p₁)",
+          "note": "Stima approssimativa dell’evacuazione per un sistema chiuso, approssimativamente isotermo, senza perdite e con velocità effettiva di pompaggio quasi costante. p₀, p₁ devono essere pressioni assolute. V_g e S_eff devono usare unità coerenti di volume e tempo. Se la velocità effettiva varia con la pressione, integrare la curva di velocità di pompaggio o misurare il sistema. I 6 L/min senza carico di una testata non sono una velocità costante durante l’intero processo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se l’aria entra continuamente, la depressione stabilizzata dipende dalla capacità effettiva di aspirazione e dal carico d’aria in ingresso. Il software deve distinguere gli stati «evacuazione in corso», «depressione di lavoro raggiunta», «valore non raggiunto entro il tempo previsto» e «recipiente pieno», tra gli altri. Con due testate, collegamenti in serie, in parallelo o su canali indipendenti modificano prestazioni e carico. Definire il collegamento e ottenere i dati corrispondenti."
+        },
+        {
+          "type": "figure",
+          "src": "/images/products/pumps/diaphragm-pumps/dpgl800/images/foreach-dpgl800-6l-min-gas-brushless-diaphragm-vacuum-pump.webp",
+          "alt": "Foto di una pompa a membrana per gas e miscele gas-liquido Foreach DPGL800 con due testate, struttura di montaggio e raccordi per tubi",
+          "width": 1500,
+          "height": 1500,
+          "caption": "Foto della DPGL800 a doppia testata. L’immagine comprende adattatori montati. Le porte della pompa senza adattatori sono indicate con filettatura interna G1/8 in questa revisione. Confermare separatamente configurazione degli adattatori e collegamento delle due testate."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nei sistemi che devono impedire l’ingresso di liquido in aspirazione, progettare la separazione gas-liquido, la protezione a recipiente pieno e il relativo rilevamento di stato. Anche con una pompa adatta alle miscele gas-liquido, verificare schiuma, condensa corrosiva, depositi e funzionamento prolungato in presenza di liquido."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/ivd-waste-liquid-pump-liquid-vs-gas-liquid-diaphragm-pump/",
+              "label": "Approfondimento: scelta tra pompa per liquidi e per miscele gas-liquido per l’aspirazione dei liquidi esausti IVD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "8. Materiali a contatto con il fluido: verificare configurazione completa e processo operativo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le parti bagnate della pompa a membrana includono testata, membrana, elemento valvola e, secondo la configurazione, tenute e raccordi. La scelta riguarda tutti i materiali a contatto. Una «membrana in PTFE» è solo uno dei dati necessari per giudicare l’idoneità dell’intera pompa al fluido. Contatto effettivo, grado del materiale, formulazione, temperatura e durata del contatto possono cambiare il risultato."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per DPL30 la tabella di selezione distingue chiaramente EP/PS e FF/PS. La prima combinazione prevede membrana in EPDM, valvole in EPDM e testata in PPS. La seconda prevede membrana in PTFE, valvole in FFKM e testata in PPS. Valutare la combinazione con il fluido chimico specifico. Una modifica della membrana o della valvola può cambiare risposta elastica, apertura e chiusura, tenuta e prestazioni di trasferimento. Collegare quindi le prove dei materiali a quelle prestazionali."
+        },
+        {
+          "type": "subheading",
+          "title": "Perché la prova con acqua purificata non rappresenta l’impiego prolungato con reagenti"
+        },
+        {
+          "type": "paragraph",
+          "text": "Solventi, sali, tensioattivi e componenti di lavaggio nei reagenti possono influire su bagnabilità, viscosità, formazione di schiuma e contatto con i materiali. La concentrazione può aumentare dopo circolazione ed evaporazione. Dopo un lungo arresto possono rimanere cristalli o residui secchi. Durante il lavaggio possono alternarsi fluidi diversi. Tutti questi fattori possono far divergere le prestazioni installate da quelle misurate con acqua purificata a temperatura ambiente."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Fase di verifica",
+            "Condizioni da includere nella prova",
+            "Controlli consigliati"
+          ],
+          "rows": [
+            [
+              "Valutazione preliminare dei materiali",
+              "Composizione esatta del fluido, concentrazione massima, temperatura e durata del contatto",
+              "Variazioni di massa e dimensioni, rigonfiamento, rammollimento e fessurazione. Verificare sostanze estraibili e contaminazione secondo i requisiti del progetto."
+            ],
+            [
+              "Prova dinamica della pompa completa",
+              "Fluido effettivo, punto di lavoro, avvio e arresto e alternanza di gas e liquido",
+              "Variazioni prima e dopo la prova di portata, autoadescamento, differenziale di pressione, tenuta, rumore e corrente"
+            ],
+            [
+              "Arresto e lavaggio",
+              "Durata massima del fermo, essiccazione dei residui, prodotti di lavaggio e procedure di risciacquo effettivi",
+              "Cristallizzazione, adesione, riavvio, residui di lavaggio e ripristino delle prestazioni"
+            ],
+            [
+              "Idoneità al processo",
+              "Condizioni di verifica compatibili con campioni effettivi o procedure analitiche",
+              "Effetti su segnale del bianco, contaminazione, trascinamento residuo e risultato finale dello strumento"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "L’immersione dei materiali aiuta a scartare le combinazioni chiaramente incompatibili. La flessione ripetuta della membrana e la tenuta dinamica delle valvole richiedono però una prova della pompa completa. Confrontare le osservazioni prima e dopo l’immersione con i risultati dinamici e registrare materiali e modello completo del campione. Se la formulazione del reagente è riservata, condividere le informazioni necessarie alla valutazione dei materiali e delle condizioni di lavoro secondo gli accordi di riservatezza."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nei documenti di acquisto elencare i materiali della testata, della membrana, degli elementi valvola e delle relative tenute. La sola dicitura «versione resistente alla corrosione» è insufficiente. Se il riepilogo dei parametri, la tabella di selezione o i dati storici usano descrizioni diverse, chiarire la configurazione da ordinare e concordare i documenti tecnici prima di fissare la configurazione di prototipo e serie."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/micro-diaphragm-pump-materials-selection/",
+              "label": "Approfondimento: scelta dei materiali a contatto con il fluido nelle pompe a membrana miniaturizzate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "9. Motore e controllo: verificare separatamente alimentazione, regolazione di velocità e feedback di stato",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La scelta tra motore con spazzole e brushless è il punto di partenza del controllo. Un progetto OEM deve specificare anche tensione di alimentazione, condizioni di avvio, caduta di tensione sul cablaggio, interfaccia del driver, comando di velocità, feedback e stati di guasto. Le schede DPL30 e DPL60 indicano una configurazione standard a due fili e altre opzioni di cablaggio. Verificare il modello completo prima di collegare il campione, che può differire dallo schema elettrico generico."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Aspetto del controllo",
+            "Condizioni da confermare",
+            "Verifiche spesso trascurate"
+          ],
+          "rows": [
+            [
+              "Alimentazione e avvio",
+              "Tensione nominale, intervallo ammesso, corrente di avvio, cablaggio e connettori",
+              "Se più pompe o elettrovalvole si avviano insieme, tensione ai morsetti della pompa e controller rimangono stabili?"
+            ],
+            [
+              "Configurazione di alimentazione a due fili",
+              "Modalità di avvio e arresto, possibilità di regolazione della tensione o alimentazione commutata e comportamento predefinito all’accensione",
+              "Verificare bassa tensione e riavvio sotto carico. Adottare l’azionamento appropriato per la specifica pompa brushless a due fili."
+            ],
+            [
+              "Ingresso di velocità indipendente",
+              "Livello, frequenza, intervallo del rapporto ciclico, impedenza d’ingresso e comportamento con ingresso lasciato flottante",
+              "Velocità minima stabile, comportamento all’avvio, banda morta e comando definito durante l’accensione"
+            ],
+            [
+              "Feedback di velocità FG",
+              "Numero di impulsi per giro, tipo di uscita, requisiti di pull-up e finestra di campionamento",
+              "Interferenze del segnale, perdita di impulsi a bassa velocità e persistenza del feedback con ostruzione o aspirazione a secco"
+            ],
+            [
+              "Controllo del senso di rotazione del motore",
+              "Funzione DIR e stati logici ammessi",
+              "Quando si inverte il motore, verificare come eroga la pompa in presenza delle valvole unidirezionali. L’inversione del flusso richiede una verifica specifica."
+            ]
+          ]
+        },
+        {
+          "type": "subheading",
+          "title": "Il feedback di velocità indica la rotazione, la portata si verifica a parte"
+        },
+        {
+          "type": "formula",
+          "expression": "Q ≈ V_eff × n",
+          "note": "V_eff è il volume effettivo erogato per giro e n è la velocità di rotazione. Differenziale di pressione, contenuto di gas, fluido, azione delle valvole e tenuta influiscono su V_eff. Verificare quindi la portata anche a velocità costante."
+        },
+        {
+          "type": "paragraph",
+          "text": "In questa revisione della tabella di cablaggio brushless DPL30H, FG genera 3 impulsi a onda quadra per giro. Per questa configurazione si può usare n = 60f/3, con f in Hz, per ricavare la velocità. Il numero di impulsi va confermato per gli altri motori. Anche con segnale FG normale, la mandata può essere instabile per mancanza di liquido, infiltrazioni d’aria o anomalie delle valvole. Scegliere il feedback di portata, pressione o livello in base al compito dello strumento."
+        },
+        {
+          "type": "paragraph",
+          "text": "La stessa revisione DPL30H indica che il motore si arresta con 0~0,25 V sul terminale PWM e funziona a piena velocità se il terminale è flottante o a 4,5~5 V. Supporta la regolazione tramite PWM o 0~5 V. La scheda di controllo deve gestire lo stato dell’ingresso durante accensione, reset, scollegamento del cavo e prima dell’inizializzazione. Confermare per la configurazione effettiva frequenza PWM, corrente d’ingresso e requisiti del circuito di uscita se mancano nei dati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il numero di fili nella foto DPGL800 non identifica le funzioni. La tabella elettrica della scheda in questa revisione riporta VCC e GND. Confermare a parte eventuali altri requisiti di controllo o feedback. Per ogni configurazione, registrare in modo sincronizzato la tensione ai morsetti, la velocità o il comando e la portata effettiva per distinguere problemi di alimentazione, controllo e circuito fluidico."
+        },
+        {
+          "type": "paragraph",
+          "text": "Con controllo ad anello chiuso di portata o pressione, considerare posizione del sensore, filtraggio, ritardi di intervento, banda morta della velocità e limitazione dell’uscita. Evitare che il controller rincorra ogni pulsazione modificando continuamente la velocità. Definire la larghezza di banda del controllo secondo la risposta e l’oscillazione ammesse dal processo. Provare la stabilità dopo variazioni del valore obiettivo e commutazioni dei rami."
+        }
+      ]
+    },
+    {
+      "title": "10. Integrazione meccanica: dimensioni di montaggio, carichi sulle porte e spazio di manutenzione",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Lunghezza, larghezza e altezza complessive descrivono l’ingombro del corpo pompa. Prevedere anche raggio di curvatura dei tubi, lunghezza di assemblaggio dei tubi rigidi, accesso ai connettori, fissaggio del cablaggio, raffreddamento e sostituzione. La documentazione DPL30/DPL60 brushless segnala possibili varianti motore A/B con prestazioni di uscita equivalenti e dimensioni di montaggio diverse. Verificare quindi l’intercambiabilità meccanica a parte."
+        },
+        {
+          "type": "paragraph",
+          "text": "Questa revisione DPL30/DPL60 prescrive un tubo flessibile con diametro interno 3,2 mm. Materiale, spessore della parete, durezza, profondità d’innesto e fissaggio influiscono sulla tenuta all’aria e sulla resistenza allo sfilamento. Per i raccordi a compressione dei tubi rigidi DPL30H, verificare materiale, diametro esterno, qualità del taglio, assemblaggio e supporto per evitare di trasferire continuamente i carichi di flessione alle porte della testata."
+        },
+        {
+          "type": "paragraph",
+          "text": "La vibrazione della pompa può raggiungere l’involucro attraverso staffa e tubazioni ed essere amplificata da pannelli di grande superficie. Valutare gli antivibranti con il carico di montaggio, la rigidezza dei supporti e i vincoli delle tubazioni. Supporti troppo morbidi possono consentire spostamenti eccessivi. Tubi rigidi o cablaggi troppo tesi possono trasmettere le vibrazioni aggirando gli antivibranti. Confrontare nelle condizioni effettive di orientamento, coppia di serraggio e involucro."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per la manutenzione, considerare scarico dei residui, smontaggio e rimontaggio dei raccordi, adescamento e prova di tenuta dopo la sostituzione della pompa. Riportare orientamenti speciali delle interfacce o lunghezze particolari del cablaggio nei disegni e nei file di configurazione. Evitare di portare in produzione le pieghe provvisorie o il cablaggio manuale usati sul prototipo."
+        }
+      ]
+    },
+    {
+      "title": "11. Pulsazioni, rumore e riflusso: valutare le prestazioni installate con i criteri di processo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La membrana varia periodicamente il volume della camera e le valvole si aprono e chiudono per trasferire il liquido. Portata e pressione istantanee oscillano. All’utenza tali variazioni risentono di elasticità dei tubi, comprimibilità del liquido, bolle, volume di compensazione e resistenza del gruppo valvole. Verificare quindi, oltre alla portata media, lo stato istantaneo dell’ugello o l’uscita del sensore rispetto ai requisiti dello strumento."
+        },
+        {
+          "type": "subheading",
+          "title": "Valutare lo smorzamento insieme alla risposta dinamica e al liquido residuo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tubi flessibili, camere di compensazione o smorzatori dedicati possono ridurre parte delle oscillazioni. Modificano però volume del circuito, risposta di pressione, tempo di sostituzione del fluido e residui di lavaggio. Misurare all’utenza la forma d’onda prima e dopo la modifica, il volume effettivamente erogato e il liquido scaricato dopo l’arresto. Le bolle intrappolate in modo incontrollato possono attenuare temporaneamente le oscillazioni ma dare prestazioni che cambiano a ogni avvio."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per misurare le pulsazioni di pressione, documentare punto di misura, campo del sensore, larghezza di banda, frequenza di campionamento e metodo di filtraggio. Un valore stabile sul display può essere una media fortemente filtrata. Una frequenza di campionamento bassa può perdere i picchi. Impostare campionamento e larghezza di banda in funzione della frequenza delle oscillazioni e dei transitori di guasto da rilevare."
+        },
+        {
+          "type": "subheading",
+          "title": "Verificare separatamente rumore e tenuta all’arresto"
+        },
+        {
+          "type": "paragraph",
+          "text": "Per confrontare il rumore, fissare distanza di misura, metodo di ponderazione, rumore di fondo, supporto, condizioni di esercizio e stato dell’involucro. Un valore in dB senza condizioni di prova comparabili non permette di garantire la silenziosità dello strumento completo. Se necessario, registrare insieme velocità del motore, pressione e vibrazioni per distinguere rumore del motore, eccitazione idraulica e risonanza strutturale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le valvole della pompa servono al ciclo di pompaggio. La tenuta prolungata richiesta a una valvola di intercettazione va verificata separatamente. Differenze di livello, pressione accumulata a valle e collegamenti fluidici possono causare riflusso, gocciolamento o effetto sifone all’arresto. Provare il mantenimento della tenuta nella direzione effettiva della pressione. Se serve isolamento, valutare dispositivi dedicati di intercettazione o non ritorno e la loro perdita di pressione aggiuntiva."
+        }
+      ]
+    },
+    {
+      "title": "12. Predisporre un banco di prova del prototipo e un metodo di accettazione riproducibili",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Distinguere prima le prestazioni della pompa da quelle del circuito fluidico dello strumento completo. Stabilire un riferimento con tubazioni corte e condizioni di alimentazione note prima di aggiungere valvole, filtri, raccordi e utenze effettivi. Modificare solo i fattori selezionati per ciascuna prova e registrare portata, pressioni in ingresso e uscita, tensione, corrente e temperatura prima e dopo, per localizzare le differenze."
+        },
+        {
+          "type": "subheading",
+          "title": "Verificare il volume di liquido erogato con il metodo gravimetrico"
+        },
+        {
+          "type": "formula",
+          "expression": "Q_avg = 60 × Δm / (ρ × Δt)",
+          "note": "Δm è la massa del liquido raccolto (g), ρ la densità del fluido a quella temperatura (g/mL), Δt il tempo di raccolta (s). Il risultato è in mL/min. Esempio: raccogliendo 30 g in 15 s con densità 1,00 g/mL, la portata media è 120 mL/min."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nelle misure di portata continua, definire la finestra di raccolta dopo la stabilizzazione per escludere effetti non contabilizzati di cambio del recipiente, evaporazione, schizzi e gocce residue. Per misurare il volume di una singola operazione, includere avvio e arresto e precisare se si conta il gocciolamento ritardato. La misura del tratto stabile non rappresenta l’intera operazione. Risoluzione della bilancia ed errori di temporizzazione e stima della densità devono rimanere ben al di sotto degli errori ammessi dal progetto."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anche i misuratori in linea vanno verificati con un flusso pulsante. Risposta, campionamento, campo di misura, orientamento di montaggio e sensibilità alle bolle possono influenzare la lettura. Il misuratore stesso può aggiungere una perdita di carico. Controllare gravimetricamente il totale raccolto in una finestra temporale, poi confrontare il totale del misuratore con il segnale istantaneo per distinguere errori di misura da oscillazioni della pompa."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Voce di prova",
+            "Condizioni e registrazioni",
+            "Criteri di accettazione da concordare prima della prova"
+          ],
+          "rows": [
+            [
+              "Punto di lavoro e margine",
+              "Fluido effettivo, livello basso, carico del filtro, limiti di alimentazione. Registrazione simultanea di Q, p_in, p_out.",
+              "Portata minima e massima all’utenza, volume erogato e tempo di completamento"
+            ],
+            [
+              "Autoadescamento e riavvio",
+              "Provare separatamente con tubi asciutti, già bagnati, dopo un fermo, dopo il cambio di flacone e dopo l’ingresso d’aria.",
+              "Tempo alla prima erogazione, tempo di stabilizzazione e numero di tentativi ammessi"
+            ],
+            [
+              "Tenuta e mantenimento all’arresto",
+              "Pressione positiva, depressione, differenza di livello e tempo di mantenimento all’arresto",
+              "Volume ammesso per perdite, ingresso d’aria, riflusso o gocciolamento"
+            ],
+            [
+              "Alimentazione elettrica e controllo",
+              "Avvio a freddo e a caldo, carichi simultanei e segnali di controllo anomali",
+              "Stabilità dell’alimentazione, stato predefinito, validità del feedback e risposta ai guasti"
+            ],
+            [
+              "Aspirazione gas-liquido",
+              "Tratti rappresentativi di gas e liquido, schiuma e volumi della fase gassosa",
+              "Tempo di completamento dell’aspirazione, liquido residuo, formazione della depressione e ripristino"
+            ],
+            [
+              "Effetto sul processo",
+              "Parti da lavare, reagenti e procedure operative effettivi",
+              "Residui di lavaggio, trascinamento residuo e variazioni ammesse del risultato dello strumento"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Per ogni prova conservare almeno numero del campione, modello completo, materiali e motore, schema fluidico, lotto del fluido, temperatura, alimentazione, versione software, stato di taratura degli strumenti e dati grezzi. Usare le stesse condizioni per i campioni da confrontare. Conservare anche i dati singoli perché le sole medie possono nascondere anomalie di avvio, deriva e guasti sporadici."
+        },
+        {
+          "type": "paragraph",
+          "text": "Valutare media, variazione tra campioni e campione con prestazioni peggiori. Definire prima della prova le soglie di accettazione a partire dai requisiti dello strumento. Per analizzare i guasti, verificare alimentazione, controllo, aspirazione, mandata, tenuta e materiali. Ripetere poi la prova con la configurazione rivista."
+        }
+      ]
+    },
+    {
+      "title": "13. Durata e affidabilità: correlare le ore di esercizio continuo al profilo di impiego effettivo",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In questa revisione DPL30, DPL60 e DPL30H riportano rispettivamente 3000 h per le versioni con spazzole e 10000 h per le versioni brushless, a tensione nominale e in esercizio continuo. DPGL800 riporta 10000 h. Sono dati di durata nelle condizioni dichiarate e non indicano durata o garanzia dello strumento completo con fluidi del cliente, contropressioni diverse o frequenti avvii e arresti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Lo strumento può lavorare poche ore al giorno con molti cicli brevi, funzionare in continuo ad alta pressione o rimanere a lungo fermo con un fluido che tende a cristallizzare. Membrana, valvole, motore, interfacce e circuito di controllo sopportano sollecitazioni diverse. Definire un profilo di impiego."
+        },
+        {
+          "type": "formula",
+          "expression": "D = t_on / (t_on + t_off)；T_run = N_cycles × t_on",
+          "note": "D è il rapporto ciclico, T_run il tempo di esercizio accumulato. t_on e t_off usano la stessa unità. Oltre al tempo accumulato, registrare numero di avvii e arresti, pressione, temperatura, fluido e durata di ogni operazione. Per stimare la durata servono dati oltre al rapporto ciclico."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nella verifica di durata, ripetere a intervalli le misure di portata al punto di lavoro, tempo di autoadescamento, tenuta, avvio, corrente e aumento di temperatura. Una pompa che gira ancora ma eroga meno di quanto richiesto dallo strumento ha già subito un guasto funzionale. Definire in anticipo i criteri di interruzione, tra cui deriva della portata, perdite, mancato riavvio, guasto del controllo e mancato risultato di processo."
+        },
+        {
+          "type": "paragraph",
+          "text": "Nelle prove accelerate spiegare il rapporto tra fattori di accelerazione e meccanismi di guasto. Aumentare temperatura, pressione o concentrazione può introdurre guasti estranei all’uso normale. Per stimare la durata sul campo serve un modello di accelerazione validato. Stabilire numero dei campioni e durata della prova in funzione del rischio e degli obiettivi statistici. Una sola unità non dimostra la distribuzione della durata di tutti i lotti."
+        },
+        {
+          "type": "paragraph",
+          "text": "Precisare le condizioni di ogni confronto. Se la pompa originale e quella candidata soddisfano le stesse condizioni di esercizio sullo stesso strumento completo, la prova dimostra l’idoneità nelle condizioni verificate. Somiglianza esterna, stessa portata nominale o una singola prova breve non dimostrano un’equivalenza generale."
+        }
+      ]
+    },
+    {
+      "title": "14. Selezione standard, adattamento della configurazione e sviluppo su misura",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Foreach supporta componenti microfluidici e soluzioni per circuiti fluidici. La collaborazione tecnica descritta al pubblico comprende verifica dei prototipi, adattamento dei parametri e definizione di soluzioni in base a spazio, interfacce, fluidi e controllo. Per un progetto OEM di pompe a membrana, valutare prima se un modello esistente copre il compito, poi un eventuale adattamento e infine la necessità di sviluppo dedicato."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Livello di integrazione",
+            "Aspetti da chiarire",
+            "Documenti e dati per la fornitura"
+          ],
+          "rows": [
+            [
+              "Scelta di un prodotto standard",
+              "I modelli, le tensioni, i motori, i materiali e le interfacce esistenti coprono le condizioni operative?",
+              "Scheda tecnica ufficiale, codice d’ordine completo, configurazione del campione e risultati delle verifiche"
+            ],
+            [
+              "Adattamento della configurazione",
+              "Verificare se uscite del cavo, orientamento delle interfacce, materiali o altre opzioni documentate sono adatti al modello scelto",
+              "Disegni, schemi elettrici ed elenco della configurazione confermati, con ambito delle prove da ripetere"
+            ],
+            [
+              "Sviluppo su misura per il progetto",
+              "Requisiti prestazionali, di spazio, di interfaccia o di controllo che le soluzioni standard non soddisfano",
+              "Valutazione di fattibilità, limiti dello sviluppo, piano dei campioni, condizioni di accettazione e responsabilità delle parti"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Cambiare l’orientamento dell’interfaccia risolve soprattutto problemi di montaggio. Modificare i materiali può incidere su compatibilità chimica e prestazioni della pompa. Cambiare motori e controllo influisce su alimentazione, dissipazione, rumore e logica del feedback. Anche se una modifica sembra locale, individuare tutte le grandezze interessate e stabilire quali verifiche ripetere."
+        },
+        {
+          "type": "paragraph",
+          "text": "Se il progetto comprende valvole, raccordi, tubazioni o prove di pressione, valutarli sullo stesso schema fluidico. Il coordinamento del sistema riduce le omissioni tra interfacce e condizioni di lavoro. Confermare per il singolo progetto l’ambito del lavoro, le configurazioni disponibili, i tempi di consegna, le quantità e i requisiti di accettazione."
+        }
+      ]
+    },
+    {
+      "title": "15. Dal prototipo alla produzione: fissare configurazione e criteri di accettazione tracciabili",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dopo la riuscita della prova di prototipo, trasformare il risultato sul campione in condizioni tecniche riproducibili per accettare le forniture successive. Le fasi seguenti propongono un metodo di lavoro. Il costruttore dello strumento e Foreach devono concordare processo effettivo e responsabilità per il progetto."
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Fissare i requisiti. Definire schema fluidico, fluido, intervallo dei punti di lavoro, cadenza, ambiente, durata obiettivo e stati di guasto.",
+            "Confermare il campione. Registrare modello completo, materiale, motore, interfaccia, orientamento, cablaggio, disegno e revisione della documentazione tecnica.",
+            "Completare la verifica. Coprire condizioni di riferimento e limite, effetti sul processo e prove di durata. Conservare analisi dei guasti e registrazioni delle revisioni.",
+            "Eseguire un lotto pilota di montaggio. Esaminare variazione tra unità, efficienza di montaggio, uniformità delle connessioni dei tubi, attrezzature di prova e sostituzione in assistenza.",
+            "Concordare l’accettazione dei lotti. Distinguere controlli in ingresso, prove di fabbrica e prove di tipo. Definire campioni, criteri, registrazioni e metodi di tracciabilità.",
+            "Gestire le modifiche della configurazione. Concordare notifica, valutazione e ripetizione delle verifiche per modifiche a materiali, membrane, elementi valvola, motori, cablaggi, raccordi o processi produttivi che influiscono sulle prestazioni."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Per le forniture di serie, una descrizione d’acquisto breve è sufficiente solo con allegati tecnici completi. «Pompa brushless DPL30» da sola non identifica tensione, materiali a contatto, cablaggi o dettagli delle porte. Oltre all’aspetto e alla portata senza carico, specificare condizioni prestazionali rappresentative secondo il rischio di progetto e collegarle alla verifica di progetto."
+        },
+        {
+          "type": "subheading",
+          "title": "Informazioni da includere in una richiesta OEM a Foreach"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Categoria dei requisiti",
+            "Dati da fornire"
+          ],
+          "rows": [
+            [
+              "Strumento e operazioni",
+              "Tipo di apparecchiatura, funzione della pompa, volumi di ogni operazione, tempo utile e rami attivi contemporaneamente"
+            ],
+            [
+              "Fluido",
+              "Composizione o informazioni chimiche necessarie, concentrazione, temperatura, viscosità, particelle, schiuma, prodotto di lavaggio e residui all’arresto"
+            ],
+            [
+              "Circuito fluidico",
+              "Schema, diametri interno ed esterno e lunghezza dei tubi, valvole, filtri e raccordi, differenze di livello, sfiato del recipiente sorgente e pressione all’utenza"
+            ],
+            [
+              "Prestazioni",
+              "Portate di esercizio minima e massima, intervalli di pressione in ingresso e uscita, pulsazioni ammesse, tempo di autoadescamento o evacuazione, liquido residuo e requisiti di tenuta"
+            ],
+            [
+              "Requisiti elettrici e meccanici",
+              "Alimentazione, ingresso di controllo, feedback, condizioni di avvio, disegno d’installazione, orientamento delle interfacce, cablaggio e spazio di manutenzione"
+            ],
+            [
+              "Verifica e fornitura",
+              "Profilo di impiego, criteri di accettazione, piano dei campioni, domanda prevista, fase di sviluppo, uniformità produttiva e requisiti per le modifiche"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Se le informazioni sono incomplete, fornire inizialmente la destinazione d’uso dello strumento, gli schemi fluidici esistenti e i problemi osservati. Il confronto tecnico deve trasformare le incertezze in verifiche e misure, fino a individuare configurazioni candidate e relativi piani di prova. La scelta può così essere ricondotta a requisiti tecnici definiti per mandata, lavaggio o aspirazione nello strumento."
+        }
+      ]
+    },
+    {
+      "title": "16. Dati di prodotto e approfondimenti",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I parametri derivano dalle schede Foreach in cinese riportate di seguito. Consultare i parametri per le condizioni prestazionali, la tabella di selezione per la configurazione e il disegno dimensionale e la tabella elettrica per l’installazione. Controllare la revisione prima dell’ordine. Se il progetto richiede fluidi particolari o modifiche di controllo o interfaccia, ottenere la conferma della configurazione specifica."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00001_A04_cn_DPL30规格书.pdf",
+              "label": "Scheda tecnica DPL30 in cinese | PS-150B-2412-00001, A04: prestazioni, materiali e definizione dei fili"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2412-00002_A02_cn_DPL60规格书.pdf",
+              "label": "Scheda tecnica DPL60 in cinese | PS-150B-2412-00002, A02: prestazioni, dimensioni e tabella di selezione"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2504-00001_A00_cn_DPL30H规格书.pdf",
+              "label": "Scheda tecnica DPL30H in cinese | PS-150B-2504-00001, A00: prestazioni con contropressione, porte per tubi rigidi e controllo brushless"
+            },
+            {
+              "href": "/downloads/resources/datasheets/zh-CN/Pumps/PS-150B-2506-00001_A00_cn_DPGL800气液混合泵规格书.pdf",
+              "label": "Scheda tecnica DPGL800 in cinese | PS-150B-2506-00001, A00: portata di gas, formazione della pressione e struttura a doppia testata"
+            },
+            {
+              "href": "/resources/datasheets/",
+              "label": "Schede tecniche e cataloghi Foreach"
+            },
+            {
+              "href": "/",
+              "label": "Componenti microfluidici e supporto tecnico Foreach"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-flow-pulsation-reduction/",
+              "label": "Cause delle pulsazioni di portata nelle pompe a membrana e metodi per ridurle"
+            },
+            {
+              "href": "/resources/technical-articles/miniature-diaphragm-pump-backflow-check-valve/",
+              "label": "Riflusso all’arresto delle pompe a membrana e scelta della valvola di non ritorno"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande tecniche frequenti: integrazione OEM delle pompe a membrana Foreach",
+  "faqItems": [
+    {
+      "question": "L’integrazione OEM di una pompa a membrana Foreach richiede sempre un nuovo progetto di pompa?",
+      "answer": "Non necessariamente. Valutare prima i modelli standard definendo fluidi, punti di lavoro, interfacce e requisiti di controllo. Se le soluzioni standard sono insufficienti, discutere le opzioni o la personalizzazione e chiarirne l’effetto su prestazioni, struttura e verifiche. Configurazione disponibile e limiti dello sviluppo vanno confermati per ogni progetto."
+    },
+    {
+      "question": "Lo strumento richiede 120 mL/min. Basta una DPL30 da 300 mL/min senza carico?",
+      "answer": "Verificare la portata disponibile con depressione in ingresso, contropressione in uscita, temperatura del fluido, carico del filtro e alimentazione effettivi. Confrontare quindi con il valore obiettivo e il margine necessario. Definire prima delle prove le condizioni più sfavorevoli e i criteri di verifica."
+    },
+    {
+      "question": "I 600 kPa della DPL30H significano che a quella pressione si ottengono ancora 300 mL/min?",
+      "answer": "No. I 300 mL/min sono la portata senza carico di scheda e i 600 kPa la pressione nominale. Consultare la curva per la portata alla pressione corrispondente e verificarla nel circuito effettivo. Per l’esercizio prolungato contro una valvola chiusa serve una verifica distinta dalla pressione nominale."
+    },
+    {
+      "question": "Per la DPGL800 a doppia testata si può calcolare direttamente una portata di liquido di 12 L/min?",
+      "answer": "No. I 6 L/min si riferiscono alla portata di gas senza carico di una singola testata. Le prestazioni con due testate in serie, in parallelo o indipendenti dipendono da collegamento, pressione e carico. Verificare il tempo di aspirazione con le fasi gas-liquido e le tubazioni effettive."
+    },
+    {
+      "question": "Il feedback di velocità di una pompa brushless permette di stabilire se il liquido viene erogato regolarmente?",
+      "answer": "Il feedback di velocità descrive la rotazione del motore. Il segnale può essere presente anche con mancanza di liquido, infiltrazioni d’aria o anomalie delle valvole. Per valutare l’erogazione, aggiungere osservazioni appropriate di portata, pressione, livello o presenza di bolle secondo il compito dello strumento."
+    },
+    {
+      "question": "Scegliendo PTFE e FFKM si può saltare la verifica con il fluido?",
+      "answer": "No. Confermare l’insieme di materiali di testata, membrana, valvole e altre parti bagnate. Includere composizione, concentrazione e temperatura effettive, arresto e lavaggio. Dopo la valutazione preliminare dei materiali, verificare prestazioni dinamiche e idoneità al processo della pompa completa."
+    },
+    {
+      "question": "Le 10.000 h della scheda si possono assumere come durata dello strumento OEM?",
+      "answer": "No. Il dato corrisponde alle condizioni di tensione nominale ed esercizio continuo della scheda. Fluido, pressione, temperatura, numero di avvii e arresti e condizioni di fermo dello strumento possono differire. Stabilire l’applicabilità mediante profilo di impiego, criteri di guasto funzionale e prove di durata."
+    },
+    {
+      "question": "Quali informazioni fissare dopo aver confermato il modello nel progetto OEM?",
+      "answer": "Fissare configurazione d’ordine completa, elenco dei materiali, disegno di installazione, interfacce e assegnazione dei fili, requisiti di controllo, condizioni del circuito, metodi di accettazione e registrazioni dei campioni. Concordare anche la tracciabilità dei lotti e come valutare e verificare di nuovo le modifiche che incidono sulle prestazioni."
+    }
+  ],
+  "cta": {
+    "title": "Comunica le condizioni del circuito OEM per valutare le configurazioni di pompa a membrana più adatte",
+    "description": "Indica operazioni dello strumento, fluido e temperatura, portata di esercizio obiettivo, pressioni in ingresso e uscita, ciclo di lavoro, interfacce, spazio di installazione e fase del progetto. Foreach può discutere modelli e configurazioni e definire insieme le condizioni da verificare.",
+    "contactLabel": "Invia una richiesta tecnica",
+    "productsLabel": "Esplora le serie di pompe a membrana miniaturizzate",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/"
+  }
+}

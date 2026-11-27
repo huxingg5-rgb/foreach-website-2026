@@ -1,4 +1,5 @@
-import { tubingAssemblyConfiguratorSlug } from "@/data/resources/technical-articles/technical-article-availability";
+import { samplingProbeSectionIds, samplingProbeSelectionSlug, tubingAssemblyConfiguratorSlug } from "@/data/resources/technical-articles/technical-article-availability";
+import { samplingProbeMentions } from "@/data/resources/technical-articles/sampling-probe-selection-locales";
 import Link from "next/link";
 import { getFittingAssemblyLinks, withFittingArticleLinks } from "@/data/resources/technical-articles/fitting-article-relations";
 import { getTubingAssemblySelectionContent } from "@/data/products/tubing-assemblies/localized";
@@ -95,7 +96,8 @@ import { PISTON_APPLICATION_GUIDES } from "@/data/applications/analytical-docume
    4. 面包屑只显示栏目层级，不显示完整文章标题
 ========================================================= */
 
-import type { ComponentType } from "react";
+import type { ComponentType, ReactNode } from "react";
+import type { EngineeringArticleBlock } from "@/data/resources/technical-articles/diaphragm-pump-engineering-article.types";
 import LegacyMotionControlArticle from "./articles/LegacyMotionControlArticle";
 import { legacyMotionArticles } from "@/data/resources/technical-articles/legacy-motion-control-articles.zh";
 
@@ -106,12 +108,14 @@ import {
 import LegacyTechnicalArticleLayout from "./articles/LegacyTechnicalArticleLayout";
 import newsArticleStyles from "@/components/resources/news/NewsArticleClient.module.css";
 import RelatedResourcesLoader from "@/components/common/related-resources/RelatedResourcesLoader";
+import { localizeItalianRelatedVideos } from "@/components/common/related-resources/RelatedResources";
+import { italianDiaphragmText } from "@/data/products/detail/diaphragm-pump-content.it";
 import BrushlessDiaphragmPumpWiringArticle from "@/components/resources/technical-articles/articles/BrushlessDiaphragmPumpWiringArticle";
 import CvKvMicrofluidicsArticle from "@/components/resources/technical-articles/articles/CvKvMicrofluidicsArticle";
 import DiaphragmPumpEngineeringArticle, {
   EngineeringArticleContent,
 } from "@/components/resources/technical-articles/articles/DiaphragmPumpEngineeringArticle";
-import Dpl30LiquidDiaphragmPumpArticle from "@/components/resources/technical-articles/articles/Dpl30LiquidDiaphragmPumpArticle";
+import Dpl30LiquidDiaphragmPumpArticle, { Dpgl800ArticleContent, Dpl30hArticleContent, StandardDiaphragmArticleContent } from "@/components/resources/technical-articles/articles/Dpl30LiquidDiaphragmPumpArticle";
 import PistonPumpLocalizedArticle from "@/components/resources/technical-articles/articles/PistonPumpLocalizedArticle";
 import PistonPumpAccuracyArticle, {
   pistonPumpAccuracyArticleCtaZh,
@@ -161,6 +165,14 @@ import type {
   ClassifiedTechnicalArticleItem,
   TechnicalArticlesPageData,
 } from "@/data/resources/technical-articles/technical-articles.types";
+import ItalianSpecializedSelectionArticle, { isSpecializedFittingArticle } from "./articles/ItalianSpecializedSelectionArticle";
+import type { HindiTechnicalArticlesPageData } from "@/services/resources/technical-articles/getHindiTechnicalArticlesPageData";
+import type { ItalianTechnicalArticleEdition, ItalianTechnicalArticlesPageData } from "@/services/resources/technical-articles/getItalianTechnicalArticlesPageData";
+import { getItalianDraftLink, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
+import type { GermanTechnicalArticlesPageData } from "@/services/resources/technical-articles/getGermanTechnicalArticlesPageData";
+import type { GermanTechnicalArticleEdition } from "@/services/resources/technical-articles/getGermanTechnicalArticleCopy";
+import { getGermanArticleContentLink, getGermanArticleDestination } from "@/lib/i18n/german-article-link";
+import { getGermanArticleRelatedResources } from "@/services/resources/technical-articles/getGermanArticleRelatedResources";
 
 type SupportedLocale = "zh-CN" | "en" | "es" | "fr" | "ko" | "ru";
 
@@ -203,7 +215,7 @@ function toAbsoluteTechnicalArticleUrl(value: string) {
 }
 
 function getTechnicalArticleCanonicalUrl(
-  locale: SupportedLocale,
+  locale: SupportedLocale | "de" | "it" | "hi",
   slug: string,
 ) {
   const localePrefix = locale === "zh-CN" ? "" : `/${locale}`;
@@ -211,13 +223,14 @@ function getTechnicalArticleCanonicalUrl(
   return `${TECHNICAL_ARTICLE_SITE_ORIGIN}${localePrefix}/resources/technical-articles/${slug}/`;
 }
 
-function buildTechnicalArticleStructuredData(
-  pageData: TechnicalArticlesPageData,
+export function buildTechnicalArticleStructuredData(
+  pageData: TechnicalArticlesPageData | GermanTechnicalArticlesPageData | ItalianTechnicalArticlesPageData | HindiTechnicalArticlesPageData,
   article: ClassifiedTechnicalArticleItem,
-  locale: SupportedLocale,
+  locale: SupportedLocale | "de" | "it" | "hi",
   faqItems: readonly TechnicalArticleFaqItem[] = [],
   subject?: TechnicalArticleSubject,
   articleType: "Article" | "TechArticle" = "Article",
+  draftCitations?: readonly string[],
 ) {
   const canonicalUrl = getTechnicalArticleCanonicalUrl(locale, article.slug);
   const organizationId = SITE_ORGANIZATION_ID;
@@ -228,12 +241,18 @@ function buildTechnicalArticleStructuredData(
   const description = String(
     article.seoDescription ?? article.summary ?? "",
   ).trim();
-  const categoryLabel = getTechnicalArticleCategoryPath(locale, article);
+  const draftLanguage = locale === "de" || locale === "it" || locale === "hi";
+  const group = draftLanguage ? pageData.taxonomy.find((item) => item.key === article.primaryCategory) : undefined;
+  const categoryLabel = draftLanguage
+    ? [group?.label, group?.children.find((item) => item.key === article.secondaryCategory)?.label].filter(Boolean).join(" / ")
+    : getTechnicalArticleCategoryPath(locale as SupportedLocale, article);
   const rplSources =
-    article.slug === rplSelectionArticleSlug
-      ? getRplSelectionSourceHrefs(locale)
+    !draftLanguage && article.slug === rplSelectionArticleSlug
+      ? getRplSelectionSourceHrefs(locale as SupportedLocale)
       : null;
-  const articleCitations = rplSources
+  const articleCitations = draftCitations?.length
+    ? draftCitations.map(toAbsoluteTechnicalArticleUrl)
+    : rplSources
     ? [
         getCanonicalUrl(rplSources.product),
         getCanonicalUrl(rplSources.datasheet),
@@ -242,10 +261,10 @@ function buildTechnicalArticleStructuredData(
       ? [...meteringPumpAccuracyRepeatabilitySourceHrefs]
       : article.slug === pipettingBasicsSlug
         ? [...pipettingBasicsSources]
-      : article.slug === programmableSyringePumpSlug
-        ? getProgrammableSyringeSources(locale).map(href => href.startsWith("/") ? getCanonicalUrl(href) : href)
-      : article.slug === programmablePipettingPumpSlug
-        ? getProgrammablePipettingSources(locale).map(href => href.startsWith("/") ? getCanonicalUrl(href) : href)
+      : !draftLanguage && article.slug === programmableSyringePumpSlug
+        ? getProgrammableSyringeSources(locale as SupportedLocale).map(href => href.startsWith("/") ? getCanonicalUrl(href) : href)
+      : !draftLanguage && article.slug === programmablePipettingPumpSlug
+        ? getProgrammablePipettingSources(locale as SupportedLocale).map(href => href.startsWith("/") ? getCanonicalUrl(href) : href)
       : [];
   // Breadcrumb destinations use the same canonical URL policy as page metadata.
   const structuredUrl = getCanonicalUrl;
@@ -286,7 +305,7 @@ function buildTechnicalArticleStructuredData(
       "@type": "WebPage",
       "@id": webpageId,
     },
-    inLanguage: locale,
+    inLanguage: locale === "de" ? "de-DE" : locale === "hi" ? "hi-IN" : locale,
     articleSection: categoryLabel,
     isAccessibleForFree: true,
     ...(articleCitations.length > 0 ? { citation: articleCitations } : {}),
@@ -321,7 +340,7 @@ function buildTechnicalArticleStructuredData(
       url: canonicalUrl,
       name: article.title,
       ...(description ? { description } : {}),
-      inLanguage: locale,
+      inLanguage: locale === "de" ? "de-DE" : locale === "hi" ? "hi-IN" : locale,
       isPartOf: { "@id": websiteId },
       publisher: { "@id": organizationId },
       breadcrumb: { "@id": breadcrumbId },
@@ -366,12 +385,428 @@ function normalizeLocale(locale: string): SupportedLocale {
   return "zh-CN";
 }
 
-function getArticleListHref(locale: SupportedLocale) {
+function getArticleListHref(locale: SupportedLocale | "de" | "it" | "hi") {
   if (locale === "zh-CN") {
     return "/resources/technical-articles";
   }
 
   return `/${locale}/resources/technical-articles`;
+}
+
+function GermanSelectionArticle({
+  article,
+  edition,
+  pageData,
+  breadcrumb,
+  structuredData,
+  sidebar,
+  footer,
+  previousArticle,
+  nextArticle,
+}: {
+  article: ClassifiedTechnicalArticleItem;
+  edition: Extract<GermanTechnicalArticleEdition, { kind: "selection" }>;
+  pageData: GermanTechnicalArticlesPageData;
+  breadcrumb: ReactNode;
+  structuredData: ReturnType<typeof buildTechnicalArticleStructuredData>;
+  sidebar: ReturnType<typeof getGermanArticleRelatedResources>["sidebar"];
+  footer: ReturnType<typeof getGermanArticleRelatedResources>["footer"];
+  previousArticle: TechnicalArticlePagerItem | null;
+  nextArticle: TechnicalArticlePagerItem | null;
+}) {
+  const isValve = edition.family === "valve";
+  const isPipetting = edition.family === "pipetting";
+  const isFittingLayout = edition.family === "connector" || edition.family === "instrument" || edition.family === "tubing";
+  const splitFooter = edition.family === "instrument" || edition.family === "tubing" || article.slug === "what-is-a-solenoid-valve";
+  const sourceCopy = isFittingLayout ? withFittingArticleLinks(
+    edition.copy, article.slug, "en", edition.navigation ?? [], pageData.articles, edition.assemblyLinks,
+  ) : edition.copy;
+  const resolveBlock = (block: EngineeringArticleBlock): EngineeringArticleBlock => {
+    if (block.type === "links") {
+      return { ...block, items: block.items.map((item) => ({ ...item, ...getGermanArticleContentLink(item.href, item.label) })) };
+    }
+    if (block.type === "figure") {
+      const caption = block.captionHref ? getGermanArticleContentLink(block.captionHref, block.caption) : null;
+      return {
+        ...block,
+        ...(caption ? { captionHref: caption.href, captionHrefLang: caption.hrefLang, caption: caption.label } : {}),
+        ...(block.link ? { link: { ...block.link, ...getGermanArticleContentLink(block.link.href, block.link.label) } } : {}),
+      };
+    }
+    return block;
+  };
+  const copy = {
+    ...sourceCopy,
+    leadBlocks: sourceCopy.leadBlocks.map(resolveBlock),
+    sections: sourceCopy.sections.map((section) => ({ ...section, blocks: section.blocks.map(resolveBlock) })),
+  };
+  const products = getGermanArticleContentLink(getLocalizedInternalHref(copy.cta.productsHref ?? "/products/", "en"), copy.cta.productsLabel);
+  const useRepresentativeTitle = ["what-is-a-bulkhead-barbed-fitting", "female-thread-adapters-selection-guide"].includes(article.slug);
+  const relatedProducts = sidebar.length ? (
+    <ArticleRelatedProducts products={sidebar} locale="de" title={useRepresentativeTitle ? "Beispielmodelle" : undefined} />
+  ) : null;
+
+  return (
+    <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`} data-locale="de" data-article-slug={article.slug} lang="de">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+      <div className="newsArticleBreadcrumbShell">{breadcrumb}</div>
+      <RplSelectionArticle
+        relatedProducts={relatedProducts}
+        copy={copy}
+        className={isPipetting ? pipettingBasicsStyles.article : isValve ? valveArticleStyles.article : isFittingLayout ? hardTubeFittingsStyles.article : undefined}
+        date={article.date}
+        locale="de"
+        listHref={getArticleListHref("de")}
+        backText="Zurück"
+        articleId={article.slug}
+        sectionNavigation={edition.navigation}
+        modelLinks={new Map(edition.modelLinks?.map(({ name, href }) => [name, getGermanArticleDestination(href).href]))}
+        leadContent={edition.workflows ? <PipettingBasicsLead blocks={copy.leadBlocks} workflows={edition.workflows} /> : undefined}
+        afterLeadContent={article.slug === tubingAssemblyConfiguratorSlug ? (
+          <TubingAssemblyArticleConfigurator key="de" locale="de" />
+        ) : article.slug === "female-thread-adapters-selection-guide" ? <FemaleThreadOverviewVideo locale="de" /> : undefined}
+        faq={edition.faq && !isPipetting && article.slug !== rplSelectionArticleSlug ? { id: "faq", label: copy.faqTitle, items: edition.faq } : undefined}
+      />
+      <div className={newsArticleStyles.page} data-rpl-article-footer>
+        <div className={edition.family === "connector" && !edition.footerIntro ? hardTubeFittingsStyles.relatedProducts : undefined}
+          data-flanged-related-products={Boolean(edition.footerIntro) || undefined}>
+          {edition.footerIntro ? <p className={hardTubeFittingsStyles.relatedIntro}>{edition.footerIntro}</p> : null}
+          {splitFooter ? (
+            <>
+              <RelatedProducts locale={footer.locale} uiLocale={footer.uiLocale} products={footer.products} />
+              {footer.videos.length > 0 && <RelatedResourcesLoader {...footer} products={[]} articles={[]} />}
+            </>
+          ) : <RelatedResourcesLoader {...footer} />}
+        </div>
+        <NewsArticlePager locale="de" previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />
+        {isFittingLayout && (
+          <section className={newsArticleStyles.supportSection}>
+            <ResourceSupportCta title={copy.cta.title} description={copy.cta.description}
+              buttonText={copy.cta.contactLabel} href="/de/contact/"
+              actions={[{ label: copy.cta.contactLabel, href: "/de/contact/" }, products]} />
+          </section>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export function GermanTechnicalArticleDetail({ pageData, article, edition, previousArticle, nextArticle }: {
+  pageData: GermanTechnicalArticlesPageData;
+  article: ClassifiedTechnicalArticleItem;
+  edition: GermanTechnicalArticleEdition;
+  previousArticle: TechnicalArticlePagerItem | null;
+  nextArticle: TechnicalArticlePagerItem | null;
+}) {
+  const listHref = getArticleListHref("de");
+  const breadcrumbs = pageData.breadcrumbs.map((item) => item.href ? item : { ...item, href: listHref });
+  const faq = edition.kind === "piston" ? edition.copy.faq
+    : edition.kind === "selection" ? edition.faq ?? edition.copy.faqItems
+    : edition.kind === "engineering" || edition.kind === "brushless-wiring" ? edition.copy.faqItems
+    : edition.kind === "standard-diaphragm" ? edition.faq.items : [];
+  const isSamplingProbeGuide = article.slug === samplingProbeSelectionSlug;
+  const subject = edition.kind === "piston" ? edition.copy.subject : edition.kind === "selection" ? edition.subject : edition.kind === "standard-diaphragm"
+    ? {
+      about: [edition.series === "dpl60" ? "DPL60 Membranpumpe für Flüssigkeiten" : "DPL30 Membranpumpe für Flüssigkeiten"],
+      mentions: edition.series === "dpl60" ? dpl60StandardModels.map((item) => item.model) : DPL30_MENTIONED_MODELS,
+    }
+    : edition.kind === "dpgl800"
+    ? { about: ["DPGL800 Membranpumpe für Gas und Flüssigkeit"], mentions: dpgl800StandardModels.map((item) => item.model) }
+    : edition.kind === "dpl30h"
+    ? { about: ["DPL30H Hochdruck-Membranpumpe für Flüssigkeiten"], mentions: dpl30hStandardModels.map((item) => item.model) }
+    : isSamplingProbeGuide
+    ? { about: [article.title], mentions: samplingProbeMentions.de }
+    : undefined;
+  const structuredData = buildTechnicalArticleStructuredData(pageData, article, "de", faq, subject, "TechArticle");
+  const { sidebar, footer } = getGermanArticleRelatedResources(article);
+  if (edition.kind === "selection") {
+    return <GermanSelectionArticle article={article} edition={edition} pageData={pageData}
+      breadcrumb={<BreadcrumbComponent items={breadcrumbs} breadcrumbs={breadcrumbs} breadcrumbItems={breadcrumbs} />}
+      structuredData={structuredData} sidebar={sidebar} footer={footer} previousArticle={previousArticle} nextArticle={nextArticle} />;
+  }
+  const applicationCoverImage = edition.kind === "engineering"
+    ? getPumpApplicationArticleCopy(article.slug, "en")?.metadata.coverImage
+    : undefined;
+  let bottomBanner = pageData.bottomBanner;
+  if (edition.kind === "engineering" || edition.kind === "piston" || edition.kind === "brushless-wiring") {
+    const { cta } = edition.copy;
+    const ctaPath = edition.kind === "piston" ? "/products/pumps/piston-pump/"
+      : edition.kind === "engineering" ? edition.copy.cta.productsHref ?? "/products/"
+      : "/products/";
+    const destination = getGermanArticleDestination(getLocalizedInternalHref(ctaPath, "en"));
+    bottomBanner = {
+      title: cta.title,
+      description: cta.description,
+      actions: [
+        { label: cta.contactLabel, href: "/de/contact/" },
+        { label: cta.productsLabel + (destination.destinationLanguage === "en" ? " (Englisch)" : ""), href: destination.href },
+      ],
+    };
+  }
+  return (
+    <div className={`newsArticleDetailPage ${rplArticleStyles.pageSurface}`} data-locale="de" data-article-slug={article.slug} lang="de">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+      <div className="newsArticleBreadcrumbShell">
+        <BreadcrumbComponent items={breadcrumbs} breadcrumbs={breadcrumbs} breadcrumbItems={breadcrumbs} />
+      </div>
+      <LegacyTechnicalArticleLayout
+        articleId={article.slug}
+        locale="de"
+        article={{
+          title: article.title,
+          date: article.date,
+          summary: (edition.kind === "engineering" && edition.showSummary) || edition.kind === "brushless-wiring" ? edition.copy.deck : undefined,
+          coverImage: edition.kind === "dpl30h" || edition.kind === "dpgl800" || edition.kind === "standard-diaphragm" ? article.coverImage : applicationCoverImage,
+          coverAlt: article.coverAlt,
+        }}
+        pageData={{
+          listHref,
+          backText: "Zurück",
+          bottomBanner,
+        }}
+        previousArticle={previousArticle}
+        nextArticle={nextArticle}
+        relatedProducts={<ArticleRelatedProducts products={sidebar} locale="de" />}
+        afterContent={<RelatedResourcesLoader {...footer} />}
+      >
+        {edition.kind === "piston"
+          ? <PistonPumpLocalizedArticle copy={edition.copy} locale="de" />
+          : edition.kind === "brushless-wiring" ? <BrushlessDiaphragmPumpWiringArticle copy={edition.copy} locale="de" />
+          : edition.kind === "cv-kv" ? <CvKvMicrofluidicsArticle locale="de" />
+          : edition.kind === "dpgl800" ? <Dpgl800ArticleContent copy={edition.copy} localePrefix="/de" />
+          : edition.kind === "dpl30h" ? <Dpl30hArticleContent copy={edition.copy} localePrefix="/de" />
+          : edition.kind === "standard-diaphragm" ? <StandardDiaphragmArticleContent copy={edition.copy} faqCopy={edition.faq}
+              dpl60Copy={edition.series === "dpl60" ? edition.copy : undefined} localePrefix="/de" />
+          : <EngineeringArticleContent copy={edition.copy} locale="de"
+              sectionIds={isSamplingProbeGuide ? samplingProbeSectionIds : undefined}
+              useShortTocLabels={isSamplingProbeGuide} />}
+        {article.secondaryCategory === "plunger-pumps" ? (
+          <section className="technicalArticleClusterLinks" data-piston-application-guide-links="true">
+            <h2>Anwendungen von Kolbenpumpen in Analysengeräten</h2>
+            <ul>
+              {PISTON_APPLICATION_GUIDES.map((guide, index) => {
+                const destination = getGermanArticleDestination(guide.href);
+                const label = [
+                  "Kolbenpumpenanwendungen im Überblick",
+                  "Proben ansaugen und übertragen",
+                  "Reagenzien und Standards dosieren",
+                  "Verdünnen, Aufstocken und proportionieren",
+                  "Titriermittel schrittweise dosieren",
+                ][index];
+                return <li key={guide.href}><Link href={destination.href} hrefLang={destination.destinationLanguage}>
+                  {label}{destination.destinationLanguage === "en" ? " (Englisch)" : null}
+                </Link></li>;
+              })}
+            </ul>
+          </section>
+        ) : null}
+      </LegacyTechnicalArticleLayout>
+    </div>
+  );
+}
+
+const italianArticleCardTitles: Readonly<Record<string, string>> = {
+  "300 mL/min Brushed Micro Liquid Diaphragm Pump for OEM Instruments": "Pompa a membrana miniaturizzata per liquidi da 300 mL/min, a spazzole, per strumenti OEM",
+  "600 mL/min Brushed Liquid Diaphragm Pump | Custom OEM Options": "Pompa a membrana per liquidi da 600 mL/min, a spazzole, con opzioni OEM",
+  "600 kPa Brushed High-Pressure Liquid Diaphragm Pump for OEM Systems": "Pompa a membrana per liquidi ad alta pressione da 600 kPa, a spazzole, per sistemi OEM",
+  "HLD3 Rotary Valve Syringe Pump": "Pompa a siringa HLD3 con valvola rotativa",
+  "HLD6 Rotary Valve Syringe Pump": "Pompa a siringa HLD6 con valvola rotativa",
+  "HMD3 Solenoid Valve Syringe Pump": "Pompa a siringa HMD3 con elettrovalvola",
+  "HMD6 Solenoid Valve Syringe Pump": "Pompa a siringa HMD6 con elettrovalvola",
+  "SV10 Series Solenoid Valve": "Elettrovalvola della serie SV10",
+  "MRV3 Ceramic Multi-channel Rotary Valve": "Valvola rotativa multicanale in ceramica MRV3",
+  "FEP Flanged Tubing Assembly": "Gruppo tubo flangiato in FEP",
+  "PTFE Flanged Tubing Assembly": "Gruppo tubo flangiato in PTFE",
+  "PFA Flanged Tubing Assembly": "Gruppo tubo flangiato in PFA",
+  "Black PTFE Flanged Tubing Assembly": "Gruppo tubo flangiato in PTFE nero",
+  "FEP Compression-Ring Tubing Assembly": "Gruppo tubo in FEP con anello di compressione",
+  "PTFE Compression-Ring Tubing Assembly": "Gruppo tubo in PTFE con anello di compressione",
+  "PFA Compression-Ring Tubing Assembly": "Gruppo tubo in PFA con anello di compressione",
+  "Black PTFE Compression-Ring Tubing Assembly": "Gruppo tubo in PTFE nero con anello di compressione",
+  "DPL30H-BS Brushless High-Pressure Miniature Liquid Diaphragm Pump": "Pompa a membrana miniaturizzata per liquidi DPL30H-BS, brushless, ad alta pressione",
+  "DPL60-DB Miniature Liquid Diaphragm Pump": "Pompa a membrana miniaturizzata per liquidi DPL60-DB",
+};
+
+export function ItalianTechnicalArticleDetail({
+  pageData, article, edition, previousArticle, nextArticle,
+}: {
+  pageData: ItalianTechnicalArticlesPageData;
+  article: ClassifiedTechnicalArticleItem;
+  edition: ItalianTechnicalArticleEdition;
+  previousArticle: TechnicalArticlePagerItem | null;
+  nextArticle: TechnicalArticlePagerItem | null;
+}) {
+  const listHref = getArticleListHref("it");
+  const breadcrumbs = pageData.breadcrumbs.map(item => item.href ? item : { ...item, href: listHref });
+  const dedicatedPump = edition.kind === "dpl30h" || edition.kind === "dpgl800" || edition.kind === "standard-diaphragm";
+  const faq = edition.kind === "cv-kv" ? [] : edition.kind === "piston" ? edition.copy.faq
+    : edition.kind === "selection" ? edition.schemaFaq ?? edition.copy.faqItems
+    : edition.kind === "standard-diaphragm" ? edition.faq.items
+    : dedicatedPump ? [] : edition.copy.faqItems;
+  const selection = edition.kind === "selection" ? edition : undefined;
+  const subject = edition.kind === "engineering" ? undefined : edition.kind === "selection"
+    ? edition.subject ?? (edition.copy.subjectAbout ? { about: edition.copy.subjectAbout, mentions: [] } : undefined)
+    : edition.kind === "piston" ? edition.copy.subject : undefined;
+  const structuredData = buildTechnicalArticleStructuredData(
+    pageData, article, "it", faq, subject, "TechArticle", edition.kind === "selection" ? edition.sources : undefined,
+  );
+  const baseline = getArticleFooterResources(article, "en");
+  const localizeProduct = <T extends { id: string; href: string; title: string; imageAlt: string },>(item: T) => {
+    const destination = getItalianDraftLink(item.href);
+    const title = italianArticleCardTitles[item.title] ?? italianDiaphragmText(item.title);
+    const translatedAlt = italianDiaphragmText(item.imageAlt).replace(/^FOREACH (\S+) diaphragm pump product photo$/, "Foto della pompa a membrana FOREACH $1");
+    const imageAlt = translatedAlt === item.imageAlt && title !== item.title ? title : translatedAlt;
+    return { ...item, title, imageAlt, href: destination.href, destinationLanguage: destination.hrefLang };
+  };
+  const articles = new Map(pageData.articles.map(item => [item.slug, item]));
+  const related = {
+    ...baseline,
+    uiLocale: "it" as const,
+    videoLocale: "it" as const,
+    videos: localizeItalianRelatedVideos(baseline.videos),
+    products: (selection?.footerProducts ?? baseline.products).map(item => {
+      const label = selection?.copy.relatedProductLabel;
+      return localizeProduct(label ? { ...item, imageAlt: `FOREACH ${item.title} ${label}` } : item);
+    }),
+    articles: baseline.articles.map(item => {
+      const target = articles.get(item.slug);
+      const href = getItalianDraftLink("/en/resources/technical-articles/" + item.slug + "/");
+      const native = target && href.hrefLang === "it";
+      return {
+        ...item, ...(native ? { title: target.title, summary: target.summary } : {}),
+        href: href.href,
+        destinationLanguage: href.hrefLang,
+        contentLanguage: native ? "it" as const : "en" as const,
+      };
+    }),
+  };
+  const barbedTitles = selection?.copy.relatedProductTitles;
+  const sidebarSource = selection?.sidebarProducts ?? (article.slug === barbedFittingSlug
+    ? getBarbedFittingRelatedProducts("en").products
+    : getArticleRelatedProducts(article, "en"));
+  const sidebar = sidebarSource.map(item => {
+    const barbedTitle = item.id === "barbed-equal-tee-pa" ? barbedTitles?.tee
+      : item.id === "barbed-equal-elbow-pa" ? barbedTitles?.elbow : undefined;
+    if (barbedTitle) return localizeProduct({ ...item, title: barbedTitle, imageAlt: `FOREACH ${barbedTitle}` });
+    if (article.slug === luerFittingSlug) return localizeProduct({
+      ...item,
+      imageAlt: item.title === "LPS-32-PP-U"
+        ? "Raccordi Luer colorati con ghiera di bloccaggio blu al centro"
+        : "Luer maschio LPR-32-PP-Y con ghiera girevole gialla e vista in sezione",
+    });
+    const label = selection?.copy.relatedProductLabel;
+    return localizeProduct(label ? { ...item, imageAlt: `FOREACH ${item.title} ${label}` } : item);
+  });
+  const representativeModels = ["what-is-a-bulkhead-barbed-fitting", "female-thread-adapters-selection-guide"].includes(article.slug);
+  const relatedProducts = sidebar.length ? (
+    <ArticleRelatedProducts products={sidebar} locale="it" title={representativeModels ? "Modelli rappresentativi" : undefined} />
+  ) : null;
+  const relatedFooter = <RelatedResourcesLoader {...related} />;
+  if (edition.kind === "selection") {
+    const copy = isSpecializedFittingArticle(article.slug)
+      ? withFittingArticleLinks(edition.copy, article.slug, "en", edition.navigation ?? [], pageData.articles,
+          getFittingAssemblyLinks(article.slug, getTubingAssemblySelectionContent("en")))
+      : edition.copy;
+    const productFooter = edition.family === "tubing" || edition.family === "instrument" || article.slug === "what-is-a-solenoid-valve";
+    const footer = productFooter ? (
+      <>
+        <RelatedProducts locale={related.locale} uiLocale={related.uiLocale} products={related.products} />
+        {related.videos.length > 0 && <RelatedResourcesLoader {...related} products={[]} articles={[]} />}
+      </>
+    ) : relatedFooter;
+    return (
+      <ItalianSpecializedSelectionArticle
+        article={article}
+        copy={copy}
+        navigation={edition.navigation}
+        family={edition.family}
+        workflows={edition.workflows}
+        modelLinks={edition.modelLinks}
+        footerIntro={edition.footerIntro}
+        breadcrumb={<BreadcrumbComponent items={breadcrumbs} breadcrumbs={breadcrumbs} breadcrumbItems={breadcrumbs} />}
+        structuredData={structuredData}
+        relatedProducts={relatedProducts}
+        footer={footer}
+        pager={<NewsArticlePager locale="it" previousArticle={previousArticle} nextArticle={nextArticle} contentType="article" />}
+      />
+    );
+  }
+  const contact = getItalianDraftLink("/en/contact/");
+  const productsHref = edition.kind === "piston" ? "/products/pumps/piston-pump/"
+    : edition.kind === "engineering" ? edition.copy.cta.productsHref ?? "/products/" : "/products/";
+  const products = getItalianDraftLink(getLocalizedInternalHref(productsHref, "en"));
+  const cta = dedicatedPump || edition.kind === "cv-kv" ? undefined : edition.copy.cta;
+  const samplingProbeGuide = article.slug === samplingProbeSelectionSlug;
+  const sectionIds = samplingProbeGuide ? samplingProbeSectionIds
+    : article.slug === "quick-disconnect-coupling-flow-pressure-drop" ? getInstrumentFluidicsArticle(article.slug, "en")?.anchors
+    : undefined;
+  const usesApplicationLayout = edition.kind === "engineering" && (
+    getPumpApplicationArticleCopy(article.slug, "en") !== null || getPumpDiagnosticsArticleCopy(article.slug, "en") !== null
+  );
+  return (
+    <div className={"newsArticleDetailPage " + rplArticleStyles.pageSurface} data-locale="it" data-article-slug={article.slug} lang="it">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+      <div className="newsArticleBreadcrumbShell">
+        <BreadcrumbComponent items={breadcrumbs} breadcrumbs={breadcrumbs} breadcrumbItems={breadcrumbs} />
+      </div>
+      <LegacyTechnicalArticleLayout
+        articleId={article.slug}
+        locale="it"
+        article={{ title: article.title, date: article.date,
+          summary: edition.kind === "cv-kv" || edition.kind === "brushless-wiring" ||
+            (edition.kind === "engineering" && !usesApplicationLayout) ? article.summary : undefined,
+          coverImage: dedicatedPump || samplingProbeGuide ? article.coverImage : undefined,
+          coverAlt: dedicatedPump || samplingProbeGuide ? article.coverAlt ?? article.title : undefined }}
+        pageData={{
+          listHref,
+          backText: "Indietro",
+          bottomBanner: cta ? {
+            title: cta.title,
+            description: cta.description,
+            actions: [
+              { label: cta.contactLabel, href: contact.href },
+              { label: cta.productsLabel + (products.hrefLang === "en" ? italianEnglishFallbackSuffix : ""), href: products.href },
+            ],
+          } : pageData.bottomBanner,
+        }}
+        previousArticle={previousArticle}
+        nextArticle={nextArticle}
+        relatedProducts={relatedProducts}
+        afterContent={relatedFooter}
+      >
+        {edition.kind === "piston" ? <PistonPumpLocalizedArticle copy={edition.copy} locale="it" />
+          : edition.kind === "brushless-wiring" ? <BrushlessDiaphragmPumpWiringArticle copy={edition.copy} locale="it" />
+          : edition.kind === "dpl30h" ? <Dpl30hArticleContent copy={edition.copy} localePrefix="/it" />
+          : edition.kind === "dpgl800" ? <Dpgl800ArticleContent copy={edition.copy} localePrefix="/it" />
+          : edition.kind === "standard-diaphragm" ? <StandardDiaphragmArticleContent
+              copy={edition.copy} faqCopy={edition.faq} dpl60Copy={edition.dpl60Copy} localePrefix="/it" />
+          : edition.kind === "cv-kv" ? <CvKvMicrofluidicsArticle locale="it" />
+          : <EngineeringArticleContent copy={edition.copy} locale="it"
+              sectionIds={sectionIds}
+              useShortTocLabels={samplingProbeGuide} />}
+        {article.secondaryCategory === "plunger-pumps" ? (
+          <section className="technicalArticleClusterLinks" data-piston-application-guide-links="true">
+            <h2>Applicazioni delle pompe a pistone negli strumenti analitici</h2>
+            <ul>
+              {PISTON_APPLICATION_GUIDES.map((guide, index) => {
+                const destination = getItalianDraftLink(guide.href);
+                const label = [
+                  "Panoramica delle applicazioni delle pompe a pistone",
+                  "Aspirazione e trasferimento dei campioni",
+                  "Dosaggio di reagenti e standard",
+                  "Diluizione, aggiunta e dosaggio in proporzione",
+                  "Dosaggio incrementale del titolante",
+                ][index];
+                return <li key={guide.href}><Link {...destination}>
+                  {label}{destination.hrefLang === "en" ? italianEnglishFallbackSuffix : null}
+                </Link></li>;
+              })}
+            </ul>
+          </section>
+        ) : null}
+      </LegacyTechnicalArticleLayout>
+    </div>
+  );
 }
 
 function getBackText(locale: SupportedLocale) {

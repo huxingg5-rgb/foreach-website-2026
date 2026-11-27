@@ -1,4 +1,7 @@
+import { getHindiInstrumentPumpDetail } from "@/data/products/detail/instrument-pumps.hi";
 import { getPipettingSeriesSlug, getPipettingSeriesKey } from "@/data/products/selection/pipetting-pump-routes";
+import { getItalianPipettingDetail } from "@/data/products/detail/pipetting-pump-detail.it";
+import { getGermanPipettingDetail } from "@/data/products/detail/pipetting-pump-detail.de";
 import { applyInstrumentFluidicsChineseCopy } from "@/data/products/detail/instrument-fluidics-copy.zh";
 import { Suspense } from "react";
 import ProductSelectionClient from "@/components/products/selection/ProductSelectionClient";
@@ -26,6 +29,9 @@ type PageParams = {
 type PageProps = {
   params: Promise<PageParams>;
   renderLocale?: RelatedResourcesLocale;
+  germanDraft?: boolean;
+  italianDraft?: boolean;
+  hindiDraft?: boolean;
 };
 
 type SpecItem = {
@@ -227,7 +233,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function PipettingPumpDetailPage({ params, renderLocale = "zh-CN" }: PageProps) {
+export default async function PipettingPumpDetailPage({ params, renderLocale = "zh-CN", germanDraft = false, italianDraft = false, hindiDraft = false }: PageProps) {
   const { slug } = await params;
   const seriesIndex = pipettingSeriesSlugs.indexOf(getPipettingSeriesKey(slug)!);
   if (seriesIndex >= 0) {
@@ -242,10 +248,16 @@ export default async function PipettingPumpDetailPage({ params, renderLocale = "
   }
 
   const series = detail.slug.split("-")[0];
+  const sourceData = applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh");
+  const german = germanDraft ? getGermanPipettingDetail(sourceData) : undefined;
+  const italian = italianDraft ? getItalianPipettingDetail(sourceData) : undefined;
+  const hindi = hindiDraft ? getHindiInstrumentPumpDetail(sourceData, "pipetting") : undefined;
   return (
     <ProductDetailClient
-      data={applyInstrumentFluidicsChineseCopy(toClientData(detail), "zh") as ComponentProps<typeof ProductDetailClient>["data"]}
-      {...getInstrumentProductSections(detail.slug, renderLocale)}
+      data={(german?.data ?? italian?.data ?? hindi?.data ?? sourceData) as ComponentProps<typeof ProductDetailClient>["data"]}
+      germanDetail={german?.presentation}
+      localizedDetail={italian ? { locale: "it", copy: italian.presentation } : hindi ? { locale: "hi", copy: hindi.presentation } : undefined}
+      {...getInstrumentProductSections(detail.slug, german ? "de" : italian ? "it" : hindi ? "hi" : renderLocale)}
       afterContent={
         <RelatedResources
           sourceType="product"
@@ -253,6 +265,7 @@ export default async function PipettingPumpDetailPage({ params, renderLocale = "
           sourceSlug={detail.slug}
           relationKeys={[`series:${series}`]}
           locale={renderLocale}
+          uiLocale={german ? "de" : italian ? "it" : hindi ? "hi" : undefined}
         />
       }
     />

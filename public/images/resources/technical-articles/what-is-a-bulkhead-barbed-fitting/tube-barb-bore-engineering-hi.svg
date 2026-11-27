@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-labelledby="title desc">
+  <title id="title">PMB-U28-24D-PP-N ट्यूबिंग और फिटिंग के आयाम</title>
+  <desc id="desc">तकनीकी आरेख: असेंबली से पहले ट्यूब का अंदरूनी व्यास 2.4 mm, बार्ब का अधिकतम बाहरी व्यास 3.5 mm और फिटिंग के बोर का व्यास 1.7 mm है। आयाम सीधे नाम से दर्शाए गए हैं। केंद्र रेखाएँ, काट की हैचिंग और आयाम रेखाएँ अक्ष, ठोस सामग्री और माप की स्थिति दिखाती हैं। चित्र पैमाने पर नहीं है और निर्माण के लिए नहीं है।</desc>
+  <defs>
+    <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M-2 2L2-2M0 9L9 0M7 11L11 7" stroke="#111" stroke-width=".7"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="8" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 4L0 8Z" fill="#111"/></marker>
+  </defs>
+  <rect width="900" height="700" fill="#fff"/>
+  <g font-family="Nirmala UI,Noto Sans Devanagari,sans-serif" fill="#111">
+    <text x="24" y="42" font-size="29" font-weight="700">ट्यूबिंग और फिटिंग के आयाम</text>
+    <text x="24" y="76" font-size="22">PMB-U28-24D-PP-N</text>
+    <text x="876" y="76" text-anchor="end" font-size="20">इकाई: mm | आरेख निर्माण के लिए नहीं है</text>
+    <path d="M24 96H876M300 112V432M24 451H876" fill="none" stroke="#111" stroke-width="1.2"/>
+    <text x="160" y="141" text-anchor="middle" font-size="20">असेंबली से पहले ट्यूब का काट</text>
+    <circle cx="160" cy="265" r="78" fill="url(#hatch)" stroke="#111" stroke-width="2.5"/>
+    <circle cx="160" cy="265" r="48" fill="#fff" stroke="#111" stroke-width="2.5"/>
+    <path d="M52 265H268M160 158V371" fill="none" stroke="#111" stroke-width=".9" stroke-dasharray="18 4 3 4"/>
+    <path d="M113 265H207" fill="none" stroke="#111" stroke-width="1.2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <rect x="112" y="225" width="96" height="28" fill="#fff"/>
+    <text x="160" y="247" text-anchor="middle" font-size="22">⌀2.4</text>
+    <text x="160" y="396" text-anchor="middle" font-size="19">ट्यूब का अंदरूनी व्यास: 2.4 mm</text>
+    <text x="160" y="426" text-anchor="middle" font-size="12">बाहरी व्यास और दीवार की मोटाई निर्दिष्ट नहीं हैं</text>
+    <text x="590" y="141" text-anchor="middle" font-size="23">बार्ब और बोर का आंशिक काट</text>
+    <path d="M350 230L535 205V225H665V241H350ZM350 320L535 345V325H665V309H350Z" fill="url(#hatch)" stroke="#111" stroke-width="2.5" stroke-linejoin="miter"/>
+    <path d="M325 275H694" fill="none" stroke="#111" stroke-width=".9" stroke-dasharray="20 4 3 4"/>
+    <path d="M535 205H735M535 345H735M665 241H835M665 309H835" fill="none" stroke="#111" stroke-width=".9"/>
+    <path d="M720 207V343M820 243V307" fill="none" stroke="#111" stroke-width="1.2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="750" y="275" text-anchor="middle" font-size="24" transform="rotate(-90 750 275)">⌀3.5</text>
+    <text x="855" y="275" text-anchor="middle" font-size="23" transform="rotate(-90 855 275)">⌀1.7</text>
+    <path d="M535 205L510 179H350M462 275L492 370H580" fill="none" stroke="#111" stroke-width="1.1"/>
+    <text x="350" y="173" font-size="19">बार्ब का अधिकतम व्यास: 3.5 mm</text>
+    <text x="588" y="377" font-size="20">अंदरूनी बोर: 1.7 mm</text>
+    <text x="590" y="426" text-anchor="middle" font-size="19">बाहरी सतह ट्यूब को पकड़ती है और बोर से द्रव बहता है</text>
+    <text x="24" y="490" font-size="23" font-weight="700">इन आयामों का उपयोग कैसे करें</text>
+    <text x="24" y="528" font-size="22">1. ट्यूबिंग चुनें: यह फिटिंग 2.4 mm अंदरूनी व्यास की ट्यूब के लिए है।</text>
+    <text x="54" y="558" font-size="18">ट्यूब का बाहरी व्यास, दीवार की मोटाई, सामग्री और कठोरता से भी फिट बदलती है।</text>
+    <text x="24" y="594" font-size="22">2. बार्ब की जाँच करें: अधिकतम व्यास 3.5 mm है। ट्यूब फैलकर बार्ब पर चढ़ती है।</text>
+    <text x="24" y="630" font-size="21">3. 1.7 mm के बोर की जाँच करें: लक्षित प्रवाह पर दाब-पतन और आपूर्ति का आकलन करें।</text>
+    <path d="M24 651H876" stroke="#111" stroke-width="1.2"/>
+    <text x="24" y="681" font-size="18">स्रोत: PMB-U28-24D-PP-N ड्रॉइंग। ट्यूब का व्यास उत्पाद के फिट विनिर्देश से है।</text>
+  </g>
+</svg>

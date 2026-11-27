@@ -19,6 +19,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteBreadcrumb from "@/components/common/SiteBreadcrumb";
 import { getAboutBreadcrumb } from "@/data/about-breadcrumb";
+import { getHindiDraftLink, hindiEnglishFallbackSuffix, getItalianDraftLink, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
 import { useEffect, useRef, useState } from "react";
 
 import {
@@ -444,18 +445,22 @@ export default function ResearchManufacturingPageContent({
                                 className="rm-supply-timeline"
                                 aria-label={text.applications.title}
                             >
-                                {text.applications.cards.map((card, index) => (
-                                    <div
+                                {text.applications.cards.map((card, index) => {
+                                    const applicationPath = "/applications/" + APPLICATION_SLUGS[index] + "/";
+                                    const link = locale === "hi" ? getHindiDraftLink("/en" + applicationPath) : locale === "it"
+                                        ? getItalianDraftLink("/en" + applicationPath)
+                                        : { href: (locale === "zh-CN" ? "" : "/" + locale) + applicationPath };
+                                    return <div
                                         className={`rm-supply-nav-item ${applicationIndex === index ? "is-active" : ""
                                             }`}
                                         key={card.title}
                                     >
                                         <Link
                                             className="rm-supply-nav-link"
-                                            href={`${locale === "zh-CN" ? "" : `/${locale}`}/applications/${APPLICATION_SLUGS[index]}/`}
+                                            {...link}
                                             prefetch={false}
                                         >
-                                            {card.title}
+                                            {card.title}{link.hrefLang === "en" ? (locale === "hi" ? hindiEnglishFallbackSuffix : italianEnglishFallbackSuffix) : ""}
                                         </Link>
                                         <button
                                             className="rm-supply-nav-dot"
@@ -464,8 +469,8 @@ export default function ResearchManufacturingPageContent({
                                             aria-pressed={applicationIndex === index}
                                             onClick={() => setApplicationIndex(index)}
                                         />
-                                    </div>
-                                ))}
+                                    </div>;
+                                })}
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,298 @@
+{
+  "metadata": {
+    "title": "Perché più ugelli di lavaggio alimentati da una sola pompa miniaturizzata a membrana hanno portate diverse?",
+    "seoTitle": "Ugelli di lavaggio multipli: bilanciamento delle portate con una pompa a membrana | Foreach Technology",
+    "seoDescription": "Calcola la portata richiesta da volume e tempi di ogni ugello, distingui erogazione insufficiente e distribuzione disuniforme e verifica ogni ramo con misure di volume raccolto e pressione.",
+    "coverImage": "/images/resources/technical-articles/pump-application-guides/dpl60-brushless-side-photo.jpg",
+    "coverAlt": "Vista laterale della pompa miniaturizzata a membrana Foreach DPL60 con testa della pompa e porte fluidiche"
+  },
+  "deck": "Calcola la portata richiesta da volume e tempi di ogni ugello, distingui erogazione insufficiente e distribuzione disuniforme e verifica ogni ramo con misure di volume raccolto e pressione.",
+  "leadBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Una sola pompa e un solo collettore non garantiscono la stessa erogazione a ogni ugello di lavaggio. In un analizzatore di chimica clinica o in un altro strumento con circuiti di lavaggio paralleli, verificare che la portata totale sia sufficiente alla pressione di esercizio effettiva e che l'erogazione di ogni ramo sia accettabile. La misura della sola portata totale può nascondere un ugello sottoalimentato. Tutti gli esempi numerici seguenti sono calcoli ipotetici e non risultati misurati sui prodotti."
+    }
+  ],
+  "sections": [
+    {
+      "title": "1. Definire la funzione di lavaggio di ogni ugello",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Tradurre una richiesta generica di pompa per il lavaggio in requisiti misurabili: numero di ugelli attivi contemporaneamente, volume per ugello, intervallo di apertura della valvola, possibilità di pre-riempimento e criteri di accettazione del primo ciclo e di quelli successivi. L'azionamento in sequenza cambia sia la domanda di picco sia il tempo necessario a completare un lotto."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Dato necessario",
+            "Perché conta",
+            "Che cosa registrare"
+          ],
+          "rows": [
+            [
+              "Volume e tolleranza per ugello",
+              "Definisce il requisito di erogazione di ogni ramo",
+              "Volumi raccolti per singolo ugello, oltre alla media"
+            ],
+            [
+              "Tempo effettivo di erogazione",
+              "Adescamento, avviamento e ritardi della valvola riducono il tempo utile",
+              "Ritardo tra comando ed erogazione effettiva"
+            ],
+            [
+              "Numero di rami aperti",
+              "Determina la domanda simultanea di picco",
+              "Numero di rami attivi in condizioni normali e massime"
+            ],
+            [
+              "Liquido, temperatura e circuito fluidico",
+              "Influisce su resistenza, compatibilità e punto di lavoro",
+              "Lotto del liquido, temperatura, diametro di passaggio, lunghezza e componenti"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "2. Calcolare la domanda totale dai volumi dei singoli ugelli",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Si ipotizzino quattro ugelli attivi insieme, ciascuno con un'erogazione di 3 mL in due secondi effettivi. Ogni ramo richiede in media 90 mL/min, per un totale di 360 mL/min. Se due secondi sono soltanto la durata del comando del controllore, sottrarre gli intervalli senza erogazione utile prima del calcolo."
+        },
+        {
+          "type": "formula",
+          "expression": "Qᵢ = 60 × Vᵢ / tᵢ; Qtotal = ΣQᵢ",
+          "note": "Con V in mL e t in secondi, Q è in mL/min. Sommare i rami aperti contemporaneamente. L'esempio non prevede bypass o ritorni separati."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le guide di scelta Foreach DPL30 e DPL60 descrivono classi di portata rispettivamente di 300 mL/min e 600 mL/min. Il dato nominale della DPL30 non dimostra l'idoneità al carico ipotetico di 360 mL/min. La DPL60 è una candidata da valutare. I 600 mL/min non corrispondono necessariamente alla portata disponibile attraverso tubi, valvole e ugelli installati. Confermare il punto di lavoro a tensione, liquido, condizioni di ingresso e pressione di mandata richiesti."
+        },
+        {
+          "type": "notice",
+          "text": "Il valore di 360 mL/min deriva da un'ipotesi di lavaggio. Non è la specifica di un analizzatore né un valore generale per i sistemi di lavaggio paralleli."
+        }
+      ]
+    },
+    {
+      "title": "3. Verificare la distribuzione anche quando la portata totale è sufficiente",
+      "blocks": [
+        {
+          "type": "figure",
+          "src": "/images/resources/technical-articles/pump-application-guides/wash-branches-it.svg",
+          "alt": "Una pompa alimenta un collettore con tubi separati e ugelli che scaricano in recipienti di raccolta misurati singolarmente",
+          "width": 1200,
+          "height": 500,
+          "caption": "Schema concettuale. Verificare a parte erogazione totale e singole erogazioni. Il disegno non riporta dimensioni reali dei tubi o prestazioni dei prodotti."
+        },
+        {
+          "type": "paragraph",
+          "text": "In moto stazionario, per un fluido approssimativamente incomprimibile senza bypass o accumulo significativo, la portata totale è la somma di quelle dei rami. Ogni ramo risponde comunque alla propria differenza di pressione effettiva e alla propria resistenza. L'approssimazione di pressione comune è utile solo se pressioni di ingresso al collettore, pressioni di uscita e dislivelli sono abbastanza simili."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il tubo di alimentazione comune e l'ingresso del collettore portano la portata totale. Ogni tubo a valle porta solo la portata del proprio ramo. Usare la portata totale per il calcolo di ciascun ramo sovrastima le perdite dei rami. Usare la portata di un ramo per il tubo comune sottostima le perdite condivise."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Causa della differenza",
+            "Possibile osservazione",
+            "Dove controllare"
+          ],
+          "rows": [
+            [
+              "Diametro, lunghezza o deformazione del tubo",
+              "Un ramo resta sempre a bassa portata",
+              "Tolleranze dei tubi, profondità di innesto, curve e tratti schiacciati"
+            ],
+            [
+              "Differenze tra ugelli o valvole",
+              "La bassa portata segue il componente scambiato",
+              "Passaggio dell'ugello, contaminazione, apertura e tempi della valvola"
+            ],
+            [
+              "Quota o immersione dell'uscita",
+              "La distribuzione cambia dopo la modifica dell'installazione",
+              "Altezza e immersione dell'ugello, pressione nel recipiente di raccolta"
+            ],
+            [
+              "Bolle o accumulo per cedevolezza",
+              "Il primo ciclo differisce dai successivi",
+              "Gas intrappolato, dilatazione dei tubi e stato di adescamento"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. Usare la sensibilità al diametro come modello diagnostico",
+      "blocks": [
+        {
+          "type": "formula",
+          "expression": "ΔP = 128 μ L Q / (π d⁴)",
+          "note": "Vale per il moto laminare stazionario pienamente sviluppato di un liquido newtoniano in un tubo diritto, rigido e circolare. μ è la viscosità dinamica, L la lunghezza e d il diametro interno. Con unità SI coerenti si ottiene la perdita di carico in Pa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Per un tratto ideale a parità delle altre condizioni, un diametro interno minore del 10% porta la resistenza a circa 1/0.9⁴ = 1.52 volte il valore iniziale. A pari differenza di pressione la portata diventa circa 0.9⁴ = 65.6% di quella originaria. Il calcolo descrive la sensibilità di un tratto ideale e non prevede una riduzione del 34.4% per tutto il sistema della pompa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un circuito installato comprende anche aperture degli ugelli, raccordi, valvole, filtri e flusso pulsante. Orifizi corti, moto non sviluppato, turbolenza o tubi molto deformabili richiedono modelli o dati dei componenti appropriati. Usare le curve di perdita di carico disponibili e verificare l'assieme effettivo. Una modifica della rete può anche spostare il punto di lavoro."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "https://openstax.org/books/college-physics/pages/12-4-viscosity-and-laminar-flow-poiseuilles-law",
+              "label": "Riferimento di fisica: OpenStax su viscosità, flusso laminare e legge di Poiseuille"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "5. Misurare portata totale e singoli rami nella stessa prova",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Adescare il sistema come previsto. Fissare liquido, temperatura, tensione di alimentazione, livello del serbatoio, quota di installazione e tubi. Identificare ogni ugello e ogni recipiente di raccolta.",
+            "Raccogliere l'erogazione di ciascun ramo durante la sequenza di controllo effettiva. Calcolare Qᵢ = Vᵢ/t se utile. Per un impulso breve di lavaggio, la misura principale è il volume erogato per evento.",
+            "Registrare pressione di ingresso, di uscita o del collettore, posizioni dei sensori, campi e frequenze di campionamento. Una misura mediata troppo lentamente può nascondere i transitori di apertura.",
+            "Confrontare la somma dei volumi raccolti con l'erogazione totale nello stesso intervallo. Contabilizzare a parte bypass, ritorni, perdite e variazioni del liquido accumulato.",
+            "Valutare separatamente avviamento, esercizio ripetuto e massimo numero di rami attivi. Definire ripetizioni e limiti di accettazione dai requisiti di lavaggio dello strumento prima delle prove."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Se l'erogazione totale è conforme ma un ramo non lo è, analizzare distribuzione e tempi. Se sono tutti sotto portata, usare le pressioni per distinguere alimentazione insufficiente, perdite del percorso comune, limiti in aspirazione e problemi elettrici. Per scambiare un ugello o un tubo sospetto, cambiare un fattore alla volta e verificare se l'anomalia segue il componente."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/en/applications/lab-automation/guide-microplate/microplate-diaphragm-pumps/microplate-plate-wash/#acceptance",
+              "prefix": "Per un lavatore di piastre, usa i ",
+              "label": "controlli di lavaggio e aspirazione delle micropiastre",
+              "suffix": " per collegare le misure dei rami a erogazione tra pozzetti, liquido residuo e ciclo di lavaggio completo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. Valutare le modifiche rispetto a tempi e pressione",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "Modifica",
+            "Possibile vantaggio",
+            "Che cosa ricontrollare"
+          ],
+          "rows": [
+            [
+              "Uniformare dimensioni e montaggio dei rami",
+              "Riduce differenze di fabbricazione e posa",
+              "Contano ancora ugelli, valvole e quote delle uscite"
+            ],
+            [
+              "Aggiungere resistenza controllata ai rami a portata maggiore",
+              "Può bilanciare una condizione di esercizio specifica",
+              "Consuma margine di pressione e cambia la portata totale"
+            ],
+            [
+              "Lavare per gruppi o in sequenza",
+              "Riduce la domanda contemporanea",
+              "Ricalcolare tempi del lotto, ciclo delle valvole e controllo"
+            ],
+            [
+              "Cambiare pompa o migliorare l'alimentazione comune",
+              "Può aumentare l'erogazione totale al punto di lavoro",
+              "Non uniforma automaticamente le resistenze dei rami"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Partire dall'erogazione richiesta dal ramo non conforme. Aumentare la tensione, scegliere una pompa più grande o aggiungere restrizioni senza misure per ramo può cambiare il totale senza risolvere la causa. Dopo la regolazione ripetere la stessa verifica di accettazione per ogni ugello, il primo ciclo e i tempi di lavaggio complessivi."
+        }
+      ]
+    },
+    {
+      "title": "7. Consultare le guide di selezione correlate",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "La pagina riguarda la distribuzione da una sola pompa a più linee di lavaggio. Per scegliere la pompa servono anche compatibilità col liquido, pressione effettiva e requisiti di controllo. Se l'erogazione cala con il funzionamento, indagare a parte lo sfiato del serbatoio e l'alimentazione in aspirazione."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "href": "/resources/technical-articles/ivd-cleaning-wash-rinse-pump-diaphragm-pump/",
+              "label": "Scelta della pompa di lavaggio e risciacquo per i circuiti degli strumenti"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-pressure-curve-guide/",
+              "label": "Uso della curva portata-pressione per individuare il punto di lavoro"
+            },
+            {
+              "href": "/resources/technical-articles/tube-inner-diameter-affects-diaphragm-pump-flow/",
+              "label": "Come il diametro interno dei tubi influisce sulla portata della pompa a membrana"
+            },
+            {
+              "href": "/resources/technical-articles/dpl30-liquid-diaphragm-pump-selection-guide/",
+              "label": "Guida alla scelta della pompa a membrana per liquidi DPL30"
+            },
+            {
+              "href": "/resources/technical-articles/dpl60-liquid-diaphragm-pump-selection-guide/",
+              "label": "Guida alla scelta della pompa a membrana per liquidi DPL60"
+            },
+            {
+              "href": "/resources/technical-articles/diaphragm-pump-flow-drop-reservoir-venting/",
+              "label": "Portata in calo durante il funzionamento: controllo dello sfiato del serbatoio"
+            },
+            {
+              "href": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/",
+              "label": "Pompe miniaturizzate a membrana per liquidi"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqTitle": "Domande frequenti",
+  "faqItems": [
+    {
+      "question": "Posso dividere la portata totale per il numero di ugelli?",
+      "answer": "Il risultato è una media. Per verificare ogni ugello, raccogliere i singoli volumi nello stesso intervallo di comando e controllare erogazione minima e variazione ammissibile."
+    },
+    {
+      "question": "Tubi della stessa lunghezza garantiscono la stessa portata?",
+      "answer": "Contano anche diametro interno, ugelli, valvole, raccordi, quota di scarico e gas intrappolato. La stessa lunghezza uniforma soltanto un aspetto del montaggio."
+    },
+    {
+      "question": "Una pompa da 600 mL/min risolve il problema?",
+      "answer": "Una capacità maggiore aiuta se la portata totale al punto di lavoro effettivo è insufficiente. Le differenze di resistenza tra rami vanno comunque analizzate a parte. Verificare la portata nominale sulla curva della pompa."
+    },
+    {
+      "question": "Conviene misurare portata media o volume per lavaggio?",
+      "answer": "La portata media è utile per diagnosticare un'erogazione continua. Per lavaggi brevi includere volume erogato e tempo di completamento. Avviamento, adescamento e movimento delle valvole possono occupare una parte significativa dell'intervallo."
+    },
+    {
+      "question": "Quale percentuale di squilibrio è accettabile?",
+      "answer": "Il limite dipende dallo strumento. Derivare i criteri di accettazione da prestazioni di lavaggio, requisiti di contaminazione residua e metodo di misura, quindi ripartire le tolleranze tra pompa, valvole, tubi e controllo."
+    }
+  ],
+  "cta": {
+    "title": "Definisci una specifica verificabile per la pompa in base alle condizioni di esercizio",
+    "description": "Indica liquido, volume o portata richiesti, tempi, circuito fluidico e vincoli di installazione per valutare configurazione della pompa e metodo di verifica.",
+    "contactLabel": "Contatta l'assistenza tecnica",
+    "productsLabel": "Esplora i prodotti correlati",
+    "productsHref": "/products/pumps/miniature-diaphragm-pumps/liquid-diaphragm-pumps/"
+  }
+}

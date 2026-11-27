@@ -490,8 +490,8 @@ export const copy = {
           "type": "links",
           "items": [
             {
-              "href": "/en/resources/technical-articles/quick-disconnect-coupling-pressure-rating/",
-              "label": "Quick Disconnect Fitting Pressure Ratings: Temperature and Connection Under Pressure"
+              "href": "/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/#conditions",
+              "label": "Quick Disconnect Fittings: Working Pressure, Temperature and Flow"
             },
             {
               "href": "/en/resources/technical-articles/what-is-a-quick-disconnect-fitting/",
