@@ -328,11 +328,21 @@ async function main() {
   for (const filePath of htmlFiles) {
     const html = await readFile(filePath, "utf8");
     const route = routeFromHtmlFile(filePath);
-    pages.push({ filePath, route, html, indexable: isIndexablePage(route, filePath, html) });
+    const indexable = isIndexablePage(route, filePath, html);
+    // Keep only the alternate link markup between passes. Copying it into a buffer
+    // prevents short string slices from retaining an entire HTML document.
+    const alternateLinks = indexable
+      ? Buffer.from((html.match(/<link\b[^>]*>/gi) ?? [])
+          .filter(tag => extractAttributes(tag).rel?.toLowerCase() === "alternate")
+          .join(""))
+      : null;
+    pages.push({ filePath, route, indexable, alternateLinks });
   }
 
   const routeSet = new Set(pages.filter(page => page.indexable).map(({ route }) => route));
-  const declaredAlternates = new Map(pages.filter(page => page.indexable).map(page => [page.route, getExistingAlternates(page.html, routeSet)]));
+  const declaredAlternates = new Map(pages
+    .filter(page => page.alternateLinks !== null)
+    .map(page => [page.route, getExistingAlternates(page.alternateLinks.toString("utf8"), routeSet)]));
   const stats = {
     pages: routeSet.size,
     documentLanguages: 0,
@@ -344,14 +354,15 @@ async function main() {
   };
 
   for (const page of pages) {
-    const languageHtml = normalizeContentLanguage(page.html, page.route);
-    if (languageHtml !== page.html) stats.documentLanguages += 1;
+    const originalHtml = await readFile(page.filePath, "utf8");
+    const languageHtml = normalizeContentLanguage(originalHtml, page.route);
+    if (languageHtml !== originalHtml) stats.documentLanguages += 1;
     if (!page.indexable) {
-      if (languageHtml !== page.html) await writeFile(page.filePath, languageHtml, "utf8");
+      if (languageHtml !== originalHtml) await writeFile(page.filePath, languageHtml, "utf8");
       continue;
     }
     const canonicalUrl = absoluteRouteUrl(page.route);
-    const alternates = getAlternates(page.html, page.route, routeSet, declaredAlternates);
+    const alternates = getAlternates(originalHtml, page.route, routeSet, declaredAlternates);
     let html = removeCanonicalAndHreflang(languageHtml);
     html = normalizeAnchorTags(html, routeSet, stats);
     html = normalizeJsonLd(html, routeSet, stats);

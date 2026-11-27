@@ -354,10 +354,8 @@ async function main() {
       );
     }
 
-    routeMap.set(route, {
-      htmlFile,
-      canonicalUrl: canonicalValues[0],
-    });
+    // The validated attribute may still be a slice of the full HTML document.
+    routeMap.set(route, expectedCanonical);
   }
 
   const routes = [...routeMap.keys()].sort(
@@ -386,7 +384,7 @@ async function main() {
       priority,
     } = getSeoSettings(route);
 
-    const url = routeMap.get(route).canonicalUrl;
+    const url = routeMap.get(route);
 
     return [
       "  <url>",
