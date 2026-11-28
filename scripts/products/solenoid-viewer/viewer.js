@@ -29,6 +29,9 @@ document.documentElement.classList.toggle('external-resource-tabs',new URLSearch
 const translations={
 zh:['复位','自动旋转','适应窗口','操作帮助','全屏','模型结构','外形尺寸（不含电线）','观察视角','显示样式','等轴测|正视图|后视图|右视图|左视图|俯视图|仰视图','带边线|实体|线框','拖动旋转；滚轮或双指缩放。尺寸按模型测量，不含电线。','加载失败，点击重试','加载中…'],
 en:['Reset','Auto rotate','Fit','Help','Fullscreen','Parts','Dimensions (excluding wires)','View','Display','Isometric|Front|Back|Right|Left|Top|Bottom','Edges|Solid|Wireframe','Drag to rotate; scroll or pinch to zoom. Model dimensions exclude wires.','Unable to load. Retry','Loading…'],
+de:['Zurücksetzen','Automatisch drehen','Einpassen','Hilfe','Vollbild','Bauteile','Außenmaße (ohne Kabel)','Ansicht','Darstellung','Isometrisch|Vorne|Hinten|Rechts|Links|Oben|Unten','Kanten|Volumenmodell|Drahtmodell','Zum Drehen ziehen. Zum Zoomen das Mausrad oder zwei Finger verwenden. Die Modellmaße gelten ohne Kabel.','Laden fehlgeschlagen. Erneut versuchen','Wird geladen…'],
+it:['Reimposta','Rotazione automatica','Adatta alla finestra','Guida','Schermo intero','Componenti','Dimensioni d’ingombro (cavi esclusi)','Vista','Visualizzazione','Isometrica|Anteriore|Posteriore|Destra|Sinistra|Superiore|Inferiore','Spigoli|Solido|Reticolo','Trascinare per ruotare. Usare la rotellina o due dita per lo zoom. Le dimensioni del modello escludono i cavi.','Caricamento non riuscito. Riprova','Caricamento…'],
+hi:['रीसेट करें','अपने-आप घुमाएँ','विंडो में फ़िट करें','सहायता','फ़ुल स्क्रीन','पुर्ज़े','बाहरी आयाम (तारों के बिना)','दृश्य','दिखाने का तरीका','आइसोमेट्रिक|सामने|पीछे|दायाँ|बायाँ|ऊपर|नीचे','किनारे|ठोस|वायरफ़्रेम','घुमाने के लिए खींचें। ज़ूम करने के लिए माउस व्हील या दो उँगलियों का इस्तेमाल करें। मॉडल के आयामों में तार शामिल नहीं हैं।','लोड नहीं हो सका। फिर कोशिश करें','लोड हो रहा है…'],
 es:['Restablecer','Giro automático','Ajustar','Ayuda','Pantalla completa','Piezas','Cotas sin cables','Vista','Estilo','Isométrica|Frontal|Posterior|Derecha|Izquierda|Superior|Inferior','Aristas|Sólido|Alambre','Arrastre para girar; rueda o pellizco para ampliar. Cotas del modelo sin cables.','No se pudo cargar. Reintentar','Cargando…'],
 fr:['Réinitialiser','Rotation automatique','Ajuster','Aide','Plein écran','Pièces','Dimensions hors câbles','Vue','Affichage','Isométrique|Face|Arrière|Droite|Gauche|Dessus|Dessous','Arêtes|Solide|Filaire','Glissez pour tourner ; molette ou pincement pour zoomer. Dimensions du modèle hors câbles.','Chargement impossible. Réessayer','Chargement…'],
 ko:['초기화','자동 회전','화면 맞춤','도움말','전체 화면','부품','외형 치수 (전선 제외)','시점','표시','등각|정면|후면|우측|좌측|상단|하단','모서리|솔리드|와이어프레임','드래그하여 회전하고 휠 또는 두 손가락으로 확대합니다. 모델 치수는 전선을 제외합니다.','불러오기 실패. 다시 시도','불러오는 중…'],
@@ -61,6 +64,9 @@ if(isPump||isPreparedFitting){
  const pumpInstructions={
   zh:['模型外形尺寸','拖动旋转；滚轮或双指缩放。尺寸按当前模型测量，安装尺寸请查看原始二维图纸。'],
   en:['Model envelope dimensions','Drag to rotate; scroll or pinch to zoom. Dimensions are measured from this model. Refer to the original drawing for mounting dimensions.'],
+  de:['Modellaußenmaße','Zum Drehen ziehen. Zum Zoomen das Mausrad oder zwei Finger verwenden. Die Maße stammen vom aktuellen Modell. Die Einbaumaße finden Sie in der Originalzeichnung.'],
+  it:['Dimensioni d’ingombro del modello','Trascinare per ruotare. Usare la rotellina o due dita per lo zoom. Le dimensioni sono rilevate sul modello. Per le quote di montaggio consultare il disegno originale.'],
+  hi:['मॉडल के बाहरी आयाम','घुमाने के लिए खींचें। ज़ूम करने के लिए माउस व्हील या दो उँगलियों का इस्तेमाल करें। आयाम इस मॉडल से लिए गए हैं। इंस्टॉलेशन के आयाम मूल ड्रॉइंग में देखें।'],
   es:['Dimensiones del modelo','Arrastre para girar; rueda o pellizco para ampliar. Las dimensiones se miden en este modelo. Consulte el plano original para las dimensiones de montaje.'],
   fr:['Dimensions du modèle','Glissez pour tourner ; molette ou pincement pour zoomer. Les dimensions sont mesurées sur ce modèle. Consultez le plan original pour les dimensions de montage.'],
   ko:['모델 외형 치수','드래그하여 회전하고 휠 또는 두 손가락으로 확대합니다. 치수는 이 모델 기준입니다. 설치 치수는 원본 2D 도면을 확인하세요.'],
@@ -71,6 +77,9 @@ if(isPump||isPreparedFitting){
   const fittingInstructions={
    zh:['接头与配套件尺寸','拖动旋转；滚轮或双指缩放。左侧切换配套件。接头横向放置，配套件位于孔口前方并留有间隙，分别标注尺寸。安装尺寸请查看原始二维图纸。'],
    en:['Fitting and accessory dimensions','Drag to rotate; scroll or pinch to zoom. Select a matching part on the left. The fitting is horizontal, with the accessory aligned in front of the opening, a gap between them and separate dimensions. Refer to the original drawing for mounting dimensions.'],
+   de:['Maße von Fitting und Zubehör','Zum Drehen ziehen. Zum Zoomen das Mausrad oder zwei Finger verwenden. Wählen Sie links das passende Zubehör. Das Fitting liegt waagerecht. Das Zubehör ist mit Abstand vor der Öffnung ausgerichtet. Beide Teile sind separat bemaßt. Die Einbaumaße finden Sie in der Originalzeichnung.'],
+   it:['Dimensioni del raccordo e dell’accessorio','Trascinare per ruotare. Usare la rotellina o due dita per lo zoom. Selezionare a sinistra il componente abbinato. Il raccordo è orizzontale e l’accessorio è allineato davanti all’apertura, con uno spazio tra i due elementi. Le quote sono indicate separatamente. Per il montaggio consultare il disegno originale.'],
+   hi:['फिटिंग और सहायक पुर्ज़े के आयाम','घुमाने के लिए खींचें। ज़ूम करने के लिए माउस व्हील या दो उँगलियों का इस्तेमाल करें। बाईं ओर मेल खाने वाला पुर्ज़ा चुनें। फिटिंग क्षैतिज है और सहायक पुर्ज़ा थोड़ी दूरी पर उसके खुले सिरे के सामने है। दोनों के आयाम अलग-अलग दिखाए गए हैं। इंस्टॉलेशन के आयाम मूल ड्रॉइंग में देखें।'],
    es:['Dimensiones del racor y accesorio','Arrastre para girar; rueda o pellizco para ampliar. Seleccione la pieza a la izquierda. El racor y el accesorio están alineados, separados y acotados individualmente. Consulte el plano original para el montaje.'],
    fr:['Dimensions du raccord et de la pièce','Glissez pour tourner ; molette ou pincement pour zoomer. Sélectionnez la pièce à gauche. Les pièces sont coaxiales, espacées et cotées séparément. Consultez le plan original pour le montage.'],
    ko:['피팅 및 부속품 치수','드래그하여 회전하고 휠 또는 두 손가락으로 확대합니다. 왼쪽에서 부속품을 선택하세요. 부품은 같은 축에 간격을 두고 배치되며 치수는 각각 표시됩니다. 설치 치수는 원본 도면을 확인하세요.'],
@@ -94,6 +103,9 @@ document.getElementById('help-close').setAttribute('aria-label',tr[3]);
  const sectionCopy={
   zh:['剖切','剖切视图','剖切方向','剖切位置','方向','移动滑块查看内部，切口不封面。'],
   en:['Section','Section view','Section axis','Section position','Axis','Move the slider to view the interior. Cut faces are not capped.'],
+  de:['Schnitt','Schnittansicht','Schnittachse','Schnittposition','Achse','Verschieben Sie den Regler, um das Innere zu sehen. Die Schnittflächen bleiben offen.'],
+  it:['Sezione','Vista in sezione','Asse di sezione','Posizione della sezione','Asse','Spostare il cursore per vedere l’interno. Le superfici di taglio restano aperte.'],
+  hi:['कटाव','कटाव दृश्य','कटाव की धुरी','कटाव की स्थिति','धुरी','अंदर देखने के लिए स्लाइडर खिसकाएँ। कटी सतहें खुली रहती हैं।'],
   es:['Sección','Vista en sección','Eje de sección','Posición de sección','Eje','Mueva el deslizador para ver el interior. Las caras cortadas quedan abiertas.'],
   fr:['Coupe','Vue en coupe','Axe de coupe','Position de coupe','Axe','Déplacez le curseur pour voir l’intérieur. Les faces coupées restent ouvertes.'],
   ko:['단면','단면 보기','단면 축','단면 위치','축','슬라이더를 움직여 내부를 확인하세요. 절단면은 채워지지 않습니다.'],
@@ -107,7 +119,7 @@ document.getElementById('help-close').setAttribute('aria-label',tr[3]);
  document.querySelector('#section-panel label').firstChild.textContent=sectionCopy[4]+' ';
  document.querySelector('#section-panel .subtle').textContent=sectionCopy[5];
 }
-const loadingLabels={zh:'3D 模型加载中',en:'Loading 3D model',es:'Cargando modelo 3D',fr:'Chargement du modèle 3D',ko:'3D 모델 로딩 중',ru:'Загрузка 3D-модели'};
+const loadingLabels={zh:'3D 模型加载中',en:'Loading 3D model',de:'3D-Modell wird geladen',it:'Caricamento del modello 3D',hi:'3D मॉडल लोड हो रहा है',es:'Cargando modelo 3D',fr:'Chargement du modèle 3D',ko:'3D 모델 로딩 중',ru:'Загрузка 3D-модели'};
 document.getElementById('loading-label').textContent=loadingLabels[language]||loadingLabels.en;
 if(usesParentLoader && parent!==window)document.getElementById('loading').hidden=true;
 
@@ -159,7 +171,7 @@ if(quickConnectReview){
  controls.maxPolarAngle=Math.PI-.12;
  controls.zoomToCursor=true;
 }
-const fittingOuterNames={zh:'外径',en:'OD',es:'DE',fr:'DE',ko:'외경',ru:'Наруж. Ø'};
+const fittingOuterNames={zh:'外径',en:'OD',de:'Außen',it:'DE',hi:'बाहरी',es:'DE',fr:'DE',ko:'외경',ru:'Наруж. Ø'};
 const fittingOuterLabel=`${fittingOuterNames[language]||fittingOuterNames.en}${language==='ru'?'':' Ø'}`;
 const dimensions=createDimensions(stage,camera,isAbd?{clampLabels:true}:isQuickConnect?{side:'bottom',axes:[models[0].mating.axis],offset:34}:isFlatBottomFitting?{side:'bottom',diameterAxis:0,diameterLabel:fittingOuterLabel}:isPreparedFitting?{side:'bottom'}:{});let dimensionsVisible=true;
 $('dimensions').onclick=()=>{const on=quickConnectReview||productReview?!dimensionsVisible:dimensions.toggle();dimensionsVisible=on;companion?.setDimensionsVisible(on);quickPair?.setDimensionsVisible(on);productView?.setDimensionsVisible(on);$('dimensions').classList.toggle('active',on);$('dimensions').setAttribute('aria-pressed',String(on));};
@@ -247,7 +259,7 @@ function prepareHardTubeDrawing(){
   iframe.src=drawingUrl;container.append(iframe);
  }else{
   const message=document.createElement('p');message.className='hard-tube-drawing-message';message.setAttribute('role','status');
-  message.textContent=({zh:'当前型号暂无公开二维图纸，可通过产品页添加图纸需求。',en:'No public 2D drawing is available for this model. Request a drawing on the product page.',es:'No hay un plano 2D público para este modelo. Solicítelo en la página del producto.',fr:'Aucun plan 2D public pour ce modèle. Demandez-le sur la page du produit.',ko:'이 모델의 공개 2D 도면이 없습니다. 제품 페이지에서 도면을 요청하세요.',ru:'Для этой модели нет открытого 2D-чертежа. Запросите его на странице изделия.'})[language]||'No public 2D drawing is available for this model.';
+  message.textContent=({zh:'当前型号暂无公开二维图纸，可通过产品页添加图纸需求。',en:'No public 2D drawing is available for this model. Request a drawing on the product page.',de:'Für dieses Modell ist keine öffentliche 2D-Zeichnung verfügbar. Fragen Sie die Zeichnung auf der Produktseite an.',it:'Per questo modello non è disponibile un disegno 2D pubblico. Richiedere il disegno dalla pagina del prodotto.',hi:'इस मॉडल की सार्वजनिक 2D ड्रॉइंग उपलब्ध नहीं है। उत्पाद पेज से ड्रॉइंग का अनुरोध करें।',es:'No hay un plano 2D público para este modelo. Solicítelo en la página del producto.',fr:'Aucun plan 2D public pour ce modèle. Demandez-le sur la page du produit.',ko:'이 모델의 공개 2D 도면이 없습니다. 제품 페이지에서 도면을 요청하세요.',ru:'Для этой модели нет открытого 2D-чертежа. Запросите его на странице изделия.'})[language]||'No public 2D drawing is available for this model.';
   container.append(message);
  }
 }

@@ -87,6 +87,9 @@ export function getInstrumentFigureLegend(file: string, locale: InstrumentGuideL
 }
 
 const ratio = {
+  hi: { concentrate: "सांद्र द्रव", diluent: "तनुकारक", nominal: "नाममात्र कुल मात्रा", perRev: "/चक्कर", validation: "बाद की मिश्रण प्रक्रिया में एकरूपता की पुष्टि करें।", ratio: "आयतन अनुपात" },
+  it: { concentrate: "Concentrato", diluent: "Diluente", nominal: "Totale nominale", perRev: "/giro", validation: "Verificare l'omogeneità dopo la miscelazione a valle.", ratio: "Rapporto volumetrico" },
+  de: { concentrate: "Konzentrat", diluent: "Verdünnungsmittel", nominal: "Nominale Gesamtmenge", perRev: "/Umdr.", validation: "Prüfen Sie die Homogenität beim nachgeschalteten Mischen.", ratio: "Volumenverhältnis" },
   zh: { concentrate: "浓缩液", diluent: "稀释液", nominal: "名义合计", perRev: "/圈", validation: "混合均匀性由下游混合过程验证。", ratio: "体积比" },
   en: { concentrate: "Concentrate", diluent: "Diluent", nominal: "Nominal total", perRev: "/rev", validation: "Validate uniformity in the downstream mixing process.", ratio: "Volume ratio" },
   es: { concentrate: "Concentrado", diluent: "Diluyente", nominal: "Total nominal", perRev: "/vuelta", validation: "Valide la uniformidad en el proceso de mezcla posterior.", ratio: "Proporción volumétrica" },

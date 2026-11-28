@@ -44,7 +44,7 @@ const COPY: Record<string, WorkspaceCopy> = {
     add: "Konfiguration hinzufügen", edit: "Konfiguration bearbeiten", view: "Konfiguration ansehen", remove: "Konfiguration löschen", cancel: "Abbrechen",
     removeQuestion: "Diese Konfiguration löschen? Vorhandene Einträge in Ihrer Anfrageliste bleiben erhalten.", removeConfirm: "Löschen bestätigen",
     addToList: "Zur Anfrageliste hinzufügen", viewList: "Anfrageliste ansehen", model: "Modell", productCode: "Bestellnummer",
-    downloads: "Unterlagen herunterladen", datasheet: "Produktdatenblatt", fullCatalog: "Gesamtkatalog",
+    downloads: "Downloads", datasheet: "Produktdatenblatt", fullCatalog: "Gesamtkatalog",
   },
   it: {
     chooseModel: "Scegli un altro modello",
@@ -56,7 +56,7 @@ const COPY: Record<string, WorkspaceCopy> = {
     add: "Aggiungi configurazione", edit: "Modifica configurazione", view: "Visualizza configurazione", remove: "Elimina configurazione", cancel: "Annulla",
     removeQuestion: "Eliminare questa configurazione? Le voci già presenti nella lista di richiesta verranno conservate.", removeConfirm: "Conferma eliminazione",
     addToList: "Aggiungi alla lista", viewList: "Visualizza la lista", model: "Modello", productCode: "Codice articolo",
-    downloads: "Scarica la documentazione", datasheet: "Scheda tecnica del prodotto", fullCatalog: "Catalogo completo dei prodotti",
+    downloads: "Scarica documenti", datasheet: "Scheda tecnica del prodotto", fullCatalog: "Catalogo completo dei prodotti",
   },
   hi: {
     chooseModel: "दूसरा मॉडल चुनें",
@@ -68,7 +68,7 @@ const COPY: Record<string, WorkspaceCopy> = {
     add: "कॉन्फ़िगरेशन जोड़ें", edit: "कॉन्फ़िगरेशन बदलें", view: "कॉन्फ़िगरेशन देखें", remove: "कॉन्फ़िगरेशन हटाएँ", cancel: "रद्द करें",
     removeQuestion: "यह कॉन्फ़िगरेशन हटाएँ? पूछताछ सूची में पहले से जोड़े गए आइटम बने रहेंगे।", removeConfirm: "हटाने की पुष्टि करें",
     addToList: "पूछताछ सूची में जोड़ें", viewList: "पूछताछ सूची देखें", model: "मॉडल", productCode: "आइटम कोड",
-    downloads: "दस्तावेज़ डाउनलोड करें", datasheet: "उत्पाद डेटाशीट", fullCatalog: "पूरा उत्पाद कैटलॉग",
+    downloads: "दस्तावेज़ डाउनलोड", datasheet: "उत्पाद डेटाशीट", fullCatalog: "पूरा उत्पाद कैटलॉग",
   },
   es: {
     chooseModel: "Seleccionar otro modelo",

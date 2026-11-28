@@ -1,4 +1,7 @@
+import hindi from "./rpl-guide-locales/delivery.hi.json";
 import type { RplGuideLocale } from "./rpl-guide-locales/types";
+
+type RplDeliveryLocale = RplGuideLocale | "de" | "it" | "hi";
 
 type RplDeliveryCopy = {
   lead: string;
@@ -13,7 +16,96 @@ type RplDeliveryCopy = {
 
 // Translations of the approved Chinese RPL delivery copy. Shipping terms do not
 // extend domestic arrangements to overseas orders.
-const copy: Record<RplGuideLocale, RplDeliveryCopy> = {
+const copy: Record<RplDeliveryLocale, RplDeliveryCopy> = {
+  hi: {
+    ...hindi,
+    rows: hindi.rows.map(row => ({
+      ...row,
+      photos: row.photos.map(([alt, caption]) => [alt, caption] as const),
+    })),
+  },
+  de: {
+    lead: "Wir liefern das bestätigte Modell in der vereinbarten Ausführung. Die Fotos zeigen die tatsächliche Verpackung der ventillosen Pumpen. Einlagen, Zubehör, Stückzahl je Karton und Begleitunterlagen richten sich nach der Bestellung.",
+    rows: [
+      {
+        title: "Innenverpackung",
+        paragraphs: [
+          "Produktschutz: Schaumstoff, Trenner oder andere Schutzmaterialien werden passend zum bestätigten Produktaufbau ausgewählt, um Stöße und Druck beim Transport zu mindern.",
+          "Zubehör: Kabelbäume und weiteres Zubehör entsprechen der bestätigten Konfiguration und werden getrennt vom Produkt verpackt.",
+          "Kennzeichnung: Prüfen Sie nach Erhalt Modell, Artikelnummer, Stückzahl und Angaben zur Rückverfolgbarkeit.",
+        ],
+        photos: [["Ventillose Pumpen und Kabelbäume in getrennten Schaumstofffächern", "Getrennter Schutz für Produkte und Kabelbäume"], ["Schützende Schaumstoffabdeckung über den ventillosen Pumpen im Karton", "Schaumstoffabdeckung"]],
+      },
+      {
+        title: "Außenverpackung und Begleitunterlagen",
+        paragraphs: [
+          "Schutzverpackung: Einlage und Außenkarton schützen Produkt und Zubehör. Die Anzahl pro Verpackung richtet sich nach der Bestellung.",
+          "Betriebsinformationen: Unterlagen zu Verdrahtung, Einbau und Betrieb werden entsprechend der gelieferten Ausführung und der Bestellvereinbarung bereitgestellt.",
+          "Qualitätsunterlagen: Konformitätsnachweise und Prüfberichte werden entsprechend der Projektvereinbarung bereitgestellt.",
+        ],
+        photos: [["In einer Schutzhülle verpacktes und mitgeliefertes Werksprüfprotokoll", "Beiliegendes Prüfprotokoll"], ["Materialetikett und Rückverfolgbarkeitskennzeichnung am Pumpenkarton", "Kartonkennzeichnung und Rückverfolgbarkeit"]],
+      },
+      {
+        title: "Versand und Wareneingang",
+        paragraphs: [
+          "Versand: Wir versenden gemäß bestätigtem Liefertermin und vereinbarter Versand- oder Transportart. Die Sendungsverfolgung wird nach Versand bereitgestellt.",
+          "Wareneingang: Prüfen Sie Modell, Stückzahl und Verpackung. Bei Schäden oder fehlenden Teilen bewahren Sie die Verpackung und Fotos auf und kontaktieren Sie uns zeitnah.",
+          "Abnahme: Prüfen Sie Maße, Konfiguration und Qualitätsanforderungen anhand der Bestellung oder Qualitätsvereinbarung. Geben Sie besondere Lieferanforderungen bei der Bestellung an.",
+        ],
+        photos: [["Mitarbeiter beim Prüfen und Verpacken ventilloser Pumpen", "Verpackungsarbeiten"], ["Verschlossener FOREACH-Karton mit ventillosen Pumpen für den Versand", "Verschlossen und versandbereit"]],
+      },
+    ],
+    warranty: "Garantie und Kundendienst",
+    warrantyParagraphs: [
+      "Garantiezeit: Für Pumpen gilt ab dem ersten Verkauf eine Garantie von 18 Monaten.",
+      "Garantieumfang: Die Garantie umfasst Herstellungs- und Materialfehler. Ausgeschlossen sind unsachgemäße Verwendung, nicht genehmigte Änderungen, nicht vorschriftsgemäße Installation oder Nutzung sowie normaler Verschleiß.",
+      "Rücksendungen: Kontaktieren Sie uns vor dem Versand und holen Sie eine Freigabe ein. Entfernen Sie Chemikalien und andere gefährliche Rückstände aus medienberührten Produkten. Für Verpackung, Zubehör, Kosten und Risiken gelten die Verkaufsbedingungen und die vereinbarte Rücksenderegelung. Rückgabe und Umtausch kundenspezifischer und nicht standardisierter Produkte richten sich nach den Verkaufsbedingungen.",
+    ],
+    email: "E-Mail",
+    phone: "Telefon",
+    hours: "Servicezeiten: Montag bis Freitag, 08:30–18:00 Uhr Pekinger Zeit (UTC+8).",
+    support: "Kontaktieren Sie den Kundendienst per Telefon, E-Mail, über das folgende Formular oder Ihre Vertriebsvertretung. Geben Sie Modell, Betriebsbedingungen und die wichtigsten Symptome an.",
+  },
+  it: {
+    lead: "La consegna segue il modello e la configurazione confermati. Le foto mostrano l'imballaggio effettivo della serie senza valvole. Inserti, accessori, quantità per scatola e documenti di accompagnamento dipendono dall'ordine.",
+    rows: [
+      {
+        title: "Imballaggio interno",
+        paragraphs: [
+          "Schiuma, divisori o altre protezioni sono scelti in base alla struttura del prodotto confermato per limitare urti e compressioni durante il trasporto.",
+          "Cablaggi e altri accessori rispettano la configurazione confermata e sono confezionati separatamente dal prodotto.",
+          "Al ricevimento verificare modello, codice articolo, quantità e dati di tracciabilità.",
+        ],
+        photos: [["Pompe senza valvole e cablaggi in scomparti separati di schiuma", "Protezione separata di pompe e cablaggi"], ["Coperchio in schiuma sopra le pompe senza valvole nella scatola", "Coperchio protettivo in schiuma"]],
+      },
+      {
+        title: "Imballaggio esterno e documenti di accompagnamento",
+        paragraphs: [
+          "L'inserto e la scatola esterna proteggono prodotto e accessori. La quantità per confezione segue l'ordine.",
+          "Le informazioni su cablaggio, montaggio e funzionamento sono fornite secondo la versione consegnata e quanto concordato nell'ordine.",
+          "Certificati di conformità e rapporti di controllo sono forniti secondo gli accordi di progetto.",
+        ],
+        photos: [["Rapporto di collaudo confezionato con le pompe senza valvole", "Rapporto di collaudo allegato"], ["Scheda di identificazione e marcature di tracciabilità sulla scatola", "Identificazione e tracciabilità della scatola"]],
+      },
+      {
+        title: "Spedizione e verifiche al ricevimento",
+        paragraphs: [
+          "La spedizione segue la data e il mezzo di trasporto confermati. I dati di tracciamento vengono forniti dopo la partenza.",
+          "Al ricevimento verificare modello, quantità e condizioni dell'imballaggio. In caso di danni o parti mancanti, conservare imballaggio e foto e contattarci tempestivamente.",
+          "Verificare dimensioni, configurazione e requisiti di qualità secondo l'ordine o l'accordo di qualità. Indicare eventuali esigenze particolari al momento dell'ordine.",
+        ],
+        photos: [["Addetto al controllo e all'imballaggio delle pompe senza valvole", "Operazione d'imballaggio"], ["Scatola FOREACH sigillata con pompe senza valvole, pronta per la spedizione", "Scatola chiusa pronta per la spedizione"]],
+      },
+    ],
+    warranty: "Garanzia e assistenza post-vendita",
+    warrantyParagraphs: [
+      "Le pompe sono coperte da garanzia per 18 mesi dalla data della prima vendita.",
+      "La garanzia copre difetti di fabbricazione e dei materiali. Sono esclusi uso improprio, modifiche non autorizzate, installazione o uso non conformi e normale usura.",
+      "Contattarci e ottenere l'autorizzazione prima di restituire un prodotto. Rimuovere sostanze chimiche e altri residui pericolosi dai componenti a contatto con il fluido. Imballaggio, accessori, costi e rischi seguono le condizioni di vendita e le modalità di reso concordate. Resi e sostituzioni di prodotti personalizzati o non standard sono regolati dalle condizioni di vendita.",
+    ],
+    email: "E-mail", phone: "Telefono", hours: "Assistenza dal lunedì al venerdì, 08:30–18:00 ora di Pechino (UTC+8).",
+    support: "Contatta l'assistenza per telefono, e-mail o tramite il modulo qui sotto, oppure rivolgiti al referente commerciale. Indica modello, condizioni operative e sintomi principali.",
+  },
   en: {
     lead: "Delivered in the confirmed model and configuration. The photos show actual packaging for the valveless pump series. Inserts, accessories, packing quantity and accompanying documents depend on the order.",
     rows: [
@@ -72,5 +164,5 @@ const copy: Record<RplGuideLocale, RplDeliveryCopy> = {
 };
 
 export function getRplDeliveryCopy(locale: string) {
-  return copy[locale as RplGuideLocale];
+  return copy[locale as RplDeliveryLocale];
 }

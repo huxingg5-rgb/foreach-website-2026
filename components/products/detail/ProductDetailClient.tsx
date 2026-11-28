@@ -1849,6 +1849,9 @@ export default function ProductDetailClient({
   const isDiaphragmPumpCustomerCategoryPage = customerCategoryMode === "diaphragm-pump";
   const isInstrumentCustomerCategoryPage = customerCategoryMode === "instrument-product" ||
     (customerCategoryMode === "instrument-product-zh" && configuratorLocale === "zh");
+  const instrumentCategoryCopy = isInstrumentCustomerCategoryPage && ["de", "it", "hi"].includes(fittingUiLocale)
+    ? customerCategoryUi
+    : undefined;
   const diaphragmGuideCopy = getDiaphragmPumpGuideCopy(isHindiDiaphragm ? "hi" : isItalianDiaphragm ? "it" : isGermanDiaphragm ? "de" : configuratorLocale);
   const actionDatasheet = datasheet;
   const hasResourceDownloads = configuratorLocale !== "zh";
@@ -2226,7 +2229,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
         active={active} variant={solenoidVariant} onVariant={setSolenoidVariant} externalResourceTabs /> }
     : cadAssets
       ? { kind: "cad", props: { modelId: cadAssets.viewerId, title: cadAssets.model || data.displayModel || data.slug,
-          drawingUrl: drawingPreviewUrl || undefined, headMaterial: pistonCadAssets?.headMaterial, locale: pistonPresentationLocale } }
+          drawingUrl: drawingPreviewUrl || undefined, headMaterial: pistonCadAssets?.headMaterial,
+          locale: instrumentCategoryCopy ? fittingUiLocale : pistonPresentationLocale } }
       : model3dUrl ? { kind: "file", slug: data.slug, model: data.displayModel || data.model, url: model3dUrl } : null;
   const [isCadRequestOpen, setIsCadRequestOpen] = useState(false);
   const [cadConfigurationId, setCadConfigurationId] = useState<string | null>(null);
@@ -4329,7 +4333,8 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
                     }
                   }}
                 >
-                  {isGermanProduct ? germanProductDetailText(label) : isProbeCustomerCategoryPage && (isItalianProbe || isHindiProbe) ? probeText(key === "product" ? "Drawings and documentation" : label, probePresentationLocale) : key === "product" ? fittingText(label, configuratorLocale)
+                  {instrumentCategoryCopy ? instrumentCategoryCopy[key]
+                    : isGermanProduct ? germanProductDetailText(label) : isProbeCustomerCategoryPage && (isItalianProbe || isHindiProbe) ? probeText(key === "product" ? "Drawings and documentation" : label, probePresentationLocale) : key === "product" ? fittingText(label, configuratorLocale)
                     : isTubingCustomerCategoryPage ? tubingText(label, tubingPresentationLocale)
                     : isProbeCustomerCategoryPage ? probeText(label, configuratorLocale)
                     : isDiaphragmPumpCustomerCategoryPage ? diaphragmGuideCopy.nav[key === "selection" ? 1 : 2]

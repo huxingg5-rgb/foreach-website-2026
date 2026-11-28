@@ -20,6 +20,24 @@ const copy = {
     features: "Features and selection", enlarge: "View larger image: ", tableHint: "Scroll horizontally to view the complete specifications and operating guidance.",
     headers: ["Selection item", "Specification and configuration", "Selection and operating guidance"], reading: "Further reading: ",
   },
+  de: {
+    navigation: "Produktinformationen", product: "Zeichnungen und Unterlagen", selection: "Auswahl und Einsatz", delivery: "Lieferung und Service",
+    drawing: "Produktzeichnung", drawingUnavailable: "Für dieses Modell steht keine öffentliche 2D-Zeichnung bereit. Fragen Sie beim technischen Support nach verfügbaren Zeichnungen.",
+    features: "Merkmale und Auswahl", enlarge: "Abbildung vergrößern: ", tableHint: "Scrollen Sie horizontal, um alle technischen Daten und Hinweise zu sehen.",
+    headers: ["Auswahlkriterium", "Spezifikation und Konfiguration", "Hinweise zur Auswahl und Verwendung"], reading: "Weiterführende Informationen: ",
+  },
+  it: {
+    navigation: "Sezioni del prodotto", product: "Disegni e documentazione", selection: "Scelta e utilizzo", delivery: "Consegna e assistenza",
+    drawing: "Disegno del prodotto", drawingUnavailable: "Per questo modello non è disponibile un disegno 2D pubblico. Contattate l’assistenza tecnica per verificare quali disegni sono disponibili.",
+    features: "Caratteristiche e criteri di scelta", enlarge: "Ingrandisci l’immagine: ", tableHint: "Scorrete orizzontalmente per leggere tutte le specifiche e le istruzioni d’uso.",
+    headers: ["Criterio di scelta", "Specifica e configurazione", "Indicazioni di scelta e utilizzo"], reading: "Approfondimenti: ",
+  },
+  hi: {
+    navigation: "उत्पाद जानकारी के भाग", product: "ड्रॉइंग और दस्तावेज़", selection: "चयन और उपयोग", delivery: "डिलीवरी और बिक्री के बाद की सहायता",
+    drawing: "उत्पाद की ड्रॉइंग", drawingUnavailable: "इस मॉडल की 2D ड्रॉइंग सार्वजनिक रूप से उपलब्ध नहीं है। उपलब्ध ड्रॉइंग की जानकारी के लिए तकनीकी सहायता से संपर्क करें।",
+    features: "विशेषताएँ और चयन", enlarge: "बड़ी तस्वीर देखें ", tableHint: "सभी विनिर्देश और उपयोग निर्देश देखने के लिए तालिका को दाएँ-बाएँ स्क्रॉल करें।",
+    headers: ["चयन का आधार", "विनिर्देश और कॉन्फ़िगरेशन", "चयन और संचालन की जानकारी"], reading: "और पढ़ें ",
+  },
   es: {
     navigation: "Secciones de información del producto", product: "Información del producto", selection: "Selección y uso", delivery: "Entrega y posventa",
     drawing: "Plano del producto", drawingUnavailable: "Este modelo no dispone de un plano 2D público. Consulte con soporte técnico qué planos están disponibles.",

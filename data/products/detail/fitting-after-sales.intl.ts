@@ -1,5 +1,8 @@
 import { contactZhData } from "@/data/contact-cooperation/contact.zh";
+import { contactDeData } from "@/data/contact-cooperation/contact.de";
 import { getContactIntlData } from "@/data/contact-cooperation/contact.intl";
+import { contactHiData } from "@/data/contact-cooperation/contact.hi";
+import { contactItData } from "@/data/contact-cooperation/contact.it";
 import type { ContactPageData } from "@/data/contact-cooperation";
 import { fittingLocale, type FittingLocale } from "./fitting-ui.intl";
 
@@ -128,10 +131,78 @@ const stageIndex = contactZhData.form.projectStages.indexOf("售后反馈");
 const groupIndex = contactZhData.form.productGroups.findIndex(group => group.options.includes("管路 / 接头 / 采样针"));
 const productIndex = contactZhData.form.productGroups[groupIndex].options.indexOf("管路 / 接头 / 采样针");
 
+const germanAfterSalesText: AfterSalesText = {
+  title: "Online-Anfrage an den Kundendienst",
+  description: "Hinterlassen Sie Ihre Kontaktdaten und beschreiben Sie das Problem. Wir antworten während unserer Arbeitszeiten und leiten Ihre Anfrage an die zuständige Stelle weiter.",
+  panelTitle: "Kundendienstformular",
+  submitButton: "Kundendienstanfrage senden",
+  modelLabel: "Produktmodell",
+  modelPlaceholder: "Produktmodell eingeben",
+  messageLabel: "Beschreibung des Problems",
+  messagePlaceholder: "Beschreiben Sie das Problem kurz. Sie können auch Fotos vom Einsatzort oder Unterlagen anhängen.",
+  successDescription: "Ihre Anfrage wurde übermittelt. Wir kontaktieren Sie während unserer Arbeitszeiten.",
+  closeButton: "Zum Formular zurück",
+  guideTitle: "Hinweise zur Kundendienstanfrage",
+  guideDescription: "Ergänzen Sie nach Möglichkeit die folgenden Angaben in Ihrer Beschreibung oder den Anhängen. Dadurch können wir das Problem schneller einordnen und Rückfragen reduzieren.",
+  guideItems: [
+    { title: "Produkt und Charge", description: "Prüfen Sie das vorausgefüllte Modell. Ergänzen Sie nach Möglichkeit die Chargennummer, die Bestellnummer oder ein Foto des Lieferetiketts." },
+    { title: "Fehlerbild", description: "Beschreiben Sie, wo das Problem auftritt, etwa eine Undichtigkeit, eine lockere Verbindung, eine Verstopfung oder ein Anschlussproblem. Geben Sie an, ob es sporadisch oder dauerhaft auftritt." },
+    { title: "Betriebsbedingungen", description: "Nennen Sie nach Möglichkeit das Medium, den Druck oder das Vakuum, die Temperatur, die Leitungsdaten und die Modelle der verbundenen Bauteile." },
+    { title: "Zeitpunkt und bisherige Prüfungen", description: "Trat das Problem bei der ersten Montage oder erst nach einiger Betriebszeit auf? Beschreiben Sie einen möglichen Zusammenhang mit Starts und Stopps, Schlauchwechseln oder Reinigung und nennen Sie bereits durchgeführte Prüfungen." },
+    { title: "Fotos und Anhänge", description: "Sie können Fotos des gesamten Produkts, der Anschlüsse, der betroffenen Stelle und des Etiketts sowie vorhandene Prüfprotokolle oder Zeichnungen anhängen." },
+  ],
+  guideNote: "Beschreiben Sie zunächst das wichtigste Fehlerbild. Weitere Angaben können Sie im weiteren Austausch ergänzen.",
+};
+
+const italianAfterSalesText = {
+  title: "Assistenza post-vendita online",
+  description: "Lasciate i vostri recapiti e descrivete il problema. Risponderemo durante l'orario di lavoro e vi metteremo in contatto con il personale di assistenza competente.",
+  panelTitle: "Modulo di assistenza post-vendita", submitButton: "Invia richiesta di assistenza",
+  modelLabel: "Modello del prodotto", modelPlaceholder: "Inserisci il modello del prodotto",
+  messageLabel: "Descrizione del problema", messagePlaceholder: "Descrivi brevemente il problema. Puoi anche allegare foto dell'installazione o documenti pertinenti.",
+  successDescription: "La richiesta di assistenza è stata inviata. Vi contatteremo durante l'orario di lavoro.", closeButton: "Torna al modulo",
+  guideTitle: "Come compilare la richiesta di assistenza",
+  guideDescription: "Se disponibili, aggiungete alla descrizione o agli allegati i dati seguenti. Ci aiuteranno a capire più rapidamente il problema e a ridurre le richieste di chiarimento.",
+  guideItems: [
+    { title: "Prodotto e lotto", description: "Controllate il modello già inserito. Se disponibili, aggiungete il numero di lotto, il numero d'ordine o una foto dell'etichetta di consegna." },
+    { title: "Sintomi", description: "Indicate dove si verifica il problema, per esempio perdite, allentamenti, ostruzioni o difficoltà di collegamento, e se si presenta in modo intermittente o continuo." },
+    { title: "Condizioni operative", description: "Se disponibili, indicate il fluido, la pressione o il vuoto, la temperatura, le specifiche dei tubi e i modelli dei componenti collegati." },
+    { title: "Comparsa del problema e verifiche eseguite", description: "È comparso durante il primo montaggio o dopo un periodo di utilizzo? Descrivete eventuali legami con avvii e arresti, cambi di tubi o pulizie e indicate le verifiche già eseguite." },
+    { title: "Foto e allegati", description: "Potete allegare foto del prodotto completo, degli attacchi, della zona interessata e dell'etichetta, oltre a registrazioni di prova o disegni disponibili." },
+  ],
+  guideNote: "Iniziate dai sintomi principali. Potrete aggiungere gli altri dettagli durante il seguito della richiesta.",
+};
+
+const hindiAfterSalesText: AfterSalesText = {
+  title: "बिक्री के बाद ऑनलाइन सहायता",
+  description: "अपना संपर्क विवरण दें और समस्या बताएँ। हम कार्य समय में जवाब देंगे और आपको सही सहायता टीम से जोड़ेंगे।",
+  panelTitle: "बिक्री के बाद सहायता का फ़ॉर्म", submitButton: "सहायता अनुरोध भेजें",
+  modelLabel: "उत्पाद मॉडल", modelPlaceholder: "उत्पाद मॉडल डालें",
+  messageLabel: "समस्या का विवरण", messagePlaceholder: "समस्या संक्षेप में बताएँ। साइट की फ़ोटो या संबंधित दस्तावेज़ जोड़ सकते हैं।",
+  successDescription: "आपका सहायता अनुरोध भेज दिया गया है। हम कार्य समय में संपर्क करेंगे।", closeButton: "फ़ॉर्म पर लौटें",
+  guideTitle: "सहायता फ़ॉर्म कैसे भरें",
+  guideDescription: "अगर जानकारी उपलब्ध है, तो उसे विवरण या अटैचमेंट में जोड़ें। इससे हमें समस्या समझने और कम सवाल पूछने में मदद मिलेगी।",
+  guideItems: [
+    { title: "उत्पाद और बैच", description: "पहले से भरा मॉडल जाँचें। अगर उपलब्ध हो तो बैच नंबर, ऑर्डर नंबर या डिलीवरी लेबल की फ़ोटो जोड़ें।" },
+    { title: "लक्षण", description: "बताएँ समस्या कहाँ है, जैसे रिसाव, ढीलापन, रुकावट या कनेक्शन की दिक्कत। यह भी बताएँ कि समस्या बीच-बीच में होती है या लगातार।" },
+    { title: "कार्य स्थितियाँ", description: "अगर उपलब्ध हों तो द्रव, दाब या वैक्यूम, तापमान, ट्यूब के विनिर्देश और मेल खाने वाले घटकों के मॉडल बताएँ।" },
+    { title: "समस्या का समय और जाँच", description: "क्या समस्या पहली बार लगाते समय आई या कुछ समय इस्तेमाल के बाद? स्टार्ट-स्टॉप, ट्यूब बदलने या सफ़ाई से संबंध और पहले की जाँच बताएँ।" },
+    { title: "फ़ोटो और अटैचमेंट", description: "पूरे उत्पाद, पोर्ट, प्रभावित जगह और लेबल की फ़ोटो के साथ परीक्षण रिकॉर्ड या ड्रॉइंग जोड़ सकते हैं।" },
+  ],
+  guideNote: "मुख्य लक्षणों से शुरू करें। बाकी जानकारी बाद में जोड़ सकते हैं।",
+};
+
+const localizedAfterSales = {
+  de: { source: contactDeData, text: germanAfterSalesText },
+  it: { source: contactItData, text: italianAfterSalesText },
+  hi: { source: contactHiData, text: hindiAfterSalesText },
+};
+
 export function getFittingAfterSalesFormConfig(localeValue: string, productModel: string) {
   const locale = fittingLocale(localeValue);
-  const source = locale === "zh" ? contactZhData : getContactIntlData(locale);
-  const text = FITTING_AFTER_SALES_TEXT[locale];
+  const localized = localeValue === "de" || localeValue === "it" || localeValue === "hi" ? localizedAfterSales[localeValue] : undefined;
+  const source = localized?.source ?? (locale === "zh" ? contactZhData : getContactIntlData(locale));
+  const text = localized?.text ?? FITTING_AFTER_SALES_TEXT[locale];
   const data: ContactPageData = {
     ...source,
     form: {

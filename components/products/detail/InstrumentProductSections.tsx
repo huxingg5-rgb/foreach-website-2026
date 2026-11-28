@@ -11,7 +11,8 @@ import figureSizes from "@/data/products/detail/instrument-guide-figures.generat
 import rplFigureSizes from "@/data/products/detail/rpl-guide-figures.intl.generated.json";
 import instrumentFigureSizes from "@/data/products/detail/instrument-guide-figures.intl.generated.json";
 import { getLocalizedRplGuide } from "@/data/products/detail/rpl-product-guides.intl";
-import { getLocalizedInstrumentGuide, type InstrumentGuideLocale } from "@/data/products/detail/instrument-product-guides.intl";
+import { getLocalizedInstrumentGuide } from "@/data/products/detail/instrument-product-guides.intl";
+import type { InstrumentDeliveryLocale } from "@/data/products/detail/instrument-delivery.intl";
 import { getInstrumentRatioCopy } from "@/data/products/detail/instrument-guide-locales/figures";
 import { getRplGuideUi } from "@/data/products/detail/rpl-guide-ui.intl";
 import deliveryPhotoSets from "@/data/products/detail/instrument-delivery-photos.zh.json";
@@ -218,7 +219,7 @@ export function getInstrumentProductSections(slug: string, locale = "zh") {
           : <InstrumentProductSelectionContent guide={localizedGuide} locale={locale} />,
         delivery: localizedGuide.family === "rpl" || localizedGuide.family === "drpl"
           ? <RplProductDeliveryContent guide={localizedGuide} locale={locale} />
-          : <InstrumentLocalizedDeliveryContent guide={localizedGuide} locale={locale as InstrumentGuideLocale} />,
+          : <InstrumentLocalizedDeliveryContent guide={localizedGuide} locale={locale as InstrumentDeliveryLocale} />,
       },
     };
   }

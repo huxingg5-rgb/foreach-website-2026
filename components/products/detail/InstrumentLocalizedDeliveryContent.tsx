@@ -1,14 +1,13 @@
 import type { InstrumentProductGuide } from "@/data/products/detail/instrument-product-guides.zh";
 import { instrumentDetailProfiles } from "@/data/products/detail/instrument-detail-content.zh";
-import { getInstrumentDeliveryCommon, getInstrumentDeliveryPhotos } from "@/data/products/detail/instrument-delivery.intl";
+import { getInstrumentDeliveryCommon, getInstrumentDeliveryPhotos, type InstrumentDeliveryLocale } from "@/data/products/detail/instrument-delivery.intl";
 import { getRplDeliveryCopy } from "@/data/products/detail/rpl-product-delivery.intl";
 import { getRplGuideUi } from "@/data/products/detail/rpl-guide-ui.intl";
-import type { InstrumentGuideLocale } from "@/data/products/detail/instrument-product-guides.intl";
 import { siteFooterData } from "@/data/site-footer";
 import InstrumentProductAfterSalesForm from "./InstrumentProductAfterSalesForm";
 import styles from "./EaPumpDetailContent.module.css";
 
-export default function InstrumentLocalizedDeliveryContent({ guide, locale }: { guide: InstrumentProductGuide; locale: InstrumentGuideLocale }) {
+export default function InstrumentLocalizedDeliveryContent({ guide, locale }: { guide: InstrumentProductGuide; locale: InstrumentDeliveryLocale }) {
   const photos = getInstrumentDeliveryPhotos(guide.slug, guide.family, locale);
   const support = getRplDeliveryCopy(locale);
   if (!photos || !support) return null;

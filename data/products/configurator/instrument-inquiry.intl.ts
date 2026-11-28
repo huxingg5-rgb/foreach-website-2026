@@ -1,3 +1,5 @@
+import { getCadRequestCopy } from "@/data/products/detail/cad-request";
+
 const zh = {
   configure: "基础选型", configuration: "选型配置", description: "选择产品规格，保存配置用于询价。",
   confirm: "确认选型", close: "关闭基础选型", requirements: "补充需求（可选）",
@@ -263,5 +265,104 @@ const ru: Record<Key, string> = {
   smtp2Note: "Объём фиксирован: 1000 μL. Подберите адаптер по глубине сосуда и наконечнику. Для cLLD и hLLD нужны проводящие наконечники.",
   smtp4Note: "Проверьте герметичность и ход установки и сброса наконечника. Интегратор должен согласовать привод и обнаружение.",
 };
-const copy: Record<string, Record<Key, string>> = { zh, en, es, fr, ko, ru };
+const de: Record<Key, string> = {
+  configure: "Grundkonfiguration", configuration: "Konfiguration", description: "Wählen Sie die Produktspezifikationen und speichern Sie die Konfiguration für Ihre Anfrage.",
+  confirm: "Auswahl bestätigen", close: "Grundkonfiguration schließen", requirements: "Weitere Anforderungen (optional)",
+  placeholder: "Geben Sie Arbeits- oder Reinigungsflüssigkeiten, Artikelnummern der Schläuche oder Pipettenspitzen, Arbeitsvolumen, Einbauraum oder weitere Einsatzanforderungen an.",
+  pending: "Noch zu bestätigen", unsure: "Auswahlhilfe anfragen", none: "Nicht erforderlich",
+  notice: "Referenzmodelle und Produktspezifikationen werden vor der Angebotserstellung geprüft. Sie können unterschiedliche Konfigurationen für separate Anfragen speichern.",
+  quantityError: "Geben Sie eine ganze Zahl von 1 bis 1.000.000 ein.", invalid: "Wählen Sie eine gültige Option aus.",
+  range: "Absolutdruckbereich", tubeOd: "Außendurchmesser des transparenten Schlauchs", capacity: "Nennvolumen", adapter: "Spitzenadapter",
+  cable: "Kabel (eines pro Gerät)", pullup: "Pull-up-Widerstände am Bus", communication: "Kommunikationsschnittstelle", lld: "Flüssigkeitsstanderkennung", cover: "Schutzabdeckung",
+  noPullup: "Standardmäßig ohne Pull-up-Widerstände", onboard: "Pull-up-Widerstände erforderlich (Sonderausführung prüfen)",
+  pLLD: "Druckbasierte pLLD", cLLD: "Kapazitive cLLD", hLLD: "Hybride hLLD",
+  side: "Seitliche Montage SMTP2-CK · 729003", rear: "Rückseitige Montage SMTP2-BK · 729006",
+  port: "Flüssigkeitsanschluss", materials: "Medienberührte Werkstoffe", voltage: "Spannungsversorgung", protocol: "Schnittstelle und Protokoll", structure: "Bauform", vertical: "Vertikale Ausführung V",
+  pdmType: "Drucksensor", abdType: "Luftblasendetektor", smtpType: "Pipettierpumpe",
+  syringeType: "Spritzenpumpe", syringeConfigure: "Individuelle Konfiguration", syringeClose: "Individuelle Konfiguration schließen",
+  syringeCapacity: "Spritzenvolumen", syringeStroke: "Hub", syringeChannels: "Anzahl der Kanäle", syringeValve: "Ventilausführung",
+  valveSeat: "Ventilsitzwerkstoff", valveDiaphragm: "Werkstoff der Ventilmembran", valveThread: "Ventilanschlussgewinde",
+  syringeDrive: "Antriebsausführung", withDrive: "Mit Antrieb", withoutDrive: "Ohne Antrieb",
+  rotaryNonDistributing: "Drehschaltventil mit 3 Anschlüssen (ohne Verteilfunktion)", rotary3: "Drehverteilventil mit 3 Anschlüssen", rotary6: "Drehverteilventil mit 6 Anschlüssen", rotary9: "Drehverteilventil mit 9 Anschlüssen",
+  standardPumpOrder: "Bestellmodell der Pumpe", solenoid2: "Magnetventil mit 2 Anschlüssen", solenoid3: "Magnetventil mit 3 Anschlüssen",
+  solenoidDispensing3: "Magnetventil mit 3 Anschlüssen (zur Dosierung)", solenoidNonDispensing2: "Magnetventil mit 2 Anschlüssen (ohne Dosierfunktion)",
+  syringeNote: "Die Artikelnummern entsprechen der Bestelltabelle der Pumpe. Nicht aufgeführte Kombinationen erfordern eine Bestätigung.",
+  hmd6Note: "Spritzen mit 10 mL und 25 mL sind nur für Einkanalgeräte verfügbar. Volumenkombinationen bei mehrkanaligen Geräten und Sonderwünsche müssen bestätigt werden.",
+  syringePlaceholder: "Geben Sie Arbeitsflüssigkeit, Ansaug- und Abgabewege, Reinigungsanforderungen, Volumen pro Kanal und Einbauraum an.",
+  pdmNote: "Der Druckbereich bezieht sich auf Absolutdruck. Die spezifizierte untere Messgrenze beträgt 10 kPa. Wählen Sie das Modell passend zum benötigten Messbereich.",
+  abdNote: "Wählen Sie die Schlauchklemme nach dem Außendurchmesser des transparenten Schlauchs. Prüfen Sie den verwendeten Schlauch, die Luftblasengröße und die Erkennungsleistung nach dem Einbau.",
+  smtp2Note: "Das Nennvolumen beträgt fest 1000 μL. Wählen Sie den Adapter passend zur Gefäßtiefe und zur Pipettenspitze. cLLD und hLLD erfordern leitfähige Spitzen.",
+  smtp4Note: "Prüfen Sie Dichtheit sowie Aufsteck- und Abwurfweg von Adapter und Spitze. Antriebselektronik und Detektion sind bei der Geräteintegration zu bestätigen.",
+};
+const it: Record<Key, string> = {
+  configure: "Scelta di base", configuration: "configurazione", description: "Selezionate le specifiche del prodotto e salvate la configurazione per la richiesta.",
+  confirm: "Conferma selezione", close: "Chiudi la scelta di base", requirements: "Altri requisiti (facoltativo)",
+  placeholder: "Indicate liquidi, detergenti, codici di tubi o puntali, volumi di lavoro, spazio di montaggio e altri requisiti operativi.",
+  pending: "Da confermare", unsure: "Richiedo assistenza nella scelta", none: "Non necessario",
+  notice: "I modelli di riferimento e le specifiche del prodotto vengono verificati prima del preventivo. Salvate configurazioni diverse per richieste separate.",
+  quantityError: "Inserite una quantità intera da 1 a 1.000.000.", invalid: "Selezionate opzioni valide.",
+  range: "Intervallo di pressione assoluta", tubeOd: "Diametro esterno del tubo trasparente", capacity: "Capacità nominale", adapter: "Adattatore per puntali",
+  cable: "Cavo (uno per unità)", pullup: "Resistenze di pull-up del bus", communication: "Interfaccia di comunicazione", lld: "Rilevamento del livello del liquido", cover: "Copertura protettiva",
+  noPullup: "Configurazione standard senza resistenze di pull-up", onboard: "Resistenze di pull-up necessarie (configurazione da verificare)",
+  pLLD: "pLLD a pressione", cLLD: "cLLD capacitivo", hLLD: "hLLD ibrido",
+  side: "Montaggio laterale SMTP2-CK · 729003", rear: "Montaggio posteriore SMTP2-BK · 729006",
+  port: "Attacco fluidico", materials: "Materiali a contatto con il fluido", voltage: "Alimentazione", protocol: "Interfaccia e protocollo", structure: "Struttura", vertical: "Versione verticale V",
+  pdmType: "sensore di pressione", abdType: "rilevatore di bolle d'aria", smtpType: "pompa per pipettaggio",
+  syringeType: "pompa a siringa", syringeConfigure: "Configurazione personalizzata", syringeClose: "Chiudi la configurazione personalizzata",
+  syringeCapacity: "Capacità della siringa", syringeStroke: "Corsa", syringeChannels: "Numero di canali", syringeValve: "Configurazione della valvola",
+  valveSeat: "Materiale della sede della valvola", valveDiaphragm: "Materiale della membrana della valvola", valveThread: "Filettatura dell'attacco della valvola",
+  syringeDrive: "Configurazione dell'azionamento", withDrive: "Con azionamento", withoutDrive: "Senza azionamento",
+  rotaryNonDistributing: "Valvola rotativa a 3 attacchi senza distribuzione", rotary3: "Valvola rotativa di distribuzione a 3 attacchi",
+  rotary6: "Valvola rotativa di distribuzione a 6 attacchi", rotary9: "Valvola rotativa di distribuzione a 9 attacchi",
+  standardPumpOrder: "Modello della pompa da ordinare", solenoid2: "Elettrovalvola a 2 attacchi", solenoid3: "Elettrovalvola a 3 attacchi",
+  solenoidDispensing3: "Elettrovalvola a 3 attacchi per l'erogazione", solenoidNonDispensing2: "Elettrovalvola a 2 attacchi senza funzione di erogazione",
+  syringeNote: "I codici articolo seguono la tabella di ordinazione della pompa. Le combinazioni assenti dalla tabella vanno confermate.",
+  hmd6Note: "Le siringhe da 10 mL e 25 mL sono disponibili solo sulle unità monocanale. Verificate le combinazioni di capacità multicanale e le richieste di personalizzazione.",
+  syringePlaceholder: "Indicate il liquido di lavoro, i percorsi di aspirazione ed erogazione, i requisiti di lavaggio, la capacità per canale e lo spazio di montaggio.",
+  pdmNote: "La pressione è assoluta. Il limite inferiore di misura specificato è di 10 kPa. Scegliete il modello in base all'intervallo di misura richiesto.",
+  abdNote: "Scegliete il fermo in base al diametro esterno del tubo trasparente. Verificate il tubo effettivo, le dimensioni delle bolle e il rilevamento dopo l'installazione.",
+  smtp2Note: "La capacità è fissa a 1000 μL. Scegliete l'adattatore in base alla profondità del recipiente e all'accoppiamento del puntale. Per cLLD e hLLD servono puntali conduttivi.",
+  smtp4Note: "Verificate tenuta e corsa di innesto ed espulsione dell'adattatore e del puntale. L'integratore deve confermare l'elettronica di azionamento e il rilevamento.",
+};
+const hi: Record<Key, string> = {
+  configure: "बुनियादी चयन", configuration: "कॉन्फ़िगरेशन", description: "उत्पाद के विनिर्देश चुनें और पूछताछ के लिए कॉन्फ़िगरेशन सहेजें।",
+  confirm: "चयन की पुष्टि करें", close: "बुनियादी चयन बंद करें", requirements: "अतिरिक्त ज़रूरतें (वैकल्पिक)",
+  placeholder: "द्रव, सफ़ाई एजेंट, ट्यूब या टिप का पार्ट नंबर, कार्य आयतन, इंस्टॉलेशन की जगह या अन्य संचालन ज़रूरतें लिखें।",
+  pending: "पुष्टि बाकी", unsure: "चयन में सहायता चाहिए", none: "ज़रूरत नहीं",
+  notice: "कीमत बताने से पहले संदर्भ मॉडल और उत्पाद के विनिर्देशों की जाँच की जाएगी। अलग-अलग पूछताछ के लिए कॉन्फ़िगरेशन अलग सहेजें।",
+  quantityError: "1 से 1,000,000 तक की पूर्णांक मात्रा डालें।", invalid: "मान्य विनिर्देश विकल्प चुनें।",
+  range: "दाब रेंज (निरपेक्ष)", tubeOd: "पारदर्शी ट्यूब का बाहरी व्यास", capacity: "नाममात्र क्षमता", adapter: "टिप अडैप्टर",
+  cable: "केबल (प्रति इकाई एक)", pullup: "बस पुल-अप रेज़िस्टर", communication: "संचार इंटरफ़ेस", lld: "द्रव स्तर की पहचान", cover: "सुरक्षा कवर",
+  noPullup: "डिफ़ॉल्ट रूप से पुल-अप रेज़िस्टर नहीं", onboard: "पुल-अप रेज़िस्टर आवश्यक हैं (कस्टम विकल्प की पुष्टि करें)",
+  pLLD: "दाब आधारित pLLD", cLLD: "कैपेसिटिव cLLD", hLLD: "हाइब्रिड hLLD",
+  side: "साइड माउंट SMTP2-CK · 729003", rear: "रियर माउंट SMTP2-BK · 729006",
+  port: "द्रव कनेक्शन", materials: "द्रव के संपर्क वाली सामग्री", voltage: "विद्युत आपूर्ति", protocol: "इंटरफ़ेस और प्रोटोकॉल", structure: "बनावट", vertical: "वर्टिकल V",
+  pdmType: "दाब सेंसर", abdType: "हवा के बुलबुले पहचानने वाला सेंसर", smtpType: "पिपेटिंग पंप",
+  syringeType: "सिरिंज पंप", syringeConfigure: "कस्टम कॉन्फ़िगरेशन", syringeClose: "कस्टम कॉन्फ़िगरेशन बंद करें",
+  syringeCapacity: "सिरिंज की क्षमता", syringeStroke: "स्ट्रोक", syringeChannels: "चैनलों की संख्या", syringeValve: "वाल्व कॉन्फ़िगरेशन",
+  valveSeat: "वाल्व सीट की सामग्री", valveDiaphragm: "वाल्व डायफ्राम की सामग्री", valveThread: "वाल्व कनेक्शन का थ्रेड",
+  syringeDrive: "ड्राइव कॉन्फ़िगरेशन", withDrive: "ड्राइव के साथ", withoutDrive: "ड्राइव के बिना",
+  rotaryNonDistributing: "3-पोर्ट नॉन-डिस्ट्रिब्यूटिंग रोटरी वाल्व", rotary3: "3-पोर्ट डिस्ट्रिब्यूटिंग रोटरी वाल्व",
+  rotary6: "6-पोर्ट डिस्ट्रिब्यूटिंग रोटरी वाल्व", rotary9: "9-पोर्ट डिस्ट्रिब्यूटिंग रोटरी वाल्व",
+  standardPumpOrder: "पूरे पंप का ऑर्डर मॉडल", solenoid2: "2-पोर्ट सोलनॉइड वाल्व", solenoid3: "3-पोर्ट सोलनॉइड वाल्व",
+  solenoidDispensing3: "3-पोर्ट डिस्पेंसिंग सोलनॉइड वाल्व", solenoidNonDispensing2: "2-पोर्ट नॉन-डिस्पेंसिंग सोलनॉइड वाल्व",
+  syringeNote: "उत्पाद कोड संबंधित पूरे पंप की ऑर्डर तालिका से आता है। सूची में न दिए संयोजन की पुष्टि कराएँ।",
+  hmd6Note: "10 mL और 25 mL सिरिंज सिर्फ़ एक चैनल के लिए हैं। मल्टीचैनल क्षमताओं और गैर-मानक संयोजनों की पुष्टि कराएँ।",
+  syringePlaceholder: "कार्य द्रव, द्रव खींचने और छोड़ने के पथ, धुलाई की ज़रूरतें, हर चैनल की क्षमता और इंस्टॉलेशन की जगह लिखें।",
+  pdmNote: "रेंज निरपेक्ष दाब की है। माप की निर्दिष्ट निचली सीमा 10 kPa है। वास्तविक दाब रेंज के अनुसार मॉडल चुनें।",
+  abdNote: "क्लैंप का आकार पारदर्शी ट्यूब के बाहर के व्यास के अनुसार चुनें। इंस्टॉलेशन के बाद इस्तेमाल हो रही ट्यूब, बुलबुले के आकार और पहचान के प्रदर्शन की पुष्टि करें।",
+  smtp2Note: "क्षमता 1000 μL तय है। कंटेनर की गहराई और टिप की ज़रूरत के अनुसार अडैप्टर चुनें। cLLD और hLLD के लिए चालक टिप चाहिए।",
+  smtp4Note: "अडैप्टर और टिप की सील तथा लगाने और हटाने का स्ट्रोक जाँचें। उपकरण में इसे जोड़ने वाली टीम को ड्राइव इलेक्ट्रॉनिक्स और पहचान विधि की पुष्टि करनी होगी।",
+};
+
+const copy: Record<string, Record<Key, string>> = { zh, en, es, fr, ko, ru, de, it, hi };
 export const instrumentInquiryText = (key: Key, locale = "zh") => (copy[locale === "zh-CN" ? "zh" : locale] || en)[key];
+
+const localizedQuantity: Record<string, string | undefined> = {
+  de: "Anfragemenge",
+  it: "Quantità richiesta",
+  hi: "पूछताछ की मात्रा",
+};
+
+export const instrumentInquiryQuantityLabel = (locale: string) =>
+  localizedQuantity[locale] ?? getCadRequestCopy(locale).quantity;

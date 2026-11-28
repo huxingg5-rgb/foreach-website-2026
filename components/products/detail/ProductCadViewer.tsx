@@ -25,6 +25,9 @@ type CadViewerProps = {
 const loadingCopy = {
   zh: ["3D 模型加载中", "3D 模型加载失败，请重试。", "重新加载"],
   en: ["Loading 3D model", "The 3D model could not load. Please try again.", "Retry"],
+  de: ["3D-Modell wird geladen", "Das 3D-Modell konnte nicht geladen werden. Versuchen Sie es erneut.", "Erneut versuchen"],
+  it: ["Caricamento del modello 3D", "Impossibile caricare il modello 3D. Riprova.", "Riprova"],
+  hi: ["3D मॉडल लोड हो रहा है", "3D मॉडल लोड नहीं हो सका। फिर कोशिश करें।", "फिर कोशिश करें"],
   es: ["Cargando modelo 3D", "No se pudo cargar el modelo 3D. Inténtelo de nuevo.", "Reintentar"],
   fr: ["Chargement du modèle 3D", "Le modèle 3D n’a pas pu être chargé. Veuillez réessayer.", "Réessayer"],
   ko: ["3D 모델 로딩 중", "3D 모델을 불러오지 못했습니다. 다시 시도해 주세요.", "다시 시도"],
@@ -104,7 +107,7 @@ function CadFrame({ modelId, title, locale, active, drawingUrl, productFamily, h
     label: productSelection.label, value: productSelection.value, options: productSelection.options,
   }))}` : "";
   return <iframe ref={frame} key={viewerModelId}
-    src={`/models/valves/6010/viewer.html?v=abd-choices-20261117-1&loader=parent&model=${encodeURIComponent(viewerModelId)}&lang=${encodeURIComponent(locale)}${selectionQuery}${externalResourceTabs ? "&resources=external" : ""}${placeholder ? "&placeholder=true" : ""}${drawingUrl ? `&drawing=${encodeURIComponent(drawingUrl)}` : ""}${initialMate ? `&mate=${encodeURIComponent(initialMate)}` : ""}${headMaterial ? `&head=${headMaterial}` : ""}${fittingFinish ? `&finish=${fittingFinish}` : ""}${fittingProduct ? `&product=${encodeURIComponent(fittingProduct)}` : ""}${initialAccessory ? `&accessory=${encodeURIComponent(initialAccessory)}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
+    src={`/models/valves/6010/viewer.html?v=cad-viewer-locales-20261128-1&loader=parent&model=${encodeURIComponent(viewerModelId)}&lang=${encodeURIComponent(locale)}${selectionQuery}${externalResourceTabs ? "&resources=external" : ""}${placeholder ? "&placeholder=true" : ""}${drawingUrl ? `&drawing=${encodeURIComponent(drawingUrl)}` : ""}${initialMate ? `&mate=${encodeURIComponent(initialMate)}` : ""}${headMaterial ? `&head=${headMaterial}` : ""}${fittingFinish ? `&finish=${fittingFinish}` : ""}${fittingProduct ? `&product=${encodeURIComponent(fittingProduct)}` : ""}${initialAccessory ? `&accessory=${encodeURIComponent(initialAccessory)}` : ""}${attempt ? `&retry=${attempt}` : ""}`}
     onError={() => onState?.("error")}
     title={`${title} 3D`} allow="fullscreen"
     style={{ display: "block", width: "100%", height: "min(680px, 75svh)", minHeight: isQuickConnect || !productFamily ? 640 : 440, border: 0, borderRadius: 12 }} />;

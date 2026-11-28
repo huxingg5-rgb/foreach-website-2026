@@ -25,7 +25,7 @@
   "Open when de-energized and closed when energized": "बिजली बंद होने पर खुल जाता है एवं बिजली चालू होने पर बंद हो जाता है।",
   "For branches that must remain open on power loss. Do not reuse normally closed shutdown logic.": "ऐसी शाखाएँ जो बिजली न होने पर भी खुली रहनी चाहिए; सामान्य रूप से बंद होने वाली बंदन प्रणालियों का पुनः उपयोग न करें।",
   "Three-way": "तीन-वे।",
-  "1 = NC，2 = COM，3 = NO": "1 = NC，2 = COM，3 = NO",
+  "1 = NC，2 = COM，3 = NO": "1 = NC, 2 = COM, 3 = NO",
   "COM connects to NO without power and to NC with the coil energized. Check the markings on the valve against its flow diagram.": "COM बिजली बंद होने पर भी NO से जुड़ा रहता है; जबकि कॉइल चालू होने पर NC से जुड़ जाता है। वाल्व पर दिए गए चिन्हों की जाँच उसके प्रवाह आरेख के साथ करें।",
   "Cycle timing": "चक्रीय समय-नियंत्रण।",
   "Validate standard and power-saving circuits separately": "मानक एवं ऊर्जा-बचत वाले परिपथों की अलग-अलग जाँच करें।",

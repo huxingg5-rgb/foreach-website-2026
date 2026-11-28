@@ -1,4 +1,9 @@
 const copy = {
+  hi: {
+    selection: "चयन और उपयोग", configuration: "कॉन्फ़िगरेशन चुनना", integration: "इंस्टॉलेशन और एकीकरण",
+    item: "चयन का मानदंड", model: "मॉडल", checks: "विनिर्देश और जाँच", symptom: "लक्षण", action: "क्या जाँचें",
+    drawing: "2D ड्रॉइंग (PDF)", tubeOd: "ट्यूब का बाहरी व्यास", closed: "सामान्यतः बंद", open: "सामान्यतः खुला", enlarge: "पूरे आकार में चित्र देखें",
+  },
   zh: {
     selection: "选型与使用", configuration: "选型与配置", integration: "装机与接入",
     item: "选型项目", model: "型号", checks: "配置与确认", symptom: "现象", action: "检查与处理",
@@ -8,6 +13,16 @@ const copy = {
     selection: "Selection and use", configuration: "Selecting a configuration", integration: "Installation and integration",
     item: "Selection criterion", model: "Model", checks: "Specifications and checks", symptom: "Symptom", action: "What to check",
     drawing: "2D drawing (PDF)", tubeOd: "Tubing OD", closed: "Normally closed", open: "Normally open", enlarge: "View full-size image",
+  },
+  de: {
+    selection: "Auswahl und Einsatz", configuration: "Konfiguration auswählen", integration: "Montage und Integration",
+    item: "Auswahlkriterium", model: "Modell", checks: "Spezifikationen und Prüfungen", symptom: "Fehlerbild", action: "Prüfung und Abhilfe",
+    drawing: "2D-Zeichnung (PDF)", tubeOd: "Schlauchaußendurchmesser", closed: "Normal geschlossen", open: "Normal offen", enlarge: "Abbildung in voller Größe anzeigen",
+  },
+  it: {
+    selection: "Scelta e utilizzo", configuration: "Scelta della configurazione", integration: "Montaggio e integrazione",
+    item: "Criterio di scelta", model: "Modello", checks: "Specifiche e verifiche", symptom: "Problema", action: "Che cosa controllare",
+    drawing: "Disegno 2D (PDF)", tubeOd: "Diametro esterno del tubo", closed: "Normalmente chiusa", open: "Normalmente aperta", enlarge: "Visualizza l'immagine a grandezza intera",
   },
   es: {
     selection: "Selección y uso", configuration: "Elección de la configuración", integration: "Montaje e integración",

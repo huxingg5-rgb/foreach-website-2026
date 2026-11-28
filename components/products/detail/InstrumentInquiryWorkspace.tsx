@@ -8,10 +8,9 @@ import { getPipettingModelPath } from "@/data/products/selection/pipetting-pump-
 import { useSelectionCart } from "@/components/selection-cart/SelectionCartProvider";
 import { useInstrumentInquiries, type SavedInstrumentInquiry } from "@/data/products/configurator/instrument-inquiry-configurations";
 import { getInstrumentInquiryDefaults, instrumentInquiryCartId, instrumentInquiryProductName, instrumentInquiryRows, resolveInstrumentInquiry, type InstrumentInquiryConfiguration, type InstrumentInquiryFamily } from "@/data/products/configurator/instrument-inquiry";
-import { instrumentInquiryText as text } from "@/data/products/configurator/instrument-inquiry.intl";
+import { instrumentInquiryQuantityLabel, instrumentInquiryText as text } from "@/data/products/configurator/instrument-inquiry.intl";
 import { isSyringePumpInquiryFamily } from "@/data/products/configurator/syringe-pump-inquiry";
 import { getSelectionWorkspaceCopy } from "@/data/products/detail/selection-workspace-copy";
-import { getCadRequestCopy } from "@/data/products/detail/cad-request";
 import { getProductDetailResourceCopy, type ProductDetailResourceCopyLocale } from "@/data/products/detail/product-detail-resources";
 import { normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import DetailSelectionWorkspace from "./DetailSelectionWorkspace";
@@ -67,7 +66,7 @@ export default function InstrumentInquiryWorkspace({ slug, family, locale, detai
     }
   }
   const configurations = collection.configurations.map(saved => ({ id: saved.id, model: resolveInstrumentInquiry(saved.configuration).model,
-    rows: [...instrumentInquiryRows(saved.configuration, locale), [getCadRequestCopy(locale).quantity, String(saved.quantity)] as [string, string]],
+    rows: [...instrumentInquiryRows(saved.configuration, locale), [instrumentInquiryQuantityLabel(locale), String(saved.quantity)] as [string, string]],
     productType: productName, productSeries: family, drawingTypes: saved.drawingTypes }));
   const reference = getInstrumentInquiryDefaults(slug);
   return <div data-instrument-inquiry-workspace={family}>

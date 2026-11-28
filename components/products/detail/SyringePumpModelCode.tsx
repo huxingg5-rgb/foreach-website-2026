@@ -20,6 +20,24 @@ const copy = {
     solenoid: "solenoid-valve syringe pump", rotary: "rotary-valve syringe pump", noSuffix: "No suffix",
     rotaryNote: (valve: string, pump: string) => `The selection table uses ${valve} for the 3-port non-distributing valve. The pump order list also includes ${pump}.`,
   },
+  de: {
+    heading: "Modellcode entschlüsseln", example: "Bestellbeispiel", productCode: "Artikelnummer",
+    segment: "Codeabschnitt", meaning: "Bedeutung", pumpSeries: "Pumpenserie", valveSeries: "Ventilserie",
+    solenoid: "Spritzenpumpe mit Magnetventil", rotary: "Spritzenpumpe mit Drehventil", noSuffix: "Ohne Suffix",
+    rotaryNote: (valve: string, pump: string) => `In der Auswahltabelle steht ${valve} für das Ventil mit 3 Anschlüssen ohne Verteilerfunktion. Die Bestellliste der Pumpe führt zusätzlich ${pump} auf.`,
+  },
+  it: {
+    heading: "Lettura del codice modello", example: "Esempio di ordine", productCode: "Codice articolo",
+    segment: "Segmento del codice", meaning: "Significato", pumpSeries: "Serie della pompa", valveSeries: "Serie della valvola",
+    solenoid: "pompa a siringa con elettrovalvola", rotary: "pompa a siringa con valvola rotativa", noSuffix: "Senza suffisso",
+    rotaryNote: (valve: string, pump: string) => `Nella tabella di selezione, ${valve} identifica la valvola a 3 attacchi senza funzione di distribuzione. L'elenco per l'ordine della pompa include anche ${pump}.`,
+  },
+  hi: {
+    heading: "मॉडल कोड कैसे पढ़ें", example: "ऑर्डर का उदाहरण", productCode: "पार्ट नंबर",
+    segment: "कोड का हिस्सा", meaning: "अर्थ", pumpSeries: "पंप सीरीज़", valveSeries: "वाल्व सीरीज़",
+    solenoid: "सोलनॉइड वाल्व वाला सिरिंज पंप", rotary: "रोटरी वाल्व वाला सिरिंज पंप", noSuffix: "कोई प्रत्यय नहीं",
+    rotaryNote: (valve: string, pump: string) => `चयन तालिका में वितरण सुविधा के बिना 3-पोर्ट वाले वाल्व का कोड ${valve} है। पंप की ऑर्डर सूची में ${pump} भी शामिल है।`,
+  },
   es: {
     heading: "Cómo leer el código del modelo", example: "Ejemplo de pedido", productCode: "Referencia",
     segment: "Parte del código", meaning: "Significado", pumpSeries: "Serie de la bomba", valveSeries: "Serie de la válvula",

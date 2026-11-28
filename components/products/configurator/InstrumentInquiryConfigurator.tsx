@@ -3,10 +3,9 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { getInstrumentInquiryDefaults, getInstrumentInquiryFields, instrumentInquiryNote, instrumentInquiryProductName, instrumentInquiryRows, normalizeInstrumentInquiry, resolveInstrumentInquiry, validateInstrumentInquiry, type InstrumentInquiryConfiguration } from "@/data/products/configurator/instrument-inquiry";
 import type { SavedInstrumentInquiry } from "@/data/products/configurator/instrument-inquiry-configurations";
-import { instrumentInquiryText as text } from "@/data/products/configurator/instrument-inquiry.intl";
+import { instrumentInquiryQuantityLabel, instrumentInquiryText as text } from "@/data/products/configurator/instrument-inquiry.intl";
 import { isSyringePumpInquiryFamily } from "@/data/products/configurator/syringe-pump-inquiry";
 import { getSelectionWorkspaceCopy } from "@/data/products/detail/selection-workspace-copy";
-import { getCadRequestCopy } from "@/data/products/detail/cad-request";
 import { normalizeDrawingTypes, type CadDrawingType } from "@/data/products/detail/drawing-requirements";
 import ConfiguratorDialogFrame from "./ConfiguratorDialogFrame";
 import ConfiguratorButton from "./ConfiguratorButton";
@@ -27,6 +26,7 @@ export default function InstrumentInquiryConfigurator({ slug, locale, initial, l
   const [error, setError] = useState("");
   const dialogRef = useRef<HTMLElement>(null), closeRef = useRef<HTMLButtonElement>(null), closeCallback = useRef(onClose);
   const prefix = useId(), copy = getSelectionWorkspaceCopy(locale);
+  const quantityLabel = instrumentInquiryQuantityLabel(locale);
   const t = (key: Parameters<typeof text>[0]) => text(key, locale);
   const name = instrumentInquiryProductName(configuration.family, locale);
   const syringePump = isSyringePumpInquiryFamily(configuration.family);
@@ -76,7 +76,7 @@ export default function InstrumentInquiryConfigurator({ slug, locale, initial, l
         <div className={shared.summaryTitle}><span>{label}</span><strong>{resolveInstrumentInquiry(configuration).model}</strong><p className={fitting.productName}>{name}</p></div>
         <div className={`${shared.summaryTable} ${fitting.summaryTable}`} aria-live="polite">
           {instrumentInquiryRows(configuration, locale).map(([label, value]) => <div className={shared.summaryRow} key={label}><span>{label}</span><b>{value}</b></div>)}
-          <div className={shared.summaryRow}><span>{getCadRequestCopy(locale).quantity}</span><b>{quantity || t("pending")}</b></div>
+          <div className={shared.summaryRow}><span>{quantityLabel}</span><b>{quantity || t("pending")}</b></div>
         </div>
       </aside>
       <section className={`${shared.config} ${fitting.config}`}>
@@ -90,7 +90,7 @@ export default function InstrumentInquiryConfigurator({ slug, locale, initial, l
                 {field.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
               </select>
             </div>)}
-            <div className={form.field}><label htmlFor={`${prefix}-quantity`}>{getCadRequestCopy(locale).quantity}</label>
+            <div className={form.field}><label htmlFor={`${prefix}-quantity`}>{quantityLabel}</label>
               <input id={`${prefix}-quantity`} type="number" min={1} max={1000000} step={1} inputMode="numeric" value={quantity} onChange={event => { setQuantity(event.target.value); setError(""); }} /></div>
           </div><p className={fitting.selectionNote}>{instrumentInquiryNote(configuration.family, locale)}</p></div></fieldset>
           <fieldset className={shared.optionGroup}><legend><label htmlFor={`${prefix}-requirements`}>{t("requirements")}</label></legend>
