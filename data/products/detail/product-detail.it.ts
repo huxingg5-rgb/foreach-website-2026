@@ -225,6 +225,14 @@ function italianHighPressureFitting(model: string, thread: string, material: str
 }
 
 const text: Readonly<Record<string, string>> = {
+  "Product resources": "Documentazione del prodotto",
+  "Technical Drawing": "Disegno tecnico",
+  "Drawing": "Disegno",
+  "Contact Us": "Contattaci",
+  "Drawings and models": "Disegni e modelli",
+  "Select product specifications and save the configuration for your inquiry.": "Seleziona le specifiche del prodotto e salva la configurazione per la richiesta.",
+  "3D Model": "Modello 3D",
+  "Filettatura size": "Misura della filettatura",
   "Breadcrumb navigation": "Percorso di navigazione",
   Products: "Prodotti",
   "Product gallery": "Galleria del prodotto",

@@ -49,7 +49,7 @@ export default function ProductDetailVideos({ locale, identity, pathname, german
   if (!isProductVideoLocale(locale)) return null;
   const ui = germanDraft ? germanVideoUi : contentLocale === "it" ? italianVideoUi : contentLocale === "hi" ? hindiVideoUi : productVideoUi[locale];
   const productVideos = getProductDetailVideos(locale, identity, pathname).map(video => {
-    const title = germanDraft ? germanVideoCopy[video.id]?.title : contentLocale === "it" ? getItalianVideoGuideTitle(video.id) ?? (pathname.includes("/miniature-diaphragm-pumps/") ? italianDiaphragmText(video.title) : italianProductDetailText(video.title)) : contentLocale === "hi" ? (pathname.includes("/miniature-diaphragm-pumps/") ? getHindiVideoGuideTitle(video.id) : undefined) ?? hindiProductDetailText(video.title) : undefined;
+    const title = germanDraft ? germanVideoCopy[video.id]?.title : contentLocale === "it" ? getItalianVideoGuideTitle(video.id) ?? (pathname.includes("/miniature-diaphragm-pumps/") ? italianDiaphragmText(video.title) : italianProductDetailText(video.title)) : contentLocale === "hi" ? getHindiVideoGuideTitle(video.id) ?? hindiProductDetailText(video.title) : undefined;
     return title ? { ...video, title } : video;
   });
   return <QuickConnectVideoShowcase

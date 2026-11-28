@@ -1,6 +1,7 @@
 import "server-only";
 
 import Link from "next/link";
+import { getLocalizedApplicationReferences } from "@/data/applications/application-reference-copy";
 import ApplicationProductCards from "@/components/applications/common/ApplicationProductCards";
 import SamplingProbeApplicationLink from "@/components/applications/SamplingProbeApplicationLink";
 import { getHindiDraftLink, getItalianDraftLink, hindiEnglishFallbackSuffix, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
@@ -445,7 +446,8 @@ export default async function AnalyticalApplicationDocument({
   productLinkCards?: ProductLinkCardsOptions;
 }) {
   const labels: ApplicationDocumentLabels = customLabels ?? { onThisPage: reviewChinese ? '本页目录' : 'ON THIS PAGE', references: reviewChinese ? '参考资料' : 'References', related: reviewChinese ? '相关指南' : 'Related guides', viewReferences: reviewChinese ? '查看参考资料' : 'View references', sources: 'Sources', reference: 'Reference' };
-  const referenceMap: ReferenceMap = new Map(document.references.map((reference, index) => [reference.id, { reference, number: index + 1 }]));
+  const references = getLocalizedApplicationReferences(document.references, locale);
+  const referenceMap: ReferenceMap = new Map(references.map((reference, index) => [reference.id, { reference, number: index + 1 }]));
   const probeContext = isSamplingProbeApplication(document.slug) ? document.slug : undefined;
   const probeGuideLocale = probeContext && (locale === "hi-IN" || locale === "hi") ? "hi" : probeContext && locale === "it" ? "it" : probeContext && locale && isSupportedLocale(locale) ? await getSamplingProbeGuideLocale(locale) : undefined;
   const rootId = "analytical-application-document";
@@ -529,7 +531,7 @@ export default async function AnalyticalApplicationDocument({
             <details className={styles.referenceDisclosure} data-reference-disclosure>
               <summary>{labels.viewReferences} ({document.references.length})</summary>
               <ol className={styles.referenceList}>
-                {document.references.map((reference, index) => (
+                {references.map((reference, index) => (
                   <li key={reference.id} id={`ref-${reference.id}`} tabIndex={-1} data-reference-item>
                     <span className={styles.referenceNumber}>[{index + 1}]</span>
                     <ContentLink href={reference.href} hrefLang={reference.hrefLang}>{reference.title}</ContentLink>

@@ -59,13 +59,17 @@ const articleProductTerms = [
   [/\bABD Air Bubble Detector\b/gi, "ABD हवा के बुलबुले का डिटेक्टर"],
 ] as const;
 
-function localizeProduct<T extends { id: string; href: string; title: string; imageAlt: string }>(item: T) {
+function localizeProduct<T extends { id: string; href: string; title: string; imageSrc: string; imageAlt: string }>(
+  item: T, assemblies?: ReturnType<typeof getTubingAssemblySelectionContent>,
+) {
   const destination = getHindiDraftLink(item.href);
-  const title = articleProductTerms.reduce((result, [pattern, value]) => result.replace(pattern, value), item.title)
+  const assembly = assemblies?.cards.find(card => card.detailHref === item.href || card.detailHref === destination.href);
+  const title = assembly?.cardTitle ?? articleProductTerms.reduce((result, [pattern, value]) => result.replace(pattern, value), item.title)
     .replace(/^(.+) for OEM Instruments$/i, "OEM उपकरणों के लिए $1");
-  const alt = articleProductTerms.reduce((result, [pattern, value]) => result.replace(pattern, value), item.imageAlt)
+  const translatedAlt = articleProductTerms.reduce((result, [pattern, value]) => result.replace(pattern, value), item.imageAlt)
     .replace(/\bproduct photo\b/i, "का फ़ोटो");
-  return { ...item, title, imageAlt: title !== item.title ? title : alt, href: destination.href, destinationLanguage: destination.hrefLang };
+  const assemblyAlt = assembly?.imageCard === item.imageSrc ? assembly.imageAlt : undefined;
+  return { ...item, title, imageAlt: assemblyAlt ?? (title !== item.title ? title : translatedAlt), href: destination.href, destinationLanguage: destination.hrefLang };
 }
 
 export default function HindiEngineeringArticleDetail({
@@ -82,6 +86,10 @@ export default function HindiEngineeringArticleDetail({
   const breadcrumbs = pageData.breadcrumbs.map(item => item.href ? item : { ...item, href: listHref });
   const baseline = getArticleFooterResources(article, "en");
   const articles = new Map(pageData.articles.map(item => [item.slug, item]));
+  let assemblyContent: ReturnType<typeof getTubingAssemblySelectionContent> | undefined;
+  const getAssemblies = () => (assemblyContent ??= getTubingAssemblySelectionContent("hi"));
+  const localizeCard = (item: Parameters<typeof localizeProduct>[0]) =>
+    localizeProduct(item, item.href.includes("/products/tubing-assemblies/") ? getAssemblies() : undefined);
   const barbed = article.slug === "what-is-a-barbed-fitting";
   const luer = article.slug === "what-is-a-luer-fitting";
   const sidebarSource = selection?.sidebarProducts ?? (selection?.family === "instrument" ? getInstrumentFluidicsArticle(article.slug, "en")?.sidebarProducts : undefined)
@@ -89,11 +97,11 @@ export default function HindiEngineeringArticleDetail({
   const sidebar = sidebarSource.map(item => {
     const titles = selection?.copy.relatedProductTitles;
     const title = item.id === "barbed-equal-tee-pa" ? titles?.tee : item.id === "barbed-equal-elbow-pa" ? titles?.elbow : undefined;
-    if (title) return localizeProduct({ ...item, title, imageAlt: "FOREACH " + title });
-    if (!luer) return localizeProduct(item);
+    if (title) return localizeCard({ ...item, title, imageAlt: "FOREACH " + title });
+    if (!luer) return localizeCard(item);
     const imageAlt = item.title === "LPS-32-PP-U" ? "बीच में नीली लॉकिंग रिंग के साथ रंगीन ल्यूअर फिटिंग"
       : "पीली घूमती लॉकिंग रिंग और अनुभाग दृश्य के साथ LPR-32-PP-Y मेल ल्यूअर";
-    return localizeProduct({ ...item, imageAlt });
+    return localizeCard({ ...item, imageAlt });
   });
   const related = {
     ...baseline,
@@ -103,7 +111,7 @@ export default function HindiEngineeringArticleDetail({
     videos: localizeHindiRelatedVideos(baseline.videos),
     products: (selection?.footerProducts ?? baseline.products).map(item => {
       const label = selection?.copy.relatedProductLabel;
-      return localizeProduct(label ? { ...item, imageAlt: `FOREACH ${item.title} ${label}` } : item);
+      return localizeCard(label ? { ...item, imageAlt: `FOREACH ${item.title} ${label}` } : item);
     }),
     articles: baseline.articles.map(item => {
       const target = articles.get(item.slug);
@@ -129,7 +137,7 @@ export default function HindiEngineeringArticleDetail({
   if (selection) {
     const copy = isSpecializedFittingArticle(article.slug)
       ? withFittingArticleLinks(selection.copy, article.slug, "en", selection.navigation ?? [], pageData.articles,
-          getFittingAssemblyLinks(article.slug, getTubingAssemblySelectionContent("hi"))) : selection.copy;
+          getFittingAssemblyLinks(article.slug, getAssemblies())) : selection.copy;
     return (
     <SpecializedSelectionArticle article={article} locale="hi" copy={copy} navigation={selection.navigation} family={selection.family}
       workflows={selection.workflows} footerIntro={selection.footerIntro} modelLinks={selection.modelLinks} breadcrumb={breadcrumb} structuredData={structuredData}

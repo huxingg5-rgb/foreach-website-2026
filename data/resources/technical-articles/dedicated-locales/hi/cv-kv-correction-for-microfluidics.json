@@ -150,9 +150,9 @@
       ]
     },
     "code": {
-      "title": "Python implementation for engineering evaluation",
-      "introduction": "The example computes the Darcy friction factor and compares long-channel resistance using an explicitly supplied measured calibration Reynolds number. The orifice model requires a separately fitted Rec.",
-      "note": "Use for single-phase incompressible Newtonian flow under the stated geometry assumptions. Fᵣ here compares a chosen calibration point; it is not a universal standard valve-sizing equation. Recal, roughness and local loss must describe the same component and test setup."
+      "title": "इंजीनियरिंग आकलन के लिए Python का उदाहरण",
+      "introduction": "यह उदाहरण डार्सी घर्षण गुणांक की गणना करता है। इसमें कैलिब्रेशन के लिए इनपुट में दी गई मापी हुई रेनॉल्ड्स संख्या का उपयोग करके लंबे चैनल के प्रवाह प्रतिरोध की तुलना की जाती है। ऑरिफ़िस मॉडल के लिए Rec को अलग से फ़िट करना आवश्यक है।",
+      "note": "यह उदाहरण बताई गई ज्यामितीय मान्यताओं के तहत एकल-चरण वाले असंपीड्य न्यूटोनियन प्रवाह पर लागू है। यहाँ Fᵣ का उपयोग चुने हुए कैलिब्रेशन बिंदु पर तुलना के लिए किया जाता है। यह वाल्व के आकार निर्धारण का सार्वभौमिक मानक समीकरण नहीं है। Recal, सतह की खुरदराहट और स्थानीय दाब-हानि के मान उसी पुर्जे और परीक्षण व्यवस्था के होने चाहिए।"
     },
     "conclusion": {
       "title": "इंजीनियरिंग निष्कर्ष",

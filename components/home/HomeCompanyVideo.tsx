@@ -53,6 +53,7 @@ export default function HomeCompanyVideo({ // 定义并导出 HomeCompanyVideo �
         data-analytics-section="home_company_video"
         data-analytics-video-id="home_company_video"
         controls={!isCompanyVideoPosterVisible}
+        aria-hidden={isCompanyVideoPosterVisible || undefined}
         preload="none"
         playsInline
         muted

@@ -182,11 +182,11 @@
   "referencesTitle": "Riferimenti",
   "references": [
     {
-      "label": "Modbus Organization: specifica e guida di implementazione per linea seriale V1.02",
+      "label": "Modbus Organization: specifica e guida di implementazione per linea seriale V1.02 (originale in inglese)",
       "href": "https://www.modbus.org/file/secure/modbusoverserial.pdf"
     },
     {
-      "label": "Modbus Organization: guida di implementazione della messaggistica su TCP/IP V1.0b",
+      "label": "Modbus Organization: guida di implementazione della messaggistica su TCP/IP V1.0b (originale in inglese)",
       "href": "https://www.modbus.org/file/secure/messagingimplementationguide.pdf"
     }
   ],

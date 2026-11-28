@@ -8,7 +8,10 @@
         "es": "Curva de tubo PVC transparente FOREACH con un extremo visible",
         "fr": "Tube PVC transparent FOREACH courbé avec une extrémité visible",
         "ko": "끝단이 보이는 FOREACH 투명 PVC 튜브 곡관",
-        "ru": "Изогнутая прозрачная трубка ПВХ FOREACH с видимым концом"
+        "ru": "Изогнутая прозрачная трубка ПВХ FOREACH с видимым концом",
+        "de": "Transparenter FOREACH PVC-Schlauchbogen mit freiliegendem Schlauchende",
+        "it": "Tubo trasparente FOREACH in PVC, curvato, con un’estremità visibile",
+        "hi": "खुले सिरे के साथ FOREACH की पारदर्शी PVC ट्यूब का मोड़"
       }
     },
     {
@@ -19,7 +22,10 @@
         "es": "Bobina de tubo de PVC transparente y flexible FOREACH con un extremo visible",
         "fr": "Bobine de tube PVC transparent et souple FOREACH avec une extrémité visible",
         "ko": "끝단이 보이는 FOREACH 투명 연질 PVC 튜브 코일",
-        "ru": "Бухта прозрачной гибкой трубки ПВХ FOREACH с видимым концом"
+        "ru": "Бухта прозрачной гибкой трубки ПВХ FOREACH с видимым концом",
+        "de": "Flexibler transparenter FOREACH PVC-Schlauch als Rolle mit freiliegendem Ende",
+        "it": "Rotolo di tubo flessibile trasparente FOREACH in PVC con un’estremità visibile",
+        "hi": "खुले सिरे के साथ FOREACH की लचीली पारदर्शी PVC ट्यूब कॉइल"
       }
     },
     {
@@ -30,7 +36,10 @@
         "es": "Bobinas de tubo de PVC FOREACH junto a una caja de embalaje Halotube",
         "fr": "Bobines de tube PVC FOREACH à côté d’un carton Halotube",
         "ko": "Halotube 포장 상자 옆의 FOREACH PVC 튜브 코일",
-        "ru": "Бухты трубки ПВХ FOREACH рядом с упаковочной коробкой Halotube"
+        "ru": "Бухты трубки ПВХ FOREACH рядом с упаковочной коробкой Halotube",
+        "de": "FOREACH PVC-Schlauchrollen neben einem Halotube-Verpackungskarton",
+        "it": "Rotoli di tubo FOREACH in PVC accanto alla confezione Halotube",
+        "hi": "Halotube पैकिंग बॉक्स के पास FOREACH PVC ट्यूब कॉइल"
       }
     }
   ],
@@ -43,7 +52,10 @@
         "es": "Tubos flexibles de TPU FOREACH dispuestos en curvas para el tendido en instrumentos",
         "fr": "Tubes TPU souples FOREACH disposés en courbes pour le cheminement dans les instruments",
         "ko": "기기 내부 배관용으로 곡선 형태로 배치된 FOREACH 유연한 TPU 튜브",
-        "ru": "Гибкие трубки TPU FOREACH, изогнутые для прокладки в приборах"
+        "ru": "Гибкие трубки TPU FOREACH, изогнутые для прокладки в приборах",
+        "de": "Flexible FOREACH TPU-Schläuche in Bögen für die Verlegung im Gerät",
+        "it": "Tubo flessibile FOREACH in TPU disposto in curve per la posa negli strumenti",
+        "hi": "उपकरण में बिछाने के लिए मोड़ों में रखी FOREACH की लचीली TPU ट्यूब"
       }
     },
     {
@@ -54,7 +66,10 @@
         "es": "Tubo de TPU FOREACH curvado con extremo abierto; opción de 2,4 mm de diámetro interior y 4,0 mm exterior",
         "fr": "Tube TPU FOREACH courbé avec extrémité ouverte ; option de diamètre intérieur 2,4 mm et extérieur 4,0 mm",
         "ko": "곡선 몸체와 열린 끝단의 FOREACH TPU 튜브, 내경 2.4 mm 및 외경 4.0 mm 사양 선택 가능",
-        "ru": "Изогнутая трубка TPU FOREACH с открытым концом; доступен вариант с внутренним диаметром 2,4 мм и наружным 4,0 мм"
+        "ru": "Изогнутая трубка TPU FOREACH с открытым концом; доступен вариант с внутренним диаметром 2,4 мм и наружным 4,0 мм",
+        "de": "Gebogener FOREACH TPU-Schlauch mit offenem Ende und Option für 2.4 mm Innen- und 4.0 mm Außendurchmesser",
+        "it": "Tubo FOREACH in TPU curvato con estremità aperta, disponibile con Ø interno 2.4 mm e Ø esterno 4.0 mm",
+        "hi": "मुड़ी ट्यूब और खुले सिरे के साथ FOREACH TPU ट्यूब, 2.4 mm ID और 4.0 mm OD के विकल्प के साथ"
       }
     }
   ],
@@ -67,7 +82,10 @@
         "es": "Tubos de FEP FOREACH en versiones transparente y negra",
         "fr": "Tubes FEP FOREACH en versions transparente et noire",
         "ko": "투명 및 검정색 FOREACH FEP 튜브",
-        "ru": "Трубки FEP FOREACH в прозрачном и чёрном исполнении"
+        "ru": "Трубки FEP FOREACH в прозрачном и чёрном исполнении",
+        "de": "FOREACH FEP-Schläuche in transparenter und schwarzer Ausführung",
+        "it": "Tubi FOREACH in FEP trasparenti e neri",
+        "hi": "पारदर्शी और काले विकल्पों में FOREACH FEP ट्यूब"
       }
     },
     {
@@ -78,7 +96,10 @@
         "es": "Tubos transparentes de FEP resistentes a productos químicos FOREACH dispuestos en curvas",
         "fr": "Tubes FEP transparents résistants aux produits chimiques FOREACH disposés en courbes",
         "ko": "곡선 형태로 배치된 FOREACH 내화학성 투명 FEP 튜브",
-        "ru": "Прозрачные химически стойкие трубки FEP FOREACH, расположенные изгибами"
+        "ru": "Прозрачные химически стойкие трубки FEP FOREACH, расположенные изгибами",
+        "de": "Chemikalienbeständige FOREACH FEP-Schläuche mit transparenten Schlauchbögen",
+        "it": "Tubi FOREACH in FEP resistenti agli agenti chimici, con i tubi trasparenti disposti in curve",
+        "hi": "मोड़ में रखी पारदर्शी, रसायन-प्रतिरोधी FOREACH FEP ट्यूब"
       }
     },
     {
@@ -89,7 +110,10 @@
         "es": "Tubos transparentes de FEP FOREACH con detalle de las paredes y los conductos interiores",
         "fr": "Tubes FEP transparents FOREACH montrant les parois et les canaux intérieurs",
         "ko": "관벽과 내부 유로가 보이는 FOREACH 투명 FEP 튜브",
-        "ru": "Прозрачные трубки FEP FOREACH с видимыми стенками и внутренними каналами"
+        "ru": "Прозрачные трубки FEP FOREACH с видимыми стенками и внутренними каналами",
+        "de": "Transparente FOREACH FEP-Schläuche mit sichtbarer Schlauchwand und Durchlässen",
+        "it": "Tubi trasparenti FOREACH in FEP con pareti e sezioni interne visibili",
+        "hi": "दीवार और आंतरिक व्यास दिखाई देती FOREACH की पारदर्शी FEP ट्यूब"
       }
     },
     {
@@ -100,7 +124,10 @@
         "es": "Tubos de FEP de pequeño diámetro interior FOREACH para seleccionar conexiones de fluidos en instrumentos",
         "fr": "Tubes FEP de petit diamètre intérieur FOREACH pour le choix des raccordements fluidiques d’instruments",
         "ko": "기기 유체 연결부 선정을 위해 배치된 FOREACH 소구경 FEP 튜브",
-        "ru": "Трубки FEP FOREACH с малым внутренним диаметром для выбора соединений жидкостных трактов приборов"
+        "ru": "Трубки FEP FOREACH с малым внутренним диаметром для выбора соединений жидкостных трактов приборов",
+        "de": "FOREACH FEP-Schläuche mit kleinem Durchlass zur Auswahl von Fluidikanschlüssen",
+        "it": "Tubi FOREACH in FEP a piccolo diametro per la scelta dei collegamenti fluidici negli strumenti",
+        "hi": "उपकरण के द्रव कनेक्शन चुनने के लिए रखी FOREACH की छोटे व्यास वाली FEP ट्यूब"
       }
     },
     {
@@ -111,7 +138,10 @@
         "es": "Haz de tubos FEP FOREACH con extremos cortados visibles; opción de 0,8 mm de diámetro interior y 1,6 mm exterior",
         "fr": "Faisceau de tubes FEP FOREACH avec extrémités coupées visibles ; option de diamètre intérieur 0,8 mm et extérieur 1,6 mm",
         "ko": "절단면이 보이는 FOREACH FEP 튜브 묶음, 내경 0.8 mm 및 외경 1.6 mm 사양 선택 가능",
-        "ru": "Пучок трубок FEP FOREACH с видимыми срезами; доступен вариант с внутренним диаметром 0,8 мм и наружным 1,6 мм"
+        "ru": "Пучок трубок FEP FOREACH с видимыми срезами; доступен вариант с внутренним диаметром 0,8 мм и наружным 1,6 мм",
+        "de": "FOREACH FEP-Schlauchbündel mit sichtbaren Schnittenden und Option für 0.8 mm Innen- und 1.6 mm Außendurchmesser",
+        "it": "Fascio di tubi FOREACH in FEP con estremità tagliate visibili, disponibile con Ø interno 0.8 mm e Ø esterno 1.6 mm",
+        "hi": "कटे सिरों के साथ FOREACH FEP ट्यूबों का बंडल, 0.8 mm ID और 1.6 mm OD के विकल्प के साथ"
       }
     },
     {
@@ -122,7 +152,10 @@
         "es": "Haz de tubos FEP FOREACH visto en ángulo; opción de 1,0 mm de diámetro interior y 2,0 mm exterior",
         "fr": "Faisceau de tubes FEP FOREACH vu en biais ; option de diamètre intérieur 1,0 mm et extérieur 2,0 mm",
         "ko": "비스듬히 배치된 FOREACH FEP 튜브 묶음, 내경 1.0 mm 및 외경 2.0 mm 사양 선택 가능",
-        "ru": "Пучок трубок FEP FOREACH под углом; доступен вариант с внутренним диаметром 1,0 мм и наружным 2,0 мм"
+        "ru": "Пучок трубок FEP FOREACH под углом; доступен вариант с внутренним диаметром 1,0 мм и наружным 2,0 мм",
+        "de": "FOREACH FEP-Schlauchbündel in Schrägansicht mit Option für 1.0 mm Innen- und 2.0 mm Außendurchmesser",
+        "it": "Fascio di tubi FOREACH in FEP visto di sbieco, disponibile con Ø interno 1.0 mm e Ø esterno 2.0 mm",
+        "hi": "तिरछे कोण से FOREACH FEP ट्यूबों का बंडल, 1.0 mm ID और 2.0 mm OD के विकल्प के साथ"
       }
     }
   ],
@@ -135,7 +168,10 @@
         "es": "Bobina de tubo PTFE natural FOREACH con un extremo cortado visible",
         "fr": "Bobine de tube PTFE naturel FOREACH avec une extrémité coupée visible",
         "ko": "절단면이 보이는 FOREACH 자연색 PTFE 튜브 코일",
-        "ru": "Бухта трубки PTFE натурального цвета FOREACH с видимым срезом"
+        "ru": "Бухта трубки PTFE натурального цвета FOREACH с видимым срезом",
+        "de": "Naturfarbene FOREACH PTFE-Schlauchrolle mit sichtbarem Schnittende",
+        "it": "Rotolo di tubo FOREACH in PTFE naturale con un’estremità tagliata",
+        "hi": "कटे सिरे के साथ FOREACH की प्राकृतिक रंग वाली PTFE ट्यूब कॉइल"
       }
     },
     {
@@ -146,7 +182,10 @@
         "es": "Bobina de tubo PTFE negro FOREACH con el extremo visible",
         "fr": "Bobine de tube PTFE noir FOREACH avec l’extrémité visible",
         "ko": "끝단이 보이는 FOREACH 검정색 PTFE 튜브 코일",
-        "ru": "Бухта чёрной трубки PTFE FOREACH с видимым концом"
+        "ru": "Бухта чёрной трубки PTFE FOREACH с видимым концом",
+        "de": "Schwarze FOREACH PTFE-Schlauchrolle mit sichtbarem Schlauchende",
+        "it": "Rotolo di tubo FOREACH in PTFE nero con l’estremità visibile",
+        "hi": "सिरा दिखाई देती FOREACH की काली PTFE ट्यूब कॉइल"
       }
     },
     {
@@ -157,7 +196,10 @@
         "es": "Detalle del extremo de un tubo PTFE FOREACH; opción de 0,8 mm de diámetro interior y 1,6 mm exterior",
         "fr": "Détail d’une extrémité de tube PTFE FOREACH ; option de diamètre intérieur 0,8 mm et extérieur 1,6 mm",
         "ko": "FOREACH PTFE 튜브 끝단 상세, 내경 0.8 mm 및 외경 1.6 mm 사양 선택 가능",
-        "ru": "Крупный план конца трубки PTFE FOREACH; доступен вариант с внутренним диаметром 0,8 мм и наружным 1,6 мм"
+        "ru": "Крупный план конца трубки PTFE FOREACH; доступен вариант с внутренним диаметром 0,8 мм и наружным 1,6 мм",
+        "de": "Detail eines FOREACH PTFE-Schlauchendes mit Option für 0.8 mm Innen- und 1.6 mm Außendurchmesser",
+        "it": "Dettaglio dell’estremità del tubo FOREACH in PTFE, disponibile con Ø interno 0.8 mm e Ø esterno 1.6 mm",
+        "hi": "FOREACH PTFE ट्यूब के सिरे का पास से दृश्य, 0.8 mm ID और 1.6 mm OD के विकल्प के साथ"
       }
     },
     {
@@ -168,7 +210,10 @@
         "es": "Tubos PTFE FOREACH con extremos cortados para seleccionar líneas de fluidos de instrumentos",
         "fr": "Tubes PTFE FOREACH et extrémités coupées pour le choix des lignes fluidiques d’instruments",
         "ko": "기기 유체 배관 선정을 위한 FOREACH PTFE 튜브와 절단면",
-        "ru": "Трубки PTFE FOREACH и их срезы для выбора жидкостных линий приборов"
+        "ru": "Трубки PTFE FOREACH и их срезы для выбора жидкостных линий приборов",
+        "de": "FOREACH PTFE-Schläuche und Schnittenden zur Auswahl von Fluidpfaden im Gerät",
+        "it": "Tubi FOREACH in PTFE con estremità tagliate per la scelta delle linee fluidiche negli strumenti",
+        "hi": "उपकरण की द्रव लाइन चुनने के लिए FOREACH PTFE ट्यूब और कटे सिरे"
       }
     },
     {
@@ -179,7 +224,10 @@
         "es": "Bobinas de tubos PTFE FOREACH en color natural y negro mostradas juntas",
         "fr": "Bobines de tubes PTFE FOREACH naturel et noir présentées ensemble",
         "ko": "함께 배치된 FOREACH 자연색 및 검정색 PTFE 튜브 코일",
-        "ru": "Бухты трубок PTFE FOREACH натурального и чёрного цвета рядом"
+        "ru": "Бухты трубок PTFE FOREACH натурального и чёрного цвета рядом",
+        "de": "Naturfarbene und schwarze FOREACH PTFE-Schläuche als Rollen im Vergleich",
+        "it": "Rotoli di tubo FOREACH in PTFE naturale e nero",
+        "hi": "FOREACH की प्राकृतिक रंग और काली PTFE ट्यूब कॉइल साथ में"
       }
     },
     {
@@ -190,7 +238,10 @@
         "es": "Bobina de tubo PTFE negro FOREACH con el extremo visible",
         "fr": "Bobine de tube PTFE noir FOREACH avec l’extrémité visible",
         "ko": "끝단이 보이는 FOREACH 검정색 PTFE 튜브 코일",
-        "ru": "Бухта чёрной трубки PTFE FOREACH с видимым концом"
+        "ru": "Бухта чёрной трубки PTFE FOREACH с видимым концом",
+        "de": "Schwarze FOREACH PTFE-Schlauchrolle mit sichtbarem Schlauchende",
+        "it": "Rotolo di tubo FOREACH in PTFE nero con l’estremità visibile",
+        "hi": "सिरा दिखाई देती FOREACH की काली PTFE ट्यूब कॉइल"
       }
     }
   ],
@@ -203,7 +254,10 @@
         "es": "Tubos PEEK resistentes a productos químicos FOREACH en amarillo, naranja y verde",
         "fr": "Tubes PEEK résistants aux produits chimiques FOREACH en jaune, orange et vert",
         "ko": "노란색, 주황색 및 녹색 FOREACH 내화학성 PEEK 튜브",
-        "ru": "Химически стойкие трубки PEEK FOREACH жёлтого, оранжевого и зелёного цвета"
+        "ru": "Химически стойкие трубки PEEK FOREACH жёлтого, оранжевого и зелёного цвета",
+        "de": "Chemikalienbeständige FOREACH PEEK-Kapillaren in Gelb, Orange und Grün",
+        "it": "Tubi FOREACH in PEEK resistenti agli agenti chimici, in giallo, arancione e verde",
+        "hi": "पीले, नारंगी और हरे रंग में FOREACH की रसायन-प्रतिरोधी PEEK ट्यूब"
       }
     },
     {
@@ -214,7 +268,10 @@
         "es": "Serie de tubos PEEK de colores FOREACH; opción de 0,2 mm de diámetro interior y 0,8 mm exterior",
         "fr": "Gamme de tubes PEEK colorés FOREACH ; option de diamètre intérieur 0,2 mm et extérieur 0,8 mm",
         "ko": "FOREACH 컬러 PEEK 튜브 시리즈, 내경 0.2 mm 및 외경 0.8 mm 사양 선택 가능",
-        "ru": "Серия цветных трубок PEEK FOREACH; доступен вариант с внутренним диаметром 0,2 мм и наружным 0,8 мм"
+        "ru": "Серия цветных трубок PEEK FOREACH; доступен вариант с внутренним диаметром 0,2 мм и наружным 0,8 мм",
+        "de": "Farbige FOREACH PEEK-Kapillarbaureihe mit Option für 0.2 mm Innen- und 0.8 mm Außendurchmesser",
+        "it": "Serie di tubi FOREACH in PEEK colorati, disponibile con Ø interno 0.2 mm e Ø esterno 0.8 mm",
+        "hi": "रंगीन FOREACH PEEK ट्यूब सीरीज़, 0.2 mm ID और 0.8 mm OD के विकल्प के साथ"
       }
     },
     {
@@ -225,7 +282,10 @@
         "es": "Tubo PEEK FOREACH con racor roscado; opción de tubo de 0,8 mm de diámetro interior y 1,6 mm exterior",
         "fr": "Tube PEEK FOREACH avec raccord fileté ; option de tube de diamètre intérieur 0,8 mm et extérieur 1,6 mm",
         "ko": "나사식 피팅과 연결된 FOREACH PEEK 튜브, 내경 0.8 mm 및 외경 1.6 mm 튜브 사양 선택 가능",
-        "ru": "Трубка PEEK FOREACH с резьбовым фитингом; доступен вариант трубки с внутренним диаметром 0,8 мм и наружным 1,6 мм"
+        "ru": "Трубка PEEK FOREACH с резьбовым фитингом; доступен вариант трубки с внутренним диаметром 0,8 мм и наружным 1,6 мм",
+        "de": "FOREACH PEEK-Kapillare mit Gewinde-Fitting und Option für 0.8 mm Innen- und 1.6 mm Außendurchmesser",
+        "it": "Tubo FOREACH in PEEK con un raccordo filettato, disponibile con Ø interno 0.8 mm e Ø esterno 1.6 mm",
+        "hi": "थ्रेड वाली फिटिंग के साथ FOREACH PEEK ट्यूब, 0.8 mm ID और 1.6 mm OD के विकल्प के साथ"
       }
     }
   ],
@@ -238,7 +298,10 @@
         "es": "Bobina de tubo PFA translúcido FOREACH con un extremo visible",
         "fr": "Bobine de tube PFA translucide FOREACH avec une extrémité visible",
         "ko": "끝단이 보이는 FOREACH 반투명 PFA 튜브 코일",
-        "ru": "Бухта полупрозрачной трубки PFA FOREACH с видимым концом"
+        "ru": "Бухта полупрозрачной трубки PFA FOREACH с видимым концом",
+        "de": "Lichtdurchlässiger FOREACH PFA-Schlauch als Rolle mit freiliegendem Ende",
+        "it": "Rotolo di tubo FOREACH in PFA traslucido con un’estremità visibile",
+        "hi": "खुले सिरे के साथ FOREACH की अर्धपारदर्शी PFA ट्यूब कॉइल"
       }
     },
     {
@@ -249,7 +312,10 @@
         "es": "Primer plano de una bobina de tubo PFA FOREACH con paredes translúcidas y curvas",
         "fr": "Gros plan d’une bobine de tube PFA FOREACH montrant ses parois translucides et ses courbes",
         "ko": "반투명 관벽과 곡선 배치를 보여주는 FOREACH PFA 튜브 코일 클로즈업",
-        "ru": "Крупный план бухты трубки PFA FOREACH с полупрозрачной стенкой и изгибами"
+        "ru": "Крупный план бухты трубки PFA FOREACH с полупрозрачной стенкой и изгибами",
+        "de": "Nahaufnahme einer FOREACH PFA-Schlauchrolle mit lichtdurchlässigen Wänden und gebogenem Schlauchverlauf",
+        "it": "Primo piano di un rotolo di tubo FOREACH in PFA con pareti traslucide e posa in curva",
+        "hi": "FOREACH PFA ट्यूब कॉइल का पास से दृश्य, अर्धपारदर्शी दीवार और मुड़े रास्ते के साथ"
       }
     },
     {
@@ -260,7 +326,10 @@
         "es": "Tubos PFA translúcidos FOREACH dispuestos en capas para seleccionar líneas de fluidos de instrumentos",
         "fr": "Tubes PFA translucides FOREACH disposés en couches pour le choix des lignes fluidiques d’instruments",
         "ko": "기기 유체 라인 선정을 위해 여러 겹으로 배치한 FOREACH 반투명 PFA 튜브",
-        "ru": "Полупрозрачные трубки PFA FOREACH, уложенные слоями для выбора жидкостных линий приборов"
+        "ru": "Полупрозрачные трубки PFA FOREACH, уложенные слоями для выбора жидкостных линий приборов",
+        "de": "Lichtdurchlässiger FOREACH PFA-Schlauch in übereinanderliegenden Windungen zur Auswahl von Geräteleitungen",
+        "it": "Tubi FOREACH in PFA traslucidi in rotoli sovrapposti per la scelta delle linee fluidiche negli strumenti",
+        "hi": "उपकरण की द्रव लाइन के लिए परतों में रखी FOREACH की अर्धपारदर्शी PFA ट्यूब कॉइल"
       }
     }
   ]

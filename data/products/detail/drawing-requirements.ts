@@ -13,6 +13,9 @@ export function getDrawingTypes(value: DrawingRequirement): CadDrawingType[] {
 const COPY = {
   zh: { title: "图纸需求", optional: "选填，可多选", required: "可选一项或两项", twoD: "2D 尺寸图", threeD: "3D CAD 模型", none: "暂不需要", update: "更新图纸需求" },
   en: { title: "Drawing requirements", optional: "optional; select one or both", required: "select one or both", twoD: "2D dimension drawing", threeD: "3D CAD model", none: "Not requested", update: "Update drawing requirements" },
+  de: { title: "Angefragte Zeichnungen", optional: "optional, Mehrfachauswahl möglich", required: "eine oder beide Optionen auswählen", twoD: "Bemaßte 2D-Zeichnung", threeD: "3D-CAD-Modell", none: "Nicht angefragt", update: "Zeichnungsanfrage aktualisieren" },
+  it: { title: "Disegni richiesti", optional: "facoltativo, anche entrambe le opzioni", required: "seleziona una o entrambe le opzioni", twoD: "Disegno 2D quotato", threeD: "Modello CAD 3D", none: "Nessun disegno richiesto", update: "Aggiorna la richiesta di disegni" },
+  hi: { title: "ड्रॉइंग की ज़रूरत", optional: "वैकल्पिक, दोनों विकल्प चुन सकते हैं", required: "एक या दोनों विकल्प चुनें", twoD: "आयाम वाली 2D ड्रॉइंग", threeD: "3D CAD मॉडल", none: "अनुरोध नहीं किया", update: "ड्रॉइंग का अनुरोध बदलें" },
   es: { title: "Documentación técnica solicitada", optional: "opcional; puede seleccionar ambas", required: "seleccione una o ambas opciones", twoD: "Plano acotado 2D", threeD: "Modelo CAD 3D", none: "No solicitada", update: "Actualizar documentación solicitada" },
   fr: { title: "Plans et modèles souhaités", optional: "facultatif ; choix multiple", required: "une ou deux options possibles", twoD: "Plan coté 2D", threeD: "Modèle CAO 3D", none: "Aucune demande", update: "Modifier les documents souhaités" },
   ko: { title: "도면 요청", optional: "선택 사항 · 복수 선택 가능", required: "한 가지 또는 두 가지 모두 선택", twoD: "2D 치수 도면", threeD: "3D CAD 모델", none: "요청하지 않음", update: "도면 요청 변경" },

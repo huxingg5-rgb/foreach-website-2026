@@ -16,15 +16,18 @@
     },
     "dpl": {
       "name": "Pompe a membrana",
-      "description": "Trasferimento di liquidi, adescamento e lavaggio per l’alimentazione e lo scarico nei dispositivi."
+      "description": "Trasferimento di liquidi, adescamento e lavaggio per l’alimentazione e lo scarico nei dispositivi.",
+      "imageAlt": "Pompa a membrana miniaturizzata FOREACH con motore e testata nera"
     },
     "smtp2": {
       "name": "Modulo di pipettaggio SMTP2",
-      "description": "Meccanica di azionamento e controllo integrati, con rilevamento del livello del liquido, della presenza del puntale e di eventuali ostruzioni."
+      "description": "Meccanica di azionamento e controllo integrati, con rilevamento del livello del liquido, della presenza del puntale e di eventuali ostruzioni.",
+      "imageAlt": "Modulo di pipettaggio FOREACH SMTP2 con stelo e scheda di controllo"
     },
     "rpl": {
       "name": "Pompe dosatrici a pistone senza valvole",
-      "description": "Progettate senza valvole per erogare volumi misurati, dosare liquidi e trasferire reagenti nei dispositivi."
+      "description": "Progettate senza valvole per erogare volumi misurati, dosare liquidi e trasferire reagenti nei dispositivi.",
+      "imageAlt": "Pompa dosatrice senza valvole FOREACH con motore e testata"
     },
     "assembly": {
       "name": "Assemblaggi di tubi per circuiti fluidici",
@@ -36,11 +39,13 @@
     },
     "quick": {
       "name": "Raccordi rapidi",
-      "description": "Per tubi con diametro interno da 1,6 a 19,0 mm, in versione passaparete o in linea, con o senza valvola. Disponibili configurazioni personalizzate."
+      "description": "Per tubi con diametro interno da 1,6 a 19,0 mm, in versione passaparete o in linea, con o senza valvola. Disponibili configurazioni personalizzate.",
+      "imageAlt": "Raccordi rapidi FOREACH in diverse forme e dimensioni"
     },
     "needle": {
       "name": "Sonde",
-      "description": "Geometrie personalizzabili per campionamento, perforazione e lavaggio."
+      "description": "Geometrie personalizzabili per campionamento, perforazione e lavaggio.",
+      "imageAlt": "Sonde per strumenti FOREACH con steli metallici e gruppi di collegamento"
     },
     "flanged-tubing": {
       "name": "Tubi con estremità bordate",

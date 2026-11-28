@@ -197,7 +197,7 @@ export const homeNewsData = {
         "恒永达将于 2026 年 11 月 16 日至 19 日参加德国杜塞尔多夫 MEDICA 2026，展位号 1H39-\u20601，欢迎新老客户及合作伙伴莅临交流。",
       en:
         "Foreach will exhibit at MEDICA 2026 in Düsseldorf, Germany, from November 16 to 19, 2026. Visit Booth\u00a01H39-\u20601 to discuss second-source options for pumps, valves, and fluidic components.",
-      de: "FOREACH ist vom 16. bis 19. November 2026 auf der MEDICA in Düsseldorf vertreten. An Stand 1H39-⁠1 erfahren Sie mehr über FOREACH als möglichen Zweitlieferanten für Pumpen, Ventile und Fluidikkomponenten.",
+      de: "FOREACH war vom 16. bis 19. November 2026 auf der MEDICA in Düsseldorf vertreten. An Stand 1H39-⁠1 stellte das Team Pumpen, Ventile und Fluidikkomponenten vor und sprach mit Besuchern über die Möglichkeiten einer Zweitversorgung.",
       es:
         "Foreach participará en MEDICA 2026 en Düsseldorf (Alemania) del 16 al 19 de noviembre de 2026. Visite el stand 1H39-\u20601 para hablar de opciones de segundo proveedor para bombas, válvulas y componentes fluídicos.",
       fr:

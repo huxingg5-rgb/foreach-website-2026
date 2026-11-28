@@ -1,3 +1,4 @@
+import { isNewProductLocale, localizeFittingPresentation } from "./fitting-ui-new-locales";
 import { FITTING_DELIVERY_COPY } from "./fitting-delivery.intl";
 
 export type FittingLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru";
@@ -293,6 +294,10 @@ const templates = rows.filter(row => /\{\d+\}/.test(row[0])).sort((a,b)=>b[0].re
   pattern: new RegExp("^" + row[0].split(/(\{\d+\})/).map(part => /^\{\d+\}$/.test(part) ? "(.+?)" : part.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("") + "$")
 }));
 export function fittingText(text: string, localeValue: string): string {
+  if (isNewProductLocale(localeValue)) {
+    const english = fittingText(text, "en");
+    return localizeFittingPresentation(english, localeValue);
+  }
   const locale = fittingLocale(localeValue);
   if (locale === "zh" || !/[\u3400-\u9fff]/.test(text)) return text;
   const leading = text.match(/^\s*/)?.[0] || "", trailing = text.match(/\s*$/)?.[0] || "";

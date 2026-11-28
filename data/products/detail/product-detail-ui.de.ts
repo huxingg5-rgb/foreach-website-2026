@@ -52,6 +52,14 @@ export const germanProductDetailTabs = {
 };
 
 const ui: Record<string, string> = {
+  "Product resources": "Produktunterlagen",
+  "Technical Drawing": "Technische Zeichnung",
+  "Drawing": "Zeichnung",
+  "Contact Us": "Kontakt aufnehmen",
+  "Drawings and models": "Zeichnungen und Modelle",
+  "Select product specifications and save the configuration for your inquiry.": "Wählen Sie die benötigten Optionen und speichern Sie die Konfiguration für Ihre Anfrage.",
+  "3D Model": "3D-Modell",
+  "Filettatura size": "Gewindegröße",
   Home: "Startseite",
   Products: "Produkte",
   "Product Center": "Produkte",

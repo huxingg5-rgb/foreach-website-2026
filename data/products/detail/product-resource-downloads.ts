@@ -15,14 +15,15 @@ export function getProductResourceDownloads(datasheet: ProductDatasheet | null, 
   if (language === "zh") return [];
   const copy = getSelectionWorkspaceCopy(language);
   const items: ProductResourceDownload[] = [];
+  const identifyEnglish = language === "de" || language === "it" || language === "hi";
   const englishDatasheet = datasheet?.language === "en"
     || (datasheet?.language !== "zh" && datasheet?.file.includes("/datasheets/en/"));
 
   if (datasheet && (englishDatasheet || (language === "zh" && options.includeChinese && datasheet.language === "zh"))) {
     const fileLanguage = datasheet.language === "zh" ? "中文" : "EN";
-    items.push({ id: datasheet.id, kind: "datasheet", label: options.includeChinese ? `${copy.datasheet} (${fileLanguage})` : copy.datasheet, href: datasheet.file, download: true });
+    items.push({ id: datasheet.id, kind: "datasheet", label: options.includeChinese || identifyEnglish ? `${copy.datasheet} (${fileLanguage})` : copy.datasheet, href: datasheet.file, download: true });
   }
-  items.push({ id: PRODUCT_CATALOG_EN.id, kind: "catalog", label: copy.fullCatalog,
+  items.push({ id: PRODUCT_CATALOG_EN.id, kind: "catalog", label: identifyEnglish ? `${copy.fullCatalog} (EN)` : copy.fullCatalog,
     href: PRODUCT_CATALOG_EN.file, download: "FOREACH-Product-Catalog-EN.pdf" });
   return items;
 }

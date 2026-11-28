@@ -48,6 +48,7 @@ export function getHomeProductsSectionData(locale: HomeProductsLocale): HomeProd
       return {
         ...product,
         ...translation,
+        ...(locale === 'it' ? { imageAlt: translation.imageAlt ?? translation.name } : {}),
         // Some localized categories use selection queries instead of English paths.
         ...(locale === 'de'
           ? getGermanDraftLink(getLanguageHref(product.href, 'en'))

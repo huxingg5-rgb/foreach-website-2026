@@ -182,11 +182,11 @@
   "referencesTitle": "संदर्भ",
   "references": [
     {
-      "label": "Modbus Organization: सीरियल लाइन विनिर्देश और कार्यान्वयन गाइड V1.02",
+      "label": "Modbus Organization: सीरियल लाइन विनिर्देश और कार्यान्वयन गाइड V1.02 (अंग्रेज़ी मूल संस्करण)",
       "href": "https://www.modbus.org/file/secure/modbusoverserial.pdf"
     },
     {
-      "label": "Modbus Organization: TCP/IP मैसेजिंग कार्यान्वयन गाइड V1.0b",
+      "label": "Modbus Organization: TCP/IP मैसेजिंग कार्यान्वयन गाइड V1.0b (अंग्रेज़ी मूल संस्करण)",
       "href": "https://www.modbus.org/file/secure/messagingimplementationguide.pdf"
     }
   ],

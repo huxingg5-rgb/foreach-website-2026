@@ -19,6 +19,7 @@ import { Q20_FITTING_REPLACEMENT_SERIES_CONFIG } from "@/data/resources/fitting-
 
 const SERIES_CONFIG = Q20_FITTING_REPLACEMENT_SERIES_CONFIG;
 const PAGE_SIZE = 10;
+const localePrefix = /^\/(en|es|fr|ko|ru|de|it|hi)(\/|$)/;
 
 interface FittingReplacementHomeProps {
   data: FittingReplacementPageData;
@@ -54,7 +55,7 @@ function getLocaleFromBreadcrumbs(
   breadcrumbs: FittingReplacementPageData["breadcrumbs"]
 ) {
   const href = breadcrumbs.find((item) => {
-    return /^\/(en|es|fr|ko|ru)(\/|$)/.test(item.href ?? "");
+    return localePrefix.test(item.href ?? "");
   })?.href;
 
   return href?.split("/")[1] ?? "zh";
@@ -69,7 +70,7 @@ function getLocalizedProductDetailHref(
   const isChinese = locale === "zh" || locale === "zh-CN";
   const isExternalOrProtocolRelative =
     !href.startsWith("/") || href.startsWith("//");
-  const alreadyLocalized = /^\/(en|es|fr|ko|ru)(\/|$)/.test(href);
+  const alreadyLocalized = localePrefix.test(href);
 
   if (isChinese || isExternalOrProtocolRelative || alreadyLocalized) {
     return href;
@@ -79,6 +80,9 @@ function getLocalizedProductDetailHref(
 }
 
 const fittingHomeUi: Record<string, { breadcrumb: string; queryLabel: string }> = {
+  de: { breadcrumb: "Brotkrümelnavigation", queryLabel: "Gesuchtes Modell: " },
+  it: { breadcrumb: "Percorso di navigazione", queryLabel: "Modello cercato: " },
+  hi: { breadcrumb: "पेज का नेविगेशन पथ", queryLabel: "खोजा गया मॉडल: " },
   es: { breadcrumb: "Ruta de navegación", queryLabel: "Modelo consultado: " },
   fr: { breadcrumb: "Fil d’Ariane", queryLabel: "Modèle recherché : " },
   ko: { breadcrumb: "이동 경로", queryLabel: "검색 모델: " },

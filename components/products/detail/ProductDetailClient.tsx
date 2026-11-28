@@ -273,7 +273,7 @@ type ProductDetailTab =
   | "drawing"
   | "datasheet";
 
-type ProductDetailTabLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru";
+type ProductDetailTabLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru" | "it" | "hi";
 
 const MOBILE_PRODUCT_TAB_LABELS: Record<
   ProductDetailTabLocale,
@@ -293,6 +293,8 @@ const MOBILE_PRODUCT_TAB_LABELS: Record<
     drawing: "Drawing",
     datasheet: "Sheet",
   },
+  it: { spec: "Dati", applications: "Utilizzi", model3d: "3D", drawing: "Disegno", datasheet: "Scheda" },
+  hi: { spec: "स्पेसिफिकेशन", applications: "उपयोग", model3d: "3D", drawing: "ड्रॉइंग", datasheet: "डेटाशीट" },
   es: {
     spec: "Espec.",
     applications: "Usos",
@@ -1714,7 +1716,7 @@ export default function ProductDetailClient({
   const pistonPresentationLocale = isGermanPiston ? "de" : localizedDetail && customerCategoryMode === "piston-pump" ? localizedDetail.locale : configuratorLocale;
   const mobileTabLabels = isGermanProduct ? germanProductDetailTabs :
     MOBILE_PRODUCT_TAB_LABELS[
-      configuratorLocale as ProductDetailTabLocale
+      (localizedDetail?.locale ?? configuratorLocale) as ProductDetailTabLocale
     ] || MOBILE_PRODUCT_TAB_LABELS.zh;
   const fittingUiLocale = isGermanProduct ? "de" : localizedDetail?.locale ?? configuratorLocale;
   const localePrefix = isEnglishPath
@@ -1725,7 +1727,7 @@ export default function ProductDetailClient({
   const data = useMemo(
     () => {
       if (isGermanValveless || isGermanSyringe || isGermanPipetting || isGermanAssembly || isItalianAssembly || isHindiAssembly || isGermanTubing || isItalianTubing || isHindiTubing || isItalianSyringe || isItalianPipetting || isItalianValveless || isItalianAuthoredValve || isHindiMrv3 || isHindiSolenoid || isHindiHp || isHindiInstrumentPump || isHindiValveless) return sourceData;
-      if (isHardTubePlug(sourceData)) return applyHardTubePlugCopy(sourceData, fittingUiLocale === "hi" ? "hi" : configuratorLocale);
+      if (isHardTubePlug(sourceData)) return applyHardTubePlugCopy(sourceData, fittingUiLocale === "it" || fittingUiLocale === "hi" ? fittingUiLocale : configuratorLocale);
       const mrv3Copy = sourceData.category === "valves" ? (getMrv3Content(sourceData.slug, isGermanAuthoredValve ? "de" : configuratorLocale) || getSolenoidContent(sourceData.slug, solenoidPresentationLocale)) : null;
       if (mrv3Copy) {
         const mrv3Data: typeof sourceData = { ...sourceData, ...mrv3Copy, category: "valves" };
@@ -3407,7 +3409,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       setIsEaInquiryOpen(false);
       if (target && target.slug !== sourceSlug) {
         saveEaPumpInquiryDraft(target.slug, configuration, quantity, drawings);
-        router.push((isGermanPiston || pistonPresentationLocale === "hi") ? pistonHref(target.detailHref, pistonPresentationLocale) : localizeInternalHref(target.detailHref, localePrefix));
+        router.push((isGermanPiston || localizedDetail) ? pistonHref(target.detailHref, pistonPresentationLocale) : localizeInternalHref(target.detailHref, localePrefix));
       }
     }
   }
@@ -3426,7 +3428,7 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       addItem({ ...createDetailCartItem(drawings.length > 0, undefined, drawings), id,
         productCode: target?.productId || "", productName: pistonText(`${series} 柱塞泵`, pistonPresentationLocale),
         foreachModel: pistonText(target ? `${target.model}（配置询价）` : `${series} ${eaPumpInquiryCapacityLabel(configuration)}（配置询价）`, pistonPresentationLocale),
-        detailHref: target ? ((isGermanPiston || pistonPresentationLocale === "hi") ? pistonHref(target.detailHref, pistonPresentationLocale) : localizeInternalHref(target.detailHref, localePrefix)) : undefined, imagePath: target?.imagePath || "",
+        detailHref: target ? ((isGermanPiston || localizedDetail) ? pistonHref(target.detailHref, pistonPresentationLocale) : localizeInternalHref(target.detailHref, localePrefix)) : undefined, imagePath: target?.imagePath || "",
         quantity, eaPumpConfiguration: configuration });
     }
     setIsEaInquiryOpen(false);
@@ -4994,6 +4996,6 @@ const [solenoidVariant, setSolenoidVariant] = useState(0);
       </div>
     </main>
     </SitePageShell>
-</div>, (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") ? configuratorLocale : "zh", isGermanProduct ? germanProductDetailText : draftDetail ? draftDetailText : undefined)
+</div>, (String(sourceData.category) === "fittings" || sourceData.categoryId === "fittings") ? fittingUiLocale : "zh", isGermanProduct ? germanProductDetailText : draftDetail ? draftDetailText : undefined)
   );
 }

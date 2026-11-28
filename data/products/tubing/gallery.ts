@@ -1,9 +1,11 @@
 import galleryData from "./gallery.json";
 import type { SelectionLocale } from "../selection/product-selection.types";
 
+type TubingGalleryLocale = SelectionLocale | "de" | "it" | "hi";
+
 type TubingGalleryImage = {
   src: string;
-  alt: Record<SelectionLocale, string>;
+  alt: Record<TubingGalleryLocale, string>;
 };
 
 const galleries: Record<string, TubingGalleryImage[] | undefined> = galleryData;
@@ -16,7 +18,7 @@ export function getTubingGallery(slug: string) {
 export function getTubingGalleryData(slug: string, locale = "zh") {
   const gallery = getTubingGallery(slug);
   if (!gallery?.length) return undefined;
-  const language = (locale === "zh-CN" ? "zh" : locale) as SelectionLocale;
+  const language = (locale === "zh-CN" ? "zh" : locale) as TubingGalleryLocale;
   const images = gallery.map((image) => image.src);
   const alts = gallery.map((image) => image.alt[language] || image.alt.en);
   return {

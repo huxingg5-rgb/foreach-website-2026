@@ -24,6 +24,7 @@ import "@/app/resources/news/news.css";
 
 export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetail }) {
   const locale = video.locale;
+  const usesLocalizedVideoTitle = locale === "de" || locale === "it" || locale === "hi";
   const embed = new URL(video.embedUrl);
   if (/(^|\.)youtube(?:-nocookie)?\.com$/.test(embed.hostname)) {
     embed.searchParams.set("enablejsapi", "1");
@@ -34,7 +35,7 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
   const products = getVideoGuideRelatedProducts(video.id, "sidebar", locale);
   const footerProducts = getVideoGuideRelatedProducts(video.id, "footer", locale);
   const relatedResources = getRelatedResourcesData({
-    sourceType: "video", sourceId: video.id, relationKeys: video.relationKeys, locale: locale === "de" || locale === "it" || locale === "hi" ? "en" : locale,
+    sourceType: "video", sourceId: video.id, relationKeys: video.relationKeys, locale: usesLocalizedVideoTitle ? "en" : locale,
   });
   if (locale === "de") {
     relatedResources.uiLocale = "de";
@@ -125,7 +126,7 @@ export default function VideoGuideDetailPage({ video }: { video: VideoGuideDetai
       <section className={styles.contentBlock} aria-labelledby={`${video.sectionId}-video`}>
         <h2 id={`${video.sectionId}-video`}>{video.watchHeading}</h2>
         <figure className={styles.figure}>
-          <iframe src={embed.href} title={locale === "hi" ? video.title : video.media?.title ?? video.title}
+          <iframe src={embed.href} title={usesLocalizedVideoTitle ? video.title : video.media?.title ?? video.title}
             style={{ display: "block", width: "100%", aspectRatio: "16 / 9", border: 0 }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />

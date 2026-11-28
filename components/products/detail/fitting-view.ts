@@ -1,11 +1,12 @@
 import { Children, cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
+import { isNewProductLocale } from "@/data/products/detail/fitting-ui-new-locales";
 import { fittingLocale, fittingText } from "@/data/products/detail/fitting-ui.intl";
 
 /** Localize only presentation nodes, before React renders them. Never visit
  * config/data/value/event props: their original keys continue to select SKUs.
  * Child components receive locale explicitly and localize their own output. */
 export function fittingView(node: ReactNode, locale: string, translateUi?: (text: string) => string): ReactNode {
-  if (fittingLocale(locale) === "zh" && !translateUi) return node;
+  if (!isNewProductLocale(locale) && fittingLocale(locale) === "zh" && !translateUi) return node;
   if (typeof node === "string") {
     const source = fittingText(node, locale);
     return translateUi ? translateUi(source) : source;

@@ -119,7 +119,7 @@ function getLocalizedText(
 }
 
 const fittingDetailBreadcrumbLabels: Partial<Record<FittingReplacementLocale, string>> = {
-  de: "Brotkrumennavigation",
+  de: "Brotkrümelnavigation",
   it: "Percorso di navigazione",
   hi: "पेज का नेविगेशन पथ",
   es: "Ruta de navegación",

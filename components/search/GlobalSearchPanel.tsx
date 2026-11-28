@@ -15,6 +15,7 @@ import {
   type CompactSearchItem,
   type SearchModule,
 } from "@/components/search/global-search-index";
+import { getLocalizedSearchPageCopy, useLocalizedSearchPageCopy } from "@/components/search/useLocalizedSearchPageCopy";
 import { getGermanNavigationText } from "@/data/navigation.de";
 import { getControlModuleSearchItems, isControlModuleSearchDetail } from "@/data/search/control-module-search";
 import { getHindiProductSearchAliases } from "@/data/search/hindi-product-search";
@@ -313,7 +314,7 @@ function getLocalizedHref(
     .filter(Boolean)[0];
 
   if (
-    ["en", "es", "fr", "ko", "ru", "de"].includes(
+    ["en", "es", "fr", "ko", "ru", "de", "it", "hi"].includes(
       firstSegment ?? ""
     )
   ) {
@@ -322,6 +323,12 @@ function getLocalizedHref(
 
   return `/${locale}${href}`;
 }
+
+const localResultLabels = {
+  de: { code: "Artikelnummer", model: "Modell", compatible: "Das passende FOREACH-Produkt ansehen." },
+  it: { code: "Codice articolo", model: "Modello", compatible: "Consulta il prodotto FOREACH compatibile." },
+  hi: { code: "उत्पाद कोड", model: "मॉडल", compatible: "संगत FOREACH उत्पाद देखें।" },
+};
 
 export default function GlobalSearchPanel({
   isOpen,
@@ -339,6 +346,8 @@ export default function GlobalSearchPanel({
   const isEnglish = locale !== "zh-CN" && locale !== "zh";
   const activeLocale = locale as LocaleCode;
   const searchIndexLocale = germanUi ? "de" : locale;
+  const translatedSearchLocale = germanUi ? "de" : italianUi ? "it" : hindiUi ? "hi" : undefined;
+  const { pages: localizedPages, isLoading: localizedCopyLoading } = useLocalizedSearchPageCopy(isOpen ? translatedSearchLocale : undefined);
   const initialCachedItems = getCachedGlobalSearchIndex(searchIndexLocale);
   const t = (text: string) => germanUi ? getGermanNavigationText(text) : italianUi ? getItalianNavigationText(text) : hindiUi ? getHindiNavigationText(text) : getInternationalUiText(activeLocale, text);
   const moduleText = isEnglish
@@ -495,11 +504,38 @@ export default function GlobalSearchPanel({
   const displayItems = useMemo(() => {
     if (!items) return items;
 
+    const searchItems = translatedSearchLocale
+      ? items.filter(item => item.m !== "material-compatibility" || !/[?&]tab=features&q=(?:PSU|PMMA)(?:[&#]|$)/.test(item.h))
+      : items;
+    const localizedItems = searchItems.map(item => {
+      if (!translatedSearchLocale || item.g) return item;
+      const labels = localResultLabels[translatedSearchLocale];
+      const labeledSubtitle = item.s
+        ?.replace(/^Product code: /, labels.code + ": ")
+        .replace(/^Model: /, labels.model + ": ");
+      if (item.m === "compatible-models") {
+        return { ...item, s: labeledSubtitle, d: labels.compatible, g: true as const };
+      }
+
+      const href = getDraftHrefForEnglish(getLocalizedHref(item.h, "en"), translatedSearchLocale);
+      const copy = getLocalizedSearchPageCopy(localizedPages, href, item.t);
+      if (!copy) return item;
+      const subtitle = labeledSubtitle !== item.s || /^[A-Z\d._ /−–-]+$/u.test(item.s ?? "")
+        ? labeledSubtitle : undefined;
+      return {
+        ...item,
+        t: copy.title,
+        s: copy.subtitle ?? (item.m === "products" ? subtitle : undefined),
+        d: copy.description,
+        x: [item.x, copy.title, copy.description].join(" "),
+        g: true as const,
+      };
+    });
     const controlItems = getControlModuleSearchItems(controlSearchLocale);
-    if (!controlItems.length) return items;
+    if (!controlItems.length) return localizedItems;
 
     return [
-      ...items.filter(item => (item.m !== "pages" && item.m !== "products") || !isControlModuleSearchDetail(item.h)),
+      ...localizedItems.filter(item => (item.m !== "pages" && item.m !== "products") || !isControlModuleSearchDetail(item.h)),
       ...controlItems.map((item): CompactSearchItem => ({
         m: item.module,
         t: item.title,
@@ -509,10 +545,10 @@ export default function GlobalSearchPanel({
         x: [item.title, item.description, ...item.keywords].join(" "),
         k: item.keywords.join(" "),
         a: item.actionLabel,
-        g: germanUi ? true : undefined,
+        g: translatedSearchLocale ? true : undefined,
       })),
     ];
-  }, [items, controlSearchLocale, germanUi]);
+  }, [items, localizedPages, controlSearchLocale, translatedSearchLocale]);
 
   const groupedResults = useMemo(() => {
     const grouped = new Map<
@@ -603,10 +639,10 @@ export default function GlobalSearchPanel({
     }
     const term = debouncedQuery.trim();
     const key = `${searchIndexLocale}:${term}`;
-    if (loadState !== "ready" || !items || query.trim() !== term || key === lastTrackedSearch.current) return;
+    if (loadState !== "ready" || localizedCopyLoading || !items || query.trim() !== term || key === lastTrackedSearch.current) return;
     lastTrackedSearch.current = key;
     trackSearchWithResults({ searchTerm: term, searchLocation: "global_search_overlay", locale: searchIndexLocale, resultCount: totalCount });
-  }, [debouncedQuery, isOpen, items, loadState, query, queryIsLongEnough, searchIndexLocale, totalCount]);
+  }, [debouncedQuery, isOpen, items, loadState, localizedCopyLoading, query, queryIsLongEnough, searchIndexLocale, totalCount]);
 
   if (!isOpen || typeof document === "undefined") {
     return null;
@@ -620,6 +656,7 @@ export default function GlobalSearchPanel({
     (
       isWaitingForDebounce ||
       loadState === "loading" ||
+      (localizedCopyLoading && loadState !== "error") ||
       (!items && loadState !== "error")
     );
 
@@ -875,16 +912,15 @@ export default function GlobalSearchPanel({
                           ? draftHref.replace(/^\/de(?=\/)/, "/en")
                           : draftHref);
                         const action = hindiUi
-                          ? pdf ? "PDF देखें (अंग्रेज़ी में)" : moduleText[module].action + (hindiLink?.hrefLang === "en" ? hindiEnglishFallbackSuffix : "")
+                          ? pdf ? "PDF देखें (अंग्रेज़ी में)" : item.m === "datasheets" ? "कस्टम उत्पाद का अनुरोध" : moduleText[module].action + (hindiLink?.hrefLang === "en" ? hindiEnglishFallbackSuffix : "")
                           : italianUi
-                          ? pdf ? "Vedi PDF (in inglese)" : moduleText[module].action + (italianLink?.hrefLang === "en" ? " (in inglese)" : "")
+                          ? pdf ? "Vedi PDF (in inglese)" : item.m === "datasheets" ? "Richiedi una versione personalizzata" : moduleText[module].action + (italianLink?.hrefLang === "en" ? " (in inglese)" : "")
                           : pdf ? "PDF ansehen (Englisch)"
                           : germanUi && item.m === "datasheets" ? "Sonderanfertigung anfragen"
                           : englishTarget ? `${moduleText[module].action} (Englisch)`
                           : germanUi ? moduleText[module].action
                           : item.a ?? moduleText[module].action;
-                        const localizedControl = item.m === "products" && isControlModuleSearchDetail(item.h);
-                        const copyLanguage = ((hindiUi || italianUi) && !localizedControl) || (germanUi && !item.g) ? "en" : undefined;
+                        const copyLanguage = translatedSearchLocale && !item.g ? "en" : undefined;
                         return (
                           <a
                             className="global-search-result"

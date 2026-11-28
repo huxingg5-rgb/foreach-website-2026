@@ -16,6 +16,7 @@ import { getGermanNavigationText } from "@/data/navigation.de";
 import { getHindiProductSearchAliases } from "@/data/search/hindi-product-search";
 import { getHindiNavigationText } from "@/data/navigation.hi";
 import { getItalianNavigationText } from "@/data/navigation.it";
+import { getLocalizedSearchPageCopy, useLocalizedSearchPageCopy } from "@/components/search/useLocalizedSearchPageCopy";
 import { getHindiDraftLink, hindiEnglishFallbackSuffix, getDraftHrefForEnglish, getItalianDraftLink, isLocalizedGermanDraftPath, italianEnglishFallbackSuffix } from "@/lib/i18n/draft-languages";
 import {
   getTubingAssemblySearchItems,
@@ -481,6 +482,7 @@ export default function SiteSearchClient({
   const isGerman = locale === "de";
   const isItalian = locale === "it";
   const isHindi = locale === "hi";
+  const { pages: localizedPages, isLoading: localizedCopyLoading } = useLocalizedSearchPageCopy(queryFromUrl && (isGerman || isItalian || isHindi) ? locale : undefined);
   const t = (text: string) => isGerman ? getGermanSearchText(text) : isItalian ? getItalianSearchText(text) : isHindi ? getHindiSearchText(text) : getInternationalUiText(activeLocale, text);
   const moduleText = isEnglish
     ? Object.fromEntries(Object.entries(MODULE_TEXT_EN).map(([key, value]) => [key, { title: t(value.title), description: t(value.description), empty: t(value.empty) }])) as typeof MODULE_TEXT_EN
@@ -528,11 +530,18 @@ export default function SiteSearchClient({
         continue;
       }
 
-      const item = isGerman
+      const translatedItem = isGerman
         ? getGermanSearchItem(scopedSourceItem, germanFittingTitles ?? {})
         : isItalian ? getItalianSearchItem(scopedSourceItem)
         : isHindi ? getHindiSearchItem(scopedSourceItem)
         : isEnglish ? getLocalizedSearchItem(scopedSourceItem, locale) : scopedSourceItem;
+      const copy = translatedItem.module !== "datasheets" && getLocalizedSearchPageCopy(localizedPages, translatedItem.href);
+      const item = copy ? {
+        ...translatedItem,
+        title: translatedItem.module === "compatible-models" ? translatedItem.title : copy.title,
+        description: translatedItem.module === "compatible-models" ? translatedItem.description : copy.description,
+        keywords: [...translatedItem.keywords, translatedItem.title, copy.title, copy.description],
+      } : translatedItem;
       const score = scoreItem(item, queryFromUrl);
       if (score <= 0) continue;
 
@@ -573,7 +582,7 @@ export default function SiteSearchClient({
     }
 
     return result;
-  }, [germanDatasheetItems, germanFittingTitles, isEnglish, isGerman, isItalian, isHindi, italianDatasheetItems, hindiDatasheetItems, locale, queryFromUrl]);
+  }, [germanDatasheetItems, germanFittingTitles, isEnglish, isGerman, isItalian, isHindi, italianDatasheetItems, hindiDatasheetItems, locale, localizedPages, queryFromUrl]);
 
   const totalResults = MODULE_ORDER.reduce((sum, module) => {
     return sum + groupedResults[module].length;
@@ -581,7 +590,7 @@ export default function SiteSearchClient({
   const resultCountLabel = totalResults === 1 && (isGerman || isItalian || isHindi) ? (isGerman ? "Ergebnis" : isItalian ? "risultato" : "नतीजा") : t("results");
 
   useEffect(() => {
-    if (!queryFromUrl) return;
+    if (!queryFromUrl || localizedCopyLoading) return;
 
     const searchSignature = `${queryFromUrl}|${totalResults}`;
     if (lastSearchSignatureRef.current !== searchSignature) {
@@ -626,7 +635,7 @@ export default function SiteSearchClient({
         })),
       });
     }
-  }, [groupedResults, locale, queryFromUrl, totalResults]);
+  }, [groupedResults, locale, localizedCopyLoading, queryFromUrl, totalResults]);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -681,6 +690,10 @@ export default function SiteSearchClient({
                 ? t("For example: Q2002, PMC1702, piston pump, or diaphragm pump datasheet.")
                 : "例如：Q2002、PMC1702、柱塞泵、隔膜泵规格书。"}
             </p>
+          </section>
+        ) : localizedCopyLoading ? (
+          <section className="site-search-initial" role="status">
+            <h2>{t("Searching")}</h2>
           </section>
         ) : (
           <>

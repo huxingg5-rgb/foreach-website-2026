@@ -12,7 +12,7 @@ const photos = {
 };
 
 type PhotoKey = keyof typeof photos;
-type PhotoLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru";
+type PhotoLocale = "zh" | "en" | "es" | "fr" | "ko" | "ru" | "de";
 
 // FIT catalog A02, pp. 47–48: SC-M6 has a cylindrical female-thread body;
 // SC-U28 has a separate circular flange. These photographs show the M6 form.
@@ -49,6 +49,16 @@ const imageAlts: Record<PhotoLocale, Record<PhotoKey, string>> = {
     sbrGroup: "SBR U28 swivel straight male-thread-to-barb fitting family photo: three natural PP connectors showing threaded ends, rotating collars and hose barbs from different angles on black",
     maleStraightGroup: "Straight male-thread-to-barb fitting family overview: five different fittings on black, showing threaded ends, hose barbs and an O-ring on one fitting; not a model-specific photo",
     maleStraightLineup: "Straight male-thread-to-barb fitting family lineup: six translucent and white fittings of different sizes on black, showing threaded ends, hex bodies and hose barbs; not a model-specific photo",
+  },
+  de: {
+    broadBarb: "Innengewinde-Schlauchtülle der Baureihe SC M6 aus naturfarbenem PP: zylindrischer Körper ohne separaten Flansch, breite Tülle und Anschlussöffnung.",
+    slimBarb: "Innengewinde-Schlauchtülle der Baureihe SC M6 aus naturfarbenem PP: Seitenansicht des zylindrischen Körpers ohne separaten Flansch mit schmaler Tülle.",
+    pair: "Baureihe SC M6 mit Innengewinde und Schlauchtülle: zwei durchscheinende Fittings aus naturfarbenem PP aus verschiedenen Blickwinkeln vor schwarzem Hintergrund.",
+    group: "Baureihe SC M6 mit Innengewinde und Schlauchtülle: drei durchscheinende Fittings aus naturfarbenem PP auf dunkelgrauem Hintergrund.",
+    sbrSingle: "Gerade drehbare Außengewinde-Schlauchtülle der Baureihe SBR U28 aus naturfarbenem PP: Schrägansicht mit Gewinde, gerändeltem Drehring und Schlauchtülle.",
+    sbrGroup: "Baureihe SBR U28: drei gerade drehbare Schlauchtüllen aus naturfarbenem PP mit Außengewinde, Drehring und Schlauchanschluss vor schwarzem Hintergrund.",
+    maleStraightGroup: "Baureihenübersicht gerader Schlauchtüllen mit Außengewinde: fünf Bauformen auf schwarzem Hintergrund mit Gewinden und Schlauchtüllen. Ein Fitting zeigt einen O-Ring.",
+    maleStraightLineup: "Baureihenübersicht gerader Schlauchtüllen mit Außengewinde: sechs durchscheinende und weiße Fittings verschiedener Größen mit Gewinde, Sechskantkörper und Schlauchtülle vor schwarzem Hintergrund.",
   },
   es: {
     broadBarb: "Familia SC M6 de racores de rosca hembra a espiga en PP natural: cuerpo cilíndrico sin brida separada, espiga ancha y detalle del orificio",

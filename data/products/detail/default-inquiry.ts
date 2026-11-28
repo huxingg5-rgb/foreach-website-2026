@@ -11,7 +11,7 @@ export function isDefaultInquiryChoice(value?: FittingConfigurationChoice) {
 }
 
 export function isSameInquiryDetailHref(first = "", second = "") {
-  const normalize = (href: string) => href.replace(/^\/(?:en|es|fr|ko|ru)(?=\/)/, "").replace(/\/+$/, "");
+  const normalize = (href: string) => href.replace(/^\/(?:en|es|fr|ko|ru|de|it|hi)(?=\/)/, "").replace(/\/+$/, "");
   return Boolean(first && second && normalize(first) === normalize(second));
 }
 
@@ -92,6 +92,48 @@ const COPY = {
     listDescription: "Check the model and quantity, then send your inquiry. We can help confirm matching parts and operating conditions.",
     listNote: "Your models, quantities and selected documents will be included. You can adjust them without finalizing every configuration detail.",
     successTitle: "Inquiry sent", successDescription: "We have received your models and requirements and will follow up using the contact details provided.",
+  },
+  de: {
+    defaultLabel: "Standardkonfiguration", cancel: "Aus der Liste entfernen",
+    helper: "Klicken Sie auf „Standardkonfiguration“, um sie zur Liste hinzuzufügen oder daraus zu entfernen. Fahren Sie für Details mit dem Mauszeiger darüber.",
+    touchHelper: "Tippen Sie auf eine Konfiguration, um ihre Details anzuzeigen oder zu schließen. In der Detailansicht können Sie sie zur Liste hinzufügen oder entfernen.",
+    additionalHelper: "Weitere Kombinationen finden Sie unter „Konfiguration hinzufügen“.",
+    title: "Produkt- und Angebotsanfrage", action: "Produkte anfragen", submit: "Anfrage senden",
+    description: "Modell, Stückzahl und ausgewählte Unterlagen sind bereits enthalten. Hinterlassen Sie Ihre Kontaktdaten für Fragen zur Auswahl, zu passenden Teilen, Preisen oder Lieferzeiten.",
+    summary: "Geben Sie Ihre Kontaktdaten ein und bestätigen Sie Ihre E-Mail-Adresse für eine Rückmeldung zur Anfrage.",
+    emailPlaceholder: "E-Mail-Adresse für Rückfragen und Angebote",
+    notes: "Ergänzende Angaben", notesPlaceholder: "Beschreiben Sie bei Bedarf Anwendung, benötigte Teile oder die voraussichtliche Stückzahl.",
+    listDescription: "Prüfen Sie Modell und Stückzahl und senden Sie Ihre Anfrage. Wir helfen bei der Auswahl passender Teile und der Klärung der Betriebsbedingungen.",
+    listNote: "Modell, Stückzahl und ausgewählte Unterlagen werden mit der Anfrage übermittelt. Sie müssen noch nicht alle Konfigurationsdetails festlegen.",
+    successTitle: "Anfrage gesendet", successDescription: "Wir haben Ihre Anfrage erhalten und melden uns über die angegebenen Kontaktdaten.",
+  },
+  it: {
+    defaultLabel: "Configurazione predefinita", cancel: "Rimuovi dalla lista",
+    helper: "Fai clic su «Configurazione predefinita» per aggiungerla o rimuoverla dalla lista. Passa il puntatore per vedere i dettagli.",
+    touchHelper: "Tocca una configurazione per aprire o chiudere i dettagli. Dai dettagli puoi aggiungerla o rimuoverla dalla lista.",
+    additionalHelper: "Per altre combinazioni, usa «Aggiungi configurazione».",
+    title: "Richiesta di informazioni e preventivo", action: "Richiedi informazioni sui prodotti", submit: "Invia richiesta",
+    description: "Modello, quantità e documenti selezionati sono inclusi. Lascia i tuoi recapiti per ricevere assistenza sulla scelta, sui componenti compatibili, sul prezzo e sui tempi di consegna.",
+    summary: "Inserisci i tuoi recapiti e verifica l’indirizzo e-mail per ricevere una risposta alla richiesta.",
+    emailPlaceholder: "E-mail per informazioni e preventivi",
+    notes: "Informazioni aggiuntive", notesPlaceholder: "Se utile, indica l’applicazione, i componenti necessari o la quantità prevista.",
+    listDescription: "Verifica il modello e la quantità, poi invia la richiesta. Possiamo aiutarti a confermare i componenti compatibili e le condizioni operative.",
+    listNote: "La richiesta include modelli, quantità e documenti selezionati. Puoi inviarla anche se la configurazione non è ancora definitiva.",
+    successTitle: "Richiesta inviata", successDescription: "Abbiamo ricevuto la richiesta. Ti risponderemo ai recapiti indicati.",
+  },
+  hi: {
+    defaultLabel: "डिफ़ॉल्ट कॉन्फ़िगरेशन", cancel: "सूची से हटाएँ",
+    helper: "सूची में जोड़ने या हटाने के लिए «डिफ़ॉल्ट कॉन्फ़िगरेशन» पर क्लिक करें। विवरण देखने के लिए उस पर पॉइंटर ले जाएँ।",
+    touchHelper: "विवरण खोलने या बंद करने के लिए कॉन्फ़िगरेशन पर टैप करें। विवरण से उसे सूची में जोड़ या हटा सकते हैं।",
+    additionalHelper: "दूसरे संयोजन के लिए «कॉन्फ़िगरेशन जोड़ें» चुनें।",
+    title: "उत्पाद की जानकारी और मूल्य के लिए पूछताछ", action: "इन उत्पादों के बारे में पूछें", submit: "पूछताछ भेजें",
+    description: "मॉडल, मात्रा और चुने गए दस्तावेज़ जुड़ चुके हैं। चयन, अनुकूल पुर्ज़ों, मूल्य और आपूर्ति समय की जानकारी के लिए अपना संपर्क विवरण दें।",
+    summary: "पूछताछ का जवाब पाने के लिए अपना संपर्क विवरण दें और ईमेल की पुष्टि करें।",
+    emailPlaceholder: "उत्पाद और मूल्य की जानकारी के लिए ईमेल",
+    notes: "अतिरिक्त जानकारी", notesPlaceholder: "चाहें तो उपयोग, ज़रूरी पुर्ज़े या अनुमानित मात्रा बताएँ।",
+    listDescription: "मॉडल और मात्रा जाँचकर पूछताछ भेजें। हम अनुकूल पुर्ज़े और संचालन की स्थितियाँ तय करने में मदद कर सकते हैं।",
+    listNote: "मॉडल, मात्रा और चुने हुए दस्तावेज़ पूछताछ के साथ भेजे जाएँगे। सभी विकल्प तय किए बिना भी पूछताछ भेज सकते हैं।",
+    successTitle: "पूछताछ भेज दी गई", successDescription: "आपकी पूछताछ मिल गई है। हम दिए गए संपर्क विवरण पर जवाब देंगे।",
   },
   es: {
     defaultLabel: "Configuración predeterminada", cancel: "Quitar de la lista",
